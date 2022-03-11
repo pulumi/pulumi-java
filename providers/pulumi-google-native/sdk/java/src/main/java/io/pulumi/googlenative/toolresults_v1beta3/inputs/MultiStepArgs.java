@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.PrimaryStepArgs;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class MultiStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="multistepNumber")
-      private final @Nullable Input<Integer> multistepNumber;
+      private final @Nullable Output<Integer> multistepNumber;
 
-    public Input<Integer> getMultistepNumber() {
-        return this.multistepNumber == null ? Input.empty() : this.multistepNumber;
+    public Output<Integer> getMultistepNumber() {
+        return this.multistepNumber == null ? Output.empty() : this.multistepNumber;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class MultiStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="primaryStep")
-      private final @Nullable Input<PrimaryStepArgs> primaryStep;
+      private final @Nullable Output<PrimaryStepArgs> primaryStep;
 
-    public Input<PrimaryStepArgs> getPrimaryStep() {
-        return this.primaryStep == null ? Input.empty() : this.primaryStep;
+    public Output<PrimaryStepArgs> getPrimaryStep() {
+        return this.primaryStep == null ? Output.empty() : this.primaryStep;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class MultiStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="primaryStepId")
-      private final @Nullable Input<String> primaryStepId;
+      private final @Nullable Output<String> primaryStepId;
 
-    public Input<String> getPrimaryStepId() {
-        return this.primaryStepId == null ? Input.empty() : this.primaryStepId;
+    public Output<String> getPrimaryStepId() {
+        return this.primaryStepId == null ? Output.empty() : this.primaryStepId;
     }
 
     public MultiStepArgs(
-        @Nullable Input<Integer> multistepNumber,
-        @Nullable Input<PrimaryStepArgs> primaryStep,
-        @Nullable Input<String> primaryStepId) {
+        @Nullable Output<Integer> multistepNumber,
+        @Nullable Output<PrimaryStepArgs> primaryStep,
+        @Nullable Output<String> primaryStepId) {
         this.multistepNumber = multistepNumber;
         this.primaryStep = primaryStep;
         this.primaryStepId = primaryStepId;
     }
 
     private MultiStepArgs() {
-        this.multistepNumber = Input.empty();
-        this.primaryStep = Input.empty();
-        this.primaryStepId = Input.empty();
+        this.multistepNumber = Output.empty();
+        this.primaryStep = Output.empty();
+        this.primaryStepId = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class MultiStepArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> multistepNumber;
-        private @Nullable Input<PrimaryStepArgs> primaryStep;
-        private @Nullable Input<String> primaryStepId;
+        private @Nullable Output<Integer> multistepNumber;
+        private @Nullable Output<PrimaryStepArgs> primaryStep;
+        private @Nullable Output<String> primaryStepId;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class MultiStepArgs extends io.pulumi.resources.ResourceArgs {
     	      this.primaryStepId = defaults.primaryStepId;
         }
 
-        public Builder multistepNumber(@Nullable Input<Integer> multistepNumber) {
+        public Builder multistepNumber(@Nullable Output<Integer> multistepNumber) {
             this.multistepNumber = multistepNumber;
             return this;
         }
 
         public Builder multistepNumber(@Nullable Integer multistepNumber) {
-            this.multistepNumber = Input.ofNullable(multistepNumber);
+            this.multistepNumber = Output.ofNullable(multistepNumber);
             return this;
         }
 
-        public Builder primaryStep(@Nullable Input<PrimaryStepArgs> primaryStep) {
+        public Builder primaryStep(@Nullable Output<PrimaryStepArgs> primaryStep) {
             this.primaryStep = primaryStep;
             return this;
         }
 
         public Builder primaryStep(@Nullable PrimaryStepArgs primaryStep) {
-            this.primaryStep = Input.ofNullable(primaryStep);
+            this.primaryStep = Output.ofNullable(primaryStep);
             return this;
         }
 
-        public Builder primaryStepId(@Nullable Input<String> primaryStepId) {
+        public Builder primaryStepId(@Nullable Output<String> primaryStepId) {
             this.primaryStepId = primaryStepId;
             return this;
         }
 
         public Builder primaryStepId(@Nullable String primaryStepId) {
-            this.primaryStepId = Input.ofNullable(primaryStepId);
+            this.primaryStepId = Output.ofNullable(primaryStepId);
             return this;
         }
         public MultiStepArgs build() {

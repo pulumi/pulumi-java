@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class ClusterAddonsConfigCloudrunConfigGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="disabled", required=true)
-      private final Input<Boolean> disabled;
+      private final Output<Boolean> disabled;
 
-    public Input<Boolean> getDisabled() {
+    public Output<Boolean> getDisabled() {
         return this.disabled;
     }
 
@@ -33,22 +33,22 @@ public final class ClusterAddonsConfigCloudrunConfigGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="loadBalancerType")
-      private final @Nullable Input<String> loadBalancerType;
+      private final @Nullable Output<String> loadBalancerType;
 
-    public Input<String> getLoadBalancerType() {
-        return this.loadBalancerType == null ? Input.empty() : this.loadBalancerType;
+    public Output<String> getLoadBalancerType() {
+        return this.loadBalancerType == null ? Output.empty() : this.loadBalancerType;
     }
 
     public ClusterAddonsConfigCloudrunConfigGetArgs(
-        Input<Boolean> disabled,
-        @Nullable Input<String> loadBalancerType) {
+        Output<Boolean> disabled,
+        @Nullable Output<String> loadBalancerType) {
         this.disabled = Objects.requireNonNull(disabled, "expected parameter 'disabled' to be non-null");
         this.loadBalancerType = loadBalancerType;
     }
 
     private ClusterAddonsConfigCloudrunConfigGetArgs() {
-        this.disabled = Input.empty();
-        this.loadBalancerType = Input.empty();
+        this.disabled = Output.empty();
+        this.loadBalancerType = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class ClusterAddonsConfigCloudrunConfigGetArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private Input<Boolean> disabled;
-        private @Nullable Input<String> loadBalancerType;
+        private Output<Boolean> disabled;
+        private @Nullable Output<String> loadBalancerType;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class ClusterAddonsConfigCloudrunConfigGetArgs extends io.pulumi.re
     	      this.loadBalancerType = defaults.loadBalancerType;
         }
 
-        public Builder disabled(Input<Boolean> disabled) {
+        public Builder disabled(Output<Boolean> disabled) {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
 
         public Builder disabled(Boolean disabled) {
-            this.disabled = Input.of(Objects.requireNonNull(disabled));
+            this.disabled = Output.of(Objects.requireNonNull(disabled));
             return this;
         }
 
-        public Builder loadBalancerType(@Nullable Input<String> loadBalancerType) {
+        public Builder loadBalancerType(@Nullable Output<String> loadBalancerType) {
             this.loadBalancerType = loadBalancerType;
             return this;
         }
 
         public Builder loadBalancerType(@Nullable String loadBalancerType) {
-            this.loadBalancerType = Input.ofNullable(loadBalancerType);
+            this.loadBalancerType = Output.ofNullable(loadBalancerType);
             return this;
         }
         public ClusterAddonsConfigCloudrunConfigGetArgs build() {

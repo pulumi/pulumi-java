@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,38 +18,38 @@ public final class OperationsDefinitionDisplayArgs extends io.pulumi.resources.R
     public static final OperationsDefinitionDisplayArgs Empty = new OperationsDefinitionDisplayArgs();
 
     @InputImport(name="description", required=true)
-      private final Input<String> description;
+      private final Output<String> description;
 
-    public Input<String> getDescription() {
+    public Output<String> getDescription() {
         return this.description;
     }
 
     @InputImport(name="operation", required=true)
-      private final Input<String> operation;
+      private final Output<String> operation;
 
-    public Input<String> getOperation() {
+    public Output<String> getOperation() {
         return this.operation;
     }
 
     @InputImport(name="provider", required=true)
-      private final Input<String> provider;
+      private final Output<String> provider;
 
-    public Input<String> getProvider() {
+    public Output<String> getProvider() {
         return this.provider;
     }
 
     @InputImport(name="resource", required=true)
-      private final Input<String> resource;
+      private final Output<String> resource;
 
-    public Input<String> getResource() {
+    public Output<String> getResource() {
         return this.resource;
     }
 
     public OperationsDefinitionDisplayArgs(
-        Input<String> description,
-        Input<String> operation,
-        Input<String> provider,
-        Input<String> resource) {
+        Output<String> description,
+        Output<String> operation,
+        Output<String> provider,
+        Output<String> resource) {
         this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
         this.operation = Objects.requireNonNull(operation, "expected parameter 'operation' to be non-null");
         this.provider = Objects.requireNonNull(provider, "expected parameter 'provider' to be non-null");
@@ -57,10 +57,10 @@ public final class OperationsDefinitionDisplayArgs extends io.pulumi.resources.R
     }
 
     private OperationsDefinitionDisplayArgs() {
-        this.description = Input.empty();
-        this.operation = Input.empty();
-        this.provider = Input.empty();
-        this.resource = Input.empty();
+        this.description = Output.empty();
+        this.operation = Output.empty();
+        this.provider = Output.empty();
+        this.resource = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,10 +72,10 @@ public final class OperationsDefinitionDisplayArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<String> description;
-        private Input<String> operation;
-        private Input<String> provider;
-        private Input<String> resource;
+        private Output<String> description;
+        private Output<String> operation;
+        private Output<String> provider;
+        private Output<String> resource;
 
         public Builder() {
     	      // Empty
@@ -89,43 +89,43 @@ public final class OperationsDefinitionDisplayArgs extends io.pulumi.resources.R
     	      this.resource = defaults.resource;
         }
 
-        public Builder description(Input<String> description) {
+        public Builder description(Output<String> description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
         public Builder description(String description) {
-            this.description = Input.of(Objects.requireNonNull(description));
+            this.description = Output.of(Objects.requireNonNull(description));
             return this;
         }
 
-        public Builder operation(Input<String> operation) {
+        public Builder operation(Output<String> operation) {
             this.operation = Objects.requireNonNull(operation);
             return this;
         }
 
         public Builder operation(String operation) {
-            this.operation = Input.of(Objects.requireNonNull(operation));
+            this.operation = Output.of(Objects.requireNonNull(operation));
             return this;
         }
 
-        public Builder provider(Input<String> provider) {
+        public Builder provider(Output<String> provider) {
             this.provider = Objects.requireNonNull(provider);
             return this;
         }
 
         public Builder provider(String provider) {
-            this.provider = Input.of(Objects.requireNonNull(provider));
+            this.provider = Output.of(Objects.requireNonNull(provider));
             return this;
         }
 
-        public Builder resource(Input<String> resource) {
+        public Builder resource(Output<String> resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
 
         public Builder resource(String resource) {
-            this.resource = Input.of(Objects.requireNonNull(resource));
+            this.resource = Output.of(Objects.requireNonNull(resource));
             return this;
         }
         public OperationsDefinitionDisplayArgs build() {

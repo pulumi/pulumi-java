@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class VpcIpamPoolCidrAllocationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="cidr")
-      private final @Nullable Input<String> cidr;
+      private final @Nullable Output<String> cidr;
 
-    public Input<String> getCidr() {
-        return this.cidr == null ? Input.empty() : this.cidr;
+    public Output<String> getCidr() {
+        return this.cidr == null ? Output.empty() : this.cidr;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class VpcIpamPoolCidrAllocationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -43,17 +43,17 @@ public final class VpcIpamPoolCidrAllocationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="disallowedCidrs")
-      private final @Nullable Input<List<String>> disallowedCidrs;
+      private final @Nullable Output<List<String>> disallowedCidrs;
 
-    public Input<List<String>> getDisallowedCidrs() {
-        return this.disallowedCidrs == null ? Input.empty() : this.disallowedCidrs;
+    public Output<List<String>> getDisallowedCidrs() {
+        return this.disallowedCidrs == null ? Output.empty() : this.disallowedCidrs;
     }
 
     @InputImport(name="ipamPoolAllocationId")
-      private final @Nullable Input<String> ipamPoolAllocationId;
+      private final @Nullable Output<String> ipamPoolAllocationId;
 
-    public Input<String> getIpamPoolAllocationId() {
-        return this.ipamPoolAllocationId == null ? Input.empty() : this.ipamPoolAllocationId;
+    public Output<String> getIpamPoolAllocationId() {
+        return this.ipamPoolAllocationId == null ? Output.empty() : this.ipamPoolAllocationId;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class VpcIpamPoolCidrAllocationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="ipamPoolId")
-      private final @Nullable Input<String> ipamPoolId;
+      private final @Nullable Output<String> ipamPoolId;
 
-    public Input<String> getIpamPoolId() {
-        return this.ipamPoolId == null ? Input.empty() : this.ipamPoolId;
+    public Output<String> getIpamPoolId() {
+        return this.ipamPoolId == null ? Output.empty() : this.ipamPoolId;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class VpcIpamPoolCidrAllocationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="netmaskLength")
-      private final @Nullable Input<Integer> netmaskLength;
+      private final @Nullable Output<Integer> netmaskLength;
 
-    public Input<Integer> getNetmaskLength() {
-        return this.netmaskLength == null ? Input.empty() : this.netmaskLength;
+    public Output<Integer> getNetmaskLength() {
+        return this.netmaskLength == null ? Output.empty() : this.netmaskLength;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class VpcIpamPoolCidrAllocationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="resourceId")
-      private final @Nullable Input<String> resourceId;
+      private final @Nullable Output<String> resourceId;
 
-    public Input<String> getResourceId() {
-        return this.resourceId == null ? Input.empty() : this.resourceId;
+    public Output<String> getResourceId() {
+        return this.resourceId == null ? Output.empty() : this.resourceId;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class VpcIpamPoolCidrAllocationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="resourceOwner")
-      private final @Nullable Input<String> resourceOwner;
+      private final @Nullable Output<String> resourceOwner;
 
-    public Input<String> getResourceOwner() {
-        return this.resourceOwner == null ? Input.empty() : this.resourceOwner;
+    public Output<String> getResourceOwner() {
+        return this.resourceOwner == null ? Output.empty() : this.resourceOwner;
     }
 
     /**
@@ -105,22 +105,22 @@ public final class VpcIpamPoolCidrAllocationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="resourceType")
-      private final @Nullable Input<String> resourceType;
+      private final @Nullable Output<String> resourceType;
 
-    public Input<String> getPropResourceType() {
-        return this.resourceType == null ? Input.empty() : this.resourceType;
+    public Output<String> getPropResourceType() {
+        return this.resourceType == null ? Output.empty() : this.resourceType;
     }
 
     public VpcIpamPoolCidrAllocationState(
-        @Nullable Input<String> cidr,
-        @Nullable Input<String> description,
-        @Nullable Input<List<String>> disallowedCidrs,
-        @Nullable Input<String> ipamPoolAllocationId,
-        @Nullable Input<String> ipamPoolId,
-        @Nullable Input<Integer> netmaskLength,
-        @Nullable Input<String> resourceId,
-        @Nullable Input<String> resourceOwner,
-        @Nullable Input<String> resourceType) {
+        @Nullable Output<String> cidr,
+        @Nullable Output<String> description,
+        @Nullable Output<List<String>> disallowedCidrs,
+        @Nullable Output<String> ipamPoolAllocationId,
+        @Nullable Output<String> ipamPoolId,
+        @Nullable Output<Integer> netmaskLength,
+        @Nullable Output<String> resourceId,
+        @Nullable Output<String> resourceOwner,
+        @Nullable Output<String> resourceType) {
         this.cidr = cidr;
         this.description = description;
         this.disallowedCidrs = disallowedCidrs;
@@ -133,15 +133,15 @@ public final class VpcIpamPoolCidrAllocationState extends io.pulumi.resources.Re
     }
 
     private VpcIpamPoolCidrAllocationState() {
-        this.cidr = Input.empty();
-        this.description = Input.empty();
-        this.disallowedCidrs = Input.empty();
-        this.ipamPoolAllocationId = Input.empty();
-        this.ipamPoolId = Input.empty();
-        this.netmaskLength = Input.empty();
-        this.resourceId = Input.empty();
-        this.resourceOwner = Input.empty();
-        this.resourceType = Input.empty();
+        this.cidr = Output.empty();
+        this.description = Output.empty();
+        this.disallowedCidrs = Output.empty();
+        this.ipamPoolAllocationId = Output.empty();
+        this.ipamPoolId = Output.empty();
+        this.netmaskLength = Output.empty();
+        this.resourceId = Output.empty();
+        this.resourceOwner = Output.empty();
+        this.resourceType = Output.empty();
     }
 
     public static Builder builder() {
@@ -153,15 +153,15 @@ public final class VpcIpamPoolCidrAllocationState extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> cidr;
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<String>> disallowedCidrs;
-        private @Nullable Input<String> ipamPoolAllocationId;
-        private @Nullable Input<String> ipamPoolId;
-        private @Nullable Input<Integer> netmaskLength;
-        private @Nullable Input<String> resourceId;
-        private @Nullable Input<String> resourceOwner;
-        private @Nullable Input<String> resourceType;
+        private @Nullable Output<String> cidr;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<String>> disallowedCidrs;
+        private @Nullable Output<String> ipamPoolAllocationId;
+        private @Nullable Output<String> ipamPoolId;
+        private @Nullable Output<Integer> netmaskLength;
+        private @Nullable Output<String> resourceId;
+        private @Nullable Output<String> resourceOwner;
+        private @Nullable Output<String> resourceType;
 
         public Builder() {
     	      // Empty
@@ -180,93 +180,93 @@ public final class VpcIpamPoolCidrAllocationState extends io.pulumi.resources.Re
     	      this.resourceType = defaults.resourceType;
         }
 
-        public Builder cidr(@Nullable Input<String> cidr) {
+        public Builder cidr(@Nullable Output<String> cidr) {
             this.cidr = cidr;
             return this;
         }
 
         public Builder cidr(@Nullable String cidr) {
-            this.cidr = Input.ofNullable(cidr);
+            this.cidr = Output.ofNullable(cidr);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder disallowedCidrs(@Nullable Input<List<String>> disallowedCidrs) {
+        public Builder disallowedCidrs(@Nullable Output<List<String>> disallowedCidrs) {
             this.disallowedCidrs = disallowedCidrs;
             return this;
         }
 
         public Builder disallowedCidrs(@Nullable List<String> disallowedCidrs) {
-            this.disallowedCidrs = Input.ofNullable(disallowedCidrs);
+            this.disallowedCidrs = Output.ofNullable(disallowedCidrs);
             return this;
         }
 
-        public Builder ipamPoolAllocationId(@Nullable Input<String> ipamPoolAllocationId) {
+        public Builder ipamPoolAllocationId(@Nullable Output<String> ipamPoolAllocationId) {
             this.ipamPoolAllocationId = ipamPoolAllocationId;
             return this;
         }
 
         public Builder ipamPoolAllocationId(@Nullable String ipamPoolAllocationId) {
-            this.ipamPoolAllocationId = Input.ofNullable(ipamPoolAllocationId);
+            this.ipamPoolAllocationId = Output.ofNullable(ipamPoolAllocationId);
             return this;
         }
 
-        public Builder ipamPoolId(@Nullable Input<String> ipamPoolId) {
+        public Builder ipamPoolId(@Nullable Output<String> ipamPoolId) {
             this.ipamPoolId = ipamPoolId;
             return this;
         }
 
         public Builder ipamPoolId(@Nullable String ipamPoolId) {
-            this.ipamPoolId = Input.ofNullable(ipamPoolId);
+            this.ipamPoolId = Output.ofNullable(ipamPoolId);
             return this;
         }
 
-        public Builder netmaskLength(@Nullable Input<Integer> netmaskLength) {
+        public Builder netmaskLength(@Nullable Output<Integer> netmaskLength) {
             this.netmaskLength = netmaskLength;
             return this;
         }
 
         public Builder netmaskLength(@Nullable Integer netmaskLength) {
-            this.netmaskLength = Input.ofNullable(netmaskLength);
+            this.netmaskLength = Output.ofNullable(netmaskLength);
             return this;
         }
 
-        public Builder resourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Input.ofNullable(resourceId);
+            this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
 
-        public Builder resourceOwner(@Nullable Input<String> resourceOwner) {
+        public Builder resourceOwner(@Nullable Output<String> resourceOwner) {
             this.resourceOwner = resourceOwner;
             return this;
         }
 
         public Builder resourceOwner(@Nullable String resourceOwner) {
-            this.resourceOwner = Input.ofNullable(resourceOwner);
+            this.resourceOwner = Output.ofNullable(resourceOwner);
             return this;
         }
 
-        public Builder resourceType(@Nullable Input<String> resourceType) {
+        public Builder resourceType(@Nullable Output<String> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
         public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Input.ofNullable(resourceType);
+            this.resourceType = Output.ofNullable(resourceType);
             return this;
         }
         public VpcIpamPoolCidrAllocationState build() {

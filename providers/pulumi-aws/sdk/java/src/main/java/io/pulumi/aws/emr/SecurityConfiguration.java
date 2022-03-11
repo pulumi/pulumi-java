@@ -6,7 +6,6 @@ package io.pulumi.aws.emr;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.emr.SecurityConfigurationArgs;
 import io.pulumi.aws.emr.inputs.SecurityConfigurationState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -126,14 +125,14 @@ public class SecurityConfiguration extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SecurityConfiguration(String name, SecurityConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:emr/securityConfiguration:SecurityConfiguration", name, args == null ? SecurityConfigurationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:emr/securityConfiguration:SecurityConfiguration", name, args == null ? SecurityConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private SecurityConfiguration(String name, Input<String> id, @Nullable SecurityConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private SecurityConfiguration(String name, Output<String> id, @Nullable SecurityConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:emr/securityConfiguration:SecurityConfiguration", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -149,7 +148,7 @@ public class SecurityConfiguration extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SecurityConfiguration get(String name, Input<String> id, @Nullable SecurityConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static SecurityConfiguration get(String name, Output<String> id, @Nullable SecurityConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SecurityConfiguration(name, id, state, options);
     }
 }

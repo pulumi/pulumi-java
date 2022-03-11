@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.qldb.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -16,29 +16,29 @@ public final class StreamKinesisConfigurationArgs extends io.pulumi.resources.Re
     public static final StreamKinesisConfigurationArgs Empty = new StreamKinesisConfigurationArgs();
 
     @InputImport(name="aggregationEnabled")
-      private final @Nullable Input<Boolean> aggregationEnabled;
+      private final @Nullable Output<Boolean> aggregationEnabled;
 
-    public Input<Boolean> getAggregationEnabled() {
-        return this.aggregationEnabled == null ? Input.empty() : this.aggregationEnabled;
+    public Output<Boolean> getAggregationEnabled() {
+        return this.aggregationEnabled == null ? Output.empty() : this.aggregationEnabled;
     }
 
     @InputImport(name="streamArn")
-      private final @Nullable Input<String> streamArn;
+      private final @Nullable Output<String> streamArn;
 
-    public Input<String> getStreamArn() {
-        return this.streamArn == null ? Input.empty() : this.streamArn;
+    public Output<String> getStreamArn() {
+        return this.streamArn == null ? Output.empty() : this.streamArn;
     }
 
     public StreamKinesisConfigurationArgs(
-        @Nullable Input<Boolean> aggregationEnabled,
-        @Nullable Input<String> streamArn) {
+        @Nullable Output<Boolean> aggregationEnabled,
+        @Nullable Output<String> streamArn) {
         this.aggregationEnabled = aggregationEnabled;
         this.streamArn = streamArn;
     }
 
     private StreamKinesisConfigurationArgs() {
-        this.aggregationEnabled = Input.empty();
-        this.streamArn = Input.empty();
+        this.aggregationEnabled = Output.empty();
+        this.streamArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class StreamKinesisConfigurationArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> aggregationEnabled;
-        private @Nullable Input<String> streamArn;
+        private @Nullable Output<Boolean> aggregationEnabled;
+        private @Nullable Output<String> streamArn;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class StreamKinesisConfigurationArgs extends io.pulumi.resources.Re
     	      this.streamArn = defaults.streamArn;
         }
 
-        public Builder aggregationEnabled(@Nullable Input<Boolean> aggregationEnabled) {
+        public Builder aggregationEnabled(@Nullable Output<Boolean> aggregationEnabled) {
             this.aggregationEnabled = aggregationEnabled;
             return this;
         }
 
         public Builder aggregationEnabled(@Nullable Boolean aggregationEnabled) {
-            this.aggregationEnabled = Input.ofNullable(aggregationEnabled);
+            this.aggregationEnabled = Output.ofNullable(aggregationEnabled);
             return this;
         }
 
-        public Builder streamArn(@Nullable Input<String> streamArn) {
+        public Builder streamArn(@Nullable Output<String> streamArn) {
             this.streamArn = streamArn;
             return this;
         }
 
         public Builder streamArn(@Nullable String streamArn) {
-            this.streamArn = Input.ofNullable(streamArn);
+            this.streamArn = Output.ofNullable(streamArn);
             return this;
         }
         public StreamKinesisConfigurationArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,9 +20,9 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * 
      */
     @InputImport(name="bucketName", required=true)
-      private final Input<String> bucketName;
+      private final Output<String> bucketName;
 
-    public Input<String> getBucketName() {
+    public Output<String> getBucketName() {
         return this.bucketName;
     }
 
@@ -32,10 +32,10 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * 
      */
     @InputImport(name="excludeRegexes")
-      private final @Nullable Input<List<String>> excludeRegexes;
+      private final @Nullable Output<List<String>> excludeRegexes;
 
-    public Input<List<String>> getExcludeRegexes() {
-        return this.excludeRegexes == null ? Input.empty() : this.excludeRegexes;
+    public Output<List<String>> getExcludeRegexes() {
+        return this.excludeRegexes == null ? Output.empty() : this.excludeRegexes;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * 
      */
     @InputImport(name="includeRegexes")
-      private final @Nullable Input<List<String>> includeRegexes;
+      private final @Nullable Output<List<String>> includeRegexes;
 
-    public Input<List<String>> getIncludeRegexes() {
-        return this.includeRegexes == null ? Input.empty() : this.includeRegexes;
+    public Output<List<String>> getIncludeRegexes() {
+        return this.includeRegexes == null ? Output.empty() : this.includeRegexes;
     }
 
     public PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetArgs(
-        Input<String> bucketName,
-        @Nullable Input<List<String>> excludeRegexes,
-        @Nullable Input<List<String>> includeRegexes) {
+        Output<String> bucketName,
+        @Nullable Output<List<String>> excludeRegexes,
+        @Nullable Output<List<String>> includeRegexes) {
         this.bucketName = Objects.requireNonNull(bucketName, "expected parameter 'bucketName' to be non-null");
         this.excludeRegexes = excludeRegexes;
         this.includeRegexes = includeRegexes;
     }
 
     private PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetArgs() {
-        this.bucketName = Input.empty();
-        this.excludeRegexes = Input.empty();
-        this.includeRegexes = Input.empty();
+        this.bucketName = Output.empty();
+        this.excludeRegexes = Output.empty();
+        this.includeRegexes = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
     }
 
     public static final class Builder {
-        private Input<String> bucketName;
-        private @Nullable Input<List<String>> excludeRegexes;
-        private @Nullable Input<List<String>> includeRegexes;
+        private Output<String> bucketName;
+        private @Nullable Output<List<String>> excludeRegexes;
+        private @Nullable Output<List<String>> includeRegexes;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
     	      this.includeRegexes = defaults.includeRegexes;
         }
 
-        public Builder bucketName(Input<String> bucketName) {
+        public Builder bucketName(Output<String> bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
         public Builder bucketName(String bucketName) {
-            this.bucketName = Input.of(Objects.requireNonNull(bucketName));
+            this.bucketName = Output.of(Objects.requireNonNull(bucketName));
             return this;
         }
 
-        public Builder excludeRegexes(@Nullable Input<List<String>> excludeRegexes) {
+        public Builder excludeRegexes(@Nullable Output<List<String>> excludeRegexes) {
             this.excludeRegexes = excludeRegexes;
             return this;
         }
 
         public Builder excludeRegexes(@Nullable List<String> excludeRegexes) {
-            this.excludeRegexes = Input.ofNullable(excludeRegexes);
+            this.excludeRegexes = Output.ofNullable(excludeRegexes);
             return this;
         }
 
-        public Builder includeRegexes(@Nullable Input<List<String>> includeRegexes) {
+        public Builder includeRegexes(@Nullable Output<List<String>> includeRegexes) {
             this.includeRegexes = includeRegexes;
             return this;
         }
 
         public Builder includeRegexes(@Nullable List<String> includeRegexes) {
-            this.includeRegexes = Input.ofNullable(includeRegexes);
+            this.includeRegexes = Output.ofNullable(includeRegexes);
             return this;
         }
         public PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetArgs build() {

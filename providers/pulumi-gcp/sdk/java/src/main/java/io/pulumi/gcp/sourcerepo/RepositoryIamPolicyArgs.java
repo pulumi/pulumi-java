@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sourcerepo;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class RepositoryIamPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="policyData", required=true)
-      private final Input<String> policyData;
+      private final Output<String> policyData;
 
-    public Input<String> getPolicyData() {
+    public Output<String> getPolicyData() {
         return this.policyData;
     }
 
@@ -32,32 +32,32 @@ public final class RepositoryIamPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="repository", required=true)
-      private final Input<String> repository;
+      private final Output<String> repository;
 
-    public Input<String> getRepository() {
+    public Output<String> getRepository() {
         return this.repository;
     }
 
     public RepositoryIamPolicyArgs(
-        Input<String> policyData,
-        @Nullable Input<String> project,
-        Input<String> repository) {
+        Output<String> policyData,
+        @Nullable Output<String> project,
+        Output<String> repository) {
         this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
         this.project = project;
         this.repository = Objects.requireNonNull(repository, "expected parameter 'repository' to be non-null");
     }
 
     private RepositoryIamPolicyArgs() {
-        this.policyData = Input.empty();
-        this.project = Input.empty();
-        this.repository = Input.empty();
+        this.policyData = Output.empty();
+        this.project = Output.empty();
+        this.repository = Output.empty();
     }
 
     public static Builder builder() {
@@ -69,9 +69,9 @@ public final class RepositoryIamPolicyArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> policyData;
-        private @Nullable Input<String> project;
-        private Input<String> repository;
+        private Output<String> policyData;
+        private @Nullable Output<String> project;
+        private Output<String> repository;
 
         public Builder() {
     	      // Empty
@@ -84,33 +84,33 @@ public final class RepositoryIamPolicyArgs extends io.pulumi.resources.ResourceA
     	      this.repository = defaults.repository;
         }
 
-        public Builder policyData(Input<String> policyData) {
+        public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
 
         public Builder policyData(String policyData) {
-            this.policyData = Input.of(Objects.requireNonNull(policyData));
+            this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder repository(Input<String> repository) {
+        public Builder repository(Output<String> repository) {
             this.repository = Objects.requireNonNull(repository);
             return this;
         }
 
         public Builder repository(String repository) {
-            this.repository = Input.of(Objects.requireNonNull(repository));
+            this.repository = Output.of(Objects.requireNonNull(repository));
             return this;
         }
         public RepositoryIamPolicyArgs build() {

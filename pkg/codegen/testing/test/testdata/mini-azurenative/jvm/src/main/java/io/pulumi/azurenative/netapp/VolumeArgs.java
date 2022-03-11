@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.netapp;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
@@ -15,10 +15,10 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     public static final VolumeArgs Empty = new VolumeArgs();
 
     @InputImport(name="throughputMibps")
-      private final @Nullable Input<Double> throughputMibps;
+      private final @Nullable Output<Double> throughputMibps;
 
-    public Input<Double> getThroughputMibps() {
-        return this.throughputMibps == null ? Input.empty() : this.throughputMibps;
+    public Output<Double> getThroughputMibps() {
+        return this.throughputMibps == null ? Output.empty() : this.throughputMibps;
     }
 
     /**
@@ -26,22 +26,22 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="usageThreshold", required=true)
-      private final Input<Double> usageThreshold;
+      private final Output<Double> usageThreshold;
 
-    public Input<Double> getUsageThreshold() {
+    public Output<Double> getUsageThreshold() {
         return this.usageThreshold;
     }
 
     public VolumeArgs(
-        @Nullable Input<Double> throughputMibps,
-        Input<Double> usageThreshold) {
-        this.throughputMibps = throughputMibps == null ? Input.ofNullable(0e+00) : throughputMibps;
-        this.usageThreshold = usageThreshold == null ? Input.ofNullable(1.073741824e+11) : Objects.requireNonNull(usageThreshold, "expected parameter 'usageThreshold' to be non-null");
+        @Nullable Output<Double> throughputMibps,
+        Output<Double> usageThreshold) {
+        this.throughputMibps = throughputMibps == null ? Output.ofNullable(0e+00) : throughputMibps;
+        this.usageThreshold = usageThreshold == null ? Output.ofNullable(1.073741824e+11) : Objects.requireNonNull(usageThreshold, "expected parameter 'usageThreshold' to be non-null");
     }
 
     private VolumeArgs() {
-        this.throughputMibps = Input.empty();
-        this.usageThreshold = Input.empty();
+        this.throughputMibps = Output.empty();
+        this.usageThreshold = Output.empty();
     }
 
     public static Builder builder() {
@@ -53,8 +53,8 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Double> throughputMibps;
-        private Input<Double> usageThreshold;
+        private @Nullable Output<Double> throughputMibps;
+        private Output<Double> usageThreshold;
 
         public Builder() {
     	      // Empty
@@ -66,23 +66,23 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.usageThreshold = defaults.usageThreshold;
         }
 
-        public Builder throughputMibps(@Nullable Input<Double> throughputMibps) {
+        public Builder throughputMibps(@Nullable Output<Double> throughputMibps) {
             this.throughputMibps = throughputMibps;
             return this;
         }
 
         public Builder throughputMibps(@Nullable Double throughputMibps) {
-            this.throughputMibps = Input.ofNullable(throughputMibps);
+            this.throughputMibps = Output.ofNullable(throughputMibps);
             return this;
         }
 
-        public Builder usageThreshold(Input<Double> usageThreshold) {
+        public Builder usageThreshold(Output<Double> usageThreshold) {
             this.usageThreshold = Objects.requireNonNull(usageThreshold);
             return this;
         }
 
         public Builder usageThreshold(Double usageThreshold) {
-            this.usageThreshold = Input.of(Objects.requireNonNull(usageThreshold));
+            this.usageThreshold = Output.of(Objects.requireNonNull(usageThreshold));
             return this;
         }
         public VolumeArgs build() {

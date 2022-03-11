@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glue.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class CrawlerDeltaTargetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="connectionName", required=true)
-      private final Input<String> connectionName;
+      private final Output<String> connectionName;
 
-    public Input<String> getConnectionName() {
+    public Output<String> getConnectionName() {
         return this.connectionName;
     }
 
@@ -31,9 +31,9 @@ public final class CrawlerDeltaTargetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="deltaTables", required=true)
-      private final Input<List<String>> deltaTables;
+      private final Output<List<String>> deltaTables;
 
-    public Input<List<String>> getDeltaTables() {
+    public Output<List<String>> getDeltaTables() {
         return this.deltaTables;
     }
 
@@ -42,25 +42,25 @@ public final class CrawlerDeltaTargetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="writeManifest", required=true)
-      private final Input<Boolean> writeManifest;
+      private final Output<Boolean> writeManifest;
 
-    public Input<Boolean> getWriteManifest() {
+    public Output<Boolean> getWriteManifest() {
         return this.writeManifest;
     }
 
     public CrawlerDeltaTargetArgs(
-        Input<String> connectionName,
-        Input<List<String>> deltaTables,
-        Input<Boolean> writeManifest) {
+        Output<String> connectionName,
+        Output<List<String>> deltaTables,
+        Output<Boolean> writeManifest) {
         this.connectionName = Objects.requireNonNull(connectionName, "expected parameter 'connectionName' to be non-null");
         this.deltaTables = Objects.requireNonNull(deltaTables, "expected parameter 'deltaTables' to be non-null");
         this.writeManifest = Objects.requireNonNull(writeManifest, "expected parameter 'writeManifest' to be non-null");
     }
 
     private CrawlerDeltaTargetArgs() {
-        this.connectionName = Input.empty();
-        this.deltaTables = Input.empty();
-        this.writeManifest = Input.empty();
+        this.connectionName = Output.empty();
+        this.deltaTables = Output.empty();
+        this.writeManifest = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class CrawlerDeltaTargetArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> connectionName;
-        private Input<List<String>> deltaTables;
-        private Input<Boolean> writeManifest;
+        private Output<String> connectionName;
+        private Output<List<String>> deltaTables;
+        private Output<Boolean> writeManifest;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class CrawlerDeltaTargetArgs extends io.pulumi.resources.ResourceAr
     	      this.writeManifest = defaults.writeManifest;
         }
 
-        public Builder connectionName(Input<String> connectionName) {
+        public Builder connectionName(Output<String> connectionName) {
             this.connectionName = Objects.requireNonNull(connectionName);
             return this;
         }
 
         public Builder connectionName(String connectionName) {
-            this.connectionName = Input.of(Objects.requireNonNull(connectionName));
+            this.connectionName = Output.of(Objects.requireNonNull(connectionName));
             return this;
         }
 
-        public Builder deltaTables(Input<List<String>> deltaTables) {
+        public Builder deltaTables(Output<List<String>> deltaTables) {
             this.deltaTables = Objects.requireNonNull(deltaTables);
             return this;
         }
 
         public Builder deltaTables(List<String> deltaTables) {
-            this.deltaTables = Input.of(Objects.requireNonNull(deltaTables));
+            this.deltaTables = Output.of(Objects.requireNonNull(deltaTables));
             return this;
         }
 
-        public Builder writeManifest(Input<Boolean> writeManifest) {
+        public Builder writeManifest(Output<Boolean> writeManifest) {
             this.writeManifest = Objects.requireNonNull(writeManifest);
             return this;
         }
 
         public Builder writeManifest(Boolean writeManifest) {
-            this.writeManifest = Input.of(Objects.requireNonNull(writeManifest));
+            this.writeManifest = Output.of(Objects.requireNonNull(writeManifest));
             return this;
         }
         public CrawlerDeltaTargetArgs build() {

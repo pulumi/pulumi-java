@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class BatchRetrySettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="maxRetries")
-      private final @Nullable Input<Integer> maxRetries;
+      private final @Nullable Output<Integer> maxRetries;
 
-    public Input<Integer> getMaxRetries() {
-        return this.maxRetries == null ? Input.empty() : this.maxRetries;
+    public Output<Integer> getMaxRetries() {
+        return this.maxRetries == null ? Output.empty() : this.maxRetries;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class BatchRetrySettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="timeout")
-      private final @Nullable Input<String> timeout;
+      private final @Nullable Output<String> timeout;
 
-    public Input<String> getTimeout() {
-        return this.timeout == null ? Input.empty() : this.timeout;
+    public Output<String> getTimeout() {
+        return this.timeout == null ? Output.empty() : this.timeout;
     }
 
     public BatchRetrySettingsArgs(
-        @Nullable Input<Integer> maxRetries,
-        @Nullable Input<String> timeout) {
+        @Nullable Output<Integer> maxRetries,
+        @Nullable Output<String> timeout) {
         this.maxRetries = maxRetries;
         this.timeout = timeout;
     }
 
     private BatchRetrySettingsArgs() {
-        this.maxRetries = Input.empty();
-        this.timeout = Input.empty();
+        this.maxRetries = Output.empty();
+        this.timeout = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class BatchRetrySettingsArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> maxRetries;
-        private @Nullable Input<String> timeout;
+        private @Nullable Output<Integer> maxRetries;
+        private @Nullable Output<String> timeout;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class BatchRetrySettingsArgs extends io.pulumi.resources.ResourceAr
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder maxRetries(@Nullable Input<Integer> maxRetries) {
+        public Builder maxRetries(@Nullable Output<Integer> maxRetries) {
             this.maxRetries = maxRetries;
             return this;
         }
 
         public Builder maxRetries(@Nullable Integer maxRetries) {
-            this.maxRetries = Input.ofNullable(maxRetries);
+            this.maxRetries = Output.ofNullable(maxRetries);
             return this;
         }
 
-        public Builder timeout(@Nullable Input<String> timeout) {
+        public Builder timeout(@Nullable Output<String> timeout) {
             this.timeout = timeout;
             return this;
         }
 
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = Input.ofNullable(timeout);
+            this.timeout = Output.ofNullable(timeout);
             return this;
         }
         public BatchRetrySettingsArgs build() {

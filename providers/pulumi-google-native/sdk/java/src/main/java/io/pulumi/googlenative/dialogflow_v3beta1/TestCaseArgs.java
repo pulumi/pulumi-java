@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1ConversationTurnArgs;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1TestCaseResultArgs;
@@ -19,9 +19,9 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
     public static final TestCaseArgs Empty = new TestCaseArgs();
 
     @InputImport(name="agentId", required=true)
-      private final Input<String> agentId;
+      private final Output<String> agentId;
 
-    public Input<String> getAgentId() {
+    public Output<String> getAgentId() {
         return this.agentId;
     }
 
@@ -30,9 +30,9 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -41,17 +41,17 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastTestResult")
-      private final @Nullable Input<GoogleCloudDialogflowCxV3beta1TestCaseResultArgs> lastTestResult;
+      private final @Nullable Output<GoogleCloudDialogflowCxV3beta1TestCaseResultArgs> lastTestResult;
 
-    public Input<GoogleCloudDialogflowCxV3beta1TestCaseResultArgs> getLastTestResult() {
-        return this.lastTestResult == null ? Input.empty() : this.lastTestResult;
+    public Output<GoogleCloudDialogflowCxV3beta1TestCaseResultArgs> getLastTestResult() {
+        return this.lastTestResult == null ? Output.empty() : this.lastTestResult;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -70,17 +70,17 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notes")
-      private final @Nullable Input<String> notes;
+      private final @Nullable Output<String> notes;
 
-    public Input<String> getNotes() {
-        return this.notes == null ? Input.empty() : this.notes;
+    public Output<String> getNotes() {
+        return this.notes == null ? Output.empty() : this.notes;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<String>> tags;
+      private final @Nullable Output<List<String>> tags;
 
-    public Input<List<String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="testCaseConversationTurns")
-      private final @Nullable Input<List<GoogleCloudDialogflowCxV3beta1ConversationTurnArgs>> testCaseConversationTurns;
+      private final @Nullable Output<List<GoogleCloudDialogflowCxV3beta1ConversationTurnArgs>> testCaseConversationTurns;
 
-    public Input<List<GoogleCloudDialogflowCxV3beta1ConversationTurnArgs>> getTestCaseConversationTurns() {
-        return this.testCaseConversationTurns == null ? Input.empty() : this.testCaseConversationTurns;
+    public Output<List<GoogleCloudDialogflowCxV3beta1ConversationTurnArgs>> getTestCaseConversationTurns() {
+        return this.testCaseConversationTurns == null ? Output.empty() : this.testCaseConversationTurns;
     }
 
     /**
@@ -110,23 +110,23 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="testConfig")
-      private final @Nullable Input<GoogleCloudDialogflowCxV3beta1TestConfigArgs> testConfig;
+      private final @Nullable Output<GoogleCloudDialogflowCxV3beta1TestConfigArgs> testConfig;
 
-    public Input<GoogleCloudDialogflowCxV3beta1TestConfigArgs> getTestConfig() {
-        return this.testConfig == null ? Input.empty() : this.testConfig;
+    public Output<GoogleCloudDialogflowCxV3beta1TestConfigArgs> getTestConfig() {
+        return this.testConfig == null ? Output.empty() : this.testConfig;
     }
 
     public TestCaseArgs(
-        Input<String> agentId,
-        Input<String> displayName,
-        @Nullable Input<GoogleCloudDialogflowCxV3beta1TestCaseResultArgs> lastTestResult,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> notes,
-        @Nullable Input<String> project,
-        @Nullable Input<List<String>> tags,
-        @Nullable Input<List<GoogleCloudDialogflowCxV3beta1ConversationTurnArgs>> testCaseConversationTurns,
-        @Nullable Input<GoogleCloudDialogflowCxV3beta1TestConfigArgs> testConfig) {
+        Output<String> agentId,
+        Output<String> displayName,
+        @Nullable Output<GoogleCloudDialogflowCxV3beta1TestCaseResultArgs> lastTestResult,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> notes,
+        @Nullable Output<String> project,
+        @Nullable Output<List<String>> tags,
+        @Nullable Output<List<GoogleCloudDialogflowCxV3beta1ConversationTurnArgs>> testCaseConversationTurns,
+        @Nullable Output<GoogleCloudDialogflowCxV3beta1TestConfigArgs> testConfig) {
         this.agentId = Objects.requireNonNull(agentId, "expected parameter 'agentId' to be non-null");
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
         this.lastTestResult = lastTestResult;
@@ -140,16 +140,16 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TestCaseArgs() {
-        this.agentId = Input.empty();
-        this.displayName = Input.empty();
-        this.lastTestResult = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.notes = Input.empty();
-        this.project = Input.empty();
-        this.tags = Input.empty();
-        this.testCaseConversationTurns = Input.empty();
-        this.testConfig = Input.empty();
+        this.agentId = Output.empty();
+        this.displayName = Output.empty();
+        this.lastTestResult = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.notes = Output.empty();
+        this.project = Output.empty();
+        this.tags = Output.empty();
+        this.testCaseConversationTurns = Output.empty();
+        this.testConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -161,16 +161,16 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> agentId;
-        private Input<String> displayName;
-        private @Nullable Input<GoogleCloudDialogflowCxV3beta1TestCaseResultArgs> lastTestResult;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> notes;
-        private @Nullable Input<String> project;
-        private @Nullable Input<List<String>> tags;
-        private @Nullable Input<List<GoogleCloudDialogflowCxV3beta1ConversationTurnArgs>> testCaseConversationTurns;
-        private @Nullable Input<GoogleCloudDialogflowCxV3beta1TestConfigArgs> testConfig;
+        private Output<String> agentId;
+        private Output<String> displayName;
+        private @Nullable Output<GoogleCloudDialogflowCxV3beta1TestCaseResultArgs> lastTestResult;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> notes;
+        private @Nullable Output<String> project;
+        private @Nullable Output<List<String>> tags;
+        private @Nullable Output<List<GoogleCloudDialogflowCxV3beta1ConversationTurnArgs>> testCaseConversationTurns;
+        private @Nullable Output<GoogleCloudDialogflowCxV3beta1TestConfigArgs> testConfig;
 
         public Builder() {
     	      // Empty
@@ -190,103 +190,103 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
     	      this.testConfig = defaults.testConfig;
         }
 
-        public Builder agentId(Input<String> agentId) {
+        public Builder agentId(Output<String> agentId) {
             this.agentId = Objects.requireNonNull(agentId);
             return this;
         }
 
         public Builder agentId(String agentId) {
-            this.agentId = Input.of(Objects.requireNonNull(agentId));
+            this.agentId = Output.of(Objects.requireNonNull(agentId));
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder lastTestResult(@Nullable Input<GoogleCloudDialogflowCxV3beta1TestCaseResultArgs> lastTestResult) {
+        public Builder lastTestResult(@Nullable Output<GoogleCloudDialogflowCxV3beta1TestCaseResultArgs> lastTestResult) {
             this.lastTestResult = lastTestResult;
             return this;
         }
 
         public Builder lastTestResult(@Nullable GoogleCloudDialogflowCxV3beta1TestCaseResultArgs lastTestResult) {
-            this.lastTestResult = Input.ofNullable(lastTestResult);
+            this.lastTestResult = Output.ofNullable(lastTestResult);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder notes(@Nullable Input<String> notes) {
+        public Builder notes(@Nullable Output<String> notes) {
             this.notes = notes;
             return this;
         }
 
         public Builder notes(@Nullable String notes) {
-            this.notes = Input.ofNullable(notes);
+            this.notes = Output.ofNullable(notes);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<String>> tags) {
+        public Builder tags(@Nullable Output<List<String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder testCaseConversationTurns(@Nullable Input<List<GoogleCloudDialogflowCxV3beta1ConversationTurnArgs>> testCaseConversationTurns) {
+        public Builder testCaseConversationTurns(@Nullable Output<List<GoogleCloudDialogflowCxV3beta1ConversationTurnArgs>> testCaseConversationTurns) {
             this.testCaseConversationTurns = testCaseConversationTurns;
             return this;
         }
 
         public Builder testCaseConversationTurns(@Nullable List<GoogleCloudDialogflowCxV3beta1ConversationTurnArgs> testCaseConversationTurns) {
-            this.testCaseConversationTurns = Input.ofNullable(testCaseConversationTurns);
+            this.testCaseConversationTurns = Output.ofNullable(testCaseConversationTurns);
             return this;
         }
 
-        public Builder testConfig(@Nullable Input<GoogleCloudDialogflowCxV3beta1TestConfigArgs> testConfig) {
+        public Builder testConfig(@Nullable Output<GoogleCloudDialogflowCxV3beta1TestConfigArgs> testConfig) {
             this.testConfig = testConfig;
             return this;
         }
 
         public Builder testConfig(@Nullable GoogleCloudDialogflowCxV3beta1TestConfigArgs testConfig) {
-            this.testConfig = Input.ofNullable(testConfig);
+            this.testConfig = Output.ofNullable(testConfig);
             return this;
         }
         public TestCaseArgs build() {

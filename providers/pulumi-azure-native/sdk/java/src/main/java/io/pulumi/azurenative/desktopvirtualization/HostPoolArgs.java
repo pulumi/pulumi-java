@@ -14,7 +14,7 @@ import io.pulumi.azurenative.desktopvirtualization.inputs.ResourceModelWithAllow
 import io.pulumi.azurenative.desktopvirtualization.inputs.ResourceModelWithAllowedPropertySetPlanArgs;
 import io.pulumi.azurenative.desktopvirtualization.inputs.ResourceModelWithAllowedPropertySetSkuArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -33,10 +33,10 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customRdpProperty")
-      private final @Nullable Input<String> customRdpProperty;
+      private final @Nullable Output<String> customRdpProperty;
 
-    public Input<String> getCustomRdpProperty() {
-        return this.customRdpProperty == null ? Input.empty() : this.customRdpProperty;
+    public Output<String> getCustomRdpProperty() {
+        return this.customRdpProperty == null ? Output.empty() : this.customRdpProperty;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="friendlyName")
-      private final @Nullable Input<String> friendlyName;
+      private final @Nullable Output<String> friendlyName;
 
-    public Input<String> getFriendlyName() {
-        return this.friendlyName == null ? Input.empty() : this.friendlyName;
+    public Output<String> getFriendlyName() {
+        return this.friendlyName == null ? Output.empty() : this.friendlyName;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostPoolName")
-      private final @Nullable Input<String> hostPoolName;
+      private final @Nullable Output<String> hostPoolName;
 
-    public Input<String> getHostPoolName() {
-        return this.hostPoolName == null ? Input.empty() : this.hostPoolName;
+    public Output<String> getHostPoolName() {
+        return this.hostPoolName == null ? Output.empty() : this.hostPoolName;
     }
 
     /**
@@ -77,17 +77,17 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostPoolType", required=true)
-      private final Input<Either<String,HostPoolType>> hostPoolType;
+      private final Output<Either<String,HostPoolType>> hostPoolType;
 
-    public Input<Either<String,HostPoolType>> getHostPoolType() {
+    public Output<Either<String,HostPoolType>> getHostPoolType() {
         return this.hostPoolType;
     }
 
     @InputImport(name="identity")
-      private final @Nullable Input<ResourceModelWithAllowedPropertySetIdentityArgs> identity;
+      private final @Nullable Output<ResourceModelWithAllowedPropertySetIdentityArgs> identity;
 
-    public Input<ResourceModelWithAllowedPropertySetIdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<ResourceModelWithAllowedPropertySetIdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -106,9 +106,9 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loadBalancerType", required=true)
-      private final Input<Either<String,LoadBalancerType>> loadBalancerType;
+      private final Output<Either<String,LoadBalancerType>> loadBalancerType;
 
-    public Input<Either<String,LoadBalancerType>> getLoadBalancerType() {
+    public Output<Either<String,LoadBalancerType>> getLoadBalancerType() {
         return this.loadBalancerType;
     }
 
@@ -117,10 +117,10 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -128,10 +128,10 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedBy")
-      private final @Nullable Input<String> managedBy;
+      private final @Nullable Output<String> managedBy;
 
-    public Input<String> getManagedBy() {
-        return this.managedBy == null ? Input.empty() : this.managedBy;
+    public Output<String> getManagedBy() {
+        return this.managedBy == null ? Output.empty() : this.managedBy;
     }
 
     /**
@@ -139,10 +139,10 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxSessionLimit")
-      private final @Nullable Input<Integer> maxSessionLimit;
+      private final @Nullable Output<Integer> maxSessionLimit;
 
-    public Input<Integer> getMaxSessionLimit() {
-        return this.maxSessionLimit == null ? Input.empty() : this.maxSessionLimit;
+    public Output<Integer> getMaxSessionLimit() {
+        return this.maxSessionLimit == null ? Output.empty() : this.maxSessionLimit;
     }
 
     /**
@@ -150,10 +150,10 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="migrationRequest")
-      private final @Nullable Input<MigrationRequestPropertiesArgs> migrationRequest;
+      private final @Nullable Output<MigrationRequestPropertiesArgs> migrationRequest;
 
-    public Input<MigrationRequestPropertiesArgs> getMigrationRequest() {
-        return this.migrationRequest == null ? Input.empty() : this.migrationRequest;
+    public Output<MigrationRequestPropertiesArgs> getMigrationRequest() {
+        return this.migrationRequest == null ? Output.empty() : this.migrationRequest;
     }
 
     /**
@@ -161,17 +161,17 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="personalDesktopAssignmentType")
-      private final @Nullable Input<Either<String,PersonalDesktopAssignmentType>> personalDesktopAssignmentType;
+      private final @Nullable Output<Either<String,PersonalDesktopAssignmentType>> personalDesktopAssignmentType;
 
-    public Input<Either<String,PersonalDesktopAssignmentType>> getPersonalDesktopAssignmentType() {
-        return this.personalDesktopAssignmentType == null ? Input.empty() : this.personalDesktopAssignmentType;
+    public Output<Either<String,PersonalDesktopAssignmentType>> getPersonalDesktopAssignmentType() {
+        return this.personalDesktopAssignmentType == null ? Output.empty() : this.personalDesktopAssignmentType;
     }
 
     @InputImport(name="plan")
-      private final @Nullable Input<ResourceModelWithAllowedPropertySetPlanArgs> plan;
+      private final @Nullable Output<ResourceModelWithAllowedPropertySetPlanArgs> plan;
 
-    public Input<ResourceModelWithAllowedPropertySetPlanArgs> getPlan() {
-        return this.plan == null ? Input.empty() : this.plan;
+    public Output<ResourceModelWithAllowedPropertySetPlanArgs> getPlan() {
+        return this.plan == null ? Output.empty() : this.plan;
     }
 
     /**
@@ -179,9 +179,9 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preferredAppGroupType", required=true)
-      private final Input<Either<String,PreferredAppGroupType>> preferredAppGroupType;
+      private final Output<Either<String,PreferredAppGroupType>> preferredAppGroupType;
 
-    public Input<Either<String,PreferredAppGroupType>> getPreferredAppGroupType() {
+    public Output<Either<String,PreferredAppGroupType>> getPreferredAppGroupType() {
         return this.preferredAppGroupType;
     }
 
@@ -190,10 +190,10 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registrationInfo")
-      private final @Nullable Input<RegistrationInfoArgs> registrationInfo;
+      private final @Nullable Output<RegistrationInfoArgs> registrationInfo;
 
-    public Input<RegistrationInfoArgs> getRegistrationInfo() {
-        return this.registrationInfo == null ? Input.empty() : this.registrationInfo;
+    public Output<RegistrationInfoArgs> getRegistrationInfo() {
+        return this.registrationInfo == null ? Output.empty() : this.registrationInfo;
     }
 
     /**
@@ -201,9 +201,9 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -212,17 +212,17 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ring")
-      private final @Nullable Input<Integer> ring;
+      private final @Nullable Output<Integer> ring;
 
-    public Input<Integer> getRing() {
-        return this.ring == null ? Input.empty() : this.ring;
+    public Output<Integer> getRing() {
+        return this.ring == null ? Output.empty() : this.ring;
     }
 
     @InputImport(name="sku")
-      private final @Nullable Input<ResourceModelWithAllowedPropertySetSkuArgs> sku;
+      private final @Nullable Output<ResourceModelWithAllowedPropertySetSkuArgs> sku;
 
-    public Input<ResourceModelWithAllowedPropertySetSkuArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<ResourceModelWithAllowedPropertySetSkuArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -230,10 +230,10 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ssoClientId")
-      private final @Nullable Input<String> ssoClientId;
+      private final @Nullable Output<String> ssoClientId;
 
-    public Input<String> getSsoClientId() {
-        return this.ssoClientId == null ? Input.empty() : this.ssoClientId;
+    public Output<String> getSsoClientId() {
+        return this.ssoClientId == null ? Output.empty() : this.ssoClientId;
     }
 
     /**
@@ -241,10 +241,10 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ssoClientSecretKeyVaultPath")
-      private final @Nullable Input<String> ssoClientSecretKeyVaultPath;
+      private final @Nullable Output<String> ssoClientSecretKeyVaultPath;
 
-    public Input<String> getSsoClientSecretKeyVaultPath() {
-        return this.ssoClientSecretKeyVaultPath == null ? Input.empty() : this.ssoClientSecretKeyVaultPath;
+    public Output<String> getSsoClientSecretKeyVaultPath() {
+        return this.ssoClientSecretKeyVaultPath == null ? Output.empty() : this.ssoClientSecretKeyVaultPath;
     }
 
     /**
@@ -252,10 +252,10 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ssoSecretType")
-      private final @Nullable Input<Either<String,SSOSecretType>> ssoSecretType;
+      private final @Nullable Output<Either<String,SSOSecretType>> ssoSecretType;
 
-    public Input<Either<String,SSOSecretType>> getSsoSecretType() {
-        return this.ssoSecretType == null ? Input.empty() : this.ssoSecretType;
+    public Output<Either<String,SSOSecretType>> getSsoSecretType() {
+        return this.ssoSecretType == null ? Output.empty() : this.ssoSecretType;
     }
 
     /**
@@ -263,10 +263,10 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ssoadfsAuthority")
-      private final @Nullable Input<String> ssoadfsAuthority;
+      private final @Nullable Output<String> ssoadfsAuthority;
 
-    public Input<String> getSsoadfsAuthority() {
-        return this.ssoadfsAuthority == null ? Input.empty() : this.ssoadfsAuthority;
+    public Output<String> getSsoadfsAuthority() {
+        return this.ssoadfsAuthority == null ? Output.empty() : this.ssoadfsAuthority;
     }
 
     /**
@@ -274,10 +274,10 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startVMOnConnect")
-      private final @Nullable Input<Boolean> startVMOnConnect;
+      private final @Nullable Output<Boolean> startVMOnConnect;
 
-    public Input<Boolean> getStartVMOnConnect() {
-        return this.startVMOnConnect == null ? Input.empty() : this.startVMOnConnect;
+    public Output<Boolean> getStartVMOnConnect() {
+        return this.startVMOnConnect == null ? Output.empty() : this.startVMOnConnect;
     }
 
     /**
@@ -285,10 +285,10 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -296,10 +296,10 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="validationEnvironment")
-      private final @Nullable Input<Boolean> validationEnvironment;
+      private final @Nullable Output<Boolean> validationEnvironment;
 
-    public Input<Boolean> getValidationEnvironment() {
-        return this.validationEnvironment == null ? Input.empty() : this.validationEnvironment;
+    public Output<Boolean> getValidationEnvironment() {
+        return this.validationEnvironment == null ? Output.empty() : this.validationEnvironment;
     }
 
     /**
@@ -307,40 +307,40 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vmTemplate")
-      private final @Nullable Input<String> vmTemplate;
+      private final @Nullable Output<String> vmTemplate;
 
-    public Input<String> getVmTemplate() {
-        return this.vmTemplate == null ? Input.empty() : this.vmTemplate;
+    public Output<String> getVmTemplate() {
+        return this.vmTemplate == null ? Output.empty() : this.vmTemplate;
     }
 
     public HostPoolArgs(
-        @Nullable Input<String> customRdpProperty,
-        @Nullable Input<String> description,
-        @Nullable Input<String> friendlyName,
-        @Nullable Input<String> hostPoolName,
-        Input<Either<String,HostPoolType>> hostPoolType,
-        @Nullable Input<ResourceModelWithAllowedPropertySetIdentityArgs> identity,
-        @Nullable Input<String> kind,
-        Input<Either<String,LoadBalancerType>> loadBalancerType,
-        @Nullable Input<String> location,
-        @Nullable Input<String> managedBy,
-        @Nullable Input<Integer> maxSessionLimit,
-        @Nullable Input<MigrationRequestPropertiesArgs> migrationRequest,
-        @Nullable Input<Either<String,PersonalDesktopAssignmentType>> personalDesktopAssignmentType,
-        @Nullable Input<ResourceModelWithAllowedPropertySetPlanArgs> plan,
-        Input<Either<String,PreferredAppGroupType>> preferredAppGroupType,
-        @Nullable Input<RegistrationInfoArgs> registrationInfo,
-        Input<String> resourceGroupName,
-        @Nullable Input<Integer> ring,
-        @Nullable Input<ResourceModelWithAllowedPropertySetSkuArgs> sku,
-        @Nullable Input<String> ssoClientId,
-        @Nullable Input<String> ssoClientSecretKeyVaultPath,
-        @Nullable Input<Either<String,SSOSecretType>> ssoSecretType,
-        @Nullable Input<String> ssoadfsAuthority,
-        @Nullable Input<Boolean> startVMOnConnect,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Boolean> validationEnvironment,
-        @Nullable Input<String> vmTemplate) {
+        @Nullable Output<String> customRdpProperty,
+        @Nullable Output<String> description,
+        @Nullable Output<String> friendlyName,
+        @Nullable Output<String> hostPoolName,
+        Output<Either<String,HostPoolType>> hostPoolType,
+        @Nullable Output<ResourceModelWithAllowedPropertySetIdentityArgs> identity,
+        @Nullable Output<String> kind,
+        Output<Either<String,LoadBalancerType>> loadBalancerType,
+        @Nullable Output<String> location,
+        @Nullable Output<String> managedBy,
+        @Nullable Output<Integer> maxSessionLimit,
+        @Nullable Output<MigrationRequestPropertiesArgs> migrationRequest,
+        @Nullable Output<Either<String,PersonalDesktopAssignmentType>> personalDesktopAssignmentType,
+        @Nullable Output<ResourceModelWithAllowedPropertySetPlanArgs> plan,
+        Output<Either<String,PreferredAppGroupType>> preferredAppGroupType,
+        @Nullable Output<RegistrationInfoArgs> registrationInfo,
+        Output<String> resourceGroupName,
+        @Nullable Output<Integer> ring,
+        @Nullable Output<ResourceModelWithAllowedPropertySetSkuArgs> sku,
+        @Nullable Output<String> ssoClientId,
+        @Nullable Output<String> ssoClientSecretKeyVaultPath,
+        @Nullable Output<Either<String,SSOSecretType>> ssoSecretType,
+        @Nullable Output<String> ssoadfsAuthority,
+        @Nullable Output<Boolean> startVMOnConnect,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Boolean> validationEnvironment,
+        @Nullable Output<String> vmTemplate) {
         this.customRdpProperty = customRdpProperty;
         this.description = description;
         this.friendlyName = friendlyName;
@@ -371,33 +371,33 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HostPoolArgs() {
-        this.customRdpProperty = Input.empty();
-        this.description = Input.empty();
-        this.friendlyName = Input.empty();
-        this.hostPoolName = Input.empty();
-        this.hostPoolType = Input.empty();
-        this.identity = Input.empty();
-        this.kind = Input.empty();
-        this.loadBalancerType = Input.empty();
-        this.location = Input.empty();
-        this.managedBy = Input.empty();
-        this.maxSessionLimit = Input.empty();
-        this.migrationRequest = Input.empty();
-        this.personalDesktopAssignmentType = Input.empty();
-        this.plan = Input.empty();
-        this.preferredAppGroupType = Input.empty();
-        this.registrationInfo = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.ring = Input.empty();
-        this.sku = Input.empty();
-        this.ssoClientId = Input.empty();
-        this.ssoClientSecretKeyVaultPath = Input.empty();
-        this.ssoSecretType = Input.empty();
-        this.ssoadfsAuthority = Input.empty();
-        this.startVMOnConnect = Input.empty();
-        this.tags = Input.empty();
-        this.validationEnvironment = Input.empty();
-        this.vmTemplate = Input.empty();
+        this.customRdpProperty = Output.empty();
+        this.description = Output.empty();
+        this.friendlyName = Output.empty();
+        this.hostPoolName = Output.empty();
+        this.hostPoolType = Output.empty();
+        this.identity = Output.empty();
+        this.kind = Output.empty();
+        this.loadBalancerType = Output.empty();
+        this.location = Output.empty();
+        this.managedBy = Output.empty();
+        this.maxSessionLimit = Output.empty();
+        this.migrationRequest = Output.empty();
+        this.personalDesktopAssignmentType = Output.empty();
+        this.plan = Output.empty();
+        this.preferredAppGroupType = Output.empty();
+        this.registrationInfo = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.ring = Output.empty();
+        this.sku = Output.empty();
+        this.ssoClientId = Output.empty();
+        this.ssoClientSecretKeyVaultPath = Output.empty();
+        this.ssoSecretType = Output.empty();
+        this.ssoadfsAuthority = Output.empty();
+        this.startVMOnConnect = Output.empty();
+        this.tags = Output.empty();
+        this.validationEnvironment = Output.empty();
+        this.vmTemplate = Output.empty();
     }
 
     public static Builder builder() {
@@ -409,33 +409,33 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> customRdpProperty;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> friendlyName;
-        private @Nullable Input<String> hostPoolName;
-        private Input<Either<String,HostPoolType>> hostPoolType;
-        private @Nullable Input<ResourceModelWithAllowedPropertySetIdentityArgs> identity;
-        private @Nullable Input<String> kind;
-        private Input<Either<String,LoadBalancerType>> loadBalancerType;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> managedBy;
-        private @Nullable Input<Integer> maxSessionLimit;
-        private @Nullable Input<MigrationRequestPropertiesArgs> migrationRequest;
-        private @Nullable Input<Either<String,PersonalDesktopAssignmentType>> personalDesktopAssignmentType;
-        private @Nullable Input<ResourceModelWithAllowedPropertySetPlanArgs> plan;
-        private Input<Either<String,PreferredAppGroupType>> preferredAppGroupType;
-        private @Nullable Input<RegistrationInfoArgs> registrationInfo;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Integer> ring;
-        private @Nullable Input<ResourceModelWithAllowedPropertySetSkuArgs> sku;
-        private @Nullable Input<String> ssoClientId;
-        private @Nullable Input<String> ssoClientSecretKeyVaultPath;
-        private @Nullable Input<Either<String,SSOSecretType>> ssoSecretType;
-        private @Nullable Input<String> ssoadfsAuthority;
-        private @Nullable Input<Boolean> startVMOnConnect;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Boolean> validationEnvironment;
-        private @Nullable Input<String> vmTemplate;
+        private @Nullable Output<String> customRdpProperty;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> friendlyName;
+        private @Nullable Output<String> hostPoolName;
+        private Output<Either<String,HostPoolType>> hostPoolType;
+        private @Nullable Output<ResourceModelWithAllowedPropertySetIdentityArgs> identity;
+        private @Nullable Output<String> kind;
+        private Output<Either<String,LoadBalancerType>> loadBalancerType;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> managedBy;
+        private @Nullable Output<Integer> maxSessionLimit;
+        private @Nullable Output<MigrationRequestPropertiesArgs> migrationRequest;
+        private @Nullable Output<Either<String,PersonalDesktopAssignmentType>> personalDesktopAssignmentType;
+        private @Nullable Output<ResourceModelWithAllowedPropertySetPlanArgs> plan;
+        private Output<Either<String,PreferredAppGroupType>> preferredAppGroupType;
+        private @Nullable Output<RegistrationInfoArgs> registrationInfo;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Integer> ring;
+        private @Nullable Output<ResourceModelWithAllowedPropertySetSkuArgs> sku;
+        private @Nullable Output<String> ssoClientId;
+        private @Nullable Output<String> ssoClientSecretKeyVaultPath;
+        private @Nullable Output<Either<String,SSOSecretType>> ssoSecretType;
+        private @Nullable Output<String> ssoadfsAuthority;
+        private @Nullable Output<Boolean> startVMOnConnect;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Boolean> validationEnvironment;
+        private @Nullable Output<String> vmTemplate;
 
         public Builder() {
     	      // Empty
@@ -472,273 +472,273 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vmTemplate = defaults.vmTemplate;
         }
 
-        public Builder customRdpProperty(@Nullable Input<String> customRdpProperty) {
+        public Builder customRdpProperty(@Nullable Output<String> customRdpProperty) {
             this.customRdpProperty = customRdpProperty;
             return this;
         }
 
         public Builder customRdpProperty(@Nullable String customRdpProperty) {
-            this.customRdpProperty = Input.ofNullable(customRdpProperty);
+            this.customRdpProperty = Output.ofNullable(customRdpProperty);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder friendlyName(@Nullable Input<String> friendlyName) {
+        public Builder friendlyName(@Nullable Output<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Input.ofNullable(friendlyName);
+            this.friendlyName = Output.ofNullable(friendlyName);
             return this;
         }
 
-        public Builder hostPoolName(@Nullable Input<String> hostPoolName) {
+        public Builder hostPoolName(@Nullable Output<String> hostPoolName) {
             this.hostPoolName = hostPoolName;
             return this;
         }
 
         public Builder hostPoolName(@Nullable String hostPoolName) {
-            this.hostPoolName = Input.ofNullable(hostPoolName);
+            this.hostPoolName = Output.ofNullable(hostPoolName);
             return this;
         }
 
-        public Builder hostPoolType(Input<Either<String,HostPoolType>> hostPoolType) {
+        public Builder hostPoolType(Output<Either<String,HostPoolType>> hostPoolType) {
             this.hostPoolType = Objects.requireNonNull(hostPoolType);
             return this;
         }
 
         public Builder hostPoolType(Either<String,HostPoolType> hostPoolType) {
-            this.hostPoolType = Input.of(Objects.requireNonNull(hostPoolType));
+            this.hostPoolType = Output.of(Objects.requireNonNull(hostPoolType));
             return this;
         }
 
-        public Builder identity(@Nullable Input<ResourceModelWithAllowedPropertySetIdentityArgs> identity) {
+        public Builder identity(@Nullable Output<ResourceModelWithAllowedPropertySetIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable ResourceModelWithAllowedPropertySetIdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder loadBalancerType(Input<Either<String,LoadBalancerType>> loadBalancerType) {
+        public Builder loadBalancerType(Output<Either<String,LoadBalancerType>> loadBalancerType) {
             this.loadBalancerType = Objects.requireNonNull(loadBalancerType);
             return this;
         }
 
         public Builder loadBalancerType(Either<String,LoadBalancerType> loadBalancerType) {
-            this.loadBalancerType = Input.of(Objects.requireNonNull(loadBalancerType));
+            this.loadBalancerType = Output.of(Objects.requireNonNull(loadBalancerType));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder managedBy(@Nullable Input<String> managedBy) {
+        public Builder managedBy(@Nullable Output<String> managedBy) {
             this.managedBy = managedBy;
             return this;
         }
 
         public Builder managedBy(@Nullable String managedBy) {
-            this.managedBy = Input.ofNullable(managedBy);
+            this.managedBy = Output.ofNullable(managedBy);
             return this;
         }
 
-        public Builder maxSessionLimit(@Nullable Input<Integer> maxSessionLimit) {
+        public Builder maxSessionLimit(@Nullable Output<Integer> maxSessionLimit) {
             this.maxSessionLimit = maxSessionLimit;
             return this;
         }
 
         public Builder maxSessionLimit(@Nullable Integer maxSessionLimit) {
-            this.maxSessionLimit = Input.ofNullable(maxSessionLimit);
+            this.maxSessionLimit = Output.ofNullable(maxSessionLimit);
             return this;
         }
 
-        public Builder migrationRequest(@Nullable Input<MigrationRequestPropertiesArgs> migrationRequest) {
+        public Builder migrationRequest(@Nullable Output<MigrationRequestPropertiesArgs> migrationRequest) {
             this.migrationRequest = migrationRequest;
             return this;
         }
 
         public Builder migrationRequest(@Nullable MigrationRequestPropertiesArgs migrationRequest) {
-            this.migrationRequest = Input.ofNullable(migrationRequest);
+            this.migrationRequest = Output.ofNullable(migrationRequest);
             return this;
         }
 
-        public Builder personalDesktopAssignmentType(@Nullable Input<Either<String,PersonalDesktopAssignmentType>> personalDesktopAssignmentType) {
+        public Builder personalDesktopAssignmentType(@Nullable Output<Either<String,PersonalDesktopAssignmentType>> personalDesktopAssignmentType) {
             this.personalDesktopAssignmentType = personalDesktopAssignmentType;
             return this;
         }
 
         public Builder personalDesktopAssignmentType(@Nullable Either<String,PersonalDesktopAssignmentType> personalDesktopAssignmentType) {
-            this.personalDesktopAssignmentType = Input.ofNullable(personalDesktopAssignmentType);
+            this.personalDesktopAssignmentType = Output.ofNullable(personalDesktopAssignmentType);
             return this;
         }
 
-        public Builder plan(@Nullable Input<ResourceModelWithAllowedPropertySetPlanArgs> plan) {
+        public Builder plan(@Nullable Output<ResourceModelWithAllowedPropertySetPlanArgs> plan) {
             this.plan = plan;
             return this;
         }
 
         public Builder plan(@Nullable ResourceModelWithAllowedPropertySetPlanArgs plan) {
-            this.plan = Input.ofNullable(plan);
+            this.plan = Output.ofNullable(plan);
             return this;
         }
 
-        public Builder preferredAppGroupType(Input<Either<String,PreferredAppGroupType>> preferredAppGroupType) {
+        public Builder preferredAppGroupType(Output<Either<String,PreferredAppGroupType>> preferredAppGroupType) {
             this.preferredAppGroupType = Objects.requireNonNull(preferredAppGroupType);
             return this;
         }
 
         public Builder preferredAppGroupType(Either<String,PreferredAppGroupType> preferredAppGroupType) {
-            this.preferredAppGroupType = Input.of(Objects.requireNonNull(preferredAppGroupType));
+            this.preferredAppGroupType = Output.of(Objects.requireNonNull(preferredAppGroupType));
             return this;
         }
 
-        public Builder registrationInfo(@Nullable Input<RegistrationInfoArgs> registrationInfo) {
+        public Builder registrationInfo(@Nullable Output<RegistrationInfoArgs> registrationInfo) {
             this.registrationInfo = registrationInfo;
             return this;
         }
 
         public Builder registrationInfo(@Nullable RegistrationInfoArgs registrationInfo) {
-            this.registrationInfo = Input.ofNullable(registrationInfo);
+            this.registrationInfo = Output.ofNullable(registrationInfo);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder ring(@Nullable Input<Integer> ring) {
+        public Builder ring(@Nullable Output<Integer> ring) {
             this.ring = ring;
             return this;
         }
 
         public Builder ring(@Nullable Integer ring) {
-            this.ring = Input.ofNullable(ring);
+            this.ring = Output.ofNullable(ring);
             return this;
         }
 
-        public Builder sku(@Nullable Input<ResourceModelWithAllowedPropertySetSkuArgs> sku) {
+        public Builder sku(@Nullable Output<ResourceModelWithAllowedPropertySetSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable ResourceModelWithAllowedPropertySetSkuArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder ssoClientId(@Nullable Input<String> ssoClientId) {
+        public Builder ssoClientId(@Nullable Output<String> ssoClientId) {
             this.ssoClientId = ssoClientId;
             return this;
         }
 
         public Builder ssoClientId(@Nullable String ssoClientId) {
-            this.ssoClientId = Input.ofNullable(ssoClientId);
+            this.ssoClientId = Output.ofNullable(ssoClientId);
             return this;
         }
 
-        public Builder ssoClientSecretKeyVaultPath(@Nullable Input<String> ssoClientSecretKeyVaultPath) {
+        public Builder ssoClientSecretKeyVaultPath(@Nullable Output<String> ssoClientSecretKeyVaultPath) {
             this.ssoClientSecretKeyVaultPath = ssoClientSecretKeyVaultPath;
             return this;
         }
 
         public Builder ssoClientSecretKeyVaultPath(@Nullable String ssoClientSecretKeyVaultPath) {
-            this.ssoClientSecretKeyVaultPath = Input.ofNullable(ssoClientSecretKeyVaultPath);
+            this.ssoClientSecretKeyVaultPath = Output.ofNullable(ssoClientSecretKeyVaultPath);
             return this;
         }
 
-        public Builder ssoSecretType(@Nullable Input<Either<String,SSOSecretType>> ssoSecretType) {
+        public Builder ssoSecretType(@Nullable Output<Either<String,SSOSecretType>> ssoSecretType) {
             this.ssoSecretType = ssoSecretType;
             return this;
         }
 
         public Builder ssoSecretType(@Nullable Either<String,SSOSecretType> ssoSecretType) {
-            this.ssoSecretType = Input.ofNullable(ssoSecretType);
+            this.ssoSecretType = Output.ofNullable(ssoSecretType);
             return this;
         }
 
-        public Builder ssoadfsAuthority(@Nullable Input<String> ssoadfsAuthority) {
+        public Builder ssoadfsAuthority(@Nullable Output<String> ssoadfsAuthority) {
             this.ssoadfsAuthority = ssoadfsAuthority;
             return this;
         }
 
         public Builder ssoadfsAuthority(@Nullable String ssoadfsAuthority) {
-            this.ssoadfsAuthority = Input.ofNullable(ssoadfsAuthority);
+            this.ssoadfsAuthority = Output.ofNullable(ssoadfsAuthority);
             return this;
         }
 
-        public Builder startVMOnConnect(@Nullable Input<Boolean> startVMOnConnect) {
+        public Builder startVMOnConnect(@Nullable Output<Boolean> startVMOnConnect) {
             this.startVMOnConnect = startVMOnConnect;
             return this;
         }
 
         public Builder startVMOnConnect(@Nullable Boolean startVMOnConnect) {
-            this.startVMOnConnect = Input.ofNullable(startVMOnConnect);
+            this.startVMOnConnect = Output.ofNullable(startVMOnConnect);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder validationEnvironment(@Nullable Input<Boolean> validationEnvironment) {
+        public Builder validationEnvironment(@Nullable Output<Boolean> validationEnvironment) {
             this.validationEnvironment = validationEnvironment;
             return this;
         }
 
         public Builder validationEnvironment(@Nullable Boolean validationEnvironment) {
-            this.validationEnvironment = Input.ofNullable(validationEnvironment);
+            this.validationEnvironment = Output.ofNullable(validationEnvironment);
             return this;
         }
 
-        public Builder vmTemplate(@Nullable Input<String> vmTemplate) {
+        public Builder vmTemplate(@Nullable Output<String> vmTemplate) {
             this.vmTemplate = vmTemplate;
             return this;
         }
 
         public Builder vmTemplate(@Nullable String vmTemplate) {
-            this.vmTemplate = Input.ofNullable(vmTemplate);
+            this.vmTemplate = Output.ofNullable(vmTemplate);
             return this;
         }
         public HostPoolArgs build() {

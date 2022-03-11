@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class DatabaseInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceDatabaseName", required=true)
-      private final Input<String> sourceDatabaseName;
+      private final Output<String> sourceDatabaseName;
 
-    public Input<String> getSourceDatabaseName() {
+    public Output<String> getSourceDatabaseName() {
         return this.sourceDatabaseName;
     }
 
-    public DatabaseInfoArgs(Input<String> sourceDatabaseName) {
+    public DatabaseInfoArgs(Output<String> sourceDatabaseName) {
         this.sourceDatabaseName = Objects.requireNonNull(sourceDatabaseName, "expected parameter 'sourceDatabaseName' to be non-null");
     }
 
     private DatabaseInfoArgs() {
-        this.sourceDatabaseName = Input.empty();
+        this.sourceDatabaseName = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class DatabaseInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> sourceDatabaseName;
+        private Output<String> sourceDatabaseName;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class DatabaseInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sourceDatabaseName = defaults.sourceDatabaseName;
         }
 
-        public Builder sourceDatabaseName(Input<String> sourceDatabaseName) {
+        public Builder sourceDatabaseName(Output<String> sourceDatabaseName) {
             this.sourceDatabaseName = Objects.requireNonNull(sourceDatabaseName);
             return this;
         }
 
         public Builder sourceDatabaseName(String sourceDatabaseName) {
-            this.sourceDatabaseName = Input.of(Objects.requireNonNull(sourceDatabaseName));
+            this.sourceDatabaseName = Output.of(Objects.requireNonNull(sourceDatabaseName));
             return this;
         }
         public DatabaseInfoArgs build() {

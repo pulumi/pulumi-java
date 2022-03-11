@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,9 +25,9 @@ public final class MpiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="distributionType", required=true)
-      private final Input<String> distributionType;
+      private final Output<String> distributionType;
 
-    public Input<String> getDistributionType() {
+    public Output<String> getDistributionType() {
         return this.distributionType;
     }
 
@@ -36,22 +36,22 @@ public final class MpiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="processCountPerInstance")
-      private final @Nullable Input<Integer> processCountPerInstance;
+      private final @Nullable Output<Integer> processCountPerInstance;
 
-    public Input<Integer> getProcessCountPerInstance() {
-        return this.processCountPerInstance == null ? Input.empty() : this.processCountPerInstance;
+    public Output<Integer> getProcessCountPerInstance() {
+        return this.processCountPerInstance == null ? Output.empty() : this.processCountPerInstance;
     }
 
     public MpiArgs(
-        Input<String> distributionType,
-        @Nullable Input<Integer> processCountPerInstance) {
+        Output<String> distributionType,
+        @Nullable Output<Integer> processCountPerInstance) {
         this.distributionType = Objects.requireNonNull(distributionType, "expected parameter 'distributionType' to be non-null");
         this.processCountPerInstance = processCountPerInstance;
     }
 
     private MpiArgs() {
-        this.distributionType = Input.empty();
-        this.processCountPerInstance = Input.empty();
+        this.distributionType = Output.empty();
+        this.processCountPerInstance = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class MpiArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> distributionType;
-        private @Nullable Input<Integer> processCountPerInstance;
+        private Output<String> distributionType;
+        private @Nullable Output<Integer> processCountPerInstance;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class MpiArgs extends io.pulumi.resources.ResourceArgs {
     	      this.processCountPerInstance = defaults.processCountPerInstance;
         }
 
-        public Builder distributionType(Input<String> distributionType) {
+        public Builder distributionType(Output<String> distributionType) {
             this.distributionType = Objects.requireNonNull(distributionType);
             return this;
         }
 
         public Builder distributionType(String distributionType) {
-            this.distributionType = Input.of(Objects.requireNonNull(distributionType));
+            this.distributionType = Output.of(Objects.requireNonNull(distributionType));
             return this;
         }
 
-        public Builder processCountPerInstance(@Nullable Input<Integer> processCountPerInstance) {
+        public Builder processCountPerInstance(@Nullable Output<Integer> processCountPerInstance) {
             this.processCountPerInstance = processCountPerInstance;
             return this;
         }
 
         public Builder processCountPerInstance(@Nullable Integer processCountPerInstance) {
-            this.processCountPerInstance = Input.ofNullable(processCountPerInstance);
+            this.processCountPerInstance = Output.ofNullable(processCountPerInstance);
             return this;
         }
         public MpiArgs build() {

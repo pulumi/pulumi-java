@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glue.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class CrawlerLineageConfigurationGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="crawlerLineageSettings")
-      private final @Nullable Input<String> crawlerLineageSettings;
+      private final @Nullable Output<String> crawlerLineageSettings;
 
-    public Input<String> getCrawlerLineageSettings() {
-        return this.crawlerLineageSettings == null ? Input.empty() : this.crawlerLineageSettings;
+    public Output<String> getCrawlerLineageSettings() {
+        return this.crawlerLineageSettings == null ? Output.empty() : this.crawlerLineageSettings;
     }
 
-    public CrawlerLineageConfigurationGetArgs(@Nullable Input<String> crawlerLineageSettings) {
+    public CrawlerLineageConfigurationGetArgs(@Nullable Output<String> crawlerLineageSettings) {
         this.crawlerLineageSettings = crawlerLineageSettings;
     }
 
     private CrawlerLineageConfigurationGetArgs() {
-        this.crawlerLineageSettings = Input.empty();
+        this.crawlerLineageSettings = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class CrawlerLineageConfigurationGetArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> crawlerLineageSettings;
+        private @Nullable Output<String> crawlerLineageSettings;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class CrawlerLineageConfigurationGetArgs extends io.pulumi.resource
     	      this.crawlerLineageSettings = defaults.crawlerLineageSettings;
         }
 
-        public Builder crawlerLineageSettings(@Nullable Input<String> crawlerLineageSettings) {
+        public Builder crawlerLineageSettings(@Nullable Output<String> crawlerLineageSettings) {
             this.crawlerLineageSettings = crawlerLineageSettings;
             return this;
         }
 
         public Builder crawlerLineageSettings(@Nullable String crawlerLineageSettings) {
-            this.crawlerLineageSettings = Input.ofNullable(crawlerLineageSettings);
+            this.crawlerLineageSettings = Output.ofNullable(crawlerLineageSettings);
             return this;
         }
         public CrawlerLineageConfigurationGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbilling_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class BillingAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class BillingAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="masterBillingAccount")
-      private final @Nullable Input<String> masterBillingAccount;
+      private final @Nullable Output<String> masterBillingAccount;
 
-    public Input<String> getMasterBillingAccount() {
-        return this.masterBillingAccount == null ? Input.empty() : this.masterBillingAccount;
+    public Output<String> getMasterBillingAccount() {
+        return this.masterBillingAccount == null ? Output.empty() : this.masterBillingAccount;
     }
 
     public BillingAccountArgs(
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> masterBillingAccount) {
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> masterBillingAccount) {
         this.displayName = displayName;
         this.masterBillingAccount = masterBillingAccount;
     }
 
     private BillingAccountArgs() {
-        this.displayName = Input.empty();
-        this.masterBillingAccount = Input.empty();
+        this.displayName = Output.empty();
+        this.masterBillingAccount = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class BillingAccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> masterBillingAccount;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> masterBillingAccount;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class BillingAccountArgs extends io.pulumi.resources.ResourceArgs {
     	      this.masterBillingAccount = defaults.masterBillingAccount;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder masterBillingAccount(@Nullable Input<String> masterBillingAccount) {
+        public Builder masterBillingAccount(@Nullable Output<String> masterBillingAccount) {
             this.masterBillingAccount = masterBillingAccount;
             return this;
         }
 
         public Builder masterBillingAccount(@Nullable String masterBillingAccount) {
-            this.masterBillingAccount = Input.ofNullable(masterBillingAccount);
+            this.masterBillingAccount = Output.ofNullable(masterBillingAccount);
             return this;
         }
         public BillingAccountArgs build() {

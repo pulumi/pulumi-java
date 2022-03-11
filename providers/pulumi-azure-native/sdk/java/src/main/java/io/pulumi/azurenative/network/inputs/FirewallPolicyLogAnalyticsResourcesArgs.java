@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.FirewallPolicyLogAnalyticsWorkspaceArgs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class FirewallPolicyLogAnalyticsResourcesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="defaultWorkspaceId")
-      private final @Nullable Input<SubResourceArgs> defaultWorkspaceId;
+      private final @Nullable Output<SubResourceArgs> defaultWorkspaceId;
 
-    public Input<SubResourceArgs> getDefaultWorkspaceId() {
-        return this.defaultWorkspaceId == null ? Input.empty() : this.defaultWorkspaceId;
+    public Output<SubResourceArgs> getDefaultWorkspaceId() {
+        return this.defaultWorkspaceId == null ? Output.empty() : this.defaultWorkspaceId;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class FirewallPolicyLogAnalyticsResourcesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="workspaces")
-      private final @Nullable Input<List<FirewallPolicyLogAnalyticsWorkspaceArgs>> workspaces;
+      private final @Nullable Output<List<FirewallPolicyLogAnalyticsWorkspaceArgs>> workspaces;
 
-    public Input<List<FirewallPolicyLogAnalyticsWorkspaceArgs>> getWorkspaces() {
-        return this.workspaces == null ? Input.empty() : this.workspaces;
+    public Output<List<FirewallPolicyLogAnalyticsWorkspaceArgs>> getWorkspaces() {
+        return this.workspaces == null ? Output.empty() : this.workspaces;
     }
 
     public FirewallPolicyLogAnalyticsResourcesArgs(
-        @Nullable Input<SubResourceArgs> defaultWorkspaceId,
-        @Nullable Input<List<FirewallPolicyLogAnalyticsWorkspaceArgs>> workspaces) {
+        @Nullable Output<SubResourceArgs> defaultWorkspaceId,
+        @Nullable Output<List<FirewallPolicyLogAnalyticsWorkspaceArgs>> workspaces) {
         this.defaultWorkspaceId = defaultWorkspaceId;
         this.workspaces = workspaces;
     }
 
     private FirewallPolicyLogAnalyticsResourcesArgs() {
-        this.defaultWorkspaceId = Input.empty();
-        this.workspaces = Input.empty();
+        this.defaultWorkspaceId = Output.empty();
+        this.workspaces = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class FirewallPolicyLogAnalyticsResourcesArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<SubResourceArgs> defaultWorkspaceId;
-        private @Nullable Input<List<FirewallPolicyLogAnalyticsWorkspaceArgs>> workspaces;
+        private @Nullable Output<SubResourceArgs> defaultWorkspaceId;
+        private @Nullable Output<List<FirewallPolicyLogAnalyticsWorkspaceArgs>> workspaces;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class FirewallPolicyLogAnalyticsResourcesArgs extends io.pulumi.res
     	      this.workspaces = defaults.workspaces;
         }
 
-        public Builder defaultWorkspaceId(@Nullable Input<SubResourceArgs> defaultWorkspaceId) {
+        public Builder defaultWorkspaceId(@Nullable Output<SubResourceArgs> defaultWorkspaceId) {
             this.defaultWorkspaceId = defaultWorkspaceId;
             return this;
         }
 
         public Builder defaultWorkspaceId(@Nullable SubResourceArgs defaultWorkspaceId) {
-            this.defaultWorkspaceId = Input.ofNullable(defaultWorkspaceId);
+            this.defaultWorkspaceId = Output.ofNullable(defaultWorkspaceId);
             return this;
         }
 
-        public Builder workspaces(@Nullable Input<List<FirewallPolicyLogAnalyticsWorkspaceArgs>> workspaces) {
+        public Builder workspaces(@Nullable Output<List<FirewallPolicyLogAnalyticsWorkspaceArgs>> workspaces) {
             this.workspaces = workspaces;
             return this;
         }
 
         public Builder workspaces(@Nullable List<FirewallPolicyLogAnalyticsWorkspaceArgs> workspaces) {
-            this.workspaces = Input.ofNullable(workspaces);
+            this.workspaces = Output.ofNullable(workspaces);
             return this;
         }
         public FirewallPolicyLogAnalyticsResourcesArgs build() {

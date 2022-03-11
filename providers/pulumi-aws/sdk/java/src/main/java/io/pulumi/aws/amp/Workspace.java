@@ -6,7 +6,6 @@ package io.pulumi.aws.amp;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.amp.WorkspaceArgs;
 import io.pulumi.aws.amp.inputs.WorkspaceState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -112,14 +111,14 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Workspace(String name, @Nullable WorkspaceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:amp/workspace:Workspace", name, args == null ? WorkspaceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:amp/workspace:Workspace", name, args == null ? WorkspaceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Workspace(String name, Input<String> id, @Nullable WorkspaceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Workspace(String name, Output<String> id, @Nullable WorkspaceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:amp/workspace:Workspace", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -135,7 +134,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Workspace get(String name, Input<String> id, @Nullable WorkspaceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Workspace get(String name, Output<String> id, @Nullable WorkspaceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Workspace(name, id, state, options);
     }
 }

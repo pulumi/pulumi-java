@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotcoredeviceadvisor;
 
 import io.pulumi.awsnative.iotcoredeviceadvisor.inputs.SuiteDefinitionConfigurationPropertiesArgs;
 import io.pulumi.awsnative.iotcoredeviceadvisor.inputs.SuiteDefinitionTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -17,9 +17,9 @@ public final class SuiteDefinitionArgs extends io.pulumi.resources.ResourceArgs 
     public static final SuiteDefinitionArgs Empty = new SuiteDefinitionArgs();
 
     @InputImport(name="suiteDefinitionConfiguration", required=true)
-      private final Input<SuiteDefinitionConfigurationPropertiesArgs> suiteDefinitionConfiguration;
+      private final Output<SuiteDefinitionConfigurationPropertiesArgs> suiteDefinitionConfiguration;
 
-    public Input<SuiteDefinitionConfigurationPropertiesArgs> getSuiteDefinitionConfiguration() {
+    public Output<SuiteDefinitionConfigurationPropertiesArgs> getSuiteDefinitionConfiguration() {
         return this.suiteDefinitionConfiguration;
     }
 
@@ -28,22 +28,22 @@ public final class SuiteDefinitionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<SuiteDefinitionTagArgs>> tags;
+      private final @Nullable Output<List<SuiteDefinitionTagArgs>> tags;
 
-    public Input<List<SuiteDefinitionTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<SuiteDefinitionTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public SuiteDefinitionArgs(
-        Input<SuiteDefinitionConfigurationPropertiesArgs> suiteDefinitionConfiguration,
-        @Nullable Input<List<SuiteDefinitionTagArgs>> tags) {
+        Output<SuiteDefinitionConfigurationPropertiesArgs> suiteDefinitionConfiguration,
+        @Nullable Output<List<SuiteDefinitionTagArgs>> tags) {
         this.suiteDefinitionConfiguration = Objects.requireNonNull(suiteDefinitionConfiguration, "expected parameter 'suiteDefinitionConfiguration' to be non-null");
         this.tags = tags;
     }
 
     private SuiteDefinitionArgs() {
-        this.suiteDefinitionConfiguration = Input.empty();
-        this.tags = Input.empty();
+        this.suiteDefinitionConfiguration = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -55,8 +55,8 @@ public final class SuiteDefinitionArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<SuiteDefinitionConfigurationPropertiesArgs> suiteDefinitionConfiguration;
-        private @Nullable Input<List<SuiteDefinitionTagArgs>> tags;
+        private Output<SuiteDefinitionConfigurationPropertiesArgs> suiteDefinitionConfiguration;
+        private @Nullable Output<List<SuiteDefinitionTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -68,23 +68,23 @@ public final class SuiteDefinitionArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tags = defaults.tags;
         }
 
-        public Builder suiteDefinitionConfiguration(Input<SuiteDefinitionConfigurationPropertiesArgs> suiteDefinitionConfiguration) {
+        public Builder suiteDefinitionConfiguration(Output<SuiteDefinitionConfigurationPropertiesArgs> suiteDefinitionConfiguration) {
             this.suiteDefinitionConfiguration = Objects.requireNonNull(suiteDefinitionConfiguration);
             return this;
         }
 
         public Builder suiteDefinitionConfiguration(SuiteDefinitionConfigurationPropertiesArgs suiteDefinitionConfiguration) {
-            this.suiteDefinitionConfiguration = Input.of(Objects.requireNonNull(suiteDefinitionConfiguration));
+            this.suiteDefinitionConfiguration = Output.of(Objects.requireNonNull(suiteDefinitionConfiguration));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<SuiteDefinitionTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<SuiteDefinitionTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<SuiteDefinitionTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public SuiteDefinitionArgs build() {

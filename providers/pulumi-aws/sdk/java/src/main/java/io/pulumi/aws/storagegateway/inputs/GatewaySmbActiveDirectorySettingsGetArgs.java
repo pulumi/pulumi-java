@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.storagegateway.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,10 +17,10 @@ public final class GatewaySmbActiveDirectorySettingsGetArgs extends io.pulumi.re
     public static final GatewaySmbActiveDirectorySettingsGetArgs Empty = new GatewaySmbActiveDirectorySettingsGetArgs();
 
     @InputImport(name="activeDirectoryStatus")
-      private final @Nullable Input<String> activeDirectoryStatus;
+      private final @Nullable Output<String> activeDirectoryStatus;
 
-    public Input<String> getActiveDirectoryStatus() {
-        return this.activeDirectoryStatus == null ? Input.empty() : this.activeDirectoryStatus;
+    public Output<String> getActiveDirectoryStatus() {
+        return this.activeDirectoryStatus == null ? Output.empty() : this.activeDirectoryStatus;
     }
 
     /**
@@ -29,10 +29,10 @@ public final class GatewaySmbActiveDirectorySettingsGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="domainControllers")
-      private final @Nullable Input<List<String>> domainControllers;
+      private final @Nullable Output<List<String>> domainControllers;
 
-    public Input<List<String>> getDomainControllers() {
-        return this.domainControllers == null ? Input.empty() : this.domainControllers;
+    public Output<List<String>> getDomainControllers() {
+        return this.domainControllers == null ? Output.empty() : this.domainControllers;
     }
 
     /**
@@ -40,9 +40,9 @@ public final class GatewaySmbActiveDirectorySettingsGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="domainName", required=true)
-      private final Input<String> domainName;
+      private final Output<String> domainName;
 
-    public Input<String> getDomainName() {
+    public Output<String> getDomainName() {
         return this.domainName;
     }
 
@@ -52,10 +52,10 @@ public final class GatewaySmbActiveDirectorySettingsGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="organizationalUnit")
-      private final @Nullable Input<String> organizationalUnit;
+      private final @Nullable Output<String> organizationalUnit;
 
-    public Input<String> getOrganizationalUnit() {
-        return this.organizationalUnit == null ? Input.empty() : this.organizationalUnit;
+    public Output<String> getOrganizationalUnit() {
+        return this.organizationalUnit == null ? Output.empty() : this.organizationalUnit;
     }
 
     /**
@@ -63,9 +63,9 @@ public final class GatewaySmbActiveDirectorySettingsGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="password", required=true)
-      private final Input<String> password;
+      private final Output<String> password;
 
-    public Input<String> getPassword() {
+    public Output<String> getPassword() {
         return this.password;
     }
 
@@ -74,10 +74,10 @@ public final class GatewaySmbActiveDirectorySettingsGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="timeoutInSeconds")
-      private final @Nullable Input<Integer> timeoutInSeconds;
+      private final @Nullable Output<Integer> timeoutInSeconds;
 
-    public Input<Integer> getTimeoutInSeconds() {
-        return this.timeoutInSeconds == null ? Input.empty() : this.timeoutInSeconds;
+    public Output<Integer> getTimeoutInSeconds() {
+        return this.timeoutInSeconds == null ? Output.empty() : this.timeoutInSeconds;
     }
 
     /**
@@ -85,20 +85,20 @@ public final class GatewaySmbActiveDirectorySettingsGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="username", required=true)
-      private final Input<String> username;
+      private final Output<String> username;
 
-    public Input<String> getUsername() {
+    public Output<String> getUsername() {
         return this.username;
     }
 
     public GatewaySmbActiveDirectorySettingsGetArgs(
-        @Nullable Input<String> activeDirectoryStatus,
-        @Nullable Input<List<String>> domainControllers,
-        Input<String> domainName,
-        @Nullable Input<String> organizationalUnit,
-        Input<String> password,
-        @Nullable Input<Integer> timeoutInSeconds,
-        Input<String> username) {
+        @Nullable Output<String> activeDirectoryStatus,
+        @Nullable Output<List<String>> domainControllers,
+        Output<String> domainName,
+        @Nullable Output<String> organizationalUnit,
+        Output<String> password,
+        @Nullable Output<Integer> timeoutInSeconds,
+        Output<String> username) {
         this.activeDirectoryStatus = activeDirectoryStatus;
         this.domainControllers = domainControllers;
         this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
@@ -109,13 +109,13 @@ public final class GatewaySmbActiveDirectorySettingsGetArgs extends io.pulumi.re
     }
 
     private GatewaySmbActiveDirectorySettingsGetArgs() {
-        this.activeDirectoryStatus = Input.empty();
-        this.domainControllers = Input.empty();
-        this.domainName = Input.empty();
-        this.organizationalUnit = Input.empty();
-        this.password = Input.empty();
-        this.timeoutInSeconds = Input.empty();
-        this.username = Input.empty();
+        this.activeDirectoryStatus = Output.empty();
+        this.domainControllers = Output.empty();
+        this.domainName = Output.empty();
+        this.organizationalUnit = Output.empty();
+        this.password = Output.empty();
+        this.timeoutInSeconds = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -127,13 +127,13 @@ public final class GatewaySmbActiveDirectorySettingsGetArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> activeDirectoryStatus;
-        private @Nullable Input<List<String>> domainControllers;
-        private Input<String> domainName;
-        private @Nullable Input<String> organizationalUnit;
-        private Input<String> password;
-        private @Nullable Input<Integer> timeoutInSeconds;
-        private Input<String> username;
+        private @Nullable Output<String> activeDirectoryStatus;
+        private @Nullable Output<List<String>> domainControllers;
+        private Output<String> domainName;
+        private @Nullable Output<String> organizationalUnit;
+        private Output<String> password;
+        private @Nullable Output<Integer> timeoutInSeconds;
+        private Output<String> username;
 
         public Builder() {
     	      // Empty
@@ -150,73 +150,73 @@ public final class GatewaySmbActiveDirectorySettingsGetArgs extends io.pulumi.re
     	      this.username = defaults.username;
         }
 
-        public Builder activeDirectoryStatus(@Nullable Input<String> activeDirectoryStatus) {
+        public Builder activeDirectoryStatus(@Nullable Output<String> activeDirectoryStatus) {
             this.activeDirectoryStatus = activeDirectoryStatus;
             return this;
         }
 
         public Builder activeDirectoryStatus(@Nullable String activeDirectoryStatus) {
-            this.activeDirectoryStatus = Input.ofNullable(activeDirectoryStatus);
+            this.activeDirectoryStatus = Output.ofNullable(activeDirectoryStatus);
             return this;
         }
 
-        public Builder domainControllers(@Nullable Input<List<String>> domainControllers) {
+        public Builder domainControllers(@Nullable Output<List<String>> domainControllers) {
             this.domainControllers = domainControllers;
             return this;
         }
 
         public Builder domainControllers(@Nullable List<String> domainControllers) {
-            this.domainControllers = Input.ofNullable(domainControllers);
+            this.domainControllers = Output.ofNullable(domainControllers);
             return this;
         }
 
-        public Builder domainName(Input<String> domainName) {
+        public Builder domainName(Output<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
         public Builder domainName(String domainName) {
-            this.domainName = Input.of(Objects.requireNonNull(domainName));
+            this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
         }
 
-        public Builder organizationalUnit(@Nullable Input<String> organizationalUnit) {
+        public Builder organizationalUnit(@Nullable Output<String> organizationalUnit) {
             this.organizationalUnit = organizationalUnit;
             return this;
         }
 
         public Builder organizationalUnit(@Nullable String organizationalUnit) {
-            this.organizationalUnit = Input.ofNullable(organizationalUnit);
+            this.organizationalUnit = Output.ofNullable(organizationalUnit);
             return this;
         }
 
-        public Builder password(Input<String> password) {
+        public Builder password(Output<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
         public Builder password(String password) {
-            this.password = Input.of(Objects.requireNonNull(password));
+            this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
 
-        public Builder timeoutInSeconds(@Nullable Input<Integer> timeoutInSeconds) {
+        public Builder timeoutInSeconds(@Nullable Output<Integer> timeoutInSeconds) {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
 
         public Builder timeoutInSeconds(@Nullable Integer timeoutInSeconds) {
-            this.timeoutInSeconds = Input.ofNullable(timeoutInSeconds);
+            this.timeoutInSeconds = Output.ofNullable(timeoutInSeconds);
             return this;
         }
 
-        public Builder username(Input<String> username) {
+        public Builder username(Output<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
 
         public Builder username(String username) {
-            this.username = Input.of(Objects.requireNonNull(username));
+            this.username = Output.of(Objects.requireNonNull(username));
             return this;
         }
         public GatewaySmbActiveDirectorySettingsGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -24,10 +24,10 @@ public final class WebhookNotificationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<Map<String,String>> properties;
+      private final @Nullable Output<Map<String,String>> properties;
 
-    public Input<Map<String,String>> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<Map<String,String>> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class WebhookNotificationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="serviceUri")
-      private final @Nullable Input<String> serviceUri;
+      private final @Nullable Output<String> serviceUri;
 
-    public Input<String> getServiceUri() {
-        return this.serviceUri == null ? Input.empty() : this.serviceUri;
+    public Output<String> getServiceUri() {
+        return this.serviceUri == null ? Output.empty() : this.serviceUri;
     }
 
     public WebhookNotificationArgs(
-        @Nullable Input<Map<String,String>> properties,
-        @Nullable Input<String> serviceUri) {
+        @Nullable Output<Map<String,String>> properties,
+        @Nullable Output<String> serviceUri) {
         this.properties = properties;
         this.serviceUri = serviceUri;
     }
 
     private WebhookNotificationArgs() {
-        this.properties = Input.empty();
-        this.serviceUri = Input.empty();
+        this.properties = Output.empty();
+        this.serviceUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class WebhookNotificationArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> properties;
-        private @Nullable Input<String> serviceUri;
+        private @Nullable Output<Map<String,String>> properties;
+        private @Nullable Output<String> serviceUri;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class WebhookNotificationArgs extends io.pulumi.resources.ResourceA
     	      this.serviceUri = defaults.serviceUri;
         }
 
-        public Builder properties(@Nullable Input<Map<String,String>> properties) {
+        public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder serviceUri(@Nullable Input<String> serviceUri) {
+        public Builder serviceUri(@Nullable Output<String> serviceUri) {
             this.serviceUri = serviceUri;
             return this;
         }
 
         public Builder serviceUri(@Nullable String serviceUri) {
-            this.serviceUri = Input.ofNullable(serviceUri);
+            this.serviceUri = Output.ofNullable(serviceUri);
             return this;
         }
         public WebhookNotificationArgs build() {

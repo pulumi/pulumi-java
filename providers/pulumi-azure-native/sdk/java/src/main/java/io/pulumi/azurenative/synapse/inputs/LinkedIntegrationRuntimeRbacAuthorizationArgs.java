@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationArgs extends io.pulu
      * 
      */
     @InputImport(name="authorizationType", required=true)
-      private final Input<String> authorizationType;
+      private final Output<String> authorizationType;
 
-    public Input<String> getAuthorizationType() {
+    public Output<String> getAuthorizationType() {
         return this.authorizationType;
     }
 
@@ -34,22 +34,22 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationArgs extends io.pulu
      * 
      */
     @InputImport(name="resourceId", required=true)
-      private final Input<String> resourceId;
+      private final Output<String> resourceId;
 
-    public Input<String> getResourceId() {
+    public Output<String> getResourceId() {
         return this.resourceId;
     }
 
     public LinkedIntegrationRuntimeRbacAuthorizationArgs(
-        Input<String> authorizationType,
-        Input<String> resourceId) {
+        Output<String> authorizationType,
+        Output<String> resourceId) {
         this.authorizationType = Objects.requireNonNull(authorizationType, "expected parameter 'authorizationType' to be non-null");
         this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
     }
 
     private LinkedIntegrationRuntimeRbacAuthorizationArgs() {
-        this.authorizationType = Input.empty();
-        this.resourceId = Input.empty();
+        this.authorizationType = Output.empty();
+        this.resourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationArgs extends io.pulu
     }
 
     public static final class Builder {
-        private Input<String> authorizationType;
-        private Input<String> resourceId;
+        private Output<String> authorizationType;
+        private Output<String> resourceId;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationArgs extends io.pulu
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder authorizationType(Input<String> authorizationType) {
+        public Builder authorizationType(Output<String> authorizationType) {
             this.authorizationType = Objects.requireNonNull(authorizationType);
             return this;
         }
 
         public Builder authorizationType(String authorizationType) {
-            this.authorizationType = Input.of(Objects.requireNonNull(authorizationType));
+            this.authorizationType = Output.of(Objects.requireNonNull(authorizationType));
             return this;
         }
 
-        public Builder resourceId(Input<String> resourceId) {
+        public Builder resourceId(Output<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
         public Builder resourceId(String resourceId) {
-            this.resourceId = Input.of(Objects.requireNonNull(resourceId));
+            this.resourceId = Output.of(Objects.requireNonNull(resourceId));
             return this;
         }
         public LinkedIntegrationRuntimeRbacAuthorizationArgs build() {

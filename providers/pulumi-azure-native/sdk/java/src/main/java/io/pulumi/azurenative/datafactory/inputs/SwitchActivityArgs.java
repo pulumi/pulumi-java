@@ -44,7 +44,7 @@ import io.pulumi.azurenative.datafactory.inputs.ValidationActivityArgs;
 import io.pulumi.azurenative.datafactory.inputs.WaitActivityArgs;
 import io.pulumi.azurenative.datafactory.inputs.WebActivityArgs;
 import io.pulumi.azurenative.datafactory.inputs.WebHookActivityArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -66,10 +66,10 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cases")
-      private final @Nullable Input<List<SwitchCaseArgs>> cases;
+      private final @Nullable Output<List<SwitchCaseArgs>> cases;
 
-    public Input<List<SwitchCaseArgs>> getCases() {
-        return this.cases == null ? Input.empty() : this.cases;
+    public Output<List<SwitchCaseArgs>> getCases() {
+        return this.cases == null ? Output.empty() : this.cases;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultActivities")
-      private final @Nullable Input<List<Object>> defaultActivities;
+      private final @Nullable Output<List<Object>> defaultActivities;
 
-    public Input<List<Object>> getDefaultActivities() {
-        return this.defaultActivities == null ? Input.empty() : this.defaultActivities;
+    public Output<List<Object>> getDefaultActivities() {
+        return this.defaultActivities == null ? Output.empty() : this.defaultActivities;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dependsOn")
-      private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
+      private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Input<List<ActivityDependencyArgs>> getDependsOn() {
-        return this.dependsOn == null ? Input.empty() : this.dependsOn;
+    public Output<List<ActivityDependencyArgs>> getDependsOn() {
+        return this.dependsOn == null ? Output.empty() : this.dependsOn;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -110,9 +110,9 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -121,9 +121,9 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="on", required=true)
-      private final Input<ExpressionArgs> on;
+      private final Output<ExpressionArgs> on;
 
-    public Input<ExpressionArgs> getOn() {
+    public Output<ExpressionArgs> getOn() {
         return this.on;
     }
 
@@ -133,9 +133,9 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -144,21 +144,21 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userProperties")
-      private final @Nullable Input<List<UserPropertyArgs>> userProperties;
+      private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Input<List<UserPropertyArgs>> getUserProperties() {
-        return this.userProperties == null ? Input.empty() : this.userProperties;
+    public Output<List<UserPropertyArgs>> getUserProperties() {
+        return this.userProperties == null ? Output.empty() : this.userProperties;
     }
 
     public SwitchActivityArgs(
-        @Nullable Input<List<SwitchCaseArgs>> cases,
-        @Nullable Input<List<Object>> defaultActivities,
-        @Nullable Input<List<ActivityDependencyArgs>> dependsOn,
-        @Nullable Input<String> description,
-        Input<String> name,
-        Input<ExpressionArgs> on,
-        Input<String> type,
-        @Nullable Input<List<UserPropertyArgs>> userProperties) {
+        @Nullable Output<List<SwitchCaseArgs>> cases,
+        @Nullable Output<List<Object>> defaultActivities,
+        @Nullable Output<List<ActivityDependencyArgs>> dependsOn,
+        @Nullable Output<String> description,
+        Output<String> name,
+        Output<ExpressionArgs> on,
+        Output<String> type,
+        @Nullable Output<List<UserPropertyArgs>> userProperties) {
         this.cases = cases;
         this.defaultActivities = defaultActivities;
         this.dependsOn = dependsOn;
@@ -170,14 +170,14 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SwitchActivityArgs() {
-        this.cases = Input.empty();
-        this.defaultActivities = Input.empty();
-        this.dependsOn = Input.empty();
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.on = Input.empty();
-        this.type = Input.empty();
-        this.userProperties = Input.empty();
+        this.cases = Output.empty();
+        this.defaultActivities = Output.empty();
+        this.dependsOn = Output.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.on = Output.empty();
+        this.type = Output.empty();
+        this.userProperties = Output.empty();
     }
 
     public static Builder builder() {
@@ -189,14 +189,14 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<SwitchCaseArgs>> cases;
-        private @Nullable Input<List<Object>> defaultActivities;
-        private @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
-        private @Nullable Input<String> description;
-        private Input<String> name;
-        private Input<ExpressionArgs> on;
-        private Input<String> type;
-        private @Nullable Input<List<UserPropertyArgs>> userProperties;
+        private @Nullable Output<List<SwitchCaseArgs>> cases;
+        private @Nullable Output<List<Object>> defaultActivities;
+        private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
+        private @Nullable Output<String> description;
+        private Output<String> name;
+        private Output<ExpressionArgs> on;
+        private Output<String> type;
+        private @Nullable Output<List<UserPropertyArgs>> userProperties;
 
         public Builder() {
     	      // Empty
@@ -214,83 +214,83 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder cases(@Nullable Input<List<SwitchCaseArgs>> cases) {
+        public Builder cases(@Nullable Output<List<SwitchCaseArgs>> cases) {
             this.cases = cases;
             return this;
         }
 
         public Builder cases(@Nullable List<SwitchCaseArgs> cases) {
-            this.cases = Input.ofNullable(cases);
+            this.cases = Output.ofNullable(cases);
             return this;
         }
 
-        public Builder defaultActivities(@Nullable Input<List<Object>> defaultActivities) {
+        public Builder defaultActivities(@Nullable Output<List<Object>> defaultActivities) {
             this.defaultActivities = defaultActivities;
             return this;
         }
 
         public Builder defaultActivities(@Nullable List<Object> defaultActivities) {
-            this.defaultActivities = Input.ofNullable(defaultActivities);
+            this.defaultActivities = Output.ofNullable(defaultActivities);
             return this;
         }
 
-        public Builder dependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
+        public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Input.ofNullable(dependsOn);
+            this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder on(Input<ExpressionArgs> on) {
+        public Builder on(Output<ExpressionArgs> on) {
             this.on = Objects.requireNonNull(on);
             return this;
         }
 
         public Builder on(ExpressionArgs on) {
-            this.on = Input.of(Objects.requireNonNull(on));
+            this.on = Output.of(Objects.requireNonNull(on));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder userProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
+        public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
 
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Input.ofNullable(userProperties);
+            this.userProperties = Output.ofNullable(userProperties);
             return this;
         }
         public SwitchActivityArgs build() {

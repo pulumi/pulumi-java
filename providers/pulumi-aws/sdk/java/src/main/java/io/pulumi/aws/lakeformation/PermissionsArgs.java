@@ -7,7 +7,7 @@ import io.pulumi.aws.lakeformation.inputs.PermissionsDataLocationArgs;
 import io.pulumi.aws.lakeformation.inputs.PermissionsDatabaseArgs;
 import io.pulumi.aws.lakeformation.inputs.PermissionsTableArgs;
 import io.pulumi.aws.lakeformation.inputs.PermissionsTableWithColumnsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="catalogId")
-      private final @Nullable Input<String> catalogId;
+      private final @Nullable Output<String> catalogId;
 
-    public Input<String> getCatalogId() {
-        return this.catalogId == null ? Input.empty() : this.catalogId;
+    public Output<String> getCatalogId() {
+        return this.catalogId == null ? Output.empty() : this.catalogId;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="catalogResource")
-      private final @Nullable Input<Boolean> catalogResource;
+      private final @Nullable Output<Boolean> catalogResource;
 
-    public Input<Boolean> getCatalogResource() {
-        return this.catalogResource == null ? Input.empty() : this.catalogResource;
+    public Output<Boolean> getCatalogResource() {
+        return this.catalogResource == null ? Output.empty() : this.catalogResource;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataLocation")
-      private final @Nullable Input<PermissionsDataLocationArgs> dataLocation;
+      private final @Nullable Output<PermissionsDataLocationArgs> dataLocation;
 
-    public Input<PermissionsDataLocationArgs> getDataLocation() {
-        return this.dataLocation == null ? Input.empty() : this.dataLocation;
+    public Output<PermissionsDataLocationArgs> getDataLocation() {
+        return this.dataLocation == null ? Output.empty() : this.dataLocation;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="database")
-      private final @Nullable Input<PermissionsDatabaseArgs> database;
+      private final @Nullable Output<PermissionsDatabaseArgs> database;
 
-    public Input<PermissionsDatabaseArgs> getDatabase() {
-        return this.database == null ? Input.empty() : this.database;
+    public Output<PermissionsDatabaseArgs> getDatabase() {
+        return this.database == null ? Output.empty() : this.database;
     }
 
     /**
@@ -69,9 +69,9 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permissions", required=true)
-      private final Input<List<String>> permissions;
+      private final Output<List<String>> permissions;
 
-    public Input<List<String>> getPermissions() {
+    public Output<List<String>> getPermissions() {
         return this.permissions;
     }
 
@@ -80,10 +80,10 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permissionsWithGrantOptions")
-      private final @Nullable Input<List<String>> permissionsWithGrantOptions;
+      private final @Nullable Output<List<String>> permissionsWithGrantOptions;
 
-    public Input<List<String>> getPermissionsWithGrantOptions() {
-        return this.permissionsWithGrantOptions == null ? Input.empty() : this.permissionsWithGrantOptions;
+    public Output<List<String>> getPermissionsWithGrantOptions() {
+        return this.permissionsWithGrantOptions == null ? Output.empty() : this.permissionsWithGrantOptions;
     }
 
     /**
@@ -91,9 +91,9 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="principal", required=true)
-      private final Input<String> principal;
+      private final Output<String> principal;
 
-    public Input<String> getPrincipal() {
+    public Output<String> getPrincipal() {
         return this.principal;
     }
 
@@ -102,10 +102,10 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="table")
-      private final @Nullable Input<PermissionsTableArgs> table;
+      private final @Nullable Output<PermissionsTableArgs> table;
 
-    public Input<PermissionsTableArgs> getTable() {
-        return this.table == null ? Input.empty() : this.table;
+    public Output<PermissionsTableArgs> getTable() {
+        return this.table == null ? Output.empty() : this.table;
     }
 
     /**
@@ -113,22 +113,22 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tableWithColumns")
-      private final @Nullable Input<PermissionsTableWithColumnsArgs> tableWithColumns;
+      private final @Nullable Output<PermissionsTableWithColumnsArgs> tableWithColumns;
 
-    public Input<PermissionsTableWithColumnsArgs> getTableWithColumns() {
-        return this.tableWithColumns == null ? Input.empty() : this.tableWithColumns;
+    public Output<PermissionsTableWithColumnsArgs> getTableWithColumns() {
+        return this.tableWithColumns == null ? Output.empty() : this.tableWithColumns;
     }
 
     public PermissionsArgs(
-        @Nullable Input<String> catalogId,
-        @Nullable Input<Boolean> catalogResource,
-        @Nullable Input<PermissionsDataLocationArgs> dataLocation,
-        @Nullable Input<PermissionsDatabaseArgs> database,
-        Input<List<String>> permissions,
-        @Nullable Input<List<String>> permissionsWithGrantOptions,
-        Input<String> principal,
-        @Nullable Input<PermissionsTableArgs> table,
-        @Nullable Input<PermissionsTableWithColumnsArgs> tableWithColumns) {
+        @Nullable Output<String> catalogId,
+        @Nullable Output<Boolean> catalogResource,
+        @Nullable Output<PermissionsDataLocationArgs> dataLocation,
+        @Nullable Output<PermissionsDatabaseArgs> database,
+        Output<List<String>> permissions,
+        @Nullable Output<List<String>> permissionsWithGrantOptions,
+        Output<String> principal,
+        @Nullable Output<PermissionsTableArgs> table,
+        @Nullable Output<PermissionsTableWithColumnsArgs> tableWithColumns) {
         this.catalogId = catalogId;
         this.catalogResource = catalogResource;
         this.dataLocation = dataLocation;
@@ -141,15 +141,15 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PermissionsArgs() {
-        this.catalogId = Input.empty();
-        this.catalogResource = Input.empty();
-        this.dataLocation = Input.empty();
-        this.database = Input.empty();
-        this.permissions = Input.empty();
-        this.permissionsWithGrantOptions = Input.empty();
-        this.principal = Input.empty();
-        this.table = Input.empty();
-        this.tableWithColumns = Input.empty();
+        this.catalogId = Output.empty();
+        this.catalogResource = Output.empty();
+        this.dataLocation = Output.empty();
+        this.database = Output.empty();
+        this.permissions = Output.empty();
+        this.permissionsWithGrantOptions = Output.empty();
+        this.principal = Output.empty();
+        this.table = Output.empty();
+        this.tableWithColumns = Output.empty();
     }
 
     public static Builder builder() {
@@ -161,15 +161,15 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> catalogId;
-        private @Nullable Input<Boolean> catalogResource;
-        private @Nullable Input<PermissionsDataLocationArgs> dataLocation;
-        private @Nullable Input<PermissionsDatabaseArgs> database;
-        private Input<List<String>> permissions;
-        private @Nullable Input<List<String>> permissionsWithGrantOptions;
-        private Input<String> principal;
-        private @Nullable Input<PermissionsTableArgs> table;
-        private @Nullable Input<PermissionsTableWithColumnsArgs> tableWithColumns;
+        private @Nullable Output<String> catalogId;
+        private @Nullable Output<Boolean> catalogResource;
+        private @Nullable Output<PermissionsDataLocationArgs> dataLocation;
+        private @Nullable Output<PermissionsDatabaseArgs> database;
+        private Output<List<String>> permissions;
+        private @Nullable Output<List<String>> permissionsWithGrantOptions;
+        private Output<String> principal;
+        private @Nullable Output<PermissionsTableArgs> table;
+        private @Nullable Output<PermissionsTableWithColumnsArgs> tableWithColumns;
 
         public Builder() {
     	      // Empty
@@ -188,93 +188,93 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tableWithColumns = defaults.tableWithColumns;
         }
 
-        public Builder catalogId(@Nullable Input<String> catalogId) {
+        public Builder catalogId(@Nullable Output<String> catalogId) {
             this.catalogId = catalogId;
             return this;
         }
 
         public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = Input.ofNullable(catalogId);
+            this.catalogId = Output.ofNullable(catalogId);
             return this;
         }
 
-        public Builder catalogResource(@Nullable Input<Boolean> catalogResource) {
+        public Builder catalogResource(@Nullable Output<Boolean> catalogResource) {
             this.catalogResource = catalogResource;
             return this;
         }
 
         public Builder catalogResource(@Nullable Boolean catalogResource) {
-            this.catalogResource = Input.ofNullable(catalogResource);
+            this.catalogResource = Output.ofNullable(catalogResource);
             return this;
         }
 
-        public Builder dataLocation(@Nullable Input<PermissionsDataLocationArgs> dataLocation) {
+        public Builder dataLocation(@Nullable Output<PermissionsDataLocationArgs> dataLocation) {
             this.dataLocation = dataLocation;
             return this;
         }
 
         public Builder dataLocation(@Nullable PermissionsDataLocationArgs dataLocation) {
-            this.dataLocation = Input.ofNullable(dataLocation);
+            this.dataLocation = Output.ofNullable(dataLocation);
             return this;
         }
 
-        public Builder database(@Nullable Input<PermissionsDatabaseArgs> database) {
+        public Builder database(@Nullable Output<PermissionsDatabaseArgs> database) {
             this.database = database;
             return this;
         }
 
         public Builder database(@Nullable PermissionsDatabaseArgs database) {
-            this.database = Input.ofNullable(database);
+            this.database = Output.ofNullable(database);
             return this;
         }
 
-        public Builder permissions(Input<List<String>> permissions) {
+        public Builder permissions(Output<List<String>> permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
 
         public Builder permissions(List<String> permissions) {
-            this.permissions = Input.of(Objects.requireNonNull(permissions));
+            this.permissions = Output.of(Objects.requireNonNull(permissions));
             return this;
         }
 
-        public Builder permissionsWithGrantOptions(@Nullable Input<List<String>> permissionsWithGrantOptions) {
+        public Builder permissionsWithGrantOptions(@Nullable Output<List<String>> permissionsWithGrantOptions) {
             this.permissionsWithGrantOptions = permissionsWithGrantOptions;
             return this;
         }
 
         public Builder permissionsWithGrantOptions(@Nullable List<String> permissionsWithGrantOptions) {
-            this.permissionsWithGrantOptions = Input.ofNullable(permissionsWithGrantOptions);
+            this.permissionsWithGrantOptions = Output.ofNullable(permissionsWithGrantOptions);
             return this;
         }
 
-        public Builder principal(Input<String> principal) {
+        public Builder principal(Output<String> principal) {
             this.principal = Objects.requireNonNull(principal);
             return this;
         }
 
         public Builder principal(String principal) {
-            this.principal = Input.of(Objects.requireNonNull(principal));
+            this.principal = Output.of(Objects.requireNonNull(principal));
             return this;
         }
 
-        public Builder table(@Nullable Input<PermissionsTableArgs> table) {
+        public Builder table(@Nullable Output<PermissionsTableArgs> table) {
             this.table = table;
             return this;
         }
 
         public Builder table(@Nullable PermissionsTableArgs table) {
-            this.table = Input.ofNullable(table);
+            this.table = Output.ofNullable(table);
             return this;
         }
 
-        public Builder tableWithColumns(@Nullable Input<PermissionsTableWithColumnsArgs> tableWithColumns) {
+        public Builder tableWithColumns(@Nullable Output<PermissionsTableWithColumnsArgs> tableWithColumns) {
             this.tableWithColumns = tableWithColumns;
             return this;
         }
 
         public Builder tableWithColumns(@Nullable PermissionsTableWithColumnsArgs tableWithColumns) {
-            this.tableWithColumns = Input.ofNullable(tableWithColumns);
+            this.tableWithColumns = Output.ofNullable(tableWithColumns);
             return this;
         }
         public PermissionsArgs build() {

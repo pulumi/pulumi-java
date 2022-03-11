@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devices.inputs;
 
 import io.pulumi.azurenative.devices.enums.IotHubSku;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class IotHubSkuInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacity")
-      private final @Nullable Input<Double> capacity;
+      private final @Nullable Output<Double> capacity;
 
-    public Input<Double> getCapacity() {
-        return this.capacity == null ? Input.empty() : this.capacity;
+    public Output<Double> getCapacity() {
+        return this.capacity == null ? Output.empty() : this.capacity;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class IotHubSkuInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<Either<String,IotHubSku>> name;
+      private final Output<Either<String,IotHubSku>> name;
 
-    public Input<Either<String,IotHubSku>> getName() {
+    public Output<Either<String,IotHubSku>> getName() {
         return this.name;
     }
 
     public IotHubSkuInfoArgs(
-        @Nullable Input<Double> capacity,
-        Input<Either<String,IotHubSku>> name) {
+        @Nullable Output<Double> capacity,
+        Output<Either<String,IotHubSku>> name) {
         this.capacity = capacity;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private IotHubSkuInfoArgs() {
-        this.capacity = Input.empty();
-        this.name = Input.empty();
+        this.capacity = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class IotHubSkuInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Double> capacity;
-        private Input<Either<String,IotHubSku>> name;
+        private @Nullable Output<Double> capacity;
+        private Output<Either<String,IotHubSku>> name;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class IotHubSkuInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder capacity(@Nullable Input<Double> capacity) {
+        public Builder capacity(@Nullable Output<Double> capacity) {
             this.capacity = capacity;
             return this;
         }
 
         public Builder capacity(@Nullable Double capacity) {
-            this.capacity = Input.ofNullable(capacity);
+            this.capacity = Output.ofNullable(capacity);
             return this;
         }
 
-        public Builder name(Input<Either<String,IotHubSku>> name) {
+        public Builder name(Output<Either<String,IotHubSku>> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(Either<String,IotHubSku> name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public IotHubSkuInfoArgs build() {

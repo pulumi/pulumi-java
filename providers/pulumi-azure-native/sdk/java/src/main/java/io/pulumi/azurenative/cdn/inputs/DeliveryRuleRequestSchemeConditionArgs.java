@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.RequestSchemeMatchConditionParametersArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class DeliveryRuleRequestSchemeConditionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -35,22 +35,22 @@ public final class DeliveryRuleRequestSchemeConditionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="parameters", required=true)
-      private final Input<RequestSchemeMatchConditionParametersArgs> parameters;
+      private final Output<RequestSchemeMatchConditionParametersArgs> parameters;
 
-    public Input<RequestSchemeMatchConditionParametersArgs> getParameters() {
+    public Output<RequestSchemeMatchConditionParametersArgs> getParameters() {
         return this.parameters;
     }
 
     public DeliveryRuleRequestSchemeConditionArgs(
-        Input<String> name,
-        Input<RequestSchemeMatchConditionParametersArgs> parameters) {
+        Output<String> name,
+        Output<RequestSchemeMatchConditionParametersArgs> parameters) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
     }
 
     private DeliveryRuleRequestSchemeConditionArgs() {
-        this.name = Input.empty();
-        this.parameters = Input.empty();
+        this.name = Output.empty();
+        this.parameters = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class DeliveryRuleRequestSchemeConditionArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private Input<RequestSchemeMatchConditionParametersArgs> parameters;
+        private Output<String> name;
+        private Output<RequestSchemeMatchConditionParametersArgs> parameters;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class DeliveryRuleRequestSchemeConditionArgs extends io.pulumi.reso
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder parameters(Input<RequestSchemeMatchConditionParametersArgs> parameters) {
+        public Builder parameters(Output<RequestSchemeMatchConditionParametersArgs> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
         public Builder parameters(RequestSchemeMatchConditionParametersArgs parameters) {
-            this.parameters = Input.of(Objects.requireNonNull(parameters));
+            this.parameters = Output.of(Objects.requireNonNull(parameters));
             return this;
         }
         public DeliveryRuleRequestSchemeConditionArgs build() {

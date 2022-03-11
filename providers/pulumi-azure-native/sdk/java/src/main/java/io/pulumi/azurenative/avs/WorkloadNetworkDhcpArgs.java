@@ -5,7 +5,7 @@ package io.pulumi.azurenative.avs;
 
 import io.pulumi.azurenative.avs.enums.DhcpTypeEnum;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="dhcpId")
-      private final @Nullable Input<String> dhcpId;
+      private final @Nullable Output<String> dhcpId;
 
-    public Input<String> getDhcpId() {
-        return this.dhcpId == null ? Input.empty() : this.dhcpId;
+    public Output<String> getDhcpId() {
+        return this.dhcpId == null ? Output.empty() : this.dhcpId;
     }
 
     /**
@@ -33,9 +33,9 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="dhcpType", required=true)
-      private final Input<Either<String,DhcpTypeEnum>> dhcpType;
+      private final Output<Either<String,DhcpTypeEnum>> dhcpType;
 
-    public Input<Either<String,DhcpTypeEnum>> getDhcpType() {
+    public Output<Either<String,DhcpTypeEnum>> getDhcpType() {
         return this.dhcpType;
     }
 
@@ -44,10 +44,10 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -55,9 +55,9 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="privateCloudName", required=true)
-      private final Input<String> privateCloudName;
+      private final Output<String> privateCloudName;
 
-    public Input<String> getPrivateCloudName() {
+    public Output<String> getPrivateCloudName() {
         return this.privateCloudName;
     }
 
@@ -66,9 +66,9 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -77,19 +77,19 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="revision")
-      private final @Nullable Input<Double> revision;
+      private final @Nullable Output<Double> revision;
 
-    public Input<Double> getRevision() {
-        return this.revision == null ? Input.empty() : this.revision;
+    public Output<Double> getRevision() {
+        return this.revision == null ? Output.empty() : this.revision;
     }
 
     public WorkloadNetworkDhcpArgs(
-        @Nullable Input<String> dhcpId,
-        Input<Either<String,DhcpTypeEnum>> dhcpType,
-        @Nullable Input<String> displayName,
-        Input<String> privateCloudName,
-        Input<String> resourceGroupName,
-        @Nullable Input<Double> revision) {
+        @Nullable Output<String> dhcpId,
+        Output<Either<String,DhcpTypeEnum>> dhcpType,
+        @Nullable Output<String> displayName,
+        Output<String> privateCloudName,
+        Output<String> resourceGroupName,
+        @Nullable Output<Double> revision) {
         this.dhcpId = dhcpId;
         this.dhcpType = Objects.requireNonNull(dhcpType, "expected parameter 'dhcpType' to be non-null");
         this.displayName = displayName;
@@ -99,12 +99,12 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
     }
 
     private WorkloadNetworkDhcpArgs() {
-        this.dhcpId = Input.empty();
-        this.dhcpType = Input.empty();
-        this.displayName = Input.empty();
-        this.privateCloudName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.revision = Input.empty();
+        this.dhcpId = Output.empty();
+        this.dhcpType = Output.empty();
+        this.displayName = Output.empty();
+        this.privateCloudName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.revision = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> dhcpId;
-        private Input<Either<String,DhcpTypeEnum>> dhcpType;
-        private @Nullable Input<String> displayName;
-        private Input<String> privateCloudName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Double> revision;
+        private @Nullable Output<String> dhcpId;
+        private Output<Either<String,DhcpTypeEnum>> dhcpType;
+        private @Nullable Output<String> displayName;
+        private Output<String> privateCloudName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Double> revision;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
     	      this.revision = defaults.revision;
         }
 
-        public Builder dhcpId(@Nullable Input<String> dhcpId) {
+        public Builder dhcpId(@Nullable Output<String> dhcpId) {
             this.dhcpId = dhcpId;
             return this;
         }
 
         public Builder dhcpId(@Nullable String dhcpId) {
-            this.dhcpId = Input.ofNullable(dhcpId);
+            this.dhcpId = Output.ofNullable(dhcpId);
             return this;
         }
 
-        public Builder dhcpType(Input<Either<String,DhcpTypeEnum>> dhcpType) {
+        public Builder dhcpType(Output<Either<String,DhcpTypeEnum>> dhcpType) {
             this.dhcpType = Objects.requireNonNull(dhcpType);
             return this;
         }
 
         public Builder dhcpType(Either<String,DhcpTypeEnum> dhcpType) {
-            this.dhcpType = Input.of(Objects.requireNonNull(dhcpType));
+            this.dhcpType = Output.of(Objects.requireNonNull(dhcpType));
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder privateCloudName(Input<String> privateCloudName) {
+        public Builder privateCloudName(Output<String> privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
 
         public Builder privateCloudName(String privateCloudName) {
-            this.privateCloudName = Input.of(Objects.requireNonNull(privateCloudName));
+            this.privateCloudName = Output.of(Objects.requireNonNull(privateCloudName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder revision(@Nullable Input<Double> revision) {
+        public Builder revision(@Nullable Output<Double> revision) {
             this.revision = revision;
             return this;
         }
 
         public Builder revision(@Nullable Double revision) {
-            this.revision = Input.ofNullable(revision);
+            this.revision = Output.ofNullable(revision);
             return this;
         }
         public WorkloadNetworkDhcpArgs build() {

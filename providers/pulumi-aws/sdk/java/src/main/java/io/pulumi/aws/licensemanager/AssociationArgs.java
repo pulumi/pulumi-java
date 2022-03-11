@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.licensemanager;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="licenseConfigurationArn", required=true)
-      private final Input<String> licenseConfigurationArn;
+      private final Output<String> licenseConfigurationArn;
 
-    public Input<String> getLicenseConfigurationArn() {
+    public Output<String> getLicenseConfigurationArn() {
         return this.licenseConfigurationArn;
     }
 
@@ -29,22 +29,22 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceArn", required=true)
-      private final Input<String> resourceArn;
+      private final Output<String> resourceArn;
 
-    public Input<String> getResourceArn() {
+    public Output<String> getResourceArn() {
         return this.resourceArn;
     }
 
     public AssociationArgs(
-        Input<String> licenseConfigurationArn,
-        Input<String> resourceArn) {
+        Output<String> licenseConfigurationArn,
+        Output<String> resourceArn) {
         this.licenseConfigurationArn = Objects.requireNonNull(licenseConfigurationArn, "expected parameter 'licenseConfigurationArn' to be non-null");
         this.resourceArn = Objects.requireNonNull(resourceArn, "expected parameter 'resourceArn' to be non-null");
     }
 
     private AssociationArgs() {
-        this.licenseConfigurationArn = Input.empty();
-        this.resourceArn = Input.empty();
+        this.licenseConfigurationArn = Output.empty();
+        this.resourceArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> licenseConfigurationArn;
-        private Input<String> resourceArn;
+        private Output<String> licenseConfigurationArn;
+        private Output<String> resourceArn;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceArn = defaults.resourceArn;
         }
 
-        public Builder licenseConfigurationArn(Input<String> licenseConfigurationArn) {
+        public Builder licenseConfigurationArn(Output<String> licenseConfigurationArn) {
             this.licenseConfigurationArn = Objects.requireNonNull(licenseConfigurationArn);
             return this;
         }
 
         public Builder licenseConfigurationArn(String licenseConfigurationArn) {
-            this.licenseConfigurationArn = Input.of(Objects.requireNonNull(licenseConfigurationArn));
+            this.licenseConfigurationArn = Output.of(Objects.requireNonNull(licenseConfigurationArn));
             return this;
         }
 
-        public Builder resourceArn(Input<String> resourceArn) {
+        public Builder resourceArn(Output<String> resourceArn) {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }
 
         public Builder resourceArn(String resourceArn) {
-            this.resourceArn = Input.of(Objects.requireNonNull(resourceArn));
+            this.resourceArn = Output.of(Objects.requireNonNull(resourceArn));
             return this;
         }
         public AssociationArgs build() {

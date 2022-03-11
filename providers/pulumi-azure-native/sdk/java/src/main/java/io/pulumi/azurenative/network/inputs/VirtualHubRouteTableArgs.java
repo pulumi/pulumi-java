@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.VirtualHubRouteArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class VirtualHubRouteTableArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="routes")
-      private final @Nullable Input<List<VirtualHubRouteArgs>> routes;
+      private final @Nullable Output<List<VirtualHubRouteArgs>> routes;
 
-    public Input<List<VirtualHubRouteArgs>> getRoutes() {
-        return this.routes == null ? Input.empty() : this.routes;
+    public Output<List<VirtualHubRouteArgs>> getRoutes() {
+        return this.routes == null ? Output.empty() : this.routes;
     }
 
-    public VirtualHubRouteTableArgs(@Nullable Input<List<VirtualHubRouteArgs>> routes) {
+    public VirtualHubRouteTableArgs(@Nullable Output<List<VirtualHubRouteArgs>> routes) {
         this.routes = routes;
     }
 
     private VirtualHubRouteTableArgs() {
-        this.routes = Input.empty();
+        this.routes = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class VirtualHubRouteTableArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<List<VirtualHubRouteArgs>> routes;
+        private @Nullable Output<List<VirtualHubRouteArgs>> routes;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class VirtualHubRouteTableArgs extends io.pulumi.resources.Resource
     	      this.routes = defaults.routes;
         }
 
-        public Builder routes(@Nullable Input<List<VirtualHubRouteArgs>> routes) {
+        public Builder routes(@Nullable Output<List<VirtualHubRouteArgs>> routes) {
             this.routes = routes;
             return this;
         }
 
         public Builder routes(@Nullable List<VirtualHubRouteArgs> routes) {
-            this.routes = Input.ofNullable(routes);
+            this.routes = Output.ofNullable(routes);
             return this;
         }
         public VirtualHubRouteTableArgs build() {

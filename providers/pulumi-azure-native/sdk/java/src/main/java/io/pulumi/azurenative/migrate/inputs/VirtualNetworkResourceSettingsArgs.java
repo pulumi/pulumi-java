@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.azurenative.migrate.inputs.SubnetResourceSettingsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class VirtualNetworkResourceSettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="addressSpace")
-      private final @Nullable Input<List<String>> addressSpace;
+      private final @Nullable Output<List<String>> addressSpace;
 
-    public Input<List<String>> getAddressSpace() {
-        return this.addressSpace == null ? Input.empty() : this.addressSpace;
+    public Output<List<String>> getAddressSpace() {
+        return this.addressSpace == null ? Output.empty() : this.addressSpace;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class VirtualNetworkResourceSettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="dnsServers")
-      private final @Nullable Input<List<String>> dnsServers;
+      private final @Nullable Output<List<String>> dnsServers;
 
-    public Input<List<String>> getDnsServers() {
-        return this.dnsServers == null ? Input.empty() : this.dnsServers;
+    public Output<List<String>> getDnsServers() {
+        return this.dnsServers == null ? Output.empty() : this.dnsServers;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class VirtualNetworkResourceSettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="enableDdosProtection")
-      private final @Nullable Input<Boolean> enableDdosProtection;
+      private final @Nullable Output<Boolean> enableDdosProtection;
 
-    public Input<Boolean> getEnableDdosProtection() {
-        return this.enableDdosProtection == null ? Input.empty() : this.enableDdosProtection;
+    public Output<Boolean> getEnableDdosProtection() {
+        return this.enableDdosProtection == null ? Output.empty() : this.enableDdosProtection;
     }
 
     /**
@@ -62,9 +62,9 @@ public final class VirtualNetworkResourceSettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="resourceType", required=true)
-      private final Input<String> resourceType;
+      private final Output<String> resourceType;
 
-    public Input<String> getPropResourceType() {
+    public Output<String> getPropResourceType() {
         return this.resourceType;
     }
 
@@ -73,10 +73,10 @@ public final class VirtualNetworkResourceSettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="subnets")
-      private final @Nullable Input<List<SubnetResourceSettingsArgs>> subnets;
+      private final @Nullable Output<List<SubnetResourceSettingsArgs>> subnets;
 
-    public Input<List<SubnetResourceSettingsArgs>> getSubnets() {
-        return this.subnets == null ? Input.empty() : this.subnets;
+    public Output<List<SubnetResourceSettingsArgs>> getSubnets() {
+        return this.subnets == null ? Output.empty() : this.subnets;
     }
 
     /**
@@ -84,19 +84,19 @@ public final class VirtualNetworkResourceSettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="targetResourceName", required=true)
-      private final Input<String> targetResourceName;
+      private final Output<String> targetResourceName;
 
-    public Input<String> getTargetResourceName() {
+    public Output<String> getTargetResourceName() {
         return this.targetResourceName;
     }
 
     public VirtualNetworkResourceSettingsArgs(
-        @Nullable Input<List<String>> addressSpace,
-        @Nullable Input<List<String>> dnsServers,
-        @Nullable Input<Boolean> enableDdosProtection,
-        Input<String> resourceType,
-        @Nullable Input<List<SubnetResourceSettingsArgs>> subnets,
-        Input<String> targetResourceName) {
+        @Nullable Output<List<String>> addressSpace,
+        @Nullable Output<List<String>> dnsServers,
+        @Nullable Output<Boolean> enableDdosProtection,
+        Output<String> resourceType,
+        @Nullable Output<List<SubnetResourceSettingsArgs>> subnets,
+        Output<String> targetResourceName) {
         this.addressSpace = addressSpace;
         this.dnsServers = dnsServers;
         this.enableDdosProtection = enableDdosProtection;
@@ -106,12 +106,12 @@ public final class VirtualNetworkResourceSettingsArgs extends io.pulumi.resource
     }
 
     private VirtualNetworkResourceSettingsArgs() {
-        this.addressSpace = Input.empty();
-        this.dnsServers = Input.empty();
-        this.enableDdosProtection = Input.empty();
-        this.resourceType = Input.empty();
-        this.subnets = Input.empty();
-        this.targetResourceName = Input.empty();
+        this.addressSpace = Output.empty();
+        this.dnsServers = Output.empty();
+        this.enableDdosProtection = Output.empty();
+        this.resourceType = Output.empty();
+        this.subnets = Output.empty();
+        this.targetResourceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -123,12 +123,12 @@ public final class VirtualNetworkResourceSettingsArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> addressSpace;
-        private @Nullable Input<List<String>> dnsServers;
-        private @Nullable Input<Boolean> enableDdosProtection;
-        private Input<String> resourceType;
-        private @Nullable Input<List<SubnetResourceSettingsArgs>> subnets;
-        private Input<String> targetResourceName;
+        private @Nullable Output<List<String>> addressSpace;
+        private @Nullable Output<List<String>> dnsServers;
+        private @Nullable Output<Boolean> enableDdosProtection;
+        private Output<String> resourceType;
+        private @Nullable Output<List<SubnetResourceSettingsArgs>> subnets;
+        private Output<String> targetResourceName;
 
         public Builder() {
     	      // Empty
@@ -144,63 +144,63 @@ public final class VirtualNetworkResourceSettingsArgs extends io.pulumi.resource
     	      this.targetResourceName = defaults.targetResourceName;
         }
 
-        public Builder addressSpace(@Nullable Input<List<String>> addressSpace) {
+        public Builder addressSpace(@Nullable Output<List<String>> addressSpace) {
             this.addressSpace = addressSpace;
             return this;
         }
 
         public Builder addressSpace(@Nullable List<String> addressSpace) {
-            this.addressSpace = Input.ofNullable(addressSpace);
+            this.addressSpace = Output.ofNullable(addressSpace);
             return this;
         }
 
-        public Builder dnsServers(@Nullable Input<List<String>> dnsServers) {
+        public Builder dnsServers(@Nullable Output<List<String>> dnsServers) {
             this.dnsServers = dnsServers;
             return this;
         }
 
         public Builder dnsServers(@Nullable List<String> dnsServers) {
-            this.dnsServers = Input.ofNullable(dnsServers);
+            this.dnsServers = Output.ofNullable(dnsServers);
             return this;
         }
 
-        public Builder enableDdosProtection(@Nullable Input<Boolean> enableDdosProtection) {
+        public Builder enableDdosProtection(@Nullable Output<Boolean> enableDdosProtection) {
             this.enableDdosProtection = enableDdosProtection;
             return this;
         }
 
         public Builder enableDdosProtection(@Nullable Boolean enableDdosProtection) {
-            this.enableDdosProtection = Input.ofNullable(enableDdosProtection);
+            this.enableDdosProtection = Output.ofNullable(enableDdosProtection);
             return this;
         }
 
-        public Builder resourceType(Input<String> resourceType) {
+        public Builder resourceType(Output<String> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
         public Builder resourceType(String resourceType) {
-            this.resourceType = Input.of(Objects.requireNonNull(resourceType));
+            this.resourceType = Output.of(Objects.requireNonNull(resourceType));
             return this;
         }
 
-        public Builder subnets(@Nullable Input<List<SubnetResourceSettingsArgs>> subnets) {
+        public Builder subnets(@Nullable Output<List<SubnetResourceSettingsArgs>> subnets) {
             this.subnets = subnets;
             return this;
         }
 
         public Builder subnets(@Nullable List<SubnetResourceSettingsArgs> subnets) {
-            this.subnets = Input.ofNullable(subnets);
+            this.subnets = Output.ofNullable(subnets);
             return this;
         }
 
-        public Builder targetResourceName(Input<String> targetResourceName) {
+        public Builder targetResourceName(Output<String> targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
 
         public Builder targetResourceName(String targetResourceName) {
-            this.targetResourceName = Input.of(Objects.requireNonNull(targetResourceName));
+            this.targetResourceName = Output.of(Objects.requireNonNull(targetResourceName));
             return this;
         }
         public VirtualNetworkResourceSettingsArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.inputs.HttpHeaderActionArgs;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class WeightedBackendServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="backendService")
-      private final @Nullable Input<String> backendService;
+      private final @Nullable Output<String> backendService;
 
-    public Input<String> getBackendService() {
-        return this.backendService == null ? Input.empty() : this.backendService;
+    public Output<String> getBackendService() {
+        return this.backendService == null ? Output.empty() : this.backendService;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class WeightedBackendServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="headerAction")
-      private final @Nullable Input<HttpHeaderActionArgs> headerAction;
+      private final @Nullable Output<HttpHeaderActionArgs> headerAction;
 
-    public Input<HttpHeaderActionArgs> getHeaderAction() {
-        return this.headerAction == null ? Input.empty() : this.headerAction;
+    public Output<HttpHeaderActionArgs> getHeaderAction() {
+        return this.headerAction == null ? Output.empty() : this.headerAction;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class WeightedBackendServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="weight")
-      private final @Nullable Input<Integer> weight;
+      private final @Nullable Output<Integer> weight;
 
-    public Input<Integer> getWeight() {
-        return this.weight == null ? Input.empty() : this.weight;
+    public Output<Integer> getWeight() {
+        return this.weight == null ? Output.empty() : this.weight;
     }
 
     public WeightedBackendServiceArgs(
-        @Nullable Input<String> backendService,
-        @Nullable Input<HttpHeaderActionArgs> headerAction,
-        @Nullable Input<Integer> weight) {
+        @Nullable Output<String> backendService,
+        @Nullable Output<HttpHeaderActionArgs> headerAction,
+        @Nullable Output<Integer> weight) {
         this.backendService = backendService;
         this.headerAction = headerAction;
         this.weight = weight;
     }
 
     private WeightedBackendServiceArgs() {
-        this.backendService = Input.empty();
-        this.headerAction = Input.empty();
-        this.weight = Input.empty();
+        this.backendService = Output.empty();
+        this.headerAction = Output.empty();
+        this.weight = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class WeightedBackendServiceArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> backendService;
-        private @Nullable Input<HttpHeaderActionArgs> headerAction;
-        private @Nullable Input<Integer> weight;
+        private @Nullable Output<String> backendService;
+        private @Nullable Output<HttpHeaderActionArgs> headerAction;
+        private @Nullable Output<Integer> weight;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class WeightedBackendServiceArgs extends io.pulumi.resources.Resour
     	      this.weight = defaults.weight;
         }
 
-        public Builder backendService(@Nullable Input<String> backendService) {
+        public Builder backendService(@Nullable Output<String> backendService) {
             this.backendService = backendService;
             return this;
         }
 
         public Builder backendService(@Nullable String backendService) {
-            this.backendService = Input.ofNullable(backendService);
+            this.backendService = Output.ofNullable(backendService);
             return this;
         }
 
-        public Builder headerAction(@Nullable Input<HttpHeaderActionArgs> headerAction) {
+        public Builder headerAction(@Nullable Output<HttpHeaderActionArgs> headerAction) {
             this.headerAction = headerAction;
             return this;
         }
 
         public Builder headerAction(@Nullable HttpHeaderActionArgs headerAction) {
-            this.headerAction = Input.ofNullable(headerAction);
+            this.headerAction = Output.ofNullable(headerAction);
             return this;
         }
 
-        public Builder weight(@Nullable Input<Integer> weight) {
+        public Builder weight(@Nullable Output<Integer> weight) {
             this.weight = weight;
             return this;
         }
 
         public Builder weight(@Nullable Integer weight) {
-            this.weight = Input.ofNullable(weight);
+            this.weight = Output.ofNullable(weight);
             return this;
         }
         public WeightedBackendServiceArgs build() {

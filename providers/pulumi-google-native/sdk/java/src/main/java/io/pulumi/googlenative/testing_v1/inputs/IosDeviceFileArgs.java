@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.testing_v1.inputs.FileReferenceArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class IosDeviceFileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bundleId")
-      private final @Nullable Input<String> bundleId;
+      private final @Nullable Output<String> bundleId;
 
-    public Input<String> getBundleId() {
-        return this.bundleId == null ? Input.empty() : this.bundleId;
+    public Output<String> getBundleId() {
+        return this.bundleId == null ? Output.empty() : this.bundleId;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class IosDeviceFileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="content")
-      private final @Nullable Input<FileReferenceArgs> content;
+      private final @Nullable Output<FileReferenceArgs> content;
 
-    public Input<FileReferenceArgs> getContent() {
-        return this.content == null ? Input.empty() : this.content;
+    public Output<FileReferenceArgs> getContent() {
+        return this.content == null ? Output.empty() : this.content;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class IosDeviceFileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="devicePath")
-      private final @Nullable Input<String> devicePath;
+      private final @Nullable Output<String> devicePath;
 
-    public Input<String> getDevicePath() {
-        return this.devicePath == null ? Input.empty() : this.devicePath;
+    public Output<String> getDevicePath() {
+        return this.devicePath == null ? Output.empty() : this.devicePath;
     }
 
     public IosDeviceFileArgs(
-        @Nullable Input<String> bundleId,
-        @Nullable Input<FileReferenceArgs> content,
-        @Nullable Input<String> devicePath) {
+        @Nullable Output<String> bundleId,
+        @Nullable Output<FileReferenceArgs> content,
+        @Nullable Output<String> devicePath) {
         this.bundleId = bundleId;
         this.content = content;
         this.devicePath = devicePath;
     }
 
     private IosDeviceFileArgs() {
-        this.bundleId = Input.empty();
-        this.content = Input.empty();
-        this.devicePath = Input.empty();
+        this.bundleId = Output.empty();
+        this.content = Output.empty();
+        this.devicePath = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class IosDeviceFileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bundleId;
-        private @Nullable Input<FileReferenceArgs> content;
-        private @Nullable Input<String> devicePath;
+        private @Nullable Output<String> bundleId;
+        private @Nullable Output<FileReferenceArgs> content;
+        private @Nullable Output<String> devicePath;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class IosDeviceFileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.devicePath = defaults.devicePath;
         }
 
-        public Builder bundleId(@Nullable Input<String> bundleId) {
+        public Builder bundleId(@Nullable Output<String> bundleId) {
             this.bundleId = bundleId;
             return this;
         }
 
         public Builder bundleId(@Nullable String bundleId) {
-            this.bundleId = Input.ofNullable(bundleId);
+            this.bundleId = Output.ofNullable(bundleId);
             return this;
         }
 
-        public Builder content(@Nullable Input<FileReferenceArgs> content) {
+        public Builder content(@Nullable Output<FileReferenceArgs> content) {
             this.content = content;
             return this;
         }
 
         public Builder content(@Nullable FileReferenceArgs content) {
-            this.content = Input.ofNullable(content);
+            this.content = Output.ofNullable(content);
             return this;
         }
 
-        public Builder devicePath(@Nullable Input<String> devicePath) {
+        public Builder devicePath(@Nullable Output<String> devicePath) {
             this.devicePath = devicePath;
             return this;
         }
 
         public Builder devicePath(@Nullable String devicePath) {
-            this.devicePath = Input.ofNullable(devicePath);
+            this.devicePath = Output.ofNullable(devicePath);
             return this;
         }
         public IosDeviceFileArgs build() {

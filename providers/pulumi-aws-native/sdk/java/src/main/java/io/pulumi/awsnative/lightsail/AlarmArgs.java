@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lightsail;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -23,10 +23,10 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alarmName")
-      private final @Nullable Input<String> alarmName;
+      private final @Nullable Output<String> alarmName;
 
-    public Input<String> getAlarmName() {
-        return this.alarmName == null ? Input.empty() : this.alarmName;
+    public Output<String> getAlarmName() {
+        return this.alarmName == null ? Output.empty() : this.alarmName;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="comparisonOperator", required=true)
-      private final Input<String> comparisonOperator;
+      private final Output<String> comparisonOperator;
 
-    public Input<String> getComparisonOperator() {
+    public Output<String> getComparisonOperator() {
         return this.comparisonOperator;
     }
 
@@ -45,10 +45,10 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contactProtocols")
-      private final @Nullable Input<List<String>> contactProtocols;
+      private final @Nullable Output<List<String>> contactProtocols;
 
-    public Input<List<String>> getContactProtocols() {
-        return this.contactProtocols == null ? Input.empty() : this.contactProtocols;
+    public Output<List<String>> getContactProtocols() {
+        return this.contactProtocols == null ? Output.empty() : this.contactProtocols;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datapointsToAlarm")
-      private final @Nullable Input<Integer> datapointsToAlarm;
+      private final @Nullable Output<Integer> datapointsToAlarm;
 
-    public Input<Integer> getDatapointsToAlarm() {
-        return this.datapointsToAlarm == null ? Input.empty() : this.datapointsToAlarm;
+    public Output<Integer> getDatapointsToAlarm() {
+        return this.datapointsToAlarm == null ? Output.empty() : this.datapointsToAlarm;
     }
 
     /**
@@ -67,9 +67,9 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="evaluationPeriods", required=true)
-      private final Input<Integer> evaluationPeriods;
+      private final Output<Integer> evaluationPeriods;
 
-    public Input<Integer> getEvaluationPeriods() {
+    public Output<Integer> getEvaluationPeriods() {
         return this.evaluationPeriods;
     }
 
@@ -78,9 +78,9 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metricName", required=true)
-      private final Input<String> metricName;
+      private final Output<String> metricName;
 
-    public Input<String> getMetricName() {
+    public Output<String> getMetricName() {
         return this.metricName;
     }
 
@@ -89,9 +89,9 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="monitoredResourceName", required=true)
-      private final Input<String> monitoredResourceName;
+      private final Output<String> monitoredResourceName;
 
-    public Input<String> getMonitoredResourceName() {
+    public Output<String> getMonitoredResourceName() {
         return this.monitoredResourceName;
     }
 
@@ -100,10 +100,10 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationEnabled")
-      private final @Nullable Input<Boolean> notificationEnabled;
+      private final @Nullable Output<Boolean> notificationEnabled;
 
-    public Input<Boolean> getNotificationEnabled() {
-        return this.notificationEnabled == null ? Input.empty() : this.notificationEnabled;
+    public Output<Boolean> getNotificationEnabled() {
+        return this.notificationEnabled == null ? Output.empty() : this.notificationEnabled;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationTriggers")
-      private final @Nullable Input<List<String>> notificationTriggers;
+      private final @Nullable Output<List<String>> notificationTriggers;
 
-    public Input<List<String>> getNotificationTriggers() {
-        return this.notificationTriggers == null ? Input.empty() : this.notificationTriggers;
+    public Output<List<String>> getNotificationTriggers() {
+        return this.notificationTriggers == null ? Output.empty() : this.notificationTriggers;
     }
 
     /**
@@ -122,9 +122,9 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="threshold", required=true)
-      private final Input<Double> threshold;
+      private final Output<Double> threshold;
 
-    public Input<Double> getThreshold() {
+    public Output<Double> getThreshold() {
         return this.threshold;
     }
 
@@ -133,24 +133,24 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="treatMissingData")
-      private final @Nullable Input<String> treatMissingData;
+      private final @Nullable Output<String> treatMissingData;
 
-    public Input<String> getTreatMissingData() {
-        return this.treatMissingData == null ? Input.empty() : this.treatMissingData;
+    public Output<String> getTreatMissingData() {
+        return this.treatMissingData == null ? Output.empty() : this.treatMissingData;
     }
 
     public AlarmArgs(
-        @Nullable Input<String> alarmName,
-        Input<String> comparisonOperator,
-        @Nullable Input<List<String>> contactProtocols,
-        @Nullable Input<Integer> datapointsToAlarm,
-        Input<Integer> evaluationPeriods,
-        Input<String> metricName,
-        Input<String> monitoredResourceName,
-        @Nullable Input<Boolean> notificationEnabled,
-        @Nullable Input<List<String>> notificationTriggers,
-        Input<Double> threshold,
-        @Nullable Input<String> treatMissingData) {
+        @Nullable Output<String> alarmName,
+        Output<String> comparisonOperator,
+        @Nullable Output<List<String>> contactProtocols,
+        @Nullable Output<Integer> datapointsToAlarm,
+        Output<Integer> evaluationPeriods,
+        Output<String> metricName,
+        Output<String> monitoredResourceName,
+        @Nullable Output<Boolean> notificationEnabled,
+        @Nullable Output<List<String>> notificationTriggers,
+        Output<Double> threshold,
+        @Nullable Output<String> treatMissingData) {
         this.alarmName = alarmName;
         this.comparisonOperator = Objects.requireNonNull(comparisonOperator, "expected parameter 'comparisonOperator' to be non-null");
         this.contactProtocols = contactProtocols;
@@ -165,17 +165,17 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AlarmArgs() {
-        this.alarmName = Input.empty();
-        this.comparisonOperator = Input.empty();
-        this.contactProtocols = Input.empty();
-        this.datapointsToAlarm = Input.empty();
-        this.evaluationPeriods = Input.empty();
-        this.metricName = Input.empty();
-        this.monitoredResourceName = Input.empty();
-        this.notificationEnabled = Input.empty();
-        this.notificationTriggers = Input.empty();
-        this.threshold = Input.empty();
-        this.treatMissingData = Input.empty();
+        this.alarmName = Output.empty();
+        this.comparisonOperator = Output.empty();
+        this.contactProtocols = Output.empty();
+        this.datapointsToAlarm = Output.empty();
+        this.evaluationPeriods = Output.empty();
+        this.metricName = Output.empty();
+        this.monitoredResourceName = Output.empty();
+        this.notificationEnabled = Output.empty();
+        this.notificationTriggers = Output.empty();
+        this.threshold = Output.empty();
+        this.treatMissingData = Output.empty();
     }
 
     public static Builder builder() {
@@ -187,17 +187,17 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> alarmName;
-        private Input<String> comparisonOperator;
-        private @Nullable Input<List<String>> contactProtocols;
-        private @Nullable Input<Integer> datapointsToAlarm;
-        private Input<Integer> evaluationPeriods;
-        private Input<String> metricName;
-        private Input<String> monitoredResourceName;
-        private @Nullable Input<Boolean> notificationEnabled;
-        private @Nullable Input<List<String>> notificationTriggers;
-        private Input<Double> threshold;
-        private @Nullable Input<String> treatMissingData;
+        private @Nullable Output<String> alarmName;
+        private Output<String> comparisonOperator;
+        private @Nullable Output<List<String>> contactProtocols;
+        private @Nullable Output<Integer> datapointsToAlarm;
+        private Output<Integer> evaluationPeriods;
+        private Output<String> metricName;
+        private Output<String> monitoredResourceName;
+        private @Nullable Output<Boolean> notificationEnabled;
+        private @Nullable Output<List<String>> notificationTriggers;
+        private Output<Double> threshold;
+        private @Nullable Output<String> treatMissingData;
 
         public Builder() {
     	      // Empty
@@ -218,113 +218,113 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
     	      this.treatMissingData = defaults.treatMissingData;
         }
 
-        public Builder alarmName(@Nullable Input<String> alarmName) {
+        public Builder alarmName(@Nullable Output<String> alarmName) {
             this.alarmName = alarmName;
             return this;
         }
 
         public Builder alarmName(@Nullable String alarmName) {
-            this.alarmName = Input.ofNullable(alarmName);
+            this.alarmName = Output.ofNullable(alarmName);
             return this;
         }
 
-        public Builder comparisonOperator(Input<String> comparisonOperator) {
+        public Builder comparisonOperator(Output<String> comparisonOperator) {
             this.comparisonOperator = Objects.requireNonNull(comparisonOperator);
             return this;
         }
 
         public Builder comparisonOperator(String comparisonOperator) {
-            this.comparisonOperator = Input.of(Objects.requireNonNull(comparisonOperator));
+            this.comparisonOperator = Output.of(Objects.requireNonNull(comparisonOperator));
             return this;
         }
 
-        public Builder contactProtocols(@Nullable Input<List<String>> contactProtocols) {
+        public Builder contactProtocols(@Nullable Output<List<String>> contactProtocols) {
             this.contactProtocols = contactProtocols;
             return this;
         }
 
         public Builder contactProtocols(@Nullable List<String> contactProtocols) {
-            this.contactProtocols = Input.ofNullable(contactProtocols);
+            this.contactProtocols = Output.ofNullable(contactProtocols);
             return this;
         }
 
-        public Builder datapointsToAlarm(@Nullable Input<Integer> datapointsToAlarm) {
+        public Builder datapointsToAlarm(@Nullable Output<Integer> datapointsToAlarm) {
             this.datapointsToAlarm = datapointsToAlarm;
             return this;
         }
 
         public Builder datapointsToAlarm(@Nullable Integer datapointsToAlarm) {
-            this.datapointsToAlarm = Input.ofNullable(datapointsToAlarm);
+            this.datapointsToAlarm = Output.ofNullable(datapointsToAlarm);
             return this;
         }
 
-        public Builder evaluationPeriods(Input<Integer> evaluationPeriods) {
+        public Builder evaluationPeriods(Output<Integer> evaluationPeriods) {
             this.evaluationPeriods = Objects.requireNonNull(evaluationPeriods);
             return this;
         }
 
         public Builder evaluationPeriods(Integer evaluationPeriods) {
-            this.evaluationPeriods = Input.of(Objects.requireNonNull(evaluationPeriods));
+            this.evaluationPeriods = Output.of(Objects.requireNonNull(evaluationPeriods));
             return this;
         }
 
-        public Builder metricName(Input<String> metricName) {
+        public Builder metricName(Output<String> metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
         public Builder metricName(String metricName) {
-            this.metricName = Input.of(Objects.requireNonNull(metricName));
+            this.metricName = Output.of(Objects.requireNonNull(metricName));
             return this;
         }
 
-        public Builder monitoredResourceName(Input<String> monitoredResourceName) {
+        public Builder monitoredResourceName(Output<String> monitoredResourceName) {
             this.monitoredResourceName = Objects.requireNonNull(monitoredResourceName);
             return this;
         }
 
         public Builder monitoredResourceName(String monitoredResourceName) {
-            this.monitoredResourceName = Input.of(Objects.requireNonNull(monitoredResourceName));
+            this.monitoredResourceName = Output.of(Objects.requireNonNull(monitoredResourceName));
             return this;
         }
 
-        public Builder notificationEnabled(@Nullable Input<Boolean> notificationEnabled) {
+        public Builder notificationEnabled(@Nullable Output<Boolean> notificationEnabled) {
             this.notificationEnabled = notificationEnabled;
             return this;
         }
 
         public Builder notificationEnabled(@Nullable Boolean notificationEnabled) {
-            this.notificationEnabled = Input.ofNullable(notificationEnabled);
+            this.notificationEnabled = Output.ofNullable(notificationEnabled);
             return this;
         }
 
-        public Builder notificationTriggers(@Nullable Input<List<String>> notificationTriggers) {
+        public Builder notificationTriggers(@Nullable Output<List<String>> notificationTriggers) {
             this.notificationTriggers = notificationTriggers;
             return this;
         }
 
         public Builder notificationTriggers(@Nullable List<String> notificationTriggers) {
-            this.notificationTriggers = Input.ofNullable(notificationTriggers);
+            this.notificationTriggers = Output.ofNullable(notificationTriggers);
             return this;
         }
 
-        public Builder threshold(Input<Double> threshold) {
+        public Builder threshold(Output<Double> threshold) {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
 
         public Builder threshold(Double threshold) {
-            this.threshold = Input.of(Objects.requireNonNull(threshold));
+            this.threshold = Output.of(Objects.requireNonNull(threshold));
             return this;
         }
 
-        public Builder treatMissingData(@Nullable Input<String> treatMissingData) {
+        public Builder treatMissingData(@Nullable Output<String> treatMissingData) {
             this.treatMissingData = treatMissingData;
             return this;
         }
 
         public Builder treatMissingData(@Nullable String treatMissingData) {
-            this.treatMissingData = Input.ofNullable(treatMissingData);
+            this.treatMissingData = Output.ofNullable(treatMissingData);
             return this;
         }
         public AlarmArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.xray.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class GroupInsightsConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="insightsEnabled")
-      private final @Nullable Input<Boolean> insightsEnabled;
+      private final @Nullable Output<Boolean> insightsEnabled;
 
-    public Input<Boolean> getInsightsEnabled() {
-        return this.insightsEnabled == null ? Input.empty() : this.insightsEnabled;
+    public Output<Boolean> getInsightsEnabled() {
+        return this.insightsEnabled == null ? Output.empty() : this.insightsEnabled;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class GroupInsightsConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="notificationsEnabled")
-      private final @Nullable Input<Boolean> notificationsEnabled;
+      private final @Nullable Output<Boolean> notificationsEnabled;
 
-    public Input<Boolean> getNotificationsEnabled() {
-        return this.notificationsEnabled == null ? Input.empty() : this.notificationsEnabled;
+    public Output<Boolean> getNotificationsEnabled() {
+        return this.notificationsEnabled == null ? Output.empty() : this.notificationsEnabled;
     }
 
     public GroupInsightsConfigurationArgs(
-        @Nullable Input<Boolean> insightsEnabled,
-        @Nullable Input<Boolean> notificationsEnabled) {
+        @Nullable Output<Boolean> insightsEnabled,
+        @Nullable Output<Boolean> notificationsEnabled) {
         this.insightsEnabled = insightsEnabled;
         this.notificationsEnabled = notificationsEnabled;
     }
 
     private GroupInsightsConfigurationArgs() {
-        this.insightsEnabled = Input.empty();
-        this.notificationsEnabled = Input.empty();
+        this.insightsEnabled = Output.empty();
+        this.notificationsEnabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class GroupInsightsConfigurationArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> insightsEnabled;
-        private @Nullable Input<Boolean> notificationsEnabled;
+        private @Nullable Output<Boolean> insightsEnabled;
+        private @Nullable Output<Boolean> notificationsEnabled;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class GroupInsightsConfigurationArgs extends io.pulumi.resources.Re
     	      this.notificationsEnabled = defaults.notificationsEnabled;
         }
 
-        public Builder insightsEnabled(@Nullable Input<Boolean> insightsEnabled) {
+        public Builder insightsEnabled(@Nullable Output<Boolean> insightsEnabled) {
             this.insightsEnabled = insightsEnabled;
             return this;
         }
 
         public Builder insightsEnabled(@Nullable Boolean insightsEnabled) {
-            this.insightsEnabled = Input.ofNullable(insightsEnabled);
+            this.insightsEnabled = Output.ofNullable(insightsEnabled);
             return this;
         }
 
-        public Builder notificationsEnabled(@Nullable Input<Boolean> notificationsEnabled) {
+        public Builder notificationsEnabled(@Nullable Output<Boolean> notificationsEnabled) {
             this.notificationsEnabled = notificationsEnabled;
             return this;
         }
 
         public Builder notificationsEnabled(@Nullable Boolean notificationsEnabled) {
-            this.notificationsEnabled = Input.ofNullable(notificationsEnabled);
+            this.notificationsEnabled = Output.ofNullable(notificationsEnabled);
             return this;
         }
         public GroupInsightsConfigurationArgs build() {

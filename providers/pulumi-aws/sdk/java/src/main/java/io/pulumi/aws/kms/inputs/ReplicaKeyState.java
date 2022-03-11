@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.kms.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -22,10 +22,10 @@ public final class ReplicaKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ReplicaKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bypassPolicyLockoutSafetyCheck")
-      private final @Nullable Input<Boolean> bypassPolicyLockoutSafetyCheck;
+      private final @Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck;
 
-    public Input<Boolean> getBypassPolicyLockoutSafetyCheck() {
-        return this.bypassPolicyLockoutSafetyCheck == null ? Input.empty() : this.bypassPolicyLockoutSafetyCheck;
+    public Output<Boolean> getBypassPolicyLockoutSafetyCheck() {
+        return this.bypassPolicyLockoutSafetyCheck == null ? Output.empty() : this.bypassPolicyLockoutSafetyCheck;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ReplicaKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deletionWindowInDays")
-      private final @Nullable Input<Integer> deletionWindowInDays;
+      private final @Nullable Output<Integer> deletionWindowInDays;
 
-    public Input<Integer> getDeletionWindowInDays() {
-        return this.deletionWindowInDays == null ? Input.empty() : this.deletionWindowInDays;
+    public Output<Integer> getDeletionWindowInDays() {
+        return this.deletionWindowInDays == null ? Output.empty() : this.deletionWindowInDays;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ReplicaKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ReplicaKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class ReplicaKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyId")
-      private final @Nullable Input<String> keyId;
+      private final @Nullable Output<String> keyId;
 
-    public Input<String> getKeyId() {
-        return this.keyId == null ? Input.empty() : this.keyId;
+    public Output<String> getKeyId() {
+        return this.keyId == null ? Output.empty() : this.keyId;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class ReplicaKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyRotationEnabled")
-      private final @Nullable Input<Boolean> keyRotationEnabled;
+      private final @Nullable Output<Boolean> keyRotationEnabled;
 
-    public Input<Boolean> getKeyRotationEnabled() {
-        return this.keyRotationEnabled == null ? Input.empty() : this.keyRotationEnabled;
+    public Output<Boolean> getKeyRotationEnabled() {
+        return this.keyRotationEnabled == null ? Output.empty() : this.keyRotationEnabled;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class ReplicaKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keySpec")
-      private final @Nullable Input<String> keySpec;
+      private final @Nullable Output<String> keySpec;
 
-    public Input<String> getKeySpec() {
-        return this.keySpec == null ? Input.empty() : this.keySpec;
+    public Output<String> getKeySpec() {
+        return this.keySpec == null ? Output.empty() : this.keySpec;
     }
 
     /**
@@ -114,17 +114,17 @@ public final class ReplicaKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyUsage")
-      private final @Nullable Input<String> keyUsage;
+      private final @Nullable Output<String> keyUsage;
 
-    public Input<String> getKeyUsage() {
-        return this.keyUsage == null ? Input.empty() : this.keyUsage;
+    public Output<String> getKeyUsage() {
+        return this.keyUsage == null ? Output.empty() : this.keyUsage;
     }
 
     @InputImport(name="policy")
-      private final @Nullable Input<String> policy;
+      private final @Nullable Output<String> policy;
 
-    public Input<String> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<String> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     /**
@@ -132,10 +132,10 @@ public final class ReplicaKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="primaryKeyArn")
-      private final @Nullable Input<String> primaryKeyArn;
+      private final @Nullable Output<String> primaryKeyArn;
 
-    public Input<String> getPrimaryKeyArn() {
-        return this.primaryKeyArn == null ? Input.empty() : this.primaryKeyArn;
+    public Output<String> getPrimaryKeyArn() {
+        return this.primaryKeyArn == null ? Output.empty() : this.primaryKeyArn;
     }
 
     /**
@@ -143,10 +143,10 @@ public final class ReplicaKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -154,26 +154,26 @@ public final class ReplicaKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public ReplicaKeyState(
-        @Nullable Input<String> arn,
-        @Nullable Input<Boolean> bypassPolicyLockoutSafetyCheck,
-        @Nullable Input<Integer> deletionWindowInDays,
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<String> keyId,
-        @Nullable Input<Boolean> keyRotationEnabled,
-        @Nullable Input<String> keySpec,
-        @Nullable Input<String> keyUsage,
-        @Nullable Input<String> policy,
-        @Nullable Input<String> primaryKeyArn,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> arn,
+        @Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck,
+        @Nullable Output<Integer> deletionWindowInDays,
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<String> keyId,
+        @Nullable Output<Boolean> keyRotationEnabled,
+        @Nullable Output<String> keySpec,
+        @Nullable Output<String> keyUsage,
+        @Nullable Output<String> policy,
+        @Nullable Output<String> primaryKeyArn,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
         this.bypassPolicyLockoutSafetyCheck = bypassPolicyLockoutSafetyCheck;
         this.deletionWindowInDays = deletionWindowInDays;
@@ -190,19 +190,19 @@ public final class ReplicaKeyState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ReplicaKeyState() {
-        this.arn = Input.empty();
-        this.bypassPolicyLockoutSafetyCheck = Input.empty();
-        this.deletionWindowInDays = Input.empty();
-        this.description = Input.empty();
-        this.enabled = Input.empty();
-        this.keyId = Input.empty();
-        this.keyRotationEnabled = Input.empty();
-        this.keySpec = Input.empty();
-        this.keyUsage = Input.empty();
-        this.policy = Input.empty();
-        this.primaryKeyArn = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.arn = Output.empty();
+        this.bypassPolicyLockoutSafetyCheck = Output.empty();
+        this.deletionWindowInDays = Output.empty();
+        this.description = Output.empty();
+        this.enabled = Output.empty();
+        this.keyId = Output.empty();
+        this.keyRotationEnabled = Output.empty();
+        this.keySpec = Output.empty();
+        this.keyUsage = Output.empty();
+        this.policy = Output.empty();
+        this.primaryKeyArn = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -214,19 +214,19 @@ public final class ReplicaKeyState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<Boolean> bypassPolicyLockoutSafetyCheck;
-        private @Nullable Input<Integer> deletionWindowInDays;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<String> keyId;
-        private @Nullable Input<Boolean> keyRotationEnabled;
-        private @Nullable Input<String> keySpec;
-        private @Nullable Input<String> keyUsage;
-        private @Nullable Input<String> policy;
-        private @Nullable Input<String> primaryKeyArn;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck;
+        private @Nullable Output<Integer> deletionWindowInDays;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<String> keyId;
+        private @Nullable Output<Boolean> keyRotationEnabled;
+        private @Nullable Output<String> keySpec;
+        private @Nullable Output<String> keyUsage;
+        private @Nullable Output<String> policy;
+        private @Nullable Output<String> primaryKeyArn;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -249,133 +249,133 @@ public final class ReplicaKeyState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder bypassPolicyLockoutSafetyCheck(@Nullable Input<Boolean> bypassPolicyLockoutSafetyCheck) {
+        public Builder bypassPolicyLockoutSafetyCheck(@Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck) {
             this.bypassPolicyLockoutSafetyCheck = bypassPolicyLockoutSafetyCheck;
             return this;
         }
 
         public Builder bypassPolicyLockoutSafetyCheck(@Nullable Boolean bypassPolicyLockoutSafetyCheck) {
-            this.bypassPolicyLockoutSafetyCheck = Input.ofNullable(bypassPolicyLockoutSafetyCheck);
+            this.bypassPolicyLockoutSafetyCheck = Output.ofNullable(bypassPolicyLockoutSafetyCheck);
             return this;
         }
 
-        public Builder deletionWindowInDays(@Nullable Input<Integer> deletionWindowInDays) {
+        public Builder deletionWindowInDays(@Nullable Output<Integer> deletionWindowInDays) {
             this.deletionWindowInDays = deletionWindowInDays;
             return this;
         }
 
         public Builder deletionWindowInDays(@Nullable Integer deletionWindowInDays) {
-            this.deletionWindowInDays = Input.ofNullable(deletionWindowInDays);
+            this.deletionWindowInDays = Output.ofNullable(deletionWindowInDays);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder keyId(@Nullable Input<String> keyId) {
+        public Builder keyId(@Nullable Output<String> keyId) {
             this.keyId = keyId;
             return this;
         }
 
         public Builder keyId(@Nullable String keyId) {
-            this.keyId = Input.ofNullable(keyId);
+            this.keyId = Output.ofNullable(keyId);
             return this;
         }
 
-        public Builder keyRotationEnabled(@Nullable Input<Boolean> keyRotationEnabled) {
+        public Builder keyRotationEnabled(@Nullable Output<Boolean> keyRotationEnabled) {
             this.keyRotationEnabled = keyRotationEnabled;
             return this;
         }
 
         public Builder keyRotationEnabled(@Nullable Boolean keyRotationEnabled) {
-            this.keyRotationEnabled = Input.ofNullable(keyRotationEnabled);
+            this.keyRotationEnabled = Output.ofNullable(keyRotationEnabled);
             return this;
         }
 
-        public Builder keySpec(@Nullable Input<String> keySpec) {
+        public Builder keySpec(@Nullable Output<String> keySpec) {
             this.keySpec = keySpec;
             return this;
         }
 
         public Builder keySpec(@Nullable String keySpec) {
-            this.keySpec = Input.ofNullable(keySpec);
+            this.keySpec = Output.ofNullable(keySpec);
             return this;
         }
 
-        public Builder keyUsage(@Nullable Input<String> keyUsage) {
+        public Builder keyUsage(@Nullable Output<String> keyUsage) {
             this.keyUsage = keyUsage;
             return this;
         }
 
         public Builder keyUsage(@Nullable String keyUsage) {
-            this.keyUsage = Input.ofNullable(keyUsage);
+            this.keyUsage = Output.ofNullable(keyUsage);
             return this;
         }
 
-        public Builder policy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable String policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
 
-        public Builder primaryKeyArn(@Nullable Input<String> primaryKeyArn) {
+        public Builder primaryKeyArn(@Nullable Output<String> primaryKeyArn) {
             this.primaryKeyArn = primaryKeyArn;
             return this;
         }
 
         public Builder primaryKeyArn(@Nullable String primaryKeyArn) {
-            this.primaryKeyArn = Input.ofNullable(primaryKeyArn);
+            this.primaryKeyArn = Output.ofNullable(primaryKeyArn);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public ReplicaKeyState build() {

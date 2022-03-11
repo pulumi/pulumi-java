@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apiregistration.k8s.io_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.apiregistration.k8s.io_v1.inputs.APIServiceConditionArgs;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class APIServiceStatusArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="conditions")
-      private final @Nullable Input<List<APIServiceConditionArgs>> conditions;
+      private final @Nullable Output<List<APIServiceConditionArgs>> conditions;
 
-    public Input<List<APIServiceConditionArgs>> getConditions() {
-        return this.conditions == null ? Input.empty() : this.conditions;
+    public Output<List<APIServiceConditionArgs>> getConditions() {
+        return this.conditions == null ? Output.empty() : this.conditions;
     }
 
-    public APIServiceStatusArgs(@Nullable Input<List<APIServiceConditionArgs>> conditions) {
+    public APIServiceStatusArgs(@Nullable Output<List<APIServiceConditionArgs>> conditions) {
         this.conditions = conditions;
     }
 
     private APIServiceStatusArgs() {
-        this.conditions = Input.empty();
+        this.conditions = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class APIServiceStatusArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<List<APIServiceConditionArgs>> conditions;
+        private @Nullable Output<List<APIServiceConditionArgs>> conditions;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class APIServiceStatusArgs extends io.pulumi.resources.ResourceArgs
     	      this.conditions = defaults.conditions;
         }
 
-        public Builder conditions(@Nullable Input<List<APIServiceConditionArgs>> conditions) {
+        public Builder conditions(@Nullable Output<List<APIServiceConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
         public Builder conditions(@Nullable List<APIServiceConditionArgs> conditions) {
-            this.conditions = Input.ofNullable(conditions);
+            this.conditions = Output.ofNullable(conditions);
             return this;
         }
         public APIServiceStatusArgs build() {

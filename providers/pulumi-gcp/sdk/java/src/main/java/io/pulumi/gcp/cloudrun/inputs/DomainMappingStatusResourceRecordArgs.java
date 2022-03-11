@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,39 +19,39 @@ public final class DomainMappingStatusResourceRecordArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="rrdata")
-      private final @Nullable Input<String> rrdata;
+      private final @Nullable Output<String> rrdata;
 
-    public Input<String> getRrdata() {
-        return this.rrdata == null ? Input.empty() : this.rrdata;
+    public Output<String> getRrdata() {
+        return this.rrdata == null ? Output.empty() : this.rrdata;
     }
 
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public DomainMappingStatusResourceRecordArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<String> rrdata,
-        @Nullable Input<String> type) {
+        @Nullable Output<String> name,
+        @Nullable Output<String> rrdata,
+        @Nullable Output<String> type) {
         this.name = name;
         this.rrdata = rrdata;
         this.type = type;
     }
 
     private DomainMappingStatusResourceRecordArgs() {
-        this.name = Input.empty();
-        this.rrdata = Input.empty();
-        this.type = Input.empty();
+        this.name = Output.empty();
+        this.rrdata = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,9 +63,9 @@ public final class DomainMappingStatusResourceRecordArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> rrdata;
-        private @Nullable Input<String> type;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> rrdata;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -78,33 +78,33 @@ public final class DomainMappingStatusResourceRecordArgs extends io.pulumi.resou
     	      this.type = defaults.type;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder rrdata(@Nullable Input<String> rrdata) {
+        public Builder rrdata(@Nullable Output<String> rrdata) {
             this.rrdata = rrdata;
             return this;
         }
 
         public Builder rrdata(@Nullable String rrdata) {
-            this.rrdata = Input.ofNullable(rrdata);
+            this.rrdata = Output.ofNullable(rrdata);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public DomainMappingStatusResourceRecordArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway;
 
 import io.pulumi.aws.apigateway.inputs.StageAccessLogSettingsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessLogSettings")
-      private final @Nullable Input<StageAccessLogSettingsArgs> accessLogSettings;
+      private final @Nullable Output<StageAccessLogSettingsArgs> accessLogSettings;
 
-    public Input<StageAccessLogSettingsArgs> getAccessLogSettings() {
-        return this.accessLogSettings == null ? Input.empty() : this.accessLogSettings;
+    public Output<StageAccessLogSettingsArgs> getAccessLogSettings() {
+        return this.accessLogSettings == null ? Output.empty() : this.accessLogSettings;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cacheClusterEnabled")
-      private final @Nullable Input<Boolean> cacheClusterEnabled;
+      private final @Nullable Output<Boolean> cacheClusterEnabled;
 
-    public Input<Boolean> getCacheClusterEnabled() {
-        return this.cacheClusterEnabled == null ? Input.empty() : this.cacheClusterEnabled;
+    public Output<Boolean> getCacheClusterEnabled() {
+        return this.cacheClusterEnabled == null ? Output.empty() : this.cacheClusterEnabled;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cacheClusterSize")
-      private final @Nullable Input<String> cacheClusterSize;
+      private final @Nullable Output<String> cacheClusterSize;
 
-    public Input<String> getCacheClusterSize() {
-        return this.cacheClusterSize == null ? Input.empty() : this.cacheClusterSize;
+    public Output<String> getCacheClusterSize() {
+        return this.cacheClusterSize == null ? Output.empty() : this.cacheClusterSize;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientCertificateId")
-      private final @Nullable Input<String> clientCertificateId;
+      private final @Nullable Output<String> clientCertificateId;
 
-    public Input<String> getClientCertificateId() {
-        return this.clientCertificateId == null ? Input.empty() : this.clientCertificateId;
+    public Output<String> getClientCertificateId() {
+        return this.clientCertificateId == null ? Output.empty() : this.clientCertificateId;
     }
 
     /**
@@ -66,9 +66,9 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deployment", required=true)
-      private final Input<String> deployment;
+      private final Output<String> deployment;
 
-    public Input<String> getDeployment() {
+    public Output<String> getDeployment() {
         return this.deployment;
     }
 
@@ -77,10 +77,10 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="documentationVersion")
-      private final @Nullable Input<String> documentationVersion;
+      private final @Nullable Output<String> documentationVersion;
 
-    public Input<String> getDocumentationVersion() {
-        return this.documentationVersion == null ? Input.empty() : this.documentationVersion;
+    public Output<String> getDocumentationVersion() {
+        return this.documentationVersion == null ? Output.empty() : this.documentationVersion;
     }
 
     /**
@@ -99,9 +99,9 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restApi", required=true)
-      private final Input<String> restApi;
+      private final Output<String> restApi;
 
-    public Input<String> getRestApi() {
+    public Output<String> getRestApi() {
         return this.restApi;
     }
 
@@ -110,9 +110,9 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stageName", required=true)
-      private final Input<String> stageName;
+      private final Output<String> stageName;
 
-    public Input<String> getStageName() {
+    public Output<String> getStageName() {
         return this.stageName;
     }
 
@@ -121,10 +121,10 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -132,10 +132,10 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="variables")
-      private final @Nullable Input<Map<String,String>> variables;
+      private final @Nullable Output<Map<String,String>> variables;
 
-    public Input<Map<String,String>> getVariables() {
-        return this.variables == null ? Input.empty() : this.variables;
+    public Output<Map<String,String>> getVariables() {
+        return this.variables == null ? Output.empty() : this.variables;
     }
 
     /**
@@ -143,25 +143,25 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="xrayTracingEnabled")
-      private final @Nullable Input<Boolean> xrayTracingEnabled;
+      private final @Nullable Output<Boolean> xrayTracingEnabled;
 
-    public Input<Boolean> getXrayTracingEnabled() {
-        return this.xrayTracingEnabled == null ? Input.empty() : this.xrayTracingEnabled;
+    public Output<Boolean> getXrayTracingEnabled() {
+        return this.xrayTracingEnabled == null ? Output.empty() : this.xrayTracingEnabled;
     }
 
     public StageArgs(
-        @Nullable Input<StageAccessLogSettingsArgs> accessLogSettings,
-        @Nullable Input<Boolean> cacheClusterEnabled,
-        @Nullable Input<String> cacheClusterSize,
-        @Nullable Input<String> clientCertificateId,
-        Input<String> deployment,
-        @Nullable Input<String> description,
-        @Nullable Input<String> documentationVersion,
-        Input<String> restApi,
-        Input<String> stageName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> variables,
-        @Nullable Input<Boolean> xrayTracingEnabled) {
+        @Nullable Output<StageAccessLogSettingsArgs> accessLogSettings,
+        @Nullable Output<Boolean> cacheClusterEnabled,
+        @Nullable Output<String> cacheClusterSize,
+        @Nullable Output<String> clientCertificateId,
+        Output<String> deployment,
+        @Nullable Output<String> description,
+        @Nullable Output<String> documentationVersion,
+        Output<String> restApi,
+        Output<String> stageName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> variables,
+        @Nullable Output<Boolean> xrayTracingEnabled) {
         this.accessLogSettings = accessLogSettings;
         this.cacheClusterEnabled = cacheClusterEnabled;
         this.cacheClusterSize = cacheClusterSize;
@@ -177,18 +177,18 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StageArgs() {
-        this.accessLogSettings = Input.empty();
-        this.cacheClusterEnabled = Input.empty();
-        this.cacheClusterSize = Input.empty();
-        this.clientCertificateId = Input.empty();
-        this.deployment = Input.empty();
-        this.description = Input.empty();
-        this.documentationVersion = Input.empty();
-        this.restApi = Input.empty();
-        this.stageName = Input.empty();
-        this.tags = Input.empty();
-        this.variables = Input.empty();
-        this.xrayTracingEnabled = Input.empty();
+        this.accessLogSettings = Output.empty();
+        this.cacheClusterEnabled = Output.empty();
+        this.cacheClusterSize = Output.empty();
+        this.clientCertificateId = Output.empty();
+        this.deployment = Output.empty();
+        this.description = Output.empty();
+        this.documentationVersion = Output.empty();
+        this.restApi = Output.empty();
+        this.stageName = Output.empty();
+        this.tags = Output.empty();
+        this.variables = Output.empty();
+        this.xrayTracingEnabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -200,18 +200,18 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<StageAccessLogSettingsArgs> accessLogSettings;
-        private @Nullable Input<Boolean> cacheClusterEnabled;
-        private @Nullable Input<String> cacheClusterSize;
-        private @Nullable Input<String> clientCertificateId;
-        private Input<String> deployment;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> documentationVersion;
-        private Input<String> restApi;
-        private Input<String> stageName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> variables;
-        private @Nullable Input<Boolean> xrayTracingEnabled;
+        private @Nullable Output<StageAccessLogSettingsArgs> accessLogSettings;
+        private @Nullable Output<Boolean> cacheClusterEnabled;
+        private @Nullable Output<String> cacheClusterSize;
+        private @Nullable Output<String> clientCertificateId;
+        private Output<String> deployment;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> documentationVersion;
+        private Output<String> restApi;
+        private Output<String> stageName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> variables;
+        private @Nullable Output<Boolean> xrayTracingEnabled;
 
         public Builder() {
     	      // Empty
@@ -233,113 +233,113 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.xrayTracingEnabled = defaults.xrayTracingEnabled;
         }
 
-        public Builder accessLogSettings(@Nullable Input<StageAccessLogSettingsArgs> accessLogSettings) {
+        public Builder accessLogSettings(@Nullable Output<StageAccessLogSettingsArgs> accessLogSettings) {
             this.accessLogSettings = accessLogSettings;
             return this;
         }
 
         public Builder accessLogSettings(@Nullable StageAccessLogSettingsArgs accessLogSettings) {
-            this.accessLogSettings = Input.ofNullable(accessLogSettings);
+            this.accessLogSettings = Output.ofNullable(accessLogSettings);
             return this;
         }
 
-        public Builder cacheClusterEnabled(@Nullable Input<Boolean> cacheClusterEnabled) {
+        public Builder cacheClusterEnabled(@Nullable Output<Boolean> cacheClusterEnabled) {
             this.cacheClusterEnabled = cacheClusterEnabled;
             return this;
         }
 
         public Builder cacheClusterEnabled(@Nullable Boolean cacheClusterEnabled) {
-            this.cacheClusterEnabled = Input.ofNullable(cacheClusterEnabled);
+            this.cacheClusterEnabled = Output.ofNullable(cacheClusterEnabled);
             return this;
         }
 
-        public Builder cacheClusterSize(@Nullable Input<String> cacheClusterSize) {
+        public Builder cacheClusterSize(@Nullable Output<String> cacheClusterSize) {
             this.cacheClusterSize = cacheClusterSize;
             return this;
         }
 
         public Builder cacheClusterSize(@Nullable String cacheClusterSize) {
-            this.cacheClusterSize = Input.ofNullable(cacheClusterSize);
+            this.cacheClusterSize = Output.ofNullable(cacheClusterSize);
             return this;
         }
 
-        public Builder clientCertificateId(@Nullable Input<String> clientCertificateId) {
+        public Builder clientCertificateId(@Nullable Output<String> clientCertificateId) {
             this.clientCertificateId = clientCertificateId;
             return this;
         }
 
         public Builder clientCertificateId(@Nullable String clientCertificateId) {
-            this.clientCertificateId = Input.ofNullable(clientCertificateId);
+            this.clientCertificateId = Output.ofNullable(clientCertificateId);
             return this;
         }
 
-        public Builder deployment(Input<String> deployment) {
+        public Builder deployment(Output<String> deployment) {
             this.deployment = Objects.requireNonNull(deployment);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder documentationVersion(@Nullable Input<String> documentationVersion) {
+        public Builder documentationVersion(@Nullable Output<String> documentationVersion) {
             this.documentationVersion = documentationVersion;
             return this;
         }
 
         public Builder documentationVersion(@Nullable String documentationVersion) {
-            this.documentationVersion = Input.ofNullable(documentationVersion);
+            this.documentationVersion = Output.ofNullable(documentationVersion);
             return this;
         }
 
-        public Builder restApi(Input<String> restApi) {
+        public Builder restApi(Output<String> restApi) {
             this.restApi = Objects.requireNonNull(restApi);
             return this;
         }
 
-        public Builder stageName(Input<String> stageName) {
+        public Builder stageName(Output<String> stageName) {
             this.stageName = Objects.requireNonNull(stageName);
             return this;
         }
 
         public Builder stageName(String stageName) {
-            this.stageName = Input.of(Objects.requireNonNull(stageName));
+            this.stageName = Output.of(Objects.requireNonNull(stageName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder variables(@Nullable Input<Map<String,String>> variables) {
+        public Builder variables(@Nullable Output<Map<String,String>> variables) {
             this.variables = variables;
             return this;
         }
 
         public Builder variables(@Nullable Map<String,String> variables) {
-            this.variables = Input.ofNullable(variables);
+            this.variables = Output.ofNullable(variables);
             return this;
         }
 
-        public Builder xrayTracingEnabled(@Nullable Input<Boolean> xrayTracingEnabled) {
+        public Builder xrayTracingEnabled(@Nullable Output<Boolean> xrayTracingEnabled) {
             this.xrayTracingEnabled = xrayTracingEnabled;
             return this;
         }
 
         public Builder xrayTracingEnabled(@Nullable Boolean xrayTracingEnabled) {
-            this.xrayTracingEnabled = Input.ofNullable(xrayTracingEnabled);
+            this.xrayTracingEnabled = Output.ofNullable(xrayTracingEnabled);
             return this;
         }
         public StageArgs build() {

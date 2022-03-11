@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class NodeGroupAffinityArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="nodeGroupUri", required=true)
-      private final Input<String> nodeGroupUri;
+      private final Output<String> nodeGroupUri;
 
-    public Input<String> getNodeGroupUri() {
+    public Output<String> getNodeGroupUri() {
         return this.nodeGroupUri;
     }
 
-    public NodeGroupAffinityArgs(Input<String> nodeGroupUri) {
+    public NodeGroupAffinityArgs(Output<String> nodeGroupUri) {
         this.nodeGroupUri = Objects.requireNonNull(nodeGroupUri, "expected parameter 'nodeGroupUri' to be non-null");
     }
 
     private NodeGroupAffinityArgs() {
-        this.nodeGroupUri = Input.empty();
+        this.nodeGroupUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class NodeGroupAffinityArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> nodeGroupUri;
+        private Output<String> nodeGroupUri;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class NodeGroupAffinityArgs extends io.pulumi.resources.ResourceArg
     	      this.nodeGroupUri = defaults.nodeGroupUri;
         }
 
-        public Builder nodeGroupUri(Input<String> nodeGroupUri) {
+        public Builder nodeGroupUri(Output<String> nodeGroupUri) {
             this.nodeGroupUri = Objects.requireNonNull(nodeGroupUri);
             return this;
         }
 
         public Builder nodeGroupUri(String nodeGroupUri) {
-            this.nodeGroupUri = Input.of(Objects.requireNonNull(nodeGroupUri));
+            this.nodeGroupUri = Output.of(Objects.requireNonNull(nodeGroupUri));
             return this;
         }
         public NodeGroupAffinityArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoCreateSubnetworks")
-      private final @Nullable Input<Boolean> autoCreateSubnetworks;
+      private final @Nullable Output<Boolean> autoCreateSubnetworks;
 
-    public Input<Boolean> getAutoCreateSubnetworks() {
-        return this.autoCreateSubnetworks == null ? Input.empty() : this.autoCreateSubnetworks;
+    public Output<Boolean> getAutoCreateSubnetworks() {
+        return this.autoCreateSubnetworks == null ? Output.empty() : this.autoCreateSubnetworks;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deleteDefaultRoutesOnCreate")
-      private final @Nullable Input<Boolean> deleteDefaultRoutesOnCreate;
+      private final @Nullable Output<Boolean> deleteDefaultRoutesOnCreate;
 
-    public Input<Boolean> getDeleteDefaultRoutesOnCreate() {
-        return this.deleteDefaultRoutesOnCreate == null ? Input.empty() : this.deleteDefaultRoutesOnCreate;
+    public Output<Boolean> getDeleteDefaultRoutesOnCreate() {
+        return this.deleteDefaultRoutesOnCreate == null ? Output.empty() : this.deleteDefaultRoutesOnCreate;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mtu")
-      private final @Nullable Input<Integer> mtu;
+      private final @Nullable Output<Integer> mtu;
 
-    public Input<Integer> getMtu() {
-        return this.mtu == null ? Input.empty() : this.mtu;
+    public Output<Integer> getMtu() {
+        return this.mtu == null ? Output.empty() : this.mtu;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -106,20 +106,20 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routingMode")
-      private final @Nullable Input<String> routingMode;
+      private final @Nullable Output<String> routingMode;
 
-    public Input<String> getRoutingMode() {
-        return this.routingMode == null ? Input.empty() : this.routingMode;
+    public Output<String> getRoutingMode() {
+        return this.routingMode == null ? Output.empty() : this.routingMode;
     }
 
     public NetworkArgs(
-        @Nullable Input<Boolean> autoCreateSubnetworks,
-        @Nullable Input<Boolean> deleteDefaultRoutesOnCreate,
-        @Nullable Input<String> description,
-        @Nullable Input<Integer> mtu,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<String> routingMode) {
+        @Nullable Output<Boolean> autoCreateSubnetworks,
+        @Nullable Output<Boolean> deleteDefaultRoutesOnCreate,
+        @Nullable Output<String> description,
+        @Nullable Output<Integer> mtu,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<String> routingMode) {
         this.autoCreateSubnetworks = autoCreateSubnetworks;
         this.deleteDefaultRoutesOnCreate = deleteDefaultRoutesOnCreate;
         this.description = description;
@@ -130,13 +130,13 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NetworkArgs() {
-        this.autoCreateSubnetworks = Input.empty();
-        this.deleteDefaultRoutesOnCreate = Input.empty();
-        this.description = Input.empty();
-        this.mtu = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.routingMode = Input.empty();
+        this.autoCreateSubnetworks = Output.empty();
+        this.deleteDefaultRoutesOnCreate = Output.empty();
+        this.description = Output.empty();
+        this.mtu = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.routingMode = Output.empty();
     }
 
     public static Builder builder() {
@@ -148,13 +148,13 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> autoCreateSubnetworks;
-        private @Nullable Input<Boolean> deleteDefaultRoutesOnCreate;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Integer> mtu;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> routingMode;
+        private @Nullable Output<Boolean> autoCreateSubnetworks;
+        private @Nullable Output<Boolean> deleteDefaultRoutesOnCreate;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Integer> mtu;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> routingMode;
 
         public Builder() {
     	      // Empty
@@ -171,73 +171,73 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.routingMode = defaults.routingMode;
         }
 
-        public Builder autoCreateSubnetworks(@Nullable Input<Boolean> autoCreateSubnetworks) {
+        public Builder autoCreateSubnetworks(@Nullable Output<Boolean> autoCreateSubnetworks) {
             this.autoCreateSubnetworks = autoCreateSubnetworks;
             return this;
         }
 
         public Builder autoCreateSubnetworks(@Nullable Boolean autoCreateSubnetworks) {
-            this.autoCreateSubnetworks = Input.ofNullable(autoCreateSubnetworks);
+            this.autoCreateSubnetworks = Output.ofNullable(autoCreateSubnetworks);
             return this;
         }
 
-        public Builder deleteDefaultRoutesOnCreate(@Nullable Input<Boolean> deleteDefaultRoutesOnCreate) {
+        public Builder deleteDefaultRoutesOnCreate(@Nullable Output<Boolean> deleteDefaultRoutesOnCreate) {
             this.deleteDefaultRoutesOnCreate = deleteDefaultRoutesOnCreate;
             return this;
         }
 
         public Builder deleteDefaultRoutesOnCreate(@Nullable Boolean deleteDefaultRoutesOnCreate) {
-            this.deleteDefaultRoutesOnCreate = Input.ofNullable(deleteDefaultRoutesOnCreate);
+            this.deleteDefaultRoutesOnCreate = Output.ofNullable(deleteDefaultRoutesOnCreate);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder mtu(@Nullable Input<Integer> mtu) {
+        public Builder mtu(@Nullable Output<Integer> mtu) {
             this.mtu = mtu;
             return this;
         }
 
         public Builder mtu(@Nullable Integer mtu) {
-            this.mtu = Input.ofNullable(mtu);
+            this.mtu = Output.ofNullable(mtu);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder routingMode(@Nullable Input<String> routingMode) {
+        public Builder routingMode(@Nullable Output<String> routingMode) {
             this.routingMode = routingMode;
             return this;
         }
 
         public Builder routingMode(@Nullable String routingMode) {
-            this.routingMode = Input.ofNullable(routingMode);
+            this.routingMode = Output.ofNullable(routingMode);
             return this;
         }
         public NetworkArgs build() {

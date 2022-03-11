@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.inputs.WebACLCustomResponseArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class WebACLBlockActionArgs extends io.pulumi.resources.ResourceArg
     public static final WebACLBlockActionArgs Empty = new WebACLBlockActionArgs();
 
     @InputImport(name="customResponse")
-      private final @Nullable Input<WebACLCustomResponseArgs> customResponse;
+      private final @Nullable Output<WebACLCustomResponseArgs> customResponse;
 
-    public Input<WebACLCustomResponseArgs> getCustomResponse() {
-        return this.customResponse == null ? Input.empty() : this.customResponse;
+    public Output<WebACLCustomResponseArgs> getCustomResponse() {
+        return this.customResponse == null ? Output.empty() : this.customResponse;
     }
 
-    public WebACLBlockActionArgs(@Nullable Input<WebACLCustomResponseArgs> customResponse) {
+    public WebACLBlockActionArgs(@Nullable Output<WebACLCustomResponseArgs> customResponse) {
         this.customResponse = customResponse;
     }
 
     private WebACLBlockActionArgs() {
-        this.customResponse = Input.empty();
+        this.customResponse = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class WebACLBlockActionArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<WebACLCustomResponseArgs> customResponse;
+        private @Nullable Output<WebACLCustomResponseArgs> customResponse;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class WebACLBlockActionArgs extends io.pulumi.resources.ResourceArg
     	      this.customResponse = defaults.customResponse;
         }
 
-        public Builder customResponse(@Nullable Input<WebACLCustomResponseArgs> customResponse) {
+        public Builder customResponse(@Nullable Output<WebACLCustomResponseArgs> customResponse) {
             this.customResponse = customResponse;
             return this;
         }
 
         public Builder customResponse(@Nullable WebACLCustomResponseArgs customResponse) {
-            this.customResponse = Input.ofNullable(customResponse);
+            this.customResponse = Output.ofNullable(customResponse);
             return this;
         }
         public WebACLBlockActionArgs build() {

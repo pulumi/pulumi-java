@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class EdgeClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceLink")
-      private final @Nullable Input<String> resourceLink;
+      private final @Nullable Output<String> resourceLink;
 
-    public Input<String> getResourceLink() {
-        return this.resourceLink == null ? Input.empty() : this.resourceLink;
+    public Output<String> getResourceLink() {
+        return this.resourceLink == null ? Output.empty() : this.resourceLink;
     }
 
-    public EdgeClusterArgs(@Nullable Input<String> resourceLink) {
+    public EdgeClusterArgs(@Nullable Output<String> resourceLink) {
         this.resourceLink = resourceLink;
     }
 
     private EdgeClusterArgs() {
-        this.resourceLink = Input.empty();
+        this.resourceLink = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class EdgeClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> resourceLink;
+        private @Nullable Output<String> resourceLink;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class EdgeClusterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceLink = defaults.resourceLink;
         }
 
-        public Builder resourceLink(@Nullable Input<String> resourceLink) {
+        public Builder resourceLink(@Nullable Output<String> resourceLink) {
             this.resourceLink = resourceLink;
             return this;
         }
 
         public Builder resourceLink(@Nullable String resourceLink) {
-            this.resourceLink = Input.ofNullable(resourceLink);
+            this.resourceLink = Output.ofNullable(resourceLink);
             return this;
         }
         public EdgeClusterArgs build() {

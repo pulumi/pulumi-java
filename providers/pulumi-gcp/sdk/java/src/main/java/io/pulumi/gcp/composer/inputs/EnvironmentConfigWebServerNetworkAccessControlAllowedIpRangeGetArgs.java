@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeG
     public static final EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs Empty = new EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs();
 
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="value", required=true)
-      private final Input<String> value;
+      private final Output<String> value;
 
-    public Input<String> getValue() {
+    public Output<String> getValue() {
         return this.value;
     }
 
     public EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs(
-        @Nullable Input<String> description,
-        Input<String> value) {
+        @Nullable Output<String> description,
+        Output<String> value) {
         this.description = description;
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs() {
-        this.description = Input.empty();
-        this.value = Input.empty();
+        this.description = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeG
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> value;
+        private @Nullable Output<String> description;
+        private Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeG
     	      this.value = defaults.value;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder value(Input<String> value) {
+        public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(String value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs build() {

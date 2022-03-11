@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.datashare.TriggerArgs;
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -131,22 +130,22 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Trigger(String name, TriggerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:datashare:Trigger", name, args == null ? TriggerArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:datashare:Trigger", name, args == null ? TriggerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Trigger(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Trigger(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:datashare:Trigger", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:datashare/v20181101preview:Trigger").build()),
-                Input.of(Alias.builder().setType("azure-native:datashare/v20191101:Trigger").build()),
-                Input.of(Alias.builder().setType("azure-native:datashare/v20200901:Trigger").build()),
-                Input.of(Alias.builder().setType("azure-native:datashare/v20201001preview:Trigger").build()),
-                Input.of(Alias.builder().setType("azure-native:datashare/v20210801:Trigger").build())
+                Output.of(Alias.builder().setType("azure-native:datashare/v20181101preview:Trigger").build()),
+                Output.of(Alias.builder().setType("azure-native:datashare/v20191101:Trigger").build()),
+                Output.of(Alias.builder().setType("azure-native:datashare/v20200901:Trigger").build()),
+                Output.of(Alias.builder().setType("azure-native:datashare/v20201001preview:Trigger").build()),
+                Output.of(Alias.builder().setType("azure-native:datashare/v20210801:Trigger").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -160,7 +159,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Trigger get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Trigger get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Trigger(name, id, options);
     }
 }

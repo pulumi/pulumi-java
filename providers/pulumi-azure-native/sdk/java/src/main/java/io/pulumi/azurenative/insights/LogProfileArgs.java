@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights;
 
 import io.pulumi.azurenative.insights.inputs.RetentionPolicyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,9 +22,9 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="categories", required=true)
-      private final Input<List<String>> categories;
+      private final Output<List<String>> categories;
 
-    public Input<List<String>> getCategories() {
+    public Output<List<String>> getCategories() {
         return this.categories;
     }
 
@@ -33,10 +33,10 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -44,9 +44,9 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locations", required=true)
-      private final Input<List<String>> locations;
+      private final Output<List<String>> locations;
 
-    public Input<List<String>> getLocations() {
+    public Output<List<String>> getLocations() {
         return this.locations;
     }
 
@@ -55,10 +55,10 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logProfileName")
-      private final @Nullable Input<String> logProfileName;
+      private final @Nullable Output<String> logProfileName;
 
-    public Input<String> getLogProfileName() {
-        return this.logProfileName == null ? Input.empty() : this.logProfileName;
+    public Output<String> getLogProfileName() {
+        return this.logProfileName == null ? Output.empty() : this.logProfileName;
     }
 
     /**
@@ -66,9 +66,9 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionPolicy", required=true)
-      private final Input<RetentionPolicyArgs> retentionPolicy;
+      private final Output<RetentionPolicyArgs> retentionPolicy;
 
-    public Input<RetentionPolicyArgs> getRetentionPolicy() {
+    public Output<RetentionPolicyArgs> getRetentionPolicy() {
         return this.retentionPolicy;
     }
 
@@ -77,10 +77,10 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceBusRuleId")
-      private final @Nullable Input<String> serviceBusRuleId;
+      private final @Nullable Output<String> serviceBusRuleId;
 
-    public Input<String> getServiceBusRuleId() {
-        return this.serviceBusRuleId == null ? Input.empty() : this.serviceBusRuleId;
+    public Output<String> getServiceBusRuleId() {
+        return this.serviceBusRuleId == null ? Output.empty() : this.serviceBusRuleId;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAccountId")
-      private final @Nullable Input<String> storageAccountId;
+      private final @Nullable Output<String> storageAccountId;
 
-    public Input<String> getStorageAccountId() {
-        return this.storageAccountId == null ? Input.empty() : this.storageAccountId;
+    public Output<String> getStorageAccountId() {
+        return this.storageAccountId == null ? Output.empty() : this.storageAccountId;
     }
 
     /**
@@ -99,21 +99,21 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public LogProfileArgs(
-        Input<List<String>> categories,
-        @Nullable Input<String> location,
-        Input<List<String>> locations,
-        @Nullable Input<String> logProfileName,
-        Input<RetentionPolicyArgs> retentionPolicy,
-        @Nullable Input<String> serviceBusRuleId,
-        @Nullable Input<String> storageAccountId,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<List<String>> categories,
+        @Nullable Output<String> location,
+        Output<List<String>> locations,
+        @Nullable Output<String> logProfileName,
+        Output<RetentionPolicyArgs> retentionPolicy,
+        @Nullable Output<String> serviceBusRuleId,
+        @Nullable Output<String> storageAccountId,
+        @Nullable Output<Map<String,String>> tags) {
         this.categories = Objects.requireNonNull(categories, "expected parameter 'categories' to be non-null");
         this.location = location;
         this.locations = Objects.requireNonNull(locations, "expected parameter 'locations' to be non-null");
@@ -125,14 +125,14 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LogProfileArgs() {
-        this.categories = Input.empty();
-        this.location = Input.empty();
-        this.locations = Input.empty();
-        this.logProfileName = Input.empty();
-        this.retentionPolicy = Input.empty();
-        this.serviceBusRuleId = Input.empty();
-        this.storageAccountId = Input.empty();
-        this.tags = Input.empty();
+        this.categories = Output.empty();
+        this.location = Output.empty();
+        this.locations = Output.empty();
+        this.logProfileName = Output.empty();
+        this.retentionPolicy = Output.empty();
+        this.serviceBusRuleId = Output.empty();
+        this.storageAccountId = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -144,14 +144,14 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<String>> categories;
-        private @Nullable Input<String> location;
-        private Input<List<String>> locations;
-        private @Nullable Input<String> logProfileName;
-        private Input<RetentionPolicyArgs> retentionPolicy;
-        private @Nullable Input<String> serviceBusRuleId;
-        private @Nullable Input<String> storageAccountId;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<List<String>> categories;
+        private @Nullable Output<String> location;
+        private Output<List<String>> locations;
+        private @Nullable Output<String> logProfileName;
+        private Output<RetentionPolicyArgs> retentionPolicy;
+        private @Nullable Output<String> serviceBusRuleId;
+        private @Nullable Output<String> storageAccountId;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -169,83 +169,83 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder categories(Input<List<String>> categories) {
+        public Builder categories(Output<List<String>> categories) {
             this.categories = Objects.requireNonNull(categories);
             return this;
         }
 
         public Builder categories(List<String> categories) {
-            this.categories = Input.of(Objects.requireNonNull(categories));
+            this.categories = Output.of(Objects.requireNonNull(categories));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder locations(Input<List<String>> locations) {
+        public Builder locations(Output<List<String>> locations) {
             this.locations = Objects.requireNonNull(locations);
             return this;
         }
 
         public Builder locations(List<String> locations) {
-            this.locations = Input.of(Objects.requireNonNull(locations));
+            this.locations = Output.of(Objects.requireNonNull(locations));
             return this;
         }
 
-        public Builder logProfileName(@Nullable Input<String> logProfileName) {
+        public Builder logProfileName(@Nullable Output<String> logProfileName) {
             this.logProfileName = logProfileName;
             return this;
         }
 
         public Builder logProfileName(@Nullable String logProfileName) {
-            this.logProfileName = Input.ofNullable(logProfileName);
+            this.logProfileName = Output.ofNullable(logProfileName);
             return this;
         }
 
-        public Builder retentionPolicy(Input<RetentionPolicyArgs> retentionPolicy) {
+        public Builder retentionPolicy(Output<RetentionPolicyArgs> retentionPolicy) {
             this.retentionPolicy = Objects.requireNonNull(retentionPolicy);
             return this;
         }
 
         public Builder retentionPolicy(RetentionPolicyArgs retentionPolicy) {
-            this.retentionPolicy = Input.of(Objects.requireNonNull(retentionPolicy));
+            this.retentionPolicy = Output.of(Objects.requireNonNull(retentionPolicy));
             return this;
         }
 
-        public Builder serviceBusRuleId(@Nullable Input<String> serviceBusRuleId) {
+        public Builder serviceBusRuleId(@Nullable Output<String> serviceBusRuleId) {
             this.serviceBusRuleId = serviceBusRuleId;
             return this;
         }
 
         public Builder serviceBusRuleId(@Nullable String serviceBusRuleId) {
-            this.serviceBusRuleId = Input.ofNullable(serviceBusRuleId);
+            this.serviceBusRuleId = Output.ofNullable(serviceBusRuleId);
             return this;
         }
 
-        public Builder storageAccountId(@Nullable Input<String> storageAccountId) {
+        public Builder storageAccountId(@Nullable Output<String> storageAccountId) {
             this.storageAccountId = storageAccountId;
             return this;
         }
 
         public Builder storageAccountId(@Nullable String storageAccountId) {
-            this.storageAccountId = Input.ofNullable(storageAccountId);
+            this.storageAccountId = Output.ofNullable(storageAccountId);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public LogProfileArgs build() {

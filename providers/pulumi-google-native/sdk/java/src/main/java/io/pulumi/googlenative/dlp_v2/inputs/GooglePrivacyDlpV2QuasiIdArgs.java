@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeArgs;
@@ -26,10 +26,10 @@ public final class GooglePrivacyDlpV2QuasiIdArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="customTag")
-      private final @Nullable Input<String> customTag;
+      private final @Nullable Output<String> customTag;
 
-    public Input<String> getCustomTag() {
-        return this.customTag == null ? Input.empty() : this.customTag;
+    public Output<String> getCustomTag() {
+        return this.customTag == null ? Output.empty() : this.customTag;
     }
 
     /**
@@ -37,9 +37,9 @@ public final class GooglePrivacyDlpV2QuasiIdArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="field", required=true)
-      private final Input<GooglePrivacyDlpV2FieldIdArgs> field;
+      private final Output<GooglePrivacyDlpV2FieldIdArgs> field;
 
-    public Input<GooglePrivacyDlpV2FieldIdArgs> getField() {
+    public Output<GooglePrivacyDlpV2FieldIdArgs> getField() {
         return this.field;
     }
 
@@ -48,10 +48,10 @@ public final class GooglePrivacyDlpV2QuasiIdArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="inferred")
-      private final @Nullable Input<GoogleProtobufEmptyArgs> inferred;
+      private final @Nullable Output<GoogleProtobufEmptyArgs> inferred;
 
-    public Input<GoogleProtobufEmptyArgs> getInferred() {
-        return this.inferred == null ? Input.empty() : this.inferred;
+    public Output<GoogleProtobufEmptyArgs> getInferred() {
+        return this.inferred == null ? Output.empty() : this.inferred;
     }
 
     /**
@@ -59,17 +59,17 @@ public final class GooglePrivacyDlpV2QuasiIdArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="infoType")
-      private final @Nullable Input<GooglePrivacyDlpV2InfoTypeArgs> infoType;
+      private final @Nullable Output<GooglePrivacyDlpV2InfoTypeArgs> infoType;
 
-    public Input<GooglePrivacyDlpV2InfoTypeArgs> getInfoType() {
-        return this.infoType == null ? Input.empty() : this.infoType;
+    public Output<GooglePrivacyDlpV2InfoTypeArgs> getInfoType() {
+        return this.infoType == null ? Output.empty() : this.infoType;
     }
 
     public GooglePrivacyDlpV2QuasiIdArgs(
-        @Nullable Input<String> customTag,
-        Input<GooglePrivacyDlpV2FieldIdArgs> field,
-        @Nullable Input<GoogleProtobufEmptyArgs> inferred,
-        @Nullable Input<GooglePrivacyDlpV2InfoTypeArgs> infoType) {
+        @Nullable Output<String> customTag,
+        Output<GooglePrivacyDlpV2FieldIdArgs> field,
+        @Nullable Output<GoogleProtobufEmptyArgs> inferred,
+        @Nullable Output<GooglePrivacyDlpV2InfoTypeArgs> infoType) {
         this.customTag = customTag;
         this.field = Objects.requireNonNull(field, "expected parameter 'field' to be non-null");
         this.inferred = inferred;
@@ -77,10 +77,10 @@ public final class GooglePrivacyDlpV2QuasiIdArgs extends io.pulumi.resources.Res
     }
 
     private GooglePrivacyDlpV2QuasiIdArgs() {
-        this.customTag = Input.empty();
-        this.field = Input.empty();
-        this.inferred = Input.empty();
-        this.infoType = Input.empty();
+        this.customTag = Output.empty();
+        this.field = Output.empty();
+        this.inferred = Output.empty();
+        this.infoType = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class GooglePrivacyDlpV2QuasiIdArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> customTag;
-        private Input<GooglePrivacyDlpV2FieldIdArgs> field;
-        private @Nullable Input<GoogleProtobufEmptyArgs> inferred;
-        private @Nullable Input<GooglePrivacyDlpV2InfoTypeArgs> infoType;
+        private @Nullable Output<String> customTag;
+        private Output<GooglePrivacyDlpV2FieldIdArgs> field;
+        private @Nullable Output<GoogleProtobufEmptyArgs> inferred;
+        private @Nullable Output<GooglePrivacyDlpV2InfoTypeArgs> infoType;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class GooglePrivacyDlpV2QuasiIdArgs extends io.pulumi.resources.Res
     	      this.infoType = defaults.infoType;
         }
 
-        public Builder customTag(@Nullable Input<String> customTag) {
+        public Builder customTag(@Nullable Output<String> customTag) {
             this.customTag = customTag;
             return this;
         }
 
         public Builder customTag(@Nullable String customTag) {
-            this.customTag = Input.ofNullable(customTag);
+            this.customTag = Output.ofNullable(customTag);
             return this;
         }
 
-        public Builder field(Input<GooglePrivacyDlpV2FieldIdArgs> field) {
+        public Builder field(Output<GooglePrivacyDlpV2FieldIdArgs> field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }
 
         public Builder field(GooglePrivacyDlpV2FieldIdArgs field) {
-            this.field = Input.of(Objects.requireNonNull(field));
+            this.field = Output.of(Objects.requireNonNull(field));
             return this;
         }
 
-        public Builder inferred(@Nullable Input<GoogleProtobufEmptyArgs> inferred) {
+        public Builder inferred(@Nullable Output<GoogleProtobufEmptyArgs> inferred) {
             this.inferred = inferred;
             return this;
         }
 
         public Builder inferred(@Nullable GoogleProtobufEmptyArgs inferred) {
-            this.inferred = Input.ofNullable(inferred);
+            this.inferred = Output.ofNullable(inferred);
             return this;
         }
 
-        public Builder infoType(@Nullable Input<GooglePrivacyDlpV2InfoTypeArgs> infoType) {
+        public Builder infoType(@Nullable Output<GooglePrivacyDlpV2InfoTypeArgs> infoType) {
             this.infoType = infoType;
             return this;
         }
 
         public Builder infoType(@Nullable GooglePrivacyDlpV2InfoTypeArgs infoType) {
-            this.infoType = Input.ofNullable(infoType);
+            this.infoType = Output.ofNullable(infoType);
             return this;
         }
         public GooglePrivacyDlpV2QuasiIdArgs build() {

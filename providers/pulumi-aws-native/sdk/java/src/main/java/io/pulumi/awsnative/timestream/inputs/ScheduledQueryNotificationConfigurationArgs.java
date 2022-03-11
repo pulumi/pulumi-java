@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.timestream.inputs;
 
 import io.pulumi.awsnative.timestream.inputs.ScheduledQuerySnsConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class ScheduledQueryNotificationConfigurationArgs extends io.pulumi
     public static final ScheduledQueryNotificationConfigurationArgs Empty = new ScheduledQueryNotificationConfigurationArgs();
 
     @InputImport(name="snsConfiguration", required=true)
-      private final Input<ScheduledQuerySnsConfigurationArgs> snsConfiguration;
+      private final Output<ScheduledQuerySnsConfigurationArgs> snsConfiguration;
 
-    public Input<ScheduledQuerySnsConfigurationArgs> getSnsConfiguration() {
+    public Output<ScheduledQuerySnsConfigurationArgs> getSnsConfiguration() {
         return this.snsConfiguration;
     }
 
-    public ScheduledQueryNotificationConfigurationArgs(Input<ScheduledQuerySnsConfigurationArgs> snsConfiguration) {
+    public ScheduledQueryNotificationConfigurationArgs(Output<ScheduledQuerySnsConfigurationArgs> snsConfiguration) {
         this.snsConfiguration = Objects.requireNonNull(snsConfiguration, "expected parameter 'snsConfiguration' to be non-null");
     }
 
     private ScheduledQueryNotificationConfigurationArgs() {
-        this.snsConfiguration = Input.empty();
+        this.snsConfiguration = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ScheduledQueryNotificationConfigurationArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private Input<ScheduledQuerySnsConfigurationArgs> snsConfiguration;
+        private Output<ScheduledQuerySnsConfigurationArgs> snsConfiguration;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ScheduledQueryNotificationConfigurationArgs extends io.pulumi
     	      this.snsConfiguration = defaults.snsConfiguration;
         }
 
-        public Builder snsConfiguration(Input<ScheduledQuerySnsConfigurationArgs> snsConfiguration) {
+        public Builder snsConfiguration(Output<ScheduledQuerySnsConfigurationArgs> snsConfiguration) {
             this.snsConfiguration = Objects.requireNonNull(snsConfiguration);
             return this;
         }
 
         public Builder snsConfiguration(ScheduledQuerySnsConfigurationArgs snsConfiguration) {
-            this.snsConfiguration = Input.of(Objects.requireNonNull(snsConfiguration));
+            this.snsConfiguration = Output.of(Objects.requireNonNull(snsConfiguration));
             return this;
         }
         public ScheduledQueryNotificationConfigurationArgs build() {

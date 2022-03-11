@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.jobs_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.jobs_v3.enums.ProcessingOptionsHtmlSanitization;
 import java.lang.Boolean;
@@ -24,10 +24,10 @@ public final class ProcessingOptionsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="disableStreetAddressResolution")
-      private final @Nullable Input<Boolean> disableStreetAddressResolution;
+      private final @Nullable Output<Boolean> disableStreetAddressResolution;
 
-    public Input<Boolean> getDisableStreetAddressResolution() {
-        return this.disableStreetAddressResolution == null ? Input.empty() : this.disableStreetAddressResolution;
+    public Output<Boolean> getDisableStreetAddressResolution() {
+        return this.disableStreetAddressResolution == null ? Output.empty() : this.disableStreetAddressResolution;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ProcessingOptionsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="htmlSanitization")
-      private final @Nullable Input<ProcessingOptionsHtmlSanitization> htmlSanitization;
+      private final @Nullable Output<ProcessingOptionsHtmlSanitization> htmlSanitization;
 
-    public Input<ProcessingOptionsHtmlSanitization> getHtmlSanitization() {
-        return this.htmlSanitization == null ? Input.empty() : this.htmlSanitization;
+    public Output<ProcessingOptionsHtmlSanitization> getHtmlSanitization() {
+        return this.htmlSanitization == null ? Output.empty() : this.htmlSanitization;
     }
 
     public ProcessingOptionsArgs(
-        @Nullable Input<Boolean> disableStreetAddressResolution,
-        @Nullable Input<ProcessingOptionsHtmlSanitization> htmlSanitization) {
+        @Nullable Output<Boolean> disableStreetAddressResolution,
+        @Nullable Output<ProcessingOptionsHtmlSanitization> htmlSanitization) {
         this.disableStreetAddressResolution = disableStreetAddressResolution;
         this.htmlSanitization = htmlSanitization;
     }
 
     private ProcessingOptionsArgs() {
-        this.disableStreetAddressResolution = Input.empty();
-        this.htmlSanitization = Input.empty();
+        this.disableStreetAddressResolution = Output.empty();
+        this.htmlSanitization = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ProcessingOptionsArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> disableStreetAddressResolution;
-        private @Nullable Input<ProcessingOptionsHtmlSanitization> htmlSanitization;
+        private @Nullable Output<Boolean> disableStreetAddressResolution;
+        private @Nullable Output<ProcessingOptionsHtmlSanitization> htmlSanitization;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ProcessingOptionsArgs extends io.pulumi.resources.ResourceArg
     	      this.htmlSanitization = defaults.htmlSanitization;
         }
 
-        public Builder disableStreetAddressResolution(@Nullable Input<Boolean> disableStreetAddressResolution) {
+        public Builder disableStreetAddressResolution(@Nullable Output<Boolean> disableStreetAddressResolution) {
             this.disableStreetAddressResolution = disableStreetAddressResolution;
             return this;
         }
 
         public Builder disableStreetAddressResolution(@Nullable Boolean disableStreetAddressResolution) {
-            this.disableStreetAddressResolution = Input.ofNullable(disableStreetAddressResolution);
+            this.disableStreetAddressResolution = Output.ofNullable(disableStreetAddressResolution);
             return this;
         }
 
-        public Builder htmlSanitization(@Nullable Input<ProcessingOptionsHtmlSanitization> htmlSanitization) {
+        public Builder htmlSanitization(@Nullable Output<ProcessingOptionsHtmlSanitization> htmlSanitization) {
             this.htmlSanitization = htmlSanitization;
             return this;
         }
 
         public Builder htmlSanitization(@Nullable ProcessingOptionsHtmlSanitization htmlSanitization) {
-            this.htmlSanitization = Input.ofNullable(htmlSanitization);
+            this.htmlSanitization = Output.ofNullable(htmlSanitization);
             return this;
         }
         public ProcessingOptionsArgs build() {

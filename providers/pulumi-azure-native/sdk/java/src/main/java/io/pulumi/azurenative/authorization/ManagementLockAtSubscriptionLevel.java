@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.authorization.ManagementLockAtSubscriptionLevelArgs;
 import io.pulumi.azurenative.authorization.outputs.ManagementLockOwnerResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -141,21 +140,21 @@ public class ManagementLockAtSubscriptionLevel extends io.pulumi.resources.Custo
      * @param options A bag of options that control this resource's behavior.
      */
     public ManagementLockAtSubscriptionLevel(String name, ManagementLockAtSubscriptionLevelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:authorization:ManagementLockAtSubscriptionLevel", name, args == null ? ManagementLockAtSubscriptionLevelArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:authorization:ManagementLockAtSubscriptionLevel", name, args == null ? ManagementLockAtSubscriptionLevelArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ManagementLockAtSubscriptionLevel(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ManagementLockAtSubscriptionLevel(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:authorization:ManagementLockAtSubscriptionLevel", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:authorization/v20150101:ManagementLockAtSubscriptionLevel").build()),
-                Input.of(Alias.builder().setType("azure-native:authorization/v20160901:ManagementLockAtSubscriptionLevel").build()),
-                Input.of(Alias.builder().setType("azure-native:authorization/v20170401:ManagementLockAtSubscriptionLevel").build()),
-                Input.of(Alias.builder().setType("azure-native:authorization/v20200501:ManagementLockAtSubscriptionLevel").build())
+                Output.of(Alias.builder().setType("azure-native:authorization/v20150101:ManagementLockAtSubscriptionLevel").build()),
+                Output.of(Alias.builder().setType("azure-native:authorization/v20160901:ManagementLockAtSubscriptionLevel").build()),
+                Output.of(Alias.builder().setType("azure-native:authorization/v20170401:ManagementLockAtSubscriptionLevel").build()),
+                Output.of(Alias.builder().setType("azure-native:authorization/v20200501:ManagementLockAtSubscriptionLevel").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -169,7 +168,7 @@ public class ManagementLockAtSubscriptionLevel extends io.pulumi.resources.Custo
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ManagementLockAtSubscriptionLevel get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ManagementLockAtSubscriptionLevel get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ManagementLockAtSubscriptionLevel(name, id, options);
     }
 }

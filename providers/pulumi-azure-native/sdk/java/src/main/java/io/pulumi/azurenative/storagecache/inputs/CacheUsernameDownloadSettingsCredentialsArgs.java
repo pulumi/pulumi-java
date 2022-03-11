@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagecache.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class CacheUsernameDownloadSettingsCredentialsArgs extends io.pulum
      * 
      */
     @InputImport(name="bindDn")
-      private final @Nullable Input<String> bindDn;
+      private final @Nullable Output<String> bindDn;
 
-    public Input<String> getBindDn() {
-        return this.bindDn == null ? Input.empty() : this.bindDn;
+    public Output<String> getBindDn() {
+        return this.bindDn == null ? Output.empty() : this.bindDn;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class CacheUsernameDownloadSettingsCredentialsArgs extends io.pulum
      * 
      */
     @InputImport(name="bindPassword")
-      private final @Nullable Input<String> bindPassword;
+      private final @Nullable Output<String> bindPassword;
 
-    public Input<String> getBindPassword() {
-        return this.bindPassword == null ? Input.empty() : this.bindPassword;
+    public Output<String> getBindPassword() {
+        return this.bindPassword == null ? Output.empty() : this.bindPassword;
     }
 
     public CacheUsernameDownloadSettingsCredentialsArgs(
-        @Nullable Input<String> bindDn,
-        @Nullable Input<String> bindPassword) {
+        @Nullable Output<String> bindDn,
+        @Nullable Output<String> bindPassword) {
         this.bindDn = bindDn;
         this.bindPassword = bindPassword;
     }
 
     private CacheUsernameDownloadSettingsCredentialsArgs() {
-        this.bindDn = Input.empty();
-        this.bindPassword = Input.empty();
+        this.bindDn = Output.empty();
+        this.bindPassword = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class CacheUsernameDownloadSettingsCredentialsArgs extends io.pulum
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bindDn;
-        private @Nullable Input<String> bindPassword;
+        private @Nullable Output<String> bindDn;
+        private @Nullable Output<String> bindPassword;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class CacheUsernameDownloadSettingsCredentialsArgs extends io.pulum
     	      this.bindPassword = defaults.bindPassword;
         }
 
-        public Builder bindDn(@Nullable Input<String> bindDn) {
+        public Builder bindDn(@Nullable Output<String> bindDn) {
             this.bindDn = bindDn;
             return this;
         }
 
         public Builder bindDn(@Nullable String bindDn) {
-            this.bindDn = Input.ofNullable(bindDn);
+            this.bindDn = Output.ofNullable(bindDn);
             return this;
         }
 
-        public Builder bindPassword(@Nullable Input<String> bindPassword) {
+        public Builder bindPassword(@Nullable Output<String> bindPassword) {
             this.bindPassword = bindPassword;
             return this;
         }
 
         public Builder bindPassword(@Nullable String bindPassword) {
-            this.bindPassword = Input.ofNullable(bindPassword);
+            this.bindPassword = Output.ofNullable(bindPassword);
             return this;
         }
         public CacheUsernameDownloadSettingsCredentialsArgs build() {

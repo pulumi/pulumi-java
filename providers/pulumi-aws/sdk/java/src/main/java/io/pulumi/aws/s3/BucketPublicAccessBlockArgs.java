@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.s3;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class BucketPublicAccessBlockArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="blockPublicAcls")
-      private final @Nullable Input<Boolean> blockPublicAcls;
+      private final @Nullable Output<Boolean> blockPublicAcls;
 
-    public Input<Boolean> getBlockPublicAcls() {
-        return this.blockPublicAcls == null ? Input.empty() : this.blockPublicAcls;
+    public Output<Boolean> getBlockPublicAcls() {
+        return this.blockPublicAcls == null ? Output.empty() : this.blockPublicAcls;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class BucketPublicAccessBlockArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="blockPublicPolicy")
-      private final @Nullable Input<Boolean> blockPublicPolicy;
+      private final @Nullable Output<Boolean> blockPublicPolicy;
 
-    public Input<Boolean> getBlockPublicPolicy() {
-        return this.blockPublicPolicy == null ? Input.empty() : this.blockPublicPolicy;
+    public Output<Boolean> getBlockPublicPolicy() {
+        return this.blockPublicPolicy == null ? Output.empty() : this.blockPublicPolicy;
     }
 
     /**
@@ -45,9 +45,9 @@ public final class BucketPublicAccessBlockArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="bucket", required=true)
-      private final Input<String> bucket;
+      private final Output<String> bucket;
 
-    public Input<String> getBucket() {
+    public Output<String> getBucket() {
         return this.bucket;
     }
 
@@ -57,10 +57,10 @@ public final class BucketPublicAccessBlockArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="ignorePublicAcls")
-      private final @Nullable Input<Boolean> ignorePublicAcls;
+      private final @Nullable Output<Boolean> ignorePublicAcls;
 
-    public Input<Boolean> getIgnorePublicAcls() {
-        return this.ignorePublicAcls == null ? Input.empty() : this.ignorePublicAcls;
+    public Output<Boolean> getIgnorePublicAcls() {
+        return this.ignorePublicAcls == null ? Output.empty() : this.ignorePublicAcls;
     }
 
     /**
@@ -69,18 +69,18 @@ public final class BucketPublicAccessBlockArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="restrictPublicBuckets")
-      private final @Nullable Input<Boolean> restrictPublicBuckets;
+      private final @Nullable Output<Boolean> restrictPublicBuckets;
 
-    public Input<Boolean> getRestrictPublicBuckets() {
-        return this.restrictPublicBuckets == null ? Input.empty() : this.restrictPublicBuckets;
+    public Output<Boolean> getRestrictPublicBuckets() {
+        return this.restrictPublicBuckets == null ? Output.empty() : this.restrictPublicBuckets;
     }
 
     public BucketPublicAccessBlockArgs(
-        @Nullable Input<Boolean> blockPublicAcls,
-        @Nullable Input<Boolean> blockPublicPolicy,
-        Input<String> bucket,
-        @Nullable Input<Boolean> ignorePublicAcls,
-        @Nullable Input<Boolean> restrictPublicBuckets) {
+        @Nullable Output<Boolean> blockPublicAcls,
+        @Nullable Output<Boolean> blockPublicPolicy,
+        Output<String> bucket,
+        @Nullable Output<Boolean> ignorePublicAcls,
+        @Nullable Output<Boolean> restrictPublicBuckets) {
         this.blockPublicAcls = blockPublicAcls;
         this.blockPublicPolicy = blockPublicPolicy;
         this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
@@ -89,11 +89,11 @@ public final class BucketPublicAccessBlockArgs extends io.pulumi.resources.Resou
     }
 
     private BucketPublicAccessBlockArgs() {
-        this.blockPublicAcls = Input.empty();
-        this.blockPublicPolicy = Input.empty();
-        this.bucket = Input.empty();
-        this.ignorePublicAcls = Input.empty();
-        this.restrictPublicBuckets = Input.empty();
+        this.blockPublicAcls = Output.empty();
+        this.blockPublicPolicy = Output.empty();
+        this.bucket = Output.empty();
+        this.ignorePublicAcls = Output.empty();
+        this.restrictPublicBuckets = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class BucketPublicAccessBlockArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> blockPublicAcls;
-        private @Nullable Input<Boolean> blockPublicPolicy;
-        private Input<String> bucket;
-        private @Nullable Input<Boolean> ignorePublicAcls;
-        private @Nullable Input<Boolean> restrictPublicBuckets;
+        private @Nullable Output<Boolean> blockPublicAcls;
+        private @Nullable Output<Boolean> blockPublicPolicy;
+        private Output<String> bucket;
+        private @Nullable Output<Boolean> ignorePublicAcls;
+        private @Nullable Output<Boolean> restrictPublicBuckets;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class BucketPublicAccessBlockArgs extends io.pulumi.resources.Resou
     	      this.restrictPublicBuckets = defaults.restrictPublicBuckets;
         }
 
-        public Builder blockPublicAcls(@Nullable Input<Boolean> blockPublicAcls) {
+        public Builder blockPublicAcls(@Nullable Output<Boolean> blockPublicAcls) {
             this.blockPublicAcls = blockPublicAcls;
             return this;
         }
 
         public Builder blockPublicAcls(@Nullable Boolean blockPublicAcls) {
-            this.blockPublicAcls = Input.ofNullable(blockPublicAcls);
+            this.blockPublicAcls = Output.ofNullable(blockPublicAcls);
             return this;
         }
 
-        public Builder blockPublicPolicy(@Nullable Input<Boolean> blockPublicPolicy) {
+        public Builder blockPublicPolicy(@Nullable Output<Boolean> blockPublicPolicy) {
             this.blockPublicPolicy = blockPublicPolicy;
             return this;
         }
 
         public Builder blockPublicPolicy(@Nullable Boolean blockPublicPolicy) {
-            this.blockPublicPolicy = Input.ofNullable(blockPublicPolicy);
+            this.blockPublicPolicy = Output.ofNullable(blockPublicPolicy);
             return this;
         }
 
-        public Builder bucket(Input<String> bucket) {
+        public Builder bucket(Output<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Input.of(Objects.requireNonNull(bucket));
+            this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder ignorePublicAcls(@Nullable Input<Boolean> ignorePublicAcls) {
+        public Builder ignorePublicAcls(@Nullable Output<Boolean> ignorePublicAcls) {
             this.ignorePublicAcls = ignorePublicAcls;
             return this;
         }
 
         public Builder ignorePublicAcls(@Nullable Boolean ignorePublicAcls) {
-            this.ignorePublicAcls = Input.ofNullable(ignorePublicAcls);
+            this.ignorePublicAcls = Output.ofNullable(ignorePublicAcls);
             return this;
         }
 
-        public Builder restrictPublicBuckets(@Nullable Input<Boolean> restrictPublicBuckets) {
+        public Builder restrictPublicBuckets(@Nullable Output<Boolean> restrictPublicBuckets) {
             this.restrictPublicBuckets = restrictPublicBuckets;
             return this;
         }
 
         public Builder restrictPublicBuckets(@Nullable Boolean restrictPublicBuckets) {
-            this.restrictPublicBuckets = Input.ofNullable(restrictPublicBuckets);
+            this.restrictPublicBuckets = Output.ofNullable(restrictPublicBuckets);
             return this;
         }
         public BucketPublicAccessBlockArgs build() {

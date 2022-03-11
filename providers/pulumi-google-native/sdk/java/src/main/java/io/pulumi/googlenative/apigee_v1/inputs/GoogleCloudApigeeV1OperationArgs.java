@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class GoogleCloudApigeeV1OperationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="methods")
-      private final @Nullable Input<List<String>> methods;
+      private final @Nullable Output<List<String>> methods;
 
-    public Input<List<String>> getMethods() {
-        return this.methods == null ? Input.empty() : this.methods;
+    public Output<List<String>> getMethods() {
+        return this.methods == null ? Output.empty() : this.methods;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class GoogleCloudApigeeV1OperationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resource", required=true)
-      private final Input<String> resource;
+      private final Output<String> resource;
 
-    public Input<String> getResource() {
+    public Output<String> getResource() {
         return this.resource;
     }
 
     public GoogleCloudApigeeV1OperationArgs(
-        @Nullable Input<List<String>> methods,
-        Input<String> resource) {
+        @Nullable Output<List<String>> methods,
+        Output<String> resource) {
         this.methods = methods;
         this.resource = Objects.requireNonNull(resource, "expected parameter 'resource' to be non-null");
     }
 
     private GoogleCloudApigeeV1OperationArgs() {
-        this.methods = Input.empty();
-        this.resource = Input.empty();
+        this.methods = Output.empty();
+        this.resource = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class GoogleCloudApigeeV1OperationArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> methods;
-        private Input<String> resource;
+        private @Nullable Output<List<String>> methods;
+        private Output<String> resource;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class GoogleCloudApigeeV1OperationArgs extends io.pulumi.resources.
     	      this.resource = defaults.resource;
         }
 
-        public Builder methods(@Nullable Input<List<String>> methods) {
+        public Builder methods(@Nullable Output<List<String>> methods) {
             this.methods = methods;
             return this;
         }
 
         public Builder methods(@Nullable List<String> methods) {
-            this.methods = Input.ofNullable(methods);
+            this.methods = Output.ofNullable(methods);
             return this;
         }
 
-        public Builder resource(Input<String> resource) {
+        public Builder resource(Output<String> resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
 
         public Builder resource(String resource) {
-            this.resource = Input.of(Objects.requireNonNull(resource));
+            this.resource = Output.of(Objects.requireNonNull(resource));
             return this;
         }
         public GoogleCloudApigeeV1OperationArgs build() {

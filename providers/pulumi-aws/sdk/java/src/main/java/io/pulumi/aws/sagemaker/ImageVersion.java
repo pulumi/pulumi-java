@@ -6,7 +6,6 @@ package io.pulumi.aws.sagemaker;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.sagemaker.ImageVersionArgs;
 import io.pulumi.aws.sagemaker.inputs.ImageVersionState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -139,14 +138,14 @@ public class ImageVersion extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ImageVersion(String name, ImageVersionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:sagemaker/imageVersion:ImageVersion", name, args == null ? ImageVersionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:sagemaker/imageVersion:ImageVersion", name, args == null ? ImageVersionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ImageVersion(String name, Input<String> id, @Nullable ImageVersionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ImageVersion(String name, Output<String> id, @Nullable ImageVersionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:sagemaker/imageVersion:ImageVersion", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -162,7 +161,7 @@ public class ImageVersion extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ImageVersion get(String name, Input<String> id, @Nullable ImageVersionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ImageVersion get(String name, Output<String> id, @Nullable ImageVersionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ImageVersion(name, id, state, options);
     }
 }

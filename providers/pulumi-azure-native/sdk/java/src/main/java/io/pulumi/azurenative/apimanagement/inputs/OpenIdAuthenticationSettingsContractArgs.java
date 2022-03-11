@@ -5,7 +5,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.azurenative.apimanagement.enums.BearerTokenSendingMethods;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class OpenIdAuthenticationSettingsContractArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="bearerTokenSendingMethods")
-      private final @Nullable Input<List<Either<String,BearerTokenSendingMethods>>> bearerTokenSendingMethods;
+      private final @Nullable Output<List<Either<String,BearerTokenSendingMethods>>> bearerTokenSendingMethods;
 
-    public Input<List<Either<String,BearerTokenSendingMethods>>> getBearerTokenSendingMethods() {
-        return this.bearerTokenSendingMethods == null ? Input.empty() : this.bearerTokenSendingMethods;
+    public Output<List<Either<String,BearerTokenSendingMethods>>> getBearerTokenSendingMethods() {
+        return this.bearerTokenSendingMethods == null ? Output.empty() : this.bearerTokenSendingMethods;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class OpenIdAuthenticationSettingsContractArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="openidProviderId")
-      private final @Nullable Input<String> openidProviderId;
+      private final @Nullable Output<String> openidProviderId;
 
-    public Input<String> getOpenidProviderId() {
-        return this.openidProviderId == null ? Input.empty() : this.openidProviderId;
+    public Output<String> getOpenidProviderId() {
+        return this.openidProviderId == null ? Output.empty() : this.openidProviderId;
     }
 
     public OpenIdAuthenticationSettingsContractArgs(
-        @Nullable Input<List<Either<String,BearerTokenSendingMethods>>> bearerTokenSendingMethods,
-        @Nullable Input<String> openidProviderId) {
+        @Nullable Output<List<Either<String,BearerTokenSendingMethods>>> bearerTokenSendingMethods,
+        @Nullable Output<String> openidProviderId) {
         this.bearerTokenSendingMethods = bearerTokenSendingMethods;
         this.openidProviderId = openidProviderId;
     }
 
     private OpenIdAuthenticationSettingsContractArgs() {
-        this.bearerTokenSendingMethods = Input.empty();
-        this.openidProviderId = Input.empty();
+        this.bearerTokenSendingMethods = Output.empty();
+        this.openidProviderId = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class OpenIdAuthenticationSettingsContractArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Either<String,BearerTokenSendingMethods>>> bearerTokenSendingMethods;
-        private @Nullable Input<String> openidProviderId;
+        private @Nullable Output<List<Either<String,BearerTokenSendingMethods>>> bearerTokenSendingMethods;
+        private @Nullable Output<String> openidProviderId;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class OpenIdAuthenticationSettingsContractArgs extends io.pulumi.re
     	      this.openidProviderId = defaults.openidProviderId;
         }
 
-        public Builder bearerTokenSendingMethods(@Nullable Input<List<Either<String,BearerTokenSendingMethods>>> bearerTokenSendingMethods) {
+        public Builder bearerTokenSendingMethods(@Nullable Output<List<Either<String,BearerTokenSendingMethods>>> bearerTokenSendingMethods) {
             this.bearerTokenSendingMethods = bearerTokenSendingMethods;
             return this;
         }
 
         public Builder bearerTokenSendingMethods(@Nullable List<Either<String,BearerTokenSendingMethods>> bearerTokenSendingMethods) {
-            this.bearerTokenSendingMethods = Input.ofNullable(bearerTokenSendingMethods);
+            this.bearerTokenSendingMethods = Output.ofNullable(bearerTokenSendingMethods);
             return this;
         }
 
-        public Builder openidProviderId(@Nullable Input<String> openidProviderId) {
+        public Builder openidProviderId(@Nullable Output<String> openidProviderId) {
             this.openidProviderId = openidProviderId;
             return this;
         }
 
         public Builder openidProviderId(@Nullable String openidProviderId) {
-            this.openidProviderId = Input.ofNullable(openidProviderId);
+            this.openidProviderId = Output.ofNullable(openidProviderId);
             return this;
         }
         public OpenIdAuthenticationSettingsContractArgs build() {

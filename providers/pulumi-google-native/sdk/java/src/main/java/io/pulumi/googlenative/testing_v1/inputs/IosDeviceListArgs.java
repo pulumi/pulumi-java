@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.testing_v1.inputs.IosDeviceArgs;
 import java.util.List;
@@ -23,18 +23,18 @@ public final class IosDeviceListArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iosDevices", required=true)
-      private final Input<List<IosDeviceArgs>> iosDevices;
+      private final Output<List<IosDeviceArgs>> iosDevices;
 
-    public Input<List<IosDeviceArgs>> getIosDevices() {
+    public Output<List<IosDeviceArgs>> getIosDevices() {
         return this.iosDevices;
     }
 
-    public IosDeviceListArgs(Input<List<IosDeviceArgs>> iosDevices) {
+    public IosDeviceListArgs(Output<List<IosDeviceArgs>> iosDevices) {
         this.iosDevices = Objects.requireNonNull(iosDevices, "expected parameter 'iosDevices' to be non-null");
     }
 
     private IosDeviceListArgs() {
-        this.iosDevices = Input.empty();
+        this.iosDevices = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class IosDeviceListArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<IosDeviceArgs>> iosDevices;
+        private Output<List<IosDeviceArgs>> iosDevices;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class IosDeviceListArgs extends io.pulumi.resources.ResourceArgs {
     	      this.iosDevices = defaults.iosDevices;
         }
 
-        public Builder iosDevices(Input<List<IosDeviceArgs>> iosDevices) {
+        public Builder iosDevices(Output<List<IosDeviceArgs>> iosDevices) {
             this.iosDevices = Objects.requireNonNull(iosDevices);
             return this;
         }
 
         public Builder iosDevices(List<IosDeviceArgs> iosDevices) {
-            this.iosDevices = Input.of(Objects.requireNonNull(iosDevices));
+            this.iosDevices = Output.of(Objects.requireNonNull(iosDevices));
             return this;
         }
         public IosDeviceListArgs build() {

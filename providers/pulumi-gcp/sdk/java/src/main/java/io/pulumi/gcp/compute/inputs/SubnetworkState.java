@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.SubnetworkLogConfigGetArgs;
 import io.pulumi.gcp.compute.inputs.SubnetworkSecondaryIpRangeGetArgs;
@@ -23,10 +23,10 @@ public final class SubnetworkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationTimestamp")
-      private final @Nullable Input<String> creationTimestamp;
+      private final @Nullable Output<String> creationTimestamp;
 
-    public Input<String> getCreationTimestamp() {
-        return this.creationTimestamp == null ? Input.empty() : this.creationTimestamp;
+    public Output<String> getCreationTimestamp() {
+        return this.creationTimestamp == null ? Output.empty() : this.creationTimestamp;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SubnetworkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class SubnetworkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="externalIpv6Prefix")
-      private final @Nullable Input<String> externalIpv6Prefix;
+      private final @Nullable Output<String> externalIpv6Prefix;
 
-    public Input<String> getExternalIpv6Prefix() {
-        return this.externalIpv6Prefix == null ? Input.empty() : this.externalIpv6Prefix;
+    public Output<String> getExternalIpv6Prefix() {
+        return this.externalIpv6Prefix == null ? Output.empty() : this.externalIpv6Prefix;
     }
 
     /**
@@ -62,11 +62,11 @@ public final class SubnetworkState extends io.pulumi.resources.ResourceArgs {
      */
     @Deprecated /* This field is not useful for users, and has been removed as an output. */
     @InputImport(name="fingerprint")
-      private final @Nullable Input<String> fingerprint;
+      private final @Nullable Output<String> fingerprint;
 
     @Deprecated /* This field is not useful for users, and has been removed as an output. */
-    public Input<String> getFingerprint() {
-        return this.fingerprint == null ? Input.empty() : this.fingerprint;
+    public Output<String> getFingerprint() {
+        return this.fingerprint == null ? Output.empty() : this.fingerprint;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class SubnetworkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayAddress")
-      private final @Nullable Input<String> gatewayAddress;
+      private final @Nullable Output<String> gatewayAddress;
 
-    public Input<String> getGatewayAddress() {
-        return this.gatewayAddress == null ? Input.empty() : this.gatewayAddress;
+    public Output<String> getGatewayAddress() {
+        return this.gatewayAddress == null ? Output.empty() : this.gatewayAddress;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class SubnetworkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipCidrRange")
-      private final @Nullable Input<String> ipCidrRange;
+      private final @Nullable Output<String> ipCidrRange;
 
-    public Input<String> getIpCidrRange() {
-        return this.ipCidrRange == null ? Input.empty() : this.ipCidrRange;
+    public Output<String> getIpCidrRange() {
+        return this.ipCidrRange == null ? Output.empty() : this.ipCidrRange;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class SubnetworkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipv6AccessType")
-      private final @Nullable Input<String> ipv6AccessType;
+      private final @Nullable Output<String> ipv6AccessType;
 
-    public Input<String> getIpv6AccessType() {
-        return this.ipv6AccessType == null ? Input.empty() : this.ipv6AccessType;
+    public Output<String> getIpv6AccessType() {
+        return this.ipv6AccessType == null ? Output.empty() : this.ipv6AccessType;
     }
 
     /**
@@ -113,10 +113,10 @@ public final class SubnetworkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipv6CidrRange")
-      private final @Nullable Input<String> ipv6CidrRange;
+      private final @Nullable Output<String> ipv6CidrRange;
 
-    public Input<String> getIpv6CidrRange() {
-        return this.ipv6CidrRange == null ? Input.empty() : this.ipv6CidrRange;
+    public Output<String> getIpv6CidrRange() {
+        return this.ipv6CidrRange == null ? Output.empty() : this.ipv6CidrRange;
     }
 
     /**
@@ -127,10 +127,10 @@ public final class SubnetworkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logConfig")
-      private final @Nullable Input<SubnetworkLogConfigGetArgs> logConfig;
+      private final @Nullable Output<SubnetworkLogConfigGetArgs> logConfig;
 
-    public Input<SubnetworkLogConfigGetArgs> getLogConfig() {
-        return this.logConfig == null ? Input.empty() : this.logConfig;
+    public Output<SubnetworkLogConfigGetArgs> getLogConfig() {
+        return this.logConfig == null ? Output.empty() : this.logConfig;
     }
 
     /**
@@ -144,10 +144,10 @@ public final class SubnetworkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -156,10 +156,10 @@ public final class SubnetworkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-      private final @Nullable Input<String> network;
+      private final @Nullable Output<String> network;
 
-    public Input<String> getNetwork() {
-        return this.network == null ? Input.empty() : this.network;
+    public Output<String> getNetwork() {
+        return this.network == null ? Output.empty() : this.network;
     }
 
     /**
@@ -168,10 +168,10 @@ public final class SubnetworkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateIpGoogleAccess")
-      private final @Nullable Input<Boolean> privateIpGoogleAccess;
+      private final @Nullable Output<Boolean> privateIpGoogleAccess;
 
-    public Input<Boolean> getPrivateIpGoogleAccess() {
-        return this.privateIpGoogleAccess == null ? Input.empty() : this.privateIpGoogleAccess;
+    public Output<Boolean> getPrivateIpGoogleAccess() {
+        return this.privateIpGoogleAccess == null ? Output.empty() : this.privateIpGoogleAccess;
     }
 
     /**
@@ -179,10 +179,10 @@ public final class SubnetworkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateIpv6GoogleAccess")
-      private final @Nullable Input<String> privateIpv6GoogleAccess;
+      private final @Nullable Output<String> privateIpv6GoogleAccess;
 
-    public Input<String> getPrivateIpv6GoogleAccess() {
-        return this.privateIpv6GoogleAccess == null ? Input.empty() : this.privateIpv6GoogleAccess;
+    public Output<String> getPrivateIpv6GoogleAccess() {
+        return this.privateIpv6GoogleAccess == null ? Output.empty() : this.privateIpv6GoogleAccess;
     }
 
     /**
@@ -191,10 +191,10 @@ public final class SubnetworkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -205,10 +205,10 @@ public final class SubnetworkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="purpose")
-      private final @Nullable Input<String> purpose;
+      private final @Nullable Output<String> purpose;
 
-    public Input<String> getPurpose() {
-        return this.purpose == null ? Input.empty() : this.purpose;
+    public Output<String> getPurpose() {
+        return this.purpose == null ? Output.empty() : this.purpose;
     }
 
     /**
@@ -216,10 +216,10 @@ public final class SubnetworkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -232,10 +232,10 @@ public final class SubnetworkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role")
-      private final @Nullable Input<String> role;
+      private final @Nullable Output<String> role;
 
-    public Input<String> getRole() {
-        return this.role == null ? Input.empty() : this.role;
+    public Output<String> getRole() {
+        return this.role == null ? Output.empty() : this.role;
     }
 
     /**
@@ -247,10 +247,10 @@ public final class SubnetworkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secondaryIpRanges")
-      private final @Nullable Input<List<SubnetworkSecondaryIpRangeGetArgs>> secondaryIpRanges;
+      private final @Nullable Output<List<SubnetworkSecondaryIpRangeGetArgs>> secondaryIpRanges;
 
-    public Input<List<SubnetworkSecondaryIpRangeGetArgs>> getSecondaryIpRanges() {
-        return this.secondaryIpRanges == null ? Input.empty() : this.secondaryIpRanges;
+    public Output<List<SubnetworkSecondaryIpRangeGetArgs>> getSecondaryIpRanges() {
+        return this.secondaryIpRanges == null ? Output.empty() : this.secondaryIpRanges;
     }
 
     /**
@@ -258,10 +258,10 @@ public final class SubnetworkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfLink")
-      private final @Nullable Input<String> selfLink;
+      private final @Nullable Output<String> selfLink;
 
-    public Input<String> getSelfLink() {
-        return this.selfLink == null ? Input.empty() : this.selfLink;
+    public Output<String> getSelfLink() {
+        return this.selfLink == null ? Output.empty() : this.selfLink;
     }
 
     /**
@@ -271,33 +271,33 @@ public final class SubnetworkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stackType")
-      private final @Nullable Input<String> stackType;
+      private final @Nullable Output<String> stackType;
 
-    public Input<String> getStackType() {
-        return this.stackType == null ? Input.empty() : this.stackType;
+    public Output<String> getStackType() {
+        return this.stackType == null ? Output.empty() : this.stackType;
     }
 
     public SubnetworkState(
-        @Nullable Input<String> creationTimestamp,
-        @Nullable Input<String> description,
-        @Nullable Input<String> externalIpv6Prefix,
-        @Nullable Input<String> fingerprint,
-        @Nullable Input<String> gatewayAddress,
-        @Nullable Input<String> ipCidrRange,
-        @Nullable Input<String> ipv6AccessType,
-        @Nullable Input<String> ipv6CidrRange,
-        @Nullable Input<SubnetworkLogConfigGetArgs> logConfig,
-        @Nullable Input<String> name,
-        @Nullable Input<String> network,
-        @Nullable Input<Boolean> privateIpGoogleAccess,
-        @Nullable Input<String> privateIpv6GoogleAccess,
-        @Nullable Input<String> project,
-        @Nullable Input<String> purpose,
-        @Nullable Input<String> region,
-        @Nullable Input<String> role,
-        @Nullable Input<List<SubnetworkSecondaryIpRangeGetArgs>> secondaryIpRanges,
-        @Nullable Input<String> selfLink,
-        @Nullable Input<String> stackType) {
+        @Nullable Output<String> creationTimestamp,
+        @Nullable Output<String> description,
+        @Nullable Output<String> externalIpv6Prefix,
+        @Nullable Output<String> fingerprint,
+        @Nullable Output<String> gatewayAddress,
+        @Nullable Output<String> ipCidrRange,
+        @Nullable Output<String> ipv6AccessType,
+        @Nullable Output<String> ipv6CidrRange,
+        @Nullable Output<SubnetworkLogConfigGetArgs> logConfig,
+        @Nullable Output<String> name,
+        @Nullable Output<String> network,
+        @Nullable Output<Boolean> privateIpGoogleAccess,
+        @Nullable Output<String> privateIpv6GoogleAccess,
+        @Nullable Output<String> project,
+        @Nullable Output<String> purpose,
+        @Nullable Output<String> region,
+        @Nullable Output<String> role,
+        @Nullable Output<List<SubnetworkSecondaryIpRangeGetArgs>> secondaryIpRanges,
+        @Nullable Output<String> selfLink,
+        @Nullable Output<String> stackType) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.externalIpv6Prefix = externalIpv6Prefix;
@@ -321,26 +321,26 @@ public final class SubnetworkState extends io.pulumi.resources.ResourceArgs {
     }
 
     private SubnetworkState() {
-        this.creationTimestamp = Input.empty();
-        this.description = Input.empty();
-        this.externalIpv6Prefix = Input.empty();
-        this.fingerprint = Input.empty();
-        this.gatewayAddress = Input.empty();
-        this.ipCidrRange = Input.empty();
-        this.ipv6AccessType = Input.empty();
-        this.ipv6CidrRange = Input.empty();
-        this.logConfig = Input.empty();
-        this.name = Input.empty();
-        this.network = Input.empty();
-        this.privateIpGoogleAccess = Input.empty();
-        this.privateIpv6GoogleAccess = Input.empty();
-        this.project = Input.empty();
-        this.purpose = Input.empty();
-        this.region = Input.empty();
-        this.role = Input.empty();
-        this.secondaryIpRanges = Input.empty();
-        this.selfLink = Input.empty();
-        this.stackType = Input.empty();
+        this.creationTimestamp = Output.empty();
+        this.description = Output.empty();
+        this.externalIpv6Prefix = Output.empty();
+        this.fingerprint = Output.empty();
+        this.gatewayAddress = Output.empty();
+        this.ipCidrRange = Output.empty();
+        this.ipv6AccessType = Output.empty();
+        this.ipv6CidrRange = Output.empty();
+        this.logConfig = Output.empty();
+        this.name = Output.empty();
+        this.network = Output.empty();
+        this.privateIpGoogleAccess = Output.empty();
+        this.privateIpv6GoogleAccess = Output.empty();
+        this.project = Output.empty();
+        this.purpose = Output.empty();
+        this.region = Output.empty();
+        this.role = Output.empty();
+        this.secondaryIpRanges = Output.empty();
+        this.selfLink = Output.empty();
+        this.stackType = Output.empty();
     }
 
     public static Builder builder() {
@@ -352,26 +352,26 @@ public final class SubnetworkState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> creationTimestamp;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> externalIpv6Prefix;
-        private @Nullable Input<String> fingerprint;
-        private @Nullable Input<String> gatewayAddress;
-        private @Nullable Input<String> ipCidrRange;
-        private @Nullable Input<String> ipv6AccessType;
-        private @Nullable Input<String> ipv6CidrRange;
-        private @Nullable Input<SubnetworkLogConfigGetArgs> logConfig;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> network;
-        private @Nullable Input<Boolean> privateIpGoogleAccess;
-        private @Nullable Input<String> privateIpv6GoogleAccess;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> purpose;
-        private @Nullable Input<String> region;
-        private @Nullable Input<String> role;
-        private @Nullable Input<List<SubnetworkSecondaryIpRangeGetArgs>> secondaryIpRanges;
-        private @Nullable Input<String> selfLink;
-        private @Nullable Input<String> stackType;
+        private @Nullable Output<String> creationTimestamp;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> externalIpv6Prefix;
+        private @Nullable Output<String> fingerprint;
+        private @Nullable Output<String> gatewayAddress;
+        private @Nullable Output<String> ipCidrRange;
+        private @Nullable Output<String> ipv6AccessType;
+        private @Nullable Output<String> ipv6CidrRange;
+        private @Nullable Output<SubnetworkLogConfigGetArgs> logConfig;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> network;
+        private @Nullable Output<Boolean> privateIpGoogleAccess;
+        private @Nullable Output<String> privateIpv6GoogleAccess;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> purpose;
+        private @Nullable Output<String> region;
+        private @Nullable Output<String> role;
+        private @Nullable Output<List<SubnetworkSecondaryIpRangeGetArgs>> secondaryIpRanges;
+        private @Nullable Output<String> selfLink;
+        private @Nullable Output<String> stackType;
 
         public Builder() {
     	      // Empty
@@ -401,203 +401,203 @@ public final class SubnetworkState extends io.pulumi.resources.ResourceArgs {
     	      this.stackType = defaults.stackType;
         }
 
-        public Builder creationTimestamp(@Nullable Input<String> creationTimestamp) {
+        public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
             this.creationTimestamp = creationTimestamp;
             return this;
         }
 
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Input.ofNullable(creationTimestamp);
+            this.creationTimestamp = Output.ofNullable(creationTimestamp);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder externalIpv6Prefix(@Nullable Input<String> externalIpv6Prefix) {
+        public Builder externalIpv6Prefix(@Nullable Output<String> externalIpv6Prefix) {
             this.externalIpv6Prefix = externalIpv6Prefix;
             return this;
         }
 
         public Builder externalIpv6Prefix(@Nullable String externalIpv6Prefix) {
-            this.externalIpv6Prefix = Input.ofNullable(externalIpv6Prefix);
+            this.externalIpv6Prefix = Output.ofNullable(externalIpv6Prefix);
             return this;
         }
 
-        public Builder fingerprint(@Nullable Input<String> fingerprint) {
+        public Builder fingerprint(@Nullable Output<String> fingerprint) {
             this.fingerprint = fingerprint;
             return this;
         }
 
         public Builder fingerprint(@Nullable String fingerprint) {
-            this.fingerprint = Input.ofNullable(fingerprint);
+            this.fingerprint = Output.ofNullable(fingerprint);
             return this;
         }
 
-        public Builder gatewayAddress(@Nullable Input<String> gatewayAddress) {
+        public Builder gatewayAddress(@Nullable Output<String> gatewayAddress) {
             this.gatewayAddress = gatewayAddress;
             return this;
         }
 
         public Builder gatewayAddress(@Nullable String gatewayAddress) {
-            this.gatewayAddress = Input.ofNullable(gatewayAddress);
+            this.gatewayAddress = Output.ofNullable(gatewayAddress);
             return this;
         }
 
-        public Builder ipCidrRange(@Nullable Input<String> ipCidrRange) {
+        public Builder ipCidrRange(@Nullable Output<String> ipCidrRange) {
             this.ipCidrRange = ipCidrRange;
             return this;
         }
 
         public Builder ipCidrRange(@Nullable String ipCidrRange) {
-            this.ipCidrRange = Input.ofNullable(ipCidrRange);
+            this.ipCidrRange = Output.ofNullable(ipCidrRange);
             return this;
         }
 
-        public Builder ipv6AccessType(@Nullable Input<String> ipv6AccessType) {
+        public Builder ipv6AccessType(@Nullable Output<String> ipv6AccessType) {
             this.ipv6AccessType = ipv6AccessType;
             return this;
         }
 
         public Builder ipv6AccessType(@Nullable String ipv6AccessType) {
-            this.ipv6AccessType = Input.ofNullable(ipv6AccessType);
+            this.ipv6AccessType = Output.ofNullable(ipv6AccessType);
             return this;
         }
 
-        public Builder ipv6CidrRange(@Nullable Input<String> ipv6CidrRange) {
+        public Builder ipv6CidrRange(@Nullable Output<String> ipv6CidrRange) {
             this.ipv6CidrRange = ipv6CidrRange;
             return this;
         }
 
         public Builder ipv6CidrRange(@Nullable String ipv6CidrRange) {
-            this.ipv6CidrRange = Input.ofNullable(ipv6CidrRange);
+            this.ipv6CidrRange = Output.ofNullable(ipv6CidrRange);
             return this;
         }
 
-        public Builder logConfig(@Nullable Input<SubnetworkLogConfigGetArgs> logConfig) {
+        public Builder logConfig(@Nullable Output<SubnetworkLogConfigGetArgs> logConfig) {
             this.logConfig = logConfig;
             return this;
         }
 
         public Builder logConfig(@Nullable SubnetworkLogConfigGetArgs logConfig) {
-            this.logConfig = Input.ofNullable(logConfig);
+            this.logConfig = Output.ofNullable(logConfig);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder network(@Nullable Input<String> network) {
+        public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
 
         public Builder network(@Nullable String network) {
-            this.network = Input.ofNullable(network);
+            this.network = Output.ofNullable(network);
             return this;
         }
 
-        public Builder privateIpGoogleAccess(@Nullable Input<Boolean> privateIpGoogleAccess) {
+        public Builder privateIpGoogleAccess(@Nullable Output<Boolean> privateIpGoogleAccess) {
             this.privateIpGoogleAccess = privateIpGoogleAccess;
             return this;
         }
 
         public Builder privateIpGoogleAccess(@Nullable Boolean privateIpGoogleAccess) {
-            this.privateIpGoogleAccess = Input.ofNullable(privateIpGoogleAccess);
+            this.privateIpGoogleAccess = Output.ofNullable(privateIpGoogleAccess);
             return this;
         }
 
-        public Builder privateIpv6GoogleAccess(@Nullable Input<String> privateIpv6GoogleAccess) {
+        public Builder privateIpv6GoogleAccess(@Nullable Output<String> privateIpv6GoogleAccess) {
             this.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
             return this;
         }
 
         public Builder privateIpv6GoogleAccess(@Nullable String privateIpv6GoogleAccess) {
-            this.privateIpv6GoogleAccess = Input.ofNullable(privateIpv6GoogleAccess);
+            this.privateIpv6GoogleAccess = Output.ofNullable(privateIpv6GoogleAccess);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder purpose(@Nullable Input<String> purpose) {
+        public Builder purpose(@Nullable Output<String> purpose) {
             this.purpose = purpose;
             return this;
         }
 
         public Builder purpose(@Nullable String purpose) {
-            this.purpose = Input.ofNullable(purpose);
+            this.purpose = Output.ofNullable(purpose);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder role(@Nullable Input<String> role) {
+        public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
 
         public Builder role(@Nullable String role) {
-            this.role = Input.ofNullable(role);
+            this.role = Output.ofNullable(role);
             return this;
         }
 
-        public Builder secondaryIpRanges(@Nullable Input<List<SubnetworkSecondaryIpRangeGetArgs>> secondaryIpRanges) {
+        public Builder secondaryIpRanges(@Nullable Output<List<SubnetworkSecondaryIpRangeGetArgs>> secondaryIpRanges) {
             this.secondaryIpRanges = secondaryIpRanges;
             return this;
         }
 
         public Builder secondaryIpRanges(@Nullable List<SubnetworkSecondaryIpRangeGetArgs> secondaryIpRanges) {
-            this.secondaryIpRanges = Input.ofNullable(secondaryIpRanges);
+            this.secondaryIpRanges = Output.ofNullable(secondaryIpRanges);
             return this;
         }
 
-        public Builder selfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Input.ofNullable(selfLink);
+            this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
 
-        public Builder stackType(@Nullable Input<String> stackType) {
+        public Builder stackType(@Nullable Output<String> stackType) {
             this.stackType = stackType;
             return this;
         }
 
         public Builder stackType(@Nullable String stackType) {
-            this.stackType = Input.ofNullable(stackType);
+            this.stackType = Output.ofNullable(stackType);
             return this;
         }
         public SubnetworkState build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.awsnative.databrew.enums.ProjectSampleType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class ProjectSampleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="size")
-      private final @Nullable Input<Integer> size;
+      private final @Nullable Output<Integer> size;
 
-    public Input<Integer> getSize() {
-        return this.size == null ? Input.empty() : this.size;
+    public Output<Integer> getSize() {
+        return this.size == null ? Output.empty() : this.size;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class ProjectSampleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<ProjectSampleType> type;
+      private final Output<ProjectSampleType> type;
 
-    public Input<ProjectSampleType> getType() {
+    public Output<ProjectSampleType> getType() {
         return this.type;
     }
 
     public ProjectSampleArgs(
-        @Nullable Input<Integer> size,
-        Input<ProjectSampleType> type) {
+        @Nullable Output<Integer> size,
+        Output<ProjectSampleType> type) {
         this.size = size;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private ProjectSampleArgs() {
-        this.size = Input.empty();
-        this.type = Input.empty();
+        this.size = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class ProjectSampleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> size;
-        private Input<ProjectSampleType> type;
+        private @Nullable Output<Integer> size;
+        private Output<ProjectSampleType> type;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class ProjectSampleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder size(@Nullable Input<Integer> size) {
+        public Builder size(@Nullable Output<Integer> size) {
             this.size = size;
             return this;
         }
 
         public Builder size(@Nullable Integer size) {
-            this.size = Input.ofNullable(size);
+            this.size = Output.ofNullable(size);
             return this;
         }
 
-        public Builder type(Input<ProjectSampleType> type) {
+        public Builder type(Output<ProjectSampleType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(ProjectSampleType type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ProjectSampleArgs build() {

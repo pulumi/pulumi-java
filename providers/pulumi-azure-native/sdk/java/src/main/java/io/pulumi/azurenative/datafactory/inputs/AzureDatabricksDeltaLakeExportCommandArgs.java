@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class AzureDatabricksDeltaLakeExportCommandArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="dateFormat")
-      private final @Nullable Input<Object> dateFormat;
+      private final @Nullable Output<Object> dateFormat;
 
-    public Input<Object> getDateFormat() {
-        return this.dateFormat == null ? Input.empty() : this.dateFormat;
+    public Output<Object> getDateFormat() {
+        return this.dateFormat == null ? Output.empty() : this.dateFormat;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AzureDatabricksDeltaLakeExportCommandArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="timestampFormat")
-      private final @Nullable Input<Object> timestampFormat;
+      private final @Nullable Output<Object> timestampFormat;
 
-    public Input<Object> getTimestampFormat() {
-        return this.timestampFormat == null ? Input.empty() : this.timestampFormat;
+    public Output<Object> getTimestampFormat() {
+        return this.timestampFormat == null ? Output.empty() : this.timestampFormat;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class AzureDatabricksDeltaLakeExportCommandArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public AzureDatabricksDeltaLakeExportCommandArgs(
-        @Nullable Input<Object> dateFormat,
-        @Nullable Input<Object> timestampFormat,
-        Input<String> type) {
+        @Nullable Output<Object> dateFormat,
+        @Nullable Output<Object> timestampFormat,
+        Output<String> type) {
         this.dateFormat = dateFormat;
         this.timestampFormat = timestampFormat;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private AzureDatabricksDeltaLakeExportCommandArgs() {
-        this.dateFormat = Input.empty();
-        this.timestampFormat = Input.empty();
-        this.type = Input.empty();
+        this.dateFormat = Output.empty();
+        this.timestampFormat = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class AzureDatabricksDeltaLakeExportCommandArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> dateFormat;
-        private @Nullable Input<Object> timestampFormat;
-        private Input<String> type;
+        private @Nullable Output<Object> dateFormat;
+        private @Nullable Output<Object> timestampFormat;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class AzureDatabricksDeltaLakeExportCommandArgs extends io.pulumi.r
     	      this.type = defaults.type;
         }
 
-        public Builder dateFormat(@Nullable Input<Object> dateFormat) {
+        public Builder dateFormat(@Nullable Output<Object> dateFormat) {
             this.dateFormat = dateFormat;
             return this;
         }
 
         public Builder dateFormat(@Nullable Object dateFormat) {
-            this.dateFormat = Input.ofNullable(dateFormat);
+            this.dateFormat = Output.ofNullable(dateFormat);
             return this;
         }
 
-        public Builder timestampFormat(@Nullable Input<Object> timestampFormat) {
+        public Builder timestampFormat(@Nullable Output<Object> timestampFormat) {
             this.timestampFormat = timestampFormat;
             return this;
         }
 
         public Builder timestampFormat(@Nullable Object timestampFormat) {
-            this.timestampFormat = Input.ofNullable(timestampFormat);
+            this.timestampFormat = Output.ofNullable(timestampFormat);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public AzureDatabricksDeltaLakeExportCommandArgs build() {

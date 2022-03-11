@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.awsnative.iotanalytics.inputs.ChannelCustomerManagedS3Args;
 import io.pulumi.awsnative.iotanalytics.inputs.ChannelServiceManagedS3Args;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,29 +16,29 @@ public final class ChannelStorageArgs extends io.pulumi.resources.ResourceArgs {
     public static final ChannelStorageArgs Empty = new ChannelStorageArgs();
 
     @InputImport(name="customerManagedS3")
-      private final @Nullable Input<ChannelCustomerManagedS3Args> customerManagedS3;
+      private final @Nullable Output<ChannelCustomerManagedS3Args> customerManagedS3;
 
-    public Input<ChannelCustomerManagedS3Args> getCustomerManagedS3() {
-        return this.customerManagedS3 == null ? Input.empty() : this.customerManagedS3;
+    public Output<ChannelCustomerManagedS3Args> getCustomerManagedS3() {
+        return this.customerManagedS3 == null ? Output.empty() : this.customerManagedS3;
     }
 
     @InputImport(name="serviceManagedS3")
-      private final @Nullable Input<ChannelServiceManagedS3Args> serviceManagedS3;
+      private final @Nullable Output<ChannelServiceManagedS3Args> serviceManagedS3;
 
-    public Input<ChannelServiceManagedS3Args> getServiceManagedS3() {
-        return this.serviceManagedS3 == null ? Input.empty() : this.serviceManagedS3;
+    public Output<ChannelServiceManagedS3Args> getServiceManagedS3() {
+        return this.serviceManagedS3 == null ? Output.empty() : this.serviceManagedS3;
     }
 
     public ChannelStorageArgs(
-        @Nullable Input<ChannelCustomerManagedS3Args> customerManagedS3,
-        @Nullable Input<ChannelServiceManagedS3Args> serviceManagedS3) {
+        @Nullable Output<ChannelCustomerManagedS3Args> customerManagedS3,
+        @Nullable Output<ChannelServiceManagedS3Args> serviceManagedS3) {
         this.customerManagedS3 = customerManagedS3;
         this.serviceManagedS3 = serviceManagedS3;
     }
 
     private ChannelStorageArgs() {
-        this.customerManagedS3 = Input.empty();
-        this.serviceManagedS3 = Input.empty();
+        this.customerManagedS3 = Output.empty();
+        this.serviceManagedS3 = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class ChannelStorageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ChannelCustomerManagedS3Args> customerManagedS3;
-        private @Nullable Input<ChannelServiceManagedS3Args> serviceManagedS3;
+        private @Nullable Output<ChannelCustomerManagedS3Args> customerManagedS3;
+        private @Nullable Output<ChannelServiceManagedS3Args> serviceManagedS3;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class ChannelStorageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serviceManagedS3 = defaults.serviceManagedS3;
         }
 
-        public Builder customerManagedS3(@Nullable Input<ChannelCustomerManagedS3Args> customerManagedS3) {
+        public Builder customerManagedS3(@Nullable Output<ChannelCustomerManagedS3Args> customerManagedS3) {
             this.customerManagedS3 = customerManagedS3;
             return this;
         }
 
         public Builder customerManagedS3(@Nullable ChannelCustomerManagedS3Args customerManagedS3) {
-            this.customerManagedS3 = Input.ofNullable(customerManagedS3);
+            this.customerManagedS3 = Output.ofNullable(customerManagedS3);
             return this;
         }
 
-        public Builder serviceManagedS3(@Nullable Input<ChannelServiceManagedS3Args> serviceManagedS3) {
+        public Builder serviceManagedS3(@Nullable Output<ChannelServiceManagedS3Args> serviceManagedS3) {
             this.serviceManagedS3 = serviceManagedS3;
             return this;
         }
 
         public Builder serviceManagedS3(@Nullable ChannelServiceManagedS3Args serviceManagedS3) {
-            this.serviceManagedS3 = Input.ofNullable(serviceManagedS3);
+            this.serviceManagedS3 = Output.ofNullable(serviceManagedS3);
             return this;
         }
         public ChannelStorageArgs build() {

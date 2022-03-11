@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.testing_v1.inputs.FileReferenceArgs;
 import java.lang.Boolean;
@@ -25,10 +25,10 @@ public final class IosXcTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="testSpecialEntitlements")
-      private final @Nullable Input<Boolean> testSpecialEntitlements;
+      private final @Nullable Output<Boolean> testSpecialEntitlements;
 
-    public Input<Boolean> getTestSpecialEntitlements() {
-        return this.testSpecialEntitlements == null ? Input.empty() : this.testSpecialEntitlements;
+    public Output<Boolean> getTestSpecialEntitlements() {
+        return this.testSpecialEntitlements == null ? Output.empty() : this.testSpecialEntitlements;
     }
 
     /**
@@ -36,9 +36,9 @@ public final class IosXcTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="testsZip", required=true)
-      private final Input<FileReferenceArgs> testsZip;
+      private final Output<FileReferenceArgs> testsZip;
 
-    public Input<FileReferenceArgs> getTestsZip() {
+    public Output<FileReferenceArgs> getTestsZip() {
         return this.testsZip;
     }
 
@@ -47,10 +47,10 @@ public final class IosXcTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="xcodeVersion")
-      private final @Nullable Input<String> xcodeVersion;
+      private final @Nullable Output<String> xcodeVersion;
 
-    public Input<String> getXcodeVersion() {
-        return this.xcodeVersion == null ? Input.empty() : this.xcodeVersion;
+    public Output<String> getXcodeVersion() {
+        return this.xcodeVersion == null ? Output.empty() : this.xcodeVersion;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class IosXcTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="xctestrun")
-      private final @Nullable Input<FileReferenceArgs> xctestrun;
+      private final @Nullable Output<FileReferenceArgs> xctestrun;
 
-    public Input<FileReferenceArgs> getXctestrun() {
-        return this.xctestrun == null ? Input.empty() : this.xctestrun;
+    public Output<FileReferenceArgs> getXctestrun() {
+        return this.xctestrun == null ? Output.empty() : this.xctestrun;
     }
 
     public IosXcTestArgs(
-        @Nullable Input<Boolean> testSpecialEntitlements,
-        Input<FileReferenceArgs> testsZip,
-        @Nullable Input<String> xcodeVersion,
-        @Nullable Input<FileReferenceArgs> xctestrun) {
+        @Nullable Output<Boolean> testSpecialEntitlements,
+        Output<FileReferenceArgs> testsZip,
+        @Nullable Output<String> xcodeVersion,
+        @Nullable Output<FileReferenceArgs> xctestrun) {
         this.testSpecialEntitlements = testSpecialEntitlements;
         this.testsZip = Objects.requireNonNull(testsZip, "expected parameter 'testsZip' to be non-null");
         this.xcodeVersion = xcodeVersion;
@@ -76,10 +76,10 @@ public final class IosXcTestArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IosXcTestArgs() {
-        this.testSpecialEntitlements = Input.empty();
-        this.testsZip = Input.empty();
-        this.xcodeVersion = Input.empty();
-        this.xctestrun = Input.empty();
+        this.testSpecialEntitlements = Output.empty();
+        this.testsZip = Output.empty();
+        this.xcodeVersion = Output.empty();
+        this.xctestrun = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class IosXcTestArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> testSpecialEntitlements;
-        private Input<FileReferenceArgs> testsZip;
-        private @Nullable Input<String> xcodeVersion;
-        private @Nullable Input<FileReferenceArgs> xctestrun;
+        private @Nullable Output<Boolean> testSpecialEntitlements;
+        private Output<FileReferenceArgs> testsZip;
+        private @Nullable Output<String> xcodeVersion;
+        private @Nullable Output<FileReferenceArgs> xctestrun;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class IosXcTestArgs extends io.pulumi.resources.ResourceArgs {
     	      this.xctestrun = defaults.xctestrun;
         }
 
-        public Builder testSpecialEntitlements(@Nullable Input<Boolean> testSpecialEntitlements) {
+        public Builder testSpecialEntitlements(@Nullable Output<Boolean> testSpecialEntitlements) {
             this.testSpecialEntitlements = testSpecialEntitlements;
             return this;
         }
 
         public Builder testSpecialEntitlements(@Nullable Boolean testSpecialEntitlements) {
-            this.testSpecialEntitlements = Input.ofNullable(testSpecialEntitlements);
+            this.testSpecialEntitlements = Output.ofNullable(testSpecialEntitlements);
             return this;
         }
 
-        public Builder testsZip(Input<FileReferenceArgs> testsZip) {
+        public Builder testsZip(Output<FileReferenceArgs> testsZip) {
             this.testsZip = Objects.requireNonNull(testsZip);
             return this;
         }
 
         public Builder testsZip(FileReferenceArgs testsZip) {
-            this.testsZip = Input.of(Objects.requireNonNull(testsZip));
+            this.testsZip = Output.of(Objects.requireNonNull(testsZip));
             return this;
         }
 
-        public Builder xcodeVersion(@Nullable Input<String> xcodeVersion) {
+        public Builder xcodeVersion(@Nullable Output<String> xcodeVersion) {
             this.xcodeVersion = xcodeVersion;
             return this;
         }
 
         public Builder xcodeVersion(@Nullable String xcodeVersion) {
-            this.xcodeVersion = Input.ofNullable(xcodeVersion);
+            this.xcodeVersion = Output.ofNullable(xcodeVersion);
             return this;
         }
 
-        public Builder xctestrun(@Nullable Input<FileReferenceArgs> xctestrun) {
+        public Builder xctestrun(@Nullable Output<FileReferenceArgs> xctestrun) {
             this.xctestrun = xctestrun;
             return this;
         }
 
         public Builder xctestrun(@Nullable FileReferenceArgs xctestrun) {
-            this.xctestrun = Input.ofNullable(xctestrun);
+            this.xctestrun = Output.ofNullable(xctestrun);
             return this;
         }
         public IosXcTestArgs build() {

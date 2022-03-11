@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquerydatatransfer_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ScheduleOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="disableAutoScheduling")
-      private final @Nullable Input<Boolean> disableAutoScheduling;
+      private final @Nullable Output<Boolean> disableAutoScheduling;
 
-    public Input<Boolean> getDisableAutoScheduling() {
-        return this.disableAutoScheduling == null ? Input.empty() : this.disableAutoScheduling;
+    public Output<Boolean> getDisableAutoScheduling() {
+        return this.disableAutoScheduling == null ? Output.empty() : this.disableAutoScheduling;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ScheduleOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="endTime")
-      private final @Nullable Input<String> endTime;
+      private final @Nullable Output<String> endTime;
 
-    public Input<String> getEndTime() {
-        return this.endTime == null ? Input.empty() : this.endTime;
+    public Output<String> getEndTime() {
+        return this.endTime == null ? Output.empty() : this.endTime;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class ScheduleOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="startTime")
-      private final @Nullable Input<String> startTime;
+      private final @Nullable Output<String> startTime;
 
-    public Input<String> getStartTime() {
-        return this.startTime == null ? Input.empty() : this.startTime;
+    public Output<String> getStartTime() {
+        return this.startTime == null ? Output.empty() : this.startTime;
     }
 
     public ScheduleOptionsArgs(
-        @Nullable Input<Boolean> disableAutoScheduling,
-        @Nullable Input<String> endTime,
-        @Nullable Input<String> startTime) {
+        @Nullable Output<Boolean> disableAutoScheduling,
+        @Nullable Output<String> endTime,
+        @Nullable Output<String> startTime) {
         this.disableAutoScheduling = disableAutoScheduling;
         this.endTime = endTime;
         this.startTime = startTime;
     }
 
     private ScheduleOptionsArgs() {
-        this.disableAutoScheduling = Input.empty();
-        this.endTime = Input.empty();
-        this.startTime = Input.empty();
+        this.disableAutoScheduling = Output.empty();
+        this.endTime = Output.empty();
+        this.startTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class ScheduleOptionsArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> disableAutoScheduling;
-        private @Nullable Input<String> endTime;
-        private @Nullable Input<String> startTime;
+        private @Nullable Output<Boolean> disableAutoScheduling;
+        private @Nullable Output<String> endTime;
+        private @Nullable Output<String> startTime;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class ScheduleOptionsArgs extends io.pulumi.resources.ResourceArgs 
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder disableAutoScheduling(@Nullable Input<Boolean> disableAutoScheduling) {
+        public Builder disableAutoScheduling(@Nullable Output<Boolean> disableAutoScheduling) {
             this.disableAutoScheduling = disableAutoScheduling;
             return this;
         }
 
         public Builder disableAutoScheduling(@Nullable Boolean disableAutoScheduling) {
-            this.disableAutoScheduling = Input.ofNullable(disableAutoScheduling);
+            this.disableAutoScheduling = Output.ofNullable(disableAutoScheduling);
             return this;
         }
 
-        public Builder endTime(@Nullable Input<String> endTime) {
+        public Builder endTime(@Nullable Output<String> endTime) {
             this.endTime = endTime;
             return this;
         }
 
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = Input.ofNullable(endTime);
+            this.endTime = Output.ofNullable(endTime);
             return this;
         }
 
-        public Builder startTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Input.ofNullable(startTime);
+            this.startTime = Output.ofNullable(startTime);
             return this;
         }
         public ScheduleOptionsArgs build() {

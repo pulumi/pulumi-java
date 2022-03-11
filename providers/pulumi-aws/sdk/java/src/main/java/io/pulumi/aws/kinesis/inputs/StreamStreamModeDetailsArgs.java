@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.kinesis.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class StreamStreamModeDetailsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="streamMode", required=true)
-      private final Input<String> streamMode;
+      private final Output<String> streamMode;
 
-    public Input<String> getStreamMode() {
+    public Output<String> getStreamMode() {
         return this.streamMode;
     }
 
-    public StreamStreamModeDetailsArgs(Input<String> streamMode) {
+    public StreamStreamModeDetailsArgs(Output<String> streamMode) {
         this.streamMode = Objects.requireNonNull(streamMode, "expected parameter 'streamMode' to be non-null");
     }
 
     private StreamStreamModeDetailsArgs() {
-        this.streamMode = Input.empty();
+        this.streamMode = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class StreamStreamModeDetailsArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<String> streamMode;
+        private Output<String> streamMode;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class StreamStreamModeDetailsArgs extends io.pulumi.resources.Resou
     	      this.streamMode = defaults.streamMode;
         }
 
-        public Builder streamMode(Input<String> streamMode) {
+        public Builder streamMode(Output<String> streamMode) {
             this.streamMode = Objects.requireNonNull(streamMode);
             return this;
         }
 
         public Builder streamMode(String streamMode) {
-            this.streamMode = Input.of(Objects.requireNonNull(streamMode));
+            this.streamMode = Output.of(Objects.requireNonNull(streamMode));
             return this;
         }
         public StreamStreamModeDetailsArgs build() {

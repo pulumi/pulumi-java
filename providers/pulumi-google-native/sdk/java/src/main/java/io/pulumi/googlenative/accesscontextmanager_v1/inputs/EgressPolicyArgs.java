@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.accesscontextmanager_v1.inputs.EgressFromArgs;
 import io.pulumi.googlenative.accesscontextmanager_v1.inputs.EgressToArgs;
@@ -24,10 +24,10 @@ public final class EgressPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="egressFrom")
-      private final @Nullable Input<EgressFromArgs> egressFrom;
+      private final @Nullable Output<EgressFromArgs> egressFrom;
 
-    public Input<EgressFromArgs> getEgressFrom() {
-        return this.egressFrom == null ? Input.empty() : this.egressFrom;
+    public Output<EgressFromArgs> getEgressFrom() {
+        return this.egressFrom == null ? Output.empty() : this.egressFrom;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class EgressPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="egressTo")
-      private final @Nullable Input<EgressToArgs> egressTo;
+      private final @Nullable Output<EgressToArgs> egressTo;
 
-    public Input<EgressToArgs> getEgressTo() {
-        return this.egressTo == null ? Input.empty() : this.egressTo;
+    public Output<EgressToArgs> getEgressTo() {
+        return this.egressTo == null ? Output.empty() : this.egressTo;
     }
 
     public EgressPolicyArgs(
-        @Nullable Input<EgressFromArgs> egressFrom,
-        @Nullable Input<EgressToArgs> egressTo) {
+        @Nullable Output<EgressFromArgs> egressFrom,
+        @Nullable Output<EgressToArgs> egressTo) {
         this.egressFrom = egressFrom;
         this.egressTo = egressTo;
     }
 
     private EgressPolicyArgs() {
-        this.egressFrom = Input.empty();
-        this.egressTo = Input.empty();
+        this.egressFrom = Output.empty();
+        this.egressTo = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class EgressPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<EgressFromArgs> egressFrom;
-        private @Nullable Input<EgressToArgs> egressTo;
+        private @Nullable Output<EgressFromArgs> egressFrom;
+        private @Nullable Output<EgressToArgs> egressTo;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class EgressPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.egressTo = defaults.egressTo;
         }
 
-        public Builder egressFrom(@Nullable Input<EgressFromArgs> egressFrom) {
+        public Builder egressFrom(@Nullable Output<EgressFromArgs> egressFrom) {
             this.egressFrom = egressFrom;
             return this;
         }
 
         public Builder egressFrom(@Nullable EgressFromArgs egressFrom) {
-            this.egressFrom = Input.ofNullable(egressFrom);
+            this.egressFrom = Output.ofNullable(egressFrom);
             return this;
         }
 
-        public Builder egressTo(@Nullable Input<EgressToArgs> egressTo) {
+        public Builder egressTo(@Nullable Output<EgressToArgs> egressTo) {
             this.egressTo = egressTo;
             return this;
         }
 
         public Builder egressTo(@Nullable EgressToArgs egressTo) {
-            this.egressTo = Input.ofNullable(egressTo);
+            this.egressTo = Output.ofNullable(egressTo);
             return this;
         }
         public EgressPolicyArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.enums.LoggingConfigurationLoggingFilterPropertiesDefaultBehavior;
 import io.pulumi.awsnative.wafv2.inputs.LoggingConfigurationFilterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class LoggingFilterPropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="defaultBehavior", required=true)
-      private final Input<LoggingConfigurationLoggingFilterPropertiesDefaultBehavior> defaultBehavior;
+      private final Output<LoggingConfigurationLoggingFilterPropertiesDefaultBehavior> defaultBehavior;
 
-    public Input<LoggingConfigurationLoggingFilterPropertiesDefaultBehavior> getDefaultBehavior() {
+    public Output<LoggingConfigurationLoggingFilterPropertiesDefaultBehavior> getDefaultBehavior() {
         return this.defaultBehavior;
     }
 
@@ -35,22 +35,22 @@ public final class LoggingFilterPropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="filters", required=true)
-      private final Input<List<LoggingConfigurationFilterArgs>> filters;
+      private final Output<List<LoggingConfigurationFilterArgs>> filters;
 
-    public Input<List<LoggingConfigurationFilterArgs>> getFilters() {
+    public Output<List<LoggingConfigurationFilterArgs>> getFilters() {
         return this.filters;
     }
 
     public LoggingFilterPropertiesArgs(
-        Input<LoggingConfigurationLoggingFilterPropertiesDefaultBehavior> defaultBehavior,
-        Input<List<LoggingConfigurationFilterArgs>> filters) {
+        Output<LoggingConfigurationLoggingFilterPropertiesDefaultBehavior> defaultBehavior,
+        Output<List<LoggingConfigurationFilterArgs>> filters) {
         this.defaultBehavior = Objects.requireNonNull(defaultBehavior, "expected parameter 'defaultBehavior' to be non-null");
         this.filters = Objects.requireNonNull(filters, "expected parameter 'filters' to be non-null");
     }
 
     private LoggingFilterPropertiesArgs() {
-        this.defaultBehavior = Input.empty();
-        this.filters = Input.empty();
+        this.defaultBehavior = Output.empty();
+        this.filters = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class LoggingFilterPropertiesArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<LoggingConfigurationLoggingFilterPropertiesDefaultBehavior> defaultBehavior;
-        private Input<List<LoggingConfigurationFilterArgs>> filters;
+        private Output<LoggingConfigurationLoggingFilterPropertiesDefaultBehavior> defaultBehavior;
+        private Output<List<LoggingConfigurationFilterArgs>> filters;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class LoggingFilterPropertiesArgs extends io.pulumi.resources.Resou
     	      this.filters = defaults.filters;
         }
 
-        public Builder defaultBehavior(Input<LoggingConfigurationLoggingFilterPropertiesDefaultBehavior> defaultBehavior) {
+        public Builder defaultBehavior(Output<LoggingConfigurationLoggingFilterPropertiesDefaultBehavior> defaultBehavior) {
             this.defaultBehavior = Objects.requireNonNull(defaultBehavior);
             return this;
         }
 
         public Builder defaultBehavior(LoggingConfigurationLoggingFilterPropertiesDefaultBehavior defaultBehavior) {
-            this.defaultBehavior = Input.of(Objects.requireNonNull(defaultBehavior));
+            this.defaultBehavior = Output.of(Objects.requireNonNull(defaultBehavior));
             return this;
         }
 
-        public Builder filters(Input<List<LoggingConfigurationFilterArgs>> filters) {
+        public Builder filters(Output<List<LoggingConfigurationFilterArgs>> filters) {
             this.filters = Objects.requireNonNull(filters);
             return this;
         }
 
         public Builder filters(List<LoggingConfigurationFilterArgs> filters) {
-            this.filters = Input.of(Objects.requireNonNull(filters));
+            this.filters = Output.of(Objects.requireNonNull(filters));
             return this;
         }
         public LoggingFilterPropertiesArgs build() {

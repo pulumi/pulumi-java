@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudwatch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class QueryDefinitionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="logGroupNames")
-      private final @Nullable Input<List<String>> logGroupNames;
+      private final @Nullable Output<List<String>> logGroupNames;
 
-    public Input<List<String>> getLogGroupNames() {
-        return this.logGroupNames == null ? Input.empty() : this.logGroupNames;
+    public Output<List<String>> getLogGroupNames() {
+        return this.logGroupNames == null ? Output.empty() : this.logGroupNames;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class QueryDefinitionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class QueryDefinitionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="queryDefinitionId")
-      private final @Nullable Input<String> queryDefinitionId;
+      private final @Nullable Output<String> queryDefinitionId;
 
-    public Input<String> getQueryDefinitionId() {
-        return this.queryDefinitionId == null ? Input.empty() : this.queryDefinitionId;
+    public Output<String> getQueryDefinitionId() {
+        return this.queryDefinitionId == null ? Output.empty() : this.queryDefinitionId;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class QueryDefinitionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="queryString")
-      private final @Nullable Input<String> queryString;
+      private final @Nullable Output<String> queryString;
 
-    public Input<String> getQueryString() {
-        return this.queryString == null ? Input.empty() : this.queryString;
+    public Output<String> getQueryString() {
+        return this.queryString == null ? Output.empty() : this.queryString;
     }
 
     public QueryDefinitionState(
-        @Nullable Input<List<String>> logGroupNames,
-        @Nullable Input<String> name,
-        @Nullable Input<String> queryDefinitionId,
-        @Nullable Input<String> queryString) {
+        @Nullable Output<List<String>> logGroupNames,
+        @Nullable Output<String> name,
+        @Nullable Output<String> queryDefinitionId,
+        @Nullable Output<String> queryString) {
         this.logGroupNames = logGroupNames;
         this.name = name;
         this.queryDefinitionId = queryDefinitionId;
@@ -71,10 +71,10 @@ public final class QueryDefinitionState extends io.pulumi.resources.ResourceArgs
     }
 
     private QueryDefinitionState() {
-        this.logGroupNames = Input.empty();
-        this.name = Input.empty();
-        this.queryDefinitionId = Input.empty();
-        this.queryString = Input.empty();
+        this.logGroupNames = Output.empty();
+        this.name = Output.empty();
+        this.queryDefinitionId = Output.empty();
+        this.queryString = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class QueryDefinitionState extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> logGroupNames;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> queryDefinitionId;
-        private @Nullable Input<String> queryString;
+        private @Nullable Output<List<String>> logGroupNames;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> queryDefinitionId;
+        private @Nullable Output<String> queryString;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class QueryDefinitionState extends io.pulumi.resources.ResourceArgs
     	      this.queryString = defaults.queryString;
         }
 
-        public Builder logGroupNames(@Nullable Input<List<String>> logGroupNames) {
+        public Builder logGroupNames(@Nullable Output<List<String>> logGroupNames) {
             this.logGroupNames = logGroupNames;
             return this;
         }
 
         public Builder logGroupNames(@Nullable List<String> logGroupNames) {
-            this.logGroupNames = Input.ofNullable(logGroupNames);
+            this.logGroupNames = Output.ofNullable(logGroupNames);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder queryDefinitionId(@Nullable Input<String> queryDefinitionId) {
+        public Builder queryDefinitionId(@Nullable Output<String> queryDefinitionId) {
             this.queryDefinitionId = queryDefinitionId;
             return this;
         }
 
         public Builder queryDefinitionId(@Nullable String queryDefinitionId) {
-            this.queryDefinitionId = Input.ofNullable(queryDefinitionId);
+            this.queryDefinitionId = Output.ofNullable(queryDefinitionId);
             return this;
         }
 
-        public Builder queryString(@Nullable Input<String> queryString) {
+        public Builder queryString(@Nullable Output<String> queryString) {
             this.queryString = queryString;
             return this;
         }
 
         public Builder queryString(@Nullable String queryString) {
-            this.queryString = Input.ofNullable(queryString);
+            this.queryString = Output.ofNullable(queryString);
             return this;
         }
         public QueryDefinitionState build() {

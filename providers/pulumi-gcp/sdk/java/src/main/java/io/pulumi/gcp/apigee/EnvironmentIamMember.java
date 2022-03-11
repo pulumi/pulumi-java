@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.apigee;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -161,14 +160,14 @@ public class EnvironmentIamMember extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EnvironmentIamMember(String name, EnvironmentIamMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:apigee/environmentIamMember:EnvironmentIamMember", name, args == null ? EnvironmentIamMemberArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:apigee/environmentIamMember:EnvironmentIamMember", name, args == null ? EnvironmentIamMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private EnvironmentIamMember(String name, Input<String> id, @Nullable EnvironmentIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private EnvironmentIamMember(String name, Output<String> id, @Nullable EnvironmentIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:apigee/environmentIamMember:EnvironmentIamMember", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -184,7 +183,7 @@ public class EnvironmentIamMember extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static EnvironmentIamMember get(String name, Input<String> id, @Nullable EnvironmentIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static EnvironmentIamMember get(String name, Output<String> id, @Nullable EnvironmentIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new EnvironmentIamMember(name, id, state, options);
     }
 }

@@ -6,7 +6,6 @@ package io.pulumi.aws.dynamodb;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.dynamodb.KinesisStreamingDestinationArgs;
 import io.pulumi.aws.dynamodb.inputs.KinesisStreamingDestinationState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -98,14 +97,14 @@ public class KinesisStreamingDestination extends io.pulumi.resources.CustomResou
      * @param options A bag of options that control this resource's behavior.
      */
     public KinesisStreamingDestination(String name, KinesisStreamingDestinationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:dynamodb/kinesisStreamingDestination:KinesisStreamingDestination", name, args == null ? KinesisStreamingDestinationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:dynamodb/kinesisStreamingDestination:KinesisStreamingDestination", name, args == null ? KinesisStreamingDestinationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private KinesisStreamingDestination(String name, Input<String> id, @Nullable KinesisStreamingDestinationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private KinesisStreamingDestination(String name, Output<String> id, @Nullable KinesisStreamingDestinationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:dynamodb/kinesisStreamingDestination:KinesisStreamingDestination", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -121,7 +120,7 @@ public class KinesisStreamingDestination extends io.pulumi.resources.CustomResou
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static KinesisStreamingDestination get(String name, Input<String> id, @Nullable KinesisStreamingDestinationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static KinesisStreamingDestination get(String name, Output<String> id, @Nullable KinesisStreamingDestinationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new KinesisStreamingDestination(name, id, state, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticloadbalancingv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class LoadBalancerAccessLogsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="bucket", required=true)
-      private final Input<String> bucket;
+      private final Output<String> bucket;
 
-    public Input<String> getBucket() {
+    public Output<String> getBucket() {
         return this.bucket;
     }
 
@@ -31,10 +31,10 @@ public final class LoadBalancerAccessLogsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class LoadBalancerAccessLogsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="prefix")
-      private final @Nullable Input<String> prefix;
+      private final @Nullable Output<String> prefix;
 
-    public Input<String> getPrefix() {
-        return this.prefix == null ? Input.empty() : this.prefix;
+    public Output<String> getPrefix() {
+        return this.prefix == null ? Output.empty() : this.prefix;
     }
 
     public LoadBalancerAccessLogsArgs(
-        Input<String> bucket,
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<String> prefix) {
+        Output<String> bucket,
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<String> prefix) {
         this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
         this.enabled = enabled;
         this.prefix = prefix;
     }
 
     private LoadBalancerAccessLogsArgs() {
-        this.bucket = Input.empty();
-        this.enabled = Input.empty();
-        this.prefix = Input.empty();
+        this.bucket = Output.empty();
+        this.enabled = Output.empty();
+        this.prefix = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class LoadBalancerAccessLogsArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> bucket;
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<String> prefix;
+        private Output<String> bucket;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<String> prefix;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class LoadBalancerAccessLogsArgs extends io.pulumi.resources.Resour
     	      this.prefix = defaults.prefix;
         }
 
-        public Builder bucket(Input<String> bucket) {
+        public Builder bucket(Output<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Input.of(Objects.requireNonNull(bucket));
+            this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder prefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Input.ofNullable(prefix);
+            this.prefix = Output.ofNullable(prefix);
             return this;
         }
         public LoadBalancerAccessLogsArgs build() {

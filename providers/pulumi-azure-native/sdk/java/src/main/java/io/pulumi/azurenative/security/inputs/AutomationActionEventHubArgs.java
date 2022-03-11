@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class AutomationActionEventHubArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="actionType", required=true)
-      private final Input<String> actionType;
+      private final Output<String> actionType;
 
-    public Input<String> getActionType() {
+    public Output<String> getActionType() {
         return this.actionType;
     }
 
@@ -35,10 +35,10 @@ public final class AutomationActionEventHubArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="connectionString")
-      private final @Nullable Input<String> connectionString;
+      private final @Nullable Output<String> connectionString;
 
-    public Input<String> getConnectionString() {
-        return this.connectionString == null ? Input.empty() : this.connectionString;
+    public Output<String> getConnectionString() {
+        return this.connectionString == null ? Output.empty() : this.connectionString;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class AutomationActionEventHubArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="eventHubResourceId")
-      private final @Nullable Input<String> eventHubResourceId;
+      private final @Nullable Output<String> eventHubResourceId;
 
-    public Input<String> getEventHubResourceId() {
-        return this.eventHubResourceId == null ? Input.empty() : this.eventHubResourceId;
+    public Output<String> getEventHubResourceId() {
+        return this.eventHubResourceId == null ? Output.empty() : this.eventHubResourceId;
     }
 
     public AutomationActionEventHubArgs(
-        Input<String> actionType,
-        @Nullable Input<String> connectionString,
-        @Nullable Input<String> eventHubResourceId) {
+        Output<String> actionType,
+        @Nullable Output<String> connectionString,
+        @Nullable Output<String> eventHubResourceId) {
         this.actionType = Objects.requireNonNull(actionType, "expected parameter 'actionType' to be non-null");
         this.connectionString = connectionString;
         this.eventHubResourceId = eventHubResourceId;
     }
 
     private AutomationActionEventHubArgs() {
-        this.actionType = Input.empty();
-        this.connectionString = Input.empty();
-        this.eventHubResourceId = Input.empty();
+        this.actionType = Output.empty();
+        this.connectionString = Output.empty();
+        this.eventHubResourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class AutomationActionEventHubArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> actionType;
-        private @Nullable Input<String> connectionString;
-        private @Nullable Input<String> eventHubResourceId;
+        private Output<String> actionType;
+        private @Nullable Output<String> connectionString;
+        private @Nullable Output<String> eventHubResourceId;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class AutomationActionEventHubArgs extends io.pulumi.resources.Reso
     	      this.eventHubResourceId = defaults.eventHubResourceId;
         }
 
-        public Builder actionType(Input<String> actionType) {
+        public Builder actionType(Output<String> actionType) {
             this.actionType = Objects.requireNonNull(actionType);
             return this;
         }
 
         public Builder actionType(String actionType) {
-            this.actionType = Input.of(Objects.requireNonNull(actionType));
+            this.actionType = Output.of(Objects.requireNonNull(actionType));
             return this;
         }
 
-        public Builder connectionString(@Nullable Input<String> connectionString) {
+        public Builder connectionString(@Nullable Output<String> connectionString) {
             this.connectionString = connectionString;
             return this;
         }
 
         public Builder connectionString(@Nullable String connectionString) {
-            this.connectionString = Input.ofNullable(connectionString);
+            this.connectionString = Output.ofNullable(connectionString);
             return this;
         }
 
-        public Builder eventHubResourceId(@Nullable Input<String> eventHubResourceId) {
+        public Builder eventHubResourceId(@Nullable Output<String> eventHubResourceId) {
             this.eventHubResourceId = eventHubResourceId;
             return this;
         }
 
         public Builder eventHubResourceId(@Nullable String eventHubResourceId) {
-            this.eventHubResourceId = Input.ofNullable(eventHubResourceId);
+            this.eventHubResourceId = Output.ofNullable(eventHubResourceId);
             return this;
         }
         public AutomationActionEventHubArgs build() {

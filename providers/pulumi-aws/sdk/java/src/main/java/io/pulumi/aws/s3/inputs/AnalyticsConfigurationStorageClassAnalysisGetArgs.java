@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.aws.s3.inputs.AnalyticsConfigurationStorageClassAnalysisDataExportGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class AnalyticsConfigurationStorageClassAnalysisGetArgs extends io.
      * 
      */
     @InputImport(name="dataExport", required=true)
-      private final Input<AnalyticsConfigurationStorageClassAnalysisDataExportGetArgs> dataExport;
+      private final Output<AnalyticsConfigurationStorageClassAnalysisDataExportGetArgs> dataExport;
 
-    public Input<AnalyticsConfigurationStorageClassAnalysisDataExportGetArgs> getDataExport() {
+    public Output<AnalyticsConfigurationStorageClassAnalysisDataExportGetArgs> getDataExport() {
         return this.dataExport;
     }
 
-    public AnalyticsConfigurationStorageClassAnalysisGetArgs(Input<AnalyticsConfigurationStorageClassAnalysisDataExportGetArgs> dataExport) {
+    public AnalyticsConfigurationStorageClassAnalysisGetArgs(Output<AnalyticsConfigurationStorageClassAnalysisDataExportGetArgs> dataExport) {
         this.dataExport = Objects.requireNonNull(dataExport, "expected parameter 'dataExport' to be non-null");
     }
 
     private AnalyticsConfigurationStorageClassAnalysisGetArgs() {
-        this.dataExport = Input.empty();
+        this.dataExport = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class AnalyticsConfigurationStorageClassAnalysisGetArgs extends io.
     }
 
     public static final class Builder {
-        private Input<AnalyticsConfigurationStorageClassAnalysisDataExportGetArgs> dataExport;
+        private Output<AnalyticsConfigurationStorageClassAnalysisDataExportGetArgs> dataExport;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class AnalyticsConfigurationStorageClassAnalysisGetArgs extends io.
     	      this.dataExport = defaults.dataExport;
         }
 
-        public Builder dataExport(Input<AnalyticsConfigurationStorageClassAnalysisDataExportGetArgs> dataExport) {
+        public Builder dataExport(Output<AnalyticsConfigurationStorageClassAnalysisDataExportGetArgs> dataExport) {
             this.dataExport = Objects.requireNonNull(dataExport);
             return this;
         }
 
         public Builder dataExport(AnalyticsConfigurationStorageClassAnalysisDataExportGetArgs dataExport) {
-            this.dataExport = Input.of(Objects.requireNonNull(dataExport));
+            this.dataExport = Output.of(Objects.requireNonNull(dataExport));
             return this;
         }
         public AnalyticsConfigurationStorageClassAnalysisGetArgs build() {

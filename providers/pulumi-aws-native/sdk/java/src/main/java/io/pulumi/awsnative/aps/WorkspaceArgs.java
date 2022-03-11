@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.aps;
 
 import io.pulumi.awsnative.aps.inputs.WorkspaceTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alertManagerDefinition")
-      private final @Nullable Input<String> alertManagerDefinition;
+      private final @Nullable Output<String> alertManagerDefinition;
 
-    public Input<String> getAlertManagerDefinition() {
-        return this.alertManagerDefinition == null ? Input.empty() : this.alertManagerDefinition;
+    public Output<String> getAlertManagerDefinition() {
+        return this.alertManagerDefinition == null ? Output.empty() : this.alertManagerDefinition;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alias")
-      private final @Nullable Input<String> alias;
+      private final @Nullable Output<String> alias;
 
-    public Input<String> getAlias() {
-        return this.alias == null ? Input.empty() : this.alias;
+    public Output<String> getAlias() {
+        return this.alias == null ? Output.empty() : this.alias;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<WorkspaceTagArgs>> tags;
+      private final @Nullable Output<List<WorkspaceTagArgs>> tags;
 
-    public Input<List<WorkspaceTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<WorkspaceTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public WorkspaceArgs(
-        @Nullable Input<String> alertManagerDefinition,
-        @Nullable Input<String> alias,
-        @Nullable Input<List<WorkspaceTagArgs>> tags) {
+        @Nullable Output<String> alertManagerDefinition,
+        @Nullable Output<String> alias,
+        @Nullable Output<List<WorkspaceTagArgs>> tags) {
         this.alertManagerDefinition = alertManagerDefinition;
         this.alias = alias;
         this.tags = tags;
     }
 
     private WorkspaceArgs() {
-        this.alertManagerDefinition = Input.empty();
-        this.alias = Input.empty();
-        this.tags = Input.empty();
+        this.alertManagerDefinition = Output.empty();
+        this.alias = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> alertManagerDefinition;
-        private @Nullable Input<String> alias;
-        private @Nullable Input<List<WorkspaceTagArgs>> tags;
+        private @Nullable Output<String> alertManagerDefinition;
+        private @Nullable Output<String> alias;
+        private @Nullable Output<List<WorkspaceTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder alertManagerDefinition(@Nullable Input<String> alertManagerDefinition) {
+        public Builder alertManagerDefinition(@Nullable Output<String> alertManagerDefinition) {
             this.alertManagerDefinition = alertManagerDefinition;
             return this;
         }
 
         public Builder alertManagerDefinition(@Nullable String alertManagerDefinition) {
-            this.alertManagerDefinition = Input.ofNullable(alertManagerDefinition);
+            this.alertManagerDefinition = Output.ofNullable(alertManagerDefinition);
             return this;
         }
 
-        public Builder alias(@Nullable Input<String> alias) {
+        public Builder alias(@Nullable Output<String> alias) {
             this.alias = alias;
             return this;
         }
 
         public Builder alias(@Nullable String alias) {
-            this.alias = Input.ofNullable(alias);
+            this.alias = Output.ofNullable(alias);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<WorkspaceTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<WorkspaceTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<WorkspaceTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public WorkspaceArgs build() {

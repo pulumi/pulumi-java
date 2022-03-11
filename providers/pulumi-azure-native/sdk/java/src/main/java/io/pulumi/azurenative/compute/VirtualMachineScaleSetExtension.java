@@ -6,7 +6,6 @@ package io.pulumi.azurenative.compute;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.compute.VirtualMachineScaleSetExtensionArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -223,31 +222,31 @@ public class VirtualMachineScaleSetExtension extends io.pulumi.resources.CustomR
      * @param options A bag of options that control this resource's behavior.
      */
     public VirtualMachineScaleSetExtension(String name, VirtualMachineScaleSetExtensionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:compute:VirtualMachineScaleSetExtension", name, args == null ? VirtualMachineScaleSetExtensionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:compute:VirtualMachineScaleSetExtension", name, args == null ? VirtualMachineScaleSetExtensionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private VirtualMachineScaleSetExtension(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private VirtualMachineScaleSetExtension(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:compute:VirtualMachineScaleSetExtension", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:compute/v20170330:VirtualMachineScaleSetExtension").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20171201:VirtualMachineScaleSetExtension").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20180401:VirtualMachineScaleSetExtension").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20180601:VirtualMachineScaleSetExtension").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20181001:VirtualMachineScaleSetExtension").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20190301:VirtualMachineScaleSetExtension").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20190701:VirtualMachineScaleSetExtension").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20191201:VirtualMachineScaleSetExtension").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20200601:VirtualMachineScaleSetExtension").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20201201:VirtualMachineScaleSetExtension").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20210301:VirtualMachineScaleSetExtension").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20210401:VirtualMachineScaleSetExtension").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20210701:VirtualMachineScaleSetExtension").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20211101:VirtualMachineScaleSetExtension").build())
+                Output.of(Alias.builder().setType("azure-native:compute/v20170330:VirtualMachineScaleSetExtension").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20171201:VirtualMachineScaleSetExtension").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20180401:VirtualMachineScaleSetExtension").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20180601:VirtualMachineScaleSetExtension").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20181001:VirtualMachineScaleSetExtension").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20190301:VirtualMachineScaleSetExtension").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20190701:VirtualMachineScaleSetExtension").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20191201:VirtualMachineScaleSetExtension").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20200601:VirtualMachineScaleSetExtension").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20201201:VirtualMachineScaleSetExtension").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20210301:VirtualMachineScaleSetExtension").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20210401:VirtualMachineScaleSetExtension").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20210701:VirtualMachineScaleSetExtension").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20211101:VirtualMachineScaleSetExtension").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -261,7 +260,7 @@ public class VirtualMachineScaleSetExtension extends io.pulumi.resources.CustomR
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static VirtualMachineScaleSetExtension get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static VirtualMachineScaleSetExtension get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new VirtualMachineScaleSetExtension(name, id, options);
     }
 }

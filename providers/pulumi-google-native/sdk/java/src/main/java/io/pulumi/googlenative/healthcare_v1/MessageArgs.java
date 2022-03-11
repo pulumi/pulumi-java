@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.healthcare_v1.inputs.PatientIdArgs;
 import io.pulumi.googlenative.healthcare_v1.inputs.SchematizedDataArgs;
@@ -23,23 +23,23 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="data")
-      private final @Nullable Input<String> data;
+      private final @Nullable Output<String> data;
 
-    public Input<String> getData() {
-        return this.data == null ? Input.empty() : this.data;
+    public Output<String> getData() {
+        return this.data == null ? Output.empty() : this.data;
     }
 
     @InputImport(name="datasetId", required=true)
-      private final Input<String> datasetId;
+      private final Output<String> datasetId;
 
-    public Input<String> getDatasetId() {
+    public Output<String> getDatasetId() {
         return this.datasetId;
     }
 
     @InputImport(name="hl7V2StoreId", required=true)
-      private final Input<String> hl7V2StoreId;
+      private final Output<String> hl7V2StoreId;
 
-    public Input<String> getHl7V2StoreId() {
+    public Output<String> getHl7V2StoreId() {
         return this.hl7V2StoreId;
     }
 
@@ -48,17 +48,17 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="messageType")
-      private final @Nullable Input<String> messageType;
+      private final @Nullable Output<String> messageType;
 
-    public Input<String> getMessageType() {
-        return this.messageType == null ? Input.empty() : this.messageType;
+    public Output<String> getMessageType() {
+        return this.messageType == null ? Output.empty() : this.messageType;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -88,17 +88,17 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="patientIds")
-      private final @Nullable Input<List<PatientIdArgs>> patientIds;
+      private final @Nullable Output<List<PatientIdArgs>> patientIds;
 
-    public Input<List<PatientIdArgs>> getPatientIds() {
-        return this.patientIds == null ? Input.empty() : this.patientIds;
+    public Output<List<PatientIdArgs>> getPatientIds() {
+        return this.patientIds == null ? Output.empty() : this.patientIds;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -106,10 +106,10 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schematizedData")
-      private final @Nullable Input<SchematizedDataArgs> schematizedData;
+      private final @Nullable Output<SchematizedDataArgs> schematizedData;
 
-    public Input<SchematizedDataArgs> getSchematizedData() {
-        return this.schematizedData == null ? Input.empty() : this.schematizedData;
+    public Output<SchematizedDataArgs> getSchematizedData() {
+        return this.schematizedData == null ? Output.empty() : this.schematizedData;
     }
 
     /**
@@ -117,10 +117,10 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sendFacility")
-      private final @Nullable Input<String> sendFacility;
+      private final @Nullable Output<String> sendFacility;
 
-    public Input<String> getSendFacility() {
-        return this.sendFacility == null ? Input.empty() : this.sendFacility;
+    public Output<String> getSendFacility() {
+        return this.sendFacility == null ? Output.empty() : this.sendFacility;
     }
 
     /**
@@ -128,25 +128,25 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sendTime")
-      private final @Nullable Input<String> sendTime;
+      private final @Nullable Output<String> sendTime;
 
-    public Input<String> getSendTime() {
-        return this.sendTime == null ? Input.empty() : this.sendTime;
+    public Output<String> getSendTime() {
+        return this.sendTime == null ? Output.empty() : this.sendTime;
     }
 
     public MessageArgs(
-        @Nullable Input<String> data,
-        Input<String> datasetId,
-        Input<String> hl7V2StoreId,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> location,
-        @Nullable Input<String> messageType,
-        @Nullable Input<String> name,
-        @Nullable Input<List<PatientIdArgs>> patientIds,
-        @Nullable Input<String> project,
-        @Nullable Input<SchematizedDataArgs> schematizedData,
-        @Nullable Input<String> sendFacility,
-        @Nullable Input<String> sendTime) {
+        @Nullable Output<String> data,
+        Output<String> datasetId,
+        Output<String> hl7V2StoreId,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> location,
+        @Nullable Output<String> messageType,
+        @Nullable Output<String> name,
+        @Nullable Output<List<PatientIdArgs>> patientIds,
+        @Nullable Output<String> project,
+        @Nullable Output<SchematizedDataArgs> schematizedData,
+        @Nullable Output<String> sendFacility,
+        @Nullable Output<String> sendTime) {
         this.data = data;
         this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
         this.hl7V2StoreId = Objects.requireNonNull(hl7V2StoreId, "expected parameter 'hl7V2StoreId' to be non-null");
@@ -162,18 +162,18 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MessageArgs() {
-        this.data = Input.empty();
-        this.datasetId = Input.empty();
-        this.hl7V2StoreId = Input.empty();
-        this.labels = Input.empty();
-        this.location = Input.empty();
-        this.messageType = Input.empty();
-        this.name = Input.empty();
-        this.patientIds = Input.empty();
-        this.project = Input.empty();
-        this.schematizedData = Input.empty();
-        this.sendFacility = Input.empty();
-        this.sendTime = Input.empty();
+        this.data = Output.empty();
+        this.datasetId = Output.empty();
+        this.hl7V2StoreId = Output.empty();
+        this.labels = Output.empty();
+        this.location = Output.empty();
+        this.messageType = Output.empty();
+        this.name = Output.empty();
+        this.patientIds = Output.empty();
+        this.project = Output.empty();
+        this.schematizedData = Output.empty();
+        this.sendFacility = Output.empty();
+        this.sendTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -185,18 +185,18 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> data;
-        private Input<String> datasetId;
-        private Input<String> hl7V2StoreId;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> messageType;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<PatientIdArgs>> patientIds;
-        private @Nullable Input<String> project;
-        private @Nullable Input<SchematizedDataArgs> schematizedData;
-        private @Nullable Input<String> sendFacility;
-        private @Nullable Input<String> sendTime;
+        private @Nullable Output<String> data;
+        private Output<String> datasetId;
+        private Output<String> hl7V2StoreId;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> messageType;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<PatientIdArgs>> patientIds;
+        private @Nullable Output<String> project;
+        private @Nullable Output<SchematizedDataArgs> schematizedData;
+        private @Nullable Output<String> sendFacility;
+        private @Nullable Output<String> sendTime;
 
         public Builder() {
     	      // Empty
@@ -218,123 +218,123 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sendTime = defaults.sendTime;
         }
 
-        public Builder data(@Nullable Input<String> data) {
+        public Builder data(@Nullable Output<String> data) {
             this.data = data;
             return this;
         }
 
         public Builder data(@Nullable String data) {
-            this.data = Input.ofNullable(data);
+            this.data = Output.ofNullable(data);
             return this;
         }
 
-        public Builder datasetId(Input<String> datasetId) {
+        public Builder datasetId(Output<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
         public Builder datasetId(String datasetId) {
-            this.datasetId = Input.of(Objects.requireNonNull(datasetId));
+            this.datasetId = Output.of(Objects.requireNonNull(datasetId));
             return this;
         }
 
-        public Builder hl7V2StoreId(Input<String> hl7V2StoreId) {
+        public Builder hl7V2StoreId(Output<String> hl7V2StoreId) {
             this.hl7V2StoreId = Objects.requireNonNull(hl7V2StoreId);
             return this;
         }
 
         public Builder hl7V2StoreId(String hl7V2StoreId) {
-            this.hl7V2StoreId = Input.of(Objects.requireNonNull(hl7V2StoreId));
+            this.hl7V2StoreId = Output.of(Objects.requireNonNull(hl7V2StoreId));
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder messageType(@Nullable Input<String> messageType) {
+        public Builder messageType(@Nullable Output<String> messageType) {
             this.messageType = messageType;
             return this;
         }
 
         public Builder messageType(@Nullable String messageType) {
-            this.messageType = Input.ofNullable(messageType);
+            this.messageType = Output.ofNullable(messageType);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder patientIds(@Nullable Input<List<PatientIdArgs>> patientIds) {
+        public Builder patientIds(@Nullable Output<List<PatientIdArgs>> patientIds) {
             this.patientIds = patientIds;
             return this;
         }
 
         public Builder patientIds(@Nullable List<PatientIdArgs> patientIds) {
-            this.patientIds = Input.ofNullable(patientIds);
+            this.patientIds = Output.ofNullable(patientIds);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder schematizedData(@Nullable Input<SchematizedDataArgs> schematizedData) {
+        public Builder schematizedData(@Nullable Output<SchematizedDataArgs> schematizedData) {
             this.schematizedData = schematizedData;
             return this;
         }
 
         public Builder schematizedData(@Nullable SchematizedDataArgs schematizedData) {
-            this.schematizedData = Input.ofNullable(schematizedData);
+            this.schematizedData = Output.ofNullable(schematizedData);
             return this;
         }
 
-        public Builder sendFacility(@Nullable Input<String> sendFacility) {
+        public Builder sendFacility(@Nullable Output<String> sendFacility) {
             this.sendFacility = sendFacility;
             return this;
         }
 
         public Builder sendFacility(@Nullable String sendFacility) {
-            this.sendFacility = Input.ofNullable(sendFacility);
+            this.sendFacility = Output.ofNullable(sendFacility);
             return this;
         }
 
-        public Builder sendTime(@Nullable Input<String> sendTime) {
+        public Builder sendTime(@Nullable Output<String> sendTime) {
             this.sendTime = sendTime;
             return this;
         }
 
         public Builder sendTime(@Nullable String sendTime) {
-            this.sendTime = Input.ofNullable(sendTime);
+            this.sendTime = Output.ofNullable(sendTime);
             return this;
         }
         public MessageArgs build() {

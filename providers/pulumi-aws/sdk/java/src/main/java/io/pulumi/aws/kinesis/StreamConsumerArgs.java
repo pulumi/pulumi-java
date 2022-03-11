@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.kinesis;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class StreamConsumerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class StreamConsumerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="streamArn", required=true)
-      private final Input<String> streamArn;
+      private final Output<String> streamArn;
 
-    public Input<String> getStreamArn() {
+    public Output<String> getStreamArn() {
         return this.streamArn;
     }
 
     public StreamConsumerArgs(
-        @Nullable Input<String> name,
-        Input<String> streamArn) {
+        @Nullable Output<String> name,
+        Output<String> streamArn) {
         this.name = name;
         this.streamArn = Objects.requireNonNull(streamArn, "expected parameter 'streamArn' to be non-null");
     }
 
     private StreamConsumerArgs() {
-        this.name = Input.empty();
-        this.streamArn = Input.empty();
+        this.name = Output.empty();
+        this.streamArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class StreamConsumerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private Input<String> streamArn;
+        private @Nullable Output<String> name;
+        private Output<String> streamArn;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class StreamConsumerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.streamArn = defaults.streamArn;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder streamArn(Input<String> streamArn) {
+        public Builder streamArn(Output<String> streamArn) {
             this.streamArn = Objects.requireNonNull(streamArn);
             return this;
         }
 
         public Builder streamArn(String streamArn) {
-            this.streamArn = Input.of(Objects.requireNonNull(streamArn));
+            this.streamArn = Output.of(Objects.requireNonNull(streamArn));
             return this;
         }
         public StreamConsumerArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2transitgateway.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class RouteTableAssociationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceId")
-      private final @Nullable Input<String> resourceId;
+      private final @Nullable Output<String> resourceId;
 
-    public Input<String> getResourceId() {
-        return this.resourceId == null ? Input.empty() : this.resourceId;
+    public Output<String> getResourceId() {
+        return this.resourceId == null ? Output.empty() : this.resourceId;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class RouteTableAssociationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceType")
-      private final @Nullable Input<String> resourceType;
+      private final @Nullable Output<String> resourceType;
 
-    public Input<String> getPropResourceType() {
-        return this.resourceType == null ? Input.empty() : this.resourceType;
+    public Output<String> getPropResourceType() {
+        return this.resourceType == null ? Output.empty() : this.resourceType;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class RouteTableAssociationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="transitGatewayAttachmentId")
-      private final @Nullable Input<String> transitGatewayAttachmentId;
+      private final @Nullable Output<String> transitGatewayAttachmentId;
 
-    public Input<String> getTransitGatewayAttachmentId() {
-        return this.transitGatewayAttachmentId == null ? Input.empty() : this.transitGatewayAttachmentId;
+    public Output<String> getTransitGatewayAttachmentId() {
+        return this.transitGatewayAttachmentId == null ? Output.empty() : this.transitGatewayAttachmentId;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class RouteTableAssociationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="transitGatewayRouteTableId")
-      private final @Nullable Input<String> transitGatewayRouteTableId;
+      private final @Nullable Output<String> transitGatewayRouteTableId;
 
-    public Input<String> getTransitGatewayRouteTableId() {
-        return this.transitGatewayRouteTableId == null ? Input.empty() : this.transitGatewayRouteTableId;
+    public Output<String> getTransitGatewayRouteTableId() {
+        return this.transitGatewayRouteTableId == null ? Output.empty() : this.transitGatewayRouteTableId;
     }
 
     public RouteTableAssociationState(
-        @Nullable Input<String> resourceId,
-        @Nullable Input<String> resourceType,
-        @Nullable Input<String> transitGatewayAttachmentId,
-        @Nullable Input<String> transitGatewayRouteTableId) {
+        @Nullable Output<String> resourceId,
+        @Nullable Output<String> resourceType,
+        @Nullable Output<String> transitGatewayAttachmentId,
+        @Nullable Output<String> transitGatewayRouteTableId) {
         this.resourceId = resourceId;
         this.resourceType = resourceType;
         this.transitGatewayAttachmentId = transitGatewayAttachmentId;
@@ -70,10 +70,10 @@ public final class RouteTableAssociationState extends io.pulumi.resources.Resour
     }
 
     private RouteTableAssociationState() {
-        this.resourceId = Input.empty();
-        this.resourceType = Input.empty();
-        this.transitGatewayAttachmentId = Input.empty();
-        this.transitGatewayRouteTableId = Input.empty();
+        this.resourceId = Output.empty();
+        this.resourceType = Output.empty();
+        this.transitGatewayAttachmentId = Output.empty();
+        this.transitGatewayRouteTableId = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class RouteTableAssociationState extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> resourceId;
-        private @Nullable Input<String> resourceType;
-        private @Nullable Input<String> transitGatewayAttachmentId;
-        private @Nullable Input<String> transitGatewayRouteTableId;
+        private @Nullable Output<String> resourceId;
+        private @Nullable Output<String> resourceType;
+        private @Nullable Output<String> transitGatewayAttachmentId;
+        private @Nullable Output<String> transitGatewayRouteTableId;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class RouteTableAssociationState extends io.pulumi.resources.Resour
     	      this.transitGatewayRouteTableId = defaults.transitGatewayRouteTableId;
         }
 
-        public Builder resourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Input.ofNullable(resourceId);
+            this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
 
-        public Builder resourceType(@Nullable Input<String> resourceType) {
+        public Builder resourceType(@Nullable Output<String> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
         public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Input.ofNullable(resourceType);
+            this.resourceType = Output.ofNullable(resourceType);
             return this;
         }
 
-        public Builder transitGatewayAttachmentId(@Nullable Input<String> transitGatewayAttachmentId) {
+        public Builder transitGatewayAttachmentId(@Nullable Output<String> transitGatewayAttachmentId) {
             this.transitGatewayAttachmentId = transitGatewayAttachmentId;
             return this;
         }
 
         public Builder transitGatewayAttachmentId(@Nullable String transitGatewayAttachmentId) {
-            this.transitGatewayAttachmentId = Input.ofNullable(transitGatewayAttachmentId);
+            this.transitGatewayAttachmentId = Output.ofNullable(transitGatewayAttachmentId);
             return this;
         }
 
-        public Builder transitGatewayRouteTableId(@Nullable Input<String> transitGatewayRouteTableId) {
+        public Builder transitGatewayRouteTableId(@Nullable Output<String> transitGatewayRouteTableId) {
             this.transitGatewayRouteTableId = transitGatewayRouteTableId;
             return this;
         }
 
         public Builder transitGatewayRouteTableId(@Nullable String transitGatewayRouteTableId) {
-            this.transitGatewayRouteTableId = Input.ofNullable(transitGatewayRouteTableId);
+            this.transitGatewayRouteTableId = Output.ofNullable(transitGatewayRouteTableId);
             return this;
         }
         public RouteTableAssociationState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class X12ProcessingSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="convertImpliedDecimal", required=true)
-      private final Input<Boolean> convertImpliedDecimal;
+      private final Output<Boolean> convertImpliedDecimal;
 
-    public Input<Boolean> getConvertImpliedDecimal() {
+    public Output<Boolean> getConvertImpliedDecimal() {
         return this.convertImpliedDecimal;
     }
 
@@ -33,9 +33,9 @@ public final class X12ProcessingSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="createEmptyXmlTagsForTrailingSeparators", required=true)
-      private final Input<Boolean> createEmptyXmlTagsForTrailingSeparators;
+      private final Output<Boolean> createEmptyXmlTagsForTrailingSeparators;
 
-    public Input<Boolean> getCreateEmptyXmlTagsForTrailingSeparators() {
+    public Output<Boolean> getCreateEmptyXmlTagsForTrailingSeparators() {
         return this.createEmptyXmlTagsForTrailingSeparators;
     }
 
@@ -44,9 +44,9 @@ public final class X12ProcessingSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="maskSecurityInfo", required=true)
-      private final Input<Boolean> maskSecurityInfo;
+      private final Output<Boolean> maskSecurityInfo;
 
-    public Input<Boolean> getMaskSecurityInfo() {
+    public Output<Boolean> getMaskSecurityInfo() {
         return this.maskSecurityInfo;
     }
 
@@ -55,9 +55,9 @@ public final class X12ProcessingSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="preserveInterchange", required=true)
-      private final Input<Boolean> preserveInterchange;
+      private final Output<Boolean> preserveInterchange;
 
-    public Input<Boolean> getPreserveInterchange() {
+    public Output<Boolean> getPreserveInterchange() {
         return this.preserveInterchange;
     }
 
@@ -66,9 +66,9 @@ public final class X12ProcessingSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="suspendInterchangeOnError", required=true)
-      private final Input<Boolean> suspendInterchangeOnError;
+      private final Output<Boolean> suspendInterchangeOnError;
 
-    public Input<Boolean> getSuspendInterchangeOnError() {
+    public Output<Boolean> getSuspendInterchangeOnError() {
         return this.suspendInterchangeOnError;
     }
 
@@ -77,19 +77,19 @@ public final class X12ProcessingSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="useDotAsDecimalSeparator", required=true)
-      private final Input<Boolean> useDotAsDecimalSeparator;
+      private final Output<Boolean> useDotAsDecimalSeparator;
 
-    public Input<Boolean> getUseDotAsDecimalSeparator() {
+    public Output<Boolean> getUseDotAsDecimalSeparator() {
         return this.useDotAsDecimalSeparator;
     }
 
     public X12ProcessingSettingsArgs(
-        Input<Boolean> convertImpliedDecimal,
-        Input<Boolean> createEmptyXmlTagsForTrailingSeparators,
-        Input<Boolean> maskSecurityInfo,
-        Input<Boolean> preserveInterchange,
-        Input<Boolean> suspendInterchangeOnError,
-        Input<Boolean> useDotAsDecimalSeparator) {
+        Output<Boolean> convertImpliedDecimal,
+        Output<Boolean> createEmptyXmlTagsForTrailingSeparators,
+        Output<Boolean> maskSecurityInfo,
+        Output<Boolean> preserveInterchange,
+        Output<Boolean> suspendInterchangeOnError,
+        Output<Boolean> useDotAsDecimalSeparator) {
         this.convertImpliedDecimal = Objects.requireNonNull(convertImpliedDecimal, "expected parameter 'convertImpliedDecimal' to be non-null");
         this.createEmptyXmlTagsForTrailingSeparators = Objects.requireNonNull(createEmptyXmlTagsForTrailingSeparators, "expected parameter 'createEmptyXmlTagsForTrailingSeparators' to be non-null");
         this.maskSecurityInfo = Objects.requireNonNull(maskSecurityInfo, "expected parameter 'maskSecurityInfo' to be non-null");
@@ -99,12 +99,12 @@ public final class X12ProcessingSettingsArgs extends io.pulumi.resources.Resourc
     }
 
     private X12ProcessingSettingsArgs() {
-        this.convertImpliedDecimal = Input.empty();
-        this.createEmptyXmlTagsForTrailingSeparators = Input.empty();
-        this.maskSecurityInfo = Input.empty();
-        this.preserveInterchange = Input.empty();
-        this.suspendInterchangeOnError = Input.empty();
-        this.useDotAsDecimalSeparator = Input.empty();
+        this.convertImpliedDecimal = Output.empty();
+        this.createEmptyXmlTagsForTrailingSeparators = Output.empty();
+        this.maskSecurityInfo = Output.empty();
+        this.preserveInterchange = Output.empty();
+        this.suspendInterchangeOnError = Output.empty();
+        this.useDotAsDecimalSeparator = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class X12ProcessingSettingsArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<Boolean> convertImpliedDecimal;
-        private Input<Boolean> createEmptyXmlTagsForTrailingSeparators;
-        private Input<Boolean> maskSecurityInfo;
-        private Input<Boolean> preserveInterchange;
-        private Input<Boolean> suspendInterchangeOnError;
-        private Input<Boolean> useDotAsDecimalSeparator;
+        private Output<Boolean> convertImpliedDecimal;
+        private Output<Boolean> createEmptyXmlTagsForTrailingSeparators;
+        private Output<Boolean> maskSecurityInfo;
+        private Output<Boolean> preserveInterchange;
+        private Output<Boolean> suspendInterchangeOnError;
+        private Output<Boolean> useDotAsDecimalSeparator;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class X12ProcessingSettingsArgs extends io.pulumi.resources.Resourc
     	      this.useDotAsDecimalSeparator = defaults.useDotAsDecimalSeparator;
         }
 
-        public Builder convertImpliedDecimal(Input<Boolean> convertImpliedDecimal) {
+        public Builder convertImpliedDecimal(Output<Boolean> convertImpliedDecimal) {
             this.convertImpliedDecimal = Objects.requireNonNull(convertImpliedDecimal);
             return this;
         }
 
         public Builder convertImpliedDecimal(Boolean convertImpliedDecimal) {
-            this.convertImpliedDecimal = Input.of(Objects.requireNonNull(convertImpliedDecimal));
+            this.convertImpliedDecimal = Output.of(Objects.requireNonNull(convertImpliedDecimal));
             return this;
         }
 
-        public Builder createEmptyXmlTagsForTrailingSeparators(Input<Boolean> createEmptyXmlTagsForTrailingSeparators) {
+        public Builder createEmptyXmlTagsForTrailingSeparators(Output<Boolean> createEmptyXmlTagsForTrailingSeparators) {
             this.createEmptyXmlTagsForTrailingSeparators = Objects.requireNonNull(createEmptyXmlTagsForTrailingSeparators);
             return this;
         }
 
         public Builder createEmptyXmlTagsForTrailingSeparators(Boolean createEmptyXmlTagsForTrailingSeparators) {
-            this.createEmptyXmlTagsForTrailingSeparators = Input.of(Objects.requireNonNull(createEmptyXmlTagsForTrailingSeparators));
+            this.createEmptyXmlTagsForTrailingSeparators = Output.of(Objects.requireNonNull(createEmptyXmlTagsForTrailingSeparators));
             return this;
         }
 
-        public Builder maskSecurityInfo(Input<Boolean> maskSecurityInfo) {
+        public Builder maskSecurityInfo(Output<Boolean> maskSecurityInfo) {
             this.maskSecurityInfo = Objects.requireNonNull(maskSecurityInfo);
             return this;
         }
 
         public Builder maskSecurityInfo(Boolean maskSecurityInfo) {
-            this.maskSecurityInfo = Input.of(Objects.requireNonNull(maskSecurityInfo));
+            this.maskSecurityInfo = Output.of(Objects.requireNonNull(maskSecurityInfo));
             return this;
         }
 
-        public Builder preserveInterchange(Input<Boolean> preserveInterchange) {
+        public Builder preserveInterchange(Output<Boolean> preserveInterchange) {
             this.preserveInterchange = Objects.requireNonNull(preserveInterchange);
             return this;
         }
 
         public Builder preserveInterchange(Boolean preserveInterchange) {
-            this.preserveInterchange = Input.of(Objects.requireNonNull(preserveInterchange));
+            this.preserveInterchange = Output.of(Objects.requireNonNull(preserveInterchange));
             return this;
         }
 
-        public Builder suspendInterchangeOnError(Input<Boolean> suspendInterchangeOnError) {
+        public Builder suspendInterchangeOnError(Output<Boolean> suspendInterchangeOnError) {
             this.suspendInterchangeOnError = Objects.requireNonNull(suspendInterchangeOnError);
             return this;
         }
 
         public Builder suspendInterchangeOnError(Boolean suspendInterchangeOnError) {
-            this.suspendInterchangeOnError = Input.of(Objects.requireNonNull(suspendInterchangeOnError));
+            this.suspendInterchangeOnError = Output.of(Objects.requireNonNull(suspendInterchangeOnError));
             return this;
         }
 
-        public Builder useDotAsDecimalSeparator(Input<Boolean> useDotAsDecimalSeparator) {
+        public Builder useDotAsDecimalSeparator(Output<Boolean> useDotAsDecimalSeparator) {
             this.useDotAsDecimalSeparator = Objects.requireNonNull(useDotAsDecimalSeparator);
             return this;
         }
 
         public Builder useDotAsDecimalSeparator(Boolean useDotAsDecimalSeparator) {
-            this.useDotAsDecimalSeparator = Input.of(Objects.requireNonNull(useDotAsDecimalSeparator));
+            this.useDotAsDecimalSeparator = Output.of(Objects.requireNonNull(useDotAsDecimalSeparator));
             return this;
         }
         public X12ProcessingSettingsArgs build() {

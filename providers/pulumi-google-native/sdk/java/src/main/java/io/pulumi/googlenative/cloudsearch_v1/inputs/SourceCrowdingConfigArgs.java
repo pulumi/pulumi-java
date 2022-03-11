@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class SourceCrowdingConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="numResults")
-      private final @Nullable Input<Integer> numResults;
+      private final @Nullable Output<Integer> numResults;
 
-    public Input<Integer> getNumResults() {
-        return this.numResults == null ? Input.empty() : this.numResults;
+    public Output<Integer> getNumResults() {
+        return this.numResults == null ? Output.empty() : this.numResults;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class SourceCrowdingConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="numSuggestions")
-      private final @Nullable Input<Integer> numSuggestions;
+      private final @Nullable Output<Integer> numSuggestions;
 
-    public Input<Integer> getNumSuggestions() {
-        return this.numSuggestions == null ? Input.empty() : this.numSuggestions;
+    public Output<Integer> getNumSuggestions() {
+        return this.numSuggestions == null ? Output.empty() : this.numSuggestions;
     }
 
     public SourceCrowdingConfigArgs(
-        @Nullable Input<Integer> numResults,
-        @Nullable Input<Integer> numSuggestions) {
+        @Nullable Output<Integer> numResults,
+        @Nullable Output<Integer> numSuggestions) {
         this.numResults = numResults;
         this.numSuggestions = numSuggestions;
     }
 
     private SourceCrowdingConfigArgs() {
-        this.numResults = Input.empty();
-        this.numSuggestions = Input.empty();
+        this.numResults = Output.empty();
+        this.numSuggestions = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class SourceCrowdingConfigArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> numResults;
-        private @Nullable Input<Integer> numSuggestions;
+        private @Nullable Output<Integer> numResults;
+        private @Nullable Output<Integer> numSuggestions;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class SourceCrowdingConfigArgs extends io.pulumi.resources.Resource
     	      this.numSuggestions = defaults.numSuggestions;
         }
 
-        public Builder numResults(@Nullable Input<Integer> numResults) {
+        public Builder numResults(@Nullable Output<Integer> numResults) {
             this.numResults = numResults;
             return this;
         }
 
         public Builder numResults(@Nullable Integer numResults) {
-            this.numResults = Input.ofNullable(numResults);
+            this.numResults = Output.ofNullable(numResults);
             return this;
         }
 
-        public Builder numSuggestions(@Nullable Input<Integer> numSuggestions) {
+        public Builder numSuggestions(@Nullable Output<Integer> numSuggestions) {
             this.numSuggestions = numSuggestions;
             return this;
         }
 
         public Builder numSuggestions(@Nullable Integer numSuggestions) {
-            this.numSuggestions = Input.ofNullable(numSuggestions);
+            this.numSuggestions = Output.ofNullable(numSuggestions);
             return this;
         }
         public SourceCrowdingConfigArgs build() {

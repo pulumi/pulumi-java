@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.awsnative.databrew.inputs.JobStatisticOverrideArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,29 +17,29 @@ public final class JobStatisticsConfigurationArgs extends io.pulumi.resources.Re
     public static final JobStatisticsConfigurationArgs Empty = new JobStatisticsConfigurationArgs();
 
     @InputImport(name="includedStatistics")
-      private final @Nullable Input<List<String>> includedStatistics;
+      private final @Nullable Output<List<String>> includedStatistics;
 
-    public Input<List<String>> getIncludedStatistics() {
-        return this.includedStatistics == null ? Input.empty() : this.includedStatistics;
+    public Output<List<String>> getIncludedStatistics() {
+        return this.includedStatistics == null ? Output.empty() : this.includedStatistics;
     }
 
     @InputImport(name="overrides")
-      private final @Nullable Input<List<JobStatisticOverrideArgs>> overrides;
+      private final @Nullable Output<List<JobStatisticOverrideArgs>> overrides;
 
-    public Input<List<JobStatisticOverrideArgs>> getOverrides() {
-        return this.overrides == null ? Input.empty() : this.overrides;
+    public Output<List<JobStatisticOverrideArgs>> getOverrides() {
+        return this.overrides == null ? Output.empty() : this.overrides;
     }
 
     public JobStatisticsConfigurationArgs(
-        @Nullable Input<List<String>> includedStatistics,
-        @Nullable Input<List<JobStatisticOverrideArgs>> overrides) {
+        @Nullable Output<List<String>> includedStatistics,
+        @Nullable Output<List<JobStatisticOverrideArgs>> overrides) {
         this.includedStatistics = includedStatistics;
         this.overrides = overrides;
     }
 
     private JobStatisticsConfigurationArgs() {
-        this.includedStatistics = Input.empty();
-        this.overrides = Input.empty();
+        this.includedStatistics = Output.empty();
+        this.overrides = Output.empty();
     }
 
     public static Builder builder() {
@@ -51,8 +51,8 @@ public final class JobStatisticsConfigurationArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> includedStatistics;
-        private @Nullable Input<List<JobStatisticOverrideArgs>> overrides;
+        private @Nullable Output<List<String>> includedStatistics;
+        private @Nullable Output<List<JobStatisticOverrideArgs>> overrides;
 
         public Builder() {
     	      // Empty
@@ -64,23 +64,23 @@ public final class JobStatisticsConfigurationArgs extends io.pulumi.resources.Re
     	      this.overrides = defaults.overrides;
         }
 
-        public Builder includedStatistics(@Nullable Input<List<String>> includedStatistics) {
+        public Builder includedStatistics(@Nullable Output<List<String>> includedStatistics) {
             this.includedStatistics = includedStatistics;
             return this;
         }
 
         public Builder includedStatistics(@Nullable List<String> includedStatistics) {
-            this.includedStatistics = Input.ofNullable(includedStatistics);
+            this.includedStatistics = Output.ofNullable(includedStatistics);
             return this;
         }
 
-        public Builder overrides(@Nullable Input<List<JobStatisticOverrideArgs>> overrides) {
+        public Builder overrides(@Nullable Output<List<JobStatisticOverrideArgs>> overrides) {
             this.overrides = overrides;
             return this;
         }
 
         public Builder overrides(@Nullable List<JobStatisticOverrideArgs> overrides) {
-            this.overrides = Input.ofNullable(overrides);
+            this.overrides = Output.ofNullable(overrides);
             return this;
         }
         public JobStatisticsConfigurationArgs build() {

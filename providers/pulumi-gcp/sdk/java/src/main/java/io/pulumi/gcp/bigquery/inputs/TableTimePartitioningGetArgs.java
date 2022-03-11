@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -22,10 +22,10 @@ public final class TableTimePartitioningGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="expirationMs")
-      private final @Nullable Input<Integer> expirationMs;
+      private final @Nullable Output<Integer> expirationMs;
 
-    public Input<Integer> getExpirationMs() {
-        return this.expirationMs == null ? Input.empty() : this.expirationMs;
+    public Output<Integer> getExpirationMs() {
+        return this.expirationMs == null ? Output.empty() : this.expirationMs;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class TableTimePartitioningGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="field")
-      private final @Nullable Input<String> field;
+      private final @Nullable Output<String> field;
 
-    public Input<String> getField() {
-        return this.field == null ? Input.empty() : this.field;
+    public Output<String> getField() {
+        return this.field == null ? Output.empty() : this.field;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class TableTimePartitioningGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="requirePartitionFilter")
-      private final @Nullable Input<Boolean> requirePartitionFilter;
+      private final @Nullable Output<Boolean> requirePartitionFilter;
 
-    public Input<Boolean> getRequirePartitionFilter() {
-        return this.requirePartitionFilter == null ? Input.empty() : this.requirePartitionFilter;
+    public Output<Boolean> getRequirePartitionFilter() {
+        return this.requirePartitionFilter == null ? Output.empty() : this.requirePartitionFilter;
     }
 
     /**
@@ -59,17 +59,17 @@ public final class TableTimePartitioningGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public TableTimePartitioningGetArgs(
-        @Nullable Input<Integer> expirationMs,
-        @Nullable Input<String> field,
-        @Nullable Input<Boolean> requirePartitionFilter,
-        Input<String> type) {
+        @Nullable Output<Integer> expirationMs,
+        @Nullable Output<String> field,
+        @Nullable Output<Boolean> requirePartitionFilter,
+        Output<String> type) {
         this.expirationMs = expirationMs;
         this.field = field;
         this.requirePartitionFilter = requirePartitionFilter;
@@ -77,10 +77,10 @@ public final class TableTimePartitioningGetArgs extends io.pulumi.resources.Reso
     }
 
     private TableTimePartitioningGetArgs() {
-        this.expirationMs = Input.empty();
-        this.field = Input.empty();
-        this.requirePartitionFilter = Input.empty();
-        this.type = Input.empty();
+        this.expirationMs = Output.empty();
+        this.field = Output.empty();
+        this.requirePartitionFilter = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class TableTimePartitioningGetArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> expirationMs;
-        private @Nullable Input<String> field;
-        private @Nullable Input<Boolean> requirePartitionFilter;
-        private Input<String> type;
+        private @Nullable Output<Integer> expirationMs;
+        private @Nullable Output<String> field;
+        private @Nullable Output<Boolean> requirePartitionFilter;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class TableTimePartitioningGetArgs extends io.pulumi.resources.Reso
     	      this.type = defaults.type;
         }
 
-        public Builder expirationMs(@Nullable Input<Integer> expirationMs) {
+        public Builder expirationMs(@Nullable Output<Integer> expirationMs) {
             this.expirationMs = expirationMs;
             return this;
         }
 
         public Builder expirationMs(@Nullable Integer expirationMs) {
-            this.expirationMs = Input.ofNullable(expirationMs);
+            this.expirationMs = Output.ofNullable(expirationMs);
             return this;
         }
 
-        public Builder field(@Nullable Input<String> field) {
+        public Builder field(@Nullable Output<String> field) {
             this.field = field;
             return this;
         }
 
         public Builder field(@Nullable String field) {
-            this.field = Input.ofNullable(field);
+            this.field = Output.ofNullable(field);
             return this;
         }
 
-        public Builder requirePartitionFilter(@Nullable Input<Boolean> requirePartitionFilter) {
+        public Builder requirePartitionFilter(@Nullable Output<Boolean> requirePartitionFilter) {
             this.requirePartitionFilter = requirePartitionFilter;
             return this;
         }
 
         public Builder requirePartitionFilter(@Nullable Boolean requirePartitionFilter) {
-            this.requirePartitionFilter = Input.ofNullable(requirePartitionFilter);
+            this.requirePartitionFilter = Output.ofNullable(requirePartitionFilter);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public TableTimePartitioningGetArgs build() {

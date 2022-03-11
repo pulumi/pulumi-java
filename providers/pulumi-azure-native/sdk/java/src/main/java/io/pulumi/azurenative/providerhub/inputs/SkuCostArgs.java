@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,39 +16,39 @@ public final class SkuCostArgs extends io.pulumi.resources.ResourceArgs {
     public static final SkuCostArgs Empty = new SkuCostArgs();
 
     @InputImport(name="extendedUnit")
-      private final @Nullable Input<String> extendedUnit;
+      private final @Nullable Output<String> extendedUnit;
 
-    public Input<String> getExtendedUnit() {
-        return this.extendedUnit == null ? Input.empty() : this.extendedUnit;
+    public Output<String> getExtendedUnit() {
+        return this.extendedUnit == null ? Output.empty() : this.extendedUnit;
     }
 
     @InputImport(name="meterId", required=true)
-      private final Input<String> meterId;
+      private final Output<String> meterId;
 
-    public Input<String> getMeterId() {
+    public Output<String> getMeterId() {
         return this.meterId;
     }
 
     @InputImport(name="quantity")
-      private final @Nullable Input<Integer> quantity;
+      private final @Nullable Output<Integer> quantity;
 
-    public Input<Integer> getQuantity() {
-        return this.quantity == null ? Input.empty() : this.quantity;
+    public Output<Integer> getQuantity() {
+        return this.quantity == null ? Output.empty() : this.quantity;
     }
 
     public SkuCostArgs(
-        @Nullable Input<String> extendedUnit,
-        Input<String> meterId,
-        @Nullable Input<Integer> quantity) {
+        @Nullable Output<String> extendedUnit,
+        Output<String> meterId,
+        @Nullable Output<Integer> quantity) {
         this.extendedUnit = extendedUnit;
         this.meterId = Objects.requireNonNull(meterId, "expected parameter 'meterId' to be non-null");
         this.quantity = quantity;
     }
 
     private SkuCostArgs() {
-        this.extendedUnit = Input.empty();
-        this.meterId = Input.empty();
-        this.quantity = Input.empty();
+        this.extendedUnit = Output.empty();
+        this.meterId = Output.empty();
+        this.quantity = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,9 +60,9 @@ public final class SkuCostArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> extendedUnit;
-        private Input<String> meterId;
-        private @Nullable Input<Integer> quantity;
+        private @Nullable Output<String> extendedUnit;
+        private Output<String> meterId;
+        private @Nullable Output<Integer> quantity;
 
         public Builder() {
     	      // Empty
@@ -75,33 +75,33 @@ public final class SkuCostArgs extends io.pulumi.resources.ResourceArgs {
     	      this.quantity = defaults.quantity;
         }
 
-        public Builder extendedUnit(@Nullable Input<String> extendedUnit) {
+        public Builder extendedUnit(@Nullable Output<String> extendedUnit) {
             this.extendedUnit = extendedUnit;
             return this;
         }
 
         public Builder extendedUnit(@Nullable String extendedUnit) {
-            this.extendedUnit = Input.ofNullable(extendedUnit);
+            this.extendedUnit = Output.ofNullable(extendedUnit);
             return this;
         }
 
-        public Builder meterId(Input<String> meterId) {
+        public Builder meterId(Output<String> meterId) {
             this.meterId = Objects.requireNonNull(meterId);
             return this;
         }
 
         public Builder meterId(String meterId) {
-            this.meterId = Input.of(Objects.requireNonNull(meterId));
+            this.meterId = Output.of(Objects.requireNonNull(meterId));
             return this;
         }
 
-        public Builder quantity(@Nullable Input<Integer> quantity) {
+        public Builder quantity(@Nullable Output<Integer> quantity) {
             this.quantity = quantity;
             return this;
         }
 
         public Builder quantity(@Nullable Integer quantity) {
-            this.quantity = Input.ofNullable(quantity);
+            this.quantity = Output.ofNullable(quantity);
             return this;
         }
         public SkuCostArgs build() {

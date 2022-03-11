@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudwatch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class EventConnectionAuthParametersOauthClientParametersArgs extend
      * 
      */
     @InputImport(name="clientId", required=true)
-      private final Input<String> clientId;
+      private final Output<String> clientId;
 
-    public Input<String> getClientId() {
+    public Output<String> getClientId() {
         return this.clientId;
     }
 
@@ -29,22 +29,22 @@ public final class EventConnectionAuthParametersOauthClientParametersArgs extend
      * 
      */
     @InputImport(name="clientSecret", required=true)
-      private final Input<String> clientSecret;
+      private final Output<String> clientSecret;
 
-    public Input<String> getClientSecret() {
+    public Output<String> getClientSecret() {
         return this.clientSecret;
     }
 
     public EventConnectionAuthParametersOauthClientParametersArgs(
-        Input<String> clientId,
-        Input<String> clientSecret) {
+        Output<String> clientId,
+        Output<String> clientSecret) {
         this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
         this.clientSecret = Objects.requireNonNull(clientSecret, "expected parameter 'clientSecret' to be non-null");
     }
 
     private EventConnectionAuthParametersOauthClientParametersArgs() {
-        this.clientId = Input.empty();
-        this.clientSecret = Input.empty();
+        this.clientId = Output.empty();
+        this.clientSecret = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class EventConnectionAuthParametersOauthClientParametersArgs extend
     }
 
     public static final class Builder {
-        private Input<String> clientId;
-        private Input<String> clientSecret;
+        private Output<String> clientId;
+        private Output<String> clientSecret;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class EventConnectionAuthParametersOauthClientParametersArgs extend
     	      this.clientSecret = defaults.clientSecret;
         }
 
-        public Builder clientId(Input<String> clientId) {
+        public Builder clientId(Output<String> clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Input.of(Objects.requireNonNull(clientId));
+            this.clientId = Output.of(Objects.requireNonNull(clientId));
             return this;
         }
 
-        public Builder clientSecret(Input<String> clientSecret) {
+        public Builder clientSecret(Output<String> clientSecret) {
             this.clientSecret = Objects.requireNonNull(clientSecret);
             return this;
         }
 
         public Builder clientSecret(String clientSecret) {
-            this.clientSecret = Input.of(Objects.requireNonNull(clientSecret));
+            this.clientSecret = Output.of(Objects.requireNonNull(clientSecret));
             return this;
         }
         public EventConnectionAuthParametersOauthClientParametersArgs build() {

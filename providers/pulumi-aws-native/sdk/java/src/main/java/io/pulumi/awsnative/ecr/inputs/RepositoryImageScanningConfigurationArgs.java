@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ecr.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class RepositoryImageScanningConfigurationArgs extends io.pulumi.re
     public static final RepositoryImageScanningConfigurationArgs Empty = new RepositoryImageScanningConfigurationArgs();
 
     @InputImport(name="scanOnPush")
-      private final @Nullable Input<Boolean> scanOnPush;
+      private final @Nullable Output<Boolean> scanOnPush;
 
-    public Input<Boolean> getScanOnPush() {
-        return this.scanOnPush == null ? Input.empty() : this.scanOnPush;
+    public Output<Boolean> getScanOnPush() {
+        return this.scanOnPush == null ? Output.empty() : this.scanOnPush;
     }
 
-    public RepositoryImageScanningConfigurationArgs(@Nullable Input<Boolean> scanOnPush) {
+    public RepositoryImageScanningConfigurationArgs(@Nullable Output<Boolean> scanOnPush) {
         this.scanOnPush = scanOnPush;
     }
 
     private RepositoryImageScanningConfigurationArgs() {
-        this.scanOnPush = Input.empty();
+        this.scanOnPush = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class RepositoryImageScanningConfigurationArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> scanOnPush;
+        private @Nullable Output<Boolean> scanOnPush;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class RepositoryImageScanningConfigurationArgs extends io.pulumi.re
     	      this.scanOnPush = defaults.scanOnPush;
         }
 
-        public Builder scanOnPush(@Nullable Input<Boolean> scanOnPush) {
+        public Builder scanOnPush(@Nullable Output<Boolean> scanOnPush) {
             this.scanOnPush = scanOnPush;
             return this;
         }
 
         public Builder scanOnPush(@Nullable Boolean scanOnPush) {
-            this.scanOnPush = Input.ofNullable(scanOnPush);
+            this.scanOnPush = Output.ofNullable(scanOnPush);
             return this;
         }
         public RepositoryImageScanningConfigurationArgs build() {

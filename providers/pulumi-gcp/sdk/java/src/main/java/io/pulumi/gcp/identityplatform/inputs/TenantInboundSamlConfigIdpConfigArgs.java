@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.identityplatform.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.identityplatform.inputs.TenantInboundSamlConfigIdpConfigIdpCertificateArgs;
 import java.lang.Boolean;
@@ -23,9 +23,9 @@ public final class TenantInboundSamlConfigIdpConfigArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="idpCertificates", required=true)
-      private final Input<List<TenantInboundSamlConfigIdpConfigIdpCertificateArgs>> idpCertificates;
+      private final Output<List<TenantInboundSamlConfigIdpConfigIdpCertificateArgs>> idpCertificates;
 
-    public Input<List<TenantInboundSamlConfigIdpConfigIdpCertificateArgs>> getIdpCertificates() {
+    public Output<List<TenantInboundSamlConfigIdpConfigIdpCertificateArgs>> getIdpCertificates() {
         return this.idpCertificates;
     }
 
@@ -34,9 +34,9 @@ public final class TenantInboundSamlConfigIdpConfigArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="idpEntityId", required=true)
-      private final Input<String> idpEntityId;
+      private final Output<String> idpEntityId;
 
-    public Input<String> getIdpEntityId() {
+    public Output<String> getIdpEntityId() {
         return this.idpEntityId;
     }
 
@@ -45,10 +45,10 @@ public final class TenantInboundSamlConfigIdpConfigArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="signRequest")
-      private final @Nullable Input<Boolean> signRequest;
+      private final @Nullable Output<Boolean> signRequest;
 
-    public Input<Boolean> getSignRequest() {
-        return this.signRequest == null ? Input.empty() : this.signRequest;
+    public Output<Boolean> getSignRequest() {
+        return this.signRequest == null ? Output.empty() : this.signRequest;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class TenantInboundSamlConfigIdpConfigArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="ssoUrl", required=true)
-      private final Input<String> ssoUrl;
+      private final Output<String> ssoUrl;
 
-    public Input<String> getSsoUrl() {
+    public Output<String> getSsoUrl() {
         return this.ssoUrl;
     }
 
     public TenantInboundSamlConfigIdpConfigArgs(
-        Input<List<TenantInboundSamlConfigIdpConfigIdpCertificateArgs>> idpCertificates,
-        Input<String> idpEntityId,
-        @Nullable Input<Boolean> signRequest,
-        Input<String> ssoUrl) {
+        Output<List<TenantInboundSamlConfigIdpConfigIdpCertificateArgs>> idpCertificates,
+        Output<String> idpEntityId,
+        @Nullable Output<Boolean> signRequest,
+        Output<String> ssoUrl) {
         this.idpCertificates = Objects.requireNonNull(idpCertificates, "expected parameter 'idpCertificates' to be non-null");
         this.idpEntityId = Objects.requireNonNull(idpEntityId, "expected parameter 'idpEntityId' to be non-null");
         this.signRequest = signRequest;
@@ -74,10 +74,10 @@ public final class TenantInboundSamlConfigIdpConfigArgs extends io.pulumi.resour
     }
 
     private TenantInboundSamlConfigIdpConfigArgs() {
-        this.idpCertificates = Input.empty();
-        this.idpEntityId = Input.empty();
-        this.signRequest = Input.empty();
-        this.ssoUrl = Input.empty();
+        this.idpCertificates = Output.empty();
+        this.idpEntityId = Output.empty();
+        this.signRequest = Output.empty();
+        this.ssoUrl = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class TenantInboundSamlConfigIdpConfigArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private Input<List<TenantInboundSamlConfigIdpConfigIdpCertificateArgs>> idpCertificates;
-        private Input<String> idpEntityId;
-        private @Nullable Input<Boolean> signRequest;
-        private Input<String> ssoUrl;
+        private Output<List<TenantInboundSamlConfigIdpConfigIdpCertificateArgs>> idpCertificates;
+        private Output<String> idpEntityId;
+        private @Nullable Output<Boolean> signRequest;
+        private Output<String> ssoUrl;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class TenantInboundSamlConfigIdpConfigArgs extends io.pulumi.resour
     	      this.ssoUrl = defaults.ssoUrl;
         }
 
-        public Builder idpCertificates(Input<List<TenantInboundSamlConfigIdpConfigIdpCertificateArgs>> idpCertificates) {
+        public Builder idpCertificates(Output<List<TenantInboundSamlConfigIdpConfigIdpCertificateArgs>> idpCertificates) {
             this.idpCertificates = Objects.requireNonNull(idpCertificates);
             return this;
         }
 
         public Builder idpCertificates(List<TenantInboundSamlConfigIdpConfigIdpCertificateArgs> idpCertificates) {
-            this.idpCertificates = Input.of(Objects.requireNonNull(idpCertificates));
+            this.idpCertificates = Output.of(Objects.requireNonNull(idpCertificates));
             return this;
         }
 
-        public Builder idpEntityId(Input<String> idpEntityId) {
+        public Builder idpEntityId(Output<String> idpEntityId) {
             this.idpEntityId = Objects.requireNonNull(idpEntityId);
             return this;
         }
 
         public Builder idpEntityId(String idpEntityId) {
-            this.idpEntityId = Input.of(Objects.requireNonNull(idpEntityId));
+            this.idpEntityId = Output.of(Objects.requireNonNull(idpEntityId));
             return this;
         }
 
-        public Builder signRequest(@Nullable Input<Boolean> signRequest) {
+        public Builder signRequest(@Nullable Output<Boolean> signRequest) {
             this.signRequest = signRequest;
             return this;
         }
 
         public Builder signRequest(@Nullable Boolean signRequest) {
-            this.signRequest = Input.ofNullable(signRequest);
+            this.signRequest = Output.ofNullable(signRequest);
             return this;
         }
 
-        public Builder ssoUrl(Input<String> ssoUrl) {
+        public Builder ssoUrl(Output<String> ssoUrl) {
             this.ssoUrl = Objects.requireNonNull(ssoUrl);
             return this;
         }
 
         public Builder ssoUrl(String ssoUrl) {
-            this.ssoUrl = Input.of(Objects.requireNonNull(ssoUrl));
+            this.ssoUrl = Output.of(Objects.requireNonNull(ssoUrl));
             return this;
         }
         public TenantInboundSamlConfigIdpConfigArgs build() {

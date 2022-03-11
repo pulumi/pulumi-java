@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.enums.DiskAccountType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,9 +25,9 @@ public final class VMwareCbtDiskInputArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="diskId", required=true)
-      private final Input<String> diskId;
+      private final Output<String> diskId;
 
-    public Input<String> getDiskId() {
+    public Output<String> getDiskId() {
         return this.diskId;
     }
 
@@ -36,10 +36,10 @@ public final class VMwareCbtDiskInputArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="diskType")
-      private final @Nullable Input<Either<String,DiskAccountType>> diskType;
+      private final @Nullable Output<Either<String,DiskAccountType>> diskType;
 
-    public Input<Either<String,DiskAccountType>> getDiskType() {
-        return this.diskType == null ? Input.empty() : this.diskType;
+    public Output<Either<String,DiskAccountType>> getDiskType() {
+        return this.diskType == null ? Output.empty() : this.diskType;
     }
 
     /**
@@ -47,9 +47,9 @@ public final class VMwareCbtDiskInputArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="isOSDisk", required=true)
-      private final Input<String> isOSDisk;
+      private final Output<String> isOSDisk;
 
-    public Input<String> getIsOSDisk() {
+    public Output<String> getIsOSDisk() {
         return this.isOSDisk;
     }
 
@@ -58,9 +58,9 @@ public final class VMwareCbtDiskInputArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="logStorageAccountId", required=true)
-      private final Input<String> logStorageAccountId;
+      private final Output<String> logStorageAccountId;
 
-    public Input<String> getLogStorageAccountId() {
+    public Output<String> getLogStorageAccountId() {
         return this.logStorageAccountId;
     }
 
@@ -69,18 +69,18 @@ public final class VMwareCbtDiskInputArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="logStorageAccountSasSecretName", required=true)
-      private final Input<String> logStorageAccountSasSecretName;
+      private final Output<String> logStorageAccountSasSecretName;
 
-    public Input<String> getLogStorageAccountSasSecretName() {
+    public Output<String> getLogStorageAccountSasSecretName() {
         return this.logStorageAccountSasSecretName;
     }
 
     public VMwareCbtDiskInputArgs(
-        Input<String> diskId,
-        @Nullable Input<Either<String,DiskAccountType>> diskType,
-        Input<String> isOSDisk,
-        Input<String> logStorageAccountId,
-        Input<String> logStorageAccountSasSecretName) {
+        Output<String> diskId,
+        @Nullable Output<Either<String,DiskAccountType>> diskType,
+        Output<String> isOSDisk,
+        Output<String> logStorageAccountId,
+        Output<String> logStorageAccountSasSecretName) {
         this.diskId = Objects.requireNonNull(diskId, "expected parameter 'diskId' to be non-null");
         this.diskType = diskType;
         this.isOSDisk = Objects.requireNonNull(isOSDisk, "expected parameter 'isOSDisk' to be non-null");
@@ -89,11 +89,11 @@ public final class VMwareCbtDiskInputArgs extends io.pulumi.resources.ResourceAr
     }
 
     private VMwareCbtDiskInputArgs() {
-        this.diskId = Input.empty();
-        this.diskType = Input.empty();
-        this.isOSDisk = Input.empty();
-        this.logStorageAccountId = Input.empty();
-        this.logStorageAccountSasSecretName = Input.empty();
+        this.diskId = Output.empty();
+        this.diskType = Output.empty();
+        this.isOSDisk = Output.empty();
+        this.logStorageAccountId = Output.empty();
+        this.logStorageAccountSasSecretName = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class VMwareCbtDiskInputArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> diskId;
-        private @Nullable Input<Either<String,DiskAccountType>> diskType;
-        private Input<String> isOSDisk;
-        private Input<String> logStorageAccountId;
-        private Input<String> logStorageAccountSasSecretName;
+        private Output<String> diskId;
+        private @Nullable Output<Either<String,DiskAccountType>> diskType;
+        private Output<String> isOSDisk;
+        private Output<String> logStorageAccountId;
+        private Output<String> logStorageAccountSasSecretName;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class VMwareCbtDiskInputArgs extends io.pulumi.resources.ResourceAr
     	      this.logStorageAccountSasSecretName = defaults.logStorageAccountSasSecretName;
         }
 
-        public Builder diskId(Input<String> diskId) {
+        public Builder diskId(Output<String> diskId) {
             this.diskId = Objects.requireNonNull(diskId);
             return this;
         }
 
         public Builder diskId(String diskId) {
-            this.diskId = Input.of(Objects.requireNonNull(diskId));
+            this.diskId = Output.of(Objects.requireNonNull(diskId));
             return this;
         }
 
-        public Builder diskType(@Nullable Input<Either<String,DiskAccountType>> diskType) {
+        public Builder diskType(@Nullable Output<Either<String,DiskAccountType>> diskType) {
             this.diskType = diskType;
             return this;
         }
 
         public Builder diskType(@Nullable Either<String,DiskAccountType> diskType) {
-            this.diskType = Input.ofNullable(diskType);
+            this.diskType = Output.ofNullable(diskType);
             return this;
         }
 
-        public Builder isOSDisk(Input<String> isOSDisk) {
+        public Builder isOSDisk(Output<String> isOSDisk) {
             this.isOSDisk = Objects.requireNonNull(isOSDisk);
             return this;
         }
 
         public Builder isOSDisk(String isOSDisk) {
-            this.isOSDisk = Input.of(Objects.requireNonNull(isOSDisk));
+            this.isOSDisk = Output.of(Objects.requireNonNull(isOSDisk));
             return this;
         }
 
-        public Builder logStorageAccountId(Input<String> logStorageAccountId) {
+        public Builder logStorageAccountId(Output<String> logStorageAccountId) {
             this.logStorageAccountId = Objects.requireNonNull(logStorageAccountId);
             return this;
         }
 
         public Builder logStorageAccountId(String logStorageAccountId) {
-            this.logStorageAccountId = Input.of(Objects.requireNonNull(logStorageAccountId));
+            this.logStorageAccountId = Output.of(Objects.requireNonNull(logStorageAccountId));
             return this;
         }
 
-        public Builder logStorageAccountSasSecretName(Input<String> logStorageAccountSasSecretName) {
+        public Builder logStorageAccountSasSecretName(Output<String> logStorageAccountSasSecretName) {
             this.logStorageAccountSasSecretName = Objects.requireNonNull(logStorageAccountSasSecretName);
             return this;
         }
 
         public Builder logStorageAccountSasSecretName(String logStorageAccountSasSecretName) {
-            this.logStorageAccountSasSecretName = Input.of(Objects.requireNonNull(logStorageAccountSasSecretName));
+            this.logStorageAccountSasSecretName = Output.of(Objects.requireNonNull(logStorageAccountSasSecretName));
             return this;
         }
         public VMwareCbtDiskInputArgs build() {

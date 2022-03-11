@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apigateway.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -21,10 +21,10 @@ public final class DeploymentCanarySettingsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="percentTraffic")
-      private final @Nullable Input<Double> percentTraffic;
+      private final @Nullable Output<Double> percentTraffic;
 
-    public Input<Double> getPercentTraffic() {
-        return this.percentTraffic == null ? Input.empty() : this.percentTraffic;
+    public Output<Double> getPercentTraffic() {
+        return this.percentTraffic == null ? Output.empty() : this.percentTraffic;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class DeploymentCanarySettingsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="stageVariableOverrides")
-      private final @Nullable Input<Object> stageVariableOverrides;
+      private final @Nullable Output<Object> stageVariableOverrides;
 
-    public Input<Object> getStageVariableOverrides() {
-        return this.stageVariableOverrides == null ? Input.empty() : this.stageVariableOverrides;
+    public Output<Object> getStageVariableOverrides() {
+        return this.stageVariableOverrides == null ? Output.empty() : this.stageVariableOverrides;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class DeploymentCanarySettingsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="useStageCache")
-      private final @Nullable Input<Boolean> useStageCache;
+      private final @Nullable Output<Boolean> useStageCache;
 
-    public Input<Boolean> getUseStageCache() {
-        return this.useStageCache == null ? Input.empty() : this.useStageCache;
+    public Output<Boolean> getUseStageCache() {
+        return this.useStageCache == null ? Output.empty() : this.useStageCache;
     }
 
     public DeploymentCanarySettingsArgs(
-        @Nullable Input<Double> percentTraffic,
-        @Nullable Input<Object> stageVariableOverrides,
-        @Nullable Input<Boolean> useStageCache) {
+        @Nullable Output<Double> percentTraffic,
+        @Nullable Output<Object> stageVariableOverrides,
+        @Nullable Output<Boolean> useStageCache) {
         this.percentTraffic = percentTraffic;
         this.stageVariableOverrides = stageVariableOverrides;
         this.useStageCache = useStageCache;
     }
 
     private DeploymentCanarySettingsArgs() {
-        this.percentTraffic = Input.empty();
-        this.stageVariableOverrides = Input.empty();
-        this.useStageCache = Input.empty();
+        this.percentTraffic = Output.empty();
+        this.stageVariableOverrides = Output.empty();
+        this.useStageCache = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class DeploymentCanarySettingsArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Double> percentTraffic;
-        private @Nullable Input<Object> stageVariableOverrides;
-        private @Nullable Input<Boolean> useStageCache;
+        private @Nullable Output<Double> percentTraffic;
+        private @Nullable Output<Object> stageVariableOverrides;
+        private @Nullable Output<Boolean> useStageCache;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class DeploymentCanarySettingsArgs extends io.pulumi.resources.Reso
     	      this.useStageCache = defaults.useStageCache;
         }
 
-        public Builder percentTraffic(@Nullable Input<Double> percentTraffic) {
+        public Builder percentTraffic(@Nullable Output<Double> percentTraffic) {
             this.percentTraffic = percentTraffic;
             return this;
         }
 
         public Builder percentTraffic(@Nullable Double percentTraffic) {
-            this.percentTraffic = Input.ofNullable(percentTraffic);
+            this.percentTraffic = Output.ofNullable(percentTraffic);
             return this;
         }
 
-        public Builder stageVariableOverrides(@Nullable Input<Object> stageVariableOverrides) {
+        public Builder stageVariableOverrides(@Nullable Output<Object> stageVariableOverrides) {
             this.stageVariableOverrides = stageVariableOverrides;
             return this;
         }
 
         public Builder stageVariableOverrides(@Nullable Object stageVariableOverrides) {
-            this.stageVariableOverrides = Input.ofNullable(stageVariableOverrides);
+            this.stageVariableOverrides = Output.ofNullable(stageVariableOverrides);
             return this;
         }
 
-        public Builder useStageCache(@Nullable Input<Boolean> useStageCache) {
+        public Builder useStageCache(@Nullable Output<Boolean> useStageCache) {
             this.useStageCache = useStageCache;
             return this;
         }
 
         public Builder useStageCache(@Nullable Boolean useStageCache) {
-            this.useStageCache = Input.ofNullable(useStageCache);
+            this.useStageCache = Output.ofNullable(useStageCache);
             return this;
         }
         public DeploymentCanarySettingsArgs build() {

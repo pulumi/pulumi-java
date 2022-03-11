@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.emr.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class ClusterBootstrapActionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="args")
-      private final @Nullable Input<List<String>> args;
+      private final @Nullable Output<List<String>> args;
 
-    public Input<List<String>> getArgs() {
-        return this.args == null ? Input.empty() : this.args;
+    public Output<List<String>> getArgs() {
+        return this.args == null ? Output.empty() : this.args;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class ClusterBootstrapActionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -42,25 +42,25 @@ public final class ClusterBootstrapActionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="path", required=true)
-      private final Input<String> path;
+      private final Output<String> path;
 
-    public Input<String> getPath() {
+    public Output<String> getPath() {
         return this.path;
     }
 
     public ClusterBootstrapActionArgs(
-        @Nullable Input<List<String>> args,
-        Input<String> name,
-        Input<String> path) {
+        @Nullable Output<List<String>> args,
+        Output<String> name,
+        Output<String> path) {
         this.args = args;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
     }
 
     private ClusterBootstrapActionArgs() {
-        this.args = Input.empty();
-        this.name = Input.empty();
-        this.path = Input.empty();
+        this.args = Output.empty();
+        this.name = Output.empty();
+        this.path = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class ClusterBootstrapActionArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> args;
-        private Input<String> name;
-        private Input<String> path;
+        private @Nullable Output<List<String>> args;
+        private Output<String> name;
+        private Output<String> path;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class ClusterBootstrapActionArgs extends io.pulumi.resources.Resour
     	      this.path = defaults.path;
         }
 
-        public Builder args(@Nullable Input<List<String>> args) {
+        public Builder args(@Nullable Output<List<String>> args) {
             this.args = args;
             return this;
         }
 
         public Builder args(@Nullable List<String> args) {
-            this.args = Input.ofNullable(args);
+            this.args = Output.ofNullable(args);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder path(Input<String> path) {
+        public Builder path(Output<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
         public Builder path(String path) {
-            this.path = Input.of(Objects.requireNonNull(path));
+            this.path = Output.of(Objects.requireNonNull(path));
             return this;
         }
         public ClusterBootstrapActionArgs build() {

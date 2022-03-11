@@ -8,7 +8,7 @@ import io.pulumi.aws.lb.inputs.ListenerRuleActionAuthenticateOidcArgs;
 import io.pulumi.aws.lb.inputs.ListenerRuleActionFixedResponseArgs;
 import io.pulumi.aws.lb.inputs.ListenerRuleActionForwardArgs;
 import io.pulumi.aws.lb.inputs.ListenerRuleActionRedirectArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class ListenerRuleActionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="authenticateCognito")
-      private final @Nullable Input<ListenerRuleActionAuthenticateCognitoArgs> authenticateCognito;
+      private final @Nullable Output<ListenerRuleActionAuthenticateCognitoArgs> authenticateCognito;
 
-    public Input<ListenerRuleActionAuthenticateCognitoArgs> getAuthenticateCognito() {
-        return this.authenticateCognito == null ? Input.empty() : this.authenticateCognito;
+    public Output<ListenerRuleActionAuthenticateCognitoArgs> getAuthenticateCognito() {
+        return this.authenticateCognito == null ? Output.empty() : this.authenticateCognito;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ListenerRuleActionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="authenticateOidc")
-      private final @Nullable Input<ListenerRuleActionAuthenticateOidcArgs> authenticateOidc;
+      private final @Nullable Output<ListenerRuleActionAuthenticateOidcArgs> authenticateOidc;
 
-    public Input<ListenerRuleActionAuthenticateOidcArgs> getAuthenticateOidc() {
-        return this.authenticateOidc == null ? Input.empty() : this.authenticateOidc;
+    public Output<ListenerRuleActionAuthenticateOidcArgs> getAuthenticateOidc() {
+        return this.authenticateOidc == null ? Output.empty() : this.authenticateOidc;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ListenerRuleActionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="fixedResponse")
-      private final @Nullable Input<ListenerRuleActionFixedResponseArgs> fixedResponse;
+      private final @Nullable Output<ListenerRuleActionFixedResponseArgs> fixedResponse;
 
-    public Input<ListenerRuleActionFixedResponseArgs> getFixedResponse() {
-        return this.fixedResponse == null ? Input.empty() : this.fixedResponse;
+    public Output<ListenerRuleActionFixedResponseArgs> getFixedResponse() {
+        return this.fixedResponse == null ? Output.empty() : this.fixedResponse;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class ListenerRuleActionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="forward")
-      private final @Nullable Input<ListenerRuleActionForwardArgs> forward;
+      private final @Nullable Output<ListenerRuleActionForwardArgs> forward;
 
-    public Input<ListenerRuleActionForwardArgs> getForward() {
-        return this.forward == null ? Input.empty() : this.forward;
+    public Output<ListenerRuleActionForwardArgs> getForward() {
+        return this.forward == null ? Output.empty() : this.forward;
     }
 
     @InputImport(name="order")
-      private final @Nullable Input<Integer> order;
+      private final @Nullable Output<Integer> order;
 
-    public Input<Integer> getOrder() {
-        return this.order == null ? Input.empty() : this.order;
+    public Output<Integer> getOrder() {
+        return this.order == null ? Output.empty() : this.order;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class ListenerRuleActionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="redirect")
-      private final @Nullable Input<ListenerRuleActionRedirectArgs> redirect;
+      private final @Nullable Output<ListenerRuleActionRedirectArgs> redirect;
 
-    public Input<ListenerRuleActionRedirectArgs> getRedirect() {
-        return this.redirect == null ? Input.empty() : this.redirect;
+    public Output<ListenerRuleActionRedirectArgs> getRedirect() {
+        return this.redirect == null ? Output.empty() : this.redirect;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class ListenerRuleActionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="targetGroupArn")
-      private final @Nullable Input<String> targetGroupArn;
+      private final @Nullable Output<String> targetGroupArn;
 
-    public Input<String> getTargetGroupArn() {
-        return this.targetGroupArn == null ? Input.empty() : this.targetGroupArn;
+    public Output<String> getTargetGroupArn() {
+        return this.targetGroupArn == null ? Output.empty() : this.targetGroupArn;
     }
 
     /**
@@ -98,21 +98,21 @@ public final class ListenerRuleActionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public ListenerRuleActionArgs(
-        @Nullable Input<ListenerRuleActionAuthenticateCognitoArgs> authenticateCognito,
-        @Nullable Input<ListenerRuleActionAuthenticateOidcArgs> authenticateOidc,
-        @Nullable Input<ListenerRuleActionFixedResponseArgs> fixedResponse,
-        @Nullable Input<ListenerRuleActionForwardArgs> forward,
-        @Nullable Input<Integer> order,
-        @Nullable Input<ListenerRuleActionRedirectArgs> redirect,
-        @Nullable Input<String> targetGroupArn,
-        Input<String> type) {
+        @Nullable Output<ListenerRuleActionAuthenticateCognitoArgs> authenticateCognito,
+        @Nullable Output<ListenerRuleActionAuthenticateOidcArgs> authenticateOidc,
+        @Nullable Output<ListenerRuleActionFixedResponseArgs> fixedResponse,
+        @Nullable Output<ListenerRuleActionForwardArgs> forward,
+        @Nullable Output<Integer> order,
+        @Nullable Output<ListenerRuleActionRedirectArgs> redirect,
+        @Nullable Output<String> targetGroupArn,
+        Output<String> type) {
         this.authenticateCognito = authenticateCognito;
         this.authenticateOidc = authenticateOidc;
         this.fixedResponse = fixedResponse;
@@ -124,14 +124,14 @@ public final class ListenerRuleActionArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ListenerRuleActionArgs() {
-        this.authenticateCognito = Input.empty();
-        this.authenticateOidc = Input.empty();
-        this.fixedResponse = Input.empty();
-        this.forward = Input.empty();
-        this.order = Input.empty();
-        this.redirect = Input.empty();
-        this.targetGroupArn = Input.empty();
-        this.type = Input.empty();
+        this.authenticateCognito = Output.empty();
+        this.authenticateOidc = Output.empty();
+        this.fixedResponse = Output.empty();
+        this.forward = Output.empty();
+        this.order = Output.empty();
+        this.redirect = Output.empty();
+        this.targetGroupArn = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -143,14 +143,14 @@ public final class ListenerRuleActionArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<ListenerRuleActionAuthenticateCognitoArgs> authenticateCognito;
-        private @Nullable Input<ListenerRuleActionAuthenticateOidcArgs> authenticateOidc;
-        private @Nullable Input<ListenerRuleActionFixedResponseArgs> fixedResponse;
-        private @Nullable Input<ListenerRuleActionForwardArgs> forward;
-        private @Nullable Input<Integer> order;
-        private @Nullable Input<ListenerRuleActionRedirectArgs> redirect;
-        private @Nullable Input<String> targetGroupArn;
-        private Input<String> type;
+        private @Nullable Output<ListenerRuleActionAuthenticateCognitoArgs> authenticateCognito;
+        private @Nullable Output<ListenerRuleActionAuthenticateOidcArgs> authenticateOidc;
+        private @Nullable Output<ListenerRuleActionFixedResponseArgs> fixedResponse;
+        private @Nullable Output<ListenerRuleActionForwardArgs> forward;
+        private @Nullable Output<Integer> order;
+        private @Nullable Output<ListenerRuleActionRedirectArgs> redirect;
+        private @Nullable Output<String> targetGroupArn;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -168,83 +168,83 @@ public final class ListenerRuleActionArgs extends io.pulumi.resources.ResourceAr
     	      this.type = defaults.type;
         }
 
-        public Builder authenticateCognito(@Nullable Input<ListenerRuleActionAuthenticateCognitoArgs> authenticateCognito) {
+        public Builder authenticateCognito(@Nullable Output<ListenerRuleActionAuthenticateCognitoArgs> authenticateCognito) {
             this.authenticateCognito = authenticateCognito;
             return this;
         }
 
         public Builder authenticateCognito(@Nullable ListenerRuleActionAuthenticateCognitoArgs authenticateCognito) {
-            this.authenticateCognito = Input.ofNullable(authenticateCognito);
+            this.authenticateCognito = Output.ofNullable(authenticateCognito);
             return this;
         }
 
-        public Builder authenticateOidc(@Nullable Input<ListenerRuleActionAuthenticateOidcArgs> authenticateOidc) {
+        public Builder authenticateOidc(@Nullable Output<ListenerRuleActionAuthenticateOidcArgs> authenticateOidc) {
             this.authenticateOidc = authenticateOidc;
             return this;
         }
 
         public Builder authenticateOidc(@Nullable ListenerRuleActionAuthenticateOidcArgs authenticateOidc) {
-            this.authenticateOidc = Input.ofNullable(authenticateOidc);
+            this.authenticateOidc = Output.ofNullable(authenticateOidc);
             return this;
         }
 
-        public Builder fixedResponse(@Nullable Input<ListenerRuleActionFixedResponseArgs> fixedResponse) {
+        public Builder fixedResponse(@Nullable Output<ListenerRuleActionFixedResponseArgs> fixedResponse) {
             this.fixedResponse = fixedResponse;
             return this;
         }
 
         public Builder fixedResponse(@Nullable ListenerRuleActionFixedResponseArgs fixedResponse) {
-            this.fixedResponse = Input.ofNullable(fixedResponse);
+            this.fixedResponse = Output.ofNullable(fixedResponse);
             return this;
         }
 
-        public Builder forward(@Nullable Input<ListenerRuleActionForwardArgs> forward) {
+        public Builder forward(@Nullable Output<ListenerRuleActionForwardArgs> forward) {
             this.forward = forward;
             return this;
         }
 
         public Builder forward(@Nullable ListenerRuleActionForwardArgs forward) {
-            this.forward = Input.ofNullable(forward);
+            this.forward = Output.ofNullable(forward);
             return this;
         }
 
-        public Builder order(@Nullable Input<Integer> order) {
+        public Builder order(@Nullable Output<Integer> order) {
             this.order = order;
             return this;
         }
 
         public Builder order(@Nullable Integer order) {
-            this.order = Input.ofNullable(order);
+            this.order = Output.ofNullable(order);
             return this;
         }
 
-        public Builder redirect(@Nullable Input<ListenerRuleActionRedirectArgs> redirect) {
+        public Builder redirect(@Nullable Output<ListenerRuleActionRedirectArgs> redirect) {
             this.redirect = redirect;
             return this;
         }
 
         public Builder redirect(@Nullable ListenerRuleActionRedirectArgs redirect) {
-            this.redirect = Input.ofNullable(redirect);
+            this.redirect = Output.ofNullable(redirect);
             return this;
         }
 
-        public Builder targetGroupArn(@Nullable Input<String> targetGroupArn) {
+        public Builder targetGroupArn(@Nullable Output<String> targetGroupArn) {
             this.targetGroupArn = targetGroupArn;
             return this;
         }
 
         public Builder targetGroupArn(@Nullable String targetGroupArn) {
-            this.targetGroupArn = Input.ofNullable(targetGroupArn);
+            this.targetGroupArn = Output.ofNullable(targetGroupArn);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ListenerRuleActionArgs build() {

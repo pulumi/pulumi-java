@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanArgs;
 import java.lang.String;
@@ -17,10 +17,10 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
     public static final CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameArgs Empty = new CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameArgs();
 
     @InputImport(name="customSans")
-      private final @Nullable Input<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanArgs>> customSans;
+      private final @Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanArgs>> customSans;
 
-    public Input<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanArgs>> getCustomSans() {
-        return this.customSans == null ? Input.empty() : this.customSans;
+    public Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanArgs>> getCustomSans() {
+        return this.customSans == null ? Output.empty() : this.customSans;
     }
 
     /**
@@ -28,10 +28,10 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
      * 
      */
     @InputImport(name="dnsNames")
-      private final @Nullable Input<List<String>> dnsNames;
+      private final @Nullable Output<List<String>> dnsNames;
 
-    public Input<List<String>> getDnsNames() {
-        return this.dnsNames == null ? Input.empty() : this.dnsNames;
+    public Output<List<String>> getDnsNames() {
+        return this.dnsNames == null ? Output.empty() : this.dnsNames;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
      * 
      */
     @InputImport(name="emailAddresses")
-      private final @Nullable Input<List<String>> emailAddresses;
+      private final @Nullable Output<List<String>> emailAddresses;
 
-    public Input<List<String>> getEmailAddresses() {
-        return this.emailAddresses == null ? Input.empty() : this.emailAddresses;
+    public Output<List<String>> getEmailAddresses() {
+        return this.emailAddresses == null ? Output.empty() : this.emailAddresses;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
      * 
      */
     @InputImport(name="ipAddresses")
-      private final @Nullable Input<List<String>> ipAddresses;
+      private final @Nullable Output<List<String>> ipAddresses;
 
-    public Input<List<String>> getIpAddresses() {
-        return this.ipAddresses == null ? Input.empty() : this.ipAddresses;
+    public Output<List<String>> getIpAddresses() {
+        return this.ipAddresses == null ? Output.empty() : this.ipAddresses;
     }
 
     /**
@@ -61,18 +61,18 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
      * 
      */
     @InputImport(name="uris")
-      private final @Nullable Input<List<String>> uris;
+      private final @Nullable Output<List<String>> uris;
 
-    public Input<List<String>> getUris() {
-        return this.uris == null ? Input.empty() : this.uris;
+    public Output<List<String>> getUris() {
+        return this.uris == null ? Output.empty() : this.uris;
     }
 
     public CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameArgs(
-        @Nullable Input<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanArgs>> customSans,
-        @Nullable Input<List<String>> dnsNames,
-        @Nullable Input<List<String>> emailAddresses,
-        @Nullable Input<List<String>> ipAddresses,
-        @Nullable Input<List<String>> uris) {
+        @Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanArgs>> customSans,
+        @Nullable Output<List<String>> dnsNames,
+        @Nullable Output<List<String>> emailAddresses,
+        @Nullable Output<List<String>> ipAddresses,
+        @Nullable Output<List<String>> uris) {
         this.customSans = customSans;
         this.dnsNames = dnsNames;
         this.emailAddresses = emailAddresses;
@@ -81,11 +81,11 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
     }
 
     private CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameArgs() {
-        this.customSans = Input.empty();
-        this.dnsNames = Input.empty();
-        this.emailAddresses = Input.empty();
-        this.ipAddresses = Input.empty();
-        this.uris = Input.empty();
+        this.customSans = Output.empty();
+        this.dnsNames = Output.empty();
+        this.emailAddresses = Output.empty();
+        this.ipAddresses = Output.empty();
+        this.uris = Output.empty();
     }
 
     public static Builder builder() {
@@ -97,11 +97,11 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
     }
 
     public static final class Builder {
-        private @Nullable Input<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanArgs>> customSans;
-        private @Nullable Input<List<String>> dnsNames;
-        private @Nullable Input<List<String>> emailAddresses;
-        private @Nullable Input<List<String>> ipAddresses;
-        private @Nullable Input<List<String>> uris;
+        private @Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanArgs>> customSans;
+        private @Nullable Output<List<String>> dnsNames;
+        private @Nullable Output<List<String>> emailAddresses;
+        private @Nullable Output<List<String>> ipAddresses;
+        private @Nullable Output<List<String>> uris;
 
         public Builder() {
     	      // Empty
@@ -116,53 +116,53 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
     	      this.uris = defaults.uris;
         }
 
-        public Builder customSans(@Nullable Input<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanArgs>> customSans) {
+        public Builder customSans(@Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanArgs>> customSans) {
             this.customSans = customSans;
             return this;
         }
 
         public Builder customSans(@Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanArgs> customSans) {
-            this.customSans = Input.ofNullable(customSans);
+            this.customSans = Output.ofNullable(customSans);
             return this;
         }
 
-        public Builder dnsNames(@Nullable Input<List<String>> dnsNames) {
+        public Builder dnsNames(@Nullable Output<List<String>> dnsNames) {
             this.dnsNames = dnsNames;
             return this;
         }
 
         public Builder dnsNames(@Nullable List<String> dnsNames) {
-            this.dnsNames = Input.ofNullable(dnsNames);
+            this.dnsNames = Output.ofNullable(dnsNames);
             return this;
         }
 
-        public Builder emailAddresses(@Nullable Input<List<String>> emailAddresses) {
+        public Builder emailAddresses(@Nullable Output<List<String>> emailAddresses) {
             this.emailAddresses = emailAddresses;
             return this;
         }
 
         public Builder emailAddresses(@Nullable List<String> emailAddresses) {
-            this.emailAddresses = Input.ofNullable(emailAddresses);
+            this.emailAddresses = Output.ofNullable(emailAddresses);
             return this;
         }
 
-        public Builder ipAddresses(@Nullable Input<List<String>> ipAddresses) {
+        public Builder ipAddresses(@Nullable Output<List<String>> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
 
         public Builder ipAddresses(@Nullable List<String> ipAddresses) {
-            this.ipAddresses = Input.ofNullable(ipAddresses);
+            this.ipAddresses = Output.ofNullable(ipAddresses);
             return this;
         }
 
-        public Builder uris(@Nullable Input<List<String>> uris) {
+        public Builder uris(@Nullable Output<List<String>> uris) {
             this.uris = uris;
             return this;
         }
 
         public Builder uris(@Nullable List<String> uris) {
-            this.uris = Input.ofNullable(uris);
+            this.uris = Output.ofNullable(uris);
             return this;
         }
         public CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameArgs build() {

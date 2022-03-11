@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class ResourcefileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentType")
-      private final @Nullable Input<String> contentType;
+      private final @Nullable Output<String> contentType;
 
-    public Input<String> getContentType() {
-        return this.contentType == null ? Input.empty() : this.contentType;
+    public Output<String> getContentType() {
+        return this.contentType == null ? Output.empty() : this.contentType;
     }
 
     /**
@@ -32,16 +32,16 @@ public final class ResourcefileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="data")
-      private final @Nullable Input<String> data;
+      private final @Nullable Output<String> data;
 
-    public Input<String> getData() {
-        return this.data == null ? Input.empty() : this.data;
+    public Output<String> getData() {
+        return this.data == null ? Output.empty() : this.data;
     }
 
     @InputImport(name="environmentId", required=true)
-      private final Input<String> environmentId;
+      private final Output<String> environmentId;
 
-    public Input<String> getEnvironmentId() {
+    public Output<String> getEnvironmentId() {
         return this.environmentId;
     }
 
@@ -50,41 +50,41 @@ public final class ResourcefileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extensions")
-      private final @Nullable Input<List<Map<String,String>>> extensions;
+      private final @Nullable Output<List<Map<String,String>>> extensions;
 
-    public Input<List<Map<String,String>>> getExtensions() {
-        return this.extensions == null ? Input.empty() : this.extensions;
+    public Output<List<Map<String,String>>> getExtensions() {
+        return this.extensions == null ? Output.empty() : this.extensions;
     }
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="organizationId", required=true)
-      private final Input<String> organizationId;
+      private final Output<String> organizationId;
 
-    public Input<String> getOrganizationId() {
+    public Output<String> getOrganizationId() {
         return this.organizationId;
     }
 
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public ResourcefileArgs(
-        @Nullable Input<String> contentType,
-        @Nullable Input<String> data,
-        Input<String> environmentId,
-        @Nullable Input<List<Map<String,String>>> extensions,
-        @Nullable Input<String> name,
-        Input<String> organizationId,
-        Input<String> type) {
+        @Nullable Output<String> contentType,
+        @Nullable Output<String> data,
+        Output<String> environmentId,
+        @Nullable Output<List<Map<String,String>>> extensions,
+        @Nullable Output<String> name,
+        Output<String> organizationId,
+        Output<String> type) {
         this.contentType = contentType;
         this.data = data;
         this.environmentId = Objects.requireNonNull(environmentId, "expected parameter 'environmentId' to be non-null");
@@ -95,13 +95,13 @@ public final class ResourcefileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResourcefileArgs() {
-        this.contentType = Input.empty();
-        this.data = Input.empty();
-        this.environmentId = Input.empty();
-        this.extensions = Input.empty();
-        this.name = Input.empty();
-        this.organizationId = Input.empty();
-        this.type = Input.empty();
+        this.contentType = Output.empty();
+        this.data = Output.empty();
+        this.environmentId = Output.empty();
+        this.extensions = Output.empty();
+        this.name = Output.empty();
+        this.organizationId = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -113,13 +113,13 @@ public final class ResourcefileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> contentType;
-        private @Nullable Input<String> data;
-        private Input<String> environmentId;
-        private @Nullable Input<List<Map<String,String>>> extensions;
-        private @Nullable Input<String> name;
-        private Input<String> organizationId;
-        private Input<String> type;
+        private @Nullable Output<String> contentType;
+        private @Nullable Output<String> data;
+        private Output<String> environmentId;
+        private @Nullable Output<List<Map<String,String>>> extensions;
+        private @Nullable Output<String> name;
+        private Output<String> organizationId;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -136,73 +136,73 @@ public final class ResourcefileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder contentType(@Nullable Input<String> contentType) {
+        public Builder contentType(@Nullable Output<String> contentType) {
             this.contentType = contentType;
             return this;
         }
 
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = Input.ofNullable(contentType);
+            this.contentType = Output.ofNullable(contentType);
             return this;
         }
 
-        public Builder data(@Nullable Input<String> data) {
+        public Builder data(@Nullable Output<String> data) {
             this.data = data;
             return this;
         }
 
         public Builder data(@Nullable String data) {
-            this.data = Input.ofNullable(data);
+            this.data = Output.ofNullable(data);
             return this;
         }
 
-        public Builder environmentId(Input<String> environmentId) {
+        public Builder environmentId(Output<String> environmentId) {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
 
         public Builder environmentId(String environmentId) {
-            this.environmentId = Input.of(Objects.requireNonNull(environmentId));
+            this.environmentId = Output.of(Objects.requireNonNull(environmentId));
             return this;
         }
 
-        public Builder extensions(@Nullable Input<List<Map<String,String>>> extensions) {
+        public Builder extensions(@Nullable Output<List<Map<String,String>>> extensions) {
             this.extensions = extensions;
             return this;
         }
 
         public Builder extensions(@Nullable List<Map<String,String>> extensions) {
-            this.extensions = Input.ofNullable(extensions);
+            this.extensions = Output.ofNullable(extensions);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder organizationId(Input<String> organizationId) {
+        public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
         public Builder organizationId(String organizationId) {
-            this.organizationId = Input.of(Objects.requireNonNull(organizationId));
+            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ResourcefileArgs build() {

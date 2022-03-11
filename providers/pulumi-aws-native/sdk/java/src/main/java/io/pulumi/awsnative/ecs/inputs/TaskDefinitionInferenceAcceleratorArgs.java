@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ecs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class TaskDefinitionInferenceAcceleratorArgs extends io.pulumi.reso
     public static final TaskDefinitionInferenceAcceleratorArgs Empty = new TaskDefinitionInferenceAcceleratorArgs();
 
     @InputImport(name="deviceName")
-      private final @Nullable Input<String> deviceName;
+      private final @Nullable Output<String> deviceName;
 
-    public Input<String> getDeviceName() {
-        return this.deviceName == null ? Input.empty() : this.deviceName;
+    public Output<String> getDeviceName() {
+        return this.deviceName == null ? Output.empty() : this.deviceName;
     }
 
     @InputImport(name="deviceType")
-      private final @Nullable Input<String> deviceType;
+      private final @Nullable Output<String> deviceType;
 
-    public Input<String> getDeviceType() {
-        return this.deviceType == null ? Input.empty() : this.deviceType;
+    public Output<String> getDeviceType() {
+        return this.deviceType == null ? Output.empty() : this.deviceType;
     }
 
     public TaskDefinitionInferenceAcceleratorArgs(
-        @Nullable Input<String> deviceName,
-        @Nullable Input<String> deviceType) {
+        @Nullable Output<String> deviceName,
+        @Nullable Output<String> deviceType) {
         this.deviceName = deviceName;
         this.deviceType = deviceType;
     }
 
     private TaskDefinitionInferenceAcceleratorArgs() {
-        this.deviceName = Input.empty();
-        this.deviceType = Input.empty();
+        this.deviceName = Output.empty();
+        this.deviceType = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class TaskDefinitionInferenceAcceleratorArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> deviceName;
-        private @Nullable Input<String> deviceType;
+        private @Nullable Output<String> deviceName;
+        private @Nullable Output<String> deviceType;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class TaskDefinitionInferenceAcceleratorArgs extends io.pulumi.reso
     	      this.deviceType = defaults.deviceType;
         }
 
-        public Builder deviceName(@Nullable Input<String> deviceName) {
+        public Builder deviceName(@Nullable Output<String> deviceName) {
             this.deviceName = deviceName;
             return this;
         }
 
         public Builder deviceName(@Nullable String deviceName) {
-            this.deviceName = Input.ofNullable(deviceName);
+            this.deviceName = Output.ofNullable(deviceName);
             return this;
         }
 
-        public Builder deviceType(@Nullable Input<String> deviceType) {
+        public Builder deviceType(@Nullable Output<String> deviceType) {
             this.deviceType = deviceType;
             return this;
         }
 
         public Builder deviceType(@Nullable String deviceType) {
-            this.deviceType = Input.ofNullable(deviceType);
+            this.deviceType = Output.ofNullable(deviceType);
             return this;
         }
         public TaskDefinitionInferenceAcceleratorArgs build() {

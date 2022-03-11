@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.devopsguru.inputs;
 
 import io.pulumi.awsnative.devopsguru.inputs.ResourceCollectionCloudFormationCollectionFilterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class ResourceCollectionFilterArgs extends io.pulumi.resources.Reso
     public static final ResourceCollectionFilterArgs Empty = new ResourceCollectionFilterArgs();
 
     @InputImport(name="cloudFormation")
-      private final @Nullable Input<ResourceCollectionCloudFormationCollectionFilterArgs> cloudFormation;
+      private final @Nullable Output<ResourceCollectionCloudFormationCollectionFilterArgs> cloudFormation;
 
-    public Input<ResourceCollectionCloudFormationCollectionFilterArgs> getCloudFormation() {
-        return this.cloudFormation == null ? Input.empty() : this.cloudFormation;
+    public Output<ResourceCollectionCloudFormationCollectionFilterArgs> getCloudFormation() {
+        return this.cloudFormation == null ? Output.empty() : this.cloudFormation;
     }
 
-    public ResourceCollectionFilterArgs(@Nullable Input<ResourceCollectionCloudFormationCollectionFilterArgs> cloudFormation) {
+    public ResourceCollectionFilterArgs(@Nullable Output<ResourceCollectionCloudFormationCollectionFilterArgs> cloudFormation) {
         this.cloudFormation = cloudFormation;
     }
 
     private ResourceCollectionFilterArgs() {
-        this.cloudFormation = Input.empty();
+        this.cloudFormation = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class ResourceCollectionFilterArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<ResourceCollectionCloudFormationCollectionFilterArgs> cloudFormation;
+        private @Nullable Output<ResourceCollectionCloudFormationCollectionFilterArgs> cloudFormation;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class ResourceCollectionFilterArgs extends io.pulumi.resources.Reso
     	      this.cloudFormation = defaults.cloudFormation;
         }
 
-        public Builder cloudFormation(@Nullable Input<ResourceCollectionCloudFormationCollectionFilterArgs> cloudFormation) {
+        public Builder cloudFormation(@Nullable Output<ResourceCollectionCloudFormationCollectionFilterArgs> cloudFormation) {
             this.cloudFormation = cloudFormation;
             return this;
         }
 
         public Builder cloudFormation(@Nullable ResourceCollectionCloudFormationCollectionFilterArgs cloudFormation) {
-            this.cloudFormation = Input.ofNullable(cloudFormation);
+            this.cloudFormation = Output.ofNullable(cloudFormation);
             return this;
         }
         public ResourceCollectionFilterArgs build() {

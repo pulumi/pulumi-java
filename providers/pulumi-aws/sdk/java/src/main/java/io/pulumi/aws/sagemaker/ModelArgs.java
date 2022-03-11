@@ -7,7 +7,7 @@ import io.pulumi.aws.sagemaker.inputs.ModelContainerArgs;
 import io.pulumi.aws.sagemaker.inputs.ModelInferenceExecutionConfigArgs;
 import io.pulumi.aws.sagemaker.inputs.ModelPrimaryContainerArgs;
 import io.pulumi.aws.sagemaker.inputs.ModelVpcConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containers")
-      private final @Nullable Input<List<ModelContainerArgs>> containers;
+      private final @Nullable Output<List<ModelContainerArgs>> containers;
 
-    public Input<List<ModelContainerArgs>> getContainers() {
-        return this.containers == null ? Input.empty() : this.containers;
+    public Output<List<ModelContainerArgs>> getContainers() {
+        return this.containers == null ? Output.empty() : this.containers;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableNetworkIsolation")
-      private final @Nullable Input<Boolean> enableNetworkIsolation;
+      private final @Nullable Output<Boolean> enableNetworkIsolation;
 
-    public Input<Boolean> getEnableNetworkIsolation() {
-        return this.enableNetworkIsolation == null ? Input.empty() : this.enableNetworkIsolation;
+    public Output<Boolean> getEnableNetworkIsolation() {
+        return this.enableNetworkIsolation == null ? Output.empty() : this.enableNetworkIsolation;
     }
 
     /**
@@ -48,9 +48,9 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="executionRoleArn", required=true)
-      private final Input<String> executionRoleArn;
+      private final Output<String> executionRoleArn;
 
-    public Input<String> getExecutionRoleArn() {
+    public Output<String> getExecutionRoleArn() {
         return this.executionRoleArn;
     }
 
@@ -59,10 +59,10 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inferenceExecutionConfig")
-      private final @Nullable Input<ModelInferenceExecutionConfigArgs> inferenceExecutionConfig;
+      private final @Nullable Output<ModelInferenceExecutionConfigArgs> inferenceExecutionConfig;
 
-    public Input<ModelInferenceExecutionConfigArgs> getInferenceExecutionConfig() {
-        return this.inferenceExecutionConfig == null ? Input.empty() : this.inferenceExecutionConfig;
+    public Output<ModelInferenceExecutionConfigArgs> getInferenceExecutionConfig() {
+        return this.inferenceExecutionConfig == null ? Output.empty() : this.inferenceExecutionConfig;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="primaryContainer")
-      private final @Nullable Input<ModelPrimaryContainerArgs> primaryContainer;
+      private final @Nullable Output<ModelPrimaryContainerArgs> primaryContainer;
 
-    public Input<ModelPrimaryContainerArgs> getPrimaryContainer() {
-        return this.primaryContainer == null ? Input.empty() : this.primaryContainer;
+    public Output<ModelPrimaryContainerArgs> getPrimaryContainer() {
+        return this.primaryContainer == null ? Output.empty() : this.primaryContainer;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -103,21 +103,21 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcConfig")
-      private final @Nullable Input<ModelVpcConfigArgs> vpcConfig;
+      private final @Nullable Output<ModelVpcConfigArgs> vpcConfig;
 
-    public Input<ModelVpcConfigArgs> getVpcConfig() {
-        return this.vpcConfig == null ? Input.empty() : this.vpcConfig;
+    public Output<ModelVpcConfigArgs> getVpcConfig() {
+        return this.vpcConfig == null ? Output.empty() : this.vpcConfig;
     }
 
     public ModelArgs(
-        @Nullable Input<List<ModelContainerArgs>> containers,
-        @Nullable Input<Boolean> enableNetworkIsolation,
-        Input<String> executionRoleArn,
-        @Nullable Input<ModelInferenceExecutionConfigArgs> inferenceExecutionConfig,
-        @Nullable Input<String> name,
-        @Nullable Input<ModelPrimaryContainerArgs> primaryContainer,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<ModelVpcConfigArgs> vpcConfig) {
+        @Nullable Output<List<ModelContainerArgs>> containers,
+        @Nullable Output<Boolean> enableNetworkIsolation,
+        Output<String> executionRoleArn,
+        @Nullable Output<ModelInferenceExecutionConfigArgs> inferenceExecutionConfig,
+        @Nullable Output<String> name,
+        @Nullable Output<ModelPrimaryContainerArgs> primaryContainer,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<ModelVpcConfigArgs> vpcConfig) {
         this.containers = containers;
         this.enableNetworkIsolation = enableNetworkIsolation;
         this.executionRoleArn = Objects.requireNonNull(executionRoleArn, "expected parameter 'executionRoleArn' to be non-null");
@@ -129,14 +129,14 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ModelArgs() {
-        this.containers = Input.empty();
-        this.enableNetworkIsolation = Input.empty();
-        this.executionRoleArn = Input.empty();
-        this.inferenceExecutionConfig = Input.empty();
-        this.name = Input.empty();
-        this.primaryContainer = Input.empty();
-        this.tags = Input.empty();
-        this.vpcConfig = Input.empty();
+        this.containers = Output.empty();
+        this.enableNetworkIsolation = Output.empty();
+        this.executionRoleArn = Output.empty();
+        this.inferenceExecutionConfig = Output.empty();
+        this.name = Output.empty();
+        this.primaryContainer = Output.empty();
+        this.tags = Output.empty();
+        this.vpcConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -148,14 +148,14 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ModelContainerArgs>> containers;
-        private @Nullable Input<Boolean> enableNetworkIsolation;
-        private Input<String> executionRoleArn;
-        private @Nullable Input<ModelInferenceExecutionConfigArgs> inferenceExecutionConfig;
-        private @Nullable Input<String> name;
-        private @Nullable Input<ModelPrimaryContainerArgs> primaryContainer;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<ModelVpcConfigArgs> vpcConfig;
+        private @Nullable Output<List<ModelContainerArgs>> containers;
+        private @Nullable Output<Boolean> enableNetworkIsolation;
+        private Output<String> executionRoleArn;
+        private @Nullable Output<ModelInferenceExecutionConfigArgs> inferenceExecutionConfig;
+        private @Nullable Output<String> name;
+        private @Nullable Output<ModelPrimaryContainerArgs> primaryContainer;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<ModelVpcConfigArgs> vpcConfig;
 
         public Builder() {
     	      // Empty
@@ -173,83 +173,83 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcConfig = defaults.vpcConfig;
         }
 
-        public Builder containers(@Nullable Input<List<ModelContainerArgs>> containers) {
+        public Builder containers(@Nullable Output<List<ModelContainerArgs>> containers) {
             this.containers = containers;
             return this;
         }
 
         public Builder containers(@Nullable List<ModelContainerArgs> containers) {
-            this.containers = Input.ofNullable(containers);
+            this.containers = Output.ofNullable(containers);
             return this;
         }
 
-        public Builder enableNetworkIsolation(@Nullable Input<Boolean> enableNetworkIsolation) {
+        public Builder enableNetworkIsolation(@Nullable Output<Boolean> enableNetworkIsolation) {
             this.enableNetworkIsolation = enableNetworkIsolation;
             return this;
         }
 
         public Builder enableNetworkIsolation(@Nullable Boolean enableNetworkIsolation) {
-            this.enableNetworkIsolation = Input.ofNullable(enableNetworkIsolation);
+            this.enableNetworkIsolation = Output.ofNullable(enableNetworkIsolation);
             return this;
         }
 
-        public Builder executionRoleArn(Input<String> executionRoleArn) {
+        public Builder executionRoleArn(Output<String> executionRoleArn) {
             this.executionRoleArn = Objects.requireNonNull(executionRoleArn);
             return this;
         }
 
         public Builder executionRoleArn(String executionRoleArn) {
-            this.executionRoleArn = Input.of(Objects.requireNonNull(executionRoleArn));
+            this.executionRoleArn = Output.of(Objects.requireNonNull(executionRoleArn));
             return this;
         }
 
-        public Builder inferenceExecutionConfig(@Nullable Input<ModelInferenceExecutionConfigArgs> inferenceExecutionConfig) {
+        public Builder inferenceExecutionConfig(@Nullable Output<ModelInferenceExecutionConfigArgs> inferenceExecutionConfig) {
             this.inferenceExecutionConfig = inferenceExecutionConfig;
             return this;
         }
 
         public Builder inferenceExecutionConfig(@Nullable ModelInferenceExecutionConfigArgs inferenceExecutionConfig) {
-            this.inferenceExecutionConfig = Input.ofNullable(inferenceExecutionConfig);
+            this.inferenceExecutionConfig = Output.ofNullable(inferenceExecutionConfig);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder primaryContainer(@Nullable Input<ModelPrimaryContainerArgs> primaryContainer) {
+        public Builder primaryContainer(@Nullable Output<ModelPrimaryContainerArgs> primaryContainer) {
             this.primaryContainer = primaryContainer;
             return this;
         }
 
         public Builder primaryContainer(@Nullable ModelPrimaryContainerArgs primaryContainer) {
-            this.primaryContainer = Input.ofNullable(primaryContainer);
+            this.primaryContainer = Output.ofNullable(primaryContainer);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder vpcConfig(@Nullable Input<ModelVpcConfigArgs> vpcConfig) {
+        public Builder vpcConfig(@Nullable Output<ModelVpcConfigArgs> vpcConfig) {
             this.vpcConfig = vpcConfig;
             return this;
         }
 
         public Builder vpcConfig(@Nullable ModelVpcConfigArgs vpcConfig) {
-            this.vpcConfig = Input.ofNullable(vpcConfig);
+            this.vpcConfig = Output.ofNullable(vpcConfig);
             return this;
         }
         public ModelArgs build() {

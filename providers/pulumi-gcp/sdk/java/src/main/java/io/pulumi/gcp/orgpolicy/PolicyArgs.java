@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.orgpolicy;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.orgpolicy.inputs.PolicySpecArgs;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent", required=true)
-      private final Input<String> parent;
+      private final Output<String> parent;
 
-    public Input<String> getParent() {
+    public Output<String> getParent() {
         return this.parent;
     }
 
@@ -42,25 +42,25 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spec")
-      private final @Nullable Input<PolicySpecArgs> spec;
+      private final @Nullable Output<PolicySpecArgs> spec;
 
-    public Input<PolicySpecArgs> getSpec() {
-        return this.spec == null ? Input.empty() : this.spec;
+    public Output<PolicySpecArgs> getSpec() {
+        return this.spec == null ? Output.empty() : this.spec;
     }
 
     public PolicyArgs(
-        @Nullable Input<String> name,
-        Input<String> parent,
-        @Nullable Input<PolicySpecArgs> spec) {
+        @Nullable Output<String> name,
+        Output<String> parent,
+        @Nullable Output<PolicySpecArgs> spec) {
         this.name = name;
         this.parent = Objects.requireNonNull(parent, "expected parameter 'parent' to be non-null");
         this.spec = spec;
     }
 
     private PolicyArgs() {
-        this.name = Input.empty();
-        this.parent = Input.empty();
-        this.spec = Input.empty();
+        this.name = Output.empty();
+        this.parent = Output.empty();
+        this.spec = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private Input<String> parent;
-        private @Nullable Input<PolicySpecArgs> spec;
+        private @Nullable Output<String> name;
+        private Output<String> parent;
+        private @Nullable Output<PolicySpecArgs> spec;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.spec = defaults.spec;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder parent(Input<String> parent) {
+        public Builder parent(Output<String> parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
 
         public Builder parent(String parent) {
-            this.parent = Input.of(Objects.requireNonNull(parent));
+            this.parent = Output.of(Objects.requireNonNull(parent));
             return this;
         }
 
-        public Builder spec(@Nullable Input<PolicySpecArgs> spec) {
+        public Builder spec(@Nullable Output<PolicySpecArgs> spec) {
             this.spec = spec;
             return this;
         }
 
         public Builder spec(@Nullable PolicySpecArgs spec) {
-            this.spec = Input.ofNullable(spec);
+            this.spec = Output.ofNullable(spec);
             return this;
         }
         public PolicyArgs build() {

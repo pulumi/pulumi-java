@@ -5,7 +5,7 @@ package io.pulumi.awsnative.groundstation;
 
 import io.pulumi.awsnative.groundstation.inputs.ConfigDataArgs;
 import io.pulumi.awsnative.groundstation.inputs.ConfigTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -18,39 +18,39 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     public static final ConfigArgs Empty = new ConfigArgs();
 
     @InputImport(name="configData", required=true)
-      private final Input<ConfigDataArgs> configData;
+      private final Output<ConfigDataArgs> configData;
 
-    public Input<ConfigDataArgs> getConfigData() {
+    public Output<ConfigDataArgs> getConfigData() {
         return this.configData;
     }
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<List<ConfigTagArgs>> tags;
+      private final @Nullable Output<List<ConfigTagArgs>> tags;
 
-    public Input<List<ConfigTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<ConfigTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ConfigArgs(
-        Input<ConfigDataArgs> configData,
-        @Nullable Input<String> name,
-        @Nullable Input<List<ConfigTagArgs>> tags) {
+        Output<ConfigDataArgs> configData,
+        @Nullable Output<String> name,
+        @Nullable Output<List<ConfigTagArgs>> tags) {
         this.configData = Objects.requireNonNull(configData, "expected parameter 'configData' to be non-null");
         this.name = name;
         this.tags = tags;
     }
 
     private ConfigArgs() {
-        this.configData = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
+        this.configData = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,9 +62,9 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<ConfigDataArgs> configData;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<ConfigTagArgs>> tags;
+        private Output<ConfigDataArgs> configData;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<ConfigTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -77,33 +77,33 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder configData(Input<ConfigDataArgs> configData) {
+        public Builder configData(Output<ConfigDataArgs> configData) {
             this.configData = Objects.requireNonNull(configData);
             return this;
         }
 
         public Builder configData(ConfigDataArgs configData) {
-            this.configData = Input.of(Objects.requireNonNull(configData));
+            this.configData = Output.of(Objects.requireNonNull(configData));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<ConfigTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<ConfigTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<ConfigTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ConfigArgs build() {

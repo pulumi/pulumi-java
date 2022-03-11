@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.dlm.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs extends io
      * 
      */
     @InputImport(name="interval", required=true)
-      private final Input<Integer> interval;
+      private final Output<Integer> interval;
 
-    public Input<Integer> getInterval() {
+    public Output<Integer> getInterval() {
         return this.interval;
     }
 
@@ -31,10 +31,10 @@ public final class LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs extends io
      * 
      */
     @InputImport(name="intervalUnit")
-      private final @Nullable Input<String> intervalUnit;
+      private final @Nullable Output<String> intervalUnit;
 
-    public Input<String> getIntervalUnit() {
-        return this.intervalUnit == null ? Input.empty() : this.intervalUnit;
+    public Output<String> getIntervalUnit() {
+        return this.intervalUnit == null ? Output.empty() : this.intervalUnit;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs extends io
      * 
      */
     @InputImport(name="times")
-      private final @Nullable Input<String> times;
+      private final @Nullable Output<String> times;
 
-    public Input<String> getTimes() {
-        return this.times == null ? Input.empty() : this.times;
+    public Output<String> getTimes() {
+        return this.times == null ? Output.empty() : this.times;
     }
 
     public LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs(
-        Input<Integer> interval,
-        @Nullable Input<String> intervalUnit,
-        @Nullable Input<String> times) {
+        Output<Integer> interval,
+        @Nullable Output<String> intervalUnit,
+        @Nullable Output<String> times) {
         this.interval = Objects.requireNonNull(interval, "expected parameter 'interval' to be non-null");
         this.intervalUnit = intervalUnit;
         this.times = times;
     }
 
     private LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs() {
-        this.interval = Input.empty();
-        this.intervalUnit = Input.empty();
-        this.times = Input.empty();
+        this.interval = Output.empty();
+        this.intervalUnit = Output.empty();
+        this.times = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs extends io
     }
 
     public static final class Builder {
-        private Input<Integer> interval;
-        private @Nullable Input<String> intervalUnit;
-        private @Nullable Input<String> times;
+        private Output<Integer> interval;
+        private @Nullable Output<String> intervalUnit;
+        private @Nullable Output<String> times;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs extends io
     	      this.times = defaults.times;
         }
 
-        public Builder interval(Input<Integer> interval) {
+        public Builder interval(Output<Integer> interval) {
             this.interval = Objects.requireNonNull(interval);
             return this;
         }
 
         public Builder interval(Integer interval) {
-            this.interval = Input.of(Objects.requireNonNull(interval));
+            this.interval = Output.of(Objects.requireNonNull(interval));
             return this;
         }
 
-        public Builder intervalUnit(@Nullable Input<String> intervalUnit) {
+        public Builder intervalUnit(@Nullable Output<String> intervalUnit) {
             this.intervalUnit = intervalUnit;
             return this;
         }
 
         public Builder intervalUnit(@Nullable String intervalUnit) {
-            this.intervalUnit = Input.ofNullable(intervalUnit);
+            this.intervalUnit = Output.ofNullable(intervalUnit);
             return this;
         }
 
-        public Builder times(@Nullable Input<String> times) {
+        public Builder times(@Nullable Output<String> times) {
             this.times = times;
             return this;
         }
 
         public Builder times(@Nullable String times) {
-            this.times = Input.ofNullable(times);
+            this.times = Output.ofNullable(times);
             return this;
         }
         public LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs build() {

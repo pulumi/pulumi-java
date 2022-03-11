@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,18 +19,18 @@ public final class WorkflowTemplateJobHiveJobQueryListGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="queries", required=true)
-      private final Input<List<String>> queries;
+      private final Output<List<String>> queries;
 
-    public Input<List<String>> getQueries() {
+    public Output<List<String>> getQueries() {
         return this.queries;
     }
 
-    public WorkflowTemplateJobHiveJobQueryListGetArgs(Input<List<String>> queries) {
+    public WorkflowTemplateJobHiveJobQueryListGetArgs(Output<List<String>> queries) {
         this.queries = Objects.requireNonNull(queries, "expected parameter 'queries' to be non-null");
     }
 
     private WorkflowTemplateJobHiveJobQueryListGetArgs() {
-        this.queries = Input.empty();
+        this.queries = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class WorkflowTemplateJobHiveJobQueryListGetArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private Input<List<String>> queries;
+        private Output<List<String>> queries;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class WorkflowTemplateJobHiveJobQueryListGetArgs extends io.pulumi.
     	      this.queries = defaults.queries;
         }
 
-        public Builder queries(Input<List<String>> queries) {
+        public Builder queries(Output<List<String>> queries) {
             this.queries = Objects.requireNonNull(queries);
             return this;
         }
 
         public Builder queries(List<String> queries) {
-            this.queries = Input.of(Objects.requireNonNull(queries));
+            this.queries = Output.of(Objects.requireNonNull(queries));
             return this;
         }
         public WorkflowTemplateJobHiveJobQueryListGetArgs build() {

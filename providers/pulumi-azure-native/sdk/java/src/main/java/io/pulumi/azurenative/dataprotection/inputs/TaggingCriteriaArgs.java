@@ -5,7 +5,7 @@ package io.pulumi.azurenative.dataprotection.inputs;
 
 import io.pulumi.azurenative.dataprotection.inputs.RetentionTagArgs;
 import io.pulumi.azurenative.dataprotection.inputs.ScheduleBasedBackupCriteriaArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -27,10 +27,10 @@ public final class TaggingCriteriaArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="criteria")
-      private final @Nullable Input<List<ScheduleBasedBackupCriteriaArgs>> criteria;
+      private final @Nullable Output<List<ScheduleBasedBackupCriteriaArgs>> criteria;
 
-    public Input<List<ScheduleBasedBackupCriteriaArgs>> getCriteria() {
-        return this.criteria == null ? Input.empty() : this.criteria;
+    public Output<List<ScheduleBasedBackupCriteriaArgs>> getCriteria() {
+        return this.criteria == null ? Output.empty() : this.criteria;
     }
 
     /**
@@ -38,9 +38,9 @@ public final class TaggingCriteriaArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="isDefault", required=true)
-      private final Input<Boolean> isDefault;
+      private final Output<Boolean> isDefault;
 
-    public Input<Boolean> getIsDefault() {
+    public Output<Boolean> getIsDefault() {
         return this.isDefault;
     }
 
@@ -49,9 +49,9 @@ public final class TaggingCriteriaArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tagInfo", required=true)
-      private final Input<RetentionTagArgs> tagInfo;
+      private final Output<RetentionTagArgs> tagInfo;
 
-    public Input<RetentionTagArgs> getTagInfo() {
+    public Output<RetentionTagArgs> getTagInfo() {
         return this.tagInfo;
     }
 
@@ -60,17 +60,17 @@ public final class TaggingCriteriaArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="taggingPriority", required=true)
-      private final Input<Double> taggingPriority;
+      private final Output<Double> taggingPriority;
 
-    public Input<Double> getTaggingPriority() {
+    public Output<Double> getTaggingPriority() {
         return this.taggingPriority;
     }
 
     public TaggingCriteriaArgs(
-        @Nullable Input<List<ScheduleBasedBackupCriteriaArgs>> criteria,
-        Input<Boolean> isDefault,
-        Input<RetentionTagArgs> tagInfo,
-        Input<Double> taggingPriority) {
+        @Nullable Output<List<ScheduleBasedBackupCriteriaArgs>> criteria,
+        Output<Boolean> isDefault,
+        Output<RetentionTagArgs> tagInfo,
+        Output<Double> taggingPriority) {
         this.criteria = criteria;
         this.isDefault = Objects.requireNonNull(isDefault, "expected parameter 'isDefault' to be non-null");
         this.tagInfo = Objects.requireNonNull(tagInfo, "expected parameter 'tagInfo' to be non-null");
@@ -78,10 +78,10 @@ public final class TaggingCriteriaArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private TaggingCriteriaArgs() {
-        this.criteria = Input.empty();
-        this.isDefault = Input.empty();
-        this.tagInfo = Input.empty();
-        this.taggingPriority = Input.empty();
+        this.criteria = Output.empty();
+        this.isDefault = Output.empty();
+        this.tagInfo = Output.empty();
+        this.taggingPriority = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,10 +93,10 @@ public final class TaggingCriteriaArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ScheduleBasedBackupCriteriaArgs>> criteria;
-        private Input<Boolean> isDefault;
-        private Input<RetentionTagArgs> tagInfo;
-        private Input<Double> taggingPriority;
+        private @Nullable Output<List<ScheduleBasedBackupCriteriaArgs>> criteria;
+        private Output<Boolean> isDefault;
+        private Output<RetentionTagArgs> tagInfo;
+        private Output<Double> taggingPriority;
 
         public Builder() {
     	      // Empty
@@ -110,43 +110,43 @@ public final class TaggingCriteriaArgs extends io.pulumi.resources.ResourceArgs 
     	      this.taggingPriority = defaults.taggingPriority;
         }
 
-        public Builder criteria(@Nullable Input<List<ScheduleBasedBackupCriteriaArgs>> criteria) {
+        public Builder criteria(@Nullable Output<List<ScheduleBasedBackupCriteriaArgs>> criteria) {
             this.criteria = criteria;
             return this;
         }
 
         public Builder criteria(@Nullable List<ScheduleBasedBackupCriteriaArgs> criteria) {
-            this.criteria = Input.ofNullable(criteria);
+            this.criteria = Output.ofNullable(criteria);
             return this;
         }
 
-        public Builder isDefault(Input<Boolean> isDefault) {
+        public Builder isDefault(Output<Boolean> isDefault) {
             this.isDefault = Objects.requireNonNull(isDefault);
             return this;
         }
 
         public Builder isDefault(Boolean isDefault) {
-            this.isDefault = Input.of(Objects.requireNonNull(isDefault));
+            this.isDefault = Output.of(Objects.requireNonNull(isDefault));
             return this;
         }
 
-        public Builder tagInfo(Input<RetentionTagArgs> tagInfo) {
+        public Builder tagInfo(Output<RetentionTagArgs> tagInfo) {
             this.tagInfo = Objects.requireNonNull(tagInfo);
             return this;
         }
 
         public Builder tagInfo(RetentionTagArgs tagInfo) {
-            this.tagInfo = Input.of(Objects.requireNonNull(tagInfo));
+            this.tagInfo = Output.of(Objects.requireNonNull(tagInfo));
             return this;
         }
 
-        public Builder taggingPriority(Input<Double> taggingPriority) {
+        public Builder taggingPriority(Output<Double> taggingPriority) {
             this.taggingPriority = Objects.requireNonNull(taggingPriority);
             return this;
         }
 
         public Builder taggingPriority(Double taggingPriority) {
-            this.taggingPriority = Input.of(Objects.requireNonNull(taggingPriority));
+            this.taggingPriority = Output.of(Objects.requireNonNull(taggingPriority));
             return this;
         }
         public TaggingCriteriaArgs build() {

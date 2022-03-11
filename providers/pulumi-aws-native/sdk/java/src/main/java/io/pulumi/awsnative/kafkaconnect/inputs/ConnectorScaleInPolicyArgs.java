@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kafkaconnect.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class ConnectorScaleInPolicyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="cpuUtilizationPercentage", required=true)
-      private final Input<Integer> cpuUtilizationPercentage;
+      private final Output<Integer> cpuUtilizationPercentage;
 
-    public Input<Integer> getCpuUtilizationPercentage() {
+    public Output<Integer> getCpuUtilizationPercentage() {
         return this.cpuUtilizationPercentage;
     }
 
-    public ConnectorScaleInPolicyArgs(Input<Integer> cpuUtilizationPercentage) {
+    public ConnectorScaleInPolicyArgs(Output<Integer> cpuUtilizationPercentage) {
         this.cpuUtilizationPercentage = Objects.requireNonNull(cpuUtilizationPercentage, "expected parameter 'cpuUtilizationPercentage' to be non-null");
     }
 
     private ConnectorScaleInPolicyArgs() {
-        this.cpuUtilizationPercentage = Input.empty();
+        this.cpuUtilizationPercentage = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class ConnectorScaleInPolicyArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<Integer> cpuUtilizationPercentage;
+        private Output<Integer> cpuUtilizationPercentage;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class ConnectorScaleInPolicyArgs extends io.pulumi.resources.Resour
     	      this.cpuUtilizationPercentage = defaults.cpuUtilizationPercentage;
         }
 
-        public Builder cpuUtilizationPercentage(Input<Integer> cpuUtilizationPercentage) {
+        public Builder cpuUtilizationPercentage(Output<Integer> cpuUtilizationPercentage) {
             this.cpuUtilizationPercentage = Objects.requireNonNull(cpuUtilizationPercentage);
             return this;
         }
 
         public Builder cpuUtilizationPercentage(Integer cpuUtilizationPercentage) {
-            this.cpuUtilizationPercentage = Input.of(Objects.requireNonNull(cpuUtilizationPercentage));
+            this.cpuUtilizationPercentage = Output.of(Objects.requireNonNull(cpuUtilizationPercentage));
             return this;
         }
         public ConnectorScaleInPolicyArgs build() {

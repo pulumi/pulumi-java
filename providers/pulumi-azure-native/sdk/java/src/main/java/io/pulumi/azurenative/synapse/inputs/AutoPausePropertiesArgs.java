@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -24,10 +24,10 @@ public final class AutoPausePropertiesArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="delayInMinutes")
-      private final @Nullable Input<Integer> delayInMinutes;
+      private final @Nullable Output<Integer> delayInMinutes;
 
-    public Input<Integer> getDelayInMinutes() {
-        return this.delayInMinutes == null ? Input.empty() : this.delayInMinutes;
+    public Output<Integer> getDelayInMinutes() {
+        return this.delayInMinutes == null ? Output.empty() : this.delayInMinutes;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class AutoPausePropertiesArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     public AutoPausePropertiesArgs(
-        @Nullable Input<Integer> delayInMinutes,
-        @Nullable Input<Boolean> enabled) {
+        @Nullable Output<Integer> delayInMinutes,
+        @Nullable Output<Boolean> enabled) {
         this.delayInMinutes = delayInMinutes;
         this.enabled = enabled;
     }
 
     private AutoPausePropertiesArgs() {
-        this.delayInMinutes = Input.empty();
-        this.enabled = Input.empty();
+        this.delayInMinutes = Output.empty();
+        this.enabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class AutoPausePropertiesArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> delayInMinutes;
-        private @Nullable Input<Boolean> enabled;
+        private @Nullable Output<Integer> delayInMinutes;
+        private @Nullable Output<Boolean> enabled;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class AutoPausePropertiesArgs extends io.pulumi.resources.ResourceA
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder delayInMinutes(@Nullable Input<Integer> delayInMinutes) {
+        public Builder delayInMinutes(@Nullable Output<Integer> delayInMinutes) {
             this.delayInMinutes = delayInMinutes;
             return this;
         }
 
         public Builder delayInMinutes(@Nullable Integer delayInMinutes) {
-            this.delayInMinutes = Input.ofNullable(delayInMinutes);
+            this.delayInMinutes = Output.ofNullable(delayInMinutes);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
         public AutoPausePropertiesArgs build() {

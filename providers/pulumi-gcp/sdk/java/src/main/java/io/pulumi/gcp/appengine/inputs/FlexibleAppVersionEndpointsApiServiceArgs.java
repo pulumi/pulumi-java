@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class FlexibleAppVersionEndpointsApiServiceArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="configId")
-      private final @Nullable Input<String> configId;
+      private final @Nullable Output<String> configId;
 
-    public Input<String> getConfigId() {
-        return this.configId == null ? Input.empty() : this.configId;
+    public Output<String> getConfigId() {
+        return this.configId == null ? Output.empty() : this.configId;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class FlexibleAppVersionEndpointsApiServiceArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="disableTraceSampling")
-      private final @Nullable Input<Boolean> disableTraceSampling;
+      private final @Nullable Output<Boolean> disableTraceSampling;
 
-    public Input<Boolean> getDisableTraceSampling() {
-        return this.disableTraceSampling == null ? Input.empty() : this.disableTraceSampling;
+    public Output<Boolean> getDisableTraceSampling() {
+        return this.disableTraceSampling == null ? Output.empty() : this.disableTraceSampling;
     }
 
     /**
@@ -47,9 +47,9 @@ public final class FlexibleAppVersionEndpointsApiServiceArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -60,17 +60,17 @@ public final class FlexibleAppVersionEndpointsApiServiceArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="rolloutStrategy")
-      private final @Nullable Input<String> rolloutStrategy;
+      private final @Nullable Output<String> rolloutStrategy;
 
-    public Input<String> getRolloutStrategy() {
-        return this.rolloutStrategy == null ? Input.empty() : this.rolloutStrategy;
+    public Output<String> getRolloutStrategy() {
+        return this.rolloutStrategy == null ? Output.empty() : this.rolloutStrategy;
     }
 
     public FlexibleAppVersionEndpointsApiServiceArgs(
-        @Nullable Input<String> configId,
-        @Nullable Input<Boolean> disableTraceSampling,
-        Input<String> name,
-        @Nullable Input<String> rolloutStrategy) {
+        @Nullable Output<String> configId,
+        @Nullable Output<Boolean> disableTraceSampling,
+        Output<String> name,
+        @Nullable Output<String> rolloutStrategy) {
         this.configId = configId;
         this.disableTraceSampling = disableTraceSampling;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
@@ -78,10 +78,10 @@ public final class FlexibleAppVersionEndpointsApiServiceArgs extends io.pulumi.r
     }
 
     private FlexibleAppVersionEndpointsApiServiceArgs() {
-        this.configId = Input.empty();
-        this.disableTraceSampling = Input.empty();
-        this.name = Input.empty();
-        this.rolloutStrategy = Input.empty();
+        this.configId = Output.empty();
+        this.disableTraceSampling = Output.empty();
+        this.name = Output.empty();
+        this.rolloutStrategy = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,10 +93,10 @@ public final class FlexibleAppVersionEndpointsApiServiceArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<String> configId;
-        private @Nullable Input<Boolean> disableTraceSampling;
-        private Input<String> name;
-        private @Nullable Input<String> rolloutStrategy;
+        private @Nullable Output<String> configId;
+        private @Nullable Output<Boolean> disableTraceSampling;
+        private Output<String> name;
+        private @Nullable Output<String> rolloutStrategy;
 
         public Builder() {
     	      // Empty
@@ -110,43 +110,43 @@ public final class FlexibleAppVersionEndpointsApiServiceArgs extends io.pulumi.r
     	      this.rolloutStrategy = defaults.rolloutStrategy;
         }
 
-        public Builder configId(@Nullable Input<String> configId) {
+        public Builder configId(@Nullable Output<String> configId) {
             this.configId = configId;
             return this;
         }
 
         public Builder configId(@Nullable String configId) {
-            this.configId = Input.ofNullable(configId);
+            this.configId = Output.ofNullable(configId);
             return this;
         }
 
-        public Builder disableTraceSampling(@Nullable Input<Boolean> disableTraceSampling) {
+        public Builder disableTraceSampling(@Nullable Output<Boolean> disableTraceSampling) {
             this.disableTraceSampling = disableTraceSampling;
             return this;
         }
 
         public Builder disableTraceSampling(@Nullable Boolean disableTraceSampling) {
-            this.disableTraceSampling = Input.ofNullable(disableTraceSampling);
+            this.disableTraceSampling = Output.ofNullable(disableTraceSampling);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder rolloutStrategy(@Nullable Input<String> rolloutStrategy) {
+        public Builder rolloutStrategy(@Nullable Output<String> rolloutStrategy) {
             this.rolloutStrategy = rolloutStrategy;
             return this;
         }
 
         public Builder rolloutStrategy(@Nullable String rolloutStrategy) {
-            this.rolloutStrategy = Input.ofNullable(rolloutStrategy);
+            this.rolloutStrategy = Output.ofNullable(rolloutStrategy);
             return this;
         }
         public FlexibleAppVersionEndpointsApiServiceArgs build() {

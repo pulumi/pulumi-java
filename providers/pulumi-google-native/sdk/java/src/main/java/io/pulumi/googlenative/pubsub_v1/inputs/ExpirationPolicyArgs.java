@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsub_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ExpirationPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ttl")
-      private final @Nullable Input<String> ttl;
+      private final @Nullable Output<String> ttl;
 
-    public Input<String> getTtl() {
-        return this.ttl == null ? Input.empty() : this.ttl;
+    public Output<String> getTtl() {
+        return this.ttl == null ? Output.empty() : this.ttl;
     }
 
-    public ExpirationPolicyArgs(@Nullable Input<String> ttl) {
+    public ExpirationPolicyArgs(@Nullable Output<String> ttl) {
         this.ttl = ttl;
     }
 
     private ExpirationPolicyArgs() {
-        this.ttl = Input.empty();
+        this.ttl = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ExpirationPolicyArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> ttl;
+        private @Nullable Output<String> ttl;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ExpirationPolicyArgs extends io.pulumi.resources.ResourceArgs
     	      this.ttl = defaults.ttl;
         }
 
-        public Builder ttl(@Nullable Input<String> ttl) {
+        public Builder ttl(@Nullable Output<String> ttl) {
             this.ttl = ttl;
             return this;
         }
 
         public Builder ttl(@Nullable String ttl) {
-            this.ttl = Input.ofNullable(ttl);
+            this.ttl = Output.ofNullable(ttl);
             return this;
         }
         public ExpirationPolicyArgs build() {

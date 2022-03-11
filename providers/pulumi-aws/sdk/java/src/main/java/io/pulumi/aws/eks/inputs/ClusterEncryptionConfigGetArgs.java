@@ -4,7 +4,7 @@
 package io.pulumi.aws.eks.inputs;
 
 import io.pulumi.aws.eks.inputs.ClusterEncryptionConfigProviderGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,9 +20,9 @@ public final class ClusterEncryptionConfigGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="provider", required=true)
-      private final Input<ClusterEncryptionConfigProviderGetArgs> provider;
+      private final Output<ClusterEncryptionConfigProviderGetArgs> provider;
 
-    public Input<ClusterEncryptionConfigProviderGetArgs> getProvider() {
+    public Output<ClusterEncryptionConfigProviderGetArgs> getProvider() {
         return this.provider;
     }
 
@@ -31,22 +31,22 @@ public final class ClusterEncryptionConfigGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="resources", required=true)
-      private final Input<List<String>> resources;
+      private final Output<List<String>> resources;
 
-    public Input<List<String>> getResources() {
+    public Output<List<String>> getResources() {
         return this.resources;
     }
 
     public ClusterEncryptionConfigGetArgs(
-        Input<ClusterEncryptionConfigProviderGetArgs> provider,
-        Input<List<String>> resources) {
+        Output<ClusterEncryptionConfigProviderGetArgs> provider,
+        Output<List<String>> resources) {
         this.provider = Objects.requireNonNull(provider, "expected parameter 'provider' to be non-null");
         this.resources = Objects.requireNonNull(resources, "expected parameter 'resources' to be non-null");
     }
 
     private ClusterEncryptionConfigGetArgs() {
-        this.provider = Input.empty();
-        this.resources = Input.empty();
+        this.provider = Output.empty();
+        this.resources = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class ClusterEncryptionConfigGetArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<ClusterEncryptionConfigProviderGetArgs> provider;
-        private Input<List<String>> resources;
+        private Output<ClusterEncryptionConfigProviderGetArgs> provider;
+        private Output<List<String>> resources;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class ClusterEncryptionConfigGetArgs extends io.pulumi.resources.Re
     	      this.resources = defaults.resources;
         }
 
-        public Builder provider(Input<ClusterEncryptionConfigProviderGetArgs> provider) {
+        public Builder provider(Output<ClusterEncryptionConfigProviderGetArgs> provider) {
             this.provider = Objects.requireNonNull(provider);
             return this;
         }
 
         public Builder provider(ClusterEncryptionConfigProviderGetArgs provider) {
-            this.provider = Input.of(Objects.requireNonNull(provider));
+            this.provider = Output.of(Objects.requireNonNull(provider));
             return this;
         }
 
-        public Builder resources(Input<List<String>> resources) {
+        public Builder resources(Output<List<String>> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
 
         public Builder resources(List<String> resources) {
-            this.resources = Input.of(Objects.requireNonNull(resources));
+            this.resources = Output.of(Objects.requireNonNull(resources));
             return this;
         }
         public ClusterEncryptionConfigGetArgs build() {

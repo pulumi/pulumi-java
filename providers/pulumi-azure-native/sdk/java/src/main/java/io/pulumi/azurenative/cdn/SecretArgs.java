@@ -6,7 +6,7 @@ package io.pulumi.azurenative.cdn;
 import io.pulumi.azurenative.cdn.inputs.CustomerCertificateParametersArgs;
 import io.pulumi.azurenative.cdn.inputs.ManagedCertificateParametersArgs;
 import io.pulumi.azurenative.cdn.inputs.UrlSigningKeyParametersArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Object> parameters;
+      private final @Nullable Output<Object> parameters;
 
-    public Input<Object> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Object> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profileName", required=true)
-      private final Input<String> profileName;
+      private final Output<String> profileName;
 
-    public Input<String> getProfileName() {
+    public Output<String> getProfileName() {
         return this.profileName;
     }
 
@@ -45,9 +45,9 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -56,17 +56,17 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretName")
-      private final @Nullable Input<String> secretName;
+      private final @Nullable Output<String> secretName;
 
-    public Input<String> getSecretName() {
-        return this.secretName == null ? Input.empty() : this.secretName;
+    public Output<String> getSecretName() {
+        return this.secretName == null ? Output.empty() : this.secretName;
     }
 
     public SecretArgs(
-        @Nullable Input<Object> parameters,
-        Input<String> profileName,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> secretName) {
+        @Nullable Output<Object> parameters,
+        Output<String> profileName,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> secretName) {
         this.parameters = parameters;
         this.profileName = Objects.requireNonNull(profileName, "expected parameter 'profileName' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -74,10 +74,10 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SecretArgs() {
-        this.parameters = Input.empty();
-        this.profileName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.secretName = Input.empty();
+        this.parameters = Output.empty();
+        this.profileName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.secretName = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> parameters;
-        private Input<String> profileName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> secretName;
+        private @Nullable Output<Object> parameters;
+        private Output<String> profileName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> secretName;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     	      this.secretName = defaults.secretName;
         }
 
-        public Builder parameters(@Nullable Input<Object> parameters) {
+        public Builder parameters(@Nullable Output<Object> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Object parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder profileName(Input<String> profileName) {
+        public Builder profileName(Output<String> profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
 
         public Builder profileName(String profileName) {
-            this.profileName = Input.of(Objects.requireNonNull(profileName));
+            this.profileName = Output.of(Objects.requireNonNull(profileName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder secretName(@Nullable Input<String> secretName) {
+        public Builder secretName(@Nullable Output<String> secretName) {
             this.secretName = secretName;
             return this;
         }
 
         public Builder secretName(@Nullable String secretName) {
-            this.secretName = Input.ofNullable(secretName);
+            this.secretName = Output.ofNullable(secretName);
             return this;
         }
         public SecretArgs build() {

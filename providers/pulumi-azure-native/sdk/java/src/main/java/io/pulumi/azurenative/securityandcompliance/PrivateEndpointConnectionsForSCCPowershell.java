@@ -9,7 +9,6 @@ import io.pulumi.azurenative.securityandcompliance.outputs.PrivateEndpointRespon
 import io.pulumi.azurenative.securityandcompliance.outputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.azurenative.securityandcompliance.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -157,19 +156,19 @@ public class PrivateEndpointConnectionsForSCCPowershell extends io.pulumi.resour
      * @param options A bag of options that control this resource's behavior.
      */
     public PrivateEndpointConnectionsForSCCPowershell(String name, PrivateEndpointConnectionsForSCCPowershellArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:securityandcompliance:PrivateEndpointConnectionsForSCCPowershell", name, args == null ? PrivateEndpointConnectionsForSCCPowershellArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:securityandcompliance:PrivateEndpointConnectionsForSCCPowershell", name, args == null ? PrivateEndpointConnectionsForSCCPowershellArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private PrivateEndpointConnectionsForSCCPowershell(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private PrivateEndpointConnectionsForSCCPowershell(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:securityandcompliance:PrivateEndpointConnectionsForSCCPowershell", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:securityandcompliance/v20210111:PrivateEndpointConnectionsForSCCPowershell").build()),
-                Input.of(Alias.builder().setType("azure-native:securityandcompliance/v20210308:PrivateEndpointConnectionsForSCCPowershell").build())
+                Output.of(Alias.builder().setType("azure-native:securityandcompliance/v20210111:PrivateEndpointConnectionsForSCCPowershell").build()),
+                Output.of(Alias.builder().setType("azure-native:securityandcompliance/v20210308:PrivateEndpointConnectionsForSCCPowershell").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -183,7 +182,7 @@ public class PrivateEndpointConnectionsForSCCPowershell extends io.pulumi.resour
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PrivateEndpointConnectionsForSCCPowershell get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static PrivateEndpointConnectionsForSCCPowershell get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PrivateEndpointConnectionsForSCCPowershell(name, id, options);
     }
 }

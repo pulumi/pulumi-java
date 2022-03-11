@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -24,10 +24,10 @@ public final class InlineSecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="envMap")
-      private final @Nullable Input<Map<String,String>> envMap;
+      private final @Nullable Output<Map<String,String>> envMap;
 
-    public Input<Map<String,String>> getEnvMap() {
-        return this.envMap == null ? Input.empty() : this.envMap;
+    public Output<Map<String,String>> getEnvMap() {
+        return this.envMap == null ? Output.empty() : this.envMap;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class InlineSecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyName")
-      private final @Nullable Input<String> kmsKeyName;
+      private final @Nullable Output<String> kmsKeyName;
 
-    public Input<String> getKmsKeyName() {
-        return this.kmsKeyName == null ? Input.empty() : this.kmsKeyName;
+    public Output<String> getKmsKeyName() {
+        return this.kmsKeyName == null ? Output.empty() : this.kmsKeyName;
     }
 
     public InlineSecretArgs(
-        @Nullable Input<Map<String,String>> envMap,
-        @Nullable Input<String> kmsKeyName) {
+        @Nullable Output<Map<String,String>> envMap,
+        @Nullable Output<String> kmsKeyName) {
         this.envMap = envMap;
         this.kmsKeyName = kmsKeyName;
     }
 
     private InlineSecretArgs() {
-        this.envMap = Input.empty();
-        this.kmsKeyName = Input.empty();
+        this.envMap = Output.empty();
+        this.kmsKeyName = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class InlineSecretArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> envMap;
-        private @Nullable Input<String> kmsKeyName;
+        private @Nullable Output<Map<String,String>> envMap;
+        private @Nullable Output<String> kmsKeyName;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class InlineSecretArgs extends io.pulumi.resources.ResourceArgs {
     	      this.kmsKeyName = defaults.kmsKeyName;
         }
 
-        public Builder envMap(@Nullable Input<Map<String,String>> envMap) {
+        public Builder envMap(@Nullable Output<Map<String,String>> envMap) {
             this.envMap = envMap;
             return this;
         }
 
         public Builder envMap(@Nullable Map<String,String> envMap) {
-            this.envMap = Input.ofNullable(envMap);
+            this.envMap = Output.ofNullable(envMap);
             return this;
         }
 
-        public Builder kmsKeyName(@Nullable Input<String> kmsKeyName) {
+        public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
             this.kmsKeyName = kmsKeyName;
             return this;
         }
 
         public Builder kmsKeyName(@Nullable String kmsKeyName) {
-            this.kmsKeyName = Input.ofNullable(kmsKeyName);
+            this.kmsKeyName = Output.ofNullable(kmsKeyName);
             return this;
         }
         public InlineSecretArgs build() {

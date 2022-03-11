@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.redis.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,10 +15,10 @@ public final class InstanceServerCaCertArgs extends io.pulumi.resources.Resource
     public static final InstanceServerCaCertArgs Empty = new InstanceServerCaCertArgs();
 
     @InputImport(name="cert")
-      private final @Nullable Input<String> cert;
+      private final @Nullable Output<String> cert;
 
-    public Input<String> getCert() {
-        return this.cert == null ? Input.empty() : this.cert;
+    public Output<String> getCert() {
+        return this.cert == null ? Output.empty() : this.cert;
     }
 
     /**
@@ -29,39 +29,39 @@ public final class InstanceServerCaCertArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="createTime")
-      private final @Nullable Input<String> createTime;
+      private final @Nullable Output<String> createTime;
 
-    public Input<String> getCreateTime() {
-        return this.createTime == null ? Input.empty() : this.createTime;
+    public Output<String> getCreateTime() {
+        return this.createTime == null ? Output.empty() : this.createTime;
     }
 
     @InputImport(name="expireTime")
-      private final @Nullable Input<String> expireTime;
+      private final @Nullable Output<String> expireTime;
 
-    public Input<String> getExpireTime() {
-        return this.expireTime == null ? Input.empty() : this.expireTime;
+    public Output<String> getExpireTime() {
+        return this.expireTime == null ? Output.empty() : this.expireTime;
     }
 
     @InputImport(name="serialNumber")
-      private final @Nullable Input<String> serialNumber;
+      private final @Nullable Output<String> serialNumber;
 
-    public Input<String> getSerialNumber() {
-        return this.serialNumber == null ? Input.empty() : this.serialNumber;
+    public Output<String> getSerialNumber() {
+        return this.serialNumber == null ? Output.empty() : this.serialNumber;
     }
 
     @InputImport(name="sha1Fingerprint")
-      private final @Nullable Input<String> sha1Fingerprint;
+      private final @Nullable Output<String> sha1Fingerprint;
 
-    public Input<String> getSha1Fingerprint() {
-        return this.sha1Fingerprint == null ? Input.empty() : this.sha1Fingerprint;
+    public Output<String> getSha1Fingerprint() {
+        return this.sha1Fingerprint == null ? Output.empty() : this.sha1Fingerprint;
     }
 
     public InstanceServerCaCertArgs(
-        @Nullable Input<String> cert,
-        @Nullable Input<String> createTime,
-        @Nullable Input<String> expireTime,
-        @Nullable Input<String> serialNumber,
-        @Nullable Input<String> sha1Fingerprint) {
+        @Nullable Output<String> cert,
+        @Nullable Output<String> createTime,
+        @Nullable Output<String> expireTime,
+        @Nullable Output<String> serialNumber,
+        @Nullable Output<String> sha1Fingerprint) {
         this.cert = cert;
         this.createTime = createTime;
         this.expireTime = expireTime;
@@ -70,11 +70,11 @@ public final class InstanceServerCaCertArgs extends io.pulumi.resources.Resource
     }
 
     private InstanceServerCaCertArgs() {
-        this.cert = Input.empty();
-        this.createTime = Input.empty();
-        this.expireTime = Input.empty();
-        this.serialNumber = Input.empty();
-        this.sha1Fingerprint = Input.empty();
+        this.cert = Output.empty();
+        this.createTime = Output.empty();
+        this.expireTime = Output.empty();
+        this.serialNumber = Output.empty();
+        this.sha1Fingerprint = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,11 +86,11 @@ public final class InstanceServerCaCertArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> cert;
-        private @Nullable Input<String> createTime;
-        private @Nullable Input<String> expireTime;
-        private @Nullable Input<String> serialNumber;
-        private @Nullable Input<String> sha1Fingerprint;
+        private @Nullable Output<String> cert;
+        private @Nullable Output<String> createTime;
+        private @Nullable Output<String> expireTime;
+        private @Nullable Output<String> serialNumber;
+        private @Nullable Output<String> sha1Fingerprint;
 
         public Builder() {
     	      // Empty
@@ -105,53 +105,53 @@ public final class InstanceServerCaCertArgs extends io.pulumi.resources.Resource
     	      this.sha1Fingerprint = defaults.sha1Fingerprint;
         }
 
-        public Builder cert(@Nullable Input<String> cert) {
+        public Builder cert(@Nullable Output<String> cert) {
             this.cert = cert;
             return this;
         }
 
         public Builder cert(@Nullable String cert) {
-            this.cert = Input.ofNullable(cert);
+            this.cert = Output.ofNullable(cert);
             return this;
         }
 
-        public Builder createTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Input.ofNullable(createTime);
+            this.createTime = Output.ofNullable(createTime);
             return this;
         }
 
-        public Builder expireTime(@Nullable Input<String> expireTime) {
+        public Builder expireTime(@Nullable Output<String> expireTime) {
             this.expireTime = expireTime;
             return this;
         }
 
         public Builder expireTime(@Nullable String expireTime) {
-            this.expireTime = Input.ofNullable(expireTime);
+            this.expireTime = Output.ofNullable(expireTime);
             return this;
         }
 
-        public Builder serialNumber(@Nullable Input<String> serialNumber) {
+        public Builder serialNumber(@Nullable Output<String> serialNumber) {
             this.serialNumber = serialNumber;
             return this;
         }
 
         public Builder serialNumber(@Nullable String serialNumber) {
-            this.serialNumber = Input.ofNullable(serialNumber);
+            this.serialNumber = Output.ofNullable(serialNumber);
             return this;
         }
 
-        public Builder sha1Fingerprint(@Nullable Input<String> sha1Fingerprint) {
+        public Builder sha1Fingerprint(@Nullable Output<String> sha1Fingerprint) {
             this.sha1Fingerprint = sha1Fingerprint;
             return this;
         }
 
         public Builder sha1Fingerprint(@Nullable String sha1Fingerprint) {
-            this.sha1Fingerprint = Input.ofNullable(sha1Fingerprint);
+            this.sha1Fingerprint = Output.ofNullable(sha1Fingerprint);
             return this;
         }
         public InstanceServerCaCertArgs build() {

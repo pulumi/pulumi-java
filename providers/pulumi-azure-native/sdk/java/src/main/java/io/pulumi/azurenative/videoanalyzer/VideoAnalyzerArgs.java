@@ -6,7 +6,7 @@ package io.pulumi.azurenative.videoanalyzer;
 import io.pulumi.azurenative.videoanalyzer.inputs.AccountEncryptionArgs;
 import io.pulumi.azurenative.videoanalyzer.inputs.StorageAccountArgs;
 import io.pulumi.azurenative.videoanalyzer.inputs.VideoAnalyzerIdentityArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class VideoAnalyzerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName")
-      private final @Nullable Input<String> accountName;
+      private final @Nullable Output<String> accountName;
 
-    public Input<String> getAccountName() {
-        return this.accountName == null ? Input.empty() : this.accountName;
+    public Output<String> getAccountName() {
+        return this.accountName == null ? Output.empty() : this.accountName;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class VideoAnalyzerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryption", required=true)
-      private final Input<AccountEncryptionArgs> encryption;
+      private final Output<AccountEncryptionArgs> encryption;
 
-    public Input<AccountEncryptionArgs> getEncryption() {
+    public Output<AccountEncryptionArgs> getEncryption() {
         return this.encryption;
     }
 
@@ -46,10 +46,10 @@ public final class VideoAnalyzerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<VideoAnalyzerIdentityArgs> identity;
+      private final @Nullable Output<VideoAnalyzerIdentityArgs> identity;
 
-    public Input<VideoAnalyzerIdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<VideoAnalyzerIdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class VideoAnalyzerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -68,9 +68,9 @@ public final class VideoAnalyzerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -79,9 +79,9 @@ public final class VideoAnalyzerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAccounts", required=true)
-      private final Input<List<StorageAccountArgs>> storageAccounts;
+      private final Output<List<StorageAccountArgs>> storageAccounts;
 
-    public Input<List<StorageAccountArgs>> getStorageAccounts() {
+    public Output<List<StorageAccountArgs>> getStorageAccounts() {
         return this.storageAccounts;
     }
 
@@ -90,20 +90,20 @@ public final class VideoAnalyzerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public VideoAnalyzerArgs(
-        @Nullable Input<String> accountName,
-        Input<AccountEncryptionArgs> encryption,
-        @Nullable Input<VideoAnalyzerIdentityArgs> identity,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        Input<List<StorageAccountArgs>> storageAccounts,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> accountName,
+        Output<AccountEncryptionArgs> encryption,
+        @Nullable Output<VideoAnalyzerIdentityArgs> identity,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        Output<List<StorageAccountArgs>> storageAccounts,
+        @Nullable Output<Map<String,String>> tags) {
         this.accountName = accountName;
         this.encryption = Objects.requireNonNull(encryption, "expected parameter 'encryption' to be non-null");
         this.identity = identity;
@@ -114,13 +114,13 @@ public final class VideoAnalyzerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VideoAnalyzerArgs() {
-        this.accountName = Input.empty();
-        this.encryption = Input.empty();
-        this.identity = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.storageAccounts = Input.empty();
-        this.tags = Input.empty();
+        this.accountName = Output.empty();
+        this.encryption = Output.empty();
+        this.identity = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.storageAccounts = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -132,13 +132,13 @@ public final class VideoAnalyzerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accountName;
-        private Input<AccountEncryptionArgs> encryption;
-        private @Nullable Input<VideoAnalyzerIdentityArgs> identity;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private Input<List<StorageAccountArgs>> storageAccounts;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> accountName;
+        private Output<AccountEncryptionArgs> encryption;
+        private @Nullable Output<VideoAnalyzerIdentityArgs> identity;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private Output<List<StorageAccountArgs>> storageAccounts;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -155,73 +155,73 @@ public final class VideoAnalyzerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder accountName(@Nullable Input<String> accountName) {
+        public Builder accountName(@Nullable Output<String> accountName) {
             this.accountName = accountName;
             return this;
         }
 
         public Builder accountName(@Nullable String accountName) {
-            this.accountName = Input.ofNullable(accountName);
+            this.accountName = Output.ofNullable(accountName);
             return this;
         }
 
-        public Builder encryption(Input<AccountEncryptionArgs> encryption) {
+        public Builder encryption(Output<AccountEncryptionArgs> encryption) {
             this.encryption = Objects.requireNonNull(encryption);
             return this;
         }
 
         public Builder encryption(AccountEncryptionArgs encryption) {
-            this.encryption = Input.of(Objects.requireNonNull(encryption));
+            this.encryption = Output.of(Objects.requireNonNull(encryption));
             return this;
         }
 
-        public Builder identity(@Nullable Input<VideoAnalyzerIdentityArgs> identity) {
+        public Builder identity(@Nullable Output<VideoAnalyzerIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable VideoAnalyzerIdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder storageAccounts(Input<List<StorageAccountArgs>> storageAccounts) {
+        public Builder storageAccounts(Output<List<StorageAccountArgs>> storageAccounts) {
             this.storageAccounts = Objects.requireNonNull(storageAccounts);
             return this;
         }
 
         public Builder storageAccounts(List<StorageAccountArgs> storageAccounts) {
-            this.storageAccounts = Input.of(Objects.requireNonNull(storageAccounts));
+            this.storageAccounts = Output.of(Objects.requireNonNull(storageAccounts));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public VideoAnalyzerArgs build() {

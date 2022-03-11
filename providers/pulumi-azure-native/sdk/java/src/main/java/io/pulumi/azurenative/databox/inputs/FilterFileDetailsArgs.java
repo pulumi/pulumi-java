@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databox.inputs;
 
 import io.pulumi.azurenative.databox.enums.FilterFileType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class FilterFileDetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="filterFilePath", required=true)
-      private final Input<String> filterFilePath;
+      private final Output<String> filterFilePath;
 
-    public Input<String> getFilterFilePath() {
+    public Output<String> getFilterFilePath() {
         return this.filterFilePath;
     }
 
@@ -35,22 +35,22 @@ public final class FilterFileDetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="filterFileType", required=true)
-      private final Input<Either<String,FilterFileType>> filterFileType;
+      private final Output<Either<String,FilterFileType>> filterFileType;
 
-    public Input<Either<String,FilterFileType>> getFilterFileType() {
+    public Output<Either<String,FilterFileType>> getFilterFileType() {
         return this.filterFileType;
     }
 
     public FilterFileDetailsArgs(
-        Input<String> filterFilePath,
-        Input<Either<String,FilterFileType>> filterFileType) {
+        Output<String> filterFilePath,
+        Output<Either<String,FilterFileType>> filterFileType) {
         this.filterFilePath = Objects.requireNonNull(filterFilePath, "expected parameter 'filterFilePath' to be non-null");
         this.filterFileType = Objects.requireNonNull(filterFileType, "expected parameter 'filterFileType' to be non-null");
     }
 
     private FilterFileDetailsArgs() {
-        this.filterFilePath = Input.empty();
-        this.filterFileType = Input.empty();
+        this.filterFilePath = Output.empty();
+        this.filterFileType = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class FilterFileDetailsArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> filterFilePath;
-        private Input<Either<String,FilterFileType>> filterFileType;
+        private Output<String> filterFilePath;
+        private Output<Either<String,FilterFileType>> filterFileType;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class FilterFileDetailsArgs extends io.pulumi.resources.ResourceArg
     	      this.filterFileType = defaults.filterFileType;
         }
 
-        public Builder filterFilePath(Input<String> filterFilePath) {
+        public Builder filterFilePath(Output<String> filterFilePath) {
             this.filterFilePath = Objects.requireNonNull(filterFilePath);
             return this;
         }
 
         public Builder filterFilePath(String filterFilePath) {
-            this.filterFilePath = Input.of(Objects.requireNonNull(filterFilePath));
+            this.filterFilePath = Output.of(Objects.requireNonNull(filterFilePath));
             return this;
         }
 
-        public Builder filterFileType(Input<Either<String,FilterFileType>> filterFileType) {
+        public Builder filterFileType(Output<Either<String,FilterFileType>> filterFileType) {
             this.filterFileType = Objects.requireNonNull(filterFileType);
             return this;
         }
 
         public Builder filterFileType(Either<String,FilterFileType> filterFileType) {
-            this.filterFileType = Input.of(Objects.requireNonNull(filterFileType));
+            this.filterFileType = Output.of(Objects.requireNonNull(filterFileType));
             return this;
         }
         public FilterFileDetailsArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.billing.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class BudgetBudgetFilterGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="creditTypes")
-      private final @Nullable Input<List<String>> creditTypes;
+      private final @Nullable Output<List<String>> creditTypes;
 
-    public Input<List<String>> getCreditTypes() {
-        return this.creditTypes == null ? Input.empty() : this.creditTypes;
+    public Output<List<String>> getCreditTypes() {
+        return this.creditTypes == null ? Output.empty() : this.creditTypes;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class BudgetBudgetFilterGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="creditTypesTreatment")
-      private final @Nullable Input<String> creditTypesTreatment;
+      private final @Nullable Output<String> creditTypesTreatment;
 
-    public Input<String> getCreditTypesTreatment() {
-        return this.creditTypesTreatment == null ? Input.empty() : this.creditTypesTreatment;
+    public Output<String> getCreditTypesTreatment() {
+        return this.creditTypesTreatment == null ? Output.empty() : this.creditTypesTreatment;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class BudgetBudgetFilterGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class BudgetBudgetFilterGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="projects")
-      private final @Nullable Input<List<String>> projects;
+      private final @Nullable Output<List<String>> projects;
 
-    public Input<List<String>> getProjects() {
-        return this.projects == null ? Input.empty() : this.projects;
+    public Output<List<String>> getProjects() {
+        return this.projects == null ? Output.empty() : this.projects;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class BudgetBudgetFilterGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="services")
-      private final @Nullable Input<List<String>> services;
+      private final @Nullable Output<List<String>> services;
 
-    public Input<List<String>> getServices() {
-        return this.services == null ? Input.empty() : this.services;
+    public Output<List<String>> getServices() {
+        return this.services == null ? Output.empty() : this.services;
     }
 
     /**
@@ -99,19 +99,19 @@ public final class BudgetBudgetFilterGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="subaccounts")
-      private final @Nullable Input<List<String>> subaccounts;
+      private final @Nullable Output<List<String>> subaccounts;
 
-    public Input<List<String>> getSubaccounts() {
-        return this.subaccounts == null ? Input.empty() : this.subaccounts;
+    public Output<List<String>> getSubaccounts() {
+        return this.subaccounts == null ? Output.empty() : this.subaccounts;
     }
 
     public BudgetBudgetFilterGetArgs(
-        @Nullable Input<List<String>> creditTypes,
-        @Nullable Input<String> creditTypesTreatment,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<List<String>> projects,
-        @Nullable Input<List<String>> services,
-        @Nullable Input<List<String>> subaccounts) {
+        @Nullable Output<List<String>> creditTypes,
+        @Nullable Output<String> creditTypesTreatment,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<List<String>> projects,
+        @Nullable Output<List<String>> services,
+        @Nullable Output<List<String>> subaccounts) {
         this.creditTypes = creditTypes;
         this.creditTypesTreatment = creditTypesTreatment;
         this.labels = labels;
@@ -121,12 +121,12 @@ public final class BudgetBudgetFilterGetArgs extends io.pulumi.resources.Resourc
     }
 
     private BudgetBudgetFilterGetArgs() {
-        this.creditTypes = Input.empty();
-        this.creditTypesTreatment = Input.empty();
-        this.labels = Input.empty();
-        this.projects = Input.empty();
-        this.services = Input.empty();
-        this.subaccounts = Input.empty();
+        this.creditTypes = Output.empty();
+        this.creditTypesTreatment = Output.empty();
+        this.labels = Output.empty();
+        this.projects = Output.empty();
+        this.services = Output.empty();
+        this.subaccounts = Output.empty();
     }
 
     public static Builder builder() {
@@ -138,12 +138,12 @@ public final class BudgetBudgetFilterGetArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> creditTypes;
-        private @Nullable Input<String> creditTypesTreatment;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<List<String>> projects;
-        private @Nullable Input<List<String>> services;
-        private @Nullable Input<List<String>> subaccounts;
+        private @Nullable Output<List<String>> creditTypes;
+        private @Nullable Output<String> creditTypesTreatment;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<List<String>> projects;
+        private @Nullable Output<List<String>> services;
+        private @Nullable Output<List<String>> subaccounts;
 
         public Builder() {
     	      // Empty
@@ -159,63 +159,63 @@ public final class BudgetBudgetFilterGetArgs extends io.pulumi.resources.Resourc
     	      this.subaccounts = defaults.subaccounts;
         }
 
-        public Builder creditTypes(@Nullable Input<List<String>> creditTypes) {
+        public Builder creditTypes(@Nullable Output<List<String>> creditTypes) {
             this.creditTypes = creditTypes;
             return this;
         }
 
         public Builder creditTypes(@Nullable List<String> creditTypes) {
-            this.creditTypes = Input.ofNullable(creditTypes);
+            this.creditTypes = Output.ofNullable(creditTypes);
             return this;
         }
 
-        public Builder creditTypesTreatment(@Nullable Input<String> creditTypesTreatment) {
+        public Builder creditTypesTreatment(@Nullable Output<String> creditTypesTreatment) {
             this.creditTypesTreatment = creditTypesTreatment;
             return this;
         }
 
         public Builder creditTypesTreatment(@Nullable String creditTypesTreatment) {
-            this.creditTypesTreatment = Input.ofNullable(creditTypesTreatment);
+            this.creditTypesTreatment = Output.ofNullable(creditTypesTreatment);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder projects(@Nullable Input<List<String>> projects) {
+        public Builder projects(@Nullable Output<List<String>> projects) {
             this.projects = projects;
             return this;
         }
 
         public Builder projects(@Nullable List<String> projects) {
-            this.projects = Input.ofNullable(projects);
+            this.projects = Output.ofNullable(projects);
             return this;
         }
 
-        public Builder services(@Nullable Input<List<String>> services) {
+        public Builder services(@Nullable Output<List<String>> services) {
             this.services = services;
             return this;
         }
 
         public Builder services(@Nullable List<String> services) {
-            this.services = Input.ofNullable(services);
+            this.services = Output.ofNullable(services);
             return this;
         }
 
-        public Builder subaccounts(@Nullable Input<List<String>> subaccounts) {
+        public Builder subaccounts(@Nullable Output<List<String>> subaccounts) {
             this.subaccounts = subaccounts;
             return this;
         }
 
         public Builder subaccounts(@Nullable List<String> subaccounts) {
-            this.subaccounts = Input.ofNullable(subaccounts);
+            this.subaccounts = Output.ofNullable(subaccounts);
             return this;
         }
         public BudgetBudgetFilterGetArgs build() {

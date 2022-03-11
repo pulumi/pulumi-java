@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.enums.StorageAccountType;
 import io.pulumi.azurenative.compute.inputs.EncryptionImagesArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class TargetRegionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryption")
-      private final @Nullable Input<EncryptionImagesArgs> encryption;
+      private final @Nullable Output<EncryptionImagesArgs> encryption;
 
-    public Input<EncryptionImagesArgs> getEncryption() {
-        return this.encryption == null ? Input.empty() : this.encryption;
+    public Output<EncryptionImagesArgs> getEncryption() {
+        return this.encryption == null ? Output.empty() : this.encryption;
     }
 
     /**
@@ -38,9 +38,9 @@ public final class TargetRegionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -49,10 +49,10 @@ public final class TargetRegionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="regionalReplicaCount")
-      private final @Nullable Input<Integer> regionalReplicaCount;
+      private final @Nullable Output<Integer> regionalReplicaCount;
 
-    public Input<Integer> getRegionalReplicaCount() {
-        return this.regionalReplicaCount == null ? Input.empty() : this.regionalReplicaCount;
+    public Output<Integer> getRegionalReplicaCount() {
+        return this.regionalReplicaCount == null ? Output.empty() : this.regionalReplicaCount;
     }
 
     /**
@@ -60,17 +60,17 @@ public final class TargetRegionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAccountType")
-      private final @Nullable Input<Either<String,StorageAccountType>> storageAccountType;
+      private final @Nullable Output<Either<String,StorageAccountType>> storageAccountType;
 
-    public Input<Either<String,StorageAccountType>> getStorageAccountType() {
-        return this.storageAccountType == null ? Input.empty() : this.storageAccountType;
+    public Output<Either<String,StorageAccountType>> getStorageAccountType() {
+        return this.storageAccountType == null ? Output.empty() : this.storageAccountType;
     }
 
     public TargetRegionArgs(
-        @Nullable Input<EncryptionImagesArgs> encryption,
-        Input<String> name,
-        @Nullable Input<Integer> regionalReplicaCount,
-        @Nullable Input<Either<String,StorageAccountType>> storageAccountType) {
+        @Nullable Output<EncryptionImagesArgs> encryption,
+        Output<String> name,
+        @Nullable Output<Integer> regionalReplicaCount,
+        @Nullable Output<Either<String,StorageAccountType>> storageAccountType) {
         this.encryption = encryption;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.regionalReplicaCount = regionalReplicaCount;
@@ -78,10 +78,10 @@ public final class TargetRegionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TargetRegionArgs() {
-        this.encryption = Input.empty();
-        this.name = Input.empty();
-        this.regionalReplicaCount = Input.empty();
-        this.storageAccountType = Input.empty();
+        this.encryption = Output.empty();
+        this.name = Output.empty();
+        this.regionalReplicaCount = Output.empty();
+        this.storageAccountType = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,10 +93,10 @@ public final class TargetRegionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<EncryptionImagesArgs> encryption;
-        private Input<String> name;
-        private @Nullable Input<Integer> regionalReplicaCount;
-        private @Nullable Input<Either<String,StorageAccountType>> storageAccountType;
+        private @Nullable Output<EncryptionImagesArgs> encryption;
+        private Output<String> name;
+        private @Nullable Output<Integer> regionalReplicaCount;
+        private @Nullable Output<Either<String,StorageAccountType>> storageAccountType;
 
         public Builder() {
     	      // Empty
@@ -110,43 +110,43 @@ public final class TargetRegionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.storageAccountType = defaults.storageAccountType;
         }
 
-        public Builder encryption(@Nullable Input<EncryptionImagesArgs> encryption) {
+        public Builder encryption(@Nullable Output<EncryptionImagesArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
 
         public Builder encryption(@Nullable EncryptionImagesArgs encryption) {
-            this.encryption = Input.ofNullable(encryption);
+            this.encryption = Output.ofNullable(encryption);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder regionalReplicaCount(@Nullable Input<Integer> regionalReplicaCount) {
+        public Builder regionalReplicaCount(@Nullable Output<Integer> regionalReplicaCount) {
             this.regionalReplicaCount = regionalReplicaCount;
             return this;
         }
 
         public Builder regionalReplicaCount(@Nullable Integer regionalReplicaCount) {
-            this.regionalReplicaCount = Input.ofNullable(regionalReplicaCount);
+            this.regionalReplicaCount = Output.ofNullable(regionalReplicaCount);
             return this;
         }
 
-        public Builder storageAccountType(@Nullable Input<Either<String,StorageAccountType>> storageAccountType) {
+        public Builder storageAccountType(@Nullable Output<Either<String,StorageAccountType>> storageAccountType) {
             this.storageAccountType = storageAccountType;
             return this;
         }
 
         public Builder storageAccountType(@Nullable Either<String,StorageAccountType> storageAccountType) {
-            this.storageAccountType = Input.ofNullable(storageAccountType);
+            this.storageAccountType = Output.ofNullable(storageAccountType);
             return this;
         }
         public TargetRegionArgs build() {

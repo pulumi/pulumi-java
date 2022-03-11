@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class LibraryRequirementsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="content")
-      private final @Nullable Input<String> content;
+      private final @Nullable Output<String> content;
 
-    public Input<String> getContent() {
-        return this.content == null ? Input.empty() : this.content;
+    public Output<String> getContent() {
+        return this.content == null ? Output.empty() : this.content;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class LibraryRequirementsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="filename")
-      private final @Nullable Input<String> filename;
+      private final @Nullable Output<String> filename;
 
-    public Input<String> getFilename() {
-        return this.filename == null ? Input.empty() : this.filename;
+    public Output<String> getFilename() {
+        return this.filename == null ? Output.empty() : this.filename;
     }
 
     public LibraryRequirementsArgs(
-        @Nullable Input<String> content,
-        @Nullable Input<String> filename) {
+        @Nullable Output<String> content,
+        @Nullable Output<String> filename) {
         this.content = content;
         this.filename = filename;
     }
 
     private LibraryRequirementsArgs() {
-        this.content = Input.empty();
-        this.filename = Input.empty();
+        this.content = Output.empty();
+        this.filename = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class LibraryRequirementsArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> content;
-        private @Nullable Input<String> filename;
+        private @Nullable Output<String> content;
+        private @Nullable Output<String> filename;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class LibraryRequirementsArgs extends io.pulumi.resources.ResourceA
     	      this.filename = defaults.filename;
         }
 
-        public Builder content(@Nullable Input<String> content) {
+        public Builder content(@Nullable Output<String> content) {
             this.content = content;
             return this;
         }
 
         public Builder content(@Nullable String content) {
-            this.content = Input.ofNullable(content);
+            this.content = Output.ofNullable(content);
             return this;
         }
 
-        public Builder filename(@Nullable Input<String> filename) {
+        public Builder filename(@Nullable Output<String> filename) {
             this.filename = filename;
             return this;
         }
 
         public Builder filename(@Nullable String filename) {
-            this.filename = Input.ofNullable(filename);
+            this.filename = Output.ofNullable(filename);
             return this;
         }
         public LibraryRequirementsArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v1.inputs.ColumnLayoutArgs;
 import io.pulumi.googlenative.monitoring_v1.inputs.GridLayoutArgs;
@@ -24,10 +24,10 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="columnLayout")
-      private final @Nullable Input<ColumnLayoutArgs> columnLayout;
+      private final @Nullable Output<ColumnLayoutArgs> columnLayout;
 
-    public Input<ColumnLayoutArgs> getColumnLayout() {
-        return this.columnLayout == null ? Input.empty() : this.columnLayout;
+    public Output<ColumnLayoutArgs> getColumnLayout() {
+        return this.columnLayout == null ? Output.empty() : this.columnLayout;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -46,10 +46,10 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gridLayout")
-      private final @Nullable Input<GridLayoutArgs> gridLayout;
+      private final @Nullable Output<GridLayoutArgs> gridLayout;
 
-    public Input<GridLayoutArgs> getGridLayout() {
-        return this.gridLayout == null ? Input.empty() : this.gridLayout;
+    public Output<GridLayoutArgs> getGridLayout() {
+        return this.gridLayout == null ? Output.empty() : this.gridLayout;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mosaicLayout")
-      private final @Nullable Input<MosaicLayoutArgs> mosaicLayout;
+      private final @Nullable Output<MosaicLayoutArgs> mosaicLayout;
 
-    public Input<MosaicLayoutArgs> getMosaicLayout() {
-        return this.mosaicLayout == null ? Input.empty() : this.mosaicLayout;
+    public Output<MosaicLayoutArgs> getMosaicLayout() {
+        return this.mosaicLayout == null ? Output.empty() : this.mosaicLayout;
     }
 
     /**
@@ -90,17 +90,17 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -108,30 +108,30 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rowLayout")
-      private final @Nullable Input<RowLayoutArgs> rowLayout;
+      private final @Nullable Output<RowLayoutArgs> rowLayout;
 
-    public Input<RowLayoutArgs> getRowLayout() {
-        return this.rowLayout == null ? Input.empty() : this.rowLayout;
+    public Output<RowLayoutArgs> getRowLayout() {
+        return this.rowLayout == null ? Output.empty() : this.rowLayout;
     }
 
     @InputImport(name="validateOnly")
-      private final @Nullable Input<String> validateOnly;
+      private final @Nullable Output<String> validateOnly;
 
-    public Input<String> getValidateOnly() {
-        return this.validateOnly == null ? Input.empty() : this.validateOnly;
+    public Output<String> getValidateOnly() {
+        return this.validateOnly == null ? Output.empty() : this.validateOnly;
     }
 
     public DashboardArgs(
-        @Nullable Input<ColumnLayoutArgs> columnLayout,
-        Input<String> displayName,
-        @Nullable Input<String> etag,
-        @Nullable Input<GridLayoutArgs> gridLayout,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<MosaicLayoutArgs> mosaicLayout,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<RowLayoutArgs> rowLayout,
-        @Nullable Input<String> validateOnly) {
+        @Nullable Output<ColumnLayoutArgs> columnLayout,
+        Output<String> displayName,
+        @Nullable Output<String> etag,
+        @Nullable Output<GridLayoutArgs> gridLayout,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<MosaicLayoutArgs> mosaicLayout,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<RowLayoutArgs> rowLayout,
+        @Nullable Output<String> validateOnly) {
         this.columnLayout = columnLayout;
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
         this.etag = etag;
@@ -145,16 +145,16 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DashboardArgs() {
-        this.columnLayout = Input.empty();
-        this.displayName = Input.empty();
-        this.etag = Input.empty();
-        this.gridLayout = Input.empty();
-        this.labels = Input.empty();
-        this.mosaicLayout = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.rowLayout = Input.empty();
-        this.validateOnly = Input.empty();
+        this.columnLayout = Output.empty();
+        this.displayName = Output.empty();
+        this.etag = Output.empty();
+        this.gridLayout = Output.empty();
+        this.labels = Output.empty();
+        this.mosaicLayout = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.rowLayout = Output.empty();
+        this.validateOnly = Output.empty();
     }
 
     public static Builder builder() {
@@ -166,16 +166,16 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ColumnLayoutArgs> columnLayout;
-        private Input<String> displayName;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<GridLayoutArgs> gridLayout;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<MosaicLayoutArgs> mosaicLayout;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<RowLayoutArgs> rowLayout;
-        private @Nullable Input<String> validateOnly;
+        private @Nullable Output<ColumnLayoutArgs> columnLayout;
+        private Output<String> displayName;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<GridLayoutArgs> gridLayout;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<MosaicLayoutArgs> mosaicLayout;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<RowLayoutArgs> rowLayout;
+        private @Nullable Output<String> validateOnly;
 
         public Builder() {
     	      // Empty
@@ -195,103 +195,103 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     	      this.validateOnly = defaults.validateOnly;
         }
 
-        public Builder columnLayout(@Nullable Input<ColumnLayoutArgs> columnLayout) {
+        public Builder columnLayout(@Nullable Output<ColumnLayoutArgs> columnLayout) {
             this.columnLayout = columnLayout;
             return this;
         }
 
         public Builder columnLayout(@Nullable ColumnLayoutArgs columnLayout) {
-            this.columnLayout = Input.ofNullable(columnLayout);
+            this.columnLayout = Output.ofNullable(columnLayout);
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder gridLayout(@Nullable Input<GridLayoutArgs> gridLayout) {
+        public Builder gridLayout(@Nullable Output<GridLayoutArgs> gridLayout) {
             this.gridLayout = gridLayout;
             return this;
         }
 
         public Builder gridLayout(@Nullable GridLayoutArgs gridLayout) {
-            this.gridLayout = Input.ofNullable(gridLayout);
+            this.gridLayout = Output.ofNullable(gridLayout);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder mosaicLayout(@Nullable Input<MosaicLayoutArgs> mosaicLayout) {
+        public Builder mosaicLayout(@Nullable Output<MosaicLayoutArgs> mosaicLayout) {
             this.mosaicLayout = mosaicLayout;
             return this;
         }
 
         public Builder mosaicLayout(@Nullable MosaicLayoutArgs mosaicLayout) {
-            this.mosaicLayout = Input.ofNullable(mosaicLayout);
+            this.mosaicLayout = Output.ofNullable(mosaicLayout);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder rowLayout(@Nullable Input<RowLayoutArgs> rowLayout) {
+        public Builder rowLayout(@Nullable Output<RowLayoutArgs> rowLayout) {
             this.rowLayout = rowLayout;
             return this;
         }
 
         public Builder rowLayout(@Nullable RowLayoutArgs rowLayout) {
-            this.rowLayout = Input.ofNullable(rowLayout);
+            this.rowLayout = Output.ofNullable(rowLayout);
             return this;
         }
 
-        public Builder validateOnly(@Nullable Input<String> validateOnly) {
+        public Builder validateOnly(@Nullable Output<String> validateOnly) {
             this.validateOnly = validateOnly;
             return this;
         }
 
         public Builder validateOnly(@Nullable String validateOnly) {
-            this.validateOnly = Input.ofNullable(validateOnly);
+            this.validateOnly = Output.ofNullable(validateOnly);
             return this;
         }
         public DashboardArgs build() {

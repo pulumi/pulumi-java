@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.transcoder_v1.inputs.SegmentSettingsArgs;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class MuxStreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="container")
-      private final @Nullable Input<String> container;
+      private final @Nullable Output<String> container;
 
-    public Input<String> getContainer() {
-        return this.container == null ? Input.empty() : this.container;
+    public Output<String> getContainer() {
+        return this.container == null ? Output.empty() : this.container;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class MuxStreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="elementaryStreams")
-      private final @Nullable Input<List<String>> elementaryStreams;
+      private final @Nullable Output<List<String>> elementaryStreams;
 
-    public Input<List<String>> getElementaryStreams() {
-        return this.elementaryStreams == null ? Input.empty() : this.elementaryStreams;
+    public Output<List<String>> getElementaryStreams() {
+        return this.elementaryStreams == null ? Output.empty() : this.elementaryStreams;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class MuxStreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileName")
-      private final @Nullable Input<String> fileName;
+      private final @Nullable Output<String> fileName;
 
-    public Input<String> getFileName() {
-        return this.fileName == null ? Input.empty() : this.fileName;
+    public Output<String> getFileName() {
+        return this.fileName == null ? Output.empty() : this.fileName;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class MuxStreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="key")
-      private final @Nullable Input<String> key;
+      private final @Nullable Output<String> key;
 
-    public Input<String> getKey() {
-        return this.key == null ? Input.empty() : this.key;
+    public Output<String> getKey() {
+        return this.key == null ? Output.empty() : this.key;
     }
 
     /**
@@ -69,18 +69,18 @@ public final class MuxStreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="segmentSettings")
-      private final @Nullable Input<SegmentSettingsArgs> segmentSettings;
+      private final @Nullable Output<SegmentSettingsArgs> segmentSettings;
 
-    public Input<SegmentSettingsArgs> getSegmentSettings() {
-        return this.segmentSettings == null ? Input.empty() : this.segmentSettings;
+    public Output<SegmentSettingsArgs> getSegmentSettings() {
+        return this.segmentSettings == null ? Output.empty() : this.segmentSettings;
     }
 
     public MuxStreamArgs(
-        @Nullable Input<String> container,
-        @Nullable Input<List<String>> elementaryStreams,
-        @Nullable Input<String> fileName,
-        @Nullable Input<String> key,
-        @Nullable Input<SegmentSettingsArgs> segmentSettings) {
+        @Nullable Output<String> container,
+        @Nullable Output<List<String>> elementaryStreams,
+        @Nullable Output<String> fileName,
+        @Nullable Output<String> key,
+        @Nullable Output<SegmentSettingsArgs> segmentSettings) {
         this.container = container;
         this.elementaryStreams = elementaryStreams;
         this.fileName = fileName;
@@ -89,11 +89,11 @@ public final class MuxStreamArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MuxStreamArgs() {
-        this.container = Input.empty();
-        this.elementaryStreams = Input.empty();
-        this.fileName = Input.empty();
-        this.key = Input.empty();
-        this.segmentSettings = Input.empty();
+        this.container = Output.empty();
+        this.elementaryStreams = Output.empty();
+        this.fileName = Output.empty();
+        this.key = Output.empty();
+        this.segmentSettings = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class MuxStreamArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> container;
-        private @Nullable Input<List<String>> elementaryStreams;
-        private @Nullable Input<String> fileName;
-        private @Nullable Input<String> key;
-        private @Nullable Input<SegmentSettingsArgs> segmentSettings;
+        private @Nullable Output<String> container;
+        private @Nullable Output<List<String>> elementaryStreams;
+        private @Nullable Output<String> fileName;
+        private @Nullable Output<String> key;
+        private @Nullable Output<SegmentSettingsArgs> segmentSettings;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class MuxStreamArgs extends io.pulumi.resources.ResourceArgs {
     	      this.segmentSettings = defaults.segmentSettings;
         }
 
-        public Builder container(@Nullable Input<String> container) {
+        public Builder container(@Nullable Output<String> container) {
             this.container = container;
             return this;
         }
 
         public Builder container(@Nullable String container) {
-            this.container = Input.ofNullable(container);
+            this.container = Output.ofNullable(container);
             return this;
         }
 
-        public Builder elementaryStreams(@Nullable Input<List<String>> elementaryStreams) {
+        public Builder elementaryStreams(@Nullable Output<List<String>> elementaryStreams) {
             this.elementaryStreams = elementaryStreams;
             return this;
         }
 
         public Builder elementaryStreams(@Nullable List<String> elementaryStreams) {
-            this.elementaryStreams = Input.ofNullable(elementaryStreams);
+            this.elementaryStreams = Output.ofNullable(elementaryStreams);
             return this;
         }
 
-        public Builder fileName(@Nullable Input<String> fileName) {
+        public Builder fileName(@Nullable Output<String> fileName) {
             this.fileName = fileName;
             return this;
         }
 
         public Builder fileName(@Nullable String fileName) {
-            this.fileName = Input.ofNullable(fileName);
+            this.fileName = Output.ofNullable(fileName);
             return this;
         }
 
-        public Builder key(@Nullable Input<String> key) {
+        public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
 
         public Builder key(@Nullable String key) {
-            this.key = Input.ofNullable(key);
+            this.key = Output.ofNullable(key);
             return this;
         }
 
-        public Builder segmentSettings(@Nullable Input<SegmentSettingsArgs> segmentSettings) {
+        public Builder segmentSettings(@Nullable Output<SegmentSettingsArgs> segmentSettings) {
             this.segmentSettings = segmentSettings;
             return this;
         }
 
         public Builder segmentSettings(@Nullable SegmentSettingsArgs segmentSettings) {
-            this.segmentSettings = Input.ofNullable(segmentSettings);
+            this.segmentSettings = Output.ofNullable(segmentSettings);
             return this;
         }
         public MuxStreamArgs build() {

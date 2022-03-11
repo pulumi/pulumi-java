@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1beta1.enums.PlacementPolicyType;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class PlacementPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<PlacementPolicyType> type;
+      private final @Nullable Output<PlacementPolicyType> type;
 
-    public Input<PlacementPolicyType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<PlacementPolicyType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
-    public PlacementPolicyArgs(@Nullable Input<PlacementPolicyType> type) {
+    public PlacementPolicyArgs(@Nullable Output<PlacementPolicyType> type) {
         this.type = type;
     }
 
     private PlacementPolicyArgs() {
-        this.type = Input.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class PlacementPolicyArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<PlacementPolicyType> type;
+        private @Nullable Output<PlacementPolicyType> type;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class PlacementPolicyArgs extends io.pulumi.resources.ResourceArgs 
     	      this.type = defaults.type;
         }
 
-        public Builder type(@Nullable Input<PlacementPolicyType> type) {
+        public Builder type(@Nullable Output<PlacementPolicyType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable PlacementPolicyType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public PlacementPolicyArgs build() {

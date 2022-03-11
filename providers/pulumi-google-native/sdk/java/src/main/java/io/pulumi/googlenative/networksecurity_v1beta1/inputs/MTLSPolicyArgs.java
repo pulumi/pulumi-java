@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networksecurity_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.networksecurity_v1beta1.inputs.ValidationCAArgs;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class MTLSPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientValidationCa")
-      private final @Nullable Input<List<ValidationCAArgs>> clientValidationCa;
+      private final @Nullable Output<List<ValidationCAArgs>> clientValidationCa;
 
-    public Input<List<ValidationCAArgs>> getClientValidationCa() {
-        return this.clientValidationCa == null ? Input.empty() : this.clientValidationCa;
+    public Output<List<ValidationCAArgs>> getClientValidationCa() {
+        return this.clientValidationCa == null ? Output.empty() : this.clientValidationCa;
     }
 
-    public MTLSPolicyArgs(@Nullable Input<List<ValidationCAArgs>> clientValidationCa) {
+    public MTLSPolicyArgs(@Nullable Output<List<ValidationCAArgs>> clientValidationCa) {
         this.clientValidationCa = clientValidationCa;
     }
 
     private MTLSPolicyArgs() {
-        this.clientValidationCa = Input.empty();
+        this.clientValidationCa = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class MTLSPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ValidationCAArgs>> clientValidationCa;
+        private @Nullable Output<List<ValidationCAArgs>> clientValidationCa;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class MTLSPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.clientValidationCa = defaults.clientValidationCa;
         }
 
-        public Builder clientValidationCa(@Nullable Input<List<ValidationCAArgs>> clientValidationCa) {
+        public Builder clientValidationCa(@Nullable Output<List<ValidationCAArgs>> clientValidationCa) {
             this.clientValidationCa = clientValidationCa;
             return this;
         }
 
         public Builder clientValidationCa(@Nullable List<ValidationCAArgs> clientValidationCa) {
-            this.clientValidationCa = Input.ofNullable(clientValidationCa);
+            this.clientValidationCa = Output.ofNullable(clientValidationCa);
             return this;
         }
         public MTLSPolicyArgs build() {

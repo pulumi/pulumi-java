@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gkehub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.gkehub.inputs.FeatureMembershipConfigmanagementBinauthzArgs;
 import io.pulumi.gcp.gkehub.inputs.FeatureMembershipConfigmanagementConfigSyncArgs;
@@ -23,10 +23,10 @@ public final class FeatureMembershipConfigmanagementArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="binauthz")
-      private final @Nullable Input<FeatureMembershipConfigmanagementBinauthzArgs> binauthz;
+      private final @Nullable Output<FeatureMembershipConfigmanagementBinauthzArgs> binauthz;
 
-    public Input<FeatureMembershipConfigmanagementBinauthzArgs> getBinauthz() {
-        return this.binauthz == null ? Input.empty() : this.binauthz;
+    public Output<FeatureMembershipConfigmanagementBinauthzArgs> getBinauthz() {
+        return this.binauthz == null ? Output.empty() : this.binauthz;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class FeatureMembershipConfigmanagementArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="configSync")
-      private final @Nullable Input<FeatureMembershipConfigmanagementConfigSyncArgs> configSync;
+      private final @Nullable Output<FeatureMembershipConfigmanagementConfigSyncArgs> configSync;
 
-    public Input<FeatureMembershipConfigmanagementConfigSyncArgs> getConfigSync() {
-        return this.configSync == null ? Input.empty() : this.configSync;
+    public Output<FeatureMembershipConfigmanagementConfigSyncArgs> getConfigSync() {
+        return this.configSync == null ? Output.empty() : this.configSync;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class FeatureMembershipConfigmanagementArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="hierarchyController")
-      private final @Nullable Input<FeatureMembershipConfigmanagementHierarchyControllerArgs> hierarchyController;
+      private final @Nullable Output<FeatureMembershipConfigmanagementHierarchyControllerArgs> hierarchyController;
 
-    public Input<FeatureMembershipConfigmanagementHierarchyControllerArgs> getHierarchyController() {
-        return this.hierarchyController == null ? Input.empty() : this.hierarchyController;
+    public Output<FeatureMembershipConfigmanagementHierarchyControllerArgs> getHierarchyController() {
+        return this.hierarchyController == null ? Output.empty() : this.hierarchyController;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class FeatureMembershipConfigmanagementArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="policyController")
-      private final @Nullable Input<FeatureMembershipConfigmanagementPolicyControllerArgs> policyController;
+      private final @Nullable Output<FeatureMembershipConfigmanagementPolicyControllerArgs> policyController;
 
-    public Input<FeatureMembershipConfigmanagementPolicyControllerArgs> getPolicyController() {
-        return this.policyController == null ? Input.empty() : this.policyController;
+    public Output<FeatureMembershipConfigmanagementPolicyControllerArgs> getPolicyController() {
+        return this.policyController == null ? Output.empty() : this.policyController;
     }
 
     /**
@@ -67,18 +67,18 @@ public final class FeatureMembershipConfigmanagementArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public FeatureMembershipConfigmanagementArgs(
-        @Nullable Input<FeatureMembershipConfigmanagementBinauthzArgs> binauthz,
-        @Nullable Input<FeatureMembershipConfigmanagementConfigSyncArgs> configSync,
-        @Nullable Input<FeatureMembershipConfigmanagementHierarchyControllerArgs> hierarchyController,
-        @Nullable Input<FeatureMembershipConfigmanagementPolicyControllerArgs> policyController,
-        @Nullable Input<String> version) {
+        @Nullable Output<FeatureMembershipConfigmanagementBinauthzArgs> binauthz,
+        @Nullable Output<FeatureMembershipConfigmanagementConfigSyncArgs> configSync,
+        @Nullable Output<FeatureMembershipConfigmanagementHierarchyControllerArgs> hierarchyController,
+        @Nullable Output<FeatureMembershipConfigmanagementPolicyControllerArgs> policyController,
+        @Nullable Output<String> version) {
         this.binauthz = binauthz;
         this.configSync = configSync;
         this.hierarchyController = hierarchyController;
@@ -87,11 +87,11 @@ public final class FeatureMembershipConfigmanagementArgs extends io.pulumi.resou
     }
 
     private FeatureMembershipConfigmanagementArgs() {
-        this.binauthz = Input.empty();
-        this.configSync = Input.empty();
-        this.hierarchyController = Input.empty();
-        this.policyController = Input.empty();
-        this.version = Input.empty();
+        this.binauthz = Output.empty();
+        this.configSync = Output.empty();
+        this.hierarchyController = Output.empty();
+        this.policyController = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,11 +103,11 @@ public final class FeatureMembershipConfigmanagementArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<FeatureMembershipConfigmanagementBinauthzArgs> binauthz;
-        private @Nullable Input<FeatureMembershipConfigmanagementConfigSyncArgs> configSync;
-        private @Nullable Input<FeatureMembershipConfigmanagementHierarchyControllerArgs> hierarchyController;
-        private @Nullable Input<FeatureMembershipConfigmanagementPolicyControllerArgs> policyController;
-        private @Nullable Input<String> version;
+        private @Nullable Output<FeatureMembershipConfigmanagementBinauthzArgs> binauthz;
+        private @Nullable Output<FeatureMembershipConfigmanagementConfigSyncArgs> configSync;
+        private @Nullable Output<FeatureMembershipConfigmanagementHierarchyControllerArgs> hierarchyController;
+        private @Nullable Output<FeatureMembershipConfigmanagementPolicyControllerArgs> policyController;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -122,53 +122,53 @@ public final class FeatureMembershipConfigmanagementArgs extends io.pulumi.resou
     	      this.version = defaults.version;
         }
 
-        public Builder binauthz(@Nullable Input<FeatureMembershipConfigmanagementBinauthzArgs> binauthz) {
+        public Builder binauthz(@Nullable Output<FeatureMembershipConfigmanagementBinauthzArgs> binauthz) {
             this.binauthz = binauthz;
             return this;
         }
 
         public Builder binauthz(@Nullable FeatureMembershipConfigmanagementBinauthzArgs binauthz) {
-            this.binauthz = Input.ofNullable(binauthz);
+            this.binauthz = Output.ofNullable(binauthz);
             return this;
         }
 
-        public Builder configSync(@Nullable Input<FeatureMembershipConfigmanagementConfigSyncArgs> configSync) {
+        public Builder configSync(@Nullable Output<FeatureMembershipConfigmanagementConfigSyncArgs> configSync) {
             this.configSync = configSync;
             return this;
         }
 
         public Builder configSync(@Nullable FeatureMembershipConfigmanagementConfigSyncArgs configSync) {
-            this.configSync = Input.ofNullable(configSync);
+            this.configSync = Output.ofNullable(configSync);
             return this;
         }
 
-        public Builder hierarchyController(@Nullable Input<FeatureMembershipConfigmanagementHierarchyControllerArgs> hierarchyController) {
+        public Builder hierarchyController(@Nullable Output<FeatureMembershipConfigmanagementHierarchyControllerArgs> hierarchyController) {
             this.hierarchyController = hierarchyController;
             return this;
         }
 
         public Builder hierarchyController(@Nullable FeatureMembershipConfigmanagementHierarchyControllerArgs hierarchyController) {
-            this.hierarchyController = Input.ofNullable(hierarchyController);
+            this.hierarchyController = Output.ofNullable(hierarchyController);
             return this;
         }
 
-        public Builder policyController(@Nullable Input<FeatureMembershipConfigmanagementPolicyControllerArgs> policyController) {
+        public Builder policyController(@Nullable Output<FeatureMembershipConfigmanagementPolicyControllerArgs> policyController) {
             this.policyController = policyController;
             return this;
         }
 
         public Builder policyController(@Nullable FeatureMembershipConfigmanagementPolicyControllerArgs policyController) {
-            this.policyController = Input.ofNullable(policyController);
+            this.policyController = Output.ofNullable(policyController);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public FeatureMembershipConfigmanagementArgs build() {

@@ -8,7 +8,6 @@ import io.pulumi.awsnative.signer.SigningProfileArgs;
 import io.pulumi.awsnative.signer.enums.SigningProfilePlatformId;
 import io.pulumi.awsnative.signer.outputs.SigningProfileSignatureValidityPeriod;
 import io.pulumi.awsnative.signer.outputs.SigningProfileTag;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -159,14 +158,14 @@ public class SigningProfile extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SigningProfile(String name, SigningProfileArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:signer:SigningProfile", name, args == null ? SigningProfileArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:signer:SigningProfile", name, args == null ? SigningProfileArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private SigningProfile(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private SigningProfile(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:signer:SigningProfile", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -181,7 +180,7 @@ public class SigningProfile extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SigningProfile get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static SigningProfile get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SigningProfile(name, id, options);
     }
 }

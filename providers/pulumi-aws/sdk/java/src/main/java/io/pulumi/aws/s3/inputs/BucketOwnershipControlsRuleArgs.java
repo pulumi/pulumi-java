@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.s3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class BucketOwnershipControlsRuleArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="objectOwnership", required=true)
-      private final Input<String> objectOwnership;
+      private final Output<String> objectOwnership;
 
-    public Input<String> getObjectOwnership() {
+    public Output<String> getObjectOwnership() {
         return this.objectOwnership;
     }
 
-    public BucketOwnershipControlsRuleArgs(Input<String> objectOwnership) {
+    public BucketOwnershipControlsRuleArgs(Output<String> objectOwnership) {
         this.objectOwnership = Objects.requireNonNull(objectOwnership, "expected parameter 'objectOwnership' to be non-null");
     }
 
     private BucketOwnershipControlsRuleArgs() {
-        this.objectOwnership = Input.empty();
+        this.objectOwnership = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class BucketOwnershipControlsRuleArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<String> objectOwnership;
+        private Output<String> objectOwnership;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class BucketOwnershipControlsRuleArgs extends io.pulumi.resources.R
     	      this.objectOwnership = defaults.objectOwnership;
         }
 
-        public Builder objectOwnership(Input<String> objectOwnership) {
+        public Builder objectOwnership(Output<String> objectOwnership) {
             this.objectOwnership = Objects.requireNonNull(objectOwnership);
             return this;
         }
 
         public Builder objectOwnership(String objectOwnership) {
-            this.objectOwnership = Input.of(Objects.requireNonNull(objectOwnership));
+            this.objectOwnership = Output.of(Objects.requireNonNull(objectOwnership));
             return this;
         }
         public BucketOwnershipControlsRuleArgs build() {

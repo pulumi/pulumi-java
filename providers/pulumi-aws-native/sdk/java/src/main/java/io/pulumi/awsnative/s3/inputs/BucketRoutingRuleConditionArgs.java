@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class BucketRoutingRuleConditionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="httpErrorCodeReturnedEquals")
-      private final @Nullable Input<String> httpErrorCodeReturnedEquals;
+      private final @Nullable Output<String> httpErrorCodeReturnedEquals;
 
-    public Input<String> getHttpErrorCodeReturnedEquals() {
-        return this.httpErrorCodeReturnedEquals == null ? Input.empty() : this.httpErrorCodeReturnedEquals;
+    public Output<String> getHttpErrorCodeReturnedEquals() {
+        return this.httpErrorCodeReturnedEquals == null ? Output.empty() : this.httpErrorCodeReturnedEquals;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class BucketRoutingRuleConditionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="keyPrefixEquals")
-      private final @Nullable Input<String> keyPrefixEquals;
+      private final @Nullable Output<String> keyPrefixEquals;
 
-    public Input<String> getKeyPrefixEquals() {
-        return this.keyPrefixEquals == null ? Input.empty() : this.keyPrefixEquals;
+    public Output<String> getKeyPrefixEquals() {
+        return this.keyPrefixEquals == null ? Output.empty() : this.keyPrefixEquals;
     }
 
     public BucketRoutingRuleConditionArgs(
-        @Nullable Input<String> httpErrorCodeReturnedEquals,
-        @Nullable Input<String> keyPrefixEquals) {
+        @Nullable Output<String> httpErrorCodeReturnedEquals,
+        @Nullable Output<String> keyPrefixEquals) {
         this.httpErrorCodeReturnedEquals = httpErrorCodeReturnedEquals;
         this.keyPrefixEquals = keyPrefixEquals;
     }
 
     private BucketRoutingRuleConditionArgs() {
-        this.httpErrorCodeReturnedEquals = Input.empty();
-        this.keyPrefixEquals = Input.empty();
+        this.httpErrorCodeReturnedEquals = Output.empty();
+        this.keyPrefixEquals = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class BucketRoutingRuleConditionArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> httpErrorCodeReturnedEquals;
-        private @Nullable Input<String> keyPrefixEquals;
+        private @Nullable Output<String> httpErrorCodeReturnedEquals;
+        private @Nullable Output<String> keyPrefixEquals;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class BucketRoutingRuleConditionArgs extends io.pulumi.resources.Re
     	      this.keyPrefixEquals = defaults.keyPrefixEquals;
         }
 
-        public Builder httpErrorCodeReturnedEquals(@Nullable Input<String> httpErrorCodeReturnedEquals) {
+        public Builder httpErrorCodeReturnedEquals(@Nullable Output<String> httpErrorCodeReturnedEquals) {
             this.httpErrorCodeReturnedEquals = httpErrorCodeReturnedEquals;
             return this;
         }
 
         public Builder httpErrorCodeReturnedEquals(@Nullable String httpErrorCodeReturnedEquals) {
-            this.httpErrorCodeReturnedEquals = Input.ofNullable(httpErrorCodeReturnedEquals);
+            this.httpErrorCodeReturnedEquals = Output.ofNullable(httpErrorCodeReturnedEquals);
             return this;
         }
 
-        public Builder keyPrefixEquals(@Nullable Input<String> keyPrefixEquals) {
+        public Builder keyPrefixEquals(@Nullable Output<String> keyPrefixEquals) {
             this.keyPrefixEquals = keyPrefixEquals;
             return this;
         }
 
         public Builder keyPrefixEquals(@Nullable String keyPrefixEquals) {
-            this.keyPrefixEquals = Input.ofNullable(keyPrefixEquals);
+            this.keyPrefixEquals = Output.ofNullable(keyPrefixEquals);
             return this;
         }
         public BucketRoutingRuleConditionArgs build() {

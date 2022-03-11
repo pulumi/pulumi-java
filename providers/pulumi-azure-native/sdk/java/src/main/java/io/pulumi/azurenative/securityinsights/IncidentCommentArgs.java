@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class IncidentCommentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="incidentCommentId")
-      private final @Nullable Input<String> incidentCommentId;
+      private final @Nullable Output<String> incidentCommentId;
 
-    public Input<String> getIncidentCommentId() {
-        return this.incidentCommentId == null ? Input.empty() : this.incidentCommentId;
+    public Output<String> getIncidentCommentId() {
+        return this.incidentCommentId == null ? Output.empty() : this.incidentCommentId;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class IncidentCommentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="incidentId", required=true)
-      private final Input<String> incidentId;
+      private final Output<String> incidentId;
 
-    public Input<String> getIncidentId() {
+    public Output<String> getIncidentId() {
         return this.incidentId;
     }
 
@@ -41,9 +41,9 @@ public final class IncidentCommentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="message", required=true)
-      private final Input<String> message;
+      private final Output<String> message;
 
-    public Input<String> getMessage() {
+    public Output<String> getMessage() {
         return this.message;
     }
 
@@ -52,9 +52,9 @@ public final class IncidentCommentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="operationalInsightsResourceProvider", required=true)
-      private final Input<String> operationalInsightsResourceProvider;
+      private final Output<String> operationalInsightsResourceProvider;
 
-    public Input<String> getOperationalInsightsResourceProvider() {
+    public Output<String> getOperationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
     }
 
@@ -63,9 +63,9 @@ public final class IncidentCommentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -74,19 +74,19 @@ public final class IncidentCommentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="workspaceName", required=true)
-      private final Input<String> workspaceName;
+      private final Output<String> workspaceName;
 
-    public Input<String> getWorkspaceName() {
+    public Output<String> getWorkspaceName() {
         return this.workspaceName;
     }
 
     public IncidentCommentArgs(
-        @Nullable Input<String> incidentCommentId,
-        Input<String> incidentId,
-        Input<String> message,
-        Input<String> operationalInsightsResourceProvider,
-        Input<String> resourceGroupName,
-        Input<String> workspaceName) {
+        @Nullable Output<String> incidentCommentId,
+        Output<String> incidentId,
+        Output<String> message,
+        Output<String> operationalInsightsResourceProvider,
+        Output<String> resourceGroupName,
+        Output<String> workspaceName) {
         this.incidentCommentId = incidentCommentId;
         this.incidentId = Objects.requireNonNull(incidentId, "expected parameter 'incidentId' to be non-null");
         this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
@@ -96,12 +96,12 @@ public final class IncidentCommentArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private IncidentCommentArgs() {
-        this.incidentCommentId = Input.empty();
-        this.incidentId = Input.empty();
-        this.message = Input.empty();
-        this.operationalInsightsResourceProvider = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.workspaceName = Input.empty();
+        this.incidentCommentId = Output.empty();
+        this.incidentId = Output.empty();
+        this.message = Output.empty();
+        this.operationalInsightsResourceProvider = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.workspaceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -113,12 +113,12 @@ public final class IncidentCommentArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> incidentCommentId;
-        private Input<String> incidentId;
-        private Input<String> message;
-        private Input<String> operationalInsightsResourceProvider;
-        private Input<String> resourceGroupName;
-        private Input<String> workspaceName;
+        private @Nullable Output<String> incidentCommentId;
+        private Output<String> incidentId;
+        private Output<String> message;
+        private Output<String> operationalInsightsResourceProvider;
+        private Output<String> resourceGroupName;
+        private Output<String> workspaceName;
 
         public Builder() {
     	      // Empty
@@ -134,63 +134,63 @@ public final class IncidentCommentArgs extends io.pulumi.resources.ResourceArgs 
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder incidentCommentId(@Nullable Input<String> incidentCommentId) {
+        public Builder incidentCommentId(@Nullable Output<String> incidentCommentId) {
             this.incidentCommentId = incidentCommentId;
             return this;
         }
 
         public Builder incidentCommentId(@Nullable String incidentCommentId) {
-            this.incidentCommentId = Input.ofNullable(incidentCommentId);
+            this.incidentCommentId = Output.ofNullable(incidentCommentId);
             return this;
         }
 
-        public Builder incidentId(Input<String> incidentId) {
+        public Builder incidentId(Output<String> incidentId) {
             this.incidentId = Objects.requireNonNull(incidentId);
             return this;
         }
 
         public Builder incidentId(String incidentId) {
-            this.incidentId = Input.of(Objects.requireNonNull(incidentId));
+            this.incidentId = Output.of(Objects.requireNonNull(incidentId));
             return this;
         }
 
-        public Builder message(Input<String> message) {
+        public Builder message(Output<String> message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
         public Builder message(String message) {
-            this.message = Input.of(Objects.requireNonNull(message));
+            this.message = Output.of(Objects.requireNonNull(message));
             return this;
         }
 
-        public Builder operationalInsightsResourceProvider(Input<String> operationalInsightsResourceProvider) {
+        public Builder operationalInsightsResourceProvider(Output<String> operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
             return this;
         }
 
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
-            this.operationalInsightsResourceProvider = Input.of(Objects.requireNonNull(operationalInsightsResourceProvider));
+            this.operationalInsightsResourceProvider = Output.of(Objects.requireNonNull(operationalInsightsResourceProvider));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder workspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
+            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
         }
         public IncidentCommentArgs build() {

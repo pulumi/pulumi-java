@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.authorization;
 
 import io.pulumi.azurenative.authorization.inputs.PermissionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class RoleDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assignableScopes")
-      private final @Nullable Input<List<String>> assignableScopes;
+      private final @Nullable Output<List<String>> assignableScopes;
 
-    public Input<List<String>> getAssignableScopes() {
-        return this.assignableScopes == null ? Input.empty() : this.assignableScopes;
+    public Output<List<String>> getAssignableScopes() {
+        return this.assignableScopes == null ? Output.empty() : this.assignableScopes;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class RoleDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class RoleDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permissions")
-      private final @Nullable Input<List<PermissionArgs>> permissions;
+      private final @Nullable Output<List<PermissionArgs>> permissions;
 
-    public Input<List<PermissionArgs>> getPermissions() {
-        return this.permissions == null ? Input.empty() : this.permissions;
+    public Output<List<PermissionArgs>> getPermissions() {
+        return this.permissions == null ? Output.empty() : this.permissions;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class RoleDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleDefinitionId")
-      private final @Nullable Input<String> roleDefinitionId;
+      private final @Nullable Output<String> roleDefinitionId;
 
-    public Input<String> getRoleDefinitionId() {
-        return this.roleDefinitionId == null ? Input.empty() : this.roleDefinitionId;
+    public Output<String> getRoleDefinitionId() {
+        return this.roleDefinitionId == null ? Output.empty() : this.roleDefinitionId;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class RoleDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleName")
-      private final @Nullable Input<String> roleName;
+      private final @Nullable Output<String> roleName;
 
-    public Input<String> getRoleName() {
-        return this.roleName == null ? Input.empty() : this.roleName;
+    public Output<String> getRoleName() {
+        return this.roleName == null ? Output.empty() : this.roleName;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class RoleDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleType")
-      private final @Nullable Input<String> roleType;
+      private final @Nullable Output<String> roleType;
 
-    public Input<String> getRoleType() {
-        return this.roleType == null ? Input.empty() : this.roleType;
+    public Output<String> getRoleType() {
+        return this.roleType == null ? Output.empty() : this.roleType;
     }
 
     /**
@@ -87,20 +87,20 @@ public final class RoleDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope", required=true)
-      private final Input<String> scope;
+      private final Output<String> scope;
 
-    public Input<String> getScope() {
+    public Output<String> getScope() {
         return this.scope;
     }
 
     public RoleDefinitionArgs(
-        @Nullable Input<List<String>> assignableScopes,
-        @Nullable Input<String> description,
-        @Nullable Input<List<PermissionArgs>> permissions,
-        @Nullable Input<String> roleDefinitionId,
-        @Nullable Input<String> roleName,
-        @Nullable Input<String> roleType,
-        Input<String> scope) {
+        @Nullable Output<List<String>> assignableScopes,
+        @Nullable Output<String> description,
+        @Nullable Output<List<PermissionArgs>> permissions,
+        @Nullable Output<String> roleDefinitionId,
+        @Nullable Output<String> roleName,
+        @Nullable Output<String> roleType,
+        Output<String> scope) {
         this.assignableScopes = assignableScopes;
         this.description = description;
         this.permissions = permissions;
@@ -111,13 +111,13 @@ public final class RoleDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RoleDefinitionArgs() {
-        this.assignableScopes = Input.empty();
-        this.description = Input.empty();
-        this.permissions = Input.empty();
-        this.roleDefinitionId = Input.empty();
-        this.roleName = Input.empty();
-        this.roleType = Input.empty();
-        this.scope = Input.empty();
+        this.assignableScopes = Output.empty();
+        this.description = Output.empty();
+        this.permissions = Output.empty();
+        this.roleDefinitionId = Output.empty();
+        this.roleName = Output.empty();
+        this.roleType = Output.empty();
+        this.scope = Output.empty();
     }
 
     public static Builder builder() {
@@ -129,13 +129,13 @@ public final class RoleDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> assignableScopes;
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<PermissionArgs>> permissions;
-        private @Nullable Input<String> roleDefinitionId;
-        private @Nullable Input<String> roleName;
-        private @Nullable Input<String> roleType;
-        private Input<String> scope;
+        private @Nullable Output<List<String>> assignableScopes;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<PermissionArgs>> permissions;
+        private @Nullable Output<String> roleDefinitionId;
+        private @Nullable Output<String> roleName;
+        private @Nullable Output<String> roleType;
+        private Output<String> scope;
 
         public Builder() {
     	      // Empty
@@ -152,73 +152,73 @@ public final class RoleDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.scope = defaults.scope;
         }
 
-        public Builder assignableScopes(@Nullable Input<List<String>> assignableScopes) {
+        public Builder assignableScopes(@Nullable Output<List<String>> assignableScopes) {
             this.assignableScopes = assignableScopes;
             return this;
         }
 
         public Builder assignableScopes(@Nullable List<String> assignableScopes) {
-            this.assignableScopes = Input.ofNullable(assignableScopes);
+            this.assignableScopes = Output.ofNullable(assignableScopes);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder permissions(@Nullable Input<List<PermissionArgs>> permissions) {
+        public Builder permissions(@Nullable Output<List<PermissionArgs>> permissions) {
             this.permissions = permissions;
             return this;
         }
 
         public Builder permissions(@Nullable List<PermissionArgs> permissions) {
-            this.permissions = Input.ofNullable(permissions);
+            this.permissions = Output.ofNullable(permissions);
             return this;
         }
 
-        public Builder roleDefinitionId(@Nullable Input<String> roleDefinitionId) {
+        public Builder roleDefinitionId(@Nullable Output<String> roleDefinitionId) {
             this.roleDefinitionId = roleDefinitionId;
             return this;
         }
 
         public Builder roleDefinitionId(@Nullable String roleDefinitionId) {
-            this.roleDefinitionId = Input.ofNullable(roleDefinitionId);
+            this.roleDefinitionId = Output.ofNullable(roleDefinitionId);
             return this;
         }
 
-        public Builder roleName(@Nullable Input<String> roleName) {
+        public Builder roleName(@Nullable Output<String> roleName) {
             this.roleName = roleName;
             return this;
         }
 
         public Builder roleName(@Nullable String roleName) {
-            this.roleName = Input.ofNullable(roleName);
+            this.roleName = Output.ofNullable(roleName);
             return this;
         }
 
-        public Builder roleType(@Nullable Input<String> roleType) {
+        public Builder roleType(@Nullable Output<String> roleType) {
             this.roleType = roleType;
             return this;
         }
 
         public Builder roleType(@Nullable String roleType) {
-            this.roleType = Input.ofNullable(roleType);
+            this.roleType = Output.ofNullable(roleType);
             return this;
         }
 
-        public Builder scope(Input<String> scope) {
+        public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
         public Builder scope(String scope) {
-            this.scope = Input.of(Objects.requireNonNull(scope));
+            this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
         public RoleDefinitionArgs build() {

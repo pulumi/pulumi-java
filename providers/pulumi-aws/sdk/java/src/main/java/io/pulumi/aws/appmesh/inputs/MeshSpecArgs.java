@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.MeshSpecEgressFilterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class MeshSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="egressFilter")
-      private final @Nullable Input<MeshSpecEgressFilterArgs> egressFilter;
+      private final @Nullable Output<MeshSpecEgressFilterArgs> egressFilter;
 
-    public Input<MeshSpecEgressFilterArgs> getEgressFilter() {
-        return this.egressFilter == null ? Input.empty() : this.egressFilter;
+    public Output<MeshSpecEgressFilterArgs> getEgressFilter() {
+        return this.egressFilter == null ? Output.empty() : this.egressFilter;
     }
 
-    public MeshSpecArgs(@Nullable Input<MeshSpecEgressFilterArgs> egressFilter) {
+    public MeshSpecArgs(@Nullable Output<MeshSpecEgressFilterArgs> egressFilter) {
         this.egressFilter = egressFilter;
     }
 
     private MeshSpecArgs() {
-        this.egressFilter = Input.empty();
+        this.egressFilter = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class MeshSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<MeshSpecEgressFilterArgs> egressFilter;
+        private @Nullable Output<MeshSpecEgressFilterArgs> egressFilter;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class MeshSpecArgs extends io.pulumi.resources.ResourceArgs {
     	      this.egressFilter = defaults.egressFilter;
         }
 
-        public Builder egressFilter(@Nullable Input<MeshSpecEgressFilterArgs> egressFilter) {
+        public Builder egressFilter(@Nullable Output<MeshSpecEgressFilterArgs> egressFilter) {
             this.egressFilter = egressFilter;
             return this;
         }
 
         public Builder egressFilter(@Nullable MeshSpecEgressFilterArgs egressFilter) {
-            this.egressFilter = Input.ofNullable(egressFilter);
+            this.egressFilter = Output.ofNullable(egressFilter);
             return this;
         }
         public MeshSpecArgs build() {

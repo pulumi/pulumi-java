@@ -6,7 +6,7 @@ package io.pulumi.azurenative.sql.inputs;
 import io.pulumi.azurenative.sql.enums.JobStepActionSource;
 import io.pulumi.azurenative.sql.enums.JobStepActionType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class JobStepActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source")
-      private final @Nullable Input<Either<String,JobStepActionSource>> source;
+      private final @Nullable Output<Either<String,JobStepActionSource>> source;
 
-    public Input<Either<String,JobStepActionSource>> getSource() {
-        return this.source == null ? Input.empty() : this.source;
+    public Output<Either<String,JobStepActionSource>> getSource() {
+        return this.source == null ? Output.empty() : this.source;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class JobStepActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<Either<String,JobStepActionType>> type;
+      private final @Nullable Output<Either<String,JobStepActionType>> type;
 
-    public Input<Either<String,JobStepActionType>> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<Either<String,JobStepActionType>> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class JobStepActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value", required=true)
-      private final Input<String> value;
+      private final Output<String> value;
 
-    public Input<String> getValue() {
+    public Output<String> getValue() {
         return this.value;
     }
 
     public JobStepActionArgs(
-        @Nullable Input<Either<String,JobStepActionSource>> source,
-        @Nullable Input<Either<String,JobStepActionType>> type,
-        Input<String> value) {
-        this.source = source == null ? Input.ofLeft("Inline") : source;
-        this.type = type == null ? Input.ofLeft("TSql") : type;
+        @Nullable Output<Either<String,JobStepActionSource>> source,
+        @Nullable Output<Either<String,JobStepActionType>> type,
+        Output<String> value) {
+        this.source = source == null ? Output.ofLeft("Inline") : source;
+        this.type = type == null ? Output.ofLeft("TSql") : type;
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private JobStepActionArgs() {
-        this.source = Input.empty();
-        this.type = Input.empty();
-        this.value = Input.empty();
+        this.source = Output.empty();
+        this.type = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class JobStepActionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,JobStepActionSource>> source;
-        private @Nullable Input<Either<String,JobStepActionType>> type;
-        private Input<String> value;
+        private @Nullable Output<Either<String,JobStepActionSource>> source;
+        private @Nullable Output<Either<String,JobStepActionType>> type;
+        private Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class JobStepActionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder source(@Nullable Input<Either<String,JobStepActionSource>> source) {
+        public Builder source(@Nullable Output<Either<String,JobStepActionSource>> source) {
             this.source = source;
             return this;
         }
 
         public Builder source(@Nullable Either<String,JobStepActionSource> source) {
-            this.source = Input.ofNullable(source);
+            this.source = Output.ofNullable(source);
             return this;
         }
 
-        public Builder type(@Nullable Input<Either<String,JobStepActionType>> type) {
+        public Builder type(@Nullable Output<Either<String,JobStepActionType>> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable Either<String,JobStepActionType> type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder value(Input<String> value) {
+        public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(String value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public JobStepActionArgs build() {

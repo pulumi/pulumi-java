@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class EncryptionInTransitPropertiesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="isEncryptionInTransitEnabled")
-      private final @Nullable Input<Boolean> isEncryptionInTransitEnabled;
+      private final @Nullable Output<Boolean> isEncryptionInTransitEnabled;
 
-    public Input<Boolean> getIsEncryptionInTransitEnabled() {
-        return this.isEncryptionInTransitEnabled == null ? Input.empty() : this.isEncryptionInTransitEnabled;
+    public Output<Boolean> getIsEncryptionInTransitEnabled() {
+        return this.isEncryptionInTransitEnabled == null ? Output.empty() : this.isEncryptionInTransitEnabled;
     }
 
-    public EncryptionInTransitPropertiesArgs(@Nullable Input<Boolean> isEncryptionInTransitEnabled) {
-        this.isEncryptionInTransitEnabled = isEncryptionInTransitEnabled == null ? Input.ofNullable(false) : isEncryptionInTransitEnabled;
+    public EncryptionInTransitPropertiesArgs(@Nullable Output<Boolean> isEncryptionInTransitEnabled) {
+        this.isEncryptionInTransitEnabled = isEncryptionInTransitEnabled == null ? Output.ofNullable(false) : isEncryptionInTransitEnabled;
     }
 
     private EncryptionInTransitPropertiesArgs() {
-        this.isEncryptionInTransitEnabled = Input.empty();
+        this.isEncryptionInTransitEnabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class EncryptionInTransitPropertiesArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> isEncryptionInTransitEnabled;
+        private @Nullable Output<Boolean> isEncryptionInTransitEnabled;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class EncryptionInTransitPropertiesArgs extends io.pulumi.resources
     	      this.isEncryptionInTransitEnabled = defaults.isEncryptionInTransitEnabled;
         }
 
-        public Builder isEncryptionInTransitEnabled(@Nullable Input<Boolean> isEncryptionInTransitEnabled) {
+        public Builder isEncryptionInTransitEnabled(@Nullable Output<Boolean> isEncryptionInTransitEnabled) {
             this.isEncryptionInTransitEnabled = isEncryptionInTransitEnabled;
             return this;
         }
 
         public Builder isEncryptionInTransitEnabled(@Nullable Boolean isEncryptionInTransitEnabled) {
-            this.isEncryptionInTransitEnabled = Input.ofNullable(isEncryptionInTransitEnabled);
+            this.isEncryptionInTransitEnabled = Output.ofNullable(isEncryptionInTransitEnabled);
             return this;
         }
         public EncryptionInTransitPropertiesArgs build() {

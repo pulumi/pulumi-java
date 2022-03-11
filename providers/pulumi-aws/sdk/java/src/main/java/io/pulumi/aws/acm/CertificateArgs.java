@@ -4,7 +4,7 @@
 package io.pulumi.aws.acm;
 
 import io.pulumi.aws.acm.inputs.CertificateOptionsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateAuthorityArn")
-      private final @Nullable Input<String> certificateAuthorityArn;
+      private final @Nullable Output<String> certificateAuthorityArn;
 
-    public Input<String> getCertificateAuthorityArn() {
-        return this.certificateAuthorityArn == null ? Input.empty() : this.certificateAuthorityArn;
+    public Output<String> getCertificateAuthorityArn() {
+        return this.certificateAuthorityArn == null ? Output.empty() : this.certificateAuthorityArn;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateBody")
-      private final @Nullable Input<String> certificateBody;
+      private final @Nullable Output<String> certificateBody;
 
-    public Input<String> getCertificateBody() {
-        return this.certificateBody == null ? Input.empty() : this.certificateBody;
+    public Output<String> getCertificateBody() {
+        return this.certificateBody == null ? Output.empty() : this.certificateBody;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateChain")
-      private final @Nullable Input<String> certificateChain;
+      private final @Nullable Output<String> certificateChain;
 
-    public Input<String> getCertificateChain() {
-        return this.certificateChain == null ? Input.empty() : this.certificateChain;
+    public Output<String> getCertificateChain() {
+        return this.certificateChain == null ? Output.empty() : this.certificateChain;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName")
-      private final @Nullable Input<String> domainName;
+      private final @Nullable Output<String> domainName;
 
-    public Input<String> getDomainName() {
-        return this.domainName == null ? Input.empty() : this.domainName;
+    public Output<String> getDomainName() {
+        return this.domainName == null ? Output.empty() : this.domainName;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="options")
-      private final @Nullable Input<CertificateOptionsArgs> options;
+      private final @Nullable Output<CertificateOptionsArgs> options;
 
-    public Input<CertificateOptionsArgs> getOptions() {
-        return this.options == null ? Input.empty() : this.options;
+    public Output<CertificateOptionsArgs> getOptions() {
+        return this.options == null ? Output.empty() : this.options;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateKey")
-      private final @Nullable Input<String> privateKey;
+      private final @Nullable Output<String> privateKey;
 
-    public Input<String> getPrivateKey() {
-        return this.privateKey == null ? Input.empty() : this.privateKey;
+    public Output<String> getPrivateKey() {
+        return this.privateKey == null ? Output.empty() : this.privateKey;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subjectAlternativeNames")
-      private final @Nullable Input<List<String>> subjectAlternativeNames;
+      private final @Nullable Output<List<String>> subjectAlternativeNames;
 
-    public Input<List<String>> getSubjectAlternativeNames() {
-        return this.subjectAlternativeNames == null ? Input.empty() : this.subjectAlternativeNames;
+    public Output<List<String>> getSubjectAlternativeNames() {
+        return this.subjectAlternativeNames == null ? Output.empty() : this.subjectAlternativeNames;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -112,22 +112,22 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="validationMethod")
-      private final @Nullable Input<String> validationMethod;
+      private final @Nullable Output<String> validationMethod;
 
-    public Input<String> getValidationMethod() {
-        return this.validationMethod == null ? Input.empty() : this.validationMethod;
+    public Output<String> getValidationMethod() {
+        return this.validationMethod == null ? Output.empty() : this.validationMethod;
     }
 
     public CertificateArgs(
-        @Nullable Input<String> certificateAuthorityArn,
-        @Nullable Input<String> certificateBody,
-        @Nullable Input<String> certificateChain,
-        @Nullable Input<String> domainName,
-        @Nullable Input<CertificateOptionsArgs> options,
-        @Nullable Input<String> privateKey,
-        @Nullable Input<List<String>> subjectAlternativeNames,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> validationMethod) {
+        @Nullable Output<String> certificateAuthorityArn,
+        @Nullable Output<String> certificateBody,
+        @Nullable Output<String> certificateChain,
+        @Nullable Output<String> domainName,
+        @Nullable Output<CertificateOptionsArgs> options,
+        @Nullable Output<String> privateKey,
+        @Nullable Output<List<String>> subjectAlternativeNames,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> validationMethod) {
         this.certificateAuthorityArn = certificateAuthorityArn;
         this.certificateBody = certificateBody;
         this.certificateChain = certificateChain;
@@ -140,15 +140,15 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CertificateArgs() {
-        this.certificateAuthorityArn = Input.empty();
-        this.certificateBody = Input.empty();
-        this.certificateChain = Input.empty();
-        this.domainName = Input.empty();
-        this.options = Input.empty();
-        this.privateKey = Input.empty();
-        this.subjectAlternativeNames = Input.empty();
-        this.tags = Input.empty();
-        this.validationMethod = Input.empty();
+        this.certificateAuthorityArn = Output.empty();
+        this.certificateBody = Output.empty();
+        this.certificateChain = Output.empty();
+        this.domainName = Output.empty();
+        this.options = Output.empty();
+        this.privateKey = Output.empty();
+        this.subjectAlternativeNames = Output.empty();
+        this.tags = Output.empty();
+        this.validationMethod = Output.empty();
     }
 
     public static Builder builder() {
@@ -160,15 +160,15 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> certificateAuthorityArn;
-        private @Nullable Input<String> certificateBody;
-        private @Nullable Input<String> certificateChain;
-        private @Nullable Input<String> domainName;
-        private @Nullable Input<CertificateOptionsArgs> options;
-        private @Nullable Input<String> privateKey;
-        private @Nullable Input<List<String>> subjectAlternativeNames;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> validationMethod;
+        private @Nullable Output<String> certificateAuthorityArn;
+        private @Nullable Output<String> certificateBody;
+        private @Nullable Output<String> certificateChain;
+        private @Nullable Output<String> domainName;
+        private @Nullable Output<CertificateOptionsArgs> options;
+        private @Nullable Output<String> privateKey;
+        private @Nullable Output<List<String>> subjectAlternativeNames;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> validationMethod;
 
         public Builder() {
     	      // Empty
@@ -187,93 +187,93 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.validationMethod = defaults.validationMethod;
         }
 
-        public Builder certificateAuthorityArn(@Nullable Input<String> certificateAuthorityArn) {
+        public Builder certificateAuthorityArn(@Nullable Output<String> certificateAuthorityArn) {
             this.certificateAuthorityArn = certificateAuthorityArn;
             return this;
         }
 
         public Builder certificateAuthorityArn(@Nullable String certificateAuthorityArn) {
-            this.certificateAuthorityArn = Input.ofNullable(certificateAuthorityArn);
+            this.certificateAuthorityArn = Output.ofNullable(certificateAuthorityArn);
             return this;
         }
 
-        public Builder certificateBody(@Nullable Input<String> certificateBody) {
+        public Builder certificateBody(@Nullable Output<String> certificateBody) {
             this.certificateBody = certificateBody;
             return this;
         }
 
         public Builder certificateBody(@Nullable String certificateBody) {
-            this.certificateBody = Input.ofNullable(certificateBody);
+            this.certificateBody = Output.ofNullable(certificateBody);
             return this;
         }
 
-        public Builder certificateChain(@Nullable Input<String> certificateChain) {
+        public Builder certificateChain(@Nullable Output<String> certificateChain) {
             this.certificateChain = certificateChain;
             return this;
         }
 
         public Builder certificateChain(@Nullable String certificateChain) {
-            this.certificateChain = Input.ofNullable(certificateChain);
+            this.certificateChain = Output.ofNullable(certificateChain);
             return this;
         }
 
-        public Builder domainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Output<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Input.ofNullable(domainName);
+            this.domainName = Output.ofNullable(domainName);
             return this;
         }
 
-        public Builder options(@Nullable Input<CertificateOptionsArgs> options) {
+        public Builder options(@Nullable Output<CertificateOptionsArgs> options) {
             this.options = options;
             return this;
         }
 
         public Builder options(@Nullable CertificateOptionsArgs options) {
-            this.options = Input.ofNullable(options);
+            this.options = Output.ofNullable(options);
             return this;
         }
 
-        public Builder privateKey(@Nullable Input<String> privateKey) {
+        public Builder privateKey(@Nullable Output<String> privateKey) {
             this.privateKey = privateKey;
             return this;
         }
 
         public Builder privateKey(@Nullable String privateKey) {
-            this.privateKey = Input.ofNullable(privateKey);
+            this.privateKey = Output.ofNullable(privateKey);
             return this;
         }
 
-        public Builder subjectAlternativeNames(@Nullable Input<List<String>> subjectAlternativeNames) {
+        public Builder subjectAlternativeNames(@Nullable Output<List<String>> subjectAlternativeNames) {
             this.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }
 
         public Builder subjectAlternativeNames(@Nullable List<String> subjectAlternativeNames) {
-            this.subjectAlternativeNames = Input.ofNullable(subjectAlternativeNames);
+            this.subjectAlternativeNames = Output.ofNullable(subjectAlternativeNames);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder validationMethod(@Nullable Input<String> validationMethod) {
+        public Builder validationMethod(@Nullable Output<String> validationMethod) {
             this.validationMethod = validationMethod;
             return this;
         }
 
         public Builder validationMethod(@Nullable String validationMethod) {
-            this.validationMethod = Input.ofNullable(validationMethod);
+            this.validationMethod = Output.ofNullable(validationMethod);
             return this;
         }
         public CertificateArgs build() {

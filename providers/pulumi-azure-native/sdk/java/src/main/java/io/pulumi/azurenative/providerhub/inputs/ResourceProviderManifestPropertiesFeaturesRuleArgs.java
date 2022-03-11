@@ -5,7 +5,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.azurenative.providerhub.enums.FeaturesPolicy;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,18 +16,18 @@ public final class ResourceProviderManifestPropertiesFeaturesRuleArgs extends io
     public static final ResourceProviderManifestPropertiesFeaturesRuleArgs Empty = new ResourceProviderManifestPropertiesFeaturesRuleArgs();
 
     @InputImport(name="requiredFeaturesPolicy", required=true)
-      private final Input<Either<String,FeaturesPolicy>> requiredFeaturesPolicy;
+      private final Output<Either<String,FeaturesPolicy>> requiredFeaturesPolicy;
 
-    public Input<Either<String,FeaturesPolicy>> getRequiredFeaturesPolicy() {
+    public Output<Either<String,FeaturesPolicy>> getRequiredFeaturesPolicy() {
         return this.requiredFeaturesPolicy;
     }
 
-    public ResourceProviderManifestPropertiesFeaturesRuleArgs(Input<Either<String,FeaturesPolicy>> requiredFeaturesPolicy) {
+    public ResourceProviderManifestPropertiesFeaturesRuleArgs(Output<Either<String,FeaturesPolicy>> requiredFeaturesPolicy) {
         this.requiredFeaturesPolicy = Objects.requireNonNull(requiredFeaturesPolicy, "expected parameter 'requiredFeaturesPolicy' to be non-null");
     }
 
     private ResourceProviderManifestPropertiesFeaturesRuleArgs() {
-        this.requiredFeaturesPolicy = Input.empty();
+        this.requiredFeaturesPolicy = Output.empty();
     }
 
     public static Builder builder() {
@@ -39,7 +39,7 @@ public final class ResourceProviderManifestPropertiesFeaturesRuleArgs extends io
     }
 
     public static final class Builder {
-        private Input<Either<String,FeaturesPolicy>> requiredFeaturesPolicy;
+        private Output<Either<String,FeaturesPolicy>> requiredFeaturesPolicy;
 
         public Builder() {
     	      // Empty
@@ -50,13 +50,13 @@ public final class ResourceProviderManifestPropertiesFeaturesRuleArgs extends io
     	      this.requiredFeaturesPolicy = defaults.requiredFeaturesPolicy;
         }
 
-        public Builder requiredFeaturesPolicy(Input<Either<String,FeaturesPolicy>> requiredFeaturesPolicy) {
+        public Builder requiredFeaturesPolicy(Output<Either<String,FeaturesPolicy>> requiredFeaturesPolicy) {
             this.requiredFeaturesPolicy = Objects.requireNonNull(requiredFeaturesPolicy);
             return this;
         }
 
         public Builder requiredFeaturesPolicy(Either<String,FeaturesPolicy> requiredFeaturesPolicy) {
-            this.requiredFeaturesPolicy = Input.of(Objects.requireNonNull(requiredFeaturesPolicy));
+            this.requiredFeaturesPolicy = Output.of(Objects.requireNonNull(requiredFeaturesPolicy));
             return this;
         }
         public ResourceProviderManifestPropertiesFeaturesRuleArgs build() {

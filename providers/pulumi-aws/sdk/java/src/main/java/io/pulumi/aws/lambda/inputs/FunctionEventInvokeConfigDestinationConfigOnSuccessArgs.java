@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lambda.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class FunctionEventInvokeConfigDestinationConfigOnSuccessArgs exten
      * 
      */
     @InputImport(name="destination", required=true)
-      private final Input<String> destination;
+      private final Output<String> destination;
 
-    public Input<String> getDestination() {
+    public Output<String> getDestination() {
         return this.destination;
     }
 
-    public FunctionEventInvokeConfigDestinationConfigOnSuccessArgs(Input<String> destination) {
+    public FunctionEventInvokeConfigDestinationConfigOnSuccessArgs(Output<String> destination) {
         this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
     }
 
     private FunctionEventInvokeConfigDestinationConfigOnSuccessArgs() {
-        this.destination = Input.empty();
+        this.destination = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class FunctionEventInvokeConfigDestinationConfigOnSuccessArgs exten
     }
 
     public static final class Builder {
-        private Input<String> destination;
+        private Output<String> destination;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class FunctionEventInvokeConfigDestinationConfigOnSuccessArgs exten
     	      this.destination = defaults.destination;
         }
 
-        public Builder destination(Input<String> destination) {
+        public Builder destination(Output<String> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
         public Builder destination(String destination) {
-            this.destination = Input.of(Objects.requireNonNull(destination));
+            this.destination = Output.of(Objects.requireNonNull(destination));
             return this;
         }
         public FunctionEventInvokeConfigDestinationConfigOnSuccessArgs build() {

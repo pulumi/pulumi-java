@@ -5,7 +5,7 @@ package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.azurenative.streamanalytics.inputs.AzureMachineLearningWebServiceInputsArgs;
 import io.pulumi.azurenative.streamanalytics.inputs.AzureMachineLearningWebServiceOutputColumnArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class AzureMachineLearningWebServiceFunctionBindingArgs extends io.
      * 
      */
     @InputImport(name="apiKey")
-      private final @Nullable Input<String> apiKey;
+      private final @Nullable Output<String> apiKey;
 
-    public Input<String> getApiKey() {
-        return this.apiKey == null ? Input.empty() : this.apiKey;
+    public Output<String> getApiKey() {
+        return this.apiKey == null ? Output.empty() : this.apiKey;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class AzureMachineLearningWebServiceFunctionBindingArgs extends io.
      * 
      */
     @InputImport(name="batchSize")
-      private final @Nullable Input<Integer> batchSize;
+      private final @Nullable Output<Integer> batchSize;
 
-    public Input<Integer> getBatchSize() {
-        return this.batchSize == null ? Input.empty() : this.batchSize;
+    public Output<Integer> getBatchSize() {
+        return this.batchSize == null ? Output.empty() : this.batchSize;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class AzureMachineLearningWebServiceFunctionBindingArgs extends io.
      * 
      */
     @InputImport(name="endpoint")
-      private final @Nullable Input<String> endpoint;
+      private final @Nullable Output<String> endpoint;
 
-    public Input<String> getEndpoint() {
-        return this.endpoint == null ? Input.empty() : this.endpoint;
+    public Output<String> getEndpoint() {
+        return this.endpoint == null ? Output.empty() : this.endpoint;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class AzureMachineLearningWebServiceFunctionBindingArgs extends io.
      * 
      */
     @InputImport(name="inputs")
-      private final @Nullable Input<AzureMachineLearningWebServiceInputsArgs> inputs;
+      private final @Nullable Output<AzureMachineLearningWebServiceInputsArgs> inputs;
 
-    public Input<AzureMachineLearningWebServiceInputsArgs> getInputs() {
-        return this.inputs == null ? Input.empty() : this.inputs;
+    public Output<AzureMachineLearningWebServiceInputsArgs> getInputs() {
+        return this.inputs == null ? Output.empty() : this.inputs;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class AzureMachineLearningWebServiceFunctionBindingArgs extends io.
      * 
      */
     @InputImport(name="outputs")
-      private final @Nullable Input<List<AzureMachineLearningWebServiceOutputColumnArgs>> outputs;
+      private final @Nullable Output<List<AzureMachineLearningWebServiceOutputColumnArgs>> outputs;
 
-    public Input<List<AzureMachineLearningWebServiceOutputColumnArgs>> getOutputs() {
-        return this.outputs == null ? Input.empty() : this.outputs;
+    public Output<List<AzureMachineLearningWebServiceOutputColumnArgs>> getOutputs() {
+        return this.outputs == null ? Output.empty() : this.outputs;
     }
 
     /**
@@ -83,19 +83,19 @@ public final class AzureMachineLearningWebServiceFunctionBindingArgs extends io.
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public AzureMachineLearningWebServiceFunctionBindingArgs(
-        @Nullable Input<String> apiKey,
-        @Nullable Input<Integer> batchSize,
-        @Nullable Input<String> endpoint,
-        @Nullable Input<AzureMachineLearningWebServiceInputsArgs> inputs,
-        @Nullable Input<List<AzureMachineLearningWebServiceOutputColumnArgs>> outputs,
-        Input<String> type) {
+        @Nullable Output<String> apiKey,
+        @Nullable Output<Integer> batchSize,
+        @Nullable Output<String> endpoint,
+        @Nullable Output<AzureMachineLearningWebServiceInputsArgs> inputs,
+        @Nullable Output<List<AzureMachineLearningWebServiceOutputColumnArgs>> outputs,
+        Output<String> type) {
         this.apiKey = apiKey;
         this.batchSize = batchSize;
         this.endpoint = endpoint;
@@ -105,12 +105,12 @@ public final class AzureMachineLearningWebServiceFunctionBindingArgs extends io.
     }
 
     private AzureMachineLearningWebServiceFunctionBindingArgs() {
-        this.apiKey = Input.empty();
-        this.batchSize = Input.empty();
-        this.endpoint = Input.empty();
-        this.inputs = Input.empty();
-        this.outputs = Input.empty();
-        this.type = Input.empty();
+        this.apiKey = Output.empty();
+        this.batchSize = Output.empty();
+        this.endpoint = Output.empty();
+        this.inputs = Output.empty();
+        this.outputs = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -122,12 +122,12 @@ public final class AzureMachineLearningWebServiceFunctionBindingArgs extends io.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> apiKey;
-        private @Nullable Input<Integer> batchSize;
-        private @Nullable Input<String> endpoint;
-        private @Nullable Input<AzureMachineLearningWebServiceInputsArgs> inputs;
-        private @Nullable Input<List<AzureMachineLearningWebServiceOutputColumnArgs>> outputs;
-        private Input<String> type;
+        private @Nullable Output<String> apiKey;
+        private @Nullable Output<Integer> batchSize;
+        private @Nullable Output<String> endpoint;
+        private @Nullable Output<AzureMachineLearningWebServiceInputsArgs> inputs;
+        private @Nullable Output<List<AzureMachineLearningWebServiceOutputColumnArgs>> outputs;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -143,63 +143,63 @@ public final class AzureMachineLearningWebServiceFunctionBindingArgs extends io.
     	      this.type = defaults.type;
         }
 
-        public Builder apiKey(@Nullable Input<String> apiKey) {
+        public Builder apiKey(@Nullable Output<String> apiKey) {
             this.apiKey = apiKey;
             return this;
         }
 
         public Builder apiKey(@Nullable String apiKey) {
-            this.apiKey = Input.ofNullable(apiKey);
+            this.apiKey = Output.ofNullable(apiKey);
             return this;
         }
 
-        public Builder batchSize(@Nullable Input<Integer> batchSize) {
+        public Builder batchSize(@Nullable Output<Integer> batchSize) {
             this.batchSize = batchSize;
             return this;
         }
 
         public Builder batchSize(@Nullable Integer batchSize) {
-            this.batchSize = Input.ofNullable(batchSize);
+            this.batchSize = Output.ofNullable(batchSize);
             return this;
         }
 
-        public Builder endpoint(@Nullable Input<String> endpoint) {
+        public Builder endpoint(@Nullable Output<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
         public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = Input.ofNullable(endpoint);
+            this.endpoint = Output.ofNullable(endpoint);
             return this;
         }
 
-        public Builder inputs(@Nullable Input<AzureMachineLearningWebServiceInputsArgs> inputs) {
+        public Builder inputs(@Nullable Output<AzureMachineLearningWebServiceInputsArgs> inputs) {
             this.inputs = inputs;
             return this;
         }
 
         public Builder inputs(@Nullable AzureMachineLearningWebServiceInputsArgs inputs) {
-            this.inputs = Input.ofNullable(inputs);
+            this.inputs = Output.ofNullable(inputs);
             return this;
         }
 
-        public Builder outputs(@Nullable Input<List<AzureMachineLearningWebServiceOutputColumnArgs>> outputs) {
+        public Builder outputs(@Nullable Output<List<AzureMachineLearningWebServiceOutputColumnArgs>> outputs) {
             this.outputs = outputs;
             return this;
         }
 
         public Builder outputs(@Nullable List<AzureMachineLearningWebServiceOutputColumnArgs> outputs) {
-            this.outputs = Input.ofNullable(outputs);
+            this.outputs = Output.ofNullable(outputs);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public AzureMachineLearningWebServiceFunctionBindingArgs build() {

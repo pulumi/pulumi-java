@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -14,18 +14,18 @@ public final class NodePoolNodeConfigEphemeralStorageConfigArgs extends io.pulum
     public static final NodePoolNodeConfigEphemeralStorageConfigArgs Empty = new NodePoolNodeConfigEphemeralStorageConfigArgs();
 
     @InputImport(name="localSsdCount", required=true)
-      private final Input<Integer> localSsdCount;
+      private final Output<Integer> localSsdCount;
 
-    public Input<Integer> getLocalSsdCount() {
+    public Output<Integer> getLocalSsdCount() {
         return this.localSsdCount;
     }
 
-    public NodePoolNodeConfigEphemeralStorageConfigArgs(Input<Integer> localSsdCount) {
+    public NodePoolNodeConfigEphemeralStorageConfigArgs(Output<Integer> localSsdCount) {
         this.localSsdCount = Objects.requireNonNull(localSsdCount, "expected parameter 'localSsdCount' to be non-null");
     }
 
     private NodePoolNodeConfigEphemeralStorageConfigArgs() {
-        this.localSsdCount = Input.empty();
+        this.localSsdCount = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class NodePoolNodeConfigEphemeralStorageConfigArgs extends io.pulum
     }
 
     public static final class Builder {
-        private Input<Integer> localSsdCount;
+        private Output<Integer> localSsdCount;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class NodePoolNodeConfigEphemeralStorageConfigArgs extends io.pulum
     	      this.localSsdCount = defaults.localSsdCount;
         }
 
-        public Builder localSsdCount(Input<Integer> localSsdCount) {
+        public Builder localSsdCount(Output<Integer> localSsdCount) {
             this.localSsdCount = Objects.requireNonNull(localSsdCount);
             return this;
         }
 
         public Builder localSsdCount(Integer localSsdCount) {
-            this.localSsdCount = Input.of(Objects.requireNonNull(localSsdCount));
+            this.localSsdCount = Output.of(Objects.requireNonNull(localSsdCount));
             return this;
         }
         public NodePoolNodeConfigEphemeralStorageConfigArgs build() {

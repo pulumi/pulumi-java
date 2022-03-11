@@ -11,7 +11,7 @@ import io.pulumi.azurenative.network.inputs.NetworkInterfaceIPConfigurationArgs;
 import io.pulumi.azurenative.network.inputs.NetworkSecurityGroupArgs;
 import io.pulumi.azurenative.network.inputs.PrivateLinkServiceArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -30,10 +30,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dnsSettings")
-      private final @Nullable Input<NetworkInterfaceDnsSettingsArgs> dnsSettings;
+      private final @Nullable Output<NetworkInterfaceDnsSettingsArgs> dnsSettings;
 
-    public Input<NetworkInterfaceDnsSettingsArgs> getDnsSettings() {
-        return this.dnsSettings == null ? Input.empty() : this.dnsSettings;
+    public Output<NetworkInterfaceDnsSettingsArgs> getDnsSettings() {
+        return this.dnsSettings == null ? Output.empty() : this.dnsSettings;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="enableAcceleratedNetworking")
-      private final @Nullable Input<Boolean> enableAcceleratedNetworking;
+      private final @Nullable Output<Boolean> enableAcceleratedNetworking;
 
-    public Input<Boolean> getEnableAcceleratedNetworking() {
-        return this.enableAcceleratedNetworking == null ? Input.empty() : this.enableAcceleratedNetworking;
+    public Output<Boolean> getEnableAcceleratedNetworking() {
+        return this.enableAcceleratedNetworking == null ? Output.empty() : this.enableAcceleratedNetworking;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="enableIPForwarding")
-      private final @Nullable Input<Boolean> enableIPForwarding;
+      private final @Nullable Output<Boolean> enableIPForwarding;
 
-    public Input<Boolean> getEnableIPForwarding() {
-        return this.enableIPForwarding == null ? Input.empty() : this.enableIPForwarding;
+    public Output<Boolean> getEnableIPForwarding() {
+        return this.enableIPForwarding == null ? Output.empty() : this.enableIPForwarding;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="extendedLocation")
-      private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
+      private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Input<ExtendedLocationArgs> getExtendedLocation() {
-        return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
+    public Output<ExtendedLocationArgs> getExtendedLocation() {
+        return this.extendedLocation == null ? Output.empty() : this.extendedLocation;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ipConfigurations")
-      private final @Nullable Input<List<NetworkInterfaceIPConfigurationArgs>> ipConfigurations;
+      private final @Nullable Output<List<NetworkInterfaceIPConfigurationArgs>> ipConfigurations;
 
-    public Input<List<NetworkInterfaceIPConfigurationArgs>> getIpConfigurations() {
-        return this.ipConfigurations == null ? Input.empty() : this.ipConfigurations;
+    public Output<List<NetworkInterfaceIPConfigurationArgs>> getIpConfigurations() {
+        return this.ipConfigurations == null ? Output.empty() : this.ipConfigurations;
     }
 
     /**
@@ -96,10 +96,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -107,10 +107,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="migrationPhase")
-      private final @Nullable Input<Either<String,NetworkInterfaceMigrationPhase>> migrationPhase;
+      private final @Nullable Output<Either<String,NetworkInterfaceMigrationPhase>> migrationPhase;
 
-    public Input<Either<String,NetworkInterfaceMigrationPhase>> getMigrationPhase() {
-        return this.migrationPhase == null ? Input.empty() : this.migrationPhase;
+    public Output<Either<String,NetworkInterfaceMigrationPhase>> getMigrationPhase() {
+        return this.migrationPhase == null ? Output.empty() : this.migrationPhase;
     }
 
     /**
@@ -118,10 +118,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="networkInterfaceName")
-      private final @Nullable Input<String> networkInterfaceName;
+      private final @Nullable Output<String> networkInterfaceName;
 
-    public Input<String> getNetworkInterfaceName() {
-        return this.networkInterfaceName == null ? Input.empty() : this.networkInterfaceName;
+    public Output<String> getNetworkInterfaceName() {
+        return this.networkInterfaceName == null ? Output.empty() : this.networkInterfaceName;
     }
 
     /**
@@ -129,10 +129,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="networkSecurityGroup")
-      private final @Nullable Input<NetworkSecurityGroupArgs> networkSecurityGroup;
+      private final @Nullable Output<NetworkSecurityGroupArgs> networkSecurityGroup;
 
-    public Input<NetworkSecurityGroupArgs> getNetworkSecurityGroup() {
-        return this.networkSecurityGroup == null ? Input.empty() : this.networkSecurityGroup;
+    public Output<NetworkSecurityGroupArgs> getNetworkSecurityGroup() {
+        return this.networkSecurityGroup == null ? Output.empty() : this.networkSecurityGroup;
     }
 
     /**
@@ -140,10 +140,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="nicType")
-      private final @Nullable Input<Either<String,NetworkInterfaceNicType>> nicType;
+      private final @Nullable Output<Either<String,NetworkInterfaceNicType>> nicType;
 
-    public Input<Either<String,NetworkInterfaceNicType>> getNicType() {
-        return this.nicType == null ? Input.empty() : this.nicType;
+    public Output<Either<String,NetworkInterfaceNicType>> getNicType() {
+        return this.nicType == null ? Output.empty() : this.nicType;
     }
 
     /**
@@ -151,10 +151,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="privateLinkService")
-      private final @Nullable Input<PrivateLinkServiceArgs> privateLinkService;
+      private final @Nullable Output<PrivateLinkServiceArgs> privateLinkService;
 
-    public Input<PrivateLinkServiceArgs> getPrivateLinkService() {
-        return this.privateLinkService == null ? Input.empty() : this.privateLinkService;
+    public Output<PrivateLinkServiceArgs> getPrivateLinkService() {
+        return this.privateLinkService == null ? Output.empty() : this.privateLinkService;
     }
 
     /**
@@ -162,9 +162,9 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -173,27 +173,27 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public NetworkInterfaceArgs(
-        @Nullable Input<NetworkInterfaceDnsSettingsArgs> dnsSettings,
-        @Nullable Input<Boolean> enableAcceleratedNetworking,
-        @Nullable Input<Boolean> enableIPForwarding,
-        @Nullable Input<ExtendedLocationArgs> extendedLocation,
-        @Nullable Input<String> id,
-        @Nullable Input<List<NetworkInterfaceIPConfigurationArgs>> ipConfigurations,
-        @Nullable Input<String> location,
-        @Nullable Input<Either<String,NetworkInterfaceMigrationPhase>> migrationPhase,
-        @Nullable Input<String> networkInterfaceName,
-        @Nullable Input<NetworkSecurityGroupArgs> networkSecurityGroup,
-        @Nullable Input<Either<String,NetworkInterfaceNicType>> nicType,
-        @Nullable Input<PrivateLinkServiceArgs> privateLinkService,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<NetworkInterfaceDnsSettingsArgs> dnsSettings,
+        @Nullable Output<Boolean> enableAcceleratedNetworking,
+        @Nullable Output<Boolean> enableIPForwarding,
+        @Nullable Output<ExtendedLocationArgs> extendedLocation,
+        @Nullable Output<String> id,
+        @Nullable Output<List<NetworkInterfaceIPConfigurationArgs>> ipConfigurations,
+        @Nullable Output<String> location,
+        @Nullable Output<Either<String,NetworkInterfaceMigrationPhase>> migrationPhase,
+        @Nullable Output<String> networkInterfaceName,
+        @Nullable Output<NetworkSecurityGroupArgs> networkSecurityGroup,
+        @Nullable Output<Either<String,NetworkInterfaceNicType>> nicType,
+        @Nullable Output<PrivateLinkServiceArgs> privateLinkService,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.dnsSettings = dnsSettings;
         this.enableAcceleratedNetworking = enableAcceleratedNetworking;
         this.enableIPForwarding = enableIPForwarding;
@@ -211,20 +211,20 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private NetworkInterfaceArgs() {
-        this.dnsSettings = Input.empty();
-        this.enableAcceleratedNetworking = Input.empty();
-        this.enableIPForwarding = Input.empty();
-        this.extendedLocation = Input.empty();
-        this.id = Input.empty();
-        this.ipConfigurations = Input.empty();
-        this.location = Input.empty();
-        this.migrationPhase = Input.empty();
-        this.networkInterfaceName = Input.empty();
-        this.networkSecurityGroup = Input.empty();
-        this.nicType = Input.empty();
-        this.privateLinkService = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.dnsSettings = Output.empty();
+        this.enableAcceleratedNetworking = Output.empty();
+        this.enableIPForwarding = Output.empty();
+        this.extendedLocation = Output.empty();
+        this.id = Output.empty();
+        this.ipConfigurations = Output.empty();
+        this.location = Output.empty();
+        this.migrationPhase = Output.empty();
+        this.networkInterfaceName = Output.empty();
+        this.networkSecurityGroup = Output.empty();
+        this.nicType = Output.empty();
+        this.privateLinkService = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -236,20 +236,20 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<NetworkInterfaceDnsSettingsArgs> dnsSettings;
-        private @Nullable Input<Boolean> enableAcceleratedNetworking;
-        private @Nullable Input<Boolean> enableIPForwarding;
-        private @Nullable Input<ExtendedLocationArgs> extendedLocation;
-        private @Nullable Input<String> id;
-        private @Nullable Input<List<NetworkInterfaceIPConfigurationArgs>> ipConfigurations;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Either<String,NetworkInterfaceMigrationPhase>> migrationPhase;
-        private @Nullable Input<String> networkInterfaceName;
-        private @Nullable Input<NetworkSecurityGroupArgs> networkSecurityGroup;
-        private @Nullable Input<Either<String,NetworkInterfaceNicType>> nicType;
-        private @Nullable Input<PrivateLinkServiceArgs> privateLinkService;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<NetworkInterfaceDnsSettingsArgs> dnsSettings;
+        private @Nullable Output<Boolean> enableAcceleratedNetworking;
+        private @Nullable Output<Boolean> enableIPForwarding;
+        private @Nullable Output<ExtendedLocationArgs> extendedLocation;
+        private @Nullable Output<String> id;
+        private @Nullable Output<List<NetworkInterfaceIPConfigurationArgs>> ipConfigurations;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Either<String,NetworkInterfaceMigrationPhase>> migrationPhase;
+        private @Nullable Output<String> networkInterfaceName;
+        private @Nullable Output<NetworkSecurityGroupArgs> networkSecurityGroup;
+        private @Nullable Output<Either<String,NetworkInterfaceNicType>> nicType;
+        private @Nullable Output<PrivateLinkServiceArgs> privateLinkService;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -273,143 +273,143 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     	      this.tags = defaults.tags;
         }
 
-        public Builder dnsSettings(@Nullable Input<NetworkInterfaceDnsSettingsArgs> dnsSettings) {
+        public Builder dnsSettings(@Nullable Output<NetworkInterfaceDnsSettingsArgs> dnsSettings) {
             this.dnsSettings = dnsSettings;
             return this;
         }
 
         public Builder dnsSettings(@Nullable NetworkInterfaceDnsSettingsArgs dnsSettings) {
-            this.dnsSettings = Input.ofNullable(dnsSettings);
+            this.dnsSettings = Output.ofNullable(dnsSettings);
             return this;
         }
 
-        public Builder enableAcceleratedNetworking(@Nullable Input<Boolean> enableAcceleratedNetworking) {
+        public Builder enableAcceleratedNetworking(@Nullable Output<Boolean> enableAcceleratedNetworking) {
             this.enableAcceleratedNetworking = enableAcceleratedNetworking;
             return this;
         }
 
         public Builder enableAcceleratedNetworking(@Nullable Boolean enableAcceleratedNetworking) {
-            this.enableAcceleratedNetworking = Input.ofNullable(enableAcceleratedNetworking);
+            this.enableAcceleratedNetworking = Output.ofNullable(enableAcceleratedNetworking);
             return this;
         }
 
-        public Builder enableIPForwarding(@Nullable Input<Boolean> enableIPForwarding) {
+        public Builder enableIPForwarding(@Nullable Output<Boolean> enableIPForwarding) {
             this.enableIPForwarding = enableIPForwarding;
             return this;
         }
 
         public Builder enableIPForwarding(@Nullable Boolean enableIPForwarding) {
-            this.enableIPForwarding = Input.ofNullable(enableIPForwarding);
+            this.enableIPForwarding = Output.ofNullable(enableIPForwarding);
             return this;
         }
 
-        public Builder extendedLocation(@Nullable Input<ExtendedLocationArgs> extendedLocation) {
+        public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
 
         public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
-            this.extendedLocation = Input.ofNullable(extendedLocation);
+            this.extendedLocation = Output.ofNullable(extendedLocation);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder ipConfigurations(@Nullable Input<List<NetworkInterfaceIPConfigurationArgs>> ipConfigurations) {
+        public Builder ipConfigurations(@Nullable Output<List<NetworkInterfaceIPConfigurationArgs>> ipConfigurations) {
             this.ipConfigurations = ipConfigurations;
             return this;
         }
 
         public Builder ipConfigurations(@Nullable List<NetworkInterfaceIPConfigurationArgs> ipConfigurations) {
-            this.ipConfigurations = Input.ofNullable(ipConfigurations);
+            this.ipConfigurations = Output.ofNullable(ipConfigurations);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder migrationPhase(@Nullable Input<Either<String,NetworkInterfaceMigrationPhase>> migrationPhase) {
+        public Builder migrationPhase(@Nullable Output<Either<String,NetworkInterfaceMigrationPhase>> migrationPhase) {
             this.migrationPhase = migrationPhase;
             return this;
         }
 
         public Builder migrationPhase(@Nullable Either<String,NetworkInterfaceMigrationPhase> migrationPhase) {
-            this.migrationPhase = Input.ofNullable(migrationPhase);
+            this.migrationPhase = Output.ofNullable(migrationPhase);
             return this;
         }
 
-        public Builder networkInterfaceName(@Nullable Input<String> networkInterfaceName) {
+        public Builder networkInterfaceName(@Nullable Output<String> networkInterfaceName) {
             this.networkInterfaceName = networkInterfaceName;
             return this;
         }
 
         public Builder networkInterfaceName(@Nullable String networkInterfaceName) {
-            this.networkInterfaceName = Input.ofNullable(networkInterfaceName);
+            this.networkInterfaceName = Output.ofNullable(networkInterfaceName);
             return this;
         }
 
-        public Builder networkSecurityGroup(@Nullable Input<NetworkSecurityGroupArgs> networkSecurityGroup) {
+        public Builder networkSecurityGroup(@Nullable Output<NetworkSecurityGroupArgs> networkSecurityGroup) {
             this.networkSecurityGroup = networkSecurityGroup;
             return this;
         }
 
         public Builder networkSecurityGroup(@Nullable NetworkSecurityGroupArgs networkSecurityGroup) {
-            this.networkSecurityGroup = Input.ofNullable(networkSecurityGroup);
+            this.networkSecurityGroup = Output.ofNullable(networkSecurityGroup);
             return this;
         }
 
-        public Builder nicType(@Nullable Input<Either<String,NetworkInterfaceNicType>> nicType) {
+        public Builder nicType(@Nullable Output<Either<String,NetworkInterfaceNicType>> nicType) {
             this.nicType = nicType;
             return this;
         }
 
         public Builder nicType(@Nullable Either<String,NetworkInterfaceNicType> nicType) {
-            this.nicType = Input.ofNullable(nicType);
+            this.nicType = Output.ofNullable(nicType);
             return this;
         }
 
-        public Builder privateLinkService(@Nullable Input<PrivateLinkServiceArgs> privateLinkService) {
+        public Builder privateLinkService(@Nullable Output<PrivateLinkServiceArgs> privateLinkService) {
             this.privateLinkService = privateLinkService;
             return this;
         }
 
         public Builder privateLinkService(@Nullable PrivateLinkServiceArgs privateLinkService) {
-            this.privateLinkService = Input.ofNullable(privateLinkService);
+            this.privateLinkService = Output.ofNullable(privateLinkService);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public NetworkInterfaceArgs build() {

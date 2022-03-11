@@ -4,7 +4,7 @@
 package io.pulumi.aws.emr.inputs;
 
 import io.pulumi.aws.emr.inputs.ClusterCoreInstanceGroupEbsConfigGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class ClusterCoreInstanceGroupGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="autoscalingPolicy")
-      private final @Nullable Input<String> autoscalingPolicy;
+      private final @Nullable Output<String> autoscalingPolicy;
 
-    public Input<String> getAutoscalingPolicy() {
-        return this.autoscalingPolicy == null ? Input.empty() : this.autoscalingPolicy;
+    public Output<String> getAutoscalingPolicy() {
+        return this.autoscalingPolicy == null ? Output.empty() : this.autoscalingPolicy;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ClusterCoreInstanceGroupGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="bidPrice")
-      private final @Nullable Input<String> bidPrice;
+      private final @Nullable Output<String> bidPrice;
 
-    public Input<String> getBidPrice() {
-        return this.bidPrice == null ? Input.empty() : this.bidPrice;
+    public Output<String> getBidPrice() {
+        return this.bidPrice == null ? Output.empty() : this.bidPrice;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ClusterCoreInstanceGroupGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="ebsConfigs")
-      private final @Nullable Input<List<ClusterCoreInstanceGroupEbsConfigGetArgs>> ebsConfigs;
+      private final @Nullable Output<List<ClusterCoreInstanceGroupEbsConfigGetArgs>> ebsConfigs;
 
-    public Input<List<ClusterCoreInstanceGroupEbsConfigGetArgs>> getEbsConfigs() {
-        return this.ebsConfigs == null ? Input.empty() : this.ebsConfigs;
+    public Output<List<ClusterCoreInstanceGroupEbsConfigGetArgs>> getEbsConfigs() {
+        return this.ebsConfigs == null ? Output.empty() : this.ebsConfigs;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ClusterCoreInstanceGroupGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ClusterCoreInstanceGroupGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="instanceCount")
-      private final @Nullable Input<Integer> instanceCount;
+      private final @Nullable Output<Integer> instanceCount;
 
-    public Input<Integer> getInstanceCount() {
-        return this.instanceCount == null ? Input.empty() : this.instanceCount;
+    public Output<Integer> getInstanceCount() {
+        return this.instanceCount == null ? Output.empty() : this.instanceCount;
     }
 
     /**
@@ -77,9 +77,9 @@ public final class ClusterCoreInstanceGroupGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="instanceType", required=true)
-      private final Input<String> instanceType;
+      private final Output<String> instanceType;
 
-    public Input<String> getInstanceType() {
+    public Output<String> getInstanceType() {
         return this.instanceType;
     }
 
@@ -88,20 +88,20 @@ public final class ClusterCoreInstanceGroupGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public ClusterCoreInstanceGroupGetArgs(
-        @Nullable Input<String> autoscalingPolicy,
-        @Nullable Input<String> bidPrice,
-        @Nullable Input<List<ClusterCoreInstanceGroupEbsConfigGetArgs>> ebsConfigs,
-        @Nullable Input<String> id,
-        @Nullable Input<Integer> instanceCount,
-        Input<String> instanceType,
-        @Nullable Input<String> name) {
+        @Nullable Output<String> autoscalingPolicy,
+        @Nullable Output<String> bidPrice,
+        @Nullable Output<List<ClusterCoreInstanceGroupEbsConfigGetArgs>> ebsConfigs,
+        @Nullable Output<String> id,
+        @Nullable Output<Integer> instanceCount,
+        Output<String> instanceType,
+        @Nullable Output<String> name) {
         this.autoscalingPolicy = autoscalingPolicy;
         this.bidPrice = bidPrice;
         this.ebsConfigs = ebsConfigs;
@@ -112,13 +112,13 @@ public final class ClusterCoreInstanceGroupGetArgs extends io.pulumi.resources.R
     }
 
     private ClusterCoreInstanceGroupGetArgs() {
-        this.autoscalingPolicy = Input.empty();
-        this.bidPrice = Input.empty();
-        this.ebsConfigs = Input.empty();
-        this.id = Input.empty();
-        this.instanceCount = Input.empty();
-        this.instanceType = Input.empty();
-        this.name = Input.empty();
+        this.autoscalingPolicy = Output.empty();
+        this.bidPrice = Output.empty();
+        this.ebsConfigs = Output.empty();
+        this.id = Output.empty();
+        this.instanceCount = Output.empty();
+        this.instanceType = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class ClusterCoreInstanceGroupGetArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> autoscalingPolicy;
-        private @Nullable Input<String> bidPrice;
-        private @Nullable Input<List<ClusterCoreInstanceGroupEbsConfigGetArgs>> ebsConfigs;
-        private @Nullable Input<String> id;
-        private @Nullable Input<Integer> instanceCount;
-        private Input<String> instanceType;
-        private @Nullable Input<String> name;
+        private @Nullable Output<String> autoscalingPolicy;
+        private @Nullable Output<String> bidPrice;
+        private @Nullable Output<List<ClusterCoreInstanceGroupEbsConfigGetArgs>> ebsConfigs;
+        private @Nullable Output<String> id;
+        private @Nullable Output<Integer> instanceCount;
+        private Output<String> instanceType;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class ClusterCoreInstanceGroupGetArgs extends io.pulumi.resources.R
     	      this.name = defaults.name;
         }
 
-        public Builder autoscalingPolicy(@Nullable Input<String> autoscalingPolicy) {
+        public Builder autoscalingPolicy(@Nullable Output<String> autoscalingPolicy) {
             this.autoscalingPolicy = autoscalingPolicy;
             return this;
         }
 
         public Builder autoscalingPolicy(@Nullable String autoscalingPolicy) {
-            this.autoscalingPolicy = Input.ofNullable(autoscalingPolicy);
+            this.autoscalingPolicy = Output.ofNullable(autoscalingPolicy);
             return this;
         }
 
-        public Builder bidPrice(@Nullable Input<String> bidPrice) {
+        public Builder bidPrice(@Nullable Output<String> bidPrice) {
             this.bidPrice = bidPrice;
             return this;
         }
 
         public Builder bidPrice(@Nullable String bidPrice) {
-            this.bidPrice = Input.ofNullable(bidPrice);
+            this.bidPrice = Output.ofNullable(bidPrice);
             return this;
         }
 
-        public Builder ebsConfigs(@Nullable Input<List<ClusterCoreInstanceGroupEbsConfigGetArgs>> ebsConfigs) {
+        public Builder ebsConfigs(@Nullable Output<List<ClusterCoreInstanceGroupEbsConfigGetArgs>> ebsConfigs) {
             this.ebsConfigs = ebsConfigs;
             return this;
         }
 
         public Builder ebsConfigs(@Nullable List<ClusterCoreInstanceGroupEbsConfigGetArgs> ebsConfigs) {
-            this.ebsConfigs = Input.ofNullable(ebsConfigs);
+            this.ebsConfigs = Output.ofNullable(ebsConfigs);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder instanceCount(@Nullable Input<Integer> instanceCount) {
+        public Builder instanceCount(@Nullable Output<Integer> instanceCount) {
             this.instanceCount = instanceCount;
             return this;
         }
 
         public Builder instanceCount(@Nullable Integer instanceCount) {
-            this.instanceCount = Input.ofNullable(instanceCount);
+            this.instanceCount = Output.ofNullable(instanceCount);
             return this;
         }
 
-        public Builder instanceType(Input<String> instanceType) {
+        public Builder instanceType(Output<String> instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
         public Builder instanceType(String instanceType) {
-            this.instanceType = Input.of(Objects.requireNonNull(instanceType));
+            this.instanceType = Output.of(Objects.requireNonNull(instanceType));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public ClusterCoreInstanceGroupGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1beta1.enums.SandboxConfigType;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class SandboxConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sandboxType")
-      private final @Nullable Input<String> sandboxType;
+      private final @Nullable Output<String> sandboxType;
 
-    public Input<String> getSandboxType() {
-        return this.sandboxType == null ? Input.empty() : this.sandboxType;
+    public Output<String> getSandboxType() {
+        return this.sandboxType == null ? Output.empty() : this.sandboxType;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class SandboxConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<SandboxConfigType> type;
+      private final @Nullable Output<SandboxConfigType> type;
 
-    public Input<SandboxConfigType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<SandboxConfigType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public SandboxConfigArgs(
-        @Nullable Input<String> sandboxType,
-        @Nullable Input<SandboxConfigType> type) {
+        @Nullable Output<String> sandboxType,
+        @Nullable Output<SandboxConfigType> type) {
         this.sandboxType = sandboxType;
         this.type = type;
     }
 
     private SandboxConfigArgs() {
-        this.sandboxType = Input.empty();
-        this.type = Input.empty();
+        this.sandboxType = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class SandboxConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> sandboxType;
-        private @Nullable Input<SandboxConfigType> type;
+        private @Nullable Output<String> sandboxType;
+        private @Nullable Output<SandboxConfigType> type;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class SandboxConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder sandboxType(@Nullable Input<String> sandboxType) {
+        public Builder sandboxType(@Nullable Output<String> sandboxType) {
             this.sandboxType = sandboxType;
             return this;
         }
 
         public Builder sandboxType(@Nullable String sandboxType) {
-            this.sandboxType = Input.ofNullable(sandboxType);
+            this.sandboxType = Output.ofNullable(sandboxType);
             return this;
         }
 
-        public Builder type(@Nullable Input<SandboxConfigType> type) {
+        public Builder type(@Nullable Output<SandboxConfigType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable SandboxConfigType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public SandboxConfigArgs build() {

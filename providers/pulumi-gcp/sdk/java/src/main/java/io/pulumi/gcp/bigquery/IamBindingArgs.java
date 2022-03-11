@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.bigquery.inputs.IamBindingConditionArgs;
 import java.lang.String;
@@ -22,23 +22,23 @@ public final class IamBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="condition")
-      private final @Nullable Input<IamBindingConditionArgs> condition;
+      private final @Nullable Output<IamBindingConditionArgs> condition;
 
-    public Input<IamBindingConditionArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<IamBindingConditionArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     @InputImport(name="datasetId", required=true)
-      private final Input<String> datasetId;
+      private final Output<String> datasetId;
 
-    public Input<String> getDatasetId() {
+    public Output<String> getDatasetId() {
         return this.datasetId;
     }
 
     @InputImport(name="members", required=true)
-      private final Input<List<String>> members;
+      private final Output<List<String>> members;
 
-    public Input<List<String>> getMembers() {
+    public Output<List<String>> getMembers() {
         return this.members;
     }
 
@@ -48,10 +48,10 @@ public final class IamBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -61,26 +61,26 @@ public final class IamBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role", required=true)
-      private final Input<String> role;
+      private final Output<String> role;
 
-    public Input<String> getRole() {
+    public Output<String> getRole() {
         return this.role;
     }
 
     @InputImport(name="tableId", required=true)
-      private final Input<String> tableId;
+      private final Output<String> tableId;
 
-    public Input<String> getTableId() {
+    public Output<String> getTableId() {
         return this.tableId;
     }
 
     public IamBindingArgs(
-        @Nullable Input<IamBindingConditionArgs> condition,
-        Input<String> datasetId,
-        Input<List<String>> members,
-        @Nullable Input<String> project,
-        Input<String> role,
-        Input<String> tableId) {
+        @Nullable Output<IamBindingConditionArgs> condition,
+        Output<String> datasetId,
+        Output<List<String>> members,
+        @Nullable Output<String> project,
+        Output<String> role,
+        Output<String> tableId) {
         this.condition = condition;
         this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
         this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
@@ -90,12 +90,12 @@ public final class IamBindingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IamBindingArgs() {
-        this.condition = Input.empty();
-        this.datasetId = Input.empty();
-        this.members = Input.empty();
-        this.project = Input.empty();
-        this.role = Input.empty();
-        this.tableId = Input.empty();
+        this.condition = Output.empty();
+        this.datasetId = Output.empty();
+        this.members = Output.empty();
+        this.project = Output.empty();
+        this.role = Output.empty();
+        this.tableId = Output.empty();
     }
 
     public static Builder builder() {
@@ -107,12 +107,12 @@ public final class IamBindingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<IamBindingConditionArgs> condition;
-        private Input<String> datasetId;
-        private Input<List<String>> members;
-        private @Nullable Input<String> project;
-        private Input<String> role;
-        private Input<String> tableId;
+        private @Nullable Output<IamBindingConditionArgs> condition;
+        private Output<String> datasetId;
+        private Output<List<String>> members;
+        private @Nullable Output<String> project;
+        private Output<String> role;
+        private Output<String> tableId;
 
         public Builder() {
     	      // Empty
@@ -128,63 +128,63 @@ public final class IamBindingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tableId = defaults.tableId;
         }
 
-        public Builder condition(@Nullable Input<IamBindingConditionArgs> condition) {
+        public Builder condition(@Nullable Output<IamBindingConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable IamBindingConditionArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder datasetId(Input<String> datasetId) {
+        public Builder datasetId(Output<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
         public Builder datasetId(String datasetId) {
-            this.datasetId = Input.of(Objects.requireNonNull(datasetId));
+            this.datasetId = Output.of(Objects.requireNonNull(datasetId));
             return this;
         }
 
-        public Builder members(Input<List<String>> members) {
+        public Builder members(Output<List<String>> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
 
         public Builder members(List<String> members) {
-            this.members = Input.of(Objects.requireNonNull(members));
+            this.members = Output.of(Objects.requireNonNull(members));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder role(Input<String> role) {
+        public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(String role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
 
-        public Builder tableId(Input<String> tableId) {
+        public Builder tableId(Output<String> tableId) {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
         }
 
         public Builder tableId(String tableId) {
-            this.tableId = Input.of(Objects.requireNonNull(tableId));
+            this.tableId = Output.of(Objects.requireNonNull(tableId));
             return this;
         }
         public IamBindingArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.customproviders.inputs;
 
 import io.pulumi.azurenative.customproviders.enums.ValidationType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,9 +25,9 @@ public final class CustomRPValidationsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="specification", required=true)
-      private final Input<String> specification;
+      private final Output<String> specification;
 
-    public Input<String> getSpecification() {
+    public Output<String> getSpecification() {
         return this.specification;
     }
 
@@ -36,22 +36,22 @@ public final class CustomRPValidationsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="validationType")
-      private final @Nullable Input<Either<String,ValidationType>> validationType;
+      private final @Nullable Output<Either<String,ValidationType>> validationType;
 
-    public Input<Either<String,ValidationType>> getValidationType() {
-        return this.validationType == null ? Input.empty() : this.validationType;
+    public Output<Either<String,ValidationType>> getValidationType() {
+        return this.validationType == null ? Output.empty() : this.validationType;
     }
 
     public CustomRPValidationsArgs(
-        Input<String> specification,
-        @Nullable Input<Either<String,ValidationType>> validationType) {
+        Output<String> specification,
+        @Nullable Output<Either<String,ValidationType>> validationType) {
         this.specification = Objects.requireNonNull(specification, "expected parameter 'specification' to be non-null");
         this.validationType = validationType;
     }
 
     private CustomRPValidationsArgs() {
-        this.specification = Input.empty();
-        this.validationType = Input.empty();
+        this.specification = Output.empty();
+        this.validationType = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class CustomRPValidationsArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> specification;
-        private @Nullable Input<Either<String,ValidationType>> validationType;
+        private Output<String> specification;
+        private @Nullable Output<Either<String,ValidationType>> validationType;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class CustomRPValidationsArgs extends io.pulumi.resources.ResourceA
     	      this.validationType = defaults.validationType;
         }
 
-        public Builder specification(Input<String> specification) {
+        public Builder specification(Output<String> specification) {
             this.specification = Objects.requireNonNull(specification);
             return this;
         }
 
         public Builder specification(String specification) {
-            this.specification = Input.of(Objects.requireNonNull(specification));
+            this.specification = Output.of(Objects.requireNonNull(specification));
             return this;
         }
 
-        public Builder validationType(@Nullable Input<Either<String,ValidationType>> validationType) {
+        public Builder validationType(@Nullable Output<Either<String,ValidationType>> validationType) {
             this.validationType = validationType;
             return this;
         }
 
         public Builder validationType(@Nullable Either<String,ValidationType> validationType) {
-            this.validationType = Input.ofNullable(validationType);
+            this.validationType = Output.ofNullable(validationType);
             return this;
         }
         public CustomRPValidationsArgs build() {

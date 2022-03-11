@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.DaprMetadataArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class DaprComponentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<List<DaprMetadataArgs>> metadata;
+      private final @Nullable Output<List<DaprMetadataArgs>> metadata;
 
-    public Input<List<DaprMetadataArgs>> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<List<DaprMetadataArgs>> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DaprComponentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class DaprComponentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class DaprComponentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public DaprComponentArgs(
-        @Nullable Input<List<DaprMetadataArgs>> metadata,
-        @Nullable Input<String> name,
-        @Nullable Input<String> type,
-        @Nullable Input<String> version) {
+        @Nullable Output<List<DaprMetadataArgs>> metadata,
+        @Nullable Output<String> name,
+        @Nullable Output<String> type,
+        @Nullable Output<String> version) {
         this.metadata = metadata;
         this.name = name;
         this.type = type;
@@ -76,10 +76,10 @@ public final class DaprComponentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DaprComponentArgs() {
-        this.metadata = Input.empty();
-        this.name = Input.empty();
-        this.type = Input.empty();
-        this.version = Input.empty();
+        this.metadata = Output.empty();
+        this.name = Output.empty();
+        this.type = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class DaprComponentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<DaprMetadataArgs>> metadata;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> type;
-        private @Nullable Input<String> version;
+        private @Nullable Output<List<DaprMetadataArgs>> metadata;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> type;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class DaprComponentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder metadata(@Nullable Input<List<DaprMetadataArgs>> metadata) {
+        public Builder metadata(@Nullable Output<List<DaprMetadataArgs>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable List<DaprMetadataArgs> metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public DaprComponentArgs build() {

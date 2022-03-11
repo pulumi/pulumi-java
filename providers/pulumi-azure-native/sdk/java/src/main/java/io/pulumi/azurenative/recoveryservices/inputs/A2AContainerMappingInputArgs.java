@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.enums.AgentAutoUpdateStatus;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class A2AContainerMappingInputArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="agentAutoUpdateStatus")
-      private final @Nullable Input<Either<String,AgentAutoUpdateStatus>> agentAutoUpdateStatus;
+      private final @Nullable Output<Either<String,AgentAutoUpdateStatus>> agentAutoUpdateStatus;
 
-    public Input<Either<String,AgentAutoUpdateStatus>> getAgentAutoUpdateStatus() {
-        return this.agentAutoUpdateStatus == null ? Input.empty() : this.agentAutoUpdateStatus;
+    public Output<Either<String,AgentAutoUpdateStatus>> getAgentAutoUpdateStatus() {
+        return this.agentAutoUpdateStatus == null ? Output.empty() : this.agentAutoUpdateStatus;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class A2AContainerMappingInputArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="automationAccountArmId")
-      private final @Nullable Input<String> automationAccountArmId;
+      private final @Nullable Output<String> automationAccountArmId;
 
-    public Input<String> getAutomationAccountArmId() {
-        return this.automationAccountArmId == null ? Input.empty() : this.automationAccountArmId;
+    public Output<String> getAutomationAccountArmId() {
+        return this.automationAccountArmId == null ? Output.empty() : this.automationAccountArmId;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class A2AContainerMappingInputArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="instanceType")
-      private final @Nullable Input<String> instanceType;
+      private final @Nullable Output<String> instanceType;
 
-    public Input<String> getInstanceType() {
-        return this.instanceType == null ? Input.empty() : this.instanceType;
+    public Output<String> getInstanceType() {
+        return this.instanceType == null ? Output.empty() : this.instanceType;
     }
 
     public A2AContainerMappingInputArgs(
-        @Nullable Input<Either<String,AgentAutoUpdateStatus>> agentAutoUpdateStatus,
-        @Nullable Input<String> automationAccountArmId,
-        @Nullable Input<String> instanceType) {
+        @Nullable Output<Either<String,AgentAutoUpdateStatus>> agentAutoUpdateStatus,
+        @Nullable Output<String> automationAccountArmId,
+        @Nullable Output<String> instanceType) {
         this.agentAutoUpdateStatus = agentAutoUpdateStatus;
         this.automationAccountArmId = automationAccountArmId;
         this.instanceType = instanceType;
     }
 
     private A2AContainerMappingInputArgs() {
-        this.agentAutoUpdateStatus = Input.empty();
-        this.automationAccountArmId = Input.empty();
-        this.instanceType = Input.empty();
+        this.agentAutoUpdateStatus = Output.empty();
+        this.automationAccountArmId = Output.empty();
+        this.instanceType = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class A2AContainerMappingInputArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,AgentAutoUpdateStatus>> agentAutoUpdateStatus;
-        private @Nullable Input<String> automationAccountArmId;
-        private @Nullable Input<String> instanceType;
+        private @Nullable Output<Either<String,AgentAutoUpdateStatus>> agentAutoUpdateStatus;
+        private @Nullable Output<String> automationAccountArmId;
+        private @Nullable Output<String> instanceType;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class A2AContainerMappingInputArgs extends io.pulumi.resources.Reso
     	      this.instanceType = defaults.instanceType;
         }
 
-        public Builder agentAutoUpdateStatus(@Nullable Input<Either<String,AgentAutoUpdateStatus>> agentAutoUpdateStatus) {
+        public Builder agentAutoUpdateStatus(@Nullable Output<Either<String,AgentAutoUpdateStatus>> agentAutoUpdateStatus) {
             this.agentAutoUpdateStatus = agentAutoUpdateStatus;
             return this;
         }
 
         public Builder agentAutoUpdateStatus(@Nullable Either<String,AgentAutoUpdateStatus> agentAutoUpdateStatus) {
-            this.agentAutoUpdateStatus = Input.ofNullable(agentAutoUpdateStatus);
+            this.agentAutoUpdateStatus = Output.ofNullable(agentAutoUpdateStatus);
             return this;
         }
 
-        public Builder automationAccountArmId(@Nullable Input<String> automationAccountArmId) {
+        public Builder automationAccountArmId(@Nullable Output<String> automationAccountArmId) {
             this.automationAccountArmId = automationAccountArmId;
             return this;
         }
 
         public Builder automationAccountArmId(@Nullable String automationAccountArmId) {
-            this.automationAccountArmId = Input.ofNullable(automationAccountArmId);
+            this.automationAccountArmId = Output.ofNullable(automationAccountArmId);
             return this;
         }
 
-        public Builder instanceType(@Nullable Input<String> instanceType) {
+        public Builder instanceType(@Nullable Output<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Input.ofNullable(instanceType);
+            this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
         public A2AContainerMappingInputArgs build() {

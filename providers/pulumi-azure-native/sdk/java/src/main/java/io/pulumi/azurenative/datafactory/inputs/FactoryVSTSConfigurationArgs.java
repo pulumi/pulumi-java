@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class FactoryVSTSConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -34,9 +34,9 @@ public final class FactoryVSTSConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="collaborationBranch", required=true)
-      private final Input<String> collaborationBranch;
+      private final Output<String> collaborationBranch;
 
-    public Input<String> getCollaborationBranch() {
+    public Output<String> getCollaborationBranch() {
         return this.collaborationBranch;
     }
 
@@ -45,10 +45,10 @@ public final class FactoryVSTSConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="lastCommitId")
-      private final @Nullable Input<String> lastCommitId;
+      private final @Nullable Output<String> lastCommitId;
 
-    public Input<String> getLastCommitId() {
-        return this.lastCommitId == null ? Input.empty() : this.lastCommitId;
+    public Output<String> getLastCommitId() {
+        return this.lastCommitId == null ? Output.empty() : this.lastCommitId;
     }
 
     /**
@@ -56,9 +56,9 @@ public final class FactoryVSTSConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="projectName", required=true)
-      private final Input<String> projectName;
+      private final Output<String> projectName;
 
-    public Input<String> getProjectName() {
+    public Output<String> getProjectName() {
         return this.projectName;
     }
 
@@ -67,9 +67,9 @@ public final class FactoryVSTSConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="repositoryName", required=true)
-      private final Input<String> repositoryName;
+      private final Output<String> repositoryName;
 
-    public Input<String> getRepositoryName() {
+    public Output<String> getRepositoryName() {
         return this.repositoryName;
     }
 
@@ -78,9 +78,9 @@ public final class FactoryVSTSConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="rootFolder", required=true)
-      private final Input<String> rootFolder;
+      private final Output<String> rootFolder;
 
-    public Input<String> getRootFolder() {
+    public Output<String> getRootFolder() {
         return this.rootFolder;
     }
 
@@ -89,10 +89,10 @@ public final class FactoryVSTSConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="tenantId")
-      private final @Nullable Input<String> tenantId;
+      private final @Nullable Output<String> tenantId;
 
-    public Input<String> getTenantId() {
-        return this.tenantId == null ? Input.empty() : this.tenantId;
+    public Output<String> getTenantId() {
+        return this.tenantId == null ? Output.empty() : this.tenantId;
     }
 
     /**
@@ -101,21 +101,21 @@ public final class FactoryVSTSConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public FactoryVSTSConfigurationArgs(
-        Input<String> accountName,
-        Input<String> collaborationBranch,
-        @Nullable Input<String> lastCommitId,
-        Input<String> projectName,
-        Input<String> repositoryName,
-        Input<String> rootFolder,
-        @Nullable Input<String> tenantId,
-        Input<String> type) {
+        Output<String> accountName,
+        Output<String> collaborationBranch,
+        @Nullable Output<String> lastCommitId,
+        Output<String> projectName,
+        Output<String> repositoryName,
+        Output<String> rootFolder,
+        @Nullable Output<String> tenantId,
+        Output<String> type) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.collaborationBranch = Objects.requireNonNull(collaborationBranch, "expected parameter 'collaborationBranch' to be non-null");
         this.lastCommitId = lastCommitId;
@@ -127,14 +127,14 @@ public final class FactoryVSTSConfigurationArgs extends io.pulumi.resources.Reso
     }
 
     private FactoryVSTSConfigurationArgs() {
-        this.accountName = Input.empty();
-        this.collaborationBranch = Input.empty();
-        this.lastCommitId = Input.empty();
-        this.projectName = Input.empty();
-        this.repositoryName = Input.empty();
-        this.rootFolder = Input.empty();
-        this.tenantId = Input.empty();
-        this.type = Input.empty();
+        this.accountName = Output.empty();
+        this.collaborationBranch = Output.empty();
+        this.lastCommitId = Output.empty();
+        this.projectName = Output.empty();
+        this.repositoryName = Output.empty();
+        this.rootFolder = Output.empty();
+        this.tenantId = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -146,14 +146,14 @@ public final class FactoryVSTSConfigurationArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private Input<String> collaborationBranch;
-        private @Nullable Input<String> lastCommitId;
-        private Input<String> projectName;
-        private Input<String> repositoryName;
-        private Input<String> rootFolder;
-        private @Nullable Input<String> tenantId;
-        private Input<String> type;
+        private Output<String> accountName;
+        private Output<String> collaborationBranch;
+        private @Nullable Output<String> lastCommitId;
+        private Output<String> projectName;
+        private Output<String> repositoryName;
+        private Output<String> rootFolder;
+        private @Nullable Output<String> tenantId;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -171,83 +171,83 @@ public final class FactoryVSTSConfigurationArgs extends io.pulumi.resources.Reso
     	      this.type = defaults.type;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder collaborationBranch(Input<String> collaborationBranch) {
+        public Builder collaborationBranch(Output<String> collaborationBranch) {
             this.collaborationBranch = Objects.requireNonNull(collaborationBranch);
             return this;
         }
 
         public Builder collaborationBranch(String collaborationBranch) {
-            this.collaborationBranch = Input.of(Objects.requireNonNull(collaborationBranch));
+            this.collaborationBranch = Output.of(Objects.requireNonNull(collaborationBranch));
             return this;
         }
 
-        public Builder lastCommitId(@Nullable Input<String> lastCommitId) {
+        public Builder lastCommitId(@Nullable Output<String> lastCommitId) {
             this.lastCommitId = lastCommitId;
             return this;
         }
 
         public Builder lastCommitId(@Nullable String lastCommitId) {
-            this.lastCommitId = Input.ofNullable(lastCommitId);
+            this.lastCommitId = Output.ofNullable(lastCommitId);
             return this;
         }
 
-        public Builder projectName(Input<String> projectName) {
+        public Builder projectName(Output<String> projectName) {
             this.projectName = Objects.requireNonNull(projectName);
             return this;
         }
 
         public Builder projectName(String projectName) {
-            this.projectName = Input.of(Objects.requireNonNull(projectName));
+            this.projectName = Output.of(Objects.requireNonNull(projectName));
             return this;
         }
 
-        public Builder repositoryName(Input<String> repositoryName) {
+        public Builder repositoryName(Output<String> repositoryName) {
             this.repositoryName = Objects.requireNonNull(repositoryName);
             return this;
         }
 
         public Builder repositoryName(String repositoryName) {
-            this.repositoryName = Input.of(Objects.requireNonNull(repositoryName));
+            this.repositoryName = Output.of(Objects.requireNonNull(repositoryName));
             return this;
         }
 
-        public Builder rootFolder(Input<String> rootFolder) {
+        public Builder rootFolder(Output<String> rootFolder) {
             this.rootFolder = Objects.requireNonNull(rootFolder);
             return this;
         }
 
         public Builder rootFolder(String rootFolder) {
-            this.rootFolder = Input.of(Objects.requireNonNull(rootFolder));
+            this.rootFolder = Output.of(Objects.requireNonNull(rootFolder));
             return this;
         }
 
-        public Builder tenantId(@Nullable Input<String> tenantId) {
+        public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Input.ofNullable(tenantId);
+            this.tenantId = Output.ofNullable(tenantId);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public FactoryVSTSConfigurationArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.azurenative.servicefabricmesh.inputs.AutoScalingResourceMetricArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
@@ -26,9 +26,9 @@ public final class AverageLoadScalingTriggerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<String> kind;
+      private final Output<String> kind;
 
-    public Input<String> getKind() {
+    public Output<String> getKind() {
         return this.kind;
     }
 
@@ -37,9 +37,9 @@ public final class AverageLoadScalingTriggerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="lowerLoadThreshold", required=true)
-      private final Input<Double> lowerLoadThreshold;
+      private final Output<Double> lowerLoadThreshold;
 
-    public Input<Double> getLowerLoadThreshold() {
+    public Output<Double> getLowerLoadThreshold() {
         return this.lowerLoadThreshold;
     }
 
@@ -48,9 +48,9 @@ public final class AverageLoadScalingTriggerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="metric", required=true)
-      private final Input<AutoScalingResourceMetricArgs> metric;
+      private final Output<AutoScalingResourceMetricArgs> metric;
 
-    public Input<AutoScalingResourceMetricArgs> getMetric() {
+    public Output<AutoScalingResourceMetricArgs> getMetric() {
         return this.metric;
     }
 
@@ -59,9 +59,9 @@ public final class AverageLoadScalingTriggerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="scaleIntervalInSeconds", required=true)
-      private final Input<Integer> scaleIntervalInSeconds;
+      private final Output<Integer> scaleIntervalInSeconds;
 
-    public Input<Integer> getScaleIntervalInSeconds() {
+    public Output<Integer> getScaleIntervalInSeconds() {
         return this.scaleIntervalInSeconds;
     }
 
@@ -70,18 +70,18 @@ public final class AverageLoadScalingTriggerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="upperLoadThreshold", required=true)
-      private final Input<Double> upperLoadThreshold;
+      private final Output<Double> upperLoadThreshold;
 
-    public Input<Double> getUpperLoadThreshold() {
+    public Output<Double> getUpperLoadThreshold() {
         return this.upperLoadThreshold;
     }
 
     public AverageLoadScalingTriggerArgs(
-        Input<String> kind,
-        Input<Double> lowerLoadThreshold,
-        Input<AutoScalingResourceMetricArgs> metric,
-        Input<Integer> scaleIntervalInSeconds,
-        Input<Double> upperLoadThreshold) {
+        Output<String> kind,
+        Output<Double> lowerLoadThreshold,
+        Output<AutoScalingResourceMetricArgs> metric,
+        Output<Integer> scaleIntervalInSeconds,
+        Output<Double> upperLoadThreshold) {
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
         this.lowerLoadThreshold = Objects.requireNonNull(lowerLoadThreshold, "expected parameter 'lowerLoadThreshold' to be non-null");
         this.metric = Objects.requireNonNull(metric, "expected parameter 'metric' to be non-null");
@@ -90,11 +90,11 @@ public final class AverageLoadScalingTriggerArgs extends io.pulumi.resources.Res
     }
 
     private AverageLoadScalingTriggerArgs() {
-        this.kind = Input.empty();
-        this.lowerLoadThreshold = Input.empty();
-        this.metric = Input.empty();
-        this.scaleIntervalInSeconds = Input.empty();
-        this.upperLoadThreshold = Input.empty();
+        this.kind = Output.empty();
+        this.lowerLoadThreshold = Output.empty();
+        this.metric = Output.empty();
+        this.scaleIntervalInSeconds = Output.empty();
+        this.upperLoadThreshold = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,11 +106,11 @@ public final class AverageLoadScalingTriggerArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> kind;
-        private Input<Double> lowerLoadThreshold;
-        private Input<AutoScalingResourceMetricArgs> metric;
-        private Input<Integer> scaleIntervalInSeconds;
-        private Input<Double> upperLoadThreshold;
+        private Output<String> kind;
+        private Output<Double> lowerLoadThreshold;
+        private Output<AutoScalingResourceMetricArgs> metric;
+        private Output<Integer> scaleIntervalInSeconds;
+        private Output<Double> upperLoadThreshold;
 
         public Builder() {
     	      // Empty
@@ -125,53 +125,53 @@ public final class AverageLoadScalingTriggerArgs extends io.pulumi.resources.Res
     	      this.upperLoadThreshold = defaults.upperLoadThreshold;
         }
 
-        public Builder kind(Input<String> kind) {
+        public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(String kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder lowerLoadThreshold(Input<Double> lowerLoadThreshold) {
+        public Builder lowerLoadThreshold(Output<Double> lowerLoadThreshold) {
             this.lowerLoadThreshold = Objects.requireNonNull(lowerLoadThreshold);
             return this;
         }
 
         public Builder lowerLoadThreshold(Double lowerLoadThreshold) {
-            this.lowerLoadThreshold = Input.of(Objects.requireNonNull(lowerLoadThreshold));
+            this.lowerLoadThreshold = Output.of(Objects.requireNonNull(lowerLoadThreshold));
             return this;
         }
 
-        public Builder metric(Input<AutoScalingResourceMetricArgs> metric) {
+        public Builder metric(Output<AutoScalingResourceMetricArgs> metric) {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
 
         public Builder metric(AutoScalingResourceMetricArgs metric) {
-            this.metric = Input.of(Objects.requireNonNull(metric));
+            this.metric = Output.of(Objects.requireNonNull(metric));
             return this;
         }
 
-        public Builder scaleIntervalInSeconds(Input<Integer> scaleIntervalInSeconds) {
+        public Builder scaleIntervalInSeconds(Output<Integer> scaleIntervalInSeconds) {
             this.scaleIntervalInSeconds = Objects.requireNonNull(scaleIntervalInSeconds);
             return this;
         }
 
         public Builder scaleIntervalInSeconds(Integer scaleIntervalInSeconds) {
-            this.scaleIntervalInSeconds = Input.of(Objects.requireNonNull(scaleIntervalInSeconds));
+            this.scaleIntervalInSeconds = Output.of(Objects.requireNonNull(scaleIntervalInSeconds));
             return this;
         }
 
-        public Builder upperLoadThreshold(Input<Double> upperLoadThreshold) {
+        public Builder upperLoadThreshold(Output<Double> upperLoadThreshold) {
             this.upperLoadThreshold = Objects.requireNonNull(upperLoadThreshold);
             return this;
         }
 
         public Builder upperLoadThreshold(Double upperLoadThreshold) {
-            this.upperLoadThreshold = Input.of(Objects.requireNonNull(upperLoadThreshold));
+            this.upperLoadThreshold = Output.of(Objects.requireNonNull(upperLoadThreshold));
             return this;
         }
         public AverageLoadScalingTriggerArgs build() {

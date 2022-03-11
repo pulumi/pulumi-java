@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.directoryservice.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class LogServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="directoryId")
-      private final @Nullable Input<String> directoryId;
+      private final @Nullable Output<String> directoryId;
 
-    public Input<String> getDirectoryId() {
-        return this.directoryId == null ? Input.empty() : this.directoryId;
+    public Output<String> getDirectoryId() {
+        return this.directoryId == null ? Output.empty() : this.directoryId;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class LogServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logGroupName")
-      private final @Nullable Input<String> logGroupName;
+      private final @Nullable Output<String> logGroupName;
 
-    public Input<String> getLogGroupName() {
-        return this.logGroupName == null ? Input.empty() : this.logGroupName;
+    public Output<String> getLogGroupName() {
+        return this.logGroupName == null ? Output.empty() : this.logGroupName;
     }
 
     public LogServiceState(
-        @Nullable Input<String> directoryId,
-        @Nullable Input<String> logGroupName) {
+        @Nullable Output<String> directoryId,
+        @Nullable Output<String> logGroupName) {
         this.directoryId = directoryId;
         this.logGroupName = logGroupName;
     }
 
     private LogServiceState() {
-        this.directoryId = Input.empty();
-        this.logGroupName = Input.empty();
+        this.directoryId = Output.empty();
+        this.logGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class LogServiceState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> directoryId;
-        private @Nullable Input<String> logGroupName;
+        private @Nullable Output<String> directoryId;
+        private @Nullable Output<String> logGroupName;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class LogServiceState extends io.pulumi.resources.ResourceArgs {
     	      this.logGroupName = defaults.logGroupName;
         }
 
-        public Builder directoryId(@Nullable Input<String> directoryId) {
+        public Builder directoryId(@Nullable Output<String> directoryId) {
             this.directoryId = directoryId;
             return this;
         }
 
         public Builder directoryId(@Nullable String directoryId) {
-            this.directoryId = Input.ofNullable(directoryId);
+            this.directoryId = Output.ofNullable(directoryId);
             return this;
         }
 
-        public Builder logGroupName(@Nullable Input<String> logGroupName) {
+        public Builder logGroupName(@Nullable Output<String> logGroupName) {
             this.logGroupName = logGroupName;
             return this;
         }
 
         public Builder logGroupName(@Nullable String logGroupName) {
-            this.logGroupName = Input.ofNullable(logGroupName);
+            this.logGroupName = Output.ofNullable(logGroupName);
             return this;
         }
         public LogServiceState build() {

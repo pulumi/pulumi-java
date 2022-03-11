@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.enums.RegionCommitmentCategory;
 import io.pulumi.googlenative.compute_beta.enums.RegionCommitmentPlan;
@@ -27,10 +27,10 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="autoRenew")
-      private final @Nullable Input<Boolean> autoRenew;
+      private final @Nullable Output<Boolean> autoRenew;
 
-    public Input<Boolean> getAutoRenew() {
-        return this.autoRenew == null ? Input.empty() : this.autoRenew;
+    public Output<Boolean> getAutoRenew() {
+        return this.autoRenew == null ? Output.empty() : this.autoRenew;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="category")
-      private final @Nullable Input<RegionCommitmentCategory> category;
+      private final @Nullable Output<RegionCommitmentCategory> category;
 
-    public Input<RegionCommitmentCategory> getCategory() {
-        return this.category == null ? Input.empty() : this.category;
+    public Output<RegionCommitmentCategory> getCategory() {
+        return this.category == null ? Output.empty() : this.category;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="licenseResource")
-      private final @Nullable Input<LicenseResourceCommitmentArgs> licenseResource;
+      private final @Nullable Output<LicenseResourceCommitmentArgs> licenseResource;
 
-    public Input<LicenseResourceCommitmentArgs> getLicenseResource() {
-        return this.licenseResource == null ? Input.empty() : this.licenseResource;
+    public Output<LicenseResourceCommitmentArgs> getLicenseResource() {
+        return this.licenseResource == null ? Output.empty() : this.licenseResource;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -82,31 +82,31 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="plan")
-      private final @Nullable Input<RegionCommitmentPlan> plan;
+      private final @Nullable Output<RegionCommitmentPlan> plan;
 
-    public Input<RegionCommitmentPlan> getPlan() {
-        return this.plan == null ? Input.empty() : this.plan;
+    public Output<RegionCommitmentPlan> getPlan() {
+        return this.plan == null ? Output.empty() : this.plan;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="region", required=true)
-      private final Input<String> region;
+      private final Output<String> region;
 
-    public Input<String> getRegion() {
+    public Output<String> getRegion() {
         return this.region;
     }
 
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     /**
@@ -114,10 +114,10 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="reservations")
-      private final @Nullable Input<List<ReservationArgs>> reservations;
+      private final @Nullable Output<List<ReservationArgs>> reservations;
 
-    public Input<List<ReservationArgs>> getReservations() {
-        return this.reservations == null ? Input.empty() : this.reservations;
+    public Output<List<ReservationArgs>> getReservations() {
+        return this.reservations == null ? Output.empty() : this.reservations;
     }
 
     /**
@@ -125,10 +125,10 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resources")
-      private final @Nullable Input<List<ResourceCommitmentArgs>> resources;
+      private final @Nullable Output<List<ResourceCommitmentArgs>> resources;
 
-    public Input<List<ResourceCommitmentArgs>> getResources() {
-        return this.resources == null ? Input.empty() : this.resources;
+    public Output<List<ResourceCommitmentArgs>> getResources() {
+        return this.resources == null ? Output.empty() : this.resources;
     }
 
     /**
@@ -136,25 +136,25 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<RegionCommitmentType> type;
+      private final @Nullable Output<RegionCommitmentType> type;
 
-    public Input<RegionCommitmentType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<RegionCommitmentType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public RegionCommitmentArgs(
-        @Nullable Input<Boolean> autoRenew,
-        @Nullable Input<RegionCommitmentCategory> category,
-        @Nullable Input<String> description,
-        @Nullable Input<LicenseResourceCommitmentArgs> licenseResource,
-        @Nullable Input<String> name,
-        @Nullable Input<RegionCommitmentPlan> plan,
-        @Nullable Input<String> project,
-        Input<String> region,
-        @Nullable Input<String> requestId,
-        @Nullable Input<List<ReservationArgs>> reservations,
-        @Nullable Input<List<ResourceCommitmentArgs>> resources,
-        @Nullable Input<RegionCommitmentType> type) {
+        @Nullable Output<Boolean> autoRenew,
+        @Nullable Output<RegionCommitmentCategory> category,
+        @Nullable Output<String> description,
+        @Nullable Output<LicenseResourceCommitmentArgs> licenseResource,
+        @Nullable Output<String> name,
+        @Nullable Output<RegionCommitmentPlan> plan,
+        @Nullable Output<String> project,
+        Output<String> region,
+        @Nullable Output<String> requestId,
+        @Nullable Output<List<ReservationArgs>> reservations,
+        @Nullable Output<List<ResourceCommitmentArgs>> resources,
+        @Nullable Output<RegionCommitmentType> type) {
         this.autoRenew = autoRenew;
         this.category = category;
         this.description = description;
@@ -170,18 +170,18 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private RegionCommitmentArgs() {
-        this.autoRenew = Input.empty();
-        this.category = Input.empty();
-        this.description = Input.empty();
-        this.licenseResource = Input.empty();
-        this.name = Input.empty();
-        this.plan = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
-        this.requestId = Input.empty();
-        this.reservations = Input.empty();
-        this.resources = Input.empty();
-        this.type = Input.empty();
+        this.autoRenew = Output.empty();
+        this.category = Output.empty();
+        this.description = Output.empty();
+        this.licenseResource = Output.empty();
+        this.name = Output.empty();
+        this.plan = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
+        this.requestId = Output.empty();
+        this.reservations = Output.empty();
+        this.resources = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -193,18 +193,18 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> autoRenew;
-        private @Nullable Input<RegionCommitmentCategory> category;
-        private @Nullable Input<String> description;
-        private @Nullable Input<LicenseResourceCommitmentArgs> licenseResource;
-        private @Nullable Input<String> name;
-        private @Nullable Input<RegionCommitmentPlan> plan;
-        private @Nullable Input<String> project;
-        private Input<String> region;
-        private @Nullable Input<String> requestId;
-        private @Nullable Input<List<ReservationArgs>> reservations;
-        private @Nullable Input<List<ResourceCommitmentArgs>> resources;
-        private @Nullable Input<RegionCommitmentType> type;
+        private @Nullable Output<Boolean> autoRenew;
+        private @Nullable Output<RegionCommitmentCategory> category;
+        private @Nullable Output<String> description;
+        private @Nullable Output<LicenseResourceCommitmentArgs> licenseResource;
+        private @Nullable Output<String> name;
+        private @Nullable Output<RegionCommitmentPlan> plan;
+        private @Nullable Output<String> project;
+        private Output<String> region;
+        private @Nullable Output<String> requestId;
+        private @Nullable Output<List<ReservationArgs>> reservations;
+        private @Nullable Output<List<ResourceCommitmentArgs>> resources;
+        private @Nullable Output<RegionCommitmentType> type;
 
         public Builder() {
     	      // Empty
@@ -226,123 +226,123 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
     	      this.type = defaults.type;
         }
 
-        public Builder autoRenew(@Nullable Input<Boolean> autoRenew) {
+        public Builder autoRenew(@Nullable Output<Boolean> autoRenew) {
             this.autoRenew = autoRenew;
             return this;
         }
 
         public Builder autoRenew(@Nullable Boolean autoRenew) {
-            this.autoRenew = Input.ofNullable(autoRenew);
+            this.autoRenew = Output.ofNullable(autoRenew);
             return this;
         }
 
-        public Builder category(@Nullable Input<RegionCommitmentCategory> category) {
+        public Builder category(@Nullable Output<RegionCommitmentCategory> category) {
             this.category = category;
             return this;
         }
 
         public Builder category(@Nullable RegionCommitmentCategory category) {
-            this.category = Input.ofNullable(category);
+            this.category = Output.ofNullable(category);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder licenseResource(@Nullable Input<LicenseResourceCommitmentArgs> licenseResource) {
+        public Builder licenseResource(@Nullable Output<LicenseResourceCommitmentArgs> licenseResource) {
             this.licenseResource = licenseResource;
             return this;
         }
 
         public Builder licenseResource(@Nullable LicenseResourceCommitmentArgs licenseResource) {
-            this.licenseResource = Input.ofNullable(licenseResource);
+            this.licenseResource = Output.ofNullable(licenseResource);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder plan(@Nullable Input<RegionCommitmentPlan> plan) {
+        public Builder plan(@Nullable Output<RegionCommitmentPlan> plan) {
             this.plan = plan;
             return this;
         }
 
         public Builder plan(@Nullable RegionCommitmentPlan plan) {
-            this.plan = Input.ofNullable(plan);
+            this.plan = Output.ofNullable(plan);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(Input<String> region) {
+        public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
         public Builder region(String region) {
-            this.region = Input.of(Objects.requireNonNull(region));
+            this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
 
-        public Builder reservations(@Nullable Input<List<ReservationArgs>> reservations) {
+        public Builder reservations(@Nullable Output<List<ReservationArgs>> reservations) {
             this.reservations = reservations;
             return this;
         }
 
         public Builder reservations(@Nullable List<ReservationArgs> reservations) {
-            this.reservations = Input.ofNullable(reservations);
+            this.reservations = Output.ofNullable(reservations);
             return this;
         }
 
-        public Builder resources(@Nullable Input<List<ResourceCommitmentArgs>> resources) {
+        public Builder resources(@Nullable Output<List<ResourceCommitmentArgs>> resources) {
             this.resources = resources;
             return this;
         }
 
         public Builder resources(@Nullable List<ResourceCommitmentArgs> resources) {
-            this.resources = Input.ofNullable(resources);
+            this.resources = Output.ofNullable(resources);
             return this;
         }
 
-        public Builder type(@Nullable Input<RegionCommitmentType> type) {
+        public Builder type(@Nullable Output<RegionCommitmentType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable RegionCommitmentType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public RegionCommitmentArgs build() {

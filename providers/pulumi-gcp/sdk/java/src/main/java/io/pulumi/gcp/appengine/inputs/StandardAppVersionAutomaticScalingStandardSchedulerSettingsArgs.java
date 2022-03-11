@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
@@ -20,10 +20,10 @@ public final class StandardAppVersionAutomaticScalingStandardSchedulerSettingsAr
      * 
      */
     @InputImport(name="maxInstances")
-      private final @Nullable Input<Integer> maxInstances;
+      private final @Nullable Output<Integer> maxInstances;
 
-    public Input<Integer> getMaxInstances() {
-        return this.maxInstances == null ? Input.empty() : this.maxInstances;
+    public Output<Integer> getMaxInstances() {
+        return this.maxInstances == null ? Output.empty() : this.maxInstances;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class StandardAppVersionAutomaticScalingStandardSchedulerSettingsAr
      * 
      */
     @InputImport(name="minInstances")
-      private final @Nullable Input<Integer> minInstances;
+      private final @Nullable Output<Integer> minInstances;
 
-    public Input<Integer> getMinInstances() {
-        return this.minInstances == null ? Input.empty() : this.minInstances;
+    public Output<Integer> getMinInstances() {
+        return this.minInstances == null ? Output.empty() : this.minInstances;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class StandardAppVersionAutomaticScalingStandardSchedulerSettingsAr
      * 
      */
     @InputImport(name="targetCpuUtilization")
-      private final @Nullable Input<Double> targetCpuUtilization;
+      private final @Nullable Output<Double> targetCpuUtilization;
 
-    public Input<Double> getTargetCpuUtilization() {
-        return this.targetCpuUtilization == null ? Input.empty() : this.targetCpuUtilization;
+    public Output<Double> getTargetCpuUtilization() {
+        return this.targetCpuUtilization == null ? Output.empty() : this.targetCpuUtilization;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class StandardAppVersionAutomaticScalingStandardSchedulerSettingsAr
      * 
      */
     @InputImport(name="targetThroughputUtilization")
-      private final @Nullable Input<Double> targetThroughputUtilization;
+      private final @Nullable Output<Double> targetThroughputUtilization;
 
-    public Input<Double> getTargetThroughputUtilization() {
-        return this.targetThroughputUtilization == null ? Input.empty() : this.targetThroughputUtilization;
+    public Output<Double> getTargetThroughputUtilization() {
+        return this.targetThroughputUtilization == null ? Output.empty() : this.targetThroughputUtilization;
     }
 
     public StandardAppVersionAutomaticScalingStandardSchedulerSettingsArgs(
-        @Nullable Input<Integer> maxInstances,
-        @Nullable Input<Integer> minInstances,
-        @Nullable Input<Double> targetCpuUtilization,
-        @Nullable Input<Double> targetThroughputUtilization) {
+        @Nullable Output<Integer> maxInstances,
+        @Nullable Output<Integer> minInstances,
+        @Nullable Output<Double> targetCpuUtilization,
+        @Nullable Output<Double> targetThroughputUtilization) {
         this.maxInstances = maxInstances;
         this.minInstances = minInstances;
         this.targetCpuUtilization = targetCpuUtilization;
@@ -71,10 +71,10 @@ public final class StandardAppVersionAutomaticScalingStandardSchedulerSettingsAr
     }
 
     private StandardAppVersionAutomaticScalingStandardSchedulerSettingsArgs() {
-        this.maxInstances = Input.empty();
-        this.minInstances = Input.empty();
-        this.targetCpuUtilization = Input.empty();
-        this.targetThroughputUtilization = Input.empty();
+        this.maxInstances = Output.empty();
+        this.minInstances = Output.empty();
+        this.targetCpuUtilization = Output.empty();
+        this.targetThroughputUtilization = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class StandardAppVersionAutomaticScalingStandardSchedulerSettingsAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> maxInstances;
-        private @Nullable Input<Integer> minInstances;
-        private @Nullable Input<Double> targetCpuUtilization;
-        private @Nullable Input<Double> targetThroughputUtilization;
+        private @Nullable Output<Integer> maxInstances;
+        private @Nullable Output<Integer> minInstances;
+        private @Nullable Output<Double> targetCpuUtilization;
+        private @Nullable Output<Double> targetThroughputUtilization;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class StandardAppVersionAutomaticScalingStandardSchedulerSettingsAr
     	      this.targetThroughputUtilization = defaults.targetThroughputUtilization;
         }
 
-        public Builder maxInstances(@Nullable Input<Integer> maxInstances) {
+        public Builder maxInstances(@Nullable Output<Integer> maxInstances) {
             this.maxInstances = maxInstances;
             return this;
         }
 
         public Builder maxInstances(@Nullable Integer maxInstances) {
-            this.maxInstances = Input.ofNullable(maxInstances);
+            this.maxInstances = Output.ofNullable(maxInstances);
             return this;
         }
 
-        public Builder minInstances(@Nullable Input<Integer> minInstances) {
+        public Builder minInstances(@Nullable Output<Integer> minInstances) {
             this.minInstances = minInstances;
             return this;
         }
 
         public Builder minInstances(@Nullable Integer minInstances) {
-            this.minInstances = Input.ofNullable(minInstances);
+            this.minInstances = Output.ofNullable(minInstances);
             return this;
         }
 
-        public Builder targetCpuUtilization(@Nullable Input<Double> targetCpuUtilization) {
+        public Builder targetCpuUtilization(@Nullable Output<Double> targetCpuUtilization) {
             this.targetCpuUtilization = targetCpuUtilization;
             return this;
         }
 
         public Builder targetCpuUtilization(@Nullable Double targetCpuUtilization) {
-            this.targetCpuUtilization = Input.ofNullable(targetCpuUtilization);
+            this.targetCpuUtilization = Output.ofNullable(targetCpuUtilization);
             return this;
         }
 
-        public Builder targetThroughputUtilization(@Nullable Input<Double> targetThroughputUtilization) {
+        public Builder targetThroughputUtilization(@Nullable Output<Double> targetThroughputUtilization) {
             this.targetThroughputUtilization = targetThroughputUtilization;
             return this;
         }
 
         public Builder targetThroughputUtilization(@Nullable Double targetThroughputUtilization) {
-            this.targetThroughputUtilization = Input.ofNullable(targetThroughputUtilization);
+            this.targetThroughputUtilization = Output.ofNullable(targetThroughputUtilization);
             return this;
         }
         public StandardAppVersionAutomaticScalingStandardSchedulerSettingsArgs build() {

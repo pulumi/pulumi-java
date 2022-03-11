@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glacier.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,9 +19,9 @@ public final class VaultNotificationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="events", required=true)
-      private final Input<List<String>> events;
+      private final Output<List<String>> events;
 
-    public Input<List<String>> getEvents() {
+    public Output<List<String>> getEvents() {
         return this.events;
     }
 
@@ -30,22 +30,22 @@ public final class VaultNotificationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="snsTopic", required=true)
-      private final Input<String> snsTopic;
+      private final Output<String> snsTopic;
 
-    public Input<String> getSnsTopic() {
+    public Output<String> getSnsTopic() {
         return this.snsTopic;
     }
 
     public VaultNotificationArgs(
-        Input<List<String>> events,
-        Input<String> snsTopic) {
+        Output<List<String>> events,
+        Output<String> snsTopic) {
         this.events = Objects.requireNonNull(events, "expected parameter 'events' to be non-null");
         this.snsTopic = Objects.requireNonNull(snsTopic, "expected parameter 'snsTopic' to be non-null");
     }
 
     private VaultNotificationArgs() {
-        this.events = Input.empty();
-        this.snsTopic = Input.empty();
+        this.events = Output.empty();
+        this.snsTopic = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class VaultNotificationArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<List<String>> events;
-        private Input<String> snsTopic;
+        private Output<List<String>> events;
+        private Output<String> snsTopic;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class VaultNotificationArgs extends io.pulumi.resources.ResourceArg
     	      this.snsTopic = defaults.snsTopic;
         }
 
-        public Builder events(Input<List<String>> events) {
+        public Builder events(Output<List<String>> events) {
             this.events = Objects.requireNonNull(events);
             return this;
         }
 
         public Builder events(List<String> events) {
-            this.events = Input.of(Objects.requireNonNull(events));
+            this.events = Output.of(Objects.requireNonNull(events));
             return this;
         }
 
-        public Builder snsTopic(Input<String> snsTopic) {
+        public Builder snsTopic(Output<String> snsTopic) {
             this.snsTopic = Objects.requireNonNull(snsTopic);
             return this;
         }
 
         public Builder snsTopic(String snsTopic) {
-            this.snsTopic = Input.of(Objects.requireNonNull(snsTopic));
+            this.snsTopic = Output.of(Objects.requireNonNull(snsTopic));
             return this;
         }
         public VaultNotificationArgs build() {

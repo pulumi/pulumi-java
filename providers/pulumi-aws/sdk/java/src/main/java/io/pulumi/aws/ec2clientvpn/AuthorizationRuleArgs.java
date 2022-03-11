@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2clientvpn;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class AuthorizationRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="accessGroupId")
-      private final @Nullable Input<String> accessGroupId;
+      private final @Nullable Output<String> accessGroupId;
 
-    public Input<String> getAccessGroupId() {
-        return this.accessGroupId == null ? Input.empty() : this.accessGroupId;
+    public Output<String> getAccessGroupId() {
+        return this.accessGroupId == null ? Output.empty() : this.accessGroupId;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class AuthorizationRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="authorizeAllGroups")
-      private final @Nullable Input<Boolean> authorizeAllGroups;
+      private final @Nullable Output<Boolean> authorizeAllGroups;
 
-    public Input<Boolean> getAuthorizeAllGroups() {
-        return this.authorizeAllGroups == null ? Input.empty() : this.authorizeAllGroups;
+    public Output<Boolean> getAuthorizeAllGroups() {
+        return this.authorizeAllGroups == null ? Output.empty() : this.authorizeAllGroups;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class AuthorizationRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="clientVpnEndpointId", required=true)
-      private final Input<String> clientVpnEndpointId;
+      private final Output<String> clientVpnEndpointId;
 
-    public Input<String> getClientVpnEndpointId() {
+    public Output<String> getClientVpnEndpointId() {
         return this.clientVpnEndpointId;
     }
 
@@ -53,10 +53,10 @@ public final class AuthorizationRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -64,18 +64,18 @@ public final class AuthorizationRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="targetNetworkCidr", required=true)
-      private final Input<String> targetNetworkCidr;
+      private final Output<String> targetNetworkCidr;
 
-    public Input<String> getTargetNetworkCidr() {
+    public Output<String> getTargetNetworkCidr() {
         return this.targetNetworkCidr;
     }
 
     public AuthorizationRuleArgs(
-        @Nullable Input<String> accessGroupId,
-        @Nullable Input<Boolean> authorizeAllGroups,
-        Input<String> clientVpnEndpointId,
-        @Nullable Input<String> description,
-        Input<String> targetNetworkCidr) {
+        @Nullable Output<String> accessGroupId,
+        @Nullable Output<Boolean> authorizeAllGroups,
+        Output<String> clientVpnEndpointId,
+        @Nullable Output<String> description,
+        Output<String> targetNetworkCidr) {
         this.accessGroupId = accessGroupId;
         this.authorizeAllGroups = authorizeAllGroups;
         this.clientVpnEndpointId = Objects.requireNonNull(clientVpnEndpointId, "expected parameter 'clientVpnEndpointId' to be non-null");
@@ -84,11 +84,11 @@ public final class AuthorizationRuleArgs extends io.pulumi.resources.ResourceArg
     }
 
     private AuthorizationRuleArgs() {
-        this.accessGroupId = Input.empty();
-        this.authorizeAllGroups = Input.empty();
-        this.clientVpnEndpointId = Input.empty();
-        this.description = Input.empty();
-        this.targetNetworkCidr = Input.empty();
+        this.accessGroupId = Output.empty();
+        this.authorizeAllGroups = Output.empty();
+        this.clientVpnEndpointId = Output.empty();
+        this.description = Output.empty();
+        this.targetNetworkCidr = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class AuthorizationRuleArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accessGroupId;
-        private @Nullable Input<Boolean> authorizeAllGroups;
-        private Input<String> clientVpnEndpointId;
-        private @Nullable Input<String> description;
-        private Input<String> targetNetworkCidr;
+        private @Nullable Output<String> accessGroupId;
+        private @Nullable Output<Boolean> authorizeAllGroups;
+        private Output<String> clientVpnEndpointId;
+        private @Nullable Output<String> description;
+        private Output<String> targetNetworkCidr;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class AuthorizationRuleArgs extends io.pulumi.resources.ResourceArg
     	      this.targetNetworkCidr = defaults.targetNetworkCidr;
         }
 
-        public Builder accessGroupId(@Nullable Input<String> accessGroupId) {
+        public Builder accessGroupId(@Nullable Output<String> accessGroupId) {
             this.accessGroupId = accessGroupId;
             return this;
         }
 
         public Builder accessGroupId(@Nullable String accessGroupId) {
-            this.accessGroupId = Input.ofNullable(accessGroupId);
+            this.accessGroupId = Output.ofNullable(accessGroupId);
             return this;
         }
 
-        public Builder authorizeAllGroups(@Nullable Input<Boolean> authorizeAllGroups) {
+        public Builder authorizeAllGroups(@Nullable Output<Boolean> authorizeAllGroups) {
             this.authorizeAllGroups = authorizeAllGroups;
             return this;
         }
 
         public Builder authorizeAllGroups(@Nullable Boolean authorizeAllGroups) {
-            this.authorizeAllGroups = Input.ofNullable(authorizeAllGroups);
+            this.authorizeAllGroups = Output.ofNullable(authorizeAllGroups);
             return this;
         }
 
-        public Builder clientVpnEndpointId(Input<String> clientVpnEndpointId) {
+        public Builder clientVpnEndpointId(Output<String> clientVpnEndpointId) {
             this.clientVpnEndpointId = Objects.requireNonNull(clientVpnEndpointId);
             return this;
         }
 
         public Builder clientVpnEndpointId(String clientVpnEndpointId) {
-            this.clientVpnEndpointId = Input.of(Objects.requireNonNull(clientVpnEndpointId));
+            this.clientVpnEndpointId = Output.of(Objects.requireNonNull(clientVpnEndpointId));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder targetNetworkCidr(Input<String> targetNetworkCidr) {
+        public Builder targetNetworkCidr(Output<String> targetNetworkCidr) {
             this.targetNetworkCidr = Objects.requireNonNull(targetNetworkCidr);
             return this;
         }
 
         public Builder targetNetworkCidr(String targetNetworkCidr) {
-            this.targetNetworkCidr = Input.of(Objects.requireNonNull(targetNetworkCidr));
+            this.targetNetworkCidr = Output.of(Objects.requireNonNull(targetNetworkCidr));
             return this;
         }
         public AuthorizationRuleArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CryptoKeyArgs;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class GooglePrivacyDlpV2CryptoHashConfigArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="cryptoKey")
-      private final @Nullable Input<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey;
+      private final @Nullable Output<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey;
 
-    public Input<GooglePrivacyDlpV2CryptoKeyArgs> getCryptoKey() {
-        return this.cryptoKey == null ? Input.empty() : this.cryptoKey;
+    public Output<GooglePrivacyDlpV2CryptoKeyArgs> getCryptoKey() {
+        return this.cryptoKey == null ? Output.empty() : this.cryptoKey;
     }
 
-    public GooglePrivacyDlpV2CryptoHashConfigArgs(@Nullable Input<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey) {
+    public GooglePrivacyDlpV2CryptoHashConfigArgs(@Nullable Output<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey) {
         this.cryptoKey = cryptoKey;
     }
 
     private GooglePrivacyDlpV2CryptoHashConfigArgs() {
-        this.cryptoKey = Input.empty();
+        this.cryptoKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2CryptoHashConfigArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey;
+        private @Nullable Output<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GooglePrivacyDlpV2CryptoHashConfigArgs extends io.pulumi.reso
     	      this.cryptoKey = defaults.cryptoKey;
         }
 
-        public Builder cryptoKey(@Nullable Input<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey) {
+        public Builder cryptoKey(@Nullable Output<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey) {
             this.cryptoKey = cryptoKey;
             return this;
         }
 
         public Builder cryptoKey(@Nullable GooglePrivacyDlpV2CryptoKeyArgs cryptoKey) {
-            this.cryptoKey = Input.ofNullable(cryptoKey);
+            this.cryptoKey = Output.ofNullable(cryptoKey);
             return this;
         }
         public GooglePrivacyDlpV2CryptoHashConfigArgs build() {

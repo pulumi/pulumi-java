@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 import io.pulumi.azurenative.devtestlab.enums.HostCachingOptions;
 import io.pulumi.azurenative.devtestlab.inputs.AttachNewDataDiskOptionsArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class DataDiskPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="attachNewDataDiskOptions")
-      private final @Nullable Input<AttachNewDataDiskOptionsArgs> attachNewDataDiskOptions;
+      private final @Nullable Output<AttachNewDataDiskOptionsArgs> attachNewDataDiskOptions;
 
-    public Input<AttachNewDataDiskOptionsArgs> getAttachNewDataDiskOptions() {
-        return this.attachNewDataDiskOptions == null ? Input.empty() : this.attachNewDataDiskOptions;
+    public Output<AttachNewDataDiskOptionsArgs> getAttachNewDataDiskOptions() {
+        return this.attachNewDataDiskOptions == null ? Output.empty() : this.attachNewDataDiskOptions;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class DataDiskPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="existingLabDiskId")
-      private final @Nullable Input<String> existingLabDiskId;
+      private final @Nullable Output<String> existingLabDiskId;
 
-    public Input<String> getExistingLabDiskId() {
-        return this.existingLabDiskId == null ? Input.empty() : this.existingLabDiskId;
+    public Output<String> getExistingLabDiskId() {
+        return this.existingLabDiskId == null ? Output.empty() : this.existingLabDiskId;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class DataDiskPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="hostCaching")
-      private final @Nullable Input<Either<String,HostCachingOptions>> hostCaching;
+      private final @Nullable Output<Either<String,HostCachingOptions>> hostCaching;
 
-    public Input<Either<String,HostCachingOptions>> getHostCaching() {
-        return this.hostCaching == null ? Input.empty() : this.hostCaching;
+    public Output<Either<String,HostCachingOptions>> getHostCaching() {
+        return this.hostCaching == null ? Output.empty() : this.hostCaching;
     }
 
     public DataDiskPropertiesArgs(
-        @Nullable Input<AttachNewDataDiskOptionsArgs> attachNewDataDiskOptions,
-        @Nullable Input<String> existingLabDiskId,
-        @Nullable Input<Either<String,HostCachingOptions>> hostCaching) {
+        @Nullable Output<AttachNewDataDiskOptionsArgs> attachNewDataDiskOptions,
+        @Nullable Output<String> existingLabDiskId,
+        @Nullable Output<Either<String,HostCachingOptions>> hostCaching) {
         this.attachNewDataDiskOptions = attachNewDataDiskOptions;
         this.existingLabDiskId = existingLabDiskId;
         this.hostCaching = hostCaching;
     }
 
     private DataDiskPropertiesArgs() {
-        this.attachNewDataDiskOptions = Input.empty();
-        this.existingLabDiskId = Input.empty();
-        this.hostCaching = Input.empty();
+        this.attachNewDataDiskOptions = Output.empty();
+        this.existingLabDiskId = Output.empty();
+        this.hostCaching = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class DataDiskPropertiesArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<AttachNewDataDiskOptionsArgs> attachNewDataDiskOptions;
-        private @Nullable Input<String> existingLabDiskId;
-        private @Nullable Input<Either<String,HostCachingOptions>> hostCaching;
+        private @Nullable Output<AttachNewDataDiskOptionsArgs> attachNewDataDiskOptions;
+        private @Nullable Output<String> existingLabDiskId;
+        private @Nullable Output<Either<String,HostCachingOptions>> hostCaching;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class DataDiskPropertiesArgs extends io.pulumi.resources.ResourceAr
     	      this.hostCaching = defaults.hostCaching;
         }
 
-        public Builder attachNewDataDiskOptions(@Nullable Input<AttachNewDataDiskOptionsArgs> attachNewDataDiskOptions) {
+        public Builder attachNewDataDiskOptions(@Nullable Output<AttachNewDataDiskOptionsArgs> attachNewDataDiskOptions) {
             this.attachNewDataDiskOptions = attachNewDataDiskOptions;
             return this;
         }
 
         public Builder attachNewDataDiskOptions(@Nullable AttachNewDataDiskOptionsArgs attachNewDataDiskOptions) {
-            this.attachNewDataDiskOptions = Input.ofNullable(attachNewDataDiskOptions);
+            this.attachNewDataDiskOptions = Output.ofNullable(attachNewDataDiskOptions);
             return this;
         }
 
-        public Builder existingLabDiskId(@Nullable Input<String> existingLabDiskId) {
+        public Builder existingLabDiskId(@Nullable Output<String> existingLabDiskId) {
             this.existingLabDiskId = existingLabDiskId;
             return this;
         }
 
         public Builder existingLabDiskId(@Nullable String existingLabDiskId) {
-            this.existingLabDiskId = Input.ofNullable(existingLabDiskId);
+            this.existingLabDiskId = Output.ofNullable(existingLabDiskId);
             return this;
         }
 
-        public Builder hostCaching(@Nullable Input<Either<String,HostCachingOptions>> hostCaching) {
+        public Builder hostCaching(@Nullable Output<Either<String,HostCachingOptions>> hostCaching) {
             this.hostCaching = hostCaching;
             return this;
         }
 
         public Builder hostCaching(@Nullable Either<String,HostCachingOptions> hostCaching) {
-            this.hostCaching = Input.ofNullable(hostCaching);
+            this.hostCaching = Output.ofNullable(hostCaching);
             return this;
         }
         public DataDiskPropertiesArgs build() {

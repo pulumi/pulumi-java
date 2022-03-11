@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class AkamaiSignatureHeaderAuthenticationKeyArgs extends io.pulumi.
      * 
      */
     @InputImport(name="base64Key")
-      private final @Nullable Input<String> base64Key;
+      private final @Nullable Output<String> base64Key;
 
-    public Input<String> getBase64Key() {
-        return this.base64Key == null ? Input.empty() : this.base64Key;
+    public Output<String> getBase64Key() {
+        return this.base64Key == null ? Output.empty() : this.base64Key;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class AkamaiSignatureHeaderAuthenticationKeyArgs extends io.pulumi.
      * 
      */
     @InputImport(name="expiration")
-      private final @Nullable Input<String> expiration;
+      private final @Nullable Output<String> expiration;
 
-    public Input<String> getExpiration() {
-        return this.expiration == null ? Input.empty() : this.expiration;
+    public Output<String> getExpiration() {
+        return this.expiration == null ? Output.empty() : this.expiration;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class AkamaiSignatureHeaderAuthenticationKeyArgs extends io.pulumi.
      * 
      */
     @InputImport(name="identifier")
-      private final @Nullable Input<String> identifier;
+      private final @Nullable Output<String> identifier;
 
-    public Input<String> getIdentifier() {
-        return this.identifier == null ? Input.empty() : this.identifier;
+    public Output<String> getIdentifier() {
+        return this.identifier == null ? Output.empty() : this.identifier;
     }
 
     public AkamaiSignatureHeaderAuthenticationKeyArgs(
-        @Nullable Input<String> base64Key,
-        @Nullable Input<String> expiration,
-        @Nullable Input<String> identifier) {
+        @Nullable Output<String> base64Key,
+        @Nullable Output<String> expiration,
+        @Nullable Output<String> identifier) {
         this.base64Key = base64Key;
         this.expiration = expiration;
         this.identifier = identifier;
     }
 
     private AkamaiSignatureHeaderAuthenticationKeyArgs() {
-        this.base64Key = Input.empty();
-        this.expiration = Input.empty();
-        this.identifier = Input.empty();
+        this.base64Key = Output.empty();
+        this.expiration = Output.empty();
+        this.identifier = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class AkamaiSignatureHeaderAuthenticationKeyArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> base64Key;
-        private @Nullable Input<String> expiration;
-        private @Nullable Input<String> identifier;
+        private @Nullable Output<String> base64Key;
+        private @Nullable Output<String> expiration;
+        private @Nullable Output<String> identifier;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class AkamaiSignatureHeaderAuthenticationKeyArgs extends io.pulumi.
     	      this.identifier = defaults.identifier;
         }
 
-        public Builder base64Key(@Nullable Input<String> base64Key) {
+        public Builder base64Key(@Nullable Output<String> base64Key) {
             this.base64Key = base64Key;
             return this;
         }
 
         public Builder base64Key(@Nullable String base64Key) {
-            this.base64Key = Input.ofNullable(base64Key);
+            this.base64Key = Output.ofNullable(base64Key);
             return this;
         }
 
-        public Builder expiration(@Nullable Input<String> expiration) {
+        public Builder expiration(@Nullable Output<String> expiration) {
             this.expiration = expiration;
             return this;
         }
 
         public Builder expiration(@Nullable String expiration) {
-            this.expiration = Input.ofNullable(expiration);
+            this.expiration = Output.ofNullable(expiration);
             return this;
         }
 
-        public Builder identifier(@Nullable Input<String> identifier) {
+        public Builder identifier(@Nullable Output<String> identifier) {
             this.identifier = identifier;
             return this;
         }
 
         public Builder identifier(@Nullable String identifier) {
-            this.identifier = Input.ofNullable(identifier);
+            this.identifier = Output.ofNullable(identifier);
             return this;
         }
         public AkamaiSignatureHeaderAuthenticationKeyArgs build() {

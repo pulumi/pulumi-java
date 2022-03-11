@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class AutoStorageBasePropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="storageAccountId", required=true)
-      private final Input<String> storageAccountId;
+      private final Output<String> storageAccountId;
 
-    public Input<String> getStorageAccountId() {
+    public Output<String> getStorageAccountId() {
         return this.storageAccountId;
     }
 
-    public AutoStorageBasePropertiesArgs(Input<String> storageAccountId) {
+    public AutoStorageBasePropertiesArgs(Output<String> storageAccountId) {
         this.storageAccountId = Objects.requireNonNull(storageAccountId, "expected parameter 'storageAccountId' to be non-null");
     }
 
     private AutoStorageBasePropertiesArgs() {
-        this.storageAccountId = Input.empty();
+        this.storageAccountId = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class AutoStorageBasePropertiesArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> storageAccountId;
+        private Output<String> storageAccountId;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class AutoStorageBasePropertiesArgs extends io.pulumi.resources.Res
     	      this.storageAccountId = defaults.storageAccountId;
         }
 
-        public Builder storageAccountId(Input<String> storageAccountId) {
+        public Builder storageAccountId(Output<String> storageAccountId) {
             this.storageAccountId = Objects.requireNonNull(storageAccountId);
             return this;
         }
 
         public Builder storageAccountId(String storageAccountId) {
-            this.storageAccountId = Input.of(Objects.requireNonNull(storageAccountId));
+            this.storageAccountId = Output.of(Objects.requireNonNull(storageAccountId));
             return this;
         }
         public AutoStorageBasePropertiesArgs build() {

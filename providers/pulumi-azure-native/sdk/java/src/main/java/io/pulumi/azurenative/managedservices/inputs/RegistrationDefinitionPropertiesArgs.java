@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.managedservices.inputs;
 
 import io.pulumi.azurenative.managedservices.inputs.AuthorizationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,9 +25,9 @@ public final class RegistrationDefinitionPropertiesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="authorizations", required=true)
-      private final Input<List<AuthorizationArgs>> authorizations;
+      private final Output<List<AuthorizationArgs>> authorizations;
 
-    public Input<List<AuthorizationArgs>> getAuthorizations() {
+    public Output<List<AuthorizationArgs>> getAuthorizations() {
         return this.authorizations;
     }
 
@@ -36,10 +36,10 @@ public final class RegistrationDefinitionPropertiesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -47,9 +47,9 @@ public final class RegistrationDefinitionPropertiesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="managedByTenantId", required=true)
-      private final Input<String> managedByTenantId;
+      private final Output<String> managedByTenantId;
 
-    public Input<String> getManagedByTenantId() {
+    public Output<String> getManagedByTenantId() {
         return this.managedByTenantId;
     }
 
@@ -58,17 +58,17 @@ public final class RegistrationDefinitionPropertiesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="registrationDefinitionName")
-      private final @Nullable Input<String> registrationDefinitionName;
+      private final @Nullable Output<String> registrationDefinitionName;
 
-    public Input<String> getRegistrationDefinitionName() {
-        return this.registrationDefinitionName == null ? Input.empty() : this.registrationDefinitionName;
+    public Output<String> getRegistrationDefinitionName() {
+        return this.registrationDefinitionName == null ? Output.empty() : this.registrationDefinitionName;
     }
 
     public RegistrationDefinitionPropertiesArgs(
-        Input<List<AuthorizationArgs>> authorizations,
-        @Nullable Input<String> description,
-        Input<String> managedByTenantId,
-        @Nullable Input<String> registrationDefinitionName) {
+        Output<List<AuthorizationArgs>> authorizations,
+        @Nullable Output<String> description,
+        Output<String> managedByTenantId,
+        @Nullable Output<String> registrationDefinitionName) {
         this.authorizations = Objects.requireNonNull(authorizations, "expected parameter 'authorizations' to be non-null");
         this.description = description;
         this.managedByTenantId = Objects.requireNonNull(managedByTenantId, "expected parameter 'managedByTenantId' to be non-null");
@@ -76,10 +76,10 @@ public final class RegistrationDefinitionPropertiesArgs extends io.pulumi.resour
     }
 
     private RegistrationDefinitionPropertiesArgs() {
-        this.authorizations = Input.empty();
-        this.description = Input.empty();
-        this.managedByTenantId = Input.empty();
-        this.registrationDefinitionName = Input.empty();
+        this.authorizations = Output.empty();
+        this.description = Output.empty();
+        this.managedByTenantId = Output.empty();
+        this.registrationDefinitionName = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class RegistrationDefinitionPropertiesArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private Input<List<AuthorizationArgs>> authorizations;
-        private @Nullable Input<String> description;
-        private Input<String> managedByTenantId;
-        private @Nullable Input<String> registrationDefinitionName;
+        private Output<List<AuthorizationArgs>> authorizations;
+        private @Nullable Output<String> description;
+        private Output<String> managedByTenantId;
+        private @Nullable Output<String> registrationDefinitionName;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class RegistrationDefinitionPropertiesArgs extends io.pulumi.resour
     	      this.registrationDefinitionName = defaults.registrationDefinitionName;
         }
 
-        public Builder authorizations(Input<List<AuthorizationArgs>> authorizations) {
+        public Builder authorizations(Output<List<AuthorizationArgs>> authorizations) {
             this.authorizations = Objects.requireNonNull(authorizations);
             return this;
         }
 
         public Builder authorizations(List<AuthorizationArgs> authorizations) {
-            this.authorizations = Input.of(Objects.requireNonNull(authorizations));
+            this.authorizations = Output.of(Objects.requireNonNull(authorizations));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder managedByTenantId(Input<String> managedByTenantId) {
+        public Builder managedByTenantId(Output<String> managedByTenantId) {
             this.managedByTenantId = Objects.requireNonNull(managedByTenantId);
             return this;
         }
 
         public Builder managedByTenantId(String managedByTenantId) {
-            this.managedByTenantId = Input.of(Objects.requireNonNull(managedByTenantId));
+            this.managedByTenantId = Output.of(Objects.requireNonNull(managedByTenantId));
             return this;
         }
 
-        public Builder registrationDefinitionName(@Nullable Input<String> registrationDefinitionName) {
+        public Builder registrationDefinitionName(@Nullable Output<String> registrationDefinitionName) {
             this.registrationDefinitionName = registrationDefinitionName;
             return this;
         }
 
         public Builder registrationDefinitionName(@Nullable String registrationDefinitionName) {
-            this.registrationDefinitionName = Input.ofNullable(registrationDefinitionName);
+            this.registrationDefinitionName = Output.ofNullable(registrationDefinitionName);
             return this;
         }
         public RegistrationDefinitionPropertiesArgs build() {

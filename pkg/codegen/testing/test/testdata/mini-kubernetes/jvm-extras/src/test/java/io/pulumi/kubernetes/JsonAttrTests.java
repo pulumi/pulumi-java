@@ -1,7 +1,7 @@
 package io.pulumi.kubernetes;
 
 import io.pulumi.Log;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.internal.Internal;
 import io.pulumi.deployment.internal.EngineLogger;
 import io.pulumi.kubernetes.ProviderArgs;
@@ -16,7 +16,7 @@ class JsonAttrTests {
     @Test
     void verifyKubeConfigNotDoubleEncoded() {
         var log = new Log(mock(EngineLogger.class));
-        var providerArgs = ProviderArgs.builder().kubeconfig(Input.of("kc")).build();
+        var providerArgs = ProviderArgs.builder().kubeconfig(Output.of("kc")).build();
         var map = Internal.from(providerArgs).toOptionalMapAsync(log).join();
         var v = map.get("kubeconfig").get();
         var r = new Serializer(log).serializeAsync("", v, true).join();

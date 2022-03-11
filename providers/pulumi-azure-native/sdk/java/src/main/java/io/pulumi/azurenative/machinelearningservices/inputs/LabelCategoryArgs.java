@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.LabelClassArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class LabelCategoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowMultiSelect")
-      private final @Nullable Input<Boolean> allowMultiSelect;
+      private final @Nullable Output<Boolean> allowMultiSelect;
 
-    public Input<Boolean> getAllowMultiSelect() {
-        return this.allowMultiSelect == null ? Input.empty() : this.allowMultiSelect;
+    public Output<Boolean> getAllowMultiSelect() {
+        return this.allowMultiSelect == null ? Output.empty() : this.allowMultiSelect;
     }
 
     /**
@@ -37,9 +37,9 @@ public final class LabelCategoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="classes", required=true)
-      private final Input<Map<String,LabelClassArgs>> classes;
+      private final Output<Map<String,LabelClassArgs>> classes;
 
-    public Input<Map<String,LabelClassArgs>> getClasses() {
+    public Output<Map<String,LabelClassArgs>> getClasses() {
         return this.classes;
     }
 
@@ -48,25 +48,25 @@ public final class LabelCategoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     public LabelCategoryArgs(
-        @Nullable Input<Boolean> allowMultiSelect,
-        Input<Map<String,LabelClassArgs>> classes,
-        @Nullable Input<String> displayName) {
+        @Nullable Output<Boolean> allowMultiSelect,
+        Output<Map<String,LabelClassArgs>> classes,
+        @Nullable Output<String> displayName) {
         this.allowMultiSelect = allowMultiSelect;
         this.classes = Objects.requireNonNull(classes, "expected parameter 'classes' to be non-null");
         this.displayName = displayName;
     }
 
     private LabelCategoryArgs() {
-        this.allowMultiSelect = Input.empty();
-        this.classes = Input.empty();
-        this.displayName = Input.empty();
+        this.allowMultiSelect = Output.empty();
+        this.classes = Output.empty();
+        this.displayName = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class LabelCategoryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowMultiSelect;
-        private Input<Map<String,LabelClassArgs>> classes;
-        private @Nullable Input<String> displayName;
+        private @Nullable Output<Boolean> allowMultiSelect;
+        private Output<Map<String,LabelClassArgs>> classes;
+        private @Nullable Output<String> displayName;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class LabelCategoryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.displayName = defaults.displayName;
         }
 
-        public Builder allowMultiSelect(@Nullable Input<Boolean> allowMultiSelect) {
+        public Builder allowMultiSelect(@Nullable Output<Boolean> allowMultiSelect) {
             this.allowMultiSelect = allowMultiSelect;
             return this;
         }
 
         public Builder allowMultiSelect(@Nullable Boolean allowMultiSelect) {
-            this.allowMultiSelect = Input.ofNullable(allowMultiSelect);
+            this.allowMultiSelect = Output.ofNullable(allowMultiSelect);
             return this;
         }
 
-        public Builder classes(Input<Map<String,LabelClassArgs>> classes) {
+        public Builder classes(Output<Map<String,LabelClassArgs>> classes) {
             this.classes = Objects.requireNonNull(classes);
             return this;
         }
 
         public Builder classes(Map<String,LabelClassArgs> classes) {
-            this.classes = Input.of(Objects.requireNonNull(classes));
+            this.classes = Output.of(Objects.requireNonNull(classes));
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
         public LabelCategoryArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class FlexibleAppVersionNetworkArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="forwardedPorts")
-      private final @Nullable Input<List<String>> forwardedPorts;
+      private final @Nullable Output<List<String>> forwardedPorts;
 
-    public Input<List<String>> getForwardedPorts() {
-        return this.forwardedPorts == null ? Input.empty() : this.forwardedPorts;
+    public Output<List<String>> getForwardedPorts() {
+        return this.forwardedPorts == null ? Output.empty() : this.forwardedPorts;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class FlexibleAppVersionNetworkArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="instanceTag")
-      private final @Nullable Input<String> instanceTag;
+      private final @Nullable Output<String> instanceTag;
 
-    public Input<String> getInstanceTag() {
-        return this.instanceTag == null ? Input.empty() : this.instanceTag;
+    public Output<String> getInstanceTag() {
+        return this.instanceTag == null ? Output.empty() : this.instanceTag;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class FlexibleAppVersionNetworkArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -54,10 +54,10 @@ public final class FlexibleAppVersionNetworkArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="sessionAffinity")
-      private final @Nullable Input<Boolean> sessionAffinity;
+      private final @Nullable Output<Boolean> sessionAffinity;
 
-    public Input<Boolean> getSessionAffinity() {
-        return this.sessionAffinity == null ? Input.empty() : this.sessionAffinity;
+    public Output<Boolean> getSessionAffinity() {
+        return this.sessionAffinity == null ? Output.empty() : this.sessionAffinity;
     }
 
     /**
@@ -69,18 +69,18 @@ public final class FlexibleAppVersionNetworkArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="subnetwork")
-      private final @Nullable Input<String> subnetwork;
+      private final @Nullable Output<String> subnetwork;
 
-    public Input<String> getSubnetwork() {
-        return this.subnetwork == null ? Input.empty() : this.subnetwork;
+    public Output<String> getSubnetwork() {
+        return this.subnetwork == null ? Output.empty() : this.subnetwork;
     }
 
     public FlexibleAppVersionNetworkArgs(
-        @Nullable Input<List<String>> forwardedPorts,
-        @Nullable Input<String> instanceTag,
-        Input<String> name,
-        @Nullable Input<Boolean> sessionAffinity,
-        @Nullable Input<String> subnetwork) {
+        @Nullable Output<List<String>> forwardedPorts,
+        @Nullable Output<String> instanceTag,
+        Output<String> name,
+        @Nullable Output<Boolean> sessionAffinity,
+        @Nullable Output<String> subnetwork) {
         this.forwardedPorts = forwardedPorts;
         this.instanceTag = instanceTag;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
@@ -89,11 +89,11 @@ public final class FlexibleAppVersionNetworkArgs extends io.pulumi.resources.Res
     }
 
     private FlexibleAppVersionNetworkArgs() {
-        this.forwardedPorts = Input.empty();
-        this.instanceTag = Input.empty();
-        this.name = Input.empty();
-        this.sessionAffinity = Input.empty();
-        this.subnetwork = Input.empty();
+        this.forwardedPorts = Output.empty();
+        this.instanceTag = Output.empty();
+        this.name = Output.empty();
+        this.sessionAffinity = Output.empty();
+        this.subnetwork = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class FlexibleAppVersionNetworkArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> forwardedPorts;
-        private @Nullable Input<String> instanceTag;
-        private Input<String> name;
-        private @Nullable Input<Boolean> sessionAffinity;
-        private @Nullable Input<String> subnetwork;
+        private @Nullable Output<List<String>> forwardedPorts;
+        private @Nullable Output<String> instanceTag;
+        private Output<String> name;
+        private @Nullable Output<Boolean> sessionAffinity;
+        private @Nullable Output<String> subnetwork;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class FlexibleAppVersionNetworkArgs extends io.pulumi.resources.Res
     	      this.subnetwork = defaults.subnetwork;
         }
 
-        public Builder forwardedPorts(@Nullable Input<List<String>> forwardedPorts) {
+        public Builder forwardedPorts(@Nullable Output<List<String>> forwardedPorts) {
             this.forwardedPorts = forwardedPorts;
             return this;
         }
 
         public Builder forwardedPorts(@Nullable List<String> forwardedPorts) {
-            this.forwardedPorts = Input.ofNullable(forwardedPorts);
+            this.forwardedPorts = Output.ofNullable(forwardedPorts);
             return this;
         }
 
-        public Builder instanceTag(@Nullable Input<String> instanceTag) {
+        public Builder instanceTag(@Nullable Output<String> instanceTag) {
             this.instanceTag = instanceTag;
             return this;
         }
 
         public Builder instanceTag(@Nullable String instanceTag) {
-            this.instanceTag = Input.ofNullable(instanceTag);
+            this.instanceTag = Output.ofNullable(instanceTag);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder sessionAffinity(@Nullable Input<Boolean> sessionAffinity) {
+        public Builder sessionAffinity(@Nullable Output<Boolean> sessionAffinity) {
             this.sessionAffinity = sessionAffinity;
             return this;
         }
 
         public Builder sessionAffinity(@Nullable Boolean sessionAffinity) {
-            this.sessionAffinity = Input.ofNullable(sessionAffinity);
+            this.sessionAffinity = Output.ofNullable(sessionAffinity);
             return this;
         }
 
-        public Builder subnetwork(@Nullable Input<String> subnetwork) {
+        public Builder subnetwork(@Nullable Output<String> subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
 
         public Builder subnetwork(@Nullable String subnetwork) {
-            this.subnetwork = Input.ofNullable(subnetwork);
+            this.subnetwork = Output.ofNullable(subnetwork);
             return this;
         }
         public FlexibleAppVersionNetworkArgs build() {

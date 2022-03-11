@@ -6,7 +6,6 @@ package io.pulumi.aws.sagemaker;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.sagemaker.ModelPackageGroupPolicyArgs;
 import io.pulumi.aws.sagemaker.inputs.ModelPackageGroupPolicyState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -88,14 +87,14 @@ public class ModelPackageGroupPolicy extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public ModelPackageGroupPolicy(String name, ModelPackageGroupPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:sagemaker/modelPackageGroupPolicy:ModelPackageGroupPolicy", name, args == null ? ModelPackageGroupPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:sagemaker/modelPackageGroupPolicy:ModelPackageGroupPolicy", name, args == null ? ModelPackageGroupPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ModelPackageGroupPolicy(String name, Input<String> id, @Nullable ModelPackageGroupPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ModelPackageGroupPolicy(String name, Output<String> id, @Nullable ModelPackageGroupPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:sagemaker/modelPackageGroupPolicy:ModelPackageGroupPolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -111,7 +110,7 @@ public class ModelPackageGroupPolicy extends io.pulumi.resources.CustomResource 
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ModelPackageGroupPolicy get(String name, Input<String> id, @Nullable ModelPackageGroupPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ModelPackageGroupPolicy get(String name, Output<String> id, @Nullable ModelPackageGroupPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ModelPackageGroupPolicy(name, id, state, options);
     }
 }

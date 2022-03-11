@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.search.inputs;
 
 import io.pulumi.azurenative.search.inputs.IpRuleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipRules")
-      private final @Nullable Input<List<IpRuleArgs>> ipRules;
+      private final @Nullable Output<List<IpRuleArgs>> ipRules;
 
-    public Input<List<IpRuleArgs>> getIpRules() {
-        return this.ipRules == null ? Input.empty() : this.ipRules;
+    public Output<List<IpRuleArgs>> getIpRules() {
+        return this.ipRules == null ? Output.empty() : this.ipRules;
     }
 
-    public NetworkRuleSetArgs(@Nullable Input<List<IpRuleArgs>> ipRules) {
+    public NetworkRuleSetArgs(@Nullable Output<List<IpRuleArgs>> ipRules) {
         this.ipRules = ipRules;
     }
 
     private NetworkRuleSetArgs() {
-        this.ipRules = Input.empty();
+        this.ipRules = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<IpRuleArgs>> ipRules;
+        private @Nullable Output<List<IpRuleArgs>> ipRules;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ipRules = defaults.ipRules;
         }
 
-        public Builder ipRules(@Nullable Input<List<IpRuleArgs>> ipRules) {
+        public Builder ipRules(@Nullable Output<List<IpRuleArgs>> ipRules) {
             this.ipRules = ipRules;
             return this;
         }
 
         public Builder ipRules(@Nullable List<IpRuleArgs> ipRules) {
-            this.ipRules = Input.ofNullable(ipRules);
+            this.ipRules = Output.ofNullable(ipRules);
             return this;
         }
         public NetworkRuleSetArgs build() {

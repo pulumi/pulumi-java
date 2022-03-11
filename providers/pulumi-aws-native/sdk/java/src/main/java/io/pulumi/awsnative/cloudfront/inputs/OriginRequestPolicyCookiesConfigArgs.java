@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -16,29 +16,29 @@ public final class OriginRequestPolicyCookiesConfigArgs extends io.pulumi.resour
     public static final OriginRequestPolicyCookiesConfigArgs Empty = new OriginRequestPolicyCookiesConfigArgs();
 
     @InputImport(name="cookieBehavior", required=true)
-      private final Input<String> cookieBehavior;
+      private final Output<String> cookieBehavior;
 
-    public Input<String> getCookieBehavior() {
+    public Output<String> getCookieBehavior() {
         return this.cookieBehavior;
     }
 
     @InputImport(name="cookies")
-      private final @Nullable Input<List<String>> cookies;
+      private final @Nullable Output<List<String>> cookies;
 
-    public Input<List<String>> getCookies() {
-        return this.cookies == null ? Input.empty() : this.cookies;
+    public Output<List<String>> getCookies() {
+        return this.cookies == null ? Output.empty() : this.cookies;
     }
 
     public OriginRequestPolicyCookiesConfigArgs(
-        Input<String> cookieBehavior,
-        @Nullable Input<List<String>> cookies) {
+        Output<String> cookieBehavior,
+        @Nullable Output<List<String>> cookies) {
         this.cookieBehavior = Objects.requireNonNull(cookieBehavior, "expected parameter 'cookieBehavior' to be non-null");
         this.cookies = cookies;
     }
 
     private OriginRequestPolicyCookiesConfigArgs() {
-        this.cookieBehavior = Input.empty();
-        this.cookies = Input.empty();
+        this.cookieBehavior = Output.empty();
+        this.cookies = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class OriginRequestPolicyCookiesConfigArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private Input<String> cookieBehavior;
-        private @Nullable Input<List<String>> cookies;
+        private Output<String> cookieBehavior;
+        private @Nullable Output<List<String>> cookies;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class OriginRequestPolicyCookiesConfigArgs extends io.pulumi.resour
     	      this.cookies = defaults.cookies;
         }
 
-        public Builder cookieBehavior(Input<String> cookieBehavior) {
+        public Builder cookieBehavior(Output<String> cookieBehavior) {
             this.cookieBehavior = Objects.requireNonNull(cookieBehavior);
             return this;
         }
 
         public Builder cookieBehavior(String cookieBehavior) {
-            this.cookieBehavior = Input.of(Objects.requireNonNull(cookieBehavior));
+            this.cookieBehavior = Output.of(Objects.requireNonNull(cookieBehavior));
             return this;
         }
 
-        public Builder cookies(@Nullable Input<List<String>> cookies) {
+        public Builder cookies(@Nullable Output<List<String>> cookies) {
             this.cookies = cookies;
             return this;
         }
 
         public Builder cookies(@Nullable List<String> cookies) {
-            this.cookies = Input.ofNullable(cookies);
+            this.cookies = Output.ofNullable(cookies);
             return this;
         }
         public OriginRequestPolicyCookiesConfigArgs build() {

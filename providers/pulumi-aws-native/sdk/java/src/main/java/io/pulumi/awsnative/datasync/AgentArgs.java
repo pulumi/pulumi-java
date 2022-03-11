@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.datasync;
 
 import io.pulumi.awsnative.datasync.inputs.AgentTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,9 +21,9 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="activationKey", required=true)
-      private final Input<String> activationKey;
+      private final Output<String> activationKey;
 
-    public Input<String> getActivationKey() {
+    public Output<String> getActivationKey() {
         return this.activationKey;
     }
 
@@ -32,10 +32,10 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="agentName")
-      private final @Nullable Input<String> agentName;
+      private final @Nullable Output<String> agentName;
 
-    public Input<String> getAgentName() {
-        return this.agentName == null ? Input.empty() : this.agentName;
+    public Output<String> getAgentName() {
+        return this.agentName == null ? Output.empty() : this.agentName;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityGroupArns")
-      private final @Nullable Input<List<String>> securityGroupArns;
+      private final @Nullable Output<List<String>> securityGroupArns;
 
-    public Input<List<String>> getSecurityGroupArns() {
-        return this.securityGroupArns == null ? Input.empty() : this.securityGroupArns;
+    public Output<List<String>> getSecurityGroupArns() {
+        return this.securityGroupArns == null ? Output.empty() : this.securityGroupArns;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetArns")
-      private final @Nullable Input<List<String>> subnetArns;
+      private final @Nullable Output<List<String>> subnetArns;
 
-    public Input<List<String>> getSubnetArns() {
-        return this.subnetArns == null ? Input.empty() : this.subnetArns;
+    public Output<List<String>> getSubnetArns() {
+        return this.subnetArns == null ? Output.empty() : this.subnetArns;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<AgentTagArgs>> tags;
+      private final @Nullable Output<List<AgentTagArgs>> tags;
 
-    public Input<List<AgentTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<AgentTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -76,19 +76,19 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcEndpointId")
-      private final @Nullable Input<String> vpcEndpointId;
+      private final @Nullable Output<String> vpcEndpointId;
 
-    public Input<String> getVpcEndpointId() {
-        return this.vpcEndpointId == null ? Input.empty() : this.vpcEndpointId;
+    public Output<String> getVpcEndpointId() {
+        return this.vpcEndpointId == null ? Output.empty() : this.vpcEndpointId;
     }
 
     public AgentArgs(
-        Input<String> activationKey,
-        @Nullable Input<String> agentName,
-        @Nullable Input<List<String>> securityGroupArns,
-        @Nullable Input<List<String>> subnetArns,
-        @Nullable Input<List<AgentTagArgs>> tags,
-        @Nullable Input<String> vpcEndpointId) {
+        Output<String> activationKey,
+        @Nullable Output<String> agentName,
+        @Nullable Output<List<String>> securityGroupArns,
+        @Nullable Output<List<String>> subnetArns,
+        @Nullable Output<List<AgentTagArgs>> tags,
+        @Nullable Output<String> vpcEndpointId) {
         this.activationKey = Objects.requireNonNull(activationKey, "expected parameter 'activationKey' to be non-null");
         this.agentName = agentName;
         this.securityGroupArns = securityGroupArns;
@@ -98,12 +98,12 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AgentArgs() {
-        this.activationKey = Input.empty();
-        this.agentName = Input.empty();
-        this.securityGroupArns = Input.empty();
-        this.subnetArns = Input.empty();
-        this.tags = Input.empty();
-        this.vpcEndpointId = Input.empty();
+        this.activationKey = Output.empty();
+        this.agentName = Output.empty();
+        this.securityGroupArns = Output.empty();
+        this.subnetArns = Output.empty();
+        this.tags = Output.empty();
+        this.vpcEndpointId = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> activationKey;
-        private @Nullable Input<String> agentName;
-        private @Nullable Input<List<String>> securityGroupArns;
-        private @Nullable Input<List<String>> subnetArns;
-        private @Nullable Input<List<AgentTagArgs>> tags;
-        private @Nullable Input<String> vpcEndpointId;
+        private Output<String> activationKey;
+        private @Nullable Output<String> agentName;
+        private @Nullable Output<List<String>> securityGroupArns;
+        private @Nullable Output<List<String>> subnetArns;
+        private @Nullable Output<List<AgentTagArgs>> tags;
+        private @Nullable Output<String> vpcEndpointId;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcEndpointId = defaults.vpcEndpointId;
         }
 
-        public Builder activationKey(Input<String> activationKey) {
+        public Builder activationKey(Output<String> activationKey) {
             this.activationKey = Objects.requireNonNull(activationKey);
             return this;
         }
 
         public Builder activationKey(String activationKey) {
-            this.activationKey = Input.of(Objects.requireNonNull(activationKey));
+            this.activationKey = Output.of(Objects.requireNonNull(activationKey));
             return this;
         }
 
-        public Builder agentName(@Nullable Input<String> agentName) {
+        public Builder agentName(@Nullable Output<String> agentName) {
             this.agentName = agentName;
             return this;
         }
 
         public Builder agentName(@Nullable String agentName) {
-            this.agentName = Input.ofNullable(agentName);
+            this.agentName = Output.ofNullable(agentName);
             return this;
         }
 
-        public Builder securityGroupArns(@Nullable Input<List<String>> securityGroupArns) {
+        public Builder securityGroupArns(@Nullable Output<List<String>> securityGroupArns) {
             this.securityGroupArns = securityGroupArns;
             return this;
         }
 
         public Builder securityGroupArns(@Nullable List<String> securityGroupArns) {
-            this.securityGroupArns = Input.ofNullable(securityGroupArns);
+            this.securityGroupArns = Output.ofNullable(securityGroupArns);
             return this;
         }
 
-        public Builder subnetArns(@Nullable Input<List<String>> subnetArns) {
+        public Builder subnetArns(@Nullable Output<List<String>> subnetArns) {
             this.subnetArns = subnetArns;
             return this;
         }
 
         public Builder subnetArns(@Nullable List<String> subnetArns) {
-            this.subnetArns = Input.ofNullable(subnetArns);
+            this.subnetArns = Output.ofNullable(subnetArns);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<AgentTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<AgentTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<AgentTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder vpcEndpointId(@Nullable Input<String> vpcEndpointId) {
+        public Builder vpcEndpointId(@Nullable Output<String> vpcEndpointId) {
             this.vpcEndpointId = vpcEndpointId;
             return this;
         }
 
         public Builder vpcEndpointId(@Nullable String vpcEndpointId) {
-            this.vpcEndpointId = Input.ofNullable(vpcEndpointId);
+            this.vpcEndpointId = Output.ofNullable(vpcEndpointId);
             return this;
         }
         public AgentArgs build() {

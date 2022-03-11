@@ -4,7 +4,7 @@
 package io.pulumi.aws.macie2.inputs;
 
 import io.pulumi.aws.macie2.inputs.ClassificationJobS3JobDefinitionScopingExcludesAndArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -20,18 +20,18 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesArgs extends i
      * 
      */
     @InputImport(name="ands")
-      private final @Nullable Input<List<ClassificationJobS3JobDefinitionScopingExcludesAndArgs>> ands;
+      private final @Nullable Output<List<ClassificationJobS3JobDefinitionScopingExcludesAndArgs>> ands;
 
-    public Input<List<ClassificationJobS3JobDefinitionScopingExcludesAndArgs>> getAnds() {
-        return this.ands == null ? Input.empty() : this.ands;
+    public Output<List<ClassificationJobS3JobDefinitionScopingExcludesAndArgs>> getAnds() {
+        return this.ands == null ? Output.empty() : this.ands;
     }
 
-    public ClassificationJobS3JobDefinitionScopingExcludesArgs(@Nullable Input<List<ClassificationJobS3JobDefinitionScopingExcludesAndArgs>> ands) {
+    public ClassificationJobS3JobDefinitionScopingExcludesArgs(@Nullable Output<List<ClassificationJobS3JobDefinitionScopingExcludesAndArgs>> ands) {
         this.ands = ands;
     }
 
     private ClassificationJobS3JobDefinitionScopingExcludesArgs() {
-        this.ands = Input.empty();
+        this.ands = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesArgs extends i
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ClassificationJobS3JobDefinitionScopingExcludesAndArgs>> ands;
+        private @Nullable Output<List<ClassificationJobS3JobDefinitionScopingExcludesAndArgs>> ands;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesArgs extends i
     	      this.ands = defaults.ands;
         }
 
-        public Builder ands(@Nullable Input<List<ClassificationJobS3JobDefinitionScopingExcludesAndArgs>> ands) {
+        public Builder ands(@Nullable Output<List<ClassificationJobS3JobDefinitionScopingExcludesAndArgs>> ands) {
             this.ands = ands;
             return this;
         }
 
         public Builder ands(@Nullable List<ClassificationJobS3JobDefinitionScopingExcludesAndArgs> ands) {
-            this.ands = Input.ofNullable(ands);
+            this.ands = Output.ofNullable(ands);
             return this;
         }
         public ClassificationJobS3JobDefinitionScopingExcludesArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.HttpHeaderActionArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.HttpRedirectActionArgs;
@@ -29,10 +29,10 @@ public final class PathMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultRouteAction")
-      private final @Nullable Input<HttpRouteActionArgs> defaultRouteAction;
+      private final @Nullable Output<HttpRouteActionArgs> defaultRouteAction;
 
-    public Input<HttpRouteActionArgs> getDefaultRouteAction() {
-        return this.defaultRouteAction == null ? Input.empty() : this.defaultRouteAction;
+    public Output<HttpRouteActionArgs> getDefaultRouteAction() {
+        return this.defaultRouteAction == null ? Output.empty() : this.defaultRouteAction;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class PathMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultService")
-      private final @Nullable Input<String> defaultService;
+      private final @Nullable Output<String> defaultService;
 
-    public Input<String> getDefaultService() {
-        return this.defaultService == null ? Input.empty() : this.defaultService;
+    public Output<String> getDefaultService() {
+        return this.defaultService == null ? Output.empty() : this.defaultService;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class PathMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultUrlRedirect")
-      private final @Nullable Input<HttpRedirectActionArgs> defaultUrlRedirect;
+      private final @Nullable Output<HttpRedirectActionArgs> defaultUrlRedirect;
 
-    public Input<HttpRedirectActionArgs> getDefaultUrlRedirect() {
-        return this.defaultUrlRedirect == null ? Input.empty() : this.defaultUrlRedirect;
+    public Output<HttpRedirectActionArgs> getDefaultUrlRedirect() {
+        return this.defaultUrlRedirect == null ? Output.empty() : this.defaultUrlRedirect;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class PathMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class PathMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="headerAction")
-      private final @Nullable Input<HttpHeaderActionArgs> headerAction;
+      private final @Nullable Output<HttpHeaderActionArgs> headerAction;
 
-    public Input<HttpHeaderActionArgs> getHeaderAction() {
-        return this.headerAction == null ? Input.empty() : this.headerAction;
+    public Output<HttpHeaderActionArgs> getHeaderAction() {
+        return this.headerAction == null ? Output.empty() : this.headerAction;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class PathMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class PathMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pathRules")
-      private final @Nullable Input<List<PathRuleArgs>> pathRules;
+      private final @Nullable Output<List<PathRuleArgs>> pathRules;
 
-    public Input<List<PathRuleArgs>> getPathRules() {
-        return this.pathRules == null ? Input.empty() : this.pathRules;
+    public Output<List<PathRuleArgs>> getPathRules() {
+        return this.pathRules == null ? Output.empty() : this.pathRules;
     }
 
     /**
@@ -106,21 +106,21 @@ public final class PathMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routeRules")
-      private final @Nullable Input<List<HttpRouteRuleArgs>> routeRules;
+      private final @Nullable Output<List<HttpRouteRuleArgs>> routeRules;
 
-    public Input<List<HttpRouteRuleArgs>> getRouteRules() {
-        return this.routeRules == null ? Input.empty() : this.routeRules;
+    public Output<List<HttpRouteRuleArgs>> getRouteRules() {
+        return this.routeRules == null ? Output.empty() : this.routeRules;
     }
 
     public PathMatcherArgs(
-        @Nullable Input<HttpRouteActionArgs> defaultRouteAction,
-        @Nullable Input<String> defaultService,
-        @Nullable Input<HttpRedirectActionArgs> defaultUrlRedirect,
-        @Nullable Input<String> description,
-        @Nullable Input<HttpHeaderActionArgs> headerAction,
-        @Nullable Input<String> name,
-        @Nullable Input<List<PathRuleArgs>> pathRules,
-        @Nullable Input<List<HttpRouteRuleArgs>> routeRules) {
+        @Nullable Output<HttpRouteActionArgs> defaultRouteAction,
+        @Nullable Output<String> defaultService,
+        @Nullable Output<HttpRedirectActionArgs> defaultUrlRedirect,
+        @Nullable Output<String> description,
+        @Nullable Output<HttpHeaderActionArgs> headerAction,
+        @Nullable Output<String> name,
+        @Nullable Output<List<PathRuleArgs>> pathRules,
+        @Nullable Output<List<HttpRouteRuleArgs>> routeRules) {
         this.defaultRouteAction = defaultRouteAction;
         this.defaultService = defaultService;
         this.defaultUrlRedirect = defaultUrlRedirect;
@@ -132,14 +132,14 @@ public final class PathMatcherArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PathMatcherArgs() {
-        this.defaultRouteAction = Input.empty();
-        this.defaultService = Input.empty();
-        this.defaultUrlRedirect = Input.empty();
-        this.description = Input.empty();
-        this.headerAction = Input.empty();
-        this.name = Input.empty();
-        this.pathRules = Input.empty();
-        this.routeRules = Input.empty();
+        this.defaultRouteAction = Output.empty();
+        this.defaultService = Output.empty();
+        this.defaultUrlRedirect = Output.empty();
+        this.description = Output.empty();
+        this.headerAction = Output.empty();
+        this.name = Output.empty();
+        this.pathRules = Output.empty();
+        this.routeRules = Output.empty();
     }
 
     public static Builder builder() {
@@ -151,14 +151,14 @@ public final class PathMatcherArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<HttpRouteActionArgs> defaultRouteAction;
-        private @Nullable Input<String> defaultService;
-        private @Nullable Input<HttpRedirectActionArgs> defaultUrlRedirect;
-        private @Nullable Input<String> description;
-        private @Nullable Input<HttpHeaderActionArgs> headerAction;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<PathRuleArgs>> pathRules;
-        private @Nullable Input<List<HttpRouteRuleArgs>> routeRules;
+        private @Nullable Output<HttpRouteActionArgs> defaultRouteAction;
+        private @Nullable Output<String> defaultService;
+        private @Nullable Output<HttpRedirectActionArgs> defaultUrlRedirect;
+        private @Nullable Output<String> description;
+        private @Nullable Output<HttpHeaderActionArgs> headerAction;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<PathRuleArgs>> pathRules;
+        private @Nullable Output<List<HttpRouteRuleArgs>> routeRules;
 
         public Builder() {
     	      // Empty
@@ -176,83 +176,83 @@ public final class PathMatcherArgs extends io.pulumi.resources.ResourceArgs {
     	      this.routeRules = defaults.routeRules;
         }
 
-        public Builder defaultRouteAction(@Nullable Input<HttpRouteActionArgs> defaultRouteAction) {
+        public Builder defaultRouteAction(@Nullable Output<HttpRouteActionArgs> defaultRouteAction) {
             this.defaultRouteAction = defaultRouteAction;
             return this;
         }
 
         public Builder defaultRouteAction(@Nullable HttpRouteActionArgs defaultRouteAction) {
-            this.defaultRouteAction = Input.ofNullable(defaultRouteAction);
+            this.defaultRouteAction = Output.ofNullable(defaultRouteAction);
             return this;
         }
 
-        public Builder defaultService(@Nullable Input<String> defaultService) {
+        public Builder defaultService(@Nullable Output<String> defaultService) {
             this.defaultService = defaultService;
             return this;
         }
 
         public Builder defaultService(@Nullable String defaultService) {
-            this.defaultService = Input.ofNullable(defaultService);
+            this.defaultService = Output.ofNullable(defaultService);
             return this;
         }
 
-        public Builder defaultUrlRedirect(@Nullable Input<HttpRedirectActionArgs> defaultUrlRedirect) {
+        public Builder defaultUrlRedirect(@Nullable Output<HttpRedirectActionArgs> defaultUrlRedirect) {
             this.defaultUrlRedirect = defaultUrlRedirect;
             return this;
         }
 
         public Builder defaultUrlRedirect(@Nullable HttpRedirectActionArgs defaultUrlRedirect) {
-            this.defaultUrlRedirect = Input.ofNullable(defaultUrlRedirect);
+            this.defaultUrlRedirect = Output.ofNullable(defaultUrlRedirect);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder headerAction(@Nullable Input<HttpHeaderActionArgs> headerAction) {
+        public Builder headerAction(@Nullable Output<HttpHeaderActionArgs> headerAction) {
             this.headerAction = headerAction;
             return this;
         }
 
         public Builder headerAction(@Nullable HttpHeaderActionArgs headerAction) {
-            this.headerAction = Input.ofNullable(headerAction);
+            this.headerAction = Output.ofNullable(headerAction);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder pathRules(@Nullable Input<List<PathRuleArgs>> pathRules) {
+        public Builder pathRules(@Nullable Output<List<PathRuleArgs>> pathRules) {
             this.pathRules = pathRules;
             return this;
         }
 
         public Builder pathRules(@Nullable List<PathRuleArgs> pathRules) {
-            this.pathRules = Input.ofNullable(pathRules);
+            this.pathRules = Output.ofNullable(pathRules);
             return this;
         }
 
-        public Builder routeRules(@Nullable Input<List<HttpRouteRuleArgs>> routeRules) {
+        public Builder routeRules(@Nullable Output<List<HttpRouteRuleArgs>> routeRules) {
             this.routeRules = routeRules;
             return this;
         }
 
         public Builder routeRules(@Nullable List<HttpRouteRuleArgs> routeRules) {
-            this.routeRules = Input.ofNullable(routeRules);
+            this.routeRules = Output.ofNullable(routeRules);
             return this;
         }
         public PathMatcherArgs build() {

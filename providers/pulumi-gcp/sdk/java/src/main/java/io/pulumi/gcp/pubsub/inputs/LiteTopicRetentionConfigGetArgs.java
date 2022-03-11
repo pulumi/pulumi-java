@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.pubsub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,9 +21,9 @@ public final class LiteTopicRetentionConfigGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="perPartitionBytes", required=true)
-      private final Input<String> perPartitionBytes;
+      private final Output<String> perPartitionBytes;
 
-    public Input<String> getPerPartitionBytes() {
+    public Output<String> getPerPartitionBytes() {
         return this.perPartitionBytes;
     }
 
@@ -35,22 +35,22 @@ public final class LiteTopicRetentionConfigGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="period")
-      private final @Nullable Input<String> period;
+      private final @Nullable Output<String> period;
 
-    public Input<String> getPeriod() {
-        return this.period == null ? Input.empty() : this.period;
+    public Output<String> getPeriod() {
+        return this.period == null ? Output.empty() : this.period;
     }
 
     public LiteTopicRetentionConfigGetArgs(
-        Input<String> perPartitionBytes,
-        @Nullable Input<String> period) {
+        Output<String> perPartitionBytes,
+        @Nullable Output<String> period) {
         this.perPartitionBytes = Objects.requireNonNull(perPartitionBytes, "expected parameter 'perPartitionBytes' to be non-null");
         this.period = period;
     }
 
     private LiteTopicRetentionConfigGetArgs() {
-        this.perPartitionBytes = Input.empty();
-        this.period = Input.empty();
+        this.perPartitionBytes = Output.empty();
+        this.period = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class LiteTopicRetentionConfigGetArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<String> perPartitionBytes;
-        private @Nullable Input<String> period;
+        private Output<String> perPartitionBytes;
+        private @Nullable Output<String> period;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class LiteTopicRetentionConfigGetArgs extends io.pulumi.resources.R
     	      this.period = defaults.period;
         }
 
-        public Builder perPartitionBytes(Input<String> perPartitionBytes) {
+        public Builder perPartitionBytes(Output<String> perPartitionBytes) {
             this.perPartitionBytes = Objects.requireNonNull(perPartitionBytes);
             return this;
         }
 
         public Builder perPartitionBytes(String perPartitionBytes) {
-            this.perPartitionBytes = Input.of(Objects.requireNonNull(perPartitionBytes));
+            this.perPartitionBytes = Output.of(Objects.requireNonNull(perPartitionBytes));
             return this;
         }
 
-        public Builder period(@Nullable Input<String> period) {
+        public Builder period(@Nullable Output<String> period) {
             this.period = period;
             return this;
         }
 
         public Builder period(@Nullable String period) {
-            this.period = Input.ofNullable(period);
+            this.period = Output.ofNullable(period);
             return this;
         }
         public LiteTopicRetentionConfigGetArgs build() {

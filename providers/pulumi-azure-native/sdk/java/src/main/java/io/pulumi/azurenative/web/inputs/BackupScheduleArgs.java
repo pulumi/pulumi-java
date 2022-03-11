@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.enums.FrequencyUnit;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -26,9 +26,9 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frequencyInterval", required=true)
-      private final Input<Integer> frequencyInterval;
+      private final Output<Integer> frequencyInterval;
 
-    public Input<Integer> getFrequencyInterval() {
+    public Output<Integer> getFrequencyInterval() {
         return this.frequencyInterval;
     }
 
@@ -37,9 +37,9 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frequencyUnit", required=true)
-      private final Input<FrequencyUnit> frequencyUnit;
+      private final Output<FrequencyUnit> frequencyUnit;
 
-    public Input<FrequencyUnit> getFrequencyUnit() {
+    public Output<FrequencyUnit> getFrequencyUnit() {
         return this.frequencyUnit;
     }
 
@@ -48,9 +48,9 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keepAtLeastOneBackup", required=true)
-      private final Input<Boolean> keepAtLeastOneBackup;
+      private final Output<Boolean> keepAtLeastOneBackup;
 
-    public Input<Boolean> getKeepAtLeastOneBackup() {
+    public Output<Boolean> getKeepAtLeastOneBackup() {
         return this.keepAtLeastOneBackup;
     }
 
@@ -59,9 +59,9 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionPeriodInDays", required=true)
-      private final Input<Integer> retentionPeriodInDays;
+      private final Output<Integer> retentionPeriodInDays;
 
-    public Input<Integer> getRetentionPeriodInDays() {
+    public Output<Integer> getRetentionPeriodInDays() {
         return this.retentionPeriodInDays;
     }
 
@@ -70,31 +70,31 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startTime")
-      private final @Nullable Input<String> startTime;
+      private final @Nullable Output<String> startTime;
 
-    public Input<String> getStartTime() {
-        return this.startTime == null ? Input.empty() : this.startTime;
+    public Output<String> getStartTime() {
+        return this.startTime == null ? Output.empty() : this.startTime;
     }
 
     public BackupScheduleArgs(
-        Input<Integer> frequencyInterval,
-        Input<FrequencyUnit> frequencyUnit,
-        Input<Boolean> keepAtLeastOneBackup,
-        Input<Integer> retentionPeriodInDays,
-        @Nullable Input<String> startTime) {
-        this.frequencyInterval = frequencyInterval == null ? Input.ofNullable(7) : Objects.requireNonNull(frequencyInterval, "expected parameter 'frequencyInterval' to be non-null");
-        this.frequencyUnit = frequencyUnit == null ? Input.ofNullable(io.pulumi.azurenative.web.enums.FrequencyUnit.Day) : Objects.requireNonNull(frequencyUnit, "expected parameter 'frequencyUnit' to be non-null");
-        this.keepAtLeastOneBackup = keepAtLeastOneBackup == null ? Input.ofNullable(true) : Objects.requireNonNull(keepAtLeastOneBackup, "expected parameter 'keepAtLeastOneBackup' to be non-null");
-        this.retentionPeriodInDays = retentionPeriodInDays == null ? Input.ofNullable(30) : Objects.requireNonNull(retentionPeriodInDays, "expected parameter 'retentionPeriodInDays' to be non-null");
+        Output<Integer> frequencyInterval,
+        Output<FrequencyUnit> frequencyUnit,
+        Output<Boolean> keepAtLeastOneBackup,
+        Output<Integer> retentionPeriodInDays,
+        @Nullable Output<String> startTime) {
+        this.frequencyInterval = frequencyInterval == null ? Output.ofNullable(7) : Objects.requireNonNull(frequencyInterval, "expected parameter 'frequencyInterval' to be non-null");
+        this.frequencyUnit = frequencyUnit == null ? Output.ofNullable(io.pulumi.azurenative.web.enums.FrequencyUnit.Day) : Objects.requireNonNull(frequencyUnit, "expected parameter 'frequencyUnit' to be non-null");
+        this.keepAtLeastOneBackup = keepAtLeastOneBackup == null ? Output.ofNullable(true) : Objects.requireNonNull(keepAtLeastOneBackup, "expected parameter 'keepAtLeastOneBackup' to be non-null");
+        this.retentionPeriodInDays = retentionPeriodInDays == null ? Output.ofNullable(30) : Objects.requireNonNull(retentionPeriodInDays, "expected parameter 'retentionPeriodInDays' to be non-null");
         this.startTime = startTime;
     }
 
     private BackupScheduleArgs() {
-        this.frequencyInterval = Input.empty();
-        this.frequencyUnit = Input.empty();
-        this.keepAtLeastOneBackup = Input.empty();
-        this.retentionPeriodInDays = Input.empty();
-        this.startTime = Input.empty();
+        this.frequencyInterval = Output.empty();
+        this.frequencyUnit = Output.empty();
+        this.keepAtLeastOneBackup = Output.empty();
+        this.retentionPeriodInDays = Output.empty();
+        this.startTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,11 +106,11 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Integer> frequencyInterval;
-        private Input<FrequencyUnit> frequencyUnit;
-        private Input<Boolean> keepAtLeastOneBackup;
-        private Input<Integer> retentionPeriodInDays;
-        private @Nullable Input<String> startTime;
+        private Output<Integer> frequencyInterval;
+        private Output<FrequencyUnit> frequencyUnit;
+        private Output<Boolean> keepAtLeastOneBackup;
+        private Output<Integer> retentionPeriodInDays;
+        private @Nullable Output<String> startTime;
 
         public Builder() {
     	      // Empty
@@ -125,53 +125,53 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder frequencyInterval(Input<Integer> frequencyInterval) {
+        public Builder frequencyInterval(Output<Integer> frequencyInterval) {
             this.frequencyInterval = Objects.requireNonNull(frequencyInterval);
             return this;
         }
 
         public Builder frequencyInterval(Integer frequencyInterval) {
-            this.frequencyInterval = Input.of(Objects.requireNonNull(frequencyInterval));
+            this.frequencyInterval = Output.of(Objects.requireNonNull(frequencyInterval));
             return this;
         }
 
-        public Builder frequencyUnit(Input<FrequencyUnit> frequencyUnit) {
+        public Builder frequencyUnit(Output<FrequencyUnit> frequencyUnit) {
             this.frequencyUnit = Objects.requireNonNull(frequencyUnit);
             return this;
         }
 
         public Builder frequencyUnit(FrequencyUnit frequencyUnit) {
-            this.frequencyUnit = Input.of(Objects.requireNonNull(frequencyUnit));
+            this.frequencyUnit = Output.of(Objects.requireNonNull(frequencyUnit));
             return this;
         }
 
-        public Builder keepAtLeastOneBackup(Input<Boolean> keepAtLeastOneBackup) {
+        public Builder keepAtLeastOneBackup(Output<Boolean> keepAtLeastOneBackup) {
             this.keepAtLeastOneBackup = Objects.requireNonNull(keepAtLeastOneBackup);
             return this;
         }
 
         public Builder keepAtLeastOneBackup(Boolean keepAtLeastOneBackup) {
-            this.keepAtLeastOneBackup = Input.of(Objects.requireNonNull(keepAtLeastOneBackup));
+            this.keepAtLeastOneBackup = Output.of(Objects.requireNonNull(keepAtLeastOneBackup));
             return this;
         }
 
-        public Builder retentionPeriodInDays(Input<Integer> retentionPeriodInDays) {
+        public Builder retentionPeriodInDays(Output<Integer> retentionPeriodInDays) {
             this.retentionPeriodInDays = Objects.requireNonNull(retentionPeriodInDays);
             return this;
         }
 
         public Builder retentionPeriodInDays(Integer retentionPeriodInDays) {
-            this.retentionPeriodInDays = Input.of(Objects.requireNonNull(retentionPeriodInDays));
+            this.retentionPeriodInDays = Output.of(Objects.requireNonNull(retentionPeriodInDays));
             return this;
         }
 
-        public Builder startTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Input.ofNullable(startTime);
+            this.startTime = Output.ofNullable(startTime);
             return this;
         }
         public BackupScheduleArgs build() {

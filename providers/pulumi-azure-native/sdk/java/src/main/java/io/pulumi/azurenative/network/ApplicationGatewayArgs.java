@@ -27,7 +27,7 @@ import io.pulumi.azurenative.network.inputs.ApplicationGatewayUrlPathMapArgs;
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayWebApplicationFirewallConfigurationArgs;
 import io.pulumi.azurenative.network.inputs.ManagedServiceIdentityArgs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -46,10 +46,10 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="applicationGatewayName")
-      private final @Nullable Input<String> applicationGatewayName;
+      private final @Nullable Output<String> applicationGatewayName;
 
-    public Input<String> getApplicationGatewayName() {
-        return this.applicationGatewayName == null ? Input.empty() : this.applicationGatewayName;
+    public Output<String> getApplicationGatewayName() {
+        return this.applicationGatewayName == null ? Output.empty() : this.applicationGatewayName;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="authenticationCertificates")
-      private final @Nullable Input<List<ApplicationGatewayAuthenticationCertificateArgs>> authenticationCertificates;
+      private final @Nullable Output<List<ApplicationGatewayAuthenticationCertificateArgs>> authenticationCertificates;
 
-    public Input<List<ApplicationGatewayAuthenticationCertificateArgs>> getAuthenticationCertificates() {
-        return this.authenticationCertificates == null ? Input.empty() : this.authenticationCertificates;
+    public Output<List<ApplicationGatewayAuthenticationCertificateArgs>> getAuthenticationCertificates() {
+        return this.authenticationCertificates == null ? Output.empty() : this.authenticationCertificates;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="autoscaleConfiguration")
-      private final @Nullable Input<ApplicationGatewayAutoscaleConfigurationArgs> autoscaleConfiguration;
+      private final @Nullable Output<ApplicationGatewayAutoscaleConfigurationArgs> autoscaleConfiguration;
 
-    public Input<ApplicationGatewayAutoscaleConfigurationArgs> getAutoscaleConfiguration() {
-        return this.autoscaleConfiguration == null ? Input.empty() : this.autoscaleConfiguration;
+    public Output<ApplicationGatewayAutoscaleConfigurationArgs> getAutoscaleConfiguration() {
+        return this.autoscaleConfiguration == null ? Output.empty() : this.autoscaleConfiguration;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="backendAddressPools")
-      private final @Nullable Input<List<ApplicationGatewayBackendAddressPoolArgs>> backendAddressPools;
+      private final @Nullable Output<List<ApplicationGatewayBackendAddressPoolArgs>> backendAddressPools;
 
-    public Input<List<ApplicationGatewayBackendAddressPoolArgs>> getBackendAddressPools() {
-        return this.backendAddressPools == null ? Input.empty() : this.backendAddressPools;
+    public Output<List<ApplicationGatewayBackendAddressPoolArgs>> getBackendAddressPools() {
+        return this.backendAddressPools == null ? Output.empty() : this.backendAddressPools;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="backendHttpSettingsCollection")
-      private final @Nullable Input<List<ApplicationGatewayBackendHttpSettingsArgs>> backendHttpSettingsCollection;
+      private final @Nullable Output<List<ApplicationGatewayBackendHttpSettingsArgs>> backendHttpSettingsCollection;
 
-    public Input<List<ApplicationGatewayBackendHttpSettingsArgs>> getBackendHttpSettingsCollection() {
-        return this.backendHttpSettingsCollection == null ? Input.empty() : this.backendHttpSettingsCollection;
+    public Output<List<ApplicationGatewayBackendHttpSettingsArgs>> getBackendHttpSettingsCollection() {
+        return this.backendHttpSettingsCollection == null ? Output.empty() : this.backendHttpSettingsCollection;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="customErrorConfigurations")
-      private final @Nullable Input<List<ApplicationGatewayCustomErrorArgs>> customErrorConfigurations;
+      private final @Nullable Output<List<ApplicationGatewayCustomErrorArgs>> customErrorConfigurations;
 
-    public Input<List<ApplicationGatewayCustomErrorArgs>> getCustomErrorConfigurations() {
-        return this.customErrorConfigurations == null ? Input.empty() : this.customErrorConfigurations;
+    public Output<List<ApplicationGatewayCustomErrorArgs>> getCustomErrorConfigurations() {
+        return this.customErrorConfigurations == null ? Output.empty() : this.customErrorConfigurations;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="enableFips")
-      private final @Nullable Input<Boolean> enableFips;
+      private final @Nullable Output<Boolean> enableFips;
 
-    public Input<Boolean> getEnableFips() {
-        return this.enableFips == null ? Input.empty() : this.enableFips;
+    public Output<Boolean> getEnableFips() {
+        return this.enableFips == null ? Output.empty() : this.enableFips;
     }
 
     /**
@@ -123,10 +123,10 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="enableHttp2")
-      private final @Nullable Input<Boolean> enableHttp2;
+      private final @Nullable Output<Boolean> enableHttp2;
 
-    public Input<Boolean> getEnableHttp2() {
-        return this.enableHttp2 == null ? Input.empty() : this.enableHttp2;
+    public Output<Boolean> getEnableHttp2() {
+        return this.enableHttp2 == null ? Output.empty() : this.enableHttp2;
     }
 
     /**
@@ -134,10 +134,10 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="firewallPolicy")
-      private final @Nullable Input<SubResourceArgs> firewallPolicy;
+      private final @Nullable Output<SubResourceArgs> firewallPolicy;
 
-    public Input<SubResourceArgs> getFirewallPolicy() {
-        return this.firewallPolicy == null ? Input.empty() : this.firewallPolicy;
+    public Output<SubResourceArgs> getFirewallPolicy() {
+        return this.firewallPolicy == null ? Output.empty() : this.firewallPolicy;
     }
 
     /**
@@ -145,10 +145,10 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="forceFirewallPolicyAssociation")
-      private final @Nullable Input<Boolean> forceFirewallPolicyAssociation;
+      private final @Nullable Output<Boolean> forceFirewallPolicyAssociation;
 
-    public Input<Boolean> getForceFirewallPolicyAssociation() {
-        return this.forceFirewallPolicyAssociation == null ? Input.empty() : this.forceFirewallPolicyAssociation;
+    public Output<Boolean> getForceFirewallPolicyAssociation() {
+        return this.forceFirewallPolicyAssociation == null ? Output.empty() : this.forceFirewallPolicyAssociation;
     }
 
     /**
@@ -156,10 +156,10 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="frontendIPConfigurations")
-      private final @Nullable Input<List<ApplicationGatewayFrontendIPConfigurationArgs>> frontendIPConfigurations;
+      private final @Nullable Output<List<ApplicationGatewayFrontendIPConfigurationArgs>> frontendIPConfigurations;
 
-    public Input<List<ApplicationGatewayFrontendIPConfigurationArgs>> getFrontendIPConfigurations() {
-        return this.frontendIPConfigurations == null ? Input.empty() : this.frontendIPConfigurations;
+    public Output<List<ApplicationGatewayFrontendIPConfigurationArgs>> getFrontendIPConfigurations() {
+        return this.frontendIPConfigurations == null ? Output.empty() : this.frontendIPConfigurations;
     }
 
     /**
@@ -167,10 +167,10 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="frontendPorts")
-      private final @Nullable Input<List<ApplicationGatewayFrontendPortArgs>> frontendPorts;
+      private final @Nullable Output<List<ApplicationGatewayFrontendPortArgs>> frontendPorts;
 
-    public Input<List<ApplicationGatewayFrontendPortArgs>> getFrontendPorts() {
-        return this.frontendPorts == null ? Input.empty() : this.frontendPorts;
+    public Output<List<ApplicationGatewayFrontendPortArgs>> getFrontendPorts() {
+        return this.frontendPorts == null ? Output.empty() : this.frontendPorts;
     }
 
     /**
@@ -178,10 +178,10 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="gatewayIPConfigurations")
-      private final @Nullable Input<List<ApplicationGatewayIPConfigurationArgs>> gatewayIPConfigurations;
+      private final @Nullable Output<List<ApplicationGatewayIPConfigurationArgs>> gatewayIPConfigurations;
 
-    public Input<List<ApplicationGatewayIPConfigurationArgs>> getGatewayIPConfigurations() {
-        return this.gatewayIPConfigurations == null ? Input.empty() : this.gatewayIPConfigurations;
+    public Output<List<ApplicationGatewayIPConfigurationArgs>> getGatewayIPConfigurations() {
+        return this.gatewayIPConfigurations == null ? Output.empty() : this.gatewayIPConfigurations;
     }
 
     /**
@@ -189,10 +189,10 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="httpListeners")
-      private final @Nullable Input<List<ApplicationGatewayHttpListenerArgs>> httpListeners;
+      private final @Nullable Output<List<ApplicationGatewayHttpListenerArgs>> httpListeners;
 
-    public Input<List<ApplicationGatewayHttpListenerArgs>> getHttpListeners() {
-        return this.httpListeners == null ? Input.empty() : this.httpListeners;
+    public Output<List<ApplicationGatewayHttpListenerArgs>> getHttpListeners() {
+        return this.httpListeners == null ? Output.empty() : this.httpListeners;
     }
 
     /**
@@ -200,10 +200,10 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -211,10 +211,10 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<ManagedServiceIdentityArgs> identity;
+      private final @Nullable Output<ManagedServiceIdentityArgs> identity;
 
-    public Input<ManagedServiceIdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<ManagedServiceIdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -222,10 +222,10 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -233,10 +233,10 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="privateLinkConfigurations")
-      private final @Nullable Input<List<ApplicationGatewayPrivateLinkConfigurationArgs>> privateLinkConfigurations;
+      private final @Nullable Output<List<ApplicationGatewayPrivateLinkConfigurationArgs>> privateLinkConfigurations;
 
-    public Input<List<ApplicationGatewayPrivateLinkConfigurationArgs>> getPrivateLinkConfigurations() {
-        return this.privateLinkConfigurations == null ? Input.empty() : this.privateLinkConfigurations;
+    public Output<List<ApplicationGatewayPrivateLinkConfigurationArgs>> getPrivateLinkConfigurations() {
+        return this.privateLinkConfigurations == null ? Output.empty() : this.privateLinkConfigurations;
     }
 
     /**
@@ -244,10 +244,10 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="probes")
-      private final @Nullable Input<List<ApplicationGatewayProbeArgs>> probes;
+      private final @Nullable Output<List<ApplicationGatewayProbeArgs>> probes;
 
-    public Input<List<ApplicationGatewayProbeArgs>> getProbes() {
-        return this.probes == null ? Input.empty() : this.probes;
+    public Output<List<ApplicationGatewayProbeArgs>> getProbes() {
+        return this.probes == null ? Output.empty() : this.probes;
     }
 
     /**
@@ -255,10 +255,10 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="redirectConfigurations")
-      private final @Nullable Input<List<ApplicationGatewayRedirectConfigurationArgs>> redirectConfigurations;
+      private final @Nullable Output<List<ApplicationGatewayRedirectConfigurationArgs>> redirectConfigurations;
 
-    public Input<List<ApplicationGatewayRedirectConfigurationArgs>> getRedirectConfigurations() {
-        return this.redirectConfigurations == null ? Input.empty() : this.redirectConfigurations;
+    public Output<List<ApplicationGatewayRedirectConfigurationArgs>> getRedirectConfigurations() {
+        return this.redirectConfigurations == null ? Output.empty() : this.redirectConfigurations;
     }
 
     /**
@@ -266,10 +266,10 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="requestRoutingRules")
-      private final @Nullable Input<List<ApplicationGatewayRequestRoutingRuleArgs>> requestRoutingRules;
+      private final @Nullable Output<List<ApplicationGatewayRequestRoutingRuleArgs>> requestRoutingRules;
 
-    public Input<List<ApplicationGatewayRequestRoutingRuleArgs>> getRequestRoutingRules() {
-        return this.requestRoutingRules == null ? Input.empty() : this.requestRoutingRules;
+    public Output<List<ApplicationGatewayRequestRoutingRuleArgs>> getRequestRoutingRules() {
+        return this.requestRoutingRules == null ? Output.empty() : this.requestRoutingRules;
     }
 
     /**
@@ -277,9 +277,9 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -288,10 +288,10 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="rewriteRuleSets")
-      private final @Nullable Input<List<ApplicationGatewayRewriteRuleSetArgs>> rewriteRuleSets;
+      private final @Nullable Output<List<ApplicationGatewayRewriteRuleSetArgs>> rewriteRuleSets;
 
-    public Input<List<ApplicationGatewayRewriteRuleSetArgs>> getRewriteRuleSets() {
-        return this.rewriteRuleSets == null ? Input.empty() : this.rewriteRuleSets;
+    public Output<List<ApplicationGatewayRewriteRuleSetArgs>> getRewriteRuleSets() {
+        return this.rewriteRuleSets == null ? Output.empty() : this.rewriteRuleSets;
     }
 
     /**
@@ -299,10 +299,10 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<ApplicationGatewaySkuArgs> sku;
+      private final @Nullable Output<ApplicationGatewaySkuArgs> sku;
 
-    public Input<ApplicationGatewaySkuArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<ApplicationGatewaySkuArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -310,10 +310,10 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="sslCertificates")
-      private final @Nullable Input<List<ApplicationGatewaySslCertificateArgs>> sslCertificates;
+      private final @Nullable Output<List<ApplicationGatewaySslCertificateArgs>> sslCertificates;
 
-    public Input<List<ApplicationGatewaySslCertificateArgs>> getSslCertificates() {
-        return this.sslCertificates == null ? Input.empty() : this.sslCertificates;
+    public Output<List<ApplicationGatewaySslCertificateArgs>> getSslCertificates() {
+        return this.sslCertificates == null ? Output.empty() : this.sslCertificates;
     }
 
     /**
@@ -321,10 +321,10 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="sslPolicy")
-      private final @Nullable Input<ApplicationGatewaySslPolicyArgs> sslPolicy;
+      private final @Nullable Output<ApplicationGatewaySslPolicyArgs> sslPolicy;
 
-    public Input<ApplicationGatewaySslPolicyArgs> getSslPolicy() {
-        return this.sslPolicy == null ? Input.empty() : this.sslPolicy;
+    public Output<ApplicationGatewaySslPolicyArgs> getSslPolicy() {
+        return this.sslPolicy == null ? Output.empty() : this.sslPolicy;
     }
 
     /**
@@ -332,10 +332,10 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="sslProfiles")
-      private final @Nullable Input<List<ApplicationGatewaySslProfileArgs>> sslProfiles;
+      private final @Nullable Output<List<ApplicationGatewaySslProfileArgs>> sslProfiles;
 
-    public Input<List<ApplicationGatewaySslProfileArgs>> getSslProfiles() {
-        return this.sslProfiles == null ? Input.empty() : this.sslProfiles;
+    public Output<List<ApplicationGatewaySslProfileArgs>> getSslProfiles() {
+        return this.sslProfiles == null ? Output.empty() : this.sslProfiles;
     }
 
     /**
@@ -343,10 +343,10 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -354,10 +354,10 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="trustedClientCertificates")
-      private final @Nullable Input<List<ApplicationGatewayTrustedClientCertificateArgs>> trustedClientCertificates;
+      private final @Nullable Output<List<ApplicationGatewayTrustedClientCertificateArgs>> trustedClientCertificates;
 
-    public Input<List<ApplicationGatewayTrustedClientCertificateArgs>> getTrustedClientCertificates() {
-        return this.trustedClientCertificates == null ? Input.empty() : this.trustedClientCertificates;
+    public Output<List<ApplicationGatewayTrustedClientCertificateArgs>> getTrustedClientCertificates() {
+        return this.trustedClientCertificates == null ? Output.empty() : this.trustedClientCertificates;
     }
 
     /**
@@ -365,10 +365,10 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="trustedRootCertificates")
-      private final @Nullable Input<List<ApplicationGatewayTrustedRootCertificateArgs>> trustedRootCertificates;
+      private final @Nullable Output<List<ApplicationGatewayTrustedRootCertificateArgs>> trustedRootCertificates;
 
-    public Input<List<ApplicationGatewayTrustedRootCertificateArgs>> getTrustedRootCertificates() {
-        return this.trustedRootCertificates == null ? Input.empty() : this.trustedRootCertificates;
+    public Output<List<ApplicationGatewayTrustedRootCertificateArgs>> getTrustedRootCertificates() {
+        return this.trustedRootCertificates == null ? Output.empty() : this.trustedRootCertificates;
     }
 
     /**
@@ -376,10 +376,10 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="urlPathMaps")
-      private final @Nullable Input<List<ApplicationGatewayUrlPathMapArgs>> urlPathMaps;
+      private final @Nullable Output<List<ApplicationGatewayUrlPathMapArgs>> urlPathMaps;
 
-    public Input<List<ApplicationGatewayUrlPathMapArgs>> getUrlPathMaps() {
-        return this.urlPathMaps == null ? Input.empty() : this.urlPathMaps;
+    public Output<List<ApplicationGatewayUrlPathMapArgs>> getUrlPathMaps() {
+        return this.urlPathMaps == null ? Output.empty() : this.urlPathMaps;
     }
 
     /**
@@ -387,10 +387,10 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="webApplicationFirewallConfiguration")
-      private final @Nullable Input<ApplicationGatewayWebApplicationFirewallConfigurationArgs> webApplicationFirewallConfiguration;
+      private final @Nullable Output<ApplicationGatewayWebApplicationFirewallConfigurationArgs> webApplicationFirewallConfiguration;
 
-    public Input<ApplicationGatewayWebApplicationFirewallConfigurationArgs> getWebApplicationFirewallConfiguration() {
-        return this.webApplicationFirewallConfiguration == null ? Input.empty() : this.webApplicationFirewallConfiguration;
+    public Output<ApplicationGatewayWebApplicationFirewallConfigurationArgs> getWebApplicationFirewallConfiguration() {
+        return this.webApplicationFirewallConfiguration == null ? Output.empty() : this.webApplicationFirewallConfiguration;
     }
 
     /**
@@ -398,46 +398,46 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="zones")
-      private final @Nullable Input<List<String>> zones;
+      private final @Nullable Output<List<String>> zones;
 
-    public Input<List<String>> getZones() {
-        return this.zones == null ? Input.empty() : this.zones;
+    public Output<List<String>> getZones() {
+        return this.zones == null ? Output.empty() : this.zones;
     }
 
     public ApplicationGatewayArgs(
-        @Nullable Input<String> applicationGatewayName,
-        @Nullable Input<List<ApplicationGatewayAuthenticationCertificateArgs>> authenticationCertificates,
-        @Nullable Input<ApplicationGatewayAutoscaleConfigurationArgs> autoscaleConfiguration,
-        @Nullable Input<List<ApplicationGatewayBackendAddressPoolArgs>> backendAddressPools,
-        @Nullable Input<List<ApplicationGatewayBackendHttpSettingsArgs>> backendHttpSettingsCollection,
-        @Nullable Input<List<ApplicationGatewayCustomErrorArgs>> customErrorConfigurations,
-        @Nullable Input<Boolean> enableFips,
-        @Nullable Input<Boolean> enableHttp2,
-        @Nullable Input<SubResourceArgs> firewallPolicy,
-        @Nullable Input<Boolean> forceFirewallPolicyAssociation,
-        @Nullable Input<List<ApplicationGatewayFrontendIPConfigurationArgs>> frontendIPConfigurations,
-        @Nullable Input<List<ApplicationGatewayFrontendPortArgs>> frontendPorts,
-        @Nullable Input<List<ApplicationGatewayIPConfigurationArgs>> gatewayIPConfigurations,
-        @Nullable Input<List<ApplicationGatewayHttpListenerArgs>> httpListeners,
-        @Nullable Input<String> id,
-        @Nullable Input<ManagedServiceIdentityArgs> identity,
-        @Nullable Input<String> location,
-        @Nullable Input<List<ApplicationGatewayPrivateLinkConfigurationArgs>> privateLinkConfigurations,
-        @Nullable Input<List<ApplicationGatewayProbeArgs>> probes,
-        @Nullable Input<List<ApplicationGatewayRedirectConfigurationArgs>> redirectConfigurations,
-        @Nullable Input<List<ApplicationGatewayRequestRoutingRuleArgs>> requestRoutingRules,
-        Input<String> resourceGroupName,
-        @Nullable Input<List<ApplicationGatewayRewriteRuleSetArgs>> rewriteRuleSets,
-        @Nullable Input<ApplicationGatewaySkuArgs> sku,
-        @Nullable Input<List<ApplicationGatewaySslCertificateArgs>> sslCertificates,
-        @Nullable Input<ApplicationGatewaySslPolicyArgs> sslPolicy,
-        @Nullable Input<List<ApplicationGatewaySslProfileArgs>> sslProfiles,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<List<ApplicationGatewayTrustedClientCertificateArgs>> trustedClientCertificates,
-        @Nullable Input<List<ApplicationGatewayTrustedRootCertificateArgs>> trustedRootCertificates,
-        @Nullable Input<List<ApplicationGatewayUrlPathMapArgs>> urlPathMaps,
-        @Nullable Input<ApplicationGatewayWebApplicationFirewallConfigurationArgs> webApplicationFirewallConfiguration,
-        @Nullable Input<List<String>> zones) {
+        @Nullable Output<String> applicationGatewayName,
+        @Nullable Output<List<ApplicationGatewayAuthenticationCertificateArgs>> authenticationCertificates,
+        @Nullable Output<ApplicationGatewayAutoscaleConfigurationArgs> autoscaleConfiguration,
+        @Nullable Output<List<ApplicationGatewayBackendAddressPoolArgs>> backendAddressPools,
+        @Nullable Output<List<ApplicationGatewayBackendHttpSettingsArgs>> backendHttpSettingsCollection,
+        @Nullable Output<List<ApplicationGatewayCustomErrorArgs>> customErrorConfigurations,
+        @Nullable Output<Boolean> enableFips,
+        @Nullable Output<Boolean> enableHttp2,
+        @Nullable Output<SubResourceArgs> firewallPolicy,
+        @Nullable Output<Boolean> forceFirewallPolicyAssociation,
+        @Nullable Output<List<ApplicationGatewayFrontendIPConfigurationArgs>> frontendIPConfigurations,
+        @Nullable Output<List<ApplicationGatewayFrontendPortArgs>> frontendPorts,
+        @Nullable Output<List<ApplicationGatewayIPConfigurationArgs>> gatewayIPConfigurations,
+        @Nullable Output<List<ApplicationGatewayHttpListenerArgs>> httpListeners,
+        @Nullable Output<String> id,
+        @Nullable Output<ManagedServiceIdentityArgs> identity,
+        @Nullable Output<String> location,
+        @Nullable Output<List<ApplicationGatewayPrivateLinkConfigurationArgs>> privateLinkConfigurations,
+        @Nullable Output<List<ApplicationGatewayProbeArgs>> probes,
+        @Nullable Output<List<ApplicationGatewayRedirectConfigurationArgs>> redirectConfigurations,
+        @Nullable Output<List<ApplicationGatewayRequestRoutingRuleArgs>> requestRoutingRules,
+        Output<String> resourceGroupName,
+        @Nullable Output<List<ApplicationGatewayRewriteRuleSetArgs>> rewriteRuleSets,
+        @Nullable Output<ApplicationGatewaySkuArgs> sku,
+        @Nullable Output<List<ApplicationGatewaySslCertificateArgs>> sslCertificates,
+        @Nullable Output<ApplicationGatewaySslPolicyArgs> sslPolicy,
+        @Nullable Output<List<ApplicationGatewaySslProfileArgs>> sslProfiles,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<List<ApplicationGatewayTrustedClientCertificateArgs>> trustedClientCertificates,
+        @Nullable Output<List<ApplicationGatewayTrustedRootCertificateArgs>> trustedRootCertificates,
+        @Nullable Output<List<ApplicationGatewayUrlPathMapArgs>> urlPathMaps,
+        @Nullable Output<ApplicationGatewayWebApplicationFirewallConfigurationArgs> webApplicationFirewallConfiguration,
+        @Nullable Output<List<String>> zones) {
         this.applicationGatewayName = applicationGatewayName;
         this.authenticationCertificates = authenticationCertificates;
         this.autoscaleConfiguration = autoscaleConfiguration;
@@ -474,39 +474,39 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ApplicationGatewayArgs() {
-        this.applicationGatewayName = Input.empty();
-        this.authenticationCertificates = Input.empty();
-        this.autoscaleConfiguration = Input.empty();
-        this.backendAddressPools = Input.empty();
-        this.backendHttpSettingsCollection = Input.empty();
-        this.customErrorConfigurations = Input.empty();
-        this.enableFips = Input.empty();
-        this.enableHttp2 = Input.empty();
-        this.firewallPolicy = Input.empty();
-        this.forceFirewallPolicyAssociation = Input.empty();
-        this.frontendIPConfigurations = Input.empty();
-        this.frontendPorts = Input.empty();
-        this.gatewayIPConfigurations = Input.empty();
-        this.httpListeners = Input.empty();
-        this.id = Input.empty();
-        this.identity = Input.empty();
-        this.location = Input.empty();
-        this.privateLinkConfigurations = Input.empty();
-        this.probes = Input.empty();
-        this.redirectConfigurations = Input.empty();
-        this.requestRoutingRules = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.rewriteRuleSets = Input.empty();
-        this.sku = Input.empty();
-        this.sslCertificates = Input.empty();
-        this.sslPolicy = Input.empty();
-        this.sslProfiles = Input.empty();
-        this.tags = Input.empty();
-        this.trustedClientCertificates = Input.empty();
-        this.trustedRootCertificates = Input.empty();
-        this.urlPathMaps = Input.empty();
-        this.webApplicationFirewallConfiguration = Input.empty();
-        this.zones = Input.empty();
+        this.applicationGatewayName = Output.empty();
+        this.authenticationCertificates = Output.empty();
+        this.autoscaleConfiguration = Output.empty();
+        this.backendAddressPools = Output.empty();
+        this.backendHttpSettingsCollection = Output.empty();
+        this.customErrorConfigurations = Output.empty();
+        this.enableFips = Output.empty();
+        this.enableHttp2 = Output.empty();
+        this.firewallPolicy = Output.empty();
+        this.forceFirewallPolicyAssociation = Output.empty();
+        this.frontendIPConfigurations = Output.empty();
+        this.frontendPorts = Output.empty();
+        this.gatewayIPConfigurations = Output.empty();
+        this.httpListeners = Output.empty();
+        this.id = Output.empty();
+        this.identity = Output.empty();
+        this.location = Output.empty();
+        this.privateLinkConfigurations = Output.empty();
+        this.probes = Output.empty();
+        this.redirectConfigurations = Output.empty();
+        this.requestRoutingRules = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.rewriteRuleSets = Output.empty();
+        this.sku = Output.empty();
+        this.sslCertificates = Output.empty();
+        this.sslPolicy = Output.empty();
+        this.sslProfiles = Output.empty();
+        this.tags = Output.empty();
+        this.trustedClientCertificates = Output.empty();
+        this.trustedRootCertificates = Output.empty();
+        this.urlPathMaps = Output.empty();
+        this.webApplicationFirewallConfiguration = Output.empty();
+        this.zones = Output.empty();
     }
 
     public static Builder builder() {
@@ -518,39 +518,39 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> applicationGatewayName;
-        private @Nullable Input<List<ApplicationGatewayAuthenticationCertificateArgs>> authenticationCertificates;
-        private @Nullable Input<ApplicationGatewayAutoscaleConfigurationArgs> autoscaleConfiguration;
-        private @Nullable Input<List<ApplicationGatewayBackendAddressPoolArgs>> backendAddressPools;
-        private @Nullable Input<List<ApplicationGatewayBackendHttpSettingsArgs>> backendHttpSettingsCollection;
-        private @Nullable Input<List<ApplicationGatewayCustomErrorArgs>> customErrorConfigurations;
-        private @Nullable Input<Boolean> enableFips;
-        private @Nullable Input<Boolean> enableHttp2;
-        private @Nullable Input<SubResourceArgs> firewallPolicy;
-        private @Nullable Input<Boolean> forceFirewallPolicyAssociation;
-        private @Nullable Input<List<ApplicationGatewayFrontendIPConfigurationArgs>> frontendIPConfigurations;
-        private @Nullable Input<List<ApplicationGatewayFrontendPortArgs>> frontendPorts;
-        private @Nullable Input<List<ApplicationGatewayIPConfigurationArgs>> gatewayIPConfigurations;
-        private @Nullable Input<List<ApplicationGatewayHttpListenerArgs>> httpListeners;
-        private @Nullable Input<String> id;
-        private @Nullable Input<ManagedServiceIdentityArgs> identity;
-        private @Nullable Input<String> location;
-        private @Nullable Input<List<ApplicationGatewayPrivateLinkConfigurationArgs>> privateLinkConfigurations;
-        private @Nullable Input<List<ApplicationGatewayProbeArgs>> probes;
-        private @Nullable Input<List<ApplicationGatewayRedirectConfigurationArgs>> redirectConfigurations;
-        private @Nullable Input<List<ApplicationGatewayRequestRoutingRuleArgs>> requestRoutingRules;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<List<ApplicationGatewayRewriteRuleSetArgs>> rewriteRuleSets;
-        private @Nullable Input<ApplicationGatewaySkuArgs> sku;
-        private @Nullable Input<List<ApplicationGatewaySslCertificateArgs>> sslCertificates;
-        private @Nullable Input<ApplicationGatewaySslPolicyArgs> sslPolicy;
-        private @Nullable Input<List<ApplicationGatewaySslProfileArgs>> sslProfiles;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<List<ApplicationGatewayTrustedClientCertificateArgs>> trustedClientCertificates;
-        private @Nullable Input<List<ApplicationGatewayTrustedRootCertificateArgs>> trustedRootCertificates;
-        private @Nullable Input<List<ApplicationGatewayUrlPathMapArgs>> urlPathMaps;
-        private @Nullable Input<ApplicationGatewayWebApplicationFirewallConfigurationArgs> webApplicationFirewallConfiguration;
-        private @Nullable Input<List<String>> zones;
+        private @Nullable Output<String> applicationGatewayName;
+        private @Nullable Output<List<ApplicationGatewayAuthenticationCertificateArgs>> authenticationCertificates;
+        private @Nullable Output<ApplicationGatewayAutoscaleConfigurationArgs> autoscaleConfiguration;
+        private @Nullable Output<List<ApplicationGatewayBackendAddressPoolArgs>> backendAddressPools;
+        private @Nullable Output<List<ApplicationGatewayBackendHttpSettingsArgs>> backendHttpSettingsCollection;
+        private @Nullable Output<List<ApplicationGatewayCustomErrorArgs>> customErrorConfigurations;
+        private @Nullable Output<Boolean> enableFips;
+        private @Nullable Output<Boolean> enableHttp2;
+        private @Nullable Output<SubResourceArgs> firewallPolicy;
+        private @Nullable Output<Boolean> forceFirewallPolicyAssociation;
+        private @Nullable Output<List<ApplicationGatewayFrontendIPConfigurationArgs>> frontendIPConfigurations;
+        private @Nullable Output<List<ApplicationGatewayFrontendPortArgs>> frontendPorts;
+        private @Nullable Output<List<ApplicationGatewayIPConfigurationArgs>> gatewayIPConfigurations;
+        private @Nullable Output<List<ApplicationGatewayHttpListenerArgs>> httpListeners;
+        private @Nullable Output<String> id;
+        private @Nullable Output<ManagedServiceIdentityArgs> identity;
+        private @Nullable Output<String> location;
+        private @Nullable Output<List<ApplicationGatewayPrivateLinkConfigurationArgs>> privateLinkConfigurations;
+        private @Nullable Output<List<ApplicationGatewayProbeArgs>> probes;
+        private @Nullable Output<List<ApplicationGatewayRedirectConfigurationArgs>> redirectConfigurations;
+        private @Nullable Output<List<ApplicationGatewayRequestRoutingRuleArgs>> requestRoutingRules;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<List<ApplicationGatewayRewriteRuleSetArgs>> rewriteRuleSets;
+        private @Nullable Output<ApplicationGatewaySkuArgs> sku;
+        private @Nullable Output<List<ApplicationGatewaySslCertificateArgs>> sslCertificates;
+        private @Nullable Output<ApplicationGatewaySslPolicyArgs> sslPolicy;
+        private @Nullable Output<List<ApplicationGatewaySslProfileArgs>> sslProfiles;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<List<ApplicationGatewayTrustedClientCertificateArgs>> trustedClientCertificates;
+        private @Nullable Output<List<ApplicationGatewayTrustedRootCertificateArgs>> trustedRootCertificates;
+        private @Nullable Output<List<ApplicationGatewayUrlPathMapArgs>> urlPathMaps;
+        private @Nullable Output<ApplicationGatewayWebApplicationFirewallConfigurationArgs> webApplicationFirewallConfiguration;
+        private @Nullable Output<List<String>> zones;
 
         public Builder() {
     	      // Empty
@@ -593,333 +593,333 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
     	      this.zones = defaults.zones;
         }
 
-        public Builder applicationGatewayName(@Nullable Input<String> applicationGatewayName) {
+        public Builder applicationGatewayName(@Nullable Output<String> applicationGatewayName) {
             this.applicationGatewayName = applicationGatewayName;
             return this;
         }
 
         public Builder applicationGatewayName(@Nullable String applicationGatewayName) {
-            this.applicationGatewayName = Input.ofNullable(applicationGatewayName);
+            this.applicationGatewayName = Output.ofNullable(applicationGatewayName);
             return this;
         }
 
-        public Builder authenticationCertificates(@Nullable Input<List<ApplicationGatewayAuthenticationCertificateArgs>> authenticationCertificates) {
+        public Builder authenticationCertificates(@Nullable Output<List<ApplicationGatewayAuthenticationCertificateArgs>> authenticationCertificates) {
             this.authenticationCertificates = authenticationCertificates;
             return this;
         }
 
         public Builder authenticationCertificates(@Nullable List<ApplicationGatewayAuthenticationCertificateArgs> authenticationCertificates) {
-            this.authenticationCertificates = Input.ofNullable(authenticationCertificates);
+            this.authenticationCertificates = Output.ofNullable(authenticationCertificates);
             return this;
         }
 
-        public Builder autoscaleConfiguration(@Nullable Input<ApplicationGatewayAutoscaleConfigurationArgs> autoscaleConfiguration) {
+        public Builder autoscaleConfiguration(@Nullable Output<ApplicationGatewayAutoscaleConfigurationArgs> autoscaleConfiguration) {
             this.autoscaleConfiguration = autoscaleConfiguration;
             return this;
         }
 
         public Builder autoscaleConfiguration(@Nullable ApplicationGatewayAutoscaleConfigurationArgs autoscaleConfiguration) {
-            this.autoscaleConfiguration = Input.ofNullable(autoscaleConfiguration);
+            this.autoscaleConfiguration = Output.ofNullable(autoscaleConfiguration);
             return this;
         }
 
-        public Builder backendAddressPools(@Nullable Input<List<ApplicationGatewayBackendAddressPoolArgs>> backendAddressPools) {
+        public Builder backendAddressPools(@Nullable Output<List<ApplicationGatewayBackendAddressPoolArgs>> backendAddressPools) {
             this.backendAddressPools = backendAddressPools;
             return this;
         }
 
         public Builder backendAddressPools(@Nullable List<ApplicationGatewayBackendAddressPoolArgs> backendAddressPools) {
-            this.backendAddressPools = Input.ofNullable(backendAddressPools);
+            this.backendAddressPools = Output.ofNullable(backendAddressPools);
             return this;
         }
 
-        public Builder backendHttpSettingsCollection(@Nullable Input<List<ApplicationGatewayBackendHttpSettingsArgs>> backendHttpSettingsCollection) {
+        public Builder backendHttpSettingsCollection(@Nullable Output<List<ApplicationGatewayBackendHttpSettingsArgs>> backendHttpSettingsCollection) {
             this.backendHttpSettingsCollection = backendHttpSettingsCollection;
             return this;
         }
 
         public Builder backendHttpSettingsCollection(@Nullable List<ApplicationGatewayBackendHttpSettingsArgs> backendHttpSettingsCollection) {
-            this.backendHttpSettingsCollection = Input.ofNullable(backendHttpSettingsCollection);
+            this.backendHttpSettingsCollection = Output.ofNullable(backendHttpSettingsCollection);
             return this;
         }
 
-        public Builder customErrorConfigurations(@Nullable Input<List<ApplicationGatewayCustomErrorArgs>> customErrorConfigurations) {
+        public Builder customErrorConfigurations(@Nullable Output<List<ApplicationGatewayCustomErrorArgs>> customErrorConfigurations) {
             this.customErrorConfigurations = customErrorConfigurations;
             return this;
         }
 
         public Builder customErrorConfigurations(@Nullable List<ApplicationGatewayCustomErrorArgs> customErrorConfigurations) {
-            this.customErrorConfigurations = Input.ofNullable(customErrorConfigurations);
+            this.customErrorConfigurations = Output.ofNullable(customErrorConfigurations);
             return this;
         }
 
-        public Builder enableFips(@Nullable Input<Boolean> enableFips) {
+        public Builder enableFips(@Nullable Output<Boolean> enableFips) {
             this.enableFips = enableFips;
             return this;
         }
 
         public Builder enableFips(@Nullable Boolean enableFips) {
-            this.enableFips = Input.ofNullable(enableFips);
+            this.enableFips = Output.ofNullable(enableFips);
             return this;
         }
 
-        public Builder enableHttp2(@Nullable Input<Boolean> enableHttp2) {
+        public Builder enableHttp2(@Nullable Output<Boolean> enableHttp2) {
             this.enableHttp2 = enableHttp2;
             return this;
         }
 
         public Builder enableHttp2(@Nullable Boolean enableHttp2) {
-            this.enableHttp2 = Input.ofNullable(enableHttp2);
+            this.enableHttp2 = Output.ofNullable(enableHttp2);
             return this;
         }
 
-        public Builder firewallPolicy(@Nullable Input<SubResourceArgs> firewallPolicy) {
+        public Builder firewallPolicy(@Nullable Output<SubResourceArgs> firewallPolicy) {
             this.firewallPolicy = firewallPolicy;
             return this;
         }
 
         public Builder firewallPolicy(@Nullable SubResourceArgs firewallPolicy) {
-            this.firewallPolicy = Input.ofNullable(firewallPolicy);
+            this.firewallPolicy = Output.ofNullable(firewallPolicy);
             return this;
         }
 
-        public Builder forceFirewallPolicyAssociation(@Nullable Input<Boolean> forceFirewallPolicyAssociation) {
+        public Builder forceFirewallPolicyAssociation(@Nullable Output<Boolean> forceFirewallPolicyAssociation) {
             this.forceFirewallPolicyAssociation = forceFirewallPolicyAssociation;
             return this;
         }
 
         public Builder forceFirewallPolicyAssociation(@Nullable Boolean forceFirewallPolicyAssociation) {
-            this.forceFirewallPolicyAssociation = Input.ofNullable(forceFirewallPolicyAssociation);
+            this.forceFirewallPolicyAssociation = Output.ofNullable(forceFirewallPolicyAssociation);
             return this;
         }
 
-        public Builder frontendIPConfigurations(@Nullable Input<List<ApplicationGatewayFrontendIPConfigurationArgs>> frontendIPConfigurations) {
+        public Builder frontendIPConfigurations(@Nullable Output<List<ApplicationGatewayFrontendIPConfigurationArgs>> frontendIPConfigurations) {
             this.frontendIPConfigurations = frontendIPConfigurations;
             return this;
         }
 
         public Builder frontendIPConfigurations(@Nullable List<ApplicationGatewayFrontendIPConfigurationArgs> frontendIPConfigurations) {
-            this.frontendIPConfigurations = Input.ofNullable(frontendIPConfigurations);
+            this.frontendIPConfigurations = Output.ofNullable(frontendIPConfigurations);
             return this;
         }
 
-        public Builder frontendPorts(@Nullable Input<List<ApplicationGatewayFrontendPortArgs>> frontendPorts) {
+        public Builder frontendPorts(@Nullable Output<List<ApplicationGatewayFrontendPortArgs>> frontendPorts) {
             this.frontendPorts = frontendPorts;
             return this;
         }
 
         public Builder frontendPorts(@Nullable List<ApplicationGatewayFrontendPortArgs> frontendPorts) {
-            this.frontendPorts = Input.ofNullable(frontendPorts);
+            this.frontendPorts = Output.ofNullable(frontendPorts);
             return this;
         }
 
-        public Builder gatewayIPConfigurations(@Nullable Input<List<ApplicationGatewayIPConfigurationArgs>> gatewayIPConfigurations) {
+        public Builder gatewayIPConfigurations(@Nullable Output<List<ApplicationGatewayIPConfigurationArgs>> gatewayIPConfigurations) {
             this.gatewayIPConfigurations = gatewayIPConfigurations;
             return this;
         }
 
         public Builder gatewayIPConfigurations(@Nullable List<ApplicationGatewayIPConfigurationArgs> gatewayIPConfigurations) {
-            this.gatewayIPConfigurations = Input.ofNullable(gatewayIPConfigurations);
+            this.gatewayIPConfigurations = Output.ofNullable(gatewayIPConfigurations);
             return this;
         }
 
-        public Builder httpListeners(@Nullable Input<List<ApplicationGatewayHttpListenerArgs>> httpListeners) {
+        public Builder httpListeners(@Nullable Output<List<ApplicationGatewayHttpListenerArgs>> httpListeners) {
             this.httpListeners = httpListeners;
             return this;
         }
 
         public Builder httpListeners(@Nullable List<ApplicationGatewayHttpListenerArgs> httpListeners) {
-            this.httpListeners = Input.ofNullable(httpListeners);
+            this.httpListeners = Output.ofNullable(httpListeners);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder identity(@Nullable Input<ManagedServiceIdentityArgs> identity) {
+        public Builder identity(@Nullable Output<ManagedServiceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder privateLinkConfigurations(@Nullable Input<List<ApplicationGatewayPrivateLinkConfigurationArgs>> privateLinkConfigurations) {
+        public Builder privateLinkConfigurations(@Nullable Output<List<ApplicationGatewayPrivateLinkConfigurationArgs>> privateLinkConfigurations) {
             this.privateLinkConfigurations = privateLinkConfigurations;
             return this;
         }
 
         public Builder privateLinkConfigurations(@Nullable List<ApplicationGatewayPrivateLinkConfigurationArgs> privateLinkConfigurations) {
-            this.privateLinkConfigurations = Input.ofNullable(privateLinkConfigurations);
+            this.privateLinkConfigurations = Output.ofNullable(privateLinkConfigurations);
             return this;
         }
 
-        public Builder probes(@Nullable Input<List<ApplicationGatewayProbeArgs>> probes) {
+        public Builder probes(@Nullable Output<List<ApplicationGatewayProbeArgs>> probes) {
             this.probes = probes;
             return this;
         }
 
         public Builder probes(@Nullable List<ApplicationGatewayProbeArgs> probes) {
-            this.probes = Input.ofNullable(probes);
+            this.probes = Output.ofNullable(probes);
             return this;
         }
 
-        public Builder redirectConfigurations(@Nullable Input<List<ApplicationGatewayRedirectConfigurationArgs>> redirectConfigurations) {
+        public Builder redirectConfigurations(@Nullable Output<List<ApplicationGatewayRedirectConfigurationArgs>> redirectConfigurations) {
             this.redirectConfigurations = redirectConfigurations;
             return this;
         }
 
         public Builder redirectConfigurations(@Nullable List<ApplicationGatewayRedirectConfigurationArgs> redirectConfigurations) {
-            this.redirectConfigurations = Input.ofNullable(redirectConfigurations);
+            this.redirectConfigurations = Output.ofNullable(redirectConfigurations);
             return this;
         }
 
-        public Builder requestRoutingRules(@Nullable Input<List<ApplicationGatewayRequestRoutingRuleArgs>> requestRoutingRules) {
+        public Builder requestRoutingRules(@Nullable Output<List<ApplicationGatewayRequestRoutingRuleArgs>> requestRoutingRules) {
             this.requestRoutingRules = requestRoutingRules;
             return this;
         }
 
         public Builder requestRoutingRules(@Nullable List<ApplicationGatewayRequestRoutingRuleArgs> requestRoutingRules) {
-            this.requestRoutingRules = Input.ofNullable(requestRoutingRules);
+            this.requestRoutingRules = Output.ofNullable(requestRoutingRules);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder rewriteRuleSets(@Nullable Input<List<ApplicationGatewayRewriteRuleSetArgs>> rewriteRuleSets) {
+        public Builder rewriteRuleSets(@Nullable Output<List<ApplicationGatewayRewriteRuleSetArgs>> rewriteRuleSets) {
             this.rewriteRuleSets = rewriteRuleSets;
             return this;
         }
 
         public Builder rewriteRuleSets(@Nullable List<ApplicationGatewayRewriteRuleSetArgs> rewriteRuleSets) {
-            this.rewriteRuleSets = Input.ofNullable(rewriteRuleSets);
+            this.rewriteRuleSets = Output.ofNullable(rewriteRuleSets);
             return this;
         }
 
-        public Builder sku(@Nullable Input<ApplicationGatewaySkuArgs> sku) {
+        public Builder sku(@Nullable Output<ApplicationGatewaySkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable ApplicationGatewaySkuArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder sslCertificates(@Nullable Input<List<ApplicationGatewaySslCertificateArgs>> sslCertificates) {
+        public Builder sslCertificates(@Nullable Output<List<ApplicationGatewaySslCertificateArgs>> sslCertificates) {
             this.sslCertificates = sslCertificates;
             return this;
         }
 
         public Builder sslCertificates(@Nullable List<ApplicationGatewaySslCertificateArgs> sslCertificates) {
-            this.sslCertificates = Input.ofNullable(sslCertificates);
+            this.sslCertificates = Output.ofNullable(sslCertificates);
             return this;
         }
 
-        public Builder sslPolicy(@Nullable Input<ApplicationGatewaySslPolicyArgs> sslPolicy) {
+        public Builder sslPolicy(@Nullable Output<ApplicationGatewaySslPolicyArgs> sslPolicy) {
             this.sslPolicy = sslPolicy;
             return this;
         }
 
         public Builder sslPolicy(@Nullable ApplicationGatewaySslPolicyArgs sslPolicy) {
-            this.sslPolicy = Input.ofNullable(sslPolicy);
+            this.sslPolicy = Output.ofNullable(sslPolicy);
             return this;
         }
 
-        public Builder sslProfiles(@Nullable Input<List<ApplicationGatewaySslProfileArgs>> sslProfiles) {
+        public Builder sslProfiles(@Nullable Output<List<ApplicationGatewaySslProfileArgs>> sslProfiles) {
             this.sslProfiles = sslProfiles;
             return this;
         }
 
         public Builder sslProfiles(@Nullable List<ApplicationGatewaySslProfileArgs> sslProfiles) {
-            this.sslProfiles = Input.ofNullable(sslProfiles);
+            this.sslProfiles = Output.ofNullable(sslProfiles);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder trustedClientCertificates(@Nullable Input<List<ApplicationGatewayTrustedClientCertificateArgs>> trustedClientCertificates) {
+        public Builder trustedClientCertificates(@Nullable Output<List<ApplicationGatewayTrustedClientCertificateArgs>> trustedClientCertificates) {
             this.trustedClientCertificates = trustedClientCertificates;
             return this;
         }
 
         public Builder trustedClientCertificates(@Nullable List<ApplicationGatewayTrustedClientCertificateArgs> trustedClientCertificates) {
-            this.trustedClientCertificates = Input.ofNullable(trustedClientCertificates);
+            this.trustedClientCertificates = Output.ofNullable(trustedClientCertificates);
             return this;
         }
 
-        public Builder trustedRootCertificates(@Nullable Input<List<ApplicationGatewayTrustedRootCertificateArgs>> trustedRootCertificates) {
+        public Builder trustedRootCertificates(@Nullable Output<List<ApplicationGatewayTrustedRootCertificateArgs>> trustedRootCertificates) {
             this.trustedRootCertificates = trustedRootCertificates;
             return this;
         }
 
         public Builder trustedRootCertificates(@Nullable List<ApplicationGatewayTrustedRootCertificateArgs> trustedRootCertificates) {
-            this.trustedRootCertificates = Input.ofNullable(trustedRootCertificates);
+            this.trustedRootCertificates = Output.ofNullable(trustedRootCertificates);
             return this;
         }
 
-        public Builder urlPathMaps(@Nullable Input<List<ApplicationGatewayUrlPathMapArgs>> urlPathMaps) {
+        public Builder urlPathMaps(@Nullable Output<List<ApplicationGatewayUrlPathMapArgs>> urlPathMaps) {
             this.urlPathMaps = urlPathMaps;
             return this;
         }
 
         public Builder urlPathMaps(@Nullable List<ApplicationGatewayUrlPathMapArgs> urlPathMaps) {
-            this.urlPathMaps = Input.ofNullable(urlPathMaps);
+            this.urlPathMaps = Output.ofNullable(urlPathMaps);
             return this;
         }
 
-        public Builder webApplicationFirewallConfiguration(@Nullable Input<ApplicationGatewayWebApplicationFirewallConfigurationArgs> webApplicationFirewallConfiguration) {
+        public Builder webApplicationFirewallConfiguration(@Nullable Output<ApplicationGatewayWebApplicationFirewallConfigurationArgs> webApplicationFirewallConfiguration) {
             this.webApplicationFirewallConfiguration = webApplicationFirewallConfiguration;
             return this;
         }
 
         public Builder webApplicationFirewallConfiguration(@Nullable ApplicationGatewayWebApplicationFirewallConfigurationArgs webApplicationFirewallConfiguration) {
-            this.webApplicationFirewallConfiguration = Input.ofNullable(webApplicationFirewallConfiguration);
+            this.webApplicationFirewallConfiguration = Output.ofNullable(webApplicationFirewallConfiguration);
             return this;
         }
 
-        public Builder zones(@Nullable Input<List<String>> zones) {
+        public Builder zones(@Nullable Output<List<String>> zones) {
             this.zones = zones;
             return this;
         }
 
         public Builder zones(@Nullable List<String> zones) {
-            this.zones = Input.ofNullable(zones);
+            this.zones = Output.ofNullable(zones);
             return this;
         }
         public ApplicationGatewayArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.kms;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.kms.inputs.KeyRingIAMBindingConditionArgs;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class KeyRingIAMBindingArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="condition")
-      private final @Nullable Input<KeyRingIAMBindingConditionArgs> condition;
+      private final @Nullable Output<KeyRingIAMBindingConditionArgs> condition;
 
-    public Input<KeyRingIAMBindingConditionArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<KeyRingIAMBindingConditionArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -36,16 +36,16 @@ public final class KeyRingIAMBindingArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="keyRingId", required=true)
-      private final Input<String> keyRingId;
+      private final Output<String> keyRingId;
 
-    public Input<String> getKeyRingId() {
+    public Output<String> getKeyRingId() {
         return this.keyRingId;
     }
 
     @InputImport(name="members", required=true)
-      private final Input<List<String>> members;
+      private final Output<List<String>> members;
 
-    public Input<List<String>> getMembers() {
+    public Output<List<String>> getMembers() {
         return this.members;
     }
 
@@ -56,17 +56,17 @@ public final class KeyRingIAMBindingArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="role", required=true)
-      private final Input<String> role;
+      private final Output<String> role;
 
-    public Input<String> getRole() {
+    public Output<String> getRole() {
         return this.role;
     }
 
     public KeyRingIAMBindingArgs(
-        @Nullable Input<KeyRingIAMBindingConditionArgs> condition,
-        Input<String> keyRingId,
-        Input<List<String>> members,
-        Input<String> role) {
+        @Nullable Output<KeyRingIAMBindingConditionArgs> condition,
+        Output<String> keyRingId,
+        Output<List<String>> members,
+        Output<String> role) {
         this.condition = condition;
         this.keyRingId = Objects.requireNonNull(keyRingId, "expected parameter 'keyRingId' to be non-null");
         this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
@@ -74,10 +74,10 @@ public final class KeyRingIAMBindingArgs extends io.pulumi.resources.ResourceArg
     }
 
     private KeyRingIAMBindingArgs() {
-        this.condition = Input.empty();
-        this.keyRingId = Input.empty();
-        this.members = Input.empty();
-        this.role = Input.empty();
+        this.condition = Output.empty();
+        this.keyRingId = Output.empty();
+        this.members = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class KeyRingIAMBindingArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<KeyRingIAMBindingConditionArgs> condition;
-        private Input<String> keyRingId;
-        private Input<List<String>> members;
-        private Input<String> role;
+        private @Nullable Output<KeyRingIAMBindingConditionArgs> condition;
+        private Output<String> keyRingId;
+        private Output<List<String>> members;
+        private Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class KeyRingIAMBindingArgs extends io.pulumi.resources.ResourceArg
     	      this.role = defaults.role;
         }
 
-        public Builder condition(@Nullable Input<KeyRingIAMBindingConditionArgs> condition) {
+        public Builder condition(@Nullable Output<KeyRingIAMBindingConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable KeyRingIAMBindingConditionArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder keyRingId(Input<String> keyRingId) {
+        public Builder keyRingId(Output<String> keyRingId) {
             this.keyRingId = Objects.requireNonNull(keyRingId);
             return this;
         }
 
         public Builder keyRingId(String keyRingId) {
-            this.keyRingId = Input.of(Objects.requireNonNull(keyRingId));
+            this.keyRingId = Output.of(Objects.requireNonNull(keyRingId));
             return this;
         }
 
-        public Builder members(Input<List<String>> members) {
+        public Builder members(Output<List<String>> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
 
         public Builder members(List<String> members) {
-            this.members = Input.of(Objects.requireNonNull(members));
+            this.members = Output.of(Objects.requireNonNull(members));
             return this;
         }
 
-        public Builder role(Input<String> role) {
+        public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(String role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
         public KeyRingIAMBindingArgs build() {

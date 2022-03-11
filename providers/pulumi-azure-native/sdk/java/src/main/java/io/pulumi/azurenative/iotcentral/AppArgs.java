@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.iotcentral;
 
 import io.pulumi.azurenative.iotcentral.inputs.AppSkuInfoArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -54,10 +54,10 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceName")
-      private final @Nullable Input<String> resourceName;
+      private final @Nullable Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
-        return this.resourceName == null ? Input.empty() : this.resourceName;
+    public Output<String> getPropResourceName() {
+        return this.resourceName == null ? Output.empty() : this.resourceName;
     }
 
     /**
@@ -65,9 +65,9 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku", required=true)
-      private final Input<AppSkuInfoArgs> sku;
+      private final Output<AppSkuInfoArgs> sku;
 
-    public Input<AppSkuInfoArgs> getSku() {
+    public Output<AppSkuInfoArgs> getSku() {
         return this.sku;
     }
 
@@ -76,10 +76,10 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subdomain")
-      private final @Nullable Input<String> subdomain;
+      private final @Nullable Output<String> subdomain;
 
-    public Input<String> getSubdomain() {
-        return this.subdomain == null ? Input.empty() : this.subdomain;
+    public Output<String> getSubdomain() {
+        return this.subdomain == null ? Output.empty() : this.subdomain;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -98,21 +98,21 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="template")
-      private final @Nullable Input<String> template;
+      private final @Nullable Output<String> template;
 
-    public Input<String> getTemplate() {
-        return this.template == null ? Input.empty() : this.template;
+    public Output<String> getTemplate() {
+        return this.template == null ? Output.empty() : this.template;
     }
 
     public AppArgs(
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> resourceName,
-        Input<AppSkuInfoArgs> sku,
-        @Nullable Input<String> subdomain,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> template) {
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> resourceName,
+        Output<AppSkuInfoArgs> sku,
+        @Nullable Output<String> subdomain,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> template) {
         this.displayName = displayName;
         this.location = location;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -124,14 +124,14 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AppArgs() {
-        this.displayName = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceName = Input.empty();
-        this.sku = Input.empty();
-        this.subdomain = Input.empty();
-        this.tags = Input.empty();
-        this.template = Input.empty();
+        this.displayName = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceName = Output.empty();
+        this.sku = Output.empty();
+        this.subdomain = Output.empty();
+        this.tags = Output.empty();
+        this.template = Output.empty();
     }
 
     public static Builder builder() {
@@ -143,14 +143,14 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> resourceName;
-        private Input<AppSkuInfoArgs> sku;
-        private @Nullable Input<String> subdomain;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> template;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> resourceName;
+        private Output<AppSkuInfoArgs> sku;
+        private @Nullable Output<String> subdomain;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> template;
 
         public Builder() {
     	      // Empty
@@ -168,83 +168,83 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     	      this.template = defaults.template;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceName(@Nullable Input<String> resourceName) {
+        public Builder resourceName(@Nullable Output<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Input.ofNullable(resourceName);
+            this.resourceName = Output.ofNullable(resourceName);
             return this;
         }
 
-        public Builder sku(Input<AppSkuInfoArgs> sku) {
+        public Builder sku(Output<AppSkuInfoArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
         public Builder sku(AppSkuInfoArgs sku) {
-            this.sku = Input.of(Objects.requireNonNull(sku));
+            this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
 
-        public Builder subdomain(@Nullable Input<String> subdomain) {
+        public Builder subdomain(@Nullable Output<String> subdomain) {
             this.subdomain = subdomain;
             return this;
         }
 
         public Builder subdomain(@Nullable String subdomain) {
-            this.subdomain = Input.ofNullable(subdomain);
+            this.subdomain = Output.ofNullable(subdomain);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder template(@Nullable Input<String> template) {
+        public Builder template(@Nullable Output<String> template) {
             this.template = template;
             return this;
         }
 
         public Builder template(@Nullable String template) {
-            this.template = Input.ofNullable(template);
+            this.template = Output.ofNullable(template);
             return this;
         }
         public AppArgs build() {

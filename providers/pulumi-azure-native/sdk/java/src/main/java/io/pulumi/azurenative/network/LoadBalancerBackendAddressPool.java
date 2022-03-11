@@ -9,7 +9,6 @@ import io.pulumi.azurenative.network.outputs.LoadBalancerBackendAddressResponse;
 import io.pulumi.azurenative.network.outputs.NetworkInterfaceIPConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -213,26 +212,26 @@ public class LoadBalancerBackendAddressPool extends io.pulumi.resources.CustomRe
      * @param options A bag of options that control this resource's behavior.
      */
     public LoadBalancerBackendAddressPool(String name, LoadBalancerBackendAddressPoolArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:LoadBalancerBackendAddressPool", name, args == null ? LoadBalancerBackendAddressPoolArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:network:LoadBalancerBackendAddressPool", name, args == null ? LoadBalancerBackendAddressPoolArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private LoadBalancerBackendAddressPool(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private LoadBalancerBackendAddressPool(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:LoadBalancerBackendAddressPool", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:network/v20200401:LoadBalancerBackendAddressPool").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200501:LoadBalancerBackendAddressPool").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200601:LoadBalancerBackendAddressPool").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200701:LoadBalancerBackendAddressPool").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200801:LoadBalancerBackendAddressPool").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20201101:LoadBalancerBackendAddressPool").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210201:LoadBalancerBackendAddressPool").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210301:LoadBalancerBackendAddressPool").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210501:LoadBalancerBackendAddressPool").build())
+                Output.of(Alias.builder().setType("azure-native:network/v20200401:LoadBalancerBackendAddressPool").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200501:LoadBalancerBackendAddressPool").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200601:LoadBalancerBackendAddressPool").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200701:LoadBalancerBackendAddressPool").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200801:LoadBalancerBackendAddressPool").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20201101:LoadBalancerBackendAddressPool").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210201:LoadBalancerBackendAddressPool").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210301:LoadBalancerBackendAddressPool").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210501:LoadBalancerBackendAddressPool").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -246,7 +245,7 @@ public class LoadBalancerBackendAddressPool extends io.pulumi.resources.CustomRe
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static LoadBalancerBackendAddressPool get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static LoadBalancerBackendAddressPool get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new LoadBalancerBackendAddressPool(name, id, options);
     }
 }

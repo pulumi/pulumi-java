@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="crashed")
-      private final @Nullable Input<Boolean> crashed;
+      private final @Nullable Output<Boolean> crashed;
 
-    public Input<Boolean> getCrashed() {
-        return this.crashed == null ? Input.empty() : this.crashed;
+    public Output<Boolean> getCrashed() {
+        return this.crashed == null ? Output.empty() : this.crashed;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceOutOfMemory")
-      private final @Nullable Input<Boolean> deviceOutOfMemory;
+      private final @Nullable Output<Boolean> deviceOutOfMemory;
 
-    public Input<Boolean> getDeviceOutOfMemory() {
-        return this.deviceOutOfMemory == null ? Input.empty() : this.deviceOutOfMemory;
+    public Output<Boolean> getDeviceOutOfMemory() {
+        return this.deviceOutOfMemory == null ? Output.empty() : this.deviceOutOfMemory;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="failedRoboscript")
-      private final @Nullable Input<Boolean> failedRoboscript;
+      private final @Nullable Output<Boolean> failedRoboscript;
 
-    public Input<Boolean> getFailedRoboscript() {
-        return this.failedRoboscript == null ? Input.empty() : this.failedRoboscript;
+    public Output<Boolean> getFailedRoboscript() {
+        return this.failedRoboscript == null ? Output.empty() : this.failedRoboscript;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notInstalled")
-      private final @Nullable Input<Boolean> notInstalled;
+      private final @Nullable Output<Boolean> notInstalled;
 
-    public Input<Boolean> getNotInstalled() {
-        return this.notInstalled == null ? Input.empty() : this.notInstalled;
+    public Output<Boolean> getNotInstalled() {
+        return this.notInstalled == null ? Output.empty() : this.notInstalled;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="otherNativeCrash")
-      private final @Nullable Input<Boolean> otherNativeCrash;
+      private final @Nullable Output<Boolean> otherNativeCrash;
 
-    public Input<Boolean> getOtherNativeCrash() {
-        return this.otherNativeCrash == null ? Input.empty() : this.otherNativeCrash;
+    public Output<Boolean> getOtherNativeCrash() {
+        return this.otherNativeCrash == null ? Output.empty() : this.otherNativeCrash;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timedOut")
-      private final @Nullable Input<Boolean> timedOut;
+      private final @Nullable Output<Boolean> timedOut;
 
-    public Input<Boolean> getTimedOut() {
-        return this.timedOut == null ? Input.empty() : this.timedOut;
+    public Output<Boolean> getTimedOut() {
+        return this.timedOut == null ? Output.empty() : this.timedOut;
     }
 
     /**
@@ -89,20 +89,20 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="unableToCrawl")
-      private final @Nullable Input<Boolean> unableToCrawl;
+      private final @Nullable Output<Boolean> unableToCrawl;
 
-    public Input<Boolean> getUnableToCrawl() {
-        return this.unableToCrawl == null ? Input.empty() : this.unableToCrawl;
+    public Output<Boolean> getUnableToCrawl() {
+        return this.unableToCrawl == null ? Output.empty() : this.unableToCrawl;
     }
 
     public FailureDetailArgs(
-        @Nullable Input<Boolean> crashed,
-        @Nullable Input<Boolean> deviceOutOfMemory,
-        @Nullable Input<Boolean> failedRoboscript,
-        @Nullable Input<Boolean> notInstalled,
-        @Nullable Input<Boolean> otherNativeCrash,
-        @Nullable Input<Boolean> timedOut,
-        @Nullable Input<Boolean> unableToCrawl) {
+        @Nullable Output<Boolean> crashed,
+        @Nullable Output<Boolean> deviceOutOfMemory,
+        @Nullable Output<Boolean> failedRoboscript,
+        @Nullable Output<Boolean> notInstalled,
+        @Nullable Output<Boolean> otherNativeCrash,
+        @Nullable Output<Boolean> timedOut,
+        @Nullable Output<Boolean> unableToCrawl) {
         this.crashed = crashed;
         this.deviceOutOfMemory = deviceOutOfMemory;
         this.failedRoboscript = failedRoboscript;
@@ -113,13 +113,13 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FailureDetailArgs() {
-        this.crashed = Input.empty();
-        this.deviceOutOfMemory = Input.empty();
-        this.failedRoboscript = Input.empty();
-        this.notInstalled = Input.empty();
-        this.otherNativeCrash = Input.empty();
-        this.timedOut = Input.empty();
-        this.unableToCrawl = Input.empty();
+        this.crashed = Output.empty();
+        this.deviceOutOfMemory = Output.empty();
+        this.failedRoboscript = Output.empty();
+        this.notInstalled = Output.empty();
+        this.otherNativeCrash = Output.empty();
+        this.timedOut = Output.empty();
+        this.unableToCrawl = Output.empty();
     }
 
     public static Builder builder() {
@@ -131,13 +131,13 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> crashed;
-        private @Nullable Input<Boolean> deviceOutOfMemory;
-        private @Nullable Input<Boolean> failedRoboscript;
-        private @Nullable Input<Boolean> notInstalled;
-        private @Nullable Input<Boolean> otherNativeCrash;
-        private @Nullable Input<Boolean> timedOut;
-        private @Nullable Input<Boolean> unableToCrawl;
+        private @Nullable Output<Boolean> crashed;
+        private @Nullable Output<Boolean> deviceOutOfMemory;
+        private @Nullable Output<Boolean> failedRoboscript;
+        private @Nullable Output<Boolean> notInstalled;
+        private @Nullable Output<Boolean> otherNativeCrash;
+        private @Nullable Output<Boolean> timedOut;
+        private @Nullable Output<Boolean> unableToCrawl;
 
         public Builder() {
     	      // Empty
@@ -154,73 +154,73 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
     	      this.unableToCrawl = defaults.unableToCrawl;
         }
 
-        public Builder crashed(@Nullable Input<Boolean> crashed) {
+        public Builder crashed(@Nullable Output<Boolean> crashed) {
             this.crashed = crashed;
             return this;
         }
 
         public Builder crashed(@Nullable Boolean crashed) {
-            this.crashed = Input.ofNullable(crashed);
+            this.crashed = Output.ofNullable(crashed);
             return this;
         }
 
-        public Builder deviceOutOfMemory(@Nullable Input<Boolean> deviceOutOfMemory) {
+        public Builder deviceOutOfMemory(@Nullable Output<Boolean> deviceOutOfMemory) {
             this.deviceOutOfMemory = deviceOutOfMemory;
             return this;
         }
 
         public Builder deviceOutOfMemory(@Nullable Boolean deviceOutOfMemory) {
-            this.deviceOutOfMemory = Input.ofNullable(deviceOutOfMemory);
+            this.deviceOutOfMemory = Output.ofNullable(deviceOutOfMemory);
             return this;
         }
 
-        public Builder failedRoboscript(@Nullable Input<Boolean> failedRoboscript) {
+        public Builder failedRoboscript(@Nullable Output<Boolean> failedRoboscript) {
             this.failedRoboscript = failedRoboscript;
             return this;
         }
 
         public Builder failedRoboscript(@Nullable Boolean failedRoboscript) {
-            this.failedRoboscript = Input.ofNullable(failedRoboscript);
+            this.failedRoboscript = Output.ofNullable(failedRoboscript);
             return this;
         }
 
-        public Builder notInstalled(@Nullable Input<Boolean> notInstalled) {
+        public Builder notInstalled(@Nullable Output<Boolean> notInstalled) {
             this.notInstalled = notInstalled;
             return this;
         }
 
         public Builder notInstalled(@Nullable Boolean notInstalled) {
-            this.notInstalled = Input.ofNullable(notInstalled);
+            this.notInstalled = Output.ofNullable(notInstalled);
             return this;
         }
 
-        public Builder otherNativeCrash(@Nullable Input<Boolean> otherNativeCrash) {
+        public Builder otherNativeCrash(@Nullable Output<Boolean> otherNativeCrash) {
             this.otherNativeCrash = otherNativeCrash;
             return this;
         }
 
         public Builder otherNativeCrash(@Nullable Boolean otherNativeCrash) {
-            this.otherNativeCrash = Input.ofNullable(otherNativeCrash);
+            this.otherNativeCrash = Output.ofNullable(otherNativeCrash);
             return this;
         }
 
-        public Builder timedOut(@Nullable Input<Boolean> timedOut) {
+        public Builder timedOut(@Nullable Output<Boolean> timedOut) {
             this.timedOut = timedOut;
             return this;
         }
 
         public Builder timedOut(@Nullable Boolean timedOut) {
-            this.timedOut = Input.ofNullable(timedOut);
+            this.timedOut = Output.ofNullable(timedOut);
             return this;
         }
 
-        public Builder unableToCrawl(@Nullable Input<Boolean> unableToCrawl) {
+        public Builder unableToCrawl(@Nullable Output<Boolean> unableToCrawl) {
             this.unableToCrawl = unableToCrawl;
             return this;
         }
 
         public Builder unableToCrawl(@Nullable Boolean unableToCrawl) {
-            this.unableToCrawl = Input.ofNullable(unableToCrawl);
+            this.unableToCrawl = Output.ofNullable(unableToCrawl);
             return this;
         }
         public FailureDetailArgs build() {

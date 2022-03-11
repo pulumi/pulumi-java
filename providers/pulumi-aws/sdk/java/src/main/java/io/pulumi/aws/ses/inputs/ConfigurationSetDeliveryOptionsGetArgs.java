@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ses.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class ConfigurationSetDeliveryOptionsGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="tlsPolicy")
-      private final @Nullable Input<String> tlsPolicy;
+      private final @Nullable Output<String> tlsPolicy;
 
-    public Input<String> getTlsPolicy() {
-        return this.tlsPolicy == null ? Input.empty() : this.tlsPolicy;
+    public Output<String> getTlsPolicy() {
+        return this.tlsPolicy == null ? Output.empty() : this.tlsPolicy;
     }
 
-    public ConfigurationSetDeliveryOptionsGetArgs(@Nullable Input<String> tlsPolicy) {
+    public ConfigurationSetDeliveryOptionsGetArgs(@Nullable Output<String> tlsPolicy) {
         this.tlsPolicy = tlsPolicy;
     }
 
     private ConfigurationSetDeliveryOptionsGetArgs() {
-        this.tlsPolicy = Input.empty();
+        this.tlsPolicy = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class ConfigurationSetDeliveryOptionsGetArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> tlsPolicy;
+        private @Nullable Output<String> tlsPolicy;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class ConfigurationSetDeliveryOptionsGetArgs extends io.pulumi.reso
     	      this.tlsPolicy = defaults.tlsPolicy;
         }
 
-        public Builder tlsPolicy(@Nullable Input<String> tlsPolicy) {
+        public Builder tlsPolicy(@Nullable Output<String> tlsPolicy) {
             this.tlsPolicy = tlsPolicy;
             return this;
         }
 
         public Builder tlsPolicy(@Nullable String tlsPolicy) {
-            this.tlsPolicy = Input.ofNullable(tlsPolicy);
+            this.tlsPolicy = Output.ofNullable(tlsPolicy);
             return this;
         }
         public ConfigurationSetDeliveryOptionsGetArgs build() {

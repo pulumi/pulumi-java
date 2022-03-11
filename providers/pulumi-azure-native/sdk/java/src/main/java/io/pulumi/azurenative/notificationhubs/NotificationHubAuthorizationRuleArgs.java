@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.notificationhubs;
 
 import io.pulumi.azurenative.notificationhubs.inputs.SharedAccessAuthorizationRulePropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class NotificationHubAuthorizationRuleArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="authorizationRuleName")
-      private final @Nullable Input<String> authorizationRuleName;
+      private final @Nullable Output<String> authorizationRuleName;
 
-    public Input<String> getAuthorizationRuleName() {
-        return this.authorizationRuleName == null ? Input.empty() : this.authorizationRuleName;
+    public Output<String> getAuthorizationRuleName() {
+        return this.authorizationRuleName == null ? Output.empty() : this.authorizationRuleName;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class NotificationHubAuthorizationRuleArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="namespaceName", required=true)
-      private final Input<String> namespaceName;
+      private final Output<String> namespaceName;
 
-    public Input<String> getNamespaceName() {
+    public Output<String> getNamespaceName() {
         return this.namespaceName;
     }
 
@@ -42,9 +42,9 @@ public final class NotificationHubAuthorizationRuleArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="notificationHubName", required=true)
-      private final Input<String> notificationHubName;
+      private final Output<String> notificationHubName;
 
-    public Input<String> getNotificationHubName() {
+    public Output<String> getNotificationHubName() {
         return this.notificationHubName;
     }
 
@@ -53,9 +53,9 @@ public final class NotificationHubAuthorizationRuleArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="properties", required=true)
-      private final Input<SharedAccessAuthorizationRulePropertiesArgs> properties;
+      private final Output<SharedAccessAuthorizationRulePropertiesArgs> properties;
 
-    public Input<SharedAccessAuthorizationRulePropertiesArgs> getProperties() {
+    public Output<SharedAccessAuthorizationRulePropertiesArgs> getProperties() {
         return this.properties;
     }
 
@@ -64,18 +64,18 @@ public final class NotificationHubAuthorizationRuleArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public NotificationHubAuthorizationRuleArgs(
-        @Nullable Input<String> authorizationRuleName,
-        Input<String> namespaceName,
-        Input<String> notificationHubName,
-        Input<SharedAccessAuthorizationRulePropertiesArgs> properties,
-        Input<String> resourceGroupName) {
+        @Nullable Output<String> authorizationRuleName,
+        Output<String> namespaceName,
+        Output<String> notificationHubName,
+        Output<SharedAccessAuthorizationRulePropertiesArgs> properties,
+        Output<String> resourceGroupName) {
         this.authorizationRuleName = authorizationRuleName;
         this.namespaceName = Objects.requireNonNull(namespaceName, "expected parameter 'namespaceName' to be non-null");
         this.notificationHubName = Objects.requireNonNull(notificationHubName, "expected parameter 'notificationHubName' to be non-null");
@@ -84,11 +84,11 @@ public final class NotificationHubAuthorizationRuleArgs extends io.pulumi.resour
     }
 
     private NotificationHubAuthorizationRuleArgs() {
-        this.authorizationRuleName = Input.empty();
-        this.namespaceName = Input.empty();
-        this.notificationHubName = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.authorizationRuleName = Output.empty();
+        this.namespaceName = Output.empty();
+        this.notificationHubName = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class NotificationHubAuthorizationRuleArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> authorizationRuleName;
-        private Input<String> namespaceName;
-        private Input<String> notificationHubName;
-        private Input<SharedAccessAuthorizationRulePropertiesArgs> properties;
-        private Input<String> resourceGroupName;
+        private @Nullable Output<String> authorizationRuleName;
+        private Output<String> namespaceName;
+        private Output<String> notificationHubName;
+        private Output<SharedAccessAuthorizationRulePropertiesArgs> properties;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class NotificationHubAuthorizationRuleArgs extends io.pulumi.resour
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder authorizationRuleName(@Nullable Input<String> authorizationRuleName) {
+        public Builder authorizationRuleName(@Nullable Output<String> authorizationRuleName) {
             this.authorizationRuleName = authorizationRuleName;
             return this;
         }
 
         public Builder authorizationRuleName(@Nullable String authorizationRuleName) {
-            this.authorizationRuleName = Input.ofNullable(authorizationRuleName);
+            this.authorizationRuleName = Output.ofNullable(authorizationRuleName);
             return this;
         }
 
-        public Builder namespaceName(Input<String> namespaceName) {
+        public Builder namespaceName(Output<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
 
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Input.of(Objects.requireNonNull(namespaceName));
+            this.namespaceName = Output.of(Objects.requireNonNull(namespaceName));
             return this;
         }
 
-        public Builder notificationHubName(Input<String> notificationHubName) {
+        public Builder notificationHubName(Output<String> notificationHubName) {
             this.notificationHubName = Objects.requireNonNull(notificationHubName);
             return this;
         }
 
         public Builder notificationHubName(String notificationHubName) {
-            this.notificationHubName = Input.of(Objects.requireNonNull(notificationHubName));
+            this.notificationHubName = Output.of(Objects.requireNonNull(notificationHubName));
             return this;
         }
 
-        public Builder properties(Input<SharedAccessAuthorizationRulePropertiesArgs> properties) {
+        public Builder properties(Output<SharedAccessAuthorizationRulePropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
         public Builder properties(SharedAccessAuthorizationRulePropertiesArgs properties) {
-            this.properties = Input.of(Objects.requireNonNull(properties));
+            this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public NotificationHubAuthorizationRuleArgs build() {

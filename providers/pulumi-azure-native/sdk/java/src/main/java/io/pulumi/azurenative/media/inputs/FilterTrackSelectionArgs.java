@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.FilterTrackPropertyConditionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class FilterTrackSelectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="trackSelections", required=true)
-      private final Input<List<FilterTrackPropertyConditionArgs>> trackSelections;
+      private final Output<List<FilterTrackPropertyConditionArgs>> trackSelections;
 
-    public Input<List<FilterTrackPropertyConditionArgs>> getTrackSelections() {
+    public Output<List<FilterTrackPropertyConditionArgs>> getTrackSelections() {
         return this.trackSelections;
     }
 
-    public FilterTrackSelectionArgs(Input<List<FilterTrackPropertyConditionArgs>> trackSelections) {
+    public FilterTrackSelectionArgs(Output<List<FilterTrackPropertyConditionArgs>> trackSelections) {
         this.trackSelections = Objects.requireNonNull(trackSelections, "expected parameter 'trackSelections' to be non-null");
     }
 
     private FilterTrackSelectionArgs() {
-        this.trackSelections = Input.empty();
+        this.trackSelections = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class FilterTrackSelectionArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<List<FilterTrackPropertyConditionArgs>> trackSelections;
+        private Output<List<FilterTrackPropertyConditionArgs>> trackSelections;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class FilterTrackSelectionArgs extends io.pulumi.resources.Resource
     	      this.trackSelections = defaults.trackSelections;
         }
 
-        public Builder trackSelections(Input<List<FilterTrackPropertyConditionArgs>> trackSelections) {
+        public Builder trackSelections(Output<List<FilterTrackPropertyConditionArgs>> trackSelections) {
             this.trackSelections = Objects.requireNonNull(trackSelections);
             return this;
         }
 
         public Builder trackSelections(List<FilterTrackPropertyConditionArgs> trackSelections) {
-            this.trackSelections = Input.of(Objects.requireNonNull(trackSelections));
+            this.trackSelections = Output.of(Objects.requireNonNull(trackSelections));
             return this;
         }
         public FilterTrackSelectionArgs build() {

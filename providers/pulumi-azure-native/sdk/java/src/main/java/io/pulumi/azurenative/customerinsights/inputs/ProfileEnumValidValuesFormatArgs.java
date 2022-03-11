@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class ProfileEnumValidValuesFormatArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="localizedValueNames")
-      private final @Nullable Input<Map<String,String>> localizedValueNames;
+      private final @Nullable Output<Map<String,String>> localizedValueNames;
 
-    public Input<Map<String,String>> getLocalizedValueNames() {
-        return this.localizedValueNames == null ? Input.empty() : this.localizedValueNames;
+    public Output<Map<String,String>> getLocalizedValueNames() {
+        return this.localizedValueNames == null ? Output.empty() : this.localizedValueNames;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class ProfileEnumValidValuesFormatArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<Integer> value;
+      private final @Nullable Output<Integer> value;
 
-    public Input<Integer> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<Integer> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public ProfileEnumValidValuesFormatArgs(
-        @Nullable Input<Map<String,String>> localizedValueNames,
-        @Nullable Input<Integer> value) {
+        @Nullable Output<Map<String,String>> localizedValueNames,
+        @Nullable Output<Integer> value) {
         this.localizedValueNames = localizedValueNames;
         this.value = value;
     }
 
     private ProfileEnumValidValuesFormatArgs() {
-        this.localizedValueNames = Input.empty();
-        this.value = Input.empty();
+        this.localizedValueNames = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class ProfileEnumValidValuesFormatArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> localizedValueNames;
-        private @Nullable Input<Integer> value;
+        private @Nullable Output<Map<String,String>> localizedValueNames;
+        private @Nullable Output<Integer> value;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class ProfileEnumValidValuesFormatArgs extends io.pulumi.resources.
     	      this.value = defaults.value;
         }
 
-        public Builder localizedValueNames(@Nullable Input<Map<String,String>> localizedValueNames) {
+        public Builder localizedValueNames(@Nullable Output<Map<String,String>> localizedValueNames) {
             this.localizedValueNames = localizedValueNames;
             return this;
         }
 
         public Builder localizedValueNames(@Nullable Map<String,String> localizedValueNames) {
-            this.localizedValueNames = Input.ofNullable(localizedValueNames);
+            this.localizedValueNames = Output.ofNullable(localizedValueNames);
             return this;
         }
 
-        public Builder value(@Nullable Input<Integer> value) {
+        public Builder value(@Nullable Output<Integer> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable Integer value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public ProfileEnumValidValuesFormatArgs build() {

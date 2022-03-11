@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class GoogleCloudMlV1__PredictionOutputArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="errorCount")
-      private final @Nullable Input<String> errorCount;
+      private final @Nullable Output<String> errorCount;
 
-    public Input<String> getErrorCount() {
-        return this.errorCount == null ? Input.empty() : this.errorCount;
+    public Output<String> getErrorCount() {
+        return this.errorCount == null ? Output.empty() : this.errorCount;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class GoogleCloudMlV1__PredictionOutputArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="nodeHours")
-      private final @Nullable Input<Double> nodeHours;
+      private final @Nullable Output<Double> nodeHours;
 
-    public Input<Double> getNodeHours() {
-        return this.nodeHours == null ? Input.empty() : this.nodeHours;
+    public Output<Double> getNodeHours() {
+        return this.nodeHours == null ? Output.empty() : this.nodeHours;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class GoogleCloudMlV1__PredictionOutputArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="outputPath")
-      private final @Nullable Input<String> outputPath;
+      private final @Nullable Output<String> outputPath;
 
-    public Input<String> getOutputPath() {
-        return this.outputPath == null ? Input.empty() : this.outputPath;
+    public Output<String> getOutputPath() {
+        return this.outputPath == null ? Output.empty() : this.outputPath;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class GoogleCloudMlV1__PredictionOutputArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="predictionCount")
-      private final @Nullable Input<String> predictionCount;
+      private final @Nullable Output<String> predictionCount;
 
-    public Input<String> getPredictionCount() {
-        return this.predictionCount == null ? Input.empty() : this.predictionCount;
+    public Output<String> getPredictionCount() {
+        return this.predictionCount == null ? Output.empty() : this.predictionCount;
     }
 
     public GoogleCloudMlV1__PredictionOutputArgs(
-        @Nullable Input<String> errorCount,
-        @Nullable Input<Double> nodeHours,
-        @Nullable Input<String> outputPath,
-        @Nullable Input<String> predictionCount) {
+        @Nullable Output<String> errorCount,
+        @Nullable Output<Double> nodeHours,
+        @Nullable Output<String> outputPath,
+        @Nullable Output<String> predictionCount) {
         this.errorCount = errorCount;
         this.nodeHours = nodeHours;
         this.outputPath = outputPath;
@@ -75,10 +75,10 @@ public final class GoogleCloudMlV1__PredictionOutputArgs extends io.pulumi.resou
     }
 
     private GoogleCloudMlV1__PredictionOutputArgs() {
-        this.errorCount = Input.empty();
-        this.nodeHours = Input.empty();
-        this.outputPath = Input.empty();
-        this.predictionCount = Input.empty();
+        this.errorCount = Output.empty();
+        this.nodeHours = Output.empty();
+        this.outputPath = Output.empty();
+        this.predictionCount = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class GoogleCloudMlV1__PredictionOutputArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> errorCount;
-        private @Nullable Input<Double> nodeHours;
-        private @Nullable Input<String> outputPath;
-        private @Nullable Input<String> predictionCount;
+        private @Nullable Output<String> errorCount;
+        private @Nullable Output<Double> nodeHours;
+        private @Nullable Output<String> outputPath;
+        private @Nullable Output<String> predictionCount;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class GoogleCloudMlV1__PredictionOutputArgs extends io.pulumi.resou
     	      this.predictionCount = defaults.predictionCount;
         }
 
-        public Builder errorCount(@Nullable Input<String> errorCount) {
+        public Builder errorCount(@Nullable Output<String> errorCount) {
             this.errorCount = errorCount;
             return this;
         }
 
         public Builder errorCount(@Nullable String errorCount) {
-            this.errorCount = Input.ofNullable(errorCount);
+            this.errorCount = Output.ofNullable(errorCount);
             return this;
         }
 
-        public Builder nodeHours(@Nullable Input<Double> nodeHours) {
+        public Builder nodeHours(@Nullable Output<Double> nodeHours) {
             this.nodeHours = nodeHours;
             return this;
         }
 
         public Builder nodeHours(@Nullable Double nodeHours) {
-            this.nodeHours = Input.ofNullable(nodeHours);
+            this.nodeHours = Output.ofNullable(nodeHours);
             return this;
         }
 
-        public Builder outputPath(@Nullable Input<String> outputPath) {
+        public Builder outputPath(@Nullable Output<String> outputPath) {
             this.outputPath = outputPath;
             return this;
         }
 
         public Builder outputPath(@Nullable String outputPath) {
-            this.outputPath = Input.ofNullable(outputPath);
+            this.outputPath = Output.ofNullable(outputPath);
             return this;
         }
 
-        public Builder predictionCount(@Nullable Input<String> predictionCount) {
+        public Builder predictionCount(@Nullable Output<String> predictionCount) {
             this.predictionCount = predictionCount;
             return this;
         }
 
         public Builder predictionCount(@Nullable String predictionCount) {
-            this.predictionCount = Input.ofNullable(predictionCount);
+            this.predictionCount = Output.ofNullable(predictionCount);
             return this;
         }
         public GoogleCloudMlV1__PredictionOutputArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class NumberInAdvancedFilterArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="key")
-      private final @Nullable Input<String> key;
+      private final @Nullable Output<String> key;
 
-    public Input<String> getKey() {
-        return this.key == null ? Input.empty() : this.key;
+    public Output<String> getKey() {
+        return this.key == null ? Output.empty() : this.key;
     }
 
     /**
@@ -37,9 +37,9 @@ public final class NumberInAdvancedFilterArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="operatorType", required=true)
-      private final Input<String> operatorType;
+      private final Output<String> operatorType;
 
-    public Input<String> getOperatorType() {
+    public Output<String> getOperatorType() {
         return this.operatorType;
     }
 
@@ -48,25 +48,25 @@ public final class NumberInAdvancedFilterArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="values")
-      private final @Nullable Input<List<Double>> values;
+      private final @Nullable Output<List<Double>> values;
 
-    public Input<List<Double>> getValues() {
-        return this.values == null ? Input.empty() : this.values;
+    public Output<List<Double>> getValues() {
+        return this.values == null ? Output.empty() : this.values;
     }
 
     public NumberInAdvancedFilterArgs(
-        @Nullable Input<String> key,
-        Input<String> operatorType,
-        @Nullable Input<List<Double>> values) {
+        @Nullable Output<String> key,
+        Output<String> operatorType,
+        @Nullable Output<List<Double>> values) {
         this.key = key;
         this.operatorType = Objects.requireNonNull(operatorType, "expected parameter 'operatorType' to be non-null");
         this.values = values;
     }
 
     private NumberInAdvancedFilterArgs() {
-        this.key = Input.empty();
-        this.operatorType = Input.empty();
-        this.values = Input.empty();
+        this.key = Output.empty();
+        this.operatorType = Output.empty();
+        this.values = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class NumberInAdvancedFilterArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> key;
-        private Input<String> operatorType;
-        private @Nullable Input<List<Double>> values;
+        private @Nullable Output<String> key;
+        private Output<String> operatorType;
+        private @Nullable Output<List<Double>> values;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class NumberInAdvancedFilterArgs extends io.pulumi.resources.Resour
     	      this.values = defaults.values;
         }
 
-        public Builder key(@Nullable Input<String> key) {
+        public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
 
         public Builder key(@Nullable String key) {
-            this.key = Input.ofNullable(key);
+            this.key = Output.ofNullable(key);
             return this;
         }
 
-        public Builder operatorType(Input<String> operatorType) {
+        public Builder operatorType(Output<String> operatorType) {
             this.operatorType = Objects.requireNonNull(operatorType);
             return this;
         }
 
         public Builder operatorType(String operatorType) {
-            this.operatorType = Input.of(Objects.requireNonNull(operatorType));
+            this.operatorType = Output.of(Objects.requireNonNull(operatorType));
             return this;
         }
 
-        public Builder values(@Nullable Input<List<Double>> values) {
+        public Builder values(@Nullable Output<List<Double>> values) {
             this.values = values;
             return this;
         }
 
         public Builder values(@Nullable List<Double> values) {
-            this.values = Input.ofNullable(values);
+            this.values = Output.ofNullable(values);
             return this;
         }
         public NumberInAdvancedFilterArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,9 +24,9 @@ public final class GetUserTablesSqlTaskInputArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="connectionInfo", required=true)
-      private final Input<SqlConnectionInfoArgs> connectionInfo;
+      private final Output<SqlConnectionInfoArgs> connectionInfo;
 
-    public Input<SqlConnectionInfoArgs> getConnectionInfo() {
+    public Output<SqlConnectionInfoArgs> getConnectionInfo() {
         return this.connectionInfo;
     }
 
@@ -35,22 +35,22 @@ public final class GetUserTablesSqlTaskInputArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="selectedDatabases", required=true)
-      private final Input<List<String>> selectedDatabases;
+      private final Output<List<String>> selectedDatabases;
 
-    public Input<List<String>> getSelectedDatabases() {
+    public Output<List<String>> getSelectedDatabases() {
         return this.selectedDatabases;
     }
 
     public GetUserTablesSqlTaskInputArgs(
-        Input<SqlConnectionInfoArgs> connectionInfo,
-        Input<List<String>> selectedDatabases) {
+        Output<SqlConnectionInfoArgs> connectionInfo,
+        Output<List<String>> selectedDatabases) {
         this.connectionInfo = Objects.requireNonNull(connectionInfo, "expected parameter 'connectionInfo' to be non-null");
         this.selectedDatabases = Objects.requireNonNull(selectedDatabases, "expected parameter 'selectedDatabases' to be non-null");
     }
 
     private GetUserTablesSqlTaskInputArgs() {
-        this.connectionInfo = Input.empty();
-        this.selectedDatabases = Input.empty();
+        this.connectionInfo = Output.empty();
+        this.selectedDatabases = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class GetUserTablesSqlTaskInputArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<SqlConnectionInfoArgs> connectionInfo;
-        private Input<List<String>> selectedDatabases;
+        private Output<SqlConnectionInfoArgs> connectionInfo;
+        private Output<List<String>> selectedDatabases;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class GetUserTablesSqlTaskInputArgs extends io.pulumi.resources.Res
     	      this.selectedDatabases = defaults.selectedDatabases;
         }
 
-        public Builder connectionInfo(Input<SqlConnectionInfoArgs> connectionInfo) {
+        public Builder connectionInfo(Output<SqlConnectionInfoArgs> connectionInfo) {
             this.connectionInfo = Objects.requireNonNull(connectionInfo);
             return this;
         }
 
         public Builder connectionInfo(SqlConnectionInfoArgs connectionInfo) {
-            this.connectionInfo = Input.of(Objects.requireNonNull(connectionInfo));
+            this.connectionInfo = Output.of(Objects.requireNonNull(connectionInfo));
             return this;
         }
 
-        public Builder selectedDatabases(Input<List<String>> selectedDatabases) {
+        public Builder selectedDatabases(Output<List<String>> selectedDatabases) {
             this.selectedDatabases = Objects.requireNonNull(selectedDatabases);
             return this;
         }
 
         public Builder selectedDatabases(List<String> selectedDatabases) {
-            this.selectedDatabases = Input.of(Objects.requireNonNull(selectedDatabases));
+            this.selectedDatabases = Output.of(Objects.requireNonNull(selectedDatabases));
             return this;
         }
         public GetUserTablesSqlTaskInputArgs build() {

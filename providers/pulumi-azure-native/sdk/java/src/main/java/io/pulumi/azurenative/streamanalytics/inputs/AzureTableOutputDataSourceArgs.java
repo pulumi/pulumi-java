@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.streamanalytics.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class AzureTableOutputDataSourceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="accountKey")
-      private final @Nullable Input<String> accountKey;
+      private final @Nullable Output<String> accountKey;
 
-    public Input<String> getAccountKey() {
-        return this.accountKey == null ? Input.empty() : this.accountKey;
+    public Output<String> getAccountKey() {
+        return this.accountKey == null ? Output.empty() : this.accountKey;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AzureTableOutputDataSourceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="accountName")
-      private final @Nullable Input<String> accountName;
+      private final @Nullable Output<String> accountName;
 
-    public Input<String> getAccountName() {
-        return this.accountName == null ? Input.empty() : this.accountName;
+    public Output<String> getAccountName() {
+        return this.accountName == null ? Output.empty() : this.accountName;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class AzureTableOutputDataSourceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="batchSize")
-      private final @Nullable Input<Integer> batchSize;
+      private final @Nullable Output<Integer> batchSize;
 
-    public Input<Integer> getBatchSize() {
-        return this.batchSize == null ? Input.empty() : this.batchSize;
+    public Output<Integer> getBatchSize() {
+        return this.batchSize == null ? Output.empty() : this.batchSize;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class AzureTableOutputDataSourceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="columnsToRemove")
-      private final @Nullable Input<List<String>> columnsToRemove;
+      private final @Nullable Output<List<String>> columnsToRemove;
 
-    public Input<List<String>> getColumnsToRemove() {
-        return this.columnsToRemove == null ? Input.empty() : this.columnsToRemove;
+    public Output<List<String>> getColumnsToRemove() {
+        return this.columnsToRemove == null ? Output.empty() : this.columnsToRemove;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class AzureTableOutputDataSourceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="partitionKey")
-      private final @Nullable Input<String> partitionKey;
+      private final @Nullable Output<String> partitionKey;
 
-    public Input<String> getPartitionKey() {
-        return this.partitionKey == null ? Input.empty() : this.partitionKey;
+    public Output<String> getPartitionKey() {
+        return this.partitionKey == null ? Output.empty() : this.partitionKey;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class AzureTableOutputDataSourceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="rowKey")
-      private final @Nullable Input<String> rowKey;
+      private final @Nullable Output<String> rowKey;
 
-    public Input<String> getRowKey() {
-        return this.rowKey == null ? Input.empty() : this.rowKey;
+    public Output<String> getRowKey() {
+        return this.rowKey == null ? Output.empty() : this.rowKey;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class AzureTableOutputDataSourceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="table")
-      private final @Nullable Input<String> table;
+      private final @Nullable Output<String> table;
 
-    public Input<String> getTable() {
-        return this.table == null ? Input.empty() : this.table;
+    public Output<String> getTable() {
+        return this.table == null ? Output.empty() : this.table;
     }
 
     /**
@@ -103,21 +103,21 @@ public final class AzureTableOutputDataSourceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public AzureTableOutputDataSourceArgs(
-        @Nullable Input<String> accountKey,
-        @Nullable Input<String> accountName,
-        @Nullable Input<Integer> batchSize,
-        @Nullable Input<List<String>> columnsToRemove,
-        @Nullable Input<String> partitionKey,
-        @Nullable Input<String> rowKey,
-        @Nullable Input<String> table,
-        Input<String> type) {
+        @Nullable Output<String> accountKey,
+        @Nullable Output<String> accountName,
+        @Nullable Output<Integer> batchSize,
+        @Nullable Output<List<String>> columnsToRemove,
+        @Nullable Output<String> partitionKey,
+        @Nullable Output<String> rowKey,
+        @Nullable Output<String> table,
+        Output<String> type) {
         this.accountKey = accountKey;
         this.accountName = accountName;
         this.batchSize = batchSize;
@@ -129,14 +129,14 @@ public final class AzureTableOutputDataSourceArgs extends io.pulumi.resources.Re
     }
 
     private AzureTableOutputDataSourceArgs() {
-        this.accountKey = Input.empty();
-        this.accountName = Input.empty();
-        this.batchSize = Input.empty();
-        this.columnsToRemove = Input.empty();
-        this.partitionKey = Input.empty();
-        this.rowKey = Input.empty();
-        this.table = Input.empty();
-        this.type = Input.empty();
+        this.accountKey = Output.empty();
+        this.accountName = Output.empty();
+        this.batchSize = Output.empty();
+        this.columnsToRemove = Output.empty();
+        this.partitionKey = Output.empty();
+        this.rowKey = Output.empty();
+        this.table = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -148,14 +148,14 @@ public final class AzureTableOutputDataSourceArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accountKey;
-        private @Nullable Input<String> accountName;
-        private @Nullable Input<Integer> batchSize;
-        private @Nullable Input<List<String>> columnsToRemove;
-        private @Nullable Input<String> partitionKey;
-        private @Nullable Input<String> rowKey;
-        private @Nullable Input<String> table;
-        private Input<String> type;
+        private @Nullable Output<String> accountKey;
+        private @Nullable Output<String> accountName;
+        private @Nullable Output<Integer> batchSize;
+        private @Nullable Output<List<String>> columnsToRemove;
+        private @Nullable Output<String> partitionKey;
+        private @Nullable Output<String> rowKey;
+        private @Nullable Output<String> table;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -173,83 +173,83 @@ public final class AzureTableOutputDataSourceArgs extends io.pulumi.resources.Re
     	      this.type = defaults.type;
         }
 
-        public Builder accountKey(@Nullable Input<String> accountKey) {
+        public Builder accountKey(@Nullable Output<String> accountKey) {
             this.accountKey = accountKey;
             return this;
         }
 
         public Builder accountKey(@Nullable String accountKey) {
-            this.accountKey = Input.ofNullable(accountKey);
+            this.accountKey = Output.ofNullable(accountKey);
             return this;
         }
 
-        public Builder accountName(@Nullable Input<String> accountName) {
+        public Builder accountName(@Nullable Output<String> accountName) {
             this.accountName = accountName;
             return this;
         }
 
         public Builder accountName(@Nullable String accountName) {
-            this.accountName = Input.ofNullable(accountName);
+            this.accountName = Output.ofNullable(accountName);
             return this;
         }
 
-        public Builder batchSize(@Nullable Input<Integer> batchSize) {
+        public Builder batchSize(@Nullable Output<Integer> batchSize) {
             this.batchSize = batchSize;
             return this;
         }
 
         public Builder batchSize(@Nullable Integer batchSize) {
-            this.batchSize = Input.ofNullable(batchSize);
+            this.batchSize = Output.ofNullable(batchSize);
             return this;
         }
 
-        public Builder columnsToRemove(@Nullable Input<List<String>> columnsToRemove) {
+        public Builder columnsToRemove(@Nullable Output<List<String>> columnsToRemove) {
             this.columnsToRemove = columnsToRemove;
             return this;
         }
 
         public Builder columnsToRemove(@Nullable List<String> columnsToRemove) {
-            this.columnsToRemove = Input.ofNullable(columnsToRemove);
+            this.columnsToRemove = Output.ofNullable(columnsToRemove);
             return this;
         }
 
-        public Builder partitionKey(@Nullable Input<String> partitionKey) {
+        public Builder partitionKey(@Nullable Output<String> partitionKey) {
             this.partitionKey = partitionKey;
             return this;
         }
 
         public Builder partitionKey(@Nullable String partitionKey) {
-            this.partitionKey = Input.ofNullable(partitionKey);
+            this.partitionKey = Output.ofNullable(partitionKey);
             return this;
         }
 
-        public Builder rowKey(@Nullable Input<String> rowKey) {
+        public Builder rowKey(@Nullable Output<String> rowKey) {
             this.rowKey = rowKey;
             return this;
         }
 
         public Builder rowKey(@Nullable String rowKey) {
-            this.rowKey = Input.ofNullable(rowKey);
+            this.rowKey = Output.ofNullable(rowKey);
             return this;
         }
 
-        public Builder table(@Nullable Input<String> table) {
+        public Builder table(@Nullable Output<String> table) {
             this.table = table;
             return this;
         }
 
         public Builder table(@Nullable String table) {
-            this.table = Input.ofNullable(table);
+            this.table = Output.ofNullable(table);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public AzureTableOutputDataSourceArgs build() {

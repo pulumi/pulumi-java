@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfi
      * 
      */
     @InputImport(name="policy")
-      private final @Nullable Input<String> policy;
+      private final @Nullable Output<String> policy;
 
-    public Input<String> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<String> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
-    public WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigGetArgs(@Nullable Input<String> policy) {
+    public WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigGetArgs(@Nullable Output<String> policy) {
         this.policy = policy;
     }
 
     private WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigGetArgs() {
-        this.policy = Input.empty();
+        this.policy = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfi
     }
 
     public static final class Builder {
-        private @Nullable Input<String> policy;
+        private @Nullable Output<String> policy;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfi
     	      this.policy = defaults.policy;
         }
 
-        public Builder policy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable String policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
         public WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.route53.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class ResolverFirewallRuleGroupAssociationState extends io.pulumi.r
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ResolverFirewallRuleGroupAssociationState extends io.pulumi.r
      * 
      */
     @InputImport(name="firewallRuleGroupId")
-      private final @Nullable Input<String> firewallRuleGroupId;
+      private final @Nullable Output<String> firewallRuleGroupId;
 
-    public Input<String> getFirewallRuleGroupId() {
-        return this.firewallRuleGroupId == null ? Input.empty() : this.firewallRuleGroupId;
+    public Output<String> getFirewallRuleGroupId() {
+        return this.firewallRuleGroupId == null ? Output.empty() : this.firewallRuleGroupId;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ResolverFirewallRuleGroupAssociationState extends io.pulumi.r
      * 
      */
     @InputImport(name="mutationProtection")
-      private final @Nullable Input<String> mutationProtection;
+      private final @Nullable Output<String> mutationProtection;
 
-    public Input<String> getMutationProtection() {
-        return this.mutationProtection == null ? Input.empty() : this.mutationProtection;
+    public Output<String> getMutationProtection() {
+        return this.mutationProtection == null ? Output.empty() : this.mutationProtection;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ResolverFirewallRuleGroupAssociationState extends io.pulumi.r
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ResolverFirewallRuleGroupAssociationState extends io.pulumi.r
      * 
      */
     @InputImport(name="priority")
-      private final @Nullable Input<Integer> priority;
+      private final @Nullable Output<Integer> priority;
 
-    public Input<Integer> getPriority() {
-        return this.priority == null ? Input.empty() : this.priority;
+    public Output<Integer> getPriority() {
+        return this.priority == null ? Output.empty() : this.priority;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class ResolverFirewallRuleGroupAssociationState extends io.pulumi.r
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class ResolverFirewallRuleGroupAssociationState extends io.pulumi.r
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -98,21 +98,21 @@ public final class ResolverFirewallRuleGroupAssociationState extends io.pulumi.r
      * 
      */
     @InputImport(name="vpcId")
-      private final @Nullable Input<String> vpcId;
+      private final @Nullable Output<String> vpcId;
 
-    public Input<String> getVpcId() {
-        return this.vpcId == null ? Input.empty() : this.vpcId;
+    public Output<String> getVpcId() {
+        return this.vpcId == null ? Output.empty() : this.vpcId;
     }
 
     public ResolverFirewallRuleGroupAssociationState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> firewallRuleGroupId,
-        @Nullable Input<String> mutationProtection,
-        @Nullable Input<String> name,
-        @Nullable Input<Integer> priority,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> vpcId) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> firewallRuleGroupId,
+        @Nullable Output<String> mutationProtection,
+        @Nullable Output<String> name,
+        @Nullable Output<Integer> priority,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> vpcId) {
         this.arn = arn;
         this.firewallRuleGroupId = firewallRuleGroupId;
         this.mutationProtection = mutationProtection;
@@ -124,14 +124,14 @@ public final class ResolverFirewallRuleGroupAssociationState extends io.pulumi.r
     }
 
     private ResolverFirewallRuleGroupAssociationState() {
-        this.arn = Input.empty();
-        this.firewallRuleGroupId = Input.empty();
-        this.mutationProtection = Input.empty();
-        this.name = Input.empty();
-        this.priority = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.vpcId = Input.empty();
+        this.arn = Output.empty();
+        this.firewallRuleGroupId = Output.empty();
+        this.mutationProtection = Output.empty();
+        this.name = Output.empty();
+        this.priority = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.vpcId = Output.empty();
     }
 
     public static Builder builder() {
@@ -143,14 +143,14 @@ public final class ResolverFirewallRuleGroupAssociationState extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> firewallRuleGroupId;
-        private @Nullable Input<String> mutationProtection;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Integer> priority;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> vpcId;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> firewallRuleGroupId;
+        private @Nullable Output<String> mutationProtection;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Integer> priority;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> vpcId;
 
         public Builder() {
     	      // Empty
@@ -168,83 +168,83 @@ public final class ResolverFirewallRuleGroupAssociationState extends io.pulumi.r
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder firewallRuleGroupId(@Nullable Input<String> firewallRuleGroupId) {
+        public Builder firewallRuleGroupId(@Nullable Output<String> firewallRuleGroupId) {
             this.firewallRuleGroupId = firewallRuleGroupId;
             return this;
         }
 
         public Builder firewallRuleGroupId(@Nullable String firewallRuleGroupId) {
-            this.firewallRuleGroupId = Input.ofNullable(firewallRuleGroupId);
+            this.firewallRuleGroupId = Output.ofNullable(firewallRuleGroupId);
             return this;
         }
 
-        public Builder mutationProtection(@Nullable Input<String> mutationProtection) {
+        public Builder mutationProtection(@Nullable Output<String> mutationProtection) {
             this.mutationProtection = mutationProtection;
             return this;
         }
 
         public Builder mutationProtection(@Nullable String mutationProtection) {
-            this.mutationProtection = Input.ofNullable(mutationProtection);
+            this.mutationProtection = Output.ofNullable(mutationProtection);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder priority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Input.ofNullable(priority);
+            this.priority = Output.ofNullable(priority);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder vpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Input.ofNullable(vpcId);
+            this.vpcId = Output.ofNullable(vpcId);
             return this;
         }
         public ResolverFirewallRuleGroupAssociationState build() {

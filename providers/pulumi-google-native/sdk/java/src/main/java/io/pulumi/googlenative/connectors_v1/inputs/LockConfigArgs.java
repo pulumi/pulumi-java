@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.connectors_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class LockConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locked")
-      private final @Nullable Input<Boolean> locked;
+      private final @Nullable Output<Boolean> locked;
 
-    public Input<Boolean> getLocked() {
-        return this.locked == null ? Input.empty() : this.locked;
+    public Output<Boolean> getLocked() {
+        return this.locked == null ? Output.empty() : this.locked;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class LockConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reason")
-      private final @Nullable Input<String> reason;
+      private final @Nullable Output<String> reason;
 
-    public Input<String> getReason() {
-        return this.reason == null ? Input.empty() : this.reason;
+    public Output<String> getReason() {
+        return this.reason == null ? Output.empty() : this.reason;
     }
 
     public LockConfigArgs(
-        @Nullable Input<Boolean> locked,
-        @Nullable Input<String> reason) {
+        @Nullable Output<Boolean> locked,
+        @Nullable Output<String> reason) {
         this.locked = locked;
         this.reason = reason;
     }
 
     private LockConfigArgs() {
-        this.locked = Input.empty();
-        this.reason = Input.empty();
+        this.locked = Output.empty();
+        this.reason = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class LockConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> locked;
-        private @Nullable Input<String> reason;
+        private @Nullable Output<Boolean> locked;
+        private @Nullable Output<String> reason;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class LockConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.reason = defaults.reason;
         }
 
-        public Builder locked(@Nullable Input<Boolean> locked) {
+        public Builder locked(@Nullable Output<Boolean> locked) {
             this.locked = locked;
             return this;
         }
 
         public Builder locked(@Nullable Boolean locked) {
-            this.locked = Input.ofNullable(locked);
+            this.locked = Output.ofNullable(locked);
             return this;
         }
 
-        public Builder reason(@Nullable Input<String> reason) {
+        public Builder reason(@Nullable Output<String> reason) {
             this.reason = reason;
             return this;
         }
 
         public Builder reason(@Nullable String reason) {
-            this.reason = Input.ofNullable(reason);
+            this.reason = Output.ofNullable(reason);
             return this;
         }
         public LockConfigArgs build() {

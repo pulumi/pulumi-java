@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.awsnative.kendra.enums.DataSourceConfluenceBlogFieldName;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,39 +16,39 @@ public final class DataSourceConfluenceBlogToIndexFieldMappingArgs extends io.pu
     public static final DataSourceConfluenceBlogToIndexFieldMappingArgs Empty = new DataSourceConfluenceBlogToIndexFieldMappingArgs();
 
     @InputImport(name="dataSourceFieldName", required=true)
-      private final Input<DataSourceConfluenceBlogFieldName> dataSourceFieldName;
+      private final Output<DataSourceConfluenceBlogFieldName> dataSourceFieldName;
 
-    public Input<DataSourceConfluenceBlogFieldName> getDataSourceFieldName() {
+    public Output<DataSourceConfluenceBlogFieldName> getDataSourceFieldName() {
         return this.dataSourceFieldName;
     }
 
     @InputImport(name="dateFieldFormat")
-      private final @Nullable Input<String> dateFieldFormat;
+      private final @Nullable Output<String> dateFieldFormat;
 
-    public Input<String> getDateFieldFormat() {
-        return this.dateFieldFormat == null ? Input.empty() : this.dateFieldFormat;
+    public Output<String> getDateFieldFormat() {
+        return this.dateFieldFormat == null ? Output.empty() : this.dateFieldFormat;
     }
 
     @InputImport(name="indexFieldName", required=true)
-      private final Input<String> indexFieldName;
+      private final Output<String> indexFieldName;
 
-    public Input<String> getIndexFieldName() {
+    public Output<String> getIndexFieldName() {
         return this.indexFieldName;
     }
 
     public DataSourceConfluenceBlogToIndexFieldMappingArgs(
-        Input<DataSourceConfluenceBlogFieldName> dataSourceFieldName,
-        @Nullable Input<String> dateFieldFormat,
-        Input<String> indexFieldName) {
+        Output<DataSourceConfluenceBlogFieldName> dataSourceFieldName,
+        @Nullable Output<String> dateFieldFormat,
+        Output<String> indexFieldName) {
         this.dataSourceFieldName = Objects.requireNonNull(dataSourceFieldName, "expected parameter 'dataSourceFieldName' to be non-null");
         this.dateFieldFormat = dateFieldFormat;
         this.indexFieldName = Objects.requireNonNull(indexFieldName, "expected parameter 'indexFieldName' to be non-null");
     }
 
     private DataSourceConfluenceBlogToIndexFieldMappingArgs() {
-        this.dataSourceFieldName = Input.empty();
-        this.dateFieldFormat = Input.empty();
-        this.indexFieldName = Input.empty();
+        this.dataSourceFieldName = Output.empty();
+        this.dateFieldFormat = Output.empty();
+        this.indexFieldName = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,9 +60,9 @@ public final class DataSourceConfluenceBlogToIndexFieldMappingArgs extends io.pu
     }
 
     public static final class Builder {
-        private Input<DataSourceConfluenceBlogFieldName> dataSourceFieldName;
-        private @Nullable Input<String> dateFieldFormat;
-        private Input<String> indexFieldName;
+        private Output<DataSourceConfluenceBlogFieldName> dataSourceFieldName;
+        private @Nullable Output<String> dateFieldFormat;
+        private Output<String> indexFieldName;
 
         public Builder() {
     	      // Empty
@@ -75,33 +75,33 @@ public final class DataSourceConfluenceBlogToIndexFieldMappingArgs extends io.pu
     	      this.indexFieldName = defaults.indexFieldName;
         }
 
-        public Builder dataSourceFieldName(Input<DataSourceConfluenceBlogFieldName> dataSourceFieldName) {
+        public Builder dataSourceFieldName(Output<DataSourceConfluenceBlogFieldName> dataSourceFieldName) {
             this.dataSourceFieldName = Objects.requireNonNull(dataSourceFieldName);
             return this;
         }
 
         public Builder dataSourceFieldName(DataSourceConfluenceBlogFieldName dataSourceFieldName) {
-            this.dataSourceFieldName = Input.of(Objects.requireNonNull(dataSourceFieldName));
+            this.dataSourceFieldName = Output.of(Objects.requireNonNull(dataSourceFieldName));
             return this;
         }
 
-        public Builder dateFieldFormat(@Nullable Input<String> dateFieldFormat) {
+        public Builder dateFieldFormat(@Nullable Output<String> dateFieldFormat) {
             this.dateFieldFormat = dateFieldFormat;
             return this;
         }
 
         public Builder dateFieldFormat(@Nullable String dateFieldFormat) {
-            this.dateFieldFormat = Input.ofNullable(dateFieldFormat);
+            this.dateFieldFormat = Output.ofNullable(dateFieldFormat);
             return this;
         }
 
-        public Builder indexFieldName(Input<String> indexFieldName) {
+        public Builder indexFieldName(Output<String> indexFieldName) {
             this.indexFieldName = Objects.requireNonNull(indexFieldName);
             return this;
         }
 
         public Builder indexFieldName(String indexFieldName) {
-            this.indexFieldName = Input.of(Objects.requireNonNull(indexFieldName));
+            this.indexFieldName = Output.of(Objects.requireNonNull(indexFieldName));
             return this;
         }
         public DataSourceConfluenceBlogToIndexFieldMappingArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class TableExternalDataConfigurationGoogleSheetsOptionsArgs extends
      * 
      */
     @InputImport(name="range")
-      private final @Nullable Input<String> range;
+      private final @Nullable Output<String> range;
 
-    public Input<String> getRange() {
-        return this.range == null ? Input.empty() : this.range;
+    public Output<String> getRange() {
+        return this.range == null ? Output.empty() : this.range;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class TableExternalDataConfigurationGoogleSheetsOptionsArgs extends
      * 
      */
     @InputImport(name="skipLeadingRows")
-      private final @Nullable Input<Integer> skipLeadingRows;
+      private final @Nullable Output<Integer> skipLeadingRows;
 
-    public Input<Integer> getSkipLeadingRows() {
-        return this.skipLeadingRows == null ? Input.empty() : this.skipLeadingRows;
+    public Output<Integer> getSkipLeadingRows() {
+        return this.skipLeadingRows == null ? Output.empty() : this.skipLeadingRows;
     }
 
     public TableExternalDataConfigurationGoogleSheetsOptionsArgs(
-        @Nullable Input<String> range,
-        @Nullable Input<Integer> skipLeadingRows) {
+        @Nullable Output<String> range,
+        @Nullable Output<Integer> skipLeadingRows) {
         this.range = range;
         this.skipLeadingRows = skipLeadingRows;
     }
 
     private TableExternalDataConfigurationGoogleSheetsOptionsArgs() {
-        this.range = Input.empty();
-        this.skipLeadingRows = Input.empty();
+        this.range = Output.empty();
+        this.skipLeadingRows = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class TableExternalDataConfigurationGoogleSheetsOptionsArgs extends
     }
 
     public static final class Builder {
-        private @Nullable Input<String> range;
-        private @Nullable Input<Integer> skipLeadingRows;
+        private @Nullable Output<String> range;
+        private @Nullable Output<Integer> skipLeadingRows;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class TableExternalDataConfigurationGoogleSheetsOptionsArgs extends
     	      this.skipLeadingRows = defaults.skipLeadingRows;
         }
 
-        public Builder range(@Nullable Input<String> range) {
+        public Builder range(@Nullable Output<String> range) {
             this.range = range;
             return this;
         }
 
         public Builder range(@Nullable String range) {
-            this.range = Input.ofNullable(range);
+            this.range = Output.ofNullable(range);
             return this;
         }
 
-        public Builder skipLeadingRows(@Nullable Input<Integer> skipLeadingRows) {
+        public Builder skipLeadingRows(@Nullable Output<Integer> skipLeadingRows) {
             this.skipLeadingRows = skipLeadingRows;
             return this;
         }
 
         public Builder skipLeadingRows(@Nullable Integer skipLeadingRows) {
-            this.skipLeadingRows = Input.ofNullable(skipLeadingRows);
+            this.skipLeadingRows = Output.ofNullable(skipLeadingRows);
             return this;
         }
         public TableExternalDataConfigurationGoogleSheetsOptionsArgs build() {

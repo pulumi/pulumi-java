@@ -5,7 +5,7 @@ package io.pulumi.azurenative.sql;
 
 import io.pulumi.azurenative.sql.enums.TransparentDataEncryptionStatus;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,9 +21,9 @@ public final class TransparentDataEncryptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="databaseName", required=true)
-      private final Input<String> databaseName;
+      private final Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
+    public Output<String> getDatabaseName() {
         return this.databaseName;
     }
 
@@ -32,9 +32,9 @@ public final class TransparentDataEncryptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -43,9 +43,9 @@ public final class TransparentDataEncryptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="serverName", required=true)
-      private final Input<String> serverName;
+      private final Output<String> serverName;
 
-    public Input<String> getServerName() {
+    public Output<String> getServerName() {
         return this.serverName;
     }
 
@@ -54,10 +54,10 @@ public final class TransparentDataEncryptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<Either<String,TransparentDataEncryptionStatus>> status;
+      private final @Nullable Output<Either<String,TransparentDataEncryptionStatus>> status;
 
-    public Input<Either<String,TransparentDataEncryptionStatus>> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<Either<String,TransparentDataEncryptionStatus>> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -65,18 +65,18 @@ public final class TransparentDataEncryptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="transparentDataEncryptionName")
-      private final @Nullable Input<String> transparentDataEncryptionName;
+      private final @Nullable Output<String> transparentDataEncryptionName;
 
-    public Input<String> getTransparentDataEncryptionName() {
-        return this.transparentDataEncryptionName == null ? Input.empty() : this.transparentDataEncryptionName;
+    public Output<String> getTransparentDataEncryptionName() {
+        return this.transparentDataEncryptionName == null ? Output.empty() : this.transparentDataEncryptionName;
     }
 
     public TransparentDataEncryptionArgs(
-        Input<String> databaseName,
-        Input<String> resourceGroupName,
-        Input<String> serverName,
-        @Nullable Input<Either<String,TransparentDataEncryptionStatus>> status,
-        @Nullable Input<String> transparentDataEncryptionName) {
+        Output<String> databaseName,
+        Output<String> resourceGroupName,
+        Output<String> serverName,
+        @Nullable Output<Either<String,TransparentDataEncryptionStatus>> status,
+        @Nullable Output<String> transparentDataEncryptionName) {
         this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
@@ -85,11 +85,11 @@ public final class TransparentDataEncryptionArgs extends io.pulumi.resources.Res
     }
 
     private TransparentDataEncryptionArgs() {
-        this.databaseName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serverName = Input.empty();
-        this.status = Input.empty();
-        this.transparentDataEncryptionName = Input.empty();
+        this.databaseName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serverName = Output.empty();
+        this.status = Output.empty();
+        this.transparentDataEncryptionName = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class TransparentDataEncryptionArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> databaseName;
-        private Input<String> resourceGroupName;
-        private Input<String> serverName;
-        private @Nullable Input<Either<String,TransparentDataEncryptionStatus>> status;
-        private @Nullable Input<String> transparentDataEncryptionName;
+        private Output<String> databaseName;
+        private Output<String> resourceGroupName;
+        private Output<String> serverName;
+        private @Nullable Output<Either<String,TransparentDataEncryptionStatus>> status;
+        private @Nullable Output<String> transparentDataEncryptionName;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class TransparentDataEncryptionArgs extends io.pulumi.resources.Res
     	      this.transparentDataEncryptionName = defaults.transparentDataEncryptionName;
         }
 
-        public Builder databaseName(Input<String> databaseName) {
+        public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
         public Builder databaseName(String databaseName) {
-            this.databaseName = Input.of(Objects.requireNonNull(databaseName));
+            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serverName(Input<String> serverName) {
+        public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
         public Builder serverName(String serverName) {
-            this.serverName = Input.of(Objects.requireNonNull(serverName));
+            this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
 
-        public Builder status(@Nullable Input<Either<String,TransparentDataEncryptionStatus>> status) {
+        public Builder status(@Nullable Output<Either<String,TransparentDataEncryptionStatus>> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable Either<String,TransparentDataEncryptionStatus> status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder transparentDataEncryptionName(@Nullable Input<String> transparentDataEncryptionName) {
+        public Builder transparentDataEncryptionName(@Nullable Output<String> transparentDataEncryptionName) {
             this.transparentDataEncryptionName = transparentDataEncryptionName;
             return this;
         }
 
         public Builder transparentDataEncryptionName(@Nullable String transparentDataEncryptionName) {
-            this.transparentDataEncryptionName = Input.ofNullable(transparentDataEncryptionName);
+            this.transparentDataEncryptionName = Output.ofNullable(transparentDataEncryptionName);
             return this;
         }
         public TransparentDataEncryptionArgs build() {

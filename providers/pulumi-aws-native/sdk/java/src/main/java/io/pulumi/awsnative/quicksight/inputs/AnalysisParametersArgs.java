@@ -7,7 +7,7 @@ import io.pulumi.awsnative.quicksight.inputs.AnalysisDateTimeParameterArgs;
 import io.pulumi.awsnative.quicksight.inputs.AnalysisDecimalParameterArgs;
 import io.pulumi.awsnative.quicksight.inputs.AnalysisIntegerParameterArgs;
 import io.pulumi.awsnative.quicksight.inputs.AnalysisStringParameterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -27,10 +27,10 @@ public final class AnalysisParametersArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dateTimeParameters")
-      private final @Nullable Input<List<AnalysisDateTimeParameterArgs>> dateTimeParameters;
+      private final @Nullable Output<List<AnalysisDateTimeParameterArgs>> dateTimeParameters;
 
-    public Input<List<AnalysisDateTimeParameterArgs>> getDateTimeParameters() {
-        return this.dateTimeParameters == null ? Input.empty() : this.dateTimeParameters;
+    public Output<List<AnalysisDateTimeParameterArgs>> getDateTimeParameters() {
+        return this.dateTimeParameters == null ? Output.empty() : this.dateTimeParameters;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class AnalysisParametersArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="decimalParameters")
-      private final @Nullable Input<List<AnalysisDecimalParameterArgs>> decimalParameters;
+      private final @Nullable Output<List<AnalysisDecimalParameterArgs>> decimalParameters;
 
-    public Input<List<AnalysisDecimalParameterArgs>> getDecimalParameters() {
-        return this.decimalParameters == null ? Input.empty() : this.decimalParameters;
+    public Output<List<AnalysisDecimalParameterArgs>> getDecimalParameters() {
+        return this.decimalParameters == null ? Output.empty() : this.decimalParameters;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class AnalysisParametersArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="integerParameters")
-      private final @Nullable Input<List<AnalysisIntegerParameterArgs>> integerParameters;
+      private final @Nullable Output<List<AnalysisIntegerParameterArgs>> integerParameters;
 
-    public Input<List<AnalysisIntegerParameterArgs>> getIntegerParameters() {
-        return this.integerParameters == null ? Input.empty() : this.integerParameters;
+    public Output<List<AnalysisIntegerParameterArgs>> getIntegerParameters() {
+        return this.integerParameters == null ? Output.empty() : this.integerParameters;
     }
 
     /**
@@ -60,17 +60,17 @@ public final class AnalysisParametersArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="stringParameters")
-      private final @Nullable Input<List<AnalysisStringParameterArgs>> stringParameters;
+      private final @Nullable Output<List<AnalysisStringParameterArgs>> stringParameters;
 
-    public Input<List<AnalysisStringParameterArgs>> getStringParameters() {
-        return this.stringParameters == null ? Input.empty() : this.stringParameters;
+    public Output<List<AnalysisStringParameterArgs>> getStringParameters() {
+        return this.stringParameters == null ? Output.empty() : this.stringParameters;
     }
 
     public AnalysisParametersArgs(
-        @Nullable Input<List<AnalysisDateTimeParameterArgs>> dateTimeParameters,
-        @Nullable Input<List<AnalysisDecimalParameterArgs>> decimalParameters,
-        @Nullable Input<List<AnalysisIntegerParameterArgs>> integerParameters,
-        @Nullable Input<List<AnalysisStringParameterArgs>> stringParameters) {
+        @Nullable Output<List<AnalysisDateTimeParameterArgs>> dateTimeParameters,
+        @Nullable Output<List<AnalysisDecimalParameterArgs>> decimalParameters,
+        @Nullable Output<List<AnalysisIntegerParameterArgs>> integerParameters,
+        @Nullable Output<List<AnalysisStringParameterArgs>> stringParameters) {
         this.dateTimeParameters = dateTimeParameters;
         this.decimalParameters = decimalParameters;
         this.integerParameters = integerParameters;
@@ -78,10 +78,10 @@ public final class AnalysisParametersArgs extends io.pulumi.resources.ResourceAr
     }
 
     private AnalysisParametersArgs() {
-        this.dateTimeParameters = Input.empty();
-        this.decimalParameters = Input.empty();
-        this.integerParameters = Input.empty();
-        this.stringParameters = Input.empty();
+        this.dateTimeParameters = Output.empty();
+        this.decimalParameters = Output.empty();
+        this.integerParameters = Output.empty();
+        this.stringParameters = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,10 +93,10 @@ public final class AnalysisParametersArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<List<AnalysisDateTimeParameterArgs>> dateTimeParameters;
-        private @Nullable Input<List<AnalysisDecimalParameterArgs>> decimalParameters;
-        private @Nullable Input<List<AnalysisIntegerParameterArgs>> integerParameters;
-        private @Nullable Input<List<AnalysisStringParameterArgs>> stringParameters;
+        private @Nullable Output<List<AnalysisDateTimeParameterArgs>> dateTimeParameters;
+        private @Nullable Output<List<AnalysisDecimalParameterArgs>> decimalParameters;
+        private @Nullable Output<List<AnalysisIntegerParameterArgs>> integerParameters;
+        private @Nullable Output<List<AnalysisStringParameterArgs>> stringParameters;
 
         public Builder() {
     	      // Empty
@@ -110,43 +110,43 @@ public final class AnalysisParametersArgs extends io.pulumi.resources.ResourceAr
     	      this.stringParameters = defaults.stringParameters;
         }
 
-        public Builder dateTimeParameters(@Nullable Input<List<AnalysisDateTimeParameterArgs>> dateTimeParameters) {
+        public Builder dateTimeParameters(@Nullable Output<List<AnalysisDateTimeParameterArgs>> dateTimeParameters) {
             this.dateTimeParameters = dateTimeParameters;
             return this;
         }
 
         public Builder dateTimeParameters(@Nullable List<AnalysisDateTimeParameterArgs> dateTimeParameters) {
-            this.dateTimeParameters = Input.ofNullable(dateTimeParameters);
+            this.dateTimeParameters = Output.ofNullable(dateTimeParameters);
             return this;
         }
 
-        public Builder decimalParameters(@Nullable Input<List<AnalysisDecimalParameterArgs>> decimalParameters) {
+        public Builder decimalParameters(@Nullable Output<List<AnalysisDecimalParameterArgs>> decimalParameters) {
             this.decimalParameters = decimalParameters;
             return this;
         }
 
         public Builder decimalParameters(@Nullable List<AnalysisDecimalParameterArgs> decimalParameters) {
-            this.decimalParameters = Input.ofNullable(decimalParameters);
+            this.decimalParameters = Output.ofNullable(decimalParameters);
             return this;
         }
 
-        public Builder integerParameters(@Nullable Input<List<AnalysisIntegerParameterArgs>> integerParameters) {
+        public Builder integerParameters(@Nullable Output<List<AnalysisIntegerParameterArgs>> integerParameters) {
             this.integerParameters = integerParameters;
             return this;
         }
 
         public Builder integerParameters(@Nullable List<AnalysisIntegerParameterArgs> integerParameters) {
-            this.integerParameters = Input.ofNullable(integerParameters);
+            this.integerParameters = Output.ofNullable(integerParameters);
             return this;
         }
 
-        public Builder stringParameters(@Nullable Input<List<AnalysisStringParameterArgs>> stringParameters) {
+        public Builder stringParameters(@Nullable Output<List<AnalysisStringParameterArgs>> stringParameters) {
             this.stringParameters = stringParameters;
             return this;
         }
 
         public Builder stringParameters(@Nullable List<AnalysisStringParameterArgs> stringParameters) {
-            this.stringParameters = Input.ofNullable(stringParameters);
+            this.stringParameters = Output.ofNullable(stringParameters);
             return this;
         }
         public AnalysisParametersArgs build() {

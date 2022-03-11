@@ -11,7 +11,6 @@ import io.pulumi.azurenative.servicefabric.outputs.LoadBalancingRuleResponse;
 import io.pulumi.azurenative.servicefabric.outputs.SettingsSectionDescriptionResponse;
 import io.pulumi.azurenative.servicefabric.outputs.SkuResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -386,23 +385,23 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ManagedCluster(String name, ManagedClusterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:servicefabric:ManagedCluster", name, args == null ? ManagedClusterArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:servicefabric:ManagedCluster", name, args == null ? ManagedClusterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ManagedCluster(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ManagedCluster(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:servicefabric:ManagedCluster", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:servicefabric/v20200101preview:ManagedCluster").build()),
-                Input.of(Alias.builder().setType("azure-native:servicefabric/v20210101preview:ManagedCluster").build()),
-                Input.of(Alias.builder().setType("azure-native:servicefabric/v20210501:ManagedCluster").build()),
-                Input.of(Alias.builder().setType("azure-native:servicefabric/v20210701preview:ManagedCluster").build()),
-                Input.of(Alias.builder().setType("azure-native:servicefabric/v20210901privatepreview:ManagedCluster").build()),
-                Input.of(Alias.builder().setType("azure-native:servicefabric/v20211101preview:ManagedCluster").build())
+                Output.of(Alias.builder().setType("azure-native:servicefabric/v20200101preview:ManagedCluster").build()),
+                Output.of(Alias.builder().setType("azure-native:servicefabric/v20210101preview:ManagedCluster").build()),
+                Output.of(Alias.builder().setType("azure-native:servicefabric/v20210501:ManagedCluster").build()),
+                Output.of(Alias.builder().setType("azure-native:servicefabric/v20210701preview:ManagedCluster").build()),
+                Output.of(Alias.builder().setType("azure-native:servicefabric/v20210901privatepreview:ManagedCluster").build()),
+                Output.of(Alias.builder().setType("azure-native:servicefabric/v20211101preview:ManagedCluster").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -416,7 +415,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ManagedCluster get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ManagedCluster get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ManagedCluster(name, id, options);
     }
 }

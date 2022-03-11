@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.network.inputs.FlowLogFormatParametersArgs;
 import io.pulumi.azurenative.network.inputs.RetentionPolicyParametersArgs;
 import io.pulumi.azurenative.network.inputs.TrafficAnalyticsPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="flowAnalyticsConfiguration")
-      private final @Nullable Input<TrafficAnalyticsPropertiesArgs> flowAnalyticsConfiguration;
+      private final @Nullable Output<TrafficAnalyticsPropertiesArgs> flowAnalyticsConfiguration;
 
-    public Input<TrafficAnalyticsPropertiesArgs> getFlowAnalyticsConfiguration() {
-        return this.flowAnalyticsConfiguration == null ? Input.empty() : this.flowAnalyticsConfiguration;
+    public Output<TrafficAnalyticsPropertiesArgs> getFlowAnalyticsConfiguration() {
+        return this.flowAnalyticsConfiguration == null ? Output.empty() : this.flowAnalyticsConfiguration;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="flowLogName")
-      private final @Nullable Input<String> flowLogName;
+      private final @Nullable Output<String> flowLogName;
 
-    public Input<String> getFlowLogName() {
-        return this.flowLogName == null ? Input.empty() : this.flowLogName;
+    public Output<String> getFlowLogName() {
+        return this.flowLogName == null ? Output.empty() : this.flowLogName;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="format")
-      private final @Nullable Input<FlowLogFormatParametersArgs> format;
+      private final @Nullable Output<FlowLogFormatParametersArgs> format;
 
-    public Input<FlowLogFormatParametersArgs> getFormat() {
-        return this.format == null ? Input.empty() : this.format;
+    public Output<FlowLogFormatParametersArgs> getFormat() {
+        return this.format == null ? Output.empty() : this.format;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -90,9 +90,9 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkWatcherName", required=true)
-      private final Input<String> networkWatcherName;
+      private final Output<String> networkWatcherName;
 
-    public Input<String> getNetworkWatcherName() {
+    public Output<String> getNetworkWatcherName() {
         return this.networkWatcherName;
     }
 
@@ -101,9 +101,9 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -112,10 +112,10 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionPolicy")
-      private final @Nullable Input<RetentionPolicyParametersArgs> retentionPolicy;
+      private final @Nullable Output<RetentionPolicyParametersArgs> retentionPolicy;
 
-    public Input<RetentionPolicyParametersArgs> getRetentionPolicy() {
-        return this.retentionPolicy == null ? Input.empty() : this.retentionPolicy;
+    public Output<RetentionPolicyParametersArgs> getRetentionPolicy() {
+        return this.retentionPolicy == null ? Output.empty() : this.retentionPolicy;
     }
 
     /**
@@ -123,9 +123,9 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageId", required=true)
-      private final Input<String> storageId;
+      private final Output<String> storageId;
 
-    public Input<String> getStorageId() {
+    public Output<String> getStorageId() {
         return this.storageId;
     }
 
@@ -134,10 +134,10 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -145,25 +145,25 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetResourceId", required=true)
-      private final Input<String> targetResourceId;
+      private final Output<String> targetResourceId;
 
-    public Input<String> getTargetResourceId() {
+    public Output<String> getTargetResourceId() {
         return this.targetResourceId;
     }
 
     public FlowLogArgs(
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<TrafficAnalyticsPropertiesArgs> flowAnalyticsConfiguration,
-        @Nullable Input<String> flowLogName,
-        @Nullable Input<FlowLogFormatParametersArgs> format,
-        @Nullable Input<String> id,
-        @Nullable Input<String> location,
-        Input<String> networkWatcherName,
-        Input<String> resourceGroupName,
-        @Nullable Input<RetentionPolicyParametersArgs> retentionPolicy,
-        Input<String> storageId,
-        @Nullable Input<Map<String,String>> tags,
-        Input<String> targetResourceId) {
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<TrafficAnalyticsPropertiesArgs> flowAnalyticsConfiguration,
+        @Nullable Output<String> flowLogName,
+        @Nullable Output<FlowLogFormatParametersArgs> format,
+        @Nullable Output<String> id,
+        @Nullable Output<String> location,
+        Output<String> networkWatcherName,
+        Output<String> resourceGroupName,
+        @Nullable Output<RetentionPolicyParametersArgs> retentionPolicy,
+        Output<String> storageId,
+        @Nullable Output<Map<String,String>> tags,
+        Output<String> targetResourceId) {
         this.enabled = enabled;
         this.flowAnalyticsConfiguration = flowAnalyticsConfiguration;
         this.flowLogName = flowLogName;
@@ -179,18 +179,18 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FlowLogArgs() {
-        this.enabled = Input.empty();
-        this.flowAnalyticsConfiguration = Input.empty();
-        this.flowLogName = Input.empty();
-        this.format = Input.empty();
-        this.id = Input.empty();
-        this.location = Input.empty();
-        this.networkWatcherName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.retentionPolicy = Input.empty();
-        this.storageId = Input.empty();
-        this.tags = Input.empty();
-        this.targetResourceId = Input.empty();
+        this.enabled = Output.empty();
+        this.flowAnalyticsConfiguration = Output.empty();
+        this.flowLogName = Output.empty();
+        this.format = Output.empty();
+        this.id = Output.empty();
+        this.location = Output.empty();
+        this.networkWatcherName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.retentionPolicy = Output.empty();
+        this.storageId = Output.empty();
+        this.tags = Output.empty();
+        this.targetResourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -202,18 +202,18 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<TrafficAnalyticsPropertiesArgs> flowAnalyticsConfiguration;
-        private @Nullable Input<String> flowLogName;
-        private @Nullable Input<FlowLogFormatParametersArgs> format;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> location;
-        private Input<String> networkWatcherName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<RetentionPolicyParametersArgs> retentionPolicy;
-        private Input<String> storageId;
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<String> targetResourceId;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<TrafficAnalyticsPropertiesArgs> flowAnalyticsConfiguration;
+        private @Nullable Output<String> flowLogName;
+        private @Nullable Output<FlowLogFormatParametersArgs> format;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> location;
+        private Output<String> networkWatcherName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<RetentionPolicyParametersArgs> retentionPolicy;
+        private Output<String> storageId;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<String> targetResourceId;
 
         public Builder() {
     	      // Empty
@@ -235,123 +235,123 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetResourceId = defaults.targetResourceId;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder flowAnalyticsConfiguration(@Nullable Input<TrafficAnalyticsPropertiesArgs> flowAnalyticsConfiguration) {
+        public Builder flowAnalyticsConfiguration(@Nullable Output<TrafficAnalyticsPropertiesArgs> flowAnalyticsConfiguration) {
             this.flowAnalyticsConfiguration = flowAnalyticsConfiguration;
             return this;
         }
 
         public Builder flowAnalyticsConfiguration(@Nullable TrafficAnalyticsPropertiesArgs flowAnalyticsConfiguration) {
-            this.flowAnalyticsConfiguration = Input.ofNullable(flowAnalyticsConfiguration);
+            this.flowAnalyticsConfiguration = Output.ofNullable(flowAnalyticsConfiguration);
             return this;
         }
 
-        public Builder flowLogName(@Nullable Input<String> flowLogName) {
+        public Builder flowLogName(@Nullable Output<String> flowLogName) {
             this.flowLogName = flowLogName;
             return this;
         }
 
         public Builder flowLogName(@Nullable String flowLogName) {
-            this.flowLogName = Input.ofNullable(flowLogName);
+            this.flowLogName = Output.ofNullable(flowLogName);
             return this;
         }
 
-        public Builder format(@Nullable Input<FlowLogFormatParametersArgs> format) {
+        public Builder format(@Nullable Output<FlowLogFormatParametersArgs> format) {
             this.format = format;
             return this;
         }
 
         public Builder format(@Nullable FlowLogFormatParametersArgs format) {
-            this.format = Input.ofNullable(format);
+            this.format = Output.ofNullable(format);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder networkWatcherName(Input<String> networkWatcherName) {
+        public Builder networkWatcherName(Output<String> networkWatcherName) {
             this.networkWatcherName = Objects.requireNonNull(networkWatcherName);
             return this;
         }
 
         public Builder networkWatcherName(String networkWatcherName) {
-            this.networkWatcherName = Input.of(Objects.requireNonNull(networkWatcherName));
+            this.networkWatcherName = Output.of(Objects.requireNonNull(networkWatcherName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder retentionPolicy(@Nullable Input<RetentionPolicyParametersArgs> retentionPolicy) {
+        public Builder retentionPolicy(@Nullable Output<RetentionPolicyParametersArgs> retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
 
         public Builder retentionPolicy(@Nullable RetentionPolicyParametersArgs retentionPolicy) {
-            this.retentionPolicy = Input.ofNullable(retentionPolicy);
+            this.retentionPolicy = Output.ofNullable(retentionPolicy);
             return this;
         }
 
-        public Builder storageId(Input<String> storageId) {
+        public Builder storageId(Output<String> storageId) {
             this.storageId = Objects.requireNonNull(storageId);
             return this;
         }
 
         public Builder storageId(String storageId) {
-            this.storageId = Input.of(Objects.requireNonNull(storageId));
+            this.storageId = Output.of(Objects.requireNonNull(storageId));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder targetResourceId(Input<String> targetResourceId) {
+        public Builder targetResourceId(Output<String> targetResourceId) {
             this.targetResourceId = Objects.requireNonNull(targetResourceId);
             return this;
         }
 
         public Builder targetResourceId(String targetResourceId) {
-            this.targetResourceId = Input.of(Objects.requireNonNull(targetResourceId));
+            this.targetResourceId = Output.of(Objects.requireNonNull(targetResourceId));
             return this;
         }
         public FlowLogArgs build() {

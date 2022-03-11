@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ses.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class EventDestinationSnsDestinationGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="topicArn", required=true)
-      private final Input<String> topicArn;
+      private final Output<String> topicArn;
 
-    public Input<String> getTopicArn() {
+    public Output<String> getTopicArn() {
         return this.topicArn;
     }
 
-    public EventDestinationSnsDestinationGetArgs(Input<String> topicArn) {
+    public EventDestinationSnsDestinationGetArgs(Output<String> topicArn) {
         this.topicArn = Objects.requireNonNull(topicArn, "expected parameter 'topicArn' to be non-null");
     }
 
     private EventDestinationSnsDestinationGetArgs() {
-        this.topicArn = Input.empty();
+        this.topicArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class EventDestinationSnsDestinationGetArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private Input<String> topicArn;
+        private Output<String> topicArn;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class EventDestinationSnsDestinationGetArgs extends io.pulumi.resou
     	      this.topicArn = defaults.topicArn;
         }
 
-        public Builder topicArn(Input<String> topicArn) {
+        public Builder topicArn(Output<String> topicArn) {
             this.topicArn = Objects.requireNonNull(topicArn);
             return this;
         }
 
         public Builder topicArn(String topicArn) {
-            this.topicArn = Input.of(Objects.requireNonNull(topicArn));
+            this.topicArn = Output.of(Objects.requireNonNull(topicArn));
             return this;
         }
         public EventDestinationSnsDestinationGetArgs build() {

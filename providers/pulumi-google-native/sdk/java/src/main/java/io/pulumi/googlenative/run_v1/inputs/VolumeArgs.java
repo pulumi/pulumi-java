@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v1.inputs.ConfigMapVolumeSourceArgs;
 import io.pulumi.googlenative.run_v1.inputs.SecretVolumeSourceArgs;
@@ -21,10 +21,10 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     public static final VolumeArgs Empty = new VolumeArgs();
 
     @InputImport(name="configMap")
-      private final @Nullable Input<ConfigMapVolumeSourceArgs> configMap;
+      private final @Nullable Output<ConfigMapVolumeSourceArgs> configMap;
 
-    public Input<ConfigMapVolumeSourceArgs> getConfigMap() {
-        return this.configMap == null ? Input.empty() : this.configMap;
+    public Output<ConfigMapVolumeSourceArgs> getConfigMap() {
+        return this.configMap == null ? Output.empty() : this.configMap;
     }
 
     /**
@@ -32,32 +32,32 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="secret")
-      private final @Nullable Input<SecretVolumeSourceArgs> secret;
+      private final @Nullable Output<SecretVolumeSourceArgs> secret;
 
-    public Input<SecretVolumeSourceArgs> getSecret() {
-        return this.secret == null ? Input.empty() : this.secret;
+    public Output<SecretVolumeSourceArgs> getSecret() {
+        return this.secret == null ? Output.empty() : this.secret;
     }
 
     public VolumeArgs(
-        @Nullable Input<ConfigMapVolumeSourceArgs> configMap,
-        @Nullable Input<String> name,
-        @Nullable Input<SecretVolumeSourceArgs> secret) {
+        @Nullable Output<ConfigMapVolumeSourceArgs> configMap,
+        @Nullable Output<String> name,
+        @Nullable Output<SecretVolumeSourceArgs> secret) {
         this.configMap = configMap;
         this.name = name;
         this.secret = secret;
     }
 
     private VolumeArgs() {
-        this.configMap = Input.empty();
-        this.name = Input.empty();
-        this.secret = Input.empty();
+        this.configMap = Output.empty();
+        this.name = Output.empty();
+        this.secret = Output.empty();
     }
 
     public static Builder builder() {
@@ -69,9 +69,9 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ConfigMapVolumeSourceArgs> configMap;
-        private @Nullable Input<String> name;
-        private @Nullable Input<SecretVolumeSourceArgs> secret;
+        private @Nullable Output<ConfigMapVolumeSourceArgs> configMap;
+        private @Nullable Output<String> name;
+        private @Nullable Output<SecretVolumeSourceArgs> secret;
 
         public Builder() {
     	      // Empty
@@ -84,33 +84,33 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.secret = defaults.secret;
         }
 
-        public Builder configMap(@Nullable Input<ConfigMapVolumeSourceArgs> configMap) {
+        public Builder configMap(@Nullable Output<ConfigMapVolumeSourceArgs> configMap) {
             this.configMap = configMap;
             return this;
         }
 
         public Builder configMap(@Nullable ConfigMapVolumeSourceArgs configMap) {
-            this.configMap = Input.ofNullable(configMap);
+            this.configMap = Output.ofNullable(configMap);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder secret(@Nullable Input<SecretVolumeSourceArgs> secret) {
+        public Builder secret(@Nullable Output<SecretVolumeSourceArgs> secret) {
             this.secret = secret;
             return this;
         }
 
         public Builder secret(@Nullable SecretVolumeSourceArgs secret) {
-            this.secret = Input.ofNullable(secret);
+            this.secret = Output.ofNullable(secret);
             return this;
         }
         public VolumeArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gcsUri")
-      private final @Nullable Input<String> gcsUri;
+      private final @Nullable Output<String> gcsUri;
 
-    public Input<String> getGcsUri() {
-        return this.gcsUri == null ? Input.empty() : this.gcsUri;
+    public Output<String> getGcsUri() {
+        return this.gcsUri == null ? Output.empty() : this.gcsUri;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rawBytes")
-      private final @Nullable Input<String> rawBytes;
+      private final @Nullable Output<String> rawBytes;
 
-    public Input<String> getRawBytes() {
-        return this.rawBytes == null ? Input.empty() : this.rawBytes;
+    public Output<String> getRawBytes() {
+        return this.rawBytes == null ? Output.empty() : this.rawBytes;
     }
 
     public ImageArgs(
-        @Nullable Input<String> gcsUri,
-        @Nullable Input<String> rawBytes) {
+        @Nullable Output<String> gcsUri,
+        @Nullable Output<String> rawBytes) {
         this.gcsUri = gcsUri;
         this.rawBytes = rawBytes;
     }
 
     private ImageArgs() {
-        this.gcsUri = Input.empty();
-        this.rawBytes = Input.empty();
+        this.gcsUri = Output.empty();
+        this.rawBytes = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> gcsUri;
-        private @Nullable Input<String> rawBytes;
+        private @Nullable Output<String> gcsUri;
+        private @Nullable Output<String> rawBytes;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.rawBytes = defaults.rawBytes;
         }
 
-        public Builder gcsUri(@Nullable Input<String> gcsUri) {
+        public Builder gcsUri(@Nullable Output<String> gcsUri) {
             this.gcsUri = gcsUri;
             return this;
         }
 
         public Builder gcsUri(@Nullable String gcsUri) {
-            this.gcsUri = Input.ofNullable(gcsUri);
+            this.gcsUri = Output.ofNullable(gcsUri);
             return this;
         }
 
-        public Builder rawBytes(@Nullable Input<String> rawBytes) {
+        public Builder rawBytes(@Nullable Output<String> rawBytes) {
             this.rawBytes = rawBytes;
             return this;
         }
 
         public Builder rawBytes(@Nullable String rawBytes) {
-            this.rawBytes = Input.ofNullable(rawBytes);
+            this.rawBytes = Output.ofNullable(rawBytes);
             return this;
         }
         public ImageArgs build() {

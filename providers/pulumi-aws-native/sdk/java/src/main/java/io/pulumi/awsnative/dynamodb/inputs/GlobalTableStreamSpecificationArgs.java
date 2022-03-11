@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.dynamodb.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,18 +14,18 @@ public final class GlobalTableStreamSpecificationArgs extends io.pulumi.resource
     public static final GlobalTableStreamSpecificationArgs Empty = new GlobalTableStreamSpecificationArgs();
 
     @InputImport(name="streamViewType", required=true)
-      private final Input<String> streamViewType;
+      private final Output<String> streamViewType;
 
-    public Input<String> getStreamViewType() {
+    public Output<String> getStreamViewType() {
         return this.streamViewType;
     }
 
-    public GlobalTableStreamSpecificationArgs(Input<String> streamViewType) {
+    public GlobalTableStreamSpecificationArgs(Output<String> streamViewType) {
         this.streamViewType = Objects.requireNonNull(streamViewType, "expected parameter 'streamViewType' to be non-null");
     }
 
     private GlobalTableStreamSpecificationArgs() {
-        this.streamViewType = Input.empty();
+        this.streamViewType = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class GlobalTableStreamSpecificationArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<String> streamViewType;
+        private Output<String> streamViewType;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class GlobalTableStreamSpecificationArgs extends io.pulumi.resource
     	      this.streamViewType = defaults.streamViewType;
         }
 
-        public Builder streamViewType(Input<String> streamViewType) {
+        public Builder streamViewType(Output<String> streamViewType) {
             this.streamViewType = Objects.requireNonNull(streamViewType);
             return this;
         }
 
         public Builder streamViewType(String streamViewType) {
-            this.streamViewType = Input.of(Objects.requireNonNull(streamViewType));
+            this.streamViewType = Output.of(Objects.requireNonNull(streamViewType));
             return this;
         }
         public GlobalTableStreamSpecificationArgs build() {

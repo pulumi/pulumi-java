@@ -6,7 +6,7 @@ package io.pulumi.azurenative.aad.inputs;
 import io.pulumi.azurenative.aad.enums.ExternalAccess;
 import io.pulumi.azurenative.aad.enums.Ldaps;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class LdapsSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="externalAccess")
-      private final @Nullable Input<Either<String,ExternalAccess>> externalAccess;
+      private final @Nullable Output<Either<String,ExternalAccess>> externalAccess;
 
-    public Input<Either<String,ExternalAccess>> getExternalAccess() {
-        return this.externalAccess == null ? Input.empty() : this.externalAccess;
+    public Output<Either<String,ExternalAccess>> getExternalAccess() {
+        return this.externalAccess == null ? Output.empty() : this.externalAccess;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class LdapsSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ldaps")
-      private final @Nullable Input<Either<String,Ldaps>> ldaps;
+      private final @Nullable Output<Either<String,Ldaps>> ldaps;
 
-    public Input<Either<String,Ldaps>> getLdaps() {
-        return this.ldaps == null ? Input.empty() : this.ldaps;
+    public Output<Either<String,Ldaps>> getLdaps() {
+        return this.ldaps == null ? Output.empty() : this.ldaps;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class LdapsSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pfxCertificate")
-      private final @Nullable Input<String> pfxCertificate;
+      private final @Nullable Output<String> pfxCertificate;
 
-    public Input<String> getPfxCertificate() {
-        return this.pfxCertificate == null ? Input.empty() : this.pfxCertificate;
+    public Output<String> getPfxCertificate() {
+        return this.pfxCertificate == null ? Output.empty() : this.pfxCertificate;
     }
 
     /**
@@ -59,28 +59,28 @@ public final class LdapsSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pfxCertificatePassword")
-      private final @Nullable Input<String> pfxCertificatePassword;
+      private final @Nullable Output<String> pfxCertificatePassword;
 
-    public Input<String> getPfxCertificatePassword() {
-        return this.pfxCertificatePassword == null ? Input.empty() : this.pfxCertificatePassword;
+    public Output<String> getPfxCertificatePassword() {
+        return this.pfxCertificatePassword == null ? Output.empty() : this.pfxCertificatePassword;
     }
 
     public LdapsSettingsArgs(
-        @Nullable Input<Either<String,ExternalAccess>> externalAccess,
-        @Nullable Input<Either<String,Ldaps>> ldaps,
-        @Nullable Input<String> pfxCertificate,
-        @Nullable Input<String> pfxCertificatePassword) {
-        this.externalAccess = externalAccess == null ? Input.ofLeft("Disabled") : externalAccess;
-        this.ldaps = ldaps == null ? Input.ofLeft("Disabled") : ldaps;
+        @Nullable Output<Either<String,ExternalAccess>> externalAccess,
+        @Nullable Output<Either<String,Ldaps>> ldaps,
+        @Nullable Output<String> pfxCertificate,
+        @Nullable Output<String> pfxCertificatePassword) {
+        this.externalAccess = externalAccess == null ? Output.ofLeft("Disabled") : externalAccess;
+        this.ldaps = ldaps == null ? Output.ofLeft("Disabled") : ldaps;
         this.pfxCertificate = pfxCertificate;
         this.pfxCertificatePassword = pfxCertificatePassword;
     }
 
     private LdapsSettingsArgs() {
-        this.externalAccess = Input.empty();
-        this.ldaps = Input.empty();
-        this.pfxCertificate = Input.empty();
-        this.pfxCertificatePassword = Input.empty();
+        this.externalAccess = Output.empty();
+        this.ldaps = Output.empty();
+        this.pfxCertificate = Output.empty();
+        this.pfxCertificatePassword = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class LdapsSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,ExternalAccess>> externalAccess;
-        private @Nullable Input<Either<String,Ldaps>> ldaps;
-        private @Nullable Input<String> pfxCertificate;
-        private @Nullable Input<String> pfxCertificatePassword;
+        private @Nullable Output<Either<String,ExternalAccess>> externalAccess;
+        private @Nullable Output<Either<String,Ldaps>> ldaps;
+        private @Nullable Output<String> pfxCertificate;
+        private @Nullable Output<String> pfxCertificatePassword;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class LdapsSettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.pfxCertificatePassword = defaults.pfxCertificatePassword;
         }
 
-        public Builder externalAccess(@Nullable Input<Either<String,ExternalAccess>> externalAccess) {
+        public Builder externalAccess(@Nullable Output<Either<String,ExternalAccess>> externalAccess) {
             this.externalAccess = externalAccess;
             return this;
         }
 
         public Builder externalAccess(@Nullable Either<String,ExternalAccess> externalAccess) {
-            this.externalAccess = Input.ofNullable(externalAccess);
+            this.externalAccess = Output.ofNullable(externalAccess);
             return this;
         }
 
-        public Builder ldaps(@Nullable Input<Either<String,Ldaps>> ldaps) {
+        public Builder ldaps(@Nullable Output<Either<String,Ldaps>> ldaps) {
             this.ldaps = ldaps;
             return this;
         }
 
         public Builder ldaps(@Nullable Either<String,Ldaps> ldaps) {
-            this.ldaps = Input.ofNullable(ldaps);
+            this.ldaps = Output.ofNullable(ldaps);
             return this;
         }
 
-        public Builder pfxCertificate(@Nullable Input<String> pfxCertificate) {
+        public Builder pfxCertificate(@Nullable Output<String> pfxCertificate) {
             this.pfxCertificate = pfxCertificate;
             return this;
         }
 
         public Builder pfxCertificate(@Nullable String pfxCertificate) {
-            this.pfxCertificate = Input.ofNullable(pfxCertificate);
+            this.pfxCertificate = Output.ofNullable(pfxCertificate);
             return this;
         }
 
-        public Builder pfxCertificatePassword(@Nullable Input<String> pfxCertificatePassword) {
+        public Builder pfxCertificatePassword(@Nullable Output<String> pfxCertificatePassword) {
             this.pfxCertificatePassword = pfxCertificatePassword;
             return this;
         }
 
         public Builder pfxCertificatePassword(@Nullable String pfxCertificatePassword) {
-            this.pfxCertificatePassword = Input.ofNullable(pfxCertificatePassword);
+            this.pfxCertificatePassword = Output.ofNullable(pfxCertificatePassword);
             return this;
         }
         public LdapsSettingsArgs build() {

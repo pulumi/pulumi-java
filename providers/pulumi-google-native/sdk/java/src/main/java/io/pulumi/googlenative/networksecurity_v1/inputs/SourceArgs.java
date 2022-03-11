@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networksecurity_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipBlocks")
-      private final @Nullable Input<List<String>> ipBlocks;
+      private final @Nullable Output<List<String>> ipBlocks;
 
-    public Input<List<String>> getIpBlocks() {
-        return this.ipBlocks == null ? Input.empty() : this.ipBlocks;
+    public Output<List<String>> getIpBlocks() {
+        return this.ipBlocks == null ? Output.empty() : this.ipBlocks;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="principals")
-      private final @Nullable Input<List<String>> principals;
+      private final @Nullable Output<List<String>> principals;
 
-    public Input<List<String>> getPrincipals() {
-        return this.principals == null ? Input.empty() : this.principals;
+    public Output<List<String>> getPrincipals() {
+        return this.principals == null ? Output.empty() : this.principals;
     }
 
     public SourceArgs(
-        @Nullable Input<List<String>> ipBlocks,
-        @Nullable Input<List<String>> principals) {
+        @Nullable Output<List<String>> ipBlocks,
+        @Nullable Output<List<String>> principals) {
         this.ipBlocks = ipBlocks;
         this.principals = principals;
     }
 
     private SourceArgs() {
-        this.ipBlocks = Input.empty();
-        this.principals = Input.empty();
+        this.ipBlocks = Output.empty();
+        this.principals = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> ipBlocks;
-        private @Nullable Input<List<String>> principals;
+        private @Nullable Output<List<String>> ipBlocks;
+        private @Nullable Output<List<String>> principals;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.principals = defaults.principals;
         }
 
-        public Builder ipBlocks(@Nullable Input<List<String>> ipBlocks) {
+        public Builder ipBlocks(@Nullable Output<List<String>> ipBlocks) {
             this.ipBlocks = ipBlocks;
             return this;
         }
 
         public Builder ipBlocks(@Nullable List<String> ipBlocks) {
-            this.ipBlocks = Input.ofNullable(ipBlocks);
+            this.ipBlocks = Output.ofNullable(ipBlocks);
             return this;
         }
 
-        public Builder principals(@Nullable Input<List<String>> principals) {
+        public Builder principals(@Nullable Output<List<String>> principals) {
             this.principals = principals;
             return this;
         }
 
         public Builder principals(@Nullable List<String> principals) {
-            this.principals = Input.ofNullable(principals);
+            this.principals = Output.ofNullable(principals);
             return this;
         }
         public SourceArgs build() {

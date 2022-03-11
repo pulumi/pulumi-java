@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.edgeorder.inputs;
 
 import io.pulumi.azurenative.edgeorder.inputs.AddressPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -22,18 +22,18 @@ public final class AddressDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forwardAddress", required=true)
-      private final Input<AddressPropertiesArgs> forwardAddress;
+      private final Output<AddressPropertiesArgs> forwardAddress;
 
-    public Input<AddressPropertiesArgs> getForwardAddress() {
+    public Output<AddressPropertiesArgs> getForwardAddress() {
         return this.forwardAddress;
     }
 
-    public AddressDetailsArgs(Input<AddressPropertiesArgs> forwardAddress) {
+    public AddressDetailsArgs(Output<AddressPropertiesArgs> forwardAddress) {
         this.forwardAddress = Objects.requireNonNull(forwardAddress, "expected parameter 'forwardAddress' to be non-null");
     }
 
     private AddressDetailsArgs() {
-        this.forwardAddress = Input.empty();
+        this.forwardAddress = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class AddressDetailsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<AddressPropertiesArgs> forwardAddress;
+        private Output<AddressPropertiesArgs> forwardAddress;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class AddressDetailsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.forwardAddress = defaults.forwardAddress;
         }
 
-        public Builder forwardAddress(Input<AddressPropertiesArgs> forwardAddress) {
+        public Builder forwardAddress(Output<AddressPropertiesArgs> forwardAddress) {
             this.forwardAddress = Objects.requireNonNull(forwardAddress);
             return this;
         }
 
         public Builder forwardAddress(AddressPropertiesArgs forwardAddress) {
-            this.forwardAddress = Input.of(Objects.requireNonNull(forwardAddress));
+            this.forwardAddress = Output.of(Objects.requireNonNull(forwardAddress));
             return this;
         }
         public AddressDetailsArgs build() {

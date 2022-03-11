@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.enums.MetadataFilterFilterMatchCriteria;
 import io.pulumi.googlenative.compute_beta.inputs.MetadataFilterLabelMatchArgs;
@@ -25,10 +25,10 @@ public final class MetadataFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filterLabels")
-      private final @Nullable Input<List<MetadataFilterLabelMatchArgs>> filterLabels;
+      private final @Nullable Output<List<MetadataFilterLabelMatchArgs>> filterLabels;
 
-    public Input<List<MetadataFilterLabelMatchArgs>> getFilterLabels() {
-        return this.filterLabels == null ? Input.empty() : this.filterLabels;
+    public Output<List<MetadataFilterLabelMatchArgs>> getFilterLabels() {
+        return this.filterLabels == null ? Output.empty() : this.filterLabels;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class MetadataFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filterMatchCriteria")
-      private final @Nullable Input<MetadataFilterFilterMatchCriteria> filterMatchCriteria;
+      private final @Nullable Output<MetadataFilterFilterMatchCriteria> filterMatchCriteria;
 
-    public Input<MetadataFilterFilterMatchCriteria> getFilterMatchCriteria() {
-        return this.filterMatchCriteria == null ? Input.empty() : this.filterMatchCriteria;
+    public Output<MetadataFilterFilterMatchCriteria> getFilterMatchCriteria() {
+        return this.filterMatchCriteria == null ? Output.empty() : this.filterMatchCriteria;
     }
 
     public MetadataFilterArgs(
-        @Nullable Input<List<MetadataFilterLabelMatchArgs>> filterLabels,
-        @Nullable Input<MetadataFilterFilterMatchCriteria> filterMatchCriteria) {
+        @Nullable Output<List<MetadataFilterLabelMatchArgs>> filterLabels,
+        @Nullable Output<MetadataFilterFilterMatchCriteria> filterMatchCriteria) {
         this.filterLabels = filterLabels;
         this.filterMatchCriteria = filterMatchCriteria;
     }
 
     private MetadataFilterArgs() {
-        this.filterLabels = Input.empty();
-        this.filterMatchCriteria = Input.empty();
+        this.filterLabels = Output.empty();
+        this.filterMatchCriteria = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class MetadataFilterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<MetadataFilterLabelMatchArgs>> filterLabels;
-        private @Nullable Input<MetadataFilterFilterMatchCriteria> filterMatchCriteria;
+        private @Nullable Output<List<MetadataFilterLabelMatchArgs>> filterLabels;
+        private @Nullable Output<MetadataFilterFilterMatchCriteria> filterMatchCriteria;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class MetadataFilterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.filterMatchCriteria = defaults.filterMatchCriteria;
         }
 
-        public Builder filterLabels(@Nullable Input<List<MetadataFilterLabelMatchArgs>> filterLabels) {
+        public Builder filterLabels(@Nullable Output<List<MetadataFilterLabelMatchArgs>> filterLabels) {
             this.filterLabels = filterLabels;
             return this;
         }
 
         public Builder filterLabels(@Nullable List<MetadataFilterLabelMatchArgs> filterLabels) {
-            this.filterLabels = Input.ofNullable(filterLabels);
+            this.filterLabels = Output.ofNullable(filterLabels);
             return this;
         }
 
-        public Builder filterMatchCriteria(@Nullable Input<MetadataFilterFilterMatchCriteria> filterMatchCriteria) {
+        public Builder filterMatchCriteria(@Nullable Output<MetadataFilterFilterMatchCriteria> filterMatchCriteria) {
             this.filterMatchCriteria = filterMatchCriteria;
             return this;
         }
 
         public Builder filterMatchCriteria(@Nullable MetadataFilterFilterMatchCriteria filterMatchCriteria) {
-            this.filterMatchCriteria = Input.ofNullable(filterMatchCriteria);
+            this.filterMatchCriteria = Output.ofNullable(filterMatchCriteria);
             return this;
         }
         public MetadataFilterArgs build() {

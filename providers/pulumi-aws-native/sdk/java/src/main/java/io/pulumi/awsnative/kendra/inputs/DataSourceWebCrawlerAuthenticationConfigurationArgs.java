@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.awsnative.kendra.inputs.DataSourceWebCrawlerBasicAuthenticationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -16,18 +16,18 @@ public final class DataSourceWebCrawlerAuthenticationConfigurationArgs extends i
     public static final DataSourceWebCrawlerAuthenticationConfigurationArgs Empty = new DataSourceWebCrawlerAuthenticationConfigurationArgs();
 
     @InputImport(name="basicAuthentication")
-      private final @Nullable Input<List<DataSourceWebCrawlerBasicAuthenticationArgs>> basicAuthentication;
+      private final @Nullable Output<List<DataSourceWebCrawlerBasicAuthenticationArgs>> basicAuthentication;
 
-    public Input<List<DataSourceWebCrawlerBasicAuthenticationArgs>> getBasicAuthentication() {
-        return this.basicAuthentication == null ? Input.empty() : this.basicAuthentication;
+    public Output<List<DataSourceWebCrawlerBasicAuthenticationArgs>> getBasicAuthentication() {
+        return this.basicAuthentication == null ? Output.empty() : this.basicAuthentication;
     }
 
-    public DataSourceWebCrawlerAuthenticationConfigurationArgs(@Nullable Input<List<DataSourceWebCrawlerBasicAuthenticationArgs>> basicAuthentication) {
+    public DataSourceWebCrawlerAuthenticationConfigurationArgs(@Nullable Output<List<DataSourceWebCrawlerBasicAuthenticationArgs>> basicAuthentication) {
         this.basicAuthentication = basicAuthentication;
     }
 
     private DataSourceWebCrawlerAuthenticationConfigurationArgs() {
-        this.basicAuthentication = Input.empty();
+        this.basicAuthentication = Output.empty();
     }
 
     public static Builder builder() {
@@ -39,7 +39,7 @@ public final class DataSourceWebCrawlerAuthenticationConfigurationArgs extends i
     }
 
     public static final class Builder {
-        private @Nullable Input<List<DataSourceWebCrawlerBasicAuthenticationArgs>> basicAuthentication;
+        private @Nullable Output<List<DataSourceWebCrawlerBasicAuthenticationArgs>> basicAuthentication;
 
         public Builder() {
     	      // Empty
@@ -50,13 +50,13 @@ public final class DataSourceWebCrawlerAuthenticationConfigurationArgs extends i
     	      this.basicAuthentication = defaults.basicAuthentication;
         }
 
-        public Builder basicAuthentication(@Nullable Input<List<DataSourceWebCrawlerBasicAuthenticationArgs>> basicAuthentication) {
+        public Builder basicAuthentication(@Nullable Output<List<DataSourceWebCrawlerBasicAuthenticationArgs>> basicAuthentication) {
             this.basicAuthentication = basicAuthentication;
             return this;
         }
 
         public Builder basicAuthentication(@Nullable List<DataSourceWebCrawlerBasicAuthenticationArgs> basicAuthentication) {
-            this.basicAuthentication = Input.ofNullable(basicAuthentication);
+            this.basicAuthentication = Output.ofNullable(basicAuthentication);
             return this;
         }
         public DataSourceWebCrawlerAuthenticationConfigurationArgs build() {

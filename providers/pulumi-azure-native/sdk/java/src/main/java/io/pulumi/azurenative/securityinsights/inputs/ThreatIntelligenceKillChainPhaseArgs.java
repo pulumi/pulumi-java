@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ThreatIntelligenceKillChainPhaseArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="killChainName")
-      private final @Nullable Input<String> killChainName;
+      private final @Nullable Output<String> killChainName;
 
-    public Input<String> getKillChainName() {
-        return this.killChainName == null ? Input.empty() : this.killChainName;
+    public Output<String> getKillChainName() {
+        return this.killChainName == null ? Output.empty() : this.killChainName;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class ThreatIntelligenceKillChainPhaseArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="phaseName")
-      private final @Nullable Input<String> phaseName;
+      private final @Nullable Output<String> phaseName;
 
-    public Input<String> getPhaseName() {
-        return this.phaseName == null ? Input.empty() : this.phaseName;
+    public Output<String> getPhaseName() {
+        return this.phaseName == null ? Output.empty() : this.phaseName;
     }
 
     public ThreatIntelligenceKillChainPhaseArgs(
-        @Nullable Input<String> killChainName,
-        @Nullable Input<String> phaseName) {
+        @Nullable Output<String> killChainName,
+        @Nullable Output<String> phaseName) {
         this.killChainName = killChainName;
         this.phaseName = phaseName;
     }
 
     private ThreatIntelligenceKillChainPhaseArgs() {
-        this.killChainName = Input.empty();
-        this.phaseName = Input.empty();
+        this.killChainName = Output.empty();
+        this.phaseName = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ThreatIntelligenceKillChainPhaseArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> killChainName;
-        private @Nullable Input<String> phaseName;
+        private @Nullable Output<String> killChainName;
+        private @Nullable Output<String> phaseName;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ThreatIntelligenceKillChainPhaseArgs extends io.pulumi.resour
     	      this.phaseName = defaults.phaseName;
         }
 
-        public Builder killChainName(@Nullable Input<String> killChainName) {
+        public Builder killChainName(@Nullable Output<String> killChainName) {
             this.killChainName = killChainName;
             return this;
         }
 
         public Builder killChainName(@Nullable String killChainName) {
-            this.killChainName = Input.ofNullable(killChainName);
+            this.killChainName = Output.ofNullable(killChainName);
             return this;
         }
 
-        public Builder phaseName(@Nullable Input<String> phaseName) {
+        public Builder phaseName(@Nullable Output<String> phaseName) {
             this.phaseName = phaseName;
             return this;
         }
 
         public Builder phaseName(@Nullable String phaseName) {
-            this.phaseName = Input.ofNullable(phaseName);
+            this.phaseName = Output.ofNullable(phaseName);
             return this;
         }
         public ThreatIntelligenceKillChainPhaseArgs build() {

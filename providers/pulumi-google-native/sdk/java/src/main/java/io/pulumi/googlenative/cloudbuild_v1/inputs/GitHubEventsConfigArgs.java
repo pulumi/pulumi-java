@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.PullRequestFilterArgs;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.PushFilterArgs;
@@ -25,10 +25,10 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="enterpriseConfigResourceName")
-      private final @Nullable Input<String> enterpriseConfigResourceName;
+      private final @Nullable Output<String> enterpriseConfigResourceName;
 
-    public Input<String> getEnterpriseConfigResourceName() {
-        return this.enterpriseConfigResourceName == null ? Input.empty() : this.enterpriseConfigResourceName;
+    public Output<String> getEnterpriseConfigResourceName() {
+        return this.enterpriseConfigResourceName == null ? Output.empty() : this.enterpriseConfigResourceName;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="installationId")
-      private final @Nullable Input<String> installationId;
+      private final @Nullable Output<String> installationId;
 
-    public Input<String> getInstallationId() {
-        return this.installationId == null ? Input.empty() : this.installationId;
+    public Output<String> getInstallationId() {
+        return this.installationId == null ? Output.empty() : this.installationId;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="owner")
-      private final @Nullable Input<String> owner;
+      private final @Nullable Output<String> owner;
 
-    public Input<String> getOwner() {
-        return this.owner == null ? Input.empty() : this.owner;
+    public Output<String> getOwner() {
+        return this.owner == null ? Output.empty() : this.owner;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="pullRequest")
-      private final @Nullable Input<PullRequestFilterArgs> pullRequest;
+      private final @Nullable Output<PullRequestFilterArgs> pullRequest;
 
-    public Input<PullRequestFilterArgs> getPullRequest() {
-        return this.pullRequest == null ? Input.empty() : this.pullRequest;
+    public Output<PullRequestFilterArgs> getPullRequest() {
+        return this.pullRequest == null ? Output.empty() : this.pullRequest;
     }
 
     /**
@@ -80,19 +80,19 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="push")
-      private final @Nullable Input<PushFilterArgs> push;
+      private final @Nullable Output<PushFilterArgs> push;
 
-    public Input<PushFilterArgs> getPush() {
-        return this.push == null ? Input.empty() : this.push;
+    public Output<PushFilterArgs> getPush() {
+        return this.push == null ? Output.empty() : this.push;
     }
 
     public GitHubEventsConfigArgs(
-        @Nullable Input<String> enterpriseConfigResourceName,
-        @Nullable Input<String> installationId,
-        @Nullable Input<String> name,
-        @Nullable Input<String> owner,
-        @Nullable Input<PullRequestFilterArgs> pullRequest,
-        @Nullable Input<PushFilterArgs> push) {
+        @Nullable Output<String> enterpriseConfigResourceName,
+        @Nullable Output<String> installationId,
+        @Nullable Output<String> name,
+        @Nullable Output<String> owner,
+        @Nullable Output<PullRequestFilterArgs> pullRequest,
+        @Nullable Output<PushFilterArgs> push) {
         this.enterpriseConfigResourceName = enterpriseConfigResourceName;
         this.installationId = installationId;
         this.name = name;
@@ -102,12 +102,12 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
     }
 
     private GitHubEventsConfigArgs() {
-        this.enterpriseConfigResourceName = Input.empty();
-        this.installationId = Input.empty();
-        this.name = Input.empty();
-        this.owner = Input.empty();
-        this.pullRequest = Input.empty();
-        this.push = Input.empty();
+        this.enterpriseConfigResourceName = Output.empty();
+        this.installationId = Output.empty();
+        this.name = Output.empty();
+        this.owner = Output.empty();
+        this.pullRequest = Output.empty();
+        this.push = Output.empty();
     }
 
     public static Builder builder() {
@@ -119,12 +119,12 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> enterpriseConfigResourceName;
-        private @Nullable Input<String> installationId;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> owner;
-        private @Nullable Input<PullRequestFilterArgs> pullRequest;
-        private @Nullable Input<PushFilterArgs> push;
+        private @Nullable Output<String> enterpriseConfigResourceName;
+        private @Nullable Output<String> installationId;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> owner;
+        private @Nullable Output<PullRequestFilterArgs> pullRequest;
+        private @Nullable Output<PushFilterArgs> push;
 
         public Builder() {
     	      // Empty
@@ -140,63 +140,63 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
     	      this.push = defaults.push;
         }
 
-        public Builder enterpriseConfigResourceName(@Nullable Input<String> enterpriseConfigResourceName) {
+        public Builder enterpriseConfigResourceName(@Nullable Output<String> enterpriseConfigResourceName) {
             this.enterpriseConfigResourceName = enterpriseConfigResourceName;
             return this;
         }
 
         public Builder enterpriseConfigResourceName(@Nullable String enterpriseConfigResourceName) {
-            this.enterpriseConfigResourceName = Input.ofNullable(enterpriseConfigResourceName);
+            this.enterpriseConfigResourceName = Output.ofNullable(enterpriseConfigResourceName);
             return this;
         }
 
-        public Builder installationId(@Nullable Input<String> installationId) {
+        public Builder installationId(@Nullable Output<String> installationId) {
             this.installationId = installationId;
             return this;
         }
 
         public Builder installationId(@Nullable String installationId) {
-            this.installationId = Input.ofNullable(installationId);
+            this.installationId = Output.ofNullable(installationId);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder owner(@Nullable Input<String> owner) {
+        public Builder owner(@Nullable Output<String> owner) {
             this.owner = owner;
             return this;
         }
 
         public Builder owner(@Nullable String owner) {
-            this.owner = Input.ofNullable(owner);
+            this.owner = Output.ofNullable(owner);
             return this;
         }
 
-        public Builder pullRequest(@Nullable Input<PullRequestFilterArgs> pullRequest) {
+        public Builder pullRequest(@Nullable Output<PullRequestFilterArgs> pullRequest) {
             this.pullRequest = pullRequest;
             return this;
         }
 
         public Builder pullRequest(@Nullable PullRequestFilterArgs pullRequest) {
-            this.pullRequest = Input.ofNullable(pullRequest);
+            this.pullRequest = Output.ofNullable(pullRequest);
             return this;
         }
 
-        public Builder push(@Nullable Input<PushFilterArgs> push) {
+        public Builder push(@Nullable Output<PushFilterArgs> push) {
             this.push = push;
             return this;
         }
 
         public Builder push(@Nullable PushFilterArgs push) {
-            this.push = Input.ofNullable(push);
+            this.push = Output.ofNullable(push);
             return this;
         }
         public GitHubEventsConfigArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class ApplicationGatewayIPConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ApplicationGatewayIPConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class ApplicationGatewayIPConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="subnet")
-      private final @Nullable Input<SubResourceArgs> subnet;
+      private final @Nullable Output<SubResourceArgs> subnet;
 
-    public Input<SubResourceArgs> getSubnet() {
-        return this.subnet == null ? Input.empty() : this.subnet;
+    public Output<SubResourceArgs> getSubnet() {
+        return this.subnet == null ? Output.empty() : this.subnet;
     }
 
     public ApplicationGatewayIPConfigurationArgs(
-        @Nullable Input<String> id,
-        @Nullable Input<String> name,
-        @Nullable Input<SubResourceArgs> subnet) {
+        @Nullable Output<String> id,
+        @Nullable Output<String> name,
+        @Nullable Output<SubResourceArgs> subnet) {
         this.id = id;
         this.name = name;
         this.subnet = subnet;
     }
 
     private ApplicationGatewayIPConfigurationArgs() {
-        this.id = Input.empty();
-        this.name = Input.empty();
-        this.subnet = Input.empty();
+        this.id = Output.empty();
+        this.name = Output.empty();
+        this.subnet = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class ApplicationGatewayIPConfigurationArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> name;
-        private @Nullable Input<SubResourceArgs> subnet;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> name;
+        private @Nullable Output<SubResourceArgs> subnet;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class ApplicationGatewayIPConfigurationArgs extends io.pulumi.resou
     	      this.subnet = defaults.subnet;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder subnet(@Nullable Input<SubResourceArgs> subnet) {
+        public Builder subnet(@Nullable Output<SubResourceArgs> subnet) {
             this.subnet = subnet;
             return this;
         }
 
         public Builder subnet(@Nullable SubResourceArgs subnet) {
-            this.subnet = Input.ofNullable(subnet);
+            this.subnet = Output.ofNullable(subnet);
             return this;
         }
         public ApplicationGatewayIPConfigurationArgs build() {

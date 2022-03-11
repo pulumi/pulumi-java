@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.WeekDayOfMonthArgs;
 import java.lang.Integer;
@@ -23,9 +23,9 @@ public final class MonthlyScheduleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="monthDay", required=true)
-      private final Input<Integer> monthDay;
+      private final Output<Integer> monthDay;
 
-    public Input<Integer> getMonthDay() {
+    public Output<Integer> getMonthDay() {
         return this.monthDay;
     }
 
@@ -34,22 +34,22 @@ public final class MonthlyScheduleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="weekDayOfMonth", required=true)
-      private final Input<WeekDayOfMonthArgs> weekDayOfMonth;
+      private final Output<WeekDayOfMonthArgs> weekDayOfMonth;
 
-    public Input<WeekDayOfMonthArgs> getWeekDayOfMonth() {
+    public Output<WeekDayOfMonthArgs> getWeekDayOfMonth() {
         return this.weekDayOfMonth;
     }
 
     public MonthlyScheduleArgs(
-        Input<Integer> monthDay,
-        Input<WeekDayOfMonthArgs> weekDayOfMonth) {
+        Output<Integer> monthDay,
+        Output<WeekDayOfMonthArgs> weekDayOfMonth) {
         this.monthDay = Objects.requireNonNull(monthDay, "expected parameter 'monthDay' to be non-null");
         this.weekDayOfMonth = Objects.requireNonNull(weekDayOfMonth, "expected parameter 'weekDayOfMonth' to be non-null");
     }
 
     private MonthlyScheduleArgs() {
-        this.monthDay = Input.empty();
-        this.weekDayOfMonth = Input.empty();
+        this.monthDay = Output.empty();
+        this.weekDayOfMonth = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class MonthlyScheduleArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<Integer> monthDay;
-        private Input<WeekDayOfMonthArgs> weekDayOfMonth;
+        private Output<Integer> monthDay;
+        private Output<WeekDayOfMonthArgs> weekDayOfMonth;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class MonthlyScheduleArgs extends io.pulumi.resources.ResourceArgs 
     	      this.weekDayOfMonth = defaults.weekDayOfMonth;
         }
 
-        public Builder monthDay(Input<Integer> monthDay) {
+        public Builder monthDay(Output<Integer> monthDay) {
             this.monthDay = Objects.requireNonNull(monthDay);
             return this;
         }
 
         public Builder monthDay(Integer monthDay) {
-            this.monthDay = Input.of(Objects.requireNonNull(monthDay));
+            this.monthDay = Output.of(Objects.requireNonNull(monthDay));
             return this;
         }
 
-        public Builder weekDayOfMonth(Input<WeekDayOfMonthArgs> weekDayOfMonth) {
+        public Builder weekDayOfMonth(Output<WeekDayOfMonthArgs> weekDayOfMonth) {
             this.weekDayOfMonth = Objects.requireNonNull(weekDayOfMonth);
             return this;
         }
 
         public Builder weekDayOfMonth(WeekDayOfMonthArgs weekDayOfMonth) {
-            this.weekDayOfMonth = Input.of(Objects.requireNonNull(weekDayOfMonth));
+            this.weekDayOfMonth = Output.of(Objects.requireNonNull(weekDayOfMonth));
             return this;
         }
         public MonthlyScheduleArgs build() {

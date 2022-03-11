@@ -4,7 +4,7 @@
 package io.pulumi.aws.macie.inputs;
 
 import io.pulumi.aws.macie.inputs.FindingsFilterFindingCriteriaCriterionGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -20,18 +20,18 @@ public final class FindingsFilterFindingCriteriaGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="criterions")
-      private final @Nullable Input<List<FindingsFilterFindingCriteriaCriterionGetArgs>> criterions;
+      private final @Nullable Output<List<FindingsFilterFindingCriteriaCriterionGetArgs>> criterions;
 
-    public Input<List<FindingsFilterFindingCriteriaCriterionGetArgs>> getCriterions() {
-        return this.criterions == null ? Input.empty() : this.criterions;
+    public Output<List<FindingsFilterFindingCriteriaCriterionGetArgs>> getCriterions() {
+        return this.criterions == null ? Output.empty() : this.criterions;
     }
 
-    public FindingsFilterFindingCriteriaGetArgs(@Nullable Input<List<FindingsFilterFindingCriteriaCriterionGetArgs>> criterions) {
+    public FindingsFilterFindingCriteriaGetArgs(@Nullable Output<List<FindingsFilterFindingCriteriaCriterionGetArgs>> criterions) {
         this.criterions = criterions;
     }
 
     private FindingsFilterFindingCriteriaGetArgs() {
-        this.criterions = Input.empty();
+        this.criterions = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class FindingsFilterFindingCriteriaGetArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<FindingsFilterFindingCriteriaCriterionGetArgs>> criterions;
+        private @Nullable Output<List<FindingsFilterFindingCriteriaCriterionGetArgs>> criterions;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class FindingsFilterFindingCriteriaGetArgs extends io.pulumi.resour
     	      this.criterions = defaults.criterions;
         }
 
-        public Builder criterions(@Nullable Input<List<FindingsFilterFindingCriteriaCriterionGetArgs>> criterions) {
+        public Builder criterions(@Nullable Output<List<FindingsFilterFindingCriteriaCriterionGetArgs>> criterions) {
             this.criterions = criterions;
             return this;
         }
 
         public Builder criterions(@Nullable List<FindingsFilterFindingCriteriaCriterionGetArgs> criterions) {
-            this.criterions = Input.ofNullable(criterions);
+            this.criterions = Output.ofNullable(criterions);
             return this;
         }
         public FindingsFilterFindingCriteriaGetArgs build() {

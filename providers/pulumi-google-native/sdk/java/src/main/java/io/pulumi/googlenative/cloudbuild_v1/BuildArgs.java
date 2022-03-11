@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.ArtifactsArgs;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.BuildOptionsArgs;
@@ -27,10 +27,10 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="artifacts")
-      private final @Nullable Input<ArtifactsArgs> artifacts;
+      private final @Nullable Output<ArtifactsArgs> artifacts;
 
-    public Input<ArtifactsArgs> getArtifacts() {
-        return this.artifacts == null ? Input.empty() : this.artifacts;
+    public Output<ArtifactsArgs> getArtifacts() {
+        return this.artifacts == null ? Output.empty() : this.artifacts;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availableSecrets")
-      private final @Nullable Input<SecretsArgs> availableSecrets;
+      private final @Nullable Output<SecretsArgs> availableSecrets;
 
-    public Input<SecretsArgs> getAvailableSecrets() {
-        return this.availableSecrets == null ? Input.empty() : this.availableSecrets;
+    public Output<SecretsArgs> getAvailableSecrets() {
+        return this.availableSecrets == null ? Output.empty() : this.availableSecrets;
     }
 
     /**
@@ -49,17 +49,17 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="images")
-      private final @Nullable Input<List<String>> images;
+      private final @Nullable Output<List<String>> images;
 
-    public Input<List<String>> getImages() {
-        return this.images == null ? Input.empty() : this.images;
+    public Output<List<String>> getImages() {
+        return this.images == null ? Output.empty() : this.images;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logsBucket")
-      private final @Nullable Input<String> logsBucket;
+      private final @Nullable Output<String> logsBucket;
 
-    public Input<String> getLogsBucket() {
-        return this.logsBucket == null ? Input.empty() : this.logsBucket;
+    public Output<String> getLogsBucket() {
+        return this.logsBucket == null ? Output.empty() : this.logsBucket;
     }
 
     /**
@@ -78,23 +78,23 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="options")
-      private final @Nullable Input<BuildOptionsArgs> options;
+      private final @Nullable Output<BuildOptionsArgs> options;
 
-    public Input<BuildOptionsArgs> getOptions() {
-        return this.options == null ? Input.empty() : this.options;
+    public Output<BuildOptionsArgs> getOptions() {
+        return this.options == null ? Output.empty() : this.options;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="projectId", required=true)
-      private final Input<String> projectId;
+      private final Output<String> projectId;
 
-    public Input<String> getProjectId() {
+    public Output<String> getProjectId() {
         return this.projectId;
     }
 
@@ -103,10 +103,10 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queueTtl")
-      private final @Nullable Input<String> queueTtl;
+      private final @Nullable Output<String> queueTtl;
 
-    public Input<String> getQueueTtl() {
-        return this.queueTtl == null ? Input.empty() : this.queueTtl;
+    public Output<String> getQueueTtl() {
+        return this.queueTtl == null ? Output.empty() : this.queueTtl;
     }
 
     /**
@@ -114,10 +114,10 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secrets")
-      private final @Nullable Input<List<SecretArgs>> secrets;
+      private final @Nullable Output<List<SecretArgs>> secrets;
 
-    public Input<List<SecretArgs>> getSecrets() {
-        return this.secrets == null ? Input.empty() : this.secrets;
+    public Output<List<SecretArgs>> getSecrets() {
+        return this.secrets == null ? Output.empty() : this.secrets;
     }
 
     /**
@@ -125,10 +125,10 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccount")
-      private final @Nullable Input<String> serviceAccount;
+      private final @Nullable Output<String> serviceAccount;
 
-    public Input<String> getServiceAccount() {
-        return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
+    public Output<String> getServiceAccount() {
+        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
     }
 
     /**
@@ -136,10 +136,10 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source")
-      private final @Nullable Input<SourceArgs> source;
+      private final @Nullable Output<SourceArgs> source;
 
-    public Input<SourceArgs> getSource() {
-        return this.source == null ? Input.empty() : this.source;
+    public Output<SourceArgs> getSource() {
+        return this.source == null ? Output.empty() : this.source;
     }
 
     /**
@@ -147,9 +147,9 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="steps", required=true)
-      private final Input<List<BuildStepArgs>> steps;
+      private final Output<List<BuildStepArgs>> steps;
 
-    public Input<List<BuildStepArgs>> getSteps() {
+    public Output<List<BuildStepArgs>> getSteps() {
         return this.steps;
     }
 
@@ -158,10 +158,10 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="substitutions")
-      private final @Nullable Input<Map<String,String>> substitutions;
+      private final @Nullable Output<Map<String,String>> substitutions;
 
-    public Input<Map<String,String>> getSubstitutions() {
-        return this.substitutions == null ? Input.empty() : this.substitutions;
+    public Output<Map<String,String>> getSubstitutions() {
+        return this.substitutions == null ? Output.empty() : this.substitutions;
     }
 
     /**
@@ -169,10 +169,10 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<String>> tags;
+      private final @Nullable Output<List<String>> tags;
 
-    public Input<List<String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -180,29 +180,29 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeout")
-      private final @Nullable Input<String> timeout;
+      private final @Nullable Output<String> timeout;
 
-    public Input<String> getTimeout() {
-        return this.timeout == null ? Input.empty() : this.timeout;
+    public Output<String> getTimeout() {
+        return this.timeout == null ? Output.empty() : this.timeout;
     }
 
     public BuildArgs(
-        @Nullable Input<ArtifactsArgs> artifacts,
-        @Nullable Input<SecretsArgs> availableSecrets,
-        @Nullable Input<List<String>> images,
-        @Nullable Input<String> location,
-        @Nullable Input<String> logsBucket,
-        @Nullable Input<BuildOptionsArgs> options,
-        @Nullable Input<String> project,
-        Input<String> projectId,
-        @Nullable Input<String> queueTtl,
-        @Nullable Input<List<SecretArgs>> secrets,
-        @Nullable Input<String> serviceAccount,
-        @Nullable Input<SourceArgs> source,
-        Input<List<BuildStepArgs>> steps,
-        @Nullable Input<Map<String,String>> substitutions,
-        @Nullable Input<List<String>> tags,
-        @Nullable Input<String> timeout) {
+        @Nullable Output<ArtifactsArgs> artifacts,
+        @Nullable Output<SecretsArgs> availableSecrets,
+        @Nullable Output<List<String>> images,
+        @Nullable Output<String> location,
+        @Nullable Output<String> logsBucket,
+        @Nullable Output<BuildOptionsArgs> options,
+        @Nullable Output<String> project,
+        Output<String> projectId,
+        @Nullable Output<String> queueTtl,
+        @Nullable Output<List<SecretArgs>> secrets,
+        @Nullable Output<String> serviceAccount,
+        @Nullable Output<SourceArgs> source,
+        Output<List<BuildStepArgs>> steps,
+        @Nullable Output<Map<String,String>> substitutions,
+        @Nullable Output<List<String>> tags,
+        @Nullable Output<String> timeout) {
         this.artifacts = artifacts;
         this.availableSecrets = availableSecrets;
         this.images = images;
@@ -222,22 +222,22 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BuildArgs() {
-        this.artifacts = Input.empty();
-        this.availableSecrets = Input.empty();
-        this.images = Input.empty();
-        this.location = Input.empty();
-        this.logsBucket = Input.empty();
-        this.options = Input.empty();
-        this.project = Input.empty();
-        this.projectId = Input.empty();
-        this.queueTtl = Input.empty();
-        this.secrets = Input.empty();
-        this.serviceAccount = Input.empty();
-        this.source = Input.empty();
-        this.steps = Input.empty();
-        this.substitutions = Input.empty();
-        this.tags = Input.empty();
-        this.timeout = Input.empty();
+        this.artifacts = Output.empty();
+        this.availableSecrets = Output.empty();
+        this.images = Output.empty();
+        this.location = Output.empty();
+        this.logsBucket = Output.empty();
+        this.options = Output.empty();
+        this.project = Output.empty();
+        this.projectId = Output.empty();
+        this.queueTtl = Output.empty();
+        this.secrets = Output.empty();
+        this.serviceAccount = Output.empty();
+        this.source = Output.empty();
+        this.steps = Output.empty();
+        this.substitutions = Output.empty();
+        this.tags = Output.empty();
+        this.timeout = Output.empty();
     }
 
     public static Builder builder() {
@@ -249,22 +249,22 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ArtifactsArgs> artifacts;
-        private @Nullable Input<SecretsArgs> availableSecrets;
-        private @Nullable Input<List<String>> images;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> logsBucket;
-        private @Nullable Input<BuildOptionsArgs> options;
-        private @Nullable Input<String> project;
-        private Input<String> projectId;
-        private @Nullable Input<String> queueTtl;
-        private @Nullable Input<List<SecretArgs>> secrets;
-        private @Nullable Input<String> serviceAccount;
-        private @Nullable Input<SourceArgs> source;
-        private Input<List<BuildStepArgs>> steps;
-        private @Nullable Input<Map<String,String>> substitutions;
-        private @Nullable Input<List<String>> tags;
-        private @Nullable Input<String> timeout;
+        private @Nullable Output<ArtifactsArgs> artifacts;
+        private @Nullable Output<SecretsArgs> availableSecrets;
+        private @Nullable Output<List<String>> images;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> logsBucket;
+        private @Nullable Output<BuildOptionsArgs> options;
+        private @Nullable Output<String> project;
+        private Output<String> projectId;
+        private @Nullable Output<String> queueTtl;
+        private @Nullable Output<List<SecretArgs>> secrets;
+        private @Nullable Output<String> serviceAccount;
+        private @Nullable Output<SourceArgs> source;
+        private Output<List<BuildStepArgs>> steps;
+        private @Nullable Output<Map<String,String>> substitutions;
+        private @Nullable Output<List<String>> tags;
+        private @Nullable Output<String> timeout;
 
         public Builder() {
     	      // Empty
@@ -290,163 +290,163 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder artifacts(@Nullable Input<ArtifactsArgs> artifacts) {
+        public Builder artifacts(@Nullable Output<ArtifactsArgs> artifacts) {
             this.artifacts = artifacts;
             return this;
         }
 
         public Builder artifacts(@Nullable ArtifactsArgs artifacts) {
-            this.artifacts = Input.ofNullable(artifacts);
+            this.artifacts = Output.ofNullable(artifacts);
             return this;
         }
 
-        public Builder availableSecrets(@Nullable Input<SecretsArgs> availableSecrets) {
+        public Builder availableSecrets(@Nullable Output<SecretsArgs> availableSecrets) {
             this.availableSecrets = availableSecrets;
             return this;
         }
 
         public Builder availableSecrets(@Nullable SecretsArgs availableSecrets) {
-            this.availableSecrets = Input.ofNullable(availableSecrets);
+            this.availableSecrets = Output.ofNullable(availableSecrets);
             return this;
         }
 
-        public Builder images(@Nullable Input<List<String>> images) {
+        public Builder images(@Nullable Output<List<String>> images) {
             this.images = images;
             return this;
         }
 
         public Builder images(@Nullable List<String> images) {
-            this.images = Input.ofNullable(images);
+            this.images = Output.ofNullable(images);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder logsBucket(@Nullable Input<String> logsBucket) {
+        public Builder logsBucket(@Nullable Output<String> logsBucket) {
             this.logsBucket = logsBucket;
             return this;
         }
 
         public Builder logsBucket(@Nullable String logsBucket) {
-            this.logsBucket = Input.ofNullable(logsBucket);
+            this.logsBucket = Output.ofNullable(logsBucket);
             return this;
         }
 
-        public Builder options(@Nullable Input<BuildOptionsArgs> options) {
+        public Builder options(@Nullable Output<BuildOptionsArgs> options) {
             this.options = options;
             return this;
         }
 
         public Builder options(@Nullable BuildOptionsArgs options) {
-            this.options = Input.ofNullable(options);
+            this.options = Output.ofNullable(options);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder projectId(Input<String> projectId) {
+        public Builder projectId(Output<String> projectId) {
             this.projectId = Objects.requireNonNull(projectId);
             return this;
         }
 
         public Builder projectId(String projectId) {
-            this.projectId = Input.of(Objects.requireNonNull(projectId));
+            this.projectId = Output.of(Objects.requireNonNull(projectId));
             return this;
         }
 
-        public Builder queueTtl(@Nullable Input<String> queueTtl) {
+        public Builder queueTtl(@Nullable Output<String> queueTtl) {
             this.queueTtl = queueTtl;
             return this;
         }
 
         public Builder queueTtl(@Nullable String queueTtl) {
-            this.queueTtl = Input.ofNullable(queueTtl);
+            this.queueTtl = Output.ofNullable(queueTtl);
             return this;
         }
 
-        public Builder secrets(@Nullable Input<List<SecretArgs>> secrets) {
+        public Builder secrets(@Nullable Output<List<SecretArgs>> secrets) {
             this.secrets = secrets;
             return this;
         }
 
         public Builder secrets(@Nullable List<SecretArgs> secrets) {
-            this.secrets = Input.ofNullable(secrets);
+            this.secrets = Output.ofNullable(secrets);
             return this;
         }
 
-        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Input.ofNullable(serviceAccount);
+            this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder source(@Nullable Input<SourceArgs> source) {
+        public Builder source(@Nullable Output<SourceArgs> source) {
             this.source = source;
             return this;
         }
 
         public Builder source(@Nullable SourceArgs source) {
-            this.source = Input.ofNullable(source);
+            this.source = Output.ofNullable(source);
             return this;
         }
 
-        public Builder steps(Input<List<BuildStepArgs>> steps) {
+        public Builder steps(Output<List<BuildStepArgs>> steps) {
             this.steps = Objects.requireNonNull(steps);
             return this;
         }
 
         public Builder steps(List<BuildStepArgs> steps) {
-            this.steps = Input.of(Objects.requireNonNull(steps));
+            this.steps = Output.of(Objects.requireNonNull(steps));
             return this;
         }
 
-        public Builder substitutions(@Nullable Input<Map<String,String>> substitutions) {
+        public Builder substitutions(@Nullable Output<Map<String,String>> substitutions) {
             this.substitutions = substitutions;
             return this;
         }
 
         public Builder substitutions(@Nullable Map<String,String> substitutions) {
-            this.substitutions = Input.ofNullable(substitutions);
+            this.substitutions = Output.ofNullable(substitutions);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<String>> tags) {
+        public Builder tags(@Nullable Output<List<String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder timeout(@Nullable Input<String> timeout) {
+        public Builder timeout(@Nullable Output<String> timeout) {
             this.timeout = timeout;
             return this;
         }
 
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = Input.ofNullable(timeout);
+            this.timeout = Output.ofNullable(timeout);
             return this;
         }
         public BuildArgs build() {

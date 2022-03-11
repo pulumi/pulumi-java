@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class OnPremiseResourceDetailsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="machineName", required=true)
-      private final Input<String> machineName;
+      private final Output<String> machineName;
 
-    public Input<String> getMachineName() {
+    public Output<String> getMachineName() {
         return this.machineName;
     }
 
@@ -34,9 +34,9 @@ public final class OnPremiseResourceDetailsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="source", required=true)
-      private final Input<String> source;
+      private final Output<String> source;
 
-    public Input<String> getSource() {
+    public Output<String> getSource() {
         return this.source;
     }
 
@@ -45,9 +45,9 @@ public final class OnPremiseResourceDetailsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="sourceComputerId", required=true)
-      private final Input<String> sourceComputerId;
+      private final Output<String> sourceComputerId;
 
-    public Input<String> getSourceComputerId() {
+    public Output<String> getSourceComputerId() {
         return this.sourceComputerId;
     }
 
@@ -56,9 +56,9 @@ public final class OnPremiseResourceDetailsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="vmuuid", required=true)
-      private final Input<String> vmuuid;
+      private final Output<String> vmuuid;
 
-    public Input<String> getVmuuid() {
+    public Output<String> getVmuuid() {
         return this.vmuuid;
     }
 
@@ -67,18 +67,18 @@ public final class OnPremiseResourceDetailsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="workspaceId", required=true)
-      private final Input<String> workspaceId;
+      private final Output<String> workspaceId;
 
-    public Input<String> getWorkspaceId() {
+    public Output<String> getWorkspaceId() {
         return this.workspaceId;
     }
 
     public OnPremiseResourceDetailsArgs(
-        Input<String> machineName,
-        Input<String> source,
-        Input<String> sourceComputerId,
-        Input<String> vmuuid,
-        Input<String> workspaceId) {
+        Output<String> machineName,
+        Output<String> source,
+        Output<String> sourceComputerId,
+        Output<String> vmuuid,
+        Output<String> workspaceId) {
         this.machineName = Objects.requireNonNull(machineName, "expected parameter 'machineName' to be non-null");
         this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
         this.sourceComputerId = Objects.requireNonNull(sourceComputerId, "expected parameter 'sourceComputerId' to be non-null");
@@ -87,11 +87,11 @@ public final class OnPremiseResourceDetailsArgs extends io.pulumi.resources.Reso
     }
 
     private OnPremiseResourceDetailsArgs() {
-        this.machineName = Input.empty();
-        this.source = Input.empty();
-        this.sourceComputerId = Input.empty();
-        this.vmuuid = Input.empty();
-        this.workspaceId = Input.empty();
+        this.machineName = Output.empty();
+        this.source = Output.empty();
+        this.sourceComputerId = Output.empty();
+        this.vmuuid = Output.empty();
+        this.workspaceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,11 +103,11 @@ public final class OnPremiseResourceDetailsArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> machineName;
-        private Input<String> source;
-        private Input<String> sourceComputerId;
-        private Input<String> vmuuid;
-        private Input<String> workspaceId;
+        private Output<String> machineName;
+        private Output<String> source;
+        private Output<String> sourceComputerId;
+        private Output<String> vmuuid;
+        private Output<String> workspaceId;
 
         public Builder() {
     	      // Empty
@@ -122,53 +122,53 @@ public final class OnPremiseResourceDetailsArgs extends io.pulumi.resources.Reso
     	      this.workspaceId = defaults.workspaceId;
         }
 
-        public Builder machineName(Input<String> machineName) {
+        public Builder machineName(Output<String> machineName) {
             this.machineName = Objects.requireNonNull(machineName);
             return this;
         }
 
         public Builder machineName(String machineName) {
-            this.machineName = Input.of(Objects.requireNonNull(machineName));
+            this.machineName = Output.of(Objects.requireNonNull(machineName));
             return this;
         }
 
-        public Builder source(Input<String> source) {
+        public Builder source(Output<String> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
         public Builder source(String source) {
-            this.source = Input.of(Objects.requireNonNull(source));
+            this.source = Output.of(Objects.requireNonNull(source));
             return this;
         }
 
-        public Builder sourceComputerId(Input<String> sourceComputerId) {
+        public Builder sourceComputerId(Output<String> sourceComputerId) {
             this.sourceComputerId = Objects.requireNonNull(sourceComputerId);
             return this;
         }
 
         public Builder sourceComputerId(String sourceComputerId) {
-            this.sourceComputerId = Input.of(Objects.requireNonNull(sourceComputerId));
+            this.sourceComputerId = Output.of(Objects.requireNonNull(sourceComputerId));
             return this;
         }
 
-        public Builder vmuuid(Input<String> vmuuid) {
+        public Builder vmuuid(Output<String> vmuuid) {
             this.vmuuid = Objects.requireNonNull(vmuuid);
             return this;
         }
 
         public Builder vmuuid(String vmuuid) {
-            this.vmuuid = Input.of(Objects.requireNonNull(vmuuid));
+            this.vmuuid = Output.of(Objects.requireNonNull(vmuuid));
             return this;
         }
 
-        public Builder workspaceId(Input<String> workspaceId) {
+        public Builder workspaceId(Output<String> workspaceId) {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
 
         public Builder workspaceId(String workspaceId) {
-            this.workspaceId = Input.of(Objects.requireNonNull(workspaceId));
+            this.workspaceId = Output.of(Objects.requireNonNull(workspaceId));
             return this;
         }
         public OnPremiseResourceDetailsArgs build() {

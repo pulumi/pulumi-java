@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.datacatalog;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.datacatalog.inputs.TagTemplateFieldArgs;
 import java.lang.Boolean;
@@ -22,10 +22,10 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fields", required=true)
-      private final Input<List<TagTemplateFieldArgs>> fields;
+      private final Output<List<TagTemplateFieldArgs>> fields;
 
-    public Input<List<TagTemplateFieldArgs>> getFields() {
+    public Output<List<TagTemplateFieldArgs>> getFields() {
         return this.fields;
     }
 
@@ -45,10 +45,10 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceDelete")
-      private final @Nullable Input<Boolean> forceDelete;
+      private final @Nullable Output<Boolean> forceDelete;
 
-    public Input<Boolean> getForceDelete() {
-        return this.forceDelete == null ? Input.empty() : this.forceDelete;
+    public Output<Boolean> getForceDelete() {
+        return this.forceDelete == null ? Output.empty() : this.forceDelete;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -79,19 +79,19 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagTemplateId", required=true)
-      private final Input<String> tagTemplateId;
+      private final Output<String> tagTemplateId;
 
-    public Input<String> getTagTemplateId() {
+    public Output<String> getTagTemplateId() {
         return this.tagTemplateId;
     }
 
     public TagTemplateArgs(
-        @Nullable Input<String> displayName,
-        Input<List<TagTemplateFieldArgs>> fields,
-        @Nullable Input<Boolean> forceDelete,
-        @Nullable Input<String> project,
-        @Nullable Input<String> region,
-        Input<String> tagTemplateId) {
+        @Nullable Output<String> displayName,
+        Output<List<TagTemplateFieldArgs>> fields,
+        @Nullable Output<Boolean> forceDelete,
+        @Nullable Output<String> project,
+        @Nullable Output<String> region,
+        Output<String> tagTemplateId) {
         this.displayName = displayName;
         this.fields = Objects.requireNonNull(fields, "expected parameter 'fields' to be non-null");
         this.forceDelete = forceDelete;
@@ -101,12 +101,12 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TagTemplateArgs() {
-        this.displayName = Input.empty();
-        this.fields = Input.empty();
-        this.forceDelete = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
-        this.tagTemplateId = Input.empty();
+        this.displayName = Output.empty();
+        this.fields = Output.empty();
+        this.forceDelete = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
+        this.tagTemplateId = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,12 +118,12 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> displayName;
-        private Input<List<TagTemplateFieldArgs>> fields;
-        private @Nullable Input<Boolean> forceDelete;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> region;
-        private Input<String> tagTemplateId;
+        private @Nullable Output<String> displayName;
+        private Output<List<TagTemplateFieldArgs>> fields;
+        private @Nullable Output<Boolean> forceDelete;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> region;
+        private Output<String> tagTemplateId;
 
         public Builder() {
     	      // Empty
@@ -139,63 +139,63 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tagTemplateId = defaults.tagTemplateId;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder fields(Input<List<TagTemplateFieldArgs>> fields) {
+        public Builder fields(Output<List<TagTemplateFieldArgs>> fields) {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
 
         public Builder fields(List<TagTemplateFieldArgs> fields) {
-            this.fields = Input.of(Objects.requireNonNull(fields));
+            this.fields = Output.of(Objects.requireNonNull(fields));
             return this;
         }
 
-        public Builder forceDelete(@Nullable Input<Boolean> forceDelete) {
+        public Builder forceDelete(@Nullable Output<Boolean> forceDelete) {
             this.forceDelete = forceDelete;
             return this;
         }
 
         public Builder forceDelete(@Nullable Boolean forceDelete) {
-            this.forceDelete = Input.ofNullable(forceDelete);
+            this.forceDelete = Output.ofNullable(forceDelete);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder tagTemplateId(Input<String> tagTemplateId) {
+        public Builder tagTemplateId(Output<String> tagTemplateId) {
             this.tagTemplateId = Objects.requireNonNull(tagTemplateId);
             return this;
         }
 
         public Builder tagTemplateId(String tagTemplateId) {
-            this.tagTemplateId = Input.of(Objects.requireNonNull(tagTemplateId));
+            this.tagTemplateId = Output.of(Objects.requireNonNull(tagTemplateId));
             return this;
         }
         public TagTemplateArgs build() {

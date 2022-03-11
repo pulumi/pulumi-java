@@ -4,7 +4,7 @@
 package io.pulumi.aws.acmpca.inputs;
 
 import io.pulumi.aws.acmpca.inputs.CertificateValidityGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificate")
-      private final @Nullable Input<String> certificate;
+      private final @Nullable Output<String> certificate;
 
-    public Input<String> getCertificate() {
-        return this.certificate == null ? Input.empty() : this.certificate;
+    public Output<String> getCertificate() {
+        return this.certificate == null ? Output.empty() : this.certificate;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateAuthorityArn")
-      private final @Nullable Input<String> certificateAuthorityArn;
+      private final @Nullable Output<String> certificateAuthorityArn;
 
-    public Input<String> getCertificateAuthorityArn() {
-        return this.certificateAuthorityArn == null ? Input.empty() : this.certificateAuthorityArn;
+    public Output<String> getCertificateAuthorityArn() {
+        return this.certificateAuthorityArn == null ? Output.empty() : this.certificateAuthorityArn;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateChain")
-      private final @Nullable Input<String> certificateChain;
+      private final @Nullable Output<String> certificateChain;
 
-    public Input<String> getCertificateChain() {
-        return this.certificateChain == null ? Input.empty() : this.certificateChain;
+    public Output<String> getCertificateChain() {
+        return this.certificateChain == null ? Output.empty() : this.certificateChain;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateSigningRequest")
-      private final @Nullable Input<String> certificateSigningRequest;
+      private final @Nullable Output<String> certificateSigningRequest;
 
-    public Input<String> getCertificateSigningRequest() {
-        return this.certificateSigningRequest == null ? Input.empty() : this.certificateSigningRequest;
+    public Output<String> getCertificateSigningRequest() {
+        return this.certificateSigningRequest == null ? Output.empty() : this.certificateSigningRequest;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="signingAlgorithm")
-      private final @Nullable Input<String> signingAlgorithm;
+      private final @Nullable Output<String> signingAlgorithm;
 
-    public Input<String> getSigningAlgorithm() {
-        return this.signingAlgorithm == null ? Input.empty() : this.signingAlgorithm;
+    public Output<String> getSigningAlgorithm() {
+        return this.signingAlgorithm == null ? Output.empty() : this.signingAlgorithm;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="templateArn")
-      private final @Nullable Input<String> templateArn;
+      private final @Nullable Output<String> templateArn;
 
-    public Input<String> getTemplateArn() {
-        return this.templateArn == null ? Input.empty() : this.templateArn;
+    public Output<String> getTemplateArn() {
+        return this.templateArn == null ? Output.empty() : this.templateArn;
     }
 
     /**
@@ -97,21 +97,21 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="validity")
-      private final @Nullable Input<CertificateValidityGetArgs> validity;
+      private final @Nullable Output<CertificateValidityGetArgs> validity;
 
-    public Input<CertificateValidityGetArgs> getValidity() {
-        return this.validity == null ? Input.empty() : this.validity;
+    public Output<CertificateValidityGetArgs> getValidity() {
+        return this.validity == null ? Output.empty() : this.validity;
     }
 
     public CertificateState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> certificate,
-        @Nullable Input<String> certificateAuthorityArn,
-        @Nullable Input<String> certificateChain,
-        @Nullable Input<String> certificateSigningRequest,
-        @Nullable Input<String> signingAlgorithm,
-        @Nullable Input<String> templateArn,
-        @Nullable Input<CertificateValidityGetArgs> validity) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> certificate,
+        @Nullable Output<String> certificateAuthorityArn,
+        @Nullable Output<String> certificateChain,
+        @Nullable Output<String> certificateSigningRequest,
+        @Nullable Output<String> signingAlgorithm,
+        @Nullable Output<String> templateArn,
+        @Nullable Output<CertificateValidityGetArgs> validity) {
         this.arn = arn;
         this.certificate = certificate;
         this.certificateAuthorityArn = certificateAuthorityArn;
@@ -123,14 +123,14 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
     }
 
     private CertificateState() {
-        this.arn = Input.empty();
-        this.certificate = Input.empty();
-        this.certificateAuthorityArn = Input.empty();
-        this.certificateChain = Input.empty();
-        this.certificateSigningRequest = Input.empty();
-        this.signingAlgorithm = Input.empty();
-        this.templateArn = Input.empty();
-        this.validity = Input.empty();
+        this.arn = Output.empty();
+        this.certificate = Output.empty();
+        this.certificateAuthorityArn = Output.empty();
+        this.certificateChain = Output.empty();
+        this.certificateSigningRequest = Output.empty();
+        this.signingAlgorithm = Output.empty();
+        this.templateArn = Output.empty();
+        this.validity = Output.empty();
     }
 
     public static Builder builder() {
@@ -142,14 +142,14 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> certificate;
-        private @Nullable Input<String> certificateAuthorityArn;
-        private @Nullable Input<String> certificateChain;
-        private @Nullable Input<String> certificateSigningRequest;
-        private @Nullable Input<String> signingAlgorithm;
-        private @Nullable Input<String> templateArn;
-        private @Nullable Input<CertificateValidityGetArgs> validity;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> certificate;
+        private @Nullable Output<String> certificateAuthorityArn;
+        private @Nullable Output<String> certificateChain;
+        private @Nullable Output<String> certificateSigningRequest;
+        private @Nullable Output<String> signingAlgorithm;
+        private @Nullable Output<String> templateArn;
+        private @Nullable Output<CertificateValidityGetArgs> validity;
 
         public Builder() {
     	      // Empty
@@ -167,83 +167,83 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
     	      this.validity = defaults.validity;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder certificate(@Nullable Input<String> certificate) {
+        public Builder certificate(@Nullable Output<String> certificate) {
             this.certificate = certificate;
             return this;
         }
 
         public Builder certificate(@Nullable String certificate) {
-            this.certificate = Input.ofNullable(certificate);
+            this.certificate = Output.ofNullable(certificate);
             return this;
         }
 
-        public Builder certificateAuthorityArn(@Nullable Input<String> certificateAuthorityArn) {
+        public Builder certificateAuthorityArn(@Nullable Output<String> certificateAuthorityArn) {
             this.certificateAuthorityArn = certificateAuthorityArn;
             return this;
         }
 
         public Builder certificateAuthorityArn(@Nullable String certificateAuthorityArn) {
-            this.certificateAuthorityArn = Input.ofNullable(certificateAuthorityArn);
+            this.certificateAuthorityArn = Output.ofNullable(certificateAuthorityArn);
             return this;
         }
 
-        public Builder certificateChain(@Nullable Input<String> certificateChain) {
+        public Builder certificateChain(@Nullable Output<String> certificateChain) {
             this.certificateChain = certificateChain;
             return this;
         }
 
         public Builder certificateChain(@Nullable String certificateChain) {
-            this.certificateChain = Input.ofNullable(certificateChain);
+            this.certificateChain = Output.ofNullable(certificateChain);
             return this;
         }
 
-        public Builder certificateSigningRequest(@Nullable Input<String> certificateSigningRequest) {
+        public Builder certificateSigningRequest(@Nullable Output<String> certificateSigningRequest) {
             this.certificateSigningRequest = certificateSigningRequest;
             return this;
         }
 
         public Builder certificateSigningRequest(@Nullable String certificateSigningRequest) {
-            this.certificateSigningRequest = Input.ofNullable(certificateSigningRequest);
+            this.certificateSigningRequest = Output.ofNullable(certificateSigningRequest);
             return this;
         }
 
-        public Builder signingAlgorithm(@Nullable Input<String> signingAlgorithm) {
+        public Builder signingAlgorithm(@Nullable Output<String> signingAlgorithm) {
             this.signingAlgorithm = signingAlgorithm;
             return this;
         }
 
         public Builder signingAlgorithm(@Nullable String signingAlgorithm) {
-            this.signingAlgorithm = Input.ofNullable(signingAlgorithm);
+            this.signingAlgorithm = Output.ofNullable(signingAlgorithm);
             return this;
         }
 
-        public Builder templateArn(@Nullable Input<String> templateArn) {
+        public Builder templateArn(@Nullable Output<String> templateArn) {
             this.templateArn = templateArn;
             return this;
         }
 
         public Builder templateArn(@Nullable String templateArn) {
-            this.templateArn = Input.ofNullable(templateArn);
+            this.templateArn = Output.ofNullable(templateArn);
             return this;
         }
 
-        public Builder validity(@Nullable Input<CertificateValidityGetArgs> validity) {
+        public Builder validity(@Nullable Output<CertificateValidityGetArgs> validity) {
             this.validity = validity;
             return this;
         }
 
         public Builder validity(@Nullable CertificateValidityGetArgs validity) {
-            this.validity = Input.ofNullable(validity);
+            this.validity = Output.ofNullable(validity);
             return this;
         }
         public CertificateState build() {

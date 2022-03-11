@@ -8,7 +8,6 @@ import io.pulumi.aws.opsworks.CustomLayerArgs;
 import io.pulumi.aws.opsworks.inputs.CustomLayerState;
 import io.pulumi.aws.opsworks.outputs.CustomLayerCloudwatchConfiguration;
 import io.pulumi.aws.opsworks.outputs.CustomLayerEbsVolume;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -384,14 +383,14 @@ public class CustomLayer extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CustomLayer(String name, CustomLayerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:opsworks/customLayer:CustomLayer", name, args == null ? CustomLayerArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:opsworks/customLayer:CustomLayer", name, args == null ? CustomLayerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private CustomLayer(String name, Input<String> id, @Nullable CustomLayerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private CustomLayer(String name, Output<String> id, @Nullable CustomLayerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:opsworks/customLayer:CustomLayer", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -407,7 +406,7 @@ public class CustomLayer extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CustomLayer get(String name, Input<String> id, @Nullable CustomLayerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static CustomLayer get(String name, Output<String> id, @Nullable CustomLayerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new CustomLayer(name, id, state, options);
     }
 }

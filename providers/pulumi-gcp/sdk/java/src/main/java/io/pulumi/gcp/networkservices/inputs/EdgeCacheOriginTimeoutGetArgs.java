@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.networkservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class EdgeCacheOriginTimeoutGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="connectTimeout")
-      private final @Nullable Input<String> connectTimeout;
+      private final @Nullable Output<String> connectTimeout;
 
-    public Input<String> getConnectTimeout() {
-        return this.connectTimeout == null ? Input.empty() : this.connectTimeout;
+    public Output<String> getConnectTimeout() {
+        return this.connectTimeout == null ? Output.empty() : this.connectTimeout;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class EdgeCacheOriginTimeoutGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="maxAttemptsTimeout")
-      private final @Nullable Input<String> maxAttemptsTimeout;
+      private final @Nullable Output<String> maxAttemptsTimeout;
 
-    public Input<String> getMaxAttemptsTimeout() {
-        return this.maxAttemptsTimeout == null ? Input.empty() : this.maxAttemptsTimeout;
+    public Output<String> getMaxAttemptsTimeout() {
+        return this.maxAttemptsTimeout == null ? Output.empty() : this.maxAttemptsTimeout;
     }
 
     /**
@@ -44,25 +44,25 @@ public final class EdgeCacheOriginTimeoutGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="responseTimeout")
-      private final @Nullable Input<String> responseTimeout;
+      private final @Nullable Output<String> responseTimeout;
 
-    public Input<String> getResponseTimeout() {
-        return this.responseTimeout == null ? Input.empty() : this.responseTimeout;
+    public Output<String> getResponseTimeout() {
+        return this.responseTimeout == null ? Output.empty() : this.responseTimeout;
     }
 
     public EdgeCacheOriginTimeoutGetArgs(
-        @Nullable Input<String> connectTimeout,
-        @Nullable Input<String> maxAttemptsTimeout,
-        @Nullable Input<String> responseTimeout) {
+        @Nullable Output<String> connectTimeout,
+        @Nullable Output<String> maxAttemptsTimeout,
+        @Nullable Output<String> responseTimeout) {
         this.connectTimeout = connectTimeout;
         this.maxAttemptsTimeout = maxAttemptsTimeout;
         this.responseTimeout = responseTimeout;
     }
 
     private EdgeCacheOriginTimeoutGetArgs() {
-        this.connectTimeout = Input.empty();
-        this.maxAttemptsTimeout = Input.empty();
-        this.responseTimeout = Input.empty();
+        this.connectTimeout = Output.empty();
+        this.maxAttemptsTimeout = Output.empty();
+        this.responseTimeout = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class EdgeCacheOriginTimeoutGetArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> connectTimeout;
-        private @Nullable Input<String> maxAttemptsTimeout;
-        private @Nullable Input<String> responseTimeout;
+        private @Nullable Output<String> connectTimeout;
+        private @Nullable Output<String> maxAttemptsTimeout;
+        private @Nullable Output<String> responseTimeout;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class EdgeCacheOriginTimeoutGetArgs extends io.pulumi.resources.Res
     	      this.responseTimeout = defaults.responseTimeout;
         }
 
-        public Builder connectTimeout(@Nullable Input<String> connectTimeout) {
+        public Builder connectTimeout(@Nullable Output<String> connectTimeout) {
             this.connectTimeout = connectTimeout;
             return this;
         }
 
         public Builder connectTimeout(@Nullable String connectTimeout) {
-            this.connectTimeout = Input.ofNullable(connectTimeout);
+            this.connectTimeout = Output.ofNullable(connectTimeout);
             return this;
         }
 
-        public Builder maxAttemptsTimeout(@Nullable Input<String> maxAttemptsTimeout) {
+        public Builder maxAttemptsTimeout(@Nullable Output<String> maxAttemptsTimeout) {
             this.maxAttemptsTimeout = maxAttemptsTimeout;
             return this;
         }
 
         public Builder maxAttemptsTimeout(@Nullable String maxAttemptsTimeout) {
-            this.maxAttemptsTimeout = Input.ofNullable(maxAttemptsTimeout);
+            this.maxAttemptsTimeout = Output.ofNullable(maxAttemptsTimeout);
             return this;
         }
 
-        public Builder responseTimeout(@Nullable Input<String> responseTimeout) {
+        public Builder responseTimeout(@Nullable Output<String> responseTimeout) {
             this.responseTimeout = responseTimeout;
             return this;
         }
 
         public Builder responseTimeout(@Nullable String responseTimeout) {
-            this.responseTimeout = Input.ofNullable(responseTimeout);
+            this.responseTimeout = Output.ofNullable(responseTimeout);
             return this;
         }
         public EdgeCacheOriginTimeoutGetArgs build() {

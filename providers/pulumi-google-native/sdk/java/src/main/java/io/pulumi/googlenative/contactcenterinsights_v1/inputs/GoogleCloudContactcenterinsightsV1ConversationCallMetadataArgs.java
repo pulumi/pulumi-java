@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataArg
      * 
      */
     @InputImport(name="agentChannel")
-      private final @Nullable Input<Integer> agentChannel;
+      private final @Nullable Output<Integer> agentChannel;
 
-    public Input<Integer> getAgentChannel() {
-        return this.agentChannel == null ? Input.empty() : this.agentChannel;
+    public Output<Integer> getAgentChannel() {
+        return this.agentChannel == null ? Output.empty() : this.agentChannel;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataArg
      * 
      */
     @InputImport(name="customerChannel")
-      private final @Nullable Input<Integer> customerChannel;
+      private final @Nullable Output<Integer> customerChannel;
 
-    public Input<Integer> getCustomerChannel() {
-        return this.customerChannel == null ? Input.empty() : this.customerChannel;
+    public Output<Integer> getCustomerChannel() {
+        return this.customerChannel == null ? Output.empty() : this.customerChannel;
     }
 
     public GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs(
-        @Nullable Input<Integer> agentChannel,
-        @Nullable Input<Integer> customerChannel) {
+        @Nullable Output<Integer> agentChannel,
+        @Nullable Output<Integer> customerChannel) {
         this.agentChannel = agentChannel;
         this.customerChannel = customerChannel;
     }
 
     private GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs() {
-        this.agentChannel = Input.empty();
-        this.customerChannel = Input.empty();
+        this.agentChannel = Output.empty();
+        this.customerChannel = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> agentChannel;
-        private @Nullable Input<Integer> customerChannel;
+        private @Nullable Output<Integer> agentChannel;
+        private @Nullable Output<Integer> customerChannel;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataArg
     	      this.customerChannel = defaults.customerChannel;
         }
 
-        public Builder agentChannel(@Nullable Input<Integer> agentChannel) {
+        public Builder agentChannel(@Nullable Output<Integer> agentChannel) {
             this.agentChannel = agentChannel;
             return this;
         }
 
         public Builder agentChannel(@Nullable Integer agentChannel) {
-            this.agentChannel = Input.ofNullable(agentChannel);
+            this.agentChannel = Output.ofNullable(agentChannel);
             return this;
         }
 
-        public Builder customerChannel(@Nullable Input<Integer> customerChannel) {
+        public Builder customerChannel(@Nullable Output<Integer> customerChannel) {
             this.customerChannel = customerChannel;
             return this;
         }
 
         public Builder customerChannel(@Nullable Integer customerChannel) {
-            this.customerChannel = Input.ofNullable(customerChannel);
+            this.customerChannel = Output.ofNullable(customerChannel);
             return this;
         }
         public GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.domains_v1alpha2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.domains_v1alpha2.enums.RegistrationContactNoticesItem;
 import io.pulumi.googlenative.domains_v1alpha2.enums.RegistrationDomainNoticesItem;
@@ -28,10 +28,10 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contactNotices")
-      private final @Nullable Input<List<RegistrationContactNoticesItem>> contactNotices;
+      private final @Nullable Output<List<RegistrationContactNoticesItem>> contactNotices;
 
-    public Input<List<RegistrationContactNoticesItem>> getContactNotices() {
-        return this.contactNotices == null ? Input.empty() : this.contactNotices;
+    public Output<List<RegistrationContactNoticesItem>> getContactNotices() {
+        return this.contactNotices == null ? Output.empty() : this.contactNotices;
     }
 
     /**
@@ -39,9 +39,9 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contactSettings", required=true)
-      private final Input<ContactSettingsArgs> contactSettings;
+      private final Output<ContactSettingsArgs> contactSettings;
 
-    public Input<ContactSettingsArgs> getContactSettings() {
+    public Output<ContactSettingsArgs> getContactSettings() {
         return this.contactSettings;
     }
 
@@ -50,10 +50,10 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsSettings")
-      private final @Nullable Input<DnsSettingsArgs> dnsSettings;
+      private final @Nullable Output<DnsSettingsArgs> dnsSettings;
 
-    public Input<DnsSettingsArgs> getDnsSettings() {
-        return this.dnsSettings == null ? Input.empty() : this.dnsSettings;
+    public Output<DnsSettingsArgs> getDnsSettings() {
+        return this.dnsSettings == null ? Output.empty() : this.dnsSettings;
     }
 
     /**
@@ -61,9 +61,9 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName", required=true)
-      private final Input<String> domainName;
+      private final Output<String> domainName;
 
-    public Input<String> getDomainName() {
+    public Output<String> getDomainName() {
         return this.domainName;
     }
 
@@ -72,10 +72,10 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainNotices")
-      private final @Nullable Input<List<RegistrationDomainNoticesItem>> domainNotices;
+      private final @Nullable Output<List<RegistrationDomainNoticesItem>> domainNotices;
 
-    public Input<List<RegistrationDomainNoticesItem>> getDomainNotices() {
-        return this.domainNotices == null ? Input.empty() : this.domainNotices;
+    public Output<List<RegistrationDomainNoticesItem>> getDomainNotices() {
+        return this.domainNotices == null ? Output.empty() : this.domainNotices;
     }
 
     /**
@@ -83,17 +83,17 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -101,17 +101,17 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managementSettings")
-      private final @Nullable Input<ManagementSettingsArgs> managementSettings;
+      private final @Nullable Output<ManagementSettingsArgs> managementSettings;
 
-    public Input<ManagementSettingsArgs> getManagementSettings() {
-        return this.managementSettings == null ? Input.empty() : this.managementSettings;
+    public Output<ManagementSettingsArgs> getManagementSettings() {
+        return this.managementSettings == null ? Output.empty() : this.managementSettings;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -119,10 +119,10 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="validateOnly")
-      private final @Nullable Input<Boolean> validateOnly;
+      private final @Nullable Output<Boolean> validateOnly;
 
-    public Input<Boolean> getValidateOnly() {
-        return this.validateOnly == null ? Input.empty() : this.validateOnly;
+    public Output<Boolean> getValidateOnly() {
+        return this.validateOnly == null ? Output.empty() : this.validateOnly;
     }
 
     /**
@@ -130,24 +130,24 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="yearlyPrice", required=true)
-      private final Input<MoneyArgs> yearlyPrice;
+      private final Output<MoneyArgs> yearlyPrice;
 
-    public Input<MoneyArgs> getYearlyPrice() {
+    public Output<MoneyArgs> getYearlyPrice() {
         return this.yearlyPrice;
     }
 
     public RegistrationArgs(
-        @Nullable Input<List<RegistrationContactNoticesItem>> contactNotices,
-        Input<ContactSettingsArgs> contactSettings,
-        @Nullable Input<DnsSettingsArgs> dnsSettings,
-        Input<String> domainName,
-        @Nullable Input<List<RegistrationDomainNoticesItem>> domainNotices,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> location,
-        @Nullable Input<ManagementSettingsArgs> managementSettings,
-        @Nullable Input<String> project,
-        @Nullable Input<Boolean> validateOnly,
-        Input<MoneyArgs> yearlyPrice) {
+        @Nullable Output<List<RegistrationContactNoticesItem>> contactNotices,
+        Output<ContactSettingsArgs> contactSettings,
+        @Nullable Output<DnsSettingsArgs> dnsSettings,
+        Output<String> domainName,
+        @Nullable Output<List<RegistrationDomainNoticesItem>> domainNotices,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> location,
+        @Nullable Output<ManagementSettingsArgs> managementSettings,
+        @Nullable Output<String> project,
+        @Nullable Output<Boolean> validateOnly,
+        Output<MoneyArgs> yearlyPrice) {
         this.contactNotices = contactNotices;
         this.contactSettings = Objects.requireNonNull(contactSettings, "expected parameter 'contactSettings' to be non-null");
         this.dnsSettings = dnsSettings;
@@ -162,17 +162,17 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RegistrationArgs() {
-        this.contactNotices = Input.empty();
-        this.contactSettings = Input.empty();
-        this.dnsSettings = Input.empty();
-        this.domainName = Input.empty();
-        this.domainNotices = Input.empty();
-        this.labels = Input.empty();
-        this.location = Input.empty();
-        this.managementSettings = Input.empty();
-        this.project = Input.empty();
-        this.validateOnly = Input.empty();
-        this.yearlyPrice = Input.empty();
+        this.contactNotices = Output.empty();
+        this.contactSettings = Output.empty();
+        this.dnsSettings = Output.empty();
+        this.domainName = Output.empty();
+        this.domainNotices = Output.empty();
+        this.labels = Output.empty();
+        this.location = Output.empty();
+        this.managementSettings = Output.empty();
+        this.project = Output.empty();
+        this.validateOnly = Output.empty();
+        this.yearlyPrice = Output.empty();
     }
 
     public static Builder builder() {
@@ -184,17 +184,17 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<RegistrationContactNoticesItem>> contactNotices;
-        private Input<ContactSettingsArgs> contactSettings;
-        private @Nullable Input<DnsSettingsArgs> dnsSettings;
-        private Input<String> domainName;
-        private @Nullable Input<List<RegistrationDomainNoticesItem>> domainNotices;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> location;
-        private @Nullable Input<ManagementSettingsArgs> managementSettings;
-        private @Nullable Input<String> project;
-        private @Nullable Input<Boolean> validateOnly;
-        private Input<MoneyArgs> yearlyPrice;
+        private @Nullable Output<List<RegistrationContactNoticesItem>> contactNotices;
+        private Output<ContactSettingsArgs> contactSettings;
+        private @Nullable Output<DnsSettingsArgs> dnsSettings;
+        private Output<String> domainName;
+        private @Nullable Output<List<RegistrationDomainNoticesItem>> domainNotices;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> location;
+        private @Nullable Output<ManagementSettingsArgs> managementSettings;
+        private @Nullable Output<String> project;
+        private @Nullable Output<Boolean> validateOnly;
+        private Output<MoneyArgs> yearlyPrice;
 
         public Builder() {
     	      // Empty
@@ -215,113 +215,113 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.yearlyPrice = defaults.yearlyPrice;
         }
 
-        public Builder contactNotices(@Nullable Input<List<RegistrationContactNoticesItem>> contactNotices) {
+        public Builder contactNotices(@Nullable Output<List<RegistrationContactNoticesItem>> contactNotices) {
             this.contactNotices = contactNotices;
             return this;
         }
 
         public Builder contactNotices(@Nullable List<RegistrationContactNoticesItem> contactNotices) {
-            this.contactNotices = Input.ofNullable(contactNotices);
+            this.contactNotices = Output.ofNullable(contactNotices);
             return this;
         }
 
-        public Builder contactSettings(Input<ContactSettingsArgs> contactSettings) {
+        public Builder contactSettings(Output<ContactSettingsArgs> contactSettings) {
             this.contactSettings = Objects.requireNonNull(contactSettings);
             return this;
         }
 
         public Builder contactSettings(ContactSettingsArgs contactSettings) {
-            this.contactSettings = Input.of(Objects.requireNonNull(contactSettings));
+            this.contactSettings = Output.of(Objects.requireNonNull(contactSettings));
             return this;
         }
 
-        public Builder dnsSettings(@Nullable Input<DnsSettingsArgs> dnsSettings) {
+        public Builder dnsSettings(@Nullable Output<DnsSettingsArgs> dnsSettings) {
             this.dnsSettings = dnsSettings;
             return this;
         }
 
         public Builder dnsSettings(@Nullable DnsSettingsArgs dnsSettings) {
-            this.dnsSettings = Input.ofNullable(dnsSettings);
+            this.dnsSettings = Output.ofNullable(dnsSettings);
             return this;
         }
 
-        public Builder domainName(Input<String> domainName) {
+        public Builder domainName(Output<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
         public Builder domainName(String domainName) {
-            this.domainName = Input.of(Objects.requireNonNull(domainName));
+            this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
         }
 
-        public Builder domainNotices(@Nullable Input<List<RegistrationDomainNoticesItem>> domainNotices) {
+        public Builder domainNotices(@Nullable Output<List<RegistrationDomainNoticesItem>> domainNotices) {
             this.domainNotices = domainNotices;
             return this;
         }
 
         public Builder domainNotices(@Nullable List<RegistrationDomainNoticesItem> domainNotices) {
-            this.domainNotices = Input.ofNullable(domainNotices);
+            this.domainNotices = Output.ofNullable(domainNotices);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder managementSettings(@Nullable Input<ManagementSettingsArgs> managementSettings) {
+        public Builder managementSettings(@Nullable Output<ManagementSettingsArgs> managementSettings) {
             this.managementSettings = managementSettings;
             return this;
         }
 
         public Builder managementSettings(@Nullable ManagementSettingsArgs managementSettings) {
-            this.managementSettings = Input.ofNullable(managementSettings);
+            this.managementSettings = Output.ofNullable(managementSettings);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder validateOnly(@Nullable Input<Boolean> validateOnly) {
+        public Builder validateOnly(@Nullable Output<Boolean> validateOnly) {
             this.validateOnly = validateOnly;
             return this;
         }
 
         public Builder validateOnly(@Nullable Boolean validateOnly) {
-            this.validateOnly = Input.ofNullable(validateOnly);
+            this.validateOnly = Output.ofNullable(validateOnly);
             return this;
         }
 
-        public Builder yearlyPrice(Input<MoneyArgs> yearlyPrice) {
+        public Builder yearlyPrice(Output<MoneyArgs> yearlyPrice) {
             this.yearlyPrice = Objects.requireNonNull(yearlyPrice);
             return this;
         }
 
         public Builder yearlyPrice(MoneyArgs yearlyPrice) {
-            this.yearlyPrice = Input.of(Objects.requireNonNull(yearlyPrice));
+            this.yearlyPrice = Output.of(Objects.requireNonNull(yearlyPrice));
             return this;
         }
         public RegistrationArgs build() {

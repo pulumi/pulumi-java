@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.fms.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,29 +20,29 @@ public final class PolicyIEMapArgs extends io.pulumi.resources.ResourceArgs {
     public static final PolicyIEMapArgs Empty = new PolicyIEMapArgs();
 
     @InputImport(name="aCCOUNT")
-      private final @Nullable Input<List<String>> aCCOUNT;
+      private final @Nullable Output<List<String>> aCCOUNT;
 
-    public Input<List<String>> getACCOUNT() {
-        return this.aCCOUNT == null ? Input.empty() : this.aCCOUNT;
+    public Output<List<String>> getACCOUNT() {
+        return this.aCCOUNT == null ? Output.empty() : this.aCCOUNT;
     }
 
     @InputImport(name="oRGUNIT")
-      private final @Nullable Input<List<String>> oRGUNIT;
+      private final @Nullable Output<List<String>> oRGUNIT;
 
-    public Input<List<String>> getORGUNIT() {
-        return this.oRGUNIT == null ? Input.empty() : this.oRGUNIT;
+    public Output<List<String>> getORGUNIT() {
+        return this.oRGUNIT == null ? Output.empty() : this.oRGUNIT;
     }
 
     public PolicyIEMapArgs(
-        @Nullable Input<List<String>> aCCOUNT,
-        @Nullable Input<List<String>> oRGUNIT) {
+        @Nullable Output<List<String>> aCCOUNT,
+        @Nullable Output<List<String>> oRGUNIT) {
         this.aCCOUNT = aCCOUNT;
         this.oRGUNIT = oRGUNIT;
     }
 
     private PolicyIEMapArgs() {
-        this.aCCOUNT = Input.empty();
-        this.oRGUNIT = Input.empty();
+        this.aCCOUNT = Output.empty();
+        this.oRGUNIT = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class PolicyIEMapArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> aCCOUNT;
-        private @Nullable Input<List<String>> oRGUNIT;
+        private @Nullable Output<List<String>> aCCOUNT;
+        private @Nullable Output<List<String>> oRGUNIT;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class PolicyIEMapArgs extends io.pulumi.resources.ResourceArgs {
     	      this.oRGUNIT = defaults.oRGUNIT;
         }
 
-        public Builder aCCOUNT(@Nullable Input<List<String>> aCCOUNT) {
+        public Builder aCCOUNT(@Nullable Output<List<String>> aCCOUNT) {
             this.aCCOUNT = aCCOUNT;
             return this;
         }
 
         public Builder aCCOUNT(@Nullable List<String> aCCOUNT) {
-            this.aCCOUNT = Input.ofNullable(aCCOUNT);
+            this.aCCOUNT = Output.ofNullable(aCCOUNT);
             return this;
         }
 
-        public Builder oRGUNIT(@Nullable Input<List<String>> oRGUNIT) {
+        public Builder oRGUNIT(@Nullable Output<List<String>> oRGUNIT) {
             this.oRGUNIT = oRGUNIT;
             return this;
         }
 
         public Builder oRGUNIT(@Nullable List<String> oRGUNIT) {
-            this.oRGUNIT = Input.ofNullable(oRGUNIT);
+            this.oRGUNIT = Output.ofNullable(oRGUNIT);
             return this;
         }
         public PolicyIEMapArgs build() {

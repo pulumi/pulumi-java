@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.GlobalForwardingRuleMetadataFilterFilterLabelArgs;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class GlobalForwardingRuleMetadataFilterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="filterLabels", required=true)
-      private final Input<List<GlobalForwardingRuleMetadataFilterFilterLabelArgs>> filterLabels;
+      private final Output<List<GlobalForwardingRuleMetadataFilterFilterLabelArgs>> filterLabels;
 
-    public Input<List<GlobalForwardingRuleMetadataFilterFilterLabelArgs>> getFilterLabels() {
+    public Output<List<GlobalForwardingRuleMetadataFilterFilterLabelArgs>> getFilterLabels() {
         return this.filterLabels;
     }
 
@@ -40,22 +40,22 @@ public final class GlobalForwardingRuleMetadataFilterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="filterMatchCriteria", required=true)
-      private final Input<String> filterMatchCriteria;
+      private final Output<String> filterMatchCriteria;
 
-    public Input<String> getFilterMatchCriteria() {
+    public Output<String> getFilterMatchCriteria() {
         return this.filterMatchCriteria;
     }
 
     public GlobalForwardingRuleMetadataFilterArgs(
-        Input<List<GlobalForwardingRuleMetadataFilterFilterLabelArgs>> filterLabels,
-        Input<String> filterMatchCriteria) {
+        Output<List<GlobalForwardingRuleMetadataFilterFilterLabelArgs>> filterLabels,
+        Output<String> filterMatchCriteria) {
         this.filterLabels = Objects.requireNonNull(filterLabels, "expected parameter 'filterLabels' to be non-null");
         this.filterMatchCriteria = Objects.requireNonNull(filterMatchCriteria, "expected parameter 'filterMatchCriteria' to be non-null");
     }
 
     private GlobalForwardingRuleMetadataFilterArgs() {
-        this.filterLabels = Input.empty();
-        this.filterMatchCriteria = Input.empty();
+        this.filterLabels = Output.empty();
+        this.filterMatchCriteria = Output.empty();
     }
 
     public static Builder builder() {
@@ -67,8 +67,8 @@ public final class GlobalForwardingRuleMetadataFilterArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private Input<List<GlobalForwardingRuleMetadataFilterFilterLabelArgs>> filterLabels;
-        private Input<String> filterMatchCriteria;
+        private Output<List<GlobalForwardingRuleMetadataFilterFilterLabelArgs>> filterLabels;
+        private Output<String> filterMatchCriteria;
 
         public Builder() {
     	      // Empty
@@ -80,23 +80,23 @@ public final class GlobalForwardingRuleMetadataFilterArgs extends io.pulumi.reso
     	      this.filterMatchCriteria = defaults.filterMatchCriteria;
         }
 
-        public Builder filterLabels(Input<List<GlobalForwardingRuleMetadataFilterFilterLabelArgs>> filterLabels) {
+        public Builder filterLabels(Output<List<GlobalForwardingRuleMetadataFilterFilterLabelArgs>> filterLabels) {
             this.filterLabels = Objects.requireNonNull(filterLabels);
             return this;
         }
 
         public Builder filterLabels(List<GlobalForwardingRuleMetadataFilterFilterLabelArgs> filterLabels) {
-            this.filterLabels = Input.of(Objects.requireNonNull(filterLabels));
+            this.filterLabels = Output.of(Objects.requireNonNull(filterLabels));
             return this;
         }
 
-        public Builder filterMatchCriteria(Input<String> filterMatchCriteria) {
+        public Builder filterMatchCriteria(Output<String> filterMatchCriteria) {
             this.filterMatchCriteria = Objects.requireNonNull(filterMatchCriteria);
             return this;
         }
 
         public Builder filterMatchCriteria(String filterMatchCriteria) {
-            this.filterMatchCriteria = Input.of(Objects.requireNonNull(filterMatchCriteria));
+            this.filterMatchCriteria = Output.of(Objects.requireNonNull(filterMatchCriteria));
             return this;
         }
         public GlobalForwardingRuleMetadataFilterArgs build() {

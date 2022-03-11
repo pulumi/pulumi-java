@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkconnectivity_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.networkconnectivity_v1.inputs.RouterApplianceInstanceArgs;
 import java.lang.Boolean;
@@ -25,10 +25,10 @@ public final class LinkedRouterApplianceInstancesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="instances")
-      private final @Nullable Input<List<RouterApplianceInstanceArgs>> instances;
+      private final @Nullable Output<List<RouterApplianceInstanceArgs>> instances;
 
-    public Input<List<RouterApplianceInstanceArgs>> getInstances() {
-        return this.instances == null ? Input.empty() : this.instances;
+    public Output<List<RouterApplianceInstanceArgs>> getInstances() {
+        return this.instances == null ? Output.empty() : this.instances;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class LinkedRouterApplianceInstancesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="siteToSiteDataTransfer")
-      private final @Nullable Input<Boolean> siteToSiteDataTransfer;
+      private final @Nullable Output<Boolean> siteToSiteDataTransfer;
 
-    public Input<Boolean> getSiteToSiteDataTransfer() {
-        return this.siteToSiteDataTransfer == null ? Input.empty() : this.siteToSiteDataTransfer;
+    public Output<Boolean> getSiteToSiteDataTransfer() {
+        return this.siteToSiteDataTransfer == null ? Output.empty() : this.siteToSiteDataTransfer;
     }
 
     public LinkedRouterApplianceInstancesArgs(
-        @Nullable Input<List<RouterApplianceInstanceArgs>> instances,
-        @Nullable Input<Boolean> siteToSiteDataTransfer) {
+        @Nullable Output<List<RouterApplianceInstanceArgs>> instances,
+        @Nullable Output<Boolean> siteToSiteDataTransfer) {
         this.instances = instances;
         this.siteToSiteDataTransfer = siteToSiteDataTransfer;
     }
 
     private LinkedRouterApplianceInstancesArgs() {
-        this.instances = Input.empty();
-        this.siteToSiteDataTransfer = Input.empty();
+        this.instances = Output.empty();
+        this.siteToSiteDataTransfer = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class LinkedRouterApplianceInstancesArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<List<RouterApplianceInstanceArgs>> instances;
-        private @Nullable Input<Boolean> siteToSiteDataTransfer;
+        private @Nullable Output<List<RouterApplianceInstanceArgs>> instances;
+        private @Nullable Output<Boolean> siteToSiteDataTransfer;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class LinkedRouterApplianceInstancesArgs extends io.pulumi.resource
     	      this.siteToSiteDataTransfer = defaults.siteToSiteDataTransfer;
         }
 
-        public Builder instances(@Nullable Input<List<RouterApplianceInstanceArgs>> instances) {
+        public Builder instances(@Nullable Output<List<RouterApplianceInstanceArgs>> instances) {
             this.instances = instances;
             return this;
         }
 
         public Builder instances(@Nullable List<RouterApplianceInstanceArgs> instances) {
-            this.instances = Input.ofNullable(instances);
+            this.instances = Output.ofNullable(instances);
             return this;
         }
 
-        public Builder siteToSiteDataTransfer(@Nullable Input<Boolean> siteToSiteDataTransfer) {
+        public Builder siteToSiteDataTransfer(@Nullable Output<Boolean> siteToSiteDataTransfer) {
             this.siteToSiteDataTransfer = siteToSiteDataTransfer;
             return this;
         }
 
         public Builder siteToSiteDataTransfer(@Nullable Boolean siteToSiteDataTransfer) {
-            this.siteToSiteDataTransfer = Input.ofNullable(siteToSiteDataTransfer);
+            this.siteToSiteDataTransfer = Output.ofNullable(siteToSiteDataTransfer);
             return this;
         }
         public LinkedRouterApplianceInstancesArgs build() {

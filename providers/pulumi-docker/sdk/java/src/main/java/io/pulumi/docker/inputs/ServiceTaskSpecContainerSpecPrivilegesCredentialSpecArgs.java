@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class ServiceTaskSpecContainerSpecPrivilegesCredentialSpecArgs exte
     public static final ServiceTaskSpecContainerSpecPrivilegesCredentialSpecArgs Empty = new ServiceTaskSpecContainerSpecPrivilegesCredentialSpecArgs();
 
     @InputImport(name="file")
-      private final @Nullable Input<String> file;
+      private final @Nullable Output<String> file;
 
-    public Input<String> getFile() {
-        return this.file == null ? Input.empty() : this.file;
+    public Output<String> getFile() {
+        return this.file == null ? Output.empty() : this.file;
     }
 
     @InputImport(name="registry")
-      private final @Nullable Input<String> registry;
+      private final @Nullable Output<String> registry;
 
-    public Input<String> getRegistry() {
-        return this.registry == null ? Input.empty() : this.registry;
+    public Output<String> getRegistry() {
+        return this.registry == null ? Output.empty() : this.registry;
     }
 
     public ServiceTaskSpecContainerSpecPrivilegesCredentialSpecArgs(
-        @Nullable Input<String> file,
-        @Nullable Input<String> registry) {
+        @Nullable Output<String> file,
+        @Nullable Output<String> registry) {
         this.file = file;
         this.registry = registry;
     }
 
     private ServiceTaskSpecContainerSpecPrivilegesCredentialSpecArgs() {
-        this.file = Input.empty();
-        this.registry = Input.empty();
+        this.file = Output.empty();
+        this.registry = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class ServiceTaskSpecContainerSpecPrivilegesCredentialSpecArgs exte
     }
 
     public static final class Builder {
-        private @Nullable Input<String> file;
-        private @Nullable Input<String> registry;
+        private @Nullable Output<String> file;
+        private @Nullable Output<String> registry;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class ServiceTaskSpecContainerSpecPrivilegesCredentialSpecArgs exte
     	      this.registry = defaults.registry;
         }
 
-        public Builder file(@Nullable Input<String> file) {
+        public Builder file(@Nullable Output<String> file) {
             this.file = file;
             return this;
         }
 
         public Builder file(@Nullable String file) {
-            this.file = Input.ofNullable(file);
+            this.file = Output.ofNullable(file);
             return this;
         }
 
-        public Builder registry(@Nullable Input<String> registry) {
+        public Builder registry(@Nullable Output<String> registry) {
             this.registry = registry;
             return this;
         }
 
         public Builder registry(@Nullable String registry) {
-            this.registry = Input.ofNullable(registry);
+            this.registry = Output.ofNullable(registry);
             return this;
         }
         public ServiceTaskSpecContainerSpecPrivilegesCredentialSpecArgs build() {

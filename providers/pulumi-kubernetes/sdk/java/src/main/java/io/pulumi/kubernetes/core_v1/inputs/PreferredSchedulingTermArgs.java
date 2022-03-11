@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.NodeSelectorTermArgs;
 import java.lang.Integer;
@@ -23,9 +23,9 @@ public final class PreferredSchedulingTermArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="preference", required=true)
-      private final Input<NodeSelectorTermArgs> preference;
+      private final Output<NodeSelectorTermArgs> preference;
 
-    public Input<NodeSelectorTermArgs> getPreference() {
+    public Output<NodeSelectorTermArgs> getPreference() {
         return this.preference;
     }
 
@@ -34,22 +34,22 @@ public final class PreferredSchedulingTermArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="weight", required=true)
-      private final Input<Integer> weight;
+      private final Output<Integer> weight;
 
-    public Input<Integer> getWeight() {
+    public Output<Integer> getWeight() {
         return this.weight;
     }
 
     public PreferredSchedulingTermArgs(
-        Input<NodeSelectorTermArgs> preference,
-        Input<Integer> weight) {
+        Output<NodeSelectorTermArgs> preference,
+        Output<Integer> weight) {
         this.preference = Objects.requireNonNull(preference, "expected parameter 'preference' to be non-null");
         this.weight = Objects.requireNonNull(weight, "expected parameter 'weight' to be non-null");
     }
 
     private PreferredSchedulingTermArgs() {
-        this.preference = Input.empty();
-        this.weight = Input.empty();
+        this.preference = Output.empty();
+        this.weight = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class PreferredSchedulingTermArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<NodeSelectorTermArgs> preference;
-        private Input<Integer> weight;
+        private Output<NodeSelectorTermArgs> preference;
+        private Output<Integer> weight;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class PreferredSchedulingTermArgs extends io.pulumi.resources.Resou
     	      this.weight = defaults.weight;
         }
 
-        public Builder preference(Input<NodeSelectorTermArgs> preference) {
+        public Builder preference(Output<NodeSelectorTermArgs> preference) {
             this.preference = Objects.requireNonNull(preference);
             return this;
         }
 
         public Builder preference(NodeSelectorTermArgs preference) {
-            this.preference = Input.of(Objects.requireNonNull(preference));
+            this.preference = Output.of(Objects.requireNonNull(preference));
             return this;
         }
 
-        public Builder weight(Input<Integer> weight) {
+        public Builder weight(Output<Integer> weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }
 
         public Builder weight(Integer weight) {
-            this.weight = Input.of(Objects.requireNonNull(weight));
+            this.weight = Output.of(Objects.requireNonNull(weight));
             return this;
         }
         public PreferredSchedulingTermArgs build() {

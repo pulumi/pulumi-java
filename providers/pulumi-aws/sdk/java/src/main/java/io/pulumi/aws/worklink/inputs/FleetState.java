@@ -5,7 +5,7 @@ package io.pulumi.aws.worklink.inputs;
 
 import io.pulumi.aws.worklink.inputs.FleetIdentityProviderGetArgs;
 import io.pulumi.aws.worklink.inputs.FleetNetworkGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="auditStreamArn")
-      private final @Nullable Input<String> auditStreamArn;
+      private final @Nullable Output<String> auditStreamArn;
 
-    public Input<String> getAuditStreamArn() {
-        return this.auditStreamArn == null ? Input.empty() : this.auditStreamArn;
+    public Output<String> getAuditStreamArn() {
+        return this.auditStreamArn == null ? Output.empty() : this.auditStreamArn;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="companyCode")
-      private final @Nullable Input<String> companyCode;
+      private final @Nullable Output<String> companyCode;
 
-    public Input<String> getCompanyCode() {
-        return this.companyCode == null ? Input.empty() : this.companyCode;
+    public Output<String> getCompanyCode() {
+        return this.companyCode == null ? Output.empty() : this.companyCode;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdTime")
-      private final @Nullable Input<String> createdTime;
+      private final @Nullable Output<String> createdTime;
 
-    public Input<String> getCreatedTime() {
-        return this.createdTime == null ? Input.empty() : this.createdTime;
+    public Output<String> getCreatedTime() {
+        return this.createdTime == null ? Output.empty() : this.createdTime;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceCaCertificate")
-      private final @Nullable Input<String> deviceCaCertificate;
+      private final @Nullable Output<String> deviceCaCertificate;
 
-    public Input<String> getDeviceCaCertificate() {
-        return this.deviceCaCertificate == null ? Input.empty() : this.deviceCaCertificate;
+    public Output<String> getDeviceCaCertificate() {
+        return this.deviceCaCertificate == null ? Output.empty() : this.deviceCaCertificate;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identityProvider")
-      private final @Nullable Input<FleetIdentityProviderGetArgs> identityProvider;
+      private final @Nullable Output<FleetIdentityProviderGetArgs> identityProvider;
 
-    public Input<FleetIdentityProviderGetArgs> getIdentityProvider() {
-        return this.identityProvider == null ? Input.empty() : this.identityProvider;
+    public Output<FleetIdentityProviderGetArgs> getIdentityProvider() {
+        return this.identityProvider == null ? Output.empty() : this.identityProvider;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastUpdatedTime")
-      private final @Nullable Input<String> lastUpdatedTime;
+      private final @Nullable Output<String> lastUpdatedTime;
 
-    public Input<String> getLastUpdatedTime() {
-        return this.lastUpdatedTime == null ? Input.empty() : this.lastUpdatedTime;
+    public Output<String> getLastUpdatedTime() {
+        return this.lastUpdatedTime == null ? Output.empty() : this.lastUpdatedTime;
     }
 
     /**
@@ -110,10 +110,10 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -121,10 +121,10 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-      private final @Nullable Input<FleetNetworkGetArgs> network;
+      private final @Nullable Output<FleetNetworkGetArgs> network;
 
-    public Input<FleetNetworkGetArgs> getNetwork() {
-        return this.network == null ? Input.empty() : this.network;
+    public Output<FleetNetworkGetArgs> getNetwork() {
+        return this.network == null ? Output.empty() : this.network;
     }
 
     /**
@@ -132,24 +132,24 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="optimizeForEndUserLocation")
-      private final @Nullable Input<Boolean> optimizeForEndUserLocation;
+      private final @Nullable Output<Boolean> optimizeForEndUserLocation;
 
-    public Input<Boolean> getOptimizeForEndUserLocation() {
-        return this.optimizeForEndUserLocation == null ? Input.empty() : this.optimizeForEndUserLocation;
+    public Output<Boolean> getOptimizeForEndUserLocation() {
+        return this.optimizeForEndUserLocation == null ? Output.empty() : this.optimizeForEndUserLocation;
     }
 
     public FleetState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> auditStreamArn,
-        @Nullable Input<String> companyCode,
-        @Nullable Input<String> createdTime,
-        @Nullable Input<String> deviceCaCertificate,
-        @Nullable Input<String> displayName,
-        @Nullable Input<FleetIdentityProviderGetArgs> identityProvider,
-        @Nullable Input<String> lastUpdatedTime,
-        @Nullable Input<String> name,
-        @Nullable Input<FleetNetworkGetArgs> network,
-        @Nullable Input<Boolean> optimizeForEndUserLocation) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> auditStreamArn,
+        @Nullable Output<String> companyCode,
+        @Nullable Output<String> createdTime,
+        @Nullable Output<String> deviceCaCertificate,
+        @Nullable Output<String> displayName,
+        @Nullable Output<FleetIdentityProviderGetArgs> identityProvider,
+        @Nullable Output<String> lastUpdatedTime,
+        @Nullable Output<String> name,
+        @Nullable Output<FleetNetworkGetArgs> network,
+        @Nullable Output<Boolean> optimizeForEndUserLocation) {
         this.arn = arn;
         this.auditStreamArn = auditStreamArn;
         this.companyCode = companyCode;
@@ -164,17 +164,17 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
     }
 
     private FleetState() {
-        this.arn = Input.empty();
-        this.auditStreamArn = Input.empty();
-        this.companyCode = Input.empty();
-        this.createdTime = Input.empty();
-        this.deviceCaCertificate = Input.empty();
-        this.displayName = Input.empty();
-        this.identityProvider = Input.empty();
-        this.lastUpdatedTime = Input.empty();
-        this.name = Input.empty();
-        this.network = Input.empty();
-        this.optimizeForEndUserLocation = Input.empty();
+        this.arn = Output.empty();
+        this.auditStreamArn = Output.empty();
+        this.companyCode = Output.empty();
+        this.createdTime = Output.empty();
+        this.deviceCaCertificate = Output.empty();
+        this.displayName = Output.empty();
+        this.identityProvider = Output.empty();
+        this.lastUpdatedTime = Output.empty();
+        this.name = Output.empty();
+        this.network = Output.empty();
+        this.optimizeForEndUserLocation = Output.empty();
     }
 
     public static Builder builder() {
@@ -186,17 +186,17 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> auditStreamArn;
-        private @Nullable Input<String> companyCode;
-        private @Nullable Input<String> createdTime;
-        private @Nullable Input<String> deviceCaCertificate;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<FleetIdentityProviderGetArgs> identityProvider;
-        private @Nullable Input<String> lastUpdatedTime;
-        private @Nullable Input<String> name;
-        private @Nullable Input<FleetNetworkGetArgs> network;
-        private @Nullable Input<Boolean> optimizeForEndUserLocation;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> auditStreamArn;
+        private @Nullable Output<String> companyCode;
+        private @Nullable Output<String> createdTime;
+        private @Nullable Output<String> deviceCaCertificate;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<FleetIdentityProviderGetArgs> identityProvider;
+        private @Nullable Output<String> lastUpdatedTime;
+        private @Nullable Output<String> name;
+        private @Nullable Output<FleetNetworkGetArgs> network;
+        private @Nullable Output<Boolean> optimizeForEndUserLocation;
 
         public Builder() {
     	      // Empty
@@ -217,113 +217,113 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
     	      this.optimizeForEndUserLocation = defaults.optimizeForEndUserLocation;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder auditStreamArn(@Nullable Input<String> auditStreamArn) {
+        public Builder auditStreamArn(@Nullable Output<String> auditStreamArn) {
             this.auditStreamArn = auditStreamArn;
             return this;
         }
 
         public Builder auditStreamArn(@Nullable String auditStreamArn) {
-            this.auditStreamArn = Input.ofNullable(auditStreamArn);
+            this.auditStreamArn = Output.ofNullable(auditStreamArn);
             return this;
         }
 
-        public Builder companyCode(@Nullable Input<String> companyCode) {
+        public Builder companyCode(@Nullable Output<String> companyCode) {
             this.companyCode = companyCode;
             return this;
         }
 
         public Builder companyCode(@Nullable String companyCode) {
-            this.companyCode = Input.ofNullable(companyCode);
+            this.companyCode = Output.ofNullable(companyCode);
             return this;
         }
 
-        public Builder createdTime(@Nullable Input<String> createdTime) {
+        public Builder createdTime(@Nullable Output<String> createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
         public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = Input.ofNullable(createdTime);
+            this.createdTime = Output.ofNullable(createdTime);
             return this;
         }
 
-        public Builder deviceCaCertificate(@Nullable Input<String> deviceCaCertificate) {
+        public Builder deviceCaCertificate(@Nullable Output<String> deviceCaCertificate) {
             this.deviceCaCertificate = deviceCaCertificate;
             return this;
         }
 
         public Builder deviceCaCertificate(@Nullable String deviceCaCertificate) {
-            this.deviceCaCertificate = Input.ofNullable(deviceCaCertificate);
+            this.deviceCaCertificate = Output.ofNullable(deviceCaCertificate);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder identityProvider(@Nullable Input<FleetIdentityProviderGetArgs> identityProvider) {
+        public Builder identityProvider(@Nullable Output<FleetIdentityProviderGetArgs> identityProvider) {
             this.identityProvider = identityProvider;
             return this;
         }
 
         public Builder identityProvider(@Nullable FleetIdentityProviderGetArgs identityProvider) {
-            this.identityProvider = Input.ofNullable(identityProvider);
+            this.identityProvider = Output.ofNullable(identityProvider);
             return this;
         }
 
-        public Builder lastUpdatedTime(@Nullable Input<String> lastUpdatedTime) {
+        public Builder lastUpdatedTime(@Nullable Output<String> lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
 
         public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
-            this.lastUpdatedTime = Input.ofNullable(lastUpdatedTime);
+            this.lastUpdatedTime = Output.ofNullable(lastUpdatedTime);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder network(@Nullable Input<FleetNetworkGetArgs> network) {
+        public Builder network(@Nullable Output<FleetNetworkGetArgs> network) {
             this.network = network;
             return this;
         }
 
         public Builder network(@Nullable FleetNetworkGetArgs network) {
-            this.network = Input.ofNullable(network);
+            this.network = Output.ofNullable(network);
             return this;
         }
 
-        public Builder optimizeForEndUserLocation(@Nullable Input<Boolean> optimizeForEndUserLocation) {
+        public Builder optimizeForEndUserLocation(@Nullable Output<Boolean> optimizeForEndUserLocation) {
             this.optimizeForEndUserLocation = optimizeForEndUserLocation;
             return this;
         }
 
         public Builder optimizeForEndUserLocation(@Nullable Boolean optimizeForEndUserLocation) {
-            this.optimizeForEndUserLocation = Input.ofNullable(optimizeForEndUserLocation);
+            this.optimizeForEndUserLocation = Output.ofNullable(optimizeForEndUserLocation);
             return this;
         }
         public FleetState build() {

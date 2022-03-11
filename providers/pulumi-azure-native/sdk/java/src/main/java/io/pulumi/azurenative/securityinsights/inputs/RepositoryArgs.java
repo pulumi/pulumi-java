@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.azurenative.securityinsights.inputs.ContentPathMapArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="branch")
-      private final @Nullable Input<String> branch;
+      private final @Nullable Output<String> branch;
 
-    public Input<String> getBranch() {
-        return this.branch == null ? Input.empty() : this.branch;
+    public Output<String> getBranch() {
+        return this.branch == null ? Output.empty() : this.branch;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deploymentLogsUrl")
-      private final @Nullable Input<String> deploymentLogsUrl;
+      private final @Nullable Output<String> deploymentLogsUrl;
 
-    public Input<String> getDeploymentLogsUrl() {
-        return this.deploymentLogsUrl == null ? Input.empty() : this.deploymentLogsUrl;
+    public Output<String> getDeploymentLogsUrl() {
+        return this.deploymentLogsUrl == null ? Output.empty() : this.deploymentLogsUrl;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayUrl")
-      private final @Nullable Input<String> displayUrl;
+      private final @Nullable Output<String> displayUrl;
 
-    public Input<String> getDisplayUrl() {
-        return this.displayUrl == null ? Input.empty() : this.displayUrl;
+    public Output<String> getDisplayUrl() {
+        return this.displayUrl == null ? Output.empty() : this.displayUrl;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pathMapping")
-      private final @Nullable Input<List<ContentPathMapArgs>> pathMapping;
+      private final @Nullable Output<List<ContentPathMapArgs>> pathMapping;
 
-    public Input<List<ContentPathMapArgs>> getPathMapping() {
-        return this.pathMapping == null ? Input.empty() : this.pathMapping;
+    public Output<List<ContentPathMapArgs>> getPathMapping() {
+        return this.pathMapping == null ? Output.empty() : this.pathMapping;
     }
 
     /**
@@ -69,18 +69,18 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="url")
-      private final @Nullable Input<String> url;
+      private final @Nullable Output<String> url;
 
-    public Input<String> getUrl() {
-        return this.url == null ? Input.empty() : this.url;
+    public Output<String> getUrl() {
+        return this.url == null ? Output.empty() : this.url;
     }
 
     public RepositoryArgs(
-        @Nullable Input<String> branch,
-        @Nullable Input<String> deploymentLogsUrl,
-        @Nullable Input<String> displayUrl,
-        @Nullable Input<List<ContentPathMapArgs>> pathMapping,
-        @Nullable Input<String> url) {
+        @Nullable Output<String> branch,
+        @Nullable Output<String> deploymentLogsUrl,
+        @Nullable Output<String> displayUrl,
+        @Nullable Output<List<ContentPathMapArgs>> pathMapping,
+        @Nullable Output<String> url) {
         this.branch = branch;
         this.deploymentLogsUrl = deploymentLogsUrl;
         this.displayUrl = displayUrl;
@@ -89,11 +89,11 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RepositoryArgs() {
-        this.branch = Input.empty();
-        this.deploymentLogsUrl = Input.empty();
-        this.displayUrl = Input.empty();
-        this.pathMapping = Input.empty();
-        this.url = Input.empty();
+        this.branch = Output.empty();
+        this.deploymentLogsUrl = Output.empty();
+        this.displayUrl = Output.empty();
+        this.pathMapping = Output.empty();
+        this.url = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> branch;
-        private @Nullable Input<String> deploymentLogsUrl;
-        private @Nullable Input<String> displayUrl;
-        private @Nullable Input<List<ContentPathMapArgs>> pathMapping;
-        private @Nullable Input<String> url;
+        private @Nullable Output<String> branch;
+        private @Nullable Output<String> deploymentLogsUrl;
+        private @Nullable Output<String> displayUrl;
+        private @Nullable Output<List<ContentPathMapArgs>> pathMapping;
+        private @Nullable Output<String> url;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.url = defaults.url;
         }
 
-        public Builder branch(@Nullable Input<String> branch) {
+        public Builder branch(@Nullable Output<String> branch) {
             this.branch = branch;
             return this;
         }
 
         public Builder branch(@Nullable String branch) {
-            this.branch = Input.ofNullable(branch);
+            this.branch = Output.ofNullable(branch);
             return this;
         }
 
-        public Builder deploymentLogsUrl(@Nullable Input<String> deploymentLogsUrl) {
+        public Builder deploymentLogsUrl(@Nullable Output<String> deploymentLogsUrl) {
             this.deploymentLogsUrl = deploymentLogsUrl;
             return this;
         }
 
         public Builder deploymentLogsUrl(@Nullable String deploymentLogsUrl) {
-            this.deploymentLogsUrl = Input.ofNullable(deploymentLogsUrl);
+            this.deploymentLogsUrl = Output.ofNullable(deploymentLogsUrl);
             return this;
         }
 
-        public Builder displayUrl(@Nullable Input<String> displayUrl) {
+        public Builder displayUrl(@Nullable Output<String> displayUrl) {
             this.displayUrl = displayUrl;
             return this;
         }
 
         public Builder displayUrl(@Nullable String displayUrl) {
-            this.displayUrl = Input.ofNullable(displayUrl);
+            this.displayUrl = Output.ofNullable(displayUrl);
             return this;
         }
 
-        public Builder pathMapping(@Nullable Input<List<ContentPathMapArgs>> pathMapping) {
+        public Builder pathMapping(@Nullable Output<List<ContentPathMapArgs>> pathMapping) {
             this.pathMapping = pathMapping;
             return this;
         }
 
         public Builder pathMapping(@Nullable List<ContentPathMapArgs> pathMapping) {
-            this.pathMapping = Input.ofNullable(pathMapping);
+            this.pathMapping = Output.ofNullable(pathMapping);
             return this;
         }
 
-        public Builder url(@Nullable Input<String> url) {
+        public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
 
         public Builder url(@Nullable String url) {
-            this.url = Input.ofNullable(url);
+            this.url = Output.ofNullable(url);
             return this;
         }
         public RepositoryArgs build() {

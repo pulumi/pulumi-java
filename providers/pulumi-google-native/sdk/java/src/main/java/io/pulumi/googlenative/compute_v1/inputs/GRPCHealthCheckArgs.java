@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.enums.GRPCHealthCheckPortSpecification;
 import java.lang.Integer;
@@ -21,10 +21,10 @@ public final class GRPCHealthCheckArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="grpcServiceName")
-      private final @Nullable Input<String> grpcServiceName;
+      private final @Nullable Output<String> grpcServiceName;
 
-    public Input<String> getGrpcServiceName() {
-        return this.grpcServiceName == null ? Input.empty() : this.grpcServiceName;
+    public Output<String> getGrpcServiceName() {
+        return this.grpcServiceName == null ? Output.empty() : this.grpcServiceName;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class GRPCHealthCheckArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class GRPCHealthCheckArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="portName")
-      private final @Nullable Input<String> portName;
+      private final @Nullable Output<String> portName;
 
-    public Input<String> getPortName() {
-        return this.portName == null ? Input.empty() : this.portName;
+    public Output<String> getPortName() {
+        return this.portName == null ? Output.empty() : this.portName;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class GRPCHealthCheckArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="portSpecification")
-      private final @Nullable Input<GRPCHealthCheckPortSpecification> portSpecification;
+      private final @Nullable Output<GRPCHealthCheckPortSpecification> portSpecification;
 
-    public Input<GRPCHealthCheckPortSpecification> getPortSpecification() {
-        return this.portSpecification == null ? Input.empty() : this.portSpecification;
+    public Output<GRPCHealthCheckPortSpecification> getPortSpecification() {
+        return this.portSpecification == null ? Output.empty() : this.portSpecification;
     }
 
     public GRPCHealthCheckArgs(
-        @Nullable Input<String> grpcServiceName,
-        @Nullable Input<Integer> port,
-        @Nullable Input<String> portName,
-        @Nullable Input<GRPCHealthCheckPortSpecification> portSpecification) {
+        @Nullable Output<String> grpcServiceName,
+        @Nullable Output<Integer> port,
+        @Nullable Output<String> portName,
+        @Nullable Output<GRPCHealthCheckPortSpecification> portSpecification) {
         this.grpcServiceName = grpcServiceName;
         this.port = port;
         this.portName = portName;
@@ -72,10 +72,10 @@ public final class GRPCHealthCheckArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private GRPCHealthCheckArgs() {
-        this.grpcServiceName = Input.empty();
-        this.port = Input.empty();
-        this.portName = Input.empty();
-        this.portSpecification = Input.empty();
+        this.grpcServiceName = Output.empty();
+        this.port = Output.empty();
+        this.portName = Output.empty();
+        this.portSpecification = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class GRPCHealthCheckArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> grpcServiceName;
-        private @Nullable Input<Integer> port;
-        private @Nullable Input<String> portName;
-        private @Nullable Input<GRPCHealthCheckPortSpecification> portSpecification;
+        private @Nullable Output<String> grpcServiceName;
+        private @Nullable Output<Integer> port;
+        private @Nullable Output<String> portName;
+        private @Nullable Output<GRPCHealthCheckPortSpecification> portSpecification;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class GRPCHealthCheckArgs extends io.pulumi.resources.ResourceArgs 
     	      this.portSpecification = defaults.portSpecification;
         }
 
-        public Builder grpcServiceName(@Nullable Input<String> grpcServiceName) {
+        public Builder grpcServiceName(@Nullable Output<String> grpcServiceName) {
             this.grpcServiceName = grpcServiceName;
             return this;
         }
 
         public Builder grpcServiceName(@Nullable String grpcServiceName) {
-            this.grpcServiceName = Input.ofNullable(grpcServiceName);
+            this.grpcServiceName = Output.ofNullable(grpcServiceName);
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder portName(@Nullable Input<String> portName) {
+        public Builder portName(@Nullable Output<String> portName) {
             this.portName = portName;
             return this;
         }
 
         public Builder portName(@Nullable String portName) {
-            this.portName = Input.ofNullable(portName);
+            this.portName = Output.ofNullable(portName);
             return this;
         }
 
-        public Builder portSpecification(@Nullable Input<GRPCHealthCheckPortSpecification> portSpecification) {
+        public Builder portSpecification(@Nullable Output<GRPCHealthCheckPortSpecification> portSpecification) {
             this.portSpecification = portSpecification;
             return this;
         }
 
         public Builder portSpecification(@Nullable GRPCHealthCheckPortSpecification portSpecification) {
-            this.portSpecification = Input.ofNullable(portSpecification);
+            this.portSpecification = Output.ofNullable(portSpecification);
             return this;
         }
         public GRPCHealthCheckArgs build() {

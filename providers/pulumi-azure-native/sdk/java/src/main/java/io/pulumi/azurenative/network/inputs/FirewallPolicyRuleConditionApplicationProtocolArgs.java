@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.enums.FirewallPolicyRuleConditionApplicationProtocolType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class FirewallPolicyRuleConditionApplicationProtocolArgs extends io
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class FirewallPolicyRuleConditionApplicationProtocolArgs extends io
      * 
      */
     @InputImport(name="protocolType")
-      private final @Nullable Input<Either<String,FirewallPolicyRuleConditionApplicationProtocolType>> protocolType;
+      private final @Nullable Output<Either<String,FirewallPolicyRuleConditionApplicationProtocolType>> protocolType;
 
-    public Input<Either<String,FirewallPolicyRuleConditionApplicationProtocolType>> getProtocolType() {
-        return this.protocolType == null ? Input.empty() : this.protocolType;
+    public Output<Either<String,FirewallPolicyRuleConditionApplicationProtocolType>> getProtocolType() {
+        return this.protocolType == null ? Output.empty() : this.protocolType;
     }
 
     public FirewallPolicyRuleConditionApplicationProtocolArgs(
-        @Nullable Input<Integer> port,
-        @Nullable Input<Either<String,FirewallPolicyRuleConditionApplicationProtocolType>> protocolType) {
+        @Nullable Output<Integer> port,
+        @Nullable Output<Either<String,FirewallPolicyRuleConditionApplicationProtocolType>> protocolType) {
         this.port = port;
         this.protocolType = protocolType;
     }
 
     private FirewallPolicyRuleConditionApplicationProtocolArgs() {
-        this.port = Input.empty();
-        this.protocolType = Input.empty();
+        this.port = Output.empty();
+        this.protocolType = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class FirewallPolicyRuleConditionApplicationProtocolArgs extends io
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> port;
-        private @Nullable Input<Either<String,FirewallPolicyRuleConditionApplicationProtocolType>> protocolType;
+        private @Nullable Output<Integer> port;
+        private @Nullable Output<Either<String,FirewallPolicyRuleConditionApplicationProtocolType>> protocolType;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class FirewallPolicyRuleConditionApplicationProtocolArgs extends io
     	      this.protocolType = defaults.protocolType;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder protocolType(@Nullable Input<Either<String,FirewallPolicyRuleConditionApplicationProtocolType>> protocolType) {
+        public Builder protocolType(@Nullable Output<Either<String,FirewallPolicyRuleConditionApplicationProtocolType>> protocolType) {
             this.protocolType = protocolType;
             return this;
         }
 
         public Builder protocolType(@Nullable Either<String,FirewallPolicyRuleConditionApplicationProtocolType> protocolType) {
-            this.protocolType = Input.ofNullable(protocolType);
+            this.protocolType = Output.ofNullable(protocolType);
             return this;
         }
         public FirewallPolicyRuleConditionApplicationProtocolArgs build() {

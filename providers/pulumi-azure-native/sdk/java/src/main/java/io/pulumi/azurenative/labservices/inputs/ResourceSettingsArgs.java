@@ -6,7 +6,7 @@ package io.pulumi.azurenative.labservices.inputs;
 import io.pulumi.azurenative.labservices.enums.ManagedLabVmSize;
 import io.pulumi.azurenative.labservices.inputs.ReferenceVmArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class ResourceSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="galleryImageResourceId")
-      private final @Nullable Input<String> galleryImageResourceId;
+      private final @Nullable Output<String> galleryImageResourceId;
 
-    public Input<String> getGalleryImageResourceId() {
-        return this.galleryImageResourceId == null ? Input.empty() : this.galleryImageResourceId;
+    public Output<String> getGalleryImageResourceId() {
+        return this.galleryImageResourceId == null ? Output.empty() : this.galleryImageResourceId;
     }
 
     /**
@@ -37,9 +37,9 @@ public final class ResourceSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="referenceVm", required=true)
-      private final Input<ReferenceVmArgs> referenceVm;
+      private final Output<ReferenceVmArgs> referenceVm;
 
-    public Input<ReferenceVmArgs> getReferenceVm() {
+    public Output<ReferenceVmArgs> getReferenceVm() {
         return this.referenceVm;
     }
 
@@ -48,25 +48,25 @@ public final class ResourceSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="size")
-      private final @Nullable Input<Either<String,ManagedLabVmSize>> size;
+      private final @Nullable Output<Either<String,ManagedLabVmSize>> size;
 
-    public Input<Either<String,ManagedLabVmSize>> getSize() {
-        return this.size == null ? Input.empty() : this.size;
+    public Output<Either<String,ManagedLabVmSize>> getSize() {
+        return this.size == null ? Output.empty() : this.size;
     }
 
     public ResourceSettingsArgs(
-        @Nullable Input<String> galleryImageResourceId,
-        Input<ReferenceVmArgs> referenceVm,
-        @Nullable Input<Either<String,ManagedLabVmSize>> size) {
+        @Nullable Output<String> galleryImageResourceId,
+        Output<ReferenceVmArgs> referenceVm,
+        @Nullable Output<Either<String,ManagedLabVmSize>> size) {
         this.galleryImageResourceId = galleryImageResourceId;
         this.referenceVm = Objects.requireNonNull(referenceVm, "expected parameter 'referenceVm' to be non-null");
         this.size = size;
     }
 
     private ResourceSettingsArgs() {
-        this.galleryImageResourceId = Input.empty();
-        this.referenceVm = Input.empty();
-        this.size = Input.empty();
+        this.galleryImageResourceId = Output.empty();
+        this.referenceVm = Output.empty();
+        this.size = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class ResourceSettingsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> galleryImageResourceId;
-        private Input<ReferenceVmArgs> referenceVm;
-        private @Nullable Input<Either<String,ManagedLabVmSize>> size;
+        private @Nullable Output<String> galleryImageResourceId;
+        private Output<ReferenceVmArgs> referenceVm;
+        private @Nullable Output<Either<String,ManagedLabVmSize>> size;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class ResourceSettingsArgs extends io.pulumi.resources.ResourceArgs
     	      this.size = defaults.size;
         }
 
-        public Builder galleryImageResourceId(@Nullable Input<String> galleryImageResourceId) {
+        public Builder galleryImageResourceId(@Nullable Output<String> galleryImageResourceId) {
             this.galleryImageResourceId = galleryImageResourceId;
             return this;
         }
 
         public Builder galleryImageResourceId(@Nullable String galleryImageResourceId) {
-            this.galleryImageResourceId = Input.ofNullable(galleryImageResourceId);
+            this.galleryImageResourceId = Output.ofNullable(galleryImageResourceId);
             return this;
         }
 
-        public Builder referenceVm(Input<ReferenceVmArgs> referenceVm) {
+        public Builder referenceVm(Output<ReferenceVmArgs> referenceVm) {
             this.referenceVm = Objects.requireNonNull(referenceVm);
             return this;
         }
 
         public Builder referenceVm(ReferenceVmArgs referenceVm) {
-            this.referenceVm = Input.of(Objects.requireNonNull(referenceVm));
+            this.referenceVm = Output.of(Objects.requireNonNull(referenceVm));
             return this;
         }
 
-        public Builder size(@Nullable Input<Either<String,ManagedLabVmSize>> size) {
+        public Builder size(@Nullable Output<Either<String,ManagedLabVmSize>> size) {
             this.size = size;
             return this;
         }
 
         public Builder size(@Nullable Either<String,ManagedLabVmSize> size) {
-            this.size = Input.ofNullable(size);
+            this.size = Output.ofNullable(size);
             return this;
         }
         public ResourceSettingsArgs build() {

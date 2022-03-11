@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.servicecatalog;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,39 +14,39 @@ public final class ServiceActionAssociationArgs extends io.pulumi.resources.Reso
     public static final ServiceActionAssociationArgs Empty = new ServiceActionAssociationArgs();
 
     @InputImport(name="productId", required=true)
-      private final Input<String> productId;
+      private final Output<String> productId;
 
-    public Input<String> getProductId() {
+    public Output<String> getProductId() {
         return this.productId;
     }
 
     @InputImport(name="provisioningArtifactId", required=true)
-      private final Input<String> provisioningArtifactId;
+      private final Output<String> provisioningArtifactId;
 
-    public Input<String> getProvisioningArtifactId() {
+    public Output<String> getProvisioningArtifactId() {
         return this.provisioningArtifactId;
     }
 
     @InputImport(name="serviceActionId", required=true)
-      private final Input<String> serviceActionId;
+      private final Output<String> serviceActionId;
 
-    public Input<String> getServiceActionId() {
+    public Output<String> getServiceActionId() {
         return this.serviceActionId;
     }
 
     public ServiceActionAssociationArgs(
-        Input<String> productId,
-        Input<String> provisioningArtifactId,
-        Input<String> serviceActionId) {
+        Output<String> productId,
+        Output<String> provisioningArtifactId,
+        Output<String> serviceActionId) {
         this.productId = Objects.requireNonNull(productId, "expected parameter 'productId' to be non-null");
         this.provisioningArtifactId = Objects.requireNonNull(provisioningArtifactId, "expected parameter 'provisioningArtifactId' to be non-null");
         this.serviceActionId = Objects.requireNonNull(serviceActionId, "expected parameter 'serviceActionId' to be non-null");
     }
 
     private ServiceActionAssociationArgs() {
-        this.productId = Input.empty();
-        this.provisioningArtifactId = Input.empty();
-        this.serviceActionId = Input.empty();
+        this.productId = Output.empty();
+        this.provisioningArtifactId = Output.empty();
+        this.serviceActionId = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,9 +58,9 @@ public final class ServiceActionAssociationArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> productId;
-        private Input<String> provisioningArtifactId;
-        private Input<String> serviceActionId;
+        private Output<String> productId;
+        private Output<String> provisioningArtifactId;
+        private Output<String> serviceActionId;
 
         public Builder() {
     	      // Empty
@@ -73,33 +73,33 @@ public final class ServiceActionAssociationArgs extends io.pulumi.resources.Reso
     	      this.serviceActionId = defaults.serviceActionId;
         }
 
-        public Builder productId(Input<String> productId) {
+        public Builder productId(Output<String> productId) {
             this.productId = Objects.requireNonNull(productId);
             return this;
         }
 
         public Builder productId(String productId) {
-            this.productId = Input.of(Objects.requireNonNull(productId));
+            this.productId = Output.of(Objects.requireNonNull(productId));
             return this;
         }
 
-        public Builder provisioningArtifactId(Input<String> provisioningArtifactId) {
+        public Builder provisioningArtifactId(Output<String> provisioningArtifactId) {
             this.provisioningArtifactId = Objects.requireNonNull(provisioningArtifactId);
             return this;
         }
 
         public Builder provisioningArtifactId(String provisioningArtifactId) {
-            this.provisioningArtifactId = Input.of(Objects.requireNonNull(provisioningArtifactId));
+            this.provisioningArtifactId = Output.of(Objects.requireNonNull(provisioningArtifactId));
             return this;
         }
 
-        public Builder serviceActionId(Input<String> serviceActionId) {
+        public Builder serviceActionId(Output<String> serviceActionId) {
             this.serviceActionId = Objects.requireNonNull(serviceActionId);
             return this;
         }
 
         public Builder serviceActionId(String serviceActionId) {
-            this.serviceActionId = Input.of(Objects.requireNonNull(serviceActionId));
+            this.serviceActionId = Output.of(Objects.requireNonNull(serviceActionId));
             return this;
         }
         public ServiceActionAssociationArgs build() {

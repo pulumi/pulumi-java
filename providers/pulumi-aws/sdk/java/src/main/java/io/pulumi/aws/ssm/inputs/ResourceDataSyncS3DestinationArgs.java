@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ssm.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class ResourceDataSyncS3DestinationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="bucketName", required=true)
-      private final Input<String> bucketName;
+      private final Output<String> bucketName;
 
-    public Input<String> getBucketName() {
+    public Output<String> getBucketName() {
         return this.bucketName;
     }
 
@@ -30,10 +30,10 @@ public final class ResourceDataSyncS3DestinationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="kmsKeyArn")
-      private final @Nullable Input<String> kmsKeyArn;
+      private final @Nullable Output<String> kmsKeyArn;
 
-    public Input<String> getKmsKeyArn() {
-        return this.kmsKeyArn == null ? Input.empty() : this.kmsKeyArn;
+    public Output<String> getKmsKeyArn() {
+        return this.kmsKeyArn == null ? Output.empty() : this.kmsKeyArn;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ResourceDataSyncS3DestinationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="prefix")
-      private final @Nullable Input<String> prefix;
+      private final @Nullable Output<String> prefix;
 
-    public Input<String> getPrefix() {
-        return this.prefix == null ? Input.empty() : this.prefix;
+    public Output<String> getPrefix() {
+        return this.prefix == null ? Output.empty() : this.prefix;
     }
 
     /**
@@ -52,9 +52,9 @@ public final class ResourceDataSyncS3DestinationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="region", required=true)
-      private final Input<String> region;
+      private final Output<String> region;
 
-    public Input<String> getRegion() {
+    public Output<String> getRegion() {
         return this.region;
     }
 
@@ -63,18 +63,18 @@ public final class ResourceDataSyncS3DestinationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="syncFormat")
-      private final @Nullable Input<String> syncFormat;
+      private final @Nullable Output<String> syncFormat;
 
-    public Input<String> getSyncFormat() {
-        return this.syncFormat == null ? Input.empty() : this.syncFormat;
+    public Output<String> getSyncFormat() {
+        return this.syncFormat == null ? Output.empty() : this.syncFormat;
     }
 
     public ResourceDataSyncS3DestinationArgs(
-        Input<String> bucketName,
-        @Nullable Input<String> kmsKeyArn,
-        @Nullable Input<String> prefix,
-        Input<String> region,
-        @Nullable Input<String> syncFormat) {
+        Output<String> bucketName,
+        @Nullable Output<String> kmsKeyArn,
+        @Nullable Output<String> prefix,
+        Output<String> region,
+        @Nullable Output<String> syncFormat) {
         this.bucketName = Objects.requireNonNull(bucketName, "expected parameter 'bucketName' to be non-null");
         this.kmsKeyArn = kmsKeyArn;
         this.prefix = prefix;
@@ -83,11 +83,11 @@ public final class ResourceDataSyncS3DestinationArgs extends io.pulumi.resources
     }
 
     private ResourceDataSyncS3DestinationArgs() {
-        this.bucketName = Input.empty();
-        this.kmsKeyArn = Input.empty();
-        this.prefix = Input.empty();
-        this.region = Input.empty();
-        this.syncFormat = Input.empty();
+        this.bucketName = Output.empty();
+        this.kmsKeyArn = Output.empty();
+        this.prefix = Output.empty();
+        this.region = Output.empty();
+        this.syncFormat = Output.empty();
     }
 
     public static Builder builder() {
@@ -99,11 +99,11 @@ public final class ResourceDataSyncS3DestinationArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<String> bucketName;
-        private @Nullable Input<String> kmsKeyArn;
-        private @Nullable Input<String> prefix;
-        private Input<String> region;
-        private @Nullable Input<String> syncFormat;
+        private Output<String> bucketName;
+        private @Nullable Output<String> kmsKeyArn;
+        private @Nullable Output<String> prefix;
+        private Output<String> region;
+        private @Nullable Output<String> syncFormat;
 
         public Builder() {
     	      // Empty
@@ -118,53 +118,53 @@ public final class ResourceDataSyncS3DestinationArgs extends io.pulumi.resources
     	      this.syncFormat = defaults.syncFormat;
         }
 
-        public Builder bucketName(Input<String> bucketName) {
+        public Builder bucketName(Output<String> bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
         public Builder bucketName(String bucketName) {
-            this.bucketName = Input.of(Objects.requireNonNull(bucketName));
+            this.bucketName = Output.of(Objects.requireNonNull(bucketName));
             return this;
         }
 
-        public Builder kmsKeyArn(@Nullable Input<String> kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Input.ofNullable(kmsKeyArn);
+            this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
             return this;
         }
 
-        public Builder prefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Input.ofNullable(prefix);
+            this.prefix = Output.ofNullable(prefix);
             return this;
         }
 
-        public Builder region(Input<String> region) {
+        public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
         public Builder region(String region) {
-            this.region = Input.of(Objects.requireNonNull(region));
+            this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
 
-        public Builder syncFormat(@Nullable Input<String> syncFormat) {
+        public Builder syncFormat(@Nullable Output<String> syncFormat) {
             this.syncFormat = syncFormat;
             return this;
         }
 
         public Builder syncFormat(@Nullable String syncFormat) {
-            this.syncFormat = Input.ofNullable(syncFormat);
+            this.syncFormat = Output.ofNullable(syncFormat);
             return this;
         }
         public ResourceDataSyncS3DestinationArgs build() {

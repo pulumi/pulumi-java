@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigGetArgs;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class SecurityPolicyAdaptiveProtectionConfigGetArgs extends io.pulu
      * 
      */
     @InputImport(name="layer7DdosDefenseConfig")
-      private final @Nullable Input<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigGetArgs> layer7DdosDefenseConfig;
+      private final @Nullable Output<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigGetArgs> layer7DdosDefenseConfig;
 
-    public Input<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigGetArgs> getLayer7DdosDefenseConfig() {
-        return this.layer7DdosDefenseConfig == null ? Input.empty() : this.layer7DdosDefenseConfig;
+    public Output<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigGetArgs> getLayer7DdosDefenseConfig() {
+        return this.layer7DdosDefenseConfig == null ? Output.empty() : this.layer7DdosDefenseConfig;
     }
 
-    public SecurityPolicyAdaptiveProtectionConfigGetArgs(@Nullable Input<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigGetArgs> layer7DdosDefenseConfig) {
+    public SecurityPolicyAdaptiveProtectionConfigGetArgs(@Nullable Output<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigGetArgs> layer7DdosDefenseConfig) {
         this.layer7DdosDefenseConfig = layer7DdosDefenseConfig;
     }
 
     private SecurityPolicyAdaptiveProtectionConfigGetArgs() {
-        this.layer7DdosDefenseConfig = Input.empty();
+        this.layer7DdosDefenseConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class SecurityPolicyAdaptiveProtectionConfigGetArgs extends io.pulu
     }
 
     public static final class Builder {
-        private @Nullable Input<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigGetArgs> layer7DdosDefenseConfig;
+        private @Nullable Output<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigGetArgs> layer7DdosDefenseConfig;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class SecurityPolicyAdaptiveProtectionConfigGetArgs extends io.pulu
     	      this.layer7DdosDefenseConfig = defaults.layer7DdosDefenseConfig;
         }
 
-        public Builder layer7DdosDefenseConfig(@Nullable Input<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigGetArgs> layer7DdosDefenseConfig) {
+        public Builder layer7DdosDefenseConfig(@Nullable Output<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigGetArgs> layer7DdosDefenseConfig) {
             this.layer7DdosDefenseConfig = layer7DdosDefenseConfig;
             return this;
         }
 
         public Builder layer7DdosDefenseConfig(@Nullable SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigGetArgs layer7DdosDefenseConfig) {
-            this.layer7DdosDefenseConfig = Input.ofNullable(layer7DdosDefenseConfig);
+            this.layer7DdosDefenseConfig = Output.ofNullable(layer7DdosDefenseConfig);
             return this;
         }
         public SecurityPolicyAdaptiveProtectionConfigGetArgs build() {

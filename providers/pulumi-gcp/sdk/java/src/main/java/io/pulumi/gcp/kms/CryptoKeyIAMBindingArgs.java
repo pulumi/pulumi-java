@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.kms;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.kms.inputs.CryptoKeyIAMBindingConditionArgs;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class CryptoKeyIAMBindingArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="condition")
-      private final @Nullable Input<CryptoKeyIAMBindingConditionArgs> condition;
+      private final @Nullable Output<CryptoKeyIAMBindingConditionArgs> condition;
 
-    public Input<CryptoKeyIAMBindingConditionArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<CryptoKeyIAMBindingConditionArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -36,16 +36,16 @@ public final class CryptoKeyIAMBindingArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="cryptoKeyId", required=true)
-      private final Input<String> cryptoKeyId;
+      private final Output<String> cryptoKeyId;
 
-    public Input<String> getCryptoKeyId() {
+    public Output<String> getCryptoKeyId() {
         return this.cryptoKeyId;
     }
 
     @InputImport(name="members", required=true)
-      private final Input<List<String>> members;
+      private final Output<List<String>> members;
 
-    public Input<List<String>> getMembers() {
+    public Output<List<String>> getMembers() {
         return this.members;
     }
 
@@ -55,17 +55,17 @@ public final class CryptoKeyIAMBindingArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="role", required=true)
-      private final Input<String> role;
+      private final Output<String> role;
 
-    public Input<String> getRole() {
+    public Output<String> getRole() {
         return this.role;
     }
 
     public CryptoKeyIAMBindingArgs(
-        @Nullable Input<CryptoKeyIAMBindingConditionArgs> condition,
-        Input<String> cryptoKeyId,
-        Input<List<String>> members,
-        Input<String> role) {
+        @Nullable Output<CryptoKeyIAMBindingConditionArgs> condition,
+        Output<String> cryptoKeyId,
+        Output<List<String>> members,
+        Output<String> role) {
         this.condition = condition;
         this.cryptoKeyId = Objects.requireNonNull(cryptoKeyId, "expected parameter 'cryptoKeyId' to be non-null");
         this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
@@ -73,10 +73,10 @@ public final class CryptoKeyIAMBindingArgs extends io.pulumi.resources.ResourceA
     }
 
     private CryptoKeyIAMBindingArgs() {
-        this.condition = Input.empty();
-        this.cryptoKeyId = Input.empty();
-        this.members = Input.empty();
-        this.role = Input.empty();
+        this.condition = Output.empty();
+        this.cryptoKeyId = Output.empty();
+        this.members = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class CryptoKeyIAMBindingArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<CryptoKeyIAMBindingConditionArgs> condition;
-        private Input<String> cryptoKeyId;
-        private Input<List<String>> members;
-        private Input<String> role;
+        private @Nullable Output<CryptoKeyIAMBindingConditionArgs> condition;
+        private Output<String> cryptoKeyId;
+        private Output<List<String>> members;
+        private Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class CryptoKeyIAMBindingArgs extends io.pulumi.resources.ResourceA
     	      this.role = defaults.role;
         }
 
-        public Builder condition(@Nullable Input<CryptoKeyIAMBindingConditionArgs> condition) {
+        public Builder condition(@Nullable Output<CryptoKeyIAMBindingConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable CryptoKeyIAMBindingConditionArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder cryptoKeyId(Input<String> cryptoKeyId) {
+        public Builder cryptoKeyId(Output<String> cryptoKeyId) {
             this.cryptoKeyId = Objects.requireNonNull(cryptoKeyId);
             return this;
         }
 
         public Builder cryptoKeyId(String cryptoKeyId) {
-            this.cryptoKeyId = Input.of(Objects.requireNonNull(cryptoKeyId));
+            this.cryptoKeyId = Output.of(Objects.requireNonNull(cryptoKeyId));
             return this;
         }
 
-        public Builder members(Input<List<String>> members) {
+        public Builder members(Output<List<String>> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
 
         public Builder members(List<String> members) {
-            this.members = Input.of(Objects.requireNonNull(members));
+            this.members = Output.of(Objects.requireNonNull(members));
             return this;
         }
 
-        public Builder role(Input<String> role) {
+        public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(String role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
         public CryptoKeyIAMBindingArgs build() {

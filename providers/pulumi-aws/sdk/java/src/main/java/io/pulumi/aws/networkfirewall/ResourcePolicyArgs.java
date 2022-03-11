@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.networkfirewall;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,9 +14,9 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
     public static final ResourcePolicyArgs Empty = new ResourcePolicyArgs();
 
     @InputImport(name="policy", required=true)
-      private final Input<String> policy;
+      private final Output<String> policy;
 
-    public Input<String> getPolicy() {
+    public Output<String> getPolicy() {
         return this.policy;
     }
 
@@ -25,22 +25,22 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceArn", required=true)
-      private final Input<String> resourceArn;
+      private final Output<String> resourceArn;
 
-    public Input<String> getResourceArn() {
+    public Output<String> getResourceArn() {
         return this.resourceArn;
     }
 
     public ResourcePolicyArgs(
-        Input<String> policy,
-        Input<String> resourceArn) {
+        Output<String> policy,
+        Output<String> resourceArn) {
         this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
         this.resourceArn = Objects.requireNonNull(resourceArn, "expected parameter 'resourceArn' to be non-null");
     }
 
     private ResourcePolicyArgs() {
-        this.policy = Input.empty();
-        this.resourceArn = Input.empty();
+        this.policy = Output.empty();
+        this.resourceArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -52,8 +52,8 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> policy;
-        private Input<String> resourceArn;
+        private Output<String> policy;
+        private Output<String> resourceArn;
 
         public Builder() {
     	      // Empty
@@ -65,23 +65,23 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceArn = defaults.resourceArn;
         }
 
-        public Builder policy(Input<String> policy) {
+        public Builder policy(Output<String> policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
 
         public Builder policy(String policy) {
-            this.policy = Input.of(Objects.requireNonNull(policy));
+            this.policy = Output.of(Objects.requireNonNull(policy));
             return this;
         }
 
-        public Builder resourceArn(Input<String> resourceArn) {
+        public Builder resourceArn(Output<String> resourceArn) {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }
 
         public Builder resourceArn(String resourceArn) {
-            this.resourceArn = Input.of(Objects.requireNonNull(resourceArn));
+            this.resourceArn = Output.of(Objects.requireNonNull(resourceArn));
             return this;
         }
         public ResourcePolicyArgs build() {

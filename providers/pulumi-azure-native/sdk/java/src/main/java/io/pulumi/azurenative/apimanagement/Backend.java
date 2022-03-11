@@ -10,7 +10,6 @@ import io.pulumi.azurenative.apimanagement.outputs.BackendPropertiesResponse;
 import io.pulumi.azurenative.apimanagement.outputs.BackendProxyContractResponse;
 import io.pulumi.azurenative.apimanagement.outputs.BackendTlsPropertiesResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -228,30 +227,30 @@ public class Backend extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Backend(String name, BackendArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:apimanagement:Backend", name, args == null ? BackendArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:apimanagement:Backend", name, args == null ? BackendArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Backend(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Backend(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:apimanagement:Backend", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20160707:Backend").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20161010:Backend").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20170301:Backend").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20180101:Backend").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20180601preview:Backend").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20190101:Backend").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20191201:Backend").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20191201preview:Backend").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20200601preview:Backend").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20201201:Backend").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20210101preview:Backend").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20210401preview:Backend").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20210801:Backend").build())
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20160707:Backend").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20161010:Backend").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20170301:Backend").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20180101:Backend").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20180601preview:Backend").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20190101:Backend").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20191201:Backend").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20191201preview:Backend").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20200601preview:Backend").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20201201:Backend").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210101preview:Backend").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210401preview:Backend").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210801:Backend").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -265,7 +264,7 @@ public class Backend extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Backend get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Backend get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Backend(name, id, options);
     }
 }

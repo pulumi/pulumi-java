@@ -5,7 +5,7 @@ package io.pulumi.awsnative.cloudfront;
 
 import io.pulumi.awsnative.cloudfront.inputs.FunctionConfigArgs;
 import io.pulumi.awsnative.cloudfront.inputs.FunctionMetadataArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -18,46 +18,46 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     public static final FunctionArgs Empty = new FunctionArgs();
 
     @InputImport(name="autoPublish")
-      private final @Nullable Input<Boolean> autoPublish;
+      private final @Nullable Output<Boolean> autoPublish;
 
-    public Input<Boolean> getAutoPublish() {
-        return this.autoPublish == null ? Input.empty() : this.autoPublish;
+    public Output<Boolean> getAutoPublish() {
+        return this.autoPublish == null ? Output.empty() : this.autoPublish;
     }
 
     @InputImport(name="functionCode")
-      private final @Nullable Input<String> functionCode;
+      private final @Nullable Output<String> functionCode;
 
-    public Input<String> getFunctionCode() {
-        return this.functionCode == null ? Input.empty() : this.functionCode;
+    public Output<String> getFunctionCode() {
+        return this.functionCode == null ? Output.empty() : this.functionCode;
     }
 
     @InputImport(name="functionConfig")
-      private final @Nullable Input<FunctionConfigArgs> functionConfig;
+      private final @Nullable Output<FunctionConfigArgs> functionConfig;
 
-    public Input<FunctionConfigArgs> getFunctionConfig() {
-        return this.functionConfig == null ? Input.empty() : this.functionConfig;
+    public Output<FunctionConfigArgs> getFunctionConfig() {
+        return this.functionConfig == null ? Output.empty() : this.functionConfig;
     }
 
     @InputImport(name="functionMetadata")
-      private final @Nullable Input<FunctionMetadataArgs> functionMetadata;
+      private final @Nullable Output<FunctionMetadataArgs> functionMetadata;
 
-    public Input<FunctionMetadataArgs> getFunctionMetadata() {
-        return this.functionMetadata == null ? Input.empty() : this.functionMetadata;
+    public Output<FunctionMetadataArgs> getFunctionMetadata() {
+        return this.functionMetadata == null ? Output.empty() : this.functionMetadata;
     }
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public FunctionArgs(
-        @Nullable Input<Boolean> autoPublish,
-        @Nullable Input<String> functionCode,
-        @Nullable Input<FunctionConfigArgs> functionConfig,
-        @Nullable Input<FunctionMetadataArgs> functionMetadata,
-        @Nullable Input<String> name) {
+        @Nullable Output<Boolean> autoPublish,
+        @Nullable Output<String> functionCode,
+        @Nullable Output<FunctionConfigArgs> functionConfig,
+        @Nullable Output<FunctionMetadataArgs> functionMetadata,
+        @Nullable Output<String> name) {
         this.autoPublish = autoPublish;
         this.functionCode = functionCode;
         this.functionConfig = functionConfig;
@@ -66,11 +66,11 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FunctionArgs() {
-        this.autoPublish = Input.empty();
-        this.functionCode = Input.empty();
-        this.functionConfig = Input.empty();
-        this.functionMetadata = Input.empty();
-        this.name = Input.empty();
+        this.autoPublish = Output.empty();
+        this.functionCode = Output.empty();
+        this.functionConfig = Output.empty();
+        this.functionMetadata = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -82,11 +82,11 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> autoPublish;
-        private @Nullable Input<String> functionCode;
-        private @Nullable Input<FunctionConfigArgs> functionConfig;
-        private @Nullable Input<FunctionMetadataArgs> functionMetadata;
-        private @Nullable Input<String> name;
+        private @Nullable Output<Boolean> autoPublish;
+        private @Nullable Output<String> functionCode;
+        private @Nullable Output<FunctionConfigArgs> functionConfig;
+        private @Nullable Output<FunctionMetadataArgs> functionMetadata;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -101,53 +101,53 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder autoPublish(@Nullable Input<Boolean> autoPublish) {
+        public Builder autoPublish(@Nullable Output<Boolean> autoPublish) {
             this.autoPublish = autoPublish;
             return this;
         }
 
         public Builder autoPublish(@Nullable Boolean autoPublish) {
-            this.autoPublish = Input.ofNullable(autoPublish);
+            this.autoPublish = Output.ofNullable(autoPublish);
             return this;
         }
 
-        public Builder functionCode(@Nullable Input<String> functionCode) {
+        public Builder functionCode(@Nullable Output<String> functionCode) {
             this.functionCode = functionCode;
             return this;
         }
 
         public Builder functionCode(@Nullable String functionCode) {
-            this.functionCode = Input.ofNullable(functionCode);
+            this.functionCode = Output.ofNullable(functionCode);
             return this;
         }
 
-        public Builder functionConfig(@Nullable Input<FunctionConfigArgs> functionConfig) {
+        public Builder functionConfig(@Nullable Output<FunctionConfigArgs> functionConfig) {
             this.functionConfig = functionConfig;
             return this;
         }
 
         public Builder functionConfig(@Nullable FunctionConfigArgs functionConfig) {
-            this.functionConfig = Input.ofNullable(functionConfig);
+            this.functionConfig = Output.ofNullable(functionConfig);
             return this;
         }
 
-        public Builder functionMetadata(@Nullable Input<FunctionMetadataArgs> functionMetadata) {
+        public Builder functionMetadata(@Nullable Output<FunctionMetadataArgs> functionMetadata) {
             this.functionMetadata = functionMetadata;
             return this;
         }
 
         public Builder functionMetadata(@Nullable FunctionMetadataArgs functionMetadata) {
-            this.functionMetadata = Input.ofNullable(functionMetadata);
+            this.functionMetadata = Output.ofNullable(functionMetadata);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public FunctionArgs build() {

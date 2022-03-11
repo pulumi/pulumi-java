@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datastream_v1.enums.JsonFileFormatCompression;
 import io.pulumi.googlenative.datastream_v1.enums.JsonFileFormatSchemaFileFormat;
@@ -24,10 +24,10 @@ public final class JsonFileFormatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="compression")
-      private final @Nullable Input<JsonFileFormatCompression> compression;
+      private final @Nullable Output<JsonFileFormatCompression> compression;
 
-    public Input<JsonFileFormatCompression> getCompression() {
-        return this.compression == null ? Input.empty() : this.compression;
+    public Output<JsonFileFormatCompression> getCompression() {
+        return this.compression == null ? Output.empty() : this.compression;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class JsonFileFormatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schemaFileFormat")
-      private final @Nullable Input<JsonFileFormatSchemaFileFormat> schemaFileFormat;
+      private final @Nullable Output<JsonFileFormatSchemaFileFormat> schemaFileFormat;
 
-    public Input<JsonFileFormatSchemaFileFormat> getSchemaFileFormat() {
-        return this.schemaFileFormat == null ? Input.empty() : this.schemaFileFormat;
+    public Output<JsonFileFormatSchemaFileFormat> getSchemaFileFormat() {
+        return this.schemaFileFormat == null ? Output.empty() : this.schemaFileFormat;
     }
 
     public JsonFileFormatArgs(
-        @Nullable Input<JsonFileFormatCompression> compression,
-        @Nullable Input<JsonFileFormatSchemaFileFormat> schemaFileFormat) {
+        @Nullable Output<JsonFileFormatCompression> compression,
+        @Nullable Output<JsonFileFormatSchemaFileFormat> schemaFileFormat) {
         this.compression = compression;
         this.schemaFileFormat = schemaFileFormat;
     }
 
     private JsonFileFormatArgs() {
-        this.compression = Input.empty();
-        this.schemaFileFormat = Input.empty();
+        this.compression = Output.empty();
+        this.schemaFileFormat = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class JsonFileFormatArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<JsonFileFormatCompression> compression;
-        private @Nullable Input<JsonFileFormatSchemaFileFormat> schemaFileFormat;
+        private @Nullable Output<JsonFileFormatCompression> compression;
+        private @Nullable Output<JsonFileFormatSchemaFileFormat> schemaFileFormat;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class JsonFileFormatArgs extends io.pulumi.resources.ResourceArgs {
     	      this.schemaFileFormat = defaults.schemaFileFormat;
         }
 
-        public Builder compression(@Nullable Input<JsonFileFormatCompression> compression) {
+        public Builder compression(@Nullable Output<JsonFileFormatCompression> compression) {
             this.compression = compression;
             return this;
         }
 
         public Builder compression(@Nullable JsonFileFormatCompression compression) {
-            this.compression = Input.ofNullable(compression);
+            this.compression = Output.ofNullable(compression);
             return this;
         }
 
-        public Builder schemaFileFormat(@Nullable Input<JsonFileFormatSchemaFileFormat> schemaFileFormat) {
+        public Builder schemaFileFormat(@Nullable Output<JsonFileFormatSchemaFileFormat> schemaFileFormat) {
             this.schemaFileFormat = schemaFileFormat;
             return this;
         }
 
         public Builder schemaFileFormat(@Nullable JsonFileFormatSchemaFileFormat schemaFileFormat) {
-            this.schemaFileFormat = Input.ofNullable(schemaFileFormat);
+            this.schemaFileFormat = Output.ofNullable(schemaFileFormat);
             return this;
         }
         public JsonFileFormatArgs build() {

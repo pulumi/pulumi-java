@@ -6,7 +6,6 @@ package io.pulumi.aws.storagegateway;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.storagegateway.CachesIscsiVolumeArgs;
 import io.pulumi.aws.storagegateway.inputs.CachesIscsiVolumeState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -315,14 +314,14 @@ public class CachesIscsiVolume extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CachesIscsiVolume(String name, CachesIscsiVolumeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:storagegateway/cachesIscsiVolume:CachesIscsiVolume", name, args == null ? CachesIscsiVolumeArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:storagegateway/cachesIscsiVolume:CachesIscsiVolume", name, args == null ? CachesIscsiVolumeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private CachesIscsiVolume(String name, Input<String> id, @Nullable CachesIscsiVolumeState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private CachesIscsiVolume(String name, Output<String> id, @Nullable CachesIscsiVolumeState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:storagegateway/cachesIscsiVolume:CachesIscsiVolume", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -338,7 +337,7 @@ public class CachesIscsiVolume extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CachesIscsiVolume get(String name, Input<String> id, @Nullable CachesIscsiVolumeState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static CachesIscsiVolume get(String name, Output<String> id, @Nullable CachesIscsiVolumeState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new CachesIscsiVolume(name, id, state, options);
     }
 }

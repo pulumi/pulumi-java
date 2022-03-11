@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.notebooks_v1.enums.RuntimeAccessConfigAccessType;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class RuntimeAccessConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="accessType")
-      private final @Nullable Input<RuntimeAccessConfigAccessType> accessType;
+      private final @Nullable Output<RuntimeAccessConfigAccessType> accessType;
 
-    public Input<RuntimeAccessConfigAccessType> getAccessType() {
-        return this.accessType == null ? Input.empty() : this.accessType;
+    public Output<RuntimeAccessConfigAccessType> getAccessType() {
+        return this.accessType == null ? Output.empty() : this.accessType;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class RuntimeAccessConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="runtimeOwner")
-      private final @Nullable Input<String> runtimeOwner;
+      private final @Nullable Output<String> runtimeOwner;
 
-    public Input<String> getRuntimeOwner() {
-        return this.runtimeOwner == null ? Input.empty() : this.runtimeOwner;
+    public Output<String> getRuntimeOwner() {
+        return this.runtimeOwner == null ? Output.empty() : this.runtimeOwner;
     }
 
     public RuntimeAccessConfigArgs(
-        @Nullable Input<RuntimeAccessConfigAccessType> accessType,
-        @Nullable Input<String> runtimeOwner) {
+        @Nullable Output<RuntimeAccessConfigAccessType> accessType,
+        @Nullable Output<String> runtimeOwner) {
         this.accessType = accessType;
         this.runtimeOwner = runtimeOwner;
     }
 
     private RuntimeAccessConfigArgs() {
-        this.accessType = Input.empty();
-        this.runtimeOwner = Input.empty();
+        this.accessType = Output.empty();
+        this.runtimeOwner = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class RuntimeAccessConfigArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<RuntimeAccessConfigAccessType> accessType;
-        private @Nullable Input<String> runtimeOwner;
+        private @Nullable Output<RuntimeAccessConfigAccessType> accessType;
+        private @Nullable Output<String> runtimeOwner;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class RuntimeAccessConfigArgs extends io.pulumi.resources.ResourceA
     	      this.runtimeOwner = defaults.runtimeOwner;
         }
 
-        public Builder accessType(@Nullable Input<RuntimeAccessConfigAccessType> accessType) {
+        public Builder accessType(@Nullable Output<RuntimeAccessConfigAccessType> accessType) {
             this.accessType = accessType;
             return this;
         }
 
         public Builder accessType(@Nullable RuntimeAccessConfigAccessType accessType) {
-            this.accessType = Input.ofNullable(accessType);
+            this.accessType = Output.ofNullable(accessType);
             return this;
         }
 
-        public Builder runtimeOwner(@Nullable Input<String> runtimeOwner) {
+        public Builder runtimeOwner(@Nullable Output<String> runtimeOwner) {
             this.runtimeOwner = runtimeOwner;
             return this;
         }
 
         public Builder runtimeOwner(@Nullable String runtimeOwner) {
-            this.runtimeOwner = Input.ofNullable(runtimeOwner);
+            this.runtimeOwner = Output.ofNullable(runtimeOwner);
             return this;
         }
         public RuntimeAccessConfigArgs build() {

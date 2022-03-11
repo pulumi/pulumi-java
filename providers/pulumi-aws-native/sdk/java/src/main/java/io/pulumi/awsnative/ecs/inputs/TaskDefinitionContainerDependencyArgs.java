@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ecs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class TaskDefinitionContainerDependencyArgs extends io.pulumi.resou
     public static final TaskDefinitionContainerDependencyArgs Empty = new TaskDefinitionContainerDependencyArgs();
 
     @InputImport(name="condition")
-      private final @Nullable Input<String> condition;
+      private final @Nullable Output<String> condition;
 
-    public Input<String> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<String> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     @InputImport(name="containerName")
-      private final @Nullable Input<String> containerName;
+      private final @Nullable Output<String> containerName;
 
-    public Input<String> getContainerName() {
-        return this.containerName == null ? Input.empty() : this.containerName;
+    public Output<String> getContainerName() {
+        return this.containerName == null ? Output.empty() : this.containerName;
     }
 
     public TaskDefinitionContainerDependencyArgs(
-        @Nullable Input<String> condition,
-        @Nullable Input<String> containerName) {
+        @Nullable Output<String> condition,
+        @Nullable Output<String> containerName) {
         this.condition = condition;
         this.containerName = containerName;
     }
 
     private TaskDefinitionContainerDependencyArgs() {
-        this.condition = Input.empty();
-        this.containerName = Input.empty();
+        this.condition = Output.empty();
+        this.containerName = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class TaskDefinitionContainerDependencyArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> condition;
-        private @Nullable Input<String> containerName;
+        private @Nullable Output<String> condition;
+        private @Nullable Output<String> containerName;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class TaskDefinitionContainerDependencyArgs extends io.pulumi.resou
     	      this.containerName = defaults.containerName;
         }
 
-        public Builder condition(@Nullable Input<String> condition) {
+        public Builder condition(@Nullable Output<String> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable String condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder containerName(@Nullable Input<String> containerName) {
+        public Builder containerName(@Nullable Output<String> containerName) {
             this.containerName = containerName;
             return this;
         }
 
         public Builder containerName(@Nullable String containerName) {
-            this.containerName = Input.ofNullable(containerName);
+            this.containerName = Output.ofNullable(containerName);
             return this;
         }
         public TaskDefinitionContainerDependencyArgs build() {

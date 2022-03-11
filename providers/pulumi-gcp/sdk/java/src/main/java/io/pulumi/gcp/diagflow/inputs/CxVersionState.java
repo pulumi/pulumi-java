@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.diagflow.inputs.CxVersionNluSettingGetArgs;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class CxVersionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-      private final @Nullable Input<String> createTime;
+      private final @Nullable Output<String> createTime;
 
-    public Input<String> getCreateTime() {
-        return this.createTime == null ? Input.empty() : this.createTime;
+    public Output<String> getCreateTime() {
+        return this.createTime == null ? Output.empty() : this.createTime;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class CxVersionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class CxVersionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class CxVersionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class CxVersionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nluSettings")
-      private final @Nullable Input<List<CxVersionNluSettingGetArgs>> nluSettings;
+      private final @Nullable Output<List<CxVersionNluSettingGetArgs>> nluSettings;
 
-    public Input<List<CxVersionNluSettingGetArgs>> getNluSettings() {
-        return this.nluSettings == null ? Input.empty() : this.nluSettings;
+    public Output<List<CxVersionNluSettingGetArgs>> getNluSettings() {
+        return this.nluSettings == null ? Output.empty() : this.nluSettings;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class CxVersionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent")
-      private final @Nullable Input<String> parent;
+      private final @Nullable Output<String> parent;
 
-    public Input<String> getParent() {
-        return this.parent == null ? Input.empty() : this.parent;
+    public Output<String> getParent() {
+        return this.parent == null ? Output.empty() : this.parent;
     }
 
     /**
@@ -91,20 +91,20 @@ public final class CxVersionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<String> state;
+      private final @Nullable Output<String> state;
 
-    public Input<String> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<String> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     public CxVersionState(
-        @Nullable Input<String> createTime,
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> name,
-        @Nullable Input<List<CxVersionNluSettingGetArgs>> nluSettings,
-        @Nullable Input<String> parent,
-        @Nullable Input<String> state) {
+        @Nullable Output<String> createTime,
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> name,
+        @Nullable Output<List<CxVersionNluSettingGetArgs>> nluSettings,
+        @Nullable Output<String> parent,
+        @Nullable Output<String> state) {
         this.createTime = createTime;
         this.description = description;
         this.displayName = displayName;
@@ -115,13 +115,13 @@ public final class CxVersionState extends io.pulumi.resources.ResourceArgs {
     }
 
     private CxVersionState() {
-        this.createTime = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.name = Input.empty();
-        this.nluSettings = Input.empty();
-        this.parent = Input.empty();
-        this.state = Input.empty();
+        this.createTime = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.name = Output.empty();
+        this.nluSettings = Output.empty();
+        this.parent = Output.empty();
+        this.state = Output.empty();
     }
 
     public static Builder builder() {
@@ -133,13 +133,13 @@ public final class CxVersionState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> createTime;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<CxVersionNluSettingGetArgs>> nluSettings;
-        private @Nullable Input<String> parent;
-        private @Nullable Input<String> state;
+        private @Nullable Output<String> createTime;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<CxVersionNluSettingGetArgs>> nluSettings;
+        private @Nullable Output<String> parent;
+        private @Nullable Output<String> state;
 
         public Builder() {
     	      // Empty
@@ -156,73 +156,73 @@ public final class CxVersionState extends io.pulumi.resources.ResourceArgs {
     	      this.state = defaults.state;
         }
 
-        public Builder createTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Input.ofNullable(createTime);
+            this.createTime = Output.ofNullable(createTime);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder nluSettings(@Nullable Input<List<CxVersionNluSettingGetArgs>> nluSettings) {
+        public Builder nluSettings(@Nullable Output<List<CxVersionNluSettingGetArgs>> nluSettings) {
             this.nluSettings = nluSettings;
             return this;
         }
 
         public Builder nluSettings(@Nullable List<CxVersionNluSettingGetArgs> nluSettings) {
-            this.nluSettings = Input.ofNullable(nluSettings);
+            this.nluSettings = Output.ofNullable(nluSettings);
             return this;
         }
 
-        public Builder parent(@Nullable Input<String> parent) {
+        public Builder parent(@Nullable Output<String> parent) {
             this.parent = parent;
             return this;
         }
 
         public Builder parent(@Nullable String parent) {
-            this.parent = Input.ofNullable(parent);
+            this.parent = Output.ofNullable(parent);
             return this;
         }
 
-        public Builder state(@Nullable Input<String> state) {
+        public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable String state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
         public CxVersionState build() {

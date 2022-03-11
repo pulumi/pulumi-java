@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.azurenative.botservice.inputs.ConnectionSettingParameterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="clientId")
-      private final @Nullable Input<String> clientId;
+      private final @Nullable Output<String> clientId;
 
-    public Input<String> getClientId() {
-        return this.clientId == null ? Input.empty() : this.clientId;
+    public Output<String> getClientId() {
+        return this.clientId == null ? Output.empty() : this.clientId;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="clientSecret")
-      private final @Nullable Input<String> clientSecret;
+      private final @Nullable Output<String> clientSecret;
 
-    public Input<String> getClientSecret() {
-        return this.clientSecret == null ? Input.empty() : this.clientSecret;
+    public Output<String> getClientSecret() {
+        return this.clientSecret == null ? Output.empty() : this.clientSecret;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<List<ConnectionSettingParameterArgs>> parameters;
+      private final @Nullable Output<List<ConnectionSettingParameterArgs>> parameters;
 
-    public Input<List<ConnectionSettingParameterArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<List<ConnectionSettingParameterArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="provisioningState")
-      private final @Nullable Input<String> provisioningState;
+      private final @Nullable Output<String> provisioningState;
 
-    public Input<String> getProvisioningState() {
-        return this.provisioningState == null ? Input.empty() : this.provisioningState;
+    public Output<String> getProvisioningState() {
+        return this.provisioningState == null ? Output.empty() : this.provisioningState;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="scopes")
-      private final @Nullable Input<String> scopes;
+      private final @Nullable Output<String> scopes;
 
-    public Input<String> getScopes() {
-        return this.scopes == null ? Input.empty() : this.scopes;
+    public Output<String> getScopes() {
+        return this.scopes == null ? Output.empty() : this.scopes;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="serviceProviderDisplayName")
-      private final @Nullable Input<String> serviceProviderDisplayName;
+      private final @Nullable Output<String> serviceProviderDisplayName;
 
-    public Input<String> getServiceProviderDisplayName() {
-        return this.serviceProviderDisplayName == null ? Input.empty() : this.serviceProviderDisplayName;
+    public Output<String> getServiceProviderDisplayName() {
+        return this.serviceProviderDisplayName == null ? Output.empty() : this.serviceProviderDisplayName;
     }
 
     /**
@@ -113,22 +113,22 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="serviceProviderId")
-      private final @Nullable Input<String> serviceProviderId;
+      private final @Nullable Output<String> serviceProviderId;
 
-    public Input<String> getServiceProviderId() {
-        return this.serviceProviderId == null ? Input.empty() : this.serviceProviderId;
+    public Output<String> getServiceProviderId() {
+        return this.serviceProviderId == null ? Output.empty() : this.serviceProviderId;
     }
 
     public ConnectionSettingPropertiesArgs(
-        @Nullable Input<String> clientId,
-        @Nullable Input<String> clientSecret,
-        @Nullable Input<String> id,
-        @Nullable Input<String> name,
-        @Nullable Input<List<ConnectionSettingParameterArgs>> parameters,
-        @Nullable Input<String> provisioningState,
-        @Nullable Input<String> scopes,
-        @Nullable Input<String> serviceProviderDisplayName,
-        @Nullable Input<String> serviceProviderId) {
+        @Nullable Output<String> clientId,
+        @Nullable Output<String> clientSecret,
+        @Nullable Output<String> id,
+        @Nullable Output<String> name,
+        @Nullable Output<List<ConnectionSettingParameterArgs>> parameters,
+        @Nullable Output<String> provisioningState,
+        @Nullable Output<String> scopes,
+        @Nullable Output<String> serviceProviderDisplayName,
+        @Nullable Output<String> serviceProviderId) {
         this.clientId = clientId;
         this.clientSecret = clientSecret;
         this.id = id;
@@ -141,15 +141,15 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
     }
 
     private ConnectionSettingPropertiesArgs() {
-        this.clientId = Input.empty();
-        this.clientSecret = Input.empty();
-        this.id = Input.empty();
-        this.name = Input.empty();
-        this.parameters = Input.empty();
-        this.provisioningState = Input.empty();
-        this.scopes = Input.empty();
-        this.serviceProviderDisplayName = Input.empty();
-        this.serviceProviderId = Input.empty();
+        this.clientId = Output.empty();
+        this.clientSecret = Output.empty();
+        this.id = Output.empty();
+        this.name = Output.empty();
+        this.parameters = Output.empty();
+        this.provisioningState = Output.empty();
+        this.scopes = Output.empty();
+        this.serviceProviderDisplayName = Output.empty();
+        this.serviceProviderId = Output.empty();
     }
 
     public static Builder builder() {
@@ -161,15 +161,15 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> clientId;
-        private @Nullable Input<String> clientSecret;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<ConnectionSettingParameterArgs>> parameters;
-        private @Nullable Input<String> provisioningState;
-        private @Nullable Input<String> scopes;
-        private @Nullable Input<String> serviceProviderDisplayName;
-        private @Nullable Input<String> serviceProviderId;
+        private @Nullable Output<String> clientId;
+        private @Nullable Output<String> clientSecret;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<ConnectionSettingParameterArgs>> parameters;
+        private @Nullable Output<String> provisioningState;
+        private @Nullable Output<String> scopes;
+        private @Nullable Output<String> serviceProviderDisplayName;
+        private @Nullable Output<String> serviceProviderId;
 
         public Builder() {
     	      // Empty
@@ -188,93 +188,93 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
     	      this.serviceProviderId = defaults.serviceProviderId;
         }
 
-        public Builder clientId(@Nullable Input<String> clientId) {
+        public Builder clientId(@Nullable Output<String> clientId) {
             this.clientId = clientId;
             return this;
         }
 
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = Input.ofNullable(clientId);
+            this.clientId = Output.ofNullable(clientId);
             return this;
         }
 
-        public Builder clientSecret(@Nullable Input<String> clientSecret) {
+        public Builder clientSecret(@Nullable Output<String> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
 
         public Builder clientSecret(@Nullable String clientSecret) {
-            this.clientSecret = Input.ofNullable(clientSecret);
+            this.clientSecret = Output.ofNullable(clientSecret);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<List<ConnectionSettingParameterArgs>> parameters) {
+        public Builder parameters(@Nullable Output<List<ConnectionSettingParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable List<ConnectionSettingParameterArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder provisioningState(@Nullable Input<String> provisioningState) {
+        public Builder provisioningState(@Nullable Output<String> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = Input.ofNullable(provisioningState);
+            this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder scopes(@Nullable Input<String> scopes) {
+        public Builder scopes(@Nullable Output<String> scopes) {
             this.scopes = scopes;
             return this;
         }
 
         public Builder scopes(@Nullable String scopes) {
-            this.scopes = Input.ofNullable(scopes);
+            this.scopes = Output.ofNullable(scopes);
             return this;
         }
 
-        public Builder serviceProviderDisplayName(@Nullable Input<String> serviceProviderDisplayName) {
+        public Builder serviceProviderDisplayName(@Nullable Output<String> serviceProviderDisplayName) {
             this.serviceProviderDisplayName = serviceProviderDisplayName;
             return this;
         }
 
         public Builder serviceProviderDisplayName(@Nullable String serviceProviderDisplayName) {
-            this.serviceProviderDisplayName = Input.ofNullable(serviceProviderDisplayName);
+            this.serviceProviderDisplayName = Output.ofNullable(serviceProviderDisplayName);
             return this;
         }
 
-        public Builder serviceProviderId(@Nullable Input<String> serviceProviderId) {
+        public Builder serviceProviderId(@Nullable Output<String> serviceProviderId) {
             this.serviceProviderId = serviceProviderId;
             return this;
         }
 
         public Builder serviceProviderId(@Nullable String serviceProviderId) {
-            this.serviceProviderId = Input.ofNullable(serviceProviderId);
+            this.serviceProviderId = Output.ofNullable(serviceProviderId);
             return this;
         }
         public ConnectionSettingPropertiesArgs build() {

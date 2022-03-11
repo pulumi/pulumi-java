@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ApplicationInsightsComponentAnalyticsItemPropertiesArgs exten
      * 
      */
     @InputImport(name="functionAlias")
-      private final @Nullable Input<String> functionAlias;
+      private final @Nullable Output<String> functionAlias;
 
-    public Input<String> getFunctionAlias() {
-        return this.functionAlias == null ? Input.empty() : this.functionAlias;
+    public Output<String> getFunctionAlias() {
+        return this.functionAlias == null ? Output.empty() : this.functionAlias;
     }
 
-    public ApplicationInsightsComponentAnalyticsItemPropertiesArgs(@Nullable Input<String> functionAlias) {
+    public ApplicationInsightsComponentAnalyticsItemPropertiesArgs(@Nullable Output<String> functionAlias) {
         this.functionAlias = functionAlias;
     }
 
     private ApplicationInsightsComponentAnalyticsItemPropertiesArgs() {
-        this.functionAlias = Input.empty();
+        this.functionAlias = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ApplicationInsightsComponentAnalyticsItemPropertiesArgs exten
     }
 
     public static final class Builder {
-        private @Nullable Input<String> functionAlias;
+        private @Nullable Output<String> functionAlias;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ApplicationInsightsComponentAnalyticsItemPropertiesArgs exten
     	      this.functionAlias = defaults.functionAlias;
         }
 
-        public Builder functionAlias(@Nullable Input<String> functionAlias) {
+        public Builder functionAlias(@Nullable Output<String> functionAlias) {
             this.functionAlias = functionAlias;
             return this;
         }
 
         public Builder functionAlias(@Nullable String functionAlias) {
-            this.functionAlias = Input.ofNullable(functionAlias);
+            this.functionAlias = Output.ofNullable(functionAlias);
             return this;
         }
         public ApplicationInsightsComponentAnalyticsItemPropertiesArgs build() {

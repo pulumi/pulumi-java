@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.notebooks.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,9 +19,9 @@ public final class InstanceAcceleratorConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="coreCount", required=true)
-      private final Input<Integer> coreCount;
+      private final Output<Integer> coreCount;
 
-    public Input<Integer> getCoreCount() {
+    public Output<Integer> getCoreCount() {
         return this.coreCount;
     }
 
@@ -31,22 +31,22 @@ public final class InstanceAcceleratorConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public InstanceAcceleratorConfigArgs(
-        Input<Integer> coreCount,
-        Input<String> type) {
+        Output<Integer> coreCount,
+        Output<String> type) {
         this.coreCount = Objects.requireNonNull(coreCount, "expected parameter 'coreCount' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private InstanceAcceleratorConfigArgs() {
-        this.coreCount = Input.empty();
-        this.type = Input.empty();
+        this.coreCount = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class InstanceAcceleratorConfigArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<Integer> coreCount;
-        private Input<String> type;
+        private Output<Integer> coreCount;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class InstanceAcceleratorConfigArgs extends io.pulumi.resources.Res
     	      this.type = defaults.type;
         }
 
-        public Builder coreCount(Input<Integer> coreCount) {
+        public Builder coreCount(Output<Integer> coreCount) {
             this.coreCount = Objects.requireNonNull(coreCount);
             return this;
         }
 
         public Builder coreCount(Integer coreCount) {
-            this.coreCount = Input.of(Objects.requireNonNull(coreCount));
+            this.coreCount = Output.of(Objects.requireNonNull(coreCount));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public InstanceAcceleratorConfigArgs build() {

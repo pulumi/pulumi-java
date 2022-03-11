@@ -6,7 +6,6 @@ package io.pulumi.aws.dms;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.dms.ReplicationSubnetGroupArgs;
 import io.pulumi.aws.dms.inputs.ReplicationSubnetGroupState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -160,14 +159,14 @@ public class ReplicationSubnetGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ReplicationSubnetGroup(String name, ReplicationSubnetGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:dms/replicationSubnetGroup:ReplicationSubnetGroup", name, args == null ? ReplicationSubnetGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:dms/replicationSubnetGroup:ReplicationSubnetGroup", name, args == null ? ReplicationSubnetGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ReplicationSubnetGroup(String name, Input<String> id, @Nullable ReplicationSubnetGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ReplicationSubnetGroup(String name, Output<String> id, @Nullable ReplicationSubnetGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:dms/replicationSubnetGroup:ReplicationSubnetGroup", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -183,7 +182,7 @@ public class ReplicationSubnetGroup extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ReplicationSubnetGroup get(String name, Input<String> id, @Nullable ReplicationSubnetGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ReplicationSubnetGroup get(String name, Output<String> id, @Nullable ReplicationSubnetGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ReplicationSubnetGroup(name, id, state, options);
     }
 }

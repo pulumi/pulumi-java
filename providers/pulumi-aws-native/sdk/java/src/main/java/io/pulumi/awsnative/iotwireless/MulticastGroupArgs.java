@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotwireless;
 
 import io.pulumi.awsnative.iotwireless.inputs.MulticastGroupLoRaWANArgs;
 import io.pulumi.awsnative.iotwireless.inputs.MulticastGroupTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class MulticastGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="associateWirelessDevice")
-      private final @Nullable Input<String> associateWirelessDevice;
+      private final @Nullable Output<String> associateWirelessDevice;
 
-    public Input<String> getAssociateWirelessDevice() {
-        return this.associateWirelessDevice == null ? Input.empty() : this.associateWirelessDevice;
+    public Output<String> getAssociateWirelessDevice() {
+        return this.associateWirelessDevice == null ? Output.empty() : this.associateWirelessDevice;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class MulticastGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class MulticastGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disassociateWirelessDevice")
-      private final @Nullable Input<String> disassociateWirelessDevice;
+      private final @Nullable Output<String> disassociateWirelessDevice;
 
-    public Input<String> getDisassociateWirelessDevice() {
-        return this.disassociateWirelessDevice == null ? Input.empty() : this.disassociateWirelessDevice;
+    public Output<String> getDisassociateWirelessDevice() {
+        return this.disassociateWirelessDevice == null ? Output.empty() : this.disassociateWirelessDevice;
     }
 
     /**
@@ -55,9 +55,9 @@ public final class MulticastGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loRaWAN", required=true)
-      private final Input<MulticastGroupLoRaWANArgs> loRaWAN;
+      private final Output<MulticastGroupLoRaWANArgs> loRaWAN;
 
-    public Input<MulticastGroupLoRaWANArgs> getLoRaWAN() {
+    public Output<MulticastGroupLoRaWANArgs> getLoRaWAN() {
         return this.loRaWAN;
     }
 
@@ -66,10 +66,10 @@ public final class MulticastGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -77,19 +77,19 @@ public final class MulticastGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<MulticastGroupTagArgs>> tags;
+      private final @Nullable Output<List<MulticastGroupTagArgs>> tags;
 
-    public Input<List<MulticastGroupTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<MulticastGroupTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public MulticastGroupArgs(
-        @Nullable Input<String> associateWirelessDevice,
-        @Nullable Input<String> description,
-        @Nullable Input<String> disassociateWirelessDevice,
-        Input<MulticastGroupLoRaWANArgs> loRaWAN,
-        @Nullable Input<String> name,
-        @Nullable Input<List<MulticastGroupTagArgs>> tags) {
+        @Nullable Output<String> associateWirelessDevice,
+        @Nullable Output<String> description,
+        @Nullable Output<String> disassociateWirelessDevice,
+        Output<MulticastGroupLoRaWANArgs> loRaWAN,
+        @Nullable Output<String> name,
+        @Nullable Output<List<MulticastGroupTagArgs>> tags) {
         this.associateWirelessDevice = associateWirelessDevice;
         this.description = description;
         this.disassociateWirelessDevice = disassociateWirelessDevice;
@@ -99,12 +99,12 @@ public final class MulticastGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MulticastGroupArgs() {
-        this.associateWirelessDevice = Input.empty();
-        this.description = Input.empty();
-        this.disassociateWirelessDevice = Input.empty();
-        this.loRaWAN = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
+        this.associateWirelessDevice = Output.empty();
+        this.description = Output.empty();
+        this.disassociateWirelessDevice = Output.empty();
+        this.loRaWAN = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class MulticastGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> associateWirelessDevice;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> disassociateWirelessDevice;
-        private Input<MulticastGroupLoRaWANArgs> loRaWAN;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<MulticastGroupTagArgs>> tags;
+        private @Nullable Output<String> associateWirelessDevice;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> disassociateWirelessDevice;
+        private Output<MulticastGroupLoRaWANArgs> loRaWAN;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<MulticastGroupTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class MulticastGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder associateWirelessDevice(@Nullable Input<String> associateWirelessDevice) {
+        public Builder associateWirelessDevice(@Nullable Output<String> associateWirelessDevice) {
             this.associateWirelessDevice = associateWirelessDevice;
             return this;
         }
 
         public Builder associateWirelessDevice(@Nullable String associateWirelessDevice) {
-            this.associateWirelessDevice = Input.ofNullable(associateWirelessDevice);
+            this.associateWirelessDevice = Output.ofNullable(associateWirelessDevice);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder disassociateWirelessDevice(@Nullable Input<String> disassociateWirelessDevice) {
+        public Builder disassociateWirelessDevice(@Nullable Output<String> disassociateWirelessDevice) {
             this.disassociateWirelessDevice = disassociateWirelessDevice;
             return this;
         }
 
         public Builder disassociateWirelessDevice(@Nullable String disassociateWirelessDevice) {
-            this.disassociateWirelessDevice = Input.ofNullable(disassociateWirelessDevice);
+            this.disassociateWirelessDevice = Output.ofNullable(disassociateWirelessDevice);
             return this;
         }
 
-        public Builder loRaWAN(Input<MulticastGroupLoRaWANArgs> loRaWAN) {
+        public Builder loRaWAN(Output<MulticastGroupLoRaWANArgs> loRaWAN) {
             this.loRaWAN = Objects.requireNonNull(loRaWAN);
             return this;
         }
 
         public Builder loRaWAN(MulticastGroupLoRaWANArgs loRaWAN) {
-            this.loRaWAN = Input.of(Objects.requireNonNull(loRaWAN));
+            this.loRaWAN = Output.of(Objects.requireNonNull(loRaWAN));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<MulticastGroupTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<MulticastGroupTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<MulticastGroupTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public MulticastGroupArgs build() {

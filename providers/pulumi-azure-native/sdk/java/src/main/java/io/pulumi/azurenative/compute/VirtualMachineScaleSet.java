@@ -16,7 +16,6 @@ import io.pulumi.azurenative.compute.outputs.UpgradePolicyResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineScaleSetIdentityResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineScaleSetVMProfileResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -419,34 +418,34 @@ public class VirtualMachineScaleSet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VirtualMachineScaleSet(String name, VirtualMachineScaleSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:compute:VirtualMachineScaleSet", name, args == null ? VirtualMachineScaleSetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:compute:VirtualMachineScaleSet", name, args == null ? VirtualMachineScaleSetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private VirtualMachineScaleSet(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private VirtualMachineScaleSet(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:compute:VirtualMachineScaleSet", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:compute/v20150615:VirtualMachineScaleSet").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20160330:VirtualMachineScaleSet").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20160430preview:VirtualMachineScaleSet").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20170330:VirtualMachineScaleSet").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20171201:VirtualMachineScaleSet").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20180401:VirtualMachineScaleSet").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20180601:VirtualMachineScaleSet").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20181001:VirtualMachineScaleSet").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20190301:VirtualMachineScaleSet").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20190701:VirtualMachineScaleSet").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20191201:VirtualMachineScaleSet").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20200601:VirtualMachineScaleSet").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20201201:VirtualMachineScaleSet").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20210301:VirtualMachineScaleSet").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20210401:VirtualMachineScaleSet").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20210701:VirtualMachineScaleSet").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20211101:VirtualMachineScaleSet").build())
+                Output.of(Alias.builder().setType("azure-native:compute/v20150615:VirtualMachineScaleSet").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20160330:VirtualMachineScaleSet").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20160430preview:VirtualMachineScaleSet").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20170330:VirtualMachineScaleSet").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20171201:VirtualMachineScaleSet").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20180401:VirtualMachineScaleSet").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20180601:VirtualMachineScaleSet").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20181001:VirtualMachineScaleSet").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20190301:VirtualMachineScaleSet").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20190701:VirtualMachineScaleSet").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20191201:VirtualMachineScaleSet").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20200601:VirtualMachineScaleSet").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20201201:VirtualMachineScaleSet").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20210301:VirtualMachineScaleSet").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20210401:VirtualMachineScaleSet").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20210701:VirtualMachineScaleSet").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20211101:VirtualMachineScaleSet").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -460,7 +459,7 @@ public class VirtualMachineScaleSet extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static VirtualMachineScaleSet get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static VirtualMachineScaleSet get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new VirtualMachineScaleSet(name, id, options);
     }
 }

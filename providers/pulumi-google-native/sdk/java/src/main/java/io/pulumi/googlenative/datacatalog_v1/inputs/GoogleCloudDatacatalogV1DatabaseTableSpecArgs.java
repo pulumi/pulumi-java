@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datacatalog_v1.enums.GoogleCloudDatacatalogV1DatabaseTableSpecType;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class GoogleCloudDatacatalogV1DatabaseTableSpecArgs extends io.pulu
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<GoogleCloudDatacatalogV1DatabaseTableSpecType> type;
+      private final @Nullable Output<GoogleCloudDatacatalogV1DatabaseTableSpecType> type;
 
-    public Input<GoogleCloudDatacatalogV1DatabaseTableSpecType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<GoogleCloudDatacatalogV1DatabaseTableSpecType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
-    public GoogleCloudDatacatalogV1DatabaseTableSpecArgs(@Nullable Input<GoogleCloudDatacatalogV1DatabaseTableSpecType> type) {
+    public GoogleCloudDatacatalogV1DatabaseTableSpecArgs(@Nullable Output<GoogleCloudDatacatalogV1DatabaseTableSpecType> type) {
         this.type = type;
     }
 
     private GoogleCloudDatacatalogV1DatabaseTableSpecArgs() {
-        this.type = Input.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDatacatalogV1DatabaseTableSpecArgs extends io.pulu
     }
 
     public static final class Builder {
-        private @Nullable Input<GoogleCloudDatacatalogV1DatabaseTableSpecType> type;
+        private @Nullable Output<GoogleCloudDatacatalogV1DatabaseTableSpecType> type;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GoogleCloudDatacatalogV1DatabaseTableSpecArgs extends io.pulu
     	      this.type = defaults.type;
         }
 
-        public Builder type(@Nullable Input<GoogleCloudDatacatalogV1DatabaseTableSpecType> type) {
+        public Builder type(@Nullable Output<GoogleCloudDatacatalogV1DatabaseTableSpecType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable GoogleCloudDatacatalogV1DatabaseTableSpecType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public GoogleCloudDatacatalogV1DatabaseTableSpecArgs build() {

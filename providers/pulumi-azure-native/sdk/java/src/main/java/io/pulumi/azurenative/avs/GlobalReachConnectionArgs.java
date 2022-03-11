@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class GlobalReachConnectionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="authorizationKey")
-      private final @Nullable Input<String> authorizationKey;
+      private final @Nullable Output<String> authorizationKey;
 
-    public Input<String> getAuthorizationKey() {
-        return this.authorizationKey == null ? Input.empty() : this.authorizationKey;
+    public Output<String> getAuthorizationKey() {
+        return this.authorizationKey == null ? Output.empty() : this.authorizationKey;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class GlobalReachConnectionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="globalReachConnectionName")
-      private final @Nullable Input<String> globalReachConnectionName;
+      private final @Nullable Output<String> globalReachConnectionName;
 
-    public Input<String> getGlobalReachConnectionName() {
-        return this.globalReachConnectionName == null ? Input.empty() : this.globalReachConnectionName;
+    public Output<String> getGlobalReachConnectionName() {
+        return this.globalReachConnectionName == null ? Output.empty() : this.globalReachConnectionName;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class GlobalReachConnectionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="peerExpressRouteCircuit")
-      private final @Nullable Input<String> peerExpressRouteCircuit;
+      private final @Nullable Output<String> peerExpressRouteCircuit;
 
-    public Input<String> getPeerExpressRouteCircuit() {
-        return this.peerExpressRouteCircuit == null ? Input.empty() : this.peerExpressRouteCircuit;
+    public Output<String> getPeerExpressRouteCircuit() {
+        return this.peerExpressRouteCircuit == null ? Output.empty() : this.peerExpressRouteCircuit;
     }
 
     /**
@@ -52,9 +52,9 @@ public final class GlobalReachConnectionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="privateCloudName", required=true)
-      private final Input<String> privateCloudName;
+      private final Output<String> privateCloudName;
 
-    public Input<String> getPrivateCloudName() {
+    public Output<String> getPrivateCloudName() {
         return this.privateCloudName;
     }
 
@@ -63,18 +63,18 @@ public final class GlobalReachConnectionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public GlobalReachConnectionArgs(
-        @Nullable Input<String> authorizationKey,
-        @Nullable Input<String> globalReachConnectionName,
-        @Nullable Input<String> peerExpressRouteCircuit,
-        Input<String> privateCloudName,
-        Input<String> resourceGroupName) {
+        @Nullable Output<String> authorizationKey,
+        @Nullable Output<String> globalReachConnectionName,
+        @Nullable Output<String> peerExpressRouteCircuit,
+        Output<String> privateCloudName,
+        Output<String> resourceGroupName) {
         this.authorizationKey = authorizationKey;
         this.globalReachConnectionName = globalReachConnectionName;
         this.peerExpressRouteCircuit = peerExpressRouteCircuit;
@@ -83,11 +83,11 @@ public final class GlobalReachConnectionArgs extends io.pulumi.resources.Resourc
     }
 
     private GlobalReachConnectionArgs() {
-        this.authorizationKey = Input.empty();
-        this.globalReachConnectionName = Input.empty();
-        this.peerExpressRouteCircuit = Input.empty();
-        this.privateCloudName = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.authorizationKey = Output.empty();
+        this.globalReachConnectionName = Output.empty();
+        this.peerExpressRouteCircuit = Output.empty();
+        this.privateCloudName = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -99,11 +99,11 @@ public final class GlobalReachConnectionArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> authorizationKey;
-        private @Nullable Input<String> globalReachConnectionName;
-        private @Nullable Input<String> peerExpressRouteCircuit;
-        private Input<String> privateCloudName;
-        private Input<String> resourceGroupName;
+        private @Nullable Output<String> authorizationKey;
+        private @Nullable Output<String> globalReachConnectionName;
+        private @Nullable Output<String> peerExpressRouteCircuit;
+        private Output<String> privateCloudName;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -118,53 +118,53 @@ public final class GlobalReachConnectionArgs extends io.pulumi.resources.Resourc
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder authorizationKey(@Nullable Input<String> authorizationKey) {
+        public Builder authorizationKey(@Nullable Output<String> authorizationKey) {
             this.authorizationKey = authorizationKey;
             return this;
         }
 
         public Builder authorizationKey(@Nullable String authorizationKey) {
-            this.authorizationKey = Input.ofNullable(authorizationKey);
+            this.authorizationKey = Output.ofNullable(authorizationKey);
             return this;
         }
 
-        public Builder globalReachConnectionName(@Nullable Input<String> globalReachConnectionName) {
+        public Builder globalReachConnectionName(@Nullable Output<String> globalReachConnectionName) {
             this.globalReachConnectionName = globalReachConnectionName;
             return this;
         }
 
         public Builder globalReachConnectionName(@Nullable String globalReachConnectionName) {
-            this.globalReachConnectionName = Input.ofNullable(globalReachConnectionName);
+            this.globalReachConnectionName = Output.ofNullable(globalReachConnectionName);
             return this;
         }
 
-        public Builder peerExpressRouteCircuit(@Nullable Input<String> peerExpressRouteCircuit) {
+        public Builder peerExpressRouteCircuit(@Nullable Output<String> peerExpressRouteCircuit) {
             this.peerExpressRouteCircuit = peerExpressRouteCircuit;
             return this;
         }
 
         public Builder peerExpressRouteCircuit(@Nullable String peerExpressRouteCircuit) {
-            this.peerExpressRouteCircuit = Input.ofNullable(peerExpressRouteCircuit);
+            this.peerExpressRouteCircuit = Output.ofNullable(peerExpressRouteCircuit);
             return this;
         }
 
-        public Builder privateCloudName(Input<String> privateCloudName) {
+        public Builder privateCloudName(Output<String> privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
 
         public Builder privateCloudName(String privateCloudName) {
-            this.privateCloudName = Input.of(Objects.requireNonNull(privateCloudName));
+            this.privateCloudName = Output.of(Objects.requireNonNull(privateCloudName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public GlobalReachConnectionArgs build() {

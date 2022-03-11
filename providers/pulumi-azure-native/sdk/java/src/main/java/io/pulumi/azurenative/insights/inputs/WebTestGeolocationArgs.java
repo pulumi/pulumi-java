@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class WebTestGeolocationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
-    public WebTestGeolocationArgs(@Nullable Input<String> location) {
+    public WebTestGeolocationArgs(@Nullable Output<String> location) {
         this.location = location;
     }
 
     private WebTestGeolocationArgs() {
-        this.location = Input.empty();
+        this.location = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class WebTestGeolocationArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> location;
+        private @Nullable Output<String> location;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class WebTestGeolocationArgs extends io.pulumi.resources.ResourceAr
     	      this.location = defaults.location;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
         public WebTestGeolocationArgs build() {

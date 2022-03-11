@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.HubPublicIPAddressesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class HubIPAddressesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateIPAddress")
-      private final @Nullable Input<String> privateIPAddress;
+      private final @Nullable Output<String> privateIPAddress;
 
-    public Input<String> getPrivateIPAddress() {
-        return this.privateIPAddress == null ? Input.empty() : this.privateIPAddress;
+    public Output<String> getPrivateIPAddress() {
+        return this.privateIPAddress == null ? Output.empty() : this.privateIPAddress;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class HubIPAddressesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicIPs")
-      private final @Nullable Input<HubPublicIPAddressesArgs> publicIPs;
+      private final @Nullable Output<HubPublicIPAddressesArgs> publicIPs;
 
-    public Input<HubPublicIPAddressesArgs> getPublicIPs() {
-        return this.publicIPs == null ? Input.empty() : this.publicIPs;
+    public Output<HubPublicIPAddressesArgs> getPublicIPs() {
+        return this.publicIPs == null ? Output.empty() : this.publicIPs;
     }
 
     public HubIPAddressesArgs(
-        @Nullable Input<String> privateIPAddress,
-        @Nullable Input<HubPublicIPAddressesArgs> publicIPs) {
+        @Nullable Output<String> privateIPAddress,
+        @Nullable Output<HubPublicIPAddressesArgs> publicIPs) {
         this.privateIPAddress = privateIPAddress;
         this.publicIPs = publicIPs;
     }
 
     private HubIPAddressesArgs() {
-        this.privateIPAddress = Input.empty();
-        this.publicIPs = Input.empty();
+        this.privateIPAddress = Output.empty();
+        this.publicIPs = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class HubIPAddressesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> privateIPAddress;
-        private @Nullable Input<HubPublicIPAddressesArgs> publicIPs;
+        private @Nullable Output<String> privateIPAddress;
+        private @Nullable Output<HubPublicIPAddressesArgs> publicIPs;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class HubIPAddressesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.publicIPs = defaults.publicIPs;
         }
 
-        public Builder privateIPAddress(@Nullable Input<String> privateIPAddress) {
+        public Builder privateIPAddress(@Nullable Output<String> privateIPAddress) {
             this.privateIPAddress = privateIPAddress;
             return this;
         }
 
         public Builder privateIPAddress(@Nullable String privateIPAddress) {
-            this.privateIPAddress = Input.ofNullable(privateIPAddress);
+            this.privateIPAddress = Output.ofNullable(privateIPAddress);
             return this;
         }
 
-        public Builder publicIPs(@Nullable Input<HubPublicIPAddressesArgs> publicIPs) {
+        public Builder publicIPs(@Nullable Output<HubPublicIPAddressesArgs> publicIPs) {
             this.publicIPs = publicIPs;
             return this;
         }
 
         public Builder publicIPs(@Nullable HubPublicIPAddressesArgs publicIPs) {
-            this.publicIPs = Input.ofNullable(publicIPs);
+            this.publicIPs = Output.ofNullable(publicIPs);
             return this;
         }
         public HubIPAddressesArgs build() {

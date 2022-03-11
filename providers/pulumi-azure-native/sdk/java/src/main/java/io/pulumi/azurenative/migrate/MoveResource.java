@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.migrate.MoveResourceArgs;
 import io.pulumi.azurenative.migrate.outputs.MoveResourcePropertiesResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -113,20 +112,20 @@ public class MoveResource extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public MoveResource(String name, MoveResourceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:migrate:MoveResource", name, args == null ? MoveResourceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:migrate:MoveResource", name, args == null ? MoveResourceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private MoveResource(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private MoveResource(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:migrate:MoveResource", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:migrate/v20191001preview:MoveResource").build()),
-                Input.of(Alias.builder().setType("azure-native:migrate/v20210101:MoveResource").build()),
-                Input.of(Alias.builder().setType("azure-native:migrate/v20210801:MoveResource").build())
+                Output.of(Alias.builder().setType("azure-native:migrate/v20191001preview:MoveResource").build()),
+                Output.of(Alias.builder().setType("azure-native:migrate/v20210101:MoveResource").build()),
+                Output.of(Alias.builder().setType("azure-native:migrate/v20210801:MoveResource").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -140,7 +139,7 @@ public class MoveResource extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static MoveResource get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static MoveResource get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new MoveResource(name, id, options);
     }
 }

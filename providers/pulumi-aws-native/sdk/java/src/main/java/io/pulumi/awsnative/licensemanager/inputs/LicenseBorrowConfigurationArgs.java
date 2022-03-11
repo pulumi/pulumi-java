@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.licensemanager.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -15,29 +15,29 @@ public final class LicenseBorrowConfigurationArgs extends io.pulumi.resources.Re
     public static final LicenseBorrowConfigurationArgs Empty = new LicenseBorrowConfigurationArgs();
 
     @InputImport(name="allowEarlyCheckIn", required=true)
-      private final Input<Boolean> allowEarlyCheckIn;
+      private final Output<Boolean> allowEarlyCheckIn;
 
-    public Input<Boolean> getAllowEarlyCheckIn() {
+    public Output<Boolean> getAllowEarlyCheckIn() {
         return this.allowEarlyCheckIn;
     }
 
     @InputImport(name="maxTimeToLiveInMinutes", required=true)
-      private final Input<Integer> maxTimeToLiveInMinutes;
+      private final Output<Integer> maxTimeToLiveInMinutes;
 
-    public Input<Integer> getMaxTimeToLiveInMinutes() {
+    public Output<Integer> getMaxTimeToLiveInMinutes() {
         return this.maxTimeToLiveInMinutes;
     }
 
     public LicenseBorrowConfigurationArgs(
-        Input<Boolean> allowEarlyCheckIn,
-        Input<Integer> maxTimeToLiveInMinutes) {
+        Output<Boolean> allowEarlyCheckIn,
+        Output<Integer> maxTimeToLiveInMinutes) {
         this.allowEarlyCheckIn = Objects.requireNonNull(allowEarlyCheckIn, "expected parameter 'allowEarlyCheckIn' to be non-null");
         this.maxTimeToLiveInMinutes = Objects.requireNonNull(maxTimeToLiveInMinutes, "expected parameter 'maxTimeToLiveInMinutes' to be non-null");
     }
 
     private LicenseBorrowConfigurationArgs() {
-        this.allowEarlyCheckIn = Input.empty();
-        this.maxTimeToLiveInMinutes = Input.empty();
+        this.allowEarlyCheckIn = Output.empty();
+        this.maxTimeToLiveInMinutes = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class LicenseBorrowConfigurationArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<Boolean> allowEarlyCheckIn;
-        private Input<Integer> maxTimeToLiveInMinutes;
+        private Output<Boolean> allowEarlyCheckIn;
+        private Output<Integer> maxTimeToLiveInMinutes;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class LicenseBorrowConfigurationArgs extends io.pulumi.resources.Re
     	      this.maxTimeToLiveInMinutes = defaults.maxTimeToLiveInMinutes;
         }
 
-        public Builder allowEarlyCheckIn(Input<Boolean> allowEarlyCheckIn) {
+        public Builder allowEarlyCheckIn(Output<Boolean> allowEarlyCheckIn) {
             this.allowEarlyCheckIn = Objects.requireNonNull(allowEarlyCheckIn);
             return this;
         }
 
         public Builder allowEarlyCheckIn(Boolean allowEarlyCheckIn) {
-            this.allowEarlyCheckIn = Input.of(Objects.requireNonNull(allowEarlyCheckIn));
+            this.allowEarlyCheckIn = Output.of(Objects.requireNonNull(allowEarlyCheckIn));
             return this;
         }
 
-        public Builder maxTimeToLiveInMinutes(Input<Integer> maxTimeToLiveInMinutes) {
+        public Builder maxTimeToLiveInMinutes(Output<Integer> maxTimeToLiveInMinutes) {
             this.maxTimeToLiveInMinutes = Objects.requireNonNull(maxTimeToLiveInMinutes);
             return this;
         }
 
         public Builder maxTimeToLiveInMinutes(Integer maxTimeToLiveInMinutes) {
-            this.maxTimeToLiveInMinutes = Input.of(Objects.requireNonNull(maxTimeToLiveInMinutes));
+            this.maxTimeToLiveInMinutes = Output.of(Objects.requireNonNull(maxTimeToLiveInMinutes));
             return this;
         }
         public LicenseBorrowConfigurationArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudbuild.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class TriggerWebhookConfigGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="secret", required=true)
-      private final Input<String> secret;
+      private final Output<String> secret;
 
-    public Input<String> getSecret() {
+    public Output<String> getSecret() {
         return this.secret;
     }
 
@@ -33,22 +33,22 @@ public final class TriggerWebhookConfigGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<String> state;
+      private final @Nullable Output<String> state;
 
-    public Input<String> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<String> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     public TriggerWebhookConfigGetArgs(
-        Input<String> secret,
-        @Nullable Input<String> state) {
+        Output<String> secret,
+        @Nullable Output<String> state) {
         this.secret = Objects.requireNonNull(secret, "expected parameter 'secret' to be non-null");
         this.state = state;
     }
 
     private TriggerWebhookConfigGetArgs() {
-        this.secret = Input.empty();
-        this.state = Input.empty();
+        this.secret = Output.empty();
+        this.state = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class TriggerWebhookConfigGetArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<String> secret;
-        private @Nullable Input<String> state;
+        private Output<String> secret;
+        private @Nullable Output<String> state;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class TriggerWebhookConfigGetArgs extends io.pulumi.resources.Resou
     	      this.state = defaults.state;
         }
 
-        public Builder secret(Input<String> secret) {
+        public Builder secret(Output<String> secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
 
         public Builder secret(String secret) {
-            this.secret = Input.of(Objects.requireNonNull(secret));
+            this.secret = Output.of(Objects.requireNonNull(secret));
             return this;
         }
 
-        public Builder state(@Nullable Input<String> state) {
+        public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable String state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
         public TriggerWebhookConfigGetArgs build() {

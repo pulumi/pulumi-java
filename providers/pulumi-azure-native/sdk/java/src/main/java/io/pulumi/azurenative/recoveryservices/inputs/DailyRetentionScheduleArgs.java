@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.RetentionDurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class DailyRetentionScheduleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="retentionDuration")
-      private final @Nullable Input<RetentionDurationArgs> retentionDuration;
+      private final @Nullable Output<RetentionDurationArgs> retentionDuration;
 
-    public Input<RetentionDurationArgs> getRetentionDuration() {
-        return this.retentionDuration == null ? Input.empty() : this.retentionDuration;
+    public Output<RetentionDurationArgs> getRetentionDuration() {
+        return this.retentionDuration == null ? Output.empty() : this.retentionDuration;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class DailyRetentionScheduleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="retentionTimes")
-      private final @Nullable Input<List<String>> retentionTimes;
+      private final @Nullable Output<List<String>> retentionTimes;
 
-    public Input<List<String>> getRetentionTimes() {
-        return this.retentionTimes == null ? Input.empty() : this.retentionTimes;
+    public Output<List<String>> getRetentionTimes() {
+        return this.retentionTimes == null ? Output.empty() : this.retentionTimes;
     }
 
     public DailyRetentionScheduleArgs(
-        @Nullable Input<RetentionDurationArgs> retentionDuration,
-        @Nullable Input<List<String>> retentionTimes) {
+        @Nullable Output<RetentionDurationArgs> retentionDuration,
+        @Nullable Output<List<String>> retentionTimes) {
         this.retentionDuration = retentionDuration;
         this.retentionTimes = retentionTimes;
     }
 
     private DailyRetentionScheduleArgs() {
-        this.retentionDuration = Input.empty();
-        this.retentionTimes = Input.empty();
+        this.retentionDuration = Output.empty();
+        this.retentionTimes = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class DailyRetentionScheduleArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<RetentionDurationArgs> retentionDuration;
-        private @Nullable Input<List<String>> retentionTimes;
+        private @Nullable Output<RetentionDurationArgs> retentionDuration;
+        private @Nullable Output<List<String>> retentionTimes;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class DailyRetentionScheduleArgs extends io.pulumi.resources.Resour
     	      this.retentionTimes = defaults.retentionTimes;
         }
 
-        public Builder retentionDuration(@Nullable Input<RetentionDurationArgs> retentionDuration) {
+        public Builder retentionDuration(@Nullable Output<RetentionDurationArgs> retentionDuration) {
             this.retentionDuration = retentionDuration;
             return this;
         }
 
         public Builder retentionDuration(@Nullable RetentionDurationArgs retentionDuration) {
-            this.retentionDuration = Input.ofNullable(retentionDuration);
+            this.retentionDuration = Output.ofNullable(retentionDuration);
             return this;
         }
 
-        public Builder retentionTimes(@Nullable Input<List<String>> retentionTimes) {
+        public Builder retentionTimes(@Nullable Output<List<String>> retentionTimes) {
             this.retentionTimes = retentionTimes;
             return this;
         }
 
         public Builder retentionTimes(@Nullable List<String> retentionTimes) {
-            this.retentionTimes = Input.ofNullable(retentionTimes);
+            this.retentionTimes = Output.ofNullable(retentionTimes);
             return this;
         }
         public DailyRetentionScheduleArgs build() {

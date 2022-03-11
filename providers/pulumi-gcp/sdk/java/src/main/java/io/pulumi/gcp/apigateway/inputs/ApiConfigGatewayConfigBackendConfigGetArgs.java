@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.apigateway.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class ApiConfigGatewayConfigBackendConfigGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="googleServiceAccount", required=true)
-      private final Input<String> googleServiceAccount;
+      private final Output<String> googleServiceAccount;
 
-    public Input<String> getGoogleServiceAccount() {
+    public Output<String> getGoogleServiceAccount() {
         return this.googleServiceAccount;
     }
 
-    public ApiConfigGatewayConfigBackendConfigGetArgs(Input<String> googleServiceAccount) {
+    public ApiConfigGatewayConfigBackendConfigGetArgs(Output<String> googleServiceAccount) {
         this.googleServiceAccount = Objects.requireNonNull(googleServiceAccount, "expected parameter 'googleServiceAccount' to be non-null");
     }
 
     private ApiConfigGatewayConfigBackendConfigGetArgs() {
-        this.googleServiceAccount = Input.empty();
+        this.googleServiceAccount = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class ApiConfigGatewayConfigBackendConfigGetArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private Input<String> googleServiceAccount;
+        private Output<String> googleServiceAccount;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class ApiConfigGatewayConfigBackendConfigGetArgs extends io.pulumi.
     	      this.googleServiceAccount = defaults.googleServiceAccount;
         }
 
-        public Builder googleServiceAccount(Input<String> googleServiceAccount) {
+        public Builder googleServiceAccount(Output<String> googleServiceAccount) {
             this.googleServiceAccount = Objects.requireNonNull(googleServiceAccount);
             return this;
         }
 
         public Builder googleServiceAccount(String googleServiceAccount) {
-            this.googleServiceAccount = Input.of(Objects.requireNonNull(googleServiceAccount));
+            this.googleServiceAccount = Output.of(Objects.requireNonNull(googleServiceAccount));
             return this;
         }
         public ApiConfigGatewayConfigBackendConfigGetArgs build() {

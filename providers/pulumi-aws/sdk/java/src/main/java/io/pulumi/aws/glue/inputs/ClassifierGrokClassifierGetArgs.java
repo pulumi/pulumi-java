@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glue.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class ClassifierGrokClassifierGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="classification", required=true)
-      private final Input<String> classification;
+      private final Output<String> classification;
 
-    public Input<String> getClassification() {
+    public Output<String> getClassification() {
         return this.classification;
     }
 
@@ -30,10 +30,10 @@ public final class ClassifierGrokClassifierGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="customPatterns")
-      private final @Nullable Input<String> customPatterns;
+      private final @Nullable Output<String> customPatterns;
 
-    public Input<String> getCustomPatterns() {
-        return this.customPatterns == null ? Input.empty() : this.customPatterns;
+    public Output<String> getCustomPatterns() {
+        return this.customPatterns == null ? Output.empty() : this.customPatterns;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class ClassifierGrokClassifierGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="grokPattern", required=true)
-      private final Input<String> grokPattern;
+      private final Output<String> grokPattern;
 
-    public Input<String> getGrokPattern() {
+    public Output<String> getGrokPattern() {
         return this.grokPattern;
     }
 
     public ClassifierGrokClassifierGetArgs(
-        Input<String> classification,
-        @Nullable Input<String> customPatterns,
-        Input<String> grokPattern) {
+        Output<String> classification,
+        @Nullable Output<String> customPatterns,
+        Output<String> grokPattern) {
         this.classification = Objects.requireNonNull(classification, "expected parameter 'classification' to be non-null");
         this.customPatterns = customPatterns;
         this.grokPattern = Objects.requireNonNull(grokPattern, "expected parameter 'grokPattern' to be non-null");
     }
 
     private ClassifierGrokClassifierGetArgs() {
-        this.classification = Input.empty();
-        this.customPatterns = Input.empty();
-        this.grokPattern = Input.empty();
+        this.classification = Output.empty();
+        this.customPatterns = Output.empty();
+        this.grokPattern = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class ClassifierGrokClassifierGetArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<String> classification;
-        private @Nullable Input<String> customPatterns;
-        private Input<String> grokPattern;
+        private Output<String> classification;
+        private @Nullable Output<String> customPatterns;
+        private Output<String> grokPattern;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class ClassifierGrokClassifierGetArgs extends io.pulumi.resources.R
     	      this.grokPattern = defaults.grokPattern;
         }
 
-        public Builder classification(Input<String> classification) {
+        public Builder classification(Output<String> classification) {
             this.classification = Objects.requireNonNull(classification);
             return this;
         }
 
         public Builder classification(String classification) {
-            this.classification = Input.of(Objects.requireNonNull(classification));
+            this.classification = Output.of(Objects.requireNonNull(classification));
             return this;
         }
 
-        public Builder customPatterns(@Nullable Input<String> customPatterns) {
+        public Builder customPatterns(@Nullable Output<String> customPatterns) {
             this.customPatterns = customPatterns;
             return this;
         }
 
         public Builder customPatterns(@Nullable String customPatterns) {
-            this.customPatterns = Input.ofNullable(customPatterns);
+            this.customPatterns = Output.ofNullable(customPatterns);
             return this;
         }
 
-        public Builder grokPattern(Input<String> grokPattern) {
+        public Builder grokPattern(Output<String> grokPattern) {
             this.grokPattern = Objects.requireNonNull(grokPattern);
             return this;
         }
 
         public Builder grokPattern(String grokPattern) {
-            this.grokPattern = Input.of(Objects.requireNonNull(grokPattern));
+            this.grokPattern = Output.of(Objects.requireNonNull(grokPattern));
             return this;
         }
         public ClassifierGrokClassifierGetArgs build() {

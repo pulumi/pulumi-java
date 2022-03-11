@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.recaptchaenterprise_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.recaptchaenterprise_v1.enums.GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge;
 import java.lang.Double;
@@ -24,10 +24,10 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs extends io
      * 
      */
     @InputImport(name="testingChallenge")
-      private final @Nullable Input<GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge> testingChallenge;
+      private final @Nullable Output<GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge> testingChallenge;
 
-    public Input<GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge> getTestingChallenge() {
-        return this.testingChallenge == null ? Input.empty() : this.testingChallenge;
+    public Output<GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge> getTestingChallenge() {
+        return this.testingChallenge == null ? Output.empty() : this.testingChallenge;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs extends io
      * 
      */
     @InputImport(name="testingScore")
-      private final @Nullable Input<Double> testingScore;
+      private final @Nullable Output<Double> testingScore;
 
-    public Input<Double> getTestingScore() {
-        return this.testingScore == null ? Input.empty() : this.testingScore;
+    public Output<Double> getTestingScore() {
+        return this.testingScore == null ? Output.empty() : this.testingScore;
     }
 
     public GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs(
-        @Nullable Input<GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge> testingChallenge,
-        @Nullable Input<Double> testingScore) {
+        @Nullable Output<GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge> testingChallenge,
+        @Nullable Output<Double> testingScore) {
         this.testingChallenge = testingChallenge;
         this.testingScore = testingScore;
     }
 
     private GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs() {
-        this.testingChallenge = Input.empty();
-        this.testingScore = Input.empty();
+        this.testingChallenge = Output.empty();
+        this.testingScore = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs extends io
     }
 
     public static final class Builder {
-        private @Nullable Input<GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge> testingChallenge;
-        private @Nullable Input<Double> testingScore;
+        private @Nullable Output<GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge> testingChallenge;
+        private @Nullable Output<Double> testingScore;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs extends io
     	      this.testingScore = defaults.testingScore;
         }
 
-        public Builder testingChallenge(@Nullable Input<GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge> testingChallenge) {
+        public Builder testingChallenge(@Nullable Output<GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge> testingChallenge) {
             this.testingChallenge = testingChallenge;
             return this;
         }
 
         public Builder testingChallenge(@Nullable GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge testingChallenge) {
-            this.testingChallenge = Input.ofNullable(testingChallenge);
+            this.testingChallenge = Output.ofNullable(testingChallenge);
             return this;
         }
 
-        public Builder testingScore(@Nullable Input<Double> testingScore) {
+        public Builder testingScore(@Nullable Output<Double> testingScore) {
             this.testingScore = testingScore;
             return this;
         }
 
         public Builder testingScore(@Nullable Double testingScore) {
-            this.testingScore = Input.ofNullable(testingScore);
+            this.testingScore = Output.ofNullable(testingScore);
             return this;
         }
         public GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs build() {

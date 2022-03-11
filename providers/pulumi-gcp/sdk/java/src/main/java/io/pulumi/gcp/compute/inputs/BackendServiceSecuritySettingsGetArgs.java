@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,9 +21,9 @@ public final class BackendServiceSecuritySettingsGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="clientTlsPolicy", required=true)
-      private final Input<String> clientTlsPolicy;
+      private final Output<String> clientTlsPolicy;
 
-    public Input<String> getClientTlsPolicy() {
+    public Output<String> getClientTlsPolicy() {
         return this.clientTlsPolicy;
     }
 
@@ -34,22 +34,22 @@ public final class BackendServiceSecuritySettingsGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="subjectAltNames", required=true)
-      private final Input<List<String>> subjectAltNames;
+      private final Output<List<String>> subjectAltNames;
 
-    public Input<List<String>> getSubjectAltNames() {
+    public Output<List<String>> getSubjectAltNames() {
         return this.subjectAltNames;
     }
 
     public BackendServiceSecuritySettingsGetArgs(
-        Input<String> clientTlsPolicy,
-        Input<List<String>> subjectAltNames) {
+        Output<String> clientTlsPolicy,
+        Output<List<String>> subjectAltNames) {
         this.clientTlsPolicy = Objects.requireNonNull(clientTlsPolicy, "expected parameter 'clientTlsPolicy' to be non-null");
         this.subjectAltNames = Objects.requireNonNull(subjectAltNames, "expected parameter 'subjectAltNames' to be non-null");
     }
 
     private BackendServiceSecuritySettingsGetArgs() {
-        this.clientTlsPolicy = Input.empty();
-        this.subjectAltNames = Input.empty();
+        this.clientTlsPolicy = Output.empty();
+        this.subjectAltNames = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class BackendServiceSecuritySettingsGetArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private Input<String> clientTlsPolicy;
-        private Input<List<String>> subjectAltNames;
+        private Output<String> clientTlsPolicy;
+        private Output<List<String>> subjectAltNames;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class BackendServiceSecuritySettingsGetArgs extends io.pulumi.resou
     	      this.subjectAltNames = defaults.subjectAltNames;
         }
 
-        public Builder clientTlsPolicy(Input<String> clientTlsPolicy) {
+        public Builder clientTlsPolicy(Output<String> clientTlsPolicy) {
             this.clientTlsPolicy = Objects.requireNonNull(clientTlsPolicy);
             return this;
         }
 
         public Builder clientTlsPolicy(String clientTlsPolicy) {
-            this.clientTlsPolicy = Input.of(Objects.requireNonNull(clientTlsPolicy));
+            this.clientTlsPolicy = Output.of(Objects.requireNonNull(clientTlsPolicy));
             return this;
         }
 
-        public Builder subjectAltNames(Input<List<String>> subjectAltNames) {
+        public Builder subjectAltNames(Output<List<String>> subjectAltNames) {
             this.subjectAltNames = Objects.requireNonNull(subjectAltNames);
             return this;
         }
 
         public Builder subjectAltNames(List<String> subjectAltNames) {
-            this.subjectAltNames = Input.of(Objects.requireNonNull(subjectAltNames));
+            this.subjectAltNames = Output.of(Objects.requireNonNull(subjectAltNames));
             return this;
         }
         public BackendServiceSecuritySettingsGetArgs build() {

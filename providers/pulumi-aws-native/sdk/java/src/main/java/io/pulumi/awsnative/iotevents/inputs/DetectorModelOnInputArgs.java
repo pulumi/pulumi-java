@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotevents.inputs;
 
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelEventArgs;
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelTransitionEventArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class DetectorModelOnInputArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="events")
-      private final @Nullable Input<List<DetectorModelEventArgs>> events;
+      private final @Nullable Output<List<DetectorModelEventArgs>> events;
 
-    public Input<List<DetectorModelEventArgs>> getEvents() {
-        return this.events == null ? Input.empty() : this.events;
+    public Output<List<DetectorModelEventArgs>> getEvents() {
+        return this.events == null ? Output.empty() : this.events;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class DetectorModelOnInputArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="transitionEvents")
-      private final @Nullable Input<List<DetectorModelTransitionEventArgs>> transitionEvents;
+      private final @Nullable Output<List<DetectorModelTransitionEventArgs>> transitionEvents;
 
-    public Input<List<DetectorModelTransitionEventArgs>> getTransitionEvents() {
-        return this.transitionEvents == null ? Input.empty() : this.transitionEvents;
+    public Output<List<DetectorModelTransitionEventArgs>> getTransitionEvents() {
+        return this.transitionEvents == null ? Output.empty() : this.transitionEvents;
     }
 
     public DetectorModelOnInputArgs(
-        @Nullable Input<List<DetectorModelEventArgs>> events,
-        @Nullable Input<List<DetectorModelTransitionEventArgs>> transitionEvents) {
+        @Nullable Output<List<DetectorModelEventArgs>> events,
+        @Nullable Output<List<DetectorModelTransitionEventArgs>> transitionEvents) {
         this.events = events;
         this.transitionEvents = transitionEvents;
     }
 
     private DetectorModelOnInputArgs() {
-        this.events = Input.empty();
-        this.transitionEvents = Input.empty();
+        this.events = Output.empty();
+        this.transitionEvents = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class DetectorModelOnInputArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<List<DetectorModelEventArgs>> events;
-        private @Nullable Input<List<DetectorModelTransitionEventArgs>> transitionEvents;
+        private @Nullable Output<List<DetectorModelEventArgs>> events;
+        private @Nullable Output<List<DetectorModelTransitionEventArgs>> transitionEvents;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class DetectorModelOnInputArgs extends io.pulumi.resources.Resource
     	      this.transitionEvents = defaults.transitionEvents;
         }
 
-        public Builder events(@Nullable Input<List<DetectorModelEventArgs>> events) {
+        public Builder events(@Nullable Output<List<DetectorModelEventArgs>> events) {
             this.events = events;
             return this;
         }
 
         public Builder events(@Nullable List<DetectorModelEventArgs> events) {
-            this.events = Input.ofNullable(events);
+            this.events = Output.ofNullable(events);
             return this;
         }
 
-        public Builder transitionEvents(@Nullable Input<List<DetectorModelTransitionEventArgs>> transitionEvents) {
+        public Builder transitionEvents(@Nullable Output<List<DetectorModelTransitionEventArgs>> transitionEvents) {
             this.transitionEvents = transitionEvents;
             return this;
         }
 
         public Builder transitionEvents(@Nullable List<DetectorModelTransitionEventArgs> transitionEvents) {
-            this.transitionEvents = Input.ofNullable(transitionEvents);
+            this.transitionEvents = Output.ofNullable(transitionEvents);
             return this;
         }
         public DetectorModelOnInputArgs build() {

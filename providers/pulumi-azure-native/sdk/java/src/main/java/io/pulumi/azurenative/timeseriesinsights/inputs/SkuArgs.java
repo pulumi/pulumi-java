@@ -5,7 +5,7 @@ package io.pulumi.azurenative.timeseriesinsights.inputs;
 
 import io.pulumi.azurenative.timeseriesinsights.enums.SkuName;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,9 +25,9 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacity", required=true)
-      private final Input<Integer> capacity;
+      private final Output<Integer> capacity;
 
-    public Input<Integer> getCapacity() {
+    public Output<Integer> getCapacity() {
         return this.capacity;
     }
 
@@ -36,22 +36,22 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<Either<String,SkuName>> name;
+      private final Output<Either<String,SkuName>> name;
 
-    public Input<Either<String,SkuName>> getName() {
+    public Output<Either<String,SkuName>> getName() {
         return this.name;
     }
 
     public SkuArgs(
-        Input<Integer> capacity,
-        Input<Either<String,SkuName>> name) {
+        Output<Integer> capacity,
+        Output<Either<String,SkuName>> name) {
         this.capacity = Objects.requireNonNull(capacity, "expected parameter 'capacity' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private SkuArgs() {
-        this.capacity = Input.empty();
-        this.name = Input.empty();
+        this.capacity = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Integer> capacity;
-        private Input<Either<String,SkuName>> name;
+        private Output<Integer> capacity;
+        private Output<Either<String,SkuName>> name;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder capacity(Input<Integer> capacity) {
+        public Builder capacity(Output<Integer> capacity) {
             this.capacity = Objects.requireNonNull(capacity);
             return this;
         }
 
         public Builder capacity(Integer capacity) {
-            this.capacity = Input.of(Objects.requireNonNull(capacity));
+            this.capacity = Output.of(Objects.requireNonNull(capacity));
             return this;
         }
 
-        public Builder name(Input<Either<String,SkuName>> name) {
+        public Builder name(Output<Either<String,SkuName>> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(Either<String,SkuName> name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public SkuArgs build() {

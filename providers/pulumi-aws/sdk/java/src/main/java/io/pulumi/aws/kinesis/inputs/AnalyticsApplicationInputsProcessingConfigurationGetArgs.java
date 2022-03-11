@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationInputsProcessingConfigurationLambdaGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class AnalyticsApplicationInputsProcessingConfigurationGetArgs exte
      * 
      */
     @InputImport(name="lambda", required=true)
-      private final Input<AnalyticsApplicationInputsProcessingConfigurationLambdaGetArgs> lambda;
+      private final Output<AnalyticsApplicationInputsProcessingConfigurationLambdaGetArgs> lambda;
 
-    public Input<AnalyticsApplicationInputsProcessingConfigurationLambdaGetArgs> getLambda() {
+    public Output<AnalyticsApplicationInputsProcessingConfigurationLambdaGetArgs> getLambda() {
         return this.lambda;
     }
 
-    public AnalyticsApplicationInputsProcessingConfigurationGetArgs(Input<AnalyticsApplicationInputsProcessingConfigurationLambdaGetArgs> lambda) {
+    public AnalyticsApplicationInputsProcessingConfigurationGetArgs(Output<AnalyticsApplicationInputsProcessingConfigurationLambdaGetArgs> lambda) {
         this.lambda = Objects.requireNonNull(lambda, "expected parameter 'lambda' to be non-null");
     }
 
     private AnalyticsApplicationInputsProcessingConfigurationGetArgs() {
-        this.lambda = Input.empty();
+        this.lambda = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class AnalyticsApplicationInputsProcessingConfigurationGetArgs exte
     }
 
     public static final class Builder {
-        private Input<AnalyticsApplicationInputsProcessingConfigurationLambdaGetArgs> lambda;
+        private Output<AnalyticsApplicationInputsProcessingConfigurationLambdaGetArgs> lambda;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class AnalyticsApplicationInputsProcessingConfigurationGetArgs exte
     	      this.lambda = defaults.lambda;
         }
 
-        public Builder lambda(Input<AnalyticsApplicationInputsProcessingConfigurationLambdaGetArgs> lambda) {
+        public Builder lambda(Output<AnalyticsApplicationInputsProcessingConfigurationLambdaGetArgs> lambda) {
             this.lambda = Objects.requireNonNull(lambda);
             return this;
         }
 
         public Builder lambda(AnalyticsApplicationInputsProcessingConfigurationLambdaGetArgs lambda) {
-            this.lambda = Input.of(Objects.requireNonNull(lambda));
+            this.lambda = Output.of(Objects.requireNonNull(lambda));
             return this;
         }
         public AnalyticsApplicationInputsProcessingConfigurationGetArgs build() {

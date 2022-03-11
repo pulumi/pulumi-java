@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.container.inputs.AwsNodePoolAutoscalingGetArgs;
 import io.pulumi.gcp.container.inputs.AwsNodePoolConfigGetArgs;
@@ -24,10 +24,10 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="annotations")
-      private final @Nullable Input<Map<String,String>> annotations;
+      private final @Nullable Output<Map<String,String>> annotations;
 
-    public Input<Map<String,String>> getAnnotations() {
-        return this.annotations == null ? Input.empty() : this.annotations;
+    public Output<Map<String,String>> getAnnotations() {
+        return this.annotations == null ? Output.empty() : this.annotations;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoscaling")
-      private final @Nullable Input<AwsNodePoolAutoscalingGetArgs> autoscaling;
+      private final @Nullable Output<AwsNodePoolAutoscalingGetArgs> autoscaling;
 
-    public Input<AwsNodePoolAutoscalingGetArgs> getAutoscaling() {
-        return this.autoscaling == null ? Input.empty() : this.autoscaling;
+    public Output<AwsNodePoolAutoscalingGetArgs> getAutoscaling() {
+        return this.autoscaling == null ? Output.empty() : this.autoscaling;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cluster")
-      private final @Nullable Input<String> cluster;
+      private final @Nullable Output<String> cluster;
 
-    public Input<String> getCluster() {
-        return this.cluster == null ? Input.empty() : this.cluster;
+    public Output<String> getCluster() {
+        return this.cluster == null ? Output.empty() : this.cluster;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="config")
-      private final @Nullable Input<AwsNodePoolConfigGetArgs> config;
+      private final @Nullable Output<AwsNodePoolConfigGetArgs> config;
 
-    public Input<AwsNodePoolConfigGetArgs> getConfig() {
-        return this.config == null ? Input.empty() : this.config;
+    public Output<AwsNodePoolConfigGetArgs> getConfig() {
+        return this.config == null ? Output.empty() : this.config;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-      private final @Nullable Input<String> createTime;
+      private final @Nullable Output<String> createTime;
 
-    public Input<String> getCreateTime() {
-        return this.createTime == null ? Input.empty() : this.createTime;
+    public Output<String> getCreateTime() {
+        return this.createTime == null ? Output.empty() : this.createTime;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxPodsConstraint")
-      private final @Nullable Input<AwsNodePoolMaxPodsConstraintGetArgs> maxPodsConstraint;
+      private final @Nullable Output<AwsNodePoolMaxPodsConstraintGetArgs> maxPodsConstraint;
 
-    public Input<AwsNodePoolMaxPodsConstraintGetArgs> getMaxPodsConstraint() {
-        return this.maxPodsConstraint == null ? Input.empty() : this.maxPodsConstraint;
+    public Output<AwsNodePoolMaxPodsConstraintGetArgs> getMaxPodsConstraint() {
+        return this.maxPodsConstraint == null ? Output.empty() : this.maxPodsConstraint;
     }
 
     /**
@@ -113,10 +113,10 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -124,10 +124,10 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -135,10 +135,10 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reconciling")
-      private final @Nullable Input<Boolean> reconciling;
+      private final @Nullable Output<Boolean> reconciling;
 
-    public Input<Boolean> getReconciling() {
-        return this.reconciling == null ? Input.empty() : this.reconciling;
+    public Output<Boolean> getReconciling() {
+        return this.reconciling == null ? Output.empty() : this.reconciling;
     }
 
     /**
@@ -147,10 +147,10 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<String> state;
+      private final @Nullable Output<String> state;
 
-    public Input<String> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<String> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     /**
@@ -158,10 +158,10 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetId")
-      private final @Nullable Input<String> subnetId;
+      private final @Nullable Output<String> subnetId;
 
-    public Input<String> getSubnetId() {
-        return this.subnetId == null ? Input.empty() : this.subnetId;
+    public Output<String> getSubnetId() {
+        return this.subnetId == null ? Output.empty() : this.subnetId;
     }
 
     /**
@@ -169,10 +169,10 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uid")
-      private final @Nullable Input<String> uid;
+      private final @Nullable Output<String> uid;
 
-    public Input<String> getUid() {
-        return this.uid == null ? Input.empty() : this.uid;
+    public Output<String> getUid() {
+        return this.uid == null ? Output.empty() : this.uid;
     }
 
     /**
@@ -180,10 +180,10 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updateTime")
-      private final @Nullable Input<String> updateTime;
+      private final @Nullable Output<String> updateTime;
 
-    public Input<String> getUpdateTime() {
-        return this.updateTime == null ? Input.empty() : this.updateTime;
+    public Output<String> getUpdateTime() {
+        return this.updateTime == null ? Output.empty() : this.updateTime;
     }
 
     /**
@@ -191,29 +191,29 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public AwsNodePoolState(
-        @Nullable Input<Map<String,String>> annotations,
-        @Nullable Input<AwsNodePoolAutoscalingGetArgs> autoscaling,
-        @Nullable Input<String> cluster,
-        @Nullable Input<AwsNodePoolConfigGetArgs> config,
-        @Nullable Input<String> createTime,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> location,
-        @Nullable Input<AwsNodePoolMaxPodsConstraintGetArgs> maxPodsConstraint,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<Boolean> reconciling,
-        @Nullable Input<String> state,
-        @Nullable Input<String> subnetId,
-        @Nullable Input<String> uid,
-        @Nullable Input<String> updateTime,
-        @Nullable Input<String> version) {
+        @Nullable Output<Map<String,String>> annotations,
+        @Nullable Output<AwsNodePoolAutoscalingGetArgs> autoscaling,
+        @Nullable Output<String> cluster,
+        @Nullable Output<AwsNodePoolConfigGetArgs> config,
+        @Nullable Output<String> createTime,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> location,
+        @Nullable Output<AwsNodePoolMaxPodsConstraintGetArgs> maxPodsConstraint,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<Boolean> reconciling,
+        @Nullable Output<String> state,
+        @Nullable Output<String> subnetId,
+        @Nullable Output<String> uid,
+        @Nullable Output<String> updateTime,
+        @Nullable Output<String> version) {
         this.annotations = annotations;
         this.autoscaling = autoscaling;
         this.cluster = cluster;
@@ -233,22 +233,22 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
     }
 
     private AwsNodePoolState() {
-        this.annotations = Input.empty();
-        this.autoscaling = Input.empty();
-        this.cluster = Input.empty();
-        this.config = Input.empty();
-        this.createTime = Input.empty();
-        this.etag = Input.empty();
-        this.location = Input.empty();
-        this.maxPodsConstraint = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.reconciling = Input.empty();
-        this.state = Input.empty();
-        this.subnetId = Input.empty();
-        this.uid = Input.empty();
-        this.updateTime = Input.empty();
-        this.version = Input.empty();
+        this.annotations = Output.empty();
+        this.autoscaling = Output.empty();
+        this.cluster = Output.empty();
+        this.config = Output.empty();
+        this.createTime = Output.empty();
+        this.etag = Output.empty();
+        this.location = Output.empty();
+        this.maxPodsConstraint = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.reconciling = Output.empty();
+        this.state = Output.empty();
+        this.subnetId = Output.empty();
+        this.uid = Output.empty();
+        this.updateTime = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -260,22 +260,22 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> annotations;
-        private @Nullable Input<AwsNodePoolAutoscalingGetArgs> autoscaling;
-        private @Nullable Input<String> cluster;
-        private @Nullable Input<AwsNodePoolConfigGetArgs> config;
-        private @Nullable Input<String> createTime;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> location;
-        private @Nullable Input<AwsNodePoolMaxPodsConstraintGetArgs> maxPodsConstraint;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<Boolean> reconciling;
-        private @Nullable Input<String> state;
-        private @Nullable Input<String> subnetId;
-        private @Nullable Input<String> uid;
-        private @Nullable Input<String> updateTime;
-        private @Nullable Input<String> version;
+        private @Nullable Output<Map<String,String>> annotations;
+        private @Nullable Output<AwsNodePoolAutoscalingGetArgs> autoscaling;
+        private @Nullable Output<String> cluster;
+        private @Nullable Output<AwsNodePoolConfigGetArgs> config;
+        private @Nullable Output<String> createTime;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> location;
+        private @Nullable Output<AwsNodePoolMaxPodsConstraintGetArgs> maxPodsConstraint;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<Boolean> reconciling;
+        private @Nullable Output<String> state;
+        private @Nullable Output<String> subnetId;
+        private @Nullable Output<String> uid;
+        private @Nullable Output<String> updateTime;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -301,163 +301,163 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder annotations(@Nullable Input<Map<String,String>> annotations) {
+        public Builder annotations(@Nullable Output<Map<String,String>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
         public Builder annotations(@Nullable Map<String,String> annotations) {
-            this.annotations = Input.ofNullable(annotations);
+            this.annotations = Output.ofNullable(annotations);
             return this;
         }
 
-        public Builder autoscaling(@Nullable Input<AwsNodePoolAutoscalingGetArgs> autoscaling) {
+        public Builder autoscaling(@Nullable Output<AwsNodePoolAutoscalingGetArgs> autoscaling) {
             this.autoscaling = autoscaling;
             return this;
         }
 
         public Builder autoscaling(@Nullable AwsNodePoolAutoscalingGetArgs autoscaling) {
-            this.autoscaling = Input.ofNullable(autoscaling);
+            this.autoscaling = Output.ofNullable(autoscaling);
             return this;
         }
 
-        public Builder cluster(@Nullable Input<String> cluster) {
+        public Builder cluster(@Nullable Output<String> cluster) {
             this.cluster = cluster;
             return this;
         }
 
         public Builder cluster(@Nullable String cluster) {
-            this.cluster = Input.ofNullable(cluster);
+            this.cluster = Output.ofNullable(cluster);
             return this;
         }
 
-        public Builder config(@Nullable Input<AwsNodePoolConfigGetArgs> config) {
+        public Builder config(@Nullable Output<AwsNodePoolConfigGetArgs> config) {
             this.config = config;
             return this;
         }
 
         public Builder config(@Nullable AwsNodePoolConfigGetArgs config) {
-            this.config = Input.ofNullable(config);
+            this.config = Output.ofNullable(config);
             return this;
         }
 
-        public Builder createTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Input.ofNullable(createTime);
+            this.createTime = Output.ofNullable(createTime);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder maxPodsConstraint(@Nullable Input<AwsNodePoolMaxPodsConstraintGetArgs> maxPodsConstraint) {
+        public Builder maxPodsConstraint(@Nullable Output<AwsNodePoolMaxPodsConstraintGetArgs> maxPodsConstraint) {
             this.maxPodsConstraint = maxPodsConstraint;
             return this;
         }
 
         public Builder maxPodsConstraint(@Nullable AwsNodePoolMaxPodsConstraintGetArgs maxPodsConstraint) {
-            this.maxPodsConstraint = Input.ofNullable(maxPodsConstraint);
+            this.maxPodsConstraint = Output.ofNullable(maxPodsConstraint);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder reconciling(@Nullable Input<Boolean> reconciling) {
+        public Builder reconciling(@Nullable Output<Boolean> reconciling) {
             this.reconciling = reconciling;
             return this;
         }
 
         public Builder reconciling(@Nullable Boolean reconciling) {
-            this.reconciling = Input.ofNullable(reconciling);
+            this.reconciling = Output.ofNullable(reconciling);
             return this;
         }
 
-        public Builder state(@Nullable Input<String> state) {
+        public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable String state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
 
-        public Builder subnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Input.ofNullable(subnetId);
+            this.subnetId = Output.ofNullable(subnetId);
             return this;
         }
 
-        public Builder uid(@Nullable Input<String> uid) {
+        public Builder uid(@Nullable Output<String> uid) {
             this.uid = uid;
             return this;
         }
 
         public Builder uid(@Nullable String uid) {
-            this.uid = Input.ofNullable(uid);
+            this.uid = Output.ofNullable(uid);
             return this;
         }
 
-        public Builder updateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Input.ofNullable(updateTime);
+            this.updateTime = Output.ofNullable(updateTime);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public AwsNodePoolState build() {

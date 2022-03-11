@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="keyIdentifier", required=true)
-      private final Input<String> keyIdentifier;
+      private final Output<String> keyIdentifier;
 
-    public Input<String> getKeyIdentifier() {
+    public Output<String> getKeyIdentifier() {
         return this.keyIdentifier;
     }
 
-    public KeyVaultPropertiesArgs(Input<String> keyIdentifier) {
+    public KeyVaultPropertiesArgs(Output<String> keyIdentifier) {
         this.keyIdentifier = Objects.requireNonNull(keyIdentifier, "expected parameter 'keyIdentifier' to be non-null");
     }
 
     private KeyVaultPropertiesArgs() {
-        this.keyIdentifier = Input.empty();
+        this.keyIdentifier = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> keyIdentifier;
+        private Output<String> keyIdentifier;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
     	      this.keyIdentifier = defaults.keyIdentifier;
         }
 
-        public Builder keyIdentifier(Input<String> keyIdentifier) {
+        public Builder keyIdentifier(Output<String> keyIdentifier) {
             this.keyIdentifier = Objects.requireNonNull(keyIdentifier);
             return this;
         }
 
         public Builder keyIdentifier(String keyIdentifier) {
-            this.keyIdentifier = Input.of(Objects.requireNonNull(keyIdentifier));
+            this.keyIdentifier = Output.of(Objects.requireNonNull(keyIdentifier));
             return this;
         }
         public KeyVaultPropertiesArgs build() {

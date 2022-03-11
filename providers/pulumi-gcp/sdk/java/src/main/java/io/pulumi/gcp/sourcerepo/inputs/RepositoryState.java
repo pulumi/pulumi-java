@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sourcerepo.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.sourcerepo.inputs.RepositoryPubsubConfigGetArgs;
 import java.lang.Integer;
@@ -23,10 +23,10 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pubsubConfigs")
-      private final @Nullable Input<List<RepositoryPubsubConfigGetArgs>> pubsubConfigs;
+      private final @Nullable Output<List<RepositoryPubsubConfigGetArgs>> pubsubConfigs;
 
-    public Input<List<RepositoryPubsubConfigGetArgs>> getPubsubConfigs() {
-        return this.pubsubConfigs == null ? Input.empty() : this.pubsubConfigs;
+    public Output<List<RepositoryPubsubConfigGetArgs>> getPubsubConfigs() {
+        return this.pubsubConfigs == null ? Output.empty() : this.pubsubConfigs;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="size")
-      private final @Nullable Input<Integer> size;
+      private final @Nullable Output<Integer> size;
 
-    public Input<Integer> getSize() {
-        return this.size == null ? Input.empty() : this.size;
+    public Output<Integer> getSize() {
+        return this.size == null ? Output.empty() : this.size;
     }
 
     /**
@@ -70,18 +70,18 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="url")
-      private final @Nullable Input<String> url;
+      private final @Nullable Output<String> url;
 
-    public Input<String> getUrl() {
-        return this.url == null ? Input.empty() : this.url;
+    public Output<String> getUrl() {
+        return this.url == null ? Output.empty() : this.url;
     }
 
     public RepositoryState(
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<List<RepositoryPubsubConfigGetArgs>> pubsubConfigs,
-        @Nullable Input<Integer> size,
-        @Nullable Input<String> url) {
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<List<RepositoryPubsubConfigGetArgs>> pubsubConfigs,
+        @Nullable Output<Integer> size,
+        @Nullable Output<String> url) {
         this.name = name;
         this.project = project;
         this.pubsubConfigs = pubsubConfigs;
@@ -90,11 +90,11 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
     }
 
     private RepositoryState() {
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.pubsubConfigs = Input.empty();
-        this.size = Input.empty();
-        this.url = Input.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.pubsubConfigs = Output.empty();
+        this.size = Output.empty();
+        this.url = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,11 +106,11 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<List<RepositoryPubsubConfigGetArgs>> pubsubConfigs;
-        private @Nullable Input<Integer> size;
-        private @Nullable Input<String> url;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<List<RepositoryPubsubConfigGetArgs>> pubsubConfigs;
+        private @Nullable Output<Integer> size;
+        private @Nullable Output<String> url;
 
         public Builder() {
     	      // Empty
@@ -125,53 +125,53 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
     	      this.url = defaults.url;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder pubsubConfigs(@Nullable Input<List<RepositoryPubsubConfigGetArgs>> pubsubConfigs) {
+        public Builder pubsubConfigs(@Nullable Output<List<RepositoryPubsubConfigGetArgs>> pubsubConfigs) {
             this.pubsubConfigs = pubsubConfigs;
             return this;
         }
 
         public Builder pubsubConfigs(@Nullable List<RepositoryPubsubConfigGetArgs> pubsubConfigs) {
-            this.pubsubConfigs = Input.ofNullable(pubsubConfigs);
+            this.pubsubConfigs = Output.ofNullable(pubsubConfigs);
             return this;
         }
 
-        public Builder size(@Nullable Input<Integer> size) {
+        public Builder size(@Nullable Output<Integer> size) {
             this.size = size;
             return this;
         }
 
         public Builder size(@Nullable Integer size) {
-            this.size = Input.ofNullable(size);
+            this.size = Output.ofNullable(size);
             return this;
         }
 
-        public Builder url(@Nullable Input<String> url) {
+        public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
 
         public Builder url(@Nullable String url) {
-            this.url = Input.ofNullable(url);
+            this.url = Output.ofNullable(url);
             return this;
         }
         public RepositoryState build() {

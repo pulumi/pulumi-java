@@ -7,7 +7,7 @@ import io.pulumi.azurenative.security.inputs.AwAssumeRoleAuthenticationDetailsPr
 import io.pulumi.azurenative.security.inputs.AwsCredsAuthenticationDetailsPropertiesArgs;
 import io.pulumi.azurenative.security.inputs.GcpCredentialsDetailsPropertiesArgs;
 import io.pulumi.azurenative.security.inputs.HybridComputeSettingsPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authenticationDetails")
-      private final @Nullable Input<Object> authenticationDetails;
+      private final @Nullable Output<Object> authenticationDetails;
 
-    public Input<Object> getAuthenticationDetails() {
-        return this.authenticationDetails == null ? Input.empty() : this.authenticationDetails;
+    public Output<Object> getAuthenticationDetails() {
+        return this.authenticationDetails == null ? Output.empty() : this.authenticationDetails;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectorName")
-      private final @Nullable Input<String> connectorName;
+      private final @Nullable Output<String> connectorName;
 
-    public Input<String> getConnectorName() {
-        return this.connectorName == null ? Input.empty() : this.connectorName;
+    public Output<String> getConnectorName() {
+        return this.connectorName == null ? Output.empty() : this.connectorName;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hybridComputeSettings")
-      private final @Nullable Input<HybridComputeSettingsPropertiesArgs> hybridComputeSettings;
+      private final @Nullable Output<HybridComputeSettingsPropertiesArgs> hybridComputeSettings;
 
-    public Input<HybridComputeSettingsPropertiesArgs> getHybridComputeSettings() {
-        return this.hybridComputeSettings == null ? Input.empty() : this.hybridComputeSettings;
+    public Output<HybridComputeSettingsPropertiesArgs> getHybridComputeSettings() {
+        return this.hybridComputeSettings == null ? Output.empty() : this.hybridComputeSettings;
     }
 
     public ConnectorArgs(
-        @Nullable Input<Object> authenticationDetails,
-        @Nullable Input<String> connectorName,
-        @Nullable Input<HybridComputeSettingsPropertiesArgs> hybridComputeSettings) {
+        @Nullable Output<Object> authenticationDetails,
+        @Nullable Output<String> connectorName,
+        @Nullable Output<HybridComputeSettingsPropertiesArgs> hybridComputeSettings) {
         this.authenticationDetails = authenticationDetails;
         this.connectorName = connectorName;
         this.hybridComputeSettings = hybridComputeSettings;
     }
 
     private ConnectorArgs() {
-        this.authenticationDetails = Input.empty();
-        this.connectorName = Input.empty();
-        this.hybridComputeSettings = Input.empty();
+        this.authenticationDetails = Output.empty();
+        this.connectorName = Output.empty();
+        this.hybridComputeSettings = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> authenticationDetails;
-        private @Nullable Input<String> connectorName;
-        private @Nullable Input<HybridComputeSettingsPropertiesArgs> hybridComputeSettings;
+        private @Nullable Output<Object> authenticationDetails;
+        private @Nullable Output<String> connectorName;
+        private @Nullable Output<HybridComputeSettingsPropertiesArgs> hybridComputeSettings;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.hybridComputeSettings = defaults.hybridComputeSettings;
         }
 
-        public Builder authenticationDetails(@Nullable Input<Object> authenticationDetails) {
+        public Builder authenticationDetails(@Nullable Output<Object> authenticationDetails) {
             this.authenticationDetails = authenticationDetails;
             return this;
         }
 
         public Builder authenticationDetails(@Nullable Object authenticationDetails) {
-            this.authenticationDetails = Input.ofNullable(authenticationDetails);
+            this.authenticationDetails = Output.ofNullable(authenticationDetails);
             return this;
         }
 
-        public Builder connectorName(@Nullable Input<String> connectorName) {
+        public Builder connectorName(@Nullable Output<String> connectorName) {
             this.connectorName = connectorName;
             return this;
         }
 
         public Builder connectorName(@Nullable String connectorName) {
-            this.connectorName = Input.ofNullable(connectorName);
+            this.connectorName = Output.ofNullable(connectorName);
             return this;
         }
 
-        public Builder hybridComputeSettings(@Nullable Input<HybridComputeSettingsPropertiesArgs> hybridComputeSettings) {
+        public Builder hybridComputeSettings(@Nullable Output<HybridComputeSettingsPropertiesArgs> hybridComputeSettings) {
             this.hybridComputeSettings = hybridComputeSettings;
             return this;
         }
 
         public Builder hybridComputeSettings(@Nullable HybridComputeSettingsPropertiesArgs hybridComputeSettings) {
-            this.hybridComputeSettings = Input.ofNullable(hybridComputeSettings);
+            this.hybridComputeSettings = Output.ofNullable(hybridComputeSettings);
             return this;
         }
         public ConnectorArgs build() {

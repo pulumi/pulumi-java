@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagecache.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class NamespaceJunctionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="namespacePath")
-      private final @Nullable Input<String> namespacePath;
+      private final @Nullable Output<String> namespacePath;
 
-    public Input<String> getNamespacePath() {
-        return this.namespacePath == null ? Input.empty() : this.namespacePath;
+    public Output<String> getNamespacePath() {
+        return this.namespacePath == null ? Output.empty() : this.namespacePath;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class NamespaceJunctionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="nfsAccessPolicy")
-      private final @Nullable Input<String> nfsAccessPolicy;
+      private final @Nullable Output<String> nfsAccessPolicy;
 
-    public Input<String> getNfsAccessPolicy() {
-        return this.nfsAccessPolicy == null ? Input.empty() : this.nfsAccessPolicy;
+    public Output<String> getNfsAccessPolicy() {
+        return this.nfsAccessPolicy == null ? Output.empty() : this.nfsAccessPolicy;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class NamespaceJunctionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="nfsExport")
-      private final @Nullable Input<String> nfsExport;
+      private final @Nullable Output<String> nfsExport;
 
-    public Input<String> getNfsExport() {
-        return this.nfsExport == null ? Input.empty() : this.nfsExport;
+    public Output<String> getNfsExport() {
+        return this.nfsExport == null ? Output.empty() : this.nfsExport;
     }
 
     /**
@@ -56,28 +56,28 @@ public final class NamespaceJunctionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="targetPath")
-      private final @Nullable Input<String> targetPath;
+      private final @Nullable Output<String> targetPath;
 
-    public Input<String> getTargetPath() {
-        return this.targetPath == null ? Input.empty() : this.targetPath;
+    public Output<String> getTargetPath() {
+        return this.targetPath == null ? Output.empty() : this.targetPath;
     }
 
     public NamespaceJunctionArgs(
-        @Nullable Input<String> namespacePath,
-        @Nullable Input<String> nfsAccessPolicy,
-        @Nullable Input<String> nfsExport,
-        @Nullable Input<String> targetPath) {
+        @Nullable Output<String> namespacePath,
+        @Nullable Output<String> nfsAccessPolicy,
+        @Nullable Output<String> nfsExport,
+        @Nullable Output<String> targetPath) {
         this.namespacePath = namespacePath;
-        this.nfsAccessPolicy = nfsAccessPolicy == null ? Input.ofNullable("default") : nfsAccessPolicy;
+        this.nfsAccessPolicy = nfsAccessPolicy == null ? Output.ofNullable("default") : nfsAccessPolicy;
         this.nfsExport = nfsExport;
         this.targetPath = targetPath;
     }
 
     private NamespaceJunctionArgs() {
-        this.namespacePath = Input.empty();
-        this.nfsAccessPolicy = Input.empty();
-        this.nfsExport = Input.empty();
-        this.targetPath = Input.empty();
+        this.namespacePath = Output.empty();
+        this.nfsAccessPolicy = Output.empty();
+        this.nfsExport = Output.empty();
+        this.targetPath = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class NamespaceJunctionArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> namespacePath;
-        private @Nullable Input<String> nfsAccessPolicy;
-        private @Nullable Input<String> nfsExport;
-        private @Nullable Input<String> targetPath;
+        private @Nullable Output<String> namespacePath;
+        private @Nullable Output<String> nfsAccessPolicy;
+        private @Nullable Output<String> nfsExport;
+        private @Nullable Output<String> targetPath;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class NamespaceJunctionArgs extends io.pulumi.resources.ResourceArg
     	      this.targetPath = defaults.targetPath;
         }
 
-        public Builder namespacePath(@Nullable Input<String> namespacePath) {
+        public Builder namespacePath(@Nullable Output<String> namespacePath) {
             this.namespacePath = namespacePath;
             return this;
         }
 
         public Builder namespacePath(@Nullable String namespacePath) {
-            this.namespacePath = Input.ofNullable(namespacePath);
+            this.namespacePath = Output.ofNullable(namespacePath);
             return this;
         }
 
-        public Builder nfsAccessPolicy(@Nullable Input<String> nfsAccessPolicy) {
+        public Builder nfsAccessPolicy(@Nullable Output<String> nfsAccessPolicy) {
             this.nfsAccessPolicy = nfsAccessPolicy;
             return this;
         }
 
         public Builder nfsAccessPolicy(@Nullable String nfsAccessPolicy) {
-            this.nfsAccessPolicy = Input.ofNullable(nfsAccessPolicy);
+            this.nfsAccessPolicy = Output.ofNullable(nfsAccessPolicy);
             return this;
         }
 
-        public Builder nfsExport(@Nullable Input<String> nfsExport) {
+        public Builder nfsExport(@Nullable Output<String> nfsExport) {
             this.nfsExport = nfsExport;
             return this;
         }
 
         public Builder nfsExport(@Nullable String nfsExport) {
-            this.nfsExport = Input.ofNullable(nfsExport);
+            this.nfsExport = Output.ofNullable(nfsExport);
             return this;
         }
 
-        public Builder targetPath(@Nullable Input<String> targetPath) {
+        public Builder targetPath(@Nullable Output<String> targetPath) {
             this.targetPath = targetPath;
             return this;
         }
 
         public Builder targetPath(@Nullable String targetPath) {
-            this.targetPath = Input.ofNullable(targetPath);
+            this.targetPath = Output.ofNullable(targetPath);
             return this;
         }
         public NamespaceJunctionArgs build() {

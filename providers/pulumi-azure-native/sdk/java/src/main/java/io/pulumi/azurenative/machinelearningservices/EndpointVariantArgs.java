@@ -7,7 +7,7 @@ import io.pulumi.azurenative.machinelearningservices.enums.VariantType;
 import io.pulumi.azurenative.machinelearningservices.inputs.CreateServiceRequestEnvironmentImageRequestArgs;
 import io.pulumi.azurenative.machinelearningservices.inputs.CreateServiceRequestKeysArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -27,9 +27,9 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="computeType", required=true)
-      private final Input<String> computeType;
+      private final Output<String> computeType;
 
-    public Input<String> getComputeType() {
+    public Output<String> getComputeType() {
         return this.computeType;
     }
 
@@ -38,10 +38,10 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="environmentImageRequest")
-      private final @Nullable Input<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest;
+      private final @Nullable Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest;
 
-    public Input<CreateServiceRequestEnvironmentImageRequestArgs> getEnvironmentImageRequest() {
-        return this.environmentImageRequest == null ? Input.empty() : this.environmentImageRequest;
+    public Output<CreateServiceRequestEnvironmentImageRequestArgs> getEnvironmentImageRequest() {
+        return this.environmentImageRequest == null ? Output.empty() : this.environmentImageRequest;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="isDefault")
-      private final @Nullable Input<Boolean> isDefault;
+      private final @Nullable Output<Boolean> isDefault;
 
-    public Input<Boolean> getIsDefault() {
-        return this.isDefault == null ? Input.empty() : this.isDefault;
+    public Output<Boolean> getIsDefault() {
+        return this.isDefault == null ? Output.empty() : this.isDefault;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="keys")
-      private final @Nullable Input<CreateServiceRequestKeysArgs> keys;
+      private final @Nullable Output<CreateServiceRequestKeysArgs> keys;
 
-    public Input<CreateServiceRequestKeysArgs> getKeys() {
-        return this.keys == null ? Input.empty() : this.keys;
+    public Output<CreateServiceRequestKeysArgs> getKeys() {
+        return this.keys == null ? Output.empty() : this.keys;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="kvTags")
-      private final @Nullable Input<Map<String,String>> kvTags;
+      private final @Nullable Output<Map<String,String>> kvTags;
 
-    public Input<Map<String,String>> getKvTags() {
-        return this.kvTags == null ? Input.empty() : this.kvTags;
+    public Output<Map<String,String>> getKvTags() {
+        return this.kvTags == null ? Output.empty() : this.kvTags;
     }
 
     /**
@@ -93,10 +93,10 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -104,10 +104,10 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<Map<String,String>> properties;
+      private final @Nullable Output<Map<String,String>> properties;
 
-    public Input<Map<String,String>> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<Map<String,String>> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -115,9 +115,9 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -126,10 +126,10 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="serviceName")
-      private final @Nullable Input<String> serviceName;
+      private final @Nullable Output<String> serviceName;
 
-    public Input<String> getServiceName() {
-        return this.serviceName == null ? Input.empty() : this.serviceName;
+    public Output<String> getServiceName() {
+        return this.serviceName == null ? Output.empty() : this.serviceName;
     }
 
     /**
@@ -137,10 +137,10 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="trafficPercentile")
-      private final @Nullable Input<Double> trafficPercentile;
+      private final @Nullable Output<Double> trafficPercentile;
 
-    public Input<Double> getTrafficPercentile() {
-        return this.trafficPercentile == null ? Input.empty() : this.trafficPercentile;
+    public Output<Double> getTrafficPercentile() {
+        return this.trafficPercentile == null ? Output.empty() : this.trafficPercentile;
     }
 
     /**
@@ -148,10 +148,10 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<Either<String,VariantType>> type;
+      private final @Nullable Output<Either<String,VariantType>> type;
 
-    public Input<Either<String,VariantType>> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<Either<String,VariantType>> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -159,26 +159,26 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="workspaceName", required=true)
-      private final Input<String> workspaceName;
+      private final Output<String> workspaceName;
 
-    public Input<String> getWorkspaceName() {
+    public Output<String> getWorkspaceName() {
         return this.workspaceName;
     }
 
     public EndpointVariantArgs(
-        Input<String> computeType,
-        @Nullable Input<String> description,
-        @Nullable Input<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest,
-        @Nullable Input<Boolean> isDefault,
-        @Nullable Input<CreateServiceRequestKeysArgs> keys,
-        @Nullable Input<Map<String,String>> kvTags,
-        @Nullable Input<String> location,
-        @Nullable Input<Map<String,String>> properties,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> serviceName,
-        @Nullable Input<Double> trafficPercentile,
-        @Nullable Input<Either<String,VariantType>> type,
-        Input<String> workspaceName) {
+        Output<String> computeType,
+        @Nullable Output<String> description,
+        @Nullable Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest,
+        @Nullable Output<Boolean> isDefault,
+        @Nullable Output<CreateServiceRequestKeysArgs> keys,
+        @Nullable Output<Map<String,String>> kvTags,
+        @Nullable Output<String> location,
+        @Nullable Output<Map<String,String>> properties,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> serviceName,
+        @Nullable Output<Double> trafficPercentile,
+        @Nullable Output<Either<String,VariantType>> type,
+        Output<String> workspaceName) {
         this.computeType = Objects.requireNonNull(computeType, "expected parameter 'computeType' to be non-null");
         this.description = description;
         this.environmentImageRequest = environmentImageRequest;
@@ -195,19 +195,19 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private EndpointVariantArgs() {
-        this.computeType = Input.empty();
-        this.description = Input.empty();
-        this.environmentImageRequest = Input.empty();
-        this.isDefault = Input.empty();
-        this.keys = Input.empty();
-        this.kvTags = Input.empty();
-        this.location = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serviceName = Input.empty();
-        this.trafficPercentile = Input.empty();
-        this.type = Input.empty();
-        this.workspaceName = Input.empty();
+        this.computeType = Output.empty();
+        this.description = Output.empty();
+        this.environmentImageRequest = Output.empty();
+        this.isDefault = Output.empty();
+        this.keys = Output.empty();
+        this.kvTags = Output.empty();
+        this.location = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serviceName = Output.empty();
+        this.trafficPercentile = Output.empty();
+        this.type = Output.empty();
+        this.workspaceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -219,19 +219,19 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<String> computeType;
-        private @Nullable Input<String> description;
-        private @Nullable Input<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest;
-        private @Nullable Input<Boolean> isDefault;
-        private @Nullable Input<CreateServiceRequestKeysArgs> keys;
-        private @Nullable Input<Map<String,String>> kvTags;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Map<String,String>> properties;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> serviceName;
-        private @Nullable Input<Double> trafficPercentile;
-        private @Nullable Input<Either<String,VariantType>> type;
-        private Input<String> workspaceName;
+        private Output<String> computeType;
+        private @Nullable Output<String> description;
+        private @Nullable Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest;
+        private @Nullable Output<Boolean> isDefault;
+        private @Nullable Output<CreateServiceRequestKeysArgs> keys;
+        private @Nullable Output<Map<String,String>> kvTags;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Map<String,String>> properties;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> serviceName;
+        private @Nullable Output<Double> trafficPercentile;
+        private @Nullable Output<Either<String,VariantType>> type;
+        private Output<String> workspaceName;
 
         public Builder() {
     	      // Empty
@@ -254,133 +254,133 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder computeType(Input<String> computeType) {
+        public Builder computeType(Output<String> computeType) {
             this.computeType = Objects.requireNonNull(computeType);
             return this;
         }
 
         public Builder computeType(String computeType) {
-            this.computeType = Input.of(Objects.requireNonNull(computeType));
+            this.computeType = Output.of(Objects.requireNonNull(computeType));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder environmentImageRequest(@Nullable Input<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest) {
+        public Builder environmentImageRequest(@Nullable Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest) {
             this.environmentImageRequest = environmentImageRequest;
             return this;
         }
 
         public Builder environmentImageRequest(@Nullable CreateServiceRequestEnvironmentImageRequestArgs environmentImageRequest) {
-            this.environmentImageRequest = Input.ofNullable(environmentImageRequest);
+            this.environmentImageRequest = Output.ofNullable(environmentImageRequest);
             return this;
         }
 
-        public Builder isDefault(@Nullable Input<Boolean> isDefault) {
+        public Builder isDefault(@Nullable Output<Boolean> isDefault) {
             this.isDefault = isDefault;
             return this;
         }
 
         public Builder isDefault(@Nullable Boolean isDefault) {
-            this.isDefault = Input.ofNullable(isDefault);
+            this.isDefault = Output.ofNullable(isDefault);
             return this;
         }
 
-        public Builder keys(@Nullable Input<CreateServiceRequestKeysArgs> keys) {
+        public Builder keys(@Nullable Output<CreateServiceRequestKeysArgs> keys) {
             this.keys = keys;
             return this;
         }
 
         public Builder keys(@Nullable CreateServiceRequestKeysArgs keys) {
-            this.keys = Input.ofNullable(keys);
+            this.keys = Output.ofNullable(keys);
             return this;
         }
 
-        public Builder kvTags(@Nullable Input<Map<String,String>> kvTags) {
+        public Builder kvTags(@Nullable Output<Map<String,String>> kvTags) {
             this.kvTags = kvTags;
             return this;
         }
 
         public Builder kvTags(@Nullable Map<String,String> kvTags) {
-            this.kvTags = Input.ofNullable(kvTags);
+            this.kvTags = Output.ofNullable(kvTags);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder properties(@Nullable Input<Map<String,String>> properties) {
+        public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serviceName(@Nullable Input<String> serviceName) {
+        public Builder serviceName(@Nullable Output<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
 
         public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Input.ofNullable(serviceName);
+            this.serviceName = Output.ofNullable(serviceName);
             return this;
         }
 
-        public Builder trafficPercentile(@Nullable Input<Double> trafficPercentile) {
+        public Builder trafficPercentile(@Nullable Output<Double> trafficPercentile) {
             this.trafficPercentile = trafficPercentile;
             return this;
         }
 
         public Builder trafficPercentile(@Nullable Double trafficPercentile) {
-            this.trafficPercentile = Input.ofNullable(trafficPercentile);
+            this.trafficPercentile = Output.ofNullable(trafficPercentile);
             return this;
         }
 
-        public Builder type(@Nullable Input<Either<String,VariantType>> type) {
+        public Builder type(@Nullable Output<Either<String,VariantType>> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable Either<String,VariantType> type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder workspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
+            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
         }
         public EndpointVariantArgs build() {

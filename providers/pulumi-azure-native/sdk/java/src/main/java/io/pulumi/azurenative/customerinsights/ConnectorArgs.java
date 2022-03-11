@@ -5,7 +5,7 @@ package io.pulumi.azurenative.customerinsights;
 
 import io.pulumi.azurenative.customerinsights.enums.ConnectorTypes;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Object;
@@ -24,10 +24,10 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectorName")
-      private final @Nullable Input<String> connectorName;
+      private final @Nullable Output<String> connectorName;
 
-    public Input<String> getConnectorName() {
-        return this.connectorName == null ? Input.empty() : this.connectorName;
+    public Output<String> getConnectorName() {
+        return this.connectorName == null ? Output.empty() : this.connectorName;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectorProperties", required=true)
-      private final Input<Map<String,Object>> connectorProperties;
+      private final Output<Map<String,Object>> connectorProperties;
 
-    public Input<Map<String,Object>> getConnectorProperties() {
+    public Output<Map<String,Object>> getConnectorProperties() {
         return this.connectorProperties;
     }
 
@@ -46,9 +46,9 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectorType", required=true)
-      private final Input<Either<String,ConnectorTypes>> connectorType;
+      private final Output<Either<String,ConnectorTypes>> connectorType;
 
-    public Input<Either<String,ConnectorTypes>> getConnectorType() {
+    public Output<Either<String,ConnectorTypes>> getConnectorType() {
         return this.connectorType;
     }
 
@@ -57,10 +57,10 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -79,9 +79,9 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hubName", required=true)
-      private final Input<String> hubName;
+      private final Output<String> hubName;
 
-    public Input<String> getHubName() {
+    public Output<String> getHubName() {
         return this.hubName;
     }
 
@@ -90,10 +90,10 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isInternal")
-      private final @Nullable Input<Boolean> isInternal;
+      private final @Nullable Output<Boolean> isInternal;
 
-    public Input<Boolean> getIsInternal() {
-        return this.isInternal == null ? Input.empty() : this.isInternal;
+    public Output<Boolean> getIsInternal() {
+        return this.isInternal == null ? Output.empty() : this.isInternal;
     }
 
     /**
@@ -101,21 +101,21 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public ConnectorArgs(
-        @Nullable Input<String> connectorName,
-        Input<Map<String,Object>> connectorProperties,
-        Input<Either<String,ConnectorTypes>> connectorType,
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        Input<String> hubName,
-        @Nullable Input<Boolean> isInternal,
-        Input<String> resourceGroupName) {
+        @Nullable Output<String> connectorName,
+        Output<Map<String,Object>> connectorProperties,
+        Output<Either<String,ConnectorTypes>> connectorType,
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        Output<String> hubName,
+        @Nullable Output<Boolean> isInternal,
+        Output<String> resourceGroupName) {
         this.connectorName = connectorName;
         this.connectorProperties = Objects.requireNonNull(connectorProperties, "expected parameter 'connectorProperties' to be non-null");
         this.connectorType = Objects.requireNonNull(connectorType, "expected parameter 'connectorType' to be non-null");
@@ -127,14 +127,14 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConnectorArgs() {
-        this.connectorName = Input.empty();
-        this.connectorProperties = Input.empty();
-        this.connectorType = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.hubName = Input.empty();
-        this.isInternal = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.connectorName = Output.empty();
+        this.connectorProperties = Output.empty();
+        this.connectorType = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.hubName = Output.empty();
+        this.isInternal = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -146,14 +146,14 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> connectorName;
-        private Input<Map<String,Object>> connectorProperties;
-        private Input<Either<String,ConnectorTypes>> connectorType;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private Input<String> hubName;
-        private @Nullable Input<Boolean> isInternal;
-        private Input<String> resourceGroupName;
+        private @Nullable Output<String> connectorName;
+        private Output<Map<String,Object>> connectorProperties;
+        private Output<Either<String,ConnectorTypes>> connectorType;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private Output<String> hubName;
+        private @Nullable Output<Boolean> isInternal;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -171,83 +171,83 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder connectorName(@Nullable Input<String> connectorName) {
+        public Builder connectorName(@Nullable Output<String> connectorName) {
             this.connectorName = connectorName;
             return this;
         }
 
         public Builder connectorName(@Nullable String connectorName) {
-            this.connectorName = Input.ofNullable(connectorName);
+            this.connectorName = Output.ofNullable(connectorName);
             return this;
         }
 
-        public Builder connectorProperties(Input<Map<String,Object>> connectorProperties) {
+        public Builder connectorProperties(Output<Map<String,Object>> connectorProperties) {
             this.connectorProperties = Objects.requireNonNull(connectorProperties);
             return this;
         }
 
         public Builder connectorProperties(Map<String,Object> connectorProperties) {
-            this.connectorProperties = Input.of(Objects.requireNonNull(connectorProperties));
+            this.connectorProperties = Output.of(Objects.requireNonNull(connectorProperties));
             return this;
         }
 
-        public Builder connectorType(Input<Either<String,ConnectorTypes>> connectorType) {
+        public Builder connectorType(Output<Either<String,ConnectorTypes>> connectorType) {
             this.connectorType = Objects.requireNonNull(connectorType);
             return this;
         }
 
         public Builder connectorType(Either<String,ConnectorTypes> connectorType) {
-            this.connectorType = Input.of(Objects.requireNonNull(connectorType));
+            this.connectorType = Output.of(Objects.requireNonNull(connectorType));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder hubName(Input<String> hubName) {
+        public Builder hubName(Output<String> hubName) {
             this.hubName = Objects.requireNonNull(hubName);
             return this;
         }
 
         public Builder hubName(String hubName) {
-            this.hubName = Input.of(Objects.requireNonNull(hubName));
+            this.hubName = Output.of(Objects.requireNonNull(hubName));
             return this;
         }
 
-        public Builder isInternal(@Nullable Input<Boolean> isInternal) {
+        public Builder isInternal(@Nullable Output<Boolean> isInternal) {
             this.isInternal = isInternal;
             return this;
         }
 
         public Builder isInternal(@Nullable Boolean isInternal) {
-            this.isInternal = Input.ofNullable(isInternal);
+            this.isInternal = Output.ofNullable(isInternal);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public ConnectorArgs build() {

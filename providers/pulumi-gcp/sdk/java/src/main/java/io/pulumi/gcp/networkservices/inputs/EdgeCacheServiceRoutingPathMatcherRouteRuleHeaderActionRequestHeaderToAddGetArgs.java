@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.networkservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionReques
      * 
      */
     @InputImport(name="headerName", required=true)
-      private final Input<String> headerName;
+      private final Output<String> headerName;
 
-    public Input<String> getHeaderName() {
+    public Output<String> getHeaderName() {
         return this.headerName;
     }
 
@@ -32,9 +32,9 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionReques
      * 
      */
     @InputImport(name="headerValue", required=true)
-      private final Input<String> headerValue;
+      private final Output<String> headerValue;
 
-    public Input<String> getHeaderValue() {
+    public Output<String> getHeaderValue() {
         return this.headerValue;
     }
 
@@ -43,25 +43,25 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionReques
      * 
      */
     @InputImport(name="replace")
-      private final @Nullable Input<Boolean> replace;
+      private final @Nullable Output<Boolean> replace;
 
-    public Input<Boolean> getReplace() {
-        return this.replace == null ? Input.empty() : this.replace;
+    public Output<Boolean> getReplace() {
+        return this.replace == null ? Output.empty() : this.replace;
     }
 
     public EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddGetArgs(
-        Input<String> headerName,
-        Input<String> headerValue,
-        @Nullable Input<Boolean> replace) {
+        Output<String> headerName,
+        Output<String> headerValue,
+        @Nullable Output<Boolean> replace) {
         this.headerName = Objects.requireNonNull(headerName, "expected parameter 'headerName' to be non-null");
         this.headerValue = Objects.requireNonNull(headerValue, "expected parameter 'headerValue' to be non-null");
         this.replace = replace;
     }
 
     private EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddGetArgs() {
-        this.headerName = Input.empty();
-        this.headerValue = Input.empty();
-        this.replace = Input.empty();
+        this.headerName = Output.empty();
+        this.headerValue = Output.empty();
+        this.replace = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionReques
     }
 
     public static final class Builder {
-        private Input<String> headerName;
-        private Input<String> headerValue;
-        private @Nullable Input<Boolean> replace;
+        private Output<String> headerName;
+        private Output<String> headerValue;
+        private @Nullable Output<Boolean> replace;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionReques
     	      this.replace = defaults.replace;
         }
 
-        public Builder headerName(Input<String> headerName) {
+        public Builder headerName(Output<String> headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
 
         public Builder headerName(String headerName) {
-            this.headerName = Input.of(Objects.requireNonNull(headerName));
+            this.headerName = Output.of(Objects.requireNonNull(headerName));
             return this;
         }
 
-        public Builder headerValue(Input<String> headerValue) {
+        public Builder headerValue(Output<String> headerValue) {
             this.headerValue = Objects.requireNonNull(headerValue);
             return this;
         }
 
         public Builder headerValue(String headerValue) {
-            this.headerValue = Input.of(Objects.requireNonNull(headerValue));
+            this.headerValue = Output.of(Objects.requireNonNull(headerValue));
             return this;
         }
 
-        public Builder replace(@Nullable Input<Boolean> replace) {
+        public Builder replace(@Nullable Output<Boolean> replace) {
             this.replace = replace;
             return this;
         }
 
         public Builder replace(@Nullable Boolean replace) {
-            this.replace = Input.ofNullable(replace);
+            this.replace = Output.ofNullable(replace);
             return this;
         }
         public EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddGetArgs build() {

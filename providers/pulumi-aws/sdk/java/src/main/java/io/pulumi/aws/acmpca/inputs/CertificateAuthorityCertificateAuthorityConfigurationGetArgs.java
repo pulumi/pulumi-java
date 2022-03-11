@@ -4,7 +4,7 @@
 package io.pulumi.aws.acmpca.inputs;
 
 import io.pulumi.aws.acmpca.inputs.CertificateAuthorityCertificateAuthorityConfigurationSubjectGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationGetArgs 
      * 
      */
     @InputImport(name="keyAlgorithm", required=true)
-      private final Input<String> keyAlgorithm;
+      private final Output<String> keyAlgorithm;
 
-    public Input<String> getKeyAlgorithm() {
+    public Output<String> getKeyAlgorithm() {
         return this.keyAlgorithm;
     }
 
@@ -30,9 +30,9 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationGetArgs 
      * 
      */
     @InputImport(name="signingAlgorithm", required=true)
-      private final Input<String> signingAlgorithm;
+      private final Output<String> signingAlgorithm;
 
-    public Input<String> getSigningAlgorithm() {
+    public Output<String> getSigningAlgorithm() {
         return this.signingAlgorithm;
     }
 
@@ -41,25 +41,25 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationGetArgs 
      * 
      */
     @InputImport(name="subject", required=true)
-      private final Input<CertificateAuthorityCertificateAuthorityConfigurationSubjectGetArgs> subject;
+      private final Output<CertificateAuthorityCertificateAuthorityConfigurationSubjectGetArgs> subject;
 
-    public Input<CertificateAuthorityCertificateAuthorityConfigurationSubjectGetArgs> getSubject() {
+    public Output<CertificateAuthorityCertificateAuthorityConfigurationSubjectGetArgs> getSubject() {
         return this.subject;
     }
 
     public CertificateAuthorityCertificateAuthorityConfigurationGetArgs(
-        Input<String> keyAlgorithm,
-        Input<String> signingAlgorithm,
-        Input<CertificateAuthorityCertificateAuthorityConfigurationSubjectGetArgs> subject) {
+        Output<String> keyAlgorithm,
+        Output<String> signingAlgorithm,
+        Output<CertificateAuthorityCertificateAuthorityConfigurationSubjectGetArgs> subject) {
         this.keyAlgorithm = Objects.requireNonNull(keyAlgorithm, "expected parameter 'keyAlgorithm' to be non-null");
         this.signingAlgorithm = Objects.requireNonNull(signingAlgorithm, "expected parameter 'signingAlgorithm' to be non-null");
         this.subject = Objects.requireNonNull(subject, "expected parameter 'subject' to be non-null");
     }
 
     private CertificateAuthorityCertificateAuthorityConfigurationGetArgs() {
-        this.keyAlgorithm = Input.empty();
-        this.signingAlgorithm = Input.empty();
-        this.subject = Input.empty();
+        this.keyAlgorithm = Output.empty();
+        this.signingAlgorithm = Output.empty();
+        this.subject = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationGetArgs 
     }
 
     public static final class Builder {
-        private Input<String> keyAlgorithm;
-        private Input<String> signingAlgorithm;
-        private Input<CertificateAuthorityCertificateAuthorityConfigurationSubjectGetArgs> subject;
+        private Output<String> keyAlgorithm;
+        private Output<String> signingAlgorithm;
+        private Output<CertificateAuthorityCertificateAuthorityConfigurationSubjectGetArgs> subject;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationGetArgs 
     	      this.subject = defaults.subject;
         }
 
-        public Builder keyAlgorithm(Input<String> keyAlgorithm) {
+        public Builder keyAlgorithm(Output<String> keyAlgorithm) {
             this.keyAlgorithm = Objects.requireNonNull(keyAlgorithm);
             return this;
         }
 
         public Builder keyAlgorithm(String keyAlgorithm) {
-            this.keyAlgorithm = Input.of(Objects.requireNonNull(keyAlgorithm));
+            this.keyAlgorithm = Output.of(Objects.requireNonNull(keyAlgorithm));
             return this;
         }
 
-        public Builder signingAlgorithm(Input<String> signingAlgorithm) {
+        public Builder signingAlgorithm(Output<String> signingAlgorithm) {
             this.signingAlgorithm = Objects.requireNonNull(signingAlgorithm);
             return this;
         }
 
         public Builder signingAlgorithm(String signingAlgorithm) {
-            this.signingAlgorithm = Input.of(Objects.requireNonNull(signingAlgorithm));
+            this.signingAlgorithm = Output.of(Objects.requireNonNull(signingAlgorithm));
             return this;
         }
 
-        public Builder subject(Input<CertificateAuthorityCertificateAuthorityConfigurationSubjectGetArgs> subject) {
+        public Builder subject(Output<CertificateAuthorityCertificateAuthorityConfigurationSubjectGetArgs> subject) {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
 
         public Builder subject(CertificateAuthorityCertificateAuthorityConfigurationSubjectGetArgs subject) {
-            this.subject = Input.of(Objects.requireNonNull(subject));
+            this.subject = Output.of(Objects.requireNonNull(subject));
             return this;
         }
         public CertificateAuthorityCertificateAuthorityConfigurationGetArgs build() {

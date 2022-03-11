@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iam;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class RolePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class RolePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namePrefix")
-      private final @Nullable Input<String> namePrefix;
+      private final @Nullable Output<String> namePrefix;
 
-    public Input<String> getNamePrefix() {
-        return this.namePrefix == null ? Input.empty() : this.namePrefix;
+    public Output<String> getNamePrefix() {
+        return this.namePrefix == null ? Output.empty() : this.namePrefix;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class RolePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy", required=true)
-      private final Input<String> policy;
+      private final Output<String> policy;
 
-    public Input<String> getPolicy() {
+    public Output<String> getPolicy() {
         return this.policy;
     }
 
@@ -54,17 +54,17 @@ public final class RolePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role", required=true)
-      private final Input<String> role;
+      private final Output<String> role;
 
-    public Input<String> getRole() {
+    public Output<String> getRole() {
         return this.role;
     }
 
     public RolePolicyArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<String> namePrefix,
-        Input<String> policy,
-        Input<String> role) {
+        @Nullable Output<String> name,
+        @Nullable Output<String> namePrefix,
+        Output<String> policy,
+        Output<String> role) {
         this.name = name;
         this.namePrefix = namePrefix;
         this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
@@ -72,10 +72,10 @@ public final class RolePolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RolePolicyArgs() {
-        this.name = Input.empty();
-        this.namePrefix = Input.empty();
-        this.policy = Input.empty();
-        this.role = Input.empty();
+        this.name = Output.empty();
+        this.namePrefix = Output.empty();
+        this.policy = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class RolePolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> namePrefix;
-        private Input<String> policy;
-        private Input<String> role;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> namePrefix;
+        private Output<String> policy;
+        private Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -104,32 +104,32 @@ public final class RolePolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.role = defaults.role;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Input.ofNullable(namePrefix);
+            this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder policy(Input<String> policy) {
+        public Builder policy(Output<String> policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
 
-        public Builder role(Input<String> role) {
+        public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }

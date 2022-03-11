@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.appplatform;
 
 import io.pulumi.azurenative.appplatform.inputs.BuildpackBindingPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class BuildpackBindingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="buildServiceName", required=true)
-      private final Input<String> buildServiceName;
+      private final Output<String> buildServiceName;
 
-    public Input<String> getBuildServiceName() {
+    public Output<String> getBuildServiceName() {
         return this.buildServiceName;
     }
 
@@ -31,9 +31,9 @@ public final class BuildpackBindingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="builderName", required=true)
-      private final Input<String> builderName;
+      private final Output<String> builderName;
 
-    public Input<String> getBuilderName() {
+    public Output<String> getBuilderName() {
         return this.builderName;
     }
 
@@ -42,10 +42,10 @@ public final class BuildpackBindingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="buildpackBindingName")
-      private final @Nullable Input<String> buildpackBindingName;
+      private final @Nullable Output<String> buildpackBindingName;
 
-    public Input<String> getBuildpackBindingName() {
-        return this.buildpackBindingName == null ? Input.empty() : this.buildpackBindingName;
+    public Output<String> getBuildpackBindingName() {
+        return this.buildpackBindingName == null ? Output.empty() : this.buildpackBindingName;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class BuildpackBindingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<BuildpackBindingPropertiesArgs> properties;
+      private final @Nullable Output<BuildpackBindingPropertiesArgs> properties;
 
-    public Input<BuildpackBindingPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<BuildpackBindingPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -64,9 +64,9 @@ public final class BuildpackBindingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -75,19 +75,19 @@ public final class BuildpackBindingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="serviceName", required=true)
-      private final Input<String> serviceName;
+      private final Output<String> serviceName;
 
-    public Input<String> getServiceName() {
+    public Output<String> getServiceName() {
         return this.serviceName;
     }
 
     public BuildpackBindingArgs(
-        Input<String> buildServiceName,
-        Input<String> builderName,
-        @Nullable Input<String> buildpackBindingName,
-        @Nullable Input<BuildpackBindingPropertiesArgs> properties,
-        Input<String> resourceGroupName,
-        Input<String> serviceName) {
+        Output<String> buildServiceName,
+        Output<String> builderName,
+        @Nullable Output<String> buildpackBindingName,
+        @Nullable Output<BuildpackBindingPropertiesArgs> properties,
+        Output<String> resourceGroupName,
+        Output<String> serviceName) {
         this.buildServiceName = Objects.requireNonNull(buildServiceName, "expected parameter 'buildServiceName' to be non-null");
         this.builderName = Objects.requireNonNull(builderName, "expected parameter 'builderName' to be non-null");
         this.buildpackBindingName = buildpackBindingName;
@@ -97,12 +97,12 @@ public final class BuildpackBindingArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private BuildpackBindingArgs() {
-        this.buildServiceName = Input.empty();
-        this.builderName = Input.empty();
-        this.buildpackBindingName = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serviceName = Input.empty();
+        this.buildServiceName = Output.empty();
+        this.builderName = Output.empty();
+        this.buildpackBindingName = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serviceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class BuildpackBindingArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> buildServiceName;
-        private Input<String> builderName;
-        private @Nullable Input<String> buildpackBindingName;
-        private @Nullable Input<BuildpackBindingPropertiesArgs> properties;
-        private Input<String> resourceGroupName;
-        private Input<String> serviceName;
+        private Output<String> buildServiceName;
+        private Output<String> builderName;
+        private @Nullable Output<String> buildpackBindingName;
+        private @Nullable Output<BuildpackBindingPropertiesArgs> properties;
+        private Output<String> resourceGroupName;
+        private Output<String> serviceName;
 
         public Builder() {
     	      // Empty
@@ -135,63 +135,63 @@ public final class BuildpackBindingArgs extends io.pulumi.resources.ResourceArgs
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder buildServiceName(Input<String> buildServiceName) {
+        public Builder buildServiceName(Output<String> buildServiceName) {
             this.buildServiceName = Objects.requireNonNull(buildServiceName);
             return this;
         }
 
         public Builder buildServiceName(String buildServiceName) {
-            this.buildServiceName = Input.of(Objects.requireNonNull(buildServiceName));
+            this.buildServiceName = Output.of(Objects.requireNonNull(buildServiceName));
             return this;
         }
 
-        public Builder builderName(Input<String> builderName) {
+        public Builder builderName(Output<String> builderName) {
             this.builderName = Objects.requireNonNull(builderName);
             return this;
         }
 
         public Builder builderName(String builderName) {
-            this.builderName = Input.of(Objects.requireNonNull(builderName));
+            this.builderName = Output.of(Objects.requireNonNull(builderName));
             return this;
         }
 
-        public Builder buildpackBindingName(@Nullable Input<String> buildpackBindingName) {
+        public Builder buildpackBindingName(@Nullable Output<String> buildpackBindingName) {
             this.buildpackBindingName = buildpackBindingName;
             return this;
         }
 
         public Builder buildpackBindingName(@Nullable String buildpackBindingName) {
-            this.buildpackBindingName = Input.ofNullable(buildpackBindingName);
+            this.buildpackBindingName = Output.ofNullable(buildpackBindingName);
             return this;
         }
 
-        public Builder properties(@Nullable Input<BuildpackBindingPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<BuildpackBindingPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable BuildpackBindingPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serviceName(Input<String> serviceName) {
+        public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Input.of(Objects.requireNonNull(serviceName));
+            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
         public BuildpackBindingArgs build() {

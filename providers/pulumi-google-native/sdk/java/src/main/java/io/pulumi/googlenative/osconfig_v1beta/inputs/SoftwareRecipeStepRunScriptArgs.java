@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1beta.enums.SoftwareRecipeStepRunScriptInterpreter;
 import java.lang.Integer;
@@ -26,10 +26,10 @@ public final class SoftwareRecipeStepRunScriptArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="allowedExitCodes")
-      private final @Nullable Input<List<Integer>> allowedExitCodes;
+      private final @Nullable Output<List<Integer>> allowedExitCodes;
 
-    public Input<List<Integer>> getAllowedExitCodes() {
-        return this.allowedExitCodes == null ? Input.empty() : this.allowedExitCodes;
+    public Output<List<Integer>> getAllowedExitCodes() {
+        return this.allowedExitCodes == null ? Output.empty() : this.allowedExitCodes;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class SoftwareRecipeStepRunScriptArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="interpreter")
-      private final @Nullable Input<SoftwareRecipeStepRunScriptInterpreter> interpreter;
+      private final @Nullable Output<SoftwareRecipeStepRunScriptInterpreter> interpreter;
 
-    public Input<SoftwareRecipeStepRunScriptInterpreter> getInterpreter() {
-        return this.interpreter == null ? Input.empty() : this.interpreter;
+    public Output<SoftwareRecipeStepRunScriptInterpreter> getInterpreter() {
+        return this.interpreter == null ? Output.empty() : this.interpreter;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class SoftwareRecipeStepRunScriptArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="script", required=true)
-      private final Input<String> script;
+      private final Output<String> script;
 
-    public Input<String> getScript() {
+    public Output<String> getScript() {
         return this.script;
     }
 
     public SoftwareRecipeStepRunScriptArgs(
-        @Nullable Input<List<Integer>> allowedExitCodes,
-        @Nullable Input<SoftwareRecipeStepRunScriptInterpreter> interpreter,
-        Input<String> script) {
+        @Nullable Output<List<Integer>> allowedExitCodes,
+        @Nullable Output<SoftwareRecipeStepRunScriptInterpreter> interpreter,
+        Output<String> script) {
         this.allowedExitCodes = allowedExitCodes;
         this.interpreter = interpreter;
         this.script = Objects.requireNonNull(script, "expected parameter 'script' to be non-null");
     }
 
     private SoftwareRecipeStepRunScriptArgs() {
-        this.allowedExitCodes = Input.empty();
-        this.interpreter = Input.empty();
-        this.script = Input.empty();
+        this.allowedExitCodes = Output.empty();
+        this.interpreter = Output.empty();
+        this.script = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class SoftwareRecipeStepRunScriptArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Integer>> allowedExitCodes;
-        private @Nullable Input<SoftwareRecipeStepRunScriptInterpreter> interpreter;
-        private Input<String> script;
+        private @Nullable Output<List<Integer>> allowedExitCodes;
+        private @Nullable Output<SoftwareRecipeStepRunScriptInterpreter> interpreter;
+        private Output<String> script;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class SoftwareRecipeStepRunScriptArgs extends io.pulumi.resources.R
     	      this.script = defaults.script;
         }
 
-        public Builder allowedExitCodes(@Nullable Input<List<Integer>> allowedExitCodes) {
+        public Builder allowedExitCodes(@Nullable Output<List<Integer>> allowedExitCodes) {
             this.allowedExitCodes = allowedExitCodes;
             return this;
         }
 
         public Builder allowedExitCodes(@Nullable List<Integer> allowedExitCodes) {
-            this.allowedExitCodes = Input.ofNullable(allowedExitCodes);
+            this.allowedExitCodes = Output.ofNullable(allowedExitCodes);
             return this;
         }
 
-        public Builder interpreter(@Nullable Input<SoftwareRecipeStepRunScriptInterpreter> interpreter) {
+        public Builder interpreter(@Nullable Output<SoftwareRecipeStepRunScriptInterpreter> interpreter) {
             this.interpreter = interpreter;
             return this;
         }
 
         public Builder interpreter(@Nullable SoftwareRecipeStepRunScriptInterpreter interpreter) {
-            this.interpreter = Input.ofNullable(interpreter);
+            this.interpreter = Output.ofNullable(interpreter);
             return this;
         }
 
-        public Builder script(Input<String> script) {
+        public Builder script(Output<String> script) {
             this.script = Objects.requireNonNull(script);
             return this;
         }
 
         public Builder script(String script) {
-            this.script = Input.of(Objects.requireNonNull(script));
+            this.script = Output.of(Objects.requireNonNull(script));
             return this;
         }
         public SoftwareRecipeStepRunScriptArgs build() {

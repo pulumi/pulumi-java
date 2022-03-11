@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ssm.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersLambdaParameters
      * 
      */
     @InputImport(name="clientContext")
-      private final @Nullable Input<String> clientContext;
+      private final @Nullable Output<String> clientContext;
 
-    public Input<String> getClientContext() {
-        return this.clientContext == null ? Input.empty() : this.clientContext;
+    public Output<String> getClientContext() {
+        return this.clientContext == null ? Output.empty() : this.clientContext;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersLambdaParameters
      * 
      */
     @InputImport(name="payload")
-      private final @Nullable Input<String> payload;
+      private final @Nullable Output<String> payload;
 
-    public Input<String> getPayload() {
-        return this.payload == null ? Input.empty() : this.payload;
+    public Output<String> getPayload() {
+        return this.payload == null ? Output.empty() : this.payload;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class MaintenanceWindowTaskTaskInvocationParametersLambdaParameters
      * 
      */
     @InputImport(name="qualifier")
-      private final @Nullable Input<String> qualifier;
+      private final @Nullable Output<String> qualifier;
 
-    public Input<String> getQualifier() {
-        return this.qualifier == null ? Input.empty() : this.qualifier;
+    public Output<String> getQualifier() {
+        return this.qualifier == null ? Output.empty() : this.qualifier;
     }
 
     public MaintenanceWindowTaskTaskInvocationParametersLambdaParametersArgs(
-        @Nullable Input<String> clientContext,
-        @Nullable Input<String> payload,
-        @Nullable Input<String> qualifier) {
+        @Nullable Output<String> clientContext,
+        @Nullable Output<String> payload,
+        @Nullable Output<String> qualifier) {
         this.clientContext = clientContext;
         this.payload = payload;
         this.qualifier = qualifier;
     }
 
     private MaintenanceWindowTaskTaskInvocationParametersLambdaParametersArgs() {
-        this.clientContext = Input.empty();
-        this.payload = Input.empty();
-        this.qualifier = Input.empty();
+        this.clientContext = Output.empty();
+        this.payload = Output.empty();
+        this.qualifier = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class MaintenanceWindowTaskTaskInvocationParametersLambdaParameters
     }
 
     public static final class Builder {
-        private @Nullable Input<String> clientContext;
-        private @Nullable Input<String> payload;
-        private @Nullable Input<String> qualifier;
+        private @Nullable Output<String> clientContext;
+        private @Nullable Output<String> payload;
+        private @Nullable Output<String> qualifier;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class MaintenanceWindowTaskTaskInvocationParametersLambdaParameters
     	      this.qualifier = defaults.qualifier;
         }
 
-        public Builder clientContext(@Nullable Input<String> clientContext) {
+        public Builder clientContext(@Nullable Output<String> clientContext) {
             this.clientContext = clientContext;
             return this;
         }
 
         public Builder clientContext(@Nullable String clientContext) {
-            this.clientContext = Input.ofNullable(clientContext);
+            this.clientContext = Output.ofNullable(clientContext);
             return this;
         }
 
-        public Builder payload(@Nullable Input<String> payload) {
+        public Builder payload(@Nullable Output<String> payload) {
             this.payload = payload;
             return this;
         }
 
         public Builder payload(@Nullable String payload) {
-            this.payload = Input.ofNullable(payload);
+            this.payload = Output.ofNullable(payload);
             return this;
         }
 
-        public Builder qualifier(@Nullable Input<String> qualifier) {
+        public Builder qualifier(@Nullable Output<String> qualifier) {
             this.qualifier = qualifier;
             return this;
         }
 
         public Builder qualifier(@Nullable String qualifier) {
-            this.qualifier = Input.ofNullable(qualifier);
+            this.qualifier = Output.ofNullable(qualifier);
             return this;
         }
         public MaintenanceWindowTaskTaskInvocationParametersLambdaParametersArgs build() {

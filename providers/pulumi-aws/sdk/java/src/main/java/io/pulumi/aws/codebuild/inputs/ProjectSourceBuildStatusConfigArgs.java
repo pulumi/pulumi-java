@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codebuild.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ProjectSourceBuildStatusConfigArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="context")
-      private final @Nullable Input<String> context;
+      private final @Nullable Output<String> context;
 
-    public Input<String> getContext() {
-        return this.context == null ? Input.empty() : this.context;
+    public Output<String> getContext() {
+        return this.context == null ? Output.empty() : this.context;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class ProjectSourceBuildStatusConfigArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="targetUrl")
-      private final @Nullable Input<String> targetUrl;
+      private final @Nullable Output<String> targetUrl;
 
-    public Input<String> getTargetUrl() {
-        return this.targetUrl == null ? Input.empty() : this.targetUrl;
+    public Output<String> getTargetUrl() {
+        return this.targetUrl == null ? Output.empty() : this.targetUrl;
     }
 
     public ProjectSourceBuildStatusConfigArgs(
-        @Nullable Input<String> context,
-        @Nullable Input<String> targetUrl) {
+        @Nullable Output<String> context,
+        @Nullable Output<String> targetUrl) {
         this.context = context;
         this.targetUrl = targetUrl;
     }
 
     private ProjectSourceBuildStatusConfigArgs() {
-        this.context = Input.empty();
-        this.targetUrl = Input.empty();
+        this.context = Output.empty();
+        this.targetUrl = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ProjectSourceBuildStatusConfigArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> context;
-        private @Nullable Input<String> targetUrl;
+        private @Nullable Output<String> context;
+        private @Nullable Output<String> targetUrl;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ProjectSourceBuildStatusConfigArgs extends io.pulumi.resource
     	      this.targetUrl = defaults.targetUrl;
         }
 
-        public Builder context(@Nullable Input<String> context) {
+        public Builder context(@Nullable Output<String> context) {
             this.context = context;
             return this;
         }
 
         public Builder context(@Nullable String context) {
-            this.context = Input.ofNullable(context);
+            this.context = Output.ofNullable(context);
             return this;
         }
 
-        public Builder targetUrl(@Nullable Input<String> targetUrl) {
+        public Builder targetUrl(@Nullable Output<String> targetUrl) {
             this.targetUrl = targetUrl;
             return this;
         }
 
         public Builder targetUrl(@Nullable String targetUrl) {
-            this.targetUrl = Input.ofNullable(targetUrl);
+            this.targetUrl = Output.ofNullable(targetUrl);
             return this;
         }
         public ProjectSourceBuildStatusConfigArgs build() {

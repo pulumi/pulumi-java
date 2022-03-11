@@ -6,7 +6,7 @@ package io.pulumi.azurenative.aadiam.inputs;
 import io.pulumi.azurenative.aadiam.enums.Category;
 import io.pulumi.azurenative.aadiam.inputs.RetentionPolicyArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class LogSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="category")
-      private final @Nullable Input<Either<String,Category>> category;
+      private final @Nullable Output<Either<String,Category>> category;
 
-    public Input<Either<String,Category>> getCategory() {
-        return this.category == null ? Input.empty() : this.category;
+    public Output<Either<String,Category>> getCategory() {
+        return this.category == null ? Output.empty() : this.category;
     }
 
     /**
@@ -38,9 +38,9 @@ public final class LogSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled", required=true)
-      private final Input<Boolean> enabled;
+      private final Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
+    public Output<Boolean> getEnabled() {
         return this.enabled;
     }
 
@@ -49,25 +49,25 @@ public final class LogSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionPolicy")
-      private final @Nullable Input<RetentionPolicyArgs> retentionPolicy;
+      private final @Nullable Output<RetentionPolicyArgs> retentionPolicy;
 
-    public Input<RetentionPolicyArgs> getRetentionPolicy() {
-        return this.retentionPolicy == null ? Input.empty() : this.retentionPolicy;
+    public Output<RetentionPolicyArgs> getRetentionPolicy() {
+        return this.retentionPolicy == null ? Output.empty() : this.retentionPolicy;
     }
 
     public LogSettingsArgs(
-        @Nullable Input<Either<String,Category>> category,
-        Input<Boolean> enabled,
-        @Nullable Input<RetentionPolicyArgs> retentionPolicy) {
+        @Nullable Output<Either<String,Category>> category,
+        Output<Boolean> enabled,
+        @Nullable Output<RetentionPolicyArgs> retentionPolicy) {
         this.category = category;
         this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
         this.retentionPolicy = retentionPolicy;
     }
 
     private LogSettingsArgs() {
-        this.category = Input.empty();
-        this.enabled = Input.empty();
-        this.retentionPolicy = Input.empty();
+        this.category = Output.empty();
+        this.enabled = Output.empty();
+        this.retentionPolicy = Output.empty();
     }
 
     public static Builder builder() {
@@ -79,9 +79,9 @@ public final class LogSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,Category>> category;
-        private Input<Boolean> enabled;
-        private @Nullable Input<RetentionPolicyArgs> retentionPolicy;
+        private @Nullable Output<Either<String,Category>> category;
+        private Output<Boolean> enabled;
+        private @Nullable Output<RetentionPolicyArgs> retentionPolicy;
 
         public Builder() {
     	      // Empty
@@ -94,33 +94,33 @@ public final class LogSettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.retentionPolicy = defaults.retentionPolicy;
         }
 
-        public Builder category(@Nullable Input<Either<String,Category>> category) {
+        public Builder category(@Nullable Output<Either<String,Category>> category) {
             this.category = category;
             return this;
         }
 
         public Builder category(@Nullable Either<String,Category> category) {
-            this.category = Input.ofNullable(category);
+            this.category = Output.ofNullable(category);
             return this;
         }
 
-        public Builder enabled(Input<Boolean> enabled) {
+        public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Input.of(Objects.requireNonNull(enabled));
+            this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
 
-        public Builder retentionPolicy(@Nullable Input<RetentionPolicyArgs> retentionPolicy) {
+        public Builder retentionPolicy(@Nullable Output<RetentionPolicyArgs> retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
 
         public Builder retentionPolicy(@Nullable RetentionPolicyArgs retentionPolicy) {
-            this.retentionPolicy = Input.ofNullable(retentionPolicy);
+            this.retentionPolicy = Output.ofNullable(retentionPolicy);
             return this;
         }
         public LogSettingsArgs build() {

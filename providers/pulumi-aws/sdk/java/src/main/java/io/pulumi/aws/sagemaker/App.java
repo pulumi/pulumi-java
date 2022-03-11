@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.sagemaker.AppArgs;
 import io.pulumi.aws.sagemaker.inputs.AppState;
 import io.pulumi.aws.sagemaker.outputs.AppResourceSpec;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -182,14 +181,14 @@ public class App extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public App(String name, AppArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:sagemaker/app:App", name, args == null ? AppArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:sagemaker/app:App", name, args == null ? AppArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private App(String name, Input<String> id, @Nullable AppState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private App(String name, Output<String> id, @Nullable AppState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:sagemaker/app:App", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -205,7 +204,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static App get(String name, Input<String> id, @Nullable AppState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static App get(String name, Output<String> id, @Nullable AppState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new App(name, id, state, options);
     }
 }

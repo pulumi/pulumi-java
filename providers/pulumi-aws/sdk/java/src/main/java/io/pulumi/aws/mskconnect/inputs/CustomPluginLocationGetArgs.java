@@ -4,7 +4,7 @@
 package io.pulumi.aws.mskconnect.inputs;
 
 import io.pulumi.aws.mskconnect.inputs.CustomPluginLocationS3GetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class CustomPluginLocationGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="s3", required=true)
-      private final Input<CustomPluginLocationS3GetArgs> s3;
+      private final Output<CustomPluginLocationS3GetArgs> s3;
 
-    public Input<CustomPluginLocationS3GetArgs> getS3() {
+    public Output<CustomPluginLocationS3GetArgs> getS3() {
         return this.s3;
     }
 
-    public CustomPluginLocationGetArgs(Input<CustomPluginLocationS3GetArgs> s3) {
+    public CustomPluginLocationGetArgs(Output<CustomPluginLocationS3GetArgs> s3) {
         this.s3 = Objects.requireNonNull(s3, "expected parameter 's3' to be non-null");
     }
 
     private CustomPluginLocationGetArgs() {
-        this.s3 = Input.empty();
+        this.s3 = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class CustomPluginLocationGetArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<CustomPluginLocationS3GetArgs> s3;
+        private Output<CustomPluginLocationS3GetArgs> s3;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class CustomPluginLocationGetArgs extends io.pulumi.resources.Resou
     	      this.s3 = defaults.s3;
         }
 
-        public Builder s3(Input<CustomPluginLocationS3GetArgs> s3) {
+        public Builder s3(Output<CustomPluginLocationS3GetArgs> s3) {
             this.s3 = Objects.requireNonNull(s3);
             return this;
         }
 
         public Builder s3(CustomPluginLocationS3GetArgs s3) {
-            this.s3 = Input.of(Objects.requireNonNull(s3));
+            this.s3 = Output.of(Objects.requireNonNull(s3));
             return this;
         }
         public CustomPluginLocationGetArgs build() {

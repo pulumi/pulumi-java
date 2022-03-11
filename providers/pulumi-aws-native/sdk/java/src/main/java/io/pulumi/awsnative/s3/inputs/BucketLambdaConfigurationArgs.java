@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.inputs.BucketNotificationFilterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class BucketLambdaConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="event", required=true)
-      private final Input<String> event;
+      private final Output<String> event;
 
-    public Input<String> getEvent() {
+    public Output<String> getEvent() {
         return this.event;
     }
 
@@ -35,10 +35,10 @@ public final class BucketLambdaConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="filter")
-      private final @Nullable Input<BucketNotificationFilterArgs> filter;
+      private final @Nullable Output<BucketNotificationFilterArgs> filter;
 
-    public Input<BucketNotificationFilterArgs> getFilter() {
-        return this.filter == null ? Input.empty() : this.filter;
+    public Output<BucketNotificationFilterArgs> getFilter() {
+        return this.filter == null ? Output.empty() : this.filter;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class BucketLambdaConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="function", required=true)
-      private final Input<String> function;
+      private final Output<String> function;
 
-    public Input<String> getFunction() {
+    public Output<String> getFunction() {
         return this.function;
     }
 
     public BucketLambdaConfigurationArgs(
-        Input<String> event,
-        @Nullable Input<BucketNotificationFilterArgs> filter,
-        Input<String> function) {
+        Output<String> event,
+        @Nullable Output<BucketNotificationFilterArgs> filter,
+        Output<String> function) {
         this.event = Objects.requireNonNull(event, "expected parameter 'event' to be non-null");
         this.filter = filter;
         this.function = Objects.requireNonNull(function, "expected parameter 'function' to be non-null");
     }
 
     private BucketLambdaConfigurationArgs() {
-        this.event = Input.empty();
-        this.filter = Input.empty();
-        this.function = Input.empty();
+        this.event = Output.empty();
+        this.filter = Output.empty();
+        this.function = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class BucketLambdaConfigurationArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> event;
-        private @Nullable Input<BucketNotificationFilterArgs> filter;
-        private Input<String> function;
+        private Output<String> event;
+        private @Nullable Output<BucketNotificationFilterArgs> filter;
+        private Output<String> function;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class BucketLambdaConfigurationArgs extends io.pulumi.resources.Res
     	      this.function = defaults.function;
         }
 
-        public Builder event(Input<String> event) {
+        public Builder event(Output<String> event) {
             this.event = Objects.requireNonNull(event);
             return this;
         }
 
         public Builder event(String event) {
-            this.event = Input.of(Objects.requireNonNull(event));
+            this.event = Output.of(Objects.requireNonNull(event));
             return this;
         }
 
-        public Builder filter(@Nullable Input<BucketNotificationFilterArgs> filter) {
+        public Builder filter(@Nullable Output<BucketNotificationFilterArgs> filter) {
             this.filter = filter;
             return this;
         }
 
         public Builder filter(@Nullable BucketNotificationFilterArgs filter) {
-            this.filter = Input.ofNullable(filter);
+            this.filter = Output.ofNullable(filter);
             return this;
         }
 
-        public Builder function(Input<String> function) {
+        public Builder function(Output<String> function) {
             this.function = Objects.requireNonNull(function);
             return this;
         }
 
         public Builder function(String function) {
-            this.function = Input.of(Objects.requireNonNull(function));
+            this.function = Output.of(Objects.requireNonNull(function));
             return this;
         }
         public BucketLambdaConfigurationArgs build() {

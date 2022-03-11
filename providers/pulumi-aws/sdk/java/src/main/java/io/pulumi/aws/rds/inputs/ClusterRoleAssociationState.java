@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.rds.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ClusterRoleAssociationState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="dbClusterIdentifier")
-      private final @Nullable Input<String> dbClusterIdentifier;
+      private final @Nullable Output<String> dbClusterIdentifier;
 
-    public Input<String> getDbClusterIdentifier() {
-        return this.dbClusterIdentifier == null ? Input.empty() : this.dbClusterIdentifier;
+    public Output<String> getDbClusterIdentifier() {
+        return this.dbClusterIdentifier == null ? Output.empty() : this.dbClusterIdentifier;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class ClusterRoleAssociationState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="featureName")
-      private final @Nullable Input<String> featureName;
+      private final @Nullable Output<String> featureName;
 
-    public Input<String> getFeatureName() {
-        return this.featureName == null ? Input.empty() : this.featureName;
+    public Output<String> getFeatureName() {
+        return this.featureName == null ? Output.empty() : this.featureName;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class ClusterRoleAssociationState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="roleArn")
-      private final @Nullable Input<String> roleArn;
+      private final @Nullable Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
-        return this.roleArn == null ? Input.empty() : this.roleArn;
+    public Output<String> getRoleArn() {
+        return this.roleArn == null ? Output.empty() : this.roleArn;
     }
 
     public ClusterRoleAssociationState(
-        @Nullable Input<String> dbClusterIdentifier,
-        @Nullable Input<String> featureName,
-        @Nullable Input<String> roleArn) {
+        @Nullable Output<String> dbClusterIdentifier,
+        @Nullable Output<String> featureName,
+        @Nullable Output<String> roleArn) {
         this.dbClusterIdentifier = dbClusterIdentifier;
         this.featureName = featureName;
         this.roleArn = roleArn;
     }
 
     private ClusterRoleAssociationState() {
-        this.dbClusterIdentifier = Input.empty();
-        this.featureName = Input.empty();
-        this.roleArn = Input.empty();
+        this.dbClusterIdentifier = Output.empty();
+        this.featureName = Output.empty();
+        this.roleArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class ClusterRoleAssociationState extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> dbClusterIdentifier;
-        private @Nullable Input<String> featureName;
-        private @Nullable Input<String> roleArn;
+        private @Nullable Output<String> dbClusterIdentifier;
+        private @Nullable Output<String> featureName;
+        private @Nullable Output<String> roleArn;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class ClusterRoleAssociationState extends io.pulumi.resources.Resou
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder dbClusterIdentifier(@Nullable Input<String> dbClusterIdentifier) {
+        public Builder dbClusterIdentifier(@Nullable Output<String> dbClusterIdentifier) {
             this.dbClusterIdentifier = dbClusterIdentifier;
             return this;
         }
 
         public Builder dbClusterIdentifier(@Nullable String dbClusterIdentifier) {
-            this.dbClusterIdentifier = Input.ofNullable(dbClusterIdentifier);
+            this.dbClusterIdentifier = Output.ofNullable(dbClusterIdentifier);
             return this;
         }
 
-        public Builder featureName(@Nullable Input<String> featureName) {
+        public Builder featureName(@Nullable Output<String> featureName) {
             this.featureName = featureName;
             return this;
         }
 
         public Builder featureName(@Nullable String featureName) {
-            this.featureName = Input.ofNullable(featureName);
+            this.featureName = Output.ofNullable(featureName);
             return this;
         }
 
-        public Builder roleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Input.ofNullable(roleArn);
+            this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
         public ClusterRoleAssociationState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudkms_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudkms_v1.enums.CryptoKeyVersionTemplateAlgorithm;
 import io.pulumi.googlenative.cloudkms_v1.enums.CryptoKeyVersionTemplateProtectionLevel;
@@ -24,9 +24,9 @@ public final class CryptoKeyVersionTemplateArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="algorithm", required=true)
-      private final Input<CryptoKeyVersionTemplateAlgorithm> algorithm;
+      private final Output<CryptoKeyVersionTemplateAlgorithm> algorithm;
 
-    public Input<CryptoKeyVersionTemplateAlgorithm> getAlgorithm() {
+    public Output<CryptoKeyVersionTemplateAlgorithm> getAlgorithm() {
         return this.algorithm;
     }
 
@@ -35,22 +35,22 @@ public final class CryptoKeyVersionTemplateArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="protectionLevel")
-      private final @Nullable Input<CryptoKeyVersionTemplateProtectionLevel> protectionLevel;
+      private final @Nullable Output<CryptoKeyVersionTemplateProtectionLevel> protectionLevel;
 
-    public Input<CryptoKeyVersionTemplateProtectionLevel> getProtectionLevel() {
-        return this.protectionLevel == null ? Input.empty() : this.protectionLevel;
+    public Output<CryptoKeyVersionTemplateProtectionLevel> getProtectionLevel() {
+        return this.protectionLevel == null ? Output.empty() : this.protectionLevel;
     }
 
     public CryptoKeyVersionTemplateArgs(
-        Input<CryptoKeyVersionTemplateAlgorithm> algorithm,
-        @Nullable Input<CryptoKeyVersionTemplateProtectionLevel> protectionLevel) {
+        Output<CryptoKeyVersionTemplateAlgorithm> algorithm,
+        @Nullable Output<CryptoKeyVersionTemplateProtectionLevel> protectionLevel) {
         this.algorithm = Objects.requireNonNull(algorithm, "expected parameter 'algorithm' to be non-null");
         this.protectionLevel = protectionLevel;
     }
 
     private CryptoKeyVersionTemplateArgs() {
-        this.algorithm = Input.empty();
-        this.protectionLevel = Input.empty();
+        this.algorithm = Output.empty();
+        this.protectionLevel = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class CryptoKeyVersionTemplateArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<CryptoKeyVersionTemplateAlgorithm> algorithm;
-        private @Nullable Input<CryptoKeyVersionTemplateProtectionLevel> protectionLevel;
+        private Output<CryptoKeyVersionTemplateAlgorithm> algorithm;
+        private @Nullable Output<CryptoKeyVersionTemplateProtectionLevel> protectionLevel;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class CryptoKeyVersionTemplateArgs extends io.pulumi.resources.Reso
     	      this.protectionLevel = defaults.protectionLevel;
         }
 
-        public Builder algorithm(Input<CryptoKeyVersionTemplateAlgorithm> algorithm) {
+        public Builder algorithm(Output<CryptoKeyVersionTemplateAlgorithm> algorithm) {
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
 
         public Builder algorithm(CryptoKeyVersionTemplateAlgorithm algorithm) {
-            this.algorithm = Input.of(Objects.requireNonNull(algorithm));
+            this.algorithm = Output.of(Objects.requireNonNull(algorithm));
             return this;
         }
 
-        public Builder protectionLevel(@Nullable Input<CryptoKeyVersionTemplateProtectionLevel> protectionLevel) {
+        public Builder protectionLevel(@Nullable Output<CryptoKeyVersionTemplateProtectionLevel> protectionLevel) {
             this.protectionLevel = protectionLevel;
             return this;
         }
 
         public Builder protectionLevel(@Nullable CryptoKeyVersionTemplateProtectionLevel protectionLevel) {
-            this.protectionLevel = Input.ofNullable(protectionLevel);
+            this.protectionLevel = Output.ofNullable(protectionLevel);
             return this;
         }
         public CryptoKeyVersionTemplateArgs build() {

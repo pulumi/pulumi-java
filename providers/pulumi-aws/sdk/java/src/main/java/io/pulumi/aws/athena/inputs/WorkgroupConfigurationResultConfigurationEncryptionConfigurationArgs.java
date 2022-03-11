@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.athena.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class WorkgroupConfigurationResultConfigurationEncryptionConfigurat
      * 
      */
     @InputImport(name="encryptionOption")
-      private final @Nullable Input<String> encryptionOption;
+      private final @Nullable Output<String> encryptionOption;
 
-    public Input<String> getEncryptionOption() {
-        return this.encryptionOption == null ? Input.empty() : this.encryptionOption;
+    public Output<String> getEncryptionOption() {
+        return this.encryptionOption == null ? Output.empty() : this.encryptionOption;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class WorkgroupConfigurationResultConfigurationEncryptionConfigurat
      * 
      */
     @InputImport(name="kmsKeyArn")
-      private final @Nullable Input<String> kmsKeyArn;
+      private final @Nullable Output<String> kmsKeyArn;
 
-    public Input<String> getKmsKeyArn() {
-        return this.kmsKeyArn == null ? Input.empty() : this.kmsKeyArn;
+    public Output<String> getKmsKeyArn() {
+        return this.kmsKeyArn == null ? Output.empty() : this.kmsKeyArn;
     }
 
     public WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs(
-        @Nullable Input<String> encryptionOption,
-        @Nullable Input<String> kmsKeyArn) {
+        @Nullable Output<String> encryptionOption,
+        @Nullable Output<String> kmsKeyArn) {
         this.encryptionOption = encryptionOption;
         this.kmsKeyArn = kmsKeyArn;
     }
 
     private WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs() {
-        this.encryptionOption = Input.empty();
-        this.kmsKeyArn = Input.empty();
+        this.encryptionOption = Output.empty();
+        this.kmsKeyArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class WorkgroupConfigurationResultConfigurationEncryptionConfigurat
     }
 
     public static final class Builder {
-        private @Nullable Input<String> encryptionOption;
-        private @Nullable Input<String> kmsKeyArn;
+        private @Nullable Output<String> encryptionOption;
+        private @Nullable Output<String> kmsKeyArn;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class WorkgroupConfigurationResultConfigurationEncryptionConfigurat
     	      this.kmsKeyArn = defaults.kmsKeyArn;
         }
 
-        public Builder encryptionOption(@Nullable Input<String> encryptionOption) {
+        public Builder encryptionOption(@Nullable Output<String> encryptionOption) {
             this.encryptionOption = encryptionOption;
             return this;
         }
 
         public Builder encryptionOption(@Nullable String encryptionOption) {
-            this.encryptionOption = Input.ofNullable(encryptionOption);
+            this.encryptionOption = Output.ofNullable(encryptionOption);
             return this;
         }
 
-        public Builder kmsKeyArn(@Nullable Input<String> kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Input.ofNullable(kmsKeyArn);
+            this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
             return this;
         }
         public WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs build() {

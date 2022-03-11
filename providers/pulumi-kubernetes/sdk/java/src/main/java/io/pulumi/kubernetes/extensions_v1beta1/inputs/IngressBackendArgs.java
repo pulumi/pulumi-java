@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.extensions_v1beta1.inputs;
 
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.TypedLocalObjectReferenceArgs;
 import java.lang.Integer;
@@ -26,10 +26,10 @@ public final class IngressBackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resource")
-      private final @Nullable Input<TypedLocalObjectReferenceArgs> resource;
+      private final @Nullable Output<TypedLocalObjectReferenceArgs> resource;
 
-    public Input<TypedLocalObjectReferenceArgs> getResource() {
-        return this.resource == null ? Input.empty() : this.resource;
+    public Output<TypedLocalObjectReferenceArgs> getResource() {
+        return this.resource == null ? Output.empty() : this.resource;
     }
 
     /**
@@ -37,9 +37,9 @@ public final class IngressBackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-      private final Input<String> serviceName;
+      private final Output<String> serviceName;
 
-    public Input<String> getServiceName() {
+    public Output<String> getServiceName() {
         return this.serviceName;
     }
 
@@ -48,25 +48,25 @@ public final class IngressBackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="servicePort", required=true)
-      private final Input<Either<Integer,String>> servicePort;
+      private final Output<Either<Integer,String>> servicePort;
 
-    public Input<Either<Integer,String>> getServicePort() {
+    public Output<Either<Integer,String>> getServicePort() {
         return this.servicePort;
     }
 
     public IngressBackendArgs(
-        @Nullable Input<TypedLocalObjectReferenceArgs> resource,
-        Input<String> serviceName,
-        Input<Either<Integer,String>> servicePort) {
+        @Nullable Output<TypedLocalObjectReferenceArgs> resource,
+        Output<String> serviceName,
+        Output<Either<Integer,String>> servicePort) {
         this.resource = resource;
         this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
         this.servicePort = Objects.requireNonNull(servicePort, "expected parameter 'servicePort' to be non-null");
     }
 
     private IngressBackendArgs() {
-        this.resource = Input.empty();
-        this.serviceName = Input.empty();
-        this.servicePort = Input.empty();
+        this.resource = Output.empty();
+        this.serviceName = Output.empty();
+        this.servicePort = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class IngressBackendArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<TypedLocalObjectReferenceArgs> resource;
-        private Input<String> serviceName;
-        private Input<Either<Integer,String>> servicePort;
+        private @Nullable Output<TypedLocalObjectReferenceArgs> resource;
+        private Output<String> serviceName;
+        private Output<Either<Integer,String>> servicePort;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class IngressBackendArgs extends io.pulumi.resources.ResourceArgs {
     	      this.servicePort = defaults.servicePort;
         }
 
-        public Builder resource(@Nullable Input<TypedLocalObjectReferenceArgs> resource) {
+        public Builder resource(@Nullable Output<TypedLocalObjectReferenceArgs> resource) {
             this.resource = resource;
             return this;
         }
 
         public Builder resource(@Nullable TypedLocalObjectReferenceArgs resource) {
-            this.resource = Input.ofNullable(resource);
+            this.resource = Output.ofNullable(resource);
             return this;
         }
 
-        public Builder serviceName(Input<String> serviceName) {
+        public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Input.of(Objects.requireNonNull(serviceName));
+            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder servicePort(Input<Either<Integer,String>> servicePort) {
+        public Builder servicePort(Output<Either<Integer,String>> servicePort) {
             this.servicePort = Objects.requireNonNull(servicePort);
             return this;
         }
 
         public Builder servicePort(Either<Integer,String> servicePort) {
-            this.servicePort = Input.of(Objects.requireNonNull(servicePort));
+            this.servicePort = Output.of(Objects.requireNonNull(servicePort));
             return this;
         }
         public IngressBackendArgs build() {

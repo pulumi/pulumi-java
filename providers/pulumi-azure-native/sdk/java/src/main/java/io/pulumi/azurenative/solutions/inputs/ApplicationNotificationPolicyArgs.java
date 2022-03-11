@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.solutions.inputs;
 
 import io.pulumi.azurenative.solutions.inputs.ApplicationNotificationEndpointArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ApplicationNotificationPolicyArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="notificationEndpoints", required=true)
-      private final Input<List<ApplicationNotificationEndpointArgs>> notificationEndpoints;
+      private final Output<List<ApplicationNotificationEndpointArgs>> notificationEndpoints;
 
-    public Input<List<ApplicationNotificationEndpointArgs>> getNotificationEndpoints() {
+    public Output<List<ApplicationNotificationEndpointArgs>> getNotificationEndpoints() {
         return this.notificationEndpoints;
     }
 
-    public ApplicationNotificationPolicyArgs(Input<List<ApplicationNotificationEndpointArgs>> notificationEndpoints) {
+    public ApplicationNotificationPolicyArgs(Output<List<ApplicationNotificationEndpointArgs>> notificationEndpoints) {
         this.notificationEndpoints = Objects.requireNonNull(notificationEndpoints, "expected parameter 'notificationEndpoints' to be non-null");
     }
 
     private ApplicationNotificationPolicyArgs() {
-        this.notificationEndpoints = Input.empty();
+        this.notificationEndpoints = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ApplicationNotificationPolicyArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<List<ApplicationNotificationEndpointArgs>> notificationEndpoints;
+        private Output<List<ApplicationNotificationEndpointArgs>> notificationEndpoints;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ApplicationNotificationPolicyArgs extends io.pulumi.resources
     	      this.notificationEndpoints = defaults.notificationEndpoints;
         }
 
-        public Builder notificationEndpoints(Input<List<ApplicationNotificationEndpointArgs>> notificationEndpoints) {
+        public Builder notificationEndpoints(Output<List<ApplicationNotificationEndpointArgs>> notificationEndpoints) {
             this.notificationEndpoints = Objects.requireNonNull(notificationEndpoints);
             return this;
         }
 
         public Builder notificationEndpoints(List<ApplicationNotificationEndpointArgs> notificationEndpoints) {
-            this.notificationEndpoints = Input.of(Objects.requireNonNull(notificationEndpoints));
+            this.notificationEndpoints = Output.of(Objects.requireNonNull(notificationEndpoints));
             return this;
         }
         public ApplicationNotificationPolicyArgs build() {

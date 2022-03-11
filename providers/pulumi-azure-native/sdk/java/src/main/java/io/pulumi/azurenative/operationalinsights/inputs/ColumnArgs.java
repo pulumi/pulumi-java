@@ -6,7 +6,7 @@ package io.pulumi.azurenative.operationalinsights.inputs;
 import io.pulumi.azurenative.operationalinsights.enums.ColumnDataTypeHintEnum;
 import io.pulumi.azurenative.operationalinsights.enums.ColumnTypeEnum;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataTypeHint")
-      private final @Nullable Input<Either<String,ColumnDataTypeHintEnum>> dataTypeHint;
+      private final @Nullable Output<Either<String,ColumnDataTypeHintEnum>> dataTypeHint;
 
-    public Input<Either<String,ColumnDataTypeHintEnum>> getDataTypeHint() {
-        return this.dataTypeHint == null ? Input.empty() : this.dataTypeHint;
+    public Output<Either<String,ColumnDataTypeHintEnum>> getDataTypeHint() {
+        return this.dataTypeHint == null ? Output.empty() : this.dataTypeHint;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -70,18 +70,18 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<Either<String,ColumnTypeEnum>> type;
+      private final @Nullable Output<Either<String,ColumnTypeEnum>> type;
 
-    public Input<Either<String,ColumnTypeEnum>> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<Either<String,ColumnTypeEnum>> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public ColumnArgs(
-        @Nullable Input<Either<String,ColumnDataTypeHintEnum>> dataTypeHint,
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> name,
-        @Nullable Input<Either<String,ColumnTypeEnum>> type) {
+        @Nullable Output<Either<String,ColumnDataTypeHintEnum>> dataTypeHint,
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> name,
+        @Nullable Output<Either<String,ColumnTypeEnum>> type) {
         this.dataTypeHint = dataTypeHint;
         this.description = description;
         this.displayName = displayName;
@@ -90,11 +90,11 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ColumnArgs() {
-        this.dataTypeHint = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.name = Input.empty();
-        this.type = Input.empty();
+        this.dataTypeHint = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.name = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,11 +106,11 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,ColumnDataTypeHintEnum>> dataTypeHint;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Either<String,ColumnTypeEnum>> type;
+        private @Nullable Output<Either<String,ColumnDataTypeHintEnum>> dataTypeHint;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Either<String,ColumnTypeEnum>> type;
 
         public Builder() {
     	      // Empty
@@ -125,53 +125,53 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder dataTypeHint(@Nullable Input<Either<String,ColumnDataTypeHintEnum>> dataTypeHint) {
+        public Builder dataTypeHint(@Nullable Output<Either<String,ColumnDataTypeHintEnum>> dataTypeHint) {
             this.dataTypeHint = dataTypeHint;
             return this;
         }
 
         public Builder dataTypeHint(@Nullable Either<String,ColumnDataTypeHintEnum> dataTypeHint) {
-            this.dataTypeHint = Input.ofNullable(dataTypeHint);
+            this.dataTypeHint = Output.ofNullable(dataTypeHint);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder type(@Nullable Input<Either<String,ColumnTypeEnum>> type) {
+        public Builder type(@Nullable Output<Either<String,ColumnTypeEnum>> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable Either<String,ColumnTypeEnum> type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public ColumnArgs build() {

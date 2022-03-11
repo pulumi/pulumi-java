@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class NotificationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bucket")
-      private final @Nullable Input<String> bucket;
+      private final @Nullable Output<String> bucket;
 
-    public Input<String> getBucket() {
-        return this.bucket == null ? Input.empty() : this.bucket;
+    public Output<String> getBucket() {
+        return this.bucket == null ? Output.empty() : this.bucket;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class NotificationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customAttributes")
-      private final @Nullable Input<Map<String,String>> customAttributes;
+      private final @Nullable Output<Map<String,String>> customAttributes;
 
-    public Input<Map<String,String>> getCustomAttributes() {
-        return this.customAttributes == null ? Input.empty() : this.customAttributes;
+    public Output<Map<String,String>> getCustomAttributes() {
+        return this.customAttributes == null ? Output.empty() : this.customAttributes;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class NotificationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventTypes")
-      private final @Nullable Input<List<String>> eventTypes;
+      private final @Nullable Output<List<String>> eventTypes;
 
-    public Input<List<String>> getEventTypes() {
-        return this.eventTypes == null ? Input.empty() : this.eventTypes;
+    public Output<List<String>> getEventTypes() {
+        return this.eventTypes == null ? Output.empty() : this.eventTypes;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class NotificationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationId")
-      private final @Nullable Input<String> notificationId;
+      private final @Nullable Output<String> notificationId;
 
-    public Input<String> getNotificationId() {
-        return this.notificationId == null ? Input.empty() : this.notificationId;
+    public Output<String> getNotificationId() {
+        return this.notificationId == null ? Output.empty() : this.notificationId;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class NotificationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectNamePrefix")
-      private final @Nullable Input<String> objectNamePrefix;
+      private final @Nullable Output<String> objectNamePrefix;
 
-    public Input<String> getObjectNamePrefix() {
-        return this.objectNamePrefix == null ? Input.empty() : this.objectNamePrefix;
+    public Output<String> getObjectNamePrefix() {
+        return this.objectNamePrefix == null ? Output.empty() : this.objectNamePrefix;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class NotificationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="payloadFormat")
-      private final @Nullable Input<String> payloadFormat;
+      private final @Nullable Output<String> payloadFormat;
 
-    public Input<String> getPayloadFormat() {
-        return this.payloadFormat == null ? Input.empty() : this.payloadFormat;
+    public Output<String> getPayloadFormat() {
+        return this.payloadFormat == null ? Output.empty() : this.payloadFormat;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class NotificationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfLink")
-      private final @Nullable Input<String> selfLink;
+      private final @Nullable Output<String> selfLink;
 
-    public Input<String> getSelfLink() {
-        return this.selfLink == null ? Input.empty() : this.selfLink;
+    public Output<String> getSelfLink() {
+        return this.selfLink == null ? Output.empty() : this.selfLink;
     }
 
     /**
@@ -101,21 +101,21 @@ public final class NotificationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topic")
-      private final @Nullable Input<String> topic;
+      private final @Nullable Output<String> topic;
 
-    public Input<String> getTopic() {
-        return this.topic == null ? Input.empty() : this.topic;
+    public Output<String> getTopic() {
+        return this.topic == null ? Output.empty() : this.topic;
     }
 
     public NotificationState(
-        @Nullable Input<String> bucket,
-        @Nullable Input<Map<String,String>> customAttributes,
-        @Nullable Input<List<String>> eventTypes,
-        @Nullable Input<String> notificationId,
-        @Nullable Input<String> objectNamePrefix,
-        @Nullable Input<String> payloadFormat,
-        @Nullable Input<String> selfLink,
-        @Nullable Input<String> topic) {
+        @Nullable Output<String> bucket,
+        @Nullable Output<Map<String,String>> customAttributes,
+        @Nullable Output<List<String>> eventTypes,
+        @Nullable Output<String> notificationId,
+        @Nullable Output<String> objectNamePrefix,
+        @Nullable Output<String> payloadFormat,
+        @Nullable Output<String> selfLink,
+        @Nullable Output<String> topic) {
         this.bucket = bucket;
         this.customAttributes = customAttributes;
         this.eventTypes = eventTypes;
@@ -127,14 +127,14 @@ public final class NotificationState extends io.pulumi.resources.ResourceArgs {
     }
 
     private NotificationState() {
-        this.bucket = Input.empty();
-        this.customAttributes = Input.empty();
-        this.eventTypes = Input.empty();
-        this.notificationId = Input.empty();
-        this.objectNamePrefix = Input.empty();
-        this.payloadFormat = Input.empty();
-        this.selfLink = Input.empty();
-        this.topic = Input.empty();
+        this.bucket = Output.empty();
+        this.customAttributes = Output.empty();
+        this.eventTypes = Output.empty();
+        this.notificationId = Output.empty();
+        this.objectNamePrefix = Output.empty();
+        this.payloadFormat = Output.empty();
+        this.selfLink = Output.empty();
+        this.topic = Output.empty();
     }
 
     public static Builder builder() {
@@ -146,14 +146,14 @@ public final class NotificationState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bucket;
-        private @Nullable Input<Map<String,String>> customAttributes;
-        private @Nullable Input<List<String>> eventTypes;
-        private @Nullable Input<String> notificationId;
-        private @Nullable Input<String> objectNamePrefix;
-        private @Nullable Input<String> payloadFormat;
-        private @Nullable Input<String> selfLink;
-        private @Nullable Input<String> topic;
+        private @Nullable Output<String> bucket;
+        private @Nullable Output<Map<String,String>> customAttributes;
+        private @Nullable Output<List<String>> eventTypes;
+        private @Nullable Output<String> notificationId;
+        private @Nullable Output<String> objectNamePrefix;
+        private @Nullable Output<String> payloadFormat;
+        private @Nullable Output<String> selfLink;
+        private @Nullable Output<String> topic;
 
         public Builder() {
     	      // Empty
@@ -171,83 +171,83 @@ public final class NotificationState extends io.pulumi.resources.ResourceArgs {
     	      this.topic = defaults.topic;
         }
 
-        public Builder bucket(@Nullable Input<String> bucket) {
+        public Builder bucket(@Nullable Output<String> bucket) {
             this.bucket = bucket;
             return this;
         }
 
         public Builder bucket(@Nullable String bucket) {
-            this.bucket = Input.ofNullable(bucket);
+            this.bucket = Output.ofNullable(bucket);
             return this;
         }
 
-        public Builder customAttributes(@Nullable Input<Map<String,String>> customAttributes) {
+        public Builder customAttributes(@Nullable Output<Map<String,String>> customAttributes) {
             this.customAttributes = customAttributes;
             return this;
         }
 
         public Builder customAttributes(@Nullable Map<String,String> customAttributes) {
-            this.customAttributes = Input.ofNullable(customAttributes);
+            this.customAttributes = Output.ofNullable(customAttributes);
             return this;
         }
 
-        public Builder eventTypes(@Nullable Input<List<String>> eventTypes) {
+        public Builder eventTypes(@Nullable Output<List<String>> eventTypes) {
             this.eventTypes = eventTypes;
             return this;
         }
 
         public Builder eventTypes(@Nullable List<String> eventTypes) {
-            this.eventTypes = Input.ofNullable(eventTypes);
+            this.eventTypes = Output.ofNullable(eventTypes);
             return this;
         }
 
-        public Builder notificationId(@Nullable Input<String> notificationId) {
+        public Builder notificationId(@Nullable Output<String> notificationId) {
             this.notificationId = notificationId;
             return this;
         }
 
         public Builder notificationId(@Nullable String notificationId) {
-            this.notificationId = Input.ofNullable(notificationId);
+            this.notificationId = Output.ofNullable(notificationId);
             return this;
         }
 
-        public Builder objectNamePrefix(@Nullable Input<String> objectNamePrefix) {
+        public Builder objectNamePrefix(@Nullable Output<String> objectNamePrefix) {
             this.objectNamePrefix = objectNamePrefix;
             return this;
         }
 
         public Builder objectNamePrefix(@Nullable String objectNamePrefix) {
-            this.objectNamePrefix = Input.ofNullable(objectNamePrefix);
+            this.objectNamePrefix = Output.ofNullable(objectNamePrefix);
             return this;
         }
 
-        public Builder payloadFormat(@Nullable Input<String> payloadFormat) {
+        public Builder payloadFormat(@Nullable Output<String> payloadFormat) {
             this.payloadFormat = payloadFormat;
             return this;
         }
 
         public Builder payloadFormat(@Nullable String payloadFormat) {
-            this.payloadFormat = Input.ofNullable(payloadFormat);
+            this.payloadFormat = Output.ofNullable(payloadFormat);
             return this;
         }
 
-        public Builder selfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Input.ofNullable(selfLink);
+            this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
 
-        public Builder topic(@Nullable Input<String> topic) {
+        public Builder topic(@Nullable Output<String> topic) {
             this.topic = topic;
             return this;
         }
 
         public Builder topic(@Nullable String topic) {
-            this.topic = Input.ofNullable(topic);
+            this.topic = Output.ofNullable(topic);
             return this;
         }
         public NotificationState build() {

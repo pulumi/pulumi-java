@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.enums.ForwardProxyConvention;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class ForwardProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="convention")
-      private final @Nullable Input<ForwardProxyConvention> convention;
+      private final @Nullable Output<ForwardProxyConvention> convention;
 
-    public Input<ForwardProxyConvention> getConvention() {
-        return this.convention == null ? Input.empty() : this.convention;
+    public Output<ForwardProxyConvention> getConvention() {
+        return this.convention == null ? Output.empty() : this.convention;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ForwardProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customHostHeaderName")
-      private final @Nullable Input<String> customHostHeaderName;
+      private final @Nullable Output<String> customHostHeaderName;
 
-    public Input<String> getCustomHostHeaderName() {
-        return this.customHostHeaderName == null ? Input.empty() : this.customHostHeaderName;
+    public Output<String> getCustomHostHeaderName() {
+        return this.customHostHeaderName == null ? Output.empty() : this.customHostHeaderName;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class ForwardProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customProtoHeaderName")
-      private final @Nullable Input<String> customProtoHeaderName;
+      private final @Nullable Output<String> customProtoHeaderName;
 
-    public Input<String> getCustomProtoHeaderName() {
-        return this.customProtoHeaderName == null ? Input.empty() : this.customProtoHeaderName;
+    public Output<String> getCustomProtoHeaderName() {
+        return this.customProtoHeaderName == null ? Output.empty() : this.customProtoHeaderName;
     }
 
     public ForwardProxyArgs(
-        @Nullable Input<ForwardProxyConvention> convention,
-        @Nullable Input<String> customHostHeaderName,
-        @Nullable Input<String> customProtoHeaderName) {
+        @Nullable Output<ForwardProxyConvention> convention,
+        @Nullable Output<String> customHostHeaderName,
+        @Nullable Output<String> customProtoHeaderName) {
         this.convention = convention;
         this.customHostHeaderName = customHostHeaderName;
         this.customProtoHeaderName = customProtoHeaderName;
     }
 
     private ForwardProxyArgs() {
-        this.convention = Input.empty();
-        this.customHostHeaderName = Input.empty();
-        this.customProtoHeaderName = Input.empty();
+        this.convention = Output.empty();
+        this.customHostHeaderName = Output.empty();
+        this.customProtoHeaderName = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class ForwardProxyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ForwardProxyConvention> convention;
-        private @Nullable Input<String> customHostHeaderName;
-        private @Nullable Input<String> customProtoHeaderName;
+        private @Nullable Output<ForwardProxyConvention> convention;
+        private @Nullable Output<String> customHostHeaderName;
+        private @Nullable Output<String> customProtoHeaderName;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class ForwardProxyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.customProtoHeaderName = defaults.customProtoHeaderName;
         }
 
-        public Builder convention(@Nullable Input<ForwardProxyConvention> convention) {
+        public Builder convention(@Nullable Output<ForwardProxyConvention> convention) {
             this.convention = convention;
             return this;
         }
 
         public Builder convention(@Nullable ForwardProxyConvention convention) {
-            this.convention = Input.ofNullable(convention);
+            this.convention = Output.ofNullable(convention);
             return this;
         }
 
-        public Builder customHostHeaderName(@Nullable Input<String> customHostHeaderName) {
+        public Builder customHostHeaderName(@Nullable Output<String> customHostHeaderName) {
             this.customHostHeaderName = customHostHeaderName;
             return this;
         }
 
         public Builder customHostHeaderName(@Nullable String customHostHeaderName) {
-            this.customHostHeaderName = Input.ofNullable(customHostHeaderName);
+            this.customHostHeaderName = Output.ofNullable(customHostHeaderName);
             return this;
         }
 
-        public Builder customProtoHeaderName(@Nullable Input<String> customProtoHeaderName) {
+        public Builder customProtoHeaderName(@Nullable Output<String> customProtoHeaderName) {
             this.customProtoHeaderName = customProtoHeaderName;
             return this;
         }
 
         public Builder customProtoHeaderName(@Nullable String customProtoHeaderName) {
-            this.customProtoHeaderName = Input.ofNullable(customProtoHeaderName);
+            this.customProtoHeaderName = Output.ofNullable(customProtoHeaderName);
             return this;
         }
         public ForwardProxyArgs build() {

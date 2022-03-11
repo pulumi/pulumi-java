@@ -6,7 +6,7 @@ package io.pulumi.azurenative.synapse;
 import io.pulumi.azurenative.synapse.enums.DatabasePrincipalRole;
 import io.pulumi.azurenative.synapse.enums.PrincipalType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class DatabasePrincipalAssignmentArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="databaseName", required=true)
-      private final Input<String> databaseName;
+      private final Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
+    public Output<String> getDatabaseName() {
         return this.databaseName;
     }
 
@@ -33,9 +33,9 @@ public final class DatabasePrincipalAssignmentArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="kustoPoolName", required=true)
-      private final Input<String> kustoPoolName;
+      private final Output<String> kustoPoolName;
 
-    public Input<String> getKustoPoolName() {
+    public Output<String> getKustoPoolName() {
         return this.kustoPoolName;
     }
 
@@ -44,10 +44,10 @@ public final class DatabasePrincipalAssignmentArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="principalAssignmentName")
-      private final @Nullable Input<String> principalAssignmentName;
+      private final @Nullable Output<String> principalAssignmentName;
 
-    public Input<String> getPrincipalAssignmentName() {
-        return this.principalAssignmentName == null ? Input.empty() : this.principalAssignmentName;
+    public Output<String> getPrincipalAssignmentName() {
+        return this.principalAssignmentName == null ? Output.empty() : this.principalAssignmentName;
     }
 
     /**
@@ -55,9 +55,9 @@ public final class DatabasePrincipalAssignmentArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="principalId", required=true)
-      private final Input<String> principalId;
+      private final Output<String> principalId;
 
-    public Input<String> getPrincipalId() {
+    public Output<String> getPrincipalId() {
         return this.principalId;
     }
 
@@ -66,9 +66,9 @@ public final class DatabasePrincipalAssignmentArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="principalType", required=true)
-      private final Input<Either<String,PrincipalType>> principalType;
+      private final Output<Either<String,PrincipalType>> principalType;
 
-    public Input<Either<String,PrincipalType>> getPrincipalType() {
+    public Output<Either<String,PrincipalType>> getPrincipalType() {
         return this.principalType;
     }
 
@@ -77,9 +77,9 @@ public final class DatabasePrincipalAssignmentArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -88,9 +88,9 @@ public final class DatabasePrincipalAssignmentArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="role", required=true)
-      private final Input<Either<String,DatabasePrincipalRole>> role;
+      private final Output<Either<String,DatabasePrincipalRole>> role;
 
-    public Input<Either<String,DatabasePrincipalRole>> getRole() {
+    public Output<Either<String,DatabasePrincipalRole>> getRole() {
         return this.role;
     }
 
@@ -99,10 +99,10 @@ public final class DatabasePrincipalAssignmentArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="tenantId")
-      private final @Nullable Input<String> tenantId;
+      private final @Nullable Output<String> tenantId;
 
-    public Input<String> getTenantId() {
-        return this.tenantId == null ? Input.empty() : this.tenantId;
+    public Output<String> getTenantId() {
+        return this.tenantId == null ? Output.empty() : this.tenantId;
     }
 
     /**
@@ -110,22 +110,22 @@ public final class DatabasePrincipalAssignmentArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="workspaceName", required=true)
-      private final Input<String> workspaceName;
+      private final Output<String> workspaceName;
 
-    public Input<String> getWorkspaceName() {
+    public Output<String> getWorkspaceName() {
         return this.workspaceName;
     }
 
     public DatabasePrincipalAssignmentArgs(
-        Input<String> databaseName,
-        Input<String> kustoPoolName,
-        @Nullable Input<String> principalAssignmentName,
-        Input<String> principalId,
-        Input<Either<String,PrincipalType>> principalType,
-        Input<String> resourceGroupName,
-        Input<Either<String,DatabasePrincipalRole>> role,
-        @Nullable Input<String> tenantId,
-        Input<String> workspaceName) {
+        Output<String> databaseName,
+        Output<String> kustoPoolName,
+        @Nullable Output<String> principalAssignmentName,
+        Output<String> principalId,
+        Output<Either<String,PrincipalType>> principalType,
+        Output<String> resourceGroupName,
+        Output<Either<String,DatabasePrincipalRole>> role,
+        @Nullable Output<String> tenantId,
+        Output<String> workspaceName) {
         this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
         this.kustoPoolName = Objects.requireNonNull(kustoPoolName, "expected parameter 'kustoPoolName' to be non-null");
         this.principalAssignmentName = principalAssignmentName;
@@ -138,15 +138,15 @@ public final class DatabasePrincipalAssignmentArgs extends io.pulumi.resources.R
     }
 
     private DatabasePrincipalAssignmentArgs() {
-        this.databaseName = Input.empty();
-        this.kustoPoolName = Input.empty();
-        this.principalAssignmentName = Input.empty();
-        this.principalId = Input.empty();
-        this.principalType = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.role = Input.empty();
-        this.tenantId = Input.empty();
-        this.workspaceName = Input.empty();
+        this.databaseName = Output.empty();
+        this.kustoPoolName = Output.empty();
+        this.principalAssignmentName = Output.empty();
+        this.principalId = Output.empty();
+        this.principalType = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.role = Output.empty();
+        this.tenantId = Output.empty();
+        this.workspaceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -158,15 +158,15 @@ public final class DatabasePrincipalAssignmentArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<String> databaseName;
-        private Input<String> kustoPoolName;
-        private @Nullable Input<String> principalAssignmentName;
-        private Input<String> principalId;
-        private Input<Either<String,PrincipalType>> principalType;
-        private Input<String> resourceGroupName;
-        private Input<Either<String,DatabasePrincipalRole>> role;
-        private @Nullable Input<String> tenantId;
-        private Input<String> workspaceName;
+        private Output<String> databaseName;
+        private Output<String> kustoPoolName;
+        private @Nullable Output<String> principalAssignmentName;
+        private Output<String> principalId;
+        private Output<Either<String,PrincipalType>> principalType;
+        private Output<String> resourceGroupName;
+        private Output<Either<String,DatabasePrincipalRole>> role;
+        private @Nullable Output<String> tenantId;
+        private Output<String> workspaceName;
 
         public Builder() {
     	      // Empty
@@ -185,93 +185,93 @@ public final class DatabasePrincipalAssignmentArgs extends io.pulumi.resources.R
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder databaseName(Input<String> databaseName) {
+        public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
         public Builder databaseName(String databaseName) {
-            this.databaseName = Input.of(Objects.requireNonNull(databaseName));
+            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder kustoPoolName(Input<String> kustoPoolName) {
+        public Builder kustoPoolName(Output<String> kustoPoolName) {
             this.kustoPoolName = Objects.requireNonNull(kustoPoolName);
             return this;
         }
 
         public Builder kustoPoolName(String kustoPoolName) {
-            this.kustoPoolName = Input.of(Objects.requireNonNull(kustoPoolName));
+            this.kustoPoolName = Output.of(Objects.requireNonNull(kustoPoolName));
             return this;
         }
 
-        public Builder principalAssignmentName(@Nullable Input<String> principalAssignmentName) {
+        public Builder principalAssignmentName(@Nullable Output<String> principalAssignmentName) {
             this.principalAssignmentName = principalAssignmentName;
             return this;
         }
 
         public Builder principalAssignmentName(@Nullable String principalAssignmentName) {
-            this.principalAssignmentName = Input.ofNullable(principalAssignmentName);
+            this.principalAssignmentName = Output.ofNullable(principalAssignmentName);
             return this;
         }
 
-        public Builder principalId(Input<String> principalId) {
+        public Builder principalId(Output<String> principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
 
         public Builder principalId(String principalId) {
-            this.principalId = Input.of(Objects.requireNonNull(principalId));
+            this.principalId = Output.of(Objects.requireNonNull(principalId));
             return this;
         }
 
-        public Builder principalType(Input<Either<String,PrincipalType>> principalType) {
+        public Builder principalType(Output<Either<String,PrincipalType>> principalType) {
             this.principalType = Objects.requireNonNull(principalType);
             return this;
         }
 
         public Builder principalType(Either<String,PrincipalType> principalType) {
-            this.principalType = Input.of(Objects.requireNonNull(principalType));
+            this.principalType = Output.of(Objects.requireNonNull(principalType));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder role(Input<Either<String,DatabasePrincipalRole>> role) {
+        public Builder role(Output<Either<String,DatabasePrincipalRole>> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(Either<String,DatabasePrincipalRole> role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
 
-        public Builder tenantId(@Nullable Input<String> tenantId) {
+        public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Input.ofNullable(tenantId);
+            this.tenantId = Output.ofNullable(tenantId);
             return this;
         }
 
-        public Builder workspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
+            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
         }
         public DatabasePrincipalAssignmentArgs build() {

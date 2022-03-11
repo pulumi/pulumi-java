@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cognito.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class ResourceServerScopeGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="scopeDescription", required=true)
-      private final Input<String> scopeDescription;
+      private final Output<String> scopeDescription;
 
-    public Input<String> getScopeDescription() {
+    public Output<String> getScopeDescription() {
         return this.scopeDescription;
     }
 
@@ -29,22 +29,22 @@ public final class ResourceServerScopeGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="scopeName", required=true)
-      private final Input<String> scopeName;
+      private final Output<String> scopeName;
 
-    public Input<String> getScopeName() {
+    public Output<String> getScopeName() {
         return this.scopeName;
     }
 
     public ResourceServerScopeGetArgs(
-        Input<String> scopeDescription,
-        Input<String> scopeName) {
+        Output<String> scopeDescription,
+        Output<String> scopeName) {
         this.scopeDescription = Objects.requireNonNull(scopeDescription, "expected parameter 'scopeDescription' to be non-null");
         this.scopeName = Objects.requireNonNull(scopeName, "expected parameter 'scopeName' to be non-null");
     }
 
     private ResourceServerScopeGetArgs() {
-        this.scopeDescription = Input.empty();
-        this.scopeName = Input.empty();
+        this.scopeDescription = Output.empty();
+        this.scopeName = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class ResourceServerScopeGetArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> scopeDescription;
-        private Input<String> scopeName;
+        private Output<String> scopeDescription;
+        private Output<String> scopeName;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class ResourceServerScopeGetArgs extends io.pulumi.resources.Resour
     	      this.scopeName = defaults.scopeName;
         }
 
-        public Builder scopeDescription(Input<String> scopeDescription) {
+        public Builder scopeDescription(Output<String> scopeDescription) {
             this.scopeDescription = Objects.requireNonNull(scopeDescription);
             return this;
         }
 
         public Builder scopeDescription(String scopeDescription) {
-            this.scopeDescription = Input.of(Objects.requireNonNull(scopeDescription));
+            this.scopeDescription = Output.of(Objects.requireNonNull(scopeDescription));
             return this;
         }
 
-        public Builder scopeName(Input<String> scopeName) {
+        public Builder scopeName(Output<String> scopeName) {
             this.scopeName = Objects.requireNonNull(scopeName);
             return this;
         }
 
         public Builder scopeName(String scopeName) {
-            this.scopeName = Input.of(Objects.requireNonNull(scopeName));
+            this.scopeName = Output.of(Objects.requireNonNull(scopeName));
             return this;
         }
         public ResourceServerScopeGetArgs build() {

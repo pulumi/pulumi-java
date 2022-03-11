@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.DataQualityJobDefinitionMonitoringOutputArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class DataQualityJobDefinitionMonitoringOutputConfigArgs extends io
      * 
      */
     @InputImport(name="kmsKeyId")
-      private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Output<String> kmsKeyId;
 
-    public Input<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
+    public Output<String> getKmsKeyId() {
+        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class DataQualityJobDefinitionMonitoringOutputConfigArgs extends io
      * 
      */
     @InputImport(name="monitoringOutputs", required=true)
-      private final Input<List<DataQualityJobDefinitionMonitoringOutputArgs>> monitoringOutputs;
+      private final Output<List<DataQualityJobDefinitionMonitoringOutputArgs>> monitoringOutputs;
 
-    public Input<List<DataQualityJobDefinitionMonitoringOutputArgs>> getMonitoringOutputs() {
+    public Output<List<DataQualityJobDefinitionMonitoringOutputArgs>> getMonitoringOutputs() {
         return this.monitoringOutputs;
     }
 
     public DataQualityJobDefinitionMonitoringOutputConfigArgs(
-        @Nullable Input<String> kmsKeyId,
-        Input<List<DataQualityJobDefinitionMonitoringOutputArgs>> monitoringOutputs) {
+        @Nullable Output<String> kmsKeyId,
+        Output<List<DataQualityJobDefinitionMonitoringOutputArgs>> monitoringOutputs) {
         this.kmsKeyId = kmsKeyId;
         this.monitoringOutputs = Objects.requireNonNull(monitoringOutputs, "expected parameter 'monitoringOutputs' to be non-null");
     }
 
     private DataQualityJobDefinitionMonitoringOutputConfigArgs() {
-        this.kmsKeyId = Input.empty();
-        this.monitoringOutputs = Input.empty();
+        this.kmsKeyId = Output.empty();
+        this.monitoringOutputs = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class DataQualityJobDefinitionMonitoringOutputConfigArgs extends io
     }
 
     public static final class Builder {
-        private @Nullable Input<String> kmsKeyId;
-        private Input<List<DataQualityJobDefinitionMonitoringOutputArgs>> monitoringOutputs;
+        private @Nullable Output<String> kmsKeyId;
+        private Output<List<DataQualityJobDefinitionMonitoringOutputArgs>> monitoringOutputs;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class DataQualityJobDefinitionMonitoringOutputConfigArgs extends io
     	      this.monitoringOutputs = defaults.monitoringOutputs;
         }
 
-        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Input.ofNullable(kmsKeyId);
+            this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder monitoringOutputs(Input<List<DataQualityJobDefinitionMonitoringOutputArgs>> monitoringOutputs) {
+        public Builder monitoringOutputs(Output<List<DataQualityJobDefinitionMonitoringOutputArgs>> monitoringOutputs) {
             this.monitoringOutputs = Objects.requireNonNull(monitoringOutputs);
             return this;
         }
 
         public Builder monitoringOutputs(List<DataQualityJobDefinitionMonitoringOutputArgs> monitoringOutputs) {
-            this.monitoringOutputs = Input.of(Objects.requireNonNull(monitoringOutputs));
+            this.monitoringOutputs = Output.of(Objects.requireNonNull(monitoringOutputs));
             return this;
         }
         public DataQualityJobDefinitionMonitoringOutputConfigArgs build() {

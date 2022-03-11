@@ -5,7 +5,7 @@ package io.pulumi.azurenative.deploymentmanager;
 
 import io.pulumi.azurenative.deploymentmanager.inputs.IdentityArgs;
 import io.pulumi.azurenative.deploymentmanager.inputs.StepGroupArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,10 +23,10 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="artifactSourceId")
-      private final @Nullable Input<String> artifactSourceId;
+      private final @Nullable Output<String> artifactSourceId;
 
-    public Input<String> getArtifactSourceId() {
-        return this.artifactSourceId == null ? Input.empty() : this.artifactSourceId;
+    public Output<String> getArtifactSourceId() {
+        return this.artifactSourceId == null ? Output.empty() : this.artifactSourceId;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="buildVersion", required=true)
-      private final Input<String> buildVersion;
+      private final Output<String> buildVersion;
 
-    public Input<String> getBuildVersion() {
+    public Output<String> getBuildVersion() {
         return this.buildVersion;
     }
 
@@ -45,9 +45,9 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity", required=true)
-      private final Input<IdentityArgs> identity;
+      private final Output<IdentityArgs> identity;
 
-    public Input<IdentityArgs> getIdentity() {
+    public Output<IdentityArgs> getIdentity() {
         return this.identity;
     }
 
@@ -56,10 +56,10 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -67,9 +67,9 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,10 +78,10 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rolloutName")
-      private final @Nullable Input<String> rolloutName;
+      private final @Nullable Output<String> rolloutName;
 
-    public Input<String> getRolloutName() {
-        return this.rolloutName == null ? Input.empty() : this.rolloutName;
+    public Output<String> getRolloutName() {
+        return this.rolloutName == null ? Output.empty() : this.rolloutName;
     }
 
     /**
@@ -89,9 +89,9 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stepGroups", required=true)
-      private final Input<List<StepGroupArgs>> stepGroups;
+      private final Output<List<StepGroupArgs>> stepGroups;
 
-    public Input<List<StepGroupArgs>> getStepGroups() {
+    public Output<List<StepGroupArgs>> getStepGroups() {
         return this.stepGroups;
     }
 
@@ -100,10 +100,10 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -111,22 +111,22 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetServiceTopologyId", required=true)
-      private final Input<String> targetServiceTopologyId;
+      private final Output<String> targetServiceTopologyId;
 
-    public Input<String> getTargetServiceTopologyId() {
+    public Output<String> getTargetServiceTopologyId() {
         return this.targetServiceTopologyId;
     }
 
     public RolloutArgs(
-        @Nullable Input<String> artifactSourceId,
-        Input<String> buildVersion,
-        Input<IdentityArgs> identity,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> rolloutName,
-        Input<List<StepGroupArgs>> stepGroups,
-        @Nullable Input<Map<String,String>> tags,
-        Input<String> targetServiceTopologyId) {
+        @Nullable Output<String> artifactSourceId,
+        Output<String> buildVersion,
+        Output<IdentityArgs> identity,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> rolloutName,
+        Output<List<StepGroupArgs>> stepGroups,
+        @Nullable Output<Map<String,String>> tags,
+        Output<String> targetServiceTopologyId) {
         this.artifactSourceId = artifactSourceId;
         this.buildVersion = Objects.requireNonNull(buildVersion, "expected parameter 'buildVersion' to be non-null");
         this.identity = Objects.requireNonNull(identity, "expected parameter 'identity' to be non-null");
@@ -139,15 +139,15 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RolloutArgs() {
-        this.artifactSourceId = Input.empty();
-        this.buildVersion = Input.empty();
-        this.identity = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.rolloutName = Input.empty();
-        this.stepGroups = Input.empty();
-        this.tags = Input.empty();
-        this.targetServiceTopologyId = Input.empty();
+        this.artifactSourceId = Output.empty();
+        this.buildVersion = Output.empty();
+        this.identity = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.rolloutName = Output.empty();
+        this.stepGroups = Output.empty();
+        this.tags = Output.empty();
+        this.targetServiceTopologyId = Output.empty();
     }
 
     public static Builder builder() {
@@ -159,15 +159,15 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> artifactSourceId;
-        private Input<String> buildVersion;
-        private Input<IdentityArgs> identity;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> rolloutName;
-        private Input<List<StepGroupArgs>> stepGroups;
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<String> targetServiceTopologyId;
+        private @Nullable Output<String> artifactSourceId;
+        private Output<String> buildVersion;
+        private Output<IdentityArgs> identity;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> rolloutName;
+        private Output<List<StepGroupArgs>> stepGroups;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<String> targetServiceTopologyId;
 
         public Builder() {
     	      // Empty
@@ -186,93 +186,93 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetServiceTopologyId = defaults.targetServiceTopologyId;
         }
 
-        public Builder artifactSourceId(@Nullable Input<String> artifactSourceId) {
+        public Builder artifactSourceId(@Nullable Output<String> artifactSourceId) {
             this.artifactSourceId = artifactSourceId;
             return this;
         }
 
         public Builder artifactSourceId(@Nullable String artifactSourceId) {
-            this.artifactSourceId = Input.ofNullable(artifactSourceId);
+            this.artifactSourceId = Output.ofNullable(artifactSourceId);
             return this;
         }
 
-        public Builder buildVersion(Input<String> buildVersion) {
+        public Builder buildVersion(Output<String> buildVersion) {
             this.buildVersion = Objects.requireNonNull(buildVersion);
             return this;
         }
 
         public Builder buildVersion(String buildVersion) {
-            this.buildVersion = Input.of(Objects.requireNonNull(buildVersion));
+            this.buildVersion = Output.of(Objects.requireNonNull(buildVersion));
             return this;
         }
 
-        public Builder identity(Input<IdentityArgs> identity) {
+        public Builder identity(Output<IdentityArgs> identity) {
             this.identity = Objects.requireNonNull(identity);
             return this;
         }
 
         public Builder identity(IdentityArgs identity) {
-            this.identity = Input.of(Objects.requireNonNull(identity));
+            this.identity = Output.of(Objects.requireNonNull(identity));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder rolloutName(@Nullable Input<String> rolloutName) {
+        public Builder rolloutName(@Nullable Output<String> rolloutName) {
             this.rolloutName = rolloutName;
             return this;
         }
 
         public Builder rolloutName(@Nullable String rolloutName) {
-            this.rolloutName = Input.ofNullable(rolloutName);
+            this.rolloutName = Output.ofNullable(rolloutName);
             return this;
         }
 
-        public Builder stepGroups(Input<List<StepGroupArgs>> stepGroups) {
+        public Builder stepGroups(Output<List<StepGroupArgs>> stepGroups) {
             this.stepGroups = Objects.requireNonNull(stepGroups);
             return this;
         }
 
         public Builder stepGroups(List<StepGroupArgs> stepGroups) {
-            this.stepGroups = Input.of(Objects.requireNonNull(stepGroups));
+            this.stepGroups = Output.of(Objects.requireNonNull(stepGroups));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder targetServiceTopologyId(Input<String> targetServiceTopologyId) {
+        public Builder targetServiceTopologyId(Output<String> targetServiceTopologyId) {
             this.targetServiceTopologyId = Objects.requireNonNull(targetServiceTopologyId);
             return this;
         }
 
         public Builder targetServiceTopologyId(String targetServiceTopologyId) {
-            this.targetServiceTopologyId = Input.of(Objects.requireNonNull(targetServiceTopologyId));
+            this.targetServiceTopologyId = Output.of(Objects.requireNonNull(targetServiceTopologyId));
             return this;
         }
         public RolloutArgs build() {

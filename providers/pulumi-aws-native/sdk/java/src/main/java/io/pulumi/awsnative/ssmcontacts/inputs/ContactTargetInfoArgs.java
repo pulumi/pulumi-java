@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ssmcontacts.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class ContactTargetInfoArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="contactId", required=true)
-      private final Input<String> contactId;
+      private final Output<String> contactId;
 
-    public Input<String> getContactId() {
+    public Output<String> getContactId() {
         return this.contactId;
     }
 
@@ -34,22 +34,22 @@ public final class ContactTargetInfoArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="isEssential", required=true)
-      private final Input<Boolean> isEssential;
+      private final Output<Boolean> isEssential;
 
-    public Input<Boolean> getIsEssential() {
+    public Output<Boolean> getIsEssential() {
         return this.isEssential;
     }
 
     public ContactTargetInfoArgs(
-        Input<String> contactId,
-        Input<Boolean> isEssential) {
+        Output<String> contactId,
+        Output<Boolean> isEssential) {
         this.contactId = Objects.requireNonNull(contactId, "expected parameter 'contactId' to be non-null");
         this.isEssential = Objects.requireNonNull(isEssential, "expected parameter 'isEssential' to be non-null");
     }
 
     private ContactTargetInfoArgs() {
-        this.contactId = Input.empty();
-        this.isEssential = Input.empty();
+        this.contactId = Output.empty();
+        this.isEssential = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ContactTargetInfoArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> contactId;
-        private Input<Boolean> isEssential;
+        private Output<String> contactId;
+        private Output<Boolean> isEssential;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ContactTargetInfoArgs extends io.pulumi.resources.ResourceArg
     	      this.isEssential = defaults.isEssential;
         }
 
-        public Builder contactId(Input<String> contactId) {
+        public Builder contactId(Output<String> contactId) {
             this.contactId = Objects.requireNonNull(contactId);
             return this;
         }
 
         public Builder contactId(String contactId) {
-            this.contactId = Input.of(Objects.requireNonNull(contactId));
+            this.contactId = Output.of(Objects.requireNonNull(contactId));
             return this;
         }
 
-        public Builder isEssential(Input<Boolean> isEssential) {
+        public Builder isEssential(Output<Boolean> isEssential) {
             this.isEssential = Objects.requireNonNull(isEssential);
             return this;
         }
 
         public Builder isEssential(Boolean isEssential) {
-            this.isEssential = Input.of(Objects.requireNonNull(isEssential));
+            this.isEssential = Output.of(Objects.requireNonNull(isEssential));
             return this;
         }
         public ContactTargetInfoArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class SoftwareRecipeArtifactGcsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="bucket")
-      private final @Nullable Input<String> bucket;
+      private final @Nullable Output<String> bucket;
 
-    public Input<String> getBucket() {
-        return this.bucket == null ? Input.empty() : this.bucket;
+    public Output<String> getBucket() {
+        return this.bucket == null ? Output.empty() : this.bucket;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SoftwareRecipeArtifactGcsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="generation")
-      private final @Nullable Input<String> generation;
+      private final @Nullable Output<String> generation;
 
-    public Input<String> getGeneration() {
-        return this.generation == null ? Input.empty() : this.generation;
+    public Output<String> getGeneration() {
+        return this.generation == null ? Output.empty() : this.generation;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class SoftwareRecipeArtifactGcsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="object")
-      private final @Nullable Input<String> object;
+      private final @Nullable Output<String> object;
 
-    public Input<String> getObject() {
-        return this.object == null ? Input.empty() : this.object;
+    public Output<String> getObject() {
+        return this.object == null ? Output.empty() : this.object;
     }
 
     public SoftwareRecipeArtifactGcsArgs(
-        @Nullable Input<String> bucket,
-        @Nullable Input<String> generation,
-        @Nullable Input<String> object) {
+        @Nullable Output<String> bucket,
+        @Nullable Output<String> generation,
+        @Nullable Output<String> object) {
         this.bucket = bucket;
         this.generation = generation;
         this.object = object;
     }
 
     private SoftwareRecipeArtifactGcsArgs() {
-        this.bucket = Input.empty();
-        this.generation = Input.empty();
-        this.object = Input.empty();
+        this.bucket = Output.empty();
+        this.generation = Output.empty();
+        this.object = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class SoftwareRecipeArtifactGcsArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bucket;
-        private @Nullable Input<String> generation;
-        private @Nullable Input<String> object;
+        private @Nullable Output<String> bucket;
+        private @Nullable Output<String> generation;
+        private @Nullable Output<String> object;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class SoftwareRecipeArtifactGcsArgs extends io.pulumi.resources.Res
     	      this.object = defaults.object;
         }
 
-        public Builder bucket(@Nullable Input<String> bucket) {
+        public Builder bucket(@Nullable Output<String> bucket) {
             this.bucket = bucket;
             return this;
         }
 
         public Builder bucket(@Nullable String bucket) {
-            this.bucket = Input.ofNullable(bucket);
+            this.bucket = Output.ofNullable(bucket);
             return this;
         }
 
-        public Builder generation(@Nullable Input<String> generation) {
+        public Builder generation(@Nullable Output<String> generation) {
             this.generation = generation;
             return this;
         }
 
         public Builder generation(@Nullable String generation) {
-            this.generation = Input.ofNullable(generation);
+            this.generation = Output.ofNullable(generation);
             return this;
         }
 
-        public Builder object(@Nullable Input<String> object) {
+        public Builder object(@Nullable Output<String> object) {
             this.object = object;
             return this;
         }
 
         public Builder object(@Nullable String object) {
-            this.object = Input.ofNullable(object);
+            this.object = Output.ofNullable(object);
             return this;
         }
         public SoftwareRecipeArtifactGcsArgs build() {

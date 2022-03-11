@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ses.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class MailFromState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="behaviorOnMxFailure")
-      private final @Nullable Input<String> behaviorOnMxFailure;
+      private final @Nullable Output<String> behaviorOnMxFailure;
 
-    public Input<String> getBehaviorOnMxFailure() {
-        return this.behaviorOnMxFailure == null ? Input.empty() : this.behaviorOnMxFailure;
+    public Output<String> getBehaviorOnMxFailure() {
+        return this.behaviorOnMxFailure == null ? Output.empty() : this.behaviorOnMxFailure;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class MailFromState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domain")
-      private final @Nullable Input<String> domain;
+      private final @Nullable Output<String> domain;
 
-    public Input<String> getDomain() {
-        return this.domain == null ? Input.empty() : this.domain;
+    public Output<String> getDomain() {
+        return this.domain == null ? Output.empty() : this.domain;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class MailFromState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mailFromDomain")
-      private final @Nullable Input<String> mailFromDomain;
+      private final @Nullable Output<String> mailFromDomain;
 
-    public Input<String> getMailFromDomain() {
-        return this.mailFromDomain == null ? Input.empty() : this.mailFromDomain;
+    public Output<String> getMailFromDomain() {
+        return this.mailFromDomain == null ? Output.empty() : this.mailFromDomain;
     }
 
     public MailFromState(
-        @Nullable Input<String> behaviorOnMxFailure,
-        @Nullable Input<String> domain,
-        @Nullable Input<String> mailFromDomain) {
+        @Nullable Output<String> behaviorOnMxFailure,
+        @Nullable Output<String> domain,
+        @Nullable Output<String> mailFromDomain) {
         this.behaviorOnMxFailure = behaviorOnMxFailure;
         this.domain = domain;
         this.mailFromDomain = mailFromDomain;
     }
 
     private MailFromState() {
-        this.behaviorOnMxFailure = Input.empty();
-        this.domain = Input.empty();
-        this.mailFromDomain = Input.empty();
+        this.behaviorOnMxFailure = Output.empty();
+        this.domain = Output.empty();
+        this.mailFromDomain = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class MailFromState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> behaviorOnMxFailure;
-        private @Nullable Input<String> domain;
-        private @Nullable Input<String> mailFromDomain;
+        private @Nullable Output<String> behaviorOnMxFailure;
+        private @Nullable Output<String> domain;
+        private @Nullable Output<String> mailFromDomain;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class MailFromState extends io.pulumi.resources.ResourceArgs {
     	      this.mailFromDomain = defaults.mailFromDomain;
         }
 
-        public Builder behaviorOnMxFailure(@Nullable Input<String> behaviorOnMxFailure) {
+        public Builder behaviorOnMxFailure(@Nullable Output<String> behaviorOnMxFailure) {
             this.behaviorOnMxFailure = behaviorOnMxFailure;
             return this;
         }
 
         public Builder behaviorOnMxFailure(@Nullable String behaviorOnMxFailure) {
-            this.behaviorOnMxFailure = Input.ofNullable(behaviorOnMxFailure);
+            this.behaviorOnMxFailure = Output.ofNullable(behaviorOnMxFailure);
             return this;
         }
 
-        public Builder domain(@Nullable Input<String> domain) {
+        public Builder domain(@Nullable Output<String> domain) {
             this.domain = domain;
             return this;
         }
 
         public Builder domain(@Nullable String domain) {
-            this.domain = Input.ofNullable(domain);
+            this.domain = Output.ofNullable(domain);
             return this;
         }
 
-        public Builder mailFromDomain(@Nullable Input<String> mailFromDomain) {
+        public Builder mailFromDomain(@Nullable Output<String> mailFromDomain) {
             this.mailFromDomain = mailFromDomain;
             return this;
         }
 
         public Builder mailFromDomain(@Nullable String mailFromDomain) {
-            this.mailFromDomain = Input.ofNullable(mailFromDomain);
+            this.mailFromDomain = Output.ofNullable(mailFromDomain);
             return this;
         }
         public MailFromState build() {

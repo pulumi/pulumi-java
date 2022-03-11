@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,18 +20,18 @@ public final class ByProductsArgs extends io.pulumi.resources.ResourceArgs {
     public static final ByProductsArgs Empty = new ByProductsArgs();
 
     @InputImport(name="customValues")
-      private final @Nullable Input<Map<String,String>> customValues;
+      private final @Nullable Output<Map<String,String>> customValues;
 
-    public Input<Map<String,String>> getCustomValues() {
-        return this.customValues == null ? Input.empty() : this.customValues;
+    public Output<Map<String,String>> getCustomValues() {
+        return this.customValues == null ? Output.empty() : this.customValues;
     }
 
-    public ByProductsArgs(@Nullable Input<Map<String,String>> customValues) {
+    public ByProductsArgs(@Nullable Output<Map<String,String>> customValues) {
         this.customValues = customValues;
     }
 
     private ByProductsArgs() {
-        this.customValues = Input.empty();
+        this.customValues = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class ByProductsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> customValues;
+        private @Nullable Output<Map<String,String>> customValues;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class ByProductsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.customValues = defaults.customValues;
         }
 
-        public Builder customValues(@Nullable Input<Map<String,String>> customValues) {
+        public Builder customValues(@Nullable Output<Map<String,String>> customValues) {
             this.customValues = customValues;
             return this;
         }
 
         public Builder customValues(@Nullable Map<String,String> customValues) {
-            this.customValues = Input.ofNullable(customValues);
+            this.customValues = Output.ofNullable(customValues);
             return this;
         }
         public ByProductsArgs build() {

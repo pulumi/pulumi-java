@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class SoftwareRecipeStepInstallMsiArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="allowedExitCodes")
-      private final @Nullable Input<List<Integer>> allowedExitCodes;
+      private final @Nullable Output<List<Integer>> allowedExitCodes;
 
-    public Input<List<Integer>> getAllowedExitCodes() {
-        return this.allowedExitCodes == null ? Input.empty() : this.allowedExitCodes;
+    public Output<List<Integer>> getAllowedExitCodes() {
+        return this.allowedExitCodes == null ? Output.empty() : this.allowedExitCodes;
     }
 
     /**
@@ -36,9 +36,9 @@ public final class SoftwareRecipeStepInstallMsiArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="artifactId", required=true)
-      private final Input<String> artifactId;
+      private final Output<String> artifactId;
 
-    public Input<String> getArtifactId() {
+    public Output<String> getArtifactId() {
         return this.artifactId;
     }
 
@@ -47,25 +47,25 @@ public final class SoftwareRecipeStepInstallMsiArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="flags")
-      private final @Nullable Input<List<String>> flags;
+      private final @Nullable Output<List<String>> flags;
 
-    public Input<List<String>> getFlags() {
-        return this.flags == null ? Input.empty() : this.flags;
+    public Output<List<String>> getFlags() {
+        return this.flags == null ? Output.empty() : this.flags;
     }
 
     public SoftwareRecipeStepInstallMsiArgs(
-        @Nullable Input<List<Integer>> allowedExitCodes,
-        Input<String> artifactId,
-        @Nullable Input<List<String>> flags) {
+        @Nullable Output<List<Integer>> allowedExitCodes,
+        Output<String> artifactId,
+        @Nullable Output<List<String>> flags) {
         this.allowedExitCodes = allowedExitCodes;
         this.artifactId = Objects.requireNonNull(artifactId, "expected parameter 'artifactId' to be non-null");
         this.flags = flags;
     }
 
     private SoftwareRecipeStepInstallMsiArgs() {
-        this.allowedExitCodes = Input.empty();
-        this.artifactId = Input.empty();
-        this.flags = Input.empty();
+        this.allowedExitCodes = Output.empty();
+        this.artifactId = Output.empty();
+        this.flags = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class SoftwareRecipeStepInstallMsiArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Integer>> allowedExitCodes;
-        private Input<String> artifactId;
-        private @Nullable Input<List<String>> flags;
+        private @Nullable Output<List<Integer>> allowedExitCodes;
+        private Output<String> artifactId;
+        private @Nullable Output<List<String>> flags;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class SoftwareRecipeStepInstallMsiArgs extends io.pulumi.resources.
     	      this.flags = defaults.flags;
         }
 
-        public Builder allowedExitCodes(@Nullable Input<List<Integer>> allowedExitCodes) {
+        public Builder allowedExitCodes(@Nullable Output<List<Integer>> allowedExitCodes) {
             this.allowedExitCodes = allowedExitCodes;
             return this;
         }
 
         public Builder allowedExitCodes(@Nullable List<Integer> allowedExitCodes) {
-            this.allowedExitCodes = Input.ofNullable(allowedExitCodes);
+            this.allowedExitCodes = Output.ofNullable(allowedExitCodes);
             return this;
         }
 
-        public Builder artifactId(Input<String> artifactId) {
+        public Builder artifactId(Output<String> artifactId) {
             this.artifactId = Objects.requireNonNull(artifactId);
             return this;
         }
 
         public Builder artifactId(String artifactId) {
-            this.artifactId = Input.of(Objects.requireNonNull(artifactId));
+            this.artifactId = Output.of(Objects.requireNonNull(artifactId));
             return this;
         }
 
-        public Builder flags(@Nullable Input<List<String>> flags) {
+        public Builder flags(@Nullable Output<List<String>> flags) {
             this.flags = flags;
             return this;
         }
 
         public Builder flags(@Nullable List<String> flags) {
-            this.flags = Input.ofNullable(flags);
+            this.flags = Output.ofNullable(flags);
             return this;
         }
         public SoftwareRecipeStepInstallMsiArgs build() {

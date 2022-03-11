@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.eks.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ClusterEncryptionConfigProviderPropertiesArgs extends io.pulu
      * 
      */
     @InputImport(name="keyArn")
-      private final @Nullable Input<String> keyArn;
+      private final @Nullable Output<String> keyArn;
 
-    public Input<String> getKeyArn() {
-        return this.keyArn == null ? Input.empty() : this.keyArn;
+    public Output<String> getKeyArn() {
+        return this.keyArn == null ? Output.empty() : this.keyArn;
     }
 
-    public ClusterEncryptionConfigProviderPropertiesArgs(@Nullable Input<String> keyArn) {
+    public ClusterEncryptionConfigProviderPropertiesArgs(@Nullable Output<String> keyArn) {
         this.keyArn = keyArn;
     }
 
     private ClusterEncryptionConfigProviderPropertiesArgs() {
-        this.keyArn = Input.empty();
+        this.keyArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ClusterEncryptionConfigProviderPropertiesArgs extends io.pulu
     }
 
     public static final class Builder {
-        private @Nullable Input<String> keyArn;
+        private @Nullable Output<String> keyArn;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ClusterEncryptionConfigProviderPropertiesArgs extends io.pulu
     	      this.keyArn = defaults.keyArn;
         }
 
-        public Builder keyArn(@Nullable Input<String> keyArn) {
+        public Builder keyArn(@Nullable Output<String> keyArn) {
             this.keyArn = keyArn;
             return this;
         }
 
         public Builder keyArn(@Nullable String keyArn) {
-            this.keyArn = Input.ofNullable(keyArn);
+            this.keyArn = Output.ofNullable(keyArn);
             return this;
         }
         public ClusterEncryptionConfigProviderPropertiesArgs build() {

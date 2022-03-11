@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.sagemaker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class FeatureGroupFeatureDefinitionGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="featureName")
-      private final @Nullable Input<String> featureName;
+      private final @Nullable Output<String> featureName;
 
-    public Input<String> getFeatureName() {
-        return this.featureName == null ? Input.empty() : this.featureName;
+    public Output<String> getFeatureName() {
+        return this.featureName == null ? Output.empty() : this.featureName;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class FeatureGroupFeatureDefinitionGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="featureType")
-      private final @Nullable Input<String> featureType;
+      private final @Nullable Output<String> featureType;
 
-    public Input<String> getFeatureType() {
-        return this.featureType == null ? Input.empty() : this.featureType;
+    public Output<String> getFeatureType() {
+        return this.featureType == null ? Output.empty() : this.featureType;
     }
 
     public FeatureGroupFeatureDefinitionGetArgs(
-        @Nullable Input<String> featureName,
-        @Nullable Input<String> featureType) {
+        @Nullable Output<String> featureName,
+        @Nullable Output<String> featureType) {
         this.featureName = featureName;
         this.featureType = featureType;
     }
 
     private FeatureGroupFeatureDefinitionGetArgs() {
-        this.featureName = Input.empty();
-        this.featureType = Input.empty();
+        this.featureName = Output.empty();
+        this.featureType = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class FeatureGroupFeatureDefinitionGetArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> featureName;
-        private @Nullable Input<String> featureType;
+        private @Nullable Output<String> featureName;
+        private @Nullable Output<String> featureType;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class FeatureGroupFeatureDefinitionGetArgs extends io.pulumi.resour
     	      this.featureType = defaults.featureType;
         }
 
-        public Builder featureName(@Nullable Input<String> featureName) {
+        public Builder featureName(@Nullable Output<String> featureName) {
             this.featureName = featureName;
             return this;
         }
 
         public Builder featureName(@Nullable String featureName) {
-            this.featureName = Input.ofNullable(featureName);
+            this.featureName = Output.ofNullable(featureName);
             return this;
         }
 
-        public Builder featureType(@Nullable Input<String> featureType) {
+        public Builder featureType(@Nullable Output<String> featureType) {
             this.featureType = featureType;
             return this;
         }
 
         public Builder featureType(@Nullable String featureType) {
-            this.featureType = Input.ofNullable(featureType);
+            this.featureType = Output.ofNullable(featureType);
             return this;
         }
         public FeatureGroupFeatureDefinitionGetArgs build() {

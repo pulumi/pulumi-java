@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudrun.inputs.DomainMappingMetadataArgs;
 import io.pulumi.gcp.cloudrun.inputs.DomainMappingSpecArgs;
@@ -21,9 +21,9 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location", required=true)
-      private final Input<String> location;
+      private final Output<String> location;
 
-    public Input<String> getLocation() {
+    public Output<String> getLocation() {
         return this.location;
     }
 
@@ -33,9 +33,9 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata", required=true)
-      private final Input<DomainMappingMetadataArgs> metadata;
+      private final Output<DomainMappingMetadataArgs> metadata;
 
-    public Input<DomainMappingMetadataArgs> getMetadata() {
+    public Output<DomainMappingMetadataArgs> getMetadata() {
         return this.metadata;
     }
 
@@ -44,10 +44,10 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spec", required=true)
-      private final Input<DomainMappingSpecArgs> spec;
+      private final Output<DomainMappingSpecArgs> spec;
 
-    public Input<DomainMappingSpecArgs> getSpec() {
+    public Output<DomainMappingSpecArgs> getSpec() {
         return this.spec;
     }
 
     public DomainMappingArgs(
-        Input<String> location,
-        Input<DomainMappingMetadataArgs> metadata,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        Input<DomainMappingSpecArgs> spec) {
+        Output<String> location,
+        Output<DomainMappingMetadataArgs> metadata,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        Output<DomainMappingSpecArgs> spec) {
         this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
         this.metadata = Objects.requireNonNull(metadata, "expected parameter 'metadata' to be non-null");
         this.name = name;
@@ -88,11 +88,11 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DomainMappingArgs() {
-        this.location = Input.empty();
-        this.metadata = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.spec = Input.empty();
+        this.location = Output.empty();
+        this.metadata = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.spec = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> location;
-        private Input<DomainMappingMetadataArgs> metadata;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private Input<DomainMappingSpecArgs> spec;
+        private Output<String> location;
+        private Output<DomainMappingMetadataArgs> metadata;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private Output<DomainMappingSpecArgs> spec;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.spec = defaults.spec;
         }
 
-        public Builder location(Input<String> location) {
+        public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
         public Builder location(String location) {
-            this.location = Input.of(Objects.requireNonNull(location));
+            this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
 
-        public Builder metadata(Input<DomainMappingMetadataArgs> metadata) {
+        public Builder metadata(Output<DomainMappingMetadataArgs> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
         public Builder metadata(DomainMappingMetadataArgs metadata) {
-            this.metadata = Input.of(Objects.requireNonNull(metadata));
+            this.metadata = Output.of(Objects.requireNonNull(metadata));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder spec(Input<DomainMappingSpecArgs> spec) {
+        public Builder spec(Output<DomainMappingSpecArgs> spec) {
             this.spec = Objects.requireNonNull(spec);
             return this;
         }
 
         public Builder spec(DomainMappingSpecArgs spec) {
-            this.spec = Input.of(Objects.requireNonNull(spec));
+            this.spec = Output.of(Objects.requireNonNull(spec));
             return this;
         }
         public DomainMappingArgs build() {

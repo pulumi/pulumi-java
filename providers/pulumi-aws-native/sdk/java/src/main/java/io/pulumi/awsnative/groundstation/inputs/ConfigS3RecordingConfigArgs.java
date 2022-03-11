@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.groundstation.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,39 +15,39 @@ public final class ConfigS3RecordingConfigArgs extends io.pulumi.resources.Resou
     public static final ConfigS3RecordingConfigArgs Empty = new ConfigS3RecordingConfigArgs();
 
     @InputImport(name="bucketArn")
-      private final @Nullable Input<String> bucketArn;
+      private final @Nullable Output<String> bucketArn;
 
-    public Input<String> getBucketArn() {
-        return this.bucketArn == null ? Input.empty() : this.bucketArn;
+    public Output<String> getBucketArn() {
+        return this.bucketArn == null ? Output.empty() : this.bucketArn;
     }
 
     @InputImport(name="prefix")
-      private final @Nullable Input<String> prefix;
+      private final @Nullable Output<String> prefix;
 
-    public Input<String> getPrefix() {
-        return this.prefix == null ? Input.empty() : this.prefix;
+    public Output<String> getPrefix() {
+        return this.prefix == null ? Output.empty() : this.prefix;
     }
 
     @InputImport(name="roleArn")
-      private final @Nullable Input<String> roleArn;
+      private final @Nullable Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
-        return this.roleArn == null ? Input.empty() : this.roleArn;
+    public Output<String> getRoleArn() {
+        return this.roleArn == null ? Output.empty() : this.roleArn;
     }
 
     public ConfigS3RecordingConfigArgs(
-        @Nullable Input<String> bucketArn,
-        @Nullable Input<String> prefix,
-        @Nullable Input<String> roleArn) {
+        @Nullable Output<String> bucketArn,
+        @Nullable Output<String> prefix,
+        @Nullable Output<String> roleArn) {
         this.bucketArn = bucketArn;
         this.prefix = prefix;
         this.roleArn = roleArn;
     }
 
     private ConfigS3RecordingConfigArgs() {
-        this.bucketArn = Input.empty();
-        this.prefix = Input.empty();
-        this.roleArn = Input.empty();
+        this.bucketArn = Output.empty();
+        this.prefix = Output.empty();
+        this.roleArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,9 +59,9 @@ public final class ConfigS3RecordingConfigArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bucketArn;
-        private @Nullable Input<String> prefix;
-        private @Nullable Input<String> roleArn;
+        private @Nullable Output<String> bucketArn;
+        private @Nullable Output<String> prefix;
+        private @Nullable Output<String> roleArn;
 
         public Builder() {
     	      // Empty
@@ -74,33 +74,33 @@ public final class ConfigS3RecordingConfigArgs extends io.pulumi.resources.Resou
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder bucketArn(@Nullable Input<String> bucketArn) {
+        public Builder bucketArn(@Nullable Output<String> bucketArn) {
             this.bucketArn = bucketArn;
             return this;
         }
 
         public Builder bucketArn(@Nullable String bucketArn) {
-            this.bucketArn = Input.ofNullable(bucketArn);
+            this.bucketArn = Output.ofNullable(bucketArn);
             return this;
         }
 
-        public Builder prefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Input.ofNullable(prefix);
+            this.prefix = Output.ofNullable(prefix);
             return this;
         }
 
-        public Builder roleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Input.ofNullable(roleArn);
+            this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
         public ConfigS3RecordingConfigArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class PlacementProfileArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="clusterId")
-      private final @Nullable Input<String> clusterId;
+      private final @Nullable Output<String> clusterId;
 
-    public Input<String> getClusterId() {
-        return this.clusterId == null ? Input.empty() : this.clusterId;
+    public Output<String> getClusterId() {
+        return this.clusterId == null ? Output.empty() : this.clusterId;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class PlacementProfileArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="datastoreId")
-      private final @Nullable Input<String> datastoreId;
+      private final @Nullable Output<String> datastoreId;
 
-    public Input<String> getDatastoreId() {
-        return this.datastoreId == null ? Input.empty() : this.datastoreId;
+    public Output<String> getDatastoreId() {
+        return this.datastoreId == null ? Output.empty() : this.datastoreId;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class PlacementProfileArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="hostId")
-      private final @Nullable Input<String> hostId;
+      private final @Nullable Output<String> hostId;
 
-    public Input<String> getHostId() {
-        return this.hostId == null ? Input.empty() : this.hostId;
+    public Output<String> getHostId() {
+        return this.hostId == null ? Output.empty() : this.hostId;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class PlacementProfileArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourcePoolId")
-      private final @Nullable Input<String> resourcePoolId;
+      private final @Nullable Output<String> resourcePoolId;
 
-    public Input<String> getResourcePoolId() {
-        return this.resourcePoolId == null ? Input.empty() : this.resourcePoolId;
+    public Output<String> getResourcePoolId() {
+        return this.resourcePoolId == null ? Output.empty() : this.resourcePoolId;
     }
 
     public PlacementProfileArgs(
-        @Nullable Input<String> clusterId,
-        @Nullable Input<String> datastoreId,
-        @Nullable Input<String> hostId,
-        @Nullable Input<String> resourcePoolId) {
+        @Nullable Output<String> clusterId,
+        @Nullable Output<String> datastoreId,
+        @Nullable Output<String> hostId,
+        @Nullable Output<String> resourcePoolId) {
         this.clusterId = clusterId;
         this.datastoreId = datastoreId;
         this.hostId = hostId;
@@ -74,10 +74,10 @@ public final class PlacementProfileArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private PlacementProfileArgs() {
-        this.clusterId = Input.empty();
-        this.datastoreId = Input.empty();
-        this.hostId = Input.empty();
-        this.resourcePoolId = Input.empty();
+        this.clusterId = Output.empty();
+        this.datastoreId = Output.empty();
+        this.hostId = Output.empty();
+        this.resourcePoolId = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class PlacementProfileArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> clusterId;
-        private @Nullable Input<String> datastoreId;
-        private @Nullable Input<String> hostId;
-        private @Nullable Input<String> resourcePoolId;
+        private @Nullable Output<String> clusterId;
+        private @Nullable Output<String> datastoreId;
+        private @Nullable Output<String> hostId;
+        private @Nullable Output<String> resourcePoolId;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class PlacementProfileArgs extends io.pulumi.resources.ResourceArgs
     	      this.resourcePoolId = defaults.resourcePoolId;
         }
 
-        public Builder clusterId(@Nullable Input<String> clusterId) {
+        public Builder clusterId(@Nullable Output<String> clusterId) {
             this.clusterId = clusterId;
             return this;
         }
 
         public Builder clusterId(@Nullable String clusterId) {
-            this.clusterId = Input.ofNullable(clusterId);
+            this.clusterId = Output.ofNullable(clusterId);
             return this;
         }
 
-        public Builder datastoreId(@Nullable Input<String> datastoreId) {
+        public Builder datastoreId(@Nullable Output<String> datastoreId) {
             this.datastoreId = datastoreId;
             return this;
         }
 
         public Builder datastoreId(@Nullable String datastoreId) {
-            this.datastoreId = Input.ofNullable(datastoreId);
+            this.datastoreId = Output.ofNullable(datastoreId);
             return this;
         }
 
-        public Builder hostId(@Nullable Input<String> hostId) {
+        public Builder hostId(@Nullable Output<String> hostId) {
             this.hostId = hostId;
             return this;
         }
 
         public Builder hostId(@Nullable String hostId) {
-            this.hostId = Input.ofNullable(hostId);
+            this.hostId = Output.ofNullable(hostId);
             return this;
         }
 
-        public Builder resourcePoolId(@Nullable Input<String> resourcePoolId) {
+        public Builder resourcePoolId(@Nullable Output<String> resourcePoolId) {
             this.resourcePoolId = resourcePoolId;
             return this;
         }
 
         public Builder resourcePoolId(@Nullable String resourcePoolId) {
-            this.resourcePoolId = Input.ofNullable(resourcePoolId);
+            this.resourcePoolId = Output.ofNullable(resourcePoolId);
             return this;
         }
         public PlacementProfileArgs build() {

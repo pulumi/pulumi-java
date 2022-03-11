@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class MachineImageIamPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="machineImage", required=true)
-      private final Input<String> machineImage;
+      private final Output<String> machineImage;
 
-    public Input<String> getMachineImage() {
+    public Output<String> getMachineImage() {
         return this.machineImage;
     }
 
@@ -31,9 +31,9 @@ public final class MachineImageIamPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="policyData", required=true)
-      private final Input<String> policyData;
+      private final Output<String> policyData;
 
-    public Input<String> getPolicyData() {
+    public Output<String> getPolicyData() {
         return this.policyData;
     }
 
@@ -43,25 +43,25 @@ public final class MachineImageIamPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public MachineImageIamPolicyArgs(
-        Input<String> machineImage,
-        Input<String> policyData,
-        @Nullable Input<String> project) {
+        Output<String> machineImage,
+        Output<String> policyData,
+        @Nullable Output<String> project) {
         this.machineImage = Objects.requireNonNull(machineImage, "expected parameter 'machineImage' to be non-null");
         this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
         this.project = project;
     }
 
     private MachineImageIamPolicyArgs() {
-        this.machineImage = Input.empty();
-        this.policyData = Input.empty();
-        this.project = Input.empty();
+        this.machineImage = Output.empty();
+        this.policyData = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class MachineImageIamPolicyArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<String> machineImage;
-        private Input<String> policyData;
-        private @Nullable Input<String> project;
+        private Output<String> machineImage;
+        private Output<String> policyData;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class MachineImageIamPolicyArgs extends io.pulumi.resources.Resourc
     	      this.project = defaults.project;
         }
 
-        public Builder machineImage(Input<String> machineImage) {
+        public Builder machineImage(Output<String> machineImage) {
             this.machineImage = Objects.requireNonNull(machineImage);
             return this;
         }
 
         public Builder machineImage(String machineImage) {
-            this.machineImage = Input.of(Objects.requireNonNull(machineImage));
+            this.machineImage = Output.of(Objects.requireNonNull(machineImage));
             return this;
         }
 
-        public Builder policyData(Input<String> policyData) {
+        public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
 
         public Builder policyData(String policyData) {
-            this.policyData = Input.of(Objects.requireNonNull(policyData));
+            this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public MachineImageIamPolicyArgs build() {

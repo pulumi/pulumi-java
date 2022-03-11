@@ -4,7 +4,7 @@
 package io.pulumi.aws.iam.inputs;
 
 import io.pulumi.aws.iam.inputs.RoleInlinePolicyGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -24,10 +24,10 @@ public final class RoleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class RoleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assumeRolePolicy")
-      private final @Nullable Input<String> assumeRolePolicy;
+      private final @Nullable Output<String> assumeRolePolicy;
 
-    public Input<String> getAssumeRolePolicy() {
-        return this.assumeRolePolicy == null ? Input.empty() : this.assumeRolePolicy;
+    public Output<String> getAssumeRolePolicy() {
+        return this.assumeRolePolicy == null ? Output.empty() : this.assumeRolePolicy;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class RoleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createDate")
-      private final @Nullable Input<String> createDate;
+      private final @Nullable Output<String> createDate;
 
-    public Input<String> getCreateDate() {
-        return this.createDate == null ? Input.empty() : this.createDate;
+    public Output<String> getCreateDate() {
+        return this.createDate == null ? Output.empty() : this.createDate;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class RoleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class RoleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceDetachPolicies")
-      private final @Nullable Input<Boolean> forceDetachPolicies;
+      private final @Nullable Output<Boolean> forceDetachPolicies;
 
-    public Input<Boolean> getForceDetachPolicies() {
-        return this.forceDetachPolicies == null ? Input.empty() : this.forceDetachPolicies;
+    public Output<Boolean> getForceDetachPolicies() {
+        return this.forceDetachPolicies == null ? Output.empty() : this.forceDetachPolicies;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class RoleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inlinePolicies")
-      private final @Nullable Input<List<RoleInlinePolicyGetArgs>> inlinePolicies;
+      private final @Nullable Output<List<RoleInlinePolicyGetArgs>> inlinePolicies;
 
-    public Input<List<RoleInlinePolicyGetArgs>> getInlinePolicies() {
-        return this.inlinePolicies == null ? Input.empty() : this.inlinePolicies;
+    public Output<List<RoleInlinePolicyGetArgs>> getInlinePolicies() {
+        return this.inlinePolicies == null ? Output.empty() : this.inlinePolicies;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class RoleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedPolicyArns")
-      private final @Nullable Input<List<String>> managedPolicyArns;
+      private final @Nullable Output<List<String>> managedPolicyArns;
 
-    public Input<List<String>> getManagedPolicyArns() {
-        return this.managedPolicyArns == null ? Input.empty() : this.managedPolicyArns;
+    public Output<List<String>> getManagedPolicyArns() {
+        return this.managedPolicyArns == null ? Output.empty() : this.managedPolicyArns;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class RoleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxSessionDuration")
-      private final @Nullable Input<Integer> maxSessionDuration;
+      private final @Nullable Output<Integer> maxSessionDuration;
 
-    public Input<Integer> getMaxSessionDuration() {
-        return this.maxSessionDuration == null ? Input.empty() : this.maxSessionDuration;
+    public Output<Integer> getMaxSessionDuration() {
+        return this.maxSessionDuration == null ? Output.empty() : this.maxSessionDuration;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class RoleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -123,10 +123,10 @@ public final class RoleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namePrefix")
-      private final @Nullable Input<String> namePrefix;
+      private final @Nullable Output<String> namePrefix;
 
-    public Input<String> getNamePrefix() {
-        return this.namePrefix == null ? Input.empty() : this.namePrefix;
+    public Output<String> getNamePrefix() {
+        return this.namePrefix == null ? Output.empty() : this.namePrefix;
     }
 
     /**
@@ -134,10 +134,10 @@ public final class RoleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     /**
@@ -145,10 +145,10 @@ public final class RoleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permissionsBoundary")
-      private final @Nullable Input<String> permissionsBoundary;
+      private final @Nullable Output<String> permissionsBoundary;
 
-    public Input<String> getPermissionsBoundary() {
-        return this.permissionsBoundary == null ? Input.empty() : this.permissionsBoundary;
+    public Output<String> getPermissionsBoundary() {
+        return this.permissionsBoundary == null ? Output.empty() : this.permissionsBoundary;
     }
 
     /**
@@ -156,10 +156,10 @@ public final class RoleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -167,10 +167,10 @@ public final class RoleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -178,28 +178,28 @@ public final class RoleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uniqueId")
-      private final @Nullable Input<String> uniqueId;
+      private final @Nullable Output<String> uniqueId;
 
-    public Input<String> getUniqueId() {
-        return this.uniqueId == null ? Input.empty() : this.uniqueId;
+    public Output<String> getUniqueId() {
+        return this.uniqueId == null ? Output.empty() : this.uniqueId;
     }
 
     public RoleState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> assumeRolePolicy,
-        @Nullable Input<String> createDate,
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> forceDetachPolicies,
-        @Nullable Input<List<RoleInlinePolicyGetArgs>> inlinePolicies,
-        @Nullable Input<List<String>> managedPolicyArns,
-        @Nullable Input<Integer> maxSessionDuration,
-        @Nullable Input<String> name,
-        @Nullable Input<String> namePrefix,
-        @Nullable Input<String> path,
-        @Nullable Input<String> permissionsBoundary,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> uniqueId) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> assumeRolePolicy,
+        @Nullable Output<String> createDate,
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> forceDetachPolicies,
+        @Nullable Output<List<RoleInlinePolicyGetArgs>> inlinePolicies,
+        @Nullable Output<List<String>> managedPolicyArns,
+        @Nullable Output<Integer> maxSessionDuration,
+        @Nullable Output<String> name,
+        @Nullable Output<String> namePrefix,
+        @Nullable Output<String> path,
+        @Nullable Output<String> permissionsBoundary,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> uniqueId) {
         this.arn = arn;
         this.assumeRolePolicy = assumeRolePolicy;
         this.createDate = createDate;
@@ -218,21 +218,21 @@ public final class RoleState extends io.pulumi.resources.ResourceArgs {
     }
 
     private RoleState() {
-        this.arn = Input.empty();
-        this.assumeRolePolicy = Input.empty();
-        this.createDate = Input.empty();
-        this.description = Input.empty();
-        this.forceDetachPolicies = Input.empty();
-        this.inlinePolicies = Input.empty();
-        this.managedPolicyArns = Input.empty();
-        this.maxSessionDuration = Input.empty();
-        this.name = Input.empty();
-        this.namePrefix = Input.empty();
-        this.path = Input.empty();
-        this.permissionsBoundary = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.uniqueId = Input.empty();
+        this.arn = Output.empty();
+        this.assumeRolePolicy = Output.empty();
+        this.createDate = Output.empty();
+        this.description = Output.empty();
+        this.forceDetachPolicies = Output.empty();
+        this.inlinePolicies = Output.empty();
+        this.managedPolicyArns = Output.empty();
+        this.maxSessionDuration = Output.empty();
+        this.name = Output.empty();
+        this.namePrefix = Output.empty();
+        this.path = Output.empty();
+        this.permissionsBoundary = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.uniqueId = Output.empty();
     }
 
     public static Builder builder() {
@@ -244,21 +244,21 @@ public final class RoleState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> assumeRolePolicy;
-        private @Nullable Input<String> createDate;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> forceDetachPolicies;
-        private @Nullable Input<List<RoleInlinePolicyGetArgs>> inlinePolicies;
-        private @Nullable Input<List<String>> managedPolicyArns;
-        private @Nullable Input<Integer> maxSessionDuration;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> namePrefix;
-        private @Nullable Input<String> path;
-        private @Nullable Input<String> permissionsBoundary;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> uniqueId;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> assumeRolePolicy;
+        private @Nullable Output<String> createDate;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> forceDetachPolicies;
+        private @Nullable Output<List<RoleInlinePolicyGetArgs>> inlinePolicies;
+        private @Nullable Output<List<String>> managedPolicyArns;
+        private @Nullable Output<Integer> maxSessionDuration;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> namePrefix;
+        private @Nullable Output<String> path;
+        private @Nullable Output<String> permissionsBoundary;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> uniqueId;
 
         public Builder() {
     	      // Empty
@@ -283,148 +283,148 @@ public final class RoleState extends io.pulumi.resources.ResourceArgs {
     	      this.uniqueId = defaults.uniqueId;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder assumeRolePolicy(@Nullable Input<String> assumeRolePolicy) {
+        public Builder assumeRolePolicy(@Nullable Output<String> assumeRolePolicy) {
             this.assumeRolePolicy = assumeRolePolicy;
             return this;
         }
 
-        public Builder createDate(@Nullable Input<String> createDate) {
+        public Builder createDate(@Nullable Output<String> createDate) {
             this.createDate = createDate;
             return this;
         }
 
         public Builder createDate(@Nullable String createDate) {
-            this.createDate = Input.ofNullable(createDate);
+            this.createDate = Output.ofNullable(createDate);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder forceDetachPolicies(@Nullable Input<Boolean> forceDetachPolicies) {
+        public Builder forceDetachPolicies(@Nullable Output<Boolean> forceDetachPolicies) {
             this.forceDetachPolicies = forceDetachPolicies;
             return this;
         }
 
         public Builder forceDetachPolicies(@Nullable Boolean forceDetachPolicies) {
-            this.forceDetachPolicies = Input.ofNullable(forceDetachPolicies);
+            this.forceDetachPolicies = Output.ofNullable(forceDetachPolicies);
             return this;
         }
 
-        public Builder inlinePolicies(@Nullable Input<List<RoleInlinePolicyGetArgs>> inlinePolicies) {
+        public Builder inlinePolicies(@Nullable Output<List<RoleInlinePolicyGetArgs>> inlinePolicies) {
             this.inlinePolicies = inlinePolicies;
             return this;
         }
 
         public Builder inlinePolicies(@Nullable List<RoleInlinePolicyGetArgs> inlinePolicies) {
-            this.inlinePolicies = Input.ofNullable(inlinePolicies);
+            this.inlinePolicies = Output.ofNullable(inlinePolicies);
             return this;
         }
 
-        public Builder managedPolicyArns(@Nullable Input<List<String>> managedPolicyArns) {
+        public Builder managedPolicyArns(@Nullable Output<List<String>> managedPolicyArns) {
             this.managedPolicyArns = managedPolicyArns;
             return this;
         }
 
         public Builder managedPolicyArns(@Nullable List<String> managedPolicyArns) {
-            this.managedPolicyArns = Input.ofNullable(managedPolicyArns);
+            this.managedPolicyArns = Output.ofNullable(managedPolicyArns);
             return this;
         }
 
-        public Builder maxSessionDuration(@Nullable Input<Integer> maxSessionDuration) {
+        public Builder maxSessionDuration(@Nullable Output<Integer> maxSessionDuration) {
             this.maxSessionDuration = maxSessionDuration;
             return this;
         }
 
         public Builder maxSessionDuration(@Nullable Integer maxSessionDuration) {
-            this.maxSessionDuration = Input.ofNullable(maxSessionDuration);
+            this.maxSessionDuration = Output.ofNullable(maxSessionDuration);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Input.ofNullable(namePrefix);
+            this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
 
-        public Builder permissionsBoundary(@Nullable Input<String> permissionsBoundary) {
+        public Builder permissionsBoundary(@Nullable Output<String> permissionsBoundary) {
             this.permissionsBoundary = permissionsBoundary;
             return this;
         }
 
         public Builder permissionsBoundary(@Nullable String permissionsBoundary) {
-            this.permissionsBoundary = Input.ofNullable(permissionsBoundary);
+            this.permissionsBoundary = Output.ofNullable(permissionsBoundary);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder uniqueId(@Nullable Input<String> uniqueId) {
+        public Builder uniqueId(@Nullable Output<String> uniqueId) {
             this.uniqueId = uniqueId;
             return this;
         }
 
         public Builder uniqueId(@Nullable String uniqueId) {
-            this.uniqueId = Input.ofNullable(uniqueId);
+            this.uniqueId = Output.ofNullable(uniqueId);
             return this;
         }
         public RoleState build() {

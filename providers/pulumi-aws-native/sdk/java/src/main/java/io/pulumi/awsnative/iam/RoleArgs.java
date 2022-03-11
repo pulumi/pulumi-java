@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iam;
 
 import io.pulumi.awsnative.iam.inputs.RolePolicyArgs;
 import io.pulumi.awsnative.iam.inputs.RoleTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
@@ -24,9 +24,9 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assumeRolePolicyDocument", required=true)
-      private final Input<Object> assumeRolePolicyDocument;
+      private final Output<Object> assumeRolePolicyDocument;
 
-    public Input<Object> getAssumeRolePolicyDocument() {
+    public Output<Object> getAssumeRolePolicyDocument() {
         return this.assumeRolePolicyDocument;
     }
 
@@ -35,10 +35,10 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedPolicyArns")
-      private final @Nullable Input<List<String>> managedPolicyArns;
+      private final @Nullable Output<List<String>> managedPolicyArns;
 
-    public Input<List<String>> getManagedPolicyArns() {
-        return this.managedPolicyArns == null ? Input.empty() : this.managedPolicyArns;
+    public Output<List<String>> getManagedPolicyArns() {
+        return this.managedPolicyArns == null ? Output.empty() : this.managedPolicyArns;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxSessionDuration")
-      private final @Nullable Input<Integer> maxSessionDuration;
+      private final @Nullable Output<Integer> maxSessionDuration;
 
-    public Input<Integer> getMaxSessionDuration() {
-        return this.maxSessionDuration == null ? Input.empty() : this.maxSessionDuration;
+    public Output<Integer> getMaxSessionDuration() {
+        return this.maxSessionDuration == null ? Output.empty() : this.maxSessionDuration;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permissionsBoundary")
-      private final @Nullable Input<String> permissionsBoundary;
+      private final @Nullable Output<String> permissionsBoundary;
 
-    public Input<String> getPermissionsBoundary() {
-        return this.permissionsBoundary == null ? Input.empty() : this.permissionsBoundary;
+    public Output<String> getPermissionsBoundary() {
+        return this.permissionsBoundary == null ? Output.empty() : this.permissionsBoundary;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policies")
-      private final @Nullable Input<List<RolePolicyArgs>> policies;
+      private final @Nullable Output<List<RolePolicyArgs>> policies;
 
-    public Input<List<RolePolicyArgs>> getPolicies() {
-        return this.policies == null ? Input.empty() : this.policies;
+    public Output<List<RolePolicyArgs>> getPolicies() {
+        return this.policies == null ? Output.empty() : this.policies;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleName")
-      private final @Nullable Input<String> roleName;
+      private final @Nullable Output<String> roleName;
 
-    public Input<String> getRoleName() {
-        return this.roleName == null ? Input.empty() : this.roleName;
+    public Output<String> getRoleName() {
+        return this.roleName == null ? Output.empty() : this.roleName;
     }
 
     /**
@@ -112,22 +112,22 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<RoleTagArgs>> tags;
+      private final @Nullable Output<List<RoleTagArgs>> tags;
 
-    public Input<List<RoleTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<RoleTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public RoleArgs(
-        Input<Object> assumeRolePolicyDocument,
-        @Nullable Input<String> description,
-        @Nullable Input<List<String>> managedPolicyArns,
-        @Nullable Input<Integer> maxSessionDuration,
-        @Nullable Input<String> path,
-        @Nullable Input<String> permissionsBoundary,
-        @Nullable Input<List<RolePolicyArgs>> policies,
-        @Nullable Input<String> roleName,
-        @Nullable Input<List<RoleTagArgs>> tags) {
+        Output<Object> assumeRolePolicyDocument,
+        @Nullable Output<String> description,
+        @Nullable Output<List<String>> managedPolicyArns,
+        @Nullable Output<Integer> maxSessionDuration,
+        @Nullable Output<String> path,
+        @Nullable Output<String> permissionsBoundary,
+        @Nullable Output<List<RolePolicyArgs>> policies,
+        @Nullable Output<String> roleName,
+        @Nullable Output<List<RoleTagArgs>> tags) {
         this.assumeRolePolicyDocument = Objects.requireNonNull(assumeRolePolicyDocument, "expected parameter 'assumeRolePolicyDocument' to be non-null");
         this.description = description;
         this.managedPolicyArns = managedPolicyArns;
@@ -140,15 +140,15 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RoleArgs() {
-        this.assumeRolePolicyDocument = Input.empty();
-        this.description = Input.empty();
-        this.managedPolicyArns = Input.empty();
-        this.maxSessionDuration = Input.empty();
-        this.path = Input.empty();
-        this.permissionsBoundary = Input.empty();
-        this.policies = Input.empty();
-        this.roleName = Input.empty();
-        this.tags = Input.empty();
+        this.assumeRolePolicyDocument = Output.empty();
+        this.description = Output.empty();
+        this.managedPolicyArns = Output.empty();
+        this.maxSessionDuration = Output.empty();
+        this.path = Output.empty();
+        this.permissionsBoundary = Output.empty();
+        this.policies = Output.empty();
+        this.roleName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -160,15 +160,15 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Object> assumeRolePolicyDocument;
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<String>> managedPolicyArns;
-        private @Nullable Input<Integer> maxSessionDuration;
-        private @Nullable Input<String> path;
-        private @Nullable Input<String> permissionsBoundary;
-        private @Nullable Input<List<RolePolicyArgs>> policies;
-        private @Nullable Input<String> roleName;
-        private @Nullable Input<List<RoleTagArgs>> tags;
+        private Output<Object> assumeRolePolicyDocument;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<String>> managedPolicyArns;
+        private @Nullable Output<Integer> maxSessionDuration;
+        private @Nullable Output<String> path;
+        private @Nullable Output<String> permissionsBoundary;
+        private @Nullable Output<List<RolePolicyArgs>> policies;
+        private @Nullable Output<String> roleName;
+        private @Nullable Output<List<RoleTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -187,93 +187,93 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder assumeRolePolicyDocument(Input<Object> assumeRolePolicyDocument) {
+        public Builder assumeRolePolicyDocument(Output<Object> assumeRolePolicyDocument) {
             this.assumeRolePolicyDocument = Objects.requireNonNull(assumeRolePolicyDocument);
             return this;
         }
 
         public Builder assumeRolePolicyDocument(Object assumeRolePolicyDocument) {
-            this.assumeRolePolicyDocument = Input.of(Objects.requireNonNull(assumeRolePolicyDocument));
+            this.assumeRolePolicyDocument = Output.of(Objects.requireNonNull(assumeRolePolicyDocument));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder managedPolicyArns(@Nullable Input<List<String>> managedPolicyArns) {
+        public Builder managedPolicyArns(@Nullable Output<List<String>> managedPolicyArns) {
             this.managedPolicyArns = managedPolicyArns;
             return this;
         }
 
         public Builder managedPolicyArns(@Nullable List<String> managedPolicyArns) {
-            this.managedPolicyArns = Input.ofNullable(managedPolicyArns);
+            this.managedPolicyArns = Output.ofNullable(managedPolicyArns);
             return this;
         }
 
-        public Builder maxSessionDuration(@Nullable Input<Integer> maxSessionDuration) {
+        public Builder maxSessionDuration(@Nullable Output<Integer> maxSessionDuration) {
             this.maxSessionDuration = maxSessionDuration;
             return this;
         }
 
         public Builder maxSessionDuration(@Nullable Integer maxSessionDuration) {
-            this.maxSessionDuration = Input.ofNullable(maxSessionDuration);
+            this.maxSessionDuration = Output.ofNullable(maxSessionDuration);
             return this;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
 
-        public Builder permissionsBoundary(@Nullable Input<String> permissionsBoundary) {
+        public Builder permissionsBoundary(@Nullable Output<String> permissionsBoundary) {
             this.permissionsBoundary = permissionsBoundary;
             return this;
         }
 
         public Builder permissionsBoundary(@Nullable String permissionsBoundary) {
-            this.permissionsBoundary = Input.ofNullable(permissionsBoundary);
+            this.permissionsBoundary = Output.ofNullable(permissionsBoundary);
             return this;
         }
 
-        public Builder policies(@Nullable Input<List<RolePolicyArgs>> policies) {
+        public Builder policies(@Nullable Output<List<RolePolicyArgs>> policies) {
             this.policies = policies;
             return this;
         }
 
         public Builder policies(@Nullable List<RolePolicyArgs> policies) {
-            this.policies = Input.ofNullable(policies);
+            this.policies = Output.ofNullable(policies);
             return this;
         }
 
-        public Builder roleName(@Nullable Input<String> roleName) {
+        public Builder roleName(@Nullable Output<String> roleName) {
             this.roleName = roleName;
             return this;
         }
 
         public Builder roleName(@Nullable String roleName) {
-            this.roleName = Input.ofNullable(roleName);
+            this.roleName = Output.ofNullable(roleName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<RoleTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<RoleTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<RoleTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public RoleArgs build() {

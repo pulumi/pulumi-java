@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class InconclusiveDetailArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="abortedByUser")
-      private final @Nullable Input<Boolean> abortedByUser;
+      private final @Nullable Output<Boolean> abortedByUser;
 
-    public Input<Boolean> getAbortedByUser() {
-        return this.abortedByUser == null ? Input.empty() : this.abortedByUser;
+    public Output<Boolean> getAbortedByUser() {
+        return this.abortedByUser == null ? Output.empty() : this.abortedByUser;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class InconclusiveDetailArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="hasErrorLogs")
-      private final @Nullable Input<Boolean> hasErrorLogs;
+      private final @Nullable Output<Boolean> hasErrorLogs;
 
-    public Input<Boolean> getHasErrorLogs() {
-        return this.hasErrorLogs == null ? Input.empty() : this.hasErrorLogs;
+    public Output<Boolean> getHasErrorLogs() {
+        return this.hasErrorLogs == null ? Output.empty() : this.hasErrorLogs;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class InconclusiveDetailArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="infrastructureFailure")
-      private final @Nullable Input<Boolean> infrastructureFailure;
+      private final @Nullable Output<Boolean> infrastructureFailure;
 
-    public Input<Boolean> getInfrastructureFailure() {
-        return this.infrastructureFailure == null ? Input.empty() : this.infrastructureFailure;
+    public Output<Boolean> getInfrastructureFailure() {
+        return this.infrastructureFailure == null ? Output.empty() : this.infrastructureFailure;
     }
 
     public InconclusiveDetailArgs(
-        @Nullable Input<Boolean> abortedByUser,
-        @Nullable Input<Boolean> hasErrorLogs,
-        @Nullable Input<Boolean> infrastructureFailure) {
+        @Nullable Output<Boolean> abortedByUser,
+        @Nullable Output<Boolean> hasErrorLogs,
+        @Nullable Output<Boolean> infrastructureFailure) {
         this.abortedByUser = abortedByUser;
         this.hasErrorLogs = hasErrorLogs;
         this.infrastructureFailure = infrastructureFailure;
     }
 
     private InconclusiveDetailArgs() {
-        this.abortedByUser = Input.empty();
-        this.hasErrorLogs = Input.empty();
-        this.infrastructureFailure = Input.empty();
+        this.abortedByUser = Output.empty();
+        this.hasErrorLogs = Output.empty();
+        this.infrastructureFailure = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class InconclusiveDetailArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> abortedByUser;
-        private @Nullable Input<Boolean> hasErrorLogs;
-        private @Nullable Input<Boolean> infrastructureFailure;
+        private @Nullable Output<Boolean> abortedByUser;
+        private @Nullable Output<Boolean> hasErrorLogs;
+        private @Nullable Output<Boolean> infrastructureFailure;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class InconclusiveDetailArgs extends io.pulumi.resources.ResourceAr
     	      this.infrastructureFailure = defaults.infrastructureFailure;
         }
 
-        public Builder abortedByUser(@Nullable Input<Boolean> abortedByUser) {
+        public Builder abortedByUser(@Nullable Output<Boolean> abortedByUser) {
             this.abortedByUser = abortedByUser;
             return this;
         }
 
         public Builder abortedByUser(@Nullable Boolean abortedByUser) {
-            this.abortedByUser = Input.ofNullable(abortedByUser);
+            this.abortedByUser = Output.ofNullable(abortedByUser);
             return this;
         }
 
-        public Builder hasErrorLogs(@Nullable Input<Boolean> hasErrorLogs) {
+        public Builder hasErrorLogs(@Nullable Output<Boolean> hasErrorLogs) {
             this.hasErrorLogs = hasErrorLogs;
             return this;
         }
 
         public Builder hasErrorLogs(@Nullable Boolean hasErrorLogs) {
-            this.hasErrorLogs = Input.ofNullable(hasErrorLogs);
+            this.hasErrorLogs = Output.ofNullable(hasErrorLogs);
             return this;
         }
 
-        public Builder infrastructureFailure(@Nullable Input<Boolean> infrastructureFailure) {
+        public Builder infrastructureFailure(@Nullable Output<Boolean> infrastructureFailure) {
             this.infrastructureFailure = infrastructureFailure;
             return this;
         }
 
         public Builder infrastructureFailure(@Nullable Boolean infrastructureFailure) {
-            this.infrastructureFailure = Input.ofNullable(infrastructureFailure);
+            this.infrastructureFailure = Output.ofNullable(infrastructureFailure);
             return this;
         }
         public InconclusiveDetailArgs build() {

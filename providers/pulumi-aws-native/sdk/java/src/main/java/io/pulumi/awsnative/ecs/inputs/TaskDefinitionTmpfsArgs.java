@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ecs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,39 +17,39 @@ public final class TaskDefinitionTmpfsArgs extends io.pulumi.resources.ResourceA
     public static final TaskDefinitionTmpfsArgs Empty = new TaskDefinitionTmpfsArgs();
 
     @InputImport(name="containerPath")
-      private final @Nullable Input<String> containerPath;
+      private final @Nullable Output<String> containerPath;
 
-    public Input<String> getContainerPath() {
-        return this.containerPath == null ? Input.empty() : this.containerPath;
+    public Output<String> getContainerPath() {
+        return this.containerPath == null ? Output.empty() : this.containerPath;
     }
 
     @InputImport(name="mountOptions")
-      private final @Nullable Input<List<String>> mountOptions;
+      private final @Nullable Output<List<String>> mountOptions;
 
-    public Input<List<String>> getMountOptions() {
-        return this.mountOptions == null ? Input.empty() : this.mountOptions;
+    public Output<List<String>> getMountOptions() {
+        return this.mountOptions == null ? Output.empty() : this.mountOptions;
     }
 
     @InputImport(name="size", required=true)
-      private final Input<Integer> size;
+      private final Output<Integer> size;
 
-    public Input<Integer> getSize() {
+    public Output<Integer> getSize() {
         return this.size;
     }
 
     public TaskDefinitionTmpfsArgs(
-        @Nullable Input<String> containerPath,
-        @Nullable Input<List<String>> mountOptions,
-        Input<Integer> size) {
+        @Nullable Output<String> containerPath,
+        @Nullable Output<List<String>> mountOptions,
+        Output<Integer> size) {
         this.containerPath = containerPath;
         this.mountOptions = mountOptions;
         this.size = Objects.requireNonNull(size, "expected parameter 'size' to be non-null");
     }
 
     private TaskDefinitionTmpfsArgs() {
-        this.containerPath = Input.empty();
-        this.mountOptions = Input.empty();
-        this.size = Input.empty();
+        this.containerPath = Output.empty();
+        this.mountOptions = Output.empty();
+        this.size = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,9 +61,9 @@ public final class TaskDefinitionTmpfsArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> containerPath;
-        private @Nullable Input<List<String>> mountOptions;
-        private Input<Integer> size;
+        private @Nullable Output<String> containerPath;
+        private @Nullable Output<List<String>> mountOptions;
+        private Output<Integer> size;
 
         public Builder() {
     	      // Empty
@@ -76,33 +76,33 @@ public final class TaskDefinitionTmpfsArgs extends io.pulumi.resources.ResourceA
     	      this.size = defaults.size;
         }
 
-        public Builder containerPath(@Nullable Input<String> containerPath) {
+        public Builder containerPath(@Nullable Output<String> containerPath) {
             this.containerPath = containerPath;
             return this;
         }
 
         public Builder containerPath(@Nullable String containerPath) {
-            this.containerPath = Input.ofNullable(containerPath);
+            this.containerPath = Output.ofNullable(containerPath);
             return this;
         }
 
-        public Builder mountOptions(@Nullable Input<List<String>> mountOptions) {
+        public Builder mountOptions(@Nullable Output<List<String>> mountOptions) {
             this.mountOptions = mountOptions;
             return this;
         }
 
         public Builder mountOptions(@Nullable List<String> mountOptions) {
-            this.mountOptions = Input.ofNullable(mountOptions);
+            this.mountOptions = Output.ofNullable(mountOptions);
             return this;
         }
 
-        public Builder size(Input<Integer> size) {
+        public Builder size(Output<Integer> size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
 
         public Builder size(Integer size) {
-            this.size = Input.of(Objects.requireNonNull(size));
+            this.size = Output.of(Objects.requireNonNull(size));
             return this;
         }
         public TaskDefinitionTmpfsArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.IPConfigurationBgpPeeringAddressArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
@@ -27,10 +27,10 @@ public final class BgpSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="asn")
-      private final @Nullable Input<Double> asn;
+      private final @Nullable Output<Double> asn;
 
-    public Input<Double> getAsn() {
-        return this.asn == null ? Input.empty() : this.asn;
+    public Output<Double> getAsn() {
+        return this.asn == null ? Output.empty() : this.asn;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class BgpSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bgpPeeringAddress")
-      private final @Nullable Input<String> bgpPeeringAddress;
+      private final @Nullable Output<String> bgpPeeringAddress;
 
-    public Input<String> getBgpPeeringAddress() {
-        return this.bgpPeeringAddress == null ? Input.empty() : this.bgpPeeringAddress;
+    public Output<String> getBgpPeeringAddress() {
+        return this.bgpPeeringAddress == null ? Output.empty() : this.bgpPeeringAddress;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class BgpSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bgpPeeringAddresses")
-      private final @Nullable Input<List<IPConfigurationBgpPeeringAddressArgs>> bgpPeeringAddresses;
+      private final @Nullable Output<List<IPConfigurationBgpPeeringAddressArgs>> bgpPeeringAddresses;
 
-    public Input<List<IPConfigurationBgpPeeringAddressArgs>> getBgpPeeringAddresses() {
-        return this.bgpPeeringAddresses == null ? Input.empty() : this.bgpPeeringAddresses;
+    public Output<List<IPConfigurationBgpPeeringAddressArgs>> getBgpPeeringAddresses() {
+        return this.bgpPeeringAddresses == null ? Output.empty() : this.bgpPeeringAddresses;
     }
 
     /**
@@ -60,17 +60,17 @@ public final class BgpSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peerWeight")
-      private final @Nullable Input<Integer> peerWeight;
+      private final @Nullable Output<Integer> peerWeight;
 
-    public Input<Integer> getPeerWeight() {
-        return this.peerWeight == null ? Input.empty() : this.peerWeight;
+    public Output<Integer> getPeerWeight() {
+        return this.peerWeight == null ? Output.empty() : this.peerWeight;
     }
 
     public BgpSettingsArgs(
-        @Nullable Input<Double> asn,
-        @Nullable Input<String> bgpPeeringAddress,
-        @Nullable Input<List<IPConfigurationBgpPeeringAddressArgs>> bgpPeeringAddresses,
-        @Nullable Input<Integer> peerWeight) {
+        @Nullable Output<Double> asn,
+        @Nullable Output<String> bgpPeeringAddress,
+        @Nullable Output<List<IPConfigurationBgpPeeringAddressArgs>> bgpPeeringAddresses,
+        @Nullable Output<Integer> peerWeight) {
         this.asn = asn;
         this.bgpPeeringAddress = bgpPeeringAddress;
         this.bgpPeeringAddresses = bgpPeeringAddresses;
@@ -78,10 +78,10 @@ public final class BgpSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BgpSettingsArgs() {
-        this.asn = Input.empty();
-        this.bgpPeeringAddress = Input.empty();
-        this.bgpPeeringAddresses = Input.empty();
-        this.peerWeight = Input.empty();
+        this.asn = Output.empty();
+        this.bgpPeeringAddress = Output.empty();
+        this.bgpPeeringAddresses = Output.empty();
+        this.peerWeight = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,10 +93,10 @@ public final class BgpSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Double> asn;
-        private @Nullable Input<String> bgpPeeringAddress;
-        private @Nullable Input<List<IPConfigurationBgpPeeringAddressArgs>> bgpPeeringAddresses;
-        private @Nullable Input<Integer> peerWeight;
+        private @Nullable Output<Double> asn;
+        private @Nullable Output<String> bgpPeeringAddress;
+        private @Nullable Output<List<IPConfigurationBgpPeeringAddressArgs>> bgpPeeringAddresses;
+        private @Nullable Output<Integer> peerWeight;
 
         public Builder() {
     	      // Empty
@@ -110,43 +110,43 @@ public final class BgpSettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.peerWeight = defaults.peerWeight;
         }
 
-        public Builder asn(@Nullable Input<Double> asn) {
+        public Builder asn(@Nullable Output<Double> asn) {
             this.asn = asn;
             return this;
         }
 
         public Builder asn(@Nullable Double asn) {
-            this.asn = Input.ofNullable(asn);
+            this.asn = Output.ofNullable(asn);
             return this;
         }
 
-        public Builder bgpPeeringAddress(@Nullable Input<String> bgpPeeringAddress) {
+        public Builder bgpPeeringAddress(@Nullable Output<String> bgpPeeringAddress) {
             this.bgpPeeringAddress = bgpPeeringAddress;
             return this;
         }
 
         public Builder bgpPeeringAddress(@Nullable String bgpPeeringAddress) {
-            this.bgpPeeringAddress = Input.ofNullable(bgpPeeringAddress);
+            this.bgpPeeringAddress = Output.ofNullable(bgpPeeringAddress);
             return this;
         }
 
-        public Builder bgpPeeringAddresses(@Nullable Input<List<IPConfigurationBgpPeeringAddressArgs>> bgpPeeringAddresses) {
+        public Builder bgpPeeringAddresses(@Nullable Output<List<IPConfigurationBgpPeeringAddressArgs>> bgpPeeringAddresses) {
             this.bgpPeeringAddresses = bgpPeeringAddresses;
             return this;
         }
 
         public Builder bgpPeeringAddresses(@Nullable List<IPConfigurationBgpPeeringAddressArgs> bgpPeeringAddresses) {
-            this.bgpPeeringAddresses = Input.ofNullable(bgpPeeringAddresses);
+            this.bgpPeeringAddresses = Output.ofNullable(bgpPeeringAddresses);
             return this;
         }
 
-        public Builder peerWeight(@Nullable Input<Integer> peerWeight) {
+        public Builder peerWeight(@Nullable Output<Integer> peerWeight) {
             this.peerWeight = peerWeight;
             return this;
         }
 
         public Builder peerWeight(@Nullable Integer peerWeight) {
-            this.peerWeight = Input.ofNullable(peerWeight);
+            this.peerWeight = Output.ofNullable(peerWeight);
             return this;
         }
         public BgpSettingsArgs build() {

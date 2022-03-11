@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ecs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class TaskSetNetworkConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="assignPublicIp")
-      private final @Nullable Input<Boolean> assignPublicIp;
+      private final @Nullable Output<Boolean> assignPublicIp;
 
-    public Input<Boolean> getAssignPublicIp() {
-        return this.assignPublicIp == null ? Input.empty() : this.assignPublicIp;
+    public Output<Boolean> getAssignPublicIp() {
+        return this.assignPublicIp == null ? Output.empty() : this.assignPublicIp;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class TaskSetNetworkConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="securityGroups")
-      private final @Nullable Input<List<String>> securityGroups;
+      private final @Nullable Output<List<String>> securityGroups;
 
-    public Input<List<String>> getSecurityGroups() {
-        return this.securityGroups == null ? Input.empty() : this.securityGroups;
+    public Output<List<String>> getSecurityGroups() {
+        return this.securityGroups == null ? Output.empty() : this.securityGroups;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class TaskSetNetworkConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="subnets", required=true)
-      private final Input<List<String>> subnets;
+      private final Output<List<String>> subnets;
 
-    public Input<List<String>> getSubnets() {
+    public Output<List<String>> getSubnets() {
         return this.subnets;
     }
 
     public TaskSetNetworkConfigurationArgs(
-        @Nullable Input<Boolean> assignPublicIp,
-        @Nullable Input<List<String>> securityGroups,
-        Input<List<String>> subnets) {
+        @Nullable Output<Boolean> assignPublicIp,
+        @Nullable Output<List<String>> securityGroups,
+        Output<List<String>> subnets) {
         this.assignPublicIp = assignPublicIp;
         this.securityGroups = securityGroups;
         this.subnets = Objects.requireNonNull(subnets, "expected parameter 'subnets' to be non-null");
     }
 
     private TaskSetNetworkConfigurationArgs() {
-        this.assignPublicIp = Input.empty();
-        this.securityGroups = Input.empty();
-        this.subnets = Input.empty();
+        this.assignPublicIp = Output.empty();
+        this.securityGroups = Output.empty();
+        this.subnets = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class TaskSetNetworkConfigurationArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> assignPublicIp;
-        private @Nullable Input<List<String>> securityGroups;
-        private Input<List<String>> subnets;
+        private @Nullable Output<Boolean> assignPublicIp;
+        private @Nullable Output<List<String>> securityGroups;
+        private Output<List<String>> subnets;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class TaskSetNetworkConfigurationArgs extends io.pulumi.resources.R
     	      this.subnets = defaults.subnets;
         }
 
-        public Builder assignPublicIp(@Nullable Input<Boolean> assignPublicIp) {
+        public Builder assignPublicIp(@Nullable Output<Boolean> assignPublicIp) {
             this.assignPublicIp = assignPublicIp;
             return this;
         }
 
         public Builder assignPublicIp(@Nullable Boolean assignPublicIp) {
-            this.assignPublicIp = Input.ofNullable(assignPublicIp);
+            this.assignPublicIp = Output.ofNullable(assignPublicIp);
             return this;
         }
 
-        public Builder securityGroups(@Nullable Input<List<String>> securityGroups) {
+        public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
         public Builder securityGroups(@Nullable List<String> securityGroups) {
-            this.securityGroups = Input.ofNullable(securityGroups);
+            this.securityGroups = Output.ofNullable(securityGroups);
             return this;
         }
 
-        public Builder subnets(Input<List<String>> subnets) {
+        public Builder subnets(Output<List<String>> subnets) {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
 
         public Builder subnets(List<String> subnets) {
-            this.subnets = Input.of(Objects.requireNonNull(subnets));
+            this.subnets = Output.of(Objects.requireNonNull(subnets));
             return this;
         }
         public TaskSetNetworkConfigurationArgs build() {

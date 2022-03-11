@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class AudioEncoderAacArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="bitrateKbps")
-      private final @Nullable Input<String> bitrateKbps;
+      private final @Nullable Output<String> bitrateKbps;
 
-    public Input<String> getBitrateKbps() {
-        return this.bitrateKbps == null ? Input.empty() : this.bitrateKbps;
+    public Output<String> getBitrateKbps() {
+        return this.bitrateKbps == null ? Output.empty() : this.bitrateKbps;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class AudioEncoderAacArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public AudioEncoderAacArgs(
-        @Nullable Input<String> bitrateKbps,
-        Input<String> type) {
+        @Nullable Output<String> bitrateKbps,
+        Output<String> type) {
         this.bitrateKbps = bitrateKbps;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private AudioEncoderAacArgs() {
-        this.bitrateKbps = Input.empty();
-        this.type = Input.empty();
+        this.bitrateKbps = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class AudioEncoderAacArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bitrateKbps;
-        private Input<String> type;
+        private @Nullable Output<String> bitrateKbps;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class AudioEncoderAacArgs extends io.pulumi.resources.ResourceArgs 
     	      this.type = defaults.type;
         }
 
-        public Builder bitrateKbps(@Nullable Input<String> bitrateKbps) {
+        public Builder bitrateKbps(@Nullable Output<String> bitrateKbps) {
             this.bitrateKbps = bitrateKbps;
             return this;
         }
 
         public Builder bitrateKbps(@Nullable String bitrateKbps) {
-            this.bitrateKbps = Input.ofNullable(bitrateKbps);
+            this.bitrateKbps = Output.ofNullable(bitrateKbps);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public AudioEncoderAacArgs build() {

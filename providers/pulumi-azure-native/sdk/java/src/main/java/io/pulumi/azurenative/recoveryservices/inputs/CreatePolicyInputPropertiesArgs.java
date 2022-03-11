@@ -11,7 +11,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.InMageAzureV2PolicyInputArg
 import io.pulumi.azurenative.recoveryservices.inputs.InMagePolicyInputArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.InMageRcmPolicyCreationInputArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.VMwareCbtPolicyCreationInputArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
@@ -31,18 +31,18 @@ public final class CreatePolicyInputPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="providerSpecificInput")
-      private final @Nullable Input<Object> providerSpecificInput;
+      private final @Nullable Output<Object> providerSpecificInput;
 
-    public Input<Object> getProviderSpecificInput() {
-        return this.providerSpecificInput == null ? Input.empty() : this.providerSpecificInput;
+    public Output<Object> getProviderSpecificInput() {
+        return this.providerSpecificInput == null ? Output.empty() : this.providerSpecificInput;
     }
 
-    public CreatePolicyInputPropertiesArgs(@Nullable Input<Object> providerSpecificInput) {
+    public CreatePolicyInputPropertiesArgs(@Nullable Output<Object> providerSpecificInput) {
         this.providerSpecificInput = providerSpecificInput;
     }
 
     private CreatePolicyInputPropertiesArgs() {
-        this.providerSpecificInput = Input.empty();
+        this.providerSpecificInput = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +54,7 @@ public final class CreatePolicyInputPropertiesArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> providerSpecificInput;
+        private @Nullable Output<Object> providerSpecificInput;
 
         public Builder() {
     	      // Empty
@@ -65,13 +65,13 @@ public final class CreatePolicyInputPropertiesArgs extends io.pulumi.resources.R
     	      this.providerSpecificInput = defaults.providerSpecificInput;
         }
 
-        public Builder providerSpecificInput(@Nullable Input<Object> providerSpecificInput) {
+        public Builder providerSpecificInput(@Nullable Output<Object> providerSpecificInput) {
             this.providerSpecificInput = providerSpecificInput;
             return this;
         }
 
         public Builder providerSpecificInput(@Nullable Object providerSpecificInput) {
-            this.providerSpecificInput = Input.ofNullable(providerSpecificInput);
+            this.providerSpecificInput = Output.ofNullable(providerSpecificInput);
             return this;
         }
         public CreatePolicyInputPropertiesArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datafusion_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datafusion_v1.enums.AcceleratorAcceleratorType;
 import io.pulumi.googlenative.datafusion_v1.enums.AcceleratorState;
@@ -24,10 +24,10 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="acceleratorType")
-      private final @Nullable Input<AcceleratorAcceleratorType> acceleratorType;
+      private final @Nullable Output<AcceleratorAcceleratorType> acceleratorType;
 
-    public Input<AcceleratorAcceleratorType> getAcceleratorType() {
-        return this.acceleratorType == null ? Input.empty() : this.acceleratorType;
+    public Output<AcceleratorAcceleratorType> getAcceleratorType() {
+        return this.acceleratorType == null ? Output.empty() : this.acceleratorType;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<AcceleratorState> state;
+      private final @Nullable Output<AcceleratorState> state;
 
-    public Input<AcceleratorState> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<AcceleratorState> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     public AcceleratorArgs(
-        @Nullable Input<AcceleratorAcceleratorType> acceleratorType,
-        @Nullable Input<AcceleratorState> state) {
+        @Nullable Output<AcceleratorAcceleratorType> acceleratorType,
+        @Nullable Output<AcceleratorState> state) {
         this.acceleratorType = acceleratorType;
         this.state = state;
     }
 
     private AcceleratorArgs() {
-        this.acceleratorType = Input.empty();
-        this.state = Input.empty();
+        this.acceleratorType = Output.empty();
+        this.state = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<AcceleratorAcceleratorType> acceleratorType;
-        private @Nullable Input<AcceleratorState> state;
+        private @Nullable Output<AcceleratorAcceleratorType> acceleratorType;
+        private @Nullable Output<AcceleratorState> state;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.state = defaults.state;
         }
 
-        public Builder acceleratorType(@Nullable Input<AcceleratorAcceleratorType> acceleratorType) {
+        public Builder acceleratorType(@Nullable Output<AcceleratorAcceleratorType> acceleratorType) {
             this.acceleratorType = acceleratorType;
             return this;
         }
 
         public Builder acceleratorType(@Nullable AcceleratorAcceleratorType acceleratorType) {
-            this.acceleratorType = Input.ofNullable(acceleratorType);
+            this.acceleratorType = Output.ofNullable(acceleratorType);
             return this;
         }
 
-        public Builder state(@Nullable Input<AcceleratorState> state) {
+        public Builder state(@Nullable Output<AcceleratorState> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable AcceleratorState state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
         public AcceleratorArgs build() {

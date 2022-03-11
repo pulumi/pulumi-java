@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticache.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessString")
-      private final @Nullable Input<String> accessString;
+      private final @Nullable Output<String> accessString;
 
-    public Input<String> getAccessString() {
-        return this.accessString == null ? Input.empty() : this.accessString;
+    public Output<String> getAccessString() {
+        return this.accessString == null ? Output.empty() : this.accessString;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engine")
-      private final @Nullable Input<String> engine;
+      private final @Nullable Output<String> engine;
 
-    public Input<String> getEngine() {
-        return this.engine == null ? Input.empty() : this.engine;
+    public Output<String> getEngine() {
+        return this.engine == null ? Output.empty() : this.engine;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="noPasswordRequired")
-      private final @Nullable Input<Boolean> noPasswordRequired;
+      private final @Nullable Output<Boolean> noPasswordRequired;
 
-    public Input<Boolean> getNoPasswordRequired() {
-        return this.noPasswordRequired == null ? Input.empty() : this.noPasswordRequired;
+    public Output<Boolean> getNoPasswordRequired() {
+        return this.noPasswordRequired == null ? Output.empty() : this.noPasswordRequired;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="passwords")
-      private final @Nullable Input<List<String>> passwords;
+      private final @Nullable Output<List<String>> passwords;
 
-    public Input<List<String>> getPasswords() {
-        return this.passwords == null ? Input.empty() : this.passwords;
+    public Output<List<String>> getPasswords() {
+        return this.passwords == null ? Output.empty() : this.passwords;
     }
 
     /**
@@ -77,17 +77,17 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userId")
-      private final @Nullable Input<String> userId;
+      private final @Nullable Output<String> userId;
 
-    public Input<String> getUserId() {
-        return this.userId == null ? Input.empty() : this.userId;
+    public Output<String> getUserId() {
+        return this.userId == null ? Output.empty() : this.userId;
     }
 
     /**
@@ -106,22 +106,22 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userName")
-      private final @Nullable Input<String> userName;
+      private final @Nullable Output<String> userName;
 
-    public Input<String> getUserName() {
-        return this.userName == null ? Input.empty() : this.userName;
+    public Output<String> getUserName() {
+        return this.userName == null ? Output.empty() : this.userName;
     }
 
     public UserState(
-        @Nullable Input<String> accessString,
-        @Nullable Input<String> arn,
-        @Nullable Input<String> engine,
-        @Nullable Input<Boolean> noPasswordRequired,
-        @Nullable Input<List<String>> passwords,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> userId,
-        @Nullable Input<String> userName) {
+        @Nullable Output<String> accessString,
+        @Nullable Output<String> arn,
+        @Nullable Output<String> engine,
+        @Nullable Output<Boolean> noPasswordRequired,
+        @Nullable Output<List<String>> passwords,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> userId,
+        @Nullable Output<String> userName) {
         this.accessString = accessString;
         this.arn = arn;
         this.engine = engine;
@@ -134,15 +134,15 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserState() {
-        this.accessString = Input.empty();
-        this.arn = Input.empty();
-        this.engine = Input.empty();
-        this.noPasswordRequired = Input.empty();
-        this.passwords = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.userId = Input.empty();
-        this.userName = Input.empty();
+        this.accessString = Output.empty();
+        this.arn = Output.empty();
+        this.engine = Output.empty();
+        this.noPasswordRequired = Output.empty();
+        this.passwords = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.userId = Output.empty();
+        this.userName = Output.empty();
     }
 
     public static Builder builder() {
@@ -154,15 +154,15 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accessString;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> engine;
-        private @Nullable Input<Boolean> noPasswordRequired;
-        private @Nullable Input<List<String>> passwords;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> userId;
-        private @Nullable Input<String> userName;
+        private @Nullable Output<String> accessString;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> engine;
+        private @Nullable Output<Boolean> noPasswordRequired;
+        private @Nullable Output<List<String>> passwords;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> userId;
+        private @Nullable Output<String> userName;
 
         public Builder() {
     	      // Empty
@@ -181,93 +181,93 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     	      this.userName = defaults.userName;
         }
 
-        public Builder accessString(@Nullable Input<String> accessString) {
+        public Builder accessString(@Nullable Output<String> accessString) {
             this.accessString = accessString;
             return this;
         }
 
         public Builder accessString(@Nullable String accessString) {
-            this.accessString = Input.ofNullable(accessString);
+            this.accessString = Output.ofNullable(accessString);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder engine(@Nullable Input<String> engine) {
+        public Builder engine(@Nullable Output<String> engine) {
             this.engine = engine;
             return this;
         }
 
         public Builder engine(@Nullable String engine) {
-            this.engine = Input.ofNullable(engine);
+            this.engine = Output.ofNullable(engine);
             return this;
         }
 
-        public Builder noPasswordRequired(@Nullable Input<Boolean> noPasswordRequired) {
+        public Builder noPasswordRequired(@Nullable Output<Boolean> noPasswordRequired) {
             this.noPasswordRequired = noPasswordRequired;
             return this;
         }
 
         public Builder noPasswordRequired(@Nullable Boolean noPasswordRequired) {
-            this.noPasswordRequired = Input.ofNullable(noPasswordRequired);
+            this.noPasswordRequired = Output.ofNullable(noPasswordRequired);
             return this;
         }
 
-        public Builder passwords(@Nullable Input<List<String>> passwords) {
+        public Builder passwords(@Nullable Output<List<String>> passwords) {
             this.passwords = passwords;
             return this;
         }
 
         public Builder passwords(@Nullable List<String> passwords) {
-            this.passwords = Input.ofNullable(passwords);
+            this.passwords = Output.ofNullable(passwords);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder userId(@Nullable Input<String> userId) {
+        public Builder userId(@Nullable Output<String> userId) {
             this.userId = userId;
             return this;
         }
 
         public Builder userId(@Nullable String userId) {
-            this.userId = Input.ofNullable(userId);
+            this.userId = Output.ofNullable(userId);
             return this;
         }
 
-        public Builder userName(@Nullable Input<String> userName) {
+        public Builder userName(@Nullable Output<String> userName) {
             this.userName = userName;
             return this;
         }
 
         public Builder userName(@Nullable String userName) {
-            this.userName = Input.ofNullable(userName);
+            this.userName = Output.ofNullable(userName);
             return this;
         }
         public UserState build() {

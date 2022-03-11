@@ -7,7 +7,7 @@ import io.pulumi.aws.wafv2.inputs.RuleGroupRuleActionGetArgs;
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleRuleLabelGetArgs;
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementGetArgs;
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleVisibilityConfigGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,9 +25,9 @@ public final class RuleGroupRuleGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="action", required=true)
-      private final Input<RuleGroupRuleActionGetArgs> action;
+      private final Output<RuleGroupRuleActionGetArgs> action;
 
-    public Input<RuleGroupRuleActionGetArgs> getAction() {
+    public Output<RuleGroupRuleActionGetArgs> getAction() {
         return this.action;
     }
 
@@ -36,9 +36,9 @@ public final class RuleGroupRuleGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -47,9 +47,9 @@ public final class RuleGroupRuleGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="priority", required=true)
-      private final Input<Integer> priority;
+      private final Output<Integer> priority;
 
-    public Input<Integer> getPriority() {
+    public Output<Integer> getPriority() {
         return this.priority;
     }
 
@@ -58,10 +58,10 @@ public final class RuleGroupRuleGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ruleLabels")
-      private final @Nullable Input<List<RuleGroupRuleRuleLabelGetArgs>> ruleLabels;
+      private final @Nullable Output<List<RuleGroupRuleRuleLabelGetArgs>> ruleLabels;
 
-    public Input<List<RuleGroupRuleRuleLabelGetArgs>> getRuleLabels() {
-        return this.ruleLabels == null ? Input.empty() : this.ruleLabels;
+    public Output<List<RuleGroupRuleRuleLabelGetArgs>> getRuleLabels() {
+        return this.ruleLabels == null ? Output.empty() : this.ruleLabels;
     }
 
     /**
@@ -69,9 +69,9 @@ public final class RuleGroupRuleGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="statement", required=true)
-      private final Input<RuleGroupRuleStatementGetArgs> statement;
+      private final Output<RuleGroupRuleStatementGetArgs> statement;
 
-    public Input<RuleGroupRuleStatementGetArgs> getStatement() {
+    public Output<RuleGroupRuleStatementGetArgs> getStatement() {
         return this.statement;
     }
 
@@ -80,19 +80,19 @@ public final class RuleGroupRuleGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="visibilityConfig", required=true)
-      private final Input<RuleGroupRuleVisibilityConfigGetArgs> visibilityConfig;
+      private final Output<RuleGroupRuleVisibilityConfigGetArgs> visibilityConfig;
 
-    public Input<RuleGroupRuleVisibilityConfigGetArgs> getVisibilityConfig() {
+    public Output<RuleGroupRuleVisibilityConfigGetArgs> getVisibilityConfig() {
         return this.visibilityConfig;
     }
 
     public RuleGroupRuleGetArgs(
-        Input<RuleGroupRuleActionGetArgs> action,
-        Input<String> name,
-        Input<Integer> priority,
-        @Nullable Input<List<RuleGroupRuleRuleLabelGetArgs>> ruleLabels,
-        Input<RuleGroupRuleStatementGetArgs> statement,
-        Input<RuleGroupRuleVisibilityConfigGetArgs> visibilityConfig) {
+        Output<RuleGroupRuleActionGetArgs> action,
+        Output<String> name,
+        Output<Integer> priority,
+        @Nullable Output<List<RuleGroupRuleRuleLabelGetArgs>> ruleLabels,
+        Output<RuleGroupRuleStatementGetArgs> statement,
+        Output<RuleGroupRuleVisibilityConfigGetArgs> visibilityConfig) {
         this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
@@ -102,12 +102,12 @@ public final class RuleGroupRuleGetArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private RuleGroupRuleGetArgs() {
-        this.action = Input.empty();
-        this.name = Input.empty();
-        this.priority = Input.empty();
-        this.ruleLabels = Input.empty();
-        this.statement = Input.empty();
-        this.visibilityConfig = Input.empty();
+        this.action = Output.empty();
+        this.name = Output.empty();
+        this.priority = Output.empty();
+        this.ruleLabels = Output.empty();
+        this.statement = Output.empty();
+        this.visibilityConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -119,12 +119,12 @@ public final class RuleGroupRuleGetArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<RuleGroupRuleActionGetArgs> action;
-        private Input<String> name;
-        private Input<Integer> priority;
-        private @Nullable Input<List<RuleGroupRuleRuleLabelGetArgs>> ruleLabels;
-        private Input<RuleGroupRuleStatementGetArgs> statement;
-        private Input<RuleGroupRuleVisibilityConfigGetArgs> visibilityConfig;
+        private Output<RuleGroupRuleActionGetArgs> action;
+        private Output<String> name;
+        private Output<Integer> priority;
+        private @Nullable Output<List<RuleGroupRuleRuleLabelGetArgs>> ruleLabels;
+        private Output<RuleGroupRuleStatementGetArgs> statement;
+        private Output<RuleGroupRuleVisibilityConfigGetArgs> visibilityConfig;
 
         public Builder() {
     	      // Empty
@@ -140,63 +140,63 @@ public final class RuleGroupRuleGetArgs extends io.pulumi.resources.ResourceArgs
     	      this.visibilityConfig = defaults.visibilityConfig;
         }
 
-        public Builder action(Input<RuleGroupRuleActionGetArgs> action) {
+        public Builder action(Output<RuleGroupRuleActionGetArgs> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
         public Builder action(RuleGroupRuleActionGetArgs action) {
-            this.action = Input.of(Objects.requireNonNull(action));
+            this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder priority(Input<Integer> priority) {
+        public Builder priority(Output<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
         public Builder priority(Integer priority) {
-            this.priority = Input.of(Objects.requireNonNull(priority));
+            this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
         }
 
-        public Builder ruleLabels(@Nullable Input<List<RuleGroupRuleRuleLabelGetArgs>> ruleLabels) {
+        public Builder ruleLabels(@Nullable Output<List<RuleGroupRuleRuleLabelGetArgs>> ruleLabels) {
             this.ruleLabels = ruleLabels;
             return this;
         }
 
         public Builder ruleLabels(@Nullable List<RuleGroupRuleRuleLabelGetArgs> ruleLabels) {
-            this.ruleLabels = Input.ofNullable(ruleLabels);
+            this.ruleLabels = Output.ofNullable(ruleLabels);
             return this;
         }
 
-        public Builder statement(Input<RuleGroupRuleStatementGetArgs> statement) {
+        public Builder statement(Output<RuleGroupRuleStatementGetArgs> statement) {
             this.statement = Objects.requireNonNull(statement);
             return this;
         }
 
         public Builder statement(RuleGroupRuleStatementGetArgs statement) {
-            this.statement = Input.of(Objects.requireNonNull(statement));
+            this.statement = Output.of(Objects.requireNonNull(statement));
             return this;
         }
 
-        public Builder visibilityConfig(Input<RuleGroupRuleVisibilityConfigGetArgs> visibilityConfig) {
+        public Builder visibilityConfig(Output<RuleGroupRuleVisibilityConfigGetArgs> visibilityConfig) {
             this.visibilityConfig = Objects.requireNonNull(visibilityConfig);
             return this;
         }
 
         public Builder visibilityConfig(RuleGroupRuleVisibilityConfigGetArgs visibilityConfig) {
-            this.visibilityConfig = Input.of(Objects.requireNonNull(visibilityConfig));
+            this.visibilityConfig = Output.of(Objects.requireNonNull(visibilityConfig));
             return this;
         }
         public RuleGroupRuleGetArgs build() {

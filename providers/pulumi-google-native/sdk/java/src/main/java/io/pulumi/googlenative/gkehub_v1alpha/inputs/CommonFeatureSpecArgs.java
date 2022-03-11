@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.gkehub_v1alpha.inputs.AppDevExperienceFeatureSpecArgs;
 import io.pulumi.googlenative.gkehub_v1alpha.inputs.CloudAuditLoggingFeatureSpecArgs;
@@ -25,10 +25,10 @@ public final class CommonFeatureSpecArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="appdevexperience")
-      private final @Nullable Input<AppDevExperienceFeatureSpecArgs> appdevexperience;
+      private final @Nullable Output<AppDevExperienceFeatureSpecArgs> appdevexperience;
 
-    public Input<AppDevExperienceFeatureSpecArgs> getAppdevexperience() {
-        return this.appdevexperience == null ? Input.empty() : this.appdevexperience;
+    public Output<AppDevExperienceFeatureSpecArgs> getAppdevexperience() {
+        return this.appdevexperience == null ? Output.empty() : this.appdevexperience;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class CommonFeatureSpecArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="cloudauditlogging")
-      private final @Nullable Input<CloudAuditLoggingFeatureSpecArgs> cloudauditlogging;
+      private final @Nullable Output<CloudAuditLoggingFeatureSpecArgs> cloudauditlogging;
 
-    public Input<CloudAuditLoggingFeatureSpecArgs> getCloudauditlogging() {
-        return this.cloudauditlogging == null ? Input.empty() : this.cloudauditlogging;
+    public Output<CloudAuditLoggingFeatureSpecArgs> getCloudauditlogging() {
+        return this.cloudauditlogging == null ? Output.empty() : this.cloudauditlogging;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class CommonFeatureSpecArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="multiclusteringress")
-      private final @Nullable Input<MultiClusterIngressFeatureSpecArgs> multiclusteringress;
+      private final @Nullable Output<MultiClusterIngressFeatureSpecArgs> multiclusteringress;
 
-    public Input<MultiClusterIngressFeatureSpecArgs> getMulticlusteringress() {
-        return this.multiclusteringress == null ? Input.empty() : this.multiclusteringress;
+    public Output<MultiClusterIngressFeatureSpecArgs> getMulticlusteringress() {
+        return this.multiclusteringress == null ? Output.empty() : this.multiclusteringress;
     }
 
     public CommonFeatureSpecArgs(
-        @Nullable Input<AppDevExperienceFeatureSpecArgs> appdevexperience,
-        @Nullable Input<CloudAuditLoggingFeatureSpecArgs> cloudauditlogging,
-        @Nullable Input<MultiClusterIngressFeatureSpecArgs> multiclusteringress) {
+        @Nullable Output<AppDevExperienceFeatureSpecArgs> appdevexperience,
+        @Nullable Output<CloudAuditLoggingFeatureSpecArgs> cloudauditlogging,
+        @Nullable Output<MultiClusterIngressFeatureSpecArgs> multiclusteringress) {
         this.appdevexperience = appdevexperience;
         this.cloudauditlogging = cloudauditlogging;
         this.multiclusteringress = multiclusteringress;
     }
 
     private CommonFeatureSpecArgs() {
-        this.appdevexperience = Input.empty();
-        this.cloudauditlogging = Input.empty();
-        this.multiclusteringress = Input.empty();
+        this.appdevexperience = Output.empty();
+        this.cloudauditlogging = Output.empty();
+        this.multiclusteringress = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class CommonFeatureSpecArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<AppDevExperienceFeatureSpecArgs> appdevexperience;
-        private @Nullable Input<CloudAuditLoggingFeatureSpecArgs> cloudauditlogging;
-        private @Nullable Input<MultiClusterIngressFeatureSpecArgs> multiclusteringress;
+        private @Nullable Output<AppDevExperienceFeatureSpecArgs> appdevexperience;
+        private @Nullable Output<CloudAuditLoggingFeatureSpecArgs> cloudauditlogging;
+        private @Nullable Output<MultiClusterIngressFeatureSpecArgs> multiclusteringress;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class CommonFeatureSpecArgs extends io.pulumi.resources.ResourceArg
     	      this.multiclusteringress = defaults.multiclusteringress;
         }
 
-        public Builder appdevexperience(@Nullable Input<AppDevExperienceFeatureSpecArgs> appdevexperience) {
+        public Builder appdevexperience(@Nullable Output<AppDevExperienceFeatureSpecArgs> appdevexperience) {
             this.appdevexperience = appdevexperience;
             return this;
         }
 
         public Builder appdevexperience(@Nullable AppDevExperienceFeatureSpecArgs appdevexperience) {
-            this.appdevexperience = Input.ofNullable(appdevexperience);
+            this.appdevexperience = Output.ofNullable(appdevexperience);
             return this;
         }
 
-        public Builder cloudauditlogging(@Nullable Input<CloudAuditLoggingFeatureSpecArgs> cloudauditlogging) {
+        public Builder cloudauditlogging(@Nullable Output<CloudAuditLoggingFeatureSpecArgs> cloudauditlogging) {
             this.cloudauditlogging = cloudauditlogging;
             return this;
         }
 
         public Builder cloudauditlogging(@Nullable CloudAuditLoggingFeatureSpecArgs cloudauditlogging) {
-            this.cloudauditlogging = Input.ofNullable(cloudauditlogging);
+            this.cloudauditlogging = Output.ofNullable(cloudauditlogging);
             return this;
         }
 
-        public Builder multiclusteringress(@Nullable Input<MultiClusterIngressFeatureSpecArgs> multiclusteringress) {
+        public Builder multiclusteringress(@Nullable Output<MultiClusterIngressFeatureSpecArgs> multiclusteringress) {
             this.multiclusteringress = multiclusteringress;
             return this;
         }
 
         public Builder multiclusteringress(@Nullable MultiClusterIngressFeatureSpecArgs multiclusteringress) {
-            this.multiclusteringress = Input.ofNullable(multiclusteringress);
+            this.multiclusteringress = Output.ofNullable(multiclusteringress);
             return this;
         }
         public CommonFeatureSpecArgs build() {

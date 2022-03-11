@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class DailyMaintenanceWindowArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="startTime")
-      private final @Nullable Input<String> startTime;
+      private final @Nullable Output<String> startTime;
 
-    public Input<String> getStartTime() {
-        return this.startTime == null ? Input.empty() : this.startTime;
+    public Output<String> getStartTime() {
+        return this.startTime == null ? Output.empty() : this.startTime;
     }
 
-    public DailyMaintenanceWindowArgs(@Nullable Input<String> startTime) {
+    public DailyMaintenanceWindowArgs(@Nullable Output<String> startTime) {
         this.startTime = startTime;
     }
 
     private DailyMaintenanceWindowArgs() {
-        this.startTime = Input.empty();
+        this.startTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class DailyMaintenanceWindowArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> startTime;
+        private @Nullable Output<String> startTime;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class DailyMaintenanceWindowArgs extends io.pulumi.resources.Resour
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder startTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Input.ofNullable(startTime);
+            this.startTime = Output.ofNullable(startTime);
             return this;
         }
         public DailyMaintenanceWindowArgs build() {

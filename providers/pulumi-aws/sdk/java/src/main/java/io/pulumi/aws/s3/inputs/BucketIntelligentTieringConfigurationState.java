@@ -5,7 +5,7 @@ package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.aws.s3.inputs.BucketIntelligentTieringConfigurationFilterGetArgs;
 import io.pulumi.aws.s3.inputs.BucketIntelligentTieringConfigurationTieringGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class BucketIntelligentTieringConfigurationState extends io.pulumi.
      * 
      */
     @InputImport(name="bucket")
-      private final @Nullable Input<String> bucket;
+      private final @Nullable Output<String> bucket;
 
-    public Input<String> getBucket() {
-        return this.bucket == null ? Input.empty() : this.bucket;
+    public Output<String> getBucket() {
+        return this.bucket == null ? Output.empty() : this.bucket;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class BucketIntelligentTieringConfigurationState extends io.pulumi.
      * 
      */
     @InputImport(name="filter")
-      private final @Nullable Input<BucketIntelligentTieringConfigurationFilterGetArgs> filter;
+      private final @Nullable Output<BucketIntelligentTieringConfigurationFilterGetArgs> filter;
 
-    public Input<BucketIntelligentTieringConfigurationFilterGetArgs> getFilter() {
-        return this.filter == null ? Input.empty() : this.filter;
+    public Output<BucketIntelligentTieringConfigurationFilterGetArgs> getFilter() {
+        return this.filter == null ? Output.empty() : this.filter;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class BucketIntelligentTieringConfigurationState extends io.pulumi.
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class BucketIntelligentTieringConfigurationState extends io.pulumi.
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -66,18 +66,18 @@ public final class BucketIntelligentTieringConfigurationState extends io.pulumi.
      * 
      */
     @InputImport(name="tierings")
-      private final @Nullable Input<List<BucketIntelligentTieringConfigurationTieringGetArgs>> tierings;
+      private final @Nullable Output<List<BucketIntelligentTieringConfigurationTieringGetArgs>> tierings;
 
-    public Input<List<BucketIntelligentTieringConfigurationTieringGetArgs>> getTierings() {
-        return this.tierings == null ? Input.empty() : this.tierings;
+    public Output<List<BucketIntelligentTieringConfigurationTieringGetArgs>> getTierings() {
+        return this.tierings == null ? Output.empty() : this.tierings;
     }
 
     public BucketIntelligentTieringConfigurationState(
-        @Nullable Input<String> bucket,
-        @Nullable Input<BucketIntelligentTieringConfigurationFilterGetArgs> filter,
-        @Nullable Input<String> name,
-        @Nullable Input<String> status,
-        @Nullable Input<List<BucketIntelligentTieringConfigurationTieringGetArgs>> tierings) {
+        @Nullable Output<String> bucket,
+        @Nullable Output<BucketIntelligentTieringConfigurationFilterGetArgs> filter,
+        @Nullable Output<String> name,
+        @Nullable Output<String> status,
+        @Nullable Output<List<BucketIntelligentTieringConfigurationTieringGetArgs>> tierings) {
         this.bucket = bucket;
         this.filter = filter;
         this.name = name;
@@ -86,11 +86,11 @@ public final class BucketIntelligentTieringConfigurationState extends io.pulumi.
     }
 
     private BucketIntelligentTieringConfigurationState() {
-        this.bucket = Input.empty();
-        this.filter = Input.empty();
-        this.name = Input.empty();
-        this.status = Input.empty();
-        this.tierings = Input.empty();
+        this.bucket = Output.empty();
+        this.filter = Output.empty();
+        this.name = Output.empty();
+        this.status = Output.empty();
+        this.tierings = Output.empty();
     }
 
     public static Builder builder() {
@@ -102,11 +102,11 @@ public final class BucketIntelligentTieringConfigurationState extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bucket;
-        private @Nullable Input<BucketIntelligentTieringConfigurationFilterGetArgs> filter;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> status;
-        private @Nullable Input<List<BucketIntelligentTieringConfigurationTieringGetArgs>> tierings;
+        private @Nullable Output<String> bucket;
+        private @Nullable Output<BucketIntelligentTieringConfigurationFilterGetArgs> filter;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> status;
+        private @Nullable Output<List<BucketIntelligentTieringConfigurationTieringGetArgs>> tierings;
 
         public Builder() {
     	      // Empty
@@ -121,53 +121,53 @@ public final class BucketIntelligentTieringConfigurationState extends io.pulumi.
     	      this.tierings = defaults.tierings;
         }
 
-        public Builder bucket(@Nullable Input<String> bucket) {
+        public Builder bucket(@Nullable Output<String> bucket) {
             this.bucket = bucket;
             return this;
         }
 
         public Builder bucket(@Nullable String bucket) {
-            this.bucket = Input.ofNullable(bucket);
+            this.bucket = Output.ofNullable(bucket);
             return this;
         }
 
-        public Builder filter(@Nullable Input<BucketIntelligentTieringConfigurationFilterGetArgs> filter) {
+        public Builder filter(@Nullable Output<BucketIntelligentTieringConfigurationFilterGetArgs> filter) {
             this.filter = filter;
             return this;
         }
 
         public Builder filter(@Nullable BucketIntelligentTieringConfigurationFilterGetArgs filter) {
-            this.filter = Input.ofNullable(filter);
+            this.filter = Output.ofNullable(filter);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder tierings(@Nullable Input<List<BucketIntelligentTieringConfigurationTieringGetArgs>> tierings) {
+        public Builder tierings(@Nullable Output<List<BucketIntelligentTieringConfigurationTieringGetArgs>> tierings) {
             this.tierings = tierings;
             return this;
         }
 
         public Builder tierings(@Nullable List<BucketIntelligentTieringConfigurationTieringGetArgs> tierings) {
-            this.tierings = Input.ofNullable(tierings);
+            this.tierings = Output.ofNullable(tierings);
             return this;
         }
         public BucketIntelligentTieringConfigurationState build() {

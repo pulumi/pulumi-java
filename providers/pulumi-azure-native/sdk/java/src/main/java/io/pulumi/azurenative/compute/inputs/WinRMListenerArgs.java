@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.enums.ProtocolTypes;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class WinRMListenerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateUrl")
-      private final @Nullable Input<String> certificateUrl;
+      private final @Nullable Output<String> certificateUrl;
 
-    public Input<String> getCertificateUrl() {
-        return this.certificateUrl == null ? Input.empty() : this.certificateUrl;
+    public Output<String> getCertificateUrl() {
+        return this.certificateUrl == null ? Output.empty() : this.certificateUrl;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class WinRMListenerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol")
-      private final @Nullable Input<ProtocolTypes> protocol;
+      private final @Nullable Output<ProtocolTypes> protocol;
 
-    public Input<ProtocolTypes> getProtocol() {
-        return this.protocol == null ? Input.empty() : this.protocol;
+    public Output<ProtocolTypes> getProtocol() {
+        return this.protocol == null ? Output.empty() : this.protocol;
     }
 
     public WinRMListenerArgs(
-        @Nullable Input<String> certificateUrl,
-        @Nullable Input<ProtocolTypes> protocol) {
+        @Nullable Output<String> certificateUrl,
+        @Nullable Output<ProtocolTypes> protocol) {
         this.certificateUrl = certificateUrl;
         this.protocol = protocol;
     }
 
     private WinRMListenerArgs() {
-        this.certificateUrl = Input.empty();
-        this.protocol = Input.empty();
+        this.certificateUrl = Output.empty();
+        this.protocol = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class WinRMListenerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> certificateUrl;
-        private @Nullable Input<ProtocolTypes> protocol;
+        private @Nullable Output<String> certificateUrl;
+        private @Nullable Output<ProtocolTypes> protocol;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class WinRMListenerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder certificateUrl(@Nullable Input<String> certificateUrl) {
+        public Builder certificateUrl(@Nullable Output<String> certificateUrl) {
             this.certificateUrl = certificateUrl;
             return this;
         }
 
         public Builder certificateUrl(@Nullable String certificateUrl) {
-            this.certificateUrl = Input.ofNullable(certificateUrl);
+            this.certificateUrl = Output.ofNullable(certificateUrl);
             return this;
         }
 
-        public Builder protocol(@Nullable Input<ProtocolTypes> protocol) {
+        public Builder protocol(@Nullable Output<ProtocolTypes> protocol) {
             this.protocol = protocol;
             return this;
         }
 
         public Builder protocol(@Nullable ProtocolTypes protocol) {
-            this.protocol = Input.ofNullable(protocol);
+            this.protocol = Output.ofNullable(protocol);
             return this;
         }
         public WinRMListenerArgs build() {

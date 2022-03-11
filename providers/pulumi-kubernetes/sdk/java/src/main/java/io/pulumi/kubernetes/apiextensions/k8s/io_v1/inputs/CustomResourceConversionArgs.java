@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs.WebhookConversionArgs;
 import java.lang.String;
@@ -25,9 +25,9 @@ public final class CustomResourceConversionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="strategy", required=true)
-      private final Input<String> strategy;
+      private final Output<String> strategy;
 
-    public Input<String> getStrategy() {
+    public Output<String> getStrategy() {
         return this.strategy;
     }
 
@@ -36,22 +36,22 @@ public final class CustomResourceConversionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="webhook")
-      private final @Nullable Input<WebhookConversionArgs> webhook;
+      private final @Nullable Output<WebhookConversionArgs> webhook;
 
-    public Input<WebhookConversionArgs> getWebhook() {
-        return this.webhook == null ? Input.empty() : this.webhook;
+    public Output<WebhookConversionArgs> getWebhook() {
+        return this.webhook == null ? Output.empty() : this.webhook;
     }
 
     public CustomResourceConversionArgs(
-        Input<String> strategy,
-        @Nullable Input<WebhookConversionArgs> webhook) {
+        Output<String> strategy,
+        @Nullable Output<WebhookConversionArgs> webhook) {
         this.strategy = Objects.requireNonNull(strategy, "expected parameter 'strategy' to be non-null");
         this.webhook = webhook;
     }
 
     private CustomResourceConversionArgs() {
-        this.strategy = Input.empty();
-        this.webhook = Input.empty();
+        this.strategy = Output.empty();
+        this.webhook = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class CustomResourceConversionArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> strategy;
-        private @Nullable Input<WebhookConversionArgs> webhook;
+        private Output<String> strategy;
+        private @Nullable Output<WebhookConversionArgs> webhook;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class CustomResourceConversionArgs extends io.pulumi.resources.Reso
     	      this.webhook = defaults.webhook;
         }
 
-        public Builder strategy(Input<String> strategy) {
+        public Builder strategy(Output<String> strategy) {
             this.strategy = Objects.requireNonNull(strategy);
             return this;
         }
 
         public Builder strategy(String strategy) {
-            this.strategy = Input.of(Objects.requireNonNull(strategy));
+            this.strategy = Output.of(Objects.requireNonNull(strategy));
             return this;
         }
 
-        public Builder webhook(@Nullable Input<WebhookConversionArgs> webhook) {
+        public Builder webhook(@Nullable Output<WebhookConversionArgs> webhook) {
             this.webhook = webhook;
             return this;
         }
 
         public Builder webhook(@Nullable WebhookConversionArgs webhook) {
-            this.webhook = Input.ofNullable(webhook);
+            this.webhook = Output.ofNullable(webhook);
             return this;
         }
         public CustomResourceConversionArgs build() {

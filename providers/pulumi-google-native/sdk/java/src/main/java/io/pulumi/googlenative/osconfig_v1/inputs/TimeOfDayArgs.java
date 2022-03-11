@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class TimeOfDayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hours")
-      private final @Nullable Input<Integer> hours;
+      private final @Nullable Output<Integer> hours;
 
-    public Input<Integer> getHours() {
-        return this.hours == null ? Input.empty() : this.hours;
+    public Output<Integer> getHours() {
+        return this.hours == null ? Output.empty() : this.hours;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class TimeOfDayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minutes")
-      private final @Nullable Input<Integer> minutes;
+      private final @Nullable Output<Integer> minutes;
 
-    public Input<Integer> getMinutes() {
-        return this.minutes == null ? Input.empty() : this.minutes;
+    public Output<Integer> getMinutes() {
+        return this.minutes == null ? Output.empty() : this.minutes;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class TimeOfDayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nanos")
-      private final @Nullable Input<Integer> nanos;
+      private final @Nullable Output<Integer> nanos;
 
-    public Input<Integer> getNanos() {
-        return this.nanos == null ? Input.empty() : this.nanos;
+    public Output<Integer> getNanos() {
+        return this.nanos == null ? Output.empty() : this.nanos;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class TimeOfDayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="seconds")
-      private final @Nullable Input<Integer> seconds;
+      private final @Nullable Output<Integer> seconds;
 
-    public Input<Integer> getSeconds() {
-        return this.seconds == null ? Input.empty() : this.seconds;
+    public Output<Integer> getSeconds() {
+        return this.seconds == null ? Output.empty() : this.seconds;
     }
 
     public TimeOfDayArgs(
-        @Nullable Input<Integer> hours,
-        @Nullable Input<Integer> minutes,
-        @Nullable Input<Integer> nanos,
-        @Nullable Input<Integer> seconds) {
+        @Nullable Output<Integer> hours,
+        @Nullable Output<Integer> minutes,
+        @Nullable Output<Integer> nanos,
+        @Nullable Output<Integer> seconds) {
         this.hours = hours;
         this.minutes = minutes;
         this.nanos = nanos;
@@ -74,10 +74,10 @@ public final class TimeOfDayArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TimeOfDayArgs() {
-        this.hours = Input.empty();
-        this.minutes = Input.empty();
-        this.nanos = Input.empty();
-        this.seconds = Input.empty();
+        this.hours = Output.empty();
+        this.minutes = Output.empty();
+        this.nanos = Output.empty();
+        this.seconds = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class TimeOfDayArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> hours;
-        private @Nullable Input<Integer> minutes;
-        private @Nullable Input<Integer> nanos;
-        private @Nullable Input<Integer> seconds;
+        private @Nullable Output<Integer> hours;
+        private @Nullable Output<Integer> minutes;
+        private @Nullable Output<Integer> nanos;
+        private @Nullable Output<Integer> seconds;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class TimeOfDayArgs extends io.pulumi.resources.ResourceArgs {
     	      this.seconds = defaults.seconds;
         }
 
-        public Builder hours(@Nullable Input<Integer> hours) {
+        public Builder hours(@Nullable Output<Integer> hours) {
             this.hours = hours;
             return this;
         }
 
         public Builder hours(@Nullable Integer hours) {
-            this.hours = Input.ofNullable(hours);
+            this.hours = Output.ofNullable(hours);
             return this;
         }
 
-        public Builder minutes(@Nullable Input<Integer> minutes) {
+        public Builder minutes(@Nullable Output<Integer> minutes) {
             this.minutes = minutes;
             return this;
         }
 
         public Builder minutes(@Nullable Integer minutes) {
-            this.minutes = Input.ofNullable(minutes);
+            this.minutes = Output.ofNullable(minutes);
             return this;
         }
 
-        public Builder nanos(@Nullable Input<Integer> nanos) {
+        public Builder nanos(@Nullable Output<Integer> nanos) {
             this.nanos = nanos;
             return this;
         }
 
         public Builder nanos(@Nullable Integer nanos) {
-            this.nanos = Input.ofNullable(nanos);
+            this.nanos = Output.ofNullable(nanos);
             return this;
         }
 
-        public Builder seconds(@Nullable Input<Integer> seconds) {
+        public Builder seconds(@Nullable Output<Integer> seconds) {
             this.seconds = seconds;
             return this;
         }
 
         public Builder seconds(@Nullable Integer seconds) {
-            this.seconds = Input.ofNullable(seconds);
+            this.seconds = Output.ofNullable(seconds);
             return this;
         }
         public TimeOfDayArgs build() {

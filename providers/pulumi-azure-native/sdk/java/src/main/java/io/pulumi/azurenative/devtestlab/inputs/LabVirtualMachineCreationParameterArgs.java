@@ -9,7 +9,7 @@ import io.pulumi.azurenative.devtestlab.inputs.DataDiskPropertiesArgs;
 import io.pulumi.azurenative.devtestlab.inputs.GalleryImageReferenceArgs;
 import io.pulumi.azurenative.devtestlab.inputs.NetworkInterfacePropertiesArgs;
 import io.pulumi.azurenative.devtestlab.inputs.ScheduleCreationParameterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -32,10 +32,10 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="allowClaim")
-      private final @Nullable Input<Boolean> allowClaim;
+      private final @Nullable Output<Boolean> allowClaim;
 
-    public Input<Boolean> getAllowClaim() {
-        return this.allowClaim == null ? Input.empty() : this.allowClaim;
+    public Output<Boolean> getAllowClaim() {
+        return this.allowClaim == null ? Output.empty() : this.allowClaim;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="artifacts")
-      private final @Nullable Input<List<ArtifactInstallPropertiesArgs>> artifacts;
+      private final @Nullable Output<List<ArtifactInstallPropertiesArgs>> artifacts;
 
-    public Input<List<ArtifactInstallPropertiesArgs>> getArtifacts() {
-        return this.artifacts == null ? Input.empty() : this.artifacts;
+    public Output<List<ArtifactInstallPropertiesArgs>> getArtifacts() {
+        return this.artifacts == null ? Output.empty() : this.artifacts;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="bulkCreationParameters")
-      private final @Nullable Input<BulkCreationParametersArgs> bulkCreationParameters;
+      private final @Nullable Output<BulkCreationParametersArgs> bulkCreationParameters;
 
-    public Input<BulkCreationParametersArgs> getBulkCreationParameters() {
-        return this.bulkCreationParameters == null ? Input.empty() : this.bulkCreationParameters;
+    public Output<BulkCreationParametersArgs> getBulkCreationParameters() {
+        return this.bulkCreationParameters == null ? Output.empty() : this.bulkCreationParameters;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="createdDate")
-      private final @Nullable Input<String> createdDate;
+      private final @Nullable Output<String> createdDate;
 
-    public Input<String> getCreatedDate() {
-        return this.createdDate == null ? Input.empty() : this.createdDate;
+    public Output<String> getCreatedDate() {
+        return this.createdDate == null ? Output.empty() : this.createdDate;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="customImageId")
-      private final @Nullable Input<String> customImageId;
+      private final @Nullable Output<String> customImageId;
 
-    public Input<String> getCustomImageId() {
-        return this.customImageId == null ? Input.empty() : this.customImageId;
+    public Output<String> getCustomImageId() {
+        return this.customImageId == null ? Output.empty() : this.customImageId;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="dataDiskParameters")
-      private final @Nullable Input<List<DataDiskPropertiesArgs>> dataDiskParameters;
+      private final @Nullable Output<List<DataDiskPropertiesArgs>> dataDiskParameters;
 
-    public Input<List<DataDiskPropertiesArgs>> getDataDiskParameters() {
-        return this.dataDiskParameters == null ? Input.empty() : this.dataDiskParameters;
+    public Output<List<DataDiskPropertiesArgs>> getDataDiskParameters() {
+        return this.dataDiskParameters == null ? Output.empty() : this.dataDiskParameters;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="disallowPublicIpAddress")
-      private final @Nullable Input<Boolean> disallowPublicIpAddress;
+      private final @Nullable Output<Boolean> disallowPublicIpAddress;
 
-    public Input<Boolean> getDisallowPublicIpAddress() {
-        return this.disallowPublicIpAddress == null ? Input.empty() : this.disallowPublicIpAddress;
+    public Output<Boolean> getDisallowPublicIpAddress() {
+        return this.disallowPublicIpAddress == null ? Output.empty() : this.disallowPublicIpAddress;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="environmentId")
-      private final @Nullable Input<String> environmentId;
+      private final @Nullable Output<String> environmentId;
 
-    public Input<String> getEnvironmentId() {
-        return this.environmentId == null ? Input.empty() : this.environmentId;
+    public Output<String> getEnvironmentId() {
+        return this.environmentId == null ? Output.empty() : this.environmentId;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="expirationDate")
-      private final @Nullable Input<String> expirationDate;
+      private final @Nullable Output<String> expirationDate;
 
-    public Input<String> getExpirationDate() {
-        return this.expirationDate == null ? Input.empty() : this.expirationDate;
+    public Output<String> getExpirationDate() {
+        return this.expirationDate == null ? Output.empty() : this.expirationDate;
     }
 
     /**
@@ -131,10 +131,10 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="galleryImageReference")
-      private final @Nullable Input<GalleryImageReferenceArgs> galleryImageReference;
+      private final @Nullable Output<GalleryImageReferenceArgs> galleryImageReference;
 
-    public Input<GalleryImageReferenceArgs> getGalleryImageReference() {
-        return this.galleryImageReference == null ? Input.empty() : this.galleryImageReference;
+    public Output<GalleryImageReferenceArgs> getGalleryImageReference() {
+        return this.galleryImageReference == null ? Output.empty() : this.galleryImageReference;
     }
 
     /**
@@ -142,10 +142,10 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="isAuthenticationWithSshKey")
-      private final @Nullable Input<Boolean> isAuthenticationWithSshKey;
+      private final @Nullable Output<Boolean> isAuthenticationWithSshKey;
 
-    public Input<Boolean> getIsAuthenticationWithSshKey() {
-        return this.isAuthenticationWithSshKey == null ? Input.empty() : this.isAuthenticationWithSshKey;
+    public Output<Boolean> getIsAuthenticationWithSshKey() {
+        return this.isAuthenticationWithSshKey == null ? Output.empty() : this.isAuthenticationWithSshKey;
     }
 
     /**
@@ -153,10 +153,10 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="labSubnetName")
-      private final @Nullable Input<String> labSubnetName;
+      private final @Nullable Output<String> labSubnetName;
 
-    public Input<String> getLabSubnetName() {
-        return this.labSubnetName == null ? Input.empty() : this.labSubnetName;
+    public Output<String> getLabSubnetName() {
+        return this.labSubnetName == null ? Output.empty() : this.labSubnetName;
     }
 
     /**
@@ -164,10 +164,10 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="labVirtualNetworkId")
-      private final @Nullable Input<String> labVirtualNetworkId;
+      private final @Nullable Output<String> labVirtualNetworkId;
 
-    public Input<String> getLabVirtualNetworkId() {
-        return this.labVirtualNetworkId == null ? Input.empty() : this.labVirtualNetworkId;
+    public Output<String> getLabVirtualNetworkId() {
+        return this.labVirtualNetworkId == null ? Output.empty() : this.labVirtualNetworkId;
     }
 
     /**
@@ -175,10 +175,10 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -186,10 +186,10 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -197,10 +197,10 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="networkInterface")
-      private final @Nullable Input<NetworkInterfacePropertiesArgs> networkInterface;
+      private final @Nullable Output<NetworkInterfacePropertiesArgs> networkInterface;
 
-    public Input<NetworkInterfacePropertiesArgs> getNetworkInterface() {
-        return this.networkInterface == null ? Input.empty() : this.networkInterface;
+    public Output<NetworkInterfacePropertiesArgs> getNetworkInterface() {
+        return this.networkInterface == null ? Output.empty() : this.networkInterface;
     }
 
     /**
@@ -208,10 +208,10 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="notes")
-      private final @Nullable Input<String> notes;
+      private final @Nullable Output<String> notes;
 
-    public Input<String> getNotes() {
-        return this.notes == null ? Input.empty() : this.notes;
+    public Output<String> getNotes() {
+        return this.notes == null ? Output.empty() : this.notes;
     }
 
     /**
@@ -219,10 +219,10 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="ownerObjectId")
-      private final @Nullable Input<String> ownerObjectId;
+      private final @Nullable Output<String> ownerObjectId;
 
-    public Input<String> getOwnerObjectId() {
-        return this.ownerObjectId == null ? Input.empty() : this.ownerObjectId;
+    public Output<String> getOwnerObjectId() {
+        return this.ownerObjectId == null ? Output.empty() : this.ownerObjectId;
     }
 
     /**
@@ -230,10 +230,10 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="ownerUserPrincipalName")
-      private final @Nullable Input<String> ownerUserPrincipalName;
+      private final @Nullable Output<String> ownerUserPrincipalName;
 
-    public Input<String> getOwnerUserPrincipalName() {
-        return this.ownerUserPrincipalName == null ? Input.empty() : this.ownerUserPrincipalName;
+    public Output<String> getOwnerUserPrincipalName() {
+        return this.ownerUserPrincipalName == null ? Output.empty() : this.ownerUserPrincipalName;
     }
 
     /**
@@ -241,10 +241,10 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<String> password;
+      private final @Nullable Output<String> password;
 
-    public Input<String> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<String> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -252,10 +252,10 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="planId")
-      private final @Nullable Input<String> planId;
+      private final @Nullable Output<String> planId;
 
-    public Input<String> getPlanId() {
-        return this.planId == null ? Input.empty() : this.planId;
+    public Output<String> getPlanId() {
+        return this.planId == null ? Output.empty() : this.planId;
     }
 
     /**
@@ -263,10 +263,10 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="scheduleParameters")
-      private final @Nullable Input<List<ScheduleCreationParameterArgs>> scheduleParameters;
+      private final @Nullable Output<List<ScheduleCreationParameterArgs>> scheduleParameters;
 
-    public Input<List<ScheduleCreationParameterArgs>> getScheduleParameters() {
-        return this.scheduleParameters == null ? Input.empty() : this.scheduleParameters;
+    public Output<List<ScheduleCreationParameterArgs>> getScheduleParameters() {
+        return this.scheduleParameters == null ? Output.empty() : this.scheduleParameters;
     }
 
     /**
@@ -274,10 +274,10 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="size")
-      private final @Nullable Input<String> size;
+      private final @Nullable Output<String> size;
 
-    public Input<String> getSize() {
-        return this.size == null ? Input.empty() : this.size;
+    public Output<String> getSize() {
+        return this.size == null ? Output.empty() : this.size;
     }
 
     /**
@@ -285,10 +285,10 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="sshKey")
-      private final @Nullable Input<String> sshKey;
+      private final @Nullable Output<String> sshKey;
 
-    public Input<String> getSshKey() {
-        return this.sshKey == null ? Input.empty() : this.sshKey;
+    public Output<String> getSshKey() {
+        return this.sshKey == null ? Output.empty() : this.sshKey;
     }
 
     /**
@@ -296,10 +296,10 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="storageType")
-      private final @Nullable Input<String> storageType;
+      private final @Nullable Output<String> storageType;
 
-    public Input<String> getStorageType() {
-        return this.storageType == null ? Input.empty() : this.storageType;
+    public Output<String> getStorageType() {
+        return this.storageType == null ? Output.empty() : this.storageType;
     }
 
     /**
@@ -307,10 +307,10 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -318,47 +318,47 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="userName")
-      private final @Nullable Input<String> userName;
+      private final @Nullable Output<String> userName;
 
-    public Input<String> getUserName() {
-        return this.userName == null ? Input.empty() : this.userName;
+    public Output<String> getUserName() {
+        return this.userName == null ? Output.empty() : this.userName;
     }
 
     public LabVirtualMachineCreationParameterArgs(
-        @Nullable Input<Boolean> allowClaim,
-        @Nullable Input<List<ArtifactInstallPropertiesArgs>> artifacts,
-        @Nullable Input<BulkCreationParametersArgs> bulkCreationParameters,
-        @Nullable Input<String> createdDate,
-        @Nullable Input<String> customImageId,
-        @Nullable Input<List<DataDiskPropertiesArgs>> dataDiskParameters,
-        @Nullable Input<Boolean> disallowPublicIpAddress,
-        @Nullable Input<String> environmentId,
-        @Nullable Input<String> expirationDate,
-        @Nullable Input<GalleryImageReferenceArgs> galleryImageReference,
-        @Nullable Input<Boolean> isAuthenticationWithSshKey,
-        @Nullable Input<String> labSubnetName,
-        @Nullable Input<String> labVirtualNetworkId,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<NetworkInterfacePropertiesArgs> networkInterface,
-        @Nullable Input<String> notes,
-        @Nullable Input<String> ownerObjectId,
-        @Nullable Input<String> ownerUserPrincipalName,
-        @Nullable Input<String> password,
-        @Nullable Input<String> planId,
-        @Nullable Input<List<ScheduleCreationParameterArgs>> scheduleParameters,
-        @Nullable Input<String> size,
-        @Nullable Input<String> sshKey,
-        @Nullable Input<String> storageType,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> userName) {
-        this.allowClaim = allowClaim == null ? Input.ofNullable(false) : allowClaim;
+        @Nullable Output<Boolean> allowClaim,
+        @Nullable Output<List<ArtifactInstallPropertiesArgs>> artifacts,
+        @Nullable Output<BulkCreationParametersArgs> bulkCreationParameters,
+        @Nullable Output<String> createdDate,
+        @Nullable Output<String> customImageId,
+        @Nullable Output<List<DataDiskPropertiesArgs>> dataDiskParameters,
+        @Nullable Output<Boolean> disallowPublicIpAddress,
+        @Nullable Output<String> environmentId,
+        @Nullable Output<String> expirationDate,
+        @Nullable Output<GalleryImageReferenceArgs> galleryImageReference,
+        @Nullable Output<Boolean> isAuthenticationWithSshKey,
+        @Nullable Output<String> labSubnetName,
+        @Nullable Output<String> labVirtualNetworkId,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<NetworkInterfacePropertiesArgs> networkInterface,
+        @Nullable Output<String> notes,
+        @Nullable Output<String> ownerObjectId,
+        @Nullable Output<String> ownerUserPrincipalName,
+        @Nullable Output<String> password,
+        @Nullable Output<String> planId,
+        @Nullable Output<List<ScheduleCreationParameterArgs>> scheduleParameters,
+        @Nullable Output<String> size,
+        @Nullable Output<String> sshKey,
+        @Nullable Output<String> storageType,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> userName) {
+        this.allowClaim = allowClaim == null ? Output.ofNullable(false) : allowClaim;
         this.artifacts = artifacts;
         this.bulkCreationParameters = bulkCreationParameters;
         this.createdDate = createdDate;
         this.customImageId = customImageId;
         this.dataDiskParameters = dataDiskParameters;
-        this.disallowPublicIpAddress = disallowPublicIpAddress == null ? Input.ofNullable(false) : disallowPublicIpAddress;
+        this.disallowPublicIpAddress = disallowPublicIpAddress == null ? Output.ofNullable(false) : disallowPublicIpAddress;
         this.environmentId = environmentId;
         this.expirationDate = expirationDate;
         this.galleryImageReference = galleryImageReference;
@@ -369,46 +369,46 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
         this.name = name;
         this.networkInterface = networkInterface;
         this.notes = notes;
-        this.ownerObjectId = ownerObjectId == null ? Input.ofNullable("dynamicValue") : ownerObjectId;
+        this.ownerObjectId = ownerObjectId == null ? Output.ofNullable("dynamicValue") : ownerObjectId;
         this.ownerUserPrincipalName = ownerUserPrincipalName;
         this.password = password;
         this.planId = planId;
         this.scheduleParameters = scheduleParameters;
         this.size = size;
         this.sshKey = sshKey;
-        this.storageType = storageType == null ? Input.ofNullable("labStorageType") : storageType;
+        this.storageType = storageType == null ? Output.ofNullable("labStorageType") : storageType;
         this.tags = tags;
         this.userName = userName;
     }
 
     private LabVirtualMachineCreationParameterArgs() {
-        this.allowClaim = Input.empty();
-        this.artifacts = Input.empty();
-        this.bulkCreationParameters = Input.empty();
-        this.createdDate = Input.empty();
-        this.customImageId = Input.empty();
-        this.dataDiskParameters = Input.empty();
-        this.disallowPublicIpAddress = Input.empty();
-        this.environmentId = Input.empty();
-        this.expirationDate = Input.empty();
-        this.galleryImageReference = Input.empty();
-        this.isAuthenticationWithSshKey = Input.empty();
-        this.labSubnetName = Input.empty();
-        this.labVirtualNetworkId = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.networkInterface = Input.empty();
-        this.notes = Input.empty();
-        this.ownerObjectId = Input.empty();
-        this.ownerUserPrincipalName = Input.empty();
-        this.password = Input.empty();
-        this.planId = Input.empty();
-        this.scheduleParameters = Input.empty();
-        this.size = Input.empty();
-        this.sshKey = Input.empty();
-        this.storageType = Input.empty();
-        this.tags = Input.empty();
-        this.userName = Input.empty();
+        this.allowClaim = Output.empty();
+        this.artifacts = Output.empty();
+        this.bulkCreationParameters = Output.empty();
+        this.createdDate = Output.empty();
+        this.customImageId = Output.empty();
+        this.dataDiskParameters = Output.empty();
+        this.disallowPublicIpAddress = Output.empty();
+        this.environmentId = Output.empty();
+        this.expirationDate = Output.empty();
+        this.galleryImageReference = Output.empty();
+        this.isAuthenticationWithSshKey = Output.empty();
+        this.labSubnetName = Output.empty();
+        this.labVirtualNetworkId = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.networkInterface = Output.empty();
+        this.notes = Output.empty();
+        this.ownerObjectId = Output.empty();
+        this.ownerUserPrincipalName = Output.empty();
+        this.password = Output.empty();
+        this.planId = Output.empty();
+        this.scheduleParameters = Output.empty();
+        this.size = Output.empty();
+        this.sshKey = Output.empty();
+        this.storageType = Output.empty();
+        this.tags = Output.empty();
+        this.userName = Output.empty();
     }
 
     public static Builder builder() {
@@ -420,33 +420,33 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowClaim;
-        private @Nullable Input<List<ArtifactInstallPropertiesArgs>> artifacts;
-        private @Nullable Input<BulkCreationParametersArgs> bulkCreationParameters;
-        private @Nullable Input<String> createdDate;
-        private @Nullable Input<String> customImageId;
-        private @Nullable Input<List<DataDiskPropertiesArgs>> dataDiskParameters;
-        private @Nullable Input<Boolean> disallowPublicIpAddress;
-        private @Nullable Input<String> environmentId;
-        private @Nullable Input<String> expirationDate;
-        private @Nullable Input<GalleryImageReferenceArgs> galleryImageReference;
-        private @Nullable Input<Boolean> isAuthenticationWithSshKey;
-        private @Nullable Input<String> labSubnetName;
-        private @Nullable Input<String> labVirtualNetworkId;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<NetworkInterfacePropertiesArgs> networkInterface;
-        private @Nullable Input<String> notes;
-        private @Nullable Input<String> ownerObjectId;
-        private @Nullable Input<String> ownerUserPrincipalName;
-        private @Nullable Input<String> password;
-        private @Nullable Input<String> planId;
-        private @Nullable Input<List<ScheduleCreationParameterArgs>> scheduleParameters;
-        private @Nullable Input<String> size;
-        private @Nullable Input<String> sshKey;
-        private @Nullable Input<String> storageType;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> userName;
+        private @Nullable Output<Boolean> allowClaim;
+        private @Nullable Output<List<ArtifactInstallPropertiesArgs>> artifacts;
+        private @Nullable Output<BulkCreationParametersArgs> bulkCreationParameters;
+        private @Nullable Output<String> createdDate;
+        private @Nullable Output<String> customImageId;
+        private @Nullable Output<List<DataDiskPropertiesArgs>> dataDiskParameters;
+        private @Nullable Output<Boolean> disallowPublicIpAddress;
+        private @Nullable Output<String> environmentId;
+        private @Nullable Output<String> expirationDate;
+        private @Nullable Output<GalleryImageReferenceArgs> galleryImageReference;
+        private @Nullable Output<Boolean> isAuthenticationWithSshKey;
+        private @Nullable Output<String> labSubnetName;
+        private @Nullable Output<String> labVirtualNetworkId;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<NetworkInterfacePropertiesArgs> networkInterface;
+        private @Nullable Output<String> notes;
+        private @Nullable Output<String> ownerObjectId;
+        private @Nullable Output<String> ownerUserPrincipalName;
+        private @Nullable Output<String> password;
+        private @Nullable Output<String> planId;
+        private @Nullable Output<List<ScheduleCreationParameterArgs>> scheduleParameters;
+        private @Nullable Output<String> size;
+        private @Nullable Output<String> sshKey;
+        private @Nullable Output<String> storageType;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> userName;
 
         public Builder() {
     	      // Empty
@@ -483,273 +483,273 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
     	      this.userName = defaults.userName;
         }
 
-        public Builder allowClaim(@Nullable Input<Boolean> allowClaim) {
+        public Builder allowClaim(@Nullable Output<Boolean> allowClaim) {
             this.allowClaim = allowClaim;
             return this;
         }
 
         public Builder allowClaim(@Nullable Boolean allowClaim) {
-            this.allowClaim = Input.ofNullable(allowClaim);
+            this.allowClaim = Output.ofNullable(allowClaim);
             return this;
         }
 
-        public Builder artifacts(@Nullable Input<List<ArtifactInstallPropertiesArgs>> artifacts) {
+        public Builder artifacts(@Nullable Output<List<ArtifactInstallPropertiesArgs>> artifacts) {
             this.artifacts = artifacts;
             return this;
         }
 
         public Builder artifacts(@Nullable List<ArtifactInstallPropertiesArgs> artifacts) {
-            this.artifacts = Input.ofNullable(artifacts);
+            this.artifacts = Output.ofNullable(artifacts);
             return this;
         }
 
-        public Builder bulkCreationParameters(@Nullable Input<BulkCreationParametersArgs> bulkCreationParameters) {
+        public Builder bulkCreationParameters(@Nullable Output<BulkCreationParametersArgs> bulkCreationParameters) {
             this.bulkCreationParameters = bulkCreationParameters;
             return this;
         }
 
         public Builder bulkCreationParameters(@Nullable BulkCreationParametersArgs bulkCreationParameters) {
-            this.bulkCreationParameters = Input.ofNullable(bulkCreationParameters);
+            this.bulkCreationParameters = Output.ofNullable(bulkCreationParameters);
             return this;
         }
 
-        public Builder createdDate(@Nullable Input<String> createdDate) {
+        public Builder createdDate(@Nullable Output<String> createdDate) {
             this.createdDate = createdDate;
             return this;
         }
 
         public Builder createdDate(@Nullable String createdDate) {
-            this.createdDate = Input.ofNullable(createdDate);
+            this.createdDate = Output.ofNullable(createdDate);
             return this;
         }
 
-        public Builder customImageId(@Nullable Input<String> customImageId) {
+        public Builder customImageId(@Nullable Output<String> customImageId) {
             this.customImageId = customImageId;
             return this;
         }
 
         public Builder customImageId(@Nullable String customImageId) {
-            this.customImageId = Input.ofNullable(customImageId);
+            this.customImageId = Output.ofNullable(customImageId);
             return this;
         }
 
-        public Builder dataDiskParameters(@Nullable Input<List<DataDiskPropertiesArgs>> dataDiskParameters) {
+        public Builder dataDiskParameters(@Nullable Output<List<DataDiskPropertiesArgs>> dataDiskParameters) {
             this.dataDiskParameters = dataDiskParameters;
             return this;
         }
 
         public Builder dataDiskParameters(@Nullable List<DataDiskPropertiesArgs> dataDiskParameters) {
-            this.dataDiskParameters = Input.ofNullable(dataDiskParameters);
+            this.dataDiskParameters = Output.ofNullable(dataDiskParameters);
             return this;
         }
 
-        public Builder disallowPublicIpAddress(@Nullable Input<Boolean> disallowPublicIpAddress) {
+        public Builder disallowPublicIpAddress(@Nullable Output<Boolean> disallowPublicIpAddress) {
             this.disallowPublicIpAddress = disallowPublicIpAddress;
             return this;
         }
 
         public Builder disallowPublicIpAddress(@Nullable Boolean disallowPublicIpAddress) {
-            this.disallowPublicIpAddress = Input.ofNullable(disallowPublicIpAddress);
+            this.disallowPublicIpAddress = Output.ofNullable(disallowPublicIpAddress);
             return this;
         }
 
-        public Builder environmentId(@Nullable Input<String> environmentId) {
+        public Builder environmentId(@Nullable Output<String> environmentId) {
             this.environmentId = environmentId;
             return this;
         }
 
         public Builder environmentId(@Nullable String environmentId) {
-            this.environmentId = Input.ofNullable(environmentId);
+            this.environmentId = Output.ofNullable(environmentId);
             return this;
         }
 
-        public Builder expirationDate(@Nullable Input<String> expirationDate) {
+        public Builder expirationDate(@Nullable Output<String> expirationDate) {
             this.expirationDate = expirationDate;
             return this;
         }
 
         public Builder expirationDate(@Nullable String expirationDate) {
-            this.expirationDate = Input.ofNullable(expirationDate);
+            this.expirationDate = Output.ofNullable(expirationDate);
             return this;
         }
 
-        public Builder galleryImageReference(@Nullable Input<GalleryImageReferenceArgs> galleryImageReference) {
+        public Builder galleryImageReference(@Nullable Output<GalleryImageReferenceArgs> galleryImageReference) {
             this.galleryImageReference = galleryImageReference;
             return this;
         }
 
         public Builder galleryImageReference(@Nullable GalleryImageReferenceArgs galleryImageReference) {
-            this.galleryImageReference = Input.ofNullable(galleryImageReference);
+            this.galleryImageReference = Output.ofNullable(galleryImageReference);
             return this;
         }
 
-        public Builder isAuthenticationWithSshKey(@Nullable Input<Boolean> isAuthenticationWithSshKey) {
+        public Builder isAuthenticationWithSshKey(@Nullable Output<Boolean> isAuthenticationWithSshKey) {
             this.isAuthenticationWithSshKey = isAuthenticationWithSshKey;
             return this;
         }
 
         public Builder isAuthenticationWithSshKey(@Nullable Boolean isAuthenticationWithSshKey) {
-            this.isAuthenticationWithSshKey = Input.ofNullable(isAuthenticationWithSshKey);
+            this.isAuthenticationWithSshKey = Output.ofNullable(isAuthenticationWithSshKey);
             return this;
         }
 
-        public Builder labSubnetName(@Nullable Input<String> labSubnetName) {
+        public Builder labSubnetName(@Nullable Output<String> labSubnetName) {
             this.labSubnetName = labSubnetName;
             return this;
         }
 
         public Builder labSubnetName(@Nullable String labSubnetName) {
-            this.labSubnetName = Input.ofNullable(labSubnetName);
+            this.labSubnetName = Output.ofNullable(labSubnetName);
             return this;
         }
 
-        public Builder labVirtualNetworkId(@Nullable Input<String> labVirtualNetworkId) {
+        public Builder labVirtualNetworkId(@Nullable Output<String> labVirtualNetworkId) {
             this.labVirtualNetworkId = labVirtualNetworkId;
             return this;
         }
 
         public Builder labVirtualNetworkId(@Nullable String labVirtualNetworkId) {
-            this.labVirtualNetworkId = Input.ofNullable(labVirtualNetworkId);
+            this.labVirtualNetworkId = Output.ofNullable(labVirtualNetworkId);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder networkInterface(@Nullable Input<NetworkInterfacePropertiesArgs> networkInterface) {
+        public Builder networkInterface(@Nullable Output<NetworkInterfacePropertiesArgs> networkInterface) {
             this.networkInterface = networkInterface;
             return this;
         }
 
         public Builder networkInterface(@Nullable NetworkInterfacePropertiesArgs networkInterface) {
-            this.networkInterface = Input.ofNullable(networkInterface);
+            this.networkInterface = Output.ofNullable(networkInterface);
             return this;
         }
 
-        public Builder notes(@Nullable Input<String> notes) {
+        public Builder notes(@Nullable Output<String> notes) {
             this.notes = notes;
             return this;
         }
 
         public Builder notes(@Nullable String notes) {
-            this.notes = Input.ofNullable(notes);
+            this.notes = Output.ofNullable(notes);
             return this;
         }
 
-        public Builder ownerObjectId(@Nullable Input<String> ownerObjectId) {
+        public Builder ownerObjectId(@Nullable Output<String> ownerObjectId) {
             this.ownerObjectId = ownerObjectId;
             return this;
         }
 
         public Builder ownerObjectId(@Nullable String ownerObjectId) {
-            this.ownerObjectId = Input.ofNullable(ownerObjectId);
+            this.ownerObjectId = Output.ofNullable(ownerObjectId);
             return this;
         }
 
-        public Builder ownerUserPrincipalName(@Nullable Input<String> ownerUserPrincipalName) {
+        public Builder ownerUserPrincipalName(@Nullable Output<String> ownerUserPrincipalName) {
             this.ownerUserPrincipalName = ownerUserPrincipalName;
             return this;
         }
 
         public Builder ownerUserPrincipalName(@Nullable String ownerUserPrincipalName) {
-            this.ownerUserPrincipalName = Input.ofNullable(ownerUserPrincipalName);
+            this.ownerUserPrincipalName = Output.ofNullable(ownerUserPrincipalName);
             return this;
         }
 
-        public Builder password(@Nullable Input<String> password) {
+        public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable String password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder planId(@Nullable Input<String> planId) {
+        public Builder planId(@Nullable Output<String> planId) {
             this.planId = planId;
             return this;
         }
 
         public Builder planId(@Nullable String planId) {
-            this.planId = Input.ofNullable(planId);
+            this.planId = Output.ofNullable(planId);
             return this;
         }
 
-        public Builder scheduleParameters(@Nullable Input<List<ScheduleCreationParameterArgs>> scheduleParameters) {
+        public Builder scheduleParameters(@Nullable Output<List<ScheduleCreationParameterArgs>> scheduleParameters) {
             this.scheduleParameters = scheduleParameters;
             return this;
         }
 
         public Builder scheduleParameters(@Nullable List<ScheduleCreationParameterArgs> scheduleParameters) {
-            this.scheduleParameters = Input.ofNullable(scheduleParameters);
+            this.scheduleParameters = Output.ofNullable(scheduleParameters);
             return this;
         }
 
-        public Builder size(@Nullable Input<String> size) {
+        public Builder size(@Nullable Output<String> size) {
             this.size = size;
             return this;
         }
 
         public Builder size(@Nullable String size) {
-            this.size = Input.ofNullable(size);
+            this.size = Output.ofNullable(size);
             return this;
         }
 
-        public Builder sshKey(@Nullable Input<String> sshKey) {
+        public Builder sshKey(@Nullable Output<String> sshKey) {
             this.sshKey = sshKey;
             return this;
         }
 
         public Builder sshKey(@Nullable String sshKey) {
-            this.sshKey = Input.ofNullable(sshKey);
+            this.sshKey = Output.ofNullable(sshKey);
             return this;
         }
 
-        public Builder storageType(@Nullable Input<String> storageType) {
+        public Builder storageType(@Nullable Output<String> storageType) {
             this.storageType = storageType;
             return this;
         }
 
         public Builder storageType(@Nullable String storageType) {
-            this.storageType = Input.ofNullable(storageType);
+            this.storageType = Output.ofNullable(storageType);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder userName(@Nullable Input<String> userName) {
+        public Builder userName(@Nullable Output<String> userName) {
             this.userName = userName;
             return this;
         }
 
         public Builder userName(@Nullable String userName) {
-            this.userName = Input.ofNullable(userName);
+            this.userName = Output.ofNullable(userName);
             return this;
         }
         public LabVirtualMachineCreationParameterArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.pinpoint.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class AppLimitsGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="daily")
-      private final @Nullable Input<Integer> daily;
+      private final @Nullable Output<Integer> daily;
 
-    public Input<Integer> getDaily() {
-        return this.daily == null ? Input.empty() : this.daily;
+    public Output<Integer> getDaily() {
+        return this.daily == null ? Output.empty() : this.daily;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class AppLimitsGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maximumDuration")
-      private final @Nullable Input<Integer> maximumDuration;
+      private final @Nullable Output<Integer> maximumDuration;
 
-    public Input<Integer> getMaximumDuration() {
-        return this.maximumDuration == null ? Input.empty() : this.maximumDuration;
+    public Output<Integer> getMaximumDuration() {
+        return this.maximumDuration == null ? Output.empty() : this.maximumDuration;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class AppLimitsGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="messagesPerSecond")
-      private final @Nullable Input<Integer> messagesPerSecond;
+      private final @Nullable Output<Integer> messagesPerSecond;
 
-    public Input<Integer> getMessagesPerSecond() {
-        return this.messagesPerSecond == null ? Input.empty() : this.messagesPerSecond;
+    public Output<Integer> getMessagesPerSecond() {
+        return this.messagesPerSecond == null ? Output.empty() : this.messagesPerSecond;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class AppLimitsGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="total")
-      private final @Nullable Input<Integer> total;
+      private final @Nullable Output<Integer> total;
 
-    public Input<Integer> getTotal() {
-        return this.total == null ? Input.empty() : this.total;
+    public Output<Integer> getTotal() {
+        return this.total == null ? Output.empty() : this.total;
     }
 
     public AppLimitsGetArgs(
-        @Nullable Input<Integer> daily,
-        @Nullable Input<Integer> maximumDuration,
-        @Nullable Input<Integer> messagesPerSecond,
-        @Nullable Input<Integer> total) {
+        @Nullable Output<Integer> daily,
+        @Nullable Output<Integer> maximumDuration,
+        @Nullable Output<Integer> messagesPerSecond,
+        @Nullable Output<Integer> total) {
         this.daily = daily;
         this.maximumDuration = maximumDuration;
         this.messagesPerSecond = messagesPerSecond;
@@ -70,10 +70,10 @@ public final class AppLimitsGetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AppLimitsGetArgs() {
-        this.daily = Input.empty();
-        this.maximumDuration = Input.empty();
-        this.messagesPerSecond = Input.empty();
-        this.total = Input.empty();
+        this.daily = Output.empty();
+        this.maximumDuration = Output.empty();
+        this.messagesPerSecond = Output.empty();
+        this.total = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class AppLimitsGetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> daily;
-        private @Nullable Input<Integer> maximumDuration;
-        private @Nullable Input<Integer> messagesPerSecond;
-        private @Nullable Input<Integer> total;
+        private @Nullable Output<Integer> daily;
+        private @Nullable Output<Integer> maximumDuration;
+        private @Nullable Output<Integer> messagesPerSecond;
+        private @Nullable Output<Integer> total;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class AppLimitsGetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.total = defaults.total;
         }
 
-        public Builder daily(@Nullable Input<Integer> daily) {
+        public Builder daily(@Nullable Output<Integer> daily) {
             this.daily = daily;
             return this;
         }
 
         public Builder daily(@Nullable Integer daily) {
-            this.daily = Input.ofNullable(daily);
+            this.daily = Output.ofNullable(daily);
             return this;
         }
 
-        public Builder maximumDuration(@Nullable Input<Integer> maximumDuration) {
+        public Builder maximumDuration(@Nullable Output<Integer> maximumDuration) {
             this.maximumDuration = maximumDuration;
             return this;
         }
 
         public Builder maximumDuration(@Nullable Integer maximumDuration) {
-            this.maximumDuration = Input.ofNullable(maximumDuration);
+            this.maximumDuration = Output.ofNullable(maximumDuration);
             return this;
         }
 
-        public Builder messagesPerSecond(@Nullable Input<Integer> messagesPerSecond) {
+        public Builder messagesPerSecond(@Nullable Output<Integer> messagesPerSecond) {
             this.messagesPerSecond = messagesPerSecond;
             return this;
         }
 
         public Builder messagesPerSecond(@Nullable Integer messagesPerSecond) {
-            this.messagesPerSecond = Input.ofNullable(messagesPerSecond);
+            this.messagesPerSecond = Output.ofNullable(messagesPerSecond);
             return this;
         }
 
-        public Builder total(@Nullable Input<Integer> total) {
+        public Builder total(@Nullable Output<Integer> total) {
             this.total = total;
             return this;
         }
 
         public Builder total(@Nullable Integer total) {
-            this.total = Input.ofNullable(total);
+            this.total = Output.ofNullable(total);
             return this;
         }
         public AppLimitsGetArgs build() {

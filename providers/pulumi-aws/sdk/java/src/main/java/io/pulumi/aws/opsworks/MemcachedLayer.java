@@ -8,7 +8,6 @@ import io.pulumi.aws.opsworks.MemcachedLayerArgs;
 import io.pulumi.aws.opsworks.inputs.MemcachedLayerState;
 import io.pulumi.aws.opsworks.outputs.MemcachedLayerCloudwatchConfiguration;
 import io.pulumi.aws.opsworks.outputs.MemcachedLayerEbsVolume;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -368,14 +367,14 @@ public class MemcachedLayer extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public MemcachedLayer(String name, MemcachedLayerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:opsworks/memcachedLayer:MemcachedLayer", name, args == null ? MemcachedLayerArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:opsworks/memcachedLayer:MemcachedLayer", name, args == null ? MemcachedLayerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private MemcachedLayer(String name, Input<String> id, @Nullable MemcachedLayerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private MemcachedLayer(String name, Output<String> id, @Nullable MemcachedLayerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:opsworks/memcachedLayer:MemcachedLayer", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -391,7 +390,7 @@ public class MemcachedLayer extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static MemcachedLayer get(String name, Input<String> id, @Nullable MemcachedLayerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static MemcachedLayer get(String name, Output<String> id, @Nullable MemcachedLayerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new MemcachedLayer(name, id, state, options);
     }
 }

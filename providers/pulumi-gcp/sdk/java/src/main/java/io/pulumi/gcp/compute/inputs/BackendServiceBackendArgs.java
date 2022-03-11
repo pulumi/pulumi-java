@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
@@ -26,10 +26,10 @@ public final class BackendServiceBackendArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="balancingMode")
-      private final @Nullable Input<String> balancingMode;
+      private final @Nullable Output<String> balancingMode;
 
-    public Input<String> getBalancingMode() {
-        return this.balancingMode == null ? Input.empty() : this.balancingMode;
+    public Output<String> getBalancingMode() {
+        return this.balancingMode == null ? Output.empty() : this.balancingMode;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class BackendServiceBackendArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="capacityScaler")
-      private final @Nullable Input<Double> capacityScaler;
+      private final @Nullable Output<Double> capacityScaler;
 
-    public Input<Double> getCapacityScaler() {
-        return this.capacityScaler == null ? Input.empty() : this.capacityScaler;
+    public Output<Double> getCapacityScaler() {
+        return this.capacityScaler == null ? Output.empty() : this.capacityScaler;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class BackendServiceBackendArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -78,9 +78,9 @@ public final class BackendServiceBackendArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="group", required=true)
-      private final Input<String> group;
+      private final Output<String> group;
 
-    public Input<String> getGroup() {
+    public Output<String> getGroup() {
         return this.group;
     }
 
@@ -90,10 +90,10 @@ public final class BackendServiceBackendArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="maxConnections")
-      private final @Nullable Input<Integer> maxConnections;
+      private final @Nullable Output<Integer> maxConnections;
 
-    public Input<Integer> getMaxConnections() {
-        return this.maxConnections == null ? Input.empty() : this.maxConnections;
+    public Output<Integer> getMaxConnections() {
+        return this.maxConnections == null ? Output.empty() : this.maxConnections;
     }
 
     /**
@@ -106,10 +106,10 @@ public final class BackendServiceBackendArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="maxConnectionsPerEndpoint")
-      private final @Nullable Input<Integer> maxConnectionsPerEndpoint;
+      private final @Nullable Output<Integer> maxConnectionsPerEndpoint;
 
-    public Input<Integer> getMaxConnectionsPerEndpoint() {
-        return this.maxConnectionsPerEndpoint == null ? Input.empty() : this.maxConnectionsPerEndpoint;
+    public Output<Integer> getMaxConnectionsPerEndpoint() {
+        return this.maxConnectionsPerEndpoint == null ? Output.empty() : this.maxConnectionsPerEndpoint;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class BackendServiceBackendArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="maxConnectionsPerInstance")
-      private final @Nullable Input<Integer> maxConnectionsPerInstance;
+      private final @Nullable Output<Integer> maxConnectionsPerInstance;
 
-    public Input<Integer> getMaxConnectionsPerInstance() {
-        return this.maxConnectionsPerInstance == null ? Input.empty() : this.maxConnectionsPerInstance;
+    public Output<Integer> getMaxConnectionsPerInstance() {
+        return this.maxConnectionsPerInstance == null ? Output.empty() : this.maxConnectionsPerInstance;
     }
 
     /**
@@ -137,10 +137,10 @@ public final class BackendServiceBackendArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="maxRate")
-      private final @Nullable Input<Integer> maxRate;
+      private final @Nullable Output<Integer> maxRate;
 
-    public Input<Integer> getMaxRate() {
-        return this.maxRate == null ? Input.empty() : this.maxRate;
+    public Output<Integer> getMaxRate() {
+        return this.maxRate == null ? Output.empty() : this.maxRate;
     }
 
     /**
@@ -151,10 +151,10 @@ public final class BackendServiceBackendArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="maxRatePerEndpoint")
-      private final @Nullable Input<Double> maxRatePerEndpoint;
+      private final @Nullable Output<Double> maxRatePerEndpoint;
 
-    public Input<Double> getMaxRatePerEndpoint() {
-        return this.maxRatePerEndpoint == null ? Input.empty() : this.maxRatePerEndpoint;
+    public Output<Double> getMaxRatePerEndpoint() {
+        return this.maxRatePerEndpoint == null ? Output.empty() : this.maxRatePerEndpoint;
     }
 
     /**
@@ -165,10 +165,10 @@ public final class BackendServiceBackendArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="maxRatePerInstance")
-      private final @Nullable Input<Double> maxRatePerInstance;
+      private final @Nullable Output<Double> maxRatePerInstance;
 
-    public Input<Double> getMaxRatePerInstance() {
-        return this.maxRatePerInstance == null ? Input.empty() : this.maxRatePerInstance;
+    public Output<Double> getMaxRatePerInstance() {
+        return this.maxRatePerInstance == null ? Output.empty() : this.maxRatePerInstance;
     }
 
     /**
@@ -177,24 +177,24 @@ public final class BackendServiceBackendArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="maxUtilization")
-      private final @Nullable Input<Double> maxUtilization;
+      private final @Nullable Output<Double> maxUtilization;
 
-    public Input<Double> getMaxUtilization() {
-        return this.maxUtilization == null ? Input.empty() : this.maxUtilization;
+    public Output<Double> getMaxUtilization() {
+        return this.maxUtilization == null ? Output.empty() : this.maxUtilization;
     }
 
     public BackendServiceBackendArgs(
-        @Nullable Input<String> balancingMode,
-        @Nullable Input<Double> capacityScaler,
-        @Nullable Input<String> description,
-        Input<String> group,
-        @Nullable Input<Integer> maxConnections,
-        @Nullable Input<Integer> maxConnectionsPerEndpoint,
-        @Nullable Input<Integer> maxConnectionsPerInstance,
-        @Nullable Input<Integer> maxRate,
-        @Nullable Input<Double> maxRatePerEndpoint,
-        @Nullable Input<Double> maxRatePerInstance,
-        @Nullable Input<Double> maxUtilization) {
+        @Nullable Output<String> balancingMode,
+        @Nullable Output<Double> capacityScaler,
+        @Nullable Output<String> description,
+        Output<String> group,
+        @Nullable Output<Integer> maxConnections,
+        @Nullable Output<Integer> maxConnectionsPerEndpoint,
+        @Nullable Output<Integer> maxConnectionsPerInstance,
+        @Nullable Output<Integer> maxRate,
+        @Nullable Output<Double> maxRatePerEndpoint,
+        @Nullable Output<Double> maxRatePerInstance,
+        @Nullable Output<Double> maxUtilization) {
         this.balancingMode = balancingMode;
         this.capacityScaler = capacityScaler;
         this.description = description;
@@ -209,17 +209,17 @@ public final class BackendServiceBackendArgs extends io.pulumi.resources.Resourc
     }
 
     private BackendServiceBackendArgs() {
-        this.balancingMode = Input.empty();
-        this.capacityScaler = Input.empty();
-        this.description = Input.empty();
-        this.group = Input.empty();
-        this.maxConnections = Input.empty();
-        this.maxConnectionsPerEndpoint = Input.empty();
-        this.maxConnectionsPerInstance = Input.empty();
-        this.maxRate = Input.empty();
-        this.maxRatePerEndpoint = Input.empty();
-        this.maxRatePerInstance = Input.empty();
-        this.maxUtilization = Input.empty();
+        this.balancingMode = Output.empty();
+        this.capacityScaler = Output.empty();
+        this.description = Output.empty();
+        this.group = Output.empty();
+        this.maxConnections = Output.empty();
+        this.maxConnectionsPerEndpoint = Output.empty();
+        this.maxConnectionsPerInstance = Output.empty();
+        this.maxRate = Output.empty();
+        this.maxRatePerEndpoint = Output.empty();
+        this.maxRatePerInstance = Output.empty();
+        this.maxUtilization = Output.empty();
     }
 
     public static Builder builder() {
@@ -231,17 +231,17 @@ public final class BackendServiceBackendArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> balancingMode;
-        private @Nullable Input<Double> capacityScaler;
-        private @Nullable Input<String> description;
-        private Input<String> group;
-        private @Nullable Input<Integer> maxConnections;
-        private @Nullable Input<Integer> maxConnectionsPerEndpoint;
-        private @Nullable Input<Integer> maxConnectionsPerInstance;
-        private @Nullable Input<Integer> maxRate;
-        private @Nullable Input<Double> maxRatePerEndpoint;
-        private @Nullable Input<Double> maxRatePerInstance;
-        private @Nullable Input<Double> maxUtilization;
+        private @Nullable Output<String> balancingMode;
+        private @Nullable Output<Double> capacityScaler;
+        private @Nullable Output<String> description;
+        private Output<String> group;
+        private @Nullable Output<Integer> maxConnections;
+        private @Nullable Output<Integer> maxConnectionsPerEndpoint;
+        private @Nullable Output<Integer> maxConnectionsPerInstance;
+        private @Nullable Output<Integer> maxRate;
+        private @Nullable Output<Double> maxRatePerEndpoint;
+        private @Nullable Output<Double> maxRatePerInstance;
+        private @Nullable Output<Double> maxUtilization;
 
         public Builder() {
     	      // Empty
@@ -262,113 +262,113 @@ public final class BackendServiceBackendArgs extends io.pulumi.resources.Resourc
     	      this.maxUtilization = defaults.maxUtilization;
         }
 
-        public Builder balancingMode(@Nullable Input<String> balancingMode) {
+        public Builder balancingMode(@Nullable Output<String> balancingMode) {
             this.balancingMode = balancingMode;
             return this;
         }
 
         public Builder balancingMode(@Nullable String balancingMode) {
-            this.balancingMode = Input.ofNullable(balancingMode);
+            this.balancingMode = Output.ofNullable(balancingMode);
             return this;
         }
 
-        public Builder capacityScaler(@Nullable Input<Double> capacityScaler) {
+        public Builder capacityScaler(@Nullable Output<Double> capacityScaler) {
             this.capacityScaler = capacityScaler;
             return this;
         }
 
         public Builder capacityScaler(@Nullable Double capacityScaler) {
-            this.capacityScaler = Input.ofNullable(capacityScaler);
+            this.capacityScaler = Output.ofNullable(capacityScaler);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder group(Input<String> group) {
+        public Builder group(Output<String> group) {
             this.group = Objects.requireNonNull(group);
             return this;
         }
 
         public Builder group(String group) {
-            this.group = Input.of(Objects.requireNonNull(group));
+            this.group = Output.of(Objects.requireNonNull(group));
             return this;
         }
 
-        public Builder maxConnections(@Nullable Input<Integer> maxConnections) {
+        public Builder maxConnections(@Nullable Output<Integer> maxConnections) {
             this.maxConnections = maxConnections;
             return this;
         }
 
         public Builder maxConnections(@Nullable Integer maxConnections) {
-            this.maxConnections = Input.ofNullable(maxConnections);
+            this.maxConnections = Output.ofNullable(maxConnections);
             return this;
         }
 
-        public Builder maxConnectionsPerEndpoint(@Nullable Input<Integer> maxConnectionsPerEndpoint) {
+        public Builder maxConnectionsPerEndpoint(@Nullable Output<Integer> maxConnectionsPerEndpoint) {
             this.maxConnectionsPerEndpoint = maxConnectionsPerEndpoint;
             return this;
         }
 
         public Builder maxConnectionsPerEndpoint(@Nullable Integer maxConnectionsPerEndpoint) {
-            this.maxConnectionsPerEndpoint = Input.ofNullable(maxConnectionsPerEndpoint);
+            this.maxConnectionsPerEndpoint = Output.ofNullable(maxConnectionsPerEndpoint);
             return this;
         }
 
-        public Builder maxConnectionsPerInstance(@Nullable Input<Integer> maxConnectionsPerInstance) {
+        public Builder maxConnectionsPerInstance(@Nullable Output<Integer> maxConnectionsPerInstance) {
             this.maxConnectionsPerInstance = maxConnectionsPerInstance;
             return this;
         }
 
         public Builder maxConnectionsPerInstance(@Nullable Integer maxConnectionsPerInstance) {
-            this.maxConnectionsPerInstance = Input.ofNullable(maxConnectionsPerInstance);
+            this.maxConnectionsPerInstance = Output.ofNullable(maxConnectionsPerInstance);
             return this;
         }
 
-        public Builder maxRate(@Nullable Input<Integer> maxRate) {
+        public Builder maxRate(@Nullable Output<Integer> maxRate) {
             this.maxRate = maxRate;
             return this;
         }
 
         public Builder maxRate(@Nullable Integer maxRate) {
-            this.maxRate = Input.ofNullable(maxRate);
+            this.maxRate = Output.ofNullable(maxRate);
             return this;
         }
 
-        public Builder maxRatePerEndpoint(@Nullable Input<Double> maxRatePerEndpoint) {
+        public Builder maxRatePerEndpoint(@Nullable Output<Double> maxRatePerEndpoint) {
             this.maxRatePerEndpoint = maxRatePerEndpoint;
             return this;
         }
 
         public Builder maxRatePerEndpoint(@Nullable Double maxRatePerEndpoint) {
-            this.maxRatePerEndpoint = Input.ofNullable(maxRatePerEndpoint);
+            this.maxRatePerEndpoint = Output.ofNullable(maxRatePerEndpoint);
             return this;
         }
 
-        public Builder maxRatePerInstance(@Nullable Input<Double> maxRatePerInstance) {
+        public Builder maxRatePerInstance(@Nullable Output<Double> maxRatePerInstance) {
             this.maxRatePerInstance = maxRatePerInstance;
             return this;
         }
 
         public Builder maxRatePerInstance(@Nullable Double maxRatePerInstance) {
-            this.maxRatePerInstance = Input.ofNullable(maxRatePerInstance);
+            this.maxRatePerInstance = Output.ofNullable(maxRatePerInstance);
             return this;
         }
 
-        public Builder maxUtilization(@Nullable Input<Double> maxUtilization) {
+        public Builder maxUtilization(@Nullable Output<Double> maxUtilization) {
             this.maxUtilization = maxUtilization;
             return this;
         }
 
         public Builder maxUtilization(@Nullable Double maxUtilization) {
-            this.maxUtilization = Input.ofNullable(maxUtilization);
+            this.maxUtilization = Output.ofNullable(maxUtilization);
             return this;
         }
         public BackendServiceBackendArgs build() {

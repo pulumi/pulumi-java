@@ -6,7 +6,7 @@ package io.pulumi.azurenative.storagecache.inputs;
 import io.pulumi.azurenative.storagecache.enums.UsernameSource;
 import io.pulumi.azurenative.storagecache.inputs.CacheUsernameDownloadSettingsCredentialsArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="autoDownloadCertificate")
-      private final @Nullable Input<Boolean> autoDownloadCertificate;
+      private final @Nullable Output<Boolean> autoDownloadCertificate;
 
-    public Input<Boolean> getAutoDownloadCertificate() {
-        return this.autoDownloadCertificate == null ? Input.empty() : this.autoDownloadCertificate;
+    public Output<Boolean> getAutoDownloadCertificate() {
+        return this.autoDownloadCertificate == null ? Output.empty() : this.autoDownloadCertificate;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="caCertificateURI")
-      private final @Nullable Input<String> caCertificateURI;
+      private final @Nullable Output<String> caCertificateURI;
 
-    public Input<String> getCaCertificateURI() {
-        return this.caCertificateURI == null ? Input.empty() : this.caCertificateURI;
+    public Output<String> getCaCertificateURI() {
+        return this.caCertificateURI == null ? Output.empty() : this.caCertificateURI;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="credentials")
-      private final @Nullable Input<CacheUsernameDownloadSettingsCredentialsArgs> credentials;
+      private final @Nullable Output<CacheUsernameDownloadSettingsCredentialsArgs> credentials;
 
-    public Input<CacheUsernameDownloadSettingsCredentialsArgs> getCredentials() {
-        return this.credentials == null ? Input.empty() : this.credentials;
+    public Output<CacheUsernameDownloadSettingsCredentialsArgs> getCredentials() {
+        return this.credentials == null ? Output.empty() : this.credentials;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="encryptLdapConnection")
-      private final @Nullable Input<Boolean> encryptLdapConnection;
+      private final @Nullable Output<Boolean> encryptLdapConnection;
 
-    public Input<Boolean> getEncryptLdapConnection() {
-        return this.encryptLdapConnection == null ? Input.empty() : this.encryptLdapConnection;
+    public Output<Boolean> getEncryptLdapConnection() {
+        return this.encryptLdapConnection == null ? Output.empty() : this.encryptLdapConnection;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="extendedGroups")
-      private final @Nullable Input<Boolean> extendedGroups;
+      private final @Nullable Output<Boolean> extendedGroups;
 
-    public Input<Boolean> getExtendedGroups() {
-        return this.extendedGroups == null ? Input.empty() : this.extendedGroups;
+    public Output<Boolean> getExtendedGroups() {
+        return this.extendedGroups == null ? Output.empty() : this.extendedGroups;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="groupFileURI")
-      private final @Nullable Input<String> groupFileURI;
+      private final @Nullable Output<String> groupFileURI;
 
-    public Input<String> getGroupFileURI() {
-        return this.groupFileURI == null ? Input.empty() : this.groupFileURI;
+    public Output<String> getGroupFileURI() {
+        return this.groupFileURI == null ? Output.empty() : this.groupFileURI;
     }
 
     /**
@@ -93,10 +93,10 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="ldapBaseDN")
-      private final @Nullable Input<String> ldapBaseDN;
+      private final @Nullable Output<String> ldapBaseDN;
 
-    public Input<String> getLdapBaseDN() {
-        return this.ldapBaseDN == null ? Input.empty() : this.ldapBaseDN;
+    public Output<String> getLdapBaseDN() {
+        return this.ldapBaseDN == null ? Output.empty() : this.ldapBaseDN;
     }
 
     /**
@@ -104,10 +104,10 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="ldapServer")
-      private final @Nullable Input<String> ldapServer;
+      private final @Nullable Output<String> ldapServer;
 
-    public Input<String> getLdapServer() {
-        return this.ldapServer == null ? Input.empty() : this.ldapServer;
+    public Output<String> getLdapServer() {
+        return this.ldapServer == null ? Output.empty() : this.ldapServer;
     }
 
     /**
@@ -115,10 +115,10 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="requireValidCertificate")
-      private final @Nullable Input<Boolean> requireValidCertificate;
+      private final @Nullable Output<Boolean> requireValidCertificate;
 
-    public Input<Boolean> getRequireValidCertificate() {
-        return this.requireValidCertificate == null ? Input.empty() : this.requireValidCertificate;
+    public Output<Boolean> getRequireValidCertificate() {
+        return this.requireValidCertificate == null ? Output.empty() : this.requireValidCertificate;
     }
 
     /**
@@ -126,10 +126,10 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="userFileURI")
-      private final @Nullable Input<String> userFileURI;
+      private final @Nullable Output<String> userFileURI;
 
-    public Input<String> getUserFileURI() {
-        return this.userFileURI == null ? Input.empty() : this.userFileURI;
+    public Output<String> getUserFileURI() {
+        return this.userFileURI == null ? Output.empty() : this.userFileURI;
     }
 
     /**
@@ -137,24 +137,24 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="usernameSource")
-      private final @Nullable Input<Either<String,UsernameSource>> usernameSource;
+      private final @Nullable Output<Either<String,UsernameSource>> usernameSource;
 
-    public Input<Either<String,UsernameSource>> getUsernameSource() {
-        return this.usernameSource == null ? Input.empty() : this.usernameSource;
+    public Output<Either<String,UsernameSource>> getUsernameSource() {
+        return this.usernameSource == null ? Output.empty() : this.usernameSource;
     }
 
     public CacheUsernameDownloadSettingsArgs(
-        @Nullable Input<Boolean> autoDownloadCertificate,
-        @Nullable Input<String> caCertificateURI,
-        @Nullable Input<CacheUsernameDownloadSettingsCredentialsArgs> credentials,
-        @Nullable Input<Boolean> encryptLdapConnection,
-        @Nullable Input<Boolean> extendedGroups,
-        @Nullable Input<String> groupFileURI,
-        @Nullable Input<String> ldapBaseDN,
-        @Nullable Input<String> ldapServer,
-        @Nullable Input<Boolean> requireValidCertificate,
-        @Nullable Input<String> userFileURI,
-        @Nullable Input<Either<String,UsernameSource>> usernameSource) {
+        @Nullable Output<Boolean> autoDownloadCertificate,
+        @Nullable Output<String> caCertificateURI,
+        @Nullable Output<CacheUsernameDownloadSettingsCredentialsArgs> credentials,
+        @Nullable Output<Boolean> encryptLdapConnection,
+        @Nullable Output<Boolean> extendedGroups,
+        @Nullable Output<String> groupFileURI,
+        @Nullable Output<String> ldapBaseDN,
+        @Nullable Output<String> ldapServer,
+        @Nullable Output<Boolean> requireValidCertificate,
+        @Nullable Output<String> userFileURI,
+        @Nullable Output<Either<String,UsernameSource>> usernameSource) {
         this.autoDownloadCertificate = autoDownloadCertificate;
         this.caCertificateURI = caCertificateURI;
         this.credentials = credentials;
@@ -165,21 +165,21 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
         this.ldapServer = ldapServer;
         this.requireValidCertificate = requireValidCertificate;
         this.userFileURI = userFileURI;
-        this.usernameSource = usernameSource == null ? Input.ofLeft("None") : usernameSource;
+        this.usernameSource = usernameSource == null ? Output.ofLeft("None") : usernameSource;
     }
 
     private CacheUsernameDownloadSettingsArgs() {
-        this.autoDownloadCertificate = Input.empty();
-        this.caCertificateURI = Input.empty();
-        this.credentials = Input.empty();
-        this.encryptLdapConnection = Input.empty();
-        this.extendedGroups = Input.empty();
-        this.groupFileURI = Input.empty();
-        this.ldapBaseDN = Input.empty();
-        this.ldapServer = Input.empty();
-        this.requireValidCertificate = Input.empty();
-        this.userFileURI = Input.empty();
-        this.usernameSource = Input.empty();
+        this.autoDownloadCertificate = Output.empty();
+        this.caCertificateURI = Output.empty();
+        this.credentials = Output.empty();
+        this.encryptLdapConnection = Output.empty();
+        this.extendedGroups = Output.empty();
+        this.groupFileURI = Output.empty();
+        this.ldapBaseDN = Output.empty();
+        this.ldapServer = Output.empty();
+        this.requireValidCertificate = Output.empty();
+        this.userFileURI = Output.empty();
+        this.usernameSource = Output.empty();
     }
 
     public static Builder builder() {
@@ -191,17 +191,17 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> autoDownloadCertificate;
-        private @Nullable Input<String> caCertificateURI;
-        private @Nullable Input<CacheUsernameDownloadSettingsCredentialsArgs> credentials;
-        private @Nullable Input<Boolean> encryptLdapConnection;
-        private @Nullable Input<Boolean> extendedGroups;
-        private @Nullable Input<String> groupFileURI;
-        private @Nullable Input<String> ldapBaseDN;
-        private @Nullable Input<String> ldapServer;
-        private @Nullable Input<Boolean> requireValidCertificate;
-        private @Nullable Input<String> userFileURI;
-        private @Nullable Input<Either<String,UsernameSource>> usernameSource;
+        private @Nullable Output<Boolean> autoDownloadCertificate;
+        private @Nullable Output<String> caCertificateURI;
+        private @Nullable Output<CacheUsernameDownloadSettingsCredentialsArgs> credentials;
+        private @Nullable Output<Boolean> encryptLdapConnection;
+        private @Nullable Output<Boolean> extendedGroups;
+        private @Nullable Output<String> groupFileURI;
+        private @Nullable Output<String> ldapBaseDN;
+        private @Nullable Output<String> ldapServer;
+        private @Nullable Output<Boolean> requireValidCertificate;
+        private @Nullable Output<String> userFileURI;
+        private @Nullable Output<Either<String,UsernameSource>> usernameSource;
 
         public Builder() {
     	      // Empty
@@ -222,113 +222,113 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
     	      this.usernameSource = defaults.usernameSource;
         }
 
-        public Builder autoDownloadCertificate(@Nullable Input<Boolean> autoDownloadCertificate) {
+        public Builder autoDownloadCertificate(@Nullable Output<Boolean> autoDownloadCertificate) {
             this.autoDownloadCertificate = autoDownloadCertificate;
             return this;
         }
 
         public Builder autoDownloadCertificate(@Nullable Boolean autoDownloadCertificate) {
-            this.autoDownloadCertificate = Input.ofNullable(autoDownloadCertificate);
+            this.autoDownloadCertificate = Output.ofNullable(autoDownloadCertificate);
             return this;
         }
 
-        public Builder caCertificateURI(@Nullable Input<String> caCertificateURI) {
+        public Builder caCertificateURI(@Nullable Output<String> caCertificateURI) {
             this.caCertificateURI = caCertificateURI;
             return this;
         }
 
         public Builder caCertificateURI(@Nullable String caCertificateURI) {
-            this.caCertificateURI = Input.ofNullable(caCertificateURI);
+            this.caCertificateURI = Output.ofNullable(caCertificateURI);
             return this;
         }
 
-        public Builder credentials(@Nullable Input<CacheUsernameDownloadSettingsCredentialsArgs> credentials) {
+        public Builder credentials(@Nullable Output<CacheUsernameDownloadSettingsCredentialsArgs> credentials) {
             this.credentials = credentials;
             return this;
         }
 
         public Builder credentials(@Nullable CacheUsernameDownloadSettingsCredentialsArgs credentials) {
-            this.credentials = Input.ofNullable(credentials);
+            this.credentials = Output.ofNullable(credentials);
             return this;
         }
 
-        public Builder encryptLdapConnection(@Nullable Input<Boolean> encryptLdapConnection) {
+        public Builder encryptLdapConnection(@Nullable Output<Boolean> encryptLdapConnection) {
             this.encryptLdapConnection = encryptLdapConnection;
             return this;
         }
 
         public Builder encryptLdapConnection(@Nullable Boolean encryptLdapConnection) {
-            this.encryptLdapConnection = Input.ofNullable(encryptLdapConnection);
+            this.encryptLdapConnection = Output.ofNullable(encryptLdapConnection);
             return this;
         }
 
-        public Builder extendedGroups(@Nullable Input<Boolean> extendedGroups) {
+        public Builder extendedGroups(@Nullable Output<Boolean> extendedGroups) {
             this.extendedGroups = extendedGroups;
             return this;
         }
 
         public Builder extendedGroups(@Nullable Boolean extendedGroups) {
-            this.extendedGroups = Input.ofNullable(extendedGroups);
+            this.extendedGroups = Output.ofNullable(extendedGroups);
             return this;
         }
 
-        public Builder groupFileURI(@Nullable Input<String> groupFileURI) {
+        public Builder groupFileURI(@Nullable Output<String> groupFileURI) {
             this.groupFileURI = groupFileURI;
             return this;
         }
 
         public Builder groupFileURI(@Nullable String groupFileURI) {
-            this.groupFileURI = Input.ofNullable(groupFileURI);
+            this.groupFileURI = Output.ofNullable(groupFileURI);
             return this;
         }
 
-        public Builder ldapBaseDN(@Nullable Input<String> ldapBaseDN) {
+        public Builder ldapBaseDN(@Nullable Output<String> ldapBaseDN) {
             this.ldapBaseDN = ldapBaseDN;
             return this;
         }
 
         public Builder ldapBaseDN(@Nullable String ldapBaseDN) {
-            this.ldapBaseDN = Input.ofNullable(ldapBaseDN);
+            this.ldapBaseDN = Output.ofNullable(ldapBaseDN);
             return this;
         }
 
-        public Builder ldapServer(@Nullable Input<String> ldapServer) {
+        public Builder ldapServer(@Nullable Output<String> ldapServer) {
             this.ldapServer = ldapServer;
             return this;
         }
 
         public Builder ldapServer(@Nullable String ldapServer) {
-            this.ldapServer = Input.ofNullable(ldapServer);
+            this.ldapServer = Output.ofNullable(ldapServer);
             return this;
         }
 
-        public Builder requireValidCertificate(@Nullable Input<Boolean> requireValidCertificate) {
+        public Builder requireValidCertificate(@Nullable Output<Boolean> requireValidCertificate) {
             this.requireValidCertificate = requireValidCertificate;
             return this;
         }
 
         public Builder requireValidCertificate(@Nullable Boolean requireValidCertificate) {
-            this.requireValidCertificate = Input.ofNullable(requireValidCertificate);
+            this.requireValidCertificate = Output.ofNullable(requireValidCertificate);
             return this;
         }
 
-        public Builder userFileURI(@Nullable Input<String> userFileURI) {
+        public Builder userFileURI(@Nullable Output<String> userFileURI) {
             this.userFileURI = userFileURI;
             return this;
         }
 
         public Builder userFileURI(@Nullable String userFileURI) {
-            this.userFileURI = Input.ofNullable(userFileURI);
+            this.userFileURI = Output.ofNullable(userFileURI);
             return this;
         }
 
-        public Builder usernameSource(@Nullable Input<Either<String,UsernameSource>> usernameSource) {
+        public Builder usernameSource(@Nullable Output<Either<String,UsernameSource>> usernameSource) {
             this.usernameSource = usernameSource;
             return this;
         }
 
         public Builder usernameSource(@Nullable Either<String,UsernameSource> usernameSource) {
-            this.usernameSource = Input.ofNullable(usernameSource);
+            this.usernameSource = Output.ofNullable(usernameSource);
             return this;
         }
         public CacheUsernameDownloadSettingsArgs build() {

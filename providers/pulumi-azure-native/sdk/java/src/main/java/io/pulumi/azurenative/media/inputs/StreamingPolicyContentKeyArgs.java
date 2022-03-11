@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.TrackSelectionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class StreamingPolicyContentKeyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="label")
-      private final @Nullable Input<String> label;
+      private final @Nullable Output<String> label;
 
-    public Input<String> getLabel() {
-        return this.label == null ? Input.empty() : this.label;
+    public Output<String> getLabel() {
+        return this.label == null ? Output.empty() : this.label;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class StreamingPolicyContentKeyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="policyName")
-      private final @Nullable Input<String> policyName;
+      private final @Nullable Output<String> policyName;
 
-    public Input<String> getPolicyName() {
-        return this.policyName == null ? Input.empty() : this.policyName;
+    public Output<String> getPolicyName() {
+        return this.policyName == null ? Output.empty() : this.policyName;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class StreamingPolicyContentKeyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="tracks")
-      private final @Nullable Input<List<TrackSelectionArgs>> tracks;
+      private final @Nullable Output<List<TrackSelectionArgs>> tracks;
 
-    public Input<List<TrackSelectionArgs>> getTracks() {
-        return this.tracks == null ? Input.empty() : this.tracks;
+    public Output<List<TrackSelectionArgs>> getTracks() {
+        return this.tracks == null ? Output.empty() : this.tracks;
     }
 
     public StreamingPolicyContentKeyArgs(
-        @Nullable Input<String> label,
-        @Nullable Input<String> policyName,
-        @Nullable Input<List<TrackSelectionArgs>> tracks) {
+        @Nullable Output<String> label,
+        @Nullable Output<String> policyName,
+        @Nullable Output<List<TrackSelectionArgs>> tracks) {
         this.label = label;
         this.policyName = policyName;
         this.tracks = tracks;
     }
 
     private StreamingPolicyContentKeyArgs() {
-        this.label = Input.empty();
-        this.policyName = Input.empty();
-        this.tracks = Input.empty();
+        this.label = Output.empty();
+        this.policyName = Output.empty();
+        this.tracks = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class StreamingPolicyContentKeyArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> label;
-        private @Nullable Input<String> policyName;
-        private @Nullable Input<List<TrackSelectionArgs>> tracks;
+        private @Nullable Output<String> label;
+        private @Nullable Output<String> policyName;
+        private @Nullable Output<List<TrackSelectionArgs>> tracks;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class StreamingPolicyContentKeyArgs extends io.pulumi.resources.Res
     	      this.tracks = defaults.tracks;
         }
 
-        public Builder label(@Nullable Input<String> label) {
+        public Builder label(@Nullable Output<String> label) {
             this.label = label;
             return this;
         }
 
         public Builder label(@Nullable String label) {
-            this.label = Input.ofNullable(label);
+            this.label = Output.ofNullable(label);
             return this;
         }
 
-        public Builder policyName(@Nullable Input<String> policyName) {
+        public Builder policyName(@Nullable Output<String> policyName) {
             this.policyName = policyName;
             return this;
         }
 
         public Builder policyName(@Nullable String policyName) {
-            this.policyName = Input.ofNullable(policyName);
+            this.policyName = Output.ofNullable(policyName);
             return this;
         }
 
-        public Builder tracks(@Nullable Input<List<TrackSelectionArgs>> tracks) {
+        public Builder tracks(@Nullable Output<List<TrackSelectionArgs>> tracks) {
             this.tracks = tracks;
             return this;
         }
 
         public Builder tracks(@Nullable List<TrackSelectionArgs> tracks) {
-            this.tracks = Input.ofNullable(tracks);
+            this.tracks = Output.ofNullable(tracks);
             return this;
         }
         public StreamingPolicyContentKeyArgs build() {

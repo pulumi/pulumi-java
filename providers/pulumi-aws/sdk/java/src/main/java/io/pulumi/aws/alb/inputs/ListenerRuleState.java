@@ -5,7 +5,7 @@ package io.pulumi.aws.alb.inputs;
 
 import io.pulumi.aws.alb.inputs.ListenerRuleActionGetArgs;
 import io.pulumi.aws.alb.inputs.ListenerRuleConditionGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ListenerRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actions")
-      private final @Nullable Input<List<ListenerRuleActionGetArgs>> actions;
+      private final @Nullable Output<List<ListenerRuleActionGetArgs>> actions;
 
-    public Input<List<ListenerRuleActionGetArgs>> getActions() {
-        return this.actions == null ? Input.empty() : this.actions;
+    public Output<List<ListenerRuleActionGetArgs>> getActions() {
+        return this.actions == null ? Output.empty() : this.actions;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ListenerRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ListenerRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conditions")
-      private final @Nullable Input<List<ListenerRuleConditionGetArgs>> conditions;
+      private final @Nullable Output<List<ListenerRuleConditionGetArgs>> conditions;
 
-    public Input<List<ListenerRuleConditionGetArgs>> getConditions() {
-        return this.conditions == null ? Input.empty() : this.conditions;
+    public Output<List<ListenerRuleConditionGetArgs>> getConditions() {
+        return this.conditions == null ? Output.empty() : this.conditions;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ListenerRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="listenerArn")
-      private final @Nullable Input<String> listenerArn;
+      private final @Nullable Output<String> listenerArn;
 
-    public Input<String> getListenerArn() {
-        return this.listenerArn == null ? Input.empty() : this.listenerArn;
+    public Output<String> getListenerArn() {
+        return this.listenerArn == null ? Output.empty() : this.listenerArn;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ListenerRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priority")
-      private final @Nullable Input<Integer> priority;
+      private final @Nullable Output<Integer> priority;
 
-    public Input<Integer> getPriority() {
-        return this.priority == null ? Input.empty() : this.priority;
+    public Output<Integer> getPriority() {
+        return this.priority == null ? Output.empty() : this.priority;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ListenerRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -90,20 +90,20 @@ public final class ListenerRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public ListenerRuleState(
-        @Nullable Input<List<ListenerRuleActionGetArgs>> actions,
-        @Nullable Input<String> arn,
-        @Nullable Input<List<ListenerRuleConditionGetArgs>> conditions,
-        @Nullable Input<String> listenerArn,
-        @Nullable Input<Integer> priority,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<List<ListenerRuleActionGetArgs>> actions,
+        @Nullable Output<String> arn,
+        @Nullable Output<List<ListenerRuleConditionGetArgs>> conditions,
+        @Nullable Output<String> listenerArn,
+        @Nullable Output<Integer> priority,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.actions = actions;
         this.arn = arn;
         this.conditions = conditions;
@@ -114,13 +114,13 @@ public final class ListenerRuleState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ListenerRuleState() {
-        this.actions = Input.empty();
-        this.arn = Input.empty();
-        this.conditions = Input.empty();
-        this.listenerArn = Input.empty();
-        this.priority = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.actions = Output.empty();
+        this.arn = Output.empty();
+        this.conditions = Output.empty();
+        this.listenerArn = Output.empty();
+        this.priority = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -132,13 +132,13 @@ public final class ListenerRuleState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ListenerRuleActionGetArgs>> actions;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<List<ListenerRuleConditionGetArgs>> conditions;
-        private @Nullable Input<String> listenerArn;
-        private @Nullable Input<Integer> priority;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<List<ListenerRuleActionGetArgs>> actions;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<List<ListenerRuleConditionGetArgs>> conditions;
+        private @Nullable Output<String> listenerArn;
+        private @Nullable Output<Integer> priority;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -155,73 +155,73 @@ public final class ListenerRuleState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder actions(@Nullable Input<List<ListenerRuleActionGetArgs>> actions) {
+        public Builder actions(@Nullable Output<List<ListenerRuleActionGetArgs>> actions) {
             this.actions = actions;
             return this;
         }
 
         public Builder actions(@Nullable List<ListenerRuleActionGetArgs> actions) {
-            this.actions = Input.ofNullable(actions);
+            this.actions = Output.ofNullable(actions);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder conditions(@Nullable Input<List<ListenerRuleConditionGetArgs>> conditions) {
+        public Builder conditions(@Nullable Output<List<ListenerRuleConditionGetArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
         public Builder conditions(@Nullable List<ListenerRuleConditionGetArgs> conditions) {
-            this.conditions = Input.ofNullable(conditions);
+            this.conditions = Output.ofNullable(conditions);
             return this;
         }
 
-        public Builder listenerArn(@Nullable Input<String> listenerArn) {
+        public Builder listenerArn(@Nullable Output<String> listenerArn) {
             this.listenerArn = listenerArn;
             return this;
         }
 
         public Builder listenerArn(@Nullable String listenerArn) {
-            this.listenerArn = Input.ofNullable(listenerArn);
+            this.listenerArn = Output.ofNullable(listenerArn);
             return this;
         }
 
-        public Builder priority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Input.ofNullable(priority);
+            this.priority = Output.ofNullable(priority);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public ListenerRuleState build() {

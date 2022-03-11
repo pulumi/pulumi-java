@@ -5,7 +5,7 @@ package io.pulumi.azurenative.chaos.inputs;
 
 import io.pulumi.azurenative.chaos.inputs.SelectorArgs;
 import io.pulumi.azurenative.chaos.inputs.StepArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.List;
@@ -26,9 +26,9 @@ public final class ExperimentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="selectors", required=true)
-      private final Input<List<SelectorArgs>> selectors;
+      private final Output<List<SelectorArgs>> selectors;
 
-    public Input<List<SelectorArgs>> getSelectors() {
+    public Output<List<SelectorArgs>> getSelectors() {
         return this.selectors;
     }
 
@@ -37,10 +37,10 @@ public final class ExperimentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="startOnCreation")
-      private final @Nullable Input<Boolean> startOnCreation;
+      private final @Nullable Output<Boolean> startOnCreation;
 
-    public Input<Boolean> getStartOnCreation() {
-        return this.startOnCreation == null ? Input.empty() : this.startOnCreation;
+    public Output<Boolean> getStartOnCreation() {
+        return this.startOnCreation == null ? Output.empty() : this.startOnCreation;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class ExperimentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="steps", required=true)
-      private final Input<List<StepArgs>> steps;
+      private final Output<List<StepArgs>> steps;
 
-    public Input<List<StepArgs>> getSteps() {
+    public Output<List<StepArgs>> getSteps() {
         return this.steps;
     }
 
     public ExperimentPropertiesArgs(
-        Input<List<SelectorArgs>> selectors,
-        @Nullable Input<Boolean> startOnCreation,
-        Input<List<StepArgs>> steps) {
+        Output<List<SelectorArgs>> selectors,
+        @Nullable Output<Boolean> startOnCreation,
+        Output<List<StepArgs>> steps) {
         this.selectors = Objects.requireNonNull(selectors, "expected parameter 'selectors' to be non-null");
         this.startOnCreation = startOnCreation;
         this.steps = Objects.requireNonNull(steps, "expected parameter 'steps' to be non-null");
     }
 
     private ExperimentPropertiesArgs() {
-        this.selectors = Input.empty();
-        this.startOnCreation = Input.empty();
-        this.steps = Input.empty();
+        this.selectors = Output.empty();
+        this.startOnCreation = Output.empty();
+        this.steps = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class ExperimentPropertiesArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<List<SelectorArgs>> selectors;
-        private @Nullable Input<Boolean> startOnCreation;
-        private Input<List<StepArgs>> steps;
+        private Output<List<SelectorArgs>> selectors;
+        private @Nullable Output<Boolean> startOnCreation;
+        private Output<List<StepArgs>> steps;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class ExperimentPropertiesArgs extends io.pulumi.resources.Resource
     	      this.steps = defaults.steps;
         }
 
-        public Builder selectors(Input<List<SelectorArgs>> selectors) {
+        public Builder selectors(Output<List<SelectorArgs>> selectors) {
             this.selectors = Objects.requireNonNull(selectors);
             return this;
         }
 
         public Builder selectors(List<SelectorArgs> selectors) {
-            this.selectors = Input.of(Objects.requireNonNull(selectors));
+            this.selectors = Output.of(Objects.requireNonNull(selectors));
             return this;
         }
 
-        public Builder startOnCreation(@Nullable Input<Boolean> startOnCreation) {
+        public Builder startOnCreation(@Nullable Output<Boolean> startOnCreation) {
             this.startOnCreation = startOnCreation;
             return this;
         }
 
         public Builder startOnCreation(@Nullable Boolean startOnCreation) {
-            this.startOnCreation = Input.ofNullable(startOnCreation);
+            this.startOnCreation = Output.ofNullable(startOnCreation);
             return this;
         }
 
-        public Builder steps(Input<List<StepArgs>> steps) {
+        public Builder steps(Output<List<StepArgs>> steps) {
             this.steps = Objects.requireNonNull(steps);
             return this;
         }
 
         public Builder steps(List<StepArgs> steps) {
-            this.steps = Input.of(Objects.requireNonNull(steps));
+            this.steps = Output.of(Objects.requireNonNull(steps));
             return this;
         }
         public ExperimentPropertiesArgs build() {

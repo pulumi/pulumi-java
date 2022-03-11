@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.elasticloadbalancingv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -16,18 +16,18 @@ public final class ListenerRuleSourceIpConfigArgs extends io.pulumi.resources.Re
     public static final ListenerRuleSourceIpConfigArgs Empty = new ListenerRuleSourceIpConfigArgs();
 
     @InputImport(name="values")
-      private final @Nullable Input<List<String>> values;
+      private final @Nullable Output<List<String>> values;
 
-    public Input<List<String>> getValues() {
-        return this.values == null ? Input.empty() : this.values;
+    public Output<List<String>> getValues() {
+        return this.values == null ? Output.empty() : this.values;
     }
 
-    public ListenerRuleSourceIpConfigArgs(@Nullable Input<List<String>> values) {
+    public ListenerRuleSourceIpConfigArgs(@Nullable Output<List<String>> values) {
         this.values = values;
     }
 
     private ListenerRuleSourceIpConfigArgs() {
-        this.values = Input.empty();
+        this.values = Output.empty();
     }
 
     public static Builder builder() {
@@ -39,7 +39,7 @@ public final class ListenerRuleSourceIpConfigArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> values;
+        private @Nullable Output<List<String>> values;
 
         public Builder() {
     	      // Empty
@@ -50,13 +50,13 @@ public final class ListenerRuleSourceIpConfigArgs extends io.pulumi.resources.Re
     	      this.values = defaults.values;
         }
 
-        public Builder values(@Nullable Input<List<String>> values) {
+        public Builder values(@Nullable Output<List<String>> values) {
             this.values = values;
             return this;
         }
 
         public Builder values(@Nullable List<String> values) {
-            this.values = Input.ofNullable(values);
+            this.values = Output.ofNullable(values);
             return this;
         }
         public ListenerRuleSourceIpConfigArgs build() {

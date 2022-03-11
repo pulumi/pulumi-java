@@ -4,7 +4,7 @@
 package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.aws.networkfirewall.inputs.FirewallFirewallStatusSyncStateGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -20,18 +20,18 @@ public final class FirewallFirewallStatusGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="syncStates")
-      private final @Nullable Input<List<FirewallFirewallStatusSyncStateGetArgs>> syncStates;
+      private final @Nullable Output<List<FirewallFirewallStatusSyncStateGetArgs>> syncStates;
 
-    public Input<List<FirewallFirewallStatusSyncStateGetArgs>> getSyncStates() {
-        return this.syncStates == null ? Input.empty() : this.syncStates;
+    public Output<List<FirewallFirewallStatusSyncStateGetArgs>> getSyncStates() {
+        return this.syncStates == null ? Output.empty() : this.syncStates;
     }
 
-    public FirewallFirewallStatusGetArgs(@Nullable Input<List<FirewallFirewallStatusSyncStateGetArgs>> syncStates) {
+    public FirewallFirewallStatusGetArgs(@Nullable Output<List<FirewallFirewallStatusSyncStateGetArgs>> syncStates) {
         this.syncStates = syncStates;
     }
 
     private FirewallFirewallStatusGetArgs() {
-        this.syncStates = Input.empty();
+        this.syncStates = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class FirewallFirewallStatusGetArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<List<FirewallFirewallStatusSyncStateGetArgs>> syncStates;
+        private @Nullable Output<List<FirewallFirewallStatusSyncStateGetArgs>> syncStates;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class FirewallFirewallStatusGetArgs extends io.pulumi.resources.Res
     	      this.syncStates = defaults.syncStates;
         }
 
-        public Builder syncStates(@Nullable Input<List<FirewallFirewallStatusSyncStateGetArgs>> syncStates) {
+        public Builder syncStates(@Nullable Output<List<FirewallFirewallStatusSyncStateGetArgs>> syncStates) {
             this.syncStates = syncStates;
             return this;
         }
 
         public Builder syncStates(@Nullable List<FirewallFirewallStatusSyncStateGetArgs> syncStates) {
-            this.syncStates = Input.ofNullable(syncStates);
+            this.syncStates = Output.ofNullable(syncStates);
             return this;
         }
         public FirewallFirewallStatusGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class URLMapTestGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class URLMapTestGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="host", required=true)
-      private final Input<String> host;
+      private final Output<String> host;
 
-    public Input<String> getHost() {
+    public Output<String> getHost() {
         return this.host;
     }
 
@@ -41,9 +41,9 @@ public final class URLMapTestGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path", required=true)
-      private final Input<String> path;
+      private final Output<String> path;
 
-    public Input<String> getPath() {
+    public Output<String> getPath() {
         return this.path;
     }
 
@@ -52,17 +52,17 @@ public final class URLMapTestGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service", required=true)
-      private final Input<String> service;
+      private final Output<String> service;
 
-    public Input<String> getService() {
+    public Output<String> getService() {
         return this.service;
     }
 
     public URLMapTestGetArgs(
-        @Nullable Input<String> description,
-        Input<String> host,
-        Input<String> path,
-        Input<String> service) {
+        @Nullable Output<String> description,
+        Output<String> host,
+        Output<String> path,
+        Output<String> service) {
         this.description = description;
         this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
         this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
@@ -70,10 +70,10 @@ public final class URLMapTestGetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private URLMapTestGetArgs() {
-        this.description = Input.empty();
-        this.host = Input.empty();
-        this.path = Input.empty();
-        this.service = Input.empty();
+        this.description = Output.empty();
+        this.host = Output.empty();
+        this.path = Output.empty();
+        this.service = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class URLMapTestGetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> host;
-        private Input<String> path;
-        private Input<String> service;
+        private @Nullable Output<String> description;
+        private Output<String> host;
+        private Output<String> path;
+        private Output<String> service;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class URLMapTestGetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.service = defaults.service;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder host(Input<String> host) {
+        public Builder host(Output<String> host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
         public Builder host(String host) {
-            this.host = Input.of(Objects.requireNonNull(host));
+            this.host = Output.of(Objects.requireNonNull(host));
             return this;
         }
 
-        public Builder path(Input<String> path) {
+        public Builder path(Output<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
         public Builder path(String path) {
-            this.path = Input.of(Objects.requireNonNull(path));
+            this.path = Output.of(Objects.requireNonNull(path));
             return this;
         }
 
-        public Builder service(Input<String> service) {
+        public Builder service(Output<String> service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
 
         public Builder service(String service) {
-            this.service = Input.of(Objects.requireNonNull(service));
+            this.service = Output.of(Objects.requireNonNull(service));
             return this;
         }
         public URLMapTestGetArgs build() {

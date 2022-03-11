@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigtable;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.bigtable.inputs.TableIamMemberConditionArgs;
 import java.lang.String;
@@ -16,10 +16,10 @@ public final class TableIamMemberArgs extends io.pulumi.resources.ResourceArgs {
     public static final TableIamMemberArgs Empty = new TableIamMemberArgs();
 
     @InputImport(name="condition")
-      private final @Nullable Input<TableIamMemberConditionArgs> condition;
+      private final @Nullable Output<TableIamMemberConditionArgs> condition;
 
-    public Input<TableIamMemberConditionArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<TableIamMemberConditionArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -27,16 +27,16 @@ public final class TableIamMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instance", required=true)
-      private final Input<String> instance;
+      private final Output<String> instance;
 
-    public Input<String> getInstance() {
+    public Output<String> getInstance() {
         return this.instance;
     }
 
     @InputImport(name="member", required=true)
-      private final Input<String> member;
+      private final Output<String> member;
 
-    public Input<String> getMember() {
+    public Output<String> getMember() {
         return this.member;
     }
 
@@ -46,10 +46,10 @@ public final class TableIamMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -59,9 +59,9 @@ public final class TableIamMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role", required=true)
-      private final Input<String> role;
+      private final Output<String> role;
 
-    public Input<String> getRole() {
+    public Output<String> getRole() {
         return this.role;
     }
 
@@ -70,19 +70,19 @@ public final class TableIamMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="table", required=true)
-      private final Input<String> table;
+      private final Output<String> table;
 
-    public Input<String> getTable() {
+    public Output<String> getTable() {
         return this.table;
     }
 
     public TableIamMemberArgs(
-        @Nullable Input<TableIamMemberConditionArgs> condition,
-        Input<String> instance,
-        Input<String> member,
-        @Nullable Input<String> project,
-        Input<String> role,
-        Input<String> table) {
+        @Nullable Output<TableIamMemberConditionArgs> condition,
+        Output<String> instance,
+        Output<String> member,
+        @Nullable Output<String> project,
+        Output<String> role,
+        Output<String> table) {
         this.condition = condition;
         this.instance = Objects.requireNonNull(instance, "expected parameter 'instance' to be non-null");
         this.member = Objects.requireNonNull(member, "expected parameter 'member' to be non-null");
@@ -92,12 +92,12 @@ public final class TableIamMemberArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TableIamMemberArgs() {
-        this.condition = Input.empty();
-        this.instance = Input.empty();
-        this.member = Input.empty();
-        this.project = Input.empty();
-        this.role = Input.empty();
-        this.table = Input.empty();
+        this.condition = Output.empty();
+        this.instance = Output.empty();
+        this.member = Output.empty();
+        this.project = Output.empty();
+        this.role = Output.empty();
+        this.table = Output.empty();
     }
 
     public static Builder builder() {
@@ -109,12 +109,12 @@ public final class TableIamMemberArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<TableIamMemberConditionArgs> condition;
-        private Input<String> instance;
-        private Input<String> member;
-        private @Nullable Input<String> project;
-        private Input<String> role;
-        private Input<String> table;
+        private @Nullable Output<TableIamMemberConditionArgs> condition;
+        private Output<String> instance;
+        private Output<String> member;
+        private @Nullable Output<String> project;
+        private Output<String> role;
+        private Output<String> table;
 
         public Builder() {
     	      // Empty
@@ -130,63 +130,63 @@ public final class TableIamMemberArgs extends io.pulumi.resources.ResourceArgs {
     	      this.table = defaults.table;
         }
 
-        public Builder condition(@Nullable Input<TableIamMemberConditionArgs> condition) {
+        public Builder condition(@Nullable Output<TableIamMemberConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable TableIamMemberConditionArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder instance(Input<String> instance) {
+        public Builder instance(Output<String> instance) {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
 
         public Builder instance(String instance) {
-            this.instance = Input.of(Objects.requireNonNull(instance));
+            this.instance = Output.of(Objects.requireNonNull(instance));
             return this;
         }
 
-        public Builder member(Input<String> member) {
+        public Builder member(Output<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
 
         public Builder member(String member) {
-            this.member = Input.of(Objects.requireNonNull(member));
+            this.member = Output.of(Objects.requireNonNull(member));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder role(Input<String> role) {
+        public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(String role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
 
-        public Builder table(Input<String> table) {
+        public Builder table(Output<String> table) {
             this.table = Objects.requireNonNull(table);
             return this;
         }
 
         public Builder table(String table) {
-            this.table = Input.of(Objects.requireNonNull(table));
+            this.table = Output.of(Objects.requireNonNull(table));
             return this;
         }
         public TableIamMemberArgs build() {

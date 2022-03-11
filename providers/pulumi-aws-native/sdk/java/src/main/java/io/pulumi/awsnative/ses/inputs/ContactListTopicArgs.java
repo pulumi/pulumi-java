@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ses.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,9 +15,9 @@ public final class ContactListTopicArgs extends io.pulumi.resources.ResourceArgs
     public static final ContactListTopicArgs Empty = new ContactListTopicArgs();
 
     @InputImport(name="defaultSubscriptionStatus", required=true)
-      private final Input<String> defaultSubscriptionStatus;
+      private final Output<String> defaultSubscriptionStatus;
 
-    public Input<String> getDefaultSubscriptionStatus() {
+    public Output<String> getDefaultSubscriptionStatus() {
         return this.defaultSubscriptionStatus;
     }
 
@@ -26,10 +26,10 @@ public final class ContactListTopicArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -37,9 +37,9 @@ public final class ContactListTopicArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -48,17 +48,17 @@ public final class ContactListTopicArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="topicName", required=true)
-      private final Input<String> topicName;
+      private final Output<String> topicName;
 
-    public Input<String> getTopicName() {
+    public Output<String> getTopicName() {
         return this.topicName;
     }
 
     public ContactListTopicArgs(
-        Input<String> defaultSubscriptionStatus,
-        @Nullable Input<String> description,
-        Input<String> displayName,
-        Input<String> topicName) {
+        Output<String> defaultSubscriptionStatus,
+        @Nullable Output<String> description,
+        Output<String> displayName,
+        Output<String> topicName) {
         this.defaultSubscriptionStatus = Objects.requireNonNull(defaultSubscriptionStatus, "expected parameter 'defaultSubscriptionStatus' to be non-null");
         this.description = description;
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
@@ -66,10 +66,10 @@ public final class ContactListTopicArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ContactListTopicArgs() {
-        this.defaultSubscriptionStatus = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.topicName = Input.empty();
+        this.defaultSubscriptionStatus = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.topicName = Output.empty();
     }
 
     public static Builder builder() {
@@ -81,10 +81,10 @@ public final class ContactListTopicArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> defaultSubscriptionStatus;
-        private @Nullable Input<String> description;
-        private Input<String> displayName;
-        private Input<String> topicName;
+        private Output<String> defaultSubscriptionStatus;
+        private @Nullable Output<String> description;
+        private Output<String> displayName;
+        private Output<String> topicName;
 
         public Builder() {
     	      // Empty
@@ -98,43 +98,43 @@ public final class ContactListTopicArgs extends io.pulumi.resources.ResourceArgs
     	      this.topicName = defaults.topicName;
         }
 
-        public Builder defaultSubscriptionStatus(Input<String> defaultSubscriptionStatus) {
+        public Builder defaultSubscriptionStatus(Output<String> defaultSubscriptionStatus) {
             this.defaultSubscriptionStatus = Objects.requireNonNull(defaultSubscriptionStatus);
             return this;
         }
 
         public Builder defaultSubscriptionStatus(String defaultSubscriptionStatus) {
-            this.defaultSubscriptionStatus = Input.of(Objects.requireNonNull(defaultSubscriptionStatus));
+            this.defaultSubscriptionStatus = Output.of(Objects.requireNonNull(defaultSubscriptionStatus));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder topicName(Input<String> topicName) {
+        public Builder topicName(Output<String> topicName) {
             this.topicName = Objects.requireNonNull(topicName);
             return this;
         }
 
         public Builder topicName(String topicName) {
-            this.topicName = Input.of(Objects.requireNonNull(topicName));
+            this.topicName = Output.of(Objects.requireNonNull(topicName));
             return this;
         }
         public ContactListTopicArgs build() {

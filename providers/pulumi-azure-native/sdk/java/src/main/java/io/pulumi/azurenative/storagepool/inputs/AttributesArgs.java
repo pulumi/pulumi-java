@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagepool.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class AttributesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authentication", required=true)
-      private final Input<Boolean> authentication;
+      private final Output<Boolean> authentication;
 
-    public Input<Boolean> getAuthentication() {
+    public Output<Boolean> getAuthentication() {
         return this.authentication;
     }
 
@@ -33,22 +33,22 @@ public final class AttributesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="prodModeWriteProtect", required=true)
-      private final Input<Boolean> prodModeWriteProtect;
+      private final Output<Boolean> prodModeWriteProtect;
 
-    public Input<Boolean> getProdModeWriteProtect() {
+    public Output<Boolean> getProdModeWriteProtect() {
         return this.prodModeWriteProtect;
     }
 
     public AttributesArgs(
-        Input<Boolean> authentication,
-        Input<Boolean> prodModeWriteProtect) {
+        Output<Boolean> authentication,
+        Output<Boolean> prodModeWriteProtect) {
         this.authentication = Objects.requireNonNull(authentication, "expected parameter 'authentication' to be non-null");
         this.prodModeWriteProtect = Objects.requireNonNull(prodModeWriteProtect, "expected parameter 'prodModeWriteProtect' to be non-null");
     }
 
     private AttributesArgs() {
-        this.authentication = Input.empty();
-        this.prodModeWriteProtect = Input.empty();
+        this.authentication = Output.empty();
+        this.prodModeWriteProtect = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class AttributesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Boolean> authentication;
-        private Input<Boolean> prodModeWriteProtect;
+        private Output<Boolean> authentication;
+        private Output<Boolean> prodModeWriteProtect;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class AttributesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.prodModeWriteProtect = defaults.prodModeWriteProtect;
         }
 
-        public Builder authentication(Input<Boolean> authentication) {
+        public Builder authentication(Output<Boolean> authentication) {
             this.authentication = Objects.requireNonNull(authentication);
             return this;
         }
 
         public Builder authentication(Boolean authentication) {
-            this.authentication = Input.of(Objects.requireNonNull(authentication));
+            this.authentication = Output.of(Objects.requireNonNull(authentication));
             return this;
         }
 
-        public Builder prodModeWriteProtect(Input<Boolean> prodModeWriteProtect) {
+        public Builder prodModeWriteProtect(Output<Boolean> prodModeWriteProtect) {
             this.prodModeWriteProtect = Objects.requireNonNull(prodModeWriteProtect);
             return this;
         }
 
         public Builder prodModeWriteProtect(Boolean prodModeWriteProtect) {
-            this.prodModeWriteProtect = Input.of(Objects.requireNonNull(prodModeWriteProtect));
+            this.prodModeWriteProtect = Output.of(Objects.requireNonNull(prodModeWriteProtect));
             return this;
         }
         public AttributesArgs build() {

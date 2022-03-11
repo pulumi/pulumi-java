@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.HashArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentHash")
-      private final @Nullable Input<HashArgs> contentHash;
+      private final @Nullable Output<HashArgs> contentHash;
 
-    public Input<HashArgs> getContentHash() {
-        return this.contentHash == null ? Input.empty() : this.contentHash;
+    public Output<HashArgs> getContentHash() {
+        return this.contentHash == null ? Output.empty() : this.contentHash;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uri")
-      private final @Nullable Input<String> uri;
+      private final @Nullable Output<String> uri;
 
-    public Input<String> getUri() {
-        return this.uri == null ? Input.empty() : this.uri;
+    public Output<String> getUri() {
+        return this.uri == null ? Output.empty() : this.uri;
     }
 
     public ResourceArgs(
-        @Nullable Input<HashArgs> contentHash,
-        @Nullable Input<String> name,
-        @Nullable Input<String> uri) {
+        @Nullable Output<HashArgs> contentHash,
+        @Nullable Output<String> name,
+        @Nullable Output<String> uri) {
         this.contentHash = contentHash;
         this.name = name;
         this.uri = uri;
     }
 
     private ResourceArgs() {
-        this.contentHash = Input.empty();
-        this.name = Input.empty();
-        this.uri = Input.empty();
+        this.contentHash = Output.empty();
+        this.name = Output.empty();
+        this.uri = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<HashArgs> contentHash;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> uri;
+        private @Nullable Output<HashArgs> contentHash;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> uri;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uri = defaults.uri;
         }
 
-        public Builder contentHash(@Nullable Input<HashArgs> contentHash) {
+        public Builder contentHash(@Nullable Output<HashArgs> contentHash) {
             this.contentHash = contentHash;
             return this;
         }
 
         public Builder contentHash(@Nullable HashArgs contentHash) {
-            this.contentHash = Input.ofNullable(contentHash);
+            this.contentHash = Output.ofNullable(contentHash);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder uri(@Nullable Input<String> uri) {
+        public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
 
         public Builder uri(@Nullable String uri) {
-            this.uri = Input.ofNullable(uri);
+            this.uri = Output.ofNullable(uri);
             return this;
         }
         public ResourceArgs build() {

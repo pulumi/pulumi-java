@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2;
 
 import io.pulumi.awsnative.ec2.inputs.TransitGatewayConnectOptionsArgs;
 import io.pulumi.awsnative.ec2.inputs.TransitGatewayConnectTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,9 +22,9 @@ public final class TransitGatewayConnectArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="options", required=true)
-      private final Input<TransitGatewayConnectOptionsArgs> options;
+      private final Output<TransitGatewayConnectOptionsArgs> options;
 
-    public Input<TransitGatewayConnectOptionsArgs> getOptions() {
+    public Output<TransitGatewayConnectOptionsArgs> getOptions() {
         return this.options;
     }
 
@@ -33,10 +33,10 @@ public final class TransitGatewayConnectArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<TransitGatewayConnectTagArgs>> tags;
+      private final @Nullable Output<List<TransitGatewayConnectTagArgs>> tags;
 
-    public Input<List<TransitGatewayConnectTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<TransitGatewayConnectTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -44,25 +44,25 @@ public final class TransitGatewayConnectArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="transportTransitGatewayAttachmentId", required=true)
-      private final Input<String> transportTransitGatewayAttachmentId;
+      private final Output<String> transportTransitGatewayAttachmentId;
 
-    public Input<String> getTransportTransitGatewayAttachmentId() {
+    public Output<String> getTransportTransitGatewayAttachmentId() {
         return this.transportTransitGatewayAttachmentId;
     }
 
     public TransitGatewayConnectArgs(
-        Input<TransitGatewayConnectOptionsArgs> options,
-        @Nullable Input<List<TransitGatewayConnectTagArgs>> tags,
-        Input<String> transportTransitGatewayAttachmentId) {
+        Output<TransitGatewayConnectOptionsArgs> options,
+        @Nullable Output<List<TransitGatewayConnectTagArgs>> tags,
+        Output<String> transportTransitGatewayAttachmentId) {
         this.options = Objects.requireNonNull(options, "expected parameter 'options' to be non-null");
         this.tags = tags;
         this.transportTransitGatewayAttachmentId = Objects.requireNonNull(transportTransitGatewayAttachmentId, "expected parameter 'transportTransitGatewayAttachmentId' to be non-null");
     }
 
     private TransitGatewayConnectArgs() {
-        this.options = Input.empty();
-        this.tags = Input.empty();
-        this.transportTransitGatewayAttachmentId = Input.empty();
+        this.options = Output.empty();
+        this.tags = Output.empty();
+        this.transportTransitGatewayAttachmentId = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class TransitGatewayConnectArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<TransitGatewayConnectOptionsArgs> options;
-        private @Nullable Input<List<TransitGatewayConnectTagArgs>> tags;
-        private Input<String> transportTransitGatewayAttachmentId;
+        private Output<TransitGatewayConnectOptionsArgs> options;
+        private @Nullable Output<List<TransitGatewayConnectTagArgs>> tags;
+        private Output<String> transportTransitGatewayAttachmentId;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class TransitGatewayConnectArgs extends io.pulumi.resources.Resourc
     	      this.transportTransitGatewayAttachmentId = defaults.transportTransitGatewayAttachmentId;
         }
 
-        public Builder options(Input<TransitGatewayConnectOptionsArgs> options) {
+        public Builder options(Output<TransitGatewayConnectOptionsArgs> options) {
             this.options = Objects.requireNonNull(options);
             return this;
         }
 
         public Builder options(TransitGatewayConnectOptionsArgs options) {
-            this.options = Input.of(Objects.requireNonNull(options));
+            this.options = Output.of(Objects.requireNonNull(options));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<TransitGatewayConnectTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<TransitGatewayConnectTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<TransitGatewayConnectTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder transportTransitGatewayAttachmentId(Input<String> transportTransitGatewayAttachmentId) {
+        public Builder transportTransitGatewayAttachmentId(Output<String> transportTransitGatewayAttachmentId) {
             this.transportTransitGatewayAttachmentId = Objects.requireNonNull(transportTransitGatewayAttachmentId);
             return this;
         }
 
         public Builder transportTransitGatewayAttachmentId(String transportTransitGatewayAttachmentId) {
-            this.transportTransitGatewayAttachmentId = Input.of(Objects.requireNonNull(transportTransitGatewayAttachmentId));
+            this.transportTransitGatewayAttachmentId = Output.of(Objects.requireNonNull(transportTransitGatewayAttachmentId));
             return this;
         }
         public TransitGatewayConnectArgs build() {

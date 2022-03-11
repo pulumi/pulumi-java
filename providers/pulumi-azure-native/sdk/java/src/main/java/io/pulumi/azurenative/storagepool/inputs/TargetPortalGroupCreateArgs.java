@@ -6,7 +6,7 @@ package io.pulumi.azurenative.storagepool.inputs;
 import io.pulumi.azurenative.storagepool.inputs.AclArgs;
 import io.pulumi.azurenative.storagepool.inputs.AttributesArgs;
 import io.pulumi.azurenative.storagepool.inputs.IscsiLunArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -25,9 +25,9 @@ public final class TargetPortalGroupCreateArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="acls", required=true)
-      private final Input<List<AclArgs>> acls;
+      private final Output<List<AclArgs>> acls;
 
-    public Input<List<AclArgs>> getAcls() {
+    public Output<List<AclArgs>> getAcls() {
         return this.acls;
     }
 
@@ -36,9 +36,9 @@ public final class TargetPortalGroupCreateArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="attributes", required=true)
-      private final Input<AttributesArgs> attributes;
+      private final Output<AttributesArgs> attributes;
 
-    public Input<AttributesArgs> getAttributes() {
+    public Output<AttributesArgs> getAttributes() {
         return this.attributes;
     }
 
@@ -47,25 +47,25 @@ public final class TargetPortalGroupCreateArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="luns", required=true)
-      private final Input<List<IscsiLunArgs>> luns;
+      private final Output<List<IscsiLunArgs>> luns;
 
-    public Input<List<IscsiLunArgs>> getLuns() {
+    public Output<List<IscsiLunArgs>> getLuns() {
         return this.luns;
     }
 
     public TargetPortalGroupCreateArgs(
-        Input<List<AclArgs>> acls,
-        Input<AttributesArgs> attributes,
-        Input<List<IscsiLunArgs>> luns) {
+        Output<List<AclArgs>> acls,
+        Output<AttributesArgs> attributes,
+        Output<List<IscsiLunArgs>> luns) {
         this.acls = Objects.requireNonNull(acls, "expected parameter 'acls' to be non-null");
         this.attributes = Objects.requireNonNull(attributes, "expected parameter 'attributes' to be non-null");
         this.luns = Objects.requireNonNull(luns, "expected parameter 'luns' to be non-null");
     }
 
     private TargetPortalGroupCreateArgs() {
-        this.acls = Input.empty();
-        this.attributes = Input.empty();
-        this.luns = Input.empty();
+        this.acls = Output.empty();
+        this.attributes = Output.empty();
+        this.luns = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class TargetPortalGroupCreateArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<List<AclArgs>> acls;
-        private Input<AttributesArgs> attributes;
-        private Input<List<IscsiLunArgs>> luns;
+        private Output<List<AclArgs>> acls;
+        private Output<AttributesArgs> attributes;
+        private Output<List<IscsiLunArgs>> luns;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class TargetPortalGroupCreateArgs extends io.pulumi.resources.Resou
     	      this.luns = defaults.luns;
         }
 
-        public Builder acls(Input<List<AclArgs>> acls) {
+        public Builder acls(Output<List<AclArgs>> acls) {
             this.acls = Objects.requireNonNull(acls);
             return this;
         }
 
         public Builder acls(List<AclArgs> acls) {
-            this.acls = Input.of(Objects.requireNonNull(acls));
+            this.acls = Output.of(Objects.requireNonNull(acls));
             return this;
         }
 
-        public Builder attributes(Input<AttributesArgs> attributes) {
+        public Builder attributes(Output<AttributesArgs> attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
 
         public Builder attributes(AttributesArgs attributes) {
-            this.attributes = Input.of(Objects.requireNonNull(attributes));
+            this.attributes = Output.of(Objects.requireNonNull(attributes));
             return this;
         }
 
-        public Builder luns(Input<List<IscsiLunArgs>> luns) {
+        public Builder luns(Output<List<IscsiLunArgs>> luns) {
             this.luns = Objects.requireNonNull(luns);
             return this;
         }
 
         public Builder luns(List<IscsiLunArgs> luns) {
-            this.luns = Input.of(Objects.requireNonNull(luns));
+            this.luns = Output.of(Objects.requireNonNull(luns));
             return this;
         }
         public TargetPortalGroupCreateArgs build() {

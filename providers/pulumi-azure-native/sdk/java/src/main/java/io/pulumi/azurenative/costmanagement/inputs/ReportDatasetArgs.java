@@ -9,7 +9,7 @@ import io.pulumi.azurenative.costmanagement.inputs.ReportDatasetConfigurationArg
 import io.pulumi.azurenative.costmanagement.inputs.ReportFilterArgs;
 import io.pulumi.azurenative.costmanagement.inputs.ReportGroupingArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -31,10 +31,10 @@ public final class ReportDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aggregation")
-      private final @Nullable Input<Map<String,ReportAggregationArgs>> aggregation;
+      private final @Nullable Output<Map<String,ReportAggregationArgs>> aggregation;
 
-    public Input<Map<String,ReportAggregationArgs>> getAggregation() {
-        return this.aggregation == null ? Input.empty() : this.aggregation;
+    public Output<Map<String,ReportAggregationArgs>> getAggregation() {
+        return this.aggregation == null ? Output.empty() : this.aggregation;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ReportDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configuration")
-      private final @Nullable Input<ReportDatasetConfigurationArgs> configuration;
+      private final @Nullable Output<ReportDatasetConfigurationArgs> configuration;
 
-    public Input<ReportDatasetConfigurationArgs> getConfiguration() {
-        return this.configuration == null ? Input.empty() : this.configuration;
+    public Output<ReportDatasetConfigurationArgs> getConfiguration() {
+        return this.configuration == null ? Output.empty() : this.configuration;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ReportDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filter")
-      private final @Nullable Input<ReportFilterArgs> filter;
+      private final @Nullable Output<ReportFilterArgs> filter;
 
-    public Input<ReportFilterArgs> getFilter() {
-        return this.filter == null ? Input.empty() : this.filter;
+    public Output<ReportFilterArgs> getFilter() {
+        return this.filter == null ? Output.empty() : this.filter;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ReportDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="granularity")
-      private final @Nullable Input<Either<String,GranularityType>> granularity;
+      private final @Nullable Output<Either<String,GranularityType>> granularity;
 
-    public Input<Either<String,GranularityType>> getGranularity() {
-        return this.granularity == null ? Input.empty() : this.granularity;
+    public Output<Either<String,GranularityType>> getGranularity() {
+        return this.granularity == null ? Output.empty() : this.granularity;
     }
 
     /**
@@ -75,18 +75,18 @@ public final class ReportDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="grouping")
-      private final @Nullable Input<List<ReportGroupingArgs>> grouping;
+      private final @Nullable Output<List<ReportGroupingArgs>> grouping;
 
-    public Input<List<ReportGroupingArgs>> getGrouping() {
-        return this.grouping == null ? Input.empty() : this.grouping;
+    public Output<List<ReportGroupingArgs>> getGrouping() {
+        return this.grouping == null ? Output.empty() : this.grouping;
     }
 
     public ReportDatasetArgs(
-        @Nullable Input<Map<String,ReportAggregationArgs>> aggregation,
-        @Nullable Input<ReportDatasetConfigurationArgs> configuration,
-        @Nullable Input<ReportFilterArgs> filter,
-        @Nullable Input<Either<String,GranularityType>> granularity,
-        @Nullable Input<List<ReportGroupingArgs>> grouping) {
+        @Nullable Output<Map<String,ReportAggregationArgs>> aggregation,
+        @Nullable Output<ReportDatasetConfigurationArgs> configuration,
+        @Nullable Output<ReportFilterArgs> filter,
+        @Nullable Output<Either<String,GranularityType>> granularity,
+        @Nullable Output<List<ReportGroupingArgs>> grouping) {
         this.aggregation = aggregation;
         this.configuration = configuration;
         this.filter = filter;
@@ -95,11 +95,11 @@ public final class ReportDatasetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ReportDatasetArgs() {
-        this.aggregation = Input.empty();
-        this.configuration = Input.empty();
-        this.filter = Input.empty();
-        this.granularity = Input.empty();
-        this.grouping = Input.empty();
+        this.aggregation = Output.empty();
+        this.configuration = Output.empty();
+        this.filter = Output.empty();
+        this.granularity = Output.empty();
+        this.grouping = Output.empty();
     }
 
     public static Builder builder() {
@@ -111,11 +111,11 @@ public final class ReportDatasetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,ReportAggregationArgs>> aggregation;
-        private @Nullable Input<ReportDatasetConfigurationArgs> configuration;
-        private @Nullable Input<ReportFilterArgs> filter;
-        private @Nullable Input<Either<String,GranularityType>> granularity;
-        private @Nullable Input<List<ReportGroupingArgs>> grouping;
+        private @Nullable Output<Map<String,ReportAggregationArgs>> aggregation;
+        private @Nullable Output<ReportDatasetConfigurationArgs> configuration;
+        private @Nullable Output<ReportFilterArgs> filter;
+        private @Nullable Output<Either<String,GranularityType>> granularity;
+        private @Nullable Output<List<ReportGroupingArgs>> grouping;
 
         public Builder() {
     	      // Empty
@@ -130,53 +130,53 @@ public final class ReportDatasetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.grouping = defaults.grouping;
         }
 
-        public Builder aggregation(@Nullable Input<Map<String,ReportAggregationArgs>> aggregation) {
+        public Builder aggregation(@Nullable Output<Map<String,ReportAggregationArgs>> aggregation) {
             this.aggregation = aggregation;
             return this;
         }
 
         public Builder aggregation(@Nullable Map<String,ReportAggregationArgs> aggregation) {
-            this.aggregation = Input.ofNullable(aggregation);
+            this.aggregation = Output.ofNullable(aggregation);
             return this;
         }
 
-        public Builder configuration(@Nullable Input<ReportDatasetConfigurationArgs> configuration) {
+        public Builder configuration(@Nullable Output<ReportDatasetConfigurationArgs> configuration) {
             this.configuration = configuration;
             return this;
         }
 
         public Builder configuration(@Nullable ReportDatasetConfigurationArgs configuration) {
-            this.configuration = Input.ofNullable(configuration);
+            this.configuration = Output.ofNullable(configuration);
             return this;
         }
 
-        public Builder filter(@Nullable Input<ReportFilterArgs> filter) {
+        public Builder filter(@Nullable Output<ReportFilterArgs> filter) {
             this.filter = filter;
             return this;
         }
 
         public Builder filter(@Nullable ReportFilterArgs filter) {
-            this.filter = Input.ofNullable(filter);
+            this.filter = Output.ofNullable(filter);
             return this;
         }
 
-        public Builder granularity(@Nullable Input<Either<String,GranularityType>> granularity) {
+        public Builder granularity(@Nullable Output<Either<String,GranularityType>> granularity) {
             this.granularity = granularity;
             return this;
         }
 
         public Builder granularity(@Nullable Either<String,GranularityType> granularity) {
-            this.granularity = Input.ofNullable(granularity);
+            this.granularity = Output.ofNullable(granularity);
             return this;
         }
 
-        public Builder grouping(@Nullable Input<List<ReportGroupingArgs>> grouping) {
+        public Builder grouping(@Nullable Output<List<ReportGroupingArgs>> grouping) {
             this.grouping = grouping;
             return this;
         }
 
         public Builder grouping(@Nullable List<ReportGroupingArgs> grouping) {
-            this.grouping = Input.ofNullable(grouping);
+            this.grouping = Output.ofNullable(grouping);
             return this;
         }
         public ReportDatasetArgs build() {

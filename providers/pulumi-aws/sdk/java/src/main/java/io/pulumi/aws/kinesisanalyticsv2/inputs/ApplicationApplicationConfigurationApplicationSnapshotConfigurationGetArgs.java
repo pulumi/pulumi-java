@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class ApplicationApplicationConfigurationApplicationSnapshotConfigu
      * 
      */
     @InputImport(name="snapshotsEnabled", required=true)
-      private final Input<Boolean> snapshotsEnabled;
+      private final Output<Boolean> snapshotsEnabled;
 
-    public Input<Boolean> getSnapshotsEnabled() {
+    public Output<Boolean> getSnapshotsEnabled() {
         return this.snapshotsEnabled;
     }
 
-    public ApplicationApplicationConfigurationApplicationSnapshotConfigurationGetArgs(Input<Boolean> snapshotsEnabled) {
+    public ApplicationApplicationConfigurationApplicationSnapshotConfigurationGetArgs(Output<Boolean> snapshotsEnabled) {
         this.snapshotsEnabled = Objects.requireNonNull(snapshotsEnabled, "expected parameter 'snapshotsEnabled' to be non-null");
     }
 
     private ApplicationApplicationConfigurationApplicationSnapshotConfigurationGetArgs() {
-        this.snapshotsEnabled = Input.empty();
+        this.snapshotsEnabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ApplicationApplicationConfigurationApplicationSnapshotConfigu
     }
 
     public static final class Builder {
-        private Input<Boolean> snapshotsEnabled;
+        private Output<Boolean> snapshotsEnabled;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ApplicationApplicationConfigurationApplicationSnapshotConfigu
     	      this.snapshotsEnabled = defaults.snapshotsEnabled;
         }
 
-        public Builder snapshotsEnabled(Input<Boolean> snapshotsEnabled) {
+        public Builder snapshotsEnabled(Output<Boolean> snapshotsEnabled) {
             this.snapshotsEnabled = Objects.requireNonNull(snapshotsEnabled);
             return this;
         }
 
         public Builder snapshotsEnabled(Boolean snapshotsEnabled) {
-            this.snapshotsEnabled = Input.of(Objects.requireNonNull(snapshotsEnabled));
+            this.snapshotsEnabled = Output.of(Objects.requireNonNull(snapshotsEnabled));
             return this;
         }
         public ApplicationApplicationConfigurationApplicationSnapshotConfigurationGetArgs build() {

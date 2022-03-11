@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs.CustomResourceColumnDefinitionArgs;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs.CustomResourceSubresourcesArgs;
@@ -28,10 +28,10 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="additionalPrinterColumns")
-      private final @Nullable Input<List<CustomResourceColumnDefinitionArgs>> additionalPrinterColumns;
+      private final @Nullable Output<List<CustomResourceColumnDefinitionArgs>> additionalPrinterColumns;
 
-    public Input<List<CustomResourceColumnDefinitionArgs>> getAdditionalPrinterColumns() {
-        return this.additionalPrinterColumns == null ? Input.empty() : this.additionalPrinterColumns;
+    public Output<List<CustomResourceColumnDefinitionArgs>> getAdditionalPrinterColumns() {
+        return this.additionalPrinterColumns == null ? Output.empty() : this.additionalPrinterColumns;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="deprecated")
-      private final @Nullable Input<Boolean> deprecated;
+      private final @Nullable Output<Boolean> deprecated;
 
-    public Input<Boolean> getDeprecated() {
-        return this.deprecated == null ? Input.empty() : this.deprecated;
+    public Output<Boolean> getDeprecated() {
+        return this.deprecated == null ? Output.empty() : this.deprecated;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="deprecationWarning")
-      private final @Nullable Input<String> deprecationWarning;
+      private final @Nullable Output<String> deprecationWarning;
 
-    public Input<String> getDeprecationWarning() {
-        return this.deprecationWarning == null ? Input.empty() : this.deprecationWarning;
+    public Output<String> getDeprecationWarning() {
+        return this.deprecationWarning == null ? Output.empty() : this.deprecationWarning;
     }
 
     /**
@@ -61,9 +61,9 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -72,10 +72,10 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="schema")
-      private final @Nullable Input<CustomResourceValidationArgs> schema;
+      private final @Nullable Output<CustomResourceValidationArgs> schema;
 
-    public Input<CustomResourceValidationArgs> getSchema() {
-        return this.schema == null ? Input.empty() : this.schema;
+    public Output<CustomResourceValidationArgs> getSchema() {
+        return this.schema == null ? Output.empty() : this.schema;
     }
 
     /**
@@ -83,9 +83,9 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="served", required=true)
-      private final Input<Boolean> served;
+      private final Output<Boolean> served;
 
-    public Input<Boolean> getServed() {
+    public Output<Boolean> getServed() {
         return this.served;
     }
 
@@ -94,9 +94,9 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="storage", required=true)
-      private final Input<Boolean> storage;
+      private final Output<Boolean> storage;
 
-    public Input<Boolean> getStorage() {
+    public Output<Boolean> getStorage() {
         return this.storage;
     }
 
@@ -105,21 +105,21 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="subresources")
-      private final @Nullable Input<CustomResourceSubresourcesArgs> subresources;
+      private final @Nullable Output<CustomResourceSubresourcesArgs> subresources;
 
-    public Input<CustomResourceSubresourcesArgs> getSubresources() {
-        return this.subresources == null ? Input.empty() : this.subresources;
+    public Output<CustomResourceSubresourcesArgs> getSubresources() {
+        return this.subresources == null ? Output.empty() : this.subresources;
     }
 
     public CustomResourceDefinitionVersionArgs(
-        @Nullable Input<List<CustomResourceColumnDefinitionArgs>> additionalPrinterColumns,
-        @Nullable Input<Boolean> deprecated,
-        @Nullable Input<String> deprecationWarning,
-        Input<String> name,
-        @Nullable Input<CustomResourceValidationArgs> schema,
-        Input<Boolean> served,
-        Input<Boolean> storage,
-        @Nullable Input<CustomResourceSubresourcesArgs> subresources) {
+        @Nullable Output<List<CustomResourceColumnDefinitionArgs>> additionalPrinterColumns,
+        @Nullable Output<Boolean> deprecated,
+        @Nullable Output<String> deprecationWarning,
+        Output<String> name,
+        @Nullable Output<CustomResourceValidationArgs> schema,
+        Output<Boolean> served,
+        Output<Boolean> storage,
+        @Nullable Output<CustomResourceSubresourcesArgs> subresources) {
         this.additionalPrinterColumns = additionalPrinterColumns;
         this.deprecated = deprecated;
         this.deprecationWarning = deprecationWarning;
@@ -131,14 +131,14 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
     }
 
     private CustomResourceDefinitionVersionArgs() {
-        this.additionalPrinterColumns = Input.empty();
-        this.deprecated = Input.empty();
-        this.deprecationWarning = Input.empty();
-        this.name = Input.empty();
-        this.schema = Input.empty();
-        this.served = Input.empty();
-        this.storage = Input.empty();
-        this.subresources = Input.empty();
+        this.additionalPrinterColumns = Output.empty();
+        this.deprecated = Output.empty();
+        this.deprecationWarning = Output.empty();
+        this.name = Output.empty();
+        this.schema = Output.empty();
+        this.served = Output.empty();
+        this.storage = Output.empty();
+        this.subresources = Output.empty();
     }
 
     public static Builder builder() {
@@ -150,14 +150,14 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<List<CustomResourceColumnDefinitionArgs>> additionalPrinterColumns;
-        private @Nullable Input<Boolean> deprecated;
-        private @Nullable Input<String> deprecationWarning;
-        private Input<String> name;
-        private @Nullable Input<CustomResourceValidationArgs> schema;
-        private Input<Boolean> served;
-        private Input<Boolean> storage;
-        private @Nullable Input<CustomResourceSubresourcesArgs> subresources;
+        private @Nullable Output<List<CustomResourceColumnDefinitionArgs>> additionalPrinterColumns;
+        private @Nullable Output<Boolean> deprecated;
+        private @Nullable Output<String> deprecationWarning;
+        private Output<String> name;
+        private @Nullable Output<CustomResourceValidationArgs> schema;
+        private Output<Boolean> served;
+        private Output<Boolean> storage;
+        private @Nullable Output<CustomResourceSubresourcesArgs> subresources;
 
         public Builder() {
     	      // Empty
@@ -175,83 +175,83 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
     	      this.subresources = defaults.subresources;
         }
 
-        public Builder additionalPrinterColumns(@Nullable Input<List<CustomResourceColumnDefinitionArgs>> additionalPrinterColumns) {
+        public Builder additionalPrinterColumns(@Nullable Output<List<CustomResourceColumnDefinitionArgs>> additionalPrinterColumns) {
             this.additionalPrinterColumns = additionalPrinterColumns;
             return this;
         }
 
         public Builder additionalPrinterColumns(@Nullable List<CustomResourceColumnDefinitionArgs> additionalPrinterColumns) {
-            this.additionalPrinterColumns = Input.ofNullable(additionalPrinterColumns);
+            this.additionalPrinterColumns = Output.ofNullable(additionalPrinterColumns);
             return this;
         }
 
-        public Builder deprecated(@Nullable Input<Boolean> deprecated) {
+        public Builder deprecated(@Nullable Output<Boolean> deprecated) {
             this.deprecated = deprecated;
             return this;
         }
 
         public Builder deprecated(@Nullable Boolean deprecated) {
-            this.deprecated = Input.ofNullable(deprecated);
+            this.deprecated = Output.ofNullable(deprecated);
             return this;
         }
 
-        public Builder deprecationWarning(@Nullable Input<String> deprecationWarning) {
+        public Builder deprecationWarning(@Nullable Output<String> deprecationWarning) {
             this.deprecationWarning = deprecationWarning;
             return this;
         }
 
         public Builder deprecationWarning(@Nullable String deprecationWarning) {
-            this.deprecationWarning = Input.ofNullable(deprecationWarning);
+            this.deprecationWarning = Output.ofNullable(deprecationWarning);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder schema(@Nullable Input<CustomResourceValidationArgs> schema) {
+        public Builder schema(@Nullable Output<CustomResourceValidationArgs> schema) {
             this.schema = schema;
             return this;
         }
 
         public Builder schema(@Nullable CustomResourceValidationArgs schema) {
-            this.schema = Input.ofNullable(schema);
+            this.schema = Output.ofNullable(schema);
             return this;
         }
 
-        public Builder served(Input<Boolean> served) {
+        public Builder served(Output<Boolean> served) {
             this.served = Objects.requireNonNull(served);
             return this;
         }
 
         public Builder served(Boolean served) {
-            this.served = Input.of(Objects.requireNonNull(served));
+            this.served = Output.of(Objects.requireNonNull(served));
             return this;
         }
 
-        public Builder storage(Input<Boolean> storage) {
+        public Builder storage(Output<Boolean> storage) {
             this.storage = Objects.requireNonNull(storage);
             return this;
         }
 
         public Builder storage(Boolean storage) {
-            this.storage = Input.of(Objects.requireNonNull(storage));
+            this.storage = Output.of(Objects.requireNonNull(storage));
             return this;
         }
 
-        public Builder subresources(@Nullable Input<CustomResourceSubresourcesArgs> subresources) {
+        public Builder subresources(@Nullable Output<CustomResourceSubresourcesArgs> subresources) {
             this.subresources = subresources;
             return this;
         }
 
         public Builder subresources(@Nullable CustomResourceSubresourcesArgs subresources) {
-            this.subresources = Input.ofNullable(subresources);
+            this.subresources = Output.ofNullable(subresources);
             return this;
         }
         public CustomResourceDefinitionVersionArgs build() {

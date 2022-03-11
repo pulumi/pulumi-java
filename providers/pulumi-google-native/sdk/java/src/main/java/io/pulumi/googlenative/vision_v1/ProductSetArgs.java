@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vision_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,17 +19,17 @@ public final class ProductSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -37,32 +37,32 @@ public final class ProductSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="productSetId")
-      private final @Nullable Input<String> productSetId;
+      private final @Nullable Output<String> productSetId;
 
-    public Input<String> getProductSetId() {
-        return this.productSetId == null ? Input.empty() : this.productSetId;
+    public Output<String> getProductSetId() {
+        return this.productSetId == null ? Output.empty() : this.productSetId;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public ProductSetArgs(
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> productSetId,
-        @Nullable Input<String> project) {
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> productSetId,
+        @Nullable Output<String> project) {
         this.displayName = displayName;
         this.location = location;
         this.name = name;
@@ -71,11 +71,11 @@ public final class ProductSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProductSetArgs() {
-        this.displayName = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.productSetId = Input.empty();
-        this.project = Input.empty();
+        this.displayName = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.productSetId = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,11 +87,11 @@ public final class ProductSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> productSetId;
-        private @Nullable Input<String> project;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> productSetId;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -106,53 +106,53 @@ public final class ProductSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder productSetId(@Nullable Input<String> productSetId) {
+        public Builder productSetId(@Nullable Output<String> productSetId) {
             this.productSetId = productSetId;
             return this;
         }
 
         public Builder productSetId(@Nullable String productSetId) {
-            this.productSetId = Input.ofNullable(productSetId);
+            this.productSetId = Output.ofNullable(productSetId);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public ProductSetArgs build() {

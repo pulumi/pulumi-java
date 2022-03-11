@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apigateway.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class DocumentationPartLocationGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="method")
-      private final @Nullable Input<String> method;
+      private final @Nullable Output<String> method;
 
-    public Input<String> getMethod() {
-        return this.method == null ? Input.empty() : this.method;
+    public Output<String> getMethod() {
+        return this.method == null ? Output.empty() : this.method;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class DocumentationPartLocationGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class DocumentationPartLocationGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class DocumentationPartLocationGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="statusCode")
-      private final @Nullable Input<String> statusCode;
+      private final @Nullable Output<String> statusCode;
 
-    public Input<String> getStatusCode() {
-        return this.statusCode == null ? Input.empty() : this.statusCode;
+    public Output<String> getStatusCode() {
+        return this.statusCode == null ? Output.empty() : this.statusCode;
     }
 
     /**
@@ -63,18 +63,18 @@ public final class DocumentationPartLocationGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public DocumentationPartLocationGetArgs(
-        @Nullable Input<String> method,
-        @Nullable Input<String> name,
-        @Nullable Input<String> path,
-        @Nullable Input<String> statusCode,
-        Input<String> type) {
+        @Nullable Output<String> method,
+        @Nullable Output<String> name,
+        @Nullable Output<String> path,
+        @Nullable Output<String> statusCode,
+        Output<String> type) {
         this.method = method;
         this.name = name;
         this.path = path;
@@ -83,11 +83,11 @@ public final class DocumentationPartLocationGetArgs extends io.pulumi.resources.
     }
 
     private DocumentationPartLocationGetArgs() {
-        this.method = Input.empty();
-        this.name = Input.empty();
-        this.path = Input.empty();
-        this.statusCode = Input.empty();
-        this.type = Input.empty();
+        this.method = Output.empty();
+        this.name = Output.empty();
+        this.path = Output.empty();
+        this.statusCode = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -99,11 +99,11 @@ public final class DocumentationPartLocationGetArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> method;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> path;
-        private @Nullable Input<String> statusCode;
-        private Input<String> type;
+        private @Nullable Output<String> method;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> path;
+        private @Nullable Output<String> statusCode;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -118,53 +118,53 @@ public final class DocumentationPartLocationGetArgs extends io.pulumi.resources.
     	      this.type = defaults.type;
         }
 
-        public Builder method(@Nullable Input<String> method) {
+        public Builder method(@Nullable Output<String> method) {
             this.method = method;
             return this;
         }
 
         public Builder method(@Nullable String method) {
-            this.method = Input.ofNullable(method);
+            this.method = Output.ofNullable(method);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
 
-        public Builder statusCode(@Nullable Input<String> statusCode) {
+        public Builder statusCode(@Nullable Output<String> statusCode) {
             this.statusCode = statusCode;
             return this;
         }
 
         public Builder statusCode(@Nullable String statusCode) {
-            this.statusCode = Input.ofNullable(statusCode);
+            this.statusCode = Output.ofNullable(statusCode);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public DocumentationPartLocationGetArgs build() {

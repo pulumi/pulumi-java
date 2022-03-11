@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.imagebuilder.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @InputImport(name="userGroups")
-      private final @Nullable Input<List<String>> userGroups;
+      private final @Nullable Output<List<String>> userGroups;
 
-    public Input<List<String>> getUserGroups() {
-        return this.userGroups == null ? Input.empty() : this.userGroups;
+    public Output<List<String>> getUserGroups() {
+        return this.userGroups == null ? Output.empty() : this.userGroups;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @InputImport(name="userIds")
-      private final @Nullable Input<List<String>> userIds;
+      private final @Nullable Output<List<String>> userIds;
 
-    public Input<List<String>> getUserIds() {
-        return this.userIds == null ? Input.empty() : this.userIds;
+    public Output<List<String>> getUserIds() {
+        return this.userIds == null ? Output.empty() : this.userIds;
     }
 
     public DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionArgs(
-        @Nullable Input<List<String>> userGroups,
-        @Nullable Input<List<String>> userIds) {
+        @Nullable Output<List<String>> userGroups,
+        @Nullable Output<List<String>> userIds) {
         this.userGroups = userGroups;
         this.userIds = userIds;
     }
 
     private DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionArgs() {
-        this.userGroups = Input.empty();
-        this.userIds = Input.empty();
+        this.userGroups = Output.empty();
+        this.userIds = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> userGroups;
-        private @Nullable Input<List<String>> userIds;
+        private @Nullable Output<List<String>> userGroups;
+        private @Nullable Output<List<String>> userIds;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     	      this.userIds = defaults.userIds;
         }
 
-        public Builder userGroups(@Nullable Input<List<String>> userGroups) {
+        public Builder userGroups(@Nullable Output<List<String>> userGroups) {
             this.userGroups = userGroups;
             return this;
         }
 
         public Builder userGroups(@Nullable List<String> userGroups) {
-            this.userGroups = Input.ofNullable(userGroups);
+            this.userGroups = Output.ofNullable(userGroups);
             return this;
         }
 
-        public Builder userIds(@Nullable Input<List<String>> userIds) {
+        public Builder userIds(@Nullable Output<List<String>> userIds) {
             this.userIds = userIds;
             return this;
         }
 
         public Builder userIds(@Nullable List<String> userIds) {
-            this.userIds = Input.ofNullable(userIds);
+            this.userIds = Output.ofNullable(userIds);
             return this;
         }
         public DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionArgs build() {

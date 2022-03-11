@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.alertsmanagement.inputs;
 
 import io.pulumi.azurenative.alertsmanagement.inputs.VmGuestHealthAlertCriterionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class HealthAlertCriteriaArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="allOf")
-      private final @Nullable Input<List<VmGuestHealthAlertCriterionArgs>> allOf;
+      private final @Nullable Output<List<VmGuestHealthAlertCriterionArgs>> allOf;
 
-    public Input<List<VmGuestHealthAlertCriterionArgs>> getAllOf() {
-        return this.allOf == null ? Input.empty() : this.allOf;
+    public Output<List<VmGuestHealthAlertCriterionArgs>> getAllOf() {
+        return this.allOf == null ? Output.empty() : this.allOf;
     }
 
-    public HealthAlertCriteriaArgs(@Nullable Input<List<VmGuestHealthAlertCriterionArgs>> allOf) {
+    public HealthAlertCriteriaArgs(@Nullable Output<List<VmGuestHealthAlertCriterionArgs>> allOf) {
         this.allOf = allOf;
     }
 
     private HealthAlertCriteriaArgs() {
-        this.allOf = Input.empty();
+        this.allOf = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class HealthAlertCriteriaArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<List<VmGuestHealthAlertCriterionArgs>> allOf;
+        private @Nullable Output<List<VmGuestHealthAlertCriterionArgs>> allOf;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class HealthAlertCriteriaArgs extends io.pulumi.resources.ResourceA
     	      this.allOf = defaults.allOf;
         }
 
-        public Builder allOf(@Nullable Input<List<VmGuestHealthAlertCriterionArgs>> allOf) {
+        public Builder allOf(@Nullable Output<List<VmGuestHealthAlertCriterionArgs>> allOf) {
             this.allOf = allOf;
             return this;
         }
 
         public Builder allOf(@Nullable List<VmGuestHealthAlertCriterionArgs> allOf) {
-            this.allOf = Input.ofNullable(allOf);
+            this.allOf = Output.ofNullable(allOf);
             return this;
         }
         public HealthAlertCriteriaArgs build() {

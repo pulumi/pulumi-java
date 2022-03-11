@@ -4,7 +4,7 @@
 package io.pulumi.aws.lambda.inputs;
 
 import io.pulumi.aws.lambda.inputs.AliasRoutingConfigGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="functionName")
-      private final @Nullable Input<String> functionName;
+      private final @Nullable Output<String> functionName;
 
-    public Input<String> getFunctionName() {
-        return this.functionName == null ? Input.empty() : this.functionName;
+    public Output<String> getFunctionName() {
+        return this.functionName == null ? Output.empty() : this.functionName;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="functionVersion")
-      private final @Nullable Input<String> functionVersion;
+      private final @Nullable Output<String> functionVersion;
 
-    public Input<String> getFunctionVersion() {
-        return this.functionVersion == null ? Input.empty() : this.functionVersion;
+    public Output<String> getFunctionVersion() {
+        return this.functionVersion == null ? Output.empty() : this.functionVersion;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="invokeArn")
-      private final @Nullable Input<String> invokeArn;
+      private final @Nullable Output<String> invokeArn;
 
-    public Input<String> getInvokeArn() {
-        return this.invokeArn == null ? Input.empty() : this.invokeArn;
+    public Output<String> getInvokeArn() {
+        return this.invokeArn == null ? Output.empty() : this.invokeArn;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -86,20 +86,20 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routingConfig")
-      private final @Nullable Input<AliasRoutingConfigGetArgs> routingConfig;
+      private final @Nullable Output<AliasRoutingConfigGetArgs> routingConfig;
 
-    public Input<AliasRoutingConfigGetArgs> getRoutingConfig() {
-        return this.routingConfig == null ? Input.empty() : this.routingConfig;
+    public Output<AliasRoutingConfigGetArgs> getRoutingConfig() {
+        return this.routingConfig == null ? Output.empty() : this.routingConfig;
     }
 
     public AliasState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> description,
-        @Nullable Input<String> functionName,
-        @Nullable Input<String> functionVersion,
-        @Nullable Input<String> invokeArn,
-        @Nullable Input<String> name,
-        @Nullable Input<AliasRoutingConfigGetArgs> routingConfig) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> description,
+        @Nullable Output<String> functionName,
+        @Nullable Output<String> functionVersion,
+        @Nullable Output<String> invokeArn,
+        @Nullable Output<String> name,
+        @Nullable Output<AliasRoutingConfigGetArgs> routingConfig) {
         this.arn = arn;
         this.description = description;
         this.functionName = functionName;
@@ -110,13 +110,13 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
     }
 
     private AliasState() {
-        this.arn = Input.empty();
-        this.description = Input.empty();
-        this.functionName = Input.empty();
-        this.functionVersion = Input.empty();
-        this.invokeArn = Input.empty();
-        this.name = Input.empty();
-        this.routingConfig = Input.empty();
+        this.arn = Output.empty();
+        this.description = Output.empty();
+        this.functionName = Output.empty();
+        this.functionVersion = Output.empty();
+        this.invokeArn = Output.empty();
+        this.name = Output.empty();
+        this.routingConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -128,13 +128,13 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> functionName;
-        private @Nullable Input<String> functionVersion;
-        private @Nullable Input<String> invokeArn;
-        private @Nullable Input<String> name;
-        private @Nullable Input<AliasRoutingConfigGetArgs> routingConfig;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> functionName;
+        private @Nullable Output<String> functionVersion;
+        private @Nullable Output<String> invokeArn;
+        private @Nullable Output<String> name;
+        private @Nullable Output<AliasRoutingConfigGetArgs> routingConfig;
 
         public Builder() {
     	      // Empty
@@ -151,73 +151,73 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
     	      this.routingConfig = defaults.routingConfig;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder functionName(@Nullable Input<String> functionName) {
+        public Builder functionName(@Nullable Output<String> functionName) {
             this.functionName = functionName;
             return this;
         }
 
         public Builder functionName(@Nullable String functionName) {
-            this.functionName = Input.ofNullable(functionName);
+            this.functionName = Output.ofNullable(functionName);
             return this;
         }
 
-        public Builder functionVersion(@Nullable Input<String> functionVersion) {
+        public Builder functionVersion(@Nullable Output<String> functionVersion) {
             this.functionVersion = functionVersion;
             return this;
         }
 
         public Builder functionVersion(@Nullable String functionVersion) {
-            this.functionVersion = Input.ofNullable(functionVersion);
+            this.functionVersion = Output.ofNullable(functionVersion);
             return this;
         }
 
-        public Builder invokeArn(@Nullable Input<String> invokeArn) {
+        public Builder invokeArn(@Nullable Output<String> invokeArn) {
             this.invokeArn = invokeArn;
             return this;
         }
 
         public Builder invokeArn(@Nullable String invokeArn) {
-            this.invokeArn = Input.ofNullable(invokeArn);
+            this.invokeArn = Output.ofNullable(invokeArn);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder routingConfig(@Nullable Input<AliasRoutingConfigGetArgs> routingConfig) {
+        public Builder routingConfig(@Nullable Output<AliasRoutingConfigGetArgs> routingConfig) {
             this.routingConfig = routingConfig;
             return this;
         }
 
         public Builder routingConfig(@Nullable AliasRoutingConfigGetArgs routingConfig) {
-            this.routingConfig = Input.ofNullable(routingConfig);
+            this.routingConfig = Output.ofNullable(routingConfig);
             return this;
         }
         public AliasState build() {

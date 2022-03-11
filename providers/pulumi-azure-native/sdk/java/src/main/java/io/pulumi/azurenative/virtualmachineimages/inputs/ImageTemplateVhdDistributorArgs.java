@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.virtualmachineimages.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -24,10 +24,10 @@ public final class ImageTemplateVhdDistributorArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="artifactTags")
-      private final @Nullable Input<Map<String,String>> artifactTags;
+      private final @Nullable Output<Map<String,String>> artifactTags;
 
-    public Input<Map<String,String>> getArtifactTags() {
-        return this.artifactTags == null ? Input.empty() : this.artifactTags;
+    public Output<Map<String,String>> getArtifactTags() {
+        return this.artifactTags == null ? Output.empty() : this.artifactTags;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class ImageTemplateVhdDistributorArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="runOutputName", required=true)
-      private final Input<String> runOutputName;
+      private final Output<String> runOutputName;
 
-    public Input<String> getRunOutputName() {
+    public Output<String> getRunOutputName() {
         return this.runOutputName;
     }
 
@@ -47,25 +47,25 @@ public final class ImageTemplateVhdDistributorArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public ImageTemplateVhdDistributorArgs(
-        @Nullable Input<Map<String,String>> artifactTags,
-        Input<String> runOutputName,
-        Input<String> type) {
+        @Nullable Output<Map<String,String>> artifactTags,
+        Output<String> runOutputName,
+        Output<String> type) {
         this.artifactTags = artifactTags;
         this.runOutputName = Objects.requireNonNull(runOutputName, "expected parameter 'runOutputName' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private ImageTemplateVhdDistributorArgs() {
-        this.artifactTags = Input.empty();
-        this.runOutputName = Input.empty();
-        this.type = Input.empty();
+        this.artifactTags = Output.empty();
+        this.runOutputName = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class ImageTemplateVhdDistributorArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> artifactTags;
-        private Input<String> runOutputName;
-        private Input<String> type;
+        private @Nullable Output<Map<String,String>> artifactTags;
+        private Output<String> runOutputName;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class ImageTemplateVhdDistributorArgs extends io.pulumi.resources.R
     	      this.type = defaults.type;
         }
 
-        public Builder artifactTags(@Nullable Input<Map<String,String>> artifactTags) {
+        public Builder artifactTags(@Nullable Output<Map<String,String>> artifactTags) {
             this.artifactTags = artifactTags;
             return this;
         }
 
         public Builder artifactTags(@Nullable Map<String,String> artifactTags) {
-            this.artifactTags = Input.ofNullable(artifactTags);
+            this.artifactTags = Output.ofNullable(artifactTags);
             return this;
         }
 
-        public Builder runOutputName(Input<String> runOutputName) {
+        public Builder runOutputName(Output<String> runOutputName) {
             this.runOutputName = Objects.requireNonNull(runOutputName);
             return this;
         }
 
         public Builder runOutputName(String runOutputName) {
-            this.runOutputName = Input.of(Objects.requireNonNull(runOutputName));
+            this.runOutputName = Output.of(Objects.requireNonNull(runOutputName));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ImageTemplateVhdDistributorArgs build() {

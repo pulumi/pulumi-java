@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datafusion_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAllocation")
-      private final @Nullable Input<String> ipAllocation;
+      private final @Nullable Output<String> ipAllocation;
 
-    public Input<String> getIpAllocation() {
-        return this.ipAllocation == null ? Input.empty() : this.ipAllocation;
+    public Output<String> getIpAllocation() {
+        return this.ipAllocation == null ? Output.empty() : this.ipAllocation;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-      private final @Nullable Input<String> network;
+      private final @Nullable Output<String> network;
 
-    public Input<String> getNetwork() {
-        return this.network == null ? Input.empty() : this.network;
+    public Output<String> getNetwork() {
+        return this.network == null ? Output.empty() : this.network;
     }
 
     public NetworkConfigArgs(
-        @Nullable Input<String> ipAllocation,
-        @Nullable Input<String> network) {
+        @Nullable Output<String> ipAllocation,
+        @Nullable Output<String> network) {
         this.ipAllocation = ipAllocation;
         this.network = network;
     }
 
     private NetworkConfigArgs() {
-        this.ipAllocation = Input.empty();
-        this.network = Input.empty();
+        this.ipAllocation = Output.empty();
+        this.network = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> ipAllocation;
-        private @Nullable Input<String> network;
+        private @Nullable Output<String> ipAllocation;
+        private @Nullable Output<String> network;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.network = defaults.network;
         }
 
-        public Builder ipAllocation(@Nullable Input<String> ipAllocation) {
+        public Builder ipAllocation(@Nullable Output<String> ipAllocation) {
             this.ipAllocation = ipAllocation;
             return this;
         }
 
         public Builder ipAllocation(@Nullable String ipAllocation) {
-            this.ipAllocation = Input.ofNullable(ipAllocation);
+            this.ipAllocation = Output.ofNullable(ipAllocation);
             return this;
         }
 
-        public Builder network(@Nullable Input<String> network) {
+        public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
 
         public Builder network(@Nullable String network) {
-            this.network = Input.ofNullable(network);
+            this.network = Output.ofNullable(network);
             return this;
         }
         public NetworkConfigArgs build() {

@@ -7,7 +7,7 @@ import io.pulumi.aws.ec2.inputs.FleetLaunchTemplateConfigArgs;
 import io.pulumi.aws.ec2.inputs.FleetOnDemandOptionsArgs;
 import io.pulumi.aws.ec2.inputs.FleetSpotOptionsArgs;
 import io.pulumi.aws.ec2.inputs.FleetTargetCapacitySpecificationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="excessCapacityTerminationPolicy")
-      private final @Nullable Input<String> excessCapacityTerminationPolicy;
+      private final @Nullable Output<String> excessCapacityTerminationPolicy;
 
-    public Input<String> getExcessCapacityTerminationPolicy() {
-        return this.excessCapacityTerminationPolicy == null ? Input.empty() : this.excessCapacityTerminationPolicy;
+    public Output<String> getExcessCapacityTerminationPolicy() {
+        return this.excessCapacityTerminationPolicy == null ? Output.empty() : this.excessCapacityTerminationPolicy;
     }
 
     /**
@@ -36,9 +36,9 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="launchTemplateConfig", required=true)
-      private final Input<FleetLaunchTemplateConfigArgs> launchTemplateConfig;
+      private final Output<FleetLaunchTemplateConfigArgs> launchTemplateConfig;
 
-    public Input<FleetLaunchTemplateConfigArgs> getLaunchTemplateConfig() {
+    public Output<FleetLaunchTemplateConfigArgs> getLaunchTemplateConfig() {
         return this.launchTemplateConfig;
     }
 
@@ -47,10 +47,10 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="onDemandOptions")
-      private final @Nullable Input<FleetOnDemandOptionsArgs> onDemandOptions;
+      private final @Nullable Output<FleetOnDemandOptionsArgs> onDemandOptions;
 
-    public Input<FleetOnDemandOptionsArgs> getOnDemandOptions() {
-        return this.onDemandOptions == null ? Input.empty() : this.onDemandOptions;
+    public Output<FleetOnDemandOptionsArgs> getOnDemandOptions() {
+        return this.onDemandOptions == null ? Output.empty() : this.onDemandOptions;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="replaceUnhealthyInstances")
-      private final @Nullable Input<Boolean> replaceUnhealthyInstances;
+      private final @Nullable Output<Boolean> replaceUnhealthyInstances;
 
-    public Input<Boolean> getReplaceUnhealthyInstances() {
-        return this.replaceUnhealthyInstances == null ? Input.empty() : this.replaceUnhealthyInstances;
+    public Output<Boolean> getReplaceUnhealthyInstances() {
+        return this.replaceUnhealthyInstances == null ? Output.empty() : this.replaceUnhealthyInstances;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spotOptions")
-      private final @Nullable Input<FleetSpotOptionsArgs> spotOptions;
+      private final @Nullable Output<FleetSpotOptionsArgs> spotOptions;
 
-    public Input<FleetSpotOptionsArgs> getSpotOptions() {
-        return this.spotOptions == null ? Input.empty() : this.spotOptions;
+    public Output<FleetSpotOptionsArgs> getSpotOptions() {
+        return this.spotOptions == null ? Output.empty() : this.spotOptions;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -91,9 +91,9 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetCapacitySpecification", required=true)
-      private final Input<FleetTargetCapacitySpecificationArgs> targetCapacitySpecification;
+      private final Output<FleetTargetCapacitySpecificationArgs> targetCapacitySpecification;
 
-    public Input<FleetTargetCapacitySpecificationArgs> getTargetCapacitySpecification() {
+    public Output<FleetTargetCapacitySpecificationArgs> getTargetCapacitySpecification() {
         return this.targetCapacitySpecification;
     }
 
@@ -102,10 +102,10 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="terminateInstances")
-      private final @Nullable Input<Boolean> terminateInstances;
+      private final @Nullable Output<Boolean> terminateInstances;
 
-    public Input<Boolean> getTerminateInstances() {
-        return this.terminateInstances == null ? Input.empty() : this.terminateInstances;
+    public Output<Boolean> getTerminateInstances() {
+        return this.terminateInstances == null ? Output.empty() : this.terminateInstances;
     }
 
     /**
@@ -113,10 +113,10 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="terminateInstancesWithExpiration")
-      private final @Nullable Input<Boolean> terminateInstancesWithExpiration;
+      private final @Nullable Output<Boolean> terminateInstancesWithExpiration;
 
-    public Input<Boolean> getTerminateInstancesWithExpiration() {
-        return this.terminateInstancesWithExpiration == null ? Input.empty() : this.terminateInstancesWithExpiration;
+    public Output<Boolean> getTerminateInstancesWithExpiration() {
+        return this.terminateInstancesWithExpiration == null ? Output.empty() : this.terminateInstancesWithExpiration;
     }
 
     /**
@@ -124,23 +124,23 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public FleetArgs(
-        @Nullable Input<String> excessCapacityTerminationPolicy,
-        Input<FleetLaunchTemplateConfigArgs> launchTemplateConfig,
-        @Nullable Input<FleetOnDemandOptionsArgs> onDemandOptions,
-        @Nullable Input<Boolean> replaceUnhealthyInstances,
-        @Nullable Input<FleetSpotOptionsArgs> spotOptions,
-        @Nullable Input<Map<String,String>> tags,
-        Input<FleetTargetCapacitySpecificationArgs> targetCapacitySpecification,
-        @Nullable Input<Boolean> terminateInstances,
-        @Nullable Input<Boolean> terminateInstancesWithExpiration,
-        @Nullable Input<String> type) {
+        @Nullable Output<String> excessCapacityTerminationPolicy,
+        Output<FleetLaunchTemplateConfigArgs> launchTemplateConfig,
+        @Nullable Output<FleetOnDemandOptionsArgs> onDemandOptions,
+        @Nullable Output<Boolean> replaceUnhealthyInstances,
+        @Nullable Output<FleetSpotOptionsArgs> spotOptions,
+        @Nullable Output<Map<String,String>> tags,
+        Output<FleetTargetCapacitySpecificationArgs> targetCapacitySpecification,
+        @Nullable Output<Boolean> terminateInstances,
+        @Nullable Output<Boolean> terminateInstancesWithExpiration,
+        @Nullable Output<String> type) {
         this.excessCapacityTerminationPolicy = excessCapacityTerminationPolicy;
         this.launchTemplateConfig = Objects.requireNonNull(launchTemplateConfig, "expected parameter 'launchTemplateConfig' to be non-null");
         this.onDemandOptions = onDemandOptions;
@@ -154,16 +154,16 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FleetArgs() {
-        this.excessCapacityTerminationPolicy = Input.empty();
-        this.launchTemplateConfig = Input.empty();
-        this.onDemandOptions = Input.empty();
-        this.replaceUnhealthyInstances = Input.empty();
-        this.spotOptions = Input.empty();
-        this.tags = Input.empty();
-        this.targetCapacitySpecification = Input.empty();
-        this.terminateInstances = Input.empty();
-        this.terminateInstancesWithExpiration = Input.empty();
-        this.type = Input.empty();
+        this.excessCapacityTerminationPolicy = Output.empty();
+        this.launchTemplateConfig = Output.empty();
+        this.onDemandOptions = Output.empty();
+        this.replaceUnhealthyInstances = Output.empty();
+        this.spotOptions = Output.empty();
+        this.tags = Output.empty();
+        this.targetCapacitySpecification = Output.empty();
+        this.terminateInstances = Output.empty();
+        this.terminateInstancesWithExpiration = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -175,16 +175,16 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> excessCapacityTerminationPolicy;
-        private Input<FleetLaunchTemplateConfigArgs> launchTemplateConfig;
-        private @Nullable Input<FleetOnDemandOptionsArgs> onDemandOptions;
-        private @Nullable Input<Boolean> replaceUnhealthyInstances;
-        private @Nullable Input<FleetSpotOptionsArgs> spotOptions;
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<FleetTargetCapacitySpecificationArgs> targetCapacitySpecification;
-        private @Nullable Input<Boolean> terminateInstances;
-        private @Nullable Input<Boolean> terminateInstancesWithExpiration;
-        private @Nullable Input<String> type;
+        private @Nullable Output<String> excessCapacityTerminationPolicy;
+        private Output<FleetLaunchTemplateConfigArgs> launchTemplateConfig;
+        private @Nullable Output<FleetOnDemandOptionsArgs> onDemandOptions;
+        private @Nullable Output<Boolean> replaceUnhealthyInstances;
+        private @Nullable Output<FleetSpotOptionsArgs> spotOptions;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<FleetTargetCapacitySpecificationArgs> targetCapacitySpecification;
+        private @Nullable Output<Boolean> terminateInstances;
+        private @Nullable Output<Boolean> terminateInstancesWithExpiration;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -204,103 +204,103 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder excessCapacityTerminationPolicy(@Nullable Input<String> excessCapacityTerminationPolicy) {
+        public Builder excessCapacityTerminationPolicy(@Nullable Output<String> excessCapacityTerminationPolicy) {
             this.excessCapacityTerminationPolicy = excessCapacityTerminationPolicy;
             return this;
         }
 
         public Builder excessCapacityTerminationPolicy(@Nullable String excessCapacityTerminationPolicy) {
-            this.excessCapacityTerminationPolicy = Input.ofNullable(excessCapacityTerminationPolicy);
+            this.excessCapacityTerminationPolicy = Output.ofNullable(excessCapacityTerminationPolicy);
             return this;
         }
 
-        public Builder launchTemplateConfig(Input<FleetLaunchTemplateConfigArgs> launchTemplateConfig) {
+        public Builder launchTemplateConfig(Output<FleetLaunchTemplateConfigArgs> launchTemplateConfig) {
             this.launchTemplateConfig = Objects.requireNonNull(launchTemplateConfig);
             return this;
         }
 
         public Builder launchTemplateConfig(FleetLaunchTemplateConfigArgs launchTemplateConfig) {
-            this.launchTemplateConfig = Input.of(Objects.requireNonNull(launchTemplateConfig));
+            this.launchTemplateConfig = Output.of(Objects.requireNonNull(launchTemplateConfig));
             return this;
         }
 
-        public Builder onDemandOptions(@Nullable Input<FleetOnDemandOptionsArgs> onDemandOptions) {
+        public Builder onDemandOptions(@Nullable Output<FleetOnDemandOptionsArgs> onDemandOptions) {
             this.onDemandOptions = onDemandOptions;
             return this;
         }
 
         public Builder onDemandOptions(@Nullable FleetOnDemandOptionsArgs onDemandOptions) {
-            this.onDemandOptions = Input.ofNullable(onDemandOptions);
+            this.onDemandOptions = Output.ofNullable(onDemandOptions);
             return this;
         }
 
-        public Builder replaceUnhealthyInstances(@Nullable Input<Boolean> replaceUnhealthyInstances) {
+        public Builder replaceUnhealthyInstances(@Nullable Output<Boolean> replaceUnhealthyInstances) {
             this.replaceUnhealthyInstances = replaceUnhealthyInstances;
             return this;
         }
 
         public Builder replaceUnhealthyInstances(@Nullable Boolean replaceUnhealthyInstances) {
-            this.replaceUnhealthyInstances = Input.ofNullable(replaceUnhealthyInstances);
+            this.replaceUnhealthyInstances = Output.ofNullable(replaceUnhealthyInstances);
             return this;
         }
 
-        public Builder spotOptions(@Nullable Input<FleetSpotOptionsArgs> spotOptions) {
+        public Builder spotOptions(@Nullable Output<FleetSpotOptionsArgs> spotOptions) {
             this.spotOptions = spotOptions;
             return this;
         }
 
         public Builder spotOptions(@Nullable FleetSpotOptionsArgs spotOptions) {
-            this.spotOptions = Input.ofNullable(spotOptions);
+            this.spotOptions = Output.ofNullable(spotOptions);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder targetCapacitySpecification(Input<FleetTargetCapacitySpecificationArgs> targetCapacitySpecification) {
+        public Builder targetCapacitySpecification(Output<FleetTargetCapacitySpecificationArgs> targetCapacitySpecification) {
             this.targetCapacitySpecification = Objects.requireNonNull(targetCapacitySpecification);
             return this;
         }
 
         public Builder targetCapacitySpecification(FleetTargetCapacitySpecificationArgs targetCapacitySpecification) {
-            this.targetCapacitySpecification = Input.of(Objects.requireNonNull(targetCapacitySpecification));
+            this.targetCapacitySpecification = Output.of(Objects.requireNonNull(targetCapacitySpecification));
             return this;
         }
 
-        public Builder terminateInstances(@Nullable Input<Boolean> terminateInstances) {
+        public Builder terminateInstances(@Nullable Output<Boolean> terminateInstances) {
             this.terminateInstances = terminateInstances;
             return this;
         }
 
         public Builder terminateInstances(@Nullable Boolean terminateInstances) {
-            this.terminateInstances = Input.ofNullable(terminateInstances);
+            this.terminateInstances = Output.ofNullable(terminateInstances);
             return this;
         }
 
-        public Builder terminateInstancesWithExpiration(@Nullable Input<Boolean> terminateInstancesWithExpiration) {
+        public Builder terminateInstancesWithExpiration(@Nullable Output<Boolean> terminateInstancesWithExpiration) {
             this.terminateInstancesWithExpiration = terminateInstancesWithExpiration;
             return this;
         }
 
         public Builder terminateInstancesWithExpiration(@Nullable Boolean terminateInstancesWithExpiration) {
-            this.terminateInstancesWithExpiration = Input.ofNullable(terminateInstancesWithExpiration);
+            this.terminateInstancesWithExpiration = Output.ofNullable(terminateInstancesWithExpiration);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public FleetArgs build() {

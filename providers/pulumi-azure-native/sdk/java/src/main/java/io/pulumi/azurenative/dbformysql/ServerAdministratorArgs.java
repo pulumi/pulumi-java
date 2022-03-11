@@ -5,7 +5,7 @@ package io.pulumi.azurenative.dbformysql;
 
 import io.pulumi.azurenative.dbformysql.enums.AdministratorType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="administratorType", required=true)
-      private final Input<Either<String,AdministratorType>> administratorType;
+      private final Output<Either<String,AdministratorType>> administratorType;
 
-    public Input<Either<String,AdministratorType>> getAdministratorType() {
+    public Output<Either<String,AdministratorType>> getAdministratorType() {
         return this.administratorType;
     }
 
@@ -31,9 +31,9 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="login", required=true)
-      private final Input<String> login;
+      private final Output<String> login;
 
-    public Input<String> getLogin() {
+    public Output<String> getLogin() {
         return this.login;
     }
 
@@ -42,9 +42,9 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -53,9 +53,9 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="serverName", required=true)
-      private final Input<String> serverName;
+      private final Output<String> serverName;
 
-    public Input<String> getServerName() {
+    public Output<String> getServerName() {
         return this.serverName;
     }
 
@@ -64,9 +64,9 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="sid", required=true)
-      private final Input<String> sid;
+      private final Output<String> sid;
 
-    public Input<String> getSid() {
+    public Output<String> getSid() {
         return this.sid;
     }
 
@@ -75,19 +75,19 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tenantId", required=true)
-      private final Input<String> tenantId;
+      private final Output<String> tenantId;
 
-    public Input<String> getTenantId() {
+    public Output<String> getTenantId() {
         return this.tenantId;
     }
 
     public ServerAdministratorArgs(
-        Input<Either<String,AdministratorType>> administratorType,
-        Input<String> login,
-        Input<String> resourceGroupName,
-        Input<String> serverName,
-        Input<String> sid,
-        Input<String> tenantId) {
+        Output<Either<String,AdministratorType>> administratorType,
+        Output<String> login,
+        Output<String> resourceGroupName,
+        Output<String> serverName,
+        Output<String> sid,
+        Output<String> tenantId) {
         this.administratorType = Objects.requireNonNull(administratorType, "expected parameter 'administratorType' to be non-null");
         this.login = Objects.requireNonNull(login, "expected parameter 'login' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -97,12 +97,12 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
     }
 
     private ServerAdministratorArgs() {
-        this.administratorType = Input.empty();
-        this.login = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serverName = Input.empty();
-        this.sid = Input.empty();
-        this.tenantId = Input.empty();
+        this.administratorType = Output.empty();
+        this.login = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serverName = Output.empty();
+        this.sid = Output.empty();
+        this.tenantId = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<Either<String,AdministratorType>> administratorType;
-        private Input<String> login;
-        private Input<String> resourceGroupName;
-        private Input<String> serverName;
-        private Input<String> sid;
-        private Input<String> tenantId;
+        private Output<Either<String,AdministratorType>> administratorType;
+        private Output<String> login;
+        private Output<String> resourceGroupName;
+        private Output<String> serverName;
+        private Output<String> sid;
+        private Output<String> tenantId;
 
         public Builder() {
     	      // Empty
@@ -135,63 +135,63 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder administratorType(Input<Either<String,AdministratorType>> administratorType) {
+        public Builder administratorType(Output<Either<String,AdministratorType>> administratorType) {
             this.administratorType = Objects.requireNonNull(administratorType);
             return this;
         }
 
         public Builder administratorType(Either<String,AdministratorType> administratorType) {
-            this.administratorType = Input.of(Objects.requireNonNull(administratorType));
+            this.administratorType = Output.of(Objects.requireNonNull(administratorType));
             return this;
         }
 
-        public Builder login(Input<String> login) {
+        public Builder login(Output<String> login) {
             this.login = Objects.requireNonNull(login);
             return this;
         }
 
         public Builder login(String login) {
-            this.login = Input.of(Objects.requireNonNull(login));
+            this.login = Output.of(Objects.requireNonNull(login));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serverName(Input<String> serverName) {
+        public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
         public Builder serverName(String serverName) {
-            this.serverName = Input.of(Objects.requireNonNull(serverName));
+            this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
 
-        public Builder sid(Input<String> sid) {
+        public Builder sid(Output<String> sid) {
             this.sid = Objects.requireNonNull(sid);
             return this;
         }
 
         public Builder sid(String sid) {
-            this.sid = Input.of(Objects.requireNonNull(sid));
+            this.sid = Output.of(Objects.requireNonNull(sid));
             return this;
         }
 
-        public Builder tenantId(Input<String> tenantId) {
+        public Builder tenantId(Output<String> tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
 
         public Builder tenantId(String tenantId) {
-            this.tenantId = Input.of(Objects.requireNonNull(tenantId));
+            this.tenantId = Output.of(Objects.requireNonNull(tenantId));
             return this;
         }
         public ServerAdministratorArgs build() {

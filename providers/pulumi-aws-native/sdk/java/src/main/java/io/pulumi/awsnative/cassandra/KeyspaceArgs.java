@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cassandra;
 
 import io.pulumi.awsnative.cassandra.inputs.KeyspaceTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,29 +21,29 @@ public final class KeyspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyspaceName")
-      private final @Nullable Input<String> keyspaceName;
+      private final @Nullable Output<String> keyspaceName;
 
-    public Input<String> getKeyspaceName() {
-        return this.keyspaceName == null ? Input.empty() : this.keyspaceName;
+    public Output<String> getKeyspaceName() {
+        return this.keyspaceName == null ? Output.empty() : this.keyspaceName;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<List<KeyspaceTagArgs>> tags;
+      private final @Nullable Output<List<KeyspaceTagArgs>> tags;
 
-    public Input<List<KeyspaceTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<KeyspaceTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public KeyspaceArgs(
-        @Nullable Input<String> keyspaceName,
-        @Nullable Input<List<KeyspaceTagArgs>> tags) {
+        @Nullable Output<String> keyspaceName,
+        @Nullable Output<List<KeyspaceTagArgs>> tags) {
         this.keyspaceName = keyspaceName;
         this.tags = tags;
     }
 
     private KeyspaceArgs() {
-        this.keyspaceName = Input.empty();
-        this.tags = Input.empty();
+        this.keyspaceName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -55,8 +55,8 @@ public final class KeyspaceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> keyspaceName;
-        private @Nullable Input<List<KeyspaceTagArgs>> tags;
+        private @Nullable Output<String> keyspaceName;
+        private @Nullable Output<List<KeyspaceTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -68,23 +68,23 @@ public final class KeyspaceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder keyspaceName(@Nullable Input<String> keyspaceName) {
+        public Builder keyspaceName(@Nullable Output<String> keyspaceName) {
             this.keyspaceName = keyspaceName;
             return this;
         }
 
         public Builder keyspaceName(@Nullable String keyspaceName) {
-            this.keyspaceName = Input.ofNullable(keyspaceName);
+            this.keyspaceName = Output.ofNullable(keyspaceName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<KeyspaceTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<KeyspaceTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<KeyspaceTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public KeyspaceArgs build() {

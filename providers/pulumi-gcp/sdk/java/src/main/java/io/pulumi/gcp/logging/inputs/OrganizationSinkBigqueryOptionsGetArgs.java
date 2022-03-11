@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.logging.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -21,18 +21,18 @@ public final class OrganizationSinkBigqueryOptionsGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="usePartitionedTables", required=true)
-      private final Input<Boolean> usePartitionedTables;
+      private final Output<Boolean> usePartitionedTables;
 
-    public Input<Boolean> getUsePartitionedTables() {
+    public Output<Boolean> getUsePartitionedTables() {
         return this.usePartitionedTables;
     }
 
-    public OrganizationSinkBigqueryOptionsGetArgs(Input<Boolean> usePartitionedTables) {
+    public OrganizationSinkBigqueryOptionsGetArgs(Output<Boolean> usePartitionedTables) {
         this.usePartitionedTables = Objects.requireNonNull(usePartitionedTables, "expected parameter 'usePartitionedTables' to be non-null");
     }
 
     private OrganizationSinkBigqueryOptionsGetArgs() {
-        this.usePartitionedTables = Input.empty();
+        this.usePartitionedTables = Output.empty();
     }
 
     public static Builder builder() {
@@ -44,7 +44,7 @@ public final class OrganizationSinkBigqueryOptionsGetArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private Input<Boolean> usePartitionedTables;
+        private Output<Boolean> usePartitionedTables;
 
         public Builder() {
     	      // Empty
@@ -55,13 +55,13 @@ public final class OrganizationSinkBigqueryOptionsGetArgs extends io.pulumi.reso
     	      this.usePartitionedTables = defaults.usePartitionedTables;
         }
 
-        public Builder usePartitionedTables(Input<Boolean> usePartitionedTables) {
+        public Builder usePartitionedTables(Output<Boolean> usePartitionedTables) {
             this.usePartitionedTables = Objects.requireNonNull(usePartitionedTables);
             return this;
         }
 
         public Builder usePartitionedTables(Boolean usePartitionedTables) {
-            this.usePartitionedTables = Input.of(Objects.requireNonNull(usePartitionedTables));
+            this.usePartitionedTables = Output.of(Objects.requireNonNull(usePartitionedTables));
             return this;
         }
         public OrganizationSinkBigqueryOptionsGetArgs build() {

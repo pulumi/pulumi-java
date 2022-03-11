@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.keyvault.inputs;
 
 import io.pulumi.azurenative.keyvault.inputs.SecretAttributesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class SecretPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="attributes")
-      private final @Nullable Input<SecretAttributesArgs> attributes;
+      private final @Nullable Output<SecretAttributesArgs> attributes;
 
-    public Input<SecretAttributesArgs> getAttributes() {
-        return this.attributes == null ? Input.empty() : this.attributes;
+    public Output<SecretAttributesArgs> getAttributes() {
+        return this.attributes == null ? Output.empty() : this.attributes;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SecretPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="contentType")
-      private final @Nullable Input<String> contentType;
+      private final @Nullable Output<String> contentType;
 
-    public Input<String> getContentType() {
-        return this.contentType == null ? Input.empty() : this.contentType;
+    public Output<String> getContentType() {
+        return this.contentType == null ? Output.empty() : this.contentType;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class SecretPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public SecretPropertiesArgs(
-        @Nullable Input<SecretAttributesArgs> attributes,
-        @Nullable Input<String> contentType,
-        @Nullable Input<String> value) {
+        @Nullable Output<SecretAttributesArgs> attributes,
+        @Nullable Output<String> contentType,
+        @Nullable Output<String> value) {
         this.attributes = attributes;
         this.contentType = contentType;
         this.value = value;
     }
 
     private SecretPropertiesArgs() {
-        this.attributes = Input.empty();
-        this.contentType = Input.empty();
-        this.value = Input.empty();
+        this.attributes = Output.empty();
+        this.contentType = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class SecretPropertiesArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<SecretAttributesArgs> attributes;
-        private @Nullable Input<String> contentType;
-        private @Nullable Input<String> value;
+        private @Nullable Output<SecretAttributesArgs> attributes;
+        private @Nullable Output<String> contentType;
+        private @Nullable Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class SecretPropertiesArgs extends io.pulumi.resources.ResourceArgs
     	      this.value = defaults.value;
         }
 
-        public Builder attributes(@Nullable Input<SecretAttributesArgs> attributes) {
+        public Builder attributes(@Nullable Output<SecretAttributesArgs> attributes) {
             this.attributes = attributes;
             return this;
         }
 
         public Builder attributes(@Nullable SecretAttributesArgs attributes) {
-            this.attributes = Input.ofNullable(attributes);
+            this.attributes = Output.ofNullable(attributes);
             return this;
         }
 
-        public Builder contentType(@Nullable Input<String> contentType) {
+        public Builder contentType(@Nullable Output<String> contentType) {
             this.contentType = contentType;
             return this;
         }
 
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = Input.ofNullable(contentType);
+            this.contentType = Output.ofNullable(contentType);
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public SecretPropertiesArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class BandwidthLimitArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="limitMbps")
-      private final @Nullable Input<String> limitMbps;
+      private final @Nullable Output<String> limitMbps;
 
-    public Input<String> getLimitMbps() {
-        return this.limitMbps == null ? Input.empty() : this.limitMbps;
+    public Output<String> getLimitMbps() {
+        return this.limitMbps == null ? Output.empty() : this.limitMbps;
     }
 
-    public BandwidthLimitArgs(@Nullable Input<String> limitMbps) {
+    public BandwidthLimitArgs(@Nullable Output<String> limitMbps) {
         this.limitMbps = limitMbps;
     }
 
     private BandwidthLimitArgs() {
-        this.limitMbps = Input.empty();
+        this.limitMbps = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class BandwidthLimitArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> limitMbps;
+        private @Nullable Output<String> limitMbps;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class BandwidthLimitArgs extends io.pulumi.resources.ResourceArgs {
     	      this.limitMbps = defaults.limitMbps;
         }
 
-        public Builder limitMbps(@Nullable Input<String> limitMbps) {
+        public Builder limitMbps(@Nullable Output<String> limitMbps) {
             this.limitMbps = limitMbps;
             return this;
         }
 
         public Builder limitMbps(@Nullable String limitMbps) {
-            this.limitMbps = Input.ofNullable(limitMbps);
+            this.limitMbps = Output.ofNullable(limitMbps);
             return this;
         }
         public BandwidthLimitArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.example;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.example.Resource;
 import java.lang.String;
@@ -25,22 +25,22 @@ public final class OtherResourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     @InputImport(name="foo")
-      private final @Nullable Input<Resource> foo;
+      private final @Nullable Output<Resource> foo;
 
-    public Input<Resource> getFoo() {
-        return this.foo == null ? Input.empty() : this.foo;
+    public Output<Resource> getFoo() {
+        return this.foo == null ? Output.empty() : this.foo;
     }
 
     public OtherResourceArgs(
         @Nullable List<String> bar,
-        @Nullable Input<Resource> foo) {
+        @Nullable Output<Resource> foo) {
         this.bar = bar;
         this.foo = foo;
     }
 
     private OtherResourceArgs() {
         this.bar = List.of();
-        this.foo = Input.empty();
+        this.foo = Output.empty();
     }
 
     public static Builder builder() {
@@ -53,7 +53,7 @@ public final class OtherResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final class Builder {
         private @Nullable List<String> bar;
-        private @Nullable Input<Resource> foo;
+        private @Nullable Output<Resource> foo;
 
         public Builder() {
     	      // Empty
@@ -70,13 +70,13 @@ public final class OtherResourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
 
-        public Builder foo(@Nullable Input<Resource> foo) {
+        public Builder foo(@Nullable Output<Resource> foo) {
             this.foo = foo;
             return this;
         }
 
         public Builder foo(@Nullable Resource foo) {
-            this.foo = Input.ofNullable(foo);
+            this.foo = Output.ofNullable(foo);
             return this;
         }
         public OtherResourceArgs build() {

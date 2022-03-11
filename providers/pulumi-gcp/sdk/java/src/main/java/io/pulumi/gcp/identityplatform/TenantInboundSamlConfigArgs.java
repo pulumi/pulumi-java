@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.identityplatform;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.identityplatform.inputs.TenantInboundSamlConfigIdpConfigArgs;
 import io.pulumi.gcp.identityplatform.inputs.TenantInboundSamlConfigSpConfigArgs;
@@ -22,9 +22,9 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -33,10 +33,10 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -45,9 +45,9 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="idpConfig", required=true)
-      private final Input<TenantInboundSamlConfigIdpConfigArgs> idpConfig;
+      private final Output<TenantInboundSamlConfigIdpConfigArgs> idpConfig;
 
-    public Input<TenantInboundSamlConfigIdpConfigArgs> getIdpConfig() {
+    public Output<TenantInboundSamlConfigIdpConfigArgs> getIdpConfig() {
         return this.idpConfig;
     }
 
@@ -58,10 +58,10 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -83,9 +83,9 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="spConfig", required=true)
-      private final Input<TenantInboundSamlConfigSpConfigArgs> spConfig;
+      private final Output<TenantInboundSamlConfigSpConfigArgs> spConfig;
 
-    public Input<TenantInboundSamlConfigSpConfigArgs> getSpConfig() {
+    public Output<TenantInboundSamlConfigSpConfigArgs> getSpConfig() {
         return this.spConfig;
     }
 
@@ -94,20 +94,20 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tenant", required=true)
-      private final Input<String> tenant;
+      private final Output<String> tenant;
 
-    public Input<String> getTenant() {
+    public Output<String> getTenant() {
         return this.tenant;
     }
 
     public TenantInboundSamlConfigArgs(
-        Input<String> displayName,
-        @Nullable Input<Boolean> enabled,
-        Input<TenantInboundSamlConfigIdpConfigArgs> idpConfig,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        Input<TenantInboundSamlConfigSpConfigArgs> spConfig,
-        Input<String> tenant) {
+        Output<String> displayName,
+        @Nullable Output<Boolean> enabled,
+        Output<TenantInboundSamlConfigIdpConfigArgs> idpConfig,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        Output<TenantInboundSamlConfigSpConfigArgs> spConfig,
+        Output<String> tenant) {
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
         this.enabled = enabled;
         this.idpConfig = Objects.requireNonNull(idpConfig, "expected parameter 'idpConfig' to be non-null");
@@ -118,13 +118,13 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
     }
 
     private TenantInboundSamlConfigArgs() {
-        this.displayName = Input.empty();
-        this.enabled = Input.empty();
-        this.idpConfig = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.spConfig = Input.empty();
-        this.tenant = Input.empty();
+        this.displayName = Output.empty();
+        this.enabled = Output.empty();
+        this.idpConfig = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.spConfig = Output.empty();
+        this.tenant = Output.empty();
     }
 
     public static Builder builder() {
@@ -136,13 +136,13 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<String> displayName;
-        private @Nullable Input<Boolean> enabled;
-        private Input<TenantInboundSamlConfigIdpConfigArgs> idpConfig;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private Input<TenantInboundSamlConfigSpConfigArgs> spConfig;
-        private Input<String> tenant;
+        private Output<String> displayName;
+        private @Nullable Output<Boolean> enabled;
+        private Output<TenantInboundSamlConfigIdpConfigArgs> idpConfig;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private Output<TenantInboundSamlConfigSpConfigArgs> spConfig;
+        private Output<String> tenant;
 
         public Builder() {
     	      // Empty
@@ -159,73 +159,73 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
     	      this.tenant = defaults.tenant;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder idpConfig(Input<TenantInboundSamlConfigIdpConfigArgs> idpConfig) {
+        public Builder idpConfig(Output<TenantInboundSamlConfigIdpConfigArgs> idpConfig) {
             this.idpConfig = Objects.requireNonNull(idpConfig);
             return this;
         }
 
         public Builder idpConfig(TenantInboundSamlConfigIdpConfigArgs idpConfig) {
-            this.idpConfig = Input.of(Objects.requireNonNull(idpConfig));
+            this.idpConfig = Output.of(Objects.requireNonNull(idpConfig));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder spConfig(Input<TenantInboundSamlConfigSpConfigArgs> spConfig) {
+        public Builder spConfig(Output<TenantInboundSamlConfigSpConfigArgs> spConfig) {
             this.spConfig = Objects.requireNonNull(spConfig);
             return this;
         }
 
         public Builder spConfig(TenantInboundSamlConfigSpConfigArgs spConfig) {
-            this.spConfig = Input.of(Objects.requireNonNull(spConfig));
+            this.spConfig = Output.of(Objects.requireNonNull(spConfig));
             return this;
         }
 
-        public Builder tenant(Input<String> tenant) {
+        public Builder tenant(Output<String> tenant) {
             this.tenant = Objects.requireNonNull(tenant);
             return this;
         }
 
         public Builder tenant(String tenant) {
-            this.tenant = Input.of(Objects.requireNonNull(tenant));
+            this.tenant = Output.of(Objects.requireNonNull(tenant));
             return this;
         }
         public TenantInboundSamlConfigArgs build() {

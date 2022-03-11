@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.assuredworkloads;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.assuredworkloads.inputs.WorkloadKmsSettingsArgs;
 import io.pulumi.gcp.assuredworkloads.inputs.WorkloadResourceSettingArgs;
@@ -23,9 +23,9 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="billingAccount", required=true)
-      private final Input<String> billingAccount;
+      private final Output<String> billingAccount;
 
-    public Input<String> getBillingAccount() {
+    public Output<String> getBillingAccount() {
         return this.billingAccount;
     }
 
@@ -34,9 +34,9 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="complianceRegime", required=true)
-      private final Input<String> complianceRegime;
+      private final Output<String> complianceRegime;
 
-    public Input<String> getComplianceRegime() {
+    public Output<String> getComplianceRegime() {
         return this.complianceRegime;
     }
 
@@ -45,9 +45,9 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -56,10 +56,10 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsSettings")
-      private final @Nullable Input<WorkloadKmsSettingsArgs> kmsSettings;
+      private final @Nullable Output<WorkloadKmsSettingsArgs> kmsSettings;
 
-    public Input<WorkloadKmsSettingsArgs> getKmsSettings() {
-        return this.kmsSettings == null ? Input.empty() : this.kmsSettings;
+    public Output<WorkloadKmsSettingsArgs> getKmsSettings() {
+        return this.kmsSettings == null ? Output.empty() : this.kmsSettings;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -78,9 +78,9 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location", required=true)
-      private final Input<String> location;
+      private final Output<String> location;
 
-    public Input<String> getLocation() {
+    public Output<String> getLocation() {
         return this.location;
     }
 
@@ -89,9 +89,9 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="organization", required=true)
-      private final Input<String> organization;
+      private final Output<String> organization;
 
-    public Input<String> getOrganization() {
+    public Output<String> getOrganization() {
         return this.organization;
     }
 
@@ -100,10 +100,10 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provisionedResourcesParent")
-      private final @Nullable Input<String> provisionedResourcesParent;
+      private final @Nullable Output<String> provisionedResourcesParent;
 
-    public Input<String> getProvisionedResourcesParent() {
-        return this.provisionedResourcesParent == null ? Input.empty() : this.provisionedResourcesParent;
+    public Output<String> getProvisionedResourcesParent() {
+        return this.provisionedResourcesParent == null ? Output.empty() : this.provisionedResourcesParent;
     }
 
     /**
@@ -111,22 +111,22 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceSettings")
-      private final @Nullable Input<List<WorkloadResourceSettingArgs>> resourceSettings;
+      private final @Nullable Output<List<WorkloadResourceSettingArgs>> resourceSettings;
 
-    public Input<List<WorkloadResourceSettingArgs>> getResourceSettings() {
-        return this.resourceSettings == null ? Input.empty() : this.resourceSettings;
+    public Output<List<WorkloadResourceSettingArgs>> getResourceSettings() {
+        return this.resourceSettings == null ? Output.empty() : this.resourceSettings;
     }
 
     public WorkloadArgs(
-        Input<String> billingAccount,
-        Input<String> complianceRegime,
-        Input<String> displayName,
-        @Nullable Input<WorkloadKmsSettingsArgs> kmsSettings,
-        @Nullable Input<Map<String,String>> labels,
-        Input<String> location,
-        Input<String> organization,
-        @Nullable Input<String> provisionedResourcesParent,
-        @Nullable Input<List<WorkloadResourceSettingArgs>> resourceSettings) {
+        Output<String> billingAccount,
+        Output<String> complianceRegime,
+        Output<String> displayName,
+        @Nullable Output<WorkloadKmsSettingsArgs> kmsSettings,
+        @Nullable Output<Map<String,String>> labels,
+        Output<String> location,
+        Output<String> organization,
+        @Nullable Output<String> provisionedResourcesParent,
+        @Nullable Output<List<WorkloadResourceSettingArgs>> resourceSettings) {
         this.billingAccount = Objects.requireNonNull(billingAccount, "expected parameter 'billingAccount' to be non-null");
         this.complianceRegime = Objects.requireNonNull(complianceRegime, "expected parameter 'complianceRegime' to be non-null");
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
@@ -139,15 +139,15 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WorkloadArgs() {
-        this.billingAccount = Input.empty();
-        this.complianceRegime = Input.empty();
-        this.displayName = Input.empty();
-        this.kmsSettings = Input.empty();
-        this.labels = Input.empty();
-        this.location = Input.empty();
-        this.organization = Input.empty();
-        this.provisionedResourcesParent = Input.empty();
-        this.resourceSettings = Input.empty();
+        this.billingAccount = Output.empty();
+        this.complianceRegime = Output.empty();
+        this.displayName = Output.empty();
+        this.kmsSettings = Output.empty();
+        this.labels = Output.empty();
+        this.location = Output.empty();
+        this.organization = Output.empty();
+        this.provisionedResourcesParent = Output.empty();
+        this.resourceSettings = Output.empty();
     }
 
     public static Builder builder() {
@@ -159,15 +159,15 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> billingAccount;
-        private Input<String> complianceRegime;
-        private Input<String> displayName;
-        private @Nullable Input<WorkloadKmsSettingsArgs> kmsSettings;
-        private @Nullable Input<Map<String,String>> labels;
-        private Input<String> location;
-        private Input<String> organization;
-        private @Nullable Input<String> provisionedResourcesParent;
-        private @Nullable Input<List<WorkloadResourceSettingArgs>> resourceSettings;
+        private Output<String> billingAccount;
+        private Output<String> complianceRegime;
+        private Output<String> displayName;
+        private @Nullable Output<WorkloadKmsSettingsArgs> kmsSettings;
+        private @Nullable Output<Map<String,String>> labels;
+        private Output<String> location;
+        private Output<String> organization;
+        private @Nullable Output<String> provisionedResourcesParent;
+        private @Nullable Output<List<WorkloadResourceSettingArgs>> resourceSettings;
 
         public Builder() {
     	      // Empty
@@ -186,93 +186,93 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceSettings = defaults.resourceSettings;
         }
 
-        public Builder billingAccount(Input<String> billingAccount) {
+        public Builder billingAccount(Output<String> billingAccount) {
             this.billingAccount = Objects.requireNonNull(billingAccount);
             return this;
         }
 
         public Builder billingAccount(String billingAccount) {
-            this.billingAccount = Input.of(Objects.requireNonNull(billingAccount));
+            this.billingAccount = Output.of(Objects.requireNonNull(billingAccount));
             return this;
         }
 
-        public Builder complianceRegime(Input<String> complianceRegime) {
+        public Builder complianceRegime(Output<String> complianceRegime) {
             this.complianceRegime = Objects.requireNonNull(complianceRegime);
             return this;
         }
 
         public Builder complianceRegime(String complianceRegime) {
-            this.complianceRegime = Input.of(Objects.requireNonNull(complianceRegime));
+            this.complianceRegime = Output.of(Objects.requireNonNull(complianceRegime));
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder kmsSettings(@Nullable Input<WorkloadKmsSettingsArgs> kmsSettings) {
+        public Builder kmsSettings(@Nullable Output<WorkloadKmsSettingsArgs> kmsSettings) {
             this.kmsSettings = kmsSettings;
             return this;
         }
 
         public Builder kmsSettings(@Nullable WorkloadKmsSettingsArgs kmsSettings) {
-            this.kmsSettings = Input.ofNullable(kmsSettings);
+            this.kmsSettings = Output.ofNullable(kmsSettings);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder location(Input<String> location) {
+        public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
         public Builder location(String location) {
-            this.location = Input.of(Objects.requireNonNull(location));
+            this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
 
-        public Builder organization(Input<String> organization) {
+        public Builder organization(Output<String> organization) {
             this.organization = Objects.requireNonNull(organization);
             return this;
         }
 
         public Builder organization(String organization) {
-            this.organization = Input.of(Objects.requireNonNull(organization));
+            this.organization = Output.of(Objects.requireNonNull(organization));
             return this;
         }
 
-        public Builder provisionedResourcesParent(@Nullable Input<String> provisionedResourcesParent) {
+        public Builder provisionedResourcesParent(@Nullable Output<String> provisionedResourcesParent) {
             this.provisionedResourcesParent = provisionedResourcesParent;
             return this;
         }
 
         public Builder provisionedResourcesParent(@Nullable String provisionedResourcesParent) {
-            this.provisionedResourcesParent = Input.ofNullable(provisionedResourcesParent);
+            this.provisionedResourcesParent = Output.ofNullable(provisionedResourcesParent);
             return this;
         }
 
-        public Builder resourceSettings(@Nullable Input<List<WorkloadResourceSettingArgs>> resourceSettings) {
+        public Builder resourceSettings(@Nullable Output<List<WorkloadResourceSettingArgs>> resourceSettings) {
             this.resourceSettings = resourceSettings;
             return this;
         }
 
         public Builder resourceSettings(@Nullable List<WorkloadResourceSettingArgs> resourceSettings) {
-            this.resourceSettings = Input.ofNullable(resourceSettings);
+            this.resourceSettings = Output.ofNullable(resourceSettings);
             return this;
         }
         public WorkloadArgs build() {

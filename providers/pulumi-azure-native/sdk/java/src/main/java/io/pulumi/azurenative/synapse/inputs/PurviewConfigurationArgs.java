@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class PurviewConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="purviewResourceId")
-      private final @Nullable Input<String> purviewResourceId;
+      private final @Nullable Output<String> purviewResourceId;
 
-    public Input<String> getPurviewResourceId() {
-        return this.purviewResourceId == null ? Input.empty() : this.purviewResourceId;
+    public Output<String> getPurviewResourceId() {
+        return this.purviewResourceId == null ? Output.empty() : this.purviewResourceId;
     }
 
-    public PurviewConfigurationArgs(@Nullable Input<String> purviewResourceId) {
+    public PurviewConfigurationArgs(@Nullable Output<String> purviewResourceId) {
         this.purviewResourceId = purviewResourceId;
     }
 
     private PurviewConfigurationArgs() {
-        this.purviewResourceId = Input.empty();
+        this.purviewResourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class PurviewConfigurationArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> purviewResourceId;
+        private @Nullable Output<String> purviewResourceId;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class PurviewConfigurationArgs extends io.pulumi.resources.Resource
     	      this.purviewResourceId = defaults.purviewResourceId;
         }
 
-        public Builder purviewResourceId(@Nullable Input<String> purviewResourceId) {
+        public Builder purviewResourceId(@Nullable Output<String> purviewResourceId) {
             this.purviewResourceId = purviewResourceId;
             return this;
         }
 
         public Builder purviewResourceId(@Nullable String purviewResourceId) {
-            this.purviewResourceId = Input.ofNullable(purviewResourceId);
+            this.purviewResourceId = Output.ofNullable(purviewResourceId);
             return this;
         }
         public PurviewConfigurationArgs build() {

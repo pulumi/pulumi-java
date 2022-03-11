@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2.enums.GoogleCloudDialogflowV2IntentMessageMediaContentMediaType;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs;
@@ -25,9 +25,9 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentArgs extends 
      * 
      */
     @InputImport(name="mediaObjects", required=true)
-      private final Input<List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs>> mediaObjects;
+      private final Output<List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs>> mediaObjects;
 
-    public Input<List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs>> getMediaObjects() {
+    public Output<List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs>> getMediaObjects() {
         return this.mediaObjects;
     }
 
@@ -36,22 +36,22 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentArgs extends 
      * 
      */
     @InputImport(name="mediaType")
-      private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageMediaContentMediaType> mediaType;
+      private final @Nullable Output<GoogleCloudDialogflowV2IntentMessageMediaContentMediaType> mediaType;
 
-    public Input<GoogleCloudDialogflowV2IntentMessageMediaContentMediaType> getMediaType() {
-        return this.mediaType == null ? Input.empty() : this.mediaType;
+    public Output<GoogleCloudDialogflowV2IntentMessageMediaContentMediaType> getMediaType() {
+        return this.mediaType == null ? Output.empty() : this.mediaType;
     }
 
     public GoogleCloudDialogflowV2IntentMessageMediaContentArgs(
-        Input<List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs>> mediaObjects,
-        @Nullable Input<GoogleCloudDialogflowV2IntentMessageMediaContentMediaType> mediaType) {
+        Output<List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs>> mediaObjects,
+        @Nullable Output<GoogleCloudDialogflowV2IntentMessageMediaContentMediaType> mediaType) {
         this.mediaObjects = Objects.requireNonNull(mediaObjects, "expected parameter 'mediaObjects' to be non-null");
         this.mediaType = mediaType;
     }
 
     private GoogleCloudDialogflowV2IntentMessageMediaContentArgs() {
-        this.mediaObjects = Input.empty();
-        this.mediaType = Input.empty();
+        this.mediaObjects = Output.empty();
+        this.mediaType = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentArgs extends 
     }
 
     public static final class Builder {
-        private Input<List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs>> mediaObjects;
-        private @Nullable Input<GoogleCloudDialogflowV2IntentMessageMediaContentMediaType> mediaType;
+        private Output<List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs>> mediaObjects;
+        private @Nullable Output<GoogleCloudDialogflowV2IntentMessageMediaContentMediaType> mediaType;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentArgs extends 
     	      this.mediaType = defaults.mediaType;
         }
 
-        public Builder mediaObjects(Input<List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs>> mediaObjects) {
+        public Builder mediaObjects(Output<List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs>> mediaObjects) {
             this.mediaObjects = Objects.requireNonNull(mediaObjects);
             return this;
         }
 
         public Builder mediaObjects(List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs> mediaObjects) {
-            this.mediaObjects = Input.of(Objects.requireNonNull(mediaObjects));
+            this.mediaObjects = Output.of(Objects.requireNonNull(mediaObjects));
             return this;
         }
 
-        public Builder mediaType(@Nullable Input<GoogleCloudDialogflowV2IntentMessageMediaContentMediaType> mediaType) {
+        public Builder mediaType(@Nullable Output<GoogleCloudDialogflowV2IntentMessageMediaContentMediaType> mediaType) {
             this.mediaType = mediaType;
             return this;
         }
 
         public Builder mediaType(@Nullable GoogleCloudDialogflowV2IntentMessageMediaContentMediaType mediaType) {
-            this.mediaType = Input.ofNullable(mediaType);
+            this.mediaType = Output.ofNullable(mediaType);
             return this;
         }
         public GoogleCloudDialogflowV2IntentMessageMediaContentArgs build() {

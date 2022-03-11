@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.portal;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class TenantConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="configurationName")
-      private final @Nullable Input<String> configurationName;
+      private final @Nullable Output<String> configurationName;
 
-    public Input<String> getConfigurationName() {
-        return this.configurationName == null ? Input.empty() : this.configurationName;
+    public Output<String> getConfigurationName() {
+        return this.configurationName == null ? Output.empty() : this.configurationName;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class TenantConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="enforcePrivateMarkdownStorage")
-      private final @Nullable Input<Boolean> enforcePrivateMarkdownStorage;
+      private final @Nullable Output<Boolean> enforcePrivateMarkdownStorage;
 
-    public Input<Boolean> getEnforcePrivateMarkdownStorage() {
-        return this.enforcePrivateMarkdownStorage == null ? Input.empty() : this.enforcePrivateMarkdownStorage;
+    public Output<Boolean> getEnforcePrivateMarkdownStorage() {
+        return this.enforcePrivateMarkdownStorage == null ? Output.empty() : this.enforcePrivateMarkdownStorage;
     }
 
     public TenantConfigurationArgs(
-        @Nullable Input<String> configurationName,
-        @Nullable Input<Boolean> enforcePrivateMarkdownStorage) {
+        @Nullable Output<String> configurationName,
+        @Nullable Output<Boolean> enforcePrivateMarkdownStorage) {
         this.configurationName = configurationName;
         this.enforcePrivateMarkdownStorage = enforcePrivateMarkdownStorage;
     }
 
     private TenantConfigurationArgs() {
-        this.configurationName = Input.empty();
-        this.enforcePrivateMarkdownStorage = Input.empty();
+        this.configurationName = Output.empty();
+        this.enforcePrivateMarkdownStorage = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class TenantConfigurationArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> configurationName;
-        private @Nullable Input<Boolean> enforcePrivateMarkdownStorage;
+        private @Nullable Output<String> configurationName;
+        private @Nullable Output<Boolean> enforcePrivateMarkdownStorage;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class TenantConfigurationArgs extends io.pulumi.resources.ResourceA
     	      this.enforcePrivateMarkdownStorage = defaults.enforcePrivateMarkdownStorage;
         }
 
-        public Builder configurationName(@Nullable Input<String> configurationName) {
+        public Builder configurationName(@Nullable Output<String> configurationName) {
             this.configurationName = configurationName;
             return this;
         }
 
         public Builder configurationName(@Nullable String configurationName) {
-            this.configurationName = Input.ofNullable(configurationName);
+            this.configurationName = Output.ofNullable(configurationName);
             return this;
         }
 
-        public Builder enforcePrivateMarkdownStorage(@Nullable Input<Boolean> enforcePrivateMarkdownStorage) {
+        public Builder enforcePrivateMarkdownStorage(@Nullable Output<Boolean> enforcePrivateMarkdownStorage) {
             this.enforcePrivateMarkdownStorage = enforcePrivateMarkdownStorage;
             return this;
         }
 
         public Builder enforcePrivateMarkdownStorage(@Nullable Boolean enforcePrivateMarkdownStorage) {
-            this.enforcePrivateMarkdownStorage = Input.ofNullable(enforcePrivateMarkdownStorage);
+            this.enforcePrivateMarkdownStorage = Output.ofNullable(enforcePrivateMarkdownStorage);
             return this;
         }
         public TenantConfigurationArgs build() {

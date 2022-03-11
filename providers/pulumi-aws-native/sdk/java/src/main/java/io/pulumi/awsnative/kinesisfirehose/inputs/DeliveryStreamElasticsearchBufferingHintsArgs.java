@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kinesisfirehose.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class DeliveryStreamElasticsearchBufferingHintsArgs extends io.pulu
     public static final DeliveryStreamElasticsearchBufferingHintsArgs Empty = new DeliveryStreamElasticsearchBufferingHintsArgs();
 
     @InputImport(name="intervalInSeconds")
-      private final @Nullable Input<Integer> intervalInSeconds;
+      private final @Nullable Output<Integer> intervalInSeconds;
 
-    public Input<Integer> getIntervalInSeconds() {
-        return this.intervalInSeconds == null ? Input.empty() : this.intervalInSeconds;
+    public Output<Integer> getIntervalInSeconds() {
+        return this.intervalInSeconds == null ? Output.empty() : this.intervalInSeconds;
     }
 
     @InputImport(name="sizeInMBs")
-      private final @Nullable Input<Integer> sizeInMBs;
+      private final @Nullable Output<Integer> sizeInMBs;
 
-    public Input<Integer> getSizeInMBs() {
-        return this.sizeInMBs == null ? Input.empty() : this.sizeInMBs;
+    public Output<Integer> getSizeInMBs() {
+        return this.sizeInMBs == null ? Output.empty() : this.sizeInMBs;
     }
 
     public DeliveryStreamElasticsearchBufferingHintsArgs(
-        @Nullable Input<Integer> intervalInSeconds,
-        @Nullable Input<Integer> sizeInMBs) {
+        @Nullable Output<Integer> intervalInSeconds,
+        @Nullable Output<Integer> sizeInMBs) {
         this.intervalInSeconds = intervalInSeconds;
         this.sizeInMBs = sizeInMBs;
     }
 
     private DeliveryStreamElasticsearchBufferingHintsArgs() {
-        this.intervalInSeconds = Input.empty();
-        this.sizeInMBs = Input.empty();
+        this.intervalInSeconds = Output.empty();
+        this.sizeInMBs = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class DeliveryStreamElasticsearchBufferingHintsArgs extends io.pulu
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> intervalInSeconds;
-        private @Nullable Input<Integer> sizeInMBs;
+        private @Nullable Output<Integer> intervalInSeconds;
+        private @Nullable Output<Integer> sizeInMBs;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class DeliveryStreamElasticsearchBufferingHintsArgs extends io.pulu
     	      this.sizeInMBs = defaults.sizeInMBs;
         }
 
-        public Builder intervalInSeconds(@Nullable Input<Integer> intervalInSeconds) {
+        public Builder intervalInSeconds(@Nullable Output<Integer> intervalInSeconds) {
             this.intervalInSeconds = intervalInSeconds;
             return this;
         }
 
         public Builder intervalInSeconds(@Nullable Integer intervalInSeconds) {
-            this.intervalInSeconds = Input.ofNullable(intervalInSeconds);
+            this.intervalInSeconds = Output.ofNullable(intervalInSeconds);
             return this;
         }
 
-        public Builder sizeInMBs(@Nullable Input<Integer> sizeInMBs) {
+        public Builder sizeInMBs(@Nullable Output<Integer> sizeInMBs) {
             this.sizeInMBs = sizeInMBs;
             return this;
         }
 
         public Builder sizeInMBs(@Nullable Integer sizeInMBs) {
-            this.sizeInMBs = Input.ofNullable(sizeInMBs);
+            this.sizeInMBs = Output.ofNullable(sizeInMBs);
             return this;
         }
         public DeliveryStreamElasticsearchBufferingHintsArgs build() {

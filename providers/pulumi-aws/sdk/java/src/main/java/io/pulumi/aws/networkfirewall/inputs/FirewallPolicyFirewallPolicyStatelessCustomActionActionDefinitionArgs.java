@@ -4,7 +4,7 @@
 package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.aws.networkfirewall.inputs.FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionActionDefini
      * 
      */
     @InputImport(name="publishMetricAction", required=true)
-      private final Input<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs> publishMetricAction;
+      private final Output<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs> publishMetricAction;
 
-    public Input<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs> getPublishMetricAction() {
+    public Output<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs> getPublishMetricAction() {
         return this.publishMetricAction;
     }
 
-    public FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionArgs(Input<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs> publishMetricAction) {
+    public FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionArgs(Output<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs> publishMetricAction) {
         this.publishMetricAction = Objects.requireNonNull(publishMetricAction, "expected parameter 'publishMetricAction' to be non-null");
     }
 
     private FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionArgs() {
-        this.publishMetricAction = Input.empty();
+        this.publishMetricAction = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionActionDefini
     }
 
     public static final class Builder {
-        private Input<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs> publishMetricAction;
+        private Output<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs> publishMetricAction;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionActionDefini
     	      this.publishMetricAction = defaults.publishMetricAction;
         }
 
-        public Builder publishMetricAction(Input<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs> publishMetricAction) {
+        public Builder publishMetricAction(Output<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs> publishMetricAction) {
             this.publishMetricAction = Objects.requireNonNull(publishMetricAction);
             return this;
         }
 
         public Builder publishMetricAction(FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs publishMetricAction) {
-            this.publishMetricAction = Input.of(Objects.requireNonNull(publishMetricAction));
+            this.publishMetricAction = Output.of(Objects.requireNonNull(publishMetricAction));
             return this;
         }
         public FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionArgs build() {

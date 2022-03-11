@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.HumanTaskUIUiTemplateGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class HumanTaskUIState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class HumanTaskUIState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="humanTaskUiName")
-      private final @Nullable Input<String> humanTaskUiName;
+      private final @Nullable Output<String> humanTaskUiName;
 
-    public Input<String> getHumanTaskUiName() {
-        return this.humanTaskUiName == null ? Input.empty() : this.humanTaskUiName;
+    public Output<String> getHumanTaskUiName() {
+        return this.humanTaskUiName == null ? Output.empty() : this.humanTaskUiName;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class HumanTaskUIState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class HumanTaskUIState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -65,18 +65,18 @@ public final class HumanTaskUIState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uiTemplate")
-      private final @Nullable Input<HumanTaskUIUiTemplateGetArgs> uiTemplate;
+      private final @Nullable Output<HumanTaskUIUiTemplateGetArgs> uiTemplate;
 
-    public Input<HumanTaskUIUiTemplateGetArgs> getUiTemplate() {
-        return this.uiTemplate == null ? Input.empty() : this.uiTemplate;
+    public Output<HumanTaskUIUiTemplateGetArgs> getUiTemplate() {
+        return this.uiTemplate == null ? Output.empty() : this.uiTemplate;
     }
 
     public HumanTaskUIState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> humanTaskUiName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<HumanTaskUIUiTemplateGetArgs> uiTemplate) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> humanTaskUiName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<HumanTaskUIUiTemplateGetArgs> uiTemplate) {
         this.arn = arn;
         this.humanTaskUiName = humanTaskUiName;
         this.tags = tags;
@@ -85,11 +85,11 @@ public final class HumanTaskUIState extends io.pulumi.resources.ResourceArgs {
     }
 
     private HumanTaskUIState() {
-        this.arn = Input.empty();
-        this.humanTaskUiName = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.uiTemplate = Input.empty();
+        this.arn = Output.empty();
+        this.humanTaskUiName = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.uiTemplate = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class HumanTaskUIState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> humanTaskUiName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<HumanTaskUIUiTemplateGetArgs> uiTemplate;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> humanTaskUiName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<HumanTaskUIUiTemplateGetArgs> uiTemplate;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class HumanTaskUIState extends io.pulumi.resources.ResourceArgs {
     	      this.uiTemplate = defaults.uiTemplate;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder humanTaskUiName(@Nullable Input<String> humanTaskUiName) {
+        public Builder humanTaskUiName(@Nullable Output<String> humanTaskUiName) {
             this.humanTaskUiName = humanTaskUiName;
             return this;
         }
 
         public Builder humanTaskUiName(@Nullable String humanTaskUiName) {
-            this.humanTaskUiName = Input.ofNullable(humanTaskUiName);
+            this.humanTaskUiName = Output.ofNullable(humanTaskUiName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder uiTemplate(@Nullable Input<HumanTaskUIUiTemplateGetArgs> uiTemplate) {
+        public Builder uiTemplate(@Nullable Output<HumanTaskUIUiTemplateGetArgs> uiTemplate) {
             this.uiTemplate = uiTemplate;
             return this;
         }
 
         public Builder uiTemplate(@Nullable HumanTaskUIUiTemplateGetArgs uiTemplate) {
-            this.uiTemplate = Input.ofNullable(uiTemplate);
+            this.uiTemplate = Output.ofNullable(uiTemplate);
             return this;
         }
         public HumanTaskUIState build() {

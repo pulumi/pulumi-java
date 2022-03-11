@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -620,14 +619,14 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RegionBackendService(String name, @Nullable RegionBackendServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/regionBackendService:RegionBackendService", name, args == null ? RegionBackendServiceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:compute/regionBackendService:RegionBackendService", name, args == null ? RegionBackendServiceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private RegionBackendService(String name, Input<String> id, @Nullable RegionBackendServiceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private RegionBackendService(String name, Output<String> id, @Nullable RegionBackendServiceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:compute/regionBackendService:RegionBackendService", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -643,7 +642,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RegionBackendService get(String name, Input<String> id, @Nullable RegionBackendServiceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static RegionBackendService get(String name, Output<String> id, @Nullable RegionBackendServiceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RegionBackendService(name, id, state, options);
     }
 }

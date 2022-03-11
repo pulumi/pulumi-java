@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudkms_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudkms_v1.inputs.ServiceResolverArgs;
 import java.lang.String;
@@ -17,9 +17,9 @@ public final class EkmConnectionArgs extends io.pulumi.resources.ResourceArgs {
     public static final EkmConnectionArgs Empty = new EkmConnectionArgs();
 
     @InputImport(name="ekmConnectionId", required=true)
-      private final Input<String> ekmConnectionId;
+      private final Output<String> ekmConnectionId;
 
-    public Input<String> getEkmConnectionId() {
+    public Output<String> getEkmConnectionId() {
         return this.ekmConnectionId;
     }
 
@@ -28,24 +28,24 @@ public final class EkmConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -53,18 +53,18 @@ public final class EkmConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceResolvers")
-      private final @Nullable Input<List<ServiceResolverArgs>> serviceResolvers;
+      private final @Nullable Output<List<ServiceResolverArgs>> serviceResolvers;
 
-    public Input<List<ServiceResolverArgs>> getServiceResolvers() {
-        return this.serviceResolvers == null ? Input.empty() : this.serviceResolvers;
+    public Output<List<ServiceResolverArgs>> getServiceResolvers() {
+        return this.serviceResolvers == null ? Output.empty() : this.serviceResolvers;
     }
 
     public EkmConnectionArgs(
-        Input<String> ekmConnectionId,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> location,
-        @Nullable Input<String> project,
-        @Nullable Input<List<ServiceResolverArgs>> serviceResolvers) {
+        Output<String> ekmConnectionId,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> location,
+        @Nullable Output<String> project,
+        @Nullable Output<List<ServiceResolverArgs>> serviceResolvers) {
         this.ekmConnectionId = Objects.requireNonNull(ekmConnectionId, "expected parameter 'ekmConnectionId' to be non-null");
         this.etag = etag;
         this.location = location;
@@ -73,11 +73,11 @@ public final class EkmConnectionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EkmConnectionArgs() {
-        this.ekmConnectionId = Input.empty();
-        this.etag = Input.empty();
-        this.location = Input.empty();
-        this.project = Input.empty();
-        this.serviceResolvers = Input.empty();
+        this.ekmConnectionId = Output.empty();
+        this.etag = Output.empty();
+        this.location = Output.empty();
+        this.project = Output.empty();
+        this.serviceResolvers = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,11 +89,11 @@ public final class EkmConnectionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> ekmConnectionId;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> project;
-        private @Nullable Input<List<ServiceResolverArgs>> serviceResolvers;
+        private Output<String> ekmConnectionId;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> project;
+        private @Nullable Output<List<ServiceResolverArgs>> serviceResolvers;
 
         public Builder() {
     	      // Empty
@@ -108,53 +108,53 @@ public final class EkmConnectionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serviceResolvers = defaults.serviceResolvers;
         }
 
-        public Builder ekmConnectionId(Input<String> ekmConnectionId) {
+        public Builder ekmConnectionId(Output<String> ekmConnectionId) {
             this.ekmConnectionId = Objects.requireNonNull(ekmConnectionId);
             return this;
         }
 
         public Builder ekmConnectionId(String ekmConnectionId) {
-            this.ekmConnectionId = Input.of(Objects.requireNonNull(ekmConnectionId));
+            this.ekmConnectionId = Output.of(Objects.requireNonNull(ekmConnectionId));
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder serviceResolvers(@Nullable Input<List<ServiceResolverArgs>> serviceResolvers) {
+        public Builder serviceResolvers(@Nullable Output<List<ServiceResolverArgs>> serviceResolvers) {
             this.serviceResolvers = serviceResolvers;
             return this;
         }
 
         public Builder serviceResolvers(@Nullable List<ServiceResolverArgs> serviceResolvers) {
-            this.serviceResolvers = Input.ofNullable(serviceResolvers);
+            this.serviceResolvers = Output.ofNullable(serviceResolvers);
             return this;
         }
         public EkmConnectionArgs build() {

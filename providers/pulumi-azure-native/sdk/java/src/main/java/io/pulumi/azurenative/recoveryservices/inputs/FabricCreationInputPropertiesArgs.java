@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 import io.pulumi.azurenative.recoveryservices.inputs.AzureFabricCreationInputArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.InMageRcmFabricCreationInputArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.VMwareV2FabricCreationInputArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
@@ -26,18 +26,18 @@ public final class FabricCreationInputPropertiesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="customDetails")
-      private final @Nullable Input<Object> customDetails;
+      private final @Nullable Output<Object> customDetails;
 
-    public Input<Object> getCustomDetails() {
-        return this.customDetails == null ? Input.empty() : this.customDetails;
+    public Output<Object> getCustomDetails() {
+        return this.customDetails == null ? Output.empty() : this.customDetails;
     }
 
-    public FabricCreationInputPropertiesArgs(@Nullable Input<Object> customDetails) {
+    public FabricCreationInputPropertiesArgs(@Nullable Output<Object> customDetails) {
         this.customDetails = customDetails;
     }
 
     private FabricCreationInputPropertiesArgs() {
-        this.customDetails = Input.empty();
+        this.customDetails = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,7 +49,7 @@ public final class FabricCreationInputPropertiesArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> customDetails;
+        private @Nullable Output<Object> customDetails;
 
         public Builder() {
     	      // Empty
@@ -60,13 +60,13 @@ public final class FabricCreationInputPropertiesArgs extends io.pulumi.resources
     	      this.customDetails = defaults.customDetails;
         }
 
-        public Builder customDetails(@Nullable Input<Object> customDetails) {
+        public Builder customDetails(@Nullable Output<Object> customDetails) {
             this.customDetails = customDetails;
             return this;
         }
 
         public Builder customDetails(@Nullable Object customDetails) {
-            this.customDetails = Input.ofNullable(customDetails);
+            this.customDetails = Output.ofNullable(customDetails);
             return this;
         }
         public FabricCreationInputPropertiesArgs build() {

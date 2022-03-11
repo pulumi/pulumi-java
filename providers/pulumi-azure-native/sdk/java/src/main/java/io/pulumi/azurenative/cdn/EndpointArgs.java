@@ -13,7 +13,7 @@ import io.pulumi.azurenative.cdn.inputs.GeoFilterArgs;
 import io.pulumi.azurenative.cdn.inputs.ResourceReferenceArgs;
 import io.pulumi.azurenative.cdn.inputs.UrlSigningKeyArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -32,10 +32,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentTypesToCompress")
-      private final @Nullable Input<List<String>> contentTypesToCompress;
+      private final @Nullable Output<List<String>> contentTypesToCompress;
 
-    public Input<List<String>> getContentTypesToCompress() {
-        return this.contentTypesToCompress == null ? Input.empty() : this.contentTypesToCompress;
+    public Output<List<String>> getContentTypesToCompress() {
+        return this.contentTypesToCompress == null ? Output.empty() : this.contentTypesToCompress;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultOriginGroup")
-      private final @Nullable Input<ResourceReferenceArgs> defaultOriginGroup;
+      private final @Nullable Output<ResourceReferenceArgs> defaultOriginGroup;
 
-    public Input<ResourceReferenceArgs> getDefaultOriginGroup() {
-        return this.defaultOriginGroup == null ? Input.empty() : this.defaultOriginGroup;
+    public Output<ResourceReferenceArgs> getDefaultOriginGroup() {
+        return this.defaultOriginGroup == null ? Output.empty() : this.defaultOriginGroup;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deliveryPolicy")
-      private final @Nullable Input<EndpointPropertiesUpdateParametersDeliveryPolicyArgs> deliveryPolicy;
+      private final @Nullable Output<EndpointPropertiesUpdateParametersDeliveryPolicyArgs> deliveryPolicy;
 
-    public Input<EndpointPropertiesUpdateParametersDeliveryPolicyArgs> getDeliveryPolicy() {
-        return this.deliveryPolicy == null ? Input.empty() : this.deliveryPolicy;
+    public Output<EndpointPropertiesUpdateParametersDeliveryPolicyArgs> getDeliveryPolicy() {
+        return this.deliveryPolicy == null ? Output.empty() : this.deliveryPolicy;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointName")
-      private final @Nullable Input<String> endpointName;
+      private final @Nullable Output<String> endpointName;
 
-    public Input<String> getEndpointName() {
-        return this.endpointName == null ? Input.empty() : this.endpointName;
+    public Output<String> getEndpointName() {
+        return this.endpointName == null ? Output.empty() : this.endpointName;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="geoFilters")
-      private final @Nullable Input<List<GeoFilterArgs>> geoFilters;
+      private final @Nullable Output<List<GeoFilterArgs>> geoFilters;
 
-    public Input<List<GeoFilterArgs>> getGeoFilters() {
-        return this.geoFilters == null ? Input.empty() : this.geoFilters;
+    public Output<List<GeoFilterArgs>> getGeoFilters() {
+        return this.geoFilters == null ? Output.empty() : this.geoFilters;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isCompressionEnabled")
-      private final @Nullable Input<Boolean> isCompressionEnabled;
+      private final @Nullable Output<Boolean> isCompressionEnabled;
 
-    public Input<Boolean> getIsCompressionEnabled() {
-        return this.isCompressionEnabled == null ? Input.empty() : this.isCompressionEnabled;
+    public Output<Boolean> getIsCompressionEnabled() {
+        return this.isCompressionEnabled == null ? Output.empty() : this.isCompressionEnabled;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isHttpAllowed")
-      private final @Nullable Input<Boolean> isHttpAllowed;
+      private final @Nullable Output<Boolean> isHttpAllowed;
 
-    public Input<Boolean> getIsHttpAllowed() {
-        return this.isHttpAllowed == null ? Input.empty() : this.isHttpAllowed;
+    public Output<Boolean> getIsHttpAllowed() {
+        return this.isHttpAllowed == null ? Output.empty() : this.isHttpAllowed;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isHttpsAllowed")
-      private final @Nullable Input<Boolean> isHttpsAllowed;
+      private final @Nullable Output<Boolean> isHttpsAllowed;
 
-    public Input<Boolean> getIsHttpsAllowed() {
-        return this.isHttpsAllowed == null ? Input.empty() : this.isHttpsAllowed;
+    public Output<Boolean> getIsHttpsAllowed() {
+        return this.isHttpsAllowed == null ? Output.empty() : this.isHttpsAllowed;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -131,10 +131,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="optimizationType")
-      private final @Nullable Input<Either<String,OptimizationType>> optimizationType;
+      private final @Nullable Output<Either<String,OptimizationType>> optimizationType;
 
-    public Input<Either<String,OptimizationType>> getOptimizationType() {
-        return this.optimizationType == null ? Input.empty() : this.optimizationType;
+    public Output<Either<String,OptimizationType>> getOptimizationType() {
+        return this.optimizationType == null ? Output.empty() : this.optimizationType;
     }
 
     /**
@@ -142,10 +142,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="originGroups")
-      private final @Nullable Input<List<DeepCreatedOriginGroupArgs>> originGroups;
+      private final @Nullable Output<List<DeepCreatedOriginGroupArgs>> originGroups;
 
-    public Input<List<DeepCreatedOriginGroupArgs>> getOriginGroups() {
-        return this.originGroups == null ? Input.empty() : this.originGroups;
+    public Output<List<DeepCreatedOriginGroupArgs>> getOriginGroups() {
+        return this.originGroups == null ? Output.empty() : this.originGroups;
     }
 
     /**
@@ -153,10 +153,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="originHostHeader")
-      private final @Nullable Input<String> originHostHeader;
+      private final @Nullable Output<String> originHostHeader;
 
-    public Input<String> getOriginHostHeader() {
-        return this.originHostHeader == null ? Input.empty() : this.originHostHeader;
+    public Output<String> getOriginHostHeader() {
+        return this.originHostHeader == null ? Output.empty() : this.originHostHeader;
     }
 
     /**
@@ -164,10 +164,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="originPath")
-      private final @Nullable Input<String> originPath;
+      private final @Nullable Output<String> originPath;
 
-    public Input<String> getOriginPath() {
-        return this.originPath == null ? Input.empty() : this.originPath;
+    public Output<String> getOriginPath() {
+        return this.originPath == null ? Output.empty() : this.originPath;
     }
 
     /**
@@ -175,9 +175,9 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="origins", required=true)
-      private final Input<List<DeepCreatedOriginArgs>> origins;
+      private final Output<List<DeepCreatedOriginArgs>> origins;
 
-    public Input<List<DeepCreatedOriginArgs>> getOrigins() {
+    public Output<List<DeepCreatedOriginArgs>> getOrigins() {
         return this.origins;
     }
 
@@ -186,10 +186,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="probePath")
-      private final @Nullable Input<String> probePath;
+      private final @Nullable Output<String> probePath;
 
-    public Input<String> getProbePath() {
-        return this.probePath == null ? Input.empty() : this.probePath;
+    public Output<String> getProbePath() {
+        return this.probePath == null ? Output.empty() : this.probePath;
     }
 
     /**
@@ -197,9 +197,9 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profileName", required=true)
-      private final Input<String> profileName;
+      private final Output<String> profileName;
 
-    public Input<String> getProfileName() {
+    public Output<String> getProfileName() {
         return this.profileName;
     }
 
@@ -208,10 +208,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queryStringCachingBehavior")
-      private final @Nullable Input<QueryStringCachingBehavior> queryStringCachingBehavior;
+      private final @Nullable Output<QueryStringCachingBehavior> queryStringCachingBehavior;
 
-    public Input<QueryStringCachingBehavior> getQueryStringCachingBehavior() {
-        return this.queryStringCachingBehavior == null ? Input.empty() : this.queryStringCachingBehavior;
+    public Output<QueryStringCachingBehavior> getQueryStringCachingBehavior() {
+        return this.queryStringCachingBehavior == null ? Output.empty() : this.queryStringCachingBehavior;
     }
 
     /**
@@ -219,9 +219,9 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -230,10 +230,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -241,10 +241,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="urlSigningKeys")
-      private final @Nullable Input<List<UrlSigningKeyArgs>> urlSigningKeys;
+      private final @Nullable Output<List<UrlSigningKeyArgs>> urlSigningKeys;
 
-    public Input<List<UrlSigningKeyArgs>> getUrlSigningKeys() {
-        return this.urlSigningKeys == null ? Input.empty() : this.urlSigningKeys;
+    public Output<List<UrlSigningKeyArgs>> getUrlSigningKeys() {
+        return this.urlSigningKeys == null ? Output.empty() : this.urlSigningKeys;
     }
 
     /**
@@ -252,34 +252,34 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="webApplicationFirewallPolicyLink")
-      private final @Nullable Input<EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink;
+      private final @Nullable Output<EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink;
 
-    public Input<EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLinkArgs> getWebApplicationFirewallPolicyLink() {
-        return this.webApplicationFirewallPolicyLink == null ? Input.empty() : this.webApplicationFirewallPolicyLink;
+    public Output<EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLinkArgs> getWebApplicationFirewallPolicyLink() {
+        return this.webApplicationFirewallPolicyLink == null ? Output.empty() : this.webApplicationFirewallPolicyLink;
     }
 
     public EndpointArgs(
-        @Nullable Input<List<String>> contentTypesToCompress,
-        @Nullable Input<ResourceReferenceArgs> defaultOriginGroup,
-        @Nullable Input<EndpointPropertiesUpdateParametersDeliveryPolicyArgs> deliveryPolicy,
-        @Nullable Input<String> endpointName,
-        @Nullable Input<List<GeoFilterArgs>> geoFilters,
-        @Nullable Input<Boolean> isCompressionEnabled,
-        @Nullable Input<Boolean> isHttpAllowed,
-        @Nullable Input<Boolean> isHttpsAllowed,
-        @Nullable Input<String> location,
-        @Nullable Input<Either<String,OptimizationType>> optimizationType,
-        @Nullable Input<List<DeepCreatedOriginGroupArgs>> originGroups,
-        @Nullable Input<String> originHostHeader,
-        @Nullable Input<String> originPath,
-        Input<List<DeepCreatedOriginArgs>> origins,
-        @Nullable Input<String> probePath,
-        Input<String> profileName,
-        @Nullable Input<QueryStringCachingBehavior> queryStringCachingBehavior,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<List<UrlSigningKeyArgs>> urlSigningKeys,
-        @Nullable Input<EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink) {
+        @Nullable Output<List<String>> contentTypesToCompress,
+        @Nullable Output<ResourceReferenceArgs> defaultOriginGroup,
+        @Nullable Output<EndpointPropertiesUpdateParametersDeliveryPolicyArgs> deliveryPolicy,
+        @Nullable Output<String> endpointName,
+        @Nullable Output<List<GeoFilterArgs>> geoFilters,
+        @Nullable Output<Boolean> isCompressionEnabled,
+        @Nullable Output<Boolean> isHttpAllowed,
+        @Nullable Output<Boolean> isHttpsAllowed,
+        @Nullable Output<String> location,
+        @Nullable Output<Either<String,OptimizationType>> optimizationType,
+        @Nullable Output<List<DeepCreatedOriginGroupArgs>> originGroups,
+        @Nullable Output<String> originHostHeader,
+        @Nullable Output<String> originPath,
+        Output<List<DeepCreatedOriginArgs>> origins,
+        @Nullable Output<String> probePath,
+        Output<String> profileName,
+        @Nullable Output<QueryStringCachingBehavior> queryStringCachingBehavior,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<List<UrlSigningKeyArgs>> urlSigningKeys,
+        @Nullable Output<EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink) {
         this.contentTypesToCompress = contentTypesToCompress;
         this.defaultOriginGroup = defaultOriginGroup;
         this.deliveryPolicy = deliveryPolicy;
@@ -304,27 +304,27 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EndpointArgs() {
-        this.contentTypesToCompress = Input.empty();
-        this.defaultOriginGroup = Input.empty();
-        this.deliveryPolicy = Input.empty();
-        this.endpointName = Input.empty();
-        this.geoFilters = Input.empty();
-        this.isCompressionEnabled = Input.empty();
-        this.isHttpAllowed = Input.empty();
-        this.isHttpsAllowed = Input.empty();
-        this.location = Input.empty();
-        this.optimizationType = Input.empty();
-        this.originGroups = Input.empty();
-        this.originHostHeader = Input.empty();
-        this.originPath = Input.empty();
-        this.origins = Input.empty();
-        this.probePath = Input.empty();
-        this.profileName = Input.empty();
-        this.queryStringCachingBehavior = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
-        this.urlSigningKeys = Input.empty();
-        this.webApplicationFirewallPolicyLink = Input.empty();
+        this.contentTypesToCompress = Output.empty();
+        this.defaultOriginGroup = Output.empty();
+        this.deliveryPolicy = Output.empty();
+        this.endpointName = Output.empty();
+        this.geoFilters = Output.empty();
+        this.isCompressionEnabled = Output.empty();
+        this.isHttpAllowed = Output.empty();
+        this.isHttpsAllowed = Output.empty();
+        this.location = Output.empty();
+        this.optimizationType = Output.empty();
+        this.originGroups = Output.empty();
+        this.originHostHeader = Output.empty();
+        this.originPath = Output.empty();
+        this.origins = Output.empty();
+        this.probePath = Output.empty();
+        this.profileName = Output.empty();
+        this.queryStringCachingBehavior = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
+        this.urlSigningKeys = Output.empty();
+        this.webApplicationFirewallPolicyLink = Output.empty();
     }
 
     public static Builder builder() {
@@ -336,27 +336,27 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> contentTypesToCompress;
-        private @Nullable Input<ResourceReferenceArgs> defaultOriginGroup;
-        private @Nullable Input<EndpointPropertiesUpdateParametersDeliveryPolicyArgs> deliveryPolicy;
-        private @Nullable Input<String> endpointName;
-        private @Nullable Input<List<GeoFilterArgs>> geoFilters;
-        private @Nullable Input<Boolean> isCompressionEnabled;
-        private @Nullable Input<Boolean> isHttpAllowed;
-        private @Nullable Input<Boolean> isHttpsAllowed;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Either<String,OptimizationType>> optimizationType;
-        private @Nullable Input<List<DeepCreatedOriginGroupArgs>> originGroups;
-        private @Nullable Input<String> originHostHeader;
-        private @Nullable Input<String> originPath;
-        private Input<List<DeepCreatedOriginArgs>> origins;
-        private @Nullable Input<String> probePath;
-        private Input<String> profileName;
-        private @Nullable Input<QueryStringCachingBehavior> queryStringCachingBehavior;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<List<UrlSigningKeyArgs>> urlSigningKeys;
-        private @Nullable Input<EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink;
+        private @Nullable Output<List<String>> contentTypesToCompress;
+        private @Nullable Output<ResourceReferenceArgs> defaultOriginGroup;
+        private @Nullable Output<EndpointPropertiesUpdateParametersDeliveryPolicyArgs> deliveryPolicy;
+        private @Nullable Output<String> endpointName;
+        private @Nullable Output<List<GeoFilterArgs>> geoFilters;
+        private @Nullable Output<Boolean> isCompressionEnabled;
+        private @Nullable Output<Boolean> isHttpAllowed;
+        private @Nullable Output<Boolean> isHttpsAllowed;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Either<String,OptimizationType>> optimizationType;
+        private @Nullable Output<List<DeepCreatedOriginGroupArgs>> originGroups;
+        private @Nullable Output<String> originHostHeader;
+        private @Nullable Output<String> originPath;
+        private Output<List<DeepCreatedOriginArgs>> origins;
+        private @Nullable Output<String> probePath;
+        private Output<String> profileName;
+        private @Nullable Output<QueryStringCachingBehavior> queryStringCachingBehavior;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<List<UrlSigningKeyArgs>> urlSigningKeys;
+        private @Nullable Output<EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink;
 
         public Builder() {
     	      // Empty
@@ -387,213 +387,213 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.webApplicationFirewallPolicyLink = defaults.webApplicationFirewallPolicyLink;
         }
 
-        public Builder contentTypesToCompress(@Nullable Input<List<String>> contentTypesToCompress) {
+        public Builder contentTypesToCompress(@Nullable Output<List<String>> contentTypesToCompress) {
             this.contentTypesToCompress = contentTypesToCompress;
             return this;
         }
 
         public Builder contentTypesToCompress(@Nullable List<String> contentTypesToCompress) {
-            this.contentTypesToCompress = Input.ofNullable(contentTypesToCompress);
+            this.contentTypesToCompress = Output.ofNullable(contentTypesToCompress);
             return this;
         }
 
-        public Builder defaultOriginGroup(@Nullable Input<ResourceReferenceArgs> defaultOriginGroup) {
+        public Builder defaultOriginGroup(@Nullable Output<ResourceReferenceArgs> defaultOriginGroup) {
             this.defaultOriginGroup = defaultOriginGroup;
             return this;
         }
 
         public Builder defaultOriginGroup(@Nullable ResourceReferenceArgs defaultOriginGroup) {
-            this.defaultOriginGroup = Input.ofNullable(defaultOriginGroup);
+            this.defaultOriginGroup = Output.ofNullable(defaultOriginGroup);
             return this;
         }
 
-        public Builder deliveryPolicy(@Nullable Input<EndpointPropertiesUpdateParametersDeliveryPolicyArgs> deliveryPolicy) {
+        public Builder deliveryPolicy(@Nullable Output<EndpointPropertiesUpdateParametersDeliveryPolicyArgs> deliveryPolicy) {
             this.deliveryPolicy = deliveryPolicy;
             return this;
         }
 
         public Builder deliveryPolicy(@Nullable EndpointPropertiesUpdateParametersDeliveryPolicyArgs deliveryPolicy) {
-            this.deliveryPolicy = Input.ofNullable(deliveryPolicy);
+            this.deliveryPolicy = Output.ofNullable(deliveryPolicy);
             return this;
         }
 
-        public Builder endpointName(@Nullable Input<String> endpointName) {
+        public Builder endpointName(@Nullable Output<String> endpointName) {
             this.endpointName = endpointName;
             return this;
         }
 
         public Builder endpointName(@Nullable String endpointName) {
-            this.endpointName = Input.ofNullable(endpointName);
+            this.endpointName = Output.ofNullable(endpointName);
             return this;
         }
 
-        public Builder geoFilters(@Nullable Input<List<GeoFilterArgs>> geoFilters) {
+        public Builder geoFilters(@Nullable Output<List<GeoFilterArgs>> geoFilters) {
             this.geoFilters = geoFilters;
             return this;
         }
 
         public Builder geoFilters(@Nullable List<GeoFilterArgs> geoFilters) {
-            this.geoFilters = Input.ofNullable(geoFilters);
+            this.geoFilters = Output.ofNullable(geoFilters);
             return this;
         }
 
-        public Builder isCompressionEnabled(@Nullable Input<Boolean> isCompressionEnabled) {
+        public Builder isCompressionEnabled(@Nullable Output<Boolean> isCompressionEnabled) {
             this.isCompressionEnabled = isCompressionEnabled;
             return this;
         }
 
         public Builder isCompressionEnabled(@Nullable Boolean isCompressionEnabled) {
-            this.isCompressionEnabled = Input.ofNullable(isCompressionEnabled);
+            this.isCompressionEnabled = Output.ofNullable(isCompressionEnabled);
             return this;
         }
 
-        public Builder isHttpAllowed(@Nullable Input<Boolean> isHttpAllowed) {
+        public Builder isHttpAllowed(@Nullable Output<Boolean> isHttpAllowed) {
             this.isHttpAllowed = isHttpAllowed;
             return this;
         }
 
         public Builder isHttpAllowed(@Nullable Boolean isHttpAllowed) {
-            this.isHttpAllowed = Input.ofNullable(isHttpAllowed);
+            this.isHttpAllowed = Output.ofNullable(isHttpAllowed);
             return this;
         }
 
-        public Builder isHttpsAllowed(@Nullable Input<Boolean> isHttpsAllowed) {
+        public Builder isHttpsAllowed(@Nullable Output<Boolean> isHttpsAllowed) {
             this.isHttpsAllowed = isHttpsAllowed;
             return this;
         }
 
         public Builder isHttpsAllowed(@Nullable Boolean isHttpsAllowed) {
-            this.isHttpsAllowed = Input.ofNullable(isHttpsAllowed);
+            this.isHttpsAllowed = Output.ofNullable(isHttpsAllowed);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder optimizationType(@Nullable Input<Either<String,OptimizationType>> optimizationType) {
+        public Builder optimizationType(@Nullable Output<Either<String,OptimizationType>> optimizationType) {
             this.optimizationType = optimizationType;
             return this;
         }
 
         public Builder optimizationType(@Nullable Either<String,OptimizationType> optimizationType) {
-            this.optimizationType = Input.ofNullable(optimizationType);
+            this.optimizationType = Output.ofNullable(optimizationType);
             return this;
         }
 
-        public Builder originGroups(@Nullable Input<List<DeepCreatedOriginGroupArgs>> originGroups) {
+        public Builder originGroups(@Nullable Output<List<DeepCreatedOriginGroupArgs>> originGroups) {
             this.originGroups = originGroups;
             return this;
         }
 
         public Builder originGroups(@Nullable List<DeepCreatedOriginGroupArgs> originGroups) {
-            this.originGroups = Input.ofNullable(originGroups);
+            this.originGroups = Output.ofNullable(originGroups);
             return this;
         }
 
-        public Builder originHostHeader(@Nullable Input<String> originHostHeader) {
+        public Builder originHostHeader(@Nullable Output<String> originHostHeader) {
             this.originHostHeader = originHostHeader;
             return this;
         }
 
         public Builder originHostHeader(@Nullable String originHostHeader) {
-            this.originHostHeader = Input.ofNullable(originHostHeader);
+            this.originHostHeader = Output.ofNullable(originHostHeader);
             return this;
         }
 
-        public Builder originPath(@Nullable Input<String> originPath) {
+        public Builder originPath(@Nullable Output<String> originPath) {
             this.originPath = originPath;
             return this;
         }
 
         public Builder originPath(@Nullable String originPath) {
-            this.originPath = Input.ofNullable(originPath);
+            this.originPath = Output.ofNullable(originPath);
             return this;
         }
 
-        public Builder origins(Input<List<DeepCreatedOriginArgs>> origins) {
+        public Builder origins(Output<List<DeepCreatedOriginArgs>> origins) {
             this.origins = Objects.requireNonNull(origins);
             return this;
         }
 
         public Builder origins(List<DeepCreatedOriginArgs> origins) {
-            this.origins = Input.of(Objects.requireNonNull(origins));
+            this.origins = Output.of(Objects.requireNonNull(origins));
             return this;
         }
 
-        public Builder probePath(@Nullable Input<String> probePath) {
+        public Builder probePath(@Nullable Output<String> probePath) {
             this.probePath = probePath;
             return this;
         }
 
         public Builder probePath(@Nullable String probePath) {
-            this.probePath = Input.ofNullable(probePath);
+            this.probePath = Output.ofNullable(probePath);
             return this;
         }
 
-        public Builder profileName(Input<String> profileName) {
+        public Builder profileName(Output<String> profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
 
         public Builder profileName(String profileName) {
-            this.profileName = Input.of(Objects.requireNonNull(profileName));
+            this.profileName = Output.of(Objects.requireNonNull(profileName));
             return this;
         }
 
-        public Builder queryStringCachingBehavior(@Nullable Input<QueryStringCachingBehavior> queryStringCachingBehavior) {
+        public Builder queryStringCachingBehavior(@Nullable Output<QueryStringCachingBehavior> queryStringCachingBehavior) {
             this.queryStringCachingBehavior = queryStringCachingBehavior;
             return this;
         }
 
         public Builder queryStringCachingBehavior(@Nullable QueryStringCachingBehavior queryStringCachingBehavior) {
-            this.queryStringCachingBehavior = Input.ofNullable(queryStringCachingBehavior);
+            this.queryStringCachingBehavior = Output.ofNullable(queryStringCachingBehavior);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder urlSigningKeys(@Nullable Input<List<UrlSigningKeyArgs>> urlSigningKeys) {
+        public Builder urlSigningKeys(@Nullable Output<List<UrlSigningKeyArgs>> urlSigningKeys) {
             this.urlSigningKeys = urlSigningKeys;
             return this;
         }
 
         public Builder urlSigningKeys(@Nullable List<UrlSigningKeyArgs> urlSigningKeys) {
-            this.urlSigningKeys = Input.ofNullable(urlSigningKeys);
+            this.urlSigningKeys = Output.ofNullable(urlSigningKeys);
             return this;
         }
 
-        public Builder webApplicationFirewallPolicyLink(@Nullable Input<EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink) {
+        public Builder webApplicationFirewallPolicyLink(@Nullable Output<EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink) {
             this.webApplicationFirewallPolicyLink = webApplicationFirewallPolicyLink;
             return this;
         }
 
         public Builder webApplicationFirewallPolicyLink(@Nullable EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLinkArgs webApplicationFirewallPolicyLink) {
-            this.webApplicationFirewallPolicyLink = Input.ofNullable(webApplicationFirewallPolicyLink);
+            this.webApplicationFirewallPolicyLink = Output.ofNullable(webApplicationFirewallPolicyLink);
             return this;
         }
         public EndpointArgs build() {

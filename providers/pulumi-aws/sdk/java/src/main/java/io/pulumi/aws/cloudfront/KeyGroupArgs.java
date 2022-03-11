@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudfront;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class KeyGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="comment")
-      private final @Nullable Input<String> comment;
+      private final @Nullable Output<String> comment;
 
-    public Input<String> getComment() {
-        return this.comment == null ? Input.empty() : this.comment;
+    public Output<String> getComment() {
+        return this.comment == null ? Output.empty() : this.comment;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class KeyGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="items", required=true)
-      private final Input<List<String>> items;
+      private final Output<List<String>> items;
 
-    public Input<List<String>> getItems() {
+    public Output<List<String>> getItems() {
         return this.items;
     }
 
@@ -42,25 +42,25 @@ public final class KeyGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public KeyGroupArgs(
-        @Nullable Input<String> comment,
-        Input<List<String>> items,
-        @Nullable Input<String> name) {
+        @Nullable Output<String> comment,
+        Output<List<String>> items,
+        @Nullable Output<String> name) {
         this.comment = comment;
         this.items = Objects.requireNonNull(items, "expected parameter 'items' to be non-null");
         this.name = name;
     }
 
     private KeyGroupArgs() {
-        this.comment = Input.empty();
-        this.items = Input.empty();
-        this.name = Input.empty();
+        this.comment = Output.empty();
+        this.items = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class KeyGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> comment;
-        private Input<List<String>> items;
-        private @Nullable Input<String> name;
+        private @Nullable Output<String> comment;
+        private Output<List<String>> items;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class KeyGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder comment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Output<String> comment) {
             this.comment = comment;
             return this;
         }
 
         public Builder comment(@Nullable String comment) {
-            this.comment = Input.ofNullable(comment);
+            this.comment = Output.ofNullable(comment);
             return this;
         }
 
-        public Builder items(Input<List<String>> items) {
+        public Builder items(Output<List<String>> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
 
         public Builder items(List<String> items) {
-            this.items = Input.of(Objects.requireNonNull(items));
+            this.items = Output.of(Objects.requireNonNull(items));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public KeyGroupArgs build() {

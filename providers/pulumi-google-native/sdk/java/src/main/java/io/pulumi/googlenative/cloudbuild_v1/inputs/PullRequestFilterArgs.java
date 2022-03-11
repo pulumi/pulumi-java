@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudbuild_v1.enums.PullRequestFilterCommentControl;
 import java.lang.Boolean;
@@ -25,10 +25,10 @@ public final class PullRequestFilterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="branch")
-      private final @Nullable Input<String> branch;
+      private final @Nullable Output<String> branch;
 
-    public Input<String> getBranch() {
-        return this.branch == null ? Input.empty() : this.branch;
+    public Output<String> getBranch() {
+        return this.branch == null ? Output.empty() : this.branch;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PullRequestFilterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="commentControl")
-      private final @Nullable Input<PullRequestFilterCommentControl> commentControl;
+      private final @Nullable Output<PullRequestFilterCommentControl> commentControl;
 
-    public Input<PullRequestFilterCommentControl> getCommentControl() {
-        return this.commentControl == null ? Input.empty() : this.commentControl;
+    public Output<PullRequestFilterCommentControl> getCommentControl() {
+        return this.commentControl == null ? Output.empty() : this.commentControl;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class PullRequestFilterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="invertRegex")
-      private final @Nullable Input<Boolean> invertRegex;
+      private final @Nullable Output<Boolean> invertRegex;
 
-    public Input<Boolean> getInvertRegex() {
-        return this.invertRegex == null ? Input.empty() : this.invertRegex;
+    public Output<Boolean> getInvertRegex() {
+        return this.invertRegex == null ? Output.empty() : this.invertRegex;
     }
 
     public PullRequestFilterArgs(
-        @Nullable Input<String> branch,
-        @Nullable Input<PullRequestFilterCommentControl> commentControl,
-        @Nullable Input<Boolean> invertRegex) {
+        @Nullable Output<String> branch,
+        @Nullable Output<PullRequestFilterCommentControl> commentControl,
+        @Nullable Output<Boolean> invertRegex) {
         this.branch = branch;
         this.commentControl = commentControl;
         this.invertRegex = invertRegex;
     }
 
     private PullRequestFilterArgs() {
-        this.branch = Input.empty();
-        this.commentControl = Input.empty();
-        this.invertRegex = Input.empty();
+        this.branch = Output.empty();
+        this.commentControl = Output.empty();
+        this.invertRegex = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class PullRequestFilterArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> branch;
-        private @Nullable Input<PullRequestFilterCommentControl> commentControl;
-        private @Nullable Input<Boolean> invertRegex;
+        private @Nullable Output<String> branch;
+        private @Nullable Output<PullRequestFilterCommentControl> commentControl;
+        private @Nullable Output<Boolean> invertRegex;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class PullRequestFilterArgs extends io.pulumi.resources.ResourceArg
     	      this.invertRegex = defaults.invertRegex;
         }
 
-        public Builder branch(@Nullable Input<String> branch) {
+        public Builder branch(@Nullable Output<String> branch) {
             this.branch = branch;
             return this;
         }
 
         public Builder branch(@Nullable String branch) {
-            this.branch = Input.ofNullable(branch);
+            this.branch = Output.ofNullable(branch);
             return this;
         }
 
-        public Builder commentControl(@Nullable Input<PullRequestFilterCommentControl> commentControl) {
+        public Builder commentControl(@Nullable Output<PullRequestFilterCommentControl> commentControl) {
             this.commentControl = commentControl;
             return this;
         }
 
         public Builder commentControl(@Nullable PullRequestFilterCommentControl commentControl) {
-            this.commentControl = Input.ofNullable(commentControl);
+            this.commentControl = Output.ofNullable(commentControl);
             return this;
         }
 
-        public Builder invertRegex(@Nullable Input<Boolean> invertRegex) {
+        public Builder invertRegex(@Nullable Output<Boolean> invertRegex) {
             this.invertRegex = invertRegex;
             return this;
         }
 
         public Builder invertRegex(@Nullable Boolean invertRegex) {
-            this.invertRegex = Input.ofNullable(invertRegex);
+            this.invertRegex = Output.ofNullable(invertRegex);
             return this;
         }
         public PullRequestFilterArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.azurenative.documentdb.enums.SpatialType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class SpatialSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     /**
@@ -33,22 +33,22 @@ public final class SpatialSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="types")
-      private final @Nullable Input<List<Either<String,SpatialType>>> types;
+      private final @Nullable Output<List<Either<String,SpatialType>>> types;
 
-    public Input<List<Either<String,SpatialType>>> getTypes() {
-        return this.types == null ? Input.empty() : this.types;
+    public Output<List<Either<String,SpatialType>>> getTypes() {
+        return this.types == null ? Output.empty() : this.types;
     }
 
     public SpatialSpecArgs(
-        @Nullable Input<String> path,
-        @Nullable Input<List<Either<String,SpatialType>>> types) {
+        @Nullable Output<String> path,
+        @Nullable Output<List<Either<String,SpatialType>>> types) {
         this.path = path;
         this.types = types;
     }
 
     private SpatialSpecArgs() {
-        this.path = Input.empty();
-        this.types = Input.empty();
+        this.path = Output.empty();
+        this.types = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class SpatialSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> path;
-        private @Nullable Input<List<Either<String,SpatialType>>> types;
+        private @Nullable Output<String> path;
+        private @Nullable Output<List<Either<String,SpatialType>>> types;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class SpatialSpecArgs extends io.pulumi.resources.ResourceArgs {
     	      this.types = defaults.types;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
 
-        public Builder types(@Nullable Input<List<Either<String,SpatialType>>> types) {
+        public Builder types(@Nullable Output<List<Either<String,SpatialType>>> types) {
             this.types = types;
             return this;
         }
 
         public Builder types(@Nullable List<Either<String,SpatialType>> types) {
-            this.types = Input.ofNullable(types);
+            this.types = Output.ofNullable(types);
             return this;
         }
         public SpatialSpecArgs build() {

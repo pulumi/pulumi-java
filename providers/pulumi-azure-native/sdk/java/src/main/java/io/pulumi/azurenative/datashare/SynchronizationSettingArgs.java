@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datashare;
 
 import io.pulumi.azurenative.datashare.enums.SynchronizationSettingKind;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,9 +21,9 @@ public final class SynchronizationSettingArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -32,9 +32,9 @@ public final class SynchronizationSettingArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<Either<String,SynchronizationSettingKind>> kind;
+      private final Output<Either<String,SynchronizationSettingKind>> kind;
 
-    public Input<Either<String,SynchronizationSettingKind>> getKind() {
+    public Output<Either<String,SynchronizationSettingKind>> getKind() {
         return this.kind;
     }
 
@@ -43,9 +43,9 @@ public final class SynchronizationSettingArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -54,9 +54,9 @@ public final class SynchronizationSettingArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="shareName", required=true)
-      private final Input<String> shareName;
+      private final Output<String> shareName;
 
-    public Input<String> getShareName() {
+    public Output<String> getShareName() {
         return this.shareName;
     }
 
@@ -65,18 +65,18 @@ public final class SynchronizationSettingArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="synchronizationSettingName")
-      private final @Nullable Input<String> synchronizationSettingName;
+      private final @Nullable Output<String> synchronizationSettingName;
 
-    public Input<String> getSynchronizationSettingName() {
-        return this.synchronizationSettingName == null ? Input.empty() : this.synchronizationSettingName;
+    public Output<String> getSynchronizationSettingName() {
+        return this.synchronizationSettingName == null ? Output.empty() : this.synchronizationSettingName;
     }
 
     public SynchronizationSettingArgs(
-        Input<String> accountName,
-        Input<Either<String,SynchronizationSettingKind>> kind,
-        Input<String> resourceGroupName,
-        Input<String> shareName,
-        @Nullable Input<String> synchronizationSettingName) {
+        Output<String> accountName,
+        Output<Either<String,SynchronizationSettingKind>> kind,
+        Output<String> resourceGroupName,
+        Output<String> shareName,
+        @Nullable Output<String> synchronizationSettingName) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -85,11 +85,11 @@ public final class SynchronizationSettingArgs extends io.pulumi.resources.Resour
     }
 
     private SynchronizationSettingArgs() {
-        this.accountName = Input.empty();
-        this.kind = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.shareName = Input.empty();
-        this.synchronizationSettingName = Input.empty();
+        this.accountName = Output.empty();
+        this.kind = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.shareName = Output.empty();
+        this.synchronizationSettingName = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class SynchronizationSettingArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private Input<Either<String,SynchronizationSettingKind>> kind;
-        private Input<String> resourceGroupName;
-        private Input<String> shareName;
-        private @Nullable Input<String> synchronizationSettingName;
+        private Output<String> accountName;
+        private Output<Either<String,SynchronizationSettingKind>> kind;
+        private Output<String> resourceGroupName;
+        private Output<String> shareName;
+        private @Nullable Output<String> synchronizationSettingName;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class SynchronizationSettingArgs extends io.pulumi.resources.Resour
     	      this.synchronizationSettingName = defaults.synchronizationSettingName;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder kind(Input<Either<String,SynchronizationSettingKind>> kind) {
+        public Builder kind(Output<Either<String,SynchronizationSettingKind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(Either<String,SynchronizationSettingKind> kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder shareName(Input<String> shareName) {
+        public Builder shareName(Output<String> shareName) {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
         }
 
         public Builder shareName(String shareName) {
-            this.shareName = Input.of(Objects.requireNonNull(shareName));
+            this.shareName = Output.of(Objects.requireNonNull(shareName));
             return this;
         }
 
-        public Builder synchronizationSettingName(@Nullable Input<String> synchronizationSettingName) {
+        public Builder synchronizationSettingName(@Nullable Output<String> synchronizationSettingName) {
             this.synchronizationSettingName = synchronizationSettingName;
             return this;
         }
 
         public Builder synchronizationSettingName(@Nullable String synchronizationSettingName) {
-            this.synchronizationSettingName = Input.ofNullable(synchronizationSettingName);
+            this.synchronizationSettingName = Output.ofNullable(synchronizationSettingName);
             return this;
         }
         public SynchronizationSettingArgs build() {

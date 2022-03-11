@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.certificatemanager;
 
 import io.pulumi.awsnative.certificatemanager.inputs.AccountExpiryEventsConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -14,18 +14,18 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     public static final AccountArgs Empty = new AccountArgs();
 
     @InputImport(name="expiryEventsConfiguration", required=true)
-      private final Input<AccountExpiryEventsConfigurationArgs> expiryEventsConfiguration;
+      private final Output<AccountExpiryEventsConfigurationArgs> expiryEventsConfiguration;
 
-    public Input<AccountExpiryEventsConfigurationArgs> getExpiryEventsConfiguration() {
+    public Output<AccountExpiryEventsConfigurationArgs> getExpiryEventsConfiguration() {
         return this.expiryEventsConfiguration;
     }
 
-    public AccountArgs(Input<AccountExpiryEventsConfigurationArgs> expiryEventsConfiguration) {
+    public AccountArgs(Output<AccountExpiryEventsConfigurationArgs> expiryEventsConfiguration) {
         this.expiryEventsConfiguration = Objects.requireNonNull(expiryEventsConfiguration, "expected parameter 'expiryEventsConfiguration' to be non-null");
     }
 
     private AccountArgs() {
-        this.expiryEventsConfiguration = Input.empty();
+        this.expiryEventsConfiguration = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<AccountExpiryEventsConfigurationArgs> expiryEventsConfiguration;
+        private Output<AccountExpiryEventsConfigurationArgs> expiryEventsConfiguration;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     	      this.expiryEventsConfiguration = defaults.expiryEventsConfiguration;
         }
 
-        public Builder expiryEventsConfiguration(Input<AccountExpiryEventsConfigurationArgs> expiryEventsConfiguration) {
+        public Builder expiryEventsConfiguration(Output<AccountExpiryEventsConfigurationArgs> expiryEventsConfiguration) {
             this.expiryEventsConfiguration = Objects.requireNonNull(expiryEventsConfiguration);
             return this;
         }
 
         public Builder expiryEventsConfiguration(AccountExpiryEventsConfigurationArgs expiryEventsConfiguration) {
-            this.expiryEventsConfiguration = Input.of(Objects.requireNonNull(expiryEventsConfiguration));
+            this.expiryEventsConfiguration = Output.of(Objects.requireNonNull(expiryEventsConfiguration));
             return this;
         }
         public AccountArgs build() {

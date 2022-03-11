@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.spanner_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.spanner_v1.inputs.BindingArgs;
 import java.lang.Integer;
@@ -18,9 +18,9 @@ public final class InstanceBackupIamPolicyArgs extends io.pulumi.resources.Resou
     public static final InstanceBackupIamPolicyArgs Empty = new InstanceBackupIamPolicyArgs();
 
     @InputImport(name="backupId", required=true)
-      private final Input<String> backupId;
+      private final Output<String> backupId;
 
-    public Input<String> getBackupId() {
+    public Output<String> getBackupId() {
         return this.backupId;
     }
 
@@ -29,10 +29,10 @@ public final class InstanceBackupIamPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="bindings")
-      private final @Nullable Input<List<BindingArgs>> bindings;
+      private final @Nullable Output<List<BindingArgs>> bindings;
 
-    public Input<List<BindingArgs>> getBindings() {
-        return this.bindings == null ? Input.empty() : this.bindings;
+    public Output<List<BindingArgs>> getBindings() {
+        return this.bindings == null ? Output.empty() : this.bindings;
     }
 
     /**
@@ -40,24 +40,24 @@ public final class InstanceBackupIamPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     @InputImport(name="instanceId", required=true)
-      private final Input<String> instanceId;
+      private final Output<String> instanceId;
 
-    public Input<String> getInstanceId() {
+    public Output<String> getInstanceId() {
         return this.instanceId;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -65,19 +65,19 @@ public final class InstanceBackupIamPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<Integer> version;
+      private final @Nullable Output<Integer> version;
 
-    public Input<Integer> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<Integer> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public InstanceBackupIamPolicyArgs(
-        Input<String> backupId,
-        @Nullable Input<List<BindingArgs>> bindings,
-        @Nullable Input<String> etag,
-        Input<String> instanceId,
-        @Nullable Input<String> project,
-        @Nullable Input<Integer> version) {
+        Output<String> backupId,
+        @Nullable Output<List<BindingArgs>> bindings,
+        @Nullable Output<String> etag,
+        Output<String> instanceId,
+        @Nullable Output<String> project,
+        @Nullable Output<Integer> version) {
         this.backupId = Objects.requireNonNull(backupId, "expected parameter 'backupId' to be non-null");
         this.bindings = bindings;
         this.etag = etag;
@@ -87,12 +87,12 @@ public final class InstanceBackupIamPolicyArgs extends io.pulumi.resources.Resou
     }
 
     private InstanceBackupIamPolicyArgs() {
-        this.backupId = Input.empty();
-        this.bindings = Input.empty();
-        this.etag = Input.empty();
-        this.instanceId = Input.empty();
-        this.project = Input.empty();
-        this.version = Input.empty();
+        this.backupId = Output.empty();
+        this.bindings = Output.empty();
+        this.etag = Output.empty();
+        this.instanceId = Output.empty();
+        this.project = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,12 +104,12 @@ public final class InstanceBackupIamPolicyArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<String> backupId;
-        private @Nullable Input<List<BindingArgs>> bindings;
-        private @Nullable Input<String> etag;
-        private Input<String> instanceId;
-        private @Nullable Input<String> project;
-        private @Nullable Input<Integer> version;
+        private Output<String> backupId;
+        private @Nullable Output<List<BindingArgs>> bindings;
+        private @Nullable Output<String> etag;
+        private Output<String> instanceId;
+        private @Nullable Output<String> project;
+        private @Nullable Output<Integer> version;
 
         public Builder() {
     	      // Empty
@@ -125,63 +125,63 @@ public final class InstanceBackupIamPolicyArgs extends io.pulumi.resources.Resou
     	      this.version = defaults.version;
         }
 
-        public Builder backupId(Input<String> backupId) {
+        public Builder backupId(Output<String> backupId) {
             this.backupId = Objects.requireNonNull(backupId);
             return this;
         }
 
         public Builder backupId(String backupId) {
-            this.backupId = Input.of(Objects.requireNonNull(backupId));
+            this.backupId = Output.of(Objects.requireNonNull(backupId));
             return this;
         }
 
-        public Builder bindings(@Nullable Input<List<BindingArgs>> bindings) {
+        public Builder bindings(@Nullable Output<List<BindingArgs>> bindings) {
             this.bindings = bindings;
             return this;
         }
 
         public Builder bindings(@Nullable List<BindingArgs> bindings) {
-            this.bindings = Input.ofNullable(bindings);
+            this.bindings = Output.ofNullable(bindings);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder instanceId(Input<String> instanceId) {
+        public Builder instanceId(Output<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
         public Builder instanceId(String instanceId) {
-            this.instanceId = Input.of(Objects.requireNonNull(instanceId));
+            this.instanceId = Output.of(Objects.requireNonNull(instanceId));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder version(@Nullable Input<Integer> version) {
+        public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable Integer version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public InstanceBackupIamPolicyArgs build() {

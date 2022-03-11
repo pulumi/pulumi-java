@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.enums.ConnectionMonitorEndpointFilterItemType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class ConnectionMonitorEndpointFilterItemArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="address")
-      private final @Nullable Input<String> address;
+      private final @Nullable Output<String> address;
 
-    public Input<String> getAddress() {
-        return this.address == null ? Input.empty() : this.address;
+    public Output<String> getAddress() {
+        return this.address == null ? Output.empty() : this.address;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class ConnectionMonitorEndpointFilterItemArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<Either<String,ConnectionMonitorEndpointFilterItemType>> type;
+      private final @Nullable Output<Either<String,ConnectionMonitorEndpointFilterItemType>> type;
 
-    public Input<Either<String,ConnectionMonitorEndpointFilterItemType>> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<Either<String,ConnectionMonitorEndpointFilterItemType>> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public ConnectionMonitorEndpointFilterItemArgs(
-        @Nullable Input<String> address,
-        @Nullable Input<Either<String,ConnectionMonitorEndpointFilterItemType>> type) {
+        @Nullable Output<String> address,
+        @Nullable Output<Either<String,ConnectionMonitorEndpointFilterItemType>> type) {
         this.address = address;
         this.type = type;
     }
 
     private ConnectionMonitorEndpointFilterItemArgs() {
-        this.address = Input.empty();
-        this.type = Input.empty();
+        this.address = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class ConnectionMonitorEndpointFilterItemArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> address;
-        private @Nullable Input<Either<String,ConnectionMonitorEndpointFilterItemType>> type;
+        private @Nullable Output<String> address;
+        private @Nullable Output<Either<String,ConnectionMonitorEndpointFilterItemType>> type;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class ConnectionMonitorEndpointFilterItemArgs extends io.pulumi.res
     	      this.type = defaults.type;
         }
 
-        public Builder address(@Nullable Input<String> address) {
+        public Builder address(@Nullable Output<String> address) {
             this.address = address;
             return this;
         }
 
         public Builder address(@Nullable String address) {
-            this.address = Input.ofNullable(address);
+            this.address = Output.ofNullable(address);
             return this;
         }
 
-        public Builder type(@Nullable Input<Either<String,ConnectionMonitorEndpointFilterItemType>> type) {
+        public Builder type(@Nullable Output<Either<String,ConnectionMonitorEndpointFilterItemType>> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable Either<String,ConnectionMonitorEndpointFilterItemType> type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public ConnectionMonitorEndpointFilterItemArgs build() {

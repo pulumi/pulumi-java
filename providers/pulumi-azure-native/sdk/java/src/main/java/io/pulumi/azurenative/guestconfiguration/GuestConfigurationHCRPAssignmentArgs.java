@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.guestconfiguration;
 
 import io.pulumi.azurenative.guestconfiguration.inputs.GuestConfigurationAssignmentPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class GuestConfigurationHCRPAssignmentArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="guestConfigurationAssignmentName")
-      private final @Nullable Input<String> guestConfigurationAssignmentName;
+      private final @Nullable Output<String> guestConfigurationAssignmentName;
 
-    public Input<String> getGuestConfigurationAssignmentName() {
-        return this.guestConfigurationAssignmentName == null ? Input.empty() : this.guestConfigurationAssignmentName;
+    public Output<String> getGuestConfigurationAssignmentName() {
+        return this.guestConfigurationAssignmentName == null ? Output.empty() : this.guestConfigurationAssignmentName;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class GuestConfigurationHCRPAssignmentArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class GuestConfigurationHCRPAssignmentArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="machineName", required=true)
-      private final Input<String> machineName;
+      private final Output<String> machineName;
 
-    public Input<String> getMachineName() {
+    public Output<String> getMachineName() {
         return this.machineName;
     }
 
@@ -53,10 +53,10 @@ public final class GuestConfigurationHCRPAssignmentArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class GuestConfigurationHCRPAssignmentArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<GuestConfigurationAssignmentPropertiesArgs> properties;
+      private final @Nullable Output<GuestConfigurationAssignmentPropertiesArgs> properties;
 
-    public Input<GuestConfigurationAssignmentPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<GuestConfigurationAssignmentPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -75,19 +75,19 @@ public final class GuestConfigurationHCRPAssignmentArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public GuestConfigurationHCRPAssignmentArgs(
-        @Nullable Input<String> guestConfigurationAssignmentName,
-        @Nullable Input<String> location,
-        Input<String> machineName,
-        @Nullable Input<String> name,
-        @Nullable Input<GuestConfigurationAssignmentPropertiesArgs> properties,
-        Input<String> resourceGroupName) {
+        @Nullable Output<String> guestConfigurationAssignmentName,
+        @Nullable Output<String> location,
+        Output<String> machineName,
+        @Nullable Output<String> name,
+        @Nullable Output<GuestConfigurationAssignmentPropertiesArgs> properties,
+        Output<String> resourceGroupName) {
         this.guestConfigurationAssignmentName = guestConfigurationAssignmentName;
         this.location = location;
         this.machineName = Objects.requireNonNull(machineName, "expected parameter 'machineName' to be non-null");
@@ -97,12 +97,12 @@ public final class GuestConfigurationHCRPAssignmentArgs extends io.pulumi.resour
     }
 
     private GuestConfigurationHCRPAssignmentArgs() {
-        this.guestConfigurationAssignmentName = Input.empty();
-        this.location = Input.empty();
-        this.machineName = Input.empty();
-        this.name = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.guestConfigurationAssignmentName = Output.empty();
+        this.location = Output.empty();
+        this.machineName = Output.empty();
+        this.name = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class GuestConfigurationHCRPAssignmentArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> guestConfigurationAssignmentName;
-        private @Nullable Input<String> location;
-        private Input<String> machineName;
-        private @Nullable Input<String> name;
-        private @Nullable Input<GuestConfigurationAssignmentPropertiesArgs> properties;
-        private Input<String> resourceGroupName;
+        private @Nullable Output<String> guestConfigurationAssignmentName;
+        private @Nullable Output<String> location;
+        private Output<String> machineName;
+        private @Nullable Output<String> name;
+        private @Nullable Output<GuestConfigurationAssignmentPropertiesArgs> properties;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -135,63 +135,63 @@ public final class GuestConfigurationHCRPAssignmentArgs extends io.pulumi.resour
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder guestConfigurationAssignmentName(@Nullable Input<String> guestConfigurationAssignmentName) {
+        public Builder guestConfigurationAssignmentName(@Nullable Output<String> guestConfigurationAssignmentName) {
             this.guestConfigurationAssignmentName = guestConfigurationAssignmentName;
             return this;
         }
 
         public Builder guestConfigurationAssignmentName(@Nullable String guestConfigurationAssignmentName) {
-            this.guestConfigurationAssignmentName = Input.ofNullable(guestConfigurationAssignmentName);
+            this.guestConfigurationAssignmentName = Output.ofNullable(guestConfigurationAssignmentName);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder machineName(Input<String> machineName) {
+        public Builder machineName(Output<String> machineName) {
             this.machineName = Objects.requireNonNull(machineName);
             return this;
         }
 
         public Builder machineName(String machineName) {
-            this.machineName = Input.of(Objects.requireNonNull(machineName));
+            this.machineName = Output.of(Objects.requireNonNull(machineName));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder properties(@Nullable Input<GuestConfigurationAssignmentPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<GuestConfigurationAssignmentPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable GuestConfigurationAssignmentPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public GuestConfigurationHCRPAssignmentArgs build() {

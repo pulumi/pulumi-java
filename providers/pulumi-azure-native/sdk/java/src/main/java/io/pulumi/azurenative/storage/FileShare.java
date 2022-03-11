@@ -6,7 +6,6 @@ package io.pulumi.azurenative.storage;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.storage.FileShareArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -312,25 +311,25 @@ public class FileShare extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FileShare(String name, FileShareArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:storage:FileShare", name, args == null ? FileShareArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:storage:FileShare", name, args == null ? FileShareArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private FileShare(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private FileShare(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:storage:FileShare", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:storage/v20190401:FileShare").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20190601:FileShare").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20200801preview:FileShare").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20210101:FileShare").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20210201:FileShare").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20210401:FileShare").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20210601:FileShare").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20210801:FileShare").build())
+                Output.of(Alias.builder().setType("azure-native:storage/v20190401:FileShare").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20190601:FileShare").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20200801preview:FileShare").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20210101:FileShare").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20210201:FileShare").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20210401:FileShare").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20210601:FileShare").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20210801:FileShare").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -344,7 +343,7 @@ public class FileShare extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static FileShare get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static FileShare get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new FileShare(name, id, options);
     }
 }

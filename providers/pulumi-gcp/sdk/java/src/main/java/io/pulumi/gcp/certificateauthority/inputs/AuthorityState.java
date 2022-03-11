@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.AuthorityAccessUrlGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.AuthorityConfigGetArgs;
@@ -25,10 +25,10 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessUrls")
-      private final @Nullable Input<List<AuthorityAccessUrlGetArgs>> accessUrls;
+      private final @Nullable Output<List<AuthorityAccessUrlGetArgs>> accessUrls;
 
-    public Input<List<AuthorityAccessUrlGetArgs>> getAccessUrls() {
-        return this.accessUrls == null ? Input.empty() : this.accessUrls;
+    public Output<List<AuthorityAccessUrlGetArgs>> getAccessUrls() {
+        return this.accessUrls == null ? Output.empty() : this.accessUrls;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateAuthorityId")
-      private final @Nullable Input<String> certificateAuthorityId;
+      private final @Nullable Output<String> certificateAuthorityId;
 
-    public Input<String> getCertificateAuthorityId() {
-        return this.certificateAuthorityId == null ? Input.empty() : this.certificateAuthorityId;
+    public Output<String> getCertificateAuthorityId() {
+        return this.certificateAuthorityId == null ? Output.empty() : this.certificateAuthorityId;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="config")
-      private final @Nullable Input<AuthorityConfigGetArgs> config;
+      private final @Nullable Output<AuthorityConfigGetArgs> config;
 
-    public Input<AuthorityConfigGetArgs> getConfig() {
-        return this.config == null ? Input.empty() : this.config;
+    public Output<AuthorityConfigGetArgs> getConfig() {
+        return this.config == null ? Output.empty() : this.config;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-      private final @Nullable Input<String> createTime;
+      private final @Nullable Output<String> createTime;
 
-    public Input<String> getCreateTime() {
-        return this.createTime == null ? Input.empty() : this.createTime;
+    public Output<String> getCreateTime() {
+        return this.createTime == null ? Output.empty() : this.createTime;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gcsBucket")
-      private final @Nullable Input<String> gcsBucket;
+      private final @Nullable Output<String> gcsBucket;
 
-    public Input<String> getGcsBucket() {
-        return this.gcsBucket == null ? Input.empty() : this.gcsBucket;
+    public Output<String> getGcsBucket() {
+        return this.gcsBucket == null ? Output.empty() : this.gcsBucket;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ignoreActiveCertificatesOnDeletion")
-      private final @Nullable Input<Boolean> ignoreActiveCertificatesOnDeletion;
+      private final @Nullable Output<Boolean> ignoreActiveCertificatesOnDeletion;
 
-    public Input<Boolean> getIgnoreActiveCertificatesOnDeletion() {
-        return this.ignoreActiveCertificatesOnDeletion == null ? Input.empty() : this.ignoreActiveCertificatesOnDeletion;
+    public Output<Boolean> getIgnoreActiveCertificatesOnDeletion() {
+        return this.ignoreActiveCertificatesOnDeletion == null ? Output.empty() : this.ignoreActiveCertificatesOnDeletion;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keySpec")
-      private final @Nullable Input<AuthorityKeySpecGetArgs> keySpec;
+      private final @Nullable Output<AuthorityKeySpecGetArgs> keySpec;
 
-    public Input<AuthorityKeySpecGetArgs> getKeySpec() {
-        return this.keySpec == null ? Input.empty() : this.keySpec;
+    public Output<AuthorityKeySpecGetArgs> getKeySpec() {
+        return this.keySpec == null ? Output.empty() : this.keySpec;
     }
 
     /**
@@ -114,10 +114,10 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -127,10 +127,10 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lifetime")
-      private final @Nullable Input<String> lifetime;
+      private final @Nullable Output<String> lifetime;
 
-    public Input<String> getLifetime() {
-        return this.lifetime == null ? Input.empty() : this.lifetime;
+    public Output<String> getLifetime() {
+        return this.lifetime == null ? Output.empty() : this.lifetime;
     }
 
     /**
@@ -139,10 +139,10 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -150,10 +150,10 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -163,10 +163,10 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pemCaCertificates")
-      private final @Nullable Input<List<String>> pemCaCertificates;
+      private final @Nullable Output<List<String>> pemCaCertificates;
 
-    public Input<List<String>> getPemCaCertificates() {
-        return this.pemCaCertificates == null ? Input.empty() : this.pemCaCertificates;
+    public Output<List<String>> getPemCaCertificates() {
+        return this.pemCaCertificates == null ? Output.empty() : this.pemCaCertificates;
     }
 
     /**
@@ -174,10 +174,10 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pool")
-      private final @Nullable Input<String> pool;
+      private final @Nullable Output<String> pool;
 
-    public Input<String> getPool() {
-        return this.pool == null ? Input.empty() : this.pool;
+    public Output<String> getPool() {
+        return this.pool == null ? Output.empty() : this.pool;
     }
 
     /**
@@ -186,10 +186,10 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -197,10 +197,10 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<String> state;
+      private final @Nullable Output<String> state;
 
-    public Input<String> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<String> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     /**
@@ -213,10 +213,10 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -225,30 +225,30 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updateTime")
-      private final @Nullable Input<String> updateTime;
+      private final @Nullable Output<String> updateTime;
 
-    public Input<String> getUpdateTime() {
-        return this.updateTime == null ? Input.empty() : this.updateTime;
+    public Output<String> getUpdateTime() {
+        return this.updateTime == null ? Output.empty() : this.updateTime;
     }
 
     public AuthorityState(
-        @Nullable Input<List<AuthorityAccessUrlGetArgs>> accessUrls,
-        @Nullable Input<String> certificateAuthorityId,
-        @Nullable Input<AuthorityConfigGetArgs> config,
-        @Nullable Input<String> createTime,
-        @Nullable Input<String> gcsBucket,
-        @Nullable Input<Boolean> ignoreActiveCertificatesOnDeletion,
-        @Nullable Input<AuthorityKeySpecGetArgs> keySpec,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> lifetime,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<List<String>> pemCaCertificates,
-        @Nullable Input<String> pool,
-        @Nullable Input<String> project,
-        @Nullable Input<String> state,
-        @Nullable Input<String> type,
-        @Nullable Input<String> updateTime) {
+        @Nullable Output<List<AuthorityAccessUrlGetArgs>> accessUrls,
+        @Nullable Output<String> certificateAuthorityId,
+        @Nullable Output<AuthorityConfigGetArgs> config,
+        @Nullable Output<String> createTime,
+        @Nullable Output<String> gcsBucket,
+        @Nullable Output<Boolean> ignoreActiveCertificatesOnDeletion,
+        @Nullable Output<AuthorityKeySpecGetArgs> keySpec,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> lifetime,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<List<String>> pemCaCertificates,
+        @Nullable Output<String> pool,
+        @Nullable Output<String> project,
+        @Nullable Output<String> state,
+        @Nullable Output<String> type,
+        @Nullable Output<String> updateTime) {
         this.accessUrls = accessUrls;
         this.certificateAuthorityId = certificateAuthorityId;
         this.config = config;
@@ -269,23 +269,23 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
     }
 
     private AuthorityState() {
-        this.accessUrls = Input.empty();
-        this.certificateAuthorityId = Input.empty();
-        this.config = Input.empty();
-        this.createTime = Input.empty();
-        this.gcsBucket = Input.empty();
-        this.ignoreActiveCertificatesOnDeletion = Input.empty();
-        this.keySpec = Input.empty();
-        this.labels = Input.empty();
-        this.lifetime = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.pemCaCertificates = Input.empty();
-        this.pool = Input.empty();
-        this.project = Input.empty();
-        this.state = Input.empty();
-        this.type = Input.empty();
-        this.updateTime = Input.empty();
+        this.accessUrls = Output.empty();
+        this.certificateAuthorityId = Output.empty();
+        this.config = Output.empty();
+        this.createTime = Output.empty();
+        this.gcsBucket = Output.empty();
+        this.ignoreActiveCertificatesOnDeletion = Output.empty();
+        this.keySpec = Output.empty();
+        this.labels = Output.empty();
+        this.lifetime = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.pemCaCertificates = Output.empty();
+        this.pool = Output.empty();
+        this.project = Output.empty();
+        this.state = Output.empty();
+        this.type = Output.empty();
+        this.updateTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -297,23 +297,23 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<AuthorityAccessUrlGetArgs>> accessUrls;
-        private @Nullable Input<String> certificateAuthorityId;
-        private @Nullable Input<AuthorityConfigGetArgs> config;
-        private @Nullable Input<String> createTime;
-        private @Nullable Input<String> gcsBucket;
-        private @Nullable Input<Boolean> ignoreActiveCertificatesOnDeletion;
-        private @Nullable Input<AuthorityKeySpecGetArgs> keySpec;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> lifetime;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<String>> pemCaCertificates;
-        private @Nullable Input<String> pool;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> state;
-        private @Nullable Input<String> type;
-        private @Nullable Input<String> updateTime;
+        private @Nullable Output<List<AuthorityAccessUrlGetArgs>> accessUrls;
+        private @Nullable Output<String> certificateAuthorityId;
+        private @Nullable Output<AuthorityConfigGetArgs> config;
+        private @Nullable Output<String> createTime;
+        private @Nullable Output<String> gcsBucket;
+        private @Nullable Output<Boolean> ignoreActiveCertificatesOnDeletion;
+        private @Nullable Output<AuthorityKeySpecGetArgs> keySpec;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> lifetime;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<String>> pemCaCertificates;
+        private @Nullable Output<String> pool;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> state;
+        private @Nullable Output<String> type;
+        private @Nullable Output<String> updateTime;
 
         public Builder() {
     	      // Empty
@@ -340,173 +340,173 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder accessUrls(@Nullable Input<List<AuthorityAccessUrlGetArgs>> accessUrls) {
+        public Builder accessUrls(@Nullable Output<List<AuthorityAccessUrlGetArgs>> accessUrls) {
             this.accessUrls = accessUrls;
             return this;
         }
 
         public Builder accessUrls(@Nullable List<AuthorityAccessUrlGetArgs> accessUrls) {
-            this.accessUrls = Input.ofNullable(accessUrls);
+            this.accessUrls = Output.ofNullable(accessUrls);
             return this;
         }
 
-        public Builder certificateAuthorityId(@Nullable Input<String> certificateAuthorityId) {
+        public Builder certificateAuthorityId(@Nullable Output<String> certificateAuthorityId) {
             this.certificateAuthorityId = certificateAuthorityId;
             return this;
         }
 
         public Builder certificateAuthorityId(@Nullable String certificateAuthorityId) {
-            this.certificateAuthorityId = Input.ofNullable(certificateAuthorityId);
+            this.certificateAuthorityId = Output.ofNullable(certificateAuthorityId);
             return this;
         }
 
-        public Builder config(@Nullable Input<AuthorityConfigGetArgs> config) {
+        public Builder config(@Nullable Output<AuthorityConfigGetArgs> config) {
             this.config = config;
             return this;
         }
 
         public Builder config(@Nullable AuthorityConfigGetArgs config) {
-            this.config = Input.ofNullable(config);
+            this.config = Output.ofNullable(config);
             return this;
         }
 
-        public Builder createTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Input.ofNullable(createTime);
+            this.createTime = Output.ofNullable(createTime);
             return this;
         }
 
-        public Builder gcsBucket(@Nullable Input<String> gcsBucket) {
+        public Builder gcsBucket(@Nullable Output<String> gcsBucket) {
             this.gcsBucket = gcsBucket;
             return this;
         }
 
         public Builder gcsBucket(@Nullable String gcsBucket) {
-            this.gcsBucket = Input.ofNullable(gcsBucket);
+            this.gcsBucket = Output.ofNullable(gcsBucket);
             return this;
         }
 
-        public Builder ignoreActiveCertificatesOnDeletion(@Nullable Input<Boolean> ignoreActiveCertificatesOnDeletion) {
+        public Builder ignoreActiveCertificatesOnDeletion(@Nullable Output<Boolean> ignoreActiveCertificatesOnDeletion) {
             this.ignoreActiveCertificatesOnDeletion = ignoreActiveCertificatesOnDeletion;
             return this;
         }
 
         public Builder ignoreActiveCertificatesOnDeletion(@Nullable Boolean ignoreActiveCertificatesOnDeletion) {
-            this.ignoreActiveCertificatesOnDeletion = Input.ofNullable(ignoreActiveCertificatesOnDeletion);
+            this.ignoreActiveCertificatesOnDeletion = Output.ofNullable(ignoreActiveCertificatesOnDeletion);
             return this;
         }
 
-        public Builder keySpec(@Nullable Input<AuthorityKeySpecGetArgs> keySpec) {
+        public Builder keySpec(@Nullable Output<AuthorityKeySpecGetArgs> keySpec) {
             this.keySpec = keySpec;
             return this;
         }
 
         public Builder keySpec(@Nullable AuthorityKeySpecGetArgs keySpec) {
-            this.keySpec = Input.ofNullable(keySpec);
+            this.keySpec = Output.ofNullable(keySpec);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder lifetime(@Nullable Input<String> lifetime) {
+        public Builder lifetime(@Nullable Output<String> lifetime) {
             this.lifetime = lifetime;
             return this;
         }
 
         public Builder lifetime(@Nullable String lifetime) {
-            this.lifetime = Input.ofNullable(lifetime);
+            this.lifetime = Output.ofNullable(lifetime);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder pemCaCertificates(@Nullable Input<List<String>> pemCaCertificates) {
+        public Builder pemCaCertificates(@Nullable Output<List<String>> pemCaCertificates) {
             this.pemCaCertificates = pemCaCertificates;
             return this;
         }
 
         public Builder pemCaCertificates(@Nullable List<String> pemCaCertificates) {
-            this.pemCaCertificates = Input.ofNullable(pemCaCertificates);
+            this.pemCaCertificates = Output.ofNullable(pemCaCertificates);
             return this;
         }
 
-        public Builder pool(@Nullable Input<String> pool) {
+        public Builder pool(@Nullable Output<String> pool) {
             this.pool = pool;
             return this;
         }
 
         public Builder pool(@Nullable String pool) {
-            this.pool = Input.ofNullable(pool);
+            this.pool = Output.ofNullable(pool);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder state(@Nullable Input<String> state) {
+        public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable String state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder updateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Input.ofNullable(updateTime);
+            this.updateTime = Output.ofNullable(updateTime);
             return this;
         }
         public AuthorityState build() {

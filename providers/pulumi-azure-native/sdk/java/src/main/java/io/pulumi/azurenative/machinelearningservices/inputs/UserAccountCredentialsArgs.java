@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class UserAccountCredentialsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="adminUserName", required=true)
-      private final Input<String> adminUserName;
+      private final Output<String> adminUserName;
 
-    public Input<String> getAdminUserName() {
+    public Output<String> getAdminUserName() {
         return this.adminUserName;
     }
 
@@ -34,10 +34,10 @@ public final class UserAccountCredentialsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="adminUserPassword")
-      private final @Nullable Input<String> adminUserPassword;
+      private final @Nullable Output<String> adminUserPassword;
 
-    public Input<String> getAdminUserPassword() {
-        return this.adminUserPassword == null ? Input.empty() : this.adminUserPassword;
+    public Output<String> getAdminUserPassword() {
+        return this.adminUserPassword == null ? Output.empty() : this.adminUserPassword;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class UserAccountCredentialsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="adminUserSshPublicKey")
-      private final @Nullable Input<String> adminUserSshPublicKey;
+      private final @Nullable Output<String> adminUserSshPublicKey;
 
-    public Input<String> getAdminUserSshPublicKey() {
-        return this.adminUserSshPublicKey == null ? Input.empty() : this.adminUserSshPublicKey;
+    public Output<String> getAdminUserSshPublicKey() {
+        return this.adminUserSshPublicKey == null ? Output.empty() : this.adminUserSshPublicKey;
     }
 
     public UserAccountCredentialsArgs(
-        Input<String> adminUserName,
-        @Nullable Input<String> adminUserPassword,
-        @Nullable Input<String> adminUserSshPublicKey) {
+        Output<String> adminUserName,
+        @Nullable Output<String> adminUserPassword,
+        @Nullable Output<String> adminUserSshPublicKey) {
         this.adminUserName = Objects.requireNonNull(adminUserName, "expected parameter 'adminUserName' to be non-null");
         this.adminUserPassword = adminUserPassword;
         this.adminUserSshPublicKey = adminUserSshPublicKey;
     }
 
     private UserAccountCredentialsArgs() {
-        this.adminUserName = Input.empty();
-        this.adminUserPassword = Input.empty();
-        this.adminUserSshPublicKey = Input.empty();
+        this.adminUserName = Output.empty();
+        this.adminUserPassword = Output.empty();
+        this.adminUserSshPublicKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class UserAccountCredentialsArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> adminUserName;
-        private @Nullable Input<String> adminUserPassword;
-        private @Nullable Input<String> adminUserSshPublicKey;
+        private Output<String> adminUserName;
+        private @Nullable Output<String> adminUserPassword;
+        private @Nullable Output<String> adminUserSshPublicKey;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class UserAccountCredentialsArgs extends io.pulumi.resources.Resour
     	      this.adminUserSshPublicKey = defaults.adminUserSshPublicKey;
         }
 
-        public Builder adminUserName(Input<String> adminUserName) {
+        public Builder adminUserName(Output<String> adminUserName) {
             this.adminUserName = Objects.requireNonNull(adminUserName);
             return this;
         }
 
         public Builder adminUserName(String adminUserName) {
-            this.adminUserName = Input.of(Objects.requireNonNull(adminUserName));
+            this.adminUserName = Output.of(Objects.requireNonNull(adminUserName));
             return this;
         }
 
-        public Builder adminUserPassword(@Nullable Input<String> adminUserPassword) {
+        public Builder adminUserPassword(@Nullable Output<String> adminUserPassword) {
             this.adminUserPassword = adminUserPassword;
             return this;
         }
 
         public Builder adminUserPassword(@Nullable String adminUserPassword) {
-            this.adminUserPassword = Input.ofNullable(adminUserPassword);
+            this.adminUserPassword = Output.ofNullable(adminUserPassword);
             return this;
         }
 
-        public Builder adminUserSshPublicKey(@Nullable Input<String> adminUserSshPublicKey) {
+        public Builder adminUserSshPublicKey(@Nullable Output<String> adminUserSshPublicKey) {
             this.adminUserSshPublicKey = adminUserSshPublicKey;
             return this;
         }
 
         public Builder adminUserSshPublicKey(@Nullable String adminUserSshPublicKey) {
-            this.adminUserSshPublicKey = Input.ofNullable(adminUserSshPublicKey);
+            this.adminUserSshPublicKey = Output.ofNullable(adminUserSshPublicKey);
             return this;
         }
         public UserAccountCredentialsArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.azurearcdata.inputs;
 
 import io.pulumi.azurenative.azurearcdata.enums.SqlManagedInstanceSkuTier;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -26,10 +26,10 @@ public final class SqlManagedInstanceSkuArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="capacity")
-      private final @Nullable Input<Integer> capacity;
+      private final @Nullable Output<Integer> capacity;
 
-    public Input<Integer> getCapacity() {
-        return this.capacity == null ? Input.empty() : this.capacity;
+    public Output<Integer> getCapacity() {
+        return this.capacity == null ? Output.empty() : this.capacity;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class SqlManagedInstanceSkuArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="dev")
-      private final @Nullable Input<Boolean> dev;
+      private final @Nullable Output<Boolean> dev;
 
-    public Input<Boolean> getDev() {
-        return this.dev == null ? Input.empty() : this.dev;
+    public Output<Boolean> getDev() {
+        return this.dev == null ? Output.empty() : this.dev;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class SqlManagedInstanceSkuArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="family")
-      private final @Nullable Input<String> family;
+      private final @Nullable Output<String> family;
 
-    public Input<String> getFamily() {
-        return this.family == null ? Input.empty() : this.family;
+    public Output<String> getFamily() {
+        return this.family == null ? Output.empty() : this.family;
     }
 
     /**
@@ -59,9 +59,9 @@ public final class SqlManagedInstanceSkuArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -70,10 +70,10 @@ public final class SqlManagedInstanceSkuArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="size")
-      private final @Nullable Input<String> size;
+      private final @Nullable Output<String> size;
 
-    public Input<String> getSize() {
-        return this.size == null ? Input.empty() : this.size;
+    public Output<String> getSize() {
+        return this.size == null ? Output.empty() : this.size;
     }
 
     /**
@@ -81,34 +81,34 @@ public final class SqlManagedInstanceSkuArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tier")
-      private final @Nullable Input<SqlManagedInstanceSkuTier> tier;
+      private final @Nullable Output<SqlManagedInstanceSkuTier> tier;
 
-    public Input<SqlManagedInstanceSkuTier> getTier() {
-        return this.tier == null ? Input.empty() : this.tier;
+    public Output<SqlManagedInstanceSkuTier> getTier() {
+        return this.tier == null ? Output.empty() : this.tier;
     }
 
     public SqlManagedInstanceSkuArgs(
-        @Nullable Input<Integer> capacity,
-        @Nullable Input<Boolean> dev,
-        @Nullable Input<String> family,
-        Input<String> name,
-        @Nullable Input<String> size,
-        @Nullable Input<SqlManagedInstanceSkuTier> tier) {
+        @Nullable Output<Integer> capacity,
+        @Nullable Output<Boolean> dev,
+        @Nullable Output<String> family,
+        Output<String> name,
+        @Nullable Output<String> size,
+        @Nullable Output<SqlManagedInstanceSkuTier> tier) {
         this.capacity = capacity;
-        this.dev = dev == null ? Input.ofNullable(true) : dev;
+        this.dev = dev == null ? Output.ofNullable(true) : dev;
         this.family = family;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.size = size;
-        this.tier = tier == null ? Input.ofNullable(io.pulumi.azurenative.azurearcdata.enums.SqlManagedInstanceSkuTier.GeneralPurpose) : tier;
+        this.tier = tier == null ? Output.ofNullable(io.pulumi.azurenative.azurearcdata.enums.SqlManagedInstanceSkuTier.GeneralPurpose) : tier;
     }
 
     private SqlManagedInstanceSkuArgs() {
-        this.capacity = Input.empty();
-        this.dev = Input.empty();
-        this.family = Input.empty();
-        this.name = Input.empty();
-        this.size = Input.empty();
-        this.tier = Input.empty();
+        this.capacity = Output.empty();
+        this.dev = Output.empty();
+        this.family = Output.empty();
+        this.name = Output.empty();
+        this.size = Output.empty();
+        this.tier = Output.empty();
     }
 
     public static Builder builder() {
@@ -120,12 +120,12 @@ public final class SqlManagedInstanceSkuArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> capacity;
-        private @Nullable Input<Boolean> dev;
-        private @Nullable Input<String> family;
-        private Input<String> name;
-        private @Nullable Input<String> size;
-        private @Nullable Input<SqlManagedInstanceSkuTier> tier;
+        private @Nullable Output<Integer> capacity;
+        private @Nullable Output<Boolean> dev;
+        private @Nullable Output<String> family;
+        private Output<String> name;
+        private @Nullable Output<String> size;
+        private @Nullable Output<SqlManagedInstanceSkuTier> tier;
 
         public Builder() {
     	      // Empty
@@ -141,63 +141,63 @@ public final class SqlManagedInstanceSkuArgs extends io.pulumi.resources.Resourc
     	      this.tier = defaults.tier;
         }
 
-        public Builder capacity(@Nullable Input<Integer> capacity) {
+        public Builder capacity(@Nullable Output<Integer> capacity) {
             this.capacity = capacity;
             return this;
         }
 
         public Builder capacity(@Nullable Integer capacity) {
-            this.capacity = Input.ofNullable(capacity);
+            this.capacity = Output.ofNullable(capacity);
             return this;
         }
 
-        public Builder dev(@Nullable Input<Boolean> dev) {
+        public Builder dev(@Nullable Output<Boolean> dev) {
             this.dev = dev;
             return this;
         }
 
         public Builder dev(@Nullable Boolean dev) {
-            this.dev = Input.ofNullable(dev);
+            this.dev = Output.ofNullable(dev);
             return this;
         }
 
-        public Builder family(@Nullable Input<String> family) {
+        public Builder family(@Nullable Output<String> family) {
             this.family = family;
             return this;
         }
 
         public Builder family(@Nullable String family) {
-            this.family = Input.ofNullable(family);
+            this.family = Output.ofNullable(family);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder size(@Nullable Input<String> size) {
+        public Builder size(@Nullable Output<String> size) {
             this.size = size;
             return this;
         }
 
         public Builder size(@Nullable String size) {
-            this.size = Input.ofNullable(size);
+            this.size = Output.ofNullable(size);
             return this;
         }
 
-        public Builder tier(@Nullable Input<SqlManagedInstanceSkuTier> tier) {
+        public Builder tier(@Nullable Output<SqlManagedInstanceSkuTier> tier) {
             this.tier = tier;
             return this;
         }
 
         public Builder tier(@Nullable SqlManagedInstanceSkuTier tier) {
-            this.tier = Input.ofNullable(tier);
+            this.tier = Output.ofNullable(tier);
             return this;
         }
         public SqlManagedInstanceSkuArgs build() {

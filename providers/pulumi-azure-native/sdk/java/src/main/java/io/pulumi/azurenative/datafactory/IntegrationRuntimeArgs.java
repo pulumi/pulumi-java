@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory;
 import io.pulumi.azurenative.datafactory.inputs.ManagedIntegrationRuntimeArgs;
 import io.pulumi.azurenative.datafactory.inputs.SelfHostedIntegrationRuntimeArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class IntegrationRuntimeArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="factoryName", required=true)
-      private final Input<String> factoryName;
+      private final Output<String> factoryName;
 
-    public Input<String> getFactoryName() {
+    public Output<String> getFactoryName() {
         return this.factoryName;
     }
 
@@ -33,10 +33,10 @@ public final class IntegrationRuntimeArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="integrationRuntimeName")
-      private final @Nullable Input<String> integrationRuntimeName;
+      private final @Nullable Output<String> integrationRuntimeName;
 
-    public Input<String> getIntegrationRuntimeName() {
-        return this.integrationRuntimeName == null ? Input.empty() : this.integrationRuntimeName;
+    public Output<String> getIntegrationRuntimeName() {
+        return this.integrationRuntimeName == null ? Output.empty() : this.integrationRuntimeName;
     }
 
     /**
@@ -44,9 +44,9 @@ public final class IntegrationRuntimeArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="properties", required=true)
-      private final Input<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> properties;
+      private final Output<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> properties;
 
-    public Input<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> getProperties() {
+    public Output<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> getProperties() {
         return this.properties;
     }
 
@@ -55,17 +55,17 @@ public final class IntegrationRuntimeArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public IntegrationRuntimeArgs(
-        Input<String> factoryName,
-        @Nullable Input<String> integrationRuntimeName,
-        Input<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> properties,
-        Input<String> resourceGroupName) {
+        Output<String> factoryName,
+        @Nullable Output<String> integrationRuntimeName,
+        Output<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> properties,
+        Output<String> resourceGroupName) {
         this.factoryName = Objects.requireNonNull(factoryName, "expected parameter 'factoryName' to be non-null");
         this.integrationRuntimeName = integrationRuntimeName;
         this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
@@ -73,10 +73,10 @@ public final class IntegrationRuntimeArgs extends io.pulumi.resources.ResourceAr
     }
 
     private IntegrationRuntimeArgs() {
-        this.factoryName = Input.empty();
-        this.integrationRuntimeName = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.factoryName = Output.empty();
+        this.integrationRuntimeName = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class IntegrationRuntimeArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> factoryName;
-        private @Nullable Input<String> integrationRuntimeName;
-        private Input<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> properties;
-        private Input<String> resourceGroupName;
+        private Output<String> factoryName;
+        private @Nullable Output<String> integrationRuntimeName;
+        private Output<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> properties;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class IntegrationRuntimeArgs extends io.pulumi.resources.ResourceAr
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder factoryName(Input<String> factoryName) {
+        public Builder factoryName(Output<String> factoryName) {
             this.factoryName = Objects.requireNonNull(factoryName);
             return this;
         }
 
         public Builder factoryName(String factoryName) {
-            this.factoryName = Input.of(Objects.requireNonNull(factoryName));
+            this.factoryName = Output.of(Objects.requireNonNull(factoryName));
             return this;
         }
 
-        public Builder integrationRuntimeName(@Nullable Input<String> integrationRuntimeName) {
+        public Builder integrationRuntimeName(@Nullable Output<String> integrationRuntimeName) {
             this.integrationRuntimeName = integrationRuntimeName;
             return this;
         }
 
         public Builder integrationRuntimeName(@Nullable String integrationRuntimeName) {
-            this.integrationRuntimeName = Input.ofNullable(integrationRuntimeName);
+            this.integrationRuntimeName = Output.ofNullable(integrationRuntimeName);
             return this;
         }
 
-        public Builder properties(Input<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> properties) {
+        public Builder properties(Output<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
         public Builder properties(Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs> properties) {
-            this.properties = Input.of(Objects.requireNonNull(properties));
+            this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public IntegrationRuntimeArgs build() {

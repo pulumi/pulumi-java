@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.SqlUpsertSettingsArgs;
 import io.pulumi.azurenative.datafactory.inputs.StoredProcedureParameterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class SqlServerSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableMetricsCollection")
-      private final @Nullable Input<Object> disableMetricsCollection;
+      private final @Nullable Output<Object> disableMetricsCollection;
 
-    public Input<Object> getDisableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
+    public Output<Object> getDisableMetricsCollection() {
+        return this.disableMetricsCollection == null ? Output.empty() : this.disableMetricsCollection;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class SqlServerSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-      private final @Nullable Input<Object> maxConcurrentConnections;
+      private final @Nullable Output<Object> maxConcurrentConnections;
 
-    public Input<Object> getMaxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
+    public Output<Object> getMaxConcurrentConnections() {
+        return this.maxConcurrentConnections == null ? Output.empty() : this.maxConcurrentConnections;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class SqlServerSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preCopyScript")
-      private final @Nullable Input<Object> preCopyScript;
+      private final @Nullable Output<Object> preCopyScript;
 
-    public Input<Object> getPreCopyScript() {
-        return this.preCopyScript == null ? Input.empty() : this.preCopyScript;
+    public Output<Object> getPreCopyScript() {
+        return this.preCopyScript == null ? Output.empty() : this.preCopyScript;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class SqlServerSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sinkRetryCount")
-      private final @Nullable Input<Object> sinkRetryCount;
+      private final @Nullable Output<Object> sinkRetryCount;
 
-    public Input<Object> getSinkRetryCount() {
-        return this.sinkRetryCount == null ? Input.empty() : this.sinkRetryCount;
+    public Output<Object> getSinkRetryCount() {
+        return this.sinkRetryCount == null ? Output.empty() : this.sinkRetryCount;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class SqlServerSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sinkRetryWait")
-      private final @Nullable Input<Object> sinkRetryWait;
+      private final @Nullable Output<Object> sinkRetryWait;
 
-    public Input<Object> getSinkRetryWait() {
-        return this.sinkRetryWait == null ? Input.empty() : this.sinkRetryWait;
+    public Output<Object> getSinkRetryWait() {
+        return this.sinkRetryWait == null ? Output.empty() : this.sinkRetryWait;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class SqlServerSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sqlWriterStoredProcedureName")
-      private final @Nullable Input<Object> sqlWriterStoredProcedureName;
+      private final @Nullable Output<Object> sqlWriterStoredProcedureName;
 
-    public Input<Object> getSqlWriterStoredProcedureName() {
-        return this.sqlWriterStoredProcedureName == null ? Input.empty() : this.sqlWriterStoredProcedureName;
+    public Output<Object> getSqlWriterStoredProcedureName() {
+        return this.sqlWriterStoredProcedureName == null ? Output.empty() : this.sqlWriterStoredProcedureName;
     }
 
     /**
@@ -93,10 +93,10 @@ public final class SqlServerSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sqlWriterTableType")
-      private final @Nullable Input<Object> sqlWriterTableType;
+      private final @Nullable Output<Object> sqlWriterTableType;
 
-    public Input<Object> getSqlWriterTableType() {
-        return this.sqlWriterTableType == null ? Input.empty() : this.sqlWriterTableType;
+    public Output<Object> getSqlWriterTableType() {
+        return this.sqlWriterTableType == null ? Output.empty() : this.sqlWriterTableType;
     }
 
     /**
@@ -104,10 +104,10 @@ public final class SqlServerSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sqlWriterUseTableLock")
-      private final @Nullable Input<Object> sqlWriterUseTableLock;
+      private final @Nullable Output<Object> sqlWriterUseTableLock;
 
-    public Input<Object> getSqlWriterUseTableLock() {
-        return this.sqlWriterUseTableLock == null ? Input.empty() : this.sqlWriterUseTableLock;
+    public Output<Object> getSqlWriterUseTableLock() {
+        return this.sqlWriterUseTableLock == null ? Output.empty() : this.sqlWriterUseTableLock;
     }
 
     /**
@@ -115,10 +115,10 @@ public final class SqlServerSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storedProcedureParameters")
-      private final @Nullable Input<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters;
+      private final @Nullable Output<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters;
 
-    public Input<Map<String,StoredProcedureParameterArgs>> getStoredProcedureParameters() {
-        return this.storedProcedureParameters == null ? Input.empty() : this.storedProcedureParameters;
+    public Output<Map<String,StoredProcedureParameterArgs>> getStoredProcedureParameters() {
+        return this.storedProcedureParameters == null ? Output.empty() : this.storedProcedureParameters;
     }
 
     /**
@@ -126,10 +126,10 @@ public final class SqlServerSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storedProcedureTableTypeParameterName")
-      private final @Nullable Input<Object> storedProcedureTableTypeParameterName;
+      private final @Nullable Output<Object> storedProcedureTableTypeParameterName;
 
-    public Input<Object> getStoredProcedureTableTypeParameterName() {
-        return this.storedProcedureTableTypeParameterName == null ? Input.empty() : this.storedProcedureTableTypeParameterName;
+    public Output<Object> getStoredProcedureTableTypeParameterName() {
+        return this.storedProcedureTableTypeParameterName == null ? Output.empty() : this.storedProcedureTableTypeParameterName;
     }
 
     /**
@@ -137,10 +137,10 @@ public final class SqlServerSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tableOption")
-      private final @Nullable Input<Object> tableOption;
+      private final @Nullable Output<Object> tableOption;
 
-    public Input<Object> getTableOption() {
-        return this.tableOption == null ? Input.empty() : this.tableOption;
+    public Output<Object> getTableOption() {
+        return this.tableOption == null ? Output.empty() : this.tableOption;
     }
 
     /**
@@ -149,9 +149,9 @@ public final class SqlServerSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -160,10 +160,10 @@ public final class SqlServerSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="upsertSettings")
-      private final @Nullable Input<SqlUpsertSettingsArgs> upsertSettings;
+      private final @Nullable Output<SqlUpsertSettingsArgs> upsertSettings;
 
-    public Input<SqlUpsertSettingsArgs> getUpsertSettings() {
-        return this.upsertSettings == null ? Input.empty() : this.upsertSettings;
+    public Output<SqlUpsertSettingsArgs> getUpsertSettings() {
+        return this.upsertSettings == null ? Output.empty() : this.upsertSettings;
     }
 
     /**
@@ -171,10 +171,10 @@ public final class SqlServerSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="writeBatchSize")
-      private final @Nullable Input<Object> writeBatchSize;
+      private final @Nullable Output<Object> writeBatchSize;
 
-    public Input<Object> getWriteBatchSize() {
-        return this.writeBatchSize == null ? Input.empty() : this.writeBatchSize;
+    public Output<Object> getWriteBatchSize() {
+        return this.writeBatchSize == null ? Output.empty() : this.writeBatchSize;
     }
 
     /**
@@ -182,10 +182,10 @@ public final class SqlServerSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="writeBatchTimeout")
-      private final @Nullable Input<Object> writeBatchTimeout;
+      private final @Nullable Output<Object> writeBatchTimeout;
 
-    public Input<Object> getWriteBatchTimeout() {
-        return this.writeBatchTimeout == null ? Input.empty() : this.writeBatchTimeout;
+    public Output<Object> getWriteBatchTimeout() {
+        return this.writeBatchTimeout == null ? Output.empty() : this.writeBatchTimeout;
     }
 
     /**
@@ -193,29 +193,29 @@ public final class SqlServerSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="writeBehavior")
-      private final @Nullable Input<Object> writeBehavior;
+      private final @Nullable Output<Object> writeBehavior;
 
-    public Input<Object> getWriteBehavior() {
-        return this.writeBehavior == null ? Input.empty() : this.writeBehavior;
+    public Output<Object> getWriteBehavior() {
+        return this.writeBehavior == null ? Output.empty() : this.writeBehavior;
     }
 
     public SqlServerSinkArgs(
-        @Nullable Input<Object> disableMetricsCollection,
-        @Nullable Input<Object> maxConcurrentConnections,
-        @Nullable Input<Object> preCopyScript,
-        @Nullable Input<Object> sinkRetryCount,
-        @Nullable Input<Object> sinkRetryWait,
-        @Nullable Input<Object> sqlWriterStoredProcedureName,
-        @Nullable Input<Object> sqlWriterTableType,
-        @Nullable Input<Object> sqlWriterUseTableLock,
-        @Nullable Input<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters,
-        @Nullable Input<Object> storedProcedureTableTypeParameterName,
-        @Nullable Input<Object> tableOption,
-        Input<String> type,
-        @Nullable Input<SqlUpsertSettingsArgs> upsertSettings,
-        @Nullable Input<Object> writeBatchSize,
-        @Nullable Input<Object> writeBatchTimeout,
-        @Nullable Input<Object> writeBehavior) {
+        @Nullable Output<Object> disableMetricsCollection,
+        @Nullable Output<Object> maxConcurrentConnections,
+        @Nullable Output<Object> preCopyScript,
+        @Nullable Output<Object> sinkRetryCount,
+        @Nullable Output<Object> sinkRetryWait,
+        @Nullable Output<Object> sqlWriterStoredProcedureName,
+        @Nullable Output<Object> sqlWriterTableType,
+        @Nullable Output<Object> sqlWriterUseTableLock,
+        @Nullable Output<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters,
+        @Nullable Output<Object> storedProcedureTableTypeParameterName,
+        @Nullable Output<Object> tableOption,
+        Output<String> type,
+        @Nullable Output<SqlUpsertSettingsArgs> upsertSettings,
+        @Nullable Output<Object> writeBatchSize,
+        @Nullable Output<Object> writeBatchTimeout,
+        @Nullable Output<Object> writeBehavior) {
         this.disableMetricsCollection = disableMetricsCollection;
         this.maxConcurrentConnections = maxConcurrentConnections;
         this.preCopyScript = preCopyScript;
@@ -235,22 +235,22 @@ public final class SqlServerSinkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SqlServerSinkArgs() {
-        this.disableMetricsCollection = Input.empty();
-        this.maxConcurrentConnections = Input.empty();
-        this.preCopyScript = Input.empty();
-        this.sinkRetryCount = Input.empty();
-        this.sinkRetryWait = Input.empty();
-        this.sqlWriterStoredProcedureName = Input.empty();
-        this.sqlWriterTableType = Input.empty();
-        this.sqlWriterUseTableLock = Input.empty();
-        this.storedProcedureParameters = Input.empty();
-        this.storedProcedureTableTypeParameterName = Input.empty();
-        this.tableOption = Input.empty();
-        this.type = Input.empty();
-        this.upsertSettings = Input.empty();
-        this.writeBatchSize = Input.empty();
-        this.writeBatchTimeout = Input.empty();
-        this.writeBehavior = Input.empty();
+        this.disableMetricsCollection = Output.empty();
+        this.maxConcurrentConnections = Output.empty();
+        this.preCopyScript = Output.empty();
+        this.sinkRetryCount = Output.empty();
+        this.sinkRetryWait = Output.empty();
+        this.sqlWriterStoredProcedureName = Output.empty();
+        this.sqlWriterTableType = Output.empty();
+        this.sqlWriterUseTableLock = Output.empty();
+        this.storedProcedureParameters = Output.empty();
+        this.storedProcedureTableTypeParameterName = Output.empty();
+        this.tableOption = Output.empty();
+        this.type = Output.empty();
+        this.upsertSettings = Output.empty();
+        this.writeBatchSize = Output.empty();
+        this.writeBatchTimeout = Output.empty();
+        this.writeBehavior = Output.empty();
     }
 
     public static Builder builder() {
@@ -262,22 +262,22 @@ public final class SqlServerSinkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> disableMetricsCollection;
-        private @Nullable Input<Object> maxConcurrentConnections;
-        private @Nullable Input<Object> preCopyScript;
-        private @Nullable Input<Object> sinkRetryCount;
-        private @Nullable Input<Object> sinkRetryWait;
-        private @Nullable Input<Object> sqlWriterStoredProcedureName;
-        private @Nullable Input<Object> sqlWriterTableType;
-        private @Nullable Input<Object> sqlWriterUseTableLock;
-        private @Nullable Input<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters;
-        private @Nullable Input<Object> storedProcedureTableTypeParameterName;
-        private @Nullable Input<Object> tableOption;
-        private Input<String> type;
-        private @Nullable Input<SqlUpsertSettingsArgs> upsertSettings;
-        private @Nullable Input<Object> writeBatchSize;
-        private @Nullable Input<Object> writeBatchTimeout;
-        private @Nullable Input<Object> writeBehavior;
+        private @Nullable Output<Object> disableMetricsCollection;
+        private @Nullable Output<Object> maxConcurrentConnections;
+        private @Nullable Output<Object> preCopyScript;
+        private @Nullable Output<Object> sinkRetryCount;
+        private @Nullable Output<Object> sinkRetryWait;
+        private @Nullable Output<Object> sqlWriterStoredProcedureName;
+        private @Nullable Output<Object> sqlWriterTableType;
+        private @Nullable Output<Object> sqlWriterUseTableLock;
+        private @Nullable Output<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters;
+        private @Nullable Output<Object> storedProcedureTableTypeParameterName;
+        private @Nullable Output<Object> tableOption;
+        private Output<String> type;
+        private @Nullable Output<SqlUpsertSettingsArgs> upsertSettings;
+        private @Nullable Output<Object> writeBatchSize;
+        private @Nullable Output<Object> writeBatchTimeout;
+        private @Nullable Output<Object> writeBehavior;
 
         public Builder() {
     	      // Empty
@@ -303,163 +303,163 @@ public final class SqlServerSinkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.writeBehavior = defaults.writeBehavior;
         }
 
-        public Builder disableMetricsCollection(@Nullable Input<Object> disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = Input.ofNullable(disableMetricsCollection);
+            this.disableMetricsCollection = Output.ofNullable(disableMetricsCollection);
             return this;
         }
 
-        public Builder maxConcurrentConnections(@Nullable Input<Object> maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = Input.ofNullable(maxConcurrentConnections);
+            this.maxConcurrentConnections = Output.ofNullable(maxConcurrentConnections);
             return this;
         }
 
-        public Builder preCopyScript(@Nullable Input<Object> preCopyScript) {
+        public Builder preCopyScript(@Nullable Output<Object> preCopyScript) {
             this.preCopyScript = preCopyScript;
             return this;
         }
 
         public Builder preCopyScript(@Nullable Object preCopyScript) {
-            this.preCopyScript = Input.ofNullable(preCopyScript);
+            this.preCopyScript = Output.ofNullable(preCopyScript);
             return this;
         }
 
-        public Builder sinkRetryCount(@Nullable Input<Object> sinkRetryCount) {
+        public Builder sinkRetryCount(@Nullable Output<Object> sinkRetryCount) {
             this.sinkRetryCount = sinkRetryCount;
             return this;
         }
 
         public Builder sinkRetryCount(@Nullable Object sinkRetryCount) {
-            this.sinkRetryCount = Input.ofNullable(sinkRetryCount);
+            this.sinkRetryCount = Output.ofNullable(sinkRetryCount);
             return this;
         }
 
-        public Builder sinkRetryWait(@Nullable Input<Object> sinkRetryWait) {
+        public Builder sinkRetryWait(@Nullable Output<Object> sinkRetryWait) {
             this.sinkRetryWait = sinkRetryWait;
             return this;
         }
 
         public Builder sinkRetryWait(@Nullable Object sinkRetryWait) {
-            this.sinkRetryWait = Input.ofNullable(sinkRetryWait);
+            this.sinkRetryWait = Output.ofNullable(sinkRetryWait);
             return this;
         }
 
-        public Builder sqlWriterStoredProcedureName(@Nullable Input<Object> sqlWriterStoredProcedureName) {
+        public Builder sqlWriterStoredProcedureName(@Nullable Output<Object> sqlWriterStoredProcedureName) {
             this.sqlWriterStoredProcedureName = sqlWriterStoredProcedureName;
             return this;
         }
 
         public Builder sqlWriterStoredProcedureName(@Nullable Object sqlWriterStoredProcedureName) {
-            this.sqlWriterStoredProcedureName = Input.ofNullable(sqlWriterStoredProcedureName);
+            this.sqlWriterStoredProcedureName = Output.ofNullable(sqlWriterStoredProcedureName);
             return this;
         }
 
-        public Builder sqlWriterTableType(@Nullable Input<Object> sqlWriterTableType) {
+        public Builder sqlWriterTableType(@Nullable Output<Object> sqlWriterTableType) {
             this.sqlWriterTableType = sqlWriterTableType;
             return this;
         }
 
         public Builder sqlWriterTableType(@Nullable Object sqlWriterTableType) {
-            this.sqlWriterTableType = Input.ofNullable(sqlWriterTableType);
+            this.sqlWriterTableType = Output.ofNullable(sqlWriterTableType);
             return this;
         }
 
-        public Builder sqlWriterUseTableLock(@Nullable Input<Object> sqlWriterUseTableLock) {
+        public Builder sqlWriterUseTableLock(@Nullable Output<Object> sqlWriterUseTableLock) {
             this.sqlWriterUseTableLock = sqlWriterUseTableLock;
             return this;
         }
 
         public Builder sqlWriterUseTableLock(@Nullable Object sqlWriterUseTableLock) {
-            this.sqlWriterUseTableLock = Input.ofNullable(sqlWriterUseTableLock);
+            this.sqlWriterUseTableLock = Output.ofNullable(sqlWriterUseTableLock);
             return this;
         }
 
-        public Builder storedProcedureParameters(@Nullable Input<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters) {
+        public Builder storedProcedureParameters(@Nullable Output<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters) {
             this.storedProcedureParameters = storedProcedureParameters;
             return this;
         }
 
         public Builder storedProcedureParameters(@Nullable Map<String,StoredProcedureParameterArgs> storedProcedureParameters) {
-            this.storedProcedureParameters = Input.ofNullable(storedProcedureParameters);
+            this.storedProcedureParameters = Output.ofNullable(storedProcedureParameters);
             return this;
         }
 
-        public Builder storedProcedureTableTypeParameterName(@Nullable Input<Object> storedProcedureTableTypeParameterName) {
+        public Builder storedProcedureTableTypeParameterName(@Nullable Output<Object> storedProcedureTableTypeParameterName) {
             this.storedProcedureTableTypeParameterName = storedProcedureTableTypeParameterName;
             return this;
         }
 
         public Builder storedProcedureTableTypeParameterName(@Nullable Object storedProcedureTableTypeParameterName) {
-            this.storedProcedureTableTypeParameterName = Input.ofNullable(storedProcedureTableTypeParameterName);
+            this.storedProcedureTableTypeParameterName = Output.ofNullable(storedProcedureTableTypeParameterName);
             return this;
         }
 
-        public Builder tableOption(@Nullable Input<Object> tableOption) {
+        public Builder tableOption(@Nullable Output<Object> tableOption) {
             this.tableOption = tableOption;
             return this;
         }
 
         public Builder tableOption(@Nullable Object tableOption) {
-            this.tableOption = Input.ofNullable(tableOption);
+            this.tableOption = Output.ofNullable(tableOption);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder upsertSettings(@Nullable Input<SqlUpsertSettingsArgs> upsertSettings) {
+        public Builder upsertSettings(@Nullable Output<SqlUpsertSettingsArgs> upsertSettings) {
             this.upsertSettings = upsertSettings;
             return this;
         }
 
         public Builder upsertSettings(@Nullable SqlUpsertSettingsArgs upsertSettings) {
-            this.upsertSettings = Input.ofNullable(upsertSettings);
+            this.upsertSettings = Output.ofNullable(upsertSettings);
             return this;
         }
 
-        public Builder writeBatchSize(@Nullable Input<Object> writeBatchSize) {
+        public Builder writeBatchSize(@Nullable Output<Object> writeBatchSize) {
             this.writeBatchSize = writeBatchSize;
             return this;
         }
 
         public Builder writeBatchSize(@Nullable Object writeBatchSize) {
-            this.writeBatchSize = Input.ofNullable(writeBatchSize);
+            this.writeBatchSize = Output.ofNullable(writeBatchSize);
             return this;
         }
 
-        public Builder writeBatchTimeout(@Nullable Input<Object> writeBatchTimeout) {
+        public Builder writeBatchTimeout(@Nullable Output<Object> writeBatchTimeout) {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
 
         public Builder writeBatchTimeout(@Nullable Object writeBatchTimeout) {
-            this.writeBatchTimeout = Input.ofNullable(writeBatchTimeout);
+            this.writeBatchTimeout = Output.ofNullable(writeBatchTimeout);
             return this;
         }
 
-        public Builder writeBehavior(@Nullable Input<Object> writeBehavior) {
+        public Builder writeBehavior(@Nullable Output<Object> writeBehavior) {
             this.writeBehavior = writeBehavior;
             return this;
         }
 
         public Builder writeBehavior(@Nullable Object writeBehavior) {
-            this.writeBehavior = Input.ofNullable(writeBehavior);
+            this.writeBehavior = Output.ofNullable(writeBehavior);
             return this;
         }
         public SqlServerSinkArgs build() {

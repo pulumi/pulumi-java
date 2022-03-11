@@ -7,7 +7,7 @@ import io.pulumi.azurenative.containerregistry.enums.PipelineOptions;
 import io.pulumi.azurenative.containerregistry.inputs.ExportPipelineTargetPropertiesArgs;
 import io.pulumi.azurenative.containerregistry.inputs.IdentityPropertiesArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class ExportPipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="exportPipelineName")
-      private final @Nullable Input<String> exportPipelineName;
+      private final @Nullable Output<String> exportPipelineName;
 
-    public Input<String> getExportPipelineName() {
-        return this.exportPipelineName == null ? Input.empty() : this.exportPipelineName;
+    public Output<String> getExportPipelineName() {
+        return this.exportPipelineName == null ? Output.empty() : this.exportPipelineName;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ExportPipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<IdentityPropertiesArgs> identity;
+      private final @Nullable Output<IdentityPropertiesArgs> identity;
 
-    public Input<IdentityPropertiesArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<IdentityPropertiesArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ExportPipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ExportPipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="options")
-      private final @Nullable Input<List<Either<String,PipelineOptions>>> options;
+      private final @Nullable Output<List<Either<String,PipelineOptions>>> options;
 
-    public Input<List<Either<String,PipelineOptions>>> getOptions() {
-        return this.options == null ? Input.empty() : this.options;
+    public Output<List<Either<String,PipelineOptions>>> getOptions() {
+        return this.options == null ? Output.empty() : this.options;
     }
 
     /**
@@ -68,9 +68,9 @@ public final class ExportPipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registryName", required=true)
-      private final Input<String> registryName;
+      private final Output<String> registryName;
 
-    public Input<String> getRegistryName() {
+    public Output<String> getRegistryName() {
         return this.registryName;
     }
 
@@ -79,9 +79,9 @@ public final class ExportPipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -90,20 +90,20 @@ public final class ExportPipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="target", required=true)
-      private final Input<ExportPipelineTargetPropertiesArgs> target;
+      private final Output<ExportPipelineTargetPropertiesArgs> target;
 
-    public Input<ExportPipelineTargetPropertiesArgs> getTarget() {
+    public Output<ExportPipelineTargetPropertiesArgs> getTarget() {
         return this.target;
     }
 
     public ExportPipelineArgs(
-        @Nullable Input<String> exportPipelineName,
-        @Nullable Input<IdentityPropertiesArgs> identity,
-        @Nullable Input<String> location,
-        @Nullable Input<List<Either<String,PipelineOptions>>> options,
-        Input<String> registryName,
-        Input<String> resourceGroupName,
-        Input<ExportPipelineTargetPropertiesArgs> target) {
+        @Nullable Output<String> exportPipelineName,
+        @Nullable Output<IdentityPropertiesArgs> identity,
+        @Nullable Output<String> location,
+        @Nullable Output<List<Either<String,PipelineOptions>>> options,
+        Output<String> registryName,
+        Output<String> resourceGroupName,
+        Output<ExportPipelineTargetPropertiesArgs> target) {
         this.exportPipelineName = exportPipelineName;
         this.identity = identity;
         this.location = location;
@@ -114,13 +114,13 @@ public final class ExportPipelineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ExportPipelineArgs() {
-        this.exportPipelineName = Input.empty();
-        this.identity = Input.empty();
-        this.location = Input.empty();
-        this.options = Input.empty();
-        this.registryName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.target = Input.empty();
+        this.exportPipelineName = Output.empty();
+        this.identity = Output.empty();
+        this.location = Output.empty();
+        this.options = Output.empty();
+        this.registryName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.target = Output.empty();
     }
 
     public static Builder builder() {
@@ -132,13 +132,13 @@ public final class ExportPipelineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> exportPipelineName;
-        private @Nullable Input<IdentityPropertiesArgs> identity;
-        private @Nullable Input<String> location;
-        private @Nullable Input<List<Either<String,PipelineOptions>>> options;
-        private Input<String> registryName;
-        private Input<String> resourceGroupName;
-        private Input<ExportPipelineTargetPropertiesArgs> target;
+        private @Nullable Output<String> exportPipelineName;
+        private @Nullable Output<IdentityPropertiesArgs> identity;
+        private @Nullable Output<String> location;
+        private @Nullable Output<List<Either<String,PipelineOptions>>> options;
+        private Output<String> registryName;
+        private Output<String> resourceGroupName;
+        private Output<ExportPipelineTargetPropertiesArgs> target;
 
         public Builder() {
     	      // Empty
@@ -155,73 +155,73 @@ public final class ExportPipelineArgs extends io.pulumi.resources.ResourceArgs {
     	      this.target = defaults.target;
         }
 
-        public Builder exportPipelineName(@Nullable Input<String> exportPipelineName) {
+        public Builder exportPipelineName(@Nullable Output<String> exportPipelineName) {
             this.exportPipelineName = exportPipelineName;
             return this;
         }
 
         public Builder exportPipelineName(@Nullable String exportPipelineName) {
-            this.exportPipelineName = Input.ofNullable(exportPipelineName);
+            this.exportPipelineName = Output.ofNullable(exportPipelineName);
             return this;
         }
 
-        public Builder identity(@Nullable Input<IdentityPropertiesArgs> identity) {
+        public Builder identity(@Nullable Output<IdentityPropertiesArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable IdentityPropertiesArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder options(@Nullable Input<List<Either<String,PipelineOptions>>> options) {
+        public Builder options(@Nullable Output<List<Either<String,PipelineOptions>>> options) {
             this.options = options;
             return this;
         }
 
         public Builder options(@Nullable List<Either<String,PipelineOptions>> options) {
-            this.options = Input.ofNullable(options);
+            this.options = Output.ofNullable(options);
             return this;
         }
 
-        public Builder registryName(Input<String> registryName) {
+        public Builder registryName(Output<String> registryName) {
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
 
         public Builder registryName(String registryName) {
-            this.registryName = Input.of(Objects.requireNonNull(registryName));
+            this.registryName = Output.of(Objects.requireNonNull(registryName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder target(Input<ExportPipelineTargetPropertiesArgs> target) {
+        public Builder target(Output<ExportPipelineTargetPropertiesArgs> target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
 
         public Builder target(ExportPipelineTargetPropertiesArgs target) {
-            this.target = Input.of(Objects.requireNonNull(target));
+            this.target = Output.of(Objects.requireNonNull(target));
             return this;
         }
         public ExportPipelineArgs build() {

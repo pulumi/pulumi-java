@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.outputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
@@ -12,21 +12,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ProviderIgnoreTagsArgs {
-    private final @Nullable Input<List<String>> keyPrefixes;
-    private final @Nullable Input<List<String>> keys;
+    private final @Nullable Output<List<String>> keyPrefixes;
+    private final @Nullable Output<List<String>> keys;
 
     @OutputCustomType.Constructor
     private ProviderIgnoreTagsArgs(
-        @OutputCustomType.Parameter("keyPrefixes") @Nullable Input<List<String>> keyPrefixes,
-        @OutputCustomType.Parameter("keys") @Nullable Input<List<String>> keys) {
+        @OutputCustomType.Parameter("keyPrefixes") @Nullable Output<List<String>> keyPrefixes,
+        @OutputCustomType.Parameter("keys") @Nullable Output<List<String>> keys) {
         this.keyPrefixes = keyPrefixes;
         this.keys = keys;
     }
 
-    public @Nullable Input<List<String>> getKeyPrefixes() {
+    public @Nullable Output<List<String>> getKeyPrefixes() {
         return this.keyPrefixes;
     }
-    public @Nullable Input<List<String>> getKeys() {
+    public @Nullable Output<List<String>> getKeys() {
         return this.keys;
     }
 
@@ -39,8 +39,8 @@ public final class ProviderIgnoreTagsArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> keyPrefixes;
-        private @Nullable Input<List<String>> keys;
+        private @Nullable Output<List<String>> keyPrefixes;
+        private @Nullable Output<List<String>> keys;
 
         public Builder() {
     	      // Empty
@@ -52,12 +52,12 @@ public final class ProviderIgnoreTagsArgs {
     	      this.keys = defaults.keys;
         }
 
-        public Builder keyPrefixes(@Nullable Input<List<String>> keyPrefixes) {
+        public Builder keyPrefixes(@Nullable Output<List<String>> keyPrefixes) {
             this.keyPrefixes = keyPrefixes;
             return this;
         }
 
-        public Builder keys(@Nullable Input<List<String>> keys) {
+        public Builder keys(@Nullable Output<List<String>> keys) {
             this.keys = keys;
             return this;
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -15,18 +15,18 @@ public final class MangedSslCertificateManagedArgs extends io.pulumi.resources.R
     public static final MangedSslCertificateManagedArgs Empty = new MangedSslCertificateManagedArgs();
 
     @InputImport(name="domains", required=true)
-      private final Input<List<String>> domains;
+      private final Output<List<String>> domains;
 
-    public Input<List<String>> getDomains() {
+    public Output<List<String>> getDomains() {
         return this.domains;
     }
 
-    public MangedSslCertificateManagedArgs(Input<List<String>> domains) {
+    public MangedSslCertificateManagedArgs(Output<List<String>> domains) {
         this.domains = Objects.requireNonNull(domains, "expected parameter 'domains' to be non-null");
     }
 
     private MangedSslCertificateManagedArgs() {
-        this.domains = Input.empty();
+        this.domains = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class MangedSslCertificateManagedArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<List<String>> domains;
+        private Output<List<String>> domains;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class MangedSslCertificateManagedArgs extends io.pulumi.resources.R
     	      this.domains = defaults.domains;
         }
 
-        public Builder domains(Input<List<String>> domains) {
+        public Builder domains(Output<List<String>> domains) {
             this.domains = Objects.requireNonNull(domains);
             return this;
         }
 
         public Builder domains(List<String> domains) {
-            this.domains = Input.of(Objects.requireNonNull(domains));
+            this.domains = Output.of(Objects.requireNonNull(domains));
             return this;
         }
         public MangedSslCertificateManagedArgs build() {

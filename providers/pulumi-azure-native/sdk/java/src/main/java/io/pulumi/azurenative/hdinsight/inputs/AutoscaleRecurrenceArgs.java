@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.azurenative.hdinsight.inputs.AutoscaleScheduleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class AutoscaleRecurrenceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="schedule")
-      private final @Nullable Input<List<AutoscaleScheduleArgs>> schedule;
+      private final @Nullable Output<List<AutoscaleScheduleArgs>> schedule;
 
-    public Input<List<AutoscaleScheduleArgs>> getSchedule() {
-        return this.schedule == null ? Input.empty() : this.schedule;
+    public Output<List<AutoscaleScheduleArgs>> getSchedule() {
+        return this.schedule == null ? Output.empty() : this.schedule;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class AutoscaleRecurrenceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="timeZone")
-      private final @Nullable Input<String> timeZone;
+      private final @Nullable Output<String> timeZone;
 
-    public Input<String> getTimeZone() {
-        return this.timeZone == null ? Input.empty() : this.timeZone;
+    public Output<String> getTimeZone() {
+        return this.timeZone == null ? Output.empty() : this.timeZone;
     }
 
     public AutoscaleRecurrenceArgs(
-        @Nullable Input<List<AutoscaleScheduleArgs>> schedule,
-        @Nullable Input<String> timeZone) {
+        @Nullable Output<List<AutoscaleScheduleArgs>> schedule,
+        @Nullable Output<String> timeZone) {
         this.schedule = schedule;
         this.timeZone = timeZone;
     }
 
     private AutoscaleRecurrenceArgs() {
-        this.schedule = Input.empty();
-        this.timeZone = Input.empty();
+        this.schedule = Output.empty();
+        this.timeZone = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class AutoscaleRecurrenceArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<List<AutoscaleScheduleArgs>> schedule;
-        private @Nullable Input<String> timeZone;
+        private @Nullable Output<List<AutoscaleScheduleArgs>> schedule;
+        private @Nullable Output<String> timeZone;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class AutoscaleRecurrenceArgs extends io.pulumi.resources.ResourceA
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder schedule(@Nullable Input<List<AutoscaleScheduleArgs>> schedule) {
+        public Builder schedule(@Nullable Output<List<AutoscaleScheduleArgs>> schedule) {
             this.schedule = schedule;
             return this;
         }
 
         public Builder schedule(@Nullable List<AutoscaleScheduleArgs> schedule) {
-            this.schedule = Input.ofNullable(schedule);
+            this.schedule = Output.ofNullable(schedule);
             return this;
         }
 
-        public Builder timeZone(@Nullable Input<String> timeZone) {
+        public Builder timeZone(@Nullable Output<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
 
         public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = Input.ofNullable(timeZone);
+            this.timeZone = Output.ofNullable(timeZone);
             return this;
         }
         public AutoscaleRecurrenceArgs build() {

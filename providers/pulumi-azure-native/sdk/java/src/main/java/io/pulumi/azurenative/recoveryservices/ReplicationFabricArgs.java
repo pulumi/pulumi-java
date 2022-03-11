@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices;
 
 import io.pulumi.azurenative.recoveryservices.inputs.FabricCreationInputPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class ReplicationFabricArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="fabricName")
-      private final @Nullable Input<String> fabricName;
+      private final @Nullable Output<String> fabricName;
 
-    public Input<String> getFabricName() {
-        return this.fabricName == null ? Input.empty() : this.fabricName;
+    public Output<String> getFabricName() {
+        return this.fabricName == null ? Output.empty() : this.fabricName;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ReplicationFabricArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<FabricCreationInputPropertiesArgs> properties;
+      private final @Nullable Output<FabricCreationInputPropertiesArgs> properties;
 
-    public Input<FabricCreationInputPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<FabricCreationInputPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class ReplicationFabricArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -53,17 +53,17 @@ public final class ReplicationFabricArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceName", required=true)
-      private final Input<String> resourceName;
+      private final Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
+    public Output<String> getPropResourceName() {
         return this.resourceName;
     }
 
     public ReplicationFabricArgs(
-        @Nullable Input<String> fabricName,
-        @Nullable Input<FabricCreationInputPropertiesArgs> properties,
-        Input<String> resourceGroupName,
-        Input<String> resourceName) {
+        @Nullable Output<String> fabricName,
+        @Nullable Output<FabricCreationInputPropertiesArgs> properties,
+        Output<String> resourceGroupName,
+        Output<String> resourceName) {
         this.fabricName = fabricName;
         this.properties = properties;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -71,10 +71,10 @@ public final class ReplicationFabricArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ReplicationFabricArgs() {
-        this.fabricName = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceName = Input.empty();
+        this.fabricName = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class ReplicationFabricArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> fabricName;
-        private @Nullable Input<FabricCreationInputPropertiesArgs> properties;
-        private Input<String> resourceGroupName;
-        private Input<String> resourceName;
+        private @Nullable Output<String> fabricName;
+        private @Nullable Output<FabricCreationInputPropertiesArgs> properties;
+        private Output<String> resourceGroupName;
+        private Output<String> resourceName;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class ReplicationFabricArgs extends io.pulumi.resources.ResourceArg
     	      this.resourceName = defaults.resourceName;
         }
 
-        public Builder fabricName(@Nullable Input<String> fabricName) {
+        public Builder fabricName(@Nullable Output<String> fabricName) {
             this.fabricName = fabricName;
             return this;
         }
 
         public Builder fabricName(@Nullable String fabricName) {
-            this.fabricName = Input.ofNullable(fabricName);
+            this.fabricName = Output.ofNullable(fabricName);
             return this;
         }
 
-        public Builder properties(@Nullable Input<FabricCreationInputPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<FabricCreationInputPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable FabricCreationInputPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceName(Input<String> resourceName) {
+        public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
         public Builder resourceName(String resourceName) {
-            this.resourceName = Input.of(Objects.requireNonNull(resourceName));
+            this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
         }
         public ReplicationFabricArgs build() {

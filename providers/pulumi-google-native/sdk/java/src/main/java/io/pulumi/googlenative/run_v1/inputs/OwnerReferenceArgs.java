@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiVersion")
-      private final @Nullable Input<String> apiVersion;
+      private final @Nullable Output<String> apiVersion;
 
-    public Input<String> getApiVersion() {
-        return this.apiVersion == null ? Input.empty() : this.apiVersion;
+    public Output<String> getApiVersion() {
+        return this.apiVersion == null ? Output.empty() : this.apiVersion;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blockOwnerDeletion")
-      private final @Nullable Input<Boolean> blockOwnerDeletion;
+      private final @Nullable Output<Boolean> blockOwnerDeletion;
 
-    public Input<Boolean> getBlockOwnerDeletion() {
-        return this.blockOwnerDeletion == null ? Input.empty() : this.blockOwnerDeletion;
+    public Output<Boolean> getBlockOwnerDeletion() {
+        return this.blockOwnerDeletion == null ? Output.empty() : this.blockOwnerDeletion;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="controller")
-      private final @Nullable Input<Boolean> controller;
+      private final @Nullable Output<Boolean> controller;
 
-    public Input<Boolean> getController() {
-        return this.controller == null ? Input.empty() : this.controller;
+    public Output<Boolean> getController() {
+        return this.controller == null ? Output.empty() : this.controller;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -79,19 +79,19 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uid")
-      private final @Nullable Input<String> uid;
+      private final @Nullable Output<String> uid;
 
-    public Input<String> getUid() {
-        return this.uid == null ? Input.empty() : this.uid;
+    public Output<String> getUid() {
+        return this.uid == null ? Output.empty() : this.uid;
     }
 
     public OwnerReferenceArgs(
-        @Nullable Input<String> apiVersion,
-        @Nullable Input<Boolean> blockOwnerDeletion,
-        @Nullable Input<Boolean> controller,
-        @Nullable Input<String> kind,
-        @Nullable Input<String> name,
-        @Nullable Input<String> uid) {
+        @Nullable Output<String> apiVersion,
+        @Nullable Output<Boolean> blockOwnerDeletion,
+        @Nullable Output<Boolean> controller,
+        @Nullable Output<String> kind,
+        @Nullable Output<String> name,
+        @Nullable Output<String> uid) {
         this.apiVersion = apiVersion;
         this.blockOwnerDeletion = blockOwnerDeletion;
         this.controller = controller;
@@ -101,12 +101,12 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OwnerReferenceArgs() {
-        this.apiVersion = Input.empty();
-        this.blockOwnerDeletion = Input.empty();
-        this.controller = Input.empty();
-        this.kind = Input.empty();
-        this.name = Input.empty();
-        this.uid = Input.empty();
+        this.apiVersion = Output.empty();
+        this.blockOwnerDeletion = Output.empty();
+        this.controller = Output.empty();
+        this.kind = Output.empty();
+        this.name = Output.empty();
+        this.uid = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,12 +118,12 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> apiVersion;
-        private @Nullable Input<Boolean> blockOwnerDeletion;
-        private @Nullable Input<Boolean> controller;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> uid;
+        private @Nullable Output<String> apiVersion;
+        private @Nullable Output<Boolean> blockOwnerDeletion;
+        private @Nullable Output<Boolean> controller;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> uid;
 
         public Builder() {
     	      // Empty
@@ -139,63 +139,63 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uid = defaults.uid;
         }
 
-        public Builder apiVersion(@Nullable Input<String> apiVersion) {
+        public Builder apiVersion(@Nullable Output<String> apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
         public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Input.ofNullable(apiVersion);
+            this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
 
-        public Builder blockOwnerDeletion(@Nullable Input<Boolean> blockOwnerDeletion) {
+        public Builder blockOwnerDeletion(@Nullable Output<Boolean> blockOwnerDeletion) {
             this.blockOwnerDeletion = blockOwnerDeletion;
             return this;
         }
 
         public Builder blockOwnerDeletion(@Nullable Boolean blockOwnerDeletion) {
-            this.blockOwnerDeletion = Input.ofNullable(blockOwnerDeletion);
+            this.blockOwnerDeletion = Output.ofNullable(blockOwnerDeletion);
             return this;
         }
 
-        public Builder controller(@Nullable Input<Boolean> controller) {
+        public Builder controller(@Nullable Output<Boolean> controller) {
             this.controller = controller;
             return this;
         }
 
         public Builder controller(@Nullable Boolean controller) {
-            this.controller = Input.ofNullable(controller);
+            this.controller = Output.ofNullable(controller);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder uid(@Nullable Input<String> uid) {
+        public Builder uid(@Nullable Output<String> uid) {
             this.uid = uid;
             return this;
         }
 
         public Builder uid(@Nullable String uid) {
-            this.uid = Input.ofNullable(uid);
+            this.uid = Output.ofNullable(uid);
             return this;
         }
         public OwnerReferenceArgs build() {

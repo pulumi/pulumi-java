@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class DataSourceAthenaParametersArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="workGroup")
-      private final @Nullable Input<String> workGroup;
+      private final @Nullable Output<String> workGroup;
 
-    public Input<String> getWorkGroup() {
-        return this.workGroup == null ? Input.empty() : this.workGroup;
+    public Output<String> getWorkGroup() {
+        return this.workGroup == null ? Output.empty() : this.workGroup;
     }
 
-    public DataSourceAthenaParametersArgs(@Nullable Input<String> workGroup) {
+    public DataSourceAthenaParametersArgs(@Nullable Output<String> workGroup) {
         this.workGroup = workGroup;
     }
 
     private DataSourceAthenaParametersArgs() {
-        this.workGroup = Input.empty();
+        this.workGroup = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class DataSourceAthenaParametersArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> workGroup;
+        private @Nullable Output<String> workGroup;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class DataSourceAthenaParametersArgs extends io.pulumi.resources.Re
     	      this.workGroup = defaults.workGroup;
         }
 
-        public Builder workGroup(@Nullable Input<String> workGroup) {
+        public Builder workGroup(@Nullable Output<String> workGroup) {
             this.workGroup = workGroup;
             return this;
         }
 
         public Builder workGroup(@Nullable String workGroup) {
-            this.workGroup = Input.ofNullable(workGroup);
+            this.workGroup = Output.ofNullable(workGroup);
             return this;
         }
         public DataSourceAthenaParametersArgs build() {

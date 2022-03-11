@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.enums.BucketOwnershipControlsRuleObjectOwnership;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class BucketOwnershipControlsRuleArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="objectOwnership")
-      private final @Nullable Input<BucketOwnershipControlsRuleObjectOwnership> objectOwnership;
+      private final @Nullable Output<BucketOwnershipControlsRuleObjectOwnership> objectOwnership;
 
-    public Input<BucketOwnershipControlsRuleObjectOwnership> getObjectOwnership() {
-        return this.objectOwnership == null ? Input.empty() : this.objectOwnership;
+    public Output<BucketOwnershipControlsRuleObjectOwnership> getObjectOwnership() {
+        return this.objectOwnership == null ? Output.empty() : this.objectOwnership;
     }
 
-    public BucketOwnershipControlsRuleArgs(@Nullable Input<BucketOwnershipControlsRuleObjectOwnership> objectOwnership) {
+    public BucketOwnershipControlsRuleArgs(@Nullable Output<BucketOwnershipControlsRuleObjectOwnership> objectOwnership) {
         this.objectOwnership = objectOwnership;
     }
 
     private BucketOwnershipControlsRuleArgs() {
-        this.objectOwnership = Input.empty();
+        this.objectOwnership = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class BucketOwnershipControlsRuleArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<BucketOwnershipControlsRuleObjectOwnership> objectOwnership;
+        private @Nullable Output<BucketOwnershipControlsRuleObjectOwnership> objectOwnership;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class BucketOwnershipControlsRuleArgs extends io.pulumi.resources.R
     	      this.objectOwnership = defaults.objectOwnership;
         }
 
-        public Builder objectOwnership(@Nullable Input<BucketOwnershipControlsRuleObjectOwnership> objectOwnership) {
+        public Builder objectOwnership(@Nullable Output<BucketOwnershipControlsRuleObjectOwnership> objectOwnership) {
             this.objectOwnership = objectOwnership;
             return this;
         }
 
         public Builder objectOwnership(@Nullable BucketOwnershipControlsRuleObjectOwnership objectOwnership) {
-            this.objectOwnership = Input.ofNullable(objectOwnership);
+            this.objectOwnership = Output.ofNullable(objectOwnership);
             return this;
         }
         public BucketOwnershipControlsRuleArgs build() {

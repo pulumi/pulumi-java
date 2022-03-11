@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automation.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class ContentHashArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="algorithm", required=true)
-      private final Input<String> algorithm;
+      private final Output<String> algorithm;
 
-    public Input<String> getAlgorithm() {
+    public Output<String> getAlgorithm() {
         return this.algorithm;
     }
 
@@ -33,22 +33,22 @@ public final class ContentHashArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value", required=true)
-      private final Input<String> value;
+      private final Output<String> value;
 
-    public Input<String> getValue() {
+    public Output<String> getValue() {
         return this.value;
     }
 
     public ContentHashArgs(
-        Input<String> algorithm,
-        Input<String> value) {
+        Output<String> algorithm,
+        Output<String> value) {
         this.algorithm = Objects.requireNonNull(algorithm, "expected parameter 'algorithm' to be non-null");
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private ContentHashArgs() {
-        this.algorithm = Input.empty();
-        this.value = Input.empty();
+        this.algorithm = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class ContentHashArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> algorithm;
-        private Input<String> value;
+        private Output<String> algorithm;
+        private Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class ContentHashArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder algorithm(Input<String> algorithm) {
+        public Builder algorithm(Output<String> algorithm) {
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
 
         public Builder algorithm(String algorithm) {
-            this.algorithm = Input.of(Objects.requireNonNull(algorithm));
+            this.algorithm = Output.of(Objects.requireNonNull(algorithm));
             return this;
         }
 
-        public Builder value(Input<String> value) {
+        public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(String value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public ContentHashArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.amplifyuibuilder.inputs;
 
 import io.pulumi.awsnative.amplifyuibuilder.inputs.ThemeValueArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,29 +16,29 @@ public final class ThemeValuesArgs extends io.pulumi.resources.ResourceArgs {
     public static final ThemeValuesArgs Empty = new ThemeValuesArgs();
 
     @InputImport(name="key")
-      private final @Nullable Input<String> key;
+      private final @Nullable Output<String> key;
 
-    public Input<String> getKey() {
-        return this.key == null ? Input.empty() : this.key;
+    public Output<String> getKey() {
+        return this.key == null ? Output.empty() : this.key;
     }
 
     @InputImport(name="value")
-      private final @Nullable Input<ThemeValueArgs> value;
+      private final @Nullable Output<ThemeValueArgs> value;
 
-    public Input<ThemeValueArgs> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<ThemeValueArgs> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public ThemeValuesArgs(
-        @Nullable Input<String> key,
-        @Nullable Input<ThemeValueArgs> value) {
+        @Nullable Output<String> key,
+        @Nullable Output<ThemeValueArgs> value) {
         this.key = key;
         this.value = value;
     }
 
     private ThemeValuesArgs() {
-        this.key = Input.empty();
-        this.value = Input.empty();
+        this.key = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class ThemeValuesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> key;
-        private @Nullable Input<ThemeValueArgs> value;
+        private @Nullable Output<String> key;
+        private @Nullable Output<ThemeValueArgs> value;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class ThemeValuesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder key(@Nullable Input<String> key) {
+        public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
 
         public Builder key(@Nullable String key) {
-            this.key = Input.ofNullable(key);
+            this.key = Output.ofNullable(key);
             return this;
         }
 
-        public Builder value(@Nullable Input<ThemeValueArgs> value) {
+        public Builder value(@Nullable Output<ThemeValueArgs> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable ThemeValueArgs value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public ThemeValuesArgs build() {

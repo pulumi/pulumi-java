@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.UserProfileCustomImageArgs;
 import io.pulumi.awsnative.sagemaker.inputs.UserProfileResourceSpecArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class UserProfileKernelGatewayAppSettingsArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="customImages")
-      private final @Nullable Input<List<UserProfileCustomImageArgs>> customImages;
+      private final @Nullable Output<List<UserProfileCustomImageArgs>> customImages;
 
-    public Input<List<UserProfileCustomImageArgs>> getCustomImages() {
-        return this.customImages == null ? Input.empty() : this.customImages;
+    public Output<List<UserProfileCustomImageArgs>> getCustomImages() {
+        return this.customImages == null ? Output.empty() : this.customImages;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class UserProfileKernelGatewayAppSettingsArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="defaultResourceSpec")
-      private final @Nullable Input<UserProfileResourceSpecArgs> defaultResourceSpec;
+      private final @Nullable Output<UserProfileResourceSpecArgs> defaultResourceSpec;
 
-    public Input<UserProfileResourceSpecArgs> getDefaultResourceSpec() {
-        return this.defaultResourceSpec == null ? Input.empty() : this.defaultResourceSpec;
+    public Output<UserProfileResourceSpecArgs> getDefaultResourceSpec() {
+        return this.defaultResourceSpec == null ? Output.empty() : this.defaultResourceSpec;
     }
 
     public UserProfileKernelGatewayAppSettingsArgs(
-        @Nullable Input<List<UserProfileCustomImageArgs>> customImages,
-        @Nullable Input<UserProfileResourceSpecArgs> defaultResourceSpec) {
+        @Nullable Output<List<UserProfileCustomImageArgs>> customImages,
+        @Nullable Output<UserProfileResourceSpecArgs> defaultResourceSpec) {
         this.customImages = customImages;
         this.defaultResourceSpec = defaultResourceSpec;
     }
 
     private UserProfileKernelGatewayAppSettingsArgs() {
-        this.customImages = Input.empty();
-        this.defaultResourceSpec = Input.empty();
+        this.customImages = Output.empty();
+        this.defaultResourceSpec = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class UserProfileKernelGatewayAppSettingsArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<List<UserProfileCustomImageArgs>> customImages;
-        private @Nullable Input<UserProfileResourceSpecArgs> defaultResourceSpec;
+        private @Nullable Output<List<UserProfileCustomImageArgs>> customImages;
+        private @Nullable Output<UserProfileResourceSpecArgs> defaultResourceSpec;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class UserProfileKernelGatewayAppSettingsArgs extends io.pulumi.res
     	      this.defaultResourceSpec = defaults.defaultResourceSpec;
         }
 
-        public Builder customImages(@Nullable Input<List<UserProfileCustomImageArgs>> customImages) {
+        public Builder customImages(@Nullable Output<List<UserProfileCustomImageArgs>> customImages) {
             this.customImages = customImages;
             return this;
         }
 
         public Builder customImages(@Nullable List<UserProfileCustomImageArgs> customImages) {
-            this.customImages = Input.ofNullable(customImages);
+            this.customImages = Output.ofNullable(customImages);
             return this;
         }
 
-        public Builder defaultResourceSpec(@Nullable Input<UserProfileResourceSpecArgs> defaultResourceSpec) {
+        public Builder defaultResourceSpec(@Nullable Output<UserProfileResourceSpecArgs> defaultResourceSpec) {
             this.defaultResourceSpec = defaultResourceSpec;
             return this;
         }
 
         public Builder defaultResourceSpec(@Nullable UserProfileResourceSpecArgs defaultResourceSpec) {
-            this.defaultResourceSpec = Input.ofNullable(defaultResourceSpec);
+            this.defaultResourceSpec = Output.ofNullable(defaultResourceSpec);
             return this;
         }
         public UserProfileKernelGatewayAppSettingsArgs build() {

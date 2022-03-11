@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.macie;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="ignoreWords")
-      private final @Nullable Input<List<String>> ignoreWords;
+      private final @Nullable Output<List<String>> ignoreWords;
 
-    public Input<List<String>> getIgnoreWords() {
-        return this.ignoreWords == null ? Input.empty() : this.ignoreWords;
+    public Output<List<String>> getIgnoreWords() {
+        return this.ignoreWords == null ? Output.empty() : this.ignoreWords;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="keywords")
-      private final @Nullable Input<List<String>> keywords;
+      private final @Nullable Output<List<String>> keywords;
 
-    public Input<List<String>> getKeywords() {
-        return this.keywords == null ? Input.empty() : this.keywords;
+    public Output<List<String>> getKeywords() {
+        return this.keywords == null ? Output.empty() : this.keywords;
     }
 
     /**
@@ -55,17 +55,17 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="maximumMatchDistance")
-      private final @Nullable Input<Integer> maximumMatchDistance;
+      private final @Nullable Output<Integer> maximumMatchDistance;
 
-    public Input<Integer> getMaximumMatchDistance() {
-        return this.maximumMatchDistance == null ? Input.empty() : this.maximumMatchDistance;
+    public Output<Integer> getMaximumMatchDistance() {
+        return this.maximumMatchDistance == null ? Output.empty() : this.maximumMatchDistance;
     }
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="namePrefix")
-      private final @Nullable Input<String> namePrefix;
+      private final @Nullable Output<String> namePrefix;
 
-    public Input<String> getNamePrefix() {
-        return this.namePrefix == null ? Input.empty() : this.namePrefix;
+    public Output<String> getNamePrefix() {
+        return this.namePrefix == null ? Output.empty() : this.namePrefix;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="regex")
-      private final @Nullable Input<String> regex;
+      private final @Nullable Output<String> regex;
 
-    public Input<String> getRegex() {
-        return this.regex == null ? Input.empty() : this.regex;
+    public Output<String> getRegex() {
+        return this.regex == null ? Output.empty() : this.regex;
     }
 
     /**
@@ -95,21 +95,21 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public CustomDataIdentifierArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<List<String>> ignoreWords,
-        @Nullable Input<List<String>> keywords,
-        @Nullable Input<Integer> maximumMatchDistance,
-        @Nullable Input<String> name,
-        @Nullable Input<String> namePrefix,
-        @Nullable Input<String> regex,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> description,
+        @Nullable Output<List<String>> ignoreWords,
+        @Nullable Output<List<String>> keywords,
+        @Nullable Output<Integer> maximumMatchDistance,
+        @Nullable Output<String> name,
+        @Nullable Output<String> namePrefix,
+        @Nullable Output<String> regex,
+        @Nullable Output<Map<String,String>> tags) {
         this.description = description;
         this.ignoreWords = ignoreWords;
         this.keywords = keywords;
@@ -121,14 +121,14 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
     }
 
     private CustomDataIdentifierArgs() {
-        this.description = Input.empty();
-        this.ignoreWords = Input.empty();
-        this.keywords = Input.empty();
-        this.maximumMatchDistance = Input.empty();
-        this.name = Input.empty();
-        this.namePrefix = Input.empty();
-        this.regex = Input.empty();
-        this.tags = Input.empty();
+        this.description = Output.empty();
+        this.ignoreWords = Output.empty();
+        this.keywords = Output.empty();
+        this.maximumMatchDistance = Output.empty();
+        this.name = Output.empty();
+        this.namePrefix = Output.empty();
+        this.regex = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -140,14 +140,14 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<String>> ignoreWords;
-        private @Nullable Input<List<String>> keywords;
-        private @Nullable Input<Integer> maximumMatchDistance;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> namePrefix;
-        private @Nullable Input<String> regex;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<String>> ignoreWords;
+        private @Nullable Output<List<String>> keywords;
+        private @Nullable Output<Integer> maximumMatchDistance;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> namePrefix;
+        private @Nullable Output<String> regex;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -165,83 +165,83 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
     	      this.tags = defaults.tags;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder ignoreWords(@Nullable Input<List<String>> ignoreWords) {
+        public Builder ignoreWords(@Nullable Output<List<String>> ignoreWords) {
             this.ignoreWords = ignoreWords;
             return this;
         }
 
         public Builder ignoreWords(@Nullable List<String> ignoreWords) {
-            this.ignoreWords = Input.ofNullable(ignoreWords);
+            this.ignoreWords = Output.ofNullable(ignoreWords);
             return this;
         }
 
-        public Builder keywords(@Nullable Input<List<String>> keywords) {
+        public Builder keywords(@Nullable Output<List<String>> keywords) {
             this.keywords = keywords;
             return this;
         }
 
         public Builder keywords(@Nullable List<String> keywords) {
-            this.keywords = Input.ofNullable(keywords);
+            this.keywords = Output.ofNullable(keywords);
             return this;
         }
 
-        public Builder maximumMatchDistance(@Nullable Input<Integer> maximumMatchDistance) {
+        public Builder maximumMatchDistance(@Nullable Output<Integer> maximumMatchDistance) {
             this.maximumMatchDistance = maximumMatchDistance;
             return this;
         }
 
         public Builder maximumMatchDistance(@Nullable Integer maximumMatchDistance) {
-            this.maximumMatchDistance = Input.ofNullable(maximumMatchDistance);
+            this.maximumMatchDistance = Output.ofNullable(maximumMatchDistance);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Input.ofNullable(namePrefix);
+            this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder regex(@Nullable Input<String> regex) {
+        public Builder regex(@Nullable Output<String> regex) {
             this.regex = regex;
             return this;
         }
 
         public Builder regex(@Nullable String regex) {
-            this.regex = Input.ofNullable(regex);
+            this.regex = Output.ofNullable(regex);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public CustomDataIdentifierArgs build() {

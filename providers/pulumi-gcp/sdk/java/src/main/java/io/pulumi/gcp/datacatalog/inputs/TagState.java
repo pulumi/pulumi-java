@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.datacatalog.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.datacatalog.inputs.TagFieldGetArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="column")
-      private final @Nullable Input<String> column;
+      private final @Nullable Output<String> column;
 
-    public Input<String> getColumn() {
-        return this.column == null ? Input.empty() : this.column;
+    public Output<String> getColumn() {
+        return this.column == null ? Output.empty() : this.column;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fields")
-      private final @Nullable Input<List<TagFieldGetArgs>> fields;
+      private final @Nullable Output<List<TagFieldGetArgs>> fields;
 
-    public Input<List<TagFieldGetArgs>> getFields() {
-        return this.fields == null ? Input.empty() : this.fields;
+    public Output<List<TagFieldGetArgs>> getFields() {
+        return this.fields == null ? Output.empty() : this.fields;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent")
-      private final @Nullable Input<String> parent;
+      private final @Nullable Output<String> parent;
 
-    public Input<String> getParent() {
-        return this.parent == null ? Input.empty() : this.parent;
+    public Output<String> getParent() {
+        return this.parent == null ? Output.empty() : this.parent;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="template")
-      private final @Nullable Input<String> template;
+      private final @Nullable Output<String> template;
 
-    public Input<String> getTemplate() {
-        return this.template == null ? Input.empty() : this.template;
+    public Output<String> getTemplate() {
+        return this.template == null ? Output.empty() : this.template;
     }
 
     /**
@@ -87,19 +87,19 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="templateDisplayname")
-      private final @Nullable Input<String> templateDisplayname;
+      private final @Nullable Output<String> templateDisplayname;
 
-    public Input<String> getTemplateDisplayname() {
-        return this.templateDisplayname == null ? Input.empty() : this.templateDisplayname;
+    public Output<String> getTemplateDisplayname() {
+        return this.templateDisplayname == null ? Output.empty() : this.templateDisplayname;
     }
 
     public TagState(
-        @Nullable Input<String> column,
-        @Nullable Input<List<TagFieldGetArgs>> fields,
-        @Nullable Input<String> name,
-        @Nullable Input<String> parent,
-        @Nullable Input<String> template,
-        @Nullable Input<String> templateDisplayname) {
+        @Nullable Output<String> column,
+        @Nullable Output<List<TagFieldGetArgs>> fields,
+        @Nullable Output<String> name,
+        @Nullable Output<String> parent,
+        @Nullable Output<String> template,
+        @Nullable Output<String> templateDisplayname) {
         this.column = column;
         this.fields = fields;
         this.name = name;
@@ -109,12 +109,12 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
     }
 
     private TagState() {
-        this.column = Input.empty();
-        this.fields = Input.empty();
-        this.name = Input.empty();
-        this.parent = Input.empty();
-        this.template = Input.empty();
-        this.templateDisplayname = Input.empty();
+        this.column = Output.empty();
+        this.fields = Output.empty();
+        this.name = Output.empty();
+        this.parent = Output.empty();
+        this.template = Output.empty();
+        this.templateDisplayname = Output.empty();
     }
 
     public static Builder builder() {
@@ -126,12 +126,12 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> column;
-        private @Nullable Input<List<TagFieldGetArgs>> fields;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> parent;
-        private @Nullable Input<String> template;
-        private @Nullable Input<String> templateDisplayname;
+        private @Nullable Output<String> column;
+        private @Nullable Output<List<TagFieldGetArgs>> fields;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> parent;
+        private @Nullable Output<String> template;
+        private @Nullable Output<String> templateDisplayname;
 
         public Builder() {
     	      // Empty
@@ -147,63 +147,63 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
     	      this.templateDisplayname = defaults.templateDisplayname;
         }
 
-        public Builder column(@Nullable Input<String> column) {
+        public Builder column(@Nullable Output<String> column) {
             this.column = column;
             return this;
         }
 
         public Builder column(@Nullable String column) {
-            this.column = Input.ofNullable(column);
+            this.column = Output.ofNullable(column);
             return this;
         }
 
-        public Builder fields(@Nullable Input<List<TagFieldGetArgs>> fields) {
+        public Builder fields(@Nullable Output<List<TagFieldGetArgs>> fields) {
             this.fields = fields;
             return this;
         }
 
         public Builder fields(@Nullable List<TagFieldGetArgs> fields) {
-            this.fields = Input.ofNullable(fields);
+            this.fields = Output.ofNullable(fields);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder parent(@Nullable Input<String> parent) {
+        public Builder parent(@Nullable Output<String> parent) {
             this.parent = parent;
             return this;
         }
 
         public Builder parent(@Nullable String parent) {
-            this.parent = Input.ofNullable(parent);
+            this.parent = Output.ofNullable(parent);
             return this;
         }
 
-        public Builder template(@Nullable Input<String> template) {
+        public Builder template(@Nullable Output<String> template) {
             this.template = template;
             return this;
         }
 
         public Builder template(@Nullable String template) {
-            this.template = Input.ofNullable(template);
+            this.template = Output.ofNullable(template);
             return this;
         }
 
-        public Builder templateDisplayname(@Nullable Input<String> templateDisplayname) {
+        public Builder templateDisplayname(@Nullable Output<String> templateDisplayname) {
             this.templateDisplayname = templateDisplayname;
             return this;
         }
 
         public Builder templateDisplayname(@Nullable String templateDisplayname) {
-            this.templateDisplayname = Input.ofNullable(templateDisplayname);
+            this.templateDisplayname = Output.ofNullable(templateDisplayname);
             return this;
         }
         public TagState build() {

@@ -5,7 +5,7 @@ package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumnArgs;
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,9 +22,9 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @InputImport(name="recordColumns", required=true)
-      private final Input<List<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumnArgs>> recordColumns;
+      private final Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumnArgs>> recordColumns;
 
-    public Input<List<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumnArgs>> getRecordColumns() {
+    public Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumnArgs>> getRecordColumns() {
         return this.recordColumns;
     }
 
@@ -33,10 +33,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @InputImport(name="recordEncoding")
-      private final @Nullable Input<String> recordEncoding;
+      private final @Nullable Output<String> recordEncoding;
 
-    public Input<String> getRecordEncoding() {
-        return this.recordEncoding == null ? Input.empty() : this.recordEncoding;
+    public Output<String> getRecordEncoding() {
+        return this.recordEncoding == null ? Output.empty() : this.recordEncoding;
     }
 
     /**
@@ -44,25 +44,25 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @InputImport(name="recordFormat", required=true)
-      private final Input<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatArgs> recordFormat;
+      private final Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatArgs> recordFormat;
 
-    public Input<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatArgs> getRecordFormat() {
+    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatArgs> getRecordFormat() {
         return this.recordFormat;
     }
 
     public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaArgs(
-        Input<List<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumnArgs>> recordColumns,
-        @Nullable Input<String> recordEncoding,
-        Input<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatArgs> recordFormat) {
+        Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumnArgs>> recordColumns,
+        @Nullable Output<String> recordEncoding,
+        Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatArgs> recordFormat) {
         this.recordColumns = Objects.requireNonNull(recordColumns, "expected parameter 'recordColumns' to be non-null");
         this.recordEncoding = recordEncoding;
         this.recordFormat = Objects.requireNonNull(recordFormat, "expected parameter 'recordFormat' to be non-null");
     }
 
     private ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaArgs() {
-        this.recordColumns = Input.empty();
-        this.recordEncoding = Input.empty();
-        this.recordFormat = Input.empty();
+        this.recordColumns = Output.empty();
+        this.recordEncoding = Output.empty();
+        this.recordFormat = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     }
 
     public static final class Builder {
-        private Input<List<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumnArgs>> recordColumns;
-        private @Nullable Input<String> recordEncoding;
-        private Input<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatArgs> recordFormat;
+        private Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumnArgs>> recordColumns;
+        private @Nullable Output<String> recordEncoding;
+        private Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatArgs> recordFormat;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     	      this.recordFormat = defaults.recordFormat;
         }
 
-        public Builder recordColumns(Input<List<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumnArgs>> recordColumns) {
+        public Builder recordColumns(Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumnArgs>> recordColumns) {
             this.recordColumns = Objects.requireNonNull(recordColumns);
             return this;
         }
 
         public Builder recordColumns(List<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumnArgs> recordColumns) {
-            this.recordColumns = Input.of(Objects.requireNonNull(recordColumns));
+            this.recordColumns = Output.of(Objects.requireNonNull(recordColumns));
             return this;
         }
 
-        public Builder recordEncoding(@Nullable Input<String> recordEncoding) {
+        public Builder recordEncoding(@Nullable Output<String> recordEncoding) {
             this.recordEncoding = recordEncoding;
             return this;
         }
 
         public Builder recordEncoding(@Nullable String recordEncoding) {
-            this.recordEncoding = Input.ofNullable(recordEncoding);
+            this.recordEncoding = Output.ofNullable(recordEncoding);
             return this;
         }
 
-        public Builder recordFormat(Input<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatArgs> recordFormat) {
+        public Builder recordFormat(Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatArgs> recordFormat) {
             this.recordFormat = Objects.requireNonNull(recordFormat);
             return this;
         }
 
         public Builder recordFormat(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatArgs recordFormat) {
-            this.recordFormat = Input.of(Objects.requireNonNull(recordFormat));
+            this.recordFormat = Output.of(Objects.requireNonNull(recordFormat));
             return this;
         }
         public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaArgs build() {

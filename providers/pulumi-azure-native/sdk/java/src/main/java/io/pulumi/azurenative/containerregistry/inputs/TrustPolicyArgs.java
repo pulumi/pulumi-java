@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 import io.pulumi.azurenative.containerregistry.enums.PolicyStatus;
 import io.pulumi.azurenative.containerregistry.enums.TrustPolicyType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class TrustPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<Either<String,PolicyStatus>> status;
+      private final @Nullable Output<Either<String,PolicyStatus>> status;
 
-    public Input<Either<String,PolicyStatus>> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<Either<String,PolicyStatus>> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class TrustPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<Either<String,TrustPolicyType>> type;
+      private final @Nullable Output<Either<String,TrustPolicyType>> type;
 
-    public Input<Either<String,TrustPolicyType>> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<Either<String,TrustPolicyType>> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public TrustPolicyArgs(
-        @Nullable Input<Either<String,PolicyStatus>> status,
-        @Nullable Input<Either<String,TrustPolicyType>> type) {
-        this.status = status == null ? Input.ofLeft("disabled") : status;
-        this.type = type == null ? Input.ofLeft("Notary") : type;
+        @Nullable Output<Either<String,PolicyStatus>> status,
+        @Nullable Output<Either<String,TrustPolicyType>> type) {
+        this.status = status == null ? Output.ofLeft("disabled") : status;
+        this.type = type == null ? Output.ofLeft("Notary") : type;
     }
 
     private TrustPolicyArgs() {
-        this.status = Input.empty();
-        this.type = Input.empty();
+        this.status = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class TrustPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,PolicyStatus>> status;
-        private @Nullable Input<Either<String,TrustPolicyType>> type;
+        private @Nullable Output<Either<String,PolicyStatus>> status;
+        private @Nullable Output<Either<String,TrustPolicyType>> type;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class TrustPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder status(@Nullable Input<Either<String,PolicyStatus>> status) {
+        public Builder status(@Nullable Output<Either<String,PolicyStatus>> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable Either<String,PolicyStatus> status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder type(@Nullable Input<Either<String,TrustPolicyType>> type) {
+        public Builder type(@Nullable Output<Either<String,TrustPolicyType>> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable Either<String,TrustPolicyType> type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public TrustPolicyArgs build() {

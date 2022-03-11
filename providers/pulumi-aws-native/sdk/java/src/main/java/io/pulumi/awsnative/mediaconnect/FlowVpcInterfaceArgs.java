@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.mediaconnect;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,9 +20,9 @@ public final class FlowVpcInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="flowArn", required=true)
-      private final Input<String> flowArn;
+      private final Output<String> flowArn;
 
-    public Input<String> getFlowArn() {
+    public Output<String> getFlowArn() {
         return this.flowArn;
     }
 
@@ -31,10 +31,10 @@ public final class FlowVpcInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class FlowVpcInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
@@ -53,9 +53,9 @@ public final class FlowVpcInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="securityGroupIds", required=true)
-      private final Input<List<String>> securityGroupIds;
+      private final Output<List<String>> securityGroupIds;
 
-    public Input<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds;
     }
 
@@ -64,18 +64,18 @@ public final class FlowVpcInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="subnetId", required=true)
-      private final Input<String> subnetId;
+      private final Output<String> subnetId;
 
-    public Input<String> getSubnetId() {
+    public Output<String> getSubnetId() {
         return this.subnetId;
     }
 
     public FlowVpcInterfaceArgs(
-        Input<String> flowArn,
-        @Nullable Input<String> name,
-        Input<String> roleArn,
-        Input<List<String>> securityGroupIds,
-        Input<String> subnetId) {
+        Output<String> flowArn,
+        @Nullable Output<String> name,
+        Output<String> roleArn,
+        Output<List<String>> securityGroupIds,
+        Output<String> subnetId) {
         this.flowArn = Objects.requireNonNull(flowArn, "expected parameter 'flowArn' to be non-null");
         this.name = name;
         this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
@@ -84,11 +84,11 @@ public final class FlowVpcInterfaceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private FlowVpcInterfaceArgs() {
-        this.flowArn = Input.empty();
-        this.name = Input.empty();
-        this.roleArn = Input.empty();
-        this.securityGroupIds = Input.empty();
-        this.subnetId = Input.empty();
+        this.flowArn = Output.empty();
+        this.name = Output.empty();
+        this.roleArn = Output.empty();
+        this.securityGroupIds = Output.empty();
+        this.subnetId = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class FlowVpcInterfaceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> flowArn;
-        private @Nullable Input<String> name;
-        private Input<String> roleArn;
-        private Input<List<String>> securityGroupIds;
-        private Input<String> subnetId;
+        private Output<String> flowArn;
+        private @Nullable Output<String> name;
+        private Output<String> roleArn;
+        private Output<List<String>> securityGroupIds;
+        private Output<String> subnetId;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class FlowVpcInterfaceArgs extends io.pulumi.resources.ResourceArgs
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder flowArn(Input<String> flowArn) {
+        public Builder flowArn(Output<String> flowArn) {
             this.flowArn = Objects.requireNonNull(flowArn);
             return this;
         }
 
         public Builder flowArn(String flowArn) {
-            this.flowArn = Input.of(Objects.requireNonNull(flowArn));
+            this.flowArn = Output.of(Objects.requireNonNull(flowArn));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder securityGroupIds(Input<List<String>> securityGroupIds) {
+        public Builder securityGroupIds(Output<List<String>> securityGroupIds) {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
 
         public Builder securityGroupIds(List<String> securityGroupIds) {
-            this.securityGroupIds = Input.of(Objects.requireNonNull(securityGroupIds));
+            this.securityGroupIds = Output.of(Objects.requireNonNull(securityGroupIds));
             return this;
         }
 
-        public Builder subnetId(Input<String> subnetId) {
+        public Builder subnetId(Output<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
 
         public Builder subnetId(String subnetId) {
-            this.subnetId = Input.of(Objects.requireNonNull(subnetId));
+            this.subnetId = Output.of(Objects.requireNonNull(subnetId));
             return this;
         }
         public FlowVpcInterfaceArgs build() {

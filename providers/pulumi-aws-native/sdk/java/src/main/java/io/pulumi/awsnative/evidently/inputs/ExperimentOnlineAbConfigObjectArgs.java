@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.evidently.inputs;
 
 import io.pulumi.awsnative.evidently.inputs.ExperimentTreatmentToWeightArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,29 +17,29 @@ public final class ExperimentOnlineAbConfigObjectArgs extends io.pulumi.resource
     public static final ExperimentOnlineAbConfigObjectArgs Empty = new ExperimentOnlineAbConfigObjectArgs();
 
     @InputImport(name="controlTreatmentName")
-      private final @Nullable Input<String> controlTreatmentName;
+      private final @Nullable Output<String> controlTreatmentName;
 
-    public Input<String> getControlTreatmentName() {
-        return this.controlTreatmentName == null ? Input.empty() : this.controlTreatmentName;
+    public Output<String> getControlTreatmentName() {
+        return this.controlTreatmentName == null ? Output.empty() : this.controlTreatmentName;
     }
 
     @InputImport(name="treatmentWeights")
-      private final @Nullable Input<List<ExperimentTreatmentToWeightArgs>> treatmentWeights;
+      private final @Nullable Output<List<ExperimentTreatmentToWeightArgs>> treatmentWeights;
 
-    public Input<List<ExperimentTreatmentToWeightArgs>> getTreatmentWeights() {
-        return this.treatmentWeights == null ? Input.empty() : this.treatmentWeights;
+    public Output<List<ExperimentTreatmentToWeightArgs>> getTreatmentWeights() {
+        return this.treatmentWeights == null ? Output.empty() : this.treatmentWeights;
     }
 
     public ExperimentOnlineAbConfigObjectArgs(
-        @Nullable Input<String> controlTreatmentName,
-        @Nullable Input<List<ExperimentTreatmentToWeightArgs>> treatmentWeights) {
+        @Nullable Output<String> controlTreatmentName,
+        @Nullable Output<List<ExperimentTreatmentToWeightArgs>> treatmentWeights) {
         this.controlTreatmentName = controlTreatmentName;
         this.treatmentWeights = treatmentWeights;
     }
 
     private ExperimentOnlineAbConfigObjectArgs() {
-        this.controlTreatmentName = Input.empty();
-        this.treatmentWeights = Input.empty();
+        this.controlTreatmentName = Output.empty();
+        this.treatmentWeights = Output.empty();
     }
 
     public static Builder builder() {
@@ -51,8 +51,8 @@ public final class ExperimentOnlineAbConfigObjectArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> controlTreatmentName;
-        private @Nullable Input<List<ExperimentTreatmentToWeightArgs>> treatmentWeights;
+        private @Nullable Output<String> controlTreatmentName;
+        private @Nullable Output<List<ExperimentTreatmentToWeightArgs>> treatmentWeights;
 
         public Builder() {
     	      // Empty
@@ -64,23 +64,23 @@ public final class ExperimentOnlineAbConfigObjectArgs extends io.pulumi.resource
     	      this.treatmentWeights = defaults.treatmentWeights;
         }
 
-        public Builder controlTreatmentName(@Nullable Input<String> controlTreatmentName) {
+        public Builder controlTreatmentName(@Nullable Output<String> controlTreatmentName) {
             this.controlTreatmentName = controlTreatmentName;
             return this;
         }
 
         public Builder controlTreatmentName(@Nullable String controlTreatmentName) {
-            this.controlTreatmentName = Input.ofNullable(controlTreatmentName);
+            this.controlTreatmentName = Output.ofNullable(controlTreatmentName);
             return this;
         }
 
-        public Builder treatmentWeights(@Nullable Input<List<ExperimentTreatmentToWeightArgs>> treatmentWeights) {
+        public Builder treatmentWeights(@Nullable Output<List<ExperimentTreatmentToWeightArgs>> treatmentWeights) {
             this.treatmentWeights = treatmentWeights;
             return this;
         }
 
         public Builder treatmentWeights(@Nullable List<ExperimentTreatmentToWeightArgs> treatmentWeights) {
-            this.treatmentWeights = Input.ofNullable(treatmentWeights);
+            this.treatmentWeights = Output.ofNullable(treatmentWeights);
             return this;
         }
         public ExperimentOnlineAbConfigObjectArgs build() {

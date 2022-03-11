@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront;
 
 import io.pulumi.aws.cloudfront.inputs.CachePolicyParametersInCacheKeyAndForwardedToOriginArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class CachePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="comment")
-      private final @Nullable Input<String> comment;
+      private final @Nullable Output<String> comment;
 
-    public Input<String> getComment() {
-        return this.comment == null ? Input.empty() : this.comment;
+    public Output<String> getComment() {
+        return this.comment == null ? Output.empty() : this.comment;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class CachePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultTtl")
-      private final @Nullable Input<Integer> defaultTtl;
+      private final @Nullable Output<Integer> defaultTtl;
 
-    public Input<Integer> getDefaultTtl() {
-        return this.defaultTtl == null ? Input.empty() : this.defaultTtl;
+    public Output<Integer> getDefaultTtl() {
+        return this.defaultTtl == null ? Output.empty() : this.defaultTtl;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class CachePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxTtl")
-      private final @Nullable Input<Integer> maxTtl;
+      private final @Nullable Output<Integer> maxTtl;
 
-    public Input<Integer> getMaxTtl() {
-        return this.maxTtl == null ? Input.empty() : this.maxTtl;
+    public Output<Integer> getMaxTtl() {
+        return this.maxTtl == null ? Output.empty() : this.maxTtl;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class CachePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minTtl")
-      private final @Nullable Input<Integer> minTtl;
+      private final @Nullable Output<Integer> minTtl;
 
-    public Input<Integer> getMinTtl() {
-        return this.minTtl == null ? Input.empty() : this.minTtl;
+    public Output<Integer> getMinTtl() {
+        return this.minTtl == null ? Output.empty() : this.minTtl;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class CachePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -76,19 +76,19 @@ public final class CachePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parametersInCacheKeyAndForwardedToOrigin", required=true)
-      private final Input<CachePolicyParametersInCacheKeyAndForwardedToOriginArgs> parametersInCacheKeyAndForwardedToOrigin;
+      private final Output<CachePolicyParametersInCacheKeyAndForwardedToOriginArgs> parametersInCacheKeyAndForwardedToOrigin;
 
-    public Input<CachePolicyParametersInCacheKeyAndForwardedToOriginArgs> getParametersInCacheKeyAndForwardedToOrigin() {
+    public Output<CachePolicyParametersInCacheKeyAndForwardedToOriginArgs> getParametersInCacheKeyAndForwardedToOrigin() {
         return this.parametersInCacheKeyAndForwardedToOrigin;
     }
 
     public CachePolicyArgs(
-        @Nullable Input<String> comment,
-        @Nullable Input<Integer> defaultTtl,
-        @Nullable Input<Integer> maxTtl,
-        @Nullable Input<Integer> minTtl,
-        @Nullable Input<String> name,
-        Input<CachePolicyParametersInCacheKeyAndForwardedToOriginArgs> parametersInCacheKeyAndForwardedToOrigin) {
+        @Nullable Output<String> comment,
+        @Nullable Output<Integer> defaultTtl,
+        @Nullable Output<Integer> maxTtl,
+        @Nullable Output<Integer> minTtl,
+        @Nullable Output<String> name,
+        Output<CachePolicyParametersInCacheKeyAndForwardedToOriginArgs> parametersInCacheKeyAndForwardedToOrigin) {
         this.comment = comment;
         this.defaultTtl = defaultTtl;
         this.maxTtl = maxTtl;
@@ -98,12 +98,12 @@ public final class CachePolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CachePolicyArgs() {
-        this.comment = Input.empty();
-        this.defaultTtl = Input.empty();
-        this.maxTtl = Input.empty();
-        this.minTtl = Input.empty();
-        this.name = Input.empty();
-        this.parametersInCacheKeyAndForwardedToOrigin = Input.empty();
+        this.comment = Output.empty();
+        this.defaultTtl = Output.empty();
+        this.maxTtl = Output.empty();
+        this.minTtl = Output.empty();
+        this.name = Output.empty();
+        this.parametersInCacheKeyAndForwardedToOrigin = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class CachePolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> comment;
-        private @Nullable Input<Integer> defaultTtl;
-        private @Nullable Input<Integer> maxTtl;
-        private @Nullable Input<Integer> minTtl;
-        private @Nullable Input<String> name;
-        private Input<CachePolicyParametersInCacheKeyAndForwardedToOriginArgs> parametersInCacheKeyAndForwardedToOrigin;
+        private @Nullable Output<String> comment;
+        private @Nullable Output<Integer> defaultTtl;
+        private @Nullable Output<Integer> maxTtl;
+        private @Nullable Output<Integer> minTtl;
+        private @Nullable Output<String> name;
+        private Output<CachePolicyParametersInCacheKeyAndForwardedToOriginArgs> parametersInCacheKeyAndForwardedToOrigin;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class CachePolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.parametersInCacheKeyAndForwardedToOrigin = defaults.parametersInCacheKeyAndForwardedToOrigin;
         }
 
-        public Builder comment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Output<String> comment) {
             this.comment = comment;
             return this;
         }
 
         public Builder comment(@Nullable String comment) {
-            this.comment = Input.ofNullable(comment);
+            this.comment = Output.ofNullable(comment);
             return this;
         }
 
-        public Builder defaultTtl(@Nullable Input<Integer> defaultTtl) {
+        public Builder defaultTtl(@Nullable Output<Integer> defaultTtl) {
             this.defaultTtl = defaultTtl;
             return this;
         }
 
         public Builder defaultTtl(@Nullable Integer defaultTtl) {
-            this.defaultTtl = Input.ofNullable(defaultTtl);
+            this.defaultTtl = Output.ofNullable(defaultTtl);
             return this;
         }
 
-        public Builder maxTtl(@Nullable Input<Integer> maxTtl) {
+        public Builder maxTtl(@Nullable Output<Integer> maxTtl) {
             this.maxTtl = maxTtl;
             return this;
         }
 
         public Builder maxTtl(@Nullable Integer maxTtl) {
-            this.maxTtl = Input.ofNullable(maxTtl);
+            this.maxTtl = Output.ofNullable(maxTtl);
             return this;
         }
 
-        public Builder minTtl(@Nullable Input<Integer> minTtl) {
+        public Builder minTtl(@Nullable Output<Integer> minTtl) {
             this.minTtl = minTtl;
             return this;
         }
 
         public Builder minTtl(@Nullable Integer minTtl) {
-            this.minTtl = Input.ofNullable(minTtl);
+            this.minTtl = Output.ofNullable(minTtl);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder parametersInCacheKeyAndForwardedToOrigin(Input<CachePolicyParametersInCacheKeyAndForwardedToOriginArgs> parametersInCacheKeyAndForwardedToOrigin) {
+        public Builder parametersInCacheKeyAndForwardedToOrigin(Output<CachePolicyParametersInCacheKeyAndForwardedToOriginArgs> parametersInCacheKeyAndForwardedToOrigin) {
             this.parametersInCacheKeyAndForwardedToOrigin = Objects.requireNonNull(parametersInCacheKeyAndForwardedToOrigin);
             return this;
         }
 
         public Builder parametersInCacheKeyAndForwardedToOrigin(CachePolicyParametersInCacheKeyAndForwardedToOriginArgs parametersInCacheKeyAndForwardedToOrigin) {
-            this.parametersInCacheKeyAndForwardedToOrigin = Input.of(Objects.requireNonNull(parametersInCacheKeyAndForwardedToOrigin));
+            this.parametersInCacheKeyAndForwardedToOrigin = Output.of(Objects.requireNonNull(parametersInCacheKeyAndForwardedToOrigin));
             return this;
         }
         public CachePolicyArgs build() {

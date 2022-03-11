@@ -6,7 +6,6 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.RouteArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -183,56 +182,56 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Route(String name, RouteArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:Route", name, args == null ? RouteArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:network:Route", name, args == null ? RouteArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Route(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Route(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:Route", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:network/v20150501preview:Route").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20150615:Route").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20160330:Route").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20160601:Route").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20160901:Route").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20161201:Route").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20170301:Route").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20170601:Route").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20170801:Route").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20170901:Route").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20171001:Route").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20171101:Route").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180101:Route").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180201:Route").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180401:Route").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180601:Route").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180701:Route").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180801:Route").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20181001:Route").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20181101:Route").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20181201:Route").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190201:Route").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190401:Route").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190601:Route").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190701:Route").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190801:Route").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190901:Route").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20191101:Route").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20191201:Route").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200301:Route").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200401:Route").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200501:Route").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200601:Route").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200701:Route").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200801:Route").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20201101:Route").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210201:Route").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210301:Route").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210501:Route").build())
+                Output.of(Alias.builder().setType("azure-native:network/v20150501preview:Route").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20150615:Route").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20160330:Route").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20160601:Route").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20160901:Route").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20161201:Route").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170301:Route").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170601:Route").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170801:Route").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170901:Route").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20171001:Route").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20171101:Route").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180101:Route").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180201:Route").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180401:Route").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180601:Route").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180701:Route").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180801:Route").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181001:Route").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181101:Route").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181201:Route").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190201:Route").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190401:Route").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190601:Route").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190701:Route").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190801:Route").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190901:Route").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20191101:Route").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20191201:Route").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200301:Route").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200401:Route").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200501:Route").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200601:Route").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200701:Route").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200801:Route").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20201101:Route").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210201:Route").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210301:Route").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210501:Route").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -246,7 +245,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Route get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Route get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Route(name, id, options);
     }
 }

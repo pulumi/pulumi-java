@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.servicecatalog.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class ProvisionedProductProvisioningParameterArgs extends io.pulumi
      * 
      */
     @InputImport(name="key", required=true)
-      private final Input<String> key;
+      private final Output<String> key;
 
-    public Input<String> getKey() {
+    public Output<String> getKey() {
         return this.key;
     }
 
@@ -31,10 +31,10 @@ public final class ProvisionedProductProvisioningParameterArgs extends io.pulumi
      * 
      */
     @InputImport(name="usePreviousValue")
-      private final @Nullable Input<Boolean> usePreviousValue;
+      private final @Nullable Output<Boolean> usePreviousValue;
 
-    public Input<Boolean> getUsePreviousValue() {
-        return this.usePreviousValue == null ? Input.empty() : this.usePreviousValue;
+    public Output<Boolean> getUsePreviousValue() {
+        return this.usePreviousValue == null ? Output.empty() : this.usePreviousValue;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class ProvisionedProductProvisioningParameterArgs extends io.pulumi
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public ProvisionedProductProvisioningParameterArgs(
-        Input<String> key,
-        @Nullable Input<Boolean> usePreviousValue,
-        @Nullable Input<String> value) {
+        Output<String> key,
+        @Nullable Output<Boolean> usePreviousValue,
+        @Nullable Output<String> value) {
         this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
         this.usePreviousValue = usePreviousValue;
         this.value = value;
     }
 
     private ProvisionedProductProvisioningParameterArgs() {
-        this.key = Input.empty();
-        this.usePreviousValue = Input.empty();
-        this.value = Input.empty();
+        this.key = Output.empty();
+        this.usePreviousValue = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class ProvisionedProductProvisioningParameterArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private Input<String> key;
-        private @Nullable Input<Boolean> usePreviousValue;
-        private @Nullable Input<String> value;
+        private Output<String> key;
+        private @Nullable Output<Boolean> usePreviousValue;
+        private @Nullable Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class ProvisionedProductProvisioningParameterArgs extends io.pulumi
     	      this.value = defaults.value;
         }
 
-        public Builder key(Input<String> key) {
+        public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
         public Builder key(String key) {
-            this.key = Input.of(Objects.requireNonNull(key));
+            this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
 
-        public Builder usePreviousValue(@Nullable Input<Boolean> usePreviousValue) {
+        public Builder usePreviousValue(@Nullable Output<Boolean> usePreviousValue) {
             this.usePreviousValue = usePreviousValue;
             return this;
         }
 
         public Builder usePreviousValue(@Nullable Boolean usePreviousValue) {
-            this.usePreviousValue = Input.ofNullable(usePreviousValue);
+            this.usePreviousValue = Output.ofNullable(usePreviousValue);
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public ProvisionedProductProvisioningParameterArgs build() {

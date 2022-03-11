@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.AttestationArgs;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class DetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attestation", required=true)
-      private final Input<AttestationArgs> attestation;
+      private final Output<AttestationArgs> attestation;
 
-    public Input<AttestationArgs> getAttestation() {
+    public Output<AttestationArgs> getAttestation() {
         return this.attestation;
     }
 
-    public DetailsArgs(Input<AttestationArgs> attestation) {
+    public DetailsArgs(Output<AttestationArgs> attestation) {
         this.attestation = Objects.requireNonNull(attestation, "expected parameter 'attestation' to be non-null");
     }
 
     private DetailsArgs() {
-        this.attestation = Input.empty();
+        this.attestation = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class DetailsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<AttestationArgs> attestation;
+        private Output<AttestationArgs> attestation;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class DetailsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.attestation = defaults.attestation;
         }
 
-        public Builder attestation(Input<AttestationArgs> attestation) {
+        public Builder attestation(Output<AttestationArgs> attestation) {
             this.attestation = Objects.requireNonNull(attestation);
             return this;
         }
 
         public Builder attestation(AttestationArgs attestation) {
-            this.attestation = Input.of(Objects.requireNonNull(attestation));
+            this.attestation = Output.of(Objects.requireNonNull(attestation));
             return this;
         }
         public DetailsArgs build() {

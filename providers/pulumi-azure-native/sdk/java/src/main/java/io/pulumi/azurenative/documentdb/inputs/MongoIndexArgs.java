@@ -5,7 +5,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.azurenative.documentdb.inputs.MongoIndexKeysArgs;
 import io.pulumi.azurenative.documentdb.inputs.MongoIndexOptionsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,10 +24,10 @@ public final class MongoIndexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="key")
-      private final @Nullable Input<MongoIndexKeysArgs> key;
+      private final @Nullable Output<MongoIndexKeysArgs> key;
 
-    public Input<MongoIndexKeysArgs> getKey() {
-        return this.key == null ? Input.empty() : this.key;
+    public Output<MongoIndexKeysArgs> getKey() {
+        return this.key == null ? Output.empty() : this.key;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class MongoIndexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="options")
-      private final @Nullable Input<MongoIndexOptionsArgs> options;
+      private final @Nullable Output<MongoIndexOptionsArgs> options;
 
-    public Input<MongoIndexOptionsArgs> getOptions() {
-        return this.options == null ? Input.empty() : this.options;
+    public Output<MongoIndexOptionsArgs> getOptions() {
+        return this.options == null ? Output.empty() : this.options;
     }
 
     public MongoIndexArgs(
-        @Nullable Input<MongoIndexKeysArgs> key,
-        @Nullable Input<MongoIndexOptionsArgs> options) {
+        @Nullable Output<MongoIndexKeysArgs> key,
+        @Nullable Output<MongoIndexOptionsArgs> options) {
         this.key = key;
         this.options = options;
     }
 
     private MongoIndexArgs() {
-        this.key = Input.empty();
-        this.options = Input.empty();
+        this.key = Output.empty();
+        this.options = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class MongoIndexArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<MongoIndexKeysArgs> key;
-        private @Nullable Input<MongoIndexOptionsArgs> options;
+        private @Nullable Output<MongoIndexKeysArgs> key;
+        private @Nullable Output<MongoIndexOptionsArgs> options;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class MongoIndexArgs extends io.pulumi.resources.ResourceArgs {
     	      this.options = defaults.options;
         }
 
-        public Builder key(@Nullable Input<MongoIndexKeysArgs> key) {
+        public Builder key(@Nullable Output<MongoIndexKeysArgs> key) {
             this.key = key;
             return this;
         }
 
         public Builder key(@Nullable MongoIndexKeysArgs key) {
-            this.key = Input.ofNullable(key);
+            this.key = Output.ofNullable(key);
             return this;
         }
 
-        public Builder options(@Nullable Input<MongoIndexOptionsArgs> options) {
+        public Builder options(@Nullable Output<MongoIndexOptionsArgs> options) {
             this.options = options;
             return this;
         }
 
         public Builder options(@Nullable MongoIndexOptionsArgs options) {
-            this.options = Input.ofNullable(options);
+            this.options = Output.ofNullable(options);
             return this;
         }
         public MongoIndexArgs build() {

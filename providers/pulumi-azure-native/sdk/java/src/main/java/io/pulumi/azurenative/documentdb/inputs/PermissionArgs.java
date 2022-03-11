@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataActions")
-      private final @Nullable Input<List<String>> dataActions;
+      private final @Nullable Output<List<String>> dataActions;
 
-    public Input<List<String>> getDataActions() {
-        return this.dataActions == null ? Input.empty() : this.dataActions;
+    public Output<List<String>> getDataActions() {
+        return this.dataActions == null ? Output.empty() : this.dataActions;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notDataActions")
-      private final @Nullable Input<List<String>> notDataActions;
+      private final @Nullable Output<List<String>> notDataActions;
 
-    public Input<List<String>> getNotDataActions() {
-        return this.notDataActions == null ? Input.empty() : this.notDataActions;
+    public Output<List<String>> getNotDataActions() {
+        return this.notDataActions == null ? Output.empty() : this.notDataActions;
     }
 
     public PermissionArgs(
-        @Nullable Input<List<String>> dataActions,
-        @Nullable Input<List<String>> notDataActions) {
+        @Nullable Output<List<String>> dataActions,
+        @Nullable Output<List<String>> notDataActions) {
         this.dataActions = dataActions;
         this.notDataActions = notDataActions;
     }
 
     private PermissionArgs() {
-        this.dataActions = Input.empty();
-        this.notDataActions = Input.empty();
+        this.dataActions = Output.empty();
+        this.notDataActions = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> dataActions;
-        private @Nullable Input<List<String>> notDataActions;
+        private @Nullable Output<List<String>> dataActions;
+        private @Nullable Output<List<String>> notDataActions;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.notDataActions = defaults.notDataActions;
         }
 
-        public Builder dataActions(@Nullable Input<List<String>> dataActions) {
+        public Builder dataActions(@Nullable Output<List<String>> dataActions) {
             this.dataActions = dataActions;
             return this;
         }
 
         public Builder dataActions(@Nullable List<String> dataActions) {
-            this.dataActions = Input.ofNullable(dataActions);
+            this.dataActions = Output.ofNullable(dataActions);
             return this;
         }
 
-        public Builder notDataActions(@Nullable Input<List<String>> notDataActions) {
+        public Builder notDataActions(@Nullable Output<List<String>> notDataActions) {
             this.notDataActions = notDataActions;
             return this;
         }
 
         public Builder notDataActions(@Nullable List<String> notDataActions) {
-            this.notDataActions = Input.ofNullable(notDataActions);
+            this.notDataActions = Output.ofNullable(notDataActions);
             return this;
         }
         public PermissionArgs build() {

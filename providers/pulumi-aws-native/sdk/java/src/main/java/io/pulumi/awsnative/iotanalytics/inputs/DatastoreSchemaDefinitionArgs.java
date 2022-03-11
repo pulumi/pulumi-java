@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.awsnative.iotanalytics.inputs.DatastoreColumnArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -16,18 +16,18 @@ public final class DatastoreSchemaDefinitionArgs extends io.pulumi.resources.Res
     public static final DatastoreSchemaDefinitionArgs Empty = new DatastoreSchemaDefinitionArgs();
 
     @InputImport(name="columns")
-      private final @Nullable Input<List<DatastoreColumnArgs>> columns;
+      private final @Nullable Output<List<DatastoreColumnArgs>> columns;
 
-    public Input<List<DatastoreColumnArgs>> getColumns() {
-        return this.columns == null ? Input.empty() : this.columns;
+    public Output<List<DatastoreColumnArgs>> getColumns() {
+        return this.columns == null ? Output.empty() : this.columns;
     }
 
-    public DatastoreSchemaDefinitionArgs(@Nullable Input<List<DatastoreColumnArgs>> columns) {
+    public DatastoreSchemaDefinitionArgs(@Nullable Output<List<DatastoreColumnArgs>> columns) {
         this.columns = columns;
     }
 
     private DatastoreSchemaDefinitionArgs() {
-        this.columns = Input.empty();
+        this.columns = Output.empty();
     }
 
     public static Builder builder() {
@@ -39,7 +39,7 @@ public final class DatastoreSchemaDefinitionArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<List<DatastoreColumnArgs>> columns;
+        private @Nullable Output<List<DatastoreColumnArgs>> columns;
 
         public Builder() {
     	      // Empty
@@ -50,13 +50,13 @@ public final class DatastoreSchemaDefinitionArgs extends io.pulumi.resources.Res
     	      this.columns = defaults.columns;
         }
 
-        public Builder columns(@Nullable Input<List<DatastoreColumnArgs>> columns) {
+        public Builder columns(@Nullable Output<List<DatastoreColumnArgs>> columns) {
             this.columns = columns;
             return this;
         }
 
         public Builder columns(@Nullable List<DatastoreColumnArgs> columns) {
-            this.columns = Input.ofNullable(columns);
+            this.columns = Output.ofNullable(columns);
             return this;
         }
         public DatastoreSchemaDefinitionArgs build() {

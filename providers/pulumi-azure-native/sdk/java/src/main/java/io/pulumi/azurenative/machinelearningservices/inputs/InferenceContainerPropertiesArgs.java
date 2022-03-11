@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.RouteArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,10 +19,10 @@ public final class InferenceContainerPropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="livenessRoute")
-      private final @Nullable Input<RouteArgs> livenessRoute;
+      private final @Nullable Output<RouteArgs> livenessRoute;
 
-    public Input<RouteArgs> getLivenessRoute() {
-        return this.livenessRoute == null ? Input.empty() : this.livenessRoute;
+    public Output<RouteArgs> getLivenessRoute() {
+        return this.livenessRoute == null ? Output.empty() : this.livenessRoute;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class InferenceContainerPropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="readinessRoute")
-      private final @Nullable Input<RouteArgs> readinessRoute;
+      private final @Nullable Output<RouteArgs> readinessRoute;
 
-    public Input<RouteArgs> getReadinessRoute() {
-        return this.readinessRoute == null ? Input.empty() : this.readinessRoute;
+    public Output<RouteArgs> getReadinessRoute() {
+        return this.readinessRoute == null ? Output.empty() : this.readinessRoute;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class InferenceContainerPropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="scoringRoute")
-      private final @Nullable Input<RouteArgs> scoringRoute;
+      private final @Nullable Output<RouteArgs> scoringRoute;
 
-    public Input<RouteArgs> getScoringRoute() {
-        return this.scoringRoute == null ? Input.empty() : this.scoringRoute;
+    public Output<RouteArgs> getScoringRoute() {
+        return this.scoringRoute == null ? Output.empty() : this.scoringRoute;
     }
 
     public InferenceContainerPropertiesArgs(
-        @Nullable Input<RouteArgs> livenessRoute,
-        @Nullable Input<RouteArgs> readinessRoute,
-        @Nullable Input<RouteArgs> scoringRoute) {
+        @Nullable Output<RouteArgs> livenessRoute,
+        @Nullable Output<RouteArgs> readinessRoute,
+        @Nullable Output<RouteArgs> scoringRoute) {
         this.livenessRoute = livenessRoute;
         this.readinessRoute = readinessRoute;
         this.scoringRoute = scoringRoute;
     }
 
     private InferenceContainerPropertiesArgs() {
-        this.livenessRoute = Input.empty();
-        this.readinessRoute = Input.empty();
-        this.scoringRoute = Input.empty();
+        this.livenessRoute = Output.empty();
+        this.readinessRoute = Output.empty();
+        this.scoringRoute = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class InferenceContainerPropertiesArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<RouteArgs> livenessRoute;
-        private @Nullable Input<RouteArgs> readinessRoute;
-        private @Nullable Input<RouteArgs> scoringRoute;
+        private @Nullable Output<RouteArgs> livenessRoute;
+        private @Nullable Output<RouteArgs> readinessRoute;
+        private @Nullable Output<RouteArgs> scoringRoute;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class InferenceContainerPropertiesArgs extends io.pulumi.resources.
     	      this.scoringRoute = defaults.scoringRoute;
         }
 
-        public Builder livenessRoute(@Nullable Input<RouteArgs> livenessRoute) {
+        public Builder livenessRoute(@Nullable Output<RouteArgs> livenessRoute) {
             this.livenessRoute = livenessRoute;
             return this;
         }
 
         public Builder livenessRoute(@Nullable RouteArgs livenessRoute) {
-            this.livenessRoute = Input.ofNullable(livenessRoute);
+            this.livenessRoute = Output.ofNullable(livenessRoute);
             return this;
         }
 
-        public Builder readinessRoute(@Nullable Input<RouteArgs> readinessRoute) {
+        public Builder readinessRoute(@Nullable Output<RouteArgs> readinessRoute) {
             this.readinessRoute = readinessRoute;
             return this;
         }
 
         public Builder readinessRoute(@Nullable RouteArgs readinessRoute) {
-            this.readinessRoute = Input.ofNullable(readinessRoute);
+            this.readinessRoute = Output.ofNullable(readinessRoute);
             return this;
         }
 
-        public Builder scoringRoute(@Nullable Input<RouteArgs> scoringRoute) {
+        public Builder scoringRoute(@Nullable Output<RouteArgs> scoringRoute) {
             this.scoringRoute = scoringRoute;
             return this;
         }
 
         public Builder scoringRoute(@Nullable RouteArgs scoringRoute) {
-            this.scoringRoute = Input.ofNullable(scoringRoute);
+            this.scoringRoute = Output.ofNullable(scoringRoute);
             return this;
         }
         public InferenceContainerPropertiesArgs build() {

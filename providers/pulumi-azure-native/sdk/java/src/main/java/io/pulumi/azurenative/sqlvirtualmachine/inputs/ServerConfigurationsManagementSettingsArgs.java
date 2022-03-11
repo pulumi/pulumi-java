@@ -7,7 +7,7 @@ import io.pulumi.azurenative.sqlvirtualmachine.inputs.AdditionalFeaturesServerCo
 import io.pulumi.azurenative.sqlvirtualmachine.inputs.SqlConnectivityUpdateSettingsArgs;
 import io.pulumi.azurenative.sqlvirtualmachine.inputs.SqlStorageUpdateSettingsArgs;
 import io.pulumi.azurenative.sqlvirtualmachine.inputs.SqlWorkloadTypeUpdateSettingsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,10 +26,10 @@ public final class ServerConfigurationsManagementSettingsArgs extends io.pulumi.
      * 
      */
     @InputImport(name="additionalFeaturesServerConfigurations")
-      private final @Nullable Input<AdditionalFeaturesServerConfigurationsArgs> additionalFeaturesServerConfigurations;
+      private final @Nullable Output<AdditionalFeaturesServerConfigurationsArgs> additionalFeaturesServerConfigurations;
 
-    public Input<AdditionalFeaturesServerConfigurationsArgs> getAdditionalFeaturesServerConfigurations() {
-        return this.additionalFeaturesServerConfigurations == null ? Input.empty() : this.additionalFeaturesServerConfigurations;
+    public Output<AdditionalFeaturesServerConfigurationsArgs> getAdditionalFeaturesServerConfigurations() {
+        return this.additionalFeaturesServerConfigurations == null ? Output.empty() : this.additionalFeaturesServerConfigurations;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ServerConfigurationsManagementSettingsArgs extends io.pulumi.
      * 
      */
     @InputImport(name="sqlConnectivityUpdateSettings")
-      private final @Nullable Input<SqlConnectivityUpdateSettingsArgs> sqlConnectivityUpdateSettings;
+      private final @Nullable Output<SqlConnectivityUpdateSettingsArgs> sqlConnectivityUpdateSettings;
 
-    public Input<SqlConnectivityUpdateSettingsArgs> getSqlConnectivityUpdateSettings() {
-        return this.sqlConnectivityUpdateSettings == null ? Input.empty() : this.sqlConnectivityUpdateSettings;
+    public Output<SqlConnectivityUpdateSettingsArgs> getSqlConnectivityUpdateSettings() {
+        return this.sqlConnectivityUpdateSettings == null ? Output.empty() : this.sqlConnectivityUpdateSettings;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ServerConfigurationsManagementSettingsArgs extends io.pulumi.
      * 
      */
     @InputImport(name="sqlStorageUpdateSettings")
-      private final @Nullable Input<SqlStorageUpdateSettingsArgs> sqlStorageUpdateSettings;
+      private final @Nullable Output<SqlStorageUpdateSettingsArgs> sqlStorageUpdateSettings;
 
-    public Input<SqlStorageUpdateSettingsArgs> getSqlStorageUpdateSettings() {
-        return this.sqlStorageUpdateSettings == null ? Input.empty() : this.sqlStorageUpdateSettings;
+    public Output<SqlStorageUpdateSettingsArgs> getSqlStorageUpdateSettings() {
+        return this.sqlStorageUpdateSettings == null ? Output.empty() : this.sqlStorageUpdateSettings;
     }
 
     /**
@@ -59,17 +59,17 @@ public final class ServerConfigurationsManagementSettingsArgs extends io.pulumi.
      * 
      */
     @InputImport(name="sqlWorkloadTypeUpdateSettings")
-      private final @Nullable Input<SqlWorkloadTypeUpdateSettingsArgs> sqlWorkloadTypeUpdateSettings;
+      private final @Nullable Output<SqlWorkloadTypeUpdateSettingsArgs> sqlWorkloadTypeUpdateSettings;
 
-    public Input<SqlWorkloadTypeUpdateSettingsArgs> getSqlWorkloadTypeUpdateSettings() {
-        return this.sqlWorkloadTypeUpdateSettings == null ? Input.empty() : this.sqlWorkloadTypeUpdateSettings;
+    public Output<SqlWorkloadTypeUpdateSettingsArgs> getSqlWorkloadTypeUpdateSettings() {
+        return this.sqlWorkloadTypeUpdateSettings == null ? Output.empty() : this.sqlWorkloadTypeUpdateSettings;
     }
 
     public ServerConfigurationsManagementSettingsArgs(
-        @Nullable Input<AdditionalFeaturesServerConfigurationsArgs> additionalFeaturesServerConfigurations,
-        @Nullable Input<SqlConnectivityUpdateSettingsArgs> sqlConnectivityUpdateSettings,
-        @Nullable Input<SqlStorageUpdateSettingsArgs> sqlStorageUpdateSettings,
-        @Nullable Input<SqlWorkloadTypeUpdateSettingsArgs> sqlWorkloadTypeUpdateSettings) {
+        @Nullable Output<AdditionalFeaturesServerConfigurationsArgs> additionalFeaturesServerConfigurations,
+        @Nullable Output<SqlConnectivityUpdateSettingsArgs> sqlConnectivityUpdateSettings,
+        @Nullable Output<SqlStorageUpdateSettingsArgs> sqlStorageUpdateSettings,
+        @Nullable Output<SqlWorkloadTypeUpdateSettingsArgs> sqlWorkloadTypeUpdateSettings) {
         this.additionalFeaturesServerConfigurations = additionalFeaturesServerConfigurations;
         this.sqlConnectivityUpdateSettings = sqlConnectivityUpdateSettings;
         this.sqlStorageUpdateSettings = sqlStorageUpdateSettings;
@@ -77,10 +77,10 @@ public final class ServerConfigurationsManagementSettingsArgs extends io.pulumi.
     }
 
     private ServerConfigurationsManagementSettingsArgs() {
-        this.additionalFeaturesServerConfigurations = Input.empty();
-        this.sqlConnectivityUpdateSettings = Input.empty();
-        this.sqlStorageUpdateSettings = Input.empty();
-        this.sqlWorkloadTypeUpdateSettings = Input.empty();
+        this.additionalFeaturesServerConfigurations = Output.empty();
+        this.sqlConnectivityUpdateSettings = Output.empty();
+        this.sqlStorageUpdateSettings = Output.empty();
+        this.sqlWorkloadTypeUpdateSettings = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class ServerConfigurationsManagementSettingsArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<AdditionalFeaturesServerConfigurationsArgs> additionalFeaturesServerConfigurations;
-        private @Nullable Input<SqlConnectivityUpdateSettingsArgs> sqlConnectivityUpdateSettings;
-        private @Nullable Input<SqlStorageUpdateSettingsArgs> sqlStorageUpdateSettings;
-        private @Nullable Input<SqlWorkloadTypeUpdateSettingsArgs> sqlWorkloadTypeUpdateSettings;
+        private @Nullable Output<AdditionalFeaturesServerConfigurationsArgs> additionalFeaturesServerConfigurations;
+        private @Nullable Output<SqlConnectivityUpdateSettingsArgs> sqlConnectivityUpdateSettings;
+        private @Nullable Output<SqlStorageUpdateSettingsArgs> sqlStorageUpdateSettings;
+        private @Nullable Output<SqlWorkloadTypeUpdateSettingsArgs> sqlWorkloadTypeUpdateSettings;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class ServerConfigurationsManagementSettingsArgs extends io.pulumi.
     	      this.sqlWorkloadTypeUpdateSettings = defaults.sqlWorkloadTypeUpdateSettings;
         }
 
-        public Builder additionalFeaturesServerConfigurations(@Nullable Input<AdditionalFeaturesServerConfigurationsArgs> additionalFeaturesServerConfigurations) {
+        public Builder additionalFeaturesServerConfigurations(@Nullable Output<AdditionalFeaturesServerConfigurationsArgs> additionalFeaturesServerConfigurations) {
             this.additionalFeaturesServerConfigurations = additionalFeaturesServerConfigurations;
             return this;
         }
 
         public Builder additionalFeaturesServerConfigurations(@Nullable AdditionalFeaturesServerConfigurationsArgs additionalFeaturesServerConfigurations) {
-            this.additionalFeaturesServerConfigurations = Input.ofNullable(additionalFeaturesServerConfigurations);
+            this.additionalFeaturesServerConfigurations = Output.ofNullable(additionalFeaturesServerConfigurations);
             return this;
         }
 
-        public Builder sqlConnectivityUpdateSettings(@Nullable Input<SqlConnectivityUpdateSettingsArgs> sqlConnectivityUpdateSettings) {
+        public Builder sqlConnectivityUpdateSettings(@Nullable Output<SqlConnectivityUpdateSettingsArgs> sqlConnectivityUpdateSettings) {
             this.sqlConnectivityUpdateSettings = sqlConnectivityUpdateSettings;
             return this;
         }
 
         public Builder sqlConnectivityUpdateSettings(@Nullable SqlConnectivityUpdateSettingsArgs sqlConnectivityUpdateSettings) {
-            this.sqlConnectivityUpdateSettings = Input.ofNullable(sqlConnectivityUpdateSettings);
+            this.sqlConnectivityUpdateSettings = Output.ofNullable(sqlConnectivityUpdateSettings);
             return this;
         }
 
-        public Builder sqlStorageUpdateSettings(@Nullable Input<SqlStorageUpdateSettingsArgs> sqlStorageUpdateSettings) {
+        public Builder sqlStorageUpdateSettings(@Nullable Output<SqlStorageUpdateSettingsArgs> sqlStorageUpdateSettings) {
             this.sqlStorageUpdateSettings = sqlStorageUpdateSettings;
             return this;
         }
 
         public Builder sqlStorageUpdateSettings(@Nullable SqlStorageUpdateSettingsArgs sqlStorageUpdateSettings) {
-            this.sqlStorageUpdateSettings = Input.ofNullable(sqlStorageUpdateSettings);
+            this.sqlStorageUpdateSettings = Output.ofNullable(sqlStorageUpdateSettings);
             return this;
         }
 
-        public Builder sqlWorkloadTypeUpdateSettings(@Nullable Input<SqlWorkloadTypeUpdateSettingsArgs> sqlWorkloadTypeUpdateSettings) {
+        public Builder sqlWorkloadTypeUpdateSettings(@Nullable Output<SqlWorkloadTypeUpdateSettingsArgs> sqlWorkloadTypeUpdateSettings) {
             this.sqlWorkloadTypeUpdateSettings = sqlWorkloadTypeUpdateSettings;
             return this;
         }
 
         public Builder sqlWorkloadTypeUpdateSettings(@Nullable SqlWorkloadTypeUpdateSettingsArgs sqlWorkloadTypeUpdateSettings) {
-            this.sqlWorkloadTypeUpdateSettings = Input.ofNullable(sqlWorkloadTypeUpdateSettings);
+            this.sqlWorkloadTypeUpdateSettings = Output.ofNullable(sqlWorkloadTypeUpdateSettings);
             return this;
         }
         public ServerConfigurationsManagementSettingsArgs build() {

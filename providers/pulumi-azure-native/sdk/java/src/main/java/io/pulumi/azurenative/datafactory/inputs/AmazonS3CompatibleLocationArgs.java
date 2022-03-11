@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class AmazonS3CompatibleLocationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="bucketName")
-      private final @Nullable Input<Object> bucketName;
+      private final @Nullable Output<Object> bucketName;
 
-    public Input<Object> getBucketName() {
-        return this.bucketName == null ? Input.empty() : this.bucketName;
+    public Output<Object> getBucketName() {
+        return this.bucketName == null ? Output.empty() : this.bucketName;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AmazonS3CompatibleLocationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="fileName")
-      private final @Nullable Input<Object> fileName;
+      private final @Nullable Output<Object> fileName;
 
-    public Input<Object> getFileName() {
-        return this.fileName == null ? Input.empty() : this.fileName;
+    public Output<Object> getFileName() {
+        return this.fileName == null ? Output.empty() : this.fileName;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AmazonS3CompatibleLocationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="folderPath")
-      private final @Nullable Input<Object> folderPath;
+      private final @Nullable Output<Object> folderPath;
 
-    public Input<Object> getFolderPath() {
-        return this.folderPath == null ? Input.empty() : this.folderPath;
+    public Output<Object> getFolderPath() {
+        return this.folderPath == null ? Output.empty() : this.folderPath;
     }
 
     /**
@@ -58,9 +58,9 @@ public final class AmazonS3CompatibleLocationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -69,18 +69,18 @@ public final class AmazonS3CompatibleLocationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<Object> version;
+      private final @Nullable Output<Object> version;
 
-    public Input<Object> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<Object> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public AmazonS3CompatibleLocationArgs(
-        @Nullable Input<Object> bucketName,
-        @Nullable Input<Object> fileName,
-        @Nullable Input<Object> folderPath,
-        Input<String> type,
-        @Nullable Input<Object> version) {
+        @Nullable Output<Object> bucketName,
+        @Nullable Output<Object> fileName,
+        @Nullable Output<Object> folderPath,
+        Output<String> type,
+        @Nullable Output<Object> version) {
         this.bucketName = bucketName;
         this.fileName = fileName;
         this.folderPath = folderPath;
@@ -89,11 +89,11 @@ public final class AmazonS3CompatibleLocationArgs extends io.pulumi.resources.Re
     }
 
     private AmazonS3CompatibleLocationArgs() {
-        this.bucketName = Input.empty();
-        this.fileName = Input.empty();
-        this.folderPath = Input.empty();
-        this.type = Input.empty();
-        this.version = Input.empty();
+        this.bucketName = Output.empty();
+        this.fileName = Output.empty();
+        this.folderPath = Output.empty();
+        this.type = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class AmazonS3CompatibleLocationArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> bucketName;
-        private @Nullable Input<Object> fileName;
-        private @Nullable Input<Object> folderPath;
-        private Input<String> type;
-        private @Nullable Input<Object> version;
+        private @Nullable Output<Object> bucketName;
+        private @Nullable Output<Object> fileName;
+        private @Nullable Output<Object> folderPath;
+        private Output<String> type;
+        private @Nullable Output<Object> version;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class AmazonS3CompatibleLocationArgs extends io.pulumi.resources.Re
     	      this.version = defaults.version;
         }
 
-        public Builder bucketName(@Nullable Input<Object> bucketName) {
+        public Builder bucketName(@Nullable Output<Object> bucketName) {
             this.bucketName = bucketName;
             return this;
         }
 
         public Builder bucketName(@Nullable Object bucketName) {
-            this.bucketName = Input.ofNullable(bucketName);
+            this.bucketName = Output.ofNullable(bucketName);
             return this;
         }
 
-        public Builder fileName(@Nullable Input<Object> fileName) {
+        public Builder fileName(@Nullable Output<Object> fileName) {
             this.fileName = fileName;
             return this;
         }
 
         public Builder fileName(@Nullable Object fileName) {
-            this.fileName = Input.ofNullable(fileName);
+            this.fileName = Output.ofNullable(fileName);
             return this;
         }
 
-        public Builder folderPath(@Nullable Input<Object> folderPath) {
+        public Builder folderPath(@Nullable Output<Object> folderPath) {
             this.folderPath = folderPath;
             return this;
         }
 
         public Builder folderPath(@Nullable Object folderPath) {
-            this.folderPath = Input.ofNullable(folderPath);
+            this.folderPath = Output.ofNullable(folderPath);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder version(@Nullable Input<Object> version) {
+        public Builder version(@Nullable Output<Object> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable Object version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public AmazonS3CompatibleLocationArgs build() {

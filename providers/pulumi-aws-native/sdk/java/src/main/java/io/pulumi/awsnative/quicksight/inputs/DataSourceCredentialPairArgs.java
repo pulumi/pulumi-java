@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.awsnative.quicksight.inputs.DataSourceParametersArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -33,10 +33,10 @@ public final class DataSourceCredentialPairArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="alternateDataSourceParameters")
-      private final @Nullable Input<List<DataSourceParametersArgs>> alternateDataSourceParameters;
+      private final @Nullable Output<List<DataSourceParametersArgs>> alternateDataSourceParameters;
 
-    public Input<List<DataSourceParametersArgs>> getAlternateDataSourceParameters() {
-        return this.alternateDataSourceParameters == null ? Input.empty() : this.alternateDataSourceParameters;
+    public Output<List<DataSourceParametersArgs>> getAlternateDataSourceParameters() {
+        return this.alternateDataSourceParameters == null ? Output.empty() : this.alternateDataSourceParameters;
     }
 
     /**
@@ -44,9 +44,9 @@ public final class DataSourceCredentialPairArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="password", required=true)
-      private final Input<String> password;
+      private final Output<String> password;
 
-    public Input<String> getPassword() {
+    public Output<String> getPassword() {
         return this.password;
     }
 
@@ -55,25 +55,25 @@ public final class DataSourceCredentialPairArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="username", required=true)
-      private final Input<String> username;
+      private final Output<String> username;
 
-    public Input<String> getUsername() {
+    public Output<String> getUsername() {
         return this.username;
     }
 
     public DataSourceCredentialPairArgs(
-        @Nullable Input<List<DataSourceParametersArgs>> alternateDataSourceParameters,
-        Input<String> password,
-        Input<String> username) {
+        @Nullable Output<List<DataSourceParametersArgs>> alternateDataSourceParameters,
+        Output<String> password,
+        Output<String> username) {
         this.alternateDataSourceParameters = alternateDataSourceParameters;
         this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
         this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
     }
 
     private DataSourceCredentialPairArgs() {
-        this.alternateDataSourceParameters = Input.empty();
-        this.password = Input.empty();
-        this.username = Input.empty();
+        this.alternateDataSourceParameters = Output.empty();
+        this.password = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,9 +85,9 @@ public final class DataSourceCredentialPairArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<List<DataSourceParametersArgs>> alternateDataSourceParameters;
-        private Input<String> password;
-        private Input<String> username;
+        private @Nullable Output<List<DataSourceParametersArgs>> alternateDataSourceParameters;
+        private Output<String> password;
+        private Output<String> username;
 
         public Builder() {
     	      // Empty
@@ -100,33 +100,33 @@ public final class DataSourceCredentialPairArgs extends io.pulumi.resources.Reso
     	      this.username = defaults.username;
         }
 
-        public Builder alternateDataSourceParameters(@Nullable Input<List<DataSourceParametersArgs>> alternateDataSourceParameters) {
+        public Builder alternateDataSourceParameters(@Nullable Output<List<DataSourceParametersArgs>> alternateDataSourceParameters) {
             this.alternateDataSourceParameters = alternateDataSourceParameters;
             return this;
         }
 
         public Builder alternateDataSourceParameters(@Nullable List<DataSourceParametersArgs> alternateDataSourceParameters) {
-            this.alternateDataSourceParameters = Input.ofNullable(alternateDataSourceParameters);
+            this.alternateDataSourceParameters = Output.ofNullable(alternateDataSourceParameters);
             return this;
         }
 
-        public Builder password(Input<String> password) {
+        public Builder password(Output<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
         public Builder password(String password) {
-            this.password = Input.of(Objects.requireNonNull(password));
+            this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
 
-        public Builder username(Input<String> username) {
+        public Builder username(Output<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
 
         public Builder username(String username) {
-            this.username = Input.of(Objects.requireNonNull(username));
+            this.username = Output.of(Objects.requireNonNull(username));
             return this;
         }
         public DataSourceCredentialPairArgs build() {

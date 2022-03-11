@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.mediapackage.inputs;
 
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationSpekeKeyProviderArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class PackagingConfigurationMssEncryptionArgs extends io.pulumi.res
     public static final PackagingConfigurationMssEncryptionArgs Empty = new PackagingConfigurationMssEncryptionArgs();
 
     @InputImport(name="spekeKeyProvider", required=true)
-      private final Input<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider;
+      private final Output<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider;
 
-    public Input<PackagingConfigurationSpekeKeyProviderArgs> getSpekeKeyProvider() {
+    public Output<PackagingConfigurationSpekeKeyProviderArgs> getSpekeKeyProvider() {
         return this.spekeKeyProvider;
     }
 
-    public PackagingConfigurationMssEncryptionArgs(Input<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider) {
+    public PackagingConfigurationMssEncryptionArgs(Output<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider) {
         this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider, "expected parameter 'spekeKeyProvider' to be non-null");
     }
 
     private PackagingConfigurationMssEncryptionArgs() {
-        this.spekeKeyProvider = Input.empty();
+        this.spekeKeyProvider = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class PackagingConfigurationMssEncryptionArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private Input<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider;
+        private Output<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class PackagingConfigurationMssEncryptionArgs extends io.pulumi.res
     	      this.spekeKeyProvider = defaults.spekeKeyProvider;
         }
 
-        public Builder spekeKeyProvider(Input<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider) {
+        public Builder spekeKeyProvider(Output<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider) {
             this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
             return this;
         }
 
         public Builder spekeKeyProvider(PackagingConfigurationSpekeKeyProviderArgs spekeKeyProvider) {
-            this.spekeKeyProvider = Input.of(Objects.requireNonNull(spekeKeyProvider));
+            this.spekeKeyProvider = Output.of(Objects.requireNonNull(spekeKeyProvider));
             return this;
         }
         public PackagingConfigurationMssEncryptionArgs build() {

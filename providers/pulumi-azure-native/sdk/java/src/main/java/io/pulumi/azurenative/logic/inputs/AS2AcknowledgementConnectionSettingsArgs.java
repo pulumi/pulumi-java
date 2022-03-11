@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class AS2AcknowledgementConnectionSettingsArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="ignoreCertificateNameMismatch", required=true)
-      private final Input<Boolean> ignoreCertificateNameMismatch;
+      private final Output<Boolean> ignoreCertificateNameMismatch;
 
-    public Input<Boolean> getIgnoreCertificateNameMismatch() {
+    public Output<Boolean> getIgnoreCertificateNameMismatch() {
         return this.ignoreCertificateNameMismatch;
     }
 
@@ -33,9 +33,9 @@ public final class AS2AcknowledgementConnectionSettingsArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="keepHttpConnectionAlive", required=true)
-      private final Input<Boolean> keepHttpConnectionAlive;
+      private final Output<Boolean> keepHttpConnectionAlive;
 
-    public Input<Boolean> getKeepHttpConnectionAlive() {
+    public Output<Boolean> getKeepHttpConnectionAlive() {
         return this.keepHttpConnectionAlive;
     }
 
@@ -44,9 +44,9 @@ public final class AS2AcknowledgementConnectionSettingsArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="supportHttpStatusCodeContinue", required=true)
-      private final Input<Boolean> supportHttpStatusCodeContinue;
+      private final Output<Boolean> supportHttpStatusCodeContinue;
 
-    public Input<Boolean> getSupportHttpStatusCodeContinue() {
+    public Output<Boolean> getSupportHttpStatusCodeContinue() {
         return this.supportHttpStatusCodeContinue;
     }
 
@@ -55,17 +55,17 @@ public final class AS2AcknowledgementConnectionSettingsArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="unfoldHttpHeaders", required=true)
-      private final Input<Boolean> unfoldHttpHeaders;
+      private final Output<Boolean> unfoldHttpHeaders;
 
-    public Input<Boolean> getUnfoldHttpHeaders() {
+    public Output<Boolean> getUnfoldHttpHeaders() {
         return this.unfoldHttpHeaders;
     }
 
     public AS2AcknowledgementConnectionSettingsArgs(
-        Input<Boolean> ignoreCertificateNameMismatch,
-        Input<Boolean> keepHttpConnectionAlive,
-        Input<Boolean> supportHttpStatusCodeContinue,
-        Input<Boolean> unfoldHttpHeaders) {
+        Output<Boolean> ignoreCertificateNameMismatch,
+        Output<Boolean> keepHttpConnectionAlive,
+        Output<Boolean> supportHttpStatusCodeContinue,
+        Output<Boolean> unfoldHttpHeaders) {
         this.ignoreCertificateNameMismatch = Objects.requireNonNull(ignoreCertificateNameMismatch, "expected parameter 'ignoreCertificateNameMismatch' to be non-null");
         this.keepHttpConnectionAlive = Objects.requireNonNull(keepHttpConnectionAlive, "expected parameter 'keepHttpConnectionAlive' to be non-null");
         this.supportHttpStatusCodeContinue = Objects.requireNonNull(supportHttpStatusCodeContinue, "expected parameter 'supportHttpStatusCodeContinue' to be non-null");
@@ -73,10 +73,10 @@ public final class AS2AcknowledgementConnectionSettingsArgs extends io.pulumi.re
     }
 
     private AS2AcknowledgementConnectionSettingsArgs() {
-        this.ignoreCertificateNameMismatch = Input.empty();
-        this.keepHttpConnectionAlive = Input.empty();
-        this.supportHttpStatusCodeContinue = Input.empty();
-        this.unfoldHttpHeaders = Input.empty();
+        this.ignoreCertificateNameMismatch = Output.empty();
+        this.keepHttpConnectionAlive = Output.empty();
+        this.supportHttpStatusCodeContinue = Output.empty();
+        this.unfoldHttpHeaders = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class AS2AcknowledgementConnectionSettingsArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private Input<Boolean> ignoreCertificateNameMismatch;
-        private Input<Boolean> keepHttpConnectionAlive;
-        private Input<Boolean> supportHttpStatusCodeContinue;
-        private Input<Boolean> unfoldHttpHeaders;
+        private Output<Boolean> ignoreCertificateNameMismatch;
+        private Output<Boolean> keepHttpConnectionAlive;
+        private Output<Boolean> supportHttpStatusCodeContinue;
+        private Output<Boolean> unfoldHttpHeaders;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class AS2AcknowledgementConnectionSettingsArgs extends io.pulumi.re
     	      this.unfoldHttpHeaders = defaults.unfoldHttpHeaders;
         }
 
-        public Builder ignoreCertificateNameMismatch(Input<Boolean> ignoreCertificateNameMismatch) {
+        public Builder ignoreCertificateNameMismatch(Output<Boolean> ignoreCertificateNameMismatch) {
             this.ignoreCertificateNameMismatch = Objects.requireNonNull(ignoreCertificateNameMismatch);
             return this;
         }
 
         public Builder ignoreCertificateNameMismatch(Boolean ignoreCertificateNameMismatch) {
-            this.ignoreCertificateNameMismatch = Input.of(Objects.requireNonNull(ignoreCertificateNameMismatch));
+            this.ignoreCertificateNameMismatch = Output.of(Objects.requireNonNull(ignoreCertificateNameMismatch));
             return this;
         }
 
-        public Builder keepHttpConnectionAlive(Input<Boolean> keepHttpConnectionAlive) {
+        public Builder keepHttpConnectionAlive(Output<Boolean> keepHttpConnectionAlive) {
             this.keepHttpConnectionAlive = Objects.requireNonNull(keepHttpConnectionAlive);
             return this;
         }
 
         public Builder keepHttpConnectionAlive(Boolean keepHttpConnectionAlive) {
-            this.keepHttpConnectionAlive = Input.of(Objects.requireNonNull(keepHttpConnectionAlive));
+            this.keepHttpConnectionAlive = Output.of(Objects.requireNonNull(keepHttpConnectionAlive));
             return this;
         }
 
-        public Builder supportHttpStatusCodeContinue(Input<Boolean> supportHttpStatusCodeContinue) {
+        public Builder supportHttpStatusCodeContinue(Output<Boolean> supportHttpStatusCodeContinue) {
             this.supportHttpStatusCodeContinue = Objects.requireNonNull(supportHttpStatusCodeContinue);
             return this;
         }
 
         public Builder supportHttpStatusCodeContinue(Boolean supportHttpStatusCodeContinue) {
-            this.supportHttpStatusCodeContinue = Input.of(Objects.requireNonNull(supportHttpStatusCodeContinue));
+            this.supportHttpStatusCodeContinue = Output.of(Objects.requireNonNull(supportHttpStatusCodeContinue));
             return this;
         }
 
-        public Builder unfoldHttpHeaders(Input<Boolean> unfoldHttpHeaders) {
+        public Builder unfoldHttpHeaders(Output<Boolean> unfoldHttpHeaders) {
             this.unfoldHttpHeaders = Objects.requireNonNull(unfoldHttpHeaders);
             return this;
         }
 
         public Builder unfoldHttpHeaders(Boolean unfoldHttpHeaders) {
-            this.unfoldHttpHeaders = Input.of(Objects.requireNonNull(unfoldHttpHeaders));
+            this.unfoldHttpHeaders = Output.of(Objects.requireNonNull(unfoldHttpHeaders));
             return this;
         }
         public AS2AcknowledgementConnectionSettingsArgs build() {

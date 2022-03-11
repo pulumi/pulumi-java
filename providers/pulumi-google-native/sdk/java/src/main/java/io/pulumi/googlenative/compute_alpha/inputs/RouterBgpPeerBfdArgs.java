@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.RouterBgpPeerBfdMode;
 import io.pulumi.googlenative.compute_alpha.enums.RouterBgpPeerBfdPacketMode;
@@ -22,10 +22,10 @@ public final class RouterBgpPeerBfdArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="minReceiveInterval")
-      private final @Nullable Input<Integer> minReceiveInterval;
+      private final @Nullable Output<Integer> minReceiveInterval;
 
-    public Input<Integer> getMinReceiveInterval() {
-        return this.minReceiveInterval == null ? Input.empty() : this.minReceiveInterval;
+    public Output<Integer> getMinReceiveInterval() {
+        return this.minReceiveInterval == null ? Output.empty() : this.minReceiveInterval;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class RouterBgpPeerBfdArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="minTransmitInterval")
-      private final @Nullable Input<Integer> minTransmitInterval;
+      private final @Nullable Output<Integer> minTransmitInterval;
 
-    public Input<Integer> getMinTransmitInterval() {
-        return this.minTransmitInterval == null ? Input.empty() : this.minTransmitInterval;
+    public Output<Integer> getMinTransmitInterval() {
+        return this.minTransmitInterval == null ? Output.empty() : this.minTransmitInterval;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class RouterBgpPeerBfdArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="mode")
-      private final @Nullable Input<RouterBgpPeerBfdMode> mode;
+      private final @Nullable Output<RouterBgpPeerBfdMode> mode;
 
-    public Input<RouterBgpPeerBfdMode> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<RouterBgpPeerBfdMode> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class RouterBgpPeerBfdArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="multiplier")
-      private final @Nullable Input<Integer> multiplier;
+      private final @Nullable Output<Integer> multiplier;
 
-    public Input<Integer> getMultiplier() {
-        return this.multiplier == null ? Input.empty() : this.multiplier;
+    public Output<Integer> getMultiplier() {
+        return this.multiplier == null ? Output.empty() : this.multiplier;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class RouterBgpPeerBfdArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="packetMode")
-      private final @Nullable Input<RouterBgpPeerBfdPacketMode> packetMode;
+      private final @Nullable Output<RouterBgpPeerBfdPacketMode> packetMode;
 
-    public Input<RouterBgpPeerBfdPacketMode> getPacketMode() {
-        return this.packetMode == null ? Input.empty() : this.packetMode;
+    public Output<RouterBgpPeerBfdPacketMode> getPacketMode() {
+        return this.packetMode == null ? Output.empty() : this.packetMode;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class RouterBgpPeerBfdArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sessionInitializationMode")
-      private final @Nullable Input<RouterBgpPeerBfdSessionInitializationMode> sessionInitializationMode;
+      private final @Nullable Output<RouterBgpPeerBfdSessionInitializationMode> sessionInitializationMode;
 
-    public Input<RouterBgpPeerBfdSessionInitializationMode> getSessionInitializationMode() {
-        return this.sessionInitializationMode == null ? Input.empty() : this.sessionInitializationMode;
+    public Output<RouterBgpPeerBfdSessionInitializationMode> getSessionInitializationMode() {
+        return this.sessionInitializationMode == null ? Output.empty() : this.sessionInitializationMode;
     }
 
     /**
@@ -88,20 +88,20 @@ public final class RouterBgpPeerBfdArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="slowTimerInterval")
-      private final @Nullable Input<Integer> slowTimerInterval;
+      private final @Nullable Output<Integer> slowTimerInterval;
 
-    public Input<Integer> getSlowTimerInterval() {
-        return this.slowTimerInterval == null ? Input.empty() : this.slowTimerInterval;
+    public Output<Integer> getSlowTimerInterval() {
+        return this.slowTimerInterval == null ? Output.empty() : this.slowTimerInterval;
     }
 
     public RouterBgpPeerBfdArgs(
-        @Nullable Input<Integer> minReceiveInterval,
-        @Nullable Input<Integer> minTransmitInterval,
-        @Nullable Input<RouterBgpPeerBfdMode> mode,
-        @Nullable Input<Integer> multiplier,
-        @Nullable Input<RouterBgpPeerBfdPacketMode> packetMode,
-        @Nullable Input<RouterBgpPeerBfdSessionInitializationMode> sessionInitializationMode,
-        @Nullable Input<Integer> slowTimerInterval) {
+        @Nullable Output<Integer> minReceiveInterval,
+        @Nullable Output<Integer> minTransmitInterval,
+        @Nullable Output<RouterBgpPeerBfdMode> mode,
+        @Nullable Output<Integer> multiplier,
+        @Nullable Output<RouterBgpPeerBfdPacketMode> packetMode,
+        @Nullable Output<RouterBgpPeerBfdSessionInitializationMode> sessionInitializationMode,
+        @Nullable Output<Integer> slowTimerInterval) {
         this.minReceiveInterval = minReceiveInterval;
         this.minTransmitInterval = minTransmitInterval;
         this.mode = mode;
@@ -112,13 +112,13 @@ public final class RouterBgpPeerBfdArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private RouterBgpPeerBfdArgs() {
-        this.minReceiveInterval = Input.empty();
-        this.minTransmitInterval = Input.empty();
-        this.mode = Input.empty();
-        this.multiplier = Input.empty();
-        this.packetMode = Input.empty();
-        this.sessionInitializationMode = Input.empty();
-        this.slowTimerInterval = Input.empty();
+        this.minReceiveInterval = Output.empty();
+        this.minTransmitInterval = Output.empty();
+        this.mode = Output.empty();
+        this.multiplier = Output.empty();
+        this.packetMode = Output.empty();
+        this.sessionInitializationMode = Output.empty();
+        this.slowTimerInterval = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class RouterBgpPeerBfdArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> minReceiveInterval;
-        private @Nullable Input<Integer> minTransmitInterval;
-        private @Nullable Input<RouterBgpPeerBfdMode> mode;
-        private @Nullable Input<Integer> multiplier;
-        private @Nullable Input<RouterBgpPeerBfdPacketMode> packetMode;
-        private @Nullable Input<RouterBgpPeerBfdSessionInitializationMode> sessionInitializationMode;
-        private @Nullable Input<Integer> slowTimerInterval;
+        private @Nullable Output<Integer> minReceiveInterval;
+        private @Nullable Output<Integer> minTransmitInterval;
+        private @Nullable Output<RouterBgpPeerBfdMode> mode;
+        private @Nullable Output<Integer> multiplier;
+        private @Nullable Output<RouterBgpPeerBfdPacketMode> packetMode;
+        private @Nullable Output<RouterBgpPeerBfdSessionInitializationMode> sessionInitializationMode;
+        private @Nullable Output<Integer> slowTimerInterval;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class RouterBgpPeerBfdArgs extends io.pulumi.resources.ResourceArgs
     	      this.slowTimerInterval = defaults.slowTimerInterval;
         }
 
-        public Builder minReceiveInterval(@Nullable Input<Integer> minReceiveInterval) {
+        public Builder minReceiveInterval(@Nullable Output<Integer> minReceiveInterval) {
             this.minReceiveInterval = minReceiveInterval;
             return this;
         }
 
         public Builder minReceiveInterval(@Nullable Integer minReceiveInterval) {
-            this.minReceiveInterval = Input.ofNullable(minReceiveInterval);
+            this.minReceiveInterval = Output.ofNullable(minReceiveInterval);
             return this;
         }
 
-        public Builder minTransmitInterval(@Nullable Input<Integer> minTransmitInterval) {
+        public Builder minTransmitInterval(@Nullable Output<Integer> minTransmitInterval) {
             this.minTransmitInterval = minTransmitInterval;
             return this;
         }
 
         public Builder minTransmitInterval(@Nullable Integer minTransmitInterval) {
-            this.minTransmitInterval = Input.ofNullable(minTransmitInterval);
+            this.minTransmitInterval = Output.ofNullable(minTransmitInterval);
             return this;
         }
 
-        public Builder mode(@Nullable Input<RouterBgpPeerBfdMode> mode) {
+        public Builder mode(@Nullable Output<RouterBgpPeerBfdMode> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable RouterBgpPeerBfdMode mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
 
-        public Builder multiplier(@Nullable Input<Integer> multiplier) {
+        public Builder multiplier(@Nullable Output<Integer> multiplier) {
             this.multiplier = multiplier;
             return this;
         }
 
         public Builder multiplier(@Nullable Integer multiplier) {
-            this.multiplier = Input.ofNullable(multiplier);
+            this.multiplier = Output.ofNullable(multiplier);
             return this;
         }
 
-        public Builder packetMode(@Nullable Input<RouterBgpPeerBfdPacketMode> packetMode) {
+        public Builder packetMode(@Nullable Output<RouterBgpPeerBfdPacketMode> packetMode) {
             this.packetMode = packetMode;
             return this;
         }
 
         public Builder packetMode(@Nullable RouterBgpPeerBfdPacketMode packetMode) {
-            this.packetMode = Input.ofNullable(packetMode);
+            this.packetMode = Output.ofNullable(packetMode);
             return this;
         }
 
-        public Builder sessionInitializationMode(@Nullable Input<RouterBgpPeerBfdSessionInitializationMode> sessionInitializationMode) {
+        public Builder sessionInitializationMode(@Nullable Output<RouterBgpPeerBfdSessionInitializationMode> sessionInitializationMode) {
             this.sessionInitializationMode = sessionInitializationMode;
             return this;
         }
 
         public Builder sessionInitializationMode(@Nullable RouterBgpPeerBfdSessionInitializationMode sessionInitializationMode) {
-            this.sessionInitializationMode = Input.ofNullable(sessionInitializationMode);
+            this.sessionInitializationMode = Output.ofNullable(sessionInitializationMode);
             return this;
         }
 
-        public Builder slowTimerInterval(@Nullable Input<Integer> slowTimerInterval) {
+        public Builder slowTimerInterval(@Nullable Output<Integer> slowTimerInterval) {
             this.slowTimerInterval = slowTimerInterval;
             return this;
         }
 
         public Builder slowTimerInterval(@Nullable Integer slowTimerInterval) {
-            this.slowTimerInterval = Input.ofNullable(slowTimerInterval);
+            this.slowTimerInterval = Output.ofNullable(slowTimerInterval);
             return this;
         }
         public RouterBgpPeerBfdArgs build() {

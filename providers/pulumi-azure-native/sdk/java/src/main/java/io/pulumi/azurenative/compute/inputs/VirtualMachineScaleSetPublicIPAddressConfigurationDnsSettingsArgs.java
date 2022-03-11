@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettings
      * 
      */
     @InputImport(name="domainNameLabel", required=true)
-      private final Input<String> domainNameLabel;
+      private final Output<String> domainNameLabel;
 
-    public Input<String> getDomainNameLabel() {
+    public Output<String> getDomainNameLabel() {
         return this.domainNameLabel;
     }
 
-    public VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsArgs(Input<String> domainNameLabel) {
+    public VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsArgs(Output<String> domainNameLabel) {
         this.domainNameLabel = Objects.requireNonNull(domainNameLabel, "expected parameter 'domainNameLabel' to be non-null");
     }
 
     private VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsArgs() {
-        this.domainNameLabel = Input.empty();
+        this.domainNameLabel = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettings
     }
 
     public static final class Builder {
-        private Input<String> domainNameLabel;
+        private Output<String> domainNameLabel;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettings
     	      this.domainNameLabel = defaults.domainNameLabel;
         }
 
-        public Builder domainNameLabel(Input<String> domainNameLabel) {
+        public Builder domainNameLabel(Output<String> domainNameLabel) {
             this.domainNameLabel = Objects.requireNonNull(domainNameLabel);
             return this;
         }
 
         public Builder domainNameLabel(String domainNameLabel) {
-            this.domainNameLabel = Input.of(Objects.requireNonNull(domainNameLabel));
+            this.domainNameLabel = Output.of(Objects.requireNonNull(domainNameLabel));
             return this;
         }
         public VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsArgs build() {

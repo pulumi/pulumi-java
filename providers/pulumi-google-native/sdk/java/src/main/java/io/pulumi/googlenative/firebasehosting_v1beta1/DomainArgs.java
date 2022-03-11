@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.firebasehosting_v1beta1.inputs.DomainRedirectArgs;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName", required=true)
-      private final Input<String> domainName;
+      private final Output<String> domainName;
 
-    public Input<String> getDomainName() {
+    public Output<String> getDomainName() {
         return this.domainName;
     }
 
@@ -31,17 +31,17 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainRedirect")
-      private final @Nullable Input<DomainRedirectArgs> domainRedirect;
+      private final @Nullable Output<DomainRedirectArgs> domainRedirect;
 
-    public Input<DomainRedirectArgs> getDomainRedirect() {
-        return this.domainRedirect == null ? Input.empty() : this.domainRedirect;
+    public Output<DomainRedirectArgs> getDomainRedirect() {
+        return this.domainRedirect == null ? Output.empty() : this.domainRedirect;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -49,25 +49,25 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="site", required=true)
-      private final Input<String> site;
+      private final Output<String> site;
 
-    public Input<String> getSite() {
+    public Output<String> getSite() {
         return this.site;
     }
 
     @InputImport(name="siteId", required=true)
-      private final Input<String> siteId;
+      private final Output<String> siteId;
 
-    public Input<String> getSiteId() {
+    public Output<String> getSiteId() {
         return this.siteId;
     }
 
     public DomainArgs(
-        Input<String> domainName,
-        @Nullable Input<DomainRedirectArgs> domainRedirect,
-        @Nullable Input<String> project,
-        Input<String> site,
-        Input<String> siteId) {
+        Output<String> domainName,
+        @Nullable Output<DomainRedirectArgs> domainRedirect,
+        @Nullable Output<String> project,
+        Output<String> site,
+        Output<String> siteId) {
         this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
         this.domainRedirect = domainRedirect;
         this.project = project;
@@ -76,11 +76,11 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DomainArgs() {
-        this.domainName = Input.empty();
-        this.domainRedirect = Input.empty();
-        this.project = Input.empty();
-        this.site = Input.empty();
-        this.siteId = Input.empty();
+        this.domainName = Output.empty();
+        this.domainRedirect = Output.empty();
+        this.project = Output.empty();
+        this.site = Output.empty();
+        this.siteId = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,11 +92,11 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> domainName;
-        private @Nullable Input<DomainRedirectArgs> domainRedirect;
-        private @Nullable Input<String> project;
-        private Input<String> site;
-        private Input<String> siteId;
+        private Output<String> domainName;
+        private @Nullable Output<DomainRedirectArgs> domainRedirect;
+        private @Nullable Output<String> project;
+        private Output<String> site;
+        private Output<String> siteId;
 
         public Builder() {
     	      // Empty
@@ -111,53 +111,53 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     	      this.siteId = defaults.siteId;
         }
 
-        public Builder domainName(Input<String> domainName) {
+        public Builder domainName(Output<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
         public Builder domainName(String domainName) {
-            this.domainName = Input.of(Objects.requireNonNull(domainName));
+            this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
         }
 
-        public Builder domainRedirect(@Nullable Input<DomainRedirectArgs> domainRedirect) {
+        public Builder domainRedirect(@Nullable Output<DomainRedirectArgs> domainRedirect) {
             this.domainRedirect = domainRedirect;
             return this;
         }
 
         public Builder domainRedirect(@Nullable DomainRedirectArgs domainRedirect) {
-            this.domainRedirect = Input.ofNullable(domainRedirect);
+            this.domainRedirect = Output.ofNullable(domainRedirect);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder site(Input<String> site) {
+        public Builder site(Output<String> site) {
             this.site = Objects.requireNonNull(site);
             return this;
         }
 
         public Builder site(String site) {
-            this.site = Input.of(Objects.requireNonNull(site));
+            this.site = Output.of(Objects.requireNonNull(site));
             return this;
         }
 
-        public Builder siteId(Input<String> siteId) {
+        public Builder siteId(Output<String> siteId) {
             this.siteId = Objects.requireNonNull(siteId);
             return this;
         }
 
         public Builder siteId(String siteId) {
-            this.siteId = Input.of(Objects.requireNonNull(siteId));
+            this.siteId = Output.of(Objects.requireNonNull(siteId));
             return this;
         }
         public DomainArgs build() {

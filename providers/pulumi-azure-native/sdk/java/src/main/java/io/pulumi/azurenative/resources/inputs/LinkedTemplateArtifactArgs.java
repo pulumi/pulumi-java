@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.resources.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class LinkedTemplateArtifactArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="path", required=true)
-      private final Input<String> path;
+      private final Output<String> path;
 
-    public Input<String> getPath() {
+    public Output<String> getPath() {
         return this.path;
     }
 
@@ -34,22 +34,22 @@ public final class LinkedTemplateArtifactArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="template", required=true)
-      private final Input<Object> template;
+      private final Output<Object> template;
 
-    public Input<Object> getTemplate() {
+    public Output<Object> getTemplate() {
         return this.template;
     }
 
     public LinkedTemplateArtifactArgs(
-        Input<String> path,
-        Input<Object> template) {
+        Output<String> path,
+        Output<Object> template) {
         this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
         this.template = Objects.requireNonNull(template, "expected parameter 'template' to be non-null");
     }
 
     private LinkedTemplateArtifactArgs() {
-        this.path = Input.empty();
-        this.template = Input.empty();
+        this.path = Output.empty();
+        this.template = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class LinkedTemplateArtifactArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> path;
-        private Input<Object> template;
+        private Output<String> path;
+        private Output<Object> template;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class LinkedTemplateArtifactArgs extends io.pulumi.resources.Resour
     	      this.template = defaults.template;
         }
 
-        public Builder path(Input<String> path) {
+        public Builder path(Output<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
         public Builder path(String path) {
-            this.path = Input.of(Objects.requireNonNull(path));
+            this.path = Output.of(Objects.requireNonNull(path));
             return this;
         }
 
-        public Builder template(Input<Object> template) {
+        public Builder template(Output<Object> template) {
             this.template = Objects.requireNonNull(template);
             return this;
         }
 
         public Builder template(Object template) {
-            this.template = Input.of(Objects.requireNonNull(template));
+            this.template = Output.of(Objects.requireNonNull(template));
             return this;
         }
         public LinkedTemplateArtifactArgs build() {

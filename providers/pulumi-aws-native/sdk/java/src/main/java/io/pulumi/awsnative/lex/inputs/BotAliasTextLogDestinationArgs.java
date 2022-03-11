@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.inputs.BotAliasCloudWatchLogGroupLogDestinationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class BotAliasTextLogDestinationArgs extends io.pulumi.resources.Re
     public static final BotAliasTextLogDestinationArgs Empty = new BotAliasTextLogDestinationArgs();
 
     @InputImport(name="cloudWatch")
-      private final @Nullable Input<BotAliasCloudWatchLogGroupLogDestinationArgs> cloudWatch;
+      private final @Nullable Output<BotAliasCloudWatchLogGroupLogDestinationArgs> cloudWatch;
 
-    public Input<BotAliasCloudWatchLogGroupLogDestinationArgs> getCloudWatch() {
-        return this.cloudWatch == null ? Input.empty() : this.cloudWatch;
+    public Output<BotAliasCloudWatchLogGroupLogDestinationArgs> getCloudWatch() {
+        return this.cloudWatch == null ? Output.empty() : this.cloudWatch;
     }
 
-    public BotAliasTextLogDestinationArgs(@Nullable Input<BotAliasCloudWatchLogGroupLogDestinationArgs> cloudWatch) {
+    public BotAliasTextLogDestinationArgs(@Nullable Output<BotAliasCloudWatchLogGroupLogDestinationArgs> cloudWatch) {
         this.cloudWatch = cloudWatch;
     }
 
     private BotAliasTextLogDestinationArgs() {
-        this.cloudWatch = Input.empty();
+        this.cloudWatch = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class BotAliasTextLogDestinationArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<BotAliasCloudWatchLogGroupLogDestinationArgs> cloudWatch;
+        private @Nullable Output<BotAliasCloudWatchLogGroupLogDestinationArgs> cloudWatch;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class BotAliasTextLogDestinationArgs extends io.pulumi.resources.Re
     	      this.cloudWatch = defaults.cloudWatch;
         }
 
-        public Builder cloudWatch(@Nullable Input<BotAliasCloudWatchLogGroupLogDestinationArgs> cloudWatch) {
+        public Builder cloudWatch(@Nullable Output<BotAliasCloudWatchLogGroupLogDestinationArgs> cloudWatch) {
             this.cloudWatch = cloudWatch;
             return this;
         }
 
         public Builder cloudWatch(@Nullable BotAliasCloudWatchLogGroupLogDestinationArgs cloudWatch) {
-            this.cloudWatch = Input.ofNullable(cloudWatch);
+            this.cloudWatch = Output.ofNullable(cloudWatch);
             return this;
         }
         public BotAliasTextLogDestinationArgs build() {

@@ -6,7 +6,6 @@ package io.pulumi.azurenative.storage;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.storage.QueueArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -127,24 +126,24 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Queue(String name, QueueArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:storage:Queue", name, args == null ? QueueArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:storage:Queue", name, args == null ? QueueArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Queue(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Queue(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:storage:Queue", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:storage/v20190601:Queue").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20200801preview:Queue").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20210101:Queue").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20210201:Queue").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20210401:Queue").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20210601:Queue").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20210801:Queue").build())
+                Output.of(Alias.builder().setType("azure-native:storage/v20190601:Queue").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20200801preview:Queue").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20210101:Queue").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20210201:Queue").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20210401:Queue").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20210601:Queue").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20210801:Queue").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -158,7 +157,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Queue get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Queue get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Queue(name, id, options);
     }
 }

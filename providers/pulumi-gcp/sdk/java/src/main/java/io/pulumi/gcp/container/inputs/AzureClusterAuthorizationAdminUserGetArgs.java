@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class AzureClusterAuthorizationAdminUserGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="username", required=true)
-      private final Input<String> username;
+      private final Output<String> username;
 
-    public Input<String> getUsername() {
+    public Output<String> getUsername() {
         return this.username;
     }
 
-    public AzureClusterAuthorizationAdminUserGetArgs(Input<String> username) {
+    public AzureClusterAuthorizationAdminUserGetArgs(Output<String> username) {
         this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
     }
 
     private AzureClusterAuthorizationAdminUserGetArgs() {
-        this.username = Input.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class AzureClusterAuthorizationAdminUserGetArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private Input<String> username;
+        private Output<String> username;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class AzureClusterAuthorizationAdminUserGetArgs extends io.pulumi.r
     	      this.username = defaults.username;
         }
 
-        public Builder username(Input<String> username) {
+        public Builder username(Output<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
 
         public Builder username(String username) {
-            this.username = Input.of(Objects.requireNonNull(username));
+            this.username = Output.of(Objects.requireNonNull(username));
             return this;
         }
         public AzureClusterAuthorizationAdminUserGetArgs build() {

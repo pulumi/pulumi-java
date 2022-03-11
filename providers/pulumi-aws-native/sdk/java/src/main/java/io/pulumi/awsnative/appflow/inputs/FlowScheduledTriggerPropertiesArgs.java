@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.awsnative.appflow.enums.FlowScheduledTriggerPropertiesDataPullMode;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -21,54 +21,54 @@ public final class FlowScheduledTriggerPropertiesArgs extends io.pulumi.resource
     public static final FlowScheduledTriggerPropertiesArgs Empty = new FlowScheduledTriggerPropertiesArgs();
 
     @InputImport(name="dataPullMode")
-      private final @Nullable Input<FlowScheduledTriggerPropertiesDataPullMode> dataPullMode;
+      private final @Nullable Output<FlowScheduledTriggerPropertiesDataPullMode> dataPullMode;
 
-    public Input<FlowScheduledTriggerPropertiesDataPullMode> getDataPullMode() {
-        return this.dataPullMode == null ? Input.empty() : this.dataPullMode;
+    public Output<FlowScheduledTriggerPropertiesDataPullMode> getDataPullMode() {
+        return this.dataPullMode == null ? Output.empty() : this.dataPullMode;
     }
 
     @InputImport(name="scheduleEndTime")
-      private final @Nullable Input<Double> scheduleEndTime;
+      private final @Nullable Output<Double> scheduleEndTime;
 
-    public Input<Double> getScheduleEndTime() {
-        return this.scheduleEndTime == null ? Input.empty() : this.scheduleEndTime;
+    public Output<Double> getScheduleEndTime() {
+        return this.scheduleEndTime == null ? Output.empty() : this.scheduleEndTime;
     }
 
     @InputImport(name="scheduleExpression", required=true)
-      private final Input<String> scheduleExpression;
+      private final Output<String> scheduleExpression;
 
-    public Input<String> getScheduleExpression() {
+    public Output<String> getScheduleExpression() {
         return this.scheduleExpression;
     }
 
     @InputImport(name="scheduleOffset")
-      private final @Nullable Input<Double> scheduleOffset;
+      private final @Nullable Output<Double> scheduleOffset;
 
-    public Input<Double> getScheduleOffset() {
-        return this.scheduleOffset == null ? Input.empty() : this.scheduleOffset;
+    public Output<Double> getScheduleOffset() {
+        return this.scheduleOffset == null ? Output.empty() : this.scheduleOffset;
     }
 
     @InputImport(name="scheduleStartTime")
-      private final @Nullable Input<Double> scheduleStartTime;
+      private final @Nullable Output<Double> scheduleStartTime;
 
-    public Input<Double> getScheduleStartTime() {
-        return this.scheduleStartTime == null ? Input.empty() : this.scheduleStartTime;
+    public Output<Double> getScheduleStartTime() {
+        return this.scheduleStartTime == null ? Output.empty() : this.scheduleStartTime;
     }
 
     @InputImport(name="timeZone")
-      private final @Nullable Input<String> timeZone;
+      private final @Nullable Output<String> timeZone;
 
-    public Input<String> getTimeZone() {
-        return this.timeZone == null ? Input.empty() : this.timeZone;
+    public Output<String> getTimeZone() {
+        return this.timeZone == null ? Output.empty() : this.timeZone;
     }
 
     public FlowScheduledTriggerPropertiesArgs(
-        @Nullable Input<FlowScheduledTriggerPropertiesDataPullMode> dataPullMode,
-        @Nullable Input<Double> scheduleEndTime,
-        Input<String> scheduleExpression,
-        @Nullable Input<Double> scheduleOffset,
-        @Nullable Input<Double> scheduleStartTime,
-        @Nullable Input<String> timeZone) {
+        @Nullable Output<FlowScheduledTriggerPropertiesDataPullMode> dataPullMode,
+        @Nullable Output<Double> scheduleEndTime,
+        Output<String> scheduleExpression,
+        @Nullable Output<Double> scheduleOffset,
+        @Nullable Output<Double> scheduleStartTime,
+        @Nullable Output<String> timeZone) {
         this.dataPullMode = dataPullMode;
         this.scheduleEndTime = scheduleEndTime;
         this.scheduleExpression = Objects.requireNonNull(scheduleExpression, "expected parameter 'scheduleExpression' to be non-null");
@@ -78,12 +78,12 @@ public final class FlowScheduledTriggerPropertiesArgs extends io.pulumi.resource
     }
 
     private FlowScheduledTriggerPropertiesArgs() {
-        this.dataPullMode = Input.empty();
-        this.scheduleEndTime = Input.empty();
-        this.scheduleExpression = Input.empty();
-        this.scheduleOffset = Input.empty();
-        this.scheduleStartTime = Input.empty();
-        this.timeZone = Input.empty();
+        this.dataPullMode = Output.empty();
+        this.scheduleEndTime = Output.empty();
+        this.scheduleExpression = Output.empty();
+        this.scheduleOffset = Output.empty();
+        this.scheduleStartTime = Output.empty();
+        this.timeZone = Output.empty();
     }
 
     public static Builder builder() {
@@ -95,12 +95,12 @@ public final class FlowScheduledTriggerPropertiesArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<FlowScheduledTriggerPropertiesDataPullMode> dataPullMode;
-        private @Nullable Input<Double> scheduleEndTime;
-        private Input<String> scheduleExpression;
-        private @Nullable Input<Double> scheduleOffset;
-        private @Nullable Input<Double> scheduleStartTime;
-        private @Nullable Input<String> timeZone;
+        private @Nullable Output<FlowScheduledTriggerPropertiesDataPullMode> dataPullMode;
+        private @Nullable Output<Double> scheduleEndTime;
+        private Output<String> scheduleExpression;
+        private @Nullable Output<Double> scheduleOffset;
+        private @Nullable Output<Double> scheduleStartTime;
+        private @Nullable Output<String> timeZone;
 
         public Builder() {
     	      // Empty
@@ -116,63 +116,63 @@ public final class FlowScheduledTriggerPropertiesArgs extends io.pulumi.resource
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder dataPullMode(@Nullable Input<FlowScheduledTriggerPropertiesDataPullMode> dataPullMode) {
+        public Builder dataPullMode(@Nullable Output<FlowScheduledTriggerPropertiesDataPullMode> dataPullMode) {
             this.dataPullMode = dataPullMode;
             return this;
         }
 
         public Builder dataPullMode(@Nullable FlowScheduledTriggerPropertiesDataPullMode dataPullMode) {
-            this.dataPullMode = Input.ofNullable(dataPullMode);
+            this.dataPullMode = Output.ofNullable(dataPullMode);
             return this;
         }
 
-        public Builder scheduleEndTime(@Nullable Input<Double> scheduleEndTime) {
+        public Builder scheduleEndTime(@Nullable Output<Double> scheduleEndTime) {
             this.scheduleEndTime = scheduleEndTime;
             return this;
         }
 
         public Builder scheduleEndTime(@Nullable Double scheduleEndTime) {
-            this.scheduleEndTime = Input.ofNullable(scheduleEndTime);
+            this.scheduleEndTime = Output.ofNullable(scheduleEndTime);
             return this;
         }
 
-        public Builder scheduleExpression(Input<String> scheduleExpression) {
+        public Builder scheduleExpression(Output<String> scheduleExpression) {
             this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
             return this;
         }
 
         public Builder scheduleExpression(String scheduleExpression) {
-            this.scheduleExpression = Input.of(Objects.requireNonNull(scheduleExpression));
+            this.scheduleExpression = Output.of(Objects.requireNonNull(scheduleExpression));
             return this;
         }
 
-        public Builder scheduleOffset(@Nullable Input<Double> scheduleOffset) {
+        public Builder scheduleOffset(@Nullable Output<Double> scheduleOffset) {
             this.scheduleOffset = scheduleOffset;
             return this;
         }
 
         public Builder scheduleOffset(@Nullable Double scheduleOffset) {
-            this.scheduleOffset = Input.ofNullable(scheduleOffset);
+            this.scheduleOffset = Output.ofNullable(scheduleOffset);
             return this;
         }
 
-        public Builder scheduleStartTime(@Nullable Input<Double> scheduleStartTime) {
+        public Builder scheduleStartTime(@Nullable Output<Double> scheduleStartTime) {
             this.scheduleStartTime = scheduleStartTime;
             return this;
         }
 
         public Builder scheduleStartTime(@Nullable Double scheduleStartTime) {
-            this.scheduleStartTime = Input.ofNullable(scheduleStartTime);
+            this.scheduleStartTime = Output.ofNullable(scheduleStartTime);
             return this;
         }
 
-        public Builder timeZone(@Nullable Input<String> timeZone) {
+        public Builder timeZone(@Nullable Output<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
 
         public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = Input.ofNullable(timeZone);
+            this.timeZone = Output.ofNullable(timeZone);
             return this;
         }
         public FlowScheduledTriggerPropertiesArgs build() {

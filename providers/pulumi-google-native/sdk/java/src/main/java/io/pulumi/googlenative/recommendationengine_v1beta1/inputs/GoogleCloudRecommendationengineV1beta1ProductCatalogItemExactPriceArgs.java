@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.recommendationengine_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExact
      * 
      */
     @InputImport(name="displayPrice")
-      private final @Nullable Input<Double> displayPrice;
+      private final @Nullable Output<Double> displayPrice;
 
-    public Input<Double> getDisplayPrice() {
-        return this.displayPrice == null ? Input.empty() : this.displayPrice;
+    public Output<Double> getDisplayPrice() {
+        return this.displayPrice == null ? Output.empty() : this.displayPrice;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExact
      * 
      */
     @InputImport(name="originalPrice")
-      private final @Nullable Input<Double> originalPrice;
+      private final @Nullable Output<Double> originalPrice;
 
-    public Input<Double> getOriginalPrice() {
-        return this.originalPrice == null ? Input.empty() : this.originalPrice;
+    public Output<Double> getOriginalPrice() {
+        return this.originalPrice == null ? Output.empty() : this.originalPrice;
     }
 
     public GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs(
-        @Nullable Input<Double> displayPrice,
-        @Nullable Input<Double> originalPrice) {
+        @Nullable Output<Double> displayPrice,
+        @Nullable Output<Double> originalPrice) {
         this.displayPrice = displayPrice;
         this.originalPrice = originalPrice;
     }
 
     private GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs() {
-        this.displayPrice = Input.empty();
-        this.originalPrice = Input.empty();
+        this.displayPrice = Output.empty();
+        this.originalPrice = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExact
     }
 
     public static final class Builder {
-        private @Nullable Input<Double> displayPrice;
-        private @Nullable Input<Double> originalPrice;
+        private @Nullable Output<Double> displayPrice;
+        private @Nullable Output<Double> originalPrice;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExact
     	      this.originalPrice = defaults.originalPrice;
         }
 
-        public Builder displayPrice(@Nullable Input<Double> displayPrice) {
+        public Builder displayPrice(@Nullable Output<Double> displayPrice) {
             this.displayPrice = displayPrice;
             return this;
         }
 
         public Builder displayPrice(@Nullable Double displayPrice) {
-            this.displayPrice = Input.ofNullable(displayPrice);
+            this.displayPrice = Output.ofNullable(displayPrice);
             return this;
         }
 
-        public Builder originalPrice(@Nullable Input<Double> originalPrice) {
+        public Builder originalPrice(@Nullable Output<Double> originalPrice) {
             this.originalPrice = originalPrice;
             return this;
         }
 
         public Builder originalPrice(@Nullable Double originalPrice) {
-            this.originalPrice = Input.ofNullable(originalPrice);
+            this.originalPrice = Output.ofNullable(originalPrice);
             return this;
         }
         public GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs build() {

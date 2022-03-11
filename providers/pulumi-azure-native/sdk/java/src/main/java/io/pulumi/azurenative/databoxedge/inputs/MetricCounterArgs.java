@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.azurenative.databoxedge.inputs.MetricDimensionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class MetricCounterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="additionalDimensions")
-      private final @Nullable Input<List<MetricDimensionArgs>> additionalDimensions;
+      private final @Nullable Output<List<MetricDimensionArgs>> additionalDimensions;
 
-    public Input<List<MetricDimensionArgs>> getAdditionalDimensions() {
-        return this.additionalDimensions == null ? Input.empty() : this.additionalDimensions;
+    public Output<List<MetricDimensionArgs>> getAdditionalDimensions() {
+        return this.additionalDimensions == null ? Output.empty() : this.additionalDimensions;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class MetricCounterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dimensionFilter")
-      private final @Nullable Input<List<MetricDimensionArgs>> dimensionFilter;
+      private final @Nullable Output<List<MetricDimensionArgs>> dimensionFilter;
 
-    public Input<List<MetricDimensionArgs>> getDimensionFilter() {
-        return this.dimensionFilter == null ? Input.empty() : this.dimensionFilter;
+    public Output<List<MetricDimensionArgs>> getDimensionFilter() {
+        return this.dimensionFilter == null ? Output.empty() : this.dimensionFilter;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class MetricCounterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instance")
-      private final @Nullable Input<String> instance;
+      private final @Nullable Output<String> instance;
 
-    public Input<String> getInstance() {
-        return this.instance == null ? Input.empty() : this.instance;
+    public Output<String> getInstance() {
+        return this.instance == null ? Output.empty() : this.instance;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class MetricCounterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     public MetricCounterArgs(
-        @Nullable Input<List<MetricDimensionArgs>> additionalDimensions,
-        @Nullable Input<List<MetricDimensionArgs>> dimensionFilter,
-        @Nullable Input<String> instance,
-        Input<String> name) {
+        @Nullable Output<List<MetricDimensionArgs>> additionalDimensions,
+        @Nullable Output<List<MetricDimensionArgs>> dimensionFilter,
+        @Nullable Output<String> instance,
+        Output<String> name) {
         this.additionalDimensions = additionalDimensions;
         this.dimensionFilter = dimensionFilter;
         this.instance = instance;
@@ -76,10 +76,10 @@ public final class MetricCounterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MetricCounterArgs() {
-        this.additionalDimensions = Input.empty();
-        this.dimensionFilter = Input.empty();
-        this.instance = Input.empty();
-        this.name = Input.empty();
+        this.additionalDimensions = Output.empty();
+        this.dimensionFilter = Output.empty();
+        this.instance = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class MetricCounterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<MetricDimensionArgs>> additionalDimensions;
-        private @Nullable Input<List<MetricDimensionArgs>> dimensionFilter;
-        private @Nullable Input<String> instance;
-        private Input<String> name;
+        private @Nullable Output<List<MetricDimensionArgs>> additionalDimensions;
+        private @Nullable Output<List<MetricDimensionArgs>> dimensionFilter;
+        private @Nullable Output<String> instance;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class MetricCounterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder additionalDimensions(@Nullable Input<List<MetricDimensionArgs>> additionalDimensions) {
+        public Builder additionalDimensions(@Nullable Output<List<MetricDimensionArgs>> additionalDimensions) {
             this.additionalDimensions = additionalDimensions;
             return this;
         }
 
         public Builder additionalDimensions(@Nullable List<MetricDimensionArgs> additionalDimensions) {
-            this.additionalDimensions = Input.ofNullable(additionalDimensions);
+            this.additionalDimensions = Output.ofNullable(additionalDimensions);
             return this;
         }
 
-        public Builder dimensionFilter(@Nullable Input<List<MetricDimensionArgs>> dimensionFilter) {
+        public Builder dimensionFilter(@Nullable Output<List<MetricDimensionArgs>> dimensionFilter) {
             this.dimensionFilter = dimensionFilter;
             return this;
         }
 
         public Builder dimensionFilter(@Nullable List<MetricDimensionArgs> dimensionFilter) {
-            this.dimensionFilter = Input.ofNullable(dimensionFilter);
+            this.dimensionFilter = Output.ofNullable(dimensionFilter);
             return this;
         }
 
-        public Builder instance(@Nullable Input<String> instance) {
+        public Builder instance(@Nullable Output<String> instance) {
             this.instance = instance;
             return this;
         }
 
         public Builder instance(@Nullable String instance) {
-            this.instance = Input.ofNullable(instance);
+            this.instance = Output.ofNullable(instance);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public MetricCounterArgs build() {

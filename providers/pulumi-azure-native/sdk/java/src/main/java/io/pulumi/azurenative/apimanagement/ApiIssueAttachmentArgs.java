@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="apiId", required=true)
-      private final Input<String> apiId;
+      private final Output<String> apiId;
 
-    public Input<String> getApiId() {
+    public Output<String> getApiId() {
         return this.apiId;
     }
 
@@ -30,10 +30,10 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="attachmentId")
-      private final @Nullable Input<String> attachmentId;
+      private final @Nullable Output<String> attachmentId;
 
-    public Input<String> getAttachmentId() {
-        return this.attachmentId == null ? Input.empty() : this.attachmentId;
+    public Output<String> getAttachmentId() {
+        return this.attachmentId == null ? Output.empty() : this.attachmentId;
     }
 
     /**
@@ -41,9 +41,9 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="content", required=true)
-      private final Input<String> content;
+      private final Output<String> content;
 
-    public Input<String> getContent() {
+    public Output<String> getContent() {
         return this.content;
     }
 
@@ -52,9 +52,9 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="contentFormat", required=true)
-      private final Input<String> contentFormat;
+      private final Output<String> contentFormat;
 
-    public Input<String> getContentFormat() {
+    public Output<String> getContentFormat() {
         return this.contentFormat;
     }
 
@@ -63,9 +63,9 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="issueId", required=true)
-      private final Input<String> issueId;
+      private final Output<String> issueId;
 
-    public Input<String> getIssueId() {
+    public Output<String> getIssueId() {
         return this.issueId;
     }
 
@@ -74,9 +74,9 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -85,9 +85,9 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="serviceName", required=true)
-      private final Input<String> serviceName;
+      private final Output<String> serviceName;
 
-    public Input<String> getServiceName() {
+    public Output<String> getServiceName() {
         return this.serviceName;
     }
 
@@ -96,21 +96,21 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="title", required=true)
-      private final Input<String> title;
+      private final Output<String> title;
 
-    public Input<String> getTitle() {
+    public Output<String> getTitle() {
         return this.title;
     }
 
     public ApiIssueAttachmentArgs(
-        Input<String> apiId,
-        @Nullable Input<String> attachmentId,
-        Input<String> content,
-        Input<String> contentFormat,
-        Input<String> issueId,
-        Input<String> resourceGroupName,
-        Input<String> serviceName,
-        Input<String> title) {
+        Output<String> apiId,
+        @Nullable Output<String> attachmentId,
+        Output<String> content,
+        Output<String> contentFormat,
+        Output<String> issueId,
+        Output<String> resourceGroupName,
+        Output<String> serviceName,
+        Output<String> title) {
         this.apiId = Objects.requireNonNull(apiId, "expected parameter 'apiId' to be non-null");
         this.attachmentId = attachmentId;
         this.content = Objects.requireNonNull(content, "expected parameter 'content' to be non-null");
@@ -122,14 +122,14 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ApiIssueAttachmentArgs() {
-        this.apiId = Input.empty();
-        this.attachmentId = Input.empty();
-        this.content = Input.empty();
-        this.contentFormat = Input.empty();
-        this.issueId = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serviceName = Input.empty();
-        this.title = Input.empty();
+        this.apiId = Output.empty();
+        this.attachmentId = Output.empty();
+        this.content = Output.empty();
+        this.contentFormat = Output.empty();
+        this.issueId = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serviceName = Output.empty();
+        this.title = Output.empty();
     }
 
     public static Builder builder() {
@@ -141,14 +141,14 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> apiId;
-        private @Nullable Input<String> attachmentId;
-        private Input<String> content;
-        private Input<String> contentFormat;
-        private Input<String> issueId;
-        private Input<String> resourceGroupName;
-        private Input<String> serviceName;
-        private Input<String> title;
+        private Output<String> apiId;
+        private @Nullable Output<String> attachmentId;
+        private Output<String> content;
+        private Output<String> contentFormat;
+        private Output<String> issueId;
+        private Output<String> resourceGroupName;
+        private Output<String> serviceName;
+        private Output<String> title;
 
         public Builder() {
     	      // Empty
@@ -166,83 +166,83 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
     	      this.title = defaults.title;
         }
 
-        public Builder apiId(Input<String> apiId) {
+        public Builder apiId(Output<String> apiId) {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
 
         public Builder apiId(String apiId) {
-            this.apiId = Input.of(Objects.requireNonNull(apiId));
+            this.apiId = Output.of(Objects.requireNonNull(apiId));
             return this;
         }
 
-        public Builder attachmentId(@Nullable Input<String> attachmentId) {
+        public Builder attachmentId(@Nullable Output<String> attachmentId) {
             this.attachmentId = attachmentId;
             return this;
         }
 
         public Builder attachmentId(@Nullable String attachmentId) {
-            this.attachmentId = Input.ofNullable(attachmentId);
+            this.attachmentId = Output.ofNullable(attachmentId);
             return this;
         }
 
-        public Builder content(Input<String> content) {
+        public Builder content(Output<String> content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
         public Builder content(String content) {
-            this.content = Input.of(Objects.requireNonNull(content));
+            this.content = Output.of(Objects.requireNonNull(content));
             return this;
         }
 
-        public Builder contentFormat(Input<String> contentFormat) {
+        public Builder contentFormat(Output<String> contentFormat) {
             this.contentFormat = Objects.requireNonNull(contentFormat);
             return this;
         }
 
         public Builder contentFormat(String contentFormat) {
-            this.contentFormat = Input.of(Objects.requireNonNull(contentFormat));
+            this.contentFormat = Output.of(Objects.requireNonNull(contentFormat));
             return this;
         }
 
-        public Builder issueId(Input<String> issueId) {
+        public Builder issueId(Output<String> issueId) {
             this.issueId = Objects.requireNonNull(issueId);
             return this;
         }
 
         public Builder issueId(String issueId) {
-            this.issueId = Input.of(Objects.requireNonNull(issueId));
+            this.issueId = Output.of(Objects.requireNonNull(issueId));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serviceName(Input<String> serviceName) {
+        public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Input.of(Objects.requireNonNull(serviceName));
+            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder title(Input<String> title) {
+        public Builder title(Output<String> title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
 
         public Builder title(String title) {
-            this.title = Input.of(Objects.requireNonNull(title));
+            this.title = Output.of(Objects.requireNonNull(title));
             return this;
         }
         public ApiIssueAttachmentArgs build() {

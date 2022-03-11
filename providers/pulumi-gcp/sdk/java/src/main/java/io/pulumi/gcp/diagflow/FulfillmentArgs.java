@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.diagflow.inputs.FulfillmentFeatureArgs;
 import io.pulumi.gcp.diagflow.inputs.FulfillmentGenericWebServiceArgs;
@@ -23,9 +23,9 @@ public final class FulfillmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -34,10 +34,10 @@ public final class FulfillmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class FulfillmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="features")
-      private final @Nullable Input<List<FulfillmentFeatureArgs>> features;
+      private final @Nullable Output<List<FulfillmentFeatureArgs>> features;
 
-    public Input<List<FulfillmentFeatureArgs>> getFeatures() {
-        return this.features == null ? Input.empty() : this.features;
+    public Output<List<FulfillmentFeatureArgs>> getFeatures() {
+        return this.features == null ? Output.empty() : this.features;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class FulfillmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="genericWebService")
-      private final @Nullable Input<FulfillmentGenericWebServiceArgs> genericWebService;
+      private final @Nullable Output<FulfillmentGenericWebServiceArgs> genericWebService;
 
-    public Input<FulfillmentGenericWebServiceArgs> getGenericWebService() {
-        return this.genericWebService == null ? Input.empty() : this.genericWebService;
+    public Output<FulfillmentGenericWebServiceArgs> getGenericWebService() {
+        return this.genericWebService == null ? Output.empty() : this.genericWebService;
     }
 
     /**
@@ -70,18 +70,18 @@ public final class FulfillmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public FulfillmentArgs(
-        Input<String> displayName,
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<List<FulfillmentFeatureArgs>> features,
-        @Nullable Input<FulfillmentGenericWebServiceArgs> genericWebService,
-        @Nullable Input<String> project) {
+        Output<String> displayName,
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<List<FulfillmentFeatureArgs>> features,
+        @Nullable Output<FulfillmentGenericWebServiceArgs> genericWebService,
+        @Nullable Output<String> project) {
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
         this.enabled = enabled;
         this.features = features;
@@ -90,11 +90,11 @@ public final class FulfillmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FulfillmentArgs() {
-        this.displayName = Input.empty();
-        this.enabled = Input.empty();
-        this.features = Input.empty();
-        this.genericWebService = Input.empty();
-        this.project = Input.empty();
+        this.displayName = Output.empty();
+        this.enabled = Output.empty();
+        this.features = Output.empty();
+        this.genericWebService = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,11 +106,11 @@ public final class FulfillmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> displayName;
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<List<FulfillmentFeatureArgs>> features;
-        private @Nullable Input<FulfillmentGenericWebServiceArgs> genericWebService;
-        private @Nullable Input<String> project;
+        private Output<String> displayName;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<List<FulfillmentFeatureArgs>> features;
+        private @Nullable Output<FulfillmentGenericWebServiceArgs> genericWebService;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -125,53 +125,53 @@ public final class FulfillmentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder features(@Nullable Input<List<FulfillmentFeatureArgs>> features) {
+        public Builder features(@Nullable Output<List<FulfillmentFeatureArgs>> features) {
             this.features = features;
             return this;
         }
 
         public Builder features(@Nullable List<FulfillmentFeatureArgs> features) {
-            this.features = Input.ofNullable(features);
+            this.features = Output.ofNullable(features);
             return this;
         }
 
-        public Builder genericWebService(@Nullable Input<FulfillmentGenericWebServiceArgs> genericWebService) {
+        public Builder genericWebService(@Nullable Output<FulfillmentGenericWebServiceArgs> genericWebService) {
             this.genericWebService = genericWebService;
             return this;
         }
 
         public Builder genericWebService(@Nullable FulfillmentGenericWebServiceArgs genericWebService) {
-            this.genericWebService = Input.ofNullable(genericWebService);
+            this.genericWebService = Output.ofNullable(genericWebService);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public FulfillmentArgs build() {

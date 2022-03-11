@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class WorkloadIdentityConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="workloadPool")
-      private final @Nullable Input<String> workloadPool;
+      private final @Nullable Output<String> workloadPool;
 
-    public Input<String> getWorkloadPool() {
-        return this.workloadPool == null ? Input.empty() : this.workloadPool;
+    public Output<String> getWorkloadPool() {
+        return this.workloadPool == null ? Output.empty() : this.workloadPool;
     }
 
-    public WorkloadIdentityConfigArgs(@Nullable Input<String> workloadPool) {
+    public WorkloadIdentityConfigArgs(@Nullable Output<String> workloadPool) {
         this.workloadPool = workloadPool;
     }
 
     private WorkloadIdentityConfigArgs() {
-        this.workloadPool = Input.empty();
+        this.workloadPool = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class WorkloadIdentityConfigArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> workloadPool;
+        private @Nullable Output<String> workloadPool;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class WorkloadIdentityConfigArgs extends io.pulumi.resources.Resour
     	      this.workloadPool = defaults.workloadPool;
         }
 
-        public Builder workloadPool(@Nullable Input<String> workloadPool) {
+        public Builder workloadPool(@Nullable Output<String> workloadPool) {
             this.workloadPool = workloadPool;
             return this;
         }
 
         public Builder workloadPool(@Nullable String workloadPool) {
-            this.workloadPool = Input.ofNullable(workloadPool);
+            this.workloadPool = Output.ofNullable(workloadPool);
             return this;
         }
         public WorkloadIdentityConfigArgs build() {

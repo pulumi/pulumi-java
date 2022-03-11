@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class LogsPanelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filter")
-      private final @Nullable Input<String> filter;
+      private final @Nullable Output<String> filter;
 
-    public Input<String> getFilter() {
-        return this.filter == null ? Input.empty() : this.filter;
+    public Output<String> getFilter() {
+        return this.filter == null ? Output.empty() : this.filter;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class LogsPanelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceNames")
-      private final @Nullable Input<List<String>> resourceNames;
+      private final @Nullable Output<List<String>> resourceNames;
 
-    public Input<List<String>> getResourceNames() {
-        return this.resourceNames == null ? Input.empty() : this.resourceNames;
+    public Output<List<String>> getResourceNames() {
+        return this.resourceNames == null ? Output.empty() : this.resourceNames;
     }
 
     public LogsPanelArgs(
-        @Nullable Input<String> filter,
-        @Nullable Input<List<String>> resourceNames) {
+        @Nullable Output<String> filter,
+        @Nullable Output<List<String>> resourceNames) {
         this.filter = filter;
         this.resourceNames = resourceNames;
     }
 
     private LogsPanelArgs() {
-        this.filter = Input.empty();
-        this.resourceNames = Input.empty();
+        this.filter = Output.empty();
+        this.resourceNames = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class LogsPanelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> filter;
-        private @Nullable Input<List<String>> resourceNames;
+        private @Nullable Output<String> filter;
+        private @Nullable Output<List<String>> resourceNames;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class LogsPanelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceNames = defaults.resourceNames;
         }
 
-        public Builder filter(@Nullable Input<String> filter) {
+        public Builder filter(@Nullable Output<String> filter) {
             this.filter = filter;
             return this;
         }
 
         public Builder filter(@Nullable String filter) {
-            this.filter = Input.ofNullable(filter);
+            this.filter = Output.ofNullable(filter);
             return this;
         }
 
-        public Builder resourceNames(@Nullable Input<List<String>> resourceNames) {
+        public Builder resourceNames(@Nullable Output<List<String>> resourceNames) {
             this.resourceNames = resourceNames;
             return this;
         }
 
         public Builder resourceNames(@Nullable List<String> resourceNames) {
-            this.resourceNames = Input.ofNullable(resourceNames);
+            this.resourceNames = Output.ofNullable(resourceNames);
             return this;
         }
         public LogsPanelArgs build() {

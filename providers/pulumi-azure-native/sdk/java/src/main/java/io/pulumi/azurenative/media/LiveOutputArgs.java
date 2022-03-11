@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media;
 
 import io.pulumi.azurenative.media.inputs.HlsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -32,9 +32,9 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="archiveWindowLength", required=true)
-      private final Input<String> archiveWindowLength;
+      private final Output<String> archiveWindowLength;
 
-    public Input<String> getArchiveWindowLength() {
+    public Output<String> getArchiveWindowLength() {
         return this.archiveWindowLength;
     }
 
@@ -43,9 +43,9 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assetName", required=true)
-      private final Input<String> assetName;
+      private final Output<String> assetName;
 
-    public Input<String> getAssetName() {
+    public Output<String> getAssetName() {
         return this.assetName;
     }
 
@@ -54,10 +54,10 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hls")
-      private final @Nullable Input<HlsArgs> hls;
+      private final @Nullable Output<HlsArgs> hls;
 
-    public Input<HlsArgs> getHls() {
-        return this.hls == null ? Input.empty() : this.hls;
+    public Output<HlsArgs> getHls() {
+        return this.hls == null ? Output.empty() : this.hls;
     }
 
     /**
@@ -76,9 +76,9 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="liveEventName", required=true)
-      private final Input<String> liveEventName;
+      private final Output<String> liveEventName;
 
-    public Input<String> getLiveEventName() {
+    public Output<String> getLiveEventName() {
         return this.liveEventName;
     }
 
@@ -87,10 +87,10 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="liveOutputName")
-      private final @Nullable Input<String> liveOutputName;
+      private final @Nullable Output<String> liveOutputName;
 
-    public Input<String> getLiveOutputName() {
-        return this.liveOutputName == null ? Input.empty() : this.liveOutputName;
+    public Output<String> getLiveOutputName() {
+        return this.liveOutputName == null ? Output.empty() : this.liveOutputName;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="manifestName")
-      private final @Nullable Input<String> manifestName;
+      private final @Nullable Output<String> manifestName;
 
-    public Input<String> getManifestName() {
-        return this.manifestName == null ? Input.empty() : this.manifestName;
+    public Output<String> getManifestName() {
+        return this.manifestName == null ? Output.empty() : this.manifestName;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputSnapTime")
-      private final @Nullable Input<Double> outputSnapTime;
+      private final @Nullable Output<Double> outputSnapTime;
 
-    public Input<Double> getOutputSnapTime() {
-        return this.outputSnapTime == null ? Input.empty() : this.outputSnapTime;
+    public Output<Double> getOutputSnapTime() {
+        return this.outputSnapTime == null ? Output.empty() : this.outputSnapTime;
     }
 
     /**
@@ -120,23 +120,23 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public LiveOutputArgs(
-        Input<String> accountName,
-        Input<String> archiveWindowLength,
-        Input<String> assetName,
-        @Nullable Input<String> description,
-        @Nullable Input<HlsArgs> hls,
-        Input<String> liveEventName,
-        @Nullable Input<String> liveOutputName,
-        @Nullable Input<String> manifestName,
-        @Nullable Input<Double> outputSnapTime,
-        Input<String> resourceGroupName) {
+        Output<String> accountName,
+        Output<String> archiveWindowLength,
+        Output<String> assetName,
+        @Nullable Output<String> description,
+        @Nullable Output<HlsArgs> hls,
+        Output<String> liveEventName,
+        @Nullable Output<String> liveOutputName,
+        @Nullable Output<String> manifestName,
+        @Nullable Output<Double> outputSnapTime,
+        Output<String> resourceGroupName) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.archiveWindowLength = Objects.requireNonNull(archiveWindowLength, "expected parameter 'archiveWindowLength' to be non-null");
         this.assetName = Objects.requireNonNull(assetName, "expected parameter 'assetName' to be non-null");
@@ -150,16 +150,16 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LiveOutputArgs() {
-        this.accountName = Input.empty();
-        this.archiveWindowLength = Input.empty();
-        this.assetName = Input.empty();
-        this.description = Input.empty();
-        this.hls = Input.empty();
-        this.liveEventName = Input.empty();
-        this.liveOutputName = Input.empty();
-        this.manifestName = Input.empty();
-        this.outputSnapTime = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.accountName = Output.empty();
+        this.archiveWindowLength = Output.empty();
+        this.assetName = Output.empty();
+        this.description = Output.empty();
+        this.hls = Output.empty();
+        this.liveEventName = Output.empty();
+        this.liveOutputName = Output.empty();
+        this.manifestName = Output.empty();
+        this.outputSnapTime = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -171,16 +171,16 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private Input<String> archiveWindowLength;
-        private Input<String> assetName;
-        private @Nullable Input<String> description;
-        private @Nullable Input<HlsArgs> hls;
-        private Input<String> liveEventName;
-        private @Nullable Input<String> liveOutputName;
-        private @Nullable Input<String> manifestName;
-        private @Nullable Input<Double> outputSnapTime;
-        private Input<String> resourceGroupName;
+        private Output<String> accountName;
+        private Output<String> archiveWindowLength;
+        private Output<String> assetName;
+        private @Nullable Output<String> description;
+        private @Nullable Output<HlsArgs> hls;
+        private Output<String> liveEventName;
+        private @Nullable Output<String> liveOutputName;
+        private @Nullable Output<String> manifestName;
+        private @Nullable Output<Double> outputSnapTime;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -200,103 +200,103 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder archiveWindowLength(Input<String> archiveWindowLength) {
+        public Builder archiveWindowLength(Output<String> archiveWindowLength) {
             this.archiveWindowLength = Objects.requireNonNull(archiveWindowLength);
             return this;
         }
 
         public Builder archiveWindowLength(String archiveWindowLength) {
-            this.archiveWindowLength = Input.of(Objects.requireNonNull(archiveWindowLength));
+            this.archiveWindowLength = Output.of(Objects.requireNonNull(archiveWindowLength));
             return this;
         }
 
-        public Builder assetName(Input<String> assetName) {
+        public Builder assetName(Output<String> assetName) {
             this.assetName = Objects.requireNonNull(assetName);
             return this;
         }
 
         public Builder assetName(String assetName) {
-            this.assetName = Input.of(Objects.requireNonNull(assetName));
+            this.assetName = Output.of(Objects.requireNonNull(assetName));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder hls(@Nullable Input<HlsArgs> hls) {
+        public Builder hls(@Nullable Output<HlsArgs> hls) {
             this.hls = hls;
             return this;
         }
 
         public Builder hls(@Nullable HlsArgs hls) {
-            this.hls = Input.ofNullable(hls);
+            this.hls = Output.ofNullable(hls);
             return this;
         }
 
-        public Builder liveEventName(Input<String> liveEventName) {
+        public Builder liveEventName(Output<String> liveEventName) {
             this.liveEventName = Objects.requireNonNull(liveEventName);
             return this;
         }
 
         public Builder liveEventName(String liveEventName) {
-            this.liveEventName = Input.of(Objects.requireNonNull(liveEventName));
+            this.liveEventName = Output.of(Objects.requireNonNull(liveEventName));
             return this;
         }
 
-        public Builder liveOutputName(@Nullable Input<String> liveOutputName) {
+        public Builder liveOutputName(@Nullable Output<String> liveOutputName) {
             this.liveOutputName = liveOutputName;
             return this;
         }
 
         public Builder liveOutputName(@Nullable String liveOutputName) {
-            this.liveOutputName = Input.ofNullable(liveOutputName);
+            this.liveOutputName = Output.ofNullable(liveOutputName);
             return this;
         }
 
-        public Builder manifestName(@Nullable Input<String> manifestName) {
+        public Builder manifestName(@Nullable Output<String> manifestName) {
             this.manifestName = manifestName;
             return this;
         }
 
         public Builder manifestName(@Nullable String manifestName) {
-            this.manifestName = Input.ofNullable(manifestName);
+            this.manifestName = Output.ofNullable(manifestName);
             return this;
         }
 
-        public Builder outputSnapTime(@Nullable Input<Double> outputSnapTime) {
+        public Builder outputSnapTime(@Nullable Output<Double> outputSnapTime) {
             this.outputSnapTime = outputSnapTime;
             return this;
         }
 
         public Builder outputSnapTime(@Nullable Double outputSnapTime) {
-            this.outputSnapTime = Input.ofNullable(outputSnapTime);
+            this.outputSnapTime = Output.ofNullable(outputSnapTime);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public LiveOutputArgs build() {

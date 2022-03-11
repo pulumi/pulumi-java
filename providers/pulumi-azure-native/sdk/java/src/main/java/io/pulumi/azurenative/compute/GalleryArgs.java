@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute;
 
 import io.pulumi.azurenative.compute.inputs.SharingProfileArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class GalleryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class GalleryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="galleryName")
-      private final @Nullable Input<String> galleryName;
+      private final @Nullable Output<String> galleryName;
 
-    public Input<String> getGalleryName() {
-        return this.galleryName == null ? Input.empty() : this.galleryName;
+    public Output<String> getGalleryName() {
+        return this.galleryName == null ? Output.empty() : this.galleryName;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class GalleryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -54,9 +54,9 @@ public final class GalleryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -65,10 +65,10 @@ public final class GalleryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sharingProfile")
-      private final @Nullable Input<SharingProfileArgs> sharingProfile;
+      private final @Nullable Output<SharingProfileArgs> sharingProfile;
 
-    public Input<SharingProfileArgs> getSharingProfile() {
-        return this.sharingProfile == null ? Input.empty() : this.sharingProfile;
+    public Output<SharingProfileArgs> getSharingProfile() {
+        return this.sharingProfile == null ? Output.empty() : this.sharingProfile;
     }
 
     /**
@@ -76,19 +76,19 @@ public final class GalleryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public GalleryArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> galleryName,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<SharingProfileArgs> sharingProfile,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> galleryName,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<SharingProfileArgs> sharingProfile,
+        @Nullable Output<Map<String,String>> tags) {
         this.description = description;
         this.galleryName = galleryName;
         this.location = location;
@@ -98,12 +98,12 @@ public final class GalleryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GalleryArgs() {
-        this.description = Input.empty();
-        this.galleryName = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sharingProfile = Input.empty();
-        this.tags = Input.empty();
+        this.description = Output.empty();
+        this.galleryName = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sharingProfile = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class GalleryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> galleryName;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<SharingProfileArgs> sharingProfile;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> galleryName;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<SharingProfileArgs> sharingProfile;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class GalleryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder galleryName(@Nullable Input<String> galleryName) {
+        public Builder galleryName(@Nullable Output<String> galleryName) {
             this.galleryName = galleryName;
             return this;
         }
 
         public Builder galleryName(@Nullable String galleryName) {
-            this.galleryName = Input.ofNullable(galleryName);
+            this.galleryName = Output.ofNullable(galleryName);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sharingProfile(@Nullable Input<SharingProfileArgs> sharingProfile) {
+        public Builder sharingProfile(@Nullable Output<SharingProfileArgs> sharingProfile) {
             this.sharingProfile = sharingProfile;
             return this;
         }
 
         public Builder sharingProfile(@Nullable SharingProfileArgs sharingProfile) {
-            this.sharingProfile = Input.ofNullable(sharingProfile);
+            this.sharingProfile = Output.ofNullable(sharingProfile);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public GalleryArgs build() {

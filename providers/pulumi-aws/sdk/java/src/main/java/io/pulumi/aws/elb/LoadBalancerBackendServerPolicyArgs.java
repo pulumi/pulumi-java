@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elb;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class LoadBalancerBackendServerPolicyArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="instancePort", required=true)
-      private final Input<Integer> instancePort;
+      private final Output<Integer> instancePort;
 
-    public Input<Integer> getInstancePort() {
+    public Output<Integer> getInstancePort() {
         return this.instancePort;
     }
 
@@ -32,9 +32,9 @@ public final class LoadBalancerBackendServerPolicyArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="loadBalancerName", required=true)
-      private final Input<String> loadBalancerName;
+      private final Output<String> loadBalancerName;
 
-    public Input<String> getLoadBalancerName() {
+    public Output<String> getLoadBalancerName() {
         return this.loadBalancerName;
     }
 
@@ -43,25 +43,25 @@ public final class LoadBalancerBackendServerPolicyArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="policyNames")
-      private final @Nullable Input<List<String>> policyNames;
+      private final @Nullable Output<List<String>> policyNames;
 
-    public Input<List<String>> getPolicyNames() {
-        return this.policyNames == null ? Input.empty() : this.policyNames;
+    public Output<List<String>> getPolicyNames() {
+        return this.policyNames == null ? Output.empty() : this.policyNames;
     }
 
     public LoadBalancerBackendServerPolicyArgs(
-        Input<Integer> instancePort,
-        Input<String> loadBalancerName,
-        @Nullable Input<List<String>> policyNames) {
+        Output<Integer> instancePort,
+        Output<String> loadBalancerName,
+        @Nullable Output<List<String>> policyNames) {
         this.instancePort = Objects.requireNonNull(instancePort, "expected parameter 'instancePort' to be non-null");
         this.loadBalancerName = Objects.requireNonNull(loadBalancerName, "expected parameter 'loadBalancerName' to be non-null");
         this.policyNames = policyNames;
     }
 
     private LoadBalancerBackendServerPolicyArgs() {
-        this.instancePort = Input.empty();
-        this.loadBalancerName = Input.empty();
-        this.policyNames = Input.empty();
+        this.instancePort = Output.empty();
+        this.loadBalancerName = Output.empty();
+        this.policyNames = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class LoadBalancerBackendServerPolicyArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<Integer> instancePort;
-        private Input<String> loadBalancerName;
-        private @Nullable Input<List<String>> policyNames;
+        private Output<Integer> instancePort;
+        private Output<String> loadBalancerName;
+        private @Nullable Output<List<String>> policyNames;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class LoadBalancerBackendServerPolicyArgs extends io.pulumi.resourc
     	      this.policyNames = defaults.policyNames;
         }
 
-        public Builder instancePort(Input<Integer> instancePort) {
+        public Builder instancePort(Output<Integer> instancePort) {
             this.instancePort = Objects.requireNonNull(instancePort);
             return this;
         }
 
         public Builder instancePort(Integer instancePort) {
-            this.instancePort = Input.of(Objects.requireNonNull(instancePort));
+            this.instancePort = Output.of(Objects.requireNonNull(instancePort));
             return this;
         }
 
-        public Builder loadBalancerName(Input<String> loadBalancerName) {
+        public Builder loadBalancerName(Output<String> loadBalancerName) {
             this.loadBalancerName = Objects.requireNonNull(loadBalancerName);
             return this;
         }
 
         public Builder loadBalancerName(String loadBalancerName) {
-            this.loadBalancerName = Input.of(Objects.requireNonNull(loadBalancerName));
+            this.loadBalancerName = Output.of(Objects.requireNonNull(loadBalancerName));
             return this;
         }
 
-        public Builder policyNames(@Nullable Input<List<String>> policyNames) {
+        public Builder policyNames(@Nullable Output<List<String>> policyNames) {
             this.policyNames = policyNames;
             return this;
         }
 
         public Builder policyNames(@Nullable List<String> policyNames) {
-            this.policyNames = Input.ofNullable(policyNames);
+            this.policyNames = Output.ofNullable(policyNames);
             return this;
         }
         public LoadBalancerBackendServerPolicyArgs build() {

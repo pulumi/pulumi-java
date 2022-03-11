@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.policy_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class AllowedHostPathArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="pathPrefix")
-      private final @Nullable Input<String> pathPrefix;
+      private final @Nullable Output<String> pathPrefix;
 
-    public Input<String> getPathPrefix() {
-        return this.pathPrefix == null ? Input.empty() : this.pathPrefix;
+    public Output<String> getPathPrefix() {
+        return this.pathPrefix == null ? Output.empty() : this.pathPrefix;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class AllowedHostPathArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="readOnly")
-      private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Output<Boolean> readOnly;
 
-    public Input<Boolean> getReadOnly() {
-        return this.readOnly == null ? Input.empty() : this.readOnly;
+    public Output<Boolean> getReadOnly() {
+        return this.readOnly == null ? Output.empty() : this.readOnly;
     }
 
     public AllowedHostPathArgs(
-        @Nullable Input<String> pathPrefix,
-        @Nullable Input<Boolean> readOnly) {
+        @Nullable Output<String> pathPrefix,
+        @Nullable Output<Boolean> readOnly) {
         this.pathPrefix = pathPrefix;
         this.readOnly = readOnly;
     }
 
     private AllowedHostPathArgs() {
-        this.pathPrefix = Input.empty();
-        this.readOnly = Input.empty();
+        this.pathPrefix = Output.empty();
+        this.readOnly = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class AllowedHostPathArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> pathPrefix;
-        private @Nullable Input<Boolean> readOnly;
+        private @Nullable Output<String> pathPrefix;
+        private @Nullable Output<Boolean> readOnly;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class AllowedHostPathArgs extends io.pulumi.resources.ResourceArgs 
     	      this.readOnly = defaults.readOnly;
         }
 
-        public Builder pathPrefix(@Nullable Input<String> pathPrefix) {
+        public Builder pathPrefix(@Nullable Output<String> pathPrefix) {
             this.pathPrefix = pathPrefix;
             return this;
         }
 
         public Builder pathPrefix(@Nullable String pathPrefix) {
-            this.pathPrefix = Input.ofNullable(pathPrefix);
+            this.pathPrefix = Output.ofNullable(pathPrefix);
             return this;
         }
 
-        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Input.ofNullable(readOnly);
+            this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
         public AllowedHostPathArgs build() {

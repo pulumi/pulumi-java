@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.kinesis.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class AnalyticsApplicationInputsStartingPositionConfigurationArgs e
      * 
      */
     @InputImport(name="startingPosition")
-      private final @Nullable Input<String> startingPosition;
+      private final @Nullable Output<String> startingPosition;
 
-    public Input<String> getStartingPosition() {
-        return this.startingPosition == null ? Input.empty() : this.startingPosition;
+    public Output<String> getStartingPosition() {
+        return this.startingPosition == null ? Output.empty() : this.startingPosition;
     }
 
-    public AnalyticsApplicationInputsStartingPositionConfigurationArgs(@Nullable Input<String> startingPosition) {
+    public AnalyticsApplicationInputsStartingPositionConfigurationArgs(@Nullable Output<String> startingPosition) {
         this.startingPosition = startingPosition;
     }
 
     private AnalyticsApplicationInputsStartingPositionConfigurationArgs() {
-        this.startingPosition = Input.empty();
+        this.startingPosition = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class AnalyticsApplicationInputsStartingPositionConfigurationArgs e
     }
 
     public static final class Builder {
-        private @Nullable Input<String> startingPosition;
+        private @Nullable Output<String> startingPosition;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class AnalyticsApplicationInputsStartingPositionConfigurationArgs e
     	      this.startingPosition = defaults.startingPosition;
         }
 
-        public Builder startingPosition(@Nullable Input<String> startingPosition) {
+        public Builder startingPosition(@Nullable Output<String> startingPosition) {
             this.startingPosition = startingPosition;
             return this;
         }
 
         public Builder startingPosition(@Nullable String startingPosition) {
-            this.startingPosition = Input.ofNullable(startingPosition);
+            this.startingPosition = Output.ofNullable(startingPosition);
             return this;
         }
         public AnalyticsApplicationInputsStartingPositionConfigurationArgs build() {

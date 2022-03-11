@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.certificates.k8s.io_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.certificates.k8s.io_v1.inputs.CertificateSigningRequestSpecArgs;
 import io.pulumi.kubernetes.certificates.k8s.io_v1.inputs.CertificateSigningRequestStatusArgs;
@@ -32,10 +32,10 @@ public final class CertificateSigningRequestArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="apiVersion")
-      private final @Nullable Input<String> apiVersion;
+      private final @Nullable Output<String> apiVersion;
 
-    public Input<String> getApiVersion() {
-        return this.apiVersion == null ? Input.empty() : this.apiVersion;
+    public Output<String> getApiVersion() {
+        return this.apiVersion == null ? Output.empty() : this.apiVersion;
     }
 
     /**
@@ -43,17 +43,17 @@ public final class CertificateSigningRequestArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     @InputImport(name="metadata")
-      private final @Nullable Input<ObjectMetaArgs> metadata;
+      private final @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Input<ObjectMetaArgs> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<ObjectMetaArgs> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -61,9 +61,9 @@ public final class CertificateSigningRequestArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="spec", required=true)
-      private final Input<CertificateSigningRequestSpecArgs> spec;
+      private final Output<CertificateSigningRequestSpecArgs> spec;
 
-    public Input<CertificateSigningRequestSpecArgs> getSpec() {
+    public Output<CertificateSigningRequestSpecArgs> getSpec() {
         return this.spec;
     }
 
@@ -72,18 +72,18 @@ public final class CertificateSigningRequestArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<CertificateSigningRequestStatusArgs> status;
+      private final @Nullable Output<CertificateSigningRequestStatusArgs> status;
 
-    public Input<CertificateSigningRequestStatusArgs> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<CertificateSigningRequestStatusArgs> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     public CertificateSigningRequestArgs(
-        @Nullable Input<String> apiVersion,
-        @Nullable Input<String> kind,
-        @Nullable Input<ObjectMetaArgs> metadata,
-        Input<CertificateSigningRequestSpecArgs> spec,
-        @Nullable Input<CertificateSigningRequestStatusArgs> status) {
+        @Nullable Output<String> apiVersion,
+        @Nullable Output<String> kind,
+        @Nullable Output<ObjectMetaArgs> metadata,
+        Output<CertificateSigningRequestSpecArgs> spec,
+        @Nullable Output<CertificateSigningRequestStatusArgs> status) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;
@@ -92,11 +92,11 @@ public final class CertificateSigningRequestArgs extends io.pulumi.resources.Res
     }
 
     private CertificateSigningRequestArgs() {
-        this.apiVersion = Input.empty();
-        this.kind = Input.empty();
-        this.metadata = Input.empty();
-        this.spec = Input.empty();
-        this.status = Input.empty();
+        this.apiVersion = Output.empty();
+        this.kind = Output.empty();
+        this.metadata = Output.empty();
+        this.spec = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -108,11 +108,11 @@ public final class CertificateSigningRequestArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> apiVersion;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<ObjectMetaArgs> metadata;
-        private Input<CertificateSigningRequestSpecArgs> spec;
-        private @Nullable Input<CertificateSigningRequestStatusArgs> status;
+        private @Nullable Output<String> apiVersion;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<ObjectMetaArgs> metadata;
+        private Output<CertificateSigningRequestSpecArgs> spec;
+        private @Nullable Output<CertificateSigningRequestStatusArgs> status;
 
         public Builder() {
     	      // Empty
@@ -127,53 +127,53 @@ public final class CertificateSigningRequestArgs extends io.pulumi.resources.Res
     	      this.status = defaults.status;
         }
 
-        public Builder apiVersion(@Nullable Input<String> apiVersion) {
+        public Builder apiVersion(@Nullable Output<String> apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
         public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Input.ofNullable(apiVersion);
+            this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<ObjectMetaArgs> metadata) {
+        public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder spec(Input<CertificateSigningRequestSpecArgs> spec) {
+        public Builder spec(Output<CertificateSigningRequestSpecArgs> spec) {
             this.spec = Objects.requireNonNull(spec);
             return this;
         }
 
         public Builder spec(CertificateSigningRequestSpecArgs spec) {
-            this.spec = Input.of(Objects.requireNonNull(spec));
+            this.spec = Output.of(Objects.requireNonNull(spec));
             return this;
         }
 
-        public Builder status(@Nullable Input<CertificateSigningRequestStatusArgs> status) {
+        public Builder status(@Nullable Output<CertificateSigningRequestStatusArgs> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable CertificateSigningRequestStatusArgs status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public CertificateSigningRequestArgs build() {

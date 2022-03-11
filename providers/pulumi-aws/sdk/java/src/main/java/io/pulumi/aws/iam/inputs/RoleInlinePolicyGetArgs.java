@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iam.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class RoleInlinePolicyGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class RoleInlinePolicyGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="policy")
-      private final @Nullable Input<String> policy;
+      private final @Nullable Output<String> policy;
 
-    public Input<String> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<String> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     public RoleInlinePolicyGetArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<String> policy) {
+        @Nullable Output<String> name,
+        @Nullable Output<String> policy) {
         this.name = name;
         this.policy = policy;
     }
 
     private RoleInlinePolicyGetArgs() {
-        this.name = Input.empty();
-        this.policy = Input.empty();
+        this.name = Output.empty();
+        this.policy = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class RoleInlinePolicyGetArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> policy;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> policy;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class RoleInlinePolicyGetArgs extends io.pulumi.resources.ResourceA
     	      this.policy = defaults.policy;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder policy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable String policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
         public RoleInlinePolicyGetArgs build() {

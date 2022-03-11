@@ -9,7 +9,7 @@ import io.pulumi.aws.rds.inputs.ClusterRestoreToPointInTimeArgs;
 import io.pulumi.aws.rds.inputs.ClusterS3ImportArgs;
 import io.pulumi.aws.rds.inputs.ClusterScalingConfigurationArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -29,10 +29,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowMajorVersionUpgrade")
-      private final @Nullable Input<Boolean> allowMajorVersionUpgrade;
+      private final @Nullable Output<Boolean> allowMajorVersionUpgrade;
 
-    public Input<Boolean> getAllowMajorVersionUpgrade() {
-        return this.allowMajorVersionUpgrade == null ? Input.empty() : this.allowMajorVersionUpgrade;
+    public Output<Boolean> getAllowMajorVersionUpgrade() {
+        return this.allowMajorVersionUpgrade == null ? Output.empty() : this.allowMajorVersionUpgrade;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applyImmediately")
-      private final @Nullable Input<Boolean> applyImmediately;
+      private final @Nullable Output<Boolean> applyImmediately;
 
-    public Input<Boolean> getApplyImmediately() {
-        return this.applyImmediately == null ? Input.empty() : this.applyImmediately;
+    public Output<Boolean> getApplyImmediately() {
+        return this.applyImmediately == null ? Output.empty() : this.applyImmediately;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZones")
-      private final @Nullable Input<List<String>> availabilityZones;
+      private final @Nullable Output<List<String>> availabilityZones;
 
-    public Input<List<String>> getAvailabilityZones() {
-        return this.availabilityZones == null ? Input.empty() : this.availabilityZones;
+    public Output<List<String>> getAvailabilityZones() {
+        return this.availabilityZones == null ? Output.empty() : this.availabilityZones;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backtrackWindow")
-      private final @Nullable Input<Integer> backtrackWindow;
+      private final @Nullable Output<Integer> backtrackWindow;
 
-    public Input<Integer> getBacktrackWindow() {
-        return this.backtrackWindow == null ? Input.empty() : this.backtrackWindow;
+    public Output<Integer> getBacktrackWindow() {
+        return this.backtrackWindow == null ? Output.empty() : this.backtrackWindow;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backupRetentionPeriod")
-      private final @Nullable Input<Integer> backupRetentionPeriod;
+      private final @Nullable Output<Integer> backupRetentionPeriod;
 
-    public Input<Integer> getBackupRetentionPeriod() {
-        return this.backupRetentionPeriod == null ? Input.empty() : this.backupRetentionPeriod;
+    public Output<Integer> getBackupRetentionPeriod() {
+        return this.backupRetentionPeriod == null ? Output.empty() : this.backupRetentionPeriod;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterIdentifier")
-      private final @Nullable Input<String> clusterIdentifier;
+      private final @Nullable Output<String> clusterIdentifier;
 
-    public Input<String> getClusterIdentifier() {
-        return this.clusterIdentifier == null ? Input.empty() : this.clusterIdentifier;
+    public Output<String> getClusterIdentifier() {
+        return this.clusterIdentifier == null ? Output.empty() : this.clusterIdentifier;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterIdentifierPrefix")
-      private final @Nullable Input<String> clusterIdentifierPrefix;
+      private final @Nullable Output<String> clusterIdentifierPrefix;
 
-    public Input<String> getClusterIdentifierPrefix() {
-        return this.clusterIdentifierPrefix == null ? Input.empty() : this.clusterIdentifierPrefix;
+    public Output<String> getClusterIdentifierPrefix() {
+        return this.clusterIdentifierPrefix == null ? Output.empty() : this.clusterIdentifierPrefix;
     }
 
     /**
@@ -106,10 +106,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterMembers")
-      private final @Nullable Input<List<String>> clusterMembers;
+      private final @Nullable Output<List<String>> clusterMembers;
 
-    public Input<List<String>> getClusterMembers() {
-        return this.clusterMembers == null ? Input.empty() : this.clusterMembers;
+    public Output<List<String>> getClusterMembers() {
+        return this.clusterMembers == null ? Output.empty() : this.clusterMembers;
     }
 
     /**
@@ -117,10 +117,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="copyTagsToSnapshot")
-      private final @Nullable Input<Boolean> copyTagsToSnapshot;
+      private final @Nullable Output<Boolean> copyTagsToSnapshot;
 
-    public Input<Boolean> getCopyTagsToSnapshot() {
-        return this.copyTagsToSnapshot == null ? Input.empty() : this.copyTagsToSnapshot;
+    public Output<Boolean> getCopyTagsToSnapshot() {
+        return this.copyTagsToSnapshot == null ? Output.empty() : this.copyTagsToSnapshot;
     }
 
     /**
@@ -128,10 +128,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseName")
-      private final @Nullable Input<String> databaseName;
+      private final @Nullable Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
-        return this.databaseName == null ? Input.empty() : this.databaseName;
+    public Output<String> getDatabaseName() {
+        return this.databaseName == null ? Output.empty() : this.databaseName;
     }
 
     /**
@@ -139,10 +139,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dbClusterParameterGroupName")
-      private final @Nullable Input<String> dbClusterParameterGroupName;
+      private final @Nullable Output<String> dbClusterParameterGroupName;
 
-    public Input<String> getDbClusterParameterGroupName() {
-        return this.dbClusterParameterGroupName == null ? Input.empty() : this.dbClusterParameterGroupName;
+    public Output<String> getDbClusterParameterGroupName() {
+        return this.dbClusterParameterGroupName == null ? Output.empty() : this.dbClusterParameterGroupName;
     }
 
     /**
@@ -150,10 +150,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dbInstanceParameterGroupName")
-      private final @Nullable Input<String> dbInstanceParameterGroupName;
+      private final @Nullable Output<String> dbInstanceParameterGroupName;
 
-    public Input<String> getDbInstanceParameterGroupName() {
-        return this.dbInstanceParameterGroupName == null ? Input.empty() : this.dbInstanceParameterGroupName;
+    public Output<String> getDbInstanceParameterGroupName() {
+        return this.dbInstanceParameterGroupName == null ? Output.empty() : this.dbInstanceParameterGroupName;
     }
 
     /**
@@ -161,10 +161,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dbSubnetGroupName")
-      private final @Nullable Input<String> dbSubnetGroupName;
+      private final @Nullable Output<String> dbSubnetGroupName;
 
-    public Input<String> getDbSubnetGroupName() {
-        return this.dbSubnetGroupName == null ? Input.empty() : this.dbSubnetGroupName;
+    public Output<String> getDbSubnetGroupName() {
+        return this.dbSubnetGroupName == null ? Output.empty() : this.dbSubnetGroupName;
     }
 
     /**
@@ -172,10 +172,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deletionProtection")
-      private final @Nullable Input<Boolean> deletionProtection;
+      private final @Nullable Output<Boolean> deletionProtection;
 
-    public Input<Boolean> getDeletionProtection() {
-        return this.deletionProtection == null ? Input.empty() : this.deletionProtection;
+    public Output<Boolean> getDeletionProtection() {
+        return this.deletionProtection == null ? Output.empty() : this.deletionProtection;
     }
 
     /**
@@ -183,10 +183,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableGlobalWriteForwarding")
-      private final @Nullable Input<Boolean> enableGlobalWriteForwarding;
+      private final @Nullable Output<Boolean> enableGlobalWriteForwarding;
 
-    public Input<Boolean> getEnableGlobalWriteForwarding() {
-        return this.enableGlobalWriteForwarding == null ? Input.empty() : this.enableGlobalWriteForwarding;
+    public Output<Boolean> getEnableGlobalWriteForwarding() {
+        return this.enableGlobalWriteForwarding == null ? Output.empty() : this.enableGlobalWriteForwarding;
     }
 
     /**
@@ -194,10 +194,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableHttpEndpoint")
-      private final @Nullable Input<Boolean> enableHttpEndpoint;
+      private final @Nullable Output<Boolean> enableHttpEndpoint;
 
-    public Input<Boolean> getEnableHttpEndpoint() {
-        return this.enableHttpEndpoint == null ? Input.empty() : this.enableHttpEndpoint;
+    public Output<Boolean> getEnableHttpEndpoint() {
+        return this.enableHttpEndpoint == null ? Output.empty() : this.enableHttpEndpoint;
     }
 
     /**
@@ -205,10 +205,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabledCloudwatchLogsExports")
-      private final @Nullable Input<List<String>> enabledCloudwatchLogsExports;
+      private final @Nullable Output<List<String>> enabledCloudwatchLogsExports;
 
-    public Input<List<String>> getEnabledCloudwatchLogsExports() {
-        return this.enabledCloudwatchLogsExports == null ? Input.empty() : this.enabledCloudwatchLogsExports;
+    public Output<List<String>> getEnabledCloudwatchLogsExports() {
+        return this.enabledCloudwatchLogsExports == null ? Output.empty() : this.enabledCloudwatchLogsExports;
     }
 
     /**
@@ -216,10 +216,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engine")
-      private final @Nullable Input<Either<String,EngineType>> engine;
+      private final @Nullable Output<Either<String,EngineType>> engine;
 
-    public Input<Either<String,EngineType>> getEngine() {
-        return this.engine == null ? Input.empty() : this.engine;
+    public Output<Either<String,EngineType>> getEngine() {
+        return this.engine == null ? Output.empty() : this.engine;
     }
 
     /**
@@ -227,10 +227,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engineMode")
-      private final @Nullable Input<Either<String,EngineMode>> engineMode;
+      private final @Nullable Output<Either<String,EngineMode>> engineMode;
 
-    public Input<Either<String,EngineMode>> getEngineMode() {
-        return this.engineMode == null ? Input.empty() : this.engineMode;
+    public Output<Either<String,EngineMode>> getEngineMode() {
+        return this.engineMode == null ? Output.empty() : this.engineMode;
     }
 
     /**
@@ -238,10 +238,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engineVersion")
-      private final @Nullable Input<String> engineVersion;
+      private final @Nullable Output<String> engineVersion;
 
-    public Input<String> getEngineVersion() {
-        return this.engineVersion == null ? Input.empty() : this.engineVersion;
+    public Output<String> getEngineVersion() {
+        return this.engineVersion == null ? Output.empty() : this.engineVersion;
     }
 
     /**
@@ -249,10 +249,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="finalSnapshotIdentifier")
-      private final @Nullable Input<String> finalSnapshotIdentifier;
+      private final @Nullable Output<String> finalSnapshotIdentifier;
 
-    public Input<String> getFinalSnapshotIdentifier() {
-        return this.finalSnapshotIdentifier == null ? Input.empty() : this.finalSnapshotIdentifier;
+    public Output<String> getFinalSnapshotIdentifier() {
+        return this.finalSnapshotIdentifier == null ? Output.empty() : this.finalSnapshotIdentifier;
     }
 
     /**
@@ -260,10 +260,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="globalClusterIdentifier")
-      private final @Nullable Input<String> globalClusterIdentifier;
+      private final @Nullable Output<String> globalClusterIdentifier;
 
-    public Input<String> getGlobalClusterIdentifier() {
-        return this.globalClusterIdentifier == null ? Input.empty() : this.globalClusterIdentifier;
+    public Output<String> getGlobalClusterIdentifier() {
+        return this.globalClusterIdentifier == null ? Output.empty() : this.globalClusterIdentifier;
     }
 
     /**
@@ -271,10 +271,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iamDatabaseAuthenticationEnabled")
-      private final @Nullable Input<Boolean> iamDatabaseAuthenticationEnabled;
+      private final @Nullable Output<Boolean> iamDatabaseAuthenticationEnabled;
 
-    public Input<Boolean> getIamDatabaseAuthenticationEnabled() {
-        return this.iamDatabaseAuthenticationEnabled == null ? Input.empty() : this.iamDatabaseAuthenticationEnabled;
+    public Output<Boolean> getIamDatabaseAuthenticationEnabled() {
+        return this.iamDatabaseAuthenticationEnabled == null ? Output.empty() : this.iamDatabaseAuthenticationEnabled;
     }
 
     /**
@@ -282,10 +282,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iamRoles")
-      private final @Nullable Input<List<String>> iamRoles;
+      private final @Nullable Output<List<String>> iamRoles;
 
-    public Input<List<String>> getIamRoles() {
-        return this.iamRoles == null ? Input.empty() : this.iamRoles;
+    public Output<List<String>> getIamRoles() {
+        return this.iamRoles == null ? Output.empty() : this.iamRoles;
     }
 
     /**
@@ -293,10 +293,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyId")
-      private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Output<String> kmsKeyId;
 
-    public Input<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
+    public Output<String> getKmsKeyId() {
+        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
     /**
@@ -304,10 +304,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="masterPassword")
-      private final @Nullable Input<String> masterPassword;
+      private final @Nullable Output<String> masterPassword;
 
-    public Input<String> getMasterPassword() {
-        return this.masterPassword == null ? Input.empty() : this.masterPassword;
+    public Output<String> getMasterPassword() {
+        return this.masterPassword == null ? Output.empty() : this.masterPassword;
     }
 
     /**
@@ -315,10 +315,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="masterUsername")
-      private final @Nullable Input<String> masterUsername;
+      private final @Nullable Output<String> masterUsername;
 
-    public Input<String> getMasterUsername() {
-        return this.masterUsername == null ? Input.empty() : this.masterUsername;
+    public Output<String> getMasterUsername() {
+        return this.masterUsername == null ? Output.empty() : this.masterUsername;
     }
 
     /**
@@ -326,10 +326,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -337,10 +337,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preferredBackupWindow")
-      private final @Nullable Input<String> preferredBackupWindow;
+      private final @Nullable Output<String> preferredBackupWindow;
 
-    public Input<String> getPreferredBackupWindow() {
-        return this.preferredBackupWindow == null ? Input.empty() : this.preferredBackupWindow;
+    public Output<String> getPreferredBackupWindow() {
+        return this.preferredBackupWindow == null ? Output.empty() : this.preferredBackupWindow;
     }
 
     /**
@@ -348,10 +348,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preferredMaintenanceWindow")
-      private final @Nullable Input<String> preferredMaintenanceWindow;
+      private final @Nullable Output<String> preferredMaintenanceWindow;
 
-    public Input<String> getPreferredMaintenanceWindow() {
-        return this.preferredMaintenanceWindow == null ? Input.empty() : this.preferredMaintenanceWindow;
+    public Output<String> getPreferredMaintenanceWindow() {
+        return this.preferredMaintenanceWindow == null ? Output.empty() : this.preferredMaintenanceWindow;
     }
 
     /**
@@ -359,10 +359,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="replicationSourceIdentifier")
-      private final @Nullable Input<String> replicationSourceIdentifier;
+      private final @Nullable Output<String> replicationSourceIdentifier;
 
-    public Input<String> getReplicationSourceIdentifier() {
-        return this.replicationSourceIdentifier == null ? Input.empty() : this.replicationSourceIdentifier;
+    public Output<String> getReplicationSourceIdentifier() {
+        return this.replicationSourceIdentifier == null ? Output.empty() : this.replicationSourceIdentifier;
     }
 
     /**
@@ -370,17 +370,17 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restoreToPointInTime")
-      private final @Nullable Input<ClusterRestoreToPointInTimeArgs> restoreToPointInTime;
+      private final @Nullable Output<ClusterRestoreToPointInTimeArgs> restoreToPointInTime;
 
-    public Input<ClusterRestoreToPointInTimeArgs> getRestoreToPointInTime() {
-        return this.restoreToPointInTime == null ? Input.empty() : this.restoreToPointInTime;
+    public Output<ClusterRestoreToPointInTimeArgs> getRestoreToPointInTime() {
+        return this.restoreToPointInTime == null ? Output.empty() : this.restoreToPointInTime;
     }
 
     @InputImport(name="s3Import")
-      private final @Nullable Input<ClusterS3ImportArgs> s3Import;
+      private final @Nullable Output<ClusterS3ImportArgs> s3Import;
 
-    public Input<ClusterS3ImportArgs> getS3Import() {
-        return this.s3Import == null ? Input.empty() : this.s3Import;
+    public Output<ClusterS3ImportArgs> getS3Import() {
+        return this.s3Import == null ? Output.empty() : this.s3Import;
     }
 
     /**
@@ -388,10 +388,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scalingConfiguration")
-      private final @Nullable Input<ClusterScalingConfigurationArgs> scalingConfiguration;
+      private final @Nullable Output<ClusterScalingConfigurationArgs> scalingConfiguration;
 
-    public Input<ClusterScalingConfigurationArgs> getScalingConfiguration() {
-        return this.scalingConfiguration == null ? Input.empty() : this.scalingConfiguration;
+    public Output<ClusterScalingConfigurationArgs> getScalingConfiguration() {
+        return this.scalingConfiguration == null ? Output.empty() : this.scalingConfiguration;
     }
 
     /**
@@ -399,10 +399,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="skipFinalSnapshot")
-      private final @Nullable Input<Boolean> skipFinalSnapshot;
+      private final @Nullable Output<Boolean> skipFinalSnapshot;
 
-    public Input<Boolean> getSkipFinalSnapshot() {
-        return this.skipFinalSnapshot == null ? Input.empty() : this.skipFinalSnapshot;
+    public Output<Boolean> getSkipFinalSnapshot() {
+        return this.skipFinalSnapshot == null ? Output.empty() : this.skipFinalSnapshot;
     }
 
     /**
@@ -410,10 +410,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="snapshotIdentifier")
-      private final @Nullable Input<String> snapshotIdentifier;
+      private final @Nullable Output<String> snapshotIdentifier;
 
-    public Input<String> getSnapshotIdentifier() {
-        return this.snapshotIdentifier == null ? Input.empty() : this.snapshotIdentifier;
+    public Output<String> getSnapshotIdentifier() {
+        return this.snapshotIdentifier == null ? Output.empty() : this.snapshotIdentifier;
     }
 
     /**
@@ -421,10 +421,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceRegion")
-      private final @Nullable Input<String> sourceRegion;
+      private final @Nullable Output<String> sourceRegion;
 
-    public Input<String> getSourceRegion() {
-        return this.sourceRegion == null ? Input.empty() : this.sourceRegion;
+    public Output<String> getSourceRegion() {
+        return this.sourceRegion == null ? Output.empty() : this.sourceRegion;
     }
 
     /**
@@ -432,10 +432,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageEncrypted")
-      private final @Nullable Input<Boolean> storageEncrypted;
+      private final @Nullable Output<Boolean> storageEncrypted;
 
-    public Input<Boolean> getStorageEncrypted() {
-        return this.storageEncrypted == null ? Input.empty() : this.storageEncrypted;
+    public Output<Boolean> getStorageEncrypted() {
+        return this.storageEncrypted == null ? Output.empty() : this.storageEncrypted;
     }
 
     /**
@@ -443,10 +443,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -454,53 +454,53 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcSecurityGroupIds")
-      private final @Nullable Input<List<String>> vpcSecurityGroupIds;
+      private final @Nullable Output<List<String>> vpcSecurityGroupIds;
 
-    public Input<List<String>> getVpcSecurityGroupIds() {
-        return this.vpcSecurityGroupIds == null ? Input.empty() : this.vpcSecurityGroupIds;
+    public Output<List<String>> getVpcSecurityGroupIds() {
+        return this.vpcSecurityGroupIds == null ? Output.empty() : this.vpcSecurityGroupIds;
     }
 
     public ClusterArgs(
-        @Nullable Input<Boolean> allowMajorVersionUpgrade,
-        @Nullable Input<Boolean> applyImmediately,
-        @Nullable Input<List<String>> availabilityZones,
-        @Nullable Input<Integer> backtrackWindow,
-        @Nullable Input<Integer> backupRetentionPeriod,
-        @Nullable Input<String> clusterIdentifier,
-        @Nullable Input<String> clusterIdentifierPrefix,
-        @Nullable Input<List<String>> clusterMembers,
-        @Nullable Input<Boolean> copyTagsToSnapshot,
-        @Nullable Input<String> databaseName,
-        @Nullable Input<String> dbClusterParameterGroupName,
-        @Nullable Input<String> dbInstanceParameterGroupName,
-        @Nullable Input<String> dbSubnetGroupName,
-        @Nullable Input<Boolean> deletionProtection,
-        @Nullable Input<Boolean> enableGlobalWriteForwarding,
-        @Nullable Input<Boolean> enableHttpEndpoint,
-        @Nullable Input<List<String>> enabledCloudwatchLogsExports,
-        @Nullable Input<Either<String,EngineType>> engine,
-        @Nullable Input<Either<String,EngineMode>> engineMode,
-        @Nullable Input<String> engineVersion,
-        @Nullable Input<String> finalSnapshotIdentifier,
-        @Nullable Input<String> globalClusterIdentifier,
-        @Nullable Input<Boolean> iamDatabaseAuthenticationEnabled,
-        @Nullable Input<List<String>> iamRoles,
-        @Nullable Input<String> kmsKeyId,
-        @Nullable Input<String> masterPassword,
-        @Nullable Input<String> masterUsername,
-        @Nullable Input<Integer> port,
-        @Nullable Input<String> preferredBackupWindow,
-        @Nullable Input<String> preferredMaintenanceWindow,
-        @Nullable Input<String> replicationSourceIdentifier,
-        @Nullable Input<ClusterRestoreToPointInTimeArgs> restoreToPointInTime,
-        @Nullable Input<ClusterS3ImportArgs> s3Import,
-        @Nullable Input<ClusterScalingConfigurationArgs> scalingConfiguration,
-        @Nullable Input<Boolean> skipFinalSnapshot,
-        @Nullable Input<String> snapshotIdentifier,
-        @Nullable Input<String> sourceRegion,
-        @Nullable Input<Boolean> storageEncrypted,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<List<String>> vpcSecurityGroupIds) {
+        @Nullable Output<Boolean> allowMajorVersionUpgrade,
+        @Nullable Output<Boolean> applyImmediately,
+        @Nullable Output<List<String>> availabilityZones,
+        @Nullable Output<Integer> backtrackWindow,
+        @Nullable Output<Integer> backupRetentionPeriod,
+        @Nullable Output<String> clusterIdentifier,
+        @Nullable Output<String> clusterIdentifierPrefix,
+        @Nullable Output<List<String>> clusterMembers,
+        @Nullable Output<Boolean> copyTagsToSnapshot,
+        @Nullable Output<String> databaseName,
+        @Nullable Output<String> dbClusterParameterGroupName,
+        @Nullable Output<String> dbInstanceParameterGroupName,
+        @Nullable Output<String> dbSubnetGroupName,
+        @Nullable Output<Boolean> deletionProtection,
+        @Nullable Output<Boolean> enableGlobalWriteForwarding,
+        @Nullable Output<Boolean> enableHttpEndpoint,
+        @Nullable Output<List<String>> enabledCloudwatchLogsExports,
+        @Nullable Output<Either<String,EngineType>> engine,
+        @Nullable Output<Either<String,EngineMode>> engineMode,
+        @Nullable Output<String> engineVersion,
+        @Nullable Output<String> finalSnapshotIdentifier,
+        @Nullable Output<String> globalClusterIdentifier,
+        @Nullable Output<Boolean> iamDatabaseAuthenticationEnabled,
+        @Nullable Output<List<String>> iamRoles,
+        @Nullable Output<String> kmsKeyId,
+        @Nullable Output<String> masterPassword,
+        @Nullable Output<String> masterUsername,
+        @Nullable Output<Integer> port,
+        @Nullable Output<String> preferredBackupWindow,
+        @Nullable Output<String> preferredMaintenanceWindow,
+        @Nullable Output<String> replicationSourceIdentifier,
+        @Nullable Output<ClusterRestoreToPointInTimeArgs> restoreToPointInTime,
+        @Nullable Output<ClusterS3ImportArgs> s3Import,
+        @Nullable Output<ClusterScalingConfigurationArgs> scalingConfiguration,
+        @Nullable Output<Boolean> skipFinalSnapshot,
+        @Nullable Output<String> snapshotIdentifier,
+        @Nullable Output<String> sourceRegion,
+        @Nullable Output<Boolean> storageEncrypted,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<List<String>> vpcSecurityGroupIds) {
         this.allowMajorVersionUpgrade = allowMajorVersionUpgrade;
         this.applyImmediately = applyImmediately;
         this.availabilityZones = availabilityZones;
@@ -544,46 +544,46 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClusterArgs() {
-        this.allowMajorVersionUpgrade = Input.empty();
-        this.applyImmediately = Input.empty();
-        this.availabilityZones = Input.empty();
-        this.backtrackWindow = Input.empty();
-        this.backupRetentionPeriod = Input.empty();
-        this.clusterIdentifier = Input.empty();
-        this.clusterIdentifierPrefix = Input.empty();
-        this.clusterMembers = Input.empty();
-        this.copyTagsToSnapshot = Input.empty();
-        this.databaseName = Input.empty();
-        this.dbClusterParameterGroupName = Input.empty();
-        this.dbInstanceParameterGroupName = Input.empty();
-        this.dbSubnetGroupName = Input.empty();
-        this.deletionProtection = Input.empty();
-        this.enableGlobalWriteForwarding = Input.empty();
-        this.enableHttpEndpoint = Input.empty();
-        this.enabledCloudwatchLogsExports = Input.empty();
-        this.engine = Input.empty();
-        this.engineMode = Input.empty();
-        this.engineVersion = Input.empty();
-        this.finalSnapshotIdentifier = Input.empty();
-        this.globalClusterIdentifier = Input.empty();
-        this.iamDatabaseAuthenticationEnabled = Input.empty();
-        this.iamRoles = Input.empty();
-        this.kmsKeyId = Input.empty();
-        this.masterPassword = Input.empty();
-        this.masterUsername = Input.empty();
-        this.port = Input.empty();
-        this.preferredBackupWindow = Input.empty();
-        this.preferredMaintenanceWindow = Input.empty();
-        this.replicationSourceIdentifier = Input.empty();
-        this.restoreToPointInTime = Input.empty();
-        this.s3Import = Input.empty();
-        this.scalingConfiguration = Input.empty();
-        this.skipFinalSnapshot = Input.empty();
-        this.snapshotIdentifier = Input.empty();
-        this.sourceRegion = Input.empty();
-        this.storageEncrypted = Input.empty();
-        this.tags = Input.empty();
-        this.vpcSecurityGroupIds = Input.empty();
+        this.allowMajorVersionUpgrade = Output.empty();
+        this.applyImmediately = Output.empty();
+        this.availabilityZones = Output.empty();
+        this.backtrackWindow = Output.empty();
+        this.backupRetentionPeriod = Output.empty();
+        this.clusterIdentifier = Output.empty();
+        this.clusterIdentifierPrefix = Output.empty();
+        this.clusterMembers = Output.empty();
+        this.copyTagsToSnapshot = Output.empty();
+        this.databaseName = Output.empty();
+        this.dbClusterParameterGroupName = Output.empty();
+        this.dbInstanceParameterGroupName = Output.empty();
+        this.dbSubnetGroupName = Output.empty();
+        this.deletionProtection = Output.empty();
+        this.enableGlobalWriteForwarding = Output.empty();
+        this.enableHttpEndpoint = Output.empty();
+        this.enabledCloudwatchLogsExports = Output.empty();
+        this.engine = Output.empty();
+        this.engineMode = Output.empty();
+        this.engineVersion = Output.empty();
+        this.finalSnapshotIdentifier = Output.empty();
+        this.globalClusterIdentifier = Output.empty();
+        this.iamDatabaseAuthenticationEnabled = Output.empty();
+        this.iamRoles = Output.empty();
+        this.kmsKeyId = Output.empty();
+        this.masterPassword = Output.empty();
+        this.masterUsername = Output.empty();
+        this.port = Output.empty();
+        this.preferredBackupWindow = Output.empty();
+        this.preferredMaintenanceWindow = Output.empty();
+        this.replicationSourceIdentifier = Output.empty();
+        this.restoreToPointInTime = Output.empty();
+        this.s3Import = Output.empty();
+        this.scalingConfiguration = Output.empty();
+        this.skipFinalSnapshot = Output.empty();
+        this.snapshotIdentifier = Output.empty();
+        this.sourceRegion = Output.empty();
+        this.storageEncrypted = Output.empty();
+        this.tags = Output.empty();
+        this.vpcSecurityGroupIds = Output.empty();
     }
 
     public static Builder builder() {
@@ -595,46 +595,46 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowMajorVersionUpgrade;
-        private @Nullable Input<Boolean> applyImmediately;
-        private @Nullable Input<List<String>> availabilityZones;
-        private @Nullable Input<Integer> backtrackWindow;
-        private @Nullable Input<Integer> backupRetentionPeriod;
-        private @Nullable Input<String> clusterIdentifier;
-        private @Nullable Input<String> clusterIdentifierPrefix;
-        private @Nullable Input<List<String>> clusterMembers;
-        private @Nullable Input<Boolean> copyTagsToSnapshot;
-        private @Nullable Input<String> databaseName;
-        private @Nullable Input<String> dbClusterParameterGroupName;
-        private @Nullable Input<String> dbInstanceParameterGroupName;
-        private @Nullable Input<String> dbSubnetGroupName;
-        private @Nullable Input<Boolean> deletionProtection;
-        private @Nullable Input<Boolean> enableGlobalWriteForwarding;
-        private @Nullable Input<Boolean> enableHttpEndpoint;
-        private @Nullable Input<List<String>> enabledCloudwatchLogsExports;
-        private @Nullable Input<Either<String,EngineType>> engine;
-        private @Nullable Input<Either<String,EngineMode>> engineMode;
-        private @Nullable Input<String> engineVersion;
-        private @Nullable Input<String> finalSnapshotIdentifier;
-        private @Nullable Input<String> globalClusterIdentifier;
-        private @Nullable Input<Boolean> iamDatabaseAuthenticationEnabled;
-        private @Nullable Input<List<String>> iamRoles;
-        private @Nullable Input<String> kmsKeyId;
-        private @Nullable Input<String> masterPassword;
-        private @Nullable Input<String> masterUsername;
-        private @Nullable Input<Integer> port;
-        private @Nullable Input<String> preferredBackupWindow;
-        private @Nullable Input<String> preferredMaintenanceWindow;
-        private @Nullable Input<String> replicationSourceIdentifier;
-        private @Nullable Input<ClusterRestoreToPointInTimeArgs> restoreToPointInTime;
-        private @Nullable Input<ClusterS3ImportArgs> s3Import;
-        private @Nullable Input<ClusterScalingConfigurationArgs> scalingConfiguration;
-        private @Nullable Input<Boolean> skipFinalSnapshot;
-        private @Nullable Input<String> snapshotIdentifier;
-        private @Nullable Input<String> sourceRegion;
-        private @Nullable Input<Boolean> storageEncrypted;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<List<String>> vpcSecurityGroupIds;
+        private @Nullable Output<Boolean> allowMajorVersionUpgrade;
+        private @Nullable Output<Boolean> applyImmediately;
+        private @Nullable Output<List<String>> availabilityZones;
+        private @Nullable Output<Integer> backtrackWindow;
+        private @Nullable Output<Integer> backupRetentionPeriod;
+        private @Nullable Output<String> clusterIdentifier;
+        private @Nullable Output<String> clusterIdentifierPrefix;
+        private @Nullable Output<List<String>> clusterMembers;
+        private @Nullable Output<Boolean> copyTagsToSnapshot;
+        private @Nullable Output<String> databaseName;
+        private @Nullable Output<String> dbClusterParameterGroupName;
+        private @Nullable Output<String> dbInstanceParameterGroupName;
+        private @Nullable Output<String> dbSubnetGroupName;
+        private @Nullable Output<Boolean> deletionProtection;
+        private @Nullable Output<Boolean> enableGlobalWriteForwarding;
+        private @Nullable Output<Boolean> enableHttpEndpoint;
+        private @Nullable Output<List<String>> enabledCloudwatchLogsExports;
+        private @Nullable Output<Either<String,EngineType>> engine;
+        private @Nullable Output<Either<String,EngineMode>> engineMode;
+        private @Nullable Output<String> engineVersion;
+        private @Nullable Output<String> finalSnapshotIdentifier;
+        private @Nullable Output<String> globalClusterIdentifier;
+        private @Nullable Output<Boolean> iamDatabaseAuthenticationEnabled;
+        private @Nullable Output<List<String>> iamRoles;
+        private @Nullable Output<String> kmsKeyId;
+        private @Nullable Output<String> masterPassword;
+        private @Nullable Output<String> masterUsername;
+        private @Nullable Output<Integer> port;
+        private @Nullable Output<String> preferredBackupWindow;
+        private @Nullable Output<String> preferredMaintenanceWindow;
+        private @Nullable Output<String> replicationSourceIdentifier;
+        private @Nullable Output<ClusterRestoreToPointInTimeArgs> restoreToPointInTime;
+        private @Nullable Output<ClusterS3ImportArgs> s3Import;
+        private @Nullable Output<ClusterScalingConfigurationArgs> scalingConfiguration;
+        private @Nullable Output<Boolean> skipFinalSnapshot;
+        private @Nullable Output<String> snapshotIdentifier;
+        private @Nullable Output<String> sourceRegion;
+        private @Nullable Output<Boolean> storageEncrypted;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<List<String>> vpcSecurityGroupIds;
 
         public Builder() {
     	      // Empty
@@ -684,403 +684,403 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcSecurityGroupIds = defaults.vpcSecurityGroupIds;
         }
 
-        public Builder allowMajorVersionUpgrade(@Nullable Input<Boolean> allowMajorVersionUpgrade) {
+        public Builder allowMajorVersionUpgrade(@Nullable Output<Boolean> allowMajorVersionUpgrade) {
             this.allowMajorVersionUpgrade = allowMajorVersionUpgrade;
             return this;
         }
 
         public Builder allowMajorVersionUpgrade(@Nullable Boolean allowMajorVersionUpgrade) {
-            this.allowMajorVersionUpgrade = Input.ofNullable(allowMajorVersionUpgrade);
+            this.allowMajorVersionUpgrade = Output.ofNullable(allowMajorVersionUpgrade);
             return this;
         }
 
-        public Builder applyImmediately(@Nullable Input<Boolean> applyImmediately) {
+        public Builder applyImmediately(@Nullable Output<Boolean> applyImmediately) {
             this.applyImmediately = applyImmediately;
             return this;
         }
 
         public Builder applyImmediately(@Nullable Boolean applyImmediately) {
-            this.applyImmediately = Input.ofNullable(applyImmediately);
+            this.applyImmediately = Output.ofNullable(applyImmediately);
             return this;
         }
 
-        public Builder availabilityZones(@Nullable Input<List<String>> availabilityZones) {
+        public Builder availabilityZones(@Nullable Output<List<String>> availabilityZones) {
             this.availabilityZones = availabilityZones;
             return this;
         }
 
         public Builder availabilityZones(@Nullable List<String> availabilityZones) {
-            this.availabilityZones = Input.ofNullable(availabilityZones);
+            this.availabilityZones = Output.ofNullable(availabilityZones);
             return this;
         }
 
-        public Builder backtrackWindow(@Nullable Input<Integer> backtrackWindow) {
+        public Builder backtrackWindow(@Nullable Output<Integer> backtrackWindow) {
             this.backtrackWindow = backtrackWindow;
             return this;
         }
 
         public Builder backtrackWindow(@Nullable Integer backtrackWindow) {
-            this.backtrackWindow = Input.ofNullable(backtrackWindow);
+            this.backtrackWindow = Output.ofNullable(backtrackWindow);
             return this;
         }
 
-        public Builder backupRetentionPeriod(@Nullable Input<Integer> backupRetentionPeriod) {
+        public Builder backupRetentionPeriod(@Nullable Output<Integer> backupRetentionPeriod) {
             this.backupRetentionPeriod = backupRetentionPeriod;
             return this;
         }
 
         public Builder backupRetentionPeriod(@Nullable Integer backupRetentionPeriod) {
-            this.backupRetentionPeriod = Input.ofNullable(backupRetentionPeriod);
+            this.backupRetentionPeriod = Output.ofNullable(backupRetentionPeriod);
             return this;
         }
 
-        public Builder clusterIdentifier(@Nullable Input<String> clusterIdentifier) {
+        public Builder clusterIdentifier(@Nullable Output<String> clusterIdentifier) {
             this.clusterIdentifier = clusterIdentifier;
             return this;
         }
 
         public Builder clusterIdentifier(@Nullable String clusterIdentifier) {
-            this.clusterIdentifier = Input.ofNullable(clusterIdentifier);
+            this.clusterIdentifier = Output.ofNullable(clusterIdentifier);
             return this;
         }
 
-        public Builder clusterIdentifierPrefix(@Nullable Input<String> clusterIdentifierPrefix) {
+        public Builder clusterIdentifierPrefix(@Nullable Output<String> clusterIdentifierPrefix) {
             this.clusterIdentifierPrefix = clusterIdentifierPrefix;
             return this;
         }
 
         public Builder clusterIdentifierPrefix(@Nullable String clusterIdentifierPrefix) {
-            this.clusterIdentifierPrefix = Input.ofNullable(clusterIdentifierPrefix);
+            this.clusterIdentifierPrefix = Output.ofNullable(clusterIdentifierPrefix);
             return this;
         }
 
-        public Builder clusterMembers(@Nullable Input<List<String>> clusterMembers) {
+        public Builder clusterMembers(@Nullable Output<List<String>> clusterMembers) {
             this.clusterMembers = clusterMembers;
             return this;
         }
 
         public Builder clusterMembers(@Nullable List<String> clusterMembers) {
-            this.clusterMembers = Input.ofNullable(clusterMembers);
+            this.clusterMembers = Output.ofNullable(clusterMembers);
             return this;
         }
 
-        public Builder copyTagsToSnapshot(@Nullable Input<Boolean> copyTagsToSnapshot) {
+        public Builder copyTagsToSnapshot(@Nullable Output<Boolean> copyTagsToSnapshot) {
             this.copyTagsToSnapshot = copyTagsToSnapshot;
             return this;
         }
 
         public Builder copyTagsToSnapshot(@Nullable Boolean copyTagsToSnapshot) {
-            this.copyTagsToSnapshot = Input.ofNullable(copyTagsToSnapshot);
+            this.copyTagsToSnapshot = Output.ofNullable(copyTagsToSnapshot);
             return this;
         }
 
-        public Builder databaseName(@Nullable Input<String> databaseName) {
+        public Builder databaseName(@Nullable Output<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
         public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Input.ofNullable(databaseName);
+            this.databaseName = Output.ofNullable(databaseName);
             return this;
         }
 
-        public Builder dbClusterParameterGroupName(@Nullable Input<String> dbClusterParameterGroupName) {
+        public Builder dbClusterParameterGroupName(@Nullable Output<String> dbClusterParameterGroupName) {
             this.dbClusterParameterGroupName = dbClusterParameterGroupName;
             return this;
         }
 
         public Builder dbClusterParameterGroupName(@Nullable String dbClusterParameterGroupName) {
-            this.dbClusterParameterGroupName = Input.ofNullable(dbClusterParameterGroupName);
+            this.dbClusterParameterGroupName = Output.ofNullable(dbClusterParameterGroupName);
             return this;
         }
 
-        public Builder dbInstanceParameterGroupName(@Nullable Input<String> dbInstanceParameterGroupName) {
+        public Builder dbInstanceParameterGroupName(@Nullable Output<String> dbInstanceParameterGroupName) {
             this.dbInstanceParameterGroupName = dbInstanceParameterGroupName;
             return this;
         }
 
         public Builder dbInstanceParameterGroupName(@Nullable String dbInstanceParameterGroupName) {
-            this.dbInstanceParameterGroupName = Input.ofNullable(dbInstanceParameterGroupName);
+            this.dbInstanceParameterGroupName = Output.ofNullable(dbInstanceParameterGroupName);
             return this;
         }
 
-        public Builder dbSubnetGroupName(@Nullable Input<String> dbSubnetGroupName) {
+        public Builder dbSubnetGroupName(@Nullable Output<String> dbSubnetGroupName) {
             this.dbSubnetGroupName = dbSubnetGroupName;
             return this;
         }
 
         public Builder dbSubnetGroupName(@Nullable String dbSubnetGroupName) {
-            this.dbSubnetGroupName = Input.ofNullable(dbSubnetGroupName);
+            this.dbSubnetGroupName = Output.ofNullable(dbSubnetGroupName);
             return this;
         }
 
-        public Builder deletionProtection(@Nullable Input<Boolean> deletionProtection) {
+        public Builder deletionProtection(@Nullable Output<Boolean> deletionProtection) {
             this.deletionProtection = deletionProtection;
             return this;
         }
 
         public Builder deletionProtection(@Nullable Boolean deletionProtection) {
-            this.deletionProtection = Input.ofNullable(deletionProtection);
+            this.deletionProtection = Output.ofNullable(deletionProtection);
             return this;
         }
 
-        public Builder enableGlobalWriteForwarding(@Nullable Input<Boolean> enableGlobalWriteForwarding) {
+        public Builder enableGlobalWriteForwarding(@Nullable Output<Boolean> enableGlobalWriteForwarding) {
             this.enableGlobalWriteForwarding = enableGlobalWriteForwarding;
             return this;
         }
 
         public Builder enableGlobalWriteForwarding(@Nullable Boolean enableGlobalWriteForwarding) {
-            this.enableGlobalWriteForwarding = Input.ofNullable(enableGlobalWriteForwarding);
+            this.enableGlobalWriteForwarding = Output.ofNullable(enableGlobalWriteForwarding);
             return this;
         }
 
-        public Builder enableHttpEndpoint(@Nullable Input<Boolean> enableHttpEndpoint) {
+        public Builder enableHttpEndpoint(@Nullable Output<Boolean> enableHttpEndpoint) {
             this.enableHttpEndpoint = enableHttpEndpoint;
             return this;
         }
 
         public Builder enableHttpEndpoint(@Nullable Boolean enableHttpEndpoint) {
-            this.enableHttpEndpoint = Input.ofNullable(enableHttpEndpoint);
+            this.enableHttpEndpoint = Output.ofNullable(enableHttpEndpoint);
             return this;
         }
 
-        public Builder enabledCloudwatchLogsExports(@Nullable Input<List<String>> enabledCloudwatchLogsExports) {
+        public Builder enabledCloudwatchLogsExports(@Nullable Output<List<String>> enabledCloudwatchLogsExports) {
             this.enabledCloudwatchLogsExports = enabledCloudwatchLogsExports;
             return this;
         }
 
         public Builder enabledCloudwatchLogsExports(@Nullable List<String> enabledCloudwatchLogsExports) {
-            this.enabledCloudwatchLogsExports = Input.ofNullable(enabledCloudwatchLogsExports);
+            this.enabledCloudwatchLogsExports = Output.ofNullable(enabledCloudwatchLogsExports);
             return this;
         }
 
-        public Builder engine(@Nullable Input<Either<String,EngineType>> engine) {
+        public Builder engine(@Nullable Output<Either<String,EngineType>> engine) {
             this.engine = engine;
             return this;
         }
 
         public Builder engine(@Nullable Either<String,EngineType> engine) {
-            this.engine = Input.ofNullable(engine);
+            this.engine = Output.ofNullable(engine);
             return this;
         }
 
-        public Builder engineMode(@Nullable Input<Either<String,EngineMode>> engineMode) {
+        public Builder engineMode(@Nullable Output<Either<String,EngineMode>> engineMode) {
             this.engineMode = engineMode;
             return this;
         }
 
         public Builder engineMode(@Nullable Either<String,EngineMode> engineMode) {
-            this.engineMode = Input.ofNullable(engineMode);
+            this.engineMode = Output.ofNullable(engineMode);
             return this;
         }
 
-        public Builder engineVersion(@Nullable Input<String> engineVersion) {
+        public Builder engineVersion(@Nullable Output<String> engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
 
         public Builder engineVersion(@Nullable String engineVersion) {
-            this.engineVersion = Input.ofNullable(engineVersion);
+            this.engineVersion = Output.ofNullable(engineVersion);
             return this;
         }
 
-        public Builder finalSnapshotIdentifier(@Nullable Input<String> finalSnapshotIdentifier) {
+        public Builder finalSnapshotIdentifier(@Nullable Output<String> finalSnapshotIdentifier) {
             this.finalSnapshotIdentifier = finalSnapshotIdentifier;
             return this;
         }
 
         public Builder finalSnapshotIdentifier(@Nullable String finalSnapshotIdentifier) {
-            this.finalSnapshotIdentifier = Input.ofNullable(finalSnapshotIdentifier);
+            this.finalSnapshotIdentifier = Output.ofNullable(finalSnapshotIdentifier);
             return this;
         }
 
-        public Builder globalClusterIdentifier(@Nullable Input<String> globalClusterIdentifier) {
+        public Builder globalClusterIdentifier(@Nullable Output<String> globalClusterIdentifier) {
             this.globalClusterIdentifier = globalClusterIdentifier;
             return this;
         }
 
         public Builder globalClusterIdentifier(@Nullable String globalClusterIdentifier) {
-            this.globalClusterIdentifier = Input.ofNullable(globalClusterIdentifier);
+            this.globalClusterIdentifier = Output.ofNullable(globalClusterIdentifier);
             return this;
         }
 
-        public Builder iamDatabaseAuthenticationEnabled(@Nullable Input<Boolean> iamDatabaseAuthenticationEnabled) {
+        public Builder iamDatabaseAuthenticationEnabled(@Nullable Output<Boolean> iamDatabaseAuthenticationEnabled) {
             this.iamDatabaseAuthenticationEnabled = iamDatabaseAuthenticationEnabled;
             return this;
         }
 
         public Builder iamDatabaseAuthenticationEnabled(@Nullable Boolean iamDatabaseAuthenticationEnabled) {
-            this.iamDatabaseAuthenticationEnabled = Input.ofNullable(iamDatabaseAuthenticationEnabled);
+            this.iamDatabaseAuthenticationEnabled = Output.ofNullable(iamDatabaseAuthenticationEnabled);
             return this;
         }
 
-        public Builder iamRoles(@Nullable Input<List<String>> iamRoles) {
+        public Builder iamRoles(@Nullable Output<List<String>> iamRoles) {
             this.iamRoles = iamRoles;
             return this;
         }
 
         public Builder iamRoles(@Nullable List<String> iamRoles) {
-            this.iamRoles = Input.ofNullable(iamRoles);
+            this.iamRoles = Output.ofNullable(iamRoles);
             return this;
         }
 
-        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Input.ofNullable(kmsKeyId);
+            this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder masterPassword(@Nullable Input<String> masterPassword) {
+        public Builder masterPassword(@Nullable Output<String> masterPassword) {
             this.masterPassword = masterPassword;
             return this;
         }
 
         public Builder masterPassword(@Nullable String masterPassword) {
-            this.masterPassword = Input.ofNullable(masterPassword);
+            this.masterPassword = Output.ofNullable(masterPassword);
             return this;
         }
 
-        public Builder masterUsername(@Nullable Input<String> masterUsername) {
+        public Builder masterUsername(@Nullable Output<String> masterUsername) {
             this.masterUsername = masterUsername;
             return this;
         }
 
         public Builder masterUsername(@Nullable String masterUsername) {
-            this.masterUsername = Input.ofNullable(masterUsername);
+            this.masterUsername = Output.ofNullable(masterUsername);
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder preferredBackupWindow(@Nullable Input<String> preferredBackupWindow) {
+        public Builder preferredBackupWindow(@Nullable Output<String> preferredBackupWindow) {
             this.preferredBackupWindow = preferredBackupWindow;
             return this;
         }
 
         public Builder preferredBackupWindow(@Nullable String preferredBackupWindow) {
-            this.preferredBackupWindow = Input.ofNullable(preferredBackupWindow);
+            this.preferredBackupWindow = Output.ofNullable(preferredBackupWindow);
             return this;
         }
 
-        public Builder preferredMaintenanceWindow(@Nullable Input<String> preferredMaintenanceWindow) {
+        public Builder preferredMaintenanceWindow(@Nullable Output<String> preferredMaintenanceWindow) {
             this.preferredMaintenanceWindow = preferredMaintenanceWindow;
             return this;
         }
 
         public Builder preferredMaintenanceWindow(@Nullable String preferredMaintenanceWindow) {
-            this.preferredMaintenanceWindow = Input.ofNullable(preferredMaintenanceWindow);
+            this.preferredMaintenanceWindow = Output.ofNullable(preferredMaintenanceWindow);
             return this;
         }
 
-        public Builder replicationSourceIdentifier(@Nullable Input<String> replicationSourceIdentifier) {
+        public Builder replicationSourceIdentifier(@Nullable Output<String> replicationSourceIdentifier) {
             this.replicationSourceIdentifier = replicationSourceIdentifier;
             return this;
         }
 
         public Builder replicationSourceIdentifier(@Nullable String replicationSourceIdentifier) {
-            this.replicationSourceIdentifier = Input.ofNullable(replicationSourceIdentifier);
+            this.replicationSourceIdentifier = Output.ofNullable(replicationSourceIdentifier);
             return this;
         }
 
-        public Builder restoreToPointInTime(@Nullable Input<ClusterRestoreToPointInTimeArgs> restoreToPointInTime) {
+        public Builder restoreToPointInTime(@Nullable Output<ClusterRestoreToPointInTimeArgs> restoreToPointInTime) {
             this.restoreToPointInTime = restoreToPointInTime;
             return this;
         }
 
         public Builder restoreToPointInTime(@Nullable ClusterRestoreToPointInTimeArgs restoreToPointInTime) {
-            this.restoreToPointInTime = Input.ofNullable(restoreToPointInTime);
+            this.restoreToPointInTime = Output.ofNullable(restoreToPointInTime);
             return this;
         }
 
-        public Builder s3Import(@Nullable Input<ClusterS3ImportArgs> s3Import) {
+        public Builder s3Import(@Nullable Output<ClusterS3ImportArgs> s3Import) {
             this.s3Import = s3Import;
             return this;
         }
 
         public Builder s3Import(@Nullable ClusterS3ImportArgs s3Import) {
-            this.s3Import = Input.ofNullable(s3Import);
+            this.s3Import = Output.ofNullable(s3Import);
             return this;
         }
 
-        public Builder scalingConfiguration(@Nullable Input<ClusterScalingConfigurationArgs> scalingConfiguration) {
+        public Builder scalingConfiguration(@Nullable Output<ClusterScalingConfigurationArgs> scalingConfiguration) {
             this.scalingConfiguration = scalingConfiguration;
             return this;
         }
 
         public Builder scalingConfiguration(@Nullable ClusterScalingConfigurationArgs scalingConfiguration) {
-            this.scalingConfiguration = Input.ofNullable(scalingConfiguration);
+            this.scalingConfiguration = Output.ofNullable(scalingConfiguration);
             return this;
         }
 
-        public Builder skipFinalSnapshot(@Nullable Input<Boolean> skipFinalSnapshot) {
+        public Builder skipFinalSnapshot(@Nullable Output<Boolean> skipFinalSnapshot) {
             this.skipFinalSnapshot = skipFinalSnapshot;
             return this;
         }
 
         public Builder skipFinalSnapshot(@Nullable Boolean skipFinalSnapshot) {
-            this.skipFinalSnapshot = Input.ofNullable(skipFinalSnapshot);
+            this.skipFinalSnapshot = Output.ofNullable(skipFinalSnapshot);
             return this;
         }
 
-        public Builder snapshotIdentifier(@Nullable Input<String> snapshotIdentifier) {
+        public Builder snapshotIdentifier(@Nullable Output<String> snapshotIdentifier) {
             this.snapshotIdentifier = snapshotIdentifier;
             return this;
         }
 
         public Builder snapshotIdentifier(@Nullable String snapshotIdentifier) {
-            this.snapshotIdentifier = Input.ofNullable(snapshotIdentifier);
+            this.snapshotIdentifier = Output.ofNullable(snapshotIdentifier);
             return this;
         }
 
-        public Builder sourceRegion(@Nullable Input<String> sourceRegion) {
+        public Builder sourceRegion(@Nullable Output<String> sourceRegion) {
             this.sourceRegion = sourceRegion;
             return this;
         }
 
         public Builder sourceRegion(@Nullable String sourceRegion) {
-            this.sourceRegion = Input.ofNullable(sourceRegion);
+            this.sourceRegion = Output.ofNullable(sourceRegion);
             return this;
         }
 
-        public Builder storageEncrypted(@Nullable Input<Boolean> storageEncrypted) {
+        public Builder storageEncrypted(@Nullable Output<Boolean> storageEncrypted) {
             this.storageEncrypted = storageEncrypted;
             return this;
         }
 
         public Builder storageEncrypted(@Nullable Boolean storageEncrypted) {
-            this.storageEncrypted = Input.ofNullable(storageEncrypted);
+            this.storageEncrypted = Output.ofNullable(storageEncrypted);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder vpcSecurityGroupIds(@Nullable Input<List<String>> vpcSecurityGroupIds) {
+        public Builder vpcSecurityGroupIds(@Nullable Output<List<String>> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
 
         public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
-            this.vpcSecurityGroupIds = Input.ofNullable(vpcSecurityGroupIds);
+            this.vpcSecurityGroupIds = Output.ofNullable(vpcSecurityGroupIds);
             return this;
         }
         public ClusterArgs build() {

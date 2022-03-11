@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,29 +14,29 @@ public final class ServiceTaskSpecContainerSpecHostArgs extends io.pulumi.resour
     public static final ServiceTaskSpecContainerSpecHostArgs Empty = new ServiceTaskSpecContainerSpecHostArgs();
 
     @InputImport(name="host", required=true)
-      private final Input<String> host;
+      private final Output<String> host;
 
-    public Input<String> getHost() {
+    public Output<String> getHost() {
         return this.host;
     }
 
     @InputImport(name="ip", required=true)
-      private final Input<String> ip;
+      private final Output<String> ip;
 
-    public Input<String> getIp() {
+    public Output<String> getIp() {
         return this.ip;
     }
 
     public ServiceTaskSpecContainerSpecHostArgs(
-        Input<String> host,
-        Input<String> ip) {
+        Output<String> host,
+        Output<String> ip) {
         this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
         this.ip = Objects.requireNonNull(ip, "expected parameter 'ip' to be non-null");
     }
 
     private ServiceTaskSpecContainerSpecHostArgs() {
-        this.host = Input.empty();
-        this.ip = Input.empty();
+        this.host = Output.empty();
+        this.ip = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,8 +48,8 @@ public final class ServiceTaskSpecContainerSpecHostArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private Input<String> host;
-        private Input<String> ip;
+        private Output<String> host;
+        private Output<String> ip;
 
         public Builder() {
     	      // Empty
@@ -61,23 +61,23 @@ public final class ServiceTaskSpecContainerSpecHostArgs extends io.pulumi.resour
     	      this.ip = defaults.ip;
         }
 
-        public Builder host(Input<String> host) {
+        public Builder host(Output<String> host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
         public Builder host(String host) {
-            this.host = Input.of(Objects.requireNonNull(host));
+            this.host = Output.of(Objects.requireNonNull(host));
             return this;
         }
 
-        public Builder ip(Input<String> ip) {
+        public Builder ip(Output<String> ip) {
             this.ip = Objects.requireNonNull(ip);
             return this;
         }
 
         public Builder ip(String ip) {
-            this.ip = Input.of(Objects.requireNonNull(ip));
+            this.ip = Output.of(Objects.requireNonNull(ip));
             return this;
         }
         public ServiceTaskSpecContainerSpecHostArgs build() {

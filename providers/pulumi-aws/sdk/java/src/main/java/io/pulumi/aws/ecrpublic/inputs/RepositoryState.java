@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecrpublic.inputs;
 
 import io.pulumi.aws.ecrpublic.inputs.RepositoryCatalogDataGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -32,17 +32,17 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="catalogData")
-      private final @Nullable Input<RepositoryCatalogDataGetArgs> catalogData;
+      private final @Nullable Output<RepositoryCatalogDataGetArgs> catalogData;
 
-    public Input<RepositoryCatalogDataGetArgs> getCatalogData() {
-        return this.catalogData == null ? Input.empty() : this.catalogData;
+    public Output<RepositoryCatalogDataGetArgs> getCatalogData() {
+        return this.catalogData == null ? Output.empty() : this.catalogData;
     }
 
     @InputImport(name="forceDestroy")
-      private final @Nullable Input<Boolean> forceDestroy;
+      private final @Nullable Output<Boolean> forceDestroy;
 
-    public Input<Boolean> getForceDestroy() {
-        return this.forceDestroy == null ? Input.empty() : this.forceDestroy;
+    public Output<Boolean> getForceDestroy() {
+        return this.forceDestroy == null ? Output.empty() : this.forceDestroy;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registryId")
-      private final @Nullable Input<String> registryId;
+      private final @Nullable Output<String> registryId;
 
-    public Input<String> getRegistryId() {
-        return this.registryId == null ? Input.empty() : this.registryId;
+    public Output<String> getRegistryId() {
+        return this.registryId == null ? Output.empty() : this.registryId;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repositoryName")
-      private final @Nullable Input<String> repositoryName;
+      private final @Nullable Output<String> repositoryName;
 
-    public Input<String> getRepositoryName() {
-        return this.repositoryName == null ? Input.empty() : this.repositoryName;
+    public Output<String> getRepositoryName() {
+        return this.repositoryName == null ? Output.empty() : this.repositoryName;
     }
 
     /**
@@ -72,19 +72,19 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repositoryUri")
-      private final @Nullable Input<String> repositoryUri;
+      private final @Nullable Output<String> repositoryUri;
 
-    public Input<String> getRepositoryUri() {
-        return this.repositoryUri == null ? Input.empty() : this.repositoryUri;
+    public Output<String> getRepositoryUri() {
+        return this.repositoryUri == null ? Output.empty() : this.repositoryUri;
     }
 
     public RepositoryState(
-        @Nullable Input<String> arn,
-        @Nullable Input<RepositoryCatalogDataGetArgs> catalogData,
-        @Nullable Input<Boolean> forceDestroy,
-        @Nullable Input<String> registryId,
-        @Nullable Input<String> repositoryName,
-        @Nullable Input<String> repositoryUri) {
+        @Nullable Output<String> arn,
+        @Nullable Output<RepositoryCatalogDataGetArgs> catalogData,
+        @Nullable Output<Boolean> forceDestroy,
+        @Nullable Output<String> registryId,
+        @Nullable Output<String> repositoryName,
+        @Nullable Output<String> repositoryUri) {
         this.arn = arn;
         this.catalogData = catalogData;
         this.forceDestroy = forceDestroy;
@@ -94,12 +94,12 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
     }
 
     private RepositoryState() {
-        this.arn = Input.empty();
-        this.catalogData = Input.empty();
-        this.forceDestroy = Input.empty();
-        this.registryId = Input.empty();
-        this.repositoryName = Input.empty();
-        this.repositoryUri = Input.empty();
+        this.arn = Output.empty();
+        this.catalogData = Output.empty();
+        this.forceDestroy = Output.empty();
+        this.registryId = Output.empty();
+        this.repositoryName = Output.empty();
+        this.repositoryUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -111,12 +111,12 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<RepositoryCatalogDataGetArgs> catalogData;
-        private @Nullable Input<Boolean> forceDestroy;
-        private @Nullable Input<String> registryId;
-        private @Nullable Input<String> repositoryName;
-        private @Nullable Input<String> repositoryUri;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<RepositoryCatalogDataGetArgs> catalogData;
+        private @Nullable Output<Boolean> forceDestroy;
+        private @Nullable Output<String> registryId;
+        private @Nullable Output<String> repositoryName;
+        private @Nullable Output<String> repositoryUri;
 
         public Builder() {
     	      // Empty
@@ -132,63 +132,63 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
     	      this.repositoryUri = defaults.repositoryUri;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder catalogData(@Nullable Input<RepositoryCatalogDataGetArgs> catalogData) {
+        public Builder catalogData(@Nullable Output<RepositoryCatalogDataGetArgs> catalogData) {
             this.catalogData = catalogData;
             return this;
         }
 
         public Builder catalogData(@Nullable RepositoryCatalogDataGetArgs catalogData) {
-            this.catalogData = Input.ofNullable(catalogData);
+            this.catalogData = Output.ofNullable(catalogData);
             return this;
         }
 
-        public Builder forceDestroy(@Nullable Input<Boolean> forceDestroy) {
+        public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
             this.forceDestroy = forceDestroy;
             return this;
         }
 
         public Builder forceDestroy(@Nullable Boolean forceDestroy) {
-            this.forceDestroy = Input.ofNullable(forceDestroy);
+            this.forceDestroy = Output.ofNullable(forceDestroy);
             return this;
         }
 
-        public Builder registryId(@Nullable Input<String> registryId) {
+        public Builder registryId(@Nullable Output<String> registryId) {
             this.registryId = registryId;
             return this;
         }
 
         public Builder registryId(@Nullable String registryId) {
-            this.registryId = Input.ofNullable(registryId);
+            this.registryId = Output.ofNullable(registryId);
             return this;
         }
 
-        public Builder repositoryName(@Nullable Input<String> repositoryName) {
+        public Builder repositoryName(@Nullable Output<String> repositoryName) {
             this.repositoryName = repositoryName;
             return this;
         }
 
         public Builder repositoryName(@Nullable String repositoryName) {
-            this.repositoryName = Input.ofNullable(repositoryName);
+            this.repositoryName = Output.ofNullable(repositoryName);
             return this;
         }
 
-        public Builder repositoryUri(@Nullable Input<String> repositoryUri) {
+        public Builder repositoryUri(@Nullable Output<String> repositoryUri) {
             this.repositoryUri = repositoryUri;
             return this;
         }
 
         public Builder repositoryUri(@Nullable String repositoryUri) {
-            this.repositoryUri = Input.ofNullable(repositoryUri);
+            this.repositoryUri = Output.ofNullable(repositoryUri);
             return this;
         }
         public RepositoryState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class ScaleSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxNodeCount", required=true)
-      private final Input<Integer> maxNodeCount;
+      private final Output<Integer> maxNodeCount;
 
-    public Input<Integer> getMaxNodeCount() {
+    public Output<Integer> getMaxNodeCount() {
         return this.maxNodeCount;
     }
 
@@ -35,10 +35,10 @@ public final class ScaleSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minNodeCount")
-      private final @Nullable Input<Integer> minNodeCount;
+      private final @Nullable Output<Integer> minNodeCount;
 
-    public Input<Integer> getMinNodeCount() {
-        return this.minNodeCount == null ? Input.empty() : this.minNodeCount;
+    public Output<Integer> getMinNodeCount() {
+        return this.minNodeCount == null ? Output.empty() : this.minNodeCount;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class ScaleSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeIdleTimeBeforeScaleDown")
-      private final @Nullable Input<String> nodeIdleTimeBeforeScaleDown;
+      private final @Nullable Output<String> nodeIdleTimeBeforeScaleDown;
 
-    public Input<String> getNodeIdleTimeBeforeScaleDown() {
-        return this.nodeIdleTimeBeforeScaleDown == null ? Input.empty() : this.nodeIdleTimeBeforeScaleDown;
+    public Output<String> getNodeIdleTimeBeforeScaleDown() {
+        return this.nodeIdleTimeBeforeScaleDown == null ? Output.empty() : this.nodeIdleTimeBeforeScaleDown;
     }
 
     public ScaleSettingsArgs(
-        Input<Integer> maxNodeCount,
-        @Nullable Input<Integer> minNodeCount,
-        @Nullable Input<String> nodeIdleTimeBeforeScaleDown) {
+        Output<Integer> maxNodeCount,
+        @Nullable Output<Integer> minNodeCount,
+        @Nullable Output<String> nodeIdleTimeBeforeScaleDown) {
         this.maxNodeCount = Objects.requireNonNull(maxNodeCount, "expected parameter 'maxNodeCount' to be non-null");
-        this.minNodeCount = minNodeCount == null ? Input.ofNullable(0) : minNodeCount;
+        this.minNodeCount = minNodeCount == null ? Output.ofNullable(0) : minNodeCount;
         this.nodeIdleTimeBeforeScaleDown = nodeIdleTimeBeforeScaleDown;
     }
 
     private ScaleSettingsArgs() {
-        this.maxNodeCount = Input.empty();
-        this.minNodeCount = Input.empty();
-        this.nodeIdleTimeBeforeScaleDown = Input.empty();
+        this.maxNodeCount = Output.empty();
+        this.minNodeCount = Output.empty();
+        this.nodeIdleTimeBeforeScaleDown = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class ScaleSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Integer> maxNodeCount;
-        private @Nullable Input<Integer> minNodeCount;
-        private @Nullable Input<String> nodeIdleTimeBeforeScaleDown;
+        private Output<Integer> maxNodeCount;
+        private @Nullable Output<Integer> minNodeCount;
+        private @Nullable Output<String> nodeIdleTimeBeforeScaleDown;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class ScaleSettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.nodeIdleTimeBeforeScaleDown = defaults.nodeIdleTimeBeforeScaleDown;
         }
 
-        public Builder maxNodeCount(Input<Integer> maxNodeCount) {
+        public Builder maxNodeCount(Output<Integer> maxNodeCount) {
             this.maxNodeCount = Objects.requireNonNull(maxNodeCount);
             return this;
         }
 
         public Builder maxNodeCount(Integer maxNodeCount) {
-            this.maxNodeCount = Input.of(Objects.requireNonNull(maxNodeCount));
+            this.maxNodeCount = Output.of(Objects.requireNonNull(maxNodeCount));
             return this;
         }
 
-        public Builder minNodeCount(@Nullable Input<Integer> minNodeCount) {
+        public Builder minNodeCount(@Nullable Output<Integer> minNodeCount) {
             this.minNodeCount = minNodeCount;
             return this;
         }
 
         public Builder minNodeCount(@Nullable Integer minNodeCount) {
-            this.minNodeCount = Input.ofNullable(minNodeCount);
+            this.minNodeCount = Output.ofNullable(minNodeCount);
             return this;
         }
 
-        public Builder nodeIdleTimeBeforeScaleDown(@Nullable Input<String> nodeIdleTimeBeforeScaleDown) {
+        public Builder nodeIdleTimeBeforeScaleDown(@Nullable Output<String> nodeIdleTimeBeforeScaleDown) {
             this.nodeIdleTimeBeforeScaleDown = nodeIdleTimeBeforeScaleDown;
             return this;
         }
 
         public Builder nodeIdleTimeBeforeScaleDown(@Nullable String nodeIdleTimeBeforeScaleDown) {
-            this.nodeIdleTimeBeforeScaleDown = Input.ofNullable(nodeIdleTimeBeforeScaleDown);
+            this.nodeIdleTimeBeforeScaleDown = Output.ofNullable(nodeIdleTimeBeforeScaleDown);
             return this;
         }
         public ScaleSettingsArgs build() {

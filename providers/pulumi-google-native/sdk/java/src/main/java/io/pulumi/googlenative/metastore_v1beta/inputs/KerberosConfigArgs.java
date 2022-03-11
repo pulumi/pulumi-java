@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.metastore_v1beta.inputs.SecretArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keytab")
-      private final @Nullable Input<SecretArgs> keytab;
+      private final @Nullable Output<SecretArgs> keytab;
 
-    public Input<SecretArgs> getKeytab() {
-        return this.keytab == null ? Input.empty() : this.keytab;
+    public Output<SecretArgs> getKeytab() {
+        return this.keytab == null ? Output.empty() : this.keytab;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="krb5ConfigGcsUri")
-      private final @Nullable Input<String> krb5ConfigGcsUri;
+      private final @Nullable Output<String> krb5ConfigGcsUri;
 
-    public Input<String> getKrb5ConfigGcsUri() {
-        return this.krb5ConfigGcsUri == null ? Input.empty() : this.krb5ConfigGcsUri;
+    public Output<String> getKrb5ConfigGcsUri() {
+        return this.krb5ConfigGcsUri == null ? Output.empty() : this.krb5ConfigGcsUri;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="principal")
-      private final @Nullable Input<String> principal;
+      private final @Nullable Output<String> principal;
 
-    public Input<String> getPrincipal() {
-        return this.principal == null ? Input.empty() : this.principal;
+    public Output<String> getPrincipal() {
+        return this.principal == null ? Output.empty() : this.principal;
     }
 
     public KerberosConfigArgs(
-        @Nullable Input<SecretArgs> keytab,
-        @Nullable Input<String> krb5ConfigGcsUri,
-        @Nullable Input<String> principal) {
+        @Nullable Output<SecretArgs> keytab,
+        @Nullable Output<String> krb5ConfigGcsUri,
+        @Nullable Output<String> principal) {
         this.keytab = keytab;
         this.krb5ConfigGcsUri = krb5ConfigGcsUri;
         this.principal = principal;
     }
 
     private KerberosConfigArgs() {
-        this.keytab = Input.empty();
-        this.krb5ConfigGcsUri = Input.empty();
-        this.principal = Input.empty();
+        this.keytab = Output.empty();
+        this.krb5ConfigGcsUri = Output.empty();
+        this.principal = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<SecretArgs> keytab;
-        private @Nullable Input<String> krb5ConfigGcsUri;
-        private @Nullable Input<String> principal;
+        private @Nullable Output<SecretArgs> keytab;
+        private @Nullable Output<String> krb5ConfigGcsUri;
+        private @Nullable Output<String> principal;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.principal = defaults.principal;
         }
 
-        public Builder keytab(@Nullable Input<SecretArgs> keytab) {
+        public Builder keytab(@Nullable Output<SecretArgs> keytab) {
             this.keytab = keytab;
             return this;
         }
 
         public Builder keytab(@Nullable SecretArgs keytab) {
-            this.keytab = Input.ofNullable(keytab);
+            this.keytab = Output.ofNullable(keytab);
             return this;
         }
 
-        public Builder krb5ConfigGcsUri(@Nullable Input<String> krb5ConfigGcsUri) {
+        public Builder krb5ConfigGcsUri(@Nullable Output<String> krb5ConfigGcsUri) {
             this.krb5ConfigGcsUri = krb5ConfigGcsUri;
             return this;
         }
 
         public Builder krb5ConfigGcsUri(@Nullable String krb5ConfigGcsUri) {
-            this.krb5ConfigGcsUri = Input.ofNullable(krb5ConfigGcsUri);
+            this.krb5ConfigGcsUri = Output.ofNullable(krb5ConfigGcsUri);
             return this;
         }
 
-        public Builder principal(@Nullable Input<String> principal) {
+        public Builder principal(@Nullable Output<String> principal) {
             this.principal = principal;
             return this;
         }
 
         public Builder principal(@Nullable String principal) {
-            this.principal = Input.ofNullable(principal);
+            this.principal = Output.ofNullable(principal);
             return this;
         }
         public KerberosConfigArgs build() {

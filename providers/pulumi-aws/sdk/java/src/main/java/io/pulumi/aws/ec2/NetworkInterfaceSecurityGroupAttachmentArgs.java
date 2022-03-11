@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class NetworkInterfaceSecurityGroupAttachmentArgs extends io.pulumi
      * 
      */
     @InputImport(name="networkInterfaceId", required=true)
-      private final Input<String> networkInterfaceId;
+      private final Output<String> networkInterfaceId;
 
-    public Input<String> getNetworkInterfaceId() {
+    public Output<String> getNetworkInterfaceId() {
         return this.networkInterfaceId;
     }
 
@@ -29,22 +29,22 @@ public final class NetworkInterfaceSecurityGroupAttachmentArgs extends io.pulumi
      * 
      */
     @InputImport(name="securityGroupId", required=true)
-      private final Input<String> securityGroupId;
+      private final Output<String> securityGroupId;
 
-    public Input<String> getSecurityGroupId() {
+    public Output<String> getSecurityGroupId() {
         return this.securityGroupId;
     }
 
     public NetworkInterfaceSecurityGroupAttachmentArgs(
-        Input<String> networkInterfaceId,
-        Input<String> securityGroupId) {
+        Output<String> networkInterfaceId,
+        Output<String> securityGroupId) {
         this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId, "expected parameter 'networkInterfaceId' to be non-null");
         this.securityGroupId = Objects.requireNonNull(securityGroupId, "expected parameter 'securityGroupId' to be non-null");
     }
 
     private NetworkInterfaceSecurityGroupAttachmentArgs() {
-        this.networkInterfaceId = Input.empty();
-        this.securityGroupId = Input.empty();
+        this.networkInterfaceId = Output.empty();
+        this.securityGroupId = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class NetworkInterfaceSecurityGroupAttachmentArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private Input<String> networkInterfaceId;
-        private Input<String> securityGroupId;
+        private Output<String> networkInterfaceId;
+        private Output<String> securityGroupId;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class NetworkInterfaceSecurityGroupAttachmentArgs extends io.pulumi
     	      this.securityGroupId = defaults.securityGroupId;
         }
 
-        public Builder networkInterfaceId(Input<String> networkInterfaceId) {
+        public Builder networkInterfaceId(Output<String> networkInterfaceId) {
             this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
             return this;
         }
 
         public Builder networkInterfaceId(String networkInterfaceId) {
-            this.networkInterfaceId = Input.of(Objects.requireNonNull(networkInterfaceId));
+            this.networkInterfaceId = Output.of(Objects.requireNonNull(networkInterfaceId));
             return this;
         }
 
-        public Builder securityGroupId(Input<String> securityGroupId) {
+        public Builder securityGroupId(Output<String> securityGroupId) {
             this.securityGroupId = Objects.requireNonNull(securityGroupId);
             return this;
         }
 
         public Builder securityGroupId(String securityGroupId) {
-            this.securityGroupId = Input.of(Objects.requireNonNull(securityGroupId));
+            this.securityGroupId = Output.of(Objects.requireNonNull(securityGroupId));
             return this;
         }
         public NetworkInterfaceSecurityGroupAttachmentArgs build() {

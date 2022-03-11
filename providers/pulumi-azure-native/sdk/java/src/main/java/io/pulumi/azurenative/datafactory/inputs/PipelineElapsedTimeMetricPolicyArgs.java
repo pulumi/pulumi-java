@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class PipelineElapsedTimeMetricPolicyArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="duration")
-      private final @Nullable Input<Object> duration;
+      private final @Nullable Output<Object> duration;
 
-    public Input<Object> getDuration() {
-        return this.duration == null ? Input.empty() : this.duration;
+    public Output<Object> getDuration() {
+        return this.duration == null ? Output.empty() : this.duration;
     }
 
-    public PipelineElapsedTimeMetricPolicyArgs(@Nullable Input<Object> duration) {
+    public PipelineElapsedTimeMetricPolicyArgs(@Nullable Output<Object> duration) {
         this.duration = duration;
     }
 
     private PipelineElapsedTimeMetricPolicyArgs() {
-        this.duration = Input.empty();
+        this.duration = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class PipelineElapsedTimeMetricPolicyArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> duration;
+        private @Nullable Output<Object> duration;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class PipelineElapsedTimeMetricPolicyArgs extends io.pulumi.resourc
     	      this.duration = defaults.duration;
         }
 
-        public Builder duration(@Nullable Input<Object> duration) {
+        public Builder duration(@Nullable Output<Object> duration) {
             this.duration = duration;
             return this;
         }
 
         public Builder duration(@Nullable Object duration) {
-            this.duration = Input.ofNullable(duration);
+            this.duration = Output.ofNullable(duration);
             return this;
         }
         public PipelineElapsedTimeMetricPolicyArgs build() {

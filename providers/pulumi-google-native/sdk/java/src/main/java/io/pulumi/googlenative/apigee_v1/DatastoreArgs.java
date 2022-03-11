@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1DatastoreConfigArgs;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datastoreConfig")
-      private final @Nullable Input<GoogleCloudApigeeV1DatastoreConfigArgs> datastoreConfig;
+      private final @Nullable Output<GoogleCloudApigeeV1DatastoreConfigArgs> datastoreConfig;
 
-    public Input<GoogleCloudApigeeV1DatastoreConfigArgs> getDatastoreConfig() {
-        return this.datastoreConfig == null ? Input.empty() : this.datastoreConfig;
+    public Output<GoogleCloudApigeeV1DatastoreConfigArgs> getDatastoreConfig() {
+        return this.datastoreConfig == null ? Output.empty() : this.datastoreConfig;
     }
 
     /**
@@ -31,16 +31,16 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
     @InputImport(name="organizationId", required=true)
-      private final Input<String> organizationId;
+      private final Output<String> organizationId;
 
-    public Input<String> getOrganizationId() {
+    public Output<String> getOrganizationId() {
         return this.organizationId;
     }
 
@@ -49,17 +49,17 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetType")
-      private final @Nullable Input<String> targetType;
+      private final @Nullable Output<String> targetType;
 
-    public Input<String> getTargetType() {
-        return this.targetType == null ? Input.empty() : this.targetType;
+    public Output<String> getTargetType() {
+        return this.targetType == null ? Output.empty() : this.targetType;
     }
 
     public DatastoreArgs(
-        @Nullable Input<GoogleCloudApigeeV1DatastoreConfigArgs> datastoreConfig,
-        Input<String> displayName,
-        Input<String> organizationId,
-        @Nullable Input<String> targetType) {
+        @Nullable Output<GoogleCloudApigeeV1DatastoreConfigArgs> datastoreConfig,
+        Output<String> displayName,
+        Output<String> organizationId,
+        @Nullable Output<String> targetType) {
         this.datastoreConfig = datastoreConfig;
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
         this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
@@ -67,10 +67,10 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DatastoreArgs() {
-        this.datastoreConfig = Input.empty();
-        this.displayName = Input.empty();
-        this.organizationId = Input.empty();
-        this.targetType = Input.empty();
+        this.datastoreConfig = Output.empty();
+        this.displayName = Output.empty();
+        this.organizationId = Output.empty();
+        this.targetType = Output.empty();
     }
 
     public static Builder builder() {
@@ -82,10 +82,10 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<GoogleCloudApigeeV1DatastoreConfigArgs> datastoreConfig;
-        private Input<String> displayName;
-        private Input<String> organizationId;
-        private @Nullable Input<String> targetType;
+        private @Nullable Output<GoogleCloudApigeeV1DatastoreConfigArgs> datastoreConfig;
+        private Output<String> displayName;
+        private Output<String> organizationId;
+        private @Nullable Output<String> targetType;
 
         public Builder() {
     	      // Empty
@@ -99,43 +99,43 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetType = defaults.targetType;
         }
 
-        public Builder datastoreConfig(@Nullable Input<GoogleCloudApigeeV1DatastoreConfigArgs> datastoreConfig) {
+        public Builder datastoreConfig(@Nullable Output<GoogleCloudApigeeV1DatastoreConfigArgs> datastoreConfig) {
             this.datastoreConfig = datastoreConfig;
             return this;
         }
 
         public Builder datastoreConfig(@Nullable GoogleCloudApigeeV1DatastoreConfigArgs datastoreConfig) {
-            this.datastoreConfig = Input.ofNullable(datastoreConfig);
+            this.datastoreConfig = Output.ofNullable(datastoreConfig);
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder organizationId(Input<String> organizationId) {
+        public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
         public Builder organizationId(String organizationId) {
-            this.organizationId = Input.of(Objects.requireNonNull(organizationId));
+            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
 
-        public Builder targetType(@Nullable Input<String> targetType) {
+        public Builder targetType(@Nullable Output<String> targetType) {
             this.targetType = targetType;
             return this;
         }
 
         public Builder targetType(@Nullable String targetType) {
-            this.targetType = Input.ofNullable(targetType);
+            this.targetType = Output.ofNullable(targetType);
             return this;
         }
         public DatastoreArgs build() {

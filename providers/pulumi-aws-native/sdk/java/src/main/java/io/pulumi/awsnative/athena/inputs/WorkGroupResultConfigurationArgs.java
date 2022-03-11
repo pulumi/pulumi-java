@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.athena.inputs;
 
 import io.pulumi.awsnative.athena.inputs.WorkGroupEncryptionConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,29 +20,29 @@ public final class WorkGroupResultConfigurationArgs extends io.pulumi.resources.
     public static final WorkGroupResultConfigurationArgs Empty = new WorkGroupResultConfigurationArgs();
 
     @InputImport(name="encryptionConfiguration")
-      private final @Nullable Input<WorkGroupEncryptionConfigurationArgs> encryptionConfiguration;
+      private final @Nullable Output<WorkGroupEncryptionConfigurationArgs> encryptionConfiguration;
 
-    public Input<WorkGroupEncryptionConfigurationArgs> getEncryptionConfiguration() {
-        return this.encryptionConfiguration == null ? Input.empty() : this.encryptionConfiguration;
+    public Output<WorkGroupEncryptionConfigurationArgs> getEncryptionConfiguration() {
+        return this.encryptionConfiguration == null ? Output.empty() : this.encryptionConfiguration;
     }
 
     @InputImport(name="outputLocation")
-      private final @Nullable Input<String> outputLocation;
+      private final @Nullable Output<String> outputLocation;
 
-    public Input<String> getOutputLocation() {
-        return this.outputLocation == null ? Input.empty() : this.outputLocation;
+    public Output<String> getOutputLocation() {
+        return this.outputLocation == null ? Output.empty() : this.outputLocation;
     }
 
     public WorkGroupResultConfigurationArgs(
-        @Nullable Input<WorkGroupEncryptionConfigurationArgs> encryptionConfiguration,
-        @Nullable Input<String> outputLocation) {
+        @Nullable Output<WorkGroupEncryptionConfigurationArgs> encryptionConfiguration,
+        @Nullable Output<String> outputLocation) {
         this.encryptionConfiguration = encryptionConfiguration;
         this.outputLocation = outputLocation;
     }
 
     private WorkGroupResultConfigurationArgs() {
-        this.encryptionConfiguration = Input.empty();
-        this.outputLocation = Input.empty();
+        this.encryptionConfiguration = Output.empty();
+        this.outputLocation = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class WorkGroupResultConfigurationArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<WorkGroupEncryptionConfigurationArgs> encryptionConfiguration;
-        private @Nullable Input<String> outputLocation;
+        private @Nullable Output<WorkGroupEncryptionConfigurationArgs> encryptionConfiguration;
+        private @Nullable Output<String> outputLocation;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class WorkGroupResultConfigurationArgs extends io.pulumi.resources.
     	      this.outputLocation = defaults.outputLocation;
         }
 
-        public Builder encryptionConfiguration(@Nullable Input<WorkGroupEncryptionConfigurationArgs> encryptionConfiguration) {
+        public Builder encryptionConfiguration(@Nullable Output<WorkGroupEncryptionConfigurationArgs> encryptionConfiguration) {
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
 
         public Builder encryptionConfiguration(@Nullable WorkGroupEncryptionConfigurationArgs encryptionConfiguration) {
-            this.encryptionConfiguration = Input.ofNullable(encryptionConfiguration);
+            this.encryptionConfiguration = Output.ofNullable(encryptionConfiguration);
             return this;
         }
 
-        public Builder outputLocation(@Nullable Input<String> outputLocation) {
+        public Builder outputLocation(@Nullable Output<String> outputLocation) {
             this.outputLocation = outputLocation;
             return this;
         }
 
         public Builder outputLocation(@Nullable String outputLocation) {
-            this.outputLocation = Input.ofNullable(outputLocation);
+            this.outputLocation = Output.ofNullable(outputLocation);
             return this;
         }
         public WorkGroupResultConfigurationArgs build() {

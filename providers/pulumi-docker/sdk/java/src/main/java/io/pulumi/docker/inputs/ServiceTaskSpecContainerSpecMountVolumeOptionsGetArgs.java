@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.docker.inputs.ServiceTaskSpecContainerSpecMountVolumeOptionsLabelGetArgs;
 import java.lang.Boolean;
@@ -19,38 +19,38 @@ public final class ServiceTaskSpecContainerSpecMountVolumeOptionsGetArgs extends
     public static final ServiceTaskSpecContainerSpecMountVolumeOptionsGetArgs Empty = new ServiceTaskSpecContainerSpecMountVolumeOptionsGetArgs();
 
     @InputImport(name="driverName")
-      private final @Nullable Input<String> driverName;
+      private final @Nullable Output<String> driverName;
 
-    public Input<String> getDriverName() {
-        return this.driverName == null ? Input.empty() : this.driverName;
+    public Output<String> getDriverName() {
+        return this.driverName == null ? Output.empty() : this.driverName;
     }
 
     @InputImport(name="driverOptions")
-      private final @Nullable Input<Map<String,String>> driverOptions;
+      private final @Nullable Output<Map<String,String>> driverOptions;
 
-    public Input<Map<String,String>> getDriverOptions() {
-        return this.driverOptions == null ? Input.empty() : this.driverOptions;
+    public Output<Map<String,String>> getDriverOptions() {
+        return this.driverOptions == null ? Output.empty() : this.driverOptions;
     }
 
     @InputImport(name="labels")
-      private final @Nullable Input<List<ServiceTaskSpecContainerSpecMountVolumeOptionsLabelGetArgs>> labels;
+      private final @Nullable Output<List<ServiceTaskSpecContainerSpecMountVolumeOptionsLabelGetArgs>> labels;
 
-    public Input<List<ServiceTaskSpecContainerSpecMountVolumeOptionsLabelGetArgs>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<List<ServiceTaskSpecContainerSpecMountVolumeOptionsLabelGetArgs>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     @InputImport(name="noCopy")
-      private final @Nullable Input<Boolean> noCopy;
+      private final @Nullable Output<Boolean> noCopy;
 
-    public Input<Boolean> getNoCopy() {
-        return this.noCopy == null ? Input.empty() : this.noCopy;
+    public Output<Boolean> getNoCopy() {
+        return this.noCopy == null ? Output.empty() : this.noCopy;
     }
 
     public ServiceTaskSpecContainerSpecMountVolumeOptionsGetArgs(
-        @Nullable Input<String> driverName,
-        @Nullable Input<Map<String,String>> driverOptions,
-        @Nullable Input<List<ServiceTaskSpecContainerSpecMountVolumeOptionsLabelGetArgs>> labels,
-        @Nullable Input<Boolean> noCopy) {
+        @Nullable Output<String> driverName,
+        @Nullable Output<Map<String,String>> driverOptions,
+        @Nullable Output<List<ServiceTaskSpecContainerSpecMountVolumeOptionsLabelGetArgs>> labels,
+        @Nullable Output<Boolean> noCopy) {
         this.driverName = driverName;
         this.driverOptions = driverOptions;
         this.labels = labels;
@@ -58,10 +58,10 @@ public final class ServiceTaskSpecContainerSpecMountVolumeOptionsGetArgs extends
     }
 
     private ServiceTaskSpecContainerSpecMountVolumeOptionsGetArgs() {
-        this.driverName = Input.empty();
-        this.driverOptions = Input.empty();
-        this.labels = Input.empty();
-        this.noCopy = Input.empty();
+        this.driverName = Output.empty();
+        this.driverOptions = Output.empty();
+        this.labels = Output.empty();
+        this.noCopy = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,10 +73,10 @@ public final class ServiceTaskSpecContainerSpecMountVolumeOptionsGetArgs extends
     }
 
     public static final class Builder {
-        private @Nullable Input<String> driverName;
-        private @Nullable Input<Map<String,String>> driverOptions;
-        private @Nullable Input<List<ServiceTaskSpecContainerSpecMountVolumeOptionsLabelGetArgs>> labels;
-        private @Nullable Input<Boolean> noCopy;
+        private @Nullable Output<String> driverName;
+        private @Nullable Output<Map<String,String>> driverOptions;
+        private @Nullable Output<List<ServiceTaskSpecContainerSpecMountVolumeOptionsLabelGetArgs>> labels;
+        private @Nullable Output<Boolean> noCopy;
 
         public Builder() {
     	      // Empty
@@ -90,43 +90,43 @@ public final class ServiceTaskSpecContainerSpecMountVolumeOptionsGetArgs extends
     	      this.noCopy = defaults.noCopy;
         }
 
-        public Builder driverName(@Nullable Input<String> driverName) {
+        public Builder driverName(@Nullable Output<String> driverName) {
             this.driverName = driverName;
             return this;
         }
 
         public Builder driverName(@Nullable String driverName) {
-            this.driverName = Input.ofNullable(driverName);
+            this.driverName = Output.ofNullable(driverName);
             return this;
         }
 
-        public Builder driverOptions(@Nullable Input<Map<String,String>> driverOptions) {
+        public Builder driverOptions(@Nullable Output<Map<String,String>> driverOptions) {
             this.driverOptions = driverOptions;
             return this;
         }
 
         public Builder driverOptions(@Nullable Map<String,String> driverOptions) {
-            this.driverOptions = Input.ofNullable(driverOptions);
+            this.driverOptions = Output.ofNullable(driverOptions);
             return this;
         }
 
-        public Builder labels(@Nullable Input<List<ServiceTaskSpecContainerSpecMountVolumeOptionsLabelGetArgs>> labels) {
+        public Builder labels(@Nullable Output<List<ServiceTaskSpecContainerSpecMountVolumeOptionsLabelGetArgs>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable List<ServiceTaskSpecContainerSpecMountVolumeOptionsLabelGetArgs> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder noCopy(@Nullable Input<Boolean> noCopy) {
+        public Builder noCopy(@Nullable Output<Boolean> noCopy) {
             this.noCopy = noCopy;
             return this;
         }
 
         public Builder noCopy(@Nullable Boolean noCopy) {
-            this.noCopy = Input.ofNullable(noCopy);
+            this.noCopy = Output.ofNullable(noCopy);
             return this;
         }
         public ServiceTaskSpecContainerSpecMountVolumeOptionsGetArgs build() {

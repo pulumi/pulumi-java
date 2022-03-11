@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.spanner_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.spanner_v1.enums.DatabaseDatabaseDialect;
 import io.pulumi.googlenative.spanner_v1.inputs.EncryptionConfigArgs;
@@ -22,9 +22,9 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createStatement", required=true)
-      private final Input<String> createStatement;
+      private final Output<String> createStatement;
 
-    public Input<String> getCreateStatement() {
+    public Output<String> getCreateStatement() {
         return this.createStatement;
     }
 
@@ -33,10 +33,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseDialect")
-      private final @Nullable Input<DatabaseDatabaseDialect> databaseDialect;
+      private final @Nullable Output<DatabaseDatabaseDialect> databaseDialect;
 
-    public Input<DatabaseDatabaseDialect> getDatabaseDialect() {
-        return this.databaseDialect == null ? Input.empty() : this.databaseDialect;
+    public Output<DatabaseDatabaseDialect> getDatabaseDialect() {
+        return this.databaseDialect == null ? Output.empty() : this.databaseDialect;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionConfig")
-      private final @Nullable Input<EncryptionConfigArgs> encryptionConfig;
+      private final @Nullable Output<EncryptionConfigArgs> encryptionConfig;
 
-    public Input<EncryptionConfigArgs> getEncryptionConfig() {
-        return this.encryptionConfig == null ? Input.empty() : this.encryptionConfig;
+    public Output<EncryptionConfigArgs> getEncryptionConfig() {
+        return this.encryptionConfig == null ? Output.empty() : this.encryptionConfig;
     }
 
     /**
@@ -55,33 +55,33 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extraStatements")
-      private final @Nullable Input<List<String>> extraStatements;
+      private final @Nullable Output<List<String>> extraStatements;
 
-    public Input<List<String>> getExtraStatements() {
-        return this.extraStatements == null ? Input.empty() : this.extraStatements;
+    public Output<List<String>> getExtraStatements() {
+        return this.extraStatements == null ? Output.empty() : this.extraStatements;
     }
 
     @InputImport(name="instanceId", required=true)
-      private final Input<String> instanceId;
+      private final Output<String> instanceId;
 
-    public Input<String> getInstanceId() {
+    public Output<String> getInstanceId() {
         return this.instanceId;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public DatabaseArgs(
-        Input<String> createStatement,
-        @Nullable Input<DatabaseDatabaseDialect> databaseDialect,
-        @Nullable Input<EncryptionConfigArgs> encryptionConfig,
-        @Nullable Input<List<String>> extraStatements,
-        Input<String> instanceId,
-        @Nullable Input<String> project) {
+        Output<String> createStatement,
+        @Nullable Output<DatabaseDatabaseDialect> databaseDialect,
+        @Nullable Output<EncryptionConfigArgs> encryptionConfig,
+        @Nullable Output<List<String>> extraStatements,
+        Output<String> instanceId,
+        @Nullable Output<String> project) {
         this.createStatement = Objects.requireNonNull(createStatement, "expected parameter 'createStatement' to be non-null");
         this.databaseDialect = databaseDialect;
         this.encryptionConfig = encryptionConfig;
@@ -91,12 +91,12 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DatabaseArgs() {
-        this.createStatement = Input.empty();
-        this.databaseDialect = Input.empty();
-        this.encryptionConfig = Input.empty();
-        this.extraStatements = Input.empty();
-        this.instanceId = Input.empty();
-        this.project = Input.empty();
+        this.createStatement = Output.empty();
+        this.databaseDialect = Output.empty();
+        this.encryptionConfig = Output.empty();
+        this.extraStatements = Output.empty();
+        this.instanceId = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -108,12 +108,12 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> createStatement;
-        private @Nullable Input<DatabaseDatabaseDialect> databaseDialect;
-        private @Nullable Input<EncryptionConfigArgs> encryptionConfig;
-        private @Nullable Input<List<String>> extraStatements;
-        private Input<String> instanceId;
-        private @Nullable Input<String> project;
+        private Output<String> createStatement;
+        private @Nullable Output<DatabaseDatabaseDialect> databaseDialect;
+        private @Nullable Output<EncryptionConfigArgs> encryptionConfig;
+        private @Nullable Output<List<String>> extraStatements;
+        private Output<String> instanceId;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -129,63 +129,63 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder createStatement(Input<String> createStatement) {
+        public Builder createStatement(Output<String> createStatement) {
             this.createStatement = Objects.requireNonNull(createStatement);
             return this;
         }
 
         public Builder createStatement(String createStatement) {
-            this.createStatement = Input.of(Objects.requireNonNull(createStatement));
+            this.createStatement = Output.of(Objects.requireNonNull(createStatement));
             return this;
         }
 
-        public Builder databaseDialect(@Nullable Input<DatabaseDatabaseDialect> databaseDialect) {
+        public Builder databaseDialect(@Nullable Output<DatabaseDatabaseDialect> databaseDialect) {
             this.databaseDialect = databaseDialect;
             return this;
         }
 
         public Builder databaseDialect(@Nullable DatabaseDatabaseDialect databaseDialect) {
-            this.databaseDialect = Input.ofNullable(databaseDialect);
+            this.databaseDialect = Output.ofNullable(databaseDialect);
             return this;
         }
 
-        public Builder encryptionConfig(@Nullable Input<EncryptionConfigArgs> encryptionConfig) {
+        public Builder encryptionConfig(@Nullable Output<EncryptionConfigArgs> encryptionConfig) {
             this.encryptionConfig = encryptionConfig;
             return this;
         }
 
         public Builder encryptionConfig(@Nullable EncryptionConfigArgs encryptionConfig) {
-            this.encryptionConfig = Input.ofNullable(encryptionConfig);
+            this.encryptionConfig = Output.ofNullable(encryptionConfig);
             return this;
         }
 
-        public Builder extraStatements(@Nullable Input<List<String>> extraStatements) {
+        public Builder extraStatements(@Nullable Output<List<String>> extraStatements) {
             this.extraStatements = extraStatements;
             return this;
         }
 
         public Builder extraStatements(@Nullable List<String> extraStatements) {
-            this.extraStatements = Input.ofNullable(extraStatements);
+            this.extraStatements = Output.ofNullable(extraStatements);
             return this;
         }
 
-        public Builder instanceId(Input<String> instanceId) {
+        public Builder instanceId(Output<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
         public Builder instanceId(String instanceId) {
-            this.instanceId = Input.of(Objects.requireNonNull(instanceId));
+            this.instanceId = Output.of(Objects.requireNonNull(instanceId));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public DatabaseArgs build() {

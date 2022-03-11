@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ecs.inputs;
 import io.pulumi.awsnative.ecs.inputs.TaskDefinitionDockerVolumeConfigurationArgs;
 import io.pulumi.awsnative.ecs.inputs.TaskDefinitionEFSVolumeConfigurationArgs;
 import io.pulumi.awsnative.ecs.inputs.TaskDefinitionHostVolumePropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,38 +18,38 @@ public final class TaskDefinitionVolumeArgs extends io.pulumi.resources.Resource
     public static final TaskDefinitionVolumeArgs Empty = new TaskDefinitionVolumeArgs();
 
     @InputImport(name="dockerVolumeConfiguration")
-      private final @Nullable Input<TaskDefinitionDockerVolumeConfigurationArgs> dockerVolumeConfiguration;
+      private final @Nullable Output<TaskDefinitionDockerVolumeConfigurationArgs> dockerVolumeConfiguration;
 
-    public Input<TaskDefinitionDockerVolumeConfigurationArgs> getDockerVolumeConfiguration() {
-        return this.dockerVolumeConfiguration == null ? Input.empty() : this.dockerVolumeConfiguration;
+    public Output<TaskDefinitionDockerVolumeConfigurationArgs> getDockerVolumeConfiguration() {
+        return this.dockerVolumeConfiguration == null ? Output.empty() : this.dockerVolumeConfiguration;
     }
 
     @InputImport(name="eFSVolumeConfiguration")
-      private final @Nullable Input<TaskDefinitionEFSVolumeConfigurationArgs> eFSVolumeConfiguration;
+      private final @Nullable Output<TaskDefinitionEFSVolumeConfigurationArgs> eFSVolumeConfiguration;
 
-    public Input<TaskDefinitionEFSVolumeConfigurationArgs> getEFSVolumeConfiguration() {
-        return this.eFSVolumeConfiguration == null ? Input.empty() : this.eFSVolumeConfiguration;
+    public Output<TaskDefinitionEFSVolumeConfigurationArgs> getEFSVolumeConfiguration() {
+        return this.eFSVolumeConfiguration == null ? Output.empty() : this.eFSVolumeConfiguration;
     }
 
     @InputImport(name="host")
-      private final @Nullable Input<TaskDefinitionHostVolumePropertiesArgs> host;
+      private final @Nullable Output<TaskDefinitionHostVolumePropertiesArgs> host;
 
-    public Input<TaskDefinitionHostVolumePropertiesArgs> getHost() {
-        return this.host == null ? Input.empty() : this.host;
+    public Output<TaskDefinitionHostVolumePropertiesArgs> getHost() {
+        return this.host == null ? Output.empty() : this.host;
     }
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public TaskDefinitionVolumeArgs(
-        @Nullable Input<TaskDefinitionDockerVolumeConfigurationArgs> dockerVolumeConfiguration,
-        @Nullable Input<TaskDefinitionEFSVolumeConfigurationArgs> eFSVolumeConfiguration,
-        @Nullable Input<TaskDefinitionHostVolumePropertiesArgs> host,
-        @Nullable Input<String> name) {
+        @Nullable Output<TaskDefinitionDockerVolumeConfigurationArgs> dockerVolumeConfiguration,
+        @Nullable Output<TaskDefinitionEFSVolumeConfigurationArgs> eFSVolumeConfiguration,
+        @Nullable Output<TaskDefinitionHostVolumePropertiesArgs> host,
+        @Nullable Output<String> name) {
         this.dockerVolumeConfiguration = dockerVolumeConfiguration;
         this.eFSVolumeConfiguration = eFSVolumeConfiguration;
         this.host = host;
@@ -57,10 +57,10 @@ public final class TaskDefinitionVolumeArgs extends io.pulumi.resources.Resource
     }
 
     private TaskDefinitionVolumeArgs() {
-        this.dockerVolumeConfiguration = Input.empty();
-        this.eFSVolumeConfiguration = Input.empty();
-        this.host = Input.empty();
-        this.name = Input.empty();
+        this.dockerVolumeConfiguration = Output.empty();
+        this.eFSVolumeConfiguration = Output.empty();
+        this.host = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,10 +72,10 @@ public final class TaskDefinitionVolumeArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<TaskDefinitionDockerVolumeConfigurationArgs> dockerVolumeConfiguration;
-        private @Nullable Input<TaskDefinitionEFSVolumeConfigurationArgs> eFSVolumeConfiguration;
-        private @Nullable Input<TaskDefinitionHostVolumePropertiesArgs> host;
-        private @Nullable Input<String> name;
+        private @Nullable Output<TaskDefinitionDockerVolumeConfigurationArgs> dockerVolumeConfiguration;
+        private @Nullable Output<TaskDefinitionEFSVolumeConfigurationArgs> eFSVolumeConfiguration;
+        private @Nullable Output<TaskDefinitionHostVolumePropertiesArgs> host;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -89,43 +89,43 @@ public final class TaskDefinitionVolumeArgs extends io.pulumi.resources.Resource
     	      this.name = defaults.name;
         }
 
-        public Builder dockerVolumeConfiguration(@Nullable Input<TaskDefinitionDockerVolumeConfigurationArgs> dockerVolumeConfiguration) {
+        public Builder dockerVolumeConfiguration(@Nullable Output<TaskDefinitionDockerVolumeConfigurationArgs> dockerVolumeConfiguration) {
             this.dockerVolumeConfiguration = dockerVolumeConfiguration;
             return this;
         }
 
         public Builder dockerVolumeConfiguration(@Nullable TaskDefinitionDockerVolumeConfigurationArgs dockerVolumeConfiguration) {
-            this.dockerVolumeConfiguration = Input.ofNullable(dockerVolumeConfiguration);
+            this.dockerVolumeConfiguration = Output.ofNullable(dockerVolumeConfiguration);
             return this;
         }
 
-        public Builder eFSVolumeConfiguration(@Nullable Input<TaskDefinitionEFSVolumeConfigurationArgs> eFSVolumeConfiguration) {
+        public Builder eFSVolumeConfiguration(@Nullable Output<TaskDefinitionEFSVolumeConfigurationArgs> eFSVolumeConfiguration) {
             this.eFSVolumeConfiguration = eFSVolumeConfiguration;
             return this;
         }
 
         public Builder eFSVolumeConfiguration(@Nullable TaskDefinitionEFSVolumeConfigurationArgs eFSVolumeConfiguration) {
-            this.eFSVolumeConfiguration = Input.ofNullable(eFSVolumeConfiguration);
+            this.eFSVolumeConfiguration = Output.ofNullable(eFSVolumeConfiguration);
             return this;
         }
 
-        public Builder host(@Nullable Input<TaskDefinitionHostVolumePropertiesArgs> host) {
+        public Builder host(@Nullable Output<TaskDefinitionHostVolumePropertiesArgs> host) {
             this.host = host;
             return this;
         }
 
         public Builder host(@Nullable TaskDefinitionHostVolumePropertiesArgs host) {
-            this.host = Input.ofNullable(host);
+            this.host = Output.ofNullable(host);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public TaskDefinitionVolumeArgs build() {

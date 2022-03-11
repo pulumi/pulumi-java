@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class GoogleCloudDatacatalogV1EntryOverviewArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="overview")
-      private final @Nullable Input<String> overview;
+      private final @Nullable Output<String> overview;
 
-    public Input<String> getOverview() {
-        return this.overview == null ? Input.empty() : this.overview;
+    public Output<String> getOverview() {
+        return this.overview == null ? Output.empty() : this.overview;
     }
 
-    public GoogleCloudDatacatalogV1EntryOverviewArgs(@Nullable Input<String> overview) {
+    public GoogleCloudDatacatalogV1EntryOverviewArgs(@Nullable Output<String> overview) {
         this.overview = overview;
     }
 
     private GoogleCloudDatacatalogV1EntryOverviewArgs() {
-        this.overview = Input.empty();
+        this.overview = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDatacatalogV1EntryOverviewArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<String> overview;
+        private @Nullable Output<String> overview;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GoogleCloudDatacatalogV1EntryOverviewArgs extends io.pulumi.r
     	      this.overview = defaults.overview;
         }
 
-        public Builder overview(@Nullable Input<String> overview) {
+        public Builder overview(@Nullable Output<String> overview) {
             this.overview = overview;
             return this;
         }
 
         public Builder overview(@Nullable String overview) {
-            this.overview = Input.ofNullable(overview);
+            this.overview = Output.ofNullable(overview);
             return this;
         }
         public GoogleCloudDatacatalogV1EntryOverviewArgs build() {

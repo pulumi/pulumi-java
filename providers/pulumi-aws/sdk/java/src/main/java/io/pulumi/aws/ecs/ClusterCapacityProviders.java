@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ecs.ClusterCapacityProvidersArgs;
 import io.pulumi.aws.ecs.inputs.ClusterCapacityProvidersState;
 import io.pulumi.aws.ecs.outputs.ClusterCapacityProvidersDefaultCapacityProviderStrategy;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -108,14 +107,14 @@ public class ClusterCapacityProviders extends io.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public ClusterCapacityProviders(String name, ClusterCapacityProvidersArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ecs/clusterCapacityProviders:ClusterCapacityProviders", name, args == null ? ClusterCapacityProvidersArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:ecs/clusterCapacityProviders:ClusterCapacityProviders", name, args == null ? ClusterCapacityProvidersArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ClusterCapacityProviders(String name, Input<String> id, @Nullable ClusterCapacityProvidersState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ClusterCapacityProviders(String name, Output<String> id, @Nullable ClusterCapacityProvidersState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:ecs/clusterCapacityProviders:ClusterCapacityProviders", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -131,7 +130,7 @@ public class ClusterCapacityProviders extends io.pulumi.resources.CustomResource
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ClusterCapacityProviders get(String name, Input<String> id, @Nullable ClusterCapacityProvidersState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ClusterCapacityProviders get(String name, Output<String> id, @Nullable ClusterCapacityProvidersState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ClusterCapacityProviders(name, id, state, options);
     }
 }

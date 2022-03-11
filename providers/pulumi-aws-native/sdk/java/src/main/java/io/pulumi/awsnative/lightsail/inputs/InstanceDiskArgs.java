@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lightsail.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class InstanceDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attachedTo")
-      private final @Nullable Input<String> attachedTo;
+      private final @Nullable Output<String> attachedTo;
 
-    public Input<String> getAttachedTo() {
-        return this.attachedTo == null ? Input.empty() : this.attachedTo;
+    public Output<String> getAttachedTo() {
+        return this.attachedTo == null ? Output.empty() : this.attachedTo;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class InstanceDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attachmentState")
-      private final @Nullable Input<String> attachmentState;
+      private final @Nullable Output<String> attachmentState;
 
-    public Input<String> getAttachmentState() {
-        return this.attachmentState == null ? Input.empty() : this.attachmentState;
+    public Output<String> getAttachmentState() {
+        return this.attachmentState == null ? Output.empty() : this.attachmentState;
     }
 
     /**
@@ -47,9 +47,9 @@ public final class InstanceDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskName", required=true)
-      private final Input<String> diskName;
+      private final Output<String> diskName;
 
-    public Input<String> getDiskName() {
+    public Output<String> getDiskName() {
         return this.diskName;
     }
 
@@ -58,10 +58,10 @@ public final class InstanceDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iOPS")
-      private final @Nullable Input<Integer> iOPS;
+      private final @Nullable Output<Integer> iOPS;
 
-    public Input<Integer> getIOPS() {
-        return this.iOPS == null ? Input.empty() : this.iOPS;
+    public Output<Integer> getIOPS() {
+        return this.iOPS == null ? Output.empty() : this.iOPS;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class InstanceDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isSystemDisk")
-      private final @Nullable Input<Boolean> isSystemDisk;
+      private final @Nullable Output<Boolean> isSystemDisk;
 
-    public Input<Boolean> getIsSystemDisk() {
-        return this.isSystemDisk == null ? Input.empty() : this.isSystemDisk;
+    public Output<Boolean> getIsSystemDisk() {
+        return this.isSystemDisk == null ? Output.empty() : this.isSystemDisk;
     }
 
     /**
@@ -80,9 +80,9 @@ public final class InstanceDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path", required=true)
-      private final Input<String> path;
+      private final Output<String> path;
 
-    public Input<String> getPath() {
+    public Output<String> getPath() {
         return this.path;
     }
 
@@ -91,20 +91,20 @@ public final class InstanceDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sizeInGb")
-      private final @Nullable Input<String> sizeInGb;
+      private final @Nullable Output<String> sizeInGb;
 
-    public Input<String> getSizeInGb() {
-        return this.sizeInGb == null ? Input.empty() : this.sizeInGb;
+    public Output<String> getSizeInGb() {
+        return this.sizeInGb == null ? Output.empty() : this.sizeInGb;
     }
 
     public InstanceDiskArgs(
-        @Nullable Input<String> attachedTo,
-        @Nullable Input<String> attachmentState,
-        Input<String> diskName,
-        @Nullable Input<Integer> iOPS,
-        @Nullable Input<Boolean> isSystemDisk,
-        Input<String> path,
-        @Nullable Input<String> sizeInGb) {
+        @Nullable Output<String> attachedTo,
+        @Nullable Output<String> attachmentState,
+        Output<String> diskName,
+        @Nullable Output<Integer> iOPS,
+        @Nullable Output<Boolean> isSystemDisk,
+        Output<String> path,
+        @Nullable Output<String> sizeInGb) {
         this.attachedTo = attachedTo;
         this.attachmentState = attachmentState;
         this.diskName = Objects.requireNonNull(diskName, "expected parameter 'diskName' to be non-null");
@@ -115,13 +115,13 @@ public final class InstanceDiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceDiskArgs() {
-        this.attachedTo = Input.empty();
-        this.attachmentState = Input.empty();
-        this.diskName = Input.empty();
-        this.iOPS = Input.empty();
-        this.isSystemDisk = Input.empty();
-        this.path = Input.empty();
-        this.sizeInGb = Input.empty();
+        this.attachedTo = Output.empty();
+        this.attachmentState = Output.empty();
+        this.diskName = Output.empty();
+        this.iOPS = Output.empty();
+        this.isSystemDisk = Output.empty();
+        this.path = Output.empty();
+        this.sizeInGb = Output.empty();
     }
 
     public static Builder builder() {
@@ -133,13 +133,13 @@ public final class InstanceDiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> attachedTo;
-        private @Nullable Input<String> attachmentState;
-        private Input<String> diskName;
-        private @Nullable Input<Integer> iOPS;
-        private @Nullable Input<Boolean> isSystemDisk;
-        private Input<String> path;
-        private @Nullable Input<String> sizeInGb;
+        private @Nullable Output<String> attachedTo;
+        private @Nullable Output<String> attachmentState;
+        private Output<String> diskName;
+        private @Nullable Output<Integer> iOPS;
+        private @Nullable Output<Boolean> isSystemDisk;
+        private Output<String> path;
+        private @Nullable Output<String> sizeInGb;
 
         public Builder() {
     	      // Empty
@@ -156,73 +156,73 @@ public final class InstanceDiskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sizeInGb = defaults.sizeInGb;
         }
 
-        public Builder attachedTo(@Nullable Input<String> attachedTo) {
+        public Builder attachedTo(@Nullable Output<String> attachedTo) {
             this.attachedTo = attachedTo;
             return this;
         }
 
         public Builder attachedTo(@Nullable String attachedTo) {
-            this.attachedTo = Input.ofNullable(attachedTo);
+            this.attachedTo = Output.ofNullable(attachedTo);
             return this;
         }
 
-        public Builder attachmentState(@Nullable Input<String> attachmentState) {
+        public Builder attachmentState(@Nullable Output<String> attachmentState) {
             this.attachmentState = attachmentState;
             return this;
         }
 
         public Builder attachmentState(@Nullable String attachmentState) {
-            this.attachmentState = Input.ofNullable(attachmentState);
+            this.attachmentState = Output.ofNullable(attachmentState);
             return this;
         }
 
-        public Builder diskName(Input<String> diskName) {
+        public Builder diskName(Output<String> diskName) {
             this.diskName = Objects.requireNonNull(diskName);
             return this;
         }
 
         public Builder diskName(String diskName) {
-            this.diskName = Input.of(Objects.requireNonNull(diskName));
+            this.diskName = Output.of(Objects.requireNonNull(diskName));
             return this;
         }
 
-        public Builder iOPS(@Nullable Input<Integer> iOPS) {
+        public Builder iOPS(@Nullable Output<Integer> iOPS) {
             this.iOPS = iOPS;
             return this;
         }
 
         public Builder iOPS(@Nullable Integer iOPS) {
-            this.iOPS = Input.ofNullable(iOPS);
+            this.iOPS = Output.ofNullable(iOPS);
             return this;
         }
 
-        public Builder isSystemDisk(@Nullable Input<Boolean> isSystemDisk) {
+        public Builder isSystemDisk(@Nullable Output<Boolean> isSystemDisk) {
             this.isSystemDisk = isSystemDisk;
             return this;
         }
 
         public Builder isSystemDisk(@Nullable Boolean isSystemDisk) {
-            this.isSystemDisk = Input.ofNullable(isSystemDisk);
+            this.isSystemDisk = Output.ofNullable(isSystemDisk);
             return this;
         }
 
-        public Builder path(Input<String> path) {
+        public Builder path(Output<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
         public Builder path(String path) {
-            this.path = Input.of(Objects.requireNonNull(path));
+            this.path = Output.of(Objects.requireNonNull(path));
             return this;
         }
 
-        public Builder sizeInGb(@Nullable Input<String> sizeInGb) {
+        public Builder sizeInGb(@Nullable Output<String> sizeInGb) {
             this.sizeInGb = sizeInGb;
             return this;
         }
 
         public Builder sizeInGb(@Nullable String sizeInGb) {
-            this.sizeInGb = Input.ofNullable(sizeInGb);
+            this.sizeInGb = Output.ofNullable(sizeInGb);
             return this;
         }
         public InstanceDiskArgs build() {

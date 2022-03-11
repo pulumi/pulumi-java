@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.aws.apigateway.inputs.MethodSettingsSettingsGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class MethodSettingsState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="methodPath")
-      private final @Nullable Input<String> methodPath;
+      private final @Nullable Output<String> methodPath;
 
-    public Input<String> getMethodPath() {
-        return this.methodPath == null ? Input.empty() : this.methodPath;
+    public Output<String> getMethodPath() {
+        return this.methodPath == null ? Output.empty() : this.methodPath;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class MethodSettingsState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="restApi")
-      private final @Nullable Input<String> restApi;
+      private final @Nullable Output<String> restApi;
 
-    public Input<String> getRestApi() {
-        return this.restApi == null ? Input.empty() : this.restApi;
+    public Output<String> getRestApi() {
+        return this.restApi == null ? Output.empty() : this.restApi;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class MethodSettingsState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="settings")
-      private final @Nullable Input<MethodSettingsSettingsGetArgs> settings;
+      private final @Nullable Output<MethodSettingsSettingsGetArgs> settings;
 
-    public Input<MethodSettingsSettingsGetArgs> getSettings() {
-        return this.settings == null ? Input.empty() : this.settings;
+    public Output<MethodSettingsSettingsGetArgs> getSettings() {
+        return this.settings == null ? Output.empty() : this.settings;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class MethodSettingsState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="stageName")
-      private final @Nullable Input<String> stageName;
+      private final @Nullable Output<String> stageName;
 
-    public Input<String> getStageName() {
-        return this.stageName == null ? Input.empty() : this.stageName;
+    public Output<String> getStageName() {
+        return this.stageName == null ? Output.empty() : this.stageName;
     }
 
     public MethodSettingsState(
-        @Nullable Input<String> methodPath,
-        @Nullable Input<String> restApi,
-        @Nullable Input<MethodSettingsSettingsGetArgs> settings,
-        @Nullable Input<String> stageName) {
+        @Nullable Output<String> methodPath,
+        @Nullable Output<String> restApi,
+        @Nullable Output<MethodSettingsSettingsGetArgs> settings,
+        @Nullable Output<String> stageName) {
         this.methodPath = methodPath;
         this.restApi = restApi;
         this.settings = settings;
@@ -71,10 +71,10 @@ public final class MethodSettingsState extends io.pulumi.resources.ResourceArgs 
     }
 
     private MethodSettingsState() {
-        this.methodPath = Input.empty();
-        this.restApi = Input.empty();
-        this.settings = Input.empty();
-        this.stageName = Input.empty();
+        this.methodPath = Output.empty();
+        this.restApi = Output.empty();
+        this.settings = Output.empty();
+        this.stageName = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class MethodSettingsState extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> methodPath;
-        private @Nullable Input<String> restApi;
-        private @Nullable Input<MethodSettingsSettingsGetArgs> settings;
-        private @Nullable Input<String> stageName;
+        private @Nullable Output<String> methodPath;
+        private @Nullable Output<String> restApi;
+        private @Nullable Output<MethodSettingsSettingsGetArgs> settings;
+        private @Nullable Output<String> stageName;
 
         public Builder() {
     	      // Empty
@@ -103,38 +103,38 @@ public final class MethodSettingsState extends io.pulumi.resources.ResourceArgs 
     	      this.stageName = defaults.stageName;
         }
 
-        public Builder methodPath(@Nullable Input<String> methodPath) {
+        public Builder methodPath(@Nullable Output<String> methodPath) {
             this.methodPath = methodPath;
             return this;
         }
 
         public Builder methodPath(@Nullable String methodPath) {
-            this.methodPath = Input.ofNullable(methodPath);
+            this.methodPath = Output.ofNullable(methodPath);
             return this;
         }
 
-        public Builder restApi(@Nullable Input<String> restApi) {
+        public Builder restApi(@Nullable Output<String> restApi) {
             this.restApi = restApi;
             return this;
         }
 
-        public Builder settings(@Nullable Input<MethodSettingsSettingsGetArgs> settings) {
+        public Builder settings(@Nullable Output<MethodSettingsSettingsGetArgs> settings) {
             this.settings = settings;
             return this;
         }
 
         public Builder settings(@Nullable MethodSettingsSettingsGetArgs settings) {
-            this.settings = Input.ofNullable(settings);
+            this.settings = Output.ofNullable(settings);
             return this;
         }
 
-        public Builder stageName(@Nullable Input<String> stageName) {
+        public Builder stageName(@Nullable Output<String> stageName) {
             this.stageName = stageName;
             return this;
         }
 
         public Builder stageName(@Nullable String stageName) {
-            this.stageName = Input.ofNullable(stageName);
+            this.stageName = Output.ofNullable(stageName);
             return this;
         }
         public MethodSettingsState build() {

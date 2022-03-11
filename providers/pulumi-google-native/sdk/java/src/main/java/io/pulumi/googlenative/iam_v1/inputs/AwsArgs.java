@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.iam_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class AwsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountId", required=true)
-      private final Input<String> accountId;
+      private final Output<String> accountId;
 
-    public Input<String> getAccountId() {
+    public Output<String> getAccountId() {
         return this.accountId;
     }
 
-    public AwsArgs(Input<String> accountId) {
+    public AwsArgs(Output<String> accountId) {
         this.accountId = Objects.requireNonNull(accountId, "expected parameter 'accountId' to be non-null");
     }
 
     private AwsArgs() {
-        this.accountId = Input.empty();
+        this.accountId = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class AwsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> accountId;
+        private Output<String> accountId;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class AwsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.accountId = defaults.accountId;
         }
 
-        public Builder accountId(Input<String> accountId) {
+        public Builder accountId(Output<String> accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
 
         public Builder accountId(String accountId) {
-            this.accountId = Input.of(Objects.requireNonNull(accountId));
+            this.accountId = Output.of(Objects.requireNonNull(accountId));
             return this;
         }
         public AwsArgs build() {

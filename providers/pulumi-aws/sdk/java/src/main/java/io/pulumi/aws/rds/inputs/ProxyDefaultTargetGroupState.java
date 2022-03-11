@@ -4,7 +4,7 @@
 package io.pulumi.aws.rds.inputs;
 
 import io.pulumi.aws.rds.inputs.ProxyDefaultTargetGroupConnectionPoolConfigGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class ProxyDefaultTargetGroupState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ProxyDefaultTargetGroupState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="connectionPoolConfig")
-      private final @Nullable Input<ProxyDefaultTargetGroupConnectionPoolConfigGetArgs> connectionPoolConfig;
+      private final @Nullable Output<ProxyDefaultTargetGroupConnectionPoolConfigGetArgs> connectionPoolConfig;
 
-    public Input<ProxyDefaultTargetGroupConnectionPoolConfigGetArgs> getConnectionPoolConfig() {
-        return this.connectionPoolConfig == null ? Input.empty() : this.connectionPoolConfig;
+    public Output<ProxyDefaultTargetGroupConnectionPoolConfigGetArgs> getConnectionPoolConfig() {
+        return this.connectionPoolConfig == null ? Output.empty() : this.connectionPoolConfig;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ProxyDefaultTargetGroupState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="dbProxyName")
-      private final @Nullable Input<String> dbProxyName;
+      private final @Nullable Output<String> dbProxyName;
 
-    public Input<String> getDbProxyName() {
-        return this.dbProxyName == null ? Input.empty() : this.dbProxyName;
+    public Output<String> getDbProxyName() {
+        return this.dbProxyName == null ? Output.empty() : this.dbProxyName;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class ProxyDefaultTargetGroupState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public ProxyDefaultTargetGroupState(
-        @Nullable Input<String> arn,
-        @Nullable Input<ProxyDefaultTargetGroupConnectionPoolConfigGetArgs> connectionPoolConfig,
-        @Nullable Input<String> dbProxyName,
-        @Nullable Input<String> name) {
+        @Nullable Output<String> arn,
+        @Nullable Output<ProxyDefaultTargetGroupConnectionPoolConfigGetArgs> connectionPoolConfig,
+        @Nullable Output<String> dbProxyName,
+        @Nullable Output<String> name) {
         this.arn = arn;
         this.connectionPoolConfig = connectionPoolConfig;
         this.dbProxyName = dbProxyName;
@@ -71,10 +71,10 @@ public final class ProxyDefaultTargetGroupState extends io.pulumi.resources.Reso
     }
 
     private ProxyDefaultTargetGroupState() {
-        this.arn = Input.empty();
-        this.connectionPoolConfig = Input.empty();
-        this.dbProxyName = Input.empty();
-        this.name = Input.empty();
+        this.arn = Output.empty();
+        this.connectionPoolConfig = Output.empty();
+        this.dbProxyName = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class ProxyDefaultTargetGroupState extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<ProxyDefaultTargetGroupConnectionPoolConfigGetArgs> connectionPoolConfig;
-        private @Nullable Input<String> dbProxyName;
-        private @Nullable Input<String> name;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<ProxyDefaultTargetGroupConnectionPoolConfigGetArgs> connectionPoolConfig;
+        private @Nullable Output<String> dbProxyName;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class ProxyDefaultTargetGroupState extends io.pulumi.resources.Reso
     	      this.name = defaults.name;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder connectionPoolConfig(@Nullable Input<ProxyDefaultTargetGroupConnectionPoolConfigGetArgs> connectionPoolConfig) {
+        public Builder connectionPoolConfig(@Nullable Output<ProxyDefaultTargetGroupConnectionPoolConfigGetArgs> connectionPoolConfig) {
             this.connectionPoolConfig = connectionPoolConfig;
             return this;
         }
 
         public Builder connectionPoolConfig(@Nullable ProxyDefaultTargetGroupConnectionPoolConfigGetArgs connectionPoolConfig) {
-            this.connectionPoolConfig = Input.ofNullable(connectionPoolConfig);
+            this.connectionPoolConfig = Output.ofNullable(connectionPoolConfig);
             return this;
         }
 
-        public Builder dbProxyName(@Nullable Input<String> dbProxyName) {
+        public Builder dbProxyName(@Nullable Output<String> dbProxyName) {
             this.dbProxyName = dbProxyName;
             return this;
         }
 
         public Builder dbProxyName(@Nullable String dbProxyName) {
-            this.dbProxyName = Input.ofNullable(dbProxyName);
+            this.dbProxyName = Output.ofNullable(dbProxyName);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public ProxyDefaultTargetGroupState build() {

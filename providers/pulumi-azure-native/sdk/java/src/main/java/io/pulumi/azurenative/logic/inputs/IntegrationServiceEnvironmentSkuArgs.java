@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.enums.IntegrationServiceEnvironmentSkuName;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class IntegrationServiceEnvironmentSkuArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="capacity")
-      private final @Nullable Input<Integer> capacity;
+      private final @Nullable Output<Integer> capacity;
 
-    public Input<Integer> getCapacity() {
-        return this.capacity == null ? Input.empty() : this.capacity;
+    public Output<Integer> getCapacity() {
+        return this.capacity == null ? Output.empty() : this.capacity;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class IntegrationServiceEnvironmentSkuArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<Either<String,IntegrationServiceEnvironmentSkuName>> name;
+      private final @Nullable Output<Either<String,IntegrationServiceEnvironmentSkuName>> name;
 
-    public Input<Either<String,IntegrationServiceEnvironmentSkuName>> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<Either<String,IntegrationServiceEnvironmentSkuName>> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public IntegrationServiceEnvironmentSkuArgs(
-        @Nullable Input<Integer> capacity,
-        @Nullable Input<Either<String,IntegrationServiceEnvironmentSkuName>> name) {
+        @Nullable Output<Integer> capacity,
+        @Nullable Output<Either<String,IntegrationServiceEnvironmentSkuName>> name) {
         this.capacity = capacity;
         this.name = name;
     }
 
     private IntegrationServiceEnvironmentSkuArgs() {
-        this.capacity = Input.empty();
-        this.name = Input.empty();
+        this.capacity = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class IntegrationServiceEnvironmentSkuArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> capacity;
-        private @Nullable Input<Either<String,IntegrationServiceEnvironmentSkuName>> name;
+        private @Nullable Output<Integer> capacity;
+        private @Nullable Output<Either<String,IntegrationServiceEnvironmentSkuName>> name;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class IntegrationServiceEnvironmentSkuArgs extends io.pulumi.resour
     	      this.name = defaults.name;
         }
 
-        public Builder capacity(@Nullable Input<Integer> capacity) {
+        public Builder capacity(@Nullable Output<Integer> capacity) {
             this.capacity = capacity;
             return this;
         }
 
         public Builder capacity(@Nullable Integer capacity) {
-            this.capacity = Input.ofNullable(capacity);
+            this.capacity = Output.ofNullable(capacity);
             return this;
         }
 
-        public Builder name(@Nullable Input<Either<String,IntegrationServiceEnvironmentSkuName>> name) {
+        public Builder name(@Nullable Output<Either<String,IntegrationServiceEnvironmentSkuName>> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable Either<String,IntegrationServiceEnvironmentSkuName> name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public IntegrationServiceEnvironmentSkuArgs build() {

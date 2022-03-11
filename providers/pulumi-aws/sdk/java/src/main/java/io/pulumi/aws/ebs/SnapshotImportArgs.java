@@ -5,7 +5,7 @@ package io.pulumi.aws.ebs;
 
 import io.pulumi.aws.ebs.inputs.SnapshotImportClientDataArgs;
 import io.pulumi.aws.ebs.inputs.SnapshotImportDiskContainerArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -24,10 +24,10 @@ public final class SnapshotImportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientData")
-      private final @Nullable Input<SnapshotImportClientDataArgs> clientData;
+      private final @Nullable Output<SnapshotImportClientDataArgs> clientData;
 
-    public Input<SnapshotImportClientDataArgs> getClientData() {
-        return this.clientData == null ? Input.empty() : this.clientData;
+    public Output<SnapshotImportClientDataArgs> getClientData() {
+        return this.clientData == null ? Output.empty() : this.clientData;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SnapshotImportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -46,9 +46,9 @@ public final class SnapshotImportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskContainer", required=true)
-      private final Input<SnapshotImportDiskContainerArgs> diskContainer;
+      private final Output<SnapshotImportDiskContainerArgs> diskContainer;
 
-    public Input<SnapshotImportDiskContainerArgs> getDiskContainer() {
+    public Output<SnapshotImportDiskContainerArgs> getDiskContainer() {
         return this.diskContainer;
     }
 
@@ -57,10 +57,10 @@ public final class SnapshotImportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encrypted")
-      private final @Nullable Input<Boolean> encrypted;
+      private final @Nullable Output<Boolean> encrypted;
 
-    public Input<Boolean> getEncrypted() {
-        return this.encrypted == null ? Input.empty() : this.encrypted;
+    public Output<Boolean> getEncrypted() {
+        return this.encrypted == null ? Output.empty() : this.encrypted;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class SnapshotImportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyId")
-      private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Output<String> kmsKeyId;
 
-    public Input<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
+    public Output<String> getKmsKeyId() {
+        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class SnapshotImportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permanentRestore")
-      private final @Nullable Input<Boolean> permanentRestore;
+      private final @Nullable Output<Boolean> permanentRestore;
 
-    public Input<Boolean> getPermanentRestore() {
-        return this.permanentRestore == null ? Input.empty() : this.permanentRestore;
+    public Output<Boolean> getPermanentRestore() {
+        return this.permanentRestore == null ? Output.empty() : this.permanentRestore;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class SnapshotImportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleName")
-      private final @Nullable Input<String> roleName;
+      private final @Nullable Output<String> roleName;
 
-    public Input<String> getRoleName() {
-        return this.roleName == null ? Input.empty() : this.roleName;
+    public Output<String> getRoleName() {
+        return this.roleName == null ? Output.empty() : this.roleName;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class SnapshotImportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageTier")
-      private final @Nullable Input<String> storageTier;
+      private final @Nullable Output<String> storageTier;
 
-    public Input<String> getStorageTier() {
-        return this.storageTier == null ? Input.empty() : this.storageTier;
+    public Output<String> getStorageTier() {
+        return this.storageTier == null ? Output.empty() : this.storageTier;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class SnapshotImportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -123,23 +123,23 @@ public final class SnapshotImportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="temporaryRestoreDays")
-      private final @Nullable Input<Integer> temporaryRestoreDays;
+      private final @Nullable Output<Integer> temporaryRestoreDays;
 
-    public Input<Integer> getTemporaryRestoreDays() {
-        return this.temporaryRestoreDays == null ? Input.empty() : this.temporaryRestoreDays;
+    public Output<Integer> getTemporaryRestoreDays() {
+        return this.temporaryRestoreDays == null ? Output.empty() : this.temporaryRestoreDays;
     }
 
     public SnapshotImportArgs(
-        @Nullable Input<SnapshotImportClientDataArgs> clientData,
-        @Nullable Input<String> description,
-        Input<SnapshotImportDiskContainerArgs> diskContainer,
-        @Nullable Input<Boolean> encrypted,
-        @Nullable Input<String> kmsKeyId,
-        @Nullable Input<Boolean> permanentRestore,
-        @Nullable Input<String> roleName,
-        @Nullable Input<String> storageTier,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Integer> temporaryRestoreDays) {
+        @Nullable Output<SnapshotImportClientDataArgs> clientData,
+        @Nullable Output<String> description,
+        Output<SnapshotImportDiskContainerArgs> diskContainer,
+        @Nullable Output<Boolean> encrypted,
+        @Nullable Output<String> kmsKeyId,
+        @Nullable Output<Boolean> permanentRestore,
+        @Nullable Output<String> roleName,
+        @Nullable Output<String> storageTier,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Integer> temporaryRestoreDays) {
         this.clientData = clientData;
         this.description = description;
         this.diskContainer = Objects.requireNonNull(diskContainer, "expected parameter 'diskContainer' to be non-null");
@@ -153,16 +153,16 @@ public final class SnapshotImportArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SnapshotImportArgs() {
-        this.clientData = Input.empty();
-        this.description = Input.empty();
-        this.diskContainer = Input.empty();
-        this.encrypted = Input.empty();
-        this.kmsKeyId = Input.empty();
-        this.permanentRestore = Input.empty();
-        this.roleName = Input.empty();
-        this.storageTier = Input.empty();
-        this.tags = Input.empty();
-        this.temporaryRestoreDays = Input.empty();
+        this.clientData = Output.empty();
+        this.description = Output.empty();
+        this.diskContainer = Output.empty();
+        this.encrypted = Output.empty();
+        this.kmsKeyId = Output.empty();
+        this.permanentRestore = Output.empty();
+        this.roleName = Output.empty();
+        this.storageTier = Output.empty();
+        this.tags = Output.empty();
+        this.temporaryRestoreDays = Output.empty();
     }
 
     public static Builder builder() {
@@ -174,16 +174,16 @@ public final class SnapshotImportArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<SnapshotImportClientDataArgs> clientData;
-        private @Nullable Input<String> description;
-        private Input<SnapshotImportDiskContainerArgs> diskContainer;
-        private @Nullable Input<Boolean> encrypted;
-        private @Nullable Input<String> kmsKeyId;
-        private @Nullable Input<Boolean> permanentRestore;
-        private @Nullable Input<String> roleName;
-        private @Nullable Input<String> storageTier;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Integer> temporaryRestoreDays;
+        private @Nullable Output<SnapshotImportClientDataArgs> clientData;
+        private @Nullable Output<String> description;
+        private Output<SnapshotImportDiskContainerArgs> diskContainer;
+        private @Nullable Output<Boolean> encrypted;
+        private @Nullable Output<String> kmsKeyId;
+        private @Nullable Output<Boolean> permanentRestore;
+        private @Nullable Output<String> roleName;
+        private @Nullable Output<String> storageTier;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Integer> temporaryRestoreDays;
 
         public Builder() {
     	      // Empty
@@ -203,103 +203,103 @@ public final class SnapshotImportArgs extends io.pulumi.resources.ResourceArgs {
     	      this.temporaryRestoreDays = defaults.temporaryRestoreDays;
         }
 
-        public Builder clientData(@Nullable Input<SnapshotImportClientDataArgs> clientData) {
+        public Builder clientData(@Nullable Output<SnapshotImportClientDataArgs> clientData) {
             this.clientData = clientData;
             return this;
         }
 
         public Builder clientData(@Nullable SnapshotImportClientDataArgs clientData) {
-            this.clientData = Input.ofNullable(clientData);
+            this.clientData = Output.ofNullable(clientData);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder diskContainer(Input<SnapshotImportDiskContainerArgs> diskContainer) {
+        public Builder diskContainer(Output<SnapshotImportDiskContainerArgs> diskContainer) {
             this.diskContainer = Objects.requireNonNull(diskContainer);
             return this;
         }
 
         public Builder diskContainer(SnapshotImportDiskContainerArgs diskContainer) {
-            this.diskContainer = Input.of(Objects.requireNonNull(diskContainer));
+            this.diskContainer = Output.of(Objects.requireNonNull(diskContainer));
             return this;
         }
 
-        public Builder encrypted(@Nullable Input<Boolean> encrypted) {
+        public Builder encrypted(@Nullable Output<Boolean> encrypted) {
             this.encrypted = encrypted;
             return this;
         }
 
         public Builder encrypted(@Nullable Boolean encrypted) {
-            this.encrypted = Input.ofNullable(encrypted);
+            this.encrypted = Output.ofNullable(encrypted);
             return this;
         }
 
-        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Input.ofNullable(kmsKeyId);
+            this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder permanentRestore(@Nullable Input<Boolean> permanentRestore) {
+        public Builder permanentRestore(@Nullable Output<Boolean> permanentRestore) {
             this.permanentRestore = permanentRestore;
             return this;
         }
 
         public Builder permanentRestore(@Nullable Boolean permanentRestore) {
-            this.permanentRestore = Input.ofNullable(permanentRestore);
+            this.permanentRestore = Output.ofNullable(permanentRestore);
             return this;
         }
 
-        public Builder roleName(@Nullable Input<String> roleName) {
+        public Builder roleName(@Nullable Output<String> roleName) {
             this.roleName = roleName;
             return this;
         }
 
         public Builder roleName(@Nullable String roleName) {
-            this.roleName = Input.ofNullable(roleName);
+            this.roleName = Output.ofNullable(roleName);
             return this;
         }
 
-        public Builder storageTier(@Nullable Input<String> storageTier) {
+        public Builder storageTier(@Nullable Output<String> storageTier) {
             this.storageTier = storageTier;
             return this;
         }
 
         public Builder storageTier(@Nullable String storageTier) {
-            this.storageTier = Input.ofNullable(storageTier);
+            this.storageTier = Output.ofNullable(storageTier);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder temporaryRestoreDays(@Nullable Input<Integer> temporaryRestoreDays) {
+        public Builder temporaryRestoreDays(@Nullable Output<Integer> temporaryRestoreDays) {
             this.temporaryRestoreDays = temporaryRestoreDays;
             return this;
         }
 
         public Builder temporaryRestoreDays(@Nullable Integer temporaryRestoreDays) {
-            this.temporaryRestoreDays = Input.ofNullable(temporaryRestoreDays);
+            this.temporaryRestoreDays = Output.ofNullable(temporaryRestoreDays);
             return this;
         }
         public SnapshotImportArgs build() {

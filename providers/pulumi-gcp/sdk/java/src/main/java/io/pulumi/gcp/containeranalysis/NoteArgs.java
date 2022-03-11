@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.containeranalysis;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.containeranalysis.inputs.NoteAttestationAuthorityArgs;
 import io.pulumi.gcp.containeranalysis.inputs.NoteRelatedUrlArgs;
@@ -31,9 +31,9 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attestationAuthority", required=true)
-      private final Input<NoteAttestationAuthorityArgs> attestationAuthority;
+      private final Output<NoteAttestationAuthorityArgs> attestationAuthority;
 
-    public Input<NoteAttestationAuthorityArgs> getAttestationAuthority() {
+    public Output<NoteAttestationAuthorityArgs> getAttestationAuthority() {
         return this.attestationAuthority;
     }
 
@@ -42,10 +42,10 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expirationTime")
-      private final @Nullable Input<String> expirationTime;
+      private final @Nullable Output<String> expirationTime;
 
-    public Input<String> getExpirationTime() {
-        return this.expirationTime == null ? Input.empty() : this.expirationTime;
+    public Output<String> getExpirationTime() {
+        return this.expirationTime == null ? Output.empty() : this.expirationTime;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="longDescription")
-      private final @Nullable Input<String> longDescription;
+      private final @Nullable Output<String> longDescription;
 
-    public Input<String> getLongDescription() {
-        return this.longDescription == null ? Input.empty() : this.longDescription;
+    public Output<String> getLongDescription() {
+        return this.longDescription == null ? Output.empty() : this.longDescription;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relatedNoteNames")
-      private final @Nullable Input<List<String>> relatedNoteNames;
+      private final @Nullable Output<List<String>> relatedNoteNames;
 
-    public Input<List<String>> getRelatedNoteNames() {
-        return this.relatedNoteNames == null ? Input.empty() : this.relatedNoteNames;
+    public Output<List<String>> getRelatedNoteNames() {
+        return this.relatedNoteNames == null ? Output.empty() : this.relatedNoteNames;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relatedUrls")
-      private final @Nullable Input<List<NoteRelatedUrlArgs>> relatedUrls;
+      private final @Nullable Output<List<NoteRelatedUrlArgs>> relatedUrls;
 
-    public Input<List<NoteRelatedUrlArgs>> getRelatedUrls() {
-        return this.relatedUrls == null ? Input.empty() : this.relatedUrls;
+    public Output<List<NoteRelatedUrlArgs>> getRelatedUrls() {
+        return this.relatedUrls == null ? Output.empty() : this.relatedUrls;
     }
 
     /**
@@ -110,21 +110,21 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shortDescription")
-      private final @Nullable Input<String> shortDescription;
+      private final @Nullable Output<String> shortDescription;
 
-    public Input<String> getShortDescription() {
-        return this.shortDescription == null ? Input.empty() : this.shortDescription;
+    public Output<String> getShortDescription() {
+        return this.shortDescription == null ? Output.empty() : this.shortDescription;
     }
 
     public NoteArgs(
-        Input<NoteAttestationAuthorityArgs> attestationAuthority,
-        @Nullable Input<String> expirationTime,
-        @Nullable Input<String> longDescription,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<List<String>> relatedNoteNames,
-        @Nullable Input<List<NoteRelatedUrlArgs>> relatedUrls,
-        @Nullable Input<String> shortDescription) {
+        Output<NoteAttestationAuthorityArgs> attestationAuthority,
+        @Nullable Output<String> expirationTime,
+        @Nullable Output<String> longDescription,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<List<String>> relatedNoteNames,
+        @Nullable Output<List<NoteRelatedUrlArgs>> relatedUrls,
+        @Nullable Output<String> shortDescription) {
         this.attestationAuthority = Objects.requireNonNull(attestationAuthority, "expected parameter 'attestationAuthority' to be non-null");
         this.expirationTime = expirationTime;
         this.longDescription = longDescription;
@@ -136,14 +136,14 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NoteArgs() {
-        this.attestationAuthority = Input.empty();
-        this.expirationTime = Input.empty();
-        this.longDescription = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.relatedNoteNames = Input.empty();
-        this.relatedUrls = Input.empty();
-        this.shortDescription = Input.empty();
+        this.attestationAuthority = Output.empty();
+        this.expirationTime = Output.empty();
+        this.longDescription = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.relatedNoteNames = Output.empty();
+        this.relatedUrls = Output.empty();
+        this.shortDescription = Output.empty();
     }
 
     public static Builder builder() {
@@ -155,14 +155,14 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<NoteAttestationAuthorityArgs> attestationAuthority;
-        private @Nullable Input<String> expirationTime;
-        private @Nullable Input<String> longDescription;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<List<String>> relatedNoteNames;
-        private @Nullable Input<List<NoteRelatedUrlArgs>> relatedUrls;
-        private @Nullable Input<String> shortDescription;
+        private Output<NoteAttestationAuthorityArgs> attestationAuthority;
+        private @Nullable Output<String> expirationTime;
+        private @Nullable Output<String> longDescription;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<List<String>> relatedNoteNames;
+        private @Nullable Output<List<NoteRelatedUrlArgs>> relatedUrls;
+        private @Nullable Output<String> shortDescription;
 
         public Builder() {
     	      // Empty
@@ -180,83 +180,83 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
     	      this.shortDescription = defaults.shortDescription;
         }
 
-        public Builder attestationAuthority(Input<NoteAttestationAuthorityArgs> attestationAuthority) {
+        public Builder attestationAuthority(Output<NoteAttestationAuthorityArgs> attestationAuthority) {
             this.attestationAuthority = Objects.requireNonNull(attestationAuthority);
             return this;
         }
 
         public Builder attestationAuthority(NoteAttestationAuthorityArgs attestationAuthority) {
-            this.attestationAuthority = Input.of(Objects.requireNonNull(attestationAuthority));
+            this.attestationAuthority = Output.of(Objects.requireNonNull(attestationAuthority));
             return this;
         }
 
-        public Builder expirationTime(@Nullable Input<String> expirationTime) {
+        public Builder expirationTime(@Nullable Output<String> expirationTime) {
             this.expirationTime = expirationTime;
             return this;
         }
 
         public Builder expirationTime(@Nullable String expirationTime) {
-            this.expirationTime = Input.ofNullable(expirationTime);
+            this.expirationTime = Output.ofNullable(expirationTime);
             return this;
         }
 
-        public Builder longDescription(@Nullable Input<String> longDescription) {
+        public Builder longDescription(@Nullable Output<String> longDescription) {
             this.longDescription = longDescription;
             return this;
         }
 
         public Builder longDescription(@Nullable String longDescription) {
-            this.longDescription = Input.ofNullable(longDescription);
+            this.longDescription = Output.ofNullable(longDescription);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder relatedNoteNames(@Nullable Input<List<String>> relatedNoteNames) {
+        public Builder relatedNoteNames(@Nullable Output<List<String>> relatedNoteNames) {
             this.relatedNoteNames = relatedNoteNames;
             return this;
         }
 
         public Builder relatedNoteNames(@Nullable List<String> relatedNoteNames) {
-            this.relatedNoteNames = Input.ofNullable(relatedNoteNames);
+            this.relatedNoteNames = Output.ofNullable(relatedNoteNames);
             return this;
         }
 
-        public Builder relatedUrls(@Nullable Input<List<NoteRelatedUrlArgs>> relatedUrls) {
+        public Builder relatedUrls(@Nullable Output<List<NoteRelatedUrlArgs>> relatedUrls) {
             this.relatedUrls = relatedUrls;
             return this;
         }
 
         public Builder relatedUrls(@Nullable List<NoteRelatedUrlArgs> relatedUrls) {
-            this.relatedUrls = Input.ofNullable(relatedUrls);
+            this.relatedUrls = Output.ofNullable(relatedUrls);
             return this;
         }
 
-        public Builder shortDescription(@Nullable Input<String> shortDescription) {
+        public Builder shortDescription(@Nullable Output<String> shortDescription) {
             this.shortDescription = shortDescription;
             return this;
         }
 
         public Builder shortDescription(@Nullable String shortDescription) {
-            this.shortDescription = Input.ofNullable(shortDescription);
+            this.shortDescription = Output.ofNullable(shortDescription);
             return this;
         }
         public NoteArgs build() {

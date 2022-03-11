@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.search.inputs;
 
 import io.pulumi.azurenative.search.enums.IdentityType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -22,18 +22,18 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<IdentityType> type;
+      private final Output<IdentityType> type;
 
-    public Input<IdentityType> getType() {
+    public Output<IdentityType> getType() {
         return this.type;
     }
 
-    public IdentityArgs(Input<IdentityType> type) {
+    public IdentityArgs(Output<IdentityType> type) {
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private IdentityArgs() {
-        this.type = Input.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<IdentityType> type;
+        private Output<IdentityType> type;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder type(Input<IdentityType> type) {
+        public Builder type(Output<IdentityType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(IdentityType type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public IdentityArgs build() {

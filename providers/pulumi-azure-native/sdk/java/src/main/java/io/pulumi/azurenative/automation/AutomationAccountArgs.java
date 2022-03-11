@@ -6,7 +6,7 @@ package io.pulumi.azurenative.automation;
 import io.pulumi.azurenative.automation.inputs.EncryptionPropertiesArgs;
 import io.pulumi.azurenative.automation.inputs.IdentityArgs;
 import io.pulumi.azurenative.automation.inputs.SkuArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="automationAccountName")
-      private final @Nullable Input<String> automationAccountName;
+      private final @Nullable Output<String> automationAccountName;
 
-    public Input<String> getAutomationAccountName() {
-        return this.automationAccountName == null ? Input.empty() : this.automationAccountName;
+    public Output<String> getAutomationAccountName() {
+        return this.automationAccountName == null ? Output.empty() : this.automationAccountName;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="disableLocalAuth")
-      private final @Nullable Input<Boolean> disableLocalAuth;
+      private final @Nullable Output<Boolean> disableLocalAuth;
 
-    public Input<Boolean> getDisableLocalAuth() {
-        return this.disableLocalAuth == null ? Input.empty() : this.disableLocalAuth;
+    public Output<Boolean> getDisableLocalAuth() {
+        return this.disableLocalAuth == null ? Output.empty() : this.disableLocalAuth;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="encryption")
-      private final @Nullable Input<EncryptionPropertiesArgs> encryption;
+      private final @Nullable Output<EncryptionPropertiesArgs> encryption;
 
-    public Input<EncryptionPropertiesArgs> getEncryption() {
-        return this.encryption == null ? Input.empty() : this.encryption;
+    public Output<EncryptionPropertiesArgs> getEncryption() {
+        return this.encryption == null ? Output.empty() : this.encryption;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<IdentityArgs> identity;
+      private final @Nullable Output<IdentityArgs> identity;
 
-    public Input<IdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<IdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="publicNetworkAccess")
-      private final @Nullable Input<Boolean> publicNetworkAccess;
+      private final @Nullable Output<Boolean> publicNetworkAccess;
 
-    public Input<Boolean> getPublicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
+    public Output<Boolean> getPublicNetworkAccess() {
+        return this.publicNetworkAccess == null ? Output.empty() : this.publicNetworkAccess;
     }
 
     /**
@@ -101,9 +101,9 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -112,10 +112,10 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<SkuArgs> sku;
+      private final @Nullable Output<SkuArgs> sku;
 
-    public Input<SkuArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<SkuArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -123,23 +123,23 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public AutomationAccountArgs(
-        @Nullable Input<String> automationAccountName,
-        @Nullable Input<Boolean> disableLocalAuth,
-        @Nullable Input<EncryptionPropertiesArgs> encryption,
-        @Nullable Input<IdentityArgs> identity,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<Boolean> publicNetworkAccess,
-        Input<String> resourceGroupName,
-        @Nullable Input<SkuArgs> sku,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> automationAccountName,
+        @Nullable Output<Boolean> disableLocalAuth,
+        @Nullable Output<EncryptionPropertiesArgs> encryption,
+        @Nullable Output<IdentityArgs> identity,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<Boolean> publicNetworkAccess,
+        Output<String> resourceGroupName,
+        @Nullable Output<SkuArgs> sku,
+        @Nullable Output<Map<String,String>> tags) {
         this.automationAccountName = automationAccountName;
         this.disableLocalAuth = disableLocalAuth;
         this.encryption = encryption;
@@ -153,16 +153,16 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
     }
 
     private AutomationAccountArgs() {
-        this.automationAccountName = Input.empty();
-        this.disableLocalAuth = Input.empty();
-        this.encryption = Input.empty();
-        this.identity = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.publicNetworkAccess = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sku = Input.empty();
-        this.tags = Input.empty();
+        this.automationAccountName = Output.empty();
+        this.disableLocalAuth = Output.empty();
+        this.encryption = Output.empty();
+        this.identity = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.publicNetworkAccess = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sku = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -174,16 +174,16 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> automationAccountName;
-        private @Nullable Input<Boolean> disableLocalAuth;
-        private @Nullable Input<EncryptionPropertiesArgs> encryption;
-        private @Nullable Input<IdentityArgs> identity;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Boolean> publicNetworkAccess;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<SkuArgs> sku;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> automationAccountName;
+        private @Nullable Output<Boolean> disableLocalAuth;
+        private @Nullable Output<EncryptionPropertiesArgs> encryption;
+        private @Nullable Output<IdentityArgs> identity;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Boolean> publicNetworkAccess;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<SkuArgs> sku;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -203,103 +203,103 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
     	      this.tags = defaults.tags;
         }
 
-        public Builder automationAccountName(@Nullable Input<String> automationAccountName) {
+        public Builder automationAccountName(@Nullable Output<String> automationAccountName) {
             this.automationAccountName = automationAccountName;
             return this;
         }
 
         public Builder automationAccountName(@Nullable String automationAccountName) {
-            this.automationAccountName = Input.ofNullable(automationAccountName);
+            this.automationAccountName = Output.ofNullable(automationAccountName);
             return this;
         }
 
-        public Builder disableLocalAuth(@Nullable Input<Boolean> disableLocalAuth) {
+        public Builder disableLocalAuth(@Nullable Output<Boolean> disableLocalAuth) {
             this.disableLocalAuth = disableLocalAuth;
             return this;
         }
 
         public Builder disableLocalAuth(@Nullable Boolean disableLocalAuth) {
-            this.disableLocalAuth = Input.ofNullable(disableLocalAuth);
+            this.disableLocalAuth = Output.ofNullable(disableLocalAuth);
             return this;
         }
 
-        public Builder encryption(@Nullable Input<EncryptionPropertiesArgs> encryption) {
+        public Builder encryption(@Nullable Output<EncryptionPropertiesArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
 
         public Builder encryption(@Nullable EncryptionPropertiesArgs encryption) {
-            this.encryption = Input.ofNullable(encryption);
+            this.encryption = Output.ofNullable(encryption);
             return this;
         }
 
-        public Builder identity(@Nullable Input<IdentityArgs> identity) {
+        public Builder identity(@Nullable Output<IdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable IdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder publicNetworkAccess(@Nullable Input<Boolean> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Output<Boolean> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
         public Builder publicNetworkAccess(@Nullable Boolean publicNetworkAccess) {
-            this.publicNetworkAccess = Input.ofNullable(publicNetworkAccess);
+            this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public AutomationAccountArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.inputs.BotMessageGroupArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -26,10 +26,10 @@ public final class BotFulfillmentStartResponseSpecificationArgs extends io.pulum
      * 
      */
     @InputImport(name="allowInterrupt")
-      private final @Nullable Input<Boolean> allowInterrupt;
+      private final @Nullable Output<Boolean> allowInterrupt;
 
-    public Input<Boolean> getAllowInterrupt() {
-        return this.allowInterrupt == null ? Input.empty() : this.allowInterrupt;
+    public Output<Boolean> getAllowInterrupt() {
+        return this.allowInterrupt == null ? Output.empty() : this.allowInterrupt;
     }
 
     /**
@@ -37,32 +37,32 @@ public final class BotFulfillmentStartResponseSpecificationArgs extends io.pulum
      * 
      */
     @InputImport(name="delayInSeconds", required=true)
-      private final Input<Integer> delayInSeconds;
+      private final Output<Integer> delayInSeconds;
 
-    public Input<Integer> getDelayInSeconds() {
+    public Output<Integer> getDelayInSeconds() {
         return this.delayInSeconds;
     }
 
     @InputImport(name="messageGroups", required=true)
-      private final Input<List<BotMessageGroupArgs>> messageGroups;
+      private final Output<List<BotMessageGroupArgs>> messageGroups;
 
-    public Input<List<BotMessageGroupArgs>> getMessageGroups() {
+    public Output<List<BotMessageGroupArgs>> getMessageGroups() {
         return this.messageGroups;
     }
 
     public BotFulfillmentStartResponseSpecificationArgs(
-        @Nullable Input<Boolean> allowInterrupt,
-        Input<Integer> delayInSeconds,
-        Input<List<BotMessageGroupArgs>> messageGroups) {
+        @Nullable Output<Boolean> allowInterrupt,
+        Output<Integer> delayInSeconds,
+        Output<List<BotMessageGroupArgs>> messageGroups) {
         this.allowInterrupt = allowInterrupt;
         this.delayInSeconds = Objects.requireNonNull(delayInSeconds, "expected parameter 'delayInSeconds' to be non-null");
         this.messageGroups = Objects.requireNonNull(messageGroups, "expected parameter 'messageGroups' to be non-null");
     }
 
     private BotFulfillmentStartResponseSpecificationArgs() {
-        this.allowInterrupt = Input.empty();
-        this.delayInSeconds = Input.empty();
-        this.messageGroups = Input.empty();
+        this.allowInterrupt = Output.empty();
+        this.delayInSeconds = Output.empty();
+        this.messageGroups = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class BotFulfillmentStartResponseSpecificationArgs extends io.pulum
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowInterrupt;
-        private Input<Integer> delayInSeconds;
-        private Input<List<BotMessageGroupArgs>> messageGroups;
+        private @Nullable Output<Boolean> allowInterrupt;
+        private Output<Integer> delayInSeconds;
+        private Output<List<BotMessageGroupArgs>> messageGroups;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class BotFulfillmentStartResponseSpecificationArgs extends io.pulum
     	      this.messageGroups = defaults.messageGroups;
         }
 
-        public Builder allowInterrupt(@Nullable Input<Boolean> allowInterrupt) {
+        public Builder allowInterrupt(@Nullable Output<Boolean> allowInterrupt) {
             this.allowInterrupt = allowInterrupt;
             return this;
         }
 
         public Builder allowInterrupt(@Nullable Boolean allowInterrupt) {
-            this.allowInterrupt = Input.ofNullable(allowInterrupt);
+            this.allowInterrupt = Output.ofNullable(allowInterrupt);
             return this;
         }
 
-        public Builder delayInSeconds(Input<Integer> delayInSeconds) {
+        public Builder delayInSeconds(Output<Integer> delayInSeconds) {
             this.delayInSeconds = Objects.requireNonNull(delayInSeconds);
             return this;
         }
 
         public Builder delayInSeconds(Integer delayInSeconds) {
-            this.delayInSeconds = Input.of(Objects.requireNonNull(delayInSeconds));
+            this.delayInSeconds = Output.of(Objects.requireNonNull(delayInSeconds));
             return this;
         }
 
-        public Builder messageGroups(Input<List<BotMessageGroupArgs>> messageGroups) {
+        public Builder messageGroups(Output<List<BotMessageGroupArgs>> messageGroups) {
             this.messageGroups = Objects.requireNonNull(messageGroups);
             return this;
         }
 
         public Builder messageGroups(List<BotMessageGroupArgs> messageGroups) {
-            this.messageGroups = Input.of(Objects.requireNonNull(messageGroups));
+            this.messageGroups = Output.of(Objects.requireNonNull(messageGroups));
             return this;
         }
         public BotFulfillmentStartResponseSpecificationArgs build() {

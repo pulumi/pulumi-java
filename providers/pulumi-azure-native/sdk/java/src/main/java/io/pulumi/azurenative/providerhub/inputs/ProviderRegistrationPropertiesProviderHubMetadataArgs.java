@@ -6,7 +6,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 import io.pulumi.azurenative.providerhub.inputs.ProviderHubMetadataProviderAuthenticationArgs;
 import io.pulumi.azurenative.providerhub.inputs.ProviderHubMetadataThirdPartyProviderAuthorizationArgs;
 import io.pulumi.azurenative.providerhub.inputs.ResourceProviderAuthorizationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -18,39 +18,39 @@ public final class ProviderRegistrationPropertiesProviderHubMetadataArgs extends
     public static final ProviderRegistrationPropertiesProviderHubMetadataArgs Empty = new ProviderRegistrationPropertiesProviderHubMetadataArgs();
 
     @InputImport(name="providerAuthentication")
-      private final @Nullable Input<ProviderHubMetadataProviderAuthenticationArgs> providerAuthentication;
+      private final @Nullable Output<ProviderHubMetadataProviderAuthenticationArgs> providerAuthentication;
 
-    public Input<ProviderHubMetadataProviderAuthenticationArgs> getProviderAuthentication() {
-        return this.providerAuthentication == null ? Input.empty() : this.providerAuthentication;
+    public Output<ProviderHubMetadataProviderAuthenticationArgs> getProviderAuthentication() {
+        return this.providerAuthentication == null ? Output.empty() : this.providerAuthentication;
     }
 
     @InputImport(name="providerAuthorizations")
-      private final @Nullable Input<List<ResourceProviderAuthorizationArgs>> providerAuthorizations;
+      private final @Nullable Output<List<ResourceProviderAuthorizationArgs>> providerAuthorizations;
 
-    public Input<List<ResourceProviderAuthorizationArgs>> getProviderAuthorizations() {
-        return this.providerAuthorizations == null ? Input.empty() : this.providerAuthorizations;
+    public Output<List<ResourceProviderAuthorizationArgs>> getProviderAuthorizations() {
+        return this.providerAuthorizations == null ? Output.empty() : this.providerAuthorizations;
     }
 
     @InputImport(name="thirdPartyProviderAuthorization")
-      private final @Nullable Input<ProviderHubMetadataThirdPartyProviderAuthorizationArgs> thirdPartyProviderAuthorization;
+      private final @Nullable Output<ProviderHubMetadataThirdPartyProviderAuthorizationArgs> thirdPartyProviderAuthorization;
 
-    public Input<ProviderHubMetadataThirdPartyProviderAuthorizationArgs> getThirdPartyProviderAuthorization() {
-        return this.thirdPartyProviderAuthorization == null ? Input.empty() : this.thirdPartyProviderAuthorization;
+    public Output<ProviderHubMetadataThirdPartyProviderAuthorizationArgs> getThirdPartyProviderAuthorization() {
+        return this.thirdPartyProviderAuthorization == null ? Output.empty() : this.thirdPartyProviderAuthorization;
     }
 
     public ProviderRegistrationPropertiesProviderHubMetadataArgs(
-        @Nullable Input<ProviderHubMetadataProviderAuthenticationArgs> providerAuthentication,
-        @Nullable Input<List<ResourceProviderAuthorizationArgs>> providerAuthorizations,
-        @Nullable Input<ProviderHubMetadataThirdPartyProviderAuthorizationArgs> thirdPartyProviderAuthorization) {
+        @Nullable Output<ProviderHubMetadataProviderAuthenticationArgs> providerAuthentication,
+        @Nullable Output<List<ResourceProviderAuthorizationArgs>> providerAuthorizations,
+        @Nullable Output<ProviderHubMetadataThirdPartyProviderAuthorizationArgs> thirdPartyProviderAuthorization) {
         this.providerAuthentication = providerAuthentication;
         this.providerAuthorizations = providerAuthorizations;
         this.thirdPartyProviderAuthorization = thirdPartyProviderAuthorization;
     }
 
     private ProviderRegistrationPropertiesProviderHubMetadataArgs() {
-        this.providerAuthentication = Input.empty();
-        this.providerAuthorizations = Input.empty();
-        this.thirdPartyProviderAuthorization = Input.empty();
+        this.providerAuthentication = Output.empty();
+        this.providerAuthorizations = Output.empty();
+        this.thirdPartyProviderAuthorization = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,9 +62,9 @@ public final class ProviderRegistrationPropertiesProviderHubMetadataArgs extends
     }
 
     public static final class Builder {
-        private @Nullable Input<ProviderHubMetadataProviderAuthenticationArgs> providerAuthentication;
-        private @Nullable Input<List<ResourceProviderAuthorizationArgs>> providerAuthorizations;
-        private @Nullable Input<ProviderHubMetadataThirdPartyProviderAuthorizationArgs> thirdPartyProviderAuthorization;
+        private @Nullable Output<ProviderHubMetadataProviderAuthenticationArgs> providerAuthentication;
+        private @Nullable Output<List<ResourceProviderAuthorizationArgs>> providerAuthorizations;
+        private @Nullable Output<ProviderHubMetadataThirdPartyProviderAuthorizationArgs> thirdPartyProviderAuthorization;
 
         public Builder() {
     	      // Empty
@@ -77,33 +77,33 @@ public final class ProviderRegistrationPropertiesProviderHubMetadataArgs extends
     	      this.thirdPartyProviderAuthorization = defaults.thirdPartyProviderAuthorization;
         }
 
-        public Builder providerAuthentication(@Nullable Input<ProviderHubMetadataProviderAuthenticationArgs> providerAuthentication) {
+        public Builder providerAuthentication(@Nullable Output<ProviderHubMetadataProviderAuthenticationArgs> providerAuthentication) {
             this.providerAuthentication = providerAuthentication;
             return this;
         }
 
         public Builder providerAuthentication(@Nullable ProviderHubMetadataProviderAuthenticationArgs providerAuthentication) {
-            this.providerAuthentication = Input.ofNullable(providerAuthentication);
+            this.providerAuthentication = Output.ofNullable(providerAuthentication);
             return this;
         }
 
-        public Builder providerAuthorizations(@Nullable Input<List<ResourceProviderAuthorizationArgs>> providerAuthorizations) {
+        public Builder providerAuthorizations(@Nullable Output<List<ResourceProviderAuthorizationArgs>> providerAuthorizations) {
             this.providerAuthorizations = providerAuthorizations;
             return this;
         }
 
         public Builder providerAuthorizations(@Nullable List<ResourceProviderAuthorizationArgs> providerAuthorizations) {
-            this.providerAuthorizations = Input.ofNullable(providerAuthorizations);
+            this.providerAuthorizations = Output.ofNullable(providerAuthorizations);
             return this;
         }
 
-        public Builder thirdPartyProviderAuthorization(@Nullable Input<ProviderHubMetadataThirdPartyProviderAuthorizationArgs> thirdPartyProviderAuthorization) {
+        public Builder thirdPartyProviderAuthorization(@Nullable Output<ProviderHubMetadataThirdPartyProviderAuthorizationArgs> thirdPartyProviderAuthorization) {
             this.thirdPartyProviderAuthorization = thirdPartyProviderAuthorization;
             return this;
         }
 
         public Builder thirdPartyProviderAuthorization(@Nullable ProviderHubMetadataThirdPartyProviderAuthorizationArgs thirdPartyProviderAuthorization) {
-            this.thirdPartyProviderAuthorization = Input.ofNullable(thirdPartyProviderAuthorization);
+            this.thirdPartyProviderAuthorization = Output.ofNullable(thirdPartyProviderAuthorization);
             return this;
         }
         public ProviderRegistrationPropertiesProviderHubMetadataArgs build() {

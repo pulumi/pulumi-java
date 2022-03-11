@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gameservices;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.gameservices.inputs.GameServerClusterConnectionInfoArgs;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="clusterId", required=true)
-      private final Input<String> clusterId;
+      private final Output<String> clusterId;
 
-    public Input<String> getClusterId() {
+    public Output<String> getClusterId() {
         return this.clusterId;
     }
 
@@ -34,9 +34,9 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="connectionInfo", required=true)
-      private final Input<GameServerClusterConnectionInfoArgs> connectionInfo;
+      private final Output<GameServerClusterConnectionInfoArgs> connectionInfo;
 
-    public Input<GameServerClusterConnectionInfoArgs> getConnectionInfo() {
+    public Output<GameServerClusterConnectionInfoArgs> getConnectionInfo() {
         return this.connectionInfo;
     }
 
@@ -45,10 +45,10 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -91,20 +91,20 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="realmId", required=true)
-      private final Input<String> realmId;
+      private final Output<String> realmId;
 
-    public Input<String> getRealmId() {
+    public Output<String> getRealmId() {
         return this.realmId;
     }
 
     public GameServerClusterArgs(
-        Input<String> clusterId,
-        Input<GameServerClusterConnectionInfoArgs> connectionInfo,
-        @Nullable Input<String> description,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> location,
-        @Nullable Input<String> project,
-        Input<String> realmId) {
+        Output<String> clusterId,
+        Output<GameServerClusterConnectionInfoArgs> connectionInfo,
+        @Nullable Output<String> description,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> location,
+        @Nullable Output<String> project,
+        Output<String> realmId) {
         this.clusterId = Objects.requireNonNull(clusterId, "expected parameter 'clusterId' to be non-null");
         this.connectionInfo = Objects.requireNonNull(connectionInfo, "expected parameter 'connectionInfo' to be non-null");
         this.description = description;
@@ -115,13 +115,13 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
     }
 
     private GameServerClusterArgs() {
-        this.clusterId = Input.empty();
-        this.connectionInfo = Input.empty();
-        this.description = Input.empty();
-        this.labels = Input.empty();
-        this.location = Input.empty();
-        this.project = Input.empty();
-        this.realmId = Input.empty();
+        this.clusterId = Output.empty();
+        this.connectionInfo = Output.empty();
+        this.description = Output.empty();
+        this.labels = Output.empty();
+        this.location = Output.empty();
+        this.project = Output.empty();
+        this.realmId = Output.empty();
     }
 
     public static Builder builder() {
@@ -133,13 +133,13 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> clusterId;
-        private Input<GameServerClusterConnectionInfoArgs> connectionInfo;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> project;
-        private Input<String> realmId;
+        private Output<String> clusterId;
+        private Output<GameServerClusterConnectionInfoArgs> connectionInfo;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> project;
+        private Output<String> realmId;
 
         public Builder() {
     	      // Empty
@@ -156,73 +156,73 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
     	      this.realmId = defaults.realmId;
         }
 
-        public Builder clusterId(Input<String> clusterId) {
+        public Builder clusterId(Output<String> clusterId) {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
 
         public Builder clusterId(String clusterId) {
-            this.clusterId = Input.of(Objects.requireNonNull(clusterId));
+            this.clusterId = Output.of(Objects.requireNonNull(clusterId));
             return this;
         }
 
-        public Builder connectionInfo(Input<GameServerClusterConnectionInfoArgs> connectionInfo) {
+        public Builder connectionInfo(Output<GameServerClusterConnectionInfoArgs> connectionInfo) {
             this.connectionInfo = Objects.requireNonNull(connectionInfo);
             return this;
         }
 
         public Builder connectionInfo(GameServerClusterConnectionInfoArgs connectionInfo) {
-            this.connectionInfo = Input.of(Objects.requireNonNull(connectionInfo));
+            this.connectionInfo = Output.of(Objects.requireNonNull(connectionInfo));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder realmId(Input<String> realmId) {
+        public Builder realmId(Output<String> realmId) {
             this.realmId = Objects.requireNonNull(realmId);
             return this;
         }
 
         public Builder realmId(String realmId) {
-            this.realmId = Input.of(Objects.requireNonNull(realmId));
+            this.realmId = Output.of(Objects.requireNonNull(realmId));
             return this;
         }
         public GameServerClusterArgs build() {

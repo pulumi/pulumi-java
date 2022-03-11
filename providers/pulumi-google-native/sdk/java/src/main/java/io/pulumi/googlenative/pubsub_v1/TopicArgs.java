@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsub_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.pubsub_v1.inputs.MessageStoragePolicyArgs;
 import io.pulumi.googlenative.pubsub_v1.inputs.SchemaSettingsArgs;
@@ -23,10 +23,10 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyName")
-      private final @Nullable Input<String> kmsKeyName;
+      private final @Nullable Output<String> kmsKeyName;
 
-    public Input<String> getKmsKeyName() {
-        return this.kmsKeyName == null ? Input.empty() : this.kmsKeyName;
+    public Output<String> getKmsKeyName() {
+        return this.kmsKeyName == null ? Output.empty() : this.kmsKeyName;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="messageRetentionDuration")
-      private final @Nullable Input<String> messageRetentionDuration;
+      private final @Nullable Output<String> messageRetentionDuration;
 
-    public Input<String> getMessageRetentionDuration() {
-        return this.messageRetentionDuration == null ? Input.empty() : this.messageRetentionDuration;
+    public Output<String> getMessageRetentionDuration() {
+        return this.messageRetentionDuration == null ? Output.empty() : this.messageRetentionDuration;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="messageStoragePolicy")
-      private final @Nullable Input<MessageStoragePolicyArgs> messageStoragePolicy;
+      private final @Nullable Output<MessageStoragePolicyArgs> messageStoragePolicy;
 
-    public Input<MessageStoragePolicyArgs> getMessageStoragePolicy() {
-        return this.messageStoragePolicy == null ? Input.empty() : this.messageStoragePolicy;
+    public Output<MessageStoragePolicyArgs> getMessageStoragePolicy() {
+        return this.messageStoragePolicy == null ? Output.empty() : this.messageStoragePolicy;
     }
 
     /**
@@ -67,17 +67,17 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="satisfiesPzs")
-      private final @Nullable Input<Boolean> satisfiesPzs;
+      private final @Nullable Output<Boolean> satisfiesPzs;
 
-    public Input<Boolean> getSatisfiesPzs() {
-        return this.satisfiesPzs == null ? Input.empty() : this.satisfiesPzs;
+    public Output<Boolean> getSatisfiesPzs() {
+        return this.satisfiesPzs == null ? Output.empty() : this.satisfiesPzs;
     }
 
     /**
@@ -96,29 +96,29 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schemaSettings")
-      private final @Nullable Input<SchemaSettingsArgs> schemaSettings;
+      private final @Nullable Output<SchemaSettingsArgs> schemaSettings;
 
-    public Input<SchemaSettingsArgs> getSchemaSettings() {
-        return this.schemaSettings == null ? Input.empty() : this.schemaSettings;
+    public Output<SchemaSettingsArgs> getSchemaSettings() {
+        return this.schemaSettings == null ? Output.empty() : this.schemaSettings;
     }
 
     @InputImport(name="topicId", required=true)
-      private final Input<String> topicId;
+      private final Output<String> topicId;
 
-    public Input<String> getTopicId() {
+    public Output<String> getTopicId() {
         return this.topicId;
     }
 
     public TopicArgs(
-        @Nullable Input<String> kmsKeyName,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> messageRetentionDuration,
-        @Nullable Input<MessageStoragePolicyArgs> messageStoragePolicy,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<Boolean> satisfiesPzs,
-        @Nullable Input<SchemaSettingsArgs> schemaSettings,
-        Input<String> topicId) {
+        @Nullable Output<String> kmsKeyName,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> messageRetentionDuration,
+        @Nullable Output<MessageStoragePolicyArgs> messageStoragePolicy,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<Boolean> satisfiesPzs,
+        @Nullable Output<SchemaSettingsArgs> schemaSettings,
+        Output<String> topicId) {
         this.kmsKeyName = kmsKeyName;
         this.labels = labels;
         this.messageRetentionDuration = messageRetentionDuration;
@@ -131,15 +131,15 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TopicArgs() {
-        this.kmsKeyName = Input.empty();
-        this.labels = Input.empty();
-        this.messageRetentionDuration = Input.empty();
-        this.messageStoragePolicy = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.satisfiesPzs = Input.empty();
-        this.schemaSettings = Input.empty();
-        this.topicId = Input.empty();
+        this.kmsKeyName = Output.empty();
+        this.labels = Output.empty();
+        this.messageRetentionDuration = Output.empty();
+        this.messageStoragePolicy = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.satisfiesPzs = Output.empty();
+        this.schemaSettings = Output.empty();
+        this.topicId = Output.empty();
     }
 
     public static Builder builder() {
@@ -151,15 +151,15 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> kmsKeyName;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> messageRetentionDuration;
-        private @Nullable Input<MessageStoragePolicyArgs> messageStoragePolicy;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<Boolean> satisfiesPzs;
-        private @Nullable Input<SchemaSettingsArgs> schemaSettings;
-        private Input<String> topicId;
+        private @Nullable Output<String> kmsKeyName;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> messageRetentionDuration;
+        private @Nullable Output<MessageStoragePolicyArgs> messageStoragePolicy;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<Boolean> satisfiesPzs;
+        private @Nullable Output<SchemaSettingsArgs> schemaSettings;
+        private Output<String> topicId;
 
         public Builder() {
     	      // Empty
@@ -178,93 +178,93 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     	      this.topicId = defaults.topicId;
         }
 
-        public Builder kmsKeyName(@Nullable Input<String> kmsKeyName) {
+        public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
             this.kmsKeyName = kmsKeyName;
             return this;
         }
 
         public Builder kmsKeyName(@Nullable String kmsKeyName) {
-            this.kmsKeyName = Input.ofNullable(kmsKeyName);
+            this.kmsKeyName = Output.ofNullable(kmsKeyName);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder messageRetentionDuration(@Nullable Input<String> messageRetentionDuration) {
+        public Builder messageRetentionDuration(@Nullable Output<String> messageRetentionDuration) {
             this.messageRetentionDuration = messageRetentionDuration;
             return this;
         }
 
         public Builder messageRetentionDuration(@Nullable String messageRetentionDuration) {
-            this.messageRetentionDuration = Input.ofNullable(messageRetentionDuration);
+            this.messageRetentionDuration = Output.ofNullable(messageRetentionDuration);
             return this;
         }
 
-        public Builder messageStoragePolicy(@Nullable Input<MessageStoragePolicyArgs> messageStoragePolicy) {
+        public Builder messageStoragePolicy(@Nullable Output<MessageStoragePolicyArgs> messageStoragePolicy) {
             this.messageStoragePolicy = messageStoragePolicy;
             return this;
         }
 
         public Builder messageStoragePolicy(@Nullable MessageStoragePolicyArgs messageStoragePolicy) {
-            this.messageStoragePolicy = Input.ofNullable(messageStoragePolicy);
+            this.messageStoragePolicy = Output.ofNullable(messageStoragePolicy);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder satisfiesPzs(@Nullable Input<Boolean> satisfiesPzs) {
+        public Builder satisfiesPzs(@Nullable Output<Boolean> satisfiesPzs) {
             this.satisfiesPzs = satisfiesPzs;
             return this;
         }
 
         public Builder satisfiesPzs(@Nullable Boolean satisfiesPzs) {
-            this.satisfiesPzs = Input.ofNullable(satisfiesPzs);
+            this.satisfiesPzs = Output.ofNullable(satisfiesPzs);
             return this;
         }
 
-        public Builder schemaSettings(@Nullable Input<SchemaSettingsArgs> schemaSettings) {
+        public Builder schemaSettings(@Nullable Output<SchemaSettingsArgs> schemaSettings) {
             this.schemaSettings = schemaSettings;
             return this;
         }
 
         public Builder schemaSettings(@Nullable SchemaSettingsArgs schemaSettings) {
-            this.schemaSettings = Input.ofNullable(schemaSettings);
+            this.schemaSettings = Output.ofNullable(schemaSettings);
             return this;
         }
 
-        public Builder topicId(Input<String> topicId) {
+        public Builder topicId(Output<String> topicId) {
             this.topicId = Objects.requireNonNull(topicId);
             return this;
         }
 
         public Builder topicId(String topicId) {
-            this.topicId = Input.of(Objects.requireNonNull(topicId));
+            this.topicId = Output.of(Objects.requireNonNull(topicId));
             return this;
         }
         public TopicArgs build() {

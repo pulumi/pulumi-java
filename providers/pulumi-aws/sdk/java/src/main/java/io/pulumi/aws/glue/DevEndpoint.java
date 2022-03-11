@@ -6,7 +6,6 @@ package io.pulumi.aws.glue;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.glue.DevEndpointArgs;
 import io.pulumi.aws.glue.inputs.DevEndpointState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -422,14 +421,14 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DevEndpoint(String name, DevEndpointArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:glue/devEndpoint:DevEndpoint", name, args == null ? DevEndpointArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:glue/devEndpoint:DevEndpoint", name, args == null ? DevEndpointArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private DevEndpoint(String name, Input<String> id, @Nullable DevEndpointState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private DevEndpoint(String name, Output<String> id, @Nullable DevEndpointState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:glue/devEndpoint:DevEndpoint", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -445,7 +444,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DevEndpoint get(String name, Input<String> id, @Nullable DevEndpointState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static DevEndpoint get(String name, Output<String> id, @Nullable DevEndpointState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DevEndpoint(name, id, state, options);
     }
 }

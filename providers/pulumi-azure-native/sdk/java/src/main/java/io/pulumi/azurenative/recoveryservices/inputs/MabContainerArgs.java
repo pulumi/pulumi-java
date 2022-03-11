@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.enums.BackupManagementType;
 import io.pulumi.azurenative.recoveryservices.inputs.MABContainerHealthDetailsArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.MabContainerExtendedInfoArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -30,10 +30,10 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="agentVersion")
-      private final @Nullable Input<String> agentVersion;
+      private final @Nullable Output<String> agentVersion;
 
-    public Input<String> getAgentVersion() {
-        return this.agentVersion == null ? Input.empty() : this.agentVersion;
+    public Output<String> getAgentVersion() {
+        return this.agentVersion == null ? Output.empty() : this.agentVersion;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backupManagementType")
-      private final @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
+      private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
 
-    public Input<Either<String,BackupManagementType>> getBackupManagementType() {
-        return this.backupManagementType == null ? Input.empty() : this.backupManagementType;
+    public Output<Either<String,BackupManagementType>> getBackupManagementType() {
+        return this.backupManagementType == null ? Output.empty() : this.backupManagementType;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="canReRegister")
-      private final @Nullable Input<Boolean> canReRegister;
+      private final @Nullable Output<Boolean> canReRegister;
 
-    public Input<Boolean> getCanReRegister() {
-        return this.canReRegister == null ? Input.empty() : this.canReRegister;
+    public Output<Boolean> getCanReRegister() {
+        return this.canReRegister == null ? Output.empty() : this.canReRegister;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerHealthState")
-      private final @Nullable Input<String> containerHealthState;
+      private final @Nullable Output<String> containerHealthState;
 
-    public Input<String> getContainerHealthState() {
-        return this.containerHealthState == null ? Input.empty() : this.containerHealthState;
+    public Output<String> getContainerHealthState() {
+        return this.containerHealthState == null ? Output.empty() : this.containerHealthState;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerId")
-      private final @Nullable Input<Double> containerId;
+      private final @Nullable Output<Double> containerId;
 
-    public Input<Double> getContainerId() {
-        return this.containerId == null ? Input.empty() : this.containerId;
+    public Output<Double> getContainerId() {
+        return this.containerId == null ? Output.empty() : this.containerId;
     }
 
     /**
@@ -89,9 +89,9 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerType", required=true)
-      private final Input<String> containerType;
+      private final Output<String> containerType;
 
-    public Input<String> getContainerType() {
+    public Output<String> getContainerType() {
         return this.containerType;
     }
 
@@ -100,10 +100,10 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extendedInfo")
-      private final @Nullable Input<MabContainerExtendedInfoArgs> extendedInfo;
+      private final @Nullable Output<MabContainerExtendedInfoArgs> extendedInfo;
 
-    public Input<MabContainerExtendedInfoArgs> getExtendedInfo() {
-        return this.extendedInfo == null ? Input.empty() : this.extendedInfo;
+    public Output<MabContainerExtendedInfoArgs> getExtendedInfo() {
+        return this.extendedInfo == null ? Output.empty() : this.extendedInfo;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="friendlyName")
-      private final @Nullable Input<String> friendlyName;
+      private final @Nullable Output<String> friendlyName;
 
-    public Input<String> getFriendlyName() {
-        return this.friendlyName == null ? Input.empty() : this.friendlyName;
+    public Output<String> getFriendlyName() {
+        return this.friendlyName == null ? Output.empty() : this.friendlyName;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthStatus")
-      private final @Nullable Input<String> healthStatus;
+      private final @Nullable Output<String> healthStatus;
 
-    public Input<String> getHealthStatus() {
-        return this.healthStatus == null ? Input.empty() : this.healthStatus;
+    public Output<String> getHealthStatus() {
+        return this.healthStatus == null ? Output.empty() : this.healthStatus;
     }
 
     /**
@@ -133,10 +133,10 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mabContainerHealthDetails")
-      private final @Nullable Input<List<MABContainerHealthDetailsArgs>> mabContainerHealthDetails;
+      private final @Nullable Output<List<MABContainerHealthDetailsArgs>> mabContainerHealthDetails;
 
-    public Input<List<MABContainerHealthDetailsArgs>> getMabContainerHealthDetails() {
-        return this.mabContainerHealthDetails == null ? Input.empty() : this.mabContainerHealthDetails;
+    public Output<List<MABContainerHealthDetailsArgs>> getMabContainerHealthDetails() {
+        return this.mabContainerHealthDetails == null ? Output.empty() : this.mabContainerHealthDetails;
     }
 
     /**
@@ -144,10 +144,10 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protectedItemCount")
-      private final @Nullable Input<Double> protectedItemCount;
+      private final @Nullable Output<Double> protectedItemCount;
 
-    public Input<Double> getProtectedItemCount() {
-        return this.protectedItemCount == null ? Input.empty() : this.protectedItemCount;
+    public Output<Double> getProtectedItemCount() {
+        return this.protectedItemCount == null ? Output.empty() : this.protectedItemCount;
     }
 
     /**
@@ -155,25 +155,25 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registrationStatus")
-      private final @Nullable Input<String> registrationStatus;
+      private final @Nullable Output<String> registrationStatus;
 
-    public Input<String> getRegistrationStatus() {
-        return this.registrationStatus == null ? Input.empty() : this.registrationStatus;
+    public Output<String> getRegistrationStatus() {
+        return this.registrationStatus == null ? Output.empty() : this.registrationStatus;
     }
 
     public MabContainerArgs(
-        @Nullable Input<String> agentVersion,
-        @Nullable Input<Either<String,BackupManagementType>> backupManagementType,
-        @Nullable Input<Boolean> canReRegister,
-        @Nullable Input<String> containerHealthState,
-        @Nullable Input<Double> containerId,
-        Input<String> containerType,
-        @Nullable Input<MabContainerExtendedInfoArgs> extendedInfo,
-        @Nullable Input<String> friendlyName,
-        @Nullable Input<String> healthStatus,
-        @Nullable Input<List<MABContainerHealthDetailsArgs>> mabContainerHealthDetails,
-        @Nullable Input<Double> protectedItemCount,
-        @Nullable Input<String> registrationStatus) {
+        @Nullable Output<String> agentVersion,
+        @Nullable Output<Either<String,BackupManagementType>> backupManagementType,
+        @Nullable Output<Boolean> canReRegister,
+        @Nullable Output<String> containerHealthState,
+        @Nullable Output<Double> containerId,
+        Output<String> containerType,
+        @Nullable Output<MabContainerExtendedInfoArgs> extendedInfo,
+        @Nullable Output<String> friendlyName,
+        @Nullable Output<String> healthStatus,
+        @Nullable Output<List<MABContainerHealthDetailsArgs>> mabContainerHealthDetails,
+        @Nullable Output<Double> protectedItemCount,
+        @Nullable Output<String> registrationStatus) {
         this.agentVersion = agentVersion;
         this.backupManagementType = backupManagementType;
         this.canReRegister = canReRegister;
@@ -189,18 +189,18 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MabContainerArgs() {
-        this.agentVersion = Input.empty();
-        this.backupManagementType = Input.empty();
-        this.canReRegister = Input.empty();
-        this.containerHealthState = Input.empty();
-        this.containerId = Input.empty();
-        this.containerType = Input.empty();
-        this.extendedInfo = Input.empty();
-        this.friendlyName = Input.empty();
-        this.healthStatus = Input.empty();
-        this.mabContainerHealthDetails = Input.empty();
-        this.protectedItemCount = Input.empty();
-        this.registrationStatus = Input.empty();
+        this.agentVersion = Output.empty();
+        this.backupManagementType = Output.empty();
+        this.canReRegister = Output.empty();
+        this.containerHealthState = Output.empty();
+        this.containerId = Output.empty();
+        this.containerType = Output.empty();
+        this.extendedInfo = Output.empty();
+        this.friendlyName = Output.empty();
+        this.healthStatus = Output.empty();
+        this.mabContainerHealthDetails = Output.empty();
+        this.protectedItemCount = Output.empty();
+        this.registrationStatus = Output.empty();
     }
 
     public static Builder builder() {
@@ -212,18 +212,18 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> agentVersion;
-        private @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
-        private @Nullable Input<Boolean> canReRegister;
-        private @Nullable Input<String> containerHealthState;
-        private @Nullable Input<Double> containerId;
-        private Input<String> containerType;
-        private @Nullable Input<MabContainerExtendedInfoArgs> extendedInfo;
-        private @Nullable Input<String> friendlyName;
-        private @Nullable Input<String> healthStatus;
-        private @Nullable Input<List<MABContainerHealthDetailsArgs>> mabContainerHealthDetails;
-        private @Nullable Input<Double> protectedItemCount;
-        private @Nullable Input<String> registrationStatus;
+        private @Nullable Output<String> agentVersion;
+        private @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
+        private @Nullable Output<Boolean> canReRegister;
+        private @Nullable Output<String> containerHealthState;
+        private @Nullable Output<Double> containerId;
+        private Output<String> containerType;
+        private @Nullable Output<MabContainerExtendedInfoArgs> extendedInfo;
+        private @Nullable Output<String> friendlyName;
+        private @Nullable Output<String> healthStatus;
+        private @Nullable Output<List<MABContainerHealthDetailsArgs>> mabContainerHealthDetails;
+        private @Nullable Output<Double> protectedItemCount;
+        private @Nullable Output<String> registrationStatus;
 
         public Builder() {
     	      // Empty
@@ -245,123 +245,123 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.registrationStatus = defaults.registrationStatus;
         }
 
-        public Builder agentVersion(@Nullable Input<String> agentVersion) {
+        public Builder agentVersion(@Nullable Output<String> agentVersion) {
             this.agentVersion = agentVersion;
             return this;
         }
 
         public Builder agentVersion(@Nullable String agentVersion) {
-            this.agentVersion = Input.ofNullable(agentVersion);
+            this.agentVersion = Output.ofNullable(agentVersion);
             return this;
         }
 
-        public Builder backupManagementType(@Nullable Input<Either<String,BackupManagementType>> backupManagementType) {
+        public Builder backupManagementType(@Nullable Output<Either<String,BackupManagementType>> backupManagementType) {
             this.backupManagementType = backupManagementType;
             return this;
         }
 
         public Builder backupManagementType(@Nullable Either<String,BackupManagementType> backupManagementType) {
-            this.backupManagementType = Input.ofNullable(backupManagementType);
+            this.backupManagementType = Output.ofNullable(backupManagementType);
             return this;
         }
 
-        public Builder canReRegister(@Nullable Input<Boolean> canReRegister) {
+        public Builder canReRegister(@Nullable Output<Boolean> canReRegister) {
             this.canReRegister = canReRegister;
             return this;
         }
 
         public Builder canReRegister(@Nullable Boolean canReRegister) {
-            this.canReRegister = Input.ofNullable(canReRegister);
+            this.canReRegister = Output.ofNullable(canReRegister);
             return this;
         }
 
-        public Builder containerHealthState(@Nullable Input<String> containerHealthState) {
+        public Builder containerHealthState(@Nullable Output<String> containerHealthState) {
             this.containerHealthState = containerHealthState;
             return this;
         }
 
         public Builder containerHealthState(@Nullable String containerHealthState) {
-            this.containerHealthState = Input.ofNullable(containerHealthState);
+            this.containerHealthState = Output.ofNullable(containerHealthState);
             return this;
         }
 
-        public Builder containerId(@Nullable Input<Double> containerId) {
+        public Builder containerId(@Nullable Output<Double> containerId) {
             this.containerId = containerId;
             return this;
         }
 
         public Builder containerId(@Nullable Double containerId) {
-            this.containerId = Input.ofNullable(containerId);
+            this.containerId = Output.ofNullable(containerId);
             return this;
         }
 
-        public Builder containerType(Input<String> containerType) {
+        public Builder containerType(Output<String> containerType) {
             this.containerType = Objects.requireNonNull(containerType);
             return this;
         }
 
         public Builder containerType(String containerType) {
-            this.containerType = Input.of(Objects.requireNonNull(containerType));
+            this.containerType = Output.of(Objects.requireNonNull(containerType));
             return this;
         }
 
-        public Builder extendedInfo(@Nullable Input<MabContainerExtendedInfoArgs> extendedInfo) {
+        public Builder extendedInfo(@Nullable Output<MabContainerExtendedInfoArgs> extendedInfo) {
             this.extendedInfo = extendedInfo;
             return this;
         }
 
         public Builder extendedInfo(@Nullable MabContainerExtendedInfoArgs extendedInfo) {
-            this.extendedInfo = Input.ofNullable(extendedInfo);
+            this.extendedInfo = Output.ofNullable(extendedInfo);
             return this;
         }
 
-        public Builder friendlyName(@Nullable Input<String> friendlyName) {
+        public Builder friendlyName(@Nullable Output<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Input.ofNullable(friendlyName);
+            this.friendlyName = Output.ofNullable(friendlyName);
             return this;
         }
 
-        public Builder healthStatus(@Nullable Input<String> healthStatus) {
+        public Builder healthStatus(@Nullable Output<String> healthStatus) {
             this.healthStatus = healthStatus;
             return this;
         }
 
         public Builder healthStatus(@Nullable String healthStatus) {
-            this.healthStatus = Input.ofNullable(healthStatus);
+            this.healthStatus = Output.ofNullable(healthStatus);
             return this;
         }
 
-        public Builder mabContainerHealthDetails(@Nullable Input<List<MABContainerHealthDetailsArgs>> mabContainerHealthDetails) {
+        public Builder mabContainerHealthDetails(@Nullable Output<List<MABContainerHealthDetailsArgs>> mabContainerHealthDetails) {
             this.mabContainerHealthDetails = mabContainerHealthDetails;
             return this;
         }
 
         public Builder mabContainerHealthDetails(@Nullable List<MABContainerHealthDetailsArgs> mabContainerHealthDetails) {
-            this.mabContainerHealthDetails = Input.ofNullable(mabContainerHealthDetails);
+            this.mabContainerHealthDetails = Output.ofNullable(mabContainerHealthDetails);
             return this;
         }
 
-        public Builder protectedItemCount(@Nullable Input<Double> protectedItemCount) {
+        public Builder protectedItemCount(@Nullable Output<Double> protectedItemCount) {
             this.protectedItemCount = protectedItemCount;
             return this;
         }
 
         public Builder protectedItemCount(@Nullable Double protectedItemCount) {
-            this.protectedItemCount = Input.ofNullable(protectedItemCount);
+            this.protectedItemCount = Output.ofNullable(protectedItemCount);
             return this;
         }
 
-        public Builder registrationStatus(@Nullable Input<String> registrationStatus) {
+        public Builder registrationStatus(@Nullable Output<String> registrationStatus) {
             this.registrationStatus = registrationStatus;
             return this;
         }
 
         public Builder registrationStatus(@Nullable String registrationStatus) {
-            this.registrationStatus = Input.ofNullable(registrationStatus);
+            this.registrationStatus = Output.ofNullable(registrationStatus);
             return this;
         }
         public MabContainerArgs build() {

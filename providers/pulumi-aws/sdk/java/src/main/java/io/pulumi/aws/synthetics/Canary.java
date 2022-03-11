@@ -11,7 +11,6 @@ import io.pulumi.aws.synthetics.outputs.CanaryRunConfig;
 import io.pulumi.aws.synthetics.outputs.CanarySchedule;
 import io.pulumi.aws.synthetics.outputs.CanaryTimeline;
 import io.pulumi.aws.synthetics.outputs.CanaryVpcConfig;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -401,14 +400,14 @@ public class Canary extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Canary(String name, CanaryArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:synthetics/canary:Canary", name, args == null ? CanaryArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:synthetics/canary:Canary", name, args == null ? CanaryArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Canary(String name, Input<String> id, @Nullable CanaryState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Canary(String name, Output<String> id, @Nullable CanaryState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:synthetics/canary:Canary", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -424,7 +423,7 @@ public class Canary extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Canary get(String name, Input<String> id, @Nullable CanaryState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Canary get(String name, Output<String> id, @Nullable CanaryState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Canary(name, id, state, options);
     }
 }

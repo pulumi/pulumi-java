@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.fsx.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,29 +14,29 @@ public final class OpenZfsVolumeOriginSnapshotArgs extends io.pulumi.resources.R
     public static final OpenZfsVolumeOriginSnapshotArgs Empty = new OpenZfsVolumeOriginSnapshotArgs();
 
     @InputImport(name="copyStrategy", required=true)
-      private final Input<String> copyStrategy;
+      private final Output<String> copyStrategy;
 
-    public Input<String> getCopyStrategy() {
+    public Output<String> getCopyStrategy() {
         return this.copyStrategy;
     }
 
     @InputImport(name="snapshotArn", required=true)
-      private final Input<String> snapshotArn;
+      private final Output<String> snapshotArn;
 
-    public Input<String> getSnapshotArn() {
+    public Output<String> getSnapshotArn() {
         return this.snapshotArn;
     }
 
     public OpenZfsVolumeOriginSnapshotArgs(
-        Input<String> copyStrategy,
-        Input<String> snapshotArn) {
+        Output<String> copyStrategy,
+        Output<String> snapshotArn) {
         this.copyStrategy = Objects.requireNonNull(copyStrategy, "expected parameter 'copyStrategy' to be non-null");
         this.snapshotArn = Objects.requireNonNull(snapshotArn, "expected parameter 'snapshotArn' to be non-null");
     }
 
     private OpenZfsVolumeOriginSnapshotArgs() {
-        this.copyStrategy = Input.empty();
-        this.snapshotArn = Input.empty();
+        this.copyStrategy = Output.empty();
+        this.snapshotArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,8 +48,8 @@ public final class OpenZfsVolumeOriginSnapshotArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<String> copyStrategy;
-        private Input<String> snapshotArn;
+        private Output<String> copyStrategy;
+        private Output<String> snapshotArn;
 
         public Builder() {
     	      // Empty
@@ -61,23 +61,23 @@ public final class OpenZfsVolumeOriginSnapshotArgs extends io.pulumi.resources.R
     	      this.snapshotArn = defaults.snapshotArn;
         }
 
-        public Builder copyStrategy(Input<String> copyStrategy) {
+        public Builder copyStrategy(Output<String> copyStrategy) {
             this.copyStrategy = Objects.requireNonNull(copyStrategy);
             return this;
         }
 
         public Builder copyStrategy(String copyStrategy) {
-            this.copyStrategy = Input.of(Objects.requireNonNull(copyStrategy));
+            this.copyStrategy = Output.of(Objects.requireNonNull(copyStrategy));
             return this;
         }
 
-        public Builder snapshotArn(Input<String> snapshotArn) {
+        public Builder snapshotArn(Output<String> snapshotArn) {
             this.snapshotArn = Objects.requireNonNull(snapshotArn);
             return this;
         }
 
         public Builder snapshotArn(String snapshotArn) {
-            this.snapshotArn = Input.of(Objects.requireNonNull(snapshotArn));
+            this.snapshotArn = Output.of(Objects.requireNonNull(snapshotArn));
             return this;
         }
         public OpenZfsVolumeOriginSnapshotArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.awsnative.databrew.inputs.JobAllowedStatisticsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,29 +17,29 @@ public final class JobEntityDetectorConfigurationArgs extends io.pulumi.resource
     public static final JobEntityDetectorConfigurationArgs Empty = new JobEntityDetectorConfigurationArgs();
 
     @InputImport(name="allowedStatistics")
-      private final @Nullable Input<JobAllowedStatisticsArgs> allowedStatistics;
+      private final @Nullable Output<JobAllowedStatisticsArgs> allowedStatistics;
 
-    public Input<JobAllowedStatisticsArgs> getAllowedStatistics() {
-        return this.allowedStatistics == null ? Input.empty() : this.allowedStatistics;
+    public Output<JobAllowedStatisticsArgs> getAllowedStatistics() {
+        return this.allowedStatistics == null ? Output.empty() : this.allowedStatistics;
     }
 
     @InputImport(name="entityTypes", required=true)
-      private final Input<List<String>> entityTypes;
+      private final Output<List<String>> entityTypes;
 
-    public Input<List<String>> getEntityTypes() {
+    public Output<List<String>> getEntityTypes() {
         return this.entityTypes;
     }
 
     public JobEntityDetectorConfigurationArgs(
-        @Nullable Input<JobAllowedStatisticsArgs> allowedStatistics,
-        Input<List<String>> entityTypes) {
+        @Nullable Output<JobAllowedStatisticsArgs> allowedStatistics,
+        Output<List<String>> entityTypes) {
         this.allowedStatistics = allowedStatistics;
         this.entityTypes = Objects.requireNonNull(entityTypes, "expected parameter 'entityTypes' to be non-null");
     }
 
     private JobEntityDetectorConfigurationArgs() {
-        this.allowedStatistics = Input.empty();
-        this.entityTypes = Input.empty();
+        this.allowedStatistics = Output.empty();
+        this.entityTypes = Output.empty();
     }
 
     public static Builder builder() {
@@ -51,8 +51,8 @@ public final class JobEntityDetectorConfigurationArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<JobAllowedStatisticsArgs> allowedStatistics;
-        private Input<List<String>> entityTypes;
+        private @Nullable Output<JobAllowedStatisticsArgs> allowedStatistics;
+        private Output<List<String>> entityTypes;
 
         public Builder() {
     	      // Empty
@@ -64,23 +64,23 @@ public final class JobEntityDetectorConfigurationArgs extends io.pulumi.resource
     	      this.entityTypes = defaults.entityTypes;
         }
 
-        public Builder allowedStatistics(@Nullable Input<JobAllowedStatisticsArgs> allowedStatistics) {
+        public Builder allowedStatistics(@Nullable Output<JobAllowedStatisticsArgs> allowedStatistics) {
             this.allowedStatistics = allowedStatistics;
             return this;
         }
 
         public Builder allowedStatistics(@Nullable JobAllowedStatisticsArgs allowedStatistics) {
-            this.allowedStatistics = Input.ofNullable(allowedStatistics);
+            this.allowedStatistics = Output.ofNullable(allowedStatistics);
             return this;
         }
 
-        public Builder entityTypes(Input<List<String>> entityTypes) {
+        public Builder entityTypes(Output<List<String>> entityTypes) {
             this.entityTypes = Objects.requireNonNull(entityTypes);
             return this;
         }
 
         public Builder entityTypes(List<String> entityTypes) {
-            this.entityTypes = Input.of(Objects.requireNonNull(entityTypes));
+            this.entityTypes = Output.of(Objects.requireNonNull(entityTypes));
             return this;
         }
         public JobEntityDetectorConfigurationArgs build() {

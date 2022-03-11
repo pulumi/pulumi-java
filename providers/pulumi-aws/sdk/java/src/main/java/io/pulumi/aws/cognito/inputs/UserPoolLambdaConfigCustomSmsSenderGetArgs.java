@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cognito.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class UserPoolLambdaConfigCustomSmsSenderGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="lambdaArn", required=true)
-      private final Input<String> lambdaArn;
+      private final Output<String> lambdaArn;
 
-    public Input<String> getLambdaArn() {
+    public Output<String> getLambdaArn() {
         return this.lambdaArn;
     }
 
@@ -29,22 +29,22 @@ public final class UserPoolLambdaConfigCustomSmsSenderGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="lambdaVersion", required=true)
-      private final Input<String> lambdaVersion;
+      private final Output<String> lambdaVersion;
 
-    public Input<String> getLambdaVersion() {
+    public Output<String> getLambdaVersion() {
         return this.lambdaVersion;
     }
 
     public UserPoolLambdaConfigCustomSmsSenderGetArgs(
-        Input<String> lambdaArn,
-        Input<String> lambdaVersion) {
+        Output<String> lambdaArn,
+        Output<String> lambdaVersion) {
         this.lambdaArn = Objects.requireNonNull(lambdaArn, "expected parameter 'lambdaArn' to be non-null");
         this.lambdaVersion = Objects.requireNonNull(lambdaVersion, "expected parameter 'lambdaVersion' to be non-null");
     }
 
     private UserPoolLambdaConfigCustomSmsSenderGetArgs() {
-        this.lambdaArn = Input.empty();
-        this.lambdaVersion = Input.empty();
+        this.lambdaArn = Output.empty();
+        this.lambdaVersion = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class UserPoolLambdaConfigCustomSmsSenderGetArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private Input<String> lambdaArn;
-        private Input<String> lambdaVersion;
+        private Output<String> lambdaArn;
+        private Output<String> lambdaVersion;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class UserPoolLambdaConfigCustomSmsSenderGetArgs extends io.pulumi.
     	      this.lambdaVersion = defaults.lambdaVersion;
         }
 
-        public Builder lambdaArn(Input<String> lambdaArn) {
+        public Builder lambdaArn(Output<String> lambdaArn) {
             this.lambdaArn = Objects.requireNonNull(lambdaArn);
             return this;
         }
 
         public Builder lambdaArn(String lambdaArn) {
-            this.lambdaArn = Input.of(Objects.requireNonNull(lambdaArn));
+            this.lambdaArn = Output.of(Objects.requireNonNull(lambdaArn));
             return this;
         }
 
-        public Builder lambdaVersion(Input<String> lambdaVersion) {
+        public Builder lambdaVersion(Output<String> lambdaVersion) {
             this.lambdaVersion = Objects.requireNonNull(lambdaVersion);
             return this;
         }
 
         public Builder lambdaVersion(String lambdaVersion) {
-            this.lambdaVersion = Input.of(Objects.requireNonNull(lambdaVersion));
+            this.lambdaVersion = Output.of(Objects.requireNonNull(lambdaVersion));
             return this;
         }
         public UserPoolLambdaConfigCustomSmsSenderGetArgs build() {

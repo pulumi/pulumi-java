@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.msk.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class ClusterLoggingInfoBrokerLogsS3GetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="bucket")
-      private final @Nullable Input<String> bucket;
+      private final @Nullable Output<String> bucket;
 
-    public Input<String> getBucket() {
-        return this.bucket == null ? Input.empty() : this.bucket;
+    public Output<String> getBucket() {
+        return this.bucket == null ? Output.empty() : this.bucket;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class ClusterLoggingInfoBrokerLogsS3GetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="enabled", required=true)
-      private final Input<Boolean> enabled;
+      private final Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
+    public Output<Boolean> getEnabled() {
         return this.enabled;
     }
 
@@ -42,25 +42,25 @@ public final class ClusterLoggingInfoBrokerLogsS3GetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="prefix")
-      private final @Nullable Input<String> prefix;
+      private final @Nullable Output<String> prefix;
 
-    public Input<String> getPrefix() {
-        return this.prefix == null ? Input.empty() : this.prefix;
+    public Output<String> getPrefix() {
+        return this.prefix == null ? Output.empty() : this.prefix;
     }
 
     public ClusterLoggingInfoBrokerLogsS3GetArgs(
-        @Nullable Input<String> bucket,
-        Input<Boolean> enabled,
-        @Nullable Input<String> prefix) {
+        @Nullable Output<String> bucket,
+        Output<Boolean> enabled,
+        @Nullable Output<String> prefix) {
         this.bucket = bucket;
         this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
         this.prefix = prefix;
     }
 
     private ClusterLoggingInfoBrokerLogsS3GetArgs() {
-        this.bucket = Input.empty();
-        this.enabled = Input.empty();
-        this.prefix = Input.empty();
+        this.bucket = Output.empty();
+        this.enabled = Output.empty();
+        this.prefix = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class ClusterLoggingInfoBrokerLogsS3GetArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bucket;
-        private Input<Boolean> enabled;
-        private @Nullable Input<String> prefix;
+        private @Nullable Output<String> bucket;
+        private Output<Boolean> enabled;
+        private @Nullable Output<String> prefix;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class ClusterLoggingInfoBrokerLogsS3GetArgs extends io.pulumi.resou
     	      this.prefix = defaults.prefix;
         }
 
-        public Builder bucket(@Nullable Input<String> bucket) {
+        public Builder bucket(@Nullable Output<String> bucket) {
             this.bucket = bucket;
             return this;
         }
 
         public Builder bucket(@Nullable String bucket) {
-            this.bucket = Input.ofNullable(bucket);
+            this.bucket = Output.ofNullable(bucket);
             return this;
         }
 
-        public Builder enabled(Input<Boolean> enabled) {
+        public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Input.of(Objects.requireNonNull(enabled));
+            this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
 
-        public Builder prefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Input.ofNullable(prefix);
+            this.prefix = Output.ofNullable(prefix);
             return this;
         }
         public ClusterLoggingInfoBrokerLogsS3GetArgs build() {

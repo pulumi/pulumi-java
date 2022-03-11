@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.authorization.k8s.io_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class SelfSubjectRulesReviewSpecArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="namespace")
-      private final @Nullable Input<String> namespace;
+      private final @Nullable Output<String> namespace;
 
-    public Input<String> getNamespace() {
-        return this.namespace == null ? Input.empty() : this.namespace;
+    public Output<String> getNamespace() {
+        return this.namespace == null ? Output.empty() : this.namespace;
     }
 
-    public SelfSubjectRulesReviewSpecArgs(@Nullable Input<String> namespace) {
+    public SelfSubjectRulesReviewSpecArgs(@Nullable Output<String> namespace) {
         this.namespace = namespace;
     }
 
     private SelfSubjectRulesReviewSpecArgs() {
-        this.namespace = Input.empty();
+        this.namespace = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class SelfSubjectRulesReviewSpecArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> namespace;
+        private @Nullable Output<String> namespace;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class SelfSubjectRulesReviewSpecArgs extends io.pulumi.resources.Re
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder namespace(@Nullable Input<String> namespace) {
+        public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
 
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Input.ofNullable(namespace);
+            this.namespace = Output.ofNullable(namespace);
             return this;
         }
         public SelfSubjectRulesReviewSpecArgs build() {

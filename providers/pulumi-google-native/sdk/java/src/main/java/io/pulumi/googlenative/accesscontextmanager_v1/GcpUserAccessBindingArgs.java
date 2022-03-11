@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,9 +20,9 @@ public final class GcpUserAccessBindingArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="accessLevels", required=true)
-      private final Input<List<String>> accessLevels;
+      private final Output<List<String>> accessLevels;
 
-    public Input<List<String>> getAccessLevels() {
+    public Output<List<String>> getAccessLevels() {
         return this.accessLevels;
     }
 
@@ -31,9 +31,9 @@ public final class GcpUserAccessBindingArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="groupKey", required=true)
-      private final Input<String> groupKey;
+      private final Output<String> groupKey;
 
-    public Input<String> getGroupKey() {
+    public Output<String> getGroupKey() {
         return this.groupKey;
     }
 
@@ -42,24 +42,24 @@ public final class GcpUserAccessBindingArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="organizationId", required=true)
-      private final Input<String> organizationId;
+      private final Output<String> organizationId;
 
-    public Input<String> getOrganizationId() {
+    public Output<String> getOrganizationId() {
         return this.organizationId;
     }
 
     public GcpUserAccessBindingArgs(
-        Input<List<String>> accessLevels,
-        Input<String> groupKey,
-        @Nullable Input<String> name,
-        Input<String> organizationId) {
+        Output<List<String>> accessLevels,
+        Output<String> groupKey,
+        @Nullable Output<String> name,
+        Output<String> organizationId) {
         this.accessLevels = Objects.requireNonNull(accessLevels, "expected parameter 'accessLevels' to be non-null");
         this.groupKey = Objects.requireNonNull(groupKey, "expected parameter 'groupKey' to be non-null");
         this.name = name;
@@ -67,10 +67,10 @@ public final class GcpUserAccessBindingArgs extends io.pulumi.resources.Resource
     }
 
     private GcpUserAccessBindingArgs() {
-        this.accessLevels = Input.empty();
-        this.groupKey = Input.empty();
-        this.name = Input.empty();
-        this.organizationId = Input.empty();
+        this.accessLevels = Output.empty();
+        this.groupKey = Output.empty();
+        this.name = Output.empty();
+        this.organizationId = Output.empty();
     }
 
     public static Builder builder() {
@@ -82,10 +82,10 @@ public final class GcpUserAccessBindingArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<List<String>> accessLevels;
-        private Input<String> groupKey;
-        private @Nullable Input<String> name;
-        private Input<String> organizationId;
+        private Output<List<String>> accessLevels;
+        private Output<String> groupKey;
+        private @Nullable Output<String> name;
+        private Output<String> organizationId;
 
         public Builder() {
     	      // Empty
@@ -99,43 +99,43 @@ public final class GcpUserAccessBindingArgs extends io.pulumi.resources.Resource
     	      this.organizationId = defaults.organizationId;
         }
 
-        public Builder accessLevels(Input<List<String>> accessLevels) {
+        public Builder accessLevels(Output<List<String>> accessLevels) {
             this.accessLevels = Objects.requireNonNull(accessLevels);
             return this;
         }
 
         public Builder accessLevels(List<String> accessLevels) {
-            this.accessLevels = Input.of(Objects.requireNonNull(accessLevels));
+            this.accessLevels = Output.of(Objects.requireNonNull(accessLevels));
             return this;
         }
 
-        public Builder groupKey(Input<String> groupKey) {
+        public Builder groupKey(Output<String> groupKey) {
             this.groupKey = Objects.requireNonNull(groupKey);
             return this;
         }
 
         public Builder groupKey(String groupKey) {
-            this.groupKey = Input.of(Objects.requireNonNull(groupKey));
+            this.groupKey = Output.of(Objects.requireNonNull(groupKey));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder organizationId(Input<String> organizationId) {
+        public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
         public Builder organizationId(String organizationId) {
-            this.organizationId = Input.of(Objects.requireNonNull(organizationId));
+            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
         public GcpUserAccessBindingArgs build() {

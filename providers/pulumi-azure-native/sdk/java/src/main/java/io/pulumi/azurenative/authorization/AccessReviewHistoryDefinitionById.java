@@ -8,7 +8,6 @@ import io.pulumi.azurenative.authorization.AccessReviewHistoryDefinitionByIdArgs
 import io.pulumi.azurenative.authorization.outputs.AccessReviewHistoryInstanceResponse;
 import io.pulumi.azurenative.authorization.outputs.AccessReviewScopeResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -325,18 +324,18 @@ public class AccessReviewHistoryDefinitionById extends io.pulumi.resources.Custo
      * @param options A bag of options that control this resource's behavior.
      */
     public AccessReviewHistoryDefinitionById(String name, @Nullable AccessReviewHistoryDefinitionByIdArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:authorization:AccessReviewHistoryDefinitionById", name, args == null ? AccessReviewHistoryDefinitionByIdArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:authorization:AccessReviewHistoryDefinitionById", name, args == null ? AccessReviewHistoryDefinitionByIdArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private AccessReviewHistoryDefinitionById(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private AccessReviewHistoryDefinitionById(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:authorization:AccessReviewHistoryDefinitionById", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:authorization/v20211116preview:AccessReviewHistoryDefinitionById").build())
+                Output.of(Alias.builder().setType("azure-native:authorization/v20211116preview:AccessReviewHistoryDefinitionById").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -350,7 +349,7 @@ public class AccessReviewHistoryDefinitionById extends io.pulumi.resources.Custo
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AccessReviewHistoryDefinitionById get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static AccessReviewHistoryDefinitionById get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AccessReviewHistoryDefinitionById(name, id, options);
     }
 }

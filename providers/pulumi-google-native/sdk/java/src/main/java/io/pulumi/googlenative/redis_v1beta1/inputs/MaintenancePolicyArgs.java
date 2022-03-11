@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.redis_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.redis_v1beta1.inputs.WeeklyMaintenanceWindowArgs;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class MaintenancePolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class MaintenancePolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="weeklyMaintenanceWindow")
-      private final @Nullable Input<List<WeeklyMaintenanceWindowArgs>> weeklyMaintenanceWindow;
+      private final @Nullable Output<List<WeeklyMaintenanceWindowArgs>> weeklyMaintenanceWindow;
 
-    public Input<List<WeeklyMaintenanceWindowArgs>> getWeeklyMaintenanceWindow() {
-        return this.weeklyMaintenanceWindow == null ? Input.empty() : this.weeklyMaintenanceWindow;
+    public Output<List<WeeklyMaintenanceWindowArgs>> getWeeklyMaintenanceWindow() {
+        return this.weeklyMaintenanceWindow == null ? Output.empty() : this.weeklyMaintenanceWindow;
     }
 
     public MaintenancePolicyArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<List<WeeklyMaintenanceWindowArgs>> weeklyMaintenanceWindow) {
+        @Nullable Output<String> description,
+        @Nullable Output<List<WeeklyMaintenanceWindowArgs>> weeklyMaintenanceWindow) {
         this.description = description;
         this.weeklyMaintenanceWindow = weeklyMaintenanceWindow;
     }
 
     private MaintenancePolicyArgs() {
-        this.description = Input.empty();
-        this.weeklyMaintenanceWindow = Input.empty();
+        this.description = Output.empty();
+        this.weeklyMaintenanceWindow = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class MaintenancePolicyArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<WeeklyMaintenanceWindowArgs>> weeklyMaintenanceWindow;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<WeeklyMaintenanceWindowArgs>> weeklyMaintenanceWindow;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class MaintenancePolicyArgs extends io.pulumi.resources.ResourceArg
     	      this.weeklyMaintenanceWindow = defaults.weeklyMaintenanceWindow;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder weeklyMaintenanceWindow(@Nullable Input<List<WeeklyMaintenanceWindowArgs>> weeklyMaintenanceWindow) {
+        public Builder weeklyMaintenanceWindow(@Nullable Output<List<WeeklyMaintenanceWindowArgs>> weeklyMaintenanceWindow) {
             this.weeklyMaintenanceWindow = weeklyMaintenanceWindow;
             return this;
         }
 
         public Builder weeklyMaintenanceWindow(@Nullable List<WeeklyMaintenanceWindowArgs> weeklyMaintenanceWindow) {
-            this.weeklyMaintenanceWindow = Input.ofNullable(weeklyMaintenanceWindow);
+            this.weeklyMaintenanceWindow = Output.ofNullable(weeklyMaintenanceWindow);
             return this;
         }
         public MaintenancePolicyArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.databrew;
 
 import io.pulumi.awsnative.databrew.inputs.RulesetRuleArgs;
 import io.pulumi.awsnative.databrew.inputs.RulesetTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -44,17 +44,17 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules", required=true)
-      private final Input<List<RulesetRuleArgs>> rules;
+      private final Output<List<RulesetRuleArgs>> rules;
 
-    public Input<List<RulesetRuleArgs>> getRules() {
+    public Output<List<RulesetRuleArgs>> getRules() {
         return this.rules;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<List<RulesetTagArgs>> tags;
+      private final @Nullable Output<List<RulesetTagArgs>> tags;
 
-    public Input<List<RulesetTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<RulesetTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -62,18 +62,18 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetArn", required=true)
-      private final Input<String> targetArn;
+      private final Output<String> targetArn;
 
-    public Input<String> getTargetArn() {
+    public Output<String> getTargetArn() {
         return this.targetArn;
     }
 
     public RulesetArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        Input<List<RulesetRuleArgs>> rules,
-        @Nullable Input<List<RulesetTagArgs>> tags,
-        Input<String> targetArn) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        Output<List<RulesetRuleArgs>> rules,
+        @Nullable Output<List<RulesetTagArgs>> tags,
+        Output<String> targetArn) {
         this.description = description;
         this.name = name;
         this.rules = Objects.requireNonNull(rules, "expected parameter 'rules' to be non-null");
@@ -82,11 +82,11 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RulesetArgs() {
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.rules = Input.empty();
-        this.tags = Input.empty();
-        this.targetArn = Input.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.rules = Output.empty();
+        this.tags = Output.empty();
+        this.targetArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -98,11 +98,11 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private Input<List<RulesetRuleArgs>> rules;
-        private @Nullable Input<List<RulesetTagArgs>> tags;
-        private Input<String> targetArn;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private Output<List<RulesetRuleArgs>> rules;
+        private @Nullable Output<List<RulesetTagArgs>> tags;
+        private Output<String> targetArn;
 
         public Builder() {
     	      // Empty
@@ -117,53 +117,53 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetArn = defaults.targetArn;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder rules(Input<List<RulesetRuleArgs>> rules) {
+        public Builder rules(Output<List<RulesetRuleArgs>> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
 
         public Builder rules(List<RulesetRuleArgs> rules) {
-            this.rules = Input.of(Objects.requireNonNull(rules));
+            this.rules = Output.of(Objects.requireNonNull(rules));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<RulesetTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<RulesetTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<RulesetTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder targetArn(Input<String> targetArn) {
+        public Builder targetArn(Output<String> targetArn) {
             this.targetArn = Objects.requireNonNull(targetArn);
             return this;
         }
 
         public Builder targetArn(String targetArn) {
-            this.targetArn = Input.of(Objects.requireNonNull(targetArn));
+            this.targetArn = Output.of(Objects.requireNonNull(targetArn));
             return this;
         }
         public RulesetArgs build() {

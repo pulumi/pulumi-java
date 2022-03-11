@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class JobQueryDestinationEncryptionConfigurationGetArgs extends io.
      * 
      */
     @InputImport(name="kmsKeyName", required=true)
-      private final Input<String> kmsKeyName;
+      private final Output<String> kmsKeyName;
 
-    public Input<String> getKmsKeyName() {
+    public Output<String> getKmsKeyName() {
         return this.kmsKeyName;
     }
 
@@ -32,22 +32,22 @@ public final class JobQueryDestinationEncryptionConfigurationGetArgs extends io.
      * 
      */
     @InputImport(name="kmsKeyVersion")
-      private final @Nullable Input<String> kmsKeyVersion;
+      private final @Nullable Output<String> kmsKeyVersion;
 
-    public Input<String> getKmsKeyVersion() {
-        return this.kmsKeyVersion == null ? Input.empty() : this.kmsKeyVersion;
+    public Output<String> getKmsKeyVersion() {
+        return this.kmsKeyVersion == null ? Output.empty() : this.kmsKeyVersion;
     }
 
     public JobQueryDestinationEncryptionConfigurationGetArgs(
-        Input<String> kmsKeyName,
-        @Nullable Input<String> kmsKeyVersion) {
+        Output<String> kmsKeyName,
+        @Nullable Output<String> kmsKeyVersion) {
         this.kmsKeyName = Objects.requireNonNull(kmsKeyName, "expected parameter 'kmsKeyName' to be non-null");
         this.kmsKeyVersion = kmsKeyVersion;
     }
 
     private JobQueryDestinationEncryptionConfigurationGetArgs() {
-        this.kmsKeyName = Input.empty();
-        this.kmsKeyVersion = Input.empty();
+        this.kmsKeyName = Output.empty();
+        this.kmsKeyVersion = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class JobQueryDestinationEncryptionConfigurationGetArgs extends io.
     }
 
     public static final class Builder {
-        private Input<String> kmsKeyName;
-        private @Nullable Input<String> kmsKeyVersion;
+        private Output<String> kmsKeyName;
+        private @Nullable Output<String> kmsKeyVersion;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class JobQueryDestinationEncryptionConfigurationGetArgs extends io.
     	      this.kmsKeyVersion = defaults.kmsKeyVersion;
         }
 
-        public Builder kmsKeyName(Input<String> kmsKeyName) {
+        public Builder kmsKeyName(Output<String> kmsKeyName) {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
 
         public Builder kmsKeyName(String kmsKeyName) {
-            this.kmsKeyName = Input.of(Objects.requireNonNull(kmsKeyName));
+            this.kmsKeyName = Output.of(Objects.requireNonNull(kmsKeyName));
             return this;
         }
 
-        public Builder kmsKeyVersion(@Nullable Input<String> kmsKeyVersion) {
+        public Builder kmsKeyVersion(@Nullable Output<String> kmsKeyVersion) {
             this.kmsKeyVersion = kmsKeyVersion;
             return this;
         }
 
         public Builder kmsKeyVersion(@Nullable String kmsKeyVersion) {
-            this.kmsKeyVersion = Input.ofNullable(kmsKeyVersion);
+            this.kmsKeyVersion = Output.ofNullable(kmsKeyVersion);
             return this;
         }
         public JobQueryDestinationEncryptionConfigurationGetArgs build() {

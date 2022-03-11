@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.remotebuildexecution_v1alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.remotebuildexecution_v1alpha.enums.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicy;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFe
      * 
      */
     @InputImport(name="allowedValues")
-      private final @Nullable Input<List<String>> allowedValues;
+      private final @Nullable Output<List<String>> allowedValues;
 
-    public Input<List<String>> getAllowedValues() {
-        return this.allowedValues == null ? Input.empty() : this.allowedValues;
+    public Output<List<String>> getAllowedValues() {
+        return this.allowedValues == null ? Output.empty() : this.allowedValues;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFe
      * 
      */
     @InputImport(name="policy")
-      private final @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicy> policy;
+      private final @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicy> policy;
 
-    public Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicy> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicy> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs(
-        @Nullable Input<List<String>> allowedValues,
-        @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicy> policy) {
+        @Nullable Output<List<String>> allowedValues,
+        @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicy> policy) {
         this.allowedValues = allowedValues;
         this.policy = policy;
     }
 
     private GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs() {
-        this.allowedValues = Input.empty();
-        this.policy = Input.empty();
+        this.allowedValues = Output.empty();
+        this.policy = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFe
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> allowedValues;
-        private @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicy> policy;
+        private @Nullable Output<List<String>> allowedValues;
+        private @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicy> policy;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFe
     	      this.policy = defaults.policy;
         }
 
-        public Builder allowedValues(@Nullable Input<List<String>> allowedValues) {
+        public Builder allowedValues(@Nullable Output<List<String>> allowedValues) {
             this.allowedValues = allowedValues;
             return this;
         }
 
         public Builder allowedValues(@Nullable List<String> allowedValues) {
-            this.allowedValues = Input.ofNullable(allowedValues);
+            this.allowedValues = Output.ofNullable(allowedValues);
             return this;
         }
 
-        public Builder policy(@Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicy> policy) {
+        public Builder policy(@Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicy> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicy policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
         public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs build() {

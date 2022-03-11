@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.VirtualRouterSpecListenerGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -19,18 +19,18 @@ public final class VirtualRouterSpecGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="listener", required=true)
-      private final Input<VirtualRouterSpecListenerGetArgs> listener;
+      private final Output<VirtualRouterSpecListenerGetArgs> listener;
 
-    public Input<VirtualRouterSpecListenerGetArgs> getListener() {
+    public Output<VirtualRouterSpecListenerGetArgs> getListener() {
         return this.listener;
     }
 
-    public VirtualRouterSpecGetArgs(Input<VirtualRouterSpecListenerGetArgs> listener) {
+    public VirtualRouterSpecGetArgs(Output<VirtualRouterSpecListenerGetArgs> listener) {
         this.listener = Objects.requireNonNull(listener, "expected parameter 'listener' to be non-null");
     }
 
     private VirtualRouterSpecGetArgs() {
-        this.listener = Input.empty();
+        this.listener = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class VirtualRouterSpecGetArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<VirtualRouterSpecListenerGetArgs> listener;
+        private Output<VirtualRouterSpecListenerGetArgs> listener;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class VirtualRouterSpecGetArgs extends io.pulumi.resources.Resource
     	      this.listener = defaults.listener;
         }
 
-        public Builder listener(Input<VirtualRouterSpecListenerGetArgs> listener) {
+        public Builder listener(Output<VirtualRouterSpecListenerGetArgs> listener) {
             this.listener = Objects.requireNonNull(listener);
             return this;
         }
 
         public Builder listener(VirtualRouterSpecListenerGetArgs listener) {
-            this.listener = Input.of(Objects.requireNonNull(listener));
+            this.listener = Output.of(Objects.requireNonNull(listener));
             return this;
         }
         public VirtualRouterSpecGetArgs build() {

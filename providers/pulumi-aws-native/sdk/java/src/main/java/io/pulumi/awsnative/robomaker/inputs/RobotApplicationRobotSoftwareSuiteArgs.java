@@ -5,7 +5,7 @@ package io.pulumi.awsnative.robomaker.inputs;
 
 import io.pulumi.awsnative.robomaker.enums.RobotApplicationRobotSoftwareSuiteName;
 import io.pulumi.awsnative.robomaker.enums.RobotApplicationRobotSoftwareSuiteVersion;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,9 +24,9 @@ public final class RobotApplicationRobotSoftwareSuiteArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<RobotApplicationRobotSoftwareSuiteName> name;
+      private final Output<RobotApplicationRobotSoftwareSuiteName> name;
 
-    public Input<RobotApplicationRobotSoftwareSuiteName> getName() {
+    public Output<RobotApplicationRobotSoftwareSuiteName> getName() {
         return this.name;
     }
 
@@ -35,22 +35,22 @@ public final class RobotApplicationRobotSoftwareSuiteArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<RobotApplicationRobotSoftwareSuiteVersion> version;
+      private final @Nullable Output<RobotApplicationRobotSoftwareSuiteVersion> version;
 
-    public Input<RobotApplicationRobotSoftwareSuiteVersion> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<RobotApplicationRobotSoftwareSuiteVersion> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public RobotApplicationRobotSoftwareSuiteArgs(
-        Input<RobotApplicationRobotSoftwareSuiteName> name,
-        @Nullable Input<RobotApplicationRobotSoftwareSuiteVersion> version) {
+        Output<RobotApplicationRobotSoftwareSuiteName> name,
+        @Nullable Output<RobotApplicationRobotSoftwareSuiteVersion> version) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.version = version;
     }
 
     private RobotApplicationRobotSoftwareSuiteArgs() {
-        this.name = Input.empty();
-        this.version = Input.empty();
+        this.name = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class RobotApplicationRobotSoftwareSuiteArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private Input<RobotApplicationRobotSoftwareSuiteName> name;
-        private @Nullable Input<RobotApplicationRobotSoftwareSuiteVersion> version;
+        private Output<RobotApplicationRobotSoftwareSuiteName> name;
+        private @Nullable Output<RobotApplicationRobotSoftwareSuiteVersion> version;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class RobotApplicationRobotSoftwareSuiteArgs extends io.pulumi.reso
     	      this.version = defaults.version;
         }
 
-        public Builder name(Input<RobotApplicationRobotSoftwareSuiteName> name) {
+        public Builder name(Output<RobotApplicationRobotSoftwareSuiteName> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(RobotApplicationRobotSoftwareSuiteName name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder version(@Nullable Input<RobotApplicationRobotSoftwareSuiteVersion> version) {
+        public Builder version(@Nullable Output<RobotApplicationRobotSoftwareSuiteVersion> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable RobotApplicationRobotSoftwareSuiteVersion version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public RobotApplicationRobotSoftwareSuiteArgs build() {

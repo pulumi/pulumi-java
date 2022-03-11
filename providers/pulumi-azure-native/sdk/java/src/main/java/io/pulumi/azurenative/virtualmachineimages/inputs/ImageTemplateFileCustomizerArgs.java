@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.virtualmachineimages.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ImageTemplateFileCustomizerArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="destination")
-      private final @Nullable Input<String> destination;
+      private final @Nullable Output<String> destination;
 
-    public Input<String> getDestination() {
-        return this.destination == null ? Input.empty() : this.destination;
+    public Output<String> getDestination() {
+        return this.destination == null ? Output.empty() : this.destination;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ImageTemplateFileCustomizerArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ImageTemplateFileCustomizerArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="sha256Checksum")
-      private final @Nullable Input<String> sha256Checksum;
+      private final @Nullable Output<String> sha256Checksum;
 
-    public Input<String> getSha256Checksum() {
-        return this.sha256Checksum == null ? Input.empty() : this.sha256Checksum;
+    public Output<String> getSha256Checksum() {
+        return this.sha256Checksum == null ? Output.empty() : this.sha256Checksum;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ImageTemplateFileCustomizerArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="sourceUri")
-      private final @Nullable Input<String> sourceUri;
+      private final @Nullable Output<String> sourceUri;
 
-    public Input<String> getSourceUri() {
-        return this.sourceUri == null ? Input.empty() : this.sourceUri;
+    public Output<String> getSourceUri() {
+        return this.sourceUri == null ? Output.empty() : this.sourceUri;
     }
 
     /**
@@ -68,31 +68,31 @@ public final class ImageTemplateFileCustomizerArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public ImageTemplateFileCustomizerArgs(
-        @Nullable Input<String> destination,
-        @Nullable Input<String> name,
-        @Nullable Input<String> sha256Checksum,
-        @Nullable Input<String> sourceUri,
-        Input<String> type) {
+        @Nullable Output<String> destination,
+        @Nullable Output<String> name,
+        @Nullable Output<String> sha256Checksum,
+        @Nullable Output<String> sourceUri,
+        Output<String> type) {
         this.destination = destination;
         this.name = name;
-        this.sha256Checksum = sha256Checksum == null ? Input.ofNullable("") : sha256Checksum;
+        this.sha256Checksum = sha256Checksum == null ? Output.ofNullable("") : sha256Checksum;
         this.sourceUri = sourceUri;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private ImageTemplateFileCustomizerArgs() {
-        this.destination = Input.empty();
-        this.name = Input.empty();
-        this.sha256Checksum = Input.empty();
-        this.sourceUri = Input.empty();
-        this.type = Input.empty();
+        this.destination = Output.empty();
+        this.name = Output.empty();
+        this.sha256Checksum = Output.empty();
+        this.sourceUri = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class ImageTemplateFileCustomizerArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> destination;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> sha256Checksum;
-        private @Nullable Input<String> sourceUri;
-        private Input<String> type;
+        private @Nullable Output<String> destination;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> sha256Checksum;
+        private @Nullable Output<String> sourceUri;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class ImageTemplateFileCustomizerArgs extends io.pulumi.resources.R
     	      this.type = defaults.type;
         }
 
-        public Builder destination(@Nullable Input<String> destination) {
+        public Builder destination(@Nullable Output<String> destination) {
             this.destination = destination;
             return this;
         }
 
         public Builder destination(@Nullable String destination) {
-            this.destination = Input.ofNullable(destination);
+            this.destination = Output.ofNullable(destination);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder sha256Checksum(@Nullable Input<String> sha256Checksum) {
+        public Builder sha256Checksum(@Nullable Output<String> sha256Checksum) {
             this.sha256Checksum = sha256Checksum;
             return this;
         }
 
         public Builder sha256Checksum(@Nullable String sha256Checksum) {
-            this.sha256Checksum = Input.ofNullable(sha256Checksum);
+            this.sha256Checksum = Output.ofNullable(sha256Checksum);
             return this;
         }
 
-        public Builder sourceUri(@Nullable Input<String> sourceUri) {
+        public Builder sourceUri(@Nullable Output<String> sourceUri) {
             this.sourceUri = sourceUri;
             return this;
         }
 
         public Builder sourceUri(@Nullable String sourceUri) {
-            this.sourceUri = Input.ofNullable(sourceUri);
+            this.sourceUri = Output.ofNullable(sourceUri);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ImageTemplateFileCustomizerArgs build() {

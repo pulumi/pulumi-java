@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker;
 
 import io.pulumi.awsnative.sagemaker.inputs.DeviceFleetEdgeOutputConfigArgs;
 import io.pulumi.awsnative.sagemaker.inputs.DeviceFleetTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceFleetName")
-      private final @Nullable Input<String> deviceFleetName;
+      private final @Nullable Output<String> deviceFleetName;
 
-    public Input<String> getDeviceFleetName() {
-        return this.deviceFleetName == null ? Input.empty() : this.deviceFleetName;
+    public Output<String> getDeviceFleetName() {
+        return this.deviceFleetName == null ? Output.empty() : this.deviceFleetName;
     }
 
     /**
@@ -44,9 +44,9 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputConfig", required=true)
-      private final Input<DeviceFleetEdgeOutputConfigArgs> outputConfig;
+      private final Output<DeviceFleetEdgeOutputConfigArgs> outputConfig;
 
-    public Input<DeviceFleetEdgeOutputConfigArgs> getOutputConfig() {
+    public Output<DeviceFleetEdgeOutputConfigArgs> getOutputConfig() {
         return this.outputConfig;
     }
 
@@ -55,9 +55,9 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
@@ -66,18 +66,18 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<DeviceFleetTagArgs>> tags;
+      private final @Nullable Output<List<DeviceFleetTagArgs>> tags;
 
-    public Input<List<DeviceFleetTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<DeviceFleetTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public DeviceFleetArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> deviceFleetName,
-        Input<DeviceFleetEdgeOutputConfigArgs> outputConfig,
-        Input<String> roleArn,
-        @Nullable Input<List<DeviceFleetTagArgs>> tags) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> deviceFleetName,
+        Output<DeviceFleetEdgeOutputConfigArgs> outputConfig,
+        Output<String> roleArn,
+        @Nullable Output<List<DeviceFleetTagArgs>> tags) {
         this.description = description;
         this.deviceFleetName = deviceFleetName;
         this.outputConfig = Objects.requireNonNull(outputConfig, "expected parameter 'outputConfig' to be non-null");
@@ -86,11 +86,11 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeviceFleetArgs() {
-        this.description = Input.empty();
-        this.deviceFleetName = Input.empty();
-        this.outputConfig = Input.empty();
-        this.roleArn = Input.empty();
-        this.tags = Input.empty();
+        this.description = Output.empty();
+        this.deviceFleetName = Output.empty();
+        this.outputConfig = Output.empty();
+        this.roleArn = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -102,11 +102,11 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> deviceFleetName;
-        private Input<DeviceFleetEdgeOutputConfigArgs> outputConfig;
-        private Input<String> roleArn;
-        private @Nullable Input<List<DeviceFleetTagArgs>> tags;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> deviceFleetName;
+        private Output<DeviceFleetEdgeOutputConfigArgs> outputConfig;
+        private Output<String> roleArn;
+        private @Nullable Output<List<DeviceFleetTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -121,53 +121,53 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder deviceFleetName(@Nullable Input<String> deviceFleetName) {
+        public Builder deviceFleetName(@Nullable Output<String> deviceFleetName) {
             this.deviceFleetName = deviceFleetName;
             return this;
         }
 
         public Builder deviceFleetName(@Nullable String deviceFleetName) {
-            this.deviceFleetName = Input.ofNullable(deviceFleetName);
+            this.deviceFleetName = Output.ofNullable(deviceFleetName);
             return this;
         }
 
-        public Builder outputConfig(Input<DeviceFleetEdgeOutputConfigArgs> outputConfig) {
+        public Builder outputConfig(Output<DeviceFleetEdgeOutputConfigArgs> outputConfig) {
             this.outputConfig = Objects.requireNonNull(outputConfig);
             return this;
         }
 
         public Builder outputConfig(DeviceFleetEdgeOutputConfigArgs outputConfig) {
-            this.outputConfig = Input.of(Objects.requireNonNull(outputConfig));
+            this.outputConfig = Output.of(Objects.requireNonNull(outputConfig));
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<DeviceFleetTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<DeviceFleetTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<DeviceFleetTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public DeviceFleetArgs build() {

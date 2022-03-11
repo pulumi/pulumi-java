@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.virtualmachineimages.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class PlatformImagePurchasePlanArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="planName", required=true)
-      private final Input<String> planName;
+      private final Output<String> planName;
 
-    public Input<String> getPlanName() {
+    public Output<String> getPlanName() {
         return this.planName;
     }
 
@@ -33,9 +33,9 @@ public final class PlatformImagePurchasePlanArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="planProduct", required=true)
-      private final Input<String> planProduct;
+      private final Output<String> planProduct;
 
-    public Input<String> getPlanProduct() {
+    public Output<String> getPlanProduct() {
         return this.planProduct;
     }
 
@@ -44,25 +44,25 @@ public final class PlatformImagePurchasePlanArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="planPublisher", required=true)
-      private final Input<String> planPublisher;
+      private final Output<String> planPublisher;
 
-    public Input<String> getPlanPublisher() {
+    public Output<String> getPlanPublisher() {
         return this.planPublisher;
     }
 
     public PlatformImagePurchasePlanArgs(
-        Input<String> planName,
-        Input<String> planProduct,
-        Input<String> planPublisher) {
+        Output<String> planName,
+        Output<String> planProduct,
+        Output<String> planPublisher) {
         this.planName = Objects.requireNonNull(planName, "expected parameter 'planName' to be non-null");
         this.planProduct = Objects.requireNonNull(planProduct, "expected parameter 'planProduct' to be non-null");
         this.planPublisher = Objects.requireNonNull(planPublisher, "expected parameter 'planPublisher' to be non-null");
     }
 
     private PlatformImagePurchasePlanArgs() {
-        this.planName = Input.empty();
-        this.planProduct = Input.empty();
-        this.planPublisher = Input.empty();
+        this.planName = Output.empty();
+        this.planProduct = Output.empty();
+        this.planPublisher = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class PlatformImagePurchasePlanArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> planName;
-        private Input<String> planProduct;
-        private Input<String> planPublisher;
+        private Output<String> planName;
+        private Output<String> planProduct;
+        private Output<String> planPublisher;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class PlatformImagePurchasePlanArgs extends io.pulumi.resources.Res
     	      this.planPublisher = defaults.planPublisher;
         }
 
-        public Builder planName(Input<String> planName) {
+        public Builder planName(Output<String> planName) {
             this.planName = Objects.requireNonNull(planName);
             return this;
         }
 
         public Builder planName(String planName) {
-            this.planName = Input.of(Objects.requireNonNull(planName));
+            this.planName = Output.of(Objects.requireNonNull(planName));
             return this;
         }
 
-        public Builder planProduct(Input<String> planProduct) {
+        public Builder planProduct(Output<String> planProduct) {
             this.planProduct = Objects.requireNonNull(planProduct);
             return this;
         }
 
         public Builder planProduct(String planProduct) {
-            this.planProduct = Input.of(Objects.requireNonNull(planProduct));
+            this.planProduct = Output.of(Objects.requireNonNull(planProduct));
             return this;
         }
 
-        public Builder planPublisher(Input<String> planPublisher) {
+        public Builder planPublisher(Output<String> planPublisher) {
             this.planPublisher = Objects.requireNonNull(planPublisher);
             return this;
         }
 
         public Builder planPublisher(String planPublisher) {
-            this.planPublisher = Input.of(Objects.requireNonNull(planPublisher));
+            this.planPublisher = Output.of(Objects.requireNonNull(planPublisher));
             return this;
         }
         public PlatformImagePurchasePlanArgs build() {

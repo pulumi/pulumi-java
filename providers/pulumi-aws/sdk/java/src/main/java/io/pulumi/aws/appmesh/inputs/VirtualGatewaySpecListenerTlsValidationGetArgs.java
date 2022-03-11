@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesGetArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecListenerTlsValidationTrustGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,10 +20,10 @@ public final class VirtualGatewaySpecListenerTlsValidationGetArgs extends io.pul
      * 
      */
     @InputImport(name="subjectAlternativeNames")
-      private final @Nullable Input<VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesGetArgs> subjectAlternativeNames;
+      private final @Nullable Output<VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesGetArgs> subjectAlternativeNames;
 
-    public Input<VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesGetArgs> getSubjectAlternativeNames() {
-        return this.subjectAlternativeNames == null ? Input.empty() : this.subjectAlternativeNames;
+    public Output<VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesGetArgs> getSubjectAlternativeNames() {
+        return this.subjectAlternativeNames == null ? Output.empty() : this.subjectAlternativeNames;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class VirtualGatewaySpecListenerTlsValidationGetArgs extends io.pul
      * 
      */
     @InputImport(name="trust", required=true)
-      private final Input<VirtualGatewaySpecListenerTlsValidationTrustGetArgs> trust;
+      private final Output<VirtualGatewaySpecListenerTlsValidationTrustGetArgs> trust;
 
-    public Input<VirtualGatewaySpecListenerTlsValidationTrustGetArgs> getTrust() {
+    public Output<VirtualGatewaySpecListenerTlsValidationTrustGetArgs> getTrust() {
         return this.trust;
     }
 
     public VirtualGatewaySpecListenerTlsValidationGetArgs(
-        @Nullable Input<VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesGetArgs> subjectAlternativeNames,
-        Input<VirtualGatewaySpecListenerTlsValidationTrustGetArgs> trust) {
+        @Nullable Output<VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesGetArgs> subjectAlternativeNames,
+        Output<VirtualGatewaySpecListenerTlsValidationTrustGetArgs> trust) {
         this.subjectAlternativeNames = subjectAlternativeNames;
         this.trust = Objects.requireNonNull(trust, "expected parameter 'trust' to be non-null");
     }
 
     private VirtualGatewaySpecListenerTlsValidationGetArgs() {
-        this.subjectAlternativeNames = Input.empty();
-        this.trust = Input.empty();
+        this.subjectAlternativeNames = Output.empty();
+        this.trust = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class VirtualGatewaySpecListenerTlsValidationGetArgs extends io.pul
     }
 
     public static final class Builder {
-        private @Nullable Input<VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesGetArgs> subjectAlternativeNames;
-        private Input<VirtualGatewaySpecListenerTlsValidationTrustGetArgs> trust;
+        private @Nullable Output<VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesGetArgs> subjectAlternativeNames;
+        private Output<VirtualGatewaySpecListenerTlsValidationTrustGetArgs> trust;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class VirtualGatewaySpecListenerTlsValidationGetArgs extends io.pul
     	      this.trust = defaults.trust;
         }
 
-        public Builder subjectAlternativeNames(@Nullable Input<VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesGetArgs> subjectAlternativeNames) {
+        public Builder subjectAlternativeNames(@Nullable Output<VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesGetArgs> subjectAlternativeNames) {
             this.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }
 
         public Builder subjectAlternativeNames(@Nullable VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesGetArgs subjectAlternativeNames) {
-            this.subjectAlternativeNames = Input.ofNullable(subjectAlternativeNames);
+            this.subjectAlternativeNames = Output.ofNullable(subjectAlternativeNames);
             return this;
         }
 
-        public Builder trust(Input<VirtualGatewaySpecListenerTlsValidationTrustGetArgs> trust) {
+        public Builder trust(Output<VirtualGatewaySpecListenerTlsValidationTrustGetArgs> trust) {
             this.trust = Objects.requireNonNull(trust);
             return this;
         }
 
         public Builder trust(VirtualGatewaySpecListenerTlsValidationTrustGetArgs trust) {
-            this.trust = Input.of(Objects.requireNonNull(trust));
+            this.trust = Output.of(Objects.requireNonNull(trust));
             return this;
         }
         public VirtualGatewaySpecListenerTlsValidationGetArgs build() {

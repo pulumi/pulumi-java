@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.folder.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -41,9 +41,9 @@ public final class AccessApprovalSettingsEnrolledServiceArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="cloudProduct", required=true)
-      private final Input<String> cloudProduct;
+      private final Output<String> cloudProduct;
 
-    public Input<String> getCloudProduct() {
+    public Output<String> getCloudProduct() {
         return this.cloudProduct;
     }
 
@@ -54,22 +54,22 @@ public final class AccessApprovalSettingsEnrolledServiceArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="enrollmentLevel")
-      private final @Nullable Input<String> enrollmentLevel;
+      private final @Nullable Output<String> enrollmentLevel;
 
-    public Input<String> getEnrollmentLevel() {
-        return this.enrollmentLevel == null ? Input.empty() : this.enrollmentLevel;
+    public Output<String> getEnrollmentLevel() {
+        return this.enrollmentLevel == null ? Output.empty() : this.enrollmentLevel;
     }
 
     public AccessApprovalSettingsEnrolledServiceArgs(
-        Input<String> cloudProduct,
-        @Nullable Input<String> enrollmentLevel) {
+        Output<String> cloudProduct,
+        @Nullable Output<String> enrollmentLevel) {
         this.cloudProduct = Objects.requireNonNull(cloudProduct, "expected parameter 'cloudProduct' to be non-null");
         this.enrollmentLevel = enrollmentLevel;
     }
 
     private AccessApprovalSettingsEnrolledServiceArgs() {
-        this.cloudProduct = Input.empty();
-        this.enrollmentLevel = Input.empty();
+        this.cloudProduct = Output.empty();
+        this.enrollmentLevel = Output.empty();
     }
 
     public static Builder builder() {
@@ -81,8 +81,8 @@ public final class AccessApprovalSettingsEnrolledServiceArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private Input<String> cloudProduct;
-        private @Nullable Input<String> enrollmentLevel;
+        private Output<String> cloudProduct;
+        private @Nullable Output<String> enrollmentLevel;
 
         public Builder() {
     	      // Empty
@@ -94,23 +94,23 @@ public final class AccessApprovalSettingsEnrolledServiceArgs extends io.pulumi.r
     	      this.enrollmentLevel = defaults.enrollmentLevel;
         }
 
-        public Builder cloudProduct(Input<String> cloudProduct) {
+        public Builder cloudProduct(Output<String> cloudProduct) {
             this.cloudProduct = Objects.requireNonNull(cloudProduct);
             return this;
         }
 
         public Builder cloudProduct(String cloudProduct) {
-            this.cloudProduct = Input.of(Objects.requireNonNull(cloudProduct));
+            this.cloudProduct = Output.of(Objects.requireNonNull(cloudProduct));
             return this;
         }
 
-        public Builder enrollmentLevel(@Nullable Input<String> enrollmentLevel) {
+        public Builder enrollmentLevel(@Nullable Output<String> enrollmentLevel) {
             this.enrollmentLevel = enrollmentLevel;
             return this;
         }
 
         public Builder enrollmentLevel(@Nullable String enrollmentLevel) {
-            this.enrollmentLevel = Input.ofNullable(enrollmentLevel);
+            this.enrollmentLevel = Output.ofNullable(enrollmentLevel);
             return this;
         }
         public AccessApprovalSettingsEnrolledServiceArgs build() {

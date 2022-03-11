@@ -7,7 +7,7 @@ import io.pulumi.awsnative.acmpca.inputs.CertificateAuthorityCsrExtensionsArgs;
 import io.pulumi.awsnative.acmpca.inputs.CertificateAuthorityRevocationConfigurationArgs;
 import io.pulumi.awsnative.acmpca.inputs.CertificateAuthoritySubjectArgs;
 import io.pulumi.awsnative.acmpca.inputs.CertificateAuthorityTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="csrExtensions")
-      private final @Nullable Input<CertificateAuthorityCsrExtensionsArgs> csrExtensions;
+      private final @Nullable Output<CertificateAuthorityCsrExtensionsArgs> csrExtensions;
 
-    public Input<CertificateAuthorityCsrExtensionsArgs> getCsrExtensions() {
-        return this.csrExtensions == null ? Input.empty() : this.csrExtensions;
+    public Output<CertificateAuthorityCsrExtensionsArgs> getCsrExtensions() {
+        return this.csrExtensions == null ? Output.empty() : this.csrExtensions;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="keyAlgorithm", required=true)
-      private final Input<String> keyAlgorithm;
+      private final Output<String> keyAlgorithm;
 
-    public Input<String> getKeyAlgorithm() {
+    public Output<String> getKeyAlgorithm() {
         return this.keyAlgorithm;
     }
 
@@ -46,10 +46,10 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="keyStorageSecurityStandard")
-      private final @Nullable Input<String> keyStorageSecurityStandard;
+      private final @Nullable Output<String> keyStorageSecurityStandard;
 
-    public Input<String> getKeyStorageSecurityStandard() {
-        return this.keyStorageSecurityStandard == null ? Input.empty() : this.keyStorageSecurityStandard;
+    public Output<String> getKeyStorageSecurityStandard() {
+        return this.keyStorageSecurityStandard == null ? Output.empty() : this.keyStorageSecurityStandard;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="revocationConfiguration")
-      private final @Nullable Input<CertificateAuthorityRevocationConfigurationArgs> revocationConfiguration;
+      private final @Nullable Output<CertificateAuthorityRevocationConfigurationArgs> revocationConfiguration;
 
-    public Input<CertificateAuthorityRevocationConfigurationArgs> getRevocationConfiguration() {
-        return this.revocationConfiguration == null ? Input.empty() : this.revocationConfiguration;
+    public Output<CertificateAuthorityRevocationConfigurationArgs> getRevocationConfiguration() {
+        return this.revocationConfiguration == null ? Output.empty() : this.revocationConfiguration;
     }
 
     /**
@@ -68,9 +68,9 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="signingAlgorithm", required=true)
-      private final Input<String> signingAlgorithm;
+      private final Output<String> signingAlgorithm;
 
-    public Input<String> getSigningAlgorithm() {
+    public Output<String> getSigningAlgorithm() {
         return this.signingAlgorithm;
     }
 
@@ -79,17 +79,17 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="subject", required=true)
-      private final Input<CertificateAuthoritySubjectArgs> subject;
+      private final Output<CertificateAuthoritySubjectArgs> subject;
 
-    public Input<CertificateAuthoritySubjectArgs> getSubject() {
+    public Output<CertificateAuthoritySubjectArgs> getSubject() {
         return this.subject;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<List<CertificateAuthorityTagArgs>> tags;
+      private final @Nullable Output<List<CertificateAuthorityTagArgs>> tags;
 
-    public Input<List<CertificateAuthorityTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<CertificateAuthorityTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -97,21 +97,21 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public CertificateAuthorityArgs(
-        @Nullable Input<CertificateAuthorityCsrExtensionsArgs> csrExtensions,
-        Input<String> keyAlgorithm,
-        @Nullable Input<String> keyStorageSecurityStandard,
-        @Nullable Input<CertificateAuthorityRevocationConfigurationArgs> revocationConfiguration,
-        Input<String> signingAlgorithm,
-        Input<CertificateAuthoritySubjectArgs> subject,
-        @Nullable Input<List<CertificateAuthorityTagArgs>> tags,
-        Input<String> type) {
+        @Nullable Output<CertificateAuthorityCsrExtensionsArgs> csrExtensions,
+        Output<String> keyAlgorithm,
+        @Nullable Output<String> keyStorageSecurityStandard,
+        @Nullable Output<CertificateAuthorityRevocationConfigurationArgs> revocationConfiguration,
+        Output<String> signingAlgorithm,
+        Output<CertificateAuthoritySubjectArgs> subject,
+        @Nullable Output<List<CertificateAuthorityTagArgs>> tags,
+        Output<String> type) {
         this.csrExtensions = csrExtensions;
         this.keyAlgorithm = Objects.requireNonNull(keyAlgorithm, "expected parameter 'keyAlgorithm' to be non-null");
         this.keyStorageSecurityStandard = keyStorageSecurityStandard;
@@ -123,14 +123,14 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
     }
 
     private CertificateAuthorityArgs() {
-        this.csrExtensions = Input.empty();
-        this.keyAlgorithm = Input.empty();
-        this.keyStorageSecurityStandard = Input.empty();
-        this.revocationConfiguration = Input.empty();
-        this.signingAlgorithm = Input.empty();
-        this.subject = Input.empty();
-        this.tags = Input.empty();
-        this.type = Input.empty();
+        this.csrExtensions = Output.empty();
+        this.keyAlgorithm = Output.empty();
+        this.keyStorageSecurityStandard = Output.empty();
+        this.revocationConfiguration = Output.empty();
+        this.signingAlgorithm = Output.empty();
+        this.subject = Output.empty();
+        this.tags = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -142,14 +142,14 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<CertificateAuthorityCsrExtensionsArgs> csrExtensions;
-        private Input<String> keyAlgorithm;
-        private @Nullable Input<String> keyStorageSecurityStandard;
-        private @Nullable Input<CertificateAuthorityRevocationConfigurationArgs> revocationConfiguration;
-        private Input<String> signingAlgorithm;
-        private Input<CertificateAuthoritySubjectArgs> subject;
-        private @Nullable Input<List<CertificateAuthorityTagArgs>> tags;
-        private Input<String> type;
+        private @Nullable Output<CertificateAuthorityCsrExtensionsArgs> csrExtensions;
+        private Output<String> keyAlgorithm;
+        private @Nullable Output<String> keyStorageSecurityStandard;
+        private @Nullable Output<CertificateAuthorityRevocationConfigurationArgs> revocationConfiguration;
+        private Output<String> signingAlgorithm;
+        private Output<CertificateAuthoritySubjectArgs> subject;
+        private @Nullable Output<List<CertificateAuthorityTagArgs>> tags;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -167,83 +167,83 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
     	      this.type = defaults.type;
         }
 
-        public Builder csrExtensions(@Nullable Input<CertificateAuthorityCsrExtensionsArgs> csrExtensions) {
+        public Builder csrExtensions(@Nullable Output<CertificateAuthorityCsrExtensionsArgs> csrExtensions) {
             this.csrExtensions = csrExtensions;
             return this;
         }
 
         public Builder csrExtensions(@Nullable CertificateAuthorityCsrExtensionsArgs csrExtensions) {
-            this.csrExtensions = Input.ofNullable(csrExtensions);
+            this.csrExtensions = Output.ofNullable(csrExtensions);
             return this;
         }
 
-        public Builder keyAlgorithm(Input<String> keyAlgorithm) {
+        public Builder keyAlgorithm(Output<String> keyAlgorithm) {
             this.keyAlgorithm = Objects.requireNonNull(keyAlgorithm);
             return this;
         }
 
         public Builder keyAlgorithm(String keyAlgorithm) {
-            this.keyAlgorithm = Input.of(Objects.requireNonNull(keyAlgorithm));
+            this.keyAlgorithm = Output.of(Objects.requireNonNull(keyAlgorithm));
             return this;
         }
 
-        public Builder keyStorageSecurityStandard(@Nullable Input<String> keyStorageSecurityStandard) {
+        public Builder keyStorageSecurityStandard(@Nullable Output<String> keyStorageSecurityStandard) {
             this.keyStorageSecurityStandard = keyStorageSecurityStandard;
             return this;
         }
 
         public Builder keyStorageSecurityStandard(@Nullable String keyStorageSecurityStandard) {
-            this.keyStorageSecurityStandard = Input.ofNullable(keyStorageSecurityStandard);
+            this.keyStorageSecurityStandard = Output.ofNullable(keyStorageSecurityStandard);
             return this;
         }
 
-        public Builder revocationConfiguration(@Nullable Input<CertificateAuthorityRevocationConfigurationArgs> revocationConfiguration) {
+        public Builder revocationConfiguration(@Nullable Output<CertificateAuthorityRevocationConfigurationArgs> revocationConfiguration) {
             this.revocationConfiguration = revocationConfiguration;
             return this;
         }
 
         public Builder revocationConfiguration(@Nullable CertificateAuthorityRevocationConfigurationArgs revocationConfiguration) {
-            this.revocationConfiguration = Input.ofNullable(revocationConfiguration);
+            this.revocationConfiguration = Output.ofNullable(revocationConfiguration);
             return this;
         }
 
-        public Builder signingAlgorithm(Input<String> signingAlgorithm) {
+        public Builder signingAlgorithm(Output<String> signingAlgorithm) {
             this.signingAlgorithm = Objects.requireNonNull(signingAlgorithm);
             return this;
         }
 
         public Builder signingAlgorithm(String signingAlgorithm) {
-            this.signingAlgorithm = Input.of(Objects.requireNonNull(signingAlgorithm));
+            this.signingAlgorithm = Output.of(Objects.requireNonNull(signingAlgorithm));
             return this;
         }
 
-        public Builder subject(Input<CertificateAuthoritySubjectArgs> subject) {
+        public Builder subject(Output<CertificateAuthoritySubjectArgs> subject) {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
 
         public Builder subject(CertificateAuthoritySubjectArgs subject) {
-            this.subject = Input.of(Objects.requireNonNull(subject));
+            this.subject = Output.of(Objects.requireNonNull(subject));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<CertificateAuthorityTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<CertificateAuthorityTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<CertificateAuthorityTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public CertificateAuthorityArgs build() {

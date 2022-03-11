@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudfront.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigContentType
      * 
      */
     @InputImport(name="contentType", required=true)
-      private final Input<String> contentType;
+      private final Output<String> contentType;
 
-    public Input<String> getContentType() {
+    public Output<String> getContentType() {
         return this.contentType;
     }
 
@@ -30,9 +30,9 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigContentType
      * 
      */
     @InputImport(name="format", required=true)
-      private final Input<String> format;
+      private final Output<String> format;
 
-    public Input<String> getFormat() {
+    public Output<String> getFormat() {
         return this.format;
     }
 
@@ -41,25 +41,25 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigContentType
      * 
      */
     @InputImport(name="profileId")
-      private final @Nullable Input<String> profileId;
+      private final @Nullable Output<String> profileId;
 
-    public Input<String> getProfileId() {
-        return this.profileId == null ? Input.empty() : this.profileId;
+    public Output<String> getProfileId() {
+        return this.profileId == null ? Output.empty() : this.profileId;
     }
 
     public FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemGetArgs(
-        Input<String> contentType,
-        Input<String> format,
-        @Nullable Input<String> profileId) {
+        Output<String> contentType,
+        Output<String> format,
+        @Nullable Output<String> profileId) {
         this.contentType = Objects.requireNonNull(contentType, "expected parameter 'contentType' to be non-null");
         this.format = Objects.requireNonNull(format, "expected parameter 'format' to be non-null");
         this.profileId = profileId;
     }
 
     private FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemGetArgs() {
-        this.contentType = Input.empty();
-        this.format = Input.empty();
-        this.profileId = Input.empty();
+        this.contentType = Output.empty();
+        this.format = Output.empty();
+        this.profileId = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigContentType
     }
 
     public static final class Builder {
-        private Input<String> contentType;
-        private Input<String> format;
-        private @Nullable Input<String> profileId;
+        private Output<String> contentType;
+        private Output<String> format;
+        private @Nullable Output<String> profileId;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigContentType
     	      this.profileId = defaults.profileId;
         }
 
-        public Builder contentType(Input<String> contentType) {
+        public Builder contentType(Output<String> contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
 
         public Builder contentType(String contentType) {
-            this.contentType = Input.of(Objects.requireNonNull(contentType));
+            this.contentType = Output.of(Objects.requireNonNull(contentType));
             return this;
         }
 
-        public Builder format(Input<String> format) {
+        public Builder format(Output<String> format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
 
         public Builder format(String format) {
-            this.format = Input.of(Objects.requireNonNull(format));
+            this.format = Output.of(Objects.requireNonNull(format));
             return this;
         }
 
-        public Builder profileId(@Nullable Input<String> profileId) {
+        public Builder profileId(@Nullable Output<String> profileId) {
             this.profileId = profileId;
             return this;
         }
 
         public Builder profileId(@Nullable String profileId) {
-            this.profileId = Input.ofNullable(profileId);
+            this.profileId = Output.ofNullable(profileId);
             return this;
         }
         public FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemGetArgs build() {

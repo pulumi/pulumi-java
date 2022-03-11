@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2transitgateway;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class PeeringAttachmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="peerAccountId")
-      private final @Nullable Input<String> peerAccountId;
+      private final @Nullable Output<String> peerAccountId;
 
-    public Input<String> getPeerAccountId() {
-        return this.peerAccountId == null ? Input.empty() : this.peerAccountId;
+    public Output<String> getPeerAccountId() {
+        return this.peerAccountId == null ? Output.empty() : this.peerAccountId;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class PeeringAttachmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="peerRegion", required=true)
-      private final Input<String> peerRegion;
+      private final Output<String> peerRegion;
 
-    public Input<String> getPeerRegion() {
+    public Output<String> getPeerRegion() {
         return this.peerRegion;
     }
 
@@ -42,9 +42,9 @@ public final class PeeringAttachmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="peerTransitGatewayId", required=true)
-      private final Input<String> peerTransitGatewayId;
+      private final Output<String> peerTransitGatewayId;
 
-    public Input<String> getPeerTransitGatewayId() {
+    public Output<String> getPeerTransitGatewayId() {
         return this.peerTransitGatewayId;
     }
 
@@ -53,10 +53,10 @@ public final class PeeringAttachmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -64,18 +64,18 @@ public final class PeeringAttachmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="transitGatewayId", required=true)
-      private final Input<String> transitGatewayId;
+      private final Output<String> transitGatewayId;
 
-    public Input<String> getTransitGatewayId() {
+    public Output<String> getTransitGatewayId() {
         return this.transitGatewayId;
     }
 
     public PeeringAttachmentArgs(
-        @Nullable Input<String> peerAccountId,
-        Input<String> peerRegion,
-        Input<String> peerTransitGatewayId,
-        @Nullable Input<Map<String,String>> tags,
-        Input<String> transitGatewayId) {
+        @Nullable Output<String> peerAccountId,
+        Output<String> peerRegion,
+        Output<String> peerTransitGatewayId,
+        @Nullable Output<Map<String,String>> tags,
+        Output<String> transitGatewayId) {
         this.peerAccountId = peerAccountId;
         this.peerRegion = Objects.requireNonNull(peerRegion, "expected parameter 'peerRegion' to be non-null");
         this.peerTransitGatewayId = Objects.requireNonNull(peerTransitGatewayId, "expected parameter 'peerTransitGatewayId' to be non-null");
@@ -84,11 +84,11 @@ public final class PeeringAttachmentArgs extends io.pulumi.resources.ResourceArg
     }
 
     private PeeringAttachmentArgs() {
-        this.peerAccountId = Input.empty();
-        this.peerRegion = Input.empty();
-        this.peerTransitGatewayId = Input.empty();
-        this.tags = Input.empty();
-        this.transitGatewayId = Input.empty();
+        this.peerAccountId = Output.empty();
+        this.peerRegion = Output.empty();
+        this.peerTransitGatewayId = Output.empty();
+        this.tags = Output.empty();
+        this.transitGatewayId = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class PeeringAttachmentArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> peerAccountId;
-        private Input<String> peerRegion;
-        private Input<String> peerTransitGatewayId;
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<String> transitGatewayId;
+        private @Nullable Output<String> peerAccountId;
+        private Output<String> peerRegion;
+        private Output<String> peerTransitGatewayId;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<String> transitGatewayId;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class PeeringAttachmentArgs extends io.pulumi.resources.ResourceArg
     	      this.transitGatewayId = defaults.transitGatewayId;
         }
 
-        public Builder peerAccountId(@Nullable Input<String> peerAccountId) {
+        public Builder peerAccountId(@Nullable Output<String> peerAccountId) {
             this.peerAccountId = peerAccountId;
             return this;
         }
 
         public Builder peerAccountId(@Nullable String peerAccountId) {
-            this.peerAccountId = Input.ofNullable(peerAccountId);
+            this.peerAccountId = Output.ofNullable(peerAccountId);
             return this;
         }
 
-        public Builder peerRegion(Input<String> peerRegion) {
+        public Builder peerRegion(Output<String> peerRegion) {
             this.peerRegion = Objects.requireNonNull(peerRegion);
             return this;
         }
 
         public Builder peerRegion(String peerRegion) {
-            this.peerRegion = Input.of(Objects.requireNonNull(peerRegion));
+            this.peerRegion = Output.of(Objects.requireNonNull(peerRegion));
             return this;
         }
 
-        public Builder peerTransitGatewayId(Input<String> peerTransitGatewayId) {
+        public Builder peerTransitGatewayId(Output<String> peerTransitGatewayId) {
             this.peerTransitGatewayId = Objects.requireNonNull(peerTransitGatewayId);
             return this;
         }
 
         public Builder peerTransitGatewayId(String peerTransitGatewayId) {
-            this.peerTransitGatewayId = Input.of(Objects.requireNonNull(peerTransitGatewayId));
+            this.peerTransitGatewayId = Output.of(Objects.requireNonNull(peerTransitGatewayId));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder transitGatewayId(Input<String> transitGatewayId) {
+        public Builder transitGatewayId(Output<String> transitGatewayId) {
             this.transitGatewayId = Objects.requireNonNull(transitGatewayId);
             return this;
         }
 
         public Builder transitGatewayId(String transitGatewayId) {
-            this.transitGatewayId = Input.of(Objects.requireNonNull(transitGatewayId));
+            this.transitGatewayId = Output.of(Objects.requireNonNull(transitGatewayId));
             return this;
         }
         public PeeringAttachmentArgs build() {

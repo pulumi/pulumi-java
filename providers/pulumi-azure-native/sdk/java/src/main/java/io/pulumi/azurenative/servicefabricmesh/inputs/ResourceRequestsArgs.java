@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class ResourceRequestsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cpu", required=true)
-      private final Input<Double> cpu;
+      private final Output<Double> cpu;
 
-    public Input<Double> getCpu() {
+    public Output<Double> getCpu() {
         return this.cpu;
     }
 
@@ -33,22 +33,22 @@ public final class ResourceRequestsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="memoryInGB", required=true)
-      private final Input<Double> memoryInGB;
+      private final Output<Double> memoryInGB;
 
-    public Input<Double> getMemoryInGB() {
+    public Output<Double> getMemoryInGB() {
         return this.memoryInGB;
     }
 
     public ResourceRequestsArgs(
-        Input<Double> cpu,
-        Input<Double> memoryInGB) {
+        Output<Double> cpu,
+        Output<Double> memoryInGB) {
         this.cpu = Objects.requireNonNull(cpu, "expected parameter 'cpu' to be non-null");
         this.memoryInGB = Objects.requireNonNull(memoryInGB, "expected parameter 'memoryInGB' to be non-null");
     }
 
     private ResourceRequestsArgs() {
-        this.cpu = Input.empty();
-        this.memoryInGB = Input.empty();
+        this.cpu = Output.empty();
+        this.memoryInGB = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class ResourceRequestsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<Double> cpu;
-        private Input<Double> memoryInGB;
+        private Output<Double> cpu;
+        private Output<Double> memoryInGB;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class ResourceRequestsArgs extends io.pulumi.resources.ResourceArgs
     	      this.memoryInGB = defaults.memoryInGB;
         }
 
-        public Builder cpu(Input<Double> cpu) {
+        public Builder cpu(Output<Double> cpu) {
             this.cpu = Objects.requireNonNull(cpu);
             return this;
         }
 
         public Builder cpu(Double cpu) {
-            this.cpu = Input.of(Objects.requireNonNull(cpu));
+            this.cpu = Output.of(Objects.requireNonNull(cpu));
             return this;
         }
 
-        public Builder memoryInGB(Input<Double> memoryInGB) {
+        public Builder memoryInGB(Output<Double> memoryInGB) {
             this.memoryInGB = Objects.requireNonNull(memoryInGB);
             return this;
         }
 
         public Builder memoryInGB(Double memoryInGB) {
-            this.memoryInGB = Input.of(Objects.requireNonNull(memoryInGB));
+            this.memoryInGB = Output.of(Objects.requireNonNull(memoryInGB));
             return this;
         }
         public ResourceRequestsArgs build() {

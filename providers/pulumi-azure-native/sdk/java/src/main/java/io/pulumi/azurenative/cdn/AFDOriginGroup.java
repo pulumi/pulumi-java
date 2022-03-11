@@ -10,7 +10,6 @@ import io.pulumi.azurenative.cdn.outputs.LoadBalancingSettingsParametersResponse
 import io.pulumi.azurenative.cdn.outputs.ResponseBasedOriginErrorDetectionParametersResponse;
 import io.pulumi.azurenative.cdn.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -207,19 +206,19 @@ public class AFDOriginGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AFDOriginGroup(String name, AFDOriginGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:cdn:AFDOriginGroup", name, args == null ? AFDOriginGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:cdn:AFDOriginGroup", name, args == null ? AFDOriginGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private AFDOriginGroup(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private AFDOriginGroup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:cdn:AFDOriginGroup", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:cdn/v20200901:AFDOriginGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:cdn/v20210601:AFDOriginGroup").build())
+                Output.of(Alias.builder().setType("azure-native:cdn/v20200901:AFDOriginGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:cdn/v20210601:AFDOriginGroup").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -233,7 +232,7 @@ public class AFDOriginGroup extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AFDOriginGroup get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static AFDOriginGroup get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AFDOriginGroup(name, id, options);
     }
 }

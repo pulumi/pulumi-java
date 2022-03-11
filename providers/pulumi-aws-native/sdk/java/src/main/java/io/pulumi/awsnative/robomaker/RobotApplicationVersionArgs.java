@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.robomaker;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,9 +15,9 @@ public final class RobotApplicationVersionArgs extends io.pulumi.resources.Resou
     public static final RobotApplicationVersionArgs Empty = new RobotApplicationVersionArgs();
 
     @InputImport(name="application", required=true)
-      private final Input<String> application;
+      private final Output<String> application;
 
-    public Input<String> getApplication() {
+    public Output<String> getApplication() {
         return this.application;
     }
 
@@ -26,22 +26,22 @@ public final class RobotApplicationVersionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="currentRevisionId")
-      private final @Nullable Input<String> currentRevisionId;
+      private final @Nullable Output<String> currentRevisionId;
 
-    public Input<String> getCurrentRevisionId() {
-        return this.currentRevisionId == null ? Input.empty() : this.currentRevisionId;
+    public Output<String> getCurrentRevisionId() {
+        return this.currentRevisionId == null ? Output.empty() : this.currentRevisionId;
     }
 
     public RobotApplicationVersionArgs(
-        Input<String> application,
-        @Nullable Input<String> currentRevisionId) {
+        Output<String> application,
+        @Nullable Output<String> currentRevisionId) {
         this.application = Objects.requireNonNull(application, "expected parameter 'application' to be non-null");
         this.currentRevisionId = currentRevisionId;
     }
 
     private RobotApplicationVersionArgs() {
-        this.application = Input.empty();
-        this.currentRevisionId = Input.empty();
+        this.application = Output.empty();
+        this.currentRevisionId = Output.empty();
     }
 
     public static Builder builder() {
@@ -53,8 +53,8 @@ public final class RobotApplicationVersionArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<String> application;
-        private @Nullable Input<String> currentRevisionId;
+        private Output<String> application;
+        private @Nullable Output<String> currentRevisionId;
 
         public Builder() {
     	      // Empty
@@ -66,23 +66,23 @@ public final class RobotApplicationVersionArgs extends io.pulumi.resources.Resou
     	      this.currentRevisionId = defaults.currentRevisionId;
         }
 
-        public Builder application(Input<String> application) {
+        public Builder application(Output<String> application) {
             this.application = Objects.requireNonNull(application);
             return this;
         }
 
         public Builder application(String application) {
-            this.application = Input.of(Objects.requireNonNull(application));
+            this.application = Output.of(Objects.requireNonNull(application));
             return this;
         }
 
-        public Builder currentRevisionId(@Nullable Input<String> currentRevisionId) {
+        public Builder currentRevisionId(@Nullable Output<String> currentRevisionId) {
             this.currentRevisionId = currentRevisionId;
             return this;
         }
 
         public Builder currentRevisionId(@Nullable String currentRevisionId) {
-            this.currentRevisionId = Input.ofNullable(currentRevisionId);
+            this.currentRevisionId = Output.ofNullable(currentRevisionId);
             return this;
         }
         public RobotApplicationVersionArgs build() {

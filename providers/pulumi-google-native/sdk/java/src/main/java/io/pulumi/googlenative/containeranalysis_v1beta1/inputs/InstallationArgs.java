@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.LocationArgs;
 import java.util.List;
@@ -23,18 +23,18 @@ public final class InstallationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location", required=true)
-      private final Input<List<LocationArgs>> location;
+      private final Output<List<LocationArgs>> location;
 
-    public Input<List<LocationArgs>> getLocation() {
+    public Output<List<LocationArgs>> getLocation() {
         return this.location;
     }
 
-    public InstallationArgs(Input<List<LocationArgs>> location) {
+    public InstallationArgs(Output<List<LocationArgs>> location) {
         this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
     }
 
     private InstallationArgs() {
-        this.location = Input.empty();
+        this.location = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class InstallationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<LocationArgs>> location;
+        private Output<List<LocationArgs>> location;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class InstallationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.location = defaults.location;
         }
 
-        public Builder location(Input<List<LocationArgs>> location) {
+        public Builder location(Output<List<LocationArgs>> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
         public Builder location(List<LocationArgs> location) {
-            this.location = Input.of(Objects.requireNonNull(location));
+            this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
         public InstallationArgs build() {

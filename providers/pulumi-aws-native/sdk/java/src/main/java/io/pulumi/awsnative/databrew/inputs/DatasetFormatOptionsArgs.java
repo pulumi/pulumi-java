@@ -6,7 +6,7 @@ package io.pulumi.awsnative.databrew.inputs;
 import io.pulumi.awsnative.databrew.inputs.DatasetCsvOptionsArgs;
 import io.pulumi.awsnative.databrew.inputs.DatasetExcelOptionsArgs;
 import io.pulumi.awsnative.databrew.inputs.DatasetJsonOptionsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,39 +21,39 @@ public final class DatasetFormatOptionsArgs extends io.pulumi.resources.Resource
     public static final DatasetFormatOptionsArgs Empty = new DatasetFormatOptionsArgs();
 
     @InputImport(name="csv")
-      private final @Nullable Input<DatasetCsvOptionsArgs> csv;
+      private final @Nullable Output<DatasetCsvOptionsArgs> csv;
 
-    public Input<DatasetCsvOptionsArgs> getCsv() {
-        return this.csv == null ? Input.empty() : this.csv;
+    public Output<DatasetCsvOptionsArgs> getCsv() {
+        return this.csv == null ? Output.empty() : this.csv;
     }
 
     @InputImport(name="excel")
-      private final @Nullable Input<DatasetExcelOptionsArgs> excel;
+      private final @Nullable Output<DatasetExcelOptionsArgs> excel;
 
-    public Input<DatasetExcelOptionsArgs> getExcel() {
-        return this.excel == null ? Input.empty() : this.excel;
+    public Output<DatasetExcelOptionsArgs> getExcel() {
+        return this.excel == null ? Output.empty() : this.excel;
     }
 
     @InputImport(name="json")
-      private final @Nullable Input<DatasetJsonOptionsArgs> json;
+      private final @Nullable Output<DatasetJsonOptionsArgs> json;
 
-    public Input<DatasetJsonOptionsArgs> getJson() {
-        return this.json == null ? Input.empty() : this.json;
+    public Output<DatasetJsonOptionsArgs> getJson() {
+        return this.json == null ? Output.empty() : this.json;
     }
 
     public DatasetFormatOptionsArgs(
-        @Nullable Input<DatasetCsvOptionsArgs> csv,
-        @Nullable Input<DatasetExcelOptionsArgs> excel,
-        @Nullable Input<DatasetJsonOptionsArgs> json) {
+        @Nullable Output<DatasetCsvOptionsArgs> csv,
+        @Nullable Output<DatasetExcelOptionsArgs> excel,
+        @Nullable Output<DatasetJsonOptionsArgs> json) {
         this.csv = csv;
         this.excel = excel;
         this.json = json;
     }
 
     private DatasetFormatOptionsArgs() {
-        this.csv = Input.empty();
-        this.excel = Input.empty();
-        this.json = Input.empty();
+        this.csv = Output.empty();
+        this.excel = Output.empty();
+        this.json = Output.empty();
     }
 
     public static Builder builder() {
@@ -65,9 +65,9 @@ public final class DatasetFormatOptionsArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<DatasetCsvOptionsArgs> csv;
-        private @Nullable Input<DatasetExcelOptionsArgs> excel;
-        private @Nullable Input<DatasetJsonOptionsArgs> json;
+        private @Nullable Output<DatasetCsvOptionsArgs> csv;
+        private @Nullable Output<DatasetExcelOptionsArgs> excel;
+        private @Nullable Output<DatasetJsonOptionsArgs> json;
 
         public Builder() {
     	      // Empty
@@ -80,33 +80,33 @@ public final class DatasetFormatOptionsArgs extends io.pulumi.resources.Resource
     	      this.json = defaults.json;
         }
 
-        public Builder csv(@Nullable Input<DatasetCsvOptionsArgs> csv) {
+        public Builder csv(@Nullable Output<DatasetCsvOptionsArgs> csv) {
             this.csv = csv;
             return this;
         }
 
         public Builder csv(@Nullable DatasetCsvOptionsArgs csv) {
-            this.csv = Input.ofNullable(csv);
+            this.csv = Output.ofNullable(csv);
             return this;
         }
 
-        public Builder excel(@Nullable Input<DatasetExcelOptionsArgs> excel) {
+        public Builder excel(@Nullable Output<DatasetExcelOptionsArgs> excel) {
             this.excel = excel;
             return this;
         }
 
         public Builder excel(@Nullable DatasetExcelOptionsArgs excel) {
-            this.excel = Input.ofNullable(excel);
+            this.excel = Output.ofNullable(excel);
             return this;
         }
 
-        public Builder json(@Nullable Input<DatasetJsonOptionsArgs> json) {
+        public Builder json(@Nullable Output<DatasetJsonOptionsArgs> json) {
             this.json = json;
             return this;
         }
 
         public Builder json(@Nullable DatasetJsonOptionsArgs json) {
-            this.json = Input.ofNullable(json);
+            this.json = Output.ofNullable(json);
             return this;
         }
         public DatasetFormatOptionsArgs build() {

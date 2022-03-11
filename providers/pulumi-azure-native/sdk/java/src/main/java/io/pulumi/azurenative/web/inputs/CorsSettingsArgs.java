@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class CorsSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedOrigins")
-      private final @Nullable Input<List<String>> allowedOrigins;
+      private final @Nullable Output<List<String>> allowedOrigins;
 
-    public Input<List<String>> getAllowedOrigins() {
-        return this.allowedOrigins == null ? Input.empty() : this.allowedOrigins;
+    public Output<List<String>> getAllowedOrigins() {
+        return this.allowedOrigins == null ? Output.empty() : this.allowedOrigins;
     }
 
     /**
@@ -39,22 +39,22 @@ public final class CorsSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="supportCredentials")
-      private final @Nullable Input<Boolean> supportCredentials;
+      private final @Nullable Output<Boolean> supportCredentials;
 
-    public Input<Boolean> getSupportCredentials() {
-        return this.supportCredentials == null ? Input.empty() : this.supportCredentials;
+    public Output<Boolean> getSupportCredentials() {
+        return this.supportCredentials == null ? Output.empty() : this.supportCredentials;
     }
 
     public CorsSettingsArgs(
-        @Nullable Input<List<String>> allowedOrigins,
-        @Nullable Input<Boolean> supportCredentials) {
+        @Nullable Output<List<String>> allowedOrigins,
+        @Nullable Output<Boolean> supportCredentials) {
         this.allowedOrigins = allowedOrigins;
         this.supportCredentials = supportCredentials;
     }
 
     private CorsSettingsArgs() {
-        this.allowedOrigins = Input.empty();
-        this.supportCredentials = Input.empty();
+        this.allowedOrigins = Output.empty();
+        this.supportCredentials = Output.empty();
     }
 
     public static Builder builder() {
@@ -66,8 +66,8 @@ public final class CorsSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> allowedOrigins;
-        private @Nullable Input<Boolean> supportCredentials;
+        private @Nullable Output<List<String>> allowedOrigins;
+        private @Nullable Output<Boolean> supportCredentials;
 
         public Builder() {
     	      // Empty
@@ -79,23 +79,23 @@ public final class CorsSettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.supportCredentials = defaults.supportCredentials;
         }
 
-        public Builder allowedOrigins(@Nullable Input<List<String>> allowedOrigins) {
+        public Builder allowedOrigins(@Nullable Output<List<String>> allowedOrigins) {
             this.allowedOrigins = allowedOrigins;
             return this;
         }
 
         public Builder allowedOrigins(@Nullable List<String> allowedOrigins) {
-            this.allowedOrigins = Input.ofNullable(allowedOrigins);
+            this.allowedOrigins = Output.ofNullable(allowedOrigins);
             return this;
         }
 
-        public Builder supportCredentials(@Nullable Input<Boolean> supportCredentials) {
+        public Builder supportCredentials(@Nullable Output<Boolean> supportCredentials) {
             this.supportCredentials = supportCredentials;
             return this;
         }
 
         public Builder supportCredentials(@Nullable Boolean supportCredentials) {
-            this.supportCredentials = Input.ofNullable(supportCredentials);
+            this.supportCredentials = Output.ofNullable(supportCredentials);
             return this;
         }
         public CorsSettingsArgs build() {

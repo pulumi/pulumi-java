@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -23,10 +23,10 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="action")
-      private final @Nullable Input<String> action;
+      private final @Nullable Output<String> action;
 
-    public Input<String> getAction() {
-        return this.action == null ? Input.empty() : this.action;
+    public Output<String> getAction() {
+        return this.action == null ? Output.empty() : this.action;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultResponsePlatforms")
-      private final @Nullable Input<List<String>> defaultResponsePlatforms;
+      private final @Nullable Output<List<String>> defaultResponsePlatforms;
 
-    public Input<List<String>> getDefaultResponsePlatforms() {
-        return this.defaultResponsePlatforms == null ? Input.empty() : this.defaultResponsePlatforms;
+    public Output<List<String>> getDefaultResponsePlatforms() {
+        return this.defaultResponsePlatforms == null ? Output.empty() : this.defaultResponsePlatforms;
     }
 
     /**
@@ -47,9 +47,9 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -60,10 +60,10 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="events")
-      private final @Nullable Input<List<String>> events;
+      private final @Nullable Output<List<String>> events;
 
-    public Input<List<String>> getEvents() {
-        return this.events == null ? Input.empty() : this.events;
+    public Output<List<String>> getEvents() {
+        return this.events == null ? Output.empty() : this.events;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputContextNames")
-      private final @Nullable Input<List<String>> inputContextNames;
+      private final @Nullable Output<List<String>> inputContextNames;
 
-    public Input<List<String>> getInputContextNames() {
-        return this.inputContextNames == null ? Input.empty() : this.inputContextNames;
+    public Output<List<String>> getInputContextNames() {
+        return this.inputContextNames == null ? Output.empty() : this.inputContextNames;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isFallback")
-      private final @Nullable Input<Boolean> isFallback;
+      private final @Nullable Output<Boolean> isFallback;
 
-    public Input<Boolean> getIsFallback() {
-        return this.isFallback == null ? Input.empty() : this.isFallback;
+    public Output<Boolean> getIsFallback() {
+        return this.isFallback == null ? Output.empty() : this.isFallback;
     }
 
     /**
@@ -96,10 +96,10 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mlDisabled")
-      private final @Nullable Input<Boolean> mlDisabled;
+      private final @Nullable Output<Boolean> mlDisabled;
 
-    public Input<Boolean> getMlDisabled() {
-        return this.mlDisabled == null ? Input.empty() : this.mlDisabled;
+    public Output<Boolean> getMlDisabled() {
+        return this.mlDisabled == null ? Output.empty() : this.mlDisabled;
     }
 
     /**
@@ -108,10 +108,10 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parentFollowupIntentName")
-      private final @Nullable Input<String> parentFollowupIntentName;
+      private final @Nullable Output<String> parentFollowupIntentName;
 
-    public Input<String> getParentFollowupIntentName() {
-        return this.parentFollowupIntentName == null ? Input.empty() : this.parentFollowupIntentName;
+    public Output<String> getParentFollowupIntentName() {
+        return this.parentFollowupIntentName == null ? Output.empty() : this.parentFollowupIntentName;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priority")
-      private final @Nullable Input<Integer> priority;
+      private final @Nullable Output<Integer> priority;
 
-    public Input<Integer> getPriority() {
-        return this.priority == null ? Input.empty() : this.priority;
+    public Output<Integer> getPriority() {
+        return this.priority == null ? Output.empty() : this.priority;
     }
 
     /**
@@ -134,10 +134,10 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -145,10 +145,10 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resetContexts")
-      private final @Nullable Input<Boolean> resetContexts;
+      private final @Nullable Output<Boolean> resetContexts;
 
-    public Input<Boolean> getResetContexts() {
-        return this.resetContexts == null ? Input.empty() : this.resetContexts;
+    public Output<Boolean> getResetContexts() {
+        return this.resetContexts == null ? Output.empty() : this.resetContexts;
     }
 
     /**
@@ -160,25 +160,25 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="webhookState")
-      private final @Nullable Input<String> webhookState;
+      private final @Nullable Output<String> webhookState;
 
-    public Input<String> getWebhookState() {
-        return this.webhookState == null ? Input.empty() : this.webhookState;
+    public Output<String> getWebhookState() {
+        return this.webhookState == null ? Output.empty() : this.webhookState;
     }
 
     public IntentArgs(
-        @Nullable Input<String> action,
-        @Nullable Input<List<String>> defaultResponsePlatforms,
-        Input<String> displayName,
-        @Nullable Input<List<String>> events,
-        @Nullable Input<List<String>> inputContextNames,
-        @Nullable Input<Boolean> isFallback,
-        @Nullable Input<Boolean> mlDisabled,
-        @Nullable Input<String> parentFollowupIntentName,
-        @Nullable Input<Integer> priority,
-        @Nullable Input<String> project,
-        @Nullable Input<Boolean> resetContexts,
-        @Nullable Input<String> webhookState) {
+        @Nullable Output<String> action,
+        @Nullable Output<List<String>> defaultResponsePlatforms,
+        Output<String> displayName,
+        @Nullable Output<List<String>> events,
+        @Nullable Output<List<String>> inputContextNames,
+        @Nullable Output<Boolean> isFallback,
+        @Nullable Output<Boolean> mlDisabled,
+        @Nullable Output<String> parentFollowupIntentName,
+        @Nullable Output<Integer> priority,
+        @Nullable Output<String> project,
+        @Nullable Output<Boolean> resetContexts,
+        @Nullable Output<String> webhookState) {
         this.action = action;
         this.defaultResponsePlatforms = defaultResponsePlatforms;
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
@@ -194,18 +194,18 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IntentArgs() {
-        this.action = Input.empty();
-        this.defaultResponsePlatforms = Input.empty();
-        this.displayName = Input.empty();
-        this.events = Input.empty();
-        this.inputContextNames = Input.empty();
-        this.isFallback = Input.empty();
-        this.mlDisabled = Input.empty();
-        this.parentFollowupIntentName = Input.empty();
-        this.priority = Input.empty();
-        this.project = Input.empty();
-        this.resetContexts = Input.empty();
-        this.webhookState = Input.empty();
+        this.action = Output.empty();
+        this.defaultResponsePlatforms = Output.empty();
+        this.displayName = Output.empty();
+        this.events = Output.empty();
+        this.inputContextNames = Output.empty();
+        this.isFallback = Output.empty();
+        this.mlDisabled = Output.empty();
+        this.parentFollowupIntentName = Output.empty();
+        this.priority = Output.empty();
+        this.project = Output.empty();
+        this.resetContexts = Output.empty();
+        this.webhookState = Output.empty();
     }
 
     public static Builder builder() {
@@ -217,18 +217,18 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> action;
-        private @Nullable Input<List<String>> defaultResponsePlatforms;
-        private Input<String> displayName;
-        private @Nullable Input<List<String>> events;
-        private @Nullable Input<List<String>> inputContextNames;
-        private @Nullable Input<Boolean> isFallback;
-        private @Nullable Input<Boolean> mlDisabled;
-        private @Nullable Input<String> parentFollowupIntentName;
-        private @Nullable Input<Integer> priority;
-        private @Nullable Input<String> project;
-        private @Nullable Input<Boolean> resetContexts;
-        private @Nullable Input<String> webhookState;
+        private @Nullable Output<String> action;
+        private @Nullable Output<List<String>> defaultResponsePlatforms;
+        private Output<String> displayName;
+        private @Nullable Output<List<String>> events;
+        private @Nullable Output<List<String>> inputContextNames;
+        private @Nullable Output<Boolean> isFallback;
+        private @Nullable Output<Boolean> mlDisabled;
+        private @Nullable Output<String> parentFollowupIntentName;
+        private @Nullable Output<Integer> priority;
+        private @Nullable Output<String> project;
+        private @Nullable Output<Boolean> resetContexts;
+        private @Nullable Output<String> webhookState;
 
         public Builder() {
     	      // Empty
@@ -250,123 +250,123 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.webhookState = defaults.webhookState;
         }
 
-        public Builder action(@Nullable Input<String> action) {
+        public Builder action(@Nullable Output<String> action) {
             this.action = action;
             return this;
         }
 
         public Builder action(@Nullable String action) {
-            this.action = Input.ofNullable(action);
+            this.action = Output.ofNullable(action);
             return this;
         }
 
-        public Builder defaultResponsePlatforms(@Nullable Input<List<String>> defaultResponsePlatforms) {
+        public Builder defaultResponsePlatforms(@Nullable Output<List<String>> defaultResponsePlatforms) {
             this.defaultResponsePlatforms = defaultResponsePlatforms;
             return this;
         }
 
         public Builder defaultResponsePlatforms(@Nullable List<String> defaultResponsePlatforms) {
-            this.defaultResponsePlatforms = Input.ofNullable(defaultResponsePlatforms);
+            this.defaultResponsePlatforms = Output.ofNullable(defaultResponsePlatforms);
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder events(@Nullable Input<List<String>> events) {
+        public Builder events(@Nullable Output<List<String>> events) {
             this.events = events;
             return this;
         }
 
         public Builder events(@Nullable List<String> events) {
-            this.events = Input.ofNullable(events);
+            this.events = Output.ofNullable(events);
             return this;
         }
 
-        public Builder inputContextNames(@Nullable Input<List<String>> inputContextNames) {
+        public Builder inputContextNames(@Nullable Output<List<String>> inputContextNames) {
             this.inputContextNames = inputContextNames;
             return this;
         }
 
         public Builder inputContextNames(@Nullable List<String> inputContextNames) {
-            this.inputContextNames = Input.ofNullable(inputContextNames);
+            this.inputContextNames = Output.ofNullable(inputContextNames);
             return this;
         }
 
-        public Builder isFallback(@Nullable Input<Boolean> isFallback) {
+        public Builder isFallback(@Nullable Output<Boolean> isFallback) {
             this.isFallback = isFallback;
             return this;
         }
 
         public Builder isFallback(@Nullable Boolean isFallback) {
-            this.isFallback = Input.ofNullable(isFallback);
+            this.isFallback = Output.ofNullable(isFallback);
             return this;
         }
 
-        public Builder mlDisabled(@Nullable Input<Boolean> mlDisabled) {
+        public Builder mlDisabled(@Nullable Output<Boolean> mlDisabled) {
             this.mlDisabled = mlDisabled;
             return this;
         }
 
         public Builder mlDisabled(@Nullable Boolean mlDisabled) {
-            this.mlDisabled = Input.ofNullable(mlDisabled);
+            this.mlDisabled = Output.ofNullable(mlDisabled);
             return this;
         }
 
-        public Builder parentFollowupIntentName(@Nullable Input<String> parentFollowupIntentName) {
+        public Builder parentFollowupIntentName(@Nullable Output<String> parentFollowupIntentName) {
             this.parentFollowupIntentName = parentFollowupIntentName;
             return this;
         }
 
         public Builder parentFollowupIntentName(@Nullable String parentFollowupIntentName) {
-            this.parentFollowupIntentName = Input.ofNullable(parentFollowupIntentName);
+            this.parentFollowupIntentName = Output.ofNullable(parentFollowupIntentName);
             return this;
         }
 
-        public Builder priority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Input.ofNullable(priority);
+            this.priority = Output.ofNullable(priority);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder resetContexts(@Nullable Input<Boolean> resetContexts) {
+        public Builder resetContexts(@Nullable Output<Boolean> resetContexts) {
             this.resetContexts = resetContexts;
             return this;
         }
 
         public Builder resetContexts(@Nullable Boolean resetContexts) {
-            this.resetContexts = Input.ofNullable(resetContexts);
+            this.resetContexts = Output.ofNullable(resetContexts);
             return this;
         }
 
-        public Builder webhookState(@Nullable Input<String> webhookState) {
+        public Builder webhookState(@Nullable Output<String> webhookState) {
             this.webhookState = webhookState;
             return this;
         }
 
         public Builder webhookState(@Nullable String webhookState) {
-            this.webhookState = Input.ofNullable(webhookState);
+            this.webhookState = Output.ofNullable(webhookState);
             return this;
         }
         public IntentArgs build() {

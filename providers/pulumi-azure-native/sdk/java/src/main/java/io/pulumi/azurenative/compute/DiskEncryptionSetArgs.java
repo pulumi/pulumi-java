@@ -7,7 +7,7 @@ import io.pulumi.azurenative.compute.enums.DiskEncryptionSetType;
 import io.pulumi.azurenative.compute.inputs.EncryptionSetIdentityArgs;
 import io.pulumi.azurenative.compute.inputs.KeyForDiskEncryptionSetArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="activeKey")
-      private final @Nullable Input<KeyForDiskEncryptionSetArgs> activeKey;
+      private final @Nullable Output<KeyForDiskEncryptionSetArgs> activeKey;
 
-    public Input<KeyForDiskEncryptionSetArgs> getActiveKey() {
-        return this.activeKey == null ? Input.empty() : this.activeKey;
+    public Output<KeyForDiskEncryptionSetArgs> getActiveKey() {
+        return this.activeKey == null ? Output.empty() : this.activeKey;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="diskEncryptionSetName")
-      private final @Nullable Input<String> diskEncryptionSetName;
+      private final @Nullable Output<String> diskEncryptionSetName;
 
-    public Input<String> getDiskEncryptionSetName() {
-        return this.diskEncryptionSetName == null ? Input.empty() : this.diskEncryptionSetName;
+    public Output<String> getDiskEncryptionSetName() {
+        return this.diskEncryptionSetName == null ? Output.empty() : this.diskEncryptionSetName;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="encryptionType")
-      private final @Nullable Input<Either<String,DiskEncryptionSetType>> encryptionType;
+      private final @Nullable Output<Either<String,DiskEncryptionSetType>> encryptionType;
 
-    public Input<Either<String,DiskEncryptionSetType>> getEncryptionType() {
-        return this.encryptionType == null ? Input.empty() : this.encryptionType;
+    public Output<Either<String,DiskEncryptionSetType>> getEncryptionType() {
+        return this.encryptionType == null ? Output.empty() : this.encryptionType;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<EncryptionSetIdentityArgs> identity;
+      private final @Nullable Output<EncryptionSetIdentityArgs> identity;
 
-    public Input<EncryptionSetIdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<EncryptionSetIdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -80,9 +80,9 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -91,10 +91,10 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="rotationToLatestKeyVersionEnabled")
-      private final @Nullable Input<Boolean> rotationToLatestKeyVersionEnabled;
+      private final @Nullable Output<Boolean> rotationToLatestKeyVersionEnabled;
 
-    public Input<Boolean> getRotationToLatestKeyVersionEnabled() {
-        return this.rotationToLatestKeyVersionEnabled == null ? Input.empty() : this.rotationToLatestKeyVersionEnabled;
+    public Output<Boolean> getRotationToLatestKeyVersionEnabled() {
+        return this.rotationToLatestKeyVersionEnabled == null ? Output.empty() : this.rotationToLatestKeyVersionEnabled;
     }
 
     /**
@@ -102,21 +102,21 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public DiskEncryptionSetArgs(
-        @Nullable Input<KeyForDiskEncryptionSetArgs> activeKey,
-        @Nullable Input<String> diskEncryptionSetName,
-        @Nullable Input<Either<String,DiskEncryptionSetType>> encryptionType,
-        @Nullable Input<EncryptionSetIdentityArgs> identity,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<Boolean> rotationToLatestKeyVersionEnabled,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<KeyForDiskEncryptionSetArgs> activeKey,
+        @Nullable Output<String> diskEncryptionSetName,
+        @Nullable Output<Either<String,DiskEncryptionSetType>> encryptionType,
+        @Nullable Output<EncryptionSetIdentityArgs> identity,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<Boolean> rotationToLatestKeyVersionEnabled,
+        @Nullable Output<Map<String,String>> tags) {
         this.activeKey = activeKey;
         this.diskEncryptionSetName = diskEncryptionSetName;
         this.encryptionType = encryptionType;
@@ -128,14 +128,14 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
     }
 
     private DiskEncryptionSetArgs() {
-        this.activeKey = Input.empty();
-        this.diskEncryptionSetName = Input.empty();
-        this.encryptionType = Input.empty();
-        this.identity = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.rotationToLatestKeyVersionEnabled = Input.empty();
-        this.tags = Input.empty();
+        this.activeKey = Output.empty();
+        this.diskEncryptionSetName = Output.empty();
+        this.encryptionType = Output.empty();
+        this.identity = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.rotationToLatestKeyVersionEnabled = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -147,14 +147,14 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<KeyForDiskEncryptionSetArgs> activeKey;
-        private @Nullable Input<String> diskEncryptionSetName;
-        private @Nullable Input<Either<String,DiskEncryptionSetType>> encryptionType;
-        private @Nullable Input<EncryptionSetIdentityArgs> identity;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Boolean> rotationToLatestKeyVersionEnabled;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<KeyForDiskEncryptionSetArgs> activeKey;
+        private @Nullable Output<String> diskEncryptionSetName;
+        private @Nullable Output<Either<String,DiskEncryptionSetType>> encryptionType;
+        private @Nullable Output<EncryptionSetIdentityArgs> identity;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Boolean> rotationToLatestKeyVersionEnabled;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -172,83 +172,83 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
     	      this.tags = defaults.tags;
         }
 
-        public Builder activeKey(@Nullable Input<KeyForDiskEncryptionSetArgs> activeKey) {
+        public Builder activeKey(@Nullable Output<KeyForDiskEncryptionSetArgs> activeKey) {
             this.activeKey = activeKey;
             return this;
         }
 
         public Builder activeKey(@Nullable KeyForDiskEncryptionSetArgs activeKey) {
-            this.activeKey = Input.ofNullable(activeKey);
+            this.activeKey = Output.ofNullable(activeKey);
             return this;
         }
 
-        public Builder diskEncryptionSetName(@Nullable Input<String> diskEncryptionSetName) {
+        public Builder diskEncryptionSetName(@Nullable Output<String> diskEncryptionSetName) {
             this.diskEncryptionSetName = diskEncryptionSetName;
             return this;
         }
 
         public Builder diskEncryptionSetName(@Nullable String diskEncryptionSetName) {
-            this.diskEncryptionSetName = Input.ofNullable(diskEncryptionSetName);
+            this.diskEncryptionSetName = Output.ofNullable(diskEncryptionSetName);
             return this;
         }
 
-        public Builder encryptionType(@Nullable Input<Either<String,DiskEncryptionSetType>> encryptionType) {
+        public Builder encryptionType(@Nullable Output<Either<String,DiskEncryptionSetType>> encryptionType) {
             this.encryptionType = encryptionType;
             return this;
         }
 
         public Builder encryptionType(@Nullable Either<String,DiskEncryptionSetType> encryptionType) {
-            this.encryptionType = Input.ofNullable(encryptionType);
+            this.encryptionType = Output.ofNullable(encryptionType);
             return this;
         }
 
-        public Builder identity(@Nullable Input<EncryptionSetIdentityArgs> identity) {
+        public Builder identity(@Nullable Output<EncryptionSetIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable EncryptionSetIdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder rotationToLatestKeyVersionEnabled(@Nullable Input<Boolean> rotationToLatestKeyVersionEnabled) {
+        public Builder rotationToLatestKeyVersionEnabled(@Nullable Output<Boolean> rotationToLatestKeyVersionEnabled) {
             this.rotationToLatestKeyVersionEnabled = rotationToLatestKeyVersionEnabled;
             return this;
         }
 
         public Builder rotationToLatestKeyVersionEnabled(@Nullable Boolean rotationToLatestKeyVersionEnabled) {
-            this.rotationToLatestKeyVersionEnabled = Input.ofNullable(rotationToLatestKeyVersionEnabled);
+            this.rotationToLatestKeyVersionEnabled = Output.ofNullable(rotationToLatestKeyVersionEnabled);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public DiskEncryptionSetArgs build() {

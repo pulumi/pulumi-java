@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="keyIdentifier")
-      private final @Nullable Input<String> keyIdentifier;
+      private final @Nullable Output<String> keyIdentifier;
 
-    public Input<String> getKeyIdentifier() {
-        return this.keyIdentifier == null ? Input.empty() : this.keyIdentifier;
+    public Output<String> getKeyIdentifier() {
+        return this.keyIdentifier == null ? Output.empty() : this.keyIdentifier;
     }
 
-    public KeyVaultPropertiesArgs(@Nullable Input<String> keyIdentifier) {
+    public KeyVaultPropertiesArgs(@Nullable Output<String> keyIdentifier) {
         this.keyIdentifier = keyIdentifier;
     }
 
     private KeyVaultPropertiesArgs() {
-        this.keyIdentifier = Input.empty();
+        this.keyIdentifier = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> keyIdentifier;
+        private @Nullable Output<String> keyIdentifier;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
     	      this.keyIdentifier = defaults.keyIdentifier;
         }
 
-        public Builder keyIdentifier(@Nullable Input<String> keyIdentifier) {
+        public Builder keyIdentifier(@Nullable Output<String> keyIdentifier) {
             this.keyIdentifier = keyIdentifier;
             return this;
         }
 
         public Builder keyIdentifier(@Nullable String keyIdentifier) {
-            this.keyIdentifier = Input.ofNullable(keyIdentifier);
+            this.keyIdentifier = Output.ofNullable(keyIdentifier);
             return this;
         }
         public KeyVaultPropertiesArgs build() {

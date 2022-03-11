@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerinstance.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class GitRepoVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="directory")
-      private final @Nullable Input<String> directory;
+      private final @Nullable Output<String> directory;
 
-    public Input<String> getDirectory() {
-        return this.directory == null ? Input.empty() : this.directory;
+    public Output<String> getDirectory() {
+        return this.directory == null ? Output.empty() : this.directory;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class GitRepoVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repository", required=true)
-      private final Input<String> repository;
+      private final Output<String> repository;
 
-    public Input<String> getRepository() {
+    public Output<String> getRepository() {
         return this.repository;
     }
 
@@ -45,25 +45,25 @@ public final class GitRepoVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="revision")
-      private final @Nullable Input<String> revision;
+      private final @Nullable Output<String> revision;
 
-    public Input<String> getRevision() {
-        return this.revision == null ? Input.empty() : this.revision;
+    public Output<String> getRevision() {
+        return this.revision == null ? Output.empty() : this.revision;
     }
 
     public GitRepoVolumeArgs(
-        @Nullable Input<String> directory,
-        Input<String> repository,
-        @Nullable Input<String> revision) {
+        @Nullable Output<String> directory,
+        Output<String> repository,
+        @Nullable Output<String> revision) {
         this.directory = directory;
         this.repository = Objects.requireNonNull(repository, "expected parameter 'repository' to be non-null");
         this.revision = revision;
     }
 
     private GitRepoVolumeArgs() {
-        this.directory = Input.empty();
-        this.repository = Input.empty();
-        this.revision = Input.empty();
+        this.directory = Output.empty();
+        this.repository = Output.empty();
+        this.revision = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class GitRepoVolumeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> directory;
-        private Input<String> repository;
-        private @Nullable Input<String> revision;
+        private @Nullable Output<String> directory;
+        private Output<String> repository;
+        private @Nullable Output<String> revision;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class GitRepoVolumeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.revision = defaults.revision;
         }
 
-        public Builder directory(@Nullable Input<String> directory) {
+        public Builder directory(@Nullable Output<String> directory) {
             this.directory = directory;
             return this;
         }
 
         public Builder directory(@Nullable String directory) {
-            this.directory = Input.ofNullable(directory);
+            this.directory = Output.ofNullable(directory);
             return this;
         }
 
-        public Builder repository(Input<String> repository) {
+        public Builder repository(Output<String> repository) {
             this.repository = Objects.requireNonNull(repository);
             return this;
         }
 
         public Builder repository(String repository) {
-            this.repository = Input.of(Objects.requireNonNull(repository));
+            this.repository = Output.of(Objects.requireNonNull(repository));
             return this;
         }
 
-        public Builder revision(@Nullable Input<String> revision) {
+        public Builder revision(@Nullable Output<String> revision) {
             this.revision = revision;
             return this;
         }
 
         public Builder revision(@Nullable String revision) {
-            this.revision = Input.ofNullable(revision);
+            this.revision = Output.ofNullable(revision);
             return this;
         }
         public GitRepoVolumeArgs build() {

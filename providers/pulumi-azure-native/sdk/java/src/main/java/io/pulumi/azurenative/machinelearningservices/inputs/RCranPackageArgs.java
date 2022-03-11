@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class RCranPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class RCranPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repository")
-      private final @Nullable Input<String> repository;
+      private final @Nullable Output<String> repository;
 
-    public Input<String> getRepository() {
-        return this.repository == null ? Input.empty() : this.repository;
+    public Output<String> getRepository() {
+        return this.repository == null ? Output.empty() : this.repository;
     }
 
     public RCranPackageArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<String> repository) {
+        @Nullable Output<String> name,
+        @Nullable Output<String> repository) {
         this.name = name;
         this.repository = repository;
     }
 
     private RCranPackageArgs() {
-        this.name = Input.empty();
-        this.repository = Input.empty();
+        this.name = Output.empty();
+        this.repository = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class RCranPackageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> repository;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> repository;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class RCranPackageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.repository = defaults.repository;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder repository(@Nullable Input<String> repository) {
+        public Builder repository(@Nullable Output<String> repository) {
             this.repository = repository;
             return this;
         }
 
         public Builder repository(@Nullable String repository) {
-            this.repository = Input.ofNullable(repository);
+            this.repository = Output.ofNullable(repository);
             return this;
         }
         public RCranPackageArgs build() {

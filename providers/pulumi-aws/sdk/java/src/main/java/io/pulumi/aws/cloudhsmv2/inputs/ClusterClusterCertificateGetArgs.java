@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudhsmv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,46 +15,46 @@ public final class ClusterClusterCertificateGetArgs extends io.pulumi.resources.
     public static final ClusterClusterCertificateGetArgs Empty = new ClusterClusterCertificateGetArgs();
 
     @InputImport(name="awsHardwareCertificate")
-      private final @Nullable Input<String> awsHardwareCertificate;
+      private final @Nullable Output<String> awsHardwareCertificate;
 
-    public Input<String> getAwsHardwareCertificate() {
-        return this.awsHardwareCertificate == null ? Input.empty() : this.awsHardwareCertificate;
+    public Output<String> getAwsHardwareCertificate() {
+        return this.awsHardwareCertificate == null ? Output.empty() : this.awsHardwareCertificate;
     }
 
     @InputImport(name="clusterCertificate")
-      private final @Nullable Input<String> clusterCertificate;
+      private final @Nullable Output<String> clusterCertificate;
 
-    public Input<String> getClusterCertificate() {
-        return this.clusterCertificate == null ? Input.empty() : this.clusterCertificate;
+    public Output<String> getClusterCertificate() {
+        return this.clusterCertificate == null ? Output.empty() : this.clusterCertificate;
     }
 
     @InputImport(name="clusterCsr")
-      private final @Nullable Input<String> clusterCsr;
+      private final @Nullable Output<String> clusterCsr;
 
-    public Input<String> getClusterCsr() {
-        return this.clusterCsr == null ? Input.empty() : this.clusterCsr;
+    public Output<String> getClusterCsr() {
+        return this.clusterCsr == null ? Output.empty() : this.clusterCsr;
     }
 
     @InputImport(name="hsmCertificate")
-      private final @Nullable Input<String> hsmCertificate;
+      private final @Nullable Output<String> hsmCertificate;
 
-    public Input<String> getHsmCertificate() {
-        return this.hsmCertificate == null ? Input.empty() : this.hsmCertificate;
+    public Output<String> getHsmCertificate() {
+        return this.hsmCertificate == null ? Output.empty() : this.hsmCertificate;
     }
 
     @InputImport(name="manufacturerHardwareCertificate")
-      private final @Nullable Input<String> manufacturerHardwareCertificate;
+      private final @Nullable Output<String> manufacturerHardwareCertificate;
 
-    public Input<String> getManufacturerHardwareCertificate() {
-        return this.manufacturerHardwareCertificate == null ? Input.empty() : this.manufacturerHardwareCertificate;
+    public Output<String> getManufacturerHardwareCertificate() {
+        return this.manufacturerHardwareCertificate == null ? Output.empty() : this.manufacturerHardwareCertificate;
     }
 
     public ClusterClusterCertificateGetArgs(
-        @Nullable Input<String> awsHardwareCertificate,
-        @Nullable Input<String> clusterCertificate,
-        @Nullable Input<String> clusterCsr,
-        @Nullable Input<String> hsmCertificate,
-        @Nullable Input<String> manufacturerHardwareCertificate) {
+        @Nullable Output<String> awsHardwareCertificate,
+        @Nullable Output<String> clusterCertificate,
+        @Nullable Output<String> clusterCsr,
+        @Nullable Output<String> hsmCertificate,
+        @Nullable Output<String> manufacturerHardwareCertificate) {
         this.awsHardwareCertificate = awsHardwareCertificate;
         this.clusterCertificate = clusterCertificate;
         this.clusterCsr = clusterCsr;
@@ -63,11 +63,11 @@ public final class ClusterClusterCertificateGetArgs extends io.pulumi.resources.
     }
 
     private ClusterClusterCertificateGetArgs() {
-        this.awsHardwareCertificate = Input.empty();
-        this.clusterCertificate = Input.empty();
-        this.clusterCsr = Input.empty();
-        this.hsmCertificate = Input.empty();
-        this.manufacturerHardwareCertificate = Input.empty();
+        this.awsHardwareCertificate = Output.empty();
+        this.clusterCertificate = Output.empty();
+        this.clusterCsr = Output.empty();
+        this.hsmCertificate = Output.empty();
+        this.manufacturerHardwareCertificate = Output.empty();
     }
 
     public static Builder builder() {
@@ -79,11 +79,11 @@ public final class ClusterClusterCertificateGetArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> awsHardwareCertificate;
-        private @Nullable Input<String> clusterCertificate;
-        private @Nullable Input<String> clusterCsr;
-        private @Nullable Input<String> hsmCertificate;
-        private @Nullable Input<String> manufacturerHardwareCertificate;
+        private @Nullable Output<String> awsHardwareCertificate;
+        private @Nullable Output<String> clusterCertificate;
+        private @Nullable Output<String> clusterCsr;
+        private @Nullable Output<String> hsmCertificate;
+        private @Nullable Output<String> manufacturerHardwareCertificate;
 
         public Builder() {
     	      // Empty
@@ -98,53 +98,53 @@ public final class ClusterClusterCertificateGetArgs extends io.pulumi.resources.
     	      this.manufacturerHardwareCertificate = defaults.manufacturerHardwareCertificate;
         }
 
-        public Builder awsHardwareCertificate(@Nullable Input<String> awsHardwareCertificate) {
+        public Builder awsHardwareCertificate(@Nullable Output<String> awsHardwareCertificate) {
             this.awsHardwareCertificate = awsHardwareCertificate;
             return this;
         }
 
         public Builder awsHardwareCertificate(@Nullable String awsHardwareCertificate) {
-            this.awsHardwareCertificate = Input.ofNullable(awsHardwareCertificate);
+            this.awsHardwareCertificate = Output.ofNullable(awsHardwareCertificate);
             return this;
         }
 
-        public Builder clusterCertificate(@Nullable Input<String> clusterCertificate) {
+        public Builder clusterCertificate(@Nullable Output<String> clusterCertificate) {
             this.clusterCertificate = clusterCertificate;
             return this;
         }
 
         public Builder clusterCertificate(@Nullable String clusterCertificate) {
-            this.clusterCertificate = Input.ofNullable(clusterCertificate);
+            this.clusterCertificate = Output.ofNullable(clusterCertificate);
             return this;
         }
 
-        public Builder clusterCsr(@Nullable Input<String> clusterCsr) {
+        public Builder clusterCsr(@Nullable Output<String> clusterCsr) {
             this.clusterCsr = clusterCsr;
             return this;
         }
 
         public Builder clusterCsr(@Nullable String clusterCsr) {
-            this.clusterCsr = Input.ofNullable(clusterCsr);
+            this.clusterCsr = Output.ofNullable(clusterCsr);
             return this;
         }
 
-        public Builder hsmCertificate(@Nullable Input<String> hsmCertificate) {
+        public Builder hsmCertificate(@Nullable Output<String> hsmCertificate) {
             this.hsmCertificate = hsmCertificate;
             return this;
         }
 
         public Builder hsmCertificate(@Nullable String hsmCertificate) {
-            this.hsmCertificate = Input.ofNullable(hsmCertificate);
+            this.hsmCertificate = Output.ofNullable(hsmCertificate);
             return this;
         }
 
-        public Builder manufacturerHardwareCertificate(@Nullable Input<String> manufacturerHardwareCertificate) {
+        public Builder manufacturerHardwareCertificate(@Nullable Output<String> manufacturerHardwareCertificate) {
             this.manufacturerHardwareCertificate = manufacturerHardwareCertificate;
             return this;
         }
 
         public Builder manufacturerHardwareCertificate(@Nullable String manufacturerHardwareCertificate) {
-            this.manufacturerHardwareCertificate = Input.ofNullable(manufacturerHardwareCertificate);
+            this.manufacturerHardwareCertificate = Output.ofNullable(manufacturerHardwareCertificate);
             return this;
         }
         public ClusterClusterCertificateGetArgs build() {

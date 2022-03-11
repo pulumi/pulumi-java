@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.networkservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewr
      * 
      */
     @InputImport(name="hostRewrite")
-      private final @Nullable Input<String> hostRewrite;
+      private final @Nullable Output<String> hostRewrite;
 
-    public Input<String> getHostRewrite() {
-        return this.hostRewrite == null ? Input.empty() : this.hostRewrite;
+    public Output<String> getHostRewrite() {
+        return this.hostRewrite == null ? Output.empty() : this.hostRewrite;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewr
      * 
      */
     @InputImport(name="pathPrefixRewrite")
-      private final @Nullable Input<String> pathPrefixRewrite;
+      private final @Nullable Output<String> pathPrefixRewrite;
 
-    public Input<String> getPathPrefixRewrite() {
-        return this.pathPrefixRewrite == null ? Input.empty() : this.pathPrefixRewrite;
+    public Output<String> getPathPrefixRewrite() {
+        return this.pathPrefixRewrite == null ? Output.empty() : this.pathPrefixRewrite;
     }
 
     /**
@@ -51,25 +51,25 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewr
      * 
      */
     @InputImport(name="pathTemplateRewrite")
-      private final @Nullable Input<String> pathTemplateRewrite;
+      private final @Nullable Output<String> pathTemplateRewrite;
 
-    public Input<String> getPathTemplateRewrite() {
-        return this.pathTemplateRewrite == null ? Input.empty() : this.pathTemplateRewrite;
+    public Output<String> getPathTemplateRewrite() {
+        return this.pathTemplateRewrite == null ? Output.empty() : this.pathTemplateRewrite;
     }
 
     public EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewriteGetArgs(
-        @Nullable Input<String> hostRewrite,
-        @Nullable Input<String> pathPrefixRewrite,
-        @Nullable Input<String> pathTemplateRewrite) {
+        @Nullable Output<String> hostRewrite,
+        @Nullable Output<String> pathPrefixRewrite,
+        @Nullable Output<String> pathTemplateRewrite) {
         this.hostRewrite = hostRewrite;
         this.pathPrefixRewrite = pathPrefixRewrite;
         this.pathTemplateRewrite = pathTemplateRewrite;
     }
 
     private EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewriteGetArgs() {
-        this.hostRewrite = Input.empty();
-        this.pathPrefixRewrite = Input.empty();
-        this.pathTemplateRewrite = Input.empty();
+        this.hostRewrite = Output.empty();
+        this.pathPrefixRewrite = Output.empty();
+        this.pathTemplateRewrite = Output.empty();
     }
 
     public static Builder builder() {
@@ -81,9 +81,9 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> hostRewrite;
-        private @Nullable Input<String> pathPrefixRewrite;
-        private @Nullable Input<String> pathTemplateRewrite;
+        private @Nullable Output<String> hostRewrite;
+        private @Nullable Output<String> pathPrefixRewrite;
+        private @Nullable Output<String> pathTemplateRewrite;
 
         public Builder() {
     	      // Empty
@@ -96,33 +96,33 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewr
     	      this.pathTemplateRewrite = defaults.pathTemplateRewrite;
         }
 
-        public Builder hostRewrite(@Nullable Input<String> hostRewrite) {
+        public Builder hostRewrite(@Nullable Output<String> hostRewrite) {
             this.hostRewrite = hostRewrite;
             return this;
         }
 
         public Builder hostRewrite(@Nullable String hostRewrite) {
-            this.hostRewrite = Input.ofNullable(hostRewrite);
+            this.hostRewrite = Output.ofNullable(hostRewrite);
             return this;
         }
 
-        public Builder pathPrefixRewrite(@Nullable Input<String> pathPrefixRewrite) {
+        public Builder pathPrefixRewrite(@Nullable Output<String> pathPrefixRewrite) {
             this.pathPrefixRewrite = pathPrefixRewrite;
             return this;
         }
 
         public Builder pathPrefixRewrite(@Nullable String pathPrefixRewrite) {
-            this.pathPrefixRewrite = Input.ofNullable(pathPrefixRewrite);
+            this.pathPrefixRewrite = Output.ofNullable(pathPrefixRewrite);
             return this;
         }
 
-        public Builder pathTemplateRewrite(@Nullable Input<String> pathTemplateRewrite) {
+        public Builder pathTemplateRewrite(@Nullable Output<String> pathTemplateRewrite) {
             this.pathTemplateRewrite = pathTemplateRewrite;
             return this;
         }
 
         public Builder pathTemplateRewrite(@Nullable String pathTemplateRewrite) {
-            this.pathTemplateRewrite = Input.ofNullable(pathTemplateRewrite);
+            this.pathTemplateRewrite = Output.ofNullable(pathTemplateRewrite);
             return this;
         }
         public EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewriteGetArgs build() {

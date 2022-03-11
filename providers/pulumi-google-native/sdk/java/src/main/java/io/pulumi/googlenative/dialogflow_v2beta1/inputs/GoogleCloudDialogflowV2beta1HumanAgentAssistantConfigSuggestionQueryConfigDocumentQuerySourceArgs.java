@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,18 +23,18 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
      * 
      */
     @InputImport(name="documents", required=true)
-      private final Input<List<String>> documents;
+      private final Output<List<String>> documents;
 
-    public Input<List<String>> getDocuments() {
+    public Output<List<String>> getDocuments() {
         return this.documents;
     }
 
-    public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceArgs(Input<List<String>> documents) {
+    public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceArgs(Output<List<String>> documents) {
         this.documents = Objects.requireNonNull(documents, "expected parameter 'documents' to be non-null");
     }
 
     private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceArgs() {
-        this.documents = Input.empty();
+        this.documents = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
     }
 
     public static final class Builder {
-        private Input<List<String>> documents;
+        private Output<List<String>> documents;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
     	      this.documents = defaults.documents;
         }
 
-        public Builder documents(Input<List<String>> documents) {
+        public Builder documents(Output<List<String>> documents) {
             this.documents = Objects.requireNonNull(documents);
             return this;
         }
 
         public Builder documents(List<String> documents) {
-            this.documents = Input.of(Objects.requireNonNull(documents));
+            this.documents = Output.of(Objects.requireNonNull(documents));
             return this;
         }
         public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceArgs build() {

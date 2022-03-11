@@ -5,7 +5,7 @@ package io.pulumi.azurenative.edgeorder.inputs;
 
 import io.pulumi.azurenative.edgeorder.enums.DoubleEncryptionStatus;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,18 +25,18 @@ public final class EncryptionPreferencesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="doubleEncryptionStatus")
-      private final @Nullable Input<Either<String,DoubleEncryptionStatus>> doubleEncryptionStatus;
+      private final @Nullable Output<Either<String,DoubleEncryptionStatus>> doubleEncryptionStatus;
 
-    public Input<Either<String,DoubleEncryptionStatus>> getDoubleEncryptionStatus() {
-        return this.doubleEncryptionStatus == null ? Input.empty() : this.doubleEncryptionStatus;
+    public Output<Either<String,DoubleEncryptionStatus>> getDoubleEncryptionStatus() {
+        return this.doubleEncryptionStatus == null ? Output.empty() : this.doubleEncryptionStatus;
     }
 
-    public EncryptionPreferencesArgs(@Nullable Input<Either<String,DoubleEncryptionStatus>> doubleEncryptionStatus) {
+    public EncryptionPreferencesArgs(@Nullable Output<Either<String,DoubleEncryptionStatus>> doubleEncryptionStatus) {
         this.doubleEncryptionStatus = doubleEncryptionStatus;
     }
 
     private EncryptionPreferencesArgs() {
-        this.doubleEncryptionStatus = Input.empty();
+        this.doubleEncryptionStatus = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,7 +48,7 @@ public final class EncryptionPreferencesArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,DoubleEncryptionStatus>> doubleEncryptionStatus;
+        private @Nullable Output<Either<String,DoubleEncryptionStatus>> doubleEncryptionStatus;
 
         public Builder() {
     	      // Empty
@@ -59,13 +59,13 @@ public final class EncryptionPreferencesArgs extends io.pulumi.resources.Resourc
     	      this.doubleEncryptionStatus = defaults.doubleEncryptionStatus;
         }
 
-        public Builder doubleEncryptionStatus(@Nullable Input<Either<String,DoubleEncryptionStatus>> doubleEncryptionStatus) {
+        public Builder doubleEncryptionStatus(@Nullable Output<Either<String,DoubleEncryptionStatus>> doubleEncryptionStatus) {
             this.doubleEncryptionStatus = doubleEncryptionStatus;
             return this;
         }
 
         public Builder doubleEncryptionStatus(@Nullable Either<String,DoubleEncryptionStatus> doubleEncryptionStatus) {
-            this.doubleEncryptionStatus = Input.ofNullable(doubleEncryptionStatus);
+            this.doubleEncryptionStatus = Output.ofNullable(doubleEncryptionStatus);
             return this;
         }
         public EncryptionPreferencesArgs build() {

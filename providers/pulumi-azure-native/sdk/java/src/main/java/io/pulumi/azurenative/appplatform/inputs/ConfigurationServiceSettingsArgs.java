@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.azurenative.appplatform.inputs.ConfigurationServiceGitPropertyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class ConfigurationServiceSettingsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="gitProperty")
-      private final @Nullable Input<ConfigurationServiceGitPropertyArgs> gitProperty;
+      private final @Nullable Output<ConfigurationServiceGitPropertyArgs> gitProperty;
 
-    public Input<ConfigurationServiceGitPropertyArgs> getGitProperty() {
-        return this.gitProperty == null ? Input.empty() : this.gitProperty;
+    public Output<ConfigurationServiceGitPropertyArgs> getGitProperty() {
+        return this.gitProperty == null ? Output.empty() : this.gitProperty;
     }
 
-    public ConfigurationServiceSettingsArgs(@Nullable Input<ConfigurationServiceGitPropertyArgs> gitProperty) {
+    public ConfigurationServiceSettingsArgs(@Nullable Output<ConfigurationServiceGitPropertyArgs> gitProperty) {
         this.gitProperty = gitProperty;
     }
 
     private ConfigurationServiceSettingsArgs() {
-        this.gitProperty = Input.empty();
+        this.gitProperty = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ConfigurationServiceSettingsArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<ConfigurationServiceGitPropertyArgs> gitProperty;
+        private @Nullable Output<ConfigurationServiceGitPropertyArgs> gitProperty;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ConfigurationServiceSettingsArgs extends io.pulumi.resources.
     	      this.gitProperty = defaults.gitProperty;
         }
 
-        public Builder gitProperty(@Nullable Input<ConfigurationServiceGitPropertyArgs> gitProperty) {
+        public Builder gitProperty(@Nullable Output<ConfigurationServiceGitPropertyArgs> gitProperty) {
             this.gitProperty = gitProperty;
             return this;
         }
 
         public Builder gitProperty(@Nullable ConfigurationServiceGitPropertyArgs gitProperty) {
-            this.gitProperty = Input.ofNullable(gitProperty);
+            this.gitProperty = Output.ofNullable(gitProperty);
             return this;
         }
         public ConfigurationServiceSettingsArgs build() {

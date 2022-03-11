@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.aws.glue.inputs.DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class DataCatalogEncryptionSettingsState extends io.pulumi.resource
      * 
      */
     @InputImport(name="catalogId")
-      private final @Nullable Input<String> catalogId;
+      private final @Nullable Output<String> catalogId;
 
-    public Input<String> getCatalogId() {
-        return this.catalogId == null ? Input.empty() : this.catalogId;
+    public Output<String> getCatalogId() {
+        return this.catalogId == null ? Output.empty() : this.catalogId;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class DataCatalogEncryptionSettingsState extends io.pulumi.resource
      * 
      */
     @InputImport(name="dataCatalogEncryptionSettings")
-      private final @Nullable Input<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs> dataCatalogEncryptionSettings;
+      private final @Nullable Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs> dataCatalogEncryptionSettings;
 
-    public Input<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs> getDataCatalogEncryptionSettings() {
-        return this.dataCatalogEncryptionSettings == null ? Input.empty() : this.dataCatalogEncryptionSettings;
+    public Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs> getDataCatalogEncryptionSettings() {
+        return this.dataCatalogEncryptionSettings == null ? Output.empty() : this.dataCatalogEncryptionSettings;
     }
 
     public DataCatalogEncryptionSettingsState(
-        @Nullable Input<String> catalogId,
-        @Nullable Input<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs> dataCatalogEncryptionSettings) {
+        @Nullable Output<String> catalogId,
+        @Nullable Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs> dataCatalogEncryptionSettings) {
         this.catalogId = catalogId;
         this.dataCatalogEncryptionSettings = dataCatalogEncryptionSettings;
     }
 
     private DataCatalogEncryptionSettingsState() {
-        this.catalogId = Input.empty();
-        this.dataCatalogEncryptionSettings = Input.empty();
+        this.catalogId = Output.empty();
+        this.dataCatalogEncryptionSettings = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class DataCatalogEncryptionSettingsState extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> catalogId;
-        private @Nullable Input<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs> dataCatalogEncryptionSettings;
+        private @Nullable Output<String> catalogId;
+        private @Nullable Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs> dataCatalogEncryptionSettings;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class DataCatalogEncryptionSettingsState extends io.pulumi.resource
     	      this.dataCatalogEncryptionSettings = defaults.dataCatalogEncryptionSettings;
         }
 
-        public Builder catalogId(@Nullable Input<String> catalogId) {
+        public Builder catalogId(@Nullable Output<String> catalogId) {
             this.catalogId = catalogId;
             return this;
         }
 
         public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = Input.ofNullable(catalogId);
+            this.catalogId = Output.ofNullable(catalogId);
             return this;
         }
 
-        public Builder dataCatalogEncryptionSettings(@Nullable Input<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs> dataCatalogEncryptionSettings) {
+        public Builder dataCatalogEncryptionSettings(@Nullable Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs> dataCatalogEncryptionSettings) {
             this.dataCatalogEncryptionSettings = dataCatalogEncryptionSettings;
             return this;
         }
 
         public Builder dataCatalogEncryptionSettings(@Nullable DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs dataCatalogEncryptionSettings) {
-            this.dataCatalogEncryptionSettings = Input.ofNullable(dataCatalogEncryptionSettings);
+            this.dataCatalogEncryptionSettings = Output.ofNullable(dataCatalogEncryptionSettings);
             return this;
         }
         public DataCatalogEncryptionSettingsState build() {

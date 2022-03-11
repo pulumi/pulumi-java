@@ -5,7 +5,7 @@ package io.pulumi.awsnative.acmpca;
 
 import io.pulumi.awsnative.acmpca.inputs.CertificateApiPassthroughArgs;
 import io.pulumi.awsnative.acmpca.inputs.CertificateValidityArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiPassthrough")
-      private final @Nullable Input<CertificateApiPassthroughArgs> apiPassthrough;
+      private final @Nullable Output<CertificateApiPassthroughArgs> apiPassthrough;
 
-    public Input<CertificateApiPassthroughArgs> getApiPassthrough() {
-        return this.apiPassthrough == null ? Input.empty() : this.apiPassthrough;
+    public Output<CertificateApiPassthroughArgs> getApiPassthrough() {
+        return this.apiPassthrough == null ? Output.empty() : this.apiPassthrough;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateAuthorityArn", required=true)
-      private final Input<String> certificateAuthorityArn;
+      private final Output<String> certificateAuthorityArn;
 
-    public Input<String> getCertificateAuthorityArn() {
+    public Output<String> getCertificateAuthorityArn() {
         return this.certificateAuthorityArn;
     }
 
@@ -43,9 +43,9 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateSigningRequest", required=true)
-      private final Input<String> certificateSigningRequest;
+      private final Output<String> certificateSigningRequest;
 
-    public Input<String> getCertificateSigningRequest() {
+    public Output<String> getCertificateSigningRequest() {
         return this.certificateSigningRequest;
     }
 
@@ -54,9 +54,9 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="signingAlgorithm", required=true)
-      private final Input<String> signingAlgorithm;
+      private final Output<String> signingAlgorithm;
 
-    public Input<String> getSigningAlgorithm() {
+    public Output<String> getSigningAlgorithm() {
         return this.signingAlgorithm;
     }
 
@@ -65,10 +65,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="templateArn")
-      private final @Nullable Input<String> templateArn;
+      private final @Nullable Output<String> templateArn;
 
-    public Input<String> getTemplateArn() {
-        return this.templateArn == null ? Input.empty() : this.templateArn;
+    public Output<String> getTemplateArn() {
+        return this.templateArn == null ? Output.empty() : this.templateArn;
     }
 
     /**
@@ -76,9 +76,9 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="validity", required=true)
-      private final Input<CertificateValidityArgs> validity;
+      private final Output<CertificateValidityArgs> validity;
 
-    public Input<CertificateValidityArgs> getValidity() {
+    public Output<CertificateValidityArgs> getValidity() {
         return this.validity;
     }
 
@@ -87,20 +87,20 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="validityNotBefore")
-      private final @Nullable Input<CertificateValidityArgs> validityNotBefore;
+      private final @Nullable Output<CertificateValidityArgs> validityNotBefore;
 
-    public Input<CertificateValidityArgs> getValidityNotBefore() {
-        return this.validityNotBefore == null ? Input.empty() : this.validityNotBefore;
+    public Output<CertificateValidityArgs> getValidityNotBefore() {
+        return this.validityNotBefore == null ? Output.empty() : this.validityNotBefore;
     }
 
     public CertificateArgs(
-        @Nullable Input<CertificateApiPassthroughArgs> apiPassthrough,
-        Input<String> certificateAuthorityArn,
-        Input<String> certificateSigningRequest,
-        Input<String> signingAlgorithm,
-        @Nullable Input<String> templateArn,
-        Input<CertificateValidityArgs> validity,
-        @Nullable Input<CertificateValidityArgs> validityNotBefore) {
+        @Nullable Output<CertificateApiPassthroughArgs> apiPassthrough,
+        Output<String> certificateAuthorityArn,
+        Output<String> certificateSigningRequest,
+        Output<String> signingAlgorithm,
+        @Nullable Output<String> templateArn,
+        Output<CertificateValidityArgs> validity,
+        @Nullable Output<CertificateValidityArgs> validityNotBefore) {
         this.apiPassthrough = apiPassthrough;
         this.certificateAuthorityArn = Objects.requireNonNull(certificateAuthorityArn, "expected parameter 'certificateAuthorityArn' to be non-null");
         this.certificateSigningRequest = Objects.requireNonNull(certificateSigningRequest, "expected parameter 'certificateSigningRequest' to be non-null");
@@ -111,13 +111,13 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CertificateArgs() {
-        this.apiPassthrough = Input.empty();
-        this.certificateAuthorityArn = Input.empty();
-        this.certificateSigningRequest = Input.empty();
-        this.signingAlgorithm = Input.empty();
-        this.templateArn = Input.empty();
-        this.validity = Input.empty();
-        this.validityNotBefore = Input.empty();
+        this.apiPassthrough = Output.empty();
+        this.certificateAuthorityArn = Output.empty();
+        this.certificateSigningRequest = Output.empty();
+        this.signingAlgorithm = Output.empty();
+        this.templateArn = Output.empty();
+        this.validity = Output.empty();
+        this.validityNotBefore = Output.empty();
     }
 
     public static Builder builder() {
@@ -129,13 +129,13 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<CertificateApiPassthroughArgs> apiPassthrough;
-        private Input<String> certificateAuthorityArn;
-        private Input<String> certificateSigningRequest;
-        private Input<String> signingAlgorithm;
-        private @Nullable Input<String> templateArn;
-        private Input<CertificateValidityArgs> validity;
-        private @Nullable Input<CertificateValidityArgs> validityNotBefore;
+        private @Nullable Output<CertificateApiPassthroughArgs> apiPassthrough;
+        private Output<String> certificateAuthorityArn;
+        private Output<String> certificateSigningRequest;
+        private Output<String> signingAlgorithm;
+        private @Nullable Output<String> templateArn;
+        private Output<CertificateValidityArgs> validity;
+        private @Nullable Output<CertificateValidityArgs> validityNotBefore;
 
         public Builder() {
     	      // Empty
@@ -152,73 +152,73 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.validityNotBefore = defaults.validityNotBefore;
         }
 
-        public Builder apiPassthrough(@Nullable Input<CertificateApiPassthroughArgs> apiPassthrough) {
+        public Builder apiPassthrough(@Nullable Output<CertificateApiPassthroughArgs> apiPassthrough) {
             this.apiPassthrough = apiPassthrough;
             return this;
         }
 
         public Builder apiPassthrough(@Nullable CertificateApiPassthroughArgs apiPassthrough) {
-            this.apiPassthrough = Input.ofNullable(apiPassthrough);
+            this.apiPassthrough = Output.ofNullable(apiPassthrough);
             return this;
         }
 
-        public Builder certificateAuthorityArn(Input<String> certificateAuthorityArn) {
+        public Builder certificateAuthorityArn(Output<String> certificateAuthorityArn) {
             this.certificateAuthorityArn = Objects.requireNonNull(certificateAuthorityArn);
             return this;
         }
 
         public Builder certificateAuthorityArn(String certificateAuthorityArn) {
-            this.certificateAuthorityArn = Input.of(Objects.requireNonNull(certificateAuthorityArn));
+            this.certificateAuthorityArn = Output.of(Objects.requireNonNull(certificateAuthorityArn));
             return this;
         }
 
-        public Builder certificateSigningRequest(Input<String> certificateSigningRequest) {
+        public Builder certificateSigningRequest(Output<String> certificateSigningRequest) {
             this.certificateSigningRequest = Objects.requireNonNull(certificateSigningRequest);
             return this;
         }
 
         public Builder certificateSigningRequest(String certificateSigningRequest) {
-            this.certificateSigningRequest = Input.of(Objects.requireNonNull(certificateSigningRequest));
+            this.certificateSigningRequest = Output.of(Objects.requireNonNull(certificateSigningRequest));
             return this;
         }
 
-        public Builder signingAlgorithm(Input<String> signingAlgorithm) {
+        public Builder signingAlgorithm(Output<String> signingAlgorithm) {
             this.signingAlgorithm = Objects.requireNonNull(signingAlgorithm);
             return this;
         }
 
         public Builder signingAlgorithm(String signingAlgorithm) {
-            this.signingAlgorithm = Input.of(Objects.requireNonNull(signingAlgorithm));
+            this.signingAlgorithm = Output.of(Objects.requireNonNull(signingAlgorithm));
             return this;
         }
 
-        public Builder templateArn(@Nullable Input<String> templateArn) {
+        public Builder templateArn(@Nullable Output<String> templateArn) {
             this.templateArn = templateArn;
             return this;
         }
 
         public Builder templateArn(@Nullable String templateArn) {
-            this.templateArn = Input.ofNullable(templateArn);
+            this.templateArn = Output.ofNullable(templateArn);
             return this;
         }
 
-        public Builder validity(Input<CertificateValidityArgs> validity) {
+        public Builder validity(Output<CertificateValidityArgs> validity) {
             this.validity = Objects.requireNonNull(validity);
             return this;
         }
 
         public Builder validity(CertificateValidityArgs validity) {
-            this.validity = Input.of(Objects.requireNonNull(validity));
+            this.validity = Output.of(Objects.requireNonNull(validity));
             return this;
         }
 
-        public Builder validityNotBefore(@Nullable Input<CertificateValidityArgs> validityNotBefore) {
+        public Builder validityNotBefore(@Nullable Output<CertificateValidityArgs> validityNotBefore) {
             this.validityNotBefore = validityNotBefore;
             return this;
         }
 
         public Builder validityNotBefore(@Nullable CertificateValidityArgs validityNotBefore) {
-            this.validityNotBefore = Input.ofNullable(validityNotBefore);
+            this.validityNotBefore = Output.ofNullable(validityNotBefore);
             return this;
         }
         public CertificateArgs build() {

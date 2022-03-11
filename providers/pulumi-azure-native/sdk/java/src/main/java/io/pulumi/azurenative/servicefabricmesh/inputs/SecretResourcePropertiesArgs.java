@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class SecretResourcePropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="contentType")
-      private final @Nullable Input<String> contentType;
+      private final @Nullable Output<String> contentType;
 
-    public Input<String> getContentType() {
-        return this.contentType == null ? Input.empty() : this.contentType;
+    public Output<String> getContentType() {
+        return this.contentType == null ? Output.empty() : this.contentType;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SecretResourcePropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class SecretResourcePropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<String> kind;
+      private final Output<String> kind;
 
-    public Input<String> getKind() {
+    public Output<String> getKind() {
         return this.kind;
     }
 
     public SecretResourcePropertiesArgs(
-        @Nullable Input<String> contentType,
-        @Nullable Input<String> description,
-        Input<String> kind) {
+        @Nullable Output<String> contentType,
+        @Nullable Output<String> description,
+        Output<String> kind) {
         this.contentType = contentType;
         this.description = description;
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
     }
 
     private SecretResourcePropertiesArgs() {
-        this.contentType = Input.empty();
-        this.description = Input.empty();
-        this.kind = Input.empty();
+        this.contentType = Output.empty();
+        this.description = Output.empty();
+        this.kind = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class SecretResourcePropertiesArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> contentType;
-        private @Nullable Input<String> description;
-        private Input<String> kind;
+        private @Nullable Output<String> contentType;
+        private @Nullable Output<String> description;
+        private Output<String> kind;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class SecretResourcePropertiesArgs extends io.pulumi.resources.Reso
     	      this.kind = defaults.kind;
         }
 
-        public Builder contentType(@Nullable Input<String> contentType) {
+        public Builder contentType(@Nullable Output<String> contentType) {
             this.contentType = contentType;
             return this;
         }
 
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = Input.ofNullable(contentType);
+            this.contentType = Output.ofNullable(contentType);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder kind(Input<String> kind) {
+        public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(String kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
         public SecretResourcePropertiesArgs build() {

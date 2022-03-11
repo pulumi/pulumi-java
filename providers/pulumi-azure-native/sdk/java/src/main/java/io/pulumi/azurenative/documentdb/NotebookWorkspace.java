@@ -6,7 +6,6 @@ package io.pulumi.azurenative.documentdb;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.documentdb.NotebookWorkspaceArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -126,33 +125,33 @@ public class NotebookWorkspace extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NotebookWorkspace(String name, NotebookWorkspaceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:documentdb:NotebookWorkspace", name, args == null ? NotebookWorkspaceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:documentdb:NotebookWorkspace", name, args == null ? NotebookWorkspaceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private NotebookWorkspace(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private NotebookWorkspace(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:documentdb:NotebookWorkspace", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20190801:NotebookWorkspace").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20191212:NotebookWorkspace").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20200301:NotebookWorkspace").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20200401:NotebookWorkspace").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20200601preview:NotebookWorkspace").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20200901:NotebookWorkspace").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210115:NotebookWorkspace").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210301preview:NotebookWorkspace").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210315:NotebookWorkspace").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210401preview:NotebookWorkspace").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210415:NotebookWorkspace").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210515:NotebookWorkspace").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210615:NotebookWorkspace").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210701preview:NotebookWorkspace").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20211015:NotebookWorkspace").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20211015preview:NotebookWorkspace").build())
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20190801:NotebookWorkspace").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20191212:NotebookWorkspace").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20200301:NotebookWorkspace").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20200401:NotebookWorkspace").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20200601preview:NotebookWorkspace").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20200901:NotebookWorkspace").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210115:NotebookWorkspace").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210301preview:NotebookWorkspace").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210315:NotebookWorkspace").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210401preview:NotebookWorkspace").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210415:NotebookWorkspace").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210515:NotebookWorkspace").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210615:NotebookWorkspace").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210701preview:NotebookWorkspace").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20211015:NotebookWorkspace").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20211015preview:NotebookWorkspace").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -166,7 +165,7 @@ public class NotebookWorkspace extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static NotebookWorkspace get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static NotebookWorkspace get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new NotebookWorkspace(name, id, options);
     }
 }

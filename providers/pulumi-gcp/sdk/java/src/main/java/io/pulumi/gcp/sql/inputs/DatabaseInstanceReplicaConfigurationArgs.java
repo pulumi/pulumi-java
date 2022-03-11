@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -22,10 +22,10 @@ public final class DatabaseInstanceReplicaConfigurationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="caCertificate")
-      private final @Nullable Input<String> caCertificate;
+      private final @Nullable Output<String> caCertificate;
 
-    public Input<String> getCaCertificate() {
-        return this.caCertificate == null ? Input.empty() : this.caCertificate;
+    public Output<String> getCaCertificate() {
+        return this.caCertificate == null ? Output.empty() : this.caCertificate;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DatabaseInstanceReplicaConfigurationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="clientCertificate")
-      private final @Nullable Input<String> clientCertificate;
+      private final @Nullable Output<String> clientCertificate;
 
-    public Input<String> getClientCertificate() {
-        return this.clientCertificate == null ? Input.empty() : this.clientCertificate;
+    public Output<String> getClientCertificate() {
+        return this.clientCertificate == null ? Output.empty() : this.clientCertificate;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class DatabaseInstanceReplicaConfigurationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="clientKey")
-      private final @Nullable Input<String> clientKey;
+      private final @Nullable Output<String> clientKey;
 
-    public Input<String> getClientKey() {
-        return this.clientKey == null ? Input.empty() : this.clientKey;
+    public Output<String> getClientKey() {
+        return this.clientKey == null ? Output.empty() : this.clientKey;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class DatabaseInstanceReplicaConfigurationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="connectRetryInterval")
-      private final @Nullable Input<Integer> connectRetryInterval;
+      private final @Nullable Output<Integer> connectRetryInterval;
 
-    public Input<Integer> getConnectRetryInterval() {
-        return this.connectRetryInterval == null ? Input.empty() : this.connectRetryInterval;
+    public Output<Integer> getConnectRetryInterval() {
+        return this.connectRetryInterval == null ? Output.empty() : this.connectRetryInterval;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class DatabaseInstanceReplicaConfigurationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="dumpFilePath")
-      private final @Nullable Input<String> dumpFilePath;
+      private final @Nullable Output<String> dumpFilePath;
 
-    public Input<String> getDumpFilePath() {
-        return this.dumpFilePath == null ? Input.empty() : this.dumpFilePath;
+    public Output<String> getDumpFilePath() {
+        return this.dumpFilePath == null ? Output.empty() : this.dumpFilePath;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class DatabaseInstanceReplicaConfigurationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="failoverTarget")
-      private final @Nullable Input<Boolean> failoverTarget;
+      private final @Nullable Output<Boolean> failoverTarget;
 
-    public Input<Boolean> getFailoverTarget() {
-        return this.failoverTarget == null ? Input.empty() : this.failoverTarget;
+    public Output<Boolean> getFailoverTarget() {
+        return this.failoverTarget == null ? Output.empty() : this.failoverTarget;
     }
 
     /**
@@ -96,10 +96,10 @@ public final class DatabaseInstanceReplicaConfigurationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="masterHeartbeatPeriod")
-      private final @Nullable Input<Integer> masterHeartbeatPeriod;
+      private final @Nullable Output<Integer> masterHeartbeatPeriod;
 
-    public Input<Integer> getMasterHeartbeatPeriod() {
-        return this.masterHeartbeatPeriod == null ? Input.empty() : this.masterHeartbeatPeriod;
+    public Output<Integer> getMasterHeartbeatPeriod() {
+        return this.masterHeartbeatPeriod == null ? Output.empty() : this.masterHeartbeatPeriod;
     }
 
     /**
@@ -107,17 +107,17 @@ public final class DatabaseInstanceReplicaConfigurationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<String> password;
+      private final @Nullable Output<String> password;
 
-    public Input<String> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<String> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     @InputImport(name="sslCipher")
-      private final @Nullable Input<String> sslCipher;
+      private final @Nullable Output<String> sslCipher;
 
-    public Input<String> getSslCipher() {
-        return this.sslCipher == null ? Input.empty() : this.sslCipher;
+    public Output<String> getSslCipher() {
+        return this.sslCipher == null ? Output.empty() : this.sslCipher;
     }
 
     /**
@@ -125,10 +125,10 @@ public final class DatabaseInstanceReplicaConfigurationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="username")
-      private final @Nullable Input<String> username;
+      private final @Nullable Output<String> username;
 
-    public Input<String> getUsername() {
-        return this.username == null ? Input.empty() : this.username;
+    public Output<String> getUsername() {
+        return this.username == null ? Output.empty() : this.username;
     }
 
     /**
@@ -137,24 +137,24 @@ public final class DatabaseInstanceReplicaConfigurationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="verifyServerCertificate")
-      private final @Nullable Input<Boolean> verifyServerCertificate;
+      private final @Nullable Output<Boolean> verifyServerCertificate;
 
-    public Input<Boolean> getVerifyServerCertificate() {
-        return this.verifyServerCertificate == null ? Input.empty() : this.verifyServerCertificate;
+    public Output<Boolean> getVerifyServerCertificate() {
+        return this.verifyServerCertificate == null ? Output.empty() : this.verifyServerCertificate;
     }
 
     public DatabaseInstanceReplicaConfigurationArgs(
-        @Nullable Input<String> caCertificate,
-        @Nullable Input<String> clientCertificate,
-        @Nullable Input<String> clientKey,
-        @Nullable Input<Integer> connectRetryInterval,
-        @Nullable Input<String> dumpFilePath,
-        @Nullable Input<Boolean> failoverTarget,
-        @Nullable Input<Integer> masterHeartbeatPeriod,
-        @Nullable Input<String> password,
-        @Nullable Input<String> sslCipher,
-        @Nullable Input<String> username,
-        @Nullable Input<Boolean> verifyServerCertificate) {
+        @Nullable Output<String> caCertificate,
+        @Nullable Output<String> clientCertificate,
+        @Nullable Output<String> clientKey,
+        @Nullable Output<Integer> connectRetryInterval,
+        @Nullable Output<String> dumpFilePath,
+        @Nullable Output<Boolean> failoverTarget,
+        @Nullable Output<Integer> masterHeartbeatPeriod,
+        @Nullable Output<String> password,
+        @Nullable Output<String> sslCipher,
+        @Nullable Output<String> username,
+        @Nullable Output<Boolean> verifyServerCertificate) {
         this.caCertificate = caCertificate;
         this.clientCertificate = clientCertificate;
         this.clientKey = clientKey;
@@ -169,17 +169,17 @@ public final class DatabaseInstanceReplicaConfigurationArgs extends io.pulumi.re
     }
 
     private DatabaseInstanceReplicaConfigurationArgs() {
-        this.caCertificate = Input.empty();
-        this.clientCertificate = Input.empty();
-        this.clientKey = Input.empty();
-        this.connectRetryInterval = Input.empty();
-        this.dumpFilePath = Input.empty();
-        this.failoverTarget = Input.empty();
-        this.masterHeartbeatPeriod = Input.empty();
-        this.password = Input.empty();
-        this.sslCipher = Input.empty();
-        this.username = Input.empty();
-        this.verifyServerCertificate = Input.empty();
+        this.caCertificate = Output.empty();
+        this.clientCertificate = Output.empty();
+        this.clientKey = Output.empty();
+        this.connectRetryInterval = Output.empty();
+        this.dumpFilePath = Output.empty();
+        this.failoverTarget = Output.empty();
+        this.masterHeartbeatPeriod = Output.empty();
+        this.password = Output.empty();
+        this.sslCipher = Output.empty();
+        this.username = Output.empty();
+        this.verifyServerCertificate = Output.empty();
     }
 
     public static Builder builder() {
@@ -191,17 +191,17 @@ public final class DatabaseInstanceReplicaConfigurationArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> caCertificate;
-        private @Nullable Input<String> clientCertificate;
-        private @Nullable Input<String> clientKey;
-        private @Nullable Input<Integer> connectRetryInterval;
-        private @Nullable Input<String> dumpFilePath;
-        private @Nullable Input<Boolean> failoverTarget;
-        private @Nullable Input<Integer> masterHeartbeatPeriod;
-        private @Nullable Input<String> password;
-        private @Nullable Input<String> sslCipher;
-        private @Nullable Input<String> username;
-        private @Nullable Input<Boolean> verifyServerCertificate;
+        private @Nullable Output<String> caCertificate;
+        private @Nullable Output<String> clientCertificate;
+        private @Nullable Output<String> clientKey;
+        private @Nullable Output<Integer> connectRetryInterval;
+        private @Nullable Output<String> dumpFilePath;
+        private @Nullable Output<Boolean> failoverTarget;
+        private @Nullable Output<Integer> masterHeartbeatPeriod;
+        private @Nullable Output<String> password;
+        private @Nullable Output<String> sslCipher;
+        private @Nullable Output<String> username;
+        private @Nullable Output<Boolean> verifyServerCertificate;
 
         public Builder() {
     	      // Empty
@@ -222,113 +222,113 @@ public final class DatabaseInstanceReplicaConfigurationArgs extends io.pulumi.re
     	      this.verifyServerCertificate = defaults.verifyServerCertificate;
         }
 
-        public Builder caCertificate(@Nullable Input<String> caCertificate) {
+        public Builder caCertificate(@Nullable Output<String> caCertificate) {
             this.caCertificate = caCertificate;
             return this;
         }
 
         public Builder caCertificate(@Nullable String caCertificate) {
-            this.caCertificate = Input.ofNullable(caCertificate);
+            this.caCertificate = Output.ofNullable(caCertificate);
             return this;
         }
 
-        public Builder clientCertificate(@Nullable Input<String> clientCertificate) {
+        public Builder clientCertificate(@Nullable Output<String> clientCertificate) {
             this.clientCertificate = clientCertificate;
             return this;
         }
 
         public Builder clientCertificate(@Nullable String clientCertificate) {
-            this.clientCertificate = Input.ofNullable(clientCertificate);
+            this.clientCertificate = Output.ofNullable(clientCertificate);
             return this;
         }
 
-        public Builder clientKey(@Nullable Input<String> clientKey) {
+        public Builder clientKey(@Nullable Output<String> clientKey) {
             this.clientKey = clientKey;
             return this;
         }
 
         public Builder clientKey(@Nullable String clientKey) {
-            this.clientKey = Input.ofNullable(clientKey);
+            this.clientKey = Output.ofNullable(clientKey);
             return this;
         }
 
-        public Builder connectRetryInterval(@Nullable Input<Integer> connectRetryInterval) {
+        public Builder connectRetryInterval(@Nullable Output<Integer> connectRetryInterval) {
             this.connectRetryInterval = connectRetryInterval;
             return this;
         }
 
         public Builder connectRetryInterval(@Nullable Integer connectRetryInterval) {
-            this.connectRetryInterval = Input.ofNullable(connectRetryInterval);
+            this.connectRetryInterval = Output.ofNullable(connectRetryInterval);
             return this;
         }
 
-        public Builder dumpFilePath(@Nullable Input<String> dumpFilePath) {
+        public Builder dumpFilePath(@Nullable Output<String> dumpFilePath) {
             this.dumpFilePath = dumpFilePath;
             return this;
         }
 
         public Builder dumpFilePath(@Nullable String dumpFilePath) {
-            this.dumpFilePath = Input.ofNullable(dumpFilePath);
+            this.dumpFilePath = Output.ofNullable(dumpFilePath);
             return this;
         }
 
-        public Builder failoverTarget(@Nullable Input<Boolean> failoverTarget) {
+        public Builder failoverTarget(@Nullable Output<Boolean> failoverTarget) {
             this.failoverTarget = failoverTarget;
             return this;
         }
 
         public Builder failoverTarget(@Nullable Boolean failoverTarget) {
-            this.failoverTarget = Input.ofNullable(failoverTarget);
+            this.failoverTarget = Output.ofNullable(failoverTarget);
             return this;
         }
 
-        public Builder masterHeartbeatPeriod(@Nullable Input<Integer> masterHeartbeatPeriod) {
+        public Builder masterHeartbeatPeriod(@Nullable Output<Integer> masterHeartbeatPeriod) {
             this.masterHeartbeatPeriod = masterHeartbeatPeriod;
             return this;
         }
 
         public Builder masterHeartbeatPeriod(@Nullable Integer masterHeartbeatPeriod) {
-            this.masterHeartbeatPeriod = Input.ofNullable(masterHeartbeatPeriod);
+            this.masterHeartbeatPeriod = Output.ofNullable(masterHeartbeatPeriod);
             return this;
         }
 
-        public Builder password(@Nullable Input<String> password) {
+        public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable String password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder sslCipher(@Nullable Input<String> sslCipher) {
+        public Builder sslCipher(@Nullable Output<String> sslCipher) {
             this.sslCipher = sslCipher;
             return this;
         }
 
         public Builder sslCipher(@Nullable String sslCipher) {
-            this.sslCipher = Input.ofNullable(sslCipher);
+            this.sslCipher = Output.ofNullable(sslCipher);
             return this;
         }
 
-        public Builder username(@Nullable Input<String> username) {
+        public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
 
         public Builder username(@Nullable String username) {
-            this.username = Input.ofNullable(username);
+            this.username = Output.ofNullable(username);
             return this;
         }
 
-        public Builder verifyServerCertificate(@Nullable Input<Boolean> verifyServerCertificate) {
+        public Builder verifyServerCertificate(@Nullable Output<Boolean> verifyServerCertificate) {
             this.verifyServerCertificate = verifyServerCertificate;
             return this;
         }
 
         public Builder verifyServerCertificate(@Nullable Boolean verifyServerCertificate) {
-            this.verifyServerCertificate = Input.ofNullable(verifyServerCertificate);
+            this.verifyServerCertificate = Output.ofNullable(verifyServerCertificate);
             return this;
         }
         public DatabaseInstanceReplicaConfigurationArgs build() {

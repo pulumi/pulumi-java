@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -24,10 +24,10 @@ public final class LabelClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class LabelClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subclasses")
-      private final @Nullable Input<Map<String,LabelClassArgs>> subclasses;
+      private final @Nullable Output<Map<String,LabelClassArgs>> subclasses;
 
-    public Input<Map<String,LabelClassArgs>> getSubclasses() {
-        return this.subclasses == null ? Input.empty() : this.subclasses;
+    public Output<Map<String,LabelClassArgs>> getSubclasses() {
+        return this.subclasses == null ? Output.empty() : this.subclasses;
     }
 
     public LabelClassArgs(
-        @Nullable Input<String> displayName,
-        @Nullable Input<Map<String,LabelClassArgs>> subclasses) {
+        @Nullable Output<String> displayName,
+        @Nullable Output<Map<String,LabelClassArgs>> subclasses) {
         this.displayName = displayName;
         this.subclasses = subclasses;
     }
 
     private LabelClassArgs() {
-        this.displayName = Input.empty();
-        this.subclasses = Input.empty();
+        this.displayName = Output.empty();
+        this.subclasses = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class LabelClassArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<Map<String,LabelClassArgs>> subclasses;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<Map<String,LabelClassArgs>> subclasses;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class LabelClassArgs extends io.pulumi.resources.ResourceArgs {
     	      this.subclasses = defaults.subclasses;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder subclasses(@Nullable Input<Map<String,LabelClassArgs>> subclasses) {
+        public Builder subclasses(@Nullable Output<Map<String,LabelClassArgs>> subclasses) {
             this.subclasses = subclasses;
             return this;
         }
 
         public Builder subclasses(@Nullable Map<String,LabelClassArgs> subclasses) {
-            this.subclasses = Input.ofNullable(subclasses);
+            this.subclasses = Output.ofNullable(subclasses);
             return this;
         }
         public LabelClassArgs build() {

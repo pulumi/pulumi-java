@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class TableFieldSchemaCategoriesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="names")
-      private final @Nullable Input<List<String>> names;
+      private final @Nullable Output<List<String>> names;
 
-    public Input<List<String>> getNames() {
-        return this.names == null ? Input.empty() : this.names;
+    public Output<List<String>> getNames() {
+        return this.names == null ? Output.empty() : this.names;
     }
 
-    public TableFieldSchemaCategoriesArgs(@Nullable Input<List<String>> names) {
+    public TableFieldSchemaCategoriesArgs(@Nullable Output<List<String>> names) {
         this.names = names;
     }
 
     private TableFieldSchemaCategoriesArgs() {
-        this.names = Input.empty();
+        this.names = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class TableFieldSchemaCategoriesArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> names;
+        private @Nullable Output<List<String>> names;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class TableFieldSchemaCategoriesArgs extends io.pulumi.resources.Re
     	      this.names = defaults.names;
         }
 
-        public Builder names(@Nullable Input<List<String>> names) {
+        public Builder names(@Nullable Output<List<String>> names) {
             this.names = names;
             return this;
         }
 
         public Builder names(@Nullable List<String> names) {
-            this.names = Input.ofNullable(names);
+            this.names = Output.ofNullable(names);
             return this;
         }
         public TableFieldSchemaCategoriesArgs build() {

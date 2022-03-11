@@ -6,7 +6,7 @@ package io.pulumi.azurenative.keyvault.inputs;
 import io.pulumi.azurenative.keyvault.enums.SkuFamily;
 import io.pulumi.azurenative.keyvault.enums.SkuName;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,9 +25,9 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="family", required=true)
-      private final Input<Either<String,SkuFamily>> family;
+      private final Output<Either<String,SkuFamily>> family;
 
-    public Input<Either<String,SkuFamily>> getFamily() {
+    public Output<Either<String,SkuFamily>> getFamily() {
         return this.family;
     }
 
@@ -36,22 +36,22 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<SkuName> name;
+      private final Output<SkuName> name;
 
-    public Input<SkuName> getName() {
+    public Output<SkuName> getName() {
         return this.name;
     }
 
     public SkuArgs(
-        Input<Either<String,SkuFamily>> family,
-        Input<SkuName> name) {
+        Output<Either<String,SkuFamily>> family,
+        Output<SkuName> name) {
         this.family = Objects.requireNonNull(family, "expected parameter 'family' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private SkuArgs() {
-        this.family = Input.empty();
-        this.name = Input.empty();
+        this.family = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Either<String,SkuFamily>> family;
-        private Input<SkuName> name;
+        private Output<Either<String,SkuFamily>> family;
+        private Output<SkuName> name;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder family(Input<Either<String,SkuFamily>> family) {
+        public Builder family(Output<Either<String,SkuFamily>> family) {
             this.family = Objects.requireNonNull(family);
             return this;
         }
 
         public Builder family(Either<String,SkuFamily> family) {
-            this.family = Input.of(Objects.requireNonNull(family));
+            this.family = Output.of(Objects.requireNonNull(family));
             return this;
         }
 
-        public Builder name(Input<SkuName> name) {
+        public Builder name(Output<SkuName> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(SkuName name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public SkuArgs build() {

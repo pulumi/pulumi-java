@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2RecordConditionArgs;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class GooglePrivacyDlpV2RecordSuppressionArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="condition")
-      private final @Nullable Input<GooglePrivacyDlpV2RecordConditionArgs> condition;
+      private final @Nullable Output<GooglePrivacyDlpV2RecordConditionArgs> condition;
 
-    public Input<GooglePrivacyDlpV2RecordConditionArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<GooglePrivacyDlpV2RecordConditionArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
-    public GooglePrivacyDlpV2RecordSuppressionArgs(@Nullable Input<GooglePrivacyDlpV2RecordConditionArgs> condition) {
+    public GooglePrivacyDlpV2RecordSuppressionArgs(@Nullable Output<GooglePrivacyDlpV2RecordConditionArgs> condition) {
         this.condition = condition;
     }
 
     private GooglePrivacyDlpV2RecordSuppressionArgs() {
-        this.condition = Input.empty();
+        this.condition = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2RecordSuppressionArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<GooglePrivacyDlpV2RecordConditionArgs> condition;
+        private @Nullable Output<GooglePrivacyDlpV2RecordConditionArgs> condition;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GooglePrivacyDlpV2RecordSuppressionArgs extends io.pulumi.res
     	      this.condition = defaults.condition;
         }
 
-        public Builder condition(@Nullable Input<GooglePrivacyDlpV2RecordConditionArgs> condition) {
+        public Builder condition(@Nullable Output<GooglePrivacyDlpV2RecordConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable GooglePrivacyDlpV2RecordConditionArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
         public GooglePrivacyDlpV2RecordSuppressionArgs build() {

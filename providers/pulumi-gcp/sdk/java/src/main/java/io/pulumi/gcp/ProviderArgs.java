@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.inputs.ProviderBatchingArgs;
@@ -19,886 +19,886 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     public static final ProviderArgs Empty = new ProviderArgs();
 
     @InputImport(name="accessApprovalCustomEndpoint")
-      private final @Nullable Input<String> accessApprovalCustomEndpoint;
+      private final @Nullable Output<String> accessApprovalCustomEndpoint;
 
-    public Input<String> getAccessApprovalCustomEndpoint() {
-        return this.accessApprovalCustomEndpoint == null ? Input.empty() : this.accessApprovalCustomEndpoint;
+    public Output<String> getAccessApprovalCustomEndpoint() {
+        return this.accessApprovalCustomEndpoint == null ? Output.empty() : this.accessApprovalCustomEndpoint;
     }
 
     @InputImport(name="accessContextManagerCustomEndpoint")
-      private final @Nullable Input<String> accessContextManagerCustomEndpoint;
+      private final @Nullable Output<String> accessContextManagerCustomEndpoint;
 
-    public Input<String> getAccessContextManagerCustomEndpoint() {
-        return this.accessContextManagerCustomEndpoint == null ? Input.empty() : this.accessContextManagerCustomEndpoint;
+    public Output<String> getAccessContextManagerCustomEndpoint() {
+        return this.accessContextManagerCustomEndpoint == null ? Output.empty() : this.accessContextManagerCustomEndpoint;
     }
 
     @InputImport(name="accessToken")
-      private final @Nullable Input<String> accessToken;
+      private final @Nullable Output<String> accessToken;
 
-    public Input<String> getAccessToken() {
-        return this.accessToken == null ? Input.empty() : this.accessToken;
+    public Output<String> getAccessToken() {
+        return this.accessToken == null ? Output.empty() : this.accessToken;
     }
 
     @InputImport(name="activeDirectoryCustomEndpoint")
-      private final @Nullable Input<String> activeDirectoryCustomEndpoint;
+      private final @Nullable Output<String> activeDirectoryCustomEndpoint;
 
-    public Input<String> getActiveDirectoryCustomEndpoint() {
-        return this.activeDirectoryCustomEndpoint == null ? Input.empty() : this.activeDirectoryCustomEndpoint;
+    public Output<String> getActiveDirectoryCustomEndpoint() {
+        return this.activeDirectoryCustomEndpoint == null ? Output.empty() : this.activeDirectoryCustomEndpoint;
     }
 
     @InputImport(name="apiGatewayCustomEndpoint")
-      private final @Nullable Input<String> apiGatewayCustomEndpoint;
+      private final @Nullable Output<String> apiGatewayCustomEndpoint;
 
-    public Input<String> getApiGatewayCustomEndpoint() {
-        return this.apiGatewayCustomEndpoint == null ? Input.empty() : this.apiGatewayCustomEndpoint;
+    public Output<String> getApiGatewayCustomEndpoint() {
+        return this.apiGatewayCustomEndpoint == null ? Output.empty() : this.apiGatewayCustomEndpoint;
     }
 
     @InputImport(name="apigeeCustomEndpoint")
-      private final @Nullable Input<String> apigeeCustomEndpoint;
+      private final @Nullable Output<String> apigeeCustomEndpoint;
 
-    public Input<String> getApigeeCustomEndpoint() {
-        return this.apigeeCustomEndpoint == null ? Input.empty() : this.apigeeCustomEndpoint;
+    public Output<String> getApigeeCustomEndpoint() {
+        return this.apigeeCustomEndpoint == null ? Output.empty() : this.apigeeCustomEndpoint;
     }
 
     @InputImport(name="appEngineCustomEndpoint")
-      private final @Nullable Input<String> appEngineCustomEndpoint;
+      private final @Nullable Output<String> appEngineCustomEndpoint;
 
-    public Input<String> getAppEngineCustomEndpoint() {
-        return this.appEngineCustomEndpoint == null ? Input.empty() : this.appEngineCustomEndpoint;
+    public Output<String> getAppEngineCustomEndpoint() {
+        return this.appEngineCustomEndpoint == null ? Output.empty() : this.appEngineCustomEndpoint;
     }
 
     @InputImport(name="artifactRegistryCustomEndpoint")
-      private final @Nullable Input<String> artifactRegistryCustomEndpoint;
+      private final @Nullable Output<String> artifactRegistryCustomEndpoint;
 
-    public Input<String> getArtifactRegistryCustomEndpoint() {
-        return this.artifactRegistryCustomEndpoint == null ? Input.empty() : this.artifactRegistryCustomEndpoint;
+    public Output<String> getArtifactRegistryCustomEndpoint() {
+        return this.artifactRegistryCustomEndpoint == null ? Output.empty() : this.artifactRegistryCustomEndpoint;
     }
 
     @InputImport(name="assuredWorkloadsCustomEndpoint")
-      private final @Nullable Input<String> assuredWorkloadsCustomEndpoint;
+      private final @Nullable Output<String> assuredWorkloadsCustomEndpoint;
 
-    public Input<String> getAssuredWorkloadsCustomEndpoint() {
-        return this.assuredWorkloadsCustomEndpoint == null ? Input.empty() : this.assuredWorkloadsCustomEndpoint;
+    public Output<String> getAssuredWorkloadsCustomEndpoint() {
+        return this.assuredWorkloadsCustomEndpoint == null ? Output.empty() : this.assuredWorkloadsCustomEndpoint;
     }
 
     @InputImport(name="batching", json=true)
-      private final @Nullable Input<ProviderBatchingArgs> batching;
+      private final @Nullable Output<ProviderBatchingArgs> batching;
 
-    public Input<ProviderBatchingArgs> getBatching() {
-        return this.batching == null ? Input.empty() : this.batching;
+    public Output<ProviderBatchingArgs> getBatching() {
+        return this.batching == null ? Output.empty() : this.batching;
     }
 
     @InputImport(name="bigQueryCustomEndpoint")
-      private final @Nullable Input<String> bigQueryCustomEndpoint;
+      private final @Nullable Output<String> bigQueryCustomEndpoint;
 
-    public Input<String> getBigQueryCustomEndpoint() {
-        return this.bigQueryCustomEndpoint == null ? Input.empty() : this.bigQueryCustomEndpoint;
+    public Output<String> getBigQueryCustomEndpoint() {
+        return this.bigQueryCustomEndpoint == null ? Output.empty() : this.bigQueryCustomEndpoint;
     }
 
     @InputImport(name="bigqueryConnectionCustomEndpoint")
-      private final @Nullable Input<String> bigqueryConnectionCustomEndpoint;
+      private final @Nullable Output<String> bigqueryConnectionCustomEndpoint;
 
-    public Input<String> getBigqueryConnectionCustomEndpoint() {
-        return this.bigqueryConnectionCustomEndpoint == null ? Input.empty() : this.bigqueryConnectionCustomEndpoint;
+    public Output<String> getBigqueryConnectionCustomEndpoint() {
+        return this.bigqueryConnectionCustomEndpoint == null ? Output.empty() : this.bigqueryConnectionCustomEndpoint;
     }
 
     @InputImport(name="bigqueryDataTransferCustomEndpoint")
-      private final @Nullable Input<String> bigqueryDataTransferCustomEndpoint;
+      private final @Nullable Output<String> bigqueryDataTransferCustomEndpoint;
 
-    public Input<String> getBigqueryDataTransferCustomEndpoint() {
-        return this.bigqueryDataTransferCustomEndpoint == null ? Input.empty() : this.bigqueryDataTransferCustomEndpoint;
+    public Output<String> getBigqueryDataTransferCustomEndpoint() {
+        return this.bigqueryDataTransferCustomEndpoint == null ? Output.empty() : this.bigqueryDataTransferCustomEndpoint;
     }
 
     @InputImport(name="bigqueryReservationCustomEndpoint")
-      private final @Nullable Input<String> bigqueryReservationCustomEndpoint;
+      private final @Nullable Output<String> bigqueryReservationCustomEndpoint;
 
-    public Input<String> getBigqueryReservationCustomEndpoint() {
-        return this.bigqueryReservationCustomEndpoint == null ? Input.empty() : this.bigqueryReservationCustomEndpoint;
+    public Output<String> getBigqueryReservationCustomEndpoint() {
+        return this.bigqueryReservationCustomEndpoint == null ? Output.empty() : this.bigqueryReservationCustomEndpoint;
     }
 
     @InputImport(name="bigtableCustomEndpoint")
-      private final @Nullable Input<String> bigtableCustomEndpoint;
+      private final @Nullable Output<String> bigtableCustomEndpoint;
 
-    public Input<String> getBigtableCustomEndpoint() {
-        return this.bigtableCustomEndpoint == null ? Input.empty() : this.bigtableCustomEndpoint;
+    public Output<String> getBigtableCustomEndpoint() {
+        return this.bigtableCustomEndpoint == null ? Output.empty() : this.bigtableCustomEndpoint;
     }
 
     @InputImport(name="billingCustomEndpoint")
-      private final @Nullable Input<String> billingCustomEndpoint;
+      private final @Nullable Output<String> billingCustomEndpoint;
 
-    public Input<String> getBillingCustomEndpoint() {
-        return this.billingCustomEndpoint == null ? Input.empty() : this.billingCustomEndpoint;
+    public Output<String> getBillingCustomEndpoint() {
+        return this.billingCustomEndpoint == null ? Output.empty() : this.billingCustomEndpoint;
     }
 
     @InputImport(name="billingProject")
-      private final @Nullable Input<String> billingProject;
+      private final @Nullable Output<String> billingProject;
 
-    public Input<String> getBillingProject() {
-        return this.billingProject == null ? Input.empty() : this.billingProject;
+    public Output<String> getBillingProject() {
+        return this.billingProject == null ? Output.empty() : this.billingProject;
     }
 
     @InputImport(name="binaryAuthorizationCustomEndpoint")
-      private final @Nullable Input<String> binaryAuthorizationCustomEndpoint;
+      private final @Nullable Output<String> binaryAuthorizationCustomEndpoint;
 
-    public Input<String> getBinaryAuthorizationCustomEndpoint() {
-        return this.binaryAuthorizationCustomEndpoint == null ? Input.empty() : this.binaryAuthorizationCustomEndpoint;
+    public Output<String> getBinaryAuthorizationCustomEndpoint() {
+        return this.binaryAuthorizationCustomEndpoint == null ? Output.empty() : this.binaryAuthorizationCustomEndpoint;
     }
 
     @InputImport(name="cloudAssetCustomEndpoint")
-      private final @Nullable Input<String> cloudAssetCustomEndpoint;
+      private final @Nullable Output<String> cloudAssetCustomEndpoint;
 
-    public Input<String> getCloudAssetCustomEndpoint() {
-        return this.cloudAssetCustomEndpoint == null ? Input.empty() : this.cloudAssetCustomEndpoint;
+    public Output<String> getCloudAssetCustomEndpoint() {
+        return this.cloudAssetCustomEndpoint == null ? Output.empty() : this.cloudAssetCustomEndpoint;
     }
 
     @InputImport(name="cloudBillingCustomEndpoint")
-      private final @Nullable Input<String> cloudBillingCustomEndpoint;
+      private final @Nullable Output<String> cloudBillingCustomEndpoint;
 
-    public Input<String> getCloudBillingCustomEndpoint() {
-        return this.cloudBillingCustomEndpoint == null ? Input.empty() : this.cloudBillingCustomEndpoint;
+    public Output<String> getCloudBillingCustomEndpoint() {
+        return this.cloudBillingCustomEndpoint == null ? Output.empty() : this.cloudBillingCustomEndpoint;
     }
 
     @InputImport(name="cloudBuildCustomEndpoint")
-      private final @Nullable Input<String> cloudBuildCustomEndpoint;
+      private final @Nullable Output<String> cloudBuildCustomEndpoint;
 
-    public Input<String> getCloudBuildCustomEndpoint() {
-        return this.cloudBuildCustomEndpoint == null ? Input.empty() : this.cloudBuildCustomEndpoint;
+    public Output<String> getCloudBuildCustomEndpoint() {
+        return this.cloudBuildCustomEndpoint == null ? Output.empty() : this.cloudBuildCustomEndpoint;
     }
 
     @InputImport(name="cloudBuildWorkerPoolCustomEndpoint")
-      private final @Nullable Input<String> cloudBuildWorkerPoolCustomEndpoint;
+      private final @Nullable Output<String> cloudBuildWorkerPoolCustomEndpoint;
 
-    public Input<String> getCloudBuildWorkerPoolCustomEndpoint() {
-        return this.cloudBuildWorkerPoolCustomEndpoint == null ? Input.empty() : this.cloudBuildWorkerPoolCustomEndpoint;
+    public Output<String> getCloudBuildWorkerPoolCustomEndpoint() {
+        return this.cloudBuildWorkerPoolCustomEndpoint == null ? Output.empty() : this.cloudBuildWorkerPoolCustomEndpoint;
     }
 
     @InputImport(name="cloudFunctionsCustomEndpoint")
-      private final @Nullable Input<String> cloudFunctionsCustomEndpoint;
+      private final @Nullable Output<String> cloudFunctionsCustomEndpoint;
 
-    public Input<String> getCloudFunctionsCustomEndpoint() {
-        return this.cloudFunctionsCustomEndpoint == null ? Input.empty() : this.cloudFunctionsCustomEndpoint;
+    public Output<String> getCloudFunctionsCustomEndpoint() {
+        return this.cloudFunctionsCustomEndpoint == null ? Output.empty() : this.cloudFunctionsCustomEndpoint;
     }
 
     @InputImport(name="cloudIdentityCustomEndpoint")
-      private final @Nullable Input<String> cloudIdentityCustomEndpoint;
+      private final @Nullable Output<String> cloudIdentityCustomEndpoint;
 
-    public Input<String> getCloudIdentityCustomEndpoint() {
-        return this.cloudIdentityCustomEndpoint == null ? Input.empty() : this.cloudIdentityCustomEndpoint;
+    public Output<String> getCloudIdentityCustomEndpoint() {
+        return this.cloudIdentityCustomEndpoint == null ? Output.empty() : this.cloudIdentityCustomEndpoint;
     }
 
     @InputImport(name="cloudIotCustomEndpoint")
-      private final @Nullable Input<String> cloudIotCustomEndpoint;
+      private final @Nullable Output<String> cloudIotCustomEndpoint;
 
-    public Input<String> getCloudIotCustomEndpoint() {
-        return this.cloudIotCustomEndpoint == null ? Input.empty() : this.cloudIotCustomEndpoint;
+    public Output<String> getCloudIotCustomEndpoint() {
+        return this.cloudIotCustomEndpoint == null ? Output.empty() : this.cloudIotCustomEndpoint;
     }
 
     @InputImport(name="cloudResourceManagerCustomEndpoint")
-      private final @Nullable Input<String> cloudResourceManagerCustomEndpoint;
+      private final @Nullable Output<String> cloudResourceManagerCustomEndpoint;
 
-    public Input<String> getCloudResourceManagerCustomEndpoint() {
-        return this.cloudResourceManagerCustomEndpoint == null ? Input.empty() : this.cloudResourceManagerCustomEndpoint;
+    public Output<String> getCloudResourceManagerCustomEndpoint() {
+        return this.cloudResourceManagerCustomEndpoint == null ? Output.empty() : this.cloudResourceManagerCustomEndpoint;
     }
 
     @InputImport(name="cloudRunCustomEndpoint")
-      private final @Nullable Input<String> cloudRunCustomEndpoint;
+      private final @Nullable Output<String> cloudRunCustomEndpoint;
 
-    public Input<String> getCloudRunCustomEndpoint() {
-        return this.cloudRunCustomEndpoint == null ? Input.empty() : this.cloudRunCustomEndpoint;
+    public Output<String> getCloudRunCustomEndpoint() {
+        return this.cloudRunCustomEndpoint == null ? Output.empty() : this.cloudRunCustomEndpoint;
     }
 
     @InputImport(name="cloudSchedulerCustomEndpoint")
-      private final @Nullable Input<String> cloudSchedulerCustomEndpoint;
+      private final @Nullable Output<String> cloudSchedulerCustomEndpoint;
 
-    public Input<String> getCloudSchedulerCustomEndpoint() {
-        return this.cloudSchedulerCustomEndpoint == null ? Input.empty() : this.cloudSchedulerCustomEndpoint;
+    public Output<String> getCloudSchedulerCustomEndpoint() {
+        return this.cloudSchedulerCustomEndpoint == null ? Output.empty() : this.cloudSchedulerCustomEndpoint;
     }
 
     @InputImport(name="cloudTasksCustomEndpoint")
-      private final @Nullable Input<String> cloudTasksCustomEndpoint;
+      private final @Nullable Output<String> cloudTasksCustomEndpoint;
 
-    public Input<String> getCloudTasksCustomEndpoint() {
-        return this.cloudTasksCustomEndpoint == null ? Input.empty() : this.cloudTasksCustomEndpoint;
+    public Output<String> getCloudTasksCustomEndpoint() {
+        return this.cloudTasksCustomEndpoint == null ? Output.empty() : this.cloudTasksCustomEndpoint;
     }
 
     @InputImport(name="composerCustomEndpoint")
-      private final @Nullable Input<String> composerCustomEndpoint;
+      private final @Nullable Output<String> composerCustomEndpoint;
 
-    public Input<String> getComposerCustomEndpoint() {
-        return this.composerCustomEndpoint == null ? Input.empty() : this.composerCustomEndpoint;
+    public Output<String> getComposerCustomEndpoint() {
+        return this.composerCustomEndpoint == null ? Output.empty() : this.composerCustomEndpoint;
     }
 
     @InputImport(name="computeCustomEndpoint")
-      private final @Nullable Input<String> computeCustomEndpoint;
+      private final @Nullable Output<String> computeCustomEndpoint;
 
-    public Input<String> getComputeCustomEndpoint() {
-        return this.computeCustomEndpoint == null ? Input.empty() : this.computeCustomEndpoint;
+    public Output<String> getComputeCustomEndpoint() {
+        return this.computeCustomEndpoint == null ? Output.empty() : this.computeCustomEndpoint;
     }
 
     @InputImport(name="containerAnalysisCustomEndpoint")
-      private final @Nullable Input<String> containerAnalysisCustomEndpoint;
+      private final @Nullable Output<String> containerAnalysisCustomEndpoint;
 
-    public Input<String> getContainerAnalysisCustomEndpoint() {
-        return this.containerAnalysisCustomEndpoint == null ? Input.empty() : this.containerAnalysisCustomEndpoint;
+    public Output<String> getContainerAnalysisCustomEndpoint() {
+        return this.containerAnalysisCustomEndpoint == null ? Output.empty() : this.containerAnalysisCustomEndpoint;
     }
 
     @InputImport(name="containerAwsCustomEndpoint")
-      private final @Nullable Input<String> containerAwsCustomEndpoint;
+      private final @Nullable Output<String> containerAwsCustomEndpoint;
 
-    public Input<String> getContainerAwsCustomEndpoint() {
-        return this.containerAwsCustomEndpoint == null ? Input.empty() : this.containerAwsCustomEndpoint;
+    public Output<String> getContainerAwsCustomEndpoint() {
+        return this.containerAwsCustomEndpoint == null ? Output.empty() : this.containerAwsCustomEndpoint;
     }
 
     @InputImport(name="containerAzureCustomEndpoint")
-      private final @Nullable Input<String> containerAzureCustomEndpoint;
+      private final @Nullable Output<String> containerAzureCustomEndpoint;
 
-    public Input<String> getContainerAzureCustomEndpoint() {
-        return this.containerAzureCustomEndpoint == null ? Input.empty() : this.containerAzureCustomEndpoint;
+    public Output<String> getContainerAzureCustomEndpoint() {
+        return this.containerAzureCustomEndpoint == null ? Output.empty() : this.containerAzureCustomEndpoint;
     }
 
     @InputImport(name="containerCustomEndpoint")
-      private final @Nullable Input<String> containerCustomEndpoint;
+      private final @Nullable Output<String> containerCustomEndpoint;
 
-    public Input<String> getContainerCustomEndpoint() {
-        return this.containerCustomEndpoint == null ? Input.empty() : this.containerCustomEndpoint;
+    public Output<String> getContainerCustomEndpoint() {
+        return this.containerCustomEndpoint == null ? Output.empty() : this.containerCustomEndpoint;
     }
 
     @InputImport(name="credentials")
-      private final @Nullable Input<String> credentials;
+      private final @Nullable Output<String> credentials;
 
-    public Input<String> getCredentials() {
-        return this.credentials == null ? Input.empty() : this.credentials;
+    public Output<String> getCredentials() {
+        return this.credentials == null ? Output.empty() : this.credentials;
     }
 
     @InputImport(name="dataCatalogCustomEndpoint")
-      private final @Nullable Input<String> dataCatalogCustomEndpoint;
+      private final @Nullable Output<String> dataCatalogCustomEndpoint;
 
-    public Input<String> getDataCatalogCustomEndpoint() {
-        return this.dataCatalogCustomEndpoint == null ? Input.empty() : this.dataCatalogCustomEndpoint;
+    public Output<String> getDataCatalogCustomEndpoint() {
+        return this.dataCatalogCustomEndpoint == null ? Output.empty() : this.dataCatalogCustomEndpoint;
     }
 
     @InputImport(name="dataFusionCustomEndpoint")
-      private final @Nullable Input<String> dataFusionCustomEndpoint;
+      private final @Nullable Output<String> dataFusionCustomEndpoint;
 
-    public Input<String> getDataFusionCustomEndpoint() {
-        return this.dataFusionCustomEndpoint == null ? Input.empty() : this.dataFusionCustomEndpoint;
+    public Output<String> getDataFusionCustomEndpoint() {
+        return this.dataFusionCustomEndpoint == null ? Output.empty() : this.dataFusionCustomEndpoint;
     }
 
     @InputImport(name="dataLossPreventionCustomEndpoint")
-      private final @Nullable Input<String> dataLossPreventionCustomEndpoint;
+      private final @Nullable Output<String> dataLossPreventionCustomEndpoint;
 
-    public Input<String> getDataLossPreventionCustomEndpoint() {
-        return this.dataLossPreventionCustomEndpoint == null ? Input.empty() : this.dataLossPreventionCustomEndpoint;
+    public Output<String> getDataLossPreventionCustomEndpoint() {
+        return this.dataLossPreventionCustomEndpoint == null ? Output.empty() : this.dataLossPreventionCustomEndpoint;
     }
 
     @InputImport(name="dataflowCustomEndpoint")
-      private final @Nullable Input<String> dataflowCustomEndpoint;
+      private final @Nullable Output<String> dataflowCustomEndpoint;
 
-    public Input<String> getDataflowCustomEndpoint() {
-        return this.dataflowCustomEndpoint == null ? Input.empty() : this.dataflowCustomEndpoint;
+    public Output<String> getDataflowCustomEndpoint() {
+        return this.dataflowCustomEndpoint == null ? Output.empty() : this.dataflowCustomEndpoint;
     }
 
     @InputImport(name="dataprocCustomEndpoint")
-      private final @Nullable Input<String> dataprocCustomEndpoint;
+      private final @Nullable Output<String> dataprocCustomEndpoint;
 
-    public Input<String> getDataprocCustomEndpoint() {
-        return this.dataprocCustomEndpoint == null ? Input.empty() : this.dataprocCustomEndpoint;
+    public Output<String> getDataprocCustomEndpoint() {
+        return this.dataprocCustomEndpoint == null ? Output.empty() : this.dataprocCustomEndpoint;
     }
 
     @InputImport(name="dataprocMetastoreCustomEndpoint")
-      private final @Nullable Input<String> dataprocMetastoreCustomEndpoint;
+      private final @Nullable Output<String> dataprocMetastoreCustomEndpoint;
 
-    public Input<String> getDataprocMetastoreCustomEndpoint() {
-        return this.dataprocMetastoreCustomEndpoint == null ? Input.empty() : this.dataprocMetastoreCustomEndpoint;
+    public Output<String> getDataprocMetastoreCustomEndpoint() {
+        return this.dataprocMetastoreCustomEndpoint == null ? Output.empty() : this.dataprocMetastoreCustomEndpoint;
     }
 
     @InputImport(name="datastoreCustomEndpoint")
-      private final @Nullable Input<String> datastoreCustomEndpoint;
+      private final @Nullable Output<String> datastoreCustomEndpoint;
 
-    public Input<String> getDatastoreCustomEndpoint() {
-        return this.datastoreCustomEndpoint == null ? Input.empty() : this.datastoreCustomEndpoint;
+    public Output<String> getDatastoreCustomEndpoint() {
+        return this.datastoreCustomEndpoint == null ? Output.empty() : this.datastoreCustomEndpoint;
     }
 
     @InputImport(name="deploymentManagerCustomEndpoint")
-      private final @Nullable Input<String> deploymentManagerCustomEndpoint;
+      private final @Nullable Output<String> deploymentManagerCustomEndpoint;
 
-    public Input<String> getDeploymentManagerCustomEndpoint() {
-        return this.deploymentManagerCustomEndpoint == null ? Input.empty() : this.deploymentManagerCustomEndpoint;
+    public Output<String> getDeploymentManagerCustomEndpoint() {
+        return this.deploymentManagerCustomEndpoint == null ? Output.empty() : this.deploymentManagerCustomEndpoint;
     }
 
     @InputImport(name="dialogflowCustomEndpoint")
-      private final @Nullable Input<String> dialogflowCustomEndpoint;
+      private final @Nullable Output<String> dialogflowCustomEndpoint;
 
-    public Input<String> getDialogflowCustomEndpoint() {
-        return this.dialogflowCustomEndpoint == null ? Input.empty() : this.dialogflowCustomEndpoint;
+    public Output<String> getDialogflowCustomEndpoint() {
+        return this.dialogflowCustomEndpoint == null ? Output.empty() : this.dialogflowCustomEndpoint;
     }
 
     @InputImport(name="dialogflowCxCustomEndpoint")
-      private final @Nullable Input<String> dialogflowCxCustomEndpoint;
+      private final @Nullable Output<String> dialogflowCxCustomEndpoint;
 
-    public Input<String> getDialogflowCxCustomEndpoint() {
-        return this.dialogflowCxCustomEndpoint == null ? Input.empty() : this.dialogflowCxCustomEndpoint;
+    public Output<String> getDialogflowCxCustomEndpoint() {
+        return this.dialogflowCxCustomEndpoint == null ? Output.empty() : this.dialogflowCxCustomEndpoint;
     }
 
     @InputImport(name="disableGooglePartnerName", json=true)
-      private final @Nullable Input<Boolean> disableGooglePartnerName;
+      private final @Nullable Output<Boolean> disableGooglePartnerName;
 
-    public Input<Boolean> getDisableGooglePartnerName() {
-        return this.disableGooglePartnerName == null ? Input.empty() : this.disableGooglePartnerName;
+    public Output<Boolean> getDisableGooglePartnerName() {
+        return this.disableGooglePartnerName == null ? Output.empty() : this.disableGooglePartnerName;
     }
 
     @InputImport(name="dnsCustomEndpoint")
-      private final @Nullable Input<String> dnsCustomEndpoint;
+      private final @Nullable Output<String> dnsCustomEndpoint;
 
-    public Input<String> getDnsCustomEndpoint() {
-        return this.dnsCustomEndpoint == null ? Input.empty() : this.dnsCustomEndpoint;
+    public Output<String> getDnsCustomEndpoint() {
+        return this.dnsCustomEndpoint == null ? Output.empty() : this.dnsCustomEndpoint;
     }
 
     @InputImport(name="essentialContactsCustomEndpoint")
-      private final @Nullable Input<String> essentialContactsCustomEndpoint;
+      private final @Nullable Output<String> essentialContactsCustomEndpoint;
 
-    public Input<String> getEssentialContactsCustomEndpoint() {
-        return this.essentialContactsCustomEndpoint == null ? Input.empty() : this.essentialContactsCustomEndpoint;
+    public Output<String> getEssentialContactsCustomEndpoint() {
+        return this.essentialContactsCustomEndpoint == null ? Output.empty() : this.essentialContactsCustomEndpoint;
     }
 
     @InputImport(name="eventarcCustomEndpoint")
-      private final @Nullable Input<String> eventarcCustomEndpoint;
+      private final @Nullable Output<String> eventarcCustomEndpoint;
 
-    public Input<String> getEventarcCustomEndpoint() {
-        return this.eventarcCustomEndpoint == null ? Input.empty() : this.eventarcCustomEndpoint;
+    public Output<String> getEventarcCustomEndpoint() {
+        return this.eventarcCustomEndpoint == null ? Output.empty() : this.eventarcCustomEndpoint;
     }
 
     @InputImport(name="filestoreCustomEndpoint")
-      private final @Nullable Input<String> filestoreCustomEndpoint;
+      private final @Nullable Output<String> filestoreCustomEndpoint;
 
-    public Input<String> getFilestoreCustomEndpoint() {
-        return this.filestoreCustomEndpoint == null ? Input.empty() : this.filestoreCustomEndpoint;
+    public Output<String> getFilestoreCustomEndpoint() {
+        return this.filestoreCustomEndpoint == null ? Output.empty() : this.filestoreCustomEndpoint;
     }
 
     @InputImport(name="firebaseCustomEndpoint")
-      private final @Nullable Input<String> firebaseCustomEndpoint;
+      private final @Nullable Output<String> firebaseCustomEndpoint;
 
-    public Input<String> getFirebaseCustomEndpoint() {
-        return this.firebaseCustomEndpoint == null ? Input.empty() : this.firebaseCustomEndpoint;
+    public Output<String> getFirebaseCustomEndpoint() {
+        return this.firebaseCustomEndpoint == null ? Output.empty() : this.firebaseCustomEndpoint;
     }
 
     @InputImport(name="firestoreCustomEndpoint")
-      private final @Nullable Input<String> firestoreCustomEndpoint;
+      private final @Nullable Output<String> firestoreCustomEndpoint;
 
-    public Input<String> getFirestoreCustomEndpoint() {
-        return this.firestoreCustomEndpoint == null ? Input.empty() : this.firestoreCustomEndpoint;
+    public Output<String> getFirestoreCustomEndpoint() {
+        return this.firestoreCustomEndpoint == null ? Output.empty() : this.firestoreCustomEndpoint;
     }
 
     @InputImport(name="gameServicesCustomEndpoint")
-      private final @Nullable Input<String> gameServicesCustomEndpoint;
+      private final @Nullable Output<String> gameServicesCustomEndpoint;
 
-    public Input<String> getGameServicesCustomEndpoint() {
-        return this.gameServicesCustomEndpoint == null ? Input.empty() : this.gameServicesCustomEndpoint;
+    public Output<String> getGameServicesCustomEndpoint() {
+        return this.gameServicesCustomEndpoint == null ? Output.empty() : this.gameServicesCustomEndpoint;
     }
 
     @InputImport(name="gkeHubCustomEndpoint")
-      private final @Nullable Input<String> gkeHubCustomEndpoint;
+      private final @Nullable Output<String> gkeHubCustomEndpoint;
 
-    public Input<String> getGkeHubCustomEndpoint() {
-        return this.gkeHubCustomEndpoint == null ? Input.empty() : this.gkeHubCustomEndpoint;
+    public Output<String> getGkeHubCustomEndpoint() {
+        return this.gkeHubCustomEndpoint == null ? Output.empty() : this.gkeHubCustomEndpoint;
     }
 
     @InputImport(name="gkehubFeatureCustomEndpoint")
-      private final @Nullable Input<String> gkehubFeatureCustomEndpoint;
+      private final @Nullable Output<String> gkehubFeatureCustomEndpoint;
 
-    public Input<String> getGkehubFeatureCustomEndpoint() {
-        return this.gkehubFeatureCustomEndpoint == null ? Input.empty() : this.gkehubFeatureCustomEndpoint;
+    public Output<String> getGkehubFeatureCustomEndpoint() {
+        return this.gkehubFeatureCustomEndpoint == null ? Output.empty() : this.gkehubFeatureCustomEndpoint;
     }
 
     @InputImport(name="googlePartnerName")
-      private final @Nullable Input<String> googlePartnerName;
+      private final @Nullable Output<String> googlePartnerName;
 
-    public Input<String> getGooglePartnerName() {
-        return this.googlePartnerName == null ? Input.empty() : this.googlePartnerName;
+    public Output<String> getGooglePartnerName() {
+        return this.googlePartnerName == null ? Output.empty() : this.googlePartnerName;
     }
 
     @InputImport(name="healthcareCustomEndpoint")
-      private final @Nullable Input<String> healthcareCustomEndpoint;
+      private final @Nullable Output<String> healthcareCustomEndpoint;
 
-    public Input<String> getHealthcareCustomEndpoint() {
-        return this.healthcareCustomEndpoint == null ? Input.empty() : this.healthcareCustomEndpoint;
+    public Output<String> getHealthcareCustomEndpoint() {
+        return this.healthcareCustomEndpoint == null ? Output.empty() : this.healthcareCustomEndpoint;
     }
 
     @InputImport(name="iamBetaCustomEndpoint")
-      private final @Nullable Input<String> iamBetaCustomEndpoint;
+      private final @Nullable Output<String> iamBetaCustomEndpoint;
 
-    public Input<String> getIamBetaCustomEndpoint() {
-        return this.iamBetaCustomEndpoint == null ? Input.empty() : this.iamBetaCustomEndpoint;
+    public Output<String> getIamBetaCustomEndpoint() {
+        return this.iamBetaCustomEndpoint == null ? Output.empty() : this.iamBetaCustomEndpoint;
     }
 
     @InputImport(name="iamCredentialsCustomEndpoint")
-      private final @Nullable Input<String> iamCredentialsCustomEndpoint;
+      private final @Nullable Output<String> iamCredentialsCustomEndpoint;
 
-    public Input<String> getIamCredentialsCustomEndpoint() {
-        return this.iamCredentialsCustomEndpoint == null ? Input.empty() : this.iamCredentialsCustomEndpoint;
+    public Output<String> getIamCredentialsCustomEndpoint() {
+        return this.iamCredentialsCustomEndpoint == null ? Output.empty() : this.iamCredentialsCustomEndpoint;
     }
 
     @InputImport(name="iamCustomEndpoint")
-      private final @Nullable Input<String> iamCustomEndpoint;
+      private final @Nullable Output<String> iamCustomEndpoint;
 
-    public Input<String> getIamCustomEndpoint() {
-        return this.iamCustomEndpoint == null ? Input.empty() : this.iamCustomEndpoint;
+    public Output<String> getIamCustomEndpoint() {
+        return this.iamCustomEndpoint == null ? Output.empty() : this.iamCustomEndpoint;
     }
 
     @InputImport(name="iapCustomEndpoint")
-      private final @Nullable Input<String> iapCustomEndpoint;
+      private final @Nullable Output<String> iapCustomEndpoint;
 
-    public Input<String> getIapCustomEndpoint() {
-        return this.iapCustomEndpoint == null ? Input.empty() : this.iapCustomEndpoint;
+    public Output<String> getIapCustomEndpoint() {
+        return this.iapCustomEndpoint == null ? Output.empty() : this.iapCustomEndpoint;
     }
 
     @InputImport(name="identityPlatformCustomEndpoint")
-      private final @Nullable Input<String> identityPlatformCustomEndpoint;
+      private final @Nullable Output<String> identityPlatformCustomEndpoint;
 
-    public Input<String> getIdentityPlatformCustomEndpoint() {
-        return this.identityPlatformCustomEndpoint == null ? Input.empty() : this.identityPlatformCustomEndpoint;
+    public Output<String> getIdentityPlatformCustomEndpoint() {
+        return this.identityPlatformCustomEndpoint == null ? Output.empty() : this.identityPlatformCustomEndpoint;
     }
 
     @InputImport(name="impersonateServiceAccount")
-      private final @Nullable Input<String> impersonateServiceAccount;
+      private final @Nullable Output<String> impersonateServiceAccount;
 
-    public Input<String> getImpersonateServiceAccount() {
-        return this.impersonateServiceAccount == null ? Input.empty() : this.impersonateServiceAccount;
+    public Output<String> getImpersonateServiceAccount() {
+        return this.impersonateServiceAccount == null ? Output.empty() : this.impersonateServiceAccount;
     }
 
     @InputImport(name="impersonateServiceAccountDelegates", json=true)
-      private final @Nullable Input<List<String>> impersonateServiceAccountDelegates;
+      private final @Nullable Output<List<String>> impersonateServiceAccountDelegates;
 
-    public Input<List<String>> getImpersonateServiceAccountDelegates() {
-        return this.impersonateServiceAccountDelegates == null ? Input.empty() : this.impersonateServiceAccountDelegates;
+    public Output<List<String>> getImpersonateServiceAccountDelegates() {
+        return this.impersonateServiceAccountDelegates == null ? Output.empty() : this.impersonateServiceAccountDelegates;
     }
 
     @InputImport(name="kmsCustomEndpoint")
-      private final @Nullable Input<String> kmsCustomEndpoint;
+      private final @Nullable Output<String> kmsCustomEndpoint;
 
-    public Input<String> getKmsCustomEndpoint() {
-        return this.kmsCustomEndpoint == null ? Input.empty() : this.kmsCustomEndpoint;
+    public Output<String> getKmsCustomEndpoint() {
+        return this.kmsCustomEndpoint == null ? Output.empty() : this.kmsCustomEndpoint;
     }
 
     @InputImport(name="loggingCustomEndpoint")
-      private final @Nullable Input<String> loggingCustomEndpoint;
+      private final @Nullable Output<String> loggingCustomEndpoint;
 
-    public Input<String> getLoggingCustomEndpoint() {
-        return this.loggingCustomEndpoint == null ? Input.empty() : this.loggingCustomEndpoint;
+    public Output<String> getLoggingCustomEndpoint() {
+        return this.loggingCustomEndpoint == null ? Output.empty() : this.loggingCustomEndpoint;
     }
 
     @InputImport(name="memcacheCustomEndpoint")
-      private final @Nullable Input<String> memcacheCustomEndpoint;
+      private final @Nullable Output<String> memcacheCustomEndpoint;
 
-    public Input<String> getMemcacheCustomEndpoint() {
-        return this.memcacheCustomEndpoint == null ? Input.empty() : this.memcacheCustomEndpoint;
+    public Output<String> getMemcacheCustomEndpoint() {
+        return this.memcacheCustomEndpoint == null ? Output.empty() : this.memcacheCustomEndpoint;
     }
 
     @InputImport(name="mlEngineCustomEndpoint")
-      private final @Nullable Input<String> mlEngineCustomEndpoint;
+      private final @Nullable Output<String> mlEngineCustomEndpoint;
 
-    public Input<String> getMlEngineCustomEndpoint() {
-        return this.mlEngineCustomEndpoint == null ? Input.empty() : this.mlEngineCustomEndpoint;
+    public Output<String> getMlEngineCustomEndpoint() {
+        return this.mlEngineCustomEndpoint == null ? Output.empty() : this.mlEngineCustomEndpoint;
     }
 
     @InputImport(name="monitoringCustomEndpoint")
-      private final @Nullable Input<String> monitoringCustomEndpoint;
+      private final @Nullable Output<String> monitoringCustomEndpoint;
 
-    public Input<String> getMonitoringCustomEndpoint() {
-        return this.monitoringCustomEndpoint == null ? Input.empty() : this.monitoringCustomEndpoint;
+    public Output<String> getMonitoringCustomEndpoint() {
+        return this.monitoringCustomEndpoint == null ? Output.empty() : this.monitoringCustomEndpoint;
     }
 
     @InputImport(name="networkConnectivityCustomEndpoint")
-      private final @Nullable Input<String> networkConnectivityCustomEndpoint;
+      private final @Nullable Output<String> networkConnectivityCustomEndpoint;
 
-    public Input<String> getNetworkConnectivityCustomEndpoint() {
-        return this.networkConnectivityCustomEndpoint == null ? Input.empty() : this.networkConnectivityCustomEndpoint;
+    public Output<String> getNetworkConnectivityCustomEndpoint() {
+        return this.networkConnectivityCustomEndpoint == null ? Output.empty() : this.networkConnectivityCustomEndpoint;
     }
 
     @InputImport(name="networkManagementCustomEndpoint")
-      private final @Nullable Input<String> networkManagementCustomEndpoint;
+      private final @Nullable Output<String> networkManagementCustomEndpoint;
 
-    public Input<String> getNetworkManagementCustomEndpoint() {
-        return this.networkManagementCustomEndpoint == null ? Input.empty() : this.networkManagementCustomEndpoint;
+    public Output<String> getNetworkManagementCustomEndpoint() {
+        return this.networkManagementCustomEndpoint == null ? Output.empty() : this.networkManagementCustomEndpoint;
     }
 
     @InputImport(name="networkServicesCustomEndpoint")
-      private final @Nullable Input<String> networkServicesCustomEndpoint;
+      private final @Nullable Output<String> networkServicesCustomEndpoint;
 
-    public Input<String> getNetworkServicesCustomEndpoint() {
-        return this.networkServicesCustomEndpoint == null ? Input.empty() : this.networkServicesCustomEndpoint;
+    public Output<String> getNetworkServicesCustomEndpoint() {
+        return this.networkServicesCustomEndpoint == null ? Output.empty() : this.networkServicesCustomEndpoint;
     }
 
     @InputImport(name="notebooksCustomEndpoint")
-      private final @Nullable Input<String> notebooksCustomEndpoint;
+      private final @Nullable Output<String> notebooksCustomEndpoint;
 
-    public Input<String> getNotebooksCustomEndpoint() {
-        return this.notebooksCustomEndpoint == null ? Input.empty() : this.notebooksCustomEndpoint;
+    public Output<String> getNotebooksCustomEndpoint() {
+        return this.notebooksCustomEndpoint == null ? Output.empty() : this.notebooksCustomEndpoint;
     }
 
     @InputImport(name="orgPolicyCustomEndpoint")
-      private final @Nullable Input<String> orgPolicyCustomEndpoint;
+      private final @Nullable Output<String> orgPolicyCustomEndpoint;
 
-    public Input<String> getOrgPolicyCustomEndpoint() {
-        return this.orgPolicyCustomEndpoint == null ? Input.empty() : this.orgPolicyCustomEndpoint;
+    public Output<String> getOrgPolicyCustomEndpoint() {
+        return this.orgPolicyCustomEndpoint == null ? Output.empty() : this.orgPolicyCustomEndpoint;
     }
 
     @InputImport(name="osConfigCustomEndpoint")
-      private final @Nullable Input<String> osConfigCustomEndpoint;
+      private final @Nullable Output<String> osConfigCustomEndpoint;
 
-    public Input<String> getOsConfigCustomEndpoint() {
-        return this.osConfigCustomEndpoint == null ? Input.empty() : this.osConfigCustomEndpoint;
+    public Output<String> getOsConfigCustomEndpoint() {
+        return this.osConfigCustomEndpoint == null ? Output.empty() : this.osConfigCustomEndpoint;
     }
 
     @InputImport(name="osLoginCustomEndpoint")
-      private final @Nullable Input<String> osLoginCustomEndpoint;
+      private final @Nullable Output<String> osLoginCustomEndpoint;
 
-    public Input<String> getOsLoginCustomEndpoint() {
-        return this.osLoginCustomEndpoint == null ? Input.empty() : this.osLoginCustomEndpoint;
+    public Output<String> getOsLoginCustomEndpoint() {
+        return this.osLoginCustomEndpoint == null ? Output.empty() : this.osLoginCustomEndpoint;
     }
 
     @InputImport(name="privatecaCustomEndpoint")
-      private final @Nullable Input<String> privatecaCustomEndpoint;
+      private final @Nullable Output<String> privatecaCustomEndpoint;
 
-    public Input<String> getPrivatecaCustomEndpoint() {
-        return this.privatecaCustomEndpoint == null ? Input.empty() : this.privatecaCustomEndpoint;
+    public Output<String> getPrivatecaCustomEndpoint() {
+        return this.privatecaCustomEndpoint == null ? Output.empty() : this.privatecaCustomEndpoint;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="pubsubCustomEndpoint")
-      private final @Nullable Input<String> pubsubCustomEndpoint;
+      private final @Nullable Output<String> pubsubCustomEndpoint;
 
-    public Input<String> getPubsubCustomEndpoint() {
-        return this.pubsubCustomEndpoint == null ? Input.empty() : this.pubsubCustomEndpoint;
+    public Output<String> getPubsubCustomEndpoint() {
+        return this.pubsubCustomEndpoint == null ? Output.empty() : this.pubsubCustomEndpoint;
     }
 
     @InputImport(name="pubsubLiteCustomEndpoint")
-      private final @Nullable Input<String> pubsubLiteCustomEndpoint;
+      private final @Nullable Output<String> pubsubLiteCustomEndpoint;
 
-    public Input<String> getPubsubLiteCustomEndpoint() {
-        return this.pubsubLiteCustomEndpoint == null ? Input.empty() : this.pubsubLiteCustomEndpoint;
+    public Output<String> getPubsubLiteCustomEndpoint() {
+        return this.pubsubLiteCustomEndpoint == null ? Output.empty() : this.pubsubLiteCustomEndpoint;
     }
 
     @InputImport(name="recaptchaEnterpriseCustomEndpoint")
-      private final @Nullable Input<String> recaptchaEnterpriseCustomEndpoint;
+      private final @Nullable Output<String> recaptchaEnterpriseCustomEndpoint;
 
-    public Input<String> getRecaptchaEnterpriseCustomEndpoint() {
-        return this.recaptchaEnterpriseCustomEndpoint == null ? Input.empty() : this.recaptchaEnterpriseCustomEndpoint;
+    public Output<String> getRecaptchaEnterpriseCustomEndpoint() {
+        return this.recaptchaEnterpriseCustomEndpoint == null ? Output.empty() : this.recaptchaEnterpriseCustomEndpoint;
     }
 
     @InputImport(name="redisCustomEndpoint")
-      private final @Nullable Input<String> redisCustomEndpoint;
+      private final @Nullable Output<String> redisCustomEndpoint;
 
-    public Input<String> getRedisCustomEndpoint() {
-        return this.redisCustomEndpoint == null ? Input.empty() : this.redisCustomEndpoint;
+    public Output<String> getRedisCustomEndpoint() {
+        return this.redisCustomEndpoint == null ? Output.empty() : this.redisCustomEndpoint;
     }
 
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     @InputImport(name="requestReason")
-      private final @Nullable Input<String> requestReason;
+      private final @Nullable Output<String> requestReason;
 
-    public Input<String> getRequestReason() {
-        return this.requestReason == null ? Input.empty() : this.requestReason;
+    public Output<String> getRequestReason() {
+        return this.requestReason == null ? Output.empty() : this.requestReason;
     }
 
     @InputImport(name="requestTimeout")
-      private final @Nullable Input<String> requestTimeout;
+      private final @Nullable Output<String> requestTimeout;
 
-    public Input<String> getRequestTimeout() {
-        return this.requestTimeout == null ? Input.empty() : this.requestTimeout;
+    public Output<String> getRequestTimeout() {
+        return this.requestTimeout == null ? Output.empty() : this.requestTimeout;
     }
 
     @InputImport(name="resourceManagerCustomEndpoint")
-      private final @Nullable Input<String> resourceManagerCustomEndpoint;
+      private final @Nullable Output<String> resourceManagerCustomEndpoint;
 
-    public Input<String> getResourceManagerCustomEndpoint() {
-        return this.resourceManagerCustomEndpoint == null ? Input.empty() : this.resourceManagerCustomEndpoint;
+    public Output<String> getResourceManagerCustomEndpoint() {
+        return this.resourceManagerCustomEndpoint == null ? Output.empty() : this.resourceManagerCustomEndpoint;
     }
 
     @InputImport(name="resourceManagerV2CustomEndpoint")
-      private final @Nullable Input<String> resourceManagerV2CustomEndpoint;
+      private final @Nullable Output<String> resourceManagerV2CustomEndpoint;
 
-    public Input<String> getResourceManagerV2CustomEndpoint() {
-        return this.resourceManagerV2CustomEndpoint == null ? Input.empty() : this.resourceManagerV2CustomEndpoint;
+    public Output<String> getResourceManagerV2CustomEndpoint() {
+        return this.resourceManagerV2CustomEndpoint == null ? Output.empty() : this.resourceManagerV2CustomEndpoint;
     }
 
     @InputImport(name="runtimeConfigCustomEndpoint")
-      private final @Nullable Input<String> runtimeConfigCustomEndpoint;
+      private final @Nullable Output<String> runtimeConfigCustomEndpoint;
 
-    public Input<String> getRuntimeConfigCustomEndpoint() {
-        return this.runtimeConfigCustomEndpoint == null ? Input.empty() : this.runtimeConfigCustomEndpoint;
+    public Output<String> getRuntimeConfigCustomEndpoint() {
+        return this.runtimeConfigCustomEndpoint == null ? Output.empty() : this.runtimeConfigCustomEndpoint;
     }
 
     @InputImport(name="runtimeconfigCustomEndpoint")
-      private final @Nullable Input<String> runtimeconfigCustomEndpoint;
+      private final @Nullable Output<String> runtimeconfigCustomEndpoint;
 
-    public Input<String> getRuntimeconfigCustomEndpoint() {
-        return this.runtimeconfigCustomEndpoint == null ? Input.empty() : this.runtimeconfigCustomEndpoint;
+    public Output<String> getRuntimeconfigCustomEndpoint() {
+        return this.runtimeconfigCustomEndpoint == null ? Output.empty() : this.runtimeconfigCustomEndpoint;
     }
 
     @InputImport(name="scopes", json=true)
-      private final @Nullable Input<List<String>> scopes;
+      private final @Nullable Output<List<String>> scopes;
 
-    public Input<List<String>> getScopes() {
-        return this.scopes == null ? Input.empty() : this.scopes;
+    public Output<List<String>> getScopes() {
+        return this.scopes == null ? Output.empty() : this.scopes;
     }
 
     @InputImport(name="secretManagerCustomEndpoint")
-      private final @Nullable Input<String> secretManagerCustomEndpoint;
+      private final @Nullable Output<String> secretManagerCustomEndpoint;
 
-    public Input<String> getSecretManagerCustomEndpoint() {
-        return this.secretManagerCustomEndpoint == null ? Input.empty() : this.secretManagerCustomEndpoint;
+    public Output<String> getSecretManagerCustomEndpoint() {
+        return this.secretManagerCustomEndpoint == null ? Output.empty() : this.secretManagerCustomEndpoint;
     }
 
     @InputImport(name="securityCenterCustomEndpoint")
-      private final @Nullable Input<String> securityCenterCustomEndpoint;
+      private final @Nullable Output<String> securityCenterCustomEndpoint;
 
-    public Input<String> getSecurityCenterCustomEndpoint() {
-        return this.securityCenterCustomEndpoint == null ? Input.empty() : this.securityCenterCustomEndpoint;
+    public Output<String> getSecurityCenterCustomEndpoint() {
+        return this.securityCenterCustomEndpoint == null ? Output.empty() : this.securityCenterCustomEndpoint;
     }
 
     @InputImport(name="securityScannerCustomEndpoint")
-      private final @Nullable Input<String> securityScannerCustomEndpoint;
+      private final @Nullable Output<String> securityScannerCustomEndpoint;
 
-    public Input<String> getSecurityScannerCustomEndpoint() {
-        return this.securityScannerCustomEndpoint == null ? Input.empty() : this.securityScannerCustomEndpoint;
+    public Output<String> getSecurityScannerCustomEndpoint() {
+        return this.securityScannerCustomEndpoint == null ? Output.empty() : this.securityScannerCustomEndpoint;
     }
 
     @InputImport(name="serviceDirectoryCustomEndpoint")
-      private final @Nullable Input<String> serviceDirectoryCustomEndpoint;
+      private final @Nullable Output<String> serviceDirectoryCustomEndpoint;
 
-    public Input<String> getServiceDirectoryCustomEndpoint() {
-        return this.serviceDirectoryCustomEndpoint == null ? Input.empty() : this.serviceDirectoryCustomEndpoint;
+    public Output<String> getServiceDirectoryCustomEndpoint() {
+        return this.serviceDirectoryCustomEndpoint == null ? Output.empty() : this.serviceDirectoryCustomEndpoint;
     }
 
     @InputImport(name="serviceManagementCustomEndpoint")
-      private final @Nullable Input<String> serviceManagementCustomEndpoint;
+      private final @Nullable Output<String> serviceManagementCustomEndpoint;
 
-    public Input<String> getServiceManagementCustomEndpoint() {
-        return this.serviceManagementCustomEndpoint == null ? Input.empty() : this.serviceManagementCustomEndpoint;
+    public Output<String> getServiceManagementCustomEndpoint() {
+        return this.serviceManagementCustomEndpoint == null ? Output.empty() : this.serviceManagementCustomEndpoint;
     }
 
     @InputImport(name="serviceNetworkingCustomEndpoint")
-      private final @Nullable Input<String> serviceNetworkingCustomEndpoint;
+      private final @Nullable Output<String> serviceNetworkingCustomEndpoint;
 
-    public Input<String> getServiceNetworkingCustomEndpoint() {
-        return this.serviceNetworkingCustomEndpoint == null ? Input.empty() : this.serviceNetworkingCustomEndpoint;
+    public Output<String> getServiceNetworkingCustomEndpoint() {
+        return this.serviceNetworkingCustomEndpoint == null ? Output.empty() : this.serviceNetworkingCustomEndpoint;
     }
 
     @InputImport(name="serviceUsageCustomEndpoint")
-      private final @Nullable Input<String> serviceUsageCustomEndpoint;
+      private final @Nullable Output<String> serviceUsageCustomEndpoint;
 
-    public Input<String> getServiceUsageCustomEndpoint() {
-        return this.serviceUsageCustomEndpoint == null ? Input.empty() : this.serviceUsageCustomEndpoint;
+    public Output<String> getServiceUsageCustomEndpoint() {
+        return this.serviceUsageCustomEndpoint == null ? Output.empty() : this.serviceUsageCustomEndpoint;
     }
 
     @InputImport(name="sourceRepoCustomEndpoint")
-      private final @Nullable Input<String> sourceRepoCustomEndpoint;
+      private final @Nullable Output<String> sourceRepoCustomEndpoint;
 
-    public Input<String> getSourceRepoCustomEndpoint() {
-        return this.sourceRepoCustomEndpoint == null ? Input.empty() : this.sourceRepoCustomEndpoint;
+    public Output<String> getSourceRepoCustomEndpoint() {
+        return this.sourceRepoCustomEndpoint == null ? Output.empty() : this.sourceRepoCustomEndpoint;
     }
 
     @InputImport(name="spannerCustomEndpoint")
-      private final @Nullable Input<String> spannerCustomEndpoint;
+      private final @Nullable Output<String> spannerCustomEndpoint;
 
-    public Input<String> getSpannerCustomEndpoint() {
-        return this.spannerCustomEndpoint == null ? Input.empty() : this.spannerCustomEndpoint;
+    public Output<String> getSpannerCustomEndpoint() {
+        return this.spannerCustomEndpoint == null ? Output.empty() : this.spannerCustomEndpoint;
     }
 
     @InputImport(name="sqlCustomEndpoint")
-      private final @Nullable Input<String> sqlCustomEndpoint;
+      private final @Nullable Output<String> sqlCustomEndpoint;
 
-    public Input<String> getSqlCustomEndpoint() {
-        return this.sqlCustomEndpoint == null ? Input.empty() : this.sqlCustomEndpoint;
+    public Output<String> getSqlCustomEndpoint() {
+        return this.sqlCustomEndpoint == null ? Output.empty() : this.sqlCustomEndpoint;
     }
 
     @InputImport(name="storageCustomEndpoint")
-      private final @Nullable Input<String> storageCustomEndpoint;
+      private final @Nullable Output<String> storageCustomEndpoint;
 
-    public Input<String> getStorageCustomEndpoint() {
-        return this.storageCustomEndpoint == null ? Input.empty() : this.storageCustomEndpoint;
+    public Output<String> getStorageCustomEndpoint() {
+        return this.storageCustomEndpoint == null ? Output.empty() : this.storageCustomEndpoint;
     }
 
     @InputImport(name="storageTransferCustomEndpoint")
-      private final @Nullable Input<String> storageTransferCustomEndpoint;
+      private final @Nullable Output<String> storageTransferCustomEndpoint;
 
-    public Input<String> getStorageTransferCustomEndpoint() {
-        return this.storageTransferCustomEndpoint == null ? Input.empty() : this.storageTransferCustomEndpoint;
+    public Output<String> getStorageTransferCustomEndpoint() {
+        return this.storageTransferCustomEndpoint == null ? Output.empty() : this.storageTransferCustomEndpoint;
     }
 
     @InputImport(name="tagsCustomEndpoint")
-      private final @Nullable Input<String> tagsCustomEndpoint;
+      private final @Nullable Output<String> tagsCustomEndpoint;
 
-    public Input<String> getTagsCustomEndpoint() {
-        return this.tagsCustomEndpoint == null ? Input.empty() : this.tagsCustomEndpoint;
+    public Output<String> getTagsCustomEndpoint() {
+        return this.tagsCustomEndpoint == null ? Output.empty() : this.tagsCustomEndpoint;
     }
 
     @InputImport(name="tpuCustomEndpoint")
-      private final @Nullable Input<String> tpuCustomEndpoint;
+      private final @Nullable Output<String> tpuCustomEndpoint;
 
-    public Input<String> getTpuCustomEndpoint() {
-        return this.tpuCustomEndpoint == null ? Input.empty() : this.tpuCustomEndpoint;
+    public Output<String> getTpuCustomEndpoint() {
+        return this.tpuCustomEndpoint == null ? Output.empty() : this.tpuCustomEndpoint;
     }
 
     @InputImport(name="userProjectOverride", json=true)
-      private final @Nullable Input<Boolean> userProjectOverride;
+      private final @Nullable Output<Boolean> userProjectOverride;
 
-    public Input<Boolean> getUserProjectOverride() {
-        return this.userProjectOverride == null ? Input.empty() : this.userProjectOverride;
+    public Output<Boolean> getUserProjectOverride() {
+        return this.userProjectOverride == null ? Output.empty() : this.userProjectOverride;
     }
 
     @InputImport(name="vertexAiCustomEndpoint")
-      private final @Nullable Input<String> vertexAiCustomEndpoint;
+      private final @Nullable Output<String> vertexAiCustomEndpoint;
 
-    public Input<String> getVertexAiCustomEndpoint() {
-        return this.vertexAiCustomEndpoint == null ? Input.empty() : this.vertexAiCustomEndpoint;
+    public Output<String> getVertexAiCustomEndpoint() {
+        return this.vertexAiCustomEndpoint == null ? Output.empty() : this.vertexAiCustomEndpoint;
     }
 
     @InputImport(name="vpcAccessCustomEndpoint")
-      private final @Nullable Input<String> vpcAccessCustomEndpoint;
+      private final @Nullable Output<String> vpcAccessCustomEndpoint;
 
-    public Input<String> getVpcAccessCustomEndpoint() {
-        return this.vpcAccessCustomEndpoint == null ? Input.empty() : this.vpcAccessCustomEndpoint;
+    public Output<String> getVpcAccessCustomEndpoint() {
+        return this.vpcAccessCustomEndpoint == null ? Output.empty() : this.vpcAccessCustomEndpoint;
     }
 
     @InputImport(name="workflowsCustomEndpoint")
-      private final @Nullable Input<String> workflowsCustomEndpoint;
+      private final @Nullable Output<String> workflowsCustomEndpoint;
 
-    public Input<String> getWorkflowsCustomEndpoint() {
-        return this.workflowsCustomEndpoint == null ? Input.empty() : this.workflowsCustomEndpoint;
+    public Output<String> getWorkflowsCustomEndpoint() {
+        return this.workflowsCustomEndpoint == null ? Output.empty() : this.workflowsCustomEndpoint;
     }
 
     @InputImport(name="zone")
-      private final @Nullable Input<String> zone;
+      private final @Nullable Output<String> zone;
 
-    public Input<String> getZone() {
-        return this.zone == null ? Input.empty() : this.zone;
+    public Output<String> getZone() {
+        return this.zone == null ? Output.empty() : this.zone;
     }
 
     public ProviderArgs(
-        @Nullable Input<String> accessApprovalCustomEndpoint,
-        @Nullable Input<String> accessContextManagerCustomEndpoint,
-        @Nullable Input<String> accessToken,
-        @Nullable Input<String> activeDirectoryCustomEndpoint,
-        @Nullable Input<String> apiGatewayCustomEndpoint,
-        @Nullable Input<String> apigeeCustomEndpoint,
-        @Nullable Input<String> appEngineCustomEndpoint,
-        @Nullable Input<String> artifactRegistryCustomEndpoint,
-        @Nullable Input<String> assuredWorkloadsCustomEndpoint,
-        @Nullable Input<ProviderBatchingArgs> batching,
-        @Nullable Input<String> bigQueryCustomEndpoint,
-        @Nullable Input<String> bigqueryConnectionCustomEndpoint,
-        @Nullable Input<String> bigqueryDataTransferCustomEndpoint,
-        @Nullable Input<String> bigqueryReservationCustomEndpoint,
-        @Nullable Input<String> bigtableCustomEndpoint,
-        @Nullable Input<String> billingCustomEndpoint,
-        @Nullable Input<String> billingProject,
-        @Nullable Input<String> binaryAuthorizationCustomEndpoint,
-        @Nullable Input<String> cloudAssetCustomEndpoint,
-        @Nullable Input<String> cloudBillingCustomEndpoint,
-        @Nullable Input<String> cloudBuildCustomEndpoint,
-        @Nullable Input<String> cloudBuildWorkerPoolCustomEndpoint,
-        @Nullable Input<String> cloudFunctionsCustomEndpoint,
-        @Nullable Input<String> cloudIdentityCustomEndpoint,
-        @Nullable Input<String> cloudIotCustomEndpoint,
-        @Nullable Input<String> cloudResourceManagerCustomEndpoint,
-        @Nullable Input<String> cloudRunCustomEndpoint,
-        @Nullable Input<String> cloudSchedulerCustomEndpoint,
-        @Nullable Input<String> cloudTasksCustomEndpoint,
-        @Nullable Input<String> composerCustomEndpoint,
-        @Nullable Input<String> computeCustomEndpoint,
-        @Nullable Input<String> containerAnalysisCustomEndpoint,
-        @Nullable Input<String> containerAwsCustomEndpoint,
-        @Nullable Input<String> containerAzureCustomEndpoint,
-        @Nullable Input<String> containerCustomEndpoint,
-        @Nullable Input<String> credentials,
-        @Nullable Input<String> dataCatalogCustomEndpoint,
-        @Nullable Input<String> dataFusionCustomEndpoint,
-        @Nullable Input<String> dataLossPreventionCustomEndpoint,
-        @Nullable Input<String> dataflowCustomEndpoint,
-        @Nullable Input<String> dataprocCustomEndpoint,
-        @Nullable Input<String> dataprocMetastoreCustomEndpoint,
-        @Nullable Input<String> datastoreCustomEndpoint,
-        @Nullable Input<String> deploymentManagerCustomEndpoint,
-        @Nullable Input<String> dialogflowCustomEndpoint,
-        @Nullable Input<String> dialogflowCxCustomEndpoint,
-        @Nullable Input<Boolean> disableGooglePartnerName,
-        @Nullable Input<String> dnsCustomEndpoint,
-        @Nullable Input<String> essentialContactsCustomEndpoint,
-        @Nullable Input<String> eventarcCustomEndpoint,
-        @Nullable Input<String> filestoreCustomEndpoint,
-        @Nullable Input<String> firebaseCustomEndpoint,
-        @Nullable Input<String> firestoreCustomEndpoint,
-        @Nullable Input<String> gameServicesCustomEndpoint,
-        @Nullable Input<String> gkeHubCustomEndpoint,
-        @Nullable Input<String> gkehubFeatureCustomEndpoint,
-        @Nullable Input<String> googlePartnerName,
-        @Nullable Input<String> healthcareCustomEndpoint,
-        @Nullable Input<String> iamBetaCustomEndpoint,
-        @Nullable Input<String> iamCredentialsCustomEndpoint,
-        @Nullable Input<String> iamCustomEndpoint,
-        @Nullable Input<String> iapCustomEndpoint,
-        @Nullable Input<String> identityPlatformCustomEndpoint,
-        @Nullable Input<String> impersonateServiceAccount,
-        @Nullable Input<List<String>> impersonateServiceAccountDelegates,
-        @Nullable Input<String> kmsCustomEndpoint,
-        @Nullable Input<String> loggingCustomEndpoint,
-        @Nullable Input<String> memcacheCustomEndpoint,
-        @Nullable Input<String> mlEngineCustomEndpoint,
-        @Nullable Input<String> monitoringCustomEndpoint,
-        @Nullable Input<String> networkConnectivityCustomEndpoint,
-        @Nullable Input<String> networkManagementCustomEndpoint,
-        @Nullable Input<String> networkServicesCustomEndpoint,
-        @Nullable Input<String> notebooksCustomEndpoint,
-        @Nullable Input<String> orgPolicyCustomEndpoint,
-        @Nullable Input<String> osConfigCustomEndpoint,
-        @Nullable Input<String> osLoginCustomEndpoint,
-        @Nullable Input<String> privatecaCustomEndpoint,
-        @Nullable Input<String> project,
-        @Nullable Input<String> pubsubCustomEndpoint,
-        @Nullable Input<String> pubsubLiteCustomEndpoint,
-        @Nullable Input<String> recaptchaEnterpriseCustomEndpoint,
-        @Nullable Input<String> redisCustomEndpoint,
-        @Nullable Input<String> region,
-        @Nullable Input<String> requestReason,
-        @Nullable Input<String> requestTimeout,
-        @Nullable Input<String> resourceManagerCustomEndpoint,
-        @Nullable Input<String> resourceManagerV2CustomEndpoint,
-        @Nullable Input<String> runtimeConfigCustomEndpoint,
-        @Nullable Input<String> runtimeconfigCustomEndpoint,
-        @Nullable Input<List<String>> scopes,
-        @Nullable Input<String> secretManagerCustomEndpoint,
-        @Nullable Input<String> securityCenterCustomEndpoint,
-        @Nullable Input<String> securityScannerCustomEndpoint,
-        @Nullable Input<String> serviceDirectoryCustomEndpoint,
-        @Nullable Input<String> serviceManagementCustomEndpoint,
-        @Nullable Input<String> serviceNetworkingCustomEndpoint,
-        @Nullable Input<String> serviceUsageCustomEndpoint,
-        @Nullable Input<String> sourceRepoCustomEndpoint,
-        @Nullable Input<String> spannerCustomEndpoint,
-        @Nullable Input<String> sqlCustomEndpoint,
-        @Nullable Input<String> storageCustomEndpoint,
-        @Nullable Input<String> storageTransferCustomEndpoint,
-        @Nullable Input<String> tagsCustomEndpoint,
-        @Nullable Input<String> tpuCustomEndpoint,
-        @Nullable Input<Boolean> userProjectOverride,
-        @Nullable Input<String> vertexAiCustomEndpoint,
-        @Nullable Input<String> vpcAccessCustomEndpoint,
-        @Nullable Input<String> workflowsCustomEndpoint,
-        @Nullable Input<String> zone) {
+        @Nullable Output<String> accessApprovalCustomEndpoint,
+        @Nullable Output<String> accessContextManagerCustomEndpoint,
+        @Nullable Output<String> accessToken,
+        @Nullable Output<String> activeDirectoryCustomEndpoint,
+        @Nullable Output<String> apiGatewayCustomEndpoint,
+        @Nullable Output<String> apigeeCustomEndpoint,
+        @Nullable Output<String> appEngineCustomEndpoint,
+        @Nullable Output<String> artifactRegistryCustomEndpoint,
+        @Nullable Output<String> assuredWorkloadsCustomEndpoint,
+        @Nullable Output<ProviderBatchingArgs> batching,
+        @Nullable Output<String> bigQueryCustomEndpoint,
+        @Nullable Output<String> bigqueryConnectionCustomEndpoint,
+        @Nullable Output<String> bigqueryDataTransferCustomEndpoint,
+        @Nullable Output<String> bigqueryReservationCustomEndpoint,
+        @Nullable Output<String> bigtableCustomEndpoint,
+        @Nullable Output<String> billingCustomEndpoint,
+        @Nullable Output<String> billingProject,
+        @Nullable Output<String> binaryAuthorizationCustomEndpoint,
+        @Nullable Output<String> cloudAssetCustomEndpoint,
+        @Nullable Output<String> cloudBillingCustomEndpoint,
+        @Nullable Output<String> cloudBuildCustomEndpoint,
+        @Nullable Output<String> cloudBuildWorkerPoolCustomEndpoint,
+        @Nullable Output<String> cloudFunctionsCustomEndpoint,
+        @Nullable Output<String> cloudIdentityCustomEndpoint,
+        @Nullable Output<String> cloudIotCustomEndpoint,
+        @Nullable Output<String> cloudResourceManagerCustomEndpoint,
+        @Nullable Output<String> cloudRunCustomEndpoint,
+        @Nullable Output<String> cloudSchedulerCustomEndpoint,
+        @Nullable Output<String> cloudTasksCustomEndpoint,
+        @Nullable Output<String> composerCustomEndpoint,
+        @Nullable Output<String> computeCustomEndpoint,
+        @Nullable Output<String> containerAnalysisCustomEndpoint,
+        @Nullable Output<String> containerAwsCustomEndpoint,
+        @Nullable Output<String> containerAzureCustomEndpoint,
+        @Nullable Output<String> containerCustomEndpoint,
+        @Nullable Output<String> credentials,
+        @Nullable Output<String> dataCatalogCustomEndpoint,
+        @Nullable Output<String> dataFusionCustomEndpoint,
+        @Nullable Output<String> dataLossPreventionCustomEndpoint,
+        @Nullable Output<String> dataflowCustomEndpoint,
+        @Nullable Output<String> dataprocCustomEndpoint,
+        @Nullable Output<String> dataprocMetastoreCustomEndpoint,
+        @Nullable Output<String> datastoreCustomEndpoint,
+        @Nullable Output<String> deploymentManagerCustomEndpoint,
+        @Nullable Output<String> dialogflowCustomEndpoint,
+        @Nullable Output<String> dialogflowCxCustomEndpoint,
+        @Nullable Output<Boolean> disableGooglePartnerName,
+        @Nullable Output<String> dnsCustomEndpoint,
+        @Nullable Output<String> essentialContactsCustomEndpoint,
+        @Nullable Output<String> eventarcCustomEndpoint,
+        @Nullable Output<String> filestoreCustomEndpoint,
+        @Nullable Output<String> firebaseCustomEndpoint,
+        @Nullable Output<String> firestoreCustomEndpoint,
+        @Nullable Output<String> gameServicesCustomEndpoint,
+        @Nullable Output<String> gkeHubCustomEndpoint,
+        @Nullable Output<String> gkehubFeatureCustomEndpoint,
+        @Nullable Output<String> googlePartnerName,
+        @Nullable Output<String> healthcareCustomEndpoint,
+        @Nullable Output<String> iamBetaCustomEndpoint,
+        @Nullable Output<String> iamCredentialsCustomEndpoint,
+        @Nullable Output<String> iamCustomEndpoint,
+        @Nullable Output<String> iapCustomEndpoint,
+        @Nullable Output<String> identityPlatformCustomEndpoint,
+        @Nullable Output<String> impersonateServiceAccount,
+        @Nullable Output<List<String>> impersonateServiceAccountDelegates,
+        @Nullable Output<String> kmsCustomEndpoint,
+        @Nullable Output<String> loggingCustomEndpoint,
+        @Nullable Output<String> memcacheCustomEndpoint,
+        @Nullable Output<String> mlEngineCustomEndpoint,
+        @Nullable Output<String> monitoringCustomEndpoint,
+        @Nullable Output<String> networkConnectivityCustomEndpoint,
+        @Nullable Output<String> networkManagementCustomEndpoint,
+        @Nullable Output<String> networkServicesCustomEndpoint,
+        @Nullable Output<String> notebooksCustomEndpoint,
+        @Nullable Output<String> orgPolicyCustomEndpoint,
+        @Nullable Output<String> osConfigCustomEndpoint,
+        @Nullable Output<String> osLoginCustomEndpoint,
+        @Nullable Output<String> privatecaCustomEndpoint,
+        @Nullable Output<String> project,
+        @Nullable Output<String> pubsubCustomEndpoint,
+        @Nullable Output<String> pubsubLiteCustomEndpoint,
+        @Nullable Output<String> recaptchaEnterpriseCustomEndpoint,
+        @Nullable Output<String> redisCustomEndpoint,
+        @Nullable Output<String> region,
+        @Nullable Output<String> requestReason,
+        @Nullable Output<String> requestTimeout,
+        @Nullable Output<String> resourceManagerCustomEndpoint,
+        @Nullable Output<String> resourceManagerV2CustomEndpoint,
+        @Nullable Output<String> runtimeConfigCustomEndpoint,
+        @Nullable Output<String> runtimeconfigCustomEndpoint,
+        @Nullable Output<List<String>> scopes,
+        @Nullable Output<String> secretManagerCustomEndpoint,
+        @Nullable Output<String> securityCenterCustomEndpoint,
+        @Nullable Output<String> securityScannerCustomEndpoint,
+        @Nullable Output<String> serviceDirectoryCustomEndpoint,
+        @Nullable Output<String> serviceManagementCustomEndpoint,
+        @Nullable Output<String> serviceNetworkingCustomEndpoint,
+        @Nullable Output<String> serviceUsageCustomEndpoint,
+        @Nullable Output<String> sourceRepoCustomEndpoint,
+        @Nullable Output<String> spannerCustomEndpoint,
+        @Nullable Output<String> sqlCustomEndpoint,
+        @Nullable Output<String> storageCustomEndpoint,
+        @Nullable Output<String> storageTransferCustomEndpoint,
+        @Nullable Output<String> tagsCustomEndpoint,
+        @Nullable Output<String> tpuCustomEndpoint,
+        @Nullable Output<Boolean> userProjectOverride,
+        @Nullable Output<String> vertexAiCustomEndpoint,
+        @Nullable Output<String> vpcAccessCustomEndpoint,
+        @Nullable Output<String> workflowsCustomEndpoint,
+        @Nullable Output<String> zone) {
         this.accessApprovalCustomEndpoint = accessApprovalCustomEndpoint;
         this.accessContextManagerCustomEndpoint = accessContextManagerCustomEndpoint;
         this.accessToken = accessToken;
@@ -977,12 +977,12 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
         this.osConfigCustomEndpoint = osConfigCustomEndpoint;
         this.osLoginCustomEndpoint = osLoginCustomEndpoint;
         this.privatecaCustomEndpoint = privatecaCustomEndpoint;
-        this.project = project == null ? Input.ofNullable(Utilities.getEnv("GOOGLE_PROJECT", "GOOGLE_CLOUD_PROJECT", "GCLOUD_PROJECT", "CLOUDSDK_CORE_PROJECT").orElse(null)) : project;
+        this.project = project == null ? Output.ofNullable(Utilities.getEnv("GOOGLE_PROJECT", "GOOGLE_CLOUD_PROJECT", "GCLOUD_PROJECT", "CLOUDSDK_CORE_PROJECT").orElse(null)) : project;
         this.pubsubCustomEndpoint = pubsubCustomEndpoint;
         this.pubsubLiteCustomEndpoint = pubsubLiteCustomEndpoint;
         this.recaptchaEnterpriseCustomEndpoint = recaptchaEnterpriseCustomEndpoint;
         this.redisCustomEndpoint = redisCustomEndpoint;
-        this.region = region == null ? Input.ofNullable(Utilities.getEnv("GOOGLE_REGION", "GCLOUD_REGION", "CLOUDSDK_COMPUTE_REGION").orElse(null)) : region;
+        this.region = region == null ? Output.ofNullable(Utilities.getEnv("GOOGLE_REGION", "GCLOUD_REGION", "CLOUDSDK_COMPUTE_REGION").orElse(null)) : region;
         this.requestReason = requestReason;
         this.requestTimeout = requestTimeout;
         this.resourceManagerCustomEndpoint = resourceManagerCustomEndpoint;
@@ -1008,120 +1008,120 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
         this.vertexAiCustomEndpoint = vertexAiCustomEndpoint;
         this.vpcAccessCustomEndpoint = vpcAccessCustomEndpoint;
         this.workflowsCustomEndpoint = workflowsCustomEndpoint;
-        this.zone = zone == null ? Input.ofNullable(Utilities.getEnv("GOOGLE_ZONE", "GCLOUD_ZONE", "CLOUDSDK_COMPUTE_ZONE").orElse(null)) : zone;
+        this.zone = zone == null ? Output.ofNullable(Utilities.getEnv("GOOGLE_ZONE", "GCLOUD_ZONE", "CLOUDSDK_COMPUTE_ZONE").orElse(null)) : zone;
     }
 
     private ProviderArgs() {
-        this.accessApprovalCustomEndpoint = Input.empty();
-        this.accessContextManagerCustomEndpoint = Input.empty();
-        this.accessToken = Input.empty();
-        this.activeDirectoryCustomEndpoint = Input.empty();
-        this.apiGatewayCustomEndpoint = Input.empty();
-        this.apigeeCustomEndpoint = Input.empty();
-        this.appEngineCustomEndpoint = Input.empty();
-        this.artifactRegistryCustomEndpoint = Input.empty();
-        this.assuredWorkloadsCustomEndpoint = Input.empty();
-        this.batching = Input.empty();
-        this.bigQueryCustomEndpoint = Input.empty();
-        this.bigqueryConnectionCustomEndpoint = Input.empty();
-        this.bigqueryDataTransferCustomEndpoint = Input.empty();
-        this.bigqueryReservationCustomEndpoint = Input.empty();
-        this.bigtableCustomEndpoint = Input.empty();
-        this.billingCustomEndpoint = Input.empty();
-        this.billingProject = Input.empty();
-        this.binaryAuthorizationCustomEndpoint = Input.empty();
-        this.cloudAssetCustomEndpoint = Input.empty();
-        this.cloudBillingCustomEndpoint = Input.empty();
-        this.cloudBuildCustomEndpoint = Input.empty();
-        this.cloudBuildWorkerPoolCustomEndpoint = Input.empty();
-        this.cloudFunctionsCustomEndpoint = Input.empty();
-        this.cloudIdentityCustomEndpoint = Input.empty();
-        this.cloudIotCustomEndpoint = Input.empty();
-        this.cloudResourceManagerCustomEndpoint = Input.empty();
-        this.cloudRunCustomEndpoint = Input.empty();
-        this.cloudSchedulerCustomEndpoint = Input.empty();
-        this.cloudTasksCustomEndpoint = Input.empty();
-        this.composerCustomEndpoint = Input.empty();
-        this.computeCustomEndpoint = Input.empty();
-        this.containerAnalysisCustomEndpoint = Input.empty();
-        this.containerAwsCustomEndpoint = Input.empty();
-        this.containerAzureCustomEndpoint = Input.empty();
-        this.containerCustomEndpoint = Input.empty();
-        this.credentials = Input.empty();
-        this.dataCatalogCustomEndpoint = Input.empty();
-        this.dataFusionCustomEndpoint = Input.empty();
-        this.dataLossPreventionCustomEndpoint = Input.empty();
-        this.dataflowCustomEndpoint = Input.empty();
-        this.dataprocCustomEndpoint = Input.empty();
-        this.dataprocMetastoreCustomEndpoint = Input.empty();
-        this.datastoreCustomEndpoint = Input.empty();
-        this.deploymentManagerCustomEndpoint = Input.empty();
-        this.dialogflowCustomEndpoint = Input.empty();
-        this.dialogflowCxCustomEndpoint = Input.empty();
-        this.disableGooglePartnerName = Input.empty();
-        this.dnsCustomEndpoint = Input.empty();
-        this.essentialContactsCustomEndpoint = Input.empty();
-        this.eventarcCustomEndpoint = Input.empty();
-        this.filestoreCustomEndpoint = Input.empty();
-        this.firebaseCustomEndpoint = Input.empty();
-        this.firestoreCustomEndpoint = Input.empty();
-        this.gameServicesCustomEndpoint = Input.empty();
-        this.gkeHubCustomEndpoint = Input.empty();
-        this.gkehubFeatureCustomEndpoint = Input.empty();
-        this.googlePartnerName = Input.empty();
-        this.healthcareCustomEndpoint = Input.empty();
-        this.iamBetaCustomEndpoint = Input.empty();
-        this.iamCredentialsCustomEndpoint = Input.empty();
-        this.iamCustomEndpoint = Input.empty();
-        this.iapCustomEndpoint = Input.empty();
-        this.identityPlatformCustomEndpoint = Input.empty();
-        this.impersonateServiceAccount = Input.empty();
-        this.impersonateServiceAccountDelegates = Input.empty();
-        this.kmsCustomEndpoint = Input.empty();
-        this.loggingCustomEndpoint = Input.empty();
-        this.memcacheCustomEndpoint = Input.empty();
-        this.mlEngineCustomEndpoint = Input.empty();
-        this.monitoringCustomEndpoint = Input.empty();
-        this.networkConnectivityCustomEndpoint = Input.empty();
-        this.networkManagementCustomEndpoint = Input.empty();
-        this.networkServicesCustomEndpoint = Input.empty();
-        this.notebooksCustomEndpoint = Input.empty();
-        this.orgPolicyCustomEndpoint = Input.empty();
-        this.osConfigCustomEndpoint = Input.empty();
-        this.osLoginCustomEndpoint = Input.empty();
-        this.privatecaCustomEndpoint = Input.empty();
-        this.project = Input.empty();
-        this.pubsubCustomEndpoint = Input.empty();
-        this.pubsubLiteCustomEndpoint = Input.empty();
-        this.recaptchaEnterpriseCustomEndpoint = Input.empty();
-        this.redisCustomEndpoint = Input.empty();
-        this.region = Input.empty();
-        this.requestReason = Input.empty();
-        this.requestTimeout = Input.empty();
-        this.resourceManagerCustomEndpoint = Input.empty();
-        this.resourceManagerV2CustomEndpoint = Input.empty();
-        this.runtimeConfigCustomEndpoint = Input.empty();
-        this.runtimeconfigCustomEndpoint = Input.empty();
-        this.scopes = Input.empty();
-        this.secretManagerCustomEndpoint = Input.empty();
-        this.securityCenterCustomEndpoint = Input.empty();
-        this.securityScannerCustomEndpoint = Input.empty();
-        this.serviceDirectoryCustomEndpoint = Input.empty();
-        this.serviceManagementCustomEndpoint = Input.empty();
-        this.serviceNetworkingCustomEndpoint = Input.empty();
-        this.serviceUsageCustomEndpoint = Input.empty();
-        this.sourceRepoCustomEndpoint = Input.empty();
-        this.spannerCustomEndpoint = Input.empty();
-        this.sqlCustomEndpoint = Input.empty();
-        this.storageCustomEndpoint = Input.empty();
-        this.storageTransferCustomEndpoint = Input.empty();
-        this.tagsCustomEndpoint = Input.empty();
-        this.tpuCustomEndpoint = Input.empty();
-        this.userProjectOverride = Input.empty();
-        this.vertexAiCustomEndpoint = Input.empty();
-        this.vpcAccessCustomEndpoint = Input.empty();
-        this.workflowsCustomEndpoint = Input.empty();
-        this.zone = Input.empty();
+        this.accessApprovalCustomEndpoint = Output.empty();
+        this.accessContextManagerCustomEndpoint = Output.empty();
+        this.accessToken = Output.empty();
+        this.activeDirectoryCustomEndpoint = Output.empty();
+        this.apiGatewayCustomEndpoint = Output.empty();
+        this.apigeeCustomEndpoint = Output.empty();
+        this.appEngineCustomEndpoint = Output.empty();
+        this.artifactRegistryCustomEndpoint = Output.empty();
+        this.assuredWorkloadsCustomEndpoint = Output.empty();
+        this.batching = Output.empty();
+        this.bigQueryCustomEndpoint = Output.empty();
+        this.bigqueryConnectionCustomEndpoint = Output.empty();
+        this.bigqueryDataTransferCustomEndpoint = Output.empty();
+        this.bigqueryReservationCustomEndpoint = Output.empty();
+        this.bigtableCustomEndpoint = Output.empty();
+        this.billingCustomEndpoint = Output.empty();
+        this.billingProject = Output.empty();
+        this.binaryAuthorizationCustomEndpoint = Output.empty();
+        this.cloudAssetCustomEndpoint = Output.empty();
+        this.cloudBillingCustomEndpoint = Output.empty();
+        this.cloudBuildCustomEndpoint = Output.empty();
+        this.cloudBuildWorkerPoolCustomEndpoint = Output.empty();
+        this.cloudFunctionsCustomEndpoint = Output.empty();
+        this.cloudIdentityCustomEndpoint = Output.empty();
+        this.cloudIotCustomEndpoint = Output.empty();
+        this.cloudResourceManagerCustomEndpoint = Output.empty();
+        this.cloudRunCustomEndpoint = Output.empty();
+        this.cloudSchedulerCustomEndpoint = Output.empty();
+        this.cloudTasksCustomEndpoint = Output.empty();
+        this.composerCustomEndpoint = Output.empty();
+        this.computeCustomEndpoint = Output.empty();
+        this.containerAnalysisCustomEndpoint = Output.empty();
+        this.containerAwsCustomEndpoint = Output.empty();
+        this.containerAzureCustomEndpoint = Output.empty();
+        this.containerCustomEndpoint = Output.empty();
+        this.credentials = Output.empty();
+        this.dataCatalogCustomEndpoint = Output.empty();
+        this.dataFusionCustomEndpoint = Output.empty();
+        this.dataLossPreventionCustomEndpoint = Output.empty();
+        this.dataflowCustomEndpoint = Output.empty();
+        this.dataprocCustomEndpoint = Output.empty();
+        this.dataprocMetastoreCustomEndpoint = Output.empty();
+        this.datastoreCustomEndpoint = Output.empty();
+        this.deploymentManagerCustomEndpoint = Output.empty();
+        this.dialogflowCustomEndpoint = Output.empty();
+        this.dialogflowCxCustomEndpoint = Output.empty();
+        this.disableGooglePartnerName = Output.empty();
+        this.dnsCustomEndpoint = Output.empty();
+        this.essentialContactsCustomEndpoint = Output.empty();
+        this.eventarcCustomEndpoint = Output.empty();
+        this.filestoreCustomEndpoint = Output.empty();
+        this.firebaseCustomEndpoint = Output.empty();
+        this.firestoreCustomEndpoint = Output.empty();
+        this.gameServicesCustomEndpoint = Output.empty();
+        this.gkeHubCustomEndpoint = Output.empty();
+        this.gkehubFeatureCustomEndpoint = Output.empty();
+        this.googlePartnerName = Output.empty();
+        this.healthcareCustomEndpoint = Output.empty();
+        this.iamBetaCustomEndpoint = Output.empty();
+        this.iamCredentialsCustomEndpoint = Output.empty();
+        this.iamCustomEndpoint = Output.empty();
+        this.iapCustomEndpoint = Output.empty();
+        this.identityPlatformCustomEndpoint = Output.empty();
+        this.impersonateServiceAccount = Output.empty();
+        this.impersonateServiceAccountDelegates = Output.empty();
+        this.kmsCustomEndpoint = Output.empty();
+        this.loggingCustomEndpoint = Output.empty();
+        this.memcacheCustomEndpoint = Output.empty();
+        this.mlEngineCustomEndpoint = Output.empty();
+        this.monitoringCustomEndpoint = Output.empty();
+        this.networkConnectivityCustomEndpoint = Output.empty();
+        this.networkManagementCustomEndpoint = Output.empty();
+        this.networkServicesCustomEndpoint = Output.empty();
+        this.notebooksCustomEndpoint = Output.empty();
+        this.orgPolicyCustomEndpoint = Output.empty();
+        this.osConfigCustomEndpoint = Output.empty();
+        this.osLoginCustomEndpoint = Output.empty();
+        this.privatecaCustomEndpoint = Output.empty();
+        this.project = Output.empty();
+        this.pubsubCustomEndpoint = Output.empty();
+        this.pubsubLiteCustomEndpoint = Output.empty();
+        this.recaptchaEnterpriseCustomEndpoint = Output.empty();
+        this.redisCustomEndpoint = Output.empty();
+        this.region = Output.empty();
+        this.requestReason = Output.empty();
+        this.requestTimeout = Output.empty();
+        this.resourceManagerCustomEndpoint = Output.empty();
+        this.resourceManagerV2CustomEndpoint = Output.empty();
+        this.runtimeConfigCustomEndpoint = Output.empty();
+        this.runtimeconfigCustomEndpoint = Output.empty();
+        this.scopes = Output.empty();
+        this.secretManagerCustomEndpoint = Output.empty();
+        this.securityCenterCustomEndpoint = Output.empty();
+        this.securityScannerCustomEndpoint = Output.empty();
+        this.serviceDirectoryCustomEndpoint = Output.empty();
+        this.serviceManagementCustomEndpoint = Output.empty();
+        this.serviceNetworkingCustomEndpoint = Output.empty();
+        this.serviceUsageCustomEndpoint = Output.empty();
+        this.sourceRepoCustomEndpoint = Output.empty();
+        this.spannerCustomEndpoint = Output.empty();
+        this.sqlCustomEndpoint = Output.empty();
+        this.storageCustomEndpoint = Output.empty();
+        this.storageTransferCustomEndpoint = Output.empty();
+        this.tagsCustomEndpoint = Output.empty();
+        this.tpuCustomEndpoint = Output.empty();
+        this.userProjectOverride = Output.empty();
+        this.vertexAiCustomEndpoint = Output.empty();
+        this.vpcAccessCustomEndpoint = Output.empty();
+        this.workflowsCustomEndpoint = Output.empty();
+        this.zone = Output.empty();
     }
 
     public static Builder builder() {
@@ -1133,116 +1133,116 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accessApprovalCustomEndpoint;
-        private @Nullable Input<String> accessContextManagerCustomEndpoint;
-        private @Nullable Input<String> accessToken;
-        private @Nullable Input<String> activeDirectoryCustomEndpoint;
-        private @Nullable Input<String> apiGatewayCustomEndpoint;
-        private @Nullable Input<String> apigeeCustomEndpoint;
-        private @Nullable Input<String> appEngineCustomEndpoint;
-        private @Nullable Input<String> artifactRegistryCustomEndpoint;
-        private @Nullable Input<String> assuredWorkloadsCustomEndpoint;
-        private @Nullable Input<ProviderBatchingArgs> batching;
-        private @Nullable Input<String> bigQueryCustomEndpoint;
-        private @Nullable Input<String> bigqueryConnectionCustomEndpoint;
-        private @Nullable Input<String> bigqueryDataTransferCustomEndpoint;
-        private @Nullable Input<String> bigqueryReservationCustomEndpoint;
-        private @Nullable Input<String> bigtableCustomEndpoint;
-        private @Nullable Input<String> billingCustomEndpoint;
-        private @Nullable Input<String> billingProject;
-        private @Nullable Input<String> binaryAuthorizationCustomEndpoint;
-        private @Nullable Input<String> cloudAssetCustomEndpoint;
-        private @Nullable Input<String> cloudBillingCustomEndpoint;
-        private @Nullable Input<String> cloudBuildCustomEndpoint;
-        private @Nullable Input<String> cloudBuildWorkerPoolCustomEndpoint;
-        private @Nullable Input<String> cloudFunctionsCustomEndpoint;
-        private @Nullable Input<String> cloudIdentityCustomEndpoint;
-        private @Nullable Input<String> cloudIotCustomEndpoint;
-        private @Nullable Input<String> cloudResourceManagerCustomEndpoint;
-        private @Nullable Input<String> cloudRunCustomEndpoint;
-        private @Nullable Input<String> cloudSchedulerCustomEndpoint;
-        private @Nullable Input<String> cloudTasksCustomEndpoint;
-        private @Nullable Input<String> composerCustomEndpoint;
-        private @Nullable Input<String> computeCustomEndpoint;
-        private @Nullable Input<String> containerAnalysisCustomEndpoint;
-        private @Nullable Input<String> containerAwsCustomEndpoint;
-        private @Nullable Input<String> containerAzureCustomEndpoint;
-        private @Nullable Input<String> containerCustomEndpoint;
-        private @Nullable Input<String> credentials;
-        private @Nullable Input<String> dataCatalogCustomEndpoint;
-        private @Nullable Input<String> dataFusionCustomEndpoint;
-        private @Nullable Input<String> dataLossPreventionCustomEndpoint;
-        private @Nullable Input<String> dataflowCustomEndpoint;
-        private @Nullable Input<String> dataprocCustomEndpoint;
-        private @Nullable Input<String> dataprocMetastoreCustomEndpoint;
-        private @Nullable Input<String> datastoreCustomEndpoint;
-        private @Nullable Input<String> deploymentManagerCustomEndpoint;
-        private @Nullable Input<String> dialogflowCustomEndpoint;
-        private @Nullable Input<String> dialogflowCxCustomEndpoint;
-        private @Nullable Input<Boolean> disableGooglePartnerName;
-        private @Nullable Input<String> dnsCustomEndpoint;
-        private @Nullable Input<String> essentialContactsCustomEndpoint;
-        private @Nullable Input<String> eventarcCustomEndpoint;
-        private @Nullable Input<String> filestoreCustomEndpoint;
-        private @Nullable Input<String> firebaseCustomEndpoint;
-        private @Nullable Input<String> firestoreCustomEndpoint;
-        private @Nullable Input<String> gameServicesCustomEndpoint;
-        private @Nullable Input<String> gkeHubCustomEndpoint;
-        private @Nullable Input<String> gkehubFeatureCustomEndpoint;
-        private @Nullable Input<String> googlePartnerName;
-        private @Nullable Input<String> healthcareCustomEndpoint;
-        private @Nullable Input<String> iamBetaCustomEndpoint;
-        private @Nullable Input<String> iamCredentialsCustomEndpoint;
-        private @Nullable Input<String> iamCustomEndpoint;
-        private @Nullable Input<String> iapCustomEndpoint;
-        private @Nullable Input<String> identityPlatformCustomEndpoint;
-        private @Nullable Input<String> impersonateServiceAccount;
-        private @Nullable Input<List<String>> impersonateServiceAccountDelegates;
-        private @Nullable Input<String> kmsCustomEndpoint;
-        private @Nullable Input<String> loggingCustomEndpoint;
-        private @Nullable Input<String> memcacheCustomEndpoint;
-        private @Nullable Input<String> mlEngineCustomEndpoint;
-        private @Nullable Input<String> monitoringCustomEndpoint;
-        private @Nullable Input<String> networkConnectivityCustomEndpoint;
-        private @Nullable Input<String> networkManagementCustomEndpoint;
-        private @Nullable Input<String> networkServicesCustomEndpoint;
-        private @Nullable Input<String> notebooksCustomEndpoint;
-        private @Nullable Input<String> orgPolicyCustomEndpoint;
-        private @Nullable Input<String> osConfigCustomEndpoint;
-        private @Nullable Input<String> osLoginCustomEndpoint;
-        private @Nullable Input<String> privatecaCustomEndpoint;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> pubsubCustomEndpoint;
-        private @Nullable Input<String> pubsubLiteCustomEndpoint;
-        private @Nullable Input<String> recaptchaEnterpriseCustomEndpoint;
-        private @Nullable Input<String> redisCustomEndpoint;
-        private @Nullable Input<String> region;
-        private @Nullable Input<String> requestReason;
-        private @Nullable Input<String> requestTimeout;
-        private @Nullable Input<String> resourceManagerCustomEndpoint;
-        private @Nullable Input<String> resourceManagerV2CustomEndpoint;
-        private @Nullable Input<String> runtimeConfigCustomEndpoint;
-        private @Nullable Input<String> runtimeconfigCustomEndpoint;
-        private @Nullable Input<List<String>> scopes;
-        private @Nullable Input<String> secretManagerCustomEndpoint;
-        private @Nullable Input<String> securityCenterCustomEndpoint;
-        private @Nullable Input<String> securityScannerCustomEndpoint;
-        private @Nullable Input<String> serviceDirectoryCustomEndpoint;
-        private @Nullable Input<String> serviceManagementCustomEndpoint;
-        private @Nullable Input<String> serviceNetworkingCustomEndpoint;
-        private @Nullable Input<String> serviceUsageCustomEndpoint;
-        private @Nullable Input<String> sourceRepoCustomEndpoint;
-        private @Nullable Input<String> spannerCustomEndpoint;
-        private @Nullable Input<String> sqlCustomEndpoint;
-        private @Nullable Input<String> storageCustomEndpoint;
-        private @Nullable Input<String> storageTransferCustomEndpoint;
-        private @Nullable Input<String> tagsCustomEndpoint;
-        private @Nullable Input<String> tpuCustomEndpoint;
-        private @Nullable Input<Boolean> userProjectOverride;
-        private @Nullable Input<String> vertexAiCustomEndpoint;
-        private @Nullable Input<String> vpcAccessCustomEndpoint;
-        private @Nullable Input<String> workflowsCustomEndpoint;
-        private @Nullable Input<String> zone;
+        private @Nullable Output<String> accessApprovalCustomEndpoint;
+        private @Nullable Output<String> accessContextManagerCustomEndpoint;
+        private @Nullable Output<String> accessToken;
+        private @Nullable Output<String> activeDirectoryCustomEndpoint;
+        private @Nullable Output<String> apiGatewayCustomEndpoint;
+        private @Nullable Output<String> apigeeCustomEndpoint;
+        private @Nullable Output<String> appEngineCustomEndpoint;
+        private @Nullable Output<String> artifactRegistryCustomEndpoint;
+        private @Nullable Output<String> assuredWorkloadsCustomEndpoint;
+        private @Nullable Output<ProviderBatchingArgs> batching;
+        private @Nullable Output<String> bigQueryCustomEndpoint;
+        private @Nullable Output<String> bigqueryConnectionCustomEndpoint;
+        private @Nullable Output<String> bigqueryDataTransferCustomEndpoint;
+        private @Nullable Output<String> bigqueryReservationCustomEndpoint;
+        private @Nullable Output<String> bigtableCustomEndpoint;
+        private @Nullable Output<String> billingCustomEndpoint;
+        private @Nullable Output<String> billingProject;
+        private @Nullable Output<String> binaryAuthorizationCustomEndpoint;
+        private @Nullable Output<String> cloudAssetCustomEndpoint;
+        private @Nullable Output<String> cloudBillingCustomEndpoint;
+        private @Nullable Output<String> cloudBuildCustomEndpoint;
+        private @Nullable Output<String> cloudBuildWorkerPoolCustomEndpoint;
+        private @Nullable Output<String> cloudFunctionsCustomEndpoint;
+        private @Nullable Output<String> cloudIdentityCustomEndpoint;
+        private @Nullable Output<String> cloudIotCustomEndpoint;
+        private @Nullable Output<String> cloudResourceManagerCustomEndpoint;
+        private @Nullable Output<String> cloudRunCustomEndpoint;
+        private @Nullable Output<String> cloudSchedulerCustomEndpoint;
+        private @Nullable Output<String> cloudTasksCustomEndpoint;
+        private @Nullable Output<String> composerCustomEndpoint;
+        private @Nullable Output<String> computeCustomEndpoint;
+        private @Nullable Output<String> containerAnalysisCustomEndpoint;
+        private @Nullable Output<String> containerAwsCustomEndpoint;
+        private @Nullable Output<String> containerAzureCustomEndpoint;
+        private @Nullable Output<String> containerCustomEndpoint;
+        private @Nullable Output<String> credentials;
+        private @Nullable Output<String> dataCatalogCustomEndpoint;
+        private @Nullable Output<String> dataFusionCustomEndpoint;
+        private @Nullable Output<String> dataLossPreventionCustomEndpoint;
+        private @Nullable Output<String> dataflowCustomEndpoint;
+        private @Nullable Output<String> dataprocCustomEndpoint;
+        private @Nullable Output<String> dataprocMetastoreCustomEndpoint;
+        private @Nullable Output<String> datastoreCustomEndpoint;
+        private @Nullable Output<String> deploymentManagerCustomEndpoint;
+        private @Nullable Output<String> dialogflowCustomEndpoint;
+        private @Nullable Output<String> dialogflowCxCustomEndpoint;
+        private @Nullable Output<Boolean> disableGooglePartnerName;
+        private @Nullable Output<String> dnsCustomEndpoint;
+        private @Nullable Output<String> essentialContactsCustomEndpoint;
+        private @Nullable Output<String> eventarcCustomEndpoint;
+        private @Nullable Output<String> filestoreCustomEndpoint;
+        private @Nullable Output<String> firebaseCustomEndpoint;
+        private @Nullable Output<String> firestoreCustomEndpoint;
+        private @Nullable Output<String> gameServicesCustomEndpoint;
+        private @Nullable Output<String> gkeHubCustomEndpoint;
+        private @Nullable Output<String> gkehubFeatureCustomEndpoint;
+        private @Nullable Output<String> googlePartnerName;
+        private @Nullable Output<String> healthcareCustomEndpoint;
+        private @Nullable Output<String> iamBetaCustomEndpoint;
+        private @Nullable Output<String> iamCredentialsCustomEndpoint;
+        private @Nullable Output<String> iamCustomEndpoint;
+        private @Nullable Output<String> iapCustomEndpoint;
+        private @Nullable Output<String> identityPlatformCustomEndpoint;
+        private @Nullable Output<String> impersonateServiceAccount;
+        private @Nullable Output<List<String>> impersonateServiceAccountDelegates;
+        private @Nullable Output<String> kmsCustomEndpoint;
+        private @Nullable Output<String> loggingCustomEndpoint;
+        private @Nullable Output<String> memcacheCustomEndpoint;
+        private @Nullable Output<String> mlEngineCustomEndpoint;
+        private @Nullable Output<String> monitoringCustomEndpoint;
+        private @Nullable Output<String> networkConnectivityCustomEndpoint;
+        private @Nullable Output<String> networkManagementCustomEndpoint;
+        private @Nullable Output<String> networkServicesCustomEndpoint;
+        private @Nullable Output<String> notebooksCustomEndpoint;
+        private @Nullable Output<String> orgPolicyCustomEndpoint;
+        private @Nullable Output<String> osConfigCustomEndpoint;
+        private @Nullable Output<String> osLoginCustomEndpoint;
+        private @Nullable Output<String> privatecaCustomEndpoint;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> pubsubCustomEndpoint;
+        private @Nullable Output<String> pubsubLiteCustomEndpoint;
+        private @Nullable Output<String> recaptchaEnterpriseCustomEndpoint;
+        private @Nullable Output<String> redisCustomEndpoint;
+        private @Nullable Output<String> region;
+        private @Nullable Output<String> requestReason;
+        private @Nullable Output<String> requestTimeout;
+        private @Nullable Output<String> resourceManagerCustomEndpoint;
+        private @Nullable Output<String> resourceManagerV2CustomEndpoint;
+        private @Nullable Output<String> runtimeConfigCustomEndpoint;
+        private @Nullable Output<String> runtimeconfigCustomEndpoint;
+        private @Nullable Output<List<String>> scopes;
+        private @Nullable Output<String> secretManagerCustomEndpoint;
+        private @Nullable Output<String> securityCenterCustomEndpoint;
+        private @Nullable Output<String> securityScannerCustomEndpoint;
+        private @Nullable Output<String> serviceDirectoryCustomEndpoint;
+        private @Nullable Output<String> serviceManagementCustomEndpoint;
+        private @Nullable Output<String> serviceNetworkingCustomEndpoint;
+        private @Nullable Output<String> serviceUsageCustomEndpoint;
+        private @Nullable Output<String> sourceRepoCustomEndpoint;
+        private @Nullable Output<String> spannerCustomEndpoint;
+        private @Nullable Output<String> sqlCustomEndpoint;
+        private @Nullable Output<String> storageCustomEndpoint;
+        private @Nullable Output<String> storageTransferCustomEndpoint;
+        private @Nullable Output<String> tagsCustomEndpoint;
+        private @Nullable Output<String> tpuCustomEndpoint;
+        private @Nullable Output<Boolean> userProjectOverride;
+        private @Nullable Output<String> vertexAiCustomEndpoint;
+        private @Nullable Output<String> vpcAccessCustomEndpoint;
+        private @Nullable Output<String> workflowsCustomEndpoint;
+        private @Nullable Output<String> zone;
 
         public Builder() {
     	      // Empty
@@ -1362,1103 +1362,1103 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zone = defaults.zone;
         }
 
-        public Builder accessApprovalCustomEndpoint(@Nullable Input<String> accessApprovalCustomEndpoint) {
+        public Builder accessApprovalCustomEndpoint(@Nullable Output<String> accessApprovalCustomEndpoint) {
             this.accessApprovalCustomEndpoint = accessApprovalCustomEndpoint;
             return this;
         }
 
         public Builder accessApprovalCustomEndpoint(@Nullable String accessApprovalCustomEndpoint) {
-            this.accessApprovalCustomEndpoint = Input.ofNullable(accessApprovalCustomEndpoint);
+            this.accessApprovalCustomEndpoint = Output.ofNullable(accessApprovalCustomEndpoint);
             return this;
         }
 
-        public Builder accessContextManagerCustomEndpoint(@Nullable Input<String> accessContextManagerCustomEndpoint) {
+        public Builder accessContextManagerCustomEndpoint(@Nullable Output<String> accessContextManagerCustomEndpoint) {
             this.accessContextManagerCustomEndpoint = accessContextManagerCustomEndpoint;
             return this;
         }
 
         public Builder accessContextManagerCustomEndpoint(@Nullable String accessContextManagerCustomEndpoint) {
-            this.accessContextManagerCustomEndpoint = Input.ofNullable(accessContextManagerCustomEndpoint);
+            this.accessContextManagerCustomEndpoint = Output.ofNullable(accessContextManagerCustomEndpoint);
             return this;
         }
 
-        public Builder accessToken(@Nullable Input<String> accessToken) {
+        public Builder accessToken(@Nullable Output<String> accessToken) {
             this.accessToken = accessToken;
             return this;
         }
 
         public Builder accessToken(@Nullable String accessToken) {
-            this.accessToken = Input.ofNullable(accessToken);
+            this.accessToken = Output.ofNullable(accessToken);
             return this;
         }
 
-        public Builder activeDirectoryCustomEndpoint(@Nullable Input<String> activeDirectoryCustomEndpoint) {
+        public Builder activeDirectoryCustomEndpoint(@Nullable Output<String> activeDirectoryCustomEndpoint) {
             this.activeDirectoryCustomEndpoint = activeDirectoryCustomEndpoint;
             return this;
         }
 
         public Builder activeDirectoryCustomEndpoint(@Nullable String activeDirectoryCustomEndpoint) {
-            this.activeDirectoryCustomEndpoint = Input.ofNullable(activeDirectoryCustomEndpoint);
+            this.activeDirectoryCustomEndpoint = Output.ofNullable(activeDirectoryCustomEndpoint);
             return this;
         }
 
-        public Builder apiGatewayCustomEndpoint(@Nullable Input<String> apiGatewayCustomEndpoint) {
+        public Builder apiGatewayCustomEndpoint(@Nullable Output<String> apiGatewayCustomEndpoint) {
             this.apiGatewayCustomEndpoint = apiGatewayCustomEndpoint;
             return this;
         }
 
         public Builder apiGatewayCustomEndpoint(@Nullable String apiGatewayCustomEndpoint) {
-            this.apiGatewayCustomEndpoint = Input.ofNullable(apiGatewayCustomEndpoint);
+            this.apiGatewayCustomEndpoint = Output.ofNullable(apiGatewayCustomEndpoint);
             return this;
         }
 
-        public Builder apigeeCustomEndpoint(@Nullable Input<String> apigeeCustomEndpoint) {
+        public Builder apigeeCustomEndpoint(@Nullable Output<String> apigeeCustomEndpoint) {
             this.apigeeCustomEndpoint = apigeeCustomEndpoint;
             return this;
         }
 
         public Builder apigeeCustomEndpoint(@Nullable String apigeeCustomEndpoint) {
-            this.apigeeCustomEndpoint = Input.ofNullable(apigeeCustomEndpoint);
+            this.apigeeCustomEndpoint = Output.ofNullable(apigeeCustomEndpoint);
             return this;
         }
 
-        public Builder appEngineCustomEndpoint(@Nullable Input<String> appEngineCustomEndpoint) {
+        public Builder appEngineCustomEndpoint(@Nullable Output<String> appEngineCustomEndpoint) {
             this.appEngineCustomEndpoint = appEngineCustomEndpoint;
             return this;
         }
 
         public Builder appEngineCustomEndpoint(@Nullable String appEngineCustomEndpoint) {
-            this.appEngineCustomEndpoint = Input.ofNullable(appEngineCustomEndpoint);
+            this.appEngineCustomEndpoint = Output.ofNullable(appEngineCustomEndpoint);
             return this;
         }
 
-        public Builder artifactRegistryCustomEndpoint(@Nullable Input<String> artifactRegistryCustomEndpoint) {
+        public Builder artifactRegistryCustomEndpoint(@Nullable Output<String> artifactRegistryCustomEndpoint) {
             this.artifactRegistryCustomEndpoint = artifactRegistryCustomEndpoint;
             return this;
         }
 
         public Builder artifactRegistryCustomEndpoint(@Nullable String artifactRegistryCustomEndpoint) {
-            this.artifactRegistryCustomEndpoint = Input.ofNullable(artifactRegistryCustomEndpoint);
+            this.artifactRegistryCustomEndpoint = Output.ofNullable(artifactRegistryCustomEndpoint);
             return this;
         }
 
-        public Builder assuredWorkloadsCustomEndpoint(@Nullable Input<String> assuredWorkloadsCustomEndpoint) {
+        public Builder assuredWorkloadsCustomEndpoint(@Nullable Output<String> assuredWorkloadsCustomEndpoint) {
             this.assuredWorkloadsCustomEndpoint = assuredWorkloadsCustomEndpoint;
             return this;
         }
 
         public Builder assuredWorkloadsCustomEndpoint(@Nullable String assuredWorkloadsCustomEndpoint) {
-            this.assuredWorkloadsCustomEndpoint = Input.ofNullable(assuredWorkloadsCustomEndpoint);
+            this.assuredWorkloadsCustomEndpoint = Output.ofNullable(assuredWorkloadsCustomEndpoint);
             return this;
         }
 
-        public Builder batching(@Nullable Input<ProviderBatchingArgs> batching) {
+        public Builder batching(@Nullable Output<ProviderBatchingArgs> batching) {
             this.batching = batching;
             return this;
         }
 
         public Builder batching(@Nullable ProviderBatchingArgs batching) {
-            this.batching = Input.ofNullable(batching);
+            this.batching = Output.ofNullable(batching);
             return this;
         }
 
-        public Builder bigQueryCustomEndpoint(@Nullable Input<String> bigQueryCustomEndpoint) {
+        public Builder bigQueryCustomEndpoint(@Nullable Output<String> bigQueryCustomEndpoint) {
             this.bigQueryCustomEndpoint = bigQueryCustomEndpoint;
             return this;
         }
 
         public Builder bigQueryCustomEndpoint(@Nullable String bigQueryCustomEndpoint) {
-            this.bigQueryCustomEndpoint = Input.ofNullable(bigQueryCustomEndpoint);
+            this.bigQueryCustomEndpoint = Output.ofNullable(bigQueryCustomEndpoint);
             return this;
         }
 
-        public Builder bigqueryConnectionCustomEndpoint(@Nullable Input<String> bigqueryConnectionCustomEndpoint) {
+        public Builder bigqueryConnectionCustomEndpoint(@Nullable Output<String> bigqueryConnectionCustomEndpoint) {
             this.bigqueryConnectionCustomEndpoint = bigqueryConnectionCustomEndpoint;
             return this;
         }
 
         public Builder bigqueryConnectionCustomEndpoint(@Nullable String bigqueryConnectionCustomEndpoint) {
-            this.bigqueryConnectionCustomEndpoint = Input.ofNullable(bigqueryConnectionCustomEndpoint);
+            this.bigqueryConnectionCustomEndpoint = Output.ofNullable(bigqueryConnectionCustomEndpoint);
             return this;
         }
 
-        public Builder bigqueryDataTransferCustomEndpoint(@Nullable Input<String> bigqueryDataTransferCustomEndpoint) {
+        public Builder bigqueryDataTransferCustomEndpoint(@Nullable Output<String> bigqueryDataTransferCustomEndpoint) {
             this.bigqueryDataTransferCustomEndpoint = bigqueryDataTransferCustomEndpoint;
             return this;
         }
 
         public Builder bigqueryDataTransferCustomEndpoint(@Nullable String bigqueryDataTransferCustomEndpoint) {
-            this.bigqueryDataTransferCustomEndpoint = Input.ofNullable(bigqueryDataTransferCustomEndpoint);
+            this.bigqueryDataTransferCustomEndpoint = Output.ofNullable(bigqueryDataTransferCustomEndpoint);
             return this;
         }
 
-        public Builder bigqueryReservationCustomEndpoint(@Nullable Input<String> bigqueryReservationCustomEndpoint) {
+        public Builder bigqueryReservationCustomEndpoint(@Nullable Output<String> bigqueryReservationCustomEndpoint) {
             this.bigqueryReservationCustomEndpoint = bigqueryReservationCustomEndpoint;
             return this;
         }
 
         public Builder bigqueryReservationCustomEndpoint(@Nullable String bigqueryReservationCustomEndpoint) {
-            this.bigqueryReservationCustomEndpoint = Input.ofNullable(bigqueryReservationCustomEndpoint);
+            this.bigqueryReservationCustomEndpoint = Output.ofNullable(bigqueryReservationCustomEndpoint);
             return this;
         }
 
-        public Builder bigtableCustomEndpoint(@Nullable Input<String> bigtableCustomEndpoint) {
+        public Builder bigtableCustomEndpoint(@Nullable Output<String> bigtableCustomEndpoint) {
             this.bigtableCustomEndpoint = bigtableCustomEndpoint;
             return this;
         }
 
         public Builder bigtableCustomEndpoint(@Nullable String bigtableCustomEndpoint) {
-            this.bigtableCustomEndpoint = Input.ofNullable(bigtableCustomEndpoint);
+            this.bigtableCustomEndpoint = Output.ofNullable(bigtableCustomEndpoint);
             return this;
         }
 
-        public Builder billingCustomEndpoint(@Nullable Input<String> billingCustomEndpoint) {
+        public Builder billingCustomEndpoint(@Nullable Output<String> billingCustomEndpoint) {
             this.billingCustomEndpoint = billingCustomEndpoint;
             return this;
         }
 
         public Builder billingCustomEndpoint(@Nullable String billingCustomEndpoint) {
-            this.billingCustomEndpoint = Input.ofNullable(billingCustomEndpoint);
+            this.billingCustomEndpoint = Output.ofNullable(billingCustomEndpoint);
             return this;
         }
 
-        public Builder billingProject(@Nullable Input<String> billingProject) {
+        public Builder billingProject(@Nullable Output<String> billingProject) {
             this.billingProject = billingProject;
             return this;
         }
 
         public Builder billingProject(@Nullable String billingProject) {
-            this.billingProject = Input.ofNullable(billingProject);
+            this.billingProject = Output.ofNullable(billingProject);
             return this;
         }
 
-        public Builder binaryAuthorizationCustomEndpoint(@Nullable Input<String> binaryAuthorizationCustomEndpoint) {
+        public Builder binaryAuthorizationCustomEndpoint(@Nullable Output<String> binaryAuthorizationCustomEndpoint) {
             this.binaryAuthorizationCustomEndpoint = binaryAuthorizationCustomEndpoint;
             return this;
         }
 
         public Builder binaryAuthorizationCustomEndpoint(@Nullable String binaryAuthorizationCustomEndpoint) {
-            this.binaryAuthorizationCustomEndpoint = Input.ofNullable(binaryAuthorizationCustomEndpoint);
+            this.binaryAuthorizationCustomEndpoint = Output.ofNullable(binaryAuthorizationCustomEndpoint);
             return this;
         }
 
-        public Builder cloudAssetCustomEndpoint(@Nullable Input<String> cloudAssetCustomEndpoint) {
+        public Builder cloudAssetCustomEndpoint(@Nullable Output<String> cloudAssetCustomEndpoint) {
             this.cloudAssetCustomEndpoint = cloudAssetCustomEndpoint;
             return this;
         }
 
         public Builder cloudAssetCustomEndpoint(@Nullable String cloudAssetCustomEndpoint) {
-            this.cloudAssetCustomEndpoint = Input.ofNullable(cloudAssetCustomEndpoint);
+            this.cloudAssetCustomEndpoint = Output.ofNullable(cloudAssetCustomEndpoint);
             return this;
         }
 
-        public Builder cloudBillingCustomEndpoint(@Nullable Input<String> cloudBillingCustomEndpoint) {
+        public Builder cloudBillingCustomEndpoint(@Nullable Output<String> cloudBillingCustomEndpoint) {
             this.cloudBillingCustomEndpoint = cloudBillingCustomEndpoint;
             return this;
         }
 
         public Builder cloudBillingCustomEndpoint(@Nullable String cloudBillingCustomEndpoint) {
-            this.cloudBillingCustomEndpoint = Input.ofNullable(cloudBillingCustomEndpoint);
+            this.cloudBillingCustomEndpoint = Output.ofNullable(cloudBillingCustomEndpoint);
             return this;
         }
 
-        public Builder cloudBuildCustomEndpoint(@Nullable Input<String> cloudBuildCustomEndpoint) {
+        public Builder cloudBuildCustomEndpoint(@Nullable Output<String> cloudBuildCustomEndpoint) {
             this.cloudBuildCustomEndpoint = cloudBuildCustomEndpoint;
             return this;
         }
 
         public Builder cloudBuildCustomEndpoint(@Nullable String cloudBuildCustomEndpoint) {
-            this.cloudBuildCustomEndpoint = Input.ofNullable(cloudBuildCustomEndpoint);
+            this.cloudBuildCustomEndpoint = Output.ofNullable(cloudBuildCustomEndpoint);
             return this;
         }
 
-        public Builder cloudBuildWorkerPoolCustomEndpoint(@Nullable Input<String> cloudBuildWorkerPoolCustomEndpoint) {
+        public Builder cloudBuildWorkerPoolCustomEndpoint(@Nullable Output<String> cloudBuildWorkerPoolCustomEndpoint) {
             this.cloudBuildWorkerPoolCustomEndpoint = cloudBuildWorkerPoolCustomEndpoint;
             return this;
         }
 
         public Builder cloudBuildWorkerPoolCustomEndpoint(@Nullable String cloudBuildWorkerPoolCustomEndpoint) {
-            this.cloudBuildWorkerPoolCustomEndpoint = Input.ofNullable(cloudBuildWorkerPoolCustomEndpoint);
+            this.cloudBuildWorkerPoolCustomEndpoint = Output.ofNullable(cloudBuildWorkerPoolCustomEndpoint);
             return this;
         }
 
-        public Builder cloudFunctionsCustomEndpoint(@Nullable Input<String> cloudFunctionsCustomEndpoint) {
+        public Builder cloudFunctionsCustomEndpoint(@Nullable Output<String> cloudFunctionsCustomEndpoint) {
             this.cloudFunctionsCustomEndpoint = cloudFunctionsCustomEndpoint;
             return this;
         }
 
         public Builder cloudFunctionsCustomEndpoint(@Nullable String cloudFunctionsCustomEndpoint) {
-            this.cloudFunctionsCustomEndpoint = Input.ofNullable(cloudFunctionsCustomEndpoint);
+            this.cloudFunctionsCustomEndpoint = Output.ofNullable(cloudFunctionsCustomEndpoint);
             return this;
         }
 
-        public Builder cloudIdentityCustomEndpoint(@Nullable Input<String> cloudIdentityCustomEndpoint) {
+        public Builder cloudIdentityCustomEndpoint(@Nullable Output<String> cloudIdentityCustomEndpoint) {
             this.cloudIdentityCustomEndpoint = cloudIdentityCustomEndpoint;
             return this;
         }
 
         public Builder cloudIdentityCustomEndpoint(@Nullable String cloudIdentityCustomEndpoint) {
-            this.cloudIdentityCustomEndpoint = Input.ofNullable(cloudIdentityCustomEndpoint);
+            this.cloudIdentityCustomEndpoint = Output.ofNullable(cloudIdentityCustomEndpoint);
             return this;
         }
 
-        public Builder cloudIotCustomEndpoint(@Nullable Input<String> cloudIotCustomEndpoint) {
+        public Builder cloudIotCustomEndpoint(@Nullable Output<String> cloudIotCustomEndpoint) {
             this.cloudIotCustomEndpoint = cloudIotCustomEndpoint;
             return this;
         }
 
         public Builder cloudIotCustomEndpoint(@Nullable String cloudIotCustomEndpoint) {
-            this.cloudIotCustomEndpoint = Input.ofNullable(cloudIotCustomEndpoint);
+            this.cloudIotCustomEndpoint = Output.ofNullable(cloudIotCustomEndpoint);
             return this;
         }
 
-        public Builder cloudResourceManagerCustomEndpoint(@Nullable Input<String> cloudResourceManagerCustomEndpoint) {
+        public Builder cloudResourceManagerCustomEndpoint(@Nullable Output<String> cloudResourceManagerCustomEndpoint) {
             this.cloudResourceManagerCustomEndpoint = cloudResourceManagerCustomEndpoint;
             return this;
         }
 
         public Builder cloudResourceManagerCustomEndpoint(@Nullable String cloudResourceManagerCustomEndpoint) {
-            this.cloudResourceManagerCustomEndpoint = Input.ofNullable(cloudResourceManagerCustomEndpoint);
+            this.cloudResourceManagerCustomEndpoint = Output.ofNullable(cloudResourceManagerCustomEndpoint);
             return this;
         }
 
-        public Builder cloudRunCustomEndpoint(@Nullable Input<String> cloudRunCustomEndpoint) {
+        public Builder cloudRunCustomEndpoint(@Nullable Output<String> cloudRunCustomEndpoint) {
             this.cloudRunCustomEndpoint = cloudRunCustomEndpoint;
             return this;
         }
 
         public Builder cloudRunCustomEndpoint(@Nullable String cloudRunCustomEndpoint) {
-            this.cloudRunCustomEndpoint = Input.ofNullable(cloudRunCustomEndpoint);
+            this.cloudRunCustomEndpoint = Output.ofNullable(cloudRunCustomEndpoint);
             return this;
         }
 
-        public Builder cloudSchedulerCustomEndpoint(@Nullable Input<String> cloudSchedulerCustomEndpoint) {
+        public Builder cloudSchedulerCustomEndpoint(@Nullable Output<String> cloudSchedulerCustomEndpoint) {
             this.cloudSchedulerCustomEndpoint = cloudSchedulerCustomEndpoint;
             return this;
         }
 
         public Builder cloudSchedulerCustomEndpoint(@Nullable String cloudSchedulerCustomEndpoint) {
-            this.cloudSchedulerCustomEndpoint = Input.ofNullable(cloudSchedulerCustomEndpoint);
+            this.cloudSchedulerCustomEndpoint = Output.ofNullable(cloudSchedulerCustomEndpoint);
             return this;
         }
 
-        public Builder cloudTasksCustomEndpoint(@Nullable Input<String> cloudTasksCustomEndpoint) {
+        public Builder cloudTasksCustomEndpoint(@Nullable Output<String> cloudTasksCustomEndpoint) {
             this.cloudTasksCustomEndpoint = cloudTasksCustomEndpoint;
             return this;
         }
 
         public Builder cloudTasksCustomEndpoint(@Nullable String cloudTasksCustomEndpoint) {
-            this.cloudTasksCustomEndpoint = Input.ofNullable(cloudTasksCustomEndpoint);
+            this.cloudTasksCustomEndpoint = Output.ofNullable(cloudTasksCustomEndpoint);
             return this;
         }
 
-        public Builder composerCustomEndpoint(@Nullable Input<String> composerCustomEndpoint) {
+        public Builder composerCustomEndpoint(@Nullable Output<String> composerCustomEndpoint) {
             this.composerCustomEndpoint = composerCustomEndpoint;
             return this;
         }
 
         public Builder composerCustomEndpoint(@Nullable String composerCustomEndpoint) {
-            this.composerCustomEndpoint = Input.ofNullable(composerCustomEndpoint);
+            this.composerCustomEndpoint = Output.ofNullable(composerCustomEndpoint);
             return this;
         }
 
-        public Builder computeCustomEndpoint(@Nullable Input<String> computeCustomEndpoint) {
+        public Builder computeCustomEndpoint(@Nullable Output<String> computeCustomEndpoint) {
             this.computeCustomEndpoint = computeCustomEndpoint;
             return this;
         }
 
         public Builder computeCustomEndpoint(@Nullable String computeCustomEndpoint) {
-            this.computeCustomEndpoint = Input.ofNullable(computeCustomEndpoint);
+            this.computeCustomEndpoint = Output.ofNullable(computeCustomEndpoint);
             return this;
         }
 
-        public Builder containerAnalysisCustomEndpoint(@Nullable Input<String> containerAnalysisCustomEndpoint) {
+        public Builder containerAnalysisCustomEndpoint(@Nullable Output<String> containerAnalysisCustomEndpoint) {
             this.containerAnalysisCustomEndpoint = containerAnalysisCustomEndpoint;
             return this;
         }
 
         public Builder containerAnalysisCustomEndpoint(@Nullable String containerAnalysisCustomEndpoint) {
-            this.containerAnalysisCustomEndpoint = Input.ofNullable(containerAnalysisCustomEndpoint);
+            this.containerAnalysisCustomEndpoint = Output.ofNullable(containerAnalysisCustomEndpoint);
             return this;
         }
 
-        public Builder containerAwsCustomEndpoint(@Nullable Input<String> containerAwsCustomEndpoint) {
+        public Builder containerAwsCustomEndpoint(@Nullable Output<String> containerAwsCustomEndpoint) {
             this.containerAwsCustomEndpoint = containerAwsCustomEndpoint;
             return this;
         }
 
         public Builder containerAwsCustomEndpoint(@Nullable String containerAwsCustomEndpoint) {
-            this.containerAwsCustomEndpoint = Input.ofNullable(containerAwsCustomEndpoint);
+            this.containerAwsCustomEndpoint = Output.ofNullable(containerAwsCustomEndpoint);
             return this;
         }
 
-        public Builder containerAzureCustomEndpoint(@Nullable Input<String> containerAzureCustomEndpoint) {
+        public Builder containerAzureCustomEndpoint(@Nullable Output<String> containerAzureCustomEndpoint) {
             this.containerAzureCustomEndpoint = containerAzureCustomEndpoint;
             return this;
         }
 
         public Builder containerAzureCustomEndpoint(@Nullable String containerAzureCustomEndpoint) {
-            this.containerAzureCustomEndpoint = Input.ofNullable(containerAzureCustomEndpoint);
+            this.containerAzureCustomEndpoint = Output.ofNullable(containerAzureCustomEndpoint);
             return this;
         }
 
-        public Builder containerCustomEndpoint(@Nullable Input<String> containerCustomEndpoint) {
+        public Builder containerCustomEndpoint(@Nullable Output<String> containerCustomEndpoint) {
             this.containerCustomEndpoint = containerCustomEndpoint;
             return this;
         }
 
         public Builder containerCustomEndpoint(@Nullable String containerCustomEndpoint) {
-            this.containerCustomEndpoint = Input.ofNullable(containerCustomEndpoint);
+            this.containerCustomEndpoint = Output.ofNullable(containerCustomEndpoint);
             return this;
         }
 
-        public Builder credentials(@Nullable Input<String> credentials) {
+        public Builder credentials(@Nullable Output<String> credentials) {
             this.credentials = credentials;
             return this;
         }
 
         public Builder credentials(@Nullable String credentials) {
-            this.credentials = Input.ofNullable(credentials);
+            this.credentials = Output.ofNullable(credentials);
             return this;
         }
 
-        public Builder dataCatalogCustomEndpoint(@Nullable Input<String> dataCatalogCustomEndpoint) {
+        public Builder dataCatalogCustomEndpoint(@Nullable Output<String> dataCatalogCustomEndpoint) {
             this.dataCatalogCustomEndpoint = dataCatalogCustomEndpoint;
             return this;
         }
 
         public Builder dataCatalogCustomEndpoint(@Nullable String dataCatalogCustomEndpoint) {
-            this.dataCatalogCustomEndpoint = Input.ofNullable(dataCatalogCustomEndpoint);
+            this.dataCatalogCustomEndpoint = Output.ofNullable(dataCatalogCustomEndpoint);
             return this;
         }
 
-        public Builder dataFusionCustomEndpoint(@Nullable Input<String> dataFusionCustomEndpoint) {
+        public Builder dataFusionCustomEndpoint(@Nullable Output<String> dataFusionCustomEndpoint) {
             this.dataFusionCustomEndpoint = dataFusionCustomEndpoint;
             return this;
         }
 
         public Builder dataFusionCustomEndpoint(@Nullable String dataFusionCustomEndpoint) {
-            this.dataFusionCustomEndpoint = Input.ofNullable(dataFusionCustomEndpoint);
+            this.dataFusionCustomEndpoint = Output.ofNullable(dataFusionCustomEndpoint);
             return this;
         }
 
-        public Builder dataLossPreventionCustomEndpoint(@Nullable Input<String> dataLossPreventionCustomEndpoint) {
+        public Builder dataLossPreventionCustomEndpoint(@Nullable Output<String> dataLossPreventionCustomEndpoint) {
             this.dataLossPreventionCustomEndpoint = dataLossPreventionCustomEndpoint;
             return this;
         }
 
         public Builder dataLossPreventionCustomEndpoint(@Nullable String dataLossPreventionCustomEndpoint) {
-            this.dataLossPreventionCustomEndpoint = Input.ofNullable(dataLossPreventionCustomEndpoint);
+            this.dataLossPreventionCustomEndpoint = Output.ofNullable(dataLossPreventionCustomEndpoint);
             return this;
         }
 
-        public Builder dataflowCustomEndpoint(@Nullable Input<String> dataflowCustomEndpoint) {
+        public Builder dataflowCustomEndpoint(@Nullable Output<String> dataflowCustomEndpoint) {
             this.dataflowCustomEndpoint = dataflowCustomEndpoint;
             return this;
         }
 
         public Builder dataflowCustomEndpoint(@Nullable String dataflowCustomEndpoint) {
-            this.dataflowCustomEndpoint = Input.ofNullable(dataflowCustomEndpoint);
+            this.dataflowCustomEndpoint = Output.ofNullable(dataflowCustomEndpoint);
             return this;
         }
 
-        public Builder dataprocCustomEndpoint(@Nullable Input<String> dataprocCustomEndpoint) {
+        public Builder dataprocCustomEndpoint(@Nullable Output<String> dataprocCustomEndpoint) {
             this.dataprocCustomEndpoint = dataprocCustomEndpoint;
             return this;
         }
 
         public Builder dataprocCustomEndpoint(@Nullable String dataprocCustomEndpoint) {
-            this.dataprocCustomEndpoint = Input.ofNullable(dataprocCustomEndpoint);
+            this.dataprocCustomEndpoint = Output.ofNullable(dataprocCustomEndpoint);
             return this;
         }
 
-        public Builder dataprocMetastoreCustomEndpoint(@Nullable Input<String> dataprocMetastoreCustomEndpoint) {
+        public Builder dataprocMetastoreCustomEndpoint(@Nullable Output<String> dataprocMetastoreCustomEndpoint) {
             this.dataprocMetastoreCustomEndpoint = dataprocMetastoreCustomEndpoint;
             return this;
         }
 
         public Builder dataprocMetastoreCustomEndpoint(@Nullable String dataprocMetastoreCustomEndpoint) {
-            this.dataprocMetastoreCustomEndpoint = Input.ofNullable(dataprocMetastoreCustomEndpoint);
+            this.dataprocMetastoreCustomEndpoint = Output.ofNullable(dataprocMetastoreCustomEndpoint);
             return this;
         }
 
-        public Builder datastoreCustomEndpoint(@Nullable Input<String> datastoreCustomEndpoint) {
+        public Builder datastoreCustomEndpoint(@Nullable Output<String> datastoreCustomEndpoint) {
             this.datastoreCustomEndpoint = datastoreCustomEndpoint;
             return this;
         }
 
         public Builder datastoreCustomEndpoint(@Nullable String datastoreCustomEndpoint) {
-            this.datastoreCustomEndpoint = Input.ofNullable(datastoreCustomEndpoint);
+            this.datastoreCustomEndpoint = Output.ofNullable(datastoreCustomEndpoint);
             return this;
         }
 
-        public Builder deploymentManagerCustomEndpoint(@Nullable Input<String> deploymentManagerCustomEndpoint) {
+        public Builder deploymentManagerCustomEndpoint(@Nullable Output<String> deploymentManagerCustomEndpoint) {
             this.deploymentManagerCustomEndpoint = deploymentManagerCustomEndpoint;
             return this;
         }
 
         public Builder deploymentManagerCustomEndpoint(@Nullable String deploymentManagerCustomEndpoint) {
-            this.deploymentManagerCustomEndpoint = Input.ofNullable(deploymentManagerCustomEndpoint);
+            this.deploymentManagerCustomEndpoint = Output.ofNullable(deploymentManagerCustomEndpoint);
             return this;
         }
 
-        public Builder dialogflowCustomEndpoint(@Nullable Input<String> dialogflowCustomEndpoint) {
+        public Builder dialogflowCustomEndpoint(@Nullable Output<String> dialogflowCustomEndpoint) {
             this.dialogflowCustomEndpoint = dialogflowCustomEndpoint;
             return this;
         }
 
         public Builder dialogflowCustomEndpoint(@Nullable String dialogflowCustomEndpoint) {
-            this.dialogflowCustomEndpoint = Input.ofNullable(dialogflowCustomEndpoint);
+            this.dialogflowCustomEndpoint = Output.ofNullable(dialogflowCustomEndpoint);
             return this;
         }
 
-        public Builder dialogflowCxCustomEndpoint(@Nullable Input<String> dialogflowCxCustomEndpoint) {
+        public Builder dialogflowCxCustomEndpoint(@Nullable Output<String> dialogflowCxCustomEndpoint) {
             this.dialogflowCxCustomEndpoint = dialogflowCxCustomEndpoint;
             return this;
         }
 
         public Builder dialogflowCxCustomEndpoint(@Nullable String dialogflowCxCustomEndpoint) {
-            this.dialogflowCxCustomEndpoint = Input.ofNullable(dialogflowCxCustomEndpoint);
+            this.dialogflowCxCustomEndpoint = Output.ofNullable(dialogflowCxCustomEndpoint);
             return this;
         }
 
-        public Builder disableGooglePartnerName(@Nullable Input<Boolean> disableGooglePartnerName) {
+        public Builder disableGooglePartnerName(@Nullable Output<Boolean> disableGooglePartnerName) {
             this.disableGooglePartnerName = disableGooglePartnerName;
             return this;
         }
 
         public Builder disableGooglePartnerName(@Nullable Boolean disableGooglePartnerName) {
-            this.disableGooglePartnerName = Input.ofNullable(disableGooglePartnerName);
+            this.disableGooglePartnerName = Output.ofNullable(disableGooglePartnerName);
             return this;
         }
 
-        public Builder dnsCustomEndpoint(@Nullable Input<String> dnsCustomEndpoint) {
+        public Builder dnsCustomEndpoint(@Nullable Output<String> dnsCustomEndpoint) {
             this.dnsCustomEndpoint = dnsCustomEndpoint;
             return this;
         }
 
         public Builder dnsCustomEndpoint(@Nullable String dnsCustomEndpoint) {
-            this.dnsCustomEndpoint = Input.ofNullable(dnsCustomEndpoint);
+            this.dnsCustomEndpoint = Output.ofNullable(dnsCustomEndpoint);
             return this;
         }
 
-        public Builder essentialContactsCustomEndpoint(@Nullable Input<String> essentialContactsCustomEndpoint) {
+        public Builder essentialContactsCustomEndpoint(@Nullable Output<String> essentialContactsCustomEndpoint) {
             this.essentialContactsCustomEndpoint = essentialContactsCustomEndpoint;
             return this;
         }
 
         public Builder essentialContactsCustomEndpoint(@Nullable String essentialContactsCustomEndpoint) {
-            this.essentialContactsCustomEndpoint = Input.ofNullable(essentialContactsCustomEndpoint);
+            this.essentialContactsCustomEndpoint = Output.ofNullable(essentialContactsCustomEndpoint);
             return this;
         }
 
-        public Builder eventarcCustomEndpoint(@Nullable Input<String> eventarcCustomEndpoint) {
+        public Builder eventarcCustomEndpoint(@Nullable Output<String> eventarcCustomEndpoint) {
             this.eventarcCustomEndpoint = eventarcCustomEndpoint;
             return this;
         }
 
         public Builder eventarcCustomEndpoint(@Nullable String eventarcCustomEndpoint) {
-            this.eventarcCustomEndpoint = Input.ofNullable(eventarcCustomEndpoint);
+            this.eventarcCustomEndpoint = Output.ofNullable(eventarcCustomEndpoint);
             return this;
         }
 
-        public Builder filestoreCustomEndpoint(@Nullable Input<String> filestoreCustomEndpoint) {
+        public Builder filestoreCustomEndpoint(@Nullable Output<String> filestoreCustomEndpoint) {
             this.filestoreCustomEndpoint = filestoreCustomEndpoint;
             return this;
         }
 
         public Builder filestoreCustomEndpoint(@Nullable String filestoreCustomEndpoint) {
-            this.filestoreCustomEndpoint = Input.ofNullable(filestoreCustomEndpoint);
+            this.filestoreCustomEndpoint = Output.ofNullable(filestoreCustomEndpoint);
             return this;
         }
 
-        public Builder firebaseCustomEndpoint(@Nullable Input<String> firebaseCustomEndpoint) {
+        public Builder firebaseCustomEndpoint(@Nullable Output<String> firebaseCustomEndpoint) {
             this.firebaseCustomEndpoint = firebaseCustomEndpoint;
             return this;
         }
 
         public Builder firebaseCustomEndpoint(@Nullable String firebaseCustomEndpoint) {
-            this.firebaseCustomEndpoint = Input.ofNullable(firebaseCustomEndpoint);
+            this.firebaseCustomEndpoint = Output.ofNullable(firebaseCustomEndpoint);
             return this;
         }
 
-        public Builder firestoreCustomEndpoint(@Nullable Input<String> firestoreCustomEndpoint) {
+        public Builder firestoreCustomEndpoint(@Nullable Output<String> firestoreCustomEndpoint) {
             this.firestoreCustomEndpoint = firestoreCustomEndpoint;
             return this;
         }
 
         public Builder firestoreCustomEndpoint(@Nullable String firestoreCustomEndpoint) {
-            this.firestoreCustomEndpoint = Input.ofNullable(firestoreCustomEndpoint);
+            this.firestoreCustomEndpoint = Output.ofNullable(firestoreCustomEndpoint);
             return this;
         }
 
-        public Builder gameServicesCustomEndpoint(@Nullable Input<String> gameServicesCustomEndpoint) {
+        public Builder gameServicesCustomEndpoint(@Nullable Output<String> gameServicesCustomEndpoint) {
             this.gameServicesCustomEndpoint = gameServicesCustomEndpoint;
             return this;
         }
 
         public Builder gameServicesCustomEndpoint(@Nullable String gameServicesCustomEndpoint) {
-            this.gameServicesCustomEndpoint = Input.ofNullable(gameServicesCustomEndpoint);
+            this.gameServicesCustomEndpoint = Output.ofNullable(gameServicesCustomEndpoint);
             return this;
         }
 
-        public Builder gkeHubCustomEndpoint(@Nullable Input<String> gkeHubCustomEndpoint) {
+        public Builder gkeHubCustomEndpoint(@Nullable Output<String> gkeHubCustomEndpoint) {
             this.gkeHubCustomEndpoint = gkeHubCustomEndpoint;
             return this;
         }
 
         public Builder gkeHubCustomEndpoint(@Nullable String gkeHubCustomEndpoint) {
-            this.gkeHubCustomEndpoint = Input.ofNullable(gkeHubCustomEndpoint);
+            this.gkeHubCustomEndpoint = Output.ofNullable(gkeHubCustomEndpoint);
             return this;
         }
 
-        public Builder gkehubFeatureCustomEndpoint(@Nullable Input<String> gkehubFeatureCustomEndpoint) {
+        public Builder gkehubFeatureCustomEndpoint(@Nullable Output<String> gkehubFeatureCustomEndpoint) {
             this.gkehubFeatureCustomEndpoint = gkehubFeatureCustomEndpoint;
             return this;
         }
 
         public Builder gkehubFeatureCustomEndpoint(@Nullable String gkehubFeatureCustomEndpoint) {
-            this.gkehubFeatureCustomEndpoint = Input.ofNullable(gkehubFeatureCustomEndpoint);
+            this.gkehubFeatureCustomEndpoint = Output.ofNullable(gkehubFeatureCustomEndpoint);
             return this;
         }
 
-        public Builder googlePartnerName(@Nullable Input<String> googlePartnerName) {
+        public Builder googlePartnerName(@Nullable Output<String> googlePartnerName) {
             this.googlePartnerName = googlePartnerName;
             return this;
         }
 
         public Builder googlePartnerName(@Nullable String googlePartnerName) {
-            this.googlePartnerName = Input.ofNullable(googlePartnerName);
+            this.googlePartnerName = Output.ofNullable(googlePartnerName);
             return this;
         }
 
-        public Builder healthcareCustomEndpoint(@Nullable Input<String> healthcareCustomEndpoint) {
+        public Builder healthcareCustomEndpoint(@Nullable Output<String> healthcareCustomEndpoint) {
             this.healthcareCustomEndpoint = healthcareCustomEndpoint;
             return this;
         }
 
         public Builder healthcareCustomEndpoint(@Nullable String healthcareCustomEndpoint) {
-            this.healthcareCustomEndpoint = Input.ofNullable(healthcareCustomEndpoint);
+            this.healthcareCustomEndpoint = Output.ofNullable(healthcareCustomEndpoint);
             return this;
         }
 
-        public Builder iamBetaCustomEndpoint(@Nullable Input<String> iamBetaCustomEndpoint) {
+        public Builder iamBetaCustomEndpoint(@Nullable Output<String> iamBetaCustomEndpoint) {
             this.iamBetaCustomEndpoint = iamBetaCustomEndpoint;
             return this;
         }
 
         public Builder iamBetaCustomEndpoint(@Nullable String iamBetaCustomEndpoint) {
-            this.iamBetaCustomEndpoint = Input.ofNullable(iamBetaCustomEndpoint);
+            this.iamBetaCustomEndpoint = Output.ofNullable(iamBetaCustomEndpoint);
             return this;
         }
 
-        public Builder iamCredentialsCustomEndpoint(@Nullable Input<String> iamCredentialsCustomEndpoint) {
+        public Builder iamCredentialsCustomEndpoint(@Nullable Output<String> iamCredentialsCustomEndpoint) {
             this.iamCredentialsCustomEndpoint = iamCredentialsCustomEndpoint;
             return this;
         }
 
         public Builder iamCredentialsCustomEndpoint(@Nullable String iamCredentialsCustomEndpoint) {
-            this.iamCredentialsCustomEndpoint = Input.ofNullable(iamCredentialsCustomEndpoint);
+            this.iamCredentialsCustomEndpoint = Output.ofNullable(iamCredentialsCustomEndpoint);
             return this;
         }
 
-        public Builder iamCustomEndpoint(@Nullable Input<String> iamCustomEndpoint) {
+        public Builder iamCustomEndpoint(@Nullable Output<String> iamCustomEndpoint) {
             this.iamCustomEndpoint = iamCustomEndpoint;
             return this;
         }
 
         public Builder iamCustomEndpoint(@Nullable String iamCustomEndpoint) {
-            this.iamCustomEndpoint = Input.ofNullable(iamCustomEndpoint);
+            this.iamCustomEndpoint = Output.ofNullable(iamCustomEndpoint);
             return this;
         }
 
-        public Builder iapCustomEndpoint(@Nullable Input<String> iapCustomEndpoint) {
+        public Builder iapCustomEndpoint(@Nullable Output<String> iapCustomEndpoint) {
             this.iapCustomEndpoint = iapCustomEndpoint;
             return this;
         }
 
         public Builder iapCustomEndpoint(@Nullable String iapCustomEndpoint) {
-            this.iapCustomEndpoint = Input.ofNullable(iapCustomEndpoint);
+            this.iapCustomEndpoint = Output.ofNullable(iapCustomEndpoint);
             return this;
         }
 
-        public Builder identityPlatformCustomEndpoint(@Nullable Input<String> identityPlatformCustomEndpoint) {
+        public Builder identityPlatformCustomEndpoint(@Nullable Output<String> identityPlatformCustomEndpoint) {
             this.identityPlatformCustomEndpoint = identityPlatformCustomEndpoint;
             return this;
         }
 
         public Builder identityPlatformCustomEndpoint(@Nullable String identityPlatformCustomEndpoint) {
-            this.identityPlatformCustomEndpoint = Input.ofNullable(identityPlatformCustomEndpoint);
+            this.identityPlatformCustomEndpoint = Output.ofNullable(identityPlatformCustomEndpoint);
             return this;
         }
 
-        public Builder impersonateServiceAccount(@Nullable Input<String> impersonateServiceAccount) {
+        public Builder impersonateServiceAccount(@Nullable Output<String> impersonateServiceAccount) {
             this.impersonateServiceAccount = impersonateServiceAccount;
             return this;
         }
 
         public Builder impersonateServiceAccount(@Nullable String impersonateServiceAccount) {
-            this.impersonateServiceAccount = Input.ofNullable(impersonateServiceAccount);
+            this.impersonateServiceAccount = Output.ofNullable(impersonateServiceAccount);
             return this;
         }
 
-        public Builder impersonateServiceAccountDelegates(@Nullable Input<List<String>> impersonateServiceAccountDelegates) {
+        public Builder impersonateServiceAccountDelegates(@Nullable Output<List<String>> impersonateServiceAccountDelegates) {
             this.impersonateServiceAccountDelegates = impersonateServiceAccountDelegates;
             return this;
         }
 
         public Builder impersonateServiceAccountDelegates(@Nullable List<String> impersonateServiceAccountDelegates) {
-            this.impersonateServiceAccountDelegates = Input.ofNullable(impersonateServiceAccountDelegates);
+            this.impersonateServiceAccountDelegates = Output.ofNullable(impersonateServiceAccountDelegates);
             return this;
         }
 
-        public Builder kmsCustomEndpoint(@Nullable Input<String> kmsCustomEndpoint) {
+        public Builder kmsCustomEndpoint(@Nullable Output<String> kmsCustomEndpoint) {
             this.kmsCustomEndpoint = kmsCustomEndpoint;
             return this;
         }
 
         public Builder kmsCustomEndpoint(@Nullable String kmsCustomEndpoint) {
-            this.kmsCustomEndpoint = Input.ofNullable(kmsCustomEndpoint);
+            this.kmsCustomEndpoint = Output.ofNullable(kmsCustomEndpoint);
             return this;
         }
 
-        public Builder loggingCustomEndpoint(@Nullable Input<String> loggingCustomEndpoint) {
+        public Builder loggingCustomEndpoint(@Nullable Output<String> loggingCustomEndpoint) {
             this.loggingCustomEndpoint = loggingCustomEndpoint;
             return this;
         }
 
         public Builder loggingCustomEndpoint(@Nullable String loggingCustomEndpoint) {
-            this.loggingCustomEndpoint = Input.ofNullable(loggingCustomEndpoint);
+            this.loggingCustomEndpoint = Output.ofNullable(loggingCustomEndpoint);
             return this;
         }
 
-        public Builder memcacheCustomEndpoint(@Nullable Input<String> memcacheCustomEndpoint) {
+        public Builder memcacheCustomEndpoint(@Nullable Output<String> memcacheCustomEndpoint) {
             this.memcacheCustomEndpoint = memcacheCustomEndpoint;
             return this;
         }
 
         public Builder memcacheCustomEndpoint(@Nullable String memcacheCustomEndpoint) {
-            this.memcacheCustomEndpoint = Input.ofNullable(memcacheCustomEndpoint);
+            this.memcacheCustomEndpoint = Output.ofNullable(memcacheCustomEndpoint);
             return this;
         }
 
-        public Builder mlEngineCustomEndpoint(@Nullable Input<String> mlEngineCustomEndpoint) {
+        public Builder mlEngineCustomEndpoint(@Nullable Output<String> mlEngineCustomEndpoint) {
             this.mlEngineCustomEndpoint = mlEngineCustomEndpoint;
             return this;
         }
 
         public Builder mlEngineCustomEndpoint(@Nullable String mlEngineCustomEndpoint) {
-            this.mlEngineCustomEndpoint = Input.ofNullable(mlEngineCustomEndpoint);
+            this.mlEngineCustomEndpoint = Output.ofNullable(mlEngineCustomEndpoint);
             return this;
         }
 
-        public Builder monitoringCustomEndpoint(@Nullable Input<String> monitoringCustomEndpoint) {
+        public Builder monitoringCustomEndpoint(@Nullable Output<String> monitoringCustomEndpoint) {
             this.monitoringCustomEndpoint = monitoringCustomEndpoint;
             return this;
         }
 
         public Builder monitoringCustomEndpoint(@Nullable String monitoringCustomEndpoint) {
-            this.monitoringCustomEndpoint = Input.ofNullable(monitoringCustomEndpoint);
+            this.monitoringCustomEndpoint = Output.ofNullable(monitoringCustomEndpoint);
             return this;
         }
 
-        public Builder networkConnectivityCustomEndpoint(@Nullable Input<String> networkConnectivityCustomEndpoint) {
+        public Builder networkConnectivityCustomEndpoint(@Nullable Output<String> networkConnectivityCustomEndpoint) {
             this.networkConnectivityCustomEndpoint = networkConnectivityCustomEndpoint;
             return this;
         }
 
         public Builder networkConnectivityCustomEndpoint(@Nullable String networkConnectivityCustomEndpoint) {
-            this.networkConnectivityCustomEndpoint = Input.ofNullable(networkConnectivityCustomEndpoint);
+            this.networkConnectivityCustomEndpoint = Output.ofNullable(networkConnectivityCustomEndpoint);
             return this;
         }
 
-        public Builder networkManagementCustomEndpoint(@Nullable Input<String> networkManagementCustomEndpoint) {
+        public Builder networkManagementCustomEndpoint(@Nullable Output<String> networkManagementCustomEndpoint) {
             this.networkManagementCustomEndpoint = networkManagementCustomEndpoint;
             return this;
         }
 
         public Builder networkManagementCustomEndpoint(@Nullable String networkManagementCustomEndpoint) {
-            this.networkManagementCustomEndpoint = Input.ofNullable(networkManagementCustomEndpoint);
+            this.networkManagementCustomEndpoint = Output.ofNullable(networkManagementCustomEndpoint);
             return this;
         }
 
-        public Builder networkServicesCustomEndpoint(@Nullable Input<String> networkServicesCustomEndpoint) {
+        public Builder networkServicesCustomEndpoint(@Nullable Output<String> networkServicesCustomEndpoint) {
             this.networkServicesCustomEndpoint = networkServicesCustomEndpoint;
             return this;
         }
 
         public Builder networkServicesCustomEndpoint(@Nullable String networkServicesCustomEndpoint) {
-            this.networkServicesCustomEndpoint = Input.ofNullable(networkServicesCustomEndpoint);
+            this.networkServicesCustomEndpoint = Output.ofNullable(networkServicesCustomEndpoint);
             return this;
         }
 
-        public Builder notebooksCustomEndpoint(@Nullable Input<String> notebooksCustomEndpoint) {
+        public Builder notebooksCustomEndpoint(@Nullable Output<String> notebooksCustomEndpoint) {
             this.notebooksCustomEndpoint = notebooksCustomEndpoint;
             return this;
         }
 
         public Builder notebooksCustomEndpoint(@Nullable String notebooksCustomEndpoint) {
-            this.notebooksCustomEndpoint = Input.ofNullable(notebooksCustomEndpoint);
+            this.notebooksCustomEndpoint = Output.ofNullable(notebooksCustomEndpoint);
             return this;
         }
 
-        public Builder orgPolicyCustomEndpoint(@Nullable Input<String> orgPolicyCustomEndpoint) {
+        public Builder orgPolicyCustomEndpoint(@Nullable Output<String> orgPolicyCustomEndpoint) {
             this.orgPolicyCustomEndpoint = orgPolicyCustomEndpoint;
             return this;
         }
 
         public Builder orgPolicyCustomEndpoint(@Nullable String orgPolicyCustomEndpoint) {
-            this.orgPolicyCustomEndpoint = Input.ofNullable(orgPolicyCustomEndpoint);
+            this.orgPolicyCustomEndpoint = Output.ofNullable(orgPolicyCustomEndpoint);
             return this;
         }
 
-        public Builder osConfigCustomEndpoint(@Nullable Input<String> osConfigCustomEndpoint) {
+        public Builder osConfigCustomEndpoint(@Nullable Output<String> osConfigCustomEndpoint) {
             this.osConfigCustomEndpoint = osConfigCustomEndpoint;
             return this;
         }
 
         public Builder osConfigCustomEndpoint(@Nullable String osConfigCustomEndpoint) {
-            this.osConfigCustomEndpoint = Input.ofNullable(osConfigCustomEndpoint);
+            this.osConfigCustomEndpoint = Output.ofNullable(osConfigCustomEndpoint);
             return this;
         }
 
-        public Builder osLoginCustomEndpoint(@Nullable Input<String> osLoginCustomEndpoint) {
+        public Builder osLoginCustomEndpoint(@Nullable Output<String> osLoginCustomEndpoint) {
             this.osLoginCustomEndpoint = osLoginCustomEndpoint;
             return this;
         }
 
         public Builder osLoginCustomEndpoint(@Nullable String osLoginCustomEndpoint) {
-            this.osLoginCustomEndpoint = Input.ofNullable(osLoginCustomEndpoint);
+            this.osLoginCustomEndpoint = Output.ofNullable(osLoginCustomEndpoint);
             return this;
         }
 
-        public Builder privatecaCustomEndpoint(@Nullable Input<String> privatecaCustomEndpoint) {
+        public Builder privatecaCustomEndpoint(@Nullable Output<String> privatecaCustomEndpoint) {
             this.privatecaCustomEndpoint = privatecaCustomEndpoint;
             return this;
         }
 
         public Builder privatecaCustomEndpoint(@Nullable String privatecaCustomEndpoint) {
-            this.privatecaCustomEndpoint = Input.ofNullable(privatecaCustomEndpoint);
+            this.privatecaCustomEndpoint = Output.ofNullable(privatecaCustomEndpoint);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder pubsubCustomEndpoint(@Nullable Input<String> pubsubCustomEndpoint) {
+        public Builder pubsubCustomEndpoint(@Nullable Output<String> pubsubCustomEndpoint) {
             this.pubsubCustomEndpoint = pubsubCustomEndpoint;
             return this;
         }
 
         public Builder pubsubCustomEndpoint(@Nullable String pubsubCustomEndpoint) {
-            this.pubsubCustomEndpoint = Input.ofNullable(pubsubCustomEndpoint);
+            this.pubsubCustomEndpoint = Output.ofNullable(pubsubCustomEndpoint);
             return this;
         }
 
-        public Builder pubsubLiteCustomEndpoint(@Nullable Input<String> pubsubLiteCustomEndpoint) {
+        public Builder pubsubLiteCustomEndpoint(@Nullable Output<String> pubsubLiteCustomEndpoint) {
             this.pubsubLiteCustomEndpoint = pubsubLiteCustomEndpoint;
             return this;
         }
 
         public Builder pubsubLiteCustomEndpoint(@Nullable String pubsubLiteCustomEndpoint) {
-            this.pubsubLiteCustomEndpoint = Input.ofNullable(pubsubLiteCustomEndpoint);
+            this.pubsubLiteCustomEndpoint = Output.ofNullable(pubsubLiteCustomEndpoint);
             return this;
         }
 
-        public Builder recaptchaEnterpriseCustomEndpoint(@Nullable Input<String> recaptchaEnterpriseCustomEndpoint) {
+        public Builder recaptchaEnterpriseCustomEndpoint(@Nullable Output<String> recaptchaEnterpriseCustomEndpoint) {
             this.recaptchaEnterpriseCustomEndpoint = recaptchaEnterpriseCustomEndpoint;
             return this;
         }
 
         public Builder recaptchaEnterpriseCustomEndpoint(@Nullable String recaptchaEnterpriseCustomEndpoint) {
-            this.recaptchaEnterpriseCustomEndpoint = Input.ofNullable(recaptchaEnterpriseCustomEndpoint);
+            this.recaptchaEnterpriseCustomEndpoint = Output.ofNullable(recaptchaEnterpriseCustomEndpoint);
             return this;
         }
 
-        public Builder redisCustomEndpoint(@Nullable Input<String> redisCustomEndpoint) {
+        public Builder redisCustomEndpoint(@Nullable Output<String> redisCustomEndpoint) {
             this.redisCustomEndpoint = redisCustomEndpoint;
             return this;
         }
 
         public Builder redisCustomEndpoint(@Nullable String redisCustomEndpoint) {
-            this.redisCustomEndpoint = Input.ofNullable(redisCustomEndpoint);
+            this.redisCustomEndpoint = Output.ofNullable(redisCustomEndpoint);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder requestReason(@Nullable Input<String> requestReason) {
+        public Builder requestReason(@Nullable Output<String> requestReason) {
             this.requestReason = requestReason;
             return this;
         }
 
         public Builder requestReason(@Nullable String requestReason) {
-            this.requestReason = Input.ofNullable(requestReason);
+            this.requestReason = Output.ofNullable(requestReason);
             return this;
         }
 
-        public Builder requestTimeout(@Nullable Input<String> requestTimeout) {
+        public Builder requestTimeout(@Nullable Output<String> requestTimeout) {
             this.requestTimeout = requestTimeout;
             return this;
         }
 
         public Builder requestTimeout(@Nullable String requestTimeout) {
-            this.requestTimeout = Input.ofNullable(requestTimeout);
+            this.requestTimeout = Output.ofNullable(requestTimeout);
             return this;
         }
 
-        public Builder resourceManagerCustomEndpoint(@Nullable Input<String> resourceManagerCustomEndpoint) {
+        public Builder resourceManagerCustomEndpoint(@Nullable Output<String> resourceManagerCustomEndpoint) {
             this.resourceManagerCustomEndpoint = resourceManagerCustomEndpoint;
             return this;
         }
 
         public Builder resourceManagerCustomEndpoint(@Nullable String resourceManagerCustomEndpoint) {
-            this.resourceManagerCustomEndpoint = Input.ofNullable(resourceManagerCustomEndpoint);
+            this.resourceManagerCustomEndpoint = Output.ofNullable(resourceManagerCustomEndpoint);
             return this;
         }
 
-        public Builder resourceManagerV2CustomEndpoint(@Nullable Input<String> resourceManagerV2CustomEndpoint) {
+        public Builder resourceManagerV2CustomEndpoint(@Nullable Output<String> resourceManagerV2CustomEndpoint) {
             this.resourceManagerV2CustomEndpoint = resourceManagerV2CustomEndpoint;
             return this;
         }
 
         public Builder resourceManagerV2CustomEndpoint(@Nullable String resourceManagerV2CustomEndpoint) {
-            this.resourceManagerV2CustomEndpoint = Input.ofNullable(resourceManagerV2CustomEndpoint);
+            this.resourceManagerV2CustomEndpoint = Output.ofNullable(resourceManagerV2CustomEndpoint);
             return this;
         }
 
-        public Builder runtimeConfigCustomEndpoint(@Nullable Input<String> runtimeConfigCustomEndpoint) {
+        public Builder runtimeConfigCustomEndpoint(@Nullable Output<String> runtimeConfigCustomEndpoint) {
             this.runtimeConfigCustomEndpoint = runtimeConfigCustomEndpoint;
             return this;
         }
 
         public Builder runtimeConfigCustomEndpoint(@Nullable String runtimeConfigCustomEndpoint) {
-            this.runtimeConfigCustomEndpoint = Input.ofNullable(runtimeConfigCustomEndpoint);
+            this.runtimeConfigCustomEndpoint = Output.ofNullable(runtimeConfigCustomEndpoint);
             return this;
         }
 
-        public Builder runtimeconfigCustomEndpoint(@Nullable Input<String> runtimeconfigCustomEndpoint) {
+        public Builder runtimeconfigCustomEndpoint(@Nullable Output<String> runtimeconfigCustomEndpoint) {
             this.runtimeconfigCustomEndpoint = runtimeconfigCustomEndpoint;
             return this;
         }
 
         public Builder runtimeconfigCustomEndpoint(@Nullable String runtimeconfigCustomEndpoint) {
-            this.runtimeconfigCustomEndpoint = Input.ofNullable(runtimeconfigCustomEndpoint);
+            this.runtimeconfigCustomEndpoint = Output.ofNullable(runtimeconfigCustomEndpoint);
             return this;
         }
 
-        public Builder scopes(@Nullable Input<List<String>> scopes) {
+        public Builder scopes(@Nullable Output<List<String>> scopes) {
             this.scopes = scopes;
             return this;
         }
 
         public Builder scopes(@Nullable List<String> scopes) {
-            this.scopes = Input.ofNullable(scopes);
+            this.scopes = Output.ofNullable(scopes);
             return this;
         }
 
-        public Builder secretManagerCustomEndpoint(@Nullable Input<String> secretManagerCustomEndpoint) {
+        public Builder secretManagerCustomEndpoint(@Nullable Output<String> secretManagerCustomEndpoint) {
             this.secretManagerCustomEndpoint = secretManagerCustomEndpoint;
             return this;
         }
 
         public Builder secretManagerCustomEndpoint(@Nullable String secretManagerCustomEndpoint) {
-            this.secretManagerCustomEndpoint = Input.ofNullable(secretManagerCustomEndpoint);
+            this.secretManagerCustomEndpoint = Output.ofNullable(secretManagerCustomEndpoint);
             return this;
         }
 
-        public Builder securityCenterCustomEndpoint(@Nullable Input<String> securityCenterCustomEndpoint) {
+        public Builder securityCenterCustomEndpoint(@Nullable Output<String> securityCenterCustomEndpoint) {
             this.securityCenterCustomEndpoint = securityCenterCustomEndpoint;
             return this;
         }
 
         public Builder securityCenterCustomEndpoint(@Nullable String securityCenterCustomEndpoint) {
-            this.securityCenterCustomEndpoint = Input.ofNullable(securityCenterCustomEndpoint);
+            this.securityCenterCustomEndpoint = Output.ofNullable(securityCenterCustomEndpoint);
             return this;
         }
 
-        public Builder securityScannerCustomEndpoint(@Nullable Input<String> securityScannerCustomEndpoint) {
+        public Builder securityScannerCustomEndpoint(@Nullable Output<String> securityScannerCustomEndpoint) {
             this.securityScannerCustomEndpoint = securityScannerCustomEndpoint;
             return this;
         }
 
         public Builder securityScannerCustomEndpoint(@Nullable String securityScannerCustomEndpoint) {
-            this.securityScannerCustomEndpoint = Input.ofNullable(securityScannerCustomEndpoint);
+            this.securityScannerCustomEndpoint = Output.ofNullable(securityScannerCustomEndpoint);
             return this;
         }
 
-        public Builder serviceDirectoryCustomEndpoint(@Nullable Input<String> serviceDirectoryCustomEndpoint) {
+        public Builder serviceDirectoryCustomEndpoint(@Nullable Output<String> serviceDirectoryCustomEndpoint) {
             this.serviceDirectoryCustomEndpoint = serviceDirectoryCustomEndpoint;
             return this;
         }
 
         public Builder serviceDirectoryCustomEndpoint(@Nullable String serviceDirectoryCustomEndpoint) {
-            this.serviceDirectoryCustomEndpoint = Input.ofNullable(serviceDirectoryCustomEndpoint);
+            this.serviceDirectoryCustomEndpoint = Output.ofNullable(serviceDirectoryCustomEndpoint);
             return this;
         }
 
-        public Builder serviceManagementCustomEndpoint(@Nullable Input<String> serviceManagementCustomEndpoint) {
+        public Builder serviceManagementCustomEndpoint(@Nullable Output<String> serviceManagementCustomEndpoint) {
             this.serviceManagementCustomEndpoint = serviceManagementCustomEndpoint;
             return this;
         }
 
         public Builder serviceManagementCustomEndpoint(@Nullable String serviceManagementCustomEndpoint) {
-            this.serviceManagementCustomEndpoint = Input.ofNullable(serviceManagementCustomEndpoint);
+            this.serviceManagementCustomEndpoint = Output.ofNullable(serviceManagementCustomEndpoint);
             return this;
         }
 
-        public Builder serviceNetworkingCustomEndpoint(@Nullable Input<String> serviceNetworkingCustomEndpoint) {
+        public Builder serviceNetworkingCustomEndpoint(@Nullable Output<String> serviceNetworkingCustomEndpoint) {
             this.serviceNetworkingCustomEndpoint = serviceNetworkingCustomEndpoint;
             return this;
         }
 
         public Builder serviceNetworkingCustomEndpoint(@Nullable String serviceNetworkingCustomEndpoint) {
-            this.serviceNetworkingCustomEndpoint = Input.ofNullable(serviceNetworkingCustomEndpoint);
+            this.serviceNetworkingCustomEndpoint = Output.ofNullable(serviceNetworkingCustomEndpoint);
             return this;
         }
 
-        public Builder serviceUsageCustomEndpoint(@Nullable Input<String> serviceUsageCustomEndpoint) {
+        public Builder serviceUsageCustomEndpoint(@Nullable Output<String> serviceUsageCustomEndpoint) {
             this.serviceUsageCustomEndpoint = serviceUsageCustomEndpoint;
             return this;
         }
 
         public Builder serviceUsageCustomEndpoint(@Nullable String serviceUsageCustomEndpoint) {
-            this.serviceUsageCustomEndpoint = Input.ofNullable(serviceUsageCustomEndpoint);
+            this.serviceUsageCustomEndpoint = Output.ofNullable(serviceUsageCustomEndpoint);
             return this;
         }
 
-        public Builder sourceRepoCustomEndpoint(@Nullable Input<String> sourceRepoCustomEndpoint) {
+        public Builder sourceRepoCustomEndpoint(@Nullable Output<String> sourceRepoCustomEndpoint) {
             this.sourceRepoCustomEndpoint = sourceRepoCustomEndpoint;
             return this;
         }
 
         public Builder sourceRepoCustomEndpoint(@Nullable String sourceRepoCustomEndpoint) {
-            this.sourceRepoCustomEndpoint = Input.ofNullable(sourceRepoCustomEndpoint);
+            this.sourceRepoCustomEndpoint = Output.ofNullable(sourceRepoCustomEndpoint);
             return this;
         }
 
-        public Builder spannerCustomEndpoint(@Nullable Input<String> spannerCustomEndpoint) {
+        public Builder spannerCustomEndpoint(@Nullable Output<String> spannerCustomEndpoint) {
             this.spannerCustomEndpoint = spannerCustomEndpoint;
             return this;
         }
 
         public Builder spannerCustomEndpoint(@Nullable String spannerCustomEndpoint) {
-            this.spannerCustomEndpoint = Input.ofNullable(spannerCustomEndpoint);
+            this.spannerCustomEndpoint = Output.ofNullable(spannerCustomEndpoint);
             return this;
         }
 
-        public Builder sqlCustomEndpoint(@Nullable Input<String> sqlCustomEndpoint) {
+        public Builder sqlCustomEndpoint(@Nullable Output<String> sqlCustomEndpoint) {
             this.sqlCustomEndpoint = sqlCustomEndpoint;
             return this;
         }
 
         public Builder sqlCustomEndpoint(@Nullable String sqlCustomEndpoint) {
-            this.sqlCustomEndpoint = Input.ofNullable(sqlCustomEndpoint);
+            this.sqlCustomEndpoint = Output.ofNullable(sqlCustomEndpoint);
             return this;
         }
 
-        public Builder storageCustomEndpoint(@Nullable Input<String> storageCustomEndpoint) {
+        public Builder storageCustomEndpoint(@Nullable Output<String> storageCustomEndpoint) {
             this.storageCustomEndpoint = storageCustomEndpoint;
             return this;
         }
 
         public Builder storageCustomEndpoint(@Nullable String storageCustomEndpoint) {
-            this.storageCustomEndpoint = Input.ofNullable(storageCustomEndpoint);
+            this.storageCustomEndpoint = Output.ofNullable(storageCustomEndpoint);
             return this;
         }
 
-        public Builder storageTransferCustomEndpoint(@Nullable Input<String> storageTransferCustomEndpoint) {
+        public Builder storageTransferCustomEndpoint(@Nullable Output<String> storageTransferCustomEndpoint) {
             this.storageTransferCustomEndpoint = storageTransferCustomEndpoint;
             return this;
         }
 
         public Builder storageTransferCustomEndpoint(@Nullable String storageTransferCustomEndpoint) {
-            this.storageTransferCustomEndpoint = Input.ofNullable(storageTransferCustomEndpoint);
+            this.storageTransferCustomEndpoint = Output.ofNullable(storageTransferCustomEndpoint);
             return this;
         }
 
-        public Builder tagsCustomEndpoint(@Nullable Input<String> tagsCustomEndpoint) {
+        public Builder tagsCustomEndpoint(@Nullable Output<String> tagsCustomEndpoint) {
             this.tagsCustomEndpoint = tagsCustomEndpoint;
             return this;
         }
 
         public Builder tagsCustomEndpoint(@Nullable String tagsCustomEndpoint) {
-            this.tagsCustomEndpoint = Input.ofNullable(tagsCustomEndpoint);
+            this.tagsCustomEndpoint = Output.ofNullable(tagsCustomEndpoint);
             return this;
         }
 
-        public Builder tpuCustomEndpoint(@Nullable Input<String> tpuCustomEndpoint) {
+        public Builder tpuCustomEndpoint(@Nullable Output<String> tpuCustomEndpoint) {
             this.tpuCustomEndpoint = tpuCustomEndpoint;
             return this;
         }
 
         public Builder tpuCustomEndpoint(@Nullable String tpuCustomEndpoint) {
-            this.tpuCustomEndpoint = Input.ofNullable(tpuCustomEndpoint);
+            this.tpuCustomEndpoint = Output.ofNullable(tpuCustomEndpoint);
             return this;
         }
 
-        public Builder userProjectOverride(@Nullable Input<Boolean> userProjectOverride) {
+        public Builder userProjectOverride(@Nullable Output<Boolean> userProjectOverride) {
             this.userProjectOverride = userProjectOverride;
             return this;
         }
 
         public Builder userProjectOverride(@Nullable Boolean userProjectOverride) {
-            this.userProjectOverride = Input.ofNullable(userProjectOverride);
+            this.userProjectOverride = Output.ofNullable(userProjectOverride);
             return this;
         }
 
-        public Builder vertexAiCustomEndpoint(@Nullable Input<String> vertexAiCustomEndpoint) {
+        public Builder vertexAiCustomEndpoint(@Nullable Output<String> vertexAiCustomEndpoint) {
             this.vertexAiCustomEndpoint = vertexAiCustomEndpoint;
             return this;
         }
 
         public Builder vertexAiCustomEndpoint(@Nullable String vertexAiCustomEndpoint) {
-            this.vertexAiCustomEndpoint = Input.ofNullable(vertexAiCustomEndpoint);
+            this.vertexAiCustomEndpoint = Output.ofNullable(vertexAiCustomEndpoint);
             return this;
         }
 
-        public Builder vpcAccessCustomEndpoint(@Nullable Input<String> vpcAccessCustomEndpoint) {
+        public Builder vpcAccessCustomEndpoint(@Nullable Output<String> vpcAccessCustomEndpoint) {
             this.vpcAccessCustomEndpoint = vpcAccessCustomEndpoint;
             return this;
         }
 
         public Builder vpcAccessCustomEndpoint(@Nullable String vpcAccessCustomEndpoint) {
-            this.vpcAccessCustomEndpoint = Input.ofNullable(vpcAccessCustomEndpoint);
+            this.vpcAccessCustomEndpoint = Output.ofNullable(vpcAccessCustomEndpoint);
             return this;
         }
 
-        public Builder workflowsCustomEndpoint(@Nullable Input<String> workflowsCustomEndpoint) {
+        public Builder workflowsCustomEndpoint(@Nullable Output<String> workflowsCustomEndpoint) {
             this.workflowsCustomEndpoint = workflowsCustomEndpoint;
             return this;
         }
 
         public Builder workflowsCustomEndpoint(@Nullable String workflowsCustomEndpoint) {
-            this.workflowsCustomEndpoint = Input.ofNullable(workflowsCustomEndpoint);
+            this.workflowsCustomEndpoint = Output.ofNullable(workflowsCustomEndpoint);
             return this;
         }
 
-        public Builder zone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
 
         public Builder zone(@Nullable String zone) {
-            this.zone = Input.ofNullable(zone);
+            this.zone = Output.ofNullable(zone);
             return this;
         }
         public ProviderArgs build() {

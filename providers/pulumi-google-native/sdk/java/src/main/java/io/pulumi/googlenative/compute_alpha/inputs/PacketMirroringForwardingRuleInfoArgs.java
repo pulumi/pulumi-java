@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class PacketMirroringForwardingRuleInfoArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="url")
-      private final @Nullable Input<String> url;
+      private final @Nullable Output<String> url;
 
-    public Input<String> getUrl() {
-        return this.url == null ? Input.empty() : this.url;
+    public Output<String> getUrl() {
+        return this.url == null ? Output.empty() : this.url;
     }
 
-    public PacketMirroringForwardingRuleInfoArgs(@Nullable Input<String> url) {
+    public PacketMirroringForwardingRuleInfoArgs(@Nullable Output<String> url) {
         this.url = url;
     }
 
     private PacketMirroringForwardingRuleInfoArgs() {
-        this.url = Input.empty();
+        this.url = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class PacketMirroringForwardingRuleInfoArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> url;
+        private @Nullable Output<String> url;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class PacketMirroringForwardingRuleInfoArgs extends io.pulumi.resou
     	      this.url = defaults.url;
         }
 
-        public Builder url(@Nullable Input<String> url) {
+        public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
 
         public Builder url(@Nullable String url) {
-            this.url = Input.ofNullable(url);
+            this.url = Output.ofNullable(url);
             return this;
         }
         public PacketMirroringForwardingRuleInfoArgs build() {

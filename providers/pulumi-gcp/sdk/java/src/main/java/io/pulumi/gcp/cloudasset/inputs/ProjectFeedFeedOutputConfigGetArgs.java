@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudasset.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudasset.inputs.ProjectFeedFeedOutputConfigPubsubDestinationGetArgs;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class ProjectFeedFeedOutputConfigGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="pubsubDestination", required=true)
-      private final Input<ProjectFeedFeedOutputConfigPubsubDestinationGetArgs> pubsubDestination;
+      private final Output<ProjectFeedFeedOutputConfigPubsubDestinationGetArgs> pubsubDestination;
 
-    public Input<ProjectFeedFeedOutputConfigPubsubDestinationGetArgs> getPubsubDestination() {
+    public Output<ProjectFeedFeedOutputConfigPubsubDestinationGetArgs> getPubsubDestination() {
         return this.pubsubDestination;
     }
 
-    public ProjectFeedFeedOutputConfigGetArgs(Input<ProjectFeedFeedOutputConfigPubsubDestinationGetArgs> pubsubDestination) {
+    public ProjectFeedFeedOutputConfigGetArgs(Output<ProjectFeedFeedOutputConfigPubsubDestinationGetArgs> pubsubDestination) {
         this.pubsubDestination = Objects.requireNonNull(pubsubDestination, "expected parameter 'pubsubDestination' to be non-null");
     }
 
     private ProjectFeedFeedOutputConfigGetArgs() {
-        this.pubsubDestination = Input.empty();
+        this.pubsubDestination = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class ProjectFeedFeedOutputConfigGetArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<ProjectFeedFeedOutputConfigPubsubDestinationGetArgs> pubsubDestination;
+        private Output<ProjectFeedFeedOutputConfigPubsubDestinationGetArgs> pubsubDestination;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class ProjectFeedFeedOutputConfigGetArgs extends io.pulumi.resource
     	      this.pubsubDestination = defaults.pubsubDestination;
         }
 
-        public Builder pubsubDestination(Input<ProjectFeedFeedOutputConfigPubsubDestinationGetArgs> pubsubDestination) {
+        public Builder pubsubDestination(Output<ProjectFeedFeedOutputConfigPubsubDestinationGetArgs> pubsubDestination) {
             this.pubsubDestination = Objects.requireNonNull(pubsubDestination);
             return this;
         }
 
         public Builder pubsubDestination(ProjectFeedFeedOutputConfigPubsubDestinationGetArgs pubsubDestination) {
-            this.pubsubDestination = Input.of(Objects.requireNonNull(pubsubDestination));
+            this.pubsubDestination = Output.of(Objects.requireNonNull(pubsubDestination));
             return this;
         }
         public ProjectFeedFeedOutputConfigGetArgs build() {

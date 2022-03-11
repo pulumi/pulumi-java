@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql;
 
 import io.pulumi.azurenative.sql.enums.GeoBackupPolicyState;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class GeoBackupPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="databaseName", required=true)
-      private final Input<String> databaseName;
+      private final Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
+    public Output<String> getDatabaseName() {
         return this.databaseName;
     }
 
@@ -31,10 +31,10 @@ public final class GeoBackupPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="geoBackupPolicyName")
-      private final @Nullable Input<String> geoBackupPolicyName;
+      private final @Nullable Output<String> geoBackupPolicyName;
 
-    public Input<String> getGeoBackupPolicyName() {
-        return this.geoBackupPolicyName == null ? Input.empty() : this.geoBackupPolicyName;
+    public Output<String> getGeoBackupPolicyName() {
+        return this.geoBackupPolicyName == null ? Output.empty() : this.geoBackupPolicyName;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class GeoBackupPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -53,9 +53,9 @@ public final class GeoBackupPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="serverName", required=true)
-      private final Input<String> serverName;
+      private final Output<String> serverName;
 
-    public Input<String> getServerName() {
+    public Output<String> getServerName() {
         return this.serverName;
     }
 
@@ -64,18 +64,18 @@ public final class GeoBackupPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="state", required=true)
-      private final Input<GeoBackupPolicyState> state;
+      private final Output<GeoBackupPolicyState> state;
 
-    public Input<GeoBackupPolicyState> getState() {
+    public Output<GeoBackupPolicyState> getState() {
         return this.state;
     }
 
     public GeoBackupPolicyArgs(
-        Input<String> databaseName,
-        @Nullable Input<String> geoBackupPolicyName,
-        Input<String> resourceGroupName,
-        Input<String> serverName,
-        Input<GeoBackupPolicyState> state) {
+        Output<String> databaseName,
+        @Nullable Output<String> geoBackupPolicyName,
+        Output<String> resourceGroupName,
+        Output<String> serverName,
+        Output<GeoBackupPolicyState> state) {
         this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
         this.geoBackupPolicyName = geoBackupPolicyName;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -84,11 +84,11 @@ public final class GeoBackupPolicyArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private GeoBackupPolicyArgs() {
-        this.databaseName = Input.empty();
-        this.geoBackupPolicyName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serverName = Input.empty();
-        this.state = Input.empty();
+        this.databaseName = Output.empty();
+        this.geoBackupPolicyName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serverName = Output.empty();
+        this.state = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class GeoBackupPolicyArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<String> databaseName;
-        private @Nullable Input<String> geoBackupPolicyName;
-        private Input<String> resourceGroupName;
-        private Input<String> serverName;
-        private Input<GeoBackupPolicyState> state;
+        private Output<String> databaseName;
+        private @Nullable Output<String> geoBackupPolicyName;
+        private Output<String> resourceGroupName;
+        private Output<String> serverName;
+        private Output<GeoBackupPolicyState> state;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class GeoBackupPolicyArgs extends io.pulumi.resources.ResourceArgs 
     	      this.state = defaults.state;
         }
 
-        public Builder databaseName(Input<String> databaseName) {
+        public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
         public Builder databaseName(String databaseName) {
-            this.databaseName = Input.of(Objects.requireNonNull(databaseName));
+            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder geoBackupPolicyName(@Nullable Input<String> geoBackupPolicyName) {
+        public Builder geoBackupPolicyName(@Nullable Output<String> geoBackupPolicyName) {
             this.geoBackupPolicyName = geoBackupPolicyName;
             return this;
         }
 
         public Builder geoBackupPolicyName(@Nullable String geoBackupPolicyName) {
-            this.geoBackupPolicyName = Input.ofNullable(geoBackupPolicyName);
+            this.geoBackupPolicyName = Output.ofNullable(geoBackupPolicyName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serverName(Input<String> serverName) {
+        public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
         public Builder serverName(String serverName) {
-            this.serverName = Input.of(Objects.requireNonNull(serverName));
+            this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
 
-        public Builder state(Input<GeoBackupPolicyState> state) {
+        public Builder state(Output<GeoBackupPolicyState> state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
         public Builder state(GeoBackupPolicyState state) {
-            this.state = Input.of(Objects.requireNonNull(state));
+            this.state = Output.of(Objects.requireNonNull(state));
             return this;
         }
         public GeoBackupPolicyArgs build() {

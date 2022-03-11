@@ -25,7 +25,7 @@ import io.pulumi.azurenative.cdn.inputs.OriginGroupOverrideActionArgs;
 import io.pulumi.azurenative.cdn.inputs.UrlRedirectActionArgs;
 import io.pulumi.azurenative.cdn.inputs.UrlRewriteActionArgs;
 import io.pulumi.azurenative.cdn.inputs.UrlSigningActionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
@@ -48,9 +48,9 @@ public final class DeliveryRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actions", required=true)
-      private final Input<List<Object>> actions;
+      private final Output<List<Object>> actions;
 
-    public Input<List<Object>> getActions() {
+    public Output<List<Object>> getActions() {
         return this.actions;
     }
 
@@ -59,10 +59,10 @@ public final class DeliveryRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conditions")
-      private final @Nullable Input<List<Object>> conditions;
+      private final @Nullable Output<List<Object>> conditions;
 
-    public Input<List<Object>> getConditions() {
-        return this.conditions == null ? Input.empty() : this.conditions;
+    public Output<List<Object>> getConditions() {
+        return this.conditions == null ? Output.empty() : this.conditions;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class DeliveryRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -81,17 +81,17 @@ public final class DeliveryRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="order", required=true)
-      private final Input<Integer> order;
+      private final Output<Integer> order;
 
-    public Input<Integer> getOrder() {
+    public Output<Integer> getOrder() {
         return this.order;
     }
 
     public DeliveryRuleArgs(
-        Input<List<Object>> actions,
-        @Nullable Input<List<Object>> conditions,
-        @Nullable Input<String> name,
-        Input<Integer> order) {
+        Output<List<Object>> actions,
+        @Nullable Output<List<Object>> conditions,
+        @Nullable Output<String> name,
+        Output<Integer> order) {
         this.actions = Objects.requireNonNull(actions, "expected parameter 'actions' to be non-null");
         this.conditions = conditions;
         this.name = name;
@@ -99,10 +99,10 @@ public final class DeliveryRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeliveryRuleArgs() {
-        this.actions = Input.empty();
-        this.conditions = Input.empty();
-        this.name = Input.empty();
-        this.order = Input.empty();
+        this.actions = Output.empty();
+        this.conditions = Output.empty();
+        this.name = Output.empty();
+        this.order = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,10 +114,10 @@ public final class DeliveryRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<Object>> actions;
-        private @Nullable Input<List<Object>> conditions;
-        private @Nullable Input<String> name;
-        private Input<Integer> order;
+        private Output<List<Object>> actions;
+        private @Nullable Output<List<Object>> conditions;
+        private @Nullable Output<String> name;
+        private Output<Integer> order;
 
         public Builder() {
     	      // Empty
@@ -131,43 +131,43 @@ public final class DeliveryRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.order = defaults.order;
         }
 
-        public Builder actions(Input<List<Object>> actions) {
+        public Builder actions(Output<List<Object>> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
         public Builder actions(List<Object> actions) {
-            this.actions = Input.of(Objects.requireNonNull(actions));
+            this.actions = Output.of(Objects.requireNonNull(actions));
             return this;
         }
 
-        public Builder conditions(@Nullable Input<List<Object>> conditions) {
+        public Builder conditions(@Nullable Output<List<Object>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
         public Builder conditions(@Nullable List<Object> conditions) {
-            this.conditions = Input.ofNullable(conditions);
+            this.conditions = Output.ofNullable(conditions);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder order(Input<Integer> order) {
+        public Builder order(Output<Integer> order) {
             this.order = Objects.requireNonNull(order);
             return this;
         }
 
         public Builder order(Integer order) {
-            this.order = Input.of(Objects.requireNonNull(order));
+            this.order = Output.of(Objects.requireNonNull(order));
             return this;
         }
         public DeliveryRuleArgs build() {

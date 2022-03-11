@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.sagemaker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class WorkforceCognitoConfigGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="clientId", required=true)
-      private final Input<String> clientId;
+      private final Output<String> clientId;
 
-    public Input<String> getClientId() {
+    public Output<String> getClientId() {
         return this.clientId;
     }
 
@@ -29,22 +29,22 @@ public final class WorkforceCognitoConfigGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="userPool", required=true)
-      private final Input<String> userPool;
+      private final Output<String> userPool;
 
-    public Input<String> getUserPool() {
+    public Output<String> getUserPool() {
         return this.userPool;
     }
 
     public WorkforceCognitoConfigGetArgs(
-        Input<String> clientId,
-        Input<String> userPool) {
+        Output<String> clientId,
+        Output<String> userPool) {
         this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
         this.userPool = Objects.requireNonNull(userPool, "expected parameter 'userPool' to be non-null");
     }
 
     private WorkforceCognitoConfigGetArgs() {
-        this.clientId = Input.empty();
-        this.userPool = Input.empty();
+        this.clientId = Output.empty();
+        this.userPool = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class WorkforceCognitoConfigGetArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> clientId;
-        private Input<String> userPool;
+        private Output<String> clientId;
+        private Output<String> userPool;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class WorkforceCognitoConfigGetArgs extends io.pulumi.resources.Res
     	      this.userPool = defaults.userPool;
         }
 
-        public Builder clientId(Input<String> clientId) {
+        public Builder clientId(Output<String> clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Input.of(Objects.requireNonNull(clientId));
+            this.clientId = Output.of(Objects.requireNonNull(clientId));
             return this;
         }
 
-        public Builder userPool(Input<String> userPool) {
+        public Builder userPool(Output<String> userPool) {
             this.userPool = Objects.requireNonNull(userPool);
             return this;
         }
 
         public Builder userPool(String userPool) {
-            this.userPool = Input.of(Objects.requireNonNull(userPool));
+            this.userPool = Output.of(Objects.requireNonNull(userPool));
             return this;
         }
         public WorkforceCognitoConfigGetArgs build() {

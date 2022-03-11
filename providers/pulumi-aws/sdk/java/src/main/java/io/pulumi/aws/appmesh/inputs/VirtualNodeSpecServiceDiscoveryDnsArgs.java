@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appmesh.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class VirtualNodeSpecServiceDiscoveryDnsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="hostname", required=true)
-      private final Input<String> hostname;
+      private final Output<String> hostname;
 
-    public Input<String> getHostname() {
+    public Output<String> getHostname() {
         return this.hostname;
     }
 
-    public VirtualNodeSpecServiceDiscoveryDnsArgs(Input<String> hostname) {
+    public VirtualNodeSpecServiceDiscoveryDnsArgs(Output<String> hostname) {
         this.hostname = Objects.requireNonNull(hostname, "expected parameter 'hostname' to be non-null");
     }
 
     private VirtualNodeSpecServiceDiscoveryDnsArgs() {
-        this.hostname = Input.empty();
+        this.hostname = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class VirtualNodeSpecServiceDiscoveryDnsArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private Input<String> hostname;
+        private Output<String> hostname;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class VirtualNodeSpecServiceDiscoveryDnsArgs extends io.pulumi.reso
     	      this.hostname = defaults.hostname;
         }
 
-        public Builder hostname(Input<String> hostname) {
+        public Builder hostname(Output<String> hostname) {
             this.hostname = Objects.requireNonNull(hostname);
             return this;
         }
 
         public Builder hostname(String hostname) {
-            this.hostname = Input.of(Objects.requireNonNull(hostname));
+            this.hostname = Output.of(Objects.requireNonNull(hostname));
             return this;
         }
         public VirtualNodeSpecServiceDiscoveryDnsArgs build() {

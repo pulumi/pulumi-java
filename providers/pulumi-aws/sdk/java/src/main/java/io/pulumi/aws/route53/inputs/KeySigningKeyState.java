@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.route53.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class KeySigningKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="digestAlgorithmMnemonic")
-      private final @Nullable Input<String> digestAlgorithmMnemonic;
+      private final @Nullable Output<String> digestAlgorithmMnemonic;
 
-    public Input<String> getDigestAlgorithmMnemonic() {
-        return this.digestAlgorithmMnemonic == null ? Input.empty() : this.digestAlgorithmMnemonic;
+    public Output<String> getDigestAlgorithmMnemonic() {
+        return this.digestAlgorithmMnemonic == null ? Output.empty() : this.digestAlgorithmMnemonic;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class KeySigningKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="digestAlgorithmType")
-      private final @Nullable Input<Integer> digestAlgorithmType;
+      private final @Nullable Output<Integer> digestAlgorithmType;
 
-    public Input<Integer> getDigestAlgorithmType() {
-        return this.digestAlgorithmType == null ? Input.empty() : this.digestAlgorithmType;
+    public Output<Integer> getDigestAlgorithmType() {
+        return this.digestAlgorithmType == null ? Output.empty() : this.digestAlgorithmType;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class KeySigningKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="digestValue")
-      private final @Nullable Input<String> digestValue;
+      private final @Nullable Output<String> digestValue;
 
-    public Input<String> getDigestValue() {
-        return this.digestValue == null ? Input.empty() : this.digestValue;
+    public Output<String> getDigestValue() {
+        return this.digestValue == null ? Output.empty() : this.digestValue;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class KeySigningKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnskeyRecord")
-      private final @Nullable Input<String> dnskeyRecord;
+      private final @Nullable Output<String> dnskeyRecord;
 
-    public Input<String> getDnskeyRecord() {
-        return this.dnskeyRecord == null ? Input.empty() : this.dnskeyRecord;
+    public Output<String> getDnskeyRecord() {
+        return this.dnskeyRecord == null ? Output.empty() : this.dnskeyRecord;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class KeySigningKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dsRecord")
-      private final @Nullable Input<String> dsRecord;
+      private final @Nullable Output<String> dsRecord;
 
-    public Input<String> getDsRecord() {
-        return this.dsRecord == null ? Input.empty() : this.dsRecord;
+    public Output<String> getDsRecord() {
+        return this.dsRecord == null ? Output.empty() : this.dsRecord;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class KeySigningKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="flag")
-      private final @Nullable Input<Integer> flag;
+      private final @Nullable Output<Integer> flag;
 
-    public Input<Integer> getFlag() {
-        return this.flag == null ? Input.empty() : this.flag;
+    public Output<Integer> getFlag() {
+        return this.flag == null ? Output.empty() : this.flag;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class KeySigningKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostedZoneId")
-      private final @Nullable Input<String> hostedZoneId;
+      private final @Nullable Output<String> hostedZoneId;
 
-    public Input<String> getHostedZoneId() {
-        return this.hostedZoneId == null ? Input.empty() : this.hostedZoneId;
+    public Output<String> getHostedZoneId() {
+        return this.hostedZoneId == null ? Output.empty() : this.hostedZoneId;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class KeySigningKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyManagementServiceArn")
-      private final @Nullable Input<String> keyManagementServiceArn;
+      private final @Nullable Output<String> keyManagementServiceArn;
 
-    public Input<String> getKeyManagementServiceArn() {
-        return this.keyManagementServiceArn == null ? Input.empty() : this.keyManagementServiceArn;
+    public Output<String> getKeyManagementServiceArn() {
+        return this.keyManagementServiceArn == null ? Output.empty() : this.keyManagementServiceArn;
     }
 
     /**
@@ -108,10 +108,10 @@ public final class KeySigningKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyTag")
-      private final @Nullable Input<Integer> keyTag;
+      private final @Nullable Output<Integer> keyTag;
 
-    public Input<Integer> getKeyTag() {
-        return this.keyTag == null ? Input.empty() : this.keyTag;
+    public Output<Integer> getKeyTag() {
+        return this.keyTag == null ? Output.empty() : this.keyTag;
     }
 
     /**
@@ -119,10 +119,10 @@ public final class KeySigningKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -130,10 +130,10 @@ public final class KeySigningKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicKey")
-      private final @Nullable Input<String> publicKey;
+      private final @Nullable Output<String> publicKey;
 
-    public Input<String> getPublicKey() {
-        return this.publicKey == null ? Input.empty() : this.publicKey;
+    public Output<String> getPublicKey() {
+        return this.publicKey == null ? Output.empty() : this.publicKey;
     }
 
     /**
@@ -141,10 +141,10 @@ public final class KeySigningKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="signingAlgorithmMnemonic")
-      private final @Nullable Input<String> signingAlgorithmMnemonic;
+      private final @Nullable Output<String> signingAlgorithmMnemonic;
 
-    public Input<String> getSigningAlgorithmMnemonic() {
-        return this.signingAlgorithmMnemonic == null ? Input.empty() : this.signingAlgorithmMnemonic;
+    public Output<String> getSigningAlgorithmMnemonic() {
+        return this.signingAlgorithmMnemonic == null ? Output.empty() : this.signingAlgorithmMnemonic;
     }
 
     /**
@@ -152,10 +152,10 @@ public final class KeySigningKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="signingAlgorithmType")
-      private final @Nullable Input<Integer> signingAlgorithmType;
+      private final @Nullable Output<Integer> signingAlgorithmType;
 
-    public Input<Integer> getSigningAlgorithmType() {
-        return this.signingAlgorithmType == null ? Input.empty() : this.signingAlgorithmType;
+    public Output<Integer> getSigningAlgorithmType() {
+        return this.signingAlgorithmType == null ? Output.empty() : this.signingAlgorithmType;
     }
 
     /**
@@ -163,27 +163,27 @@ public final class KeySigningKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     public KeySigningKeyState(
-        @Nullable Input<String> digestAlgorithmMnemonic,
-        @Nullable Input<Integer> digestAlgorithmType,
-        @Nullable Input<String> digestValue,
-        @Nullable Input<String> dnskeyRecord,
-        @Nullable Input<String> dsRecord,
-        @Nullable Input<Integer> flag,
-        @Nullable Input<String> hostedZoneId,
-        @Nullable Input<String> keyManagementServiceArn,
-        @Nullable Input<Integer> keyTag,
-        @Nullable Input<String> name,
-        @Nullable Input<String> publicKey,
-        @Nullable Input<String> signingAlgorithmMnemonic,
-        @Nullable Input<Integer> signingAlgorithmType,
-        @Nullable Input<String> status) {
+        @Nullable Output<String> digestAlgorithmMnemonic,
+        @Nullable Output<Integer> digestAlgorithmType,
+        @Nullable Output<String> digestValue,
+        @Nullable Output<String> dnskeyRecord,
+        @Nullable Output<String> dsRecord,
+        @Nullable Output<Integer> flag,
+        @Nullable Output<String> hostedZoneId,
+        @Nullable Output<String> keyManagementServiceArn,
+        @Nullable Output<Integer> keyTag,
+        @Nullable Output<String> name,
+        @Nullable Output<String> publicKey,
+        @Nullable Output<String> signingAlgorithmMnemonic,
+        @Nullable Output<Integer> signingAlgorithmType,
+        @Nullable Output<String> status) {
         this.digestAlgorithmMnemonic = digestAlgorithmMnemonic;
         this.digestAlgorithmType = digestAlgorithmType;
         this.digestValue = digestValue;
@@ -201,20 +201,20 @@ public final class KeySigningKeyState extends io.pulumi.resources.ResourceArgs {
     }
 
     private KeySigningKeyState() {
-        this.digestAlgorithmMnemonic = Input.empty();
-        this.digestAlgorithmType = Input.empty();
-        this.digestValue = Input.empty();
-        this.dnskeyRecord = Input.empty();
-        this.dsRecord = Input.empty();
-        this.flag = Input.empty();
-        this.hostedZoneId = Input.empty();
-        this.keyManagementServiceArn = Input.empty();
-        this.keyTag = Input.empty();
-        this.name = Input.empty();
-        this.publicKey = Input.empty();
-        this.signingAlgorithmMnemonic = Input.empty();
-        this.signingAlgorithmType = Input.empty();
-        this.status = Input.empty();
+        this.digestAlgorithmMnemonic = Output.empty();
+        this.digestAlgorithmType = Output.empty();
+        this.digestValue = Output.empty();
+        this.dnskeyRecord = Output.empty();
+        this.dsRecord = Output.empty();
+        this.flag = Output.empty();
+        this.hostedZoneId = Output.empty();
+        this.keyManagementServiceArn = Output.empty();
+        this.keyTag = Output.empty();
+        this.name = Output.empty();
+        this.publicKey = Output.empty();
+        this.signingAlgorithmMnemonic = Output.empty();
+        this.signingAlgorithmType = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -226,20 +226,20 @@ public final class KeySigningKeyState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> digestAlgorithmMnemonic;
-        private @Nullable Input<Integer> digestAlgorithmType;
-        private @Nullable Input<String> digestValue;
-        private @Nullable Input<String> dnskeyRecord;
-        private @Nullable Input<String> dsRecord;
-        private @Nullable Input<Integer> flag;
-        private @Nullable Input<String> hostedZoneId;
-        private @Nullable Input<String> keyManagementServiceArn;
-        private @Nullable Input<Integer> keyTag;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> publicKey;
-        private @Nullable Input<String> signingAlgorithmMnemonic;
-        private @Nullable Input<Integer> signingAlgorithmType;
-        private @Nullable Input<String> status;
+        private @Nullable Output<String> digestAlgorithmMnemonic;
+        private @Nullable Output<Integer> digestAlgorithmType;
+        private @Nullable Output<String> digestValue;
+        private @Nullable Output<String> dnskeyRecord;
+        private @Nullable Output<String> dsRecord;
+        private @Nullable Output<Integer> flag;
+        private @Nullable Output<String> hostedZoneId;
+        private @Nullable Output<String> keyManagementServiceArn;
+        private @Nullable Output<Integer> keyTag;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> publicKey;
+        private @Nullable Output<String> signingAlgorithmMnemonic;
+        private @Nullable Output<Integer> signingAlgorithmType;
+        private @Nullable Output<String> status;
 
         public Builder() {
     	      // Empty
@@ -263,143 +263,143 @@ public final class KeySigningKeyState extends io.pulumi.resources.ResourceArgs {
     	      this.status = defaults.status;
         }
 
-        public Builder digestAlgorithmMnemonic(@Nullable Input<String> digestAlgorithmMnemonic) {
+        public Builder digestAlgorithmMnemonic(@Nullable Output<String> digestAlgorithmMnemonic) {
             this.digestAlgorithmMnemonic = digestAlgorithmMnemonic;
             return this;
         }
 
         public Builder digestAlgorithmMnemonic(@Nullable String digestAlgorithmMnemonic) {
-            this.digestAlgorithmMnemonic = Input.ofNullable(digestAlgorithmMnemonic);
+            this.digestAlgorithmMnemonic = Output.ofNullable(digestAlgorithmMnemonic);
             return this;
         }
 
-        public Builder digestAlgorithmType(@Nullable Input<Integer> digestAlgorithmType) {
+        public Builder digestAlgorithmType(@Nullable Output<Integer> digestAlgorithmType) {
             this.digestAlgorithmType = digestAlgorithmType;
             return this;
         }
 
         public Builder digestAlgorithmType(@Nullable Integer digestAlgorithmType) {
-            this.digestAlgorithmType = Input.ofNullable(digestAlgorithmType);
+            this.digestAlgorithmType = Output.ofNullable(digestAlgorithmType);
             return this;
         }
 
-        public Builder digestValue(@Nullable Input<String> digestValue) {
+        public Builder digestValue(@Nullable Output<String> digestValue) {
             this.digestValue = digestValue;
             return this;
         }
 
         public Builder digestValue(@Nullable String digestValue) {
-            this.digestValue = Input.ofNullable(digestValue);
+            this.digestValue = Output.ofNullable(digestValue);
             return this;
         }
 
-        public Builder dnskeyRecord(@Nullable Input<String> dnskeyRecord) {
+        public Builder dnskeyRecord(@Nullable Output<String> dnskeyRecord) {
             this.dnskeyRecord = dnskeyRecord;
             return this;
         }
 
         public Builder dnskeyRecord(@Nullable String dnskeyRecord) {
-            this.dnskeyRecord = Input.ofNullable(dnskeyRecord);
+            this.dnskeyRecord = Output.ofNullable(dnskeyRecord);
             return this;
         }
 
-        public Builder dsRecord(@Nullable Input<String> dsRecord) {
+        public Builder dsRecord(@Nullable Output<String> dsRecord) {
             this.dsRecord = dsRecord;
             return this;
         }
 
         public Builder dsRecord(@Nullable String dsRecord) {
-            this.dsRecord = Input.ofNullable(dsRecord);
+            this.dsRecord = Output.ofNullable(dsRecord);
             return this;
         }
 
-        public Builder flag(@Nullable Input<Integer> flag) {
+        public Builder flag(@Nullable Output<Integer> flag) {
             this.flag = flag;
             return this;
         }
 
         public Builder flag(@Nullable Integer flag) {
-            this.flag = Input.ofNullable(flag);
+            this.flag = Output.ofNullable(flag);
             return this;
         }
 
-        public Builder hostedZoneId(@Nullable Input<String> hostedZoneId) {
+        public Builder hostedZoneId(@Nullable Output<String> hostedZoneId) {
             this.hostedZoneId = hostedZoneId;
             return this;
         }
 
         public Builder hostedZoneId(@Nullable String hostedZoneId) {
-            this.hostedZoneId = Input.ofNullable(hostedZoneId);
+            this.hostedZoneId = Output.ofNullable(hostedZoneId);
             return this;
         }
 
-        public Builder keyManagementServiceArn(@Nullable Input<String> keyManagementServiceArn) {
+        public Builder keyManagementServiceArn(@Nullable Output<String> keyManagementServiceArn) {
             this.keyManagementServiceArn = keyManagementServiceArn;
             return this;
         }
 
         public Builder keyManagementServiceArn(@Nullable String keyManagementServiceArn) {
-            this.keyManagementServiceArn = Input.ofNullable(keyManagementServiceArn);
+            this.keyManagementServiceArn = Output.ofNullable(keyManagementServiceArn);
             return this;
         }
 
-        public Builder keyTag(@Nullable Input<Integer> keyTag) {
+        public Builder keyTag(@Nullable Output<Integer> keyTag) {
             this.keyTag = keyTag;
             return this;
         }
 
         public Builder keyTag(@Nullable Integer keyTag) {
-            this.keyTag = Input.ofNullable(keyTag);
+            this.keyTag = Output.ofNullable(keyTag);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder publicKey(@Nullable Input<String> publicKey) {
+        public Builder publicKey(@Nullable Output<String> publicKey) {
             this.publicKey = publicKey;
             return this;
         }
 
         public Builder publicKey(@Nullable String publicKey) {
-            this.publicKey = Input.ofNullable(publicKey);
+            this.publicKey = Output.ofNullable(publicKey);
             return this;
         }
 
-        public Builder signingAlgorithmMnemonic(@Nullable Input<String> signingAlgorithmMnemonic) {
+        public Builder signingAlgorithmMnemonic(@Nullable Output<String> signingAlgorithmMnemonic) {
             this.signingAlgorithmMnemonic = signingAlgorithmMnemonic;
             return this;
         }
 
         public Builder signingAlgorithmMnemonic(@Nullable String signingAlgorithmMnemonic) {
-            this.signingAlgorithmMnemonic = Input.ofNullable(signingAlgorithmMnemonic);
+            this.signingAlgorithmMnemonic = Output.ofNullable(signingAlgorithmMnemonic);
             return this;
         }
 
-        public Builder signingAlgorithmType(@Nullable Input<Integer> signingAlgorithmType) {
+        public Builder signingAlgorithmType(@Nullable Output<Integer> signingAlgorithmType) {
             this.signingAlgorithmType = signingAlgorithmType;
             return this;
         }
 
         public Builder signingAlgorithmType(@Nullable Integer signingAlgorithmType) {
-            this.signingAlgorithmType = Input.ofNullable(signingAlgorithmType);
+            this.signingAlgorithmType = Output.ofNullable(signingAlgorithmType);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public KeySigningKeyState build() {

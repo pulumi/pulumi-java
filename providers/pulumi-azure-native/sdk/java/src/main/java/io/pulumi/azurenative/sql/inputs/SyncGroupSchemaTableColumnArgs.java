@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class SyncGroupSchemaTableColumnArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="dataSize")
-      private final @Nullable Input<String> dataSize;
+      private final @Nullable Output<String> dataSize;
 
-    public Input<String> getDataSize() {
-        return this.dataSize == null ? Input.empty() : this.dataSize;
+    public Output<String> getDataSize() {
+        return this.dataSize == null ? Output.empty() : this.dataSize;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SyncGroupSchemaTableColumnArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="dataType")
-      private final @Nullable Input<String> dataType;
+      private final @Nullable Output<String> dataType;
 
-    public Input<String> getDataType() {
-        return this.dataType == null ? Input.empty() : this.dataType;
+    public Output<String> getDataType() {
+        return this.dataType == null ? Output.empty() : this.dataType;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class SyncGroupSchemaTableColumnArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="quotedName")
-      private final @Nullable Input<String> quotedName;
+      private final @Nullable Output<String> quotedName;
 
-    public Input<String> getQuotedName() {
-        return this.quotedName == null ? Input.empty() : this.quotedName;
+    public Output<String> getQuotedName() {
+        return this.quotedName == null ? Output.empty() : this.quotedName;
     }
 
     public SyncGroupSchemaTableColumnArgs(
-        @Nullable Input<String> dataSize,
-        @Nullable Input<String> dataType,
-        @Nullable Input<String> quotedName) {
+        @Nullable Output<String> dataSize,
+        @Nullable Output<String> dataType,
+        @Nullable Output<String> quotedName) {
         this.dataSize = dataSize;
         this.dataType = dataType;
         this.quotedName = quotedName;
     }
 
     private SyncGroupSchemaTableColumnArgs() {
-        this.dataSize = Input.empty();
-        this.dataType = Input.empty();
-        this.quotedName = Input.empty();
+        this.dataSize = Output.empty();
+        this.dataType = Output.empty();
+        this.quotedName = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class SyncGroupSchemaTableColumnArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> dataSize;
-        private @Nullable Input<String> dataType;
-        private @Nullable Input<String> quotedName;
+        private @Nullable Output<String> dataSize;
+        private @Nullable Output<String> dataType;
+        private @Nullable Output<String> quotedName;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class SyncGroupSchemaTableColumnArgs extends io.pulumi.resources.Re
     	      this.quotedName = defaults.quotedName;
         }
 
-        public Builder dataSize(@Nullable Input<String> dataSize) {
+        public Builder dataSize(@Nullable Output<String> dataSize) {
             this.dataSize = dataSize;
             return this;
         }
 
         public Builder dataSize(@Nullable String dataSize) {
-            this.dataSize = Input.ofNullable(dataSize);
+            this.dataSize = Output.ofNullable(dataSize);
             return this;
         }
 
-        public Builder dataType(@Nullable Input<String> dataType) {
+        public Builder dataType(@Nullable Output<String> dataType) {
             this.dataType = dataType;
             return this;
         }
 
         public Builder dataType(@Nullable String dataType) {
-            this.dataType = Input.ofNullable(dataType);
+            this.dataType = Output.ofNullable(dataType);
             return this;
         }
 
-        public Builder quotedName(@Nullable Input<String> quotedName) {
+        public Builder quotedName(@Nullable Output<String> quotedName) {
             this.quotedName = quotedName;
             return this;
         }
 
         public Builder quotedName(@Nullable String quotedName) {
-            this.quotedName = Input.ofNullable(quotedName);
+            this.quotedName = Output.ofNullable(quotedName);
             return this;
         }
         public SyncGroupSchemaTableColumnArgs build() {

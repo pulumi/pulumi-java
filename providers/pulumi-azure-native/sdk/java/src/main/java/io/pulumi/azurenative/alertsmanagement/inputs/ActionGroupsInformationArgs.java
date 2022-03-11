@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.alertsmanagement.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class ActionGroupsInformationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="customEmailSubject")
-      private final @Nullable Input<String> customEmailSubject;
+      private final @Nullable Output<String> customEmailSubject;
 
-    public Input<String> getCustomEmailSubject() {
-        return this.customEmailSubject == null ? Input.empty() : this.customEmailSubject;
+    public Output<String> getCustomEmailSubject() {
+        return this.customEmailSubject == null ? Output.empty() : this.customEmailSubject;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ActionGroupsInformationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="customWebhookPayload")
-      private final @Nullable Input<String> customWebhookPayload;
+      private final @Nullable Output<String> customWebhookPayload;
 
-    public Input<String> getCustomWebhookPayload() {
-        return this.customWebhookPayload == null ? Input.empty() : this.customWebhookPayload;
+    public Output<String> getCustomWebhookPayload() {
+        return this.customWebhookPayload == null ? Output.empty() : this.customWebhookPayload;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class ActionGroupsInformationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="groupIds", required=true)
-      private final Input<List<String>> groupIds;
+      private final Output<List<String>> groupIds;
 
-    public Input<List<String>> getGroupIds() {
+    public Output<List<String>> getGroupIds() {
         return this.groupIds;
     }
 
     public ActionGroupsInformationArgs(
-        @Nullable Input<String> customEmailSubject,
-        @Nullable Input<String> customWebhookPayload,
-        Input<List<String>> groupIds) {
+        @Nullable Output<String> customEmailSubject,
+        @Nullable Output<String> customWebhookPayload,
+        Output<List<String>> groupIds) {
         this.customEmailSubject = customEmailSubject;
         this.customWebhookPayload = customWebhookPayload;
         this.groupIds = Objects.requireNonNull(groupIds, "expected parameter 'groupIds' to be non-null");
     }
 
     private ActionGroupsInformationArgs() {
-        this.customEmailSubject = Input.empty();
-        this.customWebhookPayload = Input.empty();
-        this.groupIds = Input.empty();
+        this.customEmailSubject = Output.empty();
+        this.customWebhookPayload = Output.empty();
+        this.groupIds = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class ActionGroupsInformationArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> customEmailSubject;
-        private @Nullable Input<String> customWebhookPayload;
-        private Input<List<String>> groupIds;
+        private @Nullable Output<String> customEmailSubject;
+        private @Nullable Output<String> customWebhookPayload;
+        private Output<List<String>> groupIds;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class ActionGroupsInformationArgs extends io.pulumi.resources.Resou
     	      this.groupIds = defaults.groupIds;
         }
 
-        public Builder customEmailSubject(@Nullable Input<String> customEmailSubject) {
+        public Builder customEmailSubject(@Nullable Output<String> customEmailSubject) {
             this.customEmailSubject = customEmailSubject;
             return this;
         }
 
         public Builder customEmailSubject(@Nullable String customEmailSubject) {
-            this.customEmailSubject = Input.ofNullable(customEmailSubject);
+            this.customEmailSubject = Output.ofNullable(customEmailSubject);
             return this;
         }
 
-        public Builder customWebhookPayload(@Nullable Input<String> customWebhookPayload) {
+        public Builder customWebhookPayload(@Nullable Output<String> customWebhookPayload) {
             this.customWebhookPayload = customWebhookPayload;
             return this;
         }
 
         public Builder customWebhookPayload(@Nullable String customWebhookPayload) {
-            this.customWebhookPayload = Input.ofNullable(customWebhookPayload);
+            this.customWebhookPayload = Output.ofNullable(customWebhookPayload);
             return this;
         }
 
-        public Builder groupIds(Input<List<String>> groupIds) {
+        public Builder groupIds(Output<List<String>> groupIds) {
             this.groupIds = Objects.requireNonNull(groupIds);
             return this;
         }
 
         public Builder groupIds(List<String> groupIds) {
-            this.groupIds = Input.of(Objects.requireNonNull(groupIds));
+            this.groupIds = Output.of(Objects.requireNonNull(groupIds));
             return this;
         }
         public ActionGroupsInformationArgs build() {

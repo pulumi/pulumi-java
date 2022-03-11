@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.AzureRecoveryServiceVaultPr
 import io.pulumi.azurenative.recoveryservices.inputs.AzureResourceProtectionIntentArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.AzureWorkloadAutoProtectionIntentArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.AzureWorkloadSQLAutoProtectionIntentArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class ProtectionIntentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="eTag")
-      private final @Nullable Input<String> eTag;
+      private final @Nullable Output<String> eTag;
 
-    public Input<String> getETag() {
-        return this.eTag == null ? Input.empty() : this.eTag;
+    public Output<String> getETag() {
+        return this.eTag == null ? Output.empty() : this.eTag;
     }
 
     /**
@@ -36,9 +36,9 @@ public final class ProtectionIntentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="fabricName", required=true)
-      private final Input<String> fabricName;
+      private final Output<String> fabricName;
 
-    public Input<String> getFabricName() {
+    public Output<String> getFabricName() {
         return this.fabricName;
     }
 
@@ -47,10 +47,10 @@ public final class ProtectionIntentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="intentObjectName")
-      private final @Nullable Input<String> intentObjectName;
+      private final @Nullable Output<String> intentObjectName;
 
-    public Input<String> getIntentObjectName() {
-        return this.intentObjectName == null ? Input.empty() : this.intentObjectName;
+    public Output<String> getIntentObjectName() {
+        return this.intentObjectName == null ? Output.empty() : this.intentObjectName;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ProtectionIntentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ProtectionIntentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<Object> properties;
+      private final @Nullable Output<Object> properties;
 
-    public Input<Object> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<Object> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -80,9 +80,9 @@ public final class ProtectionIntentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -91,10 +91,10 @@ public final class ProtectionIntentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -102,21 +102,21 @@ public final class ProtectionIntentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="vaultName", required=true)
-      private final Input<String> vaultName;
+      private final Output<String> vaultName;
 
-    public Input<String> getVaultName() {
+    public Output<String> getVaultName() {
         return this.vaultName;
     }
 
     public ProtectionIntentArgs(
-        @Nullable Input<String> eTag,
-        Input<String> fabricName,
-        @Nullable Input<String> intentObjectName,
-        @Nullable Input<String> location,
-        @Nullable Input<Object> properties,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags,
-        Input<String> vaultName) {
+        @Nullable Output<String> eTag,
+        Output<String> fabricName,
+        @Nullable Output<String> intentObjectName,
+        @Nullable Output<String> location,
+        @Nullable Output<Object> properties,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags,
+        Output<String> vaultName) {
         this.eTag = eTag;
         this.fabricName = Objects.requireNonNull(fabricName, "expected parameter 'fabricName' to be non-null");
         this.intentObjectName = intentObjectName;
@@ -128,14 +128,14 @@ public final class ProtectionIntentArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ProtectionIntentArgs() {
-        this.eTag = Input.empty();
-        this.fabricName = Input.empty();
-        this.intentObjectName = Input.empty();
-        this.location = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
-        this.vaultName = Input.empty();
+        this.eTag = Output.empty();
+        this.fabricName = Output.empty();
+        this.intentObjectName = Output.empty();
+        this.location = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
+        this.vaultName = Output.empty();
     }
 
     public static Builder builder() {
@@ -147,14 +147,14 @@ public final class ProtectionIntentArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> eTag;
-        private Input<String> fabricName;
-        private @Nullable Input<String> intentObjectName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Object> properties;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<String> vaultName;
+        private @Nullable Output<String> eTag;
+        private Output<String> fabricName;
+        private @Nullable Output<String> intentObjectName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Object> properties;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<String> vaultName;
 
         public Builder() {
     	      // Empty
@@ -172,83 +172,83 @@ public final class ProtectionIntentArgs extends io.pulumi.resources.ResourceArgs
     	      this.vaultName = defaults.vaultName;
         }
 
-        public Builder eTag(@Nullable Input<String> eTag) {
+        public Builder eTag(@Nullable Output<String> eTag) {
             this.eTag = eTag;
             return this;
         }
 
         public Builder eTag(@Nullable String eTag) {
-            this.eTag = Input.ofNullable(eTag);
+            this.eTag = Output.ofNullable(eTag);
             return this;
         }
 
-        public Builder fabricName(Input<String> fabricName) {
+        public Builder fabricName(Output<String> fabricName) {
             this.fabricName = Objects.requireNonNull(fabricName);
             return this;
         }
 
         public Builder fabricName(String fabricName) {
-            this.fabricName = Input.of(Objects.requireNonNull(fabricName));
+            this.fabricName = Output.of(Objects.requireNonNull(fabricName));
             return this;
         }
 
-        public Builder intentObjectName(@Nullable Input<String> intentObjectName) {
+        public Builder intentObjectName(@Nullable Output<String> intentObjectName) {
             this.intentObjectName = intentObjectName;
             return this;
         }
 
         public Builder intentObjectName(@Nullable String intentObjectName) {
-            this.intentObjectName = Input.ofNullable(intentObjectName);
+            this.intentObjectName = Output.ofNullable(intentObjectName);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder properties(@Nullable Input<Object> properties) {
+        public Builder properties(@Nullable Output<Object> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable Object properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder vaultName(Input<String> vaultName) {
+        public Builder vaultName(Output<String> vaultName) {
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
         }
 
         public Builder vaultName(String vaultName) {
-            this.vaultName = Input.of(Objects.requireNonNull(vaultName));
+            this.vaultName = Output.of(Objects.requireNonNull(vaultName));
             return this;
         }
         public ProtectionIntentArgs build() {

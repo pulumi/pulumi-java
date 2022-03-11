@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.enums.AzureFirewallNetworkRuleProtocol;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class AzureFirewallNatRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class AzureFirewallNatRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="destinationAddresses")
-      private final @Nullable Input<List<String>> destinationAddresses;
+      private final @Nullable Output<List<String>> destinationAddresses;
 
-    public Input<List<String>> getDestinationAddresses() {
-        return this.destinationAddresses == null ? Input.empty() : this.destinationAddresses;
+    public Output<List<String>> getDestinationAddresses() {
+        return this.destinationAddresses == null ? Output.empty() : this.destinationAddresses;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class AzureFirewallNatRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="destinationPorts")
-      private final @Nullable Input<List<String>> destinationPorts;
+      private final @Nullable Output<List<String>> destinationPorts;
 
-    public Input<List<String>> getDestinationPorts() {
-        return this.destinationPorts == null ? Input.empty() : this.destinationPorts;
+    public Output<List<String>> getDestinationPorts() {
+        return this.destinationPorts == null ? Output.empty() : this.destinationPorts;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class AzureFirewallNatRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class AzureFirewallNatRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="protocols")
-      private final @Nullable Input<List<Either<String,AzureFirewallNetworkRuleProtocol>>> protocols;
+      private final @Nullable Output<List<Either<String,AzureFirewallNetworkRuleProtocol>>> protocols;
 
-    public Input<List<Either<String,AzureFirewallNetworkRuleProtocol>>> getProtocols() {
-        return this.protocols == null ? Input.empty() : this.protocols;
+    public Output<List<Either<String,AzureFirewallNetworkRuleProtocol>>> getProtocols() {
+        return this.protocols == null ? Output.empty() : this.protocols;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class AzureFirewallNatRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="sourceAddresses")
-      private final @Nullable Input<List<String>> sourceAddresses;
+      private final @Nullable Output<List<String>> sourceAddresses;
 
-    public Input<List<String>> getSourceAddresses() {
-        return this.sourceAddresses == null ? Input.empty() : this.sourceAddresses;
+    public Output<List<String>> getSourceAddresses() {
+        return this.sourceAddresses == null ? Output.empty() : this.sourceAddresses;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class AzureFirewallNatRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="sourceIpGroups")
-      private final @Nullable Input<List<String>> sourceIpGroups;
+      private final @Nullable Output<List<String>> sourceIpGroups;
 
-    public Input<List<String>> getSourceIpGroups() {
-        return this.sourceIpGroups == null ? Input.empty() : this.sourceIpGroups;
+    public Output<List<String>> getSourceIpGroups() {
+        return this.sourceIpGroups == null ? Output.empty() : this.sourceIpGroups;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class AzureFirewallNatRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="translatedAddress")
-      private final @Nullable Input<String> translatedAddress;
+      private final @Nullable Output<String> translatedAddress;
 
-    public Input<String> getTranslatedAddress() {
-        return this.translatedAddress == null ? Input.empty() : this.translatedAddress;
+    public Output<String> getTranslatedAddress() {
+        return this.translatedAddress == null ? Output.empty() : this.translatedAddress;
     }
 
     /**
@@ -114,10 +114,10 @@ public final class AzureFirewallNatRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="translatedFqdn")
-      private final @Nullable Input<String> translatedFqdn;
+      private final @Nullable Output<String> translatedFqdn;
 
-    public Input<String> getTranslatedFqdn() {
-        return this.translatedFqdn == null ? Input.empty() : this.translatedFqdn;
+    public Output<String> getTranslatedFqdn() {
+        return this.translatedFqdn == null ? Output.empty() : this.translatedFqdn;
     }
 
     /**
@@ -125,23 +125,23 @@ public final class AzureFirewallNatRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="translatedPort")
-      private final @Nullable Input<String> translatedPort;
+      private final @Nullable Output<String> translatedPort;
 
-    public Input<String> getTranslatedPort() {
-        return this.translatedPort == null ? Input.empty() : this.translatedPort;
+    public Output<String> getTranslatedPort() {
+        return this.translatedPort == null ? Output.empty() : this.translatedPort;
     }
 
     public AzureFirewallNatRuleArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<List<String>> destinationAddresses,
-        @Nullable Input<List<String>> destinationPorts,
-        @Nullable Input<String> name,
-        @Nullable Input<List<Either<String,AzureFirewallNetworkRuleProtocol>>> protocols,
-        @Nullable Input<List<String>> sourceAddresses,
-        @Nullable Input<List<String>> sourceIpGroups,
-        @Nullable Input<String> translatedAddress,
-        @Nullable Input<String> translatedFqdn,
-        @Nullable Input<String> translatedPort) {
+        @Nullable Output<String> description,
+        @Nullable Output<List<String>> destinationAddresses,
+        @Nullable Output<List<String>> destinationPorts,
+        @Nullable Output<String> name,
+        @Nullable Output<List<Either<String,AzureFirewallNetworkRuleProtocol>>> protocols,
+        @Nullable Output<List<String>> sourceAddresses,
+        @Nullable Output<List<String>> sourceIpGroups,
+        @Nullable Output<String> translatedAddress,
+        @Nullable Output<String> translatedFqdn,
+        @Nullable Output<String> translatedPort) {
         this.description = description;
         this.destinationAddresses = destinationAddresses;
         this.destinationPorts = destinationPorts;
@@ -155,16 +155,16 @@ public final class AzureFirewallNatRuleArgs extends io.pulumi.resources.Resource
     }
 
     private AzureFirewallNatRuleArgs() {
-        this.description = Input.empty();
-        this.destinationAddresses = Input.empty();
-        this.destinationPorts = Input.empty();
-        this.name = Input.empty();
-        this.protocols = Input.empty();
-        this.sourceAddresses = Input.empty();
-        this.sourceIpGroups = Input.empty();
-        this.translatedAddress = Input.empty();
-        this.translatedFqdn = Input.empty();
-        this.translatedPort = Input.empty();
+        this.description = Output.empty();
+        this.destinationAddresses = Output.empty();
+        this.destinationPorts = Output.empty();
+        this.name = Output.empty();
+        this.protocols = Output.empty();
+        this.sourceAddresses = Output.empty();
+        this.sourceIpGroups = Output.empty();
+        this.translatedAddress = Output.empty();
+        this.translatedFqdn = Output.empty();
+        this.translatedPort = Output.empty();
     }
 
     public static Builder builder() {
@@ -176,16 +176,16 @@ public final class AzureFirewallNatRuleArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<String>> destinationAddresses;
-        private @Nullable Input<List<String>> destinationPorts;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<Either<String,AzureFirewallNetworkRuleProtocol>>> protocols;
-        private @Nullable Input<List<String>> sourceAddresses;
-        private @Nullable Input<List<String>> sourceIpGroups;
-        private @Nullable Input<String> translatedAddress;
-        private @Nullable Input<String> translatedFqdn;
-        private @Nullable Input<String> translatedPort;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<String>> destinationAddresses;
+        private @Nullable Output<List<String>> destinationPorts;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<Either<String,AzureFirewallNetworkRuleProtocol>>> protocols;
+        private @Nullable Output<List<String>> sourceAddresses;
+        private @Nullable Output<List<String>> sourceIpGroups;
+        private @Nullable Output<String> translatedAddress;
+        private @Nullable Output<String> translatedFqdn;
+        private @Nullable Output<String> translatedPort;
 
         public Builder() {
     	      // Empty
@@ -205,103 +205,103 @@ public final class AzureFirewallNatRuleArgs extends io.pulumi.resources.Resource
     	      this.translatedPort = defaults.translatedPort;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder destinationAddresses(@Nullable Input<List<String>> destinationAddresses) {
+        public Builder destinationAddresses(@Nullable Output<List<String>> destinationAddresses) {
             this.destinationAddresses = destinationAddresses;
             return this;
         }
 
         public Builder destinationAddresses(@Nullable List<String> destinationAddresses) {
-            this.destinationAddresses = Input.ofNullable(destinationAddresses);
+            this.destinationAddresses = Output.ofNullable(destinationAddresses);
             return this;
         }
 
-        public Builder destinationPorts(@Nullable Input<List<String>> destinationPorts) {
+        public Builder destinationPorts(@Nullable Output<List<String>> destinationPorts) {
             this.destinationPorts = destinationPorts;
             return this;
         }
 
         public Builder destinationPorts(@Nullable List<String> destinationPorts) {
-            this.destinationPorts = Input.ofNullable(destinationPorts);
+            this.destinationPorts = Output.ofNullable(destinationPorts);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder protocols(@Nullable Input<List<Either<String,AzureFirewallNetworkRuleProtocol>>> protocols) {
+        public Builder protocols(@Nullable Output<List<Either<String,AzureFirewallNetworkRuleProtocol>>> protocols) {
             this.protocols = protocols;
             return this;
         }
 
         public Builder protocols(@Nullable List<Either<String,AzureFirewallNetworkRuleProtocol>> protocols) {
-            this.protocols = Input.ofNullable(protocols);
+            this.protocols = Output.ofNullable(protocols);
             return this;
         }
 
-        public Builder sourceAddresses(@Nullable Input<List<String>> sourceAddresses) {
+        public Builder sourceAddresses(@Nullable Output<List<String>> sourceAddresses) {
             this.sourceAddresses = sourceAddresses;
             return this;
         }
 
         public Builder sourceAddresses(@Nullable List<String> sourceAddresses) {
-            this.sourceAddresses = Input.ofNullable(sourceAddresses);
+            this.sourceAddresses = Output.ofNullable(sourceAddresses);
             return this;
         }
 
-        public Builder sourceIpGroups(@Nullable Input<List<String>> sourceIpGroups) {
+        public Builder sourceIpGroups(@Nullable Output<List<String>> sourceIpGroups) {
             this.sourceIpGroups = sourceIpGroups;
             return this;
         }
 
         public Builder sourceIpGroups(@Nullable List<String> sourceIpGroups) {
-            this.sourceIpGroups = Input.ofNullable(sourceIpGroups);
+            this.sourceIpGroups = Output.ofNullable(sourceIpGroups);
             return this;
         }
 
-        public Builder translatedAddress(@Nullable Input<String> translatedAddress) {
+        public Builder translatedAddress(@Nullable Output<String> translatedAddress) {
             this.translatedAddress = translatedAddress;
             return this;
         }
 
         public Builder translatedAddress(@Nullable String translatedAddress) {
-            this.translatedAddress = Input.ofNullable(translatedAddress);
+            this.translatedAddress = Output.ofNullable(translatedAddress);
             return this;
         }
 
-        public Builder translatedFqdn(@Nullable Input<String> translatedFqdn) {
+        public Builder translatedFqdn(@Nullable Output<String> translatedFqdn) {
             this.translatedFqdn = translatedFqdn;
             return this;
         }
 
         public Builder translatedFqdn(@Nullable String translatedFqdn) {
-            this.translatedFqdn = Input.ofNullable(translatedFqdn);
+            this.translatedFqdn = Output.ofNullable(translatedFqdn);
             return this;
         }
 
-        public Builder translatedPort(@Nullable Input<String> translatedPort) {
+        public Builder translatedPort(@Nullable Output<String> translatedPort) {
             this.translatedPort = translatedPort;
             return this;
         }
 
         public Builder translatedPort(@Nullable String translatedPort) {
-            this.translatedPort = Input.ofNullable(translatedPort);
+            this.translatedPort = Output.ofNullable(translatedPort);
             return this;
         }
         public AzureFirewallNatRuleArgs build() {

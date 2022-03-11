@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -16,39 +16,39 @@ public final class DistributionLoggingArgs extends io.pulumi.resources.ResourceA
     public static final DistributionLoggingArgs Empty = new DistributionLoggingArgs();
 
     @InputImport(name="bucket", required=true)
-      private final Input<String> bucket;
+      private final Output<String> bucket;
 
-    public Input<String> getBucket() {
+    public Output<String> getBucket() {
         return this.bucket;
     }
 
     @InputImport(name="includeCookies")
-      private final @Nullable Input<Boolean> includeCookies;
+      private final @Nullable Output<Boolean> includeCookies;
 
-    public Input<Boolean> getIncludeCookies() {
-        return this.includeCookies == null ? Input.empty() : this.includeCookies;
+    public Output<Boolean> getIncludeCookies() {
+        return this.includeCookies == null ? Output.empty() : this.includeCookies;
     }
 
     @InputImport(name="prefix")
-      private final @Nullable Input<String> prefix;
+      private final @Nullable Output<String> prefix;
 
-    public Input<String> getPrefix() {
-        return this.prefix == null ? Input.empty() : this.prefix;
+    public Output<String> getPrefix() {
+        return this.prefix == null ? Output.empty() : this.prefix;
     }
 
     public DistributionLoggingArgs(
-        Input<String> bucket,
-        @Nullable Input<Boolean> includeCookies,
-        @Nullable Input<String> prefix) {
+        Output<String> bucket,
+        @Nullable Output<Boolean> includeCookies,
+        @Nullable Output<String> prefix) {
         this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
         this.includeCookies = includeCookies;
         this.prefix = prefix;
     }
 
     private DistributionLoggingArgs() {
-        this.bucket = Input.empty();
-        this.includeCookies = Input.empty();
-        this.prefix = Input.empty();
+        this.bucket = Output.empty();
+        this.includeCookies = Output.empty();
+        this.prefix = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,9 +60,9 @@ public final class DistributionLoggingArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> bucket;
-        private @Nullable Input<Boolean> includeCookies;
-        private @Nullable Input<String> prefix;
+        private Output<String> bucket;
+        private @Nullable Output<Boolean> includeCookies;
+        private @Nullable Output<String> prefix;
 
         public Builder() {
     	      // Empty
@@ -75,33 +75,33 @@ public final class DistributionLoggingArgs extends io.pulumi.resources.ResourceA
     	      this.prefix = defaults.prefix;
         }
 
-        public Builder bucket(Input<String> bucket) {
+        public Builder bucket(Output<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Input.of(Objects.requireNonNull(bucket));
+            this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder includeCookies(@Nullable Input<Boolean> includeCookies) {
+        public Builder includeCookies(@Nullable Output<Boolean> includeCookies) {
             this.includeCookies = includeCookies;
             return this;
         }
 
         public Builder includeCookies(@Nullable Boolean includeCookies) {
-            this.includeCookies = Input.ofNullable(includeCookies);
+            this.includeCookies = Output.ofNullable(includeCookies);
             return this;
         }
 
-        public Builder prefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Input.ofNullable(prefix);
+            this.prefix = Output.ofNullable(prefix);
             return this;
         }
         public DistributionLoggingArgs build() {

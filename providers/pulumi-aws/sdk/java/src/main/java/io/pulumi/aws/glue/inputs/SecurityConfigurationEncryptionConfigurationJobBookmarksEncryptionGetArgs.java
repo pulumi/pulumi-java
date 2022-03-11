@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glue.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class SecurityConfigurationEncryptionConfigurationJobBookmarksEncry
      * 
      */
     @InputImport(name="jobBookmarksEncryptionMode")
-      private final @Nullable Input<String> jobBookmarksEncryptionMode;
+      private final @Nullable Output<String> jobBookmarksEncryptionMode;
 
-    public Input<String> getJobBookmarksEncryptionMode() {
-        return this.jobBookmarksEncryptionMode == null ? Input.empty() : this.jobBookmarksEncryptionMode;
+    public Output<String> getJobBookmarksEncryptionMode() {
+        return this.jobBookmarksEncryptionMode == null ? Output.empty() : this.jobBookmarksEncryptionMode;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class SecurityConfigurationEncryptionConfigurationJobBookmarksEncry
      * 
      */
     @InputImport(name="kmsKeyArn")
-      private final @Nullable Input<String> kmsKeyArn;
+      private final @Nullable Output<String> kmsKeyArn;
 
-    public Input<String> getKmsKeyArn() {
-        return this.kmsKeyArn == null ? Input.empty() : this.kmsKeyArn;
+    public Output<String> getKmsKeyArn() {
+        return this.kmsKeyArn == null ? Output.empty() : this.kmsKeyArn;
     }
 
     public SecurityConfigurationEncryptionConfigurationJobBookmarksEncryptionGetArgs(
-        @Nullable Input<String> jobBookmarksEncryptionMode,
-        @Nullable Input<String> kmsKeyArn) {
+        @Nullable Output<String> jobBookmarksEncryptionMode,
+        @Nullable Output<String> kmsKeyArn) {
         this.jobBookmarksEncryptionMode = jobBookmarksEncryptionMode;
         this.kmsKeyArn = kmsKeyArn;
     }
 
     private SecurityConfigurationEncryptionConfigurationJobBookmarksEncryptionGetArgs() {
-        this.jobBookmarksEncryptionMode = Input.empty();
-        this.kmsKeyArn = Input.empty();
+        this.jobBookmarksEncryptionMode = Output.empty();
+        this.kmsKeyArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class SecurityConfigurationEncryptionConfigurationJobBookmarksEncry
     }
 
     public static final class Builder {
-        private @Nullable Input<String> jobBookmarksEncryptionMode;
-        private @Nullable Input<String> kmsKeyArn;
+        private @Nullable Output<String> jobBookmarksEncryptionMode;
+        private @Nullable Output<String> kmsKeyArn;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class SecurityConfigurationEncryptionConfigurationJobBookmarksEncry
     	      this.kmsKeyArn = defaults.kmsKeyArn;
         }
 
-        public Builder jobBookmarksEncryptionMode(@Nullable Input<String> jobBookmarksEncryptionMode) {
+        public Builder jobBookmarksEncryptionMode(@Nullable Output<String> jobBookmarksEncryptionMode) {
             this.jobBookmarksEncryptionMode = jobBookmarksEncryptionMode;
             return this;
         }
 
         public Builder jobBookmarksEncryptionMode(@Nullable String jobBookmarksEncryptionMode) {
-            this.jobBookmarksEncryptionMode = Input.ofNullable(jobBookmarksEncryptionMode);
+            this.jobBookmarksEncryptionMode = Output.ofNullable(jobBookmarksEncryptionMode);
             return this;
         }
 
-        public Builder kmsKeyArn(@Nullable Input<String> kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Input.ofNullable(kmsKeyArn);
+            this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
             return this;
         }
         public SecurityConfigurationEncryptionConfigurationJobBookmarksEncryptionGetArgs build() {

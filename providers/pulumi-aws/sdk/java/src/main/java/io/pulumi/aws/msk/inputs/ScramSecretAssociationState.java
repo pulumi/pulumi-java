@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.msk.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class ScramSecretAssociationState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="clusterArn")
-      private final @Nullable Input<String> clusterArn;
+      private final @Nullable Output<String> clusterArn;
 
-    public Input<String> getClusterArn() {
-        return this.clusterArn == null ? Input.empty() : this.clusterArn;
+    public Output<String> getClusterArn() {
+        return this.clusterArn == null ? Output.empty() : this.clusterArn;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class ScramSecretAssociationState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="secretArnLists")
-      private final @Nullable Input<List<String>> secretArnLists;
+      private final @Nullable Output<List<String>> secretArnLists;
 
-    public Input<List<String>> getSecretArnLists() {
-        return this.secretArnLists == null ? Input.empty() : this.secretArnLists;
+    public Output<List<String>> getSecretArnLists() {
+        return this.secretArnLists == null ? Output.empty() : this.secretArnLists;
     }
 
     public ScramSecretAssociationState(
-        @Nullable Input<String> clusterArn,
-        @Nullable Input<List<String>> secretArnLists) {
+        @Nullable Output<String> clusterArn,
+        @Nullable Output<List<String>> secretArnLists) {
         this.clusterArn = clusterArn;
         this.secretArnLists = secretArnLists;
     }
 
     private ScramSecretAssociationState() {
-        this.clusterArn = Input.empty();
-        this.secretArnLists = Input.empty();
+        this.clusterArn = Output.empty();
+        this.secretArnLists = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class ScramSecretAssociationState extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> clusterArn;
-        private @Nullable Input<List<String>> secretArnLists;
+        private @Nullable Output<String> clusterArn;
+        private @Nullable Output<List<String>> secretArnLists;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class ScramSecretAssociationState extends io.pulumi.resources.Resou
     	      this.secretArnLists = defaults.secretArnLists;
         }
 
-        public Builder clusterArn(@Nullable Input<String> clusterArn) {
+        public Builder clusterArn(@Nullable Output<String> clusterArn) {
             this.clusterArn = clusterArn;
             return this;
         }
 
         public Builder clusterArn(@Nullable String clusterArn) {
-            this.clusterArn = Input.ofNullable(clusterArn);
+            this.clusterArn = Output.ofNullable(clusterArn);
             return this;
         }
 
-        public Builder secretArnLists(@Nullable Input<List<String>> secretArnLists) {
+        public Builder secretArnLists(@Nullable Output<List<String>> secretArnLists) {
             this.secretArnLists = secretArnLists;
             return this;
         }
 
         public Builder secretArnLists(@Nullable List<String> secretArnLists) {
-            this.secretArnLists = Input.ofNullable(secretArnLists);
+            this.secretArnLists = Output.ofNullable(secretArnLists);
             return this;
         }
         public ScramSecretAssociationState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.extensions_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.extensions_v1beta1.inputs.IDRangeArgs;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class SupplementalGroupsStrategyOptionsArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="ranges")
-      private final @Nullable Input<List<IDRangeArgs>> ranges;
+      private final @Nullable Output<List<IDRangeArgs>> ranges;
 
-    public Input<List<IDRangeArgs>> getRanges() {
-        return this.ranges == null ? Input.empty() : this.ranges;
+    public Output<List<IDRangeArgs>> getRanges() {
+        return this.ranges == null ? Output.empty() : this.ranges;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class SupplementalGroupsStrategyOptionsArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="rule")
-      private final @Nullable Input<String> rule;
+      private final @Nullable Output<String> rule;
 
-    public Input<String> getRule() {
-        return this.rule == null ? Input.empty() : this.rule;
+    public Output<String> getRule() {
+        return this.rule == null ? Output.empty() : this.rule;
     }
 
     public SupplementalGroupsStrategyOptionsArgs(
-        @Nullable Input<List<IDRangeArgs>> ranges,
-        @Nullable Input<String> rule) {
+        @Nullable Output<List<IDRangeArgs>> ranges,
+        @Nullable Output<String> rule) {
         this.ranges = ranges;
         this.rule = rule;
     }
 
     private SupplementalGroupsStrategyOptionsArgs() {
-        this.ranges = Input.empty();
-        this.rule = Input.empty();
+        this.ranges = Output.empty();
+        this.rule = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class SupplementalGroupsStrategyOptionsArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<List<IDRangeArgs>> ranges;
-        private @Nullable Input<String> rule;
+        private @Nullable Output<List<IDRangeArgs>> ranges;
+        private @Nullable Output<String> rule;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class SupplementalGroupsStrategyOptionsArgs extends io.pulumi.resou
     	      this.rule = defaults.rule;
         }
 
-        public Builder ranges(@Nullable Input<List<IDRangeArgs>> ranges) {
+        public Builder ranges(@Nullable Output<List<IDRangeArgs>> ranges) {
             this.ranges = ranges;
             return this;
         }
 
         public Builder ranges(@Nullable List<IDRangeArgs> ranges) {
-            this.ranges = Input.ofNullable(ranges);
+            this.ranges = Output.ofNullable(ranges);
             return this;
         }
 
-        public Builder rule(@Nullable Input<String> rule) {
+        public Builder rule(@Nullable Output<String> rule) {
             this.rule = rule;
             return this;
         }
 
         public Builder rule(@Nullable String rule) {
-            this.rule = Input.ofNullable(rule);
+            this.rule = Output.ofNullable(rule);
             return this;
         }
         public SupplementalGroupsStrategyOptionsArgs build() {

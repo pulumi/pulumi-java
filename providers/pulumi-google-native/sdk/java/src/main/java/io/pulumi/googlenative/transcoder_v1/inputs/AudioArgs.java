@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -24,10 +24,10 @@ public final class AudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="highBoost")
-      private final @Nullable Input<Boolean> highBoost;
+      private final @Nullable Output<Boolean> highBoost;
 
-    public Input<Boolean> getHighBoost() {
-        return this.highBoost == null ? Input.empty() : this.highBoost;
+    public Output<Boolean> getHighBoost() {
+        return this.highBoost == null ? Output.empty() : this.highBoost;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lowBoost")
-      private final @Nullable Input<Boolean> lowBoost;
+      private final @Nullable Output<Boolean> lowBoost;
 
-    public Input<Boolean> getLowBoost() {
-        return this.lowBoost == null ? Input.empty() : this.lowBoost;
+    public Output<Boolean> getLowBoost() {
+        return this.lowBoost == null ? Output.empty() : this.lowBoost;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class AudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lufs")
-      private final @Nullable Input<Double> lufs;
+      private final @Nullable Output<Double> lufs;
 
-    public Input<Double> getLufs() {
-        return this.lufs == null ? Input.empty() : this.lufs;
+    public Output<Double> getLufs() {
+        return this.lufs == null ? Output.empty() : this.lufs;
     }
 
     public AudioArgs(
-        @Nullable Input<Boolean> highBoost,
-        @Nullable Input<Boolean> lowBoost,
-        @Nullable Input<Double> lufs) {
+        @Nullable Output<Boolean> highBoost,
+        @Nullable Output<Boolean> lowBoost,
+        @Nullable Output<Double> lufs) {
         this.highBoost = highBoost;
         this.lowBoost = lowBoost;
         this.lufs = lufs;
     }
 
     private AudioArgs() {
-        this.highBoost = Input.empty();
-        this.lowBoost = Input.empty();
-        this.lufs = Input.empty();
+        this.highBoost = Output.empty();
+        this.lowBoost = Output.empty();
+        this.lufs = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class AudioArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> highBoost;
-        private @Nullable Input<Boolean> lowBoost;
-        private @Nullable Input<Double> lufs;
+        private @Nullable Output<Boolean> highBoost;
+        private @Nullable Output<Boolean> lowBoost;
+        private @Nullable Output<Double> lufs;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class AudioArgs extends io.pulumi.resources.ResourceArgs {
     	      this.lufs = defaults.lufs;
         }
 
-        public Builder highBoost(@Nullable Input<Boolean> highBoost) {
+        public Builder highBoost(@Nullable Output<Boolean> highBoost) {
             this.highBoost = highBoost;
             return this;
         }
 
         public Builder highBoost(@Nullable Boolean highBoost) {
-            this.highBoost = Input.ofNullable(highBoost);
+            this.highBoost = Output.ofNullable(highBoost);
             return this;
         }
 
-        public Builder lowBoost(@Nullable Input<Boolean> lowBoost) {
+        public Builder lowBoost(@Nullable Output<Boolean> lowBoost) {
             this.lowBoost = lowBoost;
             return this;
         }
 
         public Builder lowBoost(@Nullable Boolean lowBoost) {
-            this.lowBoost = Input.ofNullable(lowBoost);
+            this.lowBoost = Output.ofNullable(lowBoost);
             return this;
         }
 
-        public Builder lufs(@Nullable Input<Double> lufs) {
+        public Builder lufs(@Nullable Output<Double> lufs) {
             this.lufs = lufs;
             return this;
         }
 
         public Builder lufs(@Nullable Double lufs) {
-            this.lufs = Input.ofNullable(lufs);
+            this.lufs = Output.ofNullable(lufs);
             return this;
         }
         public AudioArgs build() {

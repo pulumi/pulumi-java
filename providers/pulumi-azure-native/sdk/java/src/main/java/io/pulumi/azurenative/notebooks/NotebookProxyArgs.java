@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.notebooks;
 
 import io.pulumi.azurenative.notebooks.inputs.NotebookResourceSystemDataArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostname")
-      private final @Nullable Input<String> hostname;
+      private final @Nullable Output<String> hostname;
 
-    public Input<String> getHostname() {
-        return this.hostname == null ? Input.empty() : this.hostname;
+    public Output<String> getHostname() {
+        return this.hostname == null ? Output.empty() : this.hostname;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicDns")
-      private final @Nullable Input<String> publicDns;
+      private final @Nullable Output<String> publicDns;
 
-    public Input<String> getPublicDns() {
-        return this.publicDns == null ? Input.empty() : this.publicDns;
+    public Output<String> getPublicDns() {
+        return this.publicDns == null ? Output.empty() : this.publicDns;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicNetworkAccess")
-      private final @Nullable Input<String> publicNetworkAccess;
+      private final @Nullable Output<String> publicNetworkAccess;
 
-    public Input<String> getPublicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
+    public Output<String> getPublicNetworkAccess() {
+        return this.publicNetworkAccess == null ? Output.empty() : this.publicNetworkAccess;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -64,9 +64,9 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -75,10 +75,10 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceName")
-      private final @Nullable Input<String> resourceName;
+      private final @Nullable Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
-        return this.resourceName == null ? Input.empty() : this.resourceName;
+    public Output<String> getPropResourceName() {
+        return this.resourceName == null ? Output.empty() : this.resourceName;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secondaryAppId")
-      private final @Nullable Input<String> secondaryAppId;
+      private final @Nullable Output<String> secondaryAppId;
 
-    public Input<String> getSecondaryAppId() {
-        return this.secondaryAppId == null ? Input.empty() : this.secondaryAppId;
+    public Output<String> getSecondaryAppId() {
+        return this.secondaryAppId == null ? Output.empty() : this.secondaryAppId;
     }
 
     /**
@@ -97,21 +97,21 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="systemData")
-      private final @Nullable Input<NotebookResourceSystemDataArgs> systemData;
+      private final @Nullable Output<NotebookResourceSystemDataArgs> systemData;
 
-    public Input<NotebookResourceSystemDataArgs> getSystemData() {
-        return this.systemData == null ? Input.empty() : this.systemData;
+    public Output<NotebookResourceSystemDataArgs> getSystemData() {
+        return this.systemData == null ? Output.empty() : this.systemData;
     }
 
     public NotebookProxyArgs(
-        @Nullable Input<String> hostname,
-        @Nullable Input<String> publicDns,
-        @Nullable Input<String> publicNetworkAccess,
-        @Nullable Input<String> region,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> resourceName,
-        @Nullable Input<String> secondaryAppId,
-        @Nullable Input<NotebookResourceSystemDataArgs> systemData) {
+        @Nullable Output<String> hostname,
+        @Nullable Output<String> publicDns,
+        @Nullable Output<String> publicNetworkAccess,
+        @Nullable Output<String> region,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> resourceName,
+        @Nullable Output<String> secondaryAppId,
+        @Nullable Output<NotebookResourceSystemDataArgs> systemData) {
         this.hostname = hostname;
         this.publicDns = publicDns;
         this.publicNetworkAccess = publicNetworkAccess;
@@ -123,14 +123,14 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NotebookProxyArgs() {
-        this.hostname = Input.empty();
-        this.publicDns = Input.empty();
-        this.publicNetworkAccess = Input.empty();
-        this.region = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceName = Input.empty();
-        this.secondaryAppId = Input.empty();
-        this.systemData = Input.empty();
+        this.hostname = Output.empty();
+        this.publicDns = Output.empty();
+        this.publicNetworkAccess = Output.empty();
+        this.region = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceName = Output.empty();
+        this.secondaryAppId = Output.empty();
+        this.systemData = Output.empty();
     }
 
     public static Builder builder() {
@@ -142,14 +142,14 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> hostname;
-        private @Nullable Input<String> publicDns;
-        private @Nullable Input<String> publicNetworkAccess;
-        private @Nullable Input<String> region;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> resourceName;
-        private @Nullable Input<String> secondaryAppId;
-        private @Nullable Input<NotebookResourceSystemDataArgs> systemData;
+        private @Nullable Output<String> hostname;
+        private @Nullable Output<String> publicDns;
+        private @Nullable Output<String> publicNetworkAccess;
+        private @Nullable Output<String> region;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> resourceName;
+        private @Nullable Output<String> secondaryAppId;
+        private @Nullable Output<NotebookResourceSystemDataArgs> systemData;
 
         public Builder() {
     	      // Empty
@@ -167,83 +167,83 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.systemData = defaults.systemData;
         }
 
-        public Builder hostname(@Nullable Input<String> hostname) {
+        public Builder hostname(@Nullable Output<String> hostname) {
             this.hostname = hostname;
             return this;
         }
 
         public Builder hostname(@Nullable String hostname) {
-            this.hostname = Input.ofNullable(hostname);
+            this.hostname = Output.ofNullable(hostname);
             return this;
         }
 
-        public Builder publicDns(@Nullable Input<String> publicDns) {
+        public Builder publicDns(@Nullable Output<String> publicDns) {
             this.publicDns = publicDns;
             return this;
         }
 
         public Builder publicDns(@Nullable String publicDns) {
-            this.publicDns = Input.ofNullable(publicDns);
+            this.publicDns = Output.ofNullable(publicDns);
             return this;
         }
 
-        public Builder publicNetworkAccess(@Nullable Input<String> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Output<String> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
         public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
-            this.publicNetworkAccess = Input.ofNullable(publicNetworkAccess);
+            this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceName(@Nullable Input<String> resourceName) {
+        public Builder resourceName(@Nullable Output<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Input.ofNullable(resourceName);
+            this.resourceName = Output.ofNullable(resourceName);
             return this;
         }
 
-        public Builder secondaryAppId(@Nullable Input<String> secondaryAppId) {
+        public Builder secondaryAppId(@Nullable Output<String> secondaryAppId) {
             this.secondaryAppId = secondaryAppId;
             return this;
         }
 
         public Builder secondaryAppId(@Nullable String secondaryAppId) {
-            this.secondaryAppId = Input.ofNullable(secondaryAppId);
+            this.secondaryAppId = Output.ofNullable(secondaryAppId);
             return this;
         }
 
-        public Builder systemData(@Nullable Input<NotebookResourceSystemDataArgs> systemData) {
+        public Builder systemData(@Nullable Output<NotebookResourceSystemDataArgs> systemData) {
             this.systemData = systemData;
             return this;
         }
 
         public Builder systemData(@Nullable NotebookResourceSystemDataArgs systemData) {
-            this.systemData = Input.ofNullable(systemData);
+            this.systemData = Output.ofNullable(systemData);
             return this;
         }
         public NotebookProxyArgs build() {

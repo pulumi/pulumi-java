@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class SpotDatafeedSubscriptionState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="bucket")
-      private final @Nullable Input<String> bucket;
+      private final @Nullable Output<String> bucket;
 
-    public Input<String> getBucket() {
-        return this.bucket == null ? Input.empty() : this.bucket;
+    public Output<String> getBucket() {
+        return this.bucket == null ? Output.empty() : this.bucket;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class SpotDatafeedSubscriptionState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="prefix")
-      private final @Nullable Input<String> prefix;
+      private final @Nullable Output<String> prefix;
 
-    public Input<String> getPrefix() {
-        return this.prefix == null ? Input.empty() : this.prefix;
+    public Output<String> getPrefix() {
+        return this.prefix == null ? Output.empty() : this.prefix;
     }
 
     public SpotDatafeedSubscriptionState(
-        @Nullable Input<String> bucket,
-        @Nullable Input<String> prefix) {
+        @Nullable Output<String> bucket,
+        @Nullable Output<String> prefix) {
         this.bucket = bucket;
         this.prefix = prefix;
     }
 
     private SpotDatafeedSubscriptionState() {
-        this.bucket = Input.empty();
-        this.prefix = Input.empty();
+        this.bucket = Output.empty();
+        this.prefix = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class SpotDatafeedSubscriptionState extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bucket;
-        private @Nullable Input<String> prefix;
+        private @Nullable Output<String> bucket;
+        private @Nullable Output<String> prefix;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class SpotDatafeedSubscriptionState extends io.pulumi.resources.Res
     	      this.prefix = defaults.prefix;
         }
 
-        public Builder bucket(@Nullable Input<String> bucket) {
+        public Builder bucket(@Nullable Output<String> bucket) {
             this.bucket = bucket;
             return this;
         }
 
         public Builder bucket(@Nullable String bucket) {
-            this.bucket = Input.ofNullable(bucket);
+            this.bucket = Output.ofNullable(bucket);
             return this;
         }
 
-        public Builder prefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Input.ofNullable(prefix);
+            this.prefix = Output.ofNullable(prefix);
             return this;
         }
         public SpotDatafeedSubscriptionState build() {

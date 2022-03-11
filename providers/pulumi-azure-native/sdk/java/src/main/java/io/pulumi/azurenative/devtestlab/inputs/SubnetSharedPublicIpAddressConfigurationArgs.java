@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devtestlab.inputs;
 
 import io.pulumi.azurenative.devtestlab.inputs.PortArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class SubnetSharedPublicIpAddressConfigurationArgs extends io.pulum
      * 
      */
     @InputImport(name="allowedPorts")
-      private final @Nullable Input<List<PortArgs>> allowedPorts;
+      private final @Nullable Output<List<PortArgs>> allowedPorts;
 
-    public Input<List<PortArgs>> getAllowedPorts() {
-        return this.allowedPorts == null ? Input.empty() : this.allowedPorts;
+    public Output<List<PortArgs>> getAllowedPorts() {
+        return this.allowedPorts == null ? Output.empty() : this.allowedPorts;
     }
 
-    public SubnetSharedPublicIpAddressConfigurationArgs(@Nullable Input<List<PortArgs>> allowedPorts) {
+    public SubnetSharedPublicIpAddressConfigurationArgs(@Nullable Output<List<PortArgs>> allowedPorts) {
         this.allowedPorts = allowedPorts;
     }
 
     private SubnetSharedPublicIpAddressConfigurationArgs() {
-        this.allowedPorts = Input.empty();
+        this.allowedPorts = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class SubnetSharedPublicIpAddressConfigurationArgs extends io.pulum
     }
 
     public static final class Builder {
-        private @Nullable Input<List<PortArgs>> allowedPorts;
+        private @Nullable Output<List<PortArgs>> allowedPorts;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class SubnetSharedPublicIpAddressConfigurationArgs extends io.pulum
     	      this.allowedPorts = defaults.allowedPorts;
         }
 
-        public Builder allowedPorts(@Nullable Input<List<PortArgs>> allowedPorts) {
+        public Builder allowedPorts(@Nullable Output<List<PortArgs>> allowedPorts) {
             this.allowedPorts = allowedPorts;
             return this;
         }
 
         public Builder allowedPorts(@Nullable List<PortArgs> allowedPorts) {
-            this.allowedPorts = Input.ofNullable(allowedPorts);
+            this.allowedPorts = Output.ofNullable(allowedPorts);
             return this;
         }
         public SubnetSharedPublicIpAddressConfigurationArgs build() {

@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.apigatewayv2.RouteArgs;
 import io.pulumi.aws.apigatewayv2.inputs.RouteState;
 import io.pulumi.aws.apigatewayv2.outputs.RouteRequestParameter;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -247,14 +246,14 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Route(String name, RouteArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:apigatewayv2/route:Route", name, args == null ? RouteArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:apigatewayv2/route:Route", name, args == null ? RouteArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Route(String name, Input<String> id, @Nullable RouteState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Route(String name, Output<String> id, @Nullable RouteState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:apigatewayv2/route:Route", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -270,7 +269,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Route get(String name, Input<String> id, @Nullable RouteState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Route get(String name, Output<String> id, @Nullable RouteState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Route(name, id, state, options);
     }
 }

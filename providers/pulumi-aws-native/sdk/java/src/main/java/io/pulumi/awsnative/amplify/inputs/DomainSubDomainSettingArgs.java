@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.amplify.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,29 +14,29 @@ public final class DomainSubDomainSettingArgs extends io.pulumi.resources.Resour
     public static final DomainSubDomainSettingArgs Empty = new DomainSubDomainSettingArgs();
 
     @InputImport(name="branchName", required=true)
-      private final Input<String> branchName;
+      private final Output<String> branchName;
 
-    public Input<String> getBranchName() {
+    public Output<String> getBranchName() {
         return this.branchName;
     }
 
     @InputImport(name="prefix", required=true)
-      private final Input<String> prefix;
+      private final Output<String> prefix;
 
-    public Input<String> getPrefix() {
+    public Output<String> getPrefix() {
         return this.prefix;
     }
 
     public DomainSubDomainSettingArgs(
-        Input<String> branchName,
-        Input<String> prefix) {
+        Output<String> branchName,
+        Output<String> prefix) {
         this.branchName = Objects.requireNonNull(branchName, "expected parameter 'branchName' to be non-null");
         this.prefix = Objects.requireNonNull(prefix, "expected parameter 'prefix' to be non-null");
     }
 
     private DomainSubDomainSettingArgs() {
-        this.branchName = Input.empty();
-        this.prefix = Input.empty();
+        this.branchName = Output.empty();
+        this.prefix = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,8 +48,8 @@ public final class DomainSubDomainSettingArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> branchName;
-        private Input<String> prefix;
+        private Output<String> branchName;
+        private Output<String> prefix;
 
         public Builder() {
     	      // Empty
@@ -61,23 +61,23 @@ public final class DomainSubDomainSettingArgs extends io.pulumi.resources.Resour
     	      this.prefix = defaults.prefix;
         }
 
-        public Builder branchName(Input<String> branchName) {
+        public Builder branchName(Output<String> branchName) {
             this.branchName = Objects.requireNonNull(branchName);
             return this;
         }
 
         public Builder branchName(String branchName) {
-            this.branchName = Input.of(Objects.requireNonNull(branchName));
+            this.branchName = Output.of(Objects.requireNonNull(branchName));
             return this;
         }
 
-        public Builder prefix(Input<String> prefix) {
+        public Builder prefix(Output<String> prefix) {
             this.prefix = Objects.requireNonNull(prefix);
             return this;
         }
 
         public Builder prefix(String prefix) {
-            this.prefix = Input.of(Objects.requireNonNull(prefix));
+            this.prefix = Output.of(Objects.requireNonNull(prefix));
             return this;
         }
         public DomainSubDomainSettingArgs build() {

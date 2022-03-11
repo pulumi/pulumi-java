@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class GooglePrivacyDlpV2WordListArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="words")
-      private final @Nullable Input<List<String>> words;
+      private final @Nullable Output<List<String>> words;
 
-    public Input<List<String>> getWords() {
-        return this.words == null ? Input.empty() : this.words;
+    public Output<List<String>> getWords() {
+        return this.words == null ? Output.empty() : this.words;
     }
 
-    public GooglePrivacyDlpV2WordListArgs(@Nullable Input<List<String>> words) {
+    public GooglePrivacyDlpV2WordListArgs(@Nullable Output<List<String>> words) {
         this.words = words;
     }
 
     private GooglePrivacyDlpV2WordListArgs() {
-        this.words = Input.empty();
+        this.words = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class GooglePrivacyDlpV2WordListArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> words;
+        private @Nullable Output<List<String>> words;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class GooglePrivacyDlpV2WordListArgs extends io.pulumi.resources.Re
     	      this.words = defaults.words;
         }
 
-        public Builder words(@Nullable Input<List<String>> words) {
+        public Builder words(@Nullable Output<List<String>> words) {
             this.words = words;
             return this;
         }
 
         public Builder words(@Nullable List<String> words) {
-            this.words = Input.ofNullable(words);
+            this.words = Output.ofNullable(words);
             return this;
         }
         public GooglePrivacyDlpV2WordListArgs build() {

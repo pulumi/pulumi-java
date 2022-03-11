@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.secretmanager_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class RotationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nextRotationTime")
-      private final @Nullable Input<String> nextRotationTime;
+      private final @Nullable Output<String> nextRotationTime;
 
-    public Input<String> getNextRotationTime() {
-        return this.nextRotationTime == null ? Input.empty() : this.nextRotationTime;
+    public Output<String> getNextRotationTime() {
+        return this.nextRotationTime == null ? Output.empty() : this.nextRotationTime;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class RotationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rotationPeriod")
-      private final @Nullable Input<String> rotationPeriod;
+      private final @Nullable Output<String> rotationPeriod;
 
-    public Input<String> getRotationPeriod() {
-        return this.rotationPeriod == null ? Input.empty() : this.rotationPeriod;
+    public Output<String> getRotationPeriod() {
+        return this.rotationPeriod == null ? Output.empty() : this.rotationPeriod;
     }
 
     public RotationArgs(
-        @Nullable Input<String> nextRotationTime,
-        @Nullable Input<String> rotationPeriod) {
+        @Nullable Output<String> nextRotationTime,
+        @Nullable Output<String> rotationPeriod) {
         this.nextRotationTime = nextRotationTime;
         this.rotationPeriod = rotationPeriod;
     }
 
     private RotationArgs() {
-        this.nextRotationTime = Input.empty();
-        this.rotationPeriod = Input.empty();
+        this.nextRotationTime = Output.empty();
+        this.rotationPeriod = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class RotationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> nextRotationTime;
-        private @Nullable Input<String> rotationPeriod;
+        private @Nullable Output<String> nextRotationTime;
+        private @Nullable Output<String> rotationPeriod;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class RotationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.rotationPeriod = defaults.rotationPeriod;
         }
 
-        public Builder nextRotationTime(@Nullable Input<String> nextRotationTime) {
+        public Builder nextRotationTime(@Nullable Output<String> nextRotationTime) {
             this.nextRotationTime = nextRotationTime;
             return this;
         }
 
         public Builder nextRotationTime(@Nullable String nextRotationTime) {
-            this.nextRotationTime = Input.ofNullable(nextRotationTime);
+            this.nextRotationTime = Output.ofNullable(nextRotationTime);
             return this;
         }
 
-        public Builder rotationPeriod(@Nullable Input<String> rotationPeriod) {
+        public Builder rotationPeriod(@Nullable Output<String> rotationPeriod) {
             this.rotationPeriod = rotationPeriod;
             return this;
         }
 
         public Builder rotationPeriod(@Nullable String rotationPeriod) {
-            this.rotationPeriod = Input.ofNullable(rotationPeriod);
+            this.rotationPeriod = Output.ofNullable(rotationPeriod);
             return this;
         }
         public RotationArgs build() {

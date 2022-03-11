@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.scheduling.k8s.io_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import java.lang.Boolean;
@@ -22,10 +22,10 @@ public final class PriorityClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiVersion")
-      private final @Nullable Input<String> apiVersion;
+      private final @Nullable Output<String> apiVersion;
 
-    public Input<String> getApiVersion() {
-        return this.apiVersion == null ? Input.empty() : this.apiVersion;
+    public Output<String> getApiVersion() {
+        return this.apiVersion == null ? Output.empty() : this.apiVersion;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class PriorityClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class PriorityClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="globalDefault")
-      private final @Nullable Input<Boolean> globalDefault;
+      private final @Nullable Output<Boolean> globalDefault;
 
-    public Input<Boolean> getGlobalDefault() {
-        return this.globalDefault == null ? Input.empty() : this.globalDefault;
+    public Output<Boolean> getGlobalDefault() {
+        return this.globalDefault == null ? Output.empty() : this.globalDefault;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class PriorityClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class PriorityClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<ObjectMetaArgs> metadata;
+      private final @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Input<ObjectMetaArgs> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<ObjectMetaArgs> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class PriorityClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preemptionPolicy")
-      private final @Nullable Input<String> preemptionPolicy;
+      private final @Nullable Output<String> preemptionPolicy;
 
-    public Input<String> getPreemptionPolicy() {
-        return this.preemptionPolicy == null ? Input.empty() : this.preemptionPolicy;
+    public Output<String> getPreemptionPolicy() {
+        return this.preemptionPolicy == null ? Output.empty() : this.preemptionPolicy;
     }
 
     /**
@@ -88,20 +88,20 @@ public final class PriorityClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value", required=true)
-      private final Input<Integer> value;
+      private final Output<Integer> value;
 
-    public Input<Integer> getValue() {
+    public Output<Integer> getValue() {
         return this.value;
     }
 
     public PriorityClassArgs(
-        @Nullable Input<String> apiVersion,
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> globalDefault,
-        @Nullable Input<String> kind,
-        @Nullable Input<ObjectMetaArgs> metadata,
-        @Nullable Input<String> preemptionPolicy,
-        Input<Integer> value) {
+        @Nullable Output<String> apiVersion,
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> globalDefault,
+        @Nullable Output<String> kind,
+        @Nullable Output<ObjectMetaArgs> metadata,
+        @Nullable Output<String> preemptionPolicy,
+        Output<Integer> value) {
         this.apiVersion = apiVersion;
         this.description = description;
         this.globalDefault = globalDefault;
@@ -112,13 +112,13 @@ public final class PriorityClassArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PriorityClassArgs() {
-        this.apiVersion = Input.empty();
-        this.description = Input.empty();
-        this.globalDefault = Input.empty();
-        this.kind = Input.empty();
-        this.metadata = Input.empty();
-        this.preemptionPolicy = Input.empty();
-        this.value = Input.empty();
+        this.apiVersion = Output.empty();
+        this.description = Output.empty();
+        this.globalDefault = Output.empty();
+        this.kind = Output.empty();
+        this.metadata = Output.empty();
+        this.preemptionPolicy = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class PriorityClassArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> apiVersion;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> globalDefault;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<ObjectMetaArgs> metadata;
-        private @Nullable Input<String> preemptionPolicy;
-        private Input<Integer> value;
+        private @Nullable Output<String> apiVersion;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> globalDefault;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<ObjectMetaArgs> metadata;
+        private @Nullable Output<String> preemptionPolicy;
+        private Output<Integer> value;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class PriorityClassArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder apiVersion(@Nullable Input<String> apiVersion) {
+        public Builder apiVersion(@Nullable Output<String> apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
         public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Input.ofNullable(apiVersion);
+            this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder globalDefault(@Nullable Input<Boolean> globalDefault) {
+        public Builder globalDefault(@Nullable Output<Boolean> globalDefault) {
             this.globalDefault = globalDefault;
             return this;
         }
 
         public Builder globalDefault(@Nullable Boolean globalDefault) {
-            this.globalDefault = Input.ofNullable(globalDefault);
+            this.globalDefault = Output.ofNullable(globalDefault);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<ObjectMetaArgs> metadata) {
+        public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder preemptionPolicy(@Nullable Input<String> preemptionPolicy) {
+        public Builder preemptionPolicy(@Nullable Output<String> preemptionPolicy) {
             this.preemptionPolicy = preemptionPolicy;
             return this;
         }
 
         public Builder preemptionPolicy(@Nullable String preemptionPolicy) {
-            this.preemptionPolicy = Input.ofNullable(preemptionPolicy);
+            this.preemptionPolicy = Output.ofNullable(preemptionPolicy);
             return this;
         }
 
-        public Builder value(Input<Integer> value) {
+        public Builder value(Output<Integer> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(Integer value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public PriorityClassArgs build() {

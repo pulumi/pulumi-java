@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class IntegrationAccountMapPropertiesParametersSchemaArgs extends i
      * 
      */
     @InputImport(name="ref")
-      private final @Nullable Input<String> ref;
+      private final @Nullable Output<String> ref;
 
-    public Input<String> getRef() {
-        return this.ref == null ? Input.empty() : this.ref;
+    public Output<String> getRef() {
+        return this.ref == null ? Output.empty() : this.ref;
     }
 
-    public IntegrationAccountMapPropertiesParametersSchemaArgs(@Nullable Input<String> ref) {
+    public IntegrationAccountMapPropertiesParametersSchemaArgs(@Nullable Output<String> ref) {
         this.ref = ref;
     }
 
     private IntegrationAccountMapPropertiesParametersSchemaArgs() {
-        this.ref = Input.empty();
+        this.ref = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class IntegrationAccountMapPropertiesParametersSchemaArgs extends i
     }
 
     public static final class Builder {
-        private @Nullable Input<String> ref;
+        private @Nullable Output<String> ref;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class IntegrationAccountMapPropertiesParametersSchemaArgs extends i
     	      this.ref = defaults.ref;
         }
 
-        public Builder ref(@Nullable Input<String> ref) {
+        public Builder ref(@Nullable Output<String> ref) {
             this.ref = ref;
             return this;
         }
 
         public Builder ref(@Nullable String ref) {
-            this.ref = Input.ofNullable(ref);
+            this.ref = Output.ofNullable(ref);
             return this;
         }
         public IntegrationAccountMapPropertiesParametersSchemaArgs build() {

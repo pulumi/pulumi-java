@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotanalytics.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -15,29 +15,29 @@ public final class DatasetDeltaTimeArgs extends io.pulumi.resources.ResourceArgs
     public static final DatasetDeltaTimeArgs Empty = new DatasetDeltaTimeArgs();
 
     @InputImport(name="offsetSeconds", required=true)
-      private final Input<Integer> offsetSeconds;
+      private final Output<Integer> offsetSeconds;
 
-    public Input<Integer> getOffsetSeconds() {
+    public Output<Integer> getOffsetSeconds() {
         return this.offsetSeconds;
     }
 
     @InputImport(name="timeExpression", required=true)
-      private final Input<String> timeExpression;
+      private final Output<String> timeExpression;
 
-    public Input<String> getTimeExpression() {
+    public Output<String> getTimeExpression() {
         return this.timeExpression;
     }
 
     public DatasetDeltaTimeArgs(
-        Input<Integer> offsetSeconds,
-        Input<String> timeExpression) {
+        Output<Integer> offsetSeconds,
+        Output<String> timeExpression) {
         this.offsetSeconds = Objects.requireNonNull(offsetSeconds, "expected parameter 'offsetSeconds' to be non-null");
         this.timeExpression = Objects.requireNonNull(timeExpression, "expected parameter 'timeExpression' to be non-null");
     }
 
     private DatasetDeltaTimeArgs() {
-        this.offsetSeconds = Input.empty();
-        this.timeExpression = Input.empty();
+        this.offsetSeconds = Output.empty();
+        this.timeExpression = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class DatasetDeltaTimeArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<Integer> offsetSeconds;
-        private Input<String> timeExpression;
+        private Output<Integer> offsetSeconds;
+        private Output<String> timeExpression;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class DatasetDeltaTimeArgs extends io.pulumi.resources.ResourceArgs
     	      this.timeExpression = defaults.timeExpression;
         }
 
-        public Builder offsetSeconds(Input<Integer> offsetSeconds) {
+        public Builder offsetSeconds(Output<Integer> offsetSeconds) {
             this.offsetSeconds = Objects.requireNonNull(offsetSeconds);
             return this;
         }
 
         public Builder offsetSeconds(Integer offsetSeconds) {
-            this.offsetSeconds = Input.of(Objects.requireNonNull(offsetSeconds));
+            this.offsetSeconds = Output.of(Objects.requireNonNull(offsetSeconds));
             return this;
         }
 
-        public Builder timeExpression(Input<String> timeExpression) {
+        public Builder timeExpression(Output<String> timeExpression) {
             this.timeExpression = Objects.requireNonNull(timeExpression);
             return this;
         }
 
         public Builder timeExpression(String timeExpression) {
-            this.timeExpression = Input.of(Objects.requireNonNull(timeExpression));
+            this.timeExpression = Output.of(Objects.requireNonNull(timeExpression));
             return this;
         }
         public DatasetDeltaTimeArgs build() {

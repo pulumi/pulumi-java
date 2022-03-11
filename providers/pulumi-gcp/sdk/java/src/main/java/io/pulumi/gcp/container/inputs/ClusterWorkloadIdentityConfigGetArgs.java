@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class ClusterWorkloadIdentityConfigGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="workloadPool")
-      private final @Nullable Input<String> workloadPool;
+      private final @Nullable Output<String> workloadPool;
 
-    public Input<String> getWorkloadPool() {
-        return this.workloadPool == null ? Input.empty() : this.workloadPool;
+    public Output<String> getWorkloadPool() {
+        return this.workloadPool == null ? Output.empty() : this.workloadPool;
     }
 
-    public ClusterWorkloadIdentityConfigGetArgs(@Nullable Input<String> workloadPool) {
+    public ClusterWorkloadIdentityConfigGetArgs(@Nullable Output<String> workloadPool) {
         this.workloadPool = workloadPool;
     }
 
     private ClusterWorkloadIdentityConfigGetArgs() {
-        this.workloadPool = Input.empty();
+        this.workloadPool = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class ClusterWorkloadIdentityConfigGetArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> workloadPool;
+        private @Nullable Output<String> workloadPool;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class ClusterWorkloadIdentityConfigGetArgs extends io.pulumi.resour
     	      this.workloadPool = defaults.workloadPool;
         }
 
-        public Builder workloadPool(@Nullable Input<String> workloadPool) {
+        public Builder workloadPool(@Nullable Output<String> workloadPool) {
             this.workloadPool = workloadPool;
             return this;
         }
 
         public Builder workloadPool(@Nullable String workloadPool) {
-            this.workloadPool = Input.ofNullable(workloadPool);
+            this.workloadPool = Output.ofNullable(workloadPool);
             return this;
         }
         public ClusterWorkloadIdentityConfigGetArgs build() {

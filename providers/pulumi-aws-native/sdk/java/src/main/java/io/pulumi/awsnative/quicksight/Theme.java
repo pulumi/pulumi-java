@@ -10,7 +10,6 @@ import io.pulumi.awsnative.quicksight.outputs.ThemeConfiguration;
 import io.pulumi.awsnative.quicksight.outputs.ThemeResourcePermission;
 import io.pulumi.awsnative.quicksight.outputs.ThemeTag;
 import io.pulumi.awsnative.quicksight.outputs.ThemeVersion;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -221,14 +220,14 @@ public class Theme extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Theme(String name, ThemeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:quicksight:Theme", name, args == null ? ThemeArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:quicksight:Theme", name, args == null ? ThemeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Theme(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Theme(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:quicksight:Theme", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -243,7 +242,7 @@ public class Theme extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Theme get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Theme get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Theme(name, id, options);
     }
 }

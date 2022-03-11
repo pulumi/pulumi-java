@@ -12,7 +12,7 @@ import io.pulumi.azurenative.sql.enums.SampleName;
 import io.pulumi.azurenative.sql.enums.SecondaryType;
 import io.pulumi.azurenative.sql.inputs.SkuArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -32,10 +32,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoPauseDelay")
-      private final @Nullable Input<Integer> autoPauseDelay;
+      private final @Nullable Output<Integer> autoPauseDelay;
 
-    public Input<Integer> getAutoPauseDelay() {
-        return this.autoPauseDelay == null ? Input.empty() : this.autoPauseDelay;
+    public Output<Integer> getAutoPauseDelay() {
+        return this.autoPauseDelay == null ? Output.empty() : this.autoPauseDelay;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="catalogCollation")
-      private final @Nullable Input<Either<String,CatalogCollationType>> catalogCollation;
+      private final @Nullable Output<Either<String,CatalogCollationType>> catalogCollation;
 
-    public Input<Either<String,CatalogCollationType>> getCatalogCollation() {
-        return this.catalogCollation == null ? Input.empty() : this.catalogCollation;
+    public Output<Either<String,CatalogCollationType>> getCatalogCollation() {
+        return this.catalogCollation == null ? Output.empty() : this.catalogCollation;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="collation")
-      private final @Nullable Input<String> collation;
+      private final @Nullable Output<String> collation;
 
-    public Input<String> getCollation() {
-        return this.collation == null ? Input.empty() : this.collation;
+    public Output<String> getCollation() {
+        return this.collation == null ? Output.empty() : this.collation;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createMode")
-      private final @Nullable Input<Either<String,CreateMode>> createMode;
+      private final @Nullable Output<Either<String,CreateMode>> createMode;
 
-    public Input<Either<String,CreateMode>> getCreateMode() {
-        return this.createMode == null ? Input.empty() : this.createMode;
+    public Output<Either<String,CreateMode>> getCreateMode() {
+        return this.createMode == null ? Output.empty() : this.createMode;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseName")
-      private final @Nullable Input<String> databaseName;
+      private final @Nullable Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
-        return this.databaseName == null ? Input.empty() : this.databaseName;
+    public Output<String> getDatabaseName() {
+        return this.databaseName == null ? Output.empty() : this.databaseName;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="elasticPoolId")
-      private final @Nullable Input<String> elasticPoolId;
+      private final @Nullable Output<String> elasticPoolId;
 
-    public Input<String> getElasticPoolId() {
-        return this.elasticPoolId == null ? Input.empty() : this.elasticPoolId;
+    public Output<String> getElasticPoolId() {
+        return this.elasticPoolId == null ? Output.empty() : this.elasticPoolId;
     }
 
     /**
@@ -114,10 +114,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="highAvailabilityReplicaCount")
-      private final @Nullable Input<Integer> highAvailabilityReplicaCount;
+      private final @Nullable Output<Integer> highAvailabilityReplicaCount;
 
-    public Input<Integer> getHighAvailabilityReplicaCount() {
-        return this.highAvailabilityReplicaCount == null ? Input.empty() : this.highAvailabilityReplicaCount;
+    public Output<Integer> getHighAvailabilityReplicaCount() {
+        return this.highAvailabilityReplicaCount == null ? Output.empty() : this.highAvailabilityReplicaCount;
     }
 
     /**
@@ -125,10 +125,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="licenseType")
-      private final @Nullable Input<Either<String,DatabaseLicenseType>> licenseType;
+      private final @Nullable Output<Either<String,DatabaseLicenseType>> licenseType;
 
-    public Input<Either<String,DatabaseLicenseType>> getLicenseType() {
-        return this.licenseType == null ? Input.empty() : this.licenseType;
+    public Output<Either<String,DatabaseLicenseType>> getLicenseType() {
+        return this.licenseType == null ? Output.empty() : this.licenseType;
     }
 
     /**
@@ -136,10 +136,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -147,10 +147,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="longTermRetentionBackupResourceId")
-      private final @Nullable Input<String> longTermRetentionBackupResourceId;
+      private final @Nullable Output<String> longTermRetentionBackupResourceId;
 
-    public Input<String> getLongTermRetentionBackupResourceId() {
-        return this.longTermRetentionBackupResourceId == null ? Input.empty() : this.longTermRetentionBackupResourceId;
+    public Output<String> getLongTermRetentionBackupResourceId() {
+        return this.longTermRetentionBackupResourceId == null ? Output.empty() : this.longTermRetentionBackupResourceId;
     }
 
     /**
@@ -158,10 +158,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maintenanceConfigurationId")
-      private final @Nullable Input<String> maintenanceConfigurationId;
+      private final @Nullable Output<String> maintenanceConfigurationId;
 
-    public Input<String> getMaintenanceConfigurationId() {
-        return this.maintenanceConfigurationId == null ? Input.empty() : this.maintenanceConfigurationId;
+    public Output<String> getMaintenanceConfigurationId() {
+        return this.maintenanceConfigurationId == null ? Output.empty() : this.maintenanceConfigurationId;
     }
 
     /**
@@ -169,10 +169,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxSizeBytes")
-      private final @Nullable Input<Double> maxSizeBytes;
+      private final @Nullable Output<Double> maxSizeBytes;
 
-    public Input<Double> getMaxSizeBytes() {
-        return this.maxSizeBytes == null ? Input.empty() : this.maxSizeBytes;
+    public Output<Double> getMaxSizeBytes() {
+        return this.maxSizeBytes == null ? Output.empty() : this.maxSizeBytes;
     }
 
     /**
@@ -180,10 +180,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minCapacity")
-      private final @Nullable Input<Double> minCapacity;
+      private final @Nullable Output<Double> minCapacity;
 
-    public Input<Double> getMinCapacity() {
-        return this.minCapacity == null ? Input.empty() : this.minCapacity;
+    public Output<Double> getMinCapacity() {
+        return this.minCapacity == null ? Output.empty() : this.minCapacity;
     }
 
     /**
@@ -191,10 +191,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="readScale")
-      private final @Nullable Input<Either<String,DatabaseReadScale>> readScale;
+      private final @Nullable Output<Either<String,DatabaseReadScale>> readScale;
 
-    public Input<Either<String,DatabaseReadScale>> getReadScale() {
-        return this.readScale == null ? Input.empty() : this.readScale;
+    public Output<Either<String,DatabaseReadScale>> getReadScale() {
+        return this.readScale == null ? Output.empty() : this.readScale;
     }
 
     /**
@@ -202,10 +202,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recoverableDatabaseId")
-      private final @Nullable Input<String> recoverableDatabaseId;
+      private final @Nullable Output<String> recoverableDatabaseId;
 
-    public Input<String> getRecoverableDatabaseId() {
-        return this.recoverableDatabaseId == null ? Input.empty() : this.recoverableDatabaseId;
+    public Output<String> getRecoverableDatabaseId() {
+        return this.recoverableDatabaseId == null ? Output.empty() : this.recoverableDatabaseId;
     }
 
     /**
@@ -213,10 +213,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recoveryServicesRecoveryPointId")
-      private final @Nullable Input<String> recoveryServicesRecoveryPointId;
+      private final @Nullable Output<String> recoveryServicesRecoveryPointId;
 
-    public Input<String> getRecoveryServicesRecoveryPointId() {
-        return this.recoveryServicesRecoveryPointId == null ? Input.empty() : this.recoveryServicesRecoveryPointId;
+    public Output<String> getRecoveryServicesRecoveryPointId() {
+        return this.recoveryServicesRecoveryPointId == null ? Output.empty() : this.recoveryServicesRecoveryPointId;
     }
 
     /**
@@ -224,10 +224,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestedBackupStorageRedundancy")
-      private final @Nullable Input<Either<String,RequestedBackupStorageRedundancy>> requestedBackupStorageRedundancy;
+      private final @Nullable Output<Either<String,RequestedBackupStorageRedundancy>> requestedBackupStorageRedundancy;
 
-    public Input<Either<String,RequestedBackupStorageRedundancy>> getRequestedBackupStorageRedundancy() {
-        return this.requestedBackupStorageRedundancy == null ? Input.empty() : this.requestedBackupStorageRedundancy;
+    public Output<Either<String,RequestedBackupStorageRedundancy>> getRequestedBackupStorageRedundancy() {
+        return this.requestedBackupStorageRedundancy == null ? Output.empty() : this.requestedBackupStorageRedundancy;
     }
 
     /**
@@ -235,9 +235,9 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -246,10 +246,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restorableDroppedDatabaseId")
-      private final @Nullable Input<String> restorableDroppedDatabaseId;
+      private final @Nullable Output<String> restorableDroppedDatabaseId;
 
-    public Input<String> getRestorableDroppedDatabaseId() {
-        return this.restorableDroppedDatabaseId == null ? Input.empty() : this.restorableDroppedDatabaseId;
+    public Output<String> getRestorableDroppedDatabaseId() {
+        return this.restorableDroppedDatabaseId == null ? Output.empty() : this.restorableDroppedDatabaseId;
     }
 
     /**
@@ -257,10 +257,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restorePointInTime")
-      private final @Nullable Input<String> restorePointInTime;
+      private final @Nullable Output<String> restorePointInTime;
 
-    public Input<String> getRestorePointInTime() {
-        return this.restorePointInTime == null ? Input.empty() : this.restorePointInTime;
+    public Output<String> getRestorePointInTime() {
+        return this.restorePointInTime == null ? Output.empty() : this.restorePointInTime;
     }
 
     /**
@@ -268,10 +268,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sampleName")
-      private final @Nullable Input<Either<String,SampleName>> sampleName;
+      private final @Nullable Output<Either<String,SampleName>> sampleName;
 
-    public Input<Either<String,SampleName>> getSampleName() {
-        return this.sampleName == null ? Input.empty() : this.sampleName;
+    public Output<Either<String,SampleName>> getSampleName() {
+        return this.sampleName == null ? Output.empty() : this.sampleName;
     }
 
     /**
@@ -279,10 +279,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secondaryType")
-      private final @Nullable Input<Either<String,SecondaryType>> secondaryType;
+      private final @Nullable Output<Either<String,SecondaryType>> secondaryType;
 
-    public Input<Either<String,SecondaryType>> getSecondaryType() {
-        return this.secondaryType == null ? Input.empty() : this.secondaryType;
+    public Output<Either<String,SecondaryType>> getSecondaryType() {
+        return this.secondaryType == null ? Output.empty() : this.secondaryType;
     }
 
     /**
@@ -290,9 +290,9 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverName", required=true)
-      private final Input<String> serverName;
+      private final Output<String> serverName;
 
-    public Input<String> getServerName() {
+    public Output<String> getServerName() {
         return this.serverName;
     }
 
@@ -303,10 +303,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<SkuArgs> sku;
+      private final @Nullable Output<SkuArgs> sku;
 
-    public Input<SkuArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<SkuArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -314,10 +314,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceDatabaseDeletionDate")
-      private final @Nullable Input<String> sourceDatabaseDeletionDate;
+      private final @Nullable Output<String> sourceDatabaseDeletionDate;
 
-    public Input<String> getSourceDatabaseDeletionDate() {
-        return this.sourceDatabaseDeletionDate == null ? Input.empty() : this.sourceDatabaseDeletionDate;
+    public Output<String> getSourceDatabaseDeletionDate() {
+        return this.sourceDatabaseDeletionDate == null ? Output.empty() : this.sourceDatabaseDeletionDate;
     }
 
     /**
@@ -325,10 +325,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceDatabaseId")
-      private final @Nullable Input<String> sourceDatabaseId;
+      private final @Nullable Output<String> sourceDatabaseId;
 
-    public Input<String> getSourceDatabaseId() {
-        return this.sourceDatabaseId == null ? Input.empty() : this.sourceDatabaseId;
+    public Output<String> getSourceDatabaseId() {
+        return this.sourceDatabaseId == null ? Output.empty() : this.sourceDatabaseId;
     }
 
     /**
@@ -336,10 +336,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -347,41 +347,41 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zoneRedundant")
-      private final @Nullable Input<Boolean> zoneRedundant;
+      private final @Nullable Output<Boolean> zoneRedundant;
 
-    public Input<Boolean> getZoneRedundant() {
-        return this.zoneRedundant == null ? Input.empty() : this.zoneRedundant;
+    public Output<Boolean> getZoneRedundant() {
+        return this.zoneRedundant == null ? Output.empty() : this.zoneRedundant;
     }
 
     public DatabaseArgs(
-        @Nullable Input<Integer> autoPauseDelay,
-        @Nullable Input<Either<String,CatalogCollationType>> catalogCollation,
-        @Nullable Input<String> collation,
-        @Nullable Input<Either<String,CreateMode>> createMode,
-        @Nullable Input<String> databaseName,
-        @Nullable Input<String> elasticPoolId,
-        @Nullable Input<Integer> highAvailabilityReplicaCount,
-        @Nullable Input<Either<String,DatabaseLicenseType>> licenseType,
-        @Nullable Input<String> location,
-        @Nullable Input<String> longTermRetentionBackupResourceId,
-        @Nullable Input<String> maintenanceConfigurationId,
-        @Nullable Input<Double> maxSizeBytes,
-        @Nullable Input<Double> minCapacity,
-        @Nullable Input<Either<String,DatabaseReadScale>> readScale,
-        @Nullable Input<String> recoverableDatabaseId,
-        @Nullable Input<String> recoveryServicesRecoveryPointId,
-        @Nullable Input<Either<String,RequestedBackupStorageRedundancy>> requestedBackupStorageRedundancy,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> restorableDroppedDatabaseId,
-        @Nullable Input<String> restorePointInTime,
-        @Nullable Input<Either<String,SampleName>> sampleName,
-        @Nullable Input<Either<String,SecondaryType>> secondaryType,
-        Input<String> serverName,
-        @Nullable Input<SkuArgs> sku,
-        @Nullable Input<String> sourceDatabaseDeletionDate,
-        @Nullable Input<String> sourceDatabaseId,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Boolean> zoneRedundant) {
+        @Nullable Output<Integer> autoPauseDelay,
+        @Nullable Output<Either<String,CatalogCollationType>> catalogCollation,
+        @Nullable Output<String> collation,
+        @Nullable Output<Either<String,CreateMode>> createMode,
+        @Nullable Output<String> databaseName,
+        @Nullable Output<String> elasticPoolId,
+        @Nullable Output<Integer> highAvailabilityReplicaCount,
+        @Nullable Output<Either<String,DatabaseLicenseType>> licenseType,
+        @Nullable Output<String> location,
+        @Nullable Output<String> longTermRetentionBackupResourceId,
+        @Nullable Output<String> maintenanceConfigurationId,
+        @Nullable Output<Double> maxSizeBytes,
+        @Nullable Output<Double> minCapacity,
+        @Nullable Output<Either<String,DatabaseReadScale>> readScale,
+        @Nullable Output<String> recoverableDatabaseId,
+        @Nullable Output<String> recoveryServicesRecoveryPointId,
+        @Nullable Output<Either<String,RequestedBackupStorageRedundancy>> requestedBackupStorageRedundancy,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> restorableDroppedDatabaseId,
+        @Nullable Output<String> restorePointInTime,
+        @Nullable Output<Either<String,SampleName>> sampleName,
+        @Nullable Output<Either<String,SecondaryType>> secondaryType,
+        Output<String> serverName,
+        @Nullable Output<SkuArgs> sku,
+        @Nullable Output<String> sourceDatabaseDeletionDate,
+        @Nullable Output<String> sourceDatabaseId,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Boolean> zoneRedundant) {
         this.autoPauseDelay = autoPauseDelay;
         this.catalogCollation = catalogCollation;
         this.collation = collation;
@@ -413,34 +413,34 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DatabaseArgs() {
-        this.autoPauseDelay = Input.empty();
-        this.catalogCollation = Input.empty();
-        this.collation = Input.empty();
-        this.createMode = Input.empty();
-        this.databaseName = Input.empty();
-        this.elasticPoolId = Input.empty();
-        this.highAvailabilityReplicaCount = Input.empty();
-        this.licenseType = Input.empty();
-        this.location = Input.empty();
-        this.longTermRetentionBackupResourceId = Input.empty();
-        this.maintenanceConfigurationId = Input.empty();
-        this.maxSizeBytes = Input.empty();
-        this.minCapacity = Input.empty();
-        this.readScale = Input.empty();
-        this.recoverableDatabaseId = Input.empty();
-        this.recoveryServicesRecoveryPointId = Input.empty();
-        this.requestedBackupStorageRedundancy = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.restorableDroppedDatabaseId = Input.empty();
-        this.restorePointInTime = Input.empty();
-        this.sampleName = Input.empty();
-        this.secondaryType = Input.empty();
-        this.serverName = Input.empty();
-        this.sku = Input.empty();
-        this.sourceDatabaseDeletionDate = Input.empty();
-        this.sourceDatabaseId = Input.empty();
-        this.tags = Input.empty();
-        this.zoneRedundant = Input.empty();
+        this.autoPauseDelay = Output.empty();
+        this.catalogCollation = Output.empty();
+        this.collation = Output.empty();
+        this.createMode = Output.empty();
+        this.databaseName = Output.empty();
+        this.elasticPoolId = Output.empty();
+        this.highAvailabilityReplicaCount = Output.empty();
+        this.licenseType = Output.empty();
+        this.location = Output.empty();
+        this.longTermRetentionBackupResourceId = Output.empty();
+        this.maintenanceConfigurationId = Output.empty();
+        this.maxSizeBytes = Output.empty();
+        this.minCapacity = Output.empty();
+        this.readScale = Output.empty();
+        this.recoverableDatabaseId = Output.empty();
+        this.recoveryServicesRecoveryPointId = Output.empty();
+        this.requestedBackupStorageRedundancy = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.restorableDroppedDatabaseId = Output.empty();
+        this.restorePointInTime = Output.empty();
+        this.sampleName = Output.empty();
+        this.secondaryType = Output.empty();
+        this.serverName = Output.empty();
+        this.sku = Output.empty();
+        this.sourceDatabaseDeletionDate = Output.empty();
+        this.sourceDatabaseId = Output.empty();
+        this.tags = Output.empty();
+        this.zoneRedundant = Output.empty();
     }
 
     public static Builder builder() {
@@ -452,34 +452,34 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> autoPauseDelay;
-        private @Nullable Input<Either<String,CatalogCollationType>> catalogCollation;
-        private @Nullable Input<String> collation;
-        private @Nullable Input<Either<String,CreateMode>> createMode;
-        private @Nullable Input<String> databaseName;
-        private @Nullable Input<String> elasticPoolId;
-        private @Nullable Input<Integer> highAvailabilityReplicaCount;
-        private @Nullable Input<Either<String,DatabaseLicenseType>> licenseType;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> longTermRetentionBackupResourceId;
-        private @Nullable Input<String> maintenanceConfigurationId;
-        private @Nullable Input<Double> maxSizeBytes;
-        private @Nullable Input<Double> minCapacity;
-        private @Nullable Input<Either<String,DatabaseReadScale>> readScale;
-        private @Nullable Input<String> recoverableDatabaseId;
-        private @Nullable Input<String> recoveryServicesRecoveryPointId;
-        private @Nullable Input<Either<String,RequestedBackupStorageRedundancy>> requestedBackupStorageRedundancy;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> restorableDroppedDatabaseId;
-        private @Nullable Input<String> restorePointInTime;
-        private @Nullable Input<Either<String,SampleName>> sampleName;
-        private @Nullable Input<Either<String,SecondaryType>> secondaryType;
-        private Input<String> serverName;
-        private @Nullable Input<SkuArgs> sku;
-        private @Nullable Input<String> sourceDatabaseDeletionDate;
-        private @Nullable Input<String> sourceDatabaseId;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Boolean> zoneRedundant;
+        private @Nullable Output<Integer> autoPauseDelay;
+        private @Nullable Output<Either<String,CatalogCollationType>> catalogCollation;
+        private @Nullable Output<String> collation;
+        private @Nullable Output<Either<String,CreateMode>> createMode;
+        private @Nullable Output<String> databaseName;
+        private @Nullable Output<String> elasticPoolId;
+        private @Nullable Output<Integer> highAvailabilityReplicaCount;
+        private @Nullable Output<Either<String,DatabaseLicenseType>> licenseType;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> longTermRetentionBackupResourceId;
+        private @Nullable Output<String> maintenanceConfigurationId;
+        private @Nullable Output<Double> maxSizeBytes;
+        private @Nullable Output<Double> minCapacity;
+        private @Nullable Output<Either<String,DatabaseReadScale>> readScale;
+        private @Nullable Output<String> recoverableDatabaseId;
+        private @Nullable Output<String> recoveryServicesRecoveryPointId;
+        private @Nullable Output<Either<String,RequestedBackupStorageRedundancy>> requestedBackupStorageRedundancy;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> restorableDroppedDatabaseId;
+        private @Nullable Output<String> restorePointInTime;
+        private @Nullable Output<Either<String,SampleName>> sampleName;
+        private @Nullable Output<Either<String,SecondaryType>> secondaryType;
+        private Output<String> serverName;
+        private @Nullable Output<SkuArgs> sku;
+        private @Nullable Output<String> sourceDatabaseDeletionDate;
+        private @Nullable Output<String> sourceDatabaseId;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Boolean> zoneRedundant;
 
         public Builder() {
     	      // Empty
@@ -517,283 +517,283 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zoneRedundant = defaults.zoneRedundant;
         }
 
-        public Builder autoPauseDelay(@Nullable Input<Integer> autoPauseDelay) {
+        public Builder autoPauseDelay(@Nullable Output<Integer> autoPauseDelay) {
             this.autoPauseDelay = autoPauseDelay;
             return this;
         }
 
         public Builder autoPauseDelay(@Nullable Integer autoPauseDelay) {
-            this.autoPauseDelay = Input.ofNullable(autoPauseDelay);
+            this.autoPauseDelay = Output.ofNullable(autoPauseDelay);
             return this;
         }
 
-        public Builder catalogCollation(@Nullable Input<Either<String,CatalogCollationType>> catalogCollation) {
+        public Builder catalogCollation(@Nullable Output<Either<String,CatalogCollationType>> catalogCollation) {
             this.catalogCollation = catalogCollation;
             return this;
         }
 
         public Builder catalogCollation(@Nullable Either<String,CatalogCollationType> catalogCollation) {
-            this.catalogCollation = Input.ofNullable(catalogCollation);
+            this.catalogCollation = Output.ofNullable(catalogCollation);
             return this;
         }
 
-        public Builder collation(@Nullable Input<String> collation) {
+        public Builder collation(@Nullable Output<String> collation) {
             this.collation = collation;
             return this;
         }
 
         public Builder collation(@Nullable String collation) {
-            this.collation = Input.ofNullable(collation);
+            this.collation = Output.ofNullable(collation);
             return this;
         }
 
-        public Builder createMode(@Nullable Input<Either<String,CreateMode>> createMode) {
+        public Builder createMode(@Nullable Output<Either<String,CreateMode>> createMode) {
             this.createMode = createMode;
             return this;
         }
 
         public Builder createMode(@Nullable Either<String,CreateMode> createMode) {
-            this.createMode = Input.ofNullable(createMode);
+            this.createMode = Output.ofNullable(createMode);
             return this;
         }
 
-        public Builder databaseName(@Nullable Input<String> databaseName) {
+        public Builder databaseName(@Nullable Output<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
         public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Input.ofNullable(databaseName);
+            this.databaseName = Output.ofNullable(databaseName);
             return this;
         }
 
-        public Builder elasticPoolId(@Nullable Input<String> elasticPoolId) {
+        public Builder elasticPoolId(@Nullable Output<String> elasticPoolId) {
             this.elasticPoolId = elasticPoolId;
             return this;
         }
 
         public Builder elasticPoolId(@Nullable String elasticPoolId) {
-            this.elasticPoolId = Input.ofNullable(elasticPoolId);
+            this.elasticPoolId = Output.ofNullable(elasticPoolId);
             return this;
         }
 
-        public Builder highAvailabilityReplicaCount(@Nullable Input<Integer> highAvailabilityReplicaCount) {
+        public Builder highAvailabilityReplicaCount(@Nullable Output<Integer> highAvailabilityReplicaCount) {
             this.highAvailabilityReplicaCount = highAvailabilityReplicaCount;
             return this;
         }
 
         public Builder highAvailabilityReplicaCount(@Nullable Integer highAvailabilityReplicaCount) {
-            this.highAvailabilityReplicaCount = Input.ofNullable(highAvailabilityReplicaCount);
+            this.highAvailabilityReplicaCount = Output.ofNullable(highAvailabilityReplicaCount);
             return this;
         }
 
-        public Builder licenseType(@Nullable Input<Either<String,DatabaseLicenseType>> licenseType) {
+        public Builder licenseType(@Nullable Output<Either<String,DatabaseLicenseType>> licenseType) {
             this.licenseType = licenseType;
             return this;
         }
 
         public Builder licenseType(@Nullable Either<String,DatabaseLicenseType> licenseType) {
-            this.licenseType = Input.ofNullable(licenseType);
+            this.licenseType = Output.ofNullable(licenseType);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder longTermRetentionBackupResourceId(@Nullable Input<String> longTermRetentionBackupResourceId) {
+        public Builder longTermRetentionBackupResourceId(@Nullable Output<String> longTermRetentionBackupResourceId) {
             this.longTermRetentionBackupResourceId = longTermRetentionBackupResourceId;
             return this;
         }
 
         public Builder longTermRetentionBackupResourceId(@Nullable String longTermRetentionBackupResourceId) {
-            this.longTermRetentionBackupResourceId = Input.ofNullable(longTermRetentionBackupResourceId);
+            this.longTermRetentionBackupResourceId = Output.ofNullable(longTermRetentionBackupResourceId);
             return this;
         }
 
-        public Builder maintenanceConfigurationId(@Nullable Input<String> maintenanceConfigurationId) {
+        public Builder maintenanceConfigurationId(@Nullable Output<String> maintenanceConfigurationId) {
             this.maintenanceConfigurationId = maintenanceConfigurationId;
             return this;
         }
 
         public Builder maintenanceConfigurationId(@Nullable String maintenanceConfigurationId) {
-            this.maintenanceConfigurationId = Input.ofNullable(maintenanceConfigurationId);
+            this.maintenanceConfigurationId = Output.ofNullable(maintenanceConfigurationId);
             return this;
         }
 
-        public Builder maxSizeBytes(@Nullable Input<Double> maxSizeBytes) {
+        public Builder maxSizeBytes(@Nullable Output<Double> maxSizeBytes) {
             this.maxSizeBytes = maxSizeBytes;
             return this;
         }
 
         public Builder maxSizeBytes(@Nullable Double maxSizeBytes) {
-            this.maxSizeBytes = Input.ofNullable(maxSizeBytes);
+            this.maxSizeBytes = Output.ofNullable(maxSizeBytes);
             return this;
         }
 
-        public Builder minCapacity(@Nullable Input<Double> minCapacity) {
+        public Builder minCapacity(@Nullable Output<Double> minCapacity) {
             this.minCapacity = minCapacity;
             return this;
         }
 
         public Builder minCapacity(@Nullable Double minCapacity) {
-            this.minCapacity = Input.ofNullable(minCapacity);
+            this.minCapacity = Output.ofNullable(minCapacity);
             return this;
         }
 
-        public Builder readScale(@Nullable Input<Either<String,DatabaseReadScale>> readScale) {
+        public Builder readScale(@Nullable Output<Either<String,DatabaseReadScale>> readScale) {
             this.readScale = readScale;
             return this;
         }
 
         public Builder readScale(@Nullable Either<String,DatabaseReadScale> readScale) {
-            this.readScale = Input.ofNullable(readScale);
+            this.readScale = Output.ofNullable(readScale);
             return this;
         }
 
-        public Builder recoverableDatabaseId(@Nullable Input<String> recoverableDatabaseId) {
+        public Builder recoverableDatabaseId(@Nullable Output<String> recoverableDatabaseId) {
             this.recoverableDatabaseId = recoverableDatabaseId;
             return this;
         }
 
         public Builder recoverableDatabaseId(@Nullable String recoverableDatabaseId) {
-            this.recoverableDatabaseId = Input.ofNullable(recoverableDatabaseId);
+            this.recoverableDatabaseId = Output.ofNullable(recoverableDatabaseId);
             return this;
         }
 
-        public Builder recoveryServicesRecoveryPointId(@Nullable Input<String> recoveryServicesRecoveryPointId) {
+        public Builder recoveryServicesRecoveryPointId(@Nullable Output<String> recoveryServicesRecoveryPointId) {
             this.recoveryServicesRecoveryPointId = recoveryServicesRecoveryPointId;
             return this;
         }
 
         public Builder recoveryServicesRecoveryPointId(@Nullable String recoveryServicesRecoveryPointId) {
-            this.recoveryServicesRecoveryPointId = Input.ofNullable(recoveryServicesRecoveryPointId);
+            this.recoveryServicesRecoveryPointId = Output.ofNullable(recoveryServicesRecoveryPointId);
             return this;
         }
 
-        public Builder requestedBackupStorageRedundancy(@Nullable Input<Either<String,RequestedBackupStorageRedundancy>> requestedBackupStorageRedundancy) {
+        public Builder requestedBackupStorageRedundancy(@Nullable Output<Either<String,RequestedBackupStorageRedundancy>> requestedBackupStorageRedundancy) {
             this.requestedBackupStorageRedundancy = requestedBackupStorageRedundancy;
             return this;
         }
 
         public Builder requestedBackupStorageRedundancy(@Nullable Either<String,RequestedBackupStorageRedundancy> requestedBackupStorageRedundancy) {
-            this.requestedBackupStorageRedundancy = Input.ofNullable(requestedBackupStorageRedundancy);
+            this.requestedBackupStorageRedundancy = Output.ofNullable(requestedBackupStorageRedundancy);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder restorableDroppedDatabaseId(@Nullable Input<String> restorableDroppedDatabaseId) {
+        public Builder restorableDroppedDatabaseId(@Nullable Output<String> restorableDroppedDatabaseId) {
             this.restorableDroppedDatabaseId = restorableDroppedDatabaseId;
             return this;
         }
 
         public Builder restorableDroppedDatabaseId(@Nullable String restorableDroppedDatabaseId) {
-            this.restorableDroppedDatabaseId = Input.ofNullable(restorableDroppedDatabaseId);
+            this.restorableDroppedDatabaseId = Output.ofNullable(restorableDroppedDatabaseId);
             return this;
         }
 
-        public Builder restorePointInTime(@Nullable Input<String> restorePointInTime) {
+        public Builder restorePointInTime(@Nullable Output<String> restorePointInTime) {
             this.restorePointInTime = restorePointInTime;
             return this;
         }
 
         public Builder restorePointInTime(@Nullable String restorePointInTime) {
-            this.restorePointInTime = Input.ofNullable(restorePointInTime);
+            this.restorePointInTime = Output.ofNullable(restorePointInTime);
             return this;
         }
 
-        public Builder sampleName(@Nullable Input<Either<String,SampleName>> sampleName) {
+        public Builder sampleName(@Nullable Output<Either<String,SampleName>> sampleName) {
             this.sampleName = sampleName;
             return this;
         }
 
         public Builder sampleName(@Nullable Either<String,SampleName> sampleName) {
-            this.sampleName = Input.ofNullable(sampleName);
+            this.sampleName = Output.ofNullable(sampleName);
             return this;
         }
 
-        public Builder secondaryType(@Nullable Input<Either<String,SecondaryType>> secondaryType) {
+        public Builder secondaryType(@Nullable Output<Either<String,SecondaryType>> secondaryType) {
             this.secondaryType = secondaryType;
             return this;
         }
 
         public Builder secondaryType(@Nullable Either<String,SecondaryType> secondaryType) {
-            this.secondaryType = Input.ofNullable(secondaryType);
+            this.secondaryType = Output.ofNullable(secondaryType);
             return this;
         }
 
-        public Builder serverName(Input<String> serverName) {
+        public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
         public Builder serverName(String serverName) {
-            this.serverName = Input.of(Objects.requireNonNull(serverName));
+            this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
 
-        public Builder sku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder sourceDatabaseDeletionDate(@Nullable Input<String> sourceDatabaseDeletionDate) {
+        public Builder sourceDatabaseDeletionDate(@Nullable Output<String> sourceDatabaseDeletionDate) {
             this.sourceDatabaseDeletionDate = sourceDatabaseDeletionDate;
             return this;
         }
 
         public Builder sourceDatabaseDeletionDate(@Nullable String sourceDatabaseDeletionDate) {
-            this.sourceDatabaseDeletionDate = Input.ofNullable(sourceDatabaseDeletionDate);
+            this.sourceDatabaseDeletionDate = Output.ofNullable(sourceDatabaseDeletionDate);
             return this;
         }
 
-        public Builder sourceDatabaseId(@Nullable Input<String> sourceDatabaseId) {
+        public Builder sourceDatabaseId(@Nullable Output<String> sourceDatabaseId) {
             this.sourceDatabaseId = sourceDatabaseId;
             return this;
         }
 
         public Builder sourceDatabaseId(@Nullable String sourceDatabaseId) {
-            this.sourceDatabaseId = Input.ofNullable(sourceDatabaseId);
+            this.sourceDatabaseId = Output.ofNullable(sourceDatabaseId);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder zoneRedundant(@Nullable Input<Boolean> zoneRedundant) {
+        public Builder zoneRedundant(@Nullable Output<Boolean> zoneRedundant) {
             this.zoneRedundant = zoneRedundant;
             return this;
         }
 
         public Builder zoneRedundant(@Nullable Boolean zoneRedundant) {
-            this.zoneRedundant = Input.ofNullable(zoneRedundant);
+            this.zoneRedundant = Output.ofNullable(zoneRedundant);
             return this;
         }
         public DatabaseArgs build() {

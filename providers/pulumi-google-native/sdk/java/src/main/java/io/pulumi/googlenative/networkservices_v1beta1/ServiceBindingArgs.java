@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkservices_v1beta1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class ServiceBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ServiceBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointFilter")
-      private final @Nullable Input<String> endpointFilter;
+      private final @Nullable Output<String> endpointFilter;
 
-    public Input<String> getEndpointFilter() {
-        return this.endpointFilter == null ? Input.empty() : this.endpointFilter;
+    public Output<String> getEndpointFilter() {
+        return this.endpointFilter == null ? Output.empty() : this.endpointFilter;
     }
 
     /**
@@ -42,17 +42,17 @@ public final class ServiceBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -60,17 +60,17 @@ public final class ServiceBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -78,28 +78,28 @@ public final class ServiceBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service", required=true)
-      private final Input<String> service;
+      private final Output<String> service;
 
-    public Input<String> getService() {
+    public Output<String> getService() {
         return this.service;
     }
 
     @InputImport(name="serviceBindingId", required=true)
-      private final Input<String> serviceBindingId;
+      private final Output<String> serviceBindingId;
 
-    public Input<String> getServiceBindingId() {
+    public Output<String> getServiceBindingId() {
         return this.serviceBindingId;
     }
 
     public ServiceBindingArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> endpointFilter,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        Input<String> service,
-        Input<String> serviceBindingId) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> endpointFilter,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        Output<String> service,
+        Output<String> serviceBindingId) {
         this.description = description;
         this.endpointFilter = endpointFilter;
         this.labels = labels;
@@ -111,14 +111,14 @@ public final class ServiceBindingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceBindingArgs() {
-        this.description = Input.empty();
-        this.endpointFilter = Input.empty();
-        this.labels = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.service = Input.empty();
-        this.serviceBindingId = Input.empty();
+        this.description = Output.empty();
+        this.endpointFilter = Output.empty();
+        this.labels = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.service = Output.empty();
+        this.serviceBindingId = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,14 +130,14 @@ public final class ServiceBindingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> endpointFilter;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private Input<String> service;
-        private Input<String> serviceBindingId;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> endpointFilter;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private Output<String> service;
+        private Output<String> serviceBindingId;
 
         public Builder() {
     	      // Empty
@@ -155,83 +155,83 @@ public final class ServiceBindingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serviceBindingId = defaults.serviceBindingId;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder endpointFilter(@Nullable Input<String> endpointFilter) {
+        public Builder endpointFilter(@Nullable Output<String> endpointFilter) {
             this.endpointFilter = endpointFilter;
             return this;
         }
 
         public Builder endpointFilter(@Nullable String endpointFilter) {
-            this.endpointFilter = Input.ofNullable(endpointFilter);
+            this.endpointFilter = Output.ofNullable(endpointFilter);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder service(Input<String> service) {
+        public Builder service(Output<String> service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
 
         public Builder service(String service) {
-            this.service = Input.of(Objects.requireNonNull(service));
+            this.service = Output.of(Objects.requireNonNull(service));
             return this;
         }
 
-        public Builder serviceBindingId(Input<String> serviceBindingId) {
+        public Builder serviceBindingId(Output<String> serviceBindingId) {
             this.serviceBindingId = Objects.requireNonNull(serviceBindingId);
             return this;
         }
 
         public Builder serviceBindingId(String serviceBindingId) {
-            this.serviceBindingId = Input.of(Objects.requireNonNull(serviceBindingId));
+            this.serviceBindingId = Output.of(Objects.requireNonNull(serviceBindingId));
             return this;
         }
         public ServiceBindingArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.iap_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,9 +15,9 @@ public final class IdentityAwareProxyClientArgs extends io.pulumi.resources.Reso
     public static final IdentityAwareProxyClientArgs Empty = new IdentityAwareProxyClientArgs();
 
     @InputImport(name="brandId", required=true)
-      private final Input<String> brandId;
+      private final Output<String> brandId;
 
-    public Input<String> getBrandId() {
+    public Output<String> getBrandId() {
         return this.brandId;
     }
 
@@ -26,32 +26,32 @@ public final class IdentityAwareProxyClientArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public IdentityAwareProxyClientArgs(
-        Input<String> brandId,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> project) {
+        Output<String> brandId,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> project) {
         this.brandId = Objects.requireNonNull(brandId, "expected parameter 'brandId' to be non-null");
         this.displayName = displayName;
         this.project = project;
     }
 
     private IdentityAwareProxyClientArgs() {
-        this.brandId = Input.empty();
-        this.displayName = Input.empty();
-        this.project = Input.empty();
+        this.brandId = Output.empty();
+        this.displayName = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,9 +63,9 @@ public final class IdentityAwareProxyClientArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> brandId;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> project;
+        private Output<String> brandId;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -78,33 +78,33 @@ public final class IdentityAwareProxyClientArgs extends io.pulumi.resources.Reso
     	      this.project = defaults.project;
         }
 
-        public Builder brandId(Input<String> brandId) {
+        public Builder brandId(Output<String> brandId) {
             this.brandId = Objects.requireNonNull(brandId);
             return this;
         }
 
         public Builder brandId(String brandId) {
-            this.brandId = Input.of(Objects.requireNonNull(brandId));
+            this.brandId = Output.of(Objects.requireNonNull(brandId));
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public IdentityAwareProxyClientArgs build() {

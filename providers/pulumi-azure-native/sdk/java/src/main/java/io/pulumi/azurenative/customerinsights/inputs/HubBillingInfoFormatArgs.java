@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class HubBillingInfoFormatArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="maxUnits")
-      private final @Nullable Input<Integer> maxUnits;
+      private final @Nullable Output<Integer> maxUnits;
 
-    public Input<Integer> getMaxUnits() {
-        return this.maxUnits == null ? Input.empty() : this.maxUnits;
+    public Output<Integer> getMaxUnits() {
+        return this.maxUnits == null ? Output.empty() : this.maxUnits;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class HubBillingInfoFormatArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="minUnits")
-      private final @Nullable Input<Integer> minUnits;
+      private final @Nullable Output<Integer> minUnits;
 
-    public Input<Integer> getMinUnits() {
-        return this.minUnits == null ? Input.empty() : this.minUnits;
+    public Output<Integer> getMinUnits() {
+        return this.minUnits == null ? Output.empty() : this.minUnits;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class HubBillingInfoFormatArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="skuName")
-      private final @Nullable Input<String> skuName;
+      private final @Nullable Output<String> skuName;
 
-    public Input<String> getSkuName() {
-        return this.skuName == null ? Input.empty() : this.skuName;
+    public Output<String> getSkuName() {
+        return this.skuName == null ? Output.empty() : this.skuName;
     }
 
     public HubBillingInfoFormatArgs(
-        @Nullable Input<Integer> maxUnits,
-        @Nullable Input<Integer> minUnits,
-        @Nullable Input<String> skuName) {
+        @Nullable Output<Integer> maxUnits,
+        @Nullable Output<Integer> minUnits,
+        @Nullable Output<String> skuName) {
         this.maxUnits = maxUnits;
         this.minUnits = minUnits;
         this.skuName = skuName;
     }
 
     private HubBillingInfoFormatArgs() {
-        this.maxUnits = Input.empty();
-        this.minUnits = Input.empty();
-        this.skuName = Input.empty();
+        this.maxUnits = Output.empty();
+        this.minUnits = Output.empty();
+        this.skuName = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class HubBillingInfoFormatArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> maxUnits;
-        private @Nullable Input<Integer> minUnits;
-        private @Nullable Input<String> skuName;
+        private @Nullable Output<Integer> maxUnits;
+        private @Nullable Output<Integer> minUnits;
+        private @Nullable Output<String> skuName;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class HubBillingInfoFormatArgs extends io.pulumi.resources.Resource
     	      this.skuName = defaults.skuName;
         }
 
-        public Builder maxUnits(@Nullable Input<Integer> maxUnits) {
+        public Builder maxUnits(@Nullable Output<Integer> maxUnits) {
             this.maxUnits = maxUnits;
             return this;
         }
 
         public Builder maxUnits(@Nullable Integer maxUnits) {
-            this.maxUnits = Input.ofNullable(maxUnits);
+            this.maxUnits = Output.ofNullable(maxUnits);
             return this;
         }
 
-        public Builder minUnits(@Nullable Input<Integer> minUnits) {
+        public Builder minUnits(@Nullable Output<Integer> minUnits) {
             this.minUnits = minUnits;
             return this;
         }
 
         public Builder minUnits(@Nullable Integer minUnits) {
-            this.minUnits = Input.ofNullable(minUnits);
+            this.minUnits = Output.ofNullable(minUnits);
             return this;
         }
 
-        public Builder skuName(@Nullable Input<String> skuName) {
+        public Builder skuName(@Nullable Output<String> skuName) {
             this.skuName = skuName;
             return this;
         }
 
         public Builder skuName(@Nullable String skuName) {
-            this.skuName = Input.ofNullable(skuName);
+            this.skuName = Output.ofNullable(skuName);
             return this;
         }
         public HubBillingInfoFormatArgs build() {

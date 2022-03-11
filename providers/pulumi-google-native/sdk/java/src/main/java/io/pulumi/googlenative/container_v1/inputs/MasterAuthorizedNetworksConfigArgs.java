@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1.inputs.CidrBlockArgs;
 import java.lang.Boolean;
@@ -25,10 +25,10 @@ public final class MasterAuthorizedNetworksConfigArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="cidrBlocks")
-      private final @Nullable Input<List<CidrBlockArgs>> cidrBlocks;
+      private final @Nullable Output<List<CidrBlockArgs>> cidrBlocks;
 
-    public Input<List<CidrBlockArgs>> getCidrBlocks() {
-        return this.cidrBlocks == null ? Input.empty() : this.cidrBlocks;
+    public Output<List<CidrBlockArgs>> getCidrBlocks() {
+        return this.cidrBlocks == null ? Output.empty() : this.cidrBlocks;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class MasterAuthorizedNetworksConfigArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     public MasterAuthorizedNetworksConfigArgs(
-        @Nullable Input<List<CidrBlockArgs>> cidrBlocks,
-        @Nullable Input<Boolean> enabled) {
+        @Nullable Output<List<CidrBlockArgs>> cidrBlocks,
+        @Nullable Output<Boolean> enabled) {
         this.cidrBlocks = cidrBlocks;
         this.enabled = enabled;
     }
 
     private MasterAuthorizedNetworksConfigArgs() {
-        this.cidrBlocks = Input.empty();
-        this.enabled = Input.empty();
+        this.cidrBlocks = Output.empty();
+        this.enabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class MasterAuthorizedNetworksConfigArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<List<CidrBlockArgs>> cidrBlocks;
-        private @Nullable Input<Boolean> enabled;
+        private @Nullable Output<List<CidrBlockArgs>> cidrBlocks;
+        private @Nullable Output<Boolean> enabled;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class MasterAuthorizedNetworksConfigArgs extends io.pulumi.resource
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder cidrBlocks(@Nullable Input<List<CidrBlockArgs>> cidrBlocks) {
+        public Builder cidrBlocks(@Nullable Output<List<CidrBlockArgs>> cidrBlocks) {
             this.cidrBlocks = cidrBlocks;
             return this;
         }
 
         public Builder cidrBlocks(@Nullable List<CidrBlockArgs> cidrBlocks) {
-            this.cidrBlocks = Input.ofNullable(cidrBlocks);
+            this.cidrBlocks = Output.ofNullable(cidrBlocks);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
         public MasterAuthorizedNetworksConfigArgs build() {

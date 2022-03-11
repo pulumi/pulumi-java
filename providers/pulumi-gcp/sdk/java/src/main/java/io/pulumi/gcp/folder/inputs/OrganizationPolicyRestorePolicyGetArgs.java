@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.folder.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class OrganizationPolicyRestorePolicyGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="default", required=true)
-      private final Input<Boolean> $default;
+      private final Output<Boolean> $default;
 
-    public Input<Boolean> get$default() {
+    public Output<Boolean> get$default() {
         return this.$default;
     }
 
-    public OrganizationPolicyRestorePolicyGetArgs(Input<Boolean> $default) {
+    public OrganizationPolicyRestorePolicyGetArgs(Output<Boolean> $default) {
         this.$default = Objects.requireNonNull($default, "expected parameter '$default' to be non-null");
     }
 
     private OrganizationPolicyRestorePolicyGetArgs() {
-        this.$default = Input.empty();
+        this.$default = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class OrganizationPolicyRestorePolicyGetArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private Input<Boolean> $default;
+        private Output<Boolean> $default;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class OrganizationPolicyRestorePolicyGetArgs extends io.pulumi.reso
     	      this.$default = defaults.$default;
         }
 
-        public Builder $default(Input<Boolean> $default) {
+        public Builder $default(Output<Boolean> $default) {
             this.$default = Objects.requireNonNull($default);
             return this;
         }
 
         public Builder $default(Boolean $default) {
-            this.$default = Input.of(Objects.requireNonNull($default));
+            this.$default = Output.of(Objects.requireNonNull($default));
             return this;
         }
         public OrganizationPolicyRestorePolicyGetArgs build() {

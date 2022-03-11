@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigtable.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,11 +24,11 @@ public final class GCPolicyMaxAgeArgs extends io.pulumi.resources.ResourceArgs {
      */
     @Deprecated /* Deprecated in favor of duration */
     @InputImport(name="days")
-      private final @Nullable Input<Integer> days;
+      private final @Nullable Output<Integer> days;
 
     @Deprecated /* Deprecated in favor of duration */
-    public Input<Integer> getDays() {
-        return this.days == null ? Input.empty() : this.days;
+    public Output<Integer> getDays() {
+        return this.days == null ? Output.empty() : this.days;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class GCPolicyMaxAgeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="duration")
-      private final @Nullable Input<String> duration;
+      private final @Nullable Output<String> duration;
 
-    public Input<String> getDuration() {
-        return this.duration == null ? Input.empty() : this.duration;
+    public Output<String> getDuration() {
+        return this.duration == null ? Output.empty() : this.duration;
     }
 
     public GCPolicyMaxAgeArgs(
-        @Nullable Input<Integer> days,
-        @Nullable Input<String> duration) {
+        @Nullable Output<Integer> days,
+        @Nullable Output<String> duration) {
         this.days = days;
         this.duration = duration;
     }
 
     private GCPolicyMaxAgeArgs() {
-        this.days = Input.empty();
-        this.duration = Input.empty();
+        this.days = Output.empty();
+        this.duration = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class GCPolicyMaxAgeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> days;
-        private @Nullable Input<String> duration;
+        private @Nullable Output<Integer> days;
+        private @Nullable Output<String> duration;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class GCPolicyMaxAgeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.duration = defaults.duration;
         }
 
-        public Builder days(@Nullable Input<Integer> days) {
+        public Builder days(@Nullable Output<Integer> days) {
             this.days = days;
             return this;
         }
 
         public Builder days(@Nullable Integer days) {
-            this.days = Input.ofNullable(days);
+            this.days = Output.ofNullable(days);
             return this;
         }
 
-        public Builder duration(@Nullable Input<String> duration) {
+        public Builder duration(@Nullable Output<String> duration) {
             this.duration = duration;
             return this;
         }
 
         public Builder duration(@Nullable String duration) {
-            this.duration = Input.ofNullable(duration);
+            this.duration = Output.ofNullable(duration);
             return this;
         }
         public GCPolicyMaxAgeArgs build() {

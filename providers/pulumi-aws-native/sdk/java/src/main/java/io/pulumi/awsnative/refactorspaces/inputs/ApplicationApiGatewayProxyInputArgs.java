@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.refactorspaces.inputs;
 
 import io.pulumi.awsnative.refactorspaces.enums.ApplicationApiGatewayEndpointType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,29 +16,29 @@ public final class ApplicationApiGatewayProxyInputArgs extends io.pulumi.resourc
     public static final ApplicationApiGatewayProxyInputArgs Empty = new ApplicationApiGatewayProxyInputArgs();
 
     @InputImport(name="endpointType")
-      private final @Nullable Input<ApplicationApiGatewayEndpointType> endpointType;
+      private final @Nullable Output<ApplicationApiGatewayEndpointType> endpointType;
 
-    public Input<ApplicationApiGatewayEndpointType> getEndpointType() {
-        return this.endpointType == null ? Input.empty() : this.endpointType;
+    public Output<ApplicationApiGatewayEndpointType> getEndpointType() {
+        return this.endpointType == null ? Output.empty() : this.endpointType;
     }
 
     @InputImport(name="stageName")
-      private final @Nullable Input<String> stageName;
+      private final @Nullable Output<String> stageName;
 
-    public Input<String> getStageName() {
-        return this.stageName == null ? Input.empty() : this.stageName;
+    public Output<String> getStageName() {
+        return this.stageName == null ? Output.empty() : this.stageName;
     }
 
     public ApplicationApiGatewayProxyInputArgs(
-        @Nullable Input<ApplicationApiGatewayEndpointType> endpointType,
-        @Nullable Input<String> stageName) {
+        @Nullable Output<ApplicationApiGatewayEndpointType> endpointType,
+        @Nullable Output<String> stageName) {
         this.endpointType = endpointType;
         this.stageName = stageName;
     }
 
     private ApplicationApiGatewayProxyInputArgs() {
-        this.endpointType = Input.empty();
-        this.stageName = Input.empty();
+        this.endpointType = Output.empty();
+        this.stageName = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class ApplicationApiGatewayProxyInputArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<ApplicationApiGatewayEndpointType> endpointType;
-        private @Nullable Input<String> stageName;
+        private @Nullable Output<ApplicationApiGatewayEndpointType> endpointType;
+        private @Nullable Output<String> stageName;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class ApplicationApiGatewayProxyInputArgs extends io.pulumi.resourc
     	      this.stageName = defaults.stageName;
         }
 
-        public Builder endpointType(@Nullable Input<ApplicationApiGatewayEndpointType> endpointType) {
+        public Builder endpointType(@Nullable Output<ApplicationApiGatewayEndpointType> endpointType) {
             this.endpointType = endpointType;
             return this;
         }
 
         public Builder endpointType(@Nullable ApplicationApiGatewayEndpointType endpointType) {
-            this.endpointType = Input.ofNullable(endpointType);
+            this.endpointType = Output.ofNullable(endpointType);
             return this;
         }
 
-        public Builder stageName(@Nullable Input<String> stageName) {
+        public Builder stageName(@Nullable Output<String> stageName) {
             this.stageName = stageName;
             return this;
         }
 
         public Builder stageName(@Nullable String stageName) {
-            this.stageName = Input.ofNullable(stageName);
+            this.stageName = Output.ofNullable(stageName);
             return this;
         }
         public ApplicationApiGatewayProxyInputArgs build() {

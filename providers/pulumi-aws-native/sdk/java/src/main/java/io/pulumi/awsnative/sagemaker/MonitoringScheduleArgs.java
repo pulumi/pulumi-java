@@ -7,7 +7,7 @@ import io.pulumi.awsnative.sagemaker.enums.MonitoringScheduleStatus;
 import io.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleConfigArgs;
 import io.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleMonitoringExecutionSummaryArgs;
 import io.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class MonitoringScheduleArgs extends io.pulumi.resources.ResourceAr
     public static final MonitoringScheduleArgs Empty = new MonitoringScheduleArgs();
 
     @InputImport(name="endpointName")
-      private final @Nullable Input<String> endpointName;
+      private final @Nullable Output<String> endpointName;
 
-    public Input<String> getEndpointName() {
-        return this.endpointName == null ? Input.empty() : this.endpointName;
+    public Output<String> getEndpointName() {
+        return this.endpointName == null ? Output.empty() : this.endpointName;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class MonitoringScheduleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="failureReason")
-      private final @Nullable Input<String> failureReason;
+      private final @Nullable Output<String> failureReason;
 
-    public Input<String> getFailureReason() {
-        return this.failureReason == null ? Input.empty() : this.failureReason;
+    public Output<String> getFailureReason() {
+        return this.failureReason == null ? Output.empty() : this.failureReason;
     }
 
     /**
@@ -42,24 +42,24 @@ public final class MonitoringScheduleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="lastMonitoringExecutionSummary")
-      private final @Nullable Input<MonitoringScheduleMonitoringExecutionSummaryArgs> lastMonitoringExecutionSummary;
+      private final @Nullable Output<MonitoringScheduleMonitoringExecutionSummaryArgs> lastMonitoringExecutionSummary;
 
-    public Input<MonitoringScheduleMonitoringExecutionSummaryArgs> getLastMonitoringExecutionSummary() {
-        return this.lastMonitoringExecutionSummary == null ? Input.empty() : this.lastMonitoringExecutionSummary;
+    public Output<MonitoringScheduleMonitoringExecutionSummaryArgs> getLastMonitoringExecutionSummary() {
+        return this.lastMonitoringExecutionSummary == null ? Output.empty() : this.lastMonitoringExecutionSummary;
     }
 
     @InputImport(name="monitoringScheduleConfig", required=true)
-      private final Input<MonitoringScheduleConfigArgs> monitoringScheduleConfig;
+      private final Output<MonitoringScheduleConfigArgs> monitoringScheduleConfig;
 
-    public Input<MonitoringScheduleConfigArgs> getMonitoringScheduleConfig() {
+    public Output<MonitoringScheduleConfigArgs> getMonitoringScheduleConfig() {
         return this.monitoringScheduleConfig;
     }
 
     @InputImport(name="monitoringScheduleName")
-      private final @Nullable Input<String> monitoringScheduleName;
+      private final @Nullable Output<String> monitoringScheduleName;
 
-    public Input<String> getMonitoringScheduleName() {
-        return this.monitoringScheduleName == null ? Input.empty() : this.monitoringScheduleName;
+    public Output<String> getMonitoringScheduleName() {
+        return this.monitoringScheduleName == null ? Output.empty() : this.monitoringScheduleName;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class MonitoringScheduleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="monitoringScheduleStatus")
-      private final @Nullable Input<MonitoringScheduleStatus> monitoringScheduleStatus;
+      private final @Nullable Output<MonitoringScheduleStatus> monitoringScheduleStatus;
 
-    public Input<MonitoringScheduleStatus> getMonitoringScheduleStatus() {
-        return this.monitoringScheduleStatus == null ? Input.empty() : this.monitoringScheduleStatus;
+    public Output<MonitoringScheduleStatus> getMonitoringScheduleStatus() {
+        return this.monitoringScheduleStatus == null ? Output.empty() : this.monitoringScheduleStatus;
     }
 
     /**
@@ -78,20 +78,20 @@ public final class MonitoringScheduleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<MonitoringScheduleTagArgs>> tags;
+      private final @Nullable Output<List<MonitoringScheduleTagArgs>> tags;
 
-    public Input<List<MonitoringScheduleTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<MonitoringScheduleTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public MonitoringScheduleArgs(
-        @Nullable Input<String> endpointName,
-        @Nullable Input<String> failureReason,
-        @Nullable Input<MonitoringScheduleMonitoringExecutionSummaryArgs> lastMonitoringExecutionSummary,
-        Input<MonitoringScheduleConfigArgs> monitoringScheduleConfig,
-        @Nullable Input<String> monitoringScheduleName,
-        @Nullable Input<MonitoringScheduleStatus> monitoringScheduleStatus,
-        @Nullable Input<List<MonitoringScheduleTagArgs>> tags) {
+        @Nullable Output<String> endpointName,
+        @Nullable Output<String> failureReason,
+        @Nullable Output<MonitoringScheduleMonitoringExecutionSummaryArgs> lastMonitoringExecutionSummary,
+        Output<MonitoringScheduleConfigArgs> monitoringScheduleConfig,
+        @Nullable Output<String> monitoringScheduleName,
+        @Nullable Output<MonitoringScheduleStatus> monitoringScheduleStatus,
+        @Nullable Output<List<MonitoringScheduleTagArgs>> tags) {
         this.endpointName = endpointName;
         this.failureReason = failureReason;
         this.lastMonitoringExecutionSummary = lastMonitoringExecutionSummary;
@@ -102,13 +102,13 @@ public final class MonitoringScheduleArgs extends io.pulumi.resources.ResourceAr
     }
 
     private MonitoringScheduleArgs() {
-        this.endpointName = Input.empty();
-        this.failureReason = Input.empty();
-        this.lastMonitoringExecutionSummary = Input.empty();
-        this.monitoringScheduleConfig = Input.empty();
-        this.monitoringScheduleName = Input.empty();
-        this.monitoringScheduleStatus = Input.empty();
-        this.tags = Input.empty();
+        this.endpointName = Output.empty();
+        this.failureReason = Output.empty();
+        this.lastMonitoringExecutionSummary = Output.empty();
+        this.monitoringScheduleConfig = Output.empty();
+        this.monitoringScheduleName = Output.empty();
+        this.monitoringScheduleStatus = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -120,13 +120,13 @@ public final class MonitoringScheduleArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> endpointName;
-        private @Nullable Input<String> failureReason;
-        private @Nullable Input<MonitoringScheduleMonitoringExecutionSummaryArgs> lastMonitoringExecutionSummary;
-        private Input<MonitoringScheduleConfigArgs> monitoringScheduleConfig;
-        private @Nullable Input<String> monitoringScheduleName;
-        private @Nullable Input<MonitoringScheduleStatus> monitoringScheduleStatus;
-        private @Nullable Input<List<MonitoringScheduleTagArgs>> tags;
+        private @Nullable Output<String> endpointName;
+        private @Nullable Output<String> failureReason;
+        private @Nullable Output<MonitoringScheduleMonitoringExecutionSummaryArgs> lastMonitoringExecutionSummary;
+        private Output<MonitoringScheduleConfigArgs> monitoringScheduleConfig;
+        private @Nullable Output<String> monitoringScheduleName;
+        private @Nullable Output<MonitoringScheduleStatus> monitoringScheduleStatus;
+        private @Nullable Output<List<MonitoringScheduleTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -143,73 +143,73 @@ public final class MonitoringScheduleArgs extends io.pulumi.resources.ResourceAr
     	      this.tags = defaults.tags;
         }
 
-        public Builder endpointName(@Nullable Input<String> endpointName) {
+        public Builder endpointName(@Nullable Output<String> endpointName) {
             this.endpointName = endpointName;
             return this;
         }
 
         public Builder endpointName(@Nullable String endpointName) {
-            this.endpointName = Input.ofNullable(endpointName);
+            this.endpointName = Output.ofNullable(endpointName);
             return this;
         }
 
-        public Builder failureReason(@Nullable Input<String> failureReason) {
+        public Builder failureReason(@Nullable Output<String> failureReason) {
             this.failureReason = failureReason;
             return this;
         }
 
         public Builder failureReason(@Nullable String failureReason) {
-            this.failureReason = Input.ofNullable(failureReason);
+            this.failureReason = Output.ofNullable(failureReason);
             return this;
         }
 
-        public Builder lastMonitoringExecutionSummary(@Nullable Input<MonitoringScheduleMonitoringExecutionSummaryArgs> lastMonitoringExecutionSummary) {
+        public Builder lastMonitoringExecutionSummary(@Nullable Output<MonitoringScheduleMonitoringExecutionSummaryArgs> lastMonitoringExecutionSummary) {
             this.lastMonitoringExecutionSummary = lastMonitoringExecutionSummary;
             return this;
         }
 
         public Builder lastMonitoringExecutionSummary(@Nullable MonitoringScheduleMonitoringExecutionSummaryArgs lastMonitoringExecutionSummary) {
-            this.lastMonitoringExecutionSummary = Input.ofNullable(lastMonitoringExecutionSummary);
+            this.lastMonitoringExecutionSummary = Output.ofNullable(lastMonitoringExecutionSummary);
             return this;
         }
 
-        public Builder monitoringScheduleConfig(Input<MonitoringScheduleConfigArgs> monitoringScheduleConfig) {
+        public Builder monitoringScheduleConfig(Output<MonitoringScheduleConfigArgs> monitoringScheduleConfig) {
             this.monitoringScheduleConfig = Objects.requireNonNull(monitoringScheduleConfig);
             return this;
         }
 
         public Builder monitoringScheduleConfig(MonitoringScheduleConfigArgs monitoringScheduleConfig) {
-            this.monitoringScheduleConfig = Input.of(Objects.requireNonNull(monitoringScheduleConfig));
+            this.monitoringScheduleConfig = Output.of(Objects.requireNonNull(monitoringScheduleConfig));
             return this;
         }
 
-        public Builder monitoringScheduleName(@Nullable Input<String> monitoringScheduleName) {
+        public Builder monitoringScheduleName(@Nullable Output<String> monitoringScheduleName) {
             this.monitoringScheduleName = monitoringScheduleName;
             return this;
         }
 
         public Builder monitoringScheduleName(@Nullable String monitoringScheduleName) {
-            this.monitoringScheduleName = Input.ofNullable(monitoringScheduleName);
+            this.monitoringScheduleName = Output.ofNullable(monitoringScheduleName);
             return this;
         }
 
-        public Builder monitoringScheduleStatus(@Nullable Input<MonitoringScheduleStatus> monitoringScheduleStatus) {
+        public Builder monitoringScheduleStatus(@Nullable Output<MonitoringScheduleStatus> monitoringScheduleStatus) {
             this.monitoringScheduleStatus = monitoringScheduleStatus;
             return this;
         }
 
         public Builder monitoringScheduleStatus(@Nullable MonitoringScheduleStatus monitoringScheduleStatus) {
-            this.monitoringScheduleStatus = Input.ofNullable(monitoringScheduleStatus);
+            this.monitoringScheduleStatus = Output.ofNullable(monitoringScheduleStatus);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<MonitoringScheduleTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<MonitoringScheduleTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<MonitoringScheduleTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public MonitoringScheduleArgs build() {

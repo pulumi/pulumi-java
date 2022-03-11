@@ -7,7 +7,7 @@ import io.pulumi.awsnative.codeguruprofiler.enums.ProfilingGroupComputePlatform;
 import io.pulumi.awsnative.codeguruprofiler.inputs.AgentPermissionsPropertiesArgs;
 import io.pulumi.awsnative.codeguruprofiler.inputs.ProfilingGroupChannelArgs;
 import io.pulumi.awsnative.codeguruprofiler.inputs.ProfilingGroupTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class ProfilingGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="agentPermissions")
-      private final @Nullable Input<AgentPermissionsPropertiesArgs> agentPermissions;
+      private final @Nullable Output<AgentPermissionsPropertiesArgs> agentPermissions;
 
-    public Input<AgentPermissionsPropertiesArgs> getAgentPermissions() {
-        return this.agentPermissions == null ? Input.empty() : this.agentPermissions;
+    public Output<AgentPermissionsPropertiesArgs> getAgentPermissions() {
+        return this.agentPermissions == null ? Output.empty() : this.agentPermissions;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ProfilingGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="anomalyDetectionNotificationConfiguration")
-      private final @Nullable Input<List<ProfilingGroupChannelArgs>> anomalyDetectionNotificationConfiguration;
+      private final @Nullable Output<List<ProfilingGroupChannelArgs>> anomalyDetectionNotificationConfiguration;
 
-    public Input<List<ProfilingGroupChannelArgs>> getAnomalyDetectionNotificationConfiguration() {
-        return this.anomalyDetectionNotificationConfiguration == null ? Input.empty() : this.anomalyDetectionNotificationConfiguration;
+    public Output<List<ProfilingGroupChannelArgs>> getAnomalyDetectionNotificationConfiguration() {
+        return this.anomalyDetectionNotificationConfiguration == null ? Output.empty() : this.anomalyDetectionNotificationConfiguration;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ProfilingGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="computePlatform")
-      private final @Nullable Input<ProfilingGroupComputePlatform> computePlatform;
+      private final @Nullable Output<ProfilingGroupComputePlatform> computePlatform;
 
-    public Input<ProfilingGroupComputePlatform> getComputePlatform() {
-        return this.computePlatform == null ? Input.empty() : this.computePlatform;
+    public Output<ProfilingGroupComputePlatform> getComputePlatform() {
+        return this.computePlatform == null ? Output.empty() : this.computePlatform;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ProfilingGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profilingGroupName")
-      private final @Nullable Input<String> profilingGroupName;
+      private final @Nullable Output<String> profilingGroupName;
 
-    public Input<String> getProfilingGroupName() {
-        return this.profilingGroupName == null ? Input.empty() : this.profilingGroupName;
+    public Output<String> getProfilingGroupName() {
+        return this.profilingGroupName == null ? Output.empty() : this.profilingGroupName;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class ProfilingGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<ProfilingGroupTagArgs>> tags;
+      private final @Nullable Output<List<ProfilingGroupTagArgs>> tags;
 
-    public Input<List<ProfilingGroupTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<ProfilingGroupTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ProfilingGroupArgs(
-        @Nullable Input<AgentPermissionsPropertiesArgs> agentPermissions,
-        @Nullable Input<List<ProfilingGroupChannelArgs>> anomalyDetectionNotificationConfiguration,
-        @Nullable Input<ProfilingGroupComputePlatform> computePlatform,
-        @Nullable Input<String> profilingGroupName,
-        @Nullable Input<List<ProfilingGroupTagArgs>> tags) {
+        @Nullable Output<AgentPermissionsPropertiesArgs> agentPermissions,
+        @Nullable Output<List<ProfilingGroupChannelArgs>> anomalyDetectionNotificationConfiguration,
+        @Nullable Output<ProfilingGroupComputePlatform> computePlatform,
+        @Nullable Output<String> profilingGroupName,
+        @Nullable Output<List<ProfilingGroupTagArgs>> tags) {
         this.agentPermissions = agentPermissions;
         this.anomalyDetectionNotificationConfiguration = anomalyDetectionNotificationConfiguration;
         this.computePlatform = computePlatform;
@@ -88,11 +88,11 @@ public final class ProfilingGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProfilingGroupArgs() {
-        this.agentPermissions = Input.empty();
-        this.anomalyDetectionNotificationConfiguration = Input.empty();
-        this.computePlatform = Input.empty();
-        this.profilingGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.agentPermissions = Output.empty();
+        this.anomalyDetectionNotificationConfiguration = Output.empty();
+        this.computePlatform = Output.empty();
+        this.profilingGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class ProfilingGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<AgentPermissionsPropertiesArgs> agentPermissions;
-        private @Nullable Input<List<ProfilingGroupChannelArgs>> anomalyDetectionNotificationConfiguration;
-        private @Nullable Input<ProfilingGroupComputePlatform> computePlatform;
-        private @Nullable Input<String> profilingGroupName;
-        private @Nullable Input<List<ProfilingGroupTagArgs>> tags;
+        private @Nullable Output<AgentPermissionsPropertiesArgs> agentPermissions;
+        private @Nullable Output<List<ProfilingGroupChannelArgs>> anomalyDetectionNotificationConfiguration;
+        private @Nullable Output<ProfilingGroupComputePlatform> computePlatform;
+        private @Nullable Output<String> profilingGroupName;
+        private @Nullable Output<List<ProfilingGroupTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class ProfilingGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder agentPermissions(@Nullable Input<AgentPermissionsPropertiesArgs> agentPermissions) {
+        public Builder agentPermissions(@Nullable Output<AgentPermissionsPropertiesArgs> agentPermissions) {
             this.agentPermissions = agentPermissions;
             return this;
         }
 
         public Builder agentPermissions(@Nullable AgentPermissionsPropertiesArgs agentPermissions) {
-            this.agentPermissions = Input.ofNullable(agentPermissions);
+            this.agentPermissions = Output.ofNullable(agentPermissions);
             return this;
         }
 
-        public Builder anomalyDetectionNotificationConfiguration(@Nullable Input<List<ProfilingGroupChannelArgs>> anomalyDetectionNotificationConfiguration) {
+        public Builder anomalyDetectionNotificationConfiguration(@Nullable Output<List<ProfilingGroupChannelArgs>> anomalyDetectionNotificationConfiguration) {
             this.anomalyDetectionNotificationConfiguration = anomalyDetectionNotificationConfiguration;
             return this;
         }
 
         public Builder anomalyDetectionNotificationConfiguration(@Nullable List<ProfilingGroupChannelArgs> anomalyDetectionNotificationConfiguration) {
-            this.anomalyDetectionNotificationConfiguration = Input.ofNullable(anomalyDetectionNotificationConfiguration);
+            this.anomalyDetectionNotificationConfiguration = Output.ofNullable(anomalyDetectionNotificationConfiguration);
             return this;
         }
 
-        public Builder computePlatform(@Nullable Input<ProfilingGroupComputePlatform> computePlatform) {
+        public Builder computePlatform(@Nullable Output<ProfilingGroupComputePlatform> computePlatform) {
             this.computePlatform = computePlatform;
             return this;
         }
 
         public Builder computePlatform(@Nullable ProfilingGroupComputePlatform computePlatform) {
-            this.computePlatform = Input.ofNullable(computePlatform);
+            this.computePlatform = Output.ofNullable(computePlatform);
             return this;
         }
 
-        public Builder profilingGroupName(@Nullable Input<String> profilingGroupName) {
+        public Builder profilingGroupName(@Nullable Output<String> profilingGroupName) {
             this.profilingGroupName = profilingGroupName;
             return this;
         }
 
         public Builder profilingGroupName(@Nullable String profilingGroupName) {
-            this.profilingGroupName = Input.ofNullable(profilingGroupName);
+            this.profilingGroupName = Output.ofNullable(profilingGroupName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<ProfilingGroupTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<ProfilingGroupTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<ProfilingGroupTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ProfilingGroupArgs build() {

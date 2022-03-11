@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.s3control.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -16,10 +16,10 @@ public final class ObjectLambdaAccessPointPolicyState extends io.pulumi.resource
     public static final ObjectLambdaAccessPointPolicyState Empty = new ObjectLambdaAccessPointPolicyState();
 
     @InputImport(name="accountId")
-      private final @Nullable Input<String> accountId;
+      private final @Nullable Output<String> accountId;
 
-    public Input<String> getAccountId() {
-        return this.accountId == null ? Input.empty() : this.accountId;
+    public Output<String> getAccountId() {
+        return this.accountId == null ? Output.empty() : this.accountId;
     }
 
     /**
@@ -27,10 +27,10 @@ public final class ObjectLambdaAccessPointPolicyState extends io.pulumi.resource
      * 
      */
     @InputImport(name="hasPublicAccessPolicy")
-      private final @Nullable Input<Boolean> hasPublicAccessPolicy;
+      private final @Nullable Output<Boolean> hasPublicAccessPolicy;
 
-    public Input<Boolean> getHasPublicAccessPolicy() {
-        return this.hasPublicAccessPolicy == null ? Input.empty() : this.hasPublicAccessPolicy;
+    public Output<Boolean> getHasPublicAccessPolicy() {
+        return this.hasPublicAccessPolicy == null ? Output.empty() : this.hasPublicAccessPolicy;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ObjectLambdaAccessPointPolicyState extends io.pulumi.resource
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -49,17 +49,17 @@ public final class ObjectLambdaAccessPointPolicyState extends io.pulumi.resource
      * 
      */
     @InputImport(name="policy")
-      private final @Nullable Input<String> policy;
+      private final @Nullable Output<String> policy;
 
-    public Input<String> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<String> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     public ObjectLambdaAccessPointPolicyState(
-        @Nullable Input<String> accountId,
-        @Nullable Input<Boolean> hasPublicAccessPolicy,
-        @Nullable Input<String> name,
-        @Nullable Input<String> policy) {
+        @Nullable Output<String> accountId,
+        @Nullable Output<Boolean> hasPublicAccessPolicy,
+        @Nullable Output<String> name,
+        @Nullable Output<String> policy) {
         this.accountId = accountId;
         this.hasPublicAccessPolicy = hasPublicAccessPolicy;
         this.name = name;
@@ -67,10 +67,10 @@ public final class ObjectLambdaAccessPointPolicyState extends io.pulumi.resource
     }
 
     private ObjectLambdaAccessPointPolicyState() {
-        this.accountId = Input.empty();
-        this.hasPublicAccessPolicy = Input.empty();
-        this.name = Input.empty();
-        this.policy = Input.empty();
+        this.accountId = Output.empty();
+        this.hasPublicAccessPolicy = Output.empty();
+        this.name = Output.empty();
+        this.policy = Output.empty();
     }
 
     public static Builder builder() {
@@ -82,10 +82,10 @@ public final class ObjectLambdaAccessPointPolicyState extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accountId;
-        private @Nullable Input<Boolean> hasPublicAccessPolicy;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> policy;
+        private @Nullable Output<String> accountId;
+        private @Nullable Output<Boolean> hasPublicAccessPolicy;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> policy;
 
         public Builder() {
     	      // Empty
@@ -99,43 +99,43 @@ public final class ObjectLambdaAccessPointPolicyState extends io.pulumi.resource
     	      this.policy = defaults.policy;
         }
 
-        public Builder accountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Output<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Input.ofNullable(accountId);
+            this.accountId = Output.ofNullable(accountId);
             return this;
         }
 
-        public Builder hasPublicAccessPolicy(@Nullable Input<Boolean> hasPublicAccessPolicy) {
+        public Builder hasPublicAccessPolicy(@Nullable Output<Boolean> hasPublicAccessPolicy) {
             this.hasPublicAccessPolicy = hasPublicAccessPolicy;
             return this;
         }
 
         public Builder hasPublicAccessPolicy(@Nullable Boolean hasPublicAccessPolicy) {
-            this.hasPublicAccessPolicy = Input.ofNullable(hasPublicAccessPolicy);
+            this.hasPublicAccessPolicy = Output.ofNullable(hasPublicAccessPolicy);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder policy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable String policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
         public ObjectLambdaAccessPointPolicyState build() {

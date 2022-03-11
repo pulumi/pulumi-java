@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicebus.inputs;
 
 import io.pulumi.azurenative.servicebus.enums.NetworkRuleIPAction;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class NWRuleSetIpRulesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="action")
-      private final @Nullable Input<Either<String,NetworkRuleIPAction>> action;
+      private final @Nullable Output<Either<String,NetworkRuleIPAction>> action;
 
-    public Input<Either<String,NetworkRuleIPAction>> getAction() {
-        return this.action == null ? Input.empty() : this.action;
+    public Output<Either<String,NetworkRuleIPAction>> getAction() {
+        return this.action == null ? Output.empty() : this.action;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class NWRuleSetIpRulesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ipMask")
-      private final @Nullable Input<String> ipMask;
+      private final @Nullable Output<String> ipMask;
 
-    public Input<String> getIpMask() {
-        return this.ipMask == null ? Input.empty() : this.ipMask;
+    public Output<String> getIpMask() {
+        return this.ipMask == null ? Output.empty() : this.ipMask;
     }
 
     public NWRuleSetIpRulesArgs(
-        @Nullable Input<Either<String,NetworkRuleIPAction>> action,
-        @Nullable Input<String> ipMask) {
-        this.action = action == null ? Input.ofLeft("Allow") : action;
+        @Nullable Output<Either<String,NetworkRuleIPAction>> action,
+        @Nullable Output<String> ipMask) {
+        this.action = action == null ? Output.ofLeft("Allow") : action;
         this.ipMask = ipMask;
     }
 
     private NWRuleSetIpRulesArgs() {
-        this.action = Input.empty();
-        this.ipMask = Input.empty();
+        this.action = Output.empty();
+        this.ipMask = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class NWRuleSetIpRulesArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,NetworkRuleIPAction>> action;
-        private @Nullable Input<String> ipMask;
+        private @Nullable Output<Either<String,NetworkRuleIPAction>> action;
+        private @Nullable Output<String> ipMask;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class NWRuleSetIpRulesArgs extends io.pulumi.resources.ResourceArgs
     	      this.ipMask = defaults.ipMask;
         }
 
-        public Builder action(@Nullable Input<Either<String,NetworkRuleIPAction>> action) {
+        public Builder action(@Nullable Output<Either<String,NetworkRuleIPAction>> action) {
             this.action = action;
             return this;
         }
 
         public Builder action(@Nullable Either<String,NetworkRuleIPAction> action) {
-            this.action = Input.ofNullable(action);
+            this.action = Output.ofNullable(action);
             return this;
         }
 
-        public Builder ipMask(@Nullable Input<String> ipMask) {
+        public Builder ipMask(@Nullable Output<String> ipMask) {
             this.ipMask = ipMask;
             return this;
         }
 
         public Builder ipMask(@Nullable String ipMask) {
-            this.ipMask = Input.ofNullable(ipMask);
+            this.ipMask = Output.ofNullable(ipMask);
             return this;
         }
         public NWRuleSetIpRulesArgs build() {

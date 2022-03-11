@@ -8,7 +8,7 @@ import io.pulumi.azurenative.analysisservices.inputs.GatewayDetailsArgs;
 import io.pulumi.azurenative.analysisservices.inputs.IPv4FirewallSettingsArgs;
 import io.pulumi.azurenative.analysisservices.inputs.ResourceSkuArgs;
 import io.pulumi.azurenative.analysisservices.inputs.ServerAdministratorsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="asAdministrators")
-      private final @Nullable Input<ServerAdministratorsArgs> asAdministrators;
+      private final @Nullable Output<ServerAdministratorsArgs> asAdministrators;
 
-    public Input<ServerAdministratorsArgs> getAsAdministrators() {
-        return this.asAdministrators == null ? Input.empty() : this.asAdministrators;
+    public Output<ServerAdministratorsArgs> getAsAdministrators() {
+        return this.asAdministrators == null ? Output.empty() : this.asAdministrators;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backupBlobContainerUri")
-      private final @Nullable Input<String> backupBlobContainerUri;
+      private final @Nullable Output<String> backupBlobContainerUri;
 
-    public Input<String> getBackupBlobContainerUri() {
-        return this.backupBlobContainerUri == null ? Input.empty() : this.backupBlobContainerUri;
+    public Output<String> getBackupBlobContainerUri() {
+        return this.backupBlobContainerUri == null ? Output.empty() : this.backupBlobContainerUri;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayDetails")
-      private final @Nullable Input<GatewayDetailsArgs> gatewayDetails;
+      private final @Nullable Output<GatewayDetailsArgs> gatewayDetails;
 
-    public Input<GatewayDetailsArgs> getGatewayDetails() {
-        return this.gatewayDetails == null ? Input.empty() : this.gatewayDetails;
+    public Output<GatewayDetailsArgs> getGatewayDetails() {
+        return this.gatewayDetails == null ? Output.empty() : this.gatewayDetails;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipV4FirewallSettings")
-      private final @Nullable Input<IPv4FirewallSettingsArgs> ipV4FirewallSettings;
+      private final @Nullable Output<IPv4FirewallSettingsArgs> ipV4FirewallSettings;
 
-    public Input<IPv4FirewallSettingsArgs> getIpV4FirewallSettings() {
-        return this.ipV4FirewallSettings == null ? Input.empty() : this.ipV4FirewallSettings;
+    public Output<IPv4FirewallSettingsArgs> getIpV4FirewallSettings() {
+        return this.ipV4FirewallSettings == null ? Output.empty() : this.ipV4FirewallSettings;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedMode")
-      private final @Nullable Input<Integer> managedMode;
+      private final @Nullable Output<Integer> managedMode;
 
-    public Input<Integer> getManagedMode() {
-        return this.managedMode == null ? Input.empty() : this.managedMode;
+    public Output<Integer> getManagedMode() {
+        return this.managedMode == null ? Output.empty() : this.managedMode;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="querypoolConnectionMode")
-      private final @Nullable Input<ConnectionMode> querypoolConnectionMode;
+      private final @Nullable Output<ConnectionMode> querypoolConnectionMode;
 
-    public Input<ConnectionMode> getQuerypoolConnectionMode() {
-        return this.querypoolConnectionMode == null ? Input.empty() : this.querypoolConnectionMode;
+    public Output<ConnectionMode> getQuerypoolConnectionMode() {
+        return this.querypoolConnectionMode == null ? Output.empty() : this.querypoolConnectionMode;
     }
 
     /**
@@ -103,9 +103,9 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -114,10 +114,10 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverMonitorMode")
-      private final @Nullable Input<Integer> serverMonitorMode;
+      private final @Nullable Output<Integer> serverMonitorMode;
 
-    public Input<Integer> getServerMonitorMode() {
-        return this.serverMonitorMode == null ? Input.empty() : this.serverMonitorMode;
+    public Output<Integer> getServerMonitorMode() {
+        return this.serverMonitorMode == null ? Output.empty() : this.serverMonitorMode;
     }
 
     /**
@@ -125,10 +125,10 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverName")
-      private final @Nullable Input<String> serverName;
+      private final @Nullable Output<String> serverName;
 
-    public Input<String> getServerName() {
-        return this.serverName == null ? Input.empty() : this.serverName;
+    public Output<String> getServerName() {
+        return this.serverName == null ? Output.empty() : this.serverName;
     }
 
     /**
@@ -136,9 +136,9 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku", required=true)
-      private final Input<ResourceSkuArgs> sku;
+      private final Output<ResourceSkuArgs> sku;
 
-    public Input<ResourceSkuArgs> getSku() {
+    public Output<ResourceSkuArgs> getSku() {
         return this.sku;
     }
 
@@ -147,52 +147,52 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ServerDetailsArgs(
-        @Nullable Input<ServerAdministratorsArgs> asAdministrators,
-        @Nullable Input<String> backupBlobContainerUri,
-        @Nullable Input<GatewayDetailsArgs> gatewayDetails,
-        @Nullable Input<IPv4FirewallSettingsArgs> ipV4FirewallSettings,
-        @Nullable Input<String> location,
-        @Nullable Input<Integer> managedMode,
-        @Nullable Input<ConnectionMode> querypoolConnectionMode,
-        Input<String> resourceGroupName,
-        @Nullable Input<Integer> serverMonitorMode,
-        @Nullable Input<String> serverName,
-        Input<ResourceSkuArgs> sku,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<ServerAdministratorsArgs> asAdministrators,
+        @Nullable Output<String> backupBlobContainerUri,
+        @Nullable Output<GatewayDetailsArgs> gatewayDetails,
+        @Nullable Output<IPv4FirewallSettingsArgs> ipV4FirewallSettings,
+        @Nullable Output<String> location,
+        @Nullable Output<Integer> managedMode,
+        @Nullable Output<ConnectionMode> querypoolConnectionMode,
+        Output<String> resourceGroupName,
+        @Nullable Output<Integer> serverMonitorMode,
+        @Nullable Output<String> serverName,
+        Output<ResourceSkuArgs> sku,
+        @Nullable Output<Map<String,String>> tags) {
         this.asAdministrators = asAdministrators;
         this.backupBlobContainerUri = backupBlobContainerUri;
         this.gatewayDetails = gatewayDetails;
         this.ipV4FirewallSettings = ipV4FirewallSettings;
         this.location = location;
-        this.managedMode = managedMode == null ? Input.ofNullable(1) : managedMode;
-        this.querypoolConnectionMode = querypoolConnectionMode == null ? Input.ofNullable(io.pulumi.azurenative.analysisservices.enums.ConnectionMode.All) : querypoolConnectionMode;
+        this.managedMode = managedMode == null ? Output.ofNullable(1) : managedMode;
+        this.querypoolConnectionMode = querypoolConnectionMode == null ? Output.ofNullable(io.pulumi.azurenative.analysisservices.enums.ConnectionMode.All) : querypoolConnectionMode;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverMonitorMode = serverMonitorMode == null ? Input.ofNullable(1) : serverMonitorMode;
+        this.serverMonitorMode = serverMonitorMode == null ? Output.ofNullable(1) : serverMonitorMode;
         this.serverName = serverName;
         this.sku = Objects.requireNonNull(sku, "expected parameter 'sku' to be non-null");
         this.tags = tags;
     }
 
     private ServerDetailsArgs() {
-        this.asAdministrators = Input.empty();
-        this.backupBlobContainerUri = Input.empty();
-        this.gatewayDetails = Input.empty();
-        this.ipV4FirewallSettings = Input.empty();
-        this.location = Input.empty();
-        this.managedMode = Input.empty();
-        this.querypoolConnectionMode = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serverMonitorMode = Input.empty();
-        this.serverName = Input.empty();
-        this.sku = Input.empty();
-        this.tags = Input.empty();
+        this.asAdministrators = Output.empty();
+        this.backupBlobContainerUri = Output.empty();
+        this.gatewayDetails = Output.empty();
+        this.ipV4FirewallSettings = Output.empty();
+        this.location = Output.empty();
+        this.managedMode = Output.empty();
+        this.querypoolConnectionMode = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serverMonitorMode = Output.empty();
+        this.serverName = Output.empty();
+        this.sku = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -204,18 +204,18 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ServerAdministratorsArgs> asAdministrators;
-        private @Nullable Input<String> backupBlobContainerUri;
-        private @Nullable Input<GatewayDetailsArgs> gatewayDetails;
-        private @Nullable Input<IPv4FirewallSettingsArgs> ipV4FirewallSettings;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Integer> managedMode;
-        private @Nullable Input<ConnectionMode> querypoolConnectionMode;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Integer> serverMonitorMode;
-        private @Nullable Input<String> serverName;
-        private Input<ResourceSkuArgs> sku;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<ServerAdministratorsArgs> asAdministrators;
+        private @Nullable Output<String> backupBlobContainerUri;
+        private @Nullable Output<GatewayDetailsArgs> gatewayDetails;
+        private @Nullable Output<IPv4FirewallSettingsArgs> ipV4FirewallSettings;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Integer> managedMode;
+        private @Nullable Output<ConnectionMode> querypoolConnectionMode;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Integer> serverMonitorMode;
+        private @Nullable Output<String> serverName;
+        private Output<ResourceSkuArgs> sku;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -237,123 +237,123 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder asAdministrators(@Nullable Input<ServerAdministratorsArgs> asAdministrators) {
+        public Builder asAdministrators(@Nullable Output<ServerAdministratorsArgs> asAdministrators) {
             this.asAdministrators = asAdministrators;
             return this;
         }
 
         public Builder asAdministrators(@Nullable ServerAdministratorsArgs asAdministrators) {
-            this.asAdministrators = Input.ofNullable(asAdministrators);
+            this.asAdministrators = Output.ofNullable(asAdministrators);
             return this;
         }
 
-        public Builder backupBlobContainerUri(@Nullable Input<String> backupBlobContainerUri) {
+        public Builder backupBlobContainerUri(@Nullable Output<String> backupBlobContainerUri) {
             this.backupBlobContainerUri = backupBlobContainerUri;
             return this;
         }
 
         public Builder backupBlobContainerUri(@Nullable String backupBlobContainerUri) {
-            this.backupBlobContainerUri = Input.ofNullable(backupBlobContainerUri);
+            this.backupBlobContainerUri = Output.ofNullable(backupBlobContainerUri);
             return this;
         }
 
-        public Builder gatewayDetails(@Nullable Input<GatewayDetailsArgs> gatewayDetails) {
+        public Builder gatewayDetails(@Nullable Output<GatewayDetailsArgs> gatewayDetails) {
             this.gatewayDetails = gatewayDetails;
             return this;
         }
 
         public Builder gatewayDetails(@Nullable GatewayDetailsArgs gatewayDetails) {
-            this.gatewayDetails = Input.ofNullable(gatewayDetails);
+            this.gatewayDetails = Output.ofNullable(gatewayDetails);
             return this;
         }
 
-        public Builder ipV4FirewallSettings(@Nullable Input<IPv4FirewallSettingsArgs> ipV4FirewallSettings) {
+        public Builder ipV4FirewallSettings(@Nullable Output<IPv4FirewallSettingsArgs> ipV4FirewallSettings) {
             this.ipV4FirewallSettings = ipV4FirewallSettings;
             return this;
         }
 
         public Builder ipV4FirewallSettings(@Nullable IPv4FirewallSettingsArgs ipV4FirewallSettings) {
-            this.ipV4FirewallSettings = Input.ofNullable(ipV4FirewallSettings);
+            this.ipV4FirewallSettings = Output.ofNullable(ipV4FirewallSettings);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder managedMode(@Nullable Input<Integer> managedMode) {
+        public Builder managedMode(@Nullable Output<Integer> managedMode) {
             this.managedMode = managedMode;
             return this;
         }
 
         public Builder managedMode(@Nullable Integer managedMode) {
-            this.managedMode = Input.ofNullable(managedMode);
+            this.managedMode = Output.ofNullable(managedMode);
             return this;
         }
 
-        public Builder querypoolConnectionMode(@Nullable Input<ConnectionMode> querypoolConnectionMode) {
+        public Builder querypoolConnectionMode(@Nullable Output<ConnectionMode> querypoolConnectionMode) {
             this.querypoolConnectionMode = querypoolConnectionMode;
             return this;
         }
 
         public Builder querypoolConnectionMode(@Nullable ConnectionMode querypoolConnectionMode) {
-            this.querypoolConnectionMode = Input.ofNullable(querypoolConnectionMode);
+            this.querypoolConnectionMode = Output.ofNullable(querypoolConnectionMode);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serverMonitorMode(@Nullable Input<Integer> serverMonitorMode) {
+        public Builder serverMonitorMode(@Nullable Output<Integer> serverMonitorMode) {
             this.serverMonitorMode = serverMonitorMode;
             return this;
         }
 
         public Builder serverMonitorMode(@Nullable Integer serverMonitorMode) {
-            this.serverMonitorMode = Input.ofNullable(serverMonitorMode);
+            this.serverMonitorMode = Output.ofNullable(serverMonitorMode);
             return this;
         }
 
-        public Builder serverName(@Nullable Input<String> serverName) {
+        public Builder serverName(@Nullable Output<String> serverName) {
             this.serverName = serverName;
             return this;
         }
 
         public Builder serverName(@Nullable String serverName) {
-            this.serverName = Input.ofNullable(serverName);
+            this.serverName = Output.ofNullable(serverName);
             return this;
         }
 
-        public Builder sku(Input<ResourceSkuArgs> sku) {
+        public Builder sku(Output<ResourceSkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
         public Builder sku(ResourceSkuArgs sku) {
-            this.sku = Input.of(Objects.requireNonNull(sku));
+            this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ServerDetailsArgs build() {

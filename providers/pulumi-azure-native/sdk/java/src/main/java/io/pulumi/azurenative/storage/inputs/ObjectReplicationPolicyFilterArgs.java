@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class ObjectReplicationPolicyFilterArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="minCreationTime")
-      private final @Nullable Input<String> minCreationTime;
+      private final @Nullable Output<String> minCreationTime;
 
-    public Input<String> getMinCreationTime() {
-        return this.minCreationTime == null ? Input.empty() : this.minCreationTime;
+    public Output<String> getMinCreationTime() {
+        return this.minCreationTime == null ? Output.empty() : this.minCreationTime;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ObjectReplicationPolicyFilterArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="prefixMatch")
-      private final @Nullable Input<List<String>> prefixMatch;
+      private final @Nullable Output<List<String>> prefixMatch;
 
-    public Input<List<String>> getPrefixMatch() {
-        return this.prefixMatch == null ? Input.empty() : this.prefixMatch;
+    public Output<List<String>> getPrefixMatch() {
+        return this.prefixMatch == null ? Output.empty() : this.prefixMatch;
     }
 
     public ObjectReplicationPolicyFilterArgs(
-        @Nullable Input<String> minCreationTime,
-        @Nullable Input<List<String>> prefixMatch) {
+        @Nullable Output<String> minCreationTime,
+        @Nullable Output<List<String>> prefixMatch) {
         this.minCreationTime = minCreationTime;
         this.prefixMatch = prefixMatch;
     }
 
     private ObjectReplicationPolicyFilterArgs() {
-        this.minCreationTime = Input.empty();
-        this.prefixMatch = Input.empty();
+        this.minCreationTime = Output.empty();
+        this.prefixMatch = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ObjectReplicationPolicyFilterArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<String> minCreationTime;
-        private @Nullable Input<List<String>> prefixMatch;
+        private @Nullable Output<String> minCreationTime;
+        private @Nullable Output<List<String>> prefixMatch;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ObjectReplicationPolicyFilterArgs extends io.pulumi.resources
     	      this.prefixMatch = defaults.prefixMatch;
         }
 
-        public Builder minCreationTime(@Nullable Input<String> minCreationTime) {
+        public Builder minCreationTime(@Nullable Output<String> minCreationTime) {
             this.minCreationTime = minCreationTime;
             return this;
         }
 
         public Builder minCreationTime(@Nullable String minCreationTime) {
-            this.minCreationTime = Input.ofNullable(minCreationTime);
+            this.minCreationTime = Output.ofNullable(minCreationTime);
             return this;
         }
 
-        public Builder prefixMatch(@Nullable Input<List<String>> prefixMatch) {
+        public Builder prefixMatch(@Nullable Output<List<String>> prefixMatch) {
             this.prefixMatch = prefixMatch;
             return this;
         }
 
         public Builder prefixMatch(@Nullable List<String> prefixMatch) {
-            this.prefixMatch = Input.ofNullable(prefixMatch);
+            this.prefixMatch = Output.ofNullable(prefixMatch);
             return this;
         }
         public ObjectReplicationPolicyFilterArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.dynamodb.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,9 +20,9 @@ public final class TableLocalSecondaryIndexArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -33,10 +33,10 @@ public final class TableLocalSecondaryIndexArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="nonKeyAttributes")
-      private final @Nullable Input<List<String>> nonKeyAttributes;
+      private final @Nullable Output<List<String>> nonKeyAttributes;
 
-    public Input<List<String>> getNonKeyAttributes() {
-        return this.nonKeyAttributes == null ? Input.empty() : this.nonKeyAttributes;
+    public Output<List<String>> getNonKeyAttributes() {
+        return this.nonKeyAttributes == null ? Output.empty() : this.nonKeyAttributes;
     }
 
     /**
@@ -48,9 +48,9 @@ public final class TableLocalSecondaryIndexArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="projectionType", required=true)
-      private final Input<String> projectionType;
+      private final Output<String> projectionType;
 
-    public Input<String> getProjectionType() {
+    public Output<String> getProjectionType() {
         return this.projectionType;
     }
 
@@ -59,17 +59,17 @@ public final class TableLocalSecondaryIndexArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="rangeKey", required=true)
-      private final Input<String> rangeKey;
+      private final Output<String> rangeKey;
 
-    public Input<String> getRangeKey() {
+    public Output<String> getRangeKey() {
         return this.rangeKey;
     }
 
     public TableLocalSecondaryIndexArgs(
-        Input<String> name,
-        @Nullable Input<List<String>> nonKeyAttributes,
-        Input<String> projectionType,
-        Input<String> rangeKey) {
+        Output<String> name,
+        @Nullable Output<List<String>> nonKeyAttributes,
+        Output<String> projectionType,
+        Output<String> rangeKey) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.nonKeyAttributes = nonKeyAttributes;
         this.projectionType = Objects.requireNonNull(projectionType, "expected parameter 'projectionType' to be non-null");
@@ -77,10 +77,10 @@ public final class TableLocalSecondaryIndexArgs extends io.pulumi.resources.Reso
     }
 
     private TableLocalSecondaryIndexArgs() {
-        this.name = Input.empty();
-        this.nonKeyAttributes = Input.empty();
-        this.projectionType = Input.empty();
-        this.rangeKey = Input.empty();
+        this.name = Output.empty();
+        this.nonKeyAttributes = Output.empty();
+        this.projectionType = Output.empty();
+        this.rangeKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class TableLocalSecondaryIndexArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private @Nullable Input<List<String>> nonKeyAttributes;
-        private Input<String> projectionType;
-        private Input<String> rangeKey;
+        private Output<String> name;
+        private @Nullable Output<List<String>> nonKeyAttributes;
+        private Output<String> projectionType;
+        private Output<String> rangeKey;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class TableLocalSecondaryIndexArgs extends io.pulumi.resources.Reso
     	      this.rangeKey = defaults.rangeKey;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder nonKeyAttributes(@Nullable Input<List<String>> nonKeyAttributes) {
+        public Builder nonKeyAttributes(@Nullable Output<List<String>> nonKeyAttributes) {
             this.nonKeyAttributes = nonKeyAttributes;
             return this;
         }
 
         public Builder nonKeyAttributes(@Nullable List<String> nonKeyAttributes) {
-            this.nonKeyAttributes = Input.ofNullable(nonKeyAttributes);
+            this.nonKeyAttributes = Output.ofNullable(nonKeyAttributes);
             return this;
         }
 
-        public Builder projectionType(Input<String> projectionType) {
+        public Builder projectionType(Output<String> projectionType) {
             this.projectionType = Objects.requireNonNull(projectionType);
             return this;
         }
 
         public Builder projectionType(String projectionType) {
-            this.projectionType = Input.of(Objects.requireNonNull(projectionType));
+            this.projectionType = Output.of(Objects.requireNonNull(projectionType));
             return this;
         }
 
-        public Builder rangeKey(Input<String> rangeKey) {
+        public Builder rangeKey(Output<String> rangeKey) {
             this.rangeKey = Objects.requireNonNull(rangeKey);
             return this;
         }
 
         public Builder rangeKey(String rangeKey) {
-            this.rangeKey = Input.of(Objects.requireNonNull(rangeKey));
+            this.rangeKey = Output.of(Objects.requireNonNull(rangeKey));
             return this;
         }
         public TableLocalSecondaryIndexArgs build() {

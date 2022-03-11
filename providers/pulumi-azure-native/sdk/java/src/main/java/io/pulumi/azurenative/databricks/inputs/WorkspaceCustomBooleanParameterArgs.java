@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databricks.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class WorkspaceCustomBooleanParameterArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="value", required=true)
-      private final Input<Boolean> value;
+      private final Output<Boolean> value;
 
-    public Input<Boolean> getValue() {
+    public Output<Boolean> getValue() {
         return this.value;
     }
 
-    public WorkspaceCustomBooleanParameterArgs(Input<Boolean> value) {
+    public WorkspaceCustomBooleanParameterArgs(Output<Boolean> value) {
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private WorkspaceCustomBooleanParameterArgs() {
-        this.value = Input.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class WorkspaceCustomBooleanParameterArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<Boolean> value;
+        private Output<Boolean> value;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class WorkspaceCustomBooleanParameterArgs extends io.pulumi.resourc
     	      this.value = defaults.value;
         }
 
-        public Builder value(Input<Boolean> value) {
+        public Builder value(Output<Boolean> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(Boolean value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public WorkspaceCustomBooleanParameterArgs build() {

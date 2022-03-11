@@ -7,7 +7,7 @@ import io.pulumi.azurenative.media.enums.MediaGraphRtspTransport;
 import io.pulumi.azurenative.media.inputs.MediaGraphClearEndpointArgs;
 import io.pulumi.azurenative.media.inputs.MediaGraphTlsEndpointArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,9 +26,9 @@ public final class MediaGraphRtspSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="endpoint", required=true)
-      private final Input<Either<MediaGraphClearEndpointArgs,MediaGraphTlsEndpointArgs>> endpoint;
+      private final Output<Either<MediaGraphClearEndpointArgs,MediaGraphTlsEndpointArgs>> endpoint;
 
-    public Input<Either<MediaGraphClearEndpointArgs,MediaGraphTlsEndpointArgs>> getEndpoint() {
+    public Output<Either<MediaGraphClearEndpointArgs,MediaGraphTlsEndpointArgs>> getEndpoint() {
         return this.endpoint;
     }
 
@@ -37,9 +37,9 @@ public final class MediaGraphRtspSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -49,9 +49,9 @@ public final class MediaGraphRtspSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
@@ -60,17 +60,17 @@ public final class MediaGraphRtspSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="transport", required=true)
-      private final Input<Either<String,MediaGraphRtspTransport>> transport;
+      private final Output<Either<String,MediaGraphRtspTransport>> transport;
 
-    public Input<Either<String,MediaGraphRtspTransport>> getTransport() {
+    public Output<Either<String,MediaGraphRtspTransport>> getTransport() {
         return this.transport;
     }
 
     public MediaGraphRtspSourceArgs(
-        Input<Either<MediaGraphClearEndpointArgs,MediaGraphTlsEndpointArgs>> endpoint,
-        Input<String> name,
-        Input<String> odataType,
-        Input<Either<String,MediaGraphRtspTransport>> transport) {
+        Output<Either<MediaGraphClearEndpointArgs,MediaGraphTlsEndpointArgs>> endpoint,
+        Output<String> name,
+        Output<String> odataType,
+        Output<Either<String,MediaGraphRtspTransport>> transport) {
         this.endpoint = Objects.requireNonNull(endpoint, "expected parameter 'endpoint' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
@@ -78,10 +78,10 @@ public final class MediaGraphRtspSourceArgs extends io.pulumi.resources.Resource
     }
 
     private MediaGraphRtspSourceArgs() {
-        this.endpoint = Input.empty();
-        this.name = Input.empty();
-        this.odataType = Input.empty();
-        this.transport = Input.empty();
+        this.endpoint = Output.empty();
+        this.name = Output.empty();
+        this.odataType = Output.empty();
+        this.transport = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,10 +93,10 @@ public final class MediaGraphRtspSourceArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<Either<MediaGraphClearEndpointArgs,MediaGraphTlsEndpointArgs>> endpoint;
-        private Input<String> name;
-        private Input<String> odataType;
-        private Input<Either<String,MediaGraphRtspTransport>> transport;
+        private Output<Either<MediaGraphClearEndpointArgs,MediaGraphTlsEndpointArgs>> endpoint;
+        private Output<String> name;
+        private Output<String> odataType;
+        private Output<Either<String,MediaGraphRtspTransport>> transport;
 
         public Builder() {
     	      // Empty
@@ -110,43 +110,43 @@ public final class MediaGraphRtspSourceArgs extends io.pulumi.resources.Resource
     	      this.transport = defaults.transport;
         }
 
-        public Builder endpoint(Input<Either<MediaGraphClearEndpointArgs,MediaGraphTlsEndpointArgs>> endpoint) {
+        public Builder endpoint(Output<Either<MediaGraphClearEndpointArgs,MediaGraphTlsEndpointArgs>> endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
 
         public Builder endpoint(Either<MediaGraphClearEndpointArgs,MediaGraphTlsEndpointArgs> endpoint) {
-            this.endpoint = Input.of(Objects.requireNonNull(endpoint));
+            this.endpoint = Output.of(Objects.requireNonNull(endpoint));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder transport(Input<Either<String,MediaGraphRtspTransport>> transport) {
+        public Builder transport(Output<Either<String,MediaGraphRtspTransport>> transport) {
             this.transport = Objects.requireNonNull(transport);
             return this;
         }
 
         public Builder transport(Either<String,MediaGraphRtspTransport> transport) {
-            this.transport = Input.of(Objects.requireNonNull(transport));
+            this.transport = Output.of(Objects.requireNonNull(transport));
             return this;
         }
         public MediaGraphRtspSourceArgs build() {

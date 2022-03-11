@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appconfig;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class HostedConfigurationVersionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="applicationId", required=true)
-      private final Input<String> applicationId;
+      private final Output<String> applicationId;
 
-    public Input<String> getApplicationId() {
+    public Output<String> getApplicationId() {
         return this.applicationId;
     }
 
@@ -30,9 +30,9 @@ public final class HostedConfigurationVersionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="configurationProfileId", required=true)
-      private final Input<String> configurationProfileId;
+      private final Output<String> configurationProfileId;
 
-    public Input<String> getConfigurationProfileId() {
+    public Output<String> getConfigurationProfileId() {
         return this.configurationProfileId;
     }
 
@@ -41,9 +41,9 @@ public final class HostedConfigurationVersionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="content", required=true)
-      private final Input<String> content;
+      private final Output<String> content;
 
-    public Input<String> getContent() {
+    public Output<String> getContent() {
         return this.content;
     }
 
@@ -52,9 +52,9 @@ public final class HostedConfigurationVersionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="contentType", required=true)
-      private final Input<String> contentType;
+      private final Output<String> contentType;
 
-    public Input<String> getContentType() {
+    public Output<String> getContentType() {
         return this.contentType;
     }
 
@@ -63,18 +63,18 @@ public final class HostedConfigurationVersionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     public HostedConfigurationVersionArgs(
-        Input<String> applicationId,
-        Input<String> configurationProfileId,
-        Input<String> content,
-        Input<String> contentType,
-        @Nullable Input<String> description) {
+        Output<String> applicationId,
+        Output<String> configurationProfileId,
+        Output<String> content,
+        Output<String> contentType,
+        @Nullable Output<String> description) {
         this.applicationId = Objects.requireNonNull(applicationId, "expected parameter 'applicationId' to be non-null");
         this.configurationProfileId = Objects.requireNonNull(configurationProfileId, "expected parameter 'configurationProfileId' to be non-null");
         this.content = Objects.requireNonNull(content, "expected parameter 'content' to be non-null");
@@ -83,11 +83,11 @@ public final class HostedConfigurationVersionArgs extends io.pulumi.resources.Re
     }
 
     private HostedConfigurationVersionArgs() {
-        this.applicationId = Input.empty();
-        this.configurationProfileId = Input.empty();
-        this.content = Input.empty();
-        this.contentType = Input.empty();
-        this.description = Input.empty();
+        this.applicationId = Output.empty();
+        this.configurationProfileId = Output.empty();
+        this.content = Output.empty();
+        this.contentType = Output.empty();
+        this.description = Output.empty();
     }
 
     public static Builder builder() {
@@ -99,11 +99,11 @@ public final class HostedConfigurationVersionArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<String> applicationId;
-        private Input<String> configurationProfileId;
-        private Input<String> content;
-        private Input<String> contentType;
-        private @Nullable Input<String> description;
+        private Output<String> applicationId;
+        private Output<String> configurationProfileId;
+        private Output<String> content;
+        private Output<String> contentType;
+        private @Nullable Output<String> description;
 
         public Builder() {
     	      // Empty
@@ -118,53 +118,53 @@ public final class HostedConfigurationVersionArgs extends io.pulumi.resources.Re
     	      this.description = defaults.description;
         }
 
-        public Builder applicationId(Input<String> applicationId) {
+        public Builder applicationId(Output<String> applicationId) {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
 
         public Builder applicationId(String applicationId) {
-            this.applicationId = Input.of(Objects.requireNonNull(applicationId));
+            this.applicationId = Output.of(Objects.requireNonNull(applicationId));
             return this;
         }
 
-        public Builder configurationProfileId(Input<String> configurationProfileId) {
+        public Builder configurationProfileId(Output<String> configurationProfileId) {
             this.configurationProfileId = Objects.requireNonNull(configurationProfileId);
             return this;
         }
 
         public Builder configurationProfileId(String configurationProfileId) {
-            this.configurationProfileId = Input.of(Objects.requireNonNull(configurationProfileId));
+            this.configurationProfileId = Output.of(Objects.requireNonNull(configurationProfileId));
             return this;
         }
 
-        public Builder content(Input<String> content) {
+        public Builder content(Output<String> content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
         public Builder content(String content) {
-            this.content = Input.of(Objects.requireNonNull(content));
+            this.content = Output.of(Objects.requireNonNull(content));
             return this;
         }
 
-        public Builder contentType(Input<String> contentType) {
+        public Builder contentType(Output<String> contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
 
         public Builder contentType(String contentType) {
-            this.contentType = Input.of(Objects.requireNonNull(contentType));
+            this.contentType = Output.of(Objects.requireNonNull(contentType));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
         public HostedConfigurationVersionArgs build() {

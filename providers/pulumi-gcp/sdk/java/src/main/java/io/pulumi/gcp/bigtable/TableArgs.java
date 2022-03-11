@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigtable;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.bigtable.inputs.TableColumnFamilyArgs;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="columnFamilies")
-      private final @Nullable Input<List<TableColumnFamilyArgs>> columnFamilies;
+      private final @Nullable Output<List<TableColumnFamilyArgs>> columnFamilies;
 
-    public Input<List<TableColumnFamilyArgs>> getColumnFamilies() {
-        return this.columnFamilies == null ? Input.empty() : this.columnFamilies;
+    public Output<List<TableColumnFamilyArgs>> getColumnFamilies() {
+        return this.columnFamilies == null ? Output.empty() : this.columnFamilies;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceName", required=true)
-      private final Input<String> instanceName;
+      private final Output<String> instanceName;
 
-    public Input<String> getInstanceName() {
+    public Output<String> getInstanceName() {
         return this.instanceName;
     }
 
@@ -43,10 +43,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="splitKeys")
-      private final @Nullable Input<List<String>> splitKeys;
+      private final @Nullable Output<List<String>> splitKeys;
 
-    public Input<List<String>> getSplitKeys() {
-        return this.splitKeys == null ? Input.empty() : this.splitKeys;
+    public Output<List<String>> getSplitKeys() {
+        return this.splitKeys == null ? Output.empty() : this.splitKeys;
     }
 
     public TableArgs(
-        @Nullable Input<List<TableColumnFamilyArgs>> columnFamilies,
-        Input<String> instanceName,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<List<String>> splitKeys) {
+        @Nullable Output<List<TableColumnFamilyArgs>> columnFamilies,
+        Output<String> instanceName,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<List<String>> splitKeys) {
         this.columnFamilies = columnFamilies;
         this.instanceName = Objects.requireNonNull(instanceName, "expected parameter 'instanceName' to be non-null");
         this.name = name;
@@ -88,11 +88,11 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TableArgs() {
-        this.columnFamilies = Input.empty();
-        this.instanceName = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.splitKeys = Input.empty();
+        this.columnFamilies = Output.empty();
+        this.instanceName = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.splitKeys = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<TableColumnFamilyArgs>> columnFamilies;
-        private Input<String> instanceName;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<List<String>> splitKeys;
+        private @Nullable Output<List<TableColumnFamilyArgs>> columnFamilies;
+        private Output<String> instanceName;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<List<String>> splitKeys;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     	      this.splitKeys = defaults.splitKeys;
         }
 
-        public Builder columnFamilies(@Nullable Input<List<TableColumnFamilyArgs>> columnFamilies) {
+        public Builder columnFamilies(@Nullable Output<List<TableColumnFamilyArgs>> columnFamilies) {
             this.columnFamilies = columnFamilies;
             return this;
         }
 
         public Builder columnFamilies(@Nullable List<TableColumnFamilyArgs> columnFamilies) {
-            this.columnFamilies = Input.ofNullable(columnFamilies);
+            this.columnFamilies = Output.ofNullable(columnFamilies);
             return this;
         }
 
-        public Builder instanceName(Input<String> instanceName) {
+        public Builder instanceName(Output<String> instanceName) {
             this.instanceName = Objects.requireNonNull(instanceName);
             return this;
         }
 
         public Builder instanceName(String instanceName) {
-            this.instanceName = Input.of(Objects.requireNonNull(instanceName));
+            this.instanceName = Output.of(Objects.requireNonNull(instanceName));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder splitKeys(@Nullable Input<List<String>> splitKeys) {
+        public Builder splitKeys(@Nullable Output<List<String>> splitKeys) {
             this.splitKeys = splitKeys;
             return this;
         }
 
         public Builder splitKeys(@Nullable List<String> splitKeys) {
-            this.splitKeys = Input.ofNullable(splitKeys);
+            this.splitKeys = Output.ofNullable(splitKeys);
             return this;
         }
         public TableArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class SlowRequestsBasedTriggerArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="count")
-      private final @Nullable Input<Integer> count;
+      private final @Nullable Output<Integer> count;
 
-    public Input<Integer> getCount() {
-        return this.count == null ? Input.empty() : this.count;
+    public Output<Integer> getCount() {
+        return this.count == null ? Output.empty() : this.count;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SlowRequestsBasedTriggerArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class SlowRequestsBasedTriggerArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="timeInterval")
-      private final @Nullable Input<String> timeInterval;
+      private final @Nullable Output<String> timeInterval;
 
-    public Input<String> getTimeInterval() {
-        return this.timeInterval == null ? Input.empty() : this.timeInterval;
+    public Output<String> getTimeInterval() {
+        return this.timeInterval == null ? Output.empty() : this.timeInterval;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class SlowRequestsBasedTriggerArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="timeTaken")
-      private final @Nullable Input<String> timeTaken;
+      private final @Nullable Output<String> timeTaken;
 
-    public Input<String> getTimeTaken() {
-        return this.timeTaken == null ? Input.empty() : this.timeTaken;
+    public Output<String> getTimeTaken() {
+        return this.timeTaken == null ? Output.empty() : this.timeTaken;
     }
 
     public SlowRequestsBasedTriggerArgs(
-        @Nullable Input<Integer> count,
-        @Nullable Input<String> path,
-        @Nullable Input<String> timeInterval,
-        @Nullable Input<String> timeTaken) {
+        @Nullable Output<Integer> count,
+        @Nullable Output<String> path,
+        @Nullable Output<String> timeInterval,
+        @Nullable Output<String> timeTaken) {
         this.count = count;
         this.path = path;
         this.timeInterval = timeInterval;
@@ -75,10 +75,10 @@ public final class SlowRequestsBasedTriggerArgs extends io.pulumi.resources.Reso
     }
 
     private SlowRequestsBasedTriggerArgs() {
-        this.count = Input.empty();
-        this.path = Input.empty();
-        this.timeInterval = Input.empty();
-        this.timeTaken = Input.empty();
+        this.count = Output.empty();
+        this.path = Output.empty();
+        this.timeInterval = Output.empty();
+        this.timeTaken = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class SlowRequestsBasedTriggerArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> count;
-        private @Nullable Input<String> path;
-        private @Nullable Input<String> timeInterval;
-        private @Nullable Input<String> timeTaken;
+        private @Nullable Output<Integer> count;
+        private @Nullable Output<String> path;
+        private @Nullable Output<String> timeInterval;
+        private @Nullable Output<String> timeTaken;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class SlowRequestsBasedTriggerArgs extends io.pulumi.resources.Reso
     	      this.timeTaken = defaults.timeTaken;
         }
 
-        public Builder count(@Nullable Input<Integer> count) {
+        public Builder count(@Nullable Output<Integer> count) {
             this.count = count;
             return this;
         }
 
         public Builder count(@Nullable Integer count) {
-            this.count = Input.ofNullable(count);
+            this.count = Output.ofNullable(count);
             return this;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
 
-        public Builder timeInterval(@Nullable Input<String> timeInterval) {
+        public Builder timeInterval(@Nullable Output<String> timeInterval) {
             this.timeInterval = timeInterval;
             return this;
         }
 
         public Builder timeInterval(@Nullable String timeInterval) {
-            this.timeInterval = Input.ofNullable(timeInterval);
+            this.timeInterval = Output.ofNullable(timeInterval);
             return this;
         }
 
-        public Builder timeTaken(@Nullable Input<String> timeTaken) {
+        public Builder timeTaken(@Nullable Output<String> timeTaken) {
             this.timeTaken = timeTaken;
             return this;
         }
 
         public Builder timeTaken(@Nullable String timeTaken) {
-            this.timeTaken = Input.ofNullable(timeTaken);
+            this.timeTaken = Output.ofNullable(timeTaken);
             return this;
         }
         public SlowRequestsBasedTriggerArgs build() {

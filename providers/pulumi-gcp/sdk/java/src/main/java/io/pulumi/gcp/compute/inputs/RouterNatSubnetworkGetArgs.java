@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,9 +20,9 @@ public final class RouterNatSubnetworkGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -34,10 +34,10 @@ public final class RouterNatSubnetworkGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="secondaryIpRangeNames")
-      private final @Nullable Input<List<String>> secondaryIpRangeNames;
+      private final @Nullable Output<List<String>> secondaryIpRangeNames;
 
-    public Input<List<String>> getSecondaryIpRangeNames() {
-        return this.secondaryIpRangeNames == null ? Input.empty() : this.secondaryIpRangeNames;
+    public Output<List<String>> getSecondaryIpRangeNames() {
+        return this.secondaryIpRangeNames == null ? Output.empty() : this.secondaryIpRangeNames;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class RouterNatSubnetworkGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="sourceIpRangesToNats", required=true)
-      private final Input<List<String>> sourceIpRangesToNats;
+      private final Output<List<String>> sourceIpRangesToNats;
 
-    public Input<List<String>> getSourceIpRangesToNats() {
+    public Output<List<String>> getSourceIpRangesToNats() {
         return this.sourceIpRangesToNats;
     }
 
     public RouterNatSubnetworkGetArgs(
-        Input<String> name,
-        @Nullable Input<List<String>> secondaryIpRangeNames,
-        Input<List<String>> sourceIpRangesToNats) {
+        Output<String> name,
+        @Nullable Output<List<String>> secondaryIpRangeNames,
+        Output<List<String>> sourceIpRangesToNats) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.secondaryIpRangeNames = secondaryIpRangeNames;
         this.sourceIpRangesToNats = Objects.requireNonNull(sourceIpRangesToNats, "expected parameter 'sourceIpRangesToNats' to be non-null");
     }
 
     private RouterNatSubnetworkGetArgs() {
-        this.name = Input.empty();
-        this.secondaryIpRangeNames = Input.empty();
-        this.sourceIpRangesToNats = Input.empty();
+        this.name = Output.empty();
+        this.secondaryIpRangeNames = Output.empty();
+        this.sourceIpRangesToNats = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class RouterNatSubnetworkGetArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private @Nullable Input<List<String>> secondaryIpRangeNames;
-        private Input<List<String>> sourceIpRangesToNats;
+        private Output<String> name;
+        private @Nullable Output<List<String>> secondaryIpRangeNames;
+        private Output<List<String>> sourceIpRangesToNats;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class RouterNatSubnetworkGetArgs extends io.pulumi.resources.Resour
     	      this.sourceIpRangesToNats = defaults.sourceIpRangesToNats;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder secondaryIpRangeNames(@Nullable Input<List<String>> secondaryIpRangeNames) {
+        public Builder secondaryIpRangeNames(@Nullable Output<List<String>> secondaryIpRangeNames) {
             this.secondaryIpRangeNames = secondaryIpRangeNames;
             return this;
         }
 
         public Builder secondaryIpRangeNames(@Nullable List<String> secondaryIpRangeNames) {
-            this.secondaryIpRangeNames = Input.ofNullable(secondaryIpRangeNames);
+            this.secondaryIpRangeNames = Output.ofNullable(secondaryIpRangeNames);
             return this;
         }
 
-        public Builder sourceIpRangesToNats(Input<List<String>> sourceIpRangesToNats) {
+        public Builder sourceIpRangesToNats(Output<List<String>> sourceIpRangesToNats) {
             this.sourceIpRangesToNats = Objects.requireNonNull(sourceIpRangesToNats);
             return this;
         }
 
         public Builder sourceIpRangesToNats(List<String> sourceIpRangesToNats) {
-            this.sourceIpRangesToNats = Input.of(Objects.requireNonNull(sourceIpRangesToNats));
+            this.sourceIpRangesToNats = Output.of(Objects.requireNonNull(sourceIpRangesToNats));
             return this;
         }
         public RouterNatSubnetworkGetArgs build() {

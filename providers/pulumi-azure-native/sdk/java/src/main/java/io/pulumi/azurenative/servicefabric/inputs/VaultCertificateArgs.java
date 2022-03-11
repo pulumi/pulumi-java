@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class VaultCertificateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="certificateStore", required=true)
-      private final Input<String> certificateStore;
+      private final Output<String> certificateStore;
 
-    public Input<String> getCertificateStore() {
+    public Output<String> getCertificateStore() {
         return this.certificateStore;
     }
 
@@ -33,22 +33,22 @@ public final class VaultCertificateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="certificateUrl", required=true)
-      private final Input<String> certificateUrl;
+      private final Output<String> certificateUrl;
 
-    public Input<String> getCertificateUrl() {
+    public Output<String> getCertificateUrl() {
         return this.certificateUrl;
     }
 
     public VaultCertificateArgs(
-        Input<String> certificateStore,
-        Input<String> certificateUrl) {
+        Output<String> certificateStore,
+        Output<String> certificateUrl) {
         this.certificateStore = Objects.requireNonNull(certificateStore, "expected parameter 'certificateStore' to be non-null");
         this.certificateUrl = Objects.requireNonNull(certificateUrl, "expected parameter 'certificateUrl' to be non-null");
     }
 
     private VaultCertificateArgs() {
-        this.certificateStore = Input.empty();
-        this.certificateUrl = Input.empty();
+        this.certificateStore = Output.empty();
+        this.certificateUrl = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class VaultCertificateArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> certificateStore;
-        private Input<String> certificateUrl;
+        private Output<String> certificateStore;
+        private Output<String> certificateUrl;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class VaultCertificateArgs extends io.pulumi.resources.ResourceArgs
     	      this.certificateUrl = defaults.certificateUrl;
         }
 
-        public Builder certificateStore(Input<String> certificateStore) {
+        public Builder certificateStore(Output<String> certificateStore) {
             this.certificateStore = Objects.requireNonNull(certificateStore);
             return this;
         }
 
         public Builder certificateStore(String certificateStore) {
-            this.certificateStore = Input.of(Objects.requireNonNull(certificateStore));
+            this.certificateStore = Output.of(Objects.requireNonNull(certificateStore));
             return this;
         }
 
-        public Builder certificateUrl(Input<String> certificateUrl) {
+        public Builder certificateUrl(Output<String> certificateUrl) {
             this.certificateUrl = Objects.requireNonNull(certificateUrl);
             return this;
         }
 
         public Builder certificateUrl(String certificateUrl) {
-            this.certificateUrl = Input.of(Objects.requireNonNull(certificateUrl));
+            this.certificateUrl = Output.of(Objects.requireNonNull(certificateUrl));
             return this;
         }
         public VaultCertificateArgs build() {

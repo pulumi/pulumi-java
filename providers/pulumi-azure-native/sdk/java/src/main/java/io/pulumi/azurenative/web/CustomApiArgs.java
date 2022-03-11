@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web;
 
 import io.pulumi.azurenative.web.inputs.CustomApiPropertiesDefinitionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiName")
-      private final @Nullable Input<String> apiName;
+      private final @Nullable Output<String> apiName;
 
-    public Input<String> getApiName() {
-        return this.apiName == null ? Input.empty() : this.apiName;
+    public Output<String> getApiName() {
+        return this.apiName == null ? Output.empty() : this.apiName;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<CustomApiPropertiesDefinitionArgs> properties;
+      private final @Nullable Output<CustomApiPropertiesDefinitionArgs> properties;
 
-    public Input<CustomApiPropertiesDefinitionArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<CustomApiPropertiesDefinitionArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -54,9 +54,9 @@ public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -65,10 +65,10 @@ public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subscriptionId")
-      private final @Nullable Input<String> subscriptionId;
+      private final @Nullable Output<String> subscriptionId;
 
-    public Input<String> getSubscriptionId() {
-        return this.subscriptionId == null ? Input.empty() : this.subscriptionId;
+    public Output<String> getSubscriptionId() {
+        return this.subscriptionId == null ? Output.empty() : this.subscriptionId;
     }
 
     /**
@@ -76,19 +76,19 @@ public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public CustomApiArgs(
-        @Nullable Input<String> apiName,
-        @Nullable Input<String> location,
-        @Nullable Input<CustomApiPropertiesDefinitionArgs> properties,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> subscriptionId,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> apiName,
+        @Nullable Output<String> location,
+        @Nullable Output<CustomApiPropertiesDefinitionArgs> properties,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> subscriptionId,
+        @Nullable Output<Map<String,String>> tags) {
         this.apiName = apiName;
         this.location = location;
         this.properties = properties;
@@ -98,12 +98,12 @@ public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CustomApiArgs() {
-        this.apiName = Input.empty();
-        this.location = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.subscriptionId = Input.empty();
-        this.tags = Input.empty();
+        this.apiName = Output.empty();
+        this.location = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.subscriptionId = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> apiName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<CustomApiPropertiesDefinitionArgs> properties;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> subscriptionId;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> apiName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<CustomApiPropertiesDefinitionArgs> properties;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> subscriptionId;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder apiName(@Nullable Input<String> apiName) {
+        public Builder apiName(@Nullable Output<String> apiName) {
             this.apiName = apiName;
             return this;
         }
 
         public Builder apiName(@Nullable String apiName) {
-            this.apiName = Input.ofNullable(apiName);
+            this.apiName = Output.ofNullable(apiName);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder properties(@Nullable Input<CustomApiPropertiesDefinitionArgs> properties) {
+        public Builder properties(@Nullable Output<CustomApiPropertiesDefinitionArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable CustomApiPropertiesDefinitionArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder subscriptionId(@Nullable Input<String> subscriptionId) {
+        public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
 
         public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = Input.ofNullable(subscriptionId);
+            this.subscriptionId = Output.ofNullable(subscriptionId);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public CustomApiArgs build() {

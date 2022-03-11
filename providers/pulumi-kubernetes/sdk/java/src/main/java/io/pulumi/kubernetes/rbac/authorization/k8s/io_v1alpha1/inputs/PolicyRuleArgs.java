@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.rbac.authorization.k8s.io_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class PolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiGroups")
-      private final @Nullable Input<List<String>> apiGroups;
+      private final @Nullable Output<List<String>> apiGroups;
 
-    public Input<List<String>> getApiGroups() {
-        return this.apiGroups == null ? Input.empty() : this.apiGroups;
+    public Output<List<String>> getApiGroups() {
+        return this.apiGroups == null ? Output.empty() : this.apiGroups;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nonResourceURLs")
-      private final @Nullable Input<List<String>> nonResourceURLs;
+      private final @Nullable Output<List<String>> nonResourceURLs;
 
-    public Input<List<String>> getNonResourceURLs() {
-        return this.nonResourceURLs == null ? Input.empty() : this.nonResourceURLs;
+    public Output<List<String>> getNonResourceURLs() {
+        return this.nonResourceURLs == null ? Output.empty() : this.nonResourceURLs;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class PolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceNames")
-      private final @Nullable Input<List<String>> resourceNames;
+      private final @Nullable Output<List<String>> resourceNames;
 
-    public Input<List<String>> getResourceNames() {
-        return this.resourceNames == null ? Input.empty() : this.resourceNames;
+    public Output<List<String>> getResourceNames() {
+        return this.resourceNames == null ? Output.empty() : this.resourceNames;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class PolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resources")
-      private final @Nullable Input<List<String>> resources;
+      private final @Nullable Output<List<String>> resources;
 
-    public Input<List<String>> getResources() {
-        return this.resources == null ? Input.empty() : this.resources;
+    public Output<List<String>> getResources() {
+        return this.resources == null ? Output.empty() : this.resources;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class PolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="verbs", required=true)
-      private final Input<List<String>> verbs;
+      private final Output<List<String>> verbs;
 
-    public Input<List<String>> getVerbs() {
+    public Output<List<String>> getVerbs() {
         return this.verbs;
     }
 
     public PolicyRuleArgs(
-        @Nullable Input<List<String>> apiGroups,
-        @Nullable Input<List<String>> nonResourceURLs,
-        @Nullable Input<List<String>> resourceNames,
-        @Nullable Input<List<String>> resources,
-        Input<List<String>> verbs) {
+        @Nullable Output<List<String>> apiGroups,
+        @Nullable Output<List<String>> nonResourceURLs,
+        @Nullable Output<List<String>> resourceNames,
+        @Nullable Output<List<String>> resources,
+        Output<List<String>> verbs) {
         this.apiGroups = apiGroups;
         this.nonResourceURLs = nonResourceURLs;
         this.resourceNames = resourceNames;
@@ -88,11 +88,11 @@ public final class PolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PolicyRuleArgs() {
-        this.apiGroups = Input.empty();
-        this.nonResourceURLs = Input.empty();
-        this.resourceNames = Input.empty();
-        this.resources = Input.empty();
-        this.verbs = Input.empty();
+        this.apiGroups = Output.empty();
+        this.nonResourceURLs = Output.empty();
+        this.resourceNames = Output.empty();
+        this.resources = Output.empty();
+        this.verbs = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class PolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> apiGroups;
-        private @Nullable Input<List<String>> nonResourceURLs;
-        private @Nullable Input<List<String>> resourceNames;
-        private @Nullable Input<List<String>> resources;
-        private Input<List<String>> verbs;
+        private @Nullable Output<List<String>> apiGroups;
+        private @Nullable Output<List<String>> nonResourceURLs;
+        private @Nullable Output<List<String>> resourceNames;
+        private @Nullable Output<List<String>> resources;
+        private Output<List<String>> verbs;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class PolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.verbs = defaults.verbs;
         }
 
-        public Builder apiGroups(@Nullable Input<List<String>> apiGroups) {
+        public Builder apiGroups(@Nullable Output<List<String>> apiGroups) {
             this.apiGroups = apiGroups;
             return this;
         }
 
         public Builder apiGroups(@Nullable List<String> apiGroups) {
-            this.apiGroups = Input.ofNullable(apiGroups);
+            this.apiGroups = Output.ofNullable(apiGroups);
             return this;
         }
 
-        public Builder nonResourceURLs(@Nullable Input<List<String>> nonResourceURLs) {
+        public Builder nonResourceURLs(@Nullable Output<List<String>> nonResourceURLs) {
             this.nonResourceURLs = nonResourceURLs;
             return this;
         }
 
         public Builder nonResourceURLs(@Nullable List<String> nonResourceURLs) {
-            this.nonResourceURLs = Input.ofNullable(nonResourceURLs);
+            this.nonResourceURLs = Output.ofNullable(nonResourceURLs);
             return this;
         }
 
-        public Builder resourceNames(@Nullable Input<List<String>> resourceNames) {
+        public Builder resourceNames(@Nullable Output<List<String>> resourceNames) {
             this.resourceNames = resourceNames;
             return this;
         }
 
         public Builder resourceNames(@Nullable List<String> resourceNames) {
-            this.resourceNames = Input.ofNullable(resourceNames);
+            this.resourceNames = Output.ofNullable(resourceNames);
             return this;
         }
 
-        public Builder resources(@Nullable Input<List<String>> resources) {
+        public Builder resources(@Nullable Output<List<String>> resources) {
             this.resources = resources;
             return this;
         }
 
         public Builder resources(@Nullable List<String> resources) {
-            this.resources = Input.ofNullable(resources);
+            this.resources = Output.ofNullable(resources);
             return this;
         }
 
-        public Builder verbs(Input<List<String>> verbs) {
+        public Builder verbs(Output<List<String>> verbs) {
             this.verbs = Objects.requireNonNull(verbs);
             return this;
         }
 
         public Builder verbs(List<String> verbs) {
-            this.verbs = Input.of(Objects.requireNonNull(verbs));
+            this.verbs = Output.of(Objects.requireNonNull(verbs));
             return this;
         }
         public PolicyRuleArgs build() {

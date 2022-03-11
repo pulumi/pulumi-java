@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.inputs.ForwardingConfigurationArgs;
 import io.pulumi.azurenative.network.inputs.HeaderActionArgs;
 import io.pulumi.azurenative.network.inputs.RedirectConfigurationArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -27,10 +27,10 @@ public final class RulesEngineActionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="requestHeaderActions")
-      private final @Nullable Input<List<HeaderActionArgs>> requestHeaderActions;
+      private final @Nullable Output<List<HeaderActionArgs>> requestHeaderActions;
 
-    public Input<List<HeaderActionArgs>> getRequestHeaderActions() {
-        return this.requestHeaderActions == null ? Input.empty() : this.requestHeaderActions;
+    public Output<List<HeaderActionArgs>> getRequestHeaderActions() {
+        return this.requestHeaderActions == null ? Output.empty() : this.requestHeaderActions;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class RulesEngineActionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="responseHeaderActions")
-      private final @Nullable Input<List<HeaderActionArgs>> responseHeaderActions;
+      private final @Nullable Output<List<HeaderActionArgs>> responseHeaderActions;
 
-    public Input<List<HeaderActionArgs>> getResponseHeaderActions() {
-        return this.responseHeaderActions == null ? Input.empty() : this.responseHeaderActions;
+    public Output<List<HeaderActionArgs>> getResponseHeaderActions() {
+        return this.responseHeaderActions == null ? Output.empty() : this.responseHeaderActions;
     }
 
     /**
@@ -49,25 +49,25 @@ public final class RulesEngineActionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="routeConfigurationOverride")
-      private final @Nullable Input<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> routeConfigurationOverride;
+      private final @Nullable Output<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> routeConfigurationOverride;
 
-    public Input<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> getRouteConfigurationOverride() {
-        return this.routeConfigurationOverride == null ? Input.empty() : this.routeConfigurationOverride;
+    public Output<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> getRouteConfigurationOverride() {
+        return this.routeConfigurationOverride == null ? Output.empty() : this.routeConfigurationOverride;
     }
 
     public RulesEngineActionArgs(
-        @Nullable Input<List<HeaderActionArgs>> requestHeaderActions,
-        @Nullable Input<List<HeaderActionArgs>> responseHeaderActions,
-        @Nullable Input<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> routeConfigurationOverride) {
+        @Nullable Output<List<HeaderActionArgs>> requestHeaderActions,
+        @Nullable Output<List<HeaderActionArgs>> responseHeaderActions,
+        @Nullable Output<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> routeConfigurationOverride) {
         this.requestHeaderActions = requestHeaderActions;
         this.responseHeaderActions = responseHeaderActions;
         this.routeConfigurationOverride = routeConfigurationOverride;
     }
 
     private RulesEngineActionArgs() {
-        this.requestHeaderActions = Input.empty();
-        this.responseHeaderActions = Input.empty();
-        this.routeConfigurationOverride = Input.empty();
+        this.requestHeaderActions = Output.empty();
+        this.responseHeaderActions = Output.empty();
+        this.routeConfigurationOverride = Output.empty();
     }
 
     public static Builder builder() {
@@ -79,9 +79,9 @@ public final class RulesEngineActionArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<List<HeaderActionArgs>> requestHeaderActions;
-        private @Nullable Input<List<HeaderActionArgs>> responseHeaderActions;
-        private @Nullable Input<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> routeConfigurationOverride;
+        private @Nullable Output<List<HeaderActionArgs>> requestHeaderActions;
+        private @Nullable Output<List<HeaderActionArgs>> responseHeaderActions;
+        private @Nullable Output<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> routeConfigurationOverride;
 
         public Builder() {
     	      // Empty
@@ -94,33 +94,33 @@ public final class RulesEngineActionArgs extends io.pulumi.resources.ResourceArg
     	      this.routeConfigurationOverride = defaults.routeConfigurationOverride;
         }
 
-        public Builder requestHeaderActions(@Nullable Input<List<HeaderActionArgs>> requestHeaderActions) {
+        public Builder requestHeaderActions(@Nullable Output<List<HeaderActionArgs>> requestHeaderActions) {
             this.requestHeaderActions = requestHeaderActions;
             return this;
         }
 
         public Builder requestHeaderActions(@Nullable List<HeaderActionArgs> requestHeaderActions) {
-            this.requestHeaderActions = Input.ofNullable(requestHeaderActions);
+            this.requestHeaderActions = Output.ofNullable(requestHeaderActions);
             return this;
         }
 
-        public Builder responseHeaderActions(@Nullable Input<List<HeaderActionArgs>> responseHeaderActions) {
+        public Builder responseHeaderActions(@Nullable Output<List<HeaderActionArgs>> responseHeaderActions) {
             this.responseHeaderActions = responseHeaderActions;
             return this;
         }
 
         public Builder responseHeaderActions(@Nullable List<HeaderActionArgs> responseHeaderActions) {
-            this.responseHeaderActions = Input.ofNullable(responseHeaderActions);
+            this.responseHeaderActions = Output.ofNullable(responseHeaderActions);
             return this;
         }
 
-        public Builder routeConfigurationOverride(@Nullable Input<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> routeConfigurationOverride) {
+        public Builder routeConfigurationOverride(@Nullable Output<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> routeConfigurationOverride) {
             this.routeConfigurationOverride = routeConfigurationOverride;
             return this;
         }
 
         public Builder routeConfigurationOverride(@Nullable Either<ForwardingConfigurationArgs,RedirectConfigurationArgs> routeConfigurationOverride) {
-            this.routeConfigurationOverride = Input.ofNullable(routeConfigurationOverride);
+            this.routeConfigurationOverride = Output.ofNullable(routeConfigurationOverride);
             return this;
         }
         public RulesEngineActionArgs build() {

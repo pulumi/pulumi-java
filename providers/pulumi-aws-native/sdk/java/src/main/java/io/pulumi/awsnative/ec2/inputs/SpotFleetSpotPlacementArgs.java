@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.awsnative.ec2.enums.SpotFleetSpotPlacementTenancy;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,39 +16,39 @@ public final class SpotFleetSpotPlacementArgs extends io.pulumi.resources.Resour
     public static final SpotFleetSpotPlacementArgs Empty = new SpotFleetSpotPlacementArgs();
 
     @InputImport(name="availabilityZone")
-      private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Output<String> availabilityZone;
 
-    public Input<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
+    public Output<String> getAvailabilityZone() {
+        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
     }
 
     @InputImport(name="groupName")
-      private final @Nullable Input<String> groupName;
+      private final @Nullable Output<String> groupName;
 
-    public Input<String> getGroupName() {
-        return this.groupName == null ? Input.empty() : this.groupName;
+    public Output<String> getGroupName() {
+        return this.groupName == null ? Output.empty() : this.groupName;
     }
 
     @InputImport(name="tenancy")
-      private final @Nullable Input<SpotFleetSpotPlacementTenancy> tenancy;
+      private final @Nullable Output<SpotFleetSpotPlacementTenancy> tenancy;
 
-    public Input<SpotFleetSpotPlacementTenancy> getTenancy() {
-        return this.tenancy == null ? Input.empty() : this.tenancy;
+    public Output<SpotFleetSpotPlacementTenancy> getTenancy() {
+        return this.tenancy == null ? Output.empty() : this.tenancy;
     }
 
     public SpotFleetSpotPlacementArgs(
-        @Nullable Input<String> availabilityZone,
-        @Nullable Input<String> groupName,
-        @Nullable Input<SpotFleetSpotPlacementTenancy> tenancy) {
+        @Nullable Output<String> availabilityZone,
+        @Nullable Output<String> groupName,
+        @Nullable Output<SpotFleetSpotPlacementTenancy> tenancy) {
         this.availabilityZone = availabilityZone;
         this.groupName = groupName;
         this.tenancy = tenancy;
     }
 
     private SpotFleetSpotPlacementArgs() {
-        this.availabilityZone = Input.empty();
-        this.groupName = Input.empty();
-        this.tenancy = Input.empty();
+        this.availabilityZone = Output.empty();
+        this.groupName = Output.empty();
+        this.tenancy = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,9 +60,9 @@ public final class SpotFleetSpotPlacementArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> availabilityZone;
-        private @Nullable Input<String> groupName;
-        private @Nullable Input<SpotFleetSpotPlacementTenancy> tenancy;
+        private @Nullable Output<String> availabilityZone;
+        private @Nullable Output<String> groupName;
+        private @Nullable Output<SpotFleetSpotPlacementTenancy> tenancy;
 
         public Builder() {
     	      // Empty
@@ -75,33 +75,33 @@ public final class SpotFleetSpotPlacementArgs extends io.pulumi.resources.Resour
     	      this.tenancy = defaults.tenancy;
         }
 
-        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Input.ofNullable(availabilityZone);
+            this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder groupName(@Nullable Input<String> groupName) {
+        public Builder groupName(@Nullable Output<String> groupName) {
             this.groupName = groupName;
             return this;
         }
 
         public Builder groupName(@Nullable String groupName) {
-            this.groupName = Input.ofNullable(groupName);
+            this.groupName = Output.ofNullable(groupName);
             return this;
         }
 
-        public Builder tenancy(@Nullable Input<SpotFleetSpotPlacementTenancy> tenancy) {
+        public Builder tenancy(@Nullable Output<SpotFleetSpotPlacementTenancy> tenancy) {
             this.tenancy = tenancy;
             return this;
         }
 
         public Builder tenancy(@Nullable SpotFleetSpotPlacementTenancy tenancy) {
-            this.tenancy = Input.ofNullable(tenancy);
+            this.tenancy = Output.ofNullable(tenancy);
             return this;
         }
         public SpotFleetSpotPlacementArgs build() {

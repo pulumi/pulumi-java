@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lambda.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class EventSourceMappingDestinationConfigOnFailureGetArgs extends i
      * 
      */
     @InputImport(name="destinationArn", required=true)
-      private final Input<String> destinationArn;
+      private final Output<String> destinationArn;
 
-    public Input<String> getDestinationArn() {
+    public Output<String> getDestinationArn() {
         return this.destinationArn;
     }
 
-    public EventSourceMappingDestinationConfigOnFailureGetArgs(Input<String> destinationArn) {
+    public EventSourceMappingDestinationConfigOnFailureGetArgs(Output<String> destinationArn) {
         this.destinationArn = Objects.requireNonNull(destinationArn, "expected parameter 'destinationArn' to be non-null");
     }
 
     private EventSourceMappingDestinationConfigOnFailureGetArgs() {
-        this.destinationArn = Input.empty();
+        this.destinationArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class EventSourceMappingDestinationConfigOnFailureGetArgs extends i
     }
 
     public static final class Builder {
-        private Input<String> destinationArn;
+        private Output<String> destinationArn;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class EventSourceMappingDestinationConfigOnFailureGetArgs extends i
     	      this.destinationArn = defaults.destinationArn;
         }
 
-        public Builder destinationArn(Input<String> destinationArn) {
+        public Builder destinationArn(Output<String> destinationArn) {
             this.destinationArn = Objects.requireNonNull(destinationArn);
             return this;
         }
 
         public Builder destinationArn(String destinationArn) {
-            this.destinationArn = Input.of(Objects.requireNonNull(destinationArn));
+            this.destinationArn = Output.of(Objects.requireNonNull(destinationArn));
             return this;
         }
         public EventSourceMappingDestinationConfigOnFailureGetArgs build() {

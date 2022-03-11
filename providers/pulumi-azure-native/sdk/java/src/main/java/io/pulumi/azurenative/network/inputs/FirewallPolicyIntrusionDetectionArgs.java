@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.enums.FirewallPolicyIntrusionDetectionStateType;
 import io.pulumi.azurenative.network.inputs.FirewallPolicyIntrusionDetectionConfigurationArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class FirewallPolicyIntrusionDetectionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="configuration")
-      private final @Nullable Input<FirewallPolicyIntrusionDetectionConfigurationArgs> configuration;
+      private final @Nullable Output<FirewallPolicyIntrusionDetectionConfigurationArgs> configuration;
 
-    public Input<FirewallPolicyIntrusionDetectionConfigurationArgs> getConfiguration() {
-        return this.configuration == null ? Input.empty() : this.configuration;
+    public Output<FirewallPolicyIntrusionDetectionConfigurationArgs> getConfiguration() {
+        return this.configuration == null ? Output.empty() : this.configuration;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class FirewallPolicyIntrusionDetectionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="mode")
-      private final @Nullable Input<Either<String,FirewallPolicyIntrusionDetectionStateType>> mode;
+      private final @Nullable Output<Either<String,FirewallPolicyIntrusionDetectionStateType>> mode;
 
-    public Input<Either<String,FirewallPolicyIntrusionDetectionStateType>> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<Either<String,FirewallPolicyIntrusionDetectionStateType>> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
     public FirewallPolicyIntrusionDetectionArgs(
-        @Nullable Input<FirewallPolicyIntrusionDetectionConfigurationArgs> configuration,
-        @Nullable Input<Either<String,FirewallPolicyIntrusionDetectionStateType>> mode) {
+        @Nullable Output<FirewallPolicyIntrusionDetectionConfigurationArgs> configuration,
+        @Nullable Output<Either<String,FirewallPolicyIntrusionDetectionStateType>> mode) {
         this.configuration = configuration;
         this.mode = mode;
     }
 
     private FirewallPolicyIntrusionDetectionArgs() {
-        this.configuration = Input.empty();
-        this.mode = Input.empty();
+        this.configuration = Output.empty();
+        this.mode = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class FirewallPolicyIntrusionDetectionArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<FirewallPolicyIntrusionDetectionConfigurationArgs> configuration;
-        private @Nullable Input<Either<String,FirewallPolicyIntrusionDetectionStateType>> mode;
+        private @Nullable Output<FirewallPolicyIntrusionDetectionConfigurationArgs> configuration;
+        private @Nullable Output<Either<String,FirewallPolicyIntrusionDetectionStateType>> mode;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class FirewallPolicyIntrusionDetectionArgs extends io.pulumi.resour
     	      this.mode = defaults.mode;
         }
 
-        public Builder configuration(@Nullable Input<FirewallPolicyIntrusionDetectionConfigurationArgs> configuration) {
+        public Builder configuration(@Nullable Output<FirewallPolicyIntrusionDetectionConfigurationArgs> configuration) {
             this.configuration = configuration;
             return this;
         }
 
         public Builder configuration(@Nullable FirewallPolicyIntrusionDetectionConfigurationArgs configuration) {
-            this.configuration = Input.ofNullable(configuration);
+            this.configuration = Output.ofNullable(configuration);
             return this;
         }
 
-        public Builder mode(@Nullable Input<Either<String,FirewallPolicyIntrusionDetectionStateType>> mode) {
+        public Builder mode(@Nullable Output<Either<String,FirewallPolicyIntrusionDetectionStateType>> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable Either<String,FirewallPolicyIntrusionDetectionStateType> mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
         public FirewallPolicyIntrusionDetectionArgs build() {

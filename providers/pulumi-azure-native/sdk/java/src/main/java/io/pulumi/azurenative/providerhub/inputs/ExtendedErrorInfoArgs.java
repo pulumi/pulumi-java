@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.azurenative.providerhub.inputs.TypedErrorInfoArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,46 +17,46 @@ public final class ExtendedErrorInfoArgs extends io.pulumi.resources.ResourceArg
     public static final ExtendedErrorInfoArgs Empty = new ExtendedErrorInfoArgs();
 
     @InputImport(name="additionalInfo")
-      private final @Nullable Input<List<TypedErrorInfoArgs>> additionalInfo;
+      private final @Nullable Output<List<TypedErrorInfoArgs>> additionalInfo;
 
-    public Input<List<TypedErrorInfoArgs>> getAdditionalInfo() {
-        return this.additionalInfo == null ? Input.empty() : this.additionalInfo;
+    public Output<List<TypedErrorInfoArgs>> getAdditionalInfo() {
+        return this.additionalInfo == null ? Output.empty() : this.additionalInfo;
     }
 
     @InputImport(name="code")
-      private final @Nullable Input<String> code;
+      private final @Nullable Output<String> code;
 
-    public Input<String> getCode() {
-        return this.code == null ? Input.empty() : this.code;
+    public Output<String> getCode() {
+        return this.code == null ? Output.empty() : this.code;
     }
 
     @InputImport(name="details")
-      private final @Nullable Input<List<ExtendedErrorInfoArgs>> details;
+      private final @Nullable Output<List<ExtendedErrorInfoArgs>> details;
 
-    public Input<List<ExtendedErrorInfoArgs>> getDetails() {
-        return this.details == null ? Input.empty() : this.details;
+    public Output<List<ExtendedErrorInfoArgs>> getDetails() {
+        return this.details == null ? Output.empty() : this.details;
     }
 
     @InputImport(name="message")
-      private final @Nullable Input<String> message;
+      private final @Nullable Output<String> message;
 
-    public Input<String> getMessage() {
-        return this.message == null ? Input.empty() : this.message;
+    public Output<String> getMessage() {
+        return this.message == null ? Output.empty() : this.message;
     }
 
     @InputImport(name="target")
-      private final @Nullable Input<String> target;
+      private final @Nullable Output<String> target;
 
-    public Input<String> getTarget() {
-        return this.target == null ? Input.empty() : this.target;
+    public Output<String> getTarget() {
+        return this.target == null ? Output.empty() : this.target;
     }
 
     public ExtendedErrorInfoArgs(
-        @Nullable Input<List<TypedErrorInfoArgs>> additionalInfo,
-        @Nullable Input<String> code,
-        @Nullable Input<List<ExtendedErrorInfoArgs>> details,
-        @Nullable Input<String> message,
-        @Nullable Input<String> target) {
+        @Nullable Output<List<TypedErrorInfoArgs>> additionalInfo,
+        @Nullable Output<String> code,
+        @Nullable Output<List<ExtendedErrorInfoArgs>> details,
+        @Nullable Output<String> message,
+        @Nullable Output<String> target) {
         this.additionalInfo = additionalInfo;
         this.code = code;
         this.details = details;
@@ -65,11 +65,11 @@ public final class ExtendedErrorInfoArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ExtendedErrorInfoArgs() {
-        this.additionalInfo = Input.empty();
-        this.code = Input.empty();
-        this.details = Input.empty();
-        this.message = Input.empty();
-        this.target = Input.empty();
+        this.additionalInfo = Output.empty();
+        this.code = Output.empty();
+        this.details = Output.empty();
+        this.message = Output.empty();
+        this.target = Output.empty();
     }
 
     public static Builder builder() {
@@ -81,11 +81,11 @@ public final class ExtendedErrorInfoArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<List<TypedErrorInfoArgs>> additionalInfo;
-        private @Nullable Input<String> code;
-        private @Nullable Input<List<ExtendedErrorInfoArgs>> details;
-        private @Nullable Input<String> message;
-        private @Nullable Input<String> target;
+        private @Nullable Output<List<TypedErrorInfoArgs>> additionalInfo;
+        private @Nullable Output<String> code;
+        private @Nullable Output<List<ExtendedErrorInfoArgs>> details;
+        private @Nullable Output<String> message;
+        private @Nullable Output<String> target;
 
         public Builder() {
     	      // Empty
@@ -100,53 +100,53 @@ public final class ExtendedErrorInfoArgs extends io.pulumi.resources.ResourceArg
     	      this.target = defaults.target;
         }
 
-        public Builder additionalInfo(@Nullable Input<List<TypedErrorInfoArgs>> additionalInfo) {
+        public Builder additionalInfo(@Nullable Output<List<TypedErrorInfoArgs>> additionalInfo) {
             this.additionalInfo = additionalInfo;
             return this;
         }
 
         public Builder additionalInfo(@Nullable List<TypedErrorInfoArgs> additionalInfo) {
-            this.additionalInfo = Input.ofNullable(additionalInfo);
+            this.additionalInfo = Output.ofNullable(additionalInfo);
             return this;
         }
 
-        public Builder code(@Nullable Input<String> code) {
+        public Builder code(@Nullable Output<String> code) {
             this.code = code;
             return this;
         }
 
         public Builder code(@Nullable String code) {
-            this.code = Input.ofNullable(code);
+            this.code = Output.ofNullable(code);
             return this;
         }
 
-        public Builder details(@Nullable Input<List<ExtendedErrorInfoArgs>> details) {
+        public Builder details(@Nullable Output<List<ExtendedErrorInfoArgs>> details) {
             this.details = details;
             return this;
         }
 
         public Builder details(@Nullable List<ExtendedErrorInfoArgs> details) {
-            this.details = Input.ofNullable(details);
+            this.details = Output.ofNullable(details);
             return this;
         }
 
-        public Builder message(@Nullable Input<String> message) {
+        public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
 
         public Builder message(@Nullable String message) {
-            this.message = Input.ofNullable(message);
+            this.message = Output.ofNullable(message);
             return this;
         }
 
-        public Builder target(@Nullable Input<String> target) {
+        public Builder target(@Nullable Output<String> target) {
             this.target = target;
             return this;
         }
 
         public Builder target(@Nullable String target) {
-            this.target = Input.ofNullable(target);
+            this.target = Output.ofNullable(target);
             return this;
         }
         public ExtendedErrorInfoArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.enums.FileContentBufferFileType;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class FileContentBufferArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="content")
-      private final @Nullable Input<String> content;
+      private final @Nullable Output<String> content;
 
-    public Input<String> getContent() {
-        return this.content == null ? Input.empty() : this.content;
+    public Output<String> getContent() {
+        return this.content == null ? Output.empty() : this.content;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class FileContentBufferArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="fileType")
-      private final @Nullable Input<FileContentBufferFileType> fileType;
+      private final @Nullable Output<FileContentBufferFileType> fileType;
 
-    public Input<FileContentBufferFileType> getFileType() {
-        return this.fileType == null ? Input.empty() : this.fileType;
+    public Output<FileContentBufferFileType> getFileType() {
+        return this.fileType == null ? Output.empty() : this.fileType;
     }
 
     public FileContentBufferArgs(
-        @Nullable Input<String> content,
-        @Nullable Input<FileContentBufferFileType> fileType) {
+        @Nullable Output<String> content,
+        @Nullable Output<FileContentBufferFileType> fileType) {
         this.content = content;
         this.fileType = fileType;
     }
 
     private FileContentBufferArgs() {
-        this.content = Input.empty();
-        this.fileType = Input.empty();
+        this.content = Output.empty();
+        this.fileType = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class FileContentBufferArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> content;
-        private @Nullable Input<FileContentBufferFileType> fileType;
+        private @Nullable Output<String> content;
+        private @Nullable Output<FileContentBufferFileType> fileType;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class FileContentBufferArgs extends io.pulumi.resources.ResourceArg
     	      this.fileType = defaults.fileType;
         }
 
-        public Builder content(@Nullable Input<String> content) {
+        public Builder content(@Nullable Output<String> content) {
             this.content = content;
             return this;
         }
 
         public Builder content(@Nullable String content) {
-            this.content = Input.ofNullable(content);
+            this.content = Output.ofNullable(content);
             return this;
         }
 
-        public Builder fileType(@Nullable Input<FileContentBufferFileType> fileType) {
+        public Builder fileType(@Nullable Output<FileContentBufferFileType> fileType) {
             this.fileType = fileType;
             return this;
         }
 
         public Builder fileType(@Nullable FileContentBufferFileType fileType) {
-            this.fileType = Input.ofNullable(fileType);
+            this.fileType = Output.ofNullable(fileType);
             return this;
         }
         public FileContentBufferArgs build() {

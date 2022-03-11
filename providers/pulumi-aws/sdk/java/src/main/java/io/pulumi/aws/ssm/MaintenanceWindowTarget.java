@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ssm.MaintenanceWindowTargetArgs;
 import io.pulumi.aws.ssm.inputs.MaintenanceWindowTargetState;
 import io.pulumi.aws.ssm.outputs.MaintenanceWindowTargetTarget;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -156,14 +155,14 @@ public class MaintenanceWindowTarget extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public MaintenanceWindowTarget(String name, MaintenanceWindowTargetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ssm/maintenanceWindowTarget:MaintenanceWindowTarget", name, args == null ? MaintenanceWindowTargetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:ssm/maintenanceWindowTarget:MaintenanceWindowTarget", name, args == null ? MaintenanceWindowTargetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private MaintenanceWindowTarget(String name, Input<String> id, @Nullable MaintenanceWindowTargetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private MaintenanceWindowTarget(String name, Output<String> id, @Nullable MaintenanceWindowTargetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:ssm/maintenanceWindowTarget:MaintenanceWindowTarget", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -179,7 +178,7 @@ public class MaintenanceWindowTarget extends io.pulumi.resources.CustomResource 
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static MaintenanceWindowTarget get(String name, Input<String> id, @Nullable MaintenanceWindowTargetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static MaintenanceWindowTarget get(String name, Output<String> id, @Nullable MaintenanceWindowTargetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new MaintenanceWindowTarget(name, id, state, options);
     }
 }

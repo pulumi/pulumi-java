@@ -6,7 +6,7 @@ package io.pulumi.awsnative.pinpoint.inputs;
 import io.pulumi.awsnative.pinpoint.inputs.InAppTemplateBodyConfigArgs;
 import io.pulumi.awsnative.pinpoint.inputs.InAppTemplateButtonConfigArgs;
 import io.pulumi.awsnative.pinpoint.inputs.InAppTemplateHeaderConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,54 +18,54 @@ public final class InAppTemplateInAppMessageContentArgs extends io.pulumi.resour
     public static final InAppTemplateInAppMessageContentArgs Empty = new InAppTemplateInAppMessageContentArgs();
 
     @InputImport(name="backgroundColor")
-      private final @Nullable Input<String> backgroundColor;
+      private final @Nullable Output<String> backgroundColor;
 
-    public Input<String> getBackgroundColor() {
-        return this.backgroundColor == null ? Input.empty() : this.backgroundColor;
+    public Output<String> getBackgroundColor() {
+        return this.backgroundColor == null ? Output.empty() : this.backgroundColor;
     }
 
     @InputImport(name="bodyConfig")
-      private final @Nullable Input<InAppTemplateBodyConfigArgs> bodyConfig;
+      private final @Nullable Output<InAppTemplateBodyConfigArgs> bodyConfig;
 
-    public Input<InAppTemplateBodyConfigArgs> getBodyConfig() {
-        return this.bodyConfig == null ? Input.empty() : this.bodyConfig;
+    public Output<InAppTemplateBodyConfigArgs> getBodyConfig() {
+        return this.bodyConfig == null ? Output.empty() : this.bodyConfig;
     }
 
     @InputImport(name="headerConfig")
-      private final @Nullable Input<InAppTemplateHeaderConfigArgs> headerConfig;
+      private final @Nullable Output<InAppTemplateHeaderConfigArgs> headerConfig;
 
-    public Input<InAppTemplateHeaderConfigArgs> getHeaderConfig() {
-        return this.headerConfig == null ? Input.empty() : this.headerConfig;
+    public Output<InAppTemplateHeaderConfigArgs> getHeaderConfig() {
+        return this.headerConfig == null ? Output.empty() : this.headerConfig;
     }
 
     @InputImport(name="imageUrl")
-      private final @Nullable Input<String> imageUrl;
+      private final @Nullable Output<String> imageUrl;
 
-    public Input<String> getImageUrl() {
-        return this.imageUrl == null ? Input.empty() : this.imageUrl;
+    public Output<String> getImageUrl() {
+        return this.imageUrl == null ? Output.empty() : this.imageUrl;
     }
 
     @InputImport(name="primaryBtn")
-      private final @Nullable Input<InAppTemplateButtonConfigArgs> primaryBtn;
+      private final @Nullable Output<InAppTemplateButtonConfigArgs> primaryBtn;
 
-    public Input<InAppTemplateButtonConfigArgs> getPrimaryBtn() {
-        return this.primaryBtn == null ? Input.empty() : this.primaryBtn;
+    public Output<InAppTemplateButtonConfigArgs> getPrimaryBtn() {
+        return this.primaryBtn == null ? Output.empty() : this.primaryBtn;
     }
 
     @InputImport(name="secondaryBtn")
-      private final @Nullable Input<InAppTemplateButtonConfigArgs> secondaryBtn;
+      private final @Nullable Output<InAppTemplateButtonConfigArgs> secondaryBtn;
 
-    public Input<InAppTemplateButtonConfigArgs> getSecondaryBtn() {
-        return this.secondaryBtn == null ? Input.empty() : this.secondaryBtn;
+    public Output<InAppTemplateButtonConfigArgs> getSecondaryBtn() {
+        return this.secondaryBtn == null ? Output.empty() : this.secondaryBtn;
     }
 
     public InAppTemplateInAppMessageContentArgs(
-        @Nullable Input<String> backgroundColor,
-        @Nullable Input<InAppTemplateBodyConfigArgs> bodyConfig,
-        @Nullable Input<InAppTemplateHeaderConfigArgs> headerConfig,
-        @Nullable Input<String> imageUrl,
-        @Nullable Input<InAppTemplateButtonConfigArgs> primaryBtn,
-        @Nullable Input<InAppTemplateButtonConfigArgs> secondaryBtn) {
+        @Nullable Output<String> backgroundColor,
+        @Nullable Output<InAppTemplateBodyConfigArgs> bodyConfig,
+        @Nullable Output<InAppTemplateHeaderConfigArgs> headerConfig,
+        @Nullable Output<String> imageUrl,
+        @Nullable Output<InAppTemplateButtonConfigArgs> primaryBtn,
+        @Nullable Output<InAppTemplateButtonConfigArgs> secondaryBtn) {
         this.backgroundColor = backgroundColor;
         this.bodyConfig = bodyConfig;
         this.headerConfig = headerConfig;
@@ -75,12 +75,12 @@ public final class InAppTemplateInAppMessageContentArgs extends io.pulumi.resour
     }
 
     private InAppTemplateInAppMessageContentArgs() {
-        this.backgroundColor = Input.empty();
-        this.bodyConfig = Input.empty();
-        this.headerConfig = Input.empty();
-        this.imageUrl = Input.empty();
-        this.primaryBtn = Input.empty();
-        this.secondaryBtn = Input.empty();
+        this.backgroundColor = Output.empty();
+        this.bodyConfig = Output.empty();
+        this.headerConfig = Output.empty();
+        this.imageUrl = Output.empty();
+        this.primaryBtn = Output.empty();
+        this.secondaryBtn = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,12 +92,12 @@ public final class InAppTemplateInAppMessageContentArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> backgroundColor;
-        private @Nullable Input<InAppTemplateBodyConfigArgs> bodyConfig;
-        private @Nullable Input<InAppTemplateHeaderConfigArgs> headerConfig;
-        private @Nullable Input<String> imageUrl;
-        private @Nullable Input<InAppTemplateButtonConfigArgs> primaryBtn;
-        private @Nullable Input<InAppTemplateButtonConfigArgs> secondaryBtn;
+        private @Nullable Output<String> backgroundColor;
+        private @Nullable Output<InAppTemplateBodyConfigArgs> bodyConfig;
+        private @Nullable Output<InAppTemplateHeaderConfigArgs> headerConfig;
+        private @Nullable Output<String> imageUrl;
+        private @Nullable Output<InAppTemplateButtonConfigArgs> primaryBtn;
+        private @Nullable Output<InAppTemplateButtonConfigArgs> secondaryBtn;
 
         public Builder() {
     	      // Empty
@@ -113,63 +113,63 @@ public final class InAppTemplateInAppMessageContentArgs extends io.pulumi.resour
     	      this.secondaryBtn = defaults.secondaryBtn;
         }
 
-        public Builder backgroundColor(@Nullable Input<String> backgroundColor) {
+        public Builder backgroundColor(@Nullable Output<String> backgroundColor) {
             this.backgroundColor = backgroundColor;
             return this;
         }
 
         public Builder backgroundColor(@Nullable String backgroundColor) {
-            this.backgroundColor = Input.ofNullable(backgroundColor);
+            this.backgroundColor = Output.ofNullable(backgroundColor);
             return this;
         }
 
-        public Builder bodyConfig(@Nullable Input<InAppTemplateBodyConfigArgs> bodyConfig) {
+        public Builder bodyConfig(@Nullable Output<InAppTemplateBodyConfigArgs> bodyConfig) {
             this.bodyConfig = bodyConfig;
             return this;
         }
 
         public Builder bodyConfig(@Nullable InAppTemplateBodyConfigArgs bodyConfig) {
-            this.bodyConfig = Input.ofNullable(bodyConfig);
+            this.bodyConfig = Output.ofNullable(bodyConfig);
             return this;
         }
 
-        public Builder headerConfig(@Nullable Input<InAppTemplateHeaderConfigArgs> headerConfig) {
+        public Builder headerConfig(@Nullable Output<InAppTemplateHeaderConfigArgs> headerConfig) {
             this.headerConfig = headerConfig;
             return this;
         }
 
         public Builder headerConfig(@Nullable InAppTemplateHeaderConfigArgs headerConfig) {
-            this.headerConfig = Input.ofNullable(headerConfig);
+            this.headerConfig = Output.ofNullable(headerConfig);
             return this;
         }
 
-        public Builder imageUrl(@Nullable Input<String> imageUrl) {
+        public Builder imageUrl(@Nullable Output<String> imageUrl) {
             this.imageUrl = imageUrl;
             return this;
         }
 
         public Builder imageUrl(@Nullable String imageUrl) {
-            this.imageUrl = Input.ofNullable(imageUrl);
+            this.imageUrl = Output.ofNullable(imageUrl);
             return this;
         }
 
-        public Builder primaryBtn(@Nullable Input<InAppTemplateButtonConfigArgs> primaryBtn) {
+        public Builder primaryBtn(@Nullable Output<InAppTemplateButtonConfigArgs> primaryBtn) {
             this.primaryBtn = primaryBtn;
             return this;
         }
 
         public Builder primaryBtn(@Nullable InAppTemplateButtonConfigArgs primaryBtn) {
-            this.primaryBtn = Input.ofNullable(primaryBtn);
+            this.primaryBtn = Output.ofNullable(primaryBtn);
             return this;
         }
 
-        public Builder secondaryBtn(@Nullable Input<InAppTemplateButtonConfigArgs> secondaryBtn) {
+        public Builder secondaryBtn(@Nullable Output<InAppTemplateButtonConfigArgs> secondaryBtn) {
             this.secondaryBtn = secondaryBtn;
             return this;
         }
 
         public Builder secondaryBtn(@Nullable InAppTemplateButtonConfigArgs secondaryBtn) {
-            this.secondaryBtn = Input.ofNullable(secondaryBtn);
+            this.secondaryBtn = Output.ofNullable(secondaryBtn);
             return this;
         }
         public InAppTemplateInAppMessageContentArgs build() {

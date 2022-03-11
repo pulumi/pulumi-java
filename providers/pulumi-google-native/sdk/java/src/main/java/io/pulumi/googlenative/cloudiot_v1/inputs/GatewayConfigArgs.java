@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudiot_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudiot_v1.enums.GatewayConfigGatewayAuthMethod;
 import io.pulumi.googlenative.cloudiot_v1.enums.GatewayConfigGatewayType;
@@ -24,10 +24,10 @@ public final class GatewayConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayAuthMethod")
-      private final @Nullable Input<GatewayConfigGatewayAuthMethod> gatewayAuthMethod;
+      private final @Nullable Output<GatewayConfigGatewayAuthMethod> gatewayAuthMethod;
 
-    public Input<GatewayConfigGatewayAuthMethod> getGatewayAuthMethod() {
-        return this.gatewayAuthMethod == null ? Input.empty() : this.gatewayAuthMethod;
+    public Output<GatewayConfigGatewayAuthMethod> getGatewayAuthMethod() {
+        return this.gatewayAuthMethod == null ? Output.empty() : this.gatewayAuthMethod;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class GatewayConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayType")
-      private final @Nullable Input<GatewayConfigGatewayType> gatewayType;
+      private final @Nullable Output<GatewayConfigGatewayType> gatewayType;
 
-    public Input<GatewayConfigGatewayType> getGatewayType() {
-        return this.gatewayType == null ? Input.empty() : this.gatewayType;
+    public Output<GatewayConfigGatewayType> getGatewayType() {
+        return this.gatewayType == null ? Output.empty() : this.gatewayType;
     }
 
     public GatewayConfigArgs(
-        @Nullable Input<GatewayConfigGatewayAuthMethod> gatewayAuthMethod,
-        @Nullable Input<GatewayConfigGatewayType> gatewayType) {
+        @Nullable Output<GatewayConfigGatewayAuthMethod> gatewayAuthMethod,
+        @Nullable Output<GatewayConfigGatewayType> gatewayType) {
         this.gatewayAuthMethod = gatewayAuthMethod;
         this.gatewayType = gatewayType;
     }
 
     private GatewayConfigArgs() {
-        this.gatewayAuthMethod = Input.empty();
-        this.gatewayType = Input.empty();
+        this.gatewayAuthMethod = Output.empty();
+        this.gatewayType = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class GatewayConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<GatewayConfigGatewayAuthMethod> gatewayAuthMethod;
-        private @Nullable Input<GatewayConfigGatewayType> gatewayType;
+        private @Nullable Output<GatewayConfigGatewayAuthMethod> gatewayAuthMethod;
+        private @Nullable Output<GatewayConfigGatewayType> gatewayType;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class GatewayConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.gatewayType = defaults.gatewayType;
         }
 
-        public Builder gatewayAuthMethod(@Nullable Input<GatewayConfigGatewayAuthMethod> gatewayAuthMethod) {
+        public Builder gatewayAuthMethod(@Nullable Output<GatewayConfigGatewayAuthMethod> gatewayAuthMethod) {
             this.gatewayAuthMethod = gatewayAuthMethod;
             return this;
         }
 
         public Builder gatewayAuthMethod(@Nullable GatewayConfigGatewayAuthMethod gatewayAuthMethod) {
-            this.gatewayAuthMethod = Input.ofNullable(gatewayAuthMethod);
+            this.gatewayAuthMethod = Output.ofNullable(gatewayAuthMethod);
             return this;
         }
 
-        public Builder gatewayType(@Nullable Input<GatewayConfigGatewayType> gatewayType) {
+        public Builder gatewayType(@Nullable Output<GatewayConfigGatewayType> gatewayType) {
             this.gatewayType = gatewayType;
             return this;
         }
 
         public Builder gatewayType(@Nullable GatewayConfigGatewayType gatewayType) {
-            this.gatewayType = Input.ofNullable(gatewayType);
+            this.gatewayType = Output.ofNullable(gatewayType);
             return this;
         }
         public GatewayConfigArgs build() {

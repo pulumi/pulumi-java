@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class AllowlistCustomAlertRuleArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="allowlistValues", required=true)
-      private final Input<List<String>> allowlistValues;
+      private final Output<List<String>> allowlistValues;
 
-    public Input<List<String>> getAllowlistValues() {
+    public Output<List<String>> getAllowlistValues() {
         return this.allowlistValues;
     }
 
@@ -35,9 +35,9 @@ public final class AllowlistCustomAlertRuleArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="isEnabled", required=true)
-      private final Input<Boolean> isEnabled;
+      private final Output<Boolean> isEnabled;
 
-    public Input<Boolean> getIsEnabled() {
+    public Output<Boolean> getIsEnabled() {
         return this.isEnabled;
     }
 
@@ -47,25 +47,25 @@ public final class AllowlistCustomAlertRuleArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="ruleType", required=true)
-      private final Input<String> ruleType;
+      private final Output<String> ruleType;
 
-    public Input<String> getRuleType() {
+    public Output<String> getRuleType() {
         return this.ruleType;
     }
 
     public AllowlistCustomAlertRuleArgs(
-        Input<List<String>> allowlistValues,
-        Input<Boolean> isEnabled,
-        Input<String> ruleType) {
+        Output<List<String>> allowlistValues,
+        Output<Boolean> isEnabled,
+        Output<String> ruleType) {
         this.allowlistValues = Objects.requireNonNull(allowlistValues, "expected parameter 'allowlistValues' to be non-null");
         this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
         this.ruleType = Objects.requireNonNull(ruleType, "expected parameter 'ruleType' to be non-null");
     }
 
     private AllowlistCustomAlertRuleArgs() {
-        this.allowlistValues = Input.empty();
-        this.isEnabled = Input.empty();
-        this.ruleType = Input.empty();
+        this.allowlistValues = Output.empty();
+        this.isEnabled = Output.empty();
+        this.ruleType = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class AllowlistCustomAlertRuleArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<List<String>> allowlistValues;
-        private Input<Boolean> isEnabled;
-        private Input<String> ruleType;
+        private Output<List<String>> allowlistValues;
+        private Output<Boolean> isEnabled;
+        private Output<String> ruleType;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class AllowlistCustomAlertRuleArgs extends io.pulumi.resources.Reso
     	      this.ruleType = defaults.ruleType;
         }
 
-        public Builder allowlistValues(Input<List<String>> allowlistValues) {
+        public Builder allowlistValues(Output<List<String>> allowlistValues) {
             this.allowlistValues = Objects.requireNonNull(allowlistValues);
             return this;
         }
 
         public Builder allowlistValues(List<String> allowlistValues) {
-            this.allowlistValues = Input.of(Objects.requireNonNull(allowlistValues));
+            this.allowlistValues = Output.of(Objects.requireNonNull(allowlistValues));
             return this;
         }
 
-        public Builder isEnabled(Input<Boolean> isEnabled) {
+        public Builder isEnabled(Output<Boolean> isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Input.of(Objects.requireNonNull(isEnabled));
+            this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
             return this;
         }
 
-        public Builder ruleType(Input<String> ruleType) {
+        public Builder ruleType(Output<String> ruleType) {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }
 
         public Builder ruleType(String ruleType) {
-            this.ruleType = Input.of(Objects.requireNonNull(ruleType));
+            this.ruleType = Output.of(Objects.requireNonNull(ruleType));
             return this;
         }
         public AllowlistCustomAlertRuleArgs build() {

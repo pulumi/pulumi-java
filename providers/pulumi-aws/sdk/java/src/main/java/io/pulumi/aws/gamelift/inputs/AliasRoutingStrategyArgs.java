@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.gamelift.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class AliasRoutingStrategyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="fleetId")
-      private final @Nullable Input<String> fleetId;
+      private final @Nullable Output<String> fleetId;
 
-    public Input<String> getFleetId() {
-        return this.fleetId == null ? Input.empty() : this.fleetId;
+    public Output<String> getFleetId() {
+        return this.fleetId == null ? Output.empty() : this.fleetId;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class AliasRoutingStrategyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="message")
-      private final @Nullable Input<String> message;
+      private final @Nullable Output<String> message;
 
-    public Input<String> getMessage() {
-        return this.message == null ? Input.empty() : this.message;
+    public Output<String> getMessage() {
+        return this.message == null ? Output.empty() : this.message;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class AliasRoutingStrategyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public AliasRoutingStrategyArgs(
-        @Nullable Input<String> fleetId,
-        @Nullable Input<String> message,
-        Input<String> type) {
+        @Nullable Output<String> fleetId,
+        @Nullable Output<String> message,
+        Output<String> type) {
         this.fleetId = fleetId;
         this.message = message;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private AliasRoutingStrategyArgs() {
-        this.fleetId = Input.empty();
-        this.message = Input.empty();
-        this.type = Input.empty();
+        this.fleetId = Output.empty();
+        this.message = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class AliasRoutingStrategyArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> fleetId;
-        private @Nullable Input<String> message;
-        private Input<String> type;
+        private @Nullable Output<String> fleetId;
+        private @Nullable Output<String> message;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class AliasRoutingStrategyArgs extends io.pulumi.resources.Resource
     	      this.type = defaults.type;
         }
 
-        public Builder fleetId(@Nullable Input<String> fleetId) {
+        public Builder fleetId(@Nullable Output<String> fleetId) {
             this.fleetId = fleetId;
             return this;
         }
 
         public Builder fleetId(@Nullable String fleetId) {
-            this.fleetId = Input.ofNullable(fleetId);
+            this.fleetId = Output.ofNullable(fleetId);
             return this;
         }
 
-        public Builder message(@Nullable Input<String> message) {
+        public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
 
         public Builder message(@Nullable String message) {
-            this.message = Input.ofNullable(message);
+            this.message = Output.ofNullable(message);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public AliasRoutingStrategyArgs build() {

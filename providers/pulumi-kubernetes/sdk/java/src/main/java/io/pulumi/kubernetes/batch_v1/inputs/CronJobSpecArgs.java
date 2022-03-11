@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.batch_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.batch_v1.inputs.JobTemplateSpecArgs;
 import java.lang.Boolean;
@@ -31,10 +31,10 @@ public final class CronJobSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="concurrencyPolicy")
-      private final @Nullable Input<String> concurrencyPolicy;
+      private final @Nullable Output<String> concurrencyPolicy;
 
-    public Input<String> getConcurrencyPolicy() {
-        return this.concurrencyPolicy == null ? Input.empty() : this.concurrencyPolicy;
+    public Output<String> getConcurrencyPolicy() {
+        return this.concurrencyPolicy == null ? Output.empty() : this.concurrencyPolicy;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class CronJobSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="failedJobsHistoryLimit")
-      private final @Nullable Input<Integer> failedJobsHistoryLimit;
+      private final @Nullable Output<Integer> failedJobsHistoryLimit;
 
-    public Input<Integer> getFailedJobsHistoryLimit() {
-        return this.failedJobsHistoryLimit == null ? Input.empty() : this.failedJobsHistoryLimit;
+    public Output<Integer> getFailedJobsHistoryLimit() {
+        return this.failedJobsHistoryLimit == null ? Output.empty() : this.failedJobsHistoryLimit;
     }
 
     /**
@@ -53,9 +53,9 @@ public final class CronJobSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobTemplate", required=true)
-      private final Input<JobTemplateSpecArgs> jobTemplate;
+      private final Output<JobTemplateSpecArgs> jobTemplate;
 
-    public Input<JobTemplateSpecArgs> getJobTemplate() {
+    public Output<JobTemplateSpecArgs> getJobTemplate() {
         return this.jobTemplate;
     }
 
@@ -64,9 +64,9 @@ public final class CronJobSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedule", required=true)
-      private final Input<String> schedule;
+      private final Output<String> schedule;
 
-    public Input<String> getSchedule() {
+    public Output<String> getSchedule() {
         return this.schedule;
     }
 
@@ -75,10 +75,10 @@ public final class CronJobSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startingDeadlineSeconds")
-      private final @Nullable Input<Integer> startingDeadlineSeconds;
+      private final @Nullable Output<Integer> startingDeadlineSeconds;
 
-    public Input<Integer> getStartingDeadlineSeconds() {
-        return this.startingDeadlineSeconds == null ? Input.empty() : this.startingDeadlineSeconds;
+    public Output<Integer> getStartingDeadlineSeconds() {
+        return this.startingDeadlineSeconds == null ? Output.empty() : this.startingDeadlineSeconds;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class CronJobSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="successfulJobsHistoryLimit")
-      private final @Nullable Input<Integer> successfulJobsHistoryLimit;
+      private final @Nullable Output<Integer> successfulJobsHistoryLimit;
 
-    public Input<Integer> getSuccessfulJobsHistoryLimit() {
-        return this.successfulJobsHistoryLimit == null ? Input.empty() : this.successfulJobsHistoryLimit;
+    public Output<Integer> getSuccessfulJobsHistoryLimit() {
+        return this.successfulJobsHistoryLimit == null ? Output.empty() : this.successfulJobsHistoryLimit;
     }
 
     /**
@@ -97,20 +97,20 @@ public final class CronJobSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="suspend")
-      private final @Nullable Input<Boolean> suspend;
+      private final @Nullable Output<Boolean> suspend;
 
-    public Input<Boolean> getSuspend() {
-        return this.suspend == null ? Input.empty() : this.suspend;
+    public Output<Boolean> getSuspend() {
+        return this.suspend == null ? Output.empty() : this.suspend;
     }
 
     public CronJobSpecArgs(
-        @Nullable Input<String> concurrencyPolicy,
-        @Nullable Input<Integer> failedJobsHistoryLimit,
-        Input<JobTemplateSpecArgs> jobTemplate,
-        Input<String> schedule,
-        @Nullable Input<Integer> startingDeadlineSeconds,
-        @Nullable Input<Integer> successfulJobsHistoryLimit,
-        @Nullable Input<Boolean> suspend) {
+        @Nullable Output<String> concurrencyPolicy,
+        @Nullable Output<Integer> failedJobsHistoryLimit,
+        Output<JobTemplateSpecArgs> jobTemplate,
+        Output<String> schedule,
+        @Nullable Output<Integer> startingDeadlineSeconds,
+        @Nullable Output<Integer> successfulJobsHistoryLimit,
+        @Nullable Output<Boolean> suspend) {
         this.concurrencyPolicy = concurrencyPolicy;
         this.failedJobsHistoryLimit = failedJobsHistoryLimit;
         this.jobTemplate = Objects.requireNonNull(jobTemplate, "expected parameter 'jobTemplate' to be non-null");
@@ -121,13 +121,13 @@ public final class CronJobSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CronJobSpecArgs() {
-        this.concurrencyPolicy = Input.empty();
-        this.failedJobsHistoryLimit = Input.empty();
-        this.jobTemplate = Input.empty();
-        this.schedule = Input.empty();
-        this.startingDeadlineSeconds = Input.empty();
-        this.successfulJobsHistoryLimit = Input.empty();
-        this.suspend = Input.empty();
+        this.concurrencyPolicy = Output.empty();
+        this.failedJobsHistoryLimit = Output.empty();
+        this.jobTemplate = Output.empty();
+        this.schedule = Output.empty();
+        this.startingDeadlineSeconds = Output.empty();
+        this.successfulJobsHistoryLimit = Output.empty();
+        this.suspend = Output.empty();
     }
 
     public static Builder builder() {
@@ -139,13 +139,13 @@ public final class CronJobSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> concurrencyPolicy;
-        private @Nullable Input<Integer> failedJobsHistoryLimit;
-        private Input<JobTemplateSpecArgs> jobTemplate;
-        private Input<String> schedule;
-        private @Nullable Input<Integer> startingDeadlineSeconds;
-        private @Nullable Input<Integer> successfulJobsHistoryLimit;
-        private @Nullable Input<Boolean> suspend;
+        private @Nullable Output<String> concurrencyPolicy;
+        private @Nullable Output<Integer> failedJobsHistoryLimit;
+        private Output<JobTemplateSpecArgs> jobTemplate;
+        private Output<String> schedule;
+        private @Nullable Output<Integer> startingDeadlineSeconds;
+        private @Nullable Output<Integer> successfulJobsHistoryLimit;
+        private @Nullable Output<Boolean> suspend;
 
         public Builder() {
     	      // Empty
@@ -162,73 +162,73 @@ public final class CronJobSpecArgs extends io.pulumi.resources.ResourceArgs {
     	      this.suspend = defaults.suspend;
         }
 
-        public Builder concurrencyPolicy(@Nullable Input<String> concurrencyPolicy) {
+        public Builder concurrencyPolicy(@Nullable Output<String> concurrencyPolicy) {
             this.concurrencyPolicy = concurrencyPolicy;
             return this;
         }
 
         public Builder concurrencyPolicy(@Nullable String concurrencyPolicy) {
-            this.concurrencyPolicy = Input.ofNullable(concurrencyPolicy);
+            this.concurrencyPolicy = Output.ofNullable(concurrencyPolicy);
             return this;
         }
 
-        public Builder failedJobsHistoryLimit(@Nullable Input<Integer> failedJobsHistoryLimit) {
+        public Builder failedJobsHistoryLimit(@Nullable Output<Integer> failedJobsHistoryLimit) {
             this.failedJobsHistoryLimit = failedJobsHistoryLimit;
             return this;
         }
 
         public Builder failedJobsHistoryLimit(@Nullable Integer failedJobsHistoryLimit) {
-            this.failedJobsHistoryLimit = Input.ofNullable(failedJobsHistoryLimit);
+            this.failedJobsHistoryLimit = Output.ofNullable(failedJobsHistoryLimit);
             return this;
         }
 
-        public Builder jobTemplate(Input<JobTemplateSpecArgs> jobTemplate) {
+        public Builder jobTemplate(Output<JobTemplateSpecArgs> jobTemplate) {
             this.jobTemplate = Objects.requireNonNull(jobTemplate);
             return this;
         }
 
         public Builder jobTemplate(JobTemplateSpecArgs jobTemplate) {
-            this.jobTemplate = Input.of(Objects.requireNonNull(jobTemplate));
+            this.jobTemplate = Output.of(Objects.requireNonNull(jobTemplate));
             return this;
         }
 
-        public Builder schedule(Input<String> schedule) {
+        public Builder schedule(Output<String> schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
 
         public Builder schedule(String schedule) {
-            this.schedule = Input.of(Objects.requireNonNull(schedule));
+            this.schedule = Output.of(Objects.requireNonNull(schedule));
             return this;
         }
 
-        public Builder startingDeadlineSeconds(@Nullable Input<Integer> startingDeadlineSeconds) {
+        public Builder startingDeadlineSeconds(@Nullable Output<Integer> startingDeadlineSeconds) {
             this.startingDeadlineSeconds = startingDeadlineSeconds;
             return this;
         }
 
         public Builder startingDeadlineSeconds(@Nullable Integer startingDeadlineSeconds) {
-            this.startingDeadlineSeconds = Input.ofNullable(startingDeadlineSeconds);
+            this.startingDeadlineSeconds = Output.ofNullable(startingDeadlineSeconds);
             return this;
         }
 
-        public Builder successfulJobsHistoryLimit(@Nullable Input<Integer> successfulJobsHistoryLimit) {
+        public Builder successfulJobsHistoryLimit(@Nullable Output<Integer> successfulJobsHistoryLimit) {
             this.successfulJobsHistoryLimit = successfulJobsHistoryLimit;
             return this;
         }
 
         public Builder successfulJobsHistoryLimit(@Nullable Integer successfulJobsHistoryLimit) {
-            this.successfulJobsHistoryLimit = Input.ofNullable(successfulJobsHistoryLimit);
+            this.successfulJobsHistoryLimit = Output.ofNullable(successfulJobsHistoryLimit);
             return this;
         }
 
-        public Builder suspend(@Nullable Input<Boolean> suspend) {
+        public Builder suspend(@Nullable Output<Boolean> suspend) {
             this.suspend = suspend;
             return this;
         }
 
         public Builder suspend(@Nullable Boolean suspend) {
-            this.suspend = Input.ofNullable(suspend);
+            this.suspend = Output.ofNullable(suspend);
             return this;
         }
         public CronJobSpecArgs build() {

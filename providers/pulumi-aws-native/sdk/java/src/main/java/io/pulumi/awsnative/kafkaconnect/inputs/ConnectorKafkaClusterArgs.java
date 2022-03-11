@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kafkaconnect.inputs;
 
 import io.pulumi.awsnative.kafkaconnect.inputs.ConnectorApacheKafkaClusterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class ConnectorKafkaClusterArgs extends io.pulumi.resources.Resourc
     public static final ConnectorKafkaClusterArgs Empty = new ConnectorKafkaClusterArgs();
 
     @InputImport(name="apacheKafkaCluster", required=true)
-      private final Input<ConnectorApacheKafkaClusterArgs> apacheKafkaCluster;
+      private final Output<ConnectorApacheKafkaClusterArgs> apacheKafkaCluster;
 
-    public Input<ConnectorApacheKafkaClusterArgs> getApacheKafkaCluster() {
+    public Output<ConnectorApacheKafkaClusterArgs> getApacheKafkaCluster() {
         return this.apacheKafkaCluster;
     }
 
-    public ConnectorKafkaClusterArgs(Input<ConnectorApacheKafkaClusterArgs> apacheKafkaCluster) {
+    public ConnectorKafkaClusterArgs(Output<ConnectorApacheKafkaClusterArgs> apacheKafkaCluster) {
         this.apacheKafkaCluster = Objects.requireNonNull(apacheKafkaCluster, "expected parameter 'apacheKafkaCluster' to be non-null");
     }
 
     private ConnectorKafkaClusterArgs() {
-        this.apacheKafkaCluster = Input.empty();
+        this.apacheKafkaCluster = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ConnectorKafkaClusterArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<ConnectorApacheKafkaClusterArgs> apacheKafkaCluster;
+        private Output<ConnectorApacheKafkaClusterArgs> apacheKafkaCluster;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ConnectorKafkaClusterArgs extends io.pulumi.resources.Resourc
     	      this.apacheKafkaCluster = defaults.apacheKafkaCluster;
         }
 
-        public Builder apacheKafkaCluster(Input<ConnectorApacheKafkaClusterArgs> apacheKafkaCluster) {
+        public Builder apacheKafkaCluster(Output<ConnectorApacheKafkaClusterArgs> apacheKafkaCluster) {
             this.apacheKafkaCluster = Objects.requireNonNull(apacheKafkaCluster);
             return this;
         }
 
         public Builder apacheKafkaCluster(ConnectorApacheKafkaClusterArgs apacheKafkaCluster) {
-            this.apacheKafkaCluster = Input.of(Objects.requireNonNull(apacheKafkaCluster));
+            this.apacheKafkaCluster = Output.of(Objects.requireNonNull(apacheKafkaCluster));
             return this;
         }
         public ConnectorKafkaClusterArgs build() {

@@ -6,7 +6,6 @@ package io.pulumi.aws.datasync;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.datasync.LocationFsxWindowsArgs;
 import io.pulumi.aws.datasync.inputs.LocationFsxWindowsState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -224,14 +223,14 @@ public class LocationFsxWindows extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public LocationFsxWindows(String name, LocationFsxWindowsArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:datasync/locationFsxWindows:LocationFsxWindows", name, args == null ? LocationFsxWindowsArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:datasync/locationFsxWindows:LocationFsxWindows", name, args == null ? LocationFsxWindowsArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private LocationFsxWindows(String name, Input<String> id, @Nullable LocationFsxWindowsState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private LocationFsxWindows(String name, Output<String> id, @Nullable LocationFsxWindowsState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:datasync/locationFsxWindows:LocationFsxWindows", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -247,7 +246,7 @@ public class LocationFsxWindows extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static LocationFsxWindows get(String name, Input<String> id, @Nullable LocationFsxWindowsState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static LocationFsxWindows get(String name, Output<String> id, @Nullable LocationFsxWindowsState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new LocationFsxWindows(name, id, state, options);
     }
 }

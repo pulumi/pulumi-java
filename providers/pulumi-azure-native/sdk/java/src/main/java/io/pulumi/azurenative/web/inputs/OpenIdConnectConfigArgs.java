@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class OpenIdConnectConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="authorizationEndpoint")
-      private final @Nullable Input<String> authorizationEndpoint;
+      private final @Nullable Output<String> authorizationEndpoint;
 
-    public Input<String> getAuthorizationEndpoint() {
-        return this.authorizationEndpoint == null ? Input.empty() : this.authorizationEndpoint;
+    public Output<String> getAuthorizationEndpoint() {
+        return this.authorizationEndpoint == null ? Output.empty() : this.authorizationEndpoint;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class OpenIdConnectConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="certificationUri")
-      private final @Nullable Input<String> certificationUri;
+      private final @Nullable Output<String> certificationUri;
 
-    public Input<String> getCertificationUri() {
-        return this.certificationUri == null ? Input.empty() : this.certificationUri;
+    public Output<String> getCertificationUri() {
+        return this.certificationUri == null ? Output.empty() : this.certificationUri;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class OpenIdConnectConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="issuer")
-      private final @Nullable Input<String> issuer;
+      private final @Nullable Output<String> issuer;
 
-    public Input<String> getIssuer() {
-        return this.issuer == null ? Input.empty() : this.issuer;
+    public Output<String> getIssuer() {
+        return this.issuer == null ? Output.empty() : this.issuer;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class OpenIdConnectConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tokenEndpoint")
-      private final @Nullable Input<String> tokenEndpoint;
+      private final @Nullable Output<String> tokenEndpoint;
 
-    public Input<String> getTokenEndpoint() {
-        return this.tokenEndpoint == null ? Input.empty() : this.tokenEndpoint;
+    public Output<String> getTokenEndpoint() {
+        return this.tokenEndpoint == null ? Output.empty() : this.tokenEndpoint;
     }
 
     /**
@@ -67,18 +67,18 @@ public final class OpenIdConnectConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="wellKnownOpenIdConfiguration")
-      private final @Nullable Input<String> wellKnownOpenIdConfiguration;
+      private final @Nullable Output<String> wellKnownOpenIdConfiguration;
 
-    public Input<String> getWellKnownOpenIdConfiguration() {
-        return this.wellKnownOpenIdConfiguration == null ? Input.empty() : this.wellKnownOpenIdConfiguration;
+    public Output<String> getWellKnownOpenIdConfiguration() {
+        return this.wellKnownOpenIdConfiguration == null ? Output.empty() : this.wellKnownOpenIdConfiguration;
     }
 
     public OpenIdConnectConfigArgs(
-        @Nullable Input<String> authorizationEndpoint,
-        @Nullable Input<String> certificationUri,
-        @Nullable Input<String> issuer,
-        @Nullable Input<String> tokenEndpoint,
-        @Nullable Input<String> wellKnownOpenIdConfiguration) {
+        @Nullable Output<String> authorizationEndpoint,
+        @Nullable Output<String> certificationUri,
+        @Nullable Output<String> issuer,
+        @Nullable Output<String> tokenEndpoint,
+        @Nullable Output<String> wellKnownOpenIdConfiguration) {
         this.authorizationEndpoint = authorizationEndpoint;
         this.certificationUri = certificationUri;
         this.issuer = issuer;
@@ -87,11 +87,11 @@ public final class OpenIdConnectConfigArgs extends io.pulumi.resources.ResourceA
     }
 
     private OpenIdConnectConfigArgs() {
-        this.authorizationEndpoint = Input.empty();
-        this.certificationUri = Input.empty();
-        this.issuer = Input.empty();
-        this.tokenEndpoint = Input.empty();
-        this.wellKnownOpenIdConfiguration = Input.empty();
+        this.authorizationEndpoint = Output.empty();
+        this.certificationUri = Output.empty();
+        this.issuer = Output.empty();
+        this.tokenEndpoint = Output.empty();
+        this.wellKnownOpenIdConfiguration = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,11 +103,11 @@ public final class OpenIdConnectConfigArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> authorizationEndpoint;
-        private @Nullable Input<String> certificationUri;
-        private @Nullable Input<String> issuer;
-        private @Nullable Input<String> tokenEndpoint;
-        private @Nullable Input<String> wellKnownOpenIdConfiguration;
+        private @Nullable Output<String> authorizationEndpoint;
+        private @Nullable Output<String> certificationUri;
+        private @Nullable Output<String> issuer;
+        private @Nullable Output<String> tokenEndpoint;
+        private @Nullable Output<String> wellKnownOpenIdConfiguration;
 
         public Builder() {
     	      // Empty
@@ -122,53 +122,53 @@ public final class OpenIdConnectConfigArgs extends io.pulumi.resources.ResourceA
     	      this.wellKnownOpenIdConfiguration = defaults.wellKnownOpenIdConfiguration;
         }
 
-        public Builder authorizationEndpoint(@Nullable Input<String> authorizationEndpoint) {
+        public Builder authorizationEndpoint(@Nullable Output<String> authorizationEndpoint) {
             this.authorizationEndpoint = authorizationEndpoint;
             return this;
         }
 
         public Builder authorizationEndpoint(@Nullable String authorizationEndpoint) {
-            this.authorizationEndpoint = Input.ofNullable(authorizationEndpoint);
+            this.authorizationEndpoint = Output.ofNullable(authorizationEndpoint);
             return this;
         }
 
-        public Builder certificationUri(@Nullable Input<String> certificationUri) {
+        public Builder certificationUri(@Nullable Output<String> certificationUri) {
             this.certificationUri = certificationUri;
             return this;
         }
 
         public Builder certificationUri(@Nullable String certificationUri) {
-            this.certificationUri = Input.ofNullable(certificationUri);
+            this.certificationUri = Output.ofNullable(certificationUri);
             return this;
         }
 
-        public Builder issuer(@Nullable Input<String> issuer) {
+        public Builder issuer(@Nullable Output<String> issuer) {
             this.issuer = issuer;
             return this;
         }
 
         public Builder issuer(@Nullable String issuer) {
-            this.issuer = Input.ofNullable(issuer);
+            this.issuer = Output.ofNullable(issuer);
             return this;
         }
 
-        public Builder tokenEndpoint(@Nullable Input<String> tokenEndpoint) {
+        public Builder tokenEndpoint(@Nullable Output<String> tokenEndpoint) {
             this.tokenEndpoint = tokenEndpoint;
             return this;
         }
 
         public Builder tokenEndpoint(@Nullable String tokenEndpoint) {
-            this.tokenEndpoint = Input.ofNullable(tokenEndpoint);
+            this.tokenEndpoint = Output.ofNullable(tokenEndpoint);
             return this;
         }
 
-        public Builder wellKnownOpenIdConfiguration(@Nullable Input<String> wellKnownOpenIdConfiguration) {
+        public Builder wellKnownOpenIdConfiguration(@Nullable Output<String> wellKnownOpenIdConfiguration) {
             this.wellKnownOpenIdConfiguration = wellKnownOpenIdConfiguration;
             return this;
         }
 
         public Builder wellKnownOpenIdConfiguration(@Nullable String wellKnownOpenIdConfiguration) {
-            this.wellKnownOpenIdConfiguration = Input.ofNullable(wellKnownOpenIdConfiguration);
+            this.wellKnownOpenIdConfiguration = Output.ofNullable(wellKnownOpenIdConfiguration);
             return this;
         }
         public OpenIdConnectConfigArgs build() {

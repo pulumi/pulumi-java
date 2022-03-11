@@ -8,7 +8,7 @@ import io.pulumi.azurenative.databox.inputs.ManagedDiskDetailsArgs;
 import io.pulumi.azurenative.databox.inputs.StorageAccountDetailsArgs;
 import io.pulumi.azurenative.databox.inputs.TransferConfigurationArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -28,9 +28,9 @@ public final class DataExportDetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="accountDetails", required=true)
-      private final Input<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails;
+      private final Output<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails;
 
-    public Input<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> getAccountDetails() {
+    public Output<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> getAccountDetails() {
         return this.accountDetails;
     }
 
@@ -39,10 +39,10 @@ public final class DataExportDetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="logCollectionLevel")
-      private final @Nullable Input<Either<String,LogCollectionLevel>> logCollectionLevel;
+      private final @Nullable Output<Either<String,LogCollectionLevel>> logCollectionLevel;
 
-    public Input<Either<String,LogCollectionLevel>> getLogCollectionLevel() {
-        return this.logCollectionLevel == null ? Input.empty() : this.logCollectionLevel;
+    public Output<Either<String,LogCollectionLevel>> getLogCollectionLevel() {
+        return this.logCollectionLevel == null ? Output.empty() : this.logCollectionLevel;
     }
 
     /**
@@ -50,25 +50,25 @@ public final class DataExportDetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="transferConfiguration", required=true)
-      private final Input<TransferConfigurationArgs> transferConfiguration;
+      private final Output<TransferConfigurationArgs> transferConfiguration;
 
-    public Input<TransferConfigurationArgs> getTransferConfiguration() {
+    public Output<TransferConfigurationArgs> getTransferConfiguration() {
         return this.transferConfiguration;
     }
 
     public DataExportDetailsArgs(
-        Input<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails,
-        @Nullable Input<Either<String,LogCollectionLevel>> logCollectionLevel,
-        Input<TransferConfigurationArgs> transferConfiguration) {
+        Output<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails,
+        @Nullable Output<Either<String,LogCollectionLevel>> logCollectionLevel,
+        Output<TransferConfigurationArgs> transferConfiguration) {
         this.accountDetails = Objects.requireNonNull(accountDetails, "expected parameter 'accountDetails' to be non-null");
-        this.logCollectionLevel = logCollectionLevel == null ? Input.ofLeft("Error") : logCollectionLevel;
+        this.logCollectionLevel = logCollectionLevel == null ? Output.ofLeft("Error") : logCollectionLevel;
         this.transferConfiguration = Objects.requireNonNull(transferConfiguration, "expected parameter 'transferConfiguration' to be non-null");
     }
 
     private DataExportDetailsArgs() {
-        this.accountDetails = Input.empty();
-        this.logCollectionLevel = Input.empty();
-        this.transferConfiguration = Input.empty();
+        this.accountDetails = Output.empty();
+        this.logCollectionLevel = Output.empty();
+        this.transferConfiguration = Output.empty();
     }
 
     public static Builder builder() {
@@ -80,9 +80,9 @@ public final class DataExportDetailsArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails;
-        private @Nullable Input<Either<String,LogCollectionLevel>> logCollectionLevel;
-        private Input<TransferConfigurationArgs> transferConfiguration;
+        private Output<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails;
+        private @Nullable Output<Either<String,LogCollectionLevel>> logCollectionLevel;
+        private Output<TransferConfigurationArgs> transferConfiguration;
 
         public Builder() {
     	      // Empty
@@ -95,33 +95,33 @@ public final class DataExportDetailsArgs extends io.pulumi.resources.ResourceArg
     	      this.transferConfiguration = defaults.transferConfiguration;
         }
 
-        public Builder accountDetails(Input<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails) {
+        public Builder accountDetails(Output<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails) {
             this.accountDetails = Objects.requireNonNull(accountDetails);
             return this;
         }
 
         public Builder accountDetails(Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs> accountDetails) {
-            this.accountDetails = Input.of(Objects.requireNonNull(accountDetails));
+            this.accountDetails = Output.of(Objects.requireNonNull(accountDetails));
             return this;
         }
 
-        public Builder logCollectionLevel(@Nullable Input<Either<String,LogCollectionLevel>> logCollectionLevel) {
+        public Builder logCollectionLevel(@Nullable Output<Either<String,LogCollectionLevel>> logCollectionLevel) {
             this.logCollectionLevel = logCollectionLevel;
             return this;
         }
 
         public Builder logCollectionLevel(@Nullable Either<String,LogCollectionLevel> logCollectionLevel) {
-            this.logCollectionLevel = Input.ofNullable(logCollectionLevel);
+            this.logCollectionLevel = Output.ofNullable(logCollectionLevel);
             return this;
         }
 
-        public Builder transferConfiguration(Input<TransferConfigurationArgs> transferConfiguration) {
+        public Builder transferConfiguration(Output<TransferConfigurationArgs> transferConfiguration) {
             this.transferConfiguration = Objects.requireNonNull(transferConfiguration);
             return this;
         }
 
         public Builder transferConfiguration(TransferConfigurationArgs transferConfiguration) {
-            this.transferConfiguration = Input.of(Objects.requireNonNull(transferConfiguration));
+            this.transferConfiguration = Output.of(Objects.requireNonNull(transferConfiguration));
             return this;
         }
         public DataExportDetailsArgs build() {

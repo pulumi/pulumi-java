@@ -5,7 +5,7 @@ package io.pulumi.awsnative.groundstation;
 
 import io.pulumi.awsnative.groundstation.inputs.DataflowEndpointGroupEndpointDetailsArgs;
 import io.pulumi.awsnative.groundstation.inputs.DataflowEndpointGroupTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -17,29 +17,29 @@ public final class DataflowEndpointGroupArgs extends io.pulumi.resources.Resourc
     public static final DataflowEndpointGroupArgs Empty = new DataflowEndpointGroupArgs();
 
     @InputImport(name="endpointDetails", required=true)
-      private final Input<List<DataflowEndpointGroupEndpointDetailsArgs>> endpointDetails;
+      private final Output<List<DataflowEndpointGroupEndpointDetailsArgs>> endpointDetails;
 
-    public Input<List<DataflowEndpointGroupEndpointDetailsArgs>> getEndpointDetails() {
+    public Output<List<DataflowEndpointGroupEndpointDetailsArgs>> getEndpointDetails() {
         return this.endpointDetails;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<List<DataflowEndpointGroupTagArgs>> tags;
+      private final @Nullable Output<List<DataflowEndpointGroupTagArgs>> tags;
 
-    public Input<List<DataflowEndpointGroupTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<DataflowEndpointGroupTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public DataflowEndpointGroupArgs(
-        Input<List<DataflowEndpointGroupEndpointDetailsArgs>> endpointDetails,
-        @Nullable Input<List<DataflowEndpointGroupTagArgs>> tags) {
+        Output<List<DataflowEndpointGroupEndpointDetailsArgs>> endpointDetails,
+        @Nullable Output<List<DataflowEndpointGroupTagArgs>> tags) {
         this.endpointDetails = Objects.requireNonNull(endpointDetails, "expected parameter 'endpointDetails' to be non-null");
         this.tags = tags;
     }
 
     private DataflowEndpointGroupArgs() {
-        this.endpointDetails = Input.empty();
-        this.tags = Input.empty();
+        this.endpointDetails = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -51,8 +51,8 @@ public final class DataflowEndpointGroupArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<List<DataflowEndpointGroupEndpointDetailsArgs>> endpointDetails;
-        private @Nullable Input<List<DataflowEndpointGroupTagArgs>> tags;
+        private Output<List<DataflowEndpointGroupEndpointDetailsArgs>> endpointDetails;
+        private @Nullable Output<List<DataflowEndpointGroupTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -64,23 +64,23 @@ public final class DataflowEndpointGroupArgs extends io.pulumi.resources.Resourc
     	      this.tags = defaults.tags;
         }
 
-        public Builder endpointDetails(Input<List<DataflowEndpointGroupEndpointDetailsArgs>> endpointDetails) {
+        public Builder endpointDetails(Output<List<DataflowEndpointGroupEndpointDetailsArgs>> endpointDetails) {
             this.endpointDetails = Objects.requireNonNull(endpointDetails);
             return this;
         }
 
         public Builder endpointDetails(List<DataflowEndpointGroupEndpointDetailsArgs> endpointDetails) {
-            this.endpointDetails = Input.of(Objects.requireNonNull(endpointDetails));
+            this.endpointDetails = Output.of(Objects.requireNonNull(endpointDetails));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<DataflowEndpointGroupTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<DataflowEndpointGroupTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<DataflowEndpointGroupTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public DataflowEndpointGroupArgs build() {

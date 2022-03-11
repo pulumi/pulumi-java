@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.streamanalytics;
 
 import io.pulumi.azurenative.streamanalytics.inputs.PrivateEndpointPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="clusterName", required=true)
-      private final Input<String> clusterName;
+      private final Output<String> clusterName;
 
-    public Input<String> getClusterName() {
+    public Output<String> getClusterName() {
         return this.clusterName;
     }
 
@@ -31,10 +31,10 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="privateEndpointName")
-      private final @Nullable Input<String> privateEndpointName;
+      private final @Nullable Output<String> privateEndpointName;
 
-    public Input<String> getPrivateEndpointName() {
-        return this.privateEndpointName == null ? Input.empty() : this.privateEndpointName;
+    public Output<String> getPrivateEndpointName() {
+        return this.privateEndpointName == null ? Output.empty() : this.privateEndpointName;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<PrivateEndpointPropertiesArgs> properties;
+      private final @Nullable Output<PrivateEndpointPropertiesArgs> properties;
 
-    public Input<PrivateEndpointPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<PrivateEndpointPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public PrivateEndpointArgs(
-        Input<String> clusterName,
-        @Nullable Input<String> privateEndpointName,
-        @Nullable Input<PrivateEndpointPropertiesArgs> properties,
-        Input<String> resourceGroupName) {
+        Output<String> clusterName,
+        @Nullable Output<String> privateEndpointName,
+        @Nullable Output<PrivateEndpointPropertiesArgs> properties,
+        Output<String> resourceGroupName) {
         this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
         this.privateEndpointName = privateEndpointName;
         this.properties = properties;
@@ -71,10 +71,10 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private PrivateEndpointArgs() {
-        this.clusterName = Input.empty();
-        this.privateEndpointName = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.clusterName = Output.empty();
+        this.privateEndpointName = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<String> clusterName;
-        private @Nullable Input<String> privateEndpointName;
-        private @Nullable Input<PrivateEndpointPropertiesArgs> properties;
-        private Input<String> resourceGroupName;
+        private Output<String> clusterName;
+        private @Nullable Output<String> privateEndpointName;
+        private @Nullable Output<PrivateEndpointPropertiesArgs> properties;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder clusterName(Input<String> clusterName) {
+        public Builder clusterName(Output<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
         public Builder clusterName(String clusterName) {
-            this.clusterName = Input.of(Objects.requireNonNull(clusterName));
+            this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
 
-        public Builder privateEndpointName(@Nullable Input<String> privateEndpointName) {
+        public Builder privateEndpointName(@Nullable Output<String> privateEndpointName) {
             this.privateEndpointName = privateEndpointName;
             return this;
         }
 
         public Builder privateEndpointName(@Nullable String privateEndpointName) {
-            this.privateEndpointName = Input.ofNullable(privateEndpointName);
+            this.privateEndpointName = Output.ofNullable(privateEndpointName);
             return this;
         }
 
-        public Builder properties(@Nullable Input<PrivateEndpointPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<PrivateEndpointPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable PrivateEndpointPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public PrivateEndpointArgs build() {

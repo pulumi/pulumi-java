@@ -4,7 +4,7 @@
 package io.pulumi.aws.elb.inputs;
 
 import io.pulumi.aws.elb.inputs.LoadBalancerPolicyPolicyAttributeGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class LoadBalancerPolicyState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="loadBalancerName")
-      private final @Nullable Input<String> loadBalancerName;
+      private final @Nullable Output<String> loadBalancerName;
 
-    public Input<String> getLoadBalancerName() {
-        return this.loadBalancerName == null ? Input.empty() : this.loadBalancerName;
+    public Output<String> getLoadBalancerName() {
+        return this.loadBalancerName == null ? Output.empty() : this.loadBalancerName;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class LoadBalancerPolicyState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="policyAttributes")
-      private final @Nullable Input<List<LoadBalancerPolicyPolicyAttributeGetArgs>> policyAttributes;
+      private final @Nullable Output<List<LoadBalancerPolicyPolicyAttributeGetArgs>> policyAttributes;
 
-    public Input<List<LoadBalancerPolicyPolicyAttributeGetArgs>> getPolicyAttributes() {
-        return this.policyAttributes == null ? Input.empty() : this.policyAttributes;
+    public Output<List<LoadBalancerPolicyPolicyAttributeGetArgs>> getPolicyAttributes() {
+        return this.policyAttributes == null ? Output.empty() : this.policyAttributes;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class LoadBalancerPolicyState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="policyName")
-      private final @Nullable Input<String> policyName;
+      private final @Nullable Output<String> policyName;
 
-    public Input<String> getPolicyName() {
-        return this.policyName == null ? Input.empty() : this.policyName;
+    public Output<String> getPolicyName() {
+        return this.policyName == null ? Output.empty() : this.policyName;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class LoadBalancerPolicyState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="policyTypeName")
-      private final @Nullable Input<String> policyTypeName;
+      private final @Nullable Output<String> policyTypeName;
 
-    public Input<String> getPolicyTypeName() {
-        return this.policyTypeName == null ? Input.empty() : this.policyTypeName;
+    public Output<String> getPolicyTypeName() {
+        return this.policyTypeName == null ? Output.empty() : this.policyTypeName;
     }
 
     public LoadBalancerPolicyState(
-        @Nullable Input<String> loadBalancerName,
-        @Nullable Input<List<LoadBalancerPolicyPolicyAttributeGetArgs>> policyAttributes,
-        @Nullable Input<String> policyName,
-        @Nullable Input<String> policyTypeName) {
+        @Nullable Output<String> loadBalancerName,
+        @Nullable Output<List<LoadBalancerPolicyPolicyAttributeGetArgs>> policyAttributes,
+        @Nullable Output<String> policyName,
+        @Nullable Output<String> policyTypeName) {
         this.loadBalancerName = loadBalancerName;
         this.policyAttributes = policyAttributes;
         this.policyName = policyName;
@@ -72,10 +72,10 @@ public final class LoadBalancerPolicyState extends io.pulumi.resources.ResourceA
     }
 
     private LoadBalancerPolicyState() {
-        this.loadBalancerName = Input.empty();
-        this.policyAttributes = Input.empty();
-        this.policyName = Input.empty();
-        this.policyTypeName = Input.empty();
+        this.loadBalancerName = Output.empty();
+        this.policyAttributes = Output.empty();
+        this.policyName = Output.empty();
+        this.policyTypeName = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class LoadBalancerPolicyState extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> loadBalancerName;
-        private @Nullable Input<List<LoadBalancerPolicyPolicyAttributeGetArgs>> policyAttributes;
-        private @Nullable Input<String> policyName;
-        private @Nullable Input<String> policyTypeName;
+        private @Nullable Output<String> loadBalancerName;
+        private @Nullable Output<List<LoadBalancerPolicyPolicyAttributeGetArgs>> policyAttributes;
+        private @Nullable Output<String> policyName;
+        private @Nullable Output<String> policyTypeName;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class LoadBalancerPolicyState extends io.pulumi.resources.ResourceA
     	      this.policyTypeName = defaults.policyTypeName;
         }
 
-        public Builder loadBalancerName(@Nullable Input<String> loadBalancerName) {
+        public Builder loadBalancerName(@Nullable Output<String> loadBalancerName) {
             this.loadBalancerName = loadBalancerName;
             return this;
         }
 
         public Builder loadBalancerName(@Nullable String loadBalancerName) {
-            this.loadBalancerName = Input.ofNullable(loadBalancerName);
+            this.loadBalancerName = Output.ofNullable(loadBalancerName);
             return this;
         }
 
-        public Builder policyAttributes(@Nullable Input<List<LoadBalancerPolicyPolicyAttributeGetArgs>> policyAttributes) {
+        public Builder policyAttributes(@Nullable Output<List<LoadBalancerPolicyPolicyAttributeGetArgs>> policyAttributes) {
             this.policyAttributes = policyAttributes;
             return this;
         }
 
         public Builder policyAttributes(@Nullable List<LoadBalancerPolicyPolicyAttributeGetArgs> policyAttributes) {
-            this.policyAttributes = Input.ofNullable(policyAttributes);
+            this.policyAttributes = Output.ofNullable(policyAttributes);
             return this;
         }
 
-        public Builder policyName(@Nullable Input<String> policyName) {
+        public Builder policyName(@Nullable Output<String> policyName) {
             this.policyName = policyName;
             return this;
         }
 
         public Builder policyName(@Nullable String policyName) {
-            this.policyName = Input.ofNullable(policyName);
+            this.policyName = Output.ofNullable(policyName);
             return this;
         }
 
-        public Builder policyTypeName(@Nullable Input<String> policyTypeName) {
+        public Builder policyTypeName(@Nullable Output<String> policyTypeName) {
             this.policyTypeName = policyTypeName;
             return this;
         }
 
         public Builder policyTypeName(@Nullable String policyTypeName) {
-            this.policyTypeName = Input.ofNullable(policyTypeName);
+            this.policyTypeName = Output.ofNullable(policyTypeName);
             return this;
         }
         public LoadBalancerPolicyState build() {

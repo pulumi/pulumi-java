@@ -5,7 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.enums.EncoderNamedPreset;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,9 +25,9 @@ public final class BuiltInStandardEncoderPresetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
@@ -36,22 +36,22 @@ public final class BuiltInStandardEncoderPresetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="presetName", required=true)
-      private final Input<Either<String,EncoderNamedPreset>> presetName;
+      private final Output<Either<String,EncoderNamedPreset>> presetName;
 
-    public Input<Either<String,EncoderNamedPreset>> getPresetName() {
+    public Output<Either<String,EncoderNamedPreset>> getPresetName() {
         return this.presetName;
     }
 
     public BuiltInStandardEncoderPresetArgs(
-        Input<String> odataType,
-        Input<Either<String,EncoderNamedPreset>> presetName) {
+        Output<String> odataType,
+        Output<Either<String,EncoderNamedPreset>> presetName) {
         this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
         this.presetName = Objects.requireNonNull(presetName, "expected parameter 'presetName' to be non-null");
     }
 
     private BuiltInStandardEncoderPresetArgs() {
-        this.odataType = Input.empty();
-        this.presetName = Input.empty();
+        this.odataType = Output.empty();
+        this.presetName = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class BuiltInStandardEncoderPresetArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<String> odataType;
-        private Input<Either<String,EncoderNamedPreset>> presetName;
+        private Output<String> odataType;
+        private Output<Either<String,EncoderNamedPreset>> presetName;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class BuiltInStandardEncoderPresetArgs extends io.pulumi.resources.
     	      this.presetName = defaults.presetName;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder presetName(Input<Either<String,EncoderNamedPreset>> presetName) {
+        public Builder presetName(Output<Either<String,EncoderNamedPreset>> presetName) {
             this.presetName = Objects.requireNonNull(presetName);
             return this;
         }
 
         public Builder presetName(Either<String,EncoderNamedPreset> presetName) {
-            this.presetName = Input.of(Objects.requireNonNull(presetName));
+            this.presetName = Output.of(Objects.requireNonNull(presetName));
             return this;
         }
         public BuiltInStandardEncoderPresetArgs build() {

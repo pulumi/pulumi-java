@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class GoogleCloudRetailV2betaFulfillmentInfoArgs extends io.pulumi.
      * 
      */
     @InputImport(name="placeIds")
-      private final @Nullable Input<List<String>> placeIds;
+      private final @Nullable Output<List<String>> placeIds;
 
-    public Input<List<String>> getPlaceIds() {
-        return this.placeIds == null ? Input.empty() : this.placeIds;
+    public Output<List<String>> getPlaceIds() {
+        return this.placeIds == null ? Output.empty() : this.placeIds;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class GoogleCloudRetailV2betaFulfillmentInfoArgs extends io.pulumi.
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public GoogleCloudRetailV2betaFulfillmentInfoArgs(
-        @Nullable Input<List<String>> placeIds,
-        @Nullable Input<String> type) {
+        @Nullable Output<List<String>> placeIds,
+        @Nullable Output<String> type) {
         this.placeIds = placeIds;
         this.type = type;
     }
 
     private GoogleCloudRetailV2betaFulfillmentInfoArgs() {
-        this.placeIds = Input.empty();
-        this.type = Input.empty();
+        this.placeIds = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class GoogleCloudRetailV2betaFulfillmentInfoArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> placeIds;
-        private @Nullable Input<String> type;
+        private @Nullable Output<List<String>> placeIds;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class GoogleCloudRetailV2betaFulfillmentInfoArgs extends io.pulumi.
     	      this.type = defaults.type;
         }
 
-        public Builder placeIds(@Nullable Input<List<String>> placeIds) {
+        public Builder placeIds(@Nullable Output<List<String>> placeIds) {
             this.placeIds = placeIds;
             return this;
         }
 
         public Builder placeIds(@Nullable List<String> placeIds) {
-            this.placeIds = Input.ofNullable(placeIds);
+            this.placeIds = Output.ofNullable(placeIds);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public GoogleCloudRetailV2betaFulfillmentInfoArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.toolresults_v1beta3.enums.HistoryTestPlatform;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class HistoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class HistoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="historyId")
-      private final @Nullable Input<String> historyId;
+      private final @Nullable Output<String> historyId;
 
-    public Input<String> getHistoryId() {
-        return this.historyId == null ? Input.empty() : this.historyId;
+    public Output<String> getHistoryId() {
+        return this.historyId == null ? Output.empty() : this.historyId;
     }
 
     /**
@@ -42,24 +42,24 @@ public final class HistoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     /**
@@ -67,19 +67,19 @@ public final class HistoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="testPlatform")
-      private final @Nullable Input<HistoryTestPlatform> testPlatform;
+      private final @Nullable Output<HistoryTestPlatform> testPlatform;
 
-    public Input<HistoryTestPlatform> getTestPlatform() {
-        return this.testPlatform == null ? Input.empty() : this.testPlatform;
+    public Output<HistoryTestPlatform> getTestPlatform() {
+        return this.testPlatform == null ? Output.empty() : this.testPlatform;
     }
 
     public HistoryArgs(
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> historyId,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<String> requestId,
-        @Nullable Input<HistoryTestPlatform> testPlatform) {
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> historyId,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<String> requestId,
+        @Nullable Output<HistoryTestPlatform> testPlatform) {
         this.displayName = displayName;
         this.historyId = historyId;
         this.name = name;
@@ -89,12 +89,12 @@ public final class HistoryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HistoryArgs() {
-        this.displayName = Input.empty();
-        this.historyId = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.requestId = Input.empty();
-        this.testPlatform = Input.empty();
+        this.displayName = Output.empty();
+        this.historyId = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.requestId = Output.empty();
+        this.testPlatform = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,12 +106,12 @@ public final class HistoryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> historyId;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> requestId;
-        private @Nullable Input<HistoryTestPlatform> testPlatform;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> historyId;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> requestId;
+        private @Nullable Output<HistoryTestPlatform> testPlatform;
 
         public Builder() {
     	      // Empty
@@ -127,63 +127,63 @@ public final class HistoryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.testPlatform = defaults.testPlatform;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder historyId(@Nullable Input<String> historyId) {
+        public Builder historyId(@Nullable Output<String> historyId) {
             this.historyId = historyId;
             return this;
         }
 
         public Builder historyId(@Nullable String historyId) {
-            this.historyId = Input.ofNullable(historyId);
+            this.historyId = Output.ofNullable(historyId);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
 
-        public Builder testPlatform(@Nullable Input<HistoryTestPlatform> testPlatform) {
+        public Builder testPlatform(@Nullable Output<HistoryTestPlatform> testPlatform) {
             this.testPlatform = testPlatform;
             return this;
         }
 
         public Builder testPlatform(@Nullable HistoryTestPlatform testPlatform) {
-            this.testPlatform = Input.ofNullable(testPlatform);
+            this.testPlatform = Output.ofNullable(testPlatform);
             return this;
         }
         public HistoryArgs build() {

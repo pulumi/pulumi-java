@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class SharedVPCServiceProjectArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="hostProject", required=true)
-      private final Input<String> hostProject;
+      private final Output<String> hostProject;
 
-    public Input<String> getHostProject() {
+    public Output<String> getHostProject() {
         return this.hostProject;
     }
 
@@ -29,22 +29,22 @@ public final class SharedVPCServiceProjectArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="serviceProject", required=true)
-      private final Input<String> serviceProject;
+      private final Output<String> serviceProject;
 
-    public Input<String> getServiceProject() {
+    public Output<String> getServiceProject() {
         return this.serviceProject;
     }
 
     public SharedVPCServiceProjectArgs(
-        Input<String> hostProject,
-        Input<String> serviceProject) {
+        Output<String> hostProject,
+        Output<String> serviceProject) {
         this.hostProject = Objects.requireNonNull(hostProject, "expected parameter 'hostProject' to be non-null");
         this.serviceProject = Objects.requireNonNull(serviceProject, "expected parameter 'serviceProject' to be non-null");
     }
 
     private SharedVPCServiceProjectArgs() {
-        this.hostProject = Input.empty();
-        this.serviceProject = Input.empty();
+        this.hostProject = Output.empty();
+        this.serviceProject = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class SharedVPCServiceProjectArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<String> hostProject;
-        private Input<String> serviceProject;
+        private Output<String> hostProject;
+        private Output<String> serviceProject;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class SharedVPCServiceProjectArgs extends io.pulumi.resources.Resou
     	      this.serviceProject = defaults.serviceProject;
         }
 
-        public Builder hostProject(Input<String> hostProject) {
+        public Builder hostProject(Output<String> hostProject) {
             this.hostProject = Objects.requireNonNull(hostProject);
             return this;
         }
 
         public Builder hostProject(String hostProject) {
-            this.hostProject = Input.of(Objects.requireNonNull(hostProject));
+            this.hostProject = Output.of(Objects.requireNonNull(hostProject));
             return this;
         }
 
-        public Builder serviceProject(Input<String> serviceProject) {
+        public Builder serviceProject(Output<String> serviceProject) {
             this.serviceProject = Objects.requireNonNull(serviceProject);
             return this;
         }
 
         public Builder serviceProject(String serviceProject) {
-            this.serviceProject = Input.of(Objects.requireNonNull(serviceProject));
+            this.serviceProject = Output.of(Objects.requireNonNull(serviceProject));
             return this;
         }
         public SharedVPCServiceProjectArgs build() {

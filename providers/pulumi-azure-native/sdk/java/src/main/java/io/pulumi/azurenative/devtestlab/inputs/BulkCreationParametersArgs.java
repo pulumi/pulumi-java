@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class BulkCreationParametersArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="instanceCount")
-      private final @Nullable Input<Integer> instanceCount;
+      private final @Nullable Output<Integer> instanceCount;
 
-    public Input<Integer> getInstanceCount() {
-        return this.instanceCount == null ? Input.empty() : this.instanceCount;
+    public Output<Integer> getInstanceCount() {
+        return this.instanceCount == null ? Output.empty() : this.instanceCount;
     }
 
-    public BulkCreationParametersArgs(@Nullable Input<Integer> instanceCount) {
+    public BulkCreationParametersArgs(@Nullable Output<Integer> instanceCount) {
         this.instanceCount = instanceCount;
     }
 
     private BulkCreationParametersArgs() {
-        this.instanceCount = Input.empty();
+        this.instanceCount = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class BulkCreationParametersArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> instanceCount;
+        private @Nullable Output<Integer> instanceCount;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class BulkCreationParametersArgs extends io.pulumi.resources.Resour
     	      this.instanceCount = defaults.instanceCount;
         }
 
-        public Builder instanceCount(@Nullable Input<Integer> instanceCount) {
+        public Builder instanceCount(@Nullable Output<Integer> instanceCount) {
             this.instanceCount = instanceCount;
             return this;
         }
 
         public Builder instanceCount(@Nullable Integer instanceCount) {
-            this.instanceCount = Input.ofNullable(instanceCount);
+            this.instanceCount = Output.ofNullable(instanceCount);
             return this;
         }
         public BulkCreationParametersArgs build() {

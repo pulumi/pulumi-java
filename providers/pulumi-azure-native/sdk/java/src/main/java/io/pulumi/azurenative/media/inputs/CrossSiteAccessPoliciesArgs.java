@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class CrossSiteAccessPoliciesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="clientAccessPolicy")
-      private final @Nullable Input<String> clientAccessPolicy;
+      private final @Nullable Output<String> clientAccessPolicy;
 
-    public Input<String> getClientAccessPolicy() {
-        return this.clientAccessPolicy == null ? Input.empty() : this.clientAccessPolicy;
+    public Output<String> getClientAccessPolicy() {
+        return this.clientAccessPolicy == null ? Output.empty() : this.clientAccessPolicy;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class CrossSiteAccessPoliciesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="crossDomainPolicy")
-      private final @Nullable Input<String> crossDomainPolicy;
+      private final @Nullable Output<String> crossDomainPolicy;
 
-    public Input<String> getCrossDomainPolicy() {
-        return this.crossDomainPolicy == null ? Input.empty() : this.crossDomainPolicy;
+    public Output<String> getCrossDomainPolicy() {
+        return this.crossDomainPolicy == null ? Output.empty() : this.crossDomainPolicy;
     }
 
     public CrossSiteAccessPoliciesArgs(
-        @Nullable Input<String> clientAccessPolicy,
-        @Nullable Input<String> crossDomainPolicy) {
+        @Nullable Output<String> clientAccessPolicy,
+        @Nullable Output<String> crossDomainPolicy) {
         this.clientAccessPolicy = clientAccessPolicy;
         this.crossDomainPolicy = crossDomainPolicy;
     }
 
     private CrossSiteAccessPoliciesArgs() {
-        this.clientAccessPolicy = Input.empty();
-        this.crossDomainPolicy = Input.empty();
+        this.clientAccessPolicy = Output.empty();
+        this.crossDomainPolicy = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class CrossSiteAccessPoliciesArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> clientAccessPolicy;
-        private @Nullable Input<String> crossDomainPolicy;
+        private @Nullable Output<String> clientAccessPolicy;
+        private @Nullable Output<String> crossDomainPolicy;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class CrossSiteAccessPoliciesArgs extends io.pulumi.resources.Resou
     	      this.crossDomainPolicy = defaults.crossDomainPolicy;
         }
 
-        public Builder clientAccessPolicy(@Nullable Input<String> clientAccessPolicy) {
+        public Builder clientAccessPolicy(@Nullable Output<String> clientAccessPolicy) {
             this.clientAccessPolicy = clientAccessPolicy;
             return this;
         }
 
         public Builder clientAccessPolicy(@Nullable String clientAccessPolicy) {
-            this.clientAccessPolicy = Input.ofNullable(clientAccessPolicy);
+            this.clientAccessPolicy = Output.ofNullable(clientAccessPolicy);
             return this;
         }
 
-        public Builder crossDomainPolicy(@Nullable Input<String> crossDomainPolicy) {
+        public Builder crossDomainPolicy(@Nullable Output<String> crossDomainPolicy) {
             this.crossDomainPolicy = crossDomainPolicy;
             return this;
         }
 
         public Builder crossDomainPolicy(@Nullable String crossDomainPolicy) {
-            this.crossDomainPolicy = Input.ofNullable(crossDomainPolicy);
+            this.crossDomainPolicy = Output.ofNullable(crossDomainPolicy);
             return this;
         }
         public CrossSiteAccessPoliciesArgs build() {

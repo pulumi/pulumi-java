@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class TopicRuleErrorActionStepFunctionsGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="executionNamePrefix")
-      private final @Nullable Input<String> executionNamePrefix;
+      private final @Nullable Output<String> executionNamePrefix;
 
-    public Input<String> getExecutionNamePrefix() {
-        return this.executionNamePrefix == null ? Input.empty() : this.executionNamePrefix;
+    public Output<String> getExecutionNamePrefix() {
+        return this.executionNamePrefix == null ? Output.empty() : this.executionNamePrefix;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class TopicRuleErrorActionStepFunctionsGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
@@ -41,25 +41,25 @@ public final class TopicRuleErrorActionStepFunctionsGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="stateMachineName", required=true)
-      private final Input<String> stateMachineName;
+      private final Output<String> stateMachineName;
 
-    public Input<String> getStateMachineName() {
+    public Output<String> getStateMachineName() {
         return this.stateMachineName;
     }
 
     public TopicRuleErrorActionStepFunctionsGetArgs(
-        @Nullable Input<String> executionNamePrefix,
-        Input<String> roleArn,
-        Input<String> stateMachineName) {
+        @Nullable Output<String> executionNamePrefix,
+        Output<String> roleArn,
+        Output<String> stateMachineName) {
         this.executionNamePrefix = executionNamePrefix;
         this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
         this.stateMachineName = Objects.requireNonNull(stateMachineName, "expected parameter 'stateMachineName' to be non-null");
     }
 
     private TopicRuleErrorActionStepFunctionsGetArgs() {
-        this.executionNamePrefix = Input.empty();
-        this.roleArn = Input.empty();
-        this.stateMachineName = Input.empty();
+        this.executionNamePrefix = Output.empty();
+        this.roleArn = Output.empty();
+        this.stateMachineName = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class TopicRuleErrorActionStepFunctionsGetArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> executionNamePrefix;
-        private Input<String> roleArn;
-        private Input<String> stateMachineName;
+        private @Nullable Output<String> executionNamePrefix;
+        private Output<String> roleArn;
+        private Output<String> stateMachineName;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class TopicRuleErrorActionStepFunctionsGetArgs extends io.pulumi.re
     	      this.stateMachineName = defaults.stateMachineName;
         }
 
-        public Builder executionNamePrefix(@Nullable Input<String> executionNamePrefix) {
+        public Builder executionNamePrefix(@Nullable Output<String> executionNamePrefix) {
             this.executionNamePrefix = executionNamePrefix;
             return this;
         }
 
         public Builder executionNamePrefix(@Nullable String executionNamePrefix) {
-            this.executionNamePrefix = Input.ofNullable(executionNamePrefix);
+            this.executionNamePrefix = Output.ofNullable(executionNamePrefix);
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder stateMachineName(Input<String> stateMachineName) {
+        public Builder stateMachineName(Output<String> stateMachineName) {
             this.stateMachineName = Objects.requireNonNull(stateMachineName);
             return this;
         }
 
         public Builder stateMachineName(String stateMachineName) {
-            this.stateMachineName = Input.of(Objects.requireNonNull(stateMachineName));
+            this.stateMachineName = Output.of(Objects.requireNonNull(stateMachineName));
             return this;
         }
         public TopicRuleErrorActionStepFunctionsGetArgs build() {

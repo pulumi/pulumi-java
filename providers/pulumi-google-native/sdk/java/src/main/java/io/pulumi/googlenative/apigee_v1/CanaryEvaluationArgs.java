@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs;
 import java.lang.String;
@@ -19,9 +19,9 @@ public final class CanaryEvaluationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="control", required=true)
-      private final Input<String> control;
+      private final Output<String> control;
 
-    public Input<String> getControl() {
+    public Output<String> getControl() {
         return this.control;
     }
 
@@ -30,16 +30,16 @@ public final class CanaryEvaluationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="endTime", required=true)
-      private final Input<String> endTime;
+      private final Output<String> endTime;
 
-    public Input<String> getEndTime() {
+    public Output<String> getEndTime() {
         return this.endTime;
     }
 
     @InputImport(name="instanceId", required=true)
-      private final Input<String> instanceId;
+      private final Output<String> instanceId;
 
-    public Input<String> getInstanceId() {
+    public Output<String> getInstanceId() {
         return this.instanceId;
     }
 
@@ -48,16 +48,16 @@ public final class CanaryEvaluationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="metricLabels", required=true)
-      private final Input<GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs> metricLabels;
+      private final Output<GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs> metricLabels;
 
-    public Input<GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs> getMetricLabels() {
+    public Output<GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs> getMetricLabels() {
         return this.metricLabels;
     }
 
     @InputImport(name="organizationId", required=true)
-      private final Input<String> organizationId;
+      private final Output<String> organizationId;
 
-    public Input<String> getOrganizationId() {
+    public Output<String> getOrganizationId() {
         return this.organizationId;
     }
 
@@ -66,9 +66,9 @@ public final class CanaryEvaluationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="startTime", required=true)
-      private final Input<String> startTime;
+      private final Output<String> startTime;
 
-    public Input<String> getStartTime() {
+    public Output<String> getStartTime() {
         return this.startTime;
     }
 
@@ -77,20 +77,20 @@ public final class CanaryEvaluationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="treatment", required=true)
-      private final Input<String> treatment;
+      private final Output<String> treatment;
 
-    public Input<String> getTreatment() {
+    public Output<String> getTreatment() {
         return this.treatment;
     }
 
     public CanaryEvaluationArgs(
-        Input<String> control,
-        Input<String> endTime,
-        Input<String> instanceId,
-        Input<GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs> metricLabels,
-        Input<String> organizationId,
-        Input<String> startTime,
-        Input<String> treatment) {
+        Output<String> control,
+        Output<String> endTime,
+        Output<String> instanceId,
+        Output<GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs> metricLabels,
+        Output<String> organizationId,
+        Output<String> startTime,
+        Output<String> treatment) {
         this.control = Objects.requireNonNull(control, "expected parameter 'control' to be non-null");
         this.endTime = Objects.requireNonNull(endTime, "expected parameter 'endTime' to be non-null");
         this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
@@ -101,13 +101,13 @@ public final class CanaryEvaluationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private CanaryEvaluationArgs() {
-        this.control = Input.empty();
-        this.endTime = Input.empty();
-        this.instanceId = Input.empty();
-        this.metricLabels = Input.empty();
-        this.organizationId = Input.empty();
-        this.startTime = Input.empty();
-        this.treatment = Input.empty();
+        this.control = Output.empty();
+        this.endTime = Output.empty();
+        this.instanceId = Output.empty();
+        this.metricLabels = Output.empty();
+        this.organizationId = Output.empty();
+        this.startTime = Output.empty();
+        this.treatment = Output.empty();
     }
 
     public static Builder builder() {
@@ -119,13 +119,13 @@ public final class CanaryEvaluationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> control;
-        private Input<String> endTime;
-        private Input<String> instanceId;
-        private Input<GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs> metricLabels;
-        private Input<String> organizationId;
-        private Input<String> startTime;
-        private Input<String> treatment;
+        private Output<String> control;
+        private Output<String> endTime;
+        private Output<String> instanceId;
+        private Output<GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs> metricLabels;
+        private Output<String> organizationId;
+        private Output<String> startTime;
+        private Output<String> treatment;
 
         public Builder() {
     	      // Empty
@@ -142,73 +142,73 @@ public final class CanaryEvaluationArgs extends io.pulumi.resources.ResourceArgs
     	      this.treatment = defaults.treatment;
         }
 
-        public Builder control(Input<String> control) {
+        public Builder control(Output<String> control) {
             this.control = Objects.requireNonNull(control);
             return this;
         }
 
         public Builder control(String control) {
-            this.control = Input.of(Objects.requireNonNull(control));
+            this.control = Output.of(Objects.requireNonNull(control));
             return this;
         }
 
-        public Builder endTime(Input<String> endTime) {
+        public Builder endTime(Output<String> endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
         public Builder endTime(String endTime) {
-            this.endTime = Input.of(Objects.requireNonNull(endTime));
+            this.endTime = Output.of(Objects.requireNonNull(endTime));
             return this;
         }
 
-        public Builder instanceId(Input<String> instanceId) {
+        public Builder instanceId(Output<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
         public Builder instanceId(String instanceId) {
-            this.instanceId = Input.of(Objects.requireNonNull(instanceId));
+            this.instanceId = Output.of(Objects.requireNonNull(instanceId));
             return this;
         }
 
-        public Builder metricLabels(Input<GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs> metricLabels) {
+        public Builder metricLabels(Output<GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs> metricLabels) {
             this.metricLabels = Objects.requireNonNull(metricLabels);
             return this;
         }
 
         public Builder metricLabels(GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs metricLabels) {
-            this.metricLabels = Input.of(Objects.requireNonNull(metricLabels));
+            this.metricLabels = Output.of(Objects.requireNonNull(metricLabels));
             return this;
         }
 
-        public Builder organizationId(Input<String> organizationId) {
+        public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
         public Builder organizationId(String organizationId) {
-            this.organizationId = Input.of(Objects.requireNonNull(organizationId));
+            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
 
-        public Builder startTime(Input<String> startTime) {
+        public Builder startTime(Output<String> startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
         public Builder startTime(String startTime) {
-            this.startTime = Input.of(Objects.requireNonNull(startTime));
+            this.startTime = Output.of(Objects.requireNonNull(startTime));
             return this;
         }
 
-        public Builder treatment(Input<String> treatment) {
+        public Builder treatment(Output<String> treatment) {
             this.treatment = Objects.requireNonNull(treatment);
             return this;
         }
 
         public Builder treatment(String treatment) {
-            this.treatment = Input.of(Objects.requireNonNull(treatment));
+            this.treatment = Output.of(Objects.requireNonNull(treatment));
             return this;
         }
         public CanaryEvaluationArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.translate_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.translate_v3.inputs.GcsSourceArgs;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class GlossaryInputConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="gcsSource", required=true)
-      private final Input<GcsSourceArgs> gcsSource;
+      private final Output<GcsSourceArgs> gcsSource;
 
-    public Input<GcsSourceArgs> getGcsSource() {
+    public Output<GcsSourceArgs> getGcsSource() {
         return this.gcsSource;
     }
 
-    public GlossaryInputConfigArgs(Input<GcsSourceArgs> gcsSource) {
+    public GlossaryInputConfigArgs(Output<GcsSourceArgs> gcsSource) {
         this.gcsSource = Objects.requireNonNull(gcsSource, "expected parameter 'gcsSource' to be non-null");
     }
 
     private GlossaryInputConfigArgs() {
-        this.gcsSource = Input.empty();
+        this.gcsSource = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class GlossaryInputConfigArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<GcsSourceArgs> gcsSource;
+        private Output<GcsSourceArgs> gcsSource;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class GlossaryInputConfigArgs extends io.pulumi.resources.ResourceA
     	      this.gcsSource = defaults.gcsSource;
         }
 
-        public Builder gcsSource(Input<GcsSourceArgs> gcsSource) {
+        public Builder gcsSource(Output<GcsSourceArgs> gcsSource) {
             this.gcsSource = Objects.requireNonNull(gcsSource);
             return this;
         }
 
         public Builder gcsSource(GcsSourceArgs gcsSource) {
-            this.gcsSource = Input.of(Objects.requireNonNull(gcsSource));
+            this.gcsSource = Output.of(Objects.requireNonNull(gcsSource));
             return this;
         }
         public GlossaryInputConfigArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.SubsettingPolicy;
 import java.lang.Integer;
@@ -20,10 +20,10 @@ public final class SubsettingArgs extends io.pulumi.resources.ResourceArgs {
     public static final SubsettingArgs Empty = new SubsettingArgs();
 
     @InputImport(name="policy")
-      private final @Nullable Input<SubsettingPolicy> policy;
+      private final @Nullable Output<SubsettingPolicy> policy;
 
-    public Input<SubsettingPolicy> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<SubsettingPolicy> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class SubsettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subsetSize")
-      private final @Nullable Input<Integer> subsetSize;
+      private final @Nullable Output<Integer> subsetSize;
 
-    public Input<Integer> getSubsetSize() {
-        return this.subsetSize == null ? Input.empty() : this.subsetSize;
+    public Output<Integer> getSubsetSize() {
+        return this.subsetSize == null ? Output.empty() : this.subsetSize;
     }
 
     public SubsettingArgs(
-        @Nullable Input<SubsettingPolicy> policy,
-        @Nullable Input<Integer> subsetSize) {
+        @Nullable Output<SubsettingPolicy> policy,
+        @Nullable Output<Integer> subsetSize) {
         this.policy = policy;
         this.subsetSize = subsetSize;
     }
 
     private SubsettingArgs() {
-        this.policy = Input.empty();
-        this.subsetSize = Input.empty();
+        this.policy = Output.empty();
+        this.subsetSize = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class SubsettingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<SubsettingPolicy> policy;
-        private @Nullable Input<Integer> subsetSize;
+        private @Nullable Output<SubsettingPolicy> policy;
+        private @Nullable Output<Integer> subsetSize;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class SubsettingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.subsetSize = defaults.subsetSize;
         }
 
-        public Builder policy(@Nullable Input<SubsettingPolicy> policy) {
+        public Builder policy(@Nullable Output<SubsettingPolicy> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable SubsettingPolicy policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
 
-        public Builder subsetSize(@Nullable Input<Integer> subsetSize) {
+        public Builder subsetSize(@Nullable Output<Integer> subsetSize) {
             this.subsetSize = subsetSize;
             return this;
         }
 
         public Builder subsetSize(@Nullable Integer subsetSize) {
-            this.subsetSize = Input.ofNullable(subsetSize);
+            this.subsetSize = Output.ofNullable(subsetSize);
             return this;
         }
         public SubsettingArgs build() {

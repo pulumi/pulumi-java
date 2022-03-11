@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class SubscriptionKeyParameterNamesContractArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="header")
-      private final @Nullable Input<String> header;
+      private final @Nullable Output<String> header;
 
-    public Input<String> getHeader() {
-        return this.header == null ? Input.empty() : this.header;
+    public Output<String> getHeader() {
+        return this.header == null ? Output.empty() : this.header;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class SubscriptionKeyParameterNamesContractArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="query")
-      private final @Nullable Input<String> query;
+      private final @Nullable Output<String> query;
 
-    public Input<String> getQuery() {
-        return this.query == null ? Input.empty() : this.query;
+    public Output<String> getQuery() {
+        return this.query == null ? Output.empty() : this.query;
     }
 
     public SubscriptionKeyParameterNamesContractArgs(
-        @Nullable Input<String> header,
-        @Nullable Input<String> query) {
+        @Nullable Output<String> header,
+        @Nullable Output<String> query) {
         this.header = header;
         this.query = query;
     }
 
     private SubscriptionKeyParameterNamesContractArgs() {
-        this.header = Input.empty();
-        this.query = Input.empty();
+        this.header = Output.empty();
+        this.query = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class SubscriptionKeyParameterNamesContractArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<String> header;
-        private @Nullable Input<String> query;
+        private @Nullable Output<String> header;
+        private @Nullable Output<String> query;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class SubscriptionKeyParameterNamesContractArgs extends io.pulumi.r
     	      this.query = defaults.query;
         }
 
-        public Builder header(@Nullable Input<String> header) {
+        public Builder header(@Nullable Output<String> header) {
             this.header = header;
             return this;
         }
 
         public Builder header(@Nullable String header) {
-            this.header = Input.ofNullable(header);
+            this.header = Output.ofNullable(header);
             return this;
         }
 
-        public Builder query(@Nullable Input<String> query) {
+        public Builder query(@Nullable Output<String> query) {
             this.query = query;
             return this;
         }
 
         public Builder query(@Nullable String query) {
-            this.query = Input.ofNullable(query);
+            this.query = Output.ofNullable(query);
             return this;
         }
         public SubscriptionKeyParameterNamesContractArgs build() {

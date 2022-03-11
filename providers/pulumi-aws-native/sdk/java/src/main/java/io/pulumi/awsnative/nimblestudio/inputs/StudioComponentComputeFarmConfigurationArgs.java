@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.nimblestudio.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class StudioComponentComputeFarmConfigurationArgs extends io.pulumi
      * 
      */
     @InputImport(name="activeDirectoryUser")
-      private final @Nullable Input<String> activeDirectoryUser;
+      private final @Nullable Output<String> activeDirectoryUser;
 
-    public Input<String> getActiveDirectoryUser() {
-        return this.activeDirectoryUser == null ? Input.empty() : this.activeDirectoryUser;
+    public Output<String> getActiveDirectoryUser() {
+        return this.activeDirectoryUser == null ? Output.empty() : this.activeDirectoryUser;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class StudioComponentComputeFarmConfigurationArgs extends io.pulumi
      * 
      */
     @InputImport(name="endpoint")
-      private final @Nullable Input<String> endpoint;
+      private final @Nullable Output<String> endpoint;
 
-    public Input<String> getEndpoint() {
-        return this.endpoint == null ? Input.empty() : this.endpoint;
+    public Output<String> getEndpoint() {
+        return this.endpoint == null ? Output.empty() : this.endpoint;
     }
 
     public StudioComponentComputeFarmConfigurationArgs(
-        @Nullable Input<String> activeDirectoryUser,
-        @Nullable Input<String> endpoint) {
+        @Nullable Output<String> activeDirectoryUser,
+        @Nullable Output<String> endpoint) {
         this.activeDirectoryUser = activeDirectoryUser;
         this.endpoint = endpoint;
     }
 
     private StudioComponentComputeFarmConfigurationArgs() {
-        this.activeDirectoryUser = Input.empty();
-        this.endpoint = Input.empty();
+        this.activeDirectoryUser = Output.empty();
+        this.endpoint = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class StudioComponentComputeFarmConfigurationArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private @Nullable Input<String> activeDirectoryUser;
-        private @Nullable Input<String> endpoint;
+        private @Nullable Output<String> activeDirectoryUser;
+        private @Nullable Output<String> endpoint;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class StudioComponentComputeFarmConfigurationArgs extends io.pulumi
     	      this.endpoint = defaults.endpoint;
         }
 
-        public Builder activeDirectoryUser(@Nullable Input<String> activeDirectoryUser) {
+        public Builder activeDirectoryUser(@Nullable Output<String> activeDirectoryUser) {
             this.activeDirectoryUser = activeDirectoryUser;
             return this;
         }
 
         public Builder activeDirectoryUser(@Nullable String activeDirectoryUser) {
-            this.activeDirectoryUser = Input.ofNullable(activeDirectoryUser);
+            this.activeDirectoryUser = Output.ofNullable(activeDirectoryUser);
             return this;
         }
 
-        public Builder endpoint(@Nullable Input<String> endpoint) {
+        public Builder endpoint(@Nullable Output<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
         public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = Input.ofNullable(endpoint);
+            this.endpoint = Output.ofNullable(endpoint);
             return this;
         }
         public StudioComponentComputeFarmConfigurationArgs build() {

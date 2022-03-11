@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cfg.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class RemediationConfigurationExecutionControlsSsmControlsArgs exte
      * 
      */
     @InputImport(name="concurrentExecutionRatePercentage")
-      private final @Nullable Input<Integer> concurrentExecutionRatePercentage;
+      private final @Nullable Output<Integer> concurrentExecutionRatePercentage;
 
-    public Input<Integer> getConcurrentExecutionRatePercentage() {
-        return this.concurrentExecutionRatePercentage == null ? Input.empty() : this.concurrentExecutionRatePercentage;
+    public Output<Integer> getConcurrentExecutionRatePercentage() {
+        return this.concurrentExecutionRatePercentage == null ? Output.empty() : this.concurrentExecutionRatePercentage;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class RemediationConfigurationExecutionControlsSsmControlsArgs exte
      * 
      */
     @InputImport(name="errorPercentage")
-      private final @Nullable Input<Integer> errorPercentage;
+      private final @Nullable Output<Integer> errorPercentage;
 
-    public Input<Integer> getErrorPercentage() {
-        return this.errorPercentage == null ? Input.empty() : this.errorPercentage;
+    public Output<Integer> getErrorPercentage() {
+        return this.errorPercentage == null ? Output.empty() : this.errorPercentage;
     }
 
     public RemediationConfigurationExecutionControlsSsmControlsArgs(
-        @Nullable Input<Integer> concurrentExecutionRatePercentage,
-        @Nullable Input<Integer> errorPercentage) {
+        @Nullable Output<Integer> concurrentExecutionRatePercentage,
+        @Nullable Output<Integer> errorPercentage) {
         this.concurrentExecutionRatePercentage = concurrentExecutionRatePercentage;
         this.errorPercentage = errorPercentage;
     }
 
     private RemediationConfigurationExecutionControlsSsmControlsArgs() {
-        this.concurrentExecutionRatePercentage = Input.empty();
-        this.errorPercentage = Input.empty();
+        this.concurrentExecutionRatePercentage = Output.empty();
+        this.errorPercentage = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class RemediationConfigurationExecutionControlsSsmControlsArgs exte
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> concurrentExecutionRatePercentage;
-        private @Nullable Input<Integer> errorPercentage;
+        private @Nullable Output<Integer> concurrentExecutionRatePercentage;
+        private @Nullable Output<Integer> errorPercentage;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class RemediationConfigurationExecutionControlsSsmControlsArgs exte
     	      this.errorPercentage = defaults.errorPercentage;
         }
 
-        public Builder concurrentExecutionRatePercentage(@Nullable Input<Integer> concurrentExecutionRatePercentage) {
+        public Builder concurrentExecutionRatePercentage(@Nullable Output<Integer> concurrentExecutionRatePercentage) {
             this.concurrentExecutionRatePercentage = concurrentExecutionRatePercentage;
             return this;
         }
 
         public Builder concurrentExecutionRatePercentage(@Nullable Integer concurrentExecutionRatePercentage) {
-            this.concurrentExecutionRatePercentage = Input.ofNullable(concurrentExecutionRatePercentage);
+            this.concurrentExecutionRatePercentage = Output.ofNullable(concurrentExecutionRatePercentage);
             return this;
         }
 
-        public Builder errorPercentage(@Nullable Input<Integer> errorPercentage) {
+        public Builder errorPercentage(@Nullable Output<Integer> errorPercentage) {
             this.errorPercentage = errorPercentage;
             return this;
         }
 
         public Builder errorPercentage(@Nullable Integer errorPercentage) {
-            this.errorPercentage = Input.ofNullable(errorPercentage);
+            this.errorPercentage = Output.ofNullable(errorPercentage);
             return this;
         }
         public RemediationConfigurationExecutionControlsSsmControlsArgs build() {

@@ -10,7 +10,6 @@ import io.pulumi.azurenative.appconfiguration.outputs.PrivateEndpointConnectionR
 import io.pulumi.azurenative.appconfiguration.outputs.ResourceIdentityResponse;
 import io.pulumi.azurenative.appconfiguration.outputs.SkuResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -243,24 +242,24 @@ public class ConfigurationStore extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ConfigurationStore(String name, ConfigurationStoreArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:appconfiguration:ConfigurationStore", name, args == null ? ConfigurationStoreArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:appconfiguration:ConfigurationStore", name, args == null ? ConfigurationStoreArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ConfigurationStore(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ConfigurationStore(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:appconfiguration:ConfigurationStore", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:appconfiguration/v20190201preview:ConfigurationStore").build()),
-                Input.of(Alias.builder().setType("azure-native:appconfiguration/v20191001:ConfigurationStore").build()),
-                Input.of(Alias.builder().setType("azure-native:appconfiguration/v20191101preview:ConfigurationStore").build()),
-                Input.of(Alias.builder().setType("azure-native:appconfiguration/v20200601:ConfigurationStore").build()),
-                Input.of(Alias.builder().setType("azure-native:appconfiguration/v20200701preview:ConfigurationStore").build()),
-                Input.of(Alias.builder().setType("azure-native:appconfiguration/v20210301preview:ConfigurationStore").build()),
-                Input.of(Alias.builder().setType("azure-native:appconfiguration/v20211001preview:ConfigurationStore").build())
+                Output.of(Alias.builder().setType("azure-native:appconfiguration/v20190201preview:ConfigurationStore").build()),
+                Output.of(Alias.builder().setType("azure-native:appconfiguration/v20191001:ConfigurationStore").build()),
+                Output.of(Alias.builder().setType("azure-native:appconfiguration/v20191101preview:ConfigurationStore").build()),
+                Output.of(Alias.builder().setType("azure-native:appconfiguration/v20200601:ConfigurationStore").build()),
+                Output.of(Alias.builder().setType("azure-native:appconfiguration/v20200701preview:ConfigurationStore").build()),
+                Output.of(Alias.builder().setType("azure-native:appconfiguration/v20210301preview:ConfigurationStore").build()),
+                Output.of(Alias.builder().setType("azure-native:appconfiguration/v20211001preview:ConfigurationStore").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -274,7 +273,7 @@ public class ConfigurationStore extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ConfigurationStore get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ConfigurationStore get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ConfigurationStore(name, id, options);
     }
 }

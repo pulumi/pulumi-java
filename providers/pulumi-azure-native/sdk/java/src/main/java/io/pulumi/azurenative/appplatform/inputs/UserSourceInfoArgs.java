@@ -5,7 +5,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.azurenative.appplatform.enums.UserSourceType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class UserSourceInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="artifactSelector")
-      private final @Nullable Input<String> artifactSelector;
+      private final @Nullable Output<String> artifactSelector;
 
-    public Input<String> getArtifactSelector() {
-        return this.artifactSelector == null ? Input.empty() : this.artifactSelector;
+    public Output<String> getArtifactSelector() {
+        return this.artifactSelector == null ? Output.empty() : this.artifactSelector;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class UserSourceInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relativePath")
-      private final @Nullable Input<String> relativePath;
+      private final @Nullable Output<String> relativePath;
 
-    public Input<String> getRelativePath() {
-        return this.relativePath == null ? Input.empty() : this.relativePath;
+    public Output<String> getRelativePath() {
+        return this.relativePath == null ? Output.empty() : this.relativePath;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class UserSourceInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<Either<String,UserSourceType>> type;
+      private final @Nullable Output<Either<String,UserSourceType>> type;
 
-    public Input<Either<String,UserSourceType>> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<Either<String,UserSourceType>> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -59,17 +59,17 @@ public final class UserSourceInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public UserSourceInfoArgs(
-        @Nullable Input<String> artifactSelector,
-        @Nullable Input<String> relativePath,
-        @Nullable Input<Either<String,UserSourceType>> type,
-        @Nullable Input<String> version) {
+        @Nullable Output<String> artifactSelector,
+        @Nullable Output<String> relativePath,
+        @Nullable Output<Either<String,UserSourceType>> type,
+        @Nullable Output<String> version) {
         this.artifactSelector = artifactSelector;
         this.relativePath = relativePath;
         this.type = type;
@@ -77,10 +77,10 @@ public final class UserSourceInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserSourceInfoArgs() {
-        this.artifactSelector = Input.empty();
-        this.relativePath = Input.empty();
-        this.type = Input.empty();
-        this.version = Input.empty();
+        this.artifactSelector = Output.empty();
+        this.relativePath = Output.empty();
+        this.type = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class UserSourceInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> artifactSelector;
-        private @Nullable Input<String> relativePath;
-        private @Nullable Input<Either<String,UserSourceType>> type;
-        private @Nullable Input<String> version;
+        private @Nullable Output<String> artifactSelector;
+        private @Nullable Output<String> relativePath;
+        private @Nullable Output<Either<String,UserSourceType>> type;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class UserSourceInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder artifactSelector(@Nullable Input<String> artifactSelector) {
+        public Builder artifactSelector(@Nullable Output<String> artifactSelector) {
             this.artifactSelector = artifactSelector;
             return this;
         }
 
         public Builder artifactSelector(@Nullable String artifactSelector) {
-            this.artifactSelector = Input.ofNullable(artifactSelector);
+            this.artifactSelector = Output.ofNullable(artifactSelector);
             return this;
         }
 
-        public Builder relativePath(@Nullable Input<String> relativePath) {
+        public Builder relativePath(@Nullable Output<String> relativePath) {
             this.relativePath = relativePath;
             return this;
         }
 
         public Builder relativePath(@Nullable String relativePath) {
-            this.relativePath = Input.ofNullable(relativePath);
+            this.relativePath = Output.ofNullable(relativePath);
             return this;
         }
 
-        public Builder type(@Nullable Input<Either<String,UserSourceType>> type) {
+        public Builder type(@Nullable Output<Either<String,UserSourceType>> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable Either<String,UserSourceType> type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public UserSourceInfoArgs build() {

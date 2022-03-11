@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersOnHealthCheck;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs 
      * 
      */
     @InputImport(name="onHealthCheck")
-      private final @Nullable Input<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersOnHealthCheck> onHealthCheck;
+      private final @Nullable Output<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersOnHealthCheck> onHealthCheck;
 
-    public Input<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersOnHealthCheck> getOnHealthCheck() {
-        return this.onHealthCheck == null ? Input.empty() : this.onHealthCheck;
+    public Output<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersOnHealthCheck> getOnHealthCheck() {
+        return this.onHealthCheck == null ? Output.empty() : this.onHealthCheck;
     }
 
-    public InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs(@Nullable Input<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersOnHealthCheck> onHealthCheck) {
+    public InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs(@Nullable Output<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersOnHealthCheck> onHealthCheck) {
         this.onHealthCheck = onHealthCheck;
     }
 
     private InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs() {
-        this.onHealthCheck = Input.empty();
+        this.onHealthCheck = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersOnHealthCheck> onHealthCheck;
+        private @Nullable Output<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersOnHealthCheck> onHealthCheck;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs 
     	      this.onHealthCheck = defaults.onHealthCheck;
         }
 
-        public Builder onHealthCheck(@Nullable Input<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersOnHealthCheck> onHealthCheck) {
+        public Builder onHealthCheck(@Nullable Output<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersOnHealthCheck> onHealthCheck) {
             this.onHealthCheck = onHealthCheck;
             return this;
         }
 
         public Builder onHealthCheck(@Nullable InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersOnHealthCheck onHealthCheck) {
-            this.onHealthCheck = Input.ofNullable(onHealthCheck);
+            this.onHealthCheck = Output.ofNullable(onHealthCheck);
             return this;
         }
         public InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs build() {

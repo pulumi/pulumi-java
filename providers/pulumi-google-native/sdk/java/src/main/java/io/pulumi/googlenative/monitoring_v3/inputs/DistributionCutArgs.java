@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v3.inputs.GoogleMonitoringV3RangeArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class DistributionCutArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="distributionFilter")
-      private final @Nullable Input<String> distributionFilter;
+      private final @Nullable Output<String> distributionFilter;
 
-    public Input<String> getDistributionFilter() {
-        return this.distributionFilter == null ? Input.empty() : this.distributionFilter;
+    public Output<String> getDistributionFilter() {
+        return this.distributionFilter == null ? Output.empty() : this.distributionFilter;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class DistributionCutArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="range")
-      private final @Nullable Input<GoogleMonitoringV3RangeArgs> range;
+      private final @Nullable Output<GoogleMonitoringV3RangeArgs> range;
 
-    public Input<GoogleMonitoringV3RangeArgs> getRange() {
-        return this.range == null ? Input.empty() : this.range;
+    public Output<GoogleMonitoringV3RangeArgs> getRange() {
+        return this.range == null ? Output.empty() : this.range;
     }
 
     public DistributionCutArgs(
-        @Nullable Input<String> distributionFilter,
-        @Nullable Input<GoogleMonitoringV3RangeArgs> range) {
+        @Nullable Output<String> distributionFilter,
+        @Nullable Output<GoogleMonitoringV3RangeArgs> range) {
         this.distributionFilter = distributionFilter;
         this.range = range;
     }
 
     private DistributionCutArgs() {
-        this.distributionFilter = Input.empty();
-        this.range = Input.empty();
+        this.distributionFilter = Output.empty();
+        this.range = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class DistributionCutArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> distributionFilter;
-        private @Nullable Input<GoogleMonitoringV3RangeArgs> range;
+        private @Nullable Output<String> distributionFilter;
+        private @Nullable Output<GoogleMonitoringV3RangeArgs> range;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class DistributionCutArgs extends io.pulumi.resources.ResourceArgs 
     	      this.range = defaults.range;
         }
 
-        public Builder distributionFilter(@Nullable Input<String> distributionFilter) {
+        public Builder distributionFilter(@Nullable Output<String> distributionFilter) {
             this.distributionFilter = distributionFilter;
             return this;
         }
 
         public Builder distributionFilter(@Nullable String distributionFilter) {
-            this.distributionFilter = Input.ofNullable(distributionFilter);
+            this.distributionFilter = Output.ofNullable(distributionFilter);
             return this;
         }
 
-        public Builder range(@Nullable Input<GoogleMonitoringV3RangeArgs> range) {
+        public Builder range(@Nullable Output<GoogleMonitoringV3RangeArgs> range) {
             this.range = range;
             return this;
         }
 
         public Builder range(@Nullable GoogleMonitoringV3RangeArgs range) {
-            this.range = Input.ofNullable(range);
+            this.range = Output.ofNullable(range);
             return this;
         }
         public DistributionCutArgs build() {

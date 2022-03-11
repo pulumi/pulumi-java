@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ScriptReferenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="scriptArguments")
-      private final @Nullable Input<String> scriptArguments;
+      private final @Nullable Output<String> scriptArguments;
 
-    public Input<String> getScriptArguments() {
-        return this.scriptArguments == null ? Input.empty() : this.scriptArguments;
+    public Output<String> getScriptArguments() {
+        return this.scriptArguments == null ? Output.empty() : this.scriptArguments;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ScriptReferenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="scriptData")
-      private final @Nullable Input<String> scriptData;
+      private final @Nullable Output<String> scriptData;
 
-    public Input<String> getScriptData() {
-        return this.scriptData == null ? Input.empty() : this.scriptData;
+    public Output<String> getScriptData() {
+        return this.scriptData == null ? Output.empty() : this.scriptData;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ScriptReferenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="scriptSource")
-      private final @Nullable Input<String> scriptSource;
+      private final @Nullable Output<String> scriptSource;
 
-    public Input<String> getScriptSource() {
-        return this.scriptSource == null ? Input.empty() : this.scriptSource;
+    public Output<String> getScriptSource() {
+        return this.scriptSource == null ? Output.empty() : this.scriptSource;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class ScriptReferenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="timeout")
-      private final @Nullable Input<String> timeout;
+      private final @Nullable Output<String> timeout;
 
-    public Input<String> getTimeout() {
-        return this.timeout == null ? Input.empty() : this.timeout;
+    public Output<String> getTimeout() {
+        return this.timeout == null ? Output.empty() : this.timeout;
     }
 
     public ScriptReferenceArgs(
-        @Nullable Input<String> scriptArguments,
-        @Nullable Input<String> scriptData,
-        @Nullable Input<String> scriptSource,
-        @Nullable Input<String> timeout) {
+        @Nullable Output<String> scriptArguments,
+        @Nullable Output<String> scriptData,
+        @Nullable Output<String> scriptSource,
+        @Nullable Output<String> timeout) {
         this.scriptArguments = scriptArguments;
         this.scriptData = scriptData;
         this.scriptSource = scriptSource;
@@ -74,10 +74,10 @@ public final class ScriptReferenceArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ScriptReferenceArgs() {
-        this.scriptArguments = Input.empty();
-        this.scriptData = Input.empty();
-        this.scriptSource = Input.empty();
-        this.timeout = Input.empty();
+        this.scriptArguments = Output.empty();
+        this.scriptData = Output.empty();
+        this.scriptSource = Output.empty();
+        this.timeout = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class ScriptReferenceArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> scriptArguments;
-        private @Nullable Input<String> scriptData;
-        private @Nullable Input<String> scriptSource;
-        private @Nullable Input<String> timeout;
+        private @Nullable Output<String> scriptArguments;
+        private @Nullable Output<String> scriptData;
+        private @Nullable Output<String> scriptSource;
+        private @Nullable Output<String> timeout;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class ScriptReferenceArgs extends io.pulumi.resources.ResourceArgs 
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder scriptArguments(@Nullable Input<String> scriptArguments) {
+        public Builder scriptArguments(@Nullable Output<String> scriptArguments) {
             this.scriptArguments = scriptArguments;
             return this;
         }
 
         public Builder scriptArguments(@Nullable String scriptArguments) {
-            this.scriptArguments = Input.ofNullable(scriptArguments);
+            this.scriptArguments = Output.ofNullable(scriptArguments);
             return this;
         }
 
-        public Builder scriptData(@Nullable Input<String> scriptData) {
+        public Builder scriptData(@Nullable Output<String> scriptData) {
             this.scriptData = scriptData;
             return this;
         }
 
         public Builder scriptData(@Nullable String scriptData) {
-            this.scriptData = Input.ofNullable(scriptData);
+            this.scriptData = Output.ofNullable(scriptData);
             return this;
         }
 
-        public Builder scriptSource(@Nullable Input<String> scriptSource) {
+        public Builder scriptSource(@Nullable Output<String> scriptSource) {
             this.scriptSource = scriptSource;
             return this;
         }
 
         public Builder scriptSource(@Nullable String scriptSource) {
-            this.scriptSource = Input.ofNullable(scriptSource);
+            this.scriptSource = Output.ofNullable(scriptSource);
             return this;
         }
 
-        public Builder timeout(@Nullable Input<String> timeout) {
+        public Builder timeout(@Nullable Output<String> timeout) {
             this.timeout = timeout;
             return this;
         }
 
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = Input.ofNullable(timeout);
+            this.timeout = Output.ofNullable(timeout);
             return this;
         }
         public ScriptReferenceArgs build() {

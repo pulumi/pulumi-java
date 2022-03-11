@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.costmanagement.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class ReportRecurrencePeriodArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="from", required=true)
-      private final Input<String> from;
+      private final Output<String> from;
 
-    public Input<String> getFrom() {
+    public Output<String> getFrom() {
         return this.from;
     }
 
@@ -34,22 +34,22 @@ public final class ReportRecurrencePeriodArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="to")
-      private final @Nullable Input<String> to;
+      private final @Nullable Output<String> to;
 
-    public Input<String> getTo() {
-        return this.to == null ? Input.empty() : this.to;
+    public Output<String> getTo() {
+        return this.to == null ? Output.empty() : this.to;
     }
 
     public ReportRecurrencePeriodArgs(
-        Input<String> from,
-        @Nullable Input<String> to) {
+        Output<String> from,
+        @Nullable Output<String> to) {
         this.from = Objects.requireNonNull(from, "expected parameter 'from' to be non-null");
         this.to = to;
     }
 
     private ReportRecurrencePeriodArgs() {
-        this.from = Input.empty();
-        this.to = Input.empty();
+        this.from = Output.empty();
+        this.to = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ReportRecurrencePeriodArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> from;
-        private @Nullable Input<String> to;
+        private Output<String> from;
+        private @Nullable Output<String> to;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ReportRecurrencePeriodArgs extends io.pulumi.resources.Resour
     	      this.to = defaults.to;
         }
 
-        public Builder from(Input<String> from) {
+        public Builder from(Output<String> from) {
             this.from = Objects.requireNonNull(from);
             return this;
         }
 
         public Builder from(String from) {
-            this.from = Input.of(Objects.requireNonNull(from));
+            this.from = Output.of(Objects.requireNonNull(from));
             return this;
         }
 
-        public Builder to(@Nullable Input<String> to) {
+        public Builder to(@Nullable Output<String> to) {
             this.to = to;
             return this;
         }
 
         public Builder to(@Nullable String to) {
-            this.to = Input.ofNullable(to);
+            this.to = Output.ofNullable(to);
             return this;
         }
         public ReportRecurrencePeriodArgs build() {

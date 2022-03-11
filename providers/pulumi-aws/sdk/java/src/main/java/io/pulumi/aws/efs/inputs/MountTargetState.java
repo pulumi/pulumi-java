@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.efs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZoneId")
-      private final @Nullable Input<String> availabilityZoneId;
+      private final @Nullable Output<String> availabilityZoneId;
 
-    public Input<String> getAvailabilityZoneId() {
-        return this.availabilityZoneId == null ? Input.empty() : this.availabilityZoneId;
+    public Output<String> getAvailabilityZoneId() {
+        return this.availabilityZoneId == null ? Output.empty() : this.availabilityZoneId;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZoneName")
-      private final @Nullable Input<String> availabilityZoneName;
+      private final @Nullable Output<String> availabilityZoneName;
 
-    public Input<String> getAvailabilityZoneName() {
-        return this.availabilityZoneName == null ? Input.empty() : this.availabilityZoneName;
+    public Output<String> getAvailabilityZoneName() {
+        return this.availabilityZoneName == null ? Output.empty() : this.availabilityZoneName;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsName")
-      private final @Nullable Input<String> dnsName;
+      private final @Nullable Output<String> dnsName;
 
-    public Input<String> getDnsName() {
-        return this.dnsName == null ? Input.empty() : this.dnsName;
+    public Output<String> getDnsName() {
+        return this.dnsName == null ? Output.empty() : this.dnsName;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileSystemArn")
-      private final @Nullable Input<String> fileSystemArn;
+      private final @Nullable Output<String> fileSystemArn;
 
-    public Input<String> getFileSystemArn() {
-        return this.fileSystemArn == null ? Input.empty() : this.fileSystemArn;
+    public Output<String> getFileSystemArn() {
+        return this.fileSystemArn == null ? Output.empty() : this.fileSystemArn;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileSystemId")
-      private final @Nullable Input<String> fileSystemId;
+      private final @Nullable Output<String> fileSystemId;
 
-    public Input<String> getFileSystemId() {
-        return this.fileSystemId == null ? Input.empty() : this.fileSystemId;
+    public Output<String> getFileSystemId() {
+        return this.fileSystemId == null ? Output.empty() : this.fileSystemId;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAddress")
-      private final @Nullable Input<String> ipAddress;
+      private final @Nullable Output<String> ipAddress;
 
-    public Input<String> getIpAddress() {
-        return this.ipAddress == null ? Input.empty() : this.ipAddress;
+    public Output<String> getIpAddress() {
+        return this.ipAddress == null ? Output.empty() : this.ipAddress;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mountTargetDnsName")
-      private final @Nullable Input<String> mountTargetDnsName;
+      private final @Nullable Output<String> mountTargetDnsName;
 
-    public Input<String> getMountTargetDnsName() {
-        return this.mountTargetDnsName == null ? Input.empty() : this.mountTargetDnsName;
+    public Output<String> getMountTargetDnsName() {
+        return this.mountTargetDnsName == null ? Output.empty() : this.mountTargetDnsName;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkInterfaceId")
-      private final @Nullable Input<String> networkInterfaceId;
+      private final @Nullable Output<String> networkInterfaceId;
 
-    public Input<String> getNetworkInterfaceId() {
-        return this.networkInterfaceId == null ? Input.empty() : this.networkInterfaceId;
+    public Output<String> getNetworkInterfaceId() {
+        return this.networkInterfaceId == null ? Output.empty() : this.networkInterfaceId;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ownerId")
-      private final @Nullable Input<String> ownerId;
+      private final @Nullable Output<String> ownerId;
 
-    public Input<String> getOwnerId() {
-        return this.ownerId == null ? Input.empty() : this.ownerId;
+    public Output<String> getOwnerId() {
+        return this.ownerId == null ? Output.empty() : this.ownerId;
     }
 
     /**
@@ -121,10 +121,10 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityGroups")
-      private final @Nullable Input<List<String>> securityGroups;
+      private final @Nullable Output<List<String>> securityGroups;
 
-    public Input<List<String>> getSecurityGroups() {
-        return this.securityGroups == null ? Input.empty() : this.securityGroups;
+    public Output<List<String>> getSecurityGroups() {
+        return this.securityGroups == null ? Output.empty() : this.securityGroups;
     }
 
     /**
@@ -132,24 +132,24 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetId")
-      private final @Nullable Input<String> subnetId;
+      private final @Nullable Output<String> subnetId;
 
-    public Input<String> getSubnetId() {
-        return this.subnetId == null ? Input.empty() : this.subnetId;
+    public Output<String> getSubnetId() {
+        return this.subnetId == null ? Output.empty() : this.subnetId;
     }
 
     public MountTargetState(
-        @Nullable Input<String> availabilityZoneId,
-        @Nullable Input<String> availabilityZoneName,
-        @Nullable Input<String> dnsName,
-        @Nullable Input<String> fileSystemArn,
-        @Nullable Input<String> fileSystemId,
-        @Nullable Input<String> ipAddress,
-        @Nullable Input<String> mountTargetDnsName,
-        @Nullable Input<String> networkInterfaceId,
-        @Nullable Input<String> ownerId,
-        @Nullable Input<List<String>> securityGroups,
-        @Nullable Input<String> subnetId) {
+        @Nullable Output<String> availabilityZoneId,
+        @Nullable Output<String> availabilityZoneName,
+        @Nullable Output<String> dnsName,
+        @Nullable Output<String> fileSystemArn,
+        @Nullable Output<String> fileSystemId,
+        @Nullable Output<String> ipAddress,
+        @Nullable Output<String> mountTargetDnsName,
+        @Nullable Output<String> networkInterfaceId,
+        @Nullable Output<String> ownerId,
+        @Nullable Output<List<String>> securityGroups,
+        @Nullable Output<String> subnetId) {
         this.availabilityZoneId = availabilityZoneId;
         this.availabilityZoneName = availabilityZoneName;
         this.dnsName = dnsName;
@@ -164,17 +164,17 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
     }
 
     private MountTargetState() {
-        this.availabilityZoneId = Input.empty();
-        this.availabilityZoneName = Input.empty();
-        this.dnsName = Input.empty();
-        this.fileSystemArn = Input.empty();
-        this.fileSystemId = Input.empty();
-        this.ipAddress = Input.empty();
-        this.mountTargetDnsName = Input.empty();
-        this.networkInterfaceId = Input.empty();
-        this.ownerId = Input.empty();
-        this.securityGroups = Input.empty();
-        this.subnetId = Input.empty();
+        this.availabilityZoneId = Output.empty();
+        this.availabilityZoneName = Output.empty();
+        this.dnsName = Output.empty();
+        this.fileSystemArn = Output.empty();
+        this.fileSystemId = Output.empty();
+        this.ipAddress = Output.empty();
+        this.mountTargetDnsName = Output.empty();
+        this.networkInterfaceId = Output.empty();
+        this.ownerId = Output.empty();
+        this.securityGroups = Output.empty();
+        this.subnetId = Output.empty();
     }
 
     public static Builder builder() {
@@ -186,17 +186,17 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> availabilityZoneId;
-        private @Nullable Input<String> availabilityZoneName;
-        private @Nullable Input<String> dnsName;
-        private @Nullable Input<String> fileSystemArn;
-        private @Nullable Input<String> fileSystemId;
-        private @Nullable Input<String> ipAddress;
-        private @Nullable Input<String> mountTargetDnsName;
-        private @Nullable Input<String> networkInterfaceId;
-        private @Nullable Input<String> ownerId;
-        private @Nullable Input<List<String>> securityGroups;
-        private @Nullable Input<String> subnetId;
+        private @Nullable Output<String> availabilityZoneId;
+        private @Nullable Output<String> availabilityZoneName;
+        private @Nullable Output<String> dnsName;
+        private @Nullable Output<String> fileSystemArn;
+        private @Nullable Output<String> fileSystemId;
+        private @Nullable Output<String> ipAddress;
+        private @Nullable Output<String> mountTargetDnsName;
+        private @Nullable Output<String> networkInterfaceId;
+        private @Nullable Output<String> ownerId;
+        private @Nullable Output<List<String>> securityGroups;
+        private @Nullable Output<String> subnetId;
 
         public Builder() {
     	      // Empty
@@ -217,113 +217,113 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder availabilityZoneId(@Nullable Input<String> availabilityZoneId) {
+        public Builder availabilityZoneId(@Nullable Output<String> availabilityZoneId) {
             this.availabilityZoneId = availabilityZoneId;
             return this;
         }
 
         public Builder availabilityZoneId(@Nullable String availabilityZoneId) {
-            this.availabilityZoneId = Input.ofNullable(availabilityZoneId);
+            this.availabilityZoneId = Output.ofNullable(availabilityZoneId);
             return this;
         }
 
-        public Builder availabilityZoneName(@Nullable Input<String> availabilityZoneName) {
+        public Builder availabilityZoneName(@Nullable Output<String> availabilityZoneName) {
             this.availabilityZoneName = availabilityZoneName;
             return this;
         }
 
         public Builder availabilityZoneName(@Nullable String availabilityZoneName) {
-            this.availabilityZoneName = Input.ofNullable(availabilityZoneName);
+            this.availabilityZoneName = Output.ofNullable(availabilityZoneName);
             return this;
         }
 
-        public Builder dnsName(@Nullable Input<String> dnsName) {
+        public Builder dnsName(@Nullable Output<String> dnsName) {
             this.dnsName = dnsName;
             return this;
         }
 
         public Builder dnsName(@Nullable String dnsName) {
-            this.dnsName = Input.ofNullable(dnsName);
+            this.dnsName = Output.ofNullable(dnsName);
             return this;
         }
 
-        public Builder fileSystemArn(@Nullable Input<String> fileSystemArn) {
+        public Builder fileSystemArn(@Nullable Output<String> fileSystemArn) {
             this.fileSystemArn = fileSystemArn;
             return this;
         }
 
         public Builder fileSystemArn(@Nullable String fileSystemArn) {
-            this.fileSystemArn = Input.ofNullable(fileSystemArn);
+            this.fileSystemArn = Output.ofNullable(fileSystemArn);
             return this;
         }
 
-        public Builder fileSystemId(@Nullable Input<String> fileSystemId) {
+        public Builder fileSystemId(@Nullable Output<String> fileSystemId) {
             this.fileSystemId = fileSystemId;
             return this;
         }
 
         public Builder fileSystemId(@Nullable String fileSystemId) {
-            this.fileSystemId = Input.ofNullable(fileSystemId);
+            this.fileSystemId = Output.ofNullable(fileSystemId);
             return this;
         }
 
-        public Builder ipAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Input.ofNullable(ipAddress);
+            this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
 
-        public Builder mountTargetDnsName(@Nullable Input<String> mountTargetDnsName) {
+        public Builder mountTargetDnsName(@Nullable Output<String> mountTargetDnsName) {
             this.mountTargetDnsName = mountTargetDnsName;
             return this;
         }
 
         public Builder mountTargetDnsName(@Nullable String mountTargetDnsName) {
-            this.mountTargetDnsName = Input.ofNullable(mountTargetDnsName);
+            this.mountTargetDnsName = Output.ofNullable(mountTargetDnsName);
             return this;
         }
 
-        public Builder networkInterfaceId(@Nullable Input<String> networkInterfaceId) {
+        public Builder networkInterfaceId(@Nullable Output<String> networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
             return this;
         }
 
         public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
-            this.networkInterfaceId = Input.ofNullable(networkInterfaceId);
+            this.networkInterfaceId = Output.ofNullable(networkInterfaceId);
             return this;
         }
 
-        public Builder ownerId(@Nullable Input<String> ownerId) {
+        public Builder ownerId(@Nullable Output<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
 
         public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Input.ofNullable(ownerId);
+            this.ownerId = Output.ofNullable(ownerId);
             return this;
         }
 
-        public Builder securityGroups(@Nullable Input<List<String>> securityGroups) {
+        public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
         public Builder securityGroups(@Nullable List<String> securityGroups) {
-            this.securityGroups = Input.ofNullable(securityGroups);
+            this.securityGroups = Output.ofNullable(securityGroups);
             return this;
         }
 
-        public Builder subnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Input.ofNullable(subnetId);
+            this.subnetId = Output.ofNullable(subnetId);
             return this;
         }
         public MountTargetState build() {

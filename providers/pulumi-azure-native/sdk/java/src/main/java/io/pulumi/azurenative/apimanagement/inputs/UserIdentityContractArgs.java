@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class UserIdentityContractArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class UserIdentityContractArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="provider")
-      private final @Nullable Input<String> provider;
+      private final @Nullable Output<String> provider;
 
-    public Input<String> getProvider() {
-        return this.provider == null ? Input.empty() : this.provider;
+    public Output<String> getProvider() {
+        return this.provider == null ? Output.empty() : this.provider;
     }
 
     public UserIdentityContractArgs(
-        @Nullable Input<String> id,
-        @Nullable Input<String> provider) {
+        @Nullable Output<String> id,
+        @Nullable Output<String> provider) {
         this.id = id;
         this.provider = provider;
     }
 
     private UserIdentityContractArgs() {
-        this.id = Input.empty();
-        this.provider = Input.empty();
+        this.id = Output.empty();
+        this.provider = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class UserIdentityContractArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> provider;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> provider;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class UserIdentityContractArgs extends io.pulumi.resources.Resource
     	      this.provider = defaults.provider;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder provider(@Nullable Input<String> provider) {
+        public Builder provider(@Nullable Output<String> provider) {
             this.provider = provider;
             return this;
         }
 
         public Builder provider(@Nullable String provider) {
-            this.provider = Input.ofNullable(provider);
+            this.provider = Output.ofNullable(provider);
             return this;
         }
         public UserIdentityContractArgs build() {

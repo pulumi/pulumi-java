@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web;
 import io.pulumi.azurenative.web.inputs.HostingEnvironmentProfileArgs;
 import io.pulumi.azurenative.web.inputs.KubeEnvironmentProfileArgs;
 import io.pulumi.azurenative.web.inputs.SkuDescriptionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="freeOfferExpirationTime")
-      private final @Nullable Input<String> freeOfferExpirationTime;
+      private final @Nullable Output<String> freeOfferExpirationTime;
 
-    public Input<String> getFreeOfferExpirationTime() {
-        return this.freeOfferExpirationTime == null ? Input.empty() : this.freeOfferExpirationTime;
+    public Output<String> getFreeOfferExpirationTime() {
+        return this.freeOfferExpirationTime == null ? Output.empty() : this.freeOfferExpirationTime;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostingEnvironmentProfile")
-      private final @Nullable Input<HostingEnvironmentProfileArgs> hostingEnvironmentProfile;
+      private final @Nullable Output<HostingEnvironmentProfileArgs> hostingEnvironmentProfile;
 
-    public Input<HostingEnvironmentProfileArgs> getHostingEnvironmentProfile() {
-        return this.hostingEnvironmentProfile == null ? Input.empty() : this.hostingEnvironmentProfile;
+    public Output<HostingEnvironmentProfileArgs> getHostingEnvironmentProfile() {
+        return this.hostingEnvironmentProfile == null ? Output.empty() : this.hostingEnvironmentProfile;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hyperV")
-      private final @Nullable Input<Boolean> hyperV;
+      private final @Nullable Output<Boolean> hyperV;
 
-    public Input<Boolean> getHyperV() {
-        return this.hyperV == null ? Input.empty() : this.hyperV;
+    public Output<Boolean> getHyperV() {
+        return this.hyperV == null ? Output.empty() : this.hyperV;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isSpot")
-      private final @Nullable Input<Boolean> isSpot;
+      private final @Nullable Output<Boolean> isSpot;
 
-    public Input<Boolean> getIsSpot() {
-        return this.isSpot == null ? Input.empty() : this.isSpot;
+    public Output<Boolean> getIsSpot() {
+        return this.isSpot == null ? Output.empty() : this.isSpot;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isXenon")
-      private final @Nullable Input<Boolean> isXenon;
+      private final @Nullable Output<Boolean> isXenon;
 
-    public Input<Boolean> getIsXenon() {
-        return this.isXenon == null ? Input.empty() : this.isXenon;
+    public Output<Boolean> getIsXenon() {
+        return this.isXenon == null ? Output.empty() : this.isXenon;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kubeEnvironmentProfile")
-      private final @Nullable Input<KubeEnvironmentProfileArgs> kubeEnvironmentProfile;
+      private final @Nullable Output<KubeEnvironmentProfileArgs> kubeEnvironmentProfile;
 
-    public Input<KubeEnvironmentProfileArgs> getKubeEnvironmentProfile() {
-        return this.kubeEnvironmentProfile == null ? Input.empty() : this.kubeEnvironmentProfile;
+    public Output<KubeEnvironmentProfileArgs> getKubeEnvironmentProfile() {
+        return this.kubeEnvironmentProfile == null ? Output.empty() : this.kubeEnvironmentProfile;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -113,10 +113,10 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maximumElasticWorkerCount")
-      private final @Nullable Input<Integer> maximumElasticWorkerCount;
+      private final @Nullable Output<Integer> maximumElasticWorkerCount;
 
-    public Input<Integer> getMaximumElasticWorkerCount() {
-        return this.maximumElasticWorkerCount == null ? Input.empty() : this.maximumElasticWorkerCount;
+    public Output<Integer> getMaximumElasticWorkerCount() {
+        return this.maximumElasticWorkerCount == null ? Output.empty() : this.maximumElasticWorkerCount;
     }
 
     /**
@@ -124,10 +124,10 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -136,10 +136,10 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="perSiteScaling")
-      private final @Nullable Input<Boolean> perSiteScaling;
+      private final @Nullable Output<Boolean> perSiteScaling;
 
-    public Input<Boolean> getPerSiteScaling() {
-        return this.perSiteScaling == null ? Input.empty() : this.perSiteScaling;
+    public Output<Boolean> getPerSiteScaling() {
+        return this.perSiteScaling == null ? Output.empty() : this.perSiteScaling;
     }
 
     /**
@@ -147,10 +147,10 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reserved")
-      private final @Nullable Input<Boolean> reserved;
+      private final @Nullable Output<Boolean> reserved;
 
-    public Input<Boolean> getReserved() {
-        return this.reserved == null ? Input.empty() : this.reserved;
+    public Output<Boolean> getReserved() {
+        return this.reserved == null ? Output.empty() : this.reserved;
     }
 
     /**
@@ -158,9 +158,9 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -169,10 +169,10 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<SkuDescriptionArgs> sku;
+      private final @Nullable Output<SkuDescriptionArgs> sku;
 
-    public Input<SkuDescriptionArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<SkuDescriptionArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -180,10 +180,10 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spotExpirationTime")
-      private final @Nullable Input<String> spotExpirationTime;
+      private final @Nullable Output<String> spotExpirationTime;
 
-    public Input<String> getSpotExpirationTime() {
-        return this.spotExpirationTime == null ? Input.empty() : this.spotExpirationTime;
+    public Output<String> getSpotExpirationTime() {
+        return this.spotExpirationTime == null ? Output.empty() : this.spotExpirationTime;
     }
 
     /**
@@ -191,10 +191,10 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -202,10 +202,10 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetWorkerCount")
-      private final @Nullable Input<Integer> targetWorkerCount;
+      private final @Nullable Output<Integer> targetWorkerCount;
 
-    public Input<Integer> getTargetWorkerCount() {
-        return this.targetWorkerCount == null ? Input.empty() : this.targetWorkerCount;
+    public Output<Integer> getTargetWorkerCount() {
+        return this.targetWorkerCount == null ? Output.empty() : this.targetWorkerCount;
     }
 
     /**
@@ -213,10 +213,10 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetWorkerSizeId")
-      private final @Nullable Input<Integer> targetWorkerSizeId;
+      private final @Nullable Output<Integer> targetWorkerSizeId;
 
-    public Input<Integer> getTargetWorkerSizeId() {
-        return this.targetWorkerSizeId == null ? Input.empty() : this.targetWorkerSizeId;
+    public Output<Integer> getTargetWorkerSizeId() {
+        return this.targetWorkerSizeId == null ? Output.empty() : this.targetWorkerSizeId;
     }
 
     /**
@@ -224,44 +224,44 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workerTierName")
-      private final @Nullable Input<String> workerTierName;
+      private final @Nullable Output<String> workerTierName;
 
-    public Input<String> getWorkerTierName() {
-        return this.workerTierName == null ? Input.empty() : this.workerTierName;
+    public Output<String> getWorkerTierName() {
+        return this.workerTierName == null ? Output.empty() : this.workerTierName;
     }
 
     public AppServicePlanArgs(
-        @Nullable Input<String> freeOfferExpirationTime,
-        @Nullable Input<HostingEnvironmentProfileArgs> hostingEnvironmentProfile,
-        @Nullable Input<Boolean> hyperV,
-        @Nullable Input<Boolean> isSpot,
-        @Nullable Input<Boolean> isXenon,
-        @Nullable Input<String> kind,
-        @Nullable Input<KubeEnvironmentProfileArgs> kubeEnvironmentProfile,
-        @Nullable Input<String> location,
-        @Nullable Input<Integer> maximumElasticWorkerCount,
-        @Nullable Input<String> name,
-        @Nullable Input<Boolean> perSiteScaling,
-        @Nullable Input<Boolean> reserved,
-        Input<String> resourceGroupName,
-        @Nullable Input<SkuDescriptionArgs> sku,
-        @Nullable Input<String> spotExpirationTime,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Integer> targetWorkerCount,
-        @Nullable Input<Integer> targetWorkerSizeId,
-        @Nullable Input<String> workerTierName) {
+        @Nullable Output<String> freeOfferExpirationTime,
+        @Nullable Output<HostingEnvironmentProfileArgs> hostingEnvironmentProfile,
+        @Nullable Output<Boolean> hyperV,
+        @Nullable Output<Boolean> isSpot,
+        @Nullable Output<Boolean> isXenon,
+        @Nullable Output<String> kind,
+        @Nullable Output<KubeEnvironmentProfileArgs> kubeEnvironmentProfile,
+        @Nullable Output<String> location,
+        @Nullable Output<Integer> maximumElasticWorkerCount,
+        @Nullable Output<String> name,
+        @Nullable Output<Boolean> perSiteScaling,
+        @Nullable Output<Boolean> reserved,
+        Output<String> resourceGroupName,
+        @Nullable Output<SkuDescriptionArgs> sku,
+        @Nullable Output<String> spotExpirationTime,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Integer> targetWorkerCount,
+        @Nullable Output<Integer> targetWorkerSizeId,
+        @Nullable Output<String> workerTierName) {
         this.freeOfferExpirationTime = freeOfferExpirationTime;
         this.hostingEnvironmentProfile = hostingEnvironmentProfile;
-        this.hyperV = hyperV == null ? Input.ofNullable(false) : hyperV;
+        this.hyperV = hyperV == null ? Output.ofNullable(false) : hyperV;
         this.isSpot = isSpot;
-        this.isXenon = isXenon == null ? Input.ofNullable(false) : isXenon;
+        this.isXenon = isXenon == null ? Output.ofNullable(false) : isXenon;
         this.kind = kind;
         this.kubeEnvironmentProfile = kubeEnvironmentProfile;
         this.location = location;
         this.maximumElasticWorkerCount = maximumElasticWorkerCount;
         this.name = name;
-        this.perSiteScaling = perSiteScaling == null ? Input.ofNullable(false) : perSiteScaling;
-        this.reserved = reserved == null ? Input.ofNullable(false) : reserved;
+        this.perSiteScaling = perSiteScaling == null ? Output.ofNullable(false) : perSiteScaling;
+        this.reserved = reserved == null ? Output.ofNullable(false) : reserved;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.sku = sku;
         this.spotExpirationTime = spotExpirationTime;
@@ -272,25 +272,25 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AppServicePlanArgs() {
-        this.freeOfferExpirationTime = Input.empty();
-        this.hostingEnvironmentProfile = Input.empty();
-        this.hyperV = Input.empty();
-        this.isSpot = Input.empty();
-        this.isXenon = Input.empty();
-        this.kind = Input.empty();
-        this.kubeEnvironmentProfile = Input.empty();
-        this.location = Input.empty();
-        this.maximumElasticWorkerCount = Input.empty();
-        this.name = Input.empty();
-        this.perSiteScaling = Input.empty();
-        this.reserved = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sku = Input.empty();
-        this.spotExpirationTime = Input.empty();
-        this.tags = Input.empty();
-        this.targetWorkerCount = Input.empty();
-        this.targetWorkerSizeId = Input.empty();
-        this.workerTierName = Input.empty();
+        this.freeOfferExpirationTime = Output.empty();
+        this.hostingEnvironmentProfile = Output.empty();
+        this.hyperV = Output.empty();
+        this.isSpot = Output.empty();
+        this.isXenon = Output.empty();
+        this.kind = Output.empty();
+        this.kubeEnvironmentProfile = Output.empty();
+        this.location = Output.empty();
+        this.maximumElasticWorkerCount = Output.empty();
+        this.name = Output.empty();
+        this.perSiteScaling = Output.empty();
+        this.reserved = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sku = Output.empty();
+        this.spotExpirationTime = Output.empty();
+        this.tags = Output.empty();
+        this.targetWorkerCount = Output.empty();
+        this.targetWorkerSizeId = Output.empty();
+        this.workerTierName = Output.empty();
     }
 
     public static Builder builder() {
@@ -302,25 +302,25 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> freeOfferExpirationTime;
-        private @Nullable Input<HostingEnvironmentProfileArgs> hostingEnvironmentProfile;
-        private @Nullable Input<Boolean> hyperV;
-        private @Nullable Input<Boolean> isSpot;
-        private @Nullable Input<Boolean> isXenon;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<KubeEnvironmentProfileArgs> kubeEnvironmentProfile;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Integer> maximumElasticWorkerCount;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Boolean> perSiteScaling;
-        private @Nullable Input<Boolean> reserved;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<SkuDescriptionArgs> sku;
-        private @Nullable Input<String> spotExpirationTime;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Integer> targetWorkerCount;
-        private @Nullable Input<Integer> targetWorkerSizeId;
-        private @Nullable Input<String> workerTierName;
+        private @Nullable Output<String> freeOfferExpirationTime;
+        private @Nullable Output<HostingEnvironmentProfileArgs> hostingEnvironmentProfile;
+        private @Nullable Output<Boolean> hyperV;
+        private @Nullable Output<Boolean> isSpot;
+        private @Nullable Output<Boolean> isXenon;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<KubeEnvironmentProfileArgs> kubeEnvironmentProfile;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Integer> maximumElasticWorkerCount;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Boolean> perSiteScaling;
+        private @Nullable Output<Boolean> reserved;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<SkuDescriptionArgs> sku;
+        private @Nullable Output<String> spotExpirationTime;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Integer> targetWorkerCount;
+        private @Nullable Output<Integer> targetWorkerSizeId;
+        private @Nullable Output<String> workerTierName;
 
         public Builder() {
     	      // Empty
@@ -349,193 +349,193 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workerTierName = defaults.workerTierName;
         }
 
-        public Builder freeOfferExpirationTime(@Nullable Input<String> freeOfferExpirationTime) {
+        public Builder freeOfferExpirationTime(@Nullable Output<String> freeOfferExpirationTime) {
             this.freeOfferExpirationTime = freeOfferExpirationTime;
             return this;
         }
 
         public Builder freeOfferExpirationTime(@Nullable String freeOfferExpirationTime) {
-            this.freeOfferExpirationTime = Input.ofNullable(freeOfferExpirationTime);
+            this.freeOfferExpirationTime = Output.ofNullable(freeOfferExpirationTime);
             return this;
         }
 
-        public Builder hostingEnvironmentProfile(@Nullable Input<HostingEnvironmentProfileArgs> hostingEnvironmentProfile) {
+        public Builder hostingEnvironmentProfile(@Nullable Output<HostingEnvironmentProfileArgs> hostingEnvironmentProfile) {
             this.hostingEnvironmentProfile = hostingEnvironmentProfile;
             return this;
         }
 
         public Builder hostingEnvironmentProfile(@Nullable HostingEnvironmentProfileArgs hostingEnvironmentProfile) {
-            this.hostingEnvironmentProfile = Input.ofNullable(hostingEnvironmentProfile);
+            this.hostingEnvironmentProfile = Output.ofNullable(hostingEnvironmentProfile);
             return this;
         }
 
-        public Builder hyperV(@Nullable Input<Boolean> hyperV) {
+        public Builder hyperV(@Nullable Output<Boolean> hyperV) {
             this.hyperV = hyperV;
             return this;
         }
 
         public Builder hyperV(@Nullable Boolean hyperV) {
-            this.hyperV = Input.ofNullable(hyperV);
+            this.hyperV = Output.ofNullable(hyperV);
             return this;
         }
 
-        public Builder isSpot(@Nullable Input<Boolean> isSpot) {
+        public Builder isSpot(@Nullable Output<Boolean> isSpot) {
             this.isSpot = isSpot;
             return this;
         }
 
         public Builder isSpot(@Nullable Boolean isSpot) {
-            this.isSpot = Input.ofNullable(isSpot);
+            this.isSpot = Output.ofNullable(isSpot);
             return this;
         }
 
-        public Builder isXenon(@Nullable Input<Boolean> isXenon) {
+        public Builder isXenon(@Nullable Output<Boolean> isXenon) {
             this.isXenon = isXenon;
             return this;
         }
 
         public Builder isXenon(@Nullable Boolean isXenon) {
-            this.isXenon = Input.ofNullable(isXenon);
+            this.isXenon = Output.ofNullable(isXenon);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder kubeEnvironmentProfile(@Nullable Input<KubeEnvironmentProfileArgs> kubeEnvironmentProfile) {
+        public Builder kubeEnvironmentProfile(@Nullable Output<KubeEnvironmentProfileArgs> kubeEnvironmentProfile) {
             this.kubeEnvironmentProfile = kubeEnvironmentProfile;
             return this;
         }
 
         public Builder kubeEnvironmentProfile(@Nullable KubeEnvironmentProfileArgs kubeEnvironmentProfile) {
-            this.kubeEnvironmentProfile = Input.ofNullable(kubeEnvironmentProfile);
+            this.kubeEnvironmentProfile = Output.ofNullable(kubeEnvironmentProfile);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder maximumElasticWorkerCount(@Nullable Input<Integer> maximumElasticWorkerCount) {
+        public Builder maximumElasticWorkerCount(@Nullable Output<Integer> maximumElasticWorkerCount) {
             this.maximumElasticWorkerCount = maximumElasticWorkerCount;
             return this;
         }
 
         public Builder maximumElasticWorkerCount(@Nullable Integer maximumElasticWorkerCount) {
-            this.maximumElasticWorkerCount = Input.ofNullable(maximumElasticWorkerCount);
+            this.maximumElasticWorkerCount = Output.ofNullable(maximumElasticWorkerCount);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder perSiteScaling(@Nullable Input<Boolean> perSiteScaling) {
+        public Builder perSiteScaling(@Nullable Output<Boolean> perSiteScaling) {
             this.perSiteScaling = perSiteScaling;
             return this;
         }
 
         public Builder perSiteScaling(@Nullable Boolean perSiteScaling) {
-            this.perSiteScaling = Input.ofNullable(perSiteScaling);
+            this.perSiteScaling = Output.ofNullable(perSiteScaling);
             return this;
         }
 
-        public Builder reserved(@Nullable Input<Boolean> reserved) {
+        public Builder reserved(@Nullable Output<Boolean> reserved) {
             this.reserved = reserved;
             return this;
         }
 
         public Builder reserved(@Nullable Boolean reserved) {
-            this.reserved = Input.ofNullable(reserved);
+            this.reserved = Output.ofNullable(reserved);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sku(@Nullable Input<SkuDescriptionArgs> sku) {
+        public Builder sku(@Nullable Output<SkuDescriptionArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable SkuDescriptionArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder spotExpirationTime(@Nullable Input<String> spotExpirationTime) {
+        public Builder spotExpirationTime(@Nullable Output<String> spotExpirationTime) {
             this.spotExpirationTime = spotExpirationTime;
             return this;
         }
 
         public Builder spotExpirationTime(@Nullable String spotExpirationTime) {
-            this.spotExpirationTime = Input.ofNullable(spotExpirationTime);
+            this.spotExpirationTime = Output.ofNullable(spotExpirationTime);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder targetWorkerCount(@Nullable Input<Integer> targetWorkerCount) {
+        public Builder targetWorkerCount(@Nullable Output<Integer> targetWorkerCount) {
             this.targetWorkerCount = targetWorkerCount;
             return this;
         }
 
         public Builder targetWorkerCount(@Nullable Integer targetWorkerCount) {
-            this.targetWorkerCount = Input.ofNullable(targetWorkerCount);
+            this.targetWorkerCount = Output.ofNullable(targetWorkerCount);
             return this;
         }
 
-        public Builder targetWorkerSizeId(@Nullable Input<Integer> targetWorkerSizeId) {
+        public Builder targetWorkerSizeId(@Nullable Output<Integer> targetWorkerSizeId) {
             this.targetWorkerSizeId = targetWorkerSizeId;
             return this;
         }
 
         public Builder targetWorkerSizeId(@Nullable Integer targetWorkerSizeId) {
-            this.targetWorkerSizeId = Input.ofNullable(targetWorkerSizeId);
+            this.targetWorkerSizeId = Output.ofNullable(targetWorkerSizeId);
             return this;
         }
 
-        public Builder workerTierName(@Nullable Input<String> workerTierName) {
+        public Builder workerTierName(@Nullable Output<String> workerTierName) {
             this.workerTierName = workerTierName;
             return this;
         }
 
         public Builder workerTierName(@Nullable String workerTierName) {
-            this.workerTierName = Input.ofNullable(workerTierName);
+            this.workerTierName = Output.ofNullable(workerTierName);
             return this;
         }
         public AppServicePlanArgs build() {

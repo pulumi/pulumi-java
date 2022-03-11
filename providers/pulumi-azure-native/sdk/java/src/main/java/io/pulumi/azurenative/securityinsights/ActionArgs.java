@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actionId")
-      private final @Nullable Input<String> actionId;
+      private final @Nullable Output<String> actionId;
 
-    public Input<String> getActionId() {
-        return this.actionId == null ? Input.empty() : this.actionId;
+    public Output<String> getActionId() {
+        return this.actionId == null ? Output.empty() : this.actionId;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logicAppResourceId", required=true)
-      private final Input<String> logicAppResourceId;
+      private final Output<String> logicAppResourceId;
 
-    public Input<String> getLogicAppResourceId() {
+    public Output<String> getLogicAppResourceId() {
         return this.logicAppResourceId;
     }
 
@@ -41,9 +41,9 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -52,9 +52,9 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleId", required=true)
-      private final Input<String> ruleId;
+      private final Output<String> ruleId;
 
-    public Input<String> getRuleId() {
+    public Output<String> getRuleId() {
         return this.ruleId;
     }
 
@@ -63,9 +63,9 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="triggerUri", required=true)
-      private final Input<String> triggerUri;
+      private final Output<String> triggerUri;
 
-    public Input<String> getTriggerUri() {
+    public Output<String> getTriggerUri() {
         return this.triggerUri;
     }
 
@@ -74,19 +74,19 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-      private final Input<String> workspaceName;
+      private final Output<String> workspaceName;
 
-    public Input<String> getWorkspaceName() {
+    public Output<String> getWorkspaceName() {
         return this.workspaceName;
     }
 
     public ActionArgs(
-        @Nullable Input<String> actionId,
-        Input<String> logicAppResourceId,
-        Input<String> resourceGroupName,
-        Input<String> ruleId,
-        Input<String> triggerUri,
-        Input<String> workspaceName) {
+        @Nullable Output<String> actionId,
+        Output<String> logicAppResourceId,
+        Output<String> resourceGroupName,
+        Output<String> ruleId,
+        Output<String> triggerUri,
+        Output<String> workspaceName) {
         this.actionId = actionId;
         this.logicAppResourceId = Objects.requireNonNull(logicAppResourceId, "expected parameter 'logicAppResourceId' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -96,12 +96,12 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ActionArgs() {
-        this.actionId = Input.empty();
-        this.logicAppResourceId = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.ruleId = Input.empty();
-        this.triggerUri = Input.empty();
-        this.workspaceName = Input.empty();
+        this.actionId = Output.empty();
+        this.logicAppResourceId = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.ruleId = Output.empty();
+        this.triggerUri = Output.empty();
+        this.workspaceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -113,12 +113,12 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> actionId;
-        private Input<String> logicAppResourceId;
-        private Input<String> resourceGroupName;
-        private Input<String> ruleId;
-        private Input<String> triggerUri;
-        private Input<String> workspaceName;
+        private @Nullable Output<String> actionId;
+        private Output<String> logicAppResourceId;
+        private Output<String> resourceGroupName;
+        private Output<String> ruleId;
+        private Output<String> triggerUri;
+        private Output<String> workspaceName;
 
         public Builder() {
     	      // Empty
@@ -134,63 +134,63 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder actionId(@Nullable Input<String> actionId) {
+        public Builder actionId(@Nullable Output<String> actionId) {
             this.actionId = actionId;
             return this;
         }
 
         public Builder actionId(@Nullable String actionId) {
-            this.actionId = Input.ofNullable(actionId);
+            this.actionId = Output.ofNullable(actionId);
             return this;
         }
 
-        public Builder logicAppResourceId(Input<String> logicAppResourceId) {
+        public Builder logicAppResourceId(Output<String> logicAppResourceId) {
             this.logicAppResourceId = Objects.requireNonNull(logicAppResourceId);
             return this;
         }
 
         public Builder logicAppResourceId(String logicAppResourceId) {
-            this.logicAppResourceId = Input.of(Objects.requireNonNull(logicAppResourceId));
+            this.logicAppResourceId = Output.of(Objects.requireNonNull(logicAppResourceId));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder ruleId(Input<String> ruleId) {
+        public Builder ruleId(Output<String> ruleId) {
             this.ruleId = Objects.requireNonNull(ruleId);
             return this;
         }
 
         public Builder ruleId(String ruleId) {
-            this.ruleId = Input.of(Objects.requireNonNull(ruleId));
+            this.ruleId = Output.of(Objects.requireNonNull(ruleId));
             return this;
         }
 
-        public Builder triggerUri(Input<String> triggerUri) {
+        public Builder triggerUri(Output<String> triggerUri) {
             this.triggerUri = Objects.requireNonNull(triggerUri);
             return this;
         }
 
         public Builder triggerUri(String triggerUri) {
-            this.triggerUri = Input.of(Objects.requireNonNull(triggerUri));
+            this.triggerUri = Output.of(Objects.requireNonNull(triggerUri));
             return this;
         }
 
-        public Builder workspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
+            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
         }
         public ActionArgs build() {

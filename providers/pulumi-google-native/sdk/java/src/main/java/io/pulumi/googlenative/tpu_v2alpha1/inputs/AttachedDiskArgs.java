@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.tpu_v2alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.tpu_v2alpha1.enums.AttachedDiskMode;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mode")
-      private final @Nullable Input<AttachedDiskMode> mode;
+      private final @Nullable Output<AttachedDiskMode> mode;
 
-    public Input<AttachedDiskMode> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<AttachedDiskMode> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceDisk")
-      private final @Nullable Input<String> sourceDisk;
+      private final @Nullable Output<String> sourceDisk;
 
-    public Input<String> getSourceDisk() {
-        return this.sourceDisk == null ? Input.empty() : this.sourceDisk;
+    public Output<String> getSourceDisk() {
+        return this.sourceDisk == null ? Output.empty() : this.sourceDisk;
     }
 
     public AttachedDiskArgs(
-        @Nullable Input<AttachedDiskMode> mode,
-        @Nullable Input<String> sourceDisk) {
+        @Nullable Output<AttachedDiskMode> mode,
+        @Nullable Output<String> sourceDisk) {
         this.mode = mode;
         this.sourceDisk = sourceDisk;
     }
 
     private AttachedDiskArgs() {
-        this.mode = Input.empty();
-        this.sourceDisk = Input.empty();
+        this.mode = Output.empty();
+        this.sourceDisk = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<AttachedDiskMode> mode;
-        private @Nullable Input<String> sourceDisk;
+        private @Nullable Output<AttachedDiskMode> mode;
+        private @Nullable Output<String> sourceDisk;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sourceDisk = defaults.sourceDisk;
         }
 
-        public Builder mode(@Nullable Input<AttachedDiskMode> mode) {
+        public Builder mode(@Nullable Output<AttachedDiskMode> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable AttachedDiskMode mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
 
-        public Builder sourceDisk(@Nullable Input<String> sourceDisk) {
+        public Builder sourceDisk(@Nullable Output<String> sourceDisk) {
             this.sourceDisk = sourceDisk;
             return this;
         }
 
         public Builder sourceDisk(@Nullable String sourceDisk) {
-            this.sourceDisk = Input.ofNullable(sourceDisk);
+            this.sourceDisk = Output.ofNullable(sourceDisk);
             return this;
         }
         public AttachedDiskArgs build() {

@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.compute.CloudServiceArgs;
 import io.pulumi.azurenative.compute.outputs.CloudServicePropertiesResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -142,19 +141,19 @@ public class CloudService extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CloudService(String name, CloudServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:compute:CloudService", name, args == null ? CloudServiceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:compute:CloudService", name, args == null ? CloudServiceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private CloudService(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private CloudService(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:compute:CloudService", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:compute/v20201001preview:CloudService").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20210301:CloudService").build())
+                Output.of(Alias.builder().setType("azure-native:compute/v20201001preview:CloudService").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20210301:CloudService").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -168,7 +167,7 @@ public class CloudService extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CloudService get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static CloudService get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new CloudService(name, id, options);
     }
 }

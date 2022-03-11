@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appflow.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class ConnectorProfileDatadogConnectorProfileCredentialsArgs extend
      * 
      */
     @InputImport(name="apiKey", required=true)
-      private final Input<String> apiKey;
+      private final Output<String> apiKey;
 
-    public Input<String> getApiKey() {
+    public Output<String> getApiKey() {
         return this.apiKey;
     }
 
@@ -29,22 +29,22 @@ public final class ConnectorProfileDatadogConnectorProfileCredentialsArgs extend
      * 
      */
     @InputImport(name="applicationKey", required=true)
-      private final Input<String> applicationKey;
+      private final Output<String> applicationKey;
 
-    public Input<String> getApplicationKey() {
+    public Output<String> getApplicationKey() {
         return this.applicationKey;
     }
 
     public ConnectorProfileDatadogConnectorProfileCredentialsArgs(
-        Input<String> apiKey,
-        Input<String> applicationKey) {
+        Output<String> apiKey,
+        Output<String> applicationKey) {
         this.apiKey = Objects.requireNonNull(apiKey, "expected parameter 'apiKey' to be non-null");
         this.applicationKey = Objects.requireNonNull(applicationKey, "expected parameter 'applicationKey' to be non-null");
     }
 
     private ConnectorProfileDatadogConnectorProfileCredentialsArgs() {
-        this.apiKey = Input.empty();
-        this.applicationKey = Input.empty();
+        this.apiKey = Output.empty();
+        this.applicationKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class ConnectorProfileDatadogConnectorProfileCredentialsArgs extend
     }
 
     public static final class Builder {
-        private Input<String> apiKey;
-        private Input<String> applicationKey;
+        private Output<String> apiKey;
+        private Output<String> applicationKey;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class ConnectorProfileDatadogConnectorProfileCredentialsArgs extend
     	      this.applicationKey = defaults.applicationKey;
         }
 
-        public Builder apiKey(Input<String> apiKey) {
+        public Builder apiKey(Output<String> apiKey) {
             this.apiKey = Objects.requireNonNull(apiKey);
             return this;
         }
 
         public Builder apiKey(String apiKey) {
-            this.apiKey = Input.of(Objects.requireNonNull(apiKey));
+            this.apiKey = Output.of(Objects.requireNonNull(apiKey));
             return this;
         }
 
-        public Builder applicationKey(Input<String> applicationKey) {
+        public Builder applicationKey(Output<String> applicationKey) {
             this.applicationKey = Objects.requireNonNull(applicationKey);
             return this;
         }
 
         public Builder applicationKey(String applicationKey) {
-            this.applicationKey = Input.of(Objects.requireNonNull(applicationKey));
+            this.applicationKey = Output.of(Objects.requireNonNull(applicationKey));
             return this;
         }
         public ConnectorProfileDatadogConnectorProfileCredentialsArgs build() {

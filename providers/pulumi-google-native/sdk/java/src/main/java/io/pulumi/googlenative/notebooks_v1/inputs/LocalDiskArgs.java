@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.notebooks_v1.inputs.LocalDiskInitializeParamsArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="initializeParams")
-      private final @Nullable Input<LocalDiskInitializeParamsArgs> initializeParams;
+      private final @Nullable Output<LocalDiskInitializeParamsArgs> initializeParams;
 
-    public Input<LocalDiskInitializeParamsArgs> getInitializeParams() {
-        return this.initializeParams == null ? Input.empty() : this.initializeParams;
+    public Output<LocalDiskInitializeParamsArgs> getInitializeParams() {
+        return this.initializeParams == null ? Output.empty() : this.initializeParams;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="interface")
-      private final @Nullable Input<String> $interface;
+      private final @Nullable Output<String> $interface;
 
-    public Input<String> get$interface() {
-        return this.$interface == null ? Input.empty() : this.$interface;
+    public Output<String> get$interface() {
+        return this.$interface == null ? Output.empty() : this.$interface;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mode")
-      private final @Nullable Input<String> mode;
+      private final @Nullable Output<String> mode;
 
-    public Input<String> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<String> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source")
-      private final @Nullable Input<String> source;
+      private final @Nullable Output<String> source;
 
-    public Input<String> getSource() {
-        return this.source == null ? Input.empty() : this.source;
+    public Output<String> getSource() {
+        return this.source == null ? Output.empty() : this.source;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public LocalDiskArgs(
-        @Nullable Input<LocalDiskInitializeParamsArgs> initializeParams,
-        @Nullable Input<String> $interface,
-        @Nullable Input<String> mode,
-        @Nullable Input<String> source,
-        @Nullable Input<String> type) {
+        @Nullable Output<LocalDiskInitializeParamsArgs> initializeParams,
+        @Nullable Output<String> $interface,
+        @Nullable Output<String> mode,
+        @Nullable Output<String> source,
+        @Nullable Output<String> type) {
         this.initializeParams = initializeParams;
         this.$interface = $interface;
         this.mode = mode;
@@ -88,11 +88,11 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LocalDiskArgs() {
-        this.initializeParams = Input.empty();
-        this.$interface = Input.empty();
-        this.mode = Input.empty();
-        this.source = Input.empty();
-        this.type = Input.empty();
+        this.initializeParams = Output.empty();
+        this.$interface = Output.empty();
+        this.mode = Output.empty();
+        this.source = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<LocalDiskInitializeParamsArgs> initializeParams;
-        private @Nullable Input<String> $interface;
-        private @Nullable Input<String> mode;
-        private @Nullable Input<String> source;
-        private @Nullable Input<String> type;
+        private @Nullable Output<LocalDiskInitializeParamsArgs> initializeParams;
+        private @Nullable Output<String> $interface;
+        private @Nullable Output<String> mode;
+        private @Nullable Output<String> source;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder initializeParams(@Nullable Input<LocalDiskInitializeParamsArgs> initializeParams) {
+        public Builder initializeParams(@Nullable Output<LocalDiskInitializeParamsArgs> initializeParams) {
             this.initializeParams = initializeParams;
             return this;
         }
 
         public Builder initializeParams(@Nullable LocalDiskInitializeParamsArgs initializeParams) {
-            this.initializeParams = Input.ofNullable(initializeParams);
+            this.initializeParams = Output.ofNullable(initializeParams);
             return this;
         }
 
-        public Builder $interface(@Nullable Input<String> $interface) {
+        public Builder $interface(@Nullable Output<String> $interface) {
             this.$interface = $interface;
             return this;
         }
 
         public Builder $interface(@Nullable String $interface) {
-            this.$interface = Input.ofNullable($interface);
+            this.$interface = Output.ofNullable($interface);
             return this;
         }
 
-        public Builder mode(@Nullable Input<String> mode) {
+        public Builder mode(@Nullable Output<String> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable String mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
 
-        public Builder source(@Nullable Input<String> source) {
+        public Builder source(@Nullable Output<String> source) {
             this.source = source;
             return this;
         }
 
         public Builder source(@Nullable String source) {
-            this.source = Input.ofNullable(source);
+            this.source = Output.ofNullable(source);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public LocalDiskArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="testPackageId")
-      private final @Nullable Input<String> testPackageId;
+      private final @Nullable Output<String> testPackageId;
 
-    public Input<String> getTestPackageId() {
-        return this.testPackageId == null ? Input.empty() : this.testPackageId;
+    public Output<String> getTestPackageId() {
+        return this.testPackageId == null ? Output.empty() : this.testPackageId;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="testRunnerClass")
-      private final @Nullable Input<String> testRunnerClass;
+      private final @Nullable Output<String> testRunnerClass;
 
-    public Input<String> getTestRunnerClass() {
-        return this.testRunnerClass == null ? Input.empty() : this.testRunnerClass;
+    public Output<String> getTestRunnerClass() {
+        return this.testRunnerClass == null ? Output.empty() : this.testRunnerClass;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="testTargets")
-      private final @Nullable Input<List<String>> testTargets;
+      private final @Nullable Output<List<String>> testTargets;
 
-    public Input<List<String>> getTestTargets() {
-        return this.testTargets == null ? Input.empty() : this.testTargets;
+    public Output<List<String>> getTestTargets() {
+        return this.testTargets == null ? Output.empty() : this.testTargets;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="useOrchestrator")
-      private final @Nullable Input<Boolean> useOrchestrator;
+      private final @Nullable Output<Boolean> useOrchestrator;
 
-    public Input<Boolean> getUseOrchestrator() {
-        return this.useOrchestrator == null ? Input.empty() : this.useOrchestrator;
+    public Output<Boolean> getUseOrchestrator() {
+        return this.useOrchestrator == null ? Output.empty() : this.useOrchestrator;
     }
 
     public AndroidInstrumentationTestArgs(
-        @Nullable Input<String> testPackageId,
-        @Nullable Input<String> testRunnerClass,
-        @Nullable Input<List<String>> testTargets,
-        @Nullable Input<Boolean> useOrchestrator) {
+        @Nullable Output<String> testPackageId,
+        @Nullable Output<String> testRunnerClass,
+        @Nullable Output<List<String>> testTargets,
+        @Nullable Output<Boolean> useOrchestrator) {
         this.testPackageId = testPackageId;
         this.testRunnerClass = testRunnerClass;
         this.testTargets = testTargets;
@@ -76,10 +76,10 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
     }
 
     private AndroidInstrumentationTestArgs() {
-        this.testPackageId = Input.empty();
-        this.testRunnerClass = Input.empty();
-        this.testTargets = Input.empty();
-        this.useOrchestrator = Input.empty();
+        this.testPackageId = Output.empty();
+        this.testRunnerClass = Output.empty();
+        this.testTargets = Output.empty();
+        this.useOrchestrator = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> testPackageId;
-        private @Nullable Input<String> testRunnerClass;
-        private @Nullable Input<List<String>> testTargets;
-        private @Nullable Input<Boolean> useOrchestrator;
+        private @Nullable Output<String> testPackageId;
+        private @Nullable Output<String> testRunnerClass;
+        private @Nullable Output<List<String>> testTargets;
+        private @Nullable Output<Boolean> useOrchestrator;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
     	      this.useOrchestrator = defaults.useOrchestrator;
         }
 
-        public Builder testPackageId(@Nullable Input<String> testPackageId) {
+        public Builder testPackageId(@Nullable Output<String> testPackageId) {
             this.testPackageId = testPackageId;
             return this;
         }
 
         public Builder testPackageId(@Nullable String testPackageId) {
-            this.testPackageId = Input.ofNullable(testPackageId);
+            this.testPackageId = Output.ofNullable(testPackageId);
             return this;
         }
 
-        public Builder testRunnerClass(@Nullable Input<String> testRunnerClass) {
+        public Builder testRunnerClass(@Nullable Output<String> testRunnerClass) {
             this.testRunnerClass = testRunnerClass;
             return this;
         }
 
         public Builder testRunnerClass(@Nullable String testRunnerClass) {
-            this.testRunnerClass = Input.ofNullable(testRunnerClass);
+            this.testRunnerClass = Output.ofNullable(testRunnerClass);
             return this;
         }
 
-        public Builder testTargets(@Nullable Input<List<String>> testTargets) {
+        public Builder testTargets(@Nullable Output<List<String>> testTargets) {
             this.testTargets = testTargets;
             return this;
         }
 
         public Builder testTargets(@Nullable List<String> testTargets) {
-            this.testTargets = Input.ofNullable(testTargets);
+            this.testTargets = Output.ofNullable(testTargets);
             return this;
         }
 
-        public Builder useOrchestrator(@Nullable Input<Boolean> useOrchestrator) {
+        public Builder useOrchestrator(@Nullable Output<Boolean> useOrchestrator) {
             this.useOrchestrator = useOrchestrator;
             return this;
         }
 
         public Builder useOrchestrator(@Nullable Boolean useOrchestrator) {
-            this.useOrchestrator = Input.ofNullable(useOrchestrator);
+            this.useOrchestrator = Output.ofNullable(useOrchestrator);
             return this;
         }
         public AndroidInstrumentationTestArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ses.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class EmailIdentityState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class EmailIdentityState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="email")
-      private final @Nullable Input<String> email;
+      private final @Nullable Output<String> email;
 
-    public Input<String> getEmail() {
-        return this.email == null ? Input.empty() : this.email;
+    public Output<String> getEmail() {
+        return this.email == null ? Output.empty() : this.email;
     }
 
     public EmailIdentityState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> email) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> email) {
         this.arn = arn;
         this.email = email;
     }
 
     private EmailIdentityState() {
-        this.arn = Input.empty();
-        this.email = Input.empty();
+        this.arn = Output.empty();
+        this.email = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class EmailIdentityState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> email;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> email;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class EmailIdentityState extends io.pulumi.resources.ResourceArgs {
     	      this.email = defaults.email;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder email(@Nullable Input<String> email) {
+        public Builder email(@Nullable Output<String> email) {
             this.email = email;
             return this;
         }
 
         public Builder email(@Nullable String email) {
-            this.email = Input.ofNullable(email);
+            this.email = Output.ofNullable(email);
             return this;
         }
         public EmailIdentityState build() {

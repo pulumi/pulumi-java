@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dataprotection;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backupPolicyName")
-      private final @Nullable Input<String> backupPolicyName;
+      private final @Nullable Output<String> backupPolicyName;
 
-    public Input<String> getBackupPolicyName() {
-        return this.backupPolicyName == null ? Input.empty() : this.backupPolicyName;
+    public Output<String> getBackupPolicyName() {
+        return this.backupPolicyName == null ? Output.empty() : this.backupPolicyName;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<io.pulumi.azurenative.dataprotection.inputs.BackupPolicyArgs> properties;
+      private final @Nullable Output<io.pulumi.azurenative.dataprotection.inputs.BackupPolicyArgs> properties;
 
-    public Input<io.pulumi.azurenative.dataprotection.inputs.BackupPolicyArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<io.pulumi.azurenative.dataprotection.inputs.BackupPolicyArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -41,9 +41,9 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -52,17 +52,17 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vaultName", required=true)
-      private final Input<String> vaultName;
+      private final Output<String> vaultName;
 
-    public Input<String> getVaultName() {
+    public Output<String> getVaultName() {
         return this.vaultName;
     }
 
     public BackupPolicyArgs(
-        @Nullable Input<String> backupPolicyName,
-        @Nullable Input<io.pulumi.azurenative.dataprotection.inputs.BackupPolicyArgs> properties,
-        Input<String> resourceGroupName,
-        Input<String> vaultName) {
+        @Nullable Output<String> backupPolicyName,
+        @Nullable Output<io.pulumi.azurenative.dataprotection.inputs.BackupPolicyArgs> properties,
+        Output<String> resourceGroupName,
+        Output<String> vaultName) {
         this.backupPolicyName = backupPolicyName;
         this.properties = properties;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -70,10 +70,10 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BackupPolicyArgs() {
-        this.backupPolicyName = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.vaultName = Input.empty();
+        this.backupPolicyName = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.vaultName = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> backupPolicyName;
-        private @Nullable Input<io.pulumi.azurenative.dataprotection.inputs.BackupPolicyArgs> properties;
-        private Input<String> resourceGroupName;
-        private Input<String> vaultName;
+        private @Nullable Output<String> backupPolicyName;
+        private @Nullable Output<io.pulumi.azurenative.dataprotection.inputs.BackupPolicyArgs> properties;
+        private Output<String> resourceGroupName;
+        private Output<String> vaultName;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vaultName = defaults.vaultName;
         }
 
-        public Builder backupPolicyName(@Nullable Input<String> backupPolicyName) {
+        public Builder backupPolicyName(@Nullable Output<String> backupPolicyName) {
             this.backupPolicyName = backupPolicyName;
             return this;
         }
 
         public Builder backupPolicyName(@Nullable String backupPolicyName) {
-            this.backupPolicyName = Input.ofNullable(backupPolicyName);
+            this.backupPolicyName = Output.ofNullable(backupPolicyName);
             return this;
         }
 
-        public Builder properties(@Nullable Input<io.pulumi.azurenative.dataprotection.inputs.BackupPolicyArgs> properties) {
+        public Builder properties(@Nullable Output<io.pulumi.azurenative.dataprotection.inputs.BackupPolicyArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable io.pulumi.azurenative.dataprotection.inputs.BackupPolicyArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder vaultName(Input<String> vaultName) {
+        public Builder vaultName(Output<String> vaultName) {
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
         }
 
         public Builder vaultName(String vaultName) {
-            this.vaultName = Input.of(Objects.requireNonNull(vaultName));
+            this.vaultName = Output.of(Objects.requireNonNull(vaultName));
             return this;
         }
         public BackupPolicyArgs build() {

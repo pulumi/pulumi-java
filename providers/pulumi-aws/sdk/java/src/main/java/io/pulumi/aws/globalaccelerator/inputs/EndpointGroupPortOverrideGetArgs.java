@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.globalaccelerator.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class EndpointGroupPortOverrideGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="endpointPort", required=true)
-      private final Input<Integer> endpointPort;
+      private final Output<Integer> endpointPort;
 
-    public Input<Integer> getEndpointPort() {
+    public Output<Integer> getEndpointPort() {
         return this.endpointPort;
     }
 
@@ -29,22 +29,22 @@ public final class EndpointGroupPortOverrideGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="listenerPort", required=true)
-      private final Input<Integer> listenerPort;
+      private final Output<Integer> listenerPort;
 
-    public Input<Integer> getListenerPort() {
+    public Output<Integer> getListenerPort() {
         return this.listenerPort;
     }
 
     public EndpointGroupPortOverrideGetArgs(
-        Input<Integer> endpointPort,
-        Input<Integer> listenerPort) {
+        Output<Integer> endpointPort,
+        Output<Integer> listenerPort) {
         this.endpointPort = Objects.requireNonNull(endpointPort, "expected parameter 'endpointPort' to be non-null");
         this.listenerPort = Objects.requireNonNull(listenerPort, "expected parameter 'listenerPort' to be non-null");
     }
 
     private EndpointGroupPortOverrideGetArgs() {
-        this.endpointPort = Input.empty();
-        this.listenerPort = Input.empty();
+        this.endpointPort = Output.empty();
+        this.listenerPort = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class EndpointGroupPortOverrideGetArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<Integer> endpointPort;
-        private Input<Integer> listenerPort;
+        private Output<Integer> endpointPort;
+        private Output<Integer> listenerPort;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class EndpointGroupPortOverrideGetArgs extends io.pulumi.resources.
     	      this.listenerPort = defaults.listenerPort;
         }
 
-        public Builder endpointPort(Input<Integer> endpointPort) {
+        public Builder endpointPort(Output<Integer> endpointPort) {
             this.endpointPort = Objects.requireNonNull(endpointPort);
             return this;
         }
 
         public Builder endpointPort(Integer endpointPort) {
-            this.endpointPort = Input.of(Objects.requireNonNull(endpointPort));
+            this.endpointPort = Output.of(Objects.requireNonNull(endpointPort));
             return this;
         }
 
-        public Builder listenerPort(Input<Integer> listenerPort) {
+        public Builder listenerPort(Output<Integer> listenerPort) {
             this.listenerPort = Objects.requireNonNull(listenerPort);
             return this;
         }
 
         public Builder listenerPort(Integer listenerPort) {
-            this.listenerPort = Input.of(Objects.requireNonNull(listenerPort));
+            this.listenerPort = Output.of(Objects.requireNonNull(listenerPort));
             return this;
         }
         public EndpointGroupPortOverrideGetArgs build() {

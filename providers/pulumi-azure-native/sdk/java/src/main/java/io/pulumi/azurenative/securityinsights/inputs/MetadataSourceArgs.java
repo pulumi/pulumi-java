@@ -5,7 +5,7 @@ package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.azurenative.securityinsights.enums.SourceKind;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,9 +25,9 @@ public final class MetadataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<Either<String,SourceKind>> kind;
+      private final Output<Either<String,SourceKind>> kind;
 
-    public Input<Either<String,SourceKind>> getKind() {
+    public Output<Either<String,SourceKind>> getKind() {
         return this.kind;
     }
 
@@ -36,10 +36,10 @@ public final class MetadataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class MetadataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceId")
-      private final @Nullable Input<String> sourceId;
+      private final @Nullable Output<String> sourceId;
 
-    public Input<String> getSourceId() {
-        return this.sourceId == null ? Input.empty() : this.sourceId;
+    public Output<String> getSourceId() {
+        return this.sourceId == null ? Output.empty() : this.sourceId;
     }
 
     public MetadataSourceArgs(
-        Input<Either<String,SourceKind>> kind,
-        @Nullable Input<String> name,
-        @Nullable Input<String> sourceId) {
+        Output<Either<String,SourceKind>> kind,
+        @Nullable Output<String> name,
+        @Nullable Output<String> sourceId) {
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
         this.name = name;
         this.sourceId = sourceId;
     }
 
     private MetadataSourceArgs() {
-        this.kind = Input.empty();
-        this.name = Input.empty();
-        this.sourceId = Input.empty();
+        this.kind = Output.empty();
+        this.name = Output.empty();
+        this.sourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class MetadataSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Either<String,SourceKind>> kind;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> sourceId;
+        private Output<Either<String,SourceKind>> kind;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> sourceId;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class MetadataSourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sourceId = defaults.sourceId;
         }
 
-        public Builder kind(Input<Either<String,SourceKind>> kind) {
+        public Builder kind(Output<Either<String,SourceKind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(Either<String,SourceKind> kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder sourceId(@Nullable Input<String> sourceId) {
+        public Builder sourceId(@Nullable Output<String> sourceId) {
             this.sourceId = sourceId;
             return this;
         }
 
         public Builder sourceId(@Nullable String sourceId) {
-            this.sourceId = Input.ofNullable(sourceId);
+            this.sourceId = Output.ofNullable(sourceId);
             return this;
         }
         public MetadataSourceArgs build() {

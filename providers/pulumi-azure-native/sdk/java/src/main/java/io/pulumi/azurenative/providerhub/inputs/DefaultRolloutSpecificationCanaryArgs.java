@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -16,29 +16,29 @@ public final class DefaultRolloutSpecificationCanaryArgs extends io.pulumi.resou
     public static final DefaultRolloutSpecificationCanaryArgs Empty = new DefaultRolloutSpecificationCanaryArgs();
 
     @InputImport(name="regions")
-      private final @Nullable Input<List<String>> regions;
+      private final @Nullable Output<List<String>> regions;
 
-    public Input<List<String>> getRegions() {
-        return this.regions == null ? Input.empty() : this.regions;
+    public Output<List<String>> getRegions() {
+        return this.regions == null ? Output.empty() : this.regions;
     }
 
     @InputImport(name="skipRegions")
-      private final @Nullable Input<List<String>> skipRegions;
+      private final @Nullable Output<List<String>> skipRegions;
 
-    public Input<List<String>> getSkipRegions() {
-        return this.skipRegions == null ? Input.empty() : this.skipRegions;
+    public Output<List<String>> getSkipRegions() {
+        return this.skipRegions == null ? Output.empty() : this.skipRegions;
     }
 
     public DefaultRolloutSpecificationCanaryArgs(
-        @Nullable Input<List<String>> regions,
-        @Nullable Input<List<String>> skipRegions) {
+        @Nullable Output<List<String>> regions,
+        @Nullable Output<List<String>> skipRegions) {
         this.regions = regions;
         this.skipRegions = skipRegions;
     }
 
     private DefaultRolloutSpecificationCanaryArgs() {
-        this.regions = Input.empty();
-        this.skipRegions = Input.empty();
+        this.regions = Output.empty();
+        this.skipRegions = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class DefaultRolloutSpecificationCanaryArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> regions;
-        private @Nullable Input<List<String>> skipRegions;
+        private @Nullable Output<List<String>> regions;
+        private @Nullable Output<List<String>> skipRegions;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class DefaultRolloutSpecificationCanaryArgs extends io.pulumi.resou
     	      this.skipRegions = defaults.skipRegions;
         }
 
-        public Builder regions(@Nullable Input<List<String>> regions) {
+        public Builder regions(@Nullable Output<List<String>> regions) {
             this.regions = regions;
             return this;
         }
 
         public Builder regions(@Nullable List<String> regions) {
-            this.regions = Input.ofNullable(regions);
+            this.regions = Output.ofNullable(regions);
             return this;
         }
 
-        public Builder skipRegions(@Nullable Input<List<String>> skipRegions) {
+        public Builder skipRegions(@Nullable Output<List<String>> skipRegions) {
             this.skipRegions = skipRegions;
             return this;
         }
 
         public Builder skipRegions(@Nullable List<String> skipRegions) {
-            this.skipRegions = Input.ofNullable(skipRegions);
+            this.skipRegions = Output.ofNullable(skipRegions);
             return this;
         }
         public DefaultRolloutSpecificationCanaryArgs build() {

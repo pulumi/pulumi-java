@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datashare.inputs;
 
 import io.pulumi.azurenative.datashare.enums.Type;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,18 +25,18 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<Either<String,Type>> type;
+      private final @Nullable Output<Either<String,Type>> type;
 
-    public Input<Either<String,Type>> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<Either<String,Type>> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
-    public IdentityArgs(@Nullable Input<Either<String,Type>> type) {
+    public IdentityArgs(@Nullable Output<Either<String,Type>> type) {
         this.type = type;
     }
 
     private IdentityArgs() {
-        this.type = Input.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,7 +48,7 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,Type>> type;
+        private @Nullable Output<Either<String,Type>> type;
 
         public Builder() {
     	      // Empty
@@ -59,13 +59,13 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder type(@Nullable Input<Either<String,Type>> type) {
+        public Builder type(@Nullable Output<Either<String,Type>> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable Either<String,Type> type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public IdentityArgs build() {

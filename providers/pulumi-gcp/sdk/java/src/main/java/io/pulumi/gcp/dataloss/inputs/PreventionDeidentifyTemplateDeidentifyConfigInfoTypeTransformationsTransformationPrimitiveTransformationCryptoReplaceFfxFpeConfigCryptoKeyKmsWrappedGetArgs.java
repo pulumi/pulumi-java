@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @InputImport(name="cryptoKeyName", required=true)
-      private final Input<String> cryptoKeyName;
+      private final Output<String> cryptoKeyName;
 
-    public Input<String> getCryptoKeyName() {
+    public Output<String> getCryptoKeyName() {
         return this.cryptoKeyName;
     }
 
@@ -30,22 +30,22 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @InputImport(name="wrappedKey", required=true)
-      private final Input<String> wrappedKey;
+      private final Output<String> wrappedKey;
 
-    public Input<String> getWrappedKey() {
+    public Output<String> getWrappedKey() {
         return this.wrappedKey;
     }
 
     public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedGetArgs(
-        Input<String> cryptoKeyName,
-        Input<String> wrappedKey) {
+        Output<String> cryptoKeyName,
+        Output<String> wrappedKey) {
         this.cryptoKeyName = Objects.requireNonNull(cryptoKeyName, "expected parameter 'cryptoKeyName' to be non-null");
         this.wrappedKey = Objects.requireNonNull(wrappedKey, "expected parameter 'wrappedKey' to be non-null");
     }
 
     private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedGetArgs() {
-        this.cryptoKeyName = Input.empty();
-        this.wrappedKey = Input.empty();
+        this.cryptoKeyName = Output.empty();
+        this.wrappedKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     }
 
     public static final class Builder {
-        private Input<String> cryptoKeyName;
-        private Input<String> wrappedKey;
+        private Output<String> cryptoKeyName;
+        private Output<String> wrappedKey;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     	      this.wrappedKey = defaults.wrappedKey;
         }
 
-        public Builder cryptoKeyName(Input<String> cryptoKeyName) {
+        public Builder cryptoKeyName(Output<String> cryptoKeyName) {
             this.cryptoKeyName = Objects.requireNonNull(cryptoKeyName);
             return this;
         }
 
         public Builder cryptoKeyName(String cryptoKeyName) {
-            this.cryptoKeyName = Input.of(Objects.requireNonNull(cryptoKeyName));
+            this.cryptoKeyName = Output.of(Objects.requireNonNull(cryptoKeyName));
             return this;
         }
 
-        public Builder wrappedKey(Input<String> wrappedKey) {
+        public Builder wrappedKey(Output<String> wrappedKey) {
             this.wrappedKey = Objects.requireNonNull(wrappedKey);
             return this;
         }
 
         public Builder wrappedKey(String wrappedKey) {
-            this.wrappedKey = Input.of(Objects.requireNonNull(wrappedKey));
+            this.wrappedKey = Output.of(Objects.requireNonNull(wrappedKey));
             return this;
         }
         public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedGetArgs build() {

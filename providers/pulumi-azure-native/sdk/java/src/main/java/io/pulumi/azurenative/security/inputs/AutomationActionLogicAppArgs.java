@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class AutomationActionLogicAppArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="actionType", required=true)
-      private final Input<String> actionType;
+      private final Output<String> actionType;
 
-    public Input<String> getActionType() {
+    public Output<String> getActionType() {
         return this.actionType;
     }
 
@@ -35,10 +35,10 @@ public final class AutomationActionLogicAppArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="logicAppResourceId")
-      private final @Nullable Input<String> logicAppResourceId;
+      private final @Nullable Output<String> logicAppResourceId;
 
-    public Input<String> getLogicAppResourceId() {
-        return this.logicAppResourceId == null ? Input.empty() : this.logicAppResourceId;
+    public Output<String> getLogicAppResourceId() {
+        return this.logicAppResourceId == null ? Output.empty() : this.logicAppResourceId;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class AutomationActionLogicAppArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="uri")
-      private final @Nullable Input<String> uri;
+      private final @Nullable Output<String> uri;
 
-    public Input<String> getUri() {
-        return this.uri == null ? Input.empty() : this.uri;
+    public Output<String> getUri() {
+        return this.uri == null ? Output.empty() : this.uri;
     }
 
     public AutomationActionLogicAppArgs(
-        Input<String> actionType,
-        @Nullable Input<String> logicAppResourceId,
-        @Nullable Input<String> uri) {
+        Output<String> actionType,
+        @Nullable Output<String> logicAppResourceId,
+        @Nullable Output<String> uri) {
         this.actionType = Objects.requireNonNull(actionType, "expected parameter 'actionType' to be non-null");
         this.logicAppResourceId = logicAppResourceId;
         this.uri = uri;
     }
 
     private AutomationActionLogicAppArgs() {
-        this.actionType = Input.empty();
-        this.logicAppResourceId = Input.empty();
-        this.uri = Input.empty();
+        this.actionType = Output.empty();
+        this.logicAppResourceId = Output.empty();
+        this.uri = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class AutomationActionLogicAppArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> actionType;
-        private @Nullable Input<String> logicAppResourceId;
-        private @Nullable Input<String> uri;
+        private Output<String> actionType;
+        private @Nullable Output<String> logicAppResourceId;
+        private @Nullable Output<String> uri;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class AutomationActionLogicAppArgs extends io.pulumi.resources.Reso
     	      this.uri = defaults.uri;
         }
 
-        public Builder actionType(Input<String> actionType) {
+        public Builder actionType(Output<String> actionType) {
             this.actionType = Objects.requireNonNull(actionType);
             return this;
         }
 
         public Builder actionType(String actionType) {
-            this.actionType = Input.of(Objects.requireNonNull(actionType));
+            this.actionType = Output.of(Objects.requireNonNull(actionType));
             return this;
         }
 
-        public Builder logicAppResourceId(@Nullable Input<String> logicAppResourceId) {
+        public Builder logicAppResourceId(@Nullable Output<String> logicAppResourceId) {
             this.logicAppResourceId = logicAppResourceId;
             return this;
         }
 
         public Builder logicAppResourceId(@Nullable String logicAppResourceId) {
-            this.logicAppResourceId = Input.ofNullable(logicAppResourceId);
+            this.logicAppResourceId = Output.ofNullable(logicAppResourceId);
             return this;
         }
 
-        public Builder uri(@Nullable Input<String> uri) {
+        public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
 
         public Builder uri(@Nullable String uri) {
-            this.uri = Input.ofNullable(uri);
+            this.uri = Output.ofNullable(uri);
             return this;
         }
         public AutomationActionLogicAppArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.enums.BucketReplicaModificationsStatus;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class BucketReplicaModificationsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="status", required=true)
-      private final Input<BucketReplicaModificationsStatus> status;
+      private final Output<BucketReplicaModificationsStatus> status;
 
-    public Input<BucketReplicaModificationsStatus> getStatus() {
+    public Output<BucketReplicaModificationsStatus> getStatus() {
         return this.status;
     }
 
-    public BucketReplicaModificationsArgs(Input<BucketReplicaModificationsStatus> status) {
+    public BucketReplicaModificationsArgs(Output<BucketReplicaModificationsStatus> status) {
         this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
     }
 
     private BucketReplicaModificationsArgs() {
-        this.status = Input.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class BucketReplicaModificationsArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<BucketReplicaModificationsStatus> status;
+        private Output<BucketReplicaModificationsStatus> status;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class BucketReplicaModificationsArgs extends io.pulumi.resources.Re
     	      this.status = defaults.status;
         }
 
-        public Builder status(Input<BucketReplicaModificationsStatus> status) {
+        public Builder status(Output<BucketReplicaModificationsStatus> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
         public Builder status(BucketReplicaModificationsStatus status) {
-            this.status = Input.of(Objects.requireNonNull(status));
+            this.status = Output.of(Objects.requireNonNull(status));
             return this;
         }
         public BucketReplicaModificationsArgs build() {

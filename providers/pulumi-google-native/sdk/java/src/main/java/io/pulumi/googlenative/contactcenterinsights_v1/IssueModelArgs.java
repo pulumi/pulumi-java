@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class IssueModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -31,17 +31,17 @@ public final class IssueModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputDataConfig")
-      private final @Nullable Input<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs> inputDataConfig;
+      private final @Nullable Output<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs> inputDataConfig;
 
-    public Input<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs> getInputDataConfig() {
-        return this.inputDataConfig == null ? Input.empty() : this.inputDataConfig;
+    public Output<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs> getInputDataConfig() {
+        return this.inputDataConfig == null ? Output.empty() : this.inputDataConfig;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -49,25 +49,25 @@ public final class IssueModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public IssueModelArgs(
-        @Nullable Input<String> displayName,
-        @Nullable Input<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs> inputDataConfig,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project) {
+        @Nullable Output<String> displayName,
+        @Nullable Output<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs> inputDataConfig,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project) {
         this.displayName = displayName;
         this.inputDataConfig = inputDataConfig;
         this.location = location;
@@ -76,11 +76,11 @@ public final class IssueModelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IssueModelArgs() {
-        this.displayName = Input.empty();
-        this.inputDataConfig = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
+        this.displayName = Output.empty();
+        this.inputDataConfig = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,11 +92,11 @@ public final class IssueModelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs> inputDataConfig;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs> inputDataConfig;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -111,53 +111,53 @@ public final class IssueModelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder inputDataConfig(@Nullable Input<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs> inputDataConfig) {
+        public Builder inputDataConfig(@Nullable Output<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs> inputDataConfig) {
             this.inputDataConfig = inputDataConfig;
             return this;
         }
 
         public Builder inputDataConfig(@Nullable GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs inputDataConfig) {
-            this.inputDataConfig = Input.ofNullable(inputDataConfig);
+            this.inputDataConfig = Output.ofNullable(inputDataConfig);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public IssueModelArgs build() {

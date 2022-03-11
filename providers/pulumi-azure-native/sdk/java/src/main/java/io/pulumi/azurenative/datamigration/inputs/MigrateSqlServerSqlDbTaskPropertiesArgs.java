@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.MigrateSqlServerSqlDbTaskInputArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class MigrateSqlServerSqlDbTaskPropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="input")
-      private final @Nullable Input<MigrateSqlServerSqlDbTaskInputArgs> input;
+      private final @Nullable Output<MigrateSqlServerSqlDbTaskInputArgs> input;
 
-    public Input<MigrateSqlServerSqlDbTaskInputArgs> getInput() {
-        return this.input == null ? Input.empty() : this.input;
+    public Output<MigrateSqlServerSqlDbTaskInputArgs> getInput() {
+        return this.input == null ? Output.empty() : this.input;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class MigrateSqlServerSqlDbTaskPropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="taskType", required=true)
-      private final Input<String> taskType;
+      private final Output<String> taskType;
 
-    public Input<String> getTaskType() {
+    public Output<String> getTaskType() {
         return this.taskType;
     }
 
     public MigrateSqlServerSqlDbTaskPropertiesArgs(
-        @Nullable Input<MigrateSqlServerSqlDbTaskInputArgs> input,
-        Input<String> taskType) {
+        @Nullable Output<MigrateSqlServerSqlDbTaskInputArgs> input,
+        Output<String> taskType) {
         this.input = input;
         this.taskType = Objects.requireNonNull(taskType, "expected parameter 'taskType' to be non-null");
     }
 
     private MigrateSqlServerSqlDbTaskPropertiesArgs() {
-        this.input = Input.empty();
-        this.taskType = Input.empty();
+        this.input = Output.empty();
+        this.taskType = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class MigrateSqlServerSqlDbTaskPropertiesArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<MigrateSqlServerSqlDbTaskInputArgs> input;
-        private Input<String> taskType;
+        private @Nullable Output<MigrateSqlServerSqlDbTaskInputArgs> input;
+        private Output<String> taskType;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class MigrateSqlServerSqlDbTaskPropertiesArgs extends io.pulumi.res
     	      this.taskType = defaults.taskType;
         }
 
-        public Builder input(@Nullable Input<MigrateSqlServerSqlDbTaskInputArgs> input) {
+        public Builder input(@Nullable Output<MigrateSqlServerSqlDbTaskInputArgs> input) {
             this.input = input;
             return this;
         }
 
         public Builder input(@Nullable MigrateSqlServerSqlDbTaskInputArgs input) {
-            this.input = Input.ofNullable(input);
+            this.input = Output.ofNullable(input);
             return this;
         }
 
-        public Builder taskType(Input<String> taskType) {
+        public Builder taskType(Output<String> taskType) {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
 
         public Builder taskType(String taskType) {
-            this.taskType = Input.of(Objects.requireNonNull(taskType));
+            this.taskType = Output.of(Objects.requireNonNull(taskType));
             return this;
         }
         public MigrateSqlServerSqlDbTaskPropertiesArgs build() {

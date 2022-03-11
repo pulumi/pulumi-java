@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cur.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="additionalArtifacts")
-      private final @Nullable Input<List<String>> additionalArtifacts;
+      private final @Nullable Output<List<String>> additionalArtifacts;
 
-    public Input<List<String>> getAdditionalArtifacts() {
-        return this.additionalArtifacts == null ? Input.empty() : this.additionalArtifacts;
+    public Output<List<String>> getAdditionalArtifacts() {
+        return this.additionalArtifacts == null ? Output.empty() : this.additionalArtifacts;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="additionalSchemaElements")
-      private final @Nullable Input<List<String>> additionalSchemaElements;
+      private final @Nullable Output<List<String>> additionalSchemaElements;
 
-    public Input<List<String>> getAdditionalSchemaElements() {
-        return this.additionalSchemaElements == null ? Input.empty() : this.additionalSchemaElements;
+    public Output<List<String>> getAdditionalSchemaElements() {
+        return this.additionalSchemaElements == null ? Output.empty() : this.additionalSchemaElements;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="compression")
-      private final @Nullable Input<String> compression;
+      private final @Nullable Output<String> compression;
 
-    public Input<String> getCompression() {
-        return this.compression == null ? Input.empty() : this.compression;
+    public Output<String> getCompression() {
+        return this.compression == null ? Output.empty() : this.compression;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="format")
-      private final @Nullable Input<String> format;
+      private final @Nullable Output<String> format;
 
-    public Input<String> getFormat() {
-        return this.format == null ? Input.empty() : this.format;
+    public Output<String> getFormat() {
+        return this.format == null ? Output.empty() : this.format;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="refreshClosedReports")
-      private final @Nullable Input<Boolean> refreshClosedReports;
+      private final @Nullable Output<Boolean> refreshClosedReports;
 
-    public Input<Boolean> getRefreshClosedReports() {
-        return this.refreshClosedReports == null ? Input.empty() : this.refreshClosedReports;
+    public Output<Boolean> getRefreshClosedReports() {
+        return this.refreshClosedReports == null ? Output.empty() : this.refreshClosedReports;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="reportName")
-      private final @Nullable Input<String> reportName;
+      private final @Nullable Output<String> reportName;
 
-    public Input<String> getReportName() {
-        return this.reportName == null ? Input.empty() : this.reportName;
+    public Output<String> getReportName() {
+        return this.reportName == null ? Output.empty() : this.reportName;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="reportVersioning")
-      private final @Nullable Input<String> reportVersioning;
+      private final @Nullable Output<String> reportVersioning;
 
-    public Input<String> getReportVersioning() {
-        return this.reportVersioning == null ? Input.empty() : this.reportVersioning;
+    public Output<String> getReportVersioning() {
+        return this.reportVersioning == null ? Output.empty() : this.reportVersioning;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="s3Bucket")
-      private final @Nullable Input<String> s3Bucket;
+      private final @Nullable Output<String> s3Bucket;
 
-    public Input<String> getS3Bucket() {
-        return this.s3Bucket == null ? Input.empty() : this.s3Bucket;
+    public Output<String> getS3Bucket() {
+        return this.s3Bucket == null ? Output.empty() : this.s3Bucket;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="s3Prefix")
-      private final @Nullable Input<String> s3Prefix;
+      private final @Nullable Output<String> s3Prefix;
 
-    public Input<String> getS3Prefix() {
-        return this.s3Prefix == null ? Input.empty() : this.s3Prefix;
+    public Output<String> getS3Prefix() {
+        return this.s3Prefix == null ? Output.empty() : this.s3Prefix;
     }
 
     /**
@@ -131,10 +131,10 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="s3Region")
-      private final @Nullable Input<String> s3Region;
+      private final @Nullable Output<String> s3Region;
 
-    public Input<String> getS3Region() {
-        return this.s3Region == null ? Input.empty() : this.s3Region;
+    public Output<String> getS3Region() {
+        return this.s3Region == null ? Output.empty() : this.s3Region;
     }
 
     /**
@@ -142,25 +142,25 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="timeUnit")
-      private final @Nullable Input<String> timeUnit;
+      private final @Nullable Output<String> timeUnit;
 
-    public Input<String> getTimeUnit() {
-        return this.timeUnit == null ? Input.empty() : this.timeUnit;
+    public Output<String> getTimeUnit() {
+        return this.timeUnit == null ? Output.empty() : this.timeUnit;
     }
 
     public ReportDefinitionState(
-        @Nullable Input<List<String>> additionalArtifacts,
-        @Nullable Input<List<String>> additionalSchemaElements,
-        @Nullable Input<String> arn,
-        @Nullable Input<String> compression,
-        @Nullable Input<String> format,
-        @Nullable Input<Boolean> refreshClosedReports,
-        @Nullable Input<String> reportName,
-        @Nullable Input<String> reportVersioning,
-        @Nullable Input<String> s3Bucket,
-        @Nullable Input<String> s3Prefix,
-        @Nullable Input<String> s3Region,
-        @Nullable Input<String> timeUnit) {
+        @Nullable Output<List<String>> additionalArtifacts,
+        @Nullable Output<List<String>> additionalSchemaElements,
+        @Nullable Output<String> arn,
+        @Nullable Output<String> compression,
+        @Nullable Output<String> format,
+        @Nullable Output<Boolean> refreshClosedReports,
+        @Nullable Output<String> reportName,
+        @Nullable Output<String> reportVersioning,
+        @Nullable Output<String> s3Bucket,
+        @Nullable Output<String> s3Prefix,
+        @Nullable Output<String> s3Region,
+        @Nullable Output<String> timeUnit) {
         this.additionalArtifacts = additionalArtifacts;
         this.additionalSchemaElements = additionalSchemaElements;
         this.arn = arn;
@@ -176,18 +176,18 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
     }
 
     private ReportDefinitionState() {
-        this.additionalArtifacts = Input.empty();
-        this.additionalSchemaElements = Input.empty();
-        this.arn = Input.empty();
-        this.compression = Input.empty();
-        this.format = Input.empty();
-        this.refreshClosedReports = Input.empty();
-        this.reportName = Input.empty();
-        this.reportVersioning = Input.empty();
-        this.s3Bucket = Input.empty();
-        this.s3Prefix = Input.empty();
-        this.s3Region = Input.empty();
-        this.timeUnit = Input.empty();
+        this.additionalArtifacts = Output.empty();
+        this.additionalSchemaElements = Output.empty();
+        this.arn = Output.empty();
+        this.compression = Output.empty();
+        this.format = Output.empty();
+        this.refreshClosedReports = Output.empty();
+        this.reportName = Output.empty();
+        this.reportVersioning = Output.empty();
+        this.s3Bucket = Output.empty();
+        this.s3Prefix = Output.empty();
+        this.s3Region = Output.empty();
+        this.timeUnit = Output.empty();
     }
 
     public static Builder builder() {
@@ -199,18 +199,18 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> additionalArtifacts;
-        private @Nullable Input<List<String>> additionalSchemaElements;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> compression;
-        private @Nullable Input<String> format;
-        private @Nullable Input<Boolean> refreshClosedReports;
-        private @Nullable Input<String> reportName;
-        private @Nullable Input<String> reportVersioning;
-        private @Nullable Input<String> s3Bucket;
-        private @Nullable Input<String> s3Prefix;
-        private @Nullable Input<String> s3Region;
-        private @Nullable Input<String> timeUnit;
+        private @Nullable Output<List<String>> additionalArtifacts;
+        private @Nullable Output<List<String>> additionalSchemaElements;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> compression;
+        private @Nullable Output<String> format;
+        private @Nullable Output<Boolean> refreshClosedReports;
+        private @Nullable Output<String> reportName;
+        private @Nullable Output<String> reportVersioning;
+        private @Nullable Output<String> s3Bucket;
+        private @Nullable Output<String> s3Prefix;
+        private @Nullable Output<String> s3Region;
+        private @Nullable Output<String> timeUnit;
 
         public Builder() {
     	      // Empty
@@ -232,123 +232,123 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
     	      this.timeUnit = defaults.timeUnit;
         }
 
-        public Builder additionalArtifacts(@Nullable Input<List<String>> additionalArtifacts) {
+        public Builder additionalArtifacts(@Nullable Output<List<String>> additionalArtifacts) {
             this.additionalArtifacts = additionalArtifacts;
             return this;
         }
 
         public Builder additionalArtifacts(@Nullable List<String> additionalArtifacts) {
-            this.additionalArtifacts = Input.ofNullable(additionalArtifacts);
+            this.additionalArtifacts = Output.ofNullable(additionalArtifacts);
             return this;
         }
 
-        public Builder additionalSchemaElements(@Nullable Input<List<String>> additionalSchemaElements) {
+        public Builder additionalSchemaElements(@Nullable Output<List<String>> additionalSchemaElements) {
             this.additionalSchemaElements = additionalSchemaElements;
             return this;
         }
 
         public Builder additionalSchemaElements(@Nullable List<String> additionalSchemaElements) {
-            this.additionalSchemaElements = Input.ofNullable(additionalSchemaElements);
+            this.additionalSchemaElements = Output.ofNullable(additionalSchemaElements);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder compression(@Nullable Input<String> compression) {
+        public Builder compression(@Nullable Output<String> compression) {
             this.compression = compression;
             return this;
         }
 
         public Builder compression(@Nullable String compression) {
-            this.compression = Input.ofNullable(compression);
+            this.compression = Output.ofNullable(compression);
             return this;
         }
 
-        public Builder format(@Nullable Input<String> format) {
+        public Builder format(@Nullable Output<String> format) {
             this.format = format;
             return this;
         }
 
         public Builder format(@Nullable String format) {
-            this.format = Input.ofNullable(format);
+            this.format = Output.ofNullable(format);
             return this;
         }
 
-        public Builder refreshClosedReports(@Nullable Input<Boolean> refreshClosedReports) {
+        public Builder refreshClosedReports(@Nullable Output<Boolean> refreshClosedReports) {
             this.refreshClosedReports = refreshClosedReports;
             return this;
         }
 
         public Builder refreshClosedReports(@Nullable Boolean refreshClosedReports) {
-            this.refreshClosedReports = Input.ofNullable(refreshClosedReports);
+            this.refreshClosedReports = Output.ofNullable(refreshClosedReports);
             return this;
         }
 
-        public Builder reportName(@Nullable Input<String> reportName) {
+        public Builder reportName(@Nullable Output<String> reportName) {
             this.reportName = reportName;
             return this;
         }
 
         public Builder reportName(@Nullable String reportName) {
-            this.reportName = Input.ofNullable(reportName);
+            this.reportName = Output.ofNullable(reportName);
             return this;
         }
 
-        public Builder reportVersioning(@Nullable Input<String> reportVersioning) {
+        public Builder reportVersioning(@Nullable Output<String> reportVersioning) {
             this.reportVersioning = reportVersioning;
             return this;
         }
 
         public Builder reportVersioning(@Nullable String reportVersioning) {
-            this.reportVersioning = Input.ofNullable(reportVersioning);
+            this.reportVersioning = Output.ofNullable(reportVersioning);
             return this;
         }
 
-        public Builder s3Bucket(@Nullable Input<String> s3Bucket) {
+        public Builder s3Bucket(@Nullable Output<String> s3Bucket) {
             this.s3Bucket = s3Bucket;
             return this;
         }
 
         public Builder s3Bucket(@Nullable String s3Bucket) {
-            this.s3Bucket = Input.ofNullable(s3Bucket);
+            this.s3Bucket = Output.ofNullable(s3Bucket);
             return this;
         }
 
-        public Builder s3Prefix(@Nullable Input<String> s3Prefix) {
+        public Builder s3Prefix(@Nullable Output<String> s3Prefix) {
             this.s3Prefix = s3Prefix;
             return this;
         }
 
         public Builder s3Prefix(@Nullable String s3Prefix) {
-            this.s3Prefix = Input.ofNullable(s3Prefix);
+            this.s3Prefix = Output.ofNullable(s3Prefix);
             return this;
         }
 
-        public Builder s3Region(@Nullable Input<String> s3Region) {
+        public Builder s3Region(@Nullable Output<String> s3Region) {
             this.s3Region = s3Region;
             return this;
         }
 
         public Builder s3Region(@Nullable String s3Region) {
-            this.s3Region = Input.ofNullable(s3Region);
+            this.s3Region = Output.ofNullable(s3Region);
             return this;
         }
 
-        public Builder timeUnit(@Nullable Input<String> timeUnit) {
+        public Builder timeUnit(@Nullable Output<String> timeUnit) {
             this.timeUnit = timeUnit;
             return this;
         }
 
         public Builder timeUnit(@Nullable String timeUnit) {
-            this.timeUnit = Input.ofNullable(timeUnit);
+            this.timeUnit = Output.ofNullable(timeUnit);
             return this;
         }
         public ReportDefinitionState build() {

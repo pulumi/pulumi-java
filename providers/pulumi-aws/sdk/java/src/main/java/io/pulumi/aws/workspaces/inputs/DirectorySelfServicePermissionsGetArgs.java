@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.workspaces.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class DirectorySelfServicePermissionsGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="changeComputeType")
-      private final @Nullable Input<Boolean> changeComputeType;
+      private final @Nullable Output<Boolean> changeComputeType;
 
-    public Input<Boolean> getChangeComputeType() {
-        return this.changeComputeType == null ? Input.empty() : this.changeComputeType;
+    public Output<Boolean> getChangeComputeType() {
+        return this.changeComputeType == null ? Output.empty() : this.changeComputeType;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class DirectorySelfServicePermissionsGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="increaseVolumeSize")
-      private final @Nullable Input<Boolean> increaseVolumeSize;
+      private final @Nullable Output<Boolean> increaseVolumeSize;
 
-    public Input<Boolean> getIncreaseVolumeSize() {
-        return this.increaseVolumeSize == null ? Input.empty() : this.increaseVolumeSize;
+    public Output<Boolean> getIncreaseVolumeSize() {
+        return this.increaseVolumeSize == null ? Output.empty() : this.increaseVolumeSize;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class DirectorySelfServicePermissionsGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="rebuildWorkspace")
-      private final @Nullable Input<Boolean> rebuildWorkspace;
+      private final @Nullable Output<Boolean> rebuildWorkspace;
 
-    public Input<Boolean> getRebuildWorkspace() {
-        return this.rebuildWorkspace == null ? Input.empty() : this.rebuildWorkspace;
+    public Output<Boolean> getRebuildWorkspace() {
+        return this.rebuildWorkspace == null ? Output.empty() : this.rebuildWorkspace;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class DirectorySelfServicePermissionsGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="restartWorkspace")
-      private final @Nullable Input<Boolean> restartWorkspace;
+      private final @Nullable Output<Boolean> restartWorkspace;
 
-    public Input<Boolean> getRestartWorkspace() {
-        return this.restartWorkspace == null ? Input.empty() : this.restartWorkspace;
+    public Output<Boolean> getRestartWorkspace() {
+        return this.restartWorkspace == null ? Output.empty() : this.restartWorkspace;
     }
 
     /**
@@ -63,18 +63,18 @@ public final class DirectorySelfServicePermissionsGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="switchRunningMode")
-      private final @Nullable Input<Boolean> switchRunningMode;
+      private final @Nullable Output<Boolean> switchRunningMode;
 
-    public Input<Boolean> getSwitchRunningMode() {
-        return this.switchRunningMode == null ? Input.empty() : this.switchRunningMode;
+    public Output<Boolean> getSwitchRunningMode() {
+        return this.switchRunningMode == null ? Output.empty() : this.switchRunningMode;
     }
 
     public DirectorySelfServicePermissionsGetArgs(
-        @Nullable Input<Boolean> changeComputeType,
-        @Nullable Input<Boolean> increaseVolumeSize,
-        @Nullable Input<Boolean> rebuildWorkspace,
-        @Nullable Input<Boolean> restartWorkspace,
-        @Nullable Input<Boolean> switchRunningMode) {
+        @Nullable Output<Boolean> changeComputeType,
+        @Nullable Output<Boolean> increaseVolumeSize,
+        @Nullable Output<Boolean> rebuildWorkspace,
+        @Nullable Output<Boolean> restartWorkspace,
+        @Nullable Output<Boolean> switchRunningMode) {
         this.changeComputeType = changeComputeType;
         this.increaseVolumeSize = increaseVolumeSize;
         this.rebuildWorkspace = rebuildWorkspace;
@@ -83,11 +83,11 @@ public final class DirectorySelfServicePermissionsGetArgs extends io.pulumi.reso
     }
 
     private DirectorySelfServicePermissionsGetArgs() {
-        this.changeComputeType = Input.empty();
-        this.increaseVolumeSize = Input.empty();
-        this.rebuildWorkspace = Input.empty();
-        this.restartWorkspace = Input.empty();
-        this.switchRunningMode = Input.empty();
+        this.changeComputeType = Output.empty();
+        this.increaseVolumeSize = Output.empty();
+        this.rebuildWorkspace = Output.empty();
+        this.restartWorkspace = Output.empty();
+        this.switchRunningMode = Output.empty();
     }
 
     public static Builder builder() {
@@ -99,11 +99,11 @@ public final class DirectorySelfServicePermissionsGetArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> changeComputeType;
-        private @Nullable Input<Boolean> increaseVolumeSize;
-        private @Nullable Input<Boolean> rebuildWorkspace;
-        private @Nullable Input<Boolean> restartWorkspace;
-        private @Nullable Input<Boolean> switchRunningMode;
+        private @Nullable Output<Boolean> changeComputeType;
+        private @Nullable Output<Boolean> increaseVolumeSize;
+        private @Nullable Output<Boolean> rebuildWorkspace;
+        private @Nullable Output<Boolean> restartWorkspace;
+        private @Nullable Output<Boolean> switchRunningMode;
 
         public Builder() {
     	      // Empty
@@ -118,53 +118,53 @@ public final class DirectorySelfServicePermissionsGetArgs extends io.pulumi.reso
     	      this.switchRunningMode = defaults.switchRunningMode;
         }
 
-        public Builder changeComputeType(@Nullable Input<Boolean> changeComputeType) {
+        public Builder changeComputeType(@Nullable Output<Boolean> changeComputeType) {
             this.changeComputeType = changeComputeType;
             return this;
         }
 
         public Builder changeComputeType(@Nullable Boolean changeComputeType) {
-            this.changeComputeType = Input.ofNullable(changeComputeType);
+            this.changeComputeType = Output.ofNullable(changeComputeType);
             return this;
         }
 
-        public Builder increaseVolumeSize(@Nullable Input<Boolean> increaseVolumeSize) {
+        public Builder increaseVolumeSize(@Nullable Output<Boolean> increaseVolumeSize) {
             this.increaseVolumeSize = increaseVolumeSize;
             return this;
         }
 
         public Builder increaseVolumeSize(@Nullable Boolean increaseVolumeSize) {
-            this.increaseVolumeSize = Input.ofNullable(increaseVolumeSize);
+            this.increaseVolumeSize = Output.ofNullable(increaseVolumeSize);
             return this;
         }
 
-        public Builder rebuildWorkspace(@Nullable Input<Boolean> rebuildWorkspace) {
+        public Builder rebuildWorkspace(@Nullable Output<Boolean> rebuildWorkspace) {
             this.rebuildWorkspace = rebuildWorkspace;
             return this;
         }
 
         public Builder rebuildWorkspace(@Nullable Boolean rebuildWorkspace) {
-            this.rebuildWorkspace = Input.ofNullable(rebuildWorkspace);
+            this.rebuildWorkspace = Output.ofNullable(rebuildWorkspace);
             return this;
         }
 
-        public Builder restartWorkspace(@Nullable Input<Boolean> restartWorkspace) {
+        public Builder restartWorkspace(@Nullable Output<Boolean> restartWorkspace) {
             this.restartWorkspace = restartWorkspace;
             return this;
         }
 
         public Builder restartWorkspace(@Nullable Boolean restartWorkspace) {
-            this.restartWorkspace = Input.ofNullable(restartWorkspace);
+            this.restartWorkspace = Output.ofNullable(restartWorkspace);
             return this;
         }
 
-        public Builder switchRunningMode(@Nullable Input<Boolean> switchRunningMode) {
+        public Builder switchRunningMode(@Nullable Output<Boolean> switchRunningMode) {
             this.switchRunningMode = switchRunningMode;
             return this;
         }
 
         public Builder switchRunningMode(@Nullable Boolean switchRunningMode) {
-            this.switchRunningMode = Input.ofNullable(switchRunningMode);
+            this.switchRunningMode = Output.ofNullable(switchRunningMode);
             return this;
         }
         public DirectorySelfServicePermissionsGetArgs build() {

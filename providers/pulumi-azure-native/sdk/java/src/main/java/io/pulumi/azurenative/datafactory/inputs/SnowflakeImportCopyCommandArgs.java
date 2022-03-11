@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class SnowflakeImportCopyCommandArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="additionalCopyOptions")
-      private final @Nullable Input<Map<String,Object>> additionalCopyOptions;
+      private final @Nullable Output<Map<String,Object>> additionalCopyOptions;
 
-    public Input<Map<String,Object>> getAdditionalCopyOptions() {
-        return this.additionalCopyOptions == null ? Input.empty() : this.additionalCopyOptions;
+    public Output<Map<String,Object>> getAdditionalCopyOptions() {
+        return this.additionalCopyOptions == null ? Output.empty() : this.additionalCopyOptions;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SnowflakeImportCopyCommandArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="additionalFormatOptions")
-      private final @Nullable Input<Map<String,Object>> additionalFormatOptions;
+      private final @Nullable Output<Map<String,Object>> additionalFormatOptions;
 
-    public Input<Map<String,Object>> getAdditionalFormatOptions() {
-        return this.additionalFormatOptions == null ? Input.empty() : this.additionalFormatOptions;
+    public Output<Map<String,Object>> getAdditionalFormatOptions() {
+        return this.additionalFormatOptions == null ? Output.empty() : this.additionalFormatOptions;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class SnowflakeImportCopyCommandArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public SnowflakeImportCopyCommandArgs(
-        @Nullable Input<Map<String,Object>> additionalCopyOptions,
-        @Nullable Input<Map<String,Object>> additionalFormatOptions,
-        Input<String> type) {
+        @Nullable Output<Map<String,Object>> additionalCopyOptions,
+        @Nullable Output<Map<String,Object>> additionalFormatOptions,
+        Output<String> type) {
         this.additionalCopyOptions = additionalCopyOptions;
         this.additionalFormatOptions = additionalFormatOptions;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private SnowflakeImportCopyCommandArgs() {
-        this.additionalCopyOptions = Input.empty();
-        this.additionalFormatOptions = Input.empty();
-        this.type = Input.empty();
+        this.additionalCopyOptions = Output.empty();
+        this.additionalFormatOptions = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class SnowflakeImportCopyCommandArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,Object>> additionalCopyOptions;
-        private @Nullable Input<Map<String,Object>> additionalFormatOptions;
-        private Input<String> type;
+        private @Nullable Output<Map<String,Object>> additionalCopyOptions;
+        private @Nullable Output<Map<String,Object>> additionalFormatOptions;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class SnowflakeImportCopyCommandArgs extends io.pulumi.resources.Re
     	      this.type = defaults.type;
         }
 
-        public Builder additionalCopyOptions(@Nullable Input<Map<String,Object>> additionalCopyOptions) {
+        public Builder additionalCopyOptions(@Nullable Output<Map<String,Object>> additionalCopyOptions) {
             this.additionalCopyOptions = additionalCopyOptions;
             return this;
         }
 
         public Builder additionalCopyOptions(@Nullable Map<String,Object> additionalCopyOptions) {
-            this.additionalCopyOptions = Input.ofNullable(additionalCopyOptions);
+            this.additionalCopyOptions = Output.ofNullable(additionalCopyOptions);
             return this;
         }
 
-        public Builder additionalFormatOptions(@Nullable Input<Map<String,Object>> additionalFormatOptions) {
+        public Builder additionalFormatOptions(@Nullable Output<Map<String,Object>> additionalFormatOptions) {
             this.additionalFormatOptions = additionalFormatOptions;
             return this;
         }
 
         public Builder additionalFormatOptions(@Nullable Map<String,Object> additionalFormatOptions) {
-            this.additionalFormatOptions = Input.ofNullable(additionalFormatOptions);
+            this.additionalFormatOptions = Output.ofNullable(additionalFormatOptions);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public SnowflakeImportCopyCommandArgs build() {

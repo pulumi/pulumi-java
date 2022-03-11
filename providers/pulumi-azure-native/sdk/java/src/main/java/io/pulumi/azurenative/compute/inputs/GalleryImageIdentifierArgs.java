@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class GalleryImageIdentifierArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="offer", required=true)
-      private final Input<String> offer;
+      private final Output<String> offer;
 
-    public Input<String> getOffer() {
+    public Output<String> getOffer() {
         return this.offer;
     }
 
@@ -33,9 +33,9 @@ public final class GalleryImageIdentifierArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="publisher", required=true)
-      private final Input<String> publisher;
+      private final Output<String> publisher;
 
-    public Input<String> getPublisher() {
+    public Output<String> getPublisher() {
         return this.publisher;
     }
 
@@ -44,25 +44,25 @@ public final class GalleryImageIdentifierArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="sku", required=true)
-      private final Input<String> sku;
+      private final Output<String> sku;
 
-    public Input<String> getSku() {
+    public Output<String> getSku() {
         return this.sku;
     }
 
     public GalleryImageIdentifierArgs(
-        Input<String> offer,
-        Input<String> publisher,
-        Input<String> sku) {
+        Output<String> offer,
+        Output<String> publisher,
+        Output<String> sku) {
         this.offer = Objects.requireNonNull(offer, "expected parameter 'offer' to be non-null");
         this.publisher = Objects.requireNonNull(publisher, "expected parameter 'publisher' to be non-null");
         this.sku = Objects.requireNonNull(sku, "expected parameter 'sku' to be non-null");
     }
 
     private GalleryImageIdentifierArgs() {
-        this.offer = Input.empty();
-        this.publisher = Input.empty();
-        this.sku = Input.empty();
+        this.offer = Output.empty();
+        this.publisher = Output.empty();
+        this.sku = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class GalleryImageIdentifierArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> offer;
-        private Input<String> publisher;
-        private Input<String> sku;
+        private Output<String> offer;
+        private Output<String> publisher;
+        private Output<String> sku;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class GalleryImageIdentifierArgs extends io.pulumi.resources.Resour
     	      this.sku = defaults.sku;
         }
 
-        public Builder offer(Input<String> offer) {
+        public Builder offer(Output<String> offer) {
             this.offer = Objects.requireNonNull(offer);
             return this;
         }
 
         public Builder offer(String offer) {
-            this.offer = Input.of(Objects.requireNonNull(offer));
+            this.offer = Output.of(Objects.requireNonNull(offer));
             return this;
         }
 
-        public Builder publisher(Input<String> publisher) {
+        public Builder publisher(Output<String> publisher) {
             this.publisher = Objects.requireNonNull(publisher);
             return this;
         }
 
         public Builder publisher(String publisher) {
-            this.publisher = Input.of(Objects.requireNonNull(publisher));
+            this.publisher = Output.of(Objects.requireNonNull(publisher));
             return this;
         }
 
-        public Builder sku(Input<String> sku) {
+        public Builder sku(Output<String> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
         public Builder sku(String sku) {
-            this.sku = Input.of(Objects.requireNonNull(sku));
+            this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
         public GalleryImageIdentifierArgs build() {

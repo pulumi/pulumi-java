@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -22,18 +22,18 @@ public final class ConnectToTargetSqlDbTaskInputArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="targetConnectionInfo", required=true)
-      private final Input<SqlConnectionInfoArgs> targetConnectionInfo;
+      private final Output<SqlConnectionInfoArgs> targetConnectionInfo;
 
-    public Input<SqlConnectionInfoArgs> getTargetConnectionInfo() {
+    public Output<SqlConnectionInfoArgs> getTargetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 
-    public ConnectToTargetSqlDbTaskInputArgs(Input<SqlConnectionInfoArgs> targetConnectionInfo) {
+    public ConnectToTargetSqlDbTaskInputArgs(Output<SqlConnectionInfoArgs> targetConnectionInfo) {
         this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo, "expected parameter 'targetConnectionInfo' to be non-null");
     }
 
     private ConnectToTargetSqlDbTaskInputArgs() {
-        this.targetConnectionInfo = Input.empty();
+        this.targetConnectionInfo = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class ConnectToTargetSqlDbTaskInputArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<SqlConnectionInfoArgs> targetConnectionInfo;
+        private Output<SqlConnectionInfoArgs> targetConnectionInfo;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class ConnectToTargetSqlDbTaskInputArgs extends io.pulumi.resources
     	      this.targetConnectionInfo = defaults.targetConnectionInfo;
         }
 
-        public Builder targetConnectionInfo(Input<SqlConnectionInfoArgs> targetConnectionInfo) {
+        public Builder targetConnectionInfo(Output<SqlConnectionInfoArgs> targetConnectionInfo) {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
 
         public Builder targetConnectionInfo(SqlConnectionInfoArgs targetConnectionInfo) {
-            this.targetConnectionInfo = Input.of(Objects.requireNonNull(targetConnectionInfo));
+            this.targetConnectionInfo = Output.of(Objects.requireNonNull(targetConnectionInfo));
             return this;
         }
         public ConnectToTargetSqlDbTaskInputArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class AllowedAudiencesValidationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="allowedAudiences")
-      private final @Nullable Input<List<String>> allowedAudiences;
+      private final @Nullable Output<List<String>> allowedAudiences;
 
-    public Input<List<String>> getAllowedAudiences() {
-        return this.allowedAudiences == null ? Input.empty() : this.allowedAudiences;
+    public Output<List<String>> getAllowedAudiences() {
+        return this.allowedAudiences == null ? Output.empty() : this.allowedAudiences;
     }
 
-    public AllowedAudiencesValidationArgs(@Nullable Input<List<String>> allowedAudiences) {
+    public AllowedAudiencesValidationArgs(@Nullable Output<List<String>> allowedAudiences) {
         this.allowedAudiences = allowedAudiences;
     }
 
     private AllowedAudiencesValidationArgs() {
-        this.allowedAudiences = Input.empty();
+        this.allowedAudiences = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class AllowedAudiencesValidationArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> allowedAudiences;
+        private @Nullable Output<List<String>> allowedAudiences;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class AllowedAudiencesValidationArgs extends io.pulumi.resources.Re
     	      this.allowedAudiences = defaults.allowedAudiences;
         }
 
-        public Builder allowedAudiences(@Nullable Input<List<String>> allowedAudiences) {
+        public Builder allowedAudiences(@Nullable Output<List<String>> allowedAudiences) {
             this.allowedAudiences = allowedAudiences;
             return this;
         }
 
         public Builder allowedAudiences(@Nullable List<String> allowedAudiences) {
-            this.allowedAudiences = Input.ofNullable(allowedAudiences);
+            this.allowedAudiences = Output.ofNullable(allowedAudiences);
             return this;
         }
         public AllowedAudiencesValidationArgs build() {

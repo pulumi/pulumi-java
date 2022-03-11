@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.servicecatalog.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class ProductProvisioningArtifactParametersArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ProductProvisioningArtifactParametersArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="disableTemplateValidation")
-      private final @Nullable Input<Boolean> disableTemplateValidation;
+      private final @Nullable Output<Boolean> disableTemplateValidation;
 
-    public Input<Boolean> getDisableTemplateValidation() {
-        return this.disableTemplateValidation == null ? Input.empty() : this.disableTemplateValidation;
+    public Output<Boolean> getDisableTemplateValidation() {
+        return this.disableTemplateValidation == null ? Output.empty() : this.disableTemplateValidation;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ProductProvisioningArtifactParametersArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ProductProvisioningArtifactParametersArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="templatePhysicalId")
-      private final @Nullable Input<String> templatePhysicalId;
+      private final @Nullable Output<String> templatePhysicalId;
 
-    public Input<String> getTemplatePhysicalId() {
-        return this.templatePhysicalId == null ? Input.empty() : this.templatePhysicalId;
+    public Output<String> getTemplatePhysicalId() {
+        return this.templatePhysicalId == null ? Output.empty() : this.templatePhysicalId;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ProductProvisioningArtifactParametersArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="templateUrl")
-      private final @Nullable Input<String> templateUrl;
+      private final @Nullable Output<String> templateUrl;
 
-    public Input<String> getTemplateUrl() {
-        return this.templateUrl == null ? Input.empty() : this.templateUrl;
+    public Output<String> getTemplateUrl() {
+        return this.templateUrl == null ? Output.empty() : this.templateUrl;
     }
 
     /**
@@ -75,19 +75,19 @@ public final class ProductProvisioningArtifactParametersArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public ProductProvisioningArtifactParametersArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> disableTemplateValidation,
-        @Nullable Input<String> name,
-        @Nullable Input<String> templatePhysicalId,
-        @Nullable Input<String> templateUrl,
-        @Nullable Input<String> type) {
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> disableTemplateValidation,
+        @Nullable Output<String> name,
+        @Nullable Output<String> templatePhysicalId,
+        @Nullable Output<String> templateUrl,
+        @Nullable Output<String> type) {
         this.description = description;
         this.disableTemplateValidation = disableTemplateValidation;
         this.name = name;
@@ -97,12 +97,12 @@ public final class ProductProvisioningArtifactParametersArgs extends io.pulumi.r
     }
 
     private ProductProvisioningArtifactParametersArgs() {
-        this.description = Input.empty();
-        this.disableTemplateValidation = Input.empty();
-        this.name = Input.empty();
-        this.templatePhysicalId = Input.empty();
-        this.templateUrl = Input.empty();
-        this.type = Input.empty();
+        this.description = Output.empty();
+        this.disableTemplateValidation = Output.empty();
+        this.name = Output.empty();
+        this.templatePhysicalId = Output.empty();
+        this.templateUrl = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class ProductProvisioningArtifactParametersArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> disableTemplateValidation;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> templatePhysicalId;
-        private @Nullable Input<String> templateUrl;
-        private @Nullable Input<String> type;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> disableTemplateValidation;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> templatePhysicalId;
+        private @Nullable Output<String> templateUrl;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -135,63 +135,63 @@ public final class ProductProvisioningArtifactParametersArgs extends io.pulumi.r
     	      this.type = defaults.type;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder disableTemplateValidation(@Nullable Input<Boolean> disableTemplateValidation) {
+        public Builder disableTemplateValidation(@Nullable Output<Boolean> disableTemplateValidation) {
             this.disableTemplateValidation = disableTemplateValidation;
             return this;
         }
 
         public Builder disableTemplateValidation(@Nullable Boolean disableTemplateValidation) {
-            this.disableTemplateValidation = Input.ofNullable(disableTemplateValidation);
+            this.disableTemplateValidation = Output.ofNullable(disableTemplateValidation);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder templatePhysicalId(@Nullable Input<String> templatePhysicalId) {
+        public Builder templatePhysicalId(@Nullable Output<String> templatePhysicalId) {
             this.templatePhysicalId = templatePhysicalId;
             return this;
         }
 
         public Builder templatePhysicalId(@Nullable String templatePhysicalId) {
-            this.templatePhysicalId = Input.ofNullable(templatePhysicalId);
+            this.templatePhysicalId = Output.ofNullable(templatePhysicalId);
             return this;
         }
 
-        public Builder templateUrl(@Nullable Input<String> templateUrl) {
+        public Builder templateUrl(@Nullable Output<String> templateUrl) {
             this.templateUrl = templateUrl;
             return this;
         }
 
         public Builder templateUrl(@Nullable String templateUrl) {
-            this.templateUrl = Input.ofNullable(templateUrl);
+            this.templateUrl = Output.ofNullable(templateUrl);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public ProductProvisioningArtifactParametersArgs build() {

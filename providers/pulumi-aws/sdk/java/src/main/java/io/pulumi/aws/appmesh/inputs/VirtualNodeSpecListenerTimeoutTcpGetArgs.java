@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTimeoutTcpIdleGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class VirtualNodeSpecListenerTimeoutTcpGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="idle")
-      private final @Nullable Input<VirtualNodeSpecListenerTimeoutTcpIdleGetArgs> idle;
+      private final @Nullable Output<VirtualNodeSpecListenerTimeoutTcpIdleGetArgs> idle;
 
-    public Input<VirtualNodeSpecListenerTimeoutTcpIdleGetArgs> getIdle() {
-        return this.idle == null ? Input.empty() : this.idle;
+    public Output<VirtualNodeSpecListenerTimeoutTcpIdleGetArgs> getIdle() {
+        return this.idle == null ? Output.empty() : this.idle;
     }
 
-    public VirtualNodeSpecListenerTimeoutTcpGetArgs(@Nullable Input<VirtualNodeSpecListenerTimeoutTcpIdleGetArgs> idle) {
+    public VirtualNodeSpecListenerTimeoutTcpGetArgs(@Nullable Output<VirtualNodeSpecListenerTimeoutTcpIdleGetArgs> idle) {
         this.idle = idle;
     }
 
     private VirtualNodeSpecListenerTimeoutTcpGetArgs() {
-        this.idle = Input.empty();
+        this.idle = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class VirtualNodeSpecListenerTimeoutTcpGetArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<VirtualNodeSpecListenerTimeoutTcpIdleGetArgs> idle;
+        private @Nullable Output<VirtualNodeSpecListenerTimeoutTcpIdleGetArgs> idle;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class VirtualNodeSpecListenerTimeoutTcpGetArgs extends io.pulumi.re
     	      this.idle = defaults.idle;
         }
 
-        public Builder idle(@Nullable Input<VirtualNodeSpecListenerTimeoutTcpIdleGetArgs> idle) {
+        public Builder idle(@Nullable Output<VirtualNodeSpecListenerTimeoutTcpIdleGetArgs> idle) {
             this.idle = idle;
             return this;
         }
 
         public Builder idle(@Nullable VirtualNodeSpecListenerTimeoutTcpIdleGetArgs idle) {
-            this.idle = Input.ofNullable(idle);
+            this.idle = Output.ofNullable(idle);
             return this;
         }
         public VirtualNodeSpecListenerTimeoutTcpGetArgs build() {

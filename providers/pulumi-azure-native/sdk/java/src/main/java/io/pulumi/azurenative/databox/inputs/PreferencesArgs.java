@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databox.inputs;
 
 import io.pulumi.azurenative.databox.inputs.EncryptionPreferencesArgs;
 import io.pulumi.azurenative.databox.inputs.TransportPreferencesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class PreferencesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionPreferences")
-      private final @Nullable Input<EncryptionPreferencesArgs> encryptionPreferences;
+      private final @Nullable Output<EncryptionPreferencesArgs> encryptionPreferences;
 
-    public Input<EncryptionPreferencesArgs> getEncryptionPreferences() {
-        return this.encryptionPreferences == null ? Input.empty() : this.encryptionPreferences;
+    public Output<EncryptionPreferencesArgs> getEncryptionPreferences() {
+        return this.encryptionPreferences == null ? Output.empty() : this.encryptionPreferences;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class PreferencesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preferredDataCenterRegion")
-      private final @Nullable Input<List<String>> preferredDataCenterRegion;
+      private final @Nullable Output<List<String>> preferredDataCenterRegion;
 
-    public Input<List<String>> getPreferredDataCenterRegion() {
-        return this.preferredDataCenterRegion == null ? Input.empty() : this.preferredDataCenterRegion;
+    public Output<List<String>> getPreferredDataCenterRegion() {
+        return this.preferredDataCenterRegion == null ? Output.empty() : this.preferredDataCenterRegion;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class PreferencesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transportPreferences")
-      private final @Nullable Input<TransportPreferencesArgs> transportPreferences;
+      private final @Nullable Output<TransportPreferencesArgs> transportPreferences;
 
-    public Input<TransportPreferencesArgs> getTransportPreferences() {
-        return this.transportPreferences == null ? Input.empty() : this.transportPreferences;
+    public Output<TransportPreferencesArgs> getTransportPreferences() {
+        return this.transportPreferences == null ? Output.empty() : this.transportPreferences;
     }
 
     public PreferencesArgs(
-        @Nullable Input<EncryptionPreferencesArgs> encryptionPreferences,
-        @Nullable Input<List<String>> preferredDataCenterRegion,
-        @Nullable Input<TransportPreferencesArgs> transportPreferences) {
+        @Nullable Output<EncryptionPreferencesArgs> encryptionPreferences,
+        @Nullable Output<List<String>> preferredDataCenterRegion,
+        @Nullable Output<TransportPreferencesArgs> transportPreferences) {
         this.encryptionPreferences = encryptionPreferences;
         this.preferredDataCenterRegion = preferredDataCenterRegion;
         this.transportPreferences = transportPreferences;
     }
 
     private PreferencesArgs() {
-        this.encryptionPreferences = Input.empty();
-        this.preferredDataCenterRegion = Input.empty();
-        this.transportPreferences = Input.empty();
+        this.encryptionPreferences = Output.empty();
+        this.preferredDataCenterRegion = Output.empty();
+        this.transportPreferences = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class PreferencesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<EncryptionPreferencesArgs> encryptionPreferences;
-        private @Nullable Input<List<String>> preferredDataCenterRegion;
-        private @Nullable Input<TransportPreferencesArgs> transportPreferences;
+        private @Nullable Output<EncryptionPreferencesArgs> encryptionPreferences;
+        private @Nullable Output<List<String>> preferredDataCenterRegion;
+        private @Nullable Output<TransportPreferencesArgs> transportPreferences;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class PreferencesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.transportPreferences = defaults.transportPreferences;
         }
 
-        public Builder encryptionPreferences(@Nullable Input<EncryptionPreferencesArgs> encryptionPreferences) {
+        public Builder encryptionPreferences(@Nullable Output<EncryptionPreferencesArgs> encryptionPreferences) {
             this.encryptionPreferences = encryptionPreferences;
             return this;
         }
 
         public Builder encryptionPreferences(@Nullable EncryptionPreferencesArgs encryptionPreferences) {
-            this.encryptionPreferences = Input.ofNullable(encryptionPreferences);
+            this.encryptionPreferences = Output.ofNullable(encryptionPreferences);
             return this;
         }
 
-        public Builder preferredDataCenterRegion(@Nullable Input<List<String>> preferredDataCenterRegion) {
+        public Builder preferredDataCenterRegion(@Nullable Output<List<String>> preferredDataCenterRegion) {
             this.preferredDataCenterRegion = preferredDataCenterRegion;
             return this;
         }
 
         public Builder preferredDataCenterRegion(@Nullable List<String> preferredDataCenterRegion) {
-            this.preferredDataCenterRegion = Input.ofNullable(preferredDataCenterRegion);
+            this.preferredDataCenterRegion = Output.ofNullable(preferredDataCenterRegion);
             return this;
         }
 
-        public Builder transportPreferences(@Nullable Input<TransportPreferencesArgs> transportPreferences) {
+        public Builder transportPreferences(@Nullable Output<TransportPreferencesArgs> transportPreferences) {
             this.transportPreferences = transportPreferences;
             return this;
         }
 
         public Builder transportPreferences(@Nullable TransportPreferencesArgs transportPreferences) {
-            this.transportPreferences = Input.ofNullable(transportPreferences);
+            this.transportPreferences = Output.ofNullable(transportPreferences);
             return this;
         }
         public PreferencesArgs build() {

@@ -8,7 +8,6 @@ import io.pulumi.azurenative.azureactivedirectory.B2CTenantArgs;
 import io.pulumi.azurenative.azureactivedirectory.outputs.B2CResourceSKUResponse;
 import io.pulumi.azurenative.azureactivedirectory.outputs.B2CTenantResourcePropertiesResponseBillingConfig;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -170,18 +169,18 @@ public class B2CTenant extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public B2CTenant(String name, B2CTenantArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:azureactivedirectory:B2CTenant", name, args == null ? B2CTenantArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:azureactivedirectory:B2CTenant", name, args == null ? B2CTenantArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private B2CTenant(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private B2CTenant(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:azureactivedirectory:B2CTenant", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:azureactivedirectory/v20190101preview:B2CTenant").build())
+                Output.of(Alias.builder().setType("azure-native:azureactivedirectory/v20190101preview:B2CTenant").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -195,7 +194,7 @@ public class B2CTenant extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static B2CTenant get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static B2CTenant get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new B2CTenant(name, id, options);
     }
 }

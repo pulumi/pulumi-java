@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.quicksight;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="awsAccountId")
-      private final @Nullable Input<String> awsAccountId;
+      private final @Nullable Output<String> awsAccountId;
 
-    public Input<String> getAwsAccountId() {
-        return this.awsAccountId == null ? Input.empty() : this.awsAccountId;
+    public Output<String> getAwsAccountId() {
+        return this.awsAccountId == null ? Output.empty() : this.awsAccountId;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="groupName", required=true)
-      private final Input<String> groupName;
+      private final Output<String> groupName;
 
-    public Input<String> getGroupName() {
+    public Output<String> getGroupName() {
         return this.groupName;
     }
 
@@ -41,9 +41,9 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="memberName", required=true)
-      private final Input<String> memberName;
+      private final Output<String> memberName;
 
-    public Input<String> getMemberName() {
+    public Output<String> getMemberName() {
         return this.memberName;
     }
 
@@ -52,17 +52,17 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="namespace")
-      private final @Nullable Input<String> namespace;
+      private final @Nullable Output<String> namespace;
 
-    public Input<String> getNamespace() {
-        return this.namespace == null ? Input.empty() : this.namespace;
+    public Output<String> getNamespace() {
+        return this.namespace == null ? Output.empty() : this.namespace;
     }
 
     public GroupMembershipArgs(
-        @Nullable Input<String> awsAccountId,
-        Input<String> groupName,
-        Input<String> memberName,
-        @Nullable Input<String> namespace) {
+        @Nullable Output<String> awsAccountId,
+        Output<String> groupName,
+        Output<String> memberName,
+        @Nullable Output<String> namespace) {
         this.awsAccountId = awsAccountId;
         this.groupName = Objects.requireNonNull(groupName, "expected parameter 'groupName' to be non-null");
         this.memberName = Objects.requireNonNull(memberName, "expected parameter 'memberName' to be non-null");
@@ -70,10 +70,10 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private GroupMembershipArgs() {
-        this.awsAccountId = Input.empty();
-        this.groupName = Input.empty();
-        this.memberName = Input.empty();
-        this.namespace = Input.empty();
+        this.awsAccountId = Output.empty();
+        this.groupName = Output.empty();
+        this.memberName = Output.empty();
+        this.namespace = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> awsAccountId;
-        private Input<String> groupName;
-        private Input<String> memberName;
-        private @Nullable Input<String> namespace;
+        private @Nullable Output<String> awsAccountId;
+        private Output<String> groupName;
+        private Output<String> memberName;
+        private @Nullable Output<String> namespace;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder awsAccountId(@Nullable Input<String> awsAccountId) {
+        public Builder awsAccountId(@Nullable Output<String> awsAccountId) {
             this.awsAccountId = awsAccountId;
             return this;
         }
 
         public Builder awsAccountId(@Nullable String awsAccountId) {
-            this.awsAccountId = Input.ofNullable(awsAccountId);
+            this.awsAccountId = Output.ofNullable(awsAccountId);
             return this;
         }
 
-        public Builder groupName(Input<String> groupName) {
+        public Builder groupName(Output<String> groupName) {
             this.groupName = Objects.requireNonNull(groupName);
             return this;
         }
 
         public Builder groupName(String groupName) {
-            this.groupName = Input.of(Objects.requireNonNull(groupName));
+            this.groupName = Output.of(Objects.requireNonNull(groupName));
             return this;
         }
 
-        public Builder memberName(Input<String> memberName) {
+        public Builder memberName(Output<String> memberName) {
             this.memberName = Objects.requireNonNull(memberName);
             return this;
         }
 
         public Builder memberName(String memberName) {
-            this.memberName = Input.of(Objects.requireNonNull(memberName));
+            this.memberName = Output.of(Objects.requireNonNull(memberName));
             return this;
         }
 
-        public Builder namespace(@Nullable Input<String> namespace) {
+        public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
 
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Input.ofNullable(namespace);
+            this.namespace = Output.ofNullable(namespace);
             return this;
         }
         public GroupMembershipArgs build() {

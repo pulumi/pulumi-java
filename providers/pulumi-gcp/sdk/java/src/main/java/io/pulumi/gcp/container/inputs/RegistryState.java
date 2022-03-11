@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bucketSelfLink")
-      private final @Nullable Input<String> bucketSelfLink;
+      private final @Nullable Output<String> bucketSelfLink;
 
-    public Input<String> getBucketSelfLink() {
-        return this.bucketSelfLink == null ? Input.empty() : this.bucketSelfLink;
+    public Output<String> getBucketSelfLink() {
+        return this.bucketSelfLink == null ? Output.empty() : this.bucketSelfLink;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public RegistryState(
-        @Nullable Input<String> bucketSelfLink,
-        @Nullable Input<String> location,
-        @Nullable Input<String> project) {
+        @Nullable Output<String> bucketSelfLink,
+        @Nullable Output<String> location,
+        @Nullable Output<String> project) {
         this.bucketSelfLink = bucketSelfLink;
         this.location = location;
         this.project = project;
     }
 
     private RegistryState() {
-        this.bucketSelfLink = Input.empty();
-        this.location = Input.empty();
-        this.project = Input.empty();
+        this.bucketSelfLink = Output.empty();
+        this.location = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bucketSelfLink;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> project;
+        private @Nullable Output<String> bucketSelfLink;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder bucketSelfLink(@Nullable Input<String> bucketSelfLink) {
+        public Builder bucketSelfLink(@Nullable Output<String> bucketSelfLink) {
             this.bucketSelfLink = bucketSelfLink;
             return this;
         }
 
         public Builder bucketSelfLink(@Nullable String bucketSelfLink) {
-            this.bucketSelfLink = Input.ofNullable(bucketSelfLink);
+            this.bucketSelfLink = Output.ofNullable(bucketSelfLink);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public RegistryState build() {

@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTlsValidationTrustFileArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTlsValidationTrustSdsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,10 +20,10 @@ public final class VirtualNodeSpecListenerTlsValidationTrustArgs extends io.pulu
      * 
      */
     @InputImport(name="file")
-      private final @Nullable Input<VirtualNodeSpecListenerTlsValidationTrustFileArgs> file;
+      private final @Nullable Output<VirtualNodeSpecListenerTlsValidationTrustFileArgs> file;
 
-    public Input<VirtualNodeSpecListenerTlsValidationTrustFileArgs> getFile() {
-        return this.file == null ? Input.empty() : this.file;
+    public Output<VirtualNodeSpecListenerTlsValidationTrustFileArgs> getFile() {
+        return this.file == null ? Output.empty() : this.file;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class VirtualNodeSpecListenerTlsValidationTrustArgs extends io.pulu
      * 
      */
     @InputImport(name="sds")
-      private final @Nullable Input<VirtualNodeSpecListenerTlsValidationTrustSdsArgs> sds;
+      private final @Nullable Output<VirtualNodeSpecListenerTlsValidationTrustSdsArgs> sds;
 
-    public Input<VirtualNodeSpecListenerTlsValidationTrustSdsArgs> getSds() {
-        return this.sds == null ? Input.empty() : this.sds;
+    public Output<VirtualNodeSpecListenerTlsValidationTrustSdsArgs> getSds() {
+        return this.sds == null ? Output.empty() : this.sds;
     }
 
     public VirtualNodeSpecListenerTlsValidationTrustArgs(
-        @Nullable Input<VirtualNodeSpecListenerTlsValidationTrustFileArgs> file,
-        @Nullable Input<VirtualNodeSpecListenerTlsValidationTrustSdsArgs> sds) {
+        @Nullable Output<VirtualNodeSpecListenerTlsValidationTrustFileArgs> file,
+        @Nullable Output<VirtualNodeSpecListenerTlsValidationTrustSdsArgs> sds) {
         this.file = file;
         this.sds = sds;
     }
 
     private VirtualNodeSpecListenerTlsValidationTrustArgs() {
-        this.file = Input.empty();
-        this.sds = Input.empty();
+        this.file = Output.empty();
+        this.sds = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class VirtualNodeSpecListenerTlsValidationTrustArgs extends io.pulu
     }
 
     public static final class Builder {
-        private @Nullable Input<VirtualNodeSpecListenerTlsValidationTrustFileArgs> file;
-        private @Nullable Input<VirtualNodeSpecListenerTlsValidationTrustSdsArgs> sds;
+        private @Nullable Output<VirtualNodeSpecListenerTlsValidationTrustFileArgs> file;
+        private @Nullable Output<VirtualNodeSpecListenerTlsValidationTrustSdsArgs> sds;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class VirtualNodeSpecListenerTlsValidationTrustArgs extends io.pulu
     	      this.sds = defaults.sds;
         }
 
-        public Builder file(@Nullable Input<VirtualNodeSpecListenerTlsValidationTrustFileArgs> file) {
+        public Builder file(@Nullable Output<VirtualNodeSpecListenerTlsValidationTrustFileArgs> file) {
             this.file = file;
             return this;
         }
 
         public Builder file(@Nullable VirtualNodeSpecListenerTlsValidationTrustFileArgs file) {
-            this.file = Input.ofNullable(file);
+            this.file = Output.ofNullable(file);
             return this;
         }
 
-        public Builder sds(@Nullable Input<VirtualNodeSpecListenerTlsValidationTrustSdsArgs> sds) {
+        public Builder sds(@Nullable Output<VirtualNodeSpecListenerTlsValidationTrustSdsArgs> sds) {
             this.sds = sds;
             return this;
         }
 
         public Builder sds(@Nullable VirtualNodeSpecListenerTlsValidationTrustSdsArgs sds) {
-            this.sds = Input.ofNullable(sds);
+            this.sds = Output.ofNullable(sds);
             return this;
         }
         public VirtualNodeSpecListenerTlsValidationTrustArgs build() {

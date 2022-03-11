@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.AptRepositoryArgs;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.GooRepositoryArgs;
@@ -26,10 +26,10 @@ public final class PackageRepositoryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="apt")
-      private final @Nullable Input<AptRepositoryArgs> apt;
+      private final @Nullable Output<AptRepositoryArgs> apt;
 
-    public Input<AptRepositoryArgs> getApt() {
-        return this.apt == null ? Input.empty() : this.apt;
+    public Output<AptRepositoryArgs> getApt() {
+        return this.apt == null ? Output.empty() : this.apt;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class PackageRepositoryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="goo")
-      private final @Nullable Input<GooRepositoryArgs> goo;
+      private final @Nullable Output<GooRepositoryArgs> goo;
 
-    public Input<GooRepositoryArgs> getGoo() {
-        return this.goo == null ? Input.empty() : this.goo;
+    public Output<GooRepositoryArgs> getGoo() {
+        return this.goo == null ? Output.empty() : this.goo;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class PackageRepositoryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="yum")
-      private final @Nullable Input<YumRepositoryArgs> yum;
+      private final @Nullable Output<YumRepositoryArgs> yum;
 
-    public Input<YumRepositoryArgs> getYum() {
-        return this.yum == null ? Input.empty() : this.yum;
+    public Output<YumRepositoryArgs> getYum() {
+        return this.yum == null ? Output.empty() : this.yum;
     }
 
     /**
@@ -59,17 +59,17 @@ public final class PackageRepositoryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="zypper")
-      private final @Nullable Input<ZypperRepositoryArgs> zypper;
+      private final @Nullable Output<ZypperRepositoryArgs> zypper;
 
-    public Input<ZypperRepositoryArgs> getZypper() {
-        return this.zypper == null ? Input.empty() : this.zypper;
+    public Output<ZypperRepositoryArgs> getZypper() {
+        return this.zypper == null ? Output.empty() : this.zypper;
     }
 
     public PackageRepositoryArgs(
-        @Nullable Input<AptRepositoryArgs> apt,
-        @Nullable Input<GooRepositoryArgs> goo,
-        @Nullable Input<YumRepositoryArgs> yum,
-        @Nullable Input<ZypperRepositoryArgs> zypper) {
+        @Nullable Output<AptRepositoryArgs> apt,
+        @Nullable Output<GooRepositoryArgs> goo,
+        @Nullable Output<YumRepositoryArgs> yum,
+        @Nullable Output<ZypperRepositoryArgs> zypper) {
         this.apt = apt;
         this.goo = goo;
         this.yum = yum;
@@ -77,10 +77,10 @@ public final class PackageRepositoryArgs extends io.pulumi.resources.ResourceArg
     }
 
     private PackageRepositoryArgs() {
-        this.apt = Input.empty();
-        this.goo = Input.empty();
-        this.yum = Input.empty();
-        this.zypper = Input.empty();
+        this.apt = Output.empty();
+        this.goo = Output.empty();
+        this.yum = Output.empty();
+        this.zypper = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class PackageRepositoryArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<AptRepositoryArgs> apt;
-        private @Nullable Input<GooRepositoryArgs> goo;
-        private @Nullable Input<YumRepositoryArgs> yum;
-        private @Nullable Input<ZypperRepositoryArgs> zypper;
+        private @Nullable Output<AptRepositoryArgs> apt;
+        private @Nullable Output<GooRepositoryArgs> goo;
+        private @Nullable Output<YumRepositoryArgs> yum;
+        private @Nullable Output<ZypperRepositoryArgs> zypper;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class PackageRepositoryArgs extends io.pulumi.resources.ResourceArg
     	      this.zypper = defaults.zypper;
         }
 
-        public Builder apt(@Nullable Input<AptRepositoryArgs> apt) {
+        public Builder apt(@Nullable Output<AptRepositoryArgs> apt) {
             this.apt = apt;
             return this;
         }
 
         public Builder apt(@Nullable AptRepositoryArgs apt) {
-            this.apt = Input.ofNullable(apt);
+            this.apt = Output.ofNullable(apt);
             return this;
         }
 
-        public Builder goo(@Nullable Input<GooRepositoryArgs> goo) {
+        public Builder goo(@Nullable Output<GooRepositoryArgs> goo) {
             this.goo = goo;
             return this;
         }
 
         public Builder goo(@Nullable GooRepositoryArgs goo) {
-            this.goo = Input.ofNullable(goo);
+            this.goo = Output.ofNullable(goo);
             return this;
         }
 
-        public Builder yum(@Nullable Input<YumRepositoryArgs> yum) {
+        public Builder yum(@Nullable Output<YumRepositoryArgs> yum) {
             this.yum = yum;
             return this;
         }
 
         public Builder yum(@Nullable YumRepositoryArgs yum) {
-            this.yum = Input.ofNullable(yum);
+            this.yum = Output.ofNullable(yum);
             return this;
         }
 
-        public Builder zypper(@Nullable Input<ZypperRepositoryArgs> zypper) {
+        public Builder zypper(@Nullable Output<ZypperRepositoryArgs> zypper) {
             this.zypper = zypper;
             return this;
         }
 
         public Builder zypper(@Nullable ZypperRepositoryArgs zypper) {
-            this.zypper = Input.ofNullable(zypper);
+            this.zypper = Output.ofNullable(zypper);
             return this;
         }
         public PackageRepositoryArgs build() {

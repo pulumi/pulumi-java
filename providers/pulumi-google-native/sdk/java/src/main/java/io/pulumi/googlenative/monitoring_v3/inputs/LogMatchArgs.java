@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -24,9 +24,9 @@ public final class LogMatchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filter", required=true)
-      private final Input<String> filter;
+      private final Output<String> filter;
 
-    public Input<String> getFilter() {
+    public Output<String> getFilter() {
         return this.filter;
     }
 
@@ -35,22 +35,22 @@ public final class LogMatchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labelExtractors")
-      private final @Nullable Input<Map<String,String>> labelExtractors;
+      private final @Nullable Output<Map<String,String>> labelExtractors;
 
-    public Input<Map<String,String>> getLabelExtractors() {
-        return this.labelExtractors == null ? Input.empty() : this.labelExtractors;
+    public Output<Map<String,String>> getLabelExtractors() {
+        return this.labelExtractors == null ? Output.empty() : this.labelExtractors;
     }
 
     public LogMatchArgs(
-        Input<String> filter,
-        @Nullable Input<Map<String,String>> labelExtractors) {
+        Output<String> filter,
+        @Nullable Output<Map<String,String>> labelExtractors) {
         this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
         this.labelExtractors = labelExtractors;
     }
 
     private LogMatchArgs() {
-        this.filter = Input.empty();
-        this.labelExtractors = Input.empty();
+        this.filter = Output.empty();
+        this.labelExtractors = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class LogMatchArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> filter;
-        private @Nullable Input<Map<String,String>> labelExtractors;
+        private Output<String> filter;
+        private @Nullable Output<Map<String,String>> labelExtractors;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class LogMatchArgs extends io.pulumi.resources.ResourceArgs {
     	      this.labelExtractors = defaults.labelExtractors;
         }
 
-        public Builder filter(Input<String> filter) {
+        public Builder filter(Output<String> filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
         public Builder filter(String filter) {
-            this.filter = Input.of(Objects.requireNonNull(filter));
+            this.filter = Output.of(Objects.requireNonNull(filter));
             return this;
         }
 
-        public Builder labelExtractors(@Nullable Input<Map<String,String>> labelExtractors) {
+        public Builder labelExtractors(@Nullable Output<Map<String,String>> labelExtractors) {
             this.labelExtractors = labelExtractors;
             return this;
         }
 
         public Builder labelExtractors(@Nullable Map<String,String> labelExtractors) {
-            this.labelExtractors = Input.ofNullable(labelExtractors);
+            this.labelExtractors = Output.ofNullable(labelExtractors);
             return this;
         }
         public LogMatchArgs build() {

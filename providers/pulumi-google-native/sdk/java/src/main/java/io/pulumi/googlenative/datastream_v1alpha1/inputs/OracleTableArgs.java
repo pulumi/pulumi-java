@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.OracleColumnArgs;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class OracleTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="oracleColumns")
-      private final @Nullable Input<List<OracleColumnArgs>> oracleColumns;
+      private final @Nullable Output<List<OracleColumnArgs>> oracleColumns;
 
-    public Input<List<OracleColumnArgs>> getOracleColumns() {
-        return this.oracleColumns == null ? Input.empty() : this.oracleColumns;
+    public Output<List<OracleColumnArgs>> getOracleColumns() {
+        return this.oracleColumns == null ? Output.empty() : this.oracleColumns;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class OracleTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tableName")
-      private final @Nullable Input<String> tableName;
+      private final @Nullable Output<String> tableName;
 
-    public Input<String> getTableName() {
-        return this.tableName == null ? Input.empty() : this.tableName;
+    public Output<String> getTableName() {
+        return this.tableName == null ? Output.empty() : this.tableName;
     }
 
     public OracleTableArgs(
-        @Nullable Input<List<OracleColumnArgs>> oracleColumns,
-        @Nullable Input<String> tableName) {
+        @Nullable Output<List<OracleColumnArgs>> oracleColumns,
+        @Nullable Output<String> tableName) {
         this.oracleColumns = oracleColumns;
         this.tableName = tableName;
     }
 
     private OracleTableArgs() {
-        this.oracleColumns = Input.empty();
-        this.tableName = Input.empty();
+        this.oracleColumns = Output.empty();
+        this.tableName = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class OracleTableArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<OracleColumnArgs>> oracleColumns;
-        private @Nullable Input<String> tableName;
+        private @Nullable Output<List<OracleColumnArgs>> oracleColumns;
+        private @Nullable Output<String> tableName;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class OracleTableArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder oracleColumns(@Nullable Input<List<OracleColumnArgs>> oracleColumns) {
+        public Builder oracleColumns(@Nullable Output<List<OracleColumnArgs>> oracleColumns) {
             this.oracleColumns = oracleColumns;
             return this;
         }
 
         public Builder oracleColumns(@Nullable List<OracleColumnArgs> oracleColumns) {
-            this.oracleColumns = Input.ofNullable(oracleColumns);
+            this.oracleColumns = Output.ofNullable(oracleColumns);
             return this;
         }
 
-        public Builder tableName(@Nullable Input<String> tableName) {
+        public Builder tableName(@Nullable Output<String> tableName) {
             this.tableName = tableName;
             return this;
         }
 
         public Builder tableName(@Nullable String tableName) {
-            this.tableName = Input.ofNullable(tableName);
+            this.tableName = Output.ofNullable(tableName);
             return this;
         }
         public OracleTableArgs build() {

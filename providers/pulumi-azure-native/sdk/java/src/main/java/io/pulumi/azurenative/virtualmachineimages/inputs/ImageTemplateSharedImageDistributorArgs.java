@@ -5,7 +5,7 @@ package io.pulumi.azurenative.virtualmachineimages.inputs;
 
 import io.pulumi.azurenative.virtualmachineimages.enums.SharedImageStorageAccountType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -28,10 +28,10 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="artifactTags")
-      private final @Nullable Input<Map<String,String>> artifactTags;
+      private final @Nullable Output<Map<String,String>> artifactTags;
 
-    public Input<Map<String,String>> getArtifactTags() {
-        return this.artifactTags == null ? Input.empty() : this.artifactTags;
+    public Output<Map<String,String>> getArtifactTags() {
+        return this.artifactTags == null ? Output.empty() : this.artifactTags;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="excludeFromLatest")
-      private final @Nullable Input<Boolean> excludeFromLatest;
+      private final @Nullable Output<Boolean> excludeFromLatest;
 
-    public Input<Boolean> getExcludeFromLatest() {
-        return this.excludeFromLatest == null ? Input.empty() : this.excludeFromLatest;
+    public Output<Boolean> getExcludeFromLatest() {
+        return this.excludeFromLatest == null ? Output.empty() : this.excludeFromLatest;
     }
 
     /**
@@ -50,9 +50,9 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="galleryImageId", required=true)
-      private final Input<String> galleryImageId;
+      private final Output<String> galleryImageId;
 
-    public Input<String> getGalleryImageId() {
+    public Output<String> getGalleryImageId() {
         return this.galleryImageId;
     }
 
@@ -61,9 +61,9 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="replicationRegions", required=true)
-      private final Input<List<String>> replicationRegions;
+      private final Output<List<String>> replicationRegions;
 
-    public Input<List<String>> getReplicationRegions() {
+    public Output<List<String>> getReplicationRegions() {
         return this.replicationRegions;
     }
 
@@ -72,9 +72,9 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="runOutputName", required=true)
-      private final Input<String> runOutputName;
+      private final Output<String> runOutputName;
 
-    public Input<String> getRunOutputName() {
+    public Output<String> getRunOutputName() {
         return this.runOutputName;
     }
 
@@ -83,10 +83,10 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="storageAccountType")
-      private final @Nullable Input<Either<String,SharedImageStorageAccountType>> storageAccountType;
+      private final @Nullable Output<Either<String,SharedImageStorageAccountType>> storageAccountType;
 
-    public Input<Either<String,SharedImageStorageAccountType>> getStorageAccountType() {
-        return this.storageAccountType == null ? Input.empty() : this.storageAccountType;
+    public Output<Either<String,SharedImageStorageAccountType>> getStorageAccountType() {
+        return this.storageAccountType == null ? Output.empty() : this.storageAccountType;
     }
 
     /**
@@ -95,22 +95,22 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public ImageTemplateSharedImageDistributorArgs(
-        @Nullable Input<Map<String,String>> artifactTags,
-        @Nullable Input<Boolean> excludeFromLatest,
-        Input<String> galleryImageId,
-        Input<List<String>> replicationRegions,
-        Input<String> runOutputName,
-        @Nullable Input<Either<String,SharedImageStorageAccountType>> storageAccountType,
-        Input<String> type) {
+        @Nullable Output<Map<String,String>> artifactTags,
+        @Nullable Output<Boolean> excludeFromLatest,
+        Output<String> galleryImageId,
+        Output<List<String>> replicationRegions,
+        Output<String> runOutputName,
+        @Nullable Output<Either<String,SharedImageStorageAccountType>> storageAccountType,
+        Output<String> type) {
         this.artifactTags = artifactTags;
-        this.excludeFromLatest = excludeFromLatest == null ? Input.ofNullable(false) : excludeFromLatest;
+        this.excludeFromLatest = excludeFromLatest == null ? Output.ofNullable(false) : excludeFromLatest;
         this.galleryImageId = Objects.requireNonNull(galleryImageId, "expected parameter 'galleryImageId' to be non-null");
         this.replicationRegions = Objects.requireNonNull(replicationRegions, "expected parameter 'replicationRegions' to be non-null");
         this.runOutputName = Objects.requireNonNull(runOutputName, "expected parameter 'runOutputName' to be non-null");
@@ -119,13 +119,13 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
     }
 
     private ImageTemplateSharedImageDistributorArgs() {
-        this.artifactTags = Input.empty();
-        this.excludeFromLatest = Input.empty();
-        this.galleryImageId = Input.empty();
-        this.replicationRegions = Input.empty();
-        this.runOutputName = Input.empty();
-        this.storageAccountType = Input.empty();
-        this.type = Input.empty();
+        this.artifactTags = Output.empty();
+        this.excludeFromLatest = Output.empty();
+        this.galleryImageId = Output.empty();
+        this.replicationRegions = Output.empty();
+        this.runOutputName = Output.empty();
+        this.storageAccountType = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -137,13 +137,13 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> artifactTags;
-        private @Nullable Input<Boolean> excludeFromLatest;
-        private Input<String> galleryImageId;
-        private Input<List<String>> replicationRegions;
-        private Input<String> runOutputName;
-        private @Nullable Input<Either<String,SharedImageStorageAccountType>> storageAccountType;
-        private Input<String> type;
+        private @Nullable Output<Map<String,String>> artifactTags;
+        private @Nullable Output<Boolean> excludeFromLatest;
+        private Output<String> galleryImageId;
+        private Output<List<String>> replicationRegions;
+        private Output<String> runOutputName;
+        private @Nullable Output<Either<String,SharedImageStorageAccountType>> storageAccountType;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -160,73 +160,73 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
     	      this.type = defaults.type;
         }
 
-        public Builder artifactTags(@Nullable Input<Map<String,String>> artifactTags) {
+        public Builder artifactTags(@Nullable Output<Map<String,String>> artifactTags) {
             this.artifactTags = artifactTags;
             return this;
         }
 
         public Builder artifactTags(@Nullable Map<String,String> artifactTags) {
-            this.artifactTags = Input.ofNullable(artifactTags);
+            this.artifactTags = Output.ofNullable(artifactTags);
             return this;
         }
 
-        public Builder excludeFromLatest(@Nullable Input<Boolean> excludeFromLatest) {
+        public Builder excludeFromLatest(@Nullable Output<Boolean> excludeFromLatest) {
             this.excludeFromLatest = excludeFromLatest;
             return this;
         }
 
         public Builder excludeFromLatest(@Nullable Boolean excludeFromLatest) {
-            this.excludeFromLatest = Input.ofNullable(excludeFromLatest);
+            this.excludeFromLatest = Output.ofNullable(excludeFromLatest);
             return this;
         }
 
-        public Builder galleryImageId(Input<String> galleryImageId) {
+        public Builder galleryImageId(Output<String> galleryImageId) {
             this.galleryImageId = Objects.requireNonNull(galleryImageId);
             return this;
         }
 
         public Builder galleryImageId(String galleryImageId) {
-            this.galleryImageId = Input.of(Objects.requireNonNull(galleryImageId));
+            this.galleryImageId = Output.of(Objects.requireNonNull(galleryImageId));
             return this;
         }
 
-        public Builder replicationRegions(Input<List<String>> replicationRegions) {
+        public Builder replicationRegions(Output<List<String>> replicationRegions) {
             this.replicationRegions = Objects.requireNonNull(replicationRegions);
             return this;
         }
 
         public Builder replicationRegions(List<String> replicationRegions) {
-            this.replicationRegions = Input.of(Objects.requireNonNull(replicationRegions));
+            this.replicationRegions = Output.of(Objects.requireNonNull(replicationRegions));
             return this;
         }
 
-        public Builder runOutputName(Input<String> runOutputName) {
+        public Builder runOutputName(Output<String> runOutputName) {
             this.runOutputName = Objects.requireNonNull(runOutputName);
             return this;
         }
 
         public Builder runOutputName(String runOutputName) {
-            this.runOutputName = Input.of(Objects.requireNonNull(runOutputName));
+            this.runOutputName = Output.of(Objects.requireNonNull(runOutputName));
             return this;
         }
 
-        public Builder storageAccountType(@Nullable Input<Either<String,SharedImageStorageAccountType>> storageAccountType) {
+        public Builder storageAccountType(@Nullable Output<Either<String,SharedImageStorageAccountType>> storageAccountType) {
             this.storageAccountType = storageAccountType;
             return this;
         }
 
         public Builder storageAccountType(@Nullable Either<String,SharedImageStorageAccountType> storageAccountType) {
-            this.storageAccountType = Input.ofNullable(storageAccountType);
+            this.storageAccountType = Output.ofNullable(storageAccountType);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ImageTemplateSharedImageDistributorArgs build() {

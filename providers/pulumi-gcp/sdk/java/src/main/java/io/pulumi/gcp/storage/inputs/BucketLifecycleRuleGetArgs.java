@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.storage.inputs.BucketLifecycleRuleActionGetArgs;
 import io.pulumi.gcp.storage.inputs.BucketLifecycleRuleConditionGetArgs;
@@ -19,9 +19,9 @@ public final class BucketLifecycleRuleGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="action", required=true)
-      private final Input<BucketLifecycleRuleActionGetArgs> action;
+      private final Output<BucketLifecycleRuleActionGetArgs> action;
 
-    public Input<BucketLifecycleRuleActionGetArgs> getAction() {
+    public Output<BucketLifecycleRuleActionGetArgs> getAction() {
         return this.action;
     }
 
@@ -30,22 +30,22 @@ public final class BucketLifecycleRuleGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="condition", required=true)
-      private final Input<BucketLifecycleRuleConditionGetArgs> condition;
+      private final Output<BucketLifecycleRuleConditionGetArgs> condition;
 
-    public Input<BucketLifecycleRuleConditionGetArgs> getCondition() {
+    public Output<BucketLifecycleRuleConditionGetArgs> getCondition() {
         return this.condition;
     }
 
     public BucketLifecycleRuleGetArgs(
-        Input<BucketLifecycleRuleActionGetArgs> action,
-        Input<BucketLifecycleRuleConditionGetArgs> condition) {
+        Output<BucketLifecycleRuleActionGetArgs> action,
+        Output<BucketLifecycleRuleConditionGetArgs> condition) {
         this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
         this.condition = Objects.requireNonNull(condition, "expected parameter 'condition' to be non-null");
     }
 
     private BucketLifecycleRuleGetArgs() {
-        this.action = Input.empty();
-        this.condition = Input.empty();
+        this.action = Output.empty();
+        this.condition = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class BucketLifecycleRuleGetArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<BucketLifecycleRuleActionGetArgs> action;
-        private Input<BucketLifecycleRuleConditionGetArgs> condition;
+        private Output<BucketLifecycleRuleActionGetArgs> action;
+        private Output<BucketLifecycleRuleConditionGetArgs> condition;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class BucketLifecycleRuleGetArgs extends io.pulumi.resources.Resour
     	      this.condition = defaults.condition;
         }
 
-        public Builder action(Input<BucketLifecycleRuleActionGetArgs> action) {
+        public Builder action(Output<BucketLifecycleRuleActionGetArgs> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
         public Builder action(BucketLifecycleRuleActionGetArgs action) {
-            this.action = Input.of(Objects.requireNonNull(action));
+            this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder condition(Input<BucketLifecycleRuleConditionGetArgs> condition) {
+        public Builder condition(Output<BucketLifecycleRuleConditionGetArgs> condition) {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
 
         public Builder condition(BucketLifecycleRuleConditionGetArgs condition) {
-            this.condition = Input.of(Objects.requireNonNull(condition));
+            this.condition = Output.of(Objects.requireNonNull(condition));
             return this;
         }
         public BucketLifecycleRuleGetArgs build() {

@@ -6,7 +6,6 @@ package io.pulumi.awsnative.iot;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.iot.LoggingArgs;
 import io.pulumi.awsnative.iot.enums.LoggingDefaultLogLevel;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -100,14 +99,14 @@ public class Logging extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Logging(String name, LoggingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:iot:Logging", name, args == null ? LoggingArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:iot:Logging", name, args == null ? LoggingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Logging(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Logging(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:iot:Logging", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -122,7 +121,7 @@ public class Logging extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Logging get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Logging get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Logging(name, id, options);
     }
 }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupCustomHTTPHeaderArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class RuleGroupCustomRequestHandlingArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="insertHeaders", required=true)
-      private final Input<List<RuleGroupCustomHTTPHeaderArgs>> insertHeaders;
+      private final Output<List<RuleGroupCustomHTTPHeaderArgs>> insertHeaders;
 
-    public Input<List<RuleGroupCustomHTTPHeaderArgs>> getInsertHeaders() {
+    public Output<List<RuleGroupCustomHTTPHeaderArgs>> getInsertHeaders() {
         return this.insertHeaders;
     }
 
-    public RuleGroupCustomRequestHandlingArgs(Input<List<RuleGroupCustomHTTPHeaderArgs>> insertHeaders) {
+    public RuleGroupCustomRequestHandlingArgs(Output<List<RuleGroupCustomHTTPHeaderArgs>> insertHeaders) {
         this.insertHeaders = Objects.requireNonNull(insertHeaders, "expected parameter 'insertHeaders' to be non-null");
     }
 
     private RuleGroupCustomRequestHandlingArgs() {
-        this.insertHeaders = Input.empty();
+        this.insertHeaders = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class RuleGroupCustomRequestHandlingArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<List<RuleGroupCustomHTTPHeaderArgs>> insertHeaders;
+        private Output<List<RuleGroupCustomHTTPHeaderArgs>> insertHeaders;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class RuleGroupCustomRequestHandlingArgs extends io.pulumi.resource
     	      this.insertHeaders = defaults.insertHeaders;
         }
 
-        public Builder insertHeaders(Input<List<RuleGroupCustomHTTPHeaderArgs>> insertHeaders) {
+        public Builder insertHeaders(Output<List<RuleGroupCustomHTTPHeaderArgs>> insertHeaders) {
             this.insertHeaders = Objects.requireNonNull(insertHeaders);
             return this;
         }
 
         public Builder insertHeaders(List<RuleGroupCustomHTTPHeaderArgs> insertHeaders) {
-            this.insertHeaders = Input.of(Objects.requireNonNull(insertHeaders));
+            this.insertHeaders = Output.of(Objects.requireNonNull(insertHeaders));
             return this;
         }
         public RuleGroupCustomRequestHandlingArgs build() {

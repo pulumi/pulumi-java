@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.ActivityPolicyArgs;
 import io.pulumi.azurenative.datafactory.inputs.CustomActivityReferenceObjectArgs;
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -31,10 +31,10 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoUserSpecification")
-      private final @Nullable Input<Object> autoUserSpecification;
+      private final @Nullable Output<Object> autoUserSpecification;
 
-    public Input<Object> getAutoUserSpecification() {
-        return this.autoUserSpecification == null ? Input.empty() : this.autoUserSpecification;
+    public Output<Object> getAutoUserSpecification() {
+        return this.autoUserSpecification == null ? Output.empty() : this.autoUserSpecification;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="command", required=true)
-      private final Input<Object> command;
+      private final Output<Object> command;
 
-    public Input<Object> getCommand() {
+    public Output<Object> getCommand() {
         return this.command;
     }
 
@@ -53,10 +53,10 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dependsOn")
-      private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
+      private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Input<List<ActivityDependencyArgs>> getDependsOn() {
-        return this.dependsOn == null ? Input.empty() : this.dependsOn;
+    public Output<List<ActivityDependencyArgs>> getDependsOn() {
+        return this.dependsOn == null ? Output.empty() : this.dependsOn;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extendedProperties")
-      private final @Nullable Input<Map<String,Object>> extendedProperties;
+      private final @Nullable Output<Map<String,Object>> extendedProperties;
 
-    public Input<Map<String,Object>> getExtendedProperties() {
-        return this.extendedProperties == null ? Input.empty() : this.extendedProperties;
+    public Output<Map<String,Object>> getExtendedProperties() {
+        return this.extendedProperties == null ? Output.empty() : this.extendedProperties;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="folderPath")
-      private final @Nullable Input<Object> folderPath;
+      private final @Nullable Output<Object> folderPath;
 
-    public Input<Object> getFolderPath() {
-        return this.folderPath == null ? Input.empty() : this.folderPath;
+    public Output<Object> getFolderPath() {
+        return this.folderPath == null ? Output.empty() : this.folderPath;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkedServiceName")
-      private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
+      private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
-        return this.linkedServiceName == null ? Input.empty() : this.linkedServiceName;
+    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+        return this.linkedServiceName == null ? Output.empty() : this.linkedServiceName;
     }
 
     /**
@@ -108,9 +108,9 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -119,10 +119,10 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy")
-      private final @Nullable Input<ActivityPolicyArgs> policy;
+      private final @Nullable Output<ActivityPolicyArgs> policy;
 
-    public Input<ActivityPolicyArgs> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<ActivityPolicyArgs> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     /**
@@ -130,10 +130,10 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="referenceObjects")
-      private final @Nullable Input<CustomActivityReferenceObjectArgs> referenceObjects;
+      private final @Nullable Output<CustomActivityReferenceObjectArgs> referenceObjects;
 
-    public Input<CustomActivityReferenceObjectArgs> getReferenceObjects() {
-        return this.referenceObjects == null ? Input.empty() : this.referenceObjects;
+    public Output<CustomActivityReferenceObjectArgs> getReferenceObjects() {
+        return this.referenceObjects == null ? Output.empty() : this.referenceObjects;
     }
 
     /**
@@ -141,10 +141,10 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceLinkedService")
-      private final @Nullable Input<LinkedServiceReferenceArgs> resourceLinkedService;
+      private final @Nullable Output<LinkedServiceReferenceArgs> resourceLinkedService;
 
-    public Input<LinkedServiceReferenceArgs> getResourceLinkedService() {
-        return this.resourceLinkedService == null ? Input.empty() : this.resourceLinkedService;
+    public Output<LinkedServiceReferenceArgs> getResourceLinkedService() {
+        return this.resourceLinkedService == null ? Output.empty() : this.resourceLinkedService;
     }
 
     /**
@@ -152,10 +152,10 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionTimeInDays")
-      private final @Nullable Input<Object> retentionTimeInDays;
+      private final @Nullable Output<Object> retentionTimeInDays;
 
-    public Input<Object> getRetentionTimeInDays() {
-        return this.retentionTimeInDays == null ? Input.empty() : this.retentionTimeInDays;
+    public Output<Object> getRetentionTimeInDays() {
+        return this.retentionTimeInDays == null ? Output.empty() : this.retentionTimeInDays;
     }
 
     /**
@@ -164,9 +164,9 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -175,27 +175,27 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userProperties")
-      private final @Nullable Input<List<UserPropertyArgs>> userProperties;
+      private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Input<List<UserPropertyArgs>> getUserProperties() {
-        return this.userProperties == null ? Input.empty() : this.userProperties;
+    public Output<List<UserPropertyArgs>> getUserProperties() {
+        return this.userProperties == null ? Output.empty() : this.userProperties;
     }
 
     public CustomActivityArgs(
-        @Nullable Input<Object> autoUserSpecification,
-        Input<Object> command,
-        @Nullable Input<List<ActivityDependencyArgs>> dependsOn,
-        @Nullable Input<String> description,
-        @Nullable Input<Map<String,Object>> extendedProperties,
-        @Nullable Input<Object> folderPath,
-        @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName,
-        Input<String> name,
-        @Nullable Input<ActivityPolicyArgs> policy,
-        @Nullable Input<CustomActivityReferenceObjectArgs> referenceObjects,
-        @Nullable Input<LinkedServiceReferenceArgs> resourceLinkedService,
-        @Nullable Input<Object> retentionTimeInDays,
-        Input<String> type,
-        @Nullable Input<List<UserPropertyArgs>> userProperties) {
+        @Nullable Output<Object> autoUserSpecification,
+        Output<Object> command,
+        @Nullable Output<List<ActivityDependencyArgs>> dependsOn,
+        @Nullable Output<String> description,
+        @Nullable Output<Map<String,Object>> extendedProperties,
+        @Nullable Output<Object> folderPath,
+        @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName,
+        Output<String> name,
+        @Nullable Output<ActivityPolicyArgs> policy,
+        @Nullable Output<CustomActivityReferenceObjectArgs> referenceObjects,
+        @Nullable Output<LinkedServiceReferenceArgs> resourceLinkedService,
+        @Nullable Output<Object> retentionTimeInDays,
+        Output<String> type,
+        @Nullable Output<List<UserPropertyArgs>> userProperties) {
         this.autoUserSpecification = autoUserSpecification;
         this.command = Objects.requireNonNull(command, "expected parameter 'command' to be non-null");
         this.dependsOn = dependsOn;
@@ -213,20 +213,20 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CustomActivityArgs() {
-        this.autoUserSpecification = Input.empty();
-        this.command = Input.empty();
-        this.dependsOn = Input.empty();
-        this.description = Input.empty();
-        this.extendedProperties = Input.empty();
-        this.folderPath = Input.empty();
-        this.linkedServiceName = Input.empty();
-        this.name = Input.empty();
-        this.policy = Input.empty();
-        this.referenceObjects = Input.empty();
-        this.resourceLinkedService = Input.empty();
-        this.retentionTimeInDays = Input.empty();
-        this.type = Input.empty();
-        this.userProperties = Input.empty();
+        this.autoUserSpecification = Output.empty();
+        this.command = Output.empty();
+        this.dependsOn = Output.empty();
+        this.description = Output.empty();
+        this.extendedProperties = Output.empty();
+        this.folderPath = Output.empty();
+        this.linkedServiceName = Output.empty();
+        this.name = Output.empty();
+        this.policy = Output.empty();
+        this.referenceObjects = Output.empty();
+        this.resourceLinkedService = Output.empty();
+        this.retentionTimeInDays = Output.empty();
+        this.type = Output.empty();
+        this.userProperties = Output.empty();
     }
 
     public static Builder builder() {
@@ -238,20 +238,20 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> autoUserSpecification;
-        private Input<Object> command;
-        private @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Map<String,Object>> extendedProperties;
-        private @Nullable Input<Object> folderPath;
-        private @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
-        private Input<String> name;
-        private @Nullable Input<ActivityPolicyArgs> policy;
-        private @Nullable Input<CustomActivityReferenceObjectArgs> referenceObjects;
-        private @Nullable Input<LinkedServiceReferenceArgs> resourceLinkedService;
-        private @Nullable Input<Object> retentionTimeInDays;
-        private Input<String> type;
-        private @Nullable Input<List<UserPropertyArgs>> userProperties;
+        private @Nullable Output<Object> autoUserSpecification;
+        private Output<Object> command;
+        private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Map<String,Object>> extendedProperties;
+        private @Nullable Output<Object> folderPath;
+        private @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
+        private Output<String> name;
+        private @Nullable Output<ActivityPolicyArgs> policy;
+        private @Nullable Output<CustomActivityReferenceObjectArgs> referenceObjects;
+        private @Nullable Output<LinkedServiceReferenceArgs> resourceLinkedService;
+        private @Nullable Output<Object> retentionTimeInDays;
+        private Output<String> type;
+        private @Nullable Output<List<UserPropertyArgs>> userProperties;
 
         public Builder() {
     	      // Empty
@@ -275,143 +275,143 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder autoUserSpecification(@Nullable Input<Object> autoUserSpecification) {
+        public Builder autoUserSpecification(@Nullable Output<Object> autoUserSpecification) {
             this.autoUserSpecification = autoUserSpecification;
             return this;
         }
 
         public Builder autoUserSpecification(@Nullable Object autoUserSpecification) {
-            this.autoUserSpecification = Input.ofNullable(autoUserSpecification);
+            this.autoUserSpecification = Output.ofNullable(autoUserSpecification);
             return this;
         }
 
-        public Builder command(Input<Object> command) {
+        public Builder command(Output<Object> command) {
             this.command = Objects.requireNonNull(command);
             return this;
         }
 
         public Builder command(Object command) {
-            this.command = Input.of(Objects.requireNonNull(command));
+            this.command = Output.of(Objects.requireNonNull(command));
             return this;
         }
 
-        public Builder dependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
+        public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Input.ofNullable(dependsOn);
+            this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder extendedProperties(@Nullable Input<Map<String,Object>> extendedProperties) {
+        public Builder extendedProperties(@Nullable Output<Map<String,Object>> extendedProperties) {
             this.extendedProperties = extendedProperties;
             return this;
         }
 
         public Builder extendedProperties(@Nullable Map<String,Object> extendedProperties) {
-            this.extendedProperties = Input.ofNullable(extendedProperties);
+            this.extendedProperties = Output.ofNullable(extendedProperties);
             return this;
         }
 
-        public Builder folderPath(@Nullable Input<Object> folderPath) {
+        public Builder folderPath(@Nullable Output<Object> folderPath) {
             this.folderPath = folderPath;
             return this;
         }
 
         public Builder folderPath(@Nullable Object folderPath) {
-            this.folderPath = Input.ofNullable(folderPath);
+            this.folderPath = Output.ofNullable(folderPath);
             return this;
         }
 
-        public Builder linkedServiceName(@Nullable Input<LinkedServiceReferenceArgs> linkedServiceName) {
+        public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
 
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Input.ofNullable(linkedServiceName);
+            this.linkedServiceName = Output.ofNullable(linkedServiceName);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder policy(@Nullable Input<ActivityPolicyArgs> policy) {
+        public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable ActivityPolicyArgs policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
 
-        public Builder referenceObjects(@Nullable Input<CustomActivityReferenceObjectArgs> referenceObjects) {
+        public Builder referenceObjects(@Nullable Output<CustomActivityReferenceObjectArgs> referenceObjects) {
             this.referenceObjects = referenceObjects;
             return this;
         }
 
         public Builder referenceObjects(@Nullable CustomActivityReferenceObjectArgs referenceObjects) {
-            this.referenceObjects = Input.ofNullable(referenceObjects);
+            this.referenceObjects = Output.ofNullable(referenceObjects);
             return this;
         }
 
-        public Builder resourceLinkedService(@Nullable Input<LinkedServiceReferenceArgs> resourceLinkedService) {
+        public Builder resourceLinkedService(@Nullable Output<LinkedServiceReferenceArgs> resourceLinkedService) {
             this.resourceLinkedService = resourceLinkedService;
             return this;
         }
 
         public Builder resourceLinkedService(@Nullable LinkedServiceReferenceArgs resourceLinkedService) {
-            this.resourceLinkedService = Input.ofNullable(resourceLinkedService);
+            this.resourceLinkedService = Output.ofNullable(resourceLinkedService);
             return this;
         }
 
-        public Builder retentionTimeInDays(@Nullable Input<Object> retentionTimeInDays) {
+        public Builder retentionTimeInDays(@Nullable Output<Object> retentionTimeInDays) {
             this.retentionTimeInDays = retentionTimeInDays;
             return this;
         }
 
         public Builder retentionTimeInDays(@Nullable Object retentionTimeInDays) {
-            this.retentionTimeInDays = Input.ofNullable(retentionTimeInDays);
+            this.retentionTimeInDays = Output.ofNullable(retentionTimeInDays);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder userProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
+        public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
 
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Input.ofNullable(userProperties);
+            this.userProperties = Output.ofNullable(userProperties);
             return this;
         }
         public CustomActivityArgs build() {

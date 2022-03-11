@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.tags;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class TagKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class TagKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent", required=true)
-      private final Input<String> parent;
+      private final Output<String> parent;
 
-    public Input<String> getParent() {
+    public Output<String> getParent() {
         return this.parent;
     }
 
@@ -42,25 +42,25 @@ public final class TagKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shortName", required=true)
-      private final Input<String> shortName;
+      private final Output<String> shortName;
 
-    public Input<String> getShortName() {
+    public Output<String> getShortName() {
         return this.shortName;
     }
 
     public TagKeyArgs(
-        @Nullable Input<String> description,
-        Input<String> parent,
-        Input<String> shortName) {
+        @Nullable Output<String> description,
+        Output<String> parent,
+        Output<String> shortName) {
         this.description = description;
         this.parent = Objects.requireNonNull(parent, "expected parameter 'parent' to be non-null");
         this.shortName = Objects.requireNonNull(shortName, "expected parameter 'shortName' to be non-null");
     }
 
     private TagKeyArgs() {
-        this.description = Input.empty();
-        this.parent = Input.empty();
-        this.shortName = Input.empty();
+        this.description = Output.empty();
+        this.parent = Output.empty();
+        this.shortName = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class TagKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> parent;
-        private Input<String> shortName;
+        private @Nullable Output<String> description;
+        private Output<String> parent;
+        private Output<String> shortName;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class TagKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.shortName = defaults.shortName;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder parent(Input<String> parent) {
+        public Builder parent(Output<String> parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
 
         public Builder parent(String parent) {
-            this.parent = Input.of(Objects.requireNonNull(parent));
+            this.parent = Output.of(Objects.requireNonNull(parent));
             return this;
         }
 
-        public Builder shortName(Input<String> shortName) {
+        public Builder shortName(Output<String> shortName) {
             this.shortName = Objects.requireNonNull(shortName);
             return this;
         }
 
         public Builder shortName(String shortName) {
-            this.shortName = Input.of(Objects.requireNonNull(shortName));
+            this.shortName = Output.of(Objects.requireNonNull(shortName));
             return this;
         }
         public TagKeyArgs build() {

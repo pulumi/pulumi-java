@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.MonitoringSubscriptionMonitoringSubscriptionGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class MonitoringSubscriptionState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="distributionId")
-      private final @Nullable Input<String> distributionId;
+      private final @Nullable Output<String> distributionId;
 
-    public Input<String> getDistributionId() {
-        return this.distributionId == null ? Input.empty() : this.distributionId;
+    public Output<String> getDistributionId() {
+        return this.distributionId == null ? Output.empty() : this.distributionId;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class MonitoringSubscriptionState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="monitoringSubscription")
-      private final @Nullable Input<MonitoringSubscriptionMonitoringSubscriptionGetArgs> monitoringSubscription;
+      private final @Nullable Output<MonitoringSubscriptionMonitoringSubscriptionGetArgs> monitoringSubscription;
 
-    public Input<MonitoringSubscriptionMonitoringSubscriptionGetArgs> getMonitoringSubscription() {
-        return this.monitoringSubscription == null ? Input.empty() : this.monitoringSubscription;
+    public Output<MonitoringSubscriptionMonitoringSubscriptionGetArgs> getMonitoringSubscription() {
+        return this.monitoringSubscription == null ? Output.empty() : this.monitoringSubscription;
     }
 
     public MonitoringSubscriptionState(
-        @Nullable Input<String> distributionId,
-        @Nullable Input<MonitoringSubscriptionMonitoringSubscriptionGetArgs> monitoringSubscription) {
+        @Nullable Output<String> distributionId,
+        @Nullable Output<MonitoringSubscriptionMonitoringSubscriptionGetArgs> monitoringSubscription) {
         this.distributionId = distributionId;
         this.monitoringSubscription = monitoringSubscription;
     }
 
     private MonitoringSubscriptionState() {
-        this.distributionId = Input.empty();
-        this.monitoringSubscription = Input.empty();
+        this.distributionId = Output.empty();
+        this.monitoringSubscription = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class MonitoringSubscriptionState extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> distributionId;
-        private @Nullable Input<MonitoringSubscriptionMonitoringSubscriptionGetArgs> monitoringSubscription;
+        private @Nullable Output<String> distributionId;
+        private @Nullable Output<MonitoringSubscriptionMonitoringSubscriptionGetArgs> monitoringSubscription;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class MonitoringSubscriptionState extends io.pulumi.resources.Resou
     	      this.monitoringSubscription = defaults.monitoringSubscription;
         }
 
-        public Builder distributionId(@Nullable Input<String> distributionId) {
+        public Builder distributionId(@Nullable Output<String> distributionId) {
             this.distributionId = distributionId;
             return this;
         }
 
         public Builder distributionId(@Nullable String distributionId) {
-            this.distributionId = Input.ofNullable(distributionId);
+            this.distributionId = Output.ofNullable(distributionId);
             return this;
         }
 
-        public Builder monitoringSubscription(@Nullable Input<MonitoringSubscriptionMonitoringSubscriptionGetArgs> monitoringSubscription) {
+        public Builder monitoringSubscription(@Nullable Output<MonitoringSubscriptionMonitoringSubscriptionGetArgs> monitoringSubscription) {
             this.monitoringSubscription = monitoringSubscription;
             return this;
         }
 
         public Builder monitoringSubscription(@Nullable MonitoringSubscriptionMonitoringSubscriptionGetArgs monitoringSubscription) {
-            this.monitoringSubscription = Input.ofNullable(monitoringSubscription);
+            this.monitoringSubscription = Output.ofNullable(monitoringSubscription);
             return this;
         }
         public MonitoringSubscriptionState build() {

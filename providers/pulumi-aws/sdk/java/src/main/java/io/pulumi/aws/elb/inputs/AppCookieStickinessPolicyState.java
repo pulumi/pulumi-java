@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elb.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class AppCookieStickinessPolicyState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="cookieName")
-      private final @Nullable Input<String> cookieName;
+      private final @Nullable Output<String> cookieName;
 
-    public Input<String> getCookieName() {
-        return this.cookieName == null ? Input.empty() : this.cookieName;
+    public Output<String> getCookieName() {
+        return this.cookieName == null ? Output.empty() : this.cookieName;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class AppCookieStickinessPolicyState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="lbPort")
-      private final @Nullable Input<Integer> lbPort;
+      private final @Nullable Output<Integer> lbPort;
 
-    public Input<Integer> getLbPort() {
-        return this.lbPort == null ? Input.empty() : this.lbPort;
+    public Output<Integer> getLbPort() {
+        return this.lbPort == null ? Output.empty() : this.lbPort;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class AppCookieStickinessPolicyState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="loadBalancer")
-      private final @Nullable Input<String> loadBalancer;
+      private final @Nullable Output<String> loadBalancer;
 
-    public Input<String> getLoadBalancer() {
-        return this.loadBalancer == null ? Input.empty() : this.loadBalancer;
+    public Output<String> getLoadBalancer() {
+        return this.loadBalancer == null ? Output.empty() : this.loadBalancer;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class AppCookieStickinessPolicyState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public AppCookieStickinessPolicyState(
-        @Nullable Input<String> cookieName,
-        @Nullable Input<Integer> lbPort,
-        @Nullable Input<String> loadBalancer,
-        @Nullable Input<String> name) {
+        @Nullable Output<String> cookieName,
+        @Nullable Output<Integer> lbPort,
+        @Nullable Output<String> loadBalancer,
+        @Nullable Output<String> name) {
         this.cookieName = cookieName;
         this.lbPort = lbPort;
         this.loadBalancer = loadBalancer;
@@ -74,10 +74,10 @@ public final class AppCookieStickinessPolicyState extends io.pulumi.resources.Re
     }
 
     private AppCookieStickinessPolicyState() {
-        this.cookieName = Input.empty();
-        this.lbPort = Input.empty();
-        this.loadBalancer = Input.empty();
-        this.name = Input.empty();
+        this.cookieName = Output.empty();
+        this.lbPort = Output.empty();
+        this.loadBalancer = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class AppCookieStickinessPolicyState extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> cookieName;
-        private @Nullable Input<Integer> lbPort;
-        private @Nullable Input<String> loadBalancer;
-        private @Nullable Input<String> name;
+        private @Nullable Output<String> cookieName;
+        private @Nullable Output<Integer> lbPort;
+        private @Nullable Output<String> loadBalancer;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class AppCookieStickinessPolicyState extends io.pulumi.resources.Re
     	      this.name = defaults.name;
         }
 
-        public Builder cookieName(@Nullable Input<String> cookieName) {
+        public Builder cookieName(@Nullable Output<String> cookieName) {
             this.cookieName = cookieName;
             return this;
         }
 
         public Builder cookieName(@Nullable String cookieName) {
-            this.cookieName = Input.ofNullable(cookieName);
+            this.cookieName = Output.ofNullable(cookieName);
             return this;
         }
 
-        public Builder lbPort(@Nullable Input<Integer> lbPort) {
+        public Builder lbPort(@Nullable Output<Integer> lbPort) {
             this.lbPort = lbPort;
             return this;
         }
 
         public Builder lbPort(@Nullable Integer lbPort) {
-            this.lbPort = Input.ofNullable(lbPort);
+            this.lbPort = Output.ofNullable(lbPort);
             return this;
         }
 
-        public Builder loadBalancer(@Nullable Input<String> loadBalancer) {
+        public Builder loadBalancer(@Nullable Output<String> loadBalancer) {
             this.loadBalancer = loadBalancer;
             return this;
         }
 
         public Builder loadBalancer(@Nullable String loadBalancer) {
-            this.loadBalancer = Input.ofNullable(loadBalancer);
+            this.loadBalancer = Output.ofNullable(loadBalancer);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public AppCookieStickinessPolicyState build() {

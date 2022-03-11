@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v2beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class ResourceMetricSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -35,10 +35,10 @@ public final class ResourceMetricSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="targetAverageUtilization")
-      private final @Nullable Input<Integer> targetAverageUtilization;
+      private final @Nullable Output<Integer> targetAverageUtilization;
 
-    public Input<Integer> getTargetAverageUtilization() {
-        return this.targetAverageUtilization == null ? Input.empty() : this.targetAverageUtilization;
+    public Output<Integer> getTargetAverageUtilization() {
+        return this.targetAverageUtilization == null ? Output.empty() : this.targetAverageUtilization;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class ResourceMetricSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="targetAverageValue")
-      private final @Nullable Input<String> targetAverageValue;
+      private final @Nullable Output<String> targetAverageValue;
 
-    public Input<String> getTargetAverageValue() {
-        return this.targetAverageValue == null ? Input.empty() : this.targetAverageValue;
+    public Output<String> getTargetAverageValue() {
+        return this.targetAverageValue == null ? Output.empty() : this.targetAverageValue;
     }
 
     public ResourceMetricSourceArgs(
-        Input<String> name,
-        @Nullable Input<Integer> targetAverageUtilization,
-        @Nullable Input<String> targetAverageValue) {
+        Output<String> name,
+        @Nullable Output<Integer> targetAverageUtilization,
+        @Nullable Output<String> targetAverageValue) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.targetAverageUtilization = targetAverageUtilization;
         this.targetAverageValue = targetAverageValue;
     }
 
     private ResourceMetricSourceArgs() {
-        this.name = Input.empty();
-        this.targetAverageUtilization = Input.empty();
-        this.targetAverageValue = Input.empty();
+        this.name = Output.empty();
+        this.targetAverageUtilization = Output.empty();
+        this.targetAverageValue = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class ResourceMetricSourceArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private @Nullable Input<Integer> targetAverageUtilization;
-        private @Nullable Input<String> targetAverageValue;
+        private Output<String> name;
+        private @Nullable Output<Integer> targetAverageUtilization;
+        private @Nullable Output<String> targetAverageValue;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class ResourceMetricSourceArgs extends io.pulumi.resources.Resource
     	      this.targetAverageValue = defaults.targetAverageValue;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder targetAverageUtilization(@Nullable Input<Integer> targetAverageUtilization) {
+        public Builder targetAverageUtilization(@Nullable Output<Integer> targetAverageUtilization) {
             this.targetAverageUtilization = targetAverageUtilization;
             return this;
         }
 
         public Builder targetAverageUtilization(@Nullable Integer targetAverageUtilization) {
-            this.targetAverageUtilization = Input.ofNullable(targetAverageUtilization);
+            this.targetAverageUtilization = Output.ofNullable(targetAverageUtilization);
             return this;
         }
 
-        public Builder targetAverageValue(@Nullable Input<String> targetAverageValue) {
+        public Builder targetAverageValue(@Nullable Output<String> targetAverageValue) {
             this.targetAverageValue = targetAverageValue;
             return this;
         }
 
         public Builder targetAverageValue(@Nullable String targetAverageValue) {
-            this.targetAverageValue = Input.ofNullable(targetAverageValue);
+            this.targetAverageValue = Output.ofNullable(targetAverageValue);
             return this;
         }
         public ResourceMetricSourceArgs build() {

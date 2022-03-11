@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.iotsecurity;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class DeviceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceGroupName")
-      private final @Nullable Input<String> deviceGroupName;
+      private final @Nullable Output<String> deviceGroupName;
 
-    public Input<String> getDeviceGroupName() {
-        return this.deviceGroupName == null ? Input.empty() : this.deviceGroupName;
+    public Output<String> getDeviceGroupName() {
+        return this.deviceGroupName == null ? Output.empty() : this.deviceGroupName;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class DeviceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iotDefenderLocation", required=true)
-      private final Input<String> iotDefenderLocation;
+      private final Output<String> iotDefenderLocation;
 
-    public Input<String> getIotDefenderLocation() {
+    public Output<String> getIotDefenderLocation() {
         return this.iotDefenderLocation;
     }
 
     public DeviceGroupArgs(
-        @Nullable Input<String> deviceGroupName,
-        Input<String> iotDefenderLocation) {
+        @Nullable Output<String> deviceGroupName,
+        Output<String> iotDefenderLocation) {
         this.deviceGroupName = deviceGroupName;
         this.iotDefenderLocation = Objects.requireNonNull(iotDefenderLocation, "expected parameter 'iotDefenderLocation' to be non-null");
     }
 
     private DeviceGroupArgs() {
-        this.deviceGroupName = Input.empty();
-        this.iotDefenderLocation = Input.empty();
+        this.deviceGroupName = Output.empty();
+        this.iotDefenderLocation = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class DeviceGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> deviceGroupName;
-        private Input<String> iotDefenderLocation;
+        private @Nullable Output<String> deviceGroupName;
+        private Output<String> iotDefenderLocation;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class DeviceGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.iotDefenderLocation = defaults.iotDefenderLocation;
         }
 
-        public Builder deviceGroupName(@Nullable Input<String> deviceGroupName) {
+        public Builder deviceGroupName(@Nullable Output<String> deviceGroupName) {
             this.deviceGroupName = deviceGroupName;
             return this;
         }
 
         public Builder deviceGroupName(@Nullable String deviceGroupName) {
-            this.deviceGroupName = Input.ofNullable(deviceGroupName);
+            this.deviceGroupName = Output.ofNullable(deviceGroupName);
             return this;
         }
 
-        public Builder iotDefenderLocation(Input<String> iotDefenderLocation) {
+        public Builder iotDefenderLocation(Output<String> iotDefenderLocation) {
             this.iotDefenderLocation = Objects.requireNonNull(iotDefenderLocation);
             return this;
         }
 
         public Builder iotDefenderLocation(String iotDefenderLocation) {
-            this.iotDefenderLocation = Input.of(Objects.requireNonNull(iotDefenderLocation));
+            this.iotDefenderLocation = Output.of(Objects.requireNonNull(iotDefenderLocation));
             return this;
         }
         public DeviceGroupArgs build() {

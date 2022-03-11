@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class InstanceFailoverReplicaArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="available")
-      private final @Nullable Input<Boolean> available;
+      private final @Nullable Output<Boolean> available;
 
-    public Input<Boolean> getAvailable() {
-        return this.available == null ? Input.empty() : this.available;
+    public Output<Boolean> getAvailable() {
+        return this.available == null ? Output.empty() : this.available;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class InstanceFailoverReplicaArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public InstanceFailoverReplicaArgs(
-        @Nullable Input<Boolean> available,
-        @Nullable Input<String> name) {
+        @Nullable Output<Boolean> available,
+        @Nullable Output<String> name) {
         this.available = available;
         this.name = name;
     }
 
     private InstanceFailoverReplicaArgs() {
-        this.available = Input.empty();
-        this.name = Input.empty();
+        this.available = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class InstanceFailoverReplicaArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> available;
-        private @Nullable Input<String> name;
+        private @Nullable Output<Boolean> available;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class InstanceFailoverReplicaArgs extends io.pulumi.resources.Resou
     	      this.name = defaults.name;
         }
 
-        public Builder available(@Nullable Input<Boolean> available) {
+        public Builder available(@Nullable Output<Boolean> available) {
             this.available = available;
             return this;
         }
 
         public Builder available(@Nullable Boolean available) {
-            this.available = Input.ofNullable(available);
+            this.available = Output.ofNullable(available);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public InstanceFailoverReplicaArgs build() {

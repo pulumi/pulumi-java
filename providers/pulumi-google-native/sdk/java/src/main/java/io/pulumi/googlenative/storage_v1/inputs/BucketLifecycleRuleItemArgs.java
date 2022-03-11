@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.storage_v1.inputs.BucketLifecycleRuleItemActionArgs;
 import io.pulumi.googlenative.storage_v1.inputs.BucketLifecycleRuleItemConditionArgs;
@@ -20,10 +20,10 @@ public final class BucketLifecycleRuleItemArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="action")
-      private final @Nullable Input<BucketLifecycleRuleItemActionArgs> action;
+      private final @Nullable Output<BucketLifecycleRuleItemActionArgs> action;
 
-    public Input<BucketLifecycleRuleItemActionArgs> getAction() {
-        return this.action == null ? Input.empty() : this.action;
+    public Output<BucketLifecycleRuleItemActionArgs> getAction() {
+        return this.action == null ? Output.empty() : this.action;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class BucketLifecycleRuleItemArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="condition")
-      private final @Nullable Input<BucketLifecycleRuleItemConditionArgs> condition;
+      private final @Nullable Output<BucketLifecycleRuleItemConditionArgs> condition;
 
-    public Input<BucketLifecycleRuleItemConditionArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<BucketLifecycleRuleItemConditionArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     public BucketLifecycleRuleItemArgs(
-        @Nullable Input<BucketLifecycleRuleItemActionArgs> action,
-        @Nullable Input<BucketLifecycleRuleItemConditionArgs> condition) {
+        @Nullable Output<BucketLifecycleRuleItemActionArgs> action,
+        @Nullable Output<BucketLifecycleRuleItemConditionArgs> condition) {
         this.action = action;
         this.condition = condition;
     }
 
     private BucketLifecycleRuleItemArgs() {
-        this.action = Input.empty();
-        this.condition = Input.empty();
+        this.action = Output.empty();
+        this.condition = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class BucketLifecycleRuleItemArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<BucketLifecycleRuleItemActionArgs> action;
-        private @Nullable Input<BucketLifecycleRuleItemConditionArgs> condition;
+        private @Nullable Output<BucketLifecycleRuleItemActionArgs> action;
+        private @Nullable Output<BucketLifecycleRuleItemConditionArgs> condition;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class BucketLifecycleRuleItemArgs extends io.pulumi.resources.Resou
     	      this.condition = defaults.condition;
         }
 
-        public Builder action(@Nullable Input<BucketLifecycleRuleItemActionArgs> action) {
+        public Builder action(@Nullable Output<BucketLifecycleRuleItemActionArgs> action) {
             this.action = action;
             return this;
         }
 
         public Builder action(@Nullable BucketLifecycleRuleItemActionArgs action) {
-            this.action = Input.ofNullable(action);
+            this.action = Output.ofNullable(action);
             return this;
         }
 
-        public Builder condition(@Nullable Input<BucketLifecycleRuleItemConditionArgs> condition) {
+        public Builder condition(@Nullable Output<BucketLifecycleRuleItemConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable BucketLifecycleRuleItemConditionArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
         public BucketLifecycleRuleItemArgs build() {

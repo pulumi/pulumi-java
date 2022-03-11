@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class MainRouteTableAssociationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="routeTableId", required=true)
-      private final Input<String> routeTableId;
+      private final Output<String> routeTableId;
 
-    public Input<String> getRouteTableId() {
+    public Output<String> getRouteTableId() {
         return this.routeTableId;
     }
 
@@ -30,22 +30,22 @@ public final class MainRouteTableAssociationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="vpcId", required=true)
-      private final Input<String> vpcId;
+      private final Output<String> vpcId;
 
-    public Input<String> getVpcId() {
+    public Output<String> getVpcId() {
         return this.vpcId;
     }
 
     public MainRouteTableAssociationArgs(
-        Input<String> routeTableId,
-        Input<String> vpcId) {
+        Output<String> routeTableId,
+        Output<String> vpcId) {
         this.routeTableId = Objects.requireNonNull(routeTableId, "expected parameter 'routeTableId' to be non-null");
         this.vpcId = Objects.requireNonNull(vpcId, "expected parameter 'vpcId' to be non-null");
     }
 
     private MainRouteTableAssociationArgs() {
-        this.routeTableId = Input.empty();
-        this.vpcId = Input.empty();
+        this.routeTableId = Output.empty();
+        this.vpcId = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class MainRouteTableAssociationArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> routeTableId;
-        private Input<String> vpcId;
+        private Output<String> routeTableId;
+        private Output<String> vpcId;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class MainRouteTableAssociationArgs extends io.pulumi.resources.Res
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder routeTableId(Input<String> routeTableId) {
+        public Builder routeTableId(Output<String> routeTableId) {
             this.routeTableId = Objects.requireNonNull(routeTableId);
             return this;
         }
 
         public Builder routeTableId(String routeTableId) {
-            this.routeTableId = Input.of(Objects.requireNonNull(routeTableId));
+            this.routeTableId = Output.of(Objects.requireNonNull(routeTableId));
             return this;
         }
 
-        public Builder vpcId(Input<String> vpcId) {
+        public Builder vpcId(Output<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
 
         public Builder vpcId(String vpcId) {
-            this.vpcId = Input.of(Objects.requireNonNull(vpcId));
+            this.vpcId = Output.of(Objects.requireNonNull(vpcId));
             return this;
         }
         public MainRouteTableAssociationArgs build() {

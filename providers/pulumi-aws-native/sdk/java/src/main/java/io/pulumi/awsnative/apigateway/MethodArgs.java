@@ -6,7 +6,7 @@ package io.pulumi.awsnative.apigateway;
 import io.pulumi.awsnative.apigateway.enums.MethodAuthorizationType;
 import io.pulumi.awsnative.apigateway.inputs.MethodIntegrationArgs;
 import io.pulumi.awsnative.apigateway.inputs.MethodResponseArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Object;
@@ -25,10 +25,10 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiKeyRequired")
-      private final @Nullable Input<Boolean> apiKeyRequired;
+      private final @Nullable Output<Boolean> apiKeyRequired;
 
-    public Input<Boolean> getApiKeyRequired() {
-        return this.apiKeyRequired == null ? Input.empty() : this.apiKeyRequired;
+    public Output<Boolean> getApiKeyRequired() {
+        return this.apiKeyRequired == null ? Output.empty() : this.apiKeyRequired;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizationScopes")
-      private final @Nullable Input<List<String>> authorizationScopes;
+      private final @Nullable Output<List<String>> authorizationScopes;
 
-    public Input<List<String>> getAuthorizationScopes() {
-        return this.authorizationScopes == null ? Input.empty() : this.authorizationScopes;
+    public Output<List<String>> getAuthorizationScopes() {
+        return this.authorizationScopes == null ? Output.empty() : this.authorizationScopes;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizationType")
-      private final @Nullable Input<MethodAuthorizationType> authorizationType;
+      private final @Nullable Output<MethodAuthorizationType> authorizationType;
 
-    public Input<MethodAuthorizationType> getAuthorizationType() {
-        return this.authorizationType == null ? Input.empty() : this.authorizationType;
+    public Output<MethodAuthorizationType> getAuthorizationType() {
+        return this.authorizationType == null ? Output.empty() : this.authorizationType;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizerId")
-      private final @Nullable Input<String> authorizerId;
+      private final @Nullable Output<String> authorizerId;
 
-    public Input<String> getAuthorizerId() {
-        return this.authorizerId == null ? Input.empty() : this.authorizerId;
+    public Output<String> getAuthorizerId() {
+        return this.authorizerId == null ? Output.empty() : this.authorizerId;
     }
 
     /**
@@ -69,9 +69,9 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpMethod", required=true)
-      private final Input<String> httpMethod;
+      private final Output<String> httpMethod;
 
-    public Input<String> getHttpMethod() {
+    public Output<String> getHttpMethod() {
         return this.httpMethod;
     }
 
@@ -80,10 +80,10 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="integration")
-      private final @Nullable Input<MethodIntegrationArgs> integration;
+      private final @Nullable Output<MethodIntegrationArgs> integration;
 
-    public Input<MethodIntegrationArgs> getIntegration() {
-        return this.integration == null ? Input.empty() : this.integration;
+    public Output<MethodIntegrationArgs> getIntegration() {
+        return this.integration == null ? Output.empty() : this.integration;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="methodResponses")
-      private final @Nullable Input<List<MethodResponseArgs>> methodResponses;
+      private final @Nullable Output<List<MethodResponseArgs>> methodResponses;
 
-    public Input<List<MethodResponseArgs>> getMethodResponses() {
-        return this.methodResponses == null ? Input.empty() : this.methodResponses;
+    public Output<List<MethodResponseArgs>> getMethodResponses() {
+        return this.methodResponses == null ? Output.empty() : this.methodResponses;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operationName")
-      private final @Nullable Input<String> operationName;
+      private final @Nullable Output<String> operationName;
 
-    public Input<String> getOperationName() {
-        return this.operationName == null ? Input.empty() : this.operationName;
+    public Output<String> getOperationName() {
+        return this.operationName == null ? Output.empty() : this.operationName;
     }
 
     /**
@@ -113,10 +113,10 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestModels")
-      private final @Nullable Input<Object> requestModels;
+      private final @Nullable Output<Object> requestModels;
 
-    public Input<Object> getRequestModels() {
-        return this.requestModels == null ? Input.empty() : this.requestModels;
+    public Output<Object> getRequestModels() {
+        return this.requestModels == null ? Output.empty() : this.requestModels;
     }
 
     /**
@@ -124,10 +124,10 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestParameters")
-      private final @Nullable Input<Object> requestParameters;
+      private final @Nullable Output<Object> requestParameters;
 
-    public Input<Object> getRequestParameters() {
-        return this.requestParameters == null ? Input.empty() : this.requestParameters;
+    public Output<Object> getRequestParameters() {
+        return this.requestParameters == null ? Output.empty() : this.requestParameters;
     }
 
     /**
@@ -135,10 +135,10 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestValidatorId")
-      private final @Nullable Input<String> requestValidatorId;
+      private final @Nullable Output<String> requestValidatorId;
 
-    public Input<String> getRequestValidatorId() {
-        return this.requestValidatorId == null ? Input.empty() : this.requestValidatorId;
+    public Output<String> getRequestValidatorId() {
+        return this.requestValidatorId == null ? Output.empty() : this.requestValidatorId;
     }
 
     /**
@@ -146,9 +146,9 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceId", required=true)
-      private final Input<String> resourceId;
+      private final Output<String> resourceId;
 
-    public Input<String> getResourceId() {
+    public Output<String> getResourceId() {
         return this.resourceId;
     }
 
@@ -157,26 +157,26 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restApiId", required=true)
-      private final Input<String> restApiId;
+      private final Output<String> restApiId;
 
-    public Input<String> getRestApiId() {
+    public Output<String> getRestApiId() {
         return this.restApiId;
     }
 
     public MethodArgs(
-        @Nullable Input<Boolean> apiKeyRequired,
-        @Nullable Input<List<String>> authorizationScopes,
-        @Nullable Input<MethodAuthorizationType> authorizationType,
-        @Nullable Input<String> authorizerId,
-        Input<String> httpMethod,
-        @Nullable Input<MethodIntegrationArgs> integration,
-        @Nullable Input<List<MethodResponseArgs>> methodResponses,
-        @Nullable Input<String> operationName,
-        @Nullable Input<Object> requestModels,
-        @Nullable Input<Object> requestParameters,
-        @Nullable Input<String> requestValidatorId,
-        Input<String> resourceId,
-        Input<String> restApiId) {
+        @Nullable Output<Boolean> apiKeyRequired,
+        @Nullable Output<List<String>> authorizationScopes,
+        @Nullable Output<MethodAuthorizationType> authorizationType,
+        @Nullable Output<String> authorizerId,
+        Output<String> httpMethod,
+        @Nullable Output<MethodIntegrationArgs> integration,
+        @Nullable Output<List<MethodResponseArgs>> methodResponses,
+        @Nullable Output<String> operationName,
+        @Nullable Output<Object> requestModels,
+        @Nullable Output<Object> requestParameters,
+        @Nullable Output<String> requestValidatorId,
+        Output<String> resourceId,
+        Output<String> restApiId) {
         this.apiKeyRequired = apiKeyRequired;
         this.authorizationScopes = authorizationScopes;
         this.authorizationType = authorizationType;
@@ -193,19 +193,19 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MethodArgs() {
-        this.apiKeyRequired = Input.empty();
-        this.authorizationScopes = Input.empty();
-        this.authorizationType = Input.empty();
-        this.authorizerId = Input.empty();
-        this.httpMethod = Input.empty();
-        this.integration = Input.empty();
-        this.methodResponses = Input.empty();
-        this.operationName = Input.empty();
-        this.requestModels = Input.empty();
-        this.requestParameters = Input.empty();
-        this.requestValidatorId = Input.empty();
-        this.resourceId = Input.empty();
-        this.restApiId = Input.empty();
+        this.apiKeyRequired = Output.empty();
+        this.authorizationScopes = Output.empty();
+        this.authorizationType = Output.empty();
+        this.authorizerId = Output.empty();
+        this.httpMethod = Output.empty();
+        this.integration = Output.empty();
+        this.methodResponses = Output.empty();
+        this.operationName = Output.empty();
+        this.requestModels = Output.empty();
+        this.requestParameters = Output.empty();
+        this.requestValidatorId = Output.empty();
+        this.resourceId = Output.empty();
+        this.restApiId = Output.empty();
     }
 
     public static Builder builder() {
@@ -217,19 +217,19 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> apiKeyRequired;
-        private @Nullable Input<List<String>> authorizationScopes;
-        private @Nullable Input<MethodAuthorizationType> authorizationType;
-        private @Nullable Input<String> authorizerId;
-        private Input<String> httpMethod;
-        private @Nullable Input<MethodIntegrationArgs> integration;
-        private @Nullable Input<List<MethodResponseArgs>> methodResponses;
-        private @Nullable Input<String> operationName;
-        private @Nullable Input<Object> requestModels;
-        private @Nullable Input<Object> requestParameters;
-        private @Nullable Input<String> requestValidatorId;
-        private Input<String> resourceId;
-        private Input<String> restApiId;
+        private @Nullable Output<Boolean> apiKeyRequired;
+        private @Nullable Output<List<String>> authorizationScopes;
+        private @Nullable Output<MethodAuthorizationType> authorizationType;
+        private @Nullable Output<String> authorizerId;
+        private Output<String> httpMethod;
+        private @Nullable Output<MethodIntegrationArgs> integration;
+        private @Nullable Output<List<MethodResponseArgs>> methodResponses;
+        private @Nullable Output<String> operationName;
+        private @Nullable Output<Object> requestModels;
+        private @Nullable Output<Object> requestParameters;
+        private @Nullable Output<String> requestValidatorId;
+        private Output<String> resourceId;
+        private Output<String> restApiId;
 
         public Builder() {
     	      // Empty
@@ -252,133 +252,133 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
     	      this.restApiId = defaults.restApiId;
         }
 
-        public Builder apiKeyRequired(@Nullable Input<Boolean> apiKeyRequired) {
+        public Builder apiKeyRequired(@Nullable Output<Boolean> apiKeyRequired) {
             this.apiKeyRequired = apiKeyRequired;
             return this;
         }
 
         public Builder apiKeyRequired(@Nullable Boolean apiKeyRequired) {
-            this.apiKeyRequired = Input.ofNullable(apiKeyRequired);
+            this.apiKeyRequired = Output.ofNullable(apiKeyRequired);
             return this;
         }
 
-        public Builder authorizationScopes(@Nullable Input<List<String>> authorizationScopes) {
+        public Builder authorizationScopes(@Nullable Output<List<String>> authorizationScopes) {
             this.authorizationScopes = authorizationScopes;
             return this;
         }
 
         public Builder authorizationScopes(@Nullable List<String> authorizationScopes) {
-            this.authorizationScopes = Input.ofNullable(authorizationScopes);
+            this.authorizationScopes = Output.ofNullable(authorizationScopes);
             return this;
         }
 
-        public Builder authorizationType(@Nullable Input<MethodAuthorizationType> authorizationType) {
+        public Builder authorizationType(@Nullable Output<MethodAuthorizationType> authorizationType) {
             this.authorizationType = authorizationType;
             return this;
         }
 
         public Builder authorizationType(@Nullable MethodAuthorizationType authorizationType) {
-            this.authorizationType = Input.ofNullable(authorizationType);
+            this.authorizationType = Output.ofNullable(authorizationType);
             return this;
         }
 
-        public Builder authorizerId(@Nullable Input<String> authorizerId) {
+        public Builder authorizerId(@Nullable Output<String> authorizerId) {
             this.authorizerId = authorizerId;
             return this;
         }
 
         public Builder authorizerId(@Nullable String authorizerId) {
-            this.authorizerId = Input.ofNullable(authorizerId);
+            this.authorizerId = Output.ofNullable(authorizerId);
             return this;
         }
 
-        public Builder httpMethod(Input<String> httpMethod) {
+        public Builder httpMethod(Output<String> httpMethod) {
             this.httpMethod = Objects.requireNonNull(httpMethod);
             return this;
         }
 
         public Builder httpMethod(String httpMethod) {
-            this.httpMethod = Input.of(Objects.requireNonNull(httpMethod));
+            this.httpMethod = Output.of(Objects.requireNonNull(httpMethod));
             return this;
         }
 
-        public Builder integration(@Nullable Input<MethodIntegrationArgs> integration) {
+        public Builder integration(@Nullable Output<MethodIntegrationArgs> integration) {
             this.integration = integration;
             return this;
         }
 
         public Builder integration(@Nullable MethodIntegrationArgs integration) {
-            this.integration = Input.ofNullable(integration);
+            this.integration = Output.ofNullable(integration);
             return this;
         }
 
-        public Builder methodResponses(@Nullable Input<List<MethodResponseArgs>> methodResponses) {
+        public Builder methodResponses(@Nullable Output<List<MethodResponseArgs>> methodResponses) {
             this.methodResponses = methodResponses;
             return this;
         }
 
         public Builder methodResponses(@Nullable List<MethodResponseArgs> methodResponses) {
-            this.methodResponses = Input.ofNullable(methodResponses);
+            this.methodResponses = Output.ofNullable(methodResponses);
             return this;
         }
 
-        public Builder operationName(@Nullable Input<String> operationName) {
+        public Builder operationName(@Nullable Output<String> operationName) {
             this.operationName = operationName;
             return this;
         }
 
         public Builder operationName(@Nullable String operationName) {
-            this.operationName = Input.ofNullable(operationName);
+            this.operationName = Output.ofNullable(operationName);
             return this;
         }
 
-        public Builder requestModels(@Nullable Input<Object> requestModels) {
+        public Builder requestModels(@Nullable Output<Object> requestModels) {
             this.requestModels = requestModels;
             return this;
         }
 
         public Builder requestModels(@Nullable Object requestModels) {
-            this.requestModels = Input.ofNullable(requestModels);
+            this.requestModels = Output.ofNullable(requestModels);
             return this;
         }
 
-        public Builder requestParameters(@Nullable Input<Object> requestParameters) {
+        public Builder requestParameters(@Nullable Output<Object> requestParameters) {
             this.requestParameters = requestParameters;
             return this;
         }
 
         public Builder requestParameters(@Nullable Object requestParameters) {
-            this.requestParameters = Input.ofNullable(requestParameters);
+            this.requestParameters = Output.ofNullable(requestParameters);
             return this;
         }
 
-        public Builder requestValidatorId(@Nullable Input<String> requestValidatorId) {
+        public Builder requestValidatorId(@Nullable Output<String> requestValidatorId) {
             this.requestValidatorId = requestValidatorId;
             return this;
         }
 
         public Builder requestValidatorId(@Nullable String requestValidatorId) {
-            this.requestValidatorId = Input.ofNullable(requestValidatorId);
+            this.requestValidatorId = Output.ofNullable(requestValidatorId);
             return this;
         }
 
-        public Builder resourceId(Input<String> resourceId) {
+        public Builder resourceId(Output<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
         public Builder resourceId(String resourceId) {
-            this.resourceId = Input.of(Objects.requireNonNull(resourceId));
+            this.resourceId = Output.of(Objects.requireNonNull(resourceId));
             return this;
         }
 
-        public Builder restApiId(Input<String> restApiId) {
+        public Builder restApiId(Output<String> restApiId) {
             this.restApiId = Objects.requireNonNull(restApiId);
             return this;
         }
 
         public Builder restApiId(String restApiId) {
-            this.restApiId = Input.of(Objects.requireNonNull(restApiId));
+            this.restApiId = Output.of(Objects.requireNonNull(restApiId));
             return this;
         }
         public MethodArgs build() {

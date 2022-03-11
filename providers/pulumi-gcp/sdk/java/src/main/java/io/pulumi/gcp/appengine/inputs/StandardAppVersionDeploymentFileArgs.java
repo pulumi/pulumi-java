@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class StandardAppVersionDeploymentFileArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -30,10 +30,10 @@ public final class StandardAppVersionDeploymentFileArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="sha1Sum")
-      private final @Nullable Input<String> sha1Sum;
+      private final @Nullable Output<String> sha1Sum;
 
-    public Input<String> getSha1Sum() {
-        return this.sha1Sum == null ? Input.empty() : this.sha1Sum;
+    public Output<String> getSha1Sum() {
+        return this.sha1Sum == null ? Output.empty() : this.sha1Sum;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class StandardAppVersionDeploymentFileArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="sourceUrl", required=true)
-      private final Input<String> sourceUrl;
+      private final Output<String> sourceUrl;
 
-    public Input<String> getSourceUrl() {
+    public Output<String> getSourceUrl() {
         return this.sourceUrl;
     }
 
     public StandardAppVersionDeploymentFileArgs(
-        Input<String> name,
-        @Nullable Input<String> sha1Sum,
-        Input<String> sourceUrl) {
+        Output<String> name,
+        @Nullable Output<String> sha1Sum,
+        Output<String> sourceUrl) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.sha1Sum = sha1Sum;
         this.sourceUrl = Objects.requireNonNull(sourceUrl, "expected parameter 'sourceUrl' to be non-null");
     }
 
     private StandardAppVersionDeploymentFileArgs() {
-        this.name = Input.empty();
-        this.sha1Sum = Input.empty();
-        this.sourceUrl = Input.empty();
+        this.name = Output.empty();
+        this.sha1Sum = Output.empty();
+        this.sourceUrl = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class StandardAppVersionDeploymentFileArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private @Nullable Input<String> sha1Sum;
-        private Input<String> sourceUrl;
+        private Output<String> name;
+        private @Nullable Output<String> sha1Sum;
+        private Output<String> sourceUrl;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class StandardAppVersionDeploymentFileArgs extends io.pulumi.resour
     	      this.sourceUrl = defaults.sourceUrl;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder sha1Sum(@Nullable Input<String> sha1Sum) {
+        public Builder sha1Sum(@Nullable Output<String> sha1Sum) {
             this.sha1Sum = sha1Sum;
             return this;
         }
 
         public Builder sha1Sum(@Nullable String sha1Sum) {
-            this.sha1Sum = Input.ofNullable(sha1Sum);
+            this.sha1Sum = Output.ofNullable(sha1Sum);
             return this;
         }
 
-        public Builder sourceUrl(Input<String> sourceUrl) {
+        public Builder sourceUrl(Output<String> sourceUrl) {
             this.sourceUrl = Objects.requireNonNull(sourceUrl);
             return this;
         }
 
         public Builder sourceUrl(String sourceUrl) {
-            this.sourceUrl = Input.of(Objects.requireNonNull(sourceUrl));
+            this.sourceUrl = Output.of(Objects.requireNonNull(sourceUrl));
             return this;
         }
         public StandardAppVersionDeploymentFileArgs build() {

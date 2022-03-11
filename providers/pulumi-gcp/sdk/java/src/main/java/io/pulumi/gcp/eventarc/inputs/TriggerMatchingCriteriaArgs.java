@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.eventarc.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class TriggerMatchingCriteriaArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="attribute", required=true)
-      private final Input<String> attribute;
+      private final Output<String> attribute;
 
-    public Input<String> getAttribute() {
+    public Output<String> getAttribute() {
         return this.attribute;
     }
 
@@ -29,22 +29,22 @@ public final class TriggerMatchingCriteriaArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="value", required=true)
-      private final Input<String> value;
+      private final Output<String> value;
 
-    public Input<String> getValue() {
+    public Output<String> getValue() {
         return this.value;
     }
 
     public TriggerMatchingCriteriaArgs(
-        Input<String> attribute,
-        Input<String> value) {
+        Output<String> attribute,
+        Output<String> value) {
         this.attribute = Objects.requireNonNull(attribute, "expected parameter 'attribute' to be non-null");
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private TriggerMatchingCriteriaArgs() {
-        this.attribute = Input.empty();
-        this.value = Input.empty();
+        this.attribute = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class TriggerMatchingCriteriaArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<String> attribute;
-        private Input<String> value;
+        private Output<String> attribute;
+        private Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class TriggerMatchingCriteriaArgs extends io.pulumi.resources.Resou
     	      this.value = defaults.value;
         }
 
-        public Builder attribute(Input<String> attribute) {
+        public Builder attribute(Output<String> attribute) {
             this.attribute = Objects.requireNonNull(attribute);
             return this;
         }
 
         public Builder attribute(String attribute) {
-            this.attribute = Input.of(Objects.requireNonNull(attribute));
+            this.attribute = Output.of(Objects.requireNonNull(attribute));
             return this;
         }
 
-        public Builder value(Input<String> value) {
+        public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(String value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public TriggerMatchingCriteriaArgs build() {

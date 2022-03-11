@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2beta1.enums.ConversationConversationStage;
 import java.lang.String;
@@ -16,10 +16,10 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
     public static final ConversationArgs Empty = new ConversationArgs();
 
     @InputImport(name="conversationId")
-      private final @Nullable Input<String> conversationId;
+      private final @Nullable Output<String> conversationId;
 
-    public Input<String> getConversationId() {
-        return this.conversationId == null ? Input.empty() : this.conversationId;
+    public Output<String> getConversationId() {
+        return this.conversationId == null ? Output.empty() : this.conversationId;
     }
 
     /**
@@ -27,9 +27,9 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conversationProfile", required=true)
-      private final Input<String> conversationProfile;
+      private final Output<String> conversationProfile;
 
-    public Input<String> getConversationProfile() {
+    public Output<String> getConversationProfile() {
         return this.conversationProfile;
     }
 
@@ -38,32 +38,32 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conversationStage")
-      private final @Nullable Input<ConversationConversationStage> conversationStage;
+      private final @Nullable Output<ConversationConversationStage> conversationStage;
 
-    public Input<ConversationConversationStage> getConversationStage() {
-        return this.conversationStage == null ? Input.empty() : this.conversationStage;
+    public Output<ConversationConversationStage> getConversationStage() {
+        return this.conversationStage == null ? Output.empty() : this.conversationStage;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public ConversationArgs(
-        @Nullable Input<String> conversationId,
-        Input<String> conversationProfile,
-        @Nullable Input<ConversationConversationStage> conversationStage,
-        @Nullable Input<String> location,
-        @Nullable Input<String> project) {
+        @Nullable Output<String> conversationId,
+        Output<String> conversationProfile,
+        @Nullable Output<ConversationConversationStage> conversationStage,
+        @Nullable Output<String> location,
+        @Nullable Output<String> project) {
         this.conversationId = conversationId;
         this.conversationProfile = Objects.requireNonNull(conversationProfile, "expected parameter 'conversationProfile' to be non-null");
         this.conversationStage = conversationStage;
@@ -72,11 +72,11 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConversationArgs() {
-        this.conversationId = Input.empty();
-        this.conversationProfile = Input.empty();
-        this.conversationStage = Input.empty();
-        this.location = Input.empty();
-        this.project = Input.empty();
+        this.conversationId = Output.empty();
+        this.conversationProfile = Output.empty();
+        this.conversationStage = Output.empty();
+        this.location = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,11 +88,11 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> conversationId;
-        private Input<String> conversationProfile;
-        private @Nullable Input<ConversationConversationStage> conversationStage;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> project;
+        private @Nullable Output<String> conversationId;
+        private Output<String> conversationProfile;
+        private @Nullable Output<ConversationConversationStage> conversationStage;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -107,53 +107,53 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder conversationId(@Nullable Input<String> conversationId) {
+        public Builder conversationId(@Nullable Output<String> conversationId) {
             this.conversationId = conversationId;
             return this;
         }
 
         public Builder conversationId(@Nullable String conversationId) {
-            this.conversationId = Input.ofNullable(conversationId);
+            this.conversationId = Output.ofNullable(conversationId);
             return this;
         }
 
-        public Builder conversationProfile(Input<String> conversationProfile) {
+        public Builder conversationProfile(Output<String> conversationProfile) {
             this.conversationProfile = Objects.requireNonNull(conversationProfile);
             return this;
         }
 
         public Builder conversationProfile(String conversationProfile) {
-            this.conversationProfile = Input.of(Objects.requireNonNull(conversationProfile));
+            this.conversationProfile = Output.of(Objects.requireNonNull(conversationProfile));
             return this;
         }
 
-        public Builder conversationStage(@Nullable Input<ConversationConversationStage> conversationStage) {
+        public Builder conversationStage(@Nullable Output<ConversationConversationStage> conversationStage) {
             this.conversationStage = conversationStage;
             return this;
         }
 
         public Builder conversationStage(@Nullable ConversationConversationStage conversationStage) {
-            this.conversationStage = Input.ofNullable(conversationStage);
+            this.conversationStage = Output.ofNullable(conversationStage);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public ConversationArgs build() {

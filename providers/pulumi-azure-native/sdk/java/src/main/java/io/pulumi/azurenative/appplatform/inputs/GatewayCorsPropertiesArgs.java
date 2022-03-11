@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -26,10 +26,10 @@ public final class GatewayCorsPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="allowCredentials")
-      private final @Nullable Input<Boolean> allowCredentials;
+      private final @Nullable Output<Boolean> allowCredentials;
 
-    public Input<Boolean> getAllowCredentials() {
-        return this.allowCredentials == null ? Input.empty() : this.allowCredentials;
+    public Output<Boolean> getAllowCredentials() {
+        return this.allowCredentials == null ? Output.empty() : this.allowCredentials;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class GatewayCorsPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="allowedHeaders")
-      private final @Nullable Input<List<String>> allowedHeaders;
+      private final @Nullable Output<List<String>> allowedHeaders;
 
-    public Input<List<String>> getAllowedHeaders() {
-        return this.allowedHeaders == null ? Input.empty() : this.allowedHeaders;
+    public Output<List<String>> getAllowedHeaders() {
+        return this.allowedHeaders == null ? Output.empty() : this.allowedHeaders;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class GatewayCorsPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="allowedMethods")
-      private final @Nullable Input<List<String>> allowedMethods;
+      private final @Nullable Output<List<String>> allowedMethods;
 
-    public Input<List<String>> getAllowedMethods() {
-        return this.allowedMethods == null ? Input.empty() : this.allowedMethods;
+    public Output<List<String>> getAllowedMethods() {
+        return this.allowedMethods == null ? Output.empty() : this.allowedMethods;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class GatewayCorsPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="allowedOrigins")
-      private final @Nullable Input<List<String>> allowedOrigins;
+      private final @Nullable Output<List<String>> allowedOrigins;
 
-    public Input<List<String>> getAllowedOrigins() {
-        return this.allowedOrigins == null ? Input.empty() : this.allowedOrigins;
+    public Output<List<String>> getAllowedOrigins() {
+        return this.allowedOrigins == null ? Output.empty() : this.allowedOrigins;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class GatewayCorsPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="exposedHeaders")
-      private final @Nullable Input<List<String>> exposedHeaders;
+      private final @Nullable Output<List<String>> exposedHeaders;
 
-    public Input<List<String>> getExposedHeaders() {
-        return this.exposedHeaders == null ? Input.empty() : this.exposedHeaders;
+    public Output<List<String>> getExposedHeaders() {
+        return this.exposedHeaders == null ? Output.empty() : this.exposedHeaders;
     }
 
     /**
@@ -81,19 +81,19 @@ public final class GatewayCorsPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="maxAge")
-      private final @Nullable Input<Integer> maxAge;
+      private final @Nullable Output<Integer> maxAge;
 
-    public Input<Integer> getMaxAge() {
-        return this.maxAge == null ? Input.empty() : this.maxAge;
+    public Output<Integer> getMaxAge() {
+        return this.maxAge == null ? Output.empty() : this.maxAge;
     }
 
     public GatewayCorsPropertiesArgs(
-        @Nullable Input<Boolean> allowCredentials,
-        @Nullable Input<List<String>> allowedHeaders,
-        @Nullable Input<List<String>> allowedMethods,
-        @Nullable Input<List<String>> allowedOrigins,
-        @Nullable Input<List<String>> exposedHeaders,
-        @Nullable Input<Integer> maxAge) {
+        @Nullable Output<Boolean> allowCredentials,
+        @Nullable Output<List<String>> allowedHeaders,
+        @Nullable Output<List<String>> allowedMethods,
+        @Nullable Output<List<String>> allowedOrigins,
+        @Nullable Output<List<String>> exposedHeaders,
+        @Nullable Output<Integer> maxAge) {
         this.allowCredentials = allowCredentials;
         this.allowedHeaders = allowedHeaders;
         this.allowedMethods = allowedMethods;
@@ -103,12 +103,12 @@ public final class GatewayCorsPropertiesArgs extends io.pulumi.resources.Resourc
     }
 
     private GatewayCorsPropertiesArgs() {
-        this.allowCredentials = Input.empty();
-        this.allowedHeaders = Input.empty();
-        this.allowedMethods = Input.empty();
-        this.allowedOrigins = Input.empty();
-        this.exposedHeaders = Input.empty();
-        this.maxAge = Input.empty();
+        this.allowCredentials = Output.empty();
+        this.allowedHeaders = Output.empty();
+        this.allowedMethods = Output.empty();
+        this.allowedOrigins = Output.empty();
+        this.exposedHeaders = Output.empty();
+        this.maxAge = Output.empty();
     }
 
     public static Builder builder() {
@@ -120,12 +120,12 @@ public final class GatewayCorsPropertiesArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowCredentials;
-        private @Nullable Input<List<String>> allowedHeaders;
-        private @Nullable Input<List<String>> allowedMethods;
-        private @Nullable Input<List<String>> allowedOrigins;
-        private @Nullable Input<List<String>> exposedHeaders;
-        private @Nullable Input<Integer> maxAge;
+        private @Nullable Output<Boolean> allowCredentials;
+        private @Nullable Output<List<String>> allowedHeaders;
+        private @Nullable Output<List<String>> allowedMethods;
+        private @Nullable Output<List<String>> allowedOrigins;
+        private @Nullable Output<List<String>> exposedHeaders;
+        private @Nullable Output<Integer> maxAge;
 
         public Builder() {
     	      // Empty
@@ -141,63 +141,63 @@ public final class GatewayCorsPropertiesArgs extends io.pulumi.resources.Resourc
     	      this.maxAge = defaults.maxAge;
         }
 
-        public Builder allowCredentials(@Nullable Input<Boolean> allowCredentials) {
+        public Builder allowCredentials(@Nullable Output<Boolean> allowCredentials) {
             this.allowCredentials = allowCredentials;
             return this;
         }
 
         public Builder allowCredentials(@Nullable Boolean allowCredentials) {
-            this.allowCredentials = Input.ofNullable(allowCredentials);
+            this.allowCredentials = Output.ofNullable(allowCredentials);
             return this;
         }
 
-        public Builder allowedHeaders(@Nullable Input<List<String>> allowedHeaders) {
+        public Builder allowedHeaders(@Nullable Output<List<String>> allowedHeaders) {
             this.allowedHeaders = allowedHeaders;
             return this;
         }
 
         public Builder allowedHeaders(@Nullable List<String> allowedHeaders) {
-            this.allowedHeaders = Input.ofNullable(allowedHeaders);
+            this.allowedHeaders = Output.ofNullable(allowedHeaders);
             return this;
         }
 
-        public Builder allowedMethods(@Nullable Input<List<String>> allowedMethods) {
+        public Builder allowedMethods(@Nullable Output<List<String>> allowedMethods) {
             this.allowedMethods = allowedMethods;
             return this;
         }
 
         public Builder allowedMethods(@Nullable List<String> allowedMethods) {
-            this.allowedMethods = Input.ofNullable(allowedMethods);
+            this.allowedMethods = Output.ofNullable(allowedMethods);
             return this;
         }
 
-        public Builder allowedOrigins(@Nullable Input<List<String>> allowedOrigins) {
+        public Builder allowedOrigins(@Nullable Output<List<String>> allowedOrigins) {
             this.allowedOrigins = allowedOrigins;
             return this;
         }
 
         public Builder allowedOrigins(@Nullable List<String> allowedOrigins) {
-            this.allowedOrigins = Input.ofNullable(allowedOrigins);
+            this.allowedOrigins = Output.ofNullable(allowedOrigins);
             return this;
         }
 
-        public Builder exposedHeaders(@Nullable Input<List<String>> exposedHeaders) {
+        public Builder exposedHeaders(@Nullable Output<List<String>> exposedHeaders) {
             this.exposedHeaders = exposedHeaders;
             return this;
         }
 
         public Builder exposedHeaders(@Nullable List<String> exposedHeaders) {
-            this.exposedHeaders = Input.ofNullable(exposedHeaders);
+            this.exposedHeaders = Output.ofNullable(exposedHeaders);
             return this;
         }
 
-        public Builder maxAge(@Nullable Input<Integer> maxAge) {
+        public Builder maxAge(@Nullable Output<Integer> maxAge) {
             this.maxAge = maxAge;
             return this;
         }
 
         public Builder maxAge(@Nullable Integer maxAge) {
-            this.maxAge = Input.ofNullable(maxAge);
+            this.maxAge = Output.ofNullable(maxAge);
             return this;
         }
         public GatewayCorsPropertiesArgs build() {

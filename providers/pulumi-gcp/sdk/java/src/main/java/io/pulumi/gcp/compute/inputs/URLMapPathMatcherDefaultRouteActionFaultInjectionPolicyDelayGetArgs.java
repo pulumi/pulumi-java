@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs;
 import java.lang.Double;
@@ -21,10 +21,10 @@ public final class URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayG
      * 
      */
     @InputImport(name="fixedDelay")
-      private final @Nullable Input<URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs> fixedDelay;
+      private final @Nullable Output<URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs> fixedDelay;
 
-    public Input<URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs> getFixedDelay() {
-        return this.fixedDelay == null ? Input.empty() : this.fixedDelay;
+    public Output<URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs> getFixedDelay() {
+        return this.fixedDelay == null ? Output.empty() : this.fixedDelay;
     }
 
     /**
@@ -33,22 +33,22 @@ public final class URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayG
      * 
      */
     @InputImport(name="percentage")
-      private final @Nullable Input<Double> percentage;
+      private final @Nullable Output<Double> percentage;
 
-    public Input<Double> getPercentage() {
-        return this.percentage == null ? Input.empty() : this.percentage;
+    public Output<Double> getPercentage() {
+        return this.percentage == null ? Output.empty() : this.percentage;
     }
 
     public URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayGetArgs(
-        @Nullable Input<URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs> fixedDelay,
-        @Nullable Input<Double> percentage) {
+        @Nullable Output<URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs> fixedDelay,
+        @Nullable Output<Double> percentage) {
         this.fixedDelay = fixedDelay;
         this.percentage = percentage;
     }
 
     private URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayGetArgs() {
-        this.fixedDelay = Input.empty();
-        this.percentage = Input.empty();
+        this.fixedDelay = Output.empty();
+        this.percentage = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayG
     }
 
     public static final class Builder {
-        private @Nullable Input<URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs> fixedDelay;
-        private @Nullable Input<Double> percentage;
+        private @Nullable Output<URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs> fixedDelay;
+        private @Nullable Output<Double> percentage;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayG
     	      this.percentage = defaults.percentage;
         }
 
-        public Builder fixedDelay(@Nullable Input<URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs> fixedDelay) {
+        public Builder fixedDelay(@Nullable Output<URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs> fixedDelay) {
             this.fixedDelay = fixedDelay;
             return this;
         }
 
         public Builder fixedDelay(@Nullable URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs fixedDelay) {
-            this.fixedDelay = Input.ofNullable(fixedDelay);
+            this.fixedDelay = Output.ofNullable(fixedDelay);
             return this;
         }
 
-        public Builder percentage(@Nullable Input<Double> percentage) {
+        public Builder percentage(@Nullable Output<Double> percentage) {
             this.percentage = percentage;
             return this;
         }
 
         public Builder percentage(@Nullable Double percentage) {
-            this.percentage = Input.ofNullable(percentage);
+            this.percentage = Output.ofNullable(percentage);
             return this;
         }
         public URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayGetArgs build() {

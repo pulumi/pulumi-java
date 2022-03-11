@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.inputs.BucketTagFilterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,38 +17,38 @@ public final class BucketMetricsConfigurationArgs extends io.pulumi.resources.Re
     public static final BucketMetricsConfigurationArgs Empty = new BucketMetricsConfigurationArgs();
 
     @InputImport(name="accessPointArn")
-      private final @Nullable Input<String> accessPointArn;
+      private final @Nullable Output<String> accessPointArn;
 
-    public Input<String> getAccessPointArn() {
-        return this.accessPointArn == null ? Input.empty() : this.accessPointArn;
+    public Output<String> getAccessPointArn() {
+        return this.accessPointArn == null ? Output.empty() : this.accessPointArn;
     }
 
     @InputImport(name="id", required=true)
-      private final Input<String> id;
+      private final Output<String> id;
 
-    public Input<String> getId() {
+    public Output<String> getId() {
         return this.id;
     }
 
     @InputImport(name="prefix")
-      private final @Nullable Input<String> prefix;
+      private final @Nullable Output<String> prefix;
 
-    public Input<String> getPrefix() {
-        return this.prefix == null ? Input.empty() : this.prefix;
+    public Output<String> getPrefix() {
+        return this.prefix == null ? Output.empty() : this.prefix;
     }
 
     @InputImport(name="tagFilters")
-      private final @Nullable Input<List<BucketTagFilterArgs>> tagFilters;
+      private final @Nullable Output<List<BucketTagFilterArgs>> tagFilters;
 
-    public Input<List<BucketTagFilterArgs>> getTagFilters() {
-        return this.tagFilters == null ? Input.empty() : this.tagFilters;
+    public Output<List<BucketTagFilterArgs>> getTagFilters() {
+        return this.tagFilters == null ? Output.empty() : this.tagFilters;
     }
 
     public BucketMetricsConfigurationArgs(
-        @Nullable Input<String> accessPointArn,
-        Input<String> id,
-        @Nullable Input<String> prefix,
-        @Nullable Input<List<BucketTagFilterArgs>> tagFilters) {
+        @Nullable Output<String> accessPointArn,
+        Output<String> id,
+        @Nullable Output<String> prefix,
+        @Nullable Output<List<BucketTagFilterArgs>> tagFilters) {
         this.accessPointArn = accessPointArn;
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
         this.prefix = prefix;
@@ -56,10 +56,10 @@ public final class BucketMetricsConfigurationArgs extends io.pulumi.resources.Re
     }
 
     private BucketMetricsConfigurationArgs() {
-        this.accessPointArn = Input.empty();
-        this.id = Input.empty();
-        this.prefix = Input.empty();
-        this.tagFilters = Input.empty();
+        this.accessPointArn = Output.empty();
+        this.id = Output.empty();
+        this.prefix = Output.empty();
+        this.tagFilters = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,10 +71,10 @@ public final class BucketMetricsConfigurationArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accessPointArn;
-        private Input<String> id;
-        private @Nullable Input<String> prefix;
-        private @Nullable Input<List<BucketTagFilterArgs>> tagFilters;
+        private @Nullable Output<String> accessPointArn;
+        private Output<String> id;
+        private @Nullable Output<String> prefix;
+        private @Nullable Output<List<BucketTagFilterArgs>> tagFilters;
 
         public Builder() {
     	      // Empty
@@ -88,43 +88,43 @@ public final class BucketMetricsConfigurationArgs extends io.pulumi.resources.Re
     	      this.tagFilters = defaults.tagFilters;
         }
 
-        public Builder accessPointArn(@Nullable Input<String> accessPointArn) {
+        public Builder accessPointArn(@Nullable Output<String> accessPointArn) {
             this.accessPointArn = accessPointArn;
             return this;
         }
 
         public Builder accessPointArn(@Nullable String accessPointArn) {
-            this.accessPointArn = Input.ofNullable(accessPointArn);
+            this.accessPointArn = Output.ofNullable(accessPointArn);
             return this;
         }
 
-        public Builder id(Input<String> id) {
+        public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
         public Builder id(String id) {
-            this.id = Input.of(Objects.requireNonNull(id));
+            this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder prefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Input.ofNullable(prefix);
+            this.prefix = Output.ofNullable(prefix);
             return this;
         }
 
-        public Builder tagFilters(@Nullable Input<List<BucketTagFilterArgs>> tagFilters) {
+        public Builder tagFilters(@Nullable Output<List<BucketTagFilterArgs>> tagFilters) {
             this.tagFilters = tagFilters;
             return this;
         }
 
         public Builder tagFilters(@Nullable List<BucketTagFilterArgs> tagFilters) {
-            this.tagFilters = Input.ofNullable(tagFilters);
+            this.tagFilters = Output.ofNullable(tagFilters);
             return this;
         }
         public BucketMetricsConfigurationArgs build() {

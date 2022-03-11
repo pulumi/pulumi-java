@@ -5,7 +5,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.azurenative.providerhub.enums.ThrottlingMetricType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -18,39 +18,39 @@ public final class ThrottlingMetricArgs extends io.pulumi.resources.ResourceArgs
     public static final ThrottlingMetricArgs Empty = new ThrottlingMetricArgs();
 
     @InputImport(name="interval")
-      private final @Nullable Input<String> interval;
+      private final @Nullable Output<String> interval;
 
-    public Input<String> getInterval() {
-        return this.interval == null ? Input.empty() : this.interval;
+    public Output<String> getInterval() {
+        return this.interval == null ? Output.empty() : this.interval;
     }
 
     @InputImport(name="limit", required=true)
-      private final Input<Double> limit;
+      private final Output<Double> limit;
 
-    public Input<Double> getLimit() {
+    public Output<Double> getLimit() {
         return this.limit;
     }
 
     @InputImport(name="type", required=true)
-      private final Input<Either<String,ThrottlingMetricType>> type;
+      private final Output<Either<String,ThrottlingMetricType>> type;
 
-    public Input<Either<String,ThrottlingMetricType>> getType() {
+    public Output<Either<String,ThrottlingMetricType>> getType() {
         return this.type;
     }
 
     public ThrottlingMetricArgs(
-        @Nullable Input<String> interval,
-        Input<Double> limit,
-        Input<Either<String,ThrottlingMetricType>> type) {
+        @Nullable Output<String> interval,
+        Output<Double> limit,
+        Output<Either<String,ThrottlingMetricType>> type) {
         this.interval = interval;
         this.limit = Objects.requireNonNull(limit, "expected parameter 'limit' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private ThrottlingMetricArgs() {
-        this.interval = Input.empty();
-        this.limit = Input.empty();
-        this.type = Input.empty();
+        this.interval = Output.empty();
+        this.limit = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,9 +62,9 @@ public final class ThrottlingMetricArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> interval;
-        private Input<Double> limit;
-        private Input<Either<String,ThrottlingMetricType>> type;
+        private @Nullable Output<String> interval;
+        private Output<Double> limit;
+        private Output<Either<String,ThrottlingMetricType>> type;
 
         public Builder() {
     	      // Empty
@@ -77,33 +77,33 @@ public final class ThrottlingMetricArgs extends io.pulumi.resources.ResourceArgs
     	      this.type = defaults.type;
         }
 
-        public Builder interval(@Nullable Input<String> interval) {
+        public Builder interval(@Nullable Output<String> interval) {
             this.interval = interval;
             return this;
         }
 
         public Builder interval(@Nullable String interval) {
-            this.interval = Input.ofNullable(interval);
+            this.interval = Output.ofNullable(interval);
             return this;
         }
 
-        public Builder limit(Input<Double> limit) {
+        public Builder limit(Output<Double> limit) {
             this.limit = Objects.requireNonNull(limit);
             return this;
         }
 
         public Builder limit(Double limit) {
-            this.limit = Input.of(Objects.requireNonNull(limit));
+            this.limit = Output.of(Objects.requireNonNull(limit));
             return this;
         }
 
-        public Builder type(Input<Either<String,ThrottlingMetricType>> type) {
+        public Builder type(Output<Either<String,ThrottlingMetricType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(Either<String,ThrottlingMetricType> type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ThrottlingMetricArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.assuredworkloads_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.assuredworkloads_v1.enums.GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceType;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs ext
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs ext
      * 
      */
     @InputImport(name="resourceId")
-      private final @Nullable Input<String> resourceId;
+      private final @Nullable Output<String> resourceId;
 
-    public Input<String> getResourceId() {
-        return this.resourceId == null ? Input.empty() : this.resourceId;
+    public Output<String> getResourceId() {
+        return this.resourceId == null ? Output.empty() : this.resourceId;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs ext
      * 
      */
     @InputImport(name="resourceType")
-      private final @Nullable Input<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceType> resourceType;
+      private final @Nullable Output<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceType> resourceType;
 
-    public Input<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceType> getPropResourceType() {
-        return this.resourceType == null ? Input.empty() : this.resourceType;
+    public Output<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceType> getPropResourceType() {
+        return this.resourceType == null ? Output.empty() : this.resourceType;
     }
 
     public GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs(
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> resourceId,
-        @Nullable Input<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceType> resourceType) {
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> resourceId,
+        @Nullable Output<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceType> resourceType) {
         this.displayName = displayName;
         this.resourceId = resourceId;
         this.resourceType = resourceType;
     }
 
     private GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs() {
-        this.displayName = Input.empty();
-        this.resourceId = Input.empty();
-        this.resourceType = Input.empty();
+        this.displayName = Output.empty();
+        this.resourceId = Output.empty();
+        this.resourceType = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs ext
     }
 
     public static final class Builder {
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> resourceId;
-        private @Nullable Input<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceType> resourceType;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> resourceId;
+        private @Nullable Output<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceType> resourceType;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs ext
     	      this.resourceType = defaults.resourceType;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder resourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Input.ofNullable(resourceId);
+            this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
 
-        public Builder resourceType(@Nullable Input<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceType> resourceType) {
+        public Builder resourceType(@Nullable Output<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceType> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
         public Builder resourceType(@Nullable GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceType resourceType) {
-            this.resourceType = Input.ofNullable(resourceType);
+            this.resourceType = Output.ofNullable(resourceType);
             return this;
         }
         public GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerinstance.inputs;
 
 import io.pulumi.azurenative.containerinstance.enums.ContainerGroupNetworkProtocol;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,9 +26,9 @@ public final class PortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port", required=true)
-      private final Input<Integer> port;
+      private final Output<Integer> port;
 
-    public Input<Integer> getPort() {
+    public Output<Integer> getPort() {
         return this.port;
     }
 
@@ -37,22 +37,22 @@ public final class PortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol")
-      private final @Nullable Input<Either<String,ContainerGroupNetworkProtocol>> protocol;
+      private final @Nullable Output<Either<String,ContainerGroupNetworkProtocol>> protocol;
 
-    public Input<Either<String,ContainerGroupNetworkProtocol>> getProtocol() {
-        return this.protocol == null ? Input.empty() : this.protocol;
+    public Output<Either<String,ContainerGroupNetworkProtocol>> getProtocol() {
+        return this.protocol == null ? Output.empty() : this.protocol;
     }
 
     public PortArgs(
-        Input<Integer> port,
-        @Nullable Input<Either<String,ContainerGroupNetworkProtocol>> protocol) {
+        Output<Integer> port,
+        @Nullable Output<Either<String,ContainerGroupNetworkProtocol>> protocol) {
         this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
         this.protocol = protocol;
     }
 
     private PortArgs() {
-        this.port = Input.empty();
-        this.protocol = Input.empty();
+        this.port = Output.empty();
+        this.protocol = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class PortArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Integer> port;
-        private @Nullable Input<Either<String,ContainerGroupNetworkProtocol>> protocol;
+        private Output<Integer> port;
+        private @Nullable Output<Either<String,ContainerGroupNetworkProtocol>> protocol;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class PortArgs extends io.pulumi.resources.ResourceArgs {
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder port(Input<Integer> port) {
+        public Builder port(Output<Integer> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
         public Builder port(Integer port) {
-            this.port = Input.of(Objects.requireNonNull(port));
+            this.port = Output.of(Objects.requireNonNull(port));
             return this;
         }
 
-        public Builder protocol(@Nullable Input<Either<String,ContainerGroupNetworkProtocol>> protocol) {
+        public Builder protocol(@Nullable Output<Either<String,ContainerGroupNetworkProtocol>> protocol) {
             this.protocol = protocol;
             return this;
         }
 
         public Builder protocol(@Nullable Either<String,ContainerGroupNetworkProtocol> protocol) {
-            this.protocol = Input.ofNullable(protocol);
+            this.protocol = Output.ofNullable(protocol);
             return this;
         }
         public PortArgs build() {

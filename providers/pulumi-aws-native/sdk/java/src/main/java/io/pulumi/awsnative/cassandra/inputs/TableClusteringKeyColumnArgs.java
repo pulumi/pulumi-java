@@ -5,7 +5,7 @@ package io.pulumi.awsnative.cassandra.inputs;
 
 import io.pulumi.awsnative.cassandra.enums.TableClusteringKeyColumnOrderBy;
 import io.pulumi.awsnative.cassandra.inputs.TableColumnArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,29 +16,29 @@ public final class TableClusteringKeyColumnArgs extends io.pulumi.resources.Reso
     public static final TableClusteringKeyColumnArgs Empty = new TableClusteringKeyColumnArgs();
 
     @InputImport(name="column", required=true)
-      private final Input<TableColumnArgs> column;
+      private final Output<TableColumnArgs> column;
 
-    public Input<TableColumnArgs> getColumn() {
+    public Output<TableColumnArgs> getColumn() {
         return this.column;
     }
 
     @InputImport(name="orderBy")
-      private final @Nullable Input<TableClusteringKeyColumnOrderBy> orderBy;
+      private final @Nullable Output<TableClusteringKeyColumnOrderBy> orderBy;
 
-    public Input<TableClusteringKeyColumnOrderBy> getOrderBy() {
-        return this.orderBy == null ? Input.empty() : this.orderBy;
+    public Output<TableClusteringKeyColumnOrderBy> getOrderBy() {
+        return this.orderBy == null ? Output.empty() : this.orderBy;
     }
 
     public TableClusteringKeyColumnArgs(
-        Input<TableColumnArgs> column,
-        @Nullable Input<TableClusteringKeyColumnOrderBy> orderBy) {
+        Output<TableColumnArgs> column,
+        @Nullable Output<TableClusteringKeyColumnOrderBy> orderBy) {
         this.column = Objects.requireNonNull(column, "expected parameter 'column' to be non-null");
         this.orderBy = orderBy;
     }
 
     private TableClusteringKeyColumnArgs() {
-        this.column = Input.empty();
-        this.orderBy = Input.empty();
+        this.column = Output.empty();
+        this.orderBy = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class TableClusteringKeyColumnArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<TableColumnArgs> column;
-        private @Nullable Input<TableClusteringKeyColumnOrderBy> orderBy;
+        private Output<TableColumnArgs> column;
+        private @Nullable Output<TableClusteringKeyColumnOrderBy> orderBy;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class TableClusteringKeyColumnArgs extends io.pulumi.resources.Reso
     	      this.orderBy = defaults.orderBy;
         }
 
-        public Builder column(Input<TableColumnArgs> column) {
+        public Builder column(Output<TableColumnArgs> column) {
             this.column = Objects.requireNonNull(column);
             return this;
         }
 
         public Builder column(TableColumnArgs column) {
-            this.column = Input.of(Objects.requireNonNull(column));
+            this.column = Output.of(Objects.requireNonNull(column));
             return this;
         }
 
-        public Builder orderBy(@Nullable Input<TableClusteringKeyColumnOrderBy> orderBy) {
+        public Builder orderBy(@Nullable Output<TableClusteringKeyColumnOrderBy> orderBy) {
             this.orderBy = orderBy;
             return this;
         }
 
         public Builder orderBy(@Nullable TableClusteringKeyColumnOrderBy orderBy) {
-            this.orderBy = Input.ofNullable(orderBy);
+            this.orderBy = Output.ofNullable(orderBy);
             return this;
         }
         public TableClusteringKeyColumnArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex;
 
 import io.pulumi.awsnative.lex.inputs.BotVersionLocaleSpecificationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,39 +17,39 @@ public final class BotVersionArgs extends io.pulumi.resources.ResourceArgs {
     public static final BotVersionArgs Empty = new BotVersionArgs();
 
     @InputImport(name="botId", required=true)
-      private final Input<String> botId;
+      private final Output<String> botId;
 
-    public Input<String> getBotId() {
+    public Output<String> getBotId() {
         return this.botId;
     }
 
     @InputImport(name="botVersionLocaleSpecification", required=true)
-      private final Input<List<BotVersionLocaleSpecificationArgs>> botVersionLocaleSpecification;
+      private final Output<List<BotVersionLocaleSpecificationArgs>> botVersionLocaleSpecification;
 
-    public Input<List<BotVersionLocaleSpecificationArgs>> getBotVersionLocaleSpecification() {
+    public Output<List<BotVersionLocaleSpecificationArgs>> getBotVersionLocaleSpecification() {
         return this.botVersionLocaleSpecification;
     }
 
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     public BotVersionArgs(
-        Input<String> botId,
-        Input<List<BotVersionLocaleSpecificationArgs>> botVersionLocaleSpecification,
-        @Nullable Input<String> description) {
+        Output<String> botId,
+        Output<List<BotVersionLocaleSpecificationArgs>> botVersionLocaleSpecification,
+        @Nullable Output<String> description) {
         this.botId = Objects.requireNonNull(botId, "expected parameter 'botId' to be non-null");
         this.botVersionLocaleSpecification = Objects.requireNonNull(botVersionLocaleSpecification, "expected parameter 'botVersionLocaleSpecification' to be non-null");
         this.description = description;
     }
 
     private BotVersionArgs() {
-        this.botId = Input.empty();
-        this.botVersionLocaleSpecification = Input.empty();
-        this.description = Input.empty();
+        this.botId = Output.empty();
+        this.botVersionLocaleSpecification = Output.empty();
+        this.description = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,9 +61,9 @@ public final class BotVersionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> botId;
-        private Input<List<BotVersionLocaleSpecificationArgs>> botVersionLocaleSpecification;
-        private @Nullable Input<String> description;
+        private Output<String> botId;
+        private Output<List<BotVersionLocaleSpecificationArgs>> botVersionLocaleSpecification;
+        private @Nullable Output<String> description;
 
         public Builder() {
     	      // Empty
@@ -76,33 +76,33 @@ public final class BotVersionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.description = defaults.description;
         }
 
-        public Builder botId(Input<String> botId) {
+        public Builder botId(Output<String> botId) {
             this.botId = Objects.requireNonNull(botId);
             return this;
         }
 
         public Builder botId(String botId) {
-            this.botId = Input.of(Objects.requireNonNull(botId));
+            this.botId = Output.of(Objects.requireNonNull(botId));
             return this;
         }
 
-        public Builder botVersionLocaleSpecification(Input<List<BotVersionLocaleSpecificationArgs>> botVersionLocaleSpecification) {
+        public Builder botVersionLocaleSpecification(Output<List<BotVersionLocaleSpecificationArgs>> botVersionLocaleSpecification) {
             this.botVersionLocaleSpecification = Objects.requireNonNull(botVersionLocaleSpecification);
             return this;
         }
 
         public Builder botVersionLocaleSpecification(List<BotVersionLocaleSpecificationArgs> botVersionLocaleSpecification) {
-            this.botVersionLocaleSpecification = Input.of(Objects.requireNonNull(botVersionLocaleSpecification));
+            this.botVersionLocaleSpecification = Output.of(Objects.requireNonNull(botVersionLocaleSpecification));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
         public BotVersionArgs build() {

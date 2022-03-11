@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.backup.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class ReportSettingPropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="frameworkArns")
-      private final @Nullable Input<List<String>> frameworkArns;
+      private final @Nullable Output<List<String>> frameworkArns;
 
-    public Input<List<String>> getFrameworkArns() {
-        return this.frameworkArns == null ? Input.empty() : this.frameworkArns;
+    public Output<List<String>> getFrameworkArns() {
+        return this.frameworkArns == null ? Output.empty() : this.frameworkArns;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ReportSettingPropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="reportTemplate", required=true)
-      private final Input<String> reportTemplate;
+      private final Output<String> reportTemplate;
 
-    public Input<String> getReportTemplate() {
+    public Output<String> getReportTemplate() {
         return this.reportTemplate;
     }
 
     public ReportSettingPropertiesArgs(
-        @Nullable Input<List<String>> frameworkArns,
-        Input<String> reportTemplate) {
+        @Nullable Output<List<String>> frameworkArns,
+        Output<String> reportTemplate) {
         this.frameworkArns = frameworkArns;
         this.reportTemplate = Objects.requireNonNull(reportTemplate, "expected parameter 'reportTemplate' to be non-null");
     }
 
     private ReportSettingPropertiesArgs() {
-        this.frameworkArns = Input.empty();
-        this.reportTemplate = Input.empty();
+        this.frameworkArns = Output.empty();
+        this.reportTemplate = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ReportSettingPropertiesArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> frameworkArns;
-        private Input<String> reportTemplate;
+        private @Nullable Output<List<String>> frameworkArns;
+        private Output<String> reportTemplate;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ReportSettingPropertiesArgs extends io.pulumi.resources.Resou
     	      this.reportTemplate = defaults.reportTemplate;
         }
 
-        public Builder frameworkArns(@Nullable Input<List<String>> frameworkArns) {
+        public Builder frameworkArns(@Nullable Output<List<String>> frameworkArns) {
             this.frameworkArns = frameworkArns;
             return this;
         }
 
         public Builder frameworkArns(@Nullable List<String> frameworkArns) {
-            this.frameworkArns = Input.ofNullable(frameworkArns);
+            this.frameworkArns = Output.ofNullable(frameworkArns);
             return this;
         }
 
-        public Builder reportTemplate(Input<String> reportTemplate) {
+        public Builder reportTemplate(Output<String> reportTemplate) {
             this.reportTemplate = Objects.requireNonNull(reportTemplate);
             return this;
         }
 
         public Builder reportTemplate(String reportTemplate) {
-            this.reportTemplate = Input.of(Objects.requireNonNull(reportTemplate));
+            this.reportTemplate = Output.of(Objects.requireNonNull(reportTemplate));
             return this;
         }
         public ReportSettingPropertiesArgs build() {

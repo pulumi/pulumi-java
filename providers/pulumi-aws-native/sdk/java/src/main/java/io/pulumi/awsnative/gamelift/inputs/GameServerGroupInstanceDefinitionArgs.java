@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.gamelift.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,29 +19,29 @@ public final class GameServerGroupInstanceDefinitionArgs extends io.pulumi.resou
     public static final GameServerGroupInstanceDefinitionArgs Empty = new GameServerGroupInstanceDefinitionArgs();
 
     @InputImport(name="instanceType", required=true)
-      private final Input<String> instanceType;
+      private final Output<String> instanceType;
 
-    public Input<String> getInstanceType() {
+    public Output<String> getInstanceType() {
         return this.instanceType;
     }
 
     @InputImport(name="weightedCapacity")
-      private final @Nullable Input<String> weightedCapacity;
+      private final @Nullable Output<String> weightedCapacity;
 
-    public Input<String> getWeightedCapacity() {
-        return this.weightedCapacity == null ? Input.empty() : this.weightedCapacity;
+    public Output<String> getWeightedCapacity() {
+        return this.weightedCapacity == null ? Output.empty() : this.weightedCapacity;
     }
 
     public GameServerGroupInstanceDefinitionArgs(
-        Input<String> instanceType,
-        @Nullable Input<String> weightedCapacity) {
+        Output<String> instanceType,
+        @Nullable Output<String> weightedCapacity) {
         this.instanceType = Objects.requireNonNull(instanceType, "expected parameter 'instanceType' to be non-null");
         this.weightedCapacity = weightedCapacity;
     }
 
     private GameServerGroupInstanceDefinitionArgs() {
-        this.instanceType = Input.empty();
-        this.weightedCapacity = Input.empty();
+        this.instanceType = Output.empty();
+        this.weightedCapacity = Output.empty();
     }
 
     public static Builder builder() {
@@ -53,8 +53,8 @@ public final class GameServerGroupInstanceDefinitionArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private Input<String> instanceType;
-        private @Nullable Input<String> weightedCapacity;
+        private Output<String> instanceType;
+        private @Nullable Output<String> weightedCapacity;
 
         public Builder() {
     	      // Empty
@@ -66,23 +66,23 @@ public final class GameServerGroupInstanceDefinitionArgs extends io.pulumi.resou
     	      this.weightedCapacity = defaults.weightedCapacity;
         }
 
-        public Builder instanceType(Input<String> instanceType) {
+        public Builder instanceType(Output<String> instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
         public Builder instanceType(String instanceType) {
-            this.instanceType = Input.of(Objects.requireNonNull(instanceType));
+            this.instanceType = Output.of(Objects.requireNonNull(instanceType));
             return this;
         }
 
-        public Builder weightedCapacity(@Nullable Input<String> weightedCapacity) {
+        public Builder weightedCapacity(@Nullable Output<String> weightedCapacity) {
             this.weightedCapacity = weightedCapacity;
             return this;
         }
 
         public Builder weightedCapacity(@Nullable String weightedCapacity) {
-            this.weightedCapacity = Input.ofNullable(weightedCapacity);
+            this.weightedCapacity = Output.ofNullable(weightedCapacity);
             return this;
         }
         public GameServerGroupInstanceDefinitionArgs build() {

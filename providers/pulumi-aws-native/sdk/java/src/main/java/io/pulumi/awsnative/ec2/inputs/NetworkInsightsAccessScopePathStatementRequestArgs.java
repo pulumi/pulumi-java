@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.awsnative.ec2.inputs.NetworkInsightsAccessScopePacketHeaderStatementRequestArgs;
 import io.pulumi.awsnative.ec2.inputs.NetworkInsightsAccessScopeResourceStatementRequestArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,29 +16,29 @@ public final class NetworkInsightsAccessScopePathStatementRequestArgs extends io
     public static final NetworkInsightsAccessScopePathStatementRequestArgs Empty = new NetworkInsightsAccessScopePathStatementRequestArgs();
 
     @InputImport(name="packetHeaderStatement")
-      private final @Nullable Input<NetworkInsightsAccessScopePacketHeaderStatementRequestArgs> packetHeaderStatement;
+      private final @Nullable Output<NetworkInsightsAccessScopePacketHeaderStatementRequestArgs> packetHeaderStatement;
 
-    public Input<NetworkInsightsAccessScopePacketHeaderStatementRequestArgs> getPacketHeaderStatement() {
-        return this.packetHeaderStatement == null ? Input.empty() : this.packetHeaderStatement;
+    public Output<NetworkInsightsAccessScopePacketHeaderStatementRequestArgs> getPacketHeaderStatement() {
+        return this.packetHeaderStatement == null ? Output.empty() : this.packetHeaderStatement;
     }
 
     @InputImport(name="resourceStatement")
-      private final @Nullable Input<NetworkInsightsAccessScopeResourceStatementRequestArgs> resourceStatement;
+      private final @Nullable Output<NetworkInsightsAccessScopeResourceStatementRequestArgs> resourceStatement;
 
-    public Input<NetworkInsightsAccessScopeResourceStatementRequestArgs> getResourceStatement() {
-        return this.resourceStatement == null ? Input.empty() : this.resourceStatement;
+    public Output<NetworkInsightsAccessScopeResourceStatementRequestArgs> getResourceStatement() {
+        return this.resourceStatement == null ? Output.empty() : this.resourceStatement;
     }
 
     public NetworkInsightsAccessScopePathStatementRequestArgs(
-        @Nullable Input<NetworkInsightsAccessScopePacketHeaderStatementRequestArgs> packetHeaderStatement,
-        @Nullable Input<NetworkInsightsAccessScopeResourceStatementRequestArgs> resourceStatement) {
+        @Nullable Output<NetworkInsightsAccessScopePacketHeaderStatementRequestArgs> packetHeaderStatement,
+        @Nullable Output<NetworkInsightsAccessScopeResourceStatementRequestArgs> resourceStatement) {
         this.packetHeaderStatement = packetHeaderStatement;
         this.resourceStatement = resourceStatement;
     }
 
     private NetworkInsightsAccessScopePathStatementRequestArgs() {
-        this.packetHeaderStatement = Input.empty();
-        this.resourceStatement = Input.empty();
+        this.packetHeaderStatement = Output.empty();
+        this.resourceStatement = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class NetworkInsightsAccessScopePathStatementRequestArgs extends io
     }
 
     public static final class Builder {
-        private @Nullable Input<NetworkInsightsAccessScopePacketHeaderStatementRequestArgs> packetHeaderStatement;
-        private @Nullable Input<NetworkInsightsAccessScopeResourceStatementRequestArgs> resourceStatement;
+        private @Nullable Output<NetworkInsightsAccessScopePacketHeaderStatementRequestArgs> packetHeaderStatement;
+        private @Nullable Output<NetworkInsightsAccessScopeResourceStatementRequestArgs> resourceStatement;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class NetworkInsightsAccessScopePathStatementRequestArgs extends io
     	      this.resourceStatement = defaults.resourceStatement;
         }
 
-        public Builder packetHeaderStatement(@Nullable Input<NetworkInsightsAccessScopePacketHeaderStatementRequestArgs> packetHeaderStatement) {
+        public Builder packetHeaderStatement(@Nullable Output<NetworkInsightsAccessScopePacketHeaderStatementRequestArgs> packetHeaderStatement) {
             this.packetHeaderStatement = packetHeaderStatement;
             return this;
         }
 
         public Builder packetHeaderStatement(@Nullable NetworkInsightsAccessScopePacketHeaderStatementRequestArgs packetHeaderStatement) {
-            this.packetHeaderStatement = Input.ofNullable(packetHeaderStatement);
+            this.packetHeaderStatement = Output.ofNullable(packetHeaderStatement);
             return this;
         }
 
-        public Builder resourceStatement(@Nullable Input<NetworkInsightsAccessScopeResourceStatementRequestArgs> resourceStatement) {
+        public Builder resourceStatement(@Nullable Output<NetworkInsightsAccessScopeResourceStatementRequestArgs> resourceStatement) {
             this.resourceStatement = resourceStatement;
             return this;
         }
 
         public Builder resourceStatement(@Nullable NetworkInsightsAccessScopeResourceStatementRequestArgs resourceStatement) {
-            this.resourceStatement = Input.ofNullable(resourceStatement);
+            this.resourceStatement = Output.ofNullable(resourceStatement);
             return this;
         }
         public NetworkInsightsAccessScopePathStatementRequestArgs build() {

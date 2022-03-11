@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,29 +14,29 @@ public final class TopicRuleTimestreamTimestampArgs extends io.pulumi.resources.
     public static final TopicRuleTimestreamTimestampArgs Empty = new TopicRuleTimestreamTimestampArgs();
 
     @InputImport(name="unit", required=true)
-      private final Input<String> unit;
+      private final Output<String> unit;
 
-    public Input<String> getUnit() {
+    public Output<String> getUnit() {
         return this.unit;
     }
 
     @InputImport(name="value", required=true)
-      private final Input<String> value;
+      private final Output<String> value;
 
-    public Input<String> getValue() {
+    public Output<String> getValue() {
         return this.value;
     }
 
     public TopicRuleTimestreamTimestampArgs(
-        Input<String> unit,
-        Input<String> value) {
+        Output<String> unit,
+        Output<String> value) {
         this.unit = Objects.requireNonNull(unit, "expected parameter 'unit' to be non-null");
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private TopicRuleTimestreamTimestampArgs() {
-        this.unit = Input.empty();
-        this.value = Input.empty();
+        this.unit = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,8 +48,8 @@ public final class TopicRuleTimestreamTimestampArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<String> unit;
-        private Input<String> value;
+        private Output<String> unit;
+        private Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -61,23 +61,23 @@ public final class TopicRuleTimestreamTimestampArgs extends io.pulumi.resources.
     	      this.value = defaults.value;
         }
 
-        public Builder unit(Input<String> unit) {
+        public Builder unit(Output<String> unit) {
             this.unit = Objects.requireNonNull(unit);
             return this;
         }
 
         public Builder unit(String unit) {
-            this.unit = Input.of(Objects.requireNonNull(unit));
+            this.unit = Output.of(Objects.requireNonNull(unit));
             return this;
         }
 
-        public Builder value(Input<String> value) {
+        public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(String value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public TopicRuleTimestreamTimestampArgs build() {

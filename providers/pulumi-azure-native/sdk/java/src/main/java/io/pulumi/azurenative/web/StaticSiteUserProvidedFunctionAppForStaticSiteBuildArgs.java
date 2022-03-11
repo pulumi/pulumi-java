@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
      * 
      */
     @InputImport(name="environmentName", required=true)
-      private final Input<String> environmentName;
+      private final Output<String> environmentName;
 
-    public Input<String> getEnvironmentName() {
+    public Output<String> getEnvironmentName() {
         return this.environmentName;
     }
 
@@ -31,10 +31,10 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
      * 
      */
     @InputImport(name="functionAppName")
-      private final @Nullable Input<String> functionAppName;
+      private final @Nullable Output<String> functionAppName;
 
-    public Input<String> getFunctionAppName() {
-        return this.functionAppName == null ? Input.empty() : this.functionAppName;
+    public Output<String> getFunctionAppName() {
+        return this.functionAppName == null ? Output.empty() : this.functionAppName;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
      * 
      */
     @InputImport(name="functionAppRegion")
-      private final @Nullable Input<String> functionAppRegion;
+      private final @Nullable Output<String> functionAppRegion;
 
-    public Input<String> getFunctionAppRegion() {
-        return this.functionAppRegion == null ? Input.empty() : this.functionAppRegion;
+    public Output<String> getFunctionAppRegion() {
+        return this.functionAppRegion == null ? Output.empty() : this.functionAppRegion;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
      * 
      */
     @InputImport(name="functionAppResourceId")
-      private final @Nullable Input<String> functionAppResourceId;
+      private final @Nullable Output<String> functionAppResourceId;
 
-    public Input<String> getFunctionAppResourceId() {
-        return this.functionAppResourceId == null ? Input.empty() : this.functionAppResourceId;
+    public Output<String> getFunctionAppResourceId() {
+        return this.functionAppResourceId == null ? Output.empty() : this.functionAppResourceId;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
      * 
      */
     @InputImport(name="isForced")
-      private final @Nullable Input<Boolean> isForced;
+      private final @Nullable Output<Boolean> isForced;
 
-    public Input<Boolean> getIsForced() {
-        return this.isForced == null ? Input.empty() : this.isForced;
+    public Output<Boolean> getIsForced() {
+        return this.isForced == null ? Output.empty() : this.isForced;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -86,9 +86,9 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -97,21 +97,21 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs(
-        Input<String> environmentName,
-        @Nullable Input<String> functionAppName,
-        @Nullable Input<String> functionAppRegion,
-        @Nullable Input<String> functionAppResourceId,
-        @Nullable Input<Boolean> isForced,
-        @Nullable Input<String> kind,
-        Input<String> name,
-        Input<String> resourceGroupName) {
+        Output<String> environmentName,
+        @Nullable Output<String> functionAppName,
+        @Nullable Output<String> functionAppRegion,
+        @Nullable Output<String> functionAppResourceId,
+        @Nullable Output<Boolean> isForced,
+        @Nullable Output<String> kind,
+        Output<String> name,
+        Output<String> resourceGroupName) {
         this.environmentName = Objects.requireNonNull(environmentName, "expected parameter 'environmentName' to be non-null");
         this.functionAppName = functionAppName;
         this.functionAppRegion = functionAppRegion;
@@ -123,14 +123,14 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
     }
 
     private StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs() {
-        this.environmentName = Input.empty();
-        this.functionAppName = Input.empty();
-        this.functionAppRegion = Input.empty();
-        this.functionAppResourceId = Input.empty();
-        this.isForced = Input.empty();
-        this.kind = Input.empty();
-        this.name = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.environmentName = Output.empty();
+        this.functionAppName = Output.empty();
+        this.functionAppRegion = Output.empty();
+        this.functionAppResourceId = Output.empty();
+        this.isForced = Output.empty();
+        this.kind = Output.empty();
+        this.name = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -142,14 +142,14 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
     }
 
     public static final class Builder {
-        private Input<String> environmentName;
-        private @Nullable Input<String> functionAppName;
-        private @Nullable Input<String> functionAppRegion;
-        private @Nullable Input<String> functionAppResourceId;
-        private @Nullable Input<Boolean> isForced;
-        private @Nullable Input<String> kind;
-        private Input<String> name;
-        private Input<String> resourceGroupName;
+        private Output<String> environmentName;
+        private @Nullable Output<String> functionAppName;
+        private @Nullable Output<String> functionAppRegion;
+        private @Nullable Output<String> functionAppResourceId;
+        private @Nullable Output<Boolean> isForced;
+        private @Nullable Output<String> kind;
+        private Output<String> name;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -167,83 +167,83 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder environmentName(Input<String> environmentName) {
+        public Builder environmentName(Output<String> environmentName) {
             this.environmentName = Objects.requireNonNull(environmentName);
             return this;
         }
 
         public Builder environmentName(String environmentName) {
-            this.environmentName = Input.of(Objects.requireNonNull(environmentName));
+            this.environmentName = Output.of(Objects.requireNonNull(environmentName));
             return this;
         }
 
-        public Builder functionAppName(@Nullable Input<String> functionAppName) {
+        public Builder functionAppName(@Nullable Output<String> functionAppName) {
             this.functionAppName = functionAppName;
             return this;
         }
 
         public Builder functionAppName(@Nullable String functionAppName) {
-            this.functionAppName = Input.ofNullable(functionAppName);
+            this.functionAppName = Output.ofNullable(functionAppName);
             return this;
         }
 
-        public Builder functionAppRegion(@Nullable Input<String> functionAppRegion) {
+        public Builder functionAppRegion(@Nullable Output<String> functionAppRegion) {
             this.functionAppRegion = functionAppRegion;
             return this;
         }
 
         public Builder functionAppRegion(@Nullable String functionAppRegion) {
-            this.functionAppRegion = Input.ofNullable(functionAppRegion);
+            this.functionAppRegion = Output.ofNullable(functionAppRegion);
             return this;
         }
 
-        public Builder functionAppResourceId(@Nullable Input<String> functionAppResourceId) {
+        public Builder functionAppResourceId(@Nullable Output<String> functionAppResourceId) {
             this.functionAppResourceId = functionAppResourceId;
             return this;
         }
 
         public Builder functionAppResourceId(@Nullable String functionAppResourceId) {
-            this.functionAppResourceId = Input.ofNullable(functionAppResourceId);
+            this.functionAppResourceId = Output.ofNullable(functionAppResourceId);
             return this;
         }
 
-        public Builder isForced(@Nullable Input<Boolean> isForced) {
+        public Builder isForced(@Nullable Output<Boolean> isForced) {
             this.isForced = isForced;
             return this;
         }
 
         public Builder isForced(@Nullable Boolean isForced) {
-            this.isForced = Input.ofNullable(isForced);
+            this.isForced = Output.ofNullable(isForced);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs build() {

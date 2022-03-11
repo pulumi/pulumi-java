@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.awsnative.quicksight.inputs.ThemeBorderStyleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class ThemeTileStyleArgs extends io.pulumi.resources.ResourceArgs {
     public static final ThemeTileStyleArgs Empty = new ThemeTileStyleArgs();
 
     @InputImport(name="border")
-      private final @Nullable Input<ThemeBorderStyleArgs> border;
+      private final @Nullable Output<ThemeBorderStyleArgs> border;
 
-    public Input<ThemeBorderStyleArgs> getBorder() {
-        return this.border == null ? Input.empty() : this.border;
+    public Output<ThemeBorderStyleArgs> getBorder() {
+        return this.border == null ? Output.empty() : this.border;
     }
 
-    public ThemeTileStyleArgs(@Nullable Input<ThemeBorderStyleArgs> border) {
+    public ThemeTileStyleArgs(@Nullable Output<ThemeBorderStyleArgs> border) {
         this.border = border;
     }
 
     private ThemeTileStyleArgs() {
-        this.border = Input.empty();
+        this.border = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class ThemeTileStyleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ThemeBorderStyleArgs> border;
+        private @Nullable Output<ThemeBorderStyleArgs> border;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class ThemeTileStyleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.border = defaults.border;
         }
 
-        public Builder border(@Nullable Input<ThemeBorderStyleArgs> border) {
+        public Builder border(@Nullable Output<ThemeBorderStyleArgs> border) {
             this.border = border;
             return this;
         }
 
         public Builder border(@Nullable ThemeBorderStyleArgs border) {
-            this.border = Input.ofNullable(border);
+            this.border = Output.ofNullable(border);
             return this;
         }
         public ThemeTileStyleArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.mediaconnect.inputs;
 
 import io.pulumi.awsnative.mediaconnect.enums.FlowFailoverConfigState;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -24,29 +24,29 @@ public final class FlowFailoverConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="recoveryWindow")
-      private final @Nullable Input<Integer> recoveryWindow;
+      private final @Nullable Output<Integer> recoveryWindow;
 
-    public Input<Integer> getRecoveryWindow() {
-        return this.recoveryWindow == null ? Input.empty() : this.recoveryWindow;
+    public Output<Integer> getRecoveryWindow() {
+        return this.recoveryWindow == null ? Output.empty() : this.recoveryWindow;
     }
 
     @InputImport(name="state")
-      private final @Nullable Input<FlowFailoverConfigState> state;
+      private final @Nullable Output<FlowFailoverConfigState> state;
 
-    public Input<FlowFailoverConfigState> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<FlowFailoverConfigState> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     public FlowFailoverConfigArgs(
-        @Nullable Input<Integer> recoveryWindow,
-        @Nullable Input<FlowFailoverConfigState> state) {
+        @Nullable Output<Integer> recoveryWindow,
+        @Nullable Output<FlowFailoverConfigState> state) {
         this.recoveryWindow = recoveryWindow;
         this.state = state;
     }
 
     private FlowFailoverConfigArgs() {
-        this.recoveryWindow = Input.empty();
-        this.state = Input.empty();
+        this.recoveryWindow = Output.empty();
+        this.state = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class FlowFailoverConfigArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> recoveryWindow;
-        private @Nullable Input<FlowFailoverConfigState> state;
+        private @Nullable Output<Integer> recoveryWindow;
+        private @Nullable Output<FlowFailoverConfigState> state;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class FlowFailoverConfigArgs extends io.pulumi.resources.ResourceAr
     	      this.state = defaults.state;
         }
 
-        public Builder recoveryWindow(@Nullable Input<Integer> recoveryWindow) {
+        public Builder recoveryWindow(@Nullable Output<Integer> recoveryWindow) {
             this.recoveryWindow = recoveryWindow;
             return this;
         }
 
         public Builder recoveryWindow(@Nullable Integer recoveryWindow) {
-            this.recoveryWindow = Input.ofNullable(recoveryWindow);
+            this.recoveryWindow = Output.ofNullable(recoveryWindow);
             return this;
         }
 
-        public Builder state(@Nullable Input<FlowFailoverConfigState> state) {
+        public Builder state(@Nullable Output<FlowFailoverConfigState> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable FlowFailoverConfigState state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
         public FlowFailoverConfigArgs build() {

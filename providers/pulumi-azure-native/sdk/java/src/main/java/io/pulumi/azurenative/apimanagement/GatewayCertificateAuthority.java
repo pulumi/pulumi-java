@@ -6,7 +6,6 @@ package io.pulumi.azurenative.apimanagement;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.GatewayCertificateAuthorityArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -113,22 +112,22 @@ public class GatewayCertificateAuthority extends io.pulumi.resources.CustomResou
      * @param options A bag of options that control this resource's behavior.
      */
     public GatewayCertificateAuthority(String name, GatewayCertificateAuthorityArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:apimanagement:GatewayCertificateAuthority", name, args == null ? GatewayCertificateAuthorityArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:apimanagement:GatewayCertificateAuthority", name, args == null ? GatewayCertificateAuthorityArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private GatewayCertificateAuthority(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private GatewayCertificateAuthority(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:apimanagement:GatewayCertificateAuthority", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20200601preview:GatewayCertificateAuthority").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20201201:GatewayCertificateAuthority").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20210101preview:GatewayCertificateAuthority").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20210401preview:GatewayCertificateAuthority").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20210801:GatewayCertificateAuthority").build())
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20200601preview:GatewayCertificateAuthority").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20201201:GatewayCertificateAuthority").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210101preview:GatewayCertificateAuthority").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210401preview:GatewayCertificateAuthority").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210801:GatewayCertificateAuthority").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -142,7 +141,7 @@ public class GatewayCertificateAuthority extends io.pulumi.resources.CustomResou
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static GatewayCertificateAuthority get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static GatewayCertificateAuthority get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new GatewayCertificateAuthority(name, id, options);
     }
 }

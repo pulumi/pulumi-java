@@ -6,7 +6,7 @@ package io.pulumi.azurenative.avs;
 import io.pulumi.azurenative.avs.inputs.PSCredentialExecutionParameterArgs;
 import io.pulumi.azurenative.avs.inputs.ScriptSecureStringExecutionParameterArgs;
 import io.pulumi.azurenative.avs.inputs.ScriptStringExecutionParameterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="failureReason")
-      private final @Nullable Input<String> failureReason;
+      private final @Nullable Output<String> failureReason;
 
-    public Input<String> getFailureReason() {
-        return this.failureReason == null ? Input.empty() : this.failureReason;
+    public Output<String> getFailureReason() {
+        return this.failureReason == null ? Output.empty() : this.failureReason;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="hiddenParameters")
-      private final @Nullable Input<List<Object>> hiddenParameters;
+      private final @Nullable Output<List<Object>> hiddenParameters;
 
-    public Input<List<Object>> getHiddenParameters() {
-        return this.hiddenParameters == null ? Input.empty() : this.hiddenParameters;
+    public Output<List<Object>> getHiddenParameters() {
+        return this.hiddenParameters == null ? Output.empty() : this.hiddenParameters;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="namedOutputs")
-      private final @Nullable Input<Map<String,Object>> namedOutputs;
+      private final @Nullable Output<Map<String,Object>> namedOutputs;
 
-    public Input<Map<String,Object>> getNamedOutputs() {
-        return this.namedOutputs == null ? Input.empty() : this.namedOutputs;
+    public Output<Map<String,Object>> getNamedOutputs() {
+        return this.namedOutputs == null ? Output.empty() : this.namedOutputs;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="output")
-      private final @Nullable Input<List<String>> output;
+      private final @Nullable Output<List<String>> output;
 
-    public Input<List<String>> getOutput() {
-        return this.output == null ? Input.empty() : this.output;
+    public Output<List<String>> getOutput() {
+        return this.output == null ? Output.empty() : this.output;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<List<Object>> parameters;
+      private final @Nullable Output<List<Object>> parameters;
 
-    public Input<List<Object>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<List<Object>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -80,9 +80,9 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="privateCloudName", required=true)
-      private final Input<String> privateCloudName;
+      private final Output<String> privateCloudName;
 
-    public Input<String> getPrivateCloudName() {
+    public Output<String> getPrivateCloudName() {
         return this.privateCloudName;
     }
 
@@ -91,9 +91,9 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -102,10 +102,10 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="retention")
-      private final @Nullable Input<String> retention;
+      private final @Nullable Output<String> retention;
 
-    public Input<String> getRetention() {
-        return this.retention == null ? Input.empty() : this.retention;
+    public Output<String> getRetention() {
+        return this.retention == null ? Output.empty() : this.retention;
     }
 
     /**
@@ -113,10 +113,10 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="scriptCmdletId")
-      private final @Nullable Input<String> scriptCmdletId;
+      private final @Nullable Output<String> scriptCmdletId;
 
-    public Input<String> getScriptCmdletId() {
-        return this.scriptCmdletId == null ? Input.empty() : this.scriptCmdletId;
+    public Output<String> getScriptCmdletId() {
+        return this.scriptCmdletId == null ? Output.empty() : this.scriptCmdletId;
     }
 
     /**
@@ -124,10 +124,10 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="scriptExecutionName")
-      private final @Nullable Input<String> scriptExecutionName;
+      private final @Nullable Output<String> scriptExecutionName;
 
-    public Input<String> getScriptExecutionName() {
-        return this.scriptExecutionName == null ? Input.empty() : this.scriptExecutionName;
+    public Output<String> getScriptExecutionName() {
+        return this.scriptExecutionName == null ? Output.empty() : this.scriptExecutionName;
     }
 
     /**
@@ -135,24 +135,24 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="timeout", required=true)
-      private final Input<String> timeout;
+      private final Output<String> timeout;
 
-    public Input<String> getTimeout() {
+    public Output<String> getTimeout() {
         return this.timeout;
     }
 
     public ScriptExecutionArgs(
-        @Nullable Input<String> failureReason,
-        @Nullable Input<List<Object>> hiddenParameters,
-        @Nullable Input<Map<String,Object>> namedOutputs,
-        @Nullable Input<List<String>> output,
-        @Nullable Input<List<Object>> parameters,
-        Input<String> privateCloudName,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> retention,
-        @Nullable Input<String> scriptCmdletId,
-        @Nullable Input<String> scriptExecutionName,
-        Input<String> timeout) {
+        @Nullable Output<String> failureReason,
+        @Nullable Output<List<Object>> hiddenParameters,
+        @Nullable Output<Map<String,Object>> namedOutputs,
+        @Nullable Output<List<String>> output,
+        @Nullable Output<List<Object>> parameters,
+        Output<String> privateCloudName,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> retention,
+        @Nullable Output<String> scriptCmdletId,
+        @Nullable Output<String> scriptExecutionName,
+        Output<String> timeout) {
         this.failureReason = failureReason;
         this.hiddenParameters = hiddenParameters;
         this.namedOutputs = namedOutputs;
@@ -167,17 +167,17 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ScriptExecutionArgs() {
-        this.failureReason = Input.empty();
-        this.hiddenParameters = Input.empty();
-        this.namedOutputs = Input.empty();
-        this.output = Input.empty();
-        this.parameters = Input.empty();
-        this.privateCloudName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.retention = Input.empty();
-        this.scriptCmdletId = Input.empty();
-        this.scriptExecutionName = Input.empty();
-        this.timeout = Input.empty();
+        this.failureReason = Output.empty();
+        this.hiddenParameters = Output.empty();
+        this.namedOutputs = Output.empty();
+        this.output = Output.empty();
+        this.parameters = Output.empty();
+        this.privateCloudName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.retention = Output.empty();
+        this.scriptCmdletId = Output.empty();
+        this.scriptExecutionName = Output.empty();
+        this.timeout = Output.empty();
     }
 
     public static Builder builder() {
@@ -189,17 +189,17 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> failureReason;
-        private @Nullable Input<List<Object>> hiddenParameters;
-        private @Nullable Input<Map<String,Object>> namedOutputs;
-        private @Nullable Input<List<String>> output;
-        private @Nullable Input<List<Object>> parameters;
-        private Input<String> privateCloudName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> retention;
-        private @Nullable Input<String> scriptCmdletId;
-        private @Nullable Input<String> scriptExecutionName;
-        private Input<String> timeout;
+        private @Nullable Output<String> failureReason;
+        private @Nullable Output<List<Object>> hiddenParameters;
+        private @Nullable Output<Map<String,Object>> namedOutputs;
+        private @Nullable Output<List<String>> output;
+        private @Nullable Output<List<Object>> parameters;
+        private Output<String> privateCloudName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> retention;
+        private @Nullable Output<String> scriptCmdletId;
+        private @Nullable Output<String> scriptExecutionName;
+        private Output<String> timeout;
 
         public Builder() {
     	      // Empty
@@ -220,113 +220,113 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder failureReason(@Nullable Input<String> failureReason) {
+        public Builder failureReason(@Nullable Output<String> failureReason) {
             this.failureReason = failureReason;
             return this;
         }
 
         public Builder failureReason(@Nullable String failureReason) {
-            this.failureReason = Input.ofNullable(failureReason);
+            this.failureReason = Output.ofNullable(failureReason);
             return this;
         }
 
-        public Builder hiddenParameters(@Nullable Input<List<Object>> hiddenParameters) {
+        public Builder hiddenParameters(@Nullable Output<List<Object>> hiddenParameters) {
             this.hiddenParameters = hiddenParameters;
             return this;
         }
 
         public Builder hiddenParameters(@Nullable List<Object> hiddenParameters) {
-            this.hiddenParameters = Input.ofNullable(hiddenParameters);
+            this.hiddenParameters = Output.ofNullable(hiddenParameters);
             return this;
         }
 
-        public Builder namedOutputs(@Nullable Input<Map<String,Object>> namedOutputs) {
+        public Builder namedOutputs(@Nullable Output<Map<String,Object>> namedOutputs) {
             this.namedOutputs = namedOutputs;
             return this;
         }
 
         public Builder namedOutputs(@Nullable Map<String,Object> namedOutputs) {
-            this.namedOutputs = Input.ofNullable(namedOutputs);
+            this.namedOutputs = Output.ofNullable(namedOutputs);
             return this;
         }
 
-        public Builder output(@Nullable Input<List<String>> output) {
+        public Builder output(@Nullable Output<List<String>> output) {
             this.output = output;
             return this;
         }
 
         public Builder output(@Nullable List<String> output) {
-            this.output = Input.ofNullable(output);
+            this.output = Output.ofNullable(output);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<List<Object>> parameters) {
+        public Builder parameters(@Nullable Output<List<Object>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable List<Object> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder privateCloudName(Input<String> privateCloudName) {
+        public Builder privateCloudName(Output<String> privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
 
         public Builder privateCloudName(String privateCloudName) {
-            this.privateCloudName = Input.of(Objects.requireNonNull(privateCloudName));
+            this.privateCloudName = Output.of(Objects.requireNonNull(privateCloudName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder retention(@Nullable Input<String> retention) {
+        public Builder retention(@Nullable Output<String> retention) {
             this.retention = retention;
             return this;
         }
 
         public Builder retention(@Nullable String retention) {
-            this.retention = Input.ofNullable(retention);
+            this.retention = Output.ofNullable(retention);
             return this;
         }
 
-        public Builder scriptCmdletId(@Nullable Input<String> scriptCmdletId) {
+        public Builder scriptCmdletId(@Nullable Output<String> scriptCmdletId) {
             this.scriptCmdletId = scriptCmdletId;
             return this;
         }
 
         public Builder scriptCmdletId(@Nullable String scriptCmdletId) {
-            this.scriptCmdletId = Input.ofNullable(scriptCmdletId);
+            this.scriptCmdletId = Output.ofNullable(scriptCmdletId);
             return this;
         }
 
-        public Builder scriptExecutionName(@Nullable Input<String> scriptExecutionName) {
+        public Builder scriptExecutionName(@Nullable Output<String> scriptExecutionName) {
             this.scriptExecutionName = scriptExecutionName;
             return this;
         }
 
         public Builder scriptExecutionName(@Nullable String scriptExecutionName) {
-            this.scriptExecutionName = Input.ofNullable(scriptExecutionName);
+            this.scriptExecutionName = Output.ofNullable(scriptExecutionName);
             return this;
         }
 
-        public Builder timeout(Input<String> timeout) {
+        public Builder timeout(Output<String> timeout) {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }
 
         public Builder timeout(String timeout) {
-            this.timeout = Input.of(Objects.requireNonNull(timeout));
+            this.timeout = Output.of(Objects.requireNonNull(timeout));
             return this;
         }
         public ScriptExecutionArgs build() {

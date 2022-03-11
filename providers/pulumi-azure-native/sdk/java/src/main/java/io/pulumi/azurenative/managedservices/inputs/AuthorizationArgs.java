@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.managedservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="delegatedRoleDefinitionIds")
-      private final @Nullable Input<List<String>> delegatedRoleDefinitionIds;
+      private final @Nullable Output<List<String>> delegatedRoleDefinitionIds;
 
-    public Input<List<String>> getDelegatedRoleDefinitionIds() {
-        return this.delegatedRoleDefinitionIds == null ? Input.empty() : this.delegatedRoleDefinitionIds;
+    public Output<List<String>> getDelegatedRoleDefinitionIds() {
+        return this.delegatedRoleDefinitionIds == null ? Output.empty() : this.delegatedRoleDefinitionIds;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="principalId", required=true)
-      private final Input<String> principalId;
+      private final Output<String> principalId;
 
-    public Input<String> getPrincipalId() {
+    public Output<String> getPrincipalId() {
         return this.principalId;
     }
 
@@ -46,10 +46,10 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="principalIdDisplayName")
-      private final @Nullable Input<String> principalIdDisplayName;
+      private final @Nullable Output<String> principalIdDisplayName;
 
-    public Input<String> getPrincipalIdDisplayName() {
-        return this.principalIdDisplayName == null ? Input.empty() : this.principalIdDisplayName;
+    public Output<String> getPrincipalIdDisplayName() {
+        return this.principalIdDisplayName == null ? Output.empty() : this.principalIdDisplayName;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleDefinitionId", required=true)
-      private final Input<String> roleDefinitionId;
+      private final Output<String> roleDefinitionId;
 
-    public Input<String> getRoleDefinitionId() {
+    public Output<String> getRoleDefinitionId() {
         return this.roleDefinitionId;
     }
 
     public AuthorizationArgs(
-        @Nullable Input<List<String>> delegatedRoleDefinitionIds,
-        Input<String> principalId,
-        @Nullable Input<String> principalIdDisplayName,
-        Input<String> roleDefinitionId) {
+        @Nullable Output<List<String>> delegatedRoleDefinitionIds,
+        Output<String> principalId,
+        @Nullable Output<String> principalIdDisplayName,
+        Output<String> roleDefinitionId) {
         this.delegatedRoleDefinitionIds = delegatedRoleDefinitionIds;
         this.principalId = Objects.requireNonNull(principalId, "expected parameter 'principalId' to be non-null");
         this.principalIdDisplayName = principalIdDisplayName;
@@ -75,10 +75,10 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AuthorizationArgs() {
-        this.delegatedRoleDefinitionIds = Input.empty();
-        this.principalId = Input.empty();
-        this.principalIdDisplayName = Input.empty();
-        this.roleDefinitionId = Input.empty();
+        this.delegatedRoleDefinitionIds = Output.empty();
+        this.principalId = Output.empty();
+        this.principalIdDisplayName = Output.empty();
+        this.roleDefinitionId = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> delegatedRoleDefinitionIds;
-        private Input<String> principalId;
-        private @Nullable Input<String> principalIdDisplayName;
-        private Input<String> roleDefinitionId;
+        private @Nullable Output<List<String>> delegatedRoleDefinitionIds;
+        private Output<String> principalId;
+        private @Nullable Output<String> principalIdDisplayName;
+        private Output<String> roleDefinitionId;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.roleDefinitionId = defaults.roleDefinitionId;
         }
 
-        public Builder delegatedRoleDefinitionIds(@Nullable Input<List<String>> delegatedRoleDefinitionIds) {
+        public Builder delegatedRoleDefinitionIds(@Nullable Output<List<String>> delegatedRoleDefinitionIds) {
             this.delegatedRoleDefinitionIds = delegatedRoleDefinitionIds;
             return this;
         }
 
         public Builder delegatedRoleDefinitionIds(@Nullable List<String> delegatedRoleDefinitionIds) {
-            this.delegatedRoleDefinitionIds = Input.ofNullable(delegatedRoleDefinitionIds);
+            this.delegatedRoleDefinitionIds = Output.ofNullable(delegatedRoleDefinitionIds);
             return this;
         }
 
-        public Builder principalId(Input<String> principalId) {
+        public Builder principalId(Output<String> principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
 
         public Builder principalId(String principalId) {
-            this.principalId = Input.of(Objects.requireNonNull(principalId));
+            this.principalId = Output.of(Objects.requireNonNull(principalId));
             return this;
         }
 
-        public Builder principalIdDisplayName(@Nullable Input<String> principalIdDisplayName) {
+        public Builder principalIdDisplayName(@Nullable Output<String> principalIdDisplayName) {
             this.principalIdDisplayName = principalIdDisplayName;
             return this;
         }
 
         public Builder principalIdDisplayName(@Nullable String principalIdDisplayName) {
-            this.principalIdDisplayName = Input.ofNullable(principalIdDisplayName);
+            this.principalIdDisplayName = Output.ofNullable(principalIdDisplayName);
             return this;
         }
 
-        public Builder roleDefinitionId(Input<String> roleDefinitionId) {
+        public Builder roleDefinitionId(Output<String> roleDefinitionId) {
             this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
             return this;
         }
 
         public Builder roleDefinitionId(String roleDefinitionId) {
-            this.roleDefinitionId = Input.of(Objects.requireNonNull(roleDefinitionId));
+            this.roleDefinitionId = Output.of(Objects.requireNonNull(roleDefinitionId));
             return this;
         }
         public AuthorizationArgs build() {

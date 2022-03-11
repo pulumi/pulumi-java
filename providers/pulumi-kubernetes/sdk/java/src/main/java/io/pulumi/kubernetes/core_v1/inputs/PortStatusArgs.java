@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class PortStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="error")
-      private final @Nullable Input<String> error;
+      private final @Nullable Output<String> error;
 
-    public Input<String> getError() {
-        return this.error == null ? Input.empty() : this.error;
+    public Output<String> getError() {
+        return this.error == null ? Output.empty() : this.error;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class PortStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port", required=true)
-      private final Input<Integer> port;
+      private final Output<Integer> port;
 
-    public Input<Integer> getPort() {
+    public Output<Integer> getPort() {
         return this.port;
     }
 
@@ -50,25 +50,25 @@ public final class PortStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol", required=true)
-      private final Input<String> protocol;
+      private final Output<String> protocol;
 
-    public Input<String> getProtocol() {
+    public Output<String> getProtocol() {
         return this.protocol;
     }
 
     public PortStatusArgs(
-        @Nullable Input<String> error,
-        Input<Integer> port,
-        Input<String> protocol) {
+        @Nullable Output<String> error,
+        Output<Integer> port,
+        Output<String> protocol) {
         this.error = error;
         this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
         this.protocol = Objects.requireNonNull(protocol, "expected parameter 'protocol' to be non-null");
     }
 
     private PortStatusArgs() {
-        this.error = Input.empty();
-        this.port = Input.empty();
-        this.protocol = Input.empty();
+        this.error = Output.empty();
+        this.port = Output.empty();
+        this.protocol = Output.empty();
     }
 
     public static Builder builder() {
@@ -80,9 +80,9 @@ public final class PortStatusArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> error;
-        private Input<Integer> port;
-        private Input<String> protocol;
+        private @Nullable Output<String> error;
+        private Output<Integer> port;
+        private Output<String> protocol;
 
         public Builder() {
     	      // Empty
@@ -95,33 +95,33 @@ public final class PortStatusArgs extends io.pulumi.resources.ResourceArgs {
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder error(@Nullable Input<String> error) {
+        public Builder error(@Nullable Output<String> error) {
             this.error = error;
             return this;
         }
 
         public Builder error(@Nullable String error) {
-            this.error = Input.ofNullable(error);
+            this.error = Output.ofNullable(error);
             return this;
         }
 
-        public Builder port(Input<Integer> port) {
+        public Builder port(Output<Integer> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
         public Builder port(Integer port) {
-            this.port = Input.of(Objects.requireNonNull(port));
+            this.port = Output.of(Objects.requireNonNull(port));
             return this;
         }
 
-        public Builder protocol(Input<String> protocol) {
+        public Builder protocol(Output<String> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
         public Builder protocol(String protocol) {
-            this.protocol = Input.of(Objects.requireNonNull(protocol));
+            this.protocol = Output.of(Objects.requireNonNull(protocol));
             return this;
         }
         public PortStatusArgs build() {

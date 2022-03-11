@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.quicksight.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class DataSourceParametersRdsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="database", required=true)
-      private final Input<String> database;
+      private final Output<String> database;
 
-    public Input<String> getDatabase() {
+    public Output<String> getDatabase() {
         return this.database;
     }
 
@@ -29,22 +29,22 @@ public final class DataSourceParametersRdsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="instanceId", required=true)
-      private final Input<String> instanceId;
+      private final Output<String> instanceId;
 
-    public Input<String> getInstanceId() {
+    public Output<String> getInstanceId() {
         return this.instanceId;
     }
 
     public DataSourceParametersRdsArgs(
-        Input<String> database,
-        Input<String> instanceId) {
+        Output<String> database,
+        Output<String> instanceId) {
         this.database = Objects.requireNonNull(database, "expected parameter 'database' to be non-null");
         this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
     }
 
     private DataSourceParametersRdsArgs() {
-        this.database = Input.empty();
-        this.instanceId = Input.empty();
+        this.database = Output.empty();
+        this.instanceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class DataSourceParametersRdsArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<String> database;
-        private Input<String> instanceId;
+        private Output<String> database;
+        private Output<String> instanceId;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class DataSourceParametersRdsArgs extends io.pulumi.resources.Resou
     	      this.instanceId = defaults.instanceId;
         }
 
-        public Builder database(Input<String> database) {
+        public Builder database(Output<String> database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
 
         public Builder database(String database) {
-            this.database = Input.of(Objects.requireNonNull(database));
+            this.database = Output.of(Objects.requireNonNull(database));
             return this;
         }
 
-        public Builder instanceId(Input<String> instanceId) {
+        public Builder instanceId(Output<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
         public Builder instanceId(String instanceId) {
-            this.instanceId = Input.of(Objects.requireNonNull(instanceId));
+            this.instanceId = Output.of(Objects.requireNonNull(instanceId));
             return this;
         }
         public DataSourceParametersRdsArgs build() {

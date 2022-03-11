@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.mediapackage;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,9 +20,9 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="channelId", required=true)
-      private final Input<String> channelId;
+      private final Output<String> channelId;
 
-    public Input<String> getChannelId() {
+    public Output<String> getChannelId() {
         return this.channelId;
     }
 
@@ -31,10 +31,10 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ChannelArgs(
-        Input<String> channelId,
-        @Nullable Input<String> description,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> channelId,
+        @Nullable Output<String> description,
+        @Nullable Output<Map<String,String>> tags) {
         this.channelId = Objects.requireNonNull(channelId, "expected parameter 'channelId' to be non-null");
-        this.description = description == null ? Input.ofNullable("Managed by Pulumi") : description;
+        this.description = description == null ? Output.ofNullable("Managed by Pulumi") : description;
         this.tags = tags;
     }
 
     private ChannelArgs() {
-        this.channelId = Input.empty();
-        this.description = Input.empty();
-        this.tags = Input.empty();
+        this.channelId = Output.empty();
+        this.description = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> channelId;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> channelId;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder channelId(Input<String> channelId) {
+        public Builder channelId(Output<String> channelId) {
             this.channelId = Objects.requireNonNull(channelId);
             return this;
         }
 
         public Builder channelId(String channelId) {
-            this.channelId = Input.of(Objects.requireNonNull(channelId));
+            this.channelId = Output.of(Objects.requireNonNull(channelId));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ChannelArgs build() {

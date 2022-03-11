@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.meta_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.meta_v1.inputs.ListMetaArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.StatusDetailsArgs;
@@ -22,10 +22,10 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiVersion")
-      private final @Nullable Input<String> apiVersion;
+      private final @Nullable Output<String> apiVersion;
 
-    public Input<String> getApiVersion() {
-        return this.apiVersion == null ? Input.empty() : this.apiVersion;
+    public Output<String> getApiVersion() {
+        return this.apiVersion == null ? Output.empty() : this.apiVersion;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="code")
-      private final @Nullable Input<Integer> code;
+      private final @Nullable Output<Integer> code;
 
-    public Input<Integer> getCode() {
-        return this.code == null ? Input.empty() : this.code;
+    public Output<Integer> getCode() {
+        return this.code == null ? Output.empty() : this.code;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="details")
-      private final @Nullable Input<StatusDetailsArgs> details;
+      private final @Nullable Output<StatusDetailsArgs> details;
 
-    public Input<StatusDetailsArgs> getDetails() {
-        return this.details == null ? Input.empty() : this.details;
+    public Output<StatusDetailsArgs> getDetails() {
+        return this.details == null ? Output.empty() : this.details;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="message")
-      private final @Nullable Input<String> message;
+      private final @Nullable Output<String> message;
 
-    public Input<String> getMessage() {
-        return this.message == null ? Input.empty() : this.message;
+    public Output<String> getMessage() {
+        return this.message == null ? Output.empty() : this.message;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<ListMetaArgs> metadata;
+      private final @Nullable Output<ListMetaArgs> metadata;
 
-    public Input<ListMetaArgs> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<ListMetaArgs> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -88,20 +88,20 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reason")
-      private final @Nullable Input<String> reason;
+      private final @Nullable Output<String> reason;
 
-    public Input<String> getReason() {
-        return this.reason == null ? Input.empty() : this.reason;
+    public Output<String> getReason() {
+        return this.reason == null ? Output.empty() : this.reason;
     }
 
     public StatusArgs(
-        @Nullable Input<String> apiVersion,
-        @Nullable Input<Integer> code,
-        @Nullable Input<StatusDetailsArgs> details,
-        @Nullable Input<String> kind,
-        @Nullable Input<String> message,
-        @Nullable Input<ListMetaArgs> metadata,
-        @Nullable Input<String> reason) {
+        @Nullable Output<String> apiVersion,
+        @Nullable Output<Integer> code,
+        @Nullable Output<StatusDetailsArgs> details,
+        @Nullable Output<String> kind,
+        @Nullable Output<String> message,
+        @Nullable Output<ListMetaArgs> metadata,
+        @Nullable Output<String> reason) {
         this.apiVersion = apiVersion;
         this.code = code;
         this.details = details;
@@ -112,13 +112,13 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StatusArgs() {
-        this.apiVersion = Input.empty();
-        this.code = Input.empty();
-        this.details = Input.empty();
-        this.kind = Input.empty();
-        this.message = Input.empty();
-        this.metadata = Input.empty();
-        this.reason = Input.empty();
+        this.apiVersion = Output.empty();
+        this.code = Output.empty();
+        this.details = Output.empty();
+        this.kind = Output.empty();
+        this.message = Output.empty();
+        this.metadata = Output.empty();
+        this.reason = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> apiVersion;
-        private @Nullable Input<Integer> code;
-        private @Nullable Input<StatusDetailsArgs> details;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<String> message;
-        private @Nullable Input<ListMetaArgs> metadata;
-        private @Nullable Input<String> reason;
+        private @Nullable Output<String> apiVersion;
+        private @Nullable Output<Integer> code;
+        private @Nullable Output<StatusDetailsArgs> details;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<String> message;
+        private @Nullable Output<ListMetaArgs> metadata;
+        private @Nullable Output<String> reason;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
     	      this.reason = defaults.reason;
         }
 
-        public Builder apiVersion(@Nullable Input<String> apiVersion) {
+        public Builder apiVersion(@Nullable Output<String> apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
         public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Input.ofNullable(apiVersion);
+            this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
 
-        public Builder code(@Nullable Input<Integer> code) {
+        public Builder code(@Nullable Output<Integer> code) {
             this.code = code;
             return this;
         }
 
         public Builder code(@Nullable Integer code) {
-            this.code = Input.ofNullable(code);
+            this.code = Output.ofNullable(code);
             return this;
         }
 
-        public Builder details(@Nullable Input<StatusDetailsArgs> details) {
+        public Builder details(@Nullable Output<StatusDetailsArgs> details) {
             this.details = details;
             return this;
         }
 
         public Builder details(@Nullable StatusDetailsArgs details) {
-            this.details = Input.ofNullable(details);
+            this.details = Output.ofNullable(details);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder message(@Nullable Input<String> message) {
+        public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
 
         public Builder message(@Nullable String message) {
-            this.message = Input.ofNullable(message);
+            this.message = Output.ofNullable(message);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<ListMetaArgs> metadata) {
+        public Builder metadata(@Nullable Output<ListMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable ListMetaArgs metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder reason(@Nullable Input<String> reason) {
+        public Builder reason(@Nullable Output<String> reason) {
             this.reason = reason;
             return this;
         }
 
         public Builder reason(@Nullable String reason) {
-            this.reason = Input.ofNullable(reason);
+            this.reason = Output.ofNullable(reason);
             return this;
         }
         public StatusArgs build() {

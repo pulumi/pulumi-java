@@ -8,7 +8,7 @@ import io.pulumi.azurenative.web.inputs.IngressArgs;
 import io.pulumi.azurenative.web.inputs.RegistryCredentialsArgs;
 import io.pulumi.azurenative.web.inputs.SecretArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -30,10 +30,10 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="activeRevisionsMode")
-      private final @Nullable Input<Either<String,ActiveRevisionsMode>> activeRevisionsMode;
+      private final @Nullable Output<Either<String,ActiveRevisionsMode>> activeRevisionsMode;
 
-    public Input<Either<String,ActiveRevisionsMode>> getActiveRevisionsMode() {
-        return this.activeRevisionsMode == null ? Input.empty() : this.activeRevisionsMode;
+    public Output<Either<String,ActiveRevisionsMode>> getActiveRevisionsMode() {
+        return this.activeRevisionsMode == null ? Output.empty() : this.activeRevisionsMode;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ingress")
-      private final @Nullable Input<IngressArgs> ingress;
+      private final @Nullable Output<IngressArgs> ingress;
 
-    public Input<IngressArgs> getIngress() {
-        return this.ingress == null ? Input.empty() : this.ingress;
+    public Output<IngressArgs> getIngress() {
+        return this.ingress == null ? Output.empty() : this.ingress;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registries")
-      private final @Nullable Input<List<RegistryCredentialsArgs>> registries;
+      private final @Nullable Output<List<RegistryCredentialsArgs>> registries;
 
-    public Input<List<RegistryCredentialsArgs>> getRegistries() {
-        return this.registries == null ? Input.empty() : this.registries;
+    public Output<List<RegistryCredentialsArgs>> getRegistries() {
+        return this.registries == null ? Output.empty() : this.registries;
     }
 
     /**
@@ -63,17 +63,17 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secrets")
-      private final @Nullable Input<List<SecretArgs>> secrets;
+      private final @Nullable Output<List<SecretArgs>> secrets;
 
-    public Input<List<SecretArgs>> getSecrets() {
-        return this.secrets == null ? Input.empty() : this.secrets;
+    public Output<List<SecretArgs>> getSecrets() {
+        return this.secrets == null ? Output.empty() : this.secrets;
     }
 
     public ConfigurationArgs(
-        @Nullable Input<Either<String,ActiveRevisionsMode>> activeRevisionsMode,
-        @Nullable Input<IngressArgs> ingress,
-        @Nullable Input<List<RegistryCredentialsArgs>> registries,
-        @Nullable Input<List<SecretArgs>> secrets) {
+        @Nullable Output<Either<String,ActiveRevisionsMode>> activeRevisionsMode,
+        @Nullable Output<IngressArgs> ingress,
+        @Nullable Output<List<RegistryCredentialsArgs>> registries,
+        @Nullable Output<List<SecretArgs>> secrets) {
         this.activeRevisionsMode = activeRevisionsMode;
         this.ingress = ingress;
         this.registries = registries;
@@ -81,10 +81,10 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConfigurationArgs() {
-        this.activeRevisionsMode = Input.empty();
-        this.ingress = Input.empty();
-        this.registries = Input.empty();
-        this.secrets = Input.empty();
+        this.activeRevisionsMode = Output.empty();
+        this.ingress = Output.empty();
+        this.registries = Output.empty();
+        this.secrets = Output.empty();
     }
 
     public static Builder builder() {
@@ -96,10 +96,10 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,ActiveRevisionsMode>> activeRevisionsMode;
-        private @Nullable Input<IngressArgs> ingress;
-        private @Nullable Input<List<RegistryCredentialsArgs>> registries;
-        private @Nullable Input<List<SecretArgs>> secrets;
+        private @Nullable Output<Either<String,ActiveRevisionsMode>> activeRevisionsMode;
+        private @Nullable Output<IngressArgs> ingress;
+        private @Nullable Output<List<RegistryCredentialsArgs>> registries;
+        private @Nullable Output<List<SecretArgs>> secrets;
 
         public Builder() {
     	      // Empty
@@ -113,43 +113,43 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.secrets = defaults.secrets;
         }
 
-        public Builder activeRevisionsMode(@Nullable Input<Either<String,ActiveRevisionsMode>> activeRevisionsMode) {
+        public Builder activeRevisionsMode(@Nullable Output<Either<String,ActiveRevisionsMode>> activeRevisionsMode) {
             this.activeRevisionsMode = activeRevisionsMode;
             return this;
         }
 
         public Builder activeRevisionsMode(@Nullable Either<String,ActiveRevisionsMode> activeRevisionsMode) {
-            this.activeRevisionsMode = Input.ofNullable(activeRevisionsMode);
+            this.activeRevisionsMode = Output.ofNullable(activeRevisionsMode);
             return this;
         }
 
-        public Builder ingress(@Nullable Input<IngressArgs> ingress) {
+        public Builder ingress(@Nullable Output<IngressArgs> ingress) {
             this.ingress = ingress;
             return this;
         }
 
         public Builder ingress(@Nullable IngressArgs ingress) {
-            this.ingress = Input.ofNullable(ingress);
+            this.ingress = Output.ofNullable(ingress);
             return this;
         }
 
-        public Builder registries(@Nullable Input<List<RegistryCredentialsArgs>> registries) {
+        public Builder registries(@Nullable Output<List<RegistryCredentialsArgs>> registries) {
             this.registries = registries;
             return this;
         }
 
         public Builder registries(@Nullable List<RegistryCredentialsArgs> registries) {
-            this.registries = Input.ofNullable(registries);
+            this.registries = Output.ofNullable(registries);
             return this;
         }
 
-        public Builder secrets(@Nullable Input<List<SecretArgs>> secrets) {
+        public Builder secrets(@Nullable Output<List<SecretArgs>> secrets) {
             this.secrets = secrets;
             return this;
         }
 
         public Builder secrets(@Nullable List<SecretArgs> secrets) {
-            this.secrets = Input.ofNullable(secrets);
+            this.secrets = Output.ofNullable(secrets);
             return this;
         }
         public ConfigurationArgs build() {

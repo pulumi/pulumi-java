@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lightsail;
 
 import io.pulumi.awsnative.lightsail.inputs.LoadBalancerTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -23,10 +23,10 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attachedInstances")
-      private final @Nullable Input<List<String>> attachedInstances;
+      private final @Nullable Output<List<String>> attachedInstances;
 
-    public Input<List<String>> getAttachedInstances() {
-        return this.attachedInstances == null ? Input.empty() : this.attachedInstances;
+    public Output<List<String>> getAttachedInstances() {
+        return this.attachedInstances == null ? Output.empty() : this.attachedInstances;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthCheckPath")
-      private final @Nullable Input<String> healthCheckPath;
+      private final @Nullable Output<String> healthCheckPath;
 
-    public Input<String> getHealthCheckPath() {
-        return this.healthCheckPath == null ? Input.empty() : this.healthCheckPath;
+    public Output<String> getHealthCheckPath() {
+        return this.healthCheckPath == null ? Output.empty() : this.healthCheckPath;
     }
 
     /**
@@ -45,9 +45,9 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instancePort", required=true)
-      private final Input<Integer> instancePort;
+      private final Output<Integer> instancePort;
 
-    public Input<Integer> getInstancePort() {
+    public Output<Integer> getInstancePort() {
         return this.instancePort;
     }
 
@@ -56,10 +56,10 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAddressType")
-      private final @Nullable Input<String> ipAddressType;
+      private final @Nullable Output<String> ipAddressType;
 
-    public Input<String> getIpAddressType() {
-        return this.ipAddressType == null ? Input.empty() : this.ipAddressType;
+    public Output<String> getIpAddressType() {
+        return this.ipAddressType == null ? Output.empty() : this.ipAddressType;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loadBalancerName")
-      private final @Nullable Input<String> loadBalancerName;
+      private final @Nullable Output<String> loadBalancerName;
 
-    public Input<String> getLoadBalancerName() {
-        return this.loadBalancerName == null ? Input.empty() : this.loadBalancerName;
+    public Output<String> getLoadBalancerName() {
+        return this.loadBalancerName == null ? Output.empty() : this.loadBalancerName;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sessionStickinessEnabled")
-      private final @Nullable Input<Boolean> sessionStickinessEnabled;
+      private final @Nullable Output<Boolean> sessionStickinessEnabled;
 
-    public Input<Boolean> getSessionStickinessEnabled() {
-        return this.sessionStickinessEnabled == null ? Input.empty() : this.sessionStickinessEnabled;
+    public Output<Boolean> getSessionStickinessEnabled() {
+        return this.sessionStickinessEnabled == null ? Output.empty() : this.sessionStickinessEnabled;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sessionStickinessLBCookieDurationSeconds")
-      private final @Nullable Input<String> sessionStickinessLBCookieDurationSeconds;
+      private final @Nullable Output<String> sessionStickinessLBCookieDurationSeconds;
 
-    public Input<String> getSessionStickinessLBCookieDurationSeconds() {
-        return this.sessionStickinessLBCookieDurationSeconds == null ? Input.empty() : this.sessionStickinessLBCookieDurationSeconds;
+    public Output<String> getSessionStickinessLBCookieDurationSeconds() {
+        return this.sessionStickinessLBCookieDurationSeconds == null ? Output.empty() : this.sessionStickinessLBCookieDurationSeconds;
     }
 
     /**
@@ -100,21 +100,21 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<LoadBalancerTagArgs>> tags;
+      private final @Nullable Output<List<LoadBalancerTagArgs>> tags;
 
-    public Input<List<LoadBalancerTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<LoadBalancerTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public LoadBalancerArgs(
-        @Nullable Input<List<String>> attachedInstances,
-        @Nullable Input<String> healthCheckPath,
-        Input<Integer> instancePort,
-        @Nullable Input<String> ipAddressType,
-        @Nullable Input<String> loadBalancerName,
-        @Nullable Input<Boolean> sessionStickinessEnabled,
-        @Nullable Input<String> sessionStickinessLBCookieDurationSeconds,
-        @Nullable Input<List<LoadBalancerTagArgs>> tags) {
+        @Nullable Output<List<String>> attachedInstances,
+        @Nullable Output<String> healthCheckPath,
+        Output<Integer> instancePort,
+        @Nullable Output<String> ipAddressType,
+        @Nullable Output<String> loadBalancerName,
+        @Nullable Output<Boolean> sessionStickinessEnabled,
+        @Nullable Output<String> sessionStickinessLBCookieDurationSeconds,
+        @Nullable Output<List<LoadBalancerTagArgs>> tags) {
         this.attachedInstances = attachedInstances;
         this.healthCheckPath = healthCheckPath;
         this.instancePort = Objects.requireNonNull(instancePort, "expected parameter 'instancePort' to be non-null");
@@ -126,14 +126,14 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LoadBalancerArgs() {
-        this.attachedInstances = Input.empty();
-        this.healthCheckPath = Input.empty();
-        this.instancePort = Input.empty();
-        this.ipAddressType = Input.empty();
-        this.loadBalancerName = Input.empty();
-        this.sessionStickinessEnabled = Input.empty();
-        this.sessionStickinessLBCookieDurationSeconds = Input.empty();
-        this.tags = Input.empty();
+        this.attachedInstances = Output.empty();
+        this.healthCheckPath = Output.empty();
+        this.instancePort = Output.empty();
+        this.ipAddressType = Output.empty();
+        this.loadBalancerName = Output.empty();
+        this.sessionStickinessEnabled = Output.empty();
+        this.sessionStickinessLBCookieDurationSeconds = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -145,14 +145,14 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> attachedInstances;
-        private @Nullable Input<String> healthCheckPath;
-        private Input<Integer> instancePort;
-        private @Nullable Input<String> ipAddressType;
-        private @Nullable Input<String> loadBalancerName;
-        private @Nullable Input<Boolean> sessionStickinessEnabled;
-        private @Nullable Input<String> sessionStickinessLBCookieDurationSeconds;
-        private @Nullable Input<List<LoadBalancerTagArgs>> tags;
+        private @Nullable Output<List<String>> attachedInstances;
+        private @Nullable Output<String> healthCheckPath;
+        private Output<Integer> instancePort;
+        private @Nullable Output<String> ipAddressType;
+        private @Nullable Output<String> loadBalancerName;
+        private @Nullable Output<Boolean> sessionStickinessEnabled;
+        private @Nullable Output<String> sessionStickinessLBCookieDurationSeconds;
+        private @Nullable Output<List<LoadBalancerTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -170,83 +170,83 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder attachedInstances(@Nullable Input<List<String>> attachedInstances) {
+        public Builder attachedInstances(@Nullable Output<List<String>> attachedInstances) {
             this.attachedInstances = attachedInstances;
             return this;
         }
 
         public Builder attachedInstances(@Nullable List<String> attachedInstances) {
-            this.attachedInstances = Input.ofNullable(attachedInstances);
+            this.attachedInstances = Output.ofNullable(attachedInstances);
             return this;
         }
 
-        public Builder healthCheckPath(@Nullable Input<String> healthCheckPath) {
+        public Builder healthCheckPath(@Nullable Output<String> healthCheckPath) {
             this.healthCheckPath = healthCheckPath;
             return this;
         }
 
         public Builder healthCheckPath(@Nullable String healthCheckPath) {
-            this.healthCheckPath = Input.ofNullable(healthCheckPath);
+            this.healthCheckPath = Output.ofNullable(healthCheckPath);
             return this;
         }
 
-        public Builder instancePort(Input<Integer> instancePort) {
+        public Builder instancePort(Output<Integer> instancePort) {
             this.instancePort = Objects.requireNonNull(instancePort);
             return this;
         }
 
         public Builder instancePort(Integer instancePort) {
-            this.instancePort = Input.of(Objects.requireNonNull(instancePort));
+            this.instancePort = Output.of(Objects.requireNonNull(instancePort));
             return this;
         }
 
-        public Builder ipAddressType(@Nullable Input<String> ipAddressType) {
+        public Builder ipAddressType(@Nullable Output<String> ipAddressType) {
             this.ipAddressType = ipAddressType;
             return this;
         }
 
         public Builder ipAddressType(@Nullable String ipAddressType) {
-            this.ipAddressType = Input.ofNullable(ipAddressType);
+            this.ipAddressType = Output.ofNullable(ipAddressType);
             return this;
         }
 
-        public Builder loadBalancerName(@Nullable Input<String> loadBalancerName) {
+        public Builder loadBalancerName(@Nullable Output<String> loadBalancerName) {
             this.loadBalancerName = loadBalancerName;
             return this;
         }
 
         public Builder loadBalancerName(@Nullable String loadBalancerName) {
-            this.loadBalancerName = Input.ofNullable(loadBalancerName);
+            this.loadBalancerName = Output.ofNullable(loadBalancerName);
             return this;
         }
 
-        public Builder sessionStickinessEnabled(@Nullable Input<Boolean> sessionStickinessEnabled) {
+        public Builder sessionStickinessEnabled(@Nullable Output<Boolean> sessionStickinessEnabled) {
             this.sessionStickinessEnabled = sessionStickinessEnabled;
             return this;
         }
 
         public Builder sessionStickinessEnabled(@Nullable Boolean sessionStickinessEnabled) {
-            this.sessionStickinessEnabled = Input.ofNullable(sessionStickinessEnabled);
+            this.sessionStickinessEnabled = Output.ofNullable(sessionStickinessEnabled);
             return this;
         }
 
-        public Builder sessionStickinessLBCookieDurationSeconds(@Nullable Input<String> sessionStickinessLBCookieDurationSeconds) {
+        public Builder sessionStickinessLBCookieDurationSeconds(@Nullable Output<String> sessionStickinessLBCookieDurationSeconds) {
             this.sessionStickinessLBCookieDurationSeconds = sessionStickinessLBCookieDurationSeconds;
             return this;
         }
 
         public Builder sessionStickinessLBCookieDurationSeconds(@Nullable String sessionStickinessLBCookieDurationSeconds) {
-            this.sessionStickinessLBCookieDurationSeconds = Input.ofNullable(sessionStickinessLBCookieDurationSeconds);
+            this.sessionStickinessLBCookieDurationSeconds = Output.ofNullable(sessionStickinessLBCookieDurationSeconds);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<LoadBalancerTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<LoadBalancerTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<LoadBalancerTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public LoadBalancerArgs build() {

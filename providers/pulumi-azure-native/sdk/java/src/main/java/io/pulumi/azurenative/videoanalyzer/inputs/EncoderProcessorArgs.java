@@ -7,7 +7,7 @@ import io.pulumi.azurenative.videoanalyzer.inputs.EncoderCustomPresetArgs;
 import io.pulumi.azurenative.videoanalyzer.inputs.EncoderSystemPresetArgs;
 import io.pulumi.azurenative.videoanalyzer.inputs.NodeInputArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -27,9 +27,9 @@ public final class EncoderProcessorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="inputs", required=true)
-      private final Input<List<NodeInputArgs>> inputs;
+      private final Output<List<NodeInputArgs>> inputs;
 
-    public Input<List<NodeInputArgs>> getInputs() {
+    public Output<List<NodeInputArgs>> getInputs() {
         return this.inputs;
     }
 
@@ -38,9 +38,9 @@ public final class EncoderProcessorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -49,9 +49,9 @@ public final class EncoderProcessorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="preset", required=true)
-      private final Input<Either<EncoderCustomPresetArgs,EncoderSystemPresetArgs>> preset;
+      private final Output<Either<EncoderCustomPresetArgs,EncoderSystemPresetArgs>> preset;
 
-    public Input<Either<EncoderCustomPresetArgs,EncoderSystemPresetArgs>> getPreset() {
+    public Output<Either<EncoderCustomPresetArgs,EncoderSystemPresetArgs>> getPreset() {
         return this.preset;
     }
 
@@ -61,17 +61,17 @@ public final class EncoderProcessorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public EncoderProcessorArgs(
-        Input<List<NodeInputArgs>> inputs,
-        Input<String> name,
-        Input<Either<EncoderCustomPresetArgs,EncoderSystemPresetArgs>> preset,
-        Input<String> type) {
+        Output<List<NodeInputArgs>> inputs,
+        Output<String> name,
+        Output<Either<EncoderCustomPresetArgs,EncoderSystemPresetArgs>> preset,
+        Output<String> type) {
         this.inputs = Objects.requireNonNull(inputs, "expected parameter 'inputs' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.preset = Objects.requireNonNull(preset, "expected parameter 'preset' to be non-null");
@@ -79,10 +79,10 @@ public final class EncoderProcessorArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private EncoderProcessorArgs() {
-        this.inputs = Input.empty();
-        this.name = Input.empty();
-        this.preset = Input.empty();
-        this.type = Input.empty();
+        this.inputs = Output.empty();
+        this.name = Output.empty();
+        this.preset = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -94,10 +94,10 @@ public final class EncoderProcessorArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<List<NodeInputArgs>> inputs;
-        private Input<String> name;
-        private Input<Either<EncoderCustomPresetArgs,EncoderSystemPresetArgs>> preset;
-        private Input<String> type;
+        private Output<List<NodeInputArgs>> inputs;
+        private Output<String> name;
+        private Output<Either<EncoderCustomPresetArgs,EncoderSystemPresetArgs>> preset;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -111,43 +111,43 @@ public final class EncoderProcessorArgs extends io.pulumi.resources.ResourceArgs
     	      this.type = defaults.type;
         }
 
-        public Builder inputs(Input<List<NodeInputArgs>> inputs) {
+        public Builder inputs(Output<List<NodeInputArgs>> inputs) {
             this.inputs = Objects.requireNonNull(inputs);
             return this;
         }
 
         public Builder inputs(List<NodeInputArgs> inputs) {
-            this.inputs = Input.of(Objects.requireNonNull(inputs));
+            this.inputs = Output.of(Objects.requireNonNull(inputs));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder preset(Input<Either<EncoderCustomPresetArgs,EncoderSystemPresetArgs>> preset) {
+        public Builder preset(Output<Either<EncoderCustomPresetArgs,EncoderSystemPresetArgs>> preset) {
             this.preset = Objects.requireNonNull(preset);
             return this;
         }
 
         public Builder preset(Either<EncoderCustomPresetArgs,EncoderSystemPresetArgs> preset) {
-            this.preset = Input.of(Objects.requireNonNull(preset));
+            this.preset = Output.of(Objects.requireNonNull(preset));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public EncoderProcessorArgs build() {

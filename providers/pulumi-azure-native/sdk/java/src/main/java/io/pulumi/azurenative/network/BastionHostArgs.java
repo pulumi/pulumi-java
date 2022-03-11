@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.network.inputs.BastionHostIPConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class BastionHostArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bastionHostName")
-      private final @Nullable Input<String> bastionHostName;
+      private final @Nullable Output<String> bastionHostName;
 
-    public Input<String> getBastionHostName() {
-        return this.bastionHostName == null ? Input.empty() : this.bastionHostName;
+    public Output<String> getBastionHostName() {
+        return this.bastionHostName == null ? Output.empty() : this.bastionHostName;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class BastionHostArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsName")
-      private final @Nullable Input<String> dnsName;
+      private final @Nullable Output<String> dnsName;
 
-    public Input<String> getDnsName() {
-        return this.dnsName == null ? Input.empty() : this.dnsName;
+    public Output<String> getDnsName() {
+        return this.dnsName == null ? Output.empty() : this.dnsName;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class BastionHostArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class BastionHostArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipConfigurations")
-      private final @Nullable Input<List<BastionHostIPConfigurationArgs>> ipConfigurations;
+      private final @Nullable Output<List<BastionHostIPConfigurationArgs>> ipConfigurations;
 
-    public Input<List<BastionHostIPConfigurationArgs>> getIpConfigurations() {
-        return this.ipConfigurations == null ? Input.empty() : this.ipConfigurations;
+    public Output<List<BastionHostIPConfigurationArgs>> getIpConfigurations() {
+        return this.ipConfigurations == null ? Output.empty() : this.ipConfigurations;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class BastionHostArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -77,9 +77,9 @@ public final class BastionHostArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -88,20 +88,20 @@ public final class BastionHostArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public BastionHostArgs(
-        @Nullable Input<String> bastionHostName,
-        @Nullable Input<String> dnsName,
-        @Nullable Input<String> id,
-        @Nullable Input<List<BastionHostIPConfigurationArgs>> ipConfigurations,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> bastionHostName,
+        @Nullable Output<String> dnsName,
+        @Nullable Output<String> id,
+        @Nullable Output<List<BastionHostIPConfigurationArgs>> ipConfigurations,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.bastionHostName = bastionHostName;
         this.dnsName = dnsName;
         this.id = id;
@@ -112,13 +112,13 @@ public final class BastionHostArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BastionHostArgs() {
-        this.bastionHostName = Input.empty();
-        this.dnsName = Input.empty();
-        this.id = Input.empty();
-        this.ipConfigurations = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.bastionHostName = Output.empty();
+        this.dnsName = Output.empty();
+        this.id = Output.empty();
+        this.ipConfigurations = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class BastionHostArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bastionHostName;
-        private @Nullable Input<String> dnsName;
-        private @Nullable Input<String> id;
-        private @Nullable Input<List<BastionHostIPConfigurationArgs>> ipConfigurations;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> bastionHostName;
+        private @Nullable Output<String> dnsName;
+        private @Nullable Output<String> id;
+        private @Nullable Output<List<BastionHostIPConfigurationArgs>> ipConfigurations;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class BastionHostArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder bastionHostName(@Nullable Input<String> bastionHostName) {
+        public Builder bastionHostName(@Nullable Output<String> bastionHostName) {
             this.bastionHostName = bastionHostName;
             return this;
         }
 
         public Builder bastionHostName(@Nullable String bastionHostName) {
-            this.bastionHostName = Input.ofNullable(bastionHostName);
+            this.bastionHostName = Output.ofNullable(bastionHostName);
             return this;
         }
 
-        public Builder dnsName(@Nullable Input<String> dnsName) {
+        public Builder dnsName(@Nullable Output<String> dnsName) {
             this.dnsName = dnsName;
             return this;
         }
 
         public Builder dnsName(@Nullable String dnsName) {
-            this.dnsName = Input.ofNullable(dnsName);
+            this.dnsName = Output.ofNullable(dnsName);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder ipConfigurations(@Nullable Input<List<BastionHostIPConfigurationArgs>> ipConfigurations) {
+        public Builder ipConfigurations(@Nullable Output<List<BastionHostIPConfigurationArgs>> ipConfigurations) {
             this.ipConfigurations = ipConfigurations;
             return this;
         }
 
         public Builder ipConfigurations(@Nullable List<BastionHostIPConfigurationArgs> ipConfigurations) {
-            this.ipConfigurations = Input.ofNullable(ipConfigurations);
+            this.ipConfigurations = Output.ofNullable(ipConfigurations);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public BastionHostArgs build() {

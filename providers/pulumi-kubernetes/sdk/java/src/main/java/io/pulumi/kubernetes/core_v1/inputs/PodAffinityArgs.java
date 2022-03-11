@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.PodAffinityTermArgs;
 import io.pulumi.kubernetes.core_v1.inputs.WeightedPodAffinityTermArgs;
@@ -25,10 +25,10 @@ public final class PodAffinityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preferredDuringSchedulingIgnoredDuringExecution")
-      private final @Nullable Input<List<WeightedPodAffinityTermArgs>> preferredDuringSchedulingIgnoredDuringExecution;
+      private final @Nullable Output<List<WeightedPodAffinityTermArgs>> preferredDuringSchedulingIgnoredDuringExecution;
 
-    public Input<List<WeightedPodAffinityTermArgs>> getPreferredDuringSchedulingIgnoredDuringExecution() {
-        return this.preferredDuringSchedulingIgnoredDuringExecution == null ? Input.empty() : this.preferredDuringSchedulingIgnoredDuringExecution;
+    public Output<List<WeightedPodAffinityTermArgs>> getPreferredDuringSchedulingIgnoredDuringExecution() {
+        return this.preferredDuringSchedulingIgnoredDuringExecution == null ? Output.empty() : this.preferredDuringSchedulingIgnoredDuringExecution;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class PodAffinityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requiredDuringSchedulingIgnoredDuringExecution")
-      private final @Nullable Input<List<PodAffinityTermArgs>> requiredDuringSchedulingIgnoredDuringExecution;
+      private final @Nullable Output<List<PodAffinityTermArgs>> requiredDuringSchedulingIgnoredDuringExecution;
 
-    public Input<List<PodAffinityTermArgs>> getRequiredDuringSchedulingIgnoredDuringExecution() {
-        return this.requiredDuringSchedulingIgnoredDuringExecution == null ? Input.empty() : this.requiredDuringSchedulingIgnoredDuringExecution;
+    public Output<List<PodAffinityTermArgs>> getRequiredDuringSchedulingIgnoredDuringExecution() {
+        return this.requiredDuringSchedulingIgnoredDuringExecution == null ? Output.empty() : this.requiredDuringSchedulingIgnoredDuringExecution;
     }
 
     public PodAffinityArgs(
-        @Nullable Input<List<WeightedPodAffinityTermArgs>> preferredDuringSchedulingIgnoredDuringExecution,
-        @Nullable Input<List<PodAffinityTermArgs>> requiredDuringSchedulingIgnoredDuringExecution) {
+        @Nullable Output<List<WeightedPodAffinityTermArgs>> preferredDuringSchedulingIgnoredDuringExecution,
+        @Nullable Output<List<PodAffinityTermArgs>> requiredDuringSchedulingIgnoredDuringExecution) {
         this.preferredDuringSchedulingIgnoredDuringExecution = preferredDuringSchedulingIgnoredDuringExecution;
         this.requiredDuringSchedulingIgnoredDuringExecution = requiredDuringSchedulingIgnoredDuringExecution;
     }
 
     private PodAffinityArgs() {
-        this.preferredDuringSchedulingIgnoredDuringExecution = Input.empty();
-        this.requiredDuringSchedulingIgnoredDuringExecution = Input.empty();
+        this.preferredDuringSchedulingIgnoredDuringExecution = Output.empty();
+        this.requiredDuringSchedulingIgnoredDuringExecution = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class PodAffinityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<WeightedPodAffinityTermArgs>> preferredDuringSchedulingIgnoredDuringExecution;
-        private @Nullable Input<List<PodAffinityTermArgs>> requiredDuringSchedulingIgnoredDuringExecution;
+        private @Nullable Output<List<WeightedPodAffinityTermArgs>> preferredDuringSchedulingIgnoredDuringExecution;
+        private @Nullable Output<List<PodAffinityTermArgs>> requiredDuringSchedulingIgnoredDuringExecution;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class PodAffinityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.requiredDuringSchedulingIgnoredDuringExecution = defaults.requiredDuringSchedulingIgnoredDuringExecution;
         }
 
-        public Builder preferredDuringSchedulingIgnoredDuringExecution(@Nullable Input<List<WeightedPodAffinityTermArgs>> preferredDuringSchedulingIgnoredDuringExecution) {
+        public Builder preferredDuringSchedulingIgnoredDuringExecution(@Nullable Output<List<WeightedPodAffinityTermArgs>> preferredDuringSchedulingIgnoredDuringExecution) {
             this.preferredDuringSchedulingIgnoredDuringExecution = preferredDuringSchedulingIgnoredDuringExecution;
             return this;
         }
 
         public Builder preferredDuringSchedulingIgnoredDuringExecution(@Nullable List<WeightedPodAffinityTermArgs> preferredDuringSchedulingIgnoredDuringExecution) {
-            this.preferredDuringSchedulingIgnoredDuringExecution = Input.ofNullable(preferredDuringSchedulingIgnoredDuringExecution);
+            this.preferredDuringSchedulingIgnoredDuringExecution = Output.ofNullable(preferredDuringSchedulingIgnoredDuringExecution);
             return this;
         }
 
-        public Builder requiredDuringSchedulingIgnoredDuringExecution(@Nullable Input<List<PodAffinityTermArgs>> requiredDuringSchedulingIgnoredDuringExecution) {
+        public Builder requiredDuringSchedulingIgnoredDuringExecution(@Nullable Output<List<PodAffinityTermArgs>> requiredDuringSchedulingIgnoredDuringExecution) {
             this.requiredDuringSchedulingIgnoredDuringExecution = requiredDuringSchedulingIgnoredDuringExecution;
             return this;
         }
 
         public Builder requiredDuringSchedulingIgnoredDuringExecution(@Nullable List<PodAffinityTermArgs> requiredDuringSchedulingIgnoredDuringExecution) {
-            this.requiredDuringSchedulingIgnoredDuringExecution = Input.ofNullable(requiredDuringSchedulingIgnoredDuringExecution);
+            this.requiredDuringSchedulingIgnoredDuringExecution = Output.ofNullable(requiredDuringSchedulingIgnoredDuringExecution);
             return this;
         }
         public PodAffinityArgs build() {

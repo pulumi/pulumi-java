@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1beta.enums.WeekDayOfMonthDayOfWeek;
 import java.lang.Integer;
@@ -24,9 +24,9 @@ public final class WeekDayOfMonthArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dayOfWeek", required=true)
-      private final Input<WeekDayOfMonthDayOfWeek> dayOfWeek;
+      private final Output<WeekDayOfMonthDayOfWeek> dayOfWeek;
 
-    public Input<WeekDayOfMonthDayOfWeek> getDayOfWeek() {
+    public Output<WeekDayOfMonthDayOfWeek> getDayOfWeek() {
         return this.dayOfWeek;
     }
 
@@ -35,10 +35,10 @@ public final class WeekDayOfMonthArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dayOffset")
-      private final @Nullable Input<Integer> dayOffset;
+      private final @Nullable Output<Integer> dayOffset;
 
-    public Input<Integer> getDayOffset() {
-        return this.dayOffset == null ? Input.empty() : this.dayOffset;
+    public Output<Integer> getDayOffset() {
+        return this.dayOffset == null ? Output.empty() : this.dayOffset;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class WeekDayOfMonthArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="weekOrdinal", required=true)
-      private final Input<Integer> weekOrdinal;
+      private final Output<Integer> weekOrdinal;
 
-    public Input<Integer> getWeekOrdinal() {
+    public Output<Integer> getWeekOrdinal() {
         return this.weekOrdinal;
     }
 
     public WeekDayOfMonthArgs(
-        Input<WeekDayOfMonthDayOfWeek> dayOfWeek,
-        @Nullable Input<Integer> dayOffset,
-        Input<Integer> weekOrdinal) {
+        Output<WeekDayOfMonthDayOfWeek> dayOfWeek,
+        @Nullable Output<Integer> dayOffset,
+        Output<Integer> weekOrdinal) {
         this.dayOfWeek = Objects.requireNonNull(dayOfWeek, "expected parameter 'dayOfWeek' to be non-null");
         this.dayOffset = dayOffset;
         this.weekOrdinal = Objects.requireNonNull(weekOrdinal, "expected parameter 'weekOrdinal' to be non-null");
     }
 
     private WeekDayOfMonthArgs() {
-        this.dayOfWeek = Input.empty();
-        this.dayOffset = Input.empty();
-        this.weekOrdinal = Input.empty();
+        this.dayOfWeek = Output.empty();
+        this.dayOffset = Output.empty();
+        this.weekOrdinal = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class WeekDayOfMonthArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<WeekDayOfMonthDayOfWeek> dayOfWeek;
-        private @Nullable Input<Integer> dayOffset;
-        private Input<Integer> weekOrdinal;
+        private Output<WeekDayOfMonthDayOfWeek> dayOfWeek;
+        private @Nullable Output<Integer> dayOffset;
+        private Output<Integer> weekOrdinal;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class WeekDayOfMonthArgs extends io.pulumi.resources.ResourceArgs {
     	      this.weekOrdinal = defaults.weekOrdinal;
         }
 
-        public Builder dayOfWeek(Input<WeekDayOfMonthDayOfWeek> dayOfWeek) {
+        public Builder dayOfWeek(Output<WeekDayOfMonthDayOfWeek> dayOfWeek) {
             this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
             return this;
         }
 
         public Builder dayOfWeek(WeekDayOfMonthDayOfWeek dayOfWeek) {
-            this.dayOfWeek = Input.of(Objects.requireNonNull(dayOfWeek));
+            this.dayOfWeek = Output.of(Objects.requireNonNull(dayOfWeek));
             return this;
         }
 
-        public Builder dayOffset(@Nullable Input<Integer> dayOffset) {
+        public Builder dayOffset(@Nullable Output<Integer> dayOffset) {
             this.dayOffset = dayOffset;
             return this;
         }
 
         public Builder dayOffset(@Nullable Integer dayOffset) {
-            this.dayOffset = Input.ofNullable(dayOffset);
+            this.dayOffset = Output.ofNullable(dayOffset);
             return this;
         }
 
-        public Builder weekOrdinal(Input<Integer> weekOrdinal) {
+        public Builder weekOrdinal(Output<Integer> weekOrdinal) {
             this.weekOrdinal = Objects.requireNonNull(weekOrdinal);
             return this;
         }
 
         public Builder weekOrdinal(Integer weekOrdinal) {
-            this.weekOrdinal = Input.of(Objects.requireNonNull(weekOrdinal));
+            this.weekOrdinal = Output.of(Objects.requireNonNull(weekOrdinal));
             return this;
         }
         public WeekDayOfMonthArgs build() {

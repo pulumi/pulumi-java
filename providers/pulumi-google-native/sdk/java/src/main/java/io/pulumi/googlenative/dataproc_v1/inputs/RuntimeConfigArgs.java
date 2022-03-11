@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -24,10 +24,10 @@ public final class RuntimeConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerImage")
-      private final @Nullable Input<String> containerImage;
+      private final @Nullable Output<String> containerImage;
 
-    public Input<String> getContainerImage() {
-        return this.containerImage == null ? Input.empty() : this.containerImage;
+    public Output<String> getContainerImage() {
+        return this.containerImage == null ? Output.empty() : this.containerImage;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class RuntimeConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<Map<String,String>> properties;
+      private final @Nullable Output<Map<String,String>> properties;
 
-    public Input<Map<String,String>> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<Map<String,String>> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class RuntimeConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public RuntimeConfigArgs(
-        @Nullable Input<String> containerImage,
-        @Nullable Input<Map<String,String>> properties,
-        @Nullable Input<String> version) {
+        @Nullable Output<String> containerImage,
+        @Nullable Output<Map<String,String>> properties,
+        @Nullable Output<String> version) {
         this.containerImage = containerImage;
         this.properties = properties;
         this.version = version;
     }
 
     private RuntimeConfigArgs() {
-        this.containerImage = Input.empty();
-        this.properties = Input.empty();
-        this.version = Input.empty();
+        this.containerImage = Output.empty();
+        this.properties = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class RuntimeConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> containerImage;
-        private @Nullable Input<Map<String,String>> properties;
-        private @Nullable Input<String> version;
+        private @Nullable Output<String> containerImage;
+        private @Nullable Output<Map<String,String>> properties;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class RuntimeConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder containerImage(@Nullable Input<String> containerImage) {
+        public Builder containerImage(@Nullable Output<String> containerImage) {
             this.containerImage = containerImage;
             return this;
         }
 
         public Builder containerImage(@Nullable String containerImage) {
-            this.containerImage = Input.ofNullable(containerImage);
+            this.containerImage = Output.ofNullable(containerImage);
             return this;
         }
 
-        public Builder properties(@Nullable Input<Map<String,String>> properties) {
+        public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public RuntimeConfigArgs build() {

@@ -9,7 +9,6 @@ import io.pulumi.azurenative.mixedreality.outputs.IdentityResponse;
 import io.pulumi.azurenative.mixedreality.outputs.SkuResponse;
 import io.pulumi.azurenative.mixedreality.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -242,22 +241,22 @@ public class SpatialAnchorsAccount extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SpatialAnchorsAccount(String name, SpatialAnchorsAccountArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:mixedreality:SpatialAnchorsAccount", name, args == null ? SpatialAnchorsAccountArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:mixedreality:SpatialAnchorsAccount", name, args == null ? SpatialAnchorsAccountArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private SpatialAnchorsAccount(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private SpatialAnchorsAccount(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:mixedreality:SpatialAnchorsAccount", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:mixedreality/v20190228preview:SpatialAnchorsAccount").build()),
-                Input.of(Alias.builder().setType("azure-native:mixedreality/v20191202preview:SpatialAnchorsAccount").build()),
-                Input.of(Alias.builder().setType("azure-native:mixedreality/v20200501:SpatialAnchorsAccount").build()),
-                Input.of(Alias.builder().setType("azure-native:mixedreality/v20210101:SpatialAnchorsAccount").build()),
-                Input.of(Alias.builder().setType("azure-native:mixedreality/v20210301preview:SpatialAnchorsAccount").build())
+                Output.of(Alias.builder().setType("azure-native:mixedreality/v20190228preview:SpatialAnchorsAccount").build()),
+                Output.of(Alias.builder().setType("azure-native:mixedreality/v20191202preview:SpatialAnchorsAccount").build()),
+                Output.of(Alias.builder().setType("azure-native:mixedreality/v20200501:SpatialAnchorsAccount").build()),
+                Output.of(Alias.builder().setType("azure-native:mixedreality/v20210101:SpatialAnchorsAccount").build()),
+                Output.of(Alias.builder().setType("azure-native:mixedreality/v20210301preview:SpatialAnchorsAccount").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -271,7 +270,7 @@ public class SpatialAnchorsAccount extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SpatialAnchorsAccount get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static SpatialAnchorsAccount get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SpatialAnchorsAccount(name, id, options);
     }
 }

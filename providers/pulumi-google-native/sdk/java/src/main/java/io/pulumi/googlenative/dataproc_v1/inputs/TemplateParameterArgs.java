@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataproc_v1.inputs.ParameterValidationArgs;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class TemplateParameterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -36,9 +36,9 @@ public final class TemplateParameterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="fields", required=true)
-      private final Input<List<String>> fields;
+      private final Output<List<String>> fields;
 
-    public Input<List<String>> getFields() {
+    public Output<List<String>> getFields() {
         return this.fields;
     }
 
@@ -47,9 +47,9 @@ public final class TemplateParameterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -58,17 +58,17 @@ public final class TemplateParameterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="validation")
-      private final @Nullable Input<ParameterValidationArgs> validation;
+      private final @Nullable Output<ParameterValidationArgs> validation;
 
-    public Input<ParameterValidationArgs> getValidation() {
-        return this.validation == null ? Input.empty() : this.validation;
+    public Output<ParameterValidationArgs> getValidation() {
+        return this.validation == null ? Output.empty() : this.validation;
     }
 
     public TemplateParameterArgs(
-        @Nullable Input<String> description,
-        Input<List<String>> fields,
-        Input<String> name,
-        @Nullable Input<ParameterValidationArgs> validation) {
+        @Nullable Output<String> description,
+        Output<List<String>> fields,
+        Output<String> name,
+        @Nullable Output<ParameterValidationArgs> validation) {
         this.description = description;
         this.fields = Objects.requireNonNull(fields, "expected parameter 'fields' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
@@ -76,10 +76,10 @@ public final class TemplateParameterArgs extends io.pulumi.resources.ResourceArg
     }
 
     private TemplateParameterArgs() {
-        this.description = Input.empty();
-        this.fields = Input.empty();
-        this.name = Input.empty();
-        this.validation = Input.empty();
+        this.description = Output.empty();
+        this.fields = Output.empty();
+        this.name = Output.empty();
+        this.validation = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class TemplateParameterArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<List<String>> fields;
-        private Input<String> name;
-        private @Nullable Input<ParameterValidationArgs> validation;
+        private @Nullable Output<String> description;
+        private Output<List<String>> fields;
+        private Output<String> name;
+        private @Nullable Output<ParameterValidationArgs> validation;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class TemplateParameterArgs extends io.pulumi.resources.ResourceArg
     	      this.validation = defaults.validation;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder fields(Input<List<String>> fields) {
+        public Builder fields(Output<List<String>> fields) {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
 
         public Builder fields(List<String> fields) {
-            this.fields = Input.of(Objects.requireNonNull(fields));
+            this.fields = Output.of(Objects.requireNonNull(fields));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder validation(@Nullable Input<ParameterValidationArgs> validation) {
+        public Builder validation(@Nullable Output<ParameterValidationArgs> validation) {
             this.validation = validation;
             return this;
         }
 
         public Builder validation(@Nullable ParameterValidationArgs validation) {
-            this.validation = Input.ofNullable(validation);
+            this.validation = Output.ofNullable(validation);
             return this;
         }
         public TemplateParameterArgs build() {

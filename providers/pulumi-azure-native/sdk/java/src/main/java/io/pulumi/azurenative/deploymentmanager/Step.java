@@ -9,7 +9,6 @@ import io.pulumi.azurenative.deploymentmanager.outputs.HealthCheckStepProperties
 import io.pulumi.azurenative.deploymentmanager.outputs.WaitStepPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -144,19 +143,19 @@ public class Step extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Step(String name, StepArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:deploymentmanager:Step", name, args == null ? StepArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:deploymentmanager:Step", name, args == null ? StepArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Step(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Step(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:deploymentmanager:Step", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:deploymentmanager/v20180901preview:Step").build()),
-                Input.of(Alias.builder().setType("azure-native:deploymentmanager/v20191101preview:Step").build())
+                Output.of(Alias.builder().setType("azure-native:deploymentmanager/v20180901preview:Step").build()),
+                Output.of(Alias.builder().setType("azure-native:deploymentmanager/v20191101preview:Step").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -170,7 +169,7 @@ public class Step extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Step get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Step get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Step(name, id, options);
     }
 }

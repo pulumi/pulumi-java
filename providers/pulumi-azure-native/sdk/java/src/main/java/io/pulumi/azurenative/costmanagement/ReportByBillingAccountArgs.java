@@ -8,7 +8,7 @@ import io.pulumi.azurenative.costmanagement.inputs.ReportDefinitionArgs;
 import io.pulumi.azurenative.costmanagement.inputs.ReportDeliveryInfoArgs;
 import io.pulumi.azurenative.costmanagement.inputs.ReportScheduleArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class ReportByBillingAccountArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="billingAccountId", required=true)
-      private final Input<String> billingAccountId;
+      private final Output<String> billingAccountId;
 
-    public Input<String> getBillingAccountId() {
+    public Output<String> getBillingAccountId() {
         return this.billingAccountId;
     }
 
@@ -35,9 +35,9 @@ public final class ReportByBillingAccountArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="definition", required=true)
-      private final Input<ReportDefinitionArgs> definition;
+      private final Output<ReportDefinitionArgs> definition;
 
-    public Input<ReportDefinitionArgs> getDefinition() {
+    public Output<ReportDefinitionArgs> getDefinition() {
         return this.definition;
     }
 
@@ -46,9 +46,9 @@ public final class ReportByBillingAccountArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="deliveryInfo", required=true)
-      private final Input<ReportDeliveryInfoArgs> deliveryInfo;
+      private final Output<ReportDeliveryInfoArgs> deliveryInfo;
 
-    public Input<ReportDeliveryInfoArgs> getDeliveryInfo() {
+    public Output<ReportDeliveryInfoArgs> getDeliveryInfo() {
         return this.deliveryInfo;
     }
 
@@ -57,10 +57,10 @@ public final class ReportByBillingAccountArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="format")
-      private final @Nullable Input<Either<String,FormatType>> format;
+      private final @Nullable Output<Either<String,FormatType>> format;
 
-    public Input<Either<String,FormatType>> getFormat() {
-        return this.format == null ? Input.empty() : this.format;
+    public Output<Either<String,FormatType>> getFormat() {
+        return this.format == null ? Output.empty() : this.format;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ReportByBillingAccountArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="reportName")
-      private final @Nullable Input<String> reportName;
+      private final @Nullable Output<String> reportName;
 
-    public Input<String> getReportName() {
-        return this.reportName == null ? Input.empty() : this.reportName;
+    public Output<String> getReportName() {
+        return this.reportName == null ? Output.empty() : this.reportName;
     }
 
     /**
@@ -79,19 +79,19 @@ public final class ReportByBillingAccountArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="schedule")
-      private final @Nullable Input<ReportScheduleArgs> schedule;
+      private final @Nullable Output<ReportScheduleArgs> schedule;
 
-    public Input<ReportScheduleArgs> getSchedule() {
-        return this.schedule == null ? Input.empty() : this.schedule;
+    public Output<ReportScheduleArgs> getSchedule() {
+        return this.schedule == null ? Output.empty() : this.schedule;
     }
 
     public ReportByBillingAccountArgs(
-        Input<String> billingAccountId,
-        Input<ReportDefinitionArgs> definition,
-        Input<ReportDeliveryInfoArgs> deliveryInfo,
-        @Nullable Input<Either<String,FormatType>> format,
-        @Nullable Input<String> reportName,
-        @Nullable Input<ReportScheduleArgs> schedule) {
+        Output<String> billingAccountId,
+        Output<ReportDefinitionArgs> definition,
+        Output<ReportDeliveryInfoArgs> deliveryInfo,
+        @Nullable Output<Either<String,FormatType>> format,
+        @Nullable Output<String> reportName,
+        @Nullable Output<ReportScheduleArgs> schedule) {
         this.billingAccountId = Objects.requireNonNull(billingAccountId, "expected parameter 'billingAccountId' to be non-null");
         this.definition = Objects.requireNonNull(definition, "expected parameter 'definition' to be non-null");
         this.deliveryInfo = Objects.requireNonNull(deliveryInfo, "expected parameter 'deliveryInfo' to be non-null");
@@ -101,12 +101,12 @@ public final class ReportByBillingAccountArgs extends io.pulumi.resources.Resour
     }
 
     private ReportByBillingAccountArgs() {
-        this.billingAccountId = Input.empty();
-        this.definition = Input.empty();
-        this.deliveryInfo = Input.empty();
-        this.format = Input.empty();
-        this.reportName = Input.empty();
-        this.schedule = Input.empty();
+        this.billingAccountId = Output.empty();
+        this.definition = Output.empty();
+        this.deliveryInfo = Output.empty();
+        this.format = Output.empty();
+        this.reportName = Output.empty();
+        this.schedule = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,12 +118,12 @@ public final class ReportByBillingAccountArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> billingAccountId;
-        private Input<ReportDefinitionArgs> definition;
-        private Input<ReportDeliveryInfoArgs> deliveryInfo;
-        private @Nullable Input<Either<String,FormatType>> format;
-        private @Nullable Input<String> reportName;
-        private @Nullable Input<ReportScheduleArgs> schedule;
+        private Output<String> billingAccountId;
+        private Output<ReportDefinitionArgs> definition;
+        private Output<ReportDeliveryInfoArgs> deliveryInfo;
+        private @Nullable Output<Either<String,FormatType>> format;
+        private @Nullable Output<String> reportName;
+        private @Nullable Output<ReportScheduleArgs> schedule;
 
         public Builder() {
     	      // Empty
@@ -139,63 +139,63 @@ public final class ReportByBillingAccountArgs extends io.pulumi.resources.Resour
     	      this.schedule = defaults.schedule;
         }
 
-        public Builder billingAccountId(Input<String> billingAccountId) {
+        public Builder billingAccountId(Output<String> billingAccountId) {
             this.billingAccountId = Objects.requireNonNull(billingAccountId);
             return this;
         }
 
         public Builder billingAccountId(String billingAccountId) {
-            this.billingAccountId = Input.of(Objects.requireNonNull(billingAccountId));
+            this.billingAccountId = Output.of(Objects.requireNonNull(billingAccountId));
             return this;
         }
 
-        public Builder definition(Input<ReportDefinitionArgs> definition) {
+        public Builder definition(Output<ReportDefinitionArgs> definition) {
             this.definition = Objects.requireNonNull(definition);
             return this;
         }
 
         public Builder definition(ReportDefinitionArgs definition) {
-            this.definition = Input.of(Objects.requireNonNull(definition));
+            this.definition = Output.of(Objects.requireNonNull(definition));
             return this;
         }
 
-        public Builder deliveryInfo(Input<ReportDeliveryInfoArgs> deliveryInfo) {
+        public Builder deliveryInfo(Output<ReportDeliveryInfoArgs> deliveryInfo) {
             this.deliveryInfo = Objects.requireNonNull(deliveryInfo);
             return this;
         }
 
         public Builder deliveryInfo(ReportDeliveryInfoArgs deliveryInfo) {
-            this.deliveryInfo = Input.of(Objects.requireNonNull(deliveryInfo));
+            this.deliveryInfo = Output.of(Objects.requireNonNull(deliveryInfo));
             return this;
         }
 
-        public Builder format(@Nullable Input<Either<String,FormatType>> format) {
+        public Builder format(@Nullable Output<Either<String,FormatType>> format) {
             this.format = format;
             return this;
         }
 
         public Builder format(@Nullable Either<String,FormatType> format) {
-            this.format = Input.ofNullable(format);
+            this.format = Output.ofNullable(format);
             return this;
         }
 
-        public Builder reportName(@Nullable Input<String> reportName) {
+        public Builder reportName(@Nullable Output<String> reportName) {
             this.reportName = reportName;
             return this;
         }
 
         public Builder reportName(@Nullable String reportName) {
-            this.reportName = Input.ofNullable(reportName);
+            this.reportName = Output.ofNullable(reportName);
             return this;
         }
 
-        public Builder schedule(@Nullable Input<ReportScheduleArgs> schedule) {
+        public Builder schedule(@Nullable Output<ReportScheduleArgs> schedule) {
             this.schedule = schedule;
             return this;
         }
 
         public Builder schedule(@Nullable ReportScheduleArgs schedule) {
-            this.schedule = Input.ofNullable(schedule);
+            this.schedule = Output.ofNullable(schedule);
             return this;
         }
         public ReportByBillingAccountArgs build() {

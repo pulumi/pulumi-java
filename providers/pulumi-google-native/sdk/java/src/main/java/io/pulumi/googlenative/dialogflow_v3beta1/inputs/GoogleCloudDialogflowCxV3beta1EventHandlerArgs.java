@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1FulfillmentArgs;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class GoogleCloudDialogflowCxV3beta1EventHandlerArgs extends io.pul
      * 
      */
     @InputImport(name="event", required=true)
-      private final Input<String> event;
+      private final Output<String> event;
 
-    public Input<String> getEvent() {
+    public Output<String> getEvent() {
         return this.event;
     }
 
@@ -35,10 +35,10 @@ public final class GoogleCloudDialogflowCxV3beta1EventHandlerArgs extends io.pul
      * 
      */
     @InputImport(name="targetFlow")
-      private final @Nullable Input<String> targetFlow;
+      private final @Nullable Output<String> targetFlow;
 
-    public Input<String> getTargetFlow() {
-        return this.targetFlow == null ? Input.empty() : this.targetFlow;
+    public Output<String> getTargetFlow() {
+        return this.targetFlow == null ? Output.empty() : this.targetFlow;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class GoogleCloudDialogflowCxV3beta1EventHandlerArgs extends io.pul
      * 
      */
     @InputImport(name="targetPage")
-      private final @Nullable Input<String> targetPage;
+      private final @Nullable Output<String> targetPage;
 
-    public Input<String> getTargetPage() {
-        return this.targetPage == null ? Input.empty() : this.targetPage;
+    public Output<String> getTargetPage() {
+        return this.targetPage == null ? Output.empty() : this.targetPage;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class GoogleCloudDialogflowCxV3beta1EventHandlerArgs extends io.pul
      * 
      */
     @InputImport(name="triggerFulfillment")
-      private final @Nullable Input<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> triggerFulfillment;
+      private final @Nullable Output<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> triggerFulfillment;
 
-    public Input<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> getTriggerFulfillment() {
-        return this.triggerFulfillment == null ? Input.empty() : this.triggerFulfillment;
+    public Output<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> getTriggerFulfillment() {
+        return this.triggerFulfillment == null ? Output.empty() : this.triggerFulfillment;
     }
 
     public GoogleCloudDialogflowCxV3beta1EventHandlerArgs(
-        Input<String> event,
-        @Nullable Input<String> targetFlow,
-        @Nullable Input<String> targetPage,
-        @Nullable Input<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> triggerFulfillment) {
+        Output<String> event,
+        @Nullable Output<String> targetFlow,
+        @Nullable Output<String> targetPage,
+        @Nullable Output<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> triggerFulfillment) {
         this.event = Objects.requireNonNull(event, "expected parameter 'event' to be non-null");
         this.targetFlow = targetFlow;
         this.targetPage = targetPage;
@@ -75,10 +75,10 @@ public final class GoogleCloudDialogflowCxV3beta1EventHandlerArgs extends io.pul
     }
 
     private GoogleCloudDialogflowCxV3beta1EventHandlerArgs() {
-        this.event = Input.empty();
-        this.targetFlow = Input.empty();
-        this.targetPage = Input.empty();
-        this.triggerFulfillment = Input.empty();
+        this.event = Output.empty();
+        this.targetFlow = Output.empty();
+        this.targetPage = Output.empty();
+        this.triggerFulfillment = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class GoogleCloudDialogflowCxV3beta1EventHandlerArgs extends io.pul
     }
 
     public static final class Builder {
-        private Input<String> event;
-        private @Nullable Input<String> targetFlow;
-        private @Nullable Input<String> targetPage;
-        private @Nullable Input<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> triggerFulfillment;
+        private Output<String> event;
+        private @Nullable Output<String> targetFlow;
+        private @Nullable Output<String> targetPage;
+        private @Nullable Output<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> triggerFulfillment;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class GoogleCloudDialogflowCxV3beta1EventHandlerArgs extends io.pul
     	      this.triggerFulfillment = defaults.triggerFulfillment;
         }
 
-        public Builder event(Input<String> event) {
+        public Builder event(Output<String> event) {
             this.event = Objects.requireNonNull(event);
             return this;
         }
 
         public Builder event(String event) {
-            this.event = Input.of(Objects.requireNonNull(event));
+            this.event = Output.of(Objects.requireNonNull(event));
             return this;
         }
 
-        public Builder targetFlow(@Nullable Input<String> targetFlow) {
+        public Builder targetFlow(@Nullable Output<String> targetFlow) {
             this.targetFlow = targetFlow;
             return this;
         }
 
         public Builder targetFlow(@Nullable String targetFlow) {
-            this.targetFlow = Input.ofNullable(targetFlow);
+            this.targetFlow = Output.ofNullable(targetFlow);
             return this;
         }
 
-        public Builder targetPage(@Nullable Input<String> targetPage) {
+        public Builder targetPage(@Nullable Output<String> targetPage) {
             this.targetPage = targetPage;
             return this;
         }
 
         public Builder targetPage(@Nullable String targetPage) {
-            this.targetPage = Input.ofNullable(targetPage);
+            this.targetPage = Output.ofNullable(targetPage);
             return this;
         }
 
-        public Builder triggerFulfillment(@Nullable Input<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> triggerFulfillment) {
+        public Builder triggerFulfillment(@Nullable Output<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> triggerFulfillment) {
             this.triggerFulfillment = triggerFulfillment;
             return this;
         }
 
         public Builder triggerFulfillment(@Nullable GoogleCloudDialogflowCxV3beta1FulfillmentArgs triggerFulfillment) {
-            this.triggerFulfillment = Input.ofNullable(triggerFulfillment);
+            this.triggerFulfillment = Output.ofNullable(triggerFulfillment);
             return this;
         }
         public GoogleCloudDialogflowCxV3beta1EventHandlerArgs build() {

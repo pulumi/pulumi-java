@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.fms;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class AdminAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountId")
-      private final @Nullable Input<String> accountId;
+      private final @Nullable Output<String> accountId;
 
-    public Input<String> getAccountId() {
-        return this.accountId == null ? Input.empty() : this.accountId;
+    public Output<String> getAccountId() {
+        return this.accountId == null ? Output.empty() : this.accountId;
     }
 
-    public AdminAccountArgs(@Nullable Input<String> accountId) {
+    public AdminAccountArgs(@Nullable Output<String> accountId) {
         this.accountId = accountId;
     }
 
     private AdminAccountArgs() {
-        this.accountId = Input.empty();
+        this.accountId = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class AdminAccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accountId;
+        private @Nullable Output<String> accountId;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class AdminAccountArgs extends io.pulumi.resources.ResourceArgs {
     	      this.accountId = defaults.accountId;
         }
 
-        public Builder accountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Output<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Input.ofNullable(accountId);
+            this.accountId = Output.ofNullable(accountId);
             return this;
         }
         public AdminAccountArgs build() {

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.frauddetector.inputs.EventTypeEntityTypeArgs;
 import io.pulumi.awsnative.frauddetector.inputs.EventTypeEventVariableArgs;
 import io.pulumi.awsnative.frauddetector.inputs.EventTypeLabelArgs;
 import io.pulumi.awsnative.frauddetector.inputs.EventTypeTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,30 +24,30 @@ public final class EventTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="entityTypes", required=true)
-      private final Input<List<EventTypeEntityTypeArgs>> entityTypes;
+      private final Output<List<EventTypeEntityTypeArgs>> entityTypes;
 
-    public Input<List<EventTypeEntityTypeArgs>> getEntityTypes() {
+    public Output<List<EventTypeEntityTypeArgs>> getEntityTypes() {
         return this.entityTypes;
     }
 
     @InputImport(name="eventVariables", required=true)
-      private final Input<List<EventTypeEventVariableArgs>> eventVariables;
+      private final Output<List<EventTypeEventVariableArgs>> eventVariables;
 
-    public Input<List<EventTypeEventVariableArgs>> getEventVariables() {
+    public Output<List<EventTypeEventVariableArgs>> getEventVariables() {
         return this.eventVariables;
     }
 
     @InputImport(name="labels", required=true)
-      private final Input<List<EventTypeLabelArgs>> labels;
+      private final Output<List<EventTypeLabelArgs>> labels;
 
-    public Input<List<EventTypeLabelArgs>> getLabels() {
+    public Output<List<EventTypeLabelArgs>> getLabels() {
         return this.labels;
     }
 
@@ -56,10 +56,10 @@ public final class EventTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -67,19 +67,19 @@ public final class EventTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<EventTypeTagArgs>> tags;
+      private final @Nullable Output<List<EventTypeTagArgs>> tags;
 
-    public Input<List<EventTypeTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<EventTypeTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public EventTypeArgs(
-        @Nullable Input<String> description,
-        Input<List<EventTypeEntityTypeArgs>> entityTypes,
-        Input<List<EventTypeEventVariableArgs>> eventVariables,
-        Input<List<EventTypeLabelArgs>> labels,
-        @Nullable Input<String> name,
-        @Nullable Input<List<EventTypeTagArgs>> tags) {
+        @Nullable Output<String> description,
+        Output<List<EventTypeEntityTypeArgs>> entityTypes,
+        Output<List<EventTypeEventVariableArgs>> eventVariables,
+        Output<List<EventTypeLabelArgs>> labels,
+        @Nullable Output<String> name,
+        @Nullable Output<List<EventTypeTagArgs>> tags) {
         this.description = description;
         this.entityTypes = Objects.requireNonNull(entityTypes, "expected parameter 'entityTypes' to be non-null");
         this.eventVariables = Objects.requireNonNull(eventVariables, "expected parameter 'eventVariables' to be non-null");
@@ -89,12 +89,12 @@ public final class EventTypeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EventTypeArgs() {
-        this.description = Input.empty();
-        this.entityTypes = Input.empty();
-        this.eventVariables = Input.empty();
-        this.labels = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
+        this.description = Output.empty();
+        this.entityTypes = Output.empty();
+        this.eventVariables = Output.empty();
+        this.labels = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,12 +106,12 @@ public final class EventTypeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<List<EventTypeEntityTypeArgs>> entityTypes;
-        private Input<List<EventTypeEventVariableArgs>> eventVariables;
-        private Input<List<EventTypeLabelArgs>> labels;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<EventTypeTagArgs>> tags;
+        private @Nullable Output<String> description;
+        private Output<List<EventTypeEntityTypeArgs>> entityTypes;
+        private Output<List<EventTypeEventVariableArgs>> eventVariables;
+        private Output<List<EventTypeLabelArgs>> labels;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<EventTypeTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -127,63 +127,63 @@ public final class EventTypeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder entityTypes(Input<List<EventTypeEntityTypeArgs>> entityTypes) {
+        public Builder entityTypes(Output<List<EventTypeEntityTypeArgs>> entityTypes) {
             this.entityTypes = Objects.requireNonNull(entityTypes);
             return this;
         }
 
         public Builder entityTypes(List<EventTypeEntityTypeArgs> entityTypes) {
-            this.entityTypes = Input.of(Objects.requireNonNull(entityTypes));
+            this.entityTypes = Output.of(Objects.requireNonNull(entityTypes));
             return this;
         }
 
-        public Builder eventVariables(Input<List<EventTypeEventVariableArgs>> eventVariables) {
+        public Builder eventVariables(Output<List<EventTypeEventVariableArgs>> eventVariables) {
             this.eventVariables = Objects.requireNonNull(eventVariables);
             return this;
         }
 
         public Builder eventVariables(List<EventTypeEventVariableArgs> eventVariables) {
-            this.eventVariables = Input.of(Objects.requireNonNull(eventVariables));
+            this.eventVariables = Output.of(Objects.requireNonNull(eventVariables));
             return this;
         }
 
-        public Builder labels(Input<List<EventTypeLabelArgs>> labels) {
+        public Builder labels(Output<List<EventTypeLabelArgs>> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
         public Builder labels(List<EventTypeLabelArgs> labels) {
-            this.labels = Input.of(Objects.requireNonNull(labels));
+            this.labels = Output.of(Objects.requireNonNull(labels));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<EventTypeTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<EventTypeTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<EventTypeTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public EventTypeArgs build() {

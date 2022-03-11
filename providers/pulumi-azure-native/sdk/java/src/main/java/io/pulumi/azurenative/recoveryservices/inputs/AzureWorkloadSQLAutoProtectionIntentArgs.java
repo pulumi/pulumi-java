@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.enums.BackupManagementType;
 import io.pulumi.azurenative.recoveryservices.enums.ProtectionStatus;
 import io.pulumi.azurenative.recoveryservices.enums.WorkloadItemType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -27,10 +27,10 @@ public final class AzureWorkloadSQLAutoProtectionIntentArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="backupManagementType")
-      private final @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
+      private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
 
-    public Input<Either<String,BackupManagementType>> getBackupManagementType() {
-        return this.backupManagementType == null ? Input.empty() : this.backupManagementType;
+    public Output<Either<String,BackupManagementType>> getBackupManagementType() {
+        return this.backupManagementType == null ? Output.empty() : this.backupManagementType;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class AzureWorkloadSQLAutoProtectionIntentArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="itemId")
-      private final @Nullable Input<String> itemId;
+      private final @Nullable Output<String> itemId;
 
-    public Input<String> getItemId() {
-        return this.itemId == null ? Input.empty() : this.itemId;
+    public Output<String> getItemId() {
+        return this.itemId == null ? Output.empty() : this.itemId;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class AzureWorkloadSQLAutoProtectionIntentArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="policyId")
-      private final @Nullable Input<String> policyId;
+      private final @Nullable Output<String> policyId;
 
-    public Input<String> getPolicyId() {
-        return this.policyId == null ? Input.empty() : this.policyId;
+    public Output<String> getPolicyId() {
+        return this.policyId == null ? Output.empty() : this.policyId;
     }
 
     /**
@@ -61,9 +61,9 @@ public final class AzureWorkloadSQLAutoProtectionIntentArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="protectionIntentItemType", required=true)
-      private final Input<String> protectionIntentItemType;
+      private final Output<String> protectionIntentItemType;
 
-    public Input<String> getProtectionIntentItemType() {
+    public Output<String> getProtectionIntentItemType() {
         return this.protectionIntentItemType;
     }
 
@@ -72,10 +72,10 @@ public final class AzureWorkloadSQLAutoProtectionIntentArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="protectionState")
-      private final @Nullable Input<Either<String,ProtectionStatus>> protectionState;
+      private final @Nullable Output<Either<String,ProtectionStatus>> protectionState;
 
-    public Input<Either<String,ProtectionStatus>> getProtectionState() {
-        return this.protectionState == null ? Input.empty() : this.protectionState;
+    public Output<Either<String,ProtectionStatus>> getProtectionState() {
+        return this.protectionState == null ? Output.empty() : this.protectionState;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class AzureWorkloadSQLAutoProtectionIntentArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="sourceResourceId")
-      private final @Nullable Input<String> sourceResourceId;
+      private final @Nullable Output<String> sourceResourceId;
 
-    public Input<String> getSourceResourceId() {
-        return this.sourceResourceId == null ? Input.empty() : this.sourceResourceId;
+    public Output<String> getSourceResourceId() {
+        return this.sourceResourceId == null ? Output.empty() : this.sourceResourceId;
     }
 
     /**
@@ -94,20 +94,20 @@ public final class AzureWorkloadSQLAutoProtectionIntentArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="workloadItemType")
-      private final @Nullable Input<Either<String,WorkloadItemType>> workloadItemType;
+      private final @Nullable Output<Either<String,WorkloadItemType>> workloadItemType;
 
-    public Input<Either<String,WorkloadItemType>> getWorkloadItemType() {
-        return this.workloadItemType == null ? Input.empty() : this.workloadItemType;
+    public Output<Either<String,WorkloadItemType>> getWorkloadItemType() {
+        return this.workloadItemType == null ? Output.empty() : this.workloadItemType;
     }
 
     public AzureWorkloadSQLAutoProtectionIntentArgs(
-        @Nullable Input<Either<String,BackupManagementType>> backupManagementType,
-        @Nullable Input<String> itemId,
-        @Nullable Input<String> policyId,
-        Input<String> protectionIntentItemType,
-        @Nullable Input<Either<String,ProtectionStatus>> protectionState,
-        @Nullable Input<String> sourceResourceId,
-        @Nullable Input<Either<String,WorkloadItemType>> workloadItemType) {
+        @Nullable Output<Either<String,BackupManagementType>> backupManagementType,
+        @Nullable Output<String> itemId,
+        @Nullable Output<String> policyId,
+        Output<String> protectionIntentItemType,
+        @Nullable Output<Either<String,ProtectionStatus>> protectionState,
+        @Nullable Output<String> sourceResourceId,
+        @Nullable Output<Either<String,WorkloadItemType>> workloadItemType) {
         this.backupManagementType = backupManagementType;
         this.itemId = itemId;
         this.policyId = policyId;
@@ -118,13 +118,13 @@ public final class AzureWorkloadSQLAutoProtectionIntentArgs extends io.pulumi.re
     }
 
     private AzureWorkloadSQLAutoProtectionIntentArgs() {
-        this.backupManagementType = Input.empty();
-        this.itemId = Input.empty();
-        this.policyId = Input.empty();
-        this.protectionIntentItemType = Input.empty();
-        this.protectionState = Input.empty();
-        this.sourceResourceId = Input.empty();
-        this.workloadItemType = Input.empty();
+        this.backupManagementType = Output.empty();
+        this.itemId = Output.empty();
+        this.policyId = Output.empty();
+        this.protectionIntentItemType = Output.empty();
+        this.protectionState = Output.empty();
+        this.sourceResourceId = Output.empty();
+        this.workloadItemType = Output.empty();
     }
 
     public static Builder builder() {
@@ -136,13 +136,13 @@ public final class AzureWorkloadSQLAutoProtectionIntentArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
-        private @Nullable Input<String> itemId;
-        private @Nullable Input<String> policyId;
-        private Input<String> protectionIntentItemType;
-        private @Nullable Input<Either<String,ProtectionStatus>> protectionState;
-        private @Nullable Input<String> sourceResourceId;
-        private @Nullable Input<Either<String,WorkloadItemType>> workloadItemType;
+        private @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
+        private @Nullable Output<String> itemId;
+        private @Nullable Output<String> policyId;
+        private Output<String> protectionIntentItemType;
+        private @Nullable Output<Either<String,ProtectionStatus>> protectionState;
+        private @Nullable Output<String> sourceResourceId;
+        private @Nullable Output<Either<String,WorkloadItemType>> workloadItemType;
 
         public Builder() {
     	      // Empty
@@ -159,73 +159,73 @@ public final class AzureWorkloadSQLAutoProtectionIntentArgs extends io.pulumi.re
     	      this.workloadItemType = defaults.workloadItemType;
         }
 
-        public Builder backupManagementType(@Nullable Input<Either<String,BackupManagementType>> backupManagementType) {
+        public Builder backupManagementType(@Nullable Output<Either<String,BackupManagementType>> backupManagementType) {
             this.backupManagementType = backupManagementType;
             return this;
         }
 
         public Builder backupManagementType(@Nullable Either<String,BackupManagementType> backupManagementType) {
-            this.backupManagementType = Input.ofNullable(backupManagementType);
+            this.backupManagementType = Output.ofNullable(backupManagementType);
             return this;
         }
 
-        public Builder itemId(@Nullable Input<String> itemId) {
+        public Builder itemId(@Nullable Output<String> itemId) {
             this.itemId = itemId;
             return this;
         }
 
         public Builder itemId(@Nullable String itemId) {
-            this.itemId = Input.ofNullable(itemId);
+            this.itemId = Output.ofNullable(itemId);
             return this;
         }
 
-        public Builder policyId(@Nullable Input<String> policyId) {
+        public Builder policyId(@Nullable Output<String> policyId) {
             this.policyId = policyId;
             return this;
         }
 
         public Builder policyId(@Nullable String policyId) {
-            this.policyId = Input.ofNullable(policyId);
+            this.policyId = Output.ofNullable(policyId);
             return this;
         }
 
-        public Builder protectionIntentItemType(Input<String> protectionIntentItemType) {
+        public Builder protectionIntentItemType(Output<String> protectionIntentItemType) {
             this.protectionIntentItemType = Objects.requireNonNull(protectionIntentItemType);
             return this;
         }
 
         public Builder protectionIntentItemType(String protectionIntentItemType) {
-            this.protectionIntentItemType = Input.of(Objects.requireNonNull(protectionIntentItemType));
+            this.protectionIntentItemType = Output.of(Objects.requireNonNull(protectionIntentItemType));
             return this;
         }
 
-        public Builder protectionState(@Nullable Input<Either<String,ProtectionStatus>> protectionState) {
+        public Builder protectionState(@Nullable Output<Either<String,ProtectionStatus>> protectionState) {
             this.protectionState = protectionState;
             return this;
         }
 
         public Builder protectionState(@Nullable Either<String,ProtectionStatus> protectionState) {
-            this.protectionState = Input.ofNullable(protectionState);
+            this.protectionState = Output.ofNullable(protectionState);
             return this;
         }
 
-        public Builder sourceResourceId(@Nullable Input<String> sourceResourceId) {
+        public Builder sourceResourceId(@Nullable Output<String> sourceResourceId) {
             this.sourceResourceId = sourceResourceId;
             return this;
         }
 
         public Builder sourceResourceId(@Nullable String sourceResourceId) {
-            this.sourceResourceId = Input.ofNullable(sourceResourceId);
+            this.sourceResourceId = Output.ofNullable(sourceResourceId);
             return this;
         }
 
-        public Builder workloadItemType(@Nullable Input<Either<String,WorkloadItemType>> workloadItemType) {
+        public Builder workloadItemType(@Nullable Output<Either<String,WorkloadItemType>> workloadItemType) {
             this.workloadItemType = workloadItemType;
             return this;
         }
 
         public Builder workloadItemType(@Nullable Either<String,WorkloadItemType> workloadItemType) {
-            this.workloadItemType = Input.ofNullable(workloadItemType);
+            this.workloadItemType = Output.ofNullable(workloadItemType);
             return this;
         }
         public AzureWorkloadSQLAutoProtectionIntentArgs build() {

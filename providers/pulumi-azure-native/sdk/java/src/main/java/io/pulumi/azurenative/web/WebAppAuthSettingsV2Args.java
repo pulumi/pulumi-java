@@ -8,7 +8,7 @@ import io.pulumi.azurenative.web.inputs.GlobalValidationArgs;
 import io.pulumi.azurenative.web.inputs.HttpSettingsArgs;
 import io.pulumi.azurenative.web.inputs.IdentityProvidersArgs;
 import io.pulumi.azurenative.web.inputs.LoginArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class WebAppAuthSettingsV2Args extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="globalValidation")
-      private final @Nullable Input<GlobalValidationArgs> globalValidation;
+      private final @Nullable Output<GlobalValidationArgs> globalValidation;
 
-    public Input<GlobalValidationArgs> getGlobalValidation() {
-        return this.globalValidation == null ? Input.empty() : this.globalValidation;
+    public Output<GlobalValidationArgs> getGlobalValidation() {
+        return this.globalValidation == null ? Output.empty() : this.globalValidation;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class WebAppAuthSettingsV2Args extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="httpSettings")
-      private final @Nullable Input<HttpSettingsArgs> httpSettings;
+      private final @Nullable Output<HttpSettingsArgs> httpSettings;
 
-    public Input<HttpSettingsArgs> getHttpSettings() {
-        return this.httpSettings == null ? Input.empty() : this.httpSettings;
+    public Output<HttpSettingsArgs> getHttpSettings() {
+        return this.httpSettings == null ? Output.empty() : this.httpSettings;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class WebAppAuthSettingsV2Args extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="identityProviders")
-      private final @Nullable Input<IdentityProvidersArgs> identityProviders;
+      private final @Nullable Output<IdentityProvidersArgs> identityProviders;
 
-    public Input<IdentityProvidersArgs> getIdentityProviders() {
-        return this.identityProviders == null ? Input.empty() : this.identityProviders;
+    public Output<IdentityProvidersArgs> getIdentityProviders() {
+        return this.identityProviders == null ? Output.empty() : this.identityProviders;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class WebAppAuthSettingsV2Args extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class WebAppAuthSettingsV2Args extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="login")
-      private final @Nullable Input<LoginArgs> login;
+      private final @Nullable Output<LoginArgs> login;
 
-    public Input<LoginArgs> getLogin() {
-        return this.login == null ? Input.empty() : this.login;
+    public Output<LoginArgs> getLogin() {
+        return this.login == null ? Output.empty() : this.login;
     }
 
     /**
@@ -79,9 +79,9 @@ public final class WebAppAuthSettingsV2Args extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -90,10 +90,10 @@ public final class WebAppAuthSettingsV2Args extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="platform")
-      private final @Nullable Input<AuthPlatformArgs> platform;
+      private final @Nullable Output<AuthPlatformArgs> platform;
 
-    public Input<AuthPlatformArgs> getPlatform() {
-        return this.platform == null ? Input.empty() : this.platform;
+    public Output<AuthPlatformArgs> getPlatform() {
+        return this.platform == null ? Output.empty() : this.platform;
     }
 
     /**
@@ -101,21 +101,21 @@ public final class WebAppAuthSettingsV2Args extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public WebAppAuthSettingsV2Args(
-        @Nullable Input<GlobalValidationArgs> globalValidation,
-        @Nullable Input<HttpSettingsArgs> httpSettings,
-        @Nullable Input<IdentityProvidersArgs> identityProviders,
-        @Nullable Input<String> kind,
-        @Nullable Input<LoginArgs> login,
-        Input<String> name,
-        @Nullable Input<AuthPlatformArgs> platform,
-        Input<String> resourceGroupName) {
+        @Nullable Output<GlobalValidationArgs> globalValidation,
+        @Nullable Output<HttpSettingsArgs> httpSettings,
+        @Nullable Output<IdentityProvidersArgs> identityProviders,
+        @Nullable Output<String> kind,
+        @Nullable Output<LoginArgs> login,
+        Output<String> name,
+        @Nullable Output<AuthPlatformArgs> platform,
+        Output<String> resourceGroupName) {
         this.globalValidation = globalValidation;
         this.httpSettings = httpSettings;
         this.identityProviders = identityProviders;
@@ -127,14 +127,14 @@ public final class WebAppAuthSettingsV2Args extends io.pulumi.resources.Resource
     }
 
     private WebAppAuthSettingsV2Args() {
-        this.globalValidation = Input.empty();
-        this.httpSettings = Input.empty();
-        this.identityProviders = Input.empty();
-        this.kind = Input.empty();
-        this.login = Input.empty();
-        this.name = Input.empty();
-        this.platform = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.globalValidation = Output.empty();
+        this.httpSettings = Output.empty();
+        this.identityProviders = Output.empty();
+        this.kind = Output.empty();
+        this.login = Output.empty();
+        this.name = Output.empty();
+        this.platform = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -146,14 +146,14 @@ public final class WebAppAuthSettingsV2Args extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<GlobalValidationArgs> globalValidation;
-        private @Nullable Input<HttpSettingsArgs> httpSettings;
-        private @Nullable Input<IdentityProvidersArgs> identityProviders;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<LoginArgs> login;
-        private Input<String> name;
-        private @Nullable Input<AuthPlatformArgs> platform;
-        private Input<String> resourceGroupName;
+        private @Nullable Output<GlobalValidationArgs> globalValidation;
+        private @Nullable Output<HttpSettingsArgs> httpSettings;
+        private @Nullable Output<IdentityProvidersArgs> identityProviders;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<LoginArgs> login;
+        private Output<String> name;
+        private @Nullable Output<AuthPlatformArgs> platform;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -171,83 +171,83 @@ public final class WebAppAuthSettingsV2Args extends io.pulumi.resources.Resource
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder globalValidation(@Nullable Input<GlobalValidationArgs> globalValidation) {
+        public Builder globalValidation(@Nullable Output<GlobalValidationArgs> globalValidation) {
             this.globalValidation = globalValidation;
             return this;
         }
 
         public Builder globalValidation(@Nullable GlobalValidationArgs globalValidation) {
-            this.globalValidation = Input.ofNullable(globalValidation);
+            this.globalValidation = Output.ofNullable(globalValidation);
             return this;
         }
 
-        public Builder httpSettings(@Nullable Input<HttpSettingsArgs> httpSettings) {
+        public Builder httpSettings(@Nullable Output<HttpSettingsArgs> httpSettings) {
             this.httpSettings = httpSettings;
             return this;
         }
 
         public Builder httpSettings(@Nullable HttpSettingsArgs httpSettings) {
-            this.httpSettings = Input.ofNullable(httpSettings);
+            this.httpSettings = Output.ofNullable(httpSettings);
             return this;
         }
 
-        public Builder identityProviders(@Nullable Input<IdentityProvidersArgs> identityProviders) {
+        public Builder identityProviders(@Nullable Output<IdentityProvidersArgs> identityProviders) {
             this.identityProviders = identityProviders;
             return this;
         }
 
         public Builder identityProviders(@Nullable IdentityProvidersArgs identityProviders) {
-            this.identityProviders = Input.ofNullable(identityProviders);
+            this.identityProviders = Output.ofNullable(identityProviders);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder login(@Nullable Input<LoginArgs> login) {
+        public Builder login(@Nullable Output<LoginArgs> login) {
             this.login = login;
             return this;
         }
 
         public Builder login(@Nullable LoginArgs login) {
-            this.login = Input.ofNullable(login);
+            this.login = Output.ofNullable(login);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder platform(@Nullable Input<AuthPlatformArgs> platform) {
+        public Builder platform(@Nullable Output<AuthPlatformArgs> platform) {
             this.platform = platform;
             return this;
         }
 
         public Builder platform(@Nullable AuthPlatformArgs platform) {
-            this.platform = Input.ofNullable(platform);
+            this.platform = Output.ofNullable(platform);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public WebAppAuthSettingsV2Args build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class CustomEntityStoreAssignmentArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="customEntityStoreAssignmentName")
-      private final @Nullable Input<String> customEntityStoreAssignmentName;
+      private final @Nullable Output<String> customEntityStoreAssignmentName;
 
-    public Input<String> getCustomEntityStoreAssignmentName() {
-        return this.customEntityStoreAssignmentName == null ? Input.empty() : this.customEntityStoreAssignmentName;
+    public Output<String> getCustomEntityStoreAssignmentName() {
+        return this.customEntityStoreAssignmentName == null ? Output.empty() : this.customEntityStoreAssignmentName;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class CustomEntityStoreAssignmentArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="principal")
-      private final @Nullable Input<String> principal;
+      private final @Nullable Output<String> principal;
 
-    public Input<String> getPrincipal() {
-        return this.principal == null ? Input.empty() : this.principal;
+    public Output<String> getPrincipal() {
+        return this.principal == null ? Output.empty() : this.principal;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class CustomEntityStoreAssignmentArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public CustomEntityStoreAssignmentArgs(
-        @Nullable Input<String> customEntityStoreAssignmentName,
-        @Nullable Input<String> principal,
-        Input<String> resourceGroupName) {
+        @Nullable Output<String> customEntityStoreAssignmentName,
+        @Nullable Output<String> principal,
+        Output<String> resourceGroupName) {
         this.customEntityStoreAssignmentName = customEntityStoreAssignmentName;
         this.principal = principal;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
     }
 
     private CustomEntityStoreAssignmentArgs() {
-        this.customEntityStoreAssignmentName = Input.empty();
-        this.principal = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.customEntityStoreAssignmentName = Output.empty();
+        this.principal = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class CustomEntityStoreAssignmentArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> customEntityStoreAssignmentName;
-        private @Nullable Input<String> principal;
-        private Input<String> resourceGroupName;
+        private @Nullable Output<String> customEntityStoreAssignmentName;
+        private @Nullable Output<String> principal;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class CustomEntityStoreAssignmentArgs extends io.pulumi.resources.R
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder customEntityStoreAssignmentName(@Nullable Input<String> customEntityStoreAssignmentName) {
+        public Builder customEntityStoreAssignmentName(@Nullable Output<String> customEntityStoreAssignmentName) {
             this.customEntityStoreAssignmentName = customEntityStoreAssignmentName;
             return this;
         }
 
         public Builder customEntityStoreAssignmentName(@Nullable String customEntityStoreAssignmentName) {
-            this.customEntityStoreAssignmentName = Input.ofNullable(customEntityStoreAssignmentName);
+            this.customEntityStoreAssignmentName = Output.ofNullable(customEntityStoreAssignmentName);
             return this;
         }
 
-        public Builder principal(@Nullable Input<String> principal) {
+        public Builder principal(@Nullable Output<String> principal) {
             this.principal = principal;
             return this;
         }
 
         public Builder principal(@Nullable String principal) {
-            this.principal = Input.ofNullable(principal);
+            this.principal = Output.ofNullable(principal);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public CustomEntityStoreAssignmentArgs build() {

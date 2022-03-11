@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class ServerCertificateCommonNameArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="certificateCommonName", required=true)
-      private final Input<String> certificateCommonName;
+      private final Output<String> certificateCommonName;
 
-    public Input<String> getCertificateCommonName() {
+    public Output<String> getCertificateCommonName() {
         return this.certificateCommonName;
     }
 
@@ -33,22 +33,22 @@ public final class ServerCertificateCommonNameArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="certificateIssuerThumbprint", required=true)
-      private final Input<String> certificateIssuerThumbprint;
+      private final Output<String> certificateIssuerThumbprint;
 
-    public Input<String> getCertificateIssuerThumbprint() {
+    public Output<String> getCertificateIssuerThumbprint() {
         return this.certificateIssuerThumbprint;
     }
 
     public ServerCertificateCommonNameArgs(
-        Input<String> certificateCommonName,
-        Input<String> certificateIssuerThumbprint) {
+        Output<String> certificateCommonName,
+        Output<String> certificateIssuerThumbprint) {
         this.certificateCommonName = Objects.requireNonNull(certificateCommonName, "expected parameter 'certificateCommonName' to be non-null");
         this.certificateIssuerThumbprint = Objects.requireNonNull(certificateIssuerThumbprint, "expected parameter 'certificateIssuerThumbprint' to be non-null");
     }
 
     private ServerCertificateCommonNameArgs() {
-        this.certificateCommonName = Input.empty();
-        this.certificateIssuerThumbprint = Input.empty();
+        this.certificateCommonName = Output.empty();
+        this.certificateIssuerThumbprint = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class ServerCertificateCommonNameArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<String> certificateCommonName;
-        private Input<String> certificateIssuerThumbprint;
+        private Output<String> certificateCommonName;
+        private Output<String> certificateIssuerThumbprint;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class ServerCertificateCommonNameArgs extends io.pulumi.resources.R
     	      this.certificateIssuerThumbprint = defaults.certificateIssuerThumbprint;
         }
 
-        public Builder certificateCommonName(Input<String> certificateCommonName) {
+        public Builder certificateCommonName(Output<String> certificateCommonName) {
             this.certificateCommonName = Objects.requireNonNull(certificateCommonName);
             return this;
         }
 
         public Builder certificateCommonName(String certificateCommonName) {
-            this.certificateCommonName = Input.of(Objects.requireNonNull(certificateCommonName));
+            this.certificateCommonName = Output.of(Objects.requireNonNull(certificateCommonName));
             return this;
         }
 
-        public Builder certificateIssuerThumbprint(Input<String> certificateIssuerThumbprint) {
+        public Builder certificateIssuerThumbprint(Output<String> certificateIssuerThumbprint) {
             this.certificateIssuerThumbprint = Objects.requireNonNull(certificateIssuerThumbprint);
             return this;
         }
 
         public Builder certificateIssuerThumbprint(String certificateIssuerThumbprint) {
-            this.certificateIssuerThumbprint = Input.of(Objects.requireNonNull(certificateIssuerThumbprint));
+            this.certificateIssuerThumbprint = Output.of(Objects.requireNonNull(certificateIssuerThumbprint));
             return this;
         }
         public ServerCertificateCommonNameArgs build() {

@@ -11,7 +11,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.ScaleSettingsArgs;
 import io.pulumi.azurenative.machinelearningservices.inputs.UserAccountCredentialsArgs;
 import io.pulumi.azurenative.machinelearningservices.inputs.VirtualMachineImageArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -32,10 +32,10 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="enableNodePublicIp")
-      private final @Nullable Input<Boolean> enableNodePublicIp;
+      private final @Nullable Output<Boolean> enableNodePublicIp;
 
-    public Input<Boolean> getEnableNodePublicIp() {
-        return this.enableNodePublicIp == null ? Input.empty() : this.enableNodePublicIp;
+    public Output<Boolean> getEnableNodePublicIp() {
+        return this.enableNodePublicIp == null ? Output.empty() : this.enableNodePublicIp;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="isolatedNetwork")
-      private final @Nullable Input<Boolean> isolatedNetwork;
+      private final @Nullable Output<Boolean> isolatedNetwork;
 
-    public Input<Boolean> getIsolatedNetwork() {
-        return this.isolatedNetwork == null ? Input.empty() : this.isolatedNetwork;
+    public Output<Boolean> getIsolatedNetwork() {
+        return this.isolatedNetwork == null ? Output.empty() : this.isolatedNetwork;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="osType")
-      private final @Nullable Input<Either<String,OsType>> osType;
+      private final @Nullable Output<Either<String,OsType>> osType;
 
-    public Input<Either<String,OsType>> getOsType() {
-        return this.osType == null ? Input.empty() : this.osType;
+    public Output<Either<String,OsType>> getOsType() {
+        return this.osType == null ? Output.empty() : this.osType;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="remoteLoginPortPublicAccess")
-      private final @Nullable Input<Either<String,RemoteLoginPortPublicAccess>> remoteLoginPortPublicAccess;
+      private final @Nullable Output<Either<String,RemoteLoginPortPublicAccess>> remoteLoginPortPublicAccess;
 
-    public Input<Either<String,RemoteLoginPortPublicAccess>> getRemoteLoginPortPublicAccess() {
-        return this.remoteLoginPortPublicAccess == null ? Input.empty() : this.remoteLoginPortPublicAccess;
+    public Output<Either<String,RemoteLoginPortPublicAccess>> getRemoteLoginPortPublicAccess() {
+        return this.remoteLoginPortPublicAccess == null ? Output.empty() : this.remoteLoginPortPublicAccess;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="scaleSettings")
-      private final @Nullable Input<ScaleSettingsArgs> scaleSettings;
+      private final @Nullable Output<ScaleSettingsArgs> scaleSettings;
 
-    public Input<ScaleSettingsArgs> getScaleSettings() {
-        return this.scaleSettings == null ? Input.empty() : this.scaleSettings;
+    public Output<ScaleSettingsArgs> getScaleSettings() {
+        return this.scaleSettings == null ? Output.empty() : this.scaleSettings;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="subnet")
-      private final @Nullable Input<ResourceIdArgs> subnet;
+      private final @Nullable Output<ResourceIdArgs> subnet;
 
-    public Input<ResourceIdArgs> getSubnet() {
-        return this.subnet == null ? Input.empty() : this.subnet;
+    public Output<ResourceIdArgs> getSubnet() {
+        return this.subnet == null ? Output.empty() : this.subnet;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="userAccountCredentials")
-      private final @Nullable Input<UserAccountCredentialsArgs> userAccountCredentials;
+      private final @Nullable Output<UserAccountCredentialsArgs> userAccountCredentials;
 
-    public Input<UserAccountCredentialsArgs> getUserAccountCredentials() {
-        return this.userAccountCredentials == null ? Input.empty() : this.userAccountCredentials;
+    public Output<UserAccountCredentialsArgs> getUserAccountCredentials() {
+        return this.userAccountCredentials == null ? Output.empty() : this.userAccountCredentials;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="virtualMachineImage")
-      private final @Nullable Input<VirtualMachineImageArgs> virtualMachineImage;
+      private final @Nullable Output<VirtualMachineImageArgs> virtualMachineImage;
 
-    public Input<VirtualMachineImageArgs> getVirtualMachineImage() {
-        return this.virtualMachineImage == null ? Input.empty() : this.virtualMachineImage;
+    public Output<VirtualMachineImageArgs> getVirtualMachineImage() {
+        return this.virtualMachineImage == null ? Output.empty() : this.virtualMachineImage;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="vmPriority")
-      private final @Nullable Input<Either<String,VmPriority>> vmPriority;
+      private final @Nullable Output<Either<String,VmPriority>> vmPriority;
 
-    public Input<Either<String,VmPriority>> getVmPriority() {
-        return this.vmPriority == null ? Input.empty() : this.vmPriority;
+    public Output<Either<String,VmPriority>> getVmPriority() {
+        return this.vmPriority == null ? Output.empty() : this.vmPriority;
     }
 
     /**
@@ -131,27 +131,27 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="vmSize")
-      private final @Nullable Input<String> vmSize;
+      private final @Nullable Output<String> vmSize;
 
-    public Input<String> getVmSize() {
-        return this.vmSize == null ? Input.empty() : this.vmSize;
+    public Output<String> getVmSize() {
+        return this.vmSize == null ? Output.empty() : this.vmSize;
     }
 
     public AmlComputePropertiesArgs(
-        @Nullable Input<Boolean> enableNodePublicIp,
-        @Nullable Input<Boolean> isolatedNetwork,
-        @Nullable Input<Either<String,OsType>> osType,
-        @Nullable Input<Either<String,RemoteLoginPortPublicAccess>> remoteLoginPortPublicAccess,
-        @Nullable Input<ScaleSettingsArgs> scaleSettings,
-        @Nullable Input<ResourceIdArgs> subnet,
-        @Nullable Input<UserAccountCredentialsArgs> userAccountCredentials,
-        @Nullable Input<VirtualMachineImageArgs> virtualMachineImage,
-        @Nullable Input<Either<String,VmPriority>> vmPriority,
-        @Nullable Input<String> vmSize) {
-        this.enableNodePublicIp = enableNodePublicIp == null ? Input.ofNullable(true) : enableNodePublicIp;
+        @Nullable Output<Boolean> enableNodePublicIp,
+        @Nullable Output<Boolean> isolatedNetwork,
+        @Nullable Output<Either<String,OsType>> osType,
+        @Nullable Output<Either<String,RemoteLoginPortPublicAccess>> remoteLoginPortPublicAccess,
+        @Nullable Output<ScaleSettingsArgs> scaleSettings,
+        @Nullable Output<ResourceIdArgs> subnet,
+        @Nullable Output<UserAccountCredentialsArgs> userAccountCredentials,
+        @Nullable Output<VirtualMachineImageArgs> virtualMachineImage,
+        @Nullable Output<Either<String,VmPriority>> vmPriority,
+        @Nullable Output<String> vmSize) {
+        this.enableNodePublicIp = enableNodePublicIp == null ? Output.ofNullable(true) : enableNodePublicIp;
         this.isolatedNetwork = isolatedNetwork;
-        this.osType = osType == null ? Input.ofLeft("Linux") : osType;
-        this.remoteLoginPortPublicAccess = remoteLoginPortPublicAccess == null ? Input.ofLeft("NotSpecified") : remoteLoginPortPublicAccess;
+        this.osType = osType == null ? Output.ofLeft("Linux") : osType;
+        this.remoteLoginPortPublicAccess = remoteLoginPortPublicAccess == null ? Output.ofLeft("NotSpecified") : remoteLoginPortPublicAccess;
         this.scaleSettings = scaleSettings;
         this.subnet = subnet;
         this.userAccountCredentials = userAccountCredentials;
@@ -161,16 +161,16 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
     }
 
     private AmlComputePropertiesArgs() {
-        this.enableNodePublicIp = Input.empty();
-        this.isolatedNetwork = Input.empty();
-        this.osType = Input.empty();
-        this.remoteLoginPortPublicAccess = Input.empty();
-        this.scaleSettings = Input.empty();
-        this.subnet = Input.empty();
-        this.userAccountCredentials = Input.empty();
-        this.virtualMachineImage = Input.empty();
-        this.vmPriority = Input.empty();
-        this.vmSize = Input.empty();
+        this.enableNodePublicIp = Output.empty();
+        this.isolatedNetwork = Output.empty();
+        this.osType = Output.empty();
+        this.remoteLoginPortPublicAccess = Output.empty();
+        this.scaleSettings = Output.empty();
+        this.subnet = Output.empty();
+        this.userAccountCredentials = Output.empty();
+        this.virtualMachineImage = Output.empty();
+        this.vmPriority = Output.empty();
+        this.vmSize = Output.empty();
     }
 
     public static Builder builder() {
@@ -182,16 +182,16 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enableNodePublicIp;
-        private @Nullable Input<Boolean> isolatedNetwork;
-        private @Nullable Input<Either<String,OsType>> osType;
-        private @Nullable Input<Either<String,RemoteLoginPortPublicAccess>> remoteLoginPortPublicAccess;
-        private @Nullable Input<ScaleSettingsArgs> scaleSettings;
-        private @Nullable Input<ResourceIdArgs> subnet;
-        private @Nullable Input<UserAccountCredentialsArgs> userAccountCredentials;
-        private @Nullable Input<VirtualMachineImageArgs> virtualMachineImage;
-        private @Nullable Input<Either<String,VmPriority>> vmPriority;
-        private @Nullable Input<String> vmSize;
+        private @Nullable Output<Boolean> enableNodePublicIp;
+        private @Nullable Output<Boolean> isolatedNetwork;
+        private @Nullable Output<Either<String,OsType>> osType;
+        private @Nullable Output<Either<String,RemoteLoginPortPublicAccess>> remoteLoginPortPublicAccess;
+        private @Nullable Output<ScaleSettingsArgs> scaleSettings;
+        private @Nullable Output<ResourceIdArgs> subnet;
+        private @Nullable Output<UserAccountCredentialsArgs> userAccountCredentials;
+        private @Nullable Output<VirtualMachineImageArgs> virtualMachineImage;
+        private @Nullable Output<Either<String,VmPriority>> vmPriority;
+        private @Nullable Output<String> vmSize;
 
         public Builder() {
     	      // Empty
@@ -211,103 +211,103 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
     	      this.vmSize = defaults.vmSize;
         }
 
-        public Builder enableNodePublicIp(@Nullable Input<Boolean> enableNodePublicIp) {
+        public Builder enableNodePublicIp(@Nullable Output<Boolean> enableNodePublicIp) {
             this.enableNodePublicIp = enableNodePublicIp;
             return this;
         }
 
         public Builder enableNodePublicIp(@Nullable Boolean enableNodePublicIp) {
-            this.enableNodePublicIp = Input.ofNullable(enableNodePublicIp);
+            this.enableNodePublicIp = Output.ofNullable(enableNodePublicIp);
             return this;
         }
 
-        public Builder isolatedNetwork(@Nullable Input<Boolean> isolatedNetwork) {
+        public Builder isolatedNetwork(@Nullable Output<Boolean> isolatedNetwork) {
             this.isolatedNetwork = isolatedNetwork;
             return this;
         }
 
         public Builder isolatedNetwork(@Nullable Boolean isolatedNetwork) {
-            this.isolatedNetwork = Input.ofNullable(isolatedNetwork);
+            this.isolatedNetwork = Output.ofNullable(isolatedNetwork);
             return this;
         }
 
-        public Builder osType(@Nullable Input<Either<String,OsType>> osType) {
+        public Builder osType(@Nullable Output<Either<String,OsType>> osType) {
             this.osType = osType;
             return this;
         }
 
         public Builder osType(@Nullable Either<String,OsType> osType) {
-            this.osType = Input.ofNullable(osType);
+            this.osType = Output.ofNullable(osType);
             return this;
         }
 
-        public Builder remoteLoginPortPublicAccess(@Nullable Input<Either<String,RemoteLoginPortPublicAccess>> remoteLoginPortPublicAccess) {
+        public Builder remoteLoginPortPublicAccess(@Nullable Output<Either<String,RemoteLoginPortPublicAccess>> remoteLoginPortPublicAccess) {
             this.remoteLoginPortPublicAccess = remoteLoginPortPublicAccess;
             return this;
         }
 
         public Builder remoteLoginPortPublicAccess(@Nullable Either<String,RemoteLoginPortPublicAccess> remoteLoginPortPublicAccess) {
-            this.remoteLoginPortPublicAccess = Input.ofNullable(remoteLoginPortPublicAccess);
+            this.remoteLoginPortPublicAccess = Output.ofNullable(remoteLoginPortPublicAccess);
             return this;
         }
 
-        public Builder scaleSettings(@Nullable Input<ScaleSettingsArgs> scaleSettings) {
+        public Builder scaleSettings(@Nullable Output<ScaleSettingsArgs> scaleSettings) {
             this.scaleSettings = scaleSettings;
             return this;
         }
 
         public Builder scaleSettings(@Nullable ScaleSettingsArgs scaleSettings) {
-            this.scaleSettings = Input.ofNullable(scaleSettings);
+            this.scaleSettings = Output.ofNullable(scaleSettings);
             return this;
         }
 
-        public Builder subnet(@Nullable Input<ResourceIdArgs> subnet) {
+        public Builder subnet(@Nullable Output<ResourceIdArgs> subnet) {
             this.subnet = subnet;
             return this;
         }
 
         public Builder subnet(@Nullable ResourceIdArgs subnet) {
-            this.subnet = Input.ofNullable(subnet);
+            this.subnet = Output.ofNullable(subnet);
             return this;
         }
 
-        public Builder userAccountCredentials(@Nullable Input<UserAccountCredentialsArgs> userAccountCredentials) {
+        public Builder userAccountCredentials(@Nullable Output<UserAccountCredentialsArgs> userAccountCredentials) {
             this.userAccountCredentials = userAccountCredentials;
             return this;
         }
 
         public Builder userAccountCredentials(@Nullable UserAccountCredentialsArgs userAccountCredentials) {
-            this.userAccountCredentials = Input.ofNullable(userAccountCredentials);
+            this.userAccountCredentials = Output.ofNullable(userAccountCredentials);
             return this;
         }
 
-        public Builder virtualMachineImage(@Nullable Input<VirtualMachineImageArgs> virtualMachineImage) {
+        public Builder virtualMachineImage(@Nullable Output<VirtualMachineImageArgs> virtualMachineImage) {
             this.virtualMachineImage = virtualMachineImage;
             return this;
         }
 
         public Builder virtualMachineImage(@Nullable VirtualMachineImageArgs virtualMachineImage) {
-            this.virtualMachineImage = Input.ofNullable(virtualMachineImage);
+            this.virtualMachineImage = Output.ofNullable(virtualMachineImage);
             return this;
         }
 
-        public Builder vmPriority(@Nullable Input<Either<String,VmPriority>> vmPriority) {
+        public Builder vmPriority(@Nullable Output<Either<String,VmPriority>> vmPriority) {
             this.vmPriority = vmPriority;
             return this;
         }
 
         public Builder vmPriority(@Nullable Either<String,VmPriority> vmPriority) {
-            this.vmPriority = Input.ofNullable(vmPriority);
+            this.vmPriority = Output.ofNullable(vmPriority);
             return this;
         }
 
-        public Builder vmSize(@Nullable Input<String> vmSize) {
+        public Builder vmSize(@Nullable Output<String> vmSize) {
             this.vmSize = vmSize;
             return this;
         }
 
         public Builder vmSize(@Nullable String vmSize) {
-            this.vmSize = Input.ofNullable(vmSize);
+            this.vmSize = Output.ofNullable(vmSize);
             return this;
         }
         public AmlComputePropertiesArgs build() {

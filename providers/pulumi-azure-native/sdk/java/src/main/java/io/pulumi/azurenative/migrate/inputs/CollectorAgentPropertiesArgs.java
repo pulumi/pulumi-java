@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.azurenative.migrate.inputs.CollectorBodyAgentSpnPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,18 +15,18 @@ public final class CollectorAgentPropertiesArgs extends io.pulumi.resources.Reso
     public static final CollectorAgentPropertiesArgs Empty = new CollectorAgentPropertiesArgs();
 
     @InputImport(name="spnDetails")
-      private final @Nullable Input<CollectorBodyAgentSpnPropertiesArgs> spnDetails;
+      private final @Nullable Output<CollectorBodyAgentSpnPropertiesArgs> spnDetails;
 
-    public Input<CollectorBodyAgentSpnPropertiesArgs> getSpnDetails() {
-        return this.spnDetails == null ? Input.empty() : this.spnDetails;
+    public Output<CollectorBodyAgentSpnPropertiesArgs> getSpnDetails() {
+        return this.spnDetails == null ? Output.empty() : this.spnDetails;
     }
 
-    public CollectorAgentPropertiesArgs(@Nullable Input<CollectorBodyAgentSpnPropertiesArgs> spnDetails) {
+    public CollectorAgentPropertiesArgs(@Nullable Output<CollectorBodyAgentSpnPropertiesArgs> spnDetails) {
         this.spnDetails = spnDetails;
     }
 
     private CollectorAgentPropertiesArgs() {
-        this.spnDetails = Input.empty();
+        this.spnDetails = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class CollectorAgentPropertiesArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<CollectorBodyAgentSpnPropertiesArgs> spnDetails;
+        private @Nullable Output<CollectorBodyAgentSpnPropertiesArgs> spnDetails;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class CollectorAgentPropertiesArgs extends io.pulumi.resources.Reso
     	      this.spnDetails = defaults.spnDetails;
         }
 
-        public Builder spnDetails(@Nullable Input<CollectorBodyAgentSpnPropertiesArgs> spnDetails) {
+        public Builder spnDetails(@Nullable Output<CollectorBodyAgentSpnPropertiesArgs> spnDetails) {
             this.spnDetails = spnDetails;
             return this;
         }
 
         public Builder spnDetails(@Nullable CollectorBodyAgentSpnPropertiesArgs spnDetails) {
-            this.spnDetails = Input.ofNullable(spnDetails);
+            this.spnDetails = Output.ofNullable(spnDetails);
             return this;
         }
         public CollectorAgentPropertiesArgs build() {

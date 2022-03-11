@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotwireless.inputs;
 
 import io.pulumi.awsnative.iotwireless.inputs.TaskDefinitionLoRaWANUpdateGatewayTaskCreateArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,39 +16,39 @@ public final class TaskDefinitionUpdateWirelessGatewayTaskCreateArgs extends io.
     public static final TaskDefinitionUpdateWirelessGatewayTaskCreateArgs Empty = new TaskDefinitionUpdateWirelessGatewayTaskCreateArgs();
 
     @InputImport(name="loRaWAN")
-      private final @Nullable Input<TaskDefinitionLoRaWANUpdateGatewayTaskCreateArgs> loRaWAN;
+      private final @Nullable Output<TaskDefinitionLoRaWANUpdateGatewayTaskCreateArgs> loRaWAN;
 
-    public Input<TaskDefinitionLoRaWANUpdateGatewayTaskCreateArgs> getLoRaWAN() {
-        return this.loRaWAN == null ? Input.empty() : this.loRaWAN;
+    public Output<TaskDefinitionLoRaWANUpdateGatewayTaskCreateArgs> getLoRaWAN() {
+        return this.loRaWAN == null ? Output.empty() : this.loRaWAN;
     }
 
     @InputImport(name="updateDataRole")
-      private final @Nullable Input<String> updateDataRole;
+      private final @Nullable Output<String> updateDataRole;
 
-    public Input<String> getUpdateDataRole() {
-        return this.updateDataRole == null ? Input.empty() : this.updateDataRole;
+    public Output<String> getUpdateDataRole() {
+        return this.updateDataRole == null ? Output.empty() : this.updateDataRole;
     }
 
     @InputImport(name="updateDataSource")
-      private final @Nullable Input<String> updateDataSource;
+      private final @Nullable Output<String> updateDataSource;
 
-    public Input<String> getUpdateDataSource() {
-        return this.updateDataSource == null ? Input.empty() : this.updateDataSource;
+    public Output<String> getUpdateDataSource() {
+        return this.updateDataSource == null ? Output.empty() : this.updateDataSource;
     }
 
     public TaskDefinitionUpdateWirelessGatewayTaskCreateArgs(
-        @Nullable Input<TaskDefinitionLoRaWANUpdateGatewayTaskCreateArgs> loRaWAN,
-        @Nullable Input<String> updateDataRole,
-        @Nullable Input<String> updateDataSource) {
+        @Nullable Output<TaskDefinitionLoRaWANUpdateGatewayTaskCreateArgs> loRaWAN,
+        @Nullable Output<String> updateDataRole,
+        @Nullable Output<String> updateDataSource) {
         this.loRaWAN = loRaWAN;
         this.updateDataRole = updateDataRole;
         this.updateDataSource = updateDataSource;
     }
 
     private TaskDefinitionUpdateWirelessGatewayTaskCreateArgs() {
-        this.loRaWAN = Input.empty();
-        this.updateDataRole = Input.empty();
-        this.updateDataSource = Input.empty();
+        this.loRaWAN = Output.empty();
+        this.updateDataRole = Output.empty();
+        this.updateDataSource = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,9 +60,9 @@ public final class TaskDefinitionUpdateWirelessGatewayTaskCreateArgs extends io.
     }
 
     public static final class Builder {
-        private @Nullable Input<TaskDefinitionLoRaWANUpdateGatewayTaskCreateArgs> loRaWAN;
-        private @Nullable Input<String> updateDataRole;
-        private @Nullable Input<String> updateDataSource;
+        private @Nullable Output<TaskDefinitionLoRaWANUpdateGatewayTaskCreateArgs> loRaWAN;
+        private @Nullable Output<String> updateDataRole;
+        private @Nullable Output<String> updateDataSource;
 
         public Builder() {
     	      // Empty
@@ -75,33 +75,33 @@ public final class TaskDefinitionUpdateWirelessGatewayTaskCreateArgs extends io.
     	      this.updateDataSource = defaults.updateDataSource;
         }
 
-        public Builder loRaWAN(@Nullable Input<TaskDefinitionLoRaWANUpdateGatewayTaskCreateArgs> loRaWAN) {
+        public Builder loRaWAN(@Nullable Output<TaskDefinitionLoRaWANUpdateGatewayTaskCreateArgs> loRaWAN) {
             this.loRaWAN = loRaWAN;
             return this;
         }
 
         public Builder loRaWAN(@Nullable TaskDefinitionLoRaWANUpdateGatewayTaskCreateArgs loRaWAN) {
-            this.loRaWAN = Input.ofNullable(loRaWAN);
+            this.loRaWAN = Output.ofNullable(loRaWAN);
             return this;
         }
 
-        public Builder updateDataRole(@Nullable Input<String> updateDataRole) {
+        public Builder updateDataRole(@Nullable Output<String> updateDataRole) {
             this.updateDataRole = updateDataRole;
             return this;
         }
 
         public Builder updateDataRole(@Nullable String updateDataRole) {
-            this.updateDataRole = Input.ofNullable(updateDataRole);
+            this.updateDataRole = Output.ofNullable(updateDataRole);
             return this;
         }
 
-        public Builder updateDataSource(@Nullable Input<String> updateDataSource) {
+        public Builder updateDataSource(@Nullable Output<String> updateDataSource) {
             this.updateDataSource = updateDataSource;
             return this;
         }
 
         public Builder updateDataSource(@Nullable String updateDataSource) {
-            this.updateDataSource = Input.ofNullable(updateDataSource);
+            this.updateDataSource = Output.ofNullable(updateDataSource);
             return this;
         }
         public TaskDefinitionUpdateWirelessGatewayTaskCreateArgs build() {

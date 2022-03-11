@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iap;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.iap.inputs.TunnelInstanceIAMBindingConditionArgs;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class TunnelInstanceIAMBindingArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="condition")
-      private final @Nullable Input<TunnelInstanceIAMBindingConditionArgs> condition;
+      private final @Nullable Output<TunnelInstanceIAMBindingConditionArgs> condition;
 
-    public Input<TunnelInstanceIAMBindingConditionArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<TunnelInstanceIAMBindingConditionArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -33,16 +33,16 @@ public final class TunnelInstanceIAMBindingArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="instance", required=true)
-      private final Input<String> instance;
+      private final Output<String> instance;
 
-    public Input<String> getInstance() {
+    public Output<String> getInstance() {
         return this.instance;
     }
 
     @InputImport(name="members", required=true)
-      private final Input<List<String>> members;
+      private final Output<List<String>> members;
 
-    public Input<List<String>> getMembers() {
+    public Output<List<String>> getMembers() {
         return this.members;
     }
 
@@ -52,10 +52,10 @@ public final class TunnelInstanceIAMBindingArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -65,26 +65,26 @@ public final class TunnelInstanceIAMBindingArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="role", required=true)
-      private final Input<String> role;
+      private final Output<String> role;
 
-    public Input<String> getRole() {
+    public Output<String> getRole() {
         return this.role;
     }
 
     @InputImport(name="zone")
-      private final @Nullable Input<String> zone;
+      private final @Nullable Output<String> zone;
 
-    public Input<String> getZone() {
-        return this.zone == null ? Input.empty() : this.zone;
+    public Output<String> getZone() {
+        return this.zone == null ? Output.empty() : this.zone;
     }
 
     public TunnelInstanceIAMBindingArgs(
-        @Nullable Input<TunnelInstanceIAMBindingConditionArgs> condition,
-        Input<String> instance,
-        Input<List<String>> members,
-        @Nullable Input<String> project,
-        Input<String> role,
-        @Nullable Input<String> zone) {
+        @Nullable Output<TunnelInstanceIAMBindingConditionArgs> condition,
+        Output<String> instance,
+        Output<List<String>> members,
+        @Nullable Output<String> project,
+        Output<String> role,
+        @Nullable Output<String> zone) {
         this.condition = condition;
         this.instance = Objects.requireNonNull(instance, "expected parameter 'instance' to be non-null");
         this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
@@ -94,12 +94,12 @@ public final class TunnelInstanceIAMBindingArgs extends io.pulumi.resources.Reso
     }
 
     private TunnelInstanceIAMBindingArgs() {
-        this.condition = Input.empty();
-        this.instance = Input.empty();
-        this.members = Input.empty();
-        this.project = Input.empty();
-        this.role = Input.empty();
-        this.zone = Input.empty();
+        this.condition = Output.empty();
+        this.instance = Output.empty();
+        this.members = Output.empty();
+        this.project = Output.empty();
+        this.role = Output.empty();
+        this.zone = Output.empty();
     }
 
     public static Builder builder() {
@@ -111,12 +111,12 @@ public final class TunnelInstanceIAMBindingArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<TunnelInstanceIAMBindingConditionArgs> condition;
-        private Input<String> instance;
-        private Input<List<String>> members;
-        private @Nullable Input<String> project;
-        private Input<String> role;
-        private @Nullable Input<String> zone;
+        private @Nullable Output<TunnelInstanceIAMBindingConditionArgs> condition;
+        private Output<String> instance;
+        private Output<List<String>> members;
+        private @Nullable Output<String> project;
+        private Output<String> role;
+        private @Nullable Output<String> zone;
 
         public Builder() {
     	      // Empty
@@ -132,63 +132,63 @@ public final class TunnelInstanceIAMBindingArgs extends io.pulumi.resources.Reso
     	      this.zone = defaults.zone;
         }
 
-        public Builder condition(@Nullable Input<TunnelInstanceIAMBindingConditionArgs> condition) {
+        public Builder condition(@Nullable Output<TunnelInstanceIAMBindingConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable TunnelInstanceIAMBindingConditionArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder instance(Input<String> instance) {
+        public Builder instance(Output<String> instance) {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
 
         public Builder instance(String instance) {
-            this.instance = Input.of(Objects.requireNonNull(instance));
+            this.instance = Output.of(Objects.requireNonNull(instance));
             return this;
         }
 
-        public Builder members(Input<List<String>> members) {
+        public Builder members(Output<List<String>> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
 
         public Builder members(List<String> members) {
-            this.members = Input.of(Objects.requireNonNull(members));
+            this.members = Output.of(Objects.requireNonNull(members));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder role(Input<String> role) {
+        public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(String role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
 
-        public Builder zone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
 
         public Builder zone(@Nullable String zone) {
-            this.zone = Input.ofNullable(zone);
+            this.zone = Output.ofNullable(zone);
             return this;
         }
         public TunnelInstanceIAMBindingArgs build() {

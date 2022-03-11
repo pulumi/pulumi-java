@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.networkfirewall.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,18 +19,18 @@ public final class RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs extends io.pulu
      * 
      */
     @InputImport(name="definitions", required=true)
-      private final Input<List<String>> definitions;
+      private final Output<List<String>> definitions;
 
-    public Input<List<String>> getDefinitions() {
+    public Output<List<String>> getDefinitions() {
         return this.definitions;
     }
 
-    public RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs(Input<List<String>> definitions) {
+    public RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs(Output<List<String>> definitions) {
         this.definitions = Objects.requireNonNull(definitions, "expected parameter 'definitions' to be non-null");
     }
 
     private RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs() {
-        this.definitions = Input.empty();
+        this.definitions = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs extends io.pulu
     }
 
     public static final class Builder {
-        private Input<List<String>> definitions;
+        private Output<List<String>> definitions;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs extends io.pulu
     	      this.definitions = defaults.definitions;
         }
 
-        public Builder definitions(Input<List<String>> definitions) {
+        public Builder definitions(Output<List<String>> definitions) {
             this.definitions = Objects.requireNonNull(definitions);
             return this;
         }
 
         public Builder definitions(List<String> definitions) {
-            this.definitions = Input.of(Objects.requireNonNull(definitions));
+            this.definitions = Output.of(Objects.requireNonNull(definitions));
             return this;
         }
         public RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs build() {

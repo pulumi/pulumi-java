@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class GoogleCloudApigeeV1TlsInfoCommonNameArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class GoogleCloudApigeeV1TlsInfoCommonNameArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="wildcardMatch")
-      private final @Nullable Input<Boolean> wildcardMatch;
+      private final @Nullable Output<Boolean> wildcardMatch;
 
-    public Input<Boolean> getWildcardMatch() {
-        return this.wildcardMatch == null ? Input.empty() : this.wildcardMatch;
+    public Output<Boolean> getWildcardMatch() {
+        return this.wildcardMatch == null ? Output.empty() : this.wildcardMatch;
     }
 
     public GoogleCloudApigeeV1TlsInfoCommonNameArgs(
-        @Nullable Input<String> value,
-        @Nullable Input<Boolean> wildcardMatch) {
+        @Nullable Output<String> value,
+        @Nullable Output<Boolean> wildcardMatch) {
         this.value = value;
         this.wildcardMatch = wildcardMatch;
     }
 
     private GoogleCloudApigeeV1TlsInfoCommonNameArgs() {
-        this.value = Input.empty();
-        this.wildcardMatch = Input.empty();
+        this.value = Output.empty();
+        this.wildcardMatch = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class GoogleCloudApigeeV1TlsInfoCommonNameArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> value;
-        private @Nullable Input<Boolean> wildcardMatch;
+        private @Nullable Output<String> value;
+        private @Nullable Output<Boolean> wildcardMatch;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class GoogleCloudApigeeV1TlsInfoCommonNameArgs extends io.pulumi.re
     	      this.wildcardMatch = defaults.wildcardMatch;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
 
-        public Builder wildcardMatch(@Nullable Input<Boolean> wildcardMatch) {
+        public Builder wildcardMatch(@Nullable Output<Boolean> wildcardMatch) {
             this.wildcardMatch = wildcardMatch;
             return this;
         }
 
         public Builder wildcardMatch(@Nullable Boolean wildcardMatch) {
-            this.wildcardMatch = Input.ofNullable(wildcardMatch);
+            this.wildcardMatch = Output.ofNullable(wildcardMatch);
             return this;
         }
         public GoogleCloudApigeeV1TlsInfoCommonNameArgs build() {

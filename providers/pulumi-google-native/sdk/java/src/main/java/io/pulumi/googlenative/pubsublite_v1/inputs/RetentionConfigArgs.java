@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsublite_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class RetentionConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="perPartitionBytes")
-      private final @Nullable Input<String> perPartitionBytes;
+      private final @Nullable Output<String> perPartitionBytes;
 
-    public Input<String> getPerPartitionBytes() {
-        return this.perPartitionBytes == null ? Input.empty() : this.perPartitionBytes;
+    public Output<String> getPerPartitionBytes() {
+        return this.perPartitionBytes == null ? Output.empty() : this.perPartitionBytes;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class RetentionConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="period")
-      private final @Nullable Input<String> period;
+      private final @Nullable Output<String> period;
 
-    public Input<String> getPeriod() {
-        return this.period == null ? Input.empty() : this.period;
+    public Output<String> getPeriod() {
+        return this.period == null ? Output.empty() : this.period;
     }
 
     public RetentionConfigArgs(
-        @Nullable Input<String> perPartitionBytes,
-        @Nullable Input<String> period) {
+        @Nullable Output<String> perPartitionBytes,
+        @Nullable Output<String> period) {
         this.perPartitionBytes = perPartitionBytes;
         this.period = period;
     }
 
     private RetentionConfigArgs() {
-        this.perPartitionBytes = Input.empty();
-        this.period = Input.empty();
+        this.perPartitionBytes = Output.empty();
+        this.period = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class RetentionConfigArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> perPartitionBytes;
-        private @Nullable Input<String> period;
+        private @Nullable Output<String> perPartitionBytes;
+        private @Nullable Output<String> period;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class RetentionConfigArgs extends io.pulumi.resources.ResourceArgs 
     	      this.period = defaults.period;
         }
 
-        public Builder perPartitionBytes(@Nullable Input<String> perPartitionBytes) {
+        public Builder perPartitionBytes(@Nullable Output<String> perPartitionBytes) {
             this.perPartitionBytes = perPartitionBytes;
             return this;
         }
 
         public Builder perPartitionBytes(@Nullable String perPartitionBytes) {
-            this.perPartitionBytes = Input.ofNullable(perPartitionBytes);
+            this.perPartitionBytes = Output.ofNullable(perPartitionBytes);
             return this;
         }
 
-        public Builder period(@Nullable Input<String> period) {
+        public Builder period(@Nullable Output<String> period) {
             this.period = period;
             return this;
         }
 
         public Builder period(@Nullable String period) {
-            this.period = Input.ofNullable(period);
+            this.period = Output.ofNullable(period);
             return this;
         }
         public RetentionConfigArgs build() {

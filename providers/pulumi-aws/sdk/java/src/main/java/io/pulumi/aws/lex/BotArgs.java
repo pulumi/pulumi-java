@@ -6,7 +6,7 @@ package io.pulumi.aws.lex;
 import io.pulumi.aws.lex.inputs.BotAbortStatementArgs;
 import io.pulumi.aws.lex.inputs.BotClarificationPromptArgs;
 import io.pulumi.aws.lex.inputs.BotIntentArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -26,9 +26,9 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="abortStatement", required=true)
-      private final Input<BotAbortStatementArgs> abortStatement;
+      private final Output<BotAbortStatementArgs> abortStatement;
 
-    public Input<BotAbortStatementArgs> getAbortStatement() {
+    public Output<BotAbortStatementArgs> getAbortStatement() {
         return this.abortStatement;
     }
 
@@ -37,9 +37,9 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="childDirected", required=true)
-      private final Input<Boolean> childDirected;
+      private final Output<Boolean> childDirected;
 
-    public Input<Boolean> getChildDirected() {
+    public Output<Boolean> getChildDirected() {
         return this.childDirected;
     }
 
@@ -48,10 +48,10 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clarificationPrompt")
-      private final @Nullable Input<BotClarificationPromptArgs> clarificationPrompt;
+      private final @Nullable Output<BotClarificationPromptArgs> clarificationPrompt;
 
-    public Input<BotClarificationPromptArgs> getClarificationPrompt() {
-        return this.clarificationPrompt == null ? Input.empty() : this.clarificationPrompt;
+    public Output<BotClarificationPromptArgs> getClarificationPrompt() {
+        return this.clarificationPrompt == null ? Output.empty() : this.clarificationPrompt;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createVersion")
-      private final @Nullable Input<Boolean> createVersion;
+      private final @Nullable Output<Boolean> createVersion;
 
-    public Input<Boolean> getCreateVersion() {
-        return this.createVersion == null ? Input.empty() : this.createVersion;
+    public Output<Boolean> getCreateVersion() {
+        return this.createVersion == null ? Output.empty() : this.createVersion;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="detectSentiment")
-      private final @Nullable Input<Boolean> detectSentiment;
+      private final @Nullable Output<Boolean> detectSentiment;
 
-    public Input<Boolean> getDetectSentiment() {
-        return this.detectSentiment == null ? Input.empty() : this.detectSentiment;
+    public Output<Boolean> getDetectSentiment() {
+        return this.detectSentiment == null ? Output.empty() : this.detectSentiment;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableModelImprovements")
-      private final @Nullable Input<Boolean> enableModelImprovements;
+      private final @Nullable Output<Boolean> enableModelImprovements;
 
-    public Input<Boolean> getEnableModelImprovements() {
-        return this.enableModelImprovements == null ? Input.empty() : this.enableModelImprovements;
+    public Output<Boolean> getEnableModelImprovements() {
+        return this.enableModelImprovements == null ? Output.empty() : this.enableModelImprovements;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="idleSessionTtlInSeconds")
-      private final @Nullable Input<Integer> idleSessionTtlInSeconds;
+      private final @Nullable Output<Integer> idleSessionTtlInSeconds;
 
-    public Input<Integer> getIdleSessionTtlInSeconds() {
-        return this.idleSessionTtlInSeconds == null ? Input.empty() : this.idleSessionTtlInSeconds;
+    public Output<Integer> getIdleSessionTtlInSeconds() {
+        return this.idleSessionTtlInSeconds == null ? Output.empty() : this.idleSessionTtlInSeconds;
     }
 
     /**
@@ -114,9 +114,9 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="intents", required=true)
-      private final Input<List<BotIntentArgs>> intents;
+      private final Output<List<BotIntentArgs>> intents;
 
-    public Input<List<BotIntentArgs>> getIntents() {
+    public Output<List<BotIntentArgs>> getIntents() {
         return this.intents;
     }
 
@@ -125,10 +125,10 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locale")
-      private final @Nullable Input<String> locale;
+      private final @Nullable Output<String> locale;
 
-    public Input<String> getLocale() {
-        return this.locale == null ? Input.empty() : this.locale;
+    public Output<String> getLocale() {
+        return this.locale == null ? Output.empty() : this.locale;
     }
 
     /**
@@ -136,10 +136,10 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -147,10 +147,10 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nluIntentConfidenceThreshold")
-      private final @Nullable Input<Double> nluIntentConfidenceThreshold;
+      private final @Nullable Output<Double> nluIntentConfidenceThreshold;
 
-    public Input<Double> getNluIntentConfidenceThreshold() {
-        return this.nluIntentConfidenceThreshold == null ? Input.empty() : this.nluIntentConfidenceThreshold;
+    public Output<Double> getNluIntentConfidenceThreshold() {
+        return this.nluIntentConfidenceThreshold == null ? Output.empty() : this.nluIntentConfidenceThreshold;
     }
 
     /**
@@ -158,10 +158,10 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="processBehavior")
-      private final @Nullable Input<String> processBehavior;
+      private final @Nullable Output<String> processBehavior;
 
-    public Input<String> getProcessBehavior() {
-        return this.processBehavior == null ? Input.empty() : this.processBehavior;
+    public Output<String> getProcessBehavior() {
+        return this.processBehavior == null ? Output.empty() : this.processBehavior;
     }
 
     /**
@@ -169,27 +169,27 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="voiceId")
-      private final @Nullable Input<String> voiceId;
+      private final @Nullable Output<String> voiceId;
 
-    public Input<String> getVoiceId() {
-        return this.voiceId == null ? Input.empty() : this.voiceId;
+    public Output<String> getVoiceId() {
+        return this.voiceId == null ? Output.empty() : this.voiceId;
     }
 
     public BotArgs(
-        Input<BotAbortStatementArgs> abortStatement,
-        Input<Boolean> childDirected,
-        @Nullable Input<BotClarificationPromptArgs> clarificationPrompt,
-        @Nullable Input<Boolean> createVersion,
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> detectSentiment,
-        @Nullable Input<Boolean> enableModelImprovements,
-        @Nullable Input<Integer> idleSessionTtlInSeconds,
-        Input<List<BotIntentArgs>> intents,
-        @Nullable Input<String> locale,
-        @Nullable Input<String> name,
-        @Nullable Input<Double> nluIntentConfidenceThreshold,
-        @Nullable Input<String> processBehavior,
-        @Nullable Input<String> voiceId) {
+        Output<BotAbortStatementArgs> abortStatement,
+        Output<Boolean> childDirected,
+        @Nullable Output<BotClarificationPromptArgs> clarificationPrompt,
+        @Nullable Output<Boolean> createVersion,
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> detectSentiment,
+        @Nullable Output<Boolean> enableModelImprovements,
+        @Nullable Output<Integer> idleSessionTtlInSeconds,
+        Output<List<BotIntentArgs>> intents,
+        @Nullable Output<String> locale,
+        @Nullable Output<String> name,
+        @Nullable Output<Double> nluIntentConfidenceThreshold,
+        @Nullable Output<String> processBehavior,
+        @Nullable Output<String> voiceId) {
         this.abortStatement = Objects.requireNonNull(abortStatement, "expected parameter 'abortStatement' to be non-null");
         this.childDirected = Objects.requireNonNull(childDirected, "expected parameter 'childDirected' to be non-null");
         this.clarificationPrompt = clarificationPrompt;
@@ -207,20 +207,20 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BotArgs() {
-        this.abortStatement = Input.empty();
-        this.childDirected = Input.empty();
-        this.clarificationPrompt = Input.empty();
-        this.createVersion = Input.empty();
-        this.description = Input.empty();
-        this.detectSentiment = Input.empty();
-        this.enableModelImprovements = Input.empty();
-        this.idleSessionTtlInSeconds = Input.empty();
-        this.intents = Input.empty();
-        this.locale = Input.empty();
-        this.name = Input.empty();
-        this.nluIntentConfidenceThreshold = Input.empty();
-        this.processBehavior = Input.empty();
-        this.voiceId = Input.empty();
+        this.abortStatement = Output.empty();
+        this.childDirected = Output.empty();
+        this.clarificationPrompt = Output.empty();
+        this.createVersion = Output.empty();
+        this.description = Output.empty();
+        this.detectSentiment = Output.empty();
+        this.enableModelImprovements = Output.empty();
+        this.idleSessionTtlInSeconds = Output.empty();
+        this.intents = Output.empty();
+        this.locale = Output.empty();
+        this.name = Output.empty();
+        this.nluIntentConfidenceThreshold = Output.empty();
+        this.processBehavior = Output.empty();
+        this.voiceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -232,20 +232,20 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<BotAbortStatementArgs> abortStatement;
-        private Input<Boolean> childDirected;
-        private @Nullable Input<BotClarificationPromptArgs> clarificationPrompt;
-        private @Nullable Input<Boolean> createVersion;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> detectSentiment;
-        private @Nullable Input<Boolean> enableModelImprovements;
-        private @Nullable Input<Integer> idleSessionTtlInSeconds;
-        private Input<List<BotIntentArgs>> intents;
-        private @Nullable Input<String> locale;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Double> nluIntentConfidenceThreshold;
-        private @Nullable Input<String> processBehavior;
-        private @Nullable Input<String> voiceId;
+        private Output<BotAbortStatementArgs> abortStatement;
+        private Output<Boolean> childDirected;
+        private @Nullable Output<BotClarificationPromptArgs> clarificationPrompt;
+        private @Nullable Output<Boolean> createVersion;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> detectSentiment;
+        private @Nullable Output<Boolean> enableModelImprovements;
+        private @Nullable Output<Integer> idleSessionTtlInSeconds;
+        private Output<List<BotIntentArgs>> intents;
+        private @Nullable Output<String> locale;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Double> nluIntentConfidenceThreshold;
+        private @Nullable Output<String> processBehavior;
+        private @Nullable Output<String> voiceId;
 
         public Builder() {
     	      // Empty
@@ -269,143 +269,143 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
     	      this.voiceId = defaults.voiceId;
         }
 
-        public Builder abortStatement(Input<BotAbortStatementArgs> abortStatement) {
+        public Builder abortStatement(Output<BotAbortStatementArgs> abortStatement) {
             this.abortStatement = Objects.requireNonNull(abortStatement);
             return this;
         }
 
         public Builder abortStatement(BotAbortStatementArgs abortStatement) {
-            this.abortStatement = Input.of(Objects.requireNonNull(abortStatement));
+            this.abortStatement = Output.of(Objects.requireNonNull(abortStatement));
             return this;
         }
 
-        public Builder childDirected(Input<Boolean> childDirected) {
+        public Builder childDirected(Output<Boolean> childDirected) {
             this.childDirected = Objects.requireNonNull(childDirected);
             return this;
         }
 
         public Builder childDirected(Boolean childDirected) {
-            this.childDirected = Input.of(Objects.requireNonNull(childDirected));
+            this.childDirected = Output.of(Objects.requireNonNull(childDirected));
             return this;
         }
 
-        public Builder clarificationPrompt(@Nullable Input<BotClarificationPromptArgs> clarificationPrompt) {
+        public Builder clarificationPrompt(@Nullable Output<BotClarificationPromptArgs> clarificationPrompt) {
             this.clarificationPrompt = clarificationPrompt;
             return this;
         }
 
         public Builder clarificationPrompt(@Nullable BotClarificationPromptArgs clarificationPrompt) {
-            this.clarificationPrompt = Input.ofNullable(clarificationPrompt);
+            this.clarificationPrompt = Output.ofNullable(clarificationPrompt);
             return this;
         }
 
-        public Builder createVersion(@Nullable Input<Boolean> createVersion) {
+        public Builder createVersion(@Nullable Output<Boolean> createVersion) {
             this.createVersion = createVersion;
             return this;
         }
 
         public Builder createVersion(@Nullable Boolean createVersion) {
-            this.createVersion = Input.ofNullable(createVersion);
+            this.createVersion = Output.ofNullable(createVersion);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder detectSentiment(@Nullable Input<Boolean> detectSentiment) {
+        public Builder detectSentiment(@Nullable Output<Boolean> detectSentiment) {
             this.detectSentiment = detectSentiment;
             return this;
         }
 
         public Builder detectSentiment(@Nullable Boolean detectSentiment) {
-            this.detectSentiment = Input.ofNullable(detectSentiment);
+            this.detectSentiment = Output.ofNullable(detectSentiment);
             return this;
         }
 
-        public Builder enableModelImprovements(@Nullable Input<Boolean> enableModelImprovements) {
+        public Builder enableModelImprovements(@Nullable Output<Boolean> enableModelImprovements) {
             this.enableModelImprovements = enableModelImprovements;
             return this;
         }
 
         public Builder enableModelImprovements(@Nullable Boolean enableModelImprovements) {
-            this.enableModelImprovements = Input.ofNullable(enableModelImprovements);
+            this.enableModelImprovements = Output.ofNullable(enableModelImprovements);
             return this;
         }
 
-        public Builder idleSessionTtlInSeconds(@Nullable Input<Integer> idleSessionTtlInSeconds) {
+        public Builder idleSessionTtlInSeconds(@Nullable Output<Integer> idleSessionTtlInSeconds) {
             this.idleSessionTtlInSeconds = idleSessionTtlInSeconds;
             return this;
         }
 
         public Builder idleSessionTtlInSeconds(@Nullable Integer idleSessionTtlInSeconds) {
-            this.idleSessionTtlInSeconds = Input.ofNullable(idleSessionTtlInSeconds);
+            this.idleSessionTtlInSeconds = Output.ofNullable(idleSessionTtlInSeconds);
             return this;
         }
 
-        public Builder intents(Input<List<BotIntentArgs>> intents) {
+        public Builder intents(Output<List<BotIntentArgs>> intents) {
             this.intents = Objects.requireNonNull(intents);
             return this;
         }
 
         public Builder intents(List<BotIntentArgs> intents) {
-            this.intents = Input.of(Objects.requireNonNull(intents));
+            this.intents = Output.of(Objects.requireNonNull(intents));
             return this;
         }
 
-        public Builder locale(@Nullable Input<String> locale) {
+        public Builder locale(@Nullable Output<String> locale) {
             this.locale = locale;
             return this;
         }
 
         public Builder locale(@Nullable String locale) {
-            this.locale = Input.ofNullable(locale);
+            this.locale = Output.ofNullable(locale);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder nluIntentConfidenceThreshold(@Nullable Input<Double> nluIntentConfidenceThreshold) {
+        public Builder nluIntentConfidenceThreshold(@Nullable Output<Double> nluIntentConfidenceThreshold) {
             this.nluIntentConfidenceThreshold = nluIntentConfidenceThreshold;
             return this;
         }
 
         public Builder nluIntentConfidenceThreshold(@Nullable Double nluIntentConfidenceThreshold) {
-            this.nluIntentConfidenceThreshold = Input.ofNullable(nluIntentConfidenceThreshold);
+            this.nluIntentConfidenceThreshold = Output.ofNullable(nluIntentConfidenceThreshold);
             return this;
         }
 
-        public Builder processBehavior(@Nullable Input<String> processBehavior) {
+        public Builder processBehavior(@Nullable Output<String> processBehavior) {
             this.processBehavior = processBehavior;
             return this;
         }
 
         public Builder processBehavior(@Nullable String processBehavior) {
-            this.processBehavior = Input.ofNullable(processBehavior);
+            this.processBehavior = Output.ofNullable(processBehavior);
             return this;
         }
 
-        public Builder voiceId(@Nullable Input<String> voiceId) {
+        public Builder voiceId(@Nullable Output<String> voiceId) {
             this.voiceId = voiceId;
             return this;
         }
 
         public Builder voiceId(@Nullable String voiceId) {
-            this.voiceId = Input.ofNullable(voiceId);
+            this.voiceId = Output.ofNullable(voiceId);
             return this;
         }
         public BotArgs build() {

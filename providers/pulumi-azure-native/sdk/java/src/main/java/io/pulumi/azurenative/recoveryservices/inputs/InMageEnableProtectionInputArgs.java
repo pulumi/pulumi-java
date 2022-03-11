@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.InMageDiskExclusionInputArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="datastoreName")
-      private final @Nullable Input<String> datastoreName;
+      private final @Nullable Output<String> datastoreName;
 
-    public Input<String> getDatastoreName() {
-        return this.datastoreName == null ? Input.empty() : this.datastoreName;
+    public Output<String> getDatastoreName() {
+        return this.datastoreName == null ? Output.empty() : this.datastoreName;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="diskExclusionInput")
-      private final @Nullable Input<InMageDiskExclusionInputArgs> diskExclusionInput;
+      private final @Nullable Output<InMageDiskExclusionInputArgs> diskExclusionInput;
 
-    public Input<InMageDiskExclusionInputArgs> getDiskExclusionInput() {
-        return this.diskExclusionInput == null ? Input.empty() : this.diskExclusionInput;
+    public Output<InMageDiskExclusionInputArgs> getDiskExclusionInput() {
+        return this.diskExclusionInput == null ? Output.empty() : this.diskExclusionInput;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="disksToInclude")
-      private final @Nullable Input<List<String>> disksToInclude;
+      private final @Nullable Output<List<String>> disksToInclude;
 
-    public Input<List<String>> getDisksToInclude() {
-        return this.disksToInclude == null ? Input.empty() : this.disksToInclude;
+    public Output<List<String>> getDisksToInclude() {
+        return this.disksToInclude == null ? Output.empty() : this.disksToInclude;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="instanceType")
-      private final @Nullable Input<String> instanceType;
+      private final @Nullable Output<String> instanceType;
 
-    public Input<String> getInstanceType() {
-        return this.instanceType == null ? Input.empty() : this.instanceType;
+    public Output<String> getInstanceType() {
+        return this.instanceType == null ? Output.empty() : this.instanceType;
     }
 
     /**
@@ -70,9 +70,9 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="masterTargetId", required=true)
-      private final Input<String> masterTargetId;
+      private final Output<String> masterTargetId;
 
-    public Input<String> getMasterTargetId() {
+    public Output<String> getMasterTargetId() {
         return this.masterTargetId;
     }
 
@@ -81,9 +81,9 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="multiVmGroupId", required=true)
-      private final Input<String> multiVmGroupId;
+      private final Output<String> multiVmGroupId;
 
-    public Input<String> getMultiVmGroupId() {
+    public Output<String> getMultiVmGroupId() {
         return this.multiVmGroupId;
     }
 
@@ -92,9 +92,9 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="multiVmGroupName", required=true)
-      private final Input<String> multiVmGroupName;
+      private final Output<String> multiVmGroupName;
 
-    public Input<String> getMultiVmGroupName() {
+    public Output<String> getMultiVmGroupName() {
         return this.multiVmGroupName;
     }
 
@@ -103,9 +103,9 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="processServerId", required=true)
-      private final Input<String> processServerId;
+      private final Output<String> processServerId;
 
-    public Input<String> getProcessServerId() {
+    public Output<String> getProcessServerId() {
         return this.processServerId;
     }
 
@@ -114,9 +114,9 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="retentionDrive", required=true)
-      private final Input<String> retentionDrive;
+      private final Output<String> retentionDrive;
 
-    public Input<String> getRetentionDrive() {
+    public Output<String> getRetentionDrive() {
         return this.retentionDrive;
     }
 
@@ -125,10 +125,10 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="runAsAccountId")
-      private final @Nullable Input<String> runAsAccountId;
+      private final @Nullable Output<String> runAsAccountId;
 
-    public Input<String> getRunAsAccountId() {
-        return this.runAsAccountId == null ? Input.empty() : this.runAsAccountId;
+    public Output<String> getRunAsAccountId() {
+        return this.runAsAccountId == null ? Output.empty() : this.runAsAccountId;
     }
 
     /**
@@ -136,24 +136,24 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="vmFriendlyName")
-      private final @Nullable Input<String> vmFriendlyName;
+      private final @Nullable Output<String> vmFriendlyName;
 
-    public Input<String> getVmFriendlyName() {
-        return this.vmFriendlyName == null ? Input.empty() : this.vmFriendlyName;
+    public Output<String> getVmFriendlyName() {
+        return this.vmFriendlyName == null ? Output.empty() : this.vmFriendlyName;
     }
 
     public InMageEnableProtectionInputArgs(
-        @Nullable Input<String> datastoreName,
-        @Nullable Input<InMageDiskExclusionInputArgs> diskExclusionInput,
-        @Nullable Input<List<String>> disksToInclude,
-        @Nullable Input<String> instanceType,
-        Input<String> masterTargetId,
-        Input<String> multiVmGroupId,
-        Input<String> multiVmGroupName,
-        Input<String> processServerId,
-        Input<String> retentionDrive,
-        @Nullable Input<String> runAsAccountId,
-        @Nullable Input<String> vmFriendlyName) {
+        @Nullable Output<String> datastoreName,
+        @Nullable Output<InMageDiskExclusionInputArgs> diskExclusionInput,
+        @Nullable Output<List<String>> disksToInclude,
+        @Nullable Output<String> instanceType,
+        Output<String> masterTargetId,
+        Output<String> multiVmGroupId,
+        Output<String> multiVmGroupName,
+        Output<String> processServerId,
+        Output<String> retentionDrive,
+        @Nullable Output<String> runAsAccountId,
+        @Nullable Output<String> vmFriendlyName) {
         this.datastoreName = datastoreName;
         this.diskExclusionInput = diskExclusionInput;
         this.disksToInclude = disksToInclude;
@@ -168,17 +168,17 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
     }
 
     private InMageEnableProtectionInputArgs() {
-        this.datastoreName = Input.empty();
-        this.diskExclusionInput = Input.empty();
-        this.disksToInclude = Input.empty();
-        this.instanceType = Input.empty();
-        this.masterTargetId = Input.empty();
-        this.multiVmGroupId = Input.empty();
-        this.multiVmGroupName = Input.empty();
-        this.processServerId = Input.empty();
-        this.retentionDrive = Input.empty();
-        this.runAsAccountId = Input.empty();
-        this.vmFriendlyName = Input.empty();
+        this.datastoreName = Output.empty();
+        this.diskExclusionInput = Output.empty();
+        this.disksToInclude = Output.empty();
+        this.instanceType = Output.empty();
+        this.masterTargetId = Output.empty();
+        this.multiVmGroupId = Output.empty();
+        this.multiVmGroupName = Output.empty();
+        this.processServerId = Output.empty();
+        this.retentionDrive = Output.empty();
+        this.runAsAccountId = Output.empty();
+        this.vmFriendlyName = Output.empty();
     }
 
     public static Builder builder() {
@@ -190,17 +190,17 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> datastoreName;
-        private @Nullable Input<InMageDiskExclusionInputArgs> diskExclusionInput;
-        private @Nullable Input<List<String>> disksToInclude;
-        private @Nullable Input<String> instanceType;
-        private Input<String> masterTargetId;
-        private Input<String> multiVmGroupId;
-        private Input<String> multiVmGroupName;
-        private Input<String> processServerId;
-        private Input<String> retentionDrive;
-        private @Nullable Input<String> runAsAccountId;
-        private @Nullable Input<String> vmFriendlyName;
+        private @Nullable Output<String> datastoreName;
+        private @Nullable Output<InMageDiskExclusionInputArgs> diskExclusionInput;
+        private @Nullable Output<List<String>> disksToInclude;
+        private @Nullable Output<String> instanceType;
+        private Output<String> masterTargetId;
+        private Output<String> multiVmGroupId;
+        private Output<String> multiVmGroupName;
+        private Output<String> processServerId;
+        private Output<String> retentionDrive;
+        private @Nullable Output<String> runAsAccountId;
+        private @Nullable Output<String> vmFriendlyName;
 
         public Builder() {
     	      // Empty
@@ -221,113 +221,113 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
     	      this.vmFriendlyName = defaults.vmFriendlyName;
         }
 
-        public Builder datastoreName(@Nullable Input<String> datastoreName) {
+        public Builder datastoreName(@Nullable Output<String> datastoreName) {
             this.datastoreName = datastoreName;
             return this;
         }
 
         public Builder datastoreName(@Nullable String datastoreName) {
-            this.datastoreName = Input.ofNullable(datastoreName);
+            this.datastoreName = Output.ofNullable(datastoreName);
             return this;
         }
 
-        public Builder diskExclusionInput(@Nullable Input<InMageDiskExclusionInputArgs> diskExclusionInput) {
+        public Builder diskExclusionInput(@Nullable Output<InMageDiskExclusionInputArgs> diskExclusionInput) {
             this.diskExclusionInput = diskExclusionInput;
             return this;
         }
 
         public Builder diskExclusionInput(@Nullable InMageDiskExclusionInputArgs diskExclusionInput) {
-            this.diskExclusionInput = Input.ofNullable(diskExclusionInput);
+            this.diskExclusionInput = Output.ofNullable(diskExclusionInput);
             return this;
         }
 
-        public Builder disksToInclude(@Nullable Input<List<String>> disksToInclude) {
+        public Builder disksToInclude(@Nullable Output<List<String>> disksToInclude) {
             this.disksToInclude = disksToInclude;
             return this;
         }
 
         public Builder disksToInclude(@Nullable List<String> disksToInclude) {
-            this.disksToInclude = Input.ofNullable(disksToInclude);
+            this.disksToInclude = Output.ofNullable(disksToInclude);
             return this;
         }
 
-        public Builder instanceType(@Nullable Input<String> instanceType) {
+        public Builder instanceType(@Nullable Output<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Input.ofNullable(instanceType);
+            this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
 
-        public Builder masterTargetId(Input<String> masterTargetId) {
+        public Builder masterTargetId(Output<String> masterTargetId) {
             this.masterTargetId = Objects.requireNonNull(masterTargetId);
             return this;
         }
 
         public Builder masterTargetId(String masterTargetId) {
-            this.masterTargetId = Input.of(Objects.requireNonNull(masterTargetId));
+            this.masterTargetId = Output.of(Objects.requireNonNull(masterTargetId));
             return this;
         }
 
-        public Builder multiVmGroupId(Input<String> multiVmGroupId) {
+        public Builder multiVmGroupId(Output<String> multiVmGroupId) {
             this.multiVmGroupId = Objects.requireNonNull(multiVmGroupId);
             return this;
         }
 
         public Builder multiVmGroupId(String multiVmGroupId) {
-            this.multiVmGroupId = Input.of(Objects.requireNonNull(multiVmGroupId));
+            this.multiVmGroupId = Output.of(Objects.requireNonNull(multiVmGroupId));
             return this;
         }
 
-        public Builder multiVmGroupName(Input<String> multiVmGroupName) {
+        public Builder multiVmGroupName(Output<String> multiVmGroupName) {
             this.multiVmGroupName = Objects.requireNonNull(multiVmGroupName);
             return this;
         }
 
         public Builder multiVmGroupName(String multiVmGroupName) {
-            this.multiVmGroupName = Input.of(Objects.requireNonNull(multiVmGroupName));
+            this.multiVmGroupName = Output.of(Objects.requireNonNull(multiVmGroupName));
             return this;
         }
 
-        public Builder processServerId(Input<String> processServerId) {
+        public Builder processServerId(Output<String> processServerId) {
             this.processServerId = Objects.requireNonNull(processServerId);
             return this;
         }
 
         public Builder processServerId(String processServerId) {
-            this.processServerId = Input.of(Objects.requireNonNull(processServerId));
+            this.processServerId = Output.of(Objects.requireNonNull(processServerId));
             return this;
         }
 
-        public Builder retentionDrive(Input<String> retentionDrive) {
+        public Builder retentionDrive(Output<String> retentionDrive) {
             this.retentionDrive = Objects.requireNonNull(retentionDrive);
             return this;
         }
 
         public Builder retentionDrive(String retentionDrive) {
-            this.retentionDrive = Input.of(Objects.requireNonNull(retentionDrive));
+            this.retentionDrive = Output.of(Objects.requireNonNull(retentionDrive));
             return this;
         }
 
-        public Builder runAsAccountId(@Nullable Input<String> runAsAccountId) {
+        public Builder runAsAccountId(@Nullable Output<String> runAsAccountId) {
             this.runAsAccountId = runAsAccountId;
             return this;
         }
 
         public Builder runAsAccountId(@Nullable String runAsAccountId) {
-            this.runAsAccountId = Input.ofNullable(runAsAccountId);
+            this.runAsAccountId = Output.ofNullable(runAsAccountId);
             return this;
         }
 
-        public Builder vmFriendlyName(@Nullable Input<String> vmFriendlyName) {
+        public Builder vmFriendlyName(@Nullable Output<String> vmFriendlyName) {
             this.vmFriendlyName = vmFriendlyName;
             return this;
         }
 
         public Builder vmFriendlyName(@Nullable String vmFriendlyName) {
-            this.vmFriendlyName = Input.ofNullable(vmFriendlyName);
+            this.vmFriendlyName = Output.ofNullable(vmFriendlyName);
             return this;
         }
         public InMageEnableProtectionInputArgs build() {

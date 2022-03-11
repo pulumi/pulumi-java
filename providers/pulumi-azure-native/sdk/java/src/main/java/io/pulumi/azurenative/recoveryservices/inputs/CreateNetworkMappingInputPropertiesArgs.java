@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 import io.pulumi.azurenative.recoveryservices.inputs.AzureToAzureCreateNetworkMappingInputArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.VmmToAzureCreateNetworkMappingInputArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.VmmToVmmCreateNetworkMappingInputArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class CreateNetworkMappingInputPropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="fabricSpecificDetails")
-      private final @Nullable Input<Object> fabricSpecificDetails;
+      private final @Nullable Output<Object> fabricSpecificDetails;
 
-    public Input<Object> getFabricSpecificDetails() {
-        return this.fabricSpecificDetails == null ? Input.empty() : this.fabricSpecificDetails;
+    public Output<Object> getFabricSpecificDetails() {
+        return this.fabricSpecificDetails == null ? Output.empty() : this.fabricSpecificDetails;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class CreateNetworkMappingInputPropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="recoveryFabricName")
-      private final @Nullable Input<String> recoveryFabricName;
+      private final @Nullable Output<String> recoveryFabricName;
 
-    public Input<String> getRecoveryFabricName() {
-        return this.recoveryFabricName == null ? Input.empty() : this.recoveryFabricName;
+    public Output<String> getRecoveryFabricName() {
+        return this.recoveryFabricName == null ? Output.empty() : this.recoveryFabricName;
     }
 
     /**
@@ -49,25 +49,25 @@ public final class CreateNetworkMappingInputPropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="recoveryNetworkId")
-      private final @Nullable Input<String> recoveryNetworkId;
+      private final @Nullable Output<String> recoveryNetworkId;
 
-    public Input<String> getRecoveryNetworkId() {
-        return this.recoveryNetworkId == null ? Input.empty() : this.recoveryNetworkId;
+    public Output<String> getRecoveryNetworkId() {
+        return this.recoveryNetworkId == null ? Output.empty() : this.recoveryNetworkId;
     }
 
     public CreateNetworkMappingInputPropertiesArgs(
-        @Nullable Input<Object> fabricSpecificDetails,
-        @Nullable Input<String> recoveryFabricName,
-        @Nullable Input<String> recoveryNetworkId) {
+        @Nullable Output<Object> fabricSpecificDetails,
+        @Nullable Output<String> recoveryFabricName,
+        @Nullable Output<String> recoveryNetworkId) {
         this.fabricSpecificDetails = fabricSpecificDetails;
         this.recoveryFabricName = recoveryFabricName;
         this.recoveryNetworkId = recoveryNetworkId;
     }
 
     private CreateNetworkMappingInputPropertiesArgs() {
-        this.fabricSpecificDetails = Input.empty();
-        this.recoveryFabricName = Input.empty();
-        this.recoveryNetworkId = Input.empty();
+        this.fabricSpecificDetails = Output.empty();
+        this.recoveryFabricName = Output.empty();
+        this.recoveryNetworkId = Output.empty();
     }
 
     public static Builder builder() {
@@ -79,9 +79,9 @@ public final class CreateNetworkMappingInputPropertiesArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> fabricSpecificDetails;
-        private @Nullable Input<String> recoveryFabricName;
-        private @Nullable Input<String> recoveryNetworkId;
+        private @Nullable Output<Object> fabricSpecificDetails;
+        private @Nullable Output<String> recoveryFabricName;
+        private @Nullable Output<String> recoveryNetworkId;
 
         public Builder() {
     	      // Empty
@@ -94,33 +94,33 @@ public final class CreateNetworkMappingInputPropertiesArgs extends io.pulumi.res
     	      this.recoveryNetworkId = defaults.recoveryNetworkId;
         }
 
-        public Builder fabricSpecificDetails(@Nullable Input<Object> fabricSpecificDetails) {
+        public Builder fabricSpecificDetails(@Nullable Output<Object> fabricSpecificDetails) {
             this.fabricSpecificDetails = fabricSpecificDetails;
             return this;
         }
 
         public Builder fabricSpecificDetails(@Nullable Object fabricSpecificDetails) {
-            this.fabricSpecificDetails = Input.ofNullable(fabricSpecificDetails);
+            this.fabricSpecificDetails = Output.ofNullable(fabricSpecificDetails);
             return this;
         }
 
-        public Builder recoveryFabricName(@Nullable Input<String> recoveryFabricName) {
+        public Builder recoveryFabricName(@Nullable Output<String> recoveryFabricName) {
             this.recoveryFabricName = recoveryFabricName;
             return this;
         }
 
         public Builder recoveryFabricName(@Nullable String recoveryFabricName) {
-            this.recoveryFabricName = Input.ofNullable(recoveryFabricName);
+            this.recoveryFabricName = Output.ofNullable(recoveryFabricName);
             return this;
         }
 
-        public Builder recoveryNetworkId(@Nullable Input<String> recoveryNetworkId) {
+        public Builder recoveryNetworkId(@Nullable Output<String> recoveryNetworkId) {
             this.recoveryNetworkId = recoveryNetworkId;
             return this;
         }
 
         public Builder recoveryNetworkId(@Nullable String recoveryNetworkId) {
-            this.recoveryNetworkId = Input.ofNullable(recoveryNetworkId);
+            this.recoveryNetworkId = Output.ofNullable(recoveryNetworkId);
             return this;
         }
         public CreateNetworkMappingInputPropertiesArgs build() {

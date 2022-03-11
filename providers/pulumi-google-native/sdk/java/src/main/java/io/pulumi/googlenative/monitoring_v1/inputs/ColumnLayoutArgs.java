@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v1.inputs.ColumnArgs;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class ColumnLayoutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="columns")
-      private final @Nullable Input<List<ColumnArgs>> columns;
+      private final @Nullable Output<List<ColumnArgs>> columns;
 
-    public Input<List<ColumnArgs>> getColumns() {
-        return this.columns == null ? Input.empty() : this.columns;
+    public Output<List<ColumnArgs>> getColumns() {
+        return this.columns == null ? Output.empty() : this.columns;
     }
 
-    public ColumnLayoutArgs(@Nullable Input<List<ColumnArgs>> columns) {
+    public ColumnLayoutArgs(@Nullable Output<List<ColumnArgs>> columns) {
         this.columns = columns;
     }
 
     private ColumnLayoutArgs() {
-        this.columns = Input.empty();
+        this.columns = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class ColumnLayoutArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ColumnArgs>> columns;
+        private @Nullable Output<List<ColumnArgs>> columns;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class ColumnLayoutArgs extends io.pulumi.resources.ResourceArgs {
     	      this.columns = defaults.columns;
         }
 
-        public Builder columns(@Nullable Input<List<ColumnArgs>> columns) {
+        public Builder columns(@Nullable Output<List<ColumnArgs>> columns) {
             this.columns = columns;
             return this;
         }
 
         public Builder columns(@Nullable List<ColumnArgs> columns) {
-            this.columns = Input.ofNullable(columns);
+            this.columns = Output.ofNullable(columns);
             return this;
         }
         public ColumnLayoutArgs build() {

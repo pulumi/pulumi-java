@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.domains_v1alpha2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.domains_v1alpha2.enums.ContactSettingsPrivacy;
 import io.pulumi.googlenative.domains_v1alpha2.inputs.ContactArgs;
@@ -23,9 +23,9 @@ public final class ContactSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="adminContact", required=true)
-      private final Input<ContactArgs> adminContact;
+      private final Output<ContactArgs> adminContact;
 
-    public Input<ContactArgs> getAdminContact() {
+    public Output<ContactArgs> getAdminContact() {
         return this.adminContact;
     }
 
@@ -34,9 +34,9 @@ public final class ContactSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="privacy", required=true)
-      private final Input<ContactSettingsPrivacy> privacy;
+      private final Output<ContactSettingsPrivacy> privacy;
 
-    public Input<ContactSettingsPrivacy> getPrivacy() {
+    public Output<ContactSettingsPrivacy> getPrivacy() {
         return this.privacy;
     }
 
@@ -45,9 +45,9 @@ public final class ContactSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="registrantContact", required=true)
-      private final Input<ContactArgs> registrantContact;
+      private final Output<ContactArgs> registrantContact;
 
-    public Input<ContactArgs> getRegistrantContact() {
+    public Output<ContactArgs> getRegistrantContact() {
         return this.registrantContact;
     }
 
@@ -56,17 +56,17 @@ public final class ContactSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="technicalContact", required=true)
-      private final Input<ContactArgs> technicalContact;
+      private final Output<ContactArgs> technicalContact;
 
-    public Input<ContactArgs> getTechnicalContact() {
+    public Output<ContactArgs> getTechnicalContact() {
         return this.technicalContact;
     }
 
     public ContactSettingsArgs(
-        Input<ContactArgs> adminContact,
-        Input<ContactSettingsPrivacy> privacy,
-        Input<ContactArgs> registrantContact,
-        Input<ContactArgs> technicalContact) {
+        Output<ContactArgs> adminContact,
+        Output<ContactSettingsPrivacy> privacy,
+        Output<ContactArgs> registrantContact,
+        Output<ContactArgs> technicalContact) {
         this.adminContact = Objects.requireNonNull(adminContact, "expected parameter 'adminContact' to be non-null");
         this.privacy = Objects.requireNonNull(privacy, "expected parameter 'privacy' to be non-null");
         this.registrantContact = Objects.requireNonNull(registrantContact, "expected parameter 'registrantContact' to be non-null");
@@ -74,10 +74,10 @@ public final class ContactSettingsArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ContactSettingsArgs() {
-        this.adminContact = Input.empty();
-        this.privacy = Input.empty();
-        this.registrantContact = Input.empty();
-        this.technicalContact = Input.empty();
+        this.adminContact = Output.empty();
+        this.privacy = Output.empty();
+        this.registrantContact = Output.empty();
+        this.technicalContact = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class ContactSettingsArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<ContactArgs> adminContact;
-        private Input<ContactSettingsPrivacy> privacy;
-        private Input<ContactArgs> registrantContact;
-        private Input<ContactArgs> technicalContact;
+        private Output<ContactArgs> adminContact;
+        private Output<ContactSettingsPrivacy> privacy;
+        private Output<ContactArgs> registrantContact;
+        private Output<ContactArgs> technicalContact;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class ContactSettingsArgs extends io.pulumi.resources.ResourceArgs 
     	      this.technicalContact = defaults.technicalContact;
         }
 
-        public Builder adminContact(Input<ContactArgs> adminContact) {
+        public Builder adminContact(Output<ContactArgs> adminContact) {
             this.adminContact = Objects.requireNonNull(adminContact);
             return this;
         }
 
         public Builder adminContact(ContactArgs adminContact) {
-            this.adminContact = Input.of(Objects.requireNonNull(adminContact));
+            this.adminContact = Output.of(Objects.requireNonNull(adminContact));
             return this;
         }
 
-        public Builder privacy(Input<ContactSettingsPrivacy> privacy) {
+        public Builder privacy(Output<ContactSettingsPrivacy> privacy) {
             this.privacy = Objects.requireNonNull(privacy);
             return this;
         }
 
         public Builder privacy(ContactSettingsPrivacy privacy) {
-            this.privacy = Input.of(Objects.requireNonNull(privacy));
+            this.privacy = Output.of(Objects.requireNonNull(privacy));
             return this;
         }
 
-        public Builder registrantContact(Input<ContactArgs> registrantContact) {
+        public Builder registrantContact(Output<ContactArgs> registrantContact) {
             this.registrantContact = Objects.requireNonNull(registrantContact);
             return this;
         }
 
         public Builder registrantContact(ContactArgs registrantContact) {
-            this.registrantContact = Input.of(Objects.requireNonNull(registrantContact));
+            this.registrantContact = Output.of(Objects.requireNonNull(registrantContact));
             return this;
         }
 
-        public Builder technicalContact(Input<ContactArgs> technicalContact) {
+        public Builder technicalContact(Output<ContactArgs> technicalContact) {
             this.technicalContact = Objects.requireNonNull(technicalContact);
             return this;
         }
 
         public Builder technicalContact(ContactArgs technicalContact) {
-            this.technicalContact = Input.of(Objects.requireNonNull(technicalContact));
+            this.technicalContact = Output.of(Objects.requireNonNull(technicalContact));
             return this;
         }
         public ContactSettingsArgs build() {

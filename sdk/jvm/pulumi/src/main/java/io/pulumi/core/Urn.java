@@ -25,12 +25,12 @@ public class Urn {
      * optional project and optional stack.
      */
     public static Output<String> create(
-            Input<String> name,
-            Input<String> type,
+            Output<String> name,
+            Output<String> type,
             @Nullable Resource parent,
-            @Nullable Input<String> parentUrn,
-            @Nullable Input<String> project,
-            @Nullable Input<String> stack
+            @Nullable Output<String> parentUrn,
+            @Nullable Output<String> project,
+            @Nullable Output<String> stack
     ) {
         Objects.requireNonNull(name);
         Objects.requireNonNull(type);
@@ -43,13 +43,13 @@ public class Urn {
         if (parent != null || parentUrn != null) {
             var parentUrnOutput = parent != null
                     ? parent.getUrn()
-                    : parentUrn.toOutput();
+                    : parentUrn;
 
             parentPrefix = parentUrnOutput.applyValue(
                     parentUrnString -> parentUrnString.substring(0, parentUrnString.lastIndexOf("::")) + "$");
         } else {
-            var stackName = stack == null ? Input.of(Deployment.getInstance().getStackName()) : stack;
-            var projectName = project == null ? Input.of(Deployment.getInstance().getProjectName()) : project;
+            var stackName = stack == null ? Output.of(Deployment.getInstance().getStackName()) : stack;
+            var projectName = project == null ? Output.of(Deployment.getInstance().getProjectName()) : project;
             parentPrefix = Output.format("urn:pulumi:%s::%s::", stackName, projectName);
         }
 

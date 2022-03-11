@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.secretmanager_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.secretmanager_v1.inputs.ReplicaArgs;
 import java.util.List;
@@ -23,18 +23,18 @@ public final class UserManagedArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="replicas", required=true)
-      private final Input<List<ReplicaArgs>> replicas;
+      private final Output<List<ReplicaArgs>> replicas;
 
-    public Input<List<ReplicaArgs>> getReplicas() {
+    public Output<List<ReplicaArgs>> getReplicas() {
         return this.replicas;
     }
 
-    public UserManagedArgs(Input<List<ReplicaArgs>> replicas) {
+    public UserManagedArgs(Output<List<ReplicaArgs>> replicas) {
         this.replicas = Objects.requireNonNull(replicas, "expected parameter 'replicas' to be non-null");
     }
 
     private UserManagedArgs() {
-        this.replicas = Input.empty();
+        this.replicas = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class UserManagedArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<ReplicaArgs>> replicas;
+        private Output<List<ReplicaArgs>> replicas;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class UserManagedArgs extends io.pulumi.resources.ResourceArgs {
     	      this.replicas = defaults.replicas;
         }
 
-        public Builder replicas(Input<List<ReplicaArgs>> replicas) {
+        public Builder replicas(Output<List<ReplicaArgs>> replicas) {
             this.replicas = Objects.requireNonNull(replicas);
             return this;
         }
 
         public Builder replicas(List<ReplicaArgs> replicas) {
-            this.replicas = Input.of(Objects.requireNonNull(replicas));
+            this.replicas = Output.of(Objects.requireNonNull(replicas));
             return this;
         }
         public UserManagedArgs build() {

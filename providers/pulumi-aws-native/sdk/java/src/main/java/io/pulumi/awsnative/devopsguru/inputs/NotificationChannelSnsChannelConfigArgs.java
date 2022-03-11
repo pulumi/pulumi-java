@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.devopsguru.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class NotificationChannelSnsChannelConfigArgs extends io.pulumi.res
     public static final NotificationChannelSnsChannelConfigArgs Empty = new NotificationChannelSnsChannelConfigArgs();
 
     @InputImport(name="topicArn")
-      private final @Nullable Input<String> topicArn;
+      private final @Nullable Output<String> topicArn;
 
-    public Input<String> getTopicArn() {
-        return this.topicArn == null ? Input.empty() : this.topicArn;
+    public Output<String> getTopicArn() {
+        return this.topicArn == null ? Output.empty() : this.topicArn;
     }
 
-    public NotificationChannelSnsChannelConfigArgs(@Nullable Input<String> topicArn) {
+    public NotificationChannelSnsChannelConfigArgs(@Nullable Output<String> topicArn) {
         this.topicArn = topicArn;
     }
 
     private NotificationChannelSnsChannelConfigArgs() {
-        this.topicArn = Input.empty();
+        this.topicArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class NotificationChannelSnsChannelConfigArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> topicArn;
+        private @Nullable Output<String> topicArn;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class NotificationChannelSnsChannelConfigArgs extends io.pulumi.res
     	      this.topicArn = defaults.topicArn;
         }
 
-        public Builder topicArn(@Nullable Input<String> topicArn) {
+        public Builder topicArn(@Nullable Output<String> topicArn) {
             this.topicArn = topicArn;
             return this;
         }
 
         public Builder topicArn(@Nullable String topicArn) {
-            this.topicArn = Input.ofNullable(topicArn);
+            this.topicArn = Output.ofNullable(topicArn);
             return this;
         }
         public NotificationChannelSnsChannelConfigArgs build() {

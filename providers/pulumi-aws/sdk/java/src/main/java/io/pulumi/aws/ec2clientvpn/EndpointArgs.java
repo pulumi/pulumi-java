@@ -5,7 +5,7 @@ package io.pulumi.aws.ec2clientvpn;
 
 import io.pulumi.aws.ec2clientvpn.inputs.EndpointAuthenticationOptionArgs;
 import io.pulumi.aws.ec2clientvpn.inputs.EndpointConnectionLogOptionsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authenticationOptions", required=true)
-      private final Input<List<EndpointAuthenticationOptionArgs>> authenticationOptions;
+      private final Output<List<EndpointAuthenticationOptionArgs>> authenticationOptions;
 
-    public Input<List<EndpointAuthenticationOptionArgs>> getAuthenticationOptions() {
+    public Output<List<EndpointAuthenticationOptionArgs>> getAuthenticationOptions() {
         return this.authenticationOptions;
     }
 
@@ -35,9 +35,9 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientCidrBlock", required=true)
-      private final Input<String> clientCidrBlock;
+      private final Output<String> clientCidrBlock;
 
-    public Input<String> getClientCidrBlock() {
+    public Output<String> getClientCidrBlock() {
         return this.clientCidrBlock;
     }
 
@@ -46,9 +46,9 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectionLogOptions", required=true)
-      private final Input<EndpointConnectionLogOptionsArgs> connectionLogOptions;
+      private final Output<EndpointConnectionLogOptionsArgs> connectionLogOptions;
 
-    public Input<EndpointConnectionLogOptionsArgs> getConnectionLogOptions() {
+    public Output<EndpointConnectionLogOptionsArgs> getConnectionLogOptions() {
         return this.connectionLogOptions;
     }
 
@@ -57,10 +57,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsServers")
-      private final @Nullable Input<List<String>> dnsServers;
+      private final @Nullable Output<List<String>> dnsServers;
 
-    public Input<List<String>> getDnsServers() {
-        return this.dnsServers == null ? Input.empty() : this.dnsServers;
+    public Output<List<String>> getDnsServers() {
+        return this.dnsServers == null ? Output.empty() : this.dnsServers;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfServicePortal")
-      private final @Nullable Input<String> selfServicePortal;
+      private final @Nullable Output<String> selfServicePortal;
 
-    public Input<String> getSelfServicePortal() {
-        return this.selfServicePortal == null ? Input.empty() : this.selfServicePortal;
+    public Output<String> getSelfServicePortal() {
+        return this.selfServicePortal == null ? Output.empty() : this.selfServicePortal;
     }
 
     /**
@@ -90,9 +90,9 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverCertificateArn", required=true)
-      private final Input<String> serverCertificateArn;
+      private final Output<String> serverCertificateArn;
 
-    public Input<String> getServerCertificateArn() {
+    public Output<String> getServerCertificateArn() {
         return this.serverCertificateArn;
     }
 
@@ -101,10 +101,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="splitTunnel")
-      private final @Nullable Input<Boolean> splitTunnel;
+      private final @Nullable Output<Boolean> splitTunnel;
 
-    public Input<Boolean> getSplitTunnel() {
-        return this.splitTunnel == null ? Input.empty() : this.splitTunnel;
+    public Output<Boolean> getSplitTunnel() {
+        return this.splitTunnel == null ? Output.empty() : this.splitTunnel;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -123,23 +123,23 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transportProtocol")
-      private final @Nullable Input<String> transportProtocol;
+      private final @Nullable Output<String> transportProtocol;
 
-    public Input<String> getTransportProtocol() {
-        return this.transportProtocol == null ? Input.empty() : this.transportProtocol;
+    public Output<String> getTransportProtocol() {
+        return this.transportProtocol == null ? Output.empty() : this.transportProtocol;
     }
 
     public EndpointArgs(
-        Input<List<EndpointAuthenticationOptionArgs>> authenticationOptions,
-        Input<String> clientCidrBlock,
-        Input<EndpointConnectionLogOptionsArgs> connectionLogOptions,
-        @Nullable Input<String> description,
-        @Nullable Input<List<String>> dnsServers,
-        @Nullable Input<String> selfServicePortal,
-        Input<String> serverCertificateArn,
-        @Nullable Input<Boolean> splitTunnel,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> transportProtocol) {
+        Output<List<EndpointAuthenticationOptionArgs>> authenticationOptions,
+        Output<String> clientCidrBlock,
+        Output<EndpointConnectionLogOptionsArgs> connectionLogOptions,
+        @Nullable Output<String> description,
+        @Nullable Output<List<String>> dnsServers,
+        @Nullable Output<String> selfServicePortal,
+        Output<String> serverCertificateArn,
+        @Nullable Output<Boolean> splitTunnel,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> transportProtocol) {
         this.authenticationOptions = Objects.requireNonNull(authenticationOptions, "expected parameter 'authenticationOptions' to be non-null");
         this.clientCidrBlock = Objects.requireNonNull(clientCidrBlock, "expected parameter 'clientCidrBlock' to be non-null");
         this.connectionLogOptions = Objects.requireNonNull(connectionLogOptions, "expected parameter 'connectionLogOptions' to be non-null");
@@ -153,16 +153,16 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EndpointArgs() {
-        this.authenticationOptions = Input.empty();
-        this.clientCidrBlock = Input.empty();
-        this.connectionLogOptions = Input.empty();
-        this.description = Input.empty();
-        this.dnsServers = Input.empty();
-        this.selfServicePortal = Input.empty();
-        this.serverCertificateArn = Input.empty();
-        this.splitTunnel = Input.empty();
-        this.tags = Input.empty();
-        this.transportProtocol = Input.empty();
+        this.authenticationOptions = Output.empty();
+        this.clientCidrBlock = Output.empty();
+        this.connectionLogOptions = Output.empty();
+        this.description = Output.empty();
+        this.dnsServers = Output.empty();
+        this.selfServicePortal = Output.empty();
+        this.serverCertificateArn = Output.empty();
+        this.splitTunnel = Output.empty();
+        this.tags = Output.empty();
+        this.transportProtocol = Output.empty();
     }
 
     public static Builder builder() {
@@ -174,16 +174,16 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<EndpointAuthenticationOptionArgs>> authenticationOptions;
-        private Input<String> clientCidrBlock;
-        private Input<EndpointConnectionLogOptionsArgs> connectionLogOptions;
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<String>> dnsServers;
-        private @Nullable Input<String> selfServicePortal;
-        private Input<String> serverCertificateArn;
-        private @Nullable Input<Boolean> splitTunnel;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> transportProtocol;
+        private Output<List<EndpointAuthenticationOptionArgs>> authenticationOptions;
+        private Output<String> clientCidrBlock;
+        private Output<EndpointConnectionLogOptionsArgs> connectionLogOptions;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<String>> dnsServers;
+        private @Nullable Output<String> selfServicePortal;
+        private Output<String> serverCertificateArn;
+        private @Nullable Output<Boolean> splitTunnel;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> transportProtocol;
 
         public Builder() {
     	      // Empty
@@ -203,103 +203,103 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.transportProtocol = defaults.transportProtocol;
         }
 
-        public Builder authenticationOptions(Input<List<EndpointAuthenticationOptionArgs>> authenticationOptions) {
+        public Builder authenticationOptions(Output<List<EndpointAuthenticationOptionArgs>> authenticationOptions) {
             this.authenticationOptions = Objects.requireNonNull(authenticationOptions);
             return this;
         }
 
         public Builder authenticationOptions(List<EndpointAuthenticationOptionArgs> authenticationOptions) {
-            this.authenticationOptions = Input.of(Objects.requireNonNull(authenticationOptions));
+            this.authenticationOptions = Output.of(Objects.requireNonNull(authenticationOptions));
             return this;
         }
 
-        public Builder clientCidrBlock(Input<String> clientCidrBlock) {
+        public Builder clientCidrBlock(Output<String> clientCidrBlock) {
             this.clientCidrBlock = Objects.requireNonNull(clientCidrBlock);
             return this;
         }
 
         public Builder clientCidrBlock(String clientCidrBlock) {
-            this.clientCidrBlock = Input.of(Objects.requireNonNull(clientCidrBlock));
+            this.clientCidrBlock = Output.of(Objects.requireNonNull(clientCidrBlock));
             return this;
         }
 
-        public Builder connectionLogOptions(Input<EndpointConnectionLogOptionsArgs> connectionLogOptions) {
+        public Builder connectionLogOptions(Output<EndpointConnectionLogOptionsArgs> connectionLogOptions) {
             this.connectionLogOptions = Objects.requireNonNull(connectionLogOptions);
             return this;
         }
 
         public Builder connectionLogOptions(EndpointConnectionLogOptionsArgs connectionLogOptions) {
-            this.connectionLogOptions = Input.of(Objects.requireNonNull(connectionLogOptions));
+            this.connectionLogOptions = Output.of(Objects.requireNonNull(connectionLogOptions));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder dnsServers(@Nullable Input<List<String>> dnsServers) {
+        public Builder dnsServers(@Nullable Output<List<String>> dnsServers) {
             this.dnsServers = dnsServers;
             return this;
         }
 
         public Builder dnsServers(@Nullable List<String> dnsServers) {
-            this.dnsServers = Input.ofNullable(dnsServers);
+            this.dnsServers = Output.ofNullable(dnsServers);
             return this;
         }
 
-        public Builder selfServicePortal(@Nullable Input<String> selfServicePortal) {
+        public Builder selfServicePortal(@Nullable Output<String> selfServicePortal) {
             this.selfServicePortal = selfServicePortal;
             return this;
         }
 
         public Builder selfServicePortal(@Nullable String selfServicePortal) {
-            this.selfServicePortal = Input.ofNullable(selfServicePortal);
+            this.selfServicePortal = Output.ofNullable(selfServicePortal);
             return this;
         }
 
-        public Builder serverCertificateArn(Input<String> serverCertificateArn) {
+        public Builder serverCertificateArn(Output<String> serverCertificateArn) {
             this.serverCertificateArn = Objects.requireNonNull(serverCertificateArn);
             return this;
         }
 
         public Builder serverCertificateArn(String serverCertificateArn) {
-            this.serverCertificateArn = Input.of(Objects.requireNonNull(serverCertificateArn));
+            this.serverCertificateArn = Output.of(Objects.requireNonNull(serverCertificateArn));
             return this;
         }
 
-        public Builder splitTunnel(@Nullable Input<Boolean> splitTunnel) {
+        public Builder splitTunnel(@Nullable Output<Boolean> splitTunnel) {
             this.splitTunnel = splitTunnel;
             return this;
         }
 
         public Builder splitTunnel(@Nullable Boolean splitTunnel) {
-            this.splitTunnel = Input.ofNullable(splitTunnel);
+            this.splitTunnel = Output.ofNullable(splitTunnel);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder transportProtocol(@Nullable Input<String> transportProtocol) {
+        public Builder transportProtocol(@Nullable Output<String> transportProtocol) {
             this.transportProtocol = transportProtocol;
             return this;
         }
 
         public Builder transportProtocol(@Nullable String transportProtocol) {
-            this.transportProtocol = Input.ofNullable(transportProtocol);
+            this.transportProtocol = Output.ofNullable(transportProtocol);
             return this;
         }
         public EndpointArgs build() {

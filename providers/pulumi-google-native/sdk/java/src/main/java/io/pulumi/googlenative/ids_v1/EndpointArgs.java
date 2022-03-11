@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ids_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.ids_v1.enums.EndpointSeverity;
 import java.lang.Boolean;
@@ -22,16 +22,16 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="endpointId", required=true)
-      private final Input<String> endpointId;
+      private final Output<String> endpointId;
 
-    public Input<String> getEndpointId() {
+    public Output<String> getEndpointId() {
         return this.endpointId;
     }
 
@@ -40,17 +40,17 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -58,24 +58,24 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network", required=true)
-      private final Input<String> network;
+      private final Output<String> network;
 
-    public Input<String> getNetwork() {
+    public Output<String> getNetwork() {
         return this.network;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     /**
@@ -83,9 +83,9 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="severity", required=true)
-      private final Input<EndpointSeverity> severity;
+      private final Output<EndpointSeverity> severity;
 
-    public Input<EndpointSeverity> getSeverity() {
+    public Output<EndpointSeverity> getSeverity() {
         return this.severity;
     }
 
@@ -94,22 +94,22 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trafficLogs")
-      private final @Nullable Input<Boolean> trafficLogs;
+      private final @Nullable Output<Boolean> trafficLogs;
 
-    public Input<Boolean> getTrafficLogs() {
-        return this.trafficLogs == null ? Input.empty() : this.trafficLogs;
+    public Output<Boolean> getTrafficLogs() {
+        return this.trafficLogs == null ? Output.empty() : this.trafficLogs;
     }
 
     public EndpointArgs(
-        @Nullable Input<String> description,
-        Input<String> endpointId,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> location,
-        Input<String> network,
-        @Nullable Input<String> project,
-        @Nullable Input<String> requestId,
-        Input<EndpointSeverity> severity,
-        @Nullable Input<Boolean> trafficLogs) {
+        @Nullable Output<String> description,
+        Output<String> endpointId,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> location,
+        Output<String> network,
+        @Nullable Output<String> project,
+        @Nullable Output<String> requestId,
+        Output<EndpointSeverity> severity,
+        @Nullable Output<Boolean> trafficLogs) {
         this.description = description;
         this.endpointId = Objects.requireNonNull(endpointId, "expected parameter 'endpointId' to be non-null");
         this.labels = labels;
@@ -122,15 +122,15 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EndpointArgs() {
-        this.description = Input.empty();
-        this.endpointId = Input.empty();
-        this.labels = Input.empty();
-        this.location = Input.empty();
-        this.network = Input.empty();
-        this.project = Input.empty();
-        this.requestId = Input.empty();
-        this.severity = Input.empty();
-        this.trafficLogs = Input.empty();
+        this.description = Output.empty();
+        this.endpointId = Output.empty();
+        this.labels = Output.empty();
+        this.location = Output.empty();
+        this.network = Output.empty();
+        this.project = Output.empty();
+        this.requestId = Output.empty();
+        this.severity = Output.empty();
+        this.trafficLogs = Output.empty();
     }
 
     public static Builder builder() {
@@ -142,15 +142,15 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> endpointId;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> location;
-        private Input<String> network;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> requestId;
-        private Input<EndpointSeverity> severity;
-        private @Nullable Input<Boolean> trafficLogs;
+        private @Nullable Output<String> description;
+        private Output<String> endpointId;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> location;
+        private Output<String> network;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> requestId;
+        private Output<EndpointSeverity> severity;
+        private @Nullable Output<Boolean> trafficLogs;
 
         public Builder() {
     	      // Empty
@@ -169,93 +169,93 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.trafficLogs = defaults.trafficLogs;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder endpointId(Input<String> endpointId) {
+        public Builder endpointId(Output<String> endpointId) {
             this.endpointId = Objects.requireNonNull(endpointId);
             return this;
         }
 
         public Builder endpointId(String endpointId) {
-            this.endpointId = Input.of(Objects.requireNonNull(endpointId));
+            this.endpointId = Output.of(Objects.requireNonNull(endpointId));
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder network(Input<String> network) {
+        public Builder network(Output<String> network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
         public Builder network(String network) {
-            this.network = Input.of(Objects.requireNonNull(network));
+            this.network = Output.of(Objects.requireNonNull(network));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
 
-        public Builder severity(Input<EndpointSeverity> severity) {
+        public Builder severity(Output<EndpointSeverity> severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
 
         public Builder severity(EndpointSeverity severity) {
-            this.severity = Input.of(Objects.requireNonNull(severity));
+            this.severity = Output.of(Objects.requireNonNull(severity));
             return this;
         }
 
-        public Builder trafficLogs(@Nullable Input<Boolean> trafficLogs) {
+        public Builder trafficLogs(@Nullable Output<Boolean> trafficLogs) {
             this.trafficLogs = trafficLogs;
             return this;
         }
 
         public Builder trafficLogs(@Nullable Boolean trafficLogs) {
-            this.trafficLogs = Input.ofNullable(trafficLogs);
+            this.trafficLogs = Output.ofNullable(trafficLogs);
             return this;
         }
         public EndpointArgs build() {

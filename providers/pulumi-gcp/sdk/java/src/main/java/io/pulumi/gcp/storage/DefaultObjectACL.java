@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.storage;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -109,14 +108,14 @@ public class DefaultObjectACL extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DefaultObjectACL(String name, DefaultObjectACLArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:storage/defaultObjectACL:DefaultObjectACL", name, args == null ? DefaultObjectACLArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:storage/defaultObjectACL:DefaultObjectACL", name, args == null ? DefaultObjectACLArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private DefaultObjectACL(String name, Input<String> id, @Nullable DefaultObjectACLState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private DefaultObjectACL(String name, Output<String> id, @Nullable DefaultObjectACLState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:storage/defaultObjectACL:DefaultObjectACL", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -132,7 +131,7 @@ public class DefaultObjectACL extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DefaultObjectACL get(String name, Input<String> id, @Nullable DefaultObjectACLState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static DefaultObjectACL get(String name, Output<String> id, @Nullable DefaultObjectACLState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DefaultObjectACL(name, id, state, options);
     }
 }

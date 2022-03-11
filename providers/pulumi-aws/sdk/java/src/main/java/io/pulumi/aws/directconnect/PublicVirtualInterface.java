@@ -6,7 +6,6 @@ package io.pulumi.aws.directconnect;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.directconnect.PublicVirtualInterfaceArgs;
 import io.pulumi.aws.directconnect.inputs.PublicVirtualInterfaceState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -259,14 +258,14 @@ public class PublicVirtualInterface extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PublicVirtualInterface(String name, PublicVirtualInterfaceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:directconnect/publicVirtualInterface:PublicVirtualInterface", name, args == null ? PublicVirtualInterfaceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:directconnect/publicVirtualInterface:PublicVirtualInterface", name, args == null ? PublicVirtualInterfaceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private PublicVirtualInterface(String name, Input<String> id, @Nullable PublicVirtualInterfaceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private PublicVirtualInterface(String name, Output<String> id, @Nullable PublicVirtualInterfaceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:directconnect/publicVirtualInterface:PublicVirtualInterface", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -282,7 +281,7 @@ public class PublicVirtualInterface extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PublicVirtualInterface get(String name, Input<String> id, @Nullable PublicVirtualInterfaceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static PublicVirtualInterface get(String name, Output<String> id, @Nullable PublicVirtualInterfaceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PublicVirtualInterface(name, id, state, options);
     }
 }

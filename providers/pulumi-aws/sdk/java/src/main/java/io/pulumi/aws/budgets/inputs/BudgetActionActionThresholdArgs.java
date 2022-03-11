@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.budgets.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -19,9 +19,9 @@ public final class BudgetActionActionThresholdArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="actionThresholdType", required=true)
-      private final Input<String> actionThresholdType;
+      private final Output<String> actionThresholdType;
 
-    public Input<String> getActionThresholdType() {
+    public Output<String> getActionThresholdType() {
         return this.actionThresholdType;
     }
 
@@ -30,22 +30,22 @@ public final class BudgetActionActionThresholdArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="actionThresholdValue", required=true)
-      private final Input<Double> actionThresholdValue;
+      private final Output<Double> actionThresholdValue;
 
-    public Input<Double> getActionThresholdValue() {
+    public Output<Double> getActionThresholdValue() {
         return this.actionThresholdValue;
     }
 
     public BudgetActionActionThresholdArgs(
-        Input<String> actionThresholdType,
-        Input<Double> actionThresholdValue) {
+        Output<String> actionThresholdType,
+        Output<Double> actionThresholdValue) {
         this.actionThresholdType = Objects.requireNonNull(actionThresholdType, "expected parameter 'actionThresholdType' to be non-null");
         this.actionThresholdValue = Objects.requireNonNull(actionThresholdValue, "expected parameter 'actionThresholdValue' to be non-null");
     }
 
     private BudgetActionActionThresholdArgs() {
-        this.actionThresholdType = Input.empty();
-        this.actionThresholdValue = Input.empty();
+        this.actionThresholdType = Output.empty();
+        this.actionThresholdValue = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class BudgetActionActionThresholdArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<String> actionThresholdType;
-        private Input<Double> actionThresholdValue;
+        private Output<String> actionThresholdType;
+        private Output<Double> actionThresholdValue;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class BudgetActionActionThresholdArgs extends io.pulumi.resources.R
     	      this.actionThresholdValue = defaults.actionThresholdValue;
         }
 
-        public Builder actionThresholdType(Input<String> actionThresholdType) {
+        public Builder actionThresholdType(Output<String> actionThresholdType) {
             this.actionThresholdType = Objects.requireNonNull(actionThresholdType);
             return this;
         }
 
         public Builder actionThresholdType(String actionThresholdType) {
-            this.actionThresholdType = Input.of(Objects.requireNonNull(actionThresholdType));
+            this.actionThresholdType = Output.of(Objects.requireNonNull(actionThresholdType));
             return this;
         }
 
-        public Builder actionThresholdValue(Input<Double> actionThresholdValue) {
+        public Builder actionThresholdValue(Output<Double> actionThresholdValue) {
             this.actionThresholdValue = Objects.requireNonNull(actionThresholdValue);
             return this;
         }
 
         public Builder actionThresholdValue(Double actionThresholdValue) {
-            this.actionThresholdValue = Input.of(Objects.requireNonNull(actionThresholdValue));
+            this.actionThresholdValue = Output.of(Objects.requireNonNull(actionThresholdValue));
             return this;
         }
         public BudgetActionActionThresholdArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.firestore.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="collection")
-      private final @Nullable Input<String> collection;
+      private final @Nullable Output<String> collection;
 
-    public Input<String> getCollection() {
-        return this.collection == null ? Input.empty() : this.collection;
+    public Output<String> getCollection() {
+        return this.collection == null ? Output.empty() : this.collection;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-      private final @Nullable Input<String> createTime;
+      private final @Nullable Output<String> createTime;
 
-    public Input<String> getCreateTime() {
-        return this.createTime == null ? Input.empty() : this.createTime;
+    public Output<String> getCreateTime() {
+        return this.createTime == null ? Output.empty() : this.createTime;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="database")
-      private final @Nullable Input<String> database;
+      private final @Nullable Output<String> database;
 
-    public Input<String> getDatabase() {
-        return this.database == null ? Input.empty() : this.database;
+    public Output<String> getDatabase() {
+        return this.database == null ? Output.empty() : this.database;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="documentId")
-      private final @Nullable Input<String> documentId;
+      private final @Nullable Output<String> documentId;
 
-    public Input<String> getDocumentId() {
-        return this.documentId == null ? Input.empty() : this.documentId;
+    public Output<String> getDocumentId() {
+        return this.documentId == null ? Output.empty() : this.documentId;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fields")
-      private final @Nullable Input<String> fields;
+      private final @Nullable Output<String> fields;
 
-    public Input<String> getFields() {
-        return this.fields == null ? Input.empty() : this.fields;
+    public Output<String> getFields() {
+        return this.fields == null ? Output.empty() : this.fields;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -109,22 +109,22 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updateTime")
-      private final @Nullable Input<String> updateTime;
+      private final @Nullable Output<String> updateTime;
 
-    public Input<String> getUpdateTime() {
-        return this.updateTime == null ? Input.empty() : this.updateTime;
+    public Output<String> getUpdateTime() {
+        return this.updateTime == null ? Output.empty() : this.updateTime;
     }
 
     public DocumentState(
-        @Nullable Input<String> collection,
-        @Nullable Input<String> createTime,
-        @Nullable Input<String> database,
-        @Nullable Input<String> documentId,
-        @Nullable Input<String> fields,
-        @Nullable Input<String> name,
-        @Nullable Input<String> path,
-        @Nullable Input<String> project,
-        @Nullable Input<String> updateTime) {
+        @Nullable Output<String> collection,
+        @Nullable Output<String> createTime,
+        @Nullable Output<String> database,
+        @Nullable Output<String> documentId,
+        @Nullable Output<String> fields,
+        @Nullable Output<String> name,
+        @Nullable Output<String> path,
+        @Nullable Output<String> project,
+        @Nullable Output<String> updateTime) {
         this.collection = collection;
         this.createTime = createTime;
         this.database = database;
@@ -137,15 +137,15 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DocumentState() {
-        this.collection = Input.empty();
-        this.createTime = Input.empty();
-        this.database = Input.empty();
-        this.documentId = Input.empty();
-        this.fields = Input.empty();
-        this.name = Input.empty();
-        this.path = Input.empty();
-        this.project = Input.empty();
-        this.updateTime = Input.empty();
+        this.collection = Output.empty();
+        this.createTime = Output.empty();
+        this.database = Output.empty();
+        this.documentId = Output.empty();
+        this.fields = Output.empty();
+        this.name = Output.empty();
+        this.path = Output.empty();
+        this.project = Output.empty();
+        this.updateTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -157,15 +157,15 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> collection;
-        private @Nullable Input<String> createTime;
-        private @Nullable Input<String> database;
-        private @Nullable Input<String> documentId;
-        private @Nullable Input<String> fields;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> path;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> updateTime;
+        private @Nullable Output<String> collection;
+        private @Nullable Output<String> createTime;
+        private @Nullable Output<String> database;
+        private @Nullable Output<String> documentId;
+        private @Nullable Output<String> fields;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> path;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> updateTime;
 
         public Builder() {
     	      // Empty
@@ -184,93 +184,93 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder collection(@Nullable Input<String> collection) {
+        public Builder collection(@Nullable Output<String> collection) {
             this.collection = collection;
             return this;
         }
 
         public Builder collection(@Nullable String collection) {
-            this.collection = Input.ofNullable(collection);
+            this.collection = Output.ofNullable(collection);
             return this;
         }
 
-        public Builder createTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Input.ofNullable(createTime);
+            this.createTime = Output.ofNullable(createTime);
             return this;
         }
 
-        public Builder database(@Nullable Input<String> database) {
+        public Builder database(@Nullable Output<String> database) {
             this.database = database;
             return this;
         }
 
         public Builder database(@Nullable String database) {
-            this.database = Input.ofNullable(database);
+            this.database = Output.ofNullable(database);
             return this;
         }
 
-        public Builder documentId(@Nullable Input<String> documentId) {
+        public Builder documentId(@Nullable Output<String> documentId) {
             this.documentId = documentId;
             return this;
         }
 
         public Builder documentId(@Nullable String documentId) {
-            this.documentId = Input.ofNullable(documentId);
+            this.documentId = Output.ofNullable(documentId);
             return this;
         }
 
-        public Builder fields(@Nullable Input<String> fields) {
+        public Builder fields(@Nullable Output<String> fields) {
             this.fields = fields;
             return this;
         }
 
         public Builder fields(@Nullable String fields) {
-            this.fields = Input.ofNullable(fields);
+            this.fields = Output.ofNullable(fields);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder updateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Input.ofNullable(updateTime);
+            this.updateTime = Output.ofNullable(updateTime);
             return this;
         }
         public DocumentState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.neptune;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,9 +17,9 @@ public final class ClusterEndpointArgs extends io.pulumi.resources.ResourceArgs 
     public static final ClusterEndpointArgs Empty = new ClusterEndpointArgs();
 
     @InputImport(name="clusterEndpointIdentifier", required=true)
-      private final Input<String> clusterEndpointIdentifier;
+      private final Output<String> clusterEndpointIdentifier;
 
-    public Input<String> getClusterEndpointIdentifier() {
+    public Output<String> getClusterEndpointIdentifier() {
         return this.clusterEndpointIdentifier;
     }
 
@@ -28,9 +28,9 @@ public final class ClusterEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="clusterIdentifier", required=true)
-      private final Input<String> clusterIdentifier;
+      private final Output<String> clusterIdentifier;
 
-    public Input<String> getClusterIdentifier() {
+    public Output<String> getClusterIdentifier() {
         return this.clusterIdentifier;
     }
 
@@ -39,9 +39,9 @@ public final class ClusterEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="endpointType", required=true)
-      private final Input<String> endpointType;
+      private final Output<String> endpointType;
 
-    public Input<String> getEndpointType() {
+    public Output<String> getEndpointType() {
         return this.endpointType;
     }
 
@@ -50,10 +50,10 @@ public final class ClusterEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="excludedMembers")
-      private final @Nullable Input<List<String>> excludedMembers;
+      private final @Nullable Output<List<String>> excludedMembers;
 
-    public Input<List<String>> getExcludedMembers() {
-        return this.excludedMembers == null ? Input.empty() : this.excludedMembers;
+    public Output<List<String>> getExcludedMembers() {
+        return this.excludedMembers == null ? Output.empty() : this.excludedMembers;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class ClusterEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="staticMembers")
-      private final @Nullable Input<List<String>> staticMembers;
+      private final @Nullable Output<List<String>> staticMembers;
 
-    public Input<List<String>> getStaticMembers() {
-        return this.staticMembers == null ? Input.empty() : this.staticMembers;
+    public Output<List<String>> getStaticMembers() {
+        return this.staticMembers == null ? Output.empty() : this.staticMembers;
     }
 
     /**
@@ -72,19 +72,19 @@ public final class ClusterEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ClusterEndpointArgs(
-        Input<String> clusterEndpointIdentifier,
-        Input<String> clusterIdentifier,
-        Input<String> endpointType,
-        @Nullable Input<List<String>> excludedMembers,
-        @Nullable Input<List<String>> staticMembers,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> clusterEndpointIdentifier,
+        Output<String> clusterIdentifier,
+        Output<String> endpointType,
+        @Nullable Output<List<String>> excludedMembers,
+        @Nullable Output<List<String>> staticMembers,
+        @Nullable Output<Map<String,String>> tags) {
         this.clusterEndpointIdentifier = Objects.requireNonNull(clusterEndpointIdentifier, "expected parameter 'clusterEndpointIdentifier' to be non-null");
         this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier, "expected parameter 'clusterIdentifier' to be non-null");
         this.endpointType = Objects.requireNonNull(endpointType, "expected parameter 'endpointType' to be non-null");
@@ -94,12 +94,12 @@ public final class ClusterEndpointArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ClusterEndpointArgs() {
-        this.clusterEndpointIdentifier = Input.empty();
-        this.clusterIdentifier = Input.empty();
-        this.endpointType = Input.empty();
-        this.excludedMembers = Input.empty();
-        this.staticMembers = Input.empty();
-        this.tags = Input.empty();
+        this.clusterEndpointIdentifier = Output.empty();
+        this.clusterIdentifier = Output.empty();
+        this.endpointType = Output.empty();
+        this.excludedMembers = Output.empty();
+        this.staticMembers = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -111,12 +111,12 @@ public final class ClusterEndpointArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<String> clusterEndpointIdentifier;
-        private Input<String> clusterIdentifier;
-        private Input<String> endpointType;
-        private @Nullable Input<List<String>> excludedMembers;
-        private @Nullable Input<List<String>> staticMembers;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> clusterEndpointIdentifier;
+        private Output<String> clusterIdentifier;
+        private Output<String> endpointType;
+        private @Nullable Output<List<String>> excludedMembers;
+        private @Nullable Output<List<String>> staticMembers;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -132,63 +132,63 @@ public final class ClusterEndpointArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tags = defaults.tags;
         }
 
-        public Builder clusterEndpointIdentifier(Input<String> clusterEndpointIdentifier) {
+        public Builder clusterEndpointIdentifier(Output<String> clusterEndpointIdentifier) {
             this.clusterEndpointIdentifier = Objects.requireNonNull(clusterEndpointIdentifier);
             return this;
         }
 
         public Builder clusterEndpointIdentifier(String clusterEndpointIdentifier) {
-            this.clusterEndpointIdentifier = Input.of(Objects.requireNonNull(clusterEndpointIdentifier));
+            this.clusterEndpointIdentifier = Output.of(Objects.requireNonNull(clusterEndpointIdentifier));
             return this;
         }
 
-        public Builder clusterIdentifier(Input<String> clusterIdentifier) {
+        public Builder clusterIdentifier(Output<String> clusterIdentifier) {
             this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
             return this;
         }
 
         public Builder clusterIdentifier(String clusterIdentifier) {
-            this.clusterIdentifier = Input.of(Objects.requireNonNull(clusterIdentifier));
+            this.clusterIdentifier = Output.of(Objects.requireNonNull(clusterIdentifier));
             return this;
         }
 
-        public Builder endpointType(Input<String> endpointType) {
+        public Builder endpointType(Output<String> endpointType) {
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
 
         public Builder endpointType(String endpointType) {
-            this.endpointType = Input.of(Objects.requireNonNull(endpointType));
+            this.endpointType = Output.of(Objects.requireNonNull(endpointType));
             return this;
         }
 
-        public Builder excludedMembers(@Nullable Input<List<String>> excludedMembers) {
+        public Builder excludedMembers(@Nullable Output<List<String>> excludedMembers) {
             this.excludedMembers = excludedMembers;
             return this;
         }
 
         public Builder excludedMembers(@Nullable List<String> excludedMembers) {
-            this.excludedMembers = Input.ofNullable(excludedMembers);
+            this.excludedMembers = Output.ofNullable(excludedMembers);
             return this;
         }
 
-        public Builder staticMembers(@Nullable Input<List<String>> staticMembers) {
+        public Builder staticMembers(@Nullable Output<List<String>> staticMembers) {
             this.staticMembers = staticMembers;
             return this;
         }
 
         public Builder staticMembers(@Nullable List<String> staticMembers) {
-            this.staticMembers = Input.ofNullable(staticMembers);
+            this.staticMembers = Output.ofNullable(staticMembers);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ClusterEndpointArgs build() {

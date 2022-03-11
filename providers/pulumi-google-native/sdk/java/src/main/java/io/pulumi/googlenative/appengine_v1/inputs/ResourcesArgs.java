@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.appengine_v1.inputs.VolumeArgs;
 import java.lang.Double;
@@ -26,10 +26,10 @@ public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cpu")
-      private final @Nullable Input<Double> cpu;
+      private final @Nullable Output<Double> cpu;
 
-    public Input<Double> getCpu() {
-        return this.cpu == null ? Input.empty() : this.cpu;
+    public Output<Double> getCpu() {
+        return this.cpu == null ? Output.empty() : this.cpu;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskGb")
-      private final @Nullable Input<Double> diskGb;
+      private final @Nullable Output<Double> diskGb;
 
-    public Input<Double> getDiskGb() {
-        return this.diskGb == null ? Input.empty() : this.diskGb;
+    public Output<Double> getDiskGb() {
+        return this.diskGb == null ? Output.empty() : this.diskGb;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyReference")
-      private final @Nullable Input<String> kmsKeyReference;
+      private final @Nullable Output<String> kmsKeyReference;
 
-    public Input<String> getKmsKeyReference() {
-        return this.kmsKeyReference == null ? Input.empty() : this.kmsKeyReference;
+    public Output<String> getKmsKeyReference() {
+        return this.kmsKeyReference == null ? Output.empty() : this.kmsKeyReference;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="memoryGb")
-      private final @Nullable Input<Double> memoryGb;
+      private final @Nullable Output<Double> memoryGb;
 
-    public Input<Double> getMemoryGb() {
-        return this.memoryGb == null ? Input.empty() : this.memoryGb;
+    public Output<Double> getMemoryGb() {
+        return this.memoryGb == null ? Output.empty() : this.memoryGb;
     }
 
     /**
@@ -70,18 +70,18 @@ public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumes")
-      private final @Nullable Input<List<VolumeArgs>> volumes;
+      private final @Nullable Output<List<VolumeArgs>> volumes;
 
-    public Input<List<VolumeArgs>> getVolumes() {
-        return this.volumes == null ? Input.empty() : this.volumes;
+    public Output<List<VolumeArgs>> getVolumes() {
+        return this.volumes == null ? Output.empty() : this.volumes;
     }
 
     public ResourcesArgs(
-        @Nullable Input<Double> cpu,
-        @Nullable Input<Double> diskGb,
-        @Nullable Input<String> kmsKeyReference,
-        @Nullable Input<Double> memoryGb,
-        @Nullable Input<List<VolumeArgs>> volumes) {
+        @Nullable Output<Double> cpu,
+        @Nullable Output<Double> diskGb,
+        @Nullable Output<String> kmsKeyReference,
+        @Nullable Output<Double> memoryGb,
+        @Nullable Output<List<VolumeArgs>> volumes) {
         this.cpu = cpu;
         this.diskGb = diskGb;
         this.kmsKeyReference = kmsKeyReference;
@@ -90,11 +90,11 @@ public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResourcesArgs() {
-        this.cpu = Input.empty();
-        this.diskGb = Input.empty();
-        this.kmsKeyReference = Input.empty();
-        this.memoryGb = Input.empty();
-        this.volumes = Input.empty();
+        this.cpu = Output.empty();
+        this.diskGb = Output.empty();
+        this.kmsKeyReference = Output.empty();
+        this.memoryGb = Output.empty();
+        this.volumes = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,11 +106,11 @@ public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Double> cpu;
-        private @Nullable Input<Double> diskGb;
-        private @Nullable Input<String> kmsKeyReference;
-        private @Nullable Input<Double> memoryGb;
-        private @Nullable Input<List<VolumeArgs>> volumes;
+        private @Nullable Output<Double> cpu;
+        private @Nullable Output<Double> diskGb;
+        private @Nullable Output<String> kmsKeyReference;
+        private @Nullable Output<Double> memoryGb;
+        private @Nullable Output<List<VolumeArgs>> volumes;
 
         public Builder() {
     	      // Empty
@@ -125,53 +125,53 @@ public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.volumes = defaults.volumes;
         }
 
-        public Builder cpu(@Nullable Input<Double> cpu) {
+        public Builder cpu(@Nullable Output<Double> cpu) {
             this.cpu = cpu;
             return this;
         }
 
         public Builder cpu(@Nullable Double cpu) {
-            this.cpu = Input.ofNullable(cpu);
+            this.cpu = Output.ofNullable(cpu);
             return this;
         }
 
-        public Builder diskGb(@Nullable Input<Double> diskGb) {
+        public Builder diskGb(@Nullable Output<Double> diskGb) {
             this.diskGb = diskGb;
             return this;
         }
 
         public Builder diskGb(@Nullable Double diskGb) {
-            this.diskGb = Input.ofNullable(diskGb);
+            this.diskGb = Output.ofNullable(diskGb);
             return this;
         }
 
-        public Builder kmsKeyReference(@Nullable Input<String> kmsKeyReference) {
+        public Builder kmsKeyReference(@Nullable Output<String> kmsKeyReference) {
             this.kmsKeyReference = kmsKeyReference;
             return this;
         }
 
         public Builder kmsKeyReference(@Nullable String kmsKeyReference) {
-            this.kmsKeyReference = Input.ofNullable(kmsKeyReference);
+            this.kmsKeyReference = Output.ofNullable(kmsKeyReference);
             return this;
         }
 
-        public Builder memoryGb(@Nullable Input<Double> memoryGb) {
+        public Builder memoryGb(@Nullable Output<Double> memoryGb) {
             this.memoryGb = memoryGb;
             return this;
         }
 
         public Builder memoryGb(@Nullable Double memoryGb) {
-            this.memoryGb = Input.ofNullable(memoryGb);
+            this.memoryGb = Output.ofNullable(memoryGb);
             return this;
         }
 
-        public Builder volumes(@Nullable Input<List<VolumeArgs>> volumes) {
+        public Builder volumes(@Nullable Output<List<VolumeArgs>> volumes) {
             this.volumes = volumes;
             return this;
         }
 
         public Builder volumes(@Nullable List<VolumeArgs> volumes) {
-            this.volumes = Input.ofNullable(volumes);
+            this.volumes = Output.ofNullable(volumes);
             return this;
         }
         public ResourcesArgs build() {

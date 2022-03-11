@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kinesisfirehose.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Object;
@@ -16,39 +16,39 @@ public final class DeliveryStreamOpenXJsonSerDeArgs extends io.pulumi.resources.
     public static final DeliveryStreamOpenXJsonSerDeArgs Empty = new DeliveryStreamOpenXJsonSerDeArgs();
 
     @InputImport(name="caseInsensitive")
-      private final @Nullable Input<Boolean> caseInsensitive;
+      private final @Nullable Output<Boolean> caseInsensitive;
 
-    public Input<Boolean> getCaseInsensitive() {
-        return this.caseInsensitive == null ? Input.empty() : this.caseInsensitive;
+    public Output<Boolean> getCaseInsensitive() {
+        return this.caseInsensitive == null ? Output.empty() : this.caseInsensitive;
     }
 
     @InputImport(name="columnToJsonKeyMappings")
-      private final @Nullable Input<Object> columnToJsonKeyMappings;
+      private final @Nullable Output<Object> columnToJsonKeyMappings;
 
-    public Input<Object> getColumnToJsonKeyMappings() {
-        return this.columnToJsonKeyMappings == null ? Input.empty() : this.columnToJsonKeyMappings;
+    public Output<Object> getColumnToJsonKeyMappings() {
+        return this.columnToJsonKeyMappings == null ? Output.empty() : this.columnToJsonKeyMappings;
     }
 
     @InputImport(name="convertDotsInJsonKeysToUnderscores")
-      private final @Nullable Input<Boolean> convertDotsInJsonKeysToUnderscores;
+      private final @Nullable Output<Boolean> convertDotsInJsonKeysToUnderscores;
 
-    public Input<Boolean> getConvertDotsInJsonKeysToUnderscores() {
-        return this.convertDotsInJsonKeysToUnderscores == null ? Input.empty() : this.convertDotsInJsonKeysToUnderscores;
+    public Output<Boolean> getConvertDotsInJsonKeysToUnderscores() {
+        return this.convertDotsInJsonKeysToUnderscores == null ? Output.empty() : this.convertDotsInJsonKeysToUnderscores;
     }
 
     public DeliveryStreamOpenXJsonSerDeArgs(
-        @Nullable Input<Boolean> caseInsensitive,
-        @Nullable Input<Object> columnToJsonKeyMappings,
-        @Nullable Input<Boolean> convertDotsInJsonKeysToUnderscores) {
+        @Nullable Output<Boolean> caseInsensitive,
+        @Nullable Output<Object> columnToJsonKeyMappings,
+        @Nullable Output<Boolean> convertDotsInJsonKeysToUnderscores) {
         this.caseInsensitive = caseInsensitive;
         this.columnToJsonKeyMappings = columnToJsonKeyMappings;
         this.convertDotsInJsonKeysToUnderscores = convertDotsInJsonKeysToUnderscores;
     }
 
     private DeliveryStreamOpenXJsonSerDeArgs() {
-        this.caseInsensitive = Input.empty();
-        this.columnToJsonKeyMappings = Input.empty();
-        this.convertDotsInJsonKeysToUnderscores = Input.empty();
+        this.caseInsensitive = Output.empty();
+        this.columnToJsonKeyMappings = Output.empty();
+        this.convertDotsInJsonKeysToUnderscores = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,9 +60,9 @@ public final class DeliveryStreamOpenXJsonSerDeArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> caseInsensitive;
-        private @Nullable Input<Object> columnToJsonKeyMappings;
-        private @Nullable Input<Boolean> convertDotsInJsonKeysToUnderscores;
+        private @Nullable Output<Boolean> caseInsensitive;
+        private @Nullable Output<Object> columnToJsonKeyMappings;
+        private @Nullable Output<Boolean> convertDotsInJsonKeysToUnderscores;
 
         public Builder() {
     	      // Empty
@@ -75,33 +75,33 @@ public final class DeliveryStreamOpenXJsonSerDeArgs extends io.pulumi.resources.
     	      this.convertDotsInJsonKeysToUnderscores = defaults.convertDotsInJsonKeysToUnderscores;
         }
 
-        public Builder caseInsensitive(@Nullable Input<Boolean> caseInsensitive) {
+        public Builder caseInsensitive(@Nullable Output<Boolean> caseInsensitive) {
             this.caseInsensitive = caseInsensitive;
             return this;
         }
 
         public Builder caseInsensitive(@Nullable Boolean caseInsensitive) {
-            this.caseInsensitive = Input.ofNullable(caseInsensitive);
+            this.caseInsensitive = Output.ofNullable(caseInsensitive);
             return this;
         }
 
-        public Builder columnToJsonKeyMappings(@Nullable Input<Object> columnToJsonKeyMappings) {
+        public Builder columnToJsonKeyMappings(@Nullable Output<Object> columnToJsonKeyMappings) {
             this.columnToJsonKeyMappings = columnToJsonKeyMappings;
             return this;
         }
 
         public Builder columnToJsonKeyMappings(@Nullable Object columnToJsonKeyMappings) {
-            this.columnToJsonKeyMappings = Input.ofNullable(columnToJsonKeyMappings);
+            this.columnToJsonKeyMappings = Output.ofNullable(columnToJsonKeyMappings);
             return this;
         }
 
-        public Builder convertDotsInJsonKeysToUnderscores(@Nullable Input<Boolean> convertDotsInJsonKeysToUnderscores) {
+        public Builder convertDotsInJsonKeysToUnderscores(@Nullable Output<Boolean> convertDotsInJsonKeysToUnderscores) {
             this.convertDotsInJsonKeysToUnderscores = convertDotsInJsonKeysToUnderscores;
             return this;
         }
 
         public Builder convertDotsInJsonKeysToUnderscores(@Nullable Boolean convertDotsInJsonKeysToUnderscores) {
-            this.convertDotsInJsonKeysToUnderscores = Input.ofNullable(convertDotsInJsonKeysToUnderscores);
+            this.convertDotsInJsonKeysToUnderscores = Output.ofNullable(convertDotsInJsonKeysToUnderscores);
             return this;
         }
         public DeliveryStreamOpenXJsonSerDeArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class WorkflowTemplatePlacementManagedClusterConfigEncryptionConfig
      * 
      */
     @InputImport(name="gcePdKmsKeyName")
-      private final @Nullable Input<String> gcePdKmsKeyName;
+      private final @Nullable Output<String> gcePdKmsKeyName;
 
-    public Input<String> getGcePdKmsKeyName() {
-        return this.gcePdKmsKeyName == null ? Input.empty() : this.gcePdKmsKeyName;
+    public Output<String> getGcePdKmsKeyName() {
+        return this.gcePdKmsKeyName == null ? Output.empty() : this.gcePdKmsKeyName;
     }
 
-    public WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigArgs(@Nullable Input<String> gcePdKmsKeyName) {
+    public WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigArgs(@Nullable Output<String> gcePdKmsKeyName) {
         this.gcePdKmsKeyName = gcePdKmsKeyName;
     }
 
     private WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigArgs() {
-        this.gcePdKmsKeyName = Input.empty();
+        this.gcePdKmsKeyName = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigEncryptionConfig
     }
 
     public static final class Builder {
-        private @Nullable Input<String> gcePdKmsKeyName;
+        private @Nullable Output<String> gcePdKmsKeyName;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class WorkflowTemplatePlacementManagedClusterConfigEncryptionConfig
     	      this.gcePdKmsKeyName = defaults.gcePdKmsKeyName;
         }
 
-        public Builder gcePdKmsKeyName(@Nullable Input<String> gcePdKmsKeyName) {
+        public Builder gcePdKmsKeyName(@Nullable Output<String> gcePdKmsKeyName) {
             this.gcePdKmsKeyName = gcePdKmsKeyName;
             return this;
         }
 
         public Builder gcePdKmsKeyName(@Nullable String gcePdKmsKeyName) {
-            this.gcePdKmsKeyName = Input.ofNullable(gcePdKmsKeyName);
+            this.gcePdKmsKeyName = Output.ofNullable(gcePdKmsKeyName);
             return this;
         }
         public WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.videoanalyzer.inputs;
 
 import io.pulumi.azurenative.videoanalyzer.inputs.VideoSequenceAbsoluteTimeMarkersArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class VideoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -34,9 +34,9 @@ public final class VideoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeSequences", required=true)
-      private final Input<VideoSequenceAbsoluteTimeMarkersArgs> timeSequences;
+      private final Output<VideoSequenceAbsoluteTimeMarkersArgs> timeSequences;
 
-    public Input<VideoSequenceAbsoluteTimeMarkersArgs> getTimeSequences() {
+    public Output<VideoSequenceAbsoluteTimeMarkersArgs> getTimeSequences() {
         return this.timeSequences;
     }
 
@@ -46,9 +46,9 @@ public final class VideoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -57,17 +57,17 @@ public final class VideoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="videoName", required=true)
-      private final Input<String> videoName;
+      private final Output<String> videoName;
 
-    public Input<String> getVideoName() {
+    public Output<String> getVideoName() {
         return this.videoName;
     }
 
     public VideoSourceArgs(
-        Input<String> name,
-        Input<VideoSequenceAbsoluteTimeMarkersArgs> timeSequences,
-        Input<String> type,
-        Input<String> videoName) {
+        Output<String> name,
+        Output<VideoSequenceAbsoluteTimeMarkersArgs> timeSequences,
+        Output<String> type,
+        Output<String> videoName) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.timeSequences = Objects.requireNonNull(timeSequences, "expected parameter 'timeSequences' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
@@ -75,10 +75,10 @@ public final class VideoSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VideoSourceArgs() {
-        this.name = Input.empty();
-        this.timeSequences = Input.empty();
-        this.type = Input.empty();
-        this.videoName = Input.empty();
+        this.name = Output.empty();
+        this.timeSequences = Output.empty();
+        this.type = Output.empty();
+        this.videoName = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class VideoSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private Input<VideoSequenceAbsoluteTimeMarkersArgs> timeSequences;
-        private Input<String> type;
-        private Input<String> videoName;
+        private Output<String> name;
+        private Output<VideoSequenceAbsoluteTimeMarkersArgs> timeSequences;
+        private Output<String> type;
+        private Output<String> videoName;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class VideoSourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.videoName = defaults.videoName;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder timeSequences(Input<VideoSequenceAbsoluteTimeMarkersArgs> timeSequences) {
+        public Builder timeSequences(Output<VideoSequenceAbsoluteTimeMarkersArgs> timeSequences) {
             this.timeSequences = Objects.requireNonNull(timeSequences);
             return this;
         }
 
         public Builder timeSequences(VideoSequenceAbsoluteTimeMarkersArgs timeSequences) {
-            this.timeSequences = Input.of(Objects.requireNonNull(timeSequences));
+            this.timeSequences = Output.of(Objects.requireNonNull(timeSequences));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder videoName(Input<String> videoName) {
+        public Builder videoName(Output<String> videoName) {
             this.videoName = Objects.requireNonNull(videoName);
             return this;
         }
 
         public Builder videoName(String videoName) {
-            this.videoName = Input.of(Objects.requireNonNull(videoName));
+            this.videoName = Output.of(Objects.requireNonNull(videoName));
             return this;
         }
         public VideoSourceArgs build() {

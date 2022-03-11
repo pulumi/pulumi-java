@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class ItsmReceiverArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectionId", required=true)
-      private final Input<String> connectionId;
+      private final Output<String> connectionId;
 
-    public Input<String> getConnectionId() {
+    public Output<String> getConnectionId() {
         return this.connectionId;
     }
 
@@ -33,9 +33,9 @@ public final class ItsmReceiverArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -44,9 +44,9 @@ public final class ItsmReceiverArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region", required=true)
-      private final Input<String> region;
+      private final Output<String> region;
 
-    public Input<String> getRegion() {
+    public Output<String> getRegion() {
         return this.region;
     }
 
@@ -55,9 +55,9 @@ public final class ItsmReceiverArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ticketConfiguration", required=true)
-      private final Input<String> ticketConfiguration;
+      private final Output<String> ticketConfiguration;
 
-    public Input<String> getTicketConfiguration() {
+    public Output<String> getTicketConfiguration() {
         return this.ticketConfiguration;
     }
 
@@ -66,18 +66,18 @@ public final class ItsmReceiverArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceId", required=true)
-      private final Input<String> workspaceId;
+      private final Output<String> workspaceId;
 
-    public Input<String> getWorkspaceId() {
+    public Output<String> getWorkspaceId() {
         return this.workspaceId;
     }
 
     public ItsmReceiverArgs(
-        Input<String> connectionId,
-        Input<String> name,
-        Input<String> region,
-        Input<String> ticketConfiguration,
-        Input<String> workspaceId) {
+        Output<String> connectionId,
+        Output<String> name,
+        Output<String> region,
+        Output<String> ticketConfiguration,
+        Output<String> workspaceId) {
         this.connectionId = Objects.requireNonNull(connectionId, "expected parameter 'connectionId' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
@@ -86,11 +86,11 @@ public final class ItsmReceiverArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ItsmReceiverArgs() {
-        this.connectionId = Input.empty();
-        this.name = Input.empty();
-        this.region = Input.empty();
-        this.ticketConfiguration = Input.empty();
-        this.workspaceId = Input.empty();
+        this.connectionId = Output.empty();
+        this.name = Output.empty();
+        this.region = Output.empty();
+        this.ticketConfiguration = Output.empty();
+        this.workspaceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -102,11 +102,11 @@ public final class ItsmReceiverArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> connectionId;
-        private Input<String> name;
-        private Input<String> region;
-        private Input<String> ticketConfiguration;
-        private Input<String> workspaceId;
+        private Output<String> connectionId;
+        private Output<String> name;
+        private Output<String> region;
+        private Output<String> ticketConfiguration;
+        private Output<String> workspaceId;
 
         public Builder() {
     	      // Empty
@@ -121,53 +121,53 @@ public final class ItsmReceiverArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceId = defaults.workspaceId;
         }
 
-        public Builder connectionId(Input<String> connectionId) {
+        public Builder connectionId(Output<String> connectionId) {
             this.connectionId = Objects.requireNonNull(connectionId);
             return this;
         }
 
         public Builder connectionId(String connectionId) {
-            this.connectionId = Input.of(Objects.requireNonNull(connectionId));
+            this.connectionId = Output.of(Objects.requireNonNull(connectionId));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder region(Input<String> region) {
+        public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
         public Builder region(String region) {
-            this.region = Input.of(Objects.requireNonNull(region));
+            this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
 
-        public Builder ticketConfiguration(Input<String> ticketConfiguration) {
+        public Builder ticketConfiguration(Output<String> ticketConfiguration) {
             this.ticketConfiguration = Objects.requireNonNull(ticketConfiguration);
             return this;
         }
 
         public Builder ticketConfiguration(String ticketConfiguration) {
-            this.ticketConfiguration = Input.of(Objects.requireNonNull(ticketConfiguration));
+            this.ticketConfiguration = Output.of(Objects.requireNonNull(ticketConfiguration));
             return this;
         }
 
-        public Builder workspaceId(Input<String> workspaceId) {
+        public Builder workspaceId(Output<String> workspaceId) {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
 
         public Builder workspaceId(String workspaceId) {
-            this.workspaceId = Input.of(Objects.requireNonNull(workspaceId));
+            this.workspaceId = Output.of(Objects.requireNonNull(workspaceId));
             return this;
         }
         public ItsmReceiverArgs build() {

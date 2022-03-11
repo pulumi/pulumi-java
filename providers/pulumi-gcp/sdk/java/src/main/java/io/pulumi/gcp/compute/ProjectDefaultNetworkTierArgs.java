@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class ProjectDefaultNetworkTierArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="networkTier", required=true)
-      private final Input<String> networkTier;
+      private final Output<String> networkTier;
 
-    public Input<String> getNetworkTier() {
+    public Output<String> getNetworkTier() {
         return this.networkTier;
     }
 
@@ -32,22 +32,22 @@ public final class ProjectDefaultNetworkTierArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public ProjectDefaultNetworkTierArgs(
-        Input<String> networkTier,
-        @Nullable Input<String> project) {
+        Output<String> networkTier,
+        @Nullable Output<String> project) {
         this.networkTier = Objects.requireNonNull(networkTier, "expected parameter 'networkTier' to be non-null");
         this.project = project;
     }
 
     private ProjectDefaultNetworkTierArgs() {
-        this.networkTier = Input.empty();
-        this.project = Input.empty();
+        this.networkTier = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class ProjectDefaultNetworkTierArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> networkTier;
-        private @Nullable Input<String> project;
+        private Output<String> networkTier;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class ProjectDefaultNetworkTierArgs extends io.pulumi.resources.Res
     	      this.project = defaults.project;
         }
 
-        public Builder networkTier(Input<String> networkTier) {
+        public Builder networkTier(Output<String> networkTier) {
             this.networkTier = Objects.requireNonNull(networkTier);
             return this;
         }
 
         public Builder networkTier(String networkTier) {
-            this.networkTier = Input.of(Objects.requireNonNull(networkTier));
+            this.networkTier = Output.of(Objects.requireNonNull(networkTier));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public ProjectDefaultNetworkTierArgs build() {

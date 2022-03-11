@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigateway_v1beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ApigatewayBackendConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="googleServiceAccount")
-      private final @Nullable Input<String> googleServiceAccount;
+      private final @Nullable Output<String> googleServiceAccount;
 
-    public Input<String> getGoogleServiceAccount() {
-        return this.googleServiceAccount == null ? Input.empty() : this.googleServiceAccount;
+    public Output<String> getGoogleServiceAccount() {
+        return this.googleServiceAccount == null ? Output.empty() : this.googleServiceAccount;
     }
 
-    public ApigatewayBackendConfigArgs(@Nullable Input<String> googleServiceAccount) {
+    public ApigatewayBackendConfigArgs(@Nullable Output<String> googleServiceAccount) {
         this.googleServiceAccount = googleServiceAccount;
     }
 
     private ApigatewayBackendConfigArgs() {
-        this.googleServiceAccount = Input.empty();
+        this.googleServiceAccount = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ApigatewayBackendConfigArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> googleServiceAccount;
+        private @Nullable Output<String> googleServiceAccount;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ApigatewayBackendConfigArgs extends io.pulumi.resources.Resou
     	      this.googleServiceAccount = defaults.googleServiceAccount;
         }
 
-        public Builder googleServiceAccount(@Nullable Input<String> googleServiceAccount) {
+        public Builder googleServiceAccount(@Nullable Output<String> googleServiceAccount) {
             this.googleServiceAccount = googleServiceAccount;
             return this;
         }
 
         public Builder googleServiceAccount(@Nullable String googleServiceAccount) {
-            this.googleServiceAccount = Input.ofNullable(googleServiceAccount);
+            this.googleServiceAccount = Output.ofNullable(googleServiceAccount);
             return this;
         }
         public ApigatewayBackendConfigArgs build() {

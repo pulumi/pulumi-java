@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.efs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,9 +20,9 @@ public final class AccessPointPosixUserArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="gid", required=true)
-      private final Input<String> gid;
+      private final Output<String> gid;
 
-    public Input<String> getGid() {
+    public Output<String> getGid() {
         return this.gid;
     }
 
@@ -31,10 +31,10 @@ public final class AccessPointPosixUserArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="secondaryGids")
-      private final @Nullable Input<List<String>> secondaryGids;
+      private final @Nullable Output<List<String>> secondaryGids;
 
-    public Input<List<String>> getSecondaryGids() {
-        return this.secondaryGids == null ? Input.empty() : this.secondaryGids;
+    public Output<List<String>> getSecondaryGids() {
+        return this.secondaryGids == null ? Output.empty() : this.secondaryGids;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class AccessPointPosixUserArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="uid", required=true)
-      private final Input<String> uid;
+      private final Output<String> uid;
 
-    public Input<String> getUid() {
+    public Output<String> getUid() {
         return this.uid;
     }
 
     public AccessPointPosixUserArgs(
-        Input<String> gid,
-        @Nullable Input<List<String>> secondaryGids,
-        Input<String> uid) {
+        Output<String> gid,
+        @Nullable Output<List<String>> secondaryGids,
+        Output<String> uid) {
         this.gid = Objects.requireNonNull(gid, "expected parameter 'gid' to be non-null");
         this.secondaryGids = secondaryGids;
         this.uid = Objects.requireNonNull(uid, "expected parameter 'uid' to be non-null");
     }
 
     private AccessPointPosixUserArgs() {
-        this.gid = Input.empty();
-        this.secondaryGids = Input.empty();
-        this.uid = Input.empty();
+        this.gid = Output.empty();
+        this.secondaryGids = Output.empty();
+        this.uid = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class AccessPointPosixUserArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> gid;
-        private @Nullable Input<List<String>> secondaryGids;
-        private Input<String> uid;
+        private Output<String> gid;
+        private @Nullable Output<List<String>> secondaryGids;
+        private Output<String> uid;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class AccessPointPosixUserArgs extends io.pulumi.resources.Resource
     	      this.uid = defaults.uid;
         }
 
-        public Builder gid(Input<String> gid) {
+        public Builder gid(Output<String> gid) {
             this.gid = Objects.requireNonNull(gid);
             return this;
         }
 
         public Builder gid(String gid) {
-            this.gid = Input.of(Objects.requireNonNull(gid));
+            this.gid = Output.of(Objects.requireNonNull(gid));
             return this;
         }
 
-        public Builder secondaryGids(@Nullable Input<List<String>> secondaryGids) {
+        public Builder secondaryGids(@Nullable Output<List<String>> secondaryGids) {
             this.secondaryGids = secondaryGids;
             return this;
         }
 
         public Builder secondaryGids(@Nullable List<String> secondaryGids) {
-            this.secondaryGids = Input.ofNullable(secondaryGids);
+            this.secondaryGids = Output.ofNullable(secondaryGids);
             return this;
         }
 
-        public Builder uid(Input<String> uid) {
+        public Builder uid(Output<String> uid) {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }
 
         public Builder uid(String uid) {
-            this.uid = Input.of(Objects.requireNonNull(uid));
+            this.uid = Output.of(Objects.requireNonNull(uid));
             return this;
         }
         public AccessPointPosixUserArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.meta_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ListMetaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="continue")
-      private final @Nullable Input<String> $continue;
+      private final @Nullable Output<String> $continue;
 
-    public Input<String> get$continue() {
-        return this.$continue == null ? Input.empty() : this.$continue;
+    public Output<String> get$continue() {
+        return this.$continue == null ? Output.empty() : this.$continue;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ListMetaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="remainingItemCount")
-      private final @Nullable Input<Integer> remainingItemCount;
+      private final @Nullable Output<Integer> remainingItemCount;
 
-    public Input<Integer> getRemainingItemCount() {
-        return this.remainingItemCount == null ? Input.empty() : this.remainingItemCount;
+    public Output<Integer> getRemainingItemCount() {
+        return this.remainingItemCount == null ? Output.empty() : this.remainingItemCount;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ListMetaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceVersion")
-      private final @Nullable Input<String> resourceVersion;
+      private final @Nullable Output<String> resourceVersion;
 
-    public Input<String> getResourceVersion() {
-        return this.resourceVersion == null ? Input.empty() : this.resourceVersion;
+    public Output<String> getResourceVersion() {
+        return this.resourceVersion == null ? Output.empty() : this.resourceVersion;
     }
 
     /**
@@ -59,17 +59,17 @@ public final class ListMetaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfLink")
-      private final @Nullable Input<String> selfLink;
+      private final @Nullable Output<String> selfLink;
 
-    public Input<String> getSelfLink() {
-        return this.selfLink == null ? Input.empty() : this.selfLink;
+    public Output<String> getSelfLink() {
+        return this.selfLink == null ? Output.empty() : this.selfLink;
     }
 
     public ListMetaArgs(
-        @Nullable Input<String> $continue,
-        @Nullable Input<Integer> remainingItemCount,
-        @Nullable Input<String> resourceVersion,
-        @Nullable Input<String> selfLink) {
+        @Nullable Output<String> $continue,
+        @Nullable Output<Integer> remainingItemCount,
+        @Nullable Output<String> resourceVersion,
+        @Nullable Output<String> selfLink) {
         this.$continue = $continue;
         this.remainingItemCount = remainingItemCount;
         this.resourceVersion = resourceVersion;
@@ -77,10 +77,10 @@ public final class ListMetaArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ListMetaArgs() {
-        this.$continue = Input.empty();
-        this.remainingItemCount = Input.empty();
-        this.resourceVersion = Input.empty();
-        this.selfLink = Input.empty();
+        this.$continue = Output.empty();
+        this.remainingItemCount = Output.empty();
+        this.resourceVersion = Output.empty();
+        this.selfLink = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class ListMetaArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> $continue;
-        private @Nullable Input<Integer> remainingItemCount;
-        private @Nullable Input<String> resourceVersion;
-        private @Nullable Input<String> selfLink;
+        private @Nullable Output<String> $continue;
+        private @Nullable Output<Integer> remainingItemCount;
+        private @Nullable Output<String> resourceVersion;
+        private @Nullable Output<String> selfLink;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class ListMetaArgs extends io.pulumi.resources.ResourceArgs {
     	      this.selfLink = defaults.selfLink;
         }
 
-        public Builder $continue(@Nullable Input<String> $continue) {
+        public Builder $continue(@Nullable Output<String> $continue) {
             this.$continue = $continue;
             return this;
         }
 
         public Builder $continue(@Nullable String $continue) {
-            this.$continue = Input.ofNullable($continue);
+            this.$continue = Output.ofNullable($continue);
             return this;
         }
 
-        public Builder remainingItemCount(@Nullable Input<Integer> remainingItemCount) {
+        public Builder remainingItemCount(@Nullable Output<Integer> remainingItemCount) {
             this.remainingItemCount = remainingItemCount;
             return this;
         }
 
         public Builder remainingItemCount(@Nullable Integer remainingItemCount) {
-            this.remainingItemCount = Input.ofNullable(remainingItemCount);
+            this.remainingItemCount = Output.ofNullable(remainingItemCount);
             return this;
         }
 
-        public Builder resourceVersion(@Nullable Input<String> resourceVersion) {
+        public Builder resourceVersion(@Nullable Output<String> resourceVersion) {
             this.resourceVersion = resourceVersion;
             return this;
         }
 
         public Builder resourceVersion(@Nullable String resourceVersion) {
-            this.resourceVersion = Input.ofNullable(resourceVersion);
+            this.resourceVersion = Output.ofNullable(resourceVersion);
             return this;
         }
 
-        public Builder selfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Input.ofNullable(selfLink);
+            this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
         public ListMetaArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class LogStorageSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="enableReliableLogging")
-      private final @Nullable Input<Object> enableReliableLogging;
+      private final @Nullable Output<Object> enableReliableLogging;
 
-    public Input<Object> getEnableReliableLogging() {
-        return this.enableReliableLogging == null ? Input.empty() : this.enableReliableLogging;
+    public Output<Object> getEnableReliableLogging() {
+        return this.enableReliableLogging == null ? Output.empty() : this.enableReliableLogging;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class LogStorageSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="linkedServiceName", required=true)
-      private final Input<LinkedServiceReferenceArgs> linkedServiceName;
+      private final Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
         return this.linkedServiceName;
     }
 
@@ -46,10 +46,10 @@ public final class LogStorageSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="logLevel")
-      private final @Nullable Input<Object> logLevel;
+      private final @Nullable Output<Object> logLevel;
 
-    public Input<Object> getLogLevel() {
-        return this.logLevel == null ? Input.empty() : this.logLevel;
+    public Output<Object> getLogLevel() {
+        return this.logLevel == null ? Output.empty() : this.logLevel;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class LogStorageSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<Object> path;
+      private final @Nullable Output<Object> path;
 
-    public Input<Object> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<Object> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     public LogStorageSettingsArgs(
-        @Nullable Input<Object> enableReliableLogging,
-        Input<LinkedServiceReferenceArgs> linkedServiceName,
-        @Nullable Input<Object> logLevel,
-        @Nullable Input<Object> path) {
+        @Nullable Output<Object> enableReliableLogging,
+        Output<LinkedServiceReferenceArgs> linkedServiceName,
+        @Nullable Output<Object> logLevel,
+        @Nullable Output<Object> path) {
         this.enableReliableLogging = enableReliableLogging;
         this.linkedServiceName = Objects.requireNonNull(linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
         this.logLevel = logLevel;
@@ -75,10 +75,10 @@ public final class LogStorageSettingsArgs extends io.pulumi.resources.ResourceAr
     }
 
     private LogStorageSettingsArgs() {
-        this.enableReliableLogging = Input.empty();
-        this.linkedServiceName = Input.empty();
-        this.logLevel = Input.empty();
-        this.path = Input.empty();
+        this.enableReliableLogging = Output.empty();
+        this.linkedServiceName = Output.empty();
+        this.logLevel = Output.empty();
+        this.path = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class LogStorageSettingsArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> enableReliableLogging;
-        private Input<LinkedServiceReferenceArgs> linkedServiceName;
-        private @Nullable Input<Object> logLevel;
-        private @Nullable Input<Object> path;
+        private @Nullable Output<Object> enableReliableLogging;
+        private Output<LinkedServiceReferenceArgs> linkedServiceName;
+        private @Nullable Output<Object> logLevel;
+        private @Nullable Output<Object> path;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class LogStorageSettingsArgs extends io.pulumi.resources.ResourceAr
     	      this.path = defaults.path;
         }
 
-        public Builder enableReliableLogging(@Nullable Input<Object> enableReliableLogging) {
+        public Builder enableReliableLogging(@Nullable Output<Object> enableReliableLogging) {
             this.enableReliableLogging = enableReliableLogging;
             return this;
         }
 
         public Builder enableReliableLogging(@Nullable Object enableReliableLogging) {
-            this.enableReliableLogging = Input.ofNullable(enableReliableLogging);
+            this.enableReliableLogging = Output.ofNullable(enableReliableLogging);
             return this;
         }
 
-        public Builder linkedServiceName(Input<LinkedServiceReferenceArgs> linkedServiceName) {
+        public Builder linkedServiceName(Output<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
 
         public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Input.of(Objects.requireNonNull(linkedServiceName));
+            this.linkedServiceName = Output.of(Objects.requireNonNull(linkedServiceName));
             return this;
         }
 
-        public Builder logLevel(@Nullable Input<Object> logLevel) {
+        public Builder logLevel(@Nullable Output<Object> logLevel) {
             this.logLevel = logLevel;
             return this;
         }
 
         public Builder logLevel(@Nullable Object logLevel) {
-            this.logLevel = Input.ofNullable(logLevel);
+            this.logLevel = Output.ofNullable(logLevel);
             return this;
         }
 
-        public Builder path(@Nullable Input<Object> path) {
+        public Builder path(@Nullable Output<Object> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable Object path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
         public LogStorageSettingsArgs build() {

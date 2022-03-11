@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudscheduler;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudscheduler.inputs.JobAppEngineHttpTargetArgs;
 import io.pulumi.gcp.cloudscheduler.inputs.JobHttpTargetArgs;
@@ -26,10 +26,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appEngineHttpTarget")
-      private final @Nullable Input<JobAppEngineHttpTargetArgs> appEngineHttpTarget;
+      private final @Nullable Output<JobAppEngineHttpTargetArgs> appEngineHttpTarget;
 
-    public Input<JobAppEngineHttpTargetArgs> getAppEngineHttpTarget() {
-        return this.appEngineHttpTarget == null ? Input.empty() : this.appEngineHttpTarget;
+    public Output<JobAppEngineHttpTargetArgs> getAppEngineHttpTarget() {
+        return this.appEngineHttpTarget == null ? Output.empty() : this.appEngineHttpTarget;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attemptDeadline")
-      private final @Nullable Input<String> attemptDeadline;
+      private final @Nullable Output<String> attemptDeadline;
 
-    public Input<String> getAttemptDeadline() {
-        return this.attemptDeadline == null ? Input.empty() : this.attemptDeadline;
+    public Output<String> getAttemptDeadline() {
+        return this.attemptDeadline == null ? Output.empty() : this.attemptDeadline;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpTarget")
-      private final @Nullable Input<JobHttpTargetArgs> httpTarget;
+      private final @Nullable Output<JobHttpTargetArgs> httpTarget;
 
-    public Input<JobHttpTargetArgs> getHttpTarget() {
-        return this.httpTarget == null ? Input.empty() : this.httpTarget;
+    public Output<JobHttpTargetArgs> getHttpTarget() {
+        return this.httpTarget == null ? Output.empty() : this.httpTarget;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -93,10 +93,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -107,10 +107,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pubsubTarget")
-      private final @Nullable Input<JobPubsubTargetArgs> pubsubTarget;
+      private final @Nullable Output<JobPubsubTargetArgs> pubsubTarget;
 
-    public Input<JobPubsubTargetArgs> getPubsubTarget() {
-        return this.pubsubTarget == null ? Input.empty() : this.pubsubTarget;
+    public Output<JobPubsubTargetArgs> getPubsubTarget() {
+        return this.pubsubTarget == null ? Output.empty() : this.pubsubTarget;
     }
 
     /**
@@ -118,10 +118,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -132,10 +132,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retryConfig")
-      private final @Nullable Input<JobRetryConfigArgs> retryConfig;
+      private final @Nullable Output<JobRetryConfigArgs> retryConfig;
 
-    public Input<JobRetryConfigArgs> getRetryConfig() {
-        return this.retryConfig == null ? Input.empty() : this.retryConfig;
+    public Output<JobRetryConfigArgs> getRetryConfig() {
+        return this.retryConfig == null ? Output.empty() : this.retryConfig;
     }
 
     /**
@@ -143,10 +143,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedule")
-      private final @Nullable Input<String> schedule;
+      private final @Nullable Output<String> schedule;
 
-    public Input<String> getSchedule() {
-        return this.schedule == null ? Input.empty() : this.schedule;
+    public Output<String> getSchedule() {
+        return this.schedule == null ? Output.empty() : this.schedule;
     }
 
     /**
@@ -155,24 +155,24 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeZone")
-      private final @Nullable Input<String> timeZone;
+      private final @Nullable Output<String> timeZone;
 
-    public Input<String> getTimeZone() {
-        return this.timeZone == null ? Input.empty() : this.timeZone;
+    public Output<String> getTimeZone() {
+        return this.timeZone == null ? Output.empty() : this.timeZone;
     }
 
     public JobArgs(
-        @Nullable Input<JobAppEngineHttpTargetArgs> appEngineHttpTarget,
-        @Nullable Input<String> attemptDeadline,
-        @Nullable Input<String> description,
-        @Nullable Input<JobHttpTargetArgs> httpTarget,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<JobPubsubTargetArgs> pubsubTarget,
-        @Nullable Input<String> region,
-        @Nullable Input<JobRetryConfigArgs> retryConfig,
-        @Nullable Input<String> schedule,
-        @Nullable Input<String> timeZone) {
+        @Nullable Output<JobAppEngineHttpTargetArgs> appEngineHttpTarget,
+        @Nullable Output<String> attemptDeadline,
+        @Nullable Output<String> description,
+        @Nullable Output<JobHttpTargetArgs> httpTarget,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<JobPubsubTargetArgs> pubsubTarget,
+        @Nullable Output<String> region,
+        @Nullable Output<JobRetryConfigArgs> retryConfig,
+        @Nullable Output<String> schedule,
+        @Nullable Output<String> timeZone) {
         this.appEngineHttpTarget = appEngineHttpTarget;
         this.attemptDeadline = attemptDeadline;
         this.description = description;
@@ -187,17 +187,17 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobArgs() {
-        this.appEngineHttpTarget = Input.empty();
-        this.attemptDeadline = Input.empty();
-        this.description = Input.empty();
-        this.httpTarget = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.pubsubTarget = Input.empty();
-        this.region = Input.empty();
-        this.retryConfig = Input.empty();
-        this.schedule = Input.empty();
-        this.timeZone = Input.empty();
+        this.appEngineHttpTarget = Output.empty();
+        this.attemptDeadline = Output.empty();
+        this.description = Output.empty();
+        this.httpTarget = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.pubsubTarget = Output.empty();
+        this.region = Output.empty();
+        this.retryConfig = Output.empty();
+        this.schedule = Output.empty();
+        this.timeZone = Output.empty();
     }
 
     public static Builder builder() {
@@ -209,17 +209,17 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<JobAppEngineHttpTargetArgs> appEngineHttpTarget;
-        private @Nullable Input<String> attemptDeadline;
-        private @Nullable Input<String> description;
-        private @Nullable Input<JobHttpTargetArgs> httpTarget;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<JobPubsubTargetArgs> pubsubTarget;
-        private @Nullable Input<String> region;
-        private @Nullable Input<JobRetryConfigArgs> retryConfig;
-        private @Nullable Input<String> schedule;
-        private @Nullable Input<String> timeZone;
+        private @Nullable Output<JobAppEngineHttpTargetArgs> appEngineHttpTarget;
+        private @Nullable Output<String> attemptDeadline;
+        private @Nullable Output<String> description;
+        private @Nullable Output<JobHttpTargetArgs> httpTarget;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<JobPubsubTargetArgs> pubsubTarget;
+        private @Nullable Output<String> region;
+        private @Nullable Output<JobRetryConfigArgs> retryConfig;
+        private @Nullable Output<String> schedule;
+        private @Nullable Output<String> timeZone;
 
         public Builder() {
     	      // Empty
@@ -240,113 +240,113 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder appEngineHttpTarget(@Nullable Input<JobAppEngineHttpTargetArgs> appEngineHttpTarget) {
+        public Builder appEngineHttpTarget(@Nullable Output<JobAppEngineHttpTargetArgs> appEngineHttpTarget) {
             this.appEngineHttpTarget = appEngineHttpTarget;
             return this;
         }
 
         public Builder appEngineHttpTarget(@Nullable JobAppEngineHttpTargetArgs appEngineHttpTarget) {
-            this.appEngineHttpTarget = Input.ofNullable(appEngineHttpTarget);
+            this.appEngineHttpTarget = Output.ofNullable(appEngineHttpTarget);
             return this;
         }
 
-        public Builder attemptDeadline(@Nullable Input<String> attemptDeadline) {
+        public Builder attemptDeadline(@Nullable Output<String> attemptDeadline) {
             this.attemptDeadline = attemptDeadline;
             return this;
         }
 
         public Builder attemptDeadline(@Nullable String attemptDeadline) {
-            this.attemptDeadline = Input.ofNullable(attemptDeadline);
+            this.attemptDeadline = Output.ofNullable(attemptDeadline);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder httpTarget(@Nullable Input<JobHttpTargetArgs> httpTarget) {
+        public Builder httpTarget(@Nullable Output<JobHttpTargetArgs> httpTarget) {
             this.httpTarget = httpTarget;
             return this;
         }
 
         public Builder httpTarget(@Nullable JobHttpTargetArgs httpTarget) {
-            this.httpTarget = Input.ofNullable(httpTarget);
+            this.httpTarget = Output.ofNullable(httpTarget);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder pubsubTarget(@Nullable Input<JobPubsubTargetArgs> pubsubTarget) {
+        public Builder pubsubTarget(@Nullable Output<JobPubsubTargetArgs> pubsubTarget) {
             this.pubsubTarget = pubsubTarget;
             return this;
         }
 
         public Builder pubsubTarget(@Nullable JobPubsubTargetArgs pubsubTarget) {
-            this.pubsubTarget = Input.ofNullable(pubsubTarget);
+            this.pubsubTarget = Output.ofNullable(pubsubTarget);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder retryConfig(@Nullable Input<JobRetryConfigArgs> retryConfig) {
+        public Builder retryConfig(@Nullable Output<JobRetryConfigArgs> retryConfig) {
             this.retryConfig = retryConfig;
             return this;
         }
 
         public Builder retryConfig(@Nullable JobRetryConfigArgs retryConfig) {
-            this.retryConfig = Input.ofNullable(retryConfig);
+            this.retryConfig = Output.ofNullable(retryConfig);
             return this;
         }
 
-        public Builder schedule(@Nullable Input<String> schedule) {
+        public Builder schedule(@Nullable Output<String> schedule) {
             this.schedule = schedule;
             return this;
         }
 
         public Builder schedule(@Nullable String schedule) {
-            this.schedule = Input.ofNullable(schedule);
+            this.schedule = Output.ofNullable(schedule);
             return this;
         }
 
-        public Builder timeZone(@Nullable Input<String> timeZone) {
+        public Builder timeZone(@Nullable Output<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
 
         public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = Input.ofNullable(timeZone);
+            this.timeZone = Output.ofNullable(timeZone);
             return this;
         }
         public JobArgs build() {

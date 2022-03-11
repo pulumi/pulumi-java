@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,18 +23,18 @@ public final class OutputFileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels", required=true)
-      private final Input<List<String>> labels;
+      private final Output<List<String>> labels;
 
-    public Input<List<String>> getLabels() {
+    public Output<List<String>> getLabels() {
         return this.labels;
     }
 
-    public OutputFileArgs(Input<List<String>> labels) {
+    public OutputFileArgs(Output<List<String>> labels) {
         this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
     }
 
     private OutputFileArgs() {
-        this.labels = Input.empty();
+        this.labels = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class OutputFileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<String>> labels;
+        private Output<List<String>> labels;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class OutputFileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.labels = defaults.labels;
         }
 
-        public Builder labels(Input<List<String>> labels) {
+        public Builder labels(Output<List<String>> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
         public Builder labels(List<String> labels) {
-            this.labels = Input.of(Objects.requireNonNull(labels));
+            this.labels = Output.of(Objects.requireNonNull(labels));
             return this;
         }
         public OutputFileArgs build() {

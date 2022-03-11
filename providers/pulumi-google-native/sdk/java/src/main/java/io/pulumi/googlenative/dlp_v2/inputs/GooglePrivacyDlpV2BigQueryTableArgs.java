@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class GooglePrivacyDlpV2BigQueryTableArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="datasetId")
-      private final @Nullable Input<String> datasetId;
+      private final @Nullable Output<String> datasetId;
 
-    public Input<String> getDatasetId() {
-        return this.datasetId == null ? Input.empty() : this.datasetId;
+    public Output<String> getDatasetId() {
+        return this.datasetId == null ? Output.empty() : this.datasetId;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class GooglePrivacyDlpV2BigQueryTableArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class GooglePrivacyDlpV2BigQueryTableArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="tableId")
-      private final @Nullable Input<String> tableId;
+      private final @Nullable Output<String> tableId;
 
-    public Input<String> getTableId() {
-        return this.tableId == null ? Input.empty() : this.tableId;
+    public Output<String> getTableId() {
+        return this.tableId == null ? Output.empty() : this.tableId;
     }
 
     public GooglePrivacyDlpV2BigQueryTableArgs(
-        @Nullable Input<String> datasetId,
-        @Nullable Input<String> project,
-        @Nullable Input<String> tableId) {
+        @Nullable Output<String> datasetId,
+        @Nullable Output<String> project,
+        @Nullable Output<String> tableId) {
         this.datasetId = datasetId;
         this.project = project;
         this.tableId = tableId;
     }
 
     private GooglePrivacyDlpV2BigQueryTableArgs() {
-        this.datasetId = Input.empty();
-        this.project = Input.empty();
-        this.tableId = Input.empty();
+        this.datasetId = Output.empty();
+        this.project = Output.empty();
+        this.tableId = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class GooglePrivacyDlpV2BigQueryTableArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> datasetId;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> tableId;
+        private @Nullable Output<String> datasetId;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> tableId;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class GooglePrivacyDlpV2BigQueryTableArgs extends io.pulumi.resourc
     	      this.tableId = defaults.tableId;
         }
 
-        public Builder datasetId(@Nullable Input<String> datasetId) {
+        public Builder datasetId(@Nullable Output<String> datasetId) {
             this.datasetId = datasetId;
             return this;
         }
 
         public Builder datasetId(@Nullable String datasetId) {
-            this.datasetId = Input.ofNullable(datasetId);
+            this.datasetId = Output.ofNullable(datasetId);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder tableId(@Nullable Input<String> tableId) {
+        public Builder tableId(@Nullable Output<String> tableId) {
             this.tableId = tableId;
             return this;
         }
 
         public Builder tableId(@Nullable String tableId) {
-            this.tableId = Input.ofNullable(tableId);
+            this.tableId = Output.ofNullable(tableId);
             return this;
         }
         public GooglePrivacyDlpV2BigQueryTableArgs build() {

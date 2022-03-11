@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.backup.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,29 +14,29 @@ public final class FrameworkControlInputParameterArgs extends io.pulumi.resource
     public static final FrameworkControlInputParameterArgs Empty = new FrameworkControlInputParameterArgs();
 
     @InputImport(name="parameterName", required=true)
-      private final Input<String> parameterName;
+      private final Output<String> parameterName;
 
-    public Input<String> getParameterName() {
+    public Output<String> getParameterName() {
         return this.parameterName;
     }
 
     @InputImport(name="parameterValue", required=true)
-      private final Input<String> parameterValue;
+      private final Output<String> parameterValue;
 
-    public Input<String> getParameterValue() {
+    public Output<String> getParameterValue() {
         return this.parameterValue;
     }
 
     public FrameworkControlInputParameterArgs(
-        Input<String> parameterName,
-        Input<String> parameterValue) {
+        Output<String> parameterName,
+        Output<String> parameterValue) {
         this.parameterName = Objects.requireNonNull(parameterName, "expected parameter 'parameterName' to be non-null");
         this.parameterValue = Objects.requireNonNull(parameterValue, "expected parameter 'parameterValue' to be non-null");
     }
 
     private FrameworkControlInputParameterArgs() {
-        this.parameterName = Input.empty();
-        this.parameterValue = Input.empty();
+        this.parameterName = Output.empty();
+        this.parameterValue = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,8 +48,8 @@ public final class FrameworkControlInputParameterArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<String> parameterName;
-        private Input<String> parameterValue;
+        private Output<String> parameterName;
+        private Output<String> parameterValue;
 
         public Builder() {
     	      // Empty
@@ -61,23 +61,23 @@ public final class FrameworkControlInputParameterArgs extends io.pulumi.resource
     	      this.parameterValue = defaults.parameterValue;
         }
 
-        public Builder parameterName(Input<String> parameterName) {
+        public Builder parameterName(Output<String> parameterName) {
             this.parameterName = Objects.requireNonNull(parameterName);
             return this;
         }
 
         public Builder parameterName(String parameterName) {
-            this.parameterName = Input.of(Objects.requireNonNull(parameterName));
+            this.parameterName = Output.of(Objects.requireNonNull(parameterName));
             return this;
         }
 
-        public Builder parameterValue(Input<String> parameterValue) {
+        public Builder parameterValue(Output<String> parameterValue) {
             this.parameterValue = Objects.requireNonNull(parameterValue);
             return this;
         }
 
         public Builder parameterValue(String parameterValue) {
-            this.parameterValue = Input.of(Objects.requireNonNull(parameterValue));
+            this.parameterValue = Output.of(Objects.requireNonNull(parameterValue));
             return this;
         }
         public FrameworkControlInputParameterArgs build() {

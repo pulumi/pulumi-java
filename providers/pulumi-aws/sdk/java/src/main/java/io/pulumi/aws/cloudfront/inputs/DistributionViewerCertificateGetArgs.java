@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudfront.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class DistributionViewerCertificateGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="acmCertificateArn")
-      private final @Nullable Input<String> acmCertificateArn;
+      private final @Nullable Output<String> acmCertificateArn;
 
-    public Input<String> getAcmCertificateArn() {
-        return this.acmCertificateArn == null ? Input.empty() : this.acmCertificateArn;
+    public Output<String> getAcmCertificateArn() {
+        return this.acmCertificateArn == null ? Output.empty() : this.acmCertificateArn;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DistributionViewerCertificateGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="cloudfrontDefaultCertificate")
-      private final @Nullable Input<Boolean> cloudfrontDefaultCertificate;
+      private final @Nullable Output<Boolean> cloudfrontDefaultCertificate;
 
-    public Input<Boolean> getCloudfrontDefaultCertificate() {
-        return this.cloudfrontDefaultCertificate == null ? Input.empty() : this.cloudfrontDefaultCertificate;
+    public Output<Boolean> getCloudfrontDefaultCertificate() {
+        return this.cloudfrontDefaultCertificate == null ? Output.empty() : this.cloudfrontDefaultCertificate;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class DistributionViewerCertificateGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="iamCertificateId")
-      private final @Nullable Input<String> iamCertificateId;
+      private final @Nullable Output<String> iamCertificateId;
 
-    public Input<String> getIamCertificateId() {
-        return this.iamCertificateId == null ? Input.empty() : this.iamCertificateId;
+    public Output<String> getIamCertificateId() {
+        return this.iamCertificateId == null ? Output.empty() : this.iamCertificateId;
     }
 
     /**
@@ -71,25 +71,25 @@ public final class DistributionViewerCertificateGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="minimumProtocolVersion")
-      private final @Nullable Input<String> minimumProtocolVersion;
+      private final @Nullable Output<String> minimumProtocolVersion;
 
-    public Input<String> getMinimumProtocolVersion() {
-        return this.minimumProtocolVersion == null ? Input.empty() : this.minimumProtocolVersion;
+    public Output<String> getMinimumProtocolVersion() {
+        return this.minimumProtocolVersion == null ? Output.empty() : this.minimumProtocolVersion;
     }
 
     @InputImport(name="sslSupportMethod")
-      private final @Nullable Input<String> sslSupportMethod;
+      private final @Nullable Output<String> sslSupportMethod;
 
-    public Input<String> getSslSupportMethod() {
-        return this.sslSupportMethod == null ? Input.empty() : this.sslSupportMethod;
+    public Output<String> getSslSupportMethod() {
+        return this.sslSupportMethod == null ? Output.empty() : this.sslSupportMethod;
     }
 
     public DistributionViewerCertificateGetArgs(
-        @Nullable Input<String> acmCertificateArn,
-        @Nullable Input<Boolean> cloudfrontDefaultCertificate,
-        @Nullable Input<String> iamCertificateId,
-        @Nullable Input<String> minimumProtocolVersion,
-        @Nullable Input<String> sslSupportMethod) {
+        @Nullable Output<String> acmCertificateArn,
+        @Nullable Output<Boolean> cloudfrontDefaultCertificate,
+        @Nullable Output<String> iamCertificateId,
+        @Nullable Output<String> minimumProtocolVersion,
+        @Nullable Output<String> sslSupportMethod) {
         this.acmCertificateArn = acmCertificateArn;
         this.cloudfrontDefaultCertificate = cloudfrontDefaultCertificate;
         this.iamCertificateId = iamCertificateId;
@@ -98,11 +98,11 @@ public final class DistributionViewerCertificateGetArgs extends io.pulumi.resour
     }
 
     private DistributionViewerCertificateGetArgs() {
-        this.acmCertificateArn = Input.empty();
-        this.cloudfrontDefaultCertificate = Input.empty();
-        this.iamCertificateId = Input.empty();
-        this.minimumProtocolVersion = Input.empty();
-        this.sslSupportMethod = Input.empty();
+        this.acmCertificateArn = Output.empty();
+        this.cloudfrontDefaultCertificate = Output.empty();
+        this.iamCertificateId = Output.empty();
+        this.minimumProtocolVersion = Output.empty();
+        this.sslSupportMethod = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,11 +114,11 @@ public final class DistributionViewerCertificateGetArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> acmCertificateArn;
-        private @Nullable Input<Boolean> cloudfrontDefaultCertificate;
-        private @Nullable Input<String> iamCertificateId;
-        private @Nullable Input<String> minimumProtocolVersion;
-        private @Nullable Input<String> sslSupportMethod;
+        private @Nullable Output<String> acmCertificateArn;
+        private @Nullable Output<Boolean> cloudfrontDefaultCertificate;
+        private @Nullable Output<String> iamCertificateId;
+        private @Nullable Output<String> minimumProtocolVersion;
+        private @Nullable Output<String> sslSupportMethod;
 
         public Builder() {
     	      // Empty
@@ -133,53 +133,53 @@ public final class DistributionViewerCertificateGetArgs extends io.pulumi.resour
     	      this.sslSupportMethod = defaults.sslSupportMethod;
         }
 
-        public Builder acmCertificateArn(@Nullable Input<String> acmCertificateArn) {
+        public Builder acmCertificateArn(@Nullable Output<String> acmCertificateArn) {
             this.acmCertificateArn = acmCertificateArn;
             return this;
         }
 
         public Builder acmCertificateArn(@Nullable String acmCertificateArn) {
-            this.acmCertificateArn = Input.ofNullable(acmCertificateArn);
+            this.acmCertificateArn = Output.ofNullable(acmCertificateArn);
             return this;
         }
 
-        public Builder cloudfrontDefaultCertificate(@Nullable Input<Boolean> cloudfrontDefaultCertificate) {
+        public Builder cloudfrontDefaultCertificate(@Nullable Output<Boolean> cloudfrontDefaultCertificate) {
             this.cloudfrontDefaultCertificate = cloudfrontDefaultCertificate;
             return this;
         }
 
         public Builder cloudfrontDefaultCertificate(@Nullable Boolean cloudfrontDefaultCertificate) {
-            this.cloudfrontDefaultCertificate = Input.ofNullable(cloudfrontDefaultCertificate);
+            this.cloudfrontDefaultCertificate = Output.ofNullable(cloudfrontDefaultCertificate);
             return this;
         }
 
-        public Builder iamCertificateId(@Nullable Input<String> iamCertificateId) {
+        public Builder iamCertificateId(@Nullable Output<String> iamCertificateId) {
             this.iamCertificateId = iamCertificateId;
             return this;
         }
 
         public Builder iamCertificateId(@Nullable String iamCertificateId) {
-            this.iamCertificateId = Input.ofNullable(iamCertificateId);
+            this.iamCertificateId = Output.ofNullable(iamCertificateId);
             return this;
         }
 
-        public Builder minimumProtocolVersion(@Nullable Input<String> minimumProtocolVersion) {
+        public Builder minimumProtocolVersion(@Nullable Output<String> minimumProtocolVersion) {
             this.minimumProtocolVersion = minimumProtocolVersion;
             return this;
         }
 
         public Builder minimumProtocolVersion(@Nullable String minimumProtocolVersion) {
-            this.minimumProtocolVersion = Input.ofNullable(minimumProtocolVersion);
+            this.minimumProtocolVersion = Output.ofNullable(minimumProtocolVersion);
             return this;
         }
 
-        public Builder sslSupportMethod(@Nullable Input<String> sslSupportMethod) {
+        public Builder sslSupportMethod(@Nullable Output<String> sslSupportMethod) {
             this.sslSupportMethod = sslSupportMethod;
             return this;
         }
 
         public Builder sslSupportMethod(@Nullable String sslSupportMethod) {
-            this.sslSupportMethod = Input.ofNullable(sslSupportMethod);
+            this.sslSupportMethod = Output.ofNullable(sslSupportMethod);
             return this;
         }
         public DistributionViewerCertificateGetArgs build() {

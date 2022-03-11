@@ -8,7 +8,7 @@ import io.pulumi.awsnative.lex.inputs.BotPromptSpecificationArgs;
 import io.pulumi.awsnative.lex.inputs.BotSampleUtteranceArgs;
 import io.pulumi.awsnative.lex.inputs.BotSlotDefaultValueSpecificationArgs;
 import io.pulumi.awsnative.lex.inputs.BotWaitAndContinueSpecificationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -28,10 +28,10 @@ public final class BotSlotValueElicitationSettingArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="defaultValueSpecification")
-      private final @Nullable Input<BotSlotDefaultValueSpecificationArgs> defaultValueSpecification;
+      private final @Nullable Output<BotSlotDefaultValueSpecificationArgs> defaultValueSpecification;
 
-    public Input<BotSlotDefaultValueSpecificationArgs> getDefaultValueSpecification() {
-        return this.defaultValueSpecification == null ? Input.empty() : this.defaultValueSpecification;
+    public Output<BotSlotDefaultValueSpecificationArgs> getDefaultValueSpecification() {
+        return this.defaultValueSpecification == null ? Output.empty() : this.defaultValueSpecification;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class BotSlotValueElicitationSettingArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="promptSpecification")
-      private final @Nullable Input<BotPromptSpecificationArgs> promptSpecification;
+      private final @Nullable Output<BotPromptSpecificationArgs> promptSpecification;
 
-    public Input<BotPromptSpecificationArgs> getPromptSpecification() {
-        return this.promptSpecification == null ? Input.empty() : this.promptSpecification;
+    public Output<BotPromptSpecificationArgs> getPromptSpecification() {
+        return this.promptSpecification == null ? Output.empty() : this.promptSpecification;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class BotSlotValueElicitationSettingArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="sampleUtterances")
-      private final @Nullable Input<List<BotSampleUtteranceArgs>> sampleUtterances;
+      private final @Nullable Output<List<BotSampleUtteranceArgs>> sampleUtterances;
 
-    public Input<List<BotSampleUtteranceArgs>> getSampleUtterances() {
-        return this.sampleUtterances == null ? Input.empty() : this.sampleUtterances;
+    public Output<List<BotSampleUtteranceArgs>> getSampleUtterances() {
+        return this.sampleUtterances == null ? Output.empty() : this.sampleUtterances;
     }
 
     /**
@@ -61,9 +61,9 @@ public final class BotSlotValueElicitationSettingArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="slotConstraint", required=true)
-      private final Input<BotSlotConstraint> slotConstraint;
+      private final Output<BotSlotConstraint> slotConstraint;
 
-    public Input<BotSlotConstraint> getSlotConstraint() {
+    public Output<BotSlotConstraint> getSlotConstraint() {
         return this.slotConstraint;
     }
 
@@ -72,18 +72,18 @@ public final class BotSlotValueElicitationSettingArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="waitAndContinueSpecification")
-      private final @Nullable Input<BotWaitAndContinueSpecificationArgs> waitAndContinueSpecification;
+      private final @Nullable Output<BotWaitAndContinueSpecificationArgs> waitAndContinueSpecification;
 
-    public Input<BotWaitAndContinueSpecificationArgs> getWaitAndContinueSpecification() {
-        return this.waitAndContinueSpecification == null ? Input.empty() : this.waitAndContinueSpecification;
+    public Output<BotWaitAndContinueSpecificationArgs> getWaitAndContinueSpecification() {
+        return this.waitAndContinueSpecification == null ? Output.empty() : this.waitAndContinueSpecification;
     }
 
     public BotSlotValueElicitationSettingArgs(
-        @Nullable Input<BotSlotDefaultValueSpecificationArgs> defaultValueSpecification,
-        @Nullable Input<BotPromptSpecificationArgs> promptSpecification,
-        @Nullable Input<List<BotSampleUtteranceArgs>> sampleUtterances,
-        Input<BotSlotConstraint> slotConstraint,
-        @Nullable Input<BotWaitAndContinueSpecificationArgs> waitAndContinueSpecification) {
+        @Nullable Output<BotSlotDefaultValueSpecificationArgs> defaultValueSpecification,
+        @Nullable Output<BotPromptSpecificationArgs> promptSpecification,
+        @Nullable Output<List<BotSampleUtteranceArgs>> sampleUtterances,
+        Output<BotSlotConstraint> slotConstraint,
+        @Nullable Output<BotWaitAndContinueSpecificationArgs> waitAndContinueSpecification) {
         this.defaultValueSpecification = defaultValueSpecification;
         this.promptSpecification = promptSpecification;
         this.sampleUtterances = sampleUtterances;
@@ -92,11 +92,11 @@ public final class BotSlotValueElicitationSettingArgs extends io.pulumi.resource
     }
 
     private BotSlotValueElicitationSettingArgs() {
-        this.defaultValueSpecification = Input.empty();
-        this.promptSpecification = Input.empty();
-        this.sampleUtterances = Input.empty();
-        this.slotConstraint = Input.empty();
-        this.waitAndContinueSpecification = Input.empty();
+        this.defaultValueSpecification = Output.empty();
+        this.promptSpecification = Output.empty();
+        this.sampleUtterances = Output.empty();
+        this.slotConstraint = Output.empty();
+        this.waitAndContinueSpecification = Output.empty();
     }
 
     public static Builder builder() {
@@ -108,11 +108,11 @@ public final class BotSlotValueElicitationSettingArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<BotSlotDefaultValueSpecificationArgs> defaultValueSpecification;
-        private @Nullable Input<BotPromptSpecificationArgs> promptSpecification;
-        private @Nullable Input<List<BotSampleUtteranceArgs>> sampleUtterances;
-        private Input<BotSlotConstraint> slotConstraint;
-        private @Nullable Input<BotWaitAndContinueSpecificationArgs> waitAndContinueSpecification;
+        private @Nullable Output<BotSlotDefaultValueSpecificationArgs> defaultValueSpecification;
+        private @Nullable Output<BotPromptSpecificationArgs> promptSpecification;
+        private @Nullable Output<List<BotSampleUtteranceArgs>> sampleUtterances;
+        private Output<BotSlotConstraint> slotConstraint;
+        private @Nullable Output<BotWaitAndContinueSpecificationArgs> waitAndContinueSpecification;
 
         public Builder() {
     	      // Empty
@@ -127,53 +127,53 @@ public final class BotSlotValueElicitationSettingArgs extends io.pulumi.resource
     	      this.waitAndContinueSpecification = defaults.waitAndContinueSpecification;
         }
 
-        public Builder defaultValueSpecification(@Nullable Input<BotSlotDefaultValueSpecificationArgs> defaultValueSpecification) {
+        public Builder defaultValueSpecification(@Nullable Output<BotSlotDefaultValueSpecificationArgs> defaultValueSpecification) {
             this.defaultValueSpecification = defaultValueSpecification;
             return this;
         }
 
         public Builder defaultValueSpecification(@Nullable BotSlotDefaultValueSpecificationArgs defaultValueSpecification) {
-            this.defaultValueSpecification = Input.ofNullable(defaultValueSpecification);
+            this.defaultValueSpecification = Output.ofNullable(defaultValueSpecification);
             return this;
         }
 
-        public Builder promptSpecification(@Nullable Input<BotPromptSpecificationArgs> promptSpecification) {
+        public Builder promptSpecification(@Nullable Output<BotPromptSpecificationArgs> promptSpecification) {
             this.promptSpecification = promptSpecification;
             return this;
         }
 
         public Builder promptSpecification(@Nullable BotPromptSpecificationArgs promptSpecification) {
-            this.promptSpecification = Input.ofNullable(promptSpecification);
+            this.promptSpecification = Output.ofNullable(promptSpecification);
             return this;
         }
 
-        public Builder sampleUtterances(@Nullable Input<List<BotSampleUtteranceArgs>> sampleUtterances) {
+        public Builder sampleUtterances(@Nullable Output<List<BotSampleUtteranceArgs>> sampleUtterances) {
             this.sampleUtterances = sampleUtterances;
             return this;
         }
 
         public Builder sampleUtterances(@Nullable List<BotSampleUtteranceArgs> sampleUtterances) {
-            this.sampleUtterances = Input.ofNullable(sampleUtterances);
+            this.sampleUtterances = Output.ofNullable(sampleUtterances);
             return this;
         }
 
-        public Builder slotConstraint(Input<BotSlotConstraint> slotConstraint) {
+        public Builder slotConstraint(Output<BotSlotConstraint> slotConstraint) {
             this.slotConstraint = Objects.requireNonNull(slotConstraint);
             return this;
         }
 
         public Builder slotConstraint(BotSlotConstraint slotConstraint) {
-            this.slotConstraint = Input.of(Objects.requireNonNull(slotConstraint));
+            this.slotConstraint = Output.of(Objects.requireNonNull(slotConstraint));
             return this;
         }
 
-        public Builder waitAndContinueSpecification(@Nullable Input<BotWaitAndContinueSpecificationArgs> waitAndContinueSpecification) {
+        public Builder waitAndContinueSpecification(@Nullable Output<BotWaitAndContinueSpecificationArgs> waitAndContinueSpecification) {
             this.waitAndContinueSpecification = waitAndContinueSpecification;
             return this;
         }
 
         public Builder waitAndContinueSpecification(@Nullable BotWaitAndContinueSpecificationArgs waitAndContinueSpecification) {
-            this.waitAndContinueSpecification = Input.ofNullable(waitAndContinueSpecification);
+            this.waitAndContinueSpecification = Output.ofNullable(waitAndContinueSpecification);
             return this;
         }
         public BotSlotValueElicitationSettingArgs build() {

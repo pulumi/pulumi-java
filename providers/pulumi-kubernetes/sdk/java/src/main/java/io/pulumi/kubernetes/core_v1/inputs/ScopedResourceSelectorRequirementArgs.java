@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -30,9 +30,9 @@ public final class ScopedResourceSelectorRequirementArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="operator", required=true)
-      private final Input<String> operator;
+      private final Output<String> operator;
 
-    public Input<String> getOperator() {
+    public Output<String> getOperator() {
         return this.operator;
     }
 
@@ -49,9 +49,9 @@ public final class ScopedResourceSelectorRequirementArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="scopeName", required=true)
-      private final Input<String> scopeName;
+      private final Output<String> scopeName;
 
-    public Input<String> getScopeName() {
+    public Output<String> getScopeName() {
         return this.scopeName;
     }
 
@@ -60,25 +60,25 @@ public final class ScopedResourceSelectorRequirementArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="values")
-      private final @Nullable Input<List<String>> values;
+      private final @Nullable Output<List<String>> values;
 
-    public Input<List<String>> getValues() {
-        return this.values == null ? Input.empty() : this.values;
+    public Output<List<String>> getValues() {
+        return this.values == null ? Output.empty() : this.values;
     }
 
     public ScopedResourceSelectorRequirementArgs(
-        Input<String> operator,
-        Input<String> scopeName,
-        @Nullable Input<List<String>> values) {
+        Output<String> operator,
+        Output<String> scopeName,
+        @Nullable Output<List<String>> values) {
         this.operator = Objects.requireNonNull(operator, "expected parameter 'operator' to be non-null");
         this.scopeName = Objects.requireNonNull(scopeName, "expected parameter 'scopeName' to be non-null");
         this.values = values;
     }
 
     private ScopedResourceSelectorRequirementArgs() {
-        this.operator = Input.empty();
-        this.scopeName = Input.empty();
-        this.values = Input.empty();
+        this.operator = Output.empty();
+        this.scopeName = Output.empty();
+        this.values = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,9 +90,9 @@ public final class ScopedResourceSelectorRequirementArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private Input<String> operator;
-        private Input<String> scopeName;
-        private @Nullable Input<List<String>> values;
+        private Output<String> operator;
+        private Output<String> scopeName;
+        private @Nullable Output<List<String>> values;
 
         public Builder() {
     	      // Empty
@@ -105,33 +105,33 @@ public final class ScopedResourceSelectorRequirementArgs extends io.pulumi.resou
     	      this.values = defaults.values;
         }
 
-        public Builder operator(Input<String> operator) {
+        public Builder operator(Output<String> operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
 
         public Builder operator(String operator) {
-            this.operator = Input.of(Objects.requireNonNull(operator));
+            this.operator = Output.of(Objects.requireNonNull(operator));
             return this;
         }
 
-        public Builder scopeName(Input<String> scopeName) {
+        public Builder scopeName(Output<String> scopeName) {
             this.scopeName = Objects.requireNonNull(scopeName);
             return this;
         }
 
         public Builder scopeName(String scopeName) {
-            this.scopeName = Input.of(Objects.requireNonNull(scopeName));
+            this.scopeName = Output.of(Objects.requireNonNull(scopeName));
             return this;
         }
 
-        public Builder values(@Nullable Input<List<String>> values) {
+        public Builder values(@Nullable Output<List<String>> values) {
             this.values = values;
             return this;
         }
 
         public Builder values(@Nullable List<String> values) {
-            this.values = Input.ofNullable(values);
+            this.values = Output.ofNullable(values);
             return this;
         }
         public ScopedResourceSelectorRequirementArgs build() {

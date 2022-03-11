@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.enums.GooglePrivacyDlpV2TimePartConfigPartToExtract;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class GooglePrivacyDlpV2TimePartConfigArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="partToExtract")
-      private final @Nullable Input<GooglePrivacyDlpV2TimePartConfigPartToExtract> partToExtract;
+      private final @Nullable Output<GooglePrivacyDlpV2TimePartConfigPartToExtract> partToExtract;
 
-    public Input<GooglePrivacyDlpV2TimePartConfigPartToExtract> getPartToExtract() {
-        return this.partToExtract == null ? Input.empty() : this.partToExtract;
+    public Output<GooglePrivacyDlpV2TimePartConfigPartToExtract> getPartToExtract() {
+        return this.partToExtract == null ? Output.empty() : this.partToExtract;
     }
 
-    public GooglePrivacyDlpV2TimePartConfigArgs(@Nullable Input<GooglePrivacyDlpV2TimePartConfigPartToExtract> partToExtract) {
+    public GooglePrivacyDlpV2TimePartConfigArgs(@Nullable Output<GooglePrivacyDlpV2TimePartConfigPartToExtract> partToExtract) {
         this.partToExtract = partToExtract;
     }
 
     private GooglePrivacyDlpV2TimePartConfigArgs() {
-        this.partToExtract = Input.empty();
+        this.partToExtract = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2TimePartConfigArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<GooglePrivacyDlpV2TimePartConfigPartToExtract> partToExtract;
+        private @Nullable Output<GooglePrivacyDlpV2TimePartConfigPartToExtract> partToExtract;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GooglePrivacyDlpV2TimePartConfigArgs extends io.pulumi.resour
     	      this.partToExtract = defaults.partToExtract;
         }
 
-        public Builder partToExtract(@Nullable Input<GooglePrivacyDlpV2TimePartConfigPartToExtract> partToExtract) {
+        public Builder partToExtract(@Nullable Output<GooglePrivacyDlpV2TimePartConfigPartToExtract> partToExtract) {
             this.partToExtract = partToExtract;
             return this;
         }
 
         public Builder partToExtract(@Nullable GooglePrivacyDlpV2TimePartConfigPartToExtract partToExtract) {
-            this.partToExtract = Input.ofNullable(partToExtract);
+            this.partToExtract = Output.ofNullable(partToExtract);
             return this;
         }
         public GooglePrivacyDlpV2TimePartConfigArgs build() {

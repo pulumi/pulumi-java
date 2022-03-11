@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class VpcEndpointDnsEntryGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="dnsName")
-      private final @Nullable Input<String> dnsName;
+      private final @Nullable Output<String> dnsName;
 
-    public Input<String> getDnsName() {
-        return this.dnsName == null ? Input.empty() : this.dnsName;
+    public Output<String> getDnsName() {
+        return this.dnsName == null ? Output.empty() : this.dnsName;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class VpcEndpointDnsEntryGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="hostedZoneId")
-      private final @Nullable Input<String> hostedZoneId;
+      private final @Nullable Output<String> hostedZoneId;
 
-    public Input<String> getHostedZoneId() {
-        return this.hostedZoneId == null ? Input.empty() : this.hostedZoneId;
+    public Output<String> getHostedZoneId() {
+        return this.hostedZoneId == null ? Output.empty() : this.hostedZoneId;
     }
 
     public VpcEndpointDnsEntryGetArgs(
-        @Nullable Input<String> dnsName,
-        @Nullable Input<String> hostedZoneId) {
+        @Nullable Output<String> dnsName,
+        @Nullable Output<String> hostedZoneId) {
         this.dnsName = dnsName;
         this.hostedZoneId = hostedZoneId;
     }
 
     private VpcEndpointDnsEntryGetArgs() {
-        this.dnsName = Input.empty();
-        this.hostedZoneId = Input.empty();
+        this.dnsName = Output.empty();
+        this.hostedZoneId = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class VpcEndpointDnsEntryGetArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> dnsName;
-        private @Nullable Input<String> hostedZoneId;
+        private @Nullable Output<String> dnsName;
+        private @Nullable Output<String> hostedZoneId;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class VpcEndpointDnsEntryGetArgs extends io.pulumi.resources.Resour
     	      this.hostedZoneId = defaults.hostedZoneId;
         }
 
-        public Builder dnsName(@Nullable Input<String> dnsName) {
+        public Builder dnsName(@Nullable Output<String> dnsName) {
             this.dnsName = dnsName;
             return this;
         }
 
         public Builder dnsName(@Nullable String dnsName) {
-            this.dnsName = Input.ofNullable(dnsName);
+            this.dnsName = Output.ofNullable(dnsName);
             return this;
         }
 
-        public Builder hostedZoneId(@Nullable Input<String> hostedZoneId) {
+        public Builder hostedZoneId(@Nullable Output<String> hostedZoneId) {
             this.hostedZoneId = hostedZoneId;
             return this;
         }
 
         public Builder hostedZoneId(@Nullable String hostedZoneId) {
-            this.hostedZoneId = Input.ofNullable(hostedZoneId);
+            this.hostedZoneId = Output.ofNullable(hostedZoneId);
             return this;
         }
         public VpcEndpointDnsEntryGetArgs build() {

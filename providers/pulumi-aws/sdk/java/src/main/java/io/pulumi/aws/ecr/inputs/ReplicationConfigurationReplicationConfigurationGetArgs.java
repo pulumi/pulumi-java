@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecr.inputs;
 
 import io.pulumi.aws.ecr.inputs.ReplicationConfigurationReplicationConfigurationRuleGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class ReplicationConfigurationReplicationConfigurationGetArgs exten
      * 
      */
     @InputImport(name="rule", required=true)
-      private final Input<ReplicationConfigurationReplicationConfigurationRuleGetArgs> rule;
+      private final Output<ReplicationConfigurationReplicationConfigurationRuleGetArgs> rule;
 
-    public Input<ReplicationConfigurationReplicationConfigurationRuleGetArgs> getRule() {
+    public Output<ReplicationConfigurationReplicationConfigurationRuleGetArgs> getRule() {
         return this.rule;
     }
 
-    public ReplicationConfigurationReplicationConfigurationGetArgs(Input<ReplicationConfigurationReplicationConfigurationRuleGetArgs> rule) {
+    public ReplicationConfigurationReplicationConfigurationGetArgs(Output<ReplicationConfigurationReplicationConfigurationRuleGetArgs> rule) {
         this.rule = Objects.requireNonNull(rule, "expected parameter 'rule' to be non-null");
     }
 
     private ReplicationConfigurationReplicationConfigurationGetArgs() {
-        this.rule = Input.empty();
+        this.rule = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ReplicationConfigurationReplicationConfigurationGetArgs exten
     }
 
     public static final class Builder {
-        private Input<ReplicationConfigurationReplicationConfigurationRuleGetArgs> rule;
+        private Output<ReplicationConfigurationReplicationConfigurationRuleGetArgs> rule;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ReplicationConfigurationReplicationConfigurationGetArgs exten
     	      this.rule = defaults.rule;
         }
 
-        public Builder rule(Input<ReplicationConfigurationReplicationConfigurationRuleGetArgs> rule) {
+        public Builder rule(Output<ReplicationConfigurationReplicationConfigurationRuleGetArgs> rule) {
             this.rule = Objects.requireNonNull(rule);
             return this;
         }
 
         public Builder rule(ReplicationConfigurationReplicationConfigurationRuleGetArgs rule) {
-            this.rule = Input.of(Objects.requireNonNull(rule));
+            this.rule = Output.of(Objects.requireNonNull(rule));
             return this;
         }
         public ReplicationConfigurationReplicationConfigurationGetArgs build() {

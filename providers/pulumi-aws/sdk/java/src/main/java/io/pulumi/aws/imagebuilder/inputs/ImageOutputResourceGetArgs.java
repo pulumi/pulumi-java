@@ -4,7 +4,7 @@
 package io.pulumi.aws.imagebuilder.inputs;
 
 import io.pulumi.aws.imagebuilder.inputs.ImageOutputResourceAmiGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -20,18 +20,18 @@ public final class ImageOutputResourceGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="amis")
-      private final @Nullable Input<List<ImageOutputResourceAmiGetArgs>> amis;
+      private final @Nullable Output<List<ImageOutputResourceAmiGetArgs>> amis;
 
-    public Input<List<ImageOutputResourceAmiGetArgs>> getAmis() {
-        return this.amis == null ? Input.empty() : this.amis;
+    public Output<List<ImageOutputResourceAmiGetArgs>> getAmis() {
+        return this.amis == null ? Output.empty() : this.amis;
     }
 
-    public ImageOutputResourceGetArgs(@Nullable Input<List<ImageOutputResourceAmiGetArgs>> amis) {
+    public ImageOutputResourceGetArgs(@Nullable Output<List<ImageOutputResourceAmiGetArgs>> amis) {
         this.amis = amis;
     }
 
     private ImageOutputResourceGetArgs() {
-        this.amis = Input.empty();
+        this.amis = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class ImageOutputResourceGetArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ImageOutputResourceAmiGetArgs>> amis;
+        private @Nullable Output<List<ImageOutputResourceAmiGetArgs>> amis;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class ImageOutputResourceGetArgs extends io.pulumi.resources.Resour
     	      this.amis = defaults.amis;
         }
 
-        public Builder amis(@Nullable Input<List<ImageOutputResourceAmiGetArgs>> amis) {
+        public Builder amis(@Nullable Output<List<ImageOutputResourceAmiGetArgs>> amis) {
             this.amis = amis;
             return this;
         }
 
         public Builder amis(@Nullable List<ImageOutputResourceAmiGetArgs> amis) {
-            this.amis = Input.ofNullable(amis);
+            this.amis = Output.ofNullable(amis);
             return this;
         }
         public ImageOutputResourceGetArgs build() {

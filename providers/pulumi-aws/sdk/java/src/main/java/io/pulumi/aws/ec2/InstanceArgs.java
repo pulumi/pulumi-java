@@ -15,7 +15,7 @@ import io.pulumi.aws.ec2.inputs.InstanceMetadataOptionsArgs;
 import io.pulumi.aws.ec2.inputs.InstanceNetworkInterfaceArgs;
 import io.pulumi.aws.ec2.inputs.InstanceRootBlockDeviceArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -35,10 +35,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ami")
-      private final @Nullable Input<String> ami;
+      private final @Nullable Output<String> ami;
 
-    public Input<String> getAmi() {
-        return this.ami == null ? Input.empty() : this.ami;
+    public Output<String> getAmi() {
+        return this.ami == null ? Output.empty() : this.ami;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="associatePublicIpAddress")
-      private final @Nullable Input<Boolean> associatePublicIpAddress;
+      private final @Nullable Output<Boolean> associatePublicIpAddress;
 
-    public Input<Boolean> getAssociatePublicIpAddress() {
-        return this.associatePublicIpAddress == null ? Input.empty() : this.associatePublicIpAddress;
+    public Output<Boolean> getAssociatePublicIpAddress() {
+        return this.associatePublicIpAddress == null ? Output.empty() : this.associatePublicIpAddress;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZone")
-      private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Output<String> availabilityZone;
 
-    public Input<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
+    public Output<String> getAvailabilityZone() {
+        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacityReservationSpecification")
-      private final @Nullable Input<InstanceCapacityReservationSpecificationArgs> capacityReservationSpecification;
+      private final @Nullable Output<InstanceCapacityReservationSpecificationArgs> capacityReservationSpecification;
 
-    public Input<InstanceCapacityReservationSpecificationArgs> getCapacityReservationSpecification() {
-        return this.capacityReservationSpecification == null ? Input.empty() : this.capacityReservationSpecification;
+    public Output<InstanceCapacityReservationSpecificationArgs> getCapacityReservationSpecification() {
+        return this.capacityReservationSpecification == null ? Output.empty() : this.capacityReservationSpecification;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cpuCoreCount")
-      private final @Nullable Input<Integer> cpuCoreCount;
+      private final @Nullable Output<Integer> cpuCoreCount;
 
-    public Input<Integer> getCpuCoreCount() {
-        return this.cpuCoreCount == null ? Input.empty() : this.cpuCoreCount;
+    public Output<Integer> getCpuCoreCount() {
+        return this.cpuCoreCount == null ? Output.empty() : this.cpuCoreCount;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cpuThreadsPerCore")
-      private final @Nullable Input<Integer> cpuThreadsPerCore;
+      private final @Nullable Output<Integer> cpuThreadsPerCore;
 
-    public Input<Integer> getCpuThreadsPerCore() {
-        return this.cpuThreadsPerCore == null ? Input.empty() : this.cpuThreadsPerCore;
+    public Output<Integer> getCpuThreadsPerCore() {
+        return this.cpuThreadsPerCore == null ? Output.empty() : this.cpuThreadsPerCore;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creditSpecification")
-      private final @Nullable Input<InstanceCreditSpecificationArgs> creditSpecification;
+      private final @Nullable Output<InstanceCreditSpecificationArgs> creditSpecification;
 
-    public Input<InstanceCreditSpecificationArgs> getCreditSpecification() {
-        return this.creditSpecification == null ? Input.empty() : this.creditSpecification;
+    public Output<InstanceCreditSpecificationArgs> getCreditSpecification() {
+        return this.creditSpecification == null ? Output.empty() : this.creditSpecification;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableApiTermination")
-      private final @Nullable Input<Boolean> disableApiTermination;
+      private final @Nullable Output<Boolean> disableApiTermination;
 
-    public Input<Boolean> getDisableApiTermination() {
-        return this.disableApiTermination == null ? Input.empty() : this.disableApiTermination;
+    public Output<Boolean> getDisableApiTermination() {
+        return this.disableApiTermination == null ? Output.empty() : this.disableApiTermination;
     }
 
     /**
@@ -123,10 +123,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ebsBlockDevices")
-      private final @Nullable Input<List<InstanceEbsBlockDeviceArgs>> ebsBlockDevices;
+      private final @Nullable Output<List<InstanceEbsBlockDeviceArgs>> ebsBlockDevices;
 
-    public Input<List<InstanceEbsBlockDeviceArgs>> getEbsBlockDevices() {
-        return this.ebsBlockDevices == null ? Input.empty() : this.ebsBlockDevices;
+    public Output<List<InstanceEbsBlockDeviceArgs>> getEbsBlockDevices() {
+        return this.ebsBlockDevices == null ? Output.empty() : this.ebsBlockDevices;
     }
 
     /**
@@ -134,10 +134,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ebsOptimized")
-      private final @Nullable Input<Boolean> ebsOptimized;
+      private final @Nullable Output<Boolean> ebsOptimized;
 
-    public Input<Boolean> getEbsOptimized() {
-        return this.ebsOptimized == null ? Input.empty() : this.ebsOptimized;
+    public Output<Boolean> getEbsOptimized() {
+        return this.ebsOptimized == null ? Output.empty() : this.ebsOptimized;
     }
 
     /**
@@ -145,10 +145,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enclaveOptions")
-      private final @Nullable Input<InstanceEnclaveOptionsArgs> enclaveOptions;
+      private final @Nullable Output<InstanceEnclaveOptionsArgs> enclaveOptions;
 
-    public Input<InstanceEnclaveOptionsArgs> getEnclaveOptions() {
-        return this.enclaveOptions == null ? Input.empty() : this.enclaveOptions;
+    public Output<InstanceEnclaveOptionsArgs> getEnclaveOptions() {
+        return this.enclaveOptions == null ? Output.empty() : this.enclaveOptions;
     }
 
     /**
@@ -156,10 +156,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ephemeralBlockDevices")
-      private final @Nullable Input<List<InstanceEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
+      private final @Nullable Output<List<InstanceEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
 
-    public Input<List<InstanceEphemeralBlockDeviceArgs>> getEphemeralBlockDevices() {
-        return this.ephemeralBlockDevices == null ? Input.empty() : this.ephemeralBlockDevices;
+    public Output<List<InstanceEphemeralBlockDeviceArgs>> getEphemeralBlockDevices() {
+        return this.ephemeralBlockDevices == null ? Output.empty() : this.ephemeralBlockDevices;
     }
 
     /**
@@ -167,10 +167,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="getPasswordData")
-      private final @Nullable Input<Boolean> getPasswordData;
+      private final @Nullable Output<Boolean> getPasswordData;
 
-    public Input<Boolean> getGetPasswordData() {
-        return this.getPasswordData == null ? Input.empty() : this.getPasswordData;
+    public Output<Boolean> getGetPasswordData() {
+        return this.getPasswordData == null ? Output.empty() : this.getPasswordData;
     }
 
     /**
@@ -178,10 +178,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hibernation")
-      private final @Nullable Input<Boolean> hibernation;
+      private final @Nullable Output<Boolean> hibernation;
 
-    public Input<Boolean> getHibernation() {
-        return this.hibernation == null ? Input.empty() : this.hibernation;
+    public Output<Boolean> getHibernation() {
+        return this.hibernation == null ? Output.empty() : this.hibernation;
     }
 
     /**
@@ -189,10 +189,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostId")
-      private final @Nullable Input<String> hostId;
+      private final @Nullable Output<String> hostId;
 
-    public Input<String> getHostId() {
-        return this.hostId == null ? Input.empty() : this.hostId;
+    public Output<String> getHostId() {
+        return this.hostId == null ? Output.empty() : this.hostId;
     }
 
     /**
@@ -200,10 +200,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iamInstanceProfile")
-      private final @Nullable Input<String> iamInstanceProfile;
+      private final @Nullable Output<String> iamInstanceProfile;
 
-    public Input<String> getIamInstanceProfile() {
-        return this.iamInstanceProfile == null ? Input.empty() : this.iamInstanceProfile;
+    public Output<String> getIamInstanceProfile() {
+        return this.iamInstanceProfile == null ? Output.empty() : this.iamInstanceProfile;
     }
 
     /**
@@ -211,10 +211,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceInitiatedShutdownBehavior")
-      private final @Nullable Input<String> instanceInitiatedShutdownBehavior;
+      private final @Nullable Output<String> instanceInitiatedShutdownBehavior;
 
-    public Input<String> getInstanceInitiatedShutdownBehavior() {
-        return this.instanceInitiatedShutdownBehavior == null ? Input.empty() : this.instanceInitiatedShutdownBehavior;
+    public Output<String> getInstanceInitiatedShutdownBehavior() {
+        return this.instanceInitiatedShutdownBehavior == null ? Output.empty() : this.instanceInitiatedShutdownBehavior;
     }
 
     /**
@@ -222,10 +222,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceType")
-      private final @Nullable Input<Either<String,InstanceType>> instanceType;
+      private final @Nullable Output<Either<String,InstanceType>> instanceType;
 
-    public Input<Either<String,InstanceType>> getInstanceType() {
-        return this.instanceType == null ? Input.empty() : this.instanceType;
+    public Output<Either<String,InstanceType>> getInstanceType() {
+        return this.instanceType == null ? Output.empty() : this.instanceType;
     }
 
     /**
@@ -233,10 +233,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipv6AddressCount")
-      private final @Nullable Input<Integer> ipv6AddressCount;
+      private final @Nullable Output<Integer> ipv6AddressCount;
 
-    public Input<Integer> getIpv6AddressCount() {
-        return this.ipv6AddressCount == null ? Input.empty() : this.ipv6AddressCount;
+    public Output<Integer> getIpv6AddressCount() {
+        return this.ipv6AddressCount == null ? Output.empty() : this.ipv6AddressCount;
     }
 
     /**
@@ -244,10 +244,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipv6Addresses")
-      private final @Nullable Input<List<String>> ipv6Addresses;
+      private final @Nullable Output<List<String>> ipv6Addresses;
 
-    public Input<List<String>> getIpv6Addresses() {
-        return this.ipv6Addresses == null ? Input.empty() : this.ipv6Addresses;
+    public Output<List<String>> getIpv6Addresses() {
+        return this.ipv6Addresses == null ? Output.empty() : this.ipv6Addresses;
     }
 
     /**
@@ -255,10 +255,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyName")
-      private final @Nullable Input<String> keyName;
+      private final @Nullable Output<String> keyName;
 
-    public Input<String> getKeyName() {
-        return this.keyName == null ? Input.empty() : this.keyName;
+    public Output<String> getKeyName() {
+        return this.keyName == null ? Output.empty() : this.keyName;
     }
 
     /**
@@ -267,10 +267,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="launchTemplate")
-      private final @Nullable Input<InstanceLaunchTemplateArgs> launchTemplate;
+      private final @Nullable Output<InstanceLaunchTemplateArgs> launchTemplate;
 
-    public Input<InstanceLaunchTemplateArgs> getLaunchTemplate() {
-        return this.launchTemplate == null ? Input.empty() : this.launchTemplate;
+    public Output<InstanceLaunchTemplateArgs> getLaunchTemplate() {
+        return this.launchTemplate == null ? Output.empty() : this.launchTemplate;
     }
 
     /**
@@ -278,10 +278,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadataOptions")
-      private final @Nullable Input<InstanceMetadataOptionsArgs> metadataOptions;
+      private final @Nullable Output<InstanceMetadataOptionsArgs> metadataOptions;
 
-    public Input<InstanceMetadataOptionsArgs> getMetadataOptions() {
-        return this.metadataOptions == null ? Input.empty() : this.metadataOptions;
+    public Output<InstanceMetadataOptionsArgs> getMetadataOptions() {
+        return this.metadataOptions == null ? Output.empty() : this.metadataOptions;
     }
 
     /**
@@ -289,10 +289,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="monitoring")
-      private final @Nullable Input<Boolean> monitoring;
+      private final @Nullable Output<Boolean> monitoring;
 
-    public Input<Boolean> getMonitoring() {
-        return this.monitoring == null ? Input.empty() : this.monitoring;
+    public Output<Boolean> getMonitoring() {
+        return this.monitoring == null ? Output.empty() : this.monitoring;
     }
 
     /**
@@ -300,10 +300,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkInterfaces")
-      private final @Nullable Input<List<InstanceNetworkInterfaceArgs>> networkInterfaces;
+      private final @Nullable Output<List<InstanceNetworkInterfaceArgs>> networkInterfaces;
 
-    public Input<List<InstanceNetworkInterfaceArgs>> getNetworkInterfaces() {
-        return this.networkInterfaces == null ? Input.empty() : this.networkInterfaces;
+    public Output<List<InstanceNetworkInterfaceArgs>> getNetworkInterfaces() {
+        return this.networkInterfaces == null ? Output.empty() : this.networkInterfaces;
     }
 
     /**
@@ -311,10 +311,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="placementGroup")
-      private final @Nullable Input<String> placementGroup;
+      private final @Nullable Output<String> placementGroup;
 
-    public Input<String> getPlacementGroup() {
-        return this.placementGroup == null ? Input.empty() : this.placementGroup;
+    public Output<String> getPlacementGroup() {
+        return this.placementGroup == null ? Output.empty() : this.placementGroup;
     }
 
     /**
@@ -322,10 +322,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="placementPartitionNumber")
-      private final @Nullable Input<Integer> placementPartitionNumber;
+      private final @Nullable Output<Integer> placementPartitionNumber;
 
-    public Input<Integer> getPlacementPartitionNumber() {
-        return this.placementPartitionNumber == null ? Input.empty() : this.placementPartitionNumber;
+    public Output<Integer> getPlacementPartitionNumber() {
+        return this.placementPartitionNumber == null ? Output.empty() : this.placementPartitionNumber;
     }
 
     /**
@@ -333,10 +333,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateIp")
-      private final @Nullable Input<String> privateIp;
+      private final @Nullable Output<String> privateIp;
 
-    public Input<String> getPrivateIp() {
-        return this.privateIp == null ? Input.empty() : this.privateIp;
+    public Output<String> getPrivateIp() {
+        return this.privateIp == null ? Output.empty() : this.privateIp;
     }
 
     /**
@@ -344,10 +344,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rootBlockDevice")
-      private final @Nullable Input<InstanceRootBlockDeviceArgs> rootBlockDevice;
+      private final @Nullable Output<InstanceRootBlockDeviceArgs> rootBlockDevice;
 
-    public Input<InstanceRootBlockDeviceArgs> getRootBlockDevice() {
-        return this.rootBlockDevice == null ? Input.empty() : this.rootBlockDevice;
+    public Output<InstanceRootBlockDeviceArgs> getRootBlockDevice() {
+        return this.rootBlockDevice == null ? Output.empty() : this.rootBlockDevice;
     }
 
     /**
@@ -355,10 +355,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secondaryPrivateIps")
-      private final @Nullable Input<List<String>> secondaryPrivateIps;
+      private final @Nullable Output<List<String>> secondaryPrivateIps;
 
-    public Input<List<String>> getSecondaryPrivateIps() {
-        return this.secondaryPrivateIps == null ? Input.empty() : this.secondaryPrivateIps;
+    public Output<List<String>> getSecondaryPrivateIps() {
+        return this.secondaryPrivateIps == null ? Output.empty() : this.secondaryPrivateIps;
     }
 
     /**
@@ -370,11 +370,11 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      */
     @Deprecated /* Use of `securityGroups` is discouraged as it does not allow for changes and will force your instance to be replaced if changes are made. To avoid this, use `vpcSecurityGroupIds` which allows for updates. */
     @InputImport(name="securityGroups")
-      private final @Nullable Input<List<String>> securityGroups;
+      private final @Nullable Output<List<String>> securityGroups;
 
     @Deprecated /* Use of `securityGroups` is discouraged as it does not allow for changes and will force your instance to be replaced if changes are made. To avoid this, use `vpcSecurityGroupIds` which allows for updates. */
-    public Input<List<String>> getSecurityGroups() {
-        return this.securityGroups == null ? Input.empty() : this.securityGroups;
+    public Output<List<String>> getSecurityGroups() {
+        return this.securityGroups == null ? Output.empty() : this.securityGroups;
     }
 
     /**
@@ -382,10 +382,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceDestCheck")
-      private final @Nullable Input<Boolean> sourceDestCheck;
+      private final @Nullable Output<Boolean> sourceDestCheck;
 
-    public Input<Boolean> getSourceDestCheck() {
-        return this.sourceDestCheck == null ? Input.empty() : this.sourceDestCheck;
+    public Output<Boolean> getSourceDestCheck() {
+        return this.sourceDestCheck == null ? Output.empty() : this.sourceDestCheck;
     }
 
     /**
@@ -393,10 +393,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetId")
-      private final @Nullable Input<String> subnetId;
+      private final @Nullable Output<String> subnetId;
 
-    public Input<String> getSubnetId() {
-        return this.subnetId == null ? Input.empty() : this.subnetId;
+    public Output<String> getSubnetId() {
+        return this.subnetId == null ? Output.empty() : this.subnetId;
     }
 
     /**
@@ -404,10 +404,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -415,10 +415,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tenancy")
-      private final @Nullable Input<Either<String,Tenancy>> tenancy;
+      private final @Nullable Output<Either<String,Tenancy>> tenancy;
 
-    public Input<Either<String,Tenancy>> getTenancy() {
-        return this.tenancy == null ? Input.empty() : this.tenancy;
+    public Output<Either<String,Tenancy>> getTenancy() {
+        return this.tenancy == null ? Output.empty() : this.tenancy;
     }
 
     /**
@@ -426,10 +426,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userData")
-      private final @Nullable Input<String> userData;
+      private final @Nullable Output<String> userData;
 
-    public Input<String> getUserData() {
-        return this.userData == null ? Input.empty() : this.userData;
+    public Output<String> getUserData() {
+        return this.userData == null ? Output.empty() : this.userData;
     }
 
     /**
@@ -437,10 +437,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userDataBase64")
-      private final @Nullable Input<String> userDataBase64;
+      private final @Nullable Output<String> userDataBase64;
 
-    public Input<String> getUserDataBase64() {
-        return this.userDataBase64 == null ? Input.empty() : this.userDataBase64;
+    public Output<String> getUserDataBase64() {
+        return this.userDataBase64 == null ? Output.empty() : this.userDataBase64;
     }
 
     /**
@@ -448,10 +448,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumeTags")
-      private final @Nullable Input<Map<String,String>> volumeTags;
+      private final @Nullable Output<Map<String,String>> volumeTags;
 
-    public Input<Map<String,String>> getVolumeTags() {
-        return this.volumeTags == null ? Input.empty() : this.volumeTags;
+    public Output<Map<String,String>> getVolumeTags() {
+        return this.volumeTags == null ? Output.empty() : this.volumeTags;
     }
 
     /**
@@ -459,52 +459,52 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcSecurityGroupIds")
-      private final @Nullable Input<List<String>> vpcSecurityGroupIds;
+      private final @Nullable Output<List<String>> vpcSecurityGroupIds;
 
-    public Input<List<String>> getVpcSecurityGroupIds() {
-        return this.vpcSecurityGroupIds == null ? Input.empty() : this.vpcSecurityGroupIds;
+    public Output<List<String>> getVpcSecurityGroupIds() {
+        return this.vpcSecurityGroupIds == null ? Output.empty() : this.vpcSecurityGroupIds;
     }
 
     public InstanceArgs(
-        @Nullable Input<String> ami,
-        @Nullable Input<Boolean> associatePublicIpAddress,
-        @Nullable Input<String> availabilityZone,
-        @Nullable Input<InstanceCapacityReservationSpecificationArgs> capacityReservationSpecification,
-        @Nullable Input<Integer> cpuCoreCount,
-        @Nullable Input<Integer> cpuThreadsPerCore,
-        @Nullable Input<InstanceCreditSpecificationArgs> creditSpecification,
-        @Nullable Input<Boolean> disableApiTermination,
-        @Nullable Input<List<InstanceEbsBlockDeviceArgs>> ebsBlockDevices,
-        @Nullable Input<Boolean> ebsOptimized,
-        @Nullable Input<InstanceEnclaveOptionsArgs> enclaveOptions,
-        @Nullable Input<List<InstanceEphemeralBlockDeviceArgs>> ephemeralBlockDevices,
-        @Nullable Input<Boolean> getPasswordData,
-        @Nullable Input<Boolean> hibernation,
-        @Nullable Input<String> hostId,
-        @Nullable Input<String> iamInstanceProfile,
-        @Nullable Input<String> instanceInitiatedShutdownBehavior,
-        @Nullable Input<Either<String,InstanceType>> instanceType,
-        @Nullable Input<Integer> ipv6AddressCount,
-        @Nullable Input<List<String>> ipv6Addresses,
-        @Nullable Input<String> keyName,
-        @Nullable Input<InstanceLaunchTemplateArgs> launchTemplate,
-        @Nullable Input<InstanceMetadataOptionsArgs> metadataOptions,
-        @Nullable Input<Boolean> monitoring,
-        @Nullable Input<List<InstanceNetworkInterfaceArgs>> networkInterfaces,
-        @Nullable Input<String> placementGroup,
-        @Nullable Input<Integer> placementPartitionNumber,
-        @Nullable Input<String> privateIp,
-        @Nullable Input<InstanceRootBlockDeviceArgs> rootBlockDevice,
-        @Nullable Input<List<String>> secondaryPrivateIps,
-        @Nullable Input<List<String>> securityGroups,
-        @Nullable Input<Boolean> sourceDestCheck,
-        @Nullable Input<String> subnetId,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Either<String,Tenancy>> tenancy,
-        @Nullable Input<String> userData,
-        @Nullable Input<String> userDataBase64,
-        @Nullable Input<Map<String,String>> volumeTags,
-        @Nullable Input<List<String>> vpcSecurityGroupIds) {
+        @Nullable Output<String> ami,
+        @Nullable Output<Boolean> associatePublicIpAddress,
+        @Nullable Output<String> availabilityZone,
+        @Nullable Output<InstanceCapacityReservationSpecificationArgs> capacityReservationSpecification,
+        @Nullable Output<Integer> cpuCoreCount,
+        @Nullable Output<Integer> cpuThreadsPerCore,
+        @Nullable Output<InstanceCreditSpecificationArgs> creditSpecification,
+        @Nullable Output<Boolean> disableApiTermination,
+        @Nullable Output<List<InstanceEbsBlockDeviceArgs>> ebsBlockDevices,
+        @Nullable Output<Boolean> ebsOptimized,
+        @Nullable Output<InstanceEnclaveOptionsArgs> enclaveOptions,
+        @Nullable Output<List<InstanceEphemeralBlockDeviceArgs>> ephemeralBlockDevices,
+        @Nullable Output<Boolean> getPasswordData,
+        @Nullable Output<Boolean> hibernation,
+        @Nullable Output<String> hostId,
+        @Nullable Output<String> iamInstanceProfile,
+        @Nullable Output<String> instanceInitiatedShutdownBehavior,
+        @Nullable Output<Either<String,InstanceType>> instanceType,
+        @Nullable Output<Integer> ipv6AddressCount,
+        @Nullable Output<List<String>> ipv6Addresses,
+        @Nullable Output<String> keyName,
+        @Nullable Output<InstanceLaunchTemplateArgs> launchTemplate,
+        @Nullable Output<InstanceMetadataOptionsArgs> metadataOptions,
+        @Nullable Output<Boolean> monitoring,
+        @Nullable Output<List<InstanceNetworkInterfaceArgs>> networkInterfaces,
+        @Nullable Output<String> placementGroup,
+        @Nullable Output<Integer> placementPartitionNumber,
+        @Nullable Output<String> privateIp,
+        @Nullable Output<InstanceRootBlockDeviceArgs> rootBlockDevice,
+        @Nullable Output<List<String>> secondaryPrivateIps,
+        @Nullable Output<List<String>> securityGroups,
+        @Nullable Output<Boolean> sourceDestCheck,
+        @Nullable Output<String> subnetId,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Either<String,Tenancy>> tenancy,
+        @Nullable Output<String> userData,
+        @Nullable Output<String> userDataBase64,
+        @Nullable Output<Map<String,String>> volumeTags,
+        @Nullable Output<List<String>> vpcSecurityGroupIds) {
         this.ami = ami;
         this.associatePublicIpAddress = associatePublicIpAddress;
         this.availabilityZone = availabilityZone;
@@ -547,45 +547,45 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceArgs() {
-        this.ami = Input.empty();
-        this.associatePublicIpAddress = Input.empty();
-        this.availabilityZone = Input.empty();
-        this.capacityReservationSpecification = Input.empty();
-        this.cpuCoreCount = Input.empty();
-        this.cpuThreadsPerCore = Input.empty();
-        this.creditSpecification = Input.empty();
-        this.disableApiTermination = Input.empty();
-        this.ebsBlockDevices = Input.empty();
-        this.ebsOptimized = Input.empty();
-        this.enclaveOptions = Input.empty();
-        this.ephemeralBlockDevices = Input.empty();
-        this.getPasswordData = Input.empty();
-        this.hibernation = Input.empty();
-        this.hostId = Input.empty();
-        this.iamInstanceProfile = Input.empty();
-        this.instanceInitiatedShutdownBehavior = Input.empty();
-        this.instanceType = Input.empty();
-        this.ipv6AddressCount = Input.empty();
-        this.ipv6Addresses = Input.empty();
-        this.keyName = Input.empty();
-        this.launchTemplate = Input.empty();
-        this.metadataOptions = Input.empty();
-        this.monitoring = Input.empty();
-        this.networkInterfaces = Input.empty();
-        this.placementGroup = Input.empty();
-        this.placementPartitionNumber = Input.empty();
-        this.privateIp = Input.empty();
-        this.rootBlockDevice = Input.empty();
-        this.secondaryPrivateIps = Input.empty();
-        this.securityGroups = Input.empty();
-        this.sourceDestCheck = Input.empty();
-        this.subnetId = Input.empty();
-        this.tags = Input.empty();
-        this.tenancy = Input.empty();
-        this.userData = Input.empty();
-        this.userDataBase64 = Input.empty();
-        this.volumeTags = Input.empty();
-        this.vpcSecurityGroupIds = Input.empty();
+        this.ami = Output.empty();
+        this.associatePublicIpAddress = Output.empty();
+        this.availabilityZone = Output.empty();
+        this.capacityReservationSpecification = Output.empty();
+        this.cpuCoreCount = Output.empty();
+        this.cpuThreadsPerCore = Output.empty();
+        this.creditSpecification = Output.empty();
+        this.disableApiTermination = Output.empty();
+        this.ebsBlockDevices = Output.empty();
+        this.ebsOptimized = Output.empty();
+        this.enclaveOptions = Output.empty();
+        this.ephemeralBlockDevices = Output.empty();
+        this.getPasswordData = Output.empty();
+        this.hibernation = Output.empty();
+        this.hostId = Output.empty();
+        this.iamInstanceProfile = Output.empty();
+        this.instanceInitiatedShutdownBehavior = Output.empty();
+        this.instanceType = Output.empty();
+        this.ipv6AddressCount = Output.empty();
+        this.ipv6Addresses = Output.empty();
+        this.keyName = Output.empty();
+        this.launchTemplate = Output.empty();
+        this.metadataOptions = Output.empty();
+        this.monitoring = Output.empty();
+        this.networkInterfaces = Output.empty();
+        this.placementGroup = Output.empty();
+        this.placementPartitionNumber = Output.empty();
+        this.privateIp = Output.empty();
+        this.rootBlockDevice = Output.empty();
+        this.secondaryPrivateIps = Output.empty();
+        this.securityGroups = Output.empty();
+        this.sourceDestCheck = Output.empty();
+        this.subnetId = Output.empty();
+        this.tags = Output.empty();
+        this.tenancy = Output.empty();
+        this.userData = Output.empty();
+        this.userDataBase64 = Output.empty();
+        this.volumeTags = Output.empty();
+        this.vpcSecurityGroupIds = Output.empty();
     }
 
     public static Builder builder() {
@@ -597,45 +597,45 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> ami;
-        private @Nullable Input<Boolean> associatePublicIpAddress;
-        private @Nullable Input<String> availabilityZone;
-        private @Nullable Input<InstanceCapacityReservationSpecificationArgs> capacityReservationSpecification;
-        private @Nullable Input<Integer> cpuCoreCount;
-        private @Nullable Input<Integer> cpuThreadsPerCore;
-        private @Nullable Input<InstanceCreditSpecificationArgs> creditSpecification;
-        private @Nullable Input<Boolean> disableApiTermination;
-        private @Nullable Input<List<InstanceEbsBlockDeviceArgs>> ebsBlockDevices;
-        private @Nullable Input<Boolean> ebsOptimized;
-        private @Nullable Input<InstanceEnclaveOptionsArgs> enclaveOptions;
-        private @Nullable Input<List<InstanceEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
-        private @Nullable Input<Boolean> getPasswordData;
-        private @Nullable Input<Boolean> hibernation;
-        private @Nullable Input<String> hostId;
-        private @Nullable Input<String> iamInstanceProfile;
-        private @Nullable Input<String> instanceInitiatedShutdownBehavior;
-        private @Nullable Input<Either<String,InstanceType>> instanceType;
-        private @Nullable Input<Integer> ipv6AddressCount;
-        private @Nullable Input<List<String>> ipv6Addresses;
-        private @Nullable Input<String> keyName;
-        private @Nullable Input<InstanceLaunchTemplateArgs> launchTemplate;
-        private @Nullable Input<InstanceMetadataOptionsArgs> metadataOptions;
-        private @Nullable Input<Boolean> monitoring;
-        private @Nullable Input<List<InstanceNetworkInterfaceArgs>> networkInterfaces;
-        private @Nullable Input<String> placementGroup;
-        private @Nullable Input<Integer> placementPartitionNumber;
-        private @Nullable Input<String> privateIp;
-        private @Nullable Input<InstanceRootBlockDeviceArgs> rootBlockDevice;
-        private @Nullable Input<List<String>> secondaryPrivateIps;
-        private @Nullable Input<List<String>> securityGroups;
-        private @Nullable Input<Boolean> sourceDestCheck;
-        private @Nullable Input<String> subnetId;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Either<String,Tenancy>> tenancy;
-        private @Nullable Input<String> userData;
-        private @Nullable Input<String> userDataBase64;
-        private @Nullable Input<Map<String,String>> volumeTags;
-        private @Nullable Input<List<String>> vpcSecurityGroupIds;
+        private @Nullable Output<String> ami;
+        private @Nullable Output<Boolean> associatePublicIpAddress;
+        private @Nullable Output<String> availabilityZone;
+        private @Nullable Output<InstanceCapacityReservationSpecificationArgs> capacityReservationSpecification;
+        private @Nullable Output<Integer> cpuCoreCount;
+        private @Nullable Output<Integer> cpuThreadsPerCore;
+        private @Nullable Output<InstanceCreditSpecificationArgs> creditSpecification;
+        private @Nullable Output<Boolean> disableApiTermination;
+        private @Nullable Output<List<InstanceEbsBlockDeviceArgs>> ebsBlockDevices;
+        private @Nullable Output<Boolean> ebsOptimized;
+        private @Nullable Output<InstanceEnclaveOptionsArgs> enclaveOptions;
+        private @Nullable Output<List<InstanceEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
+        private @Nullable Output<Boolean> getPasswordData;
+        private @Nullable Output<Boolean> hibernation;
+        private @Nullable Output<String> hostId;
+        private @Nullable Output<String> iamInstanceProfile;
+        private @Nullable Output<String> instanceInitiatedShutdownBehavior;
+        private @Nullable Output<Either<String,InstanceType>> instanceType;
+        private @Nullable Output<Integer> ipv6AddressCount;
+        private @Nullable Output<List<String>> ipv6Addresses;
+        private @Nullable Output<String> keyName;
+        private @Nullable Output<InstanceLaunchTemplateArgs> launchTemplate;
+        private @Nullable Output<InstanceMetadataOptionsArgs> metadataOptions;
+        private @Nullable Output<Boolean> monitoring;
+        private @Nullable Output<List<InstanceNetworkInterfaceArgs>> networkInterfaces;
+        private @Nullable Output<String> placementGroup;
+        private @Nullable Output<Integer> placementPartitionNumber;
+        private @Nullable Output<String> privateIp;
+        private @Nullable Output<InstanceRootBlockDeviceArgs> rootBlockDevice;
+        private @Nullable Output<List<String>> secondaryPrivateIps;
+        private @Nullable Output<List<String>> securityGroups;
+        private @Nullable Output<Boolean> sourceDestCheck;
+        private @Nullable Output<String> subnetId;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Either<String,Tenancy>> tenancy;
+        private @Nullable Output<String> userData;
+        private @Nullable Output<String> userDataBase64;
+        private @Nullable Output<Map<String,String>> volumeTags;
+        private @Nullable Output<List<String>> vpcSecurityGroupIds;
 
         public Builder() {
     	      // Empty
@@ -684,388 +684,388 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcSecurityGroupIds = defaults.vpcSecurityGroupIds;
         }
 
-        public Builder ami(@Nullable Input<String> ami) {
+        public Builder ami(@Nullable Output<String> ami) {
             this.ami = ami;
             return this;
         }
 
         public Builder ami(@Nullable String ami) {
-            this.ami = Input.ofNullable(ami);
+            this.ami = Output.ofNullable(ami);
             return this;
         }
 
-        public Builder associatePublicIpAddress(@Nullable Input<Boolean> associatePublicIpAddress) {
+        public Builder associatePublicIpAddress(@Nullable Output<Boolean> associatePublicIpAddress) {
             this.associatePublicIpAddress = associatePublicIpAddress;
             return this;
         }
 
         public Builder associatePublicIpAddress(@Nullable Boolean associatePublicIpAddress) {
-            this.associatePublicIpAddress = Input.ofNullable(associatePublicIpAddress);
+            this.associatePublicIpAddress = Output.ofNullable(associatePublicIpAddress);
             return this;
         }
 
-        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Input.ofNullable(availabilityZone);
+            this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder capacityReservationSpecification(@Nullable Input<InstanceCapacityReservationSpecificationArgs> capacityReservationSpecification) {
+        public Builder capacityReservationSpecification(@Nullable Output<InstanceCapacityReservationSpecificationArgs> capacityReservationSpecification) {
             this.capacityReservationSpecification = capacityReservationSpecification;
             return this;
         }
 
         public Builder capacityReservationSpecification(@Nullable InstanceCapacityReservationSpecificationArgs capacityReservationSpecification) {
-            this.capacityReservationSpecification = Input.ofNullable(capacityReservationSpecification);
+            this.capacityReservationSpecification = Output.ofNullable(capacityReservationSpecification);
             return this;
         }
 
-        public Builder cpuCoreCount(@Nullable Input<Integer> cpuCoreCount) {
+        public Builder cpuCoreCount(@Nullable Output<Integer> cpuCoreCount) {
             this.cpuCoreCount = cpuCoreCount;
             return this;
         }
 
         public Builder cpuCoreCount(@Nullable Integer cpuCoreCount) {
-            this.cpuCoreCount = Input.ofNullable(cpuCoreCount);
+            this.cpuCoreCount = Output.ofNullable(cpuCoreCount);
             return this;
         }
 
-        public Builder cpuThreadsPerCore(@Nullable Input<Integer> cpuThreadsPerCore) {
+        public Builder cpuThreadsPerCore(@Nullable Output<Integer> cpuThreadsPerCore) {
             this.cpuThreadsPerCore = cpuThreadsPerCore;
             return this;
         }
 
         public Builder cpuThreadsPerCore(@Nullable Integer cpuThreadsPerCore) {
-            this.cpuThreadsPerCore = Input.ofNullable(cpuThreadsPerCore);
+            this.cpuThreadsPerCore = Output.ofNullable(cpuThreadsPerCore);
             return this;
         }
 
-        public Builder creditSpecification(@Nullable Input<InstanceCreditSpecificationArgs> creditSpecification) {
+        public Builder creditSpecification(@Nullable Output<InstanceCreditSpecificationArgs> creditSpecification) {
             this.creditSpecification = creditSpecification;
             return this;
         }
 
         public Builder creditSpecification(@Nullable InstanceCreditSpecificationArgs creditSpecification) {
-            this.creditSpecification = Input.ofNullable(creditSpecification);
+            this.creditSpecification = Output.ofNullable(creditSpecification);
             return this;
         }
 
-        public Builder disableApiTermination(@Nullable Input<Boolean> disableApiTermination) {
+        public Builder disableApiTermination(@Nullable Output<Boolean> disableApiTermination) {
             this.disableApiTermination = disableApiTermination;
             return this;
         }
 
         public Builder disableApiTermination(@Nullable Boolean disableApiTermination) {
-            this.disableApiTermination = Input.ofNullable(disableApiTermination);
+            this.disableApiTermination = Output.ofNullable(disableApiTermination);
             return this;
         }
 
-        public Builder ebsBlockDevices(@Nullable Input<List<InstanceEbsBlockDeviceArgs>> ebsBlockDevices) {
+        public Builder ebsBlockDevices(@Nullable Output<List<InstanceEbsBlockDeviceArgs>> ebsBlockDevices) {
             this.ebsBlockDevices = ebsBlockDevices;
             return this;
         }
 
         public Builder ebsBlockDevices(@Nullable List<InstanceEbsBlockDeviceArgs> ebsBlockDevices) {
-            this.ebsBlockDevices = Input.ofNullable(ebsBlockDevices);
+            this.ebsBlockDevices = Output.ofNullable(ebsBlockDevices);
             return this;
         }
 
-        public Builder ebsOptimized(@Nullable Input<Boolean> ebsOptimized) {
+        public Builder ebsOptimized(@Nullable Output<Boolean> ebsOptimized) {
             this.ebsOptimized = ebsOptimized;
             return this;
         }
 
         public Builder ebsOptimized(@Nullable Boolean ebsOptimized) {
-            this.ebsOptimized = Input.ofNullable(ebsOptimized);
+            this.ebsOptimized = Output.ofNullable(ebsOptimized);
             return this;
         }
 
-        public Builder enclaveOptions(@Nullable Input<InstanceEnclaveOptionsArgs> enclaveOptions) {
+        public Builder enclaveOptions(@Nullable Output<InstanceEnclaveOptionsArgs> enclaveOptions) {
             this.enclaveOptions = enclaveOptions;
             return this;
         }
 
         public Builder enclaveOptions(@Nullable InstanceEnclaveOptionsArgs enclaveOptions) {
-            this.enclaveOptions = Input.ofNullable(enclaveOptions);
+            this.enclaveOptions = Output.ofNullable(enclaveOptions);
             return this;
         }
 
-        public Builder ephemeralBlockDevices(@Nullable Input<List<InstanceEphemeralBlockDeviceArgs>> ephemeralBlockDevices) {
+        public Builder ephemeralBlockDevices(@Nullable Output<List<InstanceEphemeralBlockDeviceArgs>> ephemeralBlockDevices) {
             this.ephemeralBlockDevices = ephemeralBlockDevices;
             return this;
         }
 
         public Builder ephemeralBlockDevices(@Nullable List<InstanceEphemeralBlockDeviceArgs> ephemeralBlockDevices) {
-            this.ephemeralBlockDevices = Input.ofNullable(ephemeralBlockDevices);
+            this.ephemeralBlockDevices = Output.ofNullable(ephemeralBlockDevices);
             return this;
         }
 
-        public Builder getPasswordData(@Nullable Input<Boolean> getPasswordData) {
+        public Builder getPasswordData(@Nullable Output<Boolean> getPasswordData) {
             this.getPasswordData = getPasswordData;
             return this;
         }
 
         public Builder getPasswordData(@Nullable Boolean getPasswordData) {
-            this.getPasswordData = Input.ofNullable(getPasswordData);
+            this.getPasswordData = Output.ofNullable(getPasswordData);
             return this;
         }
 
-        public Builder hibernation(@Nullable Input<Boolean> hibernation) {
+        public Builder hibernation(@Nullable Output<Boolean> hibernation) {
             this.hibernation = hibernation;
             return this;
         }
 
         public Builder hibernation(@Nullable Boolean hibernation) {
-            this.hibernation = Input.ofNullable(hibernation);
+            this.hibernation = Output.ofNullable(hibernation);
             return this;
         }
 
-        public Builder hostId(@Nullable Input<String> hostId) {
+        public Builder hostId(@Nullable Output<String> hostId) {
             this.hostId = hostId;
             return this;
         }
 
         public Builder hostId(@Nullable String hostId) {
-            this.hostId = Input.ofNullable(hostId);
+            this.hostId = Output.ofNullable(hostId);
             return this;
         }
 
-        public Builder iamInstanceProfile(@Nullable Input<String> iamInstanceProfile) {
+        public Builder iamInstanceProfile(@Nullable Output<String> iamInstanceProfile) {
             this.iamInstanceProfile = iamInstanceProfile;
             return this;
         }
 
-        public Builder instanceInitiatedShutdownBehavior(@Nullable Input<String> instanceInitiatedShutdownBehavior) {
+        public Builder instanceInitiatedShutdownBehavior(@Nullable Output<String> instanceInitiatedShutdownBehavior) {
             this.instanceInitiatedShutdownBehavior = instanceInitiatedShutdownBehavior;
             return this;
         }
 
         public Builder instanceInitiatedShutdownBehavior(@Nullable String instanceInitiatedShutdownBehavior) {
-            this.instanceInitiatedShutdownBehavior = Input.ofNullable(instanceInitiatedShutdownBehavior);
+            this.instanceInitiatedShutdownBehavior = Output.ofNullable(instanceInitiatedShutdownBehavior);
             return this;
         }
 
-        public Builder instanceType(@Nullable Input<Either<String,InstanceType>> instanceType) {
+        public Builder instanceType(@Nullable Output<Either<String,InstanceType>> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
         public Builder instanceType(@Nullable Either<String,InstanceType> instanceType) {
-            this.instanceType = Input.ofNullable(instanceType);
+            this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
 
-        public Builder ipv6AddressCount(@Nullable Input<Integer> ipv6AddressCount) {
+        public Builder ipv6AddressCount(@Nullable Output<Integer> ipv6AddressCount) {
             this.ipv6AddressCount = ipv6AddressCount;
             return this;
         }
 
         public Builder ipv6AddressCount(@Nullable Integer ipv6AddressCount) {
-            this.ipv6AddressCount = Input.ofNullable(ipv6AddressCount);
+            this.ipv6AddressCount = Output.ofNullable(ipv6AddressCount);
             return this;
         }
 
-        public Builder ipv6Addresses(@Nullable Input<List<String>> ipv6Addresses) {
+        public Builder ipv6Addresses(@Nullable Output<List<String>> ipv6Addresses) {
             this.ipv6Addresses = ipv6Addresses;
             return this;
         }
 
         public Builder ipv6Addresses(@Nullable List<String> ipv6Addresses) {
-            this.ipv6Addresses = Input.ofNullable(ipv6Addresses);
+            this.ipv6Addresses = Output.ofNullable(ipv6Addresses);
             return this;
         }
 
-        public Builder keyName(@Nullable Input<String> keyName) {
+        public Builder keyName(@Nullable Output<String> keyName) {
             this.keyName = keyName;
             return this;
         }
 
         public Builder keyName(@Nullable String keyName) {
-            this.keyName = Input.ofNullable(keyName);
+            this.keyName = Output.ofNullable(keyName);
             return this;
         }
 
-        public Builder launchTemplate(@Nullable Input<InstanceLaunchTemplateArgs> launchTemplate) {
+        public Builder launchTemplate(@Nullable Output<InstanceLaunchTemplateArgs> launchTemplate) {
             this.launchTemplate = launchTemplate;
             return this;
         }
 
         public Builder launchTemplate(@Nullable InstanceLaunchTemplateArgs launchTemplate) {
-            this.launchTemplate = Input.ofNullable(launchTemplate);
+            this.launchTemplate = Output.ofNullable(launchTemplate);
             return this;
         }
 
-        public Builder metadataOptions(@Nullable Input<InstanceMetadataOptionsArgs> metadataOptions) {
+        public Builder metadataOptions(@Nullable Output<InstanceMetadataOptionsArgs> metadataOptions) {
             this.metadataOptions = metadataOptions;
             return this;
         }
 
         public Builder metadataOptions(@Nullable InstanceMetadataOptionsArgs metadataOptions) {
-            this.metadataOptions = Input.ofNullable(metadataOptions);
+            this.metadataOptions = Output.ofNullable(metadataOptions);
             return this;
         }
 
-        public Builder monitoring(@Nullable Input<Boolean> monitoring) {
+        public Builder monitoring(@Nullable Output<Boolean> monitoring) {
             this.monitoring = monitoring;
             return this;
         }
 
         public Builder monitoring(@Nullable Boolean monitoring) {
-            this.monitoring = Input.ofNullable(monitoring);
+            this.monitoring = Output.ofNullable(monitoring);
             return this;
         }
 
-        public Builder networkInterfaces(@Nullable Input<List<InstanceNetworkInterfaceArgs>> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable Output<List<InstanceNetworkInterfaceArgs>> networkInterfaces) {
             this.networkInterfaces = networkInterfaces;
             return this;
         }
 
         public Builder networkInterfaces(@Nullable List<InstanceNetworkInterfaceArgs> networkInterfaces) {
-            this.networkInterfaces = Input.ofNullable(networkInterfaces);
+            this.networkInterfaces = Output.ofNullable(networkInterfaces);
             return this;
         }
 
-        public Builder placementGroup(@Nullable Input<String> placementGroup) {
+        public Builder placementGroup(@Nullable Output<String> placementGroup) {
             this.placementGroup = placementGroup;
             return this;
         }
 
         public Builder placementGroup(@Nullable String placementGroup) {
-            this.placementGroup = Input.ofNullable(placementGroup);
+            this.placementGroup = Output.ofNullable(placementGroup);
             return this;
         }
 
-        public Builder placementPartitionNumber(@Nullable Input<Integer> placementPartitionNumber) {
+        public Builder placementPartitionNumber(@Nullable Output<Integer> placementPartitionNumber) {
             this.placementPartitionNumber = placementPartitionNumber;
             return this;
         }
 
         public Builder placementPartitionNumber(@Nullable Integer placementPartitionNumber) {
-            this.placementPartitionNumber = Input.ofNullable(placementPartitionNumber);
+            this.placementPartitionNumber = Output.ofNullable(placementPartitionNumber);
             return this;
         }
 
-        public Builder privateIp(@Nullable Input<String> privateIp) {
+        public Builder privateIp(@Nullable Output<String> privateIp) {
             this.privateIp = privateIp;
             return this;
         }
 
         public Builder privateIp(@Nullable String privateIp) {
-            this.privateIp = Input.ofNullable(privateIp);
+            this.privateIp = Output.ofNullable(privateIp);
             return this;
         }
 
-        public Builder rootBlockDevice(@Nullable Input<InstanceRootBlockDeviceArgs> rootBlockDevice) {
+        public Builder rootBlockDevice(@Nullable Output<InstanceRootBlockDeviceArgs> rootBlockDevice) {
             this.rootBlockDevice = rootBlockDevice;
             return this;
         }
 
         public Builder rootBlockDevice(@Nullable InstanceRootBlockDeviceArgs rootBlockDevice) {
-            this.rootBlockDevice = Input.ofNullable(rootBlockDevice);
+            this.rootBlockDevice = Output.ofNullable(rootBlockDevice);
             return this;
         }
 
-        public Builder secondaryPrivateIps(@Nullable Input<List<String>> secondaryPrivateIps) {
+        public Builder secondaryPrivateIps(@Nullable Output<List<String>> secondaryPrivateIps) {
             this.secondaryPrivateIps = secondaryPrivateIps;
             return this;
         }
 
         public Builder secondaryPrivateIps(@Nullable List<String> secondaryPrivateIps) {
-            this.secondaryPrivateIps = Input.ofNullable(secondaryPrivateIps);
+            this.secondaryPrivateIps = Output.ofNullable(secondaryPrivateIps);
             return this;
         }
 
-        public Builder securityGroups(@Nullable Input<List<String>> securityGroups) {
+        public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
         public Builder securityGroups(@Nullable List<String> securityGroups) {
-            this.securityGroups = Input.ofNullable(securityGroups);
+            this.securityGroups = Output.ofNullable(securityGroups);
             return this;
         }
 
-        public Builder sourceDestCheck(@Nullable Input<Boolean> sourceDestCheck) {
+        public Builder sourceDestCheck(@Nullable Output<Boolean> sourceDestCheck) {
             this.sourceDestCheck = sourceDestCheck;
             return this;
         }
 
         public Builder sourceDestCheck(@Nullable Boolean sourceDestCheck) {
-            this.sourceDestCheck = Input.ofNullable(sourceDestCheck);
+            this.sourceDestCheck = Output.ofNullable(sourceDestCheck);
             return this;
         }
 
-        public Builder subnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Input.ofNullable(subnetId);
+            this.subnetId = Output.ofNullable(subnetId);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tenancy(@Nullable Input<Either<String,Tenancy>> tenancy) {
+        public Builder tenancy(@Nullable Output<Either<String,Tenancy>> tenancy) {
             this.tenancy = tenancy;
             return this;
         }
 
         public Builder tenancy(@Nullable Either<String,Tenancy> tenancy) {
-            this.tenancy = Input.ofNullable(tenancy);
+            this.tenancy = Output.ofNullable(tenancy);
             return this;
         }
 
-        public Builder userData(@Nullable Input<String> userData) {
+        public Builder userData(@Nullable Output<String> userData) {
             this.userData = userData;
             return this;
         }
 
         public Builder userData(@Nullable String userData) {
-            this.userData = Input.ofNullable(userData);
+            this.userData = Output.ofNullable(userData);
             return this;
         }
 
-        public Builder userDataBase64(@Nullable Input<String> userDataBase64) {
+        public Builder userDataBase64(@Nullable Output<String> userDataBase64) {
             this.userDataBase64 = userDataBase64;
             return this;
         }
 
         public Builder userDataBase64(@Nullable String userDataBase64) {
-            this.userDataBase64 = Input.ofNullable(userDataBase64);
+            this.userDataBase64 = Output.ofNullable(userDataBase64);
             return this;
         }
 
-        public Builder volumeTags(@Nullable Input<Map<String,String>> volumeTags) {
+        public Builder volumeTags(@Nullable Output<Map<String,String>> volumeTags) {
             this.volumeTags = volumeTags;
             return this;
         }
 
         public Builder volumeTags(@Nullable Map<String,String> volumeTags) {
-            this.volumeTags = Input.ofNullable(volumeTags);
+            this.volumeTags = Output.ofNullable(volumeTags);
             return this;
         }
 
-        public Builder vpcSecurityGroupIds(@Nullable Input<List<String>> vpcSecurityGroupIds) {
+        public Builder vpcSecurityGroupIds(@Nullable Output<List<String>> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
 
         public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
-            this.vpcSecurityGroupIds = Input.ofNullable(vpcSecurityGroupIds);
+            this.vpcSecurityGroupIds = Output.ofNullable(vpcSecurityGroupIds);
             return this;
         }
         public InstanceArgs build() {

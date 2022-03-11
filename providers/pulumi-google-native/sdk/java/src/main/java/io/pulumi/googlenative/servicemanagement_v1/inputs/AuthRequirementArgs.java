@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class AuthRequirementArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="audiences")
-      private final @Nullable Input<String> audiences;
+      private final @Nullable Output<String> audiences;
 
-    public Input<String> getAudiences() {
-        return this.audiences == null ? Input.empty() : this.audiences;
+    public Output<String> getAudiences() {
+        return this.audiences == null ? Output.empty() : this.audiences;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class AuthRequirementArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="providerId")
-      private final @Nullable Input<String> providerId;
+      private final @Nullable Output<String> providerId;
 
-    public Input<String> getProviderId() {
-        return this.providerId == null ? Input.empty() : this.providerId;
+    public Output<String> getProviderId() {
+        return this.providerId == null ? Output.empty() : this.providerId;
     }
 
     public AuthRequirementArgs(
-        @Nullable Input<String> audiences,
-        @Nullable Input<String> providerId) {
+        @Nullable Output<String> audiences,
+        @Nullable Output<String> providerId) {
         this.audiences = audiences;
         this.providerId = providerId;
     }
 
     private AuthRequirementArgs() {
-        this.audiences = Input.empty();
-        this.providerId = Input.empty();
+        this.audiences = Output.empty();
+        this.providerId = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class AuthRequirementArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> audiences;
-        private @Nullable Input<String> providerId;
+        private @Nullable Output<String> audiences;
+        private @Nullable Output<String> providerId;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class AuthRequirementArgs extends io.pulumi.resources.ResourceArgs 
     	      this.providerId = defaults.providerId;
         }
 
-        public Builder audiences(@Nullable Input<String> audiences) {
+        public Builder audiences(@Nullable Output<String> audiences) {
             this.audiences = audiences;
             return this;
         }
 
         public Builder audiences(@Nullable String audiences) {
-            this.audiences = Input.ofNullable(audiences);
+            this.audiences = Output.ofNullable(audiences);
             return this;
         }
 
-        public Builder providerId(@Nullable Input<String> providerId) {
+        public Builder providerId(@Nullable Output<String> providerId) {
             this.providerId = providerId;
             return this;
         }
 
         public Builder providerId(@Nullable String providerId) {
-            this.providerId = Input.ofNullable(providerId);
+            this.providerId = Output.ofNullable(providerId);
             return this;
         }
         public AuthRequirementArgs build() {

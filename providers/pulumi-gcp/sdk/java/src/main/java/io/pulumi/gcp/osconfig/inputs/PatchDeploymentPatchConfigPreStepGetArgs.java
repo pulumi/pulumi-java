@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGetArgs;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGetArgs;
@@ -21,10 +21,10 @@ public final class PatchDeploymentPatchConfigPreStepGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="linuxExecStepConfig")
-      private final @Nullable Input<PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGetArgs> linuxExecStepConfig;
+      private final @Nullable Output<PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGetArgs> linuxExecStepConfig;
 
-    public Input<PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGetArgs> getLinuxExecStepConfig() {
-        return this.linuxExecStepConfig == null ? Input.empty() : this.linuxExecStepConfig;
+    public Output<PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGetArgs> getLinuxExecStepConfig() {
+        return this.linuxExecStepConfig == null ? Output.empty() : this.linuxExecStepConfig;
     }
 
     /**
@@ -33,22 +33,22 @@ public final class PatchDeploymentPatchConfigPreStepGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="windowsExecStepConfig")
-      private final @Nullable Input<PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGetArgs> windowsExecStepConfig;
+      private final @Nullable Output<PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGetArgs> windowsExecStepConfig;
 
-    public Input<PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGetArgs> getWindowsExecStepConfig() {
-        return this.windowsExecStepConfig == null ? Input.empty() : this.windowsExecStepConfig;
+    public Output<PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGetArgs> getWindowsExecStepConfig() {
+        return this.windowsExecStepConfig == null ? Output.empty() : this.windowsExecStepConfig;
     }
 
     public PatchDeploymentPatchConfigPreStepGetArgs(
-        @Nullable Input<PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGetArgs> linuxExecStepConfig,
-        @Nullable Input<PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGetArgs> windowsExecStepConfig) {
+        @Nullable Output<PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGetArgs> linuxExecStepConfig,
+        @Nullable Output<PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGetArgs> windowsExecStepConfig) {
         this.linuxExecStepConfig = linuxExecStepConfig;
         this.windowsExecStepConfig = windowsExecStepConfig;
     }
 
     private PatchDeploymentPatchConfigPreStepGetArgs() {
-        this.linuxExecStepConfig = Input.empty();
-        this.windowsExecStepConfig = Input.empty();
+        this.linuxExecStepConfig = Output.empty();
+        this.windowsExecStepConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class PatchDeploymentPatchConfigPreStepGetArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGetArgs> linuxExecStepConfig;
-        private @Nullable Input<PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGetArgs> windowsExecStepConfig;
+        private @Nullable Output<PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGetArgs> linuxExecStepConfig;
+        private @Nullable Output<PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGetArgs> windowsExecStepConfig;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class PatchDeploymentPatchConfigPreStepGetArgs extends io.pulumi.re
     	      this.windowsExecStepConfig = defaults.windowsExecStepConfig;
         }
 
-        public Builder linuxExecStepConfig(@Nullable Input<PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGetArgs> linuxExecStepConfig) {
+        public Builder linuxExecStepConfig(@Nullable Output<PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGetArgs> linuxExecStepConfig) {
             this.linuxExecStepConfig = linuxExecStepConfig;
             return this;
         }
 
         public Builder linuxExecStepConfig(@Nullable PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGetArgs linuxExecStepConfig) {
-            this.linuxExecStepConfig = Input.ofNullable(linuxExecStepConfig);
+            this.linuxExecStepConfig = Output.ofNullable(linuxExecStepConfig);
             return this;
         }
 
-        public Builder windowsExecStepConfig(@Nullable Input<PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGetArgs> windowsExecStepConfig) {
+        public Builder windowsExecStepConfig(@Nullable Output<PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGetArgs> windowsExecStepConfig) {
             this.windowsExecStepConfig = windowsExecStepConfig;
             return this;
         }
 
         public Builder windowsExecStepConfig(@Nullable PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGetArgs windowsExecStepConfig) {
-            this.windowsExecStepConfig = Input.ofNullable(windowsExecStepConfig);
+            this.windowsExecStepConfig = Output.ofNullable(windowsExecStepConfig);
             return this;
         }
         public PatchDeploymentPatchConfigPreStepGetArgs build() {

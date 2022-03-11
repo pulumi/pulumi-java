@@ -7,7 +7,6 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.route53resolver.ResolverQueryLoggingConfigAssociationArgs;
 import io.pulumi.awsnative.route53resolver.enums.ResolverQueryLoggingConfigAssociationError;
 import io.pulumi.awsnative.route53resolver.enums.ResolverQueryLoggingConfigAssociationStatus;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -143,14 +142,14 @@ public class ResolverQueryLoggingConfigAssociation extends io.pulumi.resources.C
      * @param options A bag of options that control this resource's behavior.
      */
     public ResolverQueryLoggingConfigAssociation(String name, @Nullable ResolverQueryLoggingConfigAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:route53resolver:ResolverQueryLoggingConfigAssociation", name, args == null ? ResolverQueryLoggingConfigAssociationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:route53resolver:ResolverQueryLoggingConfigAssociation", name, args == null ? ResolverQueryLoggingConfigAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ResolverQueryLoggingConfigAssociation(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ResolverQueryLoggingConfigAssociation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:route53resolver:ResolverQueryLoggingConfigAssociation", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -165,7 +164,7 @@ public class ResolverQueryLoggingConfigAssociation extends io.pulumi.resources.C
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ResolverQueryLoggingConfigAssociation get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ResolverQueryLoggingConfigAssociation get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ResolverQueryLoggingConfigAssociation(name, id, options);
     }
 }

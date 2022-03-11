@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class CertificateCertificateDescriptionPublicKeyGetArgs extends io.
      * 
      */
     @InputImport(name="format")
-      private final @Nullable Input<String> format;
+      private final @Nullable Output<String> format;
 
-    public Input<String> getFormat() {
-        return this.format == null ? Input.empty() : this.format;
+    public Output<String> getFormat() {
+        return this.format == null ? Output.empty() : this.format;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class CertificateCertificateDescriptionPublicKeyGetArgs extends io.
      * 
      */
     @InputImport(name="key")
-      private final @Nullable Input<String> key;
+      private final @Nullable Output<String> key;
 
-    public Input<String> getKey() {
-        return this.key == null ? Input.empty() : this.key;
+    public Output<String> getKey() {
+        return this.key == null ? Output.empty() : this.key;
     }
 
     public CertificateCertificateDescriptionPublicKeyGetArgs(
-        @Nullable Input<String> format,
-        @Nullable Input<String> key) {
+        @Nullable Output<String> format,
+        @Nullable Output<String> key) {
         this.format = format;
         this.key = key;
     }
 
     private CertificateCertificateDescriptionPublicKeyGetArgs() {
-        this.format = Input.empty();
-        this.key = Input.empty();
+        this.format = Output.empty();
+        this.key = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class CertificateCertificateDescriptionPublicKeyGetArgs extends io.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> format;
-        private @Nullable Input<String> key;
+        private @Nullable Output<String> format;
+        private @Nullable Output<String> key;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class CertificateCertificateDescriptionPublicKeyGetArgs extends io.
     	      this.key = defaults.key;
         }
 
-        public Builder format(@Nullable Input<String> format) {
+        public Builder format(@Nullable Output<String> format) {
             this.format = format;
             return this;
         }
 
         public Builder format(@Nullable String format) {
-            this.format = Input.ofNullable(format);
+            this.format = Output.ofNullable(format);
             return this;
         }
 
-        public Builder key(@Nullable Input<String> key) {
+        public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
 
         public Builder key(@Nullable String key) {
-            this.key = Input.ofNullable(key);
+            this.key = Output.ofNullable(key);
             return this;
         }
         public CertificateCertificateDescriptionPublicKeyGetArgs build() {

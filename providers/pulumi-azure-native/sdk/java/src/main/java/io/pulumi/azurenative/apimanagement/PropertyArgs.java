@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -32,10 +32,10 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="propId")
-      private final @Nullable Input<String> propId;
+      private final @Nullable Output<String> propId;
 
-    public Input<String> getPropId() {
-        return this.propId == null ? Input.empty() : this.propId;
+    public Output<String> getPropId() {
+        return this.propId == null ? Output.empty() : this.propId;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -54,10 +54,10 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secret")
-      private final @Nullable Input<Boolean> secret;
+      private final @Nullable Output<Boolean> secret;
 
-    public Input<Boolean> getSecret() {
-        return this.secret == null ? Input.empty() : this.secret;
+    public Output<Boolean> getSecret() {
+        return this.secret == null ? Output.empty() : this.secret;
     }
 
     /**
@@ -65,9 +65,9 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-      private final Input<String> serviceName;
+      private final Output<String> serviceName;
 
-    public Input<String> getServiceName() {
+    public Output<String> getServiceName() {
         return this.serviceName;
     }
 
@@ -76,10 +76,10 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<String>> tags;
+      private final @Nullable Output<List<String>> tags;
 
-    public Input<List<String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -87,20 +87,20 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value", required=true)
-      private final Input<String> value;
+      private final Output<String> value;
 
-    public Input<String> getValue() {
+    public Output<String> getValue() {
         return this.value;
     }
 
     public PropertyArgs(
-        Input<String> displayName,
-        @Nullable Input<String> propId,
-        Input<String> resourceGroupName,
-        @Nullable Input<Boolean> secret,
-        Input<String> serviceName,
-        @Nullable Input<List<String>> tags,
-        Input<String> value) {
+        Output<String> displayName,
+        @Nullable Output<String> propId,
+        Output<String> resourceGroupName,
+        @Nullable Output<Boolean> secret,
+        Output<String> serviceName,
+        @Nullable Output<List<String>> tags,
+        Output<String> value) {
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
         this.propId = propId;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -111,13 +111,13 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PropertyArgs() {
-        this.displayName = Input.empty();
-        this.propId = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.secret = Input.empty();
-        this.serviceName = Input.empty();
-        this.tags = Input.empty();
-        this.value = Input.empty();
+        this.displayName = Output.empty();
+        this.propId = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.secret = Output.empty();
+        this.serviceName = Output.empty();
+        this.tags = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -129,13 +129,13 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> displayName;
-        private @Nullable Input<String> propId;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Boolean> secret;
-        private Input<String> serviceName;
-        private @Nullable Input<List<String>> tags;
-        private Input<String> value;
+        private Output<String> displayName;
+        private @Nullable Output<String> propId;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Boolean> secret;
+        private Output<String> serviceName;
+        private @Nullable Output<List<String>> tags;
+        private Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -152,73 +152,73 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder propId(@Nullable Input<String> propId) {
+        public Builder propId(@Nullable Output<String> propId) {
             this.propId = propId;
             return this;
         }
 
         public Builder propId(@Nullable String propId) {
-            this.propId = Input.ofNullable(propId);
+            this.propId = Output.ofNullable(propId);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder secret(@Nullable Input<Boolean> secret) {
+        public Builder secret(@Nullable Output<Boolean> secret) {
             this.secret = secret;
             return this;
         }
 
         public Builder secret(@Nullable Boolean secret) {
-            this.secret = Input.ofNullable(secret);
+            this.secret = Output.ofNullable(secret);
             return this;
         }
 
-        public Builder serviceName(Input<String> serviceName) {
+        public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Input.of(Objects.requireNonNull(serviceName));
+            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<String>> tags) {
+        public Builder tags(@Nullable Output<List<String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder value(Input<String> value) {
+        public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(String value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public PropertyArgs build() {

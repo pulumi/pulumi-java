@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.InstanceSchedulingNodeAffinityArgs;
 import java.lang.Boolean;
@@ -25,10 +25,10 @@ public final class InstanceSchedulingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="automaticRestart")
-      private final @Nullable Input<Boolean> automaticRestart;
+      private final @Nullable Output<Boolean> automaticRestart;
 
-    public Input<Boolean> getAutomaticRestart() {
-        return this.automaticRestart == null ? Input.empty() : this.automaticRestart;
+    public Output<Boolean> getAutomaticRestart() {
+        return this.automaticRestart == null ? Output.empty() : this.automaticRestart;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class InstanceSchedulingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="minNodeCpus")
-      private final @Nullable Input<Integer> minNodeCpus;
+      private final @Nullable Output<Integer> minNodeCpus;
 
-    public Input<Integer> getMinNodeCpus() {
-        return this.minNodeCpus == null ? Input.empty() : this.minNodeCpus;
+    public Output<Integer> getMinNodeCpus() {
+        return this.minNodeCpus == null ? Output.empty() : this.minNodeCpus;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class InstanceSchedulingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="nodeAffinities")
-      private final @Nullable Input<List<InstanceSchedulingNodeAffinityArgs>> nodeAffinities;
+      private final @Nullable Output<List<InstanceSchedulingNodeAffinityArgs>> nodeAffinities;
 
-    public Input<List<InstanceSchedulingNodeAffinityArgs>> getNodeAffinities() {
-        return this.nodeAffinities == null ? Input.empty() : this.nodeAffinities;
+    public Output<List<InstanceSchedulingNodeAffinityArgs>> getNodeAffinities() {
+        return this.nodeAffinities == null ? Output.empty() : this.nodeAffinities;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class InstanceSchedulingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="onHostMaintenance")
-      private final @Nullable Input<String> onHostMaintenance;
+      private final @Nullable Output<String> onHostMaintenance;
 
-    public Input<String> getOnHostMaintenance() {
-        return this.onHostMaintenance == null ? Input.empty() : this.onHostMaintenance;
+    public Output<String> getOnHostMaintenance() {
+        return this.onHostMaintenance == null ? Output.empty() : this.onHostMaintenance;
     }
 
     /**
@@ -77,18 +77,18 @@ public final class InstanceSchedulingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="preemptible")
-      private final @Nullable Input<Boolean> preemptible;
+      private final @Nullable Output<Boolean> preemptible;
 
-    public Input<Boolean> getPreemptible() {
-        return this.preemptible == null ? Input.empty() : this.preemptible;
+    public Output<Boolean> getPreemptible() {
+        return this.preemptible == null ? Output.empty() : this.preemptible;
     }
 
     public InstanceSchedulingArgs(
-        @Nullable Input<Boolean> automaticRestart,
-        @Nullable Input<Integer> minNodeCpus,
-        @Nullable Input<List<InstanceSchedulingNodeAffinityArgs>> nodeAffinities,
-        @Nullable Input<String> onHostMaintenance,
-        @Nullable Input<Boolean> preemptible) {
+        @Nullable Output<Boolean> automaticRestart,
+        @Nullable Output<Integer> minNodeCpus,
+        @Nullable Output<List<InstanceSchedulingNodeAffinityArgs>> nodeAffinities,
+        @Nullable Output<String> onHostMaintenance,
+        @Nullable Output<Boolean> preemptible) {
         this.automaticRestart = automaticRestart;
         this.minNodeCpus = minNodeCpus;
         this.nodeAffinities = nodeAffinities;
@@ -97,11 +97,11 @@ public final class InstanceSchedulingArgs extends io.pulumi.resources.ResourceAr
     }
 
     private InstanceSchedulingArgs() {
-        this.automaticRestart = Input.empty();
-        this.minNodeCpus = Input.empty();
-        this.nodeAffinities = Input.empty();
-        this.onHostMaintenance = Input.empty();
-        this.preemptible = Input.empty();
+        this.automaticRestart = Output.empty();
+        this.minNodeCpus = Output.empty();
+        this.nodeAffinities = Output.empty();
+        this.onHostMaintenance = Output.empty();
+        this.preemptible = Output.empty();
     }
 
     public static Builder builder() {
@@ -113,11 +113,11 @@ public final class InstanceSchedulingArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> automaticRestart;
-        private @Nullable Input<Integer> minNodeCpus;
-        private @Nullable Input<List<InstanceSchedulingNodeAffinityArgs>> nodeAffinities;
-        private @Nullable Input<String> onHostMaintenance;
-        private @Nullable Input<Boolean> preemptible;
+        private @Nullable Output<Boolean> automaticRestart;
+        private @Nullable Output<Integer> minNodeCpus;
+        private @Nullable Output<List<InstanceSchedulingNodeAffinityArgs>> nodeAffinities;
+        private @Nullable Output<String> onHostMaintenance;
+        private @Nullable Output<Boolean> preemptible;
 
         public Builder() {
     	      // Empty
@@ -132,53 +132,53 @@ public final class InstanceSchedulingArgs extends io.pulumi.resources.ResourceAr
     	      this.preemptible = defaults.preemptible;
         }
 
-        public Builder automaticRestart(@Nullable Input<Boolean> automaticRestart) {
+        public Builder automaticRestart(@Nullable Output<Boolean> automaticRestart) {
             this.automaticRestart = automaticRestart;
             return this;
         }
 
         public Builder automaticRestart(@Nullable Boolean automaticRestart) {
-            this.automaticRestart = Input.ofNullable(automaticRestart);
+            this.automaticRestart = Output.ofNullable(automaticRestart);
             return this;
         }
 
-        public Builder minNodeCpus(@Nullable Input<Integer> minNodeCpus) {
+        public Builder minNodeCpus(@Nullable Output<Integer> minNodeCpus) {
             this.minNodeCpus = minNodeCpus;
             return this;
         }
 
         public Builder minNodeCpus(@Nullable Integer minNodeCpus) {
-            this.minNodeCpus = Input.ofNullable(minNodeCpus);
+            this.minNodeCpus = Output.ofNullable(minNodeCpus);
             return this;
         }
 
-        public Builder nodeAffinities(@Nullable Input<List<InstanceSchedulingNodeAffinityArgs>> nodeAffinities) {
+        public Builder nodeAffinities(@Nullable Output<List<InstanceSchedulingNodeAffinityArgs>> nodeAffinities) {
             this.nodeAffinities = nodeAffinities;
             return this;
         }
 
         public Builder nodeAffinities(@Nullable List<InstanceSchedulingNodeAffinityArgs> nodeAffinities) {
-            this.nodeAffinities = Input.ofNullable(nodeAffinities);
+            this.nodeAffinities = Output.ofNullable(nodeAffinities);
             return this;
         }
 
-        public Builder onHostMaintenance(@Nullable Input<String> onHostMaintenance) {
+        public Builder onHostMaintenance(@Nullable Output<String> onHostMaintenance) {
             this.onHostMaintenance = onHostMaintenance;
             return this;
         }
 
         public Builder onHostMaintenance(@Nullable String onHostMaintenance) {
-            this.onHostMaintenance = Input.ofNullable(onHostMaintenance);
+            this.onHostMaintenance = Output.ofNullable(onHostMaintenance);
             return this;
         }
 
-        public Builder preemptible(@Nullable Input<Boolean> preemptible) {
+        public Builder preemptible(@Nullable Output<Boolean> preemptible) {
             this.preemptible = preemptible;
             return this;
         }
 
         public Builder preemptible(@Nullable Boolean preemptible) {
-            this.preemptible = Input.ofNullable(preemptible);
+            this.preemptible = Output.ofNullable(preemptible);
             return this;
         }
         public InstanceSchedulingArgs build() {

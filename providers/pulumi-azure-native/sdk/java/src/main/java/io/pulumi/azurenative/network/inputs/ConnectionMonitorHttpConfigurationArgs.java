@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.enums.HTTPConfigurationMethod;
 import io.pulumi.azurenative.network.inputs.HTTPHeaderArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -29,10 +29,10 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="method")
-      private final @Nullable Input<Either<String,HTTPConfigurationMethod>> method;
+      private final @Nullable Output<Either<String,HTTPConfigurationMethod>> method;
 
-    public Input<Either<String,HTTPConfigurationMethod>> getMethod() {
-        return this.method == null ? Input.empty() : this.method;
+    public Output<Either<String,HTTPConfigurationMethod>> getMethod() {
+        return this.method == null ? Output.empty() : this.method;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="preferHTTPS")
-      private final @Nullable Input<Boolean> preferHTTPS;
+      private final @Nullable Output<Boolean> preferHTTPS;
 
-    public Input<Boolean> getPreferHTTPS() {
-        return this.preferHTTPS == null ? Input.empty() : this.preferHTTPS;
+    public Output<Boolean> getPreferHTTPS() {
+        return this.preferHTTPS == null ? Output.empty() : this.preferHTTPS;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="requestHeaders")
-      private final @Nullable Input<List<HTTPHeaderArgs>> requestHeaders;
+      private final @Nullable Output<List<HTTPHeaderArgs>> requestHeaders;
 
-    public Input<List<HTTPHeaderArgs>> getRequestHeaders() {
-        return this.requestHeaders == null ? Input.empty() : this.requestHeaders;
+    public Output<List<HTTPHeaderArgs>> getRequestHeaders() {
+        return this.requestHeaders == null ? Output.empty() : this.requestHeaders;
     }
 
     /**
@@ -84,19 +84,19 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="validStatusCodeRanges")
-      private final @Nullable Input<List<String>> validStatusCodeRanges;
+      private final @Nullable Output<List<String>> validStatusCodeRanges;
 
-    public Input<List<String>> getValidStatusCodeRanges() {
-        return this.validStatusCodeRanges == null ? Input.empty() : this.validStatusCodeRanges;
+    public Output<List<String>> getValidStatusCodeRanges() {
+        return this.validStatusCodeRanges == null ? Output.empty() : this.validStatusCodeRanges;
     }
 
     public ConnectionMonitorHttpConfigurationArgs(
-        @Nullable Input<Either<String,HTTPConfigurationMethod>> method,
-        @Nullable Input<String> path,
-        @Nullable Input<Integer> port,
-        @Nullable Input<Boolean> preferHTTPS,
-        @Nullable Input<List<HTTPHeaderArgs>> requestHeaders,
-        @Nullable Input<List<String>> validStatusCodeRanges) {
+        @Nullable Output<Either<String,HTTPConfigurationMethod>> method,
+        @Nullable Output<String> path,
+        @Nullable Output<Integer> port,
+        @Nullable Output<Boolean> preferHTTPS,
+        @Nullable Output<List<HTTPHeaderArgs>> requestHeaders,
+        @Nullable Output<List<String>> validStatusCodeRanges) {
         this.method = method;
         this.path = path;
         this.port = port;
@@ -106,12 +106,12 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
     }
 
     private ConnectionMonitorHttpConfigurationArgs() {
-        this.method = Input.empty();
-        this.path = Input.empty();
-        this.port = Input.empty();
-        this.preferHTTPS = Input.empty();
-        this.requestHeaders = Input.empty();
-        this.validStatusCodeRanges = Input.empty();
+        this.method = Output.empty();
+        this.path = Output.empty();
+        this.port = Output.empty();
+        this.preferHTTPS = Output.empty();
+        this.requestHeaders = Output.empty();
+        this.validStatusCodeRanges = Output.empty();
     }
 
     public static Builder builder() {
@@ -123,12 +123,12 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,HTTPConfigurationMethod>> method;
-        private @Nullable Input<String> path;
-        private @Nullable Input<Integer> port;
-        private @Nullable Input<Boolean> preferHTTPS;
-        private @Nullable Input<List<HTTPHeaderArgs>> requestHeaders;
-        private @Nullable Input<List<String>> validStatusCodeRanges;
+        private @Nullable Output<Either<String,HTTPConfigurationMethod>> method;
+        private @Nullable Output<String> path;
+        private @Nullable Output<Integer> port;
+        private @Nullable Output<Boolean> preferHTTPS;
+        private @Nullable Output<List<HTTPHeaderArgs>> requestHeaders;
+        private @Nullable Output<List<String>> validStatusCodeRanges;
 
         public Builder() {
     	      // Empty
@@ -144,63 +144,63 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
     	      this.validStatusCodeRanges = defaults.validStatusCodeRanges;
         }
 
-        public Builder method(@Nullable Input<Either<String,HTTPConfigurationMethod>> method) {
+        public Builder method(@Nullable Output<Either<String,HTTPConfigurationMethod>> method) {
             this.method = method;
             return this;
         }
 
         public Builder method(@Nullable Either<String,HTTPConfigurationMethod> method) {
-            this.method = Input.ofNullable(method);
+            this.method = Output.ofNullable(method);
             return this;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder preferHTTPS(@Nullable Input<Boolean> preferHTTPS) {
+        public Builder preferHTTPS(@Nullable Output<Boolean> preferHTTPS) {
             this.preferHTTPS = preferHTTPS;
             return this;
         }
 
         public Builder preferHTTPS(@Nullable Boolean preferHTTPS) {
-            this.preferHTTPS = Input.ofNullable(preferHTTPS);
+            this.preferHTTPS = Output.ofNullable(preferHTTPS);
             return this;
         }
 
-        public Builder requestHeaders(@Nullable Input<List<HTTPHeaderArgs>> requestHeaders) {
+        public Builder requestHeaders(@Nullable Output<List<HTTPHeaderArgs>> requestHeaders) {
             this.requestHeaders = requestHeaders;
             return this;
         }
 
         public Builder requestHeaders(@Nullable List<HTTPHeaderArgs> requestHeaders) {
-            this.requestHeaders = Input.ofNullable(requestHeaders);
+            this.requestHeaders = Output.ofNullable(requestHeaders);
             return this;
         }
 
-        public Builder validStatusCodeRanges(@Nullable Input<List<String>> validStatusCodeRanges) {
+        public Builder validStatusCodeRanges(@Nullable Output<List<String>> validStatusCodeRanges) {
             this.validStatusCodeRanges = validStatusCodeRanges;
             return this;
         }
 
         public Builder validStatusCodeRanges(@Nullable List<String> validStatusCodeRanges) {
-            this.validStatusCodeRanges = Input.ofNullable(validStatusCodeRanges);
+            this.validStatusCodeRanges = Output.ofNullable(validStatusCodeRanges);
             return this;
         }
         public ConnectionMonitorHttpConfigurationArgs build() {

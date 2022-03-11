@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class VpcEndpointServiceAllowedPrincipleState extends io.pulumi.res
      * 
      */
     @InputImport(name="principalArn")
-      private final @Nullable Input<String> principalArn;
+      private final @Nullable Output<String> principalArn;
 
-    public Input<String> getPrincipalArn() {
-        return this.principalArn == null ? Input.empty() : this.principalArn;
+    public Output<String> getPrincipalArn() {
+        return this.principalArn == null ? Output.empty() : this.principalArn;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class VpcEndpointServiceAllowedPrincipleState extends io.pulumi.res
      * 
      */
     @InputImport(name="vpcEndpointServiceId")
-      private final @Nullable Input<String> vpcEndpointServiceId;
+      private final @Nullable Output<String> vpcEndpointServiceId;
 
-    public Input<String> getVpcEndpointServiceId() {
-        return this.vpcEndpointServiceId == null ? Input.empty() : this.vpcEndpointServiceId;
+    public Output<String> getVpcEndpointServiceId() {
+        return this.vpcEndpointServiceId == null ? Output.empty() : this.vpcEndpointServiceId;
     }
 
     public VpcEndpointServiceAllowedPrincipleState(
-        @Nullable Input<String> principalArn,
-        @Nullable Input<String> vpcEndpointServiceId) {
+        @Nullable Output<String> principalArn,
+        @Nullable Output<String> vpcEndpointServiceId) {
         this.principalArn = principalArn;
         this.vpcEndpointServiceId = vpcEndpointServiceId;
     }
 
     private VpcEndpointServiceAllowedPrincipleState() {
-        this.principalArn = Input.empty();
-        this.vpcEndpointServiceId = Input.empty();
+        this.principalArn = Output.empty();
+        this.vpcEndpointServiceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class VpcEndpointServiceAllowedPrincipleState extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> principalArn;
-        private @Nullable Input<String> vpcEndpointServiceId;
+        private @Nullable Output<String> principalArn;
+        private @Nullable Output<String> vpcEndpointServiceId;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class VpcEndpointServiceAllowedPrincipleState extends io.pulumi.res
     	      this.vpcEndpointServiceId = defaults.vpcEndpointServiceId;
         }
 
-        public Builder principalArn(@Nullable Input<String> principalArn) {
+        public Builder principalArn(@Nullable Output<String> principalArn) {
             this.principalArn = principalArn;
             return this;
         }
 
         public Builder principalArn(@Nullable String principalArn) {
-            this.principalArn = Input.ofNullable(principalArn);
+            this.principalArn = Output.ofNullable(principalArn);
             return this;
         }
 
-        public Builder vpcEndpointServiceId(@Nullable Input<String> vpcEndpointServiceId) {
+        public Builder vpcEndpointServiceId(@Nullable Output<String> vpcEndpointServiceId) {
             this.vpcEndpointServiceId = vpcEndpointServiceId;
             return this;
         }
 
         public Builder vpcEndpointServiceId(@Nullable String vpcEndpointServiceId) {
-            this.vpcEndpointServiceId = Input.ofNullable(vpcEndpointServiceId);
+            this.vpcEndpointServiceId = Output.ofNullable(vpcEndpointServiceId);
             return this;
         }
         public VpcEndpointServiceAllowedPrincipleState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class DiskPoolVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpoints")
-      private final @Nullable Input<List<String>> endpoints;
+      private final @Nullable Output<List<String>> endpoints;
 
-    public Input<List<String>> getEndpoints() {
-        return this.endpoints == null ? Input.empty() : this.endpoints;
+    public Output<List<String>> getEndpoints() {
+        return this.endpoints == null ? Output.empty() : this.endpoints;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class DiskPoolVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lunName")
-      private final @Nullable Input<String> lunName;
+      private final @Nullable Output<String> lunName;
 
-    public Input<String> getLunName() {
-        return this.lunName == null ? Input.empty() : this.lunName;
+    public Output<String> getLunName() {
+        return this.lunName == null ? Output.empty() : this.lunName;
     }
 
     public DiskPoolVolumeArgs(
-        @Nullable Input<List<String>> endpoints,
-        @Nullable Input<String> lunName) {
+        @Nullable Output<List<String>> endpoints,
+        @Nullable Output<String> lunName) {
         this.endpoints = endpoints;
         this.lunName = lunName;
     }
 
     private DiskPoolVolumeArgs() {
-        this.endpoints = Input.empty();
-        this.lunName = Input.empty();
+        this.endpoints = Output.empty();
+        this.lunName = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class DiskPoolVolumeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> endpoints;
-        private @Nullable Input<String> lunName;
+        private @Nullable Output<List<String>> endpoints;
+        private @Nullable Output<String> lunName;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class DiskPoolVolumeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.lunName = defaults.lunName;
         }
 
-        public Builder endpoints(@Nullable Input<List<String>> endpoints) {
+        public Builder endpoints(@Nullable Output<List<String>> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
 
         public Builder endpoints(@Nullable List<String> endpoints) {
-            this.endpoints = Input.ofNullable(endpoints);
+            this.endpoints = Output.ofNullable(endpoints);
             return this;
         }
 
-        public Builder lunName(@Nullable Input<String> lunName) {
+        public Builder lunName(@Nullable Output<String> lunName) {
             this.lunName = lunName;
             return this;
         }
 
         public Builder lunName(@Nullable String lunName) {
-            this.lunName = Input.ofNullable(lunName);
+            this.lunName = Output.ofNullable(lunName);
             return this;
         }
         public DiskPoolVolumeArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class BucketNoncurrentVersionExpirationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="newerNoncurrentVersions")
-      private final @Nullable Input<Integer> newerNoncurrentVersions;
+      private final @Nullable Output<Integer> newerNoncurrentVersions;
 
-    public Input<Integer> getNewerNoncurrentVersions() {
-        return this.newerNoncurrentVersions == null ? Input.empty() : this.newerNoncurrentVersions;
+    public Output<Integer> getNewerNoncurrentVersions() {
+        return this.newerNoncurrentVersions == null ? Output.empty() : this.newerNoncurrentVersions;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class BucketNoncurrentVersionExpirationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="noncurrentDays", required=true)
-      private final Input<Integer> noncurrentDays;
+      private final Output<Integer> noncurrentDays;
 
-    public Input<Integer> getNoncurrentDays() {
+    public Output<Integer> getNoncurrentDays() {
         return this.noncurrentDays;
     }
 
     public BucketNoncurrentVersionExpirationArgs(
-        @Nullable Input<Integer> newerNoncurrentVersions,
-        Input<Integer> noncurrentDays) {
+        @Nullable Output<Integer> newerNoncurrentVersions,
+        Output<Integer> noncurrentDays) {
         this.newerNoncurrentVersions = newerNoncurrentVersions;
         this.noncurrentDays = Objects.requireNonNull(noncurrentDays, "expected parameter 'noncurrentDays' to be non-null");
     }
 
     private BucketNoncurrentVersionExpirationArgs() {
-        this.newerNoncurrentVersions = Input.empty();
-        this.noncurrentDays = Input.empty();
+        this.newerNoncurrentVersions = Output.empty();
+        this.noncurrentDays = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class BucketNoncurrentVersionExpirationArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> newerNoncurrentVersions;
-        private Input<Integer> noncurrentDays;
+        private @Nullable Output<Integer> newerNoncurrentVersions;
+        private Output<Integer> noncurrentDays;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class BucketNoncurrentVersionExpirationArgs extends io.pulumi.resou
     	      this.noncurrentDays = defaults.noncurrentDays;
         }
 
-        public Builder newerNoncurrentVersions(@Nullable Input<Integer> newerNoncurrentVersions) {
+        public Builder newerNoncurrentVersions(@Nullable Output<Integer> newerNoncurrentVersions) {
             this.newerNoncurrentVersions = newerNoncurrentVersions;
             return this;
         }
 
         public Builder newerNoncurrentVersions(@Nullable Integer newerNoncurrentVersions) {
-            this.newerNoncurrentVersions = Input.ofNullable(newerNoncurrentVersions);
+            this.newerNoncurrentVersions = Output.ofNullable(newerNoncurrentVersions);
             return this;
         }
 
-        public Builder noncurrentDays(Input<Integer> noncurrentDays) {
+        public Builder noncurrentDays(Output<Integer> noncurrentDays) {
             this.noncurrentDays = Objects.requireNonNull(noncurrentDays);
             return this;
         }
 
         public Builder noncurrentDays(Integer noncurrentDays) {
-            this.noncurrentDays = Input.of(Objects.requireNonNull(noncurrentDays));
+            this.noncurrentDays = Output.of(Objects.requireNonNull(noncurrentDays));
             return this;
         }
         public BucketNoncurrentVersionExpirationArgs build() {

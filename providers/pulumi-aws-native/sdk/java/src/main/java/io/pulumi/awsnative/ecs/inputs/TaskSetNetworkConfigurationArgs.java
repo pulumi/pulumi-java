@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.awsnative.ecs.inputs.TaskSetAwsVpcConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class TaskSetNetworkConfigurationArgs extends io.pulumi.resources.R
     public static final TaskSetNetworkConfigurationArgs Empty = new TaskSetNetworkConfigurationArgs();
 
     @InputImport(name="awsVpcConfiguration")
-      private final @Nullable Input<TaskSetAwsVpcConfigurationArgs> awsVpcConfiguration;
+      private final @Nullable Output<TaskSetAwsVpcConfigurationArgs> awsVpcConfiguration;
 
-    public Input<TaskSetAwsVpcConfigurationArgs> getAwsVpcConfiguration() {
-        return this.awsVpcConfiguration == null ? Input.empty() : this.awsVpcConfiguration;
+    public Output<TaskSetAwsVpcConfigurationArgs> getAwsVpcConfiguration() {
+        return this.awsVpcConfiguration == null ? Output.empty() : this.awsVpcConfiguration;
     }
 
-    public TaskSetNetworkConfigurationArgs(@Nullable Input<TaskSetAwsVpcConfigurationArgs> awsVpcConfiguration) {
+    public TaskSetNetworkConfigurationArgs(@Nullable Output<TaskSetAwsVpcConfigurationArgs> awsVpcConfiguration) {
         this.awsVpcConfiguration = awsVpcConfiguration;
     }
 
     private TaskSetNetworkConfigurationArgs() {
-        this.awsVpcConfiguration = Input.empty();
+        this.awsVpcConfiguration = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class TaskSetNetworkConfigurationArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<TaskSetAwsVpcConfigurationArgs> awsVpcConfiguration;
+        private @Nullable Output<TaskSetAwsVpcConfigurationArgs> awsVpcConfiguration;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class TaskSetNetworkConfigurationArgs extends io.pulumi.resources.R
     	      this.awsVpcConfiguration = defaults.awsVpcConfiguration;
         }
 
-        public Builder awsVpcConfiguration(@Nullable Input<TaskSetAwsVpcConfigurationArgs> awsVpcConfiguration) {
+        public Builder awsVpcConfiguration(@Nullable Output<TaskSetAwsVpcConfigurationArgs> awsVpcConfiguration) {
             this.awsVpcConfiguration = awsVpcConfiguration;
             return this;
         }
 
         public Builder awsVpcConfiguration(@Nullable TaskSetAwsVpcConfigurationArgs awsVpcConfiguration) {
-            this.awsVpcConfiguration = Input.ofNullable(awsVpcConfiguration);
+            this.awsVpcConfiguration = Output.ofNullable(awsVpcConfiguration);
             return this;
         }
         public TaskSetNetworkConfigurationArgs build() {

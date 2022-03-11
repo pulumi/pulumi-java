@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.monitoring.inputs.AlertPolicyAlertStrategyNotificationRateLimitArgs;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class AlertPolicyAlertStrategyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="autoClose")
-      private final @Nullable Input<String> autoClose;
+      private final @Nullable Output<String> autoClose;
 
-    public Input<String> getAutoClose() {
-        return this.autoClose == null ? Input.empty() : this.autoClose;
+    public Output<String> getAutoClose() {
+        return this.autoClose == null ? Output.empty() : this.autoClose;
     }
 
     /**
@@ -33,22 +33,22 @@ public final class AlertPolicyAlertStrategyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="notificationRateLimit")
-      private final @Nullable Input<AlertPolicyAlertStrategyNotificationRateLimitArgs> notificationRateLimit;
+      private final @Nullable Output<AlertPolicyAlertStrategyNotificationRateLimitArgs> notificationRateLimit;
 
-    public Input<AlertPolicyAlertStrategyNotificationRateLimitArgs> getNotificationRateLimit() {
-        return this.notificationRateLimit == null ? Input.empty() : this.notificationRateLimit;
+    public Output<AlertPolicyAlertStrategyNotificationRateLimitArgs> getNotificationRateLimit() {
+        return this.notificationRateLimit == null ? Output.empty() : this.notificationRateLimit;
     }
 
     public AlertPolicyAlertStrategyArgs(
-        @Nullable Input<String> autoClose,
-        @Nullable Input<AlertPolicyAlertStrategyNotificationRateLimitArgs> notificationRateLimit) {
+        @Nullable Output<String> autoClose,
+        @Nullable Output<AlertPolicyAlertStrategyNotificationRateLimitArgs> notificationRateLimit) {
         this.autoClose = autoClose;
         this.notificationRateLimit = notificationRateLimit;
     }
 
     private AlertPolicyAlertStrategyArgs() {
-        this.autoClose = Input.empty();
-        this.notificationRateLimit = Input.empty();
+        this.autoClose = Output.empty();
+        this.notificationRateLimit = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class AlertPolicyAlertStrategyArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> autoClose;
-        private @Nullable Input<AlertPolicyAlertStrategyNotificationRateLimitArgs> notificationRateLimit;
+        private @Nullable Output<String> autoClose;
+        private @Nullable Output<AlertPolicyAlertStrategyNotificationRateLimitArgs> notificationRateLimit;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class AlertPolicyAlertStrategyArgs extends io.pulumi.resources.Reso
     	      this.notificationRateLimit = defaults.notificationRateLimit;
         }
 
-        public Builder autoClose(@Nullable Input<String> autoClose) {
+        public Builder autoClose(@Nullable Output<String> autoClose) {
             this.autoClose = autoClose;
             return this;
         }
 
         public Builder autoClose(@Nullable String autoClose) {
-            this.autoClose = Input.ofNullable(autoClose);
+            this.autoClose = Output.ofNullable(autoClose);
             return this;
         }
 
-        public Builder notificationRateLimit(@Nullable Input<AlertPolicyAlertStrategyNotificationRateLimitArgs> notificationRateLimit) {
+        public Builder notificationRateLimit(@Nullable Output<AlertPolicyAlertStrategyNotificationRateLimitArgs> notificationRateLimit) {
             this.notificationRateLimit = notificationRateLimit;
             return this;
         }
 
         public Builder notificationRateLimit(@Nullable AlertPolicyAlertStrategyNotificationRateLimitArgs notificationRateLimit) {
-            this.notificationRateLimit = Input.ofNullable(notificationRateLimit);
+            this.notificationRateLimit = Output.ofNullable(notificationRateLimit);
             return this;
         }
         public AlertPolicyAlertStrategyArgs build() {

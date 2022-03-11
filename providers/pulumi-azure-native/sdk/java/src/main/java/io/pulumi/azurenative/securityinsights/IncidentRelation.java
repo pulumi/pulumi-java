@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.securityinsights.IncidentRelationArgs;
 import io.pulumi.azurenative.securityinsights.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -183,21 +182,21 @@ public class IncidentRelation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IncidentRelation(String name, IncidentRelationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:securityinsights:IncidentRelation", name, args == null ? IncidentRelationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:securityinsights:IncidentRelation", name, args == null ? IncidentRelationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private IncidentRelation(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private IncidentRelation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:securityinsights:IncidentRelation", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:securityinsights/v20190101preview:IncidentRelation").build()),
-                Input.of(Alias.builder().setType("azure-native:securityinsights/v20210301preview:IncidentRelation").build()),
-                Input.of(Alias.builder().setType("azure-native:securityinsights/v20210401:IncidentRelation").build()),
-                Input.of(Alias.builder().setType("azure-native:securityinsights/v20210901preview:IncidentRelation").build())
+                Output.of(Alias.builder().setType("azure-native:securityinsights/v20190101preview:IncidentRelation").build()),
+                Output.of(Alias.builder().setType("azure-native:securityinsights/v20210301preview:IncidentRelation").build()),
+                Output.of(Alias.builder().setType("azure-native:securityinsights/v20210401:IncidentRelation").build()),
+                Output.of(Alias.builder().setType("azure-native:securityinsights/v20210901preview:IncidentRelation").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -211,7 +210,7 @@ public class IncidentRelation extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static IncidentRelation get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static IncidentRelation get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IncidentRelation(name, id, options);
     }
 }

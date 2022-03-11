@@ -6,7 +6,7 @@ package io.pulumi.azurenative.storage.inputs;
 import io.pulumi.azurenative.storage.enums.DirectoryServiceOptions;
 import io.pulumi.azurenative.storage.inputs.ActiveDirectoryPropertiesArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class AzureFilesIdentityBasedAuthenticationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="activeDirectoryProperties")
-      private final @Nullable Input<ActiveDirectoryPropertiesArgs> activeDirectoryProperties;
+      private final @Nullable Output<ActiveDirectoryPropertiesArgs> activeDirectoryProperties;
 
-    public Input<ActiveDirectoryPropertiesArgs> getActiveDirectoryProperties() {
-        return this.activeDirectoryProperties == null ? Input.empty() : this.activeDirectoryProperties;
+    public Output<ActiveDirectoryPropertiesArgs> getActiveDirectoryProperties() {
+        return this.activeDirectoryProperties == null ? Output.empty() : this.activeDirectoryProperties;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class AzureFilesIdentityBasedAuthenticationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="directoryServiceOptions", required=true)
-      private final Input<Either<String,DirectoryServiceOptions>> directoryServiceOptions;
+      private final Output<Either<String,DirectoryServiceOptions>> directoryServiceOptions;
 
-    public Input<Either<String,DirectoryServiceOptions>> getDirectoryServiceOptions() {
+    public Output<Either<String,DirectoryServiceOptions>> getDirectoryServiceOptions() {
         return this.directoryServiceOptions;
     }
 
     public AzureFilesIdentityBasedAuthenticationArgs(
-        @Nullable Input<ActiveDirectoryPropertiesArgs> activeDirectoryProperties,
-        Input<Either<String,DirectoryServiceOptions>> directoryServiceOptions) {
+        @Nullable Output<ActiveDirectoryPropertiesArgs> activeDirectoryProperties,
+        Output<Either<String,DirectoryServiceOptions>> directoryServiceOptions) {
         this.activeDirectoryProperties = activeDirectoryProperties;
         this.directoryServiceOptions = Objects.requireNonNull(directoryServiceOptions, "expected parameter 'directoryServiceOptions' to be non-null");
     }
 
     private AzureFilesIdentityBasedAuthenticationArgs() {
-        this.activeDirectoryProperties = Input.empty();
-        this.directoryServiceOptions = Input.empty();
+        this.activeDirectoryProperties = Output.empty();
+        this.directoryServiceOptions = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class AzureFilesIdentityBasedAuthenticationArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<ActiveDirectoryPropertiesArgs> activeDirectoryProperties;
-        private Input<Either<String,DirectoryServiceOptions>> directoryServiceOptions;
+        private @Nullable Output<ActiveDirectoryPropertiesArgs> activeDirectoryProperties;
+        private Output<Either<String,DirectoryServiceOptions>> directoryServiceOptions;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class AzureFilesIdentityBasedAuthenticationArgs extends io.pulumi.r
     	      this.directoryServiceOptions = defaults.directoryServiceOptions;
         }
 
-        public Builder activeDirectoryProperties(@Nullable Input<ActiveDirectoryPropertiesArgs> activeDirectoryProperties) {
+        public Builder activeDirectoryProperties(@Nullable Output<ActiveDirectoryPropertiesArgs> activeDirectoryProperties) {
             this.activeDirectoryProperties = activeDirectoryProperties;
             return this;
         }
 
         public Builder activeDirectoryProperties(@Nullable ActiveDirectoryPropertiesArgs activeDirectoryProperties) {
-            this.activeDirectoryProperties = Input.ofNullable(activeDirectoryProperties);
+            this.activeDirectoryProperties = Output.ofNullable(activeDirectoryProperties);
             return this;
         }
 
-        public Builder directoryServiceOptions(Input<Either<String,DirectoryServiceOptions>> directoryServiceOptions) {
+        public Builder directoryServiceOptions(Output<Either<String,DirectoryServiceOptions>> directoryServiceOptions) {
             this.directoryServiceOptions = Objects.requireNonNull(directoryServiceOptions);
             return this;
         }
 
         public Builder directoryServiceOptions(Either<String,DirectoryServiceOptions> directoryServiceOptions) {
-            this.directoryServiceOptions = Input.of(Objects.requireNonNull(directoryServiceOptions));
+            this.directoryServiceOptions = Output.of(Objects.requireNonNull(directoryServiceOptions));
             return this;
         }
         public AzureFilesIdentityBasedAuthenticationArgs build() {

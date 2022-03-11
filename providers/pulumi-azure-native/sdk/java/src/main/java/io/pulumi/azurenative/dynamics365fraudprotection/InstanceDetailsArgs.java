@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.dynamics365fraudprotection;
 
 import io.pulumi.azurenative.dynamics365fraudprotection.inputs.DFPInstanceAdministratorsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class InstanceDetailsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="administration")
-      private final @Nullable Input<DFPInstanceAdministratorsArgs> administration;
+      private final @Nullable Output<DFPInstanceAdministratorsArgs> administration;
 
-    public Input<DFPInstanceAdministratorsArgs> getAdministration() {
-        return this.administration == null ? Input.empty() : this.administration;
+    public Output<DFPInstanceAdministratorsArgs> getAdministration() {
+        return this.administration == null ? Output.empty() : this.administration;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class InstanceDetailsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="instanceName")
-      private final @Nullable Input<String> instanceName;
+      private final @Nullable Output<String> instanceName;
 
-    public Input<String> getInstanceName() {
-        return this.instanceName == null ? Input.empty() : this.instanceName;
+    public Output<String> getInstanceName() {
+        return this.instanceName == null ? Output.empty() : this.instanceName;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class InstanceDetailsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -54,9 +54,9 @@ public final class InstanceDetailsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -65,18 +65,18 @@ public final class InstanceDetailsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public InstanceDetailsArgs(
-        @Nullable Input<DFPInstanceAdministratorsArgs> administration,
-        @Nullable Input<String> instanceName,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<DFPInstanceAdministratorsArgs> administration,
+        @Nullable Output<String> instanceName,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.administration = administration;
         this.instanceName = instanceName;
         this.location = location;
@@ -85,11 +85,11 @@ public final class InstanceDetailsArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private InstanceDetailsArgs() {
-        this.administration = Input.empty();
-        this.instanceName = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.administration = Output.empty();
+        this.instanceName = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class InstanceDetailsArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<DFPInstanceAdministratorsArgs> administration;
-        private @Nullable Input<String> instanceName;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<DFPInstanceAdministratorsArgs> administration;
+        private @Nullable Output<String> instanceName;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class InstanceDetailsArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tags = defaults.tags;
         }
 
-        public Builder administration(@Nullable Input<DFPInstanceAdministratorsArgs> administration) {
+        public Builder administration(@Nullable Output<DFPInstanceAdministratorsArgs> administration) {
             this.administration = administration;
             return this;
         }
 
         public Builder administration(@Nullable DFPInstanceAdministratorsArgs administration) {
-            this.administration = Input.ofNullable(administration);
+            this.administration = Output.ofNullable(administration);
             return this;
         }
 
-        public Builder instanceName(@Nullable Input<String> instanceName) {
+        public Builder instanceName(@Nullable Output<String> instanceName) {
             this.instanceName = instanceName;
             return this;
         }
 
         public Builder instanceName(@Nullable String instanceName) {
-            this.instanceName = Input.ofNullable(instanceName);
+            this.instanceName = Output.ofNullable(instanceName);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public InstanceDetailsArgs build() {

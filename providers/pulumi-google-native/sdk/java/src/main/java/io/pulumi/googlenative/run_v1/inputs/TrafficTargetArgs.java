@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class TrafficTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configurationName")
-      private final @Nullable Input<String> configurationName;
+      private final @Nullable Output<String> configurationName;
 
-    public Input<String> getConfigurationName() {
-        return this.configurationName == null ? Input.empty() : this.configurationName;
+    public Output<String> getConfigurationName() {
+        return this.configurationName == null ? Output.empty() : this.configurationName;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class TrafficTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="latestRevision")
-      private final @Nullable Input<Boolean> latestRevision;
+      private final @Nullable Output<Boolean> latestRevision;
 
-    public Input<Boolean> getLatestRevision() {
-        return this.latestRevision == null ? Input.empty() : this.latestRevision;
+    public Output<Boolean> getLatestRevision() {
+        return this.latestRevision == null ? Output.empty() : this.latestRevision;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class TrafficTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="percent")
-      private final @Nullable Input<Integer> percent;
+      private final @Nullable Output<Integer> percent;
 
-    public Input<Integer> getPercent() {
-        return this.percent == null ? Input.empty() : this.percent;
+    public Output<Integer> getPercent() {
+        return this.percent == null ? Output.empty() : this.percent;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class TrafficTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="revisionName")
-      private final @Nullable Input<String> revisionName;
+      private final @Nullable Output<String> revisionName;
 
-    public Input<String> getRevisionName() {
-        return this.revisionName == null ? Input.empty() : this.revisionName;
+    public Output<String> getRevisionName() {
+        return this.revisionName == null ? Output.empty() : this.revisionName;
     }
 
     /**
@@ -69,18 +69,18 @@ public final class TrafficTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tag")
-      private final @Nullable Input<String> tag;
+      private final @Nullable Output<String> tag;
 
-    public Input<String> getTag() {
-        return this.tag == null ? Input.empty() : this.tag;
+    public Output<String> getTag() {
+        return this.tag == null ? Output.empty() : this.tag;
     }
 
     public TrafficTargetArgs(
-        @Nullable Input<String> configurationName,
-        @Nullable Input<Boolean> latestRevision,
-        @Nullable Input<Integer> percent,
-        @Nullable Input<String> revisionName,
-        @Nullable Input<String> tag) {
+        @Nullable Output<String> configurationName,
+        @Nullable Output<Boolean> latestRevision,
+        @Nullable Output<Integer> percent,
+        @Nullable Output<String> revisionName,
+        @Nullable Output<String> tag) {
         this.configurationName = configurationName;
         this.latestRevision = latestRevision;
         this.percent = percent;
@@ -89,11 +89,11 @@ public final class TrafficTargetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TrafficTargetArgs() {
-        this.configurationName = Input.empty();
-        this.latestRevision = Input.empty();
-        this.percent = Input.empty();
-        this.revisionName = Input.empty();
-        this.tag = Input.empty();
+        this.configurationName = Output.empty();
+        this.latestRevision = Output.empty();
+        this.percent = Output.empty();
+        this.revisionName = Output.empty();
+        this.tag = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class TrafficTargetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> configurationName;
-        private @Nullable Input<Boolean> latestRevision;
-        private @Nullable Input<Integer> percent;
-        private @Nullable Input<String> revisionName;
-        private @Nullable Input<String> tag;
+        private @Nullable Output<String> configurationName;
+        private @Nullable Output<Boolean> latestRevision;
+        private @Nullable Output<Integer> percent;
+        private @Nullable Output<String> revisionName;
+        private @Nullable Output<String> tag;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class TrafficTargetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tag = defaults.tag;
         }
 
-        public Builder configurationName(@Nullable Input<String> configurationName) {
+        public Builder configurationName(@Nullable Output<String> configurationName) {
             this.configurationName = configurationName;
             return this;
         }
 
         public Builder configurationName(@Nullable String configurationName) {
-            this.configurationName = Input.ofNullable(configurationName);
+            this.configurationName = Output.ofNullable(configurationName);
             return this;
         }
 
-        public Builder latestRevision(@Nullable Input<Boolean> latestRevision) {
+        public Builder latestRevision(@Nullable Output<Boolean> latestRevision) {
             this.latestRevision = latestRevision;
             return this;
         }
 
         public Builder latestRevision(@Nullable Boolean latestRevision) {
-            this.latestRevision = Input.ofNullable(latestRevision);
+            this.latestRevision = Output.ofNullable(latestRevision);
             return this;
         }
 
-        public Builder percent(@Nullable Input<Integer> percent) {
+        public Builder percent(@Nullable Output<Integer> percent) {
             this.percent = percent;
             return this;
         }
 
         public Builder percent(@Nullable Integer percent) {
-            this.percent = Input.ofNullable(percent);
+            this.percent = Output.ofNullable(percent);
             return this;
         }
 
-        public Builder revisionName(@Nullable Input<String> revisionName) {
+        public Builder revisionName(@Nullable Output<String> revisionName) {
             this.revisionName = revisionName;
             return this;
         }
 
         public Builder revisionName(@Nullable String revisionName) {
-            this.revisionName = Input.ofNullable(revisionName);
+            this.revisionName = Output.ofNullable(revisionName);
             return this;
         }
 
-        public Builder tag(@Nullable Input<String> tag) {
+        public Builder tag(@Nullable Output<String> tag) {
             this.tag = tag;
             return this;
         }
 
         public Builder tag(@Nullable String tag) {
-            this.tag = Input.ofNullable(tag);
+            this.tag = Output.ofNullable(tag);
             return this;
         }
         public TrafficTargetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.applicationinsights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class ApplicationHANAPrometheusExporterArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="agreeToInstallHANADBClient", required=true)
-      private final Input<Boolean> agreeToInstallHANADBClient;
+      private final Output<Boolean> agreeToInstallHANADBClient;
 
-    public Input<Boolean> getAgreeToInstallHANADBClient() {
+    public Output<Boolean> getAgreeToInstallHANADBClient() {
         return this.agreeToInstallHANADBClient;
     }
 
@@ -35,9 +35,9 @@ public final class ApplicationHANAPrometheusExporterArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="hANAPort", required=true)
-      private final Input<String> hANAPort;
+      private final Output<String> hANAPort;
 
-    public Input<String> getHANAPort() {
+    public Output<String> getHANAPort() {
         return this.hANAPort;
     }
 
@@ -46,9 +46,9 @@ public final class ApplicationHANAPrometheusExporterArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="hANASID", required=true)
-      private final Input<String> hANASID;
+      private final Output<String> hANASID;
 
-    public Input<String> getHANASID() {
+    public Output<String> getHANASID() {
         return this.hANASID;
     }
 
@@ -60,9 +60,9 @@ public final class ApplicationHANAPrometheusExporterArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="hANASecretName", required=true)
-      private final Input<String> hANASecretName;
+      private final Output<String> hANASecretName;
 
-    public Input<String> getHANASecretName() {
+    public Output<String> getHANASecretName() {
         return this.hANASecretName;
     }
 
@@ -71,18 +71,18 @@ public final class ApplicationHANAPrometheusExporterArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="prometheusPort")
-      private final @Nullable Input<String> prometheusPort;
+      private final @Nullable Output<String> prometheusPort;
 
-    public Input<String> getPrometheusPort() {
-        return this.prometheusPort == null ? Input.empty() : this.prometheusPort;
+    public Output<String> getPrometheusPort() {
+        return this.prometheusPort == null ? Output.empty() : this.prometheusPort;
     }
 
     public ApplicationHANAPrometheusExporterArgs(
-        Input<Boolean> agreeToInstallHANADBClient,
-        Input<String> hANAPort,
-        Input<String> hANASID,
-        Input<String> hANASecretName,
-        @Nullable Input<String> prometheusPort) {
+        Output<Boolean> agreeToInstallHANADBClient,
+        Output<String> hANAPort,
+        Output<String> hANASID,
+        Output<String> hANASecretName,
+        @Nullable Output<String> prometheusPort) {
         this.agreeToInstallHANADBClient = Objects.requireNonNull(agreeToInstallHANADBClient, "expected parameter 'agreeToInstallHANADBClient' to be non-null");
         this.hANAPort = Objects.requireNonNull(hANAPort, "expected parameter 'hANAPort' to be non-null");
         this.hANASID = Objects.requireNonNull(hANASID, "expected parameter 'hANASID' to be non-null");
@@ -91,11 +91,11 @@ public final class ApplicationHANAPrometheusExporterArgs extends io.pulumi.resou
     }
 
     private ApplicationHANAPrometheusExporterArgs() {
-        this.agreeToInstallHANADBClient = Input.empty();
-        this.hANAPort = Input.empty();
-        this.hANASID = Input.empty();
-        this.hANASecretName = Input.empty();
-        this.prometheusPort = Input.empty();
+        this.agreeToInstallHANADBClient = Output.empty();
+        this.hANAPort = Output.empty();
+        this.hANASID = Output.empty();
+        this.hANASecretName = Output.empty();
+        this.prometheusPort = Output.empty();
     }
 
     public static Builder builder() {
@@ -107,11 +107,11 @@ public final class ApplicationHANAPrometheusExporterArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private Input<Boolean> agreeToInstallHANADBClient;
-        private Input<String> hANAPort;
-        private Input<String> hANASID;
-        private Input<String> hANASecretName;
-        private @Nullable Input<String> prometheusPort;
+        private Output<Boolean> agreeToInstallHANADBClient;
+        private Output<String> hANAPort;
+        private Output<String> hANASID;
+        private Output<String> hANASecretName;
+        private @Nullable Output<String> prometheusPort;
 
         public Builder() {
     	      // Empty
@@ -126,53 +126,53 @@ public final class ApplicationHANAPrometheusExporterArgs extends io.pulumi.resou
     	      this.prometheusPort = defaults.prometheusPort;
         }
 
-        public Builder agreeToInstallHANADBClient(Input<Boolean> agreeToInstallHANADBClient) {
+        public Builder agreeToInstallHANADBClient(Output<Boolean> agreeToInstallHANADBClient) {
             this.agreeToInstallHANADBClient = Objects.requireNonNull(agreeToInstallHANADBClient);
             return this;
         }
 
         public Builder agreeToInstallHANADBClient(Boolean agreeToInstallHANADBClient) {
-            this.agreeToInstallHANADBClient = Input.of(Objects.requireNonNull(agreeToInstallHANADBClient));
+            this.agreeToInstallHANADBClient = Output.of(Objects.requireNonNull(agreeToInstallHANADBClient));
             return this;
         }
 
-        public Builder hANAPort(Input<String> hANAPort) {
+        public Builder hANAPort(Output<String> hANAPort) {
             this.hANAPort = Objects.requireNonNull(hANAPort);
             return this;
         }
 
         public Builder hANAPort(String hANAPort) {
-            this.hANAPort = Input.of(Objects.requireNonNull(hANAPort));
+            this.hANAPort = Output.of(Objects.requireNonNull(hANAPort));
             return this;
         }
 
-        public Builder hANASID(Input<String> hANASID) {
+        public Builder hANASID(Output<String> hANASID) {
             this.hANASID = Objects.requireNonNull(hANASID);
             return this;
         }
 
         public Builder hANASID(String hANASID) {
-            this.hANASID = Input.of(Objects.requireNonNull(hANASID));
+            this.hANASID = Output.of(Objects.requireNonNull(hANASID));
             return this;
         }
 
-        public Builder hANASecretName(Input<String> hANASecretName) {
+        public Builder hANASecretName(Output<String> hANASecretName) {
             this.hANASecretName = Objects.requireNonNull(hANASecretName);
             return this;
         }
 
         public Builder hANASecretName(String hANASecretName) {
-            this.hANASecretName = Input.of(Objects.requireNonNull(hANASecretName));
+            this.hANASecretName = Output.of(Objects.requireNonNull(hANASecretName));
             return this;
         }
 
-        public Builder prometheusPort(@Nullable Input<String> prometheusPort) {
+        public Builder prometheusPort(@Nullable Output<String> prometheusPort) {
             this.prometheusPort = prometheusPort;
             return this;
         }
 
         public Builder prometheusPort(@Nullable String prometheusPort) {
-            this.prometheusPort = Input.ofNullable(prometheusPort);
+            this.prometheusPort = Output.ofNullable(prometheusPort);
             return this;
         }
         public ApplicationHANAPrometheusExporterArgs build() {

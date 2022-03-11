@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.AS2ProtocolSettingsArgs;
 import io.pulumi.azurenative.logic.inputs.BusinessIdentityArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -23,9 +23,9 @@ public final class AS2OneWayAgreementArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="protocolSettings", required=true)
-      private final Input<AS2ProtocolSettingsArgs> protocolSettings;
+      private final Output<AS2ProtocolSettingsArgs> protocolSettings;
 
-    public Input<AS2ProtocolSettingsArgs> getProtocolSettings() {
+    public Output<AS2ProtocolSettingsArgs> getProtocolSettings() {
         return this.protocolSettings;
     }
 
@@ -34,9 +34,9 @@ public final class AS2OneWayAgreementArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="receiverBusinessIdentity", required=true)
-      private final Input<BusinessIdentityArgs> receiverBusinessIdentity;
+      private final Output<BusinessIdentityArgs> receiverBusinessIdentity;
 
-    public Input<BusinessIdentityArgs> getReceiverBusinessIdentity() {
+    public Output<BusinessIdentityArgs> getReceiverBusinessIdentity() {
         return this.receiverBusinessIdentity;
     }
 
@@ -45,25 +45,25 @@ public final class AS2OneWayAgreementArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="senderBusinessIdentity", required=true)
-      private final Input<BusinessIdentityArgs> senderBusinessIdentity;
+      private final Output<BusinessIdentityArgs> senderBusinessIdentity;
 
-    public Input<BusinessIdentityArgs> getSenderBusinessIdentity() {
+    public Output<BusinessIdentityArgs> getSenderBusinessIdentity() {
         return this.senderBusinessIdentity;
     }
 
     public AS2OneWayAgreementArgs(
-        Input<AS2ProtocolSettingsArgs> protocolSettings,
-        Input<BusinessIdentityArgs> receiverBusinessIdentity,
-        Input<BusinessIdentityArgs> senderBusinessIdentity) {
+        Output<AS2ProtocolSettingsArgs> protocolSettings,
+        Output<BusinessIdentityArgs> receiverBusinessIdentity,
+        Output<BusinessIdentityArgs> senderBusinessIdentity) {
         this.protocolSettings = Objects.requireNonNull(protocolSettings, "expected parameter 'protocolSettings' to be non-null");
         this.receiverBusinessIdentity = Objects.requireNonNull(receiverBusinessIdentity, "expected parameter 'receiverBusinessIdentity' to be non-null");
         this.senderBusinessIdentity = Objects.requireNonNull(senderBusinessIdentity, "expected parameter 'senderBusinessIdentity' to be non-null");
     }
 
     private AS2OneWayAgreementArgs() {
-        this.protocolSettings = Input.empty();
-        this.receiverBusinessIdentity = Input.empty();
-        this.senderBusinessIdentity = Input.empty();
+        this.protocolSettings = Output.empty();
+        this.receiverBusinessIdentity = Output.empty();
+        this.senderBusinessIdentity = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class AS2OneWayAgreementArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<AS2ProtocolSettingsArgs> protocolSettings;
-        private Input<BusinessIdentityArgs> receiverBusinessIdentity;
-        private Input<BusinessIdentityArgs> senderBusinessIdentity;
+        private Output<AS2ProtocolSettingsArgs> protocolSettings;
+        private Output<BusinessIdentityArgs> receiverBusinessIdentity;
+        private Output<BusinessIdentityArgs> senderBusinessIdentity;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class AS2OneWayAgreementArgs extends io.pulumi.resources.ResourceAr
     	      this.senderBusinessIdentity = defaults.senderBusinessIdentity;
         }
 
-        public Builder protocolSettings(Input<AS2ProtocolSettingsArgs> protocolSettings) {
+        public Builder protocolSettings(Output<AS2ProtocolSettingsArgs> protocolSettings) {
             this.protocolSettings = Objects.requireNonNull(protocolSettings);
             return this;
         }
 
         public Builder protocolSettings(AS2ProtocolSettingsArgs protocolSettings) {
-            this.protocolSettings = Input.of(Objects.requireNonNull(protocolSettings));
+            this.protocolSettings = Output.of(Objects.requireNonNull(protocolSettings));
             return this;
         }
 
-        public Builder receiverBusinessIdentity(Input<BusinessIdentityArgs> receiverBusinessIdentity) {
+        public Builder receiverBusinessIdentity(Output<BusinessIdentityArgs> receiverBusinessIdentity) {
             this.receiverBusinessIdentity = Objects.requireNonNull(receiverBusinessIdentity);
             return this;
         }
 
         public Builder receiverBusinessIdentity(BusinessIdentityArgs receiverBusinessIdentity) {
-            this.receiverBusinessIdentity = Input.of(Objects.requireNonNull(receiverBusinessIdentity));
+            this.receiverBusinessIdentity = Output.of(Objects.requireNonNull(receiverBusinessIdentity));
             return this;
         }
 
-        public Builder senderBusinessIdentity(Input<BusinessIdentityArgs> senderBusinessIdentity) {
+        public Builder senderBusinessIdentity(Output<BusinessIdentityArgs> senderBusinessIdentity) {
             this.senderBusinessIdentity = Objects.requireNonNull(senderBusinessIdentity);
             return this;
         }
 
         public Builder senderBusinessIdentity(BusinessIdentityArgs senderBusinessIdentity) {
-            this.senderBusinessIdentity = Input.of(Objects.requireNonNull(senderBusinessIdentity));
+            this.senderBusinessIdentity = Output.of(Objects.requireNonNull(senderBusinessIdentity));
             return this;
         }
         public AS2OneWayAgreementArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class IpAddressRangeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addressRange")
-      private final @Nullable Input<String> addressRange;
+      private final @Nullable Output<String> addressRange;
 
-    public Input<String> getAddressRange() {
-        return this.addressRange == null ? Input.empty() : this.addressRange;
+    public Output<String> getAddressRange() {
+        return this.addressRange == null ? Output.empty() : this.addressRange;
     }
 
-    public IpAddressRangeArgs(@Nullable Input<String> addressRange) {
+    public IpAddressRangeArgs(@Nullable Output<String> addressRange) {
         this.addressRange = addressRange;
     }
 
     private IpAddressRangeArgs() {
-        this.addressRange = Input.empty();
+        this.addressRange = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class IpAddressRangeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> addressRange;
+        private @Nullable Output<String> addressRange;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class IpAddressRangeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.addressRange = defaults.addressRange;
         }
 
-        public Builder addressRange(@Nullable Input<String> addressRange) {
+        public Builder addressRange(@Nullable Output<String> addressRange) {
             this.addressRange = addressRange;
             return this;
         }
 
         public Builder addressRange(@Nullable String addressRange) {
-            this.addressRange = Input.ofNullable(addressRange);
+            this.addressRange = Output.ofNullable(addressRange);
             return this;
         }
         public IpAddressRangeArgs build() {

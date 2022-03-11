@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1AttributeArgs;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiProducts")
-      private final @Nullable Input<List<String>> apiProducts;
+      private final @Nullable Output<List<String>> apiProducts;
 
-    public Input<List<String>> getApiProducts() {
-        return this.apiProducts == null ? Input.empty() : this.apiProducts;
+    public Output<List<String>> getApiProducts() {
+        return this.apiProducts == null ? Output.empty() : this.apiProducts;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appFamily")
-      private final @Nullable Input<String> appFamily;
+      private final @Nullable Output<String> appFamily;
 
-    public Input<String> getAppFamily() {
-        return this.appFamily == null ? Input.empty() : this.appFamily;
+    public Output<String> getAppFamily() {
+        return this.appFamily == null ? Output.empty() : this.appFamily;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appId")
-      private final @Nullable Input<String> appId;
+      private final @Nullable Output<String> appId;
 
-    public Input<String> getAppId() {
-        return this.appId == null ? Input.empty() : this.appId;
+    public Output<String> getAppId() {
+        return this.appId == null ? Output.empty() : this.appId;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attributes")
-      private final @Nullable Input<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
+      private final @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
 
-    public Input<List<GoogleCloudApigeeV1AttributeArgs>> getAttributes() {
-        return this.attributes == null ? Input.empty() : this.attributes;
+    public Output<List<GoogleCloudApigeeV1AttributeArgs>> getAttributes() {
+        return this.attributes == null ? Output.empty() : this.attributes;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="callbackUrl")
-      private final @Nullable Input<String> callbackUrl;
+      private final @Nullable Output<String> callbackUrl;
 
-    public Input<String> getCallbackUrl() {
-        return this.callbackUrl == null ? Input.empty() : this.callbackUrl;
+    public Output<String> getCallbackUrl() {
+        return this.callbackUrl == null ? Output.empty() : this.callbackUrl;
     }
 
     /**
@@ -76,9 +76,9 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="developerId", required=true)
-      private final Input<String> developerId;
+      private final Output<String> developerId;
 
-    public Input<String> getDeveloperId() {
+    public Output<String> getDeveloperId() {
         return this.developerId;
     }
 
@@ -87,10 +87,10 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyExpiresIn")
-      private final @Nullable Input<String> keyExpiresIn;
+      private final @Nullable Output<String> keyExpiresIn;
 
-    public Input<String> getKeyExpiresIn() {
-        return this.keyExpiresIn == null ? Input.empty() : this.keyExpiresIn;
+    public Output<String> getKeyExpiresIn() {
+        return this.keyExpiresIn == null ? Output.empty() : this.keyExpiresIn;
     }
 
     /**
@@ -98,16 +98,16 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="organizationId", required=true)
-      private final Input<String> organizationId;
+      private final Output<String> organizationId;
 
-    public Input<String> getOrganizationId() {
+    public Output<String> getOrganizationId() {
         return this.organizationId;
     }
 
@@ -116,10 +116,10 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scopes")
-      private final @Nullable Input<List<String>> scopes;
+      private final @Nullable Output<List<String>> scopes;
 
-    public Input<List<String>> getScopes() {
-        return this.scopes == null ? Input.empty() : this.scopes;
+    public Output<List<String>> getScopes() {
+        return this.scopes == null ? Output.empty() : this.scopes;
     }
 
     /**
@@ -127,24 +127,24 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     public AppArgs(
-        @Nullable Input<List<String>> apiProducts,
-        @Nullable Input<String> appFamily,
-        @Nullable Input<String> appId,
-        @Nullable Input<List<GoogleCloudApigeeV1AttributeArgs>> attributes,
-        @Nullable Input<String> callbackUrl,
-        Input<String> developerId,
-        @Nullable Input<String> keyExpiresIn,
-        @Nullable Input<String> name,
-        Input<String> organizationId,
-        @Nullable Input<List<String>> scopes,
-        @Nullable Input<String> status) {
+        @Nullable Output<List<String>> apiProducts,
+        @Nullable Output<String> appFamily,
+        @Nullable Output<String> appId,
+        @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes,
+        @Nullable Output<String> callbackUrl,
+        Output<String> developerId,
+        @Nullable Output<String> keyExpiresIn,
+        @Nullable Output<String> name,
+        Output<String> organizationId,
+        @Nullable Output<List<String>> scopes,
+        @Nullable Output<String> status) {
         this.apiProducts = apiProducts;
         this.appFamily = appFamily;
         this.appId = appId;
@@ -159,17 +159,17 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AppArgs() {
-        this.apiProducts = Input.empty();
-        this.appFamily = Input.empty();
-        this.appId = Input.empty();
-        this.attributes = Input.empty();
-        this.callbackUrl = Input.empty();
-        this.developerId = Input.empty();
-        this.keyExpiresIn = Input.empty();
-        this.name = Input.empty();
-        this.organizationId = Input.empty();
-        this.scopes = Input.empty();
-        this.status = Input.empty();
+        this.apiProducts = Output.empty();
+        this.appFamily = Output.empty();
+        this.appId = Output.empty();
+        this.attributes = Output.empty();
+        this.callbackUrl = Output.empty();
+        this.developerId = Output.empty();
+        this.keyExpiresIn = Output.empty();
+        this.name = Output.empty();
+        this.organizationId = Output.empty();
+        this.scopes = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -181,17 +181,17 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> apiProducts;
-        private @Nullable Input<String> appFamily;
-        private @Nullable Input<String> appId;
-        private @Nullable Input<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
-        private @Nullable Input<String> callbackUrl;
-        private Input<String> developerId;
-        private @Nullable Input<String> keyExpiresIn;
-        private @Nullable Input<String> name;
-        private Input<String> organizationId;
-        private @Nullable Input<List<String>> scopes;
-        private @Nullable Input<String> status;
+        private @Nullable Output<List<String>> apiProducts;
+        private @Nullable Output<String> appFamily;
+        private @Nullable Output<String> appId;
+        private @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
+        private @Nullable Output<String> callbackUrl;
+        private Output<String> developerId;
+        private @Nullable Output<String> keyExpiresIn;
+        private @Nullable Output<String> name;
+        private Output<String> organizationId;
+        private @Nullable Output<List<String>> scopes;
+        private @Nullable Output<String> status;
 
         public Builder() {
     	      // Empty
@@ -212,113 +212,113 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     	      this.status = defaults.status;
         }
 
-        public Builder apiProducts(@Nullable Input<List<String>> apiProducts) {
+        public Builder apiProducts(@Nullable Output<List<String>> apiProducts) {
             this.apiProducts = apiProducts;
             return this;
         }
 
         public Builder apiProducts(@Nullable List<String> apiProducts) {
-            this.apiProducts = Input.ofNullable(apiProducts);
+            this.apiProducts = Output.ofNullable(apiProducts);
             return this;
         }
 
-        public Builder appFamily(@Nullable Input<String> appFamily) {
+        public Builder appFamily(@Nullable Output<String> appFamily) {
             this.appFamily = appFamily;
             return this;
         }
 
         public Builder appFamily(@Nullable String appFamily) {
-            this.appFamily = Input.ofNullable(appFamily);
+            this.appFamily = Output.ofNullable(appFamily);
             return this;
         }
 
-        public Builder appId(@Nullable Input<String> appId) {
+        public Builder appId(@Nullable Output<String> appId) {
             this.appId = appId;
             return this;
         }
 
         public Builder appId(@Nullable String appId) {
-            this.appId = Input.ofNullable(appId);
+            this.appId = Output.ofNullable(appId);
             return this;
         }
 
-        public Builder attributes(@Nullable Input<List<GoogleCloudApigeeV1AttributeArgs>> attributes) {
+        public Builder attributes(@Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes) {
             this.attributes = attributes;
             return this;
         }
 
         public Builder attributes(@Nullable List<GoogleCloudApigeeV1AttributeArgs> attributes) {
-            this.attributes = Input.ofNullable(attributes);
+            this.attributes = Output.ofNullable(attributes);
             return this;
         }
 
-        public Builder callbackUrl(@Nullable Input<String> callbackUrl) {
+        public Builder callbackUrl(@Nullable Output<String> callbackUrl) {
             this.callbackUrl = callbackUrl;
             return this;
         }
 
         public Builder callbackUrl(@Nullable String callbackUrl) {
-            this.callbackUrl = Input.ofNullable(callbackUrl);
+            this.callbackUrl = Output.ofNullable(callbackUrl);
             return this;
         }
 
-        public Builder developerId(Input<String> developerId) {
+        public Builder developerId(Output<String> developerId) {
             this.developerId = Objects.requireNonNull(developerId);
             return this;
         }
 
         public Builder developerId(String developerId) {
-            this.developerId = Input.of(Objects.requireNonNull(developerId));
+            this.developerId = Output.of(Objects.requireNonNull(developerId));
             return this;
         }
 
-        public Builder keyExpiresIn(@Nullable Input<String> keyExpiresIn) {
+        public Builder keyExpiresIn(@Nullable Output<String> keyExpiresIn) {
             this.keyExpiresIn = keyExpiresIn;
             return this;
         }
 
         public Builder keyExpiresIn(@Nullable String keyExpiresIn) {
-            this.keyExpiresIn = Input.ofNullable(keyExpiresIn);
+            this.keyExpiresIn = Output.ofNullable(keyExpiresIn);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder organizationId(Input<String> organizationId) {
+        public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
         public Builder organizationId(String organizationId) {
-            this.organizationId = Input.of(Objects.requireNonNull(organizationId));
+            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
 
-        public Builder scopes(@Nullable Input<List<String>> scopes) {
+        public Builder scopes(@Nullable Output<List<String>> scopes) {
             this.scopes = scopes;
             return this;
         }
 
         public Builder scopes(@Nullable List<String> scopes) {
-            this.scopes = Input.ofNullable(scopes);
+            this.scopes = Output.ofNullable(scopes);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public AppArgs build() {

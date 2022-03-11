@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lex.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class BotSlotDefaultValueArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="defaultValue", required=true)
-      private final Input<String> defaultValue;
+      private final Output<String> defaultValue;
 
-    public Input<String> getDefaultValue() {
+    public Output<String> getDefaultValue() {
         return this.defaultValue;
     }
 
-    public BotSlotDefaultValueArgs(Input<String> defaultValue) {
+    public BotSlotDefaultValueArgs(Output<String> defaultValue) {
         this.defaultValue = Objects.requireNonNull(defaultValue, "expected parameter 'defaultValue' to be non-null");
     }
 
     private BotSlotDefaultValueArgs() {
-        this.defaultValue = Input.empty();
+        this.defaultValue = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class BotSlotDefaultValueArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> defaultValue;
+        private Output<String> defaultValue;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class BotSlotDefaultValueArgs extends io.pulumi.resources.ResourceA
     	      this.defaultValue = defaults.defaultValue;
         }
 
-        public Builder defaultValue(Input<String> defaultValue) {
+        public Builder defaultValue(Output<String> defaultValue) {
             this.defaultValue = Objects.requireNonNull(defaultValue);
             return this;
         }
 
         public Builder defaultValue(String defaultValue) {
-            this.defaultValue = Input.of(Objects.requireNonNull(defaultValue));
+            this.defaultValue = Output.of(Objects.requireNonNull(defaultValue));
             return this;
         }
         public BotSlotDefaultValueArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class RosettaNetPipBusinessDocumentArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class RosettaNetPipBusinessDocumentArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -45,25 +45,25 @@ public final class RosettaNetPipBusinessDocumentArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="version", required=true)
-      private final Input<String> version;
+      private final Output<String> version;
 
-    public Input<String> getVersion() {
+    public Output<String> getVersion() {
         return this.version;
     }
 
     public RosettaNetPipBusinessDocumentArgs(
-        @Nullable Input<String> description,
-        Input<String> name,
-        Input<String> version) {
+        @Nullable Output<String> description,
+        Output<String> name,
+        Output<String> version) {
         this.description = description;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
     }
 
     private RosettaNetPipBusinessDocumentArgs() {
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.version = Input.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class RosettaNetPipBusinessDocumentArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> name;
-        private Input<String> version;
+        private @Nullable Output<String> description;
+        private Output<String> name;
+        private Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class RosettaNetPipBusinessDocumentArgs extends io.pulumi.resources
     	      this.version = defaults.version;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder version(Input<String> version) {
+        public Builder version(Output<String> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
         public Builder version(String version) {
-            this.version = Input.of(Objects.requireNonNull(version));
+            this.version = Output.of(Objects.requireNonNull(version));
             return this;
         }
         public RosettaNetPipBusinessDocumentArgs build() {

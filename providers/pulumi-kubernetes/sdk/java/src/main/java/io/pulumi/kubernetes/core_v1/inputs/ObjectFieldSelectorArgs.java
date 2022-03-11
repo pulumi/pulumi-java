@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ObjectFieldSelectorArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="apiVersion")
-      private final @Nullable Input<String> apiVersion;
+      private final @Nullable Output<String> apiVersion;
 
-    public Input<String> getApiVersion() {
-        return this.apiVersion == null ? Input.empty() : this.apiVersion;
+    public Output<String> getApiVersion() {
+        return this.apiVersion == null ? Output.empty() : this.apiVersion;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class ObjectFieldSelectorArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="fieldPath", required=true)
-      private final Input<String> fieldPath;
+      private final Output<String> fieldPath;
 
-    public Input<String> getFieldPath() {
+    public Output<String> getFieldPath() {
         return this.fieldPath;
     }
 
     public ObjectFieldSelectorArgs(
-        @Nullable Input<String> apiVersion,
-        Input<String> fieldPath) {
+        @Nullable Output<String> apiVersion,
+        Output<String> fieldPath) {
         this.apiVersion = apiVersion;
         this.fieldPath = Objects.requireNonNull(fieldPath, "expected parameter 'fieldPath' to be non-null");
     }
 
     private ObjectFieldSelectorArgs() {
-        this.apiVersion = Input.empty();
-        this.fieldPath = Input.empty();
+        this.apiVersion = Output.empty();
+        this.fieldPath = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ObjectFieldSelectorArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> apiVersion;
-        private Input<String> fieldPath;
+        private @Nullable Output<String> apiVersion;
+        private Output<String> fieldPath;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ObjectFieldSelectorArgs extends io.pulumi.resources.ResourceA
     	      this.fieldPath = defaults.fieldPath;
         }
 
-        public Builder apiVersion(@Nullable Input<String> apiVersion) {
+        public Builder apiVersion(@Nullable Output<String> apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
         public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Input.ofNullable(apiVersion);
+            this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
 
-        public Builder fieldPath(Input<String> fieldPath) {
+        public Builder fieldPath(Output<String> fieldPath) {
             this.fieldPath = Objects.requireNonNull(fieldPath);
             return this;
         }
 
         public Builder fieldPath(String fieldPath) {
-            this.fieldPath = Input.of(Objects.requireNonNull(fieldPath));
+            this.fieldPath = Output.of(Objects.requireNonNull(fieldPath));
             return this;
         }
         public ObjectFieldSelectorArgs build() {

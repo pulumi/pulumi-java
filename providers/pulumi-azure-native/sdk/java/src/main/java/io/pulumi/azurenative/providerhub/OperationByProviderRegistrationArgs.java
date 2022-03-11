@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.providerhub;
 
 import io.pulumi.azurenative.providerhub.inputs.OperationsDefinitionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -16,9 +16,9 @@ public final class OperationByProviderRegistrationArgs extends io.pulumi.resourc
     public static final OperationByProviderRegistrationArgs Empty = new OperationByProviderRegistrationArgs();
 
     @InputImport(name="contents", required=true)
-      private final Input<List<OperationsDefinitionArgs>> contents;
+      private final Output<List<OperationsDefinitionArgs>> contents;
 
-    public Input<List<OperationsDefinitionArgs>> getContents() {
+    public Output<List<OperationsDefinitionArgs>> getContents() {
         return this.contents;
     }
 
@@ -27,22 +27,22 @@ public final class OperationByProviderRegistrationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="providerNamespace", required=true)
-      private final Input<String> providerNamespace;
+      private final Output<String> providerNamespace;
 
-    public Input<String> getProviderNamespace() {
+    public Output<String> getProviderNamespace() {
         return this.providerNamespace;
     }
 
     public OperationByProviderRegistrationArgs(
-        Input<List<OperationsDefinitionArgs>> contents,
-        Input<String> providerNamespace) {
+        Output<List<OperationsDefinitionArgs>> contents,
+        Output<String> providerNamespace) {
         this.contents = Objects.requireNonNull(contents, "expected parameter 'contents' to be non-null");
         this.providerNamespace = Objects.requireNonNull(providerNamespace, "expected parameter 'providerNamespace' to be non-null");
     }
 
     private OperationByProviderRegistrationArgs() {
-        this.contents = Input.empty();
-        this.providerNamespace = Input.empty();
+        this.contents = Output.empty();
+        this.providerNamespace = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class OperationByProviderRegistrationArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<List<OperationsDefinitionArgs>> contents;
-        private Input<String> providerNamespace;
+        private Output<List<OperationsDefinitionArgs>> contents;
+        private Output<String> providerNamespace;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class OperationByProviderRegistrationArgs extends io.pulumi.resourc
     	      this.providerNamespace = defaults.providerNamespace;
         }
 
-        public Builder contents(Input<List<OperationsDefinitionArgs>> contents) {
+        public Builder contents(Output<List<OperationsDefinitionArgs>> contents) {
             this.contents = Objects.requireNonNull(contents);
             return this;
         }
 
         public Builder contents(List<OperationsDefinitionArgs> contents) {
-            this.contents = Input.of(Objects.requireNonNull(contents));
+            this.contents = Output.of(Objects.requireNonNull(contents));
             return this;
         }
 
-        public Builder providerNamespace(Input<String> providerNamespace) {
+        public Builder providerNamespace(Output<String> providerNamespace) {
             this.providerNamespace = Objects.requireNonNull(providerNamespace);
             return this;
         }
 
         public Builder providerNamespace(String providerNamespace) {
-            this.providerNamespace = Input.of(Objects.requireNonNull(providerNamespace));
+            this.providerNamespace = Output.of(Objects.requireNonNull(providerNamespace));
             return this;
         }
         public OperationByProviderRegistrationArgs build() {

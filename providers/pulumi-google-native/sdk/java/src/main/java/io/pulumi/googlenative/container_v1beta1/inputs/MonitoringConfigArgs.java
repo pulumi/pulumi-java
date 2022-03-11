@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1beta1.inputs.ManagedPrometheusConfigArgs;
 import io.pulumi.googlenative.container_v1beta1.inputs.MonitoringComponentConfigArgs;
@@ -24,10 +24,10 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="componentConfig")
-      private final @Nullable Input<MonitoringComponentConfigArgs> componentConfig;
+      private final @Nullable Output<MonitoringComponentConfigArgs> componentConfig;
 
-    public Input<MonitoringComponentConfigArgs> getComponentConfig() {
-        return this.componentConfig == null ? Input.empty() : this.componentConfig;
+    public Output<MonitoringComponentConfigArgs> getComponentConfig() {
+        return this.componentConfig == null ? Output.empty() : this.componentConfig;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="managedPrometheusConfig")
-      private final @Nullable Input<ManagedPrometheusConfigArgs> managedPrometheusConfig;
+      private final @Nullable Output<ManagedPrometheusConfigArgs> managedPrometheusConfig;
 
-    public Input<ManagedPrometheusConfigArgs> getManagedPrometheusConfig() {
-        return this.managedPrometheusConfig == null ? Input.empty() : this.managedPrometheusConfig;
+    public Output<ManagedPrometheusConfigArgs> getManagedPrometheusConfig() {
+        return this.managedPrometheusConfig == null ? Output.empty() : this.managedPrometheusConfig;
     }
 
     public MonitoringConfigArgs(
-        @Nullable Input<MonitoringComponentConfigArgs> componentConfig,
-        @Nullable Input<ManagedPrometheusConfigArgs> managedPrometheusConfig) {
+        @Nullable Output<MonitoringComponentConfigArgs> componentConfig,
+        @Nullable Output<ManagedPrometheusConfigArgs> managedPrometheusConfig) {
         this.componentConfig = componentConfig;
         this.managedPrometheusConfig = managedPrometheusConfig;
     }
 
     private MonitoringConfigArgs() {
-        this.componentConfig = Input.empty();
-        this.managedPrometheusConfig = Input.empty();
+        this.componentConfig = Output.empty();
+        this.managedPrometheusConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<MonitoringComponentConfigArgs> componentConfig;
-        private @Nullable Input<ManagedPrometheusConfigArgs> managedPrometheusConfig;
+        private @Nullable Output<MonitoringComponentConfigArgs> componentConfig;
+        private @Nullable Output<ManagedPrometheusConfigArgs> managedPrometheusConfig;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
     	      this.managedPrometheusConfig = defaults.managedPrometheusConfig;
         }
 
-        public Builder componentConfig(@Nullable Input<MonitoringComponentConfigArgs> componentConfig) {
+        public Builder componentConfig(@Nullable Output<MonitoringComponentConfigArgs> componentConfig) {
             this.componentConfig = componentConfig;
             return this;
         }
 
         public Builder componentConfig(@Nullable MonitoringComponentConfigArgs componentConfig) {
-            this.componentConfig = Input.ofNullable(componentConfig);
+            this.componentConfig = Output.ofNullable(componentConfig);
             return this;
         }
 
-        public Builder managedPrometheusConfig(@Nullable Input<ManagedPrometheusConfigArgs> managedPrometheusConfig) {
+        public Builder managedPrometheusConfig(@Nullable Output<ManagedPrometheusConfigArgs> managedPrometheusConfig) {
             this.managedPrometheusConfig = managedPrometheusConfig;
             return this;
         }
 
         public Builder managedPrometheusConfig(@Nullable ManagedPrometheusConfigArgs managedPrometheusConfig) {
-            this.managedPrometheusConfig = Input.ofNullable(managedPrometheusConfig);
+            this.managedPrometheusConfig = Output.ofNullable(managedPrometheusConfig);
             return this;
         }
         public MonitoringConfigArgs build() {

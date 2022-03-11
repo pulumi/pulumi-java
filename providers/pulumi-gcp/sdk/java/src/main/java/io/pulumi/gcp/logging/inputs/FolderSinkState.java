@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.logging.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.logging.inputs.FolderSinkBigqueryOptionsGetArgs;
 import io.pulumi.gcp.logging.inputs.FolderSinkExclusionGetArgs;
@@ -23,10 +23,10 @@ public final class FolderSinkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bigqueryOptions")
-      private final @Nullable Input<FolderSinkBigqueryOptionsGetArgs> bigqueryOptions;
+      private final @Nullable Output<FolderSinkBigqueryOptionsGetArgs> bigqueryOptions;
 
-    public Input<FolderSinkBigqueryOptionsGetArgs> getBigqueryOptions() {
-        return this.bigqueryOptions == null ? Input.empty() : this.bigqueryOptions;
+    public Output<FolderSinkBigqueryOptionsGetArgs> getBigqueryOptions() {
+        return this.bigqueryOptions == null ? Output.empty() : this.bigqueryOptions;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class FolderSinkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class FolderSinkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destination")
-      private final @Nullable Input<String> destination;
+      private final @Nullable Output<String> destination;
 
-    public Input<String> getDestination() {
-        return this.destination == null ? Input.empty() : this.destination;
+    public Output<String> getDestination() {
+        return this.destination == null ? Output.empty() : this.destination;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class FolderSinkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disabled")
-      private final @Nullable Input<Boolean> disabled;
+      private final @Nullable Output<Boolean> disabled;
 
-    public Input<Boolean> getDisabled() {
-        return this.disabled == null ? Input.empty() : this.disabled;
+    public Output<Boolean> getDisabled() {
+        return this.disabled == null ? Output.empty() : this.disabled;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class FolderSinkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="exclusions")
-      private final @Nullable Input<List<FolderSinkExclusionGetArgs>> exclusions;
+      private final @Nullable Output<List<FolderSinkExclusionGetArgs>> exclusions;
 
-    public Input<List<FolderSinkExclusionGetArgs>> getExclusions() {
-        return this.exclusions == null ? Input.empty() : this.exclusions;
+    public Output<List<FolderSinkExclusionGetArgs>> getExclusions() {
+        return this.exclusions == null ? Output.empty() : this.exclusions;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class FolderSinkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filter")
-      private final @Nullable Input<String> filter;
+      private final @Nullable Output<String> filter;
 
-    public Input<String> getFilter() {
-        return this.filter == null ? Input.empty() : this.filter;
+    public Output<String> getFilter() {
+        return this.filter == null ? Output.empty() : this.filter;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class FolderSinkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="folder")
-      private final @Nullable Input<String> folder;
+      private final @Nullable Output<String> folder;
 
-    public Input<String> getFolder() {
-        return this.folder == null ? Input.empty() : this.folder;
+    public Output<String> getFolder() {
+        return this.folder == null ? Output.empty() : this.folder;
     }
 
     /**
@@ -106,10 +106,10 @@ public final class FolderSinkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="includeChildren")
-      private final @Nullable Input<Boolean> includeChildren;
+      private final @Nullable Output<Boolean> includeChildren;
 
-    public Input<Boolean> getIncludeChildren() {
-        return this.includeChildren == null ? Input.empty() : this.includeChildren;
+    public Output<Boolean> getIncludeChildren() {
+        return this.includeChildren == null ? Output.empty() : this.includeChildren;
     }
 
     /**
@@ -117,10 +117,10 @@ public final class FolderSinkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -129,23 +129,23 @@ public final class FolderSinkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="writerIdentity")
-      private final @Nullable Input<String> writerIdentity;
+      private final @Nullable Output<String> writerIdentity;
 
-    public Input<String> getWriterIdentity() {
-        return this.writerIdentity == null ? Input.empty() : this.writerIdentity;
+    public Output<String> getWriterIdentity() {
+        return this.writerIdentity == null ? Output.empty() : this.writerIdentity;
     }
 
     public FolderSinkState(
-        @Nullable Input<FolderSinkBigqueryOptionsGetArgs> bigqueryOptions,
-        @Nullable Input<String> description,
-        @Nullable Input<String> destination,
-        @Nullable Input<Boolean> disabled,
-        @Nullable Input<List<FolderSinkExclusionGetArgs>> exclusions,
-        @Nullable Input<String> filter,
-        @Nullable Input<String> folder,
-        @Nullable Input<Boolean> includeChildren,
-        @Nullable Input<String> name,
-        @Nullable Input<String> writerIdentity) {
+        @Nullable Output<FolderSinkBigqueryOptionsGetArgs> bigqueryOptions,
+        @Nullable Output<String> description,
+        @Nullable Output<String> destination,
+        @Nullable Output<Boolean> disabled,
+        @Nullable Output<List<FolderSinkExclusionGetArgs>> exclusions,
+        @Nullable Output<String> filter,
+        @Nullable Output<String> folder,
+        @Nullable Output<Boolean> includeChildren,
+        @Nullable Output<String> name,
+        @Nullable Output<String> writerIdentity) {
         this.bigqueryOptions = bigqueryOptions;
         this.description = description;
         this.destination = destination;
@@ -159,16 +159,16 @@ public final class FolderSinkState extends io.pulumi.resources.ResourceArgs {
     }
 
     private FolderSinkState() {
-        this.bigqueryOptions = Input.empty();
-        this.description = Input.empty();
-        this.destination = Input.empty();
-        this.disabled = Input.empty();
-        this.exclusions = Input.empty();
-        this.filter = Input.empty();
-        this.folder = Input.empty();
-        this.includeChildren = Input.empty();
-        this.name = Input.empty();
-        this.writerIdentity = Input.empty();
+        this.bigqueryOptions = Output.empty();
+        this.description = Output.empty();
+        this.destination = Output.empty();
+        this.disabled = Output.empty();
+        this.exclusions = Output.empty();
+        this.filter = Output.empty();
+        this.folder = Output.empty();
+        this.includeChildren = Output.empty();
+        this.name = Output.empty();
+        this.writerIdentity = Output.empty();
     }
 
     public static Builder builder() {
@@ -180,16 +180,16 @@ public final class FolderSinkState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<FolderSinkBigqueryOptionsGetArgs> bigqueryOptions;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> destination;
-        private @Nullable Input<Boolean> disabled;
-        private @Nullable Input<List<FolderSinkExclusionGetArgs>> exclusions;
-        private @Nullable Input<String> filter;
-        private @Nullable Input<String> folder;
-        private @Nullable Input<Boolean> includeChildren;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> writerIdentity;
+        private @Nullable Output<FolderSinkBigqueryOptionsGetArgs> bigqueryOptions;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> destination;
+        private @Nullable Output<Boolean> disabled;
+        private @Nullable Output<List<FolderSinkExclusionGetArgs>> exclusions;
+        private @Nullable Output<String> filter;
+        private @Nullable Output<String> folder;
+        private @Nullable Output<Boolean> includeChildren;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> writerIdentity;
 
         public Builder() {
     	      // Empty
@@ -209,103 +209,103 @@ public final class FolderSinkState extends io.pulumi.resources.ResourceArgs {
     	      this.writerIdentity = defaults.writerIdentity;
         }
 
-        public Builder bigqueryOptions(@Nullable Input<FolderSinkBigqueryOptionsGetArgs> bigqueryOptions) {
+        public Builder bigqueryOptions(@Nullable Output<FolderSinkBigqueryOptionsGetArgs> bigqueryOptions) {
             this.bigqueryOptions = bigqueryOptions;
             return this;
         }
 
         public Builder bigqueryOptions(@Nullable FolderSinkBigqueryOptionsGetArgs bigqueryOptions) {
-            this.bigqueryOptions = Input.ofNullable(bigqueryOptions);
+            this.bigqueryOptions = Output.ofNullable(bigqueryOptions);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder destination(@Nullable Input<String> destination) {
+        public Builder destination(@Nullable Output<String> destination) {
             this.destination = destination;
             return this;
         }
 
         public Builder destination(@Nullable String destination) {
-            this.destination = Input.ofNullable(destination);
+            this.destination = Output.ofNullable(destination);
             return this;
         }
 
-        public Builder disabled(@Nullable Input<Boolean> disabled) {
+        public Builder disabled(@Nullable Output<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
 
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Input.ofNullable(disabled);
+            this.disabled = Output.ofNullable(disabled);
             return this;
         }
 
-        public Builder exclusions(@Nullable Input<List<FolderSinkExclusionGetArgs>> exclusions) {
+        public Builder exclusions(@Nullable Output<List<FolderSinkExclusionGetArgs>> exclusions) {
             this.exclusions = exclusions;
             return this;
         }
 
         public Builder exclusions(@Nullable List<FolderSinkExclusionGetArgs> exclusions) {
-            this.exclusions = Input.ofNullable(exclusions);
+            this.exclusions = Output.ofNullable(exclusions);
             return this;
         }
 
-        public Builder filter(@Nullable Input<String> filter) {
+        public Builder filter(@Nullable Output<String> filter) {
             this.filter = filter;
             return this;
         }
 
         public Builder filter(@Nullable String filter) {
-            this.filter = Input.ofNullable(filter);
+            this.filter = Output.ofNullable(filter);
             return this;
         }
 
-        public Builder folder(@Nullable Input<String> folder) {
+        public Builder folder(@Nullable Output<String> folder) {
             this.folder = folder;
             return this;
         }
 
         public Builder folder(@Nullable String folder) {
-            this.folder = Input.ofNullable(folder);
+            this.folder = Output.ofNullable(folder);
             return this;
         }
 
-        public Builder includeChildren(@Nullable Input<Boolean> includeChildren) {
+        public Builder includeChildren(@Nullable Output<Boolean> includeChildren) {
             this.includeChildren = includeChildren;
             return this;
         }
 
         public Builder includeChildren(@Nullable Boolean includeChildren) {
-            this.includeChildren = Input.ofNullable(includeChildren);
+            this.includeChildren = Output.ofNullable(includeChildren);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder writerIdentity(@Nullable Input<String> writerIdentity) {
+        public Builder writerIdentity(@Nullable Output<String> writerIdentity) {
             this.writerIdentity = writerIdentity;
             return this;
         }
 
         public Builder writerIdentity(@Nullable String writerIdentity) {
-            this.writerIdentity = Input.ofNullable(writerIdentity);
+            this.writerIdentity = Output.ofNullable(writerIdentity);
             return this;
         }
         public FolderSinkState build() {

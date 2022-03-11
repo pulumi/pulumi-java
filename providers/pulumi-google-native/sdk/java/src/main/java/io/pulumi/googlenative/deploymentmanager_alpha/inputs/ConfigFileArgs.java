@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class ConfigFileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="content")
-      private final @Nullable Input<String> content;
+      private final @Nullable Output<String> content;
 
-    public Input<String> getContent() {
-        return this.content == null ? Input.empty() : this.content;
+    public Output<String> getContent() {
+        return this.content == null ? Output.empty() : this.content;
     }
 
-    public ConfigFileArgs(@Nullable Input<String> content) {
+    public ConfigFileArgs(@Nullable Output<String> content) {
         this.content = content;
     }
 
     private ConfigFileArgs() {
-        this.content = Input.empty();
+        this.content = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class ConfigFileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> content;
+        private @Nullable Output<String> content;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class ConfigFileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.content = defaults.content;
         }
 
-        public Builder content(@Nullable Input<String> content) {
+        public Builder content(@Nullable Output<String> content) {
             this.content = content;
             return this;
         }
 
         public Builder content(@Nullable String content) {
-            this.content = Input.ofNullable(content);
+            this.content = Output.ofNullable(content);
             return this;
         }
         public ConfigFileArgs build() {

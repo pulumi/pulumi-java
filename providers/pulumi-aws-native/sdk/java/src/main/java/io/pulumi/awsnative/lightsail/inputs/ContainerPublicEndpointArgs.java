@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lightsail.inputs;
 
 import io.pulumi.awsnative.lightsail.inputs.ContainerHealthCheckConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class ContainerPublicEndpointArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="containerName")
-      private final @Nullable Input<String> containerName;
+      private final @Nullable Output<String> containerName;
 
-    public Input<String> getContainerName() {
-        return this.containerName == null ? Input.empty() : this.containerName;
+    public Output<String> getContainerName() {
+        return this.containerName == null ? Output.empty() : this.containerName;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ContainerPublicEndpointArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="containerPort")
-      private final @Nullable Input<Integer> containerPort;
+      private final @Nullable Output<Integer> containerPort;
 
-    public Input<Integer> getContainerPort() {
-        return this.containerPort == null ? Input.empty() : this.containerPort;
+    public Output<Integer> getContainerPort() {
+        return this.containerPort == null ? Output.empty() : this.containerPort;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class ContainerPublicEndpointArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="healthCheckConfig")
-      private final @Nullable Input<ContainerHealthCheckConfigArgs> healthCheckConfig;
+      private final @Nullable Output<ContainerHealthCheckConfigArgs> healthCheckConfig;
 
-    public Input<ContainerHealthCheckConfigArgs> getHealthCheckConfig() {
-        return this.healthCheckConfig == null ? Input.empty() : this.healthCheckConfig;
+    public Output<ContainerHealthCheckConfigArgs> getHealthCheckConfig() {
+        return this.healthCheckConfig == null ? Output.empty() : this.healthCheckConfig;
     }
 
     public ContainerPublicEndpointArgs(
-        @Nullable Input<String> containerName,
-        @Nullable Input<Integer> containerPort,
-        @Nullable Input<ContainerHealthCheckConfigArgs> healthCheckConfig) {
+        @Nullable Output<String> containerName,
+        @Nullable Output<Integer> containerPort,
+        @Nullable Output<ContainerHealthCheckConfigArgs> healthCheckConfig) {
         this.containerName = containerName;
         this.containerPort = containerPort;
         this.healthCheckConfig = healthCheckConfig;
     }
 
     private ContainerPublicEndpointArgs() {
-        this.containerName = Input.empty();
-        this.containerPort = Input.empty();
-        this.healthCheckConfig = Input.empty();
+        this.containerName = Output.empty();
+        this.containerPort = Output.empty();
+        this.healthCheckConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class ContainerPublicEndpointArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> containerName;
-        private @Nullable Input<Integer> containerPort;
-        private @Nullable Input<ContainerHealthCheckConfigArgs> healthCheckConfig;
+        private @Nullable Output<String> containerName;
+        private @Nullable Output<Integer> containerPort;
+        private @Nullable Output<ContainerHealthCheckConfigArgs> healthCheckConfig;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class ContainerPublicEndpointArgs extends io.pulumi.resources.Resou
     	      this.healthCheckConfig = defaults.healthCheckConfig;
         }
 
-        public Builder containerName(@Nullable Input<String> containerName) {
+        public Builder containerName(@Nullable Output<String> containerName) {
             this.containerName = containerName;
             return this;
         }
 
         public Builder containerName(@Nullable String containerName) {
-            this.containerName = Input.ofNullable(containerName);
+            this.containerName = Output.ofNullable(containerName);
             return this;
         }
 
-        public Builder containerPort(@Nullable Input<Integer> containerPort) {
+        public Builder containerPort(@Nullable Output<Integer> containerPort) {
             this.containerPort = containerPort;
             return this;
         }
 
         public Builder containerPort(@Nullable Integer containerPort) {
-            this.containerPort = Input.ofNullable(containerPort);
+            this.containerPort = Output.ofNullable(containerPort);
             return this;
         }
 
-        public Builder healthCheckConfig(@Nullable Input<ContainerHealthCheckConfigArgs> healthCheckConfig) {
+        public Builder healthCheckConfig(@Nullable Output<ContainerHealthCheckConfigArgs> healthCheckConfig) {
             this.healthCheckConfig = healthCheckConfig;
             return this;
         }
 
         public Builder healthCheckConfig(@Nullable ContainerHealthCheckConfigArgs healthCheckConfig) {
-            this.healthCheckConfig = Input.ofNullable(healthCheckConfig);
+            this.healthCheckConfig = Output.ofNullable(healthCheckConfig);
             return this;
         }
         public ContainerPublicEndpointArgs build() {

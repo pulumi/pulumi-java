@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.blueprint.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class ResourceGroupDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="dependsOn")
-      private final @Nullable Input<List<String>> dependsOn;
+      private final @Nullable Output<List<String>> dependsOn;
 
-    public Input<List<String>> getDependsOn() {
-        return this.dependsOn == null ? Input.empty() : this.dependsOn;
+    public Output<List<String>> getDependsOn() {
+        return this.dependsOn == null ? Output.empty() : this.dependsOn;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ResourceGroupDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ResourceGroupDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ResourceGroupDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ResourceGroupDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class ResourceGroupDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="strongType")
-      private final @Nullable Input<String> strongType;
+      private final @Nullable Output<String> strongType;
 
-    public Input<String> getStrongType() {
-        return this.strongType == null ? Input.empty() : this.strongType;
+    public Output<String> getStrongType() {
+        return this.strongType == null ? Output.empty() : this.strongType;
     }
 
     /**
@@ -91,20 +91,20 @@ public final class ResourceGroupDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ResourceGroupDefinitionArgs(
-        @Nullable Input<List<String>> dependsOn,
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> strongType,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<List<String>> dependsOn,
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> strongType,
+        @Nullable Output<Map<String,String>> tags) {
         this.dependsOn = dependsOn;
         this.description = description;
         this.displayName = displayName;
@@ -115,13 +115,13 @@ public final class ResourceGroupDefinitionArgs extends io.pulumi.resources.Resou
     }
 
     private ResourceGroupDefinitionArgs() {
-        this.dependsOn = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.strongType = Input.empty();
-        this.tags = Input.empty();
+        this.dependsOn = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.strongType = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -133,13 +133,13 @@ public final class ResourceGroupDefinitionArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> dependsOn;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> strongType;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<List<String>> dependsOn;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> strongType;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -156,73 +156,73 @@ public final class ResourceGroupDefinitionArgs extends io.pulumi.resources.Resou
     	      this.tags = defaults.tags;
         }
 
-        public Builder dependsOn(@Nullable Input<List<String>> dependsOn) {
+        public Builder dependsOn(@Nullable Output<List<String>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
         public Builder dependsOn(@Nullable List<String> dependsOn) {
-            this.dependsOn = Input.ofNullable(dependsOn);
+            this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder strongType(@Nullable Input<String> strongType) {
+        public Builder strongType(@Nullable Output<String> strongType) {
             this.strongType = strongType;
             return this;
         }
 
         public Builder strongType(@Nullable String strongType) {
-            this.strongType = Input.ofNullable(strongType);
+            this.strongType = Output.ofNullable(strongType);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ResourceGroupDefinitionArgs build() {

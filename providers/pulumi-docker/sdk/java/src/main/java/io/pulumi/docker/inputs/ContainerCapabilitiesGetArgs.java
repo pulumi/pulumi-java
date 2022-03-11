@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -16,29 +16,29 @@ public final class ContainerCapabilitiesGetArgs extends io.pulumi.resources.Reso
     public static final ContainerCapabilitiesGetArgs Empty = new ContainerCapabilitiesGetArgs();
 
     @InputImport(name="adds")
-      private final @Nullable Input<List<String>> adds;
+      private final @Nullable Output<List<String>> adds;
 
-    public Input<List<String>> getAdds() {
-        return this.adds == null ? Input.empty() : this.adds;
+    public Output<List<String>> getAdds() {
+        return this.adds == null ? Output.empty() : this.adds;
     }
 
     @InputImport(name="drops")
-      private final @Nullable Input<List<String>> drops;
+      private final @Nullable Output<List<String>> drops;
 
-    public Input<List<String>> getDrops() {
-        return this.drops == null ? Input.empty() : this.drops;
+    public Output<List<String>> getDrops() {
+        return this.drops == null ? Output.empty() : this.drops;
     }
 
     public ContainerCapabilitiesGetArgs(
-        @Nullable Input<List<String>> adds,
-        @Nullable Input<List<String>> drops) {
+        @Nullable Output<List<String>> adds,
+        @Nullable Output<List<String>> drops) {
         this.adds = adds;
         this.drops = drops;
     }
 
     private ContainerCapabilitiesGetArgs() {
-        this.adds = Input.empty();
-        this.drops = Input.empty();
+        this.adds = Output.empty();
+        this.drops = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class ContainerCapabilitiesGetArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> adds;
-        private @Nullable Input<List<String>> drops;
+        private @Nullable Output<List<String>> adds;
+        private @Nullable Output<List<String>> drops;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class ContainerCapabilitiesGetArgs extends io.pulumi.resources.Reso
     	      this.drops = defaults.drops;
         }
 
-        public Builder adds(@Nullable Input<List<String>> adds) {
+        public Builder adds(@Nullable Output<List<String>> adds) {
             this.adds = adds;
             return this;
         }
 
         public Builder adds(@Nullable List<String> adds) {
-            this.adds = Input.ofNullable(adds);
+            this.adds = Output.ofNullable(adds);
             return this;
         }
 
-        public Builder drops(@Nullable Input<List<String>> drops) {
+        public Builder drops(@Nullable Output<List<String>> drops) {
             this.drops = drops;
             return this;
         }
 
         public Builder drops(@Nullable List<String> drops) {
-            this.drops = Input.ofNullable(drops);
+            this.drops = Output.ofNullable(drops);
             return this;
         }
         public ContainerCapabilitiesGetArgs build() {

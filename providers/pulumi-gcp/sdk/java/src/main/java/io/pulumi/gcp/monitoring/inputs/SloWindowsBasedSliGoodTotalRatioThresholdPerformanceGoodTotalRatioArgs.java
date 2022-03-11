@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotal
      * 
      */
     @InputImport(name="badServiceFilter")
-      private final @Nullable Input<String> badServiceFilter;
+      private final @Nullable Output<String> badServiceFilter;
 
-    public Input<String> getBadServiceFilter() {
-        return this.badServiceFilter == null ? Input.empty() : this.badServiceFilter;
+    public Output<String> getBadServiceFilter() {
+        return this.badServiceFilter == null ? Output.empty() : this.badServiceFilter;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotal
      * 
      */
     @InputImport(name="goodServiceFilter")
-      private final @Nullable Input<String> goodServiceFilter;
+      private final @Nullable Output<String> goodServiceFilter;
 
-    public Input<String> getGoodServiceFilter() {
-        return this.goodServiceFilter == null ? Input.empty() : this.goodServiceFilter;
+    public Output<String> getGoodServiceFilter() {
+        return this.goodServiceFilter == null ? Output.empty() : this.goodServiceFilter;
     }
 
     /**
@@ -58,25 +58,25 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotal
      * 
      */
     @InputImport(name="totalServiceFilter")
-      private final @Nullable Input<String> totalServiceFilter;
+      private final @Nullable Output<String> totalServiceFilter;
 
-    public Input<String> getTotalServiceFilter() {
-        return this.totalServiceFilter == null ? Input.empty() : this.totalServiceFilter;
+    public Output<String> getTotalServiceFilter() {
+        return this.totalServiceFilter == null ? Output.empty() : this.totalServiceFilter;
     }
 
     public SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioArgs(
-        @Nullable Input<String> badServiceFilter,
-        @Nullable Input<String> goodServiceFilter,
-        @Nullable Input<String> totalServiceFilter) {
+        @Nullable Output<String> badServiceFilter,
+        @Nullable Output<String> goodServiceFilter,
+        @Nullable Output<String> totalServiceFilter) {
         this.badServiceFilter = badServiceFilter;
         this.goodServiceFilter = goodServiceFilter;
         this.totalServiceFilter = totalServiceFilter;
     }
 
     private SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioArgs() {
-        this.badServiceFilter = Input.empty();
-        this.goodServiceFilter = Input.empty();
-        this.totalServiceFilter = Input.empty();
+        this.badServiceFilter = Output.empty();
+        this.goodServiceFilter = Output.empty();
+        this.totalServiceFilter = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,9 +88,9 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotal
     }
 
     public static final class Builder {
-        private @Nullable Input<String> badServiceFilter;
-        private @Nullable Input<String> goodServiceFilter;
-        private @Nullable Input<String> totalServiceFilter;
+        private @Nullable Output<String> badServiceFilter;
+        private @Nullable Output<String> goodServiceFilter;
+        private @Nullable Output<String> totalServiceFilter;
 
         public Builder() {
     	      // Empty
@@ -103,33 +103,33 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotal
     	      this.totalServiceFilter = defaults.totalServiceFilter;
         }
 
-        public Builder badServiceFilter(@Nullable Input<String> badServiceFilter) {
+        public Builder badServiceFilter(@Nullable Output<String> badServiceFilter) {
             this.badServiceFilter = badServiceFilter;
             return this;
         }
 
         public Builder badServiceFilter(@Nullable String badServiceFilter) {
-            this.badServiceFilter = Input.ofNullable(badServiceFilter);
+            this.badServiceFilter = Output.ofNullable(badServiceFilter);
             return this;
         }
 
-        public Builder goodServiceFilter(@Nullable Input<String> goodServiceFilter) {
+        public Builder goodServiceFilter(@Nullable Output<String> goodServiceFilter) {
             this.goodServiceFilter = goodServiceFilter;
             return this;
         }
 
         public Builder goodServiceFilter(@Nullable String goodServiceFilter) {
-            this.goodServiceFilter = Input.ofNullable(goodServiceFilter);
+            this.goodServiceFilter = Output.ofNullable(goodServiceFilter);
             return this;
         }
 
-        public Builder totalServiceFilter(@Nullable Input<String> totalServiceFilter) {
+        public Builder totalServiceFilter(@Nullable Output<String> totalServiceFilter) {
             this.totalServiceFilter = totalServiceFilter;
             return this;
         }
 
         public Builder totalServiceFilter(@Nullable String totalServiceFilter) {
-            this.totalServiceFilter = Input.ofNullable(totalServiceFilter);
+            this.totalServiceFilter = Output.ofNullable(totalServiceFilter);
             return this;
         }
         public SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioArgs build() {

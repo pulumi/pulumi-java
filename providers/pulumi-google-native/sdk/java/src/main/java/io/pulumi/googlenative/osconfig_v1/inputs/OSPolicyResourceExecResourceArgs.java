@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourceExecResourceExecArgs;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class OSPolicyResourceExecResourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="enforce")
-      private final @Nullable Input<OSPolicyResourceExecResourceExecArgs> enforce;
+      private final @Nullable Output<OSPolicyResourceExecResourceExecArgs> enforce;
 
-    public Input<OSPolicyResourceExecResourceExecArgs> getEnforce() {
-        return this.enforce == null ? Input.empty() : this.enforce;
+    public Output<OSPolicyResourceExecResourceExecArgs> getEnforce() {
+        return this.enforce == null ? Output.empty() : this.enforce;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class OSPolicyResourceExecResourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="validate", required=true)
-      private final Input<OSPolicyResourceExecResourceExecArgs> validate;
+      private final Output<OSPolicyResourceExecResourceExecArgs> validate;
 
-    public Input<OSPolicyResourceExecResourceExecArgs> getValidate() {
+    public Output<OSPolicyResourceExecResourceExecArgs> getValidate() {
         return this.validate;
     }
 
     public OSPolicyResourceExecResourceArgs(
-        @Nullable Input<OSPolicyResourceExecResourceExecArgs> enforce,
-        Input<OSPolicyResourceExecResourceExecArgs> validate) {
+        @Nullable Output<OSPolicyResourceExecResourceExecArgs> enforce,
+        Output<OSPolicyResourceExecResourceExecArgs> validate) {
         this.enforce = enforce;
         this.validate = Objects.requireNonNull(validate, "expected parameter 'validate' to be non-null");
     }
 
     private OSPolicyResourceExecResourceArgs() {
-        this.enforce = Input.empty();
-        this.validate = Input.empty();
+        this.enforce = Output.empty();
+        this.validate = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class OSPolicyResourceExecResourceArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<OSPolicyResourceExecResourceExecArgs> enforce;
-        private Input<OSPolicyResourceExecResourceExecArgs> validate;
+        private @Nullable Output<OSPolicyResourceExecResourceExecArgs> enforce;
+        private Output<OSPolicyResourceExecResourceExecArgs> validate;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class OSPolicyResourceExecResourceArgs extends io.pulumi.resources.
     	      this.validate = defaults.validate;
         }
 
-        public Builder enforce(@Nullable Input<OSPolicyResourceExecResourceExecArgs> enforce) {
+        public Builder enforce(@Nullable Output<OSPolicyResourceExecResourceExecArgs> enforce) {
             this.enforce = enforce;
             return this;
         }
 
         public Builder enforce(@Nullable OSPolicyResourceExecResourceExecArgs enforce) {
-            this.enforce = Input.ofNullable(enforce);
+            this.enforce = Output.ofNullable(enforce);
             return this;
         }
 
-        public Builder validate(Input<OSPolicyResourceExecResourceExecArgs> validate) {
+        public Builder validate(Output<OSPolicyResourceExecResourceExecArgs> validate) {
             this.validate = Objects.requireNonNull(validate);
             return this;
         }
 
         public Builder validate(OSPolicyResourceExecResourceExecArgs validate) {
-            this.validate = Input.of(Objects.requireNonNull(validate));
+            this.validate = Output.of(Objects.requireNonNull(validate));
             return this;
         }
         public OSPolicyResourceExecResourceArgs build() {

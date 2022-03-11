@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3control.inputs;
 
 import io.pulumi.aws.s3control.inputs.MultiRegionAccessPointPolicyDetailsGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,10 +16,10 @@ public final class MultiRegionAccessPointPolicyState extends io.pulumi.resources
     public static final MultiRegionAccessPointPolicyState Empty = new MultiRegionAccessPointPolicyState();
 
     @InputImport(name="accountId")
-      private final @Nullable Input<String> accountId;
+      private final @Nullable Output<String> accountId;
 
-    public Input<String> getAccountId() {
-        return this.accountId == null ? Input.empty() : this.accountId;
+    public Output<String> getAccountId() {
+        return this.accountId == null ? Output.empty() : this.accountId;
     }
 
     /**
@@ -27,10 +27,10 @@ public final class MultiRegionAccessPointPolicyState extends io.pulumi.resources
      * 
      */
     @InputImport(name="details")
-      private final @Nullable Input<MultiRegionAccessPointPolicyDetailsGetArgs> details;
+      private final @Nullable Output<MultiRegionAccessPointPolicyDetailsGetArgs> details;
 
-    public Input<MultiRegionAccessPointPolicyDetailsGetArgs> getDetails() {
-        return this.details == null ? Input.empty() : this.details;
+    public Output<MultiRegionAccessPointPolicyDetailsGetArgs> getDetails() {
+        return this.details == null ? Output.empty() : this.details;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class MultiRegionAccessPointPolicyState extends io.pulumi.resources
      * 
      */
     @InputImport(name="established")
-      private final @Nullable Input<String> established;
+      private final @Nullable Output<String> established;
 
-    public Input<String> getEstablished() {
-        return this.established == null ? Input.empty() : this.established;
+    public Output<String> getEstablished() {
+        return this.established == null ? Output.empty() : this.established;
     }
 
     /**
@@ -49,17 +49,17 @@ public final class MultiRegionAccessPointPolicyState extends io.pulumi.resources
      * 
      */
     @InputImport(name="proposed")
-      private final @Nullable Input<String> proposed;
+      private final @Nullable Output<String> proposed;
 
-    public Input<String> getProposed() {
-        return this.proposed == null ? Input.empty() : this.proposed;
+    public Output<String> getProposed() {
+        return this.proposed == null ? Output.empty() : this.proposed;
     }
 
     public MultiRegionAccessPointPolicyState(
-        @Nullable Input<String> accountId,
-        @Nullable Input<MultiRegionAccessPointPolicyDetailsGetArgs> details,
-        @Nullable Input<String> established,
-        @Nullable Input<String> proposed) {
+        @Nullable Output<String> accountId,
+        @Nullable Output<MultiRegionAccessPointPolicyDetailsGetArgs> details,
+        @Nullable Output<String> established,
+        @Nullable Output<String> proposed) {
         this.accountId = accountId;
         this.details = details;
         this.established = established;
@@ -67,10 +67,10 @@ public final class MultiRegionAccessPointPolicyState extends io.pulumi.resources
     }
 
     private MultiRegionAccessPointPolicyState() {
-        this.accountId = Input.empty();
-        this.details = Input.empty();
-        this.established = Input.empty();
-        this.proposed = Input.empty();
+        this.accountId = Output.empty();
+        this.details = Output.empty();
+        this.established = Output.empty();
+        this.proposed = Output.empty();
     }
 
     public static Builder builder() {
@@ -82,10 +82,10 @@ public final class MultiRegionAccessPointPolicyState extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accountId;
-        private @Nullable Input<MultiRegionAccessPointPolicyDetailsGetArgs> details;
-        private @Nullable Input<String> established;
-        private @Nullable Input<String> proposed;
+        private @Nullable Output<String> accountId;
+        private @Nullable Output<MultiRegionAccessPointPolicyDetailsGetArgs> details;
+        private @Nullable Output<String> established;
+        private @Nullable Output<String> proposed;
 
         public Builder() {
     	      // Empty
@@ -99,43 +99,43 @@ public final class MultiRegionAccessPointPolicyState extends io.pulumi.resources
     	      this.proposed = defaults.proposed;
         }
 
-        public Builder accountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Output<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Input.ofNullable(accountId);
+            this.accountId = Output.ofNullable(accountId);
             return this;
         }
 
-        public Builder details(@Nullable Input<MultiRegionAccessPointPolicyDetailsGetArgs> details) {
+        public Builder details(@Nullable Output<MultiRegionAccessPointPolicyDetailsGetArgs> details) {
             this.details = details;
             return this;
         }
 
         public Builder details(@Nullable MultiRegionAccessPointPolicyDetailsGetArgs details) {
-            this.details = Input.ofNullable(details);
+            this.details = Output.ofNullable(details);
             return this;
         }
 
-        public Builder established(@Nullable Input<String> established) {
+        public Builder established(@Nullable Output<String> established) {
             this.established = established;
             return this;
         }
 
         public Builder established(@Nullable String established) {
-            this.established = Input.ofNullable(established);
+            this.established = Output.ofNullable(established);
             return this;
         }
 
-        public Builder proposed(@Nullable Input<String> proposed) {
+        public Builder proposed(@Nullable Output<String> proposed) {
             this.proposed = proposed;
             return this;
         }
 
         public Builder proposed(@Nullable String proposed) {
-            this.proposed = Input.ofNullable(proposed);
+            this.proposed = Output.ofNullable(proposed);
             return this;
         }
         public MultiRegionAccessPointPolicyState build() {

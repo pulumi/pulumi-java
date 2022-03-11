@@ -6,7 +6,7 @@ package io.pulumi.aws.ses;
 import io.pulumi.aws.ses.inputs.EventDestinationCloudwatchDestinationArgs;
 import io.pulumi.aws.ses.inputs.EventDestinationKinesisDestinationArgs;
 import io.pulumi.aws.ses.inputs.EventDestinationSnsDestinationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class EventDestinationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cloudwatchDestinations")
-      private final @Nullable Input<List<EventDestinationCloudwatchDestinationArgs>> cloudwatchDestinations;
+      private final @Nullable Output<List<EventDestinationCloudwatchDestinationArgs>> cloudwatchDestinations;
 
-    public Input<List<EventDestinationCloudwatchDestinationArgs>> getCloudwatchDestinations() {
-        return this.cloudwatchDestinations == null ? Input.empty() : this.cloudwatchDestinations;
+    public Output<List<EventDestinationCloudwatchDestinationArgs>> getCloudwatchDestinations() {
+        return this.cloudwatchDestinations == null ? Output.empty() : this.cloudwatchDestinations;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class EventDestinationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="configurationSetName", required=true)
-      private final Input<String> configurationSetName;
+      private final Output<String> configurationSetName;
 
-    public Input<String> getConfigurationSetName() {
+    public Output<String> getConfigurationSetName() {
         return this.configurationSetName;
     }
 
@@ -46,10 +46,10 @@ public final class EventDestinationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class EventDestinationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="kinesisDestination")
-      private final @Nullable Input<EventDestinationKinesisDestinationArgs> kinesisDestination;
+      private final @Nullable Output<EventDestinationKinesisDestinationArgs> kinesisDestination;
 
-    public Input<EventDestinationKinesisDestinationArgs> getKinesisDestination() {
-        return this.kinesisDestination == null ? Input.empty() : this.kinesisDestination;
+    public Output<EventDestinationKinesisDestinationArgs> getKinesisDestination() {
+        return this.kinesisDestination == null ? Output.empty() : this.kinesisDestination;
     }
 
     /**
@@ -68,9 +68,9 @@ public final class EventDestinationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="matchingTypes", required=true)
-      private final Input<List<String>> matchingTypes;
+      private final Output<List<String>> matchingTypes;
 
-    public Input<List<String>> getMatchingTypes() {
+    public Output<List<String>> getMatchingTypes() {
         return this.matchingTypes;
     }
 
@@ -79,10 +79,10 @@ public final class EventDestinationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -90,20 +90,20 @@ public final class EventDestinationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="snsDestination")
-      private final @Nullable Input<EventDestinationSnsDestinationArgs> snsDestination;
+      private final @Nullable Output<EventDestinationSnsDestinationArgs> snsDestination;
 
-    public Input<EventDestinationSnsDestinationArgs> getSnsDestination() {
-        return this.snsDestination == null ? Input.empty() : this.snsDestination;
+    public Output<EventDestinationSnsDestinationArgs> getSnsDestination() {
+        return this.snsDestination == null ? Output.empty() : this.snsDestination;
     }
 
     public EventDestinationArgs(
-        @Nullable Input<List<EventDestinationCloudwatchDestinationArgs>> cloudwatchDestinations,
-        Input<String> configurationSetName,
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<EventDestinationKinesisDestinationArgs> kinesisDestination,
-        Input<List<String>> matchingTypes,
-        @Nullable Input<String> name,
-        @Nullable Input<EventDestinationSnsDestinationArgs> snsDestination) {
+        @Nullable Output<List<EventDestinationCloudwatchDestinationArgs>> cloudwatchDestinations,
+        Output<String> configurationSetName,
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<EventDestinationKinesisDestinationArgs> kinesisDestination,
+        Output<List<String>> matchingTypes,
+        @Nullable Output<String> name,
+        @Nullable Output<EventDestinationSnsDestinationArgs> snsDestination) {
         this.cloudwatchDestinations = cloudwatchDestinations;
         this.configurationSetName = Objects.requireNonNull(configurationSetName, "expected parameter 'configurationSetName' to be non-null");
         this.enabled = enabled;
@@ -114,13 +114,13 @@ public final class EventDestinationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private EventDestinationArgs() {
-        this.cloudwatchDestinations = Input.empty();
-        this.configurationSetName = Input.empty();
-        this.enabled = Input.empty();
-        this.kinesisDestination = Input.empty();
-        this.matchingTypes = Input.empty();
-        this.name = Input.empty();
-        this.snsDestination = Input.empty();
+        this.cloudwatchDestinations = Output.empty();
+        this.configurationSetName = Output.empty();
+        this.enabled = Output.empty();
+        this.kinesisDestination = Output.empty();
+        this.matchingTypes = Output.empty();
+        this.name = Output.empty();
+        this.snsDestination = Output.empty();
     }
 
     public static Builder builder() {
@@ -132,13 +132,13 @@ public final class EventDestinationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<List<EventDestinationCloudwatchDestinationArgs>> cloudwatchDestinations;
-        private Input<String> configurationSetName;
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<EventDestinationKinesisDestinationArgs> kinesisDestination;
-        private Input<List<String>> matchingTypes;
-        private @Nullable Input<String> name;
-        private @Nullable Input<EventDestinationSnsDestinationArgs> snsDestination;
+        private @Nullable Output<List<EventDestinationCloudwatchDestinationArgs>> cloudwatchDestinations;
+        private Output<String> configurationSetName;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<EventDestinationKinesisDestinationArgs> kinesisDestination;
+        private Output<List<String>> matchingTypes;
+        private @Nullable Output<String> name;
+        private @Nullable Output<EventDestinationSnsDestinationArgs> snsDestination;
 
         public Builder() {
     	      // Empty
@@ -155,73 +155,73 @@ public final class EventDestinationArgs extends io.pulumi.resources.ResourceArgs
     	      this.snsDestination = defaults.snsDestination;
         }
 
-        public Builder cloudwatchDestinations(@Nullable Input<List<EventDestinationCloudwatchDestinationArgs>> cloudwatchDestinations) {
+        public Builder cloudwatchDestinations(@Nullable Output<List<EventDestinationCloudwatchDestinationArgs>> cloudwatchDestinations) {
             this.cloudwatchDestinations = cloudwatchDestinations;
             return this;
         }
 
         public Builder cloudwatchDestinations(@Nullable List<EventDestinationCloudwatchDestinationArgs> cloudwatchDestinations) {
-            this.cloudwatchDestinations = Input.ofNullable(cloudwatchDestinations);
+            this.cloudwatchDestinations = Output.ofNullable(cloudwatchDestinations);
             return this;
         }
 
-        public Builder configurationSetName(Input<String> configurationSetName) {
+        public Builder configurationSetName(Output<String> configurationSetName) {
             this.configurationSetName = Objects.requireNonNull(configurationSetName);
             return this;
         }
 
         public Builder configurationSetName(String configurationSetName) {
-            this.configurationSetName = Input.of(Objects.requireNonNull(configurationSetName));
+            this.configurationSetName = Output.of(Objects.requireNonNull(configurationSetName));
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder kinesisDestination(@Nullable Input<EventDestinationKinesisDestinationArgs> kinesisDestination) {
+        public Builder kinesisDestination(@Nullable Output<EventDestinationKinesisDestinationArgs> kinesisDestination) {
             this.kinesisDestination = kinesisDestination;
             return this;
         }
 
         public Builder kinesisDestination(@Nullable EventDestinationKinesisDestinationArgs kinesisDestination) {
-            this.kinesisDestination = Input.ofNullable(kinesisDestination);
+            this.kinesisDestination = Output.ofNullable(kinesisDestination);
             return this;
         }
 
-        public Builder matchingTypes(Input<List<String>> matchingTypes) {
+        public Builder matchingTypes(Output<List<String>> matchingTypes) {
             this.matchingTypes = Objects.requireNonNull(matchingTypes);
             return this;
         }
 
         public Builder matchingTypes(List<String> matchingTypes) {
-            this.matchingTypes = Input.of(Objects.requireNonNull(matchingTypes));
+            this.matchingTypes = Output.of(Objects.requireNonNull(matchingTypes));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder snsDestination(@Nullable Input<EventDestinationSnsDestinationArgs> snsDestination) {
+        public Builder snsDestination(@Nullable Output<EventDestinationSnsDestinationArgs> snsDestination) {
             this.snsDestination = snsDestination;
             return this;
         }
 
         public Builder snsDestination(@Nullable EventDestinationSnsDestinationArgs snsDestination) {
-            this.snsDestination = Input.ofNullable(snsDestination);
+            this.snsDestination = Output.ofNullable(snsDestination);
             return this;
         }
         public EventDestinationArgs build() {

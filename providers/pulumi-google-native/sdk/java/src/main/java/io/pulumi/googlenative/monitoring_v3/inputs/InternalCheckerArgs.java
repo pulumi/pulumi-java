@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v3.enums.InternalCheckerState;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="gcpZone")
-      private final @Nullable Input<String> gcpZone;
+      private final @Nullable Output<String> gcpZone;
 
-    public Input<String> getGcpZone() {
-        return this.gcpZone == null ? Input.empty() : this.gcpZone;
+    public Output<String> getGcpZone() {
+        return this.gcpZone == null ? Output.empty() : this.gcpZone;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="network")
-      private final @Nullable Input<String> network;
+      private final @Nullable Output<String> network;
 
-    public Input<String> getNetwork() {
-        return this.network == null ? Input.empty() : this.network;
+    public Output<String> getNetwork() {
+        return this.network == null ? Output.empty() : this.network;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="peerProjectId")
-      private final @Nullable Input<String> peerProjectId;
+      private final @Nullable Output<String> peerProjectId;
 
-    public Input<String> getPeerProjectId() {
-        return this.peerProjectId == null ? Input.empty() : this.peerProjectId;
+    public Output<String> getPeerProjectId() {
+        return this.peerProjectId == null ? Output.empty() : this.peerProjectId;
     }
 
     /**
@@ -79,19 +79,19 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<InternalCheckerState> state;
+      private final @Nullable Output<InternalCheckerState> state;
 
-    public Input<InternalCheckerState> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<InternalCheckerState> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     public InternalCheckerArgs(
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> gcpZone,
-        @Nullable Input<String> name,
-        @Nullable Input<String> network,
-        @Nullable Input<String> peerProjectId,
-        @Nullable Input<InternalCheckerState> state) {
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> gcpZone,
+        @Nullable Output<String> name,
+        @Nullable Output<String> network,
+        @Nullable Output<String> peerProjectId,
+        @Nullable Output<InternalCheckerState> state) {
         this.displayName = displayName;
         this.gcpZone = gcpZone;
         this.name = name;
@@ -101,12 +101,12 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private InternalCheckerArgs() {
-        this.displayName = Input.empty();
-        this.gcpZone = Input.empty();
-        this.name = Input.empty();
-        this.network = Input.empty();
-        this.peerProjectId = Input.empty();
-        this.state = Input.empty();
+        this.displayName = Output.empty();
+        this.gcpZone = Output.empty();
+        this.name = Output.empty();
+        this.network = Output.empty();
+        this.peerProjectId = Output.empty();
+        this.state = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,12 +118,12 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> gcpZone;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> network;
-        private @Nullable Input<String> peerProjectId;
-        private @Nullable Input<InternalCheckerState> state;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> gcpZone;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> network;
+        private @Nullable Output<String> peerProjectId;
+        private @Nullable Output<InternalCheckerState> state;
 
         public Builder() {
     	      // Empty
@@ -139,63 +139,63 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
     	      this.state = defaults.state;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder gcpZone(@Nullable Input<String> gcpZone) {
+        public Builder gcpZone(@Nullable Output<String> gcpZone) {
             this.gcpZone = gcpZone;
             return this;
         }
 
         public Builder gcpZone(@Nullable String gcpZone) {
-            this.gcpZone = Input.ofNullable(gcpZone);
+            this.gcpZone = Output.ofNullable(gcpZone);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder network(@Nullable Input<String> network) {
+        public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
 
         public Builder network(@Nullable String network) {
-            this.network = Input.ofNullable(network);
+            this.network = Output.ofNullable(network);
             return this;
         }
 
-        public Builder peerProjectId(@Nullable Input<String> peerProjectId) {
+        public Builder peerProjectId(@Nullable Output<String> peerProjectId) {
             this.peerProjectId = peerProjectId;
             return this;
         }
 
         public Builder peerProjectId(@Nullable String peerProjectId) {
-            this.peerProjectId = Input.ofNullable(peerProjectId);
+            this.peerProjectId = Output.ofNullable(peerProjectId);
             return this;
         }
 
-        public Builder state(@Nullable Input<InternalCheckerState> state) {
+        public Builder state(@Nullable Output<InternalCheckerState> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable InternalCheckerState state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
         public InternalCheckerArgs build() {

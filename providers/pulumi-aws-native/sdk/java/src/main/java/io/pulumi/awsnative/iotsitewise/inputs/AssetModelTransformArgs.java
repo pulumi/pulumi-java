@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotsitewise.inputs;
 
 import io.pulumi.awsnative.iotsitewise.inputs.AssetModelExpressionVariableArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,9 +20,9 @@ public final class AssetModelTransformArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="expression", required=true)
-      private final Input<String> expression;
+      private final Output<String> expression;
 
-    public Input<String> getExpression() {
+    public Output<String> getExpression() {
         return this.expression;
     }
 
@@ -31,22 +31,22 @@ public final class AssetModelTransformArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="variables", required=true)
-      private final Input<List<AssetModelExpressionVariableArgs>> variables;
+      private final Output<List<AssetModelExpressionVariableArgs>> variables;
 
-    public Input<List<AssetModelExpressionVariableArgs>> getVariables() {
+    public Output<List<AssetModelExpressionVariableArgs>> getVariables() {
         return this.variables;
     }
 
     public AssetModelTransformArgs(
-        Input<String> expression,
-        Input<List<AssetModelExpressionVariableArgs>> variables) {
+        Output<String> expression,
+        Output<List<AssetModelExpressionVariableArgs>> variables) {
         this.expression = Objects.requireNonNull(expression, "expected parameter 'expression' to be non-null");
         this.variables = Objects.requireNonNull(variables, "expected parameter 'variables' to be non-null");
     }
 
     private AssetModelTransformArgs() {
-        this.expression = Input.empty();
-        this.variables = Input.empty();
+        this.expression = Output.empty();
+        this.variables = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class AssetModelTransformArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> expression;
-        private Input<List<AssetModelExpressionVariableArgs>> variables;
+        private Output<String> expression;
+        private Output<List<AssetModelExpressionVariableArgs>> variables;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class AssetModelTransformArgs extends io.pulumi.resources.ResourceA
     	      this.variables = defaults.variables;
         }
 
-        public Builder expression(Input<String> expression) {
+        public Builder expression(Output<String> expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
 
         public Builder expression(String expression) {
-            this.expression = Input.of(Objects.requireNonNull(expression));
+            this.expression = Output.of(Objects.requireNonNull(expression));
             return this;
         }
 
-        public Builder variables(Input<List<AssetModelExpressionVariableArgs>> variables) {
+        public Builder variables(Output<List<AssetModelExpressionVariableArgs>> variables) {
             this.variables = Objects.requireNonNull(variables);
             return this;
         }
 
         public Builder variables(List<AssetModelExpressionVariableArgs> variables) {
-            this.variables = Input.of(Objects.requireNonNull(variables));
+            this.variables = Output.of(Objects.requireNonNull(variables));
             return this;
         }
         public AssetModelTransformArgs build() {

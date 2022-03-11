@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.networkmanager.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class LinkBandwidthArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="downloadSpeed")
-      private final @Nullable Input<Integer> downloadSpeed;
+      private final @Nullable Output<Integer> downloadSpeed;
 
-    public Input<Integer> getDownloadSpeed() {
-        return this.downloadSpeed == null ? Input.empty() : this.downloadSpeed;
+    public Output<Integer> getDownloadSpeed() {
+        return this.downloadSpeed == null ? Output.empty() : this.downloadSpeed;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class LinkBandwidthArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uploadSpeed")
-      private final @Nullable Input<Integer> uploadSpeed;
+      private final @Nullable Output<Integer> uploadSpeed;
 
-    public Input<Integer> getUploadSpeed() {
-        return this.uploadSpeed == null ? Input.empty() : this.uploadSpeed;
+    public Output<Integer> getUploadSpeed() {
+        return this.uploadSpeed == null ? Output.empty() : this.uploadSpeed;
     }
 
     public LinkBandwidthArgs(
-        @Nullable Input<Integer> downloadSpeed,
-        @Nullable Input<Integer> uploadSpeed) {
+        @Nullable Output<Integer> downloadSpeed,
+        @Nullable Output<Integer> uploadSpeed) {
         this.downloadSpeed = downloadSpeed;
         this.uploadSpeed = uploadSpeed;
     }
 
     private LinkBandwidthArgs() {
-        this.downloadSpeed = Input.empty();
-        this.uploadSpeed = Input.empty();
+        this.downloadSpeed = Output.empty();
+        this.uploadSpeed = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class LinkBandwidthArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> downloadSpeed;
-        private @Nullable Input<Integer> uploadSpeed;
+        private @Nullable Output<Integer> downloadSpeed;
+        private @Nullable Output<Integer> uploadSpeed;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class LinkBandwidthArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uploadSpeed = defaults.uploadSpeed;
         }
 
-        public Builder downloadSpeed(@Nullable Input<Integer> downloadSpeed) {
+        public Builder downloadSpeed(@Nullable Output<Integer> downloadSpeed) {
             this.downloadSpeed = downloadSpeed;
             return this;
         }
 
         public Builder downloadSpeed(@Nullable Integer downloadSpeed) {
-            this.downloadSpeed = Input.ofNullable(downloadSpeed);
+            this.downloadSpeed = Output.ofNullable(downloadSpeed);
             return this;
         }
 
-        public Builder uploadSpeed(@Nullable Input<Integer> uploadSpeed) {
+        public Builder uploadSpeed(@Nullable Output<Integer> uploadSpeed) {
             this.uploadSpeed = uploadSpeed;
             return this;
         }
 
         public Builder uploadSpeed(@Nullable Integer uploadSpeed) {
-            this.uploadSpeed = Input.ofNullable(uploadSpeed);
+            this.uploadSpeed = Output.ofNullable(uploadSpeed);
             return this;
         }
         public LinkBandwidthArgs build() {

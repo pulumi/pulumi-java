@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.datacatalog.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class EntryBigqueryTableSpecTableSpecArgs extends io.pulumi.resourc
     public static final EntryBigqueryTableSpecTableSpecArgs Empty = new EntryBigqueryTableSpecTableSpecArgs();
 
     @InputImport(name="groupedEntry")
-      private final @Nullable Input<String> groupedEntry;
+      private final @Nullable Output<String> groupedEntry;
 
-    public Input<String> getGroupedEntry() {
-        return this.groupedEntry == null ? Input.empty() : this.groupedEntry;
+    public Output<String> getGroupedEntry() {
+        return this.groupedEntry == null ? Output.empty() : this.groupedEntry;
     }
 
-    public EntryBigqueryTableSpecTableSpecArgs(@Nullable Input<String> groupedEntry) {
+    public EntryBigqueryTableSpecTableSpecArgs(@Nullable Output<String> groupedEntry) {
         this.groupedEntry = groupedEntry;
     }
 
     private EntryBigqueryTableSpecTableSpecArgs() {
-        this.groupedEntry = Input.empty();
+        this.groupedEntry = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class EntryBigqueryTableSpecTableSpecArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> groupedEntry;
+        private @Nullable Output<String> groupedEntry;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class EntryBigqueryTableSpecTableSpecArgs extends io.pulumi.resourc
     	      this.groupedEntry = defaults.groupedEntry;
         }
 
-        public Builder groupedEntry(@Nullable Input<String> groupedEntry) {
+        public Builder groupedEntry(@Nullable Output<String> groupedEntry) {
             this.groupedEntry = groupedEntry;
             return this;
         }
 
         public Builder groupedEntry(@Nullable String groupedEntry) {
-            this.groupedEntry = Input.ofNullable(groupedEntry);
+            this.groupedEntry = Output.ofNullable(groupedEntry);
             return this;
         }
         public EntryBigqueryTableSpecTableSpecArgs build() {

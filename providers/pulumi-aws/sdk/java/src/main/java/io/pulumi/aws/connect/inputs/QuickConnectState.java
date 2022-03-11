@@ -4,7 +4,7 @@
 package io.pulumi.aws.connect.inputs;
 
 import io.pulumi.aws.connect.inputs.QuickConnectQuickConnectConfigGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class QuickConnectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class QuickConnectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class QuickConnectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceId")
-      private final @Nullable Input<String> instanceId;
+      private final @Nullable Output<String> instanceId;
 
-    public Input<String> getInstanceId() {
-        return this.instanceId == null ? Input.empty() : this.instanceId;
+    public Output<String> getInstanceId() {
+        return this.instanceId == null ? Output.empty() : this.instanceId;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class QuickConnectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class QuickConnectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="quickConnectConfig")
-      private final @Nullable Input<QuickConnectQuickConnectConfigGetArgs> quickConnectConfig;
+      private final @Nullable Output<QuickConnectQuickConnectConfigGetArgs> quickConnectConfig;
 
-    public Input<QuickConnectQuickConnectConfigGetArgs> getQuickConnectConfig() {
-        return this.quickConnectConfig == null ? Input.empty() : this.quickConnectConfig;
+    public Output<QuickConnectQuickConnectConfigGetArgs> getQuickConnectConfig() {
+        return this.quickConnectConfig == null ? Output.empty() : this.quickConnectConfig;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class QuickConnectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="quickConnectId")
-      private final @Nullable Input<String> quickConnectId;
+      private final @Nullable Output<String> quickConnectId;
 
-    public Input<String> getQuickConnectId() {
-        return this.quickConnectId == null ? Input.empty() : this.quickConnectId;
+    public Output<String> getQuickConnectId() {
+        return this.quickConnectId == null ? Output.empty() : this.quickConnectId;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class QuickConnectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -98,21 +98,21 @@ public final class QuickConnectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public QuickConnectState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> description,
-        @Nullable Input<String> instanceId,
-        @Nullable Input<String> name,
-        @Nullable Input<QuickConnectQuickConnectConfigGetArgs> quickConnectConfig,
-        @Nullable Input<String> quickConnectId,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> description,
+        @Nullable Output<String> instanceId,
+        @Nullable Output<String> name,
+        @Nullable Output<QuickConnectQuickConnectConfigGetArgs> quickConnectConfig,
+        @Nullable Output<String> quickConnectId,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
         this.description = description;
         this.instanceId = instanceId;
@@ -124,14 +124,14 @@ public final class QuickConnectState extends io.pulumi.resources.ResourceArgs {
     }
 
     private QuickConnectState() {
-        this.arn = Input.empty();
-        this.description = Input.empty();
-        this.instanceId = Input.empty();
-        this.name = Input.empty();
-        this.quickConnectConfig = Input.empty();
-        this.quickConnectId = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.arn = Output.empty();
+        this.description = Output.empty();
+        this.instanceId = Output.empty();
+        this.name = Output.empty();
+        this.quickConnectConfig = Output.empty();
+        this.quickConnectId = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -143,14 +143,14 @@ public final class QuickConnectState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> instanceId;
-        private @Nullable Input<String> name;
-        private @Nullable Input<QuickConnectQuickConnectConfigGetArgs> quickConnectConfig;
-        private @Nullable Input<String> quickConnectId;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> instanceId;
+        private @Nullable Output<String> name;
+        private @Nullable Output<QuickConnectQuickConnectConfigGetArgs> quickConnectConfig;
+        private @Nullable Output<String> quickConnectId;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -168,83 +168,83 @@ public final class QuickConnectState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder instanceId(@Nullable Input<String> instanceId) {
+        public Builder instanceId(@Nullable Output<String> instanceId) {
             this.instanceId = instanceId;
             return this;
         }
 
         public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Input.ofNullable(instanceId);
+            this.instanceId = Output.ofNullable(instanceId);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder quickConnectConfig(@Nullable Input<QuickConnectQuickConnectConfigGetArgs> quickConnectConfig) {
+        public Builder quickConnectConfig(@Nullable Output<QuickConnectQuickConnectConfigGetArgs> quickConnectConfig) {
             this.quickConnectConfig = quickConnectConfig;
             return this;
         }
 
         public Builder quickConnectConfig(@Nullable QuickConnectQuickConnectConfigGetArgs quickConnectConfig) {
-            this.quickConnectConfig = Input.ofNullable(quickConnectConfig);
+            this.quickConnectConfig = Output.ofNullable(quickConnectConfig);
             return this;
         }
 
-        public Builder quickConnectId(@Nullable Input<String> quickConnectId) {
+        public Builder quickConnectId(@Nullable Output<String> quickConnectId) {
             this.quickConnectId = quickConnectId;
             return this;
         }
 
         public Builder quickConnectId(@Nullable String quickConnectId) {
-            this.quickConnectId = Input.ofNullable(quickConnectId);
+            this.quickConnectId = Output.ofNullable(quickConnectId);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public QuickConnectState build() {

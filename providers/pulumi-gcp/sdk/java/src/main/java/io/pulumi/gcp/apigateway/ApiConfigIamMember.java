@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.apigateway;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -179,14 +178,14 @@ public class ApiConfigIamMember extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ApiConfigIamMember(String name, ApiConfigIamMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:apigateway/apiConfigIamMember:ApiConfigIamMember", name, args == null ? ApiConfigIamMemberArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:apigateway/apiConfigIamMember:ApiConfigIamMember", name, args == null ? ApiConfigIamMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ApiConfigIamMember(String name, Input<String> id, @Nullable ApiConfigIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ApiConfigIamMember(String name, Output<String> id, @Nullable ApiConfigIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:apigateway/apiConfigIamMember:ApiConfigIamMember", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -202,7 +201,7 @@ public class ApiConfigIamMember extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ApiConfigIamMember get(String name, Input<String> id, @Nullable ApiConfigIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ApiConfigIamMember get(String name, Output<String> id, @Nullable ApiConfigIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ApiConfigIamMember(name, id, state, options);
     }
 }

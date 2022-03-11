@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.ProtocolType;
 import io.pulumi.azurenative.network.inputs.QosIpRangeArgs;
 import io.pulumi.azurenative.network.inputs.QosPortRangeArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="destinationIpRanges")
-      private final @Nullable Input<List<QosIpRangeArgs>> destinationIpRanges;
+      private final @Nullable Output<List<QosIpRangeArgs>> destinationIpRanges;
 
-    public Input<List<QosIpRangeArgs>> getDestinationIpRanges() {
-        return this.destinationIpRanges == null ? Input.empty() : this.destinationIpRanges;
+    public Output<List<QosIpRangeArgs>> getDestinationIpRanges() {
+        return this.destinationIpRanges == null ? Output.empty() : this.destinationIpRanges;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="destinationPortRanges")
-      private final @Nullable Input<List<QosPortRangeArgs>> destinationPortRanges;
+      private final @Nullable Output<List<QosPortRangeArgs>> destinationPortRanges;
 
-    public Input<List<QosPortRangeArgs>> getDestinationPortRanges() {
-        return this.destinationPortRanges == null ? Input.empty() : this.destinationPortRanges;
+    public Output<List<QosPortRangeArgs>> getDestinationPortRanges() {
+        return this.destinationPortRanges == null ? Output.empty() : this.destinationPortRanges;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="dscpConfigurationName")
-      private final @Nullable Input<String> dscpConfigurationName;
+      private final @Nullable Output<String> dscpConfigurationName;
 
-    public Input<String> getDscpConfigurationName() {
-        return this.dscpConfigurationName == null ? Input.empty() : this.dscpConfigurationName;
+    public Output<String> getDscpConfigurationName() {
+        return this.dscpConfigurationName == null ? Output.empty() : this.dscpConfigurationName;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="markings")
-      private final @Nullable Input<List<Integer>> markings;
+      private final @Nullable Output<List<Integer>> markings;
 
-    public Input<List<Integer>> getMarkings() {
-        return this.markings == null ? Input.empty() : this.markings;
+    public Output<List<Integer>> getMarkings() {
+        return this.markings == null ? Output.empty() : this.markings;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="protocol")
-      private final @Nullable Input<Either<String,ProtocolType>> protocol;
+      private final @Nullable Output<Either<String,ProtocolType>> protocol;
 
-    public Input<Either<String,ProtocolType>> getProtocol() {
-        return this.protocol == null ? Input.empty() : this.protocol;
+    public Output<Either<String,ProtocolType>> getProtocol() {
+        return this.protocol == null ? Output.empty() : this.protocol;
     }
 
     /**
@@ -103,9 +103,9 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -114,10 +114,10 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sourceIpRanges")
-      private final @Nullable Input<List<QosIpRangeArgs>> sourceIpRanges;
+      private final @Nullable Output<List<QosIpRangeArgs>> sourceIpRanges;
 
-    public Input<List<QosIpRangeArgs>> getSourceIpRanges() {
-        return this.sourceIpRanges == null ? Input.empty() : this.sourceIpRanges;
+    public Output<List<QosIpRangeArgs>> getSourceIpRanges() {
+        return this.sourceIpRanges == null ? Output.empty() : this.sourceIpRanges;
     }
 
     /**
@@ -125,10 +125,10 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sourcePortRanges")
-      private final @Nullable Input<List<QosPortRangeArgs>> sourcePortRanges;
+      private final @Nullable Output<List<QosPortRangeArgs>> sourcePortRanges;
 
-    public Input<List<QosPortRangeArgs>> getSourcePortRanges() {
-        return this.sourcePortRanges == null ? Input.empty() : this.sourcePortRanges;
+    public Output<List<QosPortRangeArgs>> getSourcePortRanges() {
+        return this.sourcePortRanges == null ? Output.empty() : this.sourcePortRanges;
     }
 
     /**
@@ -136,24 +136,24 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public DscpConfigurationArgs(
-        @Nullable Input<List<QosIpRangeArgs>> destinationIpRanges,
-        @Nullable Input<List<QosPortRangeArgs>> destinationPortRanges,
-        @Nullable Input<String> dscpConfigurationName,
-        @Nullable Input<String> id,
-        @Nullable Input<String> location,
-        @Nullable Input<List<Integer>> markings,
-        @Nullable Input<Either<String,ProtocolType>> protocol,
-        Input<String> resourceGroupName,
-        @Nullable Input<List<QosIpRangeArgs>> sourceIpRanges,
-        @Nullable Input<List<QosPortRangeArgs>> sourcePortRanges,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<List<QosIpRangeArgs>> destinationIpRanges,
+        @Nullable Output<List<QosPortRangeArgs>> destinationPortRanges,
+        @Nullable Output<String> dscpConfigurationName,
+        @Nullable Output<String> id,
+        @Nullable Output<String> location,
+        @Nullable Output<List<Integer>> markings,
+        @Nullable Output<Either<String,ProtocolType>> protocol,
+        Output<String> resourceGroupName,
+        @Nullable Output<List<QosIpRangeArgs>> sourceIpRanges,
+        @Nullable Output<List<QosPortRangeArgs>> sourcePortRanges,
+        @Nullable Output<Map<String,String>> tags) {
         this.destinationIpRanges = destinationIpRanges;
         this.destinationPortRanges = destinationPortRanges;
         this.dscpConfigurationName = dscpConfigurationName;
@@ -168,17 +168,17 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
     }
 
     private DscpConfigurationArgs() {
-        this.destinationIpRanges = Input.empty();
-        this.destinationPortRanges = Input.empty();
-        this.dscpConfigurationName = Input.empty();
-        this.id = Input.empty();
-        this.location = Input.empty();
-        this.markings = Input.empty();
-        this.protocol = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sourceIpRanges = Input.empty();
-        this.sourcePortRanges = Input.empty();
-        this.tags = Input.empty();
+        this.destinationIpRanges = Output.empty();
+        this.destinationPortRanges = Output.empty();
+        this.dscpConfigurationName = Output.empty();
+        this.id = Output.empty();
+        this.location = Output.empty();
+        this.markings = Output.empty();
+        this.protocol = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sourceIpRanges = Output.empty();
+        this.sourcePortRanges = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -190,17 +190,17 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<List<QosIpRangeArgs>> destinationIpRanges;
-        private @Nullable Input<List<QosPortRangeArgs>> destinationPortRanges;
-        private @Nullable Input<String> dscpConfigurationName;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> location;
-        private @Nullable Input<List<Integer>> markings;
-        private @Nullable Input<Either<String,ProtocolType>> protocol;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<List<QosIpRangeArgs>> sourceIpRanges;
-        private @Nullable Input<List<QosPortRangeArgs>> sourcePortRanges;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<List<QosIpRangeArgs>> destinationIpRanges;
+        private @Nullable Output<List<QosPortRangeArgs>> destinationPortRanges;
+        private @Nullable Output<String> dscpConfigurationName;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> location;
+        private @Nullable Output<List<Integer>> markings;
+        private @Nullable Output<Either<String,ProtocolType>> protocol;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<List<QosIpRangeArgs>> sourceIpRanges;
+        private @Nullable Output<List<QosPortRangeArgs>> sourcePortRanges;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -221,113 +221,113 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
     	      this.tags = defaults.tags;
         }
 
-        public Builder destinationIpRanges(@Nullable Input<List<QosIpRangeArgs>> destinationIpRanges) {
+        public Builder destinationIpRanges(@Nullable Output<List<QosIpRangeArgs>> destinationIpRanges) {
             this.destinationIpRanges = destinationIpRanges;
             return this;
         }
 
         public Builder destinationIpRanges(@Nullable List<QosIpRangeArgs> destinationIpRanges) {
-            this.destinationIpRanges = Input.ofNullable(destinationIpRanges);
+            this.destinationIpRanges = Output.ofNullable(destinationIpRanges);
             return this;
         }
 
-        public Builder destinationPortRanges(@Nullable Input<List<QosPortRangeArgs>> destinationPortRanges) {
+        public Builder destinationPortRanges(@Nullable Output<List<QosPortRangeArgs>> destinationPortRanges) {
             this.destinationPortRanges = destinationPortRanges;
             return this;
         }
 
         public Builder destinationPortRanges(@Nullable List<QosPortRangeArgs> destinationPortRanges) {
-            this.destinationPortRanges = Input.ofNullable(destinationPortRanges);
+            this.destinationPortRanges = Output.ofNullable(destinationPortRanges);
             return this;
         }
 
-        public Builder dscpConfigurationName(@Nullable Input<String> dscpConfigurationName) {
+        public Builder dscpConfigurationName(@Nullable Output<String> dscpConfigurationName) {
             this.dscpConfigurationName = dscpConfigurationName;
             return this;
         }
 
         public Builder dscpConfigurationName(@Nullable String dscpConfigurationName) {
-            this.dscpConfigurationName = Input.ofNullable(dscpConfigurationName);
+            this.dscpConfigurationName = Output.ofNullable(dscpConfigurationName);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder markings(@Nullable Input<List<Integer>> markings) {
+        public Builder markings(@Nullable Output<List<Integer>> markings) {
             this.markings = markings;
             return this;
         }
 
         public Builder markings(@Nullable List<Integer> markings) {
-            this.markings = Input.ofNullable(markings);
+            this.markings = Output.ofNullable(markings);
             return this;
         }
 
-        public Builder protocol(@Nullable Input<Either<String,ProtocolType>> protocol) {
+        public Builder protocol(@Nullable Output<Either<String,ProtocolType>> protocol) {
             this.protocol = protocol;
             return this;
         }
 
         public Builder protocol(@Nullable Either<String,ProtocolType> protocol) {
-            this.protocol = Input.ofNullable(protocol);
+            this.protocol = Output.ofNullable(protocol);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sourceIpRanges(@Nullable Input<List<QosIpRangeArgs>> sourceIpRanges) {
+        public Builder sourceIpRanges(@Nullable Output<List<QosIpRangeArgs>> sourceIpRanges) {
             this.sourceIpRanges = sourceIpRanges;
             return this;
         }
 
         public Builder sourceIpRanges(@Nullable List<QosIpRangeArgs> sourceIpRanges) {
-            this.sourceIpRanges = Input.ofNullable(sourceIpRanges);
+            this.sourceIpRanges = Output.ofNullable(sourceIpRanges);
             return this;
         }
 
-        public Builder sourcePortRanges(@Nullable Input<List<QosPortRangeArgs>> sourcePortRanges) {
+        public Builder sourcePortRanges(@Nullable Output<List<QosPortRangeArgs>> sourcePortRanges) {
             this.sourcePortRanges = sourcePortRanges;
             return this;
         }
 
         public Builder sourcePortRanges(@Nullable List<QosPortRangeArgs> sourcePortRanges) {
-            this.sourcePortRanges = Input.ofNullable(sourcePortRanges);
+            this.sourcePortRanges = Output.ofNullable(sourcePortRanges);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public DscpConfigurationArgs build() {

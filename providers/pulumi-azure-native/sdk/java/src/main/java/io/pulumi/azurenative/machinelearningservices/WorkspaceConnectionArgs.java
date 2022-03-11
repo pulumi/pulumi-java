@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices;
 
 import io.pulumi.azurenative.machinelearningservices.enums.ValueFormat;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="authType")
-      private final @Nullable Input<String> authType;
+      private final @Nullable Output<String> authType;
 
-    public Input<String> getAuthType() {
-        return this.authType == null ? Input.empty() : this.authType;
+    public Output<String> getAuthType() {
+        return this.authType == null ? Output.empty() : this.authType;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="category")
-      private final @Nullable Input<String> category;
+      private final @Nullable Output<String> category;
 
-    public Input<String> getCategory() {
-        return this.category == null ? Input.empty() : this.category;
+    public Output<String> getCategory() {
+        return this.category == null ? Output.empty() : this.category;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="connectionName")
-      private final @Nullable Input<String> connectionName;
+      private final @Nullable Output<String> connectionName;
 
-    public Input<String> getConnectionName() {
-        return this.connectionName == null ? Input.empty() : this.connectionName;
+    public Output<String> getConnectionName() {
+        return this.connectionName == null ? Output.empty() : this.connectionName;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -65,9 +65,9 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -76,10 +76,10 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="target")
-      private final @Nullable Input<String> target;
+      private final @Nullable Output<String> target;
 
-    public Input<String> getTarget() {
-        return this.target == null ? Input.empty() : this.target;
+    public Output<String> getTarget() {
+        return this.target == null ? Output.empty() : this.target;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="valueFormat")
-      private final @Nullable Input<Either<String,ValueFormat>> valueFormat;
+      private final @Nullable Output<Either<String,ValueFormat>> valueFormat;
 
-    public Input<Either<String,ValueFormat>> getValueFormat() {
-        return this.valueFormat == null ? Input.empty() : this.valueFormat;
+    public Output<Either<String,ValueFormat>> getValueFormat() {
+        return this.valueFormat == null ? Output.empty() : this.valueFormat;
     }
 
     /**
@@ -109,22 +109,22 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="workspaceName", required=true)
-      private final Input<String> workspaceName;
+      private final Output<String> workspaceName;
 
-    public Input<String> getWorkspaceName() {
+    public Output<String> getWorkspaceName() {
         return this.workspaceName;
     }
 
     public WorkspaceConnectionArgs(
-        @Nullable Input<String> authType,
-        @Nullable Input<String> category,
-        @Nullable Input<String> connectionName,
-        @Nullable Input<String> name,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> target,
-        @Nullable Input<String> value,
-        @Nullable Input<Either<String,ValueFormat>> valueFormat,
-        Input<String> workspaceName) {
+        @Nullable Output<String> authType,
+        @Nullable Output<String> category,
+        @Nullable Output<String> connectionName,
+        @Nullable Output<String> name,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> target,
+        @Nullable Output<String> value,
+        @Nullable Output<Either<String,ValueFormat>> valueFormat,
+        Output<String> workspaceName) {
         this.authType = authType;
         this.category = category;
         this.connectionName = connectionName;
@@ -137,15 +137,15 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
     }
 
     private WorkspaceConnectionArgs() {
-        this.authType = Input.empty();
-        this.category = Input.empty();
-        this.connectionName = Input.empty();
-        this.name = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.target = Input.empty();
-        this.value = Input.empty();
-        this.valueFormat = Input.empty();
-        this.workspaceName = Input.empty();
+        this.authType = Output.empty();
+        this.category = Output.empty();
+        this.connectionName = Output.empty();
+        this.name = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.target = Output.empty();
+        this.value = Output.empty();
+        this.valueFormat = Output.empty();
+        this.workspaceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -157,15 +157,15 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> authType;
-        private @Nullable Input<String> category;
-        private @Nullable Input<String> connectionName;
-        private @Nullable Input<String> name;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> target;
-        private @Nullable Input<String> value;
-        private @Nullable Input<Either<String,ValueFormat>> valueFormat;
-        private Input<String> workspaceName;
+        private @Nullable Output<String> authType;
+        private @Nullable Output<String> category;
+        private @Nullable Output<String> connectionName;
+        private @Nullable Output<String> name;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> target;
+        private @Nullable Output<String> value;
+        private @Nullable Output<Either<String,ValueFormat>> valueFormat;
+        private Output<String> workspaceName;
 
         public Builder() {
     	      // Empty
@@ -184,93 +184,93 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder authType(@Nullable Input<String> authType) {
+        public Builder authType(@Nullable Output<String> authType) {
             this.authType = authType;
             return this;
         }
 
         public Builder authType(@Nullable String authType) {
-            this.authType = Input.ofNullable(authType);
+            this.authType = Output.ofNullable(authType);
             return this;
         }
 
-        public Builder category(@Nullable Input<String> category) {
+        public Builder category(@Nullable Output<String> category) {
             this.category = category;
             return this;
         }
 
         public Builder category(@Nullable String category) {
-            this.category = Input.ofNullable(category);
+            this.category = Output.ofNullable(category);
             return this;
         }
 
-        public Builder connectionName(@Nullable Input<String> connectionName) {
+        public Builder connectionName(@Nullable Output<String> connectionName) {
             this.connectionName = connectionName;
             return this;
         }
 
         public Builder connectionName(@Nullable String connectionName) {
-            this.connectionName = Input.ofNullable(connectionName);
+            this.connectionName = Output.ofNullable(connectionName);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder target(@Nullable Input<String> target) {
+        public Builder target(@Nullable Output<String> target) {
             this.target = target;
             return this;
         }
 
         public Builder target(@Nullable String target) {
-            this.target = Input.ofNullable(target);
+            this.target = Output.ofNullable(target);
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
 
-        public Builder valueFormat(@Nullable Input<Either<String,ValueFormat>> valueFormat) {
+        public Builder valueFormat(@Nullable Output<Either<String,ValueFormat>> valueFormat) {
             this.valueFormat = valueFormat;
             return this;
         }
 
         public Builder valueFormat(@Nullable Either<String,ValueFormat> valueFormat) {
-            this.valueFormat = Input.ofNullable(valueFormat);
+            this.valueFormat = Output.ofNullable(valueFormat);
             return this;
         }
 
-        public Builder workspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
+            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
         }
         public WorkspaceConnectionArgs build() {

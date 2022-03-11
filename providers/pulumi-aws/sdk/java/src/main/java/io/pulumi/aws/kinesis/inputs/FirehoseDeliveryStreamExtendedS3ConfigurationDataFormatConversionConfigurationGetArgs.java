@@ -6,7 +6,7 @@ package io.pulumi.aws.kinesis.inputs;
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationGetArgs;
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationGetArgs;
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationSchemaConfigurationGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -22,10 +22,10 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -33,9 +33,9 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      * 
      */
     @InputImport(name="inputFormatConfiguration", required=true)
-      private final Input<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationGetArgs> inputFormatConfiguration;
+      private final Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationGetArgs> inputFormatConfiguration;
 
-    public Input<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationGetArgs> getInputFormatConfiguration() {
+    public Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationGetArgs> getInputFormatConfiguration() {
         return this.inputFormatConfiguration;
     }
 
@@ -44,9 +44,9 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      * 
      */
     @InputImport(name="outputFormatConfiguration", required=true)
-      private final Input<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationGetArgs> outputFormatConfiguration;
+      private final Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationGetArgs> outputFormatConfiguration;
 
-    public Input<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationGetArgs> getOutputFormatConfiguration() {
+    public Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationGetArgs> getOutputFormatConfiguration() {
         return this.outputFormatConfiguration;
     }
 
@@ -55,17 +55,17 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      * 
      */
     @InputImport(name="schemaConfiguration", required=true)
-      private final Input<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationSchemaConfigurationGetArgs> schemaConfiguration;
+      private final Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationSchemaConfigurationGetArgs> schemaConfiguration;
 
-    public Input<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationSchemaConfigurationGetArgs> getSchemaConfiguration() {
+    public Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationSchemaConfigurationGetArgs> getSchemaConfiguration() {
         return this.schemaConfiguration;
     }
 
     public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationGetArgs(
-        @Nullable Input<Boolean> enabled,
-        Input<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationGetArgs> inputFormatConfiguration,
-        Input<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationGetArgs> outputFormatConfiguration,
-        Input<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationSchemaConfigurationGetArgs> schemaConfiguration) {
+        @Nullable Output<Boolean> enabled,
+        Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationGetArgs> inputFormatConfiguration,
+        Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationGetArgs> outputFormatConfiguration,
+        Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationSchemaConfigurationGetArgs> schemaConfiguration) {
         this.enabled = enabled;
         this.inputFormatConfiguration = Objects.requireNonNull(inputFormatConfiguration, "expected parameter 'inputFormatConfiguration' to be non-null");
         this.outputFormatConfiguration = Objects.requireNonNull(outputFormatConfiguration, "expected parameter 'outputFormatConfiguration' to be non-null");
@@ -73,10 +73,10 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     }
 
     private FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationGetArgs() {
-        this.enabled = Input.empty();
-        this.inputFormatConfiguration = Input.empty();
-        this.outputFormatConfiguration = Input.empty();
-        this.schemaConfiguration = Input.empty();
+        this.enabled = Output.empty();
+        this.inputFormatConfiguration = Output.empty();
+        this.outputFormatConfiguration = Output.empty();
+        this.schemaConfiguration = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private Input<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationGetArgs> inputFormatConfiguration;
-        private Input<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationGetArgs> outputFormatConfiguration;
-        private Input<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationSchemaConfigurationGetArgs> schemaConfiguration;
+        private @Nullable Output<Boolean> enabled;
+        private Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationGetArgs> inputFormatConfiguration;
+        private Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationGetArgs> outputFormatConfiguration;
+        private Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationSchemaConfigurationGetArgs> schemaConfiguration;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     	      this.schemaConfiguration = defaults.schemaConfiguration;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder inputFormatConfiguration(Input<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationGetArgs> inputFormatConfiguration) {
+        public Builder inputFormatConfiguration(Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationGetArgs> inputFormatConfiguration) {
             this.inputFormatConfiguration = Objects.requireNonNull(inputFormatConfiguration);
             return this;
         }
 
         public Builder inputFormatConfiguration(FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationGetArgs inputFormatConfiguration) {
-            this.inputFormatConfiguration = Input.of(Objects.requireNonNull(inputFormatConfiguration));
+            this.inputFormatConfiguration = Output.of(Objects.requireNonNull(inputFormatConfiguration));
             return this;
         }
 
-        public Builder outputFormatConfiguration(Input<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationGetArgs> outputFormatConfiguration) {
+        public Builder outputFormatConfiguration(Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationGetArgs> outputFormatConfiguration) {
             this.outputFormatConfiguration = Objects.requireNonNull(outputFormatConfiguration);
             return this;
         }
 
         public Builder outputFormatConfiguration(FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationGetArgs outputFormatConfiguration) {
-            this.outputFormatConfiguration = Input.of(Objects.requireNonNull(outputFormatConfiguration));
+            this.outputFormatConfiguration = Output.of(Objects.requireNonNull(outputFormatConfiguration));
             return this;
         }
 
-        public Builder schemaConfiguration(Input<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationSchemaConfigurationGetArgs> schemaConfiguration) {
+        public Builder schemaConfiguration(Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationSchemaConfigurationGetArgs> schemaConfiguration) {
             this.schemaConfiguration = Objects.requireNonNull(schemaConfiguration);
             return this;
         }
 
         public Builder schemaConfiguration(FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationSchemaConfigurationGetArgs schemaConfiguration) {
-            this.schemaConfiguration = Input.of(Objects.requireNonNull(schemaConfiguration));
+            this.schemaConfiguration = Output.of(Objects.requireNonNull(schemaConfiguration));
             return this;
         }
         public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class BucketIAMPolicyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="bucket")
-      private final @Nullable Input<String> bucket;
+      private final @Nullable Output<String> bucket;
 
-    public Input<String> getBucket() {
-        return this.bucket == null ? Input.empty() : this.bucket;
+    public Output<String> getBucket() {
+        return this.bucket == null ? Output.empty() : this.bucket;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class BucketIAMPolicyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class BucketIAMPolicyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="policyData")
-      private final @Nullable Input<String> policyData;
+      private final @Nullable Output<String> policyData;
 
-    public Input<String> getPolicyData() {
-        return this.policyData == null ? Input.empty() : this.policyData;
+    public Output<String> getPolicyData() {
+        return this.policyData == null ? Output.empty() : this.policyData;
     }
 
     public BucketIAMPolicyState(
-        @Nullable Input<String> bucket,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> policyData) {
+        @Nullable Output<String> bucket,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> policyData) {
         this.bucket = bucket;
         this.etag = etag;
         this.policyData = policyData;
     }
 
     private BucketIAMPolicyState() {
-        this.bucket = Input.empty();
-        this.etag = Input.empty();
-        this.policyData = Input.empty();
+        this.bucket = Output.empty();
+        this.etag = Output.empty();
+        this.policyData = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class BucketIAMPolicyState extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bucket;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> policyData;
+        private @Nullable Output<String> bucket;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> policyData;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class BucketIAMPolicyState extends io.pulumi.resources.ResourceArgs
     	      this.policyData = defaults.policyData;
         }
 
-        public Builder bucket(@Nullable Input<String> bucket) {
+        public Builder bucket(@Nullable Output<String> bucket) {
             this.bucket = bucket;
             return this;
         }
 
         public Builder bucket(@Nullable String bucket) {
-            this.bucket = Input.ofNullable(bucket);
+            this.bucket = Output.ofNullable(bucket);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder policyData(@Nullable Input<String> policyData) {
+        public Builder policyData(@Nullable Output<String> policyData) {
             this.policyData = policyData;
             return this;
         }
 
         public Builder policyData(@Nullable String policyData) {
-            this.policyData = Input.ofNullable(policyData);
+            this.policyData = Output.ofNullable(policyData);
             return this;
         }
         public BucketIAMPolicyState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceName", required=true)
-      private final Input<String> deviceName;
+      private final Output<String> deviceName;
 
-    public Input<String> getDeviceName() {
+    public Output<String> getDeviceName() {
         return this.deviceName;
     }
 
@@ -45,25 +45,25 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iotThingName")
-      private final @Nullable Input<String> iotThingName;
+      private final @Nullable Output<String> iotThingName;
 
-    public Input<String> getIotThingName() {
-        return this.iotThingName == null ? Input.empty() : this.iotThingName;
+    public Output<String> getIotThingName() {
+        return this.iotThingName == null ? Output.empty() : this.iotThingName;
     }
 
     public DeviceArgs(
-        @Nullable Input<String> description,
-        Input<String> deviceName,
-        @Nullable Input<String> iotThingName) {
+        @Nullable Output<String> description,
+        Output<String> deviceName,
+        @Nullable Output<String> iotThingName) {
         this.description = description;
         this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
         this.iotThingName = iotThingName;
     }
 
     private DeviceArgs() {
-        this.description = Input.empty();
-        this.deviceName = Input.empty();
-        this.iotThingName = Input.empty();
+        this.description = Output.empty();
+        this.deviceName = Output.empty();
+        this.iotThingName = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> deviceName;
-        private @Nullable Input<String> iotThingName;
+        private @Nullable Output<String> description;
+        private Output<String> deviceName;
+        private @Nullable Output<String> iotThingName;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.iotThingName = defaults.iotThingName;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder deviceName(Input<String> deviceName) {
+        public Builder deviceName(Output<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
         public Builder deviceName(String deviceName) {
-            this.deviceName = Input.of(Objects.requireNonNull(deviceName));
+            this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
 
-        public Builder iotThingName(@Nullable Input<String> iotThingName) {
+        public Builder iotThingName(@Nullable Output<String> iotThingName) {
             this.iotThingName = iotThingName;
             return this;
         }
 
         public Builder iotThingName(@Nullable String iotThingName) {
-            this.iotThingName = Input.ofNullable(iotThingName);
+            this.iotThingName = Output.ofNullable(iotThingName);
             return this;
         }
         public DeviceArgs build() {

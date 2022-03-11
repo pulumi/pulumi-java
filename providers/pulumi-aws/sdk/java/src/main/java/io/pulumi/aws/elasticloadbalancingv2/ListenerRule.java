@@ -8,7 +8,6 @@ import io.pulumi.aws.elasticloadbalancingv2.ListenerRuleArgs;
 import io.pulumi.aws.elasticloadbalancingv2.inputs.ListenerRuleState;
 import io.pulumi.aws.elasticloadbalancingv2.outputs.ListenerRuleAction;
 import io.pulumi.aws.elasticloadbalancingv2.outputs.ListenerRuleCondition;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -177,14 +176,14 @@ public class ListenerRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ListenerRule(String name, ListenerRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:elasticloadbalancingv2/listenerRule:ListenerRule", name, args == null ? ListenerRuleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:elasticloadbalancingv2/listenerRule:ListenerRule", name, args == null ? ListenerRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ListenerRule(String name, Input<String> id, @Nullable ListenerRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ListenerRule(String name, Output<String> id, @Nullable ListenerRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:elasticloadbalancingv2/listenerRule:ListenerRule", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -200,7 +199,7 @@ public class ListenerRule extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ListenerRule get(String name, Input<String> id, @Nullable ListenerRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ListenerRule get(String name, Output<String> id, @Nullable ListenerRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ListenerRule(name, id, state, options);
     }
 }

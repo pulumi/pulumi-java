@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cognitiveservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class CommitmentPeriodArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="count")
-      private final @Nullable Input<Integer> count;
+      private final @Nullable Output<Integer> count;
 
-    public Input<Integer> getCount() {
-        return this.count == null ? Input.empty() : this.count;
+    public Output<Integer> getCount() {
+        return this.count == null ? Output.empty() : this.count;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class CommitmentPeriodArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tier")
-      private final @Nullable Input<String> tier;
+      private final @Nullable Output<String> tier;
 
-    public Input<String> getTier() {
-        return this.tier == null ? Input.empty() : this.tier;
+    public Output<String> getTier() {
+        return this.tier == null ? Output.empty() : this.tier;
     }
 
     public CommitmentPeriodArgs(
-        @Nullable Input<Integer> count,
-        @Nullable Input<String> tier) {
+        @Nullable Output<Integer> count,
+        @Nullable Output<String> tier) {
         this.count = count;
         this.tier = tier;
     }
 
     private CommitmentPeriodArgs() {
-        this.count = Input.empty();
-        this.tier = Input.empty();
+        this.count = Output.empty();
+        this.tier = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class CommitmentPeriodArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> count;
-        private @Nullable Input<String> tier;
+        private @Nullable Output<Integer> count;
+        private @Nullable Output<String> tier;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class CommitmentPeriodArgs extends io.pulumi.resources.ResourceArgs
     	      this.tier = defaults.tier;
         }
 
-        public Builder count(@Nullable Input<Integer> count) {
+        public Builder count(@Nullable Output<Integer> count) {
             this.count = count;
             return this;
         }
 
         public Builder count(@Nullable Integer count) {
-            this.count = Input.ofNullable(count);
+            this.count = Output.ofNullable(count);
             return this;
         }
 
-        public Builder tier(@Nullable Input<String> tier) {
+        public Builder tier(@Nullable Output<String> tier) {
             this.tier = tier;
             return this;
         }
 
         public Builder tier(@Nullable String tier) {
-            this.tier = Input.ofNullable(tier);
+            this.tier = Output.ofNullable(tier);
             return this;
         }
         public CommitmentPeriodArgs build() {

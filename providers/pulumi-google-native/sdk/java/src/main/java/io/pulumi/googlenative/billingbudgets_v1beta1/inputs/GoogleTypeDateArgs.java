@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.billingbudgets_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class GoogleTypeDateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="day")
-      private final @Nullable Input<Integer> day;
+      private final @Nullable Output<Integer> day;
 
-    public Input<Integer> getDay() {
-        return this.day == null ? Input.empty() : this.day;
+    public Output<Integer> getDay() {
+        return this.day == null ? Output.empty() : this.day;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class GoogleTypeDateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="month")
-      private final @Nullable Input<Integer> month;
+      private final @Nullable Output<Integer> month;
 
-    public Input<Integer> getMonth() {
-        return this.month == null ? Input.empty() : this.month;
+    public Output<Integer> getMonth() {
+        return this.month == null ? Output.empty() : this.month;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class GoogleTypeDateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="year")
-      private final @Nullable Input<Integer> year;
+      private final @Nullable Output<Integer> year;
 
-    public Input<Integer> getYear() {
-        return this.year == null ? Input.empty() : this.year;
+    public Output<Integer> getYear() {
+        return this.year == null ? Output.empty() : this.year;
     }
 
     public GoogleTypeDateArgs(
-        @Nullable Input<Integer> day,
-        @Nullable Input<Integer> month,
-        @Nullable Input<Integer> year) {
+        @Nullable Output<Integer> day,
+        @Nullable Output<Integer> month,
+        @Nullable Output<Integer> year) {
         this.day = day;
         this.month = month;
         this.year = year;
     }
 
     private GoogleTypeDateArgs() {
-        this.day = Input.empty();
-        this.month = Input.empty();
-        this.year = Input.empty();
+        this.day = Output.empty();
+        this.month = Output.empty();
+        this.year = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class GoogleTypeDateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> day;
-        private @Nullable Input<Integer> month;
-        private @Nullable Input<Integer> year;
+        private @Nullable Output<Integer> day;
+        private @Nullable Output<Integer> month;
+        private @Nullable Output<Integer> year;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class GoogleTypeDateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.year = defaults.year;
         }
 
-        public Builder day(@Nullable Input<Integer> day) {
+        public Builder day(@Nullable Output<Integer> day) {
             this.day = day;
             return this;
         }
 
         public Builder day(@Nullable Integer day) {
-            this.day = Input.ofNullable(day);
+            this.day = Output.ofNullable(day);
             return this;
         }
 
-        public Builder month(@Nullable Input<Integer> month) {
+        public Builder month(@Nullable Output<Integer> month) {
             this.month = month;
             return this;
         }
 
         public Builder month(@Nullable Integer month) {
-            this.month = Input.ofNullable(month);
+            this.month = Output.ofNullable(month);
             return this;
         }
 
-        public Builder year(@Nullable Input<Integer> year) {
+        public Builder year(@Nullable Output<Integer> year) {
             this.year = year;
             return this;
         }
 
         public Builder year(@Nullable Integer year) {
-            this.year = Input.ofNullable(year);
+            this.year = Output.ofNullable(year);
             return this;
         }
         public GoogleTypeDateArgs build() {

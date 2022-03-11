@@ -5,7 +5,7 @@ package io.pulumi.azurenative.consumption.inputs;
 
 import io.pulumi.azurenative.consumption.enums.BudgetOperatorType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,9 +25,9 @@ public final class BudgetComparisonExpressionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -36,9 +36,9 @@ public final class BudgetComparisonExpressionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="operator", required=true)
-      private final Input<Either<String,BudgetOperatorType>> operator;
+      private final Output<Either<String,BudgetOperatorType>> operator;
 
-    public Input<Either<String,BudgetOperatorType>> getOperator() {
+    public Output<Either<String,BudgetOperatorType>> getOperator() {
         return this.operator;
     }
 
@@ -47,25 +47,25 @@ public final class BudgetComparisonExpressionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="values", required=true)
-      private final Input<List<String>> values;
+      private final Output<List<String>> values;
 
-    public Input<List<String>> getValues() {
+    public Output<List<String>> getValues() {
         return this.values;
     }
 
     public BudgetComparisonExpressionArgs(
-        Input<String> name,
-        Input<Either<String,BudgetOperatorType>> operator,
-        Input<List<String>> values) {
+        Output<String> name,
+        Output<Either<String,BudgetOperatorType>> operator,
+        Output<List<String>> values) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.operator = Objects.requireNonNull(operator, "expected parameter 'operator' to be non-null");
         this.values = Objects.requireNonNull(values, "expected parameter 'values' to be non-null");
     }
 
     private BudgetComparisonExpressionArgs() {
-        this.name = Input.empty();
-        this.operator = Input.empty();
-        this.values = Input.empty();
+        this.name = Output.empty();
+        this.operator = Output.empty();
+        this.values = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class BudgetComparisonExpressionArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private Input<Either<String,BudgetOperatorType>> operator;
-        private Input<List<String>> values;
+        private Output<String> name;
+        private Output<Either<String,BudgetOperatorType>> operator;
+        private Output<List<String>> values;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class BudgetComparisonExpressionArgs extends io.pulumi.resources.Re
     	      this.values = defaults.values;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder operator(Input<Either<String,BudgetOperatorType>> operator) {
+        public Builder operator(Output<Either<String,BudgetOperatorType>> operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
 
         public Builder operator(Either<String,BudgetOperatorType> operator) {
-            this.operator = Input.of(Objects.requireNonNull(operator));
+            this.operator = Output.of(Objects.requireNonNull(operator));
             return this;
         }
 
-        public Builder values(Input<List<String>> values) {
+        public Builder values(Output<List<String>> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
 
         public Builder values(List<String> values) {
-            this.values = Input.of(Objects.requireNonNull(values));
+            this.values = Output.of(Objects.requireNonNull(values));
             return this;
         }
         public BudgetComparisonExpressionArgs build() {

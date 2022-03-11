@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cfg.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class RuleScopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="complianceResourceId")
-      private final @Nullable Input<String> complianceResourceId;
+      private final @Nullable Output<String> complianceResourceId;
 
-    public Input<String> getComplianceResourceId() {
-        return this.complianceResourceId == null ? Input.empty() : this.complianceResourceId;
+    public Output<String> getComplianceResourceId() {
+        return this.complianceResourceId == null ? Output.empty() : this.complianceResourceId;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class RuleScopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="complianceResourceTypes")
-      private final @Nullable Input<List<String>> complianceResourceTypes;
+      private final @Nullable Output<List<String>> complianceResourceTypes;
 
-    public Input<List<String>> getComplianceResourceTypes() {
-        return this.complianceResourceTypes == null ? Input.empty() : this.complianceResourceTypes;
+    public Output<List<String>> getComplianceResourceTypes() {
+        return this.complianceResourceTypes == null ? Output.empty() : this.complianceResourceTypes;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class RuleScopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagKey")
-      private final @Nullable Input<String> tagKey;
+      private final @Nullable Output<String> tagKey;
 
-    public Input<String> getTagKey() {
-        return this.tagKey == null ? Input.empty() : this.tagKey;
+    public Output<String> getTagKey() {
+        return this.tagKey == null ? Output.empty() : this.tagKey;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class RuleScopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagValue")
-      private final @Nullable Input<String> tagValue;
+      private final @Nullable Output<String> tagValue;
 
-    public Input<String> getTagValue() {
-        return this.tagValue == null ? Input.empty() : this.tagValue;
+    public Output<String> getTagValue() {
+        return this.tagValue == null ? Output.empty() : this.tagValue;
     }
 
     public RuleScopeArgs(
-        @Nullable Input<String> complianceResourceId,
-        @Nullable Input<List<String>> complianceResourceTypes,
-        @Nullable Input<String> tagKey,
-        @Nullable Input<String> tagValue) {
+        @Nullable Output<String> complianceResourceId,
+        @Nullable Output<List<String>> complianceResourceTypes,
+        @Nullable Output<String> tagKey,
+        @Nullable Output<String> tagValue) {
         this.complianceResourceId = complianceResourceId;
         this.complianceResourceTypes = complianceResourceTypes;
         this.tagKey = tagKey;
@@ -71,10 +71,10 @@ public final class RuleScopeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RuleScopeArgs() {
-        this.complianceResourceId = Input.empty();
-        this.complianceResourceTypes = Input.empty();
-        this.tagKey = Input.empty();
-        this.tagValue = Input.empty();
+        this.complianceResourceId = Output.empty();
+        this.complianceResourceTypes = Output.empty();
+        this.tagKey = Output.empty();
+        this.tagValue = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class RuleScopeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> complianceResourceId;
-        private @Nullable Input<List<String>> complianceResourceTypes;
-        private @Nullable Input<String> tagKey;
-        private @Nullable Input<String> tagValue;
+        private @Nullable Output<String> complianceResourceId;
+        private @Nullable Output<List<String>> complianceResourceTypes;
+        private @Nullable Output<String> tagKey;
+        private @Nullable Output<String> tagValue;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class RuleScopeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tagValue = defaults.tagValue;
         }
 
-        public Builder complianceResourceId(@Nullable Input<String> complianceResourceId) {
+        public Builder complianceResourceId(@Nullable Output<String> complianceResourceId) {
             this.complianceResourceId = complianceResourceId;
             return this;
         }
 
         public Builder complianceResourceId(@Nullable String complianceResourceId) {
-            this.complianceResourceId = Input.ofNullable(complianceResourceId);
+            this.complianceResourceId = Output.ofNullable(complianceResourceId);
             return this;
         }
 
-        public Builder complianceResourceTypes(@Nullable Input<List<String>> complianceResourceTypes) {
+        public Builder complianceResourceTypes(@Nullable Output<List<String>> complianceResourceTypes) {
             this.complianceResourceTypes = complianceResourceTypes;
             return this;
         }
 
         public Builder complianceResourceTypes(@Nullable List<String> complianceResourceTypes) {
-            this.complianceResourceTypes = Input.ofNullable(complianceResourceTypes);
+            this.complianceResourceTypes = Output.ofNullable(complianceResourceTypes);
             return this;
         }
 
-        public Builder tagKey(@Nullable Input<String> tagKey) {
+        public Builder tagKey(@Nullable Output<String> tagKey) {
             this.tagKey = tagKey;
             return this;
         }
 
         public Builder tagKey(@Nullable String tagKey) {
-            this.tagKey = Input.ofNullable(tagKey);
+            this.tagKey = Output.ofNullable(tagKey);
             return this;
         }
 
-        public Builder tagValue(@Nullable Input<String> tagValue) {
+        public Builder tagValue(@Nullable Output<String> tagValue) {
             this.tagValue = tagValue;
             return this;
         }
 
         public Builder tagValue(@Nullable String tagValue) {
-            this.tagValue = Input.ofNullable(tagValue);
+            this.tagValue = Output.ofNullable(tagValue);
             return this;
         }
         public RuleScopeArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,18 +20,18 @@ public final class ArtifactRuleArgs extends io.pulumi.resources.ResourceArgs {
     public static final ArtifactRuleArgs Empty = new ArtifactRuleArgs();
 
     @InputImport(name="artifactRule")
-      private final @Nullable Input<List<String>> artifactRule;
+      private final @Nullable Output<List<String>> artifactRule;
 
-    public Input<List<String>> getArtifactRule() {
-        return this.artifactRule == null ? Input.empty() : this.artifactRule;
+    public Output<List<String>> getArtifactRule() {
+        return this.artifactRule == null ? Output.empty() : this.artifactRule;
     }
 
-    public ArtifactRuleArgs(@Nullable Input<List<String>> artifactRule) {
+    public ArtifactRuleArgs(@Nullable Output<List<String>> artifactRule) {
         this.artifactRule = artifactRule;
     }
 
     private ArtifactRuleArgs() {
-        this.artifactRule = Input.empty();
+        this.artifactRule = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class ArtifactRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> artifactRule;
+        private @Nullable Output<List<String>> artifactRule;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class ArtifactRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.artifactRule = defaults.artifactRule;
         }
 
-        public Builder artifactRule(@Nullable Input<List<String>> artifactRule) {
+        public Builder artifactRule(@Nullable Output<List<String>> artifactRule) {
             this.artifactRule = artifactRule;
             return this;
         }
 
         public Builder artifactRule(@Nullable List<String> artifactRule) {
-            this.artifactRule = Input.ofNullable(artifactRule);
+            this.artifactRule = Output.ofNullable(artifactRule);
             return this;
         }
         public ArtifactRuleArgs build() {

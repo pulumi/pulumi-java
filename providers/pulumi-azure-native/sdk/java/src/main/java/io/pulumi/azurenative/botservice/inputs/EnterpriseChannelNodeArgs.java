@@ -5,7 +5,7 @@ package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.azurenative.botservice.enums.EnterpriseChannelNodeState;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,9 +25,9 @@ public final class EnterpriseChannelNodeArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="azureLocation", required=true)
-      private final Input<String> azureLocation;
+      private final Output<String> azureLocation;
 
-    public Input<String> getAzureLocation() {
+    public Output<String> getAzureLocation() {
         return this.azureLocation;
     }
 
@@ -36,9 +36,9 @@ public final class EnterpriseChannelNodeArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="azureSku", required=true)
-      private final Input<String> azureSku;
+      private final Output<String> azureSku;
 
-    public Input<String> getAzureSku() {
+    public Output<String> getAzureSku() {
         return this.azureSku;
     }
 
@@ -47,9 +47,9 @@ public final class EnterpriseChannelNodeArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -58,17 +58,17 @@ public final class EnterpriseChannelNodeArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<Either<String,EnterpriseChannelNodeState>> state;
+      private final @Nullable Output<Either<String,EnterpriseChannelNodeState>> state;
 
-    public Input<Either<String,EnterpriseChannelNodeState>> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<Either<String,EnterpriseChannelNodeState>> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     public EnterpriseChannelNodeArgs(
-        Input<String> azureLocation,
-        Input<String> azureSku,
-        Input<String> name,
-        @Nullable Input<Either<String,EnterpriseChannelNodeState>> state) {
+        Output<String> azureLocation,
+        Output<String> azureSku,
+        Output<String> name,
+        @Nullable Output<Either<String,EnterpriseChannelNodeState>> state) {
         this.azureLocation = Objects.requireNonNull(azureLocation, "expected parameter 'azureLocation' to be non-null");
         this.azureSku = Objects.requireNonNull(azureSku, "expected parameter 'azureSku' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
@@ -76,10 +76,10 @@ public final class EnterpriseChannelNodeArgs extends io.pulumi.resources.Resourc
     }
 
     private EnterpriseChannelNodeArgs() {
-        this.azureLocation = Input.empty();
-        this.azureSku = Input.empty();
-        this.name = Input.empty();
-        this.state = Input.empty();
+        this.azureLocation = Output.empty();
+        this.azureSku = Output.empty();
+        this.name = Output.empty();
+        this.state = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class EnterpriseChannelNodeArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<String> azureLocation;
-        private Input<String> azureSku;
-        private Input<String> name;
-        private @Nullable Input<Either<String,EnterpriseChannelNodeState>> state;
+        private Output<String> azureLocation;
+        private Output<String> azureSku;
+        private Output<String> name;
+        private @Nullable Output<Either<String,EnterpriseChannelNodeState>> state;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class EnterpriseChannelNodeArgs extends io.pulumi.resources.Resourc
     	      this.state = defaults.state;
         }
 
-        public Builder azureLocation(Input<String> azureLocation) {
+        public Builder azureLocation(Output<String> azureLocation) {
             this.azureLocation = Objects.requireNonNull(azureLocation);
             return this;
         }
 
         public Builder azureLocation(String azureLocation) {
-            this.azureLocation = Input.of(Objects.requireNonNull(azureLocation));
+            this.azureLocation = Output.of(Objects.requireNonNull(azureLocation));
             return this;
         }
 
-        public Builder azureSku(Input<String> azureSku) {
+        public Builder azureSku(Output<String> azureSku) {
             this.azureSku = Objects.requireNonNull(azureSku);
             return this;
         }
 
         public Builder azureSku(String azureSku) {
-            this.azureSku = Input.of(Objects.requireNonNull(azureSku));
+            this.azureSku = Output.of(Objects.requireNonNull(azureSku));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder state(@Nullable Input<Either<String,EnterpriseChannelNodeState>> state) {
+        public Builder state(@Nullable Output<Either<String,EnterpriseChannelNodeState>> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable Either<String,EnterpriseChannelNodeState> state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
         public EnterpriseChannelNodeArgs build() {

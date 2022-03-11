@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListArgs;
@@ -21,10 +21,10 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
      * 
      */
     @InputImport(name="cloudStoragePath")
-      private final @Nullable Input<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathArgs> cloudStoragePath;
+      private final @Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathArgs> cloudStoragePath;
 
-    public Input<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathArgs> getCloudStoragePath() {
-        return this.cloudStoragePath == null ? Input.empty() : this.cloudStoragePath;
+    public Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathArgs> getCloudStoragePath() {
+        return this.cloudStoragePath == null ? Output.empty() : this.cloudStoragePath;
     }
 
     /**
@@ -33,22 +33,22 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
      * 
      */
     @InputImport(name="wordList")
-      private final @Nullable Input<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListArgs> wordList;
+      private final @Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListArgs> wordList;
 
-    public Input<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListArgs> getWordList() {
-        return this.wordList == null ? Input.empty() : this.wordList;
+    public Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListArgs> getWordList() {
+        return this.wordList == null ? Output.empty() : this.wordList;
     }
 
     public PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryArgs(
-        @Nullable Input<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathArgs> cloudStoragePath,
-        @Nullable Input<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListArgs> wordList) {
+        @Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathArgs> cloudStoragePath,
+        @Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListArgs> wordList) {
         this.cloudStoragePath = cloudStoragePath;
         this.wordList = wordList;
     }
 
     private PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryArgs() {
-        this.cloudStoragePath = Input.empty();
-        this.wordList = Input.empty();
+        this.cloudStoragePath = Output.empty();
+        this.wordList = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
     }
 
     public static final class Builder {
-        private @Nullable Input<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathArgs> cloudStoragePath;
-        private @Nullable Input<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListArgs> wordList;
+        private @Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathArgs> cloudStoragePath;
+        private @Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListArgs> wordList;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
     	      this.wordList = defaults.wordList;
         }
 
-        public Builder cloudStoragePath(@Nullable Input<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathArgs> cloudStoragePath) {
+        public Builder cloudStoragePath(@Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathArgs> cloudStoragePath) {
             this.cloudStoragePath = cloudStoragePath;
             return this;
         }
 
         public Builder cloudStoragePath(@Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathArgs cloudStoragePath) {
-            this.cloudStoragePath = Input.ofNullable(cloudStoragePath);
+            this.cloudStoragePath = Output.ofNullable(cloudStoragePath);
             return this;
         }
 
-        public Builder wordList(@Nullable Input<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListArgs> wordList) {
+        public Builder wordList(@Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListArgs> wordList) {
             this.wordList = wordList;
             return this;
         }
 
         public Builder wordList(@Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListArgs wordList) {
-            this.wordList = Input.ofNullable(wordList);
+            this.wordList = Output.ofNullable(wordList);
             return this;
         }
         public PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryArgs build() {

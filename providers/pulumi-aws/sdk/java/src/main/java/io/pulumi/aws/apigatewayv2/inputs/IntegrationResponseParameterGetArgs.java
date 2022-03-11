@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apigatewayv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,9 +20,9 @@ public final class IntegrationResponseParameterGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="mappings", required=true)
-      private final Input<Map<String,String>> mappings;
+      private final Output<Map<String,String>> mappings;
 
-    public Input<Map<String,String>> getMappings() {
+    public Output<Map<String,String>> getMappings() {
         return this.mappings;
     }
 
@@ -31,22 +31,22 @@ public final class IntegrationResponseParameterGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="statusCode", required=true)
-      private final Input<String> statusCode;
+      private final Output<String> statusCode;
 
-    public Input<String> getStatusCode() {
+    public Output<String> getStatusCode() {
         return this.statusCode;
     }
 
     public IntegrationResponseParameterGetArgs(
-        Input<Map<String,String>> mappings,
-        Input<String> statusCode) {
+        Output<Map<String,String>> mappings,
+        Output<String> statusCode) {
         this.mappings = Objects.requireNonNull(mappings, "expected parameter 'mappings' to be non-null");
         this.statusCode = Objects.requireNonNull(statusCode, "expected parameter 'statusCode' to be non-null");
     }
 
     private IntegrationResponseParameterGetArgs() {
-        this.mappings = Input.empty();
-        this.statusCode = Input.empty();
+        this.mappings = Output.empty();
+        this.statusCode = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class IntegrationResponseParameterGetArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<Map<String,String>> mappings;
-        private Input<String> statusCode;
+        private Output<Map<String,String>> mappings;
+        private Output<String> statusCode;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class IntegrationResponseParameterGetArgs extends io.pulumi.resourc
     	      this.statusCode = defaults.statusCode;
         }
 
-        public Builder mappings(Input<Map<String,String>> mappings) {
+        public Builder mappings(Output<Map<String,String>> mappings) {
             this.mappings = Objects.requireNonNull(mappings);
             return this;
         }
 
         public Builder mappings(Map<String,String> mappings) {
-            this.mappings = Input.of(Objects.requireNonNull(mappings));
+            this.mappings = Output.of(Objects.requireNonNull(mappings));
             return this;
         }
 
-        public Builder statusCode(Input<String> statusCode) {
+        public Builder statusCode(Output<String> statusCode) {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }
 
         public Builder statusCode(String statusCode) {
-            this.statusCode = Input.of(Objects.requireNonNull(statusCode));
+            this.statusCode = Output.of(Objects.requireNonNull(statusCode));
             return this;
         }
         public IntegrationResponseParameterGetArgs build() {

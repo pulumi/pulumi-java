@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.DiskDiskEncryptionKeyGetArgs;
 import io.pulumi.gcp.compute.inputs.DiskSourceImageEncryptionKeyGetArgs;
@@ -26,10 +26,10 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationTimestamp")
-      private final @Nullable Input<String> creationTimestamp;
+      private final @Nullable Output<String> creationTimestamp;
 
-    public Input<String> getCreationTimestamp() {
-        return this.creationTimestamp == null ? Input.empty() : this.creationTimestamp;
+    public Output<String> getCreationTimestamp() {
+        return this.creationTimestamp == null ? Output.empty() : this.creationTimestamp;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskEncryptionKey")
-      private final @Nullable Input<DiskDiskEncryptionKeyGetArgs> diskEncryptionKey;
+      private final @Nullable Output<DiskDiskEncryptionKeyGetArgs> diskEncryptionKey;
 
-    public Input<DiskDiskEncryptionKeyGetArgs> getDiskEncryptionKey() {
-        return this.diskEncryptionKey == null ? Input.empty() : this.diskEncryptionKey;
+    public Output<DiskDiskEncryptionKeyGetArgs> getDiskEncryptionKey() {
+        return this.diskEncryptionKey == null ? Output.empty() : this.diskEncryptionKey;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="image")
-      private final @Nullable Input<String> image;
+      private final @Nullable Output<String> image;
 
-    public Input<String> getImage() {
-        return this.image == null ? Input.empty() : this.image;
+    public Output<String> getImage() {
+        return this.image == null ? Output.empty() : this.image;
     }
 
     /**
@@ -92,11 +92,11 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      */
     @Deprecated /* This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config. */
     @InputImport(name="interface")
-      private final @Nullable Input<String> $interface;
+      private final @Nullable Output<String> $interface;
 
     @Deprecated /* This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config. */
-    public Input<String> get$interface() {
-        return this.$interface == null ? Input.empty() : this.$interface;
+    public Output<String> get$interface() {
+        return this.$interface == null ? Output.empty() : this.$interface;
     }
 
     /**
@@ -104,10 +104,10 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labelFingerprint")
-      private final @Nullable Input<String> labelFingerprint;
+      private final @Nullable Output<String> labelFingerprint;
 
-    public Input<String> getLabelFingerprint() {
-        return this.labelFingerprint == null ? Input.empty() : this.labelFingerprint;
+    public Output<String> getLabelFingerprint() {
+        return this.labelFingerprint == null ? Output.empty() : this.labelFingerprint;
     }
 
     /**
@@ -115,10 +115,10 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -126,10 +126,10 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastAttachTimestamp")
-      private final @Nullable Input<String> lastAttachTimestamp;
+      private final @Nullable Output<String> lastAttachTimestamp;
 
-    public Input<String> getLastAttachTimestamp() {
-        return this.lastAttachTimestamp == null ? Input.empty() : this.lastAttachTimestamp;
+    public Output<String> getLastAttachTimestamp() {
+        return this.lastAttachTimestamp == null ? Output.empty() : this.lastAttachTimestamp;
     }
 
     /**
@@ -137,10 +137,10 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastDetachTimestamp")
-      private final @Nullable Input<String> lastDetachTimestamp;
+      private final @Nullable Output<String> lastDetachTimestamp;
 
-    public Input<String> getLastDetachTimestamp() {
-        return this.lastDetachTimestamp == null ? Input.empty() : this.lastDetachTimestamp;
+    public Output<String> getLastDetachTimestamp() {
+        return this.lastDetachTimestamp == null ? Output.empty() : this.lastDetachTimestamp;
     }
 
     /**
@@ -148,10 +148,10 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="multiWriter")
-      private final @Nullable Input<Boolean> multiWriter;
+      private final @Nullable Output<Boolean> multiWriter;
 
-    public Input<Boolean> getMultiWriter() {
-        return this.multiWriter == null ? Input.empty() : this.multiWriter;
+    public Output<Boolean> getMultiWriter() {
+        return this.multiWriter == null ? Output.empty() : this.multiWriter;
     }
 
     /**
@@ -165,10 +165,10 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -180,10 +180,10 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="physicalBlockSizeBytes")
-      private final @Nullable Input<Integer> physicalBlockSizeBytes;
+      private final @Nullable Output<Integer> physicalBlockSizeBytes;
 
-    public Input<Integer> getPhysicalBlockSizeBytes() {
-        return this.physicalBlockSizeBytes == null ? Input.empty() : this.physicalBlockSizeBytes;
+    public Output<Integer> getPhysicalBlockSizeBytes() {
+        return this.physicalBlockSizeBytes == null ? Output.empty() : this.physicalBlockSizeBytes;
     }
 
     /**
@@ -192,10 +192,10 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -203,10 +203,10 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provisionedIops")
-      private final @Nullable Input<Integer> provisionedIops;
+      private final @Nullable Output<Integer> provisionedIops;
 
-    public Input<Integer> getProvisionedIops() {
-        return this.provisionedIops == null ? Input.empty() : this.provisionedIops;
+    public Output<Integer> getProvisionedIops() {
+        return this.provisionedIops == null ? Output.empty() : this.provisionedIops;
     }
 
     /**
@@ -219,10 +219,10 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourcePolicies")
-      private final @Nullable Input<List<String>> resourcePolicies;
+      private final @Nullable Output<List<String>> resourcePolicies;
 
-    public Input<List<String>> getResourcePolicies() {
-        return this.resourcePolicies == null ? Input.empty() : this.resourcePolicies;
+    public Output<List<String>> getResourcePolicies() {
+        return this.resourcePolicies == null ? Output.empty() : this.resourcePolicies;
     }
 
     /**
@@ -230,10 +230,10 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfLink")
-      private final @Nullable Input<String> selfLink;
+      private final @Nullable Output<String> selfLink;
 
-    public Input<String> getSelfLink() {
-        return this.selfLink == null ? Input.empty() : this.selfLink;
+    public Output<String> getSelfLink() {
+        return this.selfLink == null ? Output.empty() : this.selfLink;
     }
 
     /**
@@ -251,10 +251,10 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="size")
-      private final @Nullable Input<Integer> size;
+      private final @Nullable Output<Integer> size;
 
-    public Input<Integer> getSize() {
-        return this.size == null ? Input.empty() : this.size;
+    public Output<Integer> getSize() {
+        return this.size == null ? Output.empty() : this.size;
     }
 
     /**
@@ -269,10 +269,10 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="snapshot")
-      private final @Nullable Input<String> snapshot;
+      private final @Nullable Output<String> snapshot;
 
-    public Input<String> getSnapshot() {
-        return this.snapshot == null ? Input.empty() : this.snapshot;
+    public Output<String> getSnapshot() {
+        return this.snapshot == null ? Output.empty() : this.snapshot;
     }
 
     /**
@@ -282,10 +282,10 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceImageEncryptionKey")
-      private final @Nullable Input<DiskSourceImageEncryptionKeyGetArgs> sourceImageEncryptionKey;
+      private final @Nullable Output<DiskSourceImageEncryptionKeyGetArgs> sourceImageEncryptionKey;
 
-    public Input<DiskSourceImageEncryptionKeyGetArgs> getSourceImageEncryptionKey() {
-        return this.sourceImageEncryptionKey == null ? Input.empty() : this.sourceImageEncryptionKey;
+    public Output<DiskSourceImageEncryptionKeyGetArgs> getSourceImageEncryptionKey() {
+        return this.sourceImageEncryptionKey == null ? Output.empty() : this.sourceImageEncryptionKey;
     }
 
     /**
@@ -295,10 +295,10 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceImageId")
-      private final @Nullable Input<String> sourceImageId;
+      private final @Nullable Output<String> sourceImageId;
 
-    public Input<String> getSourceImageId() {
-        return this.sourceImageId == null ? Input.empty() : this.sourceImageId;
+    public Output<String> getSourceImageId() {
+        return this.sourceImageId == null ? Output.empty() : this.sourceImageId;
     }
 
     /**
@@ -309,10 +309,10 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceSnapshotEncryptionKey")
-      private final @Nullable Input<DiskSourceSnapshotEncryptionKeyGetArgs> sourceSnapshotEncryptionKey;
+      private final @Nullable Output<DiskSourceSnapshotEncryptionKeyGetArgs> sourceSnapshotEncryptionKey;
 
-    public Input<DiskSourceSnapshotEncryptionKeyGetArgs> getSourceSnapshotEncryptionKey() {
-        return this.sourceSnapshotEncryptionKey == null ? Input.empty() : this.sourceSnapshotEncryptionKey;
+    public Output<DiskSourceSnapshotEncryptionKeyGetArgs> getSourceSnapshotEncryptionKey() {
+        return this.sourceSnapshotEncryptionKey == null ? Output.empty() : this.sourceSnapshotEncryptionKey;
     }
 
     /**
@@ -322,10 +322,10 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceSnapshotId")
-      private final @Nullable Input<String> sourceSnapshotId;
+      private final @Nullable Output<String> sourceSnapshotId;
 
-    public Input<String> getSourceSnapshotId() {
-        return this.sourceSnapshotId == null ? Input.empty() : this.sourceSnapshotId;
+    public Output<String> getSourceSnapshotId() {
+        return this.sourceSnapshotId == null ? Output.empty() : this.sourceSnapshotId;
     }
 
     /**
@@ -334,10 +334,10 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -345,10 +345,10 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="users")
-      private final @Nullable Input<List<String>> users;
+      private final @Nullable Output<List<String>> users;
 
-    public Input<List<String>> getUsers() {
-        return this.users == null ? Input.empty() : this.users;
+    public Output<List<String>> getUsers() {
+        return this.users == null ? Output.empty() : this.users;
     }
 
     /**
@@ -356,38 +356,38 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zone")
-      private final @Nullable Input<String> zone;
+      private final @Nullable Output<String> zone;
 
-    public Input<String> getZone() {
-        return this.zone == null ? Input.empty() : this.zone;
+    public Output<String> getZone() {
+        return this.zone == null ? Output.empty() : this.zone;
     }
 
     public DiskState(
-        @Nullable Input<String> creationTimestamp,
-        @Nullable Input<String> description,
-        @Nullable Input<DiskDiskEncryptionKeyGetArgs> diskEncryptionKey,
-        @Nullable Input<String> image,
-        @Nullable Input<String> $interface,
-        @Nullable Input<String> labelFingerprint,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> lastAttachTimestamp,
-        @Nullable Input<String> lastDetachTimestamp,
-        @Nullable Input<Boolean> multiWriter,
-        @Nullable Input<String> name,
-        @Nullable Input<Integer> physicalBlockSizeBytes,
-        @Nullable Input<String> project,
-        @Nullable Input<Integer> provisionedIops,
-        @Nullable Input<List<String>> resourcePolicies,
-        @Nullable Input<String> selfLink,
-        @Nullable Input<Integer> size,
-        @Nullable Input<String> snapshot,
-        @Nullable Input<DiskSourceImageEncryptionKeyGetArgs> sourceImageEncryptionKey,
-        @Nullable Input<String> sourceImageId,
-        @Nullable Input<DiskSourceSnapshotEncryptionKeyGetArgs> sourceSnapshotEncryptionKey,
-        @Nullable Input<String> sourceSnapshotId,
-        @Nullable Input<String> type,
-        @Nullable Input<List<String>> users,
-        @Nullable Input<String> zone) {
+        @Nullable Output<String> creationTimestamp,
+        @Nullable Output<String> description,
+        @Nullable Output<DiskDiskEncryptionKeyGetArgs> diskEncryptionKey,
+        @Nullable Output<String> image,
+        @Nullable Output<String> $interface,
+        @Nullable Output<String> labelFingerprint,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> lastAttachTimestamp,
+        @Nullable Output<String> lastDetachTimestamp,
+        @Nullable Output<Boolean> multiWriter,
+        @Nullable Output<String> name,
+        @Nullable Output<Integer> physicalBlockSizeBytes,
+        @Nullable Output<String> project,
+        @Nullable Output<Integer> provisionedIops,
+        @Nullable Output<List<String>> resourcePolicies,
+        @Nullable Output<String> selfLink,
+        @Nullable Output<Integer> size,
+        @Nullable Output<String> snapshot,
+        @Nullable Output<DiskSourceImageEncryptionKeyGetArgs> sourceImageEncryptionKey,
+        @Nullable Output<String> sourceImageId,
+        @Nullable Output<DiskSourceSnapshotEncryptionKeyGetArgs> sourceSnapshotEncryptionKey,
+        @Nullable Output<String> sourceSnapshotId,
+        @Nullable Output<String> type,
+        @Nullable Output<List<String>> users,
+        @Nullable Output<String> zone) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.diskEncryptionKey = diskEncryptionKey;
@@ -416,31 +416,31 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DiskState() {
-        this.creationTimestamp = Input.empty();
-        this.description = Input.empty();
-        this.diskEncryptionKey = Input.empty();
-        this.image = Input.empty();
-        this.$interface = Input.empty();
-        this.labelFingerprint = Input.empty();
-        this.labels = Input.empty();
-        this.lastAttachTimestamp = Input.empty();
-        this.lastDetachTimestamp = Input.empty();
-        this.multiWriter = Input.empty();
-        this.name = Input.empty();
-        this.physicalBlockSizeBytes = Input.empty();
-        this.project = Input.empty();
-        this.provisionedIops = Input.empty();
-        this.resourcePolicies = Input.empty();
-        this.selfLink = Input.empty();
-        this.size = Input.empty();
-        this.snapshot = Input.empty();
-        this.sourceImageEncryptionKey = Input.empty();
-        this.sourceImageId = Input.empty();
-        this.sourceSnapshotEncryptionKey = Input.empty();
-        this.sourceSnapshotId = Input.empty();
-        this.type = Input.empty();
-        this.users = Input.empty();
-        this.zone = Input.empty();
+        this.creationTimestamp = Output.empty();
+        this.description = Output.empty();
+        this.diskEncryptionKey = Output.empty();
+        this.image = Output.empty();
+        this.$interface = Output.empty();
+        this.labelFingerprint = Output.empty();
+        this.labels = Output.empty();
+        this.lastAttachTimestamp = Output.empty();
+        this.lastDetachTimestamp = Output.empty();
+        this.multiWriter = Output.empty();
+        this.name = Output.empty();
+        this.physicalBlockSizeBytes = Output.empty();
+        this.project = Output.empty();
+        this.provisionedIops = Output.empty();
+        this.resourcePolicies = Output.empty();
+        this.selfLink = Output.empty();
+        this.size = Output.empty();
+        this.snapshot = Output.empty();
+        this.sourceImageEncryptionKey = Output.empty();
+        this.sourceImageId = Output.empty();
+        this.sourceSnapshotEncryptionKey = Output.empty();
+        this.sourceSnapshotId = Output.empty();
+        this.type = Output.empty();
+        this.users = Output.empty();
+        this.zone = Output.empty();
     }
 
     public static Builder builder() {
@@ -452,31 +452,31 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> creationTimestamp;
-        private @Nullable Input<String> description;
-        private @Nullable Input<DiskDiskEncryptionKeyGetArgs> diskEncryptionKey;
-        private @Nullable Input<String> image;
-        private @Nullable Input<String> $interface;
-        private @Nullable Input<String> labelFingerprint;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> lastAttachTimestamp;
-        private @Nullable Input<String> lastDetachTimestamp;
-        private @Nullable Input<Boolean> multiWriter;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Integer> physicalBlockSizeBytes;
-        private @Nullable Input<String> project;
-        private @Nullable Input<Integer> provisionedIops;
-        private @Nullable Input<List<String>> resourcePolicies;
-        private @Nullable Input<String> selfLink;
-        private @Nullable Input<Integer> size;
-        private @Nullable Input<String> snapshot;
-        private @Nullable Input<DiskSourceImageEncryptionKeyGetArgs> sourceImageEncryptionKey;
-        private @Nullable Input<String> sourceImageId;
-        private @Nullable Input<DiskSourceSnapshotEncryptionKeyGetArgs> sourceSnapshotEncryptionKey;
-        private @Nullable Input<String> sourceSnapshotId;
-        private @Nullable Input<String> type;
-        private @Nullable Input<List<String>> users;
-        private @Nullable Input<String> zone;
+        private @Nullable Output<String> creationTimestamp;
+        private @Nullable Output<String> description;
+        private @Nullable Output<DiskDiskEncryptionKeyGetArgs> diskEncryptionKey;
+        private @Nullable Output<String> image;
+        private @Nullable Output<String> $interface;
+        private @Nullable Output<String> labelFingerprint;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> lastAttachTimestamp;
+        private @Nullable Output<String> lastDetachTimestamp;
+        private @Nullable Output<Boolean> multiWriter;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Integer> physicalBlockSizeBytes;
+        private @Nullable Output<String> project;
+        private @Nullable Output<Integer> provisionedIops;
+        private @Nullable Output<List<String>> resourcePolicies;
+        private @Nullable Output<String> selfLink;
+        private @Nullable Output<Integer> size;
+        private @Nullable Output<String> snapshot;
+        private @Nullable Output<DiskSourceImageEncryptionKeyGetArgs> sourceImageEncryptionKey;
+        private @Nullable Output<String> sourceImageId;
+        private @Nullable Output<DiskSourceSnapshotEncryptionKeyGetArgs> sourceSnapshotEncryptionKey;
+        private @Nullable Output<String> sourceSnapshotId;
+        private @Nullable Output<String> type;
+        private @Nullable Output<List<String>> users;
+        private @Nullable Output<String> zone;
 
         public Builder() {
     	      // Empty
@@ -511,253 +511,253 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
     	      this.zone = defaults.zone;
         }
 
-        public Builder creationTimestamp(@Nullable Input<String> creationTimestamp) {
+        public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
             this.creationTimestamp = creationTimestamp;
             return this;
         }
 
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Input.ofNullable(creationTimestamp);
+            this.creationTimestamp = Output.ofNullable(creationTimestamp);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder diskEncryptionKey(@Nullable Input<DiskDiskEncryptionKeyGetArgs> diskEncryptionKey) {
+        public Builder diskEncryptionKey(@Nullable Output<DiskDiskEncryptionKeyGetArgs> diskEncryptionKey) {
             this.diskEncryptionKey = diskEncryptionKey;
             return this;
         }
 
         public Builder diskEncryptionKey(@Nullable DiskDiskEncryptionKeyGetArgs diskEncryptionKey) {
-            this.diskEncryptionKey = Input.ofNullable(diskEncryptionKey);
+            this.diskEncryptionKey = Output.ofNullable(diskEncryptionKey);
             return this;
         }
 
-        public Builder image(@Nullable Input<String> image) {
+        public Builder image(@Nullable Output<String> image) {
             this.image = image;
             return this;
         }
 
         public Builder image(@Nullable String image) {
-            this.image = Input.ofNullable(image);
+            this.image = Output.ofNullable(image);
             return this;
         }
 
-        public Builder $interface(@Nullable Input<String> $interface) {
+        public Builder $interface(@Nullable Output<String> $interface) {
             this.$interface = $interface;
             return this;
         }
 
         public Builder $interface(@Nullable String $interface) {
-            this.$interface = Input.ofNullable($interface);
+            this.$interface = Output.ofNullable($interface);
             return this;
         }
 
-        public Builder labelFingerprint(@Nullable Input<String> labelFingerprint) {
+        public Builder labelFingerprint(@Nullable Output<String> labelFingerprint) {
             this.labelFingerprint = labelFingerprint;
             return this;
         }
 
         public Builder labelFingerprint(@Nullable String labelFingerprint) {
-            this.labelFingerprint = Input.ofNullable(labelFingerprint);
+            this.labelFingerprint = Output.ofNullable(labelFingerprint);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder lastAttachTimestamp(@Nullable Input<String> lastAttachTimestamp) {
+        public Builder lastAttachTimestamp(@Nullable Output<String> lastAttachTimestamp) {
             this.lastAttachTimestamp = lastAttachTimestamp;
             return this;
         }
 
         public Builder lastAttachTimestamp(@Nullable String lastAttachTimestamp) {
-            this.lastAttachTimestamp = Input.ofNullable(lastAttachTimestamp);
+            this.lastAttachTimestamp = Output.ofNullable(lastAttachTimestamp);
             return this;
         }
 
-        public Builder lastDetachTimestamp(@Nullable Input<String> lastDetachTimestamp) {
+        public Builder lastDetachTimestamp(@Nullable Output<String> lastDetachTimestamp) {
             this.lastDetachTimestamp = lastDetachTimestamp;
             return this;
         }
 
         public Builder lastDetachTimestamp(@Nullable String lastDetachTimestamp) {
-            this.lastDetachTimestamp = Input.ofNullable(lastDetachTimestamp);
+            this.lastDetachTimestamp = Output.ofNullable(lastDetachTimestamp);
             return this;
         }
 
-        public Builder multiWriter(@Nullable Input<Boolean> multiWriter) {
+        public Builder multiWriter(@Nullable Output<Boolean> multiWriter) {
             this.multiWriter = multiWriter;
             return this;
         }
 
         public Builder multiWriter(@Nullable Boolean multiWriter) {
-            this.multiWriter = Input.ofNullable(multiWriter);
+            this.multiWriter = Output.ofNullable(multiWriter);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder physicalBlockSizeBytes(@Nullable Input<Integer> physicalBlockSizeBytes) {
+        public Builder physicalBlockSizeBytes(@Nullable Output<Integer> physicalBlockSizeBytes) {
             this.physicalBlockSizeBytes = physicalBlockSizeBytes;
             return this;
         }
 
         public Builder physicalBlockSizeBytes(@Nullable Integer physicalBlockSizeBytes) {
-            this.physicalBlockSizeBytes = Input.ofNullable(physicalBlockSizeBytes);
+            this.physicalBlockSizeBytes = Output.ofNullable(physicalBlockSizeBytes);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder provisionedIops(@Nullable Input<Integer> provisionedIops) {
+        public Builder provisionedIops(@Nullable Output<Integer> provisionedIops) {
             this.provisionedIops = provisionedIops;
             return this;
         }
 
         public Builder provisionedIops(@Nullable Integer provisionedIops) {
-            this.provisionedIops = Input.ofNullable(provisionedIops);
+            this.provisionedIops = Output.ofNullable(provisionedIops);
             return this;
         }
 
-        public Builder resourcePolicies(@Nullable Input<List<String>> resourcePolicies) {
+        public Builder resourcePolicies(@Nullable Output<List<String>> resourcePolicies) {
             this.resourcePolicies = resourcePolicies;
             return this;
         }
 
         public Builder resourcePolicies(@Nullable List<String> resourcePolicies) {
-            this.resourcePolicies = Input.ofNullable(resourcePolicies);
+            this.resourcePolicies = Output.ofNullable(resourcePolicies);
             return this;
         }
 
-        public Builder selfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Input.ofNullable(selfLink);
+            this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
 
-        public Builder size(@Nullable Input<Integer> size) {
+        public Builder size(@Nullable Output<Integer> size) {
             this.size = size;
             return this;
         }
 
         public Builder size(@Nullable Integer size) {
-            this.size = Input.ofNullable(size);
+            this.size = Output.ofNullable(size);
             return this;
         }
 
-        public Builder snapshot(@Nullable Input<String> snapshot) {
+        public Builder snapshot(@Nullable Output<String> snapshot) {
             this.snapshot = snapshot;
             return this;
         }
 
         public Builder snapshot(@Nullable String snapshot) {
-            this.snapshot = Input.ofNullable(snapshot);
+            this.snapshot = Output.ofNullable(snapshot);
             return this;
         }
 
-        public Builder sourceImageEncryptionKey(@Nullable Input<DiskSourceImageEncryptionKeyGetArgs> sourceImageEncryptionKey) {
+        public Builder sourceImageEncryptionKey(@Nullable Output<DiskSourceImageEncryptionKeyGetArgs> sourceImageEncryptionKey) {
             this.sourceImageEncryptionKey = sourceImageEncryptionKey;
             return this;
         }
 
         public Builder sourceImageEncryptionKey(@Nullable DiskSourceImageEncryptionKeyGetArgs sourceImageEncryptionKey) {
-            this.sourceImageEncryptionKey = Input.ofNullable(sourceImageEncryptionKey);
+            this.sourceImageEncryptionKey = Output.ofNullable(sourceImageEncryptionKey);
             return this;
         }
 
-        public Builder sourceImageId(@Nullable Input<String> sourceImageId) {
+        public Builder sourceImageId(@Nullable Output<String> sourceImageId) {
             this.sourceImageId = sourceImageId;
             return this;
         }
 
         public Builder sourceImageId(@Nullable String sourceImageId) {
-            this.sourceImageId = Input.ofNullable(sourceImageId);
+            this.sourceImageId = Output.ofNullable(sourceImageId);
             return this;
         }
 
-        public Builder sourceSnapshotEncryptionKey(@Nullable Input<DiskSourceSnapshotEncryptionKeyGetArgs> sourceSnapshotEncryptionKey) {
+        public Builder sourceSnapshotEncryptionKey(@Nullable Output<DiskSourceSnapshotEncryptionKeyGetArgs> sourceSnapshotEncryptionKey) {
             this.sourceSnapshotEncryptionKey = sourceSnapshotEncryptionKey;
             return this;
         }
 
         public Builder sourceSnapshotEncryptionKey(@Nullable DiskSourceSnapshotEncryptionKeyGetArgs sourceSnapshotEncryptionKey) {
-            this.sourceSnapshotEncryptionKey = Input.ofNullable(sourceSnapshotEncryptionKey);
+            this.sourceSnapshotEncryptionKey = Output.ofNullable(sourceSnapshotEncryptionKey);
             return this;
         }
 
-        public Builder sourceSnapshotId(@Nullable Input<String> sourceSnapshotId) {
+        public Builder sourceSnapshotId(@Nullable Output<String> sourceSnapshotId) {
             this.sourceSnapshotId = sourceSnapshotId;
             return this;
         }
 
         public Builder sourceSnapshotId(@Nullable String sourceSnapshotId) {
-            this.sourceSnapshotId = Input.ofNullable(sourceSnapshotId);
+            this.sourceSnapshotId = Output.ofNullable(sourceSnapshotId);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder users(@Nullable Input<List<String>> users) {
+        public Builder users(@Nullable Output<List<String>> users) {
             this.users = users;
             return this;
         }
 
         public Builder users(@Nullable List<String> users) {
-            this.users = Input.ofNullable(users);
+            this.users = Output.ofNullable(users);
             return this;
         }
 
-        public Builder zone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
 
         public Builder zone(@Nullable String zone) {
-            this.zone = Input.ofNullable(zone);
+            this.zone = Output.ofNullable(zone);
             return this;
         }
         public DiskState build() {

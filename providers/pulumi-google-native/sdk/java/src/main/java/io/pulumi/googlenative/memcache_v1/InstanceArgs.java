@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.memcache_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.memcache_v1.enums.InstanceMemcacheVersion;
 import io.pulumi.googlenative.memcache_v1.inputs.InstanceMessageArgs;
@@ -26,10 +26,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizedNetwork")
-      private final @Nullable Input<String> authorizedNetwork;
+      private final @Nullable Output<String> authorizedNetwork;
 
-    public Input<String> getAuthorizedNetwork() {
-        return this.authorizedNetwork == null ? Input.empty() : this.authorizedNetwork;
+    public Output<String> getAuthorizedNetwork() {
+        return this.authorizedNetwork == null ? Output.empty() : this.authorizedNetwork;
     }
 
     /**
@@ -37,16 +37,16 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     @InputImport(name="instanceId", required=true)
-      private final Input<String> instanceId;
+      private final Output<String> instanceId;
 
-    public Input<String> getInstanceId() {
+    public Output<String> getInstanceId() {
         return this.instanceId;
     }
 
@@ -55,10 +55,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceMessages")
-      private final @Nullable Input<List<InstanceMessageArgs>> instanceMessages;
+      private final @Nullable Output<List<InstanceMessageArgs>> instanceMessages;
 
-    public Input<List<InstanceMessageArgs>> getInstanceMessages() {
-        return this.instanceMessages == null ? Input.empty() : this.instanceMessages;
+    public Output<List<InstanceMessageArgs>> getInstanceMessages() {
+        return this.instanceMessages == null ? Output.empty() : this.instanceMessages;
     }
 
     /**
@@ -66,17 +66,17 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="memcacheVersion")
-      private final @Nullable Input<InstanceMemcacheVersion> memcacheVersion;
+      private final @Nullable Output<InstanceMemcacheVersion> memcacheVersion;
 
-    public Input<InstanceMemcacheVersion> getMemcacheVersion() {
-        return this.memcacheVersion == null ? Input.empty() : this.memcacheVersion;
+    public Output<InstanceMemcacheVersion> getMemcacheVersion() {
+        return this.memcacheVersion == null ? Output.empty() : this.memcacheVersion;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -106,9 +106,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeConfig", required=true)
-      private final Input<NodeConfigArgs> nodeConfig;
+      private final Output<NodeConfigArgs> nodeConfig;
 
-    public Input<NodeConfigArgs> getNodeConfig() {
+    public Output<NodeConfigArgs> getNodeConfig() {
         return this.nodeConfig;
     }
 
@@ -117,9 +117,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeCount", required=true)
-      private final Input<Integer> nodeCount;
+      private final Output<Integer> nodeCount;
 
-    public Input<Integer> getNodeCount() {
+    public Output<Integer> getNodeCount() {
         return this.nodeCount;
     }
 
@@ -128,17 +128,17 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<MemcacheParametersArgs> parameters;
+      private final @Nullable Output<MemcacheParametersArgs> parameters;
 
-    public Input<MemcacheParametersArgs> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<MemcacheParametersArgs> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -146,26 +146,26 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zones")
-      private final @Nullable Input<List<String>> zones;
+      private final @Nullable Output<List<String>> zones;
 
-    public Input<List<String>> getZones() {
-        return this.zones == null ? Input.empty() : this.zones;
+    public Output<List<String>> getZones() {
+        return this.zones == null ? Output.empty() : this.zones;
     }
 
     public InstanceArgs(
-        @Nullable Input<String> authorizedNetwork,
-        @Nullable Input<String> displayName,
-        Input<String> instanceId,
-        @Nullable Input<List<InstanceMessageArgs>> instanceMessages,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> location,
-        @Nullable Input<InstanceMemcacheVersion> memcacheVersion,
-        @Nullable Input<String> name,
-        Input<NodeConfigArgs> nodeConfig,
-        Input<Integer> nodeCount,
-        @Nullable Input<MemcacheParametersArgs> parameters,
-        @Nullable Input<String> project,
-        @Nullable Input<List<String>> zones) {
+        @Nullable Output<String> authorizedNetwork,
+        @Nullable Output<String> displayName,
+        Output<String> instanceId,
+        @Nullable Output<List<InstanceMessageArgs>> instanceMessages,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> location,
+        @Nullable Output<InstanceMemcacheVersion> memcacheVersion,
+        @Nullable Output<String> name,
+        Output<NodeConfigArgs> nodeConfig,
+        Output<Integer> nodeCount,
+        @Nullable Output<MemcacheParametersArgs> parameters,
+        @Nullable Output<String> project,
+        @Nullable Output<List<String>> zones) {
         this.authorizedNetwork = authorizedNetwork;
         this.displayName = displayName;
         this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
@@ -182,19 +182,19 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceArgs() {
-        this.authorizedNetwork = Input.empty();
-        this.displayName = Input.empty();
-        this.instanceId = Input.empty();
-        this.instanceMessages = Input.empty();
-        this.labels = Input.empty();
-        this.location = Input.empty();
-        this.memcacheVersion = Input.empty();
-        this.name = Input.empty();
-        this.nodeConfig = Input.empty();
-        this.nodeCount = Input.empty();
-        this.parameters = Input.empty();
-        this.project = Input.empty();
-        this.zones = Input.empty();
+        this.authorizedNetwork = Output.empty();
+        this.displayName = Output.empty();
+        this.instanceId = Output.empty();
+        this.instanceMessages = Output.empty();
+        this.labels = Output.empty();
+        this.location = Output.empty();
+        this.memcacheVersion = Output.empty();
+        this.name = Output.empty();
+        this.nodeConfig = Output.empty();
+        this.nodeCount = Output.empty();
+        this.parameters = Output.empty();
+        this.project = Output.empty();
+        this.zones = Output.empty();
     }
 
     public static Builder builder() {
@@ -206,19 +206,19 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> authorizedNetwork;
-        private @Nullable Input<String> displayName;
-        private Input<String> instanceId;
-        private @Nullable Input<List<InstanceMessageArgs>> instanceMessages;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> location;
-        private @Nullable Input<InstanceMemcacheVersion> memcacheVersion;
-        private @Nullable Input<String> name;
-        private Input<NodeConfigArgs> nodeConfig;
-        private Input<Integer> nodeCount;
-        private @Nullable Input<MemcacheParametersArgs> parameters;
-        private @Nullable Input<String> project;
-        private @Nullable Input<List<String>> zones;
+        private @Nullable Output<String> authorizedNetwork;
+        private @Nullable Output<String> displayName;
+        private Output<String> instanceId;
+        private @Nullable Output<List<InstanceMessageArgs>> instanceMessages;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> location;
+        private @Nullable Output<InstanceMemcacheVersion> memcacheVersion;
+        private @Nullable Output<String> name;
+        private Output<NodeConfigArgs> nodeConfig;
+        private Output<Integer> nodeCount;
+        private @Nullable Output<MemcacheParametersArgs> parameters;
+        private @Nullable Output<String> project;
+        private @Nullable Output<List<String>> zones;
 
         public Builder() {
     	      // Empty
@@ -241,133 +241,133 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zones = defaults.zones;
         }
 
-        public Builder authorizedNetwork(@Nullable Input<String> authorizedNetwork) {
+        public Builder authorizedNetwork(@Nullable Output<String> authorizedNetwork) {
             this.authorizedNetwork = authorizedNetwork;
             return this;
         }
 
         public Builder authorizedNetwork(@Nullable String authorizedNetwork) {
-            this.authorizedNetwork = Input.ofNullable(authorizedNetwork);
+            this.authorizedNetwork = Output.ofNullable(authorizedNetwork);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder instanceId(Input<String> instanceId) {
+        public Builder instanceId(Output<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
         public Builder instanceId(String instanceId) {
-            this.instanceId = Input.of(Objects.requireNonNull(instanceId));
+            this.instanceId = Output.of(Objects.requireNonNull(instanceId));
             return this;
         }
 
-        public Builder instanceMessages(@Nullable Input<List<InstanceMessageArgs>> instanceMessages) {
+        public Builder instanceMessages(@Nullable Output<List<InstanceMessageArgs>> instanceMessages) {
             this.instanceMessages = instanceMessages;
             return this;
         }
 
         public Builder instanceMessages(@Nullable List<InstanceMessageArgs> instanceMessages) {
-            this.instanceMessages = Input.ofNullable(instanceMessages);
+            this.instanceMessages = Output.ofNullable(instanceMessages);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder memcacheVersion(@Nullable Input<InstanceMemcacheVersion> memcacheVersion) {
+        public Builder memcacheVersion(@Nullable Output<InstanceMemcacheVersion> memcacheVersion) {
             this.memcacheVersion = memcacheVersion;
             return this;
         }
 
         public Builder memcacheVersion(@Nullable InstanceMemcacheVersion memcacheVersion) {
-            this.memcacheVersion = Input.ofNullable(memcacheVersion);
+            this.memcacheVersion = Output.ofNullable(memcacheVersion);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder nodeConfig(Input<NodeConfigArgs> nodeConfig) {
+        public Builder nodeConfig(Output<NodeConfigArgs> nodeConfig) {
             this.nodeConfig = Objects.requireNonNull(nodeConfig);
             return this;
         }
 
         public Builder nodeConfig(NodeConfigArgs nodeConfig) {
-            this.nodeConfig = Input.of(Objects.requireNonNull(nodeConfig));
+            this.nodeConfig = Output.of(Objects.requireNonNull(nodeConfig));
             return this;
         }
 
-        public Builder nodeCount(Input<Integer> nodeCount) {
+        public Builder nodeCount(Output<Integer> nodeCount) {
             this.nodeCount = Objects.requireNonNull(nodeCount);
             return this;
         }
 
         public Builder nodeCount(Integer nodeCount) {
-            this.nodeCount = Input.of(Objects.requireNonNull(nodeCount));
+            this.nodeCount = Output.of(Objects.requireNonNull(nodeCount));
             return this;
         }
 
-        public Builder parameters(@Nullable Input<MemcacheParametersArgs> parameters) {
+        public Builder parameters(@Nullable Output<MemcacheParametersArgs> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable MemcacheParametersArgs parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder zones(@Nullable Input<List<String>> zones) {
+        public Builder zones(@Nullable Output<List<String>> zones) {
             this.zones = zones;
             return this;
         }
 
         public Builder zones(@Nullable List<String> zones) {
-            this.zones = Input.ofNullable(zones);
+            this.zones = Output.ofNullable(zones);
             return this;
         }
         public InstanceArgs build() {

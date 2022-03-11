@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class AccessLevelCustomExprArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class AccessLevelCustomExprArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="expression", required=true)
-      private final Input<String> expression;
+      private final Output<String> expression;
 
-    public Input<String> getExpression() {
+    public Output<String> getExpression() {
         return this.expression;
     }
 
@@ -41,10 +41,10 @@ public final class AccessLevelCustomExprArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class AccessLevelCustomExprArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="title")
-      private final @Nullable Input<String> title;
+      private final @Nullable Output<String> title;
 
-    public Input<String> getTitle() {
-        return this.title == null ? Input.empty() : this.title;
+    public Output<String> getTitle() {
+        return this.title == null ? Output.empty() : this.title;
     }
 
     public AccessLevelCustomExprArgs(
-        @Nullable Input<String> description,
-        Input<String> expression,
-        @Nullable Input<String> location,
-        @Nullable Input<String> title) {
+        @Nullable Output<String> description,
+        Output<String> expression,
+        @Nullable Output<String> location,
+        @Nullable Output<String> title) {
         this.description = description;
         this.expression = Objects.requireNonNull(expression, "expected parameter 'expression' to be non-null");
         this.location = location;
@@ -70,10 +70,10 @@ public final class AccessLevelCustomExprArgs extends io.pulumi.resources.Resourc
     }
 
     private AccessLevelCustomExprArgs() {
-        this.description = Input.empty();
-        this.expression = Input.empty();
-        this.location = Input.empty();
-        this.title = Input.empty();
+        this.description = Output.empty();
+        this.expression = Output.empty();
+        this.location = Output.empty();
+        this.title = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class AccessLevelCustomExprArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> expression;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> title;
+        private @Nullable Output<String> description;
+        private Output<String> expression;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> title;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class AccessLevelCustomExprArgs extends io.pulumi.resources.Resourc
     	      this.title = defaults.title;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder expression(Input<String> expression) {
+        public Builder expression(Output<String> expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
 
         public Builder expression(String expression) {
-            this.expression = Input.of(Objects.requireNonNull(expression));
+            this.expression = Output.of(Objects.requireNonNull(expression));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder title(@Nullable Input<String> title) {
+        public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
 
         public Builder title(@Nullable String title) {
-            this.title = Input.ofNullable(title);
+            this.title = Output.ofNullable(title);
             return this;
         }
         public AccessLevelCustomExprArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3;
 
 import io.pulumi.awsnative.s3.inputs.StorageLensConfigurationArgs;
 import io.pulumi.awsnative.s3.inputs.StorageLensTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -17,9 +17,9 @@ public final class StorageLensArgs extends io.pulumi.resources.ResourceArgs {
     public static final StorageLensArgs Empty = new StorageLensArgs();
 
     @InputImport(name="storageLensConfiguration", required=true)
-      private final Input<StorageLensConfigurationArgs> storageLensConfiguration;
+      private final Output<StorageLensConfigurationArgs> storageLensConfiguration;
 
-    public Input<StorageLensConfigurationArgs> getStorageLensConfiguration() {
+    public Output<StorageLensConfigurationArgs> getStorageLensConfiguration() {
         return this.storageLensConfiguration;
     }
 
@@ -28,22 +28,22 @@ public final class StorageLensArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<StorageLensTagArgs>> tags;
+      private final @Nullable Output<List<StorageLensTagArgs>> tags;
 
-    public Input<List<StorageLensTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<StorageLensTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public StorageLensArgs(
-        Input<StorageLensConfigurationArgs> storageLensConfiguration,
-        @Nullable Input<List<StorageLensTagArgs>> tags) {
+        Output<StorageLensConfigurationArgs> storageLensConfiguration,
+        @Nullable Output<List<StorageLensTagArgs>> tags) {
         this.storageLensConfiguration = Objects.requireNonNull(storageLensConfiguration, "expected parameter 'storageLensConfiguration' to be non-null");
         this.tags = tags;
     }
 
     private StorageLensArgs() {
-        this.storageLensConfiguration = Input.empty();
-        this.tags = Input.empty();
+        this.storageLensConfiguration = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -55,8 +55,8 @@ public final class StorageLensArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<StorageLensConfigurationArgs> storageLensConfiguration;
-        private @Nullable Input<List<StorageLensTagArgs>> tags;
+        private Output<StorageLensConfigurationArgs> storageLensConfiguration;
+        private @Nullable Output<List<StorageLensTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -68,23 +68,23 @@ public final class StorageLensArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder storageLensConfiguration(Input<StorageLensConfigurationArgs> storageLensConfiguration) {
+        public Builder storageLensConfiguration(Output<StorageLensConfigurationArgs> storageLensConfiguration) {
             this.storageLensConfiguration = Objects.requireNonNull(storageLensConfiguration);
             return this;
         }
 
         public Builder storageLensConfiguration(StorageLensConfigurationArgs storageLensConfiguration) {
-            this.storageLensConfiguration = Input.of(Objects.requireNonNull(storageLensConfiguration));
+            this.storageLensConfiguration = Output.of(Objects.requireNonNull(storageLensConfiguration));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<StorageLensTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<StorageLensTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<StorageLensTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public StorageLensArgs build() {

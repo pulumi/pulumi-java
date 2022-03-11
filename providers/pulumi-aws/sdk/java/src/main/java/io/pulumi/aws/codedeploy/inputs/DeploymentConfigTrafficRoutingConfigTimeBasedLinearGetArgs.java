@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codedeploy.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class DeploymentConfigTrafficRoutingConfigTimeBasedLinearGetArgs ex
      * 
      */
     @InputImport(name="interval")
-      private final @Nullable Input<Integer> interval;
+      private final @Nullable Output<Integer> interval;
 
-    public Input<Integer> getInterval() {
-        return this.interval == null ? Input.empty() : this.interval;
+    public Output<Integer> getInterval() {
+        return this.interval == null ? Output.empty() : this.interval;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class DeploymentConfigTrafficRoutingConfigTimeBasedLinearGetArgs ex
      * 
      */
     @InputImport(name="percentage")
-      private final @Nullable Input<Integer> percentage;
+      private final @Nullable Output<Integer> percentage;
 
-    public Input<Integer> getPercentage() {
-        return this.percentage == null ? Input.empty() : this.percentage;
+    public Output<Integer> getPercentage() {
+        return this.percentage == null ? Output.empty() : this.percentage;
     }
 
     public DeploymentConfigTrafficRoutingConfigTimeBasedLinearGetArgs(
-        @Nullable Input<Integer> interval,
-        @Nullable Input<Integer> percentage) {
+        @Nullable Output<Integer> interval,
+        @Nullable Output<Integer> percentage) {
         this.interval = interval;
         this.percentage = percentage;
     }
 
     private DeploymentConfigTrafficRoutingConfigTimeBasedLinearGetArgs() {
-        this.interval = Input.empty();
-        this.percentage = Input.empty();
+        this.interval = Output.empty();
+        this.percentage = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class DeploymentConfigTrafficRoutingConfigTimeBasedLinearGetArgs ex
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> interval;
-        private @Nullable Input<Integer> percentage;
+        private @Nullable Output<Integer> interval;
+        private @Nullable Output<Integer> percentage;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class DeploymentConfigTrafficRoutingConfigTimeBasedLinearGetArgs ex
     	      this.percentage = defaults.percentage;
         }
 
-        public Builder interval(@Nullable Input<Integer> interval) {
+        public Builder interval(@Nullable Output<Integer> interval) {
             this.interval = interval;
             return this;
         }
 
         public Builder interval(@Nullable Integer interval) {
-            this.interval = Input.ofNullable(interval);
+            this.interval = Output.ofNullable(interval);
             return this;
         }
 
-        public Builder percentage(@Nullable Input<Integer> percentage) {
+        public Builder percentage(@Nullable Output<Integer> percentage) {
             this.percentage = percentage;
             return this;
         }
 
         public Builder percentage(@Nullable Integer percentage) {
-            this.percentage = Input.ofNullable(percentage);
+            this.percentage = Output.ofNullable(percentage);
             return this;
         }
         public DeploymentConfigTrafficRoutingConfigTimeBasedLinearGetArgs build() {

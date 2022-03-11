@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appstream;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,39 +14,39 @@ public final class ApplicationEntitlementAssociationArgs extends io.pulumi.resou
     public static final ApplicationEntitlementAssociationArgs Empty = new ApplicationEntitlementAssociationArgs();
 
     @InputImport(name="applicationIdentifier", required=true)
-      private final Input<String> applicationIdentifier;
+      private final Output<String> applicationIdentifier;
 
-    public Input<String> getApplicationIdentifier() {
+    public Output<String> getApplicationIdentifier() {
         return this.applicationIdentifier;
     }
 
     @InputImport(name="entitlementName", required=true)
-      private final Input<String> entitlementName;
+      private final Output<String> entitlementName;
 
-    public Input<String> getEntitlementName() {
+    public Output<String> getEntitlementName() {
         return this.entitlementName;
     }
 
     @InputImport(name="stackName", required=true)
-      private final Input<String> stackName;
+      private final Output<String> stackName;
 
-    public Input<String> getStackName() {
+    public Output<String> getStackName() {
         return this.stackName;
     }
 
     public ApplicationEntitlementAssociationArgs(
-        Input<String> applicationIdentifier,
-        Input<String> entitlementName,
-        Input<String> stackName) {
+        Output<String> applicationIdentifier,
+        Output<String> entitlementName,
+        Output<String> stackName) {
         this.applicationIdentifier = Objects.requireNonNull(applicationIdentifier, "expected parameter 'applicationIdentifier' to be non-null");
         this.entitlementName = Objects.requireNonNull(entitlementName, "expected parameter 'entitlementName' to be non-null");
         this.stackName = Objects.requireNonNull(stackName, "expected parameter 'stackName' to be non-null");
     }
 
     private ApplicationEntitlementAssociationArgs() {
-        this.applicationIdentifier = Input.empty();
-        this.entitlementName = Input.empty();
-        this.stackName = Input.empty();
+        this.applicationIdentifier = Output.empty();
+        this.entitlementName = Output.empty();
+        this.stackName = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,9 +58,9 @@ public final class ApplicationEntitlementAssociationArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private Input<String> applicationIdentifier;
-        private Input<String> entitlementName;
-        private Input<String> stackName;
+        private Output<String> applicationIdentifier;
+        private Output<String> entitlementName;
+        private Output<String> stackName;
 
         public Builder() {
     	      // Empty
@@ -73,33 +73,33 @@ public final class ApplicationEntitlementAssociationArgs extends io.pulumi.resou
     	      this.stackName = defaults.stackName;
         }
 
-        public Builder applicationIdentifier(Input<String> applicationIdentifier) {
+        public Builder applicationIdentifier(Output<String> applicationIdentifier) {
             this.applicationIdentifier = Objects.requireNonNull(applicationIdentifier);
             return this;
         }
 
         public Builder applicationIdentifier(String applicationIdentifier) {
-            this.applicationIdentifier = Input.of(Objects.requireNonNull(applicationIdentifier));
+            this.applicationIdentifier = Output.of(Objects.requireNonNull(applicationIdentifier));
             return this;
         }
 
-        public Builder entitlementName(Input<String> entitlementName) {
+        public Builder entitlementName(Output<String> entitlementName) {
             this.entitlementName = Objects.requireNonNull(entitlementName);
             return this;
         }
 
         public Builder entitlementName(String entitlementName) {
-            this.entitlementName = Input.of(Objects.requireNonNull(entitlementName));
+            this.entitlementName = Output.of(Objects.requireNonNull(entitlementName));
             return this;
         }
 
-        public Builder stackName(Input<String> stackName) {
+        public Builder stackName(Output<String> stackName) {
             this.stackName = Objects.requireNonNull(stackName);
             return this;
         }
 
         public Builder stackName(String stackName) {
-            this.stackName = Input.of(Objects.requireNonNull(stackName));
+            this.stackName = Output.of(Objects.requireNonNull(stackName));
             return this;
         }
         public ApplicationEntitlementAssociationArgs build() {

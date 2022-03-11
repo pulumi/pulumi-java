@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.netapp.inputs;
 
 import io.pulumi.azurenative.netapp.inputs.ExportPolicyRuleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class VolumePropertiesExportPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="rules")
-      private final @Nullable Input<List<ExportPolicyRuleArgs>> rules;
+      private final @Nullable Output<List<ExportPolicyRuleArgs>> rules;
 
-    public Input<List<ExportPolicyRuleArgs>> getRules() {
-        return this.rules == null ? Input.empty() : this.rules;
+    public Output<List<ExportPolicyRuleArgs>> getRules() {
+        return this.rules == null ? Output.empty() : this.rules;
     }
 
-    public VolumePropertiesExportPolicyArgs(@Nullable Input<List<ExportPolicyRuleArgs>> rules) {
+    public VolumePropertiesExportPolicyArgs(@Nullable Output<List<ExportPolicyRuleArgs>> rules) {
         this.rules = rules;
     }
 
     private VolumePropertiesExportPolicyArgs() {
-        this.rules = Input.empty();
+        this.rules = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class VolumePropertiesExportPolicyArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ExportPolicyRuleArgs>> rules;
+        private @Nullable Output<List<ExportPolicyRuleArgs>> rules;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class VolumePropertiesExportPolicyArgs extends io.pulumi.resources.
     	      this.rules = defaults.rules;
         }
 
-        public Builder rules(@Nullable Input<List<ExportPolicyRuleArgs>> rules) {
+        public Builder rules(@Nullable Output<List<ExportPolicyRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
         public Builder rules(@Nullable List<ExportPolicyRuleArgs> rules) {
-            this.rules = Input.ofNullable(rules);
+            this.rules = Output.ofNullable(rules);
             return this;
         }
         public VolumePropertiesExportPolicyArgs build() {

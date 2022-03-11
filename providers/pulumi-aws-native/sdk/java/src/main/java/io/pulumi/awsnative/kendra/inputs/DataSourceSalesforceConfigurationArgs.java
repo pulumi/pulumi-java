@@ -7,7 +7,7 @@ import io.pulumi.awsnative.kendra.inputs.DataSourceSalesforceChatterFeedConfigur
 import io.pulumi.awsnative.kendra.inputs.DataSourceSalesforceKnowledgeArticleConfigurationArgs;
 import io.pulumi.awsnative.kendra.inputs.DataSourceSalesforceStandardObjectAttachmentConfigurationArgs;
 import io.pulumi.awsnative.kendra.inputs.DataSourceSalesforceStandardObjectConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,78 +21,78 @@ public final class DataSourceSalesforceConfigurationArgs extends io.pulumi.resou
     public static final DataSourceSalesforceConfigurationArgs Empty = new DataSourceSalesforceConfigurationArgs();
 
     @InputImport(name="chatterFeedConfiguration")
-      private final @Nullable Input<DataSourceSalesforceChatterFeedConfigurationArgs> chatterFeedConfiguration;
+      private final @Nullable Output<DataSourceSalesforceChatterFeedConfigurationArgs> chatterFeedConfiguration;
 
-    public Input<DataSourceSalesforceChatterFeedConfigurationArgs> getChatterFeedConfiguration() {
-        return this.chatterFeedConfiguration == null ? Input.empty() : this.chatterFeedConfiguration;
+    public Output<DataSourceSalesforceChatterFeedConfigurationArgs> getChatterFeedConfiguration() {
+        return this.chatterFeedConfiguration == null ? Output.empty() : this.chatterFeedConfiguration;
     }
 
     @InputImport(name="crawlAttachments")
-      private final @Nullable Input<Boolean> crawlAttachments;
+      private final @Nullable Output<Boolean> crawlAttachments;
 
-    public Input<Boolean> getCrawlAttachments() {
-        return this.crawlAttachments == null ? Input.empty() : this.crawlAttachments;
+    public Output<Boolean> getCrawlAttachments() {
+        return this.crawlAttachments == null ? Output.empty() : this.crawlAttachments;
     }
 
     @InputImport(name="excludeAttachmentFilePatterns")
-      private final @Nullable Input<List<String>> excludeAttachmentFilePatterns;
+      private final @Nullable Output<List<String>> excludeAttachmentFilePatterns;
 
-    public Input<List<String>> getExcludeAttachmentFilePatterns() {
-        return this.excludeAttachmentFilePatterns == null ? Input.empty() : this.excludeAttachmentFilePatterns;
+    public Output<List<String>> getExcludeAttachmentFilePatterns() {
+        return this.excludeAttachmentFilePatterns == null ? Output.empty() : this.excludeAttachmentFilePatterns;
     }
 
     @InputImport(name="includeAttachmentFilePatterns")
-      private final @Nullable Input<List<String>> includeAttachmentFilePatterns;
+      private final @Nullable Output<List<String>> includeAttachmentFilePatterns;
 
-    public Input<List<String>> getIncludeAttachmentFilePatterns() {
-        return this.includeAttachmentFilePatterns == null ? Input.empty() : this.includeAttachmentFilePatterns;
+    public Output<List<String>> getIncludeAttachmentFilePatterns() {
+        return this.includeAttachmentFilePatterns == null ? Output.empty() : this.includeAttachmentFilePatterns;
     }
 
     @InputImport(name="knowledgeArticleConfiguration")
-      private final @Nullable Input<DataSourceSalesforceKnowledgeArticleConfigurationArgs> knowledgeArticleConfiguration;
+      private final @Nullable Output<DataSourceSalesforceKnowledgeArticleConfigurationArgs> knowledgeArticleConfiguration;
 
-    public Input<DataSourceSalesforceKnowledgeArticleConfigurationArgs> getKnowledgeArticleConfiguration() {
-        return this.knowledgeArticleConfiguration == null ? Input.empty() : this.knowledgeArticleConfiguration;
+    public Output<DataSourceSalesforceKnowledgeArticleConfigurationArgs> getKnowledgeArticleConfiguration() {
+        return this.knowledgeArticleConfiguration == null ? Output.empty() : this.knowledgeArticleConfiguration;
     }
 
     @InputImport(name="secretArn", required=true)
-      private final Input<String> secretArn;
+      private final Output<String> secretArn;
 
-    public Input<String> getSecretArn() {
+    public Output<String> getSecretArn() {
         return this.secretArn;
     }
 
     @InputImport(name="serverUrl", required=true)
-      private final Input<String> serverUrl;
+      private final Output<String> serverUrl;
 
-    public Input<String> getServerUrl() {
+    public Output<String> getServerUrl() {
         return this.serverUrl;
     }
 
     @InputImport(name="standardObjectAttachmentConfiguration")
-      private final @Nullable Input<DataSourceSalesforceStandardObjectAttachmentConfigurationArgs> standardObjectAttachmentConfiguration;
+      private final @Nullable Output<DataSourceSalesforceStandardObjectAttachmentConfigurationArgs> standardObjectAttachmentConfiguration;
 
-    public Input<DataSourceSalesforceStandardObjectAttachmentConfigurationArgs> getStandardObjectAttachmentConfiguration() {
-        return this.standardObjectAttachmentConfiguration == null ? Input.empty() : this.standardObjectAttachmentConfiguration;
+    public Output<DataSourceSalesforceStandardObjectAttachmentConfigurationArgs> getStandardObjectAttachmentConfiguration() {
+        return this.standardObjectAttachmentConfiguration == null ? Output.empty() : this.standardObjectAttachmentConfiguration;
     }
 
     @InputImport(name="standardObjectConfigurations")
-      private final @Nullable Input<List<DataSourceSalesforceStandardObjectConfigurationArgs>> standardObjectConfigurations;
+      private final @Nullable Output<List<DataSourceSalesforceStandardObjectConfigurationArgs>> standardObjectConfigurations;
 
-    public Input<List<DataSourceSalesforceStandardObjectConfigurationArgs>> getStandardObjectConfigurations() {
-        return this.standardObjectConfigurations == null ? Input.empty() : this.standardObjectConfigurations;
+    public Output<List<DataSourceSalesforceStandardObjectConfigurationArgs>> getStandardObjectConfigurations() {
+        return this.standardObjectConfigurations == null ? Output.empty() : this.standardObjectConfigurations;
     }
 
     public DataSourceSalesforceConfigurationArgs(
-        @Nullable Input<DataSourceSalesforceChatterFeedConfigurationArgs> chatterFeedConfiguration,
-        @Nullable Input<Boolean> crawlAttachments,
-        @Nullable Input<List<String>> excludeAttachmentFilePatterns,
-        @Nullable Input<List<String>> includeAttachmentFilePatterns,
-        @Nullable Input<DataSourceSalesforceKnowledgeArticleConfigurationArgs> knowledgeArticleConfiguration,
-        Input<String> secretArn,
-        Input<String> serverUrl,
-        @Nullable Input<DataSourceSalesforceStandardObjectAttachmentConfigurationArgs> standardObjectAttachmentConfiguration,
-        @Nullable Input<List<DataSourceSalesforceStandardObjectConfigurationArgs>> standardObjectConfigurations) {
+        @Nullable Output<DataSourceSalesforceChatterFeedConfigurationArgs> chatterFeedConfiguration,
+        @Nullable Output<Boolean> crawlAttachments,
+        @Nullable Output<List<String>> excludeAttachmentFilePatterns,
+        @Nullable Output<List<String>> includeAttachmentFilePatterns,
+        @Nullable Output<DataSourceSalesforceKnowledgeArticleConfigurationArgs> knowledgeArticleConfiguration,
+        Output<String> secretArn,
+        Output<String> serverUrl,
+        @Nullable Output<DataSourceSalesforceStandardObjectAttachmentConfigurationArgs> standardObjectAttachmentConfiguration,
+        @Nullable Output<List<DataSourceSalesforceStandardObjectConfigurationArgs>> standardObjectConfigurations) {
         this.chatterFeedConfiguration = chatterFeedConfiguration;
         this.crawlAttachments = crawlAttachments;
         this.excludeAttachmentFilePatterns = excludeAttachmentFilePatterns;
@@ -105,15 +105,15 @@ public final class DataSourceSalesforceConfigurationArgs extends io.pulumi.resou
     }
 
     private DataSourceSalesforceConfigurationArgs() {
-        this.chatterFeedConfiguration = Input.empty();
-        this.crawlAttachments = Input.empty();
-        this.excludeAttachmentFilePatterns = Input.empty();
-        this.includeAttachmentFilePatterns = Input.empty();
-        this.knowledgeArticleConfiguration = Input.empty();
-        this.secretArn = Input.empty();
-        this.serverUrl = Input.empty();
-        this.standardObjectAttachmentConfiguration = Input.empty();
-        this.standardObjectConfigurations = Input.empty();
+        this.chatterFeedConfiguration = Output.empty();
+        this.crawlAttachments = Output.empty();
+        this.excludeAttachmentFilePatterns = Output.empty();
+        this.includeAttachmentFilePatterns = Output.empty();
+        this.knowledgeArticleConfiguration = Output.empty();
+        this.secretArn = Output.empty();
+        this.serverUrl = Output.empty();
+        this.standardObjectAttachmentConfiguration = Output.empty();
+        this.standardObjectConfigurations = Output.empty();
     }
 
     public static Builder builder() {
@@ -125,15 +125,15 @@ public final class DataSourceSalesforceConfigurationArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<DataSourceSalesforceChatterFeedConfigurationArgs> chatterFeedConfiguration;
-        private @Nullable Input<Boolean> crawlAttachments;
-        private @Nullable Input<List<String>> excludeAttachmentFilePatterns;
-        private @Nullable Input<List<String>> includeAttachmentFilePatterns;
-        private @Nullable Input<DataSourceSalesforceKnowledgeArticleConfigurationArgs> knowledgeArticleConfiguration;
-        private Input<String> secretArn;
-        private Input<String> serverUrl;
-        private @Nullable Input<DataSourceSalesforceStandardObjectAttachmentConfigurationArgs> standardObjectAttachmentConfiguration;
-        private @Nullable Input<List<DataSourceSalesforceStandardObjectConfigurationArgs>> standardObjectConfigurations;
+        private @Nullable Output<DataSourceSalesforceChatterFeedConfigurationArgs> chatterFeedConfiguration;
+        private @Nullable Output<Boolean> crawlAttachments;
+        private @Nullable Output<List<String>> excludeAttachmentFilePatterns;
+        private @Nullable Output<List<String>> includeAttachmentFilePatterns;
+        private @Nullable Output<DataSourceSalesforceKnowledgeArticleConfigurationArgs> knowledgeArticleConfiguration;
+        private Output<String> secretArn;
+        private Output<String> serverUrl;
+        private @Nullable Output<DataSourceSalesforceStandardObjectAttachmentConfigurationArgs> standardObjectAttachmentConfiguration;
+        private @Nullable Output<List<DataSourceSalesforceStandardObjectConfigurationArgs>> standardObjectConfigurations;
 
         public Builder() {
     	      // Empty
@@ -152,93 +152,93 @@ public final class DataSourceSalesforceConfigurationArgs extends io.pulumi.resou
     	      this.standardObjectConfigurations = defaults.standardObjectConfigurations;
         }
 
-        public Builder chatterFeedConfiguration(@Nullable Input<DataSourceSalesforceChatterFeedConfigurationArgs> chatterFeedConfiguration) {
+        public Builder chatterFeedConfiguration(@Nullable Output<DataSourceSalesforceChatterFeedConfigurationArgs> chatterFeedConfiguration) {
             this.chatterFeedConfiguration = chatterFeedConfiguration;
             return this;
         }
 
         public Builder chatterFeedConfiguration(@Nullable DataSourceSalesforceChatterFeedConfigurationArgs chatterFeedConfiguration) {
-            this.chatterFeedConfiguration = Input.ofNullable(chatterFeedConfiguration);
+            this.chatterFeedConfiguration = Output.ofNullable(chatterFeedConfiguration);
             return this;
         }
 
-        public Builder crawlAttachments(@Nullable Input<Boolean> crawlAttachments) {
+        public Builder crawlAttachments(@Nullable Output<Boolean> crawlAttachments) {
             this.crawlAttachments = crawlAttachments;
             return this;
         }
 
         public Builder crawlAttachments(@Nullable Boolean crawlAttachments) {
-            this.crawlAttachments = Input.ofNullable(crawlAttachments);
+            this.crawlAttachments = Output.ofNullable(crawlAttachments);
             return this;
         }
 
-        public Builder excludeAttachmentFilePatterns(@Nullable Input<List<String>> excludeAttachmentFilePatterns) {
+        public Builder excludeAttachmentFilePatterns(@Nullable Output<List<String>> excludeAttachmentFilePatterns) {
             this.excludeAttachmentFilePatterns = excludeAttachmentFilePatterns;
             return this;
         }
 
         public Builder excludeAttachmentFilePatterns(@Nullable List<String> excludeAttachmentFilePatterns) {
-            this.excludeAttachmentFilePatterns = Input.ofNullable(excludeAttachmentFilePatterns);
+            this.excludeAttachmentFilePatterns = Output.ofNullable(excludeAttachmentFilePatterns);
             return this;
         }
 
-        public Builder includeAttachmentFilePatterns(@Nullable Input<List<String>> includeAttachmentFilePatterns) {
+        public Builder includeAttachmentFilePatterns(@Nullable Output<List<String>> includeAttachmentFilePatterns) {
             this.includeAttachmentFilePatterns = includeAttachmentFilePatterns;
             return this;
         }
 
         public Builder includeAttachmentFilePatterns(@Nullable List<String> includeAttachmentFilePatterns) {
-            this.includeAttachmentFilePatterns = Input.ofNullable(includeAttachmentFilePatterns);
+            this.includeAttachmentFilePatterns = Output.ofNullable(includeAttachmentFilePatterns);
             return this;
         }
 
-        public Builder knowledgeArticleConfiguration(@Nullable Input<DataSourceSalesforceKnowledgeArticleConfigurationArgs> knowledgeArticleConfiguration) {
+        public Builder knowledgeArticleConfiguration(@Nullable Output<DataSourceSalesforceKnowledgeArticleConfigurationArgs> knowledgeArticleConfiguration) {
             this.knowledgeArticleConfiguration = knowledgeArticleConfiguration;
             return this;
         }
 
         public Builder knowledgeArticleConfiguration(@Nullable DataSourceSalesforceKnowledgeArticleConfigurationArgs knowledgeArticleConfiguration) {
-            this.knowledgeArticleConfiguration = Input.ofNullable(knowledgeArticleConfiguration);
+            this.knowledgeArticleConfiguration = Output.ofNullable(knowledgeArticleConfiguration);
             return this;
         }
 
-        public Builder secretArn(Input<String> secretArn) {
+        public Builder secretArn(Output<String> secretArn) {
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
         }
 
         public Builder secretArn(String secretArn) {
-            this.secretArn = Input.of(Objects.requireNonNull(secretArn));
+            this.secretArn = Output.of(Objects.requireNonNull(secretArn));
             return this;
         }
 
-        public Builder serverUrl(Input<String> serverUrl) {
+        public Builder serverUrl(Output<String> serverUrl) {
             this.serverUrl = Objects.requireNonNull(serverUrl);
             return this;
         }
 
         public Builder serverUrl(String serverUrl) {
-            this.serverUrl = Input.of(Objects.requireNonNull(serverUrl));
+            this.serverUrl = Output.of(Objects.requireNonNull(serverUrl));
             return this;
         }
 
-        public Builder standardObjectAttachmentConfiguration(@Nullable Input<DataSourceSalesforceStandardObjectAttachmentConfigurationArgs> standardObjectAttachmentConfiguration) {
+        public Builder standardObjectAttachmentConfiguration(@Nullable Output<DataSourceSalesforceStandardObjectAttachmentConfigurationArgs> standardObjectAttachmentConfiguration) {
             this.standardObjectAttachmentConfiguration = standardObjectAttachmentConfiguration;
             return this;
         }
 
         public Builder standardObjectAttachmentConfiguration(@Nullable DataSourceSalesforceStandardObjectAttachmentConfigurationArgs standardObjectAttachmentConfiguration) {
-            this.standardObjectAttachmentConfiguration = Input.ofNullable(standardObjectAttachmentConfiguration);
+            this.standardObjectAttachmentConfiguration = Output.ofNullable(standardObjectAttachmentConfiguration);
             return this;
         }
 
-        public Builder standardObjectConfigurations(@Nullable Input<List<DataSourceSalesforceStandardObjectConfigurationArgs>> standardObjectConfigurations) {
+        public Builder standardObjectConfigurations(@Nullable Output<List<DataSourceSalesforceStandardObjectConfigurationArgs>> standardObjectConfigurations) {
             this.standardObjectConfigurations = standardObjectConfigurations;
             return this;
         }
 
         public Builder standardObjectConfigurations(@Nullable List<DataSourceSalesforceStandardObjectConfigurationArgs> standardObjectConfigurations) {
-            this.standardObjectConfigurations = Input.ofNullable(standardObjectConfigurations);
+            this.standardObjectConfigurations = Output.ofNullable(standardObjectConfigurations);
             return this;
         }
         public DataSourceSalesforceConfigurationArgs build() {

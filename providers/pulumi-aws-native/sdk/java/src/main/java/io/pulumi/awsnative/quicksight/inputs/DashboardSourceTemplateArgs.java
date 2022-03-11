@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.awsnative.quicksight.inputs.DashboardDataSetReferenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,9 +24,9 @@ public final class DashboardSourceTemplateArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="arn", required=true)
-      private final Input<String> arn;
+      private final Output<String> arn;
 
-    public Input<String> getArn() {
+    public Output<String> getArn() {
         return this.arn;
     }
 
@@ -35,22 +35,22 @@ public final class DashboardSourceTemplateArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="dataSetReferences", required=true)
-      private final Input<List<DashboardDataSetReferenceArgs>> dataSetReferences;
+      private final Output<List<DashboardDataSetReferenceArgs>> dataSetReferences;
 
-    public Input<List<DashboardDataSetReferenceArgs>> getDataSetReferences() {
+    public Output<List<DashboardDataSetReferenceArgs>> getDataSetReferences() {
         return this.dataSetReferences;
     }
 
     public DashboardSourceTemplateArgs(
-        Input<String> arn,
-        Input<List<DashboardDataSetReferenceArgs>> dataSetReferences) {
+        Output<String> arn,
+        Output<List<DashboardDataSetReferenceArgs>> dataSetReferences) {
         this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
         this.dataSetReferences = Objects.requireNonNull(dataSetReferences, "expected parameter 'dataSetReferences' to be non-null");
     }
 
     private DashboardSourceTemplateArgs() {
-        this.arn = Input.empty();
-        this.dataSetReferences = Input.empty();
+        this.arn = Output.empty();
+        this.dataSetReferences = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class DashboardSourceTemplateArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<String> arn;
-        private Input<List<DashboardDataSetReferenceArgs>> dataSetReferences;
+        private Output<String> arn;
+        private Output<List<DashboardDataSetReferenceArgs>> dataSetReferences;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class DashboardSourceTemplateArgs extends io.pulumi.resources.Resou
     	      this.dataSetReferences = defaults.dataSetReferences;
         }
 
-        public Builder arn(Input<String> arn) {
+        public Builder arn(Output<String> arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
         public Builder arn(String arn) {
-            this.arn = Input.of(Objects.requireNonNull(arn));
+            this.arn = Output.of(Objects.requireNonNull(arn));
             return this;
         }
 
-        public Builder dataSetReferences(Input<List<DashboardDataSetReferenceArgs>> dataSetReferences) {
+        public Builder dataSetReferences(Output<List<DashboardDataSetReferenceArgs>> dataSetReferences) {
             this.dataSetReferences = Objects.requireNonNull(dataSetReferences);
             return this;
         }
 
         public Builder dataSetReferences(List<DashboardDataSetReferenceArgs> dataSetReferences) {
-            this.dataSetReferences = Input.of(Objects.requireNonNull(dataSetReferences));
+            this.dataSetReferences = Output.of(Objects.requireNonNull(dataSetReferences));
             return this;
         }
         public DashboardSourceTemplateArgs build() {

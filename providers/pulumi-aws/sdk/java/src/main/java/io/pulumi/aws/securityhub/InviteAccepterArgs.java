@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.securityhub;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class InviteAccepterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="masterId", required=true)
-      private final Input<String> masterId;
+      private final Output<String> masterId;
 
-    public Input<String> getMasterId() {
+    public Output<String> getMasterId() {
         return this.masterId;
     }
 
-    public InviteAccepterArgs(Input<String> masterId) {
+    public InviteAccepterArgs(Output<String> masterId) {
         this.masterId = Objects.requireNonNull(masterId, "expected parameter 'masterId' to be non-null");
     }
 
     private InviteAccepterArgs() {
-        this.masterId = Input.empty();
+        this.masterId = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class InviteAccepterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> masterId;
+        private Output<String> masterId;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class InviteAccepterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.masterId = defaults.masterId;
         }
 
-        public Builder masterId(Input<String> masterId) {
+        public Builder masterId(Output<String> masterId) {
             this.masterId = Objects.requireNonNull(masterId);
             return this;
         }
 
         public Builder masterId(String masterId) {
-            this.masterId = Input.of(Objects.requireNonNull(masterId));
+            this.masterId = Output.of(Objects.requireNonNull(masterId));
             return this;
         }
         public InviteAccepterArgs build() {

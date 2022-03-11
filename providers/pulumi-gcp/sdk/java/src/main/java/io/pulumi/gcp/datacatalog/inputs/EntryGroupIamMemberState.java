@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.datacatalog.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.datacatalog.inputs.EntryGroupIamMemberConditionGetArgs;
 import java.lang.String;
@@ -16,10 +16,10 @@ public final class EntryGroupIamMemberState extends io.pulumi.resources.Resource
     public static final EntryGroupIamMemberState Empty = new EntryGroupIamMemberState();
 
     @InputImport(name="condition")
-      private final @Nullable Input<EntryGroupIamMemberConditionGetArgs> condition;
+      private final @Nullable Output<EntryGroupIamMemberConditionGetArgs> condition;
 
-    public Input<EntryGroupIamMemberConditionGetArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<EntryGroupIamMemberConditionGetArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -27,10 +27,10 @@ public final class EntryGroupIamMemberState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="entryGroup")
-      private final @Nullable Input<String> entryGroup;
+      private final @Nullable Output<String> entryGroup;
 
-    public Input<String> getEntryGroup() {
-        return this.entryGroup == null ? Input.empty() : this.entryGroup;
+    public Output<String> getEntryGroup() {
+        return this.entryGroup == null ? Output.empty() : this.entryGroup;
     }
 
     /**
@@ -38,17 +38,17 @@ public final class EntryGroupIamMemberState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     @InputImport(name="member")
-      private final @Nullable Input<String> member;
+      private final @Nullable Output<String> member;
 
-    public Input<String> getMember() {
-        return this.member == null ? Input.empty() : this.member;
+    public Output<String> getMember() {
+        return this.member == null ? Output.empty() : this.member;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class EntryGroupIamMemberState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -77,20 +77,20 @@ public final class EntryGroupIamMemberState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="role")
-      private final @Nullable Input<String> role;
+      private final @Nullable Output<String> role;
 
-    public Input<String> getRole() {
-        return this.role == null ? Input.empty() : this.role;
+    public Output<String> getRole() {
+        return this.role == null ? Output.empty() : this.role;
     }
 
     public EntryGroupIamMemberState(
-        @Nullable Input<EntryGroupIamMemberConditionGetArgs> condition,
-        @Nullable Input<String> entryGroup,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> member,
-        @Nullable Input<String> project,
-        @Nullable Input<String> region,
-        @Nullable Input<String> role) {
+        @Nullable Output<EntryGroupIamMemberConditionGetArgs> condition,
+        @Nullable Output<String> entryGroup,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> member,
+        @Nullable Output<String> project,
+        @Nullable Output<String> region,
+        @Nullable Output<String> role) {
         this.condition = condition;
         this.entryGroup = entryGroup;
         this.etag = etag;
@@ -101,13 +101,13 @@ public final class EntryGroupIamMemberState extends io.pulumi.resources.Resource
     }
 
     private EntryGroupIamMemberState() {
-        this.condition = Input.empty();
-        this.entryGroup = Input.empty();
-        this.etag = Input.empty();
-        this.member = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
-        this.role = Input.empty();
+        this.condition = Output.empty();
+        this.entryGroup = Output.empty();
+        this.etag = Output.empty();
+        this.member = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -119,13 +119,13 @@ public final class EntryGroupIamMemberState extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<EntryGroupIamMemberConditionGetArgs> condition;
-        private @Nullable Input<String> entryGroup;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> member;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> region;
-        private @Nullable Input<String> role;
+        private @Nullable Output<EntryGroupIamMemberConditionGetArgs> condition;
+        private @Nullable Output<String> entryGroup;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> member;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> region;
+        private @Nullable Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -142,73 +142,73 @@ public final class EntryGroupIamMemberState extends io.pulumi.resources.Resource
     	      this.role = defaults.role;
         }
 
-        public Builder condition(@Nullable Input<EntryGroupIamMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<EntryGroupIamMemberConditionGetArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable EntryGroupIamMemberConditionGetArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder entryGroup(@Nullable Input<String> entryGroup) {
+        public Builder entryGroup(@Nullable Output<String> entryGroup) {
             this.entryGroup = entryGroup;
             return this;
         }
 
         public Builder entryGroup(@Nullable String entryGroup) {
-            this.entryGroup = Input.ofNullable(entryGroup);
+            this.entryGroup = Output.ofNullable(entryGroup);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder member(@Nullable Input<String> member) {
+        public Builder member(@Nullable Output<String> member) {
             this.member = member;
             return this;
         }
 
         public Builder member(@Nullable String member) {
-            this.member = Input.ofNullable(member);
+            this.member = Output.ofNullable(member);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder role(@Nullable Input<String> role) {
+        public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
 
         public Builder role(@Nullable String role) {
-            this.role = Input.ofNullable(role);
+            this.role = Output.ofNullable(role);
             return this;
         }
         public EntryGroupIamMemberState build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.ModelExplainabilityJobDefinitionClusterConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class ModelExplainabilityJobDefinitionMonitoringResourcesArgs exten
     public static final ModelExplainabilityJobDefinitionMonitoringResourcesArgs Empty = new ModelExplainabilityJobDefinitionMonitoringResourcesArgs();
 
     @InputImport(name="clusterConfig", required=true)
-      private final Input<ModelExplainabilityJobDefinitionClusterConfigArgs> clusterConfig;
+      private final Output<ModelExplainabilityJobDefinitionClusterConfigArgs> clusterConfig;
 
-    public Input<ModelExplainabilityJobDefinitionClusterConfigArgs> getClusterConfig() {
+    public Output<ModelExplainabilityJobDefinitionClusterConfigArgs> getClusterConfig() {
         return this.clusterConfig;
     }
 
-    public ModelExplainabilityJobDefinitionMonitoringResourcesArgs(Input<ModelExplainabilityJobDefinitionClusterConfigArgs> clusterConfig) {
+    public ModelExplainabilityJobDefinitionMonitoringResourcesArgs(Output<ModelExplainabilityJobDefinitionClusterConfigArgs> clusterConfig) {
         this.clusterConfig = Objects.requireNonNull(clusterConfig, "expected parameter 'clusterConfig' to be non-null");
     }
 
     private ModelExplainabilityJobDefinitionMonitoringResourcesArgs() {
-        this.clusterConfig = Input.empty();
+        this.clusterConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ModelExplainabilityJobDefinitionMonitoringResourcesArgs exten
     }
 
     public static final class Builder {
-        private Input<ModelExplainabilityJobDefinitionClusterConfigArgs> clusterConfig;
+        private Output<ModelExplainabilityJobDefinitionClusterConfigArgs> clusterConfig;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ModelExplainabilityJobDefinitionMonitoringResourcesArgs exten
     	      this.clusterConfig = defaults.clusterConfig;
         }
 
-        public Builder clusterConfig(Input<ModelExplainabilityJobDefinitionClusterConfigArgs> clusterConfig) {
+        public Builder clusterConfig(Output<ModelExplainabilityJobDefinitionClusterConfigArgs> clusterConfig) {
             this.clusterConfig = Objects.requireNonNull(clusterConfig);
             return this;
         }
 
         public Builder clusterConfig(ModelExplainabilityJobDefinitionClusterConfigArgs clusterConfig) {
-            this.clusterConfig = Input.of(Objects.requireNonNull(clusterConfig));
+            this.clusterConfig = Output.of(Objects.requireNonNull(clusterConfig));
             return this;
         }
         public ModelExplainabilityJobDefinitionMonitoringResourcesArgs build() {

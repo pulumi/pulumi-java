@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.inputs.StatefulPolicyPreservedStateArgs;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class StatefulPolicyArgs extends io.pulumi.resources.ResourceArgs {
     public static final StatefulPolicyArgs Empty = new StatefulPolicyArgs();
 
     @InputImport(name="preservedState")
-      private final @Nullable Input<StatefulPolicyPreservedStateArgs> preservedState;
+      private final @Nullable Output<StatefulPolicyPreservedStateArgs> preservedState;
 
-    public Input<StatefulPolicyPreservedStateArgs> getPreservedState() {
-        return this.preservedState == null ? Input.empty() : this.preservedState;
+    public Output<StatefulPolicyPreservedStateArgs> getPreservedState() {
+        return this.preservedState == null ? Output.empty() : this.preservedState;
     }
 
-    public StatefulPolicyArgs(@Nullable Input<StatefulPolicyPreservedStateArgs> preservedState) {
+    public StatefulPolicyArgs(@Nullable Output<StatefulPolicyPreservedStateArgs> preservedState) {
         this.preservedState = preservedState;
     }
 
     private StatefulPolicyArgs() {
-        this.preservedState = Input.empty();
+        this.preservedState = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class StatefulPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<StatefulPolicyPreservedStateArgs> preservedState;
+        private @Nullable Output<StatefulPolicyPreservedStateArgs> preservedState;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class StatefulPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.preservedState = defaults.preservedState;
         }
 
-        public Builder preservedState(@Nullable Input<StatefulPolicyPreservedStateArgs> preservedState) {
+        public Builder preservedState(@Nullable Output<StatefulPolicyPreservedStateArgs> preservedState) {
             this.preservedState = preservedState;
             return this;
         }
 
         public Builder preservedState(@Nullable StatefulPolicyPreservedStateArgs preservedState) {
-            this.preservedState = Input.ofNullable(preservedState);
+            this.preservedState = Output.ofNullable(preservedState);
             return this;
         }
         public StatefulPolicyArgs build() {

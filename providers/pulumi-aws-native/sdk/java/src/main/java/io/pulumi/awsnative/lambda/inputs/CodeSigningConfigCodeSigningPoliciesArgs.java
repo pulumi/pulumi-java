@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lambda.inputs;
 
 import io.pulumi.awsnative.lambda.enums.CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -22,18 +22,18 @@ public final class CodeSigningConfigCodeSigningPoliciesArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="untrustedArtifactOnDeployment", required=true)
-      private final Input<CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment> untrustedArtifactOnDeployment;
+      private final Output<CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment> untrustedArtifactOnDeployment;
 
-    public Input<CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment> getUntrustedArtifactOnDeployment() {
+    public Output<CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment> getUntrustedArtifactOnDeployment() {
         return this.untrustedArtifactOnDeployment;
     }
 
-    public CodeSigningConfigCodeSigningPoliciesArgs(Input<CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment> untrustedArtifactOnDeployment) {
+    public CodeSigningConfigCodeSigningPoliciesArgs(Output<CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment> untrustedArtifactOnDeployment) {
         this.untrustedArtifactOnDeployment = Objects.requireNonNull(untrustedArtifactOnDeployment, "expected parameter 'untrustedArtifactOnDeployment' to be non-null");
     }
 
     private CodeSigningConfigCodeSigningPoliciesArgs() {
-        this.untrustedArtifactOnDeployment = Input.empty();
+        this.untrustedArtifactOnDeployment = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class CodeSigningConfigCodeSigningPoliciesArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private Input<CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment> untrustedArtifactOnDeployment;
+        private Output<CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment> untrustedArtifactOnDeployment;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class CodeSigningConfigCodeSigningPoliciesArgs extends io.pulumi.re
     	      this.untrustedArtifactOnDeployment = defaults.untrustedArtifactOnDeployment;
         }
 
-        public Builder untrustedArtifactOnDeployment(Input<CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment> untrustedArtifactOnDeployment) {
+        public Builder untrustedArtifactOnDeployment(Output<CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment> untrustedArtifactOnDeployment) {
             this.untrustedArtifactOnDeployment = Objects.requireNonNull(untrustedArtifactOnDeployment);
             return this;
         }
 
         public Builder untrustedArtifactOnDeployment(CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment untrustedArtifactOnDeployment) {
-            this.untrustedArtifactOnDeployment = Input.of(Objects.requireNonNull(untrustedArtifactOnDeployment));
+            this.untrustedArtifactOnDeployment = Output.of(Objects.requireNonNull(untrustedArtifactOnDeployment));
             return this;
         }
         public CodeSigningConfigCodeSigningPoliciesArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class CloudEndpointsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service")
-      private final @Nullable Input<String> service;
+      private final @Nullable Output<String> service;
 
-    public Input<String> getService() {
-        return this.service == null ? Input.empty() : this.service;
+    public Output<String> getService() {
+        return this.service == null ? Output.empty() : this.service;
     }
 
-    public CloudEndpointsArgs(@Nullable Input<String> service) {
+    public CloudEndpointsArgs(@Nullable Output<String> service) {
         this.service = service;
     }
 
     private CloudEndpointsArgs() {
-        this.service = Input.empty();
+        this.service = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class CloudEndpointsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> service;
+        private @Nullable Output<String> service;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class CloudEndpointsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.service = defaults.service;
         }
 
-        public Builder service(@Nullable Input<String> service) {
+        public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
 
         public Builder service(@Nullable String service) {
-            this.service = Input.ofNullable(service);
+            this.service = Output.ofNullable(service);
             return this;
         }
         public CloudEndpointsArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.enums.GlobalParameterType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -25,9 +25,9 @@ public final class GlobalParameterSpecificationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<Either<String,GlobalParameterType>> type;
+      private final Output<Either<String,GlobalParameterType>> type;
 
-    public Input<Either<String,GlobalParameterType>> getType() {
+    public Output<Either<String,GlobalParameterType>> getType() {
         return this.type;
     }
 
@@ -36,22 +36,22 @@ public final class GlobalParameterSpecificationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="value", required=true)
-      private final Input<Object> value;
+      private final Output<Object> value;
 
-    public Input<Object> getValue() {
+    public Output<Object> getValue() {
         return this.value;
     }
 
     public GlobalParameterSpecificationArgs(
-        Input<Either<String,GlobalParameterType>> type,
-        Input<Object> value) {
+        Output<Either<String,GlobalParameterType>> type,
+        Output<Object> value) {
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private GlobalParameterSpecificationArgs() {
-        this.type = Input.empty();
-        this.value = Input.empty();
+        this.type = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class GlobalParameterSpecificationArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<Either<String,GlobalParameterType>> type;
-        private Input<Object> value;
+        private Output<Either<String,GlobalParameterType>> type;
+        private Output<Object> value;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class GlobalParameterSpecificationArgs extends io.pulumi.resources.
     	      this.value = defaults.value;
         }
 
-        public Builder type(Input<Either<String,GlobalParameterType>> type) {
+        public Builder type(Output<Either<String,GlobalParameterType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(Either<String,GlobalParameterType> type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder value(Input<Object> value) {
+        public Builder value(Output<Object> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(Object value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public GlobalParameterSpecificationArgs build() {

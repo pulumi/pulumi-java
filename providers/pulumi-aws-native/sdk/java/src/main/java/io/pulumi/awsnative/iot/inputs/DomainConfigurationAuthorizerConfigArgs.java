@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -16,29 +16,29 @@ public final class DomainConfigurationAuthorizerConfigArgs extends io.pulumi.res
     public static final DomainConfigurationAuthorizerConfigArgs Empty = new DomainConfigurationAuthorizerConfigArgs();
 
     @InputImport(name="allowAuthorizerOverride")
-      private final @Nullable Input<Boolean> allowAuthorizerOverride;
+      private final @Nullable Output<Boolean> allowAuthorizerOverride;
 
-    public Input<Boolean> getAllowAuthorizerOverride() {
-        return this.allowAuthorizerOverride == null ? Input.empty() : this.allowAuthorizerOverride;
+    public Output<Boolean> getAllowAuthorizerOverride() {
+        return this.allowAuthorizerOverride == null ? Output.empty() : this.allowAuthorizerOverride;
     }
 
     @InputImport(name="defaultAuthorizerName")
-      private final @Nullable Input<String> defaultAuthorizerName;
+      private final @Nullable Output<String> defaultAuthorizerName;
 
-    public Input<String> getDefaultAuthorizerName() {
-        return this.defaultAuthorizerName == null ? Input.empty() : this.defaultAuthorizerName;
+    public Output<String> getDefaultAuthorizerName() {
+        return this.defaultAuthorizerName == null ? Output.empty() : this.defaultAuthorizerName;
     }
 
     public DomainConfigurationAuthorizerConfigArgs(
-        @Nullable Input<Boolean> allowAuthorizerOverride,
-        @Nullable Input<String> defaultAuthorizerName) {
+        @Nullable Output<Boolean> allowAuthorizerOverride,
+        @Nullable Output<String> defaultAuthorizerName) {
         this.allowAuthorizerOverride = allowAuthorizerOverride;
         this.defaultAuthorizerName = defaultAuthorizerName;
     }
 
     private DomainConfigurationAuthorizerConfigArgs() {
-        this.allowAuthorizerOverride = Input.empty();
-        this.defaultAuthorizerName = Input.empty();
+        this.allowAuthorizerOverride = Output.empty();
+        this.defaultAuthorizerName = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class DomainConfigurationAuthorizerConfigArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowAuthorizerOverride;
-        private @Nullable Input<String> defaultAuthorizerName;
+        private @Nullable Output<Boolean> allowAuthorizerOverride;
+        private @Nullable Output<String> defaultAuthorizerName;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class DomainConfigurationAuthorizerConfigArgs extends io.pulumi.res
     	      this.defaultAuthorizerName = defaults.defaultAuthorizerName;
         }
 
-        public Builder allowAuthorizerOverride(@Nullable Input<Boolean> allowAuthorizerOverride) {
+        public Builder allowAuthorizerOverride(@Nullable Output<Boolean> allowAuthorizerOverride) {
             this.allowAuthorizerOverride = allowAuthorizerOverride;
             return this;
         }
 
         public Builder allowAuthorizerOverride(@Nullable Boolean allowAuthorizerOverride) {
-            this.allowAuthorizerOverride = Input.ofNullable(allowAuthorizerOverride);
+            this.allowAuthorizerOverride = Output.ofNullable(allowAuthorizerOverride);
             return this;
         }
 
-        public Builder defaultAuthorizerName(@Nullable Input<String> defaultAuthorizerName) {
+        public Builder defaultAuthorizerName(@Nullable Output<String> defaultAuthorizerName) {
             this.defaultAuthorizerName = defaultAuthorizerName;
             return this;
         }
 
         public Builder defaultAuthorizerName(@Nullable String defaultAuthorizerName) {
-            this.defaultAuthorizerName = Input.ofNullable(defaultAuthorizerName);
+            this.defaultAuthorizerName = Output.ofNullable(defaultAuthorizerName);
             return this;
         }
         public DomainConfigurationAuthorizerConfigArgs build() {

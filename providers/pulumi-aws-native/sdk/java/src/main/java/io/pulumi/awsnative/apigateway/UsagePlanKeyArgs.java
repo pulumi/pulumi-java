@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.apigateway;
 
 import io.pulumi.awsnative.apigateway.enums.UsagePlanKeyKeyType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class UsagePlanKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyId", required=true)
-      private final Input<String> keyId;
+      private final Output<String> keyId;
 
-    public Input<String> getKeyId() {
+    public Output<String> getKeyId() {
         return this.keyId;
     }
 
@@ -30,9 +30,9 @@ public final class UsagePlanKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyType", required=true)
-      private final Input<UsagePlanKeyKeyType> keyType;
+      private final Output<UsagePlanKeyKeyType> keyType;
 
-    public Input<UsagePlanKeyKeyType> getKeyType() {
+    public Output<UsagePlanKeyKeyType> getKeyType() {
         return this.keyType;
     }
 
@@ -41,25 +41,25 @@ public final class UsagePlanKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="usagePlanId", required=true)
-      private final Input<String> usagePlanId;
+      private final Output<String> usagePlanId;
 
-    public Input<String> getUsagePlanId() {
+    public Output<String> getUsagePlanId() {
         return this.usagePlanId;
     }
 
     public UsagePlanKeyArgs(
-        Input<String> keyId,
-        Input<UsagePlanKeyKeyType> keyType,
-        Input<String> usagePlanId) {
+        Output<String> keyId,
+        Output<UsagePlanKeyKeyType> keyType,
+        Output<String> usagePlanId) {
         this.keyId = Objects.requireNonNull(keyId, "expected parameter 'keyId' to be non-null");
         this.keyType = Objects.requireNonNull(keyType, "expected parameter 'keyType' to be non-null");
         this.usagePlanId = Objects.requireNonNull(usagePlanId, "expected parameter 'usagePlanId' to be non-null");
     }
 
     private UsagePlanKeyArgs() {
-        this.keyId = Input.empty();
-        this.keyType = Input.empty();
-        this.usagePlanId = Input.empty();
+        this.keyId = Output.empty();
+        this.keyType = Output.empty();
+        this.usagePlanId = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class UsagePlanKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> keyId;
-        private Input<UsagePlanKeyKeyType> keyType;
-        private Input<String> usagePlanId;
+        private Output<String> keyId;
+        private Output<UsagePlanKeyKeyType> keyType;
+        private Output<String> usagePlanId;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class UsagePlanKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.usagePlanId = defaults.usagePlanId;
         }
 
-        public Builder keyId(Input<String> keyId) {
+        public Builder keyId(Output<String> keyId) {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
         }
 
         public Builder keyId(String keyId) {
-            this.keyId = Input.of(Objects.requireNonNull(keyId));
+            this.keyId = Output.of(Objects.requireNonNull(keyId));
             return this;
         }
 
-        public Builder keyType(Input<UsagePlanKeyKeyType> keyType) {
+        public Builder keyType(Output<UsagePlanKeyKeyType> keyType) {
             this.keyType = Objects.requireNonNull(keyType);
             return this;
         }
 
         public Builder keyType(UsagePlanKeyKeyType keyType) {
-            this.keyType = Input.of(Objects.requireNonNull(keyType));
+            this.keyType = Output.of(Objects.requireNonNull(keyType));
             return this;
         }
 
-        public Builder usagePlanId(Input<String> usagePlanId) {
+        public Builder usagePlanId(Output<String> usagePlanId) {
             this.usagePlanId = Objects.requireNonNull(usagePlanId);
             return this;
         }
 
         public Builder usagePlanId(String usagePlanId) {
-            this.usagePlanId = Input.of(Objects.requireNonNull(usagePlanId));
+            this.usagePlanId = Output.of(Objects.requireNonNull(usagePlanId));
             return this;
         }
         public UsagePlanKeyArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,9 +16,9 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
     public static final DebugSessionArgs Empty = new DebugSessionArgs();
 
     @InputImport(name="apiId", required=true)
-      private final Input<String> apiId;
+      private final Output<String> apiId;
 
-    public Input<String> getApiId() {
+    public Output<String> getApiId() {
         return this.apiId;
     }
 
@@ -27,16 +27,16 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="count")
-      private final @Nullable Input<Integer> count;
+      private final @Nullable Output<Integer> count;
 
-    public Input<Integer> getCount() {
-        return this.count == null ? Input.empty() : this.count;
+    public Output<Integer> getCount() {
+        return this.count == null ? Output.empty() : this.count;
     }
 
     @InputImport(name="environmentId", required=true)
-      private final Input<String> environmentId;
+      private final Output<String> environmentId;
 
-    public Input<String> getEnvironmentId() {
+    public Output<String> getEnvironmentId() {
         return this.environmentId;
     }
 
@@ -45,10 +45,10 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filter")
-      private final @Nullable Input<String> filter;
+      private final @Nullable Output<String> filter;
 
-    public Input<String> getFilter() {
-        return this.filter == null ? Input.empty() : this.filter;
+    public Output<String> getFilter() {
+        return this.filter == null ? Output.empty() : this.filter;
     }
 
     /**
@@ -56,23 +56,23 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="organizationId", required=true)
-      private final Input<String> organizationId;
+      private final Output<String> organizationId;
 
-    public Input<String> getOrganizationId() {
+    public Output<String> getOrganizationId() {
         return this.organizationId;
     }
 
     @InputImport(name="revisionId", required=true)
-      private final Input<String> revisionId;
+      private final Output<String> revisionId;
 
-    public Input<String> getRevisionId() {
+    public Output<String> getRevisionId() {
         return this.revisionId;
     }
 
@@ -81,10 +81,10 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeout")
-      private final @Nullable Input<String> timeout;
+      private final @Nullable Output<String> timeout;
 
-    public Input<String> getTimeout() {
-        return this.timeout == null ? Input.empty() : this.timeout;
+    public Output<String> getTimeout() {
+        return this.timeout == null ? Output.empty() : this.timeout;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tracesize")
-      private final @Nullable Input<Integer> tracesize;
+      private final @Nullable Output<Integer> tracesize;
 
-    public Input<Integer> getTracesize() {
-        return this.tracesize == null ? Input.empty() : this.tracesize;
+    public Output<Integer> getTracesize() {
+        return this.tracesize == null ? Output.empty() : this.tracesize;
     }
 
     /**
@@ -103,23 +103,23 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="validity")
-      private final @Nullable Input<Integer> validity;
+      private final @Nullable Output<Integer> validity;
 
-    public Input<Integer> getValidity() {
-        return this.validity == null ? Input.empty() : this.validity;
+    public Output<Integer> getValidity() {
+        return this.validity == null ? Output.empty() : this.validity;
     }
 
     public DebugSessionArgs(
-        Input<String> apiId,
-        @Nullable Input<Integer> count,
-        Input<String> environmentId,
-        @Nullable Input<String> filter,
-        @Nullable Input<String> name,
-        Input<String> organizationId,
-        Input<String> revisionId,
-        @Nullable Input<String> timeout,
-        @Nullable Input<Integer> tracesize,
-        @Nullable Input<Integer> validity) {
+        Output<String> apiId,
+        @Nullable Output<Integer> count,
+        Output<String> environmentId,
+        @Nullable Output<String> filter,
+        @Nullable Output<String> name,
+        Output<String> organizationId,
+        Output<String> revisionId,
+        @Nullable Output<String> timeout,
+        @Nullable Output<Integer> tracesize,
+        @Nullable Output<Integer> validity) {
         this.apiId = Objects.requireNonNull(apiId, "expected parameter 'apiId' to be non-null");
         this.count = count;
         this.environmentId = Objects.requireNonNull(environmentId, "expected parameter 'environmentId' to be non-null");
@@ -133,16 +133,16 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DebugSessionArgs() {
-        this.apiId = Input.empty();
-        this.count = Input.empty();
-        this.environmentId = Input.empty();
-        this.filter = Input.empty();
-        this.name = Input.empty();
-        this.organizationId = Input.empty();
-        this.revisionId = Input.empty();
-        this.timeout = Input.empty();
-        this.tracesize = Input.empty();
-        this.validity = Input.empty();
+        this.apiId = Output.empty();
+        this.count = Output.empty();
+        this.environmentId = Output.empty();
+        this.filter = Output.empty();
+        this.name = Output.empty();
+        this.organizationId = Output.empty();
+        this.revisionId = Output.empty();
+        this.timeout = Output.empty();
+        this.tracesize = Output.empty();
+        this.validity = Output.empty();
     }
 
     public static Builder builder() {
@@ -154,16 +154,16 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> apiId;
-        private @Nullable Input<Integer> count;
-        private Input<String> environmentId;
-        private @Nullable Input<String> filter;
-        private @Nullable Input<String> name;
-        private Input<String> organizationId;
-        private Input<String> revisionId;
-        private @Nullable Input<String> timeout;
-        private @Nullable Input<Integer> tracesize;
-        private @Nullable Input<Integer> validity;
+        private Output<String> apiId;
+        private @Nullable Output<Integer> count;
+        private Output<String> environmentId;
+        private @Nullable Output<String> filter;
+        private @Nullable Output<String> name;
+        private Output<String> organizationId;
+        private Output<String> revisionId;
+        private @Nullable Output<String> timeout;
+        private @Nullable Output<Integer> tracesize;
+        private @Nullable Output<Integer> validity;
 
         public Builder() {
     	      // Empty
@@ -183,103 +183,103 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.validity = defaults.validity;
         }
 
-        public Builder apiId(Input<String> apiId) {
+        public Builder apiId(Output<String> apiId) {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
 
         public Builder apiId(String apiId) {
-            this.apiId = Input.of(Objects.requireNonNull(apiId));
+            this.apiId = Output.of(Objects.requireNonNull(apiId));
             return this;
         }
 
-        public Builder count(@Nullable Input<Integer> count) {
+        public Builder count(@Nullable Output<Integer> count) {
             this.count = count;
             return this;
         }
 
         public Builder count(@Nullable Integer count) {
-            this.count = Input.ofNullable(count);
+            this.count = Output.ofNullable(count);
             return this;
         }
 
-        public Builder environmentId(Input<String> environmentId) {
+        public Builder environmentId(Output<String> environmentId) {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
 
         public Builder environmentId(String environmentId) {
-            this.environmentId = Input.of(Objects.requireNonNull(environmentId));
+            this.environmentId = Output.of(Objects.requireNonNull(environmentId));
             return this;
         }
 
-        public Builder filter(@Nullable Input<String> filter) {
+        public Builder filter(@Nullable Output<String> filter) {
             this.filter = filter;
             return this;
         }
 
         public Builder filter(@Nullable String filter) {
-            this.filter = Input.ofNullable(filter);
+            this.filter = Output.ofNullable(filter);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder organizationId(Input<String> organizationId) {
+        public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
         public Builder organizationId(String organizationId) {
-            this.organizationId = Input.of(Objects.requireNonNull(organizationId));
+            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
 
-        public Builder revisionId(Input<String> revisionId) {
+        public Builder revisionId(Output<String> revisionId) {
             this.revisionId = Objects.requireNonNull(revisionId);
             return this;
         }
 
         public Builder revisionId(String revisionId) {
-            this.revisionId = Input.of(Objects.requireNonNull(revisionId));
+            this.revisionId = Output.of(Objects.requireNonNull(revisionId));
             return this;
         }
 
-        public Builder timeout(@Nullable Input<String> timeout) {
+        public Builder timeout(@Nullable Output<String> timeout) {
             this.timeout = timeout;
             return this;
         }
 
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = Input.ofNullable(timeout);
+            this.timeout = Output.ofNullable(timeout);
             return this;
         }
 
-        public Builder tracesize(@Nullable Input<Integer> tracesize) {
+        public Builder tracesize(@Nullable Output<Integer> tracesize) {
             this.tracesize = tracesize;
             return this;
         }
 
         public Builder tracesize(@Nullable Integer tracesize) {
-            this.tracesize = Input.ofNullable(tracesize);
+            this.tracesize = Output.ofNullable(tracesize);
             return this;
         }
 
-        public Builder validity(@Nullable Input<Integer> validity) {
+        public Builder validity(@Nullable Output<Integer> validity) {
             this.validity = validity;
             return this;
         }
 
         public Builder validity(@Nullable Integer validity) {
-            this.validity = Input.ofNullable(validity);
+            this.validity = Output.ofNullable(validity);
             return this;
         }
         public DebugSessionArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,18 +21,18 @@ public final class CustomServiceTelemetryArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceName")
-      private final @Nullable Input<String> resourceName;
+      private final @Nullable Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
-        return this.resourceName == null ? Input.empty() : this.resourceName;
+    public Output<String> getPropResourceName() {
+        return this.resourceName == null ? Output.empty() : this.resourceName;
     }
 
-    public CustomServiceTelemetryArgs(@Nullable Input<String> resourceName) {
+    public CustomServiceTelemetryArgs(@Nullable Output<String> resourceName) {
         this.resourceName = resourceName;
     }
 
     private CustomServiceTelemetryArgs() {
-        this.resourceName = Input.empty();
+        this.resourceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -44,7 +44,7 @@ public final class CustomServiceTelemetryArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> resourceName;
+        private @Nullable Output<String> resourceName;
 
         public Builder() {
     	      // Empty
@@ -55,13 +55,13 @@ public final class CustomServiceTelemetryArgs extends io.pulumi.resources.Resour
     	      this.resourceName = defaults.resourceName;
         }
 
-        public Builder resourceName(@Nullable Input<String> resourceName) {
+        public Builder resourceName(@Nullable Output<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Input.ofNullable(resourceName);
+            this.resourceName = Output.ofNullable(resourceName);
             return this;
         }
         public CustomServiceTelemetryArgs build() {

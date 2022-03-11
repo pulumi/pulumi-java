@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dns;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dns.inputs.ManagedZoneDnssecConfigArgs;
 import io.pulumi.gcp.dns.inputs.ManagedZoneForwardingConfigArgs;
@@ -26,10 +26,10 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -37,9 +37,9 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsName", required=true)
-      private final Input<String> dnsName;
+      private final Output<String> dnsName;
 
-    public Input<String> getDnsName() {
+    public Output<String> getDnsName() {
         return this.dnsName;
     }
 
@@ -49,10 +49,10 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnssecConfig")
-      private final @Nullable Input<ManagedZoneDnssecConfigArgs> dnssecConfig;
+      private final @Nullable Output<ManagedZoneDnssecConfigArgs> dnssecConfig;
 
-    public Input<ManagedZoneDnssecConfigArgs> getDnssecConfig() {
-        return this.dnssecConfig == null ? Input.empty() : this.dnssecConfig;
+    public Output<ManagedZoneDnssecConfigArgs> getDnssecConfig() {
+        return this.dnssecConfig == null ? Output.empty() : this.dnssecConfig;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceDestroy")
-      private final @Nullable Input<Boolean> forceDestroy;
+      private final @Nullable Output<Boolean> forceDestroy;
 
-    public Input<Boolean> getForceDestroy() {
-        return this.forceDestroy == null ? Input.empty() : this.forceDestroy;
+    public Output<Boolean> getForceDestroy() {
+        return this.forceDestroy == null ? Output.empty() : this.forceDestroy;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forwardingConfig")
-      private final @Nullable Input<ManagedZoneForwardingConfigArgs> forwardingConfig;
+      private final @Nullable Output<ManagedZoneForwardingConfigArgs> forwardingConfig;
 
-    public Input<ManagedZoneForwardingConfigArgs> getForwardingConfig() {
-        return this.forwardingConfig == null ? Input.empty() : this.forwardingConfig;
+    public Output<ManagedZoneForwardingConfigArgs> getForwardingConfig() {
+        return this.forwardingConfig == null ? Output.empty() : this.forwardingConfig;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -110,10 +110,10 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peeringConfig")
-      private final @Nullable Input<ManagedZonePeeringConfigArgs> peeringConfig;
+      private final @Nullable Output<ManagedZonePeeringConfigArgs> peeringConfig;
 
-    public Input<ManagedZonePeeringConfigArgs> getPeeringConfig() {
-        return this.peeringConfig == null ? Input.empty() : this.peeringConfig;
+    public Output<ManagedZonePeeringConfigArgs> getPeeringConfig() {
+        return this.peeringConfig == null ? Output.empty() : this.peeringConfig;
     }
 
     /**
@@ -123,10 +123,10 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateVisibilityConfig")
-      private final @Nullable Input<ManagedZonePrivateVisibilityConfigArgs> privateVisibilityConfig;
+      private final @Nullable Output<ManagedZonePrivateVisibilityConfigArgs> privateVisibilityConfig;
 
-    public Input<ManagedZonePrivateVisibilityConfigArgs> getPrivateVisibilityConfig() {
-        return this.privateVisibilityConfig == null ? Input.empty() : this.privateVisibilityConfig;
+    public Output<ManagedZonePrivateVisibilityConfigArgs> getPrivateVisibilityConfig() {
+        return this.privateVisibilityConfig == null ? Output.empty() : this.privateVisibilityConfig;
     }
 
     /**
@@ -135,10 +135,10 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -148,10 +148,10 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reverseLookup")
-      private final @Nullable Input<Boolean> reverseLookup;
+      private final @Nullable Output<Boolean> reverseLookup;
 
-    public Input<Boolean> getReverseLookup() {
-        return this.reverseLookup == null ? Input.empty() : this.reverseLookup;
+    public Output<Boolean> getReverseLookup() {
+        return this.reverseLookup == null ? Output.empty() : this.reverseLookup;
     }
 
     /**
@@ -160,10 +160,10 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceDirectoryConfig")
-      private final @Nullable Input<ManagedZoneServiceDirectoryConfigArgs> serviceDirectoryConfig;
+      private final @Nullable Output<ManagedZoneServiceDirectoryConfigArgs> serviceDirectoryConfig;
 
-    public Input<ManagedZoneServiceDirectoryConfigArgs> getServiceDirectoryConfig() {
-        return this.serviceDirectoryConfig == null ? Input.empty() : this.serviceDirectoryConfig;
+    public Output<ManagedZoneServiceDirectoryConfigArgs> getServiceDirectoryConfig() {
+        return this.serviceDirectoryConfig == null ? Output.empty() : this.serviceDirectoryConfig;
     }
 
     /**
@@ -174,27 +174,27 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="visibility")
-      private final @Nullable Input<String> visibility;
+      private final @Nullable Output<String> visibility;
 
-    public Input<String> getVisibility() {
-        return this.visibility == null ? Input.empty() : this.visibility;
+    public Output<String> getVisibility() {
+        return this.visibility == null ? Output.empty() : this.visibility;
     }
 
     public ManagedZoneArgs(
-        @Nullable Input<String> description,
-        Input<String> dnsName,
-        @Nullable Input<ManagedZoneDnssecConfigArgs> dnssecConfig,
-        @Nullable Input<Boolean> forceDestroy,
-        @Nullable Input<ManagedZoneForwardingConfigArgs> forwardingConfig,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> name,
-        @Nullable Input<ManagedZonePeeringConfigArgs> peeringConfig,
-        @Nullable Input<ManagedZonePrivateVisibilityConfigArgs> privateVisibilityConfig,
-        @Nullable Input<String> project,
-        @Nullable Input<Boolean> reverseLookup,
-        @Nullable Input<ManagedZoneServiceDirectoryConfigArgs> serviceDirectoryConfig,
-        @Nullable Input<String> visibility) {
-        this.description = description == null ? Input.ofNullable("Managed by Pulumi") : description;
+        @Nullable Output<String> description,
+        Output<String> dnsName,
+        @Nullable Output<ManagedZoneDnssecConfigArgs> dnssecConfig,
+        @Nullable Output<Boolean> forceDestroy,
+        @Nullable Output<ManagedZoneForwardingConfigArgs> forwardingConfig,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> name,
+        @Nullable Output<ManagedZonePeeringConfigArgs> peeringConfig,
+        @Nullable Output<ManagedZonePrivateVisibilityConfigArgs> privateVisibilityConfig,
+        @Nullable Output<String> project,
+        @Nullable Output<Boolean> reverseLookup,
+        @Nullable Output<ManagedZoneServiceDirectoryConfigArgs> serviceDirectoryConfig,
+        @Nullable Output<String> visibility) {
+        this.description = description == null ? Output.ofNullable("Managed by Pulumi") : description;
         this.dnsName = Objects.requireNonNull(dnsName, "expected parameter 'dnsName' to be non-null");
         this.dnssecConfig = dnssecConfig;
         this.forceDestroy = forceDestroy;
@@ -210,19 +210,19 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ManagedZoneArgs() {
-        this.description = Input.empty();
-        this.dnsName = Input.empty();
-        this.dnssecConfig = Input.empty();
-        this.forceDestroy = Input.empty();
-        this.forwardingConfig = Input.empty();
-        this.labels = Input.empty();
-        this.name = Input.empty();
-        this.peeringConfig = Input.empty();
-        this.privateVisibilityConfig = Input.empty();
-        this.project = Input.empty();
-        this.reverseLookup = Input.empty();
-        this.serviceDirectoryConfig = Input.empty();
-        this.visibility = Input.empty();
+        this.description = Output.empty();
+        this.dnsName = Output.empty();
+        this.dnssecConfig = Output.empty();
+        this.forceDestroy = Output.empty();
+        this.forwardingConfig = Output.empty();
+        this.labels = Output.empty();
+        this.name = Output.empty();
+        this.peeringConfig = Output.empty();
+        this.privateVisibilityConfig = Output.empty();
+        this.project = Output.empty();
+        this.reverseLookup = Output.empty();
+        this.serviceDirectoryConfig = Output.empty();
+        this.visibility = Output.empty();
     }
 
     public static Builder builder() {
@@ -234,19 +234,19 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> dnsName;
-        private @Nullable Input<ManagedZoneDnssecConfigArgs> dnssecConfig;
-        private @Nullable Input<Boolean> forceDestroy;
-        private @Nullable Input<ManagedZoneForwardingConfigArgs> forwardingConfig;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> name;
-        private @Nullable Input<ManagedZonePeeringConfigArgs> peeringConfig;
-        private @Nullable Input<ManagedZonePrivateVisibilityConfigArgs> privateVisibilityConfig;
-        private @Nullable Input<String> project;
-        private @Nullable Input<Boolean> reverseLookup;
-        private @Nullable Input<ManagedZoneServiceDirectoryConfigArgs> serviceDirectoryConfig;
-        private @Nullable Input<String> visibility;
+        private @Nullable Output<String> description;
+        private Output<String> dnsName;
+        private @Nullable Output<ManagedZoneDnssecConfigArgs> dnssecConfig;
+        private @Nullable Output<Boolean> forceDestroy;
+        private @Nullable Output<ManagedZoneForwardingConfigArgs> forwardingConfig;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> name;
+        private @Nullable Output<ManagedZonePeeringConfigArgs> peeringConfig;
+        private @Nullable Output<ManagedZonePrivateVisibilityConfigArgs> privateVisibilityConfig;
+        private @Nullable Output<String> project;
+        private @Nullable Output<Boolean> reverseLookup;
+        private @Nullable Output<ManagedZoneServiceDirectoryConfigArgs> serviceDirectoryConfig;
+        private @Nullable Output<String> visibility;
 
         public Builder() {
     	      // Empty
@@ -269,133 +269,133 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
     	      this.visibility = defaults.visibility;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder dnsName(Input<String> dnsName) {
+        public Builder dnsName(Output<String> dnsName) {
             this.dnsName = Objects.requireNonNull(dnsName);
             return this;
         }
 
         public Builder dnsName(String dnsName) {
-            this.dnsName = Input.of(Objects.requireNonNull(dnsName));
+            this.dnsName = Output.of(Objects.requireNonNull(dnsName));
             return this;
         }
 
-        public Builder dnssecConfig(@Nullable Input<ManagedZoneDnssecConfigArgs> dnssecConfig) {
+        public Builder dnssecConfig(@Nullable Output<ManagedZoneDnssecConfigArgs> dnssecConfig) {
             this.dnssecConfig = dnssecConfig;
             return this;
         }
 
         public Builder dnssecConfig(@Nullable ManagedZoneDnssecConfigArgs dnssecConfig) {
-            this.dnssecConfig = Input.ofNullable(dnssecConfig);
+            this.dnssecConfig = Output.ofNullable(dnssecConfig);
             return this;
         }
 
-        public Builder forceDestroy(@Nullable Input<Boolean> forceDestroy) {
+        public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
             this.forceDestroy = forceDestroy;
             return this;
         }
 
         public Builder forceDestroy(@Nullable Boolean forceDestroy) {
-            this.forceDestroy = Input.ofNullable(forceDestroy);
+            this.forceDestroy = Output.ofNullable(forceDestroy);
             return this;
         }
 
-        public Builder forwardingConfig(@Nullable Input<ManagedZoneForwardingConfigArgs> forwardingConfig) {
+        public Builder forwardingConfig(@Nullable Output<ManagedZoneForwardingConfigArgs> forwardingConfig) {
             this.forwardingConfig = forwardingConfig;
             return this;
         }
 
         public Builder forwardingConfig(@Nullable ManagedZoneForwardingConfigArgs forwardingConfig) {
-            this.forwardingConfig = Input.ofNullable(forwardingConfig);
+            this.forwardingConfig = Output.ofNullable(forwardingConfig);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder peeringConfig(@Nullable Input<ManagedZonePeeringConfigArgs> peeringConfig) {
+        public Builder peeringConfig(@Nullable Output<ManagedZonePeeringConfigArgs> peeringConfig) {
             this.peeringConfig = peeringConfig;
             return this;
         }
 
         public Builder peeringConfig(@Nullable ManagedZonePeeringConfigArgs peeringConfig) {
-            this.peeringConfig = Input.ofNullable(peeringConfig);
+            this.peeringConfig = Output.ofNullable(peeringConfig);
             return this;
         }
 
-        public Builder privateVisibilityConfig(@Nullable Input<ManagedZonePrivateVisibilityConfigArgs> privateVisibilityConfig) {
+        public Builder privateVisibilityConfig(@Nullable Output<ManagedZonePrivateVisibilityConfigArgs> privateVisibilityConfig) {
             this.privateVisibilityConfig = privateVisibilityConfig;
             return this;
         }
 
         public Builder privateVisibilityConfig(@Nullable ManagedZonePrivateVisibilityConfigArgs privateVisibilityConfig) {
-            this.privateVisibilityConfig = Input.ofNullable(privateVisibilityConfig);
+            this.privateVisibilityConfig = Output.ofNullable(privateVisibilityConfig);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder reverseLookup(@Nullable Input<Boolean> reverseLookup) {
+        public Builder reverseLookup(@Nullable Output<Boolean> reverseLookup) {
             this.reverseLookup = reverseLookup;
             return this;
         }
 
         public Builder reverseLookup(@Nullable Boolean reverseLookup) {
-            this.reverseLookup = Input.ofNullable(reverseLookup);
+            this.reverseLookup = Output.ofNullable(reverseLookup);
             return this;
         }
 
-        public Builder serviceDirectoryConfig(@Nullable Input<ManagedZoneServiceDirectoryConfigArgs> serviceDirectoryConfig) {
+        public Builder serviceDirectoryConfig(@Nullable Output<ManagedZoneServiceDirectoryConfigArgs> serviceDirectoryConfig) {
             this.serviceDirectoryConfig = serviceDirectoryConfig;
             return this;
         }
 
         public Builder serviceDirectoryConfig(@Nullable ManagedZoneServiceDirectoryConfigArgs serviceDirectoryConfig) {
-            this.serviceDirectoryConfig = Input.ofNullable(serviceDirectoryConfig);
+            this.serviceDirectoryConfig = Output.ofNullable(serviceDirectoryConfig);
             return this;
         }
 
-        public Builder visibility(@Nullable Input<String> visibility) {
+        public Builder visibility(@Nullable Output<String> visibility) {
             this.visibility = visibility;
             return this;
         }
 
         public Builder visibility(@Nullable String visibility) {
-            this.visibility = Input.ofNullable(visibility);
+            this.visibility = Output.ofNullable(visibility);
             return this;
         }
         public ManagedZoneArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class EmailNotificationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="customEmails")
-      private final @Nullable Input<List<String>> customEmails;
+      private final @Nullable Output<List<String>> customEmails;
 
-    public Input<List<String>> getCustomEmails() {
-        return this.customEmails == null ? Input.empty() : this.customEmails;
+    public Output<List<String>> getCustomEmails() {
+        return this.customEmails == null ? Output.empty() : this.customEmails;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class EmailNotificationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sendToSubscriptionAdministrator")
-      private final @Nullable Input<Boolean> sendToSubscriptionAdministrator;
+      private final @Nullable Output<Boolean> sendToSubscriptionAdministrator;
 
-    public Input<Boolean> getSendToSubscriptionAdministrator() {
-        return this.sendToSubscriptionAdministrator == null ? Input.empty() : this.sendToSubscriptionAdministrator;
+    public Output<Boolean> getSendToSubscriptionAdministrator() {
+        return this.sendToSubscriptionAdministrator == null ? Output.empty() : this.sendToSubscriptionAdministrator;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class EmailNotificationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sendToSubscriptionCoAdministrators")
-      private final @Nullable Input<Boolean> sendToSubscriptionCoAdministrators;
+      private final @Nullable Output<Boolean> sendToSubscriptionCoAdministrators;
 
-    public Input<Boolean> getSendToSubscriptionCoAdministrators() {
-        return this.sendToSubscriptionCoAdministrators == null ? Input.empty() : this.sendToSubscriptionCoAdministrators;
+    public Output<Boolean> getSendToSubscriptionCoAdministrators() {
+        return this.sendToSubscriptionCoAdministrators == null ? Output.empty() : this.sendToSubscriptionCoAdministrators;
     }
 
     public EmailNotificationArgs(
-        @Nullable Input<List<String>> customEmails,
-        @Nullable Input<Boolean> sendToSubscriptionAdministrator,
-        @Nullable Input<Boolean> sendToSubscriptionCoAdministrators) {
+        @Nullable Output<List<String>> customEmails,
+        @Nullable Output<Boolean> sendToSubscriptionAdministrator,
+        @Nullable Output<Boolean> sendToSubscriptionCoAdministrators) {
         this.customEmails = customEmails;
-        this.sendToSubscriptionAdministrator = sendToSubscriptionAdministrator == null ? Input.ofNullable(false) : sendToSubscriptionAdministrator;
-        this.sendToSubscriptionCoAdministrators = sendToSubscriptionCoAdministrators == null ? Input.ofNullable(false) : sendToSubscriptionCoAdministrators;
+        this.sendToSubscriptionAdministrator = sendToSubscriptionAdministrator == null ? Output.ofNullable(false) : sendToSubscriptionAdministrator;
+        this.sendToSubscriptionCoAdministrators = sendToSubscriptionCoAdministrators == null ? Output.ofNullable(false) : sendToSubscriptionCoAdministrators;
     }
 
     private EmailNotificationArgs() {
-        this.customEmails = Input.empty();
-        this.sendToSubscriptionAdministrator = Input.empty();
-        this.sendToSubscriptionCoAdministrators = Input.empty();
+        this.customEmails = Output.empty();
+        this.sendToSubscriptionAdministrator = Output.empty();
+        this.sendToSubscriptionCoAdministrators = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class EmailNotificationArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> customEmails;
-        private @Nullable Input<Boolean> sendToSubscriptionAdministrator;
-        private @Nullable Input<Boolean> sendToSubscriptionCoAdministrators;
+        private @Nullable Output<List<String>> customEmails;
+        private @Nullable Output<Boolean> sendToSubscriptionAdministrator;
+        private @Nullable Output<Boolean> sendToSubscriptionCoAdministrators;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class EmailNotificationArgs extends io.pulumi.resources.ResourceArg
     	      this.sendToSubscriptionCoAdministrators = defaults.sendToSubscriptionCoAdministrators;
         }
 
-        public Builder customEmails(@Nullable Input<List<String>> customEmails) {
+        public Builder customEmails(@Nullable Output<List<String>> customEmails) {
             this.customEmails = customEmails;
             return this;
         }
 
         public Builder customEmails(@Nullable List<String> customEmails) {
-            this.customEmails = Input.ofNullable(customEmails);
+            this.customEmails = Output.ofNullable(customEmails);
             return this;
         }
 
-        public Builder sendToSubscriptionAdministrator(@Nullable Input<Boolean> sendToSubscriptionAdministrator) {
+        public Builder sendToSubscriptionAdministrator(@Nullable Output<Boolean> sendToSubscriptionAdministrator) {
             this.sendToSubscriptionAdministrator = sendToSubscriptionAdministrator;
             return this;
         }
 
         public Builder sendToSubscriptionAdministrator(@Nullable Boolean sendToSubscriptionAdministrator) {
-            this.sendToSubscriptionAdministrator = Input.ofNullable(sendToSubscriptionAdministrator);
+            this.sendToSubscriptionAdministrator = Output.ofNullable(sendToSubscriptionAdministrator);
             return this;
         }
 
-        public Builder sendToSubscriptionCoAdministrators(@Nullable Input<Boolean> sendToSubscriptionCoAdministrators) {
+        public Builder sendToSubscriptionCoAdministrators(@Nullable Output<Boolean> sendToSubscriptionCoAdministrators) {
             this.sendToSubscriptionCoAdministrators = sendToSubscriptionCoAdministrators;
             return this;
         }
 
         public Builder sendToSubscriptionCoAdministrators(@Nullable Boolean sendToSubscriptionCoAdministrators) {
-            this.sendToSubscriptionCoAdministrators = Input.ofNullable(sendToSubscriptionCoAdministrators);
+            this.sendToSubscriptionCoAdministrators = Output.ofNullable(sendToSubscriptionCoAdministrators);
             return this;
         }
         public EmailNotificationArgs build() {

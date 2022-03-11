@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appflow.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,29 +18,29 @@ public final class ConnectorProfileAmplitudeConnectorProfileCredentialsArgs exte
      * 
      */
     @InputImport(name="apiKey", required=true)
-      private final Input<String> apiKey;
+      private final Output<String> apiKey;
 
-    public Input<String> getApiKey() {
+    public Output<String> getApiKey() {
         return this.apiKey;
     }
 
     @InputImport(name="secretKey", required=true)
-      private final Input<String> secretKey;
+      private final Output<String> secretKey;
 
-    public Input<String> getSecretKey() {
+    public Output<String> getSecretKey() {
         return this.secretKey;
     }
 
     public ConnectorProfileAmplitudeConnectorProfileCredentialsArgs(
-        Input<String> apiKey,
-        Input<String> secretKey) {
+        Output<String> apiKey,
+        Output<String> secretKey) {
         this.apiKey = Objects.requireNonNull(apiKey, "expected parameter 'apiKey' to be non-null");
         this.secretKey = Objects.requireNonNull(secretKey, "expected parameter 'secretKey' to be non-null");
     }
 
     private ConnectorProfileAmplitudeConnectorProfileCredentialsArgs() {
-        this.apiKey = Input.empty();
-        this.secretKey = Input.empty();
+        this.apiKey = Output.empty();
+        this.secretKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -52,8 +52,8 @@ public final class ConnectorProfileAmplitudeConnectorProfileCredentialsArgs exte
     }
 
     public static final class Builder {
-        private Input<String> apiKey;
-        private Input<String> secretKey;
+        private Output<String> apiKey;
+        private Output<String> secretKey;
 
         public Builder() {
     	      // Empty
@@ -65,23 +65,23 @@ public final class ConnectorProfileAmplitudeConnectorProfileCredentialsArgs exte
     	      this.secretKey = defaults.secretKey;
         }
 
-        public Builder apiKey(Input<String> apiKey) {
+        public Builder apiKey(Output<String> apiKey) {
             this.apiKey = Objects.requireNonNull(apiKey);
             return this;
         }
 
         public Builder apiKey(String apiKey) {
-            this.apiKey = Input.of(Objects.requireNonNull(apiKey));
+            this.apiKey = Output.of(Objects.requireNonNull(apiKey));
             return this;
         }
 
-        public Builder secretKey(Input<String> secretKey) {
+        public Builder secretKey(Output<String> secretKey) {
             this.secretKey = Objects.requireNonNull(secretKey);
             return this;
         }
 
         public Builder secretKey(String secretKey) {
-            this.secretKey = Input.of(Objects.requireNonNull(secretKey));
+            this.secretKey = Output.of(Objects.requireNonNull(secretKey));
             return this;
         }
         public ConnectorProfileAmplitudeConnectorProfileCredentialsArgs build() {

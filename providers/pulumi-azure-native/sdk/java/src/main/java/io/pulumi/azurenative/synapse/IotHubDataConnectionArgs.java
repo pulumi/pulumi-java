@@ -5,7 +5,7 @@ package io.pulumi.azurenative.synapse;
 
 import io.pulumi.azurenative.synapse.enums.IotHubDataFormat;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,9 +22,9 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="consumerGroup", required=true)
-      private final Input<String> consumerGroup;
+      private final Output<String> consumerGroup;
 
-    public Input<String> getConsumerGroup() {
+    public Output<String> getConsumerGroup() {
         return this.consumerGroup;
     }
 
@@ -33,10 +33,10 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="dataConnectionName")
-      private final @Nullable Input<String> dataConnectionName;
+      private final @Nullable Output<String> dataConnectionName;
 
-    public Input<String> getDataConnectionName() {
-        return this.dataConnectionName == null ? Input.empty() : this.dataConnectionName;
+    public Output<String> getDataConnectionName() {
+        return this.dataConnectionName == null ? Output.empty() : this.dataConnectionName;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="dataFormat")
-      private final @Nullable Input<Either<String,IotHubDataFormat>> dataFormat;
+      private final @Nullable Output<Either<String,IotHubDataFormat>> dataFormat;
 
-    public Input<Either<String,IotHubDataFormat>> getDataFormat() {
-        return this.dataFormat == null ? Input.empty() : this.dataFormat;
+    public Output<Either<String,IotHubDataFormat>> getDataFormat() {
+        return this.dataFormat == null ? Output.empty() : this.dataFormat;
     }
 
     /**
@@ -55,9 +55,9 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="databaseName", required=true)
-      private final Input<String> databaseName;
+      private final Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
+    public Output<String> getDatabaseName() {
         return this.databaseName;
     }
 
@@ -66,10 +66,10 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="eventSystemProperties")
-      private final @Nullable Input<List<String>> eventSystemProperties;
+      private final @Nullable Output<List<String>> eventSystemProperties;
 
-    public Input<List<String>> getEventSystemProperties() {
-        return this.eventSystemProperties == null ? Input.empty() : this.eventSystemProperties;
+    public Output<List<String>> getEventSystemProperties() {
+        return this.eventSystemProperties == null ? Output.empty() : this.eventSystemProperties;
     }
 
     /**
@@ -77,9 +77,9 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="iotHubResourceId", required=true)
-      private final Input<String> iotHubResourceId;
+      private final Output<String> iotHubResourceId;
 
-    public Input<String> getIotHubResourceId() {
+    public Output<String> getIotHubResourceId() {
         return this.iotHubResourceId;
     }
 
@@ -89,9 +89,9 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<String> kind;
+      private final Output<String> kind;
 
-    public Input<String> getKind() {
+    public Output<String> getKind() {
         return this.kind;
     }
 
@@ -100,9 +100,9 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="kustoPoolName", required=true)
-      private final Input<String> kustoPoolName;
+      private final Output<String> kustoPoolName;
 
-    public Input<String> getKustoPoolName() {
+    public Output<String> getKustoPoolName() {
         return this.kustoPoolName;
     }
 
@@ -111,10 +111,10 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="mappingRuleName")
-      private final @Nullable Input<String> mappingRuleName;
+      private final @Nullable Output<String> mappingRuleName;
 
-    public Input<String> getMappingRuleName() {
-        return this.mappingRuleName == null ? Input.empty() : this.mappingRuleName;
+    public Output<String> getMappingRuleName() {
+        return this.mappingRuleName == null ? Output.empty() : this.mappingRuleName;
     }
 
     /**
@@ -133,9 +133,9 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -144,9 +144,9 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="sharedAccessPolicyName", required=true)
-      private final Input<String> sharedAccessPolicyName;
+      private final Output<String> sharedAccessPolicyName;
 
-    public Input<String> getSharedAccessPolicyName() {
+    public Output<String> getSharedAccessPolicyName() {
         return this.sharedAccessPolicyName;
     }
 
@@ -155,10 +155,10 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tableName")
-      private final @Nullable Input<String> tableName;
+      private final @Nullable Output<String> tableName;
 
-    public Input<String> getTableName() {
-        return this.tableName == null ? Input.empty() : this.tableName;
+    public Output<String> getTableName() {
+        return this.tableName == null ? Output.empty() : this.tableName;
     }
 
     /**
@@ -166,27 +166,27 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="workspaceName", required=true)
-      private final Input<String> workspaceName;
+      private final Output<String> workspaceName;
 
-    public Input<String> getWorkspaceName() {
+    public Output<String> getWorkspaceName() {
         return this.workspaceName;
     }
 
     public IotHubDataConnectionArgs(
-        Input<String> consumerGroup,
-        @Nullable Input<String> dataConnectionName,
-        @Nullable Input<Either<String,IotHubDataFormat>> dataFormat,
-        Input<String> databaseName,
-        @Nullable Input<List<String>> eventSystemProperties,
-        Input<String> iotHubResourceId,
-        Input<String> kind,
-        Input<String> kustoPoolName,
-        @Nullable Input<String> location,
-        @Nullable Input<String> mappingRuleName,
-        Input<String> resourceGroupName,
-        Input<String> sharedAccessPolicyName,
-        @Nullable Input<String> tableName,
-        Input<String> workspaceName) {
+        Output<String> consumerGroup,
+        @Nullable Output<String> dataConnectionName,
+        @Nullable Output<Either<String,IotHubDataFormat>> dataFormat,
+        Output<String> databaseName,
+        @Nullable Output<List<String>> eventSystemProperties,
+        Output<String> iotHubResourceId,
+        Output<String> kind,
+        Output<String> kustoPoolName,
+        @Nullable Output<String> location,
+        @Nullable Output<String> mappingRuleName,
+        Output<String> resourceGroupName,
+        Output<String> sharedAccessPolicyName,
+        @Nullable Output<String> tableName,
+        Output<String> workspaceName) {
         this.consumerGroup = Objects.requireNonNull(consumerGroup, "expected parameter 'consumerGroup' to be non-null");
         this.dataConnectionName = dataConnectionName;
         this.dataFormat = dataFormat;
@@ -204,20 +204,20 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
     }
 
     private IotHubDataConnectionArgs() {
-        this.consumerGroup = Input.empty();
-        this.dataConnectionName = Input.empty();
-        this.dataFormat = Input.empty();
-        this.databaseName = Input.empty();
-        this.eventSystemProperties = Input.empty();
-        this.iotHubResourceId = Input.empty();
-        this.kind = Input.empty();
-        this.kustoPoolName = Input.empty();
-        this.location = Input.empty();
-        this.mappingRuleName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sharedAccessPolicyName = Input.empty();
-        this.tableName = Input.empty();
-        this.workspaceName = Input.empty();
+        this.consumerGroup = Output.empty();
+        this.dataConnectionName = Output.empty();
+        this.dataFormat = Output.empty();
+        this.databaseName = Output.empty();
+        this.eventSystemProperties = Output.empty();
+        this.iotHubResourceId = Output.empty();
+        this.kind = Output.empty();
+        this.kustoPoolName = Output.empty();
+        this.location = Output.empty();
+        this.mappingRuleName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sharedAccessPolicyName = Output.empty();
+        this.tableName = Output.empty();
+        this.workspaceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -229,20 +229,20 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> consumerGroup;
-        private @Nullable Input<String> dataConnectionName;
-        private @Nullable Input<Either<String,IotHubDataFormat>> dataFormat;
-        private Input<String> databaseName;
-        private @Nullable Input<List<String>> eventSystemProperties;
-        private Input<String> iotHubResourceId;
-        private Input<String> kind;
-        private Input<String> kustoPoolName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> mappingRuleName;
-        private Input<String> resourceGroupName;
-        private Input<String> sharedAccessPolicyName;
-        private @Nullable Input<String> tableName;
-        private Input<String> workspaceName;
+        private Output<String> consumerGroup;
+        private @Nullable Output<String> dataConnectionName;
+        private @Nullable Output<Either<String,IotHubDataFormat>> dataFormat;
+        private Output<String> databaseName;
+        private @Nullable Output<List<String>> eventSystemProperties;
+        private Output<String> iotHubResourceId;
+        private Output<String> kind;
+        private Output<String> kustoPoolName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> mappingRuleName;
+        private Output<String> resourceGroupName;
+        private Output<String> sharedAccessPolicyName;
+        private @Nullable Output<String> tableName;
+        private Output<String> workspaceName;
 
         public Builder() {
     	      // Empty
@@ -266,143 +266,143 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder consumerGroup(Input<String> consumerGroup) {
+        public Builder consumerGroup(Output<String> consumerGroup) {
             this.consumerGroup = Objects.requireNonNull(consumerGroup);
             return this;
         }
 
         public Builder consumerGroup(String consumerGroup) {
-            this.consumerGroup = Input.of(Objects.requireNonNull(consumerGroup));
+            this.consumerGroup = Output.of(Objects.requireNonNull(consumerGroup));
             return this;
         }
 
-        public Builder dataConnectionName(@Nullable Input<String> dataConnectionName) {
+        public Builder dataConnectionName(@Nullable Output<String> dataConnectionName) {
             this.dataConnectionName = dataConnectionName;
             return this;
         }
 
         public Builder dataConnectionName(@Nullable String dataConnectionName) {
-            this.dataConnectionName = Input.ofNullable(dataConnectionName);
+            this.dataConnectionName = Output.ofNullable(dataConnectionName);
             return this;
         }
 
-        public Builder dataFormat(@Nullable Input<Either<String,IotHubDataFormat>> dataFormat) {
+        public Builder dataFormat(@Nullable Output<Either<String,IotHubDataFormat>> dataFormat) {
             this.dataFormat = dataFormat;
             return this;
         }
 
         public Builder dataFormat(@Nullable Either<String,IotHubDataFormat> dataFormat) {
-            this.dataFormat = Input.ofNullable(dataFormat);
+            this.dataFormat = Output.ofNullable(dataFormat);
             return this;
         }
 
-        public Builder databaseName(Input<String> databaseName) {
+        public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
         public Builder databaseName(String databaseName) {
-            this.databaseName = Input.of(Objects.requireNonNull(databaseName));
+            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder eventSystemProperties(@Nullable Input<List<String>> eventSystemProperties) {
+        public Builder eventSystemProperties(@Nullable Output<List<String>> eventSystemProperties) {
             this.eventSystemProperties = eventSystemProperties;
             return this;
         }
 
         public Builder eventSystemProperties(@Nullable List<String> eventSystemProperties) {
-            this.eventSystemProperties = Input.ofNullable(eventSystemProperties);
+            this.eventSystemProperties = Output.ofNullable(eventSystemProperties);
             return this;
         }
 
-        public Builder iotHubResourceId(Input<String> iotHubResourceId) {
+        public Builder iotHubResourceId(Output<String> iotHubResourceId) {
             this.iotHubResourceId = Objects.requireNonNull(iotHubResourceId);
             return this;
         }
 
         public Builder iotHubResourceId(String iotHubResourceId) {
-            this.iotHubResourceId = Input.of(Objects.requireNonNull(iotHubResourceId));
+            this.iotHubResourceId = Output.of(Objects.requireNonNull(iotHubResourceId));
             return this;
         }
 
-        public Builder kind(Input<String> kind) {
+        public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(String kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder kustoPoolName(Input<String> kustoPoolName) {
+        public Builder kustoPoolName(Output<String> kustoPoolName) {
             this.kustoPoolName = Objects.requireNonNull(kustoPoolName);
             return this;
         }
 
         public Builder kustoPoolName(String kustoPoolName) {
-            this.kustoPoolName = Input.of(Objects.requireNonNull(kustoPoolName));
+            this.kustoPoolName = Output.of(Objects.requireNonNull(kustoPoolName));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder mappingRuleName(@Nullable Input<String> mappingRuleName) {
+        public Builder mappingRuleName(@Nullable Output<String> mappingRuleName) {
             this.mappingRuleName = mappingRuleName;
             return this;
         }
 
         public Builder mappingRuleName(@Nullable String mappingRuleName) {
-            this.mappingRuleName = Input.ofNullable(mappingRuleName);
+            this.mappingRuleName = Output.ofNullable(mappingRuleName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sharedAccessPolicyName(Input<String> sharedAccessPolicyName) {
+        public Builder sharedAccessPolicyName(Output<String> sharedAccessPolicyName) {
             this.sharedAccessPolicyName = Objects.requireNonNull(sharedAccessPolicyName);
             return this;
         }
 
         public Builder sharedAccessPolicyName(String sharedAccessPolicyName) {
-            this.sharedAccessPolicyName = Input.of(Objects.requireNonNull(sharedAccessPolicyName));
+            this.sharedAccessPolicyName = Output.of(Objects.requireNonNull(sharedAccessPolicyName));
             return this;
         }
 
-        public Builder tableName(@Nullable Input<String> tableName) {
+        public Builder tableName(@Nullable Output<String> tableName) {
             this.tableName = tableName;
             return this;
         }
 
         public Builder tableName(@Nullable String tableName) {
-            this.tableName = Input.ofNullable(tableName);
+            this.tableName = Output.ofNullable(tableName);
             return this;
         }
 
-        public Builder workspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
+            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
         }
         public IotHubDataConnectionArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.enums.MitigationActionUpdateDeviceCertificateParamsAction;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class MitigationActionUpdateDeviceCertificateParamsArgs extends io.
     public static final MitigationActionUpdateDeviceCertificateParamsArgs Empty = new MitigationActionUpdateDeviceCertificateParamsArgs();
 
     @InputImport(name="action", required=true)
-      private final Input<MitigationActionUpdateDeviceCertificateParamsAction> action;
+      private final Output<MitigationActionUpdateDeviceCertificateParamsAction> action;
 
-    public Input<MitigationActionUpdateDeviceCertificateParamsAction> getAction() {
+    public Output<MitigationActionUpdateDeviceCertificateParamsAction> getAction() {
         return this.action;
     }
 
-    public MitigationActionUpdateDeviceCertificateParamsArgs(Input<MitigationActionUpdateDeviceCertificateParamsAction> action) {
+    public MitigationActionUpdateDeviceCertificateParamsArgs(Output<MitigationActionUpdateDeviceCertificateParamsAction> action) {
         this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
     }
 
     private MitigationActionUpdateDeviceCertificateParamsArgs() {
-        this.action = Input.empty();
+        this.action = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class MitigationActionUpdateDeviceCertificateParamsArgs extends io.
     }
 
     public static final class Builder {
-        private Input<MitigationActionUpdateDeviceCertificateParamsAction> action;
+        private Output<MitigationActionUpdateDeviceCertificateParamsAction> action;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class MitigationActionUpdateDeviceCertificateParamsArgs extends io.
     	      this.action = defaults.action;
         }
 
-        public Builder action(Input<MitigationActionUpdateDeviceCertificateParamsAction> action) {
+        public Builder action(Output<MitigationActionUpdateDeviceCertificateParamsAction> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
         public Builder action(MitigationActionUpdateDeviceCertificateParamsAction action) {
-            this.action = Input.of(Objects.requireNonNull(action));
+            this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
         public MitigationActionUpdateDeviceCertificateParamsArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lightsail.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessDirection")
-      private final @Nullable Input<String> accessDirection;
+      private final @Nullable Output<String> accessDirection;
 
-    public Input<String> getAccessDirection() {
-        return this.accessDirection == null ? Input.empty() : this.accessDirection;
+    public Output<String> getAccessDirection() {
+        return this.accessDirection == null ? Output.empty() : this.accessDirection;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessFrom")
-      private final @Nullable Input<String> accessFrom;
+      private final @Nullable Output<String> accessFrom;
 
-    public Input<String> getAccessFrom() {
-        return this.accessFrom == null ? Input.empty() : this.accessFrom;
+    public Output<String> getAccessFrom() {
+        return this.accessFrom == null ? Output.empty() : this.accessFrom;
     }
 
     /**
@@ -47,24 +47,24 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessType")
-      private final @Nullable Input<String> accessType;
+      private final @Nullable Output<String> accessType;
 
-    public Input<String> getAccessType() {
-        return this.accessType == null ? Input.empty() : this.accessType;
+    public Output<String> getAccessType() {
+        return this.accessType == null ? Output.empty() : this.accessType;
     }
 
     @InputImport(name="cidrListAliases")
-      private final @Nullable Input<List<String>> cidrListAliases;
+      private final @Nullable Output<List<String>> cidrListAliases;
 
-    public Input<List<String>> getCidrListAliases() {
-        return this.cidrListAliases == null ? Input.empty() : this.cidrListAliases;
+    public Output<List<String>> getCidrListAliases() {
+        return this.cidrListAliases == null ? Output.empty() : this.cidrListAliases;
     }
 
     @InputImport(name="cidrs")
-      private final @Nullable Input<List<String>> cidrs;
+      private final @Nullable Output<List<String>> cidrs;
 
-    public Input<List<String>> getCidrs() {
-        return this.cidrs == null ? Input.empty() : this.cidrs;
+    public Output<List<String>> getCidrs() {
+        return this.cidrs == null ? Output.empty() : this.cidrs;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="commonName")
-      private final @Nullable Input<String> commonName;
+      private final @Nullable Output<String> commonName;
 
-    public Input<String> getCommonName() {
-        return this.commonName == null ? Input.empty() : this.commonName;
+    public Output<String> getCommonName() {
+        return this.commonName == null ? Output.empty() : this.commonName;
     }
 
     /**
@@ -83,17 +83,17 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fromPort")
-      private final @Nullable Input<Integer> fromPort;
+      private final @Nullable Output<Integer> fromPort;
 
-    public Input<Integer> getFromPort() {
-        return this.fromPort == null ? Input.empty() : this.fromPort;
+    public Output<Integer> getFromPort() {
+        return this.fromPort == null ? Output.empty() : this.fromPort;
     }
 
     @InputImport(name="ipv6Cidrs")
-      private final @Nullable Input<List<String>> ipv6Cidrs;
+      private final @Nullable Output<List<String>> ipv6Cidrs;
 
-    public Input<List<String>> getIpv6Cidrs() {
-        return this.ipv6Cidrs == null ? Input.empty() : this.ipv6Cidrs;
+    public Output<List<String>> getIpv6Cidrs() {
+        return this.ipv6Cidrs == null ? Output.empty() : this.ipv6Cidrs;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol")
-      private final @Nullable Input<String> protocol;
+      private final @Nullable Output<String> protocol;
 
-    public Input<String> getProtocol() {
-        return this.protocol == null ? Input.empty() : this.protocol;
+    public Output<String> getProtocol() {
+        return this.protocol == null ? Output.empty() : this.protocol;
     }
 
     /**
@@ -112,23 +112,23 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="toPort")
-      private final @Nullable Input<Integer> toPort;
+      private final @Nullable Output<Integer> toPort;
 
-    public Input<Integer> getToPort() {
-        return this.toPort == null ? Input.empty() : this.toPort;
+    public Output<Integer> getToPort() {
+        return this.toPort == null ? Output.empty() : this.toPort;
     }
 
     public InstancePortArgs(
-        @Nullable Input<String> accessDirection,
-        @Nullable Input<String> accessFrom,
-        @Nullable Input<String> accessType,
-        @Nullable Input<List<String>> cidrListAliases,
-        @Nullable Input<List<String>> cidrs,
-        @Nullable Input<String> commonName,
-        @Nullable Input<Integer> fromPort,
-        @Nullable Input<List<String>> ipv6Cidrs,
-        @Nullable Input<String> protocol,
-        @Nullable Input<Integer> toPort) {
+        @Nullable Output<String> accessDirection,
+        @Nullable Output<String> accessFrom,
+        @Nullable Output<String> accessType,
+        @Nullable Output<List<String>> cidrListAliases,
+        @Nullable Output<List<String>> cidrs,
+        @Nullable Output<String> commonName,
+        @Nullable Output<Integer> fromPort,
+        @Nullable Output<List<String>> ipv6Cidrs,
+        @Nullable Output<String> protocol,
+        @Nullable Output<Integer> toPort) {
         this.accessDirection = accessDirection;
         this.accessFrom = accessFrom;
         this.accessType = accessType;
@@ -142,16 +142,16 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstancePortArgs() {
-        this.accessDirection = Input.empty();
-        this.accessFrom = Input.empty();
-        this.accessType = Input.empty();
-        this.cidrListAliases = Input.empty();
-        this.cidrs = Input.empty();
-        this.commonName = Input.empty();
-        this.fromPort = Input.empty();
-        this.ipv6Cidrs = Input.empty();
-        this.protocol = Input.empty();
-        this.toPort = Input.empty();
+        this.accessDirection = Output.empty();
+        this.accessFrom = Output.empty();
+        this.accessType = Output.empty();
+        this.cidrListAliases = Output.empty();
+        this.cidrs = Output.empty();
+        this.commonName = Output.empty();
+        this.fromPort = Output.empty();
+        this.ipv6Cidrs = Output.empty();
+        this.protocol = Output.empty();
+        this.toPort = Output.empty();
     }
 
     public static Builder builder() {
@@ -163,16 +163,16 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accessDirection;
-        private @Nullable Input<String> accessFrom;
-        private @Nullable Input<String> accessType;
-        private @Nullable Input<List<String>> cidrListAliases;
-        private @Nullable Input<List<String>> cidrs;
-        private @Nullable Input<String> commonName;
-        private @Nullable Input<Integer> fromPort;
-        private @Nullable Input<List<String>> ipv6Cidrs;
-        private @Nullable Input<String> protocol;
-        private @Nullable Input<Integer> toPort;
+        private @Nullable Output<String> accessDirection;
+        private @Nullable Output<String> accessFrom;
+        private @Nullable Output<String> accessType;
+        private @Nullable Output<List<String>> cidrListAliases;
+        private @Nullable Output<List<String>> cidrs;
+        private @Nullable Output<String> commonName;
+        private @Nullable Output<Integer> fromPort;
+        private @Nullable Output<List<String>> ipv6Cidrs;
+        private @Nullable Output<String> protocol;
+        private @Nullable Output<Integer> toPort;
 
         public Builder() {
     	      // Empty
@@ -192,103 +192,103 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
     	      this.toPort = defaults.toPort;
         }
 
-        public Builder accessDirection(@Nullable Input<String> accessDirection) {
+        public Builder accessDirection(@Nullable Output<String> accessDirection) {
             this.accessDirection = accessDirection;
             return this;
         }
 
         public Builder accessDirection(@Nullable String accessDirection) {
-            this.accessDirection = Input.ofNullable(accessDirection);
+            this.accessDirection = Output.ofNullable(accessDirection);
             return this;
         }
 
-        public Builder accessFrom(@Nullable Input<String> accessFrom) {
+        public Builder accessFrom(@Nullable Output<String> accessFrom) {
             this.accessFrom = accessFrom;
             return this;
         }
 
         public Builder accessFrom(@Nullable String accessFrom) {
-            this.accessFrom = Input.ofNullable(accessFrom);
+            this.accessFrom = Output.ofNullable(accessFrom);
             return this;
         }
 
-        public Builder accessType(@Nullable Input<String> accessType) {
+        public Builder accessType(@Nullable Output<String> accessType) {
             this.accessType = accessType;
             return this;
         }
 
         public Builder accessType(@Nullable String accessType) {
-            this.accessType = Input.ofNullable(accessType);
+            this.accessType = Output.ofNullable(accessType);
             return this;
         }
 
-        public Builder cidrListAliases(@Nullable Input<List<String>> cidrListAliases) {
+        public Builder cidrListAliases(@Nullable Output<List<String>> cidrListAliases) {
             this.cidrListAliases = cidrListAliases;
             return this;
         }
 
         public Builder cidrListAliases(@Nullable List<String> cidrListAliases) {
-            this.cidrListAliases = Input.ofNullable(cidrListAliases);
+            this.cidrListAliases = Output.ofNullable(cidrListAliases);
             return this;
         }
 
-        public Builder cidrs(@Nullable Input<List<String>> cidrs) {
+        public Builder cidrs(@Nullable Output<List<String>> cidrs) {
             this.cidrs = cidrs;
             return this;
         }
 
         public Builder cidrs(@Nullable List<String> cidrs) {
-            this.cidrs = Input.ofNullable(cidrs);
+            this.cidrs = Output.ofNullable(cidrs);
             return this;
         }
 
-        public Builder commonName(@Nullable Input<String> commonName) {
+        public Builder commonName(@Nullable Output<String> commonName) {
             this.commonName = commonName;
             return this;
         }
 
         public Builder commonName(@Nullable String commonName) {
-            this.commonName = Input.ofNullable(commonName);
+            this.commonName = Output.ofNullable(commonName);
             return this;
         }
 
-        public Builder fromPort(@Nullable Input<Integer> fromPort) {
+        public Builder fromPort(@Nullable Output<Integer> fromPort) {
             this.fromPort = fromPort;
             return this;
         }
 
         public Builder fromPort(@Nullable Integer fromPort) {
-            this.fromPort = Input.ofNullable(fromPort);
+            this.fromPort = Output.ofNullable(fromPort);
             return this;
         }
 
-        public Builder ipv6Cidrs(@Nullable Input<List<String>> ipv6Cidrs) {
+        public Builder ipv6Cidrs(@Nullable Output<List<String>> ipv6Cidrs) {
             this.ipv6Cidrs = ipv6Cidrs;
             return this;
         }
 
         public Builder ipv6Cidrs(@Nullable List<String> ipv6Cidrs) {
-            this.ipv6Cidrs = Input.ofNullable(ipv6Cidrs);
+            this.ipv6Cidrs = Output.ofNullable(ipv6Cidrs);
             return this;
         }
 
-        public Builder protocol(@Nullable Input<String> protocol) {
+        public Builder protocol(@Nullable Output<String> protocol) {
             this.protocol = protocol;
             return this;
         }
 
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = Input.ofNullable(protocol);
+            this.protocol = Output.ofNullable(protocol);
             return this;
         }
 
-        public Builder toPort(@Nullable Input<Integer> toPort) {
+        public Builder toPort(@Nullable Output<Integer> toPort) {
             this.toPort = toPort;
             return this;
         }
 
         public Builder toPort(@Nullable Integer toPort) {
-            this.toPort = Input.ofNullable(toPort);
+            this.toPort = Output.ofNullable(toPort);
             return this;
         }
         public InstancePortArgs build() {

@@ -19,7 +19,6 @@ import io.pulumi.azurenative.eventgrid.outputs.StorageQueueEventSubscriptionDest
 import io.pulumi.azurenative.eventgrid.outputs.SystemDataResponse;
 import io.pulumi.azurenative.eventgrid.outputs.WebHookEventSubscriptionDestinationResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -288,21 +287,21 @@ public class SystemTopicEventSubscription extends io.pulumi.resources.CustomReso
      * @param options A bag of options that control this resource's behavior.
      */
     public SystemTopicEventSubscription(String name, SystemTopicEventSubscriptionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:eventgrid:SystemTopicEventSubscription", name, args == null ? SystemTopicEventSubscriptionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:eventgrid:SystemTopicEventSubscription", name, args == null ? SystemTopicEventSubscriptionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private SystemTopicEventSubscription(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private SystemTopicEventSubscription(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:eventgrid:SystemTopicEventSubscription", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:eventgrid/v20200401preview:SystemTopicEventSubscription").build()),
-                Input.of(Alias.builder().setType("azure-native:eventgrid/v20201015preview:SystemTopicEventSubscription").build()),
-                Input.of(Alias.builder().setType("azure-native:eventgrid/v20210601preview:SystemTopicEventSubscription").build()),
-                Input.of(Alias.builder().setType("azure-native:eventgrid/v20211201:SystemTopicEventSubscription").build())
+                Output.of(Alias.builder().setType("azure-native:eventgrid/v20200401preview:SystemTopicEventSubscription").build()),
+                Output.of(Alias.builder().setType("azure-native:eventgrid/v20201015preview:SystemTopicEventSubscription").build()),
+                Output.of(Alias.builder().setType("azure-native:eventgrid/v20210601preview:SystemTopicEventSubscription").build()),
+                Output.of(Alias.builder().setType("azure-native:eventgrid/v20211201:SystemTopicEventSubscription").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -316,7 +315,7 @@ public class SystemTopicEventSubscription extends io.pulumi.resources.CustomReso
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SystemTopicEventSubscription get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static SystemTopicEventSubscription get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SystemTopicEventSubscription(name, id, options);
     }
 }

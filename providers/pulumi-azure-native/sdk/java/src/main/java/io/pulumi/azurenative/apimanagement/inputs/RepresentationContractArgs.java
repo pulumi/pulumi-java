@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.azurenative.apimanagement.inputs.ParameterContractArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,9 +25,9 @@ public final class RepresentationContractArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="contentType", required=true)
-      private final Input<String> contentType;
+      private final Output<String> contentType;
 
-    public Input<String> getContentType() {
+    public Output<String> getContentType() {
         return this.contentType;
     }
 
@@ -36,10 +36,10 @@ public final class RepresentationContractArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="formParameters")
-      private final @Nullable Input<List<ParameterContractArgs>> formParameters;
+      private final @Nullable Output<List<ParameterContractArgs>> formParameters;
 
-    public Input<List<ParameterContractArgs>> getFormParameters() {
-        return this.formParameters == null ? Input.empty() : this.formParameters;
+    public Output<List<ParameterContractArgs>> getFormParameters() {
+        return this.formParameters == null ? Output.empty() : this.formParameters;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class RepresentationContractArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="sample")
-      private final @Nullable Input<String> sample;
+      private final @Nullable Output<String> sample;
 
-    public Input<String> getSample() {
-        return this.sample == null ? Input.empty() : this.sample;
+    public Output<String> getSample() {
+        return this.sample == null ? Output.empty() : this.sample;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class RepresentationContractArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="schemaId")
-      private final @Nullable Input<String> schemaId;
+      private final @Nullable Output<String> schemaId;
 
-    public Input<String> getSchemaId() {
-        return this.schemaId == null ? Input.empty() : this.schemaId;
+    public Output<String> getSchemaId() {
+        return this.schemaId == null ? Output.empty() : this.schemaId;
     }
 
     /**
@@ -69,18 +69,18 @@ public final class RepresentationContractArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="typeName")
-      private final @Nullable Input<String> typeName;
+      private final @Nullable Output<String> typeName;
 
-    public Input<String> getTypeName() {
-        return this.typeName == null ? Input.empty() : this.typeName;
+    public Output<String> getTypeName() {
+        return this.typeName == null ? Output.empty() : this.typeName;
     }
 
     public RepresentationContractArgs(
-        Input<String> contentType,
-        @Nullable Input<List<ParameterContractArgs>> formParameters,
-        @Nullable Input<String> sample,
-        @Nullable Input<String> schemaId,
-        @Nullable Input<String> typeName) {
+        Output<String> contentType,
+        @Nullable Output<List<ParameterContractArgs>> formParameters,
+        @Nullable Output<String> sample,
+        @Nullable Output<String> schemaId,
+        @Nullable Output<String> typeName) {
         this.contentType = Objects.requireNonNull(contentType, "expected parameter 'contentType' to be non-null");
         this.formParameters = formParameters;
         this.sample = sample;
@@ -89,11 +89,11 @@ public final class RepresentationContractArgs extends io.pulumi.resources.Resour
     }
 
     private RepresentationContractArgs() {
-        this.contentType = Input.empty();
-        this.formParameters = Input.empty();
-        this.sample = Input.empty();
-        this.schemaId = Input.empty();
-        this.typeName = Input.empty();
+        this.contentType = Output.empty();
+        this.formParameters = Output.empty();
+        this.sample = Output.empty();
+        this.schemaId = Output.empty();
+        this.typeName = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class RepresentationContractArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> contentType;
-        private @Nullable Input<List<ParameterContractArgs>> formParameters;
-        private @Nullable Input<String> sample;
-        private @Nullable Input<String> schemaId;
-        private @Nullable Input<String> typeName;
+        private Output<String> contentType;
+        private @Nullable Output<List<ParameterContractArgs>> formParameters;
+        private @Nullable Output<String> sample;
+        private @Nullable Output<String> schemaId;
+        private @Nullable Output<String> typeName;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class RepresentationContractArgs extends io.pulumi.resources.Resour
     	      this.typeName = defaults.typeName;
         }
 
-        public Builder contentType(Input<String> contentType) {
+        public Builder contentType(Output<String> contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
 
         public Builder contentType(String contentType) {
-            this.contentType = Input.of(Objects.requireNonNull(contentType));
+            this.contentType = Output.of(Objects.requireNonNull(contentType));
             return this;
         }
 
-        public Builder formParameters(@Nullable Input<List<ParameterContractArgs>> formParameters) {
+        public Builder formParameters(@Nullable Output<List<ParameterContractArgs>> formParameters) {
             this.formParameters = formParameters;
             return this;
         }
 
         public Builder formParameters(@Nullable List<ParameterContractArgs> formParameters) {
-            this.formParameters = Input.ofNullable(formParameters);
+            this.formParameters = Output.ofNullable(formParameters);
             return this;
         }
 
-        public Builder sample(@Nullable Input<String> sample) {
+        public Builder sample(@Nullable Output<String> sample) {
             this.sample = sample;
             return this;
         }
 
         public Builder sample(@Nullable String sample) {
-            this.sample = Input.ofNullable(sample);
+            this.sample = Output.ofNullable(sample);
             return this;
         }
 
-        public Builder schemaId(@Nullable Input<String> schemaId) {
+        public Builder schemaId(@Nullable Output<String> schemaId) {
             this.schemaId = schemaId;
             return this;
         }
 
         public Builder schemaId(@Nullable String schemaId) {
-            this.schemaId = Input.ofNullable(schemaId);
+            this.schemaId = Output.ofNullable(schemaId);
             return this;
         }
 
-        public Builder typeName(@Nullable Input<String> typeName) {
+        public Builder typeName(@Nullable Output<String> typeName) {
             this.typeName = typeName;
             return this;
         }
 
         public Builder typeName(@Nullable String typeName) {
-            this.typeName = Input.ofNullable(typeName);
+            this.typeName = Output.ofNullable(typeName);
             return this;
         }
         public RepresentationContractArgs build() {

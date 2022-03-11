@@ -5,7 +5,7 @@ package io.pulumi.azurenative.orbital.inputs;
 
 import io.pulumi.azurenative.orbital.enums.Protocol;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class EndPointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endPointName", required=true)
-      private final Input<String> endPointName;
+      private final Output<String> endPointName;
 
-    public Input<String> getEndPointName() {
+    public Output<String> getEndPointName() {
         return this.endPointName;
     }
 
@@ -35,9 +35,9 @@ public final class EndPointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAddress", required=true)
-      private final Input<String> ipAddress;
+      private final Output<String> ipAddress;
 
-    public Input<String> getIpAddress() {
+    public Output<String> getIpAddress() {
         return this.ipAddress;
     }
 
@@ -46,9 +46,9 @@ public final class EndPointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port", required=true)
-      private final Input<String> port;
+      private final Output<String> port;
 
-    public Input<String> getPort() {
+    public Output<String> getPort() {
         return this.port;
     }
 
@@ -57,17 +57,17 @@ public final class EndPointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol", required=true)
-      private final Input<Either<String,Protocol>> protocol;
+      private final Output<Either<String,Protocol>> protocol;
 
-    public Input<Either<String,Protocol>> getProtocol() {
+    public Output<Either<String,Protocol>> getProtocol() {
         return this.protocol;
     }
 
     public EndPointArgs(
-        Input<String> endPointName,
-        Input<String> ipAddress,
-        Input<String> port,
-        Input<Either<String,Protocol>> protocol) {
+        Output<String> endPointName,
+        Output<String> ipAddress,
+        Output<String> port,
+        Output<Either<String,Protocol>> protocol) {
         this.endPointName = Objects.requireNonNull(endPointName, "expected parameter 'endPointName' to be non-null");
         this.ipAddress = Objects.requireNonNull(ipAddress, "expected parameter 'ipAddress' to be non-null");
         this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
@@ -75,10 +75,10 @@ public final class EndPointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EndPointArgs() {
-        this.endPointName = Input.empty();
-        this.ipAddress = Input.empty();
-        this.port = Input.empty();
-        this.protocol = Input.empty();
+        this.endPointName = Output.empty();
+        this.ipAddress = Output.empty();
+        this.port = Output.empty();
+        this.protocol = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class EndPointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> endPointName;
-        private Input<String> ipAddress;
-        private Input<String> port;
-        private Input<Either<String,Protocol>> protocol;
+        private Output<String> endPointName;
+        private Output<String> ipAddress;
+        private Output<String> port;
+        private Output<Either<String,Protocol>> protocol;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class EndPointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder endPointName(Input<String> endPointName) {
+        public Builder endPointName(Output<String> endPointName) {
             this.endPointName = Objects.requireNonNull(endPointName);
             return this;
         }
 
         public Builder endPointName(String endPointName) {
-            this.endPointName = Input.of(Objects.requireNonNull(endPointName));
+            this.endPointName = Output.of(Objects.requireNonNull(endPointName));
             return this;
         }
 
-        public Builder ipAddress(Input<String> ipAddress) {
+        public Builder ipAddress(Output<String> ipAddress) {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }
 
         public Builder ipAddress(String ipAddress) {
-            this.ipAddress = Input.of(Objects.requireNonNull(ipAddress));
+            this.ipAddress = Output.of(Objects.requireNonNull(ipAddress));
             return this;
         }
 
-        public Builder port(Input<String> port) {
+        public Builder port(Output<String> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
         public Builder port(String port) {
-            this.port = Input.of(Objects.requireNonNull(port));
+            this.port = Output.of(Objects.requireNonNull(port));
             return this;
         }
 
-        public Builder protocol(Input<Either<String,Protocol>> protocol) {
+        public Builder protocol(Output<Either<String,Protocol>> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
         public Builder protocol(Either<String,Protocol> protocol) {
-            this.protocol = Input.of(Objects.requireNonNull(protocol));
+            this.protocol = Output.of(Objects.requireNonNull(protocol));
             return this;
         }
         public EndPointArgs build() {

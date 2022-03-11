@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebasedatabase_v1beta;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.firebasedatabase_v1beta.enums.InstanceState;
 import io.pulumi.googlenative.firebasedatabase_v1beta.enums.InstanceType;
@@ -17,10 +17,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     public static final InstanceArgs Empty = new InstanceArgs();
 
     @InputImport(name="databaseId")
-      private final @Nullable Input<String> databaseId;
+      private final @Nullable Output<String> databaseId;
 
-    public Input<String> getDatabaseId() {
-        return this.databaseId == null ? Input.empty() : this.databaseId;
+    public Output<String> getDatabaseId() {
+        return this.databaseId == null ? Output.empty() : this.databaseId;
     }
 
     /**
@@ -28,17 +28,17 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseUrl")
-      private final @Nullable Input<String> databaseUrl;
+      private final @Nullable Output<String> databaseUrl;
 
-    public Input<String> getDatabaseUrl() {
-        return this.databaseUrl == null ? Input.empty() : this.databaseUrl;
+    public Output<String> getDatabaseUrl() {
+        return this.databaseUrl == null ? Output.empty() : this.databaseUrl;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<InstanceState> state;
+      private final @Nullable Output<InstanceState> state;
 
-    public Input<InstanceState> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<InstanceState> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     /**
@@ -79,28 +79,28 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<InstanceType> type;
+      private final @Nullable Output<InstanceType> type;
 
-    public Input<InstanceType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<InstanceType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     @InputImport(name="validateOnly")
-      private final @Nullable Input<String> validateOnly;
+      private final @Nullable Output<String> validateOnly;
 
-    public Input<String> getValidateOnly() {
-        return this.validateOnly == null ? Input.empty() : this.validateOnly;
+    public Output<String> getValidateOnly() {
+        return this.validateOnly == null ? Output.empty() : this.validateOnly;
     }
 
     public InstanceArgs(
-        @Nullable Input<String> databaseId,
-        @Nullable Input<String> databaseUrl,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<InstanceState> state,
-        @Nullable Input<InstanceType> type,
-        @Nullable Input<String> validateOnly) {
+        @Nullable Output<String> databaseId,
+        @Nullable Output<String> databaseUrl,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<InstanceState> state,
+        @Nullable Output<InstanceType> type,
+        @Nullable Output<String> validateOnly) {
         this.databaseId = databaseId;
         this.databaseUrl = databaseUrl;
         this.location = location;
@@ -112,14 +112,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceArgs() {
-        this.databaseId = Input.empty();
-        this.databaseUrl = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.state = Input.empty();
-        this.type = Input.empty();
-        this.validateOnly = Input.empty();
+        this.databaseId = Output.empty();
+        this.databaseUrl = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.state = Output.empty();
+        this.type = Output.empty();
+        this.validateOnly = Output.empty();
     }
 
     public static Builder builder() {
@@ -131,14 +131,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> databaseId;
-        private @Nullable Input<String> databaseUrl;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<InstanceState> state;
-        private @Nullable Input<InstanceType> type;
-        private @Nullable Input<String> validateOnly;
+        private @Nullable Output<String> databaseId;
+        private @Nullable Output<String> databaseUrl;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<InstanceState> state;
+        private @Nullable Output<InstanceType> type;
+        private @Nullable Output<String> validateOnly;
 
         public Builder() {
     	      // Empty
@@ -156,83 +156,83 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.validateOnly = defaults.validateOnly;
         }
 
-        public Builder databaseId(@Nullable Input<String> databaseId) {
+        public Builder databaseId(@Nullable Output<String> databaseId) {
             this.databaseId = databaseId;
             return this;
         }
 
         public Builder databaseId(@Nullable String databaseId) {
-            this.databaseId = Input.ofNullable(databaseId);
+            this.databaseId = Output.ofNullable(databaseId);
             return this;
         }
 
-        public Builder databaseUrl(@Nullable Input<String> databaseUrl) {
+        public Builder databaseUrl(@Nullable Output<String> databaseUrl) {
             this.databaseUrl = databaseUrl;
             return this;
         }
 
         public Builder databaseUrl(@Nullable String databaseUrl) {
-            this.databaseUrl = Input.ofNullable(databaseUrl);
+            this.databaseUrl = Output.ofNullable(databaseUrl);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder state(@Nullable Input<InstanceState> state) {
+        public Builder state(@Nullable Output<InstanceState> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable InstanceState state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
 
-        public Builder type(@Nullable Input<InstanceType> type) {
+        public Builder type(@Nullable Output<InstanceType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable InstanceType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder validateOnly(@Nullable Input<String> validateOnly) {
+        public Builder validateOnly(@Nullable Output<String> validateOnly) {
             this.validateOnly = validateOnly;
             return this;
         }
 
         public Builder validateOnly(@Nullable String validateOnly) {
-            this.validateOnly = Input.ofNullable(validateOnly);
+            this.validateOnly = Output.ofNullable(validateOnly);
             return this;
         }
         public InstanceArgs build() {

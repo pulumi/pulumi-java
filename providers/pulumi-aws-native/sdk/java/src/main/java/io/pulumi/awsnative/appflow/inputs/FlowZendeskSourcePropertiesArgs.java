@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appflow.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,18 +14,18 @@ public final class FlowZendeskSourcePropertiesArgs extends io.pulumi.resources.R
     public static final FlowZendeskSourcePropertiesArgs Empty = new FlowZendeskSourcePropertiesArgs();
 
     @InputImport(name="object", required=true)
-      private final Input<String> object;
+      private final Output<String> object;
 
-    public Input<String> getObject() {
+    public Output<String> getObject() {
         return this.object;
     }
 
-    public FlowZendeskSourcePropertiesArgs(Input<String> object) {
+    public FlowZendeskSourcePropertiesArgs(Output<String> object) {
         this.object = Objects.requireNonNull(object, "expected parameter 'object' to be non-null");
     }
 
     private FlowZendeskSourcePropertiesArgs() {
-        this.object = Input.empty();
+        this.object = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class FlowZendeskSourcePropertiesArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<String> object;
+        private Output<String> object;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class FlowZendeskSourcePropertiesArgs extends io.pulumi.resources.R
     	      this.object = defaults.object;
         }
 
-        public Builder object(Input<String> object) {
+        public Builder object(Output<String> object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }
 
         public Builder object(String object) {
-            this.object = Input.of(Objects.requireNonNull(object));
+            this.object = Output.of(Objects.requireNonNull(object));
             return this;
         }
         public FlowZendeskSourcePropertiesArgs build() {

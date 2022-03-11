@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.essentialcontacts.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class ContactState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="email")
-      private final @Nullable Input<String> email;
+      private final @Nullable Output<String> email;
 
-    public Input<String> getEmail() {
-        return this.email == null ? Input.empty() : this.email;
+    public Output<String> getEmail() {
+        return this.email == null ? Output.empty() : this.email;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ContactState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="languageTag")
-      private final @Nullable Input<String> languageTag;
+      private final @Nullable Output<String> languageTag;
 
-    public Input<String> getLanguageTag() {
-        return this.languageTag == null ? Input.empty() : this.languageTag;
+    public Output<String> getLanguageTag() {
+        return this.languageTag == null ? Output.empty() : this.languageTag;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ContactState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ContactState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationCategorySubscriptions")
-      private final @Nullable Input<List<String>> notificationCategorySubscriptions;
+      private final @Nullable Output<List<String>> notificationCategorySubscriptions;
 
-    public Input<List<String>> getNotificationCategorySubscriptions() {
-        return this.notificationCategorySubscriptions == null ? Input.empty() : this.notificationCategorySubscriptions;
+    public Output<List<String>> getNotificationCategorySubscriptions() {
+        return this.notificationCategorySubscriptions == null ? Output.empty() : this.notificationCategorySubscriptions;
     }
 
     /**
@@ -64,18 +64,18 @@ public final class ContactState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent")
-      private final @Nullable Input<String> parent;
+      private final @Nullable Output<String> parent;
 
-    public Input<String> getParent() {
-        return this.parent == null ? Input.empty() : this.parent;
+    public Output<String> getParent() {
+        return this.parent == null ? Output.empty() : this.parent;
     }
 
     public ContactState(
-        @Nullable Input<String> email,
-        @Nullable Input<String> languageTag,
-        @Nullable Input<String> name,
-        @Nullable Input<List<String>> notificationCategorySubscriptions,
-        @Nullable Input<String> parent) {
+        @Nullable Output<String> email,
+        @Nullable Output<String> languageTag,
+        @Nullable Output<String> name,
+        @Nullable Output<List<String>> notificationCategorySubscriptions,
+        @Nullable Output<String> parent) {
         this.email = email;
         this.languageTag = languageTag;
         this.name = name;
@@ -84,11 +84,11 @@ public final class ContactState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContactState() {
-        this.email = Input.empty();
-        this.languageTag = Input.empty();
-        this.name = Input.empty();
-        this.notificationCategorySubscriptions = Input.empty();
-        this.parent = Input.empty();
+        this.email = Output.empty();
+        this.languageTag = Output.empty();
+        this.name = Output.empty();
+        this.notificationCategorySubscriptions = Output.empty();
+        this.parent = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class ContactState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> email;
-        private @Nullable Input<String> languageTag;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<String>> notificationCategorySubscriptions;
-        private @Nullable Input<String> parent;
+        private @Nullable Output<String> email;
+        private @Nullable Output<String> languageTag;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<String>> notificationCategorySubscriptions;
+        private @Nullable Output<String> parent;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class ContactState extends io.pulumi.resources.ResourceArgs {
     	      this.parent = defaults.parent;
         }
 
-        public Builder email(@Nullable Input<String> email) {
+        public Builder email(@Nullable Output<String> email) {
             this.email = email;
             return this;
         }
 
         public Builder email(@Nullable String email) {
-            this.email = Input.ofNullable(email);
+            this.email = Output.ofNullable(email);
             return this;
         }
 
-        public Builder languageTag(@Nullable Input<String> languageTag) {
+        public Builder languageTag(@Nullable Output<String> languageTag) {
             this.languageTag = languageTag;
             return this;
         }
 
         public Builder languageTag(@Nullable String languageTag) {
-            this.languageTag = Input.ofNullable(languageTag);
+            this.languageTag = Output.ofNullable(languageTag);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder notificationCategorySubscriptions(@Nullable Input<List<String>> notificationCategorySubscriptions) {
+        public Builder notificationCategorySubscriptions(@Nullable Output<List<String>> notificationCategorySubscriptions) {
             this.notificationCategorySubscriptions = notificationCategorySubscriptions;
             return this;
         }
 
         public Builder notificationCategorySubscriptions(@Nullable List<String> notificationCategorySubscriptions) {
-            this.notificationCategorySubscriptions = Input.ofNullable(notificationCategorySubscriptions);
+            this.notificationCategorySubscriptions = Output.ofNullable(notificationCategorySubscriptions);
             return this;
         }
 
-        public Builder parent(@Nullable Input<String> parent) {
+        public Builder parent(@Nullable Output<String> parent) {
             this.parent = parent;
             return this;
         }
 
         public Builder parent(@Nullable String parent) {
-            this.parent = Input.ofNullable(parent);
+            this.parent = Output.ofNullable(parent);
             return this;
         }
         public ContactState build() {

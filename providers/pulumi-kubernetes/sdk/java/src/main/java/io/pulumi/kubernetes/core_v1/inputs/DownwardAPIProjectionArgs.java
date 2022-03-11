@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.DownwardAPIVolumeFileArgs;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class DownwardAPIProjectionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="items")
-      private final @Nullable Input<List<DownwardAPIVolumeFileArgs>> items;
+      private final @Nullable Output<List<DownwardAPIVolumeFileArgs>> items;
 
-    public Input<List<DownwardAPIVolumeFileArgs>> getItems() {
-        return this.items == null ? Input.empty() : this.items;
+    public Output<List<DownwardAPIVolumeFileArgs>> getItems() {
+        return this.items == null ? Output.empty() : this.items;
     }
 
-    public DownwardAPIProjectionArgs(@Nullable Input<List<DownwardAPIVolumeFileArgs>> items) {
+    public DownwardAPIProjectionArgs(@Nullable Output<List<DownwardAPIVolumeFileArgs>> items) {
         this.items = items;
     }
 
     private DownwardAPIProjectionArgs() {
-        this.items = Input.empty();
+        this.items = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class DownwardAPIProjectionArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<List<DownwardAPIVolumeFileArgs>> items;
+        private @Nullable Output<List<DownwardAPIVolumeFileArgs>> items;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class DownwardAPIProjectionArgs extends io.pulumi.resources.Resourc
     	      this.items = defaults.items;
         }
 
-        public Builder items(@Nullable Input<List<DownwardAPIVolumeFileArgs>> items) {
+        public Builder items(@Nullable Output<List<DownwardAPIVolumeFileArgs>> items) {
             this.items = items;
             return this;
         }
 
         public Builder items(@Nullable List<DownwardAPIVolumeFileArgs> items) {
-            this.items = Input.ofNullable(items);
+            this.items = Output.ofNullable(items);
             return this;
         }
         public DownwardAPIProjectionArgs build() {

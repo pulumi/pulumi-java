@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class AzureBlobFSSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="disableMetricsCollection")
-      private final @Nullable Input<Object> disableMetricsCollection;
+      private final @Nullable Output<Object> disableMetricsCollection;
 
-    public Input<Object> getDisableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
+    public Output<Object> getDisableMetricsCollection() {
+        return this.disableMetricsCollection == null ? Output.empty() : this.disableMetricsCollection;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AzureBlobFSSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-      private final @Nullable Input<Object> maxConcurrentConnections;
+      private final @Nullable Output<Object> maxConcurrentConnections;
 
-    public Input<Object> getMaxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
+    public Output<Object> getMaxConcurrentConnections() {
+        return this.maxConcurrentConnections == null ? Output.empty() : this.maxConcurrentConnections;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AzureBlobFSSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="recursive")
-      private final @Nullable Input<Object> recursive;
+      private final @Nullable Output<Object> recursive;
 
-    public Input<Object> getRecursive() {
-        return this.recursive == null ? Input.empty() : this.recursive;
+    public Output<Object> getRecursive() {
+        return this.recursive == null ? Output.empty() : this.recursive;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class AzureBlobFSSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="skipHeaderLineCount")
-      private final @Nullable Input<Object> skipHeaderLineCount;
+      private final @Nullable Output<Object> skipHeaderLineCount;
 
-    public Input<Object> getSkipHeaderLineCount() {
-        return this.skipHeaderLineCount == null ? Input.empty() : this.skipHeaderLineCount;
+    public Output<Object> getSkipHeaderLineCount() {
+        return this.skipHeaderLineCount == null ? Output.empty() : this.skipHeaderLineCount;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class AzureBlobFSSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sourceRetryCount")
-      private final @Nullable Input<Object> sourceRetryCount;
+      private final @Nullable Output<Object> sourceRetryCount;
 
-    public Input<Object> getSourceRetryCount() {
-        return this.sourceRetryCount == null ? Input.empty() : this.sourceRetryCount;
+    public Output<Object> getSourceRetryCount() {
+        return this.sourceRetryCount == null ? Output.empty() : this.sourceRetryCount;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class AzureBlobFSSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sourceRetryWait")
-      private final @Nullable Input<Object> sourceRetryWait;
+      private final @Nullable Output<Object> sourceRetryWait;
 
-    public Input<Object> getSourceRetryWait() {
-        return this.sourceRetryWait == null ? Input.empty() : this.sourceRetryWait;
+    public Output<Object> getSourceRetryWait() {
+        return this.sourceRetryWait == null ? Output.empty() : this.sourceRetryWait;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class AzureBlobFSSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="treatEmptyAsNull")
-      private final @Nullable Input<Object> treatEmptyAsNull;
+      private final @Nullable Output<Object> treatEmptyAsNull;
 
-    public Input<Object> getTreatEmptyAsNull() {
-        return this.treatEmptyAsNull == null ? Input.empty() : this.treatEmptyAsNull;
+    public Output<Object> getTreatEmptyAsNull() {
+        return this.treatEmptyAsNull == null ? Output.empty() : this.treatEmptyAsNull;
     }
 
     /**
@@ -102,21 +102,21 @@ public final class AzureBlobFSSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public AzureBlobFSSourceArgs(
-        @Nullable Input<Object> disableMetricsCollection,
-        @Nullable Input<Object> maxConcurrentConnections,
-        @Nullable Input<Object> recursive,
-        @Nullable Input<Object> skipHeaderLineCount,
-        @Nullable Input<Object> sourceRetryCount,
-        @Nullable Input<Object> sourceRetryWait,
-        @Nullable Input<Object> treatEmptyAsNull,
-        Input<String> type) {
+        @Nullable Output<Object> disableMetricsCollection,
+        @Nullable Output<Object> maxConcurrentConnections,
+        @Nullable Output<Object> recursive,
+        @Nullable Output<Object> skipHeaderLineCount,
+        @Nullable Output<Object> sourceRetryCount,
+        @Nullable Output<Object> sourceRetryWait,
+        @Nullable Output<Object> treatEmptyAsNull,
+        Output<String> type) {
         this.disableMetricsCollection = disableMetricsCollection;
         this.maxConcurrentConnections = maxConcurrentConnections;
         this.recursive = recursive;
@@ -128,14 +128,14 @@ public final class AzureBlobFSSourceArgs extends io.pulumi.resources.ResourceArg
     }
 
     private AzureBlobFSSourceArgs() {
-        this.disableMetricsCollection = Input.empty();
-        this.maxConcurrentConnections = Input.empty();
-        this.recursive = Input.empty();
-        this.skipHeaderLineCount = Input.empty();
-        this.sourceRetryCount = Input.empty();
-        this.sourceRetryWait = Input.empty();
-        this.treatEmptyAsNull = Input.empty();
-        this.type = Input.empty();
+        this.disableMetricsCollection = Output.empty();
+        this.maxConcurrentConnections = Output.empty();
+        this.recursive = Output.empty();
+        this.skipHeaderLineCount = Output.empty();
+        this.sourceRetryCount = Output.empty();
+        this.sourceRetryWait = Output.empty();
+        this.treatEmptyAsNull = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -147,14 +147,14 @@ public final class AzureBlobFSSourceArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> disableMetricsCollection;
-        private @Nullable Input<Object> maxConcurrentConnections;
-        private @Nullable Input<Object> recursive;
-        private @Nullable Input<Object> skipHeaderLineCount;
-        private @Nullable Input<Object> sourceRetryCount;
-        private @Nullable Input<Object> sourceRetryWait;
-        private @Nullable Input<Object> treatEmptyAsNull;
-        private Input<String> type;
+        private @Nullable Output<Object> disableMetricsCollection;
+        private @Nullable Output<Object> maxConcurrentConnections;
+        private @Nullable Output<Object> recursive;
+        private @Nullable Output<Object> skipHeaderLineCount;
+        private @Nullable Output<Object> sourceRetryCount;
+        private @Nullable Output<Object> sourceRetryWait;
+        private @Nullable Output<Object> treatEmptyAsNull;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -172,83 +172,83 @@ public final class AzureBlobFSSourceArgs extends io.pulumi.resources.ResourceArg
     	      this.type = defaults.type;
         }
 
-        public Builder disableMetricsCollection(@Nullable Input<Object> disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = Input.ofNullable(disableMetricsCollection);
+            this.disableMetricsCollection = Output.ofNullable(disableMetricsCollection);
             return this;
         }
 
-        public Builder maxConcurrentConnections(@Nullable Input<Object> maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = Input.ofNullable(maxConcurrentConnections);
+            this.maxConcurrentConnections = Output.ofNullable(maxConcurrentConnections);
             return this;
         }
 
-        public Builder recursive(@Nullable Input<Object> recursive) {
+        public Builder recursive(@Nullable Output<Object> recursive) {
             this.recursive = recursive;
             return this;
         }
 
         public Builder recursive(@Nullable Object recursive) {
-            this.recursive = Input.ofNullable(recursive);
+            this.recursive = Output.ofNullable(recursive);
             return this;
         }
 
-        public Builder skipHeaderLineCount(@Nullable Input<Object> skipHeaderLineCount) {
+        public Builder skipHeaderLineCount(@Nullable Output<Object> skipHeaderLineCount) {
             this.skipHeaderLineCount = skipHeaderLineCount;
             return this;
         }
 
         public Builder skipHeaderLineCount(@Nullable Object skipHeaderLineCount) {
-            this.skipHeaderLineCount = Input.ofNullable(skipHeaderLineCount);
+            this.skipHeaderLineCount = Output.ofNullable(skipHeaderLineCount);
             return this;
         }
 
-        public Builder sourceRetryCount(@Nullable Input<Object> sourceRetryCount) {
+        public Builder sourceRetryCount(@Nullable Output<Object> sourceRetryCount) {
             this.sourceRetryCount = sourceRetryCount;
             return this;
         }
 
         public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
-            this.sourceRetryCount = Input.ofNullable(sourceRetryCount);
+            this.sourceRetryCount = Output.ofNullable(sourceRetryCount);
             return this;
         }
 
-        public Builder sourceRetryWait(@Nullable Input<Object> sourceRetryWait) {
+        public Builder sourceRetryWait(@Nullable Output<Object> sourceRetryWait) {
             this.sourceRetryWait = sourceRetryWait;
             return this;
         }
 
         public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
-            this.sourceRetryWait = Input.ofNullable(sourceRetryWait);
+            this.sourceRetryWait = Output.ofNullable(sourceRetryWait);
             return this;
         }
 
-        public Builder treatEmptyAsNull(@Nullable Input<Object> treatEmptyAsNull) {
+        public Builder treatEmptyAsNull(@Nullable Output<Object> treatEmptyAsNull) {
             this.treatEmptyAsNull = treatEmptyAsNull;
             return this;
         }
 
         public Builder treatEmptyAsNull(@Nullable Object treatEmptyAsNull) {
-            this.treatEmptyAsNull = Input.ofNullable(treatEmptyAsNull);
+            this.treatEmptyAsNull = Output.ofNullable(treatEmptyAsNull);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public AzureBlobFSSourceArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,18 +14,18 @@ public final class CloudFrontOriginAccessIdentityConfigArgs extends io.pulumi.re
     public static final CloudFrontOriginAccessIdentityConfigArgs Empty = new CloudFrontOriginAccessIdentityConfigArgs();
 
     @InputImport(name="comment", required=true)
-      private final Input<String> comment;
+      private final Output<String> comment;
 
-    public Input<String> getComment() {
+    public Output<String> getComment() {
         return this.comment;
     }
 
-    public CloudFrontOriginAccessIdentityConfigArgs(Input<String> comment) {
+    public CloudFrontOriginAccessIdentityConfigArgs(Output<String> comment) {
         this.comment = Objects.requireNonNull(comment, "expected parameter 'comment' to be non-null");
     }
 
     private CloudFrontOriginAccessIdentityConfigArgs() {
-        this.comment = Input.empty();
+        this.comment = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class CloudFrontOriginAccessIdentityConfigArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private Input<String> comment;
+        private Output<String> comment;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class CloudFrontOriginAccessIdentityConfigArgs extends io.pulumi.re
     	      this.comment = defaults.comment;
         }
 
-        public Builder comment(Input<String> comment) {
+        public Builder comment(Output<String> comment) {
             this.comment = Objects.requireNonNull(comment);
             return this;
         }
 
         public Builder comment(String comment) {
-            this.comment = Input.of(Objects.requireNonNull(comment));
+            this.comment = Output.of(Objects.requireNonNull(comment));
             return this;
         }
         public CloudFrontOriginAccessIdentityConfigArgs build() {

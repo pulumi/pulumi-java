@@ -8,7 +8,7 @@ import io.pulumi.azurenative.hybriddata.enums.State;
 import io.pulumi.azurenative.hybriddata.enums.UserConfirmation;
 import io.pulumi.azurenative.hybriddata.inputs.CustomerSecretArgs;
 import io.pulumi.azurenative.hybriddata.inputs.ScheduleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customerSecrets")
-      private final @Nullable Input<List<CustomerSecretArgs>> customerSecrets;
+      private final @Nullable Output<List<CustomerSecretArgs>> customerSecrets;
 
-    public Input<List<CustomerSecretArgs>> getCustomerSecrets() {
-        return this.customerSecrets == null ? Input.empty() : this.customerSecrets;
+    public Output<List<CustomerSecretArgs>> getCustomerSecrets() {
+        return this.customerSecrets == null ? Output.empty() : this.customerSecrets;
     }
 
     /**
@@ -37,9 +37,9 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataManagerName", required=true)
-      private final Input<String> dataManagerName;
+      private final Output<String> dataManagerName;
 
-    public Input<String> getDataManagerName() {
+    public Output<String> getDataManagerName() {
         return this.dataManagerName;
     }
 
@@ -48,10 +48,10 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataServiceInput")
-      private final @Nullable Input<Object> dataServiceInput;
+      private final @Nullable Output<Object> dataServiceInput;
 
-    public Input<Object> getDataServiceInput() {
-        return this.dataServiceInput == null ? Input.empty() : this.dataServiceInput;
+    public Output<Object> getDataServiceInput() {
+        return this.dataServiceInput == null ? Output.empty() : this.dataServiceInput;
     }
 
     /**
@@ -59,9 +59,9 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataServiceName", required=true)
-      private final Input<String> dataServiceName;
+      private final Output<String> dataServiceName;
 
-    public Input<String> getDataServiceName() {
+    public Output<String> getDataServiceName() {
         return this.dataServiceName;
     }
 
@@ -70,9 +70,9 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataSinkId", required=true)
-      private final Input<String> dataSinkId;
+      private final Output<String> dataSinkId;
 
-    public Input<String> getDataSinkId() {
+    public Output<String> getDataSinkId() {
         return this.dataSinkId;
     }
 
@@ -81,9 +81,9 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataSourceId", required=true)
-      private final Input<String> dataSourceId;
+      private final Output<String> dataSourceId;
 
-    public Input<String> getDataSourceId() {
+    public Output<String> getDataSourceId() {
         return this.dataSourceId;
     }
 
@@ -92,10 +92,10 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobDefinitionName")
-      private final @Nullable Input<String> jobDefinitionName;
+      private final @Nullable Output<String> jobDefinitionName;
 
-    public Input<String> getJobDefinitionName() {
-        return this.jobDefinitionName == null ? Input.empty() : this.jobDefinitionName;
+    public Output<String> getJobDefinitionName() {
+        return this.jobDefinitionName == null ? Output.empty() : this.jobDefinitionName;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModifiedTime")
-      private final @Nullable Input<String> lastModifiedTime;
+      private final @Nullable Output<String> lastModifiedTime;
 
-    public Input<String> getLastModifiedTime() {
-        return this.lastModifiedTime == null ? Input.empty() : this.lastModifiedTime;
+    public Output<String> getLastModifiedTime() {
+        return this.lastModifiedTime == null ? Output.empty() : this.lastModifiedTime;
     }
 
     /**
@@ -114,9 +114,9 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -125,10 +125,10 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runLocation")
-      private final @Nullable Input<RunLocation> runLocation;
+      private final @Nullable Output<RunLocation> runLocation;
 
-    public Input<RunLocation> getRunLocation() {
-        return this.runLocation == null ? Input.empty() : this.runLocation;
+    public Output<RunLocation> getRunLocation() {
+        return this.runLocation == null ? Output.empty() : this.runLocation;
     }
 
     /**
@@ -136,10 +136,10 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedules")
-      private final @Nullable Input<List<ScheduleArgs>> schedules;
+      private final @Nullable Output<List<ScheduleArgs>> schedules;
 
-    public Input<List<ScheduleArgs>> getSchedules() {
-        return this.schedules == null ? Input.empty() : this.schedules;
+    public Output<List<ScheduleArgs>> getSchedules() {
+        return this.schedules == null ? Output.empty() : this.schedules;
     }
 
     /**
@@ -147,9 +147,9 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state", required=true)
-      private final Input<State> state;
+      private final Output<State> state;
 
-    public Input<State> getState() {
+    public Output<State> getState() {
         return this.state;
     }
 
@@ -158,26 +158,26 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userConfirmation")
-      private final @Nullable Input<UserConfirmation> userConfirmation;
+      private final @Nullable Output<UserConfirmation> userConfirmation;
 
-    public Input<UserConfirmation> getUserConfirmation() {
-        return this.userConfirmation == null ? Input.empty() : this.userConfirmation;
+    public Output<UserConfirmation> getUserConfirmation() {
+        return this.userConfirmation == null ? Output.empty() : this.userConfirmation;
     }
 
     public JobDefinitionArgs(
-        @Nullable Input<List<CustomerSecretArgs>> customerSecrets,
-        Input<String> dataManagerName,
-        @Nullable Input<Object> dataServiceInput,
-        Input<String> dataServiceName,
-        Input<String> dataSinkId,
-        Input<String> dataSourceId,
-        @Nullable Input<String> jobDefinitionName,
-        @Nullable Input<String> lastModifiedTime,
-        Input<String> resourceGroupName,
-        @Nullable Input<RunLocation> runLocation,
-        @Nullable Input<List<ScheduleArgs>> schedules,
-        Input<State> state,
-        @Nullable Input<UserConfirmation> userConfirmation) {
+        @Nullable Output<List<CustomerSecretArgs>> customerSecrets,
+        Output<String> dataManagerName,
+        @Nullable Output<Object> dataServiceInput,
+        Output<String> dataServiceName,
+        Output<String> dataSinkId,
+        Output<String> dataSourceId,
+        @Nullable Output<String> jobDefinitionName,
+        @Nullable Output<String> lastModifiedTime,
+        Output<String> resourceGroupName,
+        @Nullable Output<RunLocation> runLocation,
+        @Nullable Output<List<ScheduleArgs>> schedules,
+        Output<State> state,
+        @Nullable Output<UserConfirmation> userConfirmation) {
         this.customerSecrets = customerSecrets;
         this.dataManagerName = Objects.requireNonNull(dataManagerName, "expected parameter 'dataManagerName' to be non-null");
         this.dataServiceInput = dataServiceInput;
@@ -190,23 +190,23 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
         this.runLocation = runLocation;
         this.schedules = schedules;
         this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.userConfirmation = userConfirmation == null ? Input.ofNullable(io.pulumi.azurenative.hybriddata.enums.UserConfirmation.NotRequired) : userConfirmation;
+        this.userConfirmation = userConfirmation == null ? Output.ofNullable(io.pulumi.azurenative.hybriddata.enums.UserConfirmation.NotRequired) : userConfirmation;
     }
 
     private JobDefinitionArgs() {
-        this.customerSecrets = Input.empty();
-        this.dataManagerName = Input.empty();
-        this.dataServiceInput = Input.empty();
-        this.dataServiceName = Input.empty();
-        this.dataSinkId = Input.empty();
-        this.dataSourceId = Input.empty();
-        this.jobDefinitionName = Input.empty();
-        this.lastModifiedTime = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.runLocation = Input.empty();
-        this.schedules = Input.empty();
-        this.state = Input.empty();
-        this.userConfirmation = Input.empty();
+        this.customerSecrets = Output.empty();
+        this.dataManagerName = Output.empty();
+        this.dataServiceInput = Output.empty();
+        this.dataServiceName = Output.empty();
+        this.dataSinkId = Output.empty();
+        this.dataSourceId = Output.empty();
+        this.jobDefinitionName = Output.empty();
+        this.lastModifiedTime = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.runLocation = Output.empty();
+        this.schedules = Output.empty();
+        this.state = Output.empty();
+        this.userConfirmation = Output.empty();
     }
 
     public static Builder builder() {
@@ -218,19 +218,19 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<CustomerSecretArgs>> customerSecrets;
-        private Input<String> dataManagerName;
-        private @Nullable Input<Object> dataServiceInput;
-        private Input<String> dataServiceName;
-        private Input<String> dataSinkId;
-        private Input<String> dataSourceId;
-        private @Nullable Input<String> jobDefinitionName;
-        private @Nullable Input<String> lastModifiedTime;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<RunLocation> runLocation;
-        private @Nullable Input<List<ScheduleArgs>> schedules;
-        private Input<State> state;
-        private @Nullable Input<UserConfirmation> userConfirmation;
+        private @Nullable Output<List<CustomerSecretArgs>> customerSecrets;
+        private Output<String> dataManagerName;
+        private @Nullable Output<Object> dataServiceInput;
+        private Output<String> dataServiceName;
+        private Output<String> dataSinkId;
+        private Output<String> dataSourceId;
+        private @Nullable Output<String> jobDefinitionName;
+        private @Nullable Output<String> lastModifiedTime;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<RunLocation> runLocation;
+        private @Nullable Output<List<ScheduleArgs>> schedules;
+        private Output<State> state;
+        private @Nullable Output<UserConfirmation> userConfirmation;
 
         public Builder() {
     	      // Empty
@@ -253,133 +253,133 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userConfirmation = defaults.userConfirmation;
         }
 
-        public Builder customerSecrets(@Nullable Input<List<CustomerSecretArgs>> customerSecrets) {
+        public Builder customerSecrets(@Nullable Output<List<CustomerSecretArgs>> customerSecrets) {
             this.customerSecrets = customerSecrets;
             return this;
         }
 
         public Builder customerSecrets(@Nullable List<CustomerSecretArgs> customerSecrets) {
-            this.customerSecrets = Input.ofNullable(customerSecrets);
+            this.customerSecrets = Output.ofNullable(customerSecrets);
             return this;
         }
 
-        public Builder dataManagerName(Input<String> dataManagerName) {
+        public Builder dataManagerName(Output<String> dataManagerName) {
             this.dataManagerName = Objects.requireNonNull(dataManagerName);
             return this;
         }
 
         public Builder dataManagerName(String dataManagerName) {
-            this.dataManagerName = Input.of(Objects.requireNonNull(dataManagerName));
+            this.dataManagerName = Output.of(Objects.requireNonNull(dataManagerName));
             return this;
         }
 
-        public Builder dataServiceInput(@Nullable Input<Object> dataServiceInput) {
+        public Builder dataServiceInput(@Nullable Output<Object> dataServiceInput) {
             this.dataServiceInput = dataServiceInput;
             return this;
         }
 
         public Builder dataServiceInput(@Nullable Object dataServiceInput) {
-            this.dataServiceInput = Input.ofNullable(dataServiceInput);
+            this.dataServiceInput = Output.ofNullable(dataServiceInput);
             return this;
         }
 
-        public Builder dataServiceName(Input<String> dataServiceName) {
+        public Builder dataServiceName(Output<String> dataServiceName) {
             this.dataServiceName = Objects.requireNonNull(dataServiceName);
             return this;
         }
 
         public Builder dataServiceName(String dataServiceName) {
-            this.dataServiceName = Input.of(Objects.requireNonNull(dataServiceName));
+            this.dataServiceName = Output.of(Objects.requireNonNull(dataServiceName));
             return this;
         }
 
-        public Builder dataSinkId(Input<String> dataSinkId) {
+        public Builder dataSinkId(Output<String> dataSinkId) {
             this.dataSinkId = Objects.requireNonNull(dataSinkId);
             return this;
         }
 
         public Builder dataSinkId(String dataSinkId) {
-            this.dataSinkId = Input.of(Objects.requireNonNull(dataSinkId));
+            this.dataSinkId = Output.of(Objects.requireNonNull(dataSinkId));
             return this;
         }
 
-        public Builder dataSourceId(Input<String> dataSourceId) {
+        public Builder dataSourceId(Output<String> dataSourceId) {
             this.dataSourceId = Objects.requireNonNull(dataSourceId);
             return this;
         }
 
         public Builder dataSourceId(String dataSourceId) {
-            this.dataSourceId = Input.of(Objects.requireNonNull(dataSourceId));
+            this.dataSourceId = Output.of(Objects.requireNonNull(dataSourceId));
             return this;
         }
 
-        public Builder jobDefinitionName(@Nullable Input<String> jobDefinitionName) {
+        public Builder jobDefinitionName(@Nullable Output<String> jobDefinitionName) {
             this.jobDefinitionName = jobDefinitionName;
             return this;
         }
 
         public Builder jobDefinitionName(@Nullable String jobDefinitionName) {
-            this.jobDefinitionName = Input.ofNullable(jobDefinitionName);
+            this.jobDefinitionName = Output.ofNullable(jobDefinitionName);
             return this;
         }
 
-        public Builder lastModifiedTime(@Nullable Input<String> lastModifiedTime) {
+        public Builder lastModifiedTime(@Nullable Output<String> lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
 
         public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
-            this.lastModifiedTime = Input.ofNullable(lastModifiedTime);
+            this.lastModifiedTime = Output.ofNullable(lastModifiedTime);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder runLocation(@Nullable Input<RunLocation> runLocation) {
+        public Builder runLocation(@Nullable Output<RunLocation> runLocation) {
             this.runLocation = runLocation;
             return this;
         }
 
         public Builder runLocation(@Nullable RunLocation runLocation) {
-            this.runLocation = Input.ofNullable(runLocation);
+            this.runLocation = Output.ofNullable(runLocation);
             return this;
         }
 
-        public Builder schedules(@Nullable Input<List<ScheduleArgs>> schedules) {
+        public Builder schedules(@Nullable Output<List<ScheduleArgs>> schedules) {
             this.schedules = schedules;
             return this;
         }
 
         public Builder schedules(@Nullable List<ScheduleArgs> schedules) {
-            this.schedules = Input.ofNullable(schedules);
+            this.schedules = Output.ofNullable(schedules);
             return this;
         }
 
-        public Builder state(Input<State> state) {
+        public Builder state(Output<State> state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
         public Builder state(State state) {
-            this.state = Input.of(Objects.requireNonNull(state));
+            this.state = Output.of(Objects.requireNonNull(state));
             return this;
         }
 
-        public Builder userConfirmation(@Nullable Input<UserConfirmation> userConfirmation) {
+        public Builder userConfirmation(@Nullable Output<UserConfirmation> userConfirmation) {
             this.userConfirmation = userConfirmation;
             return this;
         }
 
         public Builder userConfirmation(@Nullable UserConfirmation userConfirmation) {
-            this.userConfirmation = Input.ofNullable(userConfirmation);
+            this.userConfirmation = Output.ofNullable(userConfirmation);
             return this;
         }
         public JobDefinitionArgs build() {

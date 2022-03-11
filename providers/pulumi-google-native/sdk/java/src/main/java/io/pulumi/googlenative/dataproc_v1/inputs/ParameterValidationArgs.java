@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataproc_v1.inputs.RegexValidationArgs;
 import io.pulumi.googlenative.dataproc_v1.inputs.ValueValidationArgs;
@@ -24,10 +24,10 @@ public final class ParameterValidationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="regex")
-      private final @Nullable Input<RegexValidationArgs> regex;
+      private final @Nullable Output<RegexValidationArgs> regex;
 
-    public Input<RegexValidationArgs> getRegex() {
-        return this.regex == null ? Input.empty() : this.regex;
+    public Output<RegexValidationArgs> getRegex() {
+        return this.regex == null ? Output.empty() : this.regex;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ParameterValidationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="values")
-      private final @Nullable Input<ValueValidationArgs> values;
+      private final @Nullable Output<ValueValidationArgs> values;
 
-    public Input<ValueValidationArgs> getValues() {
-        return this.values == null ? Input.empty() : this.values;
+    public Output<ValueValidationArgs> getValues() {
+        return this.values == null ? Output.empty() : this.values;
     }
 
     public ParameterValidationArgs(
-        @Nullable Input<RegexValidationArgs> regex,
-        @Nullable Input<ValueValidationArgs> values) {
+        @Nullable Output<RegexValidationArgs> regex,
+        @Nullable Output<ValueValidationArgs> values) {
         this.regex = regex;
         this.values = values;
     }
 
     private ParameterValidationArgs() {
-        this.regex = Input.empty();
-        this.values = Input.empty();
+        this.regex = Output.empty();
+        this.values = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ParameterValidationArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<RegexValidationArgs> regex;
-        private @Nullable Input<ValueValidationArgs> values;
+        private @Nullable Output<RegexValidationArgs> regex;
+        private @Nullable Output<ValueValidationArgs> values;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ParameterValidationArgs extends io.pulumi.resources.ResourceA
     	      this.values = defaults.values;
         }
 
-        public Builder regex(@Nullable Input<RegexValidationArgs> regex) {
+        public Builder regex(@Nullable Output<RegexValidationArgs> regex) {
             this.regex = regex;
             return this;
         }
 
         public Builder regex(@Nullable RegexValidationArgs regex) {
-            this.regex = Input.ofNullable(regex);
+            this.regex = Output.ofNullable(regex);
             return this;
         }
 
-        public Builder values(@Nullable Input<ValueValidationArgs> values) {
+        public Builder values(@Nullable Output<ValueValidationArgs> values) {
             this.values = values;
             return this;
         }
 
         public Builder values(@Nullable ValueValidationArgs values) {
-            this.values = Input.ofNullable(values);
+            this.values = Output.ofNullable(values);
             return this;
         }
         public ParameterValidationArgs build() {

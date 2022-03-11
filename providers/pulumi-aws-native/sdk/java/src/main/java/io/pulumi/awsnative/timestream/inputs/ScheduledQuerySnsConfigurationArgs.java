@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.timestream.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class ScheduledQuerySnsConfigurationArgs extends io.pulumi.resource
     public static final ScheduledQuerySnsConfigurationArgs Empty = new ScheduledQuerySnsConfigurationArgs();
 
     @InputImport(name="topicArn", required=true)
-      private final Input<String> topicArn;
+      private final Output<String> topicArn;
 
-    public Input<String> getTopicArn() {
+    public Output<String> getTopicArn() {
         return this.topicArn;
     }
 
-    public ScheduledQuerySnsConfigurationArgs(Input<String> topicArn) {
+    public ScheduledQuerySnsConfigurationArgs(Output<String> topicArn) {
         this.topicArn = Objects.requireNonNull(topicArn, "expected parameter 'topicArn' to be non-null");
     }
 
     private ScheduledQuerySnsConfigurationArgs() {
-        this.topicArn = Input.empty();
+        this.topicArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ScheduledQuerySnsConfigurationArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<String> topicArn;
+        private Output<String> topicArn;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ScheduledQuerySnsConfigurationArgs extends io.pulumi.resource
     	      this.topicArn = defaults.topicArn;
         }
 
-        public Builder topicArn(Input<String> topicArn) {
+        public Builder topicArn(Output<String> topicArn) {
             this.topicArn = Objects.requireNonNull(topicArn);
             return this;
         }
 
         public Builder topicArn(String topicArn) {
-            this.topicArn = Input.of(Objects.requireNonNull(topicArn));
+            this.topicArn = Output.of(Objects.requireNonNull(topicArn));
             return this;
         }
         public ScheduledQuerySnsConfigurationArgs build() {

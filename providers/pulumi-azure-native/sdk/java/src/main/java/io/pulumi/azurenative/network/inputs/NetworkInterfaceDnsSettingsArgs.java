@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class NetworkInterfaceDnsSettingsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="dnsServers")
-      private final @Nullable Input<List<String>> dnsServers;
+      private final @Nullable Output<List<String>> dnsServers;
 
-    public Input<List<String>> getDnsServers() {
-        return this.dnsServers == null ? Input.empty() : this.dnsServers;
+    public Output<List<String>> getDnsServers() {
+        return this.dnsServers == null ? Output.empty() : this.dnsServers;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class NetworkInterfaceDnsSettingsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="internalDnsNameLabel")
-      private final @Nullable Input<String> internalDnsNameLabel;
+      private final @Nullable Output<String> internalDnsNameLabel;
 
-    public Input<String> getInternalDnsNameLabel() {
-        return this.internalDnsNameLabel == null ? Input.empty() : this.internalDnsNameLabel;
+    public Output<String> getInternalDnsNameLabel() {
+        return this.internalDnsNameLabel == null ? Output.empty() : this.internalDnsNameLabel;
     }
 
     public NetworkInterfaceDnsSettingsArgs(
-        @Nullable Input<List<String>> dnsServers,
-        @Nullable Input<String> internalDnsNameLabel) {
+        @Nullable Output<List<String>> dnsServers,
+        @Nullable Output<String> internalDnsNameLabel) {
         this.dnsServers = dnsServers;
         this.internalDnsNameLabel = internalDnsNameLabel;
     }
 
     private NetworkInterfaceDnsSettingsArgs() {
-        this.dnsServers = Input.empty();
-        this.internalDnsNameLabel = Input.empty();
+        this.dnsServers = Output.empty();
+        this.internalDnsNameLabel = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class NetworkInterfaceDnsSettingsArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> dnsServers;
-        private @Nullable Input<String> internalDnsNameLabel;
+        private @Nullable Output<List<String>> dnsServers;
+        private @Nullable Output<String> internalDnsNameLabel;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class NetworkInterfaceDnsSettingsArgs extends io.pulumi.resources.R
     	      this.internalDnsNameLabel = defaults.internalDnsNameLabel;
         }
 
-        public Builder dnsServers(@Nullable Input<List<String>> dnsServers) {
+        public Builder dnsServers(@Nullable Output<List<String>> dnsServers) {
             this.dnsServers = dnsServers;
             return this;
         }
 
         public Builder dnsServers(@Nullable List<String> dnsServers) {
-            this.dnsServers = Input.ofNullable(dnsServers);
+            this.dnsServers = Output.ofNullable(dnsServers);
             return this;
         }
 
-        public Builder internalDnsNameLabel(@Nullable Input<String> internalDnsNameLabel) {
+        public Builder internalDnsNameLabel(@Nullable Output<String> internalDnsNameLabel) {
             this.internalDnsNameLabel = internalDnsNameLabel;
             return this;
         }
 
         public Builder internalDnsNameLabel(@Nullable String internalDnsNameLabel) {
-            this.internalDnsNameLabel = Input.ofNullable(internalDnsNameLabel);
+            this.internalDnsNameLabel = Output.ofNullable(internalDnsNameLabel);
             return this;
         }
         public NetworkInterfaceDnsSettingsArgs build() {

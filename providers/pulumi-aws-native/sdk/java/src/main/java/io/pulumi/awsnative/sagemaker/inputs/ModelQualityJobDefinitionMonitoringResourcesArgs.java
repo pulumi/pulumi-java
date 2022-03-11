@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.ModelQualityJobDefinitionClusterConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class ModelQualityJobDefinitionMonitoringResourcesArgs extends io.p
     public static final ModelQualityJobDefinitionMonitoringResourcesArgs Empty = new ModelQualityJobDefinitionMonitoringResourcesArgs();
 
     @InputImport(name="clusterConfig", required=true)
-      private final Input<ModelQualityJobDefinitionClusterConfigArgs> clusterConfig;
+      private final Output<ModelQualityJobDefinitionClusterConfigArgs> clusterConfig;
 
-    public Input<ModelQualityJobDefinitionClusterConfigArgs> getClusterConfig() {
+    public Output<ModelQualityJobDefinitionClusterConfigArgs> getClusterConfig() {
         return this.clusterConfig;
     }
 
-    public ModelQualityJobDefinitionMonitoringResourcesArgs(Input<ModelQualityJobDefinitionClusterConfigArgs> clusterConfig) {
+    public ModelQualityJobDefinitionMonitoringResourcesArgs(Output<ModelQualityJobDefinitionClusterConfigArgs> clusterConfig) {
         this.clusterConfig = Objects.requireNonNull(clusterConfig, "expected parameter 'clusterConfig' to be non-null");
     }
 
     private ModelQualityJobDefinitionMonitoringResourcesArgs() {
-        this.clusterConfig = Input.empty();
+        this.clusterConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ModelQualityJobDefinitionMonitoringResourcesArgs extends io.p
     }
 
     public static final class Builder {
-        private Input<ModelQualityJobDefinitionClusterConfigArgs> clusterConfig;
+        private Output<ModelQualityJobDefinitionClusterConfigArgs> clusterConfig;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ModelQualityJobDefinitionMonitoringResourcesArgs extends io.p
     	      this.clusterConfig = defaults.clusterConfig;
         }
 
-        public Builder clusterConfig(Input<ModelQualityJobDefinitionClusterConfigArgs> clusterConfig) {
+        public Builder clusterConfig(Output<ModelQualityJobDefinitionClusterConfigArgs> clusterConfig) {
             this.clusterConfig = Objects.requireNonNull(clusterConfig);
             return this;
         }
 
         public Builder clusterConfig(ModelQualityJobDefinitionClusterConfigArgs clusterConfig) {
-            this.clusterConfig = Input.of(Objects.requireNonNull(clusterConfig));
+            this.clusterConfig = Output.of(Objects.requireNonNull(clusterConfig));
             return this;
         }
         public ModelQualityJobDefinitionMonitoringResourcesArgs build() {

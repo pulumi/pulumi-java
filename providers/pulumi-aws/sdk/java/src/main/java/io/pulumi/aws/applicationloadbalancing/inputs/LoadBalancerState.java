@@ -5,7 +5,7 @@ package io.pulumi.aws.applicationloadbalancing.inputs;
 
 import io.pulumi.aws.applicationloadbalancing.inputs.LoadBalancerAccessLogsGetArgs;
 import io.pulumi.aws.applicationloadbalancing.inputs.LoadBalancerSubnetMappingGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessLogs")
-      private final @Nullable Input<LoadBalancerAccessLogsGetArgs> accessLogs;
+      private final @Nullable Output<LoadBalancerAccessLogsGetArgs> accessLogs;
 
-    public Input<LoadBalancerAccessLogsGetArgs> getAccessLogs() {
-        return this.accessLogs == null ? Input.empty() : this.accessLogs;
+    public Output<LoadBalancerAccessLogsGetArgs> getAccessLogs() {
+        return this.accessLogs == null ? Output.empty() : this.accessLogs;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arnSuffix")
-      private final @Nullable Input<String> arnSuffix;
+      private final @Nullable Output<String> arnSuffix;
 
-    public Input<String> getArnSuffix() {
-        return this.arnSuffix == null ? Input.empty() : this.arnSuffix;
+    public Output<String> getArnSuffix() {
+        return this.arnSuffix == null ? Output.empty() : this.arnSuffix;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customerOwnedIpv4Pool")
-      private final @Nullable Input<String> customerOwnedIpv4Pool;
+      private final @Nullable Output<String> customerOwnedIpv4Pool;
 
-    public Input<String> getCustomerOwnedIpv4Pool() {
-        return this.customerOwnedIpv4Pool == null ? Input.empty() : this.customerOwnedIpv4Pool;
+    public Output<String> getCustomerOwnedIpv4Pool() {
+        return this.customerOwnedIpv4Pool == null ? Output.empty() : this.customerOwnedIpv4Pool;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="desyncMitigationMode")
-      private final @Nullable Input<String> desyncMitigationMode;
+      private final @Nullable Output<String> desyncMitigationMode;
 
-    public Input<String> getDesyncMitigationMode() {
-        return this.desyncMitigationMode == null ? Input.empty() : this.desyncMitigationMode;
+    public Output<String> getDesyncMitigationMode() {
+        return this.desyncMitigationMode == null ? Output.empty() : this.desyncMitigationMode;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsName")
-      private final @Nullable Input<String> dnsName;
+      private final @Nullable Output<String> dnsName;
 
-    public Input<String> getDnsName() {
-        return this.dnsName == null ? Input.empty() : this.dnsName;
+    public Output<String> getDnsName() {
+        return this.dnsName == null ? Output.empty() : this.dnsName;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dropInvalidHeaderFields")
-      private final @Nullable Input<Boolean> dropInvalidHeaderFields;
+      private final @Nullable Output<Boolean> dropInvalidHeaderFields;
 
-    public Input<Boolean> getDropInvalidHeaderFields() {
-        return this.dropInvalidHeaderFields == null ? Input.empty() : this.dropInvalidHeaderFields;
+    public Output<Boolean> getDropInvalidHeaderFields() {
+        return this.dropInvalidHeaderFields == null ? Output.empty() : this.dropInvalidHeaderFields;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableCrossZoneLoadBalancing")
-      private final @Nullable Input<Boolean> enableCrossZoneLoadBalancing;
+      private final @Nullable Output<Boolean> enableCrossZoneLoadBalancing;
 
-    public Input<Boolean> getEnableCrossZoneLoadBalancing() {
-        return this.enableCrossZoneLoadBalancing == null ? Input.empty() : this.enableCrossZoneLoadBalancing;
+    public Output<Boolean> getEnableCrossZoneLoadBalancing() {
+        return this.enableCrossZoneLoadBalancing == null ? Output.empty() : this.enableCrossZoneLoadBalancing;
     }
 
     /**
@@ -115,10 +115,10 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableDeletionProtection")
-      private final @Nullable Input<Boolean> enableDeletionProtection;
+      private final @Nullable Output<Boolean> enableDeletionProtection;
 
-    public Input<Boolean> getEnableDeletionProtection() {
-        return this.enableDeletionProtection == null ? Input.empty() : this.enableDeletionProtection;
+    public Output<Boolean> getEnableDeletionProtection() {
+        return this.enableDeletionProtection == null ? Output.empty() : this.enableDeletionProtection;
     }
 
     /**
@@ -126,10 +126,10 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableHttp2")
-      private final @Nullable Input<Boolean> enableHttp2;
+      private final @Nullable Output<Boolean> enableHttp2;
 
-    public Input<Boolean> getEnableHttp2() {
-        return this.enableHttp2 == null ? Input.empty() : this.enableHttp2;
+    public Output<Boolean> getEnableHttp2() {
+        return this.enableHttp2 == null ? Output.empty() : this.enableHttp2;
     }
 
     /**
@@ -137,10 +137,10 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableWafFailOpen")
-      private final @Nullable Input<Boolean> enableWafFailOpen;
+      private final @Nullable Output<Boolean> enableWafFailOpen;
 
-    public Input<Boolean> getEnableWafFailOpen() {
-        return this.enableWafFailOpen == null ? Input.empty() : this.enableWafFailOpen;
+    public Output<Boolean> getEnableWafFailOpen() {
+        return this.enableWafFailOpen == null ? Output.empty() : this.enableWafFailOpen;
     }
 
     /**
@@ -148,10 +148,10 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="idleTimeout")
-      private final @Nullable Input<Integer> idleTimeout;
+      private final @Nullable Output<Integer> idleTimeout;
 
-    public Input<Integer> getIdleTimeout() {
-        return this.idleTimeout == null ? Input.empty() : this.idleTimeout;
+    public Output<Integer> getIdleTimeout() {
+        return this.idleTimeout == null ? Output.empty() : this.idleTimeout;
     }
 
     /**
@@ -159,10 +159,10 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="internal")
-      private final @Nullable Input<Boolean> internal;
+      private final @Nullable Output<Boolean> internal;
 
-    public Input<Boolean> getInternal() {
-        return this.internal == null ? Input.empty() : this.internal;
+    public Output<Boolean> getInternal() {
+        return this.internal == null ? Output.empty() : this.internal;
     }
 
     /**
@@ -170,10 +170,10 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAddressType")
-      private final @Nullable Input<String> ipAddressType;
+      private final @Nullable Output<String> ipAddressType;
 
-    public Input<String> getIpAddressType() {
-        return this.ipAddressType == null ? Input.empty() : this.ipAddressType;
+    public Output<String> getIpAddressType() {
+        return this.ipAddressType == null ? Output.empty() : this.ipAddressType;
     }
 
     /**
@@ -181,10 +181,10 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loadBalancerType")
-      private final @Nullable Input<String> loadBalancerType;
+      private final @Nullable Output<String> loadBalancerType;
 
-    public Input<String> getLoadBalancerType() {
-        return this.loadBalancerType == null ? Input.empty() : this.loadBalancerType;
+    public Output<String> getLoadBalancerType() {
+        return this.loadBalancerType == null ? Output.empty() : this.loadBalancerType;
     }
 
     /**
@@ -194,10 +194,10 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -205,10 +205,10 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namePrefix")
-      private final @Nullable Input<String> namePrefix;
+      private final @Nullable Output<String> namePrefix;
 
-    public Input<String> getNamePrefix() {
-        return this.namePrefix == null ? Input.empty() : this.namePrefix;
+    public Output<String> getNamePrefix() {
+        return this.namePrefix == null ? Output.empty() : this.namePrefix;
     }
 
     /**
@@ -216,10 +216,10 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityGroups")
-      private final @Nullable Input<List<String>> securityGroups;
+      private final @Nullable Output<List<String>> securityGroups;
 
-    public Input<List<String>> getSecurityGroups() {
-        return this.securityGroups == null ? Input.empty() : this.securityGroups;
+    public Output<List<String>> getSecurityGroups() {
+        return this.securityGroups == null ? Output.empty() : this.securityGroups;
     }
 
     /**
@@ -227,10 +227,10 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetMappings")
-      private final @Nullable Input<List<LoadBalancerSubnetMappingGetArgs>> subnetMappings;
+      private final @Nullable Output<List<LoadBalancerSubnetMappingGetArgs>> subnetMappings;
 
-    public Input<List<LoadBalancerSubnetMappingGetArgs>> getSubnetMappings() {
-        return this.subnetMappings == null ? Input.empty() : this.subnetMappings;
+    public Output<List<LoadBalancerSubnetMappingGetArgs>> getSubnetMappings() {
+        return this.subnetMappings == null ? Output.empty() : this.subnetMappings;
     }
 
     /**
@@ -240,10 +240,10 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnets")
-      private final @Nullable Input<List<String>> subnets;
+      private final @Nullable Output<List<String>> subnets;
 
-    public Input<List<String>> getSubnets() {
-        return this.subnets == null ? Input.empty() : this.subnets;
+    public Output<List<String>> getSubnets() {
+        return this.subnets == null ? Output.empty() : this.subnets;
     }
 
     /**
@@ -251,10 +251,10 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -262,17 +262,17 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     @InputImport(name="vpcId")
-      private final @Nullable Input<String> vpcId;
+      private final @Nullable Output<String> vpcId;
 
-    public Input<String> getVpcId() {
-        return this.vpcId == null ? Input.empty() : this.vpcId;
+    public Output<String> getVpcId() {
+        return this.vpcId == null ? Output.empty() : this.vpcId;
     }
 
     /**
@@ -281,37 +281,37 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zoneId")
-      private final @Nullable Input<String> zoneId;
+      private final @Nullable Output<String> zoneId;
 
-    public Input<String> getZoneId() {
-        return this.zoneId == null ? Input.empty() : this.zoneId;
+    public Output<String> getZoneId() {
+        return this.zoneId == null ? Output.empty() : this.zoneId;
     }
 
     public LoadBalancerState(
-        @Nullable Input<LoadBalancerAccessLogsGetArgs> accessLogs,
-        @Nullable Input<String> arn,
-        @Nullable Input<String> arnSuffix,
-        @Nullable Input<String> customerOwnedIpv4Pool,
-        @Nullable Input<String> desyncMitigationMode,
-        @Nullable Input<String> dnsName,
-        @Nullable Input<Boolean> dropInvalidHeaderFields,
-        @Nullable Input<Boolean> enableCrossZoneLoadBalancing,
-        @Nullable Input<Boolean> enableDeletionProtection,
-        @Nullable Input<Boolean> enableHttp2,
-        @Nullable Input<Boolean> enableWafFailOpen,
-        @Nullable Input<Integer> idleTimeout,
-        @Nullable Input<Boolean> internal,
-        @Nullable Input<String> ipAddressType,
-        @Nullable Input<String> loadBalancerType,
-        @Nullable Input<String> name,
-        @Nullable Input<String> namePrefix,
-        @Nullable Input<List<String>> securityGroups,
-        @Nullable Input<List<LoadBalancerSubnetMappingGetArgs>> subnetMappings,
-        @Nullable Input<List<String>> subnets,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> vpcId,
-        @Nullable Input<String> zoneId) {
+        @Nullable Output<LoadBalancerAccessLogsGetArgs> accessLogs,
+        @Nullable Output<String> arn,
+        @Nullable Output<String> arnSuffix,
+        @Nullable Output<String> customerOwnedIpv4Pool,
+        @Nullable Output<String> desyncMitigationMode,
+        @Nullable Output<String> dnsName,
+        @Nullable Output<Boolean> dropInvalidHeaderFields,
+        @Nullable Output<Boolean> enableCrossZoneLoadBalancing,
+        @Nullable Output<Boolean> enableDeletionProtection,
+        @Nullable Output<Boolean> enableHttp2,
+        @Nullable Output<Boolean> enableWafFailOpen,
+        @Nullable Output<Integer> idleTimeout,
+        @Nullable Output<Boolean> internal,
+        @Nullable Output<String> ipAddressType,
+        @Nullable Output<String> loadBalancerType,
+        @Nullable Output<String> name,
+        @Nullable Output<String> namePrefix,
+        @Nullable Output<List<String>> securityGroups,
+        @Nullable Output<List<LoadBalancerSubnetMappingGetArgs>> subnetMappings,
+        @Nullable Output<List<String>> subnets,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> vpcId,
+        @Nullable Output<String> zoneId) {
         this.accessLogs = accessLogs;
         this.arn = arn;
         this.arnSuffix = arnSuffix;
@@ -339,30 +339,30 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
     }
 
     private LoadBalancerState() {
-        this.accessLogs = Input.empty();
-        this.arn = Input.empty();
-        this.arnSuffix = Input.empty();
-        this.customerOwnedIpv4Pool = Input.empty();
-        this.desyncMitigationMode = Input.empty();
-        this.dnsName = Input.empty();
-        this.dropInvalidHeaderFields = Input.empty();
-        this.enableCrossZoneLoadBalancing = Input.empty();
-        this.enableDeletionProtection = Input.empty();
-        this.enableHttp2 = Input.empty();
-        this.enableWafFailOpen = Input.empty();
-        this.idleTimeout = Input.empty();
-        this.internal = Input.empty();
-        this.ipAddressType = Input.empty();
-        this.loadBalancerType = Input.empty();
-        this.name = Input.empty();
-        this.namePrefix = Input.empty();
-        this.securityGroups = Input.empty();
-        this.subnetMappings = Input.empty();
-        this.subnets = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.vpcId = Input.empty();
-        this.zoneId = Input.empty();
+        this.accessLogs = Output.empty();
+        this.arn = Output.empty();
+        this.arnSuffix = Output.empty();
+        this.customerOwnedIpv4Pool = Output.empty();
+        this.desyncMitigationMode = Output.empty();
+        this.dnsName = Output.empty();
+        this.dropInvalidHeaderFields = Output.empty();
+        this.enableCrossZoneLoadBalancing = Output.empty();
+        this.enableDeletionProtection = Output.empty();
+        this.enableHttp2 = Output.empty();
+        this.enableWafFailOpen = Output.empty();
+        this.idleTimeout = Output.empty();
+        this.internal = Output.empty();
+        this.ipAddressType = Output.empty();
+        this.loadBalancerType = Output.empty();
+        this.name = Output.empty();
+        this.namePrefix = Output.empty();
+        this.securityGroups = Output.empty();
+        this.subnetMappings = Output.empty();
+        this.subnets = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.vpcId = Output.empty();
+        this.zoneId = Output.empty();
     }
 
     public static Builder builder() {
@@ -374,30 +374,30 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<LoadBalancerAccessLogsGetArgs> accessLogs;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> arnSuffix;
-        private @Nullable Input<String> customerOwnedIpv4Pool;
-        private @Nullable Input<String> desyncMitigationMode;
-        private @Nullable Input<String> dnsName;
-        private @Nullable Input<Boolean> dropInvalidHeaderFields;
-        private @Nullable Input<Boolean> enableCrossZoneLoadBalancing;
-        private @Nullable Input<Boolean> enableDeletionProtection;
-        private @Nullable Input<Boolean> enableHttp2;
-        private @Nullable Input<Boolean> enableWafFailOpen;
-        private @Nullable Input<Integer> idleTimeout;
-        private @Nullable Input<Boolean> internal;
-        private @Nullable Input<String> ipAddressType;
-        private @Nullable Input<String> loadBalancerType;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> namePrefix;
-        private @Nullable Input<List<String>> securityGroups;
-        private @Nullable Input<List<LoadBalancerSubnetMappingGetArgs>> subnetMappings;
-        private @Nullable Input<List<String>> subnets;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> vpcId;
-        private @Nullable Input<String> zoneId;
+        private @Nullable Output<LoadBalancerAccessLogsGetArgs> accessLogs;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> arnSuffix;
+        private @Nullable Output<String> customerOwnedIpv4Pool;
+        private @Nullable Output<String> desyncMitigationMode;
+        private @Nullable Output<String> dnsName;
+        private @Nullable Output<Boolean> dropInvalidHeaderFields;
+        private @Nullable Output<Boolean> enableCrossZoneLoadBalancing;
+        private @Nullable Output<Boolean> enableDeletionProtection;
+        private @Nullable Output<Boolean> enableHttp2;
+        private @Nullable Output<Boolean> enableWafFailOpen;
+        private @Nullable Output<Integer> idleTimeout;
+        private @Nullable Output<Boolean> internal;
+        private @Nullable Output<String> ipAddressType;
+        private @Nullable Output<String> loadBalancerType;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> namePrefix;
+        private @Nullable Output<List<String>> securityGroups;
+        private @Nullable Output<List<LoadBalancerSubnetMappingGetArgs>> subnetMappings;
+        private @Nullable Output<List<String>> subnets;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> vpcId;
+        private @Nullable Output<String> zoneId;
 
         public Builder() {
     	      // Empty
@@ -431,243 +431,243 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
     	      this.zoneId = defaults.zoneId;
         }
 
-        public Builder accessLogs(@Nullable Input<LoadBalancerAccessLogsGetArgs> accessLogs) {
+        public Builder accessLogs(@Nullable Output<LoadBalancerAccessLogsGetArgs> accessLogs) {
             this.accessLogs = accessLogs;
             return this;
         }
 
         public Builder accessLogs(@Nullable LoadBalancerAccessLogsGetArgs accessLogs) {
-            this.accessLogs = Input.ofNullable(accessLogs);
+            this.accessLogs = Output.ofNullable(accessLogs);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder arnSuffix(@Nullable Input<String> arnSuffix) {
+        public Builder arnSuffix(@Nullable Output<String> arnSuffix) {
             this.arnSuffix = arnSuffix;
             return this;
         }
 
         public Builder arnSuffix(@Nullable String arnSuffix) {
-            this.arnSuffix = Input.ofNullable(arnSuffix);
+            this.arnSuffix = Output.ofNullable(arnSuffix);
             return this;
         }
 
-        public Builder customerOwnedIpv4Pool(@Nullable Input<String> customerOwnedIpv4Pool) {
+        public Builder customerOwnedIpv4Pool(@Nullable Output<String> customerOwnedIpv4Pool) {
             this.customerOwnedIpv4Pool = customerOwnedIpv4Pool;
             return this;
         }
 
         public Builder customerOwnedIpv4Pool(@Nullable String customerOwnedIpv4Pool) {
-            this.customerOwnedIpv4Pool = Input.ofNullable(customerOwnedIpv4Pool);
+            this.customerOwnedIpv4Pool = Output.ofNullable(customerOwnedIpv4Pool);
             return this;
         }
 
-        public Builder desyncMitigationMode(@Nullable Input<String> desyncMitigationMode) {
+        public Builder desyncMitigationMode(@Nullable Output<String> desyncMitigationMode) {
             this.desyncMitigationMode = desyncMitigationMode;
             return this;
         }
 
         public Builder desyncMitigationMode(@Nullable String desyncMitigationMode) {
-            this.desyncMitigationMode = Input.ofNullable(desyncMitigationMode);
+            this.desyncMitigationMode = Output.ofNullable(desyncMitigationMode);
             return this;
         }
 
-        public Builder dnsName(@Nullable Input<String> dnsName) {
+        public Builder dnsName(@Nullable Output<String> dnsName) {
             this.dnsName = dnsName;
             return this;
         }
 
         public Builder dnsName(@Nullable String dnsName) {
-            this.dnsName = Input.ofNullable(dnsName);
+            this.dnsName = Output.ofNullable(dnsName);
             return this;
         }
 
-        public Builder dropInvalidHeaderFields(@Nullable Input<Boolean> dropInvalidHeaderFields) {
+        public Builder dropInvalidHeaderFields(@Nullable Output<Boolean> dropInvalidHeaderFields) {
             this.dropInvalidHeaderFields = dropInvalidHeaderFields;
             return this;
         }
 
         public Builder dropInvalidHeaderFields(@Nullable Boolean dropInvalidHeaderFields) {
-            this.dropInvalidHeaderFields = Input.ofNullable(dropInvalidHeaderFields);
+            this.dropInvalidHeaderFields = Output.ofNullable(dropInvalidHeaderFields);
             return this;
         }
 
-        public Builder enableCrossZoneLoadBalancing(@Nullable Input<Boolean> enableCrossZoneLoadBalancing) {
+        public Builder enableCrossZoneLoadBalancing(@Nullable Output<Boolean> enableCrossZoneLoadBalancing) {
             this.enableCrossZoneLoadBalancing = enableCrossZoneLoadBalancing;
             return this;
         }
 
         public Builder enableCrossZoneLoadBalancing(@Nullable Boolean enableCrossZoneLoadBalancing) {
-            this.enableCrossZoneLoadBalancing = Input.ofNullable(enableCrossZoneLoadBalancing);
+            this.enableCrossZoneLoadBalancing = Output.ofNullable(enableCrossZoneLoadBalancing);
             return this;
         }
 
-        public Builder enableDeletionProtection(@Nullable Input<Boolean> enableDeletionProtection) {
+        public Builder enableDeletionProtection(@Nullable Output<Boolean> enableDeletionProtection) {
             this.enableDeletionProtection = enableDeletionProtection;
             return this;
         }
 
         public Builder enableDeletionProtection(@Nullable Boolean enableDeletionProtection) {
-            this.enableDeletionProtection = Input.ofNullable(enableDeletionProtection);
+            this.enableDeletionProtection = Output.ofNullable(enableDeletionProtection);
             return this;
         }
 
-        public Builder enableHttp2(@Nullable Input<Boolean> enableHttp2) {
+        public Builder enableHttp2(@Nullable Output<Boolean> enableHttp2) {
             this.enableHttp2 = enableHttp2;
             return this;
         }
 
         public Builder enableHttp2(@Nullable Boolean enableHttp2) {
-            this.enableHttp2 = Input.ofNullable(enableHttp2);
+            this.enableHttp2 = Output.ofNullable(enableHttp2);
             return this;
         }
 
-        public Builder enableWafFailOpen(@Nullable Input<Boolean> enableWafFailOpen) {
+        public Builder enableWafFailOpen(@Nullable Output<Boolean> enableWafFailOpen) {
             this.enableWafFailOpen = enableWafFailOpen;
             return this;
         }
 
         public Builder enableWafFailOpen(@Nullable Boolean enableWafFailOpen) {
-            this.enableWafFailOpen = Input.ofNullable(enableWafFailOpen);
+            this.enableWafFailOpen = Output.ofNullable(enableWafFailOpen);
             return this;
         }
 
-        public Builder idleTimeout(@Nullable Input<Integer> idleTimeout) {
+        public Builder idleTimeout(@Nullable Output<Integer> idleTimeout) {
             this.idleTimeout = idleTimeout;
             return this;
         }
 
         public Builder idleTimeout(@Nullable Integer idleTimeout) {
-            this.idleTimeout = Input.ofNullable(idleTimeout);
+            this.idleTimeout = Output.ofNullable(idleTimeout);
             return this;
         }
 
-        public Builder internal(@Nullable Input<Boolean> internal) {
+        public Builder internal(@Nullable Output<Boolean> internal) {
             this.internal = internal;
             return this;
         }
 
         public Builder internal(@Nullable Boolean internal) {
-            this.internal = Input.ofNullable(internal);
+            this.internal = Output.ofNullable(internal);
             return this;
         }
 
-        public Builder ipAddressType(@Nullable Input<String> ipAddressType) {
+        public Builder ipAddressType(@Nullable Output<String> ipAddressType) {
             this.ipAddressType = ipAddressType;
             return this;
         }
 
         public Builder ipAddressType(@Nullable String ipAddressType) {
-            this.ipAddressType = Input.ofNullable(ipAddressType);
+            this.ipAddressType = Output.ofNullable(ipAddressType);
             return this;
         }
 
-        public Builder loadBalancerType(@Nullable Input<String> loadBalancerType) {
+        public Builder loadBalancerType(@Nullable Output<String> loadBalancerType) {
             this.loadBalancerType = loadBalancerType;
             return this;
         }
 
         public Builder loadBalancerType(@Nullable String loadBalancerType) {
-            this.loadBalancerType = Input.ofNullable(loadBalancerType);
+            this.loadBalancerType = Output.ofNullable(loadBalancerType);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Input.ofNullable(namePrefix);
+            this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder securityGroups(@Nullable Input<List<String>> securityGroups) {
+        public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
         public Builder securityGroups(@Nullable List<String> securityGroups) {
-            this.securityGroups = Input.ofNullable(securityGroups);
+            this.securityGroups = Output.ofNullable(securityGroups);
             return this;
         }
 
-        public Builder subnetMappings(@Nullable Input<List<LoadBalancerSubnetMappingGetArgs>> subnetMappings) {
+        public Builder subnetMappings(@Nullable Output<List<LoadBalancerSubnetMappingGetArgs>> subnetMappings) {
             this.subnetMappings = subnetMappings;
             return this;
         }
 
         public Builder subnetMappings(@Nullable List<LoadBalancerSubnetMappingGetArgs> subnetMappings) {
-            this.subnetMappings = Input.ofNullable(subnetMappings);
+            this.subnetMappings = Output.ofNullable(subnetMappings);
             return this;
         }
 
-        public Builder subnets(@Nullable Input<List<String>> subnets) {
+        public Builder subnets(@Nullable Output<List<String>> subnets) {
             this.subnets = subnets;
             return this;
         }
 
         public Builder subnets(@Nullable List<String> subnets) {
-            this.subnets = Input.ofNullable(subnets);
+            this.subnets = Output.ofNullable(subnets);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder vpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Input.ofNullable(vpcId);
+            this.vpcId = Output.ofNullable(vpcId);
             return this;
         }
 
-        public Builder zoneId(@Nullable Input<String> zoneId) {
+        public Builder zoneId(@Nullable Output<String> zoneId) {
             this.zoneId = zoneId;
             return this;
         }
 
         public Builder zoneId(@Nullable String zoneId) {
-            this.zoneId = Input.ofNullable(zoneId);
+            this.zoneId = Output.ofNullable(zoneId);
             return this;
         }
         public LoadBalancerState build() {

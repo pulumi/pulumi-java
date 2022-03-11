@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datashare;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class KustoDatabaseDataSetMappingArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -30,9 +30,9 @@ public final class KustoDatabaseDataSetMappingArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="dataSetId", required=true)
-      private final Input<String> dataSetId;
+      private final Output<String> dataSetId;
 
-    public Input<String> getDataSetId() {
+    public Output<String> getDataSetId() {
         return this.dataSetId;
     }
 
@@ -41,10 +41,10 @@ public final class KustoDatabaseDataSetMappingArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="dataSetMappingName")
-      private final @Nullable Input<String> dataSetMappingName;
+      private final @Nullable Output<String> dataSetMappingName;
 
-    public Input<String> getDataSetMappingName() {
-        return this.dataSetMappingName == null ? Input.empty() : this.dataSetMappingName;
+    public Output<String> getDataSetMappingName() {
+        return this.dataSetMappingName == null ? Output.empty() : this.dataSetMappingName;
     }
 
     /**
@@ -53,9 +53,9 @@ public final class KustoDatabaseDataSetMappingArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<String> kind;
+      private final Output<String> kind;
 
-    public Input<String> getKind() {
+    public Output<String> getKind() {
         return this.kind;
     }
 
@@ -64,9 +64,9 @@ public final class KustoDatabaseDataSetMappingArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="kustoClusterResourceId", required=true)
-      private final Input<String> kustoClusterResourceId;
+      private final Output<String> kustoClusterResourceId;
 
-    public Input<String> getKustoClusterResourceId() {
+    public Output<String> getKustoClusterResourceId() {
         return this.kustoClusterResourceId;
     }
 
@@ -75,9 +75,9 @@ public final class KustoDatabaseDataSetMappingArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -86,20 +86,20 @@ public final class KustoDatabaseDataSetMappingArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="shareSubscriptionName", required=true)
-      private final Input<String> shareSubscriptionName;
+      private final Output<String> shareSubscriptionName;
 
-    public Input<String> getShareSubscriptionName() {
+    public Output<String> getShareSubscriptionName() {
         return this.shareSubscriptionName;
     }
 
     public KustoDatabaseDataSetMappingArgs(
-        Input<String> accountName,
-        Input<String> dataSetId,
-        @Nullable Input<String> dataSetMappingName,
-        Input<String> kind,
-        Input<String> kustoClusterResourceId,
-        Input<String> resourceGroupName,
-        Input<String> shareSubscriptionName) {
+        Output<String> accountName,
+        Output<String> dataSetId,
+        @Nullable Output<String> dataSetMappingName,
+        Output<String> kind,
+        Output<String> kustoClusterResourceId,
+        Output<String> resourceGroupName,
+        Output<String> shareSubscriptionName) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.dataSetId = Objects.requireNonNull(dataSetId, "expected parameter 'dataSetId' to be non-null");
         this.dataSetMappingName = dataSetMappingName;
@@ -110,13 +110,13 @@ public final class KustoDatabaseDataSetMappingArgs extends io.pulumi.resources.R
     }
 
     private KustoDatabaseDataSetMappingArgs() {
-        this.accountName = Input.empty();
-        this.dataSetId = Input.empty();
-        this.dataSetMappingName = Input.empty();
-        this.kind = Input.empty();
-        this.kustoClusterResourceId = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.shareSubscriptionName = Input.empty();
+        this.accountName = Output.empty();
+        this.dataSetId = Output.empty();
+        this.dataSetMappingName = Output.empty();
+        this.kind = Output.empty();
+        this.kustoClusterResourceId = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.shareSubscriptionName = Output.empty();
     }
 
     public static Builder builder() {
@@ -128,13 +128,13 @@ public final class KustoDatabaseDataSetMappingArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private Input<String> dataSetId;
-        private @Nullable Input<String> dataSetMappingName;
-        private Input<String> kind;
-        private Input<String> kustoClusterResourceId;
-        private Input<String> resourceGroupName;
-        private Input<String> shareSubscriptionName;
+        private Output<String> accountName;
+        private Output<String> dataSetId;
+        private @Nullable Output<String> dataSetMappingName;
+        private Output<String> kind;
+        private Output<String> kustoClusterResourceId;
+        private Output<String> resourceGroupName;
+        private Output<String> shareSubscriptionName;
 
         public Builder() {
     	      // Empty
@@ -151,73 +151,73 @@ public final class KustoDatabaseDataSetMappingArgs extends io.pulumi.resources.R
     	      this.shareSubscriptionName = defaults.shareSubscriptionName;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder dataSetId(Input<String> dataSetId) {
+        public Builder dataSetId(Output<String> dataSetId) {
             this.dataSetId = Objects.requireNonNull(dataSetId);
             return this;
         }
 
         public Builder dataSetId(String dataSetId) {
-            this.dataSetId = Input.of(Objects.requireNonNull(dataSetId));
+            this.dataSetId = Output.of(Objects.requireNonNull(dataSetId));
             return this;
         }
 
-        public Builder dataSetMappingName(@Nullable Input<String> dataSetMappingName) {
+        public Builder dataSetMappingName(@Nullable Output<String> dataSetMappingName) {
             this.dataSetMappingName = dataSetMappingName;
             return this;
         }
 
         public Builder dataSetMappingName(@Nullable String dataSetMappingName) {
-            this.dataSetMappingName = Input.ofNullable(dataSetMappingName);
+            this.dataSetMappingName = Output.ofNullable(dataSetMappingName);
             return this;
         }
 
-        public Builder kind(Input<String> kind) {
+        public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(String kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder kustoClusterResourceId(Input<String> kustoClusterResourceId) {
+        public Builder kustoClusterResourceId(Output<String> kustoClusterResourceId) {
             this.kustoClusterResourceId = Objects.requireNonNull(kustoClusterResourceId);
             return this;
         }
 
         public Builder kustoClusterResourceId(String kustoClusterResourceId) {
-            this.kustoClusterResourceId = Input.of(Objects.requireNonNull(kustoClusterResourceId));
+            this.kustoClusterResourceId = Output.of(Objects.requireNonNull(kustoClusterResourceId));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder shareSubscriptionName(Input<String> shareSubscriptionName) {
+        public Builder shareSubscriptionName(Output<String> shareSubscriptionName) {
             this.shareSubscriptionName = Objects.requireNonNull(shareSubscriptionName);
             return this;
         }
 
         public Builder shareSubscriptionName(String shareSubscriptionName) {
-            this.shareSubscriptionName = Input.of(Objects.requireNonNull(shareSubscriptionName));
+            this.shareSubscriptionName = Output.of(Objects.requireNonNull(shareSubscriptionName));
             return this;
         }
         public KustoDatabaseDataSetMappingArgs build() {

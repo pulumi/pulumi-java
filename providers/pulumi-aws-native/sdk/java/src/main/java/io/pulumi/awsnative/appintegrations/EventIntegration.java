@@ -8,7 +8,6 @@ import io.pulumi.awsnative.appintegrations.EventIntegrationArgs;
 import io.pulumi.awsnative.appintegrations.outputs.EventIntegrationAssociation;
 import io.pulumi.awsnative.appintegrations.outputs.EventIntegrationEventFilter;
 import io.pulumi.awsnative.appintegrations.outputs.EventIntegrationTag;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -159,14 +158,14 @@ public class EventIntegration extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EventIntegration(String name, EventIntegrationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:appintegrations:EventIntegration", name, args == null ? EventIntegrationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:appintegrations:EventIntegration", name, args == null ? EventIntegrationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private EventIntegration(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private EventIntegration(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:appintegrations:EventIntegration", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -181,7 +180,7 @@ public class EventIntegration extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static EventIntegration get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static EventIntegration get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new EventIntegration(name, id, options);
     }
 }

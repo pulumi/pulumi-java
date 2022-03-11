@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.networkservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleGetArgs;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class EdgeCacheServiceRoutingPathMatcherGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class EdgeCacheServiceRoutingPathMatcherGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -44,25 +44,25 @@ public final class EdgeCacheServiceRoutingPathMatcherGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="routeRules", required=true)
-      private final Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleGetArgs>> routeRules;
+      private final Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleGetArgs>> routeRules;
 
-    public Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleGetArgs>> getRouteRules() {
+    public Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleGetArgs>> getRouteRules() {
         return this.routeRules;
     }
 
     public EdgeCacheServiceRoutingPathMatcherGetArgs(
-        @Nullable Input<String> description,
-        Input<String> name,
-        Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleGetArgs>> routeRules) {
+        @Nullable Output<String> description,
+        Output<String> name,
+        Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleGetArgs>> routeRules) {
         this.description = description;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.routeRules = Objects.requireNonNull(routeRules, "expected parameter 'routeRules' to be non-null");
     }
 
     private EdgeCacheServiceRoutingPathMatcherGetArgs() {
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.routeRules = Input.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.routeRules = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class EdgeCacheServiceRoutingPathMatcherGetArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> name;
-        private Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleGetArgs>> routeRules;
+        private @Nullable Output<String> description;
+        private Output<String> name;
+        private Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleGetArgs>> routeRules;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class EdgeCacheServiceRoutingPathMatcherGetArgs extends io.pulumi.r
     	      this.routeRules = defaults.routeRules;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder routeRules(Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleGetArgs>> routeRules) {
+        public Builder routeRules(Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleGetArgs>> routeRules) {
             this.routeRules = Objects.requireNonNull(routeRules);
             return this;
         }
 
         public Builder routeRules(List<EdgeCacheServiceRoutingPathMatcherRouteRuleGetArgs> routeRules) {
-            this.routeRules = Input.of(Objects.requireNonNull(routeRules));
+            this.routeRules = Output.of(Objects.requireNonNull(routeRules));
             return this;
         }
         public EdgeCacheServiceRoutingPathMatcherGetArgs build() {

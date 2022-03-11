@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudasset_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class IdentitySelectorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="identity", required=true)
-      private final Input<String> identity;
+      private final Output<String> identity;
 
-    public Input<String> getIdentity() {
+    public Output<String> getIdentity() {
         return this.identity;
     }
 
-    public IdentitySelectorArgs(Input<String> identity) {
+    public IdentitySelectorArgs(Output<String> identity) {
         this.identity = Objects.requireNonNull(identity, "expected parameter 'identity' to be non-null");
     }
 
     private IdentitySelectorArgs() {
-        this.identity = Input.empty();
+        this.identity = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class IdentitySelectorArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> identity;
+        private Output<String> identity;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class IdentitySelectorArgs extends io.pulumi.resources.ResourceArgs
     	      this.identity = defaults.identity;
         }
 
-        public Builder identity(Input<String> identity) {
+        public Builder identity(Output<String> identity) {
             this.identity = Objects.requireNonNull(identity);
             return this;
         }
 
         public Builder identity(String identity) {
-            this.identity = Input.of(Objects.requireNonNull(identity));
+            this.identity = Output.of(Objects.requireNonNull(identity));
             return this;
         }
         public IdentitySelectorArgs build() {

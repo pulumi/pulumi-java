@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.elb.LoadBalancerBackendServerPolicyArgs;
 import io.pulumi.aws.elb.inputs.LoadBalancerBackendServerPolicyState;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -105,18 +104,18 @@ public class LoadBalancerBackendServerPolicy extends io.pulumi.resources.CustomR
      * @param options A bag of options that control this resource's behavior.
      */
     public LoadBalancerBackendServerPolicy(String name, LoadBalancerBackendServerPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:elb/loadBalancerBackendServerPolicy:LoadBalancerBackendServerPolicy", name, args == null ? LoadBalancerBackendServerPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:elb/loadBalancerBackendServerPolicy:LoadBalancerBackendServerPolicy", name, args == null ? LoadBalancerBackendServerPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private LoadBalancerBackendServerPolicy(String name, Input<String> id, @Nullable LoadBalancerBackendServerPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private LoadBalancerBackendServerPolicy(String name, Output<String> id, @Nullable LoadBalancerBackendServerPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:elb/loadBalancerBackendServerPolicy:LoadBalancerBackendServerPolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("aws:elasticloadbalancing/loadBalancerBackendServerPolicy:LoadBalancerBackendServerPolicy").build())
+                Output.of(Alias.builder().setType("aws:elasticloadbalancing/loadBalancerBackendServerPolicy:LoadBalancerBackendServerPolicy").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -131,7 +130,7 @@ public class LoadBalancerBackendServerPolicy extends io.pulumi.resources.CustomR
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static LoadBalancerBackendServerPolicy get(String name, Input<String> id, @Nullable LoadBalancerBackendServerPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static LoadBalancerBackendServerPolicy get(String name, Output<String> id, @Nullable LoadBalancerBackendServerPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new LoadBalancerBackendServerPolicy(name, id, state, options);
     }
 }

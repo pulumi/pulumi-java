@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.inputs.DataDiskArgs;
 import io.pulumi.azurenative.compute.inputs.ImageReferenceArgs;
 import io.pulumi.azurenative.compute.inputs.OSDiskArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataDisks")
-      private final @Nullable Input<List<DataDiskArgs>> dataDisks;
+      private final @Nullable Output<List<DataDiskArgs>> dataDisks;
 
-    public Input<List<DataDiskArgs>> getDataDisks() {
-        return this.dataDisks == null ? Input.empty() : this.dataDisks;
+    public Output<List<DataDiskArgs>> getDataDisks() {
+        return this.dataDisks == null ? Output.empty() : this.dataDisks;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageReference")
-      private final @Nullable Input<ImageReferenceArgs> imageReference;
+      private final @Nullable Output<ImageReferenceArgs> imageReference;
 
-    public Input<ImageReferenceArgs> getImageReference() {
-        return this.imageReference == null ? Input.empty() : this.imageReference;
+    public Output<ImageReferenceArgs> getImageReference() {
+        return this.imageReference == null ? Output.empty() : this.imageReference;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="osDisk")
-      private final @Nullable Input<OSDiskArgs> osDisk;
+      private final @Nullable Output<OSDiskArgs> osDisk;
 
-    public Input<OSDiskArgs> getOsDisk() {
-        return this.osDisk == null ? Input.empty() : this.osDisk;
+    public Output<OSDiskArgs> getOsDisk() {
+        return this.osDisk == null ? Output.empty() : this.osDisk;
     }
 
     public StorageProfileArgs(
-        @Nullable Input<List<DataDiskArgs>> dataDisks,
-        @Nullable Input<ImageReferenceArgs> imageReference,
-        @Nullable Input<OSDiskArgs> osDisk) {
+        @Nullable Output<List<DataDiskArgs>> dataDisks,
+        @Nullable Output<ImageReferenceArgs> imageReference,
+        @Nullable Output<OSDiskArgs> osDisk) {
         this.dataDisks = dataDisks;
         this.imageReference = imageReference;
         this.osDisk = osDisk;
     }
 
     private StorageProfileArgs() {
-        this.dataDisks = Input.empty();
-        this.imageReference = Input.empty();
-        this.osDisk = Input.empty();
+        this.dataDisks = Output.empty();
+        this.imageReference = Output.empty();
+        this.osDisk = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<DataDiskArgs>> dataDisks;
-        private @Nullable Input<ImageReferenceArgs> imageReference;
-        private @Nullable Input<OSDiskArgs> osDisk;
+        private @Nullable Output<List<DataDiskArgs>> dataDisks;
+        private @Nullable Output<ImageReferenceArgs> imageReference;
+        private @Nullable Output<OSDiskArgs> osDisk;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.osDisk = defaults.osDisk;
         }
 
-        public Builder dataDisks(@Nullable Input<List<DataDiskArgs>> dataDisks) {
+        public Builder dataDisks(@Nullable Output<List<DataDiskArgs>> dataDisks) {
             this.dataDisks = dataDisks;
             return this;
         }
 
         public Builder dataDisks(@Nullable List<DataDiskArgs> dataDisks) {
-            this.dataDisks = Input.ofNullable(dataDisks);
+            this.dataDisks = Output.ofNullable(dataDisks);
             return this;
         }
 
-        public Builder imageReference(@Nullable Input<ImageReferenceArgs> imageReference) {
+        public Builder imageReference(@Nullable Output<ImageReferenceArgs> imageReference) {
             this.imageReference = imageReference;
             return this;
         }
 
         public Builder imageReference(@Nullable ImageReferenceArgs imageReference) {
-            this.imageReference = Input.ofNullable(imageReference);
+            this.imageReference = Output.ofNullable(imageReference);
             return this;
         }
 
-        public Builder osDisk(@Nullable Input<OSDiskArgs> osDisk) {
+        public Builder osDisk(@Nullable Output<OSDiskArgs> osDisk) {
             this.osDisk = osDisk;
             return this;
         }
 
         public Builder osDisk(@Nullable OSDiskArgs osDisk) {
-            this.osDisk = Input.ofNullable(osDisk);
+            this.osDisk = Output.ofNullable(osDisk);
             return this;
         }
         public StorageProfileArgs build() {

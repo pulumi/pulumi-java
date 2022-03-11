@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.resources.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class StorageAccountConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="storageAccountKey")
-      private final @Nullable Input<String> storageAccountKey;
+      private final @Nullable Output<String> storageAccountKey;
 
-    public Input<String> getStorageAccountKey() {
-        return this.storageAccountKey == null ? Input.empty() : this.storageAccountKey;
+    public Output<String> getStorageAccountKey() {
+        return this.storageAccountKey == null ? Output.empty() : this.storageAccountKey;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class StorageAccountConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="storageAccountName")
-      private final @Nullable Input<String> storageAccountName;
+      private final @Nullable Output<String> storageAccountName;
 
-    public Input<String> getStorageAccountName() {
-        return this.storageAccountName == null ? Input.empty() : this.storageAccountName;
+    public Output<String> getStorageAccountName() {
+        return this.storageAccountName == null ? Output.empty() : this.storageAccountName;
     }
 
     public StorageAccountConfigurationArgs(
-        @Nullable Input<String> storageAccountKey,
-        @Nullable Input<String> storageAccountName) {
+        @Nullable Output<String> storageAccountKey,
+        @Nullable Output<String> storageAccountName) {
         this.storageAccountKey = storageAccountKey;
         this.storageAccountName = storageAccountName;
     }
 
     private StorageAccountConfigurationArgs() {
-        this.storageAccountKey = Input.empty();
-        this.storageAccountName = Input.empty();
+        this.storageAccountKey = Output.empty();
+        this.storageAccountName = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class StorageAccountConfigurationArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> storageAccountKey;
-        private @Nullable Input<String> storageAccountName;
+        private @Nullable Output<String> storageAccountKey;
+        private @Nullable Output<String> storageAccountName;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class StorageAccountConfigurationArgs extends io.pulumi.resources.R
     	      this.storageAccountName = defaults.storageAccountName;
         }
 
-        public Builder storageAccountKey(@Nullable Input<String> storageAccountKey) {
+        public Builder storageAccountKey(@Nullable Output<String> storageAccountKey) {
             this.storageAccountKey = storageAccountKey;
             return this;
         }
 
         public Builder storageAccountKey(@Nullable String storageAccountKey) {
-            this.storageAccountKey = Input.ofNullable(storageAccountKey);
+            this.storageAccountKey = Output.ofNullable(storageAccountKey);
             return this;
         }
 
-        public Builder storageAccountName(@Nullable Input<String> storageAccountName) {
+        public Builder storageAccountName(@Nullable Output<String> storageAccountName) {
             this.storageAccountName = storageAccountName;
             return this;
         }
 
         public Builder storageAccountName(@Nullable String storageAccountName) {
-            this.storageAccountName = Input.ofNullable(storageAccountName);
+            this.storageAccountName = Output.ofNullable(storageAccountName);
             return this;
         }
         public StorageAccountConfigurationArgs build() {

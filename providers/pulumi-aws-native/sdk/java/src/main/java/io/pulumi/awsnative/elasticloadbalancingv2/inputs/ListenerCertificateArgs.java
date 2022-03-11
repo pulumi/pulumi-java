@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.elasticloadbalancingv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class ListenerCertificateArgs extends io.pulumi.resources.ResourceA
     public static final ListenerCertificateArgs Empty = new ListenerCertificateArgs();
 
     @InputImport(name="certificateArn")
-      private final @Nullable Input<String> certificateArn;
+      private final @Nullable Output<String> certificateArn;
 
-    public Input<String> getCertificateArn() {
-        return this.certificateArn == null ? Input.empty() : this.certificateArn;
+    public Output<String> getCertificateArn() {
+        return this.certificateArn == null ? Output.empty() : this.certificateArn;
     }
 
-    public ListenerCertificateArgs(@Nullable Input<String> certificateArn) {
+    public ListenerCertificateArgs(@Nullable Output<String> certificateArn) {
         this.certificateArn = certificateArn;
     }
 
     private ListenerCertificateArgs() {
-        this.certificateArn = Input.empty();
+        this.certificateArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class ListenerCertificateArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> certificateArn;
+        private @Nullable Output<String> certificateArn;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class ListenerCertificateArgs extends io.pulumi.resources.ResourceA
     	      this.certificateArn = defaults.certificateArn;
         }
 
-        public Builder certificateArn(@Nullable Input<String> certificateArn) {
+        public Builder certificateArn(@Nullable Output<String> certificateArn) {
             this.certificateArn = certificateArn;
             return this;
         }
 
         public Builder certificateArn(@Nullable String certificateArn) {
-            this.certificateArn = Input.ofNullable(certificateArn);
+            this.certificateArn = Output.ofNullable(certificateArn);
             return this;
         }
         public ListenerCertificateArgs build() {

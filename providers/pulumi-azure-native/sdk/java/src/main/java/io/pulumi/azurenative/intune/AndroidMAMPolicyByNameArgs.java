@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.intune;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,86 +17,86 @@ public final class AndroidMAMPolicyByNameArgs extends io.pulumi.resources.Resour
     public static final AndroidMAMPolicyByNameArgs Empty = new AndroidMAMPolicyByNameArgs();
 
     @InputImport(name="accessRecheckOfflineTimeout")
-      private final @Nullable Input<String> accessRecheckOfflineTimeout;
+      private final @Nullable Output<String> accessRecheckOfflineTimeout;
 
-    public Input<String> getAccessRecheckOfflineTimeout() {
-        return this.accessRecheckOfflineTimeout == null ? Input.empty() : this.accessRecheckOfflineTimeout;
+    public Output<String> getAccessRecheckOfflineTimeout() {
+        return this.accessRecheckOfflineTimeout == null ? Output.empty() : this.accessRecheckOfflineTimeout;
     }
 
     @InputImport(name="accessRecheckOnlineTimeout")
-      private final @Nullable Input<String> accessRecheckOnlineTimeout;
+      private final @Nullable Output<String> accessRecheckOnlineTimeout;
 
-    public Input<String> getAccessRecheckOnlineTimeout() {
-        return this.accessRecheckOnlineTimeout == null ? Input.empty() : this.accessRecheckOnlineTimeout;
+    public Output<String> getAccessRecheckOnlineTimeout() {
+        return this.accessRecheckOnlineTimeout == null ? Output.empty() : this.accessRecheckOnlineTimeout;
     }
 
     @InputImport(name="appSharingFromLevel")
-      private final @Nullable Input<String> appSharingFromLevel;
+      private final @Nullable Output<String> appSharingFromLevel;
 
-    public Input<String> getAppSharingFromLevel() {
-        return this.appSharingFromLevel == null ? Input.empty() : this.appSharingFromLevel;
+    public Output<String> getAppSharingFromLevel() {
+        return this.appSharingFromLevel == null ? Output.empty() : this.appSharingFromLevel;
     }
 
     @InputImport(name="appSharingToLevel")
-      private final @Nullable Input<String> appSharingToLevel;
+      private final @Nullable Output<String> appSharingToLevel;
 
-    public Input<String> getAppSharingToLevel() {
-        return this.appSharingToLevel == null ? Input.empty() : this.appSharingToLevel;
+    public Output<String> getAppSharingToLevel() {
+        return this.appSharingToLevel == null ? Output.empty() : this.appSharingToLevel;
     }
 
     @InputImport(name="authentication")
-      private final @Nullable Input<String> authentication;
+      private final @Nullable Output<String> authentication;
 
-    public Input<String> getAuthentication() {
-        return this.authentication == null ? Input.empty() : this.authentication;
+    public Output<String> getAuthentication() {
+        return this.authentication == null ? Output.empty() : this.authentication;
     }
 
     @InputImport(name="clipboardSharingLevel")
-      private final @Nullable Input<String> clipboardSharingLevel;
+      private final @Nullable Output<String> clipboardSharingLevel;
 
-    public Input<String> getClipboardSharingLevel() {
-        return this.clipboardSharingLevel == null ? Input.empty() : this.clipboardSharingLevel;
+    public Output<String> getClipboardSharingLevel() {
+        return this.clipboardSharingLevel == null ? Output.empty() : this.clipboardSharingLevel;
     }
 
     @InputImport(name="dataBackup")
-      private final @Nullable Input<String> dataBackup;
+      private final @Nullable Output<String> dataBackup;
 
-    public Input<String> getDataBackup() {
-        return this.dataBackup == null ? Input.empty() : this.dataBackup;
+    public Output<String> getDataBackup() {
+        return this.dataBackup == null ? Output.empty() : this.dataBackup;
     }
 
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="deviceCompliance")
-      private final @Nullable Input<String> deviceCompliance;
+      private final @Nullable Output<String> deviceCompliance;
 
-    public Input<String> getDeviceCompliance() {
-        return this.deviceCompliance == null ? Input.empty() : this.deviceCompliance;
+    public Output<String> getDeviceCompliance() {
+        return this.deviceCompliance == null ? Output.empty() : this.deviceCompliance;
     }
 
     @InputImport(name="fileEncryption")
-      private final @Nullable Input<String> fileEncryption;
+      private final @Nullable Output<String> fileEncryption;
 
-    public Input<String> getFileEncryption() {
-        return this.fileEncryption == null ? Input.empty() : this.fileEncryption;
+    public Output<String> getFileEncryption() {
+        return this.fileEncryption == null ? Output.empty() : this.fileEncryption;
     }
 
     @InputImport(name="fileSharingSaveAs")
-      private final @Nullable Input<String> fileSharingSaveAs;
+      private final @Nullable Output<String> fileSharingSaveAs;
 
-    public Input<String> getFileSharingSaveAs() {
-        return this.fileSharingSaveAs == null ? Input.empty() : this.fileSharingSaveAs;
+    public Output<String> getFileSharingSaveAs() {
+        return this.fileSharingSaveAs == null ? Output.empty() : this.fileSharingSaveAs;
     }
 
     @InputImport(name="friendlyName", required=true)
-      private final Input<String> friendlyName;
+      private final Output<String> friendlyName;
 
-    public Input<String> getFriendlyName() {
+    public Output<String> getFriendlyName() {
         return this.friendlyName;
     }
 
@@ -105,9 +105,9 @@ public final class AndroidMAMPolicyByNameArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="hostName", required=true)
-      private final Input<String> hostName;
+      private final Output<String> hostName;
 
-    public Input<String> getHostName() {
+    public Output<String> getHostName() {
         return this.hostName;
     }
 
@@ -116,38 +116,38 @@ public final class AndroidMAMPolicyByNameArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     @InputImport(name="managedBrowser")
-      private final @Nullable Input<String> managedBrowser;
+      private final @Nullable Output<String> managedBrowser;
 
-    public Input<String> getManagedBrowser() {
-        return this.managedBrowser == null ? Input.empty() : this.managedBrowser;
+    public Output<String> getManagedBrowser() {
+        return this.managedBrowser == null ? Output.empty() : this.managedBrowser;
     }
 
     @InputImport(name="offlineWipeTimeout")
-      private final @Nullable Input<String> offlineWipeTimeout;
+      private final @Nullable Output<String> offlineWipeTimeout;
 
-    public Input<String> getOfflineWipeTimeout() {
-        return this.offlineWipeTimeout == null ? Input.empty() : this.offlineWipeTimeout;
+    public Output<String> getOfflineWipeTimeout() {
+        return this.offlineWipeTimeout == null ? Output.empty() : this.offlineWipeTimeout;
     }
 
     @InputImport(name="pin")
-      private final @Nullable Input<String> pin;
+      private final @Nullable Output<String> pin;
 
-    public Input<String> getPin() {
-        return this.pin == null ? Input.empty() : this.pin;
+    public Output<String> getPin() {
+        return this.pin == null ? Output.empty() : this.pin;
     }
 
     @InputImport(name="pinNumRetry")
-      private final @Nullable Input<Integer> pinNumRetry;
+      private final @Nullable Output<Integer> pinNumRetry;
 
-    public Input<Integer> getPinNumRetry() {
-        return this.pinNumRetry == null ? Input.empty() : this.pinNumRetry;
+    public Output<Integer> getPinNumRetry() {
+        return this.pinNumRetry == null ? Output.empty() : this.pinNumRetry;
     }
 
     /**
@@ -155,17 +155,17 @@ public final class AndroidMAMPolicyByNameArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="policyName")
-      private final @Nullable Input<String> policyName;
+      private final @Nullable Output<String> policyName;
 
-    public Input<String> getPolicyName() {
-        return this.policyName == null ? Input.empty() : this.policyName;
+    public Output<String> getPolicyName() {
+        return this.policyName == null ? Output.empty() : this.policyName;
     }
 
     @InputImport(name="screenCapture")
-      private final @Nullable Input<String> screenCapture;
+      private final @Nullable Output<String> screenCapture;
 
-    public Input<String> getScreenCapture() {
-        return this.screenCapture == null ? Input.empty() : this.screenCapture;
+    public Output<String> getScreenCapture() {
+        return this.screenCapture == null ? Output.empty() : this.screenCapture;
     }
 
     /**
@@ -173,79 +173,79 @@ public final class AndroidMAMPolicyByNameArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public AndroidMAMPolicyByNameArgs(
-        @Nullable Input<String> accessRecheckOfflineTimeout,
-        @Nullable Input<String> accessRecheckOnlineTimeout,
-        @Nullable Input<String> appSharingFromLevel,
-        @Nullable Input<String> appSharingToLevel,
-        @Nullable Input<String> authentication,
-        @Nullable Input<String> clipboardSharingLevel,
-        @Nullable Input<String> dataBackup,
-        @Nullable Input<String> description,
-        @Nullable Input<String> deviceCompliance,
-        @Nullable Input<String> fileEncryption,
-        @Nullable Input<String> fileSharingSaveAs,
-        Input<String> friendlyName,
-        Input<String> hostName,
-        @Nullable Input<String> location,
-        @Nullable Input<String> managedBrowser,
-        @Nullable Input<String> offlineWipeTimeout,
-        @Nullable Input<String> pin,
-        @Nullable Input<Integer> pinNumRetry,
-        @Nullable Input<String> policyName,
-        @Nullable Input<String> screenCapture,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> accessRecheckOfflineTimeout,
+        @Nullable Output<String> accessRecheckOnlineTimeout,
+        @Nullable Output<String> appSharingFromLevel,
+        @Nullable Output<String> appSharingToLevel,
+        @Nullable Output<String> authentication,
+        @Nullable Output<String> clipboardSharingLevel,
+        @Nullable Output<String> dataBackup,
+        @Nullable Output<String> description,
+        @Nullable Output<String> deviceCompliance,
+        @Nullable Output<String> fileEncryption,
+        @Nullable Output<String> fileSharingSaveAs,
+        Output<String> friendlyName,
+        Output<String> hostName,
+        @Nullable Output<String> location,
+        @Nullable Output<String> managedBrowser,
+        @Nullable Output<String> offlineWipeTimeout,
+        @Nullable Output<String> pin,
+        @Nullable Output<Integer> pinNumRetry,
+        @Nullable Output<String> policyName,
+        @Nullable Output<String> screenCapture,
+        @Nullable Output<Map<String,String>> tags) {
         this.accessRecheckOfflineTimeout = accessRecheckOfflineTimeout;
         this.accessRecheckOnlineTimeout = accessRecheckOnlineTimeout;
-        this.appSharingFromLevel = appSharingFromLevel == null ? Input.ofNullable("none") : appSharingFromLevel;
-        this.appSharingToLevel = appSharingToLevel == null ? Input.ofNullable("none") : appSharingToLevel;
-        this.authentication = authentication == null ? Input.ofNullable("required") : authentication;
-        this.clipboardSharingLevel = clipboardSharingLevel == null ? Input.ofNullable("blocked") : clipboardSharingLevel;
-        this.dataBackup = dataBackup == null ? Input.ofNullable("allow") : dataBackup;
+        this.appSharingFromLevel = appSharingFromLevel == null ? Output.ofNullable("none") : appSharingFromLevel;
+        this.appSharingToLevel = appSharingToLevel == null ? Output.ofNullable("none") : appSharingToLevel;
+        this.authentication = authentication == null ? Output.ofNullable("required") : authentication;
+        this.clipboardSharingLevel = clipboardSharingLevel == null ? Output.ofNullable("blocked") : clipboardSharingLevel;
+        this.dataBackup = dataBackup == null ? Output.ofNullable("allow") : dataBackup;
         this.description = description;
-        this.deviceCompliance = deviceCompliance == null ? Input.ofNullable("enable") : deviceCompliance;
-        this.fileEncryption = fileEncryption == null ? Input.ofNullable("required") : fileEncryption;
-        this.fileSharingSaveAs = fileSharingSaveAs == null ? Input.ofNullable("allow") : fileSharingSaveAs;
+        this.deviceCompliance = deviceCompliance == null ? Output.ofNullable("enable") : deviceCompliance;
+        this.fileEncryption = fileEncryption == null ? Output.ofNullable("required") : fileEncryption;
+        this.fileSharingSaveAs = fileSharingSaveAs == null ? Output.ofNullable("allow") : fileSharingSaveAs;
         this.friendlyName = Objects.requireNonNull(friendlyName, "expected parameter 'friendlyName' to be non-null");
         this.hostName = Objects.requireNonNull(hostName, "expected parameter 'hostName' to be non-null");
         this.location = location;
-        this.managedBrowser = managedBrowser == null ? Input.ofNullable("required") : managedBrowser;
+        this.managedBrowser = managedBrowser == null ? Output.ofNullable("required") : managedBrowser;
         this.offlineWipeTimeout = offlineWipeTimeout;
-        this.pin = pin == null ? Input.ofNullable("required") : pin;
+        this.pin = pin == null ? Output.ofNullable("required") : pin;
         this.pinNumRetry = pinNumRetry;
         this.policyName = policyName;
-        this.screenCapture = screenCapture == null ? Input.ofNullable("allow") : screenCapture;
+        this.screenCapture = screenCapture == null ? Output.ofNullable("allow") : screenCapture;
         this.tags = tags;
     }
 
     private AndroidMAMPolicyByNameArgs() {
-        this.accessRecheckOfflineTimeout = Input.empty();
-        this.accessRecheckOnlineTimeout = Input.empty();
-        this.appSharingFromLevel = Input.empty();
-        this.appSharingToLevel = Input.empty();
-        this.authentication = Input.empty();
-        this.clipboardSharingLevel = Input.empty();
-        this.dataBackup = Input.empty();
-        this.description = Input.empty();
-        this.deviceCompliance = Input.empty();
-        this.fileEncryption = Input.empty();
-        this.fileSharingSaveAs = Input.empty();
-        this.friendlyName = Input.empty();
-        this.hostName = Input.empty();
-        this.location = Input.empty();
-        this.managedBrowser = Input.empty();
-        this.offlineWipeTimeout = Input.empty();
-        this.pin = Input.empty();
-        this.pinNumRetry = Input.empty();
-        this.policyName = Input.empty();
-        this.screenCapture = Input.empty();
-        this.tags = Input.empty();
+        this.accessRecheckOfflineTimeout = Output.empty();
+        this.accessRecheckOnlineTimeout = Output.empty();
+        this.appSharingFromLevel = Output.empty();
+        this.appSharingToLevel = Output.empty();
+        this.authentication = Output.empty();
+        this.clipboardSharingLevel = Output.empty();
+        this.dataBackup = Output.empty();
+        this.description = Output.empty();
+        this.deviceCompliance = Output.empty();
+        this.fileEncryption = Output.empty();
+        this.fileSharingSaveAs = Output.empty();
+        this.friendlyName = Output.empty();
+        this.hostName = Output.empty();
+        this.location = Output.empty();
+        this.managedBrowser = Output.empty();
+        this.offlineWipeTimeout = Output.empty();
+        this.pin = Output.empty();
+        this.pinNumRetry = Output.empty();
+        this.policyName = Output.empty();
+        this.screenCapture = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -257,27 +257,27 @@ public final class AndroidMAMPolicyByNameArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accessRecheckOfflineTimeout;
-        private @Nullable Input<String> accessRecheckOnlineTimeout;
-        private @Nullable Input<String> appSharingFromLevel;
-        private @Nullable Input<String> appSharingToLevel;
-        private @Nullable Input<String> authentication;
-        private @Nullable Input<String> clipboardSharingLevel;
-        private @Nullable Input<String> dataBackup;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> deviceCompliance;
-        private @Nullable Input<String> fileEncryption;
-        private @Nullable Input<String> fileSharingSaveAs;
-        private Input<String> friendlyName;
-        private Input<String> hostName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> managedBrowser;
-        private @Nullable Input<String> offlineWipeTimeout;
-        private @Nullable Input<String> pin;
-        private @Nullable Input<Integer> pinNumRetry;
-        private @Nullable Input<String> policyName;
-        private @Nullable Input<String> screenCapture;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> accessRecheckOfflineTimeout;
+        private @Nullable Output<String> accessRecheckOnlineTimeout;
+        private @Nullable Output<String> appSharingFromLevel;
+        private @Nullable Output<String> appSharingToLevel;
+        private @Nullable Output<String> authentication;
+        private @Nullable Output<String> clipboardSharingLevel;
+        private @Nullable Output<String> dataBackup;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> deviceCompliance;
+        private @Nullable Output<String> fileEncryption;
+        private @Nullable Output<String> fileSharingSaveAs;
+        private Output<String> friendlyName;
+        private Output<String> hostName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> managedBrowser;
+        private @Nullable Output<String> offlineWipeTimeout;
+        private @Nullable Output<String> pin;
+        private @Nullable Output<Integer> pinNumRetry;
+        private @Nullable Output<String> policyName;
+        private @Nullable Output<String> screenCapture;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -308,213 +308,213 @@ public final class AndroidMAMPolicyByNameArgs extends io.pulumi.resources.Resour
     	      this.tags = defaults.tags;
         }
 
-        public Builder accessRecheckOfflineTimeout(@Nullable Input<String> accessRecheckOfflineTimeout) {
+        public Builder accessRecheckOfflineTimeout(@Nullable Output<String> accessRecheckOfflineTimeout) {
             this.accessRecheckOfflineTimeout = accessRecheckOfflineTimeout;
             return this;
         }
 
         public Builder accessRecheckOfflineTimeout(@Nullable String accessRecheckOfflineTimeout) {
-            this.accessRecheckOfflineTimeout = Input.ofNullable(accessRecheckOfflineTimeout);
+            this.accessRecheckOfflineTimeout = Output.ofNullable(accessRecheckOfflineTimeout);
             return this;
         }
 
-        public Builder accessRecheckOnlineTimeout(@Nullable Input<String> accessRecheckOnlineTimeout) {
+        public Builder accessRecheckOnlineTimeout(@Nullable Output<String> accessRecheckOnlineTimeout) {
             this.accessRecheckOnlineTimeout = accessRecheckOnlineTimeout;
             return this;
         }
 
         public Builder accessRecheckOnlineTimeout(@Nullable String accessRecheckOnlineTimeout) {
-            this.accessRecheckOnlineTimeout = Input.ofNullable(accessRecheckOnlineTimeout);
+            this.accessRecheckOnlineTimeout = Output.ofNullable(accessRecheckOnlineTimeout);
             return this;
         }
 
-        public Builder appSharingFromLevel(@Nullable Input<String> appSharingFromLevel) {
+        public Builder appSharingFromLevel(@Nullable Output<String> appSharingFromLevel) {
             this.appSharingFromLevel = appSharingFromLevel;
             return this;
         }
 
         public Builder appSharingFromLevel(@Nullable String appSharingFromLevel) {
-            this.appSharingFromLevel = Input.ofNullable(appSharingFromLevel);
+            this.appSharingFromLevel = Output.ofNullable(appSharingFromLevel);
             return this;
         }
 
-        public Builder appSharingToLevel(@Nullable Input<String> appSharingToLevel) {
+        public Builder appSharingToLevel(@Nullable Output<String> appSharingToLevel) {
             this.appSharingToLevel = appSharingToLevel;
             return this;
         }
 
         public Builder appSharingToLevel(@Nullable String appSharingToLevel) {
-            this.appSharingToLevel = Input.ofNullable(appSharingToLevel);
+            this.appSharingToLevel = Output.ofNullable(appSharingToLevel);
             return this;
         }
 
-        public Builder authentication(@Nullable Input<String> authentication) {
+        public Builder authentication(@Nullable Output<String> authentication) {
             this.authentication = authentication;
             return this;
         }
 
         public Builder authentication(@Nullable String authentication) {
-            this.authentication = Input.ofNullable(authentication);
+            this.authentication = Output.ofNullable(authentication);
             return this;
         }
 
-        public Builder clipboardSharingLevel(@Nullable Input<String> clipboardSharingLevel) {
+        public Builder clipboardSharingLevel(@Nullable Output<String> clipboardSharingLevel) {
             this.clipboardSharingLevel = clipboardSharingLevel;
             return this;
         }
 
         public Builder clipboardSharingLevel(@Nullable String clipboardSharingLevel) {
-            this.clipboardSharingLevel = Input.ofNullable(clipboardSharingLevel);
+            this.clipboardSharingLevel = Output.ofNullable(clipboardSharingLevel);
             return this;
         }
 
-        public Builder dataBackup(@Nullable Input<String> dataBackup) {
+        public Builder dataBackup(@Nullable Output<String> dataBackup) {
             this.dataBackup = dataBackup;
             return this;
         }
 
         public Builder dataBackup(@Nullable String dataBackup) {
-            this.dataBackup = Input.ofNullable(dataBackup);
+            this.dataBackup = Output.ofNullable(dataBackup);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder deviceCompliance(@Nullable Input<String> deviceCompliance) {
+        public Builder deviceCompliance(@Nullable Output<String> deviceCompliance) {
             this.deviceCompliance = deviceCompliance;
             return this;
         }
 
         public Builder deviceCompliance(@Nullable String deviceCompliance) {
-            this.deviceCompliance = Input.ofNullable(deviceCompliance);
+            this.deviceCompliance = Output.ofNullable(deviceCompliance);
             return this;
         }
 
-        public Builder fileEncryption(@Nullable Input<String> fileEncryption) {
+        public Builder fileEncryption(@Nullable Output<String> fileEncryption) {
             this.fileEncryption = fileEncryption;
             return this;
         }
 
         public Builder fileEncryption(@Nullable String fileEncryption) {
-            this.fileEncryption = Input.ofNullable(fileEncryption);
+            this.fileEncryption = Output.ofNullable(fileEncryption);
             return this;
         }
 
-        public Builder fileSharingSaveAs(@Nullable Input<String> fileSharingSaveAs) {
+        public Builder fileSharingSaveAs(@Nullable Output<String> fileSharingSaveAs) {
             this.fileSharingSaveAs = fileSharingSaveAs;
             return this;
         }
 
         public Builder fileSharingSaveAs(@Nullable String fileSharingSaveAs) {
-            this.fileSharingSaveAs = Input.ofNullable(fileSharingSaveAs);
+            this.fileSharingSaveAs = Output.ofNullable(fileSharingSaveAs);
             return this;
         }
 
-        public Builder friendlyName(Input<String> friendlyName) {
+        public Builder friendlyName(Output<String> friendlyName) {
             this.friendlyName = Objects.requireNonNull(friendlyName);
             return this;
         }
 
         public Builder friendlyName(String friendlyName) {
-            this.friendlyName = Input.of(Objects.requireNonNull(friendlyName));
+            this.friendlyName = Output.of(Objects.requireNonNull(friendlyName));
             return this;
         }
 
-        public Builder hostName(Input<String> hostName) {
+        public Builder hostName(Output<String> hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
 
         public Builder hostName(String hostName) {
-            this.hostName = Input.of(Objects.requireNonNull(hostName));
+            this.hostName = Output.of(Objects.requireNonNull(hostName));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder managedBrowser(@Nullable Input<String> managedBrowser) {
+        public Builder managedBrowser(@Nullable Output<String> managedBrowser) {
             this.managedBrowser = managedBrowser;
             return this;
         }
 
         public Builder managedBrowser(@Nullable String managedBrowser) {
-            this.managedBrowser = Input.ofNullable(managedBrowser);
+            this.managedBrowser = Output.ofNullable(managedBrowser);
             return this;
         }
 
-        public Builder offlineWipeTimeout(@Nullable Input<String> offlineWipeTimeout) {
+        public Builder offlineWipeTimeout(@Nullable Output<String> offlineWipeTimeout) {
             this.offlineWipeTimeout = offlineWipeTimeout;
             return this;
         }
 
         public Builder offlineWipeTimeout(@Nullable String offlineWipeTimeout) {
-            this.offlineWipeTimeout = Input.ofNullable(offlineWipeTimeout);
+            this.offlineWipeTimeout = Output.ofNullable(offlineWipeTimeout);
             return this;
         }
 
-        public Builder pin(@Nullable Input<String> pin) {
+        public Builder pin(@Nullable Output<String> pin) {
             this.pin = pin;
             return this;
         }
 
         public Builder pin(@Nullable String pin) {
-            this.pin = Input.ofNullable(pin);
+            this.pin = Output.ofNullable(pin);
             return this;
         }
 
-        public Builder pinNumRetry(@Nullable Input<Integer> pinNumRetry) {
+        public Builder pinNumRetry(@Nullable Output<Integer> pinNumRetry) {
             this.pinNumRetry = pinNumRetry;
             return this;
         }
 
         public Builder pinNumRetry(@Nullable Integer pinNumRetry) {
-            this.pinNumRetry = Input.ofNullable(pinNumRetry);
+            this.pinNumRetry = Output.ofNullable(pinNumRetry);
             return this;
         }
 
-        public Builder policyName(@Nullable Input<String> policyName) {
+        public Builder policyName(@Nullable Output<String> policyName) {
             this.policyName = policyName;
             return this;
         }
 
         public Builder policyName(@Nullable String policyName) {
-            this.policyName = Input.ofNullable(policyName);
+            this.policyName = Output.ofNullable(policyName);
             return this;
         }
 
-        public Builder screenCapture(@Nullable Input<String> screenCapture) {
+        public Builder screenCapture(@Nullable Output<String> screenCapture) {
             this.screenCapture = screenCapture;
             return this;
         }
 
         public Builder screenCapture(@Nullable String screenCapture) {
-            this.screenCapture = Input.ofNullable(screenCapture);
+            this.screenCapture = Output.ofNullable(screenCapture);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public AndroidMAMPolicyByNameArgs build() {

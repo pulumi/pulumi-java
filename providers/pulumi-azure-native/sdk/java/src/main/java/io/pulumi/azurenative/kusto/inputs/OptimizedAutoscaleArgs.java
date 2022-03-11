@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kusto.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -23,9 +23,9 @@ public final class OptimizedAutoscaleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="isEnabled", required=true)
-      private final Input<Boolean> isEnabled;
+      private final Output<Boolean> isEnabled;
 
-    public Input<Boolean> getIsEnabled() {
+    public Output<Boolean> getIsEnabled() {
         return this.isEnabled;
     }
 
@@ -34,9 +34,9 @@ public final class OptimizedAutoscaleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="maximum", required=true)
-      private final Input<Integer> maximum;
+      private final Output<Integer> maximum;
 
-    public Input<Integer> getMaximum() {
+    public Output<Integer> getMaximum() {
         return this.maximum;
     }
 
@@ -45,9 +45,9 @@ public final class OptimizedAutoscaleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="minimum", required=true)
-      private final Input<Integer> minimum;
+      private final Output<Integer> minimum;
 
-    public Input<Integer> getMinimum() {
+    public Output<Integer> getMinimum() {
         return this.minimum;
     }
 
@@ -56,17 +56,17 @@ public final class OptimizedAutoscaleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="version", required=true)
-      private final Input<Integer> version;
+      private final Output<Integer> version;
 
-    public Input<Integer> getVersion() {
+    public Output<Integer> getVersion() {
         return this.version;
     }
 
     public OptimizedAutoscaleArgs(
-        Input<Boolean> isEnabled,
-        Input<Integer> maximum,
-        Input<Integer> minimum,
-        Input<Integer> version) {
+        Output<Boolean> isEnabled,
+        Output<Integer> maximum,
+        Output<Integer> minimum,
+        Output<Integer> version) {
         this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
         this.maximum = Objects.requireNonNull(maximum, "expected parameter 'maximum' to be non-null");
         this.minimum = Objects.requireNonNull(minimum, "expected parameter 'minimum' to be non-null");
@@ -74,10 +74,10 @@ public final class OptimizedAutoscaleArgs extends io.pulumi.resources.ResourceAr
     }
 
     private OptimizedAutoscaleArgs() {
-        this.isEnabled = Input.empty();
-        this.maximum = Input.empty();
-        this.minimum = Input.empty();
-        this.version = Input.empty();
+        this.isEnabled = Output.empty();
+        this.maximum = Output.empty();
+        this.minimum = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class OptimizedAutoscaleArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<Boolean> isEnabled;
-        private Input<Integer> maximum;
-        private Input<Integer> minimum;
-        private Input<Integer> version;
+        private Output<Boolean> isEnabled;
+        private Output<Integer> maximum;
+        private Output<Integer> minimum;
+        private Output<Integer> version;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class OptimizedAutoscaleArgs extends io.pulumi.resources.ResourceAr
     	      this.version = defaults.version;
         }
 
-        public Builder isEnabled(Input<Boolean> isEnabled) {
+        public Builder isEnabled(Output<Boolean> isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Input.of(Objects.requireNonNull(isEnabled));
+            this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
             return this;
         }
 
-        public Builder maximum(Input<Integer> maximum) {
+        public Builder maximum(Output<Integer> maximum) {
             this.maximum = Objects.requireNonNull(maximum);
             return this;
         }
 
         public Builder maximum(Integer maximum) {
-            this.maximum = Input.of(Objects.requireNonNull(maximum));
+            this.maximum = Output.of(Objects.requireNonNull(maximum));
             return this;
         }
 
-        public Builder minimum(Input<Integer> minimum) {
+        public Builder minimum(Output<Integer> minimum) {
             this.minimum = Objects.requireNonNull(minimum);
             return this;
         }
 
         public Builder minimum(Integer minimum) {
-            this.minimum = Input.of(Objects.requireNonNull(minimum));
+            this.minimum = Output.of(Objects.requireNonNull(minimum));
             return this;
         }
 
-        public Builder version(Input<Integer> version) {
+        public Builder version(Output<Integer> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
         public Builder version(Integer version) {
-            this.version = Input.of(Objects.requireNonNull(version));
+            this.version = Output.of(Objects.requireNonNull(version));
             return this;
         }
         public OptimizedAutoscaleArgs build() {

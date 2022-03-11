@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codebuild.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class ProjectSourceGitSubmodulesConfigArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="fetchSubmodules", required=true)
-      private final Input<Boolean> fetchSubmodules;
+      private final Output<Boolean> fetchSubmodules;
 
-    public Input<Boolean> getFetchSubmodules() {
+    public Output<Boolean> getFetchSubmodules() {
         return this.fetchSubmodules;
     }
 
-    public ProjectSourceGitSubmodulesConfigArgs(Input<Boolean> fetchSubmodules) {
+    public ProjectSourceGitSubmodulesConfigArgs(Output<Boolean> fetchSubmodules) {
         this.fetchSubmodules = Objects.requireNonNull(fetchSubmodules, "expected parameter 'fetchSubmodules' to be non-null");
     }
 
     private ProjectSourceGitSubmodulesConfigArgs() {
-        this.fetchSubmodules = Input.empty();
+        this.fetchSubmodules = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ProjectSourceGitSubmodulesConfigArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private Input<Boolean> fetchSubmodules;
+        private Output<Boolean> fetchSubmodules;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ProjectSourceGitSubmodulesConfigArgs extends io.pulumi.resour
     	      this.fetchSubmodules = defaults.fetchSubmodules;
         }
 
-        public Builder fetchSubmodules(Input<Boolean> fetchSubmodules) {
+        public Builder fetchSubmodules(Output<Boolean> fetchSubmodules) {
             this.fetchSubmodules = Objects.requireNonNull(fetchSubmodules);
             return this;
         }
 
         public Builder fetchSubmodules(Boolean fetchSubmodules) {
-            this.fetchSubmodules = Input.of(Objects.requireNonNull(fetchSubmodules));
+            this.fetchSubmodules = Output.of(Objects.requireNonNull(fetchSubmodules));
             return this;
         }
         public ProjectSourceGitSubmodulesConfigArgs build() {

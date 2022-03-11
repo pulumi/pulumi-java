@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cognito.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class UserPoolSchemaStringAttributeConstraintsArgs extends io.pulum
      * 
      */
     @InputImport(name="maxLength")
-      private final @Nullable Input<String> maxLength;
+      private final @Nullable Output<String> maxLength;
 
-    public Input<String> getMaxLength() {
-        return this.maxLength == null ? Input.empty() : this.maxLength;
+    public Output<String> getMaxLength() {
+        return this.maxLength == null ? Output.empty() : this.maxLength;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class UserPoolSchemaStringAttributeConstraintsArgs extends io.pulum
      * 
      */
     @InputImport(name="minLength")
-      private final @Nullable Input<String> minLength;
+      private final @Nullable Output<String> minLength;
 
-    public Input<String> getMinLength() {
-        return this.minLength == null ? Input.empty() : this.minLength;
+    public Output<String> getMinLength() {
+        return this.minLength == null ? Output.empty() : this.minLength;
     }
 
     public UserPoolSchemaStringAttributeConstraintsArgs(
-        @Nullable Input<String> maxLength,
-        @Nullable Input<String> minLength) {
+        @Nullable Output<String> maxLength,
+        @Nullable Output<String> minLength) {
         this.maxLength = maxLength;
         this.minLength = minLength;
     }
 
     private UserPoolSchemaStringAttributeConstraintsArgs() {
-        this.maxLength = Input.empty();
-        this.minLength = Input.empty();
+        this.maxLength = Output.empty();
+        this.minLength = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class UserPoolSchemaStringAttributeConstraintsArgs extends io.pulum
     }
 
     public static final class Builder {
-        private @Nullable Input<String> maxLength;
-        private @Nullable Input<String> minLength;
+        private @Nullable Output<String> maxLength;
+        private @Nullable Output<String> minLength;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class UserPoolSchemaStringAttributeConstraintsArgs extends io.pulum
     	      this.minLength = defaults.minLength;
         }
 
-        public Builder maxLength(@Nullable Input<String> maxLength) {
+        public Builder maxLength(@Nullable Output<String> maxLength) {
             this.maxLength = maxLength;
             return this;
         }
 
         public Builder maxLength(@Nullable String maxLength) {
-            this.maxLength = Input.ofNullable(maxLength);
+            this.maxLength = Output.ofNullable(maxLength);
             return this;
         }
 
-        public Builder minLength(@Nullable Input<String> minLength) {
+        public Builder minLength(@Nullable Output<String> minLength) {
             this.minLength = minLength;
             return this;
         }
 
         public Builder minLength(@Nullable String minLength) {
-            this.minLength = Input.ofNullable(minLength);
+            this.minLength = Output.ofNullable(minLength);
             return this;
         }
         public UserPoolSchemaStringAttributeConstraintsArgs build() {

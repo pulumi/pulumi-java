@@ -5,7 +5,7 @@ package io.pulumi.awsnative.athena;
 
 import io.pulumi.awsnative.athena.enums.DataCatalogType;
 import io.pulumi.awsnative.athena.inputs.DataCatalogTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class DataCatalogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DataCatalogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class DataCatalogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Object> parameters;
+      private final @Nullable Output<Object> parameters;
 
-    public Input<Object> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Object> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class DataCatalogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<DataCatalogTagArgs>> tags;
+      private final @Nullable Output<List<DataCatalogTagArgs>> tags;
 
-    public Input<List<DataCatalogTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<DataCatalogTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -67,18 +67,18 @@ public final class DataCatalogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<DataCatalogType> type;
+      private final Output<DataCatalogType> type;
 
-    public Input<DataCatalogType> getType() {
+    public Output<DataCatalogType> getType() {
         return this.type;
     }
 
     public DataCatalogArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        @Nullable Input<Object> parameters,
-        @Nullable Input<List<DataCatalogTagArgs>> tags,
-        Input<DataCatalogType> type) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        @Nullable Output<Object> parameters,
+        @Nullable Output<List<DataCatalogTagArgs>> tags,
+        Output<DataCatalogType> type) {
         this.description = description;
         this.name = name;
         this.parameters = parameters;
@@ -87,11 +87,11 @@ public final class DataCatalogArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DataCatalogArgs() {
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.parameters = Input.empty();
-        this.tags = Input.empty();
-        this.type = Input.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.parameters = Output.empty();
+        this.tags = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,11 +103,11 @@ public final class DataCatalogArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Object> parameters;
-        private @Nullable Input<List<DataCatalogTagArgs>> tags;
-        private Input<DataCatalogType> type;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Object> parameters;
+        private @Nullable Output<List<DataCatalogTagArgs>> tags;
+        private Output<DataCatalogType> type;
 
         public Builder() {
     	      // Empty
@@ -122,53 +122,53 @@ public final class DataCatalogArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Object> parameters) {
+        public Builder parameters(@Nullable Output<Object> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Object parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<DataCatalogTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<DataCatalogTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<DataCatalogTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder type(Input<DataCatalogType> type) {
+        public Builder type(Output<DataCatalogType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(DataCatalogType type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public DataCatalogArgs build() {

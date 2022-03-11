@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.edgeorder.inputs;
 
 import io.pulumi.azurenative.edgeorder.inputs.HierarchyInformationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -22,18 +22,18 @@ public final class ProductDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hierarchyInformation", required=true)
-      private final Input<HierarchyInformationArgs> hierarchyInformation;
+      private final Output<HierarchyInformationArgs> hierarchyInformation;
 
-    public Input<HierarchyInformationArgs> getHierarchyInformation() {
+    public Output<HierarchyInformationArgs> getHierarchyInformation() {
         return this.hierarchyInformation;
     }
 
-    public ProductDetailsArgs(Input<HierarchyInformationArgs> hierarchyInformation) {
+    public ProductDetailsArgs(Output<HierarchyInformationArgs> hierarchyInformation) {
         this.hierarchyInformation = Objects.requireNonNull(hierarchyInformation, "expected parameter 'hierarchyInformation' to be non-null");
     }
 
     private ProductDetailsArgs() {
-        this.hierarchyInformation = Input.empty();
+        this.hierarchyInformation = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class ProductDetailsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<HierarchyInformationArgs> hierarchyInformation;
+        private Output<HierarchyInformationArgs> hierarchyInformation;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class ProductDetailsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.hierarchyInformation = defaults.hierarchyInformation;
         }
 
-        public Builder hierarchyInformation(Input<HierarchyInformationArgs> hierarchyInformation) {
+        public Builder hierarchyInformation(Output<HierarchyInformationArgs> hierarchyInformation) {
             this.hierarchyInformation = Objects.requireNonNull(hierarchyInformation);
             return this;
         }
 
         public Builder hierarchyInformation(HierarchyInformationArgs hierarchyInformation) {
-            this.hierarchyInformation = Input.of(Objects.requireNonNull(hierarchyInformation));
+            this.hierarchyInformation = Output.of(Objects.requireNonNull(hierarchyInformation));
             return this;
         }
         public ProductDetailsArgs build() {

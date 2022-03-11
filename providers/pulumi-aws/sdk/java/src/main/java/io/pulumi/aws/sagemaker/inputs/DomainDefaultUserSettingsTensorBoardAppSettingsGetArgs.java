@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class DomainDefaultUserSettingsTensorBoardAppSettingsGetArgs extend
      * 
      */
     @InputImport(name="defaultResourceSpec")
-      private final @Nullable Input<DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec;
+      private final @Nullable Output<DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec;
 
-    public Input<DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecGetArgs> getDefaultResourceSpec() {
-        return this.defaultResourceSpec == null ? Input.empty() : this.defaultResourceSpec;
+    public Output<DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecGetArgs> getDefaultResourceSpec() {
+        return this.defaultResourceSpec == null ? Output.empty() : this.defaultResourceSpec;
     }
 
-    public DomainDefaultUserSettingsTensorBoardAppSettingsGetArgs(@Nullable Input<DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec) {
+    public DomainDefaultUserSettingsTensorBoardAppSettingsGetArgs(@Nullable Output<DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec) {
         this.defaultResourceSpec = defaultResourceSpec;
     }
 
     private DomainDefaultUserSettingsTensorBoardAppSettingsGetArgs() {
-        this.defaultResourceSpec = Input.empty();
+        this.defaultResourceSpec = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class DomainDefaultUserSettingsTensorBoardAppSettingsGetArgs extend
     }
 
     public static final class Builder {
-        private @Nullable Input<DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec;
+        private @Nullable Output<DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class DomainDefaultUserSettingsTensorBoardAppSettingsGetArgs extend
     	      this.defaultResourceSpec = defaults.defaultResourceSpec;
         }
 
-        public Builder defaultResourceSpec(@Nullable Input<DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec) {
+        public Builder defaultResourceSpec(@Nullable Output<DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec) {
             this.defaultResourceSpec = defaultResourceSpec;
             return this;
         }
 
         public Builder defaultResourceSpec(@Nullable DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecGetArgs defaultResourceSpec) {
-            this.defaultResourceSpec = Input.ofNullable(defaultResourceSpec);
+            this.defaultResourceSpec = Output.ofNullable(defaultResourceSpec);
             return this;
         }
         public DomainDefaultUserSettingsTensorBoardAppSettingsGetArgs build() {

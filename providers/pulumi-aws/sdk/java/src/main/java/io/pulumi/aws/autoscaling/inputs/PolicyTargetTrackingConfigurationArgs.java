@@ -5,7 +5,7 @@ package io.pulumi.aws.autoscaling.inputs;
 
 import io.pulumi.aws.autoscaling.inputs.PolicyTargetTrackingConfigurationCustomizedMetricSpecificationArgs;
 import io.pulumi.aws.autoscaling.inputs.PolicyTargetTrackingConfigurationPredefinedMetricSpecificationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -22,10 +22,10 @@ public final class PolicyTargetTrackingConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="customizedMetricSpecification")
-      private final @Nullable Input<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationArgs> customizedMetricSpecification;
+      private final @Nullable Output<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationArgs> customizedMetricSpecification;
 
-    public Input<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationArgs> getCustomizedMetricSpecification() {
-        return this.customizedMetricSpecification == null ? Input.empty() : this.customizedMetricSpecification;
+    public Output<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationArgs> getCustomizedMetricSpecification() {
+        return this.customizedMetricSpecification == null ? Output.empty() : this.customizedMetricSpecification;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class PolicyTargetTrackingConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="disableScaleIn")
-      private final @Nullable Input<Boolean> disableScaleIn;
+      private final @Nullable Output<Boolean> disableScaleIn;
 
-    public Input<Boolean> getDisableScaleIn() {
-        return this.disableScaleIn == null ? Input.empty() : this.disableScaleIn;
+    public Output<Boolean> getDisableScaleIn() {
+        return this.disableScaleIn == null ? Output.empty() : this.disableScaleIn;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class PolicyTargetTrackingConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="predefinedMetricSpecification")
-      private final @Nullable Input<PolicyTargetTrackingConfigurationPredefinedMetricSpecificationArgs> predefinedMetricSpecification;
+      private final @Nullable Output<PolicyTargetTrackingConfigurationPredefinedMetricSpecificationArgs> predefinedMetricSpecification;
 
-    public Input<PolicyTargetTrackingConfigurationPredefinedMetricSpecificationArgs> getPredefinedMetricSpecification() {
-        return this.predefinedMetricSpecification == null ? Input.empty() : this.predefinedMetricSpecification;
+    public Output<PolicyTargetTrackingConfigurationPredefinedMetricSpecificationArgs> getPredefinedMetricSpecification() {
+        return this.predefinedMetricSpecification == null ? Output.empty() : this.predefinedMetricSpecification;
     }
 
     /**
@@ -55,17 +55,17 @@ public final class PolicyTargetTrackingConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="targetValue", required=true)
-      private final Input<Double> targetValue;
+      private final Output<Double> targetValue;
 
-    public Input<Double> getTargetValue() {
+    public Output<Double> getTargetValue() {
         return this.targetValue;
     }
 
     public PolicyTargetTrackingConfigurationArgs(
-        @Nullable Input<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationArgs> customizedMetricSpecification,
-        @Nullable Input<Boolean> disableScaleIn,
-        @Nullable Input<PolicyTargetTrackingConfigurationPredefinedMetricSpecificationArgs> predefinedMetricSpecification,
-        Input<Double> targetValue) {
+        @Nullable Output<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationArgs> customizedMetricSpecification,
+        @Nullable Output<Boolean> disableScaleIn,
+        @Nullable Output<PolicyTargetTrackingConfigurationPredefinedMetricSpecificationArgs> predefinedMetricSpecification,
+        Output<Double> targetValue) {
         this.customizedMetricSpecification = customizedMetricSpecification;
         this.disableScaleIn = disableScaleIn;
         this.predefinedMetricSpecification = predefinedMetricSpecification;
@@ -73,10 +73,10 @@ public final class PolicyTargetTrackingConfigurationArgs extends io.pulumi.resou
     }
 
     private PolicyTargetTrackingConfigurationArgs() {
-        this.customizedMetricSpecification = Input.empty();
-        this.disableScaleIn = Input.empty();
-        this.predefinedMetricSpecification = Input.empty();
-        this.targetValue = Input.empty();
+        this.customizedMetricSpecification = Output.empty();
+        this.disableScaleIn = Output.empty();
+        this.predefinedMetricSpecification = Output.empty();
+        this.targetValue = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class PolicyTargetTrackingConfigurationArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationArgs> customizedMetricSpecification;
-        private @Nullable Input<Boolean> disableScaleIn;
-        private @Nullable Input<PolicyTargetTrackingConfigurationPredefinedMetricSpecificationArgs> predefinedMetricSpecification;
-        private Input<Double> targetValue;
+        private @Nullable Output<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationArgs> customizedMetricSpecification;
+        private @Nullable Output<Boolean> disableScaleIn;
+        private @Nullable Output<PolicyTargetTrackingConfigurationPredefinedMetricSpecificationArgs> predefinedMetricSpecification;
+        private Output<Double> targetValue;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class PolicyTargetTrackingConfigurationArgs extends io.pulumi.resou
     	      this.targetValue = defaults.targetValue;
         }
 
-        public Builder customizedMetricSpecification(@Nullable Input<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationArgs> customizedMetricSpecification) {
+        public Builder customizedMetricSpecification(@Nullable Output<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationArgs> customizedMetricSpecification) {
             this.customizedMetricSpecification = customizedMetricSpecification;
             return this;
         }
 
         public Builder customizedMetricSpecification(@Nullable PolicyTargetTrackingConfigurationCustomizedMetricSpecificationArgs customizedMetricSpecification) {
-            this.customizedMetricSpecification = Input.ofNullable(customizedMetricSpecification);
+            this.customizedMetricSpecification = Output.ofNullable(customizedMetricSpecification);
             return this;
         }
 
-        public Builder disableScaleIn(@Nullable Input<Boolean> disableScaleIn) {
+        public Builder disableScaleIn(@Nullable Output<Boolean> disableScaleIn) {
             this.disableScaleIn = disableScaleIn;
             return this;
         }
 
         public Builder disableScaleIn(@Nullable Boolean disableScaleIn) {
-            this.disableScaleIn = Input.ofNullable(disableScaleIn);
+            this.disableScaleIn = Output.ofNullable(disableScaleIn);
             return this;
         }
 
-        public Builder predefinedMetricSpecification(@Nullable Input<PolicyTargetTrackingConfigurationPredefinedMetricSpecificationArgs> predefinedMetricSpecification) {
+        public Builder predefinedMetricSpecification(@Nullable Output<PolicyTargetTrackingConfigurationPredefinedMetricSpecificationArgs> predefinedMetricSpecification) {
             this.predefinedMetricSpecification = predefinedMetricSpecification;
             return this;
         }
 
         public Builder predefinedMetricSpecification(@Nullable PolicyTargetTrackingConfigurationPredefinedMetricSpecificationArgs predefinedMetricSpecification) {
-            this.predefinedMetricSpecification = Input.ofNullable(predefinedMetricSpecification);
+            this.predefinedMetricSpecification = Output.ofNullable(predefinedMetricSpecification);
             return this;
         }
 
-        public Builder targetValue(Input<Double> targetValue) {
+        public Builder targetValue(Output<Double> targetValue) {
             this.targetValue = Objects.requireNonNull(targetValue);
             return this;
         }
 
         public Builder targetValue(Double targetValue) {
-            this.targetValue = Input.of(Objects.requireNonNull(targetValue));
+            this.targetValue = Output.of(Objects.requireNonNull(targetValue));
             return this;
         }
         public PolicyTargetTrackingConfigurationArgs build() {

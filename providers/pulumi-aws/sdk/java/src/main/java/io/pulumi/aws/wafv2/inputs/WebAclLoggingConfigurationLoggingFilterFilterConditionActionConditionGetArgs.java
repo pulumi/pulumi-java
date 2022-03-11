@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.wafv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterConditionActionC
      * 
      */
     @InputImport(name="action", required=true)
-      private final Input<String> action;
+      private final Output<String> action;
 
-    public Input<String> getAction() {
+    public Output<String> getAction() {
         return this.action;
     }
 
-    public WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionGetArgs(Input<String> action) {
+    public WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionGetArgs(Output<String> action) {
         this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
     }
 
     private WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionGetArgs() {
-        this.action = Input.empty();
+        this.action = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterConditionActionC
     }
 
     public static final class Builder {
-        private Input<String> action;
+        private Output<String> action;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterConditionActionC
     	      this.action = defaults.action;
         }
 
-        public Builder action(Input<String> action) {
+        public Builder action(Output<String> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
         public Builder action(String action) {
-            this.action = Input.of(Objects.requireNonNull(action));
+            this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
         public WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionGetArgs build() {

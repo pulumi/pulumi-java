@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class AutoscalingPolicyLoadBalancingUtilizationArgs extends io.pulu
      * 
      */
     @InputImport(name="utilizationTarget")
-      private final @Nullable Input<Double> utilizationTarget;
+      private final @Nullable Output<Double> utilizationTarget;
 
-    public Input<Double> getUtilizationTarget() {
-        return this.utilizationTarget == null ? Input.empty() : this.utilizationTarget;
+    public Output<Double> getUtilizationTarget() {
+        return this.utilizationTarget == null ? Output.empty() : this.utilizationTarget;
     }
 
-    public AutoscalingPolicyLoadBalancingUtilizationArgs(@Nullable Input<Double> utilizationTarget) {
+    public AutoscalingPolicyLoadBalancingUtilizationArgs(@Nullable Output<Double> utilizationTarget) {
         this.utilizationTarget = utilizationTarget;
     }
 
     private AutoscalingPolicyLoadBalancingUtilizationArgs() {
-        this.utilizationTarget = Input.empty();
+        this.utilizationTarget = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class AutoscalingPolicyLoadBalancingUtilizationArgs extends io.pulu
     }
 
     public static final class Builder {
-        private @Nullable Input<Double> utilizationTarget;
+        private @Nullable Output<Double> utilizationTarget;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class AutoscalingPolicyLoadBalancingUtilizationArgs extends io.pulu
     	      this.utilizationTarget = defaults.utilizationTarget;
         }
 
-        public Builder utilizationTarget(@Nullable Input<Double> utilizationTarget) {
+        public Builder utilizationTarget(@Nullable Output<Double> utilizationTarget) {
             this.utilizationTarget = utilizationTarget;
             return this;
         }
 
         public Builder utilizationTarget(@Nullable Double utilizationTarget) {
-            this.utilizationTarget = Input.ofNullable(utilizationTarget);
+            this.utilizationTarget = Output.ofNullable(utilizationTarget);
             return this;
         }
         public AutoscalingPolicyLoadBalancingUtilizationArgs build() {

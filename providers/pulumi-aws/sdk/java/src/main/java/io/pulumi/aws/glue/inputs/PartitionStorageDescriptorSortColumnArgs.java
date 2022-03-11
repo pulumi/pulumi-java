@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glue.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,9 +19,9 @@ public final class PartitionStorageDescriptorSortColumnArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="column", required=true)
-      private final Input<String> column;
+      private final Output<String> column;
 
-    public Input<String> getColumn() {
+    public Output<String> getColumn() {
         return this.column;
     }
 
@@ -30,22 +30,22 @@ public final class PartitionStorageDescriptorSortColumnArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="sortOrder", required=true)
-      private final Input<Integer> sortOrder;
+      private final Output<Integer> sortOrder;
 
-    public Input<Integer> getSortOrder() {
+    public Output<Integer> getSortOrder() {
         return this.sortOrder;
     }
 
     public PartitionStorageDescriptorSortColumnArgs(
-        Input<String> column,
-        Input<Integer> sortOrder) {
+        Output<String> column,
+        Output<Integer> sortOrder) {
         this.column = Objects.requireNonNull(column, "expected parameter 'column' to be non-null");
         this.sortOrder = Objects.requireNonNull(sortOrder, "expected parameter 'sortOrder' to be non-null");
     }
 
     private PartitionStorageDescriptorSortColumnArgs() {
-        this.column = Input.empty();
-        this.sortOrder = Input.empty();
+        this.column = Output.empty();
+        this.sortOrder = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class PartitionStorageDescriptorSortColumnArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private Input<String> column;
-        private Input<Integer> sortOrder;
+        private Output<String> column;
+        private Output<Integer> sortOrder;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class PartitionStorageDescriptorSortColumnArgs extends io.pulumi.re
     	      this.sortOrder = defaults.sortOrder;
         }
 
-        public Builder column(Input<String> column) {
+        public Builder column(Output<String> column) {
             this.column = Objects.requireNonNull(column);
             return this;
         }
 
         public Builder column(String column) {
-            this.column = Input.of(Objects.requireNonNull(column));
+            this.column = Output.of(Objects.requireNonNull(column));
             return this;
         }
 
-        public Builder sortOrder(Input<Integer> sortOrder) {
+        public Builder sortOrder(Output<Integer> sortOrder) {
             this.sortOrder = Objects.requireNonNull(sortOrder);
             return this;
         }
 
         public Builder sortOrder(Integer sortOrder) {
-            this.sortOrder = Input.of(Objects.requireNonNull(sortOrder));
+            this.sortOrder = Output.of(Objects.requireNonNull(sortOrder));
             return this;
         }
         public PartitionStorageDescriptorSortColumnArgs build() {

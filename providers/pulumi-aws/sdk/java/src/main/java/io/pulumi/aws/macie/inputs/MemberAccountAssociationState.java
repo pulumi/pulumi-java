@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.macie.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class MemberAccountAssociationState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="memberAccountId")
-      private final @Nullable Input<String> memberAccountId;
+      private final @Nullable Output<String> memberAccountId;
 
-    public Input<String> getMemberAccountId() {
-        return this.memberAccountId == null ? Input.empty() : this.memberAccountId;
+    public Output<String> getMemberAccountId() {
+        return this.memberAccountId == null ? Output.empty() : this.memberAccountId;
     }
 
-    public MemberAccountAssociationState(@Nullable Input<String> memberAccountId) {
+    public MemberAccountAssociationState(@Nullable Output<String> memberAccountId) {
         this.memberAccountId = memberAccountId;
     }
 
     private MemberAccountAssociationState() {
-        this.memberAccountId = Input.empty();
+        this.memberAccountId = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class MemberAccountAssociationState extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> memberAccountId;
+        private @Nullable Output<String> memberAccountId;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class MemberAccountAssociationState extends io.pulumi.resources.Res
     	      this.memberAccountId = defaults.memberAccountId;
         }
 
-        public Builder memberAccountId(@Nullable Input<String> memberAccountId) {
+        public Builder memberAccountId(@Nullable Output<String> memberAccountId) {
             this.memberAccountId = memberAccountId;
             return this;
         }
 
         public Builder memberAccountId(@Nullable String memberAccountId) {
-            this.memberAccountId = Input.ofNullable(memberAccountId);
+            this.memberAccountId = Output.ofNullable(memberAccountId);
             return this;
         }
         public MemberAccountAssociationState build() {

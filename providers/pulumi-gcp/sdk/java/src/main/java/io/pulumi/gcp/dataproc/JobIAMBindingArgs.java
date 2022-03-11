@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataproc.inputs.JobIAMBindingConditionArgs;
 import java.lang.String;
@@ -17,23 +17,23 @@ public final class JobIAMBindingArgs extends io.pulumi.resources.ResourceArgs {
     public static final JobIAMBindingArgs Empty = new JobIAMBindingArgs();
 
     @InputImport(name="condition")
-      private final @Nullable Input<JobIAMBindingConditionArgs> condition;
+      private final @Nullable Output<JobIAMBindingConditionArgs> condition;
 
-    public Input<JobIAMBindingConditionArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<JobIAMBindingConditionArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     @InputImport(name="jobId", required=true)
-      private final Input<String> jobId;
+      private final Output<String> jobId;
 
-    public Input<String> getJobId() {
+    public Output<String> getJobId() {
         return this.jobId;
     }
 
     @InputImport(name="members", required=true)
-      private final Input<List<String>> members;
+      private final Output<List<String>> members;
 
-    public Input<List<String>> getMembers() {
+    public Output<List<String>> getMembers() {
         return this.members;
     }
 
@@ -43,10 +43,10 @@ public final class JobIAMBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class JobIAMBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -68,19 +68,19 @@ public final class JobIAMBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role", required=true)
-      private final Input<String> role;
+      private final Output<String> role;
 
-    public Input<String> getRole() {
+    public Output<String> getRole() {
         return this.role;
     }
 
     public JobIAMBindingArgs(
-        @Nullable Input<JobIAMBindingConditionArgs> condition,
-        Input<String> jobId,
-        Input<List<String>> members,
-        @Nullable Input<String> project,
-        @Nullable Input<String> region,
-        Input<String> role) {
+        @Nullable Output<JobIAMBindingConditionArgs> condition,
+        Output<String> jobId,
+        Output<List<String>> members,
+        @Nullable Output<String> project,
+        @Nullable Output<String> region,
+        Output<String> role) {
         this.condition = condition;
         this.jobId = Objects.requireNonNull(jobId, "expected parameter 'jobId' to be non-null");
         this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
@@ -90,12 +90,12 @@ public final class JobIAMBindingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobIAMBindingArgs() {
-        this.condition = Input.empty();
-        this.jobId = Input.empty();
-        this.members = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
-        this.role = Input.empty();
+        this.condition = Output.empty();
+        this.jobId = Output.empty();
+        this.members = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -107,12 +107,12 @@ public final class JobIAMBindingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<JobIAMBindingConditionArgs> condition;
-        private Input<String> jobId;
-        private Input<List<String>> members;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> region;
-        private Input<String> role;
+        private @Nullable Output<JobIAMBindingConditionArgs> condition;
+        private Output<String> jobId;
+        private Output<List<String>> members;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> region;
+        private Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -128,63 +128,63 @@ public final class JobIAMBindingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.role = defaults.role;
         }
 
-        public Builder condition(@Nullable Input<JobIAMBindingConditionArgs> condition) {
+        public Builder condition(@Nullable Output<JobIAMBindingConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable JobIAMBindingConditionArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder jobId(Input<String> jobId) {
+        public Builder jobId(Output<String> jobId) {
             this.jobId = Objects.requireNonNull(jobId);
             return this;
         }
 
         public Builder jobId(String jobId) {
-            this.jobId = Input.of(Objects.requireNonNull(jobId));
+            this.jobId = Output.of(Objects.requireNonNull(jobId));
             return this;
         }
 
-        public Builder members(Input<List<String>> members) {
+        public Builder members(Output<List<String>> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
 
         public Builder members(List<String> members) {
-            this.members = Input.of(Objects.requireNonNull(members));
+            this.members = Output.of(Objects.requireNonNull(members));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder role(Input<String> role) {
+        public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(String role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
         public JobIAMBindingArgs build() {

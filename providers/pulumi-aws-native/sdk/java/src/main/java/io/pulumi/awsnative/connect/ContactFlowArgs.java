@@ -6,7 +6,7 @@ package io.pulumi.awsnative.connect;
 import io.pulumi.awsnative.connect.enums.ContactFlowState;
 import io.pulumi.awsnative.connect.enums.ContactFlowType;
 import io.pulumi.awsnative.connect.inputs.ContactFlowTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,9 +23,9 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="content", required=true)
-      private final Input<String> content;
+      private final Output<String> content;
 
-    public Input<String> getContent() {
+    public Output<String> getContent() {
         return this.content;
     }
 
@@ -34,10 +34,10 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -45,9 +45,9 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceArn", required=true)
-      private final Input<String> instanceArn;
+      private final Output<String> instanceArn;
 
-    public Input<String> getInstanceArn() {
+    public Output<String> getInstanceArn() {
         return this.instanceArn;
     }
 
@@ -56,10 +56,10 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<ContactFlowState> state;
+      private final @Nullable Output<ContactFlowState> state;
 
-    public Input<ContactFlowState> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<ContactFlowState> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<ContactFlowTagArgs>> tags;
+      private final @Nullable Output<List<ContactFlowTagArgs>> tags;
 
-    public Input<List<ContactFlowTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<ContactFlowTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -89,20 +89,20 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<ContactFlowType> type;
+      private final @Nullable Output<ContactFlowType> type;
 
-    public Input<ContactFlowType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<ContactFlowType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public ContactFlowArgs(
-        Input<String> content,
-        @Nullable Input<String> description,
-        Input<String> instanceArn,
-        @Nullable Input<String> name,
-        @Nullable Input<ContactFlowState> state,
-        @Nullable Input<List<ContactFlowTagArgs>> tags,
-        @Nullable Input<ContactFlowType> type) {
+        Output<String> content,
+        @Nullable Output<String> description,
+        Output<String> instanceArn,
+        @Nullable Output<String> name,
+        @Nullable Output<ContactFlowState> state,
+        @Nullable Output<List<ContactFlowTagArgs>> tags,
+        @Nullable Output<ContactFlowType> type) {
         this.content = Objects.requireNonNull(content, "expected parameter 'content' to be non-null");
         this.description = description;
         this.instanceArn = Objects.requireNonNull(instanceArn, "expected parameter 'instanceArn' to be non-null");
@@ -113,13 +113,13 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContactFlowArgs() {
-        this.content = Input.empty();
-        this.description = Input.empty();
-        this.instanceArn = Input.empty();
-        this.name = Input.empty();
-        this.state = Input.empty();
-        this.tags = Input.empty();
-        this.type = Input.empty();
+        this.content = Output.empty();
+        this.description = Output.empty();
+        this.instanceArn = Output.empty();
+        this.name = Output.empty();
+        this.state = Output.empty();
+        this.tags = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -131,13 +131,13 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> content;
-        private @Nullable Input<String> description;
-        private Input<String> instanceArn;
-        private @Nullable Input<String> name;
-        private @Nullable Input<ContactFlowState> state;
-        private @Nullable Input<List<ContactFlowTagArgs>> tags;
-        private @Nullable Input<ContactFlowType> type;
+        private Output<String> content;
+        private @Nullable Output<String> description;
+        private Output<String> instanceArn;
+        private @Nullable Output<String> name;
+        private @Nullable Output<ContactFlowState> state;
+        private @Nullable Output<List<ContactFlowTagArgs>> tags;
+        private @Nullable Output<ContactFlowType> type;
 
         public Builder() {
     	      // Empty
@@ -154,73 +154,73 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder content(Input<String> content) {
+        public Builder content(Output<String> content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
         public Builder content(String content) {
-            this.content = Input.of(Objects.requireNonNull(content));
+            this.content = Output.of(Objects.requireNonNull(content));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder instanceArn(Input<String> instanceArn) {
+        public Builder instanceArn(Output<String> instanceArn) {
             this.instanceArn = Objects.requireNonNull(instanceArn);
             return this;
         }
 
         public Builder instanceArn(String instanceArn) {
-            this.instanceArn = Input.of(Objects.requireNonNull(instanceArn));
+            this.instanceArn = Output.of(Objects.requireNonNull(instanceArn));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder state(@Nullable Input<ContactFlowState> state) {
+        public Builder state(@Nullable Output<ContactFlowState> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable ContactFlowState state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<ContactFlowTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<ContactFlowTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<ContactFlowTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder type(@Nullable Input<ContactFlowType> type) {
+        public Builder type(@Nullable Output<ContactFlowType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable ContactFlowType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public ContactFlowArgs build() {

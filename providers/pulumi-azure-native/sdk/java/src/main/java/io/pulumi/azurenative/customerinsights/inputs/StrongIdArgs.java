@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class StrongIdArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<Map<String,String>> description;
+      private final @Nullable Output<Map<String,String>> description;
 
-    public Input<Map<String,String>> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<Map<String,String>> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class StrongIdArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<Map<String,String>> displayName;
+      private final @Nullable Output<Map<String,String>> displayName;
 
-    public Input<Map<String,String>> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<Map<String,String>> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -47,9 +47,9 @@ public final class StrongIdArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyPropertyNames", required=true)
-      private final Input<List<String>> keyPropertyNames;
+      private final Output<List<String>> keyPropertyNames;
 
-    public Input<List<String>> getKeyPropertyNames() {
+    public Output<List<String>> getKeyPropertyNames() {
         return this.keyPropertyNames;
     }
 
@@ -58,17 +58,17 @@ public final class StrongIdArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="strongIdName", required=true)
-      private final Input<String> strongIdName;
+      private final Output<String> strongIdName;
 
-    public Input<String> getStrongIdName() {
+    public Output<String> getStrongIdName() {
         return this.strongIdName;
     }
 
     public StrongIdArgs(
-        @Nullable Input<Map<String,String>> description,
-        @Nullable Input<Map<String,String>> displayName,
-        Input<List<String>> keyPropertyNames,
-        Input<String> strongIdName) {
+        @Nullable Output<Map<String,String>> description,
+        @Nullable Output<Map<String,String>> displayName,
+        Output<List<String>> keyPropertyNames,
+        Output<String> strongIdName) {
         this.description = description;
         this.displayName = displayName;
         this.keyPropertyNames = Objects.requireNonNull(keyPropertyNames, "expected parameter 'keyPropertyNames' to be non-null");
@@ -76,10 +76,10 @@ public final class StrongIdArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StrongIdArgs() {
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.keyPropertyNames = Input.empty();
-        this.strongIdName = Input.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.keyPropertyNames = Output.empty();
+        this.strongIdName = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class StrongIdArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> description;
-        private @Nullable Input<Map<String,String>> displayName;
-        private Input<List<String>> keyPropertyNames;
-        private Input<String> strongIdName;
+        private @Nullable Output<Map<String,String>> description;
+        private @Nullable Output<Map<String,String>> displayName;
+        private Output<List<String>> keyPropertyNames;
+        private Output<String> strongIdName;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class StrongIdArgs extends io.pulumi.resources.ResourceArgs {
     	      this.strongIdName = defaults.strongIdName;
         }
 
-        public Builder description(@Nullable Input<Map<String,String>> description) {
+        public Builder description(@Nullable Output<Map<String,String>> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable Map<String,String> description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<Map<String,String>> displayName) {
+        public Builder displayName(@Nullable Output<Map<String,String>> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable Map<String,String> displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder keyPropertyNames(Input<List<String>> keyPropertyNames) {
+        public Builder keyPropertyNames(Output<List<String>> keyPropertyNames) {
             this.keyPropertyNames = Objects.requireNonNull(keyPropertyNames);
             return this;
         }
 
         public Builder keyPropertyNames(List<String> keyPropertyNames) {
-            this.keyPropertyNames = Input.of(Objects.requireNonNull(keyPropertyNames));
+            this.keyPropertyNames = Output.of(Objects.requireNonNull(keyPropertyNames));
             return this;
         }
 
-        public Builder strongIdName(Input<String> strongIdName) {
+        public Builder strongIdName(Output<String> strongIdName) {
             this.strongIdName = Objects.requireNonNull(strongIdName);
             return this;
         }
 
         public Builder strongIdName(String strongIdName) {
-            this.strongIdName = Input.of(Objects.requireNonNull(strongIdName));
+            this.strongIdName = Output.of(Objects.requireNonNull(strongIdName));
             return this;
         }
         public StrongIdArgs build() {

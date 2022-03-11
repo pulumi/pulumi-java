@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.sagemaker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs ex
      * 
      */
     @InputImport(name="captureMode", required=true)
-      private final Input<String> captureMode;
+      private final Output<String> captureMode;
 
-    public Input<String> getCaptureMode() {
+    public Output<String> getCaptureMode() {
         return this.captureMode;
     }
 
-    public EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs(Input<String> captureMode) {
+    public EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs(Output<String> captureMode) {
         this.captureMode = Objects.requireNonNull(captureMode, "expected parameter 'captureMode' to be non-null");
     }
 
     private EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs() {
-        this.captureMode = Input.empty();
+        this.captureMode = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs ex
     }
 
     public static final class Builder {
-        private Input<String> captureMode;
+        private Output<String> captureMode;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs ex
     	      this.captureMode = defaults.captureMode;
         }
 
-        public Builder captureMode(Input<String> captureMode) {
+        public Builder captureMode(Output<String> captureMode) {
             this.captureMode = Objects.requireNonNull(captureMode);
             return this;
         }
 
         public Builder captureMode(String captureMode) {
-            this.captureMode = Input.of(Objects.requireNonNull(captureMode));
+            this.captureMode = Output.of(Objects.requireNonNull(captureMode));
             return this;
         }
         public EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs build() {

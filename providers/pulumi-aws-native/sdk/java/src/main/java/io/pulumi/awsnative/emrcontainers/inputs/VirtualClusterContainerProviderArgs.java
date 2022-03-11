@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.emrcontainers.inputs;
 
 import io.pulumi.awsnative.emrcontainers.inputs.VirtualClusterContainerInfoArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,16 +19,16 @@ public final class VirtualClusterContainerProviderArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="id", required=true)
-      private final Input<String> id;
+      private final Output<String> id;
 
-    public Input<String> getId() {
+    public Output<String> getId() {
         return this.id;
     }
 
     @InputImport(name="info", required=true)
-      private final Input<VirtualClusterContainerInfoArgs> info;
+      private final Output<VirtualClusterContainerInfoArgs> info;
 
-    public Input<VirtualClusterContainerInfoArgs> getInfo() {
+    public Output<VirtualClusterContainerInfoArgs> getInfo() {
         return this.info;
     }
 
@@ -37,25 +37,25 @@ public final class VirtualClusterContainerProviderArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public VirtualClusterContainerProviderArgs(
-        Input<String> id,
-        Input<VirtualClusterContainerInfoArgs> info,
-        Input<String> type) {
+        Output<String> id,
+        Output<VirtualClusterContainerInfoArgs> info,
+        Output<String> type) {
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
         this.info = Objects.requireNonNull(info, "expected parameter 'info' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private VirtualClusterContainerProviderArgs() {
-        this.id = Input.empty();
-        this.info = Input.empty();
-        this.type = Input.empty();
+        this.id = Output.empty();
+        this.info = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -67,9 +67,9 @@ public final class VirtualClusterContainerProviderArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<String> id;
-        private Input<VirtualClusterContainerInfoArgs> info;
-        private Input<String> type;
+        private Output<String> id;
+        private Output<VirtualClusterContainerInfoArgs> info;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -82,33 +82,33 @@ public final class VirtualClusterContainerProviderArgs extends io.pulumi.resourc
     	      this.type = defaults.type;
         }
 
-        public Builder id(Input<String> id) {
+        public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
         public Builder id(String id) {
-            this.id = Input.of(Objects.requireNonNull(id));
+            this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder info(Input<VirtualClusterContainerInfoArgs> info) {
+        public Builder info(Output<VirtualClusterContainerInfoArgs> info) {
             this.info = Objects.requireNonNull(info);
             return this;
         }
 
         public Builder info(VirtualClusterContainerInfoArgs info) {
-            this.info = Input.of(Objects.requireNonNull(info));
+            this.info = Output.of(Objects.requireNonNull(info));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public VirtualClusterContainerProviderArgs build() {

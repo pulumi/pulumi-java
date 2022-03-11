@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iotanalytics;
 import io.pulumi.awsnative.iotanalytics.inputs.ChannelRetentionPeriodArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.ChannelStorageArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.ChannelTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,38 +19,38 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     public static final ChannelArgs Empty = new ChannelArgs();
 
     @InputImport(name="channelName")
-      private final @Nullable Input<String> channelName;
+      private final @Nullable Output<String> channelName;
 
-    public Input<String> getChannelName() {
-        return this.channelName == null ? Input.empty() : this.channelName;
+    public Output<String> getChannelName() {
+        return this.channelName == null ? Output.empty() : this.channelName;
     }
 
     @InputImport(name="channelStorage")
-      private final @Nullable Input<ChannelStorageArgs> channelStorage;
+      private final @Nullable Output<ChannelStorageArgs> channelStorage;
 
-    public Input<ChannelStorageArgs> getChannelStorage() {
-        return this.channelStorage == null ? Input.empty() : this.channelStorage;
+    public Output<ChannelStorageArgs> getChannelStorage() {
+        return this.channelStorage == null ? Output.empty() : this.channelStorage;
     }
 
     @InputImport(name="retentionPeriod")
-      private final @Nullable Input<ChannelRetentionPeriodArgs> retentionPeriod;
+      private final @Nullable Output<ChannelRetentionPeriodArgs> retentionPeriod;
 
-    public Input<ChannelRetentionPeriodArgs> getRetentionPeriod() {
-        return this.retentionPeriod == null ? Input.empty() : this.retentionPeriod;
+    public Output<ChannelRetentionPeriodArgs> getRetentionPeriod() {
+        return this.retentionPeriod == null ? Output.empty() : this.retentionPeriod;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<List<ChannelTagArgs>> tags;
+      private final @Nullable Output<List<ChannelTagArgs>> tags;
 
-    public Input<List<ChannelTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<ChannelTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ChannelArgs(
-        @Nullable Input<String> channelName,
-        @Nullable Input<ChannelStorageArgs> channelStorage,
-        @Nullable Input<ChannelRetentionPeriodArgs> retentionPeriod,
-        @Nullable Input<List<ChannelTagArgs>> tags) {
+        @Nullable Output<String> channelName,
+        @Nullable Output<ChannelStorageArgs> channelStorage,
+        @Nullable Output<ChannelRetentionPeriodArgs> retentionPeriod,
+        @Nullable Output<List<ChannelTagArgs>> tags) {
         this.channelName = channelName;
         this.channelStorage = channelStorage;
         this.retentionPeriod = retentionPeriod;
@@ -58,10 +58,10 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ChannelArgs() {
-        this.channelName = Input.empty();
-        this.channelStorage = Input.empty();
-        this.retentionPeriod = Input.empty();
-        this.tags = Input.empty();
+        this.channelName = Output.empty();
+        this.channelStorage = Output.empty();
+        this.retentionPeriod = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,10 +73,10 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> channelName;
-        private @Nullable Input<ChannelStorageArgs> channelStorage;
-        private @Nullable Input<ChannelRetentionPeriodArgs> retentionPeriod;
-        private @Nullable Input<List<ChannelTagArgs>> tags;
+        private @Nullable Output<String> channelName;
+        private @Nullable Output<ChannelStorageArgs> channelStorage;
+        private @Nullable Output<ChannelRetentionPeriodArgs> retentionPeriod;
+        private @Nullable Output<List<ChannelTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -90,43 +90,43 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder channelName(@Nullable Input<String> channelName) {
+        public Builder channelName(@Nullable Output<String> channelName) {
             this.channelName = channelName;
             return this;
         }
 
         public Builder channelName(@Nullable String channelName) {
-            this.channelName = Input.ofNullable(channelName);
+            this.channelName = Output.ofNullable(channelName);
             return this;
         }
 
-        public Builder channelStorage(@Nullable Input<ChannelStorageArgs> channelStorage) {
+        public Builder channelStorage(@Nullable Output<ChannelStorageArgs> channelStorage) {
             this.channelStorage = channelStorage;
             return this;
         }
 
         public Builder channelStorage(@Nullable ChannelStorageArgs channelStorage) {
-            this.channelStorage = Input.ofNullable(channelStorage);
+            this.channelStorage = Output.ofNullable(channelStorage);
             return this;
         }
 
-        public Builder retentionPeriod(@Nullable Input<ChannelRetentionPeriodArgs> retentionPeriod) {
+        public Builder retentionPeriod(@Nullable Output<ChannelRetentionPeriodArgs> retentionPeriod) {
             this.retentionPeriod = retentionPeriod;
             return this;
         }
 
         public Builder retentionPeriod(@Nullable ChannelRetentionPeriodArgs retentionPeriod) {
-            this.retentionPeriod = Input.ofNullable(retentionPeriod);
+            this.retentionPeriod = Output.ofNullable(retentionPeriod);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<ChannelTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<ChannelTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<ChannelTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ChannelArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class VMwareV2FabricCreationInputArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="instanceType")
-      private final @Nullable Input<String> instanceType;
+      private final @Nullable Output<String> instanceType;
 
-    public Input<String> getInstanceType() {
-        return this.instanceType == null ? Input.empty() : this.instanceType;
+    public Output<String> getInstanceType() {
+        return this.instanceType == null ? Output.empty() : this.instanceType;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class VMwareV2FabricCreationInputArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="migrationSolutionId", required=true)
-      private final Input<String> migrationSolutionId;
+      private final Output<String> migrationSolutionId;
 
-    public Input<String> getMigrationSolutionId() {
+    public Output<String> getMigrationSolutionId() {
         return this.migrationSolutionId;
     }
 
@@ -46,25 +46,25 @@ public final class VMwareV2FabricCreationInputArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="vmwareSiteId", required=true)
-      private final Input<String> vmwareSiteId;
+      private final Output<String> vmwareSiteId;
 
-    public Input<String> getVmwareSiteId() {
+    public Output<String> getVmwareSiteId() {
         return this.vmwareSiteId;
     }
 
     public VMwareV2FabricCreationInputArgs(
-        @Nullable Input<String> instanceType,
-        Input<String> migrationSolutionId,
-        Input<String> vmwareSiteId) {
+        @Nullable Output<String> instanceType,
+        Output<String> migrationSolutionId,
+        Output<String> vmwareSiteId) {
         this.instanceType = instanceType;
         this.migrationSolutionId = Objects.requireNonNull(migrationSolutionId, "expected parameter 'migrationSolutionId' to be non-null");
         this.vmwareSiteId = Objects.requireNonNull(vmwareSiteId, "expected parameter 'vmwareSiteId' to be non-null");
     }
 
     private VMwareV2FabricCreationInputArgs() {
-        this.instanceType = Input.empty();
-        this.migrationSolutionId = Input.empty();
-        this.vmwareSiteId = Input.empty();
+        this.instanceType = Output.empty();
+        this.migrationSolutionId = Output.empty();
+        this.vmwareSiteId = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class VMwareV2FabricCreationInputArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> instanceType;
-        private Input<String> migrationSolutionId;
-        private Input<String> vmwareSiteId;
+        private @Nullable Output<String> instanceType;
+        private Output<String> migrationSolutionId;
+        private Output<String> vmwareSiteId;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class VMwareV2FabricCreationInputArgs extends io.pulumi.resources.R
     	      this.vmwareSiteId = defaults.vmwareSiteId;
         }
 
-        public Builder instanceType(@Nullable Input<String> instanceType) {
+        public Builder instanceType(@Nullable Output<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Input.ofNullable(instanceType);
+            this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
 
-        public Builder migrationSolutionId(Input<String> migrationSolutionId) {
+        public Builder migrationSolutionId(Output<String> migrationSolutionId) {
             this.migrationSolutionId = Objects.requireNonNull(migrationSolutionId);
             return this;
         }
 
         public Builder migrationSolutionId(String migrationSolutionId) {
-            this.migrationSolutionId = Input.of(Objects.requireNonNull(migrationSolutionId));
+            this.migrationSolutionId = Output.of(Objects.requireNonNull(migrationSolutionId));
             return this;
         }
 
-        public Builder vmwareSiteId(Input<String> vmwareSiteId) {
+        public Builder vmwareSiteId(Output<String> vmwareSiteId) {
             this.vmwareSiteId = Objects.requireNonNull(vmwareSiteId);
             return this;
         }
 
         public Builder vmwareSiteId(String vmwareSiteId) {
-            this.vmwareSiteId = Input.of(Objects.requireNonNull(vmwareSiteId));
+            this.vmwareSiteId = Output.of(Objects.requireNonNull(vmwareSiteId));
             return this;
         }
         public VMwareV2FabricCreationInputArgs build() {

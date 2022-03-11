@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.budgets.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class BudgetActionSubscriberGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="address", required=true)
-      private final Input<String> address;
+      private final Output<String> address;
 
-    public Input<String> getAddress() {
+    public Output<String> getAddress() {
         return this.address;
     }
 
@@ -29,22 +29,22 @@ public final class BudgetActionSubscriberGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="subscriptionType", required=true)
-      private final Input<String> subscriptionType;
+      private final Output<String> subscriptionType;
 
-    public Input<String> getSubscriptionType() {
+    public Output<String> getSubscriptionType() {
         return this.subscriptionType;
     }
 
     public BudgetActionSubscriberGetArgs(
-        Input<String> address,
-        Input<String> subscriptionType) {
+        Output<String> address,
+        Output<String> subscriptionType) {
         this.address = Objects.requireNonNull(address, "expected parameter 'address' to be non-null");
         this.subscriptionType = Objects.requireNonNull(subscriptionType, "expected parameter 'subscriptionType' to be non-null");
     }
 
     private BudgetActionSubscriberGetArgs() {
-        this.address = Input.empty();
-        this.subscriptionType = Input.empty();
+        this.address = Output.empty();
+        this.subscriptionType = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class BudgetActionSubscriberGetArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> address;
-        private Input<String> subscriptionType;
+        private Output<String> address;
+        private Output<String> subscriptionType;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class BudgetActionSubscriberGetArgs extends io.pulumi.resources.Res
     	      this.subscriptionType = defaults.subscriptionType;
         }
 
-        public Builder address(Input<String> address) {
+        public Builder address(Output<String> address) {
             this.address = Objects.requireNonNull(address);
             return this;
         }
 
         public Builder address(String address) {
-            this.address = Input.of(Objects.requireNonNull(address));
+            this.address = Output.of(Objects.requireNonNull(address));
             return this;
         }
 
-        public Builder subscriptionType(Input<String> subscriptionType) {
+        public Builder subscriptionType(Output<String> subscriptionType) {
             this.subscriptionType = Objects.requireNonNull(subscriptionType);
             return this;
         }
 
         public Builder subscriptionType(String subscriptionType) {
-            this.subscriptionType = Input.of(Objects.requireNonNull(subscriptionType));
+            this.subscriptionType = Output.of(Objects.requireNonNull(subscriptionType));
             return this;
         }
         public BudgetActionSubscriberGetArgs build() {

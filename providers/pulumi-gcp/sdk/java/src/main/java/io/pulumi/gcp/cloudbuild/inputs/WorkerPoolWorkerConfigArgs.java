@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudbuild.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -21,10 +21,10 @@ public final class WorkerPoolWorkerConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="diskSizeGb")
-      private final @Nullable Input<Integer> diskSizeGb;
+      private final @Nullable Output<Integer> diskSizeGb;
 
-    public Input<Integer> getDiskSizeGb() {
-        return this.diskSizeGb == null ? Input.empty() : this.diskSizeGb;
+    public Output<Integer> getDiskSizeGb() {
+        return this.diskSizeGb == null ? Output.empty() : this.diskSizeGb;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class WorkerPoolWorkerConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="machineType")
-      private final @Nullable Input<String> machineType;
+      private final @Nullable Output<String> machineType;
 
-    public Input<String> getMachineType() {
-        return this.machineType == null ? Input.empty() : this.machineType;
+    public Output<String> getMachineType() {
+        return this.machineType == null ? Output.empty() : this.machineType;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class WorkerPoolWorkerConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="noExternalIp")
-      private final @Nullable Input<Boolean> noExternalIp;
+      private final @Nullable Output<Boolean> noExternalIp;
 
-    public Input<Boolean> getNoExternalIp() {
-        return this.noExternalIp == null ? Input.empty() : this.noExternalIp;
+    public Output<Boolean> getNoExternalIp() {
+        return this.noExternalIp == null ? Output.empty() : this.noExternalIp;
     }
 
     public WorkerPoolWorkerConfigArgs(
-        @Nullable Input<Integer> diskSizeGb,
-        @Nullable Input<String> machineType,
-        @Nullable Input<Boolean> noExternalIp) {
+        @Nullable Output<Integer> diskSizeGb,
+        @Nullable Output<String> machineType,
+        @Nullable Output<Boolean> noExternalIp) {
         this.diskSizeGb = diskSizeGb;
         this.machineType = machineType;
         this.noExternalIp = noExternalIp;
     }
 
     private WorkerPoolWorkerConfigArgs() {
-        this.diskSizeGb = Input.empty();
-        this.machineType = Input.empty();
-        this.noExternalIp = Input.empty();
+        this.diskSizeGb = Output.empty();
+        this.machineType = Output.empty();
+        this.noExternalIp = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class WorkerPoolWorkerConfigArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> diskSizeGb;
-        private @Nullable Input<String> machineType;
-        private @Nullable Input<Boolean> noExternalIp;
+        private @Nullable Output<Integer> diskSizeGb;
+        private @Nullable Output<String> machineType;
+        private @Nullable Output<Boolean> noExternalIp;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class WorkerPoolWorkerConfigArgs extends io.pulumi.resources.Resour
     	      this.noExternalIp = defaults.noExternalIp;
         }
 
-        public Builder diskSizeGb(@Nullable Input<Integer> diskSizeGb) {
+        public Builder diskSizeGb(@Nullable Output<Integer> diskSizeGb) {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
 
         public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
-            this.diskSizeGb = Input.ofNullable(diskSizeGb);
+            this.diskSizeGb = Output.ofNullable(diskSizeGb);
             return this;
         }
 
-        public Builder machineType(@Nullable Input<String> machineType) {
+        public Builder machineType(@Nullable Output<String> machineType) {
             this.machineType = machineType;
             return this;
         }
 
         public Builder machineType(@Nullable String machineType) {
-            this.machineType = Input.ofNullable(machineType);
+            this.machineType = Output.ofNullable(machineType);
             return this;
         }
 
-        public Builder noExternalIp(@Nullable Input<Boolean> noExternalIp) {
+        public Builder noExternalIp(@Nullable Output<Boolean> noExternalIp) {
             this.noExternalIp = noExternalIp;
             return this;
         }
 
         public Builder noExternalIp(@Nullable Boolean noExternalIp) {
-            this.noExternalIp = Input.ofNullable(noExternalIp);
+            this.noExternalIp = Output.ofNullable(noExternalIp);
             return this;
         }
         public WorkerPoolWorkerConfigArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.route53.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class ResolverFirewallRuleState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="action")
-      private final @Nullable Input<String> action;
+      private final @Nullable Output<String> action;
 
-    public Input<String> getAction() {
-        return this.action == null ? Input.empty() : this.action;
+    public Output<String> getAction() {
+        return this.action == null ? Output.empty() : this.action;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ResolverFirewallRuleState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="blockOverrideDnsType")
-      private final @Nullable Input<String> blockOverrideDnsType;
+      private final @Nullable Output<String> blockOverrideDnsType;
 
-    public Input<String> getBlockOverrideDnsType() {
-        return this.blockOverrideDnsType == null ? Input.empty() : this.blockOverrideDnsType;
+    public Output<String> getBlockOverrideDnsType() {
+        return this.blockOverrideDnsType == null ? Output.empty() : this.blockOverrideDnsType;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ResolverFirewallRuleState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="blockOverrideDomain")
-      private final @Nullable Input<String> blockOverrideDomain;
+      private final @Nullable Output<String> blockOverrideDomain;
 
-    public Input<String> getBlockOverrideDomain() {
-        return this.blockOverrideDomain == null ? Input.empty() : this.blockOverrideDomain;
+    public Output<String> getBlockOverrideDomain() {
+        return this.blockOverrideDomain == null ? Output.empty() : this.blockOverrideDomain;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ResolverFirewallRuleState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="blockOverrideTtl")
-      private final @Nullable Input<Integer> blockOverrideTtl;
+      private final @Nullable Output<Integer> blockOverrideTtl;
 
-    public Input<Integer> getBlockOverrideTtl() {
-        return this.blockOverrideTtl == null ? Input.empty() : this.blockOverrideTtl;
+    public Output<Integer> getBlockOverrideTtl() {
+        return this.blockOverrideTtl == null ? Output.empty() : this.blockOverrideTtl;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ResolverFirewallRuleState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="blockResponse")
-      private final @Nullable Input<String> blockResponse;
+      private final @Nullable Output<String> blockResponse;
 
-    public Input<String> getBlockResponse() {
-        return this.blockResponse == null ? Input.empty() : this.blockResponse;
+    public Output<String> getBlockResponse() {
+        return this.blockResponse == null ? Output.empty() : this.blockResponse;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class ResolverFirewallRuleState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="firewallDomainListId")
-      private final @Nullable Input<String> firewallDomainListId;
+      private final @Nullable Output<String> firewallDomainListId;
 
-    public Input<String> getFirewallDomainListId() {
-        return this.firewallDomainListId == null ? Input.empty() : this.firewallDomainListId;
+    public Output<String> getFirewallDomainListId() {
+        return this.firewallDomainListId == null ? Output.empty() : this.firewallDomainListId;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class ResolverFirewallRuleState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="firewallRuleGroupId")
-      private final @Nullable Input<String> firewallRuleGroupId;
+      private final @Nullable Output<String> firewallRuleGroupId;
 
-    public Input<String> getFirewallRuleGroupId() {
-        return this.firewallRuleGroupId == null ? Input.empty() : this.firewallRuleGroupId;
+    public Output<String> getFirewallRuleGroupId() {
+        return this.firewallRuleGroupId == null ? Output.empty() : this.firewallRuleGroupId;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class ResolverFirewallRuleState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -108,22 +108,22 @@ public final class ResolverFirewallRuleState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="priority")
-      private final @Nullable Input<Integer> priority;
+      private final @Nullable Output<Integer> priority;
 
-    public Input<Integer> getPriority() {
-        return this.priority == null ? Input.empty() : this.priority;
+    public Output<Integer> getPriority() {
+        return this.priority == null ? Output.empty() : this.priority;
     }
 
     public ResolverFirewallRuleState(
-        @Nullable Input<String> action,
-        @Nullable Input<String> blockOverrideDnsType,
-        @Nullable Input<String> blockOverrideDomain,
-        @Nullable Input<Integer> blockOverrideTtl,
-        @Nullable Input<String> blockResponse,
-        @Nullable Input<String> firewallDomainListId,
-        @Nullable Input<String> firewallRuleGroupId,
-        @Nullable Input<String> name,
-        @Nullable Input<Integer> priority) {
+        @Nullable Output<String> action,
+        @Nullable Output<String> blockOverrideDnsType,
+        @Nullable Output<String> blockOverrideDomain,
+        @Nullable Output<Integer> blockOverrideTtl,
+        @Nullable Output<String> blockResponse,
+        @Nullable Output<String> firewallDomainListId,
+        @Nullable Output<String> firewallRuleGroupId,
+        @Nullable Output<String> name,
+        @Nullable Output<Integer> priority) {
         this.action = action;
         this.blockOverrideDnsType = blockOverrideDnsType;
         this.blockOverrideDomain = blockOverrideDomain;
@@ -136,15 +136,15 @@ public final class ResolverFirewallRuleState extends io.pulumi.resources.Resourc
     }
 
     private ResolverFirewallRuleState() {
-        this.action = Input.empty();
-        this.blockOverrideDnsType = Input.empty();
-        this.blockOverrideDomain = Input.empty();
-        this.blockOverrideTtl = Input.empty();
-        this.blockResponse = Input.empty();
-        this.firewallDomainListId = Input.empty();
-        this.firewallRuleGroupId = Input.empty();
-        this.name = Input.empty();
-        this.priority = Input.empty();
+        this.action = Output.empty();
+        this.blockOverrideDnsType = Output.empty();
+        this.blockOverrideDomain = Output.empty();
+        this.blockOverrideTtl = Output.empty();
+        this.blockResponse = Output.empty();
+        this.firewallDomainListId = Output.empty();
+        this.firewallRuleGroupId = Output.empty();
+        this.name = Output.empty();
+        this.priority = Output.empty();
     }
 
     public static Builder builder() {
@@ -156,15 +156,15 @@ public final class ResolverFirewallRuleState extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> action;
-        private @Nullable Input<String> blockOverrideDnsType;
-        private @Nullable Input<String> blockOverrideDomain;
-        private @Nullable Input<Integer> blockOverrideTtl;
-        private @Nullable Input<String> blockResponse;
-        private @Nullable Input<String> firewallDomainListId;
-        private @Nullable Input<String> firewallRuleGroupId;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Integer> priority;
+        private @Nullable Output<String> action;
+        private @Nullable Output<String> blockOverrideDnsType;
+        private @Nullable Output<String> blockOverrideDomain;
+        private @Nullable Output<Integer> blockOverrideTtl;
+        private @Nullable Output<String> blockResponse;
+        private @Nullable Output<String> firewallDomainListId;
+        private @Nullable Output<String> firewallRuleGroupId;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Integer> priority;
 
         public Builder() {
     	      // Empty
@@ -183,93 +183,93 @@ public final class ResolverFirewallRuleState extends io.pulumi.resources.Resourc
     	      this.priority = defaults.priority;
         }
 
-        public Builder action(@Nullable Input<String> action) {
+        public Builder action(@Nullable Output<String> action) {
             this.action = action;
             return this;
         }
 
         public Builder action(@Nullable String action) {
-            this.action = Input.ofNullable(action);
+            this.action = Output.ofNullable(action);
             return this;
         }
 
-        public Builder blockOverrideDnsType(@Nullable Input<String> blockOverrideDnsType) {
+        public Builder blockOverrideDnsType(@Nullable Output<String> blockOverrideDnsType) {
             this.blockOverrideDnsType = blockOverrideDnsType;
             return this;
         }
 
         public Builder blockOverrideDnsType(@Nullable String blockOverrideDnsType) {
-            this.blockOverrideDnsType = Input.ofNullable(blockOverrideDnsType);
+            this.blockOverrideDnsType = Output.ofNullable(blockOverrideDnsType);
             return this;
         }
 
-        public Builder blockOverrideDomain(@Nullable Input<String> blockOverrideDomain) {
+        public Builder blockOverrideDomain(@Nullable Output<String> blockOverrideDomain) {
             this.blockOverrideDomain = blockOverrideDomain;
             return this;
         }
 
         public Builder blockOverrideDomain(@Nullable String blockOverrideDomain) {
-            this.blockOverrideDomain = Input.ofNullable(blockOverrideDomain);
+            this.blockOverrideDomain = Output.ofNullable(blockOverrideDomain);
             return this;
         }
 
-        public Builder blockOverrideTtl(@Nullable Input<Integer> blockOverrideTtl) {
+        public Builder blockOverrideTtl(@Nullable Output<Integer> blockOverrideTtl) {
             this.blockOverrideTtl = blockOverrideTtl;
             return this;
         }
 
         public Builder blockOverrideTtl(@Nullable Integer blockOverrideTtl) {
-            this.blockOverrideTtl = Input.ofNullable(blockOverrideTtl);
+            this.blockOverrideTtl = Output.ofNullable(blockOverrideTtl);
             return this;
         }
 
-        public Builder blockResponse(@Nullable Input<String> blockResponse) {
+        public Builder blockResponse(@Nullable Output<String> blockResponse) {
             this.blockResponse = blockResponse;
             return this;
         }
 
         public Builder blockResponse(@Nullable String blockResponse) {
-            this.blockResponse = Input.ofNullable(blockResponse);
+            this.blockResponse = Output.ofNullable(blockResponse);
             return this;
         }
 
-        public Builder firewallDomainListId(@Nullable Input<String> firewallDomainListId) {
+        public Builder firewallDomainListId(@Nullable Output<String> firewallDomainListId) {
             this.firewallDomainListId = firewallDomainListId;
             return this;
         }
 
         public Builder firewallDomainListId(@Nullable String firewallDomainListId) {
-            this.firewallDomainListId = Input.ofNullable(firewallDomainListId);
+            this.firewallDomainListId = Output.ofNullable(firewallDomainListId);
             return this;
         }
 
-        public Builder firewallRuleGroupId(@Nullable Input<String> firewallRuleGroupId) {
+        public Builder firewallRuleGroupId(@Nullable Output<String> firewallRuleGroupId) {
             this.firewallRuleGroupId = firewallRuleGroupId;
             return this;
         }
 
         public Builder firewallRuleGroupId(@Nullable String firewallRuleGroupId) {
-            this.firewallRuleGroupId = Input.ofNullable(firewallRuleGroupId);
+            this.firewallRuleGroupId = Output.ofNullable(firewallRuleGroupId);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder priority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Input.ofNullable(priority);
+            this.priority = Output.ofNullable(priority);
             return this;
         }
         public ResolverFirewallRuleState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class ExecActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="command")
-      private final @Nullable Input<List<String>> command;
+      private final @Nullable Output<List<String>> command;
 
-    public Input<List<String>> getCommand() {
-        return this.command == null ? Input.empty() : this.command;
+    public Output<List<String>> getCommand() {
+        return this.command == null ? Output.empty() : this.command;
     }
 
-    public ExecActionArgs(@Nullable Input<List<String>> command) {
+    public ExecActionArgs(@Nullable Output<List<String>> command) {
         this.command = command;
     }
 
     private ExecActionArgs() {
-        this.command = Input.empty();
+        this.command = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class ExecActionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> command;
+        private @Nullable Output<List<String>> command;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class ExecActionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.command = defaults.command;
         }
 
-        public Builder command(@Nullable Input<List<String>> command) {
+        public Builder command(@Nullable Output<List<String>> command) {
             this.command = command;
             return this;
         }
 
         public Builder command(@Nullable List<String> command) {
-            this.command = Input.ofNullable(command);
+            this.command = Output.ofNullable(command);
             return this;
         }
         public ExecActionArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudtasks_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
@@ -24,10 +24,10 @@ public final class RateLimitsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxConcurrentDispatches")
-      private final @Nullable Input<Integer> maxConcurrentDispatches;
+      private final @Nullable Output<Integer> maxConcurrentDispatches;
 
-    public Input<Integer> getMaxConcurrentDispatches() {
-        return this.maxConcurrentDispatches == null ? Input.empty() : this.maxConcurrentDispatches;
+    public Output<Integer> getMaxConcurrentDispatches() {
+        return this.maxConcurrentDispatches == null ? Output.empty() : this.maxConcurrentDispatches;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class RateLimitsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxDispatchesPerSecond")
-      private final @Nullable Input<Double> maxDispatchesPerSecond;
+      private final @Nullable Output<Double> maxDispatchesPerSecond;
 
-    public Input<Double> getMaxDispatchesPerSecond() {
-        return this.maxDispatchesPerSecond == null ? Input.empty() : this.maxDispatchesPerSecond;
+    public Output<Double> getMaxDispatchesPerSecond() {
+        return this.maxDispatchesPerSecond == null ? Output.empty() : this.maxDispatchesPerSecond;
     }
 
     public RateLimitsArgs(
-        @Nullable Input<Integer> maxConcurrentDispatches,
-        @Nullable Input<Double> maxDispatchesPerSecond) {
+        @Nullable Output<Integer> maxConcurrentDispatches,
+        @Nullable Output<Double> maxDispatchesPerSecond) {
         this.maxConcurrentDispatches = maxConcurrentDispatches;
         this.maxDispatchesPerSecond = maxDispatchesPerSecond;
     }
 
     private RateLimitsArgs() {
-        this.maxConcurrentDispatches = Input.empty();
-        this.maxDispatchesPerSecond = Input.empty();
+        this.maxConcurrentDispatches = Output.empty();
+        this.maxDispatchesPerSecond = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class RateLimitsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> maxConcurrentDispatches;
-        private @Nullable Input<Double> maxDispatchesPerSecond;
+        private @Nullable Output<Integer> maxConcurrentDispatches;
+        private @Nullable Output<Double> maxDispatchesPerSecond;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class RateLimitsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.maxDispatchesPerSecond = defaults.maxDispatchesPerSecond;
         }
 
-        public Builder maxConcurrentDispatches(@Nullable Input<Integer> maxConcurrentDispatches) {
+        public Builder maxConcurrentDispatches(@Nullable Output<Integer> maxConcurrentDispatches) {
             this.maxConcurrentDispatches = maxConcurrentDispatches;
             return this;
         }
 
         public Builder maxConcurrentDispatches(@Nullable Integer maxConcurrentDispatches) {
-            this.maxConcurrentDispatches = Input.ofNullable(maxConcurrentDispatches);
+            this.maxConcurrentDispatches = Output.ofNullable(maxConcurrentDispatches);
             return this;
         }
 
-        public Builder maxDispatchesPerSecond(@Nullable Input<Double> maxDispatchesPerSecond) {
+        public Builder maxDispatchesPerSecond(@Nullable Output<Double> maxDispatchesPerSecond) {
             this.maxDispatchesPerSecond = maxDispatchesPerSecond;
             return this;
         }
 
         public Builder maxDispatchesPerSecond(@Nullable Double maxDispatchesPerSecond) {
-            this.maxDispatchesPerSecond = Input.ofNullable(maxDispatchesPerSecond);
+            this.maxDispatchesPerSecond = Output.ofNullable(maxDispatchesPerSecond);
             return this;
         }
         public RateLimitsArgs build() {

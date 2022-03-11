@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.metastore_v1beta.inputs.ConsumerArgs;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="consumers")
-      private final @Nullable Input<List<ConsumerArgs>> consumers;
+      private final @Nullable Output<List<ConsumerArgs>> consumers;
 
-    public Input<List<ConsumerArgs>> getConsumers() {
-        return this.consumers == null ? Input.empty() : this.consumers;
+    public Output<List<ConsumerArgs>> getConsumers() {
+        return this.consumers == null ? Output.empty() : this.consumers;
     }
 
-    public NetworkConfigArgs(@Nullable Input<List<ConsumerArgs>> consumers) {
+    public NetworkConfigArgs(@Nullable Output<List<ConsumerArgs>> consumers) {
         this.consumers = consumers;
     }
 
     private NetworkConfigArgs() {
-        this.consumers = Input.empty();
+        this.consumers = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ConsumerArgs>> consumers;
+        private @Nullable Output<List<ConsumerArgs>> consumers;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.consumers = defaults.consumers;
         }
 
-        public Builder consumers(@Nullable Input<List<ConsumerArgs>> consumers) {
+        public Builder consumers(@Nullable Output<List<ConsumerArgs>> consumers) {
             this.consumers = consumers;
             return this;
         }
 
         public Builder consumers(@Nullable List<ConsumerArgs> consumers) {
-            this.consumers = Input.ofNullable(consumers);
+            this.consumers = Output.ofNullable(consumers);
             return this;
         }
         public NetworkConfigArgs build() {

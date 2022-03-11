@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.autoscaling_v1.inputs.CrossVersionObjectReferenceArgs;
 import java.lang.Integer;
@@ -24,9 +24,9 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="maxReplicas", required=true)
-      private final Input<Integer> maxReplicas;
+      private final Output<Integer> maxReplicas;
 
-    public Input<Integer> getMaxReplicas() {
+    public Output<Integer> getMaxReplicas() {
         return this.maxReplicas;
     }
 
@@ -35,10 +35,10 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="minReplicas")
-      private final @Nullable Input<Integer> minReplicas;
+      private final @Nullable Output<Integer> minReplicas;
 
-    public Input<Integer> getMinReplicas() {
-        return this.minReplicas == null ? Input.empty() : this.minReplicas;
+    public Output<Integer> getMinReplicas() {
+        return this.minReplicas == null ? Output.empty() : this.minReplicas;
     }
 
     /**
@@ -46,9 +46,9 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="scaleTargetRef", required=true)
-      private final Input<CrossVersionObjectReferenceArgs> scaleTargetRef;
+      private final Output<CrossVersionObjectReferenceArgs> scaleTargetRef;
 
-    public Input<CrossVersionObjectReferenceArgs> getScaleTargetRef() {
+    public Output<CrossVersionObjectReferenceArgs> getScaleTargetRef() {
         return this.scaleTargetRef;
     }
 
@@ -57,17 +57,17 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="targetCPUUtilizationPercentage")
-      private final @Nullable Input<Integer> targetCPUUtilizationPercentage;
+      private final @Nullable Output<Integer> targetCPUUtilizationPercentage;
 
-    public Input<Integer> getTargetCPUUtilizationPercentage() {
-        return this.targetCPUUtilizationPercentage == null ? Input.empty() : this.targetCPUUtilizationPercentage;
+    public Output<Integer> getTargetCPUUtilizationPercentage() {
+        return this.targetCPUUtilizationPercentage == null ? Output.empty() : this.targetCPUUtilizationPercentage;
     }
 
     public HorizontalPodAutoscalerSpecArgs(
-        Input<Integer> maxReplicas,
-        @Nullable Input<Integer> minReplicas,
-        Input<CrossVersionObjectReferenceArgs> scaleTargetRef,
-        @Nullable Input<Integer> targetCPUUtilizationPercentage) {
+        Output<Integer> maxReplicas,
+        @Nullable Output<Integer> minReplicas,
+        Output<CrossVersionObjectReferenceArgs> scaleTargetRef,
+        @Nullable Output<Integer> targetCPUUtilizationPercentage) {
         this.maxReplicas = Objects.requireNonNull(maxReplicas, "expected parameter 'maxReplicas' to be non-null");
         this.minReplicas = minReplicas;
         this.scaleTargetRef = Objects.requireNonNull(scaleTargetRef, "expected parameter 'scaleTargetRef' to be non-null");
@@ -75,10 +75,10 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
     }
 
     private HorizontalPodAutoscalerSpecArgs() {
-        this.maxReplicas = Input.empty();
-        this.minReplicas = Input.empty();
-        this.scaleTargetRef = Input.empty();
-        this.targetCPUUtilizationPercentage = Input.empty();
+        this.maxReplicas = Output.empty();
+        this.minReplicas = Output.empty();
+        this.scaleTargetRef = Output.empty();
+        this.targetCPUUtilizationPercentage = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<Integer> maxReplicas;
-        private @Nullable Input<Integer> minReplicas;
-        private Input<CrossVersionObjectReferenceArgs> scaleTargetRef;
-        private @Nullable Input<Integer> targetCPUUtilizationPercentage;
+        private Output<Integer> maxReplicas;
+        private @Nullable Output<Integer> minReplicas;
+        private Output<CrossVersionObjectReferenceArgs> scaleTargetRef;
+        private @Nullable Output<Integer> targetCPUUtilizationPercentage;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
     	      this.targetCPUUtilizationPercentage = defaults.targetCPUUtilizationPercentage;
         }
 
-        public Builder maxReplicas(Input<Integer> maxReplicas) {
+        public Builder maxReplicas(Output<Integer> maxReplicas) {
             this.maxReplicas = Objects.requireNonNull(maxReplicas);
             return this;
         }
 
         public Builder maxReplicas(Integer maxReplicas) {
-            this.maxReplicas = Input.of(Objects.requireNonNull(maxReplicas));
+            this.maxReplicas = Output.of(Objects.requireNonNull(maxReplicas));
             return this;
         }
 
-        public Builder minReplicas(@Nullable Input<Integer> minReplicas) {
+        public Builder minReplicas(@Nullable Output<Integer> minReplicas) {
             this.minReplicas = minReplicas;
             return this;
         }
 
         public Builder minReplicas(@Nullable Integer minReplicas) {
-            this.minReplicas = Input.ofNullable(minReplicas);
+            this.minReplicas = Output.ofNullable(minReplicas);
             return this;
         }
 
-        public Builder scaleTargetRef(Input<CrossVersionObjectReferenceArgs> scaleTargetRef) {
+        public Builder scaleTargetRef(Output<CrossVersionObjectReferenceArgs> scaleTargetRef) {
             this.scaleTargetRef = Objects.requireNonNull(scaleTargetRef);
             return this;
         }
 
         public Builder scaleTargetRef(CrossVersionObjectReferenceArgs scaleTargetRef) {
-            this.scaleTargetRef = Input.of(Objects.requireNonNull(scaleTargetRef));
+            this.scaleTargetRef = Output.of(Objects.requireNonNull(scaleTargetRef));
             return this;
         }
 
-        public Builder targetCPUUtilizationPercentage(@Nullable Input<Integer> targetCPUUtilizationPercentage) {
+        public Builder targetCPUUtilizationPercentage(@Nullable Output<Integer> targetCPUUtilizationPercentage) {
             this.targetCPUUtilizationPercentage = targetCPUUtilizationPercentage;
             return this;
         }
 
         public Builder targetCPUUtilizationPercentage(@Nullable Integer targetCPUUtilizationPercentage) {
-            this.targetCPUUtilizationPercentage = Input.ofNullable(targetCPUUtilizationPercentage);
+            this.targetCPUUtilizationPercentage = Output.ofNullable(targetCPUUtilizationPercentage);
             return this;
         }
         public HorizontalPodAutoscalerSpecArgs build() {

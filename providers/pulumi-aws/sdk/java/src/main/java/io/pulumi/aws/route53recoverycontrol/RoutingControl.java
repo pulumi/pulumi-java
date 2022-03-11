@@ -6,7 +6,6 @@ package io.pulumi.aws.route53recoverycontrol;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.route53recoverycontrol.RoutingControlArgs;
 import io.pulumi.aws.route53recoverycontrol.inputs.RoutingControlState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -138,14 +137,14 @@ public class RoutingControl extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RoutingControl(String name, RoutingControlArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:route53recoverycontrol/routingControl:RoutingControl", name, args == null ? RoutingControlArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:route53recoverycontrol/routingControl:RoutingControl", name, args == null ? RoutingControlArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private RoutingControl(String name, Input<String> id, @Nullable RoutingControlState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private RoutingControl(String name, Output<String> id, @Nullable RoutingControlState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:route53recoverycontrol/routingControl:RoutingControl", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -161,7 +160,7 @@ public class RoutingControl extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RoutingControl get(String name, Input<String> id, @Nullable RoutingControlState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static RoutingControl get(String name, Output<String> id, @Nullable RoutingControlState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RoutingControl(name, id, state, options);
     }
 }

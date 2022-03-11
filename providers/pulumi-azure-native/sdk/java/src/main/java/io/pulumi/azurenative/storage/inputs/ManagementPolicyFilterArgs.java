@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.inputs.TagFilterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class ManagementPolicyFilterArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="blobIndexMatch")
-      private final @Nullable Input<List<TagFilterArgs>> blobIndexMatch;
+      private final @Nullable Output<List<TagFilterArgs>> blobIndexMatch;
 
-    public Input<List<TagFilterArgs>> getBlobIndexMatch() {
-        return this.blobIndexMatch == null ? Input.empty() : this.blobIndexMatch;
+    public Output<List<TagFilterArgs>> getBlobIndexMatch() {
+        return this.blobIndexMatch == null ? Output.empty() : this.blobIndexMatch;
     }
 
     /**
@@ -36,9 +36,9 @@ public final class ManagementPolicyFilterArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="blobTypes", required=true)
-      private final Input<List<String>> blobTypes;
+      private final Output<List<String>> blobTypes;
 
-    public Input<List<String>> getBlobTypes() {
+    public Output<List<String>> getBlobTypes() {
         return this.blobTypes;
     }
 
@@ -47,25 +47,25 @@ public final class ManagementPolicyFilterArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="prefixMatch")
-      private final @Nullable Input<List<String>> prefixMatch;
+      private final @Nullable Output<List<String>> prefixMatch;
 
-    public Input<List<String>> getPrefixMatch() {
-        return this.prefixMatch == null ? Input.empty() : this.prefixMatch;
+    public Output<List<String>> getPrefixMatch() {
+        return this.prefixMatch == null ? Output.empty() : this.prefixMatch;
     }
 
     public ManagementPolicyFilterArgs(
-        @Nullable Input<List<TagFilterArgs>> blobIndexMatch,
-        Input<List<String>> blobTypes,
-        @Nullable Input<List<String>> prefixMatch) {
+        @Nullable Output<List<TagFilterArgs>> blobIndexMatch,
+        Output<List<String>> blobTypes,
+        @Nullable Output<List<String>> prefixMatch) {
         this.blobIndexMatch = blobIndexMatch;
         this.blobTypes = Objects.requireNonNull(blobTypes, "expected parameter 'blobTypes' to be non-null");
         this.prefixMatch = prefixMatch;
     }
 
     private ManagementPolicyFilterArgs() {
-        this.blobIndexMatch = Input.empty();
-        this.blobTypes = Input.empty();
-        this.prefixMatch = Input.empty();
+        this.blobIndexMatch = Output.empty();
+        this.blobTypes = Output.empty();
+        this.prefixMatch = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class ManagementPolicyFilterArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<TagFilterArgs>> blobIndexMatch;
-        private Input<List<String>> blobTypes;
-        private @Nullable Input<List<String>> prefixMatch;
+        private @Nullable Output<List<TagFilterArgs>> blobIndexMatch;
+        private Output<List<String>> blobTypes;
+        private @Nullable Output<List<String>> prefixMatch;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class ManagementPolicyFilterArgs extends io.pulumi.resources.Resour
     	      this.prefixMatch = defaults.prefixMatch;
         }
 
-        public Builder blobIndexMatch(@Nullable Input<List<TagFilterArgs>> blobIndexMatch) {
+        public Builder blobIndexMatch(@Nullable Output<List<TagFilterArgs>> blobIndexMatch) {
             this.blobIndexMatch = blobIndexMatch;
             return this;
         }
 
         public Builder blobIndexMatch(@Nullable List<TagFilterArgs> blobIndexMatch) {
-            this.blobIndexMatch = Input.ofNullable(blobIndexMatch);
+            this.blobIndexMatch = Output.ofNullable(blobIndexMatch);
             return this;
         }
 
-        public Builder blobTypes(Input<List<String>> blobTypes) {
+        public Builder blobTypes(Output<List<String>> blobTypes) {
             this.blobTypes = Objects.requireNonNull(blobTypes);
             return this;
         }
 
         public Builder blobTypes(List<String> blobTypes) {
-            this.blobTypes = Input.of(Objects.requireNonNull(blobTypes));
+            this.blobTypes = Output.of(Objects.requireNonNull(blobTypes));
             return this;
         }
 
-        public Builder prefixMatch(@Nullable Input<List<String>> prefixMatch) {
+        public Builder prefixMatch(@Nullable Output<List<String>> prefixMatch) {
             this.prefixMatch = prefixMatch;
             return this;
         }
 
         public Builder prefixMatch(@Nullable List<String> prefixMatch) {
-            this.prefixMatch = Input.ofNullable(prefixMatch);
+            this.prefixMatch = Output.ofNullable(prefixMatch);
             return this;
         }
         public ManagementPolicyFilterArgs build() {

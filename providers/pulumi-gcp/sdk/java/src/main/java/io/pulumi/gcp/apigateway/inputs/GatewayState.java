@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.apigateway.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiConfig")
-      private final @Nullable Input<String> apiConfig;
+      private final @Nullable Output<String> apiConfig;
 
-    public Input<String> getApiConfig() {
-        return this.apiConfig == null ? Input.empty() : this.apiConfig;
+    public Output<String> getApiConfig() {
+        return this.apiConfig == null ? Output.empty() : this.apiConfig;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultHostname")
-      private final @Nullable Input<String> defaultHostname;
+      private final @Nullable Output<String> defaultHostname;
 
-    public Input<String> getDefaultHostname() {
-        return this.defaultHostname == null ? Input.empty() : this.defaultHostname;
+    public Output<String> getDefaultHostname() {
+        return this.defaultHostname == null ? Output.empty() : this.defaultHostname;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayId")
-      private final @Nullable Input<String> gatewayId;
+      private final @Nullable Output<String> gatewayId;
 
-    public Input<String> getGatewayId() {
-        return this.gatewayId == null ? Input.empty() : this.gatewayId;
+    public Output<String> getGatewayId() {
+        return this.gatewayId == null ? Output.empty() : this.gatewayId;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -99,21 +99,21 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     public GatewayState(
-        @Nullable Input<String> apiConfig,
-        @Nullable Input<String> defaultHostname,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> gatewayId,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<String> region) {
+        @Nullable Output<String> apiConfig,
+        @Nullable Output<String> defaultHostname,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> gatewayId,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<String> region) {
         this.apiConfig = apiConfig;
         this.defaultHostname = defaultHostname;
         this.displayName = displayName;
@@ -125,14 +125,14 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
     }
 
     private GatewayState() {
-        this.apiConfig = Input.empty();
-        this.defaultHostname = Input.empty();
-        this.displayName = Input.empty();
-        this.gatewayId = Input.empty();
-        this.labels = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
+        this.apiConfig = Output.empty();
+        this.defaultHostname = Output.empty();
+        this.displayName = Output.empty();
+        this.gatewayId = Output.empty();
+        this.labels = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
     }
 
     public static Builder builder() {
@@ -144,14 +144,14 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> apiConfig;
-        private @Nullable Input<String> defaultHostname;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> gatewayId;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> region;
+        private @Nullable Output<String> apiConfig;
+        private @Nullable Output<String> defaultHostname;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> gatewayId;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> region;
 
         public Builder() {
     	      // Empty
@@ -169,83 +169,83 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
     	      this.region = defaults.region;
         }
 
-        public Builder apiConfig(@Nullable Input<String> apiConfig) {
+        public Builder apiConfig(@Nullable Output<String> apiConfig) {
             this.apiConfig = apiConfig;
             return this;
         }
 
         public Builder apiConfig(@Nullable String apiConfig) {
-            this.apiConfig = Input.ofNullable(apiConfig);
+            this.apiConfig = Output.ofNullable(apiConfig);
             return this;
         }
 
-        public Builder defaultHostname(@Nullable Input<String> defaultHostname) {
+        public Builder defaultHostname(@Nullable Output<String> defaultHostname) {
             this.defaultHostname = defaultHostname;
             return this;
         }
 
         public Builder defaultHostname(@Nullable String defaultHostname) {
-            this.defaultHostname = Input.ofNullable(defaultHostname);
+            this.defaultHostname = Output.ofNullable(defaultHostname);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder gatewayId(@Nullable Input<String> gatewayId) {
+        public Builder gatewayId(@Nullable Output<String> gatewayId) {
             this.gatewayId = gatewayId;
             return this;
         }
 
         public Builder gatewayId(@Nullable String gatewayId) {
-            this.gatewayId = Input.ofNullable(gatewayId);
+            this.gatewayId = Output.ofNullable(gatewayId);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
         public GatewayState build() {

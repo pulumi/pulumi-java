@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.backup.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class BackupPlanLifecycleResourceTypeArgs extends io.pulumi.resourc
     public static final BackupPlanLifecycleResourceTypeArgs Empty = new BackupPlanLifecycleResourceTypeArgs();
 
     @InputImport(name="deleteAfterDays")
-      private final @Nullable Input<Double> deleteAfterDays;
+      private final @Nullable Output<Double> deleteAfterDays;
 
-    public Input<Double> getDeleteAfterDays() {
-        return this.deleteAfterDays == null ? Input.empty() : this.deleteAfterDays;
+    public Output<Double> getDeleteAfterDays() {
+        return this.deleteAfterDays == null ? Output.empty() : this.deleteAfterDays;
     }
 
     @InputImport(name="moveToColdStorageAfterDays")
-      private final @Nullable Input<Double> moveToColdStorageAfterDays;
+      private final @Nullable Output<Double> moveToColdStorageAfterDays;
 
-    public Input<Double> getMoveToColdStorageAfterDays() {
-        return this.moveToColdStorageAfterDays == null ? Input.empty() : this.moveToColdStorageAfterDays;
+    public Output<Double> getMoveToColdStorageAfterDays() {
+        return this.moveToColdStorageAfterDays == null ? Output.empty() : this.moveToColdStorageAfterDays;
     }
 
     public BackupPlanLifecycleResourceTypeArgs(
-        @Nullable Input<Double> deleteAfterDays,
-        @Nullable Input<Double> moveToColdStorageAfterDays) {
+        @Nullable Output<Double> deleteAfterDays,
+        @Nullable Output<Double> moveToColdStorageAfterDays) {
         this.deleteAfterDays = deleteAfterDays;
         this.moveToColdStorageAfterDays = moveToColdStorageAfterDays;
     }
 
     private BackupPlanLifecycleResourceTypeArgs() {
-        this.deleteAfterDays = Input.empty();
-        this.moveToColdStorageAfterDays = Input.empty();
+        this.deleteAfterDays = Output.empty();
+        this.moveToColdStorageAfterDays = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class BackupPlanLifecycleResourceTypeArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Double> deleteAfterDays;
-        private @Nullable Input<Double> moveToColdStorageAfterDays;
+        private @Nullable Output<Double> deleteAfterDays;
+        private @Nullable Output<Double> moveToColdStorageAfterDays;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class BackupPlanLifecycleResourceTypeArgs extends io.pulumi.resourc
     	      this.moveToColdStorageAfterDays = defaults.moveToColdStorageAfterDays;
         }
 
-        public Builder deleteAfterDays(@Nullable Input<Double> deleteAfterDays) {
+        public Builder deleteAfterDays(@Nullable Output<Double> deleteAfterDays) {
             this.deleteAfterDays = deleteAfterDays;
             return this;
         }
 
         public Builder deleteAfterDays(@Nullable Double deleteAfterDays) {
-            this.deleteAfterDays = Input.ofNullable(deleteAfterDays);
+            this.deleteAfterDays = Output.ofNullable(deleteAfterDays);
             return this;
         }
 
-        public Builder moveToColdStorageAfterDays(@Nullable Input<Double> moveToColdStorageAfterDays) {
+        public Builder moveToColdStorageAfterDays(@Nullable Output<Double> moveToColdStorageAfterDays) {
             this.moveToColdStorageAfterDays = moveToColdStorageAfterDays;
             return this;
         }
 
         public Builder moveToColdStorageAfterDays(@Nullable Double moveToColdStorageAfterDays) {
-            this.moveToColdStorageAfterDays = Input.ofNullable(moveToColdStorageAfterDays);
+            this.moveToColdStorageAfterDays = Output.ofNullable(moveToColdStorageAfterDays);
             return this;
         }
         public BackupPlanLifecycleResourceTypeArgs build() {

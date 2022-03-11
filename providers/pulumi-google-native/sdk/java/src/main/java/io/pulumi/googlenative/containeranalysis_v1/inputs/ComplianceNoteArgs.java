@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.CisBenchmarkArgs;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.ComplianceVersionArgs;
@@ -18,10 +18,10 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
     public static final ComplianceNoteArgs Empty = new ComplianceNoteArgs();
 
     @InputImport(name="cisBenchmark")
-      private final @Nullable Input<CisBenchmarkArgs> cisBenchmark;
+      private final @Nullable Output<CisBenchmarkArgs> cisBenchmark;
 
-    public Input<CisBenchmarkArgs> getCisBenchmark() {
-        return this.cisBenchmark == null ? Input.empty() : this.cisBenchmark;
+    public Output<CisBenchmarkArgs> getCisBenchmark() {
+        return this.cisBenchmark == null ? Output.empty() : this.cisBenchmark;
     }
 
     /**
@@ -29,10 +29,10 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rationale")
-      private final @Nullable Input<String> rationale;
+      private final @Nullable Output<String> rationale;
 
-    public Input<String> getRationale() {
-        return this.rationale == null ? Input.empty() : this.rationale;
+    public Output<String> getRationale() {
+        return this.rationale == null ? Output.empty() : this.rationale;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="remediation")
-      private final @Nullable Input<String> remediation;
+      private final @Nullable Output<String> remediation;
 
-    public Input<String> getRemediation() {
-        return this.remediation == null ? Input.empty() : this.remediation;
+    public Output<String> getRemediation() {
+        return this.remediation == null ? Output.empty() : this.remediation;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scanInstructions")
-      private final @Nullable Input<String> scanInstructions;
+      private final @Nullable Output<String> scanInstructions;
 
-    public Input<String> getScanInstructions() {
-        return this.scanInstructions == null ? Input.empty() : this.scanInstructions;
+    public Output<String> getScanInstructions() {
+        return this.scanInstructions == null ? Output.empty() : this.scanInstructions;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="title")
-      private final @Nullable Input<String> title;
+      private final @Nullable Output<String> title;
 
-    public Input<String> getTitle() {
-        return this.title == null ? Input.empty() : this.title;
+    public Output<String> getTitle() {
+        return this.title == null ? Output.empty() : this.title;
     }
 
     /**
@@ -84,20 +84,20 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<List<ComplianceVersionArgs>> version;
+      private final @Nullable Output<List<ComplianceVersionArgs>> version;
 
-    public Input<List<ComplianceVersionArgs>> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<List<ComplianceVersionArgs>> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public ComplianceNoteArgs(
-        @Nullable Input<CisBenchmarkArgs> cisBenchmark,
-        @Nullable Input<String> description,
-        @Nullable Input<String> rationale,
-        @Nullable Input<String> remediation,
-        @Nullable Input<String> scanInstructions,
-        @Nullable Input<String> title,
-        @Nullable Input<List<ComplianceVersionArgs>> version) {
+        @Nullable Output<CisBenchmarkArgs> cisBenchmark,
+        @Nullable Output<String> description,
+        @Nullable Output<String> rationale,
+        @Nullable Output<String> remediation,
+        @Nullable Output<String> scanInstructions,
+        @Nullable Output<String> title,
+        @Nullable Output<List<ComplianceVersionArgs>> version) {
         this.cisBenchmark = cisBenchmark;
         this.description = description;
         this.rationale = rationale;
@@ -108,13 +108,13 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ComplianceNoteArgs() {
-        this.cisBenchmark = Input.empty();
-        this.description = Input.empty();
-        this.rationale = Input.empty();
-        this.remediation = Input.empty();
-        this.scanInstructions = Input.empty();
-        this.title = Input.empty();
-        this.version = Input.empty();
+        this.cisBenchmark = Output.empty();
+        this.description = Output.empty();
+        this.rationale = Output.empty();
+        this.remediation = Output.empty();
+        this.scanInstructions = Output.empty();
+        this.title = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -126,13 +126,13 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<CisBenchmarkArgs> cisBenchmark;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> rationale;
-        private @Nullable Input<String> remediation;
-        private @Nullable Input<String> scanInstructions;
-        private @Nullable Input<String> title;
-        private @Nullable Input<List<ComplianceVersionArgs>> version;
+        private @Nullable Output<CisBenchmarkArgs> cisBenchmark;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> rationale;
+        private @Nullable Output<String> remediation;
+        private @Nullable Output<String> scanInstructions;
+        private @Nullable Output<String> title;
+        private @Nullable Output<List<ComplianceVersionArgs>> version;
 
         public Builder() {
     	      // Empty
@@ -149,73 +149,73 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder cisBenchmark(@Nullable Input<CisBenchmarkArgs> cisBenchmark) {
+        public Builder cisBenchmark(@Nullable Output<CisBenchmarkArgs> cisBenchmark) {
             this.cisBenchmark = cisBenchmark;
             return this;
         }
 
         public Builder cisBenchmark(@Nullable CisBenchmarkArgs cisBenchmark) {
-            this.cisBenchmark = Input.ofNullable(cisBenchmark);
+            this.cisBenchmark = Output.ofNullable(cisBenchmark);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder rationale(@Nullable Input<String> rationale) {
+        public Builder rationale(@Nullable Output<String> rationale) {
             this.rationale = rationale;
             return this;
         }
 
         public Builder rationale(@Nullable String rationale) {
-            this.rationale = Input.ofNullable(rationale);
+            this.rationale = Output.ofNullable(rationale);
             return this;
         }
 
-        public Builder remediation(@Nullable Input<String> remediation) {
+        public Builder remediation(@Nullable Output<String> remediation) {
             this.remediation = remediation;
             return this;
         }
 
         public Builder remediation(@Nullable String remediation) {
-            this.remediation = Input.ofNullable(remediation);
+            this.remediation = Output.ofNullable(remediation);
             return this;
         }
 
-        public Builder scanInstructions(@Nullable Input<String> scanInstructions) {
+        public Builder scanInstructions(@Nullable Output<String> scanInstructions) {
             this.scanInstructions = scanInstructions;
             return this;
         }
 
         public Builder scanInstructions(@Nullable String scanInstructions) {
-            this.scanInstructions = Input.ofNullable(scanInstructions);
+            this.scanInstructions = Output.ofNullable(scanInstructions);
             return this;
         }
 
-        public Builder title(@Nullable Input<String> title) {
+        public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
 
         public Builder title(@Nullable String title) {
-            this.title = Input.ofNullable(title);
+            this.title = Output.ofNullable(title);
             return this;
         }
 
-        public Builder version(@Nullable Input<List<ComplianceVersionArgs>> version) {
+        public Builder version(@Nullable Output<List<ComplianceVersionArgs>> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable List<ComplianceVersionArgs> version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public ComplianceNoteArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.composer.inputs.EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockGetArgs;
 import java.lang.Boolean;
@@ -17,29 +17,29 @@ public final class EnvironmentConfigMasterAuthorizedNetworksConfigGetArgs extend
     public static final EnvironmentConfigMasterAuthorizedNetworksConfigGetArgs Empty = new EnvironmentConfigMasterAuthorizedNetworksConfigGetArgs();
 
     @InputImport(name="cidrBlocks")
-      private final @Nullable Input<List<EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockGetArgs>> cidrBlocks;
+      private final @Nullable Output<List<EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockGetArgs>> cidrBlocks;
 
-    public Input<List<EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockGetArgs>> getCidrBlocks() {
-        return this.cidrBlocks == null ? Input.empty() : this.cidrBlocks;
+    public Output<List<EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockGetArgs>> getCidrBlocks() {
+        return this.cidrBlocks == null ? Output.empty() : this.cidrBlocks;
     }
 
     @InputImport(name="enabled", required=true)
-      private final Input<Boolean> enabled;
+      private final Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
+    public Output<Boolean> getEnabled() {
         return this.enabled;
     }
 
     public EnvironmentConfigMasterAuthorizedNetworksConfigGetArgs(
-        @Nullable Input<List<EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockGetArgs>> cidrBlocks,
-        Input<Boolean> enabled) {
+        @Nullable Output<List<EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockGetArgs>> cidrBlocks,
+        Output<Boolean> enabled) {
         this.cidrBlocks = cidrBlocks;
         this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
     }
 
     private EnvironmentConfigMasterAuthorizedNetworksConfigGetArgs() {
-        this.cidrBlocks = Input.empty();
-        this.enabled = Input.empty();
+        this.cidrBlocks = Output.empty();
+        this.enabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -51,8 +51,8 @@ public final class EnvironmentConfigMasterAuthorizedNetworksConfigGetArgs extend
     }
 
     public static final class Builder {
-        private @Nullable Input<List<EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockGetArgs>> cidrBlocks;
-        private Input<Boolean> enabled;
+        private @Nullable Output<List<EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockGetArgs>> cidrBlocks;
+        private Output<Boolean> enabled;
 
         public Builder() {
     	      // Empty
@@ -64,23 +64,23 @@ public final class EnvironmentConfigMasterAuthorizedNetworksConfigGetArgs extend
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder cidrBlocks(@Nullable Input<List<EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockGetArgs>> cidrBlocks) {
+        public Builder cidrBlocks(@Nullable Output<List<EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockGetArgs>> cidrBlocks) {
             this.cidrBlocks = cidrBlocks;
             return this;
         }
 
         public Builder cidrBlocks(@Nullable List<EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockGetArgs> cidrBlocks) {
-            this.cidrBlocks = Input.ofNullable(cidrBlocks);
+            this.cidrBlocks = Output.ofNullable(cidrBlocks);
             return this;
         }
 
-        public Builder enabled(Input<Boolean> enabled) {
+        public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Input.of(Objects.requireNonNull(enabled));
+            this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
         public EnvironmentConfigMasterAuthorizedNetworksConfigGetArgs build() {

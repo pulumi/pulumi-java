@@ -4,7 +4,7 @@
 package io.pulumi.aws.autoscaling;
 
 import io.pulumi.aws.autoscaling.inputs.TagTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoscalingGroupName", required=true)
-      private final Input<String> autoscalingGroupName;
+      private final Output<String> autoscalingGroupName;
 
-    public Input<String> getAutoscalingGroupName() {
+    public Output<String> getAutoscalingGroupName() {
         return this.autoscalingGroupName;
     }
 
@@ -30,22 +30,22 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tag", required=true)
-      private final Input<TagTagArgs> tag;
+      private final Output<TagTagArgs> tag;
 
-    public Input<TagTagArgs> getTag() {
+    public Output<TagTagArgs> getTag() {
         return this.tag;
     }
 
     public TagArgs(
-        Input<String> autoscalingGroupName,
-        Input<TagTagArgs> tag) {
+        Output<String> autoscalingGroupName,
+        Output<TagTagArgs> tag) {
         this.autoscalingGroupName = Objects.requireNonNull(autoscalingGroupName, "expected parameter 'autoscalingGroupName' to be non-null");
         this.tag = Objects.requireNonNull(tag, "expected parameter 'tag' to be non-null");
     }
 
     private TagArgs() {
-        this.autoscalingGroupName = Input.empty();
-        this.tag = Input.empty();
+        this.autoscalingGroupName = Output.empty();
+        this.tag = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> autoscalingGroupName;
-        private Input<TagTagArgs> tag;
+        private Output<String> autoscalingGroupName;
+        private Output<TagTagArgs> tag;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tag = defaults.tag;
         }
 
-        public Builder autoscalingGroupName(Input<String> autoscalingGroupName) {
+        public Builder autoscalingGroupName(Output<String> autoscalingGroupName) {
             this.autoscalingGroupName = Objects.requireNonNull(autoscalingGroupName);
             return this;
         }
 
         public Builder autoscalingGroupName(String autoscalingGroupName) {
-            this.autoscalingGroupName = Input.of(Objects.requireNonNull(autoscalingGroupName));
+            this.autoscalingGroupName = Output.of(Objects.requireNonNull(autoscalingGroupName));
             return this;
         }
 
-        public Builder tag(Input<TagTagArgs> tag) {
+        public Builder tag(Output<TagTagArgs> tag) {
             this.tag = Objects.requireNonNull(tag);
             return this;
         }
 
         public Builder tag(TagTagArgs tag) {
-            this.tag = Input.of(Objects.requireNonNull(tag));
+            this.tag = Output.of(Objects.requireNonNull(tag));
             return this;
         }
         public TagArgs build() {

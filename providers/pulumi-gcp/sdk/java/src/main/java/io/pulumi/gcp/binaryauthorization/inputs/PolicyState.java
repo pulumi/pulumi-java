@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.binaryauthorization.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.binaryauthorization.inputs.PolicyAdmissionWhitelistPatternGetArgs;
 import io.pulumi.gcp.binaryauthorization.inputs.PolicyClusterAdmissionRuleGetArgs;
@@ -26,10 +26,10 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="admissionWhitelistPatterns")
-      private final @Nullable Input<List<PolicyAdmissionWhitelistPatternGetArgs>> admissionWhitelistPatterns;
+      private final @Nullable Output<List<PolicyAdmissionWhitelistPatternGetArgs>> admissionWhitelistPatterns;
 
-    public Input<List<PolicyAdmissionWhitelistPatternGetArgs>> getAdmissionWhitelistPatterns() {
-        return this.admissionWhitelistPatterns == null ? Input.empty() : this.admissionWhitelistPatterns;
+    public Output<List<PolicyAdmissionWhitelistPatternGetArgs>> getAdmissionWhitelistPatterns() {
+        return this.admissionWhitelistPatterns == null ? Output.empty() : this.admissionWhitelistPatterns;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterAdmissionRules")
-      private final @Nullable Input<List<PolicyClusterAdmissionRuleGetArgs>> clusterAdmissionRules;
+      private final @Nullable Output<List<PolicyClusterAdmissionRuleGetArgs>> clusterAdmissionRules;
 
-    public Input<List<PolicyClusterAdmissionRuleGetArgs>> getClusterAdmissionRules() {
-        return this.clusterAdmissionRules == null ? Input.empty() : this.clusterAdmissionRules;
+    public Output<List<PolicyClusterAdmissionRuleGetArgs>> getClusterAdmissionRules() {
+        return this.clusterAdmissionRules == null ? Output.empty() : this.clusterAdmissionRules;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultAdmissionRule")
-      private final @Nullable Input<PolicyDefaultAdmissionRuleGetArgs> defaultAdmissionRule;
+      private final @Nullable Output<PolicyDefaultAdmissionRuleGetArgs> defaultAdmissionRule;
 
-    public Input<PolicyDefaultAdmissionRuleGetArgs> getDefaultAdmissionRule() {
-        return this.defaultAdmissionRule == null ? Input.empty() : this.defaultAdmissionRule;
+    public Output<PolicyDefaultAdmissionRuleGetArgs> getDefaultAdmissionRule() {
+        return this.defaultAdmissionRule == null ? Output.empty() : this.defaultAdmissionRule;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="globalPolicyEvaluationMode")
-      private final @Nullable Input<String> globalPolicyEvaluationMode;
+      private final @Nullable Output<String> globalPolicyEvaluationMode;
 
-    public Input<String> getGlobalPolicyEvaluationMode() {
-        return this.globalPolicyEvaluationMode == null ? Input.empty() : this.globalPolicyEvaluationMode;
+    public Output<String> getGlobalPolicyEvaluationMode() {
+        return this.globalPolicyEvaluationMode == null ? Output.empty() : this.globalPolicyEvaluationMode;
     }
 
     /**
@@ -91,19 +91,19 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public PolicyState(
-        @Nullable Input<List<PolicyAdmissionWhitelistPatternGetArgs>> admissionWhitelistPatterns,
-        @Nullable Input<List<PolicyClusterAdmissionRuleGetArgs>> clusterAdmissionRules,
-        @Nullable Input<PolicyDefaultAdmissionRuleGetArgs> defaultAdmissionRule,
-        @Nullable Input<String> description,
-        @Nullable Input<String> globalPolicyEvaluationMode,
-        @Nullable Input<String> project) {
+        @Nullable Output<List<PolicyAdmissionWhitelistPatternGetArgs>> admissionWhitelistPatterns,
+        @Nullable Output<List<PolicyClusterAdmissionRuleGetArgs>> clusterAdmissionRules,
+        @Nullable Output<PolicyDefaultAdmissionRuleGetArgs> defaultAdmissionRule,
+        @Nullable Output<String> description,
+        @Nullable Output<String> globalPolicyEvaluationMode,
+        @Nullable Output<String> project) {
         this.admissionWhitelistPatterns = admissionWhitelistPatterns;
         this.clusterAdmissionRules = clusterAdmissionRules;
         this.defaultAdmissionRule = defaultAdmissionRule;
@@ -113,12 +113,12 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
     }
 
     private PolicyState() {
-        this.admissionWhitelistPatterns = Input.empty();
-        this.clusterAdmissionRules = Input.empty();
-        this.defaultAdmissionRule = Input.empty();
-        this.description = Input.empty();
-        this.globalPolicyEvaluationMode = Input.empty();
-        this.project = Input.empty();
+        this.admissionWhitelistPatterns = Output.empty();
+        this.clusterAdmissionRules = Output.empty();
+        this.defaultAdmissionRule = Output.empty();
+        this.description = Output.empty();
+        this.globalPolicyEvaluationMode = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,12 +130,12 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<PolicyAdmissionWhitelistPatternGetArgs>> admissionWhitelistPatterns;
-        private @Nullable Input<List<PolicyClusterAdmissionRuleGetArgs>> clusterAdmissionRules;
-        private @Nullable Input<PolicyDefaultAdmissionRuleGetArgs> defaultAdmissionRule;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> globalPolicyEvaluationMode;
-        private @Nullable Input<String> project;
+        private @Nullable Output<List<PolicyAdmissionWhitelistPatternGetArgs>> admissionWhitelistPatterns;
+        private @Nullable Output<List<PolicyClusterAdmissionRuleGetArgs>> clusterAdmissionRules;
+        private @Nullable Output<PolicyDefaultAdmissionRuleGetArgs> defaultAdmissionRule;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> globalPolicyEvaluationMode;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -151,63 +151,63 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder admissionWhitelistPatterns(@Nullable Input<List<PolicyAdmissionWhitelistPatternGetArgs>> admissionWhitelistPatterns) {
+        public Builder admissionWhitelistPatterns(@Nullable Output<List<PolicyAdmissionWhitelistPatternGetArgs>> admissionWhitelistPatterns) {
             this.admissionWhitelistPatterns = admissionWhitelistPatterns;
             return this;
         }
 
         public Builder admissionWhitelistPatterns(@Nullable List<PolicyAdmissionWhitelistPatternGetArgs> admissionWhitelistPatterns) {
-            this.admissionWhitelistPatterns = Input.ofNullable(admissionWhitelistPatterns);
+            this.admissionWhitelistPatterns = Output.ofNullable(admissionWhitelistPatterns);
             return this;
         }
 
-        public Builder clusterAdmissionRules(@Nullable Input<List<PolicyClusterAdmissionRuleGetArgs>> clusterAdmissionRules) {
+        public Builder clusterAdmissionRules(@Nullable Output<List<PolicyClusterAdmissionRuleGetArgs>> clusterAdmissionRules) {
             this.clusterAdmissionRules = clusterAdmissionRules;
             return this;
         }
 
         public Builder clusterAdmissionRules(@Nullable List<PolicyClusterAdmissionRuleGetArgs> clusterAdmissionRules) {
-            this.clusterAdmissionRules = Input.ofNullable(clusterAdmissionRules);
+            this.clusterAdmissionRules = Output.ofNullable(clusterAdmissionRules);
             return this;
         }
 
-        public Builder defaultAdmissionRule(@Nullable Input<PolicyDefaultAdmissionRuleGetArgs> defaultAdmissionRule) {
+        public Builder defaultAdmissionRule(@Nullable Output<PolicyDefaultAdmissionRuleGetArgs> defaultAdmissionRule) {
             this.defaultAdmissionRule = defaultAdmissionRule;
             return this;
         }
 
         public Builder defaultAdmissionRule(@Nullable PolicyDefaultAdmissionRuleGetArgs defaultAdmissionRule) {
-            this.defaultAdmissionRule = Input.ofNullable(defaultAdmissionRule);
+            this.defaultAdmissionRule = Output.ofNullable(defaultAdmissionRule);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder globalPolicyEvaluationMode(@Nullable Input<String> globalPolicyEvaluationMode) {
+        public Builder globalPolicyEvaluationMode(@Nullable Output<String> globalPolicyEvaluationMode) {
             this.globalPolicyEvaluationMode = globalPolicyEvaluationMode;
             return this;
         }
 
         public Builder globalPolicyEvaluationMode(@Nullable String globalPolicyEvaluationMode) {
-            this.globalPolicyEvaluationMode = Input.ofNullable(globalPolicyEvaluationMode);
+            this.globalPolicyEvaluationMode = Output.ofNullable(globalPolicyEvaluationMode);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public PolicyState build() {

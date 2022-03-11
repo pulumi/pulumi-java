@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,9 +19,9 @@ public final class ClusterClusterConfigWorkerConfigAcceleratorGetArgs extends io
      * 
      */
     @InputImport(name="acceleratorCount", required=true)
-      private final Input<Integer> acceleratorCount;
+      private final Output<Integer> acceleratorCount;
 
-    public Input<Integer> getAcceleratorCount() {
+    public Output<Integer> getAcceleratorCount() {
         return this.acceleratorCount;
     }
 
@@ -30,22 +30,22 @@ public final class ClusterClusterConfigWorkerConfigAcceleratorGetArgs extends io
      * 
      */
     @InputImport(name="acceleratorType", required=true)
-      private final Input<String> acceleratorType;
+      private final Output<String> acceleratorType;
 
-    public Input<String> getAcceleratorType() {
+    public Output<String> getAcceleratorType() {
         return this.acceleratorType;
     }
 
     public ClusterClusterConfigWorkerConfigAcceleratorGetArgs(
-        Input<Integer> acceleratorCount,
-        Input<String> acceleratorType) {
+        Output<Integer> acceleratorCount,
+        Output<String> acceleratorType) {
         this.acceleratorCount = Objects.requireNonNull(acceleratorCount, "expected parameter 'acceleratorCount' to be non-null");
         this.acceleratorType = Objects.requireNonNull(acceleratorType, "expected parameter 'acceleratorType' to be non-null");
     }
 
     private ClusterClusterConfigWorkerConfigAcceleratorGetArgs() {
-        this.acceleratorCount = Input.empty();
-        this.acceleratorType = Input.empty();
+        this.acceleratorCount = Output.empty();
+        this.acceleratorType = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ClusterClusterConfigWorkerConfigAcceleratorGetArgs extends io
     }
 
     public static final class Builder {
-        private Input<Integer> acceleratorCount;
-        private Input<String> acceleratorType;
+        private Output<Integer> acceleratorCount;
+        private Output<String> acceleratorType;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ClusterClusterConfigWorkerConfigAcceleratorGetArgs extends io
     	      this.acceleratorType = defaults.acceleratorType;
         }
 
-        public Builder acceleratorCount(Input<Integer> acceleratorCount) {
+        public Builder acceleratorCount(Output<Integer> acceleratorCount) {
             this.acceleratorCount = Objects.requireNonNull(acceleratorCount);
             return this;
         }
 
         public Builder acceleratorCount(Integer acceleratorCount) {
-            this.acceleratorCount = Input.of(Objects.requireNonNull(acceleratorCount));
+            this.acceleratorCount = Output.of(Objects.requireNonNull(acceleratorCount));
             return this;
         }
 
-        public Builder acceleratorType(Input<String> acceleratorType) {
+        public Builder acceleratorType(Output<String> acceleratorType) {
             this.acceleratorType = Objects.requireNonNull(acceleratorType);
             return this;
         }
 
         public Builder acceleratorType(String acceleratorType) {
-            this.acceleratorType = Input.of(Objects.requireNonNull(acceleratorType));
+            this.acceleratorType = Output.of(Objects.requireNonNull(acceleratorType));
             return this;
         }
         public ClusterClusterConfigWorkerConfigAcceleratorGetArgs build() {

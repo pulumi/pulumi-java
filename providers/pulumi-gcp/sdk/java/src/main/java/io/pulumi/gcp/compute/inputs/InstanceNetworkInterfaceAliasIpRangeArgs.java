@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class InstanceNetworkInterfaceAliasIpRangeArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="ipCidrRange", required=true)
-      private final Input<String> ipCidrRange;
+      private final Output<String> ipCidrRange;
 
-    public Input<String> getIpCidrRange() {
+    public Output<String> getIpCidrRange() {
         return this.ipCidrRange;
     }
 
@@ -35,22 +35,22 @@ public final class InstanceNetworkInterfaceAliasIpRangeArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="subnetworkRangeName")
-      private final @Nullable Input<String> subnetworkRangeName;
+      private final @Nullable Output<String> subnetworkRangeName;
 
-    public Input<String> getSubnetworkRangeName() {
-        return this.subnetworkRangeName == null ? Input.empty() : this.subnetworkRangeName;
+    public Output<String> getSubnetworkRangeName() {
+        return this.subnetworkRangeName == null ? Output.empty() : this.subnetworkRangeName;
     }
 
     public InstanceNetworkInterfaceAliasIpRangeArgs(
-        Input<String> ipCidrRange,
-        @Nullable Input<String> subnetworkRangeName) {
+        Output<String> ipCidrRange,
+        @Nullable Output<String> subnetworkRangeName) {
         this.ipCidrRange = Objects.requireNonNull(ipCidrRange, "expected parameter 'ipCidrRange' to be non-null");
         this.subnetworkRangeName = subnetworkRangeName;
     }
 
     private InstanceNetworkInterfaceAliasIpRangeArgs() {
-        this.ipCidrRange = Input.empty();
-        this.subnetworkRangeName = Input.empty();
+        this.ipCidrRange = Output.empty();
+        this.subnetworkRangeName = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class InstanceNetworkInterfaceAliasIpRangeArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private Input<String> ipCidrRange;
-        private @Nullable Input<String> subnetworkRangeName;
+        private Output<String> ipCidrRange;
+        private @Nullable Output<String> subnetworkRangeName;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class InstanceNetworkInterfaceAliasIpRangeArgs extends io.pulumi.re
     	      this.subnetworkRangeName = defaults.subnetworkRangeName;
         }
 
-        public Builder ipCidrRange(Input<String> ipCidrRange) {
+        public Builder ipCidrRange(Output<String> ipCidrRange) {
             this.ipCidrRange = Objects.requireNonNull(ipCidrRange);
             return this;
         }
 
         public Builder ipCidrRange(String ipCidrRange) {
-            this.ipCidrRange = Input.of(Objects.requireNonNull(ipCidrRange));
+            this.ipCidrRange = Output.of(Objects.requireNonNull(ipCidrRange));
             return this;
         }
 
-        public Builder subnetworkRangeName(@Nullable Input<String> subnetworkRangeName) {
+        public Builder subnetworkRangeName(@Nullable Output<String> subnetworkRangeName) {
             this.subnetworkRangeName = subnetworkRangeName;
             return this;
         }
 
         public Builder subnetworkRangeName(@Nullable String subnetworkRangeName) {
-            this.subnetworkRangeName = Input.ofNullable(subnetworkRangeName);
+            this.subnetworkRangeName = Output.ofNullable(subnetworkRangeName);
             return this;
         }
         public InstanceNetworkInterfaceAliasIpRangeArgs build() {

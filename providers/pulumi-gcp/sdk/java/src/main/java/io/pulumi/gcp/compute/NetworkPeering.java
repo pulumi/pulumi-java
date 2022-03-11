@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -207,14 +206,14 @@ public class NetworkPeering extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NetworkPeering(String name, NetworkPeeringArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/networkPeering:NetworkPeering", name, args == null ? NetworkPeeringArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:compute/networkPeering:NetworkPeering", name, args == null ? NetworkPeeringArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private NetworkPeering(String name, Input<String> id, @Nullable NetworkPeeringState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private NetworkPeering(String name, Output<String> id, @Nullable NetworkPeeringState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:compute/networkPeering:NetworkPeering", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -230,7 +229,7 @@ public class NetworkPeering extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static NetworkPeering get(String name, Input<String> id, @Nullable NetworkPeeringState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static NetworkPeering get(String name, Output<String> id, @Nullable NetworkPeeringState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new NetworkPeering(name, id, state, options);
     }
 }

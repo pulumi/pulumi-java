@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.marketplace;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="allSubscriptions")
-      private final @Nullable Input<Boolean> allSubscriptions;
+      private final @Nullable Output<Boolean> allSubscriptions;
 
-    public Input<Boolean> getAllSubscriptions() {
-        return this.allSubscriptions == null ? Input.empty() : this.allSubscriptions;
+    public Output<Boolean> getAllSubscriptions() {
+        return this.allSubscriptions == null ? Output.empty() : this.allSubscriptions;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="claim")
-      private final @Nullable Input<String> claim;
+      private final @Nullable Output<String> claim;
 
-    public Input<String> getClaim() {
-        return this.claim == null ? Input.empty() : this.claim;
+    public Output<String> getClaim() {
+        return this.claim == null ? Output.empty() : this.claim;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="collectionId")
-      private final @Nullable Input<String> collectionId;
+      private final @Nullable Output<String> collectionId;
 
-    public Input<String> getCollectionId() {
-        return this.collectionId == null ? Input.empty() : this.collectionId;
+    public Output<String> getCollectionId() {
+        return this.collectionId == null ? Output.empty() : this.collectionId;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="collectionName")
-      private final @Nullable Input<String> collectionName;
+      private final @Nullable Output<String> collectionName;
 
-    public Input<String> getCollectionName() {
-        return this.collectionName == null ? Input.empty() : this.collectionName;
+    public Output<String> getCollectionName() {
+        return this.collectionName == null ? Output.empty() : this.collectionName;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -76,9 +76,9 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="privateStoreId", required=true)
-      private final Input<String> privateStoreId;
+      private final Output<String> privateStoreId;
 
-    public Input<String> getPrivateStoreId() {
+    public Output<String> getPrivateStoreId() {
         return this.privateStoreId;
     }
 
@@ -87,20 +87,20 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="subscriptionsList")
-      private final @Nullable Input<List<String>> subscriptionsList;
+      private final @Nullable Output<List<String>> subscriptionsList;
 
-    public Input<List<String>> getSubscriptionsList() {
-        return this.subscriptionsList == null ? Input.empty() : this.subscriptionsList;
+    public Output<List<String>> getSubscriptionsList() {
+        return this.subscriptionsList == null ? Output.empty() : this.subscriptionsList;
     }
 
     public PrivateStoreCollectionArgs(
-        @Nullable Input<Boolean> allSubscriptions,
-        @Nullable Input<String> claim,
-        @Nullable Input<String> collectionId,
-        @Nullable Input<String> collectionName,
-        @Nullable Input<Boolean> enabled,
-        Input<String> privateStoreId,
-        @Nullable Input<List<String>> subscriptionsList) {
+        @Nullable Output<Boolean> allSubscriptions,
+        @Nullable Output<String> claim,
+        @Nullable Output<String> collectionId,
+        @Nullable Output<String> collectionName,
+        @Nullable Output<Boolean> enabled,
+        Output<String> privateStoreId,
+        @Nullable Output<List<String>> subscriptionsList) {
         this.allSubscriptions = allSubscriptions;
         this.claim = claim;
         this.collectionId = collectionId;
@@ -111,13 +111,13 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
     }
 
     private PrivateStoreCollectionArgs() {
-        this.allSubscriptions = Input.empty();
-        this.claim = Input.empty();
-        this.collectionId = Input.empty();
-        this.collectionName = Input.empty();
-        this.enabled = Input.empty();
-        this.privateStoreId = Input.empty();
-        this.subscriptionsList = Input.empty();
+        this.allSubscriptions = Output.empty();
+        this.claim = Output.empty();
+        this.collectionId = Output.empty();
+        this.collectionName = Output.empty();
+        this.enabled = Output.empty();
+        this.privateStoreId = Output.empty();
+        this.subscriptionsList = Output.empty();
     }
 
     public static Builder builder() {
@@ -129,13 +129,13 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allSubscriptions;
-        private @Nullable Input<String> claim;
-        private @Nullable Input<String> collectionId;
-        private @Nullable Input<String> collectionName;
-        private @Nullable Input<Boolean> enabled;
-        private Input<String> privateStoreId;
-        private @Nullable Input<List<String>> subscriptionsList;
+        private @Nullable Output<Boolean> allSubscriptions;
+        private @Nullable Output<String> claim;
+        private @Nullable Output<String> collectionId;
+        private @Nullable Output<String> collectionName;
+        private @Nullable Output<Boolean> enabled;
+        private Output<String> privateStoreId;
+        private @Nullable Output<List<String>> subscriptionsList;
 
         public Builder() {
     	      // Empty
@@ -152,73 +152,73 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
     	      this.subscriptionsList = defaults.subscriptionsList;
         }
 
-        public Builder allSubscriptions(@Nullable Input<Boolean> allSubscriptions) {
+        public Builder allSubscriptions(@Nullable Output<Boolean> allSubscriptions) {
             this.allSubscriptions = allSubscriptions;
             return this;
         }
 
         public Builder allSubscriptions(@Nullable Boolean allSubscriptions) {
-            this.allSubscriptions = Input.ofNullable(allSubscriptions);
+            this.allSubscriptions = Output.ofNullable(allSubscriptions);
             return this;
         }
 
-        public Builder claim(@Nullable Input<String> claim) {
+        public Builder claim(@Nullable Output<String> claim) {
             this.claim = claim;
             return this;
         }
 
         public Builder claim(@Nullable String claim) {
-            this.claim = Input.ofNullable(claim);
+            this.claim = Output.ofNullable(claim);
             return this;
         }
 
-        public Builder collectionId(@Nullable Input<String> collectionId) {
+        public Builder collectionId(@Nullable Output<String> collectionId) {
             this.collectionId = collectionId;
             return this;
         }
 
         public Builder collectionId(@Nullable String collectionId) {
-            this.collectionId = Input.ofNullable(collectionId);
+            this.collectionId = Output.ofNullable(collectionId);
             return this;
         }
 
-        public Builder collectionName(@Nullable Input<String> collectionName) {
+        public Builder collectionName(@Nullable Output<String> collectionName) {
             this.collectionName = collectionName;
             return this;
         }
 
         public Builder collectionName(@Nullable String collectionName) {
-            this.collectionName = Input.ofNullable(collectionName);
+            this.collectionName = Output.ofNullable(collectionName);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder privateStoreId(Input<String> privateStoreId) {
+        public Builder privateStoreId(Output<String> privateStoreId) {
             this.privateStoreId = Objects.requireNonNull(privateStoreId);
             return this;
         }
 
         public Builder privateStoreId(String privateStoreId) {
-            this.privateStoreId = Input.of(Objects.requireNonNull(privateStoreId));
+            this.privateStoreId = Output.of(Objects.requireNonNull(privateStoreId));
             return this;
         }
 
-        public Builder subscriptionsList(@Nullable Input<List<String>> subscriptionsList) {
+        public Builder subscriptionsList(@Nullable Output<List<String>> subscriptionsList) {
             this.subscriptionsList = subscriptionsList;
             return this;
         }
 
         public Builder subscriptionsList(@Nullable List<String> subscriptionsList) {
-            this.subscriptionsList = Input.ofNullable(subscriptionsList);
+            this.subscriptionsList = Output.ofNullable(subscriptionsList);
             return this;
         }
         public PrivateStoreCollectionArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotevents.inputs;
 
 import io.pulumi.awsnative.iotevents.inputs.InputAttributeArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class InputDefinitionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="attributes", required=true)
-      private final Input<List<InputAttributeArgs>> attributes;
+      private final Output<List<InputAttributeArgs>> attributes;
 
-    public Input<List<InputAttributeArgs>> getAttributes() {
+    public Output<List<InputAttributeArgs>> getAttributes() {
         return this.attributes;
     }
 
-    public InputDefinitionArgs(Input<List<InputAttributeArgs>> attributes) {
+    public InputDefinitionArgs(Output<List<InputAttributeArgs>> attributes) {
         this.attributes = Objects.requireNonNull(attributes, "expected parameter 'attributes' to be non-null");
     }
 
     private InputDefinitionArgs() {
-        this.attributes = Input.empty();
+        this.attributes = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class InputDefinitionArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<List<InputAttributeArgs>> attributes;
+        private Output<List<InputAttributeArgs>> attributes;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class InputDefinitionArgs extends io.pulumi.resources.ResourceArgs 
     	      this.attributes = defaults.attributes;
         }
 
-        public Builder attributes(Input<List<InputAttributeArgs>> attributes) {
+        public Builder attributes(Output<List<InputAttributeArgs>> attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
 
         public Builder attributes(List<InputAttributeArgs> attributes) {
-            this.attributes = Input.of(Objects.requireNonNull(attributes));
+            this.attributes = Output.of(Objects.requireNonNull(attributes));
             return this;
         }
         public InputDefinitionArgs build() {

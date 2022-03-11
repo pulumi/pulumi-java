@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class ServiceTemplateSpecContainerVolumeMountArgs extends io.pulumi
      * 
      */
     @InputImport(name="mountPath", required=true)
-      private final Input<String> mountPath;
+      private final Output<String> mountPath;
 
-    public Input<String> getMountPath() {
+    public Output<String> getMountPath() {
         return this.mountPath;
     }
 
@@ -30,22 +30,22 @@ public final class ServiceTemplateSpecContainerVolumeMountArgs extends io.pulumi
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     public ServiceTemplateSpecContainerVolumeMountArgs(
-        Input<String> mountPath,
-        Input<String> name) {
+        Output<String> mountPath,
+        Output<String> name) {
         this.mountPath = Objects.requireNonNull(mountPath, "expected parameter 'mountPath' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private ServiceTemplateSpecContainerVolumeMountArgs() {
-        this.mountPath = Input.empty();
-        this.name = Input.empty();
+        this.mountPath = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ServiceTemplateSpecContainerVolumeMountArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private Input<String> mountPath;
-        private Input<String> name;
+        private Output<String> mountPath;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ServiceTemplateSpecContainerVolumeMountArgs extends io.pulumi
     	      this.name = defaults.name;
         }
 
-        public Builder mountPath(Input<String> mountPath) {
+        public Builder mountPath(Output<String> mountPath) {
             this.mountPath = Objects.requireNonNull(mountPath);
             return this;
         }
 
         public Builder mountPath(String mountPath) {
-            this.mountPath = Input.of(Objects.requireNonNull(mountPath));
+            this.mountPath = Output.of(Objects.requireNonNull(mountPath));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public ServiceTemplateSpecContainerVolumeMountArgs build() {

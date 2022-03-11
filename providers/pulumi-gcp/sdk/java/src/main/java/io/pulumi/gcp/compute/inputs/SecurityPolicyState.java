@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.SecurityPolicyAdaptiveProtectionConfigGetArgs;
 import io.pulumi.gcp.compute.inputs.SecurityPolicyRuleGetArgs;
@@ -22,10 +22,10 @@ public final class SecurityPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="adaptiveProtectionConfig")
-      private final @Nullable Input<SecurityPolicyAdaptiveProtectionConfigGetArgs> adaptiveProtectionConfig;
+      private final @Nullable Output<SecurityPolicyAdaptiveProtectionConfigGetArgs> adaptiveProtectionConfig;
 
-    public Input<SecurityPolicyAdaptiveProtectionConfigGetArgs> getAdaptiveProtectionConfig() {
-        return this.adaptiveProtectionConfig == null ? Input.empty() : this.adaptiveProtectionConfig;
+    public Output<SecurityPolicyAdaptiveProtectionConfigGetArgs> getAdaptiveProtectionConfig() {
+        return this.adaptiveProtectionConfig == null ? Output.empty() : this.adaptiveProtectionConfig;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class SecurityPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class SecurityPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="fingerprint")
-      private final @Nullable Input<String> fingerprint;
+      private final @Nullable Output<String> fingerprint;
 
-    public Input<String> getFingerprint() {
-        return this.fingerprint == null ? Input.empty() : this.fingerprint;
+    public Output<String> getFingerprint() {
+        return this.fingerprint == null ? Output.empty() : this.fingerprint;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class SecurityPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class SecurityPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class SecurityPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="rules")
-      private final @Nullable Input<List<SecurityPolicyRuleGetArgs>> rules;
+      private final @Nullable Output<List<SecurityPolicyRuleGetArgs>> rules;
 
-    public Input<List<SecurityPolicyRuleGetArgs>> getRules() {
-        return this.rules == null ? Input.empty() : this.rules;
+    public Output<List<SecurityPolicyRuleGetArgs>> getRules() {
+        return this.rules == null ? Output.empty() : this.rules;
     }
 
     /**
@@ -91,20 +91,20 @@ public final class SecurityPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="selfLink")
-      private final @Nullable Input<String> selfLink;
+      private final @Nullable Output<String> selfLink;
 
-    public Input<String> getSelfLink() {
-        return this.selfLink == null ? Input.empty() : this.selfLink;
+    public Output<String> getSelfLink() {
+        return this.selfLink == null ? Output.empty() : this.selfLink;
     }
 
     public SecurityPolicyState(
-        @Nullable Input<SecurityPolicyAdaptiveProtectionConfigGetArgs> adaptiveProtectionConfig,
-        @Nullable Input<String> description,
-        @Nullable Input<String> fingerprint,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<List<SecurityPolicyRuleGetArgs>> rules,
-        @Nullable Input<String> selfLink) {
+        @Nullable Output<SecurityPolicyAdaptiveProtectionConfigGetArgs> adaptiveProtectionConfig,
+        @Nullable Output<String> description,
+        @Nullable Output<String> fingerprint,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<List<SecurityPolicyRuleGetArgs>> rules,
+        @Nullable Output<String> selfLink) {
         this.adaptiveProtectionConfig = adaptiveProtectionConfig;
         this.description = description;
         this.fingerprint = fingerprint;
@@ -115,13 +115,13 @@ public final class SecurityPolicyState extends io.pulumi.resources.ResourceArgs 
     }
 
     private SecurityPolicyState() {
-        this.adaptiveProtectionConfig = Input.empty();
-        this.description = Input.empty();
-        this.fingerprint = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.rules = Input.empty();
-        this.selfLink = Input.empty();
+        this.adaptiveProtectionConfig = Output.empty();
+        this.description = Output.empty();
+        this.fingerprint = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.rules = Output.empty();
+        this.selfLink = Output.empty();
     }
 
     public static Builder builder() {
@@ -133,13 +133,13 @@ public final class SecurityPolicyState extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<SecurityPolicyAdaptiveProtectionConfigGetArgs> adaptiveProtectionConfig;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> fingerprint;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<List<SecurityPolicyRuleGetArgs>> rules;
-        private @Nullable Input<String> selfLink;
+        private @Nullable Output<SecurityPolicyAdaptiveProtectionConfigGetArgs> adaptiveProtectionConfig;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> fingerprint;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<List<SecurityPolicyRuleGetArgs>> rules;
+        private @Nullable Output<String> selfLink;
 
         public Builder() {
     	      // Empty
@@ -156,73 +156,73 @@ public final class SecurityPolicyState extends io.pulumi.resources.ResourceArgs 
     	      this.selfLink = defaults.selfLink;
         }
 
-        public Builder adaptiveProtectionConfig(@Nullable Input<SecurityPolicyAdaptiveProtectionConfigGetArgs> adaptiveProtectionConfig) {
+        public Builder adaptiveProtectionConfig(@Nullable Output<SecurityPolicyAdaptiveProtectionConfigGetArgs> adaptiveProtectionConfig) {
             this.adaptiveProtectionConfig = adaptiveProtectionConfig;
             return this;
         }
 
         public Builder adaptiveProtectionConfig(@Nullable SecurityPolicyAdaptiveProtectionConfigGetArgs adaptiveProtectionConfig) {
-            this.adaptiveProtectionConfig = Input.ofNullable(adaptiveProtectionConfig);
+            this.adaptiveProtectionConfig = Output.ofNullable(adaptiveProtectionConfig);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder fingerprint(@Nullable Input<String> fingerprint) {
+        public Builder fingerprint(@Nullable Output<String> fingerprint) {
             this.fingerprint = fingerprint;
             return this;
         }
 
         public Builder fingerprint(@Nullable String fingerprint) {
-            this.fingerprint = Input.ofNullable(fingerprint);
+            this.fingerprint = Output.ofNullable(fingerprint);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder rules(@Nullable Input<List<SecurityPolicyRuleGetArgs>> rules) {
+        public Builder rules(@Nullable Output<List<SecurityPolicyRuleGetArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
         public Builder rules(@Nullable List<SecurityPolicyRuleGetArgs> rules) {
-            this.rules = Input.ofNullable(rules);
+            this.rules = Output.ofNullable(rules);
             return this;
         }
 
-        public Builder selfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Input.ofNullable(selfLink);
+            this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
         public SecurityPolicyState build() {

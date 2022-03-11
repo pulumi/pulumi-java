@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,54 +16,54 @@ public final class ServiceTaskSpecContainerSpecConfigGetArgs extends io.pulumi.r
     public static final ServiceTaskSpecContainerSpecConfigGetArgs Empty = new ServiceTaskSpecContainerSpecConfigGetArgs();
 
     @InputImport(name="configId", required=true)
-      private final Input<String> configId;
+      private final Output<String> configId;
 
-    public Input<String> getConfigId() {
+    public Output<String> getConfigId() {
         return this.configId;
     }
 
     @InputImport(name="configName")
-      private final @Nullable Input<String> configName;
+      private final @Nullable Output<String> configName;
 
-    public Input<String> getConfigName() {
-        return this.configName == null ? Input.empty() : this.configName;
+    public Output<String> getConfigName() {
+        return this.configName == null ? Output.empty() : this.configName;
     }
 
     @InputImport(name="fileGid")
-      private final @Nullable Input<String> fileGid;
+      private final @Nullable Output<String> fileGid;
 
-    public Input<String> getFileGid() {
-        return this.fileGid == null ? Input.empty() : this.fileGid;
+    public Output<String> getFileGid() {
+        return this.fileGid == null ? Output.empty() : this.fileGid;
     }
 
     @InputImport(name="fileMode")
-      private final @Nullable Input<Integer> fileMode;
+      private final @Nullable Output<Integer> fileMode;
 
-    public Input<Integer> getFileMode() {
-        return this.fileMode == null ? Input.empty() : this.fileMode;
+    public Output<Integer> getFileMode() {
+        return this.fileMode == null ? Output.empty() : this.fileMode;
     }
 
     @InputImport(name="fileName", required=true)
-      private final Input<String> fileName;
+      private final Output<String> fileName;
 
-    public Input<String> getFileName() {
+    public Output<String> getFileName() {
         return this.fileName;
     }
 
     @InputImport(name="fileUid")
-      private final @Nullable Input<String> fileUid;
+      private final @Nullable Output<String> fileUid;
 
-    public Input<String> getFileUid() {
-        return this.fileUid == null ? Input.empty() : this.fileUid;
+    public Output<String> getFileUid() {
+        return this.fileUid == null ? Output.empty() : this.fileUid;
     }
 
     public ServiceTaskSpecContainerSpecConfigGetArgs(
-        Input<String> configId,
-        @Nullable Input<String> configName,
-        @Nullable Input<String> fileGid,
-        @Nullable Input<Integer> fileMode,
-        Input<String> fileName,
-        @Nullable Input<String> fileUid) {
+        Output<String> configId,
+        @Nullable Output<String> configName,
+        @Nullable Output<String> fileGid,
+        @Nullable Output<Integer> fileMode,
+        Output<String> fileName,
+        @Nullable Output<String> fileUid) {
         this.configId = Objects.requireNonNull(configId, "expected parameter 'configId' to be non-null");
         this.configName = configName;
         this.fileGid = fileGid;
@@ -73,12 +73,12 @@ public final class ServiceTaskSpecContainerSpecConfigGetArgs extends io.pulumi.r
     }
 
     private ServiceTaskSpecContainerSpecConfigGetArgs() {
-        this.configId = Input.empty();
-        this.configName = Input.empty();
-        this.fileGid = Input.empty();
-        this.fileMode = Input.empty();
-        this.fileName = Input.empty();
-        this.fileUid = Input.empty();
+        this.configId = Output.empty();
+        this.configName = Output.empty();
+        this.fileGid = Output.empty();
+        this.fileMode = Output.empty();
+        this.fileName = Output.empty();
+        this.fileUid = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,12 +90,12 @@ public final class ServiceTaskSpecContainerSpecConfigGetArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private Input<String> configId;
-        private @Nullable Input<String> configName;
-        private @Nullable Input<String> fileGid;
-        private @Nullable Input<Integer> fileMode;
-        private Input<String> fileName;
-        private @Nullable Input<String> fileUid;
+        private Output<String> configId;
+        private @Nullable Output<String> configName;
+        private @Nullable Output<String> fileGid;
+        private @Nullable Output<Integer> fileMode;
+        private Output<String> fileName;
+        private @Nullable Output<String> fileUid;
 
         public Builder() {
     	      // Empty
@@ -111,63 +111,63 @@ public final class ServiceTaskSpecContainerSpecConfigGetArgs extends io.pulumi.r
     	      this.fileUid = defaults.fileUid;
         }
 
-        public Builder configId(Input<String> configId) {
+        public Builder configId(Output<String> configId) {
             this.configId = Objects.requireNonNull(configId);
             return this;
         }
 
         public Builder configId(String configId) {
-            this.configId = Input.of(Objects.requireNonNull(configId));
+            this.configId = Output.of(Objects.requireNonNull(configId));
             return this;
         }
 
-        public Builder configName(@Nullable Input<String> configName) {
+        public Builder configName(@Nullable Output<String> configName) {
             this.configName = configName;
             return this;
         }
 
         public Builder configName(@Nullable String configName) {
-            this.configName = Input.ofNullable(configName);
+            this.configName = Output.ofNullable(configName);
             return this;
         }
 
-        public Builder fileGid(@Nullable Input<String> fileGid) {
+        public Builder fileGid(@Nullable Output<String> fileGid) {
             this.fileGid = fileGid;
             return this;
         }
 
         public Builder fileGid(@Nullable String fileGid) {
-            this.fileGid = Input.ofNullable(fileGid);
+            this.fileGid = Output.ofNullable(fileGid);
             return this;
         }
 
-        public Builder fileMode(@Nullable Input<Integer> fileMode) {
+        public Builder fileMode(@Nullable Output<Integer> fileMode) {
             this.fileMode = fileMode;
             return this;
         }
 
         public Builder fileMode(@Nullable Integer fileMode) {
-            this.fileMode = Input.ofNullable(fileMode);
+            this.fileMode = Output.ofNullable(fileMode);
             return this;
         }
 
-        public Builder fileName(Input<String> fileName) {
+        public Builder fileName(Output<String> fileName) {
             this.fileName = Objects.requireNonNull(fileName);
             return this;
         }
 
         public Builder fileName(String fileName) {
-            this.fileName = Input.of(Objects.requireNonNull(fileName));
+            this.fileName = Output.of(Objects.requireNonNull(fileName));
             return this;
         }
 
-        public Builder fileUid(@Nullable Input<String> fileUid) {
+        public Builder fileUid(@Nullable Output<String> fileUid) {
             this.fileUid = fileUid;
             return this;
         }
 
         public Builder fileUid(@Nullable String fileUid) {
-            this.fileUid = Input.ofNullable(fileUid);
+            this.fileUid = Output.ofNullable(fileUid);
             return this;
         }
         public ServiceTaskSpecContainerSpecConfigGetArgs build() {

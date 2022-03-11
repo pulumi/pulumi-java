@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.AppImageConfigKernelGatewayImageConfigGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class AppImageConfigState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="appImageConfigName")
-      private final @Nullable Input<String> appImageConfigName;
+      private final @Nullable Output<String> appImageConfigName;
 
-    public Input<String> getAppImageConfigName() {
-        return this.appImageConfigName == null ? Input.empty() : this.appImageConfigName;
+    public Output<String> getAppImageConfigName() {
+        return this.appImageConfigName == null ? Output.empty() : this.appImageConfigName;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class AppImageConfigState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class AppImageConfigState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="kernelGatewayImageConfig")
-      private final @Nullable Input<AppImageConfigKernelGatewayImageConfigGetArgs> kernelGatewayImageConfig;
+      private final @Nullable Output<AppImageConfigKernelGatewayImageConfigGetArgs> kernelGatewayImageConfig;
 
-    public Input<AppImageConfigKernelGatewayImageConfigGetArgs> getKernelGatewayImageConfig() {
-        return this.kernelGatewayImageConfig == null ? Input.empty() : this.kernelGatewayImageConfig;
+    public Output<AppImageConfigKernelGatewayImageConfigGetArgs> getKernelGatewayImageConfig() {
+        return this.kernelGatewayImageConfig == null ? Output.empty() : this.kernelGatewayImageConfig;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class AppImageConfigState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -65,18 +65,18 @@ public final class AppImageConfigState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public AppImageConfigState(
-        @Nullable Input<String> appImageConfigName,
-        @Nullable Input<String> arn,
-        @Nullable Input<AppImageConfigKernelGatewayImageConfigGetArgs> kernelGatewayImageConfig,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> appImageConfigName,
+        @Nullable Output<String> arn,
+        @Nullable Output<AppImageConfigKernelGatewayImageConfigGetArgs> kernelGatewayImageConfig,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.appImageConfigName = appImageConfigName;
         this.arn = arn;
         this.kernelGatewayImageConfig = kernelGatewayImageConfig;
@@ -85,11 +85,11 @@ public final class AppImageConfigState extends io.pulumi.resources.ResourceArgs 
     }
 
     private AppImageConfigState() {
-        this.appImageConfigName = Input.empty();
-        this.arn = Input.empty();
-        this.kernelGatewayImageConfig = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.appImageConfigName = Output.empty();
+        this.arn = Output.empty();
+        this.kernelGatewayImageConfig = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class AppImageConfigState extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> appImageConfigName;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<AppImageConfigKernelGatewayImageConfigGetArgs> kernelGatewayImageConfig;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> appImageConfigName;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<AppImageConfigKernelGatewayImageConfigGetArgs> kernelGatewayImageConfig;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class AppImageConfigState extends io.pulumi.resources.ResourceArgs 
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder appImageConfigName(@Nullable Input<String> appImageConfigName) {
+        public Builder appImageConfigName(@Nullable Output<String> appImageConfigName) {
             this.appImageConfigName = appImageConfigName;
             return this;
         }
 
         public Builder appImageConfigName(@Nullable String appImageConfigName) {
-            this.appImageConfigName = Input.ofNullable(appImageConfigName);
+            this.appImageConfigName = Output.ofNullable(appImageConfigName);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder kernelGatewayImageConfig(@Nullable Input<AppImageConfigKernelGatewayImageConfigGetArgs> kernelGatewayImageConfig) {
+        public Builder kernelGatewayImageConfig(@Nullable Output<AppImageConfigKernelGatewayImageConfigGetArgs> kernelGatewayImageConfig) {
             this.kernelGatewayImageConfig = kernelGatewayImageConfig;
             return this;
         }
 
         public Builder kernelGatewayImageConfig(@Nullable AppImageConfigKernelGatewayImageConfigGetArgs kernelGatewayImageConfig) {
-            this.kernelGatewayImageConfig = Input.ofNullable(kernelGatewayImageConfig);
+            this.kernelGatewayImageConfig = Output.ofNullable(kernelGatewayImageConfig);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public AppImageConfigState build() {

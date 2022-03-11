@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.visualstudio.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ExtensionResourcePlanArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ExtensionResourcePlanArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="product")
-      private final @Nullable Input<String> product;
+      private final @Nullable Output<String> product;
 
-    public Input<String> getProduct() {
-        return this.product == null ? Input.empty() : this.product;
+    public Output<String> getProduct() {
+        return this.product == null ? Output.empty() : this.product;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ExtensionResourcePlanArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="promotionCode")
-      private final @Nullable Input<String> promotionCode;
+      private final @Nullable Output<String> promotionCode;
 
-    public Input<String> getPromotionCode() {
-        return this.promotionCode == null ? Input.empty() : this.promotionCode;
+    public Output<String> getPromotionCode() {
+        return this.promotionCode == null ? Output.empty() : this.promotionCode;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ExtensionResourcePlanArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="publisher")
-      private final @Nullable Input<String> publisher;
+      private final @Nullable Output<String> publisher;
 
-    public Input<String> getPublisher() {
-        return this.publisher == null ? Input.empty() : this.publisher;
+    public Output<String> getPublisher() {
+        return this.publisher == null ? Output.empty() : this.publisher;
     }
 
     /**
@@ -67,18 +67,18 @@ public final class ExtensionResourcePlanArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public ExtensionResourcePlanArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<String> product,
-        @Nullable Input<String> promotionCode,
-        @Nullable Input<String> publisher,
-        @Nullable Input<String> version) {
+        @Nullable Output<String> name,
+        @Nullable Output<String> product,
+        @Nullable Output<String> promotionCode,
+        @Nullable Output<String> publisher,
+        @Nullable Output<String> version) {
         this.name = name;
         this.product = product;
         this.promotionCode = promotionCode;
@@ -87,11 +87,11 @@ public final class ExtensionResourcePlanArgs extends io.pulumi.resources.Resourc
     }
 
     private ExtensionResourcePlanArgs() {
-        this.name = Input.empty();
-        this.product = Input.empty();
-        this.promotionCode = Input.empty();
-        this.publisher = Input.empty();
-        this.version = Input.empty();
+        this.name = Output.empty();
+        this.product = Output.empty();
+        this.promotionCode = Output.empty();
+        this.publisher = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,11 +103,11 @@ public final class ExtensionResourcePlanArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> product;
-        private @Nullable Input<String> promotionCode;
-        private @Nullable Input<String> publisher;
-        private @Nullable Input<String> version;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> product;
+        private @Nullable Output<String> promotionCode;
+        private @Nullable Output<String> publisher;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -122,53 +122,53 @@ public final class ExtensionResourcePlanArgs extends io.pulumi.resources.Resourc
     	      this.version = defaults.version;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder product(@Nullable Input<String> product) {
+        public Builder product(@Nullable Output<String> product) {
             this.product = product;
             return this;
         }
 
         public Builder product(@Nullable String product) {
-            this.product = Input.ofNullable(product);
+            this.product = Output.ofNullable(product);
             return this;
         }
 
-        public Builder promotionCode(@Nullable Input<String> promotionCode) {
+        public Builder promotionCode(@Nullable Output<String> promotionCode) {
             this.promotionCode = promotionCode;
             return this;
         }
 
         public Builder promotionCode(@Nullable String promotionCode) {
-            this.promotionCode = Input.ofNullable(promotionCode);
+            this.promotionCode = Output.ofNullable(promotionCode);
             return this;
         }
 
-        public Builder publisher(@Nullable Input<String> publisher) {
+        public Builder publisher(@Nullable Output<String> publisher) {
             this.publisher = publisher;
             return this;
         }
 
         public Builder publisher(@Nullable String publisher) {
-            this.publisher = Input.ofNullable(publisher);
+            this.publisher = Output.ofNullable(publisher);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public ExtensionResourcePlanArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devices.inputs;
 
 import io.pulumi.azurenative.devices.enums.NetworkRuleIPAction;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class NetworkRuleSetIpRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="action")
-      private final @Nullable Input<Either<String,NetworkRuleIPAction>> action;
+      private final @Nullable Output<Either<String,NetworkRuleIPAction>> action;
 
-    public Input<Either<String,NetworkRuleIPAction>> getAction() {
-        return this.action == null ? Input.empty() : this.action;
+    public Output<Either<String,NetworkRuleIPAction>> getAction() {
+        return this.action == null ? Output.empty() : this.action;
     }
 
     /**
@@ -36,9 +36,9 @@ public final class NetworkRuleSetIpRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="filterName", required=true)
-      private final Input<String> filterName;
+      private final Output<String> filterName;
 
-    public Input<String> getFilterName() {
+    public Output<String> getFilterName() {
         return this.filterName;
     }
 
@@ -47,25 +47,25 @@ public final class NetworkRuleSetIpRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="ipMask", required=true)
-      private final Input<String> ipMask;
+      private final Output<String> ipMask;
 
-    public Input<String> getIpMask() {
+    public Output<String> getIpMask() {
         return this.ipMask;
     }
 
     public NetworkRuleSetIpRuleArgs(
-        @Nullable Input<Either<String,NetworkRuleIPAction>> action,
-        Input<String> filterName,
-        Input<String> ipMask) {
-        this.action = action == null ? Input.ofLeft("Allow") : action;
+        @Nullable Output<Either<String,NetworkRuleIPAction>> action,
+        Output<String> filterName,
+        Output<String> ipMask) {
+        this.action = action == null ? Output.ofLeft("Allow") : action;
         this.filterName = Objects.requireNonNull(filterName, "expected parameter 'filterName' to be non-null");
         this.ipMask = Objects.requireNonNull(ipMask, "expected parameter 'ipMask' to be non-null");
     }
 
     private NetworkRuleSetIpRuleArgs() {
-        this.action = Input.empty();
-        this.filterName = Input.empty();
-        this.ipMask = Input.empty();
+        this.action = Output.empty();
+        this.filterName = Output.empty();
+        this.ipMask = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class NetworkRuleSetIpRuleArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,NetworkRuleIPAction>> action;
-        private Input<String> filterName;
-        private Input<String> ipMask;
+        private @Nullable Output<Either<String,NetworkRuleIPAction>> action;
+        private Output<String> filterName;
+        private Output<String> ipMask;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class NetworkRuleSetIpRuleArgs extends io.pulumi.resources.Resource
     	      this.ipMask = defaults.ipMask;
         }
 
-        public Builder action(@Nullable Input<Either<String,NetworkRuleIPAction>> action) {
+        public Builder action(@Nullable Output<Either<String,NetworkRuleIPAction>> action) {
             this.action = action;
             return this;
         }
 
         public Builder action(@Nullable Either<String,NetworkRuleIPAction> action) {
-            this.action = Input.ofNullable(action);
+            this.action = Output.ofNullable(action);
             return this;
         }
 
-        public Builder filterName(Input<String> filterName) {
+        public Builder filterName(Output<String> filterName) {
             this.filterName = Objects.requireNonNull(filterName);
             return this;
         }
 
         public Builder filterName(String filterName) {
-            this.filterName = Input.of(Objects.requireNonNull(filterName));
+            this.filterName = Output.of(Objects.requireNonNull(filterName));
             return this;
         }
 
-        public Builder ipMask(Input<String> ipMask) {
+        public Builder ipMask(Output<String> ipMask) {
             this.ipMask = Objects.requireNonNull(ipMask);
             return this;
         }
 
         public Builder ipMask(String ipMask) {
-            this.ipMask = Input.of(Objects.requireNonNull(ipMask));
+            this.ipMask = Output.of(Objects.requireNonNull(ipMask));
             return this;
         }
         public NetworkRuleSetIpRuleArgs build() {

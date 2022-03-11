@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.cfg.ConformancePackArgs;
 import io.pulumi.aws.cfg.inputs.ConformancePackState;
 import io.pulumi.aws.cfg.outputs.ConformancePackInputParameter;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -174,14 +173,14 @@ public class ConformancePack extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ConformancePack(String name, @Nullable ConformancePackArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cfg/conformancePack:ConformancePack", name, args == null ? ConformancePackArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:cfg/conformancePack:ConformancePack", name, args == null ? ConformancePackArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ConformancePack(String name, Input<String> id, @Nullable ConformancePackState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ConformancePack(String name, Output<String> id, @Nullable ConformancePackState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:cfg/conformancePack:ConformancePack", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -197,7 +196,7 @@ public class ConformancePack extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ConformancePack get(String name, Input<String> id, @Nullable ConformancePackState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ConformancePack get(String name, Output<String> id, @Nullable ConformancePackState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ConformancePack(name, id, state, options);
     }
 }

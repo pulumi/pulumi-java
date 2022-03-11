@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.SecurityPolicyDdosProtectionConfigDdosProtection;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class SecurityPolicyDdosProtectionConfigArgs extends io.pulumi.reso
     public static final SecurityPolicyDdosProtectionConfigArgs Empty = new SecurityPolicyDdosProtectionConfigArgs();
 
     @InputImport(name="ddosProtection")
-      private final @Nullable Input<SecurityPolicyDdosProtectionConfigDdosProtection> ddosProtection;
+      private final @Nullable Output<SecurityPolicyDdosProtectionConfigDdosProtection> ddosProtection;
 
-    public Input<SecurityPolicyDdosProtectionConfigDdosProtection> getDdosProtection() {
-        return this.ddosProtection == null ? Input.empty() : this.ddosProtection;
+    public Output<SecurityPolicyDdosProtectionConfigDdosProtection> getDdosProtection() {
+        return this.ddosProtection == null ? Output.empty() : this.ddosProtection;
     }
 
-    public SecurityPolicyDdosProtectionConfigArgs(@Nullable Input<SecurityPolicyDdosProtectionConfigDdosProtection> ddosProtection) {
+    public SecurityPolicyDdosProtectionConfigArgs(@Nullable Output<SecurityPolicyDdosProtectionConfigDdosProtection> ddosProtection) {
         this.ddosProtection = ddosProtection;
     }
 
     private SecurityPolicyDdosProtectionConfigArgs() {
-        this.ddosProtection = Input.empty();
+        this.ddosProtection = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class SecurityPolicyDdosProtectionConfigArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<SecurityPolicyDdosProtectionConfigDdosProtection> ddosProtection;
+        private @Nullable Output<SecurityPolicyDdosProtectionConfigDdosProtection> ddosProtection;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class SecurityPolicyDdosProtectionConfigArgs extends io.pulumi.reso
     	      this.ddosProtection = defaults.ddosProtection;
         }
 
-        public Builder ddosProtection(@Nullable Input<SecurityPolicyDdosProtectionConfigDdosProtection> ddosProtection) {
+        public Builder ddosProtection(@Nullable Output<SecurityPolicyDdosProtectionConfigDdosProtection> ddosProtection) {
             this.ddosProtection = ddosProtection;
             return this;
         }
 
         public Builder ddosProtection(@Nullable SecurityPolicyDdosProtectionConfigDdosProtection ddosProtection) {
-            this.ddosProtection = Input.ofNullable(ddosProtection);
+            this.ddosProtection = Output.ofNullable(ddosProtection);
             return this;
         }
         public SecurityPolicyDdosProtectionConfigArgs build() {

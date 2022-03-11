@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class VpnGatewayRoutePropagationState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="routeTableId")
-      private final @Nullable Input<String> routeTableId;
+      private final @Nullable Output<String> routeTableId;
 
-    public Input<String> getRouteTableId() {
-        return this.routeTableId == null ? Input.empty() : this.routeTableId;
+    public Output<String> getRouteTableId() {
+        return this.routeTableId == null ? Output.empty() : this.routeTableId;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class VpnGatewayRoutePropagationState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="vpnGatewayId")
-      private final @Nullable Input<String> vpnGatewayId;
+      private final @Nullable Output<String> vpnGatewayId;
 
-    public Input<String> getVpnGatewayId() {
-        return this.vpnGatewayId == null ? Input.empty() : this.vpnGatewayId;
+    public Output<String> getVpnGatewayId() {
+        return this.vpnGatewayId == null ? Output.empty() : this.vpnGatewayId;
     }
 
     public VpnGatewayRoutePropagationState(
-        @Nullable Input<String> routeTableId,
-        @Nullable Input<String> vpnGatewayId) {
+        @Nullable Output<String> routeTableId,
+        @Nullable Output<String> vpnGatewayId) {
         this.routeTableId = routeTableId;
         this.vpnGatewayId = vpnGatewayId;
     }
 
     private VpnGatewayRoutePropagationState() {
-        this.routeTableId = Input.empty();
-        this.vpnGatewayId = Input.empty();
+        this.routeTableId = Output.empty();
+        this.vpnGatewayId = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class VpnGatewayRoutePropagationState extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> routeTableId;
-        private @Nullable Input<String> vpnGatewayId;
+        private @Nullable Output<String> routeTableId;
+        private @Nullable Output<String> vpnGatewayId;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class VpnGatewayRoutePropagationState extends io.pulumi.resources.R
     	      this.vpnGatewayId = defaults.vpnGatewayId;
         }
 
-        public Builder routeTableId(@Nullable Input<String> routeTableId) {
+        public Builder routeTableId(@Nullable Output<String> routeTableId) {
             this.routeTableId = routeTableId;
             return this;
         }
 
         public Builder routeTableId(@Nullable String routeTableId) {
-            this.routeTableId = Input.ofNullable(routeTableId);
+            this.routeTableId = Output.ofNullable(routeTableId);
             return this;
         }
 
-        public Builder vpnGatewayId(@Nullable Input<String> vpnGatewayId) {
+        public Builder vpnGatewayId(@Nullable Output<String> vpnGatewayId) {
             this.vpnGatewayId = vpnGatewayId;
             return this;
         }
 
         public Builder vpnGatewayId(@Nullable String vpnGatewayId) {
-            this.vpnGatewayId = Input.ofNullable(vpnGatewayId);
+            this.vpnGatewayId = Output.ofNullable(vpnGatewayId);
             return this;
         }
         public VpnGatewayRoutePropagationState build() {

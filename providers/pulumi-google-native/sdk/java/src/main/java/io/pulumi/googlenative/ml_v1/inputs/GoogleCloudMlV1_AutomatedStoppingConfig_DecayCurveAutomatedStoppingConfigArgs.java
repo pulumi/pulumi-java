@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedSt
      * 
      */
     @InputImport(name="useElapsedTime")
-      private final @Nullable Input<Boolean> useElapsedTime;
+      private final @Nullable Output<Boolean> useElapsedTime;
 
-    public Input<Boolean> getUseElapsedTime() {
-        return this.useElapsedTime == null ? Input.empty() : this.useElapsedTime;
+    public Output<Boolean> getUseElapsedTime() {
+        return this.useElapsedTime == null ? Output.empty() : this.useElapsedTime;
     }
 
-    public GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigArgs(@Nullable Input<Boolean> useElapsedTime) {
+    public GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigArgs(@Nullable Output<Boolean> useElapsedTime) {
         this.useElapsedTime = useElapsedTime;
     }
 
     private GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigArgs() {
-        this.useElapsedTime = Input.empty();
+        this.useElapsedTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedSt
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> useElapsedTime;
+        private @Nullable Output<Boolean> useElapsedTime;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedSt
     	      this.useElapsedTime = defaults.useElapsedTime;
         }
 
-        public Builder useElapsedTime(@Nullable Input<Boolean> useElapsedTime) {
+        public Builder useElapsedTime(@Nullable Output<Boolean> useElapsedTime) {
             this.useElapsedTime = useElapsedTime;
             return this;
         }
 
         public Builder useElapsedTime(@Nullable Boolean useElapsedTime) {
-            this.useElapsedTime = Input.ofNullable(useElapsedTime);
+            this.useElapsedTime = Output.ofNullable(useElapsedTime);
             return this;
         }
         public GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigArgs build() {

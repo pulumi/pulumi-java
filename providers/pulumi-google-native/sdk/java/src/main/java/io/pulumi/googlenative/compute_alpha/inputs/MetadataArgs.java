@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.MetadataItemsItemArgs;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="items")
-      private final @Nullable Input<List<MetadataItemsItemArgs>> items;
+      private final @Nullable Output<List<MetadataItemsItemArgs>> items;
 
-    public Input<List<MetadataItemsItemArgs>> getItems() {
-        return this.items == null ? Input.empty() : this.items;
+    public Output<List<MetadataItemsItemArgs>> getItems() {
+        return this.items == null ? Output.empty() : this.items;
     }
 
-    public MetadataArgs(@Nullable Input<List<MetadataItemsItemArgs>> items) {
+    public MetadataArgs(@Nullable Output<List<MetadataItemsItemArgs>> items) {
         this.items = items;
     }
 
     private MetadataArgs() {
-        this.items = Input.empty();
+        this.items = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<MetadataItemsItemArgs>> items;
+        private @Nullable Output<List<MetadataItemsItemArgs>> items;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
     	      this.items = defaults.items;
         }
 
-        public Builder items(@Nullable Input<List<MetadataItemsItemArgs>> items) {
+        public Builder items(@Nullable Output<List<MetadataItemsItemArgs>> items) {
             this.items = items;
             return this;
         }
 
         public Builder items(@Nullable List<MetadataItemsItemArgs> items) {
-            this.items = Input.ofNullable(items);
+            this.items = Output.ofNullable(items);
             return this;
         }
         public MetadataArgs build() {

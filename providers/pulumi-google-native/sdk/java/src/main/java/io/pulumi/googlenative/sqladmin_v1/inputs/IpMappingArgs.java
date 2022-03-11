@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.sqladmin_v1.enums.IpMappingType;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class IpMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAddress")
-      private final @Nullable Input<String> ipAddress;
+      private final @Nullable Output<String> ipAddress;
 
-    public Input<String> getIpAddress() {
-        return this.ipAddress == null ? Input.empty() : this.ipAddress;
+    public Output<String> getIpAddress() {
+        return this.ipAddress == null ? Output.empty() : this.ipAddress;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class IpMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeToRetire")
-      private final @Nullable Input<String> timeToRetire;
+      private final @Nullable Output<String> timeToRetire;
 
-    public Input<String> getTimeToRetire() {
-        return this.timeToRetire == null ? Input.empty() : this.timeToRetire;
+    public Output<String> getTimeToRetire() {
+        return this.timeToRetire == null ? Output.empty() : this.timeToRetire;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class IpMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<IpMappingType> type;
+      private final @Nullable Output<IpMappingType> type;
 
-    public Input<IpMappingType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<IpMappingType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public IpMappingArgs(
-        @Nullable Input<String> ipAddress,
-        @Nullable Input<String> timeToRetire,
-        @Nullable Input<IpMappingType> type) {
+        @Nullable Output<String> ipAddress,
+        @Nullable Output<String> timeToRetire,
+        @Nullable Output<IpMappingType> type) {
         this.ipAddress = ipAddress;
         this.timeToRetire = timeToRetire;
         this.type = type;
     }
 
     private IpMappingArgs() {
-        this.ipAddress = Input.empty();
-        this.timeToRetire = Input.empty();
-        this.type = Input.empty();
+        this.ipAddress = Output.empty();
+        this.timeToRetire = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class IpMappingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> ipAddress;
-        private @Nullable Input<String> timeToRetire;
-        private @Nullable Input<IpMappingType> type;
+        private @Nullable Output<String> ipAddress;
+        private @Nullable Output<String> timeToRetire;
+        private @Nullable Output<IpMappingType> type;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class IpMappingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder ipAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Input.ofNullable(ipAddress);
+            this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
 
-        public Builder timeToRetire(@Nullable Input<String> timeToRetire) {
+        public Builder timeToRetire(@Nullable Output<String> timeToRetire) {
             this.timeToRetire = timeToRetire;
             return this;
         }
 
         public Builder timeToRetire(@Nullable String timeToRetire) {
-            this.timeToRetire = Input.ofNullable(timeToRetire);
+            this.timeToRetire = Output.ofNullable(timeToRetire);
             return this;
         }
 
-        public Builder type(@Nullable Input<IpMappingType> type) {
+        public Builder type(@Nullable Output<IpMappingType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable IpMappingType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public IpMappingArgs build() {

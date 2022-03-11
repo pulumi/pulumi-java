@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.azurenative.batch.enums.DiskEncryptionTarget;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class DiskEncryptionConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="targets")
-      private final @Nullable Input<List<DiskEncryptionTarget>> targets;
+      private final @Nullable Output<List<DiskEncryptionTarget>> targets;
 
-    public Input<List<DiskEncryptionTarget>> getTargets() {
-        return this.targets == null ? Input.empty() : this.targets;
+    public Output<List<DiskEncryptionTarget>> getTargets() {
+        return this.targets == null ? Output.empty() : this.targets;
     }
 
-    public DiskEncryptionConfigurationArgs(@Nullable Input<List<DiskEncryptionTarget>> targets) {
+    public DiskEncryptionConfigurationArgs(@Nullable Output<List<DiskEncryptionTarget>> targets) {
         this.targets = targets;
     }
 
     private DiskEncryptionConfigurationArgs() {
-        this.targets = Input.empty();
+        this.targets = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class DiskEncryptionConfigurationArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<List<DiskEncryptionTarget>> targets;
+        private @Nullable Output<List<DiskEncryptionTarget>> targets;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class DiskEncryptionConfigurationArgs extends io.pulumi.resources.R
     	      this.targets = defaults.targets;
         }
 
-        public Builder targets(@Nullable Input<List<DiskEncryptionTarget>> targets) {
+        public Builder targets(@Nullable Output<List<DiskEncryptionTarget>> targets) {
             this.targets = targets;
             return this;
         }
 
         public Builder targets(@Nullable List<DiskEncryptionTarget> targets) {
-            this.targets = Input.ofNullable(targets);
+            this.targets = Output.ofNullable(targets);
             return this;
         }
         public DiskEncryptionConfigurationArgs build() {

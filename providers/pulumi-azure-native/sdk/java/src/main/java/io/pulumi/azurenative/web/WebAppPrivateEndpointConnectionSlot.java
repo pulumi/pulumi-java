@@ -8,7 +8,6 @@ import io.pulumi.azurenative.web.WebAppPrivateEndpointConnectionSlotArgs;
 import io.pulumi.azurenative.web.outputs.ArmIdWrapperResponse;
 import io.pulumi.azurenative.web.outputs.PrivateLinkConnectionStateResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -162,22 +161,22 @@ public class WebAppPrivateEndpointConnectionSlot extends io.pulumi.resources.Cus
      * @param options A bag of options that control this resource's behavior.
      */
     public WebAppPrivateEndpointConnectionSlot(String name, WebAppPrivateEndpointConnectionSlotArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:web:WebAppPrivateEndpointConnectionSlot", name, args == null ? WebAppPrivateEndpointConnectionSlotArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:web:WebAppPrivateEndpointConnectionSlot", name, args == null ? WebAppPrivateEndpointConnectionSlotArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private WebAppPrivateEndpointConnectionSlot(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private WebAppPrivateEndpointConnectionSlot(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:web:WebAppPrivateEndpointConnectionSlot", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:web/v20201201:WebAppPrivateEndpointConnectionSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210101:WebAppPrivateEndpointConnectionSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210115:WebAppPrivateEndpointConnectionSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210201:WebAppPrivateEndpointConnectionSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210301:WebAppPrivateEndpointConnectionSlot").build())
+                Output.of(Alias.builder().setType("azure-native:web/v20201201:WebAppPrivateEndpointConnectionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210101:WebAppPrivateEndpointConnectionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210115:WebAppPrivateEndpointConnectionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210201:WebAppPrivateEndpointConnectionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210301:WebAppPrivateEndpointConnectionSlot").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -191,7 +190,7 @@ public class WebAppPrivateEndpointConnectionSlot extends io.pulumi.resources.Cus
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WebAppPrivateEndpointConnectionSlot get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static WebAppPrivateEndpointConnectionSlot get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new WebAppPrivateEndpointConnectionSlot(name, id, options);
     }
 }

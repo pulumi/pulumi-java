@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -24,10 +24,10 @@ public final class ResourceRequirementsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="limits")
-      private final @Nullable Input<Map<String,String>> limits;
+      private final @Nullable Output<Map<String,String>> limits;
 
-    public Input<Map<String,String>> getLimits() {
-        return this.limits == null ? Input.empty() : this.limits;
+    public Output<Map<String,String>> getLimits() {
+        return this.limits == null ? Output.empty() : this.limits;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ResourceRequirementsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="requests")
-      private final @Nullable Input<Map<String,String>> requests;
+      private final @Nullable Output<Map<String,String>> requests;
 
-    public Input<Map<String,String>> getRequests() {
-        return this.requests == null ? Input.empty() : this.requests;
+    public Output<Map<String,String>> getRequests() {
+        return this.requests == null ? Output.empty() : this.requests;
     }
 
     public ResourceRequirementsArgs(
-        @Nullable Input<Map<String,String>> limits,
-        @Nullable Input<Map<String,String>> requests) {
+        @Nullable Output<Map<String,String>> limits,
+        @Nullable Output<Map<String,String>> requests) {
         this.limits = limits;
         this.requests = requests;
     }
 
     private ResourceRequirementsArgs() {
-        this.limits = Input.empty();
-        this.requests = Input.empty();
+        this.limits = Output.empty();
+        this.requests = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ResourceRequirementsArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> limits;
-        private @Nullable Input<Map<String,String>> requests;
+        private @Nullable Output<Map<String,String>> limits;
+        private @Nullable Output<Map<String,String>> requests;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ResourceRequirementsArgs extends io.pulumi.resources.Resource
     	      this.requests = defaults.requests;
         }
 
-        public Builder limits(@Nullable Input<Map<String,String>> limits) {
+        public Builder limits(@Nullable Output<Map<String,String>> limits) {
             this.limits = limits;
             return this;
         }
 
         public Builder limits(@Nullable Map<String,String> limits) {
-            this.limits = Input.ofNullable(limits);
+            this.limits = Output.ofNullable(limits);
             return this;
         }
 
-        public Builder requests(@Nullable Input<Map<String,String>> requests) {
+        public Builder requests(@Nullable Output<Map<String,String>> requests) {
             this.requests = requests;
             return this;
         }
 
         public Builder requests(@Nullable Map<String,String> requests) {
-            this.requests = Input.ofNullable(requests);
+            this.requests = Output.ofNullable(requests);
             return this;
         }
         public ResourceRequirementsArgs build() {

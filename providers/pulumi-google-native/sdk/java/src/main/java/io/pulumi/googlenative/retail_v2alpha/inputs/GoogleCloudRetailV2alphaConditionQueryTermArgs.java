@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class GoogleCloudRetailV2alphaConditionQueryTermArgs extends io.pul
      * 
      */
     @InputImport(name="fullMatch")
-      private final @Nullable Input<Boolean> fullMatch;
+      private final @Nullable Output<Boolean> fullMatch;
 
-    public Input<Boolean> getFullMatch() {
-        return this.fullMatch == null ? Input.empty() : this.fullMatch;
+    public Output<Boolean> getFullMatch() {
+        return this.fullMatch == null ? Output.empty() : this.fullMatch;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class GoogleCloudRetailV2alphaConditionQueryTermArgs extends io.pul
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public GoogleCloudRetailV2alphaConditionQueryTermArgs(
-        @Nullable Input<Boolean> fullMatch,
-        @Nullable Input<String> value) {
+        @Nullable Output<Boolean> fullMatch,
+        @Nullable Output<String> value) {
         this.fullMatch = fullMatch;
         this.value = value;
     }
 
     private GoogleCloudRetailV2alphaConditionQueryTermArgs() {
-        this.fullMatch = Input.empty();
-        this.value = Input.empty();
+        this.fullMatch = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class GoogleCloudRetailV2alphaConditionQueryTermArgs extends io.pul
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> fullMatch;
-        private @Nullable Input<String> value;
+        private @Nullable Output<Boolean> fullMatch;
+        private @Nullable Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class GoogleCloudRetailV2alphaConditionQueryTermArgs extends io.pul
     	      this.value = defaults.value;
         }
 
-        public Builder fullMatch(@Nullable Input<Boolean> fullMatch) {
+        public Builder fullMatch(@Nullable Output<Boolean> fullMatch) {
             this.fullMatch = fullMatch;
             return this;
         }
 
         public Builder fullMatch(@Nullable Boolean fullMatch) {
-            this.fullMatch = Input.ofNullable(fullMatch);
+            this.fullMatch = Output.ofNullable(fullMatch);
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public GoogleCloudRetailV2alphaConditionQueryTermArgs build() {

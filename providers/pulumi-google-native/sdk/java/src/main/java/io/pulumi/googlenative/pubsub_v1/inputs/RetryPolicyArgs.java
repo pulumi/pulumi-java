@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsub_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maximumBackoff")
-      private final @Nullable Input<String> maximumBackoff;
+      private final @Nullable Output<String> maximumBackoff;
 
-    public Input<String> getMaximumBackoff() {
-        return this.maximumBackoff == null ? Input.empty() : this.maximumBackoff;
+    public Output<String> getMaximumBackoff() {
+        return this.maximumBackoff == null ? Output.empty() : this.maximumBackoff;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minimumBackoff")
-      private final @Nullable Input<String> minimumBackoff;
+      private final @Nullable Output<String> minimumBackoff;
 
-    public Input<String> getMinimumBackoff() {
-        return this.minimumBackoff == null ? Input.empty() : this.minimumBackoff;
+    public Output<String> getMinimumBackoff() {
+        return this.minimumBackoff == null ? Output.empty() : this.minimumBackoff;
     }
 
     public RetryPolicyArgs(
-        @Nullable Input<String> maximumBackoff,
-        @Nullable Input<String> minimumBackoff) {
+        @Nullable Output<String> maximumBackoff,
+        @Nullable Output<String> minimumBackoff) {
         this.maximumBackoff = maximumBackoff;
         this.minimumBackoff = minimumBackoff;
     }
 
     private RetryPolicyArgs() {
-        this.maximumBackoff = Input.empty();
-        this.minimumBackoff = Input.empty();
+        this.maximumBackoff = Output.empty();
+        this.minimumBackoff = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> maximumBackoff;
-        private @Nullable Input<String> minimumBackoff;
+        private @Nullable Output<String> maximumBackoff;
+        private @Nullable Output<String> minimumBackoff;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.minimumBackoff = defaults.minimumBackoff;
         }
 
-        public Builder maximumBackoff(@Nullable Input<String> maximumBackoff) {
+        public Builder maximumBackoff(@Nullable Output<String> maximumBackoff) {
             this.maximumBackoff = maximumBackoff;
             return this;
         }
 
         public Builder maximumBackoff(@Nullable String maximumBackoff) {
-            this.maximumBackoff = Input.ofNullable(maximumBackoff);
+            this.maximumBackoff = Output.ofNullable(maximumBackoff);
             return this;
         }
 
-        public Builder minimumBackoff(@Nullable Input<String> minimumBackoff) {
+        public Builder minimumBackoff(@Nullable Output<String> minimumBackoff) {
             this.minimumBackoff = minimumBackoff;
             return this;
         }
 
         public Builder minimumBackoff(@Nullable String minimumBackoff) {
-            this.minimumBackoff = Input.ofNullable(minimumBackoff);
+            this.minimumBackoff = Output.ofNullable(minimumBackoff);
             return this;
         }
         public RetryPolicyArgs build() {

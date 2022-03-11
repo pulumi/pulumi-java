@@ -6,7 +6,6 @@ package io.pulumi.aws.shield;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.shield.ProtectionArgs;
 import io.pulumi.aws.shield.inputs.ProtectionState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -140,14 +139,14 @@ public class Protection extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Protection(String name, ProtectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:shield/protection:Protection", name, args == null ? ProtectionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:shield/protection:Protection", name, args == null ? ProtectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Protection(String name, Input<String> id, @Nullable ProtectionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Protection(String name, Output<String> id, @Nullable ProtectionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:shield/protection:Protection", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -163,7 +162,7 @@ public class Protection extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Protection get(String name, Input<String> id, @Nullable ProtectionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Protection get(String name, Output<String> id, @Nullable ProtectionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Protection(name, id, state, options);
     }
 }

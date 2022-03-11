@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.inputs.TopicRuleTimestreamDimensionArgs;
 import io.pulumi.awsnative.iot.inputs.TopicRuleTimestreamTimestampArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -19,54 +19,54 @@ public final class TopicRuleTimestreamActionArgs extends io.pulumi.resources.Res
     public static final TopicRuleTimestreamActionArgs Empty = new TopicRuleTimestreamActionArgs();
 
     @InputImport(name="batchMode")
-      private final @Nullable Input<Boolean> batchMode;
+      private final @Nullable Output<Boolean> batchMode;
 
-    public Input<Boolean> getBatchMode() {
-        return this.batchMode == null ? Input.empty() : this.batchMode;
+    public Output<Boolean> getBatchMode() {
+        return this.batchMode == null ? Output.empty() : this.batchMode;
     }
 
     @InputImport(name="databaseName", required=true)
-      private final Input<String> databaseName;
+      private final Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
+    public Output<String> getDatabaseName() {
         return this.databaseName;
     }
 
     @InputImport(name="dimensions", required=true)
-      private final Input<List<TopicRuleTimestreamDimensionArgs>> dimensions;
+      private final Output<List<TopicRuleTimestreamDimensionArgs>> dimensions;
 
-    public Input<List<TopicRuleTimestreamDimensionArgs>> getDimensions() {
+    public Output<List<TopicRuleTimestreamDimensionArgs>> getDimensions() {
         return this.dimensions;
     }
 
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
     @InputImport(name="tableName", required=true)
-      private final Input<String> tableName;
+      private final Output<String> tableName;
 
-    public Input<String> getTableName() {
+    public Output<String> getTableName() {
         return this.tableName;
     }
 
     @InputImport(name="timestamp")
-      private final @Nullable Input<TopicRuleTimestreamTimestampArgs> timestamp;
+      private final @Nullable Output<TopicRuleTimestreamTimestampArgs> timestamp;
 
-    public Input<TopicRuleTimestreamTimestampArgs> getTimestamp() {
-        return this.timestamp == null ? Input.empty() : this.timestamp;
+    public Output<TopicRuleTimestreamTimestampArgs> getTimestamp() {
+        return this.timestamp == null ? Output.empty() : this.timestamp;
     }
 
     public TopicRuleTimestreamActionArgs(
-        @Nullable Input<Boolean> batchMode,
-        Input<String> databaseName,
-        Input<List<TopicRuleTimestreamDimensionArgs>> dimensions,
-        Input<String> roleArn,
-        Input<String> tableName,
-        @Nullable Input<TopicRuleTimestreamTimestampArgs> timestamp) {
+        @Nullable Output<Boolean> batchMode,
+        Output<String> databaseName,
+        Output<List<TopicRuleTimestreamDimensionArgs>> dimensions,
+        Output<String> roleArn,
+        Output<String> tableName,
+        @Nullable Output<TopicRuleTimestreamTimestampArgs> timestamp) {
         this.batchMode = batchMode;
         this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
         this.dimensions = Objects.requireNonNull(dimensions, "expected parameter 'dimensions' to be non-null");
@@ -76,12 +76,12 @@ public final class TopicRuleTimestreamActionArgs extends io.pulumi.resources.Res
     }
 
     private TopicRuleTimestreamActionArgs() {
-        this.batchMode = Input.empty();
-        this.databaseName = Input.empty();
-        this.dimensions = Input.empty();
-        this.roleArn = Input.empty();
-        this.tableName = Input.empty();
-        this.timestamp = Input.empty();
+        this.batchMode = Output.empty();
+        this.databaseName = Output.empty();
+        this.dimensions = Output.empty();
+        this.roleArn = Output.empty();
+        this.tableName = Output.empty();
+        this.timestamp = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,12 +93,12 @@ public final class TopicRuleTimestreamActionArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> batchMode;
-        private Input<String> databaseName;
-        private Input<List<TopicRuleTimestreamDimensionArgs>> dimensions;
-        private Input<String> roleArn;
-        private Input<String> tableName;
-        private @Nullable Input<TopicRuleTimestreamTimestampArgs> timestamp;
+        private @Nullable Output<Boolean> batchMode;
+        private Output<String> databaseName;
+        private Output<List<TopicRuleTimestreamDimensionArgs>> dimensions;
+        private Output<String> roleArn;
+        private Output<String> tableName;
+        private @Nullable Output<TopicRuleTimestreamTimestampArgs> timestamp;
 
         public Builder() {
     	      // Empty
@@ -114,63 +114,63 @@ public final class TopicRuleTimestreamActionArgs extends io.pulumi.resources.Res
     	      this.timestamp = defaults.timestamp;
         }
 
-        public Builder batchMode(@Nullable Input<Boolean> batchMode) {
+        public Builder batchMode(@Nullable Output<Boolean> batchMode) {
             this.batchMode = batchMode;
             return this;
         }
 
         public Builder batchMode(@Nullable Boolean batchMode) {
-            this.batchMode = Input.ofNullable(batchMode);
+            this.batchMode = Output.ofNullable(batchMode);
             return this;
         }
 
-        public Builder databaseName(Input<String> databaseName) {
+        public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
         public Builder databaseName(String databaseName) {
-            this.databaseName = Input.of(Objects.requireNonNull(databaseName));
+            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder dimensions(Input<List<TopicRuleTimestreamDimensionArgs>> dimensions) {
+        public Builder dimensions(Output<List<TopicRuleTimestreamDimensionArgs>> dimensions) {
             this.dimensions = Objects.requireNonNull(dimensions);
             return this;
         }
 
         public Builder dimensions(List<TopicRuleTimestreamDimensionArgs> dimensions) {
-            this.dimensions = Input.of(Objects.requireNonNull(dimensions));
+            this.dimensions = Output.of(Objects.requireNonNull(dimensions));
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder tableName(Input<String> tableName) {
+        public Builder tableName(Output<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
         public Builder tableName(String tableName) {
-            this.tableName = Input.of(Objects.requireNonNull(tableName));
+            this.tableName = Output.of(Objects.requireNonNull(tableName));
             return this;
         }
 
-        public Builder timestamp(@Nullable Input<TopicRuleTimestreamTimestampArgs> timestamp) {
+        public Builder timestamp(@Nullable Output<TopicRuleTimestreamTimestampArgs> timestamp) {
             this.timestamp = timestamp;
             return this;
         }
 
         public Builder timestamp(@Nullable TopicRuleTimestreamTimestampArgs timestamp) {
-            this.timestamp = Input.ofNullable(timestamp);
+            this.timestamp = Output.ofNullable(timestamp);
             return this;
         }
         public TopicRuleTimestreamActionArgs build() {

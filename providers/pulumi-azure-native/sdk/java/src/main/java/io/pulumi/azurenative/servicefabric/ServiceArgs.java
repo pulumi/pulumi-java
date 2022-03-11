@@ -13,7 +13,7 @@ import io.pulumi.azurenative.servicefabric.inputs.ServicePlacementPolicyDescript
 import io.pulumi.azurenative.servicefabric.inputs.SingletonPartitionSchemeDescriptionArgs;
 import io.pulumi.azurenative.servicefabric.inputs.UniformInt64RangePartitionSchemeDescriptionArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -32,9 +32,9 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationName", required=true)
-      private final Input<String> applicationName;
+      private final Output<String> applicationName;
 
-    public Input<String> getApplicationName() {
+    public Output<String> getApplicationName() {
         return this.applicationName;
     }
 
@@ -43,9 +43,9 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName", required=true)
-      private final Input<String> clusterName;
+      private final Output<String> clusterName;
 
-    public Input<String> getClusterName() {
+    public Output<String> getClusterName() {
         return this.clusterName;
     }
 
@@ -54,10 +54,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="correlationScheme")
-      private final @Nullable Input<List<ServiceCorrelationDescriptionArgs>> correlationScheme;
+      private final @Nullable Output<List<ServiceCorrelationDescriptionArgs>> correlationScheme;
 
-    public Input<List<ServiceCorrelationDescriptionArgs>> getCorrelationScheme() {
-        return this.correlationScheme == null ? Input.empty() : this.correlationScheme;
+    public Output<List<ServiceCorrelationDescriptionArgs>> getCorrelationScheme() {
+        return this.correlationScheme == null ? Output.empty() : this.correlationScheme;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultMoveCost")
-      private final @Nullable Input<Either<String,MoveCost>> defaultMoveCost;
+      private final @Nullable Output<Either<String,MoveCost>> defaultMoveCost;
 
-    public Input<Either<String,MoveCost>> getDefaultMoveCost() {
-        return this.defaultMoveCost == null ? Input.empty() : this.defaultMoveCost;
+    public Output<Either<String,MoveCost>> getDefaultMoveCost() {
+        return this.defaultMoveCost == null ? Output.empty() : this.defaultMoveCost;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="partitionDescription")
-      private final @Nullable Input<Object> partitionDescription;
+      private final @Nullable Output<Object> partitionDescription;
 
-    public Input<Object> getPartitionDescription() {
-        return this.partitionDescription == null ? Input.empty() : this.partitionDescription;
+    public Output<Object> getPartitionDescription() {
+        return this.partitionDescription == null ? Output.empty() : this.partitionDescription;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="placementConstraints")
-      private final @Nullable Input<String> placementConstraints;
+      private final @Nullable Output<String> placementConstraints;
 
-    public Input<String> getPlacementConstraints() {
-        return this.placementConstraints == null ? Input.empty() : this.placementConstraints;
+    public Output<String> getPlacementConstraints() {
+        return this.placementConstraints == null ? Output.empty() : this.placementConstraints;
     }
 
     /**
@@ -109,9 +109,9 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -120,10 +120,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceDnsName")
-      private final @Nullable Input<String> serviceDnsName;
+      private final @Nullable Output<String> serviceDnsName;
 
-    public Input<String> getServiceDnsName() {
-        return this.serviceDnsName == null ? Input.empty() : this.serviceDnsName;
+    public Output<String> getServiceDnsName() {
+        return this.serviceDnsName == null ? Output.empty() : this.serviceDnsName;
     }
 
     /**
@@ -131,9 +131,9 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceKind", required=true)
-      private final Input<Either<String,ServiceKind>> serviceKind;
+      private final Output<Either<String,ServiceKind>> serviceKind;
 
-    public Input<Either<String,ServiceKind>> getServiceKind() {
+    public Output<Either<String,ServiceKind>> getServiceKind() {
         return this.serviceKind;
     }
 
@@ -142,10 +142,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceLoadMetrics")
-      private final @Nullable Input<List<ServiceLoadMetricDescriptionArgs>> serviceLoadMetrics;
+      private final @Nullable Output<List<ServiceLoadMetricDescriptionArgs>> serviceLoadMetrics;
 
-    public Input<List<ServiceLoadMetricDescriptionArgs>> getServiceLoadMetrics() {
-        return this.serviceLoadMetrics == null ? Input.empty() : this.serviceLoadMetrics;
+    public Output<List<ServiceLoadMetricDescriptionArgs>> getServiceLoadMetrics() {
+        return this.serviceLoadMetrics == null ? Output.empty() : this.serviceLoadMetrics;
     }
 
     /**
@@ -153,10 +153,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName")
-      private final @Nullable Input<String> serviceName;
+      private final @Nullable Output<String> serviceName;
 
-    public Input<String> getServiceName() {
-        return this.serviceName == null ? Input.empty() : this.serviceName;
+    public Output<String> getServiceName() {
+        return this.serviceName == null ? Output.empty() : this.serviceName;
     }
 
     /**
@@ -164,10 +164,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="servicePackageActivationMode")
-      private final @Nullable Input<Either<String,ArmServicePackageActivationMode>> servicePackageActivationMode;
+      private final @Nullable Output<Either<String,ArmServicePackageActivationMode>> servicePackageActivationMode;
 
-    public Input<Either<String,ArmServicePackageActivationMode>> getServicePackageActivationMode() {
-        return this.servicePackageActivationMode == null ? Input.empty() : this.servicePackageActivationMode;
+    public Output<Either<String,ArmServicePackageActivationMode>> getServicePackageActivationMode() {
+        return this.servicePackageActivationMode == null ? Output.empty() : this.servicePackageActivationMode;
     }
 
     /**
@@ -175,10 +175,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="servicePlacementPolicies")
-      private final @Nullable Input<List<ServicePlacementPolicyDescriptionArgs>> servicePlacementPolicies;
+      private final @Nullable Output<List<ServicePlacementPolicyDescriptionArgs>> servicePlacementPolicies;
 
-    public Input<List<ServicePlacementPolicyDescriptionArgs>> getServicePlacementPolicies() {
-        return this.servicePlacementPolicies == null ? Input.empty() : this.servicePlacementPolicies;
+    public Output<List<ServicePlacementPolicyDescriptionArgs>> getServicePlacementPolicies() {
+        return this.servicePlacementPolicies == null ? Output.empty() : this.servicePlacementPolicies;
     }
 
     /**
@@ -186,10 +186,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceTypeName")
-      private final @Nullable Input<String> serviceTypeName;
+      private final @Nullable Output<String> serviceTypeName;
 
-    public Input<String> getServiceTypeName() {
-        return this.serviceTypeName == null ? Input.empty() : this.serviceTypeName;
+    public Output<String> getServiceTypeName() {
+        return this.serviceTypeName == null ? Output.empty() : this.serviceTypeName;
     }
 
     /**
@@ -197,29 +197,29 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ServiceArgs(
-        Input<String> applicationName,
-        Input<String> clusterName,
-        @Nullable Input<List<ServiceCorrelationDescriptionArgs>> correlationScheme,
-        @Nullable Input<Either<String,MoveCost>> defaultMoveCost,
-        @Nullable Input<String> location,
-        @Nullable Input<Object> partitionDescription,
-        @Nullable Input<String> placementConstraints,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> serviceDnsName,
-        Input<Either<String,ServiceKind>> serviceKind,
-        @Nullable Input<List<ServiceLoadMetricDescriptionArgs>> serviceLoadMetrics,
-        @Nullable Input<String> serviceName,
-        @Nullable Input<Either<String,ArmServicePackageActivationMode>> servicePackageActivationMode,
-        @Nullable Input<List<ServicePlacementPolicyDescriptionArgs>> servicePlacementPolicies,
-        @Nullable Input<String> serviceTypeName,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> applicationName,
+        Output<String> clusterName,
+        @Nullable Output<List<ServiceCorrelationDescriptionArgs>> correlationScheme,
+        @Nullable Output<Either<String,MoveCost>> defaultMoveCost,
+        @Nullable Output<String> location,
+        @Nullable Output<Object> partitionDescription,
+        @Nullable Output<String> placementConstraints,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> serviceDnsName,
+        Output<Either<String,ServiceKind>> serviceKind,
+        @Nullable Output<List<ServiceLoadMetricDescriptionArgs>> serviceLoadMetrics,
+        @Nullable Output<String> serviceName,
+        @Nullable Output<Either<String,ArmServicePackageActivationMode>> servicePackageActivationMode,
+        @Nullable Output<List<ServicePlacementPolicyDescriptionArgs>> servicePlacementPolicies,
+        @Nullable Output<String> serviceTypeName,
+        @Nullable Output<Map<String,String>> tags) {
         this.applicationName = Objects.requireNonNull(applicationName, "expected parameter 'applicationName' to be non-null");
         this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
         this.correlationScheme = correlationScheme;
@@ -239,22 +239,22 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceArgs() {
-        this.applicationName = Input.empty();
-        this.clusterName = Input.empty();
-        this.correlationScheme = Input.empty();
-        this.defaultMoveCost = Input.empty();
-        this.location = Input.empty();
-        this.partitionDescription = Input.empty();
-        this.placementConstraints = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serviceDnsName = Input.empty();
-        this.serviceKind = Input.empty();
-        this.serviceLoadMetrics = Input.empty();
-        this.serviceName = Input.empty();
-        this.servicePackageActivationMode = Input.empty();
-        this.servicePlacementPolicies = Input.empty();
-        this.serviceTypeName = Input.empty();
-        this.tags = Input.empty();
+        this.applicationName = Output.empty();
+        this.clusterName = Output.empty();
+        this.correlationScheme = Output.empty();
+        this.defaultMoveCost = Output.empty();
+        this.location = Output.empty();
+        this.partitionDescription = Output.empty();
+        this.placementConstraints = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serviceDnsName = Output.empty();
+        this.serviceKind = Output.empty();
+        this.serviceLoadMetrics = Output.empty();
+        this.serviceName = Output.empty();
+        this.servicePackageActivationMode = Output.empty();
+        this.servicePlacementPolicies = Output.empty();
+        this.serviceTypeName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -266,22 +266,22 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> applicationName;
-        private Input<String> clusterName;
-        private @Nullable Input<List<ServiceCorrelationDescriptionArgs>> correlationScheme;
-        private @Nullable Input<Either<String,MoveCost>> defaultMoveCost;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Object> partitionDescription;
-        private @Nullable Input<String> placementConstraints;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> serviceDnsName;
-        private Input<Either<String,ServiceKind>> serviceKind;
-        private @Nullable Input<List<ServiceLoadMetricDescriptionArgs>> serviceLoadMetrics;
-        private @Nullable Input<String> serviceName;
-        private @Nullable Input<Either<String,ArmServicePackageActivationMode>> servicePackageActivationMode;
-        private @Nullable Input<List<ServicePlacementPolicyDescriptionArgs>> servicePlacementPolicies;
-        private @Nullable Input<String> serviceTypeName;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> applicationName;
+        private Output<String> clusterName;
+        private @Nullable Output<List<ServiceCorrelationDescriptionArgs>> correlationScheme;
+        private @Nullable Output<Either<String,MoveCost>> defaultMoveCost;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Object> partitionDescription;
+        private @Nullable Output<String> placementConstraints;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> serviceDnsName;
+        private Output<Either<String,ServiceKind>> serviceKind;
+        private @Nullable Output<List<ServiceLoadMetricDescriptionArgs>> serviceLoadMetrics;
+        private @Nullable Output<String> serviceName;
+        private @Nullable Output<Either<String,ArmServicePackageActivationMode>> servicePackageActivationMode;
+        private @Nullable Output<List<ServicePlacementPolicyDescriptionArgs>> servicePlacementPolicies;
+        private @Nullable Output<String> serviceTypeName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -307,163 +307,163 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder applicationName(Input<String> applicationName) {
+        public Builder applicationName(Output<String> applicationName) {
             this.applicationName = Objects.requireNonNull(applicationName);
             return this;
         }
 
         public Builder applicationName(String applicationName) {
-            this.applicationName = Input.of(Objects.requireNonNull(applicationName));
+            this.applicationName = Output.of(Objects.requireNonNull(applicationName));
             return this;
         }
 
-        public Builder clusterName(Input<String> clusterName) {
+        public Builder clusterName(Output<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
         public Builder clusterName(String clusterName) {
-            this.clusterName = Input.of(Objects.requireNonNull(clusterName));
+            this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
 
-        public Builder correlationScheme(@Nullable Input<List<ServiceCorrelationDescriptionArgs>> correlationScheme) {
+        public Builder correlationScheme(@Nullable Output<List<ServiceCorrelationDescriptionArgs>> correlationScheme) {
             this.correlationScheme = correlationScheme;
             return this;
         }
 
         public Builder correlationScheme(@Nullable List<ServiceCorrelationDescriptionArgs> correlationScheme) {
-            this.correlationScheme = Input.ofNullable(correlationScheme);
+            this.correlationScheme = Output.ofNullable(correlationScheme);
             return this;
         }
 
-        public Builder defaultMoveCost(@Nullable Input<Either<String,MoveCost>> defaultMoveCost) {
+        public Builder defaultMoveCost(@Nullable Output<Either<String,MoveCost>> defaultMoveCost) {
             this.defaultMoveCost = defaultMoveCost;
             return this;
         }
 
         public Builder defaultMoveCost(@Nullable Either<String,MoveCost> defaultMoveCost) {
-            this.defaultMoveCost = Input.ofNullable(defaultMoveCost);
+            this.defaultMoveCost = Output.ofNullable(defaultMoveCost);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder partitionDescription(@Nullable Input<Object> partitionDescription) {
+        public Builder partitionDescription(@Nullable Output<Object> partitionDescription) {
             this.partitionDescription = partitionDescription;
             return this;
         }
 
         public Builder partitionDescription(@Nullable Object partitionDescription) {
-            this.partitionDescription = Input.ofNullable(partitionDescription);
+            this.partitionDescription = Output.ofNullable(partitionDescription);
             return this;
         }
 
-        public Builder placementConstraints(@Nullable Input<String> placementConstraints) {
+        public Builder placementConstraints(@Nullable Output<String> placementConstraints) {
             this.placementConstraints = placementConstraints;
             return this;
         }
 
         public Builder placementConstraints(@Nullable String placementConstraints) {
-            this.placementConstraints = Input.ofNullable(placementConstraints);
+            this.placementConstraints = Output.ofNullable(placementConstraints);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serviceDnsName(@Nullable Input<String> serviceDnsName) {
+        public Builder serviceDnsName(@Nullable Output<String> serviceDnsName) {
             this.serviceDnsName = serviceDnsName;
             return this;
         }
 
         public Builder serviceDnsName(@Nullable String serviceDnsName) {
-            this.serviceDnsName = Input.ofNullable(serviceDnsName);
+            this.serviceDnsName = Output.ofNullable(serviceDnsName);
             return this;
         }
 
-        public Builder serviceKind(Input<Either<String,ServiceKind>> serviceKind) {
+        public Builder serviceKind(Output<Either<String,ServiceKind>> serviceKind) {
             this.serviceKind = Objects.requireNonNull(serviceKind);
             return this;
         }
 
         public Builder serviceKind(Either<String,ServiceKind> serviceKind) {
-            this.serviceKind = Input.of(Objects.requireNonNull(serviceKind));
+            this.serviceKind = Output.of(Objects.requireNonNull(serviceKind));
             return this;
         }
 
-        public Builder serviceLoadMetrics(@Nullable Input<List<ServiceLoadMetricDescriptionArgs>> serviceLoadMetrics) {
+        public Builder serviceLoadMetrics(@Nullable Output<List<ServiceLoadMetricDescriptionArgs>> serviceLoadMetrics) {
             this.serviceLoadMetrics = serviceLoadMetrics;
             return this;
         }
 
         public Builder serviceLoadMetrics(@Nullable List<ServiceLoadMetricDescriptionArgs> serviceLoadMetrics) {
-            this.serviceLoadMetrics = Input.ofNullable(serviceLoadMetrics);
+            this.serviceLoadMetrics = Output.ofNullable(serviceLoadMetrics);
             return this;
         }
 
-        public Builder serviceName(@Nullable Input<String> serviceName) {
+        public Builder serviceName(@Nullable Output<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
 
         public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Input.ofNullable(serviceName);
+            this.serviceName = Output.ofNullable(serviceName);
             return this;
         }
 
-        public Builder servicePackageActivationMode(@Nullable Input<Either<String,ArmServicePackageActivationMode>> servicePackageActivationMode) {
+        public Builder servicePackageActivationMode(@Nullable Output<Either<String,ArmServicePackageActivationMode>> servicePackageActivationMode) {
             this.servicePackageActivationMode = servicePackageActivationMode;
             return this;
         }
 
         public Builder servicePackageActivationMode(@Nullable Either<String,ArmServicePackageActivationMode> servicePackageActivationMode) {
-            this.servicePackageActivationMode = Input.ofNullable(servicePackageActivationMode);
+            this.servicePackageActivationMode = Output.ofNullable(servicePackageActivationMode);
             return this;
         }
 
-        public Builder servicePlacementPolicies(@Nullable Input<List<ServicePlacementPolicyDescriptionArgs>> servicePlacementPolicies) {
+        public Builder servicePlacementPolicies(@Nullable Output<List<ServicePlacementPolicyDescriptionArgs>> servicePlacementPolicies) {
             this.servicePlacementPolicies = servicePlacementPolicies;
             return this;
         }
 
         public Builder servicePlacementPolicies(@Nullable List<ServicePlacementPolicyDescriptionArgs> servicePlacementPolicies) {
-            this.servicePlacementPolicies = Input.ofNullable(servicePlacementPolicies);
+            this.servicePlacementPolicies = Output.ofNullable(servicePlacementPolicies);
             return this;
         }
 
-        public Builder serviceTypeName(@Nullable Input<String> serviceTypeName) {
+        public Builder serviceTypeName(@Nullable Output<String> serviceTypeName) {
             this.serviceTypeName = serviceTypeName;
             return this;
         }
 
         public Builder serviceTypeName(@Nullable String serviceTypeName) {
-            this.serviceTypeName = Input.ofNullable(serviceTypeName);
+            this.serviceTypeName = Output.ofNullable(serviceTypeName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ServiceArgs build() {

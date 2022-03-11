@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.codeartifact;
 
 import io.pulumi.awsnative.codeartifact.inputs.RepositoryTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="externalConnections")
-      private final @Nullable Input<List<String>> externalConnections;
+      private final @Nullable Output<List<String>> externalConnections;
 
-    public Input<List<String>> getExternalConnections() {
-        return this.externalConnections == null ? Input.empty() : this.externalConnections;
+    public Output<List<String>> getExternalConnections() {
+        return this.externalConnections == null ? Output.empty() : this.externalConnections;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permissionsPolicyDocument")
-      private final @Nullable Input<Object> permissionsPolicyDocument;
+      private final @Nullable Output<Object> permissionsPolicyDocument;
 
-    public Input<Object> getPermissionsPolicyDocument() {
-        return this.permissionsPolicyDocument == null ? Input.empty() : this.permissionsPolicyDocument;
+    public Output<Object> getPermissionsPolicyDocument() {
+        return this.permissionsPolicyDocument == null ? Output.empty() : this.permissionsPolicyDocument;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repositoryName")
-      private final @Nullable Input<String> repositoryName;
+      private final @Nullable Output<String> repositoryName;
 
-    public Input<String> getRepositoryName() {
-        return this.repositoryName == null ? Input.empty() : this.repositoryName;
+    public Output<String> getRepositoryName() {
+        return this.repositoryName == null ? Output.empty() : this.repositoryName;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<RepositoryTagArgs>> tags;
+      private final @Nullable Output<List<RepositoryTagArgs>> tags;
 
-    public Input<List<RepositoryTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<RepositoryTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -77,19 +77,19 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="upstreams")
-      private final @Nullable Input<List<String>> upstreams;
+      private final @Nullable Output<List<String>> upstreams;
 
-    public Input<List<String>> getUpstreams() {
-        return this.upstreams == null ? Input.empty() : this.upstreams;
+    public Output<List<String>> getUpstreams() {
+        return this.upstreams == null ? Output.empty() : this.upstreams;
     }
 
     public RepositoryArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<List<String>> externalConnections,
-        @Nullable Input<Object> permissionsPolicyDocument,
-        @Nullable Input<String> repositoryName,
-        @Nullable Input<List<RepositoryTagArgs>> tags,
-        @Nullable Input<List<String>> upstreams) {
+        @Nullable Output<String> description,
+        @Nullable Output<List<String>> externalConnections,
+        @Nullable Output<Object> permissionsPolicyDocument,
+        @Nullable Output<String> repositoryName,
+        @Nullable Output<List<RepositoryTagArgs>> tags,
+        @Nullable Output<List<String>> upstreams) {
         this.description = description;
         this.externalConnections = externalConnections;
         this.permissionsPolicyDocument = permissionsPolicyDocument;
@@ -99,12 +99,12 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RepositoryArgs() {
-        this.description = Input.empty();
-        this.externalConnections = Input.empty();
-        this.permissionsPolicyDocument = Input.empty();
-        this.repositoryName = Input.empty();
-        this.tags = Input.empty();
-        this.upstreams = Input.empty();
+        this.description = Output.empty();
+        this.externalConnections = Output.empty();
+        this.permissionsPolicyDocument = Output.empty();
+        this.repositoryName = Output.empty();
+        this.tags = Output.empty();
+        this.upstreams = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<String>> externalConnections;
-        private @Nullable Input<Object> permissionsPolicyDocument;
-        private @Nullable Input<String> repositoryName;
-        private @Nullable Input<List<RepositoryTagArgs>> tags;
-        private @Nullable Input<List<String>> upstreams;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<String>> externalConnections;
+        private @Nullable Output<Object> permissionsPolicyDocument;
+        private @Nullable Output<String> repositoryName;
+        private @Nullable Output<List<RepositoryTagArgs>> tags;
+        private @Nullable Output<List<String>> upstreams;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.upstreams = defaults.upstreams;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder externalConnections(@Nullable Input<List<String>> externalConnections) {
+        public Builder externalConnections(@Nullable Output<List<String>> externalConnections) {
             this.externalConnections = externalConnections;
             return this;
         }
 
         public Builder externalConnections(@Nullable List<String> externalConnections) {
-            this.externalConnections = Input.ofNullable(externalConnections);
+            this.externalConnections = Output.ofNullable(externalConnections);
             return this;
         }
 
-        public Builder permissionsPolicyDocument(@Nullable Input<Object> permissionsPolicyDocument) {
+        public Builder permissionsPolicyDocument(@Nullable Output<Object> permissionsPolicyDocument) {
             this.permissionsPolicyDocument = permissionsPolicyDocument;
             return this;
         }
 
         public Builder permissionsPolicyDocument(@Nullable Object permissionsPolicyDocument) {
-            this.permissionsPolicyDocument = Input.ofNullable(permissionsPolicyDocument);
+            this.permissionsPolicyDocument = Output.ofNullable(permissionsPolicyDocument);
             return this;
         }
 
-        public Builder repositoryName(@Nullable Input<String> repositoryName) {
+        public Builder repositoryName(@Nullable Output<String> repositoryName) {
             this.repositoryName = repositoryName;
             return this;
         }
 
         public Builder repositoryName(@Nullable String repositoryName) {
-            this.repositoryName = Input.ofNullable(repositoryName);
+            this.repositoryName = Output.ofNullable(repositoryName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<RepositoryTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<RepositoryTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<RepositoryTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder upstreams(@Nullable Input<List<String>> upstreams) {
+        public Builder upstreams(@Nullable Output<List<String>> upstreams) {
             this.upstreams = upstreams;
             return this;
         }
 
         public Builder upstreams(@Nullable List<String> upstreams) {
-            this.upstreams = Input.ofNullable(upstreams);
+            this.upstreams = Output.ofNullable(upstreams);
             return this;
         }
         public RepositoryArgs build() {

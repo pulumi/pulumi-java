@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 import io.pulumi.azurenative.recoveryservices.enums.BackupManagementType;
 import io.pulumi.azurenative.recoveryservices.enums.ProtectionStatus;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class AzureResourceProtectionIntentArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="backupManagementType")
-      private final @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
+      private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
 
-    public Input<Either<String,BackupManagementType>> getBackupManagementType() {
-        return this.backupManagementType == null ? Input.empty() : this.backupManagementType;
+    public Output<Either<String,BackupManagementType>> getBackupManagementType() {
+        return this.backupManagementType == null ? Output.empty() : this.backupManagementType;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class AzureResourceProtectionIntentArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="friendlyName")
-      private final @Nullable Input<String> friendlyName;
+      private final @Nullable Output<String> friendlyName;
 
-    public Input<String> getFriendlyName() {
-        return this.friendlyName == null ? Input.empty() : this.friendlyName;
+    public Output<String> getFriendlyName() {
+        return this.friendlyName == null ? Output.empty() : this.friendlyName;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class AzureResourceProtectionIntentArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="itemId")
-      private final @Nullable Input<String> itemId;
+      private final @Nullable Output<String> itemId;
 
-    public Input<String> getItemId() {
-        return this.itemId == null ? Input.empty() : this.itemId;
+    public Output<String> getItemId() {
+        return this.itemId == null ? Output.empty() : this.itemId;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class AzureResourceProtectionIntentArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="policyId")
-      private final @Nullable Input<String> policyId;
+      private final @Nullable Output<String> policyId;
 
-    public Input<String> getPolicyId() {
-        return this.policyId == null ? Input.empty() : this.policyId;
+    public Output<String> getPolicyId() {
+        return this.policyId == null ? Output.empty() : this.policyId;
     }
 
     /**
@@ -71,9 +71,9 @@ public final class AzureResourceProtectionIntentArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="protectionIntentItemType", required=true)
-      private final Input<String> protectionIntentItemType;
+      private final Output<String> protectionIntentItemType;
 
-    public Input<String> getProtectionIntentItemType() {
+    public Output<String> getProtectionIntentItemType() {
         return this.protectionIntentItemType;
     }
 
@@ -82,10 +82,10 @@ public final class AzureResourceProtectionIntentArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="protectionState")
-      private final @Nullable Input<Either<String,ProtectionStatus>> protectionState;
+      private final @Nullable Output<Either<String,ProtectionStatus>> protectionState;
 
-    public Input<Either<String,ProtectionStatus>> getProtectionState() {
-        return this.protectionState == null ? Input.empty() : this.protectionState;
+    public Output<Either<String,ProtectionStatus>> getProtectionState() {
+        return this.protectionState == null ? Output.empty() : this.protectionState;
     }
 
     /**
@@ -93,20 +93,20 @@ public final class AzureResourceProtectionIntentArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="sourceResourceId")
-      private final @Nullable Input<String> sourceResourceId;
+      private final @Nullable Output<String> sourceResourceId;
 
-    public Input<String> getSourceResourceId() {
-        return this.sourceResourceId == null ? Input.empty() : this.sourceResourceId;
+    public Output<String> getSourceResourceId() {
+        return this.sourceResourceId == null ? Output.empty() : this.sourceResourceId;
     }
 
     public AzureResourceProtectionIntentArgs(
-        @Nullable Input<Either<String,BackupManagementType>> backupManagementType,
-        @Nullable Input<String> friendlyName,
-        @Nullable Input<String> itemId,
-        @Nullable Input<String> policyId,
-        Input<String> protectionIntentItemType,
-        @Nullable Input<Either<String,ProtectionStatus>> protectionState,
-        @Nullable Input<String> sourceResourceId) {
+        @Nullable Output<Either<String,BackupManagementType>> backupManagementType,
+        @Nullable Output<String> friendlyName,
+        @Nullable Output<String> itemId,
+        @Nullable Output<String> policyId,
+        Output<String> protectionIntentItemType,
+        @Nullable Output<Either<String,ProtectionStatus>> protectionState,
+        @Nullable Output<String> sourceResourceId) {
         this.backupManagementType = backupManagementType;
         this.friendlyName = friendlyName;
         this.itemId = itemId;
@@ -117,13 +117,13 @@ public final class AzureResourceProtectionIntentArgs extends io.pulumi.resources
     }
 
     private AzureResourceProtectionIntentArgs() {
-        this.backupManagementType = Input.empty();
-        this.friendlyName = Input.empty();
-        this.itemId = Input.empty();
-        this.policyId = Input.empty();
-        this.protectionIntentItemType = Input.empty();
-        this.protectionState = Input.empty();
-        this.sourceResourceId = Input.empty();
+        this.backupManagementType = Output.empty();
+        this.friendlyName = Output.empty();
+        this.itemId = Output.empty();
+        this.policyId = Output.empty();
+        this.protectionIntentItemType = Output.empty();
+        this.protectionState = Output.empty();
+        this.sourceResourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -135,13 +135,13 @@ public final class AzureResourceProtectionIntentArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
-        private @Nullable Input<String> friendlyName;
-        private @Nullable Input<String> itemId;
-        private @Nullable Input<String> policyId;
-        private Input<String> protectionIntentItemType;
-        private @Nullable Input<Either<String,ProtectionStatus>> protectionState;
-        private @Nullable Input<String> sourceResourceId;
+        private @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
+        private @Nullable Output<String> friendlyName;
+        private @Nullable Output<String> itemId;
+        private @Nullable Output<String> policyId;
+        private Output<String> protectionIntentItemType;
+        private @Nullable Output<Either<String,ProtectionStatus>> protectionState;
+        private @Nullable Output<String> sourceResourceId;
 
         public Builder() {
     	      // Empty
@@ -158,73 +158,73 @@ public final class AzureResourceProtectionIntentArgs extends io.pulumi.resources
     	      this.sourceResourceId = defaults.sourceResourceId;
         }
 
-        public Builder backupManagementType(@Nullable Input<Either<String,BackupManagementType>> backupManagementType) {
+        public Builder backupManagementType(@Nullable Output<Either<String,BackupManagementType>> backupManagementType) {
             this.backupManagementType = backupManagementType;
             return this;
         }
 
         public Builder backupManagementType(@Nullable Either<String,BackupManagementType> backupManagementType) {
-            this.backupManagementType = Input.ofNullable(backupManagementType);
+            this.backupManagementType = Output.ofNullable(backupManagementType);
             return this;
         }
 
-        public Builder friendlyName(@Nullable Input<String> friendlyName) {
+        public Builder friendlyName(@Nullable Output<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Input.ofNullable(friendlyName);
+            this.friendlyName = Output.ofNullable(friendlyName);
             return this;
         }
 
-        public Builder itemId(@Nullable Input<String> itemId) {
+        public Builder itemId(@Nullable Output<String> itemId) {
             this.itemId = itemId;
             return this;
         }
 
         public Builder itemId(@Nullable String itemId) {
-            this.itemId = Input.ofNullable(itemId);
+            this.itemId = Output.ofNullable(itemId);
             return this;
         }
 
-        public Builder policyId(@Nullable Input<String> policyId) {
+        public Builder policyId(@Nullable Output<String> policyId) {
             this.policyId = policyId;
             return this;
         }
 
         public Builder policyId(@Nullable String policyId) {
-            this.policyId = Input.ofNullable(policyId);
+            this.policyId = Output.ofNullable(policyId);
             return this;
         }
 
-        public Builder protectionIntentItemType(Input<String> protectionIntentItemType) {
+        public Builder protectionIntentItemType(Output<String> protectionIntentItemType) {
             this.protectionIntentItemType = Objects.requireNonNull(protectionIntentItemType);
             return this;
         }
 
         public Builder protectionIntentItemType(String protectionIntentItemType) {
-            this.protectionIntentItemType = Input.of(Objects.requireNonNull(protectionIntentItemType));
+            this.protectionIntentItemType = Output.of(Objects.requireNonNull(protectionIntentItemType));
             return this;
         }
 
-        public Builder protectionState(@Nullable Input<Either<String,ProtectionStatus>> protectionState) {
+        public Builder protectionState(@Nullable Output<Either<String,ProtectionStatus>> protectionState) {
             this.protectionState = protectionState;
             return this;
         }
 
         public Builder protectionState(@Nullable Either<String,ProtectionStatus> protectionState) {
-            this.protectionState = Input.ofNullable(protectionState);
+            this.protectionState = Output.ofNullable(protectionState);
             return this;
         }
 
-        public Builder sourceResourceId(@Nullable Input<String> sourceResourceId) {
+        public Builder sourceResourceId(@Nullable Output<String> sourceResourceId) {
             this.sourceResourceId = sourceResourceId;
             return this;
         }
 
         public Builder sourceResourceId(@Nullable String sourceResourceId) {
-            this.sourceResourceId = Input.ofNullable(sourceResourceId);
+            this.sourceResourceId = Output.ofNullable(sourceResourceId);
             return this;
         }
         public AzureResourceProtectionIntentArgs build() {

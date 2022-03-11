@@ -6,7 +6,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 import io.pulumi.awsnative.wafv2.enums.WebACLPositionalConstraint;
 import io.pulumi.awsnative.wafv2.inputs.WebACLFieldToMatchArgs;
 import io.pulumi.awsnative.wafv2.inputs.WebACLTextTransformationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,46 +23,46 @@ public final class WebACLByteMatchStatementArgs extends io.pulumi.resources.Reso
     public static final WebACLByteMatchStatementArgs Empty = new WebACLByteMatchStatementArgs();
 
     @InputImport(name="fieldToMatch", required=true)
-      private final Input<WebACLFieldToMatchArgs> fieldToMatch;
+      private final Output<WebACLFieldToMatchArgs> fieldToMatch;
 
-    public Input<WebACLFieldToMatchArgs> getFieldToMatch() {
+    public Output<WebACLFieldToMatchArgs> getFieldToMatch() {
         return this.fieldToMatch;
     }
 
     @InputImport(name="positionalConstraint", required=true)
-      private final Input<WebACLPositionalConstraint> positionalConstraint;
+      private final Output<WebACLPositionalConstraint> positionalConstraint;
 
-    public Input<WebACLPositionalConstraint> getPositionalConstraint() {
+    public Output<WebACLPositionalConstraint> getPositionalConstraint() {
         return this.positionalConstraint;
     }
 
     @InputImport(name="searchString")
-      private final @Nullable Input<String> searchString;
+      private final @Nullable Output<String> searchString;
 
-    public Input<String> getSearchString() {
-        return this.searchString == null ? Input.empty() : this.searchString;
+    public Output<String> getSearchString() {
+        return this.searchString == null ? Output.empty() : this.searchString;
     }
 
     @InputImport(name="searchStringBase64")
-      private final @Nullable Input<String> searchStringBase64;
+      private final @Nullable Output<String> searchStringBase64;
 
-    public Input<String> getSearchStringBase64() {
-        return this.searchStringBase64 == null ? Input.empty() : this.searchStringBase64;
+    public Output<String> getSearchStringBase64() {
+        return this.searchStringBase64 == null ? Output.empty() : this.searchStringBase64;
     }
 
     @InputImport(name="textTransformations", required=true)
-      private final Input<List<WebACLTextTransformationArgs>> textTransformations;
+      private final Output<List<WebACLTextTransformationArgs>> textTransformations;
 
-    public Input<List<WebACLTextTransformationArgs>> getTextTransformations() {
+    public Output<List<WebACLTextTransformationArgs>> getTextTransformations() {
         return this.textTransformations;
     }
 
     public WebACLByteMatchStatementArgs(
-        Input<WebACLFieldToMatchArgs> fieldToMatch,
-        Input<WebACLPositionalConstraint> positionalConstraint,
-        @Nullable Input<String> searchString,
-        @Nullable Input<String> searchStringBase64,
-        Input<List<WebACLTextTransformationArgs>> textTransformations) {
+        Output<WebACLFieldToMatchArgs> fieldToMatch,
+        Output<WebACLPositionalConstraint> positionalConstraint,
+        @Nullable Output<String> searchString,
+        @Nullable Output<String> searchStringBase64,
+        Output<List<WebACLTextTransformationArgs>> textTransformations) {
         this.fieldToMatch = Objects.requireNonNull(fieldToMatch, "expected parameter 'fieldToMatch' to be non-null");
         this.positionalConstraint = Objects.requireNonNull(positionalConstraint, "expected parameter 'positionalConstraint' to be non-null");
         this.searchString = searchString;
@@ -71,11 +71,11 @@ public final class WebACLByteMatchStatementArgs extends io.pulumi.resources.Reso
     }
 
     private WebACLByteMatchStatementArgs() {
-        this.fieldToMatch = Input.empty();
-        this.positionalConstraint = Input.empty();
-        this.searchString = Input.empty();
-        this.searchStringBase64 = Input.empty();
-        this.textTransformations = Input.empty();
+        this.fieldToMatch = Output.empty();
+        this.positionalConstraint = Output.empty();
+        this.searchString = Output.empty();
+        this.searchStringBase64 = Output.empty();
+        this.textTransformations = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,11 +87,11 @@ public final class WebACLByteMatchStatementArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<WebACLFieldToMatchArgs> fieldToMatch;
-        private Input<WebACLPositionalConstraint> positionalConstraint;
-        private @Nullable Input<String> searchString;
-        private @Nullable Input<String> searchStringBase64;
-        private Input<List<WebACLTextTransformationArgs>> textTransformations;
+        private Output<WebACLFieldToMatchArgs> fieldToMatch;
+        private Output<WebACLPositionalConstraint> positionalConstraint;
+        private @Nullable Output<String> searchString;
+        private @Nullable Output<String> searchStringBase64;
+        private Output<List<WebACLTextTransformationArgs>> textTransformations;
 
         public Builder() {
     	      // Empty
@@ -106,53 +106,53 @@ public final class WebACLByteMatchStatementArgs extends io.pulumi.resources.Reso
     	      this.textTransformations = defaults.textTransformations;
         }
 
-        public Builder fieldToMatch(Input<WebACLFieldToMatchArgs> fieldToMatch) {
+        public Builder fieldToMatch(Output<WebACLFieldToMatchArgs> fieldToMatch) {
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
 
         public Builder fieldToMatch(WebACLFieldToMatchArgs fieldToMatch) {
-            this.fieldToMatch = Input.of(Objects.requireNonNull(fieldToMatch));
+            this.fieldToMatch = Output.of(Objects.requireNonNull(fieldToMatch));
             return this;
         }
 
-        public Builder positionalConstraint(Input<WebACLPositionalConstraint> positionalConstraint) {
+        public Builder positionalConstraint(Output<WebACLPositionalConstraint> positionalConstraint) {
             this.positionalConstraint = Objects.requireNonNull(positionalConstraint);
             return this;
         }
 
         public Builder positionalConstraint(WebACLPositionalConstraint positionalConstraint) {
-            this.positionalConstraint = Input.of(Objects.requireNonNull(positionalConstraint));
+            this.positionalConstraint = Output.of(Objects.requireNonNull(positionalConstraint));
             return this;
         }
 
-        public Builder searchString(@Nullable Input<String> searchString) {
+        public Builder searchString(@Nullable Output<String> searchString) {
             this.searchString = searchString;
             return this;
         }
 
         public Builder searchString(@Nullable String searchString) {
-            this.searchString = Input.ofNullable(searchString);
+            this.searchString = Output.ofNullable(searchString);
             return this;
         }
 
-        public Builder searchStringBase64(@Nullable Input<String> searchStringBase64) {
+        public Builder searchStringBase64(@Nullable Output<String> searchStringBase64) {
             this.searchStringBase64 = searchStringBase64;
             return this;
         }
 
         public Builder searchStringBase64(@Nullable String searchStringBase64) {
-            this.searchStringBase64 = Input.ofNullable(searchStringBase64);
+            this.searchStringBase64 = Output.ofNullable(searchStringBase64);
             return this;
         }
 
-        public Builder textTransformations(Input<List<WebACLTextTransformationArgs>> textTransformations) {
+        public Builder textTransformations(Output<List<WebACLTextTransformationArgs>> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
 
         public Builder textTransformations(List<WebACLTextTransformationArgs> textTransformations) {
-            this.textTransformations = Input.of(Objects.requireNonNull(textTransformations));
+            this.textTransformations = Output.of(Objects.requireNonNull(textTransformations));
             return this;
         }
         public WebACLByteMatchStatementArgs build() {

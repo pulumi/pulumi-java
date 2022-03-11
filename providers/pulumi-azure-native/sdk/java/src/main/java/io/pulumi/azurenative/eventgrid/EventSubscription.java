@@ -17,7 +17,6 @@ import io.pulumi.azurenative.eventgrid.outputs.StorageQueueEventSubscriptionDest
 import io.pulumi.azurenative.eventgrid.outputs.SystemDataResponse;
 import io.pulumi.azurenative.eventgrid.outputs.WebHookEventSubscriptionDestinationResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -250,31 +249,31 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EventSubscription(String name, EventSubscriptionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:eventgrid:EventSubscription", name, args == null ? EventSubscriptionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:eventgrid:EventSubscription", name, args == null ? EventSubscriptionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private EventSubscription(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private EventSubscription(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:eventgrid:EventSubscription", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:eventgrid/v20170615preview:EventSubscription").build()),
-                Input.of(Alias.builder().setType("azure-native:eventgrid/v20170915preview:EventSubscription").build()),
-                Input.of(Alias.builder().setType("azure-native:eventgrid/v20180101:EventSubscription").build()),
-                Input.of(Alias.builder().setType("azure-native:eventgrid/v20180501preview:EventSubscription").build()),
-                Input.of(Alias.builder().setType("azure-native:eventgrid/v20180915preview:EventSubscription").build()),
-                Input.of(Alias.builder().setType("azure-native:eventgrid/v20190101:EventSubscription").build()),
-                Input.of(Alias.builder().setType("azure-native:eventgrid/v20190201preview:EventSubscription").build()),
-                Input.of(Alias.builder().setType("azure-native:eventgrid/v20190601:EventSubscription").build()),
-                Input.of(Alias.builder().setType("azure-native:eventgrid/v20200101preview:EventSubscription").build()),
-                Input.of(Alias.builder().setType("azure-native:eventgrid/v20200401preview:EventSubscription").build()),
-                Input.of(Alias.builder().setType("azure-native:eventgrid/v20200601:EventSubscription").build()),
-                Input.of(Alias.builder().setType("azure-native:eventgrid/v20201015preview:EventSubscription").build()),
-                Input.of(Alias.builder().setType("azure-native:eventgrid/v20210601preview:EventSubscription").build()),
-                Input.of(Alias.builder().setType("azure-native:eventgrid/v20211201:EventSubscription").build())
+                Output.of(Alias.builder().setType("azure-native:eventgrid/v20170615preview:EventSubscription").build()),
+                Output.of(Alias.builder().setType("azure-native:eventgrid/v20170915preview:EventSubscription").build()),
+                Output.of(Alias.builder().setType("azure-native:eventgrid/v20180101:EventSubscription").build()),
+                Output.of(Alias.builder().setType("azure-native:eventgrid/v20180501preview:EventSubscription").build()),
+                Output.of(Alias.builder().setType("azure-native:eventgrid/v20180915preview:EventSubscription").build()),
+                Output.of(Alias.builder().setType("azure-native:eventgrid/v20190101:EventSubscription").build()),
+                Output.of(Alias.builder().setType("azure-native:eventgrid/v20190201preview:EventSubscription").build()),
+                Output.of(Alias.builder().setType("azure-native:eventgrid/v20190601:EventSubscription").build()),
+                Output.of(Alias.builder().setType("azure-native:eventgrid/v20200101preview:EventSubscription").build()),
+                Output.of(Alias.builder().setType("azure-native:eventgrid/v20200401preview:EventSubscription").build()),
+                Output.of(Alias.builder().setType("azure-native:eventgrid/v20200601:EventSubscription").build()),
+                Output.of(Alias.builder().setType("azure-native:eventgrid/v20201015preview:EventSubscription").build()),
+                Output.of(Alias.builder().setType("azure-native:eventgrid/v20210601preview:EventSubscription").build()),
+                Output.of(Alias.builder().setType("azure-native:eventgrid/v20211201:EventSubscription").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -288,7 +287,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static EventSubscription get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static EventSubscription get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new EventSubscription(name, id, options);
     }
 }

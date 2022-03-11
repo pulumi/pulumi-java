@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.notebooks;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class RuntimeIamPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class RuntimeIamPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="policyData", required=true)
-      private final Input<String> policyData;
+      private final Output<String> policyData;
 
-    public Input<String> getPolicyData() {
+    public Output<String> getPolicyData() {
         return this.policyData;
     }
 
@@ -43,10 +43,10 @@ public final class RuntimeIamPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class RuntimeIamPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="runtimeName", required=true)
-      private final Input<String> runtimeName;
+      private final Output<String> runtimeName;
 
-    public Input<String> getRuntimeName() {
+    public Output<String> getRuntimeName() {
         return this.runtimeName;
     }
 
     public RuntimeIamPolicyArgs(
-        @Nullable Input<String> location,
-        Input<String> policyData,
-        @Nullable Input<String> project,
-        Input<String> runtimeName) {
+        @Nullable Output<String> location,
+        Output<String> policyData,
+        @Nullable Output<String> project,
+        Output<String> runtimeName) {
         this.location = location;
         this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
         this.project = project;
@@ -72,10 +72,10 @@ public final class RuntimeIamPolicyArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private RuntimeIamPolicyArgs() {
-        this.location = Input.empty();
-        this.policyData = Input.empty();
-        this.project = Input.empty();
-        this.runtimeName = Input.empty();
+        this.location = Output.empty();
+        this.policyData = Output.empty();
+        this.project = Output.empty();
+        this.runtimeName = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class RuntimeIamPolicyArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> location;
-        private Input<String> policyData;
-        private @Nullable Input<String> project;
-        private Input<String> runtimeName;
+        private @Nullable Output<String> location;
+        private Output<String> policyData;
+        private @Nullable Output<String> project;
+        private Output<String> runtimeName;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class RuntimeIamPolicyArgs extends io.pulumi.resources.ResourceArgs
     	      this.runtimeName = defaults.runtimeName;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder policyData(Input<String> policyData) {
+        public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
 
         public Builder policyData(String policyData) {
-            this.policyData = Input.of(Objects.requireNonNull(policyData));
+            this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder runtimeName(Input<String> runtimeName) {
+        public Builder runtimeName(Output<String> runtimeName) {
             this.runtimeName = Objects.requireNonNull(runtimeName);
             return this;
         }
 
         public Builder runtimeName(String runtimeName) {
-            this.runtimeName = Input.of(Objects.requireNonNull(runtimeName));
+            this.runtimeName = Output.of(Objects.requireNonNull(runtimeName));
             return this;
         }
         public RuntimeIamPolicyArgs build() {

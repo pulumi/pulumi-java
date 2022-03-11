@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dns.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dns.inputs.PolicyAlternativeNameServerConfigTargetNameServerArgs;
 import java.util.List;
@@ -22,18 +22,18 @@ public final class PolicyAlternativeNameServerConfigArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="targetNameServers", required=true)
-      private final Input<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> targetNameServers;
+      private final Output<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> targetNameServers;
 
-    public Input<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> getTargetNameServers() {
+    public Output<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> getTargetNameServers() {
         return this.targetNameServers;
     }
 
-    public PolicyAlternativeNameServerConfigArgs(Input<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> targetNameServers) {
+    public PolicyAlternativeNameServerConfigArgs(Output<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> targetNameServers) {
         this.targetNameServers = Objects.requireNonNull(targetNameServers, "expected parameter 'targetNameServers' to be non-null");
     }
 
     private PolicyAlternativeNameServerConfigArgs() {
-        this.targetNameServers = Input.empty();
+        this.targetNameServers = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class PolicyAlternativeNameServerConfigArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private Input<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> targetNameServers;
+        private Output<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> targetNameServers;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class PolicyAlternativeNameServerConfigArgs extends io.pulumi.resou
     	      this.targetNameServers = defaults.targetNameServers;
         }
 
-        public Builder targetNameServers(Input<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> targetNameServers) {
+        public Builder targetNameServers(Output<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> targetNameServers) {
             this.targetNameServers = Objects.requireNonNull(targetNameServers);
             return this;
         }
 
         public Builder targetNameServers(List<PolicyAlternativeNameServerConfigTargetNameServerArgs> targetNameServers) {
-            this.targetNameServers = Input.of(Objects.requireNonNull(targetNameServers));
+            this.targetNameServers = Output.of(Objects.requireNonNull(targetNameServers));
             return this;
         }
         public PolicyAlternativeNameServerConfigArgs build() {

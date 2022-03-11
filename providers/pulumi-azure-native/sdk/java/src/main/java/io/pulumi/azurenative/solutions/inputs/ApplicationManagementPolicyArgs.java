@@ -5,7 +5,7 @@ package io.pulumi.azurenative.solutions.inputs;
 
 import io.pulumi.azurenative.solutions.enums.ApplicationManagementMode;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,18 +25,18 @@ public final class ApplicationManagementPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="mode")
-      private final @Nullable Input<Either<String,ApplicationManagementMode>> mode;
+      private final @Nullable Output<Either<String,ApplicationManagementMode>> mode;
 
-    public Input<Either<String,ApplicationManagementMode>> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<Either<String,ApplicationManagementMode>> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
-    public ApplicationManagementPolicyArgs(@Nullable Input<Either<String,ApplicationManagementMode>> mode) {
+    public ApplicationManagementPolicyArgs(@Nullable Output<Either<String,ApplicationManagementMode>> mode) {
         this.mode = mode;
     }
 
     private ApplicationManagementPolicyArgs() {
-        this.mode = Input.empty();
+        this.mode = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,7 +48,7 @@ public final class ApplicationManagementPolicyArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,ApplicationManagementMode>> mode;
+        private @Nullable Output<Either<String,ApplicationManagementMode>> mode;
 
         public Builder() {
     	      // Empty
@@ -59,13 +59,13 @@ public final class ApplicationManagementPolicyArgs extends io.pulumi.resources.R
     	      this.mode = defaults.mode;
         }
 
-        public Builder mode(@Nullable Input<Either<String,ApplicationManagementMode>> mode) {
+        public Builder mode(@Nullable Output<Either<String,ApplicationManagementMode>> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable Either<String,ApplicationManagementMode> mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
         public ApplicationManagementPolicyArgs build() {

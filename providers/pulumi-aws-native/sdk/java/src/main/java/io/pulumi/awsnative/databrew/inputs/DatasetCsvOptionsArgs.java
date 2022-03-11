@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.databrew.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,29 +20,29 @@ public final class DatasetCsvOptionsArgs extends io.pulumi.resources.ResourceArg
     public static final DatasetCsvOptionsArgs Empty = new DatasetCsvOptionsArgs();
 
     @InputImport(name="delimiter")
-      private final @Nullable Input<String> delimiter;
+      private final @Nullable Output<String> delimiter;
 
-    public Input<String> getDelimiter() {
-        return this.delimiter == null ? Input.empty() : this.delimiter;
+    public Output<String> getDelimiter() {
+        return this.delimiter == null ? Output.empty() : this.delimiter;
     }
 
     @InputImport(name="headerRow")
-      private final @Nullable Input<Boolean> headerRow;
+      private final @Nullable Output<Boolean> headerRow;
 
-    public Input<Boolean> getHeaderRow() {
-        return this.headerRow == null ? Input.empty() : this.headerRow;
+    public Output<Boolean> getHeaderRow() {
+        return this.headerRow == null ? Output.empty() : this.headerRow;
     }
 
     public DatasetCsvOptionsArgs(
-        @Nullable Input<String> delimiter,
-        @Nullable Input<Boolean> headerRow) {
+        @Nullable Output<String> delimiter,
+        @Nullable Output<Boolean> headerRow) {
         this.delimiter = delimiter;
         this.headerRow = headerRow;
     }
 
     private DatasetCsvOptionsArgs() {
-        this.delimiter = Input.empty();
-        this.headerRow = Input.empty();
+        this.delimiter = Output.empty();
+        this.headerRow = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class DatasetCsvOptionsArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> delimiter;
-        private @Nullable Input<Boolean> headerRow;
+        private @Nullable Output<String> delimiter;
+        private @Nullable Output<Boolean> headerRow;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class DatasetCsvOptionsArgs extends io.pulumi.resources.ResourceArg
     	      this.headerRow = defaults.headerRow;
         }
 
-        public Builder delimiter(@Nullable Input<String> delimiter) {
+        public Builder delimiter(@Nullable Output<String> delimiter) {
             this.delimiter = delimiter;
             return this;
         }
 
         public Builder delimiter(@Nullable String delimiter) {
-            this.delimiter = Input.ofNullable(delimiter);
+            this.delimiter = Output.ofNullable(delimiter);
             return this;
         }
 
-        public Builder headerRow(@Nullable Input<Boolean> headerRow) {
+        public Builder headerRow(@Nullable Output<Boolean> headerRow) {
             this.headerRow = headerRow;
             return this;
         }
 
         public Builder headerRow(@Nullable Boolean headerRow) {
-            this.headerRow = Input.ofNullable(headerRow);
+            this.headerRow = Output.ofNullable(headerRow);
             return this;
         }
         public DatasetCsvOptionsArgs build() {

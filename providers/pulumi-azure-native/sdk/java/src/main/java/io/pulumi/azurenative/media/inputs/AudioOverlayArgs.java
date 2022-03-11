@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class AudioOverlayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="audioGainLevel")
-      private final @Nullable Input<Double> audioGainLevel;
+      private final @Nullable Output<Double> audioGainLevel;
 
-    public Input<Double> getAudioGainLevel() {
-        return this.audioGainLevel == null ? Input.empty() : this.audioGainLevel;
+    public Output<Double> getAudioGainLevel() {
+        return this.audioGainLevel == null ? Output.empty() : this.audioGainLevel;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AudioOverlayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="end")
-      private final @Nullable Input<String> end;
+      private final @Nullable Output<String> end;
 
-    public Input<String> getEnd() {
-        return this.end == null ? Input.empty() : this.end;
+    public Output<String> getEnd() {
+        return this.end == null ? Output.empty() : this.end;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AudioOverlayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fadeInDuration")
-      private final @Nullable Input<String> fadeInDuration;
+      private final @Nullable Output<String> fadeInDuration;
 
-    public Input<String> getFadeInDuration() {
-        return this.fadeInDuration == null ? Input.empty() : this.fadeInDuration;
+    public Output<String> getFadeInDuration() {
+        return this.fadeInDuration == null ? Output.empty() : this.fadeInDuration;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class AudioOverlayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fadeOutDuration")
-      private final @Nullable Input<String> fadeOutDuration;
+      private final @Nullable Output<String> fadeOutDuration;
 
-    public Input<String> getFadeOutDuration() {
-        return this.fadeOutDuration == null ? Input.empty() : this.fadeOutDuration;
+    public Output<String> getFadeOutDuration() {
+        return this.fadeOutDuration == null ? Output.empty() : this.fadeOutDuration;
     }
 
     /**
@@ -68,9 +68,9 @@ public final class AudioOverlayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputLabel", required=true)
-      private final Input<String> inputLabel;
+      private final Output<String> inputLabel;
 
-    public Input<String> getInputLabel() {
+    public Output<String> getInputLabel() {
         return this.inputLabel;
     }
 
@@ -80,9 +80,9 @@ public final class AudioOverlayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
@@ -91,20 +91,20 @@ public final class AudioOverlayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="start")
-      private final @Nullable Input<String> start;
+      private final @Nullable Output<String> start;
 
-    public Input<String> getStart() {
-        return this.start == null ? Input.empty() : this.start;
+    public Output<String> getStart() {
+        return this.start == null ? Output.empty() : this.start;
     }
 
     public AudioOverlayArgs(
-        @Nullable Input<Double> audioGainLevel,
-        @Nullable Input<String> end,
-        @Nullable Input<String> fadeInDuration,
-        @Nullable Input<String> fadeOutDuration,
-        Input<String> inputLabel,
-        Input<String> odataType,
-        @Nullable Input<String> start) {
+        @Nullable Output<Double> audioGainLevel,
+        @Nullable Output<String> end,
+        @Nullable Output<String> fadeInDuration,
+        @Nullable Output<String> fadeOutDuration,
+        Output<String> inputLabel,
+        Output<String> odataType,
+        @Nullable Output<String> start) {
         this.audioGainLevel = audioGainLevel;
         this.end = end;
         this.fadeInDuration = fadeInDuration;
@@ -115,13 +115,13 @@ public final class AudioOverlayArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AudioOverlayArgs() {
-        this.audioGainLevel = Input.empty();
-        this.end = Input.empty();
-        this.fadeInDuration = Input.empty();
-        this.fadeOutDuration = Input.empty();
-        this.inputLabel = Input.empty();
-        this.odataType = Input.empty();
-        this.start = Input.empty();
+        this.audioGainLevel = Output.empty();
+        this.end = Output.empty();
+        this.fadeInDuration = Output.empty();
+        this.fadeOutDuration = Output.empty();
+        this.inputLabel = Output.empty();
+        this.odataType = Output.empty();
+        this.start = Output.empty();
     }
 
     public static Builder builder() {
@@ -133,13 +133,13 @@ public final class AudioOverlayArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Double> audioGainLevel;
-        private @Nullable Input<String> end;
-        private @Nullable Input<String> fadeInDuration;
-        private @Nullable Input<String> fadeOutDuration;
-        private Input<String> inputLabel;
-        private Input<String> odataType;
-        private @Nullable Input<String> start;
+        private @Nullable Output<Double> audioGainLevel;
+        private @Nullable Output<String> end;
+        private @Nullable Output<String> fadeInDuration;
+        private @Nullable Output<String> fadeOutDuration;
+        private Output<String> inputLabel;
+        private Output<String> odataType;
+        private @Nullable Output<String> start;
 
         public Builder() {
     	      // Empty
@@ -156,73 +156,73 @@ public final class AudioOverlayArgs extends io.pulumi.resources.ResourceArgs {
     	      this.start = defaults.start;
         }
 
-        public Builder audioGainLevel(@Nullable Input<Double> audioGainLevel) {
+        public Builder audioGainLevel(@Nullable Output<Double> audioGainLevel) {
             this.audioGainLevel = audioGainLevel;
             return this;
         }
 
         public Builder audioGainLevel(@Nullable Double audioGainLevel) {
-            this.audioGainLevel = Input.ofNullable(audioGainLevel);
+            this.audioGainLevel = Output.ofNullable(audioGainLevel);
             return this;
         }
 
-        public Builder end(@Nullable Input<String> end) {
+        public Builder end(@Nullable Output<String> end) {
             this.end = end;
             return this;
         }
 
         public Builder end(@Nullable String end) {
-            this.end = Input.ofNullable(end);
+            this.end = Output.ofNullable(end);
             return this;
         }
 
-        public Builder fadeInDuration(@Nullable Input<String> fadeInDuration) {
+        public Builder fadeInDuration(@Nullable Output<String> fadeInDuration) {
             this.fadeInDuration = fadeInDuration;
             return this;
         }
 
         public Builder fadeInDuration(@Nullable String fadeInDuration) {
-            this.fadeInDuration = Input.ofNullable(fadeInDuration);
+            this.fadeInDuration = Output.ofNullable(fadeInDuration);
             return this;
         }
 
-        public Builder fadeOutDuration(@Nullable Input<String> fadeOutDuration) {
+        public Builder fadeOutDuration(@Nullable Output<String> fadeOutDuration) {
             this.fadeOutDuration = fadeOutDuration;
             return this;
         }
 
         public Builder fadeOutDuration(@Nullable String fadeOutDuration) {
-            this.fadeOutDuration = Input.ofNullable(fadeOutDuration);
+            this.fadeOutDuration = Output.ofNullable(fadeOutDuration);
             return this;
         }
 
-        public Builder inputLabel(Input<String> inputLabel) {
+        public Builder inputLabel(Output<String> inputLabel) {
             this.inputLabel = Objects.requireNonNull(inputLabel);
             return this;
         }
 
         public Builder inputLabel(String inputLabel) {
-            this.inputLabel = Input.of(Objects.requireNonNull(inputLabel));
+            this.inputLabel = Output.of(Objects.requireNonNull(inputLabel));
             return this;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder start(@Nullable Input<String> start) {
+        public Builder start(@Nullable Output<String> start) {
             this.start = start;
             return this;
         }
 
         public Builder start(@Nullable String start) {
-            this.start = Input.ofNullable(start);
+            this.start = Output.ofNullable(start);
             return this;
         }
         public AudioOverlayArgs build() {

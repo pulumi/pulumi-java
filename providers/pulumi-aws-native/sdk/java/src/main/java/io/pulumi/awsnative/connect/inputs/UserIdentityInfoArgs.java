@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.connect.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,39 +19,39 @@ public final class UserIdentityInfoArgs extends io.pulumi.resources.ResourceArgs
     public static final UserIdentityInfoArgs Empty = new UserIdentityInfoArgs();
 
     @InputImport(name="email")
-      private final @Nullable Input<String> email;
+      private final @Nullable Output<String> email;
 
-    public Input<String> getEmail() {
-        return this.email == null ? Input.empty() : this.email;
+    public Output<String> getEmail() {
+        return this.email == null ? Output.empty() : this.email;
     }
 
     @InputImport(name="firstName")
-      private final @Nullable Input<String> firstName;
+      private final @Nullable Output<String> firstName;
 
-    public Input<String> getFirstName() {
-        return this.firstName == null ? Input.empty() : this.firstName;
+    public Output<String> getFirstName() {
+        return this.firstName == null ? Output.empty() : this.firstName;
     }
 
     @InputImport(name="lastName")
-      private final @Nullable Input<String> lastName;
+      private final @Nullable Output<String> lastName;
 
-    public Input<String> getLastName() {
-        return this.lastName == null ? Input.empty() : this.lastName;
+    public Output<String> getLastName() {
+        return this.lastName == null ? Output.empty() : this.lastName;
     }
 
     public UserIdentityInfoArgs(
-        @Nullable Input<String> email,
-        @Nullable Input<String> firstName,
-        @Nullable Input<String> lastName) {
+        @Nullable Output<String> email,
+        @Nullable Output<String> firstName,
+        @Nullable Output<String> lastName) {
         this.email = email;
         this.firstName = firstName;
         this.lastName = lastName;
     }
 
     private UserIdentityInfoArgs() {
-        this.email = Input.empty();
-        this.firstName = Input.empty();
-        this.lastName = Input.empty();
+        this.email = Output.empty();
+        this.firstName = Output.empty();
+        this.lastName = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,9 +63,9 @@ public final class UserIdentityInfoArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> email;
-        private @Nullable Input<String> firstName;
-        private @Nullable Input<String> lastName;
+        private @Nullable Output<String> email;
+        private @Nullable Output<String> firstName;
+        private @Nullable Output<String> lastName;
 
         public Builder() {
     	      // Empty
@@ -78,33 +78,33 @@ public final class UserIdentityInfoArgs extends io.pulumi.resources.ResourceArgs
     	      this.lastName = defaults.lastName;
         }
 
-        public Builder email(@Nullable Input<String> email) {
+        public Builder email(@Nullable Output<String> email) {
             this.email = email;
             return this;
         }
 
         public Builder email(@Nullable String email) {
-            this.email = Input.ofNullable(email);
+            this.email = Output.ofNullable(email);
             return this;
         }
 
-        public Builder firstName(@Nullable Input<String> firstName) {
+        public Builder firstName(@Nullable Output<String> firstName) {
             this.firstName = firstName;
             return this;
         }
 
         public Builder firstName(@Nullable String firstName) {
-            this.firstName = Input.ofNullable(firstName);
+            this.firstName = Output.ofNullable(firstName);
             return this;
         }
 
-        public Builder lastName(@Nullable Input<String> lastName) {
+        public Builder lastName(@Nullable Output<String> lastName) {
             this.lastName = lastName;
             return this;
         }
 
         public Builder lastName(@Nullable String lastName) {
-            this.lastName = Input.ofNullable(lastName);
+            this.lastName = Output.ofNullable(lastName);
             return this;
         }
         public UserIdentityInfoArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automation;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="automationAccountName", required=true)
-      private final Input<String> automationAccountName;
+      private final Output<String> automationAccountName;
 
-    public Input<String> getAutomationAccountName() {
+    public Output<String> getAutomationAccountName() {
         return this.automationAccountName;
     }
 
@@ -32,10 +32,10 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="executionFrequencyInSeconds")
-      private final @Nullable Input<Double> executionFrequencyInSeconds;
+      private final @Nullable Output<Double> executionFrequencyInSeconds;
 
-    public Input<Double> getExecutionFrequencyInSeconds() {
-        return this.executionFrequencyInSeconds == null ? Input.empty() : this.executionFrequencyInSeconds;
+    public Output<Double> getExecutionFrequencyInSeconds() {
+        return this.executionFrequencyInSeconds == null ? Output.empty() : this.executionFrequencyInSeconds;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -65,9 +65,9 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -76,10 +76,10 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scriptName")
-      private final @Nullable Input<String> scriptName;
+      private final @Nullable Output<String> scriptName;
 
-    public Input<String> getScriptName() {
-        return this.scriptName == null ? Input.empty() : this.scriptName;
+    public Output<String> getScriptName() {
+        return this.scriptName == null ? Output.empty() : this.scriptName;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scriptParameters")
-      private final @Nullable Input<Map<String,String>> scriptParameters;
+      private final @Nullable Output<Map<String,String>> scriptParameters;
 
-    public Input<Map<String,String>> getScriptParameters() {
-        return this.scriptParameters == null ? Input.empty() : this.scriptParameters;
+    public Output<Map<String,String>> getScriptParameters() {
+        return this.scriptParameters == null ? Output.empty() : this.scriptParameters;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scriptRunOn")
-      private final @Nullable Input<String> scriptRunOn;
+      private final @Nullable Output<String> scriptRunOn;
 
-    public Input<String> getScriptRunOn() {
-        return this.scriptRunOn == null ? Input.empty() : this.scriptRunOn;
+    public Output<String> getScriptRunOn() {
+        return this.scriptRunOn == null ? Output.empty() : this.scriptRunOn;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -120,23 +120,23 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="watcherName")
-      private final @Nullable Input<String> watcherName;
+      private final @Nullable Output<String> watcherName;
 
-    public Input<String> getWatcherName() {
-        return this.watcherName == null ? Input.empty() : this.watcherName;
+    public Output<String> getWatcherName() {
+        return this.watcherName == null ? Output.empty() : this.watcherName;
     }
 
     public WatcherArgs(
-        Input<String> automationAccountName,
-        @Nullable Input<String> description,
-        @Nullable Input<Double> executionFrequencyInSeconds,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> scriptName,
-        @Nullable Input<Map<String,String>> scriptParameters,
-        @Nullable Input<String> scriptRunOn,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> watcherName) {
+        Output<String> automationAccountName,
+        @Nullable Output<String> description,
+        @Nullable Output<Double> executionFrequencyInSeconds,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> scriptName,
+        @Nullable Output<Map<String,String>> scriptParameters,
+        @Nullable Output<String> scriptRunOn,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> watcherName) {
         this.automationAccountName = Objects.requireNonNull(automationAccountName, "expected parameter 'automationAccountName' to be non-null");
         this.description = description;
         this.executionFrequencyInSeconds = executionFrequencyInSeconds;
@@ -150,16 +150,16 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WatcherArgs() {
-        this.automationAccountName = Input.empty();
-        this.description = Input.empty();
-        this.executionFrequencyInSeconds = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.scriptName = Input.empty();
-        this.scriptParameters = Input.empty();
-        this.scriptRunOn = Input.empty();
-        this.tags = Input.empty();
-        this.watcherName = Input.empty();
+        this.automationAccountName = Output.empty();
+        this.description = Output.empty();
+        this.executionFrequencyInSeconds = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.scriptName = Output.empty();
+        this.scriptParameters = Output.empty();
+        this.scriptRunOn = Output.empty();
+        this.tags = Output.empty();
+        this.watcherName = Output.empty();
     }
 
     public static Builder builder() {
@@ -171,16 +171,16 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> automationAccountName;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Double> executionFrequencyInSeconds;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> scriptName;
-        private @Nullable Input<Map<String,String>> scriptParameters;
-        private @Nullable Input<String> scriptRunOn;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> watcherName;
+        private Output<String> automationAccountName;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Double> executionFrequencyInSeconds;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> scriptName;
+        private @Nullable Output<Map<String,String>> scriptParameters;
+        private @Nullable Output<String> scriptRunOn;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> watcherName;
 
         public Builder() {
     	      // Empty
@@ -200,103 +200,103 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
     	      this.watcherName = defaults.watcherName;
         }
 
-        public Builder automationAccountName(Input<String> automationAccountName) {
+        public Builder automationAccountName(Output<String> automationAccountName) {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
 
         public Builder automationAccountName(String automationAccountName) {
-            this.automationAccountName = Input.of(Objects.requireNonNull(automationAccountName));
+            this.automationAccountName = Output.of(Objects.requireNonNull(automationAccountName));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder executionFrequencyInSeconds(@Nullable Input<Double> executionFrequencyInSeconds) {
+        public Builder executionFrequencyInSeconds(@Nullable Output<Double> executionFrequencyInSeconds) {
             this.executionFrequencyInSeconds = executionFrequencyInSeconds;
             return this;
         }
 
         public Builder executionFrequencyInSeconds(@Nullable Double executionFrequencyInSeconds) {
-            this.executionFrequencyInSeconds = Input.ofNullable(executionFrequencyInSeconds);
+            this.executionFrequencyInSeconds = Output.ofNullable(executionFrequencyInSeconds);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder scriptName(@Nullable Input<String> scriptName) {
+        public Builder scriptName(@Nullable Output<String> scriptName) {
             this.scriptName = scriptName;
             return this;
         }
 
         public Builder scriptName(@Nullable String scriptName) {
-            this.scriptName = Input.ofNullable(scriptName);
+            this.scriptName = Output.ofNullable(scriptName);
             return this;
         }
 
-        public Builder scriptParameters(@Nullable Input<Map<String,String>> scriptParameters) {
+        public Builder scriptParameters(@Nullable Output<Map<String,String>> scriptParameters) {
             this.scriptParameters = scriptParameters;
             return this;
         }
 
         public Builder scriptParameters(@Nullable Map<String,String> scriptParameters) {
-            this.scriptParameters = Input.ofNullable(scriptParameters);
+            this.scriptParameters = Output.ofNullable(scriptParameters);
             return this;
         }
 
-        public Builder scriptRunOn(@Nullable Input<String> scriptRunOn) {
+        public Builder scriptRunOn(@Nullable Output<String> scriptRunOn) {
             this.scriptRunOn = scriptRunOn;
             return this;
         }
 
         public Builder scriptRunOn(@Nullable String scriptRunOn) {
-            this.scriptRunOn = Input.ofNullable(scriptRunOn);
+            this.scriptRunOn = Output.ofNullable(scriptRunOn);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder watcherName(@Nullable Input<String> watcherName) {
+        public Builder watcherName(@Nullable Output<String> watcherName) {
             this.watcherName = watcherName;
             return this;
         }
 
         public Builder watcherName(@Nullable String watcherName) {
-            this.watcherName = Input.ofNullable(watcherName);
+            this.watcherName = Output.ofNullable(watcherName);
             return this;
         }
         public WatcherArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.healthcareapis.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class IotEventHubIngestionEndpointConfigurationArgs extends io.pulu
      * 
      */
     @InputImport(name="consumerGroup")
-      private final @Nullable Input<String> consumerGroup;
+      private final @Nullable Output<String> consumerGroup;
 
-    public Input<String> getConsumerGroup() {
-        return this.consumerGroup == null ? Input.empty() : this.consumerGroup;
+    public Output<String> getConsumerGroup() {
+        return this.consumerGroup == null ? Output.empty() : this.consumerGroup;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class IotEventHubIngestionEndpointConfigurationArgs extends io.pulu
      * 
      */
     @InputImport(name="eventHubName")
-      private final @Nullable Input<String> eventHubName;
+      private final @Nullable Output<String> eventHubName;
 
-    public Input<String> getEventHubName() {
-        return this.eventHubName == null ? Input.empty() : this.eventHubName;
+    public Output<String> getEventHubName() {
+        return this.eventHubName == null ? Output.empty() : this.eventHubName;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class IotEventHubIngestionEndpointConfigurationArgs extends io.pulu
      * 
      */
     @InputImport(name="fullyQualifiedEventHubNamespace")
-      private final @Nullable Input<String> fullyQualifiedEventHubNamespace;
+      private final @Nullable Output<String> fullyQualifiedEventHubNamespace;
 
-    public Input<String> getFullyQualifiedEventHubNamespace() {
-        return this.fullyQualifiedEventHubNamespace == null ? Input.empty() : this.fullyQualifiedEventHubNamespace;
+    public Output<String> getFullyQualifiedEventHubNamespace() {
+        return this.fullyQualifiedEventHubNamespace == null ? Output.empty() : this.fullyQualifiedEventHubNamespace;
     }
 
     public IotEventHubIngestionEndpointConfigurationArgs(
-        @Nullable Input<String> consumerGroup,
-        @Nullable Input<String> eventHubName,
-        @Nullable Input<String> fullyQualifiedEventHubNamespace) {
+        @Nullable Output<String> consumerGroup,
+        @Nullable Output<String> eventHubName,
+        @Nullable Output<String> fullyQualifiedEventHubNamespace) {
         this.consumerGroup = consumerGroup;
         this.eventHubName = eventHubName;
         this.fullyQualifiedEventHubNamespace = fullyQualifiedEventHubNamespace;
     }
 
     private IotEventHubIngestionEndpointConfigurationArgs() {
-        this.consumerGroup = Input.empty();
-        this.eventHubName = Input.empty();
-        this.fullyQualifiedEventHubNamespace = Input.empty();
+        this.consumerGroup = Output.empty();
+        this.eventHubName = Output.empty();
+        this.fullyQualifiedEventHubNamespace = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class IotEventHubIngestionEndpointConfigurationArgs extends io.pulu
     }
 
     public static final class Builder {
-        private @Nullable Input<String> consumerGroup;
-        private @Nullable Input<String> eventHubName;
-        private @Nullable Input<String> fullyQualifiedEventHubNamespace;
+        private @Nullable Output<String> consumerGroup;
+        private @Nullable Output<String> eventHubName;
+        private @Nullable Output<String> fullyQualifiedEventHubNamespace;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class IotEventHubIngestionEndpointConfigurationArgs extends io.pulu
     	      this.fullyQualifiedEventHubNamespace = defaults.fullyQualifiedEventHubNamespace;
         }
 
-        public Builder consumerGroup(@Nullable Input<String> consumerGroup) {
+        public Builder consumerGroup(@Nullable Output<String> consumerGroup) {
             this.consumerGroup = consumerGroup;
             return this;
         }
 
         public Builder consumerGroup(@Nullable String consumerGroup) {
-            this.consumerGroup = Input.ofNullable(consumerGroup);
+            this.consumerGroup = Output.ofNullable(consumerGroup);
             return this;
         }
 
-        public Builder eventHubName(@Nullable Input<String> eventHubName) {
+        public Builder eventHubName(@Nullable Output<String> eventHubName) {
             this.eventHubName = eventHubName;
             return this;
         }
 
         public Builder eventHubName(@Nullable String eventHubName) {
-            this.eventHubName = Input.ofNullable(eventHubName);
+            this.eventHubName = Output.ofNullable(eventHubName);
             return this;
         }
 
-        public Builder fullyQualifiedEventHubNamespace(@Nullable Input<String> fullyQualifiedEventHubNamespace) {
+        public Builder fullyQualifiedEventHubNamespace(@Nullable Output<String> fullyQualifiedEventHubNamespace) {
             this.fullyQualifiedEventHubNamespace = fullyQualifiedEventHubNamespace;
             return this;
         }
 
         public Builder fullyQualifiedEventHubNamespace(@Nullable String fullyQualifiedEventHubNamespace) {
-            this.fullyQualifiedEventHubNamespace = Input.ofNullable(fullyQualifiedEventHubNamespace);
+            this.fullyQualifiedEventHubNamespace = Output.ofNullable(fullyQualifiedEventHubNamespace);
             return this;
         }
         public IotEventHubIngestionEndpointConfigurationArgs build() {

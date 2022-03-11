@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.aad;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName")
-      private final @Nullable Input<String> accountName;
+      private final @Nullable Output<String> accountName;
 
-    public Input<String> getAccountName() {
-        return this.accountName == null ? Input.empty() : this.accountName;
+    public Output<String> getAccountName() {
+        return this.accountName == null ? Output.empty() : this.accountName;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainServiceName", required=true)
-      private final Input<String> domainServiceName;
+      private final Output<String> domainServiceName;
 
-    public Input<String> getDomainServiceName() {
+    public Output<String> getDomainServiceName() {
         return this.domainServiceName;
     }
 
@@ -41,10 +41,10 @@ public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ouContainerName")
-      private final @Nullable Input<String> ouContainerName;
+      private final @Nullable Output<String> ouContainerName;
 
-    public Input<String> getOuContainerName() {
-        return this.ouContainerName == null ? Input.empty() : this.ouContainerName;
+    public Output<String> getOuContainerName() {
+        return this.ouContainerName == null ? Output.empty() : this.ouContainerName;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<String> password;
+      private final @Nullable Output<String> password;
 
-    public Input<String> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<String> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -63,9 +63,9 @@ public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -74,19 +74,19 @@ public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spn")
-      private final @Nullable Input<String> spn;
+      private final @Nullable Output<String> spn;
 
-    public Input<String> getSpn() {
-        return this.spn == null ? Input.empty() : this.spn;
+    public Output<String> getSpn() {
+        return this.spn == null ? Output.empty() : this.spn;
     }
 
     public OuContainerArgs(
-        @Nullable Input<String> accountName,
-        Input<String> domainServiceName,
-        @Nullable Input<String> ouContainerName,
-        @Nullable Input<String> password,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> spn) {
+        @Nullable Output<String> accountName,
+        Output<String> domainServiceName,
+        @Nullable Output<String> ouContainerName,
+        @Nullable Output<String> password,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> spn) {
         this.accountName = accountName;
         this.domainServiceName = Objects.requireNonNull(domainServiceName, "expected parameter 'domainServiceName' to be non-null");
         this.ouContainerName = ouContainerName;
@@ -96,12 +96,12 @@ public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OuContainerArgs() {
-        this.accountName = Input.empty();
-        this.domainServiceName = Input.empty();
-        this.ouContainerName = Input.empty();
-        this.password = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.spn = Input.empty();
+        this.accountName = Output.empty();
+        this.domainServiceName = Output.empty();
+        this.ouContainerName = Output.empty();
+        this.password = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.spn = Output.empty();
     }
 
     public static Builder builder() {
@@ -113,12 +113,12 @@ public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accountName;
-        private Input<String> domainServiceName;
-        private @Nullable Input<String> ouContainerName;
-        private @Nullable Input<String> password;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> spn;
+        private @Nullable Output<String> accountName;
+        private Output<String> domainServiceName;
+        private @Nullable Output<String> ouContainerName;
+        private @Nullable Output<String> password;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> spn;
 
         public Builder() {
     	      // Empty
@@ -134,63 +134,63 @@ public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.spn = defaults.spn;
         }
 
-        public Builder accountName(@Nullable Input<String> accountName) {
+        public Builder accountName(@Nullable Output<String> accountName) {
             this.accountName = accountName;
             return this;
         }
 
         public Builder accountName(@Nullable String accountName) {
-            this.accountName = Input.ofNullable(accountName);
+            this.accountName = Output.ofNullable(accountName);
             return this;
         }
 
-        public Builder domainServiceName(Input<String> domainServiceName) {
+        public Builder domainServiceName(Output<String> domainServiceName) {
             this.domainServiceName = Objects.requireNonNull(domainServiceName);
             return this;
         }
 
         public Builder domainServiceName(String domainServiceName) {
-            this.domainServiceName = Input.of(Objects.requireNonNull(domainServiceName));
+            this.domainServiceName = Output.of(Objects.requireNonNull(domainServiceName));
             return this;
         }
 
-        public Builder ouContainerName(@Nullable Input<String> ouContainerName) {
+        public Builder ouContainerName(@Nullable Output<String> ouContainerName) {
             this.ouContainerName = ouContainerName;
             return this;
         }
 
         public Builder ouContainerName(@Nullable String ouContainerName) {
-            this.ouContainerName = Input.ofNullable(ouContainerName);
+            this.ouContainerName = Output.ofNullable(ouContainerName);
             return this;
         }
 
-        public Builder password(@Nullable Input<String> password) {
+        public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable String password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder spn(@Nullable Input<String> spn) {
+        public Builder spn(@Nullable Output<String> spn) {
             this.spn = spn;
             return this;
         }
 
         public Builder spn(@Nullable String spn) {
-            this.spn = Input.ofNullable(spn);
+            this.spn = Output.ofNullable(spn);
             return this;
         }
         public OuContainerArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -23,18 +23,18 @@ public final class IdentityConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userServiceAccountMapping", required=true)
-      private final Input<Map<String,String>> userServiceAccountMapping;
+      private final Output<Map<String,String>> userServiceAccountMapping;
 
-    public Input<Map<String,String>> getUserServiceAccountMapping() {
+    public Output<Map<String,String>> getUserServiceAccountMapping() {
         return this.userServiceAccountMapping;
     }
 
-    public IdentityConfigArgs(Input<Map<String,String>> userServiceAccountMapping) {
+    public IdentityConfigArgs(Output<Map<String,String>> userServiceAccountMapping) {
         this.userServiceAccountMapping = Objects.requireNonNull(userServiceAccountMapping, "expected parameter 'userServiceAccountMapping' to be non-null");
     }
 
     private IdentityConfigArgs() {
-        this.userServiceAccountMapping = Input.empty();
+        this.userServiceAccountMapping = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class IdentityConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Map<String,String>> userServiceAccountMapping;
+        private Output<Map<String,String>> userServiceAccountMapping;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class IdentityConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userServiceAccountMapping = defaults.userServiceAccountMapping;
         }
 
-        public Builder userServiceAccountMapping(Input<Map<String,String>> userServiceAccountMapping) {
+        public Builder userServiceAccountMapping(Output<Map<String,String>> userServiceAccountMapping) {
             this.userServiceAccountMapping = Objects.requireNonNull(userServiceAccountMapping);
             return this;
         }
 
         public Builder userServiceAccountMapping(Map<String,String> userServiceAccountMapping) {
-            this.userServiceAccountMapping = Input.of(Objects.requireNonNull(userServiceAccountMapping));
+            this.userServiceAccountMapping = Output.of(Objects.requireNonNull(userServiceAccountMapping));
             return this;
         }
         public IdentityConfigArgs build() {

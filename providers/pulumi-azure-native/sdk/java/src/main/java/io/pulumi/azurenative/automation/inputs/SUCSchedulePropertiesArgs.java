@@ -6,7 +6,7 @@ package io.pulumi.azurenative.automation.inputs;
 import io.pulumi.azurenative.automation.enums.ScheduleFrequency;
 import io.pulumi.azurenative.automation.inputs.AdvancedScheduleArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -28,10 +28,10 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="advancedSchedule")
-      private final @Nullable Input<AdvancedScheduleArgs> advancedSchedule;
+      private final @Nullable Output<AdvancedScheduleArgs> advancedSchedule;
 
-    public Input<AdvancedScheduleArgs> getAdvancedSchedule() {
-        return this.advancedSchedule == null ? Input.empty() : this.advancedSchedule;
+    public Output<AdvancedScheduleArgs> getAdvancedSchedule() {
+        return this.advancedSchedule == null ? Output.empty() : this.advancedSchedule;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="creationTime")
-      private final @Nullable Input<String> creationTime;
+      private final @Nullable Output<String> creationTime;
 
-    public Input<String> getCreationTime() {
-        return this.creationTime == null ? Input.empty() : this.creationTime;
+    public Output<String> getCreationTime() {
+        return this.creationTime == null ? Output.empty() : this.creationTime;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="expiryTime")
-      private final @Nullable Input<String> expiryTime;
+      private final @Nullable Output<String> expiryTime;
 
-    public Input<String> getExpiryTime() {
-        return this.expiryTime == null ? Input.empty() : this.expiryTime;
+    public Output<String> getExpiryTime() {
+        return this.expiryTime == null ? Output.empty() : this.expiryTime;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="expiryTimeOffsetMinutes")
-      private final @Nullable Input<Double> expiryTimeOffsetMinutes;
+      private final @Nullable Output<Double> expiryTimeOffsetMinutes;
 
-    public Input<Double> getExpiryTimeOffsetMinutes() {
-        return this.expiryTimeOffsetMinutes == null ? Input.empty() : this.expiryTimeOffsetMinutes;
+    public Output<Double> getExpiryTimeOffsetMinutes() {
+        return this.expiryTimeOffsetMinutes == null ? Output.empty() : this.expiryTimeOffsetMinutes;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="frequency")
-      private final @Nullable Input<Either<String,ScheduleFrequency>> frequency;
+      private final @Nullable Output<Either<String,ScheduleFrequency>> frequency;
 
-    public Input<Either<String,ScheduleFrequency>> getFrequency() {
-        return this.frequency == null ? Input.empty() : this.frequency;
+    public Output<Either<String,ScheduleFrequency>> getFrequency() {
+        return this.frequency == null ? Output.empty() : this.frequency;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="interval")
-      private final @Nullable Input<Double> interval;
+      private final @Nullable Output<Double> interval;
 
-    public Input<Double> getInterval() {
-        return this.interval == null ? Input.empty() : this.interval;
+    public Output<Double> getInterval() {
+        return this.interval == null ? Output.empty() : this.interval;
     }
 
     /**
@@ -105,10 +105,10 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="isEnabled")
-      private final @Nullable Input<Boolean> isEnabled;
+      private final @Nullable Output<Boolean> isEnabled;
 
-    public Input<Boolean> getIsEnabled() {
-        return this.isEnabled == null ? Input.empty() : this.isEnabled;
+    public Output<Boolean> getIsEnabled() {
+        return this.isEnabled == null ? Output.empty() : this.isEnabled;
     }
 
     /**
@@ -116,10 +116,10 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="lastModifiedTime")
-      private final @Nullable Input<String> lastModifiedTime;
+      private final @Nullable Output<String> lastModifiedTime;
 
-    public Input<String> getLastModifiedTime() {
-        return this.lastModifiedTime == null ? Input.empty() : this.lastModifiedTime;
+    public Output<String> getLastModifiedTime() {
+        return this.lastModifiedTime == null ? Output.empty() : this.lastModifiedTime;
     }
 
     /**
@@ -127,10 +127,10 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="nextRun")
-      private final @Nullable Input<String> nextRun;
+      private final @Nullable Output<String> nextRun;
 
-    public Input<String> getNextRun() {
-        return this.nextRun == null ? Input.empty() : this.nextRun;
+    public Output<String> getNextRun() {
+        return this.nextRun == null ? Output.empty() : this.nextRun;
     }
 
     /**
@@ -138,10 +138,10 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="nextRunOffsetMinutes")
-      private final @Nullable Input<Double> nextRunOffsetMinutes;
+      private final @Nullable Output<Double> nextRunOffsetMinutes;
 
-    public Input<Double> getNextRunOffsetMinutes() {
-        return this.nextRunOffsetMinutes == null ? Input.empty() : this.nextRunOffsetMinutes;
+    public Output<Double> getNextRunOffsetMinutes() {
+        return this.nextRunOffsetMinutes == null ? Output.empty() : this.nextRunOffsetMinutes;
     }
 
     /**
@@ -149,10 +149,10 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="startTime")
-      private final @Nullable Input<String> startTime;
+      private final @Nullable Output<String> startTime;
 
-    public Input<String> getStartTime() {
-        return this.startTime == null ? Input.empty() : this.startTime;
+    public Output<String> getStartTime() {
+        return this.startTime == null ? Output.empty() : this.startTime;
     }
 
     /**
@@ -160,26 +160,26 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="timeZone")
-      private final @Nullable Input<String> timeZone;
+      private final @Nullable Output<String> timeZone;
 
-    public Input<String> getTimeZone() {
-        return this.timeZone == null ? Input.empty() : this.timeZone;
+    public Output<String> getTimeZone() {
+        return this.timeZone == null ? Output.empty() : this.timeZone;
     }
 
     public SUCSchedulePropertiesArgs(
-        @Nullable Input<AdvancedScheduleArgs> advancedSchedule,
-        @Nullable Input<String> creationTime,
-        @Nullable Input<String> description,
-        @Nullable Input<String> expiryTime,
-        @Nullable Input<Double> expiryTimeOffsetMinutes,
-        @Nullable Input<Either<String,ScheduleFrequency>> frequency,
-        @Nullable Input<Double> interval,
-        @Nullable Input<Boolean> isEnabled,
-        @Nullable Input<String> lastModifiedTime,
-        @Nullable Input<String> nextRun,
-        @Nullable Input<Double> nextRunOffsetMinutes,
-        @Nullable Input<String> startTime,
-        @Nullable Input<String> timeZone) {
+        @Nullable Output<AdvancedScheduleArgs> advancedSchedule,
+        @Nullable Output<String> creationTime,
+        @Nullable Output<String> description,
+        @Nullable Output<String> expiryTime,
+        @Nullable Output<Double> expiryTimeOffsetMinutes,
+        @Nullable Output<Either<String,ScheduleFrequency>> frequency,
+        @Nullable Output<Double> interval,
+        @Nullable Output<Boolean> isEnabled,
+        @Nullable Output<String> lastModifiedTime,
+        @Nullable Output<String> nextRun,
+        @Nullable Output<Double> nextRunOffsetMinutes,
+        @Nullable Output<String> startTime,
+        @Nullable Output<String> timeZone) {
         this.advancedSchedule = advancedSchedule;
         this.creationTime = creationTime;
         this.description = description;
@@ -187,7 +187,7 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
         this.expiryTimeOffsetMinutes = expiryTimeOffsetMinutes;
         this.frequency = frequency;
         this.interval = interval;
-        this.isEnabled = isEnabled == null ? Input.ofNullable(false) : isEnabled;
+        this.isEnabled = isEnabled == null ? Output.ofNullable(false) : isEnabled;
         this.lastModifiedTime = lastModifiedTime;
         this.nextRun = nextRun;
         this.nextRunOffsetMinutes = nextRunOffsetMinutes;
@@ -196,19 +196,19 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
     }
 
     private SUCSchedulePropertiesArgs() {
-        this.advancedSchedule = Input.empty();
-        this.creationTime = Input.empty();
-        this.description = Input.empty();
-        this.expiryTime = Input.empty();
-        this.expiryTimeOffsetMinutes = Input.empty();
-        this.frequency = Input.empty();
-        this.interval = Input.empty();
-        this.isEnabled = Input.empty();
-        this.lastModifiedTime = Input.empty();
-        this.nextRun = Input.empty();
-        this.nextRunOffsetMinutes = Input.empty();
-        this.startTime = Input.empty();
-        this.timeZone = Input.empty();
+        this.advancedSchedule = Output.empty();
+        this.creationTime = Output.empty();
+        this.description = Output.empty();
+        this.expiryTime = Output.empty();
+        this.expiryTimeOffsetMinutes = Output.empty();
+        this.frequency = Output.empty();
+        this.interval = Output.empty();
+        this.isEnabled = Output.empty();
+        this.lastModifiedTime = Output.empty();
+        this.nextRun = Output.empty();
+        this.nextRunOffsetMinutes = Output.empty();
+        this.startTime = Output.empty();
+        this.timeZone = Output.empty();
     }
 
     public static Builder builder() {
@@ -220,19 +220,19 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<AdvancedScheduleArgs> advancedSchedule;
-        private @Nullable Input<String> creationTime;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> expiryTime;
-        private @Nullable Input<Double> expiryTimeOffsetMinutes;
-        private @Nullable Input<Either<String,ScheduleFrequency>> frequency;
-        private @Nullable Input<Double> interval;
-        private @Nullable Input<Boolean> isEnabled;
-        private @Nullable Input<String> lastModifiedTime;
-        private @Nullable Input<String> nextRun;
-        private @Nullable Input<Double> nextRunOffsetMinutes;
-        private @Nullable Input<String> startTime;
-        private @Nullable Input<String> timeZone;
+        private @Nullable Output<AdvancedScheduleArgs> advancedSchedule;
+        private @Nullable Output<String> creationTime;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> expiryTime;
+        private @Nullable Output<Double> expiryTimeOffsetMinutes;
+        private @Nullable Output<Either<String,ScheduleFrequency>> frequency;
+        private @Nullable Output<Double> interval;
+        private @Nullable Output<Boolean> isEnabled;
+        private @Nullable Output<String> lastModifiedTime;
+        private @Nullable Output<String> nextRun;
+        private @Nullable Output<Double> nextRunOffsetMinutes;
+        private @Nullable Output<String> startTime;
+        private @Nullable Output<String> timeZone;
 
         public Builder() {
     	      // Empty
@@ -255,133 +255,133 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder advancedSchedule(@Nullable Input<AdvancedScheduleArgs> advancedSchedule) {
+        public Builder advancedSchedule(@Nullable Output<AdvancedScheduleArgs> advancedSchedule) {
             this.advancedSchedule = advancedSchedule;
             return this;
         }
 
         public Builder advancedSchedule(@Nullable AdvancedScheduleArgs advancedSchedule) {
-            this.advancedSchedule = Input.ofNullable(advancedSchedule);
+            this.advancedSchedule = Output.ofNullable(advancedSchedule);
             return this;
         }
 
-        public Builder creationTime(@Nullable Input<String> creationTime) {
+        public Builder creationTime(@Nullable Output<String> creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
         public Builder creationTime(@Nullable String creationTime) {
-            this.creationTime = Input.ofNullable(creationTime);
+            this.creationTime = Output.ofNullable(creationTime);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder expiryTime(@Nullable Input<String> expiryTime) {
+        public Builder expiryTime(@Nullable Output<String> expiryTime) {
             this.expiryTime = expiryTime;
             return this;
         }
 
         public Builder expiryTime(@Nullable String expiryTime) {
-            this.expiryTime = Input.ofNullable(expiryTime);
+            this.expiryTime = Output.ofNullable(expiryTime);
             return this;
         }
 
-        public Builder expiryTimeOffsetMinutes(@Nullable Input<Double> expiryTimeOffsetMinutes) {
+        public Builder expiryTimeOffsetMinutes(@Nullable Output<Double> expiryTimeOffsetMinutes) {
             this.expiryTimeOffsetMinutes = expiryTimeOffsetMinutes;
             return this;
         }
 
         public Builder expiryTimeOffsetMinutes(@Nullable Double expiryTimeOffsetMinutes) {
-            this.expiryTimeOffsetMinutes = Input.ofNullable(expiryTimeOffsetMinutes);
+            this.expiryTimeOffsetMinutes = Output.ofNullable(expiryTimeOffsetMinutes);
             return this;
         }
 
-        public Builder frequency(@Nullable Input<Either<String,ScheduleFrequency>> frequency) {
+        public Builder frequency(@Nullable Output<Either<String,ScheduleFrequency>> frequency) {
             this.frequency = frequency;
             return this;
         }
 
         public Builder frequency(@Nullable Either<String,ScheduleFrequency> frequency) {
-            this.frequency = Input.ofNullable(frequency);
+            this.frequency = Output.ofNullable(frequency);
             return this;
         }
 
-        public Builder interval(@Nullable Input<Double> interval) {
+        public Builder interval(@Nullable Output<Double> interval) {
             this.interval = interval;
             return this;
         }
 
         public Builder interval(@Nullable Double interval) {
-            this.interval = Input.ofNullable(interval);
+            this.interval = Output.ofNullable(interval);
             return this;
         }
 
-        public Builder isEnabled(@Nullable Input<Boolean> isEnabled) {
+        public Builder isEnabled(@Nullable Output<Boolean> isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
 
         public Builder isEnabled(@Nullable Boolean isEnabled) {
-            this.isEnabled = Input.ofNullable(isEnabled);
+            this.isEnabled = Output.ofNullable(isEnabled);
             return this;
         }
 
-        public Builder lastModifiedTime(@Nullable Input<String> lastModifiedTime) {
+        public Builder lastModifiedTime(@Nullable Output<String> lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
 
         public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
-            this.lastModifiedTime = Input.ofNullable(lastModifiedTime);
+            this.lastModifiedTime = Output.ofNullable(lastModifiedTime);
             return this;
         }
 
-        public Builder nextRun(@Nullable Input<String> nextRun) {
+        public Builder nextRun(@Nullable Output<String> nextRun) {
             this.nextRun = nextRun;
             return this;
         }
 
         public Builder nextRun(@Nullable String nextRun) {
-            this.nextRun = Input.ofNullable(nextRun);
+            this.nextRun = Output.ofNullable(nextRun);
             return this;
         }
 
-        public Builder nextRunOffsetMinutes(@Nullable Input<Double> nextRunOffsetMinutes) {
+        public Builder nextRunOffsetMinutes(@Nullable Output<Double> nextRunOffsetMinutes) {
             this.nextRunOffsetMinutes = nextRunOffsetMinutes;
             return this;
         }
 
         public Builder nextRunOffsetMinutes(@Nullable Double nextRunOffsetMinutes) {
-            this.nextRunOffsetMinutes = Input.ofNullable(nextRunOffsetMinutes);
+            this.nextRunOffsetMinutes = Output.ofNullable(nextRunOffsetMinutes);
             return this;
         }
 
-        public Builder startTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Input.ofNullable(startTime);
+            this.startTime = Output.ofNullable(startTime);
             return this;
         }
 
-        public Builder timeZone(@Nullable Input<String> timeZone) {
+        public Builder timeZone(@Nullable Output<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
 
         public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = Input.ofNullable(timeZone);
+            this.timeZone = Output.ofNullable(timeZone);
             return this;
         }
         public SUCSchedulePropertiesArgs build() {

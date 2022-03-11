@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.azurearcdata.inputs;
 
 import io.pulumi.azurenative.azurearcdata.inputs.BasicLoginInformationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class PostgresInstancePropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="admin")
-      private final @Nullable Input<String> admin;
+      private final @Nullable Output<String> admin;
 
-    public Input<String> getAdmin() {
-        return this.admin == null ? Input.empty() : this.admin;
+    public Output<String> getAdmin() {
+        return this.admin == null ? Output.empty() : this.admin;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PostgresInstancePropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="basicLoginInformation")
-      private final @Nullable Input<BasicLoginInformationArgs> basicLoginInformation;
+      private final @Nullable Output<BasicLoginInformationArgs> basicLoginInformation;
 
-    public Input<BasicLoginInformationArgs> getBasicLoginInformation() {
-        return this.basicLoginInformation == null ? Input.empty() : this.basicLoginInformation;
+    public Output<BasicLoginInformationArgs> getBasicLoginInformation() {
+        return this.basicLoginInformation == null ? Output.empty() : this.basicLoginInformation;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class PostgresInstancePropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="dataControllerId")
-      private final @Nullable Input<String> dataControllerId;
+      private final @Nullable Output<String> dataControllerId;
 
-    public Input<String> getDataControllerId() {
-        return this.dataControllerId == null ? Input.empty() : this.dataControllerId;
+    public Output<String> getDataControllerId() {
+        return this.dataControllerId == null ? Output.empty() : this.dataControllerId;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class PostgresInstancePropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="k8sRaw")
-      private final @Nullable Input<Object> k8sRaw;
+      private final @Nullable Output<Object> k8sRaw;
 
-    public Input<Object> getK8sRaw() {
-        return this.k8sRaw == null ? Input.empty() : this.k8sRaw;
+    public Output<Object> getK8sRaw() {
+        return this.k8sRaw == null ? Output.empty() : this.k8sRaw;
     }
 
     /**
@@ -69,18 +69,18 @@ public final class PostgresInstancePropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="lastUploadedDate")
-      private final @Nullable Input<String> lastUploadedDate;
+      private final @Nullable Output<String> lastUploadedDate;
 
-    public Input<String> getLastUploadedDate() {
-        return this.lastUploadedDate == null ? Input.empty() : this.lastUploadedDate;
+    public Output<String> getLastUploadedDate() {
+        return this.lastUploadedDate == null ? Output.empty() : this.lastUploadedDate;
     }
 
     public PostgresInstancePropertiesArgs(
-        @Nullable Input<String> admin,
-        @Nullable Input<BasicLoginInformationArgs> basicLoginInformation,
-        @Nullable Input<String> dataControllerId,
-        @Nullable Input<Object> k8sRaw,
-        @Nullable Input<String> lastUploadedDate) {
+        @Nullable Output<String> admin,
+        @Nullable Output<BasicLoginInformationArgs> basicLoginInformation,
+        @Nullable Output<String> dataControllerId,
+        @Nullable Output<Object> k8sRaw,
+        @Nullable Output<String> lastUploadedDate) {
         this.admin = admin;
         this.basicLoginInformation = basicLoginInformation;
         this.dataControllerId = dataControllerId;
@@ -89,11 +89,11 @@ public final class PostgresInstancePropertiesArgs extends io.pulumi.resources.Re
     }
 
     private PostgresInstancePropertiesArgs() {
-        this.admin = Input.empty();
-        this.basicLoginInformation = Input.empty();
-        this.dataControllerId = Input.empty();
-        this.k8sRaw = Input.empty();
-        this.lastUploadedDate = Input.empty();
+        this.admin = Output.empty();
+        this.basicLoginInformation = Output.empty();
+        this.dataControllerId = Output.empty();
+        this.k8sRaw = Output.empty();
+        this.lastUploadedDate = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class PostgresInstancePropertiesArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> admin;
-        private @Nullable Input<BasicLoginInformationArgs> basicLoginInformation;
-        private @Nullable Input<String> dataControllerId;
-        private @Nullable Input<Object> k8sRaw;
-        private @Nullable Input<String> lastUploadedDate;
+        private @Nullable Output<String> admin;
+        private @Nullable Output<BasicLoginInformationArgs> basicLoginInformation;
+        private @Nullable Output<String> dataControllerId;
+        private @Nullable Output<Object> k8sRaw;
+        private @Nullable Output<String> lastUploadedDate;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class PostgresInstancePropertiesArgs extends io.pulumi.resources.Re
     	      this.lastUploadedDate = defaults.lastUploadedDate;
         }
 
-        public Builder admin(@Nullable Input<String> admin) {
+        public Builder admin(@Nullable Output<String> admin) {
             this.admin = admin;
             return this;
         }
 
         public Builder admin(@Nullable String admin) {
-            this.admin = Input.ofNullable(admin);
+            this.admin = Output.ofNullable(admin);
             return this;
         }
 
-        public Builder basicLoginInformation(@Nullable Input<BasicLoginInformationArgs> basicLoginInformation) {
+        public Builder basicLoginInformation(@Nullable Output<BasicLoginInformationArgs> basicLoginInformation) {
             this.basicLoginInformation = basicLoginInformation;
             return this;
         }
 
         public Builder basicLoginInformation(@Nullable BasicLoginInformationArgs basicLoginInformation) {
-            this.basicLoginInformation = Input.ofNullable(basicLoginInformation);
+            this.basicLoginInformation = Output.ofNullable(basicLoginInformation);
             return this;
         }
 
-        public Builder dataControllerId(@Nullable Input<String> dataControllerId) {
+        public Builder dataControllerId(@Nullable Output<String> dataControllerId) {
             this.dataControllerId = dataControllerId;
             return this;
         }
 
         public Builder dataControllerId(@Nullable String dataControllerId) {
-            this.dataControllerId = Input.ofNullable(dataControllerId);
+            this.dataControllerId = Output.ofNullable(dataControllerId);
             return this;
         }
 
-        public Builder k8sRaw(@Nullable Input<Object> k8sRaw) {
+        public Builder k8sRaw(@Nullable Output<Object> k8sRaw) {
             this.k8sRaw = k8sRaw;
             return this;
         }
 
         public Builder k8sRaw(@Nullable Object k8sRaw) {
-            this.k8sRaw = Input.ofNullable(k8sRaw);
+            this.k8sRaw = Output.ofNullable(k8sRaw);
             return this;
         }
 
-        public Builder lastUploadedDate(@Nullable Input<String> lastUploadedDate) {
+        public Builder lastUploadedDate(@Nullable Output<String> lastUploadedDate) {
             this.lastUploadedDate = lastUploadedDate;
             return this;
         }
 
         public Builder lastUploadedDate(@Nullable String lastUploadedDate) {
-            this.lastUploadedDate = Input.ofNullable(lastUploadedDate);
+            this.lastUploadedDate = Output.ofNullable(lastUploadedDate);
             return this;
         }
         public PostgresInstancePropertiesArgs build() {

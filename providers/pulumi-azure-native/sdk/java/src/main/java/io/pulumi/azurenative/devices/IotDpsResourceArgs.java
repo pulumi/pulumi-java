@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devices;
 
 import io.pulumi.azurenative.devices.inputs.IotDpsPropertiesDescriptionArgs;
 import io.pulumi.azurenative.devices.inputs.IotDpsSkuInfoArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -22,10 +22,10 @@ public final class IotDpsResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -33,9 +33,9 @@ public final class IotDpsResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties", required=true)
-      private final Input<IotDpsPropertiesDescriptionArgs> properties;
+      private final Output<IotDpsPropertiesDescriptionArgs> properties;
 
-    public Input<IotDpsPropertiesDescriptionArgs> getProperties() {
+    public Output<IotDpsPropertiesDescriptionArgs> getProperties() {
         return this.properties;
     }
 
@@ -44,10 +44,10 @@ public final class IotDpsResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provisioningServiceName")
-      private final @Nullable Input<String> provisioningServiceName;
+      private final @Nullable Output<String> provisioningServiceName;
 
-    public Input<String> getProvisioningServiceName() {
-        return this.provisioningServiceName == null ? Input.empty() : this.provisioningServiceName;
+    public Output<String> getProvisioningServiceName() {
+        return this.provisioningServiceName == null ? Output.empty() : this.provisioningServiceName;
     }
 
     /**
@@ -55,9 +55,9 @@ public final class IotDpsResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -66,9 +66,9 @@ public final class IotDpsResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku", required=true)
-      private final Input<IotDpsSkuInfoArgs> sku;
+      private final Output<IotDpsSkuInfoArgs> sku;
 
-    public Input<IotDpsSkuInfoArgs> getSku() {
+    public Output<IotDpsSkuInfoArgs> getSku() {
         return this.sku;
     }
 
@@ -77,19 +77,19 @@ public final class IotDpsResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public IotDpsResourceArgs(
-        @Nullable Input<String> location,
-        Input<IotDpsPropertiesDescriptionArgs> properties,
-        @Nullable Input<String> provisioningServiceName,
-        Input<String> resourceGroupName,
-        Input<IotDpsSkuInfoArgs> sku,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> location,
+        Output<IotDpsPropertiesDescriptionArgs> properties,
+        @Nullable Output<String> provisioningServiceName,
+        Output<String> resourceGroupName,
+        Output<IotDpsSkuInfoArgs> sku,
+        @Nullable Output<Map<String,String>> tags) {
         this.location = location;
         this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
         this.provisioningServiceName = provisioningServiceName;
@@ -99,12 +99,12 @@ public final class IotDpsResourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IotDpsResourceArgs() {
-        this.location = Input.empty();
-        this.properties = Input.empty();
-        this.provisioningServiceName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sku = Input.empty();
-        this.tags = Input.empty();
+        this.location = Output.empty();
+        this.properties = Output.empty();
+        this.provisioningServiceName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sku = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class IotDpsResourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> location;
-        private Input<IotDpsPropertiesDescriptionArgs> properties;
-        private @Nullable Input<String> provisioningServiceName;
-        private Input<String> resourceGroupName;
-        private Input<IotDpsSkuInfoArgs> sku;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> location;
+        private Output<IotDpsPropertiesDescriptionArgs> properties;
+        private @Nullable Output<String> provisioningServiceName;
+        private Output<String> resourceGroupName;
+        private Output<IotDpsSkuInfoArgs> sku;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class IotDpsResourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder properties(Input<IotDpsPropertiesDescriptionArgs> properties) {
+        public Builder properties(Output<IotDpsPropertiesDescriptionArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
         public Builder properties(IotDpsPropertiesDescriptionArgs properties) {
-            this.properties = Input.of(Objects.requireNonNull(properties));
+            this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
 
-        public Builder provisioningServiceName(@Nullable Input<String> provisioningServiceName) {
+        public Builder provisioningServiceName(@Nullable Output<String> provisioningServiceName) {
             this.provisioningServiceName = provisioningServiceName;
             return this;
         }
 
         public Builder provisioningServiceName(@Nullable String provisioningServiceName) {
-            this.provisioningServiceName = Input.ofNullable(provisioningServiceName);
+            this.provisioningServiceName = Output.ofNullable(provisioningServiceName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sku(Input<IotDpsSkuInfoArgs> sku) {
+        public Builder sku(Output<IotDpsSkuInfoArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
         public Builder sku(IotDpsSkuInfoArgs sku) {
-            this.sku = Input.of(Objects.requireNonNull(sku));
+            this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public IotDpsResourceArgs build() {

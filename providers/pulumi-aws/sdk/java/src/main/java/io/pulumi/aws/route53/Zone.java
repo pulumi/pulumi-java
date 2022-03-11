@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.route53.ZoneArgs;
 import io.pulumi.aws.route53.inputs.ZoneState;
 import io.pulumi.aws.route53.outputs.ZoneVpc;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -214,14 +213,14 @@ public class Zone extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Zone(String name, @Nullable ZoneArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:route53/zone:Zone", name, args == null ? ZoneArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:route53/zone:Zone", name, args == null ? ZoneArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Zone(String name, Input<String> id, @Nullable ZoneState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Zone(String name, Output<String> id, @Nullable ZoneState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:route53/zone:Zone", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -237,7 +236,7 @@ public class Zone extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Zone get(String name, Input<String> id, @Nullable ZoneState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Zone get(String name, Output<String> id, @Nullable ZoneState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Zone(name, id, state, options);
     }
 }

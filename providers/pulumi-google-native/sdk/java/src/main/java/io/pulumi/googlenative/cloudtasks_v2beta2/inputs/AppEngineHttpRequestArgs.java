@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudtasks_v2beta2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudtasks_v2beta2.enums.AppEngineHttpRequestHttpMethod;
 import io.pulumi.googlenative.cloudtasks_v2beta2.inputs.AppEngineRoutingArgs;
@@ -26,10 +26,10 @@ public final class AppEngineHttpRequestArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="appEngineRouting")
-      private final @Nullable Input<AppEngineRoutingArgs> appEngineRouting;
+      private final @Nullable Output<AppEngineRoutingArgs> appEngineRouting;
 
-    public Input<AppEngineRoutingArgs> getAppEngineRouting() {
-        return this.appEngineRouting == null ? Input.empty() : this.appEngineRouting;
+    public Output<AppEngineRoutingArgs> getAppEngineRouting() {
+        return this.appEngineRouting == null ? Output.empty() : this.appEngineRouting;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class AppEngineHttpRequestArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="headers")
-      private final @Nullable Input<Map<String,String>> headers;
+      private final @Nullable Output<Map<String,String>> headers;
 
-    public Input<Map<String,String>> getHeaders() {
-        return this.headers == null ? Input.empty() : this.headers;
+    public Output<Map<String,String>> getHeaders() {
+        return this.headers == null ? Output.empty() : this.headers;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class AppEngineHttpRequestArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="httpMethod")
-      private final @Nullable Input<AppEngineHttpRequestHttpMethod> httpMethod;
+      private final @Nullable Output<AppEngineHttpRequestHttpMethod> httpMethod;
 
-    public Input<AppEngineHttpRequestHttpMethod> getHttpMethod() {
-        return this.httpMethod == null ? Input.empty() : this.httpMethod;
+    public Output<AppEngineHttpRequestHttpMethod> getHttpMethod() {
+        return this.httpMethod == null ? Output.empty() : this.httpMethod;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class AppEngineHttpRequestArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="payload")
-      private final @Nullable Input<String> payload;
+      private final @Nullable Output<String> payload;
 
-    public Input<String> getPayload() {
-        return this.payload == null ? Input.empty() : this.payload;
+    public Output<String> getPayload() {
+        return this.payload == null ? Output.empty() : this.payload;
     }
 
     /**
@@ -70,18 +70,18 @@ public final class AppEngineHttpRequestArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="relativeUrl")
-      private final @Nullable Input<String> relativeUrl;
+      private final @Nullable Output<String> relativeUrl;
 
-    public Input<String> getRelativeUrl() {
-        return this.relativeUrl == null ? Input.empty() : this.relativeUrl;
+    public Output<String> getRelativeUrl() {
+        return this.relativeUrl == null ? Output.empty() : this.relativeUrl;
     }
 
     public AppEngineHttpRequestArgs(
-        @Nullable Input<AppEngineRoutingArgs> appEngineRouting,
-        @Nullable Input<Map<String,String>> headers,
-        @Nullable Input<AppEngineHttpRequestHttpMethod> httpMethod,
-        @Nullable Input<String> payload,
-        @Nullable Input<String> relativeUrl) {
+        @Nullable Output<AppEngineRoutingArgs> appEngineRouting,
+        @Nullable Output<Map<String,String>> headers,
+        @Nullable Output<AppEngineHttpRequestHttpMethod> httpMethod,
+        @Nullable Output<String> payload,
+        @Nullable Output<String> relativeUrl) {
         this.appEngineRouting = appEngineRouting;
         this.headers = headers;
         this.httpMethod = httpMethod;
@@ -90,11 +90,11 @@ public final class AppEngineHttpRequestArgs extends io.pulumi.resources.Resource
     }
 
     private AppEngineHttpRequestArgs() {
-        this.appEngineRouting = Input.empty();
-        this.headers = Input.empty();
-        this.httpMethod = Input.empty();
-        this.payload = Input.empty();
-        this.relativeUrl = Input.empty();
+        this.appEngineRouting = Output.empty();
+        this.headers = Output.empty();
+        this.httpMethod = Output.empty();
+        this.payload = Output.empty();
+        this.relativeUrl = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,11 +106,11 @@ public final class AppEngineHttpRequestArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<AppEngineRoutingArgs> appEngineRouting;
-        private @Nullable Input<Map<String,String>> headers;
-        private @Nullable Input<AppEngineHttpRequestHttpMethod> httpMethod;
-        private @Nullable Input<String> payload;
-        private @Nullable Input<String> relativeUrl;
+        private @Nullable Output<AppEngineRoutingArgs> appEngineRouting;
+        private @Nullable Output<Map<String,String>> headers;
+        private @Nullable Output<AppEngineHttpRequestHttpMethod> httpMethod;
+        private @Nullable Output<String> payload;
+        private @Nullable Output<String> relativeUrl;
 
         public Builder() {
     	      // Empty
@@ -125,53 +125,53 @@ public final class AppEngineHttpRequestArgs extends io.pulumi.resources.Resource
     	      this.relativeUrl = defaults.relativeUrl;
         }
 
-        public Builder appEngineRouting(@Nullable Input<AppEngineRoutingArgs> appEngineRouting) {
+        public Builder appEngineRouting(@Nullable Output<AppEngineRoutingArgs> appEngineRouting) {
             this.appEngineRouting = appEngineRouting;
             return this;
         }
 
         public Builder appEngineRouting(@Nullable AppEngineRoutingArgs appEngineRouting) {
-            this.appEngineRouting = Input.ofNullable(appEngineRouting);
+            this.appEngineRouting = Output.ofNullable(appEngineRouting);
             return this;
         }
 
-        public Builder headers(@Nullable Input<Map<String,String>> headers) {
+        public Builder headers(@Nullable Output<Map<String,String>> headers) {
             this.headers = headers;
             return this;
         }
 
         public Builder headers(@Nullable Map<String,String> headers) {
-            this.headers = Input.ofNullable(headers);
+            this.headers = Output.ofNullable(headers);
             return this;
         }
 
-        public Builder httpMethod(@Nullable Input<AppEngineHttpRequestHttpMethod> httpMethod) {
+        public Builder httpMethod(@Nullable Output<AppEngineHttpRequestHttpMethod> httpMethod) {
             this.httpMethod = httpMethod;
             return this;
         }
 
         public Builder httpMethod(@Nullable AppEngineHttpRequestHttpMethod httpMethod) {
-            this.httpMethod = Input.ofNullable(httpMethod);
+            this.httpMethod = Output.ofNullable(httpMethod);
             return this;
         }
 
-        public Builder payload(@Nullable Input<String> payload) {
+        public Builder payload(@Nullable Output<String> payload) {
             this.payload = payload;
             return this;
         }
 
         public Builder payload(@Nullable String payload) {
-            this.payload = Input.ofNullable(payload);
+            this.payload = Output.ofNullable(payload);
             return this;
         }
 
-        public Builder relativeUrl(@Nullable Input<String> relativeUrl) {
+        public Builder relativeUrl(@Nullable Output<String> relativeUrl) {
             this.relativeUrl = relativeUrl;
             return this;
         }
 
         public Builder relativeUrl(@Nullable String relativeUrl) {
-            this.relativeUrl = Input.ofNullable(relativeUrl);
+            this.relativeUrl = Output.ofNullable(relativeUrl);
             return this;
         }
         public AppEngineHttpRequestArgs build() {

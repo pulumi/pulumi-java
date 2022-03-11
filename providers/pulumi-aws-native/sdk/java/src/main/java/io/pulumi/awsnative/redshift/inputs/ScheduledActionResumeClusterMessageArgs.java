@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.redshift.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class ScheduledActionResumeClusterMessageArgs extends io.pulumi.res
     public static final ScheduledActionResumeClusterMessageArgs Empty = new ScheduledActionResumeClusterMessageArgs();
 
     @InputImport(name="clusterIdentifier", required=true)
-      private final Input<String> clusterIdentifier;
+      private final Output<String> clusterIdentifier;
 
-    public Input<String> getClusterIdentifier() {
+    public Output<String> getClusterIdentifier() {
         return this.clusterIdentifier;
     }
 
-    public ScheduledActionResumeClusterMessageArgs(Input<String> clusterIdentifier) {
+    public ScheduledActionResumeClusterMessageArgs(Output<String> clusterIdentifier) {
         this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier, "expected parameter 'clusterIdentifier' to be non-null");
     }
 
     private ScheduledActionResumeClusterMessageArgs() {
-        this.clusterIdentifier = Input.empty();
+        this.clusterIdentifier = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ScheduledActionResumeClusterMessageArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private Input<String> clusterIdentifier;
+        private Output<String> clusterIdentifier;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ScheduledActionResumeClusterMessageArgs extends io.pulumi.res
     	      this.clusterIdentifier = defaults.clusterIdentifier;
         }
 
-        public Builder clusterIdentifier(Input<String> clusterIdentifier) {
+        public Builder clusterIdentifier(Output<String> clusterIdentifier) {
             this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
             return this;
         }
 
         public Builder clusterIdentifier(String clusterIdentifier) {
-            this.clusterIdentifier = Input.of(Objects.requireNonNull(clusterIdentifier));
+            this.clusterIdentifier = Output.of(Objects.requireNonNull(clusterIdentifier));
             return this;
         }
         public ScheduledActionResumeClusterMessageArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apigateway.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class DomainNameMutualTlsAuthenticationGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="truststoreUri", required=true)
-      private final Input<String> truststoreUri;
+      private final Output<String> truststoreUri;
 
-    public Input<String> getTruststoreUri() {
+    public Output<String> getTruststoreUri() {
         return this.truststoreUri;
     }
 
@@ -31,22 +31,22 @@ public final class DomainNameMutualTlsAuthenticationGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="truststoreVersion")
-      private final @Nullable Input<String> truststoreVersion;
+      private final @Nullable Output<String> truststoreVersion;
 
-    public Input<String> getTruststoreVersion() {
-        return this.truststoreVersion == null ? Input.empty() : this.truststoreVersion;
+    public Output<String> getTruststoreVersion() {
+        return this.truststoreVersion == null ? Output.empty() : this.truststoreVersion;
     }
 
     public DomainNameMutualTlsAuthenticationGetArgs(
-        Input<String> truststoreUri,
-        @Nullable Input<String> truststoreVersion) {
+        Output<String> truststoreUri,
+        @Nullable Output<String> truststoreVersion) {
         this.truststoreUri = Objects.requireNonNull(truststoreUri, "expected parameter 'truststoreUri' to be non-null");
         this.truststoreVersion = truststoreVersion;
     }
 
     private DomainNameMutualTlsAuthenticationGetArgs() {
-        this.truststoreUri = Input.empty();
-        this.truststoreVersion = Input.empty();
+        this.truststoreUri = Output.empty();
+        this.truststoreVersion = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class DomainNameMutualTlsAuthenticationGetArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private Input<String> truststoreUri;
-        private @Nullable Input<String> truststoreVersion;
+        private Output<String> truststoreUri;
+        private @Nullable Output<String> truststoreVersion;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class DomainNameMutualTlsAuthenticationGetArgs extends io.pulumi.re
     	      this.truststoreVersion = defaults.truststoreVersion;
         }
 
-        public Builder truststoreUri(Input<String> truststoreUri) {
+        public Builder truststoreUri(Output<String> truststoreUri) {
             this.truststoreUri = Objects.requireNonNull(truststoreUri);
             return this;
         }
 
         public Builder truststoreUri(String truststoreUri) {
-            this.truststoreUri = Input.of(Objects.requireNonNull(truststoreUri));
+            this.truststoreUri = Output.of(Objects.requireNonNull(truststoreUri));
             return this;
         }
 
-        public Builder truststoreVersion(@Nullable Input<String> truststoreVersion) {
+        public Builder truststoreVersion(@Nullable Output<String> truststoreVersion) {
             this.truststoreVersion = truststoreVersion;
             return this;
         }
 
         public Builder truststoreVersion(@Nullable String truststoreVersion) {
-            this.truststoreVersion = Input.ofNullable(truststoreVersion);
+            this.truststoreVersion = Output.ofNullable(truststoreVersion);
             return this;
         }
         public DomainNameMutualTlsAuthenticationGetArgs build() {

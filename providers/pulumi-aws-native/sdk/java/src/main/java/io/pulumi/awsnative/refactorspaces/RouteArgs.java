@@ -6,7 +6,7 @@ package io.pulumi.awsnative.refactorspaces;
 import io.pulumi.awsnative.refactorspaces.enums.RouteType;
 import io.pulumi.awsnative.refactorspaces.inputs.RouteTagArgs;
 import io.pulumi.awsnative.refactorspaces.inputs.RouteUriPathRouteInputArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,30 +19,30 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     public static final RouteArgs Empty = new RouteArgs();
 
     @InputImport(name="applicationIdentifier", required=true)
-      private final Input<String> applicationIdentifier;
+      private final Output<String> applicationIdentifier;
 
-    public Input<String> getApplicationIdentifier() {
+    public Output<String> getApplicationIdentifier() {
         return this.applicationIdentifier;
     }
 
     @InputImport(name="environmentIdentifier", required=true)
-      private final Input<String> environmentIdentifier;
+      private final Output<String> environmentIdentifier;
 
-    public Input<String> getEnvironmentIdentifier() {
+    public Output<String> getEnvironmentIdentifier() {
         return this.environmentIdentifier;
     }
 
     @InputImport(name="routeType")
-      private final @Nullable Input<RouteType> routeType;
+      private final @Nullable Output<RouteType> routeType;
 
-    public Input<RouteType> getRouteType() {
-        return this.routeType == null ? Input.empty() : this.routeType;
+    public Output<RouteType> getRouteType() {
+        return this.routeType == null ? Output.empty() : this.routeType;
     }
 
     @InputImport(name="serviceIdentifier", required=true)
-      private final Input<String> serviceIdentifier;
+      private final Output<String> serviceIdentifier;
 
-    public Input<String> getServiceIdentifier() {
+    public Output<String> getServiceIdentifier() {
         return this.serviceIdentifier;
     }
 
@@ -51,26 +51,26 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<RouteTagArgs>> tags;
+      private final @Nullable Output<List<RouteTagArgs>> tags;
 
-    public Input<List<RouteTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<RouteTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     @InputImport(name="uriPathRoute")
-      private final @Nullable Input<RouteUriPathRouteInputArgs> uriPathRoute;
+      private final @Nullable Output<RouteUriPathRouteInputArgs> uriPathRoute;
 
-    public Input<RouteUriPathRouteInputArgs> getUriPathRoute() {
-        return this.uriPathRoute == null ? Input.empty() : this.uriPathRoute;
+    public Output<RouteUriPathRouteInputArgs> getUriPathRoute() {
+        return this.uriPathRoute == null ? Output.empty() : this.uriPathRoute;
     }
 
     public RouteArgs(
-        Input<String> applicationIdentifier,
-        Input<String> environmentIdentifier,
-        @Nullable Input<RouteType> routeType,
-        Input<String> serviceIdentifier,
-        @Nullable Input<List<RouteTagArgs>> tags,
-        @Nullable Input<RouteUriPathRouteInputArgs> uriPathRoute) {
+        Output<String> applicationIdentifier,
+        Output<String> environmentIdentifier,
+        @Nullable Output<RouteType> routeType,
+        Output<String> serviceIdentifier,
+        @Nullable Output<List<RouteTagArgs>> tags,
+        @Nullable Output<RouteUriPathRouteInputArgs> uriPathRoute) {
         this.applicationIdentifier = Objects.requireNonNull(applicationIdentifier, "expected parameter 'applicationIdentifier' to be non-null");
         this.environmentIdentifier = Objects.requireNonNull(environmentIdentifier, "expected parameter 'environmentIdentifier' to be non-null");
         this.routeType = routeType;
@@ -80,12 +80,12 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RouteArgs() {
-        this.applicationIdentifier = Input.empty();
-        this.environmentIdentifier = Input.empty();
-        this.routeType = Input.empty();
-        this.serviceIdentifier = Input.empty();
-        this.tags = Input.empty();
-        this.uriPathRoute = Input.empty();
+        this.applicationIdentifier = Output.empty();
+        this.environmentIdentifier = Output.empty();
+        this.routeType = Output.empty();
+        this.serviceIdentifier = Output.empty();
+        this.tags = Output.empty();
+        this.uriPathRoute = Output.empty();
     }
 
     public static Builder builder() {
@@ -97,12 +97,12 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> applicationIdentifier;
-        private Input<String> environmentIdentifier;
-        private @Nullable Input<RouteType> routeType;
-        private Input<String> serviceIdentifier;
-        private @Nullable Input<List<RouteTagArgs>> tags;
-        private @Nullable Input<RouteUriPathRouteInputArgs> uriPathRoute;
+        private Output<String> applicationIdentifier;
+        private Output<String> environmentIdentifier;
+        private @Nullable Output<RouteType> routeType;
+        private Output<String> serviceIdentifier;
+        private @Nullable Output<List<RouteTagArgs>> tags;
+        private @Nullable Output<RouteUriPathRouteInputArgs> uriPathRoute;
 
         public Builder() {
     	      // Empty
@@ -118,63 +118,63 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uriPathRoute = defaults.uriPathRoute;
         }
 
-        public Builder applicationIdentifier(Input<String> applicationIdentifier) {
+        public Builder applicationIdentifier(Output<String> applicationIdentifier) {
             this.applicationIdentifier = Objects.requireNonNull(applicationIdentifier);
             return this;
         }
 
         public Builder applicationIdentifier(String applicationIdentifier) {
-            this.applicationIdentifier = Input.of(Objects.requireNonNull(applicationIdentifier));
+            this.applicationIdentifier = Output.of(Objects.requireNonNull(applicationIdentifier));
             return this;
         }
 
-        public Builder environmentIdentifier(Input<String> environmentIdentifier) {
+        public Builder environmentIdentifier(Output<String> environmentIdentifier) {
             this.environmentIdentifier = Objects.requireNonNull(environmentIdentifier);
             return this;
         }
 
         public Builder environmentIdentifier(String environmentIdentifier) {
-            this.environmentIdentifier = Input.of(Objects.requireNonNull(environmentIdentifier));
+            this.environmentIdentifier = Output.of(Objects.requireNonNull(environmentIdentifier));
             return this;
         }
 
-        public Builder routeType(@Nullable Input<RouteType> routeType) {
+        public Builder routeType(@Nullable Output<RouteType> routeType) {
             this.routeType = routeType;
             return this;
         }
 
         public Builder routeType(@Nullable RouteType routeType) {
-            this.routeType = Input.ofNullable(routeType);
+            this.routeType = Output.ofNullable(routeType);
             return this;
         }
 
-        public Builder serviceIdentifier(Input<String> serviceIdentifier) {
+        public Builder serviceIdentifier(Output<String> serviceIdentifier) {
             this.serviceIdentifier = Objects.requireNonNull(serviceIdentifier);
             return this;
         }
 
         public Builder serviceIdentifier(String serviceIdentifier) {
-            this.serviceIdentifier = Input.of(Objects.requireNonNull(serviceIdentifier));
+            this.serviceIdentifier = Output.of(Objects.requireNonNull(serviceIdentifier));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<RouteTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<RouteTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<RouteTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder uriPathRoute(@Nullable Input<RouteUriPathRouteInputArgs> uriPathRoute) {
+        public Builder uriPathRoute(@Nullable Output<RouteUriPathRouteInputArgs> uriPathRoute) {
             this.uriPathRoute = uriPathRoute;
             return this;
         }
 
         public Builder uriPathRoute(@Nullable RouteUriPathRouteInputArgs uriPathRoute) {
-            this.uriPathRoute = Input.ofNullable(uriPathRoute);
+            this.uriPathRoute = Output.ofNullable(uriPathRoute);
             return this;
         }
         public RouteArgs build() {

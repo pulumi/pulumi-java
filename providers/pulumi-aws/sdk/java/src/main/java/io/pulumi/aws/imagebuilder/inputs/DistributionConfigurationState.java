@@ -4,7 +4,7 @@
 package io.pulumi.aws.imagebuilder.inputs;
 
 import io.pulumi.aws.imagebuilder.inputs.DistributionConfigurationDistributionGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class DistributionConfigurationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class DistributionConfigurationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="dateCreated")
-      private final @Nullable Input<String> dateCreated;
+      private final @Nullable Output<String> dateCreated;
 
-    public Input<String> getDateCreated() {
-        return this.dateCreated == null ? Input.empty() : this.dateCreated;
+    public Output<String> getDateCreated() {
+        return this.dateCreated == null ? Output.empty() : this.dateCreated;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class DistributionConfigurationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="dateUpdated")
-      private final @Nullable Input<String> dateUpdated;
+      private final @Nullable Output<String> dateUpdated;
 
-    public Input<String> getDateUpdated() {
-        return this.dateUpdated == null ? Input.empty() : this.dateUpdated;
+    public Output<String> getDateUpdated() {
+        return this.dateUpdated == null ? Output.empty() : this.dateUpdated;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class DistributionConfigurationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class DistributionConfigurationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="distributions")
-      private final @Nullable Input<List<DistributionConfigurationDistributionGetArgs>> distributions;
+      private final @Nullable Output<List<DistributionConfigurationDistributionGetArgs>> distributions;
 
-    public Input<List<DistributionConfigurationDistributionGetArgs>> getDistributions() {
-        return this.distributions == null ? Input.empty() : this.distributions;
+    public Output<List<DistributionConfigurationDistributionGetArgs>> getDistributions() {
+        return this.distributions == null ? Output.empty() : this.distributions;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class DistributionConfigurationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class DistributionConfigurationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -99,21 +99,21 @@ public final class DistributionConfigurationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public DistributionConfigurationState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> dateCreated,
-        @Nullable Input<String> dateUpdated,
-        @Nullable Input<String> description,
-        @Nullable Input<List<DistributionConfigurationDistributionGetArgs>> distributions,
-        @Nullable Input<String> name,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> dateCreated,
+        @Nullable Output<String> dateUpdated,
+        @Nullable Output<String> description,
+        @Nullable Output<List<DistributionConfigurationDistributionGetArgs>> distributions,
+        @Nullable Output<String> name,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
         this.dateCreated = dateCreated;
         this.dateUpdated = dateUpdated;
@@ -125,14 +125,14 @@ public final class DistributionConfigurationState extends io.pulumi.resources.Re
     }
 
     private DistributionConfigurationState() {
-        this.arn = Input.empty();
-        this.dateCreated = Input.empty();
-        this.dateUpdated = Input.empty();
-        this.description = Input.empty();
-        this.distributions = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.arn = Output.empty();
+        this.dateCreated = Output.empty();
+        this.dateUpdated = Output.empty();
+        this.description = Output.empty();
+        this.distributions = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -144,14 +144,14 @@ public final class DistributionConfigurationState extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> dateCreated;
-        private @Nullable Input<String> dateUpdated;
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<DistributionConfigurationDistributionGetArgs>> distributions;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> dateCreated;
+        private @Nullable Output<String> dateUpdated;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<DistributionConfigurationDistributionGetArgs>> distributions;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -169,83 +169,83 @@ public final class DistributionConfigurationState extends io.pulumi.resources.Re
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder dateCreated(@Nullable Input<String> dateCreated) {
+        public Builder dateCreated(@Nullable Output<String> dateCreated) {
             this.dateCreated = dateCreated;
             return this;
         }
 
         public Builder dateCreated(@Nullable String dateCreated) {
-            this.dateCreated = Input.ofNullable(dateCreated);
+            this.dateCreated = Output.ofNullable(dateCreated);
             return this;
         }
 
-        public Builder dateUpdated(@Nullable Input<String> dateUpdated) {
+        public Builder dateUpdated(@Nullable Output<String> dateUpdated) {
             this.dateUpdated = dateUpdated;
             return this;
         }
 
         public Builder dateUpdated(@Nullable String dateUpdated) {
-            this.dateUpdated = Input.ofNullable(dateUpdated);
+            this.dateUpdated = Output.ofNullable(dateUpdated);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder distributions(@Nullable Input<List<DistributionConfigurationDistributionGetArgs>> distributions) {
+        public Builder distributions(@Nullable Output<List<DistributionConfigurationDistributionGetArgs>> distributions) {
             this.distributions = distributions;
             return this;
         }
 
         public Builder distributions(@Nullable List<DistributionConfigurationDistributionGetArgs> distributions) {
-            this.distributions = Input.ofNullable(distributions);
+            this.distributions = Output.ofNullable(distributions);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public DistributionConfigurationState build() {

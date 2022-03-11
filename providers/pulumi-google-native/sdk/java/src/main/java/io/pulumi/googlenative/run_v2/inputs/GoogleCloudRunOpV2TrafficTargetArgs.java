@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v2.enums.GoogleCloudRunOpV2TrafficTargetType;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class GoogleCloudRunOpV2TrafficTargetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="percent")
-      private final @Nullable Input<Integer> percent;
+      private final @Nullable Output<Integer> percent;
 
-    public Input<Integer> getPercent() {
-        return this.percent == null ? Input.empty() : this.percent;
+    public Output<Integer> getPercent() {
+        return this.percent == null ? Output.empty() : this.percent;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GoogleCloudRunOpV2TrafficTargetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="revision")
-      private final @Nullable Input<String> revision;
+      private final @Nullable Output<String> revision;
 
-    public Input<String> getRevision() {
-        return this.revision == null ? Input.empty() : this.revision;
+    public Output<String> getRevision() {
+        return this.revision == null ? Output.empty() : this.revision;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class GoogleCloudRunOpV2TrafficTargetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="tag")
-      private final @Nullable Input<String> tag;
+      private final @Nullable Output<String> tag;
 
-    public Input<String> getTag() {
-        return this.tag == null ? Input.empty() : this.tag;
+    public Output<String> getTag() {
+        return this.tag == null ? Output.empty() : this.tag;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class GoogleCloudRunOpV2TrafficTargetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<GoogleCloudRunOpV2TrafficTargetType> type;
+      private final @Nullable Output<GoogleCloudRunOpV2TrafficTargetType> type;
 
-    public Input<GoogleCloudRunOpV2TrafficTargetType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<GoogleCloudRunOpV2TrafficTargetType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public GoogleCloudRunOpV2TrafficTargetArgs(
-        @Nullable Input<Integer> percent,
-        @Nullable Input<String> revision,
-        @Nullable Input<String> tag,
-        @Nullable Input<GoogleCloudRunOpV2TrafficTargetType> type) {
+        @Nullable Output<Integer> percent,
+        @Nullable Output<String> revision,
+        @Nullable Output<String> tag,
+        @Nullable Output<GoogleCloudRunOpV2TrafficTargetType> type) {
         this.percent = percent;
         this.revision = revision;
         this.tag = tag;
@@ -76,10 +76,10 @@ public final class GoogleCloudRunOpV2TrafficTargetArgs extends io.pulumi.resourc
     }
 
     private GoogleCloudRunOpV2TrafficTargetArgs() {
-        this.percent = Input.empty();
-        this.revision = Input.empty();
-        this.tag = Input.empty();
-        this.type = Input.empty();
+        this.percent = Output.empty();
+        this.revision = Output.empty();
+        this.tag = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class GoogleCloudRunOpV2TrafficTargetArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> percent;
-        private @Nullable Input<String> revision;
-        private @Nullable Input<String> tag;
-        private @Nullable Input<GoogleCloudRunOpV2TrafficTargetType> type;
+        private @Nullable Output<Integer> percent;
+        private @Nullable Output<String> revision;
+        private @Nullable Output<String> tag;
+        private @Nullable Output<GoogleCloudRunOpV2TrafficTargetType> type;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class GoogleCloudRunOpV2TrafficTargetArgs extends io.pulumi.resourc
     	      this.type = defaults.type;
         }
 
-        public Builder percent(@Nullable Input<Integer> percent) {
+        public Builder percent(@Nullable Output<Integer> percent) {
             this.percent = percent;
             return this;
         }
 
         public Builder percent(@Nullable Integer percent) {
-            this.percent = Input.ofNullable(percent);
+            this.percent = Output.ofNullable(percent);
             return this;
         }
 
-        public Builder revision(@Nullable Input<String> revision) {
+        public Builder revision(@Nullable Output<String> revision) {
             this.revision = revision;
             return this;
         }
 
         public Builder revision(@Nullable String revision) {
-            this.revision = Input.ofNullable(revision);
+            this.revision = Output.ofNullable(revision);
             return this;
         }
 
-        public Builder tag(@Nullable Input<String> tag) {
+        public Builder tag(@Nullable Output<String> tag) {
             this.tag = tag;
             return this;
         }
 
         public Builder tag(@Nullable String tag) {
-            this.tag = Input.ofNullable(tag);
+            this.tag = Output.ofNullable(tag);
             return this;
         }
 
-        public Builder type(@Nullable Input<GoogleCloudRunOpV2TrafficTargetType> type) {
+        public Builder type(@Nullable Output<GoogleCloudRunOpV2TrafficTargetType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable GoogleCloudRunOpV2TrafficTargetType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public GoogleCloudRunOpV2TrafficTargetArgs build() {

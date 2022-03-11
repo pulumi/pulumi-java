@@ -4,7 +4,7 @@
 package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.aws.ses.inputs.ConfgurationSetDeliveryOptionsGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class ConfgurationSetState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ConfgurationSetState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="deliveryOptions")
-      private final @Nullable Input<ConfgurationSetDeliveryOptionsGetArgs> deliveryOptions;
+      private final @Nullable Output<ConfgurationSetDeliveryOptionsGetArgs> deliveryOptions;
 
-    public Input<ConfgurationSetDeliveryOptionsGetArgs> getDeliveryOptions() {
-        return this.deliveryOptions == null ? Input.empty() : this.deliveryOptions;
+    public Output<ConfgurationSetDeliveryOptionsGetArgs> getDeliveryOptions() {
+        return this.deliveryOptions == null ? Output.empty() : this.deliveryOptions;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ConfgurationSetState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="lastFreshStart")
-      private final @Nullable Input<String> lastFreshStart;
+      private final @Nullable Output<String> lastFreshStart;
 
-    public Input<String> getLastFreshStart() {
-        return this.lastFreshStart == null ? Input.empty() : this.lastFreshStart;
+    public Output<String> getLastFreshStart() {
+        return this.lastFreshStart == null ? Output.empty() : this.lastFreshStart;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ConfgurationSetState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ConfgurationSetState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="reputationMetricsEnabled")
-      private final @Nullable Input<Boolean> reputationMetricsEnabled;
+      private final @Nullable Output<Boolean> reputationMetricsEnabled;
 
-    public Input<Boolean> getReputationMetricsEnabled() {
-        return this.reputationMetricsEnabled == null ? Input.empty() : this.reputationMetricsEnabled;
+    public Output<Boolean> getReputationMetricsEnabled() {
+        return this.reputationMetricsEnabled == null ? Output.empty() : this.reputationMetricsEnabled;
     }
 
     /**
@@ -76,19 +76,19 @@ public final class ConfgurationSetState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sendingEnabled")
-      private final @Nullable Input<Boolean> sendingEnabled;
+      private final @Nullable Output<Boolean> sendingEnabled;
 
-    public Input<Boolean> getSendingEnabled() {
-        return this.sendingEnabled == null ? Input.empty() : this.sendingEnabled;
+    public Output<Boolean> getSendingEnabled() {
+        return this.sendingEnabled == null ? Output.empty() : this.sendingEnabled;
     }
 
     public ConfgurationSetState(
-        @Nullable Input<String> arn,
-        @Nullable Input<ConfgurationSetDeliveryOptionsGetArgs> deliveryOptions,
-        @Nullable Input<String> lastFreshStart,
-        @Nullable Input<String> name,
-        @Nullable Input<Boolean> reputationMetricsEnabled,
-        @Nullable Input<Boolean> sendingEnabled) {
+        @Nullable Output<String> arn,
+        @Nullable Output<ConfgurationSetDeliveryOptionsGetArgs> deliveryOptions,
+        @Nullable Output<String> lastFreshStart,
+        @Nullable Output<String> name,
+        @Nullable Output<Boolean> reputationMetricsEnabled,
+        @Nullable Output<Boolean> sendingEnabled) {
         this.arn = arn;
         this.deliveryOptions = deliveryOptions;
         this.lastFreshStart = lastFreshStart;
@@ -98,12 +98,12 @@ public final class ConfgurationSetState extends io.pulumi.resources.ResourceArgs
     }
 
     private ConfgurationSetState() {
-        this.arn = Input.empty();
-        this.deliveryOptions = Input.empty();
-        this.lastFreshStart = Input.empty();
-        this.name = Input.empty();
-        this.reputationMetricsEnabled = Input.empty();
-        this.sendingEnabled = Input.empty();
+        this.arn = Output.empty();
+        this.deliveryOptions = Output.empty();
+        this.lastFreshStart = Output.empty();
+        this.name = Output.empty();
+        this.reputationMetricsEnabled = Output.empty();
+        this.sendingEnabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class ConfgurationSetState extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<ConfgurationSetDeliveryOptionsGetArgs> deliveryOptions;
-        private @Nullable Input<String> lastFreshStart;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Boolean> reputationMetricsEnabled;
-        private @Nullable Input<Boolean> sendingEnabled;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<ConfgurationSetDeliveryOptionsGetArgs> deliveryOptions;
+        private @Nullable Output<String> lastFreshStart;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Boolean> reputationMetricsEnabled;
+        private @Nullable Output<Boolean> sendingEnabled;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class ConfgurationSetState extends io.pulumi.resources.ResourceArgs
     	      this.sendingEnabled = defaults.sendingEnabled;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder deliveryOptions(@Nullable Input<ConfgurationSetDeliveryOptionsGetArgs> deliveryOptions) {
+        public Builder deliveryOptions(@Nullable Output<ConfgurationSetDeliveryOptionsGetArgs> deliveryOptions) {
             this.deliveryOptions = deliveryOptions;
             return this;
         }
 
         public Builder deliveryOptions(@Nullable ConfgurationSetDeliveryOptionsGetArgs deliveryOptions) {
-            this.deliveryOptions = Input.ofNullable(deliveryOptions);
+            this.deliveryOptions = Output.ofNullable(deliveryOptions);
             return this;
         }
 
-        public Builder lastFreshStart(@Nullable Input<String> lastFreshStart) {
+        public Builder lastFreshStart(@Nullable Output<String> lastFreshStart) {
             this.lastFreshStart = lastFreshStart;
             return this;
         }
 
         public Builder lastFreshStart(@Nullable String lastFreshStart) {
-            this.lastFreshStart = Input.ofNullable(lastFreshStart);
+            this.lastFreshStart = Output.ofNullable(lastFreshStart);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder reputationMetricsEnabled(@Nullable Input<Boolean> reputationMetricsEnabled) {
+        public Builder reputationMetricsEnabled(@Nullable Output<Boolean> reputationMetricsEnabled) {
             this.reputationMetricsEnabled = reputationMetricsEnabled;
             return this;
         }
 
         public Builder reputationMetricsEnabled(@Nullable Boolean reputationMetricsEnabled) {
-            this.reputationMetricsEnabled = Input.ofNullable(reputationMetricsEnabled);
+            this.reputationMetricsEnabled = Output.ofNullable(reputationMetricsEnabled);
             return this;
         }
 
-        public Builder sendingEnabled(@Nullable Input<Boolean> sendingEnabled) {
+        public Builder sendingEnabled(@Nullable Output<Boolean> sendingEnabled) {
             this.sendingEnabled = sendingEnabled;
             return this;
         }
 
         public Builder sendingEnabled(@Nullable Boolean sendingEnabled) {
-            this.sendingEnabled = Input.ofNullable(sendingEnabled);
+            this.sendingEnabled = Output.ofNullable(sendingEnabled);
             return this;
         }
         public ConfgurationSetState build() {

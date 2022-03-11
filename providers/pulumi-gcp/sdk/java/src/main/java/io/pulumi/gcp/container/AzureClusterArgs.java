@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.container.inputs.AzureClusterAuthorizationArgs;
 import io.pulumi.gcp.container.inputs.AzureClusterControlPlaneArgs;
@@ -24,10 +24,10 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="annotations")
-      private final @Nullable Input<Map<String,String>> annotations;
+      private final @Nullable Output<Map<String,String>> annotations;
 
-    public Input<Map<String,String>> getAnnotations() {
-        return this.annotations == null ? Input.empty() : this.annotations;
+    public Output<Map<String,String>> getAnnotations() {
+        return this.annotations == null ? Output.empty() : this.annotations;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorization", required=true)
-      private final Input<AzureClusterAuthorizationArgs> authorization;
+      private final Output<AzureClusterAuthorizationArgs> authorization;
 
-    public Input<AzureClusterAuthorizationArgs> getAuthorization() {
+    public Output<AzureClusterAuthorizationArgs> getAuthorization() {
         return this.authorization;
     }
 
@@ -46,9 +46,9 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="azureRegion", required=true)
-      private final Input<String> azureRegion;
+      private final Output<String> azureRegion;
 
-    public Input<String> getAzureRegion() {
+    public Output<String> getAzureRegion() {
         return this.azureRegion;
     }
 
@@ -57,9 +57,9 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="client", required=true)
-      private final Input<String> client;
+      private final Output<String> client;
 
-    public Input<String> getClient() {
+    public Output<String> getClient() {
         return this.client;
     }
 
@@ -68,9 +68,9 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="controlPlane", required=true)
-      private final Input<AzureClusterControlPlaneArgs> controlPlane;
+      private final Output<AzureClusterControlPlaneArgs> controlPlane;
 
-    public Input<AzureClusterControlPlaneArgs> getControlPlane() {
+    public Output<AzureClusterControlPlaneArgs> getControlPlane() {
         return this.controlPlane;
     }
 
@@ -79,10 +79,10 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -90,9 +90,9 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fleet", required=true)
-      private final Input<AzureClusterFleetArgs> fleet;
+      private final Output<AzureClusterFleetArgs> fleet;
 
-    public Input<AzureClusterFleetArgs> getFleet() {
+    public Output<AzureClusterFleetArgs> getFleet() {
         return this.fleet;
     }
 
@@ -101,9 +101,9 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location", required=true)
-      private final Input<String> location;
+      private final Output<String> location;
 
-    public Input<String> getLocation() {
+    public Output<String> getLocation() {
         return this.location;
     }
 
@@ -112,10 +112,10 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -123,9 +123,9 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networking", required=true)
-      private final Input<AzureClusterNetworkingArgs> networking;
+      private final Output<AzureClusterNetworkingArgs> networking;
 
-    public Input<AzureClusterNetworkingArgs> getNetworking() {
+    public Output<AzureClusterNetworkingArgs> getNetworking() {
         return this.networking;
     }
 
@@ -134,10 +134,10 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -145,25 +145,25 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupId", required=true)
-      private final Input<String> resourceGroupId;
+      private final Output<String> resourceGroupId;
 
-    public Input<String> getResourceGroupId() {
+    public Output<String> getResourceGroupId() {
         return this.resourceGroupId;
     }
 
     public AzureClusterArgs(
-        @Nullable Input<Map<String,String>> annotations,
-        Input<AzureClusterAuthorizationArgs> authorization,
-        Input<String> azureRegion,
-        Input<String> client,
-        Input<AzureClusterControlPlaneArgs> controlPlane,
-        @Nullable Input<String> description,
-        Input<AzureClusterFleetArgs> fleet,
-        Input<String> location,
-        @Nullable Input<String> name,
-        Input<AzureClusterNetworkingArgs> networking,
-        @Nullable Input<String> project,
-        Input<String> resourceGroupId) {
+        @Nullable Output<Map<String,String>> annotations,
+        Output<AzureClusterAuthorizationArgs> authorization,
+        Output<String> azureRegion,
+        Output<String> client,
+        Output<AzureClusterControlPlaneArgs> controlPlane,
+        @Nullable Output<String> description,
+        Output<AzureClusterFleetArgs> fleet,
+        Output<String> location,
+        @Nullable Output<String> name,
+        Output<AzureClusterNetworkingArgs> networking,
+        @Nullable Output<String> project,
+        Output<String> resourceGroupId) {
         this.annotations = annotations;
         this.authorization = Objects.requireNonNull(authorization, "expected parameter 'authorization' to be non-null");
         this.azureRegion = Objects.requireNonNull(azureRegion, "expected parameter 'azureRegion' to be non-null");
@@ -179,18 +179,18 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AzureClusterArgs() {
-        this.annotations = Input.empty();
-        this.authorization = Input.empty();
-        this.azureRegion = Input.empty();
-        this.client = Input.empty();
-        this.controlPlane = Input.empty();
-        this.description = Input.empty();
-        this.fleet = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.networking = Input.empty();
-        this.project = Input.empty();
-        this.resourceGroupId = Input.empty();
+        this.annotations = Output.empty();
+        this.authorization = Output.empty();
+        this.azureRegion = Output.empty();
+        this.client = Output.empty();
+        this.controlPlane = Output.empty();
+        this.description = Output.empty();
+        this.fleet = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.networking = Output.empty();
+        this.project = Output.empty();
+        this.resourceGroupId = Output.empty();
     }
 
     public static Builder builder() {
@@ -202,18 +202,18 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> annotations;
-        private Input<AzureClusterAuthorizationArgs> authorization;
-        private Input<String> azureRegion;
-        private Input<String> client;
-        private Input<AzureClusterControlPlaneArgs> controlPlane;
-        private @Nullable Input<String> description;
-        private Input<AzureClusterFleetArgs> fleet;
-        private Input<String> location;
-        private @Nullable Input<String> name;
-        private Input<AzureClusterNetworkingArgs> networking;
-        private @Nullable Input<String> project;
-        private Input<String> resourceGroupId;
+        private @Nullable Output<Map<String,String>> annotations;
+        private Output<AzureClusterAuthorizationArgs> authorization;
+        private Output<String> azureRegion;
+        private Output<String> client;
+        private Output<AzureClusterControlPlaneArgs> controlPlane;
+        private @Nullable Output<String> description;
+        private Output<AzureClusterFleetArgs> fleet;
+        private Output<String> location;
+        private @Nullable Output<String> name;
+        private Output<AzureClusterNetworkingArgs> networking;
+        private @Nullable Output<String> project;
+        private Output<String> resourceGroupId;
 
         public Builder() {
     	      // Empty
@@ -235,123 +235,123 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupId = defaults.resourceGroupId;
         }
 
-        public Builder annotations(@Nullable Input<Map<String,String>> annotations) {
+        public Builder annotations(@Nullable Output<Map<String,String>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
         public Builder annotations(@Nullable Map<String,String> annotations) {
-            this.annotations = Input.ofNullable(annotations);
+            this.annotations = Output.ofNullable(annotations);
             return this;
         }
 
-        public Builder authorization(Input<AzureClusterAuthorizationArgs> authorization) {
+        public Builder authorization(Output<AzureClusterAuthorizationArgs> authorization) {
             this.authorization = Objects.requireNonNull(authorization);
             return this;
         }
 
         public Builder authorization(AzureClusterAuthorizationArgs authorization) {
-            this.authorization = Input.of(Objects.requireNonNull(authorization));
+            this.authorization = Output.of(Objects.requireNonNull(authorization));
             return this;
         }
 
-        public Builder azureRegion(Input<String> azureRegion) {
+        public Builder azureRegion(Output<String> azureRegion) {
             this.azureRegion = Objects.requireNonNull(azureRegion);
             return this;
         }
 
         public Builder azureRegion(String azureRegion) {
-            this.azureRegion = Input.of(Objects.requireNonNull(azureRegion));
+            this.azureRegion = Output.of(Objects.requireNonNull(azureRegion));
             return this;
         }
 
-        public Builder client(Input<String> client) {
+        public Builder client(Output<String> client) {
             this.client = Objects.requireNonNull(client);
             return this;
         }
 
         public Builder client(String client) {
-            this.client = Input.of(Objects.requireNonNull(client));
+            this.client = Output.of(Objects.requireNonNull(client));
             return this;
         }
 
-        public Builder controlPlane(Input<AzureClusterControlPlaneArgs> controlPlane) {
+        public Builder controlPlane(Output<AzureClusterControlPlaneArgs> controlPlane) {
             this.controlPlane = Objects.requireNonNull(controlPlane);
             return this;
         }
 
         public Builder controlPlane(AzureClusterControlPlaneArgs controlPlane) {
-            this.controlPlane = Input.of(Objects.requireNonNull(controlPlane));
+            this.controlPlane = Output.of(Objects.requireNonNull(controlPlane));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder fleet(Input<AzureClusterFleetArgs> fleet) {
+        public Builder fleet(Output<AzureClusterFleetArgs> fleet) {
             this.fleet = Objects.requireNonNull(fleet);
             return this;
         }
 
         public Builder fleet(AzureClusterFleetArgs fleet) {
-            this.fleet = Input.of(Objects.requireNonNull(fleet));
+            this.fleet = Output.of(Objects.requireNonNull(fleet));
             return this;
         }
 
-        public Builder location(Input<String> location) {
+        public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
         public Builder location(String location) {
-            this.location = Input.of(Objects.requireNonNull(location));
+            this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder networking(Input<AzureClusterNetworkingArgs> networking) {
+        public Builder networking(Output<AzureClusterNetworkingArgs> networking) {
             this.networking = Objects.requireNonNull(networking);
             return this;
         }
 
         public Builder networking(AzureClusterNetworkingArgs networking) {
-            this.networking = Input.of(Objects.requireNonNull(networking));
+            this.networking = Output.of(Objects.requireNonNull(networking));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder resourceGroupId(Input<String> resourceGroupId) {
+        public Builder resourceGroupId(Output<String> resourceGroupId) {
             this.resourceGroupId = Objects.requireNonNull(resourceGroupId);
             return this;
         }
 
         public Builder resourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = Input.of(Objects.requireNonNull(resourceGroupId));
+            this.resourceGroupId = Output.of(Objects.requireNonNull(resourceGroupId));
             return this;
         }
         public AzureClusterArgs build() {

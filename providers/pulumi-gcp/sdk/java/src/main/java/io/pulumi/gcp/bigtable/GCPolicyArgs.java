@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigtable;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.bigtable.inputs.GCPolicyMaxAgeArgs;
 import io.pulumi.gcp.bigtable.inputs.GCPolicyMaxVersionArgs;
@@ -22,9 +22,9 @@ public final class GCPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="columnFamily", required=true)
-      private final Input<String> columnFamily;
+      private final Output<String> columnFamily;
 
-    public Input<String> getColumnFamily() {
+    public Output<String> getColumnFamily() {
         return this.columnFamily;
     }
 
@@ -33,9 +33,9 @@ public final class GCPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceName", required=true)
-      private final Input<String> instanceName;
+      private final Output<String> instanceName;
 
-    public Input<String> getInstanceName() {
+    public Output<String> getInstanceName() {
         return this.instanceName;
     }
 
@@ -44,10 +44,10 @@ public final class GCPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxAge")
-      private final @Nullable Input<GCPolicyMaxAgeArgs> maxAge;
+      private final @Nullable Output<GCPolicyMaxAgeArgs> maxAge;
 
-    public Input<GCPolicyMaxAgeArgs> getMaxAge() {
-        return this.maxAge == null ? Input.empty() : this.maxAge;
+    public Output<GCPolicyMaxAgeArgs> getMaxAge() {
+        return this.maxAge == null ? Output.empty() : this.maxAge;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class GCPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxVersions")
-      private final @Nullable Input<List<GCPolicyMaxVersionArgs>> maxVersions;
+      private final @Nullable Output<List<GCPolicyMaxVersionArgs>> maxVersions;
 
-    public Input<List<GCPolicyMaxVersionArgs>> getMaxVersions() {
-        return this.maxVersions == null ? Input.empty() : this.maxVersions;
+    public Output<List<GCPolicyMaxVersionArgs>> getMaxVersions() {
+        return this.maxVersions == null ? Output.empty() : this.maxVersions;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class GCPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mode")
-      private final @Nullable Input<String> mode;
+      private final @Nullable Output<String> mode;
 
-    public Input<String> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<String> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class GCPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -88,20 +88,20 @@ public final class GCPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="table", required=true)
-      private final Input<String> table;
+      private final Output<String> table;
 
-    public Input<String> getTable() {
+    public Output<String> getTable() {
         return this.table;
     }
 
     public GCPolicyArgs(
-        Input<String> columnFamily,
-        Input<String> instanceName,
-        @Nullable Input<GCPolicyMaxAgeArgs> maxAge,
-        @Nullable Input<List<GCPolicyMaxVersionArgs>> maxVersions,
-        @Nullable Input<String> mode,
-        @Nullable Input<String> project,
-        Input<String> table) {
+        Output<String> columnFamily,
+        Output<String> instanceName,
+        @Nullable Output<GCPolicyMaxAgeArgs> maxAge,
+        @Nullable Output<List<GCPolicyMaxVersionArgs>> maxVersions,
+        @Nullable Output<String> mode,
+        @Nullable Output<String> project,
+        Output<String> table) {
         this.columnFamily = Objects.requireNonNull(columnFamily, "expected parameter 'columnFamily' to be non-null");
         this.instanceName = Objects.requireNonNull(instanceName, "expected parameter 'instanceName' to be non-null");
         this.maxAge = maxAge;
@@ -112,13 +112,13 @@ public final class GCPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GCPolicyArgs() {
-        this.columnFamily = Input.empty();
-        this.instanceName = Input.empty();
-        this.maxAge = Input.empty();
-        this.maxVersions = Input.empty();
-        this.mode = Input.empty();
-        this.project = Input.empty();
-        this.table = Input.empty();
+        this.columnFamily = Output.empty();
+        this.instanceName = Output.empty();
+        this.maxAge = Output.empty();
+        this.maxVersions = Output.empty();
+        this.mode = Output.empty();
+        this.project = Output.empty();
+        this.table = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class GCPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> columnFamily;
-        private Input<String> instanceName;
-        private @Nullable Input<GCPolicyMaxAgeArgs> maxAge;
-        private @Nullable Input<List<GCPolicyMaxVersionArgs>> maxVersions;
-        private @Nullable Input<String> mode;
-        private @Nullable Input<String> project;
-        private Input<String> table;
+        private Output<String> columnFamily;
+        private Output<String> instanceName;
+        private @Nullable Output<GCPolicyMaxAgeArgs> maxAge;
+        private @Nullable Output<List<GCPolicyMaxVersionArgs>> maxVersions;
+        private @Nullable Output<String> mode;
+        private @Nullable Output<String> project;
+        private Output<String> table;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class GCPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.table = defaults.table;
         }
 
-        public Builder columnFamily(Input<String> columnFamily) {
+        public Builder columnFamily(Output<String> columnFamily) {
             this.columnFamily = Objects.requireNonNull(columnFamily);
             return this;
         }
 
         public Builder columnFamily(String columnFamily) {
-            this.columnFamily = Input.of(Objects.requireNonNull(columnFamily));
+            this.columnFamily = Output.of(Objects.requireNonNull(columnFamily));
             return this;
         }
 
-        public Builder instanceName(Input<String> instanceName) {
+        public Builder instanceName(Output<String> instanceName) {
             this.instanceName = Objects.requireNonNull(instanceName);
             return this;
         }
 
         public Builder instanceName(String instanceName) {
-            this.instanceName = Input.of(Objects.requireNonNull(instanceName));
+            this.instanceName = Output.of(Objects.requireNonNull(instanceName));
             return this;
         }
 
-        public Builder maxAge(@Nullable Input<GCPolicyMaxAgeArgs> maxAge) {
+        public Builder maxAge(@Nullable Output<GCPolicyMaxAgeArgs> maxAge) {
             this.maxAge = maxAge;
             return this;
         }
 
         public Builder maxAge(@Nullable GCPolicyMaxAgeArgs maxAge) {
-            this.maxAge = Input.ofNullable(maxAge);
+            this.maxAge = Output.ofNullable(maxAge);
             return this;
         }
 
-        public Builder maxVersions(@Nullable Input<List<GCPolicyMaxVersionArgs>> maxVersions) {
+        public Builder maxVersions(@Nullable Output<List<GCPolicyMaxVersionArgs>> maxVersions) {
             this.maxVersions = maxVersions;
             return this;
         }
 
         public Builder maxVersions(@Nullable List<GCPolicyMaxVersionArgs> maxVersions) {
-            this.maxVersions = Input.ofNullable(maxVersions);
+            this.maxVersions = Output.ofNullable(maxVersions);
             return this;
         }
 
-        public Builder mode(@Nullable Input<String> mode) {
+        public Builder mode(@Nullable Output<String> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable String mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder table(Input<String> table) {
+        public Builder table(Output<String> table) {
             this.table = Objects.requireNonNull(table);
             return this;
         }
 
         public Builder table(String table) {
-            this.table = Input.of(Objects.requireNonNull(table));
+            this.table = Output.of(Objects.requireNonNull(table));
             return this;
         }
         public GCPolicyArgs build() {

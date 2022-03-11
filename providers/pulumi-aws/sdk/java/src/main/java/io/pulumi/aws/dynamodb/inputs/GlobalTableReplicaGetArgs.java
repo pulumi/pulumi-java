@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.dynamodb.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class GlobalTableReplicaGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="regionName", required=true)
-      private final Input<String> regionName;
+      private final Output<String> regionName;
 
-    public Input<String> getRegionName() {
+    public Output<String> getRegionName() {
         return this.regionName;
     }
 
-    public GlobalTableReplicaGetArgs(Input<String> regionName) {
+    public GlobalTableReplicaGetArgs(Output<String> regionName) {
         this.regionName = Objects.requireNonNull(regionName, "expected parameter 'regionName' to be non-null");
     }
 
     private GlobalTableReplicaGetArgs() {
-        this.regionName = Input.empty();
+        this.regionName = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class GlobalTableReplicaGetArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<String> regionName;
+        private Output<String> regionName;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class GlobalTableReplicaGetArgs extends io.pulumi.resources.Resourc
     	      this.regionName = defaults.regionName;
         }
 
-        public Builder regionName(Input<String> regionName) {
+        public Builder regionName(Output<String> regionName) {
             this.regionName = Objects.requireNonNull(regionName);
             return this;
         }
 
         public Builder regionName(String regionName) {
-            this.regionName = Input.of(Objects.requireNonNull(regionName));
+            this.regionName = Output.of(Objects.requireNonNull(regionName));
             return this;
         }
         public GlobalTableReplicaGetArgs build() {

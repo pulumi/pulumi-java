@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudasset_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudasset_v1.inputs.IamPolicyAnalysisQueryArgs;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class QueryContentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iamPolicyAnalysisQuery")
-      private final @Nullable Input<IamPolicyAnalysisQueryArgs> iamPolicyAnalysisQuery;
+      private final @Nullable Output<IamPolicyAnalysisQueryArgs> iamPolicyAnalysisQuery;
 
-    public Input<IamPolicyAnalysisQueryArgs> getIamPolicyAnalysisQuery() {
-        return this.iamPolicyAnalysisQuery == null ? Input.empty() : this.iamPolicyAnalysisQuery;
+    public Output<IamPolicyAnalysisQueryArgs> getIamPolicyAnalysisQuery() {
+        return this.iamPolicyAnalysisQuery == null ? Output.empty() : this.iamPolicyAnalysisQuery;
     }
 
-    public QueryContentArgs(@Nullable Input<IamPolicyAnalysisQueryArgs> iamPolicyAnalysisQuery) {
+    public QueryContentArgs(@Nullable Output<IamPolicyAnalysisQueryArgs> iamPolicyAnalysisQuery) {
         this.iamPolicyAnalysisQuery = iamPolicyAnalysisQuery;
     }
 
     private QueryContentArgs() {
-        this.iamPolicyAnalysisQuery = Input.empty();
+        this.iamPolicyAnalysisQuery = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class QueryContentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<IamPolicyAnalysisQueryArgs> iamPolicyAnalysisQuery;
+        private @Nullable Output<IamPolicyAnalysisQueryArgs> iamPolicyAnalysisQuery;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class QueryContentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.iamPolicyAnalysisQuery = defaults.iamPolicyAnalysisQuery;
         }
 
-        public Builder iamPolicyAnalysisQuery(@Nullable Input<IamPolicyAnalysisQueryArgs> iamPolicyAnalysisQuery) {
+        public Builder iamPolicyAnalysisQuery(@Nullable Output<IamPolicyAnalysisQueryArgs> iamPolicyAnalysisQuery) {
             this.iamPolicyAnalysisQuery = iamPolicyAnalysisQuery;
             return this;
         }
 
         public Builder iamPolicyAnalysisQuery(@Nullable IamPolicyAnalysisQueryArgs iamPolicyAnalysisQuery) {
-            this.iamPolicyAnalysisQuery = Input.ofNullable(iamPolicyAnalysisQuery);
+            this.iamPolicyAnalysisQuery = Output.ofNullable(iamPolicyAnalysisQuery);
             return this;
         }
         public QueryContentArgs build() {

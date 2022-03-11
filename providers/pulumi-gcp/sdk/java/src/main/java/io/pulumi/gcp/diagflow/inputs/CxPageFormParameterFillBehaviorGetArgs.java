@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.diagflow.inputs.CxPageFormParameterFillBehaviorInitialPromptFulfillmentGetArgs;
 import java.util.Objects;
@@ -20,18 +20,18 @@ public final class CxPageFormParameterFillBehaviorGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="initialPromptFulfillment")
-      private final @Nullable Input<CxPageFormParameterFillBehaviorInitialPromptFulfillmentGetArgs> initialPromptFulfillment;
+      private final @Nullable Output<CxPageFormParameterFillBehaviorInitialPromptFulfillmentGetArgs> initialPromptFulfillment;
 
-    public Input<CxPageFormParameterFillBehaviorInitialPromptFulfillmentGetArgs> getInitialPromptFulfillment() {
-        return this.initialPromptFulfillment == null ? Input.empty() : this.initialPromptFulfillment;
+    public Output<CxPageFormParameterFillBehaviorInitialPromptFulfillmentGetArgs> getInitialPromptFulfillment() {
+        return this.initialPromptFulfillment == null ? Output.empty() : this.initialPromptFulfillment;
     }
 
-    public CxPageFormParameterFillBehaviorGetArgs(@Nullable Input<CxPageFormParameterFillBehaviorInitialPromptFulfillmentGetArgs> initialPromptFulfillment) {
+    public CxPageFormParameterFillBehaviorGetArgs(@Nullable Output<CxPageFormParameterFillBehaviorInitialPromptFulfillmentGetArgs> initialPromptFulfillment) {
         this.initialPromptFulfillment = initialPromptFulfillment;
     }
 
     private CxPageFormParameterFillBehaviorGetArgs() {
-        this.initialPromptFulfillment = Input.empty();
+        this.initialPromptFulfillment = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class CxPageFormParameterFillBehaviorGetArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<CxPageFormParameterFillBehaviorInitialPromptFulfillmentGetArgs> initialPromptFulfillment;
+        private @Nullable Output<CxPageFormParameterFillBehaviorInitialPromptFulfillmentGetArgs> initialPromptFulfillment;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class CxPageFormParameterFillBehaviorGetArgs extends io.pulumi.reso
     	      this.initialPromptFulfillment = defaults.initialPromptFulfillment;
         }
 
-        public Builder initialPromptFulfillment(@Nullable Input<CxPageFormParameterFillBehaviorInitialPromptFulfillmentGetArgs> initialPromptFulfillment) {
+        public Builder initialPromptFulfillment(@Nullable Output<CxPageFormParameterFillBehaviorInitialPromptFulfillmentGetArgs> initialPromptFulfillment) {
             this.initialPromptFulfillment = initialPromptFulfillment;
             return this;
         }
 
         public Builder initialPromptFulfillment(@Nullable CxPageFormParameterFillBehaviorInitialPromptFulfillmentGetArgs initialPromptFulfillment) {
-            this.initialPromptFulfillment = Input.ofNullable(initialPromptFulfillment);
+            this.initialPromptFulfillment = Output.ofNullable(initialPromptFulfillment);
             return this;
         }
         public CxPageFormParameterFillBehaviorGetArgs build() {

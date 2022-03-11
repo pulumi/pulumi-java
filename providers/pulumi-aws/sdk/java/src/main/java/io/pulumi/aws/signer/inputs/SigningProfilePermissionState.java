@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.signer.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class SigningProfilePermissionState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="action")
-      private final @Nullable Input<String> action;
+      private final @Nullable Output<String> action;
 
-    public Input<String> getAction() {
-        return this.action == null ? Input.empty() : this.action;
+    public Output<String> getAction() {
+        return this.action == null ? Output.empty() : this.action;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class SigningProfilePermissionState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="principal")
-      private final @Nullable Input<String> principal;
+      private final @Nullable Output<String> principal;
 
-    public Input<String> getPrincipal() {
-        return this.principal == null ? Input.empty() : this.principal;
+    public Output<String> getPrincipal() {
+        return this.principal == null ? Output.empty() : this.principal;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class SigningProfilePermissionState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="profileName")
-      private final @Nullable Input<String> profileName;
+      private final @Nullable Output<String> profileName;
 
-    public Input<String> getProfileName() {
-        return this.profileName == null ? Input.empty() : this.profileName;
+    public Output<String> getProfileName() {
+        return this.profileName == null ? Output.empty() : this.profileName;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class SigningProfilePermissionState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="profileVersion")
-      private final @Nullable Input<String> profileVersion;
+      private final @Nullable Output<String> profileVersion;
 
-    public Input<String> getProfileVersion() {
-        return this.profileVersion == null ? Input.empty() : this.profileVersion;
+    public Output<String> getProfileVersion() {
+        return this.profileVersion == null ? Output.empty() : this.profileVersion;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class SigningProfilePermissionState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="statementId")
-      private final @Nullable Input<String> statementId;
+      private final @Nullable Output<String> statementId;
 
-    public Input<String> getStatementId() {
-        return this.statementId == null ? Input.empty() : this.statementId;
+    public Output<String> getStatementId() {
+        return this.statementId == null ? Output.empty() : this.statementId;
     }
 
     /**
@@ -74,19 +74,19 @@ public final class SigningProfilePermissionState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="statementIdPrefix")
-      private final @Nullable Input<String> statementIdPrefix;
+      private final @Nullable Output<String> statementIdPrefix;
 
-    public Input<String> getStatementIdPrefix() {
-        return this.statementIdPrefix == null ? Input.empty() : this.statementIdPrefix;
+    public Output<String> getStatementIdPrefix() {
+        return this.statementIdPrefix == null ? Output.empty() : this.statementIdPrefix;
     }
 
     public SigningProfilePermissionState(
-        @Nullable Input<String> action,
-        @Nullable Input<String> principal,
-        @Nullable Input<String> profileName,
-        @Nullable Input<String> profileVersion,
-        @Nullable Input<String> statementId,
-        @Nullable Input<String> statementIdPrefix) {
+        @Nullable Output<String> action,
+        @Nullable Output<String> principal,
+        @Nullable Output<String> profileName,
+        @Nullable Output<String> profileVersion,
+        @Nullable Output<String> statementId,
+        @Nullable Output<String> statementIdPrefix) {
         this.action = action;
         this.principal = principal;
         this.profileName = profileName;
@@ -96,12 +96,12 @@ public final class SigningProfilePermissionState extends io.pulumi.resources.Res
     }
 
     private SigningProfilePermissionState() {
-        this.action = Input.empty();
-        this.principal = Input.empty();
-        this.profileName = Input.empty();
-        this.profileVersion = Input.empty();
-        this.statementId = Input.empty();
-        this.statementIdPrefix = Input.empty();
+        this.action = Output.empty();
+        this.principal = Output.empty();
+        this.profileName = Output.empty();
+        this.profileVersion = Output.empty();
+        this.statementId = Output.empty();
+        this.statementIdPrefix = Output.empty();
     }
 
     public static Builder builder() {
@@ -113,12 +113,12 @@ public final class SigningProfilePermissionState extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> action;
-        private @Nullable Input<String> principal;
-        private @Nullable Input<String> profileName;
-        private @Nullable Input<String> profileVersion;
-        private @Nullable Input<String> statementId;
-        private @Nullable Input<String> statementIdPrefix;
+        private @Nullable Output<String> action;
+        private @Nullable Output<String> principal;
+        private @Nullable Output<String> profileName;
+        private @Nullable Output<String> profileVersion;
+        private @Nullable Output<String> statementId;
+        private @Nullable Output<String> statementIdPrefix;
 
         public Builder() {
     	      // Empty
@@ -134,63 +134,63 @@ public final class SigningProfilePermissionState extends io.pulumi.resources.Res
     	      this.statementIdPrefix = defaults.statementIdPrefix;
         }
 
-        public Builder action(@Nullable Input<String> action) {
+        public Builder action(@Nullable Output<String> action) {
             this.action = action;
             return this;
         }
 
         public Builder action(@Nullable String action) {
-            this.action = Input.ofNullable(action);
+            this.action = Output.ofNullable(action);
             return this;
         }
 
-        public Builder principal(@Nullable Input<String> principal) {
+        public Builder principal(@Nullable Output<String> principal) {
             this.principal = principal;
             return this;
         }
 
         public Builder principal(@Nullable String principal) {
-            this.principal = Input.ofNullable(principal);
+            this.principal = Output.ofNullable(principal);
             return this;
         }
 
-        public Builder profileName(@Nullable Input<String> profileName) {
+        public Builder profileName(@Nullable Output<String> profileName) {
             this.profileName = profileName;
             return this;
         }
 
         public Builder profileName(@Nullable String profileName) {
-            this.profileName = Input.ofNullable(profileName);
+            this.profileName = Output.ofNullable(profileName);
             return this;
         }
 
-        public Builder profileVersion(@Nullable Input<String> profileVersion) {
+        public Builder profileVersion(@Nullable Output<String> profileVersion) {
             this.profileVersion = profileVersion;
             return this;
         }
 
         public Builder profileVersion(@Nullable String profileVersion) {
-            this.profileVersion = Input.ofNullable(profileVersion);
+            this.profileVersion = Output.ofNullable(profileVersion);
             return this;
         }
 
-        public Builder statementId(@Nullable Input<String> statementId) {
+        public Builder statementId(@Nullable Output<String> statementId) {
             this.statementId = statementId;
             return this;
         }
 
         public Builder statementId(@Nullable String statementId) {
-            this.statementId = Input.ofNullable(statementId);
+            this.statementId = Output.ofNullable(statementId);
             return this;
         }
 
-        public Builder statementIdPrefix(@Nullable Input<String> statementIdPrefix) {
+        public Builder statementIdPrefix(@Nullable Output<String> statementIdPrefix) {
             this.statementIdPrefix = statementIdPrefix;
             return this;
         }
 
         public Builder statementIdPrefix(@Nullable String statementIdPrefix) {
-            this.statementIdPrefix = Input.ofNullable(statementIdPrefix);
+            this.statementIdPrefix = Output.ofNullable(statementIdPrefix);
             return this;
         }
         public SigningProfilePermissionState build() {

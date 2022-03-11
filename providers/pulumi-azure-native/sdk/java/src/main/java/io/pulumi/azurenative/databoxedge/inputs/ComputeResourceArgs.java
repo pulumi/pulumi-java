@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
@@ -23,9 +23,9 @@ public final class ComputeResourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="memoryInGB", required=true)
-      private final Input<Double> memoryInGB;
+      private final Output<Double> memoryInGB;
 
-    public Input<Double> getMemoryInGB() {
+    public Output<Double> getMemoryInGB() {
         return this.memoryInGB;
     }
 
@@ -34,22 +34,22 @@ public final class ComputeResourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="processorCount", required=true)
-      private final Input<Integer> processorCount;
+      private final Output<Integer> processorCount;
 
-    public Input<Integer> getProcessorCount() {
+    public Output<Integer> getProcessorCount() {
         return this.processorCount;
     }
 
     public ComputeResourceArgs(
-        Input<Double> memoryInGB,
-        Input<Integer> processorCount) {
+        Output<Double> memoryInGB,
+        Output<Integer> processorCount) {
         this.memoryInGB = Objects.requireNonNull(memoryInGB, "expected parameter 'memoryInGB' to be non-null");
         this.processorCount = Objects.requireNonNull(processorCount, "expected parameter 'processorCount' to be non-null");
     }
 
     private ComputeResourceArgs() {
-        this.memoryInGB = Input.empty();
-        this.processorCount = Input.empty();
+        this.memoryInGB = Output.empty();
+        this.processorCount = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ComputeResourceArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<Double> memoryInGB;
-        private Input<Integer> processorCount;
+        private Output<Double> memoryInGB;
+        private Output<Integer> processorCount;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ComputeResourceArgs extends io.pulumi.resources.ResourceArgs 
     	      this.processorCount = defaults.processorCount;
         }
 
-        public Builder memoryInGB(Input<Double> memoryInGB) {
+        public Builder memoryInGB(Output<Double> memoryInGB) {
             this.memoryInGB = Objects.requireNonNull(memoryInGB);
             return this;
         }
 
         public Builder memoryInGB(Double memoryInGB) {
-            this.memoryInGB = Input.of(Objects.requireNonNull(memoryInGB));
+            this.memoryInGB = Output.of(Objects.requireNonNull(memoryInGB));
             return this;
         }
 
-        public Builder processorCount(Input<Integer> processorCount) {
+        public Builder processorCount(Output<Integer> processorCount) {
             this.processorCount = Objects.requireNonNull(processorCount);
             return this;
         }
 
         public Builder processorCount(Integer processorCount) {
-            this.processorCount = Input.of(Objects.requireNonNull(processorCount));
+            this.processorCount = Output.of(Objects.requireNonNull(processorCount));
             return this;
         }
         public ComputeResourceArgs build() {

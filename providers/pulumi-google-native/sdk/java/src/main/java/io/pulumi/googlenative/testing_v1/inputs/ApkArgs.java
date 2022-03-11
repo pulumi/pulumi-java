@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.testing_v1.inputs.FileReferenceArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ApkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<FileReferenceArgs> location;
+      private final @Nullable Output<FileReferenceArgs> location;
 
-    public Input<FileReferenceArgs> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<FileReferenceArgs> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ApkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="packageName")
-      private final @Nullable Input<String> packageName;
+      private final @Nullable Output<String> packageName;
 
-    public Input<String> getPackageName() {
-        return this.packageName == null ? Input.empty() : this.packageName;
+    public Output<String> getPackageName() {
+        return this.packageName == null ? Output.empty() : this.packageName;
     }
 
     public ApkArgs(
-        @Nullable Input<FileReferenceArgs> location,
-        @Nullable Input<String> packageName) {
+        @Nullable Output<FileReferenceArgs> location,
+        @Nullable Output<String> packageName) {
         this.location = location;
         this.packageName = packageName;
     }
 
     private ApkArgs() {
-        this.location = Input.empty();
-        this.packageName = Input.empty();
+        this.location = Output.empty();
+        this.packageName = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ApkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<FileReferenceArgs> location;
-        private @Nullable Input<String> packageName;
+        private @Nullable Output<FileReferenceArgs> location;
+        private @Nullable Output<String> packageName;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ApkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.packageName = defaults.packageName;
         }
 
-        public Builder location(@Nullable Input<FileReferenceArgs> location) {
+        public Builder location(@Nullable Output<FileReferenceArgs> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable FileReferenceArgs location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder packageName(@Nullable Input<String> packageName) {
+        public Builder packageName(@Nullable Output<String> packageName) {
             this.packageName = packageName;
             return this;
         }
 
         public Builder packageName(@Nullable String packageName) {
-            this.packageName = Input.ofNullable(packageName);
+            this.packageName = Output.ofNullable(packageName);
             return this;
         }
         public ApkArgs build() {

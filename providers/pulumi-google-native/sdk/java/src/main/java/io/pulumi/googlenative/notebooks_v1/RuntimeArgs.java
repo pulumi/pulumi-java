@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.notebooks_v1.inputs.RuntimeAccessConfigArgs;
 import io.pulumi.googlenative.notebooks_v1.inputs.RuntimeSoftwareConfigArgs;
@@ -22,30 +22,30 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessConfig")
-      private final @Nullable Input<RuntimeAccessConfigArgs> accessConfig;
+      private final @Nullable Output<RuntimeAccessConfigArgs> accessConfig;
 
-    public Input<RuntimeAccessConfigArgs> getAccessConfig() {
-        return this.accessConfig == null ? Input.empty() : this.accessConfig;
+    public Output<RuntimeAccessConfigArgs> getAccessConfig() {
+        return this.accessConfig == null ? Output.empty() : this.accessConfig;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="runtimeId", required=true)
-      private final Input<String> runtimeId;
+      private final Output<String> runtimeId;
 
-    public Input<String> getRuntimeId() {
+    public Output<String> getRuntimeId() {
         return this.runtimeId;
     }
 
@@ -54,10 +54,10 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="softwareConfig")
-      private final @Nullable Input<RuntimeSoftwareConfigArgs> softwareConfig;
+      private final @Nullable Output<RuntimeSoftwareConfigArgs> softwareConfig;
 
-    public Input<RuntimeSoftwareConfigArgs> getSoftwareConfig() {
-        return this.softwareConfig == null ? Input.empty() : this.softwareConfig;
+    public Output<RuntimeSoftwareConfigArgs> getSoftwareConfig() {
+        return this.softwareConfig == null ? Output.empty() : this.softwareConfig;
     }
 
     /**
@@ -65,19 +65,19 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualMachine")
-      private final @Nullable Input<VirtualMachineArgs> virtualMachine;
+      private final @Nullable Output<VirtualMachineArgs> virtualMachine;
 
-    public Input<VirtualMachineArgs> getVirtualMachine() {
-        return this.virtualMachine == null ? Input.empty() : this.virtualMachine;
+    public Output<VirtualMachineArgs> getVirtualMachine() {
+        return this.virtualMachine == null ? Output.empty() : this.virtualMachine;
     }
 
     public RuntimeArgs(
-        @Nullable Input<RuntimeAccessConfigArgs> accessConfig,
-        @Nullable Input<String> location,
-        @Nullable Input<String> project,
-        Input<String> runtimeId,
-        @Nullable Input<RuntimeSoftwareConfigArgs> softwareConfig,
-        @Nullable Input<VirtualMachineArgs> virtualMachine) {
+        @Nullable Output<RuntimeAccessConfigArgs> accessConfig,
+        @Nullable Output<String> location,
+        @Nullable Output<String> project,
+        Output<String> runtimeId,
+        @Nullable Output<RuntimeSoftwareConfigArgs> softwareConfig,
+        @Nullable Output<VirtualMachineArgs> virtualMachine) {
         this.accessConfig = accessConfig;
         this.location = location;
         this.project = project;
@@ -87,12 +87,12 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RuntimeArgs() {
-        this.accessConfig = Input.empty();
-        this.location = Input.empty();
-        this.project = Input.empty();
-        this.runtimeId = Input.empty();
-        this.softwareConfig = Input.empty();
-        this.virtualMachine = Input.empty();
+        this.accessConfig = Output.empty();
+        this.location = Output.empty();
+        this.project = Output.empty();
+        this.runtimeId = Output.empty();
+        this.softwareConfig = Output.empty();
+        this.virtualMachine = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,12 +104,12 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<RuntimeAccessConfigArgs> accessConfig;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> project;
-        private Input<String> runtimeId;
-        private @Nullable Input<RuntimeSoftwareConfigArgs> softwareConfig;
-        private @Nullable Input<VirtualMachineArgs> virtualMachine;
+        private @Nullable Output<RuntimeAccessConfigArgs> accessConfig;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> project;
+        private Output<String> runtimeId;
+        private @Nullable Output<RuntimeSoftwareConfigArgs> softwareConfig;
+        private @Nullable Output<VirtualMachineArgs> virtualMachine;
 
         public Builder() {
     	      // Empty
@@ -125,63 +125,63 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.virtualMachine = defaults.virtualMachine;
         }
 
-        public Builder accessConfig(@Nullable Input<RuntimeAccessConfigArgs> accessConfig) {
+        public Builder accessConfig(@Nullable Output<RuntimeAccessConfigArgs> accessConfig) {
             this.accessConfig = accessConfig;
             return this;
         }
 
         public Builder accessConfig(@Nullable RuntimeAccessConfigArgs accessConfig) {
-            this.accessConfig = Input.ofNullable(accessConfig);
+            this.accessConfig = Output.ofNullable(accessConfig);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder runtimeId(Input<String> runtimeId) {
+        public Builder runtimeId(Output<String> runtimeId) {
             this.runtimeId = Objects.requireNonNull(runtimeId);
             return this;
         }
 
         public Builder runtimeId(String runtimeId) {
-            this.runtimeId = Input.of(Objects.requireNonNull(runtimeId));
+            this.runtimeId = Output.of(Objects.requireNonNull(runtimeId));
             return this;
         }
 
-        public Builder softwareConfig(@Nullable Input<RuntimeSoftwareConfigArgs> softwareConfig) {
+        public Builder softwareConfig(@Nullable Output<RuntimeSoftwareConfigArgs> softwareConfig) {
             this.softwareConfig = softwareConfig;
             return this;
         }
 
         public Builder softwareConfig(@Nullable RuntimeSoftwareConfigArgs softwareConfig) {
-            this.softwareConfig = Input.ofNullable(softwareConfig);
+            this.softwareConfig = Output.ofNullable(softwareConfig);
             return this;
         }
 
-        public Builder virtualMachine(@Nullable Input<VirtualMachineArgs> virtualMachine) {
+        public Builder virtualMachine(@Nullable Output<VirtualMachineArgs> virtualMachine) {
             this.virtualMachine = virtualMachine;
             return this;
         }
 
         public Builder virtualMachine(@Nullable VirtualMachineArgs virtualMachine) {
-            this.virtualMachine = Input.ofNullable(virtualMachine);
+            this.virtualMachine = Output.ofNullable(virtualMachine);
             return this;
         }
         public RuntimeArgs build() {

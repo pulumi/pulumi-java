@@ -6,7 +6,6 @@ package io.pulumi.aws.directconnect;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.directconnect.ConnectionAssociationArgs;
 import io.pulumi.aws.directconnect.inputs.ConnectionAssociationState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -88,14 +87,14 @@ public class ConnectionAssociation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ConnectionAssociation(String name, ConnectionAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:directconnect/connectionAssociation:ConnectionAssociation", name, args == null ? ConnectionAssociationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:directconnect/connectionAssociation:ConnectionAssociation", name, args == null ? ConnectionAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ConnectionAssociation(String name, Input<String> id, @Nullable ConnectionAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ConnectionAssociation(String name, Output<String> id, @Nullable ConnectionAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:directconnect/connectionAssociation:ConnectionAssociation", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -111,7 +110,7 @@ public class ConnectionAssociation extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ConnectionAssociation get(String name, Input<String> id, @Nullable ConnectionAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ConnectionAssociation get(String name, Output<String> id, @Nullable ConnectionAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ConnectionAssociation(name, id, state, options);
     }
 }

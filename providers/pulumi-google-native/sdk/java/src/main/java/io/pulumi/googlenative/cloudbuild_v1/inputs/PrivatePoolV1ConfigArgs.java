@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.NetworkConfigArgs;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.WorkerConfigArgs;
@@ -24,10 +24,10 @@ public final class PrivatePoolV1ConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="networkConfig")
-      private final @Nullable Input<NetworkConfigArgs> networkConfig;
+      private final @Nullable Output<NetworkConfigArgs> networkConfig;
 
-    public Input<NetworkConfigArgs> getNetworkConfig() {
-        return this.networkConfig == null ? Input.empty() : this.networkConfig;
+    public Output<NetworkConfigArgs> getNetworkConfig() {
+        return this.networkConfig == null ? Output.empty() : this.networkConfig;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class PrivatePoolV1ConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="workerConfig")
-      private final @Nullable Input<WorkerConfigArgs> workerConfig;
+      private final @Nullable Output<WorkerConfigArgs> workerConfig;
 
-    public Input<WorkerConfigArgs> getWorkerConfig() {
-        return this.workerConfig == null ? Input.empty() : this.workerConfig;
+    public Output<WorkerConfigArgs> getWorkerConfig() {
+        return this.workerConfig == null ? Output.empty() : this.workerConfig;
     }
 
     public PrivatePoolV1ConfigArgs(
-        @Nullable Input<NetworkConfigArgs> networkConfig,
-        @Nullable Input<WorkerConfigArgs> workerConfig) {
+        @Nullable Output<NetworkConfigArgs> networkConfig,
+        @Nullable Output<WorkerConfigArgs> workerConfig) {
         this.networkConfig = networkConfig;
         this.workerConfig = workerConfig;
     }
 
     private PrivatePoolV1ConfigArgs() {
-        this.networkConfig = Input.empty();
-        this.workerConfig = Input.empty();
+        this.networkConfig = Output.empty();
+        this.workerConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class PrivatePoolV1ConfigArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<NetworkConfigArgs> networkConfig;
-        private @Nullable Input<WorkerConfigArgs> workerConfig;
+        private @Nullable Output<NetworkConfigArgs> networkConfig;
+        private @Nullable Output<WorkerConfigArgs> workerConfig;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class PrivatePoolV1ConfigArgs extends io.pulumi.resources.ResourceA
     	      this.workerConfig = defaults.workerConfig;
         }
 
-        public Builder networkConfig(@Nullable Input<NetworkConfigArgs> networkConfig) {
+        public Builder networkConfig(@Nullable Output<NetworkConfigArgs> networkConfig) {
             this.networkConfig = networkConfig;
             return this;
         }
 
         public Builder networkConfig(@Nullable NetworkConfigArgs networkConfig) {
-            this.networkConfig = Input.ofNullable(networkConfig);
+            this.networkConfig = Output.ofNullable(networkConfig);
             return this;
         }
 
-        public Builder workerConfig(@Nullable Input<WorkerConfigArgs> workerConfig) {
+        public Builder workerConfig(@Nullable Output<WorkerConfigArgs> workerConfig) {
             this.workerConfig = workerConfig;
             return this;
         }
 
         public Builder workerConfig(@Nullable WorkerConfigArgs workerConfig) {
-            this.workerConfig = Input.ofNullable(workerConfig);
+            this.workerConfig = Output.ofNullable(workerConfig);
             return this;
         }
         public PrivatePoolV1ConfigArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplateJobGetArgs;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplateParameterGetArgs;
@@ -25,10 +25,10 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="createTime")
-      private final @Nullable Input<String> createTime;
+      private final @Nullable Output<String> createTime;
 
-    public Input<String> getCreateTime() {
-        return this.createTime == null ? Input.empty() : this.createTime;
+    public Output<String> getCreateTime() {
+        return this.createTime == null ? Output.empty() : this.createTime;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="dagTimeout")
-      private final @Nullable Input<String> dagTimeout;
+      private final @Nullable Output<String> dagTimeout;
 
-    public Input<String> getDagTimeout() {
-        return this.dagTimeout == null ? Input.empty() : this.dagTimeout;
+    public Output<String> getDagTimeout() {
+        return this.dagTimeout == null ? Output.empty() : this.dagTimeout;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="jobs")
-      private final @Nullable Input<List<WorkflowTemplateJobGetArgs>> jobs;
+      private final @Nullable Output<List<WorkflowTemplateJobGetArgs>> jobs;
 
-    public Input<List<WorkflowTemplateJobGetArgs>> getJobs() {
-        return this.jobs == null ? Input.empty() : this.jobs;
+    public Output<List<WorkflowTemplateJobGetArgs>> getJobs() {
+        return this.jobs == null ? Output.empty() : this.jobs;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<List<WorkflowTemplateParameterGetArgs>> parameters;
+      private final @Nullable Output<List<WorkflowTemplateParameterGetArgs>> parameters;
 
-    public Input<List<WorkflowTemplateParameterGetArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<List<WorkflowTemplateParameterGetArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="placement")
-      private final @Nullable Input<WorkflowTemplatePlacementGetArgs> placement;
+      private final @Nullable Output<WorkflowTemplatePlacementGetArgs> placement;
 
-    public Input<WorkflowTemplatePlacementGetArgs> getPlacement() {
-        return this.placement == null ? Input.empty() : this.placement;
+    public Output<WorkflowTemplatePlacementGetArgs> getPlacement() {
+        return this.placement == null ? Output.empty() : this.placement;
     }
 
     /**
@@ -113,10 +113,10 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -124,10 +124,10 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="updateTime")
-      private final @Nullable Input<String> updateTime;
+      private final @Nullable Output<String> updateTime;
 
-    public Input<String> getUpdateTime() {
-        return this.updateTime == null ? Input.empty() : this.updateTime;
+    public Output<String> getUpdateTime() {
+        return this.updateTime == null ? Output.empty() : this.updateTime;
     }
 
     /**
@@ -139,25 +139,25 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
      */
     @Deprecated /* version is not useful as a configurable field, and will be removed in the future. */
     @InputImport(name="version")
-      private final @Nullable Input<Integer> version;
+      private final @Nullable Output<Integer> version;
 
     @Deprecated /* version is not useful as a configurable field, and will be removed in the future. */
-    public Input<Integer> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<Integer> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public WorkflowTemplateState(
-        @Nullable Input<String> createTime,
-        @Nullable Input<String> dagTimeout,
-        @Nullable Input<List<WorkflowTemplateJobGetArgs>> jobs,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<List<WorkflowTemplateParameterGetArgs>> parameters,
-        @Nullable Input<WorkflowTemplatePlacementGetArgs> placement,
-        @Nullable Input<String> project,
-        @Nullable Input<String> updateTime,
-        @Nullable Input<Integer> version) {
+        @Nullable Output<String> createTime,
+        @Nullable Output<String> dagTimeout,
+        @Nullable Output<List<WorkflowTemplateJobGetArgs>> jobs,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<List<WorkflowTemplateParameterGetArgs>> parameters,
+        @Nullable Output<WorkflowTemplatePlacementGetArgs> placement,
+        @Nullable Output<String> project,
+        @Nullable Output<String> updateTime,
+        @Nullable Output<Integer> version) {
         this.createTime = createTime;
         this.dagTimeout = dagTimeout;
         this.jobs = jobs;
@@ -172,17 +172,17 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
     }
 
     private WorkflowTemplateState() {
-        this.createTime = Input.empty();
-        this.dagTimeout = Input.empty();
-        this.jobs = Input.empty();
-        this.labels = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.parameters = Input.empty();
-        this.placement = Input.empty();
-        this.project = Input.empty();
-        this.updateTime = Input.empty();
-        this.version = Input.empty();
+        this.createTime = Output.empty();
+        this.dagTimeout = Output.empty();
+        this.jobs = Output.empty();
+        this.labels = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.parameters = Output.empty();
+        this.placement = Output.empty();
+        this.project = Output.empty();
+        this.updateTime = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -194,17 +194,17 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> createTime;
-        private @Nullable Input<String> dagTimeout;
-        private @Nullable Input<List<WorkflowTemplateJobGetArgs>> jobs;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<WorkflowTemplateParameterGetArgs>> parameters;
-        private @Nullable Input<WorkflowTemplatePlacementGetArgs> placement;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> updateTime;
-        private @Nullable Input<Integer> version;
+        private @Nullable Output<String> createTime;
+        private @Nullable Output<String> dagTimeout;
+        private @Nullable Output<List<WorkflowTemplateJobGetArgs>> jobs;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<WorkflowTemplateParameterGetArgs>> parameters;
+        private @Nullable Output<WorkflowTemplatePlacementGetArgs> placement;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> updateTime;
+        private @Nullable Output<Integer> version;
 
         public Builder() {
     	      // Empty
@@ -225,113 +225,113 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
     	      this.version = defaults.version;
         }
 
-        public Builder createTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Input.ofNullable(createTime);
+            this.createTime = Output.ofNullable(createTime);
             return this;
         }
 
-        public Builder dagTimeout(@Nullable Input<String> dagTimeout) {
+        public Builder dagTimeout(@Nullable Output<String> dagTimeout) {
             this.dagTimeout = dagTimeout;
             return this;
         }
 
         public Builder dagTimeout(@Nullable String dagTimeout) {
-            this.dagTimeout = Input.ofNullable(dagTimeout);
+            this.dagTimeout = Output.ofNullable(dagTimeout);
             return this;
         }
 
-        public Builder jobs(@Nullable Input<List<WorkflowTemplateJobGetArgs>> jobs) {
+        public Builder jobs(@Nullable Output<List<WorkflowTemplateJobGetArgs>> jobs) {
             this.jobs = jobs;
             return this;
         }
 
         public Builder jobs(@Nullable List<WorkflowTemplateJobGetArgs> jobs) {
-            this.jobs = Input.ofNullable(jobs);
+            this.jobs = Output.ofNullable(jobs);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<List<WorkflowTemplateParameterGetArgs>> parameters) {
+        public Builder parameters(@Nullable Output<List<WorkflowTemplateParameterGetArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable List<WorkflowTemplateParameterGetArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder placement(@Nullable Input<WorkflowTemplatePlacementGetArgs> placement) {
+        public Builder placement(@Nullable Output<WorkflowTemplatePlacementGetArgs> placement) {
             this.placement = placement;
             return this;
         }
 
         public Builder placement(@Nullable WorkflowTemplatePlacementGetArgs placement) {
-            this.placement = Input.ofNullable(placement);
+            this.placement = Output.ofNullable(placement);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder updateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Input.ofNullable(updateTime);
+            this.updateTime = Output.ofNullable(updateTime);
             return this;
         }
 
-        public Builder version(@Nullable Input<Integer> version) {
+        public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable Integer version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public WorkflowTemplateState build() {

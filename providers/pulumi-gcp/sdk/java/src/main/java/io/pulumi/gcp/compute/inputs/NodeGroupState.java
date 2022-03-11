@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.NodeGroupAutoscalingPolicyGetArgs;
 import io.pulumi.gcp.compute.inputs.NodeGroupMaintenanceWindowGetArgs;
@@ -24,10 +24,10 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoscalingPolicy")
-      private final @Nullable Input<NodeGroupAutoscalingPolicyGetArgs> autoscalingPolicy;
+      private final @Nullable Output<NodeGroupAutoscalingPolicyGetArgs> autoscalingPolicy;
 
-    public Input<NodeGroupAutoscalingPolicyGetArgs> getAutoscalingPolicy() {
-        return this.autoscalingPolicy == null ? Input.empty() : this.autoscalingPolicy;
+    public Output<NodeGroupAutoscalingPolicyGetArgs> getAutoscalingPolicy() {
+        return this.autoscalingPolicy == null ? Output.empty() : this.autoscalingPolicy;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationTimestamp")
-      private final @Nullable Input<String> creationTimestamp;
+      private final @Nullable Output<String> creationTimestamp;
 
-    public Input<String> getCreationTimestamp() {
-        return this.creationTimestamp == null ? Input.empty() : this.creationTimestamp;
+    public Output<String> getCreationTimestamp() {
+        return this.creationTimestamp == null ? Output.empty() : this.creationTimestamp;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="initialSize")
-      private final @Nullable Input<Integer> initialSize;
+      private final @Nullable Output<Integer> initialSize;
 
-    public Input<Integer> getInitialSize() {
-        return this.initialSize == null ? Input.empty() : this.initialSize;
+    public Output<Integer> getInitialSize() {
+        return this.initialSize == null ? Output.empty() : this.initialSize;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maintenancePolicy")
-      private final @Nullable Input<String> maintenancePolicy;
+      private final @Nullable Output<String> maintenancePolicy;
 
-    public Input<String> getMaintenancePolicy() {
-        return this.maintenancePolicy == null ? Input.empty() : this.maintenancePolicy;
+    public Output<String> getMaintenancePolicy() {
+        return this.maintenancePolicy == null ? Output.empty() : this.maintenancePolicy;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maintenanceWindow")
-      private final @Nullable Input<NodeGroupMaintenanceWindowGetArgs> maintenanceWindow;
+      private final @Nullable Output<NodeGroupMaintenanceWindowGetArgs> maintenanceWindow;
 
-    public Input<NodeGroupMaintenanceWindowGetArgs> getMaintenanceWindow() {
-        return this.maintenanceWindow == null ? Input.empty() : this.maintenanceWindow;
+    public Output<NodeGroupMaintenanceWindowGetArgs> getMaintenanceWindow() {
+        return this.maintenanceWindow == null ? Output.empty() : this.maintenanceWindow;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeTemplate")
-      private final @Nullable Input<String> nodeTemplate;
+      private final @Nullable Output<String> nodeTemplate;
 
-    public Input<String> getNodeTemplate() {
-        return this.nodeTemplate == null ? Input.empty() : this.nodeTemplate;
+    public Output<String> getNodeTemplate() {
+        return this.nodeTemplate == null ? Output.empty() : this.nodeTemplate;
     }
 
     /**
@@ -114,10 +114,10 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -125,10 +125,10 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfLink")
-      private final @Nullable Input<String> selfLink;
+      private final @Nullable Output<String> selfLink;
 
-    public Input<String> getSelfLink() {
-        return this.selfLink == null ? Input.empty() : this.selfLink;
+    public Output<String> getSelfLink() {
+        return this.selfLink == null ? Output.empty() : this.selfLink;
     }
 
     /**
@@ -136,10 +136,10 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="size")
-      private final @Nullable Input<Integer> size;
+      private final @Nullable Output<Integer> size;
 
-    public Input<Integer> getSize() {
-        return this.size == null ? Input.empty() : this.size;
+    public Output<Integer> getSize() {
+        return this.size == null ? Output.empty() : this.size;
     }
 
     /**
@@ -147,25 +147,25 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zone")
-      private final @Nullable Input<String> zone;
+      private final @Nullable Output<String> zone;
 
-    public Input<String> getZone() {
-        return this.zone == null ? Input.empty() : this.zone;
+    public Output<String> getZone() {
+        return this.zone == null ? Output.empty() : this.zone;
     }
 
     public NodeGroupState(
-        @Nullable Input<NodeGroupAutoscalingPolicyGetArgs> autoscalingPolicy,
-        @Nullable Input<String> creationTimestamp,
-        @Nullable Input<String> description,
-        @Nullable Input<Integer> initialSize,
-        @Nullable Input<String> maintenancePolicy,
-        @Nullable Input<NodeGroupMaintenanceWindowGetArgs> maintenanceWindow,
-        @Nullable Input<String> name,
-        @Nullable Input<String> nodeTemplate,
-        @Nullable Input<String> project,
-        @Nullable Input<String> selfLink,
-        @Nullable Input<Integer> size,
-        @Nullable Input<String> zone) {
+        @Nullable Output<NodeGroupAutoscalingPolicyGetArgs> autoscalingPolicy,
+        @Nullable Output<String> creationTimestamp,
+        @Nullable Output<String> description,
+        @Nullable Output<Integer> initialSize,
+        @Nullable Output<String> maintenancePolicy,
+        @Nullable Output<NodeGroupMaintenanceWindowGetArgs> maintenanceWindow,
+        @Nullable Output<String> name,
+        @Nullable Output<String> nodeTemplate,
+        @Nullable Output<String> project,
+        @Nullable Output<String> selfLink,
+        @Nullable Output<Integer> size,
+        @Nullable Output<String> zone) {
         this.autoscalingPolicy = autoscalingPolicy;
         this.creationTimestamp = creationTimestamp;
         this.description = description;
@@ -181,18 +181,18 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
     }
 
     private NodeGroupState() {
-        this.autoscalingPolicy = Input.empty();
-        this.creationTimestamp = Input.empty();
-        this.description = Input.empty();
-        this.initialSize = Input.empty();
-        this.maintenancePolicy = Input.empty();
-        this.maintenanceWindow = Input.empty();
-        this.name = Input.empty();
-        this.nodeTemplate = Input.empty();
-        this.project = Input.empty();
-        this.selfLink = Input.empty();
-        this.size = Input.empty();
-        this.zone = Input.empty();
+        this.autoscalingPolicy = Output.empty();
+        this.creationTimestamp = Output.empty();
+        this.description = Output.empty();
+        this.initialSize = Output.empty();
+        this.maintenancePolicy = Output.empty();
+        this.maintenanceWindow = Output.empty();
+        this.name = Output.empty();
+        this.nodeTemplate = Output.empty();
+        this.project = Output.empty();
+        this.selfLink = Output.empty();
+        this.size = Output.empty();
+        this.zone = Output.empty();
     }
 
     public static Builder builder() {
@@ -204,18 +204,18 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<NodeGroupAutoscalingPolicyGetArgs> autoscalingPolicy;
-        private @Nullable Input<String> creationTimestamp;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Integer> initialSize;
-        private @Nullable Input<String> maintenancePolicy;
-        private @Nullable Input<NodeGroupMaintenanceWindowGetArgs> maintenanceWindow;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> nodeTemplate;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> selfLink;
-        private @Nullable Input<Integer> size;
-        private @Nullable Input<String> zone;
+        private @Nullable Output<NodeGroupAutoscalingPolicyGetArgs> autoscalingPolicy;
+        private @Nullable Output<String> creationTimestamp;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Integer> initialSize;
+        private @Nullable Output<String> maintenancePolicy;
+        private @Nullable Output<NodeGroupMaintenanceWindowGetArgs> maintenanceWindow;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> nodeTemplate;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> selfLink;
+        private @Nullable Output<Integer> size;
+        private @Nullable Output<String> zone;
 
         public Builder() {
     	      // Empty
@@ -237,123 +237,123 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
     	      this.zone = defaults.zone;
         }
 
-        public Builder autoscalingPolicy(@Nullable Input<NodeGroupAutoscalingPolicyGetArgs> autoscalingPolicy) {
+        public Builder autoscalingPolicy(@Nullable Output<NodeGroupAutoscalingPolicyGetArgs> autoscalingPolicy) {
             this.autoscalingPolicy = autoscalingPolicy;
             return this;
         }
 
         public Builder autoscalingPolicy(@Nullable NodeGroupAutoscalingPolicyGetArgs autoscalingPolicy) {
-            this.autoscalingPolicy = Input.ofNullable(autoscalingPolicy);
+            this.autoscalingPolicy = Output.ofNullable(autoscalingPolicy);
             return this;
         }
 
-        public Builder creationTimestamp(@Nullable Input<String> creationTimestamp) {
+        public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
             this.creationTimestamp = creationTimestamp;
             return this;
         }
 
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Input.ofNullable(creationTimestamp);
+            this.creationTimestamp = Output.ofNullable(creationTimestamp);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder initialSize(@Nullable Input<Integer> initialSize) {
+        public Builder initialSize(@Nullable Output<Integer> initialSize) {
             this.initialSize = initialSize;
             return this;
         }
 
         public Builder initialSize(@Nullable Integer initialSize) {
-            this.initialSize = Input.ofNullable(initialSize);
+            this.initialSize = Output.ofNullable(initialSize);
             return this;
         }
 
-        public Builder maintenancePolicy(@Nullable Input<String> maintenancePolicy) {
+        public Builder maintenancePolicy(@Nullable Output<String> maintenancePolicy) {
             this.maintenancePolicy = maintenancePolicy;
             return this;
         }
 
         public Builder maintenancePolicy(@Nullable String maintenancePolicy) {
-            this.maintenancePolicy = Input.ofNullable(maintenancePolicy);
+            this.maintenancePolicy = Output.ofNullable(maintenancePolicy);
             return this;
         }
 
-        public Builder maintenanceWindow(@Nullable Input<NodeGroupMaintenanceWindowGetArgs> maintenanceWindow) {
+        public Builder maintenanceWindow(@Nullable Output<NodeGroupMaintenanceWindowGetArgs> maintenanceWindow) {
             this.maintenanceWindow = maintenanceWindow;
             return this;
         }
 
         public Builder maintenanceWindow(@Nullable NodeGroupMaintenanceWindowGetArgs maintenanceWindow) {
-            this.maintenanceWindow = Input.ofNullable(maintenanceWindow);
+            this.maintenanceWindow = Output.ofNullable(maintenanceWindow);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder nodeTemplate(@Nullable Input<String> nodeTemplate) {
+        public Builder nodeTemplate(@Nullable Output<String> nodeTemplate) {
             this.nodeTemplate = nodeTemplate;
             return this;
         }
 
         public Builder nodeTemplate(@Nullable String nodeTemplate) {
-            this.nodeTemplate = Input.ofNullable(nodeTemplate);
+            this.nodeTemplate = Output.ofNullable(nodeTemplate);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder selfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Input.ofNullable(selfLink);
+            this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
 
-        public Builder size(@Nullable Input<Integer> size) {
+        public Builder size(@Nullable Output<Integer> size) {
             this.size = size;
             return this;
         }
 
         public Builder size(@Nullable Integer size) {
-            this.size = Input.ofNullable(size);
+            this.size = Output.ofNullable(size);
             return this;
         }
 
-        public Builder zone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
 
         public Builder zone(@Nullable String zone) {
-            this.zone = Input.ofNullable(zone);
+            this.zone = Output.ofNullable(zone);
             return this;
         }
         public NodeGroupState build() {

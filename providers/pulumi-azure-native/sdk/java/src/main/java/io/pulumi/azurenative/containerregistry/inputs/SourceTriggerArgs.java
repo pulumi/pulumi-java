@@ -7,7 +7,7 @@ import io.pulumi.azurenative.containerregistry.enums.SourceTriggerEvent;
 import io.pulumi.azurenative.containerregistry.enums.TriggerStatus;
 import io.pulumi.azurenative.containerregistry.inputs.SourcePropertiesArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -28,9 +28,9 @@ public final class SourceTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -39,9 +39,9 @@ public final class SourceTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceRepository", required=true)
-      private final Input<SourcePropertiesArgs> sourceRepository;
+      private final Output<SourcePropertiesArgs> sourceRepository;
 
-    public Input<SourcePropertiesArgs> getSourceRepository() {
+    public Output<SourcePropertiesArgs> getSourceRepository() {
         return this.sourceRepository;
     }
 
@@ -50,9 +50,9 @@ public final class SourceTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceTriggerEvents", required=true)
-      private final Input<List<Either<String,SourceTriggerEvent>>> sourceTriggerEvents;
+      private final Output<List<Either<String,SourceTriggerEvent>>> sourceTriggerEvents;
 
-    public Input<List<Either<String,SourceTriggerEvent>>> getSourceTriggerEvents() {
+    public Output<List<Either<String,SourceTriggerEvent>>> getSourceTriggerEvents() {
         return this.sourceTriggerEvents;
     }
 
@@ -61,28 +61,28 @@ public final class SourceTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<Either<String,TriggerStatus>> status;
+      private final @Nullable Output<Either<String,TriggerStatus>> status;
 
-    public Input<Either<String,TriggerStatus>> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<Either<String,TriggerStatus>> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     public SourceTriggerArgs(
-        Input<String> name,
-        Input<SourcePropertiesArgs> sourceRepository,
-        Input<List<Either<String,SourceTriggerEvent>>> sourceTriggerEvents,
-        @Nullable Input<Either<String,TriggerStatus>> status) {
+        Output<String> name,
+        Output<SourcePropertiesArgs> sourceRepository,
+        Output<List<Either<String,SourceTriggerEvent>>> sourceTriggerEvents,
+        @Nullable Output<Either<String,TriggerStatus>> status) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.sourceRepository = Objects.requireNonNull(sourceRepository, "expected parameter 'sourceRepository' to be non-null");
         this.sourceTriggerEvents = Objects.requireNonNull(sourceTriggerEvents, "expected parameter 'sourceTriggerEvents' to be non-null");
-        this.status = status == null ? Input.ofLeft("Enabled") : status;
+        this.status = status == null ? Output.ofLeft("Enabled") : status;
     }
 
     private SourceTriggerArgs() {
-        this.name = Input.empty();
-        this.sourceRepository = Input.empty();
-        this.sourceTriggerEvents = Input.empty();
-        this.status = Input.empty();
+        this.name = Output.empty();
+        this.sourceRepository = Output.empty();
+        this.sourceTriggerEvents = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -94,10 +94,10 @@ public final class SourceTriggerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private Input<SourcePropertiesArgs> sourceRepository;
-        private Input<List<Either<String,SourceTriggerEvent>>> sourceTriggerEvents;
-        private @Nullable Input<Either<String,TriggerStatus>> status;
+        private Output<String> name;
+        private Output<SourcePropertiesArgs> sourceRepository;
+        private Output<List<Either<String,SourceTriggerEvent>>> sourceTriggerEvents;
+        private @Nullable Output<Either<String,TriggerStatus>> status;
 
         public Builder() {
     	      // Empty
@@ -111,43 +111,43 @@ public final class SourceTriggerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.status = defaults.status;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder sourceRepository(Input<SourcePropertiesArgs> sourceRepository) {
+        public Builder sourceRepository(Output<SourcePropertiesArgs> sourceRepository) {
             this.sourceRepository = Objects.requireNonNull(sourceRepository);
             return this;
         }
 
         public Builder sourceRepository(SourcePropertiesArgs sourceRepository) {
-            this.sourceRepository = Input.of(Objects.requireNonNull(sourceRepository));
+            this.sourceRepository = Output.of(Objects.requireNonNull(sourceRepository));
             return this;
         }
 
-        public Builder sourceTriggerEvents(Input<List<Either<String,SourceTriggerEvent>>> sourceTriggerEvents) {
+        public Builder sourceTriggerEvents(Output<List<Either<String,SourceTriggerEvent>>> sourceTriggerEvents) {
             this.sourceTriggerEvents = Objects.requireNonNull(sourceTriggerEvents);
             return this;
         }
 
         public Builder sourceTriggerEvents(List<Either<String,SourceTriggerEvent>> sourceTriggerEvents) {
-            this.sourceTriggerEvents = Input.of(Objects.requireNonNull(sourceTriggerEvents));
+            this.sourceTriggerEvents = Output.of(Objects.requireNonNull(sourceTriggerEvents));
             return this;
         }
 
-        public Builder status(@Nullable Input<Either<String,TriggerStatus>> status) {
+        public Builder status(@Nullable Output<Either<String,TriggerStatus>> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable Either<String,TriggerStatus> status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public SourceTriggerArgs build() {

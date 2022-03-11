@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.stepfunctions.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,39 +15,39 @@ public final class StateMachineS3LocationArgs extends io.pulumi.resources.Resour
     public static final StateMachineS3LocationArgs Empty = new StateMachineS3LocationArgs();
 
     @InputImport(name="bucket", required=true)
-      private final Input<String> bucket;
+      private final Output<String> bucket;
 
-    public Input<String> getBucket() {
+    public Output<String> getBucket() {
         return this.bucket;
     }
 
     @InputImport(name="key", required=true)
-      private final Input<String> key;
+      private final Output<String> key;
 
-    public Input<String> getKey() {
+    public Output<String> getKey() {
         return this.key;
     }
 
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public StateMachineS3LocationArgs(
-        Input<String> bucket,
-        Input<String> key,
-        @Nullable Input<String> version) {
+        Output<String> bucket,
+        Output<String> key,
+        @Nullable Output<String> version) {
         this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
         this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
         this.version = version;
     }
 
     private StateMachineS3LocationArgs() {
-        this.bucket = Input.empty();
-        this.key = Input.empty();
-        this.version = Input.empty();
+        this.bucket = Output.empty();
+        this.key = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,9 +59,9 @@ public final class StateMachineS3LocationArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> bucket;
-        private Input<String> key;
-        private @Nullable Input<String> version;
+        private Output<String> bucket;
+        private Output<String> key;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -74,33 +74,33 @@ public final class StateMachineS3LocationArgs extends io.pulumi.resources.Resour
     	      this.version = defaults.version;
         }
 
-        public Builder bucket(Input<String> bucket) {
+        public Builder bucket(Output<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Input.of(Objects.requireNonNull(bucket));
+            this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder key(Input<String> key) {
+        public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
         public Builder key(String key) {
-            this.key = Input.of(Objects.requireNonNull(key));
+            this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public StateMachineS3LocationArgs build() {

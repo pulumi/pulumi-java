@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.translate_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class GcsSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputUri", required=true)
-      private final Input<String> inputUri;
+      private final Output<String> inputUri;
 
-    public Input<String> getInputUri() {
+    public Output<String> getInputUri() {
         return this.inputUri;
     }
 
-    public GcsSourceArgs(Input<String> inputUri) {
+    public GcsSourceArgs(Output<String> inputUri) {
         this.inputUri = Objects.requireNonNull(inputUri, "expected parameter 'inputUri' to be non-null");
     }
 
     private GcsSourceArgs() {
-        this.inputUri = Input.empty();
+        this.inputUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class GcsSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> inputUri;
+        private Output<String> inputUri;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class GcsSourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.inputUri = defaults.inputUri;
         }
 
-        public Builder inputUri(Input<String> inputUri) {
+        public Builder inputUri(Output<String> inputUri) {
             this.inputUri = Objects.requireNonNull(inputUri);
             return this;
         }
 
         public Builder inputUri(String inputUri) {
-            this.inputUri = Input.of(Objects.requireNonNull(inputUri));
+            this.inputUri = Output.of(Objects.requireNonNull(inputUri));
             return this;
         }
         public GcsSourceArgs build() {

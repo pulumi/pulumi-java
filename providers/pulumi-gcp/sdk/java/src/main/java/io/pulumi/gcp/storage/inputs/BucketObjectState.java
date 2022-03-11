@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.AssetOrArchive;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.storage.inputs.BucketObjectCustomerEncryptionGetArgs;
 import java.lang.Boolean;
@@ -23,10 +23,10 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bucket")
-      private final @Nullable Input<String> bucket;
+      private final @Nullable Output<String> bucket;
 
-    public Input<String> getBucket() {
-        return this.bucket == null ? Input.empty() : this.bucket;
+    public Output<String> getBucket() {
+        return this.bucket == null ? Output.empty() : this.bucket;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cacheControl")
-      private final @Nullable Input<String> cacheControl;
+      private final @Nullable Output<String> cacheControl;
 
-    public Input<String> getCacheControl() {
-        return this.cacheControl == null ? Input.empty() : this.cacheControl;
+    public Output<String> getCacheControl() {
+        return this.cacheControl == null ? Output.empty() : this.cacheControl;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="content")
-      private final @Nullable Input<String> content;
+      private final @Nullable Output<String> content;
 
-    public Input<String> getContent() {
-        return this.content == null ? Input.empty() : this.content;
+    public Output<String> getContent() {
+        return this.content == null ? Output.empty() : this.content;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentDisposition")
-      private final @Nullable Input<String> contentDisposition;
+      private final @Nullable Output<String> contentDisposition;
 
-    public Input<String> getContentDisposition() {
-        return this.contentDisposition == null ? Input.empty() : this.contentDisposition;
+    public Output<String> getContentDisposition() {
+        return this.contentDisposition == null ? Output.empty() : this.contentDisposition;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentEncoding")
-      private final @Nullable Input<String> contentEncoding;
+      private final @Nullable Output<String> contentEncoding;
 
-    public Input<String> getContentEncoding() {
-        return this.contentEncoding == null ? Input.empty() : this.contentEncoding;
+    public Output<String> getContentEncoding() {
+        return this.contentEncoding == null ? Output.empty() : this.contentEncoding;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentLanguage")
-      private final @Nullable Input<String> contentLanguage;
+      private final @Nullable Output<String> contentLanguage;
 
-    public Input<String> getContentLanguage() {
-        return this.contentLanguage == null ? Input.empty() : this.contentLanguage;
+    public Output<String> getContentLanguage() {
+        return this.contentLanguage == null ? Output.empty() : this.contentLanguage;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentType")
-      private final @Nullable Input<String> contentType;
+      private final @Nullable Output<String> contentType;
 
-    public Input<String> getContentType() {
-        return this.contentType == null ? Input.empty() : this.contentType;
+    public Output<String> getContentType() {
+        return this.contentType == null ? Output.empty() : this.contentType;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="crc32c")
-      private final @Nullable Input<String> crc32c;
+      private final @Nullable Output<String> crc32c;
 
-    public Input<String> getCrc32c() {
-        return this.crc32c == null ? Input.empty() : this.crc32c;
+    public Output<String> getCrc32c() {
+        return this.crc32c == null ? Output.empty() : this.crc32c;
     }
 
     /**
@@ -113,17 +113,17 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customerEncryption")
-      private final @Nullable Input<BucketObjectCustomerEncryptionGetArgs> customerEncryption;
+      private final @Nullable Output<BucketObjectCustomerEncryptionGetArgs> customerEncryption;
 
-    public Input<BucketObjectCustomerEncryptionGetArgs> getCustomerEncryption() {
-        return this.customerEncryption == null ? Input.empty() : this.customerEncryption;
+    public Output<BucketObjectCustomerEncryptionGetArgs> getCustomerEncryption() {
+        return this.customerEncryption == null ? Output.empty() : this.customerEncryption;
     }
 
     @InputImport(name="detectMd5hash")
-      private final @Nullable Input<String> detectMd5hash;
+      private final @Nullable Output<String> detectMd5hash;
 
-    public Input<String> getDetectMd5hash() {
-        return this.detectMd5hash == null ? Input.empty() : this.detectMd5hash;
+    public Output<String> getDetectMd5hash() {
+        return this.detectMd5hash == null ? Output.empty() : this.detectMd5hash;
     }
 
     /**
@@ -133,10 +133,10 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventBasedHold")
-      private final @Nullable Input<Boolean> eventBasedHold;
+      private final @Nullable Output<Boolean> eventBasedHold;
 
-    public Input<Boolean> getEventBasedHold() {
-        return this.eventBasedHold == null ? Input.empty() : this.eventBasedHold;
+    public Output<Boolean> getEventBasedHold() {
+        return this.eventBasedHold == null ? Output.empty() : this.eventBasedHold;
     }
 
     /**
@@ -144,10 +144,10 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyName")
-      private final @Nullable Input<String> kmsKeyName;
+      private final @Nullable Output<String> kmsKeyName;
 
-    public Input<String> getKmsKeyName() {
-        return this.kmsKeyName == null ? Input.empty() : this.kmsKeyName;
+    public Output<String> getKmsKeyName() {
+        return this.kmsKeyName == null ? Output.empty() : this.kmsKeyName;
     }
 
     /**
@@ -155,10 +155,10 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="md5hash")
-      private final @Nullable Input<String> md5hash;
+      private final @Nullable Output<String> md5hash;
 
-    public Input<String> getMd5hash() {
-        return this.md5hash == null ? Input.empty() : this.md5hash;
+    public Output<String> getMd5hash() {
+        return this.md5hash == null ? Output.empty() : this.md5hash;
     }
 
     /**
@@ -166,10 +166,10 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mediaLink")
-      private final @Nullable Input<String> mediaLink;
+      private final @Nullable Output<String> mediaLink;
 
-    public Input<String> getMediaLink() {
-        return this.mediaLink == null ? Input.empty() : this.mediaLink;
+    public Output<String> getMediaLink() {
+        return this.mediaLink == null ? Output.empty() : this.mediaLink;
     }
 
     /**
@@ -177,10 +177,10 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Output<Map<String,String>> metadata;
 
-    public Input<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Map<String,String>> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -188,10 +188,10 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -200,10 +200,10 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputName")
-      private final @Nullable Input<String> outputName;
+      private final @Nullable Output<String> outputName;
 
-    public Input<String> getOutputName() {
-        return this.outputName == null ? Input.empty() : this.outputName;
+    public Output<String> getOutputName() {
+        return this.outputName == null ? Output.empty() : this.outputName;
     }
 
     /**
@@ -211,10 +211,10 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfLink")
-      private final @Nullable Input<String> selfLink;
+      private final @Nullable Output<String> selfLink;
 
-    public Input<String> getSelfLink() {
-        return this.selfLink == null ? Input.empty() : this.selfLink;
+    public Output<String> getSelfLink() {
+        return this.selfLink == null ? Output.empty() : this.selfLink;
     }
 
     /**
@@ -223,10 +223,10 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source")
-      private final @Nullable Input<AssetOrArchive> source;
+      private final @Nullable Output<AssetOrArchive> source;
 
-    public Input<AssetOrArchive> getSource() {
-        return this.source == null ? Input.empty() : this.source;
+    public Output<AssetOrArchive> getSource() {
+        return this.source == null ? Output.empty() : this.source;
     }
 
     /**
@@ -236,10 +236,10 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageClass")
-      private final @Nullable Input<String> storageClass;
+      private final @Nullable Output<String> storageClass;
 
-    public Input<String> getStorageClass() {
-        return this.storageClass == null ? Input.empty() : this.storageClass;
+    public Output<String> getStorageClass() {
+        return this.storageClass == null ? Output.empty() : this.storageClass;
     }
 
     /**
@@ -248,34 +248,34 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="temporaryHold")
-      private final @Nullable Input<Boolean> temporaryHold;
+      private final @Nullable Output<Boolean> temporaryHold;
 
-    public Input<Boolean> getTemporaryHold() {
-        return this.temporaryHold == null ? Input.empty() : this.temporaryHold;
+    public Output<Boolean> getTemporaryHold() {
+        return this.temporaryHold == null ? Output.empty() : this.temporaryHold;
     }
 
     public BucketObjectState(
-        @Nullable Input<String> bucket,
-        @Nullable Input<String> cacheControl,
-        @Nullable Input<String> content,
-        @Nullable Input<String> contentDisposition,
-        @Nullable Input<String> contentEncoding,
-        @Nullable Input<String> contentLanguage,
-        @Nullable Input<String> contentType,
-        @Nullable Input<String> crc32c,
-        @Nullable Input<BucketObjectCustomerEncryptionGetArgs> customerEncryption,
-        @Nullable Input<String> detectMd5hash,
-        @Nullable Input<Boolean> eventBasedHold,
-        @Nullable Input<String> kmsKeyName,
-        @Nullable Input<String> md5hash,
-        @Nullable Input<String> mediaLink,
-        @Nullable Input<Map<String,String>> metadata,
-        @Nullable Input<String> name,
-        @Nullable Input<String> outputName,
-        @Nullable Input<String> selfLink,
-        @Nullable Input<AssetOrArchive> source,
-        @Nullable Input<String> storageClass,
-        @Nullable Input<Boolean> temporaryHold) {
+        @Nullable Output<String> bucket,
+        @Nullable Output<String> cacheControl,
+        @Nullable Output<String> content,
+        @Nullable Output<String> contentDisposition,
+        @Nullable Output<String> contentEncoding,
+        @Nullable Output<String> contentLanguage,
+        @Nullable Output<String> contentType,
+        @Nullable Output<String> crc32c,
+        @Nullable Output<BucketObjectCustomerEncryptionGetArgs> customerEncryption,
+        @Nullable Output<String> detectMd5hash,
+        @Nullable Output<Boolean> eventBasedHold,
+        @Nullable Output<String> kmsKeyName,
+        @Nullable Output<String> md5hash,
+        @Nullable Output<String> mediaLink,
+        @Nullable Output<Map<String,String>> metadata,
+        @Nullable Output<String> name,
+        @Nullable Output<String> outputName,
+        @Nullable Output<String> selfLink,
+        @Nullable Output<AssetOrArchive> source,
+        @Nullable Output<String> storageClass,
+        @Nullable Output<Boolean> temporaryHold) {
         this.bucket = bucket;
         this.cacheControl = cacheControl;
         this.content = content;
@@ -300,27 +300,27 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
     }
 
     private BucketObjectState() {
-        this.bucket = Input.empty();
-        this.cacheControl = Input.empty();
-        this.content = Input.empty();
-        this.contentDisposition = Input.empty();
-        this.contentEncoding = Input.empty();
-        this.contentLanguage = Input.empty();
-        this.contentType = Input.empty();
-        this.crc32c = Input.empty();
-        this.customerEncryption = Input.empty();
-        this.detectMd5hash = Input.empty();
-        this.eventBasedHold = Input.empty();
-        this.kmsKeyName = Input.empty();
-        this.md5hash = Input.empty();
-        this.mediaLink = Input.empty();
-        this.metadata = Input.empty();
-        this.name = Input.empty();
-        this.outputName = Input.empty();
-        this.selfLink = Input.empty();
-        this.source = Input.empty();
-        this.storageClass = Input.empty();
-        this.temporaryHold = Input.empty();
+        this.bucket = Output.empty();
+        this.cacheControl = Output.empty();
+        this.content = Output.empty();
+        this.contentDisposition = Output.empty();
+        this.contentEncoding = Output.empty();
+        this.contentLanguage = Output.empty();
+        this.contentType = Output.empty();
+        this.crc32c = Output.empty();
+        this.customerEncryption = Output.empty();
+        this.detectMd5hash = Output.empty();
+        this.eventBasedHold = Output.empty();
+        this.kmsKeyName = Output.empty();
+        this.md5hash = Output.empty();
+        this.mediaLink = Output.empty();
+        this.metadata = Output.empty();
+        this.name = Output.empty();
+        this.outputName = Output.empty();
+        this.selfLink = Output.empty();
+        this.source = Output.empty();
+        this.storageClass = Output.empty();
+        this.temporaryHold = Output.empty();
     }
 
     public static Builder builder() {
@@ -332,27 +332,27 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bucket;
-        private @Nullable Input<String> cacheControl;
-        private @Nullable Input<String> content;
-        private @Nullable Input<String> contentDisposition;
-        private @Nullable Input<String> contentEncoding;
-        private @Nullable Input<String> contentLanguage;
-        private @Nullable Input<String> contentType;
-        private @Nullable Input<String> crc32c;
-        private @Nullable Input<BucketObjectCustomerEncryptionGetArgs> customerEncryption;
-        private @Nullable Input<String> detectMd5hash;
-        private @Nullable Input<Boolean> eventBasedHold;
-        private @Nullable Input<String> kmsKeyName;
-        private @Nullable Input<String> md5hash;
-        private @Nullable Input<String> mediaLink;
-        private @Nullable Input<Map<String,String>> metadata;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> outputName;
-        private @Nullable Input<String> selfLink;
-        private @Nullable Input<AssetOrArchive> source;
-        private @Nullable Input<String> storageClass;
-        private @Nullable Input<Boolean> temporaryHold;
+        private @Nullable Output<String> bucket;
+        private @Nullable Output<String> cacheControl;
+        private @Nullable Output<String> content;
+        private @Nullable Output<String> contentDisposition;
+        private @Nullable Output<String> contentEncoding;
+        private @Nullable Output<String> contentLanguage;
+        private @Nullable Output<String> contentType;
+        private @Nullable Output<String> crc32c;
+        private @Nullable Output<BucketObjectCustomerEncryptionGetArgs> customerEncryption;
+        private @Nullable Output<String> detectMd5hash;
+        private @Nullable Output<Boolean> eventBasedHold;
+        private @Nullable Output<String> kmsKeyName;
+        private @Nullable Output<String> md5hash;
+        private @Nullable Output<String> mediaLink;
+        private @Nullable Output<Map<String,String>> metadata;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> outputName;
+        private @Nullable Output<String> selfLink;
+        private @Nullable Output<AssetOrArchive> source;
+        private @Nullable Output<String> storageClass;
+        private @Nullable Output<Boolean> temporaryHold;
 
         public Builder() {
     	      // Empty
@@ -383,213 +383,213 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
     	      this.temporaryHold = defaults.temporaryHold;
         }
 
-        public Builder bucket(@Nullable Input<String> bucket) {
+        public Builder bucket(@Nullable Output<String> bucket) {
             this.bucket = bucket;
             return this;
         }
 
         public Builder bucket(@Nullable String bucket) {
-            this.bucket = Input.ofNullable(bucket);
+            this.bucket = Output.ofNullable(bucket);
             return this;
         }
 
-        public Builder cacheControl(@Nullable Input<String> cacheControl) {
+        public Builder cacheControl(@Nullable Output<String> cacheControl) {
             this.cacheControl = cacheControl;
             return this;
         }
 
         public Builder cacheControl(@Nullable String cacheControl) {
-            this.cacheControl = Input.ofNullable(cacheControl);
+            this.cacheControl = Output.ofNullable(cacheControl);
             return this;
         }
 
-        public Builder content(@Nullable Input<String> content) {
+        public Builder content(@Nullable Output<String> content) {
             this.content = content;
             return this;
         }
 
         public Builder content(@Nullable String content) {
-            this.content = Input.ofNullable(content);
+            this.content = Output.ofNullable(content);
             return this;
         }
 
-        public Builder contentDisposition(@Nullable Input<String> contentDisposition) {
+        public Builder contentDisposition(@Nullable Output<String> contentDisposition) {
             this.contentDisposition = contentDisposition;
             return this;
         }
 
         public Builder contentDisposition(@Nullable String contentDisposition) {
-            this.contentDisposition = Input.ofNullable(contentDisposition);
+            this.contentDisposition = Output.ofNullable(contentDisposition);
             return this;
         }
 
-        public Builder contentEncoding(@Nullable Input<String> contentEncoding) {
+        public Builder contentEncoding(@Nullable Output<String> contentEncoding) {
             this.contentEncoding = contentEncoding;
             return this;
         }
 
         public Builder contentEncoding(@Nullable String contentEncoding) {
-            this.contentEncoding = Input.ofNullable(contentEncoding);
+            this.contentEncoding = Output.ofNullable(contentEncoding);
             return this;
         }
 
-        public Builder contentLanguage(@Nullable Input<String> contentLanguage) {
+        public Builder contentLanguage(@Nullable Output<String> contentLanguage) {
             this.contentLanguage = contentLanguage;
             return this;
         }
 
         public Builder contentLanguage(@Nullable String contentLanguage) {
-            this.contentLanguage = Input.ofNullable(contentLanguage);
+            this.contentLanguage = Output.ofNullable(contentLanguage);
             return this;
         }
 
-        public Builder contentType(@Nullable Input<String> contentType) {
+        public Builder contentType(@Nullable Output<String> contentType) {
             this.contentType = contentType;
             return this;
         }
 
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = Input.ofNullable(contentType);
+            this.contentType = Output.ofNullable(contentType);
             return this;
         }
 
-        public Builder crc32c(@Nullable Input<String> crc32c) {
+        public Builder crc32c(@Nullable Output<String> crc32c) {
             this.crc32c = crc32c;
             return this;
         }
 
         public Builder crc32c(@Nullable String crc32c) {
-            this.crc32c = Input.ofNullable(crc32c);
+            this.crc32c = Output.ofNullable(crc32c);
             return this;
         }
 
-        public Builder customerEncryption(@Nullable Input<BucketObjectCustomerEncryptionGetArgs> customerEncryption) {
+        public Builder customerEncryption(@Nullable Output<BucketObjectCustomerEncryptionGetArgs> customerEncryption) {
             this.customerEncryption = customerEncryption;
             return this;
         }
 
         public Builder customerEncryption(@Nullable BucketObjectCustomerEncryptionGetArgs customerEncryption) {
-            this.customerEncryption = Input.ofNullable(customerEncryption);
+            this.customerEncryption = Output.ofNullable(customerEncryption);
             return this;
         }
 
-        public Builder detectMd5hash(@Nullable Input<String> detectMd5hash) {
+        public Builder detectMd5hash(@Nullable Output<String> detectMd5hash) {
             this.detectMd5hash = detectMd5hash;
             return this;
         }
 
         public Builder detectMd5hash(@Nullable String detectMd5hash) {
-            this.detectMd5hash = Input.ofNullable(detectMd5hash);
+            this.detectMd5hash = Output.ofNullable(detectMd5hash);
             return this;
         }
 
-        public Builder eventBasedHold(@Nullable Input<Boolean> eventBasedHold) {
+        public Builder eventBasedHold(@Nullable Output<Boolean> eventBasedHold) {
             this.eventBasedHold = eventBasedHold;
             return this;
         }
 
         public Builder eventBasedHold(@Nullable Boolean eventBasedHold) {
-            this.eventBasedHold = Input.ofNullable(eventBasedHold);
+            this.eventBasedHold = Output.ofNullable(eventBasedHold);
             return this;
         }
 
-        public Builder kmsKeyName(@Nullable Input<String> kmsKeyName) {
+        public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
             this.kmsKeyName = kmsKeyName;
             return this;
         }
 
         public Builder kmsKeyName(@Nullable String kmsKeyName) {
-            this.kmsKeyName = Input.ofNullable(kmsKeyName);
+            this.kmsKeyName = Output.ofNullable(kmsKeyName);
             return this;
         }
 
-        public Builder md5hash(@Nullable Input<String> md5hash) {
+        public Builder md5hash(@Nullable Output<String> md5hash) {
             this.md5hash = md5hash;
             return this;
         }
 
         public Builder md5hash(@Nullable String md5hash) {
-            this.md5hash = Input.ofNullable(md5hash);
+            this.md5hash = Output.ofNullable(md5hash);
             return this;
         }
 
-        public Builder mediaLink(@Nullable Input<String> mediaLink) {
+        public Builder mediaLink(@Nullable Output<String> mediaLink) {
             this.mediaLink = mediaLink;
             return this;
         }
 
         public Builder mediaLink(@Nullable String mediaLink) {
-            this.mediaLink = Input.ofNullable(mediaLink);
+            this.mediaLink = Output.ofNullable(mediaLink);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder outputName(@Nullable Input<String> outputName) {
+        public Builder outputName(@Nullable Output<String> outputName) {
             this.outputName = outputName;
             return this;
         }
 
         public Builder outputName(@Nullable String outputName) {
-            this.outputName = Input.ofNullable(outputName);
+            this.outputName = Output.ofNullable(outputName);
             return this;
         }
 
-        public Builder selfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Input.ofNullable(selfLink);
+            this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
 
-        public Builder source(@Nullable Input<AssetOrArchive> source) {
+        public Builder source(@Nullable Output<AssetOrArchive> source) {
             this.source = source;
             return this;
         }
 
         public Builder source(@Nullable AssetOrArchive source) {
-            this.source = Input.ofNullable(source);
+            this.source = Output.ofNullable(source);
             return this;
         }
 
-        public Builder storageClass(@Nullable Input<String> storageClass) {
+        public Builder storageClass(@Nullable Output<String> storageClass) {
             this.storageClass = storageClass;
             return this;
         }
 
         public Builder storageClass(@Nullable String storageClass) {
-            this.storageClass = Input.ofNullable(storageClass);
+            this.storageClass = Output.ofNullable(storageClass);
             return this;
         }
 
-        public Builder temporaryHold(@Nullable Input<Boolean> temporaryHold) {
+        public Builder temporaryHold(@Nullable Output<Boolean> temporaryHold) {
             this.temporaryHold = temporaryHold;
             return this;
         }
 
         public Builder temporaryHold(@Nullable Boolean temporaryHold) {
-            this.temporaryHold = Input.ofNullable(temporaryHold);
+            this.temporaryHold = Output.ofNullable(temporaryHold);
             return this;
         }
         public BucketObjectState build() {

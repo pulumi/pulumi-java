@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -16,29 +16,29 @@ public final class ProviderBatchingArgs extends io.pulumi.resources.ResourceArgs
     public static final ProviderBatchingArgs Empty = new ProviderBatchingArgs();
 
     @InputImport(name="enableBatching")
-      private final @Nullable Input<Boolean> enableBatching;
+      private final @Nullable Output<Boolean> enableBatching;
 
-    public Input<Boolean> getEnableBatching() {
-        return this.enableBatching == null ? Input.empty() : this.enableBatching;
+    public Output<Boolean> getEnableBatching() {
+        return this.enableBatching == null ? Output.empty() : this.enableBatching;
     }
 
     @InputImport(name="sendAfter")
-      private final @Nullable Input<String> sendAfter;
+      private final @Nullable Output<String> sendAfter;
 
-    public Input<String> getSendAfter() {
-        return this.sendAfter == null ? Input.empty() : this.sendAfter;
+    public Output<String> getSendAfter() {
+        return this.sendAfter == null ? Output.empty() : this.sendAfter;
     }
 
     public ProviderBatchingArgs(
-        @Nullable Input<Boolean> enableBatching,
-        @Nullable Input<String> sendAfter) {
+        @Nullable Output<Boolean> enableBatching,
+        @Nullable Output<String> sendAfter) {
         this.enableBatching = enableBatching;
         this.sendAfter = sendAfter;
     }
 
     private ProviderBatchingArgs() {
-        this.enableBatching = Input.empty();
-        this.sendAfter = Input.empty();
+        this.enableBatching = Output.empty();
+        this.sendAfter = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class ProviderBatchingArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enableBatching;
-        private @Nullable Input<String> sendAfter;
+        private @Nullable Output<Boolean> enableBatching;
+        private @Nullable Output<String> sendAfter;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class ProviderBatchingArgs extends io.pulumi.resources.ResourceArgs
     	      this.sendAfter = defaults.sendAfter;
         }
 
-        public Builder enableBatching(@Nullable Input<Boolean> enableBatching) {
+        public Builder enableBatching(@Nullable Output<Boolean> enableBatching) {
             this.enableBatching = enableBatching;
             return this;
         }
 
         public Builder enableBatching(@Nullable Boolean enableBatching) {
-            this.enableBatching = Input.ofNullable(enableBatching);
+            this.enableBatching = Output.ofNullable(enableBatching);
             return this;
         }
 
-        public Builder sendAfter(@Nullable Input<String> sendAfter) {
+        public Builder sendAfter(@Nullable Output<String> sendAfter) {
             this.sendAfter = sendAfter;
             return this;
         }
 
         public Builder sendAfter(@Nullable String sendAfter) {
-            this.sendAfter = Input.ofNullable(sendAfter);
+            this.sendAfter = Output.ofNullable(sendAfter);
             return this;
         }
         public ProviderBatchingArgs build() {

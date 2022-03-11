@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.azurenative.batch.enums.NodePlacementPolicyType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class NodePlacementConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="policy")
-      private final @Nullable Input<NodePlacementPolicyType> policy;
+      private final @Nullable Output<NodePlacementPolicyType> policy;
 
-    public Input<NodePlacementPolicyType> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<NodePlacementPolicyType> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
-    public NodePlacementConfigurationArgs(@Nullable Input<NodePlacementPolicyType> policy) {
+    public NodePlacementConfigurationArgs(@Nullable Output<NodePlacementPolicyType> policy) {
         this.policy = policy;
     }
 
     private NodePlacementConfigurationArgs() {
-        this.policy = Input.empty();
+        this.policy = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class NodePlacementConfigurationArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<NodePlacementPolicyType> policy;
+        private @Nullable Output<NodePlacementPolicyType> policy;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class NodePlacementConfigurationArgs extends io.pulumi.resources.Re
     	      this.policy = defaults.policy;
         }
 
-        public Builder policy(@Nullable Input<NodePlacementPolicyType> policy) {
+        public Builder policy(@Nullable Output<NodePlacementPolicyType> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable NodePlacementPolicyType policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
         public NodePlacementConfigurationArgs build() {

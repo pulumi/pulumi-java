@@ -8,7 +8,6 @@ import io.pulumi.azurenative.databoxedge.IoTAddonArgs;
 import io.pulumi.azurenative.databoxedge.outputs.IoTDeviceInfoResponse;
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -214,10 +213,10 @@ public class IoTAddon extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IoTAddon(String name, IoTAddonArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:databoxedge:IoTAddon", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
+        super("azure-native:databoxedge:IoTAddon", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
     }
 
-    private IoTAddon(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private IoTAddon(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:databoxedge:IoTAddon", name, null, makeResourceOptions(options, id));
     }
 
@@ -228,17 +227,17 @@ public class IoTAddon extends io.pulumi.resources.CustomResource {
             .build();
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20200901:IoTAddon").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20200901preview:IoTAddon").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20201201:IoTAddon").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20210201:IoTAddon").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20210201preview:IoTAddon").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20210601:IoTAddon").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20210601preview:IoTAddon").build())
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20200901:IoTAddon").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20200901preview:IoTAddon").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20201201:IoTAddon").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20210201:IoTAddon").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20210201preview:IoTAddon").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20210601:IoTAddon").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20210601preview:IoTAddon").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -252,7 +251,7 @@ public class IoTAddon extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static IoTAddon get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static IoTAddon get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IoTAddon(name, id, options);
     }
 }

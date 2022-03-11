@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataflow_v1b3.enums.EnvironmentFlexResourceSchedulingGoal;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.DebugOptionsArgs;
@@ -28,10 +28,10 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterManagerApiService")
-      private final @Nullable Input<String> clusterManagerApiService;
+      private final @Nullable Output<String> clusterManagerApiService;
 
-    public Input<String> getClusterManagerApiService() {
-        return this.clusterManagerApiService == null ? Input.empty() : this.clusterManagerApiService;
+    public Output<String> getClusterManagerApiService() {
+        return this.clusterManagerApiService == null ? Output.empty() : this.clusterManagerApiService;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataset")
-      private final @Nullable Input<String> dataset;
+      private final @Nullable Output<String> dataset;
 
-    public Input<String> getDataset() {
-        return this.dataset == null ? Input.empty() : this.dataset;
+    public Output<String> getDataset() {
+        return this.dataset == null ? Output.empty() : this.dataset;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="debugOptions")
-      private final @Nullable Input<DebugOptionsArgs> debugOptions;
+      private final @Nullable Output<DebugOptionsArgs> debugOptions;
 
-    public Input<DebugOptionsArgs> getDebugOptions() {
-        return this.debugOptions == null ? Input.empty() : this.debugOptions;
+    public Output<DebugOptionsArgs> getDebugOptions() {
+        return this.debugOptions == null ? Output.empty() : this.debugOptions;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="experiments")
-      private final @Nullable Input<List<String>> experiments;
+      private final @Nullable Output<List<String>> experiments;
 
-    public Input<List<String>> getExperiments() {
-        return this.experiments == null ? Input.empty() : this.experiments;
+    public Output<List<String>> getExperiments() {
+        return this.experiments == null ? Output.empty() : this.experiments;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="flexResourceSchedulingGoal")
-      private final @Nullable Input<EnvironmentFlexResourceSchedulingGoal> flexResourceSchedulingGoal;
+      private final @Nullable Output<EnvironmentFlexResourceSchedulingGoal> flexResourceSchedulingGoal;
 
-    public Input<EnvironmentFlexResourceSchedulingGoal> getFlexResourceSchedulingGoal() {
-        return this.flexResourceSchedulingGoal == null ? Input.empty() : this.flexResourceSchedulingGoal;
+    public Output<EnvironmentFlexResourceSchedulingGoal> getFlexResourceSchedulingGoal() {
+        return this.flexResourceSchedulingGoal == null ? Output.empty() : this.flexResourceSchedulingGoal;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="internalExperiments")
-      private final @Nullable Input<Map<String,String>> internalExperiments;
+      private final @Nullable Output<Map<String,String>> internalExperiments;
 
-    public Input<Map<String,String>> getInternalExperiments() {
-        return this.internalExperiments == null ? Input.empty() : this.internalExperiments;
+    public Output<Map<String,String>> getInternalExperiments() {
+        return this.internalExperiments == null ? Output.empty() : this.internalExperiments;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sdkPipelineOptions")
-      private final @Nullable Input<Map<String,String>> sdkPipelineOptions;
+      private final @Nullable Output<Map<String,String>> sdkPipelineOptions;
 
-    public Input<Map<String,String>> getSdkPipelineOptions() {
-        return this.sdkPipelineOptions == null ? Input.empty() : this.sdkPipelineOptions;
+    public Output<Map<String,String>> getSdkPipelineOptions() {
+        return this.sdkPipelineOptions == null ? Output.empty() : this.sdkPipelineOptions;
     }
 
     /**
@@ -105,10 +105,10 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccountEmail")
-      private final @Nullable Input<String> serviceAccountEmail;
+      private final @Nullable Output<String> serviceAccountEmail;
 
-    public Input<String> getServiceAccountEmail() {
-        return this.serviceAccountEmail == null ? Input.empty() : this.serviceAccountEmail;
+    public Output<String> getServiceAccountEmail() {
+        return this.serviceAccountEmail == null ? Output.empty() : this.serviceAccountEmail;
     }
 
     /**
@@ -116,10 +116,10 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceKmsKeyName")
-      private final @Nullable Input<String> serviceKmsKeyName;
+      private final @Nullable Output<String> serviceKmsKeyName;
 
-    public Input<String> getServiceKmsKeyName() {
-        return this.serviceKmsKeyName == null ? Input.empty() : this.serviceKmsKeyName;
+    public Output<String> getServiceKmsKeyName() {
+        return this.serviceKmsKeyName == null ? Output.empty() : this.serviceKmsKeyName;
     }
 
     /**
@@ -127,10 +127,10 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceOptions")
-      private final @Nullable Input<List<String>> serviceOptions;
+      private final @Nullable Output<List<String>> serviceOptions;
 
-    public Input<List<String>> getServiceOptions() {
-        return this.serviceOptions == null ? Input.empty() : this.serviceOptions;
+    public Output<List<String>> getServiceOptions() {
+        return this.serviceOptions == null ? Output.empty() : this.serviceOptions;
     }
 
     /**
@@ -138,10 +138,10 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tempStoragePrefix")
-      private final @Nullable Input<String> tempStoragePrefix;
+      private final @Nullable Output<String> tempStoragePrefix;
 
-    public Input<String> getTempStoragePrefix() {
-        return this.tempStoragePrefix == null ? Input.empty() : this.tempStoragePrefix;
+    public Output<String> getTempStoragePrefix() {
+        return this.tempStoragePrefix == null ? Output.empty() : this.tempStoragePrefix;
     }
 
     /**
@@ -149,10 +149,10 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userAgent")
-      private final @Nullable Input<Map<String,String>> userAgent;
+      private final @Nullable Output<Map<String,String>> userAgent;
 
-    public Input<Map<String,String>> getUserAgent() {
-        return this.userAgent == null ? Input.empty() : this.userAgent;
+    public Output<Map<String,String>> getUserAgent() {
+        return this.userAgent == null ? Output.empty() : this.userAgent;
     }
 
     /**
@@ -160,10 +160,10 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<Map<String,String>> version;
+      private final @Nullable Output<Map<String,String>> version;
 
-    public Input<Map<String,String>> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<Map<String,String>> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     /**
@@ -171,10 +171,10 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workerPools")
-      private final @Nullable Input<List<WorkerPoolArgs>> workerPools;
+      private final @Nullable Output<List<WorkerPoolArgs>> workerPools;
 
-    public Input<List<WorkerPoolArgs>> getWorkerPools() {
-        return this.workerPools == null ? Input.empty() : this.workerPools;
+    public Output<List<WorkerPoolArgs>> getWorkerPools() {
+        return this.workerPools == null ? Output.empty() : this.workerPools;
     }
 
     /**
@@ -182,10 +182,10 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workerRegion")
-      private final @Nullable Input<String> workerRegion;
+      private final @Nullable Output<String> workerRegion;
 
-    public Input<String> getWorkerRegion() {
-        return this.workerRegion == null ? Input.empty() : this.workerRegion;
+    public Output<String> getWorkerRegion() {
+        return this.workerRegion == null ? Output.empty() : this.workerRegion;
     }
 
     /**
@@ -193,29 +193,29 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workerZone")
-      private final @Nullable Input<String> workerZone;
+      private final @Nullable Output<String> workerZone;
 
-    public Input<String> getWorkerZone() {
-        return this.workerZone == null ? Input.empty() : this.workerZone;
+    public Output<String> getWorkerZone() {
+        return this.workerZone == null ? Output.empty() : this.workerZone;
     }
 
     public EnvironmentArgs(
-        @Nullable Input<String> clusterManagerApiService,
-        @Nullable Input<String> dataset,
-        @Nullable Input<DebugOptionsArgs> debugOptions,
-        @Nullable Input<List<String>> experiments,
-        @Nullable Input<EnvironmentFlexResourceSchedulingGoal> flexResourceSchedulingGoal,
-        @Nullable Input<Map<String,String>> internalExperiments,
-        @Nullable Input<Map<String,String>> sdkPipelineOptions,
-        @Nullable Input<String> serviceAccountEmail,
-        @Nullable Input<String> serviceKmsKeyName,
-        @Nullable Input<List<String>> serviceOptions,
-        @Nullable Input<String> tempStoragePrefix,
-        @Nullable Input<Map<String,String>> userAgent,
-        @Nullable Input<Map<String,String>> version,
-        @Nullable Input<List<WorkerPoolArgs>> workerPools,
-        @Nullable Input<String> workerRegion,
-        @Nullable Input<String> workerZone) {
+        @Nullable Output<String> clusterManagerApiService,
+        @Nullable Output<String> dataset,
+        @Nullable Output<DebugOptionsArgs> debugOptions,
+        @Nullable Output<List<String>> experiments,
+        @Nullable Output<EnvironmentFlexResourceSchedulingGoal> flexResourceSchedulingGoal,
+        @Nullable Output<Map<String,String>> internalExperiments,
+        @Nullable Output<Map<String,String>> sdkPipelineOptions,
+        @Nullable Output<String> serviceAccountEmail,
+        @Nullable Output<String> serviceKmsKeyName,
+        @Nullable Output<List<String>> serviceOptions,
+        @Nullable Output<String> tempStoragePrefix,
+        @Nullable Output<Map<String,String>> userAgent,
+        @Nullable Output<Map<String,String>> version,
+        @Nullable Output<List<WorkerPoolArgs>> workerPools,
+        @Nullable Output<String> workerRegion,
+        @Nullable Output<String> workerZone) {
         this.clusterManagerApiService = clusterManagerApiService;
         this.dataset = dataset;
         this.debugOptions = debugOptions;
@@ -235,22 +235,22 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EnvironmentArgs() {
-        this.clusterManagerApiService = Input.empty();
-        this.dataset = Input.empty();
-        this.debugOptions = Input.empty();
-        this.experiments = Input.empty();
-        this.flexResourceSchedulingGoal = Input.empty();
-        this.internalExperiments = Input.empty();
-        this.sdkPipelineOptions = Input.empty();
-        this.serviceAccountEmail = Input.empty();
-        this.serviceKmsKeyName = Input.empty();
-        this.serviceOptions = Input.empty();
-        this.tempStoragePrefix = Input.empty();
-        this.userAgent = Input.empty();
-        this.version = Input.empty();
-        this.workerPools = Input.empty();
-        this.workerRegion = Input.empty();
-        this.workerZone = Input.empty();
+        this.clusterManagerApiService = Output.empty();
+        this.dataset = Output.empty();
+        this.debugOptions = Output.empty();
+        this.experiments = Output.empty();
+        this.flexResourceSchedulingGoal = Output.empty();
+        this.internalExperiments = Output.empty();
+        this.sdkPipelineOptions = Output.empty();
+        this.serviceAccountEmail = Output.empty();
+        this.serviceKmsKeyName = Output.empty();
+        this.serviceOptions = Output.empty();
+        this.tempStoragePrefix = Output.empty();
+        this.userAgent = Output.empty();
+        this.version = Output.empty();
+        this.workerPools = Output.empty();
+        this.workerRegion = Output.empty();
+        this.workerZone = Output.empty();
     }
 
     public static Builder builder() {
@@ -262,22 +262,22 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> clusterManagerApiService;
-        private @Nullable Input<String> dataset;
-        private @Nullable Input<DebugOptionsArgs> debugOptions;
-        private @Nullable Input<List<String>> experiments;
-        private @Nullable Input<EnvironmentFlexResourceSchedulingGoal> flexResourceSchedulingGoal;
-        private @Nullable Input<Map<String,String>> internalExperiments;
-        private @Nullable Input<Map<String,String>> sdkPipelineOptions;
-        private @Nullable Input<String> serviceAccountEmail;
-        private @Nullable Input<String> serviceKmsKeyName;
-        private @Nullable Input<List<String>> serviceOptions;
-        private @Nullable Input<String> tempStoragePrefix;
-        private @Nullable Input<Map<String,String>> userAgent;
-        private @Nullable Input<Map<String,String>> version;
-        private @Nullable Input<List<WorkerPoolArgs>> workerPools;
-        private @Nullable Input<String> workerRegion;
-        private @Nullable Input<String> workerZone;
+        private @Nullable Output<String> clusterManagerApiService;
+        private @Nullable Output<String> dataset;
+        private @Nullable Output<DebugOptionsArgs> debugOptions;
+        private @Nullable Output<List<String>> experiments;
+        private @Nullable Output<EnvironmentFlexResourceSchedulingGoal> flexResourceSchedulingGoal;
+        private @Nullable Output<Map<String,String>> internalExperiments;
+        private @Nullable Output<Map<String,String>> sdkPipelineOptions;
+        private @Nullable Output<String> serviceAccountEmail;
+        private @Nullable Output<String> serviceKmsKeyName;
+        private @Nullable Output<List<String>> serviceOptions;
+        private @Nullable Output<String> tempStoragePrefix;
+        private @Nullable Output<Map<String,String>> userAgent;
+        private @Nullable Output<Map<String,String>> version;
+        private @Nullable Output<List<WorkerPoolArgs>> workerPools;
+        private @Nullable Output<String> workerRegion;
+        private @Nullable Output<String> workerZone;
 
         public Builder() {
     	      // Empty
@@ -303,163 +303,163 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workerZone = defaults.workerZone;
         }
 
-        public Builder clusterManagerApiService(@Nullable Input<String> clusterManagerApiService) {
+        public Builder clusterManagerApiService(@Nullable Output<String> clusterManagerApiService) {
             this.clusterManagerApiService = clusterManagerApiService;
             return this;
         }
 
         public Builder clusterManagerApiService(@Nullable String clusterManagerApiService) {
-            this.clusterManagerApiService = Input.ofNullable(clusterManagerApiService);
+            this.clusterManagerApiService = Output.ofNullable(clusterManagerApiService);
             return this;
         }
 
-        public Builder dataset(@Nullable Input<String> dataset) {
+        public Builder dataset(@Nullable Output<String> dataset) {
             this.dataset = dataset;
             return this;
         }
 
         public Builder dataset(@Nullable String dataset) {
-            this.dataset = Input.ofNullable(dataset);
+            this.dataset = Output.ofNullable(dataset);
             return this;
         }
 
-        public Builder debugOptions(@Nullable Input<DebugOptionsArgs> debugOptions) {
+        public Builder debugOptions(@Nullable Output<DebugOptionsArgs> debugOptions) {
             this.debugOptions = debugOptions;
             return this;
         }
 
         public Builder debugOptions(@Nullable DebugOptionsArgs debugOptions) {
-            this.debugOptions = Input.ofNullable(debugOptions);
+            this.debugOptions = Output.ofNullable(debugOptions);
             return this;
         }
 
-        public Builder experiments(@Nullable Input<List<String>> experiments) {
+        public Builder experiments(@Nullable Output<List<String>> experiments) {
             this.experiments = experiments;
             return this;
         }
 
         public Builder experiments(@Nullable List<String> experiments) {
-            this.experiments = Input.ofNullable(experiments);
+            this.experiments = Output.ofNullable(experiments);
             return this;
         }
 
-        public Builder flexResourceSchedulingGoal(@Nullable Input<EnvironmentFlexResourceSchedulingGoal> flexResourceSchedulingGoal) {
+        public Builder flexResourceSchedulingGoal(@Nullable Output<EnvironmentFlexResourceSchedulingGoal> flexResourceSchedulingGoal) {
             this.flexResourceSchedulingGoal = flexResourceSchedulingGoal;
             return this;
         }
 
         public Builder flexResourceSchedulingGoal(@Nullable EnvironmentFlexResourceSchedulingGoal flexResourceSchedulingGoal) {
-            this.flexResourceSchedulingGoal = Input.ofNullable(flexResourceSchedulingGoal);
+            this.flexResourceSchedulingGoal = Output.ofNullable(flexResourceSchedulingGoal);
             return this;
         }
 
-        public Builder internalExperiments(@Nullable Input<Map<String,String>> internalExperiments) {
+        public Builder internalExperiments(@Nullable Output<Map<String,String>> internalExperiments) {
             this.internalExperiments = internalExperiments;
             return this;
         }
 
         public Builder internalExperiments(@Nullable Map<String,String> internalExperiments) {
-            this.internalExperiments = Input.ofNullable(internalExperiments);
+            this.internalExperiments = Output.ofNullable(internalExperiments);
             return this;
         }
 
-        public Builder sdkPipelineOptions(@Nullable Input<Map<String,String>> sdkPipelineOptions) {
+        public Builder sdkPipelineOptions(@Nullable Output<Map<String,String>> sdkPipelineOptions) {
             this.sdkPipelineOptions = sdkPipelineOptions;
             return this;
         }
 
         public Builder sdkPipelineOptions(@Nullable Map<String,String> sdkPipelineOptions) {
-            this.sdkPipelineOptions = Input.ofNullable(sdkPipelineOptions);
+            this.sdkPipelineOptions = Output.ofNullable(sdkPipelineOptions);
             return this;
         }
 
-        public Builder serviceAccountEmail(@Nullable Input<String> serviceAccountEmail) {
+        public Builder serviceAccountEmail(@Nullable Output<String> serviceAccountEmail) {
             this.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
 
         public Builder serviceAccountEmail(@Nullable String serviceAccountEmail) {
-            this.serviceAccountEmail = Input.ofNullable(serviceAccountEmail);
+            this.serviceAccountEmail = Output.ofNullable(serviceAccountEmail);
             return this;
         }
 
-        public Builder serviceKmsKeyName(@Nullable Input<String> serviceKmsKeyName) {
+        public Builder serviceKmsKeyName(@Nullable Output<String> serviceKmsKeyName) {
             this.serviceKmsKeyName = serviceKmsKeyName;
             return this;
         }
 
         public Builder serviceKmsKeyName(@Nullable String serviceKmsKeyName) {
-            this.serviceKmsKeyName = Input.ofNullable(serviceKmsKeyName);
+            this.serviceKmsKeyName = Output.ofNullable(serviceKmsKeyName);
             return this;
         }
 
-        public Builder serviceOptions(@Nullable Input<List<String>> serviceOptions) {
+        public Builder serviceOptions(@Nullable Output<List<String>> serviceOptions) {
             this.serviceOptions = serviceOptions;
             return this;
         }
 
         public Builder serviceOptions(@Nullable List<String> serviceOptions) {
-            this.serviceOptions = Input.ofNullable(serviceOptions);
+            this.serviceOptions = Output.ofNullable(serviceOptions);
             return this;
         }
 
-        public Builder tempStoragePrefix(@Nullable Input<String> tempStoragePrefix) {
+        public Builder tempStoragePrefix(@Nullable Output<String> tempStoragePrefix) {
             this.tempStoragePrefix = tempStoragePrefix;
             return this;
         }
 
         public Builder tempStoragePrefix(@Nullable String tempStoragePrefix) {
-            this.tempStoragePrefix = Input.ofNullable(tempStoragePrefix);
+            this.tempStoragePrefix = Output.ofNullable(tempStoragePrefix);
             return this;
         }
 
-        public Builder userAgent(@Nullable Input<Map<String,String>> userAgent) {
+        public Builder userAgent(@Nullable Output<Map<String,String>> userAgent) {
             this.userAgent = userAgent;
             return this;
         }
 
         public Builder userAgent(@Nullable Map<String,String> userAgent) {
-            this.userAgent = Input.ofNullable(userAgent);
+            this.userAgent = Output.ofNullable(userAgent);
             return this;
         }
 
-        public Builder version(@Nullable Input<Map<String,String>> version) {
+        public Builder version(@Nullable Output<Map<String,String>> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable Map<String,String> version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
 
-        public Builder workerPools(@Nullable Input<List<WorkerPoolArgs>> workerPools) {
+        public Builder workerPools(@Nullable Output<List<WorkerPoolArgs>> workerPools) {
             this.workerPools = workerPools;
             return this;
         }
 
         public Builder workerPools(@Nullable List<WorkerPoolArgs> workerPools) {
-            this.workerPools = Input.ofNullable(workerPools);
+            this.workerPools = Output.ofNullable(workerPools);
             return this;
         }
 
-        public Builder workerRegion(@Nullable Input<String> workerRegion) {
+        public Builder workerRegion(@Nullable Output<String> workerRegion) {
             this.workerRegion = workerRegion;
             return this;
         }
 
         public Builder workerRegion(@Nullable String workerRegion) {
-            this.workerRegion = Input.ofNullable(workerRegion);
+            this.workerRegion = Output.ofNullable(workerRegion);
             return this;
         }
 
-        public Builder workerZone(@Nullable Input<String> workerZone) {
+        public Builder workerZone(@Nullable Output<String> workerZone) {
             this.workerZone = workerZone;
             return this;
         }
 
         public Builder workerZone(@Nullable String workerZone) {
-            this.workerZone = Input.ofNullable(workerZone);
+            this.workerZone = Output.ofNullable(workerZone);
             return this;
         }
         public EnvironmentArgs build() {

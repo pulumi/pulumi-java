@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dashboardJson", required=true)
-      private final Input<String> dashboardJson;
+      private final Output<String> dashboardJson;
 
-    public Input<String> getDashboardJson() {
+    public Output<String> getDashboardJson() {
         return this.dashboardJson;
     }
 
@@ -32,22 +32,22 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public DashboardArgs(
-        Input<String> dashboardJson,
-        @Nullable Input<String> project) {
+        Output<String> dashboardJson,
+        @Nullable Output<String> project) {
         this.dashboardJson = Objects.requireNonNull(dashboardJson, "expected parameter 'dashboardJson' to be non-null");
         this.project = project;
     }
 
     private DashboardArgs() {
-        this.dashboardJson = Input.empty();
-        this.project = Input.empty();
+        this.dashboardJson = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> dashboardJson;
-        private @Nullable Input<String> project;
+        private Output<String> dashboardJson;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder dashboardJson(Input<String> dashboardJson) {
+        public Builder dashboardJson(Output<String> dashboardJson) {
             this.dashboardJson = Objects.requireNonNull(dashboardJson);
             return this;
         }
 
         public Builder dashboardJson(String dashboardJson) {
-            this.dashboardJson = Input.of(Objects.requireNonNull(dashboardJson));
+            this.dashboardJson = Output.of(Objects.requireNonNull(dashboardJson));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public DashboardArgs build() {

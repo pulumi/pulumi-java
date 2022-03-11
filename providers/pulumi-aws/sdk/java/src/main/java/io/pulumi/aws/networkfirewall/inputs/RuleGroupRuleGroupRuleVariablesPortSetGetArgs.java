@@ -4,7 +4,7 @@
 package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRuleVariablesPortSetPortSetGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class RuleGroupRuleGroupRuleVariablesPortSetGetArgs extends io.pulu
      * 
      */
     @InputImport(name="key", required=true)
-      private final Input<String> key;
+      private final Output<String> key;
 
-    public Input<String> getKey() {
+    public Output<String> getKey() {
         return this.key;
     }
 
@@ -30,22 +30,22 @@ public final class RuleGroupRuleGroupRuleVariablesPortSetGetArgs extends io.pulu
      * 
      */
     @InputImport(name="portSet", required=true)
-      private final Input<RuleGroupRuleGroupRuleVariablesPortSetPortSetGetArgs> portSet;
+      private final Output<RuleGroupRuleGroupRuleVariablesPortSetPortSetGetArgs> portSet;
 
-    public Input<RuleGroupRuleGroupRuleVariablesPortSetPortSetGetArgs> getPortSet() {
+    public Output<RuleGroupRuleGroupRuleVariablesPortSetPortSetGetArgs> getPortSet() {
         return this.portSet;
     }
 
     public RuleGroupRuleGroupRuleVariablesPortSetGetArgs(
-        Input<String> key,
-        Input<RuleGroupRuleGroupRuleVariablesPortSetPortSetGetArgs> portSet) {
+        Output<String> key,
+        Output<RuleGroupRuleGroupRuleVariablesPortSetPortSetGetArgs> portSet) {
         this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
         this.portSet = Objects.requireNonNull(portSet, "expected parameter 'portSet' to be non-null");
     }
 
     private RuleGroupRuleGroupRuleVariablesPortSetGetArgs() {
-        this.key = Input.empty();
-        this.portSet = Input.empty();
+        this.key = Output.empty();
+        this.portSet = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class RuleGroupRuleGroupRuleVariablesPortSetGetArgs extends io.pulu
     }
 
     public static final class Builder {
-        private Input<String> key;
-        private Input<RuleGroupRuleGroupRuleVariablesPortSetPortSetGetArgs> portSet;
+        private Output<String> key;
+        private Output<RuleGroupRuleGroupRuleVariablesPortSetPortSetGetArgs> portSet;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class RuleGroupRuleGroupRuleVariablesPortSetGetArgs extends io.pulu
     	      this.portSet = defaults.portSet;
         }
 
-        public Builder key(Input<String> key) {
+        public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
         public Builder key(String key) {
-            this.key = Input.of(Objects.requireNonNull(key));
+            this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
 
-        public Builder portSet(Input<RuleGroupRuleGroupRuleVariablesPortSetPortSetGetArgs> portSet) {
+        public Builder portSet(Output<RuleGroupRuleGroupRuleVariablesPortSetPortSetGetArgs> portSet) {
             this.portSet = Objects.requireNonNull(portSet);
             return this;
         }
 
         public Builder portSet(RuleGroupRuleGroupRuleVariablesPortSetPortSetGetArgs portSet) {
-            this.portSet = Input.of(Objects.requireNonNull(portSet));
+            this.portSet = Output.of(Objects.requireNonNull(portSet));
             return this;
         }
         public RuleGroupRuleGroupRuleVariablesPortSetGetArgs build() {

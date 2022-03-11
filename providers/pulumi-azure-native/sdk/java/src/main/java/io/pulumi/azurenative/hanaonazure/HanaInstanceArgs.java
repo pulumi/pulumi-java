@@ -6,7 +6,7 @@ package io.pulumi.azurenative.hanaonazure;
 import io.pulumi.azurenative.hanaonazure.inputs.NetworkProfileArgs;
 import io.pulumi.azurenative.hanaonazure.inputs.OSProfileArgs;
 import io.pulumi.azurenative.hanaonazure.inputs.StorageProfileArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -23,10 +23,10 @@ public final class HanaInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hanaInstanceName")
-      private final @Nullable Input<String> hanaInstanceName;
+      private final @Nullable Output<String> hanaInstanceName;
 
-    public Input<String> getHanaInstanceName() {
-        return this.hanaInstanceName == null ? Input.empty() : this.hanaInstanceName;
+    public Output<String> getHanaInstanceName() {
+        return this.hanaInstanceName == null ? Output.empty() : this.hanaInstanceName;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class HanaInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class HanaInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkProfile")
-      private final @Nullable Input<NetworkProfileArgs> networkProfile;
+      private final @Nullable Output<NetworkProfileArgs> networkProfile;
 
-    public Input<NetworkProfileArgs> getNetworkProfile() {
-        return this.networkProfile == null ? Input.empty() : this.networkProfile;
+    public Output<NetworkProfileArgs> getNetworkProfile() {
+        return this.networkProfile == null ? Output.empty() : this.networkProfile;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class HanaInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="osProfile")
-      private final @Nullable Input<OSProfileArgs> osProfile;
+      private final @Nullable Output<OSProfileArgs> osProfile;
 
-    public Input<OSProfileArgs> getOsProfile() {
-        return this.osProfile == null ? Input.empty() : this.osProfile;
+    public Output<OSProfileArgs> getOsProfile() {
+        return this.osProfile == null ? Output.empty() : this.osProfile;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class HanaInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="partnerNodeId")
-      private final @Nullable Input<String> partnerNodeId;
+      private final @Nullable Output<String> partnerNodeId;
 
-    public Input<String> getPartnerNodeId() {
-        return this.partnerNodeId == null ? Input.empty() : this.partnerNodeId;
+    public Output<String> getPartnerNodeId() {
+        return this.partnerNodeId == null ? Output.empty() : this.partnerNodeId;
     }
 
     /**
@@ -78,9 +78,9 @@ public final class HanaInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,10 +89,10 @@ public final class HanaInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageProfile")
-      private final @Nullable Input<StorageProfileArgs> storageProfile;
+      private final @Nullable Output<StorageProfileArgs> storageProfile;
 
-    public Input<StorageProfileArgs> getStorageProfile() {
-        return this.storageProfile == null ? Input.empty() : this.storageProfile;
+    public Output<StorageProfileArgs> getStorageProfile() {
+        return this.storageProfile == null ? Output.empty() : this.storageProfile;
     }
 
     /**
@@ -100,21 +100,21 @@ public final class HanaInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public HanaInstanceArgs(
-        @Nullable Input<String> hanaInstanceName,
-        @Nullable Input<String> location,
-        @Nullable Input<NetworkProfileArgs> networkProfile,
-        @Nullable Input<OSProfileArgs> osProfile,
-        @Nullable Input<String> partnerNodeId,
-        Input<String> resourceGroupName,
-        @Nullable Input<StorageProfileArgs> storageProfile,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> hanaInstanceName,
+        @Nullable Output<String> location,
+        @Nullable Output<NetworkProfileArgs> networkProfile,
+        @Nullable Output<OSProfileArgs> osProfile,
+        @Nullable Output<String> partnerNodeId,
+        Output<String> resourceGroupName,
+        @Nullable Output<StorageProfileArgs> storageProfile,
+        @Nullable Output<Map<String,String>> tags) {
         this.hanaInstanceName = hanaInstanceName;
         this.location = location;
         this.networkProfile = networkProfile;
@@ -126,14 +126,14 @@ public final class HanaInstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HanaInstanceArgs() {
-        this.hanaInstanceName = Input.empty();
-        this.location = Input.empty();
-        this.networkProfile = Input.empty();
-        this.osProfile = Input.empty();
-        this.partnerNodeId = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.storageProfile = Input.empty();
-        this.tags = Input.empty();
+        this.hanaInstanceName = Output.empty();
+        this.location = Output.empty();
+        this.networkProfile = Output.empty();
+        this.osProfile = Output.empty();
+        this.partnerNodeId = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.storageProfile = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -145,14 +145,14 @@ public final class HanaInstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> hanaInstanceName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<NetworkProfileArgs> networkProfile;
-        private @Nullable Input<OSProfileArgs> osProfile;
-        private @Nullable Input<String> partnerNodeId;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<StorageProfileArgs> storageProfile;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> hanaInstanceName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<NetworkProfileArgs> networkProfile;
+        private @Nullable Output<OSProfileArgs> osProfile;
+        private @Nullable Output<String> partnerNodeId;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<StorageProfileArgs> storageProfile;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -170,83 +170,83 @@ public final class HanaInstanceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder hanaInstanceName(@Nullable Input<String> hanaInstanceName) {
+        public Builder hanaInstanceName(@Nullable Output<String> hanaInstanceName) {
             this.hanaInstanceName = hanaInstanceName;
             return this;
         }
 
         public Builder hanaInstanceName(@Nullable String hanaInstanceName) {
-            this.hanaInstanceName = Input.ofNullable(hanaInstanceName);
+            this.hanaInstanceName = Output.ofNullable(hanaInstanceName);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder networkProfile(@Nullable Input<NetworkProfileArgs> networkProfile) {
+        public Builder networkProfile(@Nullable Output<NetworkProfileArgs> networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
 
         public Builder networkProfile(@Nullable NetworkProfileArgs networkProfile) {
-            this.networkProfile = Input.ofNullable(networkProfile);
+            this.networkProfile = Output.ofNullable(networkProfile);
             return this;
         }
 
-        public Builder osProfile(@Nullable Input<OSProfileArgs> osProfile) {
+        public Builder osProfile(@Nullable Output<OSProfileArgs> osProfile) {
             this.osProfile = osProfile;
             return this;
         }
 
         public Builder osProfile(@Nullable OSProfileArgs osProfile) {
-            this.osProfile = Input.ofNullable(osProfile);
+            this.osProfile = Output.ofNullable(osProfile);
             return this;
         }
 
-        public Builder partnerNodeId(@Nullable Input<String> partnerNodeId) {
+        public Builder partnerNodeId(@Nullable Output<String> partnerNodeId) {
             this.partnerNodeId = partnerNodeId;
             return this;
         }
 
         public Builder partnerNodeId(@Nullable String partnerNodeId) {
-            this.partnerNodeId = Input.ofNullable(partnerNodeId);
+            this.partnerNodeId = Output.ofNullable(partnerNodeId);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder storageProfile(@Nullable Input<StorageProfileArgs> storageProfile) {
+        public Builder storageProfile(@Nullable Output<StorageProfileArgs> storageProfile) {
             this.storageProfile = storageProfile;
             return this;
         }
 
         public Builder storageProfile(@Nullable StorageProfileArgs storageProfile) {
-            this.storageProfile = Input.ofNullable(storageProfile);
+            this.storageProfile = Output.ofNullable(storageProfile);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public HanaInstanceArgs build() {

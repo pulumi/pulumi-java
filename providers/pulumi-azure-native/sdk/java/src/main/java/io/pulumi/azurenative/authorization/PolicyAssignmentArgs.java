@@ -8,7 +8,7 @@ import io.pulumi.azurenative.authorization.inputs.IdentityArgs;
 import io.pulumi.azurenative.authorization.inputs.NonComplianceMessageArgs;
 import io.pulumi.azurenative.authorization.inputs.ParameterValuesValueArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="enforcementMode")
-      private final @Nullable Input<Either<String,EnforcementMode>> enforcementMode;
+      private final @Nullable Output<Either<String,EnforcementMode>> enforcementMode;
 
-    public Input<Either<String,EnforcementMode>> getEnforcementMode() {
-        return this.enforcementMode == null ? Input.empty() : this.enforcementMode;
+    public Output<Either<String,EnforcementMode>> getEnforcementMode() {
+        return this.enforcementMode == null ? Output.empty() : this.enforcementMode;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<IdentityArgs> identity;
+      private final @Nullable Output<IdentityArgs> identity;
 
-    public Input<IdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<IdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<Object> metadata;
+      private final @Nullable Output<Object> metadata;
 
-    public Input<Object> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Object> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -93,10 +93,10 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="nonComplianceMessages")
-      private final @Nullable Input<List<NonComplianceMessageArgs>> nonComplianceMessages;
+      private final @Nullable Output<List<NonComplianceMessageArgs>> nonComplianceMessages;
 
-    public Input<List<NonComplianceMessageArgs>> getNonComplianceMessages() {
-        return this.nonComplianceMessages == null ? Input.empty() : this.nonComplianceMessages;
+    public Output<List<NonComplianceMessageArgs>> getNonComplianceMessages() {
+        return this.nonComplianceMessages == null ? Output.empty() : this.nonComplianceMessages;
     }
 
     /**
@@ -104,10 +104,10 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="notScopes")
-      private final @Nullable Input<List<String>> notScopes;
+      private final @Nullable Output<List<String>> notScopes;
 
-    public Input<List<String>> getNotScopes() {
-        return this.notScopes == null ? Input.empty() : this.notScopes;
+    public Output<List<String>> getNotScopes() {
+        return this.notScopes == null ? Output.empty() : this.notScopes;
     }
 
     /**
@@ -115,10 +115,10 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,ParameterValuesValueArgs>> parameters;
+      private final @Nullable Output<Map<String,ParameterValuesValueArgs>> parameters;
 
-    public Input<Map<String,ParameterValuesValueArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,ParameterValuesValueArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -126,10 +126,10 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="policyAssignmentName")
-      private final @Nullable Input<String> policyAssignmentName;
+      private final @Nullable Output<String> policyAssignmentName;
 
-    public Input<String> getPolicyAssignmentName() {
-        return this.policyAssignmentName == null ? Input.empty() : this.policyAssignmentName;
+    public Output<String> getPolicyAssignmentName() {
+        return this.policyAssignmentName == null ? Output.empty() : this.policyAssignmentName;
     }
 
     /**
@@ -137,10 +137,10 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="policyDefinitionId")
-      private final @Nullable Input<String> policyDefinitionId;
+      private final @Nullable Output<String> policyDefinitionId;
 
-    public Input<String> getPolicyDefinitionId() {
-        return this.policyDefinitionId == null ? Input.empty() : this.policyDefinitionId;
+    public Output<String> getPolicyDefinitionId() {
+        return this.policyDefinitionId == null ? Output.empty() : this.policyDefinitionId;
     }
 
     /**
@@ -148,28 +148,28 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="scope", required=true)
-      private final Input<String> scope;
+      private final Output<String> scope;
 
-    public Input<String> getScope() {
+    public Output<String> getScope() {
         return this.scope;
     }
 
     public PolicyAssignmentArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        @Nullable Input<Either<String,EnforcementMode>> enforcementMode,
-        @Nullable Input<IdentityArgs> identity,
-        @Nullable Input<String> location,
-        @Nullable Input<Object> metadata,
-        @Nullable Input<List<NonComplianceMessageArgs>> nonComplianceMessages,
-        @Nullable Input<List<String>> notScopes,
-        @Nullable Input<Map<String,ParameterValuesValueArgs>> parameters,
-        @Nullable Input<String> policyAssignmentName,
-        @Nullable Input<String> policyDefinitionId,
-        Input<String> scope) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        @Nullable Output<Either<String,EnforcementMode>> enforcementMode,
+        @Nullable Output<IdentityArgs> identity,
+        @Nullable Output<String> location,
+        @Nullable Output<Object> metadata,
+        @Nullable Output<List<NonComplianceMessageArgs>> nonComplianceMessages,
+        @Nullable Output<List<String>> notScopes,
+        @Nullable Output<Map<String,ParameterValuesValueArgs>> parameters,
+        @Nullable Output<String> policyAssignmentName,
+        @Nullable Output<String> policyDefinitionId,
+        Output<String> scope) {
         this.description = description;
         this.displayName = displayName;
-        this.enforcementMode = enforcementMode == null ? Input.ofLeft("Default") : enforcementMode;
+        this.enforcementMode = enforcementMode == null ? Output.ofLeft("Default") : enforcementMode;
         this.identity = identity;
         this.location = location;
         this.metadata = metadata;
@@ -182,18 +182,18 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private PolicyAssignmentArgs() {
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.enforcementMode = Input.empty();
-        this.identity = Input.empty();
-        this.location = Input.empty();
-        this.metadata = Input.empty();
-        this.nonComplianceMessages = Input.empty();
-        this.notScopes = Input.empty();
-        this.parameters = Input.empty();
-        this.policyAssignmentName = Input.empty();
-        this.policyDefinitionId = Input.empty();
-        this.scope = Input.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.enforcementMode = Output.empty();
+        this.identity = Output.empty();
+        this.location = Output.empty();
+        this.metadata = Output.empty();
+        this.nonComplianceMessages = Output.empty();
+        this.notScopes = Output.empty();
+        this.parameters = Output.empty();
+        this.policyAssignmentName = Output.empty();
+        this.policyDefinitionId = Output.empty();
+        this.scope = Output.empty();
     }
 
     public static Builder builder() {
@@ -205,18 +205,18 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<Either<String,EnforcementMode>> enforcementMode;
-        private @Nullable Input<IdentityArgs> identity;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Object> metadata;
-        private @Nullable Input<List<NonComplianceMessageArgs>> nonComplianceMessages;
-        private @Nullable Input<List<String>> notScopes;
-        private @Nullable Input<Map<String,ParameterValuesValueArgs>> parameters;
-        private @Nullable Input<String> policyAssignmentName;
-        private @Nullable Input<String> policyDefinitionId;
-        private Input<String> scope;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<Either<String,EnforcementMode>> enforcementMode;
+        private @Nullable Output<IdentityArgs> identity;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Object> metadata;
+        private @Nullable Output<List<NonComplianceMessageArgs>> nonComplianceMessages;
+        private @Nullable Output<List<String>> notScopes;
+        private @Nullable Output<Map<String,ParameterValuesValueArgs>> parameters;
+        private @Nullable Output<String> policyAssignmentName;
+        private @Nullable Output<String> policyDefinitionId;
+        private Output<String> scope;
 
         public Builder() {
     	      // Empty
@@ -238,123 +238,123 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
     	      this.scope = defaults.scope;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder enforcementMode(@Nullable Input<Either<String,EnforcementMode>> enforcementMode) {
+        public Builder enforcementMode(@Nullable Output<Either<String,EnforcementMode>> enforcementMode) {
             this.enforcementMode = enforcementMode;
             return this;
         }
 
         public Builder enforcementMode(@Nullable Either<String,EnforcementMode> enforcementMode) {
-            this.enforcementMode = Input.ofNullable(enforcementMode);
+            this.enforcementMode = Output.ofNullable(enforcementMode);
             return this;
         }
 
-        public Builder identity(@Nullable Input<IdentityArgs> identity) {
+        public Builder identity(@Nullable Output<IdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable IdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<Object> metadata) {
+        public Builder metadata(@Nullable Output<Object> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Object metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder nonComplianceMessages(@Nullable Input<List<NonComplianceMessageArgs>> nonComplianceMessages) {
+        public Builder nonComplianceMessages(@Nullable Output<List<NonComplianceMessageArgs>> nonComplianceMessages) {
             this.nonComplianceMessages = nonComplianceMessages;
             return this;
         }
 
         public Builder nonComplianceMessages(@Nullable List<NonComplianceMessageArgs> nonComplianceMessages) {
-            this.nonComplianceMessages = Input.ofNullable(nonComplianceMessages);
+            this.nonComplianceMessages = Output.ofNullable(nonComplianceMessages);
             return this;
         }
 
-        public Builder notScopes(@Nullable Input<List<String>> notScopes) {
+        public Builder notScopes(@Nullable Output<List<String>> notScopes) {
             this.notScopes = notScopes;
             return this;
         }
 
         public Builder notScopes(@Nullable List<String> notScopes) {
-            this.notScopes = Input.ofNullable(notScopes);
+            this.notScopes = Output.ofNullable(notScopes);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,ParameterValuesValueArgs>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,ParameterValuesValueArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,ParameterValuesValueArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder policyAssignmentName(@Nullable Input<String> policyAssignmentName) {
+        public Builder policyAssignmentName(@Nullable Output<String> policyAssignmentName) {
             this.policyAssignmentName = policyAssignmentName;
             return this;
         }
 
         public Builder policyAssignmentName(@Nullable String policyAssignmentName) {
-            this.policyAssignmentName = Input.ofNullable(policyAssignmentName);
+            this.policyAssignmentName = Output.ofNullable(policyAssignmentName);
             return this;
         }
 
-        public Builder policyDefinitionId(@Nullable Input<String> policyDefinitionId) {
+        public Builder policyDefinitionId(@Nullable Output<String> policyDefinitionId) {
             this.policyDefinitionId = policyDefinitionId;
             return this;
         }
 
         public Builder policyDefinitionId(@Nullable String policyDefinitionId) {
-            this.policyDefinitionId = Input.ofNullable(policyDefinitionId);
+            this.policyDefinitionId = Output.ofNullable(policyDefinitionId);
             return this;
         }
 
-        public Builder scope(Input<String> scope) {
+        public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
         public Builder scope(String scope) {
-            this.scope = Input.of(Objects.requireNonNull(scope));
+            this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
         public PolicyAssignmentArgs build() {

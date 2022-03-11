@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ApiResourceBackendServiceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="serviceUrl")
-      private final @Nullable Input<String> serviceUrl;
+      private final @Nullable Output<String> serviceUrl;
 
-    public Input<String> getServiceUrl() {
-        return this.serviceUrl == null ? Input.empty() : this.serviceUrl;
+    public Output<String> getServiceUrl() {
+        return this.serviceUrl == null ? Output.empty() : this.serviceUrl;
     }
 
-    public ApiResourceBackendServiceArgs(@Nullable Input<String> serviceUrl) {
+    public ApiResourceBackendServiceArgs(@Nullable Output<String> serviceUrl) {
         this.serviceUrl = serviceUrl;
     }
 
     private ApiResourceBackendServiceArgs() {
-        this.serviceUrl = Input.empty();
+        this.serviceUrl = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ApiResourceBackendServiceArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> serviceUrl;
+        private @Nullable Output<String> serviceUrl;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ApiResourceBackendServiceArgs extends io.pulumi.resources.Res
     	      this.serviceUrl = defaults.serviceUrl;
         }
 
-        public Builder serviceUrl(@Nullable Input<String> serviceUrl) {
+        public Builder serviceUrl(@Nullable Output<String> serviceUrl) {
             this.serviceUrl = serviceUrl;
             return this;
         }
 
         public Builder serviceUrl(@Nullable String serviceUrl) {
-            this.serviceUrl = Input.ofNullable(serviceUrl);
+            this.serviceUrl = Output.ofNullable(serviceUrl);
             return this;
         }
         public ApiResourceBackendServiceArgs build() {

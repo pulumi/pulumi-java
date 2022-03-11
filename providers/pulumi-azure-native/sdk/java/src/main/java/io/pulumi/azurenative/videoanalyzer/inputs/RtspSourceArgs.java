@@ -7,7 +7,7 @@ import io.pulumi.azurenative.videoanalyzer.enums.RtspTransport;
 import io.pulumi.azurenative.videoanalyzer.inputs.TlsEndpointArgs;
 import io.pulumi.azurenative.videoanalyzer.inputs.UnsecuredEndpointArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -27,9 +27,9 @@ public final class RtspSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpoint", required=true)
-      private final Input<Either<TlsEndpointArgs,UnsecuredEndpointArgs>> endpoint;
+      private final Output<Either<TlsEndpointArgs,UnsecuredEndpointArgs>> endpoint;
 
-    public Input<Either<TlsEndpointArgs,UnsecuredEndpointArgs>> getEndpoint() {
+    public Output<Either<TlsEndpointArgs,UnsecuredEndpointArgs>> getEndpoint() {
         return this.endpoint;
     }
 
@@ -38,9 +38,9 @@ public final class RtspSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -49,10 +49,10 @@ public final class RtspSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transport")
-      private final @Nullable Input<Either<String,RtspTransport>> transport;
+      private final @Nullable Output<Either<String,RtspTransport>> transport;
 
-    public Input<Either<String,RtspTransport>> getTransport() {
-        return this.transport == null ? Input.empty() : this.transport;
+    public Output<Either<String,RtspTransport>> getTransport() {
+        return this.transport == null ? Output.empty() : this.transport;
     }
 
     /**
@@ -61,17 +61,17 @@ public final class RtspSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public RtspSourceArgs(
-        Input<Either<TlsEndpointArgs,UnsecuredEndpointArgs>> endpoint,
-        Input<String> name,
-        @Nullable Input<Either<String,RtspTransport>> transport,
-        Input<String> type) {
+        Output<Either<TlsEndpointArgs,UnsecuredEndpointArgs>> endpoint,
+        Output<String> name,
+        @Nullable Output<Either<String,RtspTransport>> transport,
+        Output<String> type) {
         this.endpoint = Objects.requireNonNull(endpoint, "expected parameter 'endpoint' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.transport = transport;
@@ -79,10 +79,10 @@ public final class RtspSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RtspSourceArgs() {
-        this.endpoint = Input.empty();
-        this.name = Input.empty();
-        this.transport = Input.empty();
-        this.type = Input.empty();
+        this.endpoint = Output.empty();
+        this.name = Output.empty();
+        this.transport = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -94,10 +94,10 @@ public final class RtspSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Either<TlsEndpointArgs,UnsecuredEndpointArgs>> endpoint;
-        private Input<String> name;
-        private @Nullable Input<Either<String,RtspTransport>> transport;
-        private Input<String> type;
+        private Output<Either<TlsEndpointArgs,UnsecuredEndpointArgs>> endpoint;
+        private Output<String> name;
+        private @Nullable Output<Either<String,RtspTransport>> transport;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -111,43 +111,43 @@ public final class RtspSourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder endpoint(Input<Either<TlsEndpointArgs,UnsecuredEndpointArgs>> endpoint) {
+        public Builder endpoint(Output<Either<TlsEndpointArgs,UnsecuredEndpointArgs>> endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
 
         public Builder endpoint(Either<TlsEndpointArgs,UnsecuredEndpointArgs> endpoint) {
-            this.endpoint = Input.of(Objects.requireNonNull(endpoint));
+            this.endpoint = Output.of(Objects.requireNonNull(endpoint));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder transport(@Nullable Input<Either<String,RtspTransport>> transport) {
+        public Builder transport(@Nullable Output<Either<String,RtspTransport>> transport) {
             this.transport = transport;
             return this;
         }
 
         public Builder transport(@Nullable Either<String,RtspTransport> transport) {
-            this.transport = Input.ofNullable(transport);
+            this.transport = Output.ofNullable(transport);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public RtspSourceArgs build() {

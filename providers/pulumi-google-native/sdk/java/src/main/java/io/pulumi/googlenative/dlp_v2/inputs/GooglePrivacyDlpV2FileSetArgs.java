@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CloudStorageRegexFileSetArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class GooglePrivacyDlpV2FileSetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="regexFileSet")
-      private final @Nullable Input<GooglePrivacyDlpV2CloudStorageRegexFileSetArgs> regexFileSet;
+      private final @Nullable Output<GooglePrivacyDlpV2CloudStorageRegexFileSetArgs> regexFileSet;
 
-    public Input<GooglePrivacyDlpV2CloudStorageRegexFileSetArgs> getRegexFileSet() {
-        return this.regexFileSet == null ? Input.empty() : this.regexFileSet;
+    public Output<GooglePrivacyDlpV2CloudStorageRegexFileSetArgs> getRegexFileSet() {
+        return this.regexFileSet == null ? Output.empty() : this.regexFileSet;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class GooglePrivacyDlpV2FileSetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="url")
-      private final @Nullable Input<String> url;
+      private final @Nullable Output<String> url;
 
-    public Input<String> getUrl() {
-        return this.url == null ? Input.empty() : this.url;
+    public Output<String> getUrl() {
+        return this.url == null ? Output.empty() : this.url;
     }
 
     public GooglePrivacyDlpV2FileSetArgs(
-        @Nullable Input<GooglePrivacyDlpV2CloudStorageRegexFileSetArgs> regexFileSet,
-        @Nullable Input<String> url) {
+        @Nullable Output<GooglePrivacyDlpV2CloudStorageRegexFileSetArgs> regexFileSet,
+        @Nullable Output<String> url) {
         this.regexFileSet = regexFileSet;
         this.url = url;
     }
 
     private GooglePrivacyDlpV2FileSetArgs() {
-        this.regexFileSet = Input.empty();
-        this.url = Input.empty();
+        this.regexFileSet = Output.empty();
+        this.url = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class GooglePrivacyDlpV2FileSetArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<GooglePrivacyDlpV2CloudStorageRegexFileSetArgs> regexFileSet;
-        private @Nullable Input<String> url;
+        private @Nullable Output<GooglePrivacyDlpV2CloudStorageRegexFileSetArgs> regexFileSet;
+        private @Nullable Output<String> url;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class GooglePrivacyDlpV2FileSetArgs extends io.pulumi.resources.Res
     	      this.url = defaults.url;
         }
 
-        public Builder regexFileSet(@Nullable Input<GooglePrivacyDlpV2CloudStorageRegexFileSetArgs> regexFileSet) {
+        public Builder regexFileSet(@Nullable Output<GooglePrivacyDlpV2CloudStorageRegexFileSetArgs> regexFileSet) {
             this.regexFileSet = regexFileSet;
             return this;
         }
 
         public Builder regexFileSet(@Nullable GooglePrivacyDlpV2CloudStorageRegexFileSetArgs regexFileSet) {
-            this.regexFileSet = Input.ofNullable(regexFileSet);
+            this.regexFileSet = Output.ofNullable(regexFileSet);
             return this;
         }
 
-        public Builder url(@Nullable Input<String> url) {
+        public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
 
         public Builder url(@Nullable String url) {
-            this.url = Input.ofNullable(url);
+            this.url = Output.ofNullable(url);
             return this;
         }
         public GooglePrivacyDlpV2FileSetArgs build() {

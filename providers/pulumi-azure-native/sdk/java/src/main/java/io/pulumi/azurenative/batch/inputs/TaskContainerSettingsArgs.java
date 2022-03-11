@@ -5,7 +5,7 @@ package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.azurenative.batch.enums.ContainerWorkingDirectory;
 import io.pulumi.azurenative.batch.inputs.ContainerRegistryArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class TaskContainerSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="containerRunOptions")
-      private final @Nullable Input<String> containerRunOptions;
+      private final @Nullable Output<String> containerRunOptions;
 
-    public Input<String> getContainerRunOptions() {
-        return this.containerRunOptions == null ? Input.empty() : this.containerRunOptions;
+    public Output<String> getContainerRunOptions() {
+        return this.containerRunOptions == null ? Output.empty() : this.containerRunOptions;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class TaskContainerSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="imageName", required=true)
-      private final Input<String> imageName;
+      private final Output<String> imageName;
 
-    public Input<String> getImageName() {
+    public Output<String> getImageName() {
         return this.imageName;
     }
 
@@ -43,24 +43,24 @@ public final class TaskContainerSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="registry")
-      private final @Nullable Input<ContainerRegistryArgs> registry;
+      private final @Nullable Output<ContainerRegistryArgs> registry;
 
-    public Input<ContainerRegistryArgs> getRegistry() {
-        return this.registry == null ? Input.empty() : this.registry;
+    public Output<ContainerRegistryArgs> getRegistry() {
+        return this.registry == null ? Output.empty() : this.registry;
     }
 
     @InputImport(name="workingDirectory")
-      private final @Nullable Input<ContainerWorkingDirectory> workingDirectory;
+      private final @Nullable Output<ContainerWorkingDirectory> workingDirectory;
 
-    public Input<ContainerWorkingDirectory> getWorkingDirectory() {
-        return this.workingDirectory == null ? Input.empty() : this.workingDirectory;
+    public Output<ContainerWorkingDirectory> getWorkingDirectory() {
+        return this.workingDirectory == null ? Output.empty() : this.workingDirectory;
     }
 
     public TaskContainerSettingsArgs(
-        @Nullable Input<String> containerRunOptions,
-        Input<String> imageName,
-        @Nullable Input<ContainerRegistryArgs> registry,
-        @Nullable Input<ContainerWorkingDirectory> workingDirectory) {
+        @Nullable Output<String> containerRunOptions,
+        Output<String> imageName,
+        @Nullable Output<ContainerRegistryArgs> registry,
+        @Nullable Output<ContainerWorkingDirectory> workingDirectory) {
         this.containerRunOptions = containerRunOptions;
         this.imageName = Objects.requireNonNull(imageName, "expected parameter 'imageName' to be non-null");
         this.registry = registry;
@@ -68,10 +68,10 @@ public final class TaskContainerSettingsArgs extends io.pulumi.resources.Resourc
     }
 
     private TaskContainerSettingsArgs() {
-        this.containerRunOptions = Input.empty();
-        this.imageName = Input.empty();
-        this.registry = Input.empty();
-        this.workingDirectory = Input.empty();
+        this.containerRunOptions = Output.empty();
+        this.imageName = Output.empty();
+        this.registry = Output.empty();
+        this.workingDirectory = Output.empty();
     }
 
     public static Builder builder() {
@@ -83,10 +83,10 @@ public final class TaskContainerSettingsArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> containerRunOptions;
-        private Input<String> imageName;
-        private @Nullable Input<ContainerRegistryArgs> registry;
-        private @Nullable Input<ContainerWorkingDirectory> workingDirectory;
+        private @Nullable Output<String> containerRunOptions;
+        private Output<String> imageName;
+        private @Nullable Output<ContainerRegistryArgs> registry;
+        private @Nullable Output<ContainerWorkingDirectory> workingDirectory;
 
         public Builder() {
     	      // Empty
@@ -100,43 +100,43 @@ public final class TaskContainerSettingsArgs extends io.pulumi.resources.Resourc
     	      this.workingDirectory = defaults.workingDirectory;
         }
 
-        public Builder containerRunOptions(@Nullable Input<String> containerRunOptions) {
+        public Builder containerRunOptions(@Nullable Output<String> containerRunOptions) {
             this.containerRunOptions = containerRunOptions;
             return this;
         }
 
         public Builder containerRunOptions(@Nullable String containerRunOptions) {
-            this.containerRunOptions = Input.ofNullable(containerRunOptions);
+            this.containerRunOptions = Output.ofNullable(containerRunOptions);
             return this;
         }
 
-        public Builder imageName(Input<String> imageName) {
+        public Builder imageName(Output<String> imageName) {
             this.imageName = Objects.requireNonNull(imageName);
             return this;
         }
 
         public Builder imageName(String imageName) {
-            this.imageName = Input.of(Objects.requireNonNull(imageName));
+            this.imageName = Output.of(Objects.requireNonNull(imageName));
             return this;
         }
 
-        public Builder registry(@Nullable Input<ContainerRegistryArgs> registry) {
+        public Builder registry(@Nullable Output<ContainerRegistryArgs> registry) {
             this.registry = registry;
             return this;
         }
 
         public Builder registry(@Nullable ContainerRegistryArgs registry) {
-            this.registry = Input.ofNullable(registry);
+            this.registry = Output.ofNullable(registry);
             return this;
         }
 
-        public Builder workingDirectory(@Nullable Input<ContainerWorkingDirectory> workingDirectory) {
+        public Builder workingDirectory(@Nullable Output<ContainerWorkingDirectory> workingDirectory) {
             this.workingDirectory = workingDirectory;
             return this;
         }
 
         public Builder workingDirectory(@Nullable ContainerWorkingDirectory workingDirectory) {
-            this.workingDirectory = Input.ofNullable(workingDirectory);
+            this.workingDirectory = Output.ofNullable(workingDirectory);
             return this;
         }
         public TaskContainerSettingsArgs build() {

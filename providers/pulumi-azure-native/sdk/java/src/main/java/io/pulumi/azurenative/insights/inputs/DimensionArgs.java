@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.enums.Operator;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,9 +25,9 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -36,9 +36,9 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operator", required=true)
-      private final Input<Either<String,Operator>> operator;
+      private final Output<Either<String,Operator>> operator;
 
-    public Input<Either<String,Operator>> getOperator() {
+    public Output<Either<String,Operator>> getOperator() {
         return this.operator;
     }
 
@@ -47,25 +47,25 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="values", required=true)
-      private final Input<List<String>> values;
+      private final Output<List<String>> values;
 
-    public Input<List<String>> getValues() {
+    public Output<List<String>> getValues() {
         return this.values;
     }
 
     public DimensionArgs(
-        Input<String> name,
-        Input<Either<String,Operator>> operator,
-        Input<List<String>> values) {
+        Output<String> name,
+        Output<Either<String,Operator>> operator,
+        Output<List<String>> values) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.operator = Objects.requireNonNull(operator, "expected parameter 'operator' to be non-null");
         this.values = Objects.requireNonNull(values, "expected parameter 'values' to be non-null");
     }
 
     private DimensionArgs() {
-        this.name = Input.empty();
-        this.operator = Input.empty();
-        this.values = Input.empty();
+        this.name = Output.empty();
+        this.operator = Output.empty();
+        this.values = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private Input<Either<String,Operator>> operator;
-        private Input<List<String>> values;
+        private Output<String> name;
+        private Output<Either<String,Operator>> operator;
+        private Output<List<String>> values;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.values = defaults.values;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder operator(Input<Either<String,Operator>> operator) {
+        public Builder operator(Output<Either<String,Operator>> operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
 
         public Builder operator(Either<String,Operator> operator) {
-            this.operator = Input.of(Objects.requireNonNull(operator));
+            this.operator = Output.of(Objects.requireNonNull(operator));
             return this;
         }
 
-        public Builder values(Input<List<String>> values) {
+        public Builder values(Output<List<String>> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
 
         public Builder values(List<String> values) {
-            this.values = Input.of(Objects.requireNonNull(values));
+            this.values = Output.of(Objects.requireNonNull(values));
             return this;
         }
         public DimensionArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.datasync.inputs;
 
 import io.pulumi.awsnative.datasync.enums.LocationHDFSQopConfigurationDataTransferProtection;
 import io.pulumi.awsnative.datasync.enums.LocationHDFSQopConfigurationRpcProtection;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,10 +24,10 @@ public final class LocationHDFSQopConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="dataTransferProtection")
-      private final @Nullable Input<LocationHDFSQopConfigurationDataTransferProtection> dataTransferProtection;
+      private final @Nullable Output<LocationHDFSQopConfigurationDataTransferProtection> dataTransferProtection;
 
-    public Input<LocationHDFSQopConfigurationDataTransferProtection> getDataTransferProtection() {
-        return this.dataTransferProtection == null ? Input.empty() : this.dataTransferProtection;
+    public Output<LocationHDFSQopConfigurationDataTransferProtection> getDataTransferProtection() {
+        return this.dataTransferProtection == null ? Output.empty() : this.dataTransferProtection;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class LocationHDFSQopConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="rpcProtection")
-      private final @Nullable Input<LocationHDFSQopConfigurationRpcProtection> rpcProtection;
+      private final @Nullable Output<LocationHDFSQopConfigurationRpcProtection> rpcProtection;
 
-    public Input<LocationHDFSQopConfigurationRpcProtection> getRpcProtection() {
-        return this.rpcProtection == null ? Input.empty() : this.rpcProtection;
+    public Output<LocationHDFSQopConfigurationRpcProtection> getRpcProtection() {
+        return this.rpcProtection == null ? Output.empty() : this.rpcProtection;
     }
 
     public LocationHDFSQopConfigurationArgs(
-        @Nullable Input<LocationHDFSQopConfigurationDataTransferProtection> dataTransferProtection,
-        @Nullable Input<LocationHDFSQopConfigurationRpcProtection> rpcProtection) {
+        @Nullable Output<LocationHDFSQopConfigurationDataTransferProtection> dataTransferProtection,
+        @Nullable Output<LocationHDFSQopConfigurationRpcProtection> rpcProtection) {
         this.dataTransferProtection = dataTransferProtection;
         this.rpcProtection = rpcProtection;
     }
 
     private LocationHDFSQopConfigurationArgs() {
-        this.dataTransferProtection = Input.empty();
-        this.rpcProtection = Input.empty();
+        this.dataTransferProtection = Output.empty();
+        this.rpcProtection = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class LocationHDFSQopConfigurationArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<LocationHDFSQopConfigurationDataTransferProtection> dataTransferProtection;
-        private @Nullable Input<LocationHDFSQopConfigurationRpcProtection> rpcProtection;
+        private @Nullable Output<LocationHDFSQopConfigurationDataTransferProtection> dataTransferProtection;
+        private @Nullable Output<LocationHDFSQopConfigurationRpcProtection> rpcProtection;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class LocationHDFSQopConfigurationArgs extends io.pulumi.resources.
     	      this.rpcProtection = defaults.rpcProtection;
         }
 
-        public Builder dataTransferProtection(@Nullable Input<LocationHDFSQopConfigurationDataTransferProtection> dataTransferProtection) {
+        public Builder dataTransferProtection(@Nullable Output<LocationHDFSQopConfigurationDataTransferProtection> dataTransferProtection) {
             this.dataTransferProtection = dataTransferProtection;
             return this;
         }
 
         public Builder dataTransferProtection(@Nullable LocationHDFSQopConfigurationDataTransferProtection dataTransferProtection) {
-            this.dataTransferProtection = Input.ofNullable(dataTransferProtection);
+            this.dataTransferProtection = Output.ofNullable(dataTransferProtection);
             return this;
         }
 
-        public Builder rpcProtection(@Nullable Input<LocationHDFSQopConfigurationRpcProtection> rpcProtection) {
+        public Builder rpcProtection(@Nullable Output<LocationHDFSQopConfigurationRpcProtection> rpcProtection) {
             this.rpcProtection = rpcProtection;
             return this;
         }
 
         public Builder rpcProtection(@Nullable LocationHDFSQopConfigurationRpcProtection rpcProtection) {
-            this.rpcProtection = Input.ofNullable(rpcProtection);
+            this.rpcProtection = Output.ofNullable(rpcProtection);
             return this;
         }
         public LocationHDFSQopConfigurationArgs build() {

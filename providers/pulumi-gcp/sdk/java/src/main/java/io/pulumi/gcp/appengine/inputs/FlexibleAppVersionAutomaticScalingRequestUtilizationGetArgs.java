@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs e
      * 
      */
     @InputImport(name="targetConcurrentRequests")
-      private final @Nullable Input<Double> targetConcurrentRequests;
+      private final @Nullable Output<Double> targetConcurrentRequests;
 
-    public Input<Double> getTargetConcurrentRequests() {
-        return this.targetConcurrentRequests == null ? Input.empty() : this.targetConcurrentRequests;
+    public Output<Double> getTargetConcurrentRequests() {
+        return this.targetConcurrentRequests == null ? Output.empty() : this.targetConcurrentRequests;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs e
      * 
      */
     @InputImport(name="targetRequestCountPerSecond")
-      private final @Nullable Input<String> targetRequestCountPerSecond;
+      private final @Nullable Output<String> targetRequestCountPerSecond;
 
-    public Input<String> getTargetRequestCountPerSecond() {
-        return this.targetRequestCountPerSecond == null ? Input.empty() : this.targetRequestCountPerSecond;
+    public Output<String> getTargetRequestCountPerSecond() {
+        return this.targetRequestCountPerSecond == null ? Output.empty() : this.targetRequestCountPerSecond;
     }
 
     public FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs(
-        @Nullable Input<Double> targetConcurrentRequests,
-        @Nullable Input<String> targetRequestCountPerSecond) {
+        @Nullable Output<Double> targetConcurrentRequests,
+        @Nullable Output<String> targetRequestCountPerSecond) {
         this.targetConcurrentRequests = targetConcurrentRequests;
         this.targetRequestCountPerSecond = targetRequestCountPerSecond;
     }
 
     private FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs() {
-        this.targetConcurrentRequests = Input.empty();
-        this.targetRequestCountPerSecond = Input.empty();
+        this.targetConcurrentRequests = Output.empty();
+        this.targetRequestCountPerSecond = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs e
     }
 
     public static final class Builder {
-        private @Nullable Input<Double> targetConcurrentRequests;
-        private @Nullable Input<String> targetRequestCountPerSecond;
+        private @Nullable Output<Double> targetConcurrentRequests;
+        private @Nullable Output<String> targetRequestCountPerSecond;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs e
     	      this.targetRequestCountPerSecond = defaults.targetRequestCountPerSecond;
         }
 
-        public Builder targetConcurrentRequests(@Nullable Input<Double> targetConcurrentRequests) {
+        public Builder targetConcurrentRequests(@Nullable Output<Double> targetConcurrentRequests) {
             this.targetConcurrentRequests = targetConcurrentRequests;
             return this;
         }
 
         public Builder targetConcurrentRequests(@Nullable Double targetConcurrentRequests) {
-            this.targetConcurrentRequests = Input.ofNullable(targetConcurrentRequests);
+            this.targetConcurrentRequests = Output.ofNullable(targetConcurrentRequests);
             return this;
         }
 
-        public Builder targetRequestCountPerSecond(@Nullable Input<String> targetRequestCountPerSecond) {
+        public Builder targetRequestCountPerSecond(@Nullable Output<String> targetRequestCountPerSecond) {
             this.targetRequestCountPerSecond = targetRequestCountPerSecond;
             return this;
         }
 
         public Builder targetRequestCountPerSecond(@Nullable String targetRequestCountPerSecond) {
-            this.targetRequestCountPerSecond = Input.ofNullable(targetRequestCountPerSecond);
+            this.targetRequestCountPerSecond = Output.ofNullable(targetRequestCountPerSecond);
             return this;
         }
         public FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs build() {

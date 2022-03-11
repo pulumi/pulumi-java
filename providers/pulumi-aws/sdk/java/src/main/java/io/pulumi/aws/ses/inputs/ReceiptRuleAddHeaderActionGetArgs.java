@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ses.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,9 +19,9 @@ public final class ReceiptRuleAddHeaderActionGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="headerName", required=true)
-      private final Input<String> headerName;
+      private final Output<String> headerName;
 
-    public Input<String> getHeaderName() {
+    public Output<String> getHeaderName() {
         return this.headerName;
     }
 
@@ -30,9 +30,9 @@ public final class ReceiptRuleAddHeaderActionGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="headerValue", required=true)
-      private final Input<String> headerValue;
+      private final Output<String> headerValue;
 
-    public Input<String> getHeaderValue() {
+    public Output<String> getHeaderValue() {
         return this.headerValue;
     }
 
@@ -41,25 +41,25 @@ public final class ReceiptRuleAddHeaderActionGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="position", required=true)
-      private final Input<Integer> position;
+      private final Output<Integer> position;
 
-    public Input<Integer> getPosition() {
+    public Output<Integer> getPosition() {
         return this.position;
     }
 
     public ReceiptRuleAddHeaderActionGetArgs(
-        Input<String> headerName,
-        Input<String> headerValue,
-        Input<Integer> position) {
+        Output<String> headerName,
+        Output<String> headerValue,
+        Output<Integer> position) {
         this.headerName = Objects.requireNonNull(headerName, "expected parameter 'headerName' to be non-null");
         this.headerValue = Objects.requireNonNull(headerValue, "expected parameter 'headerValue' to be non-null");
         this.position = Objects.requireNonNull(position, "expected parameter 'position' to be non-null");
     }
 
     private ReceiptRuleAddHeaderActionGetArgs() {
-        this.headerName = Input.empty();
-        this.headerValue = Input.empty();
-        this.position = Input.empty();
+        this.headerName = Output.empty();
+        this.headerValue = Output.empty();
+        this.position = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class ReceiptRuleAddHeaderActionGetArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<String> headerName;
-        private Input<String> headerValue;
-        private Input<Integer> position;
+        private Output<String> headerName;
+        private Output<String> headerValue;
+        private Output<Integer> position;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class ReceiptRuleAddHeaderActionGetArgs extends io.pulumi.resources
     	      this.position = defaults.position;
         }
 
-        public Builder headerName(Input<String> headerName) {
+        public Builder headerName(Output<String> headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
 
         public Builder headerName(String headerName) {
-            this.headerName = Input.of(Objects.requireNonNull(headerName));
+            this.headerName = Output.of(Objects.requireNonNull(headerName));
             return this;
         }
 
-        public Builder headerValue(Input<String> headerValue) {
+        public Builder headerValue(Output<String> headerValue) {
             this.headerValue = Objects.requireNonNull(headerValue);
             return this;
         }
 
         public Builder headerValue(String headerValue) {
-            this.headerValue = Input.of(Objects.requireNonNull(headerValue));
+            this.headerValue = Output.of(Objects.requireNonNull(headerValue));
             return this;
         }
 
-        public Builder position(Input<Integer> position) {
+        public Builder position(Output<Integer> position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }
 
         public Builder position(Integer position) {
-            this.position = Input.of(Objects.requireNonNull(position));
+            this.position = Output.of(Objects.requireNonNull(position));
             return this;
         }
         public ReceiptRuleAddHeaderActionGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class VolumeReferenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="destinationPath", required=true)
-      private final Input<String> destinationPath;
+      private final Output<String> destinationPath;
 
-    public Input<String> getDestinationPath() {
+    public Output<String> getDestinationPath() {
         return this.destinationPath;
     }
 
@@ -35,9 +35,9 @@ public final class VolumeReferenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -46,25 +46,25 @@ public final class VolumeReferenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="readOnly")
-      private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Output<Boolean> readOnly;
 
-    public Input<Boolean> getReadOnly() {
-        return this.readOnly == null ? Input.empty() : this.readOnly;
+    public Output<Boolean> getReadOnly() {
+        return this.readOnly == null ? Output.empty() : this.readOnly;
     }
 
     public VolumeReferenceArgs(
-        Input<String> destinationPath,
-        Input<String> name,
-        @Nullable Input<Boolean> readOnly) {
+        Output<String> destinationPath,
+        Output<String> name,
+        @Nullable Output<Boolean> readOnly) {
         this.destinationPath = Objects.requireNonNull(destinationPath, "expected parameter 'destinationPath' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.readOnly = readOnly;
     }
 
     private VolumeReferenceArgs() {
-        this.destinationPath = Input.empty();
-        this.name = Input.empty();
-        this.readOnly = Input.empty();
+        this.destinationPath = Output.empty();
+        this.name = Output.empty();
+        this.readOnly = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class VolumeReferenceArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<String> destinationPath;
-        private Input<String> name;
-        private @Nullable Input<Boolean> readOnly;
+        private Output<String> destinationPath;
+        private Output<String> name;
+        private @Nullable Output<Boolean> readOnly;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class VolumeReferenceArgs extends io.pulumi.resources.ResourceArgs 
     	      this.readOnly = defaults.readOnly;
         }
 
-        public Builder destinationPath(Input<String> destinationPath) {
+        public Builder destinationPath(Output<String> destinationPath) {
             this.destinationPath = Objects.requireNonNull(destinationPath);
             return this;
         }
 
         public Builder destinationPath(String destinationPath) {
-            this.destinationPath = Input.of(Objects.requireNonNull(destinationPath));
+            this.destinationPath = Output.of(Objects.requireNonNull(destinationPath));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Input.ofNullable(readOnly);
+            this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
         public VolumeReferenceArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class AnimationEndArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startTimeOffset")
-      private final @Nullable Input<String> startTimeOffset;
+      private final @Nullable Output<String> startTimeOffset;
 
-    public Input<String> getStartTimeOffset() {
-        return this.startTimeOffset == null ? Input.empty() : this.startTimeOffset;
+    public Output<String> getStartTimeOffset() {
+        return this.startTimeOffset == null ? Output.empty() : this.startTimeOffset;
     }
 
-    public AnimationEndArgs(@Nullable Input<String> startTimeOffset) {
+    public AnimationEndArgs(@Nullable Output<String> startTimeOffset) {
         this.startTimeOffset = startTimeOffset;
     }
 
     private AnimationEndArgs() {
-        this.startTimeOffset = Input.empty();
+        this.startTimeOffset = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class AnimationEndArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> startTimeOffset;
+        private @Nullable Output<String> startTimeOffset;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class AnimationEndArgs extends io.pulumi.resources.ResourceArgs {
     	      this.startTimeOffset = defaults.startTimeOffset;
         }
 
-        public Builder startTimeOffset(@Nullable Input<String> startTimeOffset) {
+        public Builder startTimeOffset(@Nullable Output<String> startTimeOffset) {
             this.startTimeOffset = startTimeOffset;
             return this;
         }
 
         public Builder startTimeOffset(@Nullable String startTimeOffset) {
-            this.startTimeOffset = Input.ofNullable(startTimeOffset);
+            this.startTimeOffset = Output.ofNullable(startTimeOffset);
             return this;
         }
         public AnimationEndArgs build() {

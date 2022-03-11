@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.EncryptionSettingsElementArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,9 +26,9 @@ public final class EncryptionSettingsCollectionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="enabled", required=true)
-      private final Input<Boolean> enabled;
+      private final Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
+    public Output<Boolean> getEnabled() {
         return this.enabled;
     }
 
@@ -37,10 +37,10 @@ public final class EncryptionSettingsCollectionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="encryptionSettings")
-      private final @Nullable Input<List<EncryptionSettingsElementArgs>> encryptionSettings;
+      private final @Nullable Output<List<EncryptionSettingsElementArgs>> encryptionSettings;
 
-    public Input<List<EncryptionSettingsElementArgs>> getEncryptionSettings() {
-        return this.encryptionSettings == null ? Input.empty() : this.encryptionSettings;
+    public Output<List<EncryptionSettingsElementArgs>> getEncryptionSettings() {
+        return this.encryptionSettings == null ? Output.empty() : this.encryptionSettings;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class EncryptionSettingsCollectionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="encryptionSettingsVersion")
-      private final @Nullable Input<String> encryptionSettingsVersion;
+      private final @Nullable Output<String> encryptionSettingsVersion;
 
-    public Input<String> getEncryptionSettingsVersion() {
-        return this.encryptionSettingsVersion == null ? Input.empty() : this.encryptionSettingsVersion;
+    public Output<String> getEncryptionSettingsVersion() {
+        return this.encryptionSettingsVersion == null ? Output.empty() : this.encryptionSettingsVersion;
     }
 
     public EncryptionSettingsCollectionArgs(
-        Input<Boolean> enabled,
-        @Nullable Input<List<EncryptionSettingsElementArgs>> encryptionSettings,
-        @Nullable Input<String> encryptionSettingsVersion) {
+        Output<Boolean> enabled,
+        @Nullable Output<List<EncryptionSettingsElementArgs>> encryptionSettings,
+        @Nullable Output<String> encryptionSettingsVersion) {
         this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
         this.encryptionSettings = encryptionSettings;
         this.encryptionSettingsVersion = encryptionSettingsVersion;
     }
 
     private EncryptionSettingsCollectionArgs() {
-        this.enabled = Input.empty();
-        this.encryptionSettings = Input.empty();
-        this.encryptionSettingsVersion = Input.empty();
+        this.enabled = Output.empty();
+        this.encryptionSettings = Output.empty();
+        this.encryptionSettingsVersion = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class EncryptionSettingsCollectionArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<Boolean> enabled;
-        private @Nullable Input<List<EncryptionSettingsElementArgs>> encryptionSettings;
-        private @Nullable Input<String> encryptionSettingsVersion;
+        private Output<Boolean> enabled;
+        private @Nullable Output<List<EncryptionSettingsElementArgs>> encryptionSettings;
+        private @Nullable Output<String> encryptionSettingsVersion;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class EncryptionSettingsCollectionArgs extends io.pulumi.resources.
     	      this.encryptionSettingsVersion = defaults.encryptionSettingsVersion;
         }
 
-        public Builder enabled(Input<Boolean> enabled) {
+        public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Input.of(Objects.requireNonNull(enabled));
+            this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
 
-        public Builder encryptionSettings(@Nullable Input<List<EncryptionSettingsElementArgs>> encryptionSettings) {
+        public Builder encryptionSettings(@Nullable Output<List<EncryptionSettingsElementArgs>> encryptionSettings) {
             this.encryptionSettings = encryptionSettings;
             return this;
         }
 
         public Builder encryptionSettings(@Nullable List<EncryptionSettingsElementArgs> encryptionSettings) {
-            this.encryptionSettings = Input.ofNullable(encryptionSettings);
+            this.encryptionSettings = Output.ofNullable(encryptionSettings);
             return this;
         }
 
-        public Builder encryptionSettingsVersion(@Nullable Input<String> encryptionSettingsVersion) {
+        public Builder encryptionSettingsVersion(@Nullable Output<String> encryptionSettingsVersion) {
             this.encryptionSettingsVersion = encryptionSettingsVersion;
             return this;
         }
 
         public Builder encryptionSettingsVersion(@Nullable String encryptionSettingsVersion) {
-            this.encryptionSettingsVersion = Input.ofNullable(encryptionSettingsVersion);
+            this.encryptionSettingsVersion = Output.ofNullable(encryptionSettingsVersion);
             return this;
         }
         public EncryptionSettingsCollectionArgs build() {

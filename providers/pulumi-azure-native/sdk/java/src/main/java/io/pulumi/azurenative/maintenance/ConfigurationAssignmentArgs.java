@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.maintenance;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ConfigurationAssignmentArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="configurationAssignmentName")
-      private final @Nullable Input<String> configurationAssignmentName;
+      private final @Nullable Output<String> configurationAssignmentName;
 
-    public Input<String> getConfigurationAssignmentName() {
-        return this.configurationAssignmentName == null ? Input.empty() : this.configurationAssignmentName;
+    public Output<String> getConfigurationAssignmentName() {
+        return this.configurationAssignmentName == null ? Output.empty() : this.configurationAssignmentName;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class ConfigurationAssignmentArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ConfigurationAssignmentArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="maintenanceConfigurationId")
-      private final @Nullable Input<String> maintenanceConfigurationId;
+      private final @Nullable Output<String> maintenanceConfigurationId;
 
-    public Input<String> getMaintenanceConfigurationId() {
-        return this.maintenanceConfigurationId == null ? Input.empty() : this.maintenanceConfigurationId;
+    public Output<String> getMaintenanceConfigurationId() {
+        return this.maintenanceConfigurationId == null ? Output.empty() : this.maintenanceConfigurationId;
     }
 
     /**
@@ -52,9 +52,9 @@ public final class ConfigurationAssignmentArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="providerName", required=true)
-      private final Input<String> providerName;
+      private final Output<String> providerName;
 
-    public Input<String> getProviderName() {
+    public Output<String> getProviderName() {
         return this.providerName;
     }
 
@@ -63,9 +63,9 @@ public final class ConfigurationAssignmentArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -74,10 +74,10 @@ public final class ConfigurationAssignmentArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceId")
-      private final @Nullable Input<String> resourceId;
+      private final @Nullable Output<String> resourceId;
 
-    public Input<String> getResourceId() {
-        return this.resourceId == null ? Input.empty() : this.resourceId;
+    public Output<String> getResourceId() {
+        return this.resourceId == null ? Output.empty() : this.resourceId;
     }
 
     /**
@@ -85,9 +85,9 @@ public final class ConfigurationAssignmentArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceName", required=true)
-      private final Input<String> resourceName;
+      private final Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
+    public Output<String> getPropResourceName() {
         return this.resourceName;
     }
 
@@ -96,21 +96,21 @@ public final class ConfigurationAssignmentArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceType", required=true)
-      private final Input<String> resourceType;
+      private final Output<String> resourceType;
 
-    public Input<String> getPropResourceType() {
+    public Output<String> getPropResourceType() {
         return this.resourceType;
     }
 
     public ConfigurationAssignmentArgs(
-        @Nullable Input<String> configurationAssignmentName,
-        @Nullable Input<String> location,
-        @Nullable Input<String> maintenanceConfigurationId,
-        Input<String> providerName,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> resourceId,
-        Input<String> resourceName,
-        Input<String> resourceType) {
+        @Nullable Output<String> configurationAssignmentName,
+        @Nullable Output<String> location,
+        @Nullable Output<String> maintenanceConfigurationId,
+        Output<String> providerName,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> resourceId,
+        Output<String> resourceName,
+        Output<String> resourceType) {
         this.configurationAssignmentName = configurationAssignmentName;
         this.location = location;
         this.maintenanceConfigurationId = maintenanceConfigurationId;
@@ -122,14 +122,14 @@ public final class ConfigurationAssignmentArgs extends io.pulumi.resources.Resou
     }
 
     private ConfigurationAssignmentArgs() {
-        this.configurationAssignmentName = Input.empty();
-        this.location = Input.empty();
-        this.maintenanceConfigurationId = Input.empty();
-        this.providerName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceId = Input.empty();
-        this.resourceName = Input.empty();
-        this.resourceType = Input.empty();
+        this.configurationAssignmentName = Output.empty();
+        this.location = Output.empty();
+        this.maintenanceConfigurationId = Output.empty();
+        this.providerName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceId = Output.empty();
+        this.resourceName = Output.empty();
+        this.resourceType = Output.empty();
     }
 
     public static Builder builder() {
@@ -141,14 +141,14 @@ public final class ConfigurationAssignmentArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> configurationAssignmentName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> maintenanceConfigurationId;
-        private Input<String> providerName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> resourceId;
-        private Input<String> resourceName;
-        private Input<String> resourceType;
+        private @Nullable Output<String> configurationAssignmentName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> maintenanceConfigurationId;
+        private Output<String> providerName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> resourceId;
+        private Output<String> resourceName;
+        private Output<String> resourceType;
 
         public Builder() {
     	      // Empty
@@ -166,83 +166,83 @@ public final class ConfigurationAssignmentArgs extends io.pulumi.resources.Resou
     	      this.resourceType = defaults.resourceType;
         }
 
-        public Builder configurationAssignmentName(@Nullable Input<String> configurationAssignmentName) {
+        public Builder configurationAssignmentName(@Nullable Output<String> configurationAssignmentName) {
             this.configurationAssignmentName = configurationAssignmentName;
             return this;
         }
 
         public Builder configurationAssignmentName(@Nullable String configurationAssignmentName) {
-            this.configurationAssignmentName = Input.ofNullable(configurationAssignmentName);
+            this.configurationAssignmentName = Output.ofNullable(configurationAssignmentName);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder maintenanceConfigurationId(@Nullable Input<String> maintenanceConfigurationId) {
+        public Builder maintenanceConfigurationId(@Nullable Output<String> maintenanceConfigurationId) {
             this.maintenanceConfigurationId = maintenanceConfigurationId;
             return this;
         }
 
         public Builder maintenanceConfigurationId(@Nullable String maintenanceConfigurationId) {
-            this.maintenanceConfigurationId = Input.ofNullable(maintenanceConfigurationId);
+            this.maintenanceConfigurationId = Output.ofNullable(maintenanceConfigurationId);
             return this;
         }
 
-        public Builder providerName(Input<String> providerName) {
+        public Builder providerName(Output<String> providerName) {
             this.providerName = Objects.requireNonNull(providerName);
             return this;
         }
 
         public Builder providerName(String providerName) {
-            this.providerName = Input.of(Objects.requireNonNull(providerName));
+            this.providerName = Output.of(Objects.requireNonNull(providerName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Input.ofNullable(resourceId);
+            this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
 
-        public Builder resourceName(Input<String> resourceName) {
+        public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
         public Builder resourceName(String resourceName) {
-            this.resourceName = Input.of(Objects.requireNonNull(resourceName));
+            this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
         }
 
-        public Builder resourceType(Input<String> resourceType) {
+        public Builder resourceType(Output<String> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
         public Builder resourceType(String resourceType) {
-            this.resourceType = Input.of(Objects.requireNonNull(resourceType));
+            this.resourceType = Output.of(Objects.requireNonNull(resourceType));
             return this;
         }
         public ConfigurationAssignmentArgs build() {

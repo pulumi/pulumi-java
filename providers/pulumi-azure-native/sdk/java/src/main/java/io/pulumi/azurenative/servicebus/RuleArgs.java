@@ -7,7 +7,7 @@ import io.pulumi.azurenative.servicebus.enums.FilterType;
 import io.pulumi.azurenative.servicebus.inputs.ActionArgs;
 import io.pulumi.azurenative.servicebus.inputs.CorrelationFilterArgs;
 import io.pulumi.azurenative.servicebus.inputs.SqlFilterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="action")
-      private final @Nullable Input<ActionArgs> action;
+      private final @Nullable Output<ActionArgs> action;
 
-    public Input<ActionArgs> getAction() {
-        return this.action == null ? Input.empty() : this.action;
+    public Output<ActionArgs> getAction() {
+        return this.action == null ? Output.empty() : this.action;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="correlationFilter")
-      private final @Nullable Input<CorrelationFilterArgs> correlationFilter;
+      private final @Nullable Output<CorrelationFilterArgs> correlationFilter;
 
-    public Input<CorrelationFilterArgs> getCorrelationFilter() {
-        return this.correlationFilter == null ? Input.empty() : this.correlationFilter;
+    public Output<CorrelationFilterArgs> getCorrelationFilter() {
+        return this.correlationFilter == null ? Output.empty() : this.correlationFilter;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filterType")
-      private final @Nullable Input<FilterType> filterType;
+      private final @Nullable Output<FilterType> filterType;
 
-    public Input<FilterType> getFilterType() {
-        return this.filterType == null ? Input.empty() : this.filterType;
+    public Output<FilterType> getFilterType() {
+        return this.filterType == null ? Output.empty() : this.filterType;
     }
 
     /**
@@ -56,9 +56,9 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namespaceName", required=true)
-      private final Input<String> namespaceName;
+      private final Output<String> namespaceName;
 
-    public Input<String> getNamespaceName() {
+    public Output<String> getNamespaceName() {
         return this.namespaceName;
     }
 
@@ -67,9 +67,9 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,10 +78,10 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleName")
-      private final @Nullable Input<String> ruleName;
+      private final @Nullable Output<String> ruleName;
 
-    public Input<String> getRuleName() {
-        return this.ruleName == null ? Input.empty() : this.ruleName;
+    public Output<String> getRuleName() {
+        return this.ruleName == null ? Output.empty() : this.ruleName;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sqlFilter")
-      private final @Nullable Input<SqlFilterArgs> sqlFilter;
+      private final @Nullable Output<SqlFilterArgs> sqlFilter;
 
-    public Input<SqlFilterArgs> getSqlFilter() {
-        return this.sqlFilter == null ? Input.empty() : this.sqlFilter;
+    public Output<SqlFilterArgs> getSqlFilter() {
+        return this.sqlFilter == null ? Output.empty() : this.sqlFilter;
     }
 
     /**
@@ -100,9 +100,9 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subscriptionName", required=true)
-      private final Input<String> subscriptionName;
+      private final Output<String> subscriptionName;
 
-    public Input<String> getSubscriptionName() {
+    public Output<String> getSubscriptionName() {
         return this.subscriptionName;
     }
 
@@ -111,22 +111,22 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topicName", required=true)
-      private final Input<String> topicName;
+      private final Output<String> topicName;
 
-    public Input<String> getTopicName() {
+    public Output<String> getTopicName() {
         return this.topicName;
     }
 
     public RuleArgs(
-        @Nullable Input<ActionArgs> action,
-        @Nullable Input<CorrelationFilterArgs> correlationFilter,
-        @Nullable Input<FilterType> filterType,
-        Input<String> namespaceName,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> ruleName,
-        @Nullable Input<SqlFilterArgs> sqlFilter,
-        Input<String> subscriptionName,
-        Input<String> topicName) {
+        @Nullable Output<ActionArgs> action,
+        @Nullable Output<CorrelationFilterArgs> correlationFilter,
+        @Nullable Output<FilterType> filterType,
+        Output<String> namespaceName,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> ruleName,
+        @Nullable Output<SqlFilterArgs> sqlFilter,
+        Output<String> subscriptionName,
+        Output<String> topicName) {
         this.action = action;
         this.correlationFilter = correlationFilter;
         this.filterType = filterType;
@@ -139,15 +139,15 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RuleArgs() {
-        this.action = Input.empty();
-        this.correlationFilter = Input.empty();
-        this.filterType = Input.empty();
-        this.namespaceName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.ruleName = Input.empty();
-        this.sqlFilter = Input.empty();
-        this.subscriptionName = Input.empty();
-        this.topicName = Input.empty();
+        this.action = Output.empty();
+        this.correlationFilter = Output.empty();
+        this.filterType = Output.empty();
+        this.namespaceName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.ruleName = Output.empty();
+        this.sqlFilter = Output.empty();
+        this.subscriptionName = Output.empty();
+        this.topicName = Output.empty();
     }
 
     public static Builder builder() {
@@ -159,15 +159,15 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ActionArgs> action;
-        private @Nullable Input<CorrelationFilterArgs> correlationFilter;
-        private @Nullable Input<FilterType> filterType;
-        private Input<String> namespaceName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> ruleName;
-        private @Nullable Input<SqlFilterArgs> sqlFilter;
-        private Input<String> subscriptionName;
-        private Input<String> topicName;
+        private @Nullable Output<ActionArgs> action;
+        private @Nullable Output<CorrelationFilterArgs> correlationFilter;
+        private @Nullable Output<FilterType> filterType;
+        private Output<String> namespaceName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> ruleName;
+        private @Nullable Output<SqlFilterArgs> sqlFilter;
+        private Output<String> subscriptionName;
+        private Output<String> topicName;
 
         public Builder() {
     	      // Empty
@@ -186,93 +186,93 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.topicName = defaults.topicName;
         }
 
-        public Builder action(@Nullable Input<ActionArgs> action) {
+        public Builder action(@Nullable Output<ActionArgs> action) {
             this.action = action;
             return this;
         }
 
         public Builder action(@Nullable ActionArgs action) {
-            this.action = Input.ofNullable(action);
+            this.action = Output.ofNullable(action);
             return this;
         }
 
-        public Builder correlationFilter(@Nullable Input<CorrelationFilterArgs> correlationFilter) {
+        public Builder correlationFilter(@Nullable Output<CorrelationFilterArgs> correlationFilter) {
             this.correlationFilter = correlationFilter;
             return this;
         }
 
         public Builder correlationFilter(@Nullable CorrelationFilterArgs correlationFilter) {
-            this.correlationFilter = Input.ofNullable(correlationFilter);
+            this.correlationFilter = Output.ofNullable(correlationFilter);
             return this;
         }
 
-        public Builder filterType(@Nullable Input<FilterType> filterType) {
+        public Builder filterType(@Nullable Output<FilterType> filterType) {
             this.filterType = filterType;
             return this;
         }
 
         public Builder filterType(@Nullable FilterType filterType) {
-            this.filterType = Input.ofNullable(filterType);
+            this.filterType = Output.ofNullable(filterType);
             return this;
         }
 
-        public Builder namespaceName(Input<String> namespaceName) {
+        public Builder namespaceName(Output<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
 
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Input.of(Objects.requireNonNull(namespaceName));
+            this.namespaceName = Output.of(Objects.requireNonNull(namespaceName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder ruleName(@Nullable Input<String> ruleName) {
+        public Builder ruleName(@Nullable Output<String> ruleName) {
             this.ruleName = ruleName;
             return this;
         }
 
         public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = Input.ofNullable(ruleName);
+            this.ruleName = Output.ofNullable(ruleName);
             return this;
         }
 
-        public Builder sqlFilter(@Nullable Input<SqlFilterArgs> sqlFilter) {
+        public Builder sqlFilter(@Nullable Output<SqlFilterArgs> sqlFilter) {
             this.sqlFilter = sqlFilter;
             return this;
         }
 
         public Builder sqlFilter(@Nullable SqlFilterArgs sqlFilter) {
-            this.sqlFilter = Input.ofNullable(sqlFilter);
+            this.sqlFilter = Output.ofNullable(sqlFilter);
             return this;
         }
 
-        public Builder subscriptionName(Input<String> subscriptionName) {
+        public Builder subscriptionName(Output<String> subscriptionName) {
             this.subscriptionName = Objects.requireNonNull(subscriptionName);
             return this;
         }
 
         public Builder subscriptionName(String subscriptionName) {
-            this.subscriptionName = Input.of(Objects.requireNonNull(subscriptionName));
+            this.subscriptionName = Output.of(Objects.requireNonNull(subscriptionName));
             return this;
         }
 
-        public Builder topicName(Input<String> topicName) {
+        public Builder topicName(Output<String> topicName) {
             this.topicName = Objects.requireNonNull(topicName);
             return this;
         }
 
         public Builder topicName(String topicName) {
-            this.topicName = Input.of(Objects.requireNonNull(topicName));
+            this.topicName = Output.of(Objects.requireNonNull(topicName));
             return this;
         }
         public RuleArgs build() {

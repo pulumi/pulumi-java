@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class SSISExecutionParameterArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="value", required=true)
-      private final Input<Object> value;
+      private final Output<Object> value;
 
-    public Input<Object> getValue() {
+    public Output<Object> getValue() {
         return this.value;
     }
 
-    public SSISExecutionParameterArgs(Input<Object> value) {
+    public SSISExecutionParameterArgs(Output<Object> value) {
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private SSISExecutionParameterArgs() {
-        this.value = Input.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class SSISExecutionParameterArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<Object> value;
+        private Output<Object> value;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class SSISExecutionParameterArgs extends io.pulumi.resources.Resour
     	      this.value = defaults.value;
         }
 
-        public Builder value(Input<Object> value) {
+        public Builder value(Output<Object> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(Object value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public SSISExecutionParameterArgs build() {

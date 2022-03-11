@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databox.inputs;
 
 import io.pulumi.azurenative.databox.inputs.TransferAllDetailsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class TransferConfigurationTransferAllDetailsArgs extends io.pulumi
      * 
      */
     @InputImport(name="include")
-      private final @Nullable Input<TransferAllDetailsArgs> include;
+      private final @Nullable Output<TransferAllDetailsArgs> include;
 
-    public Input<TransferAllDetailsArgs> getInclude() {
-        return this.include == null ? Input.empty() : this.include;
+    public Output<TransferAllDetailsArgs> getInclude() {
+        return this.include == null ? Output.empty() : this.include;
     }
 
-    public TransferConfigurationTransferAllDetailsArgs(@Nullable Input<TransferAllDetailsArgs> include) {
+    public TransferConfigurationTransferAllDetailsArgs(@Nullable Output<TransferAllDetailsArgs> include) {
         this.include = include;
     }
 
     private TransferConfigurationTransferAllDetailsArgs() {
-        this.include = Input.empty();
+        this.include = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class TransferConfigurationTransferAllDetailsArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private @Nullable Input<TransferAllDetailsArgs> include;
+        private @Nullable Output<TransferAllDetailsArgs> include;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class TransferConfigurationTransferAllDetailsArgs extends io.pulumi
     	      this.include = defaults.include;
         }
 
-        public Builder include(@Nullable Input<TransferAllDetailsArgs> include) {
+        public Builder include(@Nullable Output<TransferAllDetailsArgs> include) {
             this.include = include;
             return this;
         }
 
         public Builder include(@Nullable TransferAllDetailsArgs include) {
-            this.include = Input.ofNullable(include);
+            this.include = Output.ofNullable(include);
             return this;
         }
         public TransferConfigurationTransferAllDetailsArgs build() {

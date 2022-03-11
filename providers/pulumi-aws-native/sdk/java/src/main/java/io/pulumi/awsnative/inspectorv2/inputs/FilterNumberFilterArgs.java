@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.inspectorv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class FilterNumberFilterArgs extends io.pulumi.resources.ResourceAr
     public static final FilterNumberFilterArgs Empty = new FilterNumberFilterArgs();
 
     @InputImport(name="lowerInclusive")
-      private final @Nullable Input<Double> lowerInclusive;
+      private final @Nullable Output<Double> lowerInclusive;
 
-    public Input<Double> getLowerInclusive() {
-        return this.lowerInclusive == null ? Input.empty() : this.lowerInclusive;
+    public Output<Double> getLowerInclusive() {
+        return this.lowerInclusive == null ? Output.empty() : this.lowerInclusive;
     }
 
     @InputImport(name="upperInclusive")
-      private final @Nullable Input<Double> upperInclusive;
+      private final @Nullable Output<Double> upperInclusive;
 
-    public Input<Double> getUpperInclusive() {
-        return this.upperInclusive == null ? Input.empty() : this.upperInclusive;
+    public Output<Double> getUpperInclusive() {
+        return this.upperInclusive == null ? Output.empty() : this.upperInclusive;
     }
 
     public FilterNumberFilterArgs(
-        @Nullable Input<Double> lowerInclusive,
-        @Nullable Input<Double> upperInclusive) {
+        @Nullable Output<Double> lowerInclusive,
+        @Nullable Output<Double> upperInclusive) {
         this.lowerInclusive = lowerInclusive;
         this.upperInclusive = upperInclusive;
     }
 
     private FilterNumberFilterArgs() {
-        this.lowerInclusive = Input.empty();
-        this.upperInclusive = Input.empty();
+        this.lowerInclusive = Output.empty();
+        this.upperInclusive = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class FilterNumberFilterArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Double> lowerInclusive;
-        private @Nullable Input<Double> upperInclusive;
+        private @Nullable Output<Double> lowerInclusive;
+        private @Nullable Output<Double> upperInclusive;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class FilterNumberFilterArgs extends io.pulumi.resources.ResourceAr
     	      this.upperInclusive = defaults.upperInclusive;
         }
 
-        public Builder lowerInclusive(@Nullable Input<Double> lowerInclusive) {
+        public Builder lowerInclusive(@Nullable Output<Double> lowerInclusive) {
             this.lowerInclusive = lowerInclusive;
             return this;
         }
 
         public Builder lowerInclusive(@Nullable Double lowerInclusive) {
-            this.lowerInclusive = Input.ofNullable(lowerInclusive);
+            this.lowerInclusive = Output.ofNullable(lowerInclusive);
             return this;
         }
 
-        public Builder upperInclusive(@Nullable Input<Double> upperInclusive) {
+        public Builder upperInclusive(@Nullable Output<Double> upperInclusive) {
             this.upperInclusive = upperInclusive;
             return this;
         }
 
         public Builder upperInclusive(@Nullable Double upperInclusive) {
-            this.upperInclusive = Input.ofNullable(upperInclusive);
+            this.upperInclusive = Output.ofNullable(upperInclusive);
             return this;
         }
         public FilterNumberFilterArgs build() {

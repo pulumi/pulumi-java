@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.webpubsub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class WebPubSubTlsSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="clientCertEnabled")
-      private final @Nullable Input<Boolean> clientCertEnabled;
+      private final @Nullable Output<Boolean> clientCertEnabled;
 
-    public Input<Boolean> getClientCertEnabled() {
-        return this.clientCertEnabled == null ? Input.empty() : this.clientCertEnabled;
+    public Output<Boolean> getClientCertEnabled() {
+        return this.clientCertEnabled == null ? Output.empty() : this.clientCertEnabled;
     }
 
-    public WebPubSubTlsSettingsArgs(@Nullable Input<Boolean> clientCertEnabled) {
-        this.clientCertEnabled = clientCertEnabled == null ? Input.ofNullable(true) : clientCertEnabled;
+    public WebPubSubTlsSettingsArgs(@Nullable Output<Boolean> clientCertEnabled) {
+        this.clientCertEnabled = clientCertEnabled == null ? Output.ofNullable(true) : clientCertEnabled;
     }
 
     private WebPubSubTlsSettingsArgs() {
-        this.clientCertEnabled = Input.empty();
+        this.clientCertEnabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class WebPubSubTlsSettingsArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> clientCertEnabled;
+        private @Nullable Output<Boolean> clientCertEnabled;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class WebPubSubTlsSettingsArgs extends io.pulumi.resources.Resource
     	      this.clientCertEnabled = defaults.clientCertEnabled;
         }
 
-        public Builder clientCertEnabled(@Nullable Input<Boolean> clientCertEnabled) {
+        public Builder clientCertEnabled(@Nullable Output<Boolean> clientCertEnabled) {
             this.clientCertEnabled = clientCertEnabled;
             return this;
         }
 
         public Builder clientCertEnabled(@Nullable Boolean clientCertEnabled) {
-            this.clientCertEnabled = Input.ofNullable(clientCertEnabled);
+            this.clientCertEnabled = Output.ofNullable(clientCertEnabled);
             return this;
         }
         public WebPubSubTlsSettingsArgs build() {

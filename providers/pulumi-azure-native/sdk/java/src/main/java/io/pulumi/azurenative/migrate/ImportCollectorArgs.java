@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate;
 
 import io.pulumi.azurenative.migrate.inputs.ImportCollectorPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,10 +16,10 @@ public final class ImportCollectorArgs extends io.pulumi.resources.ResourceArgs 
     public static final ImportCollectorArgs Empty = new ImportCollectorArgs();
 
     @InputImport(name="eTag")
-      private final @Nullable Input<String> eTag;
+      private final @Nullable Output<String> eTag;
 
-    public Input<String> getETag() {
-        return this.eTag == null ? Input.empty() : this.eTag;
+    public Output<String> getETag() {
+        return this.eTag == null ? Output.empty() : this.eTag;
     }
 
     /**
@@ -27,10 +27,10 @@ public final class ImportCollectorArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="importCollectorName")
-      private final @Nullable Input<String> importCollectorName;
+      private final @Nullable Output<String> importCollectorName;
 
-    public Input<String> getImportCollectorName() {
-        return this.importCollectorName == null ? Input.empty() : this.importCollectorName;
+    public Output<String> getImportCollectorName() {
+        return this.importCollectorName == null ? Output.empty() : this.importCollectorName;
     }
 
     /**
@@ -38,17 +38,17 @@ public final class ImportCollectorArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="projectName", required=true)
-      private final Input<String> projectName;
+      private final Output<String> projectName;
 
-    public Input<String> getProjectName() {
+    public Output<String> getProjectName() {
         return this.projectName;
     }
 
     @InputImport(name="properties")
-      private final @Nullable Input<ImportCollectorPropertiesArgs> properties;
+      private final @Nullable Output<ImportCollectorPropertiesArgs> properties;
 
-    public Input<ImportCollectorPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<ImportCollectorPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -56,18 +56,18 @@ public final class ImportCollectorArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public ImportCollectorArgs(
-        @Nullable Input<String> eTag,
-        @Nullable Input<String> importCollectorName,
-        Input<String> projectName,
-        @Nullable Input<ImportCollectorPropertiesArgs> properties,
-        Input<String> resourceGroupName) {
+        @Nullable Output<String> eTag,
+        @Nullable Output<String> importCollectorName,
+        Output<String> projectName,
+        @Nullable Output<ImportCollectorPropertiesArgs> properties,
+        Output<String> resourceGroupName) {
         this.eTag = eTag;
         this.importCollectorName = importCollectorName;
         this.projectName = Objects.requireNonNull(projectName, "expected parameter 'projectName' to be non-null");
@@ -76,11 +76,11 @@ public final class ImportCollectorArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ImportCollectorArgs() {
-        this.eTag = Input.empty();
-        this.importCollectorName = Input.empty();
-        this.projectName = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.eTag = Output.empty();
+        this.importCollectorName = Output.empty();
+        this.projectName = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,11 +92,11 @@ public final class ImportCollectorArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> eTag;
-        private @Nullable Input<String> importCollectorName;
-        private Input<String> projectName;
-        private @Nullable Input<ImportCollectorPropertiesArgs> properties;
-        private Input<String> resourceGroupName;
+        private @Nullable Output<String> eTag;
+        private @Nullable Output<String> importCollectorName;
+        private Output<String> projectName;
+        private @Nullable Output<ImportCollectorPropertiesArgs> properties;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -111,53 +111,53 @@ public final class ImportCollectorArgs extends io.pulumi.resources.ResourceArgs 
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder eTag(@Nullable Input<String> eTag) {
+        public Builder eTag(@Nullable Output<String> eTag) {
             this.eTag = eTag;
             return this;
         }
 
         public Builder eTag(@Nullable String eTag) {
-            this.eTag = Input.ofNullable(eTag);
+            this.eTag = Output.ofNullable(eTag);
             return this;
         }
 
-        public Builder importCollectorName(@Nullable Input<String> importCollectorName) {
+        public Builder importCollectorName(@Nullable Output<String> importCollectorName) {
             this.importCollectorName = importCollectorName;
             return this;
         }
 
         public Builder importCollectorName(@Nullable String importCollectorName) {
-            this.importCollectorName = Input.ofNullable(importCollectorName);
+            this.importCollectorName = Output.ofNullable(importCollectorName);
             return this;
         }
 
-        public Builder projectName(Input<String> projectName) {
+        public Builder projectName(Output<String> projectName) {
             this.projectName = Objects.requireNonNull(projectName);
             return this;
         }
 
         public Builder projectName(String projectName) {
-            this.projectName = Input.of(Objects.requireNonNull(projectName));
+            this.projectName = Output.of(Objects.requireNonNull(projectName));
             return this;
         }
 
-        public Builder properties(@Nullable Input<ImportCollectorPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<ImportCollectorPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable ImportCollectorPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public ImportCollectorArgs build() {

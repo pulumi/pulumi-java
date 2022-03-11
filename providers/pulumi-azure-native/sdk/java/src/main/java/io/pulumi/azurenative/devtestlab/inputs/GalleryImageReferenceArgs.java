@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class GalleryImageReferenceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="offer")
-      private final @Nullable Input<String> offer;
+      private final @Nullable Output<String> offer;
 
-    public Input<String> getOffer() {
-        return this.offer == null ? Input.empty() : this.offer;
+    public Output<String> getOffer() {
+        return this.offer == null ? Output.empty() : this.offer;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class GalleryImageReferenceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="osType")
-      private final @Nullable Input<String> osType;
+      private final @Nullable Output<String> osType;
 
-    public Input<String> getOsType() {
-        return this.osType == null ? Input.empty() : this.osType;
+    public Output<String> getOsType() {
+        return this.osType == null ? Output.empty() : this.osType;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class GalleryImageReferenceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="publisher")
-      private final @Nullable Input<String> publisher;
+      private final @Nullable Output<String> publisher;
 
-    public Input<String> getPublisher() {
-        return this.publisher == null ? Input.empty() : this.publisher;
+    public Output<String> getPublisher() {
+        return this.publisher == null ? Output.empty() : this.publisher;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class GalleryImageReferenceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<String> sku;
+      private final @Nullable Output<String> sku;
 
-    public Input<String> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<String> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -67,18 +67,18 @@ public final class GalleryImageReferenceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public GalleryImageReferenceArgs(
-        @Nullable Input<String> offer,
-        @Nullable Input<String> osType,
-        @Nullable Input<String> publisher,
-        @Nullable Input<String> sku,
-        @Nullable Input<String> version) {
+        @Nullable Output<String> offer,
+        @Nullable Output<String> osType,
+        @Nullable Output<String> publisher,
+        @Nullable Output<String> sku,
+        @Nullable Output<String> version) {
         this.offer = offer;
         this.osType = osType;
         this.publisher = publisher;
@@ -87,11 +87,11 @@ public final class GalleryImageReferenceArgs extends io.pulumi.resources.Resourc
     }
 
     private GalleryImageReferenceArgs() {
-        this.offer = Input.empty();
-        this.osType = Input.empty();
-        this.publisher = Input.empty();
-        this.sku = Input.empty();
-        this.version = Input.empty();
+        this.offer = Output.empty();
+        this.osType = Output.empty();
+        this.publisher = Output.empty();
+        this.sku = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,11 +103,11 @@ public final class GalleryImageReferenceArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> offer;
-        private @Nullable Input<String> osType;
-        private @Nullable Input<String> publisher;
-        private @Nullable Input<String> sku;
-        private @Nullable Input<String> version;
+        private @Nullable Output<String> offer;
+        private @Nullable Output<String> osType;
+        private @Nullable Output<String> publisher;
+        private @Nullable Output<String> sku;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -122,53 +122,53 @@ public final class GalleryImageReferenceArgs extends io.pulumi.resources.Resourc
     	      this.version = defaults.version;
         }
 
-        public Builder offer(@Nullable Input<String> offer) {
+        public Builder offer(@Nullable Output<String> offer) {
             this.offer = offer;
             return this;
         }
 
         public Builder offer(@Nullable String offer) {
-            this.offer = Input.ofNullable(offer);
+            this.offer = Output.ofNullable(offer);
             return this;
         }
 
-        public Builder osType(@Nullable Input<String> osType) {
+        public Builder osType(@Nullable Output<String> osType) {
             this.osType = osType;
             return this;
         }
 
         public Builder osType(@Nullable String osType) {
-            this.osType = Input.ofNullable(osType);
+            this.osType = Output.ofNullable(osType);
             return this;
         }
 
-        public Builder publisher(@Nullable Input<String> publisher) {
+        public Builder publisher(@Nullable Output<String> publisher) {
             this.publisher = publisher;
             return this;
         }
 
         public Builder publisher(@Nullable String publisher) {
-            this.publisher = Input.ofNullable(publisher);
+            this.publisher = Output.ofNullable(publisher);
             return this;
         }
 
-        public Builder sku(@Nullable Input<String> sku) {
+        public Builder sku(@Nullable Output<String> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable String sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public GalleryImageReferenceArgs build() {

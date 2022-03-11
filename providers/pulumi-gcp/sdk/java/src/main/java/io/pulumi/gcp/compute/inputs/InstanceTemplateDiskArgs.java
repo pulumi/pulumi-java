@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.InstanceTemplateDiskDiskEncryptionKeyArgs;
 import java.lang.Boolean;
@@ -24,10 +24,10 @@ public final class InstanceTemplateDiskArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="autoDelete")
-      private final @Nullable Input<Boolean> autoDelete;
+      private final @Nullable Output<Boolean> autoDelete;
 
-    public Input<Boolean> getAutoDelete() {
-        return this.autoDelete == null ? Input.empty() : this.autoDelete;
+    public Output<Boolean> getAutoDelete() {
+        return this.autoDelete == null ? Output.empty() : this.autoDelete;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class InstanceTemplateDiskArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="boot")
-      private final @Nullable Input<Boolean> boot;
+      private final @Nullable Output<Boolean> boot;
 
-    public Input<Boolean> getBoot() {
-        return this.boot == null ? Input.empty() : this.boot;
+    public Output<Boolean> getBoot() {
+        return this.boot == null ? Output.empty() : this.boot;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class InstanceTemplateDiskArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="deviceName")
-      private final @Nullable Input<String> deviceName;
+      private final @Nullable Output<String> deviceName;
 
-    public Input<String> getDeviceName() {
-        return this.deviceName == null ? Input.empty() : this.deviceName;
+    public Output<String> getDeviceName() {
+        return this.deviceName == null ? Output.empty() : this.deviceName;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class InstanceTemplateDiskArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="diskEncryptionKey")
-      private final @Nullable Input<InstanceTemplateDiskDiskEncryptionKeyArgs> diskEncryptionKey;
+      private final @Nullable Output<InstanceTemplateDiskDiskEncryptionKeyArgs> diskEncryptionKey;
 
-    public Input<InstanceTemplateDiskDiskEncryptionKeyArgs> getDiskEncryptionKey() {
-        return this.diskEncryptionKey == null ? Input.empty() : this.diskEncryptionKey;
+    public Output<InstanceTemplateDiskDiskEncryptionKeyArgs> getDiskEncryptionKey() {
+        return this.diskEncryptionKey == null ? Output.empty() : this.diskEncryptionKey;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class InstanceTemplateDiskArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="diskName")
-      private final @Nullable Input<String> diskName;
+      private final @Nullable Output<String> diskName;
 
-    public Input<String> getDiskName() {
-        return this.diskName == null ? Input.empty() : this.diskName;
+    public Output<String> getDiskName() {
+        return this.diskName == null ? Output.empty() : this.diskName;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class InstanceTemplateDiskArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="diskSizeGb")
-      private final @Nullable Input<Integer> diskSizeGb;
+      private final @Nullable Output<Integer> diskSizeGb;
 
-    public Input<Integer> getDiskSizeGb() {
-        return this.diskSizeGb == null ? Input.empty() : this.diskSizeGb;
+    public Output<Integer> getDiskSizeGb() {
+        return this.diskSizeGb == null ? Output.empty() : this.diskSizeGb;
     }
 
     /**
@@ -96,10 +96,10 @@ public final class InstanceTemplateDiskArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="diskType")
-      private final @Nullable Input<String> diskType;
+      private final @Nullable Output<String> diskType;
 
-    public Input<String> getDiskType() {
-        return this.diskType == null ? Input.empty() : this.diskType;
+    public Output<String> getDiskType() {
+        return this.diskType == null ? Output.empty() : this.diskType;
     }
 
     /**
@@ -110,10 +110,10 @@ public final class InstanceTemplateDiskArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="interface")
-      private final @Nullable Input<String> $interface;
+      private final @Nullable Output<String> $interface;
 
-    public Input<String> get$interface() {
-        return this.$interface == null ? Input.empty() : this.$interface;
+    public Output<String> get$interface() {
+        return this.$interface == null ? Output.empty() : this.$interface;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class InstanceTemplateDiskArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -135,10 +135,10 @@ public final class InstanceTemplateDiskArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="mode")
-      private final @Nullable Input<String> mode;
+      private final @Nullable Output<String> mode;
 
-    public Input<String> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<String> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
     /**
@@ -146,10 +146,10 @@ public final class InstanceTemplateDiskArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourcePolicies")
-      private final @Nullable Input<String> resourcePolicies;
+      private final @Nullable Output<String> resourcePolicies;
 
-    public Input<String> getResourcePolicies() {
-        return this.resourcePolicies == null ? Input.empty() : this.resourcePolicies;
+    public Output<String> getResourcePolicies() {
+        return this.resourcePolicies == null ? Output.empty() : this.resourcePolicies;
     }
 
     /**
@@ -159,10 +159,10 @@ public final class InstanceTemplateDiskArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="source")
-      private final @Nullable Input<String> source;
+      private final @Nullable Output<String> source;
 
-    public Input<String> getSource() {
-        return this.source == null ? Input.empty() : this.source;
+    public Output<String> getSource() {
+        return this.source == null ? Output.empty() : this.source;
     }
 
     /**
@@ -176,10 +176,10 @@ public final class InstanceTemplateDiskArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="sourceImage")
-      private final @Nullable Input<String> sourceImage;
+      private final @Nullable Output<String> sourceImage;
 
-    public Input<String> getSourceImage() {
-        return this.sourceImage == null ? Input.empty() : this.sourceImage;
+    public Output<String> getSourceImage() {
+        return this.sourceImage == null ? Output.empty() : this.sourceImage;
     }
 
     /**
@@ -187,27 +187,27 @@ public final class InstanceTemplateDiskArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public InstanceTemplateDiskArgs(
-        @Nullable Input<Boolean> autoDelete,
-        @Nullable Input<Boolean> boot,
-        @Nullable Input<String> deviceName,
-        @Nullable Input<InstanceTemplateDiskDiskEncryptionKeyArgs> diskEncryptionKey,
-        @Nullable Input<String> diskName,
-        @Nullable Input<Integer> diskSizeGb,
-        @Nullable Input<String> diskType,
-        @Nullable Input<String> $interface,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> mode,
-        @Nullable Input<String> resourcePolicies,
-        @Nullable Input<String> source,
-        @Nullable Input<String> sourceImage,
-        @Nullable Input<String> type) {
+        @Nullable Output<Boolean> autoDelete,
+        @Nullable Output<Boolean> boot,
+        @Nullable Output<String> deviceName,
+        @Nullable Output<InstanceTemplateDiskDiskEncryptionKeyArgs> diskEncryptionKey,
+        @Nullable Output<String> diskName,
+        @Nullable Output<Integer> diskSizeGb,
+        @Nullable Output<String> diskType,
+        @Nullable Output<String> $interface,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> mode,
+        @Nullable Output<String> resourcePolicies,
+        @Nullable Output<String> source,
+        @Nullable Output<String> sourceImage,
+        @Nullable Output<String> type) {
         this.autoDelete = autoDelete;
         this.boot = boot;
         this.deviceName = deviceName;
@@ -225,20 +225,20 @@ public final class InstanceTemplateDiskArgs extends io.pulumi.resources.Resource
     }
 
     private InstanceTemplateDiskArgs() {
-        this.autoDelete = Input.empty();
-        this.boot = Input.empty();
-        this.deviceName = Input.empty();
-        this.diskEncryptionKey = Input.empty();
-        this.diskName = Input.empty();
-        this.diskSizeGb = Input.empty();
-        this.diskType = Input.empty();
-        this.$interface = Input.empty();
-        this.labels = Input.empty();
-        this.mode = Input.empty();
-        this.resourcePolicies = Input.empty();
-        this.source = Input.empty();
-        this.sourceImage = Input.empty();
-        this.type = Input.empty();
+        this.autoDelete = Output.empty();
+        this.boot = Output.empty();
+        this.deviceName = Output.empty();
+        this.diskEncryptionKey = Output.empty();
+        this.diskName = Output.empty();
+        this.diskSizeGb = Output.empty();
+        this.diskType = Output.empty();
+        this.$interface = Output.empty();
+        this.labels = Output.empty();
+        this.mode = Output.empty();
+        this.resourcePolicies = Output.empty();
+        this.source = Output.empty();
+        this.sourceImage = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -250,20 +250,20 @@ public final class InstanceTemplateDiskArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> autoDelete;
-        private @Nullable Input<Boolean> boot;
-        private @Nullable Input<String> deviceName;
-        private @Nullable Input<InstanceTemplateDiskDiskEncryptionKeyArgs> diskEncryptionKey;
-        private @Nullable Input<String> diskName;
-        private @Nullable Input<Integer> diskSizeGb;
-        private @Nullable Input<String> diskType;
-        private @Nullable Input<String> $interface;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> mode;
-        private @Nullable Input<String> resourcePolicies;
-        private @Nullable Input<String> source;
-        private @Nullable Input<String> sourceImage;
-        private @Nullable Input<String> type;
+        private @Nullable Output<Boolean> autoDelete;
+        private @Nullable Output<Boolean> boot;
+        private @Nullable Output<String> deviceName;
+        private @Nullable Output<InstanceTemplateDiskDiskEncryptionKeyArgs> diskEncryptionKey;
+        private @Nullable Output<String> diskName;
+        private @Nullable Output<Integer> diskSizeGb;
+        private @Nullable Output<String> diskType;
+        private @Nullable Output<String> $interface;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> mode;
+        private @Nullable Output<String> resourcePolicies;
+        private @Nullable Output<String> source;
+        private @Nullable Output<String> sourceImage;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -287,143 +287,143 @@ public final class InstanceTemplateDiskArgs extends io.pulumi.resources.Resource
     	      this.type = defaults.type;
         }
 
-        public Builder autoDelete(@Nullable Input<Boolean> autoDelete) {
+        public Builder autoDelete(@Nullable Output<Boolean> autoDelete) {
             this.autoDelete = autoDelete;
             return this;
         }
 
         public Builder autoDelete(@Nullable Boolean autoDelete) {
-            this.autoDelete = Input.ofNullable(autoDelete);
+            this.autoDelete = Output.ofNullable(autoDelete);
             return this;
         }
 
-        public Builder boot(@Nullable Input<Boolean> boot) {
+        public Builder boot(@Nullable Output<Boolean> boot) {
             this.boot = boot;
             return this;
         }
 
         public Builder boot(@Nullable Boolean boot) {
-            this.boot = Input.ofNullable(boot);
+            this.boot = Output.ofNullable(boot);
             return this;
         }
 
-        public Builder deviceName(@Nullable Input<String> deviceName) {
+        public Builder deviceName(@Nullable Output<String> deviceName) {
             this.deviceName = deviceName;
             return this;
         }
 
         public Builder deviceName(@Nullable String deviceName) {
-            this.deviceName = Input.ofNullable(deviceName);
+            this.deviceName = Output.ofNullable(deviceName);
             return this;
         }
 
-        public Builder diskEncryptionKey(@Nullable Input<InstanceTemplateDiskDiskEncryptionKeyArgs> diskEncryptionKey) {
+        public Builder diskEncryptionKey(@Nullable Output<InstanceTemplateDiskDiskEncryptionKeyArgs> diskEncryptionKey) {
             this.diskEncryptionKey = diskEncryptionKey;
             return this;
         }
 
         public Builder diskEncryptionKey(@Nullable InstanceTemplateDiskDiskEncryptionKeyArgs diskEncryptionKey) {
-            this.diskEncryptionKey = Input.ofNullable(diskEncryptionKey);
+            this.diskEncryptionKey = Output.ofNullable(diskEncryptionKey);
             return this;
         }
 
-        public Builder diskName(@Nullable Input<String> diskName) {
+        public Builder diskName(@Nullable Output<String> diskName) {
             this.diskName = diskName;
             return this;
         }
 
         public Builder diskName(@Nullable String diskName) {
-            this.diskName = Input.ofNullable(diskName);
+            this.diskName = Output.ofNullable(diskName);
             return this;
         }
 
-        public Builder diskSizeGb(@Nullable Input<Integer> diskSizeGb) {
+        public Builder diskSizeGb(@Nullable Output<Integer> diskSizeGb) {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
 
         public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
-            this.diskSizeGb = Input.ofNullable(diskSizeGb);
+            this.diskSizeGb = Output.ofNullable(diskSizeGb);
             return this;
         }
 
-        public Builder diskType(@Nullable Input<String> diskType) {
+        public Builder diskType(@Nullable Output<String> diskType) {
             this.diskType = diskType;
             return this;
         }
 
         public Builder diskType(@Nullable String diskType) {
-            this.diskType = Input.ofNullable(diskType);
+            this.diskType = Output.ofNullable(diskType);
             return this;
         }
 
-        public Builder $interface(@Nullable Input<String> $interface) {
+        public Builder $interface(@Nullable Output<String> $interface) {
             this.$interface = $interface;
             return this;
         }
 
         public Builder $interface(@Nullable String $interface) {
-            this.$interface = Input.ofNullable($interface);
+            this.$interface = Output.ofNullable($interface);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder mode(@Nullable Input<String> mode) {
+        public Builder mode(@Nullable Output<String> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable String mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
 
-        public Builder resourcePolicies(@Nullable Input<String> resourcePolicies) {
+        public Builder resourcePolicies(@Nullable Output<String> resourcePolicies) {
             this.resourcePolicies = resourcePolicies;
             return this;
         }
 
         public Builder resourcePolicies(@Nullable String resourcePolicies) {
-            this.resourcePolicies = Input.ofNullable(resourcePolicies);
+            this.resourcePolicies = Output.ofNullable(resourcePolicies);
             return this;
         }
 
-        public Builder source(@Nullable Input<String> source) {
+        public Builder source(@Nullable Output<String> source) {
             this.source = source;
             return this;
         }
 
         public Builder source(@Nullable String source) {
-            this.source = Input.ofNullable(source);
+            this.source = Output.ofNullable(source);
             return this;
         }
 
-        public Builder sourceImage(@Nullable Input<String> sourceImage) {
+        public Builder sourceImage(@Nullable Output<String> sourceImage) {
             this.sourceImage = sourceImage;
             return this;
         }
 
         public Builder sourceImage(@Nullable String sourceImage) {
-            this.sourceImage = Input.ofNullable(sourceImage);
+            this.sourceImage = Output.ofNullable(sourceImage);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public InstanceTemplateDiskArgs build() {

@@ -6,7 +6,6 @@ package io.pulumi.awsnative.apigateway;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.apigateway.UsagePlanKeyArgs;
 import io.pulumi.awsnative.apigateway.enums.UsagePlanKeyKeyType;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -100,14 +99,14 @@ public class UsagePlanKey extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public UsagePlanKey(String name, UsagePlanKeyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:apigateway:UsagePlanKey", name, args == null ? UsagePlanKeyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:apigateway:UsagePlanKey", name, args == null ? UsagePlanKeyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private UsagePlanKey(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private UsagePlanKey(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:apigateway:UsagePlanKey", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -122,7 +121,7 @@ public class UsagePlanKey extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static UsagePlanKey get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static UsagePlanKey get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new UsagePlanKey(name, id, options);
     }
 }

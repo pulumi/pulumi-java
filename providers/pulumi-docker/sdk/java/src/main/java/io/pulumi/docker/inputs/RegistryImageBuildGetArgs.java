@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.docker.inputs.RegistryImageBuildAuthConfigGetArgs;
 import io.pulumi.docker.inputs.RegistryImageBuildUlimitGetArgs;
@@ -21,262 +21,262 @@ public final class RegistryImageBuildGetArgs extends io.pulumi.resources.Resourc
     public static final RegistryImageBuildGetArgs Empty = new RegistryImageBuildGetArgs();
 
     @InputImport(name="authConfigs")
-      private final @Nullable Input<List<RegistryImageBuildAuthConfigGetArgs>> authConfigs;
+      private final @Nullable Output<List<RegistryImageBuildAuthConfigGetArgs>> authConfigs;
 
-    public Input<List<RegistryImageBuildAuthConfigGetArgs>> getAuthConfigs() {
-        return this.authConfigs == null ? Input.empty() : this.authConfigs;
+    public Output<List<RegistryImageBuildAuthConfigGetArgs>> getAuthConfigs() {
+        return this.authConfigs == null ? Output.empty() : this.authConfigs;
     }
 
     @InputImport(name="buildArgs")
-      private final @Nullable Input<Map<String,String>> buildArgs;
+      private final @Nullable Output<Map<String,String>> buildArgs;
 
-    public Input<Map<String,String>> getBuildArgs() {
-        return this.buildArgs == null ? Input.empty() : this.buildArgs;
+    public Output<Map<String,String>> getBuildArgs() {
+        return this.buildArgs == null ? Output.empty() : this.buildArgs;
     }
 
     @InputImport(name="buildId")
-      private final @Nullable Input<String> buildId;
+      private final @Nullable Output<String> buildId;
 
-    public Input<String> getBuildId() {
-        return this.buildId == null ? Input.empty() : this.buildId;
+    public Output<String> getBuildId() {
+        return this.buildId == null ? Output.empty() : this.buildId;
     }
 
     @InputImport(name="cacheFroms")
-      private final @Nullable Input<List<String>> cacheFroms;
+      private final @Nullable Output<List<String>> cacheFroms;
 
-    public Input<List<String>> getCacheFroms() {
-        return this.cacheFroms == null ? Input.empty() : this.cacheFroms;
+    public Output<List<String>> getCacheFroms() {
+        return this.cacheFroms == null ? Output.empty() : this.cacheFroms;
     }
 
     @InputImport(name="cgroupParent")
-      private final @Nullable Input<String> cgroupParent;
+      private final @Nullable Output<String> cgroupParent;
 
-    public Input<String> getCgroupParent() {
-        return this.cgroupParent == null ? Input.empty() : this.cgroupParent;
+    public Output<String> getCgroupParent() {
+        return this.cgroupParent == null ? Output.empty() : this.cgroupParent;
     }
 
     @InputImport(name="context", required=true)
-      private final Input<String> context;
+      private final Output<String> context;
 
-    public Input<String> getContext() {
+    public Output<String> getContext() {
         return this.context;
     }
 
     @InputImport(name="cpuPeriod")
-      private final @Nullable Input<Integer> cpuPeriod;
+      private final @Nullable Output<Integer> cpuPeriod;
 
-    public Input<Integer> getCpuPeriod() {
-        return this.cpuPeriod == null ? Input.empty() : this.cpuPeriod;
+    public Output<Integer> getCpuPeriod() {
+        return this.cpuPeriod == null ? Output.empty() : this.cpuPeriod;
     }
 
     @InputImport(name="cpuQuota")
-      private final @Nullable Input<Integer> cpuQuota;
+      private final @Nullable Output<Integer> cpuQuota;
 
-    public Input<Integer> getCpuQuota() {
-        return this.cpuQuota == null ? Input.empty() : this.cpuQuota;
+    public Output<Integer> getCpuQuota() {
+        return this.cpuQuota == null ? Output.empty() : this.cpuQuota;
     }
 
     @InputImport(name="cpuSetCpus")
-      private final @Nullable Input<String> cpuSetCpus;
+      private final @Nullable Output<String> cpuSetCpus;
 
-    public Input<String> getCpuSetCpus() {
-        return this.cpuSetCpus == null ? Input.empty() : this.cpuSetCpus;
+    public Output<String> getCpuSetCpus() {
+        return this.cpuSetCpus == null ? Output.empty() : this.cpuSetCpus;
     }
 
     @InputImport(name="cpuSetMems")
-      private final @Nullable Input<String> cpuSetMems;
+      private final @Nullable Output<String> cpuSetMems;
 
-    public Input<String> getCpuSetMems() {
-        return this.cpuSetMems == null ? Input.empty() : this.cpuSetMems;
+    public Output<String> getCpuSetMems() {
+        return this.cpuSetMems == null ? Output.empty() : this.cpuSetMems;
     }
 
     @InputImport(name="cpuShares")
-      private final @Nullable Input<Integer> cpuShares;
+      private final @Nullable Output<Integer> cpuShares;
 
-    public Input<Integer> getCpuShares() {
-        return this.cpuShares == null ? Input.empty() : this.cpuShares;
+    public Output<Integer> getCpuShares() {
+        return this.cpuShares == null ? Output.empty() : this.cpuShares;
     }
 
     @InputImport(name="dockerfile")
-      private final @Nullable Input<String> dockerfile;
+      private final @Nullable Output<String> dockerfile;
 
-    public Input<String> getDockerfile() {
-        return this.dockerfile == null ? Input.empty() : this.dockerfile;
+    public Output<String> getDockerfile() {
+        return this.dockerfile == null ? Output.empty() : this.dockerfile;
     }
 
     @InputImport(name="extraHosts")
-      private final @Nullable Input<List<String>> extraHosts;
+      private final @Nullable Output<List<String>> extraHosts;
 
-    public Input<List<String>> getExtraHosts() {
-        return this.extraHosts == null ? Input.empty() : this.extraHosts;
+    public Output<List<String>> getExtraHosts() {
+        return this.extraHosts == null ? Output.empty() : this.extraHosts;
     }
 
     @InputImport(name="forceRemove")
-      private final @Nullable Input<Boolean> forceRemove;
+      private final @Nullable Output<Boolean> forceRemove;
 
-    public Input<Boolean> getForceRemove() {
-        return this.forceRemove == null ? Input.empty() : this.forceRemove;
+    public Output<Boolean> getForceRemove() {
+        return this.forceRemove == null ? Output.empty() : this.forceRemove;
     }
 
     @InputImport(name="isolation")
-      private final @Nullable Input<String> isolation;
+      private final @Nullable Output<String> isolation;
 
-    public Input<String> getIsolation() {
-        return this.isolation == null ? Input.empty() : this.isolation;
+    public Output<String> getIsolation() {
+        return this.isolation == null ? Output.empty() : this.isolation;
     }
 
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     @InputImport(name="memory")
-      private final @Nullable Input<Integer> memory;
+      private final @Nullable Output<Integer> memory;
 
-    public Input<Integer> getMemory() {
-        return this.memory == null ? Input.empty() : this.memory;
+    public Output<Integer> getMemory() {
+        return this.memory == null ? Output.empty() : this.memory;
     }
 
     @InputImport(name="memorySwap")
-      private final @Nullable Input<Integer> memorySwap;
+      private final @Nullable Output<Integer> memorySwap;
 
-    public Input<Integer> getMemorySwap() {
-        return this.memorySwap == null ? Input.empty() : this.memorySwap;
+    public Output<Integer> getMemorySwap() {
+        return this.memorySwap == null ? Output.empty() : this.memorySwap;
     }
 
     @InputImport(name="networkMode")
-      private final @Nullable Input<String> networkMode;
+      private final @Nullable Output<String> networkMode;
 
-    public Input<String> getNetworkMode() {
-        return this.networkMode == null ? Input.empty() : this.networkMode;
+    public Output<String> getNetworkMode() {
+        return this.networkMode == null ? Output.empty() : this.networkMode;
     }
 
     @InputImport(name="noCache")
-      private final @Nullable Input<Boolean> noCache;
+      private final @Nullable Output<Boolean> noCache;
 
-    public Input<Boolean> getNoCache() {
-        return this.noCache == null ? Input.empty() : this.noCache;
+    public Output<Boolean> getNoCache() {
+        return this.noCache == null ? Output.empty() : this.noCache;
     }
 
     @InputImport(name="platform")
-      private final @Nullable Input<String> platform;
+      private final @Nullable Output<String> platform;
 
-    public Input<String> getPlatform() {
-        return this.platform == null ? Input.empty() : this.platform;
+    public Output<String> getPlatform() {
+        return this.platform == null ? Output.empty() : this.platform;
     }
 
     @InputImport(name="pullParent")
-      private final @Nullable Input<Boolean> pullParent;
+      private final @Nullable Output<Boolean> pullParent;
 
-    public Input<Boolean> getPullParent() {
-        return this.pullParent == null ? Input.empty() : this.pullParent;
+    public Output<Boolean> getPullParent() {
+        return this.pullParent == null ? Output.empty() : this.pullParent;
     }
 
     @InputImport(name="remoteContext")
-      private final @Nullable Input<String> remoteContext;
+      private final @Nullable Output<String> remoteContext;
 
-    public Input<String> getRemoteContext() {
-        return this.remoteContext == null ? Input.empty() : this.remoteContext;
+    public Output<String> getRemoteContext() {
+        return this.remoteContext == null ? Output.empty() : this.remoteContext;
     }
 
     @InputImport(name="remove")
-      private final @Nullable Input<Boolean> remove;
+      private final @Nullable Output<Boolean> remove;
 
-    public Input<Boolean> getRemove() {
-        return this.remove == null ? Input.empty() : this.remove;
+    public Output<Boolean> getRemove() {
+        return this.remove == null ? Output.empty() : this.remove;
     }
 
     @InputImport(name="securityOpts")
-      private final @Nullable Input<List<String>> securityOpts;
+      private final @Nullable Output<List<String>> securityOpts;
 
-    public Input<List<String>> getSecurityOpts() {
-        return this.securityOpts == null ? Input.empty() : this.securityOpts;
+    public Output<List<String>> getSecurityOpts() {
+        return this.securityOpts == null ? Output.empty() : this.securityOpts;
     }
 
     @InputImport(name="sessionId")
-      private final @Nullable Input<String> sessionId;
+      private final @Nullable Output<String> sessionId;
 
-    public Input<String> getSessionId() {
-        return this.sessionId == null ? Input.empty() : this.sessionId;
+    public Output<String> getSessionId() {
+        return this.sessionId == null ? Output.empty() : this.sessionId;
     }
 
     @InputImport(name="shmSize")
-      private final @Nullable Input<Integer> shmSize;
+      private final @Nullable Output<Integer> shmSize;
 
-    public Input<Integer> getShmSize() {
-        return this.shmSize == null ? Input.empty() : this.shmSize;
+    public Output<Integer> getShmSize() {
+        return this.shmSize == null ? Output.empty() : this.shmSize;
     }
 
     @InputImport(name="squash")
-      private final @Nullable Input<Boolean> squash;
+      private final @Nullable Output<Boolean> squash;
 
-    public Input<Boolean> getSquash() {
-        return this.squash == null ? Input.empty() : this.squash;
+    public Output<Boolean> getSquash() {
+        return this.squash == null ? Output.empty() : this.squash;
     }
 
     @InputImport(name="suppressOutput")
-      private final @Nullable Input<Boolean> suppressOutput;
+      private final @Nullable Output<Boolean> suppressOutput;
 
-    public Input<Boolean> getSuppressOutput() {
-        return this.suppressOutput == null ? Input.empty() : this.suppressOutput;
+    public Output<Boolean> getSuppressOutput() {
+        return this.suppressOutput == null ? Output.empty() : this.suppressOutput;
     }
 
     @InputImport(name="target")
-      private final @Nullable Input<String> target;
+      private final @Nullable Output<String> target;
 
-    public Input<String> getTarget() {
-        return this.target == null ? Input.empty() : this.target;
+    public Output<String> getTarget() {
+        return this.target == null ? Output.empty() : this.target;
     }
 
     @InputImport(name="ulimits")
-      private final @Nullable Input<List<RegistryImageBuildUlimitGetArgs>> ulimits;
+      private final @Nullable Output<List<RegistryImageBuildUlimitGetArgs>> ulimits;
 
-    public Input<List<RegistryImageBuildUlimitGetArgs>> getUlimits() {
-        return this.ulimits == null ? Input.empty() : this.ulimits;
+    public Output<List<RegistryImageBuildUlimitGetArgs>> getUlimits() {
+        return this.ulimits == null ? Output.empty() : this.ulimits;
     }
 
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public RegistryImageBuildGetArgs(
-        @Nullable Input<List<RegistryImageBuildAuthConfigGetArgs>> authConfigs,
-        @Nullable Input<Map<String,String>> buildArgs,
-        @Nullable Input<String> buildId,
-        @Nullable Input<List<String>> cacheFroms,
-        @Nullable Input<String> cgroupParent,
-        Input<String> context,
-        @Nullable Input<Integer> cpuPeriod,
-        @Nullable Input<Integer> cpuQuota,
-        @Nullable Input<String> cpuSetCpus,
-        @Nullable Input<String> cpuSetMems,
-        @Nullable Input<Integer> cpuShares,
-        @Nullable Input<String> dockerfile,
-        @Nullable Input<List<String>> extraHosts,
-        @Nullable Input<Boolean> forceRemove,
-        @Nullable Input<String> isolation,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<Integer> memory,
-        @Nullable Input<Integer> memorySwap,
-        @Nullable Input<String> networkMode,
-        @Nullable Input<Boolean> noCache,
-        @Nullable Input<String> platform,
-        @Nullable Input<Boolean> pullParent,
-        @Nullable Input<String> remoteContext,
-        @Nullable Input<Boolean> remove,
-        @Nullable Input<List<String>> securityOpts,
-        @Nullable Input<String> sessionId,
-        @Nullable Input<Integer> shmSize,
-        @Nullable Input<Boolean> squash,
-        @Nullable Input<Boolean> suppressOutput,
-        @Nullable Input<String> target,
-        @Nullable Input<List<RegistryImageBuildUlimitGetArgs>> ulimits,
-        @Nullable Input<String> version) {
+        @Nullable Output<List<RegistryImageBuildAuthConfigGetArgs>> authConfigs,
+        @Nullable Output<Map<String,String>> buildArgs,
+        @Nullable Output<String> buildId,
+        @Nullable Output<List<String>> cacheFroms,
+        @Nullable Output<String> cgroupParent,
+        Output<String> context,
+        @Nullable Output<Integer> cpuPeriod,
+        @Nullable Output<Integer> cpuQuota,
+        @Nullable Output<String> cpuSetCpus,
+        @Nullable Output<String> cpuSetMems,
+        @Nullable Output<Integer> cpuShares,
+        @Nullable Output<String> dockerfile,
+        @Nullable Output<List<String>> extraHosts,
+        @Nullable Output<Boolean> forceRemove,
+        @Nullable Output<String> isolation,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<Integer> memory,
+        @Nullable Output<Integer> memorySwap,
+        @Nullable Output<String> networkMode,
+        @Nullable Output<Boolean> noCache,
+        @Nullable Output<String> platform,
+        @Nullable Output<Boolean> pullParent,
+        @Nullable Output<String> remoteContext,
+        @Nullable Output<Boolean> remove,
+        @Nullable Output<List<String>> securityOpts,
+        @Nullable Output<String> sessionId,
+        @Nullable Output<Integer> shmSize,
+        @Nullable Output<Boolean> squash,
+        @Nullable Output<Boolean> suppressOutput,
+        @Nullable Output<String> target,
+        @Nullable Output<List<RegistryImageBuildUlimitGetArgs>> ulimits,
+        @Nullable Output<String> version) {
         this.authConfigs = authConfigs;
         this.buildArgs = buildArgs;
         this.buildId = buildId;
@@ -312,38 +312,38 @@ public final class RegistryImageBuildGetArgs extends io.pulumi.resources.Resourc
     }
 
     private RegistryImageBuildGetArgs() {
-        this.authConfigs = Input.empty();
-        this.buildArgs = Input.empty();
-        this.buildId = Input.empty();
-        this.cacheFroms = Input.empty();
-        this.cgroupParent = Input.empty();
-        this.context = Input.empty();
-        this.cpuPeriod = Input.empty();
-        this.cpuQuota = Input.empty();
-        this.cpuSetCpus = Input.empty();
-        this.cpuSetMems = Input.empty();
-        this.cpuShares = Input.empty();
-        this.dockerfile = Input.empty();
-        this.extraHosts = Input.empty();
-        this.forceRemove = Input.empty();
-        this.isolation = Input.empty();
-        this.labels = Input.empty();
-        this.memory = Input.empty();
-        this.memorySwap = Input.empty();
-        this.networkMode = Input.empty();
-        this.noCache = Input.empty();
-        this.platform = Input.empty();
-        this.pullParent = Input.empty();
-        this.remoteContext = Input.empty();
-        this.remove = Input.empty();
-        this.securityOpts = Input.empty();
-        this.sessionId = Input.empty();
-        this.shmSize = Input.empty();
-        this.squash = Input.empty();
-        this.suppressOutput = Input.empty();
-        this.target = Input.empty();
-        this.ulimits = Input.empty();
-        this.version = Input.empty();
+        this.authConfigs = Output.empty();
+        this.buildArgs = Output.empty();
+        this.buildId = Output.empty();
+        this.cacheFroms = Output.empty();
+        this.cgroupParent = Output.empty();
+        this.context = Output.empty();
+        this.cpuPeriod = Output.empty();
+        this.cpuQuota = Output.empty();
+        this.cpuSetCpus = Output.empty();
+        this.cpuSetMems = Output.empty();
+        this.cpuShares = Output.empty();
+        this.dockerfile = Output.empty();
+        this.extraHosts = Output.empty();
+        this.forceRemove = Output.empty();
+        this.isolation = Output.empty();
+        this.labels = Output.empty();
+        this.memory = Output.empty();
+        this.memorySwap = Output.empty();
+        this.networkMode = Output.empty();
+        this.noCache = Output.empty();
+        this.platform = Output.empty();
+        this.pullParent = Output.empty();
+        this.remoteContext = Output.empty();
+        this.remove = Output.empty();
+        this.securityOpts = Output.empty();
+        this.sessionId = Output.empty();
+        this.shmSize = Output.empty();
+        this.squash = Output.empty();
+        this.suppressOutput = Output.empty();
+        this.target = Output.empty();
+        this.ulimits = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -355,38 +355,38 @@ public final class RegistryImageBuildGetArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<List<RegistryImageBuildAuthConfigGetArgs>> authConfigs;
-        private @Nullable Input<Map<String,String>> buildArgs;
-        private @Nullable Input<String> buildId;
-        private @Nullable Input<List<String>> cacheFroms;
-        private @Nullable Input<String> cgroupParent;
-        private Input<String> context;
-        private @Nullable Input<Integer> cpuPeriod;
-        private @Nullable Input<Integer> cpuQuota;
-        private @Nullable Input<String> cpuSetCpus;
-        private @Nullable Input<String> cpuSetMems;
-        private @Nullable Input<Integer> cpuShares;
-        private @Nullable Input<String> dockerfile;
-        private @Nullable Input<List<String>> extraHosts;
-        private @Nullable Input<Boolean> forceRemove;
-        private @Nullable Input<String> isolation;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<Integer> memory;
-        private @Nullable Input<Integer> memorySwap;
-        private @Nullable Input<String> networkMode;
-        private @Nullable Input<Boolean> noCache;
-        private @Nullable Input<String> platform;
-        private @Nullable Input<Boolean> pullParent;
-        private @Nullable Input<String> remoteContext;
-        private @Nullable Input<Boolean> remove;
-        private @Nullable Input<List<String>> securityOpts;
-        private @Nullable Input<String> sessionId;
-        private @Nullable Input<Integer> shmSize;
-        private @Nullable Input<Boolean> squash;
-        private @Nullable Input<Boolean> suppressOutput;
-        private @Nullable Input<String> target;
-        private @Nullable Input<List<RegistryImageBuildUlimitGetArgs>> ulimits;
-        private @Nullable Input<String> version;
+        private @Nullable Output<List<RegistryImageBuildAuthConfigGetArgs>> authConfigs;
+        private @Nullable Output<Map<String,String>> buildArgs;
+        private @Nullable Output<String> buildId;
+        private @Nullable Output<List<String>> cacheFroms;
+        private @Nullable Output<String> cgroupParent;
+        private Output<String> context;
+        private @Nullable Output<Integer> cpuPeriod;
+        private @Nullable Output<Integer> cpuQuota;
+        private @Nullable Output<String> cpuSetCpus;
+        private @Nullable Output<String> cpuSetMems;
+        private @Nullable Output<Integer> cpuShares;
+        private @Nullable Output<String> dockerfile;
+        private @Nullable Output<List<String>> extraHosts;
+        private @Nullable Output<Boolean> forceRemove;
+        private @Nullable Output<String> isolation;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<Integer> memory;
+        private @Nullable Output<Integer> memorySwap;
+        private @Nullable Output<String> networkMode;
+        private @Nullable Output<Boolean> noCache;
+        private @Nullable Output<String> platform;
+        private @Nullable Output<Boolean> pullParent;
+        private @Nullable Output<String> remoteContext;
+        private @Nullable Output<Boolean> remove;
+        private @Nullable Output<List<String>> securityOpts;
+        private @Nullable Output<String> sessionId;
+        private @Nullable Output<Integer> shmSize;
+        private @Nullable Output<Boolean> squash;
+        private @Nullable Output<Boolean> suppressOutput;
+        private @Nullable Output<String> target;
+        private @Nullable Output<List<RegistryImageBuildUlimitGetArgs>> ulimits;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -428,323 +428,323 @@ public final class RegistryImageBuildGetArgs extends io.pulumi.resources.Resourc
     	      this.version = defaults.version;
         }
 
-        public Builder authConfigs(@Nullable Input<List<RegistryImageBuildAuthConfigGetArgs>> authConfigs) {
+        public Builder authConfigs(@Nullable Output<List<RegistryImageBuildAuthConfigGetArgs>> authConfigs) {
             this.authConfigs = authConfigs;
             return this;
         }
 
         public Builder authConfigs(@Nullable List<RegistryImageBuildAuthConfigGetArgs> authConfigs) {
-            this.authConfigs = Input.ofNullable(authConfigs);
+            this.authConfigs = Output.ofNullable(authConfigs);
             return this;
         }
 
-        public Builder buildArgs(@Nullable Input<Map<String,String>> buildArgs) {
+        public Builder buildArgs(@Nullable Output<Map<String,String>> buildArgs) {
             this.buildArgs = buildArgs;
             return this;
         }
 
         public Builder buildArgs(@Nullable Map<String,String> buildArgs) {
-            this.buildArgs = Input.ofNullable(buildArgs);
+            this.buildArgs = Output.ofNullable(buildArgs);
             return this;
         }
 
-        public Builder buildId(@Nullable Input<String> buildId) {
+        public Builder buildId(@Nullable Output<String> buildId) {
             this.buildId = buildId;
             return this;
         }
 
         public Builder buildId(@Nullable String buildId) {
-            this.buildId = Input.ofNullable(buildId);
+            this.buildId = Output.ofNullable(buildId);
             return this;
         }
 
-        public Builder cacheFroms(@Nullable Input<List<String>> cacheFroms) {
+        public Builder cacheFroms(@Nullable Output<List<String>> cacheFroms) {
             this.cacheFroms = cacheFroms;
             return this;
         }
 
         public Builder cacheFroms(@Nullable List<String> cacheFroms) {
-            this.cacheFroms = Input.ofNullable(cacheFroms);
+            this.cacheFroms = Output.ofNullable(cacheFroms);
             return this;
         }
 
-        public Builder cgroupParent(@Nullable Input<String> cgroupParent) {
+        public Builder cgroupParent(@Nullable Output<String> cgroupParent) {
             this.cgroupParent = cgroupParent;
             return this;
         }
 
         public Builder cgroupParent(@Nullable String cgroupParent) {
-            this.cgroupParent = Input.ofNullable(cgroupParent);
+            this.cgroupParent = Output.ofNullable(cgroupParent);
             return this;
         }
 
-        public Builder context(Input<String> context) {
+        public Builder context(Output<String> context) {
             this.context = Objects.requireNonNull(context);
             return this;
         }
 
         public Builder context(String context) {
-            this.context = Input.of(Objects.requireNonNull(context));
+            this.context = Output.of(Objects.requireNonNull(context));
             return this;
         }
 
-        public Builder cpuPeriod(@Nullable Input<Integer> cpuPeriod) {
+        public Builder cpuPeriod(@Nullable Output<Integer> cpuPeriod) {
             this.cpuPeriod = cpuPeriod;
             return this;
         }
 
         public Builder cpuPeriod(@Nullable Integer cpuPeriod) {
-            this.cpuPeriod = Input.ofNullable(cpuPeriod);
+            this.cpuPeriod = Output.ofNullable(cpuPeriod);
             return this;
         }
 
-        public Builder cpuQuota(@Nullable Input<Integer> cpuQuota) {
+        public Builder cpuQuota(@Nullable Output<Integer> cpuQuota) {
             this.cpuQuota = cpuQuota;
             return this;
         }
 
         public Builder cpuQuota(@Nullable Integer cpuQuota) {
-            this.cpuQuota = Input.ofNullable(cpuQuota);
+            this.cpuQuota = Output.ofNullable(cpuQuota);
             return this;
         }
 
-        public Builder cpuSetCpus(@Nullable Input<String> cpuSetCpus) {
+        public Builder cpuSetCpus(@Nullable Output<String> cpuSetCpus) {
             this.cpuSetCpus = cpuSetCpus;
             return this;
         }
 
         public Builder cpuSetCpus(@Nullable String cpuSetCpus) {
-            this.cpuSetCpus = Input.ofNullable(cpuSetCpus);
+            this.cpuSetCpus = Output.ofNullable(cpuSetCpus);
             return this;
         }
 
-        public Builder cpuSetMems(@Nullable Input<String> cpuSetMems) {
+        public Builder cpuSetMems(@Nullable Output<String> cpuSetMems) {
             this.cpuSetMems = cpuSetMems;
             return this;
         }
 
         public Builder cpuSetMems(@Nullable String cpuSetMems) {
-            this.cpuSetMems = Input.ofNullable(cpuSetMems);
+            this.cpuSetMems = Output.ofNullable(cpuSetMems);
             return this;
         }
 
-        public Builder cpuShares(@Nullable Input<Integer> cpuShares) {
+        public Builder cpuShares(@Nullable Output<Integer> cpuShares) {
             this.cpuShares = cpuShares;
             return this;
         }
 
         public Builder cpuShares(@Nullable Integer cpuShares) {
-            this.cpuShares = Input.ofNullable(cpuShares);
+            this.cpuShares = Output.ofNullable(cpuShares);
             return this;
         }
 
-        public Builder dockerfile(@Nullable Input<String> dockerfile) {
+        public Builder dockerfile(@Nullable Output<String> dockerfile) {
             this.dockerfile = dockerfile;
             return this;
         }
 
         public Builder dockerfile(@Nullable String dockerfile) {
-            this.dockerfile = Input.ofNullable(dockerfile);
+            this.dockerfile = Output.ofNullable(dockerfile);
             return this;
         }
 
-        public Builder extraHosts(@Nullable Input<List<String>> extraHosts) {
+        public Builder extraHosts(@Nullable Output<List<String>> extraHosts) {
             this.extraHosts = extraHosts;
             return this;
         }
 
         public Builder extraHosts(@Nullable List<String> extraHosts) {
-            this.extraHosts = Input.ofNullable(extraHosts);
+            this.extraHosts = Output.ofNullable(extraHosts);
             return this;
         }
 
-        public Builder forceRemove(@Nullable Input<Boolean> forceRemove) {
+        public Builder forceRemove(@Nullable Output<Boolean> forceRemove) {
             this.forceRemove = forceRemove;
             return this;
         }
 
         public Builder forceRemove(@Nullable Boolean forceRemove) {
-            this.forceRemove = Input.ofNullable(forceRemove);
+            this.forceRemove = Output.ofNullable(forceRemove);
             return this;
         }
 
-        public Builder isolation(@Nullable Input<String> isolation) {
+        public Builder isolation(@Nullable Output<String> isolation) {
             this.isolation = isolation;
             return this;
         }
 
         public Builder isolation(@Nullable String isolation) {
-            this.isolation = Input.ofNullable(isolation);
+            this.isolation = Output.ofNullable(isolation);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder memory(@Nullable Input<Integer> memory) {
+        public Builder memory(@Nullable Output<Integer> memory) {
             this.memory = memory;
             return this;
         }
 
         public Builder memory(@Nullable Integer memory) {
-            this.memory = Input.ofNullable(memory);
+            this.memory = Output.ofNullable(memory);
             return this;
         }
 
-        public Builder memorySwap(@Nullable Input<Integer> memorySwap) {
+        public Builder memorySwap(@Nullable Output<Integer> memorySwap) {
             this.memorySwap = memorySwap;
             return this;
         }
 
         public Builder memorySwap(@Nullable Integer memorySwap) {
-            this.memorySwap = Input.ofNullable(memorySwap);
+            this.memorySwap = Output.ofNullable(memorySwap);
             return this;
         }
 
-        public Builder networkMode(@Nullable Input<String> networkMode) {
+        public Builder networkMode(@Nullable Output<String> networkMode) {
             this.networkMode = networkMode;
             return this;
         }
 
         public Builder networkMode(@Nullable String networkMode) {
-            this.networkMode = Input.ofNullable(networkMode);
+            this.networkMode = Output.ofNullable(networkMode);
             return this;
         }
 
-        public Builder noCache(@Nullable Input<Boolean> noCache) {
+        public Builder noCache(@Nullable Output<Boolean> noCache) {
             this.noCache = noCache;
             return this;
         }
 
         public Builder noCache(@Nullable Boolean noCache) {
-            this.noCache = Input.ofNullable(noCache);
+            this.noCache = Output.ofNullable(noCache);
             return this;
         }
 
-        public Builder platform(@Nullable Input<String> platform) {
+        public Builder platform(@Nullable Output<String> platform) {
             this.platform = platform;
             return this;
         }
 
         public Builder platform(@Nullable String platform) {
-            this.platform = Input.ofNullable(platform);
+            this.platform = Output.ofNullable(platform);
             return this;
         }
 
-        public Builder pullParent(@Nullable Input<Boolean> pullParent) {
+        public Builder pullParent(@Nullable Output<Boolean> pullParent) {
             this.pullParent = pullParent;
             return this;
         }
 
         public Builder pullParent(@Nullable Boolean pullParent) {
-            this.pullParent = Input.ofNullable(pullParent);
+            this.pullParent = Output.ofNullable(pullParent);
             return this;
         }
 
-        public Builder remoteContext(@Nullable Input<String> remoteContext) {
+        public Builder remoteContext(@Nullable Output<String> remoteContext) {
             this.remoteContext = remoteContext;
             return this;
         }
 
         public Builder remoteContext(@Nullable String remoteContext) {
-            this.remoteContext = Input.ofNullable(remoteContext);
+            this.remoteContext = Output.ofNullable(remoteContext);
             return this;
         }
 
-        public Builder remove(@Nullable Input<Boolean> remove) {
+        public Builder remove(@Nullable Output<Boolean> remove) {
             this.remove = remove;
             return this;
         }
 
         public Builder remove(@Nullable Boolean remove) {
-            this.remove = Input.ofNullable(remove);
+            this.remove = Output.ofNullable(remove);
             return this;
         }
 
-        public Builder securityOpts(@Nullable Input<List<String>> securityOpts) {
+        public Builder securityOpts(@Nullable Output<List<String>> securityOpts) {
             this.securityOpts = securityOpts;
             return this;
         }
 
         public Builder securityOpts(@Nullable List<String> securityOpts) {
-            this.securityOpts = Input.ofNullable(securityOpts);
+            this.securityOpts = Output.ofNullable(securityOpts);
             return this;
         }
 
-        public Builder sessionId(@Nullable Input<String> sessionId) {
+        public Builder sessionId(@Nullable Output<String> sessionId) {
             this.sessionId = sessionId;
             return this;
         }
 
         public Builder sessionId(@Nullable String sessionId) {
-            this.sessionId = Input.ofNullable(sessionId);
+            this.sessionId = Output.ofNullable(sessionId);
             return this;
         }
 
-        public Builder shmSize(@Nullable Input<Integer> shmSize) {
+        public Builder shmSize(@Nullable Output<Integer> shmSize) {
             this.shmSize = shmSize;
             return this;
         }
 
         public Builder shmSize(@Nullable Integer shmSize) {
-            this.shmSize = Input.ofNullable(shmSize);
+            this.shmSize = Output.ofNullable(shmSize);
             return this;
         }
 
-        public Builder squash(@Nullable Input<Boolean> squash) {
+        public Builder squash(@Nullable Output<Boolean> squash) {
             this.squash = squash;
             return this;
         }
 
         public Builder squash(@Nullable Boolean squash) {
-            this.squash = Input.ofNullable(squash);
+            this.squash = Output.ofNullable(squash);
             return this;
         }
 
-        public Builder suppressOutput(@Nullable Input<Boolean> suppressOutput) {
+        public Builder suppressOutput(@Nullable Output<Boolean> suppressOutput) {
             this.suppressOutput = suppressOutput;
             return this;
         }
 
         public Builder suppressOutput(@Nullable Boolean suppressOutput) {
-            this.suppressOutput = Input.ofNullable(suppressOutput);
+            this.suppressOutput = Output.ofNullable(suppressOutput);
             return this;
         }
 
-        public Builder target(@Nullable Input<String> target) {
+        public Builder target(@Nullable Output<String> target) {
             this.target = target;
             return this;
         }
 
         public Builder target(@Nullable String target) {
-            this.target = Input.ofNullable(target);
+            this.target = Output.ofNullable(target);
             return this;
         }
 
-        public Builder ulimits(@Nullable Input<List<RegistryImageBuildUlimitGetArgs>> ulimits) {
+        public Builder ulimits(@Nullable Output<List<RegistryImageBuildUlimitGetArgs>> ulimits) {
             this.ulimits = ulimits;
             return this;
         }
 
         public Builder ulimits(@Nullable List<RegistryImageBuildUlimitGetArgs> ulimits) {
-            this.ulimits = Input.ofNullable(ulimits);
+            this.ulimits = Output.ofNullable(ulimits);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public RegistryImageBuildGetArgs build() {

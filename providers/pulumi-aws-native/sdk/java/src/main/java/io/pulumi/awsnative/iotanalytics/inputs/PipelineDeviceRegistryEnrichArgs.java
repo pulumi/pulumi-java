@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotanalytics.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,46 +15,46 @@ public final class PipelineDeviceRegistryEnrichArgs extends io.pulumi.resources.
     public static final PipelineDeviceRegistryEnrichArgs Empty = new PipelineDeviceRegistryEnrichArgs();
 
     @InputImport(name="attribute", required=true)
-      private final Input<String> attribute;
+      private final Output<String> attribute;
 
-    public Input<String> getAttribute() {
+    public Output<String> getAttribute() {
         return this.attribute;
     }
 
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     @InputImport(name="next")
-      private final @Nullable Input<String> next;
+      private final @Nullable Output<String> next;
 
-    public Input<String> getNext() {
-        return this.next == null ? Input.empty() : this.next;
+    public Output<String> getNext() {
+        return this.next == null ? Output.empty() : this.next;
     }
 
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
     @InputImport(name="thingName", required=true)
-      private final Input<String> thingName;
+      private final Output<String> thingName;
 
-    public Input<String> getThingName() {
+    public Output<String> getThingName() {
         return this.thingName;
     }
 
     public PipelineDeviceRegistryEnrichArgs(
-        Input<String> attribute,
-        Input<String> name,
-        @Nullable Input<String> next,
-        Input<String> roleArn,
-        Input<String> thingName) {
+        Output<String> attribute,
+        Output<String> name,
+        @Nullable Output<String> next,
+        Output<String> roleArn,
+        Output<String> thingName) {
         this.attribute = Objects.requireNonNull(attribute, "expected parameter 'attribute' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.next = next;
@@ -63,11 +63,11 @@ public final class PipelineDeviceRegistryEnrichArgs extends io.pulumi.resources.
     }
 
     private PipelineDeviceRegistryEnrichArgs() {
-        this.attribute = Input.empty();
-        this.name = Input.empty();
-        this.next = Input.empty();
-        this.roleArn = Input.empty();
-        this.thingName = Input.empty();
+        this.attribute = Output.empty();
+        this.name = Output.empty();
+        this.next = Output.empty();
+        this.roleArn = Output.empty();
+        this.thingName = Output.empty();
     }
 
     public static Builder builder() {
@@ -79,11 +79,11 @@ public final class PipelineDeviceRegistryEnrichArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<String> attribute;
-        private Input<String> name;
-        private @Nullable Input<String> next;
-        private Input<String> roleArn;
-        private Input<String> thingName;
+        private Output<String> attribute;
+        private Output<String> name;
+        private @Nullable Output<String> next;
+        private Output<String> roleArn;
+        private Output<String> thingName;
 
         public Builder() {
     	      // Empty
@@ -98,53 +98,53 @@ public final class PipelineDeviceRegistryEnrichArgs extends io.pulumi.resources.
     	      this.thingName = defaults.thingName;
         }
 
-        public Builder attribute(Input<String> attribute) {
+        public Builder attribute(Output<String> attribute) {
             this.attribute = Objects.requireNonNull(attribute);
             return this;
         }
 
         public Builder attribute(String attribute) {
-            this.attribute = Input.of(Objects.requireNonNull(attribute));
+            this.attribute = Output.of(Objects.requireNonNull(attribute));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder next(@Nullable Input<String> next) {
+        public Builder next(@Nullable Output<String> next) {
             this.next = next;
             return this;
         }
 
         public Builder next(@Nullable String next) {
-            this.next = Input.ofNullable(next);
+            this.next = Output.ofNullable(next);
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder thingName(Input<String> thingName) {
+        public Builder thingName(Output<String> thingName) {
             this.thingName = Objects.requireNonNull(thingName);
             return this;
         }
 
         public Builder thingName(String thingName) {
-            this.thingName = Input.of(Objects.requireNonNull(thingName));
+            this.thingName = Output.of(Objects.requireNonNull(thingName));
             return this;
         }
         public PipelineDeviceRegistryEnrichArgs build() {

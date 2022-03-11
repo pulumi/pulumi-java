@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
      * 
      */
     @InputImport(name="consumeReservationType")
-      private final @Nullable Input<String> consumeReservationType;
+      private final @Nullable Output<String> consumeReservationType;
 
-    public Input<String> getConsumeReservationType() {
-        return this.consumeReservationType == null ? Input.empty() : this.consumeReservationType;
+    public Output<String> getConsumeReservationType() {
+        return this.consumeReservationType == null ? Output.empty() : this.consumeReservationType;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
      * 
      */
     @InputImport(name="key")
-      private final @Nullable Input<String> key;
+      private final @Nullable Output<String> key;
 
-    public Input<String> getKey() {
-        return this.key == null ? Input.empty() : this.key;
+    public Output<String> getKey() {
+        return this.key == null ? Output.empty() : this.key;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
      * 
      */
     @InputImport(name="values")
-      private final @Nullable Input<List<String>> values;
+      private final @Nullable Output<List<String>> values;
 
-    public Input<List<String>> getValues() {
-        return this.values == null ? Input.empty() : this.values;
+    public Output<List<String>> getValues() {
+        return this.values == null ? Output.empty() : this.values;
     }
 
     public WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinityGetArgs(
-        @Nullable Input<String> consumeReservationType,
-        @Nullable Input<String> key,
-        @Nullable Input<List<String>> values) {
+        @Nullable Output<String> consumeReservationType,
+        @Nullable Output<String> key,
+        @Nullable Output<List<String>> values) {
         this.consumeReservationType = consumeReservationType;
         this.key = key;
         this.values = values;
     }
 
     private WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinityGetArgs() {
-        this.consumeReservationType = Input.empty();
-        this.key = Input.empty();
-        this.values = Input.empty();
+        this.consumeReservationType = Output.empty();
+        this.key = Output.empty();
+        this.values = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
     }
 
     public static final class Builder {
-        private @Nullable Input<String> consumeReservationType;
-        private @Nullable Input<String> key;
-        private @Nullable Input<List<String>> values;
+        private @Nullable Output<String> consumeReservationType;
+        private @Nullable Output<String> key;
+        private @Nullable Output<List<String>> values;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
     	      this.values = defaults.values;
         }
 
-        public Builder consumeReservationType(@Nullable Input<String> consumeReservationType) {
+        public Builder consumeReservationType(@Nullable Output<String> consumeReservationType) {
             this.consumeReservationType = consumeReservationType;
             return this;
         }
 
         public Builder consumeReservationType(@Nullable String consumeReservationType) {
-            this.consumeReservationType = Input.ofNullable(consumeReservationType);
+            this.consumeReservationType = Output.ofNullable(consumeReservationType);
             return this;
         }
 
-        public Builder key(@Nullable Input<String> key) {
+        public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
 
         public Builder key(@Nullable String key) {
-            this.key = Input.ofNullable(key);
+            this.key = Output.ofNullable(key);
             return this;
         }
 
-        public Builder values(@Nullable Input<List<String>> values) {
+        public Builder values(@Nullable Output<List<String>> values) {
             this.values = values;
             return this;
         }
 
         public Builder values(@Nullable List<String> values) {
-            this.values = Input.ofNullable(values);
+            this.values = Output.ofNullable(values);
             return this;
         }
         public WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinityGetArgs build() {

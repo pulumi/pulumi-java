@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.autoscaling.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class GroupInstanceRefreshPreferencesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="checkpointDelay")
-      private final @Nullable Input<String> checkpointDelay;
+      private final @Nullable Output<String> checkpointDelay;
 
-    public Input<String> getCheckpointDelay() {
-        return this.checkpointDelay == null ? Input.empty() : this.checkpointDelay;
+    public Output<String> getCheckpointDelay() {
+        return this.checkpointDelay == null ? Output.empty() : this.checkpointDelay;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class GroupInstanceRefreshPreferencesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="checkpointPercentages")
-      private final @Nullable Input<List<Integer>> checkpointPercentages;
+      private final @Nullable Output<List<Integer>> checkpointPercentages;
 
-    public Input<List<Integer>> getCheckpointPercentages() {
-        return this.checkpointPercentages == null ? Input.empty() : this.checkpointPercentages;
+    public Output<List<Integer>> getCheckpointPercentages() {
+        return this.checkpointPercentages == null ? Output.empty() : this.checkpointPercentages;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class GroupInstanceRefreshPreferencesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="instanceWarmup")
-      private final @Nullable Input<String> instanceWarmup;
+      private final @Nullable Output<String> instanceWarmup;
 
-    public Input<String> getInstanceWarmup() {
-        return this.instanceWarmup == null ? Input.empty() : this.instanceWarmup;
+    public Output<String> getInstanceWarmup() {
+        return this.instanceWarmup == null ? Output.empty() : this.instanceWarmup;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class GroupInstanceRefreshPreferencesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="minHealthyPercentage")
-      private final @Nullable Input<Integer> minHealthyPercentage;
+      private final @Nullable Output<Integer> minHealthyPercentage;
 
-    public Input<Integer> getMinHealthyPercentage() {
-        return this.minHealthyPercentage == null ? Input.empty() : this.minHealthyPercentage;
+    public Output<Integer> getMinHealthyPercentage() {
+        return this.minHealthyPercentage == null ? Output.empty() : this.minHealthyPercentage;
     }
 
     public GroupInstanceRefreshPreferencesArgs(
-        @Nullable Input<String> checkpointDelay,
-        @Nullable Input<List<Integer>> checkpointPercentages,
-        @Nullable Input<String> instanceWarmup,
-        @Nullable Input<Integer> minHealthyPercentage) {
+        @Nullable Output<String> checkpointDelay,
+        @Nullable Output<List<Integer>> checkpointPercentages,
+        @Nullable Output<String> instanceWarmup,
+        @Nullable Output<Integer> minHealthyPercentage) {
         this.checkpointDelay = checkpointDelay;
         this.checkpointPercentages = checkpointPercentages;
         this.instanceWarmup = instanceWarmup;
@@ -72,10 +72,10 @@ public final class GroupInstanceRefreshPreferencesArgs extends io.pulumi.resourc
     }
 
     private GroupInstanceRefreshPreferencesArgs() {
-        this.checkpointDelay = Input.empty();
-        this.checkpointPercentages = Input.empty();
-        this.instanceWarmup = Input.empty();
-        this.minHealthyPercentage = Input.empty();
+        this.checkpointDelay = Output.empty();
+        this.checkpointPercentages = Output.empty();
+        this.instanceWarmup = Output.empty();
+        this.minHealthyPercentage = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class GroupInstanceRefreshPreferencesArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> checkpointDelay;
-        private @Nullable Input<List<Integer>> checkpointPercentages;
-        private @Nullable Input<String> instanceWarmup;
-        private @Nullable Input<Integer> minHealthyPercentage;
+        private @Nullable Output<String> checkpointDelay;
+        private @Nullable Output<List<Integer>> checkpointPercentages;
+        private @Nullable Output<String> instanceWarmup;
+        private @Nullable Output<Integer> minHealthyPercentage;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class GroupInstanceRefreshPreferencesArgs extends io.pulumi.resourc
     	      this.minHealthyPercentage = defaults.minHealthyPercentage;
         }
 
-        public Builder checkpointDelay(@Nullable Input<String> checkpointDelay) {
+        public Builder checkpointDelay(@Nullable Output<String> checkpointDelay) {
             this.checkpointDelay = checkpointDelay;
             return this;
         }
 
         public Builder checkpointDelay(@Nullable String checkpointDelay) {
-            this.checkpointDelay = Input.ofNullable(checkpointDelay);
+            this.checkpointDelay = Output.ofNullable(checkpointDelay);
             return this;
         }
 
-        public Builder checkpointPercentages(@Nullable Input<List<Integer>> checkpointPercentages) {
+        public Builder checkpointPercentages(@Nullable Output<List<Integer>> checkpointPercentages) {
             this.checkpointPercentages = checkpointPercentages;
             return this;
         }
 
         public Builder checkpointPercentages(@Nullable List<Integer> checkpointPercentages) {
-            this.checkpointPercentages = Input.ofNullable(checkpointPercentages);
+            this.checkpointPercentages = Output.ofNullable(checkpointPercentages);
             return this;
         }
 
-        public Builder instanceWarmup(@Nullable Input<String> instanceWarmup) {
+        public Builder instanceWarmup(@Nullable Output<String> instanceWarmup) {
             this.instanceWarmup = instanceWarmup;
             return this;
         }
 
         public Builder instanceWarmup(@Nullable String instanceWarmup) {
-            this.instanceWarmup = Input.ofNullable(instanceWarmup);
+            this.instanceWarmup = Output.ofNullable(instanceWarmup);
             return this;
         }
 
-        public Builder minHealthyPercentage(@Nullable Input<Integer> minHealthyPercentage) {
+        public Builder minHealthyPercentage(@Nullable Output<Integer> minHealthyPercentage) {
             this.minHealthyPercentage = minHealthyPercentage;
             return this;
         }
 
         public Builder minHealthyPercentage(@Nullable Integer minHealthyPercentage) {
-            this.minHealthyPercentage = Input.ofNullable(minHealthyPercentage);
+            this.minHealthyPercentage = Output.ofNullable(minHealthyPercentage);
             return this;
         }
         public GroupInstanceRefreshPreferencesArgs build() {

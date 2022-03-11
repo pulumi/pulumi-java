@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql;
 
 import io.pulumi.azurenative.sql.inputs.ServerInfoArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,9 +21,9 @@ public final class ServerTrustGroupArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="groupMembers", required=true)
-      private final Input<List<ServerInfoArgs>> groupMembers;
+      private final Output<List<ServerInfoArgs>> groupMembers;
 
-    public Input<List<ServerInfoArgs>> getGroupMembers() {
+    public Output<List<ServerInfoArgs>> getGroupMembers() {
         return this.groupMembers;
     }
 
@@ -32,9 +32,9 @@ public final class ServerTrustGroupArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="locationName", required=true)
-      private final Input<String> locationName;
+      private final Output<String> locationName;
 
-    public Input<String> getLocationName() {
+    public Output<String> getLocationName() {
         return this.locationName;
     }
 
@@ -43,9 +43,9 @@ public final class ServerTrustGroupArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -54,10 +54,10 @@ public final class ServerTrustGroupArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="serverTrustGroupName")
-      private final @Nullable Input<String> serverTrustGroupName;
+      private final @Nullable Output<String> serverTrustGroupName;
 
-    public Input<String> getServerTrustGroupName() {
-        return this.serverTrustGroupName == null ? Input.empty() : this.serverTrustGroupName;
+    public Output<String> getServerTrustGroupName() {
+        return this.serverTrustGroupName == null ? Output.empty() : this.serverTrustGroupName;
     }
 
     /**
@@ -65,18 +65,18 @@ public final class ServerTrustGroupArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="trustScopes", required=true)
-      private final Input<List<String>> trustScopes;
+      private final Output<List<String>> trustScopes;
 
-    public Input<List<String>> getTrustScopes() {
+    public Output<List<String>> getTrustScopes() {
         return this.trustScopes;
     }
 
     public ServerTrustGroupArgs(
-        Input<List<ServerInfoArgs>> groupMembers,
-        Input<String> locationName,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> serverTrustGroupName,
-        Input<List<String>> trustScopes) {
+        Output<List<ServerInfoArgs>> groupMembers,
+        Output<String> locationName,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> serverTrustGroupName,
+        Output<List<String>> trustScopes) {
         this.groupMembers = Objects.requireNonNull(groupMembers, "expected parameter 'groupMembers' to be non-null");
         this.locationName = Objects.requireNonNull(locationName, "expected parameter 'locationName' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -85,11 +85,11 @@ public final class ServerTrustGroupArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ServerTrustGroupArgs() {
-        this.groupMembers = Input.empty();
-        this.locationName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serverTrustGroupName = Input.empty();
-        this.trustScopes = Input.empty();
+        this.groupMembers = Output.empty();
+        this.locationName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serverTrustGroupName = Output.empty();
+        this.trustScopes = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class ServerTrustGroupArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<List<ServerInfoArgs>> groupMembers;
-        private Input<String> locationName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> serverTrustGroupName;
-        private Input<List<String>> trustScopes;
+        private Output<List<ServerInfoArgs>> groupMembers;
+        private Output<String> locationName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> serverTrustGroupName;
+        private Output<List<String>> trustScopes;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class ServerTrustGroupArgs extends io.pulumi.resources.ResourceArgs
     	      this.trustScopes = defaults.trustScopes;
         }
 
-        public Builder groupMembers(Input<List<ServerInfoArgs>> groupMembers) {
+        public Builder groupMembers(Output<List<ServerInfoArgs>> groupMembers) {
             this.groupMembers = Objects.requireNonNull(groupMembers);
             return this;
         }
 
         public Builder groupMembers(List<ServerInfoArgs> groupMembers) {
-            this.groupMembers = Input.of(Objects.requireNonNull(groupMembers));
+            this.groupMembers = Output.of(Objects.requireNonNull(groupMembers));
             return this;
         }
 
-        public Builder locationName(Input<String> locationName) {
+        public Builder locationName(Output<String> locationName) {
             this.locationName = Objects.requireNonNull(locationName);
             return this;
         }
 
         public Builder locationName(String locationName) {
-            this.locationName = Input.of(Objects.requireNonNull(locationName));
+            this.locationName = Output.of(Objects.requireNonNull(locationName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serverTrustGroupName(@Nullable Input<String> serverTrustGroupName) {
+        public Builder serverTrustGroupName(@Nullable Output<String> serverTrustGroupName) {
             this.serverTrustGroupName = serverTrustGroupName;
             return this;
         }
 
         public Builder serverTrustGroupName(@Nullable String serverTrustGroupName) {
-            this.serverTrustGroupName = Input.ofNullable(serverTrustGroupName);
+            this.serverTrustGroupName = Output.ofNullable(serverTrustGroupName);
             return this;
         }
 
-        public Builder trustScopes(Input<List<String>> trustScopes) {
+        public Builder trustScopes(Output<List<String>> trustScopes) {
             this.trustScopes = Objects.requireNonNull(trustScopes);
             return this;
         }
 
         public Builder trustScopes(List<String> trustScopes) {
-            this.trustScopes = Input.of(Objects.requireNonNull(trustScopes));
+            this.trustScopes = Output.of(Objects.requireNonNull(trustScopes));
             return this;
         }
         public ServerTrustGroupArgs build() {

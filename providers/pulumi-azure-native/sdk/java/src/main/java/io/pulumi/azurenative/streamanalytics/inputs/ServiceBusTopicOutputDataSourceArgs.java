@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.streamanalytics.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class ServiceBusTopicOutputDataSourceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="propertyColumns")
-      private final @Nullable Input<List<String>> propertyColumns;
+      private final @Nullable Output<List<String>> propertyColumns;
 
-    public Input<List<String>> getPropertyColumns() {
-        return this.propertyColumns == null ? Input.empty() : this.propertyColumns;
+    public Output<List<String>> getPropertyColumns() {
+        return this.propertyColumns == null ? Output.empty() : this.propertyColumns;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ServiceBusTopicOutputDataSourceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="serviceBusNamespace")
-      private final @Nullable Input<String> serviceBusNamespace;
+      private final @Nullable Output<String> serviceBusNamespace;
 
-    public Input<String> getServiceBusNamespace() {
-        return this.serviceBusNamespace == null ? Input.empty() : this.serviceBusNamespace;
+    public Output<String> getServiceBusNamespace() {
+        return this.serviceBusNamespace == null ? Output.empty() : this.serviceBusNamespace;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ServiceBusTopicOutputDataSourceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="sharedAccessPolicyKey")
-      private final @Nullable Input<String> sharedAccessPolicyKey;
+      private final @Nullable Output<String> sharedAccessPolicyKey;
 
-    public Input<String> getSharedAccessPolicyKey() {
-        return this.sharedAccessPolicyKey == null ? Input.empty() : this.sharedAccessPolicyKey;
+    public Output<String> getSharedAccessPolicyKey() {
+        return this.sharedAccessPolicyKey == null ? Output.empty() : this.sharedAccessPolicyKey;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ServiceBusTopicOutputDataSourceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="sharedAccessPolicyName")
-      private final @Nullable Input<String> sharedAccessPolicyName;
+      private final @Nullable Output<String> sharedAccessPolicyName;
 
-    public Input<String> getSharedAccessPolicyName() {
-        return this.sharedAccessPolicyName == null ? Input.empty() : this.sharedAccessPolicyName;
+    public Output<String> getSharedAccessPolicyName() {
+        return this.sharedAccessPolicyName == null ? Output.empty() : this.sharedAccessPolicyName;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ServiceBusTopicOutputDataSourceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="topicName")
-      private final @Nullable Input<String> topicName;
+      private final @Nullable Output<String> topicName;
 
-    public Input<String> getTopicName() {
-        return this.topicName == null ? Input.empty() : this.topicName;
+    public Output<String> getTopicName() {
+        return this.topicName == null ? Output.empty() : this.topicName;
     }
 
     /**
@@ -80,19 +80,19 @@ public final class ServiceBusTopicOutputDataSourceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public ServiceBusTopicOutputDataSourceArgs(
-        @Nullable Input<List<String>> propertyColumns,
-        @Nullable Input<String> serviceBusNamespace,
-        @Nullable Input<String> sharedAccessPolicyKey,
-        @Nullable Input<String> sharedAccessPolicyName,
-        @Nullable Input<String> topicName,
-        Input<String> type) {
+        @Nullable Output<List<String>> propertyColumns,
+        @Nullable Output<String> serviceBusNamespace,
+        @Nullable Output<String> sharedAccessPolicyKey,
+        @Nullable Output<String> sharedAccessPolicyName,
+        @Nullable Output<String> topicName,
+        Output<String> type) {
         this.propertyColumns = propertyColumns;
         this.serviceBusNamespace = serviceBusNamespace;
         this.sharedAccessPolicyKey = sharedAccessPolicyKey;
@@ -102,12 +102,12 @@ public final class ServiceBusTopicOutputDataSourceArgs extends io.pulumi.resourc
     }
 
     private ServiceBusTopicOutputDataSourceArgs() {
-        this.propertyColumns = Input.empty();
-        this.serviceBusNamespace = Input.empty();
-        this.sharedAccessPolicyKey = Input.empty();
-        this.sharedAccessPolicyName = Input.empty();
-        this.topicName = Input.empty();
-        this.type = Input.empty();
+        this.propertyColumns = Output.empty();
+        this.serviceBusNamespace = Output.empty();
+        this.sharedAccessPolicyKey = Output.empty();
+        this.sharedAccessPolicyName = Output.empty();
+        this.topicName = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -119,12 +119,12 @@ public final class ServiceBusTopicOutputDataSourceArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> propertyColumns;
-        private @Nullable Input<String> serviceBusNamespace;
-        private @Nullable Input<String> sharedAccessPolicyKey;
-        private @Nullable Input<String> sharedAccessPolicyName;
-        private @Nullable Input<String> topicName;
-        private Input<String> type;
+        private @Nullable Output<List<String>> propertyColumns;
+        private @Nullable Output<String> serviceBusNamespace;
+        private @Nullable Output<String> sharedAccessPolicyKey;
+        private @Nullable Output<String> sharedAccessPolicyName;
+        private @Nullable Output<String> topicName;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -140,63 +140,63 @@ public final class ServiceBusTopicOutputDataSourceArgs extends io.pulumi.resourc
     	      this.type = defaults.type;
         }
 
-        public Builder propertyColumns(@Nullable Input<List<String>> propertyColumns) {
+        public Builder propertyColumns(@Nullable Output<List<String>> propertyColumns) {
             this.propertyColumns = propertyColumns;
             return this;
         }
 
         public Builder propertyColumns(@Nullable List<String> propertyColumns) {
-            this.propertyColumns = Input.ofNullable(propertyColumns);
+            this.propertyColumns = Output.ofNullable(propertyColumns);
             return this;
         }
 
-        public Builder serviceBusNamespace(@Nullable Input<String> serviceBusNamespace) {
+        public Builder serviceBusNamespace(@Nullable Output<String> serviceBusNamespace) {
             this.serviceBusNamespace = serviceBusNamespace;
             return this;
         }
 
         public Builder serviceBusNamespace(@Nullable String serviceBusNamespace) {
-            this.serviceBusNamespace = Input.ofNullable(serviceBusNamespace);
+            this.serviceBusNamespace = Output.ofNullable(serviceBusNamespace);
             return this;
         }
 
-        public Builder sharedAccessPolicyKey(@Nullable Input<String> sharedAccessPolicyKey) {
+        public Builder sharedAccessPolicyKey(@Nullable Output<String> sharedAccessPolicyKey) {
             this.sharedAccessPolicyKey = sharedAccessPolicyKey;
             return this;
         }
 
         public Builder sharedAccessPolicyKey(@Nullable String sharedAccessPolicyKey) {
-            this.sharedAccessPolicyKey = Input.ofNullable(sharedAccessPolicyKey);
+            this.sharedAccessPolicyKey = Output.ofNullable(sharedAccessPolicyKey);
             return this;
         }
 
-        public Builder sharedAccessPolicyName(@Nullable Input<String> sharedAccessPolicyName) {
+        public Builder sharedAccessPolicyName(@Nullable Output<String> sharedAccessPolicyName) {
             this.sharedAccessPolicyName = sharedAccessPolicyName;
             return this;
         }
 
         public Builder sharedAccessPolicyName(@Nullable String sharedAccessPolicyName) {
-            this.sharedAccessPolicyName = Input.ofNullable(sharedAccessPolicyName);
+            this.sharedAccessPolicyName = Output.ofNullable(sharedAccessPolicyName);
             return this;
         }
 
-        public Builder topicName(@Nullable Input<String> topicName) {
+        public Builder topicName(@Nullable Output<String> topicName) {
             this.topicName = topicName;
             return this;
         }
 
         public Builder topicName(@Nullable String topicName) {
-            this.topicName = Input.ofNullable(topicName);
+            this.topicName = Output.ofNullable(topicName);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ServiceBusTopicOutputDataSourceArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class DataSourceSnowflakeParametersArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="database", required=true)
-      private final Input<String> database;
+      private final Output<String> database;
 
-    public Input<String> getDatabase() {
+    public Output<String> getDatabase() {
         return this.database;
     }
 
@@ -33,9 +33,9 @@ public final class DataSourceSnowflakeParametersArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="host", required=true)
-      private final Input<String> host;
+      private final Output<String> host;
 
-    public Input<String> getHost() {
+    public Output<String> getHost() {
         return this.host;
     }
 
@@ -44,25 +44,25 @@ public final class DataSourceSnowflakeParametersArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="warehouse", required=true)
-      private final Input<String> warehouse;
+      private final Output<String> warehouse;
 
-    public Input<String> getWarehouse() {
+    public Output<String> getWarehouse() {
         return this.warehouse;
     }
 
     public DataSourceSnowflakeParametersArgs(
-        Input<String> database,
-        Input<String> host,
-        Input<String> warehouse) {
+        Output<String> database,
+        Output<String> host,
+        Output<String> warehouse) {
         this.database = Objects.requireNonNull(database, "expected parameter 'database' to be non-null");
         this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
         this.warehouse = Objects.requireNonNull(warehouse, "expected parameter 'warehouse' to be non-null");
     }
 
     private DataSourceSnowflakeParametersArgs() {
-        this.database = Input.empty();
-        this.host = Input.empty();
-        this.warehouse = Input.empty();
+        this.database = Output.empty();
+        this.host = Output.empty();
+        this.warehouse = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class DataSourceSnowflakeParametersArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<String> database;
-        private Input<String> host;
-        private Input<String> warehouse;
+        private Output<String> database;
+        private Output<String> host;
+        private Output<String> warehouse;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class DataSourceSnowflakeParametersArgs extends io.pulumi.resources
     	      this.warehouse = defaults.warehouse;
         }
 
-        public Builder database(Input<String> database) {
+        public Builder database(Output<String> database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
 
         public Builder database(String database) {
-            this.database = Input.of(Objects.requireNonNull(database));
+            this.database = Output.of(Objects.requireNonNull(database));
             return this;
         }
 
-        public Builder host(Input<String> host) {
+        public Builder host(Output<String> host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
         public Builder host(String host) {
-            this.host = Input.of(Objects.requireNonNull(host));
+            this.host = Output.of(Objects.requireNonNull(host));
             return this;
         }
 
-        public Builder warehouse(Input<String> warehouse) {
+        public Builder warehouse(Output<String> warehouse) {
             this.warehouse = Objects.requireNonNull(warehouse);
             return this;
         }
 
         public Builder warehouse(String warehouse) {
-            this.warehouse = Input.of(Objects.requireNonNull(warehouse));
+            this.warehouse = Output.of(Objects.requireNonNull(warehouse));
             return this;
         }
         public DataSourceSnowflakeParametersArgs build() {

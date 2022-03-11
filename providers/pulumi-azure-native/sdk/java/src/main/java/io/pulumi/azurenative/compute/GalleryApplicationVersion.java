@@ -8,7 +8,6 @@ import io.pulumi.azurenative.compute.GalleryApplicationVersionArgs;
 import io.pulumi.azurenative.compute.outputs.GalleryApplicationVersionPublishingProfileResponse;
 import io.pulumi.azurenative.compute.outputs.ReplicationStatusResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -171,22 +170,22 @@ public class GalleryApplicationVersion extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public GalleryApplicationVersion(String name, GalleryApplicationVersionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:compute:GalleryApplicationVersion", name, args == null ? GalleryApplicationVersionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:compute:GalleryApplicationVersion", name, args == null ? GalleryApplicationVersionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private GalleryApplicationVersion(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private GalleryApplicationVersion(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:compute:GalleryApplicationVersion", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:compute/v20190301:GalleryApplicationVersion").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20190701:GalleryApplicationVersion").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20191201:GalleryApplicationVersion").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20200930:GalleryApplicationVersion").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20210701:GalleryApplicationVersion").build())
+                Output.of(Alias.builder().setType("azure-native:compute/v20190301:GalleryApplicationVersion").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20190701:GalleryApplicationVersion").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20191201:GalleryApplicationVersion").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20200930:GalleryApplicationVersion").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20210701:GalleryApplicationVersion").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -200,7 +199,7 @@ public class GalleryApplicationVersion extends io.pulumi.resources.CustomResourc
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static GalleryApplicationVersion get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static GalleryApplicationVersion get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new GalleryApplicationVersion(name, id, options);
     }
 }

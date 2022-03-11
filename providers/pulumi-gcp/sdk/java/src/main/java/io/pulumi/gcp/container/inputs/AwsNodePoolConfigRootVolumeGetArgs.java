@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class AwsNodePoolConfigRootVolumeGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="iops")
-      private final @Nullable Input<Integer> iops;
+      private final @Nullable Output<Integer> iops;
 
-    public Input<Integer> getIops() {
-        return this.iops == null ? Input.empty() : this.iops;
+    public Output<Integer> getIops() {
+        return this.iops == null ? Output.empty() : this.iops;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class AwsNodePoolConfigRootVolumeGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="kmsKeyArn")
-      private final @Nullable Input<String> kmsKeyArn;
+      private final @Nullable Output<String> kmsKeyArn;
 
-    public Input<String> getKmsKeyArn() {
-        return this.kmsKeyArn == null ? Input.empty() : this.kmsKeyArn;
+    public Output<String> getKmsKeyArn() {
+        return this.kmsKeyArn == null ? Output.empty() : this.kmsKeyArn;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class AwsNodePoolConfigRootVolumeGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="sizeGib")
-      private final @Nullable Input<Integer> sizeGib;
+      private final @Nullable Output<Integer> sizeGib;
 
-    public Input<Integer> getSizeGib() {
-        return this.sizeGib == null ? Input.empty() : this.sizeGib;
+    public Output<Integer> getSizeGib() {
+        return this.sizeGib == null ? Output.empty() : this.sizeGib;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class AwsNodePoolConfigRootVolumeGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="volumeType")
-      private final @Nullable Input<String> volumeType;
+      private final @Nullable Output<String> volumeType;
 
-    public Input<String> getVolumeType() {
-        return this.volumeType == null ? Input.empty() : this.volumeType;
+    public Output<String> getVolumeType() {
+        return this.volumeType == null ? Output.empty() : this.volumeType;
     }
 
     public AwsNodePoolConfigRootVolumeGetArgs(
-        @Nullable Input<Integer> iops,
-        @Nullable Input<String> kmsKeyArn,
-        @Nullable Input<Integer> sizeGib,
-        @Nullable Input<String> volumeType) {
+        @Nullable Output<Integer> iops,
+        @Nullable Output<String> kmsKeyArn,
+        @Nullable Output<Integer> sizeGib,
+        @Nullable Output<String> volumeType) {
         this.iops = iops;
         this.kmsKeyArn = kmsKeyArn;
         this.sizeGib = sizeGib;
@@ -71,10 +71,10 @@ public final class AwsNodePoolConfigRootVolumeGetArgs extends io.pulumi.resource
     }
 
     private AwsNodePoolConfigRootVolumeGetArgs() {
-        this.iops = Input.empty();
-        this.kmsKeyArn = Input.empty();
-        this.sizeGib = Input.empty();
-        this.volumeType = Input.empty();
+        this.iops = Output.empty();
+        this.kmsKeyArn = Output.empty();
+        this.sizeGib = Output.empty();
+        this.volumeType = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class AwsNodePoolConfigRootVolumeGetArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> iops;
-        private @Nullable Input<String> kmsKeyArn;
-        private @Nullable Input<Integer> sizeGib;
-        private @Nullable Input<String> volumeType;
+        private @Nullable Output<Integer> iops;
+        private @Nullable Output<String> kmsKeyArn;
+        private @Nullable Output<Integer> sizeGib;
+        private @Nullable Output<String> volumeType;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class AwsNodePoolConfigRootVolumeGetArgs extends io.pulumi.resource
     	      this.volumeType = defaults.volumeType;
         }
 
-        public Builder iops(@Nullable Input<Integer> iops) {
+        public Builder iops(@Nullable Output<Integer> iops) {
             this.iops = iops;
             return this;
         }
 
         public Builder iops(@Nullable Integer iops) {
-            this.iops = Input.ofNullable(iops);
+            this.iops = Output.ofNullable(iops);
             return this;
         }
 
-        public Builder kmsKeyArn(@Nullable Input<String> kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Input.ofNullable(kmsKeyArn);
+            this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
             return this;
         }
 
-        public Builder sizeGib(@Nullable Input<Integer> sizeGib) {
+        public Builder sizeGib(@Nullable Output<Integer> sizeGib) {
             this.sizeGib = sizeGib;
             return this;
         }
 
         public Builder sizeGib(@Nullable Integer sizeGib) {
-            this.sizeGib = Input.ofNullable(sizeGib);
+            this.sizeGib = Output.ofNullable(sizeGib);
             return this;
         }
 
-        public Builder volumeType(@Nullable Input<String> volumeType) {
+        public Builder volumeType(@Nullable Output<String> volumeType) {
             this.volumeType = volumeType;
             return this;
         }
 
         public Builder volumeType(@Nullable String volumeType) {
-            this.volumeType = Input.ofNullable(volumeType);
+            this.volumeType = Output.ofNullable(volumeType);
             return this;
         }
         public AwsNodePoolConfigRootVolumeGetArgs build() {

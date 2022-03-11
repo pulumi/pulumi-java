@@ -9,7 +9,7 @@ import io.pulumi.awsnative.iot.inputs.JobExecutionsRolloutConfigPropertiesArgs;
 import io.pulumi.awsnative.iot.inputs.JobTemplateTagArgs;
 import io.pulumi.awsnative.iot.inputs.PresignedUrlConfigPropertiesArgs;
 import io.pulumi.awsnative.iot.inputs.TimeoutConfigPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="abortConfig")
-      private final @Nullable Input<AbortConfigPropertiesArgs> abortConfig;
+      private final @Nullable Output<AbortConfigPropertiesArgs> abortConfig;
 
-    public Input<AbortConfigPropertiesArgs> getAbortConfig() {
-        return this.abortConfig == null ? Input.empty() : this.abortConfig;
+    public Output<AbortConfigPropertiesArgs> getAbortConfig() {
+        return this.abortConfig == null ? Output.empty() : this.abortConfig;
     }
 
     /**
@@ -37,9 +37,9 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description", required=true)
-      private final Input<String> description;
+      private final Output<String> description;
 
-    public Input<String> getDescription() {
+    public Output<String> getDescription() {
         return this.description;
     }
 
@@ -48,10 +48,10 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="document")
-      private final @Nullable Input<String> document;
+      private final @Nullable Output<String> document;
 
-    public Input<String> getDocument() {
-        return this.document == null ? Input.empty() : this.document;
+    public Output<String> getDocument() {
+        return this.document == null ? Output.empty() : this.document;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="documentSource")
-      private final @Nullable Input<String> documentSource;
+      private final @Nullable Output<String> documentSource;
 
-    public Input<String> getDocumentSource() {
-        return this.documentSource == null ? Input.empty() : this.documentSource;
+    public Output<String> getDocumentSource() {
+        return this.documentSource == null ? Output.empty() : this.documentSource;
     }
 
     /**
@@ -70,17 +70,17 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobArn")
-      private final @Nullable Input<String> jobArn;
+      private final @Nullable Output<String> jobArn;
 
-    public Input<String> getJobArn() {
-        return this.jobArn == null ? Input.empty() : this.jobArn;
+    public Output<String> getJobArn() {
+        return this.jobArn == null ? Output.empty() : this.jobArn;
     }
 
     @InputImport(name="jobExecutionsRetryConfig")
-      private final @Nullable Input<JobExecutionsRetryConfigPropertiesArgs> jobExecutionsRetryConfig;
+      private final @Nullable Output<JobExecutionsRetryConfigPropertiesArgs> jobExecutionsRetryConfig;
 
-    public Input<JobExecutionsRetryConfigPropertiesArgs> getJobExecutionsRetryConfig() {
-        return this.jobExecutionsRetryConfig == null ? Input.empty() : this.jobExecutionsRetryConfig;
+    public Output<JobExecutionsRetryConfigPropertiesArgs> getJobExecutionsRetryConfig() {
+        return this.jobExecutionsRetryConfig == null ? Output.empty() : this.jobExecutionsRetryConfig;
     }
 
     /**
@@ -88,16 +88,16 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobExecutionsRolloutConfig")
-      private final @Nullable Input<JobExecutionsRolloutConfigPropertiesArgs> jobExecutionsRolloutConfig;
+      private final @Nullable Output<JobExecutionsRolloutConfigPropertiesArgs> jobExecutionsRolloutConfig;
 
-    public Input<JobExecutionsRolloutConfigPropertiesArgs> getJobExecutionsRolloutConfig() {
-        return this.jobExecutionsRolloutConfig == null ? Input.empty() : this.jobExecutionsRolloutConfig;
+    public Output<JobExecutionsRolloutConfigPropertiesArgs> getJobExecutionsRolloutConfig() {
+        return this.jobExecutionsRolloutConfig == null ? Output.empty() : this.jobExecutionsRolloutConfig;
     }
 
     @InputImport(name="jobTemplateId", required=true)
-      private final Input<String> jobTemplateId;
+      private final Output<String> jobTemplateId;
 
-    public Input<String> getJobTemplateId() {
+    public Output<String> getJobTemplateId() {
         return this.jobTemplateId;
     }
 
@@ -106,10 +106,10 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="presignedUrlConfig")
-      private final @Nullable Input<PresignedUrlConfigPropertiesArgs> presignedUrlConfig;
+      private final @Nullable Output<PresignedUrlConfigPropertiesArgs> presignedUrlConfig;
 
-    public Input<PresignedUrlConfigPropertiesArgs> getPresignedUrlConfig() {
-        return this.presignedUrlConfig == null ? Input.empty() : this.presignedUrlConfig;
+    public Output<PresignedUrlConfigPropertiesArgs> getPresignedUrlConfig() {
+        return this.presignedUrlConfig == null ? Output.empty() : this.presignedUrlConfig;
     }
 
     /**
@@ -117,10 +117,10 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<JobTemplateTagArgs>> tags;
+      private final @Nullable Output<List<JobTemplateTagArgs>> tags;
 
-    public Input<List<JobTemplateTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<JobTemplateTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -128,24 +128,24 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeoutConfig")
-      private final @Nullable Input<TimeoutConfigPropertiesArgs> timeoutConfig;
+      private final @Nullable Output<TimeoutConfigPropertiesArgs> timeoutConfig;
 
-    public Input<TimeoutConfigPropertiesArgs> getTimeoutConfig() {
-        return this.timeoutConfig == null ? Input.empty() : this.timeoutConfig;
+    public Output<TimeoutConfigPropertiesArgs> getTimeoutConfig() {
+        return this.timeoutConfig == null ? Output.empty() : this.timeoutConfig;
     }
 
     public JobTemplateArgs(
-        @Nullable Input<AbortConfigPropertiesArgs> abortConfig,
-        Input<String> description,
-        @Nullable Input<String> document,
-        @Nullable Input<String> documentSource,
-        @Nullable Input<String> jobArn,
-        @Nullable Input<JobExecutionsRetryConfigPropertiesArgs> jobExecutionsRetryConfig,
-        @Nullable Input<JobExecutionsRolloutConfigPropertiesArgs> jobExecutionsRolloutConfig,
-        Input<String> jobTemplateId,
-        @Nullable Input<PresignedUrlConfigPropertiesArgs> presignedUrlConfig,
-        @Nullable Input<List<JobTemplateTagArgs>> tags,
-        @Nullable Input<TimeoutConfigPropertiesArgs> timeoutConfig) {
+        @Nullable Output<AbortConfigPropertiesArgs> abortConfig,
+        Output<String> description,
+        @Nullable Output<String> document,
+        @Nullable Output<String> documentSource,
+        @Nullable Output<String> jobArn,
+        @Nullable Output<JobExecutionsRetryConfigPropertiesArgs> jobExecutionsRetryConfig,
+        @Nullable Output<JobExecutionsRolloutConfigPropertiesArgs> jobExecutionsRolloutConfig,
+        Output<String> jobTemplateId,
+        @Nullable Output<PresignedUrlConfigPropertiesArgs> presignedUrlConfig,
+        @Nullable Output<List<JobTemplateTagArgs>> tags,
+        @Nullable Output<TimeoutConfigPropertiesArgs> timeoutConfig) {
         this.abortConfig = abortConfig;
         this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
         this.document = document;
@@ -160,17 +160,17 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobTemplateArgs() {
-        this.abortConfig = Input.empty();
-        this.description = Input.empty();
-        this.document = Input.empty();
-        this.documentSource = Input.empty();
-        this.jobArn = Input.empty();
-        this.jobExecutionsRetryConfig = Input.empty();
-        this.jobExecutionsRolloutConfig = Input.empty();
-        this.jobTemplateId = Input.empty();
-        this.presignedUrlConfig = Input.empty();
-        this.tags = Input.empty();
-        this.timeoutConfig = Input.empty();
+        this.abortConfig = Output.empty();
+        this.description = Output.empty();
+        this.document = Output.empty();
+        this.documentSource = Output.empty();
+        this.jobArn = Output.empty();
+        this.jobExecutionsRetryConfig = Output.empty();
+        this.jobExecutionsRolloutConfig = Output.empty();
+        this.jobTemplateId = Output.empty();
+        this.presignedUrlConfig = Output.empty();
+        this.tags = Output.empty();
+        this.timeoutConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -182,17 +182,17 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<AbortConfigPropertiesArgs> abortConfig;
-        private Input<String> description;
-        private @Nullable Input<String> document;
-        private @Nullable Input<String> documentSource;
-        private @Nullable Input<String> jobArn;
-        private @Nullable Input<JobExecutionsRetryConfigPropertiesArgs> jobExecutionsRetryConfig;
-        private @Nullable Input<JobExecutionsRolloutConfigPropertiesArgs> jobExecutionsRolloutConfig;
-        private Input<String> jobTemplateId;
-        private @Nullable Input<PresignedUrlConfigPropertiesArgs> presignedUrlConfig;
-        private @Nullable Input<List<JobTemplateTagArgs>> tags;
-        private @Nullable Input<TimeoutConfigPropertiesArgs> timeoutConfig;
+        private @Nullable Output<AbortConfigPropertiesArgs> abortConfig;
+        private Output<String> description;
+        private @Nullable Output<String> document;
+        private @Nullable Output<String> documentSource;
+        private @Nullable Output<String> jobArn;
+        private @Nullable Output<JobExecutionsRetryConfigPropertiesArgs> jobExecutionsRetryConfig;
+        private @Nullable Output<JobExecutionsRolloutConfigPropertiesArgs> jobExecutionsRolloutConfig;
+        private Output<String> jobTemplateId;
+        private @Nullable Output<PresignedUrlConfigPropertiesArgs> presignedUrlConfig;
+        private @Nullable Output<List<JobTemplateTagArgs>> tags;
+        private @Nullable Output<TimeoutConfigPropertiesArgs> timeoutConfig;
 
         public Builder() {
     	      // Empty
@@ -213,113 +213,113 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeoutConfig = defaults.timeoutConfig;
         }
 
-        public Builder abortConfig(@Nullable Input<AbortConfigPropertiesArgs> abortConfig) {
+        public Builder abortConfig(@Nullable Output<AbortConfigPropertiesArgs> abortConfig) {
             this.abortConfig = abortConfig;
             return this;
         }
 
         public Builder abortConfig(@Nullable AbortConfigPropertiesArgs abortConfig) {
-            this.abortConfig = Input.ofNullable(abortConfig);
+            this.abortConfig = Output.ofNullable(abortConfig);
             return this;
         }
 
-        public Builder description(Input<String> description) {
+        public Builder description(Output<String> description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
         public Builder description(String description) {
-            this.description = Input.of(Objects.requireNonNull(description));
+            this.description = Output.of(Objects.requireNonNull(description));
             return this;
         }
 
-        public Builder document(@Nullable Input<String> document) {
+        public Builder document(@Nullable Output<String> document) {
             this.document = document;
             return this;
         }
 
         public Builder document(@Nullable String document) {
-            this.document = Input.ofNullable(document);
+            this.document = Output.ofNullable(document);
             return this;
         }
 
-        public Builder documentSource(@Nullable Input<String> documentSource) {
+        public Builder documentSource(@Nullable Output<String> documentSource) {
             this.documentSource = documentSource;
             return this;
         }
 
         public Builder documentSource(@Nullable String documentSource) {
-            this.documentSource = Input.ofNullable(documentSource);
+            this.documentSource = Output.ofNullable(documentSource);
             return this;
         }
 
-        public Builder jobArn(@Nullable Input<String> jobArn) {
+        public Builder jobArn(@Nullable Output<String> jobArn) {
             this.jobArn = jobArn;
             return this;
         }
 
         public Builder jobArn(@Nullable String jobArn) {
-            this.jobArn = Input.ofNullable(jobArn);
+            this.jobArn = Output.ofNullable(jobArn);
             return this;
         }
 
-        public Builder jobExecutionsRetryConfig(@Nullable Input<JobExecutionsRetryConfigPropertiesArgs> jobExecutionsRetryConfig) {
+        public Builder jobExecutionsRetryConfig(@Nullable Output<JobExecutionsRetryConfigPropertiesArgs> jobExecutionsRetryConfig) {
             this.jobExecutionsRetryConfig = jobExecutionsRetryConfig;
             return this;
         }
 
         public Builder jobExecutionsRetryConfig(@Nullable JobExecutionsRetryConfigPropertiesArgs jobExecutionsRetryConfig) {
-            this.jobExecutionsRetryConfig = Input.ofNullable(jobExecutionsRetryConfig);
+            this.jobExecutionsRetryConfig = Output.ofNullable(jobExecutionsRetryConfig);
             return this;
         }
 
-        public Builder jobExecutionsRolloutConfig(@Nullable Input<JobExecutionsRolloutConfigPropertiesArgs> jobExecutionsRolloutConfig) {
+        public Builder jobExecutionsRolloutConfig(@Nullable Output<JobExecutionsRolloutConfigPropertiesArgs> jobExecutionsRolloutConfig) {
             this.jobExecutionsRolloutConfig = jobExecutionsRolloutConfig;
             return this;
         }
 
         public Builder jobExecutionsRolloutConfig(@Nullable JobExecutionsRolloutConfigPropertiesArgs jobExecutionsRolloutConfig) {
-            this.jobExecutionsRolloutConfig = Input.ofNullable(jobExecutionsRolloutConfig);
+            this.jobExecutionsRolloutConfig = Output.ofNullable(jobExecutionsRolloutConfig);
             return this;
         }
 
-        public Builder jobTemplateId(Input<String> jobTemplateId) {
+        public Builder jobTemplateId(Output<String> jobTemplateId) {
             this.jobTemplateId = Objects.requireNonNull(jobTemplateId);
             return this;
         }
 
         public Builder jobTemplateId(String jobTemplateId) {
-            this.jobTemplateId = Input.of(Objects.requireNonNull(jobTemplateId));
+            this.jobTemplateId = Output.of(Objects.requireNonNull(jobTemplateId));
             return this;
         }
 
-        public Builder presignedUrlConfig(@Nullable Input<PresignedUrlConfigPropertiesArgs> presignedUrlConfig) {
+        public Builder presignedUrlConfig(@Nullable Output<PresignedUrlConfigPropertiesArgs> presignedUrlConfig) {
             this.presignedUrlConfig = presignedUrlConfig;
             return this;
         }
 
         public Builder presignedUrlConfig(@Nullable PresignedUrlConfigPropertiesArgs presignedUrlConfig) {
-            this.presignedUrlConfig = Input.ofNullable(presignedUrlConfig);
+            this.presignedUrlConfig = Output.ofNullable(presignedUrlConfig);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<JobTemplateTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<JobTemplateTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<JobTemplateTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder timeoutConfig(@Nullable Input<TimeoutConfigPropertiesArgs> timeoutConfig) {
+        public Builder timeoutConfig(@Nullable Output<TimeoutConfigPropertiesArgs> timeoutConfig) {
             this.timeoutConfig = timeoutConfig;
             return this;
         }
 
         public Builder timeoutConfig(@Nullable TimeoutConfigPropertiesArgs timeoutConfig) {
-            this.timeoutConfig = Input.ofNullable(timeoutConfig);
+            this.timeoutConfig = Output.ofNullable(timeoutConfig);
             return this;
         }
         public JobTemplateArgs build() {

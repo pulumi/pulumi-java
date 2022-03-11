@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigee_v1.enums.DataCollectorType;
 import java.lang.String;
@@ -16,10 +16,10 @@ public final class DataCollectorArgs extends io.pulumi.resources.ResourceArgs {
     public static final DataCollectorArgs Empty = new DataCollectorArgs();
 
     @InputImport(name="dataCollectorId")
-      private final @Nullable Input<String> dataCollectorId;
+      private final @Nullable Output<String> dataCollectorId;
 
-    public Input<String> getDataCollectorId() {
-        return this.dataCollectorId == null ? Input.empty() : this.dataCollectorId;
+    public Output<String> getDataCollectorId() {
+        return this.dataCollectorId == null ? Output.empty() : this.dataCollectorId;
     }
 
     /**
@@ -27,10 +27,10 @@ public final class DataCollectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -38,16 +38,16 @@ public final class DataCollectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="organizationId", required=true)
-      private final Input<String> organizationId;
+      private final Output<String> organizationId;
 
-    public Input<String> getOrganizationId() {
+    public Output<String> getOrganizationId() {
         return this.organizationId;
     }
 
@@ -56,18 +56,18 @@ public final class DataCollectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<DataCollectorType> type;
+      private final @Nullable Output<DataCollectorType> type;
 
-    public Input<DataCollectorType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<DataCollectorType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public DataCollectorArgs(
-        @Nullable Input<String> dataCollectorId,
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        Input<String> organizationId,
-        @Nullable Input<DataCollectorType> type) {
+        @Nullable Output<String> dataCollectorId,
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        Output<String> organizationId,
+        @Nullable Output<DataCollectorType> type) {
         this.dataCollectorId = dataCollectorId;
         this.description = description;
         this.name = name;
@@ -76,11 +76,11 @@ public final class DataCollectorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DataCollectorArgs() {
-        this.dataCollectorId = Input.empty();
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.organizationId = Input.empty();
-        this.type = Input.empty();
+        this.dataCollectorId = Output.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.organizationId = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,11 +92,11 @@ public final class DataCollectorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> dataCollectorId;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private Input<String> organizationId;
-        private @Nullable Input<DataCollectorType> type;
+        private @Nullable Output<String> dataCollectorId;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private Output<String> organizationId;
+        private @Nullable Output<DataCollectorType> type;
 
         public Builder() {
     	      // Empty
@@ -111,53 +111,53 @@ public final class DataCollectorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder dataCollectorId(@Nullable Input<String> dataCollectorId) {
+        public Builder dataCollectorId(@Nullable Output<String> dataCollectorId) {
             this.dataCollectorId = dataCollectorId;
             return this;
         }
 
         public Builder dataCollectorId(@Nullable String dataCollectorId) {
-            this.dataCollectorId = Input.ofNullable(dataCollectorId);
+            this.dataCollectorId = Output.ofNullable(dataCollectorId);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder organizationId(Input<String> organizationId) {
+        public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
         public Builder organizationId(String organizationId) {
-            this.organizationId = Input.of(Objects.requireNonNull(organizationId));
+            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
 
-        public Builder type(@Nullable Input<DataCollectorType> type) {
+        public Builder type(@Nullable Output<DataCollectorType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable DataCollectorType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public DataCollectorArgs build() {

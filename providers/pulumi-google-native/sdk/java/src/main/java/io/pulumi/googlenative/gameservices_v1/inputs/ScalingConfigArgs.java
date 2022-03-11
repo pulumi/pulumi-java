@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gameservices_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.gameservices_v1.inputs.LabelSelectorArgs;
 import io.pulumi.googlenative.gameservices_v1.inputs.ScheduleArgs;
@@ -26,9 +26,9 @@ public final class ScalingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fleetAutoscalerSpec", required=true)
-      private final Input<String> fleetAutoscalerSpec;
+      private final Output<String> fleetAutoscalerSpec;
 
-    public Input<String> getFleetAutoscalerSpec() {
+    public Output<String> getFleetAutoscalerSpec() {
         return this.fleetAutoscalerSpec;
     }
 
@@ -37,9 +37,9 @@ public final class ScalingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -48,10 +48,10 @@ public final class ScalingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedules")
-      private final @Nullable Input<List<ScheduleArgs>> schedules;
+      private final @Nullable Output<List<ScheduleArgs>> schedules;
 
-    public Input<List<ScheduleArgs>> getSchedules() {
-        return this.schedules == null ? Input.empty() : this.schedules;
+    public Output<List<ScheduleArgs>> getSchedules() {
+        return this.schedules == null ? Output.empty() : this.schedules;
     }
 
     /**
@@ -59,17 +59,17 @@ public final class ScalingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selectors")
-      private final @Nullable Input<List<LabelSelectorArgs>> selectors;
+      private final @Nullable Output<List<LabelSelectorArgs>> selectors;
 
-    public Input<List<LabelSelectorArgs>> getSelectors() {
-        return this.selectors == null ? Input.empty() : this.selectors;
+    public Output<List<LabelSelectorArgs>> getSelectors() {
+        return this.selectors == null ? Output.empty() : this.selectors;
     }
 
     public ScalingConfigArgs(
-        Input<String> fleetAutoscalerSpec,
-        Input<String> name,
-        @Nullable Input<List<ScheduleArgs>> schedules,
-        @Nullable Input<List<LabelSelectorArgs>> selectors) {
+        Output<String> fleetAutoscalerSpec,
+        Output<String> name,
+        @Nullable Output<List<ScheduleArgs>> schedules,
+        @Nullable Output<List<LabelSelectorArgs>> selectors) {
         this.fleetAutoscalerSpec = Objects.requireNonNull(fleetAutoscalerSpec, "expected parameter 'fleetAutoscalerSpec' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.schedules = schedules;
@@ -77,10 +77,10 @@ public final class ScalingConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ScalingConfigArgs() {
-        this.fleetAutoscalerSpec = Input.empty();
-        this.name = Input.empty();
-        this.schedules = Input.empty();
-        this.selectors = Input.empty();
+        this.fleetAutoscalerSpec = Output.empty();
+        this.name = Output.empty();
+        this.schedules = Output.empty();
+        this.selectors = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class ScalingConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> fleetAutoscalerSpec;
-        private Input<String> name;
-        private @Nullable Input<List<ScheduleArgs>> schedules;
-        private @Nullable Input<List<LabelSelectorArgs>> selectors;
+        private Output<String> fleetAutoscalerSpec;
+        private Output<String> name;
+        private @Nullable Output<List<ScheduleArgs>> schedules;
+        private @Nullable Output<List<LabelSelectorArgs>> selectors;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class ScalingConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.selectors = defaults.selectors;
         }
 
-        public Builder fleetAutoscalerSpec(Input<String> fleetAutoscalerSpec) {
+        public Builder fleetAutoscalerSpec(Output<String> fleetAutoscalerSpec) {
             this.fleetAutoscalerSpec = Objects.requireNonNull(fleetAutoscalerSpec);
             return this;
         }
 
         public Builder fleetAutoscalerSpec(String fleetAutoscalerSpec) {
-            this.fleetAutoscalerSpec = Input.of(Objects.requireNonNull(fleetAutoscalerSpec));
+            this.fleetAutoscalerSpec = Output.of(Objects.requireNonNull(fleetAutoscalerSpec));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder schedules(@Nullable Input<List<ScheduleArgs>> schedules) {
+        public Builder schedules(@Nullable Output<List<ScheduleArgs>> schedules) {
             this.schedules = schedules;
             return this;
         }
 
         public Builder schedules(@Nullable List<ScheduleArgs> schedules) {
-            this.schedules = Input.ofNullable(schedules);
+            this.schedules = Output.ofNullable(schedules);
             return this;
         }
 
-        public Builder selectors(@Nullable Input<List<LabelSelectorArgs>> selectors) {
+        public Builder selectors(@Nullable Output<List<LabelSelectorArgs>> selectors) {
             this.selectors = selectors;
             return this;
         }
 
         public Builder selectors(@Nullable List<LabelSelectorArgs> selectors) {
-            this.selectors = Input.ofNullable(selectors);
+            this.selectors = Output.ofNullable(selectors);
             return this;
         }
         public ScalingConfigArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.ExtensionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class CloudServiceExtensionProfileArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="extensions")
-      private final @Nullable Input<List<ExtensionArgs>> extensions;
+      private final @Nullable Output<List<ExtensionArgs>> extensions;
 
-    public Input<List<ExtensionArgs>> getExtensions() {
-        return this.extensions == null ? Input.empty() : this.extensions;
+    public Output<List<ExtensionArgs>> getExtensions() {
+        return this.extensions == null ? Output.empty() : this.extensions;
     }
 
-    public CloudServiceExtensionProfileArgs(@Nullable Input<List<ExtensionArgs>> extensions) {
+    public CloudServiceExtensionProfileArgs(@Nullable Output<List<ExtensionArgs>> extensions) {
         this.extensions = extensions;
     }
 
     private CloudServiceExtensionProfileArgs() {
-        this.extensions = Input.empty();
+        this.extensions = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class CloudServiceExtensionProfileArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ExtensionArgs>> extensions;
+        private @Nullable Output<List<ExtensionArgs>> extensions;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class CloudServiceExtensionProfileArgs extends io.pulumi.resources.
     	      this.extensions = defaults.extensions;
         }
 
-        public Builder extensions(@Nullable Input<List<ExtensionArgs>> extensions) {
+        public Builder extensions(@Nullable Output<List<ExtensionArgs>> extensions) {
             this.extensions = extensions;
             return this;
         }
 
         public Builder extensions(@Nullable List<ExtensionArgs> extensions) {
-            this.extensions = Input.ofNullable(extensions);
+            this.extensions = Output.ofNullable(extensions);
             return this;
         }
         public CloudServiceExtensionProfileArgs build() {

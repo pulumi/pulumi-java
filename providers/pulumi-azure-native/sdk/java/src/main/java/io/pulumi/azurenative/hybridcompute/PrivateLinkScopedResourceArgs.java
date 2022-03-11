@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hybridcompute;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class PrivateLinkScopedResourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="linkedResourceId")
-      private final @Nullable Input<String> linkedResourceId;
+      private final @Nullable Output<String> linkedResourceId;
 
-    public Input<String> getLinkedResourceId() {
-        return this.linkedResourceId == null ? Input.empty() : this.linkedResourceId;
+    public Output<String> getLinkedResourceId() {
+        return this.linkedResourceId == null ? Output.empty() : this.linkedResourceId;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class PrivateLinkScopedResourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -41,9 +41,9 @@ public final class PrivateLinkScopedResourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -52,17 +52,17 @@ public final class PrivateLinkScopedResourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="scopeName", required=true)
-      private final Input<String> scopeName;
+      private final Output<String> scopeName;
 
-    public Input<String> getScopeName() {
+    public Output<String> getScopeName() {
         return this.scopeName;
     }
 
     public PrivateLinkScopedResourceArgs(
-        @Nullable Input<String> linkedResourceId,
-        @Nullable Input<String> name,
-        Input<String> resourceGroupName,
-        Input<String> scopeName) {
+        @Nullable Output<String> linkedResourceId,
+        @Nullable Output<String> name,
+        Output<String> resourceGroupName,
+        Output<String> scopeName) {
         this.linkedResourceId = linkedResourceId;
         this.name = name;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -70,10 +70,10 @@ public final class PrivateLinkScopedResourceArgs extends io.pulumi.resources.Res
     }
 
     private PrivateLinkScopedResourceArgs() {
-        this.linkedResourceId = Input.empty();
-        this.name = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.scopeName = Input.empty();
+        this.linkedResourceId = Output.empty();
+        this.name = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.scopeName = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class PrivateLinkScopedResourceArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> linkedResourceId;
-        private @Nullable Input<String> name;
-        private Input<String> resourceGroupName;
-        private Input<String> scopeName;
+        private @Nullable Output<String> linkedResourceId;
+        private @Nullable Output<String> name;
+        private Output<String> resourceGroupName;
+        private Output<String> scopeName;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class PrivateLinkScopedResourceArgs extends io.pulumi.resources.Res
     	      this.scopeName = defaults.scopeName;
         }
 
-        public Builder linkedResourceId(@Nullable Input<String> linkedResourceId) {
+        public Builder linkedResourceId(@Nullable Output<String> linkedResourceId) {
             this.linkedResourceId = linkedResourceId;
             return this;
         }
 
         public Builder linkedResourceId(@Nullable String linkedResourceId) {
-            this.linkedResourceId = Input.ofNullable(linkedResourceId);
+            this.linkedResourceId = Output.ofNullable(linkedResourceId);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder scopeName(Input<String> scopeName) {
+        public Builder scopeName(Output<String> scopeName) {
             this.scopeName = Objects.requireNonNull(scopeName);
             return this;
         }
 
         public Builder scopeName(String scopeName) {
-            this.scopeName = Input.of(Objects.requireNonNull(scopeName));
+            this.scopeName = Output.of(Objects.requireNonNull(scopeName));
             return this;
         }
         public PrivateLinkScopedResourceArgs build() {

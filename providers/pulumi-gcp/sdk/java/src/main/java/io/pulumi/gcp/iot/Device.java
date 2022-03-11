@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.iot;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -327,14 +326,14 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Device(String name, DeviceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:iot/device:Device", name, args == null ? DeviceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:iot/device:Device", name, args == null ? DeviceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Device(String name, Input<String> id, @Nullable io.pulumi.gcp.iot.inputs.DeviceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Device(String name, Output<String> id, @Nullable io.pulumi.gcp.iot.inputs.DeviceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:iot/device:Device", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -350,7 +349,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Device get(String name, Input<String> id, @Nullable io.pulumi.gcp.iot.inputs.DeviceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Device get(String name, Output<String> id, @Nullable io.pulumi.gcp.iot.inputs.DeviceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Device(name, id, state, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.deviceupdate.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="groupIds")
-      private final @Nullable Input<List<String>> groupIds;
+      private final @Nullable Output<List<String>> groupIds;
 
-    public Input<List<String>> getGroupIds() {
-        return this.groupIds == null ? Input.empty() : this.groupIds;
+    public Output<List<String>> getGroupIds() {
+        return this.groupIds == null ? Output.empty() : this.groupIds;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="requestMessage")
-      private final @Nullable Input<String> requestMessage;
+      private final @Nullable Output<String> requestMessage;
 
-    public Input<String> getRequestMessage() {
-        return this.requestMessage == null ? Input.empty() : this.requestMessage;
+    public Output<String> getRequestMessage() {
+        return this.requestMessage == null ? Output.empty() : this.requestMessage;
     }
 
     public PrivateLinkServiceConnectionArgs(
-        @Nullable Input<List<String>> groupIds,
-        @Nullable Input<String> name,
-        @Nullable Input<String> requestMessage) {
+        @Nullable Output<List<String>> groupIds,
+        @Nullable Output<String> name,
+        @Nullable Output<String> requestMessage) {
         this.groupIds = groupIds;
         this.name = name;
         this.requestMessage = requestMessage;
     }
 
     private PrivateLinkServiceConnectionArgs() {
-        this.groupIds = Input.empty();
-        this.name = Input.empty();
-        this.requestMessage = Input.empty();
+        this.groupIds = Output.empty();
+        this.name = Output.empty();
+        this.requestMessage = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> groupIds;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> requestMessage;
+        private @Nullable Output<List<String>> groupIds;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> requestMessage;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
     	      this.requestMessage = defaults.requestMessage;
         }
 
-        public Builder groupIds(@Nullable Input<List<String>> groupIds) {
+        public Builder groupIds(@Nullable Output<List<String>> groupIds) {
             this.groupIds = groupIds;
             return this;
         }
 
         public Builder groupIds(@Nullable List<String> groupIds) {
-            this.groupIds = Input.ofNullable(groupIds);
+            this.groupIds = Output.ofNullable(groupIds);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder requestMessage(@Nullable Input<String> requestMessage) {
+        public Builder requestMessage(@Nullable Output<String> requestMessage) {
             this.requestMessage = requestMessage;
             return this;
         }
 
         public Builder requestMessage(@Nullable String requestMessage) {
-            this.requestMessage = Input.ofNullable(requestMessage);
+            this.requestMessage = Output.ofNullable(requestMessage);
             return this;
         }
         public PrivateLinkServiceConnectionArgs build() {

@@ -8,7 +8,6 @@ import io.pulumi.azurenative.network.NatGatewayArgs;
 import io.pulumi.azurenative.network.outputs.NatGatewaySkuResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -256,35 +255,35 @@ public class NatGateway extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NatGateway(String name, NatGatewayArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:NatGateway", name, args == null ? NatGatewayArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:network:NatGateway", name, args == null ? NatGatewayArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private NatGateway(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private NatGateway(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:NatGateway", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:network/v20190201:NatGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190401:NatGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190601:NatGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190701:NatGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190801:NatGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190901:NatGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20191101:NatGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20191201:NatGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200301:NatGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200401:NatGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200501:NatGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200601:NatGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200701:NatGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200801:NatGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20201101:NatGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210201:NatGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210301:NatGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210501:NatGateway").build())
+                Output.of(Alias.builder().setType("azure-native:network/v20190201:NatGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190401:NatGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190601:NatGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190701:NatGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190801:NatGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190901:NatGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20191101:NatGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20191201:NatGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200301:NatGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200401:NatGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200501:NatGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200601:NatGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200701:NatGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200801:NatGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20201101:NatGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210201:NatGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210301:NatGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210501:NatGateway").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -298,7 +297,7 @@ public class NatGateway extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static NatGateway get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static NatGateway get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new NatGateway(name, id, options);
     }
 }

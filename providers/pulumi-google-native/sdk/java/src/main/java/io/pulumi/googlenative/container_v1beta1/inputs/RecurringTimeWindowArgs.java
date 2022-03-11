@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1beta1.inputs.TimeWindowArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class RecurringTimeWindowArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="recurrence")
-      private final @Nullable Input<String> recurrence;
+      private final @Nullable Output<String> recurrence;
 
-    public Input<String> getRecurrence() {
-        return this.recurrence == null ? Input.empty() : this.recurrence;
+    public Output<String> getRecurrence() {
+        return this.recurrence == null ? Output.empty() : this.recurrence;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class RecurringTimeWindowArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="window")
-      private final @Nullable Input<TimeWindowArgs> window;
+      private final @Nullable Output<TimeWindowArgs> window;
 
-    public Input<TimeWindowArgs> getWindow() {
-        return this.window == null ? Input.empty() : this.window;
+    public Output<TimeWindowArgs> getWindow() {
+        return this.window == null ? Output.empty() : this.window;
     }
 
     public RecurringTimeWindowArgs(
-        @Nullable Input<String> recurrence,
-        @Nullable Input<TimeWindowArgs> window) {
+        @Nullable Output<String> recurrence,
+        @Nullable Output<TimeWindowArgs> window) {
         this.recurrence = recurrence;
         this.window = window;
     }
 
     private RecurringTimeWindowArgs() {
-        this.recurrence = Input.empty();
-        this.window = Input.empty();
+        this.recurrence = Output.empty();
+        this.window = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class RecurringTimeWindowArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> recurrence;
-        private @Nullable Input<TimeWindowArgs> window;
+        private @Nullable Output<String> recurrence;
+        private @Nullable Output<TimeWindowArgs> window;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class RecurringTimeWindowArgs extends io.pulumi.resources.ResourceA
     	      this.window = defaults.window;
         }
 
-        public Builder recurrence(@Nullable Input<String> recurrence) {
+        public Builder recurrence(@Nullable Output<String> recurrence) {
             this.recurrence = recurrence;
             return this;
         }
 
         public Builder recurrence(@Nullable String recurrence) {
-            this.recurrence = Input.ofNullable(recurrence);
+            this.recurrence = Output.ofNullable(recurrence);
             return this;
         }
 
-        public Builder window(@Nullable Input<TimeWindowArgs> window) {
+        public Builder window(@Nullable Output<TimeWindowArgs> window) {
             this.window = window;
             return this;
         }
 
         public Builder window(@Nullable TimeWindowArgs window) {
-            this.window = Input.ofNullable(window);
+            this.window = Output.ofNullable(window);
             return this;
         }
         public RecurringTimeWindowArgs build() {

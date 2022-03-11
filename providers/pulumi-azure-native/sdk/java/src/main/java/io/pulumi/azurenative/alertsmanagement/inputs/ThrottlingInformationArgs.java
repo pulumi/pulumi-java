@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.alertsmanagement.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ThrottlingInformationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="duration")
-      private final @Nullable Input<String> duration;
+      private final @Nullable Output<String> duration;
 
-    public Input<String> getDuration() {
-        return this.duration == null ? Input.empty() : this.duration;
+    public Output<String> getDuration() {
+        return this.duration == null ? Output.empty() : this.duration;
     }
 
-    public ThrottlingInformationArgs(@Nullable Input<String> duration) {
+    public ThrottlingInformationArgs(@Nullable Output<String> duration) {
         this.duration = duration;
     }
 
     private ThrottlingInformationArgs() {
-        this.duration = Input.empty();
+        this.duration = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ThrottlingInformationArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> duration;
+        private @Nullable Output<String> duration;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ThrottlingInformationArgs extends io.pulumi.resources.Resourc
     	      this.duration = defaults.duration;
         }
 
-        public Builder duration(@Nullable Input<String> duration) {
+        public Builder duration(@Nullable Output<String> duration) {
             this.duration = duration;
             return this;
         }
 
         public Builder duration(@Nullable String duration) {
-            this.duration = Input.ofNullable(duration);
+            this.duration = Output.ofNullable(duration);
             return this;
         }
         public ThrottlingInformationArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.azurenative.botservice.inputs.WebChatSiteArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class WebChatChannelPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="sites")
-      private final @Nullable Input<List<WebChatSiteArgs>> sites;
+      private final @Nullable Output<List<WebChatSiteArgs>> sites;
 
-    public Input<List<WebChatSiteArgs>> getSites() {
-        return this.sites == null ? Input.empty() : this.sites;
+    public Output<List<WebChatSiteArgs>> getSites() {
+        return this.sites == null ? Output.empty() : this.sites;
     }
 
-    public WebChatChannelPropertiesArgs(@Nullable Input<List<WebChatSiteArgs>> sites) {
+    public WebChatChannelPropertiesArgs(@Nullable Output<List<WebChatSiteArgs>> sites) {
         this.sites = sites;
     }
 
     private WebChatChannelPropertiesArgs() {
-        this.sites = Input.empty();
+        this.sites = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class WebChatChannelPropertiesArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<List<WebChatSiteArgs>> sites;
+        private @Nullable Output<List<WebChatSiteArgs>> sites;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class WebChatChannelPropertiesArgs extends io.pulumi.resources.Reso
     	      this.sites = defaults.sites;
         }
 
-        public Builder sites(@Nullable Input<List<WebChatSiteArgs>> sites) {
+        public Builder sites(@Nullable Output<List<WebChatSiteArgs>> sites) {
             this.sites = sites;
             return this;
         }
 
         public Builder sites(@Nullable List<WebChatSiteArgs> sites) {
-            this.sites = Input.ofNullable(sites);
+            this.sites = Output.ofNullable(sites);
             return this;
         }
         public WebChatChannelPropertiesArgs build() {

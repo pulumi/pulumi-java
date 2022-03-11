@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,18 +20,18 @@ public final class WorkflowTemplateJobPrestoJobLoggingConfigGetArgs extends io.p
      * 
      */
     @InputImport(name="driverLogLevels")
-      private final @Nullable Input<Map<String,String>> driverLogLevels;
+      private final @Nullable Output<Map<String,String>> driverLogLevels;
 
-    public Input<Map<String,String>> getDriverLogLevels() {
-        return this.driverLogLevels == null ? Input.empty() : this.driverLogLevels;
+    public Output<Map<String,String>> getDriverLogLevels() {
+        return this.driverLogLevels == null ? Output.empty() : this.driverLogLevels;
     }
 
-    public WorkflowTemplateJobPrestoJobLoggingConfigGetArgs(@Nullable Input<Map<String,String>> driverLogLevels) {
+    public WorkflowTemplateJobPrestoJobLoggingConfigGetArgs(@Nullable Output<Map<String,String>> driverLogLevels) {
         this.driverLogLevels = driverLogLevels;
     }
 
     private WorkflowTemplateJobPrestoJobLoggingConfigGetArgs() {
-        this.driverLogLevels = Input.empty();
+        this.driverLogLevels = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class WorkflowTemplateJobPrestoJobLoggingConfigGetArgs extends io.p
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> driverLogLevels;
+        private @Nullable Output<Map<String,String>> driverLogLevels;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class WorkflowTemplateJobPrestoJobLoggingConfigGetArgs extends io.p
     	      this.driverLogLevels = defaults.driverLogLevels;
         }
 
-        public Builder driverLogLevels(@Nullable Input<Map<String,String>> driverLogLevels) {
+        public Builder driverLogLevels(@Nullable Output<Map<String,String>> driverLogLevels) {
             this.driverLogLevels = driverLogLevels;
             return this;
         }
 
         public Builder driverLogLevels(@Nullable Map<String,String> driverLogLevels) {
-            this.driverLogLevels = Input.ofNullable(driverLogLevels);
+            this.driverLogLevels = Output.ofNullable(driverLogLevels);
             return this;
         }
         public WorkflowTemplateJobPrestoJobLoggingConfigGetArgs build() {

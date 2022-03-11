@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.emr.InstanceGroupArgs;
 import io.pulumi.aws.emr.inputs.InstanceGroupState;
 import io.pulumi.aws.emr.outputs.InstanceGroupEbsConfig;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -215,14 +214,14 @@ public class InstanceGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public InstanceGroup(String name, InstanceGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:emr/instanceGroup:InstanceGroup", name, args == null ? InstanceGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:emr/instanceGroup:InstanceGroup", name, args == null ? InstanceGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private InstanceGroup(String name, Input<String> id, @Nullable InstanceGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private InstanceGroup(String name, Output<String> id, @Nullable InstanceGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:emr/instanceGroup:InstanceGroup", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -238,7 +237,7 @@ public class InstanceGroup extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static InstanceGroup get(String name, Input<String> id, @Nullable InstanceGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static InstanceGroup get(String name, Output<String> id, @Nullable InstanceGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new InstanceGroup(name, id, state, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ContentItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentItemId")
-      private final @Nullable Input<String> contentItemId;
+      private final @Nullable Output<String> contentItemId;
 
-    public Input<String> getContentItemId() {
-        return this.contentItemId == null ? Input.empty() : this.contentItemId;
+    public Output<String> getContentItemId() {
+        return this.contentItemId == null ? Output.empty() : this.contentItemId;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class ContentItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentTypeId", required=true)
-      private final Input<String> contentTypeId;
+      private final Output<String> contentTypeId;
 
-    public Input<String> getContentTypeId() {
+    public Output<String> getContentTypeId() {
         return this.contentTypeId;
     }
 
@@ -41,9 +41,9 @@ public final class ContentItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -52,17 +52,17 @@ public final class ContentItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-      private final Input<String> serviceName;
+      private final Output<String> serviceName;
 
-    public Input<String> getServiceName() {
+    public Output<String> getServiceName() {
         return this.serviceName;
     }
 
     public ContentItemArgs(
-        @Nullable Input<String> contentItemId,
-        Input<String> contentTypeId,
-        Input<String> resourceGroupName,
-        Input<String> serviceName) {
+        @Nullable Output<String> contentItemId,
+        Output<String> contentTypeId,
+        Output<String> resourceGroupName,
+        Output<String> serviceName) {
         this.contentItemId = contentItemId;
         this.contentTypeId = Objects.requireNonNull(contentTypeId, "expected parameter 'contentTypeId' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -70,10 +70,10 @@ public final class ContentItemArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContentItemArgs() {
-        this.contentItemId = Input.empty();
-        this.contentTypeId = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serviceName = Input.empty();
+        this.contentItemId = Output.empty();
+        this.contentTypeId = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serviceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class ContentItemArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> contentItemId;
-        private Input<String> contentTypeId;
-        private Input<String> resourceGroupName;
-        private Input<String> serviceName;
+        private @Nullable Output<String> contentItemId;
+        private Output<String> contentTypeId;
+        private Output<String> resourceGroupName;
+        private Output<String> serviceName;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class ContentItemArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder contentItemId(@Nullable Input<String> contentItemId) {
+        public Builder contentItemId(@Nullable Output<String> contentItemId) {
             this.contentItemId = contentItemId;
             return this;
         }
 
         public Builder contentItemId(@Nullable String contentItemId) {
-            this.contentItemId = Input.ofNullable(contentItemId);
+            this.contentItemId = Output.ofNullable(contentItemId);
             return this;
         }
 
-        public Builder contentTypeId(Input<String> contentTypeId) {
+        public Builder contentTypeId(Output<String> contentTypeId) {
             this.contentTypeId = Objects.requireNonNull(contentTypeId);
             return this;
         }
 
         public Builder contentTypeId(String contentTypeId) {
-            this.contentTypeId = Input.of(Objects.requireNonNull(contentTypeId));
+            this.contentTypeId = Output.of(Objects.requireNonNull(contentTypeId));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serviceName(Input<String> serviceName) {
+        public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Input.of(Objects.requireNonNull(serviceName));
+            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
         public ContentItemArgs build() {

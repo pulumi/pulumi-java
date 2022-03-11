@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.InMageDiskSignatureExclusionOptionsArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.InMageVolumeExclusionOptionsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class InMageDiskExclusionInputArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="diskSignatureOptions")
-      private final @Nullable Input<List<InMageDiskSignatureExclusionOptionsArgs>> diskSignatureOptions;
+      private final @Nullable Output<List<InMageDiskSignatureExclusionOptionsArgs>> diskSignatureOptions;
 
-    public Input<List<InMageDiskSignatureExclusionOptionsArgs>> getDiskSignatureOptions() {
-        return this.diskSignatureOptions == null ? Input.empty() : this.diskSignatureOptions;
+    public Output<List<InMageDiskSignatureExclusionOptionsArgs>> getDiskSignatureOptions() {
+        return this.diskSignatureOptions == null ? Output.empty() : this.diskSignatureOptions;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class InMageDiskExclusionInputArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="volumeOptions")
-      private final @Nullable Input<List<InMageVolumeExclusionOptionsArgs>> volumeOptions;
+      private final @Nullable Output<List<InMageVolumeExclusionOptionsArgs>> volumeOptions;
 
-    public Input<List<InMageVolumeExclusionOptionsArgs>> getVolumeOptions() {
-        return this.volumeOptions == null ? Input.empty() : this.volumeOptions;
+    public Output<List<InMageVolumeExclusionOptionsArgs>> getVolumeOptions() {
+        return this.volumeOptions == null ? Output.empty() : this.volumeOptions;
     }
 
     public InMageDiskExclusionInputArgs(
-        @Nullable Input<List<InMageDiskSignatureExclusionOptionsArgs>> diskSignatureOptions,
-        @Nullable Input<List<InMageVolumeExclusionOptionsArgs>> volumeOptions) {
+        @Nullable Output<List<InMageDiskSignatureExclusionOptionsArgs>> diskSignatureOptions,
+        @Nullable Output<List<InMageVolumeExclusionOptionsArgs>> volumeOptions) {
         this.diskSignatureOptions = diskSignatureOptions;
         this.volumeOptions = volumeOptions;
     }
 
     private InMageDiskExclusionInputArgs() {
-        this.diskSignatureOptions = Input.empty();
-        this.volumeOptions = Input.empty();
+        this.diskSignatureOptions = Output.empty();
+        this.volumeOptions = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class InMageDiskExclusionInputArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<List<InMageDiskSignatureExclusionOptionsArgs>> diskSignatureOptions;
-        private @Nullable Input<List<InMageVolumeExclusionOptionsArgs>> volumeOptions;
+        private @Nullable Output<List<InMageDiskSignatureExclusionOptionsArgs>> diskSignatureOptions;
+        private @Nullable Output<List<InMageVolumeExclusionOptionsArgs>> volumeOptions;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class InMageDiskExclusionInputArgs extends io.pulumi.resources.Reso
     	      this.volumeOptions = defaults.volumeOptions;
         }
 
-        public Builder diskSignatureOptions(@Nullable Input<List<InMageDiskSignatureExclusionOptionsArgs>> diskSignatureOptions) {
+        public Builder diskSignatureOptions(@Nullable Output<List<InMageDiskSignatureExclusionOptionsArgs>> diskSignatureOptions) {
             this.diskSignatureOptions = diskSignatureOptions;
             return this;
         }
 
         public Builder diskSignatureOptions(@Nullable List<InMageDiskSignatureExclusionOptionsArgs> diskSignatureOptions) {
-            this.diskSignatureOptions = Input.ofNullable(diskSignatureOptions);
+            this.diskSignatureOptions = Output.ofNullable(diskSignatureOptions);
             return this;
         }
 
-        public Builder volumeOptions(@Nullable Input<List<InMageVolumeExclusionOptionsArgs>> volumeOptions) {
+        public Builder volumeOptions(@Nullable Output<List<InMageVolumeExclusionOptionsArgs>> volumeOptions) {
             this.volumeOptions = volumeOptions;
             return this;
         }
 
         public Builder volumeOptions(@Nullable List<InMageVolumeExclusionOptionsArgs> volumeOptions) {
-            this.volumeOptions = Input.ofNullable(volumeOptions);
+            this.volumeOptions = Output.ofNullable(volumeOptions);
             return this;
         }
         public InMageDiskExclusionInputArgs build() {

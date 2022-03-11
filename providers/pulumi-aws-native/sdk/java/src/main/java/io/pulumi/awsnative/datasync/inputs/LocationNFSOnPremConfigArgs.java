@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.datasync.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,18 +23,18 @@ public final class LocationNFSOnPremConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="agentArns", required=true)
-      private final Input<List<String>> agentArns;
+      private final Output<List<String>> agentArns;
 
-    public Input<List<String>> getAgentArns() {
+    public Output<List<String>> getAgentArns() {
         return this.agentArns;
     }
 
-    public LocationNFSOnPremConfigArgs(Input<List<String>> agentArns) {
+    public LocationNFSOnPremConfigArgs(Output<List<String>> agentArns) {
         this.agentArns = Objects.requireNonNull(agentArns, "expected parameter 'agentArns' to be non-null");
     }
 
     private LocationNFSOnPremConfigArgs() {
-        this.agentArns = Input.empty();
+        this.agentArns = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class LocationNFSOnPremConfigArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<List<String>> agentArns;
+        private Output<List<String>> agentArns;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class LocationNFSOnPremConfigArgs extends io.pulumi.resources.Resou
     	      this.agentArns = defaults.agentArns;
         }
 
-        public Builder agentArns(Input<List<String>> agentArns) {
+        public Builder agentArns(Output<List<String>> agentArns) {
             this.agentArns = Objects.requireNonNull(agentArns);
             return this;
         }
 
         public Builder agentArns(List<String> agentArns) {
-            this.agentArns = Input.of(Objects.requireNonNull(agentArns));
+            this.agentArns = Output.of(Objects.requireNonNull(agentArns));
             return this;
         }
         public LocationNFSOnPremConfigArgs build() {

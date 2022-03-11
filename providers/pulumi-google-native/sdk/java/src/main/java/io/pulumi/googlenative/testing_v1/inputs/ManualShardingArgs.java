@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.testing_v1.inputs.TestTargetsForShardArgs;
 import java.util.List;
@@ -23,18 +23,18 @@ public final class ManualShardingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="testTargetsForShard", required=true)
-      private final Input<List<TestTargetsForShardArgs>> testTargetsForShard;
+      private final Output<List<TestTargetsForShardArgs>> testTargetsForShard;
 
-    public Input<List<TestTargetsForShardArgs>> getTestTargetsForShard() {
+    public Output<List<TestTargetsForShardArgs>> getTestTargetsForShard() {
         return this.testTargetsForShard;
     }
 
-    public ManualShardingArgs(Input<List<TestTargetsForShardArgs>> testTargetsForShard) {
+    public ManualShardingArgs(Output<List<TestTargetsForShardArgs>> testTargetsForShard) {
         this.testTargetsForShard = Objects.requireNonNull(testTargetsForShard, "expected parameter 'testTargetsForShard' to be non-null");
     }
 
     private ManualShardingArgs() {
-        this.testTargetsForShard = Input.empty();
+        this.testTargetsForShard = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ManualShardingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<TestTargetsForShardArgs>> testTargetsForShard;
+        private Output<List<TestTargetsForShardArgs>> testTargetsForShard;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ManualShardingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.testTargetsForShard = defaults.testTargetsForShard;
         }
 
-        public Builder testTargetsForShard(Input<List<TestTargetsForShardArgs>> testTargetsForShard) {
+        public Builder testTargetsForShard(Output<List<TestTargetsForShardArgs>> testTargetsForShard) {
             this.testTargetsForShard = Objects.requireNonNull(testTargetsForShard);
             return this;
         }
 
         public Builder testTargetsForShard(List<TestTargetsForShardArgs> testTargetsForShard) {
-            this.testTargetsForShard = Input.of(Objects.requireNonNull(testTargetsForShard));
+            this.testTargetsForShard = Output.of(Objects.requireNonNull(testTargetsForShard));
             return this;
         }
         public ManualShardingArgs build() {

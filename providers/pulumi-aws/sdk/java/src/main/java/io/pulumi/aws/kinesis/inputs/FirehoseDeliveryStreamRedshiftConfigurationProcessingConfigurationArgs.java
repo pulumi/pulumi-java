@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigur
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigur
      * 
      */
     @InputImport(name="processors")
-      private final @Nullable Input<List<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorArgs>> processors;
+      private final @Nullable Output<List<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorArgs>> processors;
 
-    public Input<List<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorArgs>> getProcessors() {
-        return this.processors == null ? Input.empty() : this.processors;
+    public Output<List<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorArgs>> getProcessors() {
+        return this.processors == null ? Output.empty() : this.processors;
     }
 
     public FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationArgs(
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<List<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorArgs>> processors) {
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<List<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorArgs>> processors) {
         this.enabled = enabled;
         this.processors = processors;
     }
 
     private FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationArgs() {
-        this.enabled = Input.empty();
-        this.processors = Input.empty();
+        this.enabled = Output.empty();
+        this.processors = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigur
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<List<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorArgs>> processors;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<List<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorArgs>> processors;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigur
     	      this.processors = defaults.processors;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder processors(@Nullable Input<List<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorArgs>> processors) {
+        public Builder processors(@Nullable Output<List<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorArgs>> processors) {
             this.processors = processors;
             return this;
         }
 
         public Builder processors(@Nullable List<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorArgs> processors) {
-            this.processors = Input.ofNullable(processors);
+            this.processors = Output.ofNullable(processors);
             return this;
         }
         public FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationArgs build() {

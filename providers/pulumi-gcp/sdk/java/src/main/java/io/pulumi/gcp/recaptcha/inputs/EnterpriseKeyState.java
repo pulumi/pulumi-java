@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.recaptcha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.recaptcha.inputs.EnterpriseKeyAndroidSettingsGetArgs;
 import io.pulumi.gcp.recaptcha.inputs.EnterpriseKeyIosSettingsGetArgs;
@@ -24,10 +24,10 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="androidSettings")
-      private final @Nullable Input<EnterpriseKeyAndroidSettingsGetArgs> androidSettings;
+      private final @Nullable Output<EnterpriseKeyAndroidSettingsGetArgs> androidSettings;
 
-    public Input<EnterpriseKeyAndroidSettingsGetArgs> getAndroidSettings() {
-        return this.androidSettings == null ? Input.empty() : this.androidSettings;
+    public Output<EnterpriseKeyAndroidSettingsGetArgs> getAndroidSettings() {
+        return this.androidSettings == null ? Output.empty() : this.androidSettings;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-      private final @Nullable Input<String> createTime;
+      private final @Nullable Output<String> createTime;
 
-    public Input<String> getCreateTime() {
-        return this.createTime == null ? Input.empty() : this.createTime;
+    public Output<String> getCreateTime() {
+        return this.createTime == null ? Output.empty() : this.createTime;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iosSettings")
-      private final @Nullable Input<EnterpriseKeyIosSettingsGetArgs> iosSettings;
+      private final @Nullable Output<EnterpriseKeyIosSettingsGetArgs> iosSettings;
 
-    public Input<EnterpriseKeyIosSettingsGetArgs> getIosSettings() {
-        return this.iosSettings == null ? Input.empty() : this.iosSettings;
+    public Output<EnterpriseKeyIosSettingsGetArgs> getIosSettings() {
+        return this.iosSettings == null ? Output.empty() : this.iosSettings;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="testingOptions")
-      private final @Nullable Input<EnterpriseKeyTestingOptionsGetArgs> testingOptions;
+      private final @Nullable Output<EnterpriseKeyTestingOptionsGetArgs> testingOptions;
 
-    public Input<EnterpriseKeyTestingOptionsGetArgs> getTestingOptions() {
-        return this.testingOptions == null ? Input.empty() : this.testingOptions;
+    public Output<EnterpriseKeyTestingOptionsGetArgs> getTestingOptions() {
+        return this.testingOptions == null ? Output.empty() : this.testingOptions;
     }
 
     /**
@@ -112,22 +112,22 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="webSettings")
-      private final @Nullable Input<EnterpriseKeyWebSettingsGetArgs> webSettings;
+      private final @Nullable Output<EnterpriseKeyWebSettingsGetArgs> webSettings;
 
-    public Input<EnterpriseKeyWebSettingsGetArgs> getWebSettings() {
-        return this.webSettings == null ? Input.empty() : this.webSettings;
+    public Output<EnterpriseKeyWebSettingsGetArgs> getWebSettings() {
+        return this.webSettings == null ? Output.empty() : this.webSettings;
     }
 
     public EnterpriseKeyState(
-        @Nullable Input<EnterpriseKeyAndroidSettingsGetArgs> androidSettings,
-        @Nullable Input<String> createTime,
-        @Nullable Input<String> displayName,
-        @Nullable Input<EnterpriseKeyIosSettingsGetArgs> iosSettings,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<EnterpriseKeyTestingOptionsGetArgs> testingOptions,
-        @Nullable Input<EnterpriseKeyWebSettingsGetArgs> webSettings) {
+        @Nullable Output<EnterpriseKeyAndroidSettingsGetArgs> androidSettings,
+        @Nullable Output<String> createTime,
+        @Nullable Output<String> displayName,
+        @Nullable Output<EnterpriseKeyIosSettingsGetArgs> iosSettings,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<EnterpriseKeyTestingOptionsGetArgs> testingOptions,
+        @Nullable Output<EnterpriseKeyWebSettingsGetArgs> webSettings) {
         this.androidSettings = androidSettings;
         this.createTime = createTime;
         this.displayName = displayName;
@@ -140,15 +140,15 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
     }
 
     private EnterpriseKeyState() {
-        this.androidSettings = Input.empty();
-        this.createTime = Input.empty();
-        this.displayName = Input.empty();
-        this.iosSettings = Input.empty();
-        this.labels = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.testingOptions = Input.empty();
-        this.webSettings = Input.empty();
+        this.androidSettings = Output.empty();
+        this.createTime = Output.empty();
+        this.displayName = Output.empty();
+        this.iosSettings = Output.empty();
+        this.labels = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.testingOptions = Output.empty();
+        this.webSettings = Output.empty();
     }
 
     public static Builder builder() {
@@ -160,15 +160,15 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<EnterpriseKeyAndroidSettingsGetArgs> androidSettings;
-        private @Nullable Input<String> createTime;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<EnterpriseKeyIosSettingsGetArgs> iosSettings;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<EnterpriseKeyTestingOptionsGetArgs> testingOptions;
-        private @Nullable Input<EnterpriseKeyWebSettingsGetArgs> webSettings;
+        private @Nullable Output<EnterpriseKeyAndroidSettingsGetArgs> androidSettings;
+        private @Nullable Output<String> createTime;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<EnterpriseKeyIosSettingsGetArgs> iosSettings;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<EnterpriseKeyTestingOptionsGetArgs> testingOptions;
+        private @Nullable Output<EnterpriseKeyWebSettingsGetArgs> webSettings;
 
         public Builder() {
     	      // Empty
@@ -187,93 +187,93 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
     	      this.webSettings = defaults.webSettings;
         }
 
-        public Builder androidSettings(@Nullable Input<EnterpriseKeyAndroidSettingsGetArgs> androidSettings) {
+        public Builder androidSettings(@Nullable Output<EnterpriseKeyAndroidSettingsGetArgs> androidSettings) {
             this.androidSettings = androidSettings;
             return this;
         }
 
         public Builder androidSettings(@Nullable EnterpriseKeyAndroidSettingsGetArgs androidSettings) {
-            this.androidSettings = Input.ofNullable(androidSettings);
+            this.androidSettings = Output.ofNullable(androidSettings);
             return this;
         }
 
-        public Builder createTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Input.ofNullable(createTime);
+            this.createTime = Output.ofNullable(createTime);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder iosSettings(@Nullable Input<EnterpriseKeyIosSettingsGetArgs> iosSettings) {
+        public Builder iosSettings(@Nullable Output<EnterpriseKeyIosSettingsGetArgs> iosSettings) {
             this.iosSettings = iosSettings;
             return this;
         }
 
         public Builder iosSettings(@Nullable EnterpriseKeyIosSettingsGetArgs iosSettings) {
-            this.iosSettings = Input.ofNullable(iosSettings);
+            this.iosSettings = Output.ofNullable(iosSettings);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder testingOptions(@Nullable Input<EnterpriseKeyTestingOptionsGetArgs> testingOptions) {
+        public Builder testingOptions(@Nullable Output<EnterpriseKeyTestingOptionsGetArgs> testingOptions) {
             this.testingOptions = testingOptions;
             return this;
         }
 
         public Builder testingOptions(@Nullable EnterpriseKeyTestingOptionsGetArgs testingOptions) {
-            this.testingOptions = Input.ofNullable(testingOptions);
+            this.testingOptions = Output.ofNullable(testingOptions);
             return this;
         }
 
-        public Builder webSettings(@Nullable Input<EnterpriseKeyWebSettingsGetArgs> webSettings) {
+        public Builder webSettings(@Nullable Output<EnterpriseKeyWebSettingsGetArgs> webSettings) {
             this.webSettings = webSettings;
             return this;
         }
 
         public Builder webSettings(@Nullable EnterpriseKeyWebSettingsGetArgs webSettings) {
-            this.webSettings = Input.ofNullable(webSettings);
+            this.webSettings = Output.ofNullable(webSettings);
             return this;
         }
         public EnterpriseKeyState build() {

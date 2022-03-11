@@ -5,7 +5,7 @@ package io.pulumi.aws.storagegateway.inputs;
 
 import io.pulumi.aws.storagegateway.inputs.GatewayGatewayNetworkInterfaceGetArgs;
 import io.pulumi.aws.storagegateway.inputs.GatewaySmbActiveDirectorySettingsGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="activationKey")
-      private final @Nullable Input<String> activationKey;
+      private final @Nullable Output<String> activationKey;
 
-    public Input<String> getActivationKey() {
-        return this.activationKey == null ? Input.empty() : this.activationKey;
+    public Output<String> getActivationKey() {
+        return this.activationKey == null ? Output.empty() : this.activationKey;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="averageDownloadRateLimitInBitsPerSec")
-      private final @Nullable Input<Integer> averageDownloadRateLimitInBitsPerSec;
+      private final @Nullable Output<Integer> averageDownloadRateLimitInBitsPerSec;
 
-    public Input<Integer> getAverageDownloadRateLimitInBitsPerSec() {
-        return this.averageDownloadRateLimitInBitsPerSec == null ? Input.empty() : this.averageDownloadRateLimitInBitsPerSec;
+    public Output<Integer> getAverageDownloadRateLimitInBitsPerSec() {
+        return this.averageDownloadRateLimitInBitsPerSec == null ? Output.empty() : this.averageDownloadRateLimitInBitsPerSec;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="averageUploadRateLimitInBitsPerSec")
-      private final @Nullable Input<Integer> averageUploadRateLimitInBitsPerSec;
+      private final @Nullable Output<Integer> averageUploadRateLimitInBitsPerSec;
 
-    public Input<Integer> getAverageUploadRateLimitInBitsPerSec() {
-        return this.averageUploadRateLimitInBitsPerSec == null ? Input.empty() : this.averageUploadRateLimitInBitsPerSec;
+    public Output<Integer> getAverageUploadRateLimitInBitsPerSec() {
+        return this.averageUploadRateLimitInBitsPerSec == null ? Output.empty() : this.averageUploadRateLimitInBitsPerSec;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudwatchLogGroupArn")
-      private final @Nullable Input<String> cloudwatchLogGroupArn;
+      private final @Nullable Output<String> cloudwatchLogGroupArn;
 
-    public Input<String> getCloudwatchLogGroupArn() {
-        return this.cloudwatchLogGroupArn == null ? Input.empty() : this.cloudwatchLogGroupArn;
+    public Output<String> getCloudwatchLogGroupArn() {
+        return this.cloudwatchLogGroupArn == null ? Output.empty() : this.cloudwatchLogGroupArn;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ec2InstanceId")
-      private final @Nullable Input<String> ec2InstanceId;
+      private final @Nullable Output<String> ec2InstanceId;
 
-    public Input<String> getEc2InstanceId() {
-        return this.ec2InstanceId == null ? Input.empty() : this.ec2InstanceId;
+    public Output<String> getEc2InstanceId() {
+        return this.ec2InstanceId == null ? Output.empty() : this.ec2InstanceId;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointType")
-      private final @Nullable Input<String> endpointType;
+      private final @Nullable Output<String> endpointType;
 
-    public Input<String> getEndpointType() {
-        return this.endpointType == null ? Input.empty() : this.endpointType;
+    public Output<String> getEndpointType() {
+        return this.endpointType == null ? Output.empty() : this.endpointType;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayId")
-      private final @Nullable Input<String> gatewayId;
+      private final @Nullable Output<String> gatewayId;
 
-    public Input<String> getGatewayId() {
-        return this.gatewayId == null ? Input.empty() : this.gatewayId;
+    public Output<String> getGatewayId() {
+        return this.gatewayId == null ? Output.empty() : this.gatewayId;
     }
 
     /**
@@ -113,10 +113,10 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayIpAddress")
-      private final @Nullable Input<String> gatewayIpAddress;
+      private final @Nullable Output<String> gatewayIpAddress;
 
-    public Input<String> getGatewayIpAddress() {
-        return this.gatewayIpAddress == null ? Input.empty() : this.gatewayIpAddress;
+    public Output<String> getGatewayIpAddress() {
+        return this.gatewayIpAddress == null ? Output.empty() : this.gatewayIpAddress;
     }
 
     /**
@@ -124,10 +124,10 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayName")
-      private final @Nullable Input<String> gatewayName;
+      private final @Nullable Output<String> gatewayName;
 
-    public Input<String> getGatewayName() {
-        return this.gatewayName == null ? Input.empty() : this.gatewayName;
+    public Output<String> getGatewayName() {
+        return this.gatewayName == null ? Output.empty() : this.gatewayName;
     }
 
     /**
@@ -135,10 +135,10 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayNetworkInterfaces")
-      private final @Nullable Input<List<GatewayGatewayNetworkInterfaceGetArgs>> gatewayNetworkInterfaces;
+      private final @Nullable Output<List<GatewayGatewayNetworkInterfaceGetArgs>> gatewayNetworkInterfaces;
 
-    public Input<List<GatewayGatewayNetworkInterfaceGetArgs>> getGatewayNetworkInterfaces() {
-        return this.gatewayNetworkInterfaces == null ? Input.empty() : this.gatewayNetworkInterfaces;
+    public Output<List<GatewayGatewayNetworkInterfaceGetArgs>> getGatewayNetworkInterfaces() {
+        return this.gatewayNetworkInterfaces == null ? Output.empty() : this.gatewayNetworkInterfaces;
     }
 
     /**
@@ -146,10 +146,10 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayTimezone")
-      private final @Nullable Input<String> gatewayTimezone;
+      private final @Nullable Output<String> gatewayTimezone;
 
-    public Input<String> getGatewayTimezone() {
-        return this.gatewayTimezone == null ? Input.empty() : this.gatewayTimezone;
+    public Output<String> getGatewayTimezone() {
+        return this.gatewayTimezone == null ? Output.empty() : this.gatewayTimezone;
     }
 
     /**
@@ -157,10 +157,10 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayType")
-      private final @Nullable Input<String> gatewayType;
+      private final @Nullable Output<String> gatewayType;
 
-    public Input<String> getGatewayType() {
-        return this.gatewayType == null ? Input.empty() : this.gatewayType;
+    public Output<String> getGatewayType() {
+        return this.gatewayType == null ? Output.empty() : this.gatewayType;
     }
 
     /**
@@ -168,10 +168,10 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayVpcEndpoint")
-      private final @Nullable Input<String> gatewayVpcEndpoint;
+      private final @Nullable Output<String> gatewayVpcEndpoint;
 
-    public Input<String> getGatewayVpcEndpoint() {
-        return this.gatewayVpcEndpoint == null ? Input.empty() : this.gatewayVpcEndpoint;
+    public Output<String> getGatewayVpcEndpoint() {
+        return this.gatewayVpcEndpoint == null ? Output.empty() : this.gatewayVpcEndpoint;
     }
 
     /**
@@ -179,10 +179,10 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostEnvironment")
-      private final @Nullable Input<String> hostEnvironment;
+      private final @Nullable Output<String> hostEnvironment;
 
-    public Input<String> getHostEnvironment() {
-        return this.hostEnvironment == null ? Input.empty() : this.hostEnvironment;
+    public Output<String> getHostEnvironment() {
+        return this.hostEnvironment == null ? Output.empty() : this.hostEnvironment;
     }
 
     /**
@@ -190,10 +190,10 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mediumChangerType")
-      private final @Nullable Input<String> mediumChangerType;
+      private final @Nullable Output<String> mediumChangerType;
 
-    public Input<String> getMediumChangerType() {
-        return this.mediumChangerType == null ? Input.empty() : this.mediumChangerType;
+    public Output<String> getMediumChangerType() {
+        return this.mediumChangerType == null ? Output.empty() : this.mediumChangerType;
     }
 
     /**
@@ -201,10 +201,10 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="smbActiveDirectorySettings")
-      private final @Nullable Input<GatewaySmbActiveDirectorySettingsGetArgs> smbActiveDirectorySettings;
+      private final @Nullable Output<GatewaySmbActiveDirectorySettingsGetArgs> smbActiveDirectorySettings;
 
-    public Input<GatewaySmbActiveDirectorySettingsGetArgs> getSmbActiveDirectorySettings() {
-        return this.smbActiveDirectorySettings == null ? Input.empty() : this.smbActiveDirectorySettings;
+    public Output<GatewaySmbActiveDirectorySettingsGetArgs> getSmbActiveDirectorySettings() {
+        return this.smbActiveDirectorySettings == null ? Output.empty() : this.smbActiveDirectorySettings;
     }
 
     /**
@@ -212,10 +212,10 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="smbFileShareVisibility")
-      private final @Nullable Input<Boolean> smbFileShareVisibility;
+      private final @Nullable Output<Boolean> smbFileShareVisibility;
 
-    public Input<Boolean> getSmbFileShareVisibility() {
-        return this.smbFileShareVisibility == null ? Input.empty() : this.smbFileShareVisibility;
+    public Output<Boolean> getSmbFileShareVisibility() {
+        return this.smbFileShareVisibility == null ? Output.empty() : this.smbFileShareVisibility;
     }
 
     /**
@@ -223,10 +223,10 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="smbGuestPassword")
-      private final @Nullable Input<String> smbGuestPassword;
+      private final @Nullable Output<String> smbGuestPassword;
 
-    public Input<String> getSmbGuestPassword() {
-        return this.smbGuestPassword == null ? Input.empty() : this.smbGuestPassword;
+    public Output<String> getSmbGuestPassword() {
+        return this.smbGuestPassword == null ? Output.empty() : this.smbGuestPassword;
     }
 
     /**
@@ -234,10 +234,10 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="smbSecurityStrategy")
-      private final @Nullable Input<String> smbSecurityStrategy;
+      private final @Nullable Output<String> smbSecurityStrategy;
 
-    public Input<String> getSmbSecurityStrategy() {
-        return this.smbSecurityStrategy == null ? Input.empty() : this.smbSecurityStrategy;
+    public Output<String> getSmbSecurityStrategy() {
+        return this.smbSecurityStrategy == null ? Output.empty() : this.smbSecurityStrategy;
     }
 
     /**
@@ -245,10 +245,10 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -256,10 +256,10 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -267,36 +267,36 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tapeDriveType")
-      private final @Nullable Input<String> tapeDriveType;
+      private final @Nullable Output<String> tapeDriveType;
 
-    public Input<String> getTapeDriveType() {
-        return this.tapeDriveType == null ? Input.empty() : this.tapeDriveType;
+    public Output<String> getTapeDriveType() {
+        return this.tapeDriveType == null ? Output.empty() : this.tapeDriveType;
     }
 
     public GatewayState(
-        @Nullable Input<String> activationKey,
-        @Nullable Input<String> arn,
-        @Nullable Input<Integer> averageDownloadRateLimitInBitsPerSec,
-        @Nullable Input<Integer> averageUploadRateLimitInBitsPerSec,
-        @Nullable Input<String> cloudwatchLogGroupArn,
-        @Nullable Input<String> ec2InstanceId,
-        @Nullable Input<String> endpointType,
-        @Nullable Input<String> gatewayId,
-        @Nullable Input<String> gatewayIpAddress,
-        @Nullable Input<String> gatewayName,
-        @Nullable Input<List<GatewayGatewayNetworkInterfaceGetArgs>> gatewayNetworkInterfaces,
-        @Nullable Input<String> gatewayTimezone,
-        @Nullable Input<String> gatewayType,
-        @Nullable Input<String> gatewayVpcEndpoint,
-        @Nullable Input<String> hostEnvironment,
-        @Nullable Input<String> mediumChangerType,
-        @Nullable Input<GatewaySmbActiveDirectorySettingsGetArgs> smbActiveDirectorySettings,
-        @Nullable Input<Boolean> smbFileShareVisibility,
-        @Nullable Input<String> smbGuestPassword,
-        @Nullable Input<String> smbSecurityStrategy,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> tapeDriveType) {
+        @Nullable Output<String> activationKey,
+        @Nullable Output<String> arn,
+        @Nullable Output<Integer> averageDownloadRateLimitInBitsPerSec,
+        @Nullable Output<Integer> averageUploadRateLimitInBitsPerSec,
+        @Nullable Output<String> cloudwatchLogGroupArn,
+        @Nullable Output<String> ec2InstanceId,
+        @Nullable Output<String> endpointType,
+        @Nullable Output<String> gatewayId,
+        @Nullable Output<String> gatewayIpAddress,
+        @Nullable Output<String> gatewayName,
+        @Nullable Output<List<GatewayGatewayNetworkInterfaceGetArgs>> gatewayNetworkInterfaces,
+        @Nullable Output<String> gatewayTimezone,
+        @Nullable Output<String> gatewayType,
+        @Nullable Output<String> gatewayVpcEndpoint,
+        @Nullable Output<String> hostEnvironment,
+        @Nullable Output<String> mediumChangerType,
+        @Nullable Output<GatewaySmbActiveDirectorySettingsGetArgs> smbActiveDirectorySettings,
+        @Nullable Output<Boolean> smbFileShareVisibility,
+        @Nullable Output<String> smbGuestPassword,
+        @Nullable Output<String> smbSecurityStrategy,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> tapeDriveType) {
         this.activationKey = activationKey;
         this.arn = arn;
         this.averageDownloadRateLimitInBitsPerSec = averageDownloadRateLimitInBitsPerSec;
@@ -323,29 +323,29 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
     }
 
     private GatewayState() {
-        this.activationKey = Input.empty();
-        this.arn = Input.empty();
-        this.averageDownloadRateLimitInBitsPerSec = Input.empty();
-        this.averageUploadRateLimitInBitsPerSec = Input.empty();
-        this.cloudwatchLogGroupArn = Input.empty();
-        this.ec2InstanceId = Input.empty();
-        this.endpointType = Input.empty();
-        this.gatewayId = Input.empty();
-        this.gatewayIpAddress = Input.empty();
-        this.gatewayName = Input.empty();
-        this.gatewayNetworkInterfaces = Input.empty();
-        this.gatewayTimezone = Input.empty();
-        this.gatewayType = Input.empty();
-        this.gatewayVpcEndpoint = Input.empty();
-        this.hostEnvironment = Input.empty();
-        this.mediumChangerType = Input.empty();
-        this.smbActiveDirectorySettings = Input.empty();
-        this.smbFileShareVisibility = Input.empty();
-        this.smbGuestPassword = Input.empty();
-        this.smbSecurityStrategy = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.tapeDriveType = Input.empty();
+        this.activationKey = Output.empty();
+        this.arn = Output.empty();
+        this.averageDownloadRateLimitInBitsPerSec = Output.empty();
+        this.averageUploadRateLimitInBitsPerSec = Output.empty();
+        this.cloudwatchLogGroupArn = Output.empty();
+        this.ec2InstanceId = Output.empty();
+        this.endpointType = Output.empty();
+        this.gatewayId = Output.empty();
+        this.gatewayIpAddress = Output.empty();
+        this.gatewayName = Output.empty();
+        this.gatewayNetworkInterfaces = Output.empty();
+        this.gatewayTimezone = Output.empty();
+        this.gatewayType = Output.empty();
+        this.gatewayVpcEndpoint = Output.empty();
+        this.hostEnvironment = Output.empty();
+        this.mediumChangerType = Output.empty();
+        this.smbActiveDirectorySettings = Output.empty();
+        this.smbFileShareVisibility = Output.empty();
+        this.smbGuestPassword = Output.empty();
+        this.smbSecurityStrategy = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.tapeDriveType = Output.empty();
     }
 
     public static Builder builder() {
@@ -357,29 +357,29 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> activationKey;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<Integer> averageDownloadRateLimitInBitsPerSec;
-        private @Nullable Input<Integer> averageUploadRateLimitInBitsPerSec;
-        private @Nullable Input<String> cloudwatchLogGroupArn;
-        private @Nullable Input<String> ec2InstanceId;
-        private @Nullable Input<String> endpointType;
-        private @Nullable Input<String> gatewayId;
-        private @Nullable Input<String> gatewayIpAddress;
-        private @Nullable Input<String> gatewayName;
-        private @Nullable Input<List<GatewayGatewayNetworkInterfaceGetArgs>> gatewayNetworkInterfaces;
-        private @Nullable Input<String> gatewayTimezone;
-        private @Nullable Input<String> gatewayType;
-        private @Nullable Input<String> gatewayVpcEndpoint;
-        private @Nullable Input<String> hostEnvironment;
-        private @Nullable Input<String> mediumChangerType;
-        private @Nullable Input<GatewaySmbActiveDirectorySettingsGetArgs> smbActiveDirectorySettings;
-        private @Nullable Input<Boolean> smbFileShareVisibility;
-        private @Nullable Input<String> smbGuestPassword;
-        private @Nullable Input<String> smbSecurityStrategy;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> tapeDriveType;
+        private @Nullable Output<String> activationKey;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<Integer> averageDownloadRateLimitInBitsPerSec;
+        private @Nullable Output<Integer> averageUploadRateLimitInBitsPerSec;
+        private @Nullable Output<String> cloudwatchLogGroupArn;
+        private @Nullable Output<String> ec2InstanceId;
+        private @Nullable Output<String> endpointType;
+        private @Nullable Output<String> gatewayId;
+        private @Nullable Output<String> gatewayIpAddress;
+        private @Nullable Output<String> gatewayName;
+        private @Nullable Output<List<GatewayGatewayNetworkInterfaceGetArgs>> gatewayNetworkInterfaces;
+        private @Nullable Output<String> gatewayTimezone;
+        private @Nullable Output<String> gatewayType;
+        private @Nullable Output<String> gatewayVpcEndpoint;
+        private @Nullable Output<String> hostEnvironment;
+        private @Nullable Output<String> mediumChangerType;
+        private @Nullable Output<GatewaySmbActiveDirectorySettingsGetArgs> smbActiveDirectorySettings;
+        private @Nullable Output<Boolean> smbFileShareVisibility;
+        private @Nullable Output<String> smbGuestPassword;
+        private @Nullable Output<String> smbSecurityStrategy;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> tapeDriveType;
 
         public Builder() {
     	      // Empty
@@ -412,233 +412,233 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
     	      this.tapeDriveType = defaults.tapeDriveType;
         }
 
-        public Builder activationKey(@Nullable Input<String> activationKey) {
+        public Builder activationKey(@Nullable Output<String> activationKey) {
             this.activationKey = activationKey;
             return this;
         }
 
         public Builder activationKey(@Nullable String activationKey) {
-            this.activationKey = Input.ofNullable(activationKey);
+            this.activationKey = Output.ofNullable(activationKey);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder averageDownloadRateLimitInBitsPerSec(@Nullable Input<Integer> averageDownloadRateLimitInBitsPerSec) {
+        public Builder averageDownloadRateLimitInBitsPerSec(@Nullable Output<Integer> averageDownloadRateLimitInBitsPerSec) {
             this.averageDownloadRateLimitInBitsPerSec = averageDownloadRateLimitInBitsPerSec;
             return this;
         }
 
         public Builder averageDownloadRateLimitInBitsPerSec(@Nullable Integer averageDownloadRateLimitInBitsPerSec) {
-            this.averageDownloadRateLimitInBitsPerSec = Input.ofNullable(averageDownloadRateLimitInBitsPerSec);
+            this.averageDownloadRateLimitInBitsPerSec = Output.ofNullable(averageDownloadRateLimitInBitsPerSec);
             return this;
         }
 
-        public Builder averageUploadRateLimitInBitsPerSec(@Nullable Input<Integer> averageUploadRateLimitInBitsPerSec) {
+        public Builder averageUploadRateLimitInBitsPerSec(@Nullable Output<Integer> averageUploadRateLimitInBitsPerSec) {
             this.averageUploadRateLimitInBitsPerSec = averageUploadRateLimitInBitsPerSec;
             return this;
         }
 
         public Builder averageUploadRateLimitInBitsPerSec(@Nullable Integer averageUploadRateLimitInBitsPerSec) {
-            this.averageUploadRateLimitInBitsPerSec = Input.ofNullable(averageUploadRateLimitInBitsPerSec);
+            this.averageUploadRateLimitInBitsPerSec = Output.ofNullable(averageUploadRateLimitInBitsPerSec);
             return this;
         }
 
-        public Builder cloudwatchLogGroupArn(@Nullable Input<String> cloudwatchLogGroupArn) {
+        public Builder cloudwatchLogGroupArn(@Nullable Output<String> cloudwatchLogGroupArn) {
             this.cloudwatchLogGroupArn = cloudwatchLogGroupArn;
             return this;
         }
 
         public Builder cloudwatchLogGroupArn(@Nullable String cloudwatchLogGroupArn) {
-            this.cloudwatchLogGroupArn = Input.ofNullable(cloudwatchLogGroupArn);
+            this.cloudwatchLogGroupArn = Output.ofNullable(cloudwatchLogGroupArn);
             return this;
         }
 
-        public Builder ec2InstanceId(@Nullable Input<String> ec2InstanceId) {
+        public Builder ec2InstanceId(@Nullable Output<String> ec2InstanceId) {
             this.ec2InstanceId = ec2InstanceId;
             return this;
         }
 
         public Builder ec2InstanceId(@Nullable String ec2InstanceId) {
-            this.ec2InstanceId = Input.ofNullable(ec2InstanceId);
+            this.ec2InstanceId = Output.ofNullable(ec2InstanceId);
             return this;
         }
 
-        public Builder endpointType(@Nullable Input<String> endpointType) {
+        public Builder endpointType(@Nullable Output<String> endpointType) {
             this.endpointType = endpointType;
             return this;
         }
 
         public Builder endpointType(@Nullable String endpointType) {
-            this.endpointType = Input.ofNullable(endpointType);
+            this.endpointType = Output.ofNullable(endpointType);
             return this;
         }
 
-        public Builder gatewayId(@Nullable Input<String> gatewayId) {
+        public Builder gatewayId(@Nullable Output<String> gatewayId) {
             this.gatewayId = gatewayId;
             return this;
         }
 
         public Builder gatewayId(@Nullable String gatewayId) {
-            this.gatewayId = Input.ofNullable(gatewayId);
+            this.gatewayId = Output.ofNullable(gatewayId);
             return this;
         }
 
-        public Builder gatewayIpAddress(@Nullable Input<String> gatewayIpAddress) {
+        public Builder gatewayIpAddress(@Nullable Output<String> gatewayIpAddress) {
             this.gatewayIpAddress = gatewayIpAddress;
             return this;
         }
 
         public Builder gatewayIpAddress(@Nullable String gatewayIpAddress) {
-            this.gatewayIpAddress = Input.ofNullable(gatewayIpAddress);
+            this.gatewayIpAddress = Output.ofNullable(gatewayIpAddress);
             return this;
         }
 
-        public Builder gatewayName(@Nullable Input<String> gatewayName) {
+        public Builder gatewayName(@Nullable Output<String> gatewayName) {
             this.gatewayName = gatewayName;
             return this;
         }
 
         public Builder gatewayName(@Nullable String gatewayName) {
-            this.gatewayName = Input.ofNullable(gatewayName);
+            this.gatewayName = Output.ofNullable(gatewayName);
             return this;
         }
 
-        public Builder gatewayNetworkInterfaces(@Nullable Input<List<GatewayGatewayNetworkInterfaceGetArgs>> gatewayNetworkInterfaces) {
+        public Builder gatewayNetworkInterfaces(@Nullable Output<List<GatewayGatewayNetworkInterfaceGetArgs>> gatewayNetworkInterfaces) {
             this.gatewayNetworkInterfaces = gatewayNetworkInterfaces;
             return this;
         }
 
         public Builder gatewayNetworkInterfaces(@Nullable List<GatewayGatewayNetworkInterfaceGetArgs> gatewayNetworkInterfaces) {
-            this.gatewayNetworkInterfaces = Input.ofNullable(gatewayNetworkInterfaces);
+            this.gatewayNetworkInterfaces = Output.ofNullable(gatewayNetworkInterfaces);
             return this;
         }
 
-        public Builder gatewayTimezone(@Nullable Input<String> gatewayTimezone) {
+        public Builder gatewayTimezone(@Nullable Output<String> gatewayTimezone) {
             this.gatewayTimezone = gatewayTimezone;
             return this;
         }
 
         public Builder gatewayTimezone(@Nullable String gatewayTimezone) {
-            this.gatewayTimezone = Input.ofNullable(gatewayTimezone);
+            this.gatewayTimezone = Output.ofNullable(gatewayTimezone);
             return this;
         }
 
-        public Builder gatewayType(@Nullable Input<String> gatewayType) {
+        public Builder gatewayType(@Nullable Output<String> gatewayType) {
             this.gatewayType = gatewayType;
             return this;
         }
 
         public Builder gatewayType(@Nullable String gatewayType) {
-            this.gatewayType = Input.ofNullable(gatewayType);
+            this.gatewayType = Output.ofNullable(gatewayType);
             return this;
         }
 
-        public Builder gatewayVpcEndpoint(@Nullable Input<String> gatewayVpcEndpoint) {
+        public Builder gatewayVpcEndpoint(@Nullable Output<String> gatewayVpcEndpoint) {
             this.gatewayVpcEndpoint = gatewayVpcEndpoint;
             return this;
         }
 
         public Builder gatewayVpcEndpoint(@Nullable String gatewayVpcEndpoint) {
-            this.gatewayVpcEndpoint = Input.ofNullable(gatewayVpcEndpoint);
+            this.gatewayVpcEndpoint = Output.ofNullable(gatewayVpcEndpoint);
             return this;
         }
 
-        public Builder hostEnvironment(@Nullable Input<String> hostEnvironment) {
+        public Builder hostEnvironment(@Nullable Output<String> hostEnvironment) {
             this.hostEnvironment = hostEnvironment;
             return this;
         }
 
         public Builder hostEnvironment(@Nullable String hostEnvironment) {
-            this.hostEnvironment = Input.ofNullable(hostEnvironment);
+            this.hostEnvironment = Output.ofNullable(hostEnvironment);
             return this;
         }
 
-        public Builder mediumChangerType(@Nullable Input<String> mediumChangerType) {
+        public Builder mediumChangerType(@Nullable Output<String> mediumChangerType) {
             this.mediumChangerType = mediumChangerType;
             return this;
         }
 
         public Builder mediumChangerType(@Nullable String mediumChangerType) {
-            this.mediumChangerType = Input.ofNullable(mediumChangerType);
+            this.mediumChangerType = Output.ofNullable(mediumChangerType);
             return this;
         }
 
-        public Builder smbActiveDirectorySettings(@Nullable Input<GatewaySmbActiveDirectorySettingsGetArgs> smbActiveDirectorySettings) {
+        public Builder smbActiveDirectorySettings(@Nullable Output<GatewaySmbActiveDirectorySettingsGetArgs> smbActiveDirectorySettings) {
             this.smbActiveDirectorySettings = smbActiveDirectorySettings;
             return this;
         }
 
         public Builder smbActiveDirectorySettings(@Nullable GatewaySmbActiveDirectorySettingsGetArgs smbActiveDirectorySettings) {
-            this.smbActiveDirectorySettings = Input.ofNullable(smbActiveDirectorySettings);
+            this.smbActiveDirectorySettings = Output.ofNullable(smbActiveDirectorySettings);
             return this;
         }
 
-        public Builder smbFileShareVisibility(@Nullable Input<Boolean> smbFileShareVisibility) {
+        public Builder smbFileShareVisibility(@Nullable Output<Boolean> smbFileShareVisibility) {
             this.smbFileShareVisibility = smbFileShareVisibility;
             return this;
         }
 
         public Builder smbFileShareVisibility(@Nullable Boolean smbFileShareVisibility) {
-            this.smbFileShareVisibility = Input.ofNullable(smbFileShareVisibility);
+            this.smbFileShareVisibility = Output.ofNullable(smbFileShareVisibility);
             return this;
         }
 
-        public Builder smbGuestPassword(@Nullable Input<String> smbGuestPassword) {
+        public Builder smbGuestPassword(@Nullable Output<String> smbGuestPassword) {
             this.smbGuestPassword = smbGuestPassword;
             return this;
         }
 
         public Builder smbGuestPassword(@Nullable String smbGuestPassword) {
-            this.smbGuestPassword = Input.ofNullable(smbGuestPassword);
+            this.smbGuestPassword = Output.ofNullable(smbGuestPassword);
             return this;
         }
 
-        public Builder smbSecurityStrategy(@Nullable Input<String> smbSecurityStrategy) {
+        public Builder smbSecurityStrategy(@Nullable Output<String> smbSecurityStrategy) {
             this.smbSecurityStrategy = smbSecurityStrategy;
             return this;
         }
 
         public Builder smbSecurityStrategy(@Nullable String smbSecurityStrategy) {
-            this.smbSecurityStrategy = Input.ofNullable(smbSecurityStrategy);
+            this.smbSecurityStrategy = Output.ofNullable(smbSecurityStrategy);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder tapeDriveType(@Nullable Input<String> tapeDriveType) {
+        public Builder tapeDriveType(@Nullable Output<String> tapeDriveType) {
             this.tapeDriveType = tapeDriveType;
             return this;
         }
 
         public Builder tapeDriveType(@Nullable String tapeDriveType) {
-            this.tapeDriveType = Input.ofNullable(tapeDriveType);
+            this.tapeDriveType = Output.ofNullable(tapeDriveType);
             return this;
         }
         public GatewayState build() {

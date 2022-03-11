@@ -9,7 +9,6 @@ import io.pulumi.aws.sagemaker.inputs.EndpointConfigurationState;
 import io.pulumi.aws.sagemaker.outputs.EndpointConfigurationAsyncInferenceConfig;
 import io.pulumi.aws.sagemaker.outputs.EndpointConfigurationDataCaptureConfig;
 import io.pulumi.aws.sagemaker.outputs.EndpointConfigurationProductionVariant;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -185,14 +184,14 @@ public class EndpointConfiguration extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EndpointConfiguration(String name, EndpointConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:sagemaker/endpointConfiguration:EndpointConfiguration", name, args == null ? EndpointConfigurationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:sagemaker/endpointConfiguration:EndpointConfiguration", name, args == null ? EndpointConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private EndpointConfiguration(String name, Input<String> id, @Nullable EndpointConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private EndpointConfiguration(String name, Output<String> id, @Nullable EndpointConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:sagemaker/endpointConfiguration:EndpointConfiguration", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -208,7 +207,7 @@ public class EndpointConfiguration extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static EndpointConfiguration get(String name, Input<String> id, @Nullable EndpointConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static EndpointConfiguration get(String name, Output<String> id, @Nullable EndpointConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new EndpointConfiguration(name, id, state, options);
     }
 }

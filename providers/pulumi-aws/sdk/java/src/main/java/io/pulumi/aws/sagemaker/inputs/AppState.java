@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.AppResourceSpecGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appName")
-      private final @Nullable Input<String> appName;
+      private final @Nullable Output<String> appName;
 
-    public Input<String> getAppName() {
-        return this.appName == null ? Input.empty() : this.appName;
+    public Output<String> getAppName() {
+        return this.appName == null ? Output.empty() : this.appName;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appType")
-      private final @Nullable Input<String> appType;
+      private final @Nullable Output<String> appType;
 
-    public Input<String> getAppType() {
-        return this.appType == null ? Input.empty() : this.appType;
+    public Output<String> getAppType() {
+        return this.appType == null ? Output.empty() : this.appType;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainId")
-      private final @Nullable Input<String> domainId;
+      private final @Nullable Output<String> domainId;
 
-    public Input<String> getDomainId() {
-        return this.domainId == null ? Input.empty() : this.domainId;
+    public Output<String> getDomainId() {
+        return this.domainId == null ? Output.empty() : this.domainId;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceSpec")
-      private final @Nullable Input<AppResourceSpecGetArgs> resourceSpec;
+      private final @Nullable Output<AppResourceSpecGetArgs> resourceSpec;
 
-    public Input<AppResourceSpecGetArgs> getResourceSpec() {
-        return this.resourceSpec == null ? Input.empty() : this.resourceSpec;
+    public Output<AppResourceSpecGetArgs> getResourceSpec() {
+        return this.resourceSpec == null ? Output.empty() : this.resourceSpec;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -98,21 +98,21 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userProfileName")
-      private final @Nullable Input<String> userProfileName;
+      private final @Nullable Output<String> userProfileName;
 
-    public Input<String> getUserProfileName() {
-        return this.userProfileName == null ? Input.empty() : this.userProfileName;
+    public Output<String> getUserProfileName() {
+        return this.userProfileName == null ? Output.empty() : this.userProfileName;
     }
 
     public AppState(
-        @Nullable Input<String> appName,
-        @Nullable Input<String> appType,
-        @Nullable Input<String> arn,
-        @Nullable Input<String> domainId,
-        @Nullable Input<AppResourceSpecGetArgs> resourceSpec,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> userProfileName) {
+        @Nullable Output<String> appName,
+        @Nullable Output<String> appType,
+        @Nullable Output<String> arn,
+        @Nullable Output<String> domainId,
+        @Nullable Output<AppResourceSpecGetArgs> resourceSpec,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> userProfileName) {
         this.appName = appName;
         this.appType = appType;
         this.arn = arn;
@@ -124,14 +124,14 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
     }
 
     private AppState() {
-        this.appName = Input.empty();
-        this.appType = Input.empty();
-        this.arn = Input.empty();
-        this.domainId = Input.empty();
-        this.resourceSpec = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.userProfileName = Input.empty();
+        this.appName = Output.empty();
+        this.appType = Output.empty();
+        this.arn = Output.empty();
+        this.domainId = Output.empty();
+        this.resourceSpec = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.userProfileName = Output.empty();
     }
 
     public static Builder builder() {
@@ -143,14 +143,14 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> appName;
-        private @Nullable Input<String> appType;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> domainId;
-        private @Nullable Input<AppResourceSpecGetArgs> resourceSpec;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> userProfileName;
+        private @Nullable Output<String> appName;
+        private @Nullable Output<String> appType;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> domainId;
+        private @Nullable Output<AppResourceSpecGetArgs> resourceSpec;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> userProfileName;
 
         public Builder() {
     	      // Empty
@@ -168,83 +168,83 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
     	      this.userProfileName = defaults.userProfileName;
         }
 
-        public Builder appName(@Nullable Input<String> appName) {
+        public Builder appName(@Nullable Output<String> appName) {
             this.appName = appName;
             return this;
         }
 
         public Builder appName(@Nullable String appName) {
-            this.appName = Input.ofNullable(appName);
+            this.appName = Output.ofNullable(appName);
             return this;
         }
 
-        public Builder appType(@Nullable Input<String> appType) {
+        public Builder appType(@Nullable Output<String> appType) {
             this.appType = appType;
             return this;
         }
 
         public Builder appType(@Nullable String appType) {
-            this.appType = Input.ofNullable(appType);
+            this.appType = Output.ofNullable(appType);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder domainId(@Nullable Input<String> domainId) {
+        public Builder domainId(@Nullable Output<String> domainId) {
             this.domainId = domainId;
             return this;
         }
 
         public Builder domainId(@Nullable String domainId) {
-            this.domainId = Input.ofNullable(domainId);
+            this.domainId = Output.ofNullable(domainId);
             return this;
         }
 
-        public Builder resourceSpec(@Nullable Input<AppResourceSpecGetArgs> resourceSpec) {
+        public Builder resourceSpec(@Nullable Output<AppResourceSpecGetArgs> resourceSpec) {
             this.resourceSpec = resourceSpec;
             return this;
         }
 
         public Builder resourceSpec(@Nullable AppResourceSpecGetArgs resourceSpec) {
-            this.resourceSpec = Input.ofNullable(resourceSpec);
+            this.resourceSpec = Output.ofNullable(resourceSpec);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder userProfileName(@Nullable Input<String> userProfileName) {
+        public Builder userProfileName(@Nullable Output<String> userProfileName) {
             this.userProfileName = userProfileName;
             return this;
         }
 
         public Builder userProfileName(@Nullable String userProfileName) {
-            this.userProfileName = Input.ofNullable(userProfileName);
+            this.userProfileName = Output.ofNullable(userProfileName);
             return this;
         }
         public AppState build() {

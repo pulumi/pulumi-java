@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.artifactregistry_v1beta2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.artifactregistry_v1beta2.enums.MavenRepositoryConfigVersionPolicy;
 import java.lang.Boolean;
@@ -24,10 +24,10 @@ public final class MavenRepositoryConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="allowSnapshotOverwrites")
-      private final @Nullable Input<Boolean> allowSnapshotOverwrites;
+      private final @Nullable Output<Boolean> allowSnapshotOverwrites;
 
-    public Input<Boolean> getAllowSnapshotOverwrites() {
-        return this.allowSnapshotOverwrites == null ? Input.empty() : this.allowSnapshotOverwrites;
+    public Output<Boolean> getAllowSnapshotOverwrites() {
+        return this.allowSnapshotOverwrites == null ? Output.empty() : this.allowSnapshotOverwrites;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class MavenRepositoryConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="versionPolicy")
-      private final @Nullable Input<MavenRepositoryConfigVersionPolicy> versionPolicy;
+      private final @Nullable Output<MavenRepositoryConfigVersionPolicy> versionPolicy;
 
-    public Input<MavenRepositoryConfigVersionPolicy> getVersionPolicy() {
-        return this.versionPolicy == null ? Input.empty() : this.versionPolicy;
+    public Output<MavenRepositoryConfigVersionPolicy> getVersionPolicy() {
+        return this.versionPolicy == null ? Output.empty() : this.versionPolicy;
     }
 
     public MavenRepositoryConfigArgs(
-        @Nullable Input<Boolean> allowSnapshotOverwrites,
-        @Nullable Input<MavenRepositoryConfigVersionPolicy> versionPolicy) {
+        @Nullable Output<Boolean> allowSnapshotOverwrites,
+        @Nullable Output<MavenRepositoryConfigVersionPolicy> versionPolicy) {
         this.allowSnapshotOverwrites = allowSnapshotOverwrites;
         this.versionPolicy = versionPolicy;
     }
 
     private MavenRepositoryConfigArgs() {
-        this.allowSnapshotOverwrites = Input.empty();
-        this.versionPolicy = Input.empty();
+        this.allowSnapshotOverwrites = Output.empty();
+        this.versionPolicy = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class MavenRepositoryConfigArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowSnapshotOverwrites;
-        private @Nullable Input<MavenRepositoryConfigVersionPolicy> versionPolicy;
+        private @Nullable Output<Boolean> allowSnapshotOverwrites;
+        private @Nullable Output<MavenRepositoryConfigVersionPolicy> versionPolicy;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class MavenRepositoryConfigArgs extends io.pulumi.resources.Resourc
     	      this.versionPolicy = defaults.versionPolicy;
         }
 
-        public Builder allowSnapshotOverwrites(@Nullable Input<Boolean> allowSnapshotOverwrites) {
+        public Builder allowSnapshotOverwrites(@Nullable Output<Boolean> allowSnapshotOverwrites) {
             this.allowSnapshotOverwrites = allowSnapshotOverwrites;
             return this;
         }
 
         public Builder allowSnapshotOverwrites(@Nullable Boolean allowSnapshotOverwrites) {
-            this.allowSnapshotOverwrites = Input.ofNullable(allowSnapshotOverwrites);
+            this.allowSnapshotOverwrites = Output.ofNullable(allowSnapshotOverwrites);
             return this;
         }
 
-        public Builder versionPolicy(@Nullable Input<MavenRepositoryConfigVersionPolicy> versionPolicy) {
+        public Builder versionPolicy(@Nullable Output<MavenRepositoryConfigVersionPolicy> versionPolicy) {
             this.versionPolicy = versionPolicy;
             return this;
         }
 
         public Builder versionPolicy(@Nullable MavenRepositoryConfigVersionPolicy versionPolicy) {
-            this.versionPolicy = Input.ofNullable(versionPolicy);
+            this.versionPolicy = Output.ofNullable(versionPolicy);
             return this;
         }
         public MavenRepositoryConfigArgs build() {

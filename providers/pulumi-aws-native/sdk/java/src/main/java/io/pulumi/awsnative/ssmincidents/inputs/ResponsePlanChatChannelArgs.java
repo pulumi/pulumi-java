@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ssmincidents.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,18 +20,18 @@ public final class ResponsePlanChatChannelArgs extends io.pulumi.resources.Resou
     public static final ResponsePlanChatChannelArgs Empty = new ResponsePlanChatChannelArgs();
 
     @InputImport(name="chatbotSns")
-      private final @Nullable Input<List<String>> chatbotSns;
+      private final @Nullable Output<List<String>> chatbotSns;
 
-    public Input<List<String>> getChatbotSns() {
-        return this.chatbotSns == null ? Input.empty() : this.chatbotSns;
+    public Output<List<String>> getChatbotSns() {
+        return this.chatbotSns == null ? Output.empty() : this.chatbotSns;
     }
 
-    public ResponsePlanChatChannelArgs(@Nullable Input<List<String>> chatbotSns) {
+    public ResponsePlanChatChannelArgs(@Nullable Output<List<String>> chatbotSns) {
         this.chatbotSns = chatbotSns;
     }
 
     private ResponsePlanChatChannelArgs() {
-        this.chatbotSns = Input.empty();
+        this.chatbotSns = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class ResponsePlanChatChannelArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> chatbotSns;
+        private @Nullable Output<List<String>> chatbotSns;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class ResponsePlanChatChannelArgs extends io.pulumi.resources.Resou
     	      this.chatbotSns = defaults.chatbotSns;
         }
 
-        public Builder chatbotSns(@Nullable Input<List<String>> chatbotSns) {
+        public Builder chatbotSns(@Nullable Output<List<String>> chatbotSns) {
             this.chatbotSns = chatbotSns;
             return this;
         }
 
         public Builder chatbotSns(@Nullable List<String> chatbotSns) {
-            this.chatbotSns = Input.ofNullable(chatbotSns);
+            this.chatbotSns = Output.ofNullable(chatbotSns);
             return this;
         }
         public ResponsePlanChatChannelArgs build() {

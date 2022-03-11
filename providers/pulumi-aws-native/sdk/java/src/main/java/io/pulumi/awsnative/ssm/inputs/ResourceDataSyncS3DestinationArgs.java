@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ssm.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,46 +15,46 @@ public final class ResourceDataSyncS3DestinationArgs extends io.pulumi.resources
     public static final ResourceDataSyncS3DestinationArgs Empty = new ResourceDataSyncS3DestinationArgs();
 
     @InputImport(name="bucketName", required=true)
-      private final Input<String> bucketName;
+      private final Output<String> bucketName;
 
-    public Input<String> getBucketName() {
+    public Output<String> getBucketName() {
         return this.bucketName;
     }
 
     @InputImport(name="bucketPrefix")
-      private final @Nullable Input<String> bucketPrefix;
+      private final @Nullable Output<String> bucketPrefix;
 
-    public Input<String> getBucketPrefix() {
-        return this.bucketPrefix == null ? Input.empty() : this.bucketPrefix;
+    public Output<String> getBucketPrefix() {
+        return this.bucketPrefix == null ? Output.empty() : this.bucketPrefix;
     }
 
     @InputImport(name="bucketRegion", required=true)
-      private final Input<String> bucketRegion;
+      private final Output<String> bucketRegion;
 
-    public Input<String> getBucketRegion() {
+    public Output<String> getBucketRegion() {
         return this.bucketRegion;
     }
 
     @InputImport(name="kMSKeyArn")
-      private final @Nullable Input<String> kMSKeyArn;
+      private final @Nullable Output<String> kMSKeyArn;
 
-    public Input<String> getKMSKeyArn() {
-        return this.kMSKeyArn == null ? Input.empty() : this.kMSKeyArn;
+    public Output<String> getKMSKeyArn() {
+        return this.kMSKeyArn == null ? Output.empty() : this.kMSKeyArn;
     }
 
     @InputImport(name="syncFormat", required=true)
-      private final Input<String> syncFormat;
+      private final Output<String> syncFormat;
 
-    public Input<String> getSyncFormat() {
+    public Output<String> getSyncFormat() {
         return this.syncFormat;
     }
 
     public ResourceDataSyncS3DestinationArgs(
-        Input<String> bucketName,
-        @Nullable Input<String> bucketPrefix,
-        Input<String> bucketRegion,
-        @Nullable Input<String> kMSKeyArn,
-        Input<String> syncFormat) {
+        Output<String> bucketName,
+        @Nullable Output<String> bucketPrefix,
+        Output<String> bucketRegion,
+        @Nullable Output<String> kMSKeyArn,
+        Output<String> syncFormat) {
         this.bucketName = Objects.requireNonNull(bucketName, "expected parameter 'bucketName' to be non-null");
         this.bucketPrefix = bucketPrefix;
         this.bucketRegion = Objects.requireNonNull(bucketRegion, "expected parameter 'bucketRegion' to be non-null");
@@ -63,11 +63,11 @@ public final class ResourceDataSyncS3DestinationArgs extends io.pulumi.resources
     }
 
     private ResourceDataSyncS3DestinationArgs() {
-        this.bucketName = Input.empty();
-        this.bucketPrefix = Input.empty();
-        this.bucketRegion = Input.empty();
-        this.kMSKeyArn = Input.empty();
-        this.syncFormat = Input.empty();
+        this.bucketName = Output.empty();
+        this.bucketPrefix = Output.empty();
+        this.bucketRegion = Output.empty();
+        this.kMSKeyArn = Output.empty();
+        this.syncFormat = Output.empty();
     }
 
     public static Builder builder() {
@@ -79,11 +79,11 @@ public final class ResourceDataSyncS3DestinationArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<String> bucketName;
-        private @Nullable Input<String> bucketPrefix;
-        private Input<String> bucketRegion;
-        private @Nullable Input<String> kMSKeyArn;
-        private Input<String> syncFormat;
+        private Output<String> bucketName;
+        private @Nullable Output<String> bucketPrefix;
+        private Output<String> bucketRegion;
+        private @Nullable Output<String> kMSKeyArn;
+        private Output<String> syncFormat;
 
         public Builder() {
     	      // Empty
@@ -98,53 +98,53 @@ public final class ResourceDataSyncS3DestinationArgs extends io.pulumi.resources
     	      this.syncFormat = defaults.syncFormat;
         }
 
-        public Builder bucketName(Input<String> bucketName) {
+        public Builder bucketName(Output<String> bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
         public Builder bucketName(String bucketName) {
-            this.bucketName = Input.of(Objects.requireNonNull(bucketName));
+            this.bucketName = Output.of(Objects.requireNonNull(bucketName));
             return this;
         }
 
-        public Builder bucketPrefix(@Nullable Input<String> bucketPrefix) {
+        public Builder bucketPrefix(@Nullable Output<String> bucketPrefix) {
             this.bucketPrefix = bucketPrefix;
             return this;
         }
 
         public Builder bucketPrefix(@Nullable String bucketPrefix) {
-            this.bucketPrefix = Input.ofNullable(bucketPrefix);
+            this.bucketPrefix = Output.ofNullable(bucketPrefix);
             return this;
         }
 
-        public Builder bucketRegion(Input<String> bucketRegion) {
+        public Builder bucketRegion(Output<String> bucketRegion) {
             this.bucketRegion = Objects.requireNonNull(bucketRegion);
             return this;
         }
 
         public Builder bucketRegion(String bucketRegion) {
-            this.bucketRegion = Input.of(Objects.requireNonNull(bucketRegion));
+            this.bucketRegion = Output.of(Objects.requireNonNull(bucketRegion));
             return this;
         }
 
-        public Builder kMSKeyArn(@Nullable Input<String> kMSKeyArn) {
+        public Builder kMSKeyArn(@Nullable Output<String> kMSKeyArn) {
             this.kMSKeyArn = kMSKeyArn;
             return this;
         }
 
         public Builder kMSKeyArn(@Nullable String kMSKeyArn) {
-            this.kMSKeyArn = Input.ofNullable(kMSKeyArn);
+            this.kMSKeyArn = Output.ofNullable(kMSKeyArn);
             return this;
         }
 
-        public Builder syncFormat(Input<String> syncFormat) {
+        public Builder syncFormat(Output<String> syncFormat) {
             this.syncFormat = Objects.requireNonNull(syncFormat);
             return this;
         }
 
         public Builder syncFormat(String syncFormat) {
-            this.syncFormat = Input.of(Objects.requireNonNull(syncFormat));
+            this.syncFormat = Output.of(Objects.requireNonNull(syncFormat));
             return this;
         }
         public ResourceDataSyncS3DestinationArgs build() {

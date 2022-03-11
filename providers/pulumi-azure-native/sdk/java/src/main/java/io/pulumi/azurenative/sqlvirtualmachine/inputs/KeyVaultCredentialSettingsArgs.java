@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sqlvirtualmachine.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="azureKeyVaultUrl")
-      private final @Nullable Input<String> azureKeyVaultUrl;
+      private final @Nullable Output<String> azureKeyVaultUrl;
 
-    public Input<String> getAzureKeyVaultUrl() {
-        return this.azureKeyVaultUrl == null ? Input.empty() : this.azureKeyVaultUrl;
+    public Output<String> getAzureKeyVaultUrl() {
+        return this.azureKeyVaultUrl == null ? Output.empty() : this.azureKeyVaultUrl;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="credentialName")
-      private final @Nullable Input<String> credentialName;
+      private final @Nullable Output<String> credentialName;
 
-    public Input<String> getCredentialName() {
-        return this.credentialName == null ? Input.empty() : this.credentialName;
+    public Output<String> getCredentialName() {
+        return this.credentialName == null ? Output.empty() : this.credentialName;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="enable")
-      private final @Nullable Input<Boolean> enable;
+      private final @Nullable Output<Boolean> enable;
 
-    public Input<Boolean> getEnable() {
-        return this.enable == null ? Input.empty() : this.enable;
+    public Output<Boolean> getEnable() {
+        return this.enable == null ? Output.empty() : this.enable;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="servicePrincipalName")
-      private final @Nullable Input<String> servicePrincipalName;
+      private final @Nullable Output<String> servicePrincipalName;
 
-    public Input<String> getServicePrincipalName() {
-        return this.servicePrincipalName == null ? Input.empty() : this.servicePrincipalName;
+    public Output<String> getServicePrincipalName() {
+        return this.servicePrincipalName == null ? Output.empty() : this.servicePrincipalName;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="servicePrincipalSecret")
-      private final @Nullable Input<String> servicePrincipalSecret;
+      private final @Nullable Output<String> servicePrincipalSecret;
 
-    public Input<String> getServicePrincipalSecret() {
-        return this.servicePrincipalSecret == null ? Input.empty() : this.servicePrincipalSecret;
+    public Output<String> getServicePrincipalSecret() {
+        return this.servicePrincipalSecret == null ? Output.empty() : this.servicePrincipalSecret;
     }
 
     public KeyVaultCredentialSettingsArgs(
-        @Nullable Input<String> azureKeyVaultUrl,
-        @Nullable Input<String> credentialName,
-        @Nullable Input<Boolean> enable,
-        @Nullable Input<String> servicePrincipalName,
-        @Nullable Input<String> servicePrincipalSecret) {
+        @Nullable Output<String> azureKeyVaultUrl,
+        @Nullable Output<String> credentialName,
+        @Nullable Output<Boolean> enable,
+        @Nullable Output<String> servicePrincipalName,
+        @Nullable Output<String> servicePrincipalSecret) {
         this.azureKeyVaultUrl = azureKeyVaultUrl;
         this.credentialName = credentialName;
         this.enable = enable;
@@ -88,11 +88,11 @@ public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.Re
     }
 
     private KeyVaultCredentialSettingsArgs() {
-        this.azureKeyVaultUrl = Input.empty();
-        this.credentialName = Input.empty();
-        this.enable = Input.empty();
-        this.servicePrincipalName = Input.empty();
-        this.servicePrincipalSecret = Input.empty();
+        this.azureKeyVaultUrl = Output.empty();
+        this.credentialName = Output.empty();
+        this.enable = Output.empty();
+        this.servicePrincipalName = Output.empty();
+        this.servicePrincipalSecret = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> azureKeyVaultUrl;
-        private @Nullable Input<String> credentialName;
-        private @Nullable Input<Boolean> enable;
-        private @Nullable Input<String> servicePrincipalName;
-        private @Nullable Input<String> servicePrincipalSecret;
+        private @Nullable Output<String> azureKeyVaultUrl;
+        private @Nullable Output<String> credentialName;
+        private @Nullable Output<Boolean> enable;
+        private @Nullable Output<String> servicePrincipalName;
+        private @Nullable Output<String> servicePrincipalSecret;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.Re
     	      this.servicePrincipalSecret = defaults.servicePrincipalSecret;
         }
 
-        public Builder azureKeyVaultUrl(@Nullable Input<String> azureKeyVaultUrl) {
+        public Builder azureKeyVaultUrl(@Nullable Output<String> azureKeyVaultUrl) {
             this.azureKeyVaultUrl = azureKeyVaultUrl;
             return this;
         }
 
         public Builder azureKeyVaultUrl(@Nullable String azureKeyVaultUrl) {
-            this.azureKeyVaultUrl = Input.ofNullable(azureKeyVaultUrl);
+            this.azureKeyVaultUrl = Output.ofNullable(azureKeyVaultUrl);
             return this;
         }
 
-        public Builder credentialName(@Nullable Input<String> credentialName) {
+        public Builder credentialName(@Nullable Output<String> credentialName) {
             this.credentialName = credentialName;
             return this;
         }
 
         public Builder credentialName(@Nullable String credentialName) {
-            this.credentialName = Input.ofNullable(credentialName);
+            this.credentialName = Output.ofNullable(credentialName);
             return this;
         }
 
-        public Builder enable(@Nullable Input<Boolean> enable) {
+        public Builder enable(@Nullable Output<Boolean> enable) {
             this.enable = enable;
             return this;
         }
 
         public Builder enable(@Nullable Boolean enable) {
-            this.enable = Input.ofNullable(enable);
+            this.enable = Output.ofNullable(enable);
             return this;
         }
 
-        public Builder servicePrincipalName(@Nullable Input<String> servicePrincipalName) {
+        public Builder servicePrincipalName(@Nullable Output<String> servicePrincipalName) {
             this.servicePrincipalName = servicePrincipalName;
             return this;
         }
 
         public Builder servicePrincipalName(@Nullable String servicePrincipalName) {
-            this.servicePrincipalName = Input.ofNullable(servicePrincipalName);
+            this.servicePrincipalName = Output.ofNullable(servicePrincipalName);
             return this;
         }
 
-        public Builder servicePrincipalSecret(@Nullable Input<String> servicePrincipalSecret) {
+        public Builder servicePrincipalSecret(@Nullable Output<String> servicePrincipalSecret) {
             this.servicePrincipalSecret = servicePrincipalSecret;
             return this;
         }
 
         public Builder servicePrincipalSecret(@Nullable String servicePrincipalSecret) {
-            this.servicePrincipalSecret = Input.ofNullable(servicePrincipalSecret);
+            this.servicePrincipalSecret = Output.ofNullable(servicePrincipalSecret);
             return this;
         }
         public KeyVaultCredentialSettingsArgs build() {

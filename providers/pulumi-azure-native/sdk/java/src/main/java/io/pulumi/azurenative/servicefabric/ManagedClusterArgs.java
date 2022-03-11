@@ -8,7 +8,7 @@ import io.pulumi.azurenative.servicefabric.inputs.ClientCertificateArgs;
 import io.pulumi.azurenative.servicefabric.inputs.LoadBalancingRuleArgs;
 import io.pulumi.azurenative.servicefabric.inputs.SettingsSectionDescriptionArgs;
 import io.pulumi.azurenative.servicefabric.inputs.SkuArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addonFeatures")
-      private final @Nullable Input<List<String>> addonFeatures;
+      private final @Nullable Output<List<String>> addonFeatures;
 
-    public Input<List<String>> getAddonFeatures() {
-        return this.addonFeatures == null ? Input.empty() : this.addonFeatures;
+    public Output<List<String>> getAddonFeatures() {
+        return this.addonFeatures == null ? Output.empty() : this.addonFeatures;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="adminPassword")
-      private final @Nullable Input<String> adminPassword;
+      private final @Nullable Output<String> adminPassword;
 
-    public Input<String> getAdminPassword() {
-        return this.adminPassword == null ? Input.empty() : this.adminPassword;
+    public Output<String> getAdminPassword() {
+        return this.adminPassword == null ? Output.empty() : this.adminPassword;
     }
 
     /**
@@ -49,9 +49,9 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="adminUserName", required=true)
-      private final Input<String> adminUserName;
+      private final Output<String> adminUserName;
 
-    public Input<String> getAdminUserName() {
+    public Output<String> getAdminUserName() {
         return this.adminUserName;
     }
 
@@ -60,10 +60,10 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="azureActiveDirectory")
-      private final @Nullable Input<AzureActiveDirectoryArgs> azureActiveDirectory;
+      private final @Nullable Output<AzureActiveDirectoryArgs> azureActiveDirectory;
 
-    public Input<AzureActiveDirectoryArgs> getAzureActiveDirectory() {
-        return this.azureActiveDirectory == null ? Input.empty() : this.azureActiveDirectory;
+    public Output<AzureActiveDirectoryArgs> getAzureActiveDirectory() {
+        return this.azureActiveDirectory == null ? Output.empty() : this.azureActiveDirectory;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientConnectionPort")
-      private final @Nullable Input<Integer> clientConnectionPort;
+      private final @Nullable Output<Integer> clientConnectionPort;
 
-    public Input<Integer> getClientConnectionPort() {
-        return this.clientConnectionPort == null ? Input.empty() : this.clientConnectionPort;
+    public Output<Integer> getClientConnectionPort() {
+        return this.clientConnectionPort == null ? Output.empty() : this.clientConnectionPort;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clients")
-      private final @Nullable Input<List<ClientCertificateArgs>> clients;
+      private final @Nullable Output<List<ClientCertificateArgs>> clients;
 
-    public Input<List<ClientCertificateArgs>> getClients() {
-        return this.clients == null ? Input.empty() : this.clients;
+    public Output<List<ClientCertificateArgs>> getClients() {
+        return this.clients == null ? Output.empty() : this.clients;
     }
 
     /**
@@ -93,10 +93,10 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterCodeVersion")
-      private final @Nullable Input<String> clusterCodeVersion;
+      private final @Nullable Output<String> clusterCodeVersion;
 
-    public Input<String> getClusterCodeVersion() {
-        return this.clusterCodeVersion == null ? Input.empty() : this.clusterCodeVersion;
+    public Output<String> getClusterCodeVersion() {
+        return this.clusterCodeVersion == null ? Output.empty() : this.clusterCodeVersion;
     }
 
     /**
@@ -104,10 +104,10 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName")
-      private final @Nullable Input<String> clusterName;
+      private final @Nullable Output<String> clusterName;
 
-    public Input<String> getClusterName() {
-        return this.clusterName == null ? Input.empty() : this.clusterName;
+    public Output<String> getClusterName() {
+        return this.clusterName == null ? Output.empty() : this.clusterName;
     }
 
     /**
@@ -115,9 +115,9 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsName", required=true)
-      private final Input<String> dnsName;
+      private final Output<String> dnsName;
 
-    public Input<String> getDnsName() {
+    public Output<String> getDnsName() {
         return this.dnsName;
     }
 
@@ -126,10 +126,10 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fabricSettings")
-      private final @Nullable Input<List<SettingsSectionDescriptionArgs>> fabricSettings;
+      private final @Nullable Output<List<SettingsSectionDescriptionArgs>> fabricSettings;
 
-    public Input<List<SettingsSectionDescriptionArgs>> getFabricSettings() {
-        return this.fabricSettings == null ? Input.empty() : this.fabricSettings;
+    public Output<List<SettingsSectionDescriptionArgs>> getFabricSettings() {
+        return this.fabricSettings == null ? Output.empty() : this.fabricSettings;
     }
 
     /**
@@ -137,10 +137,10 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpGatewayConnectionPort")
-      private final @Nullable Input<Integer> httpGatewayConnectionPort;
+      private final @Nullable Output<Integer> httpGatewayConnectionPort;
 
-    public Input<Integer> getHttpGatewayConnectionPort() {
-        return this.httpGatewayConnectionPort == null ? Input.empty() : this.httpGatewayConnectionPort;
+    public Output<Integer> getHttpGatewayConnectionPort() {
+        return this.httpGatewayConnectionPort == null ? Output.empty() : this.httpGatewayConnectionPort;
     }
 
     /**
@@ -148,10 +148,10 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loadBalancingRules")
-      private final @Nullable Input<List<LoadBalancingRuleArgs>> loadBalancingRules;
+      private final @Nullable Output<List<LoadBalancingRuleArgs>> loadBalancingRules;
 
-    public Input<List<LoadBalancingRuleArgs>> getLoadBalancingRules() {
-        return this.loadBalancingRules == null ? Input.empty() : this.loadBalancingRules;
+    public Output<List<LoadBalancingRuleArgs>> getLoadBalancingRules() {
+        return this.loadBalancingRules == null ? Output.empty() : this.loadBalancingRules;
     }
 
     /**
@@ -159,10 +159,10 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -170,9 +170,9 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -181,10 +181,10 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<SkuArgs> sku;
+      private final @Nullable Output<SkuArgs> sku;
 
-    public Input<SkuArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<SkuArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -192,40 +192,40 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ManagedClusterArgs(
-        @Nullable Input<List<String>> addonFeatures,
-        @Nullable Input<String> adminPassword,
-        Input<String> adminUserName,
-        @Nullable Input<AzureActiveDirectoryArgs> azureActiveDirectory,
-        @Nullable Input<Integer> clientConnectionPort,
-        @Nullable Input<List<ClientCertificateArgs>> clients,
-        @Nullable Input<String> clusterCodeVersion,
-        @Nullable Input<String> clusterName,
-        Input<String> dnsName,
-        @Nullable Input<List<SettingsSectionDescriptionArgs>> fabricSettings,
-        @Nullable Input<Integer> httpGatewayConnectionPort,
-        @Nullable Input<List<LoadBalancingRuleArgs>> loadBalancingRules,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<SkuArgs> sku,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<List<String>> addonFeatures,
+        @Nullable Output<String> adminPassword,
+        Output<String> adminUserName,
+        @Nullable Output<AzureActiveDirectoryArgs> azureActiveDirectory,
+        @Nullable Output<Integer> clientConnectionPort,
+        @Nullable Output<List<ClientCertificateArgs>> clients,
+        @Nullable Output<String> clusterCodeVersion,
+        @Nullable Output<String> clusterName,
+        Output<String> dnsName,
+        @Nullable Output<List<SettingsSectionDescriptionArgs>> fabricSettings,
+        @Nullable Output<Integer> httpGatewayConnectionPort,
+        @Nullable Output<List<LoadBalancingRuleArgs>> loadBalancingRules,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<SkuArgs> sku,
+        @Nullable Output<Map<String,String>> tags) {
         this.addonFeatures = addonFeatures;
         this.adminPassword = adminPassword;
         this.adminUserName = Objects.requireNonNull(adminUserName, "expected parameter 'adminUserName' to be non-null");
         this.azureActiveDirectory = azureActiveDirectory;
-        this.clientConnectionPort = clientConnectionPort == null ? Input.ofNullable(19000) : clientConnectionPort;
+        this.clientConnectionPort = clientConnectionPort == null ? Output.ofNullable(19000) : clientConnectionPort;
         this.clients = clients;
         this.clusterCodeVersion = clusterCodeVersion;
         this.clusterName = clusterName;
         this.dnsName = Objects.requireNonNull(dnsName, "expected parameter 'dnsName' to be non-null");
         this.fabricSettings = fabricSettings;
-        this.httpGatewayConnectionPort = httpGatewayConnectionPort == null ? Input.ofNullable(19080) : httpGatewayConnectionPort;
+        this.httpGatewayConnectionPort = httpGatewayConnectionPort == null ? Output.ofNullable(19080) : httpGatewayConnectionPort;
         this.loadBalancingRules = loadBalancingRules;
         this.location = location;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -234,22 +234,22 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ManagedClusterArgs() {
-        this.addonFeatures = Input.empty();
-        this.adminPassword = Input.empty();
-        this.adminUserName = Input.empty();
-        this.azureActiveDirectory = Input.empty();
-        this.clientConnectionPort = Input.empty();
-        this.clients = Input.empty();
-        this.clusterCodeVersion = Input.empty();
-        this.clusterName = Input.empty();
-        this.dnsName = Input.empty();
-        this.fabricSettings = Input.empty();
-        this.httpGatewayConnectionPort = Input.empty();
-        this.loadBalancingRules = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sku = Input.empty();
-        this.tags = Input.empty();
+        this.addonFeatures = Output.empty();
+        this.adminPassword = Output.empty();
+        this.adminUserName = Output.empty();
+        this.azureActiveDirectory = Output.empty();
+        this.clientConnectionPort = Output.empty();
+        this.clients = Output.empty();
+        this.clusterCodeVersion = Output.empty();
+        this.clusterName = Output.empty();
+        this.dnsName = Output.empty();
+        this.fabricSettings = Output.empty();
+        this.httpGatewayConnectionPort = Output.empty();
+        this.loadBalancingRules = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sku = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -261,22 +261,22 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> addonFeatures;
-        private @Nullable Input<String> adminPassword;
-        private Input<String> adminUserName;
-        private @Nullable Input<AzureActiveDirectoryArgs> azureActiveDirectory;
-        private @Nullable Input<Integer> clientConnectionPort;
-        private @Nullable Input<List<ClientCertificateArgs>> clients;
-        private @Nullable Input<String> clusterCodeVersion;
-        private @Nullable Input<String> clusterName;
-        private Input<String> dnsName;
-        private @Nullable Input<List<SettingsSectionDescriptionArgs>> fabricSettings;
-        private @Nullable Input<Integer> httpGatewayConnectionPort;
-        private @Nullable Input<List<LoadBalancingRuleArgs>> loadBalancingRules;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<SkuArgs> sku;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<List<String>> addonFeatures;
+        private @Nullable Output<String> adminPassword;
+        private Output<String> adminUserName;
+        private @Nullable Output<AzureActiveDirectoryArgs> azureActiveDirectory;
+        private @Nullable Output<Integer> clientConnectionPort;
+        private @Nullable Output<List<ClientCertificateArgs>> clients;
+        private @Nullable Output<String> clusterCodeVersion;
+        private @Nullable Output<String> clusterName;
+        private Output<String> dnsName;
+        private @Nullable Output<List<SettingsSectionDescriptionArgs>> fabricSettings;
+        private @Nullable Output<Integer> httpGatewayConnectionPort;
+        private @Nullable Output<List<LoadBalancingRuleArgs>> loadBalancingRules;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<SkuArgs> sku;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -302,163 +302,163 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder addonFeatures(@Nullable Input<List<String>> addonFeatures) {
+        public Builder addonFeatures(@Nullable Output<List<String>> addonFeatures) {
             this.addonFeatures = addonFeatures;
             return this;
         }
 
         public Builder addonFeatures(@Nullable List<String> addonFeatures) {
-            this.addonFeatures = Input.ofNullable(addonFeatures);
+            this.addonFeatures = Output.ofNullable(addonFeatures);
             return this;
         }
 
-        public Builder adminPassword(@Nullable Input<String> adminPassword) {
+        public Builder adminPassword(@Nullable Output<String> adminPassword) {
             this.adminPassword = adminPassword;
             return this;
         }
 
         public Builder adminPassword(@Nullable String adminPassword) {
-            this.adminPassword = Input.ofNullable(adminPassword);
+            this.adminPassword = Output.ofNullable(adminPassword);
             return this;
         }
 
-        public Builder adminUserName(Input<String> adminUserName) {
+        public Builder adminUserName(Output<String> adminUserName) {
             this.adminUserName = Objects.requireNonNull(adminUserName);
             return this;
         }
 
         public Builder adminUserName(String adminUserName) {
-            this.adminUserName = Input.of(Objects.requireNonNull(adminUserName));
+            this.adminUserName = Output.of(Objects.requireNonNull(adminUserName));
             return this;
         }
 
-        public Builder azureActiveDirectory(@Nullable Input<AzureActiveDirectoryArgs> azureActiveDirectory) {
+        public Builder azureActiveDirectory(@Nullable Output<AzureActiveDirectoryArgs> azureActiveDirectory) {
             this.azureActiveDirectory = azureActiveDirectory;
             return this;
         }
 
         public Builder azureActiveDirectory(@Nullable AzureActiveDirectoryArgs azureActiveDirectory) {
-            this.azureActiveDirectory = Input.ofNullable(azureActiveDirectory);
+            this.azureActiveDirectory = Output.ofNullable(azureActiveDirectory);
             return this;
         }
 
-        public Builder clientConnectionPort(@Nullable Input<Integer> clientConnectionPort) {
+        public Builder clientConnectionPort(@Nullable Output<Integer> clientConnectionPort) {
             this.clientConnectionPort = clientConnectionPort;
             return this;
         }
 
         public Builder clientConnectionPort(@Nullable Integer clientConnectionPort) {
-            this.clientConnectionPort = Input.ofNullable(clientConnectionPort);
+            this.clientConnectionPort = Output.ofNullable(clientConnectionPort);
             return this;
         }
 
-        public Builder clients(@Nullable Input<List<ClientCertificateArgs>> clients) {
+        public Builder clients(@Nullable Output<List<ClientCertificateArgs>> clients) {
             this.clients = clients;
             return this;
         }
 
         public Builder clients(@Nullable List<ClientCertificateArgs> clients) {
-            this.clients = Input.ofNullable(clients);
+            this.clients = Output.ofNullable(clients);
             return this;
         }
 
-        public Builder clusterCodeVersion(@Nullable Input<String> clusterCodeVersion) {
+        public Builder clusterCodeVersion(@Nullable Output<String> clusterCodeVersion) {
             this.clusterCodeVersion = clusterCodeVersion;
             return this;
         }
 
         public Builder clusterCodeVersion(@Nullable String clusterCodeVersion) {
-            this.clusterCodeVersion = Input.ofNullable(clusterCodeVersion);
+            this.clusterCodeVersion = Output.ofNullable(clusterCodeVersion);
             return this;
         }
 
-        public Builder clusterName(@Nullable Input<String> clusterName) {
+        public Builder clusterName(@Nullable Output<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
 
         public Builder clusterName(@Nullable String clusterName) {
-            this.clusterName = Input.ofNullable(clusterName);
+            this.clusterName = Output.ofNullable(clusterName);
             return this;
         }
 
-        public Builder dnsName(Input<String> dnsName) {
+        public Builder dnsName(Output<String> dnsName) {
             this.dnsName = Objects.requireNonNull(dnsName);
             return this;
         }
 
         public Builder dnsName(String dnsName) {
-            this.dnsName = Input.of(Objects.requireNonNull(dnsName));
+            this.dnsName = Output.of(Objects.requireNonNull(dnsName));
             return this;
         }
 
-        public Builder fabricSettings(@Nullable Input<List<SettingsSectionDescriptionArgs>> fabricSettings) {
+        public Builder fabricSettings(@Nullable Output<List<SettingsSectionDescriptionArgs>> fabricSettings) {
             this.fabricSettings = fabricSettings;
             return this;
         }
 
         public Builder fabricSettings(@Nullable List<SettingsSectionDescriptionArgs> fabricSettings) {
-            this.fabricSettings = Input.ofNullable(fabricSettings);
+            this.fabricSettings = Output.ofNullable(fabricSettings);
             return this;
         }
 
-        public Builder httpGatewayConnectionPort(@Nullable Input<Integer> httpGatewayConnectionPort) {
+        public Builder httpGatewayConnectionPort(@Nullable Output<Integer> httpGatewayConnectionPort) {
             this.httpGatewayConnectionPort = httpGatewayConnectionPort;
             return this;
         }
 
         public Builder httpGatewayConnectionPort(@Nullable Integer httpGatewayConnectionPort) {
-            this.httpGatewayConnectionPort = Input.ofNullable(httpGatewayConnectionPort);
+            this.httpGatewayConnectionPort = Output.ofNullable(httpGatewayConnectionPort);
             return this;
         }
 
-        public Builder loadBalancingRules(@Nullable Input<List<LoadBalancingRuleArgs>> loadBalancingRules) {
+        public Builder loadBalancingRules(@Nullable Output<List<LoadBalancingRuleArgs>> loadBalancingRules) {
             this.loadBalancingRules = loadBalancingRules;
             return this;
         }
 
         public Builder loadBalancingRules(@Nullable List<LoadBalancingRuleArgs> loadBalancingRules) {
-            this.loadBalancingRules = Input.ofNullable(loadBalancingRules);
+            this.loadBalancingRules = Output.ofNullable(loadBalancingRules);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ManagedClusterArgs build() {

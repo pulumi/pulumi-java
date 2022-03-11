@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,29 +19,29 @@ public final class ExternalDocumentationArgs extends io.pulumi.resources.Resourc
     public static final ExternalDocumentationArgs Empty = new ExternalDocumentationArgs();
 
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="url")
-      private final @Nullable Input<String> url;
+      private final @Nullable Output<String> url;
 
-    public Input<String> getUrl() {
-        return this.url == null ? Input.empty() : this.url;
+    public Output<String> getUrl() {
+        return this.url == null ? Output.empty() : this.url;
     }
 
     public ExternalDocumentationArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> url) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> url) {
         this.description = description;
         this.url = url;
     }
 
     private ExternalDocumentationArgs() {
-        this.description = Input.empty();
-        this.url = Input.empty();
+        this.description = Output.empty();
+        this.url = Output.empty();
     }
 
     public static Builder builder() {
@@ -53,8 +53,8 @@ public final class ExternalDocumentationArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> url;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> url;
 
         public Builder() {
     	      // Empty
@@ -66,23 +66,23 @@ public final class ExternalDocumentationArgs extends io.pulumi.resources.Resourc
     	      this.url = defaults.url;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder url(@Nullable Input<String> url) {
+        public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
 
         public Builder url(@Nullable String url) {
-            this.url = Input.ofNullable(url);
+            this.url = Output.ofNullable(url);
             return this;
         }
         public ExternalDocumentationArgs build() {

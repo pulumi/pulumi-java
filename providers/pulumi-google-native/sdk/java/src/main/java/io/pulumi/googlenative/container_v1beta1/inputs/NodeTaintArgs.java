@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1beta1.enums.NodeTaintEffect;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class NodeTaintArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="effect")
-      private final @Nullable Input<NodeTaintEffect> effect;
+      private final @Nullable Output<NodeTaintEffect> effect;
 
-    public Input<NodeTaintEffect> getEffect() {
-        return this.effect == null ? Input.empty() : this.effect;
+    public Output<NodeTaintEffect> getEffect() {
+        return this.effect == null ? Output.empty() : this.effect;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class NodeTaintArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="key")
-      private final @Nullable Input<String> key;
+      private final @Nullable Output<String> key;
 
-    public Input<String> getKey() {
-        return this.key == null ? Input.empty() : this.key;
+    public Output<String> getKey() {
+        return this.key == null ? Output.empty() : this.key;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class NodeTaintArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public NodeTaintArgs(
-        @Nullable Input<NodeTaintEffect> effect,
-        @Nullable Input<String> key,
-        @Nullable Input<String> value) {
+        @Nullable Output<NodeTaintEffect> effect,
+        @Nullable Output<String> key,
+        @Nullable Output<String> value) {
         this.effect = effect;
         this.key = key;
         this.value = value;
     }
 
     private NodeTaintArgs() {
-        this.effect = Input.empty();
-        this.key = Input.empty();
-        this.value = Input.empty();
+        this.effect = Output.empty();
+        this.key = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class NodeTaintArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<NodeTaintEffect> effect;
-        private @Nullable Input<String> key;
-        private @Nullable Input<String> value;
+        private @Nullable Output<NodeTaintEffect> effect;
+        private @Nullable Output<String> key;
+        private @Nullable Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class NodeTaintArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder effect(@Nullable Input<NodeTaintEffect> effect) {
+        public Builder effect(@Nullable Output<NodeTaintEffect> effect) {
             this.effect = effect;
             return this;
         }
 
         public Builder effect(@Nullable NodeTaintEffect effect) {
-            this.effect = Input.ofNullable(effect);
+            this.effect = Output.ofNullable(effect);
             return this;
         }
 
-        public Builder key(@Nullable Input<String> key) {
+        public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
 
         public Builder key(@Nullable String key) {
-            this.key = Input.ofNullable(key);
+            this.key = Output.ofNullable(key);
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public NodeTaintArgs build() {

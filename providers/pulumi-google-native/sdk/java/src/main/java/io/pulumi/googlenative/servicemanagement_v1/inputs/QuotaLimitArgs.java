@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -24,10 +24,10 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultLimit")
-      private final @Nullable Input<String> defaultLimit;
+      private final @Nullable Output<String> defaultLimit;
 
-    public Input<String> getDefaultLimit() {
-        return this.defaultLimit == null ? Input.empty() : this.defaultLimit;
+    public Output<String> getDefaultLimit() {
+        return this.defaultLimit == null ? Output.empty() : this.defaultLimit;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="duration")
-      private final @Nullable Input<String> duration;
+      private final @Nullable Output<String> duration;
 
-    public Input<String> getDuration() {
-        return this.duration == null ? Input.empty() : this.duration;
+    public Output<String> getDuration() {
+        return this.duration == null ? Output.empty() : this.duration;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="freeTier")
-      private final @Nullable Input<String> freeTier;
+      private final @Nullable Output<String> freeTier;
 
-    public Input<String> getFreeTier() {
-        return this.freeTier == null ? Input.empty() : this.freeTier;
+    public Output<String> getFreeTier() {
+        return this.freeTier == null ? Output.empty() : this.freeTier;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxLimit")
-      private final @Nullable Input<String> maxLimit;
+      private final @Nullable Output<String> maxLimit;
 
-    public Input<String> getMaxLimit() {
-        return this.maxLimit == null ? Input.empty() : this.maxLimit;
+    public Output<String> getMaxLimit() {
+        return this.maxLimit == null ? Output.empty() : this.maxLimit;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metric")
-      private final @Nullable Input<String> metric;
+      private final @Nullable Output<String> metric;
 
-    public Input<String> getMetric() {
-        return this.metric == null ? Input.empty() : this.metric;
+    public Output<String> getMetric() {
+        return this.metric == null ? Output.empty() : this.metric;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="unit")
-      private final @Nullable Input<String> unit;
+      private final @Nullable Output<String> unit;
 
-    public Input<String> getUnit() {
-        return this.unit == null ? Input.empty() : this.unit;
+    public Output<String> getUnit() {
+        return this.unit == null ? Output.empty() : this.unit;
     }
 
     /**
@@ -123,23 +123,23 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="values")
-      private final @Nullable Input<Map<String,String>> values;
+      private final @Nullable Output<Map<String,String>> values;
 
-    public Input<Map<String,String>> getValues() {
-        return this.values == null ? Input.empty() : this.values;
+    public Output<Map<String,String>> getValues() {
+        return this.values == null ? Output.empty() : this.values;
     }
 
     public QuotaLimitArgs(
-        @Nullable Input<String> defaultLimit,
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> duration,
-        @Nullable Input<String> freeTier,
-        @Nullable Input<String> maxLimit,
-        @Nullable Input<String> metric,
-        @Nullable Input<String> name,
-        @Nullable Input<String> unit,
-        @Nullable Input<Map<String,String>> values) {
+        @Nullable Output<String> defaultLimit,
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> duration,
+        @Nullable Output<String> freeTier,
+        @Nullable Output<String> maxLimit,
+        @Nullable Output<String> metric,
+        @Nullable Output<String> name,
+        @Nullable Output<String> unit,
+        @Nullable Output<Map<String,String>> values) {
         this.defaultLimit = defaultLimit;
         this.description = description;
         this.displayName = displayName;
@@ -153,16 +153,16 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private QuotaLimitArgs() {
-        this.defaultLimit = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.duration = Input.empty();
-        this.freeTier = Input.empty();
-        this.maxLimit = Input.empty();
-        this.metric = Input.empty();
-        this.name = Input.empty();
-        this.unit = Input.empty();
-        this.values = Input.empty();
+        this.defaultLimit = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.duration = Output.empty();
+        this.freeTier = Output.empty();
+        this.maxLimit = Output.empty();
+        this.metric = Output.empty();
+        this.name = Output.empty();
+        this.unit = Output.empty();
+        this.values = Output.empty();
     }
 
     public static Builder builder() {
@@ -174,16 +174,16 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> defaultLimit;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> duration;
-        private @Nullable Input<String> freeTier;
-        private @Nullable Input<String> maxLimit;
-        private @Nullable Input<String> metric;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> unit;
-        private @Nullable Input<Map<String,String>> values;
+        private @Nullable Output<String> defaultLimit;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> duration;
+        private @Nullable Output<String> freeTier;
+        private @Nullable Output<String> maxLimit;
+        private @Nullable Output<String> metric;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> unit;
+        private @Nullable Output<Map<String,String>> values;
 
         public Builder() {
     	      // Empty
@@ -203,103 +203,103 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
     	      this.values = defaults.values;
         }
 
-        public Builder defaultLimit(@Nullable Input<String> defaultLimit) {
+        public Builder defaultLimit(@Nullable Output<String> defaultLimit) {
             this.defaultLimit = defaultLimit;
             return this;
         }
 
         public Builder defaultLimit(@Nullable String defaultLimit) {
-            this.defaultLimit = Input.ofNullable(defaultLimit);
+            this.defaultLimit = Output.ofNullable(defaultLimit);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder duration(@Nullable Input<String> duration) {
+        public Builder duration(@Nullable Output<String> duration) {
             this.duration = duration;
             return this;
         }
 
         public Builder duration(@Nullable String duration) {
-            this.duration = Input.ofNullable(duration);
+            this.duration = Output.ofNullable(duration);
             return this;
         }
 
-        public Builder freeTier(@Nullable Input<String> freeTier) {
+        public Builder freeTier(@Nullable Output<String> freeTier) {
             this.freeTier = freeTier;
             return this;
         }
 
         public Builder freeTier(@Nullable String freeTier) {
-            this.freeTier = Input.ofNullable(freeTier);
+            this.freeTier = Output.ofNullable(freeTier);
             return this;
         }
 
-        public Builder maxLimit(@Nullable Input<String> maxLimit) {
+        public Builder maxLimit(@Nullable Output<String> maxLimit) {
             this.maxLimit = maxLimit;
             return this;
         }
 
         public Builder maxLimit(@Nullable String maxLimit) {
-            this.maxLimit = Input.ofNullable(maxLimit);
+            this.maxLimit = Output.ofNullable(maxLimit);
             return this;
         }
 
-        public Builder metric(@Nullable Input<String> metric) {
+        public Builder metric(@Nullable Output<String> metric) {
             this.metric = metric;
             return this;
         }
 
         public Builder metric(@Nullable String metric) {
-            this.metric = Input.ofNullable(metric);
+            this.metric = Output.ofNullable(metric);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder unit(@Nullable Input<String> unit) {
+        public Builder unit(@Nullable Output<String> unit) {
             this.unit = unit;
             return this;
         }
 
         public Builder unit(@Nullable String unit) {
-            this.unit = Input.ofNullable(unit);
+            this.unit = Output.ofNullable(unit);
             return this;
         }
 
-        public Builder values(@Nullable Input<Map<String,String>> values) {
+        public Builder values(@Nullable Output<Map<String,String>> values) {
             this.values = values;
             return this;
         }
 
         public Builder values(@Nullable Map<String,String> values) {
-            this.values = Input.ofNullable(values);
+            this.values = Output.ofNullable(values);
             return this;
         }
         public QuotaLimitArgs build() {

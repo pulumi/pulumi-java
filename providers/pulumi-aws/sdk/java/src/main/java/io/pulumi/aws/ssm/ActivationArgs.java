@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ssm;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class ActivationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ActivationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expirationDate")
-      private final @Nullable Input<String> expirationDate;
+      private final @Nullable Output<String> expirationDate;
 
-    public Input<String> getExpirationDate() {
-        return this.expirationDate == null ? Input.empty() : this.expirationDate;
+    public Output<String> getExpirationDate() {
+        return this.expirationDate == null ? Output.empty() : this.expirationDate;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class ActivationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iamRole", required=true)
-      private final Input<String> iamRole;
+      private final Output<String> iamRole;
 
-    public Input<String> getIamRole() {
+    public Output<String> getIamRole() {
         return this.iamRole;
     }
 
@@ -54,10 +54,10 @@ public final class ActivationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ActivationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registrationLimit")
-      private final @Nullable Input<Integer> registrationLimit;
+      private final @Nullable Output<Integer> registrationLimit;
 
-    public Input<Integer> getRegistrationLimit() {
-        return this.registrationLimit == null ? Input.empty() : this.registrationLimit;
+    public Output<Integer> getRegistrationLimit() {
+        return this.registrationLimit == null ? Output.empty() : this.registrationLimit;
     }
 
     /**
@@ -76,19 +76,19 @@ public final class ActivationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ActivationArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> expirationDate,
-        Input<String> iamRole,
-        @Nullable Input<String> name,
-        @Nullable Input<Integer> registrationLimit,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> expirationDate,
+        Output<String> iamRole,
+        @Nullable Output<String> name,
+        @Nullable Output<Integer> registrationLimit,
+        @Nullable Output<Map<String,String>> tags) {
         this.description = description;
         this.expirationDate = expirationDate;
         this.iamRole = Objects.requireNonNull(iamRole, "expected parameter 'iamRole' to be non-null");
@@ -98,12 +98,12 @@ public final class ActivationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ActivationArgs() {
-        this.description = Input.empty();
-        this.expirationDate = Input.empty();
-        this.iamRole = Input.empty();
-        this.name = Input.empty();
-        this.registrationLimit = Input.empty();
-        this.tags = Input.empty();
+        this.description = Output.empty();
+        this.expirationDate = Output.empty();
+        this.iamRole = Output.empty();
+        this.name = Output.empty();
+        this.registrationLimit = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class ActivationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> expirationDate;
-        private Input<String> iamRole;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Integer> registrationLimit;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> expirationDate;
+        private Output<String> iamRole;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Integer> registrationLimit;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class ActivationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder expirationDate(@Nullable Input<String> expirationDate) {
+        public Builder expirationDate(@Nullable Output<String> expirationDate) {
             this.expirationDate = expirationDate;
             return this;
         }
 
         public Builder expirationDate(@Nullable String expirationDate) {
-            this.expirationDate = Input.ofNullable(expirationDate);
+            this.expirationDate = Output.ofNullable(expirationDate);
             return this;
         }
 
-        public Builder iamRole(Input<String> iamRole) {
+        public Builder iamRole(Output<String> iamRole) {
             this.iamRole = Objects.requireNonNull(iamRole);
             return this;
         }
 
         public Builder iamRole(String iamRole) {
-            this.iamRole = Input.of(Objects.requireNonNull(iamRole));
+            this.iamRole = Output.of(Objects.requireNonNull(iamRole));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder registrationLimit(@Nullable Input<Integer> registrationLimit) {
+        public Builder registrationLimit(@Nullable Output<Integer> registrationLimit) {
             this.registrationLimit = registrationLimit;
             return this;
         }
 
         public Builder registrationLimit(@Nullable Integer registrationLimit) {
-            this.registrationLimit = Input.ofNullable(registrationLimit);
+            this.registrationLimit = Output.ofNullable(registrationLimit);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ActivationArgs build() {

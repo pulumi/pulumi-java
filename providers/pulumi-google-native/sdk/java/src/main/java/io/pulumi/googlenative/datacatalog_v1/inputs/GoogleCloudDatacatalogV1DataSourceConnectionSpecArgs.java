@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs extends 
      * 
      */
     @InputImport(name="bigqueryConnectionSpec")
-      private final @Nullable Input<GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs> bigqueryConnectionSpec;
+      private final @Nullable Output<GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs> bigqueryConnectionSpec;
 
-    public Input<GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs> getBigqueryConnectionSpec() {
-        return this.bigqueryConnectionSpec == null ? Input.empty() : this.bigqueryConnectionSpec;
+    public Output<GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs> getBigqueryConnectionSpec() {
+        return this.bigqueryConnectionSpec == null ? Output.empty() : this.bigqueryConnectionSpec;
     }
 
-    public GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs(@Nullable Input<GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs> bigqueryConnectionSpec) {
+    public GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs(@Nullable Output<GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs> bigqueryConnectionSpec) {
         this.bigqueryConnectionSpec = bigqueryConnectionSpec;
     }
 
     private GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs() {
-        this.bigqueryConnectionSpec = Input.empty();
+        this.bigqueryConnectionSpec = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs extends 
     }
 
     public static final class Builder {
-        private @Nullable Input<GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs> bigqueryConnectionSpec;
+        private @Nullable Output<GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs> bigqueryConnectionSpec;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs extends 
     	      this.bigqueryConnectionSpec = defaults.bigqueryConnectionSpec;
         }
 
-        public Builder bigqueryConnectionSpec(@Nullable Input<GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs> bigqueryConnectionSpec) {
+        public Builder bigqueryConnectionSpec(@Nullable Output<GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs> bigqueryConnectionSpec) {
             this.bigqueryConnectionSpec = bigqueryConnectionSpec;
             return this;
         }
 
         public Builder bigqueryConnectionSpec(@Nullable GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs bigqueryConnectionSpec) {
-            this.bigqueryConnectionSpec = Input.ofNullable(bigqueryConnectionSpec);
+            this.bigqueryConnectionSpec = Output.ofNullable(bigqueryConnectionSpec);
             return this;
         }
         public GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs build() {

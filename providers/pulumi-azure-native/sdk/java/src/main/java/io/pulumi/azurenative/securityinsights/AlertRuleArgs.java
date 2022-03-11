@@ -5,7 +5,7 @@ package io.pulumi.azurenative.securityinsights;
 
 import io.pulumi.azurenative.securityinsights.enums.AlertRuleKind;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,9 +21,9 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<Either<String,AlertRuleKind>> kind;
+      private final Output<Either<String,AlertRuleKind>> kind;
 
-    public Input<Either<String,AlertRuleKind>> getKind() {
+    public Output<Either<String,AlertRuleKind>> getKind() {
         return this.kind;
     }
 
@@ -32,9 +32,9 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -43,10 +43,10 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleId")
-      private final @Nullable Input<String> ruleId;
+      private final @Nullable Output<String> ruleId;
 
-    public Input<String> getRuleId() {
-        return this.ruleId == null ? Input.empty() : this.ruleId;
+    public Output<String> getRuleId() {
+        return this.ruleId == null ? Output.empty() : this.ruleId;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-      private final Input<String> workspaceName;
+      private final Output<String> workspaceName;
 
-    public Input<String> getWorkspaceName() {
+    public Output<String> getWorkspaceName() {
         return this.workspaceName;
     }
 
     public AlertRuleArgs(
-        Input<Either<String,AlertRuleKind>> kind,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> ruleId,
-        Input<String> workspaceName) {
+        Output<Either<String,AlertRuleKind>> kind,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> ruleId,
+        Output<String> workspaceName) {
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.ruleId = ruleId;
@@ -72,10 +72,10 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AlertRuleArgs() {
-        this.kind = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.ruleId = Input.empty();
-        this.workspaceName = Input.empty();
+        this.kind = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.ruleId = Output.empty();
+        this.workspaceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Either<String,AlertRuleKind>> kind;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> ruleId;
-        private Input<String> workspaceName;
+        private Output<Either<String,AlertRuleKind>> kind;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> ruleId;
+        private Output<String> workspaceName;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder kind(Input<Either<String,AlertRuleKind>> kind) {
+        public Builder kind(Output<Either<String,AlertRuleKind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(Either<String,AlertRuleKind> kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder ruleId(@Nullable Input<String> ruleId) {
+        public Builder ruleId(@Nullable Output<String> ruleId) {
             this.ruleId = ruleId;
             return this;
         }
 
         public Builder ruleId(@Nullable String ruleId) {
-            this.ruleId = Input.ofNullable(ruleId);
+            this.ruleId = Output.ofNullable(ruleId);
             return this;
         }
 
-        public Builder workspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
+            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
         }
         public AlertRuleArgs build() {

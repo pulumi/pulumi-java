@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1AutomatedAgentConfigArgs;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs;
@@ -25,10 +25,10 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="automatedAgentConfig")
-      private final @Nullable Input<GoogleCloudDialogflowV2beta1AutomatedAgentConfigArgs> automatedAgentConfig;
+      private final @Nullable Output<GoogleCloudDialogflowV2beta1AutomatedAgentConfigArgs> automatedAgentConfig;
 
-    public Input<GoogleCloudDialogflowV2beta1AutomatedAgentConfigArgs> getAutomatedAgentConfig() {
-        return this.automatedAgentConfig == null ? Input.empty() : this.automatedAgentConfig;
+    public Output<GoogleCloudDialogflowV2beta1AutomatedAgentConfigArgs> getAutomatedAgentConfig() {
+        return this.automatedAgentConfig == null ? Output.empty() : this.automatedAgentConfig;
     }
 
     /**
@@ -36,9 +36,9 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -47,10 +47,10 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="humanAgentAssistantConfig")
-      private final @Nullable Input<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs> humanAgentAssistantConfig;
+      private final @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs> humanAgentAssistantConfig;
 
-    public Input<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs> getHumanAgentAssistantConfig() {
-        return this.humanAgentAssistantConfig == null ? Input.empty() : this.humanAgentAssistantConfig;
+    public Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs> getHumanAgentAssistantConfig() {
+        return this.humanAgentAssistantConfig == null ? Output.empty() : this.humanAgentAssistantConfig;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="humanAgentHandoffConfig")
-      private final @Nullable Input<GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigArgs> humanAgentHandoffConfig;
+      private final @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigArgs> humanAgentHandoffConfig;
 
-    public Input<GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigArgs> getHumanAgentHandoffConfig() {
-        return this.humanAgentHandoffConfig == null ? Input.empty() : this.humanAgentHandoffConfig;
+    public Output<GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigArgs> getHumanAgentHandoffConfig() {
+        return this.humanAgentHandoffConfig == null ? Output.empty() : this.humanAgentHandoffConfig;
     }
 
     /**
@@ -69,17 +69,17 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="languageCode")
-      private final @Nullable Input<String> languageCode;
+      private final @Nullable Output<String> languageCode;
 
-    public Input<String> getLanguageCode() {
-        return this.languageCode == null ? Input.empty() : this.languageCode;
+    public Output<String> getLanguageCode() {
+        return this.languageCode == null ? Output.empty() : this.languageCode;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="loggingConfig")
-      private final @Nullable Input<GoogleCloudDialogflowV2beta1LoggingConfigArgs> loggingConfig;
+      private final @Nullable Output<GoogleCloudDialogflowV2beta1LoggingConfigArgs> loggingConfig;
 
-    public Input<GoogleCloudDialogflowV2beta1LoggingConfigArgs> getLoggingConfig() {
-        return this.loggingConfig == null ? Input.empty() : this.loggingConfig;
+    public Output<GoogleCloudDialogflowV2beta1LoggingConfigArgs> getLoggingConfig() {
+        return this.loggingConfig == null ? Output.empty() : this.loggingConfig;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="newMessageEventNotificationConfig")
-      private final @Nullable Input<GoogleCloudDialogflowV2beta1NotificationConfigArgs> newMessageEventNotificationConfig;
+      private final @Nullable Output<GoogleCloudDialogflowV2beta1NotificationConfigArgs> newMessageEventNotificationConfig;
 
-    public Input<GoogleCloudDialogflowV2beta1NotificationConfigArgs> getNewMessageEventNotificationConfig() {
-        return this.newMessageEventNotificationConfig == null ? Input.empty() : this.newMessageEventNotificationConfig;
+    public Output<GoogleCloudDialogflowV2beta1NotificationConfigArgs> getNewMessageEventNotificationConfig() {
+        return this.newMessageEventNotificationConfig == null ? Output.empty() : this.newMessageEventNotificationConfig;
     }
 
     /**
@@ -120,17 +120,17 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="notificationConfig")
-      private final @Nullable Input<GoogleCloudDialogflowV2beta1NotificationConfigArgs> notificationConfig;
+      private final @Nullable Output<GoogleCloudDialogflowV2beta1NotificationConfigArgs> notificationConfig;
 
-    public Input<GoogleCloudDialogflowV2beta1NotificationConfigArgs> getNotificationConfig() {
-        return this.notificationConfig == null ? Input.empty() : this.notificationConfig;
+    public Output<GoogleCloudDialogflowV2beta1NotificationConfigArgs> getNotificationConfig() {
+        return this.notificationConfig == null ? Output.empty() : this.notificationConfig;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -138,10 +138,10 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="securitySettings")
-      private final @Nullable Input<String> securitySettings;
+      private final @Nullable Output<String> securitySettings;
 
-    public Input<String> getSecuritySettings() {
-        return this.securitySettings == null ? Input.empty() : this.securitySettings;
+    public Output<String> getSecuritySettings() {
+        return this.securitySettings == null ? Output.empty() : this.securitySettings;
     }
 
     /**
@@ -149,10 +149,10 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="sttConfig")
-      private final @Nullable Input<GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs> sttConfig;
+      private final @Nullable Output<GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs> sttConfig;
 
-    public Input<GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs> getSttConfig() {
-        return this.sttConfig == null ? Input.empty() : this.sttConfig;
+    public Output<GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs> getSttConfig() {
+        return this.sttConfig == null ? Output.empty() : this.sttConfig;
     }
 
     /**
@@ -160,27 +160,27 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="timeZone")
-      private final @Nullable Input<String> timeZone;
+      private final @Nullable Output<String> timeZone;
 
-    public Input<String> getTimeZone() {
-        return this.timeZone == null ? Input.empty() : this.timeZone;
+    public Output<String> getTimeZone() {
+        return this.timeZone == null ? Output.empty() : this.timeZone;
     }
 
     public ConversationProfileArgs(
-        @Nullable Input<GoogleCloudDialogflowV2beta1AutomatedAgentConfigArgs> automatedAgentConfig,
-        Input<String> displayName,
-        @Nullable Input<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs> humanAgentAssistantConfig,
-        @Nullable Input<GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigArgs> humanAgentHandoffConfig,
-        @Nullable Input<String> languageCode,
-        @Nullable Input<String> location,
-        @Nullable Input<GoogleCloudDialogflowV2beta1LoggingConfigArgs> loggingConfig,
-        @Nullable Input<String> name,
-        @Nullable Input<GoogleCloudDialogflowV2beta1NotificationConfigArgs> newMessageEventNotificationConfig,
-        @Nullable Input<GoogleCloudDialogflowV2beta1NotificationConfigArgs> notificationConfig,
-        @Nullable Input<String> project,
-        @Nullable Input<String> securitySettings,
-        @Nullable Input<GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs> sttConfig,
-        @Nullable Input<String> timeZone) {
+        @Nullable Output<GoogleCloudDialogflowV2beta1AutomatedAgentConfigArgs> automatedAgentConfig,
+        Output<String> displayName,
+        @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs> humanAgentAssistantConfig,
+        @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigArgs> humanAgentHandoffConfig,
+        @Nullable Output<String> languageCode,
+        @Nullable Output<String> location,
+        @Nullable Output<GoogleCloudDialogflowV2beta1LoggingConfigArgs> loggingConfig,
+        @Nullable Output<String> name,
+        @Nullable Output<GoogleCloudDialogflowV2beta1NotificationConfigArgs> newMessageEventNotificationConfig,
+        @Nullable Output<GoogleCloudDialogflowV2beta1NotificationConfigArgs> notificationConfig,
+        @Nullable Output<String> project,
+        @Nullable Output<String> securitySettings,
+        @Nullable Output<GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs> sttConfig,
+        @Nullable Output<String> timeZone) {
         this.automatedAgentConfig = automatedAgentConfig;
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
         this.humanAgentAssistantConfig = humanAgentAssistantConfig;
@@ -198,20 +198,20 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
     }
 
     private ConversationProfileArgs() {
-        this.automatedAgentConfig = Input.empty();
-        this.displayName = Input.empty();
-        this.humanAgentAssistantConfig = Input.empty();
-        this.humanAgentHandoffConfig = Input.empty();
-        this.languageCode = Input.empty();
-        this.location = Input.empty();
-        this.loggingConfig = Input.empty();
-        this.name = Input.empty();
-        this.newMessageEventNotificationConfig = Input.empty();
-        this.notificationConfig = Input.empty();
-        this.project = Input.empty();
-        this.securitySettings = Input.empty();
-        this.sttConfig = Input.empty();
-        this.timeZone = Input.empty();
+        this.automatedAgentConfig = Output.empty();
+        this.displayName = Output.empty();
+        this.humanAgentAssistantConfig = Output.empty();
+        this.humanAgentHandoffConfig = Output.empty();
+        this.languageCode = Output.empty();
+        this.location = Output.empty();
+        this.loggingConfig = Output.empty();
+        this.name = Output.empty();
+        this.newMessageEventNotificationConfig = Output.empty();
+        this.notificationConfig = Output.empty();
+        this.project = Output.empty();
+        this.securitySettings = Output.empty();
+        this.sttConfig = Output.empty();
+        this.timeZone = Output.empty();
     }
 
     public static Builder builder() {
@@ -223,20 +223,20 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<GoogleCloudDialogflowV2beta1AutomatedAgentConfigArgs> automatedAgentConfig;
-        private Input<String> displayName;
-        private @Nullable Input<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs> humanAgentAssistantConfig;
-        private @Nullable Input<GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigArgs> humanAgentHandoffConfig;
-        private @Nullable Input<String> languageCode;
-        private @Nullable Input<String> location;
-        private @Nullable Input<GoogleCloudDialogflowV2beta1LoggingConfigArgs> loggingConfig;
-        private @Nullable Input<String> name;
-        private @Nullable Input<GoogleCloudDialogflowV2beta1NotificationConfigArgs> newMessageEventNotificationConfig;
-        private @Nullable Input<GoogleCloudDialogflowV2beta1NotificationConfigArgs> notificationConfig;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> securitySettings;
-        private @Nullable Input<GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs> sttConfig;
-        private @Nullable Input<String> timeZone;
+        private @Nullable Output<GoogleCloudDialogflowV2beta1AutomatedAgentConfigArgs> automatedAgentConfig;
+        private Output<String> displayName;
+        private @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs> humanAgentAssistantConfig;
+        private @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigArgs> humanAgentHandoffConfig;
+        private @Nullable Output<String> languageCode;
+        private @Nullable Output<String> location;
+        private @Nullable Output<GoogleCloudDialogflowV2beta1LoggingConfigArgs> loggingConfig;
+        private @Nullable Output<String> name;
+        private @Nullable Output<GoogleCloudDialogflowV2beta1NotificationConfigArgs> newMessageEventNotificationConfig;
+        private @Nullable Output<GoogleCloudDialogflowV2beta1NotificationConfigArgs> notificationConfig;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> securitySettings;
+        private @Nullable Output<GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs> sttConfig;
+        private @Nullable Output<String> timeZone;
 
         public Builder() {
     	      // Empty
@@ -260,143 +260,143 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder automatedAgentConfig(@Nullable Input<GoogleCloudDialogflowV2beta1AutomatedAgentConfigArgs> automatedAgentConfig) {
+        public Builder automatedAgentConfig(@Nullable Output<GoogleCloudDialogflowV2beta1AutomatedAgentConfigArgs> automatedAgentConfig) {
             this.automatedAgentConfig = automatedAgentConfig;
             return this;
         }
 
         public Builder automatedAgentConfig(@Nullable GoogleCloudDialogflowV2beta1AutomatedAgentConfigArgs automatedAgentConfig) {
-            this.automatedAgentConfig = Input.ofNullable(automatedAgentConfig);
+            this.automatedAgentConfig = Output.ofNullable(automatedAgentConfig);
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder humanAgentAssistantConfig(@Nullable Input<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs> humanAgentAssistantConfig) {
+        public Builder humanAgentAssistantConfig(@Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs> humanAgentAssistantConfig) {
             this.humanAgentAssistantConfig = humanAgentAssistantConfig;
             return this;
         }
 
         public Builder humanAgentAssistantConfig(@Nullable GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs humanAgentAssistantConfig) {
-            this.humanAgentAssistantConfig = Input.ofNullable(humanAgentAssistantConfig);
+            this.humanAgentAssistantConfig = Output.ofNullable(humanAgentAssistantConfig);
             return this;
         }
 
-        public Builder humanAgentHandoffConfig(@Nullable Input<GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigArgs> humanAgentHandoffConfig) {
+        public Builder humanAgentHandoffConfig(@Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigArgs> humanAgentHandoffConfig) {
             this.humanAgentHandoffConfig = humanAgentHandoffConfig;
             return this;
         }
 
         public Builder humanAgentHandoffConfig(@Nullable GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigArgs humanAgentHandoffConfig) {
-            this.humanAgentHandoffConfig = Input.ofNullable(humanAgentHandoffConfig);
+            this.humanAgentHandoffConfig = Output.ofNullable(humanAgentHandoffConfig);
             return this;
         }
 
-        public Builder languageCode(@Nullable Input<String> languageCode) {
+        public Builder languageCode(@Nullable Output<String> languageCode) {
             this.languageCode = languageCode;
             return this;
         }
 
         public Builder languageCode(@Nullable String languageCode) {
-            this.languageCode = Input.ofNullable(languageCode);
+            this.languageCode = Output.ofNullable(languageCode);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder loggingConfig(@Nullable Input<GoogleCloudDialogflowV2beta1LoggingConfigArgs> loggingConfig) {
+        public Builder loggingConfig(@Nullable Output<GoogleCloudDialogflowV2beta1LoggingConfigArgs> loggingConfig) {
             this.loggingConfig = loggingConfig;
             return this;
         }
 
         public Builder loggingConfig(@Nullable GoogleCloudDialogflowV2beta1LoggingConfigArgs loggingConfig) {
-            this.loggingConfig = Input.ofNullable(loggingConfig);
+            this.loggingConfig = Output.ofNullable(loggingConfig);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder newMessageEventNotificationConfig(@Nullable Input<GoogleCloudDialogflowV2beta1NotificationConfigArgs> newMessageEventNotificationConfig) {
+        public Builder newMessageEventNotificationConfig(@Nullable Output<GoogleCloudDialogflowV2beta1NotificationConfigArgs> newMessageEventNotificationConfig) {
             this.newMessageEventNotificationConfig = newMessageEventNotificationConfig;
             return this;
         }
 
         public Builder newMessageEventNotificationConfig(@Nullable GoogleCloudDialogflowV2beta1NotificationConfigArgs newMessageEventNotificationConfig) {
-            this.newMessageEventNotificationConfig = Input.ofNullable(newMessageEventNotificationConfig);
+            this.newMessageEventNotificationConfig = Output.ofNullable(newMessageEventNotificationConfig);
             return this;
         }
 
-        public Builder notificationConfig(@Nullable Input<GoogleCloudDialogflowV2beta1NotificationConfigArgs> notificationConfig) {
+        public Builder notificationConfig(@Nullable Output<GoogleCloudDialogflowV2beta1NotificationConfigArgs> notificationConfig) {
             this.notificationConfig = notificationConfig;
             return this;
         }
 
         public Builder notificationConfig(@Nullable GoogleCloudDialogflowV2beta1NotificationConfigArgs notificationConfig) {
-            this.notificationConfig = Input.ofNullable(notificationConfig);
+            this.notificationConfig = Output.ofNullable(notificationConfig);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder securitySettings(@Nullable Input<String> securitySettings) {
+        public Builder securitySettings(@Nullable Output<String> securitySettings) {
             this.securitySettings = securitySettings;
             return this;
         }
 
         public Builder securitySettings(@Nullable String securitySettings) {
-            this.securitySettings = Input.ofNullable(securitySettings);
+            this.securitySettings = Output.ofNullable(securitySettings);
             return this;
         }
 
-        public Builder sttConfig(@Nullable Input<GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs> sttConfig) {
+        public Builder sttConfig(@Nullable Output<GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs> sttConfig) {
             this.sttConfig = sttConfig;
             return this;
         }
 
         public Builder sttConfig(@Nullable GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs sttConfig) {
-            this.sttConfig = Input.ofNullable(sttConfig);
+            this.sttConfig = Output.ofNullable(sttConfig);
             return this;
         }
 
-        public Builder timeZone(@Nullable Input<String> timeZone) {
+        public Builder timeZone(@Nullable Output<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
 
         public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = Input.ofNullable(timeZone);
+            this.timeZone = Output.ofNullable(timeZone);
             return this;
         }
         public ConversationProfileArgs build() {

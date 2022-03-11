@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataflow_v1b3.enums.JobCurrentState;
 import io.pulumi.googlenative.dataflow_v1b3.enums.JobRequestedState;
@@ -30,10 +30,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientRequestId")
-      private final @Nullable Input<String> clientRequestId;
+      private final @Nullable Output<String> clientRequestId;
 
-    public Input<String> getClientRequestId() {
-        return this.clientRequestId == null ? Input.empty() : this.clientRequestId;
+    public Output<String> getClientRequestId() {
+        return this.clientRequestId == null ? Output.empty() : this.clientRequestId;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-      private final @Nullable Input<String> createTime;
+      private final @Nullable Output<String> createTime;
 
-    public Input<String> getCreateTime() {
-        return this.createTime == null ? Input.empty() : this.createTime;
+    public Output<String> getCreateTime() {
+        return this.createTime == null ? Output.empty() : this.createTime;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdFromSnapshotId")
-      private final @Nullable Input<String> createdFromSnapshotId;
+      private final @Nullable Output<String> createdFromSnapshotId;
 
-    public Input<String> getCreatedFromSnapshotId() {
-        return this.createdFromSnapshotId == null ? Input.empty() : this.createdFromSnapshotId;
+    public Output<String> getCreatedFromSnapshotId() {
+        return this.createdFromSnapshotId == null ? Output.empty() : this.createdFromSnapshotId;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="currentState")
-      private final @Nullable Input<JobCurrentState> currentState;
+      private final @Nullable Output<JobCurrentState> currentState;
 
-    public Input<JobCurrentState> getCurrentState() {
-        return this.currentState == null ? Input.empty() : this.currentState;
+    public Output<JobCurrentState> getCurrentState() {
+        return this.currentState == null ? Output.empty() : this.currentState;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="currentStateTime")
-      private final @Nullable Input<String> currentStateTime;
+      private final @Nullable Output<String> currentStateTime;
 
-    public Input<String> getCurrentStateTime() {
-        return this.currentStateTime == null ? Input.empty() : this.currentStateTime;
+    public Output<String> getCurrentStateTime() {
+        return this.currentStateTime == null ? Output.empty() : this.currentStateTime;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="environment")
-      private final @Nullable Input<EnvironmentArgs> environment;
+      private final @Nullable Output<EnvironmentArgs> environment;
 
-    public Input<EnvironmentArgs> getEnvironment() {
-        return this.environment == null ? Input.empty() : this.environment;
+    public Output<EnvironmentArgs> getEnvironment() {
+        return this.environment == null ? Output.empty() : this.environment;
     }
 
     /**
@@ -96,10 +96,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -107,10 +107,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobMetadata")
-      private final @Nullable Input<JobMetadataArgs> jobMetadata;
+      private final @Nullable Output<JobMetadataArgs> jobMetadata;
 
-    public Input<JobMetadataArgs> getJobMetadata() {
-        return this.jobMetadata == null ? Input.empty() : this.jobMetadata;
+    public Output<JobMetadataArgs> getJobMetadata() {
+        return this.jobMetadata == null ? Output.empty() : this.jobMetadata;
     }
 
     /**
@@ -118,10 +118,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -129,10 +129,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -140,10 +140,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -151,10 +151,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pipelineDescription")
-      private final @Nullable Input<PipelineDescriptionArgs> pipelineDescription;
+      private final @Nullable Output<PipelineDescriptionArgs> pipelineDescription;
 
-    public Input<PipelineDescriptionArgs> getPipelineDescription() {
-        return this.pipelineDescription == null ? Input.empty() : this.pipelineDescription;
+    public Output<PipelineDescriptionArgs> getPipelineDescription() {
+        return this.pipelineDescription == null ? Output.empty() : this.pipelineDescription;
     }
 
     /**
@@ -162,10 +162,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -173,10 +173,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="replaceJobId")
-      private final @Nullable Input<String> replaceJobId;
+      private final @Nullable Output<String> replaceJobId;
 
-    public Input<String> getReplaceJobId() {
-        return this.replaceJobId == null ? Input.empty() : this.replaceJobId;
+    public Output<String> getReplaceJobId() {
+        return this.replaceJobId == null ? Output.empty() : this.replaceJobId;
     }
 
     /**
@@ -184,10 +184,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="replacedByJobId")
-      private final @Nullable Input<String> replacedByJobId;
+      private final @Nullable Output<String> replacedByJobId;
 
-    public Input<String> getReplacedByJobId() {
-        return this.replacedByJobId == null ? Input.empty() : this.replacedByJobId;
+    public Output<String> getReplacedByJobId() {
+        return this.replacedByJobId == null ? Output.empty() : this.replacedByJobId;
     }
 
     /**
@@ -195,10 +195,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestedState")
-      private final @Nullable Input<JobRequestedState> requestedState;
+      private final @Nullable Output<JobRequestedState> requestedState;
 
-    public Input<JobRequestedState> getRequestedState() {
-        return this.requestedState == null ? Input.empty() : this.requestedState;
+    public Output<JobRequestedState> getRequestedState() {
+        return this.requestedState == null ? Output.empty() : this.requestedState;
     }
 
     /**
@@ -206,10 +206,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="satisfiesPzs")
-      private final @Nullable Input<Boolean> satisfiesPzs;
+      private final @Nullable Output<Boolean> satisfiesPzs;
 
-    public Input<Boolean> getSatisfiesPzs() {
-        return this.satisfiesPzs == null ? Input.empty() : this.satisfiesPzs;
+    public Output<Boolean> getSatisfiesPzs() {
+        return this.satisfiesPzs == null ? Output.empty() : this.satisfiesPzs;
     }
 
     /**
@@ -217,10 +217,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stageStates")
-      private final @Nullable Input<List<ExecutionStageStateArgs>> stageStates;
+      private final @Nullable Output<List<ExecutionStageStateArgs>> stageStates;
 
-    public Input<List<ExecutionStageStateArgs>> getStageStates() {
-        return this.stageStates == null ? Input.empty() : this.stageStates;
+    public Output<List<ExecutionStageStateArgs>> getStageStates() {
+        return this.stageStates == null ? Output.empty() : this.stageStates;
     }
 
     /**
@@ -228,10 +228,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startTime")
-      private final @Nullable Input<String> startTime;
+      private final @Nullable Output<String> startTime;
 
-    public Input<String> getStartTime() {
-        return this.startTime == null ? Input.empty() : this.startTime;
+    public Output<String> getStartTime() {
+        return this.startTime == null ? Output.empty() : this.startTime;
     }
 
     /**
@@ -239,10 +239,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="steps")
-      private final @Nullable Input<List<StepArgs>> steps;
+      private final @Nullable Output<List<StepArgs>> steps;
 
-    public Input<List<StepArgs>> getSteps() {
-        return this.steps == null ? Input.empty() : this.steps;
+    public Output<List<StepArgs>> getSteps() {
+        return this.steps == null ? Output.empty() : this.steps;
     }
 
     /**
@@ -250,10 +250,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stepsLocation")
-      private final @Nullable Input<String> stepsLocation;
+      private final @Nullable Output<String> stepsLocation;
 
-    public Input<String> getStepsLocation() {
-        return this.stepsLocation == null ? Input.empty() : this.stepsLocation;
+    public Output<String> getStepsLocation() {
+        return this.stepsLocation == null ? Output.empty() : this.stepsLocation;
     }
 
     /**
@@ -261,10 +261,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tempFiles")
-      private final @Nullable Input<List<String>> tempFiles;
+      private final @Nullable Output<List<String>> tempFiles;
 
-    public Input<List<String>> getTempFiles() {
-        return this.tempFiles == null ? Input.empty() : this.tempFiles;
+    public Output<List<String>> getTempFiles() {
+        return this.tempFiles == null ? Output.empty() : this.tempFiles;
     }
 
     /**
@@ -272,10 +272,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transformNameMapping")
-      private final @Nullable Input<Map<String,String>> transformNameMapping;
+      private final @Nullable Output<Map<String,String>> transformNameMapping;
 
-    public Input<Map<String,String>> getTransformNameMapping() {
-        return this.transformNameMapping == null ? Input.empty() : this.transformNameMapping;
+    public Output<Map<String,String>> getTransformNameMapping() {
+        return this.transformNameMapping == null ? Output.empty() : this.transformNameMapping;
     }
 
     /**
@@ -283,45 +283,45 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<JobType> type;
+      private final @Nullable Output<JobType> type;
 
-    public Input<JobType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<JobType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     @InputImport(name="view")
-      private final @Nullable Input<String> view;
+      private final @Nullable Output<String> view;
 
-    public Input<String> getView() {
-        return this.view == null ? Input.empty() : this.view;
+    public Output<String> getView() {
+        return this.view == null ? Output.empty() : this.view;
     }
 
     public JobArgs(
-        @Nullable Input<String> clientRequestId,
-        @Nullable Input<String> createTime,
-        @Nullable Input<String> createdFromSnapshotId,
-        @Nullable Input<JobCurrentState> currentState,
-        @Nullable Input<String> currentStateTime,
-        @Nullable Input<EnvironmentArgs> environment,
-        @Nullable Input<String> id,
-        @Nullable Input<JobMetadataArgs> jobMetadata,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<PipelineDescriptionArgs> pipelineDescription,
-        @Nullable Input<String> project,
-        @Nullable Input<String> replaceJobId,
-        @Nullable Input<String> replacedByJobId,
-        @Nullable Input<JobRequestedState> requestedState,
-        @Nullable Input<Boolean> satisfiesPzs,
-        @Nullable Input<List<ExecutionStageStateArgs>> stageStates,
-        @Nullable Input<String> startTime,
-        @Nullable Input<List<StepArgs>> steps,
-        @Nullable Input<String> stepsLocation,
-        @Nullable Input<List<String>> tempFiles,
-        @Nullable Input<Map<String,String>> transformNameMapping,
-        @Nullable Input<JobType> type,
-        @Nullable Input<String> view) {
+        @Nullable Output<String> clientRequestId,
+        @Nullable Output<String> createTime,
+        @Nullable Output<String> createdFromSnapshotId,
+        @Nullable Output<JobCurrentState> currentState,
+        @Nullable Output<String> currentStateTime,
+        @Nullable Output<EnvironmentArgs> environment,
+        @Nullable Output<String> id,
+        @Nullable Output<JobMetadataArgs> jobMetadata,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<PipelineDescriptionArgs> pipelineDescription,
+        @Nullable Output<String> project,
+        @Nullable Output<String> replaceJobId,
+        @Nullable Output<String> replacedByJobId,
+        @Nullable Output<JobRequestedState> requestedState,
+        @Nullable Output<Boolean> satisfiesPzs,
+        @Nullable Output<List<ExecutionStageStateArgs>> stageStates,
+        @Nullable Output<String> startTime,
+        @Nullable Output<List<StepArgs>> steps,
+        @Nullable Output<String> stepsLocation,
+        @Nullable Output<List<String>> tempFiles,
+        @Nullable Output<Map<String,String>> transformNameMapping,
+        @Nullable Output<JobType> type,
+        @Nullable Output<String> view) {
         this.clientRequestId = clientRequestId;
         this.createTime = createTime;
         this.createdFromSnapshotId = createdFromSnapshotId;
@@ -350,31 +350,31 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobArgs() {
-        this.clientRequestId = Input.empty();
-        this.createTime = Input.empty();
-        this.createdFromSnapshotId = Input.empty();
-        this.currentState = Input.empty();
-        this.currentStateTime = Input.empty();
-        this.environment = Input.empty();
-        this.id = Input.empty();
-        this.jobMetadata = Input.empty();
-        this.labels = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.pipelineDescription = Input.empty();
-        this.project = Input.empty();
-        this.replaceJobId = Input.empty();
-        this.replacedByJobId = Input.empty();
-        this.requestedState = Input.empty();
-        this.satisfiesPzs = Input.empty();
-        this.stageStates = Input.empty();
-        this.startTime = Input.empty();
-        this.steps = Input.empty();
-        this.stepsLocation = Input.empty();
-        this.tempFiles = Input.empty();
-        this.transformNameMapping = Input.empty();
-        this.type = Input.empty();
-        this.view = Input.empty();
+        this.clientRequestId = Output.empty();
+        this.createTime = Output.empty();
+        this.createdFromSnapshotId = Output.empty();
+        this.currentState = Output.empty();
+        this.currentStateTime = Output.empty();
+        this.environment = Output.empty();
+        this.id = Output.empty();
+        this.jobMetadata = Output.empty();
+        this.labels = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.pipelineDescription = Output.empty();
+        this.project = Output.empty();
+        this.replaceJobId = Output.empty();
+        this.replacedByJobId = Output.empty();
+        this.requestedState = Output.empty();
+        this.satisfiesPzs = Output.empty();
+        this.stageStates = Output.empty();
+        this.startTime = Output.empty();
+        this.steps = Output.empty();
+        this.stepsLocation = Output.empty();
+        this.tempFiles = Output.empty();
+        this.transformNameMapping = Output.empty();
+        this.type = Output.empty();
+        this.view = Output.empty();
     }
 
     public static Builder builder() {
@@ -386,31 +386,31 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> clientRequestId;
-        private @Nullable Input<String> createTime;
-        private @Nullable Input<String> createdFromSnapshotId;
-        private @Nullable Input<JobCurrentState> currentState;
-        private @Nullable Input<String> currentStateTime;
-        private @Nullable Input<EnvironmentArgs> environment;
-        private @Nullable Input<String> id;
-        private @Nullable Input<JobMetadataArgs> jobMetadata;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<PipelineDescriptionArgs> pipelineDescription;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> replaceJobId;
-        private @Nullable Input<String> replacedByJobId;
-        private @Nullable Input<JobRequestedState> requestedState;
-        private @Nullable Input<Boolean> satisfiesPzs;
-        private @Nullable Input<List<ExecutionStageStateArgs>> stageStates;
-        private @Nullable Input<String> startTime;
-        private @Nullable Input<List<StepArgs>> steps;
-        private @Nullable Input<String> stepsLocation;
-        private @Nullable Input<List<String>> tempFiles;
-        private @Nullable Input<Map<String,String>> transformNameMapping;
-        private @Nullable Input<JobType> type;
-        private @Nullable Input<String> view;
+        private @Nullable Output<String> clientRequestId;
+        private @Nullable Output<String> createTime;
+        private @Nullable Output<String> createdFromSnapshotId;
+        private @Nullable Output<JobCurrentState> currentState;
+        private @Nullable Output<String> currentStateTime;
+        private @Nullable Output<EnvironmentArgs> environment;
+        private @Nullable Output<String> id;
+        private @Nullable Output<JobMetadataArgs> jobMetadata;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<PipelineDescriptionArgs> pipelineDescription;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> replaceJobId;
+        private @Nullable Output<String> replacedByJobId;
+        private @Nullable Output<JobRequestedState> requestedState;
+        private @Nullable Output<Boolean> satisfiesPzs;
+        private @Nullable Output<List<ExecutionStageStateArgs>> stageStates;
+        private @Nullable Output<String> startTime;
+        private @Nullable Output<List<StepArgs>> steps;
+        private @Nullable Output<String> stepsLocation;
+        private @Nullable Output<List<String>> tempFiles;
+        private @Nullable Output<Map<String,String>> transformNameMapping;
+        private @Nullable Output<JobType> type;
+        private @Nullable Output<String> view;
 
         public Builder() {
     	      // Empty
@@ -445,253 +445,253 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     	      this.view = defaults.view;
         }
 
-        public Builder clientRequestId(@Nullable Input<String> clientRequestId) {
+        public Builder clientRequestId(@Nullable Output<String> clientRequestId) {
             this.clientRequestId = clientRequestId;
             return this;
         }
 
         public Builder clientRequestId(@Nullable String clientRequestId) {
-            this.clientRequestId = Input.ofNullable(clientRequestId);
+            this.clientRequestId = Output.ofNullable(clientRequestId);
             return this;
         }
 
-        public Builder createTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Input.ofNullable(createTime);
+            this.createTime = Output.ofNullable(createTime);
             return this;
         }
 
-        public Builder createdFromSnapshotId(@Nullable Input<String> createdFromSnapshotId) {
+        public Builder createdFromSnapshotId(@Nullable Output<String> createdFromSnapshotId) {
             this.createdFromSnapshotId = createdFromSnapshotId;
             return this;
         }
 
         public Builder createdFromSnapshotId(@Nullable String createdFromSnapshotId) {
-            this.createdFromSnapshotId = Input.ofNullable(createdFromSnapshotId);
+            this.createdFromSnapshotId = Output.ofNullable(createdFromSnapshotId);
             return this;
         }
 
-        public Builder currentState(@Nullable Input<JobCurrentState> currentState) {
+        public Builder currentState(@Nullable Output<JobCurrentState> currentState) {
             this.currentState = currentState;
             return this;
         }
 
         public Builder currentState(@Nullable JobCurrentState currentState) {
-            this.currentState = Input.ofNullable(currentState);
+            this.currentState = Output.ofNullable(currentState);
             return this;
         }
 
-        public Builder currentStateTime(@Nullable Input<String> currentStateTime) {
+        public Builder currentStateTime(@Nullable Output<String> currentStateTime) {
             this.currentStateTime = currentStateTime;
             return this;
         }
 
         public Builder currentStateTime(@Nullable String currentStateTime) {
-            this.currentStateTime = Input.ofNullable(currentStateTime);
+            this.currentStateTime = Output.ofNullable(currentStateTime);
             return this;
         }
 
-        public Builder environment(@Nullable Input<EnvironmentArgs> environment) {
+        public Builder environment(@Nullable Output<EnvironmentArgs> environment) {
             this.environment = environment;
             return this;
         }
 
         public Builder environment(@Nullable EnvironmentArgs environment) {
-            this.environment = Input.ofNullable(environment);
+            this.environment = Output.ofNullable(environment);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder jobMetadata(@Nullable Input<JobMetadataArgs> jobMetadata) {
+        public Builder jobMetadata(@Nullable Output<JobMetadataArgs> jobMetadata) {
             this.jobMetadata = jobMetadata;
             return this;
         }
 
         public Builder jobMetadata(@Nullable JobMetadataArgs jobMetadata) {
-            this.jobMetadata = Input.ofNullable(jobMetadata);
+            this.jobMetadata = Output.ofNullable(jobMetadata);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder pipelineDescription(@Nullable Input<PipelineDescriptionArgs> pipelineDescription) {
+        public Builder pipelineDescription(@Nullable Output<PipelineDescriptionArgs> pipelineDescription) {
             this.pipelineDescription = pipelineDescription;
             return this;
         }
 
         public Builder pipelineDescription(@Nullable PipelineDescriptionArgs pipelineDescription) {
-            this.pipelineDescription = Input.ofNullable(pipelineDescription);
+            this.pipelineDescription = Output.ofNullable(pipelineDescription);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder replaceJobId(@Nullable Input<String> replaceJobId) {
+        public Builder replaceJobId(@Nullable Output<String> replaceJobId) {
             this.replaceJobId = replaceJobId;
             return this;
         }
 
         public Builder replaceJobId(@Nullable String replaceJobId) {
-            this.replaceJobId = Input.ofNullable(replaceJobId);
+            this.replaceJobId = Output.ofNullable(replaceJobId);
             return this;
         }
 
-        public Builder replacedByJobId(@Nullable Input<String> replacedByJobId) {
+        public Builder replacedByJobId(@Nullable Output<String> replacedByJobId) {
             this.replacedByJobId = replacedByJobId;
             return this;
         }
 
         public Builder replacedByJobId(@Nullable String replacedByJobId) {
-            this.replacedByJobId = Input.ofNullable(replacedByJobId);
+            this.replacedByJobId = Output.ofNullable(replacedByJobId);
             return this;
         }
 
-        public Builder requestedState(@Nullable Input<JobRequestedState> requestedState) {
+        public Builder requestedState(@Nullable Output<JobRequestedState> requestedState) {
             this.requestedState = requestedState;
             return this;
         }
 
         public Builder requestedState(@Nullable JobRequestedState requestedState) {
-            this.requestedState = Input.ofNullable(requestedState);
+            this.requestedState = Output.ofNullable(requestedState);
             return this;
         }
 
-        public Builder satisfiesPzs(@Nullable Input<Boolean> satisfiesPzs) {
+        public Builder satisfiesPzs(@Nullable Output<Boolean> satisfiesPzs) {
             this.satisfiesPzs = satisfiesPzs;
             return this;
         }
 
         public Builder satisfiesPzs(@Nullable Boolean satisfiesPzs) {
-            this.satisfiesPzs = Input.ofNullable(satisfiesPzs);
+            this.satisfiesPzs = Output.ofNullable(satisfiesPzs);
             return this;
         }
 
-        public Builder stageStates(@Nullable Input<List<ExecutionStageStateArgs>> stageStates) {
+        public Builder stageStates(@Nullable Output<List<ExecutionStageStateArgs>> stageStates) {
             this.stageStates = stageStates;
             return this;
         }
 
         public Builder stageStates(@Nullable List<ExecutionStageStateArgs> stageStates) {
-            this.stageStates = Input.ofNullable(stageStates);
+            this.stageStates = Output.ofNullable(stageStates);
             return this;
         }
 
-        public Builder startTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Input.ofNullable(startTime);
+            this.startTime = Output.ofNullable(startTime);
             return this;
         }
 
-        public Builder steps(@Nullable Input<List<StepArgs>> steps) {
+        public Builder steps(@Nullable Output<List<StepArgs>> steps) {
             this.steps = steps;
             return this;
         }
 
         public Builder steps(@Nullable List<StepArgs> steps) {
-            this.steps = Input.ofNullable(steps);
+            this.steps = Output.ofNullable(steps);
             return this;
         }
 
-        public Builder stepsLocation(@Nullable Input<String> stepsLocation) {
+        public Builder stepsLocation(@Nullable Output<String> stepsLocation) {
             this.stepsLocation = stepsLocation;
             return this;
         }
 
         public Builder stepsLocation(@Nullable String stepsLocation) {
-            this.stepsLocation = Input.ofNullable(stepsLocation);
+            this.stepsLocation = Output.ofNullable(stepsLocation);
             return this;
         }
 
-        public Builder tempFiles(@Nullable Input<List<String>> tempFiles) {
+        public Builder tempFiles(@Nullable Output<List<String>> tempFiles) {
             this.tempFiles = tempFiles;
             return this;
         }
 
         public Builder tempFiles(@Nullable List<String> tempFiles) {
-            this.tempFiles = Input.ofNullable(tempFiles);
+            this.tempFiles = Output.ofNullable(tempFiles);
             return this;
         }
 
-        public Builder transformNameMapping(@Nullable Input<Map<String,String>> transformNameMapping) {
+        public Builder transformNameMapping(@Nullable Output<Map<String,String>> transformNameMapping) {
             this.transformNameMapping = transformNameMapping;
             return this;
         }
 
         public Builder transformNameMapping(@Nullable Map<String,String> transformNameMapping) {
-            this.transformNameMapping = Input.ofNullable(transformNameMapping);
+            this.transformNameMapping = Output.ofNullable(transformNameMapping);
             return this;
         }
 
-        public Builder type(@Nullable Input<JobType> type) {
+        public Builder type(@Nullable Output<JobType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable JobType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder view(@Nullable Input<String> view) {
+        public Builder view(@Nullable Output<String> view) {
             this.view = view;
             return this;
         }
 
         public Builder view(@Nullable String view) {
-            this.view = Input.ofNullable(view);
+            this.view = Output.ofNullable(view);
             return this;
         }
         public JobArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataproc.inputs.ClusterClusterConfigSecurityConfigKerberosConfigArgs;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class ClusterClusterConfigSecurityConfigArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="kerberosConfig", required=true)
-      private final Input<ClusterClusterConfigSecurityConfigKerberosConfigArgs> kerberosConfig;
+      private final Output<ClusterClusterConfigSecurityConfigKerberosConfigArgs> kerberosConfig;
 
-    public Input<ClusterClusterConfigSecurityConfigKerberosConfigArgs> getKerberosConfig() {
+    public Output<ClusterClusterConfigSecurityConfigKerberosConfigArgs> getKerberosConfig() {
         return this.kerberosConfig;
     }
 
-    public ClusterClusterConfigSecurityConfigArgs(Input<ClusterClusterConfigSecurityConfigKerberosConfigArgs> kerberosConfig) {
+    public ClusterClusterConfigSecurityConfigArgs(Output<ClusterClusterConfigSecurityConfigKerberosConfigArgs> kerberosConfig) {
         this.kerberosConfig = Objects.requireNonNull(kerberosConfig, "expected parameter 'kerberosConfig' to be non-null");
     }
 
     private ClusterClusterConfigSecurityConfigArgs() {
-        this.kerberosConfig = Input.empty();
+        this.kerberosConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ClusterClusterConfigSecurityConfigArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private Input<ClusterClusterConfigSecurityConfigKerberosConfigArgs> kerberosConfig;
+        private Output<ClusterClusterConfigSecurityConfigKerberosConfigArgs> kerberosConfig;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ClusterClusterConfigSecurityConfigArgs extends io.pulumi.reso
     	      this.kerberosConfig = defaults.kerberosConfig;
         }
 
-        public Builder kerberosConfig(Input<ClusterClusterConfigSecurityConfigKerberosConfigArgs> kerberosConfig) {
+        public Builder kerberosConfig(Output<ClusterClusterConfigSecurityConfigKerberosConfigArgs> kerberosConfig) {
             this.kerberosConfig = Objects.requireNonNull(kerberosConfig);
             return this;
         }
 
         public Builder kerberosConfig(ClusterClusterConfigSecurityConfigKerberosConfigArgs kerberosConfig) {
-            this.kerberosConfig = Input.of(Objects.requireNonNull(kerberosConfig));
+            this.kerberosConfig = Output.of(Objects.requireNonNull(kerberosConfig));
             return this;
         }
         public ClusterClusterConfigSecurityConfigArgs build() {

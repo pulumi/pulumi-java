@@ -5,7 +5,7 @@ package io.pulumi.awsnative.connect;
 
 import io.pulumi.awsnative.connect.inputs.QuickConnectConfigArgs;
 import io.pulumi.awsnative.connect.inputs.QuickConnectTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class QuickConnectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -33,9 +33,9 @@ public final class QuickConnectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceArn", required=true)
-      private final Input<String> instanceArn;
+      private final Output<String> instanceArn;
 
-    public Input<String> getInstanceArn() {
+    public Output<String> getInstanceArn() {
         return this.instanceArn;
     }
 
@@ -44,10 +44,10 @@ public final class QuickConnectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -55,9 +55,9 @@ public final class QuickConnectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="quickConnectConfig", required=true)
-      private final Input<QuickConnectConfigArgs> quickConnectConfig;
+      private final Output<QuickConnectConfigArgs> quickConnectConfig;
 
-    public Input<QuickConnectConfigArgs> getQuickConnectConfig() {
+    public Output<QuickConnectConfigArgs> getQuickConnectConfig() {
         return this.quickConnectConfig;
     }
 
@@ -66,18 +66,18 @@ public final class QuickConnectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<QuickConnectTagArgs>> tags;
+      private final @Nullable Output<List<QuickConnectTagArgs>> tags;
 
-    public Input<List<QuickConnectTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<QuickConnectTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public QuickConnectArgs(
-        @Nullable Input<String> description,
-        Input<String> instanceArn,
-        @Nullable Input<String> name,
-        Input<QuickConnectConfigArgs> quickConnectConfig,
-        @Nullable Input<List<QuickConnectTagArgs>> tags) {
+        @Nullable Output<String> description,
+        Output<String> instanceArn,
+        @Nullable Output<String> name,
+        Output<QuickConnectConfigArgs> quickConnectConfig,
+        @Nullable Output<List<QuickConnectTagArgs>> tags) {
         this.description = description;
         this.instanceArn = Objects.requireNonNull(instanceArn, "expected parameter 'instanceArn' to be non-null");
         this.name = name;
@@ -86,11 +86,11 @@ public final class QuickConnectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private QuickConnectArgs() {
-        this.description = Input.empty();
-        this.instanceArn = Input.empty();
-        this.name = Input.empty();
-        this.quickConnectConfig = Input.empty();
-        this.tags = Input.empty();
+        this.description = Output.empty();
+        this.instanceArn = Output.empty();
+        this.name = Output.empty();
+        this.quickConnectConfig = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -102,11 +102,11 @@ public final class QuickConnectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> instanceArn;
-        private @Nullable Input<String> name;
-        private Input<QuickConnectConfigArgs> quickConnectConfig;
-        private @Nullable Input<List<QuickConnectTagArgs>> tags;
+        private @Nullable Output<String> description;
+        private Output<String> instanceArn;
+        private @Nullable Output<String> name;
+        private Output<QuickConnectConfigArgs> quickConnectConfig;
+        private @Nullable Output<List<QuickConnectTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -121,53 +121,53 @@ public final class QuickConnectArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder instanceArn(Input<String> instanceArn) {
+        public Builder instanceArn(Output<String> instanceArn) {
             this.instanceArn = Objects.requireNonNull(instanceArn);
             return this;
         }
 
         public Builder instanceArn(String instanceArn) {
-            this.instanceArn = Input.of(Objects.requireNonNull(instanceArn));
+            this.instanceArn = Output.of(Objects.requireNonNull(instanceArn));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder quickConnectConfig(Input<QuickConnectConfigArgs> quickConnectConfig) {
+        public Builder quickConnectConfig(Output<QuickConnectConfigArgs> quickConnectConfig) {
             this.quickConnectConfig = Objects.requireNonNull(quickConnectConfig);
             return this;
         }
 
         public Builder quickConnectConfig(QuickConnectConfigArgs quickConnectConfig) {
-            this.quickConnectConfig = Input.of(Objects.requireNonNull(quickConnectConfig));
+            this.quickConnectConfig = Output.of(Objects.requireNonNull(quickConnectConfig));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<QuickConnectTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<QuickConnectTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<QuickConnectTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public QuickConnectArgs build() {

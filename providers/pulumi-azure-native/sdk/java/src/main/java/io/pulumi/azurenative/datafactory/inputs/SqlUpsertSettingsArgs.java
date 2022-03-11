@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class SqlUpsertSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="interimSchemaName")
-      private final @Nullable Input<Object> interimSchemaName;
+      private final @Nullable Output<Object> interimSchemaName;
 
-    public Input<Object> getInterimSchemaName() {
-        return this.interimSchemaName == null ? Input.empty() : this.interimSchemaName;
+    public Output<Object> getInterimSchemaName() {
+        return this.interimSchemaName == null ? Output.empty() : this.interimSchemaName;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SqlUpsertSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="keys")
-      private final @Nullable Input<Object> keys;
+      private final @Nullable Output<Object> keys;
 
-    public Input<Object> getKeys() {
-        return this.keys == null ? Input.empty() : this.keys;
+    public Output<Object> getKeys() {
+        return this.keys == null ? Output.empty() : this.keys;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class SqlUpsertSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="useTempDB")
-      private final @Nullable Input<Object> useTempDB;
+      private final @Nullable Output<Object> useTempDB;
 
-    public Input<Object> getUseTempDB() {
-        return this.useTempDB == null ? Input.empty() : this.useTempDB;
+    public Output<Object> getUseTempDB() {
+        return this.useTempDB == null ? Output.empty() : this.useTempDB;
     }
 
     public SqlUpsertSettingsArgs(
-        @Nullable Input<Object> interimSchemaName,
-        @Nullable Input<Object> keys,
-        @Nullable Input<Object> useTempDB) {
+        @Nullable Output<Object> interimSchemaName,
+        @Nullable Output<Object> keys,
+        @Nullable Output<Object> useTempDB) {
         this.interimSchemaName = interimSchemaName;
         this.keys = keys;
         this.useTempDB = useTempDB;
     }
 
     private SqlUpsertSettingsArgs() {
-        this.interimSchemaName = Input.empty();
-        this.keys = Input.empty();
-        this.useTempDB = Input.empty();
+        this.interimSchemaName = Output.empty();
+        this.keys = Output.empty();
+        this.useTempDB = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class SqlUpsertSettingsArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> interimSchemaName;
-        private @Nullable Input<Object> keys;
-        private @Nullable Input<Object> useTempDB;
+        private @Nullable Output<Object> interimSchemaName;
+        private @Nullable Output<Object> keys;
+        private @Nullable Output<Object> useTempDB;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class SqlUpsertSettingsArgs extends io.pulumi.resources.ResourceArg
     	      this.useTempDB = defaults.useTempDB;
         }
 
-        public Builder interimSchemaName(@Nullable Input<Object> interimSchemaName) {
+        public Builder interimSchemaName(@Nullable Output<Object> interimSchemaName) {
             this.interimSchemaName = interimSchemaName;
             return this;
         }
 
         public Builder interimSchemaName(@Nullable Object interimSchemaName) {
-            this.interimSchemaName = Input.ofNullable(interimSchemaName);
+            this.interimSchemaName = Output.ofNullable(interimSchemaName);
             return this;
         }
 
-        public Builder keys(@Nullable Input<Object> keys) {
+        public Builder keys(@Nullable Output<Object> keys) {
             this.keys = keys;
             return this;
         }
 
         public Builder keys(@Nullable Object keys) {
-            this.keys = Input.ofNullable(keys);
+            this.keys = Output.ofNullable(keys);
             return this;
         }
 
-        public Builder useTempDB(@Nullable Input<Object> useTempDB) {
+        public Builder useTempDB(@Nullable Output<Object> useTempDB) {
             this.useTempDB = useTempDB;
             return this;
         }
 
         public Builder useTempDB(@Nullable Object useTempDB) {
-            this.useTempDB = Input.ofNullable(useTempDB);
+            this.useTempDB = Output.ofNullable(useTempDB);
             return this;
         }
         public SqlUpsertSettingsArgs build() {

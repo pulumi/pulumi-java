@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iap;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.iap.inputs.WebTypeComputeIamMemberConditionArgs;
 import java.lang.String;
@@ -21,16 +21,16 @@ public final class WebTypeComputeIamMemberArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="condition")
-      private final @Nullable Input<WebTypeComputeIamMemberConditionArgs> condition;
+      private final @Nullable Output<WebTypeComputeIamMemberConditionArgs> condition;
 
-    public Input<WebTypeComputeIamMemberConditionArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<WebTypeComputeIamMemberConditionArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     @InputImport(name="member", required=true)
-      private final Input<String> member;
+      private final Output<String> member;
 
-    public Input<String> getMember() {
+    public Output<String> getMember() {
         return this.member;
     }
 
@@ -40,10 +40,10 @@ public final class WebTypeComputeIamMemberArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class WebTypeComputeIamMemberArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="role", required=true)
-      private final Input<String> role;
+      private final Output<String> role;
 
-    public Input<String> getRole() {
+    public Output<String> getRole() {
         return this.role;
     }
 
     public WebTypeComputeIamMemberArgs(
-        @Nullable Input<WebTypeComputeIamMemberConditionArgs> condition,
-        Input<String> member,
-        @Nullable Input<String> project,
-        Input<String> role) {
+        @Nullable Output<WebTypeComputeIamMemberConditionArgs> condition,
+        Output<String> member,
+        @Nullable Output<String> project,
+        Output<String> role) {
         this.condition = condition;
         this.member = Objects.requireNonNull(member, "expected parameter 'member' to be non-null");
         this.project = project;
@@ -71,10 +71,10 @@ public final class WebTypeComputeIamMemberArgs extends io.pulumi.resources.Resou
     }
 
     private WebTypeComputeIamMemberArgs() {
-        this.condition = Input.empty();
-        this.member = Input.empty();
-        this.project = Input.empty();
-        this.role = Input.empty();
+        this.condition = Output.empty();
+        this.member = Output.empty();
+        this.project = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class WebTypeComputeIamMemberArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<WebTypeComputeIamMemberConditionArgs> condition;
-        private Input<String> member;
-        private @Nullable Input<String> project;
-        private Input<String> role;
+        private @Nullable Output<WebTypeComputeIamMemberConditionArgs> condition;
+        private Output<String> member;
+        private @Nullable Output<String> project;
+        private Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class WebTypeComputeIamMemberArgs extends io.pulumi.resources.Resou
     	      this.role = defaults.role;
         }
 
-        public Builder condition(@Nullable Input<WebTypeComputeIamMemberConditionArgs> condition) {
+        public Builder condition(@Nullable Output<WebTypeComputeIamMemberConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable WebTypeComputeIamMemberConditionArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder member(Input<String> member) {
+        public Builder member(Output<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
 
         public Builder member(String member) {
-            this.member = Input.of(Objects.requireNonNull(member));
+            this.member = Output.of(Objects.requireNonNull(member));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder role(Input<String> role) {
+        public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(String role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
         public WebTypeComputeIamMemberArgs build() {

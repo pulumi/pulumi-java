@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.redhatopenshift.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class WorkerProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="count")
-      private final @Nullable Input<Integer> count;
+      private final @Nullable Output<Integer> count;
 
-    public Input<Integer> getCount() {
-        return this.count == null ? Input.empty() : this.count;
+    public Output<Integer> getCount() {
+        return this.count == null ? Output.empty() : this.count;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class WorkerProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskSizeGB")
-      private final @Nullable Input<Integer> diskSizeGB;
+      private final @Nullable Output<Integer> diskSizeGB;
 
-    public Input<Integer> getDiskSizeGB() {
-        return this.diskSizeGB == null ? Input.empty() : this.diskSizeGB;
+    public Output<Integer> getDiskSizeGB() {
+        return this.diskSizeGB == null ? Output.empty() : this.diskSizeGB;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class WorkerProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class WorkerProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetId")
-      private final @Nullable Input<String> subnetId;
+      private final @Nullable Output<String> subnetId;
 
-    public Input<String> getSubnetId() {
-        return this.subnetId == null ? Input.empty() : this.subnetId;
+    public Output<String> getSubnetId() {
+        return this.subnetId == null ? Output.empty() : this.subnetId;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class WorkerProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vmSize")
-      private final @Nullable Input<String> vmSize;
+      private final @Nullable Output<String> vmSize;
 
-    public Input<String> getVmSize() {
-        return this.vmSize == null ? Input.empty() : this.vmSize;
+    public Output<String> getVmSize() {
+        return this.vmSize == null ? Output.empty() : this.vmSize;
     }
 
     public WorkerProfileArgs(
-        @Nullable Input<Integer> count,
-        @Nullable Input<Integer> diskSizeGB,
-        @Nullable Input<String> name,
-        @Nullable Input<String> subnetId,
-        @Nullable Input<String> vmSize) {
+        @Nullable Output<Integer> count,
+        @Nullable Output<Integer> diskSizeGB,
+        @Nullable Output<String> name,
+        @Nullable Output<String> subnetId,
+        @Nullable Output<String> vmSize) {
         this.count = count;
         this.diskSizeGB = diskSizeGB;
         this.name = name;
@@ -88,11 +88,11 @@ public final class WorkerProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WorkerProfileArgs() {
-        this.count = Input.empty();
-        this.diskSizeGB = Input.empty();
-        this.name = Input.empty();
-        this.subnetId = Input.empty();
-        this.vmSize = Input.empty();
+        this.count = Output.empty();
+        this.diskSizeGB = Output.empty();
+        this.name = Output.empty();
+        this.subnetId = Output.empty();
+        this.vmSize = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class WorkerProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> count;
-        private @Nullable Input<Integer> diskSizeGB;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> subnetId;
-        private @Nullable Input<String> vmSize;
+        private @Nullable Output<Integer> count;
+        private @Nullable Output<Integer> diskSizeGB;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> subnetId;
+        private @Nullable Output<String> vmSize;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class WorkerProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vmSize = defaults.vmSize;
         }
 
-        public Builder count(@Nullable Input<Integer> count) {
+        public Builder count(@Nullable Output<Integer> count) {
             this.count = count;
             return this;
         }
 
         public Builder count(@Nullable Integer count) {
-            this.count = Input.ofNullable(count);
+            this.count = Output.ofNullable(count);
             return this;
         }
 
-        public Builder diskSizeGB(@Nullable Input<Integer> diskSizeGB) {
+        public Builder diskSizeGB(@Nullable Output<Integer> diskSizeGB) {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
 
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
-            this.diskSizeGB = Input.ofNullable(diskSizeGB);
+            this.diskSizeGB = Output.ofNullable(diskSizeGB);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder subnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Input.ofNullable(subnetId);
+            this.subnetId = Output.ofNullable(subnetId);
             return this;
         }
 
-        public Builder vmSize(@Nullable Input<String> vmSize) {
+        public Builder vmSize(@Nullable Output<String> vmSize) {
             this.vmSize = vmSize;
             return this;
         }
 
         public Builder vmSize(@Nullable String vmSize) {
-            this.vmSize = Input.ofNullable(vmSize);
+            this.vmSize = Output.ofNullable(vmSize);
             return this;
         }
         public WorkerProfileArgs build() {

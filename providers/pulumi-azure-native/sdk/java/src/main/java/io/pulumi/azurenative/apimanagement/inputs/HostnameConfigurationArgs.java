@@ -6,7 +6,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 import io.pulumi.azurenative.apimanagement.enums.HostnameType;
 import io.pulumi.azurenative.apimanagement.inputs.CertificateInformationArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="certificate")
-      private final @Nullable Input<CertificateInformationArgs> certificate;
+      private final @Nullable Output<CertificateInformationArgs> certificate;
 
-    public Input<CertificateInformationArgs> getCertificate() {
-        return this.certificate == null ? Input.empty() : this.certificate;
+    public Output<CertificateInformationArgs> getCertificate() {
+        return this.certificate == null ? Output.empty() : this.certificate;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="certificatePassword")
-      private final @Nullable Input<String> certificatePassword;
+      private final @Nullable Output<String> certificatePassword;
 
-    public Input<String> getCertificatePassword() {
-        return this.certificatePassword == null ? Input.empty() : this.certificatePassword;
+    public Output<String> getCertificatePassword() {
+        return this.certificatePassword == null ? Output.empty() : this.certificatePassword;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="defaultSslBinding")
-      private final @Nullable Input<Boolean> defaultSslBinding;
+      private final @Nullable Output<Boolean> defaultSslBinding;
 
-    public Input<Boolean> getDefaultSslBinding() {
-        return this.defaultSslBinding == null ? Input.empty() : this.defaultSslBinding;
+    public Output<Boolean> getDefaultSslBinding() {
+        return this.defaultSslBinding == null ? Output.empty() : this.defaultSslBinding;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="encodedCertificate")
-      private final @Nullable Input<String> encodedCertificate;
+      private final @Nullable Output<String> encodedCertificate;
 
-    public Input<String> getEncodedCertificate() {
-        return this.encodedCertificate == null ? Input.empty() : this.encodedCertificate;
+    public Output<String> getEncodedCertificate() {
+        return this.encodedCertificate == null ? Output.empty() : this.encodedCertificate;
     }
 
     /**
@@ -71,9 +71,9 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="hostName", required=true)
-      private final Input<String> hostName;
+      private final Output<String> hostName;
 
-    public Input<String> getHostName() {
+    public Output<String> getHostName() {
         return this.hostName;
     }
 
@@ -82,10 +82,10 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="identityClientId")
-      private final @Nullable Input<String> identityClientId;
+      private final @Nullable Output<String> identityClientId;
 
-    public Input<String> getIdentityClientId() {
-        return this.identityClientId == null ? Input.empty() : this.identityClientId;
+    public Output<String> getIdentityClientId() {
+        return this.identityClientId == null ? Output.empty() : this.identityClientId;
     }
 
     /**
@@ -93,10 +93,10 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="keyVaultId")
-      private final @Nullable Input<String> keyVaultId;
+      private final @Nullable Output<String> keyVaultId;
 
-    public Input<String> getKeyVaultId() {
-        return this.keyVaultId == null ? Input.empty() : this.keyVaultId;
+    public Output<String> getKeyVaultId() {
+        return this.keyVaultId == null ? Output.empty() : this.keyVaultId;
     }
 
     /**
@@ -104,10 +104,10 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="negotiateClientCertificate")
-      private final @Nullable Input<Boolean> negotiateClientCertificate;
+      private final @Nullable Output<Boolean> negotiateClientCertificate;
 
-    public Input<Boolean> getNegotiateClientCertificate() {
-        return this.negotiateClientCertificate == null ? Input.empty() : this.negotiateClientCertificate;
+    public Output<Boolean> getNegotiateClientCertificate() {
+        return this.negotiateClientCertificate == null ? Output.empty() : this.negotiateClientCertificate;
     }
 
     /**
@@ -115,43 +115,43 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<Either<String,HostnameType>> type;
+      private final Output<Either<String,HostnameType>> type;
 
-    public Input<Either<String,HostnameType>> getType() {
+    public Output<Either<String,HostnameType>> getType() {
         return this.type;
     }
 
     public HostnameConfigurationArgs(
-        @Nullable Input<CertificateInformationArgs> certificate,
-        @Nullable Input<String> certificatePassword,
-        @Nullable Input<Boolean> defaultSslBinding,
-        @Nullable Input<String> encodedCertificate,
-        Input<String> hostName,
-        @Nullable Input<String> identityClientId,
-        @Nullable Input<String> keyVaultId,
-        @Nullable Input<Boolean> negotiateClientCertificate,
-        Input<Either<String,HostnameType>> type) {
+        @Nullable Output<CertificateInformationArgs> certificate,
+        @Nullable Output<String> certificatePassword,
+        @Nullable Output<Boolean> defaultSslBinding,
+        @Nullable Output<String> encodedCertificate,
+        Output<String> hostName,
+        @Nullable Output<String> identityClientId,
+        @Nullable Output<String> keyVaultId,
+        @Nullable Output<Boolean> negotiateClientCertificate,
+        Output<Either<String,HostnameType>> type) {
         this.certificate = certificate;
         this.certificatePassword = certificatePassword;
-        this.defaultSslBinding = defaultSslBinding == null ? Input.ofNullable(false) : defaultSslBinding;
+        this.defaultSslBinding = defaultSslBinding == null ? Output.ofNullable(false) : defaultSslBinding;
         this.encodedCertificate = encodedCertificate;
         this.hostName = Objects.requireNonNull(hostName, "expected parameter 'hostName' to be non-null");
         this.identityClientId = identityClientId;
         this.keyVaultId = keyVaultId;
-        this.negotiateClientCertificate = negotiateClientCertificate == null ? Input.ofNullable(false) : negotiateClientCertificate;
+        this.negotiateClientCertificate = negotiateClientCertificate == null ? Output.ofNullable(false) : negotiateClientCertificate;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private HostnameConfigurationArgs() {
-        this.certificate = Input.empty();
-        this.certificatePassword = Input.empty();
-        this.defaultSslBinding = Input.empty();
-        this.encodedCertificate = Input.empty();
-        this.hostName = Input.empty();
-        this.identityClientId = Input.empty();
-        this.keyVaultId = Input.empty();
-        this.negotiateClientCertificate = Input.empty();
-        this.type = Input.empty();
+        this.certificate = Output.empty();
+        this.certificatePassword = Output.empty();
+        this.defaultSslBinding = Output.empty();
+        this.encodedCertificate = Output.empty();
+        this.hostName = Output.empty();
+        this.identityClientId = Output.empty();
+        this.keyVaultId = Output.empty();
+        this.negotiateClientCertificate = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -163,15 +163,15 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<CertificateInformationArgs> certificate;
-        private @Nullable Input<String> certificatePassword;
-        private @Nullable Input<Boolean> defaultSslBinding;
-        private @Nullable Input<String> encodedCertificate;
-        private Input<String> hostName;
-        private @Nullable Input<String> identityClientId;
-        private @Nullable Input<String> keyVaultId;
-        private @Nullable Input<Boolean> negotiateClientCertificate;
-        private Input<Either<String,HostnameType>> type;
+        private @Nullable Output<CertificateInformationArgs> certificate;
+        private @Nullable Output<String> certificatePassword;
+        private @Nullable Output<Boolean> defaultSslBinding;
+        private @Nullable Output<String> encodedCertificate;
+        private Output<String> hostName;
+        private @Nullable Output<String> identityClientId;
+        private @Nullable Output<String> keyVaultId;
+        private @Nullable Output<Boolean> negotiateClientCertificate;
+        private Output<Either<String,HostnameType>> type;
 
         public Builder() {
     	      // Empty
@@ -190,93 +190,93 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
     	      this.type = defaults.type;
         }
 
-        public Builder certificate(@Nullable Input<CertificateInformationArgs> certificate) {
+        public Builder certificate(@Nullable Output<CertificateInformationArgs> certificate) {
             this.certificate = certificate;
             return this;
         }
 
         public Builder certificate(@Nullable CertificateInformationArgs certificate) {
-            this.certificate = Input.ofNullable(certificate);
+            this.certificate = Output.ofNullable(certificate);
             return this;
         }
 
-        public Builder certificatePassword(@Nullable Input<String> certificatePassword) {
+        public Builder certificatePassword(@Nullable Output<String> certificatePassword) {
             this.certificatePassword = certificatePassword;
             return this;
         }
 
         public Builder certificatePassword(@Nullable String certificatePassword) {
-            this.certificatePassword = Input.ofNullable(certificatePassword);
+            this.certificatePassword = Output.ofNullable(certificatePassword);
             return this;
         }
 
-        public Builder defaultSslBinding(@Nullable Input<Boolean> defaultSslBinding) {
+        public Builder defaultSslBinding(@Nullable Output<Boolean> defaultSslBinding) {
             this.defaultSslBinding = defaultSslBinding;
             return this;
         }
 
         public Builder defaultSslBinding(@Nullable Boolean defaultSslBinding) {
-            this.defaultSslBinding = Input.ofNullable(defaultSslBinding);
+            this.defaultSslBinding = Output.ofNullable(defaultSslBinding);
             return this;
         }
 
-        public Builder encodedCertificate(@Nullable Input<String> encodedCertificate) {
+        public Builder encodedCertificate(@Nullable Output<String> encodedCertificate) {
             this.encodedCertificate = encodedCertificate;
             return this;
         }
 
         public Builder encodedCertificate(@Nullable String encodedCertificate) {
-            this.encodedCertificate = Input.ofNullable(encodedCertificate);
+            this.encodedCertificate = Output.ofNullable(encodedCertificate);
             return this;
         }
 
-        public Builder hostName(Input<String> hostName) {
+        public Builder hostName(Output<String> hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
 
         public Builder hostName(String hostName) {
-            this.hostName = Input.of(Objects.requireNonNull(hostName));
+            this.hostName = Output.of(Objects.requireNonNull(hostName));
             return this;
         }
 
-        public Builder identityClientId(@Nullable Input<String> identityClientId) {
+        public Builder identityClientId(@Nullable Output<String> identityClientId) {
             this.identityClientId = identityClientId;
             return this;
         }
 
         public Builder identityClientId(@Nullable String identityClientId) {
-            this.identityClientId = Input.ofNullable(identityClientId);
+            this.identityClientId = Output.ofNullable(identityClientId);
             return this;
         }
 
-        public Builder keyVaultId(@Nullable Input<String> keyVaultId) {
+        public Builder keyVaultId(@Nullable Output<String> keyVaultId) {
             this.keyVaultId = keyVaultId;
             return this;
         }
 
         public Builder keyVaultId(@Nullable String keyVaultId) {
-            this.keyVaultId = Input.ofNullable(keyVaultId);
+            this.keyVaultId = Output.ofNullable(keyVaultId);
             return this;
         }
 
-        public Builder negotiateClientCertificate(@Nullable Input<Boolean> negotiateClientCertificate) {
+        public Builder negotiateClientCertificate(@Nullable Output<Boolean> negotiateClientCertificate) {
             this.negotiateClientCertificate = negotiateClientCertificate;
             return this;
         }
 
         public Builder negotiateClientCertificate(@Nullable Boolean negotiateClientCertificate) {
-            this.negotiateClientCertificate = Input.ofNullable(negotiateClientCertificate);
+            this.negotiateClientCertificate = Output.ofNullable(negotiateClientCertificate);
             return this;
         }
 
-        public Builder type(Input<Either<String,HostnameType>> type) {
+        public Builder type(Output<Either<String,HostnameType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(Either<String,HostnameType> type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public HostnameConfigurationArgs build() {

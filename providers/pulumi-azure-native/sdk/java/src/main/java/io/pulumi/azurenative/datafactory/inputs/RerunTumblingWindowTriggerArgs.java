@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
@@ -26,10 +26,10 @@ public final class RerunTumblingWindowTriggerArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="annotations")
-      private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Output<List<Object>> annotations;
 
-    public Input<List<Object>> getAnnotations() {
-        return this.annotations == null ? Input.empty() : this.annotations;
+    public Output<List<Object>> getAnnotations() {
+        return this.annotations == null ? Output.empty() : this.annotations;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class RerunTumblingWindowTriggerArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -48,9 +48,9 @@ public final class RerunTumblingWindowTriggerArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="parentTrigger", required=true)
-      private final Input<Object> parentTrigger;
+      private final Output<Object> parentTrigger;
 
-    public Input<Object> getParentTrigger() {
+    public Output<Object> getParentTrigger() {
         return this.parentTrigger;
     }
 
@@ -59,9 +59,9 @@ public final class RerunTumblingWindowTriggerArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="requestedEndTime", required=true)
-      private final Input<String> requestedEndTime;
+      private final Output<String> requestedEndTime;
 
-    public Input<String> getRequestedEndTime() {
+    public Output<String> getRequestedEndTime() {
         return this.requestedEndTime;
     }
 
@@ -70,9 +70,9 @@ public final class RerunTumblingWindowTriggerArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="requestedStartTime", required=true)
-      private final Input<String> requestedStartTime;
+      private final Output<String> requestedStartTime;
 
-    public Input<String> getRequestedStartTime() {
+    public Output<String> getRequestedStartTime() {
         return this.requestedStartTime;
     }
 
@@ -81,9 +81,9 @@ public final class RerunTumblingWindowTriggerArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="rerunConcurrency", required=true)
-      private final Input<Integer> rerunConcurrency;
+      private final Output<Integer> rerunConcurrency;
 
-    public Input<Integer> getRerunConcurrency() {
+    public Output<Integer> getRerunConcurrency() {
         return this.rerunConcurrency;
     }
 
@@ -93,20 +93,20 @@ public final class RerunTumblingWindowTriggerArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public RerunTumblingWindowTriggerArgs(
-        @Nullable Input<List<Object>> annotations,
-        @Nullable Input<String> description,
-        Input<Object> parentTrigger,
-        Input<String> requestedEndTime,
-        Input<String> requestedStartTime,
-        Input<Integer> rerunConcurrency,
-        Input<String> type) {
+        @Nullable Output<List<Object>> annotations,
+        @Nullable Output<String> description,
+        Output<Object> parentTrigger,
+        Output<String> requestedEndTime,
+        Output<String> requestedStartTime,
+        Output<Integer> rerunConcurrency,
+        Output<String> type) {
         this.annotations = annotations;
         this.description = description;
         this.parentTrigger = Objects.requireNonNull(parentTrigger, "expected parameter 'parentTrigger' to be non-null");
@@ -117,13 +117,13 @@ public final class RerunTumblingWindowTriggerArgs extends io.pulumi.resources.Re
     }
 
     private RerunTumblingWindowTriggerArgs() {
-        this.annotations = Input.empty();
-        this.description = Input.empty();
-        this.parentTrigger = Input.empty();
-        this.requestedEndTime = Input.empty();
-        this.requestedStartTime = Input.empty();
-        this.rerunConcurrency = Input.empty();
-        this.type = Input.empty();
+        this.annotations = Output.empty();
+        this.description = Output.empty();
+        this.parentTrigger = Output.empty();
+        this.requestedEndTime = Output.empty();
+        this.requestedStartTime = Output.empty();
+        this.rerunConcurrency = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -135,13 +135,13 @@ public final class RerunTumblingWindowTriggerArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Object>> annotations;
-        private @Nullable Input<String> description;
-        private Input<Object> parentTrigger;
-        private Input<String> requestedEndTime;
-        private Input<String> requestedStartTime;
-        private Input<Integer> rerunConcurrency;
-        private Input<String> type;
+        private @Nullable Output<List<Object>> annotations;
+        private @Nullable Output<String> description;
+        private Output<Object> parentTrigger;
+        private Output<String> requestedEndTime;
+        private Output<String> requestedStartTime;
+        private Output<Integer> rerunConcurrency;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -158,73 +158,73 @@ public final class RerunTumblingWindowTriggerArgs extends io.pulumi.resources.Re
     	      this.type = defaults.type;
         }
 
-        public Builder annotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Output<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Input.ofNullable(annotations);
+            this.annotations = Output.ofNullable(annotations);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder parentTrigger(Input<Object> parentTrigger) {
+        public Builder parentTrigger(Output<Object> parentTrigger) {
             this.parentTrigger = Objects.requireNonNull(parentTrigger);
             return this;
         }
 
         public Builder parentTrigger(Object parentTrigger) {
-            this.parentTrigger = Input.of(Objects.requireNonNull(parentTrigger));
+            this.parentTrigger = Output.of(Objects.requireNonNull(parentTrigger));
             return this;
         }
 
-        public Builder requestedEndTime(Input<String> requestedEndTime) {
+        public Builder requestedEndTime(Output<String> requestedEndTime) {
             this.requestedEndTime = Objects.requireNonNull(requestedEndTime);
             return this;
         }
 
         public Builder requestedEndTime(String requestedEndTime) {
-            this.requestedEndTime = Input.of(Objects.requireNonNull(requestedEndTime));
+            this.requestedEndTime = Output.of(Objects.requireNonNull(requestedEndTime));
             return this;
         }
 
-        public Builder requestedStartTime(Input<String> requestedStartTime) {
+        public Builder requestedStartTime(Output<String> requestedStartTime) {
             this.requestedStartTime = Objects.requireNonNull(requestedStartTime);
             return this;
         }
 
         public Builder requestedStartTime(String requestedStartTime) {
-            this.requestedStartTime = Input.of(Objects.requireNonNull(requestedStartTime));
+            this.requestedStartTime = Output.of(Objects.requireNonNull(requestedStartTime));
             return this;
         }
 
-        public Builder rerunConcurrency(Input<Integer> rerunConcurrency) {
+        public Builder rerunConcurrency(Output<Integer> rerunConcurrency) {
             this.rerunConcurrency = Objects.requireNonNull(rerunConcurrency);
             return this;
         }
 
         public Builder rerunConcurrency(Integer rerunConcurrency) {
-            this.rerunConcurrency = Input.of(Objects.requireNonNull(rerunConcurrency));
+            this.rerunConcurrency = Output.of(Objects.requireNonNull(rerunConcurrency));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public RerunTumblingWindowTriggerArgs build() {

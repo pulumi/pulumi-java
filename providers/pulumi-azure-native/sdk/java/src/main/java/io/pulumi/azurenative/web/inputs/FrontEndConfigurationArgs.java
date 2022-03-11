@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.enums.FrontEndServiceType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,18 +15,18 @@ public final class FrontEndConfigurationArgs extends io.pulumi.resources.Resourc
     public static final FrontEndConfigurationArgs Empty = new FrontEndConfigurationArgs();
 
     @InputImport(name="kind")
-      private final @Nullable Input<FrontEndServiceType> kind;
+      private final @Nullable Output<FrontEndServiceType> kind;
 
-    public Input<FrontEndServiceType> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<FrontEndServiceType> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
-    public FrontEndConfigurationArgs(@Nullable Input<FrontEndServiceType> kind) {
+    public FrontEndConfigurationArgs(@Nullable Output<FrontEndServiceType> kind) {
         this.kind = kind;
     }
 
     private FrontEndConfigurationArgs() {
-        this.kind = Input.empty();
+        this.kind = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class FrontEndConfigurationArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<FrontEndServiceType> kind;
+        private @Nullable Output<FrontEndServiceType> kind;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class FrontEndConfigurationArgs extends io.pulumi.resources.Resourc
     	      this.kind = defaults.kind;
         }
 
-        public Builder kind(@Nullable Input<FrontEndServiceType> kind) {
+        public Builder kind(@Nullable Output<FrontEndServiceType> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable FrontEndServiceType kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
         public FrontEndConfigurationArgs build() {

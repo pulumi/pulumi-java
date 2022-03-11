@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.AllocationSpecificSKUAllocationReservedInstancePropertiesArgs;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class FutureReservationSpecificSKUPropertiesArgs extends io.pulumi.
      * 
      */
     @InputImport(name="instanceProperties")
-      private final @Nullable Input<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties;
+      private final @Nullable Output<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties;
 
-    public Input<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> getInstanceProperties() {
-        return this.instanceProperties == null ? Input.empty() : this.instanceProperties;
+    public Output<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> getInstanceProperties() {
+        return this.instanceProperties == null ? Output.empty() : this.instanceProperties;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class FutureReservationSpecificSKUPropertiesArgs extends io.pulumi.
      * 
      */
     @InputImport(name="totalCount")
-      private final @Nullable Input<String> totalCount;
+      private final @Nullable Output<String> totalCount;
 
-    public Input<String> getTotalCount() {
-        return this.totalCount == null ? Input.empty() : this.totalCount;
+    public Output<String> getTotalCount() {
+        return this.totalCount == null ? Output.empty() : this.totalCount;
     }
 
     public FutureReservationSpecificSKUPropertiesArgs(
-        @Nullable Input<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties,
-        @Nullable Input<String> totalCount) {
+        @Nullable Output<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties,
+        @Nullable Output<String> totalCount) {
         this.instanceProperties = instanceProperties;
         this.totalCount = totalCount;
     }
 
     private FutureReservationSpecificSKUPropertiesArgs() {
-        this.instanceProperties = Input.empty();
-        this.totalCount = Input.empty();
+        this.instanceProperties = Output.empty();
+        this.totalCount = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class FutureReservationSpecificSKUPropertiesArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties;
-        private @Nullable Input<String> totalCount;
+        private @Nullable Output<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties;
+        private @Nullable Output<String> totalCount;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class FutureReservationSpecificSKUPropertiesArgs extends io.pulumi.
     	      this.totalCount = defaults.totalCount;
         }
 
-        public Builder instanceProperties(@Nullable Input<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties) {
+        public Builder instanceProperties(@Nullable Output<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties) {
             this.instanceProperties = instanceProperties;
             return this;
         }
 
         public Builder instanceProperties(@Nullable AllocationSpecificSKUAllocationReservedInstancePropertiesArgs instanceProperties) {
-            this.instanceProperties = Input.ofNullable(instanceProperties);
+            this.instanceProperties = Output.ofNullable(instanceProperties);
             return this;
         }
 
-        public Builder totalCount(@Nullable Input<String> totalCount) {
+        public Builder totalCount(@Nullable Output<String> totalCount) {
             this.totalCount = totalCount;
             return this;
         }
 
         public Builder totalCount(@Nullable String totalCount) {
-            this.totalCount = Input.ofNullable(totalCount);
+            this.totalCount = Output.ofNullable(totalCount);
             return this;
         }
         public FutureReservationSpecificSKUPropertiesArgs build() {

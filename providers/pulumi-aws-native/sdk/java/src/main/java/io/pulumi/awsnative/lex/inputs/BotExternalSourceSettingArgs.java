@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.inputs.BotGrammarSlotTypeSettingArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class BotExternalSourceSettingArgs extends io.pulumi.resources.Reso
     public static final BotExternalSourceSettingArgs Empty = new BotExternalSourceSettingArgs();
 
     @InputImport(name="grammarSlotTypeSetting")
-      private final @Nullable Input<BotGrammarSlotTypeSettingArgs> grammarSlotTypeSetting;
+      private final @Nullable Output<BotGrammarSlotTypeSettingArgs> grammarSlotTypeSetting;
 
-    public Input<BotGrammarSlotTypeSettingArgs> getGrammarSlotTypeSetting() {
-        return this.grammarSlotTypeSetting == null ? Input.empty() : this.grammarSlotTypeSetting;
+    public Output<BotGrammarSlotTypeSettingArgs> getGrammarSlotTypeSetting() {
+        return this.grammarSlotTypeSetting == null ? Output.empty() : this.grammarSlotTypeSetting;
     }
 
-    public BotExternalSourceSettingArgs(@Nullable Input<BotGrammarSlotTypeSettingArgs> grammarSlotTypeSetting) {
+    public BotExternalSourceSettingArgs(@Nullable Output<BotGrammarSlotTypeSettingArgs> grammarSlotTypeSetting) {
         this.grammarSlotTypeSetting = grammarSlotTypeSetting;
     }
 
     private BotExternalSourceSettingArgs() {
-        this.grammarSlotTypeSetting = Input.empty();
+        this.grammarSlotTypeSetting = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class BotExternalSourceSettingArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<BotGrammarSlotTypeSettingArgs> grammarSlotTypeSetting;
+        private @Nullable Output<BotGrammarSlotTypeSettingArgs> grammarSlotTypeSetting;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class BotExternalSourceSettingArgs extends io.pulumi.resources.Reso
     	      this.grammarSlotTypeSetting = defaults.grammarSlotTypeSetting;
         }
 
-        public Builder grammarSlotTypeSetting(@Nullable Input<BotGrammarSlotTypeSettingArgs> grammarSlotTypeSetting) {
+        public Builder grammarSlotTypeSetting(@Nullable Output<BotGrammarSlotTypeSettingArgs> grammarSlotTypeSetting) {
             this.grammarSlotTypeSetting = grammarSlotTypeSetting;
             return this;
         }
 
         public Builder grammarSlotTypeSetting(@Nullable BotGrammarSlotTypeSettingArgs grammarSlotTypeSetting) {
-            this.grammarSlotTypeSetting = Input.ofNullable(grammarSlotTypeSetting);
+            this.grammarSlotTypeSetting = Output.ofNullable(grammarSlotTypeSetting);
             return this;
         }
         public BotExternalSourceSettingArgs build() {

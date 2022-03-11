@@ -6,7 +6,7 @@ package io.pulumi.aws.s3;
 import io.pulumi.aws.s3.inputs.BucketNotificationLambdaFunctionArgs;
 import io.pulumi.aws.s3.inputs.BucketNotificationQueueArgs;
 import io.pulumi.aws.s3.inputs.BucketNotificationTopicArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class BucketNotificationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="bucket", required=true)
-      private final Input<String> bucket;
+      private final Output<String> bucket;
 
-    public Input<String> getBucket() {
+    public Output<String> getBucket() {
         return this.bucket;
     }
 
@@ -35,10 +35,10 @@ public final class BucketNotificationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="eventbridge")
-      private final @Nullable Input<Boolean> eventbridge;
+      private final @Nullable Output<Boolean> eventbridge;
 
-    public Input<Boolean> getEventbridge() {
-        return this.eventbridge == null ? Input.empty() : this.eventbridge;
+    public Output<Boolean> getEventbridge() {
+        return this.eventbridge == null ? Output.empty() : this.eventbridge;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class BucketNotificationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="lambdaFunctions")
-      private final @Nullable Input<List<BucketNotificationLambdaFunctionArgs>> lambdaFunctions;
+      private final @Nullable Output<List<BucketNotificationLambdaFunctionArgs>> lambdaFunctions;
 
-    public Input<List<BucketNotificationLambdaFunctionArgs>> getLambdaFunctions() {
-        return this.lambdaFunctions == null ? Input.empty() : this.lambdaFunctions;
+    public Output<List<BucketNotificationLambdaFunctionArgs>> getLambdaFunctions() {
+        return this.lambdaFunctions == null ? Output.empty() : this.lambdaFunctions;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class BucketNotificationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="queues")
-      private final @Nullable Input<List<BucketNotificationQueueArgs>> queues;
+      private final @Nullable Output<List<BucketNotificationQueueArgs>> queues;
 
-    public Input<List<BucketNotificationQueueArgs>> getQueues() {
-        return this.queues == null ? Input.empty() : this.queues;
+    public Output<List<BucketNotificationQueueArgs>> getQueues() {
+        return this.queues == null ? Output.empty() : this.queues;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class BucketNotificationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="topics")
-      private final @Nullable Input<List<BucketNotificationTopicArgs>> topics;
+      private final @Nullable Output<List<BucketNotificationTopicArgs>> topics;
 
-    public Input<List<BucketNotificationTopicArgs>> getTopics() {
-        return this.topics == null ? Input.empty() : this.topics;
+    public Output<List<BucketNotificationTopicArgs>> getTopics() {
+        return this.topics == null ? Output.empty() : this.topics;
     }
 
     public BucketNotificationArgs(
-        Input<String> bucket,
-        @Nullable Input<Boolean> eventbridge,
-        @Nullable Input<List<BucketNotificationLambdaFunctionArgs>> lambdaFunctions,
-        @Nullable Input<List<BucketNotificationQueueArgs>> queues,
-        @Nullable Input<List<BucketNotificationTopicArgs>> topics) {
+        Output<String> bucket,
+        @Nullable Output<Boolean> eventbridge,
+        @Nullable Output<List<BucketNotificationLambdaFunctionArgs>> lambdaFunctions,
+        @Nullable Output<List<BucketNotificationQueueArgs>> queues,
+        @Nullable Output<List<BucketNotificationTopicArgs>> topics) {
         this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
         this.eventbridge = eventbridge;
         this.lambdaFunctions = lambdaFunctions;
@@ -88,11 +88,11 @@ public final class BucketNotificationArgs extends io.pulumi.resources.ResourceAr
     }
 
     private BucketNotificationArgs() {
-        this.bucket = Input.empty();
-        this.eventbridge = Input.empty();
-        this.lambdaFunctions = Input.empty();
-        this.queues = Input.empty();
-        this.topics = Input.empty();
+        this.bucket = Output.empty();
+        this.eventbridge = Output.empty();
+        this.lambdaFunctions = Output.empty();
+        this.queues = Output.empty();
+        this.topics = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class BucketNotificationArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> bucket;
-        private @Nullable Input<Boolean> eventbridge;
-        private @Nullable Input<List<BucketNotificationLambdaFunctionArgs>> lambdaFunctions;
-        private @Nullable Input<List<BucketNotificationQueueArgs>> queues;
-        private @Nullable Input<List<BucketNotificationTopicArgs>> topics;
+        private Output<String> bucket;
+        private @Nullable Output<Boolean> eventbridge;
+        private @Nullable Output<List<BucketNotificationLambdaFunctionArgs>> lambdaFunctions;
+        private @Nullable Output<List<BucketNotificationQueueArgs>> queues;
+        private @Nullable Output<List<BucketNotificationTopicArgs>> topics;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class BucketNotificationArgs extends io.pulumi.resources.ResourceAr
     	      this.topics = defaults.topics;
         }
 
-        public Builder bucket(Input<String> bucket) {
+        public Builder bucket(Output<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Input.of(Objects.requireNonNull(bucket));
+            this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder eventbridge(@Nullable Input<Boolean> eventbridge) {
+        public Builder eventbridge(@Nullable Output<Boolean> eventbridge) {
             this.eventbridge = eventbridge;
             return this;
         }
 
         public Builder eventbridge(@Nullable Boolean eventbridge) {
-            this.eventbridge = Input.ofNullable(eventbridge);
+            this.eventbridge = Output.ofNullable(eventbridge);
             return this;
         }
 
-        public Builder lambdaFunctions(@Nullable Input<List<BucketNotificationLambdaFunctionArgs>> lambdaFunctions) {
+        public Builder lambdaFunctions(@Nullable Output<List<BucketNotificationLambdaFunctionArgs>> lambdaFunctions) {
             this.lambdaFunctions = lambdaFunctions;
             return this;
         }
 
         public Builder lambdaFunctions(@Nullable List<BucketNotificationLambdaFunctionArgs> lambdaFunctions) {
-            this.lambdaFunctions = Input.ofNullable(lambdaFunctions);
+            this.lambdaFunctions = Output.ofNullable(lambdaFunctions);
             return this;
         }
 
-        public Builder queues(@Nullable Input<List<BucketNotificationQueueArgs>> queues) {
+        public Builder queues(@Nullable Output<List<BucketNotificationQueueArgs>> queues) {
             this.queues = queues;
             return this;
         }
 
         public Builder queues(@Nullable List<BucketNotificationQueueArgs> queues) {
-            this.queues = Input.ofNullable(queues);
+            this.queues = Output.ofNullable(queues);
             return this;
         }
 
-        public Builder topics(@Nullable Input<List<BucketNotificationTopicArgs>> topics) {
+        public Builder topics(@Nullable Output<List<BucketNotificationTopicArgs>> topics) {
             this.topics = topics;
             return this;
         }
 
         public Builder topics(@Nullable List<BucketNotificationTopicArgs> topics) {
-            this.topics = Input.ofNullable(topics);
+            this.topics = Output.ofNullable(topics);
             return this;
         }
         public BucketNotificationArgs build() {

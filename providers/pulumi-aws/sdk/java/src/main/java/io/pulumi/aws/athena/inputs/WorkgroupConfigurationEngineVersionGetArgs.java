@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.athena.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class WorkgroupConfigurationEngineVersionGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="effectiveEngineVersion")
-      private final @Nullable Input<String> effectiveEngineVersion;
+      private final @Nullable Output<String> effectiveEngineVersion;
 
-    public Input<String> getEffectiveEngineVersion() {
-        return this.effectiveEngineVersion == null ? Input.empty() : this.effectiveEngineVersion;
+    public Output<String> getEffectiveEngineVersion() {
+        return this.effectiveEngineVersion == null ? Output.empty() : this.effectiveEngineVersion;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class WorkgroupConfigurationEngineVersionGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="selectedEngineVersion")
-      private final @Nullable Input<String> selectedEngineVersion;
+      private final @Nullable Output<String> selectedEngineVersion;
 
-    public Input<String> getSelectedEngineVersion() {
-        return this.selectedEngineVersion == null ? Input.empty() : this.selectedEngineVersion;
+    public Output<String> getSelectedEngineVersion() {
+        return this.selectedEngineVersion == null ? Output.empty() : this.selectedEngineVersion;
     }
 
     public WorkgroupConfigurationEngineVersionGetArgs(
-        @Nullable Input<String> effectiveEngineVersion,
-        @Nullable Input<String> selectedEngineVersion) {
+        @Nullable Output<String> effectiveEngineVersion,
+        @Nullable Output<String> selectedEngineVersion) {
         this.effectiveEngineVersion = effectiveEngineVersion;
         this.selectedEngineVersion = selectedEngineVersion;
     }
 
     private WorkgroupConfigurationEngineVersionGetArgs() {
-        this.effectiveEngineVersion = Input.empty();
-        this.selectedEngineVersion = Input.empty();
+        this.effectiveEngineVersion = Output.empty();
+        this.selectedEngineVersion = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class WorkgroupConfigurationEngineVersionGetArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> effectiveEngineVersion;
-        private @Nullable Input<String> selectedEngineVersion;
+        private @Nullable Output<String> effectiveEngineVersion;
+        private @Nullable Output<String> selectedEngineVersion;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class WorkgroupConfigurationEngineVersionGetArgs extends io.pulumi.
     	      this.selectedEngineVersion = defaults.selectedEngineVersion;
         }
 
-        public Builder effectiveEngineVersion(@Nullable Input<String> effectiveEngineVersion) {
+        public Builder effectiveEngineVersion(@Nullable Output<String> effectiveEngineVersion) {
             this.effectiveEngineVersion = effectiveEngineVersion;
             return this;
         }
 
         public Builder effectiveEngineVersion(@Nullable String effectiveEngineVersion) {
-            this.effectiveEngineVersion = Input.ofNullable(effectiveEngineVersion);
+            this.effectiveEngineVersion = Output.ofNullable(effectiveEngineVersion);
             return this;
         }
 
-        public Builder selectedEngineVersion(@Nullable Input<String> selectedEngineVersion) {
+        public Builder selectedEngineVersion(@Nullable Output<String> selectedEngineVersion) {
             this.selectedEngineVersion = selectedEngineVersion;
             return this;
         }
 
         public Builder selectedEngineVersion(@Nullable String selectedEngineVersion) {
-            this.selectedEngineVersion = Input.ofNullable(selectedEngineVersion);
+            this.selectedEngineVersion = Output.ofNullable(selectedEngineVersion);
             return this;
         }
         public WorkgroupConfigurationEngineVersionGetArgs build() {

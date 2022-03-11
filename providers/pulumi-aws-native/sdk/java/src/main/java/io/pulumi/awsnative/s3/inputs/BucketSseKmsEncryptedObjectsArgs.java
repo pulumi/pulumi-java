@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.enums.BucketSseKmsEncryptedObjectsStatus;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -22,18 +22,18 @@ public final class BucketSseKmsEncryptedObjectsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="status", required=true)
-      private final Input<BucketSseKmsEncryptedObjectsStatus> status;
+      private final Output<BucketSseKmsEncryptedObjectsStatus> status;
 
-    public Input<BucketSseKmsEncryptedObjectsStatus> getStatus() {
+    public Output<BucketSseKmsEncryptedObjectsStatus> getStatus() {
         return this.status;
     }
 
-    public BucketSseKmsEncryptedObjectsArgs(Input<BucketSseKmsEncryptedObjectsStatus> status) {
+    public BucketSseKmsEncryptedObjectsArgs(Output<BucketSseKmsEncryptedObjectsStatus> status) {
         this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
     }
 
     private BucketSseKmsEncryptedObjectsArgs() {
-        this.status = Input.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class BucketSseKmsEncryptedObjectsArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<BucketSseKmsEncryptedObjectsStatus> status;
+        private Output<BucketSseKmsEncryptedObjectsStatus> status;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class BucketSseKmsEncryptedObjectsArgs extends io.pulumi.resources.
     	      this.status = defaults.status;
         }
 
-        public Builder status(Input<BucketSseKmsEncryptedObjectsStatus> status) {
+        public Builder status(Output<BucketSseKmsEncryptedObjectsStatus> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
         public Builder status(BucketSseKmsEncryptedObjectsStatus status) {
-            this.status = Input.of(Objects.requireNonNull(status));
+            this.status = Output.of(Objects.requireNonNull(status));
             return this;
         }
         public BucketSseKmsEncryptedObjectsArgs build() {

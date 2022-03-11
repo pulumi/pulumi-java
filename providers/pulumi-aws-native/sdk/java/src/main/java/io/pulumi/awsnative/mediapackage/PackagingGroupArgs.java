@@ -6,7 +6,7 @@ package io.pulumi.awsnative.mediapackage;
 import io.pulumi.awsnative.mediapackage.inputs.PackagingGroupAuthorizationArgs;
 import io.pulumi.awsnative.mediapackage.inputs.PackagingGroupLogConfigurationArgs;
 import io.pulumi.awsnative.mediapackage.inputs.PackagingGroupTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -22,10 +22,10 @@ public final class PackagingGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorization")
-      private final @Nullable Input<PackagingGroupAuthorizationArgs> authorization;
+      private final @Nullable Output<PackagingGroupAuthorizationArgs> authorization;
 
-    public Input<PackagingGroupAuthorizationArgs> getAuthorization() {
-        return this.authorization == null ? Input.empty() : this.authorization;
+    public Output<PackagingGroupAuthorizationArgs> getAuthorization() {
+        return this.authorization == null ? Output.empty() : this.authorization;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class PackagingGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="egressAccessLogs")
-      private final @Nullable Input<PackagingGroupLogConfigurationArgs> egressAccessLogs;
+      private final @Nullable Output<PackagingGroupLogConfigurationArgs> egressAccessLogs;
 
-    public Input<PackagingGroupLogConfigurationArgs> getEgressAccessLogs() {
-        return this.egressAccessLogs == null ? Input.empty() : this.egressAccessLogs;
+    public Output<PackagingGroupLogConfigurationArgs> getEgressAccessLogs() {
+        return this.egressAccessLogs == null ? Output.empty() : this.egressAccessLogs;
     }
 
     /**
@@ -44,25 +44,25 @@ public final class PackagingGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<PackagingGroupTagArgs>> tags;
+      private final @Nullable Output<List<PackagingGroupTagArgs>> tags;
 
-    public Input<List<PackagingGroupTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<PackagingGroupTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public PackagingGroupArgs(
-        @Nullable Input<PackagingGroupAuthorizationArgs> authorization,
-        @Nullable Input<PackagingGroupLogConfigurationArgs> egressAccessLogs,
-        @Nullable Input<List<PackagingGroupTagArgs>> tags) {
+        @Nullable Output<PackagingGroupAuthorizationArgs> authorization,
+        @Nullable Output<PackagingGroupLogConfigurationArgs> egressAccessLogs,
+        @Nullable Output<List<PackagingGroupTagArgs>> tags) {
         this.authorization = authorization;
         this.egressAccessLogs = egressAccessLogs;
         this.tags = tags;
     }
 
     private PackagingGroupArgs() {
-        this.authorization = Input.empty();
-        this.egressAccessLogs = Input.empty();
-        this.tags = Input.empty();
+        this.authorization = Output.empty();
+        this.egressAccessLogs = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class PackagingGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<PackagingGroupAuthorizationArgs> authorization;
-        private @Nullable Input<PackagingGroupLogConfigurationArgs> egressAccessLogs;
-        private @Nullable Input<List<PackagingGroupTagArgs>> tags;
+        private @Nullable Output<PackagingGroupAuthorizationArgs> authorization;
+        private @Nullable Output<PackagingGroupLogConfigurationArgs> egressAccessLogs;
+        private @Nullable Output<List<PackagingGroupTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class PackagingGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder authorization(@Nullable Input<PackagingGroupAuthorizationArgs> authorization) {
+        public Builder authorization(@Nullable Output<PackagingGroupAuthorizationArgs> authorization) {
             this.authorization = authorization;
             return this;
         }
 
         public Builder authorization(@Nullable PackagingGroupAuthorizationArgs authorization) {
-            this.authorization = Input.ofNullable(authorization);
+            this.authorization = Output.ofNullable(authorization);
             return this;
         }
 
-        public Builder egressAccessLogs(@Nullable Input<PackagingGroupLogConfigurationArgs> egressAccessLogs) {
+        public Builder egressAccessLogs(@Nullable Output<PackagingGroupLogConfigurationArgs> egressAccessLogs) {
             this.egressAccessLogs = egressAccessLogs;
             return this;
         }
 
         public Builder egressAccessLogs(@Nullable PackagingGroupLogConfigurationArgs egressAccessLogs) {
-            this.egressAccessLogs = Input.ofNullable(egressAccessLogs);
+            this.egressAccessLogs = Output.ofNullable(egressAccessLogs);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<PackagingGroupTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<PackagingGroupTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<PackagingGroupTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public PackagingGroupArgs build() {

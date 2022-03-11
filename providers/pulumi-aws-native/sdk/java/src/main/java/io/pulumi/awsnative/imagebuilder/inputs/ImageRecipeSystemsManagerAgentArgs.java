@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.imagebuilder.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ImageRecipeSystemsManagerAgentArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="uninstallAfterBuild")
-      private final @Nullable Input<Boolean> uninstallAfterBuild;
+      private final @Nullable Output<Boolean> uninstallAfterBuild;
 
-    public Input<Boolean> getUninstallAfterBuild() {
-        return this.uninstallAfterBuild == null ? Input.empty() : this.uninstallAfterBuild;
+    public Output<Boolean> getUninstallAfterBuild() {
+        return this.uninstallAfterBuild == null ? Output.empty() : this.uninstallAfterBuild;
     }
 
-    public ImageRecipeSystemsManagerAgentArgs(@Nullable Input<Boolean> uninstallAfterBuild) {
+    public ImageRecipeSystemsManagerAgentArgs(@Nullable Output<Boolean> uninstallAfterBuild) {
         this.uninstallAfterBuild = uninstallAfterBuild;
     }
 
     private ImageRecipeSystemsManagerAgentArgs() {
-        this.uninstallAfterBuild = Input.empty();
+        this.uninstallAfterBuild = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ImageRecipeSystemsManagerAgentArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> uninstallAfterBuild;
+        private @Nullable Output<Boolean> uninstallAfterBuild;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ImageRecipeSystemsManagerAgentArgs extends io.pulumi.resource
     	      this.uninstallAfterBuild = defaults.uninstallAfterBuild;
         }
 
-        public Builder uninstallAfterBuild(@Nullable Input<Boolean> uninstallAfterBuild) {
+        public Builder uninstallAfterBuild(@Nullable Output<Boolean> uninstallAfterBuild) {
             this.uninstallAfterBuild = uninstallAfterBuild;
             return this;
         }
 
         public Builder uninstallAfterBuild(@Nullable Boolean uninstallAfterBuild) {
-            this.uninstallAfterBuild = Input.ofNullable(uninstallAfterBuild);
+            this.uninstallAfterBuild = Output.ofNullable(uninstallAfterBuild);
             return this;
         }
         public ImageRecipeSystemsManagerAgentArgs build() {

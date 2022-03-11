@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.bigquery;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -158,14 +157,14 @@ public class IamPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IamPolicy(String name, IamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:bigquery/iamPolicy:IamPolicy", name, args == null ? IamPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:bigquery/iamPolicy:IamPolicy", name, args == null ? IamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private IamPolicy(String name, Input<String> id, @Nullable IamPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private IamPolicy(String name, Output<String> id, @Nullable IamPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:bigquery/iamPolicy:IamPolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -181,7 +180,7 @@ public class IamPolicy extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static IamPolicy get(String name, Input<String> id, @Nullable IamPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static IamPolicy get(String name, Output<String> id, @Nullable IamPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IamPolicy(name, id, state, options);
     }
 }

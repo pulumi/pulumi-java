@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.healthcare.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.healthcare.inputs.DicomStoreNotificationConfigGetArgs;
 import io.pulumi.gcp.healthcare.inputs.DicomStoreStreamConfigGetArgs;
@@ -24,10 +24,10 @@ public final class DicomStoreState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataset")
-      private final @Nullable Input<String> dataset;
+      private final @Nullable Output<String> dataset;
 
-    public Input<String> getDataset() {
-        return this.dataset == null ? Input.empty() : this.dataset;
+    public Output<String> getDataset() {
+        return this.dataset == null ? Output.empty() : this.dataset;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class DicomStoreState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class DicomStoreState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class DicomStoreState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationConfig")
-      private final @Nullable Input<DicomStoreNotificationConfigGetArgs> notificationConfig;
+      private final @Nullable Output<DicomStoreNotificationConfigGetArgs> notificationConfig;
 
-    public Input<DicomStoreNotificationConfigGetArgs> getNotificationConfig() {
-        return this.notificationConfig == null ? Input.empty() : this.notificationConfig;
+    public Output<DicomStoreNotificationConfigGetArgs> getNotificationConfig() {
+        return this.notificationConfig == null ? Output.empty() : this.notificationConfig;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class DicomStoreState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfLink")
-      private final @Nullable Input<String> selfLink;
+      private final @Nullable Output<String> selfLink;
 
-    public Input<String> getSelfLink() {
-        return this.selfLink == null ? Input.empty() : this.selfLink;
+    public Output<String> getSelfLink() {
+        return this.selfLink == null ? Output.empty() : this.selfLink;
     }
 
     /**
@@ -90,19 +90,19 @@ public final class DicomStoreState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="streamConfigs")
-      private final @Nullable Input<List<DicomStoreStreamConfigGetArgs>> streamConfigs;
+      private final @Nullable Output<List<DicomStoreStreamConfigGetArgs>> streamConfigs;
 
-    public Input<List<DicomStoreStreamConfigGetArgs>> getStreamConfigs() {
-        return this.streamConfigs == null ? Input.empty() : this.streamConfigs;
+    public Output<List<DicomStoreStreamConfigGetArgs>> getStreamConfigs() {
+        return this.streamConfigs == null ? Output.empty() : this.streamConfigs;
     }
 
     public DicomStoreState(
-        @Nullable Input<String> dataset,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> name,
-        @Nullable Input<DicomStoreNotificationConfigGetArgs> notificationConfig,
-        @Nullable Input<String> selfLink,
-        @Nullable Input<List<DicomStoreStreamConfigGetArgs>> streamConfigs) {
+        @Nullable Output<String> dataset,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> name,
+        @Nullable Output<DicomStoreNotificationConfigGetArgs> notificationConfig,
+        @Nullable Output<String> selfLink,
+        @Nullable Output<List<DicomStoreStreamConfigGetArgs>> streamConfigs) {
         this.dataset = dataset;
         this.labels = labels;
         this.name = name;
@@ -112,12 +112,12 @@ public final class DicomStoreState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DicomStoreState() {
-        this.dataset = Input.empty();
-        this.labels = Input.empty();
-        this.name = Input.empty();
-        this.notificationConfig = Input.empty();
-        this.selfLink = Input.empty();
-        this.streamConfigs = Input.empty();
+        this.dataset = Output.empty();
+        this.labels = Output.empty();
+        this.name = Output.empty();
+        this.notificationConfig = Output.empty();
+        this.selfLink = Output.empty();
+        this.streamConfigs = Output.empty();
     }
 
     public static Builder builder() {
@@ -129,12 +129,12 @@ public final class DicomStoreState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> dataset;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> name;
-        private @Nullable Input<DicomStoreNotificationConfigGetArgs> notificationConfig;
-        private @Nullable Input<String> selfLink;
-        private @Nullable Input<List<DicomStoreStreamConfigGetArgs>> streamConfigs;
+        private @Nullable Output<String> dataset;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> name;
+        private @Nullable Output<DicomStoreNotificationConfigGetArgs> notificationConfig;
+        private @Nullable Output<String> selfLink;
+        private @Nullable Output<List<DicomStoreStreamConfigGetArgs>> streamConfigs;
 
         public Builder() {
     	      // Empty
@@ -150,63 +150,63 @@ public final class DicomStoreState extends io.pulumi.resources.ResourceArgs {
     	      this.streamConfigs = defaults.streamConfigs;
         }
 
-        public Builder dataset(@Nullable Input<String> dataset) {
+        public Builder dataset(@Nullable Output<String> dataset) {
             this.dataset = dataset;
             return this;
         }
 
         public Builder dataset(@Nullable String dataset) {
-            this.dataset = Input.ofNullable(dataset);
+            this.dataset = Output.ofNullable(dataset);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder notificationConfig(@Nullable Input<DicomStoreNotificationConfigGetArgs> notificationConfig) {
+        public Builder notificationConfig(@Nullable Output<DicomStoreNotificationConfigGetArgs> notificationConfig) {
             this.notificationConfig = notificationConfig;
             return this;
         }
 
         public Builder notificationConfig(@Nullable DicomStoreNotificationConfigGetArgs notificationConfig) {
-            this.notificationConfig = Input.ofNullable(notificationConfig);
+            this.notificationConfig = Output.ofNullable(notificationConfig);
             return this;
         }
 
-        public Builder selfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Input.ofNullable(selfLink);
+            this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
 
-        public Builder streamConfigs(@Nullable Input<List<DicomStoreStreamConfigGetArgs>> streamConfigs) {
+        public Builder streamConfigs(@Nullable Output<List<DicomStoreStreamConfigGetArgs>> streamConfigs) {
             this.streamConfigs = streamConfigs;
             return this;
         }
 
         public Builder streamConfigs(@Nullable List<DicomStoreStreamConfigGetArgs> streamConfigs) {
-            this.streamConfigs = Input.ofNullable(streamConfigs);
+            this.streamConfigs = Output.ofNullable(streamConfigs);
             return this;
         }
         public DicomStoreState build() {

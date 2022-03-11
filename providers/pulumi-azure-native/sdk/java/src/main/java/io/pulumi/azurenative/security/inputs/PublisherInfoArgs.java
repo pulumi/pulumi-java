@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class PublisherInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="binaryName")
-      private final @Nullable Input<String> binaryName;
+      private final @Nullable Output<String> binaryName;
 
-    public Input<String> getBinaryName() {
-        return this.binaryName == null ? Input.empty() : this.binaryName;
+    public Output<String> getBinaryName() {
+        return this.binaryName == null ? Output.empty() : this.binaryName;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class PublisherInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="productName")
-      private final @Nullable Input<String> productName;
+      private final @Nullable Output<String> productName;
 
-    public Input<String> getProductName() {
-        return this.productName == null ? Input.empty() : this.productName;
+    public Output<String> getProductName() {
+        return this.productName == null ? Output.empty() : this.productName;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class PublisherInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publisherName")
-      private final @Nullable Input<String> publisherName;
+      private final @Nullable Output<String> publisherName;
 
-    public Input<String> getPublisherName() {
-        return this.publisherName == null ? Input.empty() : this.publisherName;
+    public Output<String> getPublisherName() {
+        return this.publisherName == null ? Output.empty() : this.publisherName;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class PublisherInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public PublisherInfoArgs(
-        @Nullable Input<String> binaryName,
-        @Nullable Input<String> productName,
-        @Nullable Input<String> publisherName,
-        @Nullable Input<String> version) {
+        @Nullable Output<String> binaryName,
+        @Nullable Output<String> productName,
+        @Nullable Output<String> publisherName,
+        @Nullable Output<String> version) {
         this.binaryName = binaryName;
         this.productName = productName;
         this.publisherName = publisherName;
@@ -74,10 +74,10 @@ public final class PublisherInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PublisherInfoArgs() {
-        this.binaryName = Input.empty();
-        this.productName = Input.empty();
-        this.publisherName = Input.empty();
-        this.version = Input.empty();
+        this.binaryName = Output.empty();
+        this.productName = Output.empty();
+        this.publisherName = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class PublisherInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> binaryName;
-        private @Nullable Input<String> productName;
-        private @Nullable Input<String> publisherName;
-        private @Nullable Input<String> version;
+        private @Nullable Output<String> binaryName;
+        private @Nullable Output<String> productName;
+        private @Nullable Output<String> publisherName;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class PublisherInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder binaryName(@Nullable Input<String> binaryName) {
+        public Builder binaryName(@Nullable Output<String> binaryName) {
             this.binaryName = binaryName;
             return this;
         }
 
         public Builder binaryName(@Nullable String binaryName) {
-            this.binaryName = Input.ofNullable(binaryName);
+            this.binaryName = Output.ofNullable(binaryName);
             return this;
         }
 
-        public Builder productName(@Nullable Input<String> productName) {
+        public Builder productName(@Nullable Output<String> productName) {
             this.productName = productName;
             return this;
         }
 
         public Builder productName(@Nullable String productName) {
-            this.productName = Input.ofNullable(productName);
+            this.productName = Output.ofNullable(productName);
             return this;
         }
 
-        public Builder publisherName(@Nullable Input<String> publisherName) {
+        public Builder publisherName(@Nullable Output<String> publisherName) {
             this.publisherName = publisherName;
             return this;
         }
 
         public Builder publisherName(@Nullable String publisherName) {
-            this.publisherName = Input.ofNullable(publisherName);
+            this.publisherName = Output.ofNullable(publisherName);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public PublisherInfoArgs build() {

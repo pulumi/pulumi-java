@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appsync.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class DataSourceElasticsearchConfigGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="endpoint", required=true)
-      private final Input<String> endpoint;
+      private final Output<String> endpoint;
 
-    public Input<String> getEndpoint() {
+    public Output<String> getEndpoint() {
         return this.endpoint;
     }
 
@@ -30,22 +30,22 @@ public final class DataSourceElasticsearchConfigGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     public DataSourceElasticsearchConfigGetArgs(
-        Input<String> endpoint,
-        @Nullable Input<String> region) {
+        Output<String> endpoint,
+        @Nullable Output<String> region) {
         this.endpoint = Objects.requireNonNull(endpoint, "expected parameter 'endpoint' to be non-null");
         this.region = region;
     }
 
     private DataSourceElasticsearchConfigGetArgs() {
-        this.endpoint = Input.empty();
-        this.region = Input.empty();
+        this.endpoint = Output.empty();
+        this.region = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class DataSourceElasticsearchConfigGetArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private Input<String> endpoint;
-        private @Nullable Input<String> region;
+        private Output<String> endpoint;
+        private @Nullable Output<String> region;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class DataSourceElasticsearchConfigGetArgs extends io.pulumi.resour
     	      this.region = defaults.region;
         }
 
-        public Builder endpoint(Input<String> endpoint) {
+        public Builder endpoint(Output<String> endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
 
         public Builder endpoint(String endpoint) {
-            this.endpoint = Input.of(Objects.requireNonNull(endpoint));
+            this.endpoint = Output.of(Objects.requireNonNull(endpoint));
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
         public DataSourceElasticsearchConfigGetArgs build() {

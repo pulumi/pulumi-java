@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networksecurity_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.networksecurity_v1.inputs.GoogleIamV1AuditConfigArgs;
 import io.pulumi.googlenative.networksecurity_v1.inputs.GoogleIamV1BindingArgs;
@@ -23,16 +23,16 @@ public final class AuthorizationPolicyIamPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="auditConfigs")
-      private final @Nullable Input<List<GoogleIamV1AuditConfigArgs>> auditConfigs;
+      private final @Nullable Output<List<GoogleIamV1AuditConfigArgs>> auditConfigs;
 
-    public Input<List<GoogleIamV1AuditConfigArgs>> getAuditConfigs() {
-        return this.auditConfigs == null ? Input.empty() : this.auditConfigs;
+    public Output<List<GoogleIamV1AuditConfigArgs>> getAuditConfigs() {
+        return this.auditConfigs == null ? Output.empty() : this.auditConfigs;
     }
 
     @InputImport(name="authorizationPolicyId", required=true)
-      private final Input<String> authorizationPolicyId;
+      private final Output<String> authorizationPolicyId;
 
-    public Input<String> getAuthorizationPolicyId() {
+    public Output<String> getAuthorizationPolicyId() {
         return this.authorizationPolicyId;
     }
 
@@ -41,10 +41,10 @@ public final class AuthorizationPolicyIamPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="bindings")
-      private final @Nullable Input<List<GoogleIamV1BindingArgs>> bindings;
+      private final @Nullable Output<List<GoogleIamV1BindingArgs>> bindings;
 
-    public Input<List<GoogleIamV1BindingArgs>> getBindings() {
-        return this.bindings == null ? Input.empty() : this.bindings;
+    public Output<List<GoogleIamV1BindingArgs>> getBindings() {
+        return this.bindings == null ? Output.empty() : this.bindings;
     }
 
     /**
@@ -52,24 +52,24 @@ public final class AuthorizationPolicyIamPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class AuthorizationPolicyIamPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="updateMask")
-      private final @Nullable Input<String> updateMask;
+      private final @Nullable Output<String> updateMask;
 
-    public Input<String> getUpdateMask() {
-        return this.updateMask == null ? Input.empty() : this.updateMask;
+    public Output<String> getUpdateMask() {
+        return this.updateMask == null ? Output.empty() : this.updateMask;
     }
 
     /**
@@ -88,21 +88,21 @@ public final class AuthorizationPolicyIamPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<Integer> version;
+      private final @Nullable Output<Integer> version;
 
-    public Input<Integer> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<Integer> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public AuthorizationPolicyIamPolicyArgs(
-        @Nullable Input<List<GoogleIamV1AuditConfigArgs>> auditConfigs,
-        Input<String> authorizationPolicyId,
-        @Nullable Input<List<GoogleIamV1BindingArgs>> bindings,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> location,
-        @Nullable Input<String> project,
-        @Nullable Input<String> updateMask,
-        @Nullable Input<Integer> version) {
+        @Nullable Output<List<GoogleIamV1AuditConfigArgs>> auditConfigs,
+        Output<String> authorizationPolicyId,
+        @Nullable Output<List<GoogleIamV1BindingArgs>> bindings,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> location,
+        @Nullable Output<String> project,
+        @Nullable Output<String> updateMask,
+        @Nullable Output<Integer> version) {
         this.auditConfigs = auditConfigs;
         this.authorizationPolicyId = Objects.requireNonNull(authorizationPolicyId, "expected parameter 'authorizationPolicyId' to be non-null");
         this.bindings = bindings;
@@ -114,14 +114,14 @@ public final class AuthorizationPolicyIamPolicyArgs extends io.pulumi.resources.
     }
 
     private AuthorizationPolicyIamPolicyArgs() {
-        this.auditConfigs = Input.empty();
-        this.authorizationPolicyId = Input.empty();
-        this.bindings = Input.empty();
-        this.etag = Input.empty();
-        this.location = Input.empty();
-        this.project = Input.empty();
-        this.updateMask = Input.empty();
-        this.version = Input.empty();
+        this.auditConfigs = Output.empty();
+        this.authorizationPolicyId = Output.empty();
+        this.bindings = Output.empty();
+        this.etag = Output.empty();
+        this.location = Output.empty();
+        this.project = Output.empty();
+        this.updateMask = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -133,14 +133,14 @@ public final class AuthorizationPolicyIamPolicyArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<List<GoogleIamV1AuditConfigArgs>> auditConfigs;
-        private Input<String> authorizationPolicyId;
-        private @Nullable Input<List<GoogleIamV1BindingArgs>> bindings;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> updateMask;
-        private @Nullable Input<Integer> version;
+        private @Nullable Output<List<GoogleIamV1AuditConfigArgs>> auditConfigs;
+        private Output<String> authorizationPolicyId;
+        private @Nullable Output<List<GoogleIamV1BindingArgs>> bindings;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> updateMask;
+        private @Nullable Output<Integer> version;
 
         public Builder() {
     	      // Empty
@@ -158,83 +158,83 @@ public final class AuthorizationPolicyIamPolicyArgs extends io.pulumi.resources.
     	      this.version = defaults.version;
         }
 
-        public Builder auditConfigs(@Nullable Input<List<GoogleIamV1AuditConfigArgs>> auditConfigs) {
+        public Builder auditConfigs(@Nullable Output<List<GoogleIamV1AuditConfigArgs>> auditConfigs) {
             this.auditConfigs = auditConfigs;
             return this;
         }
 
         public Builder auditConfigs(@Nullable List<GoogleIamV1AuditConfigArgs> auditConfigs) {
-            this.auditConfigs = Input.ofNullable(auditConfigs);
+            this.auditConfigs = Output.ofNullable(auditConfigs);
             return this;
         }
 
-        public Builder authorizationPolicyId(Input<String> authorizationPolicyId) {
+        public Builder authorizationPolicyId(Output<String> authorizationPolicyId) {
             this.authorizationPolicyId = Objects.requireNonNull(authorizationPolicyId);
             return this;
         }
 
         public Builder authorizationPolicyId(String authorizationPolicyId) {
-            this.authorizationPolicyId = Input.of(Objects.requireNonNull(authorizationPolicyId));
+            this.authorizationPolicyId = Output.of(Objects.requireNonNull(authorizationPolicyId));
             return this;
         }
 
-        public Builder bindings(@Nullable Input<List<GoogleIamV1BindingArgs>> bindings) {
+        public Builder bindings(@Nullable Output<List<GoogleIamV1BindingArgs>> bindings) {
             this.bindings = bindings;
             return this;
         }
 
         public Builder bindings(@Nullable List<GoogleIamV1BindingArgs> bindings) {
-            this.bindings = Input.ofNullable(bindings);
+            this.bindings = Output.ofNullable(bindings);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder updateMask(@Nullable Input<String> updateMask) {
+        public Builder updateMask(@Nullable Output<String> updateMask) {
             this.updateMask = updateMask;
             return this;
         }
 
         public Builder updateMask(@Nullable String updateMask) {
-            this.updateMask = Input.ofNullable(updateMask);
+            this.updateMask = Output.ofNullable(updateMask);
             return this;
         }
 
-        public Builder version(@Nullable Input<Integer> version) {
+        public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable Integer version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public AuthorizationPolicyIamPolicyArgs build() {

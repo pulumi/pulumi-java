@@ -5,7 +5,7 @@ package io.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
 import io.pulumi.azurenative.connectedvmwarevsphere.enums.IdentityType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<Either<String,IdentityType>> type;
+      private final Output<Either<String,IdentityType>> type;
 
-    public Input<Either<String,IdentityType>> getType() {
+    public Output<Either<String,IdentityType>> getType() {
         return this.type;
     }
 
-    public IdentityArgs(Input<Either<String,IdentityType>> type) {
+    public IdentityArgs(Output<Either<String,IdentityType>> type) {
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private IdentityArgs() {
-        this.type = Input.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Either<String,IdentityType>> type;
+        private Output<Either<String,IdentityType>> type;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder type(Input<Either<String,IdentityType>> type) {
+        public Builder type(Output<Either<String,IdentityType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(Either<String,IdentityType> type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public IdentityArgs build() {

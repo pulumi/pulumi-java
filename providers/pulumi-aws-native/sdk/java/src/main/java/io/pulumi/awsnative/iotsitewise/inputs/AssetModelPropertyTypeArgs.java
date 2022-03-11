@@ -7,7 +7,7 @@ import io.pulumi.awsnative.iotsitewise.enums.AssetModelTypeName;
 import io.pulumi.awsnative.iotsitewise.inputs.AssetModelAttributeArgs;
 import io.pulumi.awsnative.iotsitewise.inputs.AssetModelMetricArgs;
 import io.pulumi.awsnative.iotsitewise.inputs.AssetModelTransformArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,38 +22,38 @@ public final class AssetModelPropertyTypeArgs extends io.pulumi.resources.Resour
     public static final AssetModelPropertyTypeArgs Empty = new AssetModelPropertyTypeArgs();
 
     @InputImport(name="attribute")
-      private final @Nullable Input<AssetModelAttributeArgs> attribute;
+      private final @Nullable Output<AssetModelAttributeArgs> attribute;
 
-    public Input<AssetModelAttributeArgs> getAttribute() {
-        return this.attribute == null ? Input.empty() : this.attribute;
+    public Output<AssetModelAttributeArgs> getAttribute() {
+        return this.attribute == null ? Output.empty() : this.attribute;
     }
 
     @InputImport(name="metric")
-      private final @Nullable Input<AssetModelMetricArgs> metric;
+      private final @Nullable Output<AssetModelMetricArgs> metric;
 
-    public Input<AssetModelMetricArgs> getMetric() {
-        return this.metric == null ? Input.empty() : this.metric;
+    public Output<AssetModelMetricArgs> getMetric() {
+        return this.metric == null ? Output.empty() : this.metric;
     }
 
     @InputImport(name="transform")
-      private final @Nullable Input<AssetModelTransformArgs> transform;
+      private final @Nullable Output<AssetModelTransformArgs> transform;
 
-    public Input<AssetModelTransformArgs> getTransform() {
-        return this.transform == null ? Input.empty() : this.transform;
+    public Output<AssetModelTransformArgs> getTransform() {
+        return this.transform == null ? Output.empty() : this.transform;
     }
 
     @InputImport(name="typeName", required=true)
-      private final Input<AssetModelTypeName> typeName;
+      private final Output<AssetModelTypeName> typeName;
 
-    public Input<AssetModelTypeName> getTypeName() {
+    public Output<AssetModelTypeName> getTypeName() {
         return this.typeName;
     }
 
     public AssetModelPropertyTypeArgs(
-        @Nullable Input<AssetModelAttributeArgs> attribute,
-        @Nullable Input<AssetModelMetricArgs> metric,
-        @Nullable Input<AssetModelTransformArgs> transform,
-        Input<AssetModelTypeName> typeName) {
+        @Nullable Output<AssetModelAttributeArgs> attribute,
+        @Nullable Output<AssetModelMetricArgs> metric,
+        @Nullable Output<AssetModelTransformArgs> transform,
+        Output<AssetModelTypeName> typeName) {
         this.attribute = attribute;
         this.metric = metric;
         this.transform = transform;
@@ -61,10 +61,10 @@ public final class AssetModelPropertyTypeArgs extends io.pulumi.resources.Resour
     }
 
     private AssetModelPropertyTypeArgs() {
-        this.attribute = Input.empty();
-        this.metric = Input.empty();
-        this.transform = Input.empty();
-        this.typeName = Input.empty();
+        this.attribute = Output.empty();
+        this.metric = Output.empty();
+        this.transform = Output.empty();
+        this.typeName = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,10 +76,10 @@ public final class AssetModelPropertyTypeArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<AssetModelAttributeArgs> attribute;
-        private @Nullable Input<AssetModelMetricArgs> metric;
-        private @Nullable Input<AssetModelTransformArgs> transform;
-        private Input<AssetModelTypeName> typeName;
+        private @Nullable Output<AssetModelAttributeArgs> attribute;
+        private @Nullable Output<AssetModelMetricArgs> metric;
+        private @Nullable Output<AssetModelTransformArgs> transform;
+        private Output<AssetModelTypeName> typeName;
 
         public Builder() {
     	      // Empty
@@ -93,43 +93,43 @@ public final class AssetModelPropertyTypeArgs extends io.pulumi.resources.Resour
     	      this.typeName = defaults.typeName;
         }
 
-        public Builder attribute(@Nullable Input<AssetModelAttributeArgs> attribute) {
+        public Builder attribute(@Nullable Output<AssetModelAttributeArgs> attribute) {
             this.attribute = attribute;
             return this;
         }
 
         public Builder attribute(@Nullable AssetModelAttributeArgs attribute) {
-            this.attribute = Input.ofNullable(attribute);
+            this.attribute = Output.ofNullable(attribute);
             return this;
         }
 
-        public Builder metric(@Nullable Input<AssetModelMetricArgs> metric) {
+        public Builder metric(@Nullable Output<AssetModelMetricArgs> metric) {
             this.metric = metric;
             return this;
         }
 
         public Builder metric(@Nullable AssetModelMetricArgs metric) {
-            this.metric = Input.ofNullable(metric);
+            this.metric = Output.ofNullable(metric);
             return this;
         }
 
-        public Builder transform(@Nullable Input<AssetModelTransformArgs> transform) {
+        public Builder transform(@Nullable Output<AssetModelTransformArgs> transform) {
             this.transform = transform;
             return this;
         }
 
         public Builder transform(@Nullable AssetModelTransformArgs transform) {
-            this.transform = Input.ofNullable(transform);
+            this.transform = Output.ofNullable(transform);
             return this;
         }
 
-        public Builder typeName(Input<AssetModelTypeName> typeName) {
+        public Builder typeName(Output<AssetModelTypeName> typeName) {
             this.typeName = Objects.requireNonNull(typeName);
             return this;
         }
 
         public Builder typeName(AssetModelTypeName typeName) {
-            this.typeName = Input.of(Objects.requireNonNull(typeName));
+            this.typeName = Output.of(Objects.requireNonNull(typeName));
             return this;
         }
         public AssetModelPropertyTypeArgs build() {

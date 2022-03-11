@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dns.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class ManagedZoneDnssecConfigDefaultKeySpecGetArgs extends io.pulum
      * 
      */
     @InputImport(name="algorithm")
-      private final @Nullable Input<String> algorithm;
+      private final @Nullable Output<String> algorithm;
 
-    public Input<String> getAlgorithm() {
-        return this.algorithm == null ? Input.empty() : this.algorithm;
+    public Output<String> getAlgorithm() {
+        return this.algorithm == null ? Output.empty() : this.algorithm;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ManagedZoneDnssecConfigDefaultKeySpecGetArgs extends io.pulum
      * 
      */
     @InputImport(name="keyLength")
-      private final @Nullable Input<Integer> keyLength;
+      private final @Nullable Output<Integer> keyLength;
 
-    public Input<Integer> getKeyLength() {
-        return this.keyLength == null ? Input.empty() : this.keyLength;
+    public Output<Integer> getKeyLength() {
+        return this.keyLength == null ? Output.empty() : this.keyLength;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ManagedZoneDnssecConfigDefaultKeySpecGetArgs extends io.pulum
      * 
      */
     @InputImport(name="keyType")
-      private final @Nullable Input<String> keyType;
+      private final @Nullable Output<String> keyType;
 
-    public Input<String> getKeyType() {
-        return this.keyType == null ? Input.empty() : this.keyType;
+    public Output<String> getKeyType() {
+        return this.keyType == null ? Output.empty() : this.keyType;
     }
 
     /**
@@ -60,17 +60,17 @@ public final class ManagedZoneDnssecConfigDefaultKeySpecGetArgs extends io.pulum
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     public ManagedZoneDnssecConfigDefaultKeySpecGetArgs(
-        @Nullable Input<String> algorithm,
-        @Nullable Input<Integer> keyLength,
-        @Nullable Input<String> keyType,
-        @Nullable Input<String> kind) {
+        @Nullable Output<String> algorithm,
+        @Nullable Output<Integer> keyLength,
+        @Nullable Output<String> keyType,
+        @Nullable Output<String> kind) {
         this.algorithm = algorithm;
         this.keyLength = keyLength;
         this.keyType = keyType;
@@ -78,10 +78,10 @@ public final class ManagedZoneDnssecConfigDefaultKeySpecGetArgs extends io.pulum
     }
 
     private ManagedZoneDnssecConfigDefaultKeySpecGetArgs() {
-        this.algorithm = Input.empty();
-        this.keyLength = Input.empty();
-        this.keyType = Input.empty();
-        this.kind = Input.empty();
+        this.algorithm = Output.empty();
+        this.keyLength = Output.empty();
+        this.keyType = Output.empty();
+        this.kind = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,10 +93,10 @@ public final class ManagedZoneDnssecConfigDefaultKeySpecGetArgs extends io.pulum
     }
 
     public static final class Builder {
-        private @Nullable Input<String> algorithm;
-        private @Nullable Input<Integer> keyLength;
-        private @Nullable Input<String> keyType;
-        private @Nullable Input<String> kind;
+        private @Nullable Output<String> algorithm;
+        private @Nullable Output<Integer> keyLength;
+        private @Nullable Output<String> keyType;
+        private @Nullable Output<String> kind;
 
         public Builder() {
     	      // Empty
@@ -110,43 +110,43 @@ public final class ManagedZoneDnssecConfigDefaultKeySpecGetArgs extends io.pulum
     	      this.kind = defaults.kind;
         }
 
-        public Builder algorithm(@Nullable Input<String> algorithm) {
+        public Builder algorithm(@Nullable Output<String> algorithm) {
             this.algorithm = algorithm;
             return this;
         }
 
         public Builder algorithm(@Nullable String algorithm) {
-            this.algorithm = Input.ofNullable(algorithm);
+            this.algorithm = Output.ofNullable(algorithm);
             return this;
         }
 
-        public Builder keyLength(@Nullable Input<Integer> keyLength) {
+        public Builder keyLength(@Nullable Output<Integer> keyLength) {
             this.keyLength = keyLength;
             return this;
         }
 
         public Builder keyLength(@Nullable Integer keyLength) {
-            this.keyLength = Input.ofNullable(keyLength);
+            this.keyLength = Output.ofNullable(keyLength);
             return this;
         }
 
-        public Builder keyType(@Nullable Input<String> keyType) {
+        public Builder keyType(@Nullable Output<String> keyType) {
             this.keyType = keyType;
             return this;
         }
 
         public Builder keyType(@Nullable String keyType) {
-            this.keyType = Input.ofNullable(keyType);
+            this.keyType = Output.ofNullable(keyType);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
         public ManagedZoneDnssecConfigDefaultKeySpecGetArgs build() {

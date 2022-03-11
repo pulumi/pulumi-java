@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class GooglePrivacyDlpV2RegexArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="groupIndexes")
-      private final @Nullable Input<List<Integer>> groupIndexes;
+      private final @Nullable Output<List<Integer>> groupIndexes;
 
-    public Input<List<Integer>> getGroupIndexes() {
-        return this.groupIndexes == null ? Input.empty() : this.groupIndexes;
+    public Output<List<Integer>> getGroupIndexes() {
+        return this.groupIndexes == null ? Output.empty() : this.groupIndexes;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class GooglePrivacyDlpV2RegexArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="pattern")
-      private final @Nullable Input<String> pattern;
+      private final @Nullable Output<String> pattern;
 
-    public Input<String> getPattern() {
-        return this.pattern == null ? Input.empty() : this.pattern;
+    public Output<String> getPattern() {
+        return this.pattern == null ? Output.empty() : this.pattern;
     }
 
     public GooglePrivacyDlpV2RegexArgs(
-        @Nullable Input<List<Integer>> groupIndexes,
-        @Nullable Input<String> pattern) {
+        @Nullable Output<List<Integer>> groupIndexes,
+        @Nullable Output<String> pattern) {
         this.groupIndexes = groupIndexes;
         this.pattern = pattern;
     }
 
     private GooglePrivacyDlpV2RegexArgs() {
-        this.groupIndexes = Input.empty();
-        this.pattern = Input.empty();
+        this.groupIndexes = Output.empty();
+        this.pattern = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class GooglePrivacyDlpV2RegexArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Integer>> groupIndexes;
-        private @Nullable Input<String> pattern;
+        private @Nullable Output<List<Integer>> groupIndexes;
+        private @Nullable Output<String> pattern;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class GooglePrivacyDlpV2RegexArgs extends io.pulumi.resources.Resou
     	      this.pattern = defaults.pattern;
         }
 
-        public Builder groupIndexes(@Nullable Input<List<Integer>> groupIndexes) {
+        public Builder groupIndexes(@Nullable Output<List<Integer>> groupIndexes) {
             this.groupIndexes = groupIndexes;
             return this;
         }
 
         public Builder groupIndexes(@Nullable List<Integer> groupIndexes) {
-            this.groupIndexes = Input.ofNullable(groupIndexes);
+            this.groupIndexes = Output.ofNullable(groupIndexes);
             return this;
         }
 
-        public Builder pattern(@Nullable Input<String> pattern) {
+        public Builder pattern(@Nullable Output<String> pattern) {
             this.pattern = pattern;
             return this;
         }
 
         public Builder pattern(@Nullable String pattern) {
-            this.pattern = Input.ofNullable(pattern);
+            this.pattern = Output.ofNullable(pattern);
             return this;
         }
         public GooglePrivacyDlpV2RegexArgs build() {

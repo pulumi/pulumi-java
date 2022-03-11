@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.inputs.WebACLIPSetForwardedIPConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,29 +16,29 @@ public final class WebACLIPSetReferenceStatementArgs extends io.pulumi.resources
     public static final WebACLIPSetReferenceStatementArgs Empty = new WebACLIPSetReferenceStatementArgs();
 
     @InputImport(name="arn", required=true)
-      private final Input<String> arn;
+      private final Output<String> arn;
 
-    public Input<String> getArn() {
+    public Output<String> getArn() {
         return this.arn;
     }
 
     @InputImport(name="iPSetForwardedIPConfig")
-      private final @Nullable Input<WebACLIPSetForwardedIPConfigurationArgs> iPSetForwardedIPConfig;
+      private final @Nullable Output<WebACLIPSetForwardedIPConfigurationArgs> iPSetForwardedIPConfig;
 
-    public Input<WebACLIPSetForwardedIPConfigurationArgs> getIPSetForwardedIPConfig() {
-        return this.iPSetForwardedIPConfig == null ? Input.empty() : this.iPSetForwardedIPConfig;
+    public Output<WebACLIPSetForwardedIPConfigurationArgs> getIPSetForwardedIPConfig() {
+        return this.iPSetForwardedIPConfig == null ? Output.empty() : this.iPSetForwardedIPConfig;
     }
 
     public WebACLIPSetReferenceStatementArgs(
-        Input<String> arn,
-        @Nullable Input<WebACLIPSetForwardedIPConfigurationArgs> iPSetForwardedIPConfig) {
+        Output<String> arn,
+        @Nullable Output<WebACLIPSetForwardedIPConfigurationArgs> iPSetForwardedIPConfig) {
         this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
         this.iPSetForwardedIPConfig = iPSetForwardedIPConfig;
     }
 
     private WebACLIPSetReferenceStatementArgs() {
-        this.arn = Input.empty();
-        this.iPSetForwardedIPConfig = Input.empty();
+        this.arn = Output.empty();
+        this.iPSetForwardedIPConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class WebACLIPSetReferenceStatementArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<String> arn;
-        private @Nullable Input<WebACLIPSetForwardedIPConfigurationArgs> iPSetForwardedIPConfig;
+        private Output<String> arn;
+        private @Nullable Output<WebACLIPSetForwardedIPConfigurationArgs> iPSetForwardedIPConfig;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class WebACLIPSetReferenceStatementArgs extends io.pulumi.resources
     	      this.iPSetForwardedIPConfig = defaults.iPSetForwardedIPConfig;
         }
 
-        public Builder arn(Input<String> arn) {
+        public Builder arn(Output<String> arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
         public Builder arn(String arn) {
-            this.arn = Input.of(Objects.requireNonNull(arn));
+            this.arn = Output.of(Objects.requireNonNull(arn));
             return this;
         }
 
-        public Builder iPSetForwardedIPConfig(@Nullable Input<WebACLIPSetForwardedIPConfigurationArgs> iPSetForwardedIPConfig) {
+        public Builder iPSetForwardedIPConfig(@Nullable Output<WebACLIPSetForwardedIPConfigurationArgs> iPSetForwardedIPConfig) {
             this.iPSetForwardedIPConfig = iPSetForwardedIPConfig;
             return this;
         }
 
         public Builder iPSetForwardedIPConfig(@Nullable WebACLIPSetForwardedIPConfigurationArgs iPSetForwardedIPConfig) {
-            this.iPSetForwardedIPConfig = Input.ofNullable(iPSetForwardedIPConfig);
+            this.iPSetForwardedIPConfig = Output.ofNullable(iPSetForwardedIPConfig);
             return this;
         }
         public WebACLIPSetReferenceStatementArgs build() {

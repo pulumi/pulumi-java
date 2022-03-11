@@ -9,7 +9,6 @@ import io.pulumi.azurenative.authorization.outputs.ParameterDefinitionsValueResp
 import io.pulumi.azurenative.authorization.outputs.PolicyDefinitionGroupResponse;
 import io.pulumi.azurenative.authorization.outputs.PolicyDefinitionReferenceResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -201,26 +200,26 @@ public class PolicySetDefinitionAtManagementGroup extends io.pulumi.resources.Cu
      * @param options A bag of options that control this resource's behavior.
      */
     public PolicySetDefinitionAtManagementGroup(String name, PolicySetDefinitionAtManagementGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:authorization:PolicySetDefinitionAtManagementGroup", name, args == null ? PolicySetDefinitionAtManagementGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:authorization:PolicySetDefinitionAtManagementGroup", name, args == null ? PolicySetDefinitionAtManagementGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private PolicySetDefinitionAtManagementGroup(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private PolicySetDefinitionAtManagementGroup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:authorization:PolicySetDefinitionAtManagementGroup", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:authorization/v20170601preview:PolicySetDefinitionAtManagementGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:authorization/v20180301:PolicySetDefinitionAtManagementGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:authorization/v20180501:PolicySetDefinitionAtManagementGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:authorization/v20190101:PolicySetDefinitionAtManagementGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:authorization/v20190601:PolicySetDefinitionAtManagementGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:authorization/v20190901:PolicySetDefinitionAtManagementGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:authorization/v20200301:PolicySetDefinitionAtManagementGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:authorization/v20200901:PolicySetDefinitionAtManagementGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:authorization/v20210601:PolicySetDefinitionAtManagementGroup").build())
+                Output.of(Alias.builder().setType("azure-native:authorization/v20170601preview:PolicySetDefinitionAtManagementGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:authorization/v20180301:PolicySetDefinitionAtManagementGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:authorization/v20180501:PolicySetDefinitionAtManagementGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:authorization/v20190101:PolicySetDefinitionAtManagementGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:authorization/v20190601:PolicySetDefinitionAtManagementGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:authorization/v20190901:PolicySetDefinitionAtManagementGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:authorization/v20200301:PolicySetDefinitionAtManagementGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:authorization/v20200901:PolicySetDefinitionAtManagementGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:authorization/v20210601:PolicySetDefinitionAtManagementGroup").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -234,7 +233,7 @@ public class PolicySetDefinitionAtManagementGroup extends io.pulumi.resources.Cu
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PolicySetDefinitionAtManagementGroup get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static PolicySetDefinitionAtManagementGroup get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PolicySetDefinitionAtManagementGroup(name, id, options);
     }
 }

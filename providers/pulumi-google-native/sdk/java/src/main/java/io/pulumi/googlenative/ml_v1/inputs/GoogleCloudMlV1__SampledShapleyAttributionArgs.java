@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class GoogleCloudMlV1__SampledShapleyAttributionArgs extends io.pul
      * 
      */
     @InputImport(name="numPaths")
-      private final @Nullable Input<Integer> numPaths;
+      private final @Nullable Output<Integer> numPaths;
 
-    public Input<Integer> getNumPaths() {
-        return this.numPaths == null ? Input.empty() : this.numPaths;
+    public Output<Integer> getNumPaths() {
+        return this.numPaths == null ? Output.empty() : this.numPaths;
     }
 
-    public GoogleCloudMlV1__SampledShapleyAttributionArgs(@Nullable Input<Integer> numPaths) {
+    public GoogleCloudMlV1__SampledShapleyAttributionArgs(@Nullable Output<Integer> numPaths) {
         this.numPaths = numPaths;
     }
 
     private GoogleCloudMlV1__SampledShapleyAttributionArgs() {
-        this.numPaths = Input.empty();
+        this.numPaths = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GoogleCloudMlV1__SampledShapleyAttributionArgs extends io.pul
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> numPaths;
+        private @Nullable Output<Integer> numPaths;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GoogleCloudMlV1__SampledShapleyAttributionArgs extends io.pul
     	      this.numPaths = defaults.numPaths;
         }
 
-        public Builder numPaths(@Nullable Input<Integer> numPaths) {
+        public Builder numPaths(@Nullable Output<Integer> numPaths) {
             this.numPaths = numPaths;
             return this;
         }
 
         public Builder numPaths(@Nullable Integer numPaths) {
-            this.numPaths = Input.ofNullable(numPaths);
+            this.numPaths = Output.ofNullable(numPaths);
             return this;
         }
         public GoogleCloudMlV1__SampledShapleyAttributionArgs build() {

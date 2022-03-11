@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs extend
      * 
      */
     @InputImport(name="playbackDurationSeconds", required=true)
-      private final Input<Double> playbackDurationSeconds;
+      private final Output<Double> playbackDurationSeconds;
 
-    public Input<Double> getPlaybackDurationSeconds() {
+    public Output<Double> getPlaybackDurationSeconds() {
         return this.playbackDurationSeconds;
     }
 
@@ -29,22 +29,22 @@ public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs extend
      * 
      */
     @InputImport(name="storageDurationSeconds", required=true)
-      private final Input<Double> storageDurationSeconds;
+      private final Output<Double> storageDurationSeconds;
 
-    public Input<Double> getStorageDurationSeconds() {
+    public Output<Double> getStorageDurationSeconds() {
         return this.storageDurationSeconds;
     }
 
     public ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs(
-        Input<Double> playbackDurationSeconds,
-        Input<Double> storageDurationSeconds) {
+        Output<Double> playbackDurationSeconds,
+        Output<Double> storageDurationSeconds) {
         this.playbackDurationSeconds = Objects.requireNonNull(playbackDurationSeconds, "expected parameter 'playbackDurationSeconds' to be non-null");
         this.storageDurationSeconds = Objects.requireNonNull(storageDurationSeconds, "expected parameter 'storageDurationSeconds' to be non-null");
     }
 
     private ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs() {
-        this.playbackDurationSeconds = Input.empty();
-        this.storageDurationSeconds = Input.empty();
+        this.playbackDurationSeconds = Output.empty();
+        this.storageDurationSeconds = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs extend
     }
 
     public static final class Builder {
-        private Input<Double> playbackDurationSeconds;
-        private Input<Double> storageDurationSeconds;
+        private Output<Double> playbackDurationSeconds;
+        private Output<Double> storageDurationSeconds;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs extend
     	      this.storageDurationSeconds = defaults.storageDurationSeconds;
         }
 
-        public Builder playbackDurationSeconds(Input<Double> playbackDurationSeconds) {
+        public Builder playbackDurationSeconds(Output<Double> playbackDurationSeconds) {
             this.playbackDurationSeconds = Objects.requireNonNull(playbackDurationSeconds);
             return this;
         }
 
         public Builder playbackDurationSeconds(Double playbackDurationSeconds) {
-            this.playbackDurationSeconds = Input.of(Objects.requireNonNull(playbackDurationSeconds));
+            this.playbackDurationSeconds = Output.of(Objects.requireNonNull(playbackDurationSeconds));
             return this;
         }
 
-        public Builder storageDurationSeconds(Input<Double> storageDurationSeconds) {
+        public Builder storageDurationSeconds(Output<Double> storageDurationSeconds) {
             this.storageDurationSeconds = Objects.requireNonNull(storageDurationSeconds);
             return this;
         }
 
         public Builder storageDurationSeconds(Double storageDurationSeconds) {
-            this.storageDurationSeconds = Input.of(Objects.requireNonNull(storageDurationSeconds));
+            this.storageDurationSeconds = Output.of(Objects.requireNonNull(storageDurationSeconds));
             return this;
         }
         public ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs build() {

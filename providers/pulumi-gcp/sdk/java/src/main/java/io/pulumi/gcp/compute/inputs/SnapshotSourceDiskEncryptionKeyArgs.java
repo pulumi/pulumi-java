@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class SnapshotSourceDiskEncryptionKeyArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="kmsKeyServiceAccount")
-      private final @Nullable Input<String> kmsKeyServiceAccount;
+      private final @Nullable Output<String> kmsKeyServiceAccount;
 
-    public Input<String> getKmsKeyServiceAccount() {
-        return this.kmsKeyServiceAccount == null ? Input.empty() : this.kmsKeyServiceAccount;
+    public Output<String> getKmsKeyServiceAccount() {
+        return this.kmsKeyServiceAccount == null ? Output.empty() : this.kmsKeyServiceAccount;
     }
 
     /**
@@ -33,22 +33,22 @@ public final class SnapshotSourceDiskEncryptionKeyArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="rawKey")
-      private final @Nullable Input<String> rawKey;
+      private final @Nullable Output<String> rawKey;
 
-    public Input<String> getRawKey() {
-        return this.rawKey == null ? Input.empty() : this.rawKey;
+    public Output<String> getRawKey() {
+        return this.rawKey == null ? Output.empty() : this.rawKey;
     }
 
     public SnapshotSourceDiskEncryptionKeyArgs(
-        @Nullable Input<String> kmsKeyServiceAccount,
-        @Nullable Input<String> rawKey) {
+        @Nullable Output<String> kmsKeyServiceAccount,
+        @Nullable Output<String> rawKey) {
         this.kmsKeyServiceAccount = kmsKeyServiceAccount;
         this.rawKey = rawKey;
     }
 
     private SnapshotSourceDiskEncryptionKeyArgs() {
-        this.kmsKeyServiceAccount = Input.empty();
-        this.rawKey = Input.empty();
+        this.kmsKeyServiceAccount = Output.empty();
+        this.rawKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class SnapshotSourceDiskEncryptionKeyArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> kmsKeyServiceAccount;
-        private @Nullable Input<String> rawKey;
+        private @Nullable Output<String> kmsKeyServiceAccount;
+        private @Nullable Output<String> rawKey;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class SnapshotSourceDiskEncryptionKeyArgs extends io.pulumi.resourc
     	      this.rawKey = defaults.rawKey;
         }
 
-        public Builder kmsKeyServiceAccount(@Nullable Input<String> kmsKeyServiceAccount) {
+        public Builder kmsKeyServiceAccount(@Nullable Output<String> kmsKeyServiceAccount) {
             this.kmsKeyServiceAccount = kmsKeyServiceAccount;
             return this;
         }
 
         public Builder kmsKeyServiceAccount(@Nullable String kmsKeyServiceAccount) {
-            this.kmsKeyServiceAccount = Input.ofNullable(kmsKeyServiceAccount);
+            this.kmsKeyServiceAccount = Output.ofNullable(kmsKeyServiceAccount);
             return this;
         }
 
-        public Builder rawKey(@Nullable Input<String> rawKey) {
+        public Builder rawKey(@Nullable Output<String> rawKey) {
             this.rawKey = rawKey;
             return this;
         }
 
         public Builder rawKey(@Nullable String rawKey) {
-            this.rawKey = Input.ofNullable(rawKey);
+            this.rawKey = Output.ofNullable(rawKey);
             return this;
         }
         public SnapshotSourceDiskEncryptionKeyArgs build() {

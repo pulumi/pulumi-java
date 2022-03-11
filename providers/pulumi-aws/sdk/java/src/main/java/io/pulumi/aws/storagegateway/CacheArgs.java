@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.storagegateway;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskId", required=true)
-      private final Input<String> diskId;
+      private final Output<String> diskId;
 
-    public Input<String> getDiskId() {
+    public Output<String> getDiskId() {
         return this.diskId;
     }
 
@@ -29,22 +29,22 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayArn", required=true)
-      private final Input<String> gatewayArn;
+      private final Output<String> gatewayArn;
 
-    public Input<String> getGatewayArn() {
+    public Output<String> getGatewayArn() {
         return this.gatewayArn;
     }
 
     public CacheArgs(
-        Input<String> diskId,
-        Input<String> gatewayArn) {
+        Output<String> diskId,
+        Output<String> gatewayArn) {
         this.diskId = Objects.requireNonNull(diskId, "expected parameter 'diskId' to be non-null");
         this.gatewayArn = Objects.requireNonNull(gatewayArn, "expected parameter 'gatewayArn' to be non-null");
     }
 
     private CacheArgs() {
-        this.diskId = Input.empty();
-        this.gatewayArn = Input.empty();
+        this.diskId = Output.empty();
+        this.gatewayArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> diskId;
-        private Input<String> gatewayArn;
+        private Output<String> diskId;
+        private Output<String> gatewayArn;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
     	      this.gatewayArn = defaults.gatewayArn;
         }
 
-        public Builder diskId(Input<String> diskId) {
+        public Builder diskId(Output<String> diskId) {
             this.diskId = Objects.requireNonNull(diskId);
             return this;
         }
 
         public Builder diskId(String diskId) {
-            this.diskId = Input.of(Objects.requireNonNull(diskId));
+            this.diskId = Output.of(Objects.requireNonNull(diskId));
             return this;
         }
 
-        public Builder gatewayArn(Input<String> gatewayArn) {
+        public Builder gatewayArn(Output<String> gatewayArn) {
             this.gatewayArn = Objects.requireNonNull(gatewayArn);
             return this;
         }
 
         public Builder gatewayArn(String gatewayArn) {
-            this.gatewayArn = Input.of(Objects.requireNonNull(gatewayArn));
+            this.gatewayArn = Output.of(Objects.requireNonNull(gatewayArn));
             return this;
         }
         public CacheArgs build() {

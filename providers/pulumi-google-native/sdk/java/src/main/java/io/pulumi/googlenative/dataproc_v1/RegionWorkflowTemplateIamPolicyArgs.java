@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataproc_v1.inputs.BindingArgs;
 import java.lang.Integer;
@@ -22,10 +22,10 @@ public final class RegionWorkflowTemplateIamPolicyArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="bindings")
-      private final @Nullable Input<List<BindingArgs>> bindings;
+      private final @Nullable Output<List<BindingArgs>> bindings;
 
-    public Input<List<BindingArgs>> getBindings() {
-        return this.bindings == null ? Input.empty() : this.bindings;
+    public Output<List<BindingArgs>> getBindings() {
+        return this.bindings == null ? Output.empty() : this.bindings;
     }
 
     /**
@@ -33,23 +33,23 @@ public final class RegionWorkflowTemplateIamPolicyArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="regionId", required=true)
-      private final Input<String> regionId;
+      private final Output<String> regionId;
 
-    public Input<String> getRegionId() {
+    public Output<String> getRegionId() {
         return this.regionId;
     }
 
@@ -58,26 +58,26 @@ public final class RegionWorkflowTemplateIamPolicyArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<Integer> version;
+      private final @Nullable Output<Integer> version;
 
-    public Input<Integer> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<Integer> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     @InputImport(name="workflowTemplateId", required=true)
-      private final Input<String> workflowTemplateId;
+      private final Output<String> workflowTemplateId;
 
-    public Input<String> getWorkflowTemplateId() {
+    public Output<String> getWorkflowTemplateId() {
         return this.workflowTemplateId;
     }
 
     public RegionWorkflowTemplateIamPolicyArgs(
-        @Nullable Input<List<BindingArgs>> bindings,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> project,
-        Input<String> regionId,
-        @Nullable Input<Integer> version,
-        Input<String> workflowTemplateId) {
+        @Nullable Output<List<BindingArgs>> bindings,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> project,
+        Output<String> regionId,
+        @Nullable Output<Integer> version,
+        Output<String> workflowTemplateId) {
         this.bindings = bindings;
         this.etag = etag;
         this.project = project;
@@ -87,12 +87,12 @@ public final class RegionWorkflowTemplateIamPolicyArgs extends io.pulumi.resourc
     }
 
     private RegionWorkflowTemplateIamPolicyArgs() {
-        this.bindings = Input.empty();
-        this.etag = Input.empty();
-        this.project = Input.empty();
-        this.regionId = Input.empty();
-        this.version = Input.empty();
-        this.workflowTemplateId = Input.empty();
+        this.bindings = Output.empty();
+        this.etag = Output.empty();
+        this.project = Output.empty();
+        this.regionId = Output.empty();
+        this.version = Output.empty();
+        this.workflowTemplateId = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,12 +104,12 @@ public final class RegionWorkflowTemplateIamPolicyArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<List<BindingArgs>> bindings;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> project;
-        private Input<String> regionId;
-        private @Nullable Input<Integer> version;
-        private Input<String> workflowTemplateId;
+        private @Nullable Output<List<BindingArgs>> bindings;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> project;
+        private Output<String> regionId;
+        private @Nullable Output<Integer> version;
+        private Output<String> workflowTemplateId;
 
         public Builder() {
     	      // Empty
@@ -125,63 +125,63 @@ public final class RegionWorkflowTemplateIamPolicyArgs extends io.pulumi.resourc
     	      this.workflowTemplateId = defaults.workflowTemplateId;
         }
 
-        public Builder bindings(@Nullable Input<List<BindingArgs>> bindings) {
+        public Builder bindings(@Nullable Output<List<BindingArgs>> bindings) {
             this.bindings = bindings;
             return this;
         }
 
         public Builder bindings(@Nullable List<BindingArgs> bindings) {
-            this.bindings = Input.ofNullable(bindings);
+            this.bindings = Output.ofNullable(bindings);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder regionId(Input<String> regionId) {
+        public Builder regionId(Output<String> regionId) {
             this.regionId = Objects.requireNonNull(regionId);
             return this;
         }
 
         public Builder regionId(String regionId) {
-            this.regionId = Input.of(Objects.requireNonNull(regionId));
+            this.regionId = Output.of(Objects.requireNonNull(regionId));
             return this;
         }
 
-        public Builder version(@Nullable Input<Integer> version) {
+        public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable Integer version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
 
-        public Builder workflowTemplateId(Input<String> workflowTemplateId) {
+        public Builder workflowTemplateId(Output<String> workflowTemplateId) {
             this.workflowTemplateId = Objects.requireNonNull(workflowTemplateId);
             return this;
         }
 
         public Builder workflowTemplateId(String workflowTemplateId) {
-            this.workflowTemplateId = Input.of(Objects.requireNonNull(workflowTemplateId));
+            this.workflowTemplateId = Output.of(Objects.requireNonNull(workflowTemplateId));
             return this;
         }
         public RegionWorkflowTemplateIamPolicyArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.solutions.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ApplicationPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ApplicationPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<String> parameters;
+      private final @Nullable Output<String> parameters;
 
-    public Input<String> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<String> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class ApplicationPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="policyDefinitionId")
-      private final @Nullable Input<String> policyDefinitionId;
+      private final @Nullable Output<String> policyDefinitionId;
 
-    public Input<String> getPolicyDefinitionId() {
-        return this.policyDefinitionId == null ? Input.empty() : this.policyDefinitionId;
+    public Output<String> getPolicyDefinitionId() {
+        return this.policyDefinitionId == null ? Output.empty() : this.policyDefinitionId;
     }
 
     public ApplicationPolicyArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<String> parameters,
-        @Nullable Input<String> policyDefinitionId) {
+        @Nullable Output<String> name,
+        @Nullable Output<String> parameters,
+        @Nullable Output<String> policyDefinitionId) {
         this.name = name;
         this.parameters = parameters;
         this.policyDefinitionId = policyDefinitionId;
     }
 
     private ApplicationPolicyArgs() {
-        this.name = Input.empty();
-        this.parameters = Input.empty();
-        this.policyDefinitionId = Input.empty();
+        this.name = Output.empty();
+        this.parameters = Output.empty();
+        this.policyDefinitionId = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class ApplicationPolicyArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> parameters;
-        private @Nullable Input<String> policyDefinitionId;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> parameters;
+        private @Nullable Output<String> policyDefinitionId;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class ApplicationPolicyArgs extends io.pulumi.resources.ResourceArg
     	      this.policyDefinitionId = defaults.policyDefinitionId;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<String> parameters) {
+        public Builder parameters(@Nullable Output<String> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable String parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder policyDefinitionId(@Nullable Input<String> policyDefinitionId) {
+        public Builder policyDefinitionId(@Nullable Output<String> policyDefinitionId) {
             this.policyDefinitionId = policyDefinitionId;
             return this;
         }
 
         public Builder policyDefinitionId(@Nullable String policyDefinitionId) {
-            this.policyDefinitionId = Input.ofNullable(policyDefinitionId);
+            this.policyDefinitionId = Output.ofNullable(policyDefinitionId);
             return this;
         }
         public ApplicationPolicyArgs build() {

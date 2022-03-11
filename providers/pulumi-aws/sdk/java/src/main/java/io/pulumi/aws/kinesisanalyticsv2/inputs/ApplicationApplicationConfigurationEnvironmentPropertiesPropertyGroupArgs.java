@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -19,9 +19,9 @@ public final class ApplicationApplicationConfigurationEnvironmentPropertiesPrope
      * 
      */
     @InputImport(name="propertyGroupId", required=true)
-      private final Input<String> propertyGroupId;
+      private final Output<String> propertyGroupId;
 
-    public Input<String> getPropertyGroupId() {
+    public Output<String> getPropertyGroupId() {
         return this.propertyGroupId;
     }
 
@@ -30,22 +30,22 @@ public final class ApplicationApplicationConfigurationEnvironmentPropertiesPrope
      * 
      */
     @InputImport(name="propertyMap", required=true)
-      private final Input<Map<String,String>> propertyMap;
+      private final Output<Map<String,String>> propertyMap;
 
-    public Input<Map<String,String>> getPropertyMap() {
+    public Output<Map<String,String>> getPropertyMap() {
         return this.propertyMap;
     }
 
     public ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupArgs(
-        Input<String> propertyGroupId,
-        Input<Map<String,String>> propertyMap) {
+        Output<String> propertyGroupId,
+        Output<Map<String,String>> propertyMap) {
         this.propertyGroupId = Objects.requireNonNull(propertyGroupId, "expected parameter 'propertyGroupId' to be non-null");
         this.propertyMap = Objects.requireNonNull(propertyMap, "expected parameter 'propertyMap' to be non-null");
     }
 
     private ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupArgs() {
-        this.propertyGroupId = Input.empty();
-        this.propertyMap = Input.empty();
+        this.propertyGroupId = Output.empty();
+        this.propertyMap = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ApplicationApplicationConfigurationEnvironmentPropertiesPrope
     }
 
     public static final class Builder {
-        private Input<String> propertyGroupId;
-        private Input<Map<String,String>> propertyMap;
+        private Output<String> propertyGroupId;
+        private Output<Map<String,String>> propertyMap;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ApplicationApplicationConfigurationEnvironmentPropertiesPrope
     	      this.propertyMap = defaults.propertyMap;
         }
 
-        public Builder propertyGroupId(Input<String> propertyGroupId) {
+        public Builder propertyGroupId(Output<String> propertyGroupId) {
             this.propertyGroupId = Objects.requireNonNull(propertyGroupId);
             return this;
         }
 
         public Builder propertyGroupId(String propertyGroupId) {
-            this.propertyGroupId = Input.of(Objects.requireNonNull(propertyGroupId));
+            this.propertyGroupId = Output.of(Objects.requireNonNull(propertyGroupId));
             return this;
         }
 
-        public Builder propertyMap(Input<Map<String,String>> propertyMap) {
+        public Builder propertyMap(Output<Map<String,String>> propertyMap) {
             this.propertyMap = Objects.requireNonNull(propertyMap);
             return this;
         }
 
         public Builder propertyMap(Map<String,String> propertyMap) {
-            this.propertyMap = Input.of(Objects.requireNonNull(propertyMap));
+            this.propertyMap = Output.of(Objects.requireNonNull(propertyMap));
             return this;
         }
         public ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupArgs build() {

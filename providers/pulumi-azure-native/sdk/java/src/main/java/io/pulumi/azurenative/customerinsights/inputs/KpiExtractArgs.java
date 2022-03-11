@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class KpiExtractArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expression", required=true)
-      private final Input<String> expression;
+      private final Output<String> expression;
 
-    public Input<String> getExpression() {
+    public Output<String> getExpression() {
         return this.expression;
     }
 
@@ -33,22 +33,22 @@ public final class KpiExtractArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extractName", required=true)
-      private final Input<String> extractName;
+      private final Output<String> extractName;
 
-    public Input<String> getExtractName() {
+    public Output<String> getExtractName() {
         return this.extractName;
     }
 
     public KpiExtractArgs(
-        Input<String> expression,
-        Input<String> extractName) {
+        Output<String> expression,
+        Output<String> extractName) {
         this.expression = Objects.requireNonNull(expression, "expected parameter 'expression' to be non-null");
         this.extractName = Objects.requireNonNull(extractName, "expected parameter 'extractName' to be non-null");
     }
 
     private KpiExtractArgs() {
-        this.expression = Input.empty();
-        this.extractName = Input.empty();
+        this.expression = Output.empty();
+        this.extractName = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class KpiExtractArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> expression;
-        private Input<String> extractName;
+        private Output<String> expression;
+        private Output<String> extractName;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class KpiExtractArgs extends io.pulumi.resources.ResourceArgs {
     	      this.extractName = defaults.extractName;
         }
 
-        public Builder expression(Input<String> expression) {
+        public Builder expression(Output<String> expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
 
         public Builder expression(String expression) {
-            this.expression = Input.of(Objects.requireNonNull(expression));
+            this.expression = Output.of(Objects.requireNonNull(expression));
             return this;
         }
 
-        public Builder extractName(Input<String> extractName) {
+        public Builder extractName(Output<String> extractName) {
             this.extractName = Objects.requireNonNull(extractName);
             return this;
         }
 
         public Builder extractName(String extractName) {
-            this.extractName = Input.of(Objects.requireNonNull(extractName));
+            this.extractName = Output.of(Objects.requireNonNull(extractName));
             return this;
         }
         public KpiExtractArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.AttestationNoteArgs;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.BuildNoteArgs;
@@ -31,10 +31,10 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attestation")
-      private final @Nullable Input<AttestationNoteArgs> attestation;
+      private final @Nullable Output<AttestationNoteArgs> attestation;
 
-    public Input<AttestationNoteArgs> getAttestation() {
-        return this.attestation == null ? Input.empty() : this.attestation;
+    public Output<AttestationNoteArgs> getAttestation() {
+        return this.attestation == null ? Output.empty() : this.attestation;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="build")
-      private final @Nullable Input<BuildNoteArgs> build;
+      private final @Nullable Output<BuildNoteArgs> build;
 
-    public Input<BuildNoteArgs> getBuild() {
-        return this.build == null ? Input.empty() : this.build;
+    public Output<BuildNoteArgs> getBuild() {
+        return this.build == null ? Output.empty() : this.build;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="compliance")
-      private final @Nullable Input<ComplianceNoteArgs> compliance;
+      private final @Nullable Output<ComplianceNoteArgs> compliance;
 
-    public Input<ComplianceNoteArgs> getCompliance() {
-        return this.compliance == null ? Input.empty() : this.compliance;
+    public Output<ComplianceNoteArgs> getCompliance() {
+        return this.compliance == null ? Output.empty() : this.compliance;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deployment")
-      private final @Nullable Input<DeploymentNoteArgs> deployment;
+      private final @Nullable Output<DeploymentNoteArgs> deployment;
 
-    public Input<DeploymentNoteArgs> getDeployment() {
-        return this.deployment == null ? Input.empty() : this.deployment;
+    public Output<DeploymentNoteArgs> getDeployment() {
+        return this.deployment == null ? Output.empty() : this.deployment;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="discovery")
-      private final @Nullable Input<DiscoveryNoteArgs> discovery;
+      private final @Nullable Output<DiscoveryNoteArgs> discovery;
 
-    public Input<DiscoveryNoteArgs> getDiscovery() {
-        return this.discovery == null ? Input.empty() : this.discovery;
+    public Output<DiscoveryNoteArgs> getDiscovery() {
+        return this.discovery == null ? Output.empty() : this.discovery;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dsseAttestation")
-      private final @Nullable Input<DSSEAttestationNoteArgs> dsseAttestation;
+      private final @Nullable Output<DSSEAttestationNoteArgs> dsseAttestation;
 
-    public Input<DSSEAttestationNoteArgs> getDsseAttestation() {
-        return this.dsseAttestation == null ? Input.empty() : this.dsseAttestation;
+    public Output<DSSEAttestationNoteArgs> getDsseAttestation() {
+        return this.dsseAttestation == null ? Output.empty() : this.dsseAttestation;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expirationTime")
-      private final @Nullable Input<String> expirationTime;
+      private final @Nullable Output<String> expirationTime;
 
-    public Input<String> getExpirationTime() {
-        return this.expirationTime == null ? Input.empty() : this.expirationTime;
+    public Output<String> getExpirationTime() {
+        return this.expirationTime == null ? Output.empty() : this.expirationTime;
     }
 
     /**
@@ -108,10 +108,10 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="image")
-      private final @Nullable Input<ImageNoteArgs> image;
+      private final @Nullable Output<ImageNoteArgs> image;
 
-    public Input<ImageNoteArgs> getImage() {
-        return this.image == null ? Input.empty() : this.image;
+    public Output<ImageNoteArgs> getImage() {
+        return this.image == null ? Output.empty() : this.image;
     }
 
     /**
@@ -119,16 +119,16 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="longDescription")
-      private final @Nullable Input<String> longDescription;
+      private final @Nullable Output<String> longDescription;
 
-    public Input<String> getLongDescription() {
-        return this.longDescription == null ? Input.empty() : this.longDescription;
+    public Output<String> getLongDescription() {
+        return this.longDescription == null ? Output.empty() : this.longDescription;
     }
 
     @InputImport(name="noteId", required=true)
-      private final Input<String> noteId;
+      private final Output<String> noteId;
 
-    public Input<String> getNoteId() {
+    public Output<String> getNoteId() {
         return this.noteId;
     }
 
@@ -137,17 +137,17 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="package")
-      private final @Nullable Input<PackageNoteArgs> $package;
+      private final @Nullable Output<PackageNoteArgs> $package;
 
-    public Input<PackageNoteArgs> get$package() {
-        return this.$package == null ? Input.empty() : this.$package;
+    public Output<PackageNoteArgs> get$package() {
+        return this.$package == null ? Output.empty() : this.$package;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -155,10 +155,10 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relatedNoteNames")
-      private final @Nullable Input<List<String>> relatedNoteNames;
+      private final @Nullable Output<List<String>> relatedNoteNames;
 
-    public Input<List<String>> getRelatedNoteNames() {
-        return this.relatedNoteNames == null ? Input.empty() : this.relatedNoteNames;
+    public Output<List<String>> getRelatedNoteNames() {
+        return this.relatedNoteNames == null ? Output.empty() : this.relatedNoteNames;
     }
 
     /**
@@ -166,10 +166,10 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relatedUrl")
-      private final @Nullable Input<List<RelatedUrlArgs>> relatedUrl;
+      private final @Nullable Output<List<RelatedUrlArgs>> relatedUrl;
 
-    public Input<List<RelatedUrlArgs>> getRelatedUrl() {
-        return this.relatedUrl == null ? Input.empty() : this.relatedUrl;
+    public Output<List<RelatedUrlArgs>> getRelatedUrl() {
+        return this.relatedUrl == null ? Output.empty() : this.relatedUrl;
     }
 
     /**
@@ -177,10 +177,10 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shortDescription")
-      private final @Nullable Input<String> shortDescription;
+      private final @Nullable Output<String> shortDescription;
 
-    public Input<String> getShortDescription() {
-        return this.shortDescription == null ? Input.empty() : this.shortDescription;
+    public Output<String> getShortDescription() {
+        return this.shortDescription == null ? Output.empty() : this.shortDescription;
     }
 
     /**
@@ -188,10 +188,10 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="upgrade")
-      private final @Nullable Input<UpgradeNoteArgs> upgrade;
+      private final @Nullable Output<UpgradeNoteArgs> upgrade;
 
-    public Input<UpgradeNoteArgs> getUpgrade() {
-        return this.upgrade == null ? Input.empty() : this.upgrade;
+    public Output<UpgradeNoteArgs> getUpgrade() {
+        return this.upgrade == null ? Output.empty() : this.upgrade;
     }
 
     /**
@@ -199,30 +199,30 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vulnerability")
-      private final @Nullable Input<VulnerabilityNoteArgs> vulnerability;
+      private final @Nullable Output<VulnerabilityNoteArgs> vulnerability;
 
-    public Input<VulnerabilityNoteArgs> getVulnerability() {
-        return this.vulnerability == null ? Input.empty() : this.vulnerability;
+    public Output<VulnerabilityNoteArgs> getVulnerability() {
+        return this.vulnerability == null ? Output.empty() : this.vulnerability;
     }
 
     public NoteArgs(
-        @Nullable Input<AttestationNoteArgs> attestation,
-        @Nullable Input<BuildNoteArgs> build,
-        @Nullable Input<ComplianceNoteArgs> compliance,
-        @Nullable Input<DeploymentNoteArgs> deployment,
-        @Nullable Input<DiscoveryNoteArgs> discovery,
-        @Nullable Input<DSSEAttestationNoteArgs> dsseAttestation,
-        @Nullable Input<String> expirationTime,
-        @Nullable Input<ImageNoteArgs> image,
-        @Nullable Input<String> longDescription,
-        Input<String> noteId,
-        @Nullable Input<PackageNoteArgs> $package,
-        @Nullable Input<String> project,
-        @Nullable Input<List<String>> relatedNoteNames,
-        @Nullable Input<List<RelatedUrlArgs>> relatedUrl,
-        @Nullable Input<String> shortDescription,
-        @Nullable Input<UpgradeNoteArgs> upgrade,
-        @Nullable Input<VulnerabilityNoteArgs> vulnerability) {
+        @Nullable Output<AttestationNoteArgs> attestation,
+        @Nullable Output<BuildNoteArgs> build,
+        @Nullable Output<ComplianceNoteArgs> compliance,
+        @Nullable Output<DeploymentNoteArgs> deployment,
+        @Nullable Output<DiscoveryNoteArgs> discovery,
+        @Nullable Output<DSSEAttestationNoteArgs> dsseAttestation,
+        @Nullable Output<String> expirationTime,
+        @Nullable Output<ImageNoteArgs> image,
+        @Nullable Output<String> longDescription,
+        Output<String> noteId,
+        @Nullable Output<PackageNoteArgs> $package,
+        @Nullable Output<String> project,
+        @Nullable Output<List<String>> relatedNoteNames,
+        @Nullable Output<List<RelatedUrlArgs>> relatedUrl,
+        @Nullable Output<String> shortDescription,
+        @Nullable Output<UpgradeNoteArgs> upgrade,
+        @Nullable Output<VulnerabilityNoteArgs> vulnerability) {
         this.attestation = attestation;
         this.build = build;
         this.compliance = compliance;
@@ -243,23 +243,23 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NoteArgs() {
-        this.attestation = Input.empty();
-        this.build = Input.empty();
-        this.compliance = Input.empty();
-        this.deployment = Input.empty();
-        this.discovery = Input.empty();
-        this.dsseAttestation = Input.empty();
-        this.expirationTime = Input.empty();
-        this.image = Input.empty();
-        this.longDescription = Input.empty();
-        this.noteId = Input.empty();
-        this.$package = Input.empty();
-        this.project = Input.empty();
-        this.relatedNoteNames = Input.empty();
-        this.relatedUrl = Input.empty();
-        this.shortDescription = Input.empty();
-        this.upgrade = Input.empty();
-        this.vulnerability = Input.empty();
+        this.attestation = Output.empty();
+        this.build = Output.empty();
+        this.compliance = Output.empty();
+        this.deployment = Output.empty();
+        this.discovery = Output.empty();
+        this.dsseAttestation = Output.empty();
+        this.expirationTime = Output.empty();
+        this.image = Output.empty();
+        this.longDescription = Output.empty();
+        this.noteId = Output.empty();
+        this.$package = Output.empty();
+        this.project = Output.empty();
+        this.relatedNoteNames = Output.empty();
+        this.relatedUrl = Output.empty();
+        this.shortDescription = Output.empty();
+        this.upgrade = Output.empty();
+        this.vulnerability = Output.empty();
     }
 
     public static Builder builder() {
@@ -271,23 +271,23 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<AttestationNoteArgs> attestation;
-        private @Nullable Input<BuildNoteArgs> build;
-        private @Nullable Input<ComplianceNoteArgs> compliance;
-        private @Nullable Input<DeploymentNoteArgs> deployment;
-        private @Nullable Input<DiscoveryNoteArgs> discovery;
-        private @Nullable Input<DSSEAttestationNoteArgs> dsseAttestation;
-        private @Nullable Input<String> expirationTime;
-        private @Nullable Input<ImageNoteArgs> image;
-        private @Nullable Input<String> longDescription;
-        private Input<String> noteId;
-        private @Nullable Input<PackageNoteArgs> $package;
-        private @Nullable Input<String> project;
-        private @Nullable Input<List<String>> relatedNoteNames;
-        private @Nullable Input<List<RelatedUrlArgs>> relatedUrl;
-        private @Nullable Input<String> shortDescription;
-        private @Nullable Input<UpgradeNoteArgs> upgrade;
-        private @Nullable Input<VulnerabilityNoteArgs> vulnerability;
+        private @Nullable Output<AttestationNoteArgs> attestation;
+        private @Nullable Output<BuildNoteArgs> build;
+        private @Nullable Output<ComplianceNoteArgs> compliance;
+        private @Nullable Output<DeploymentNoteArgs> deployment;
+        private @Nullable Output<DiscoveryNoteArgs> discovery;
+        private @Nullable Output<DSSEAttestationNoteArgs> dsseAttestation;
+        private @Nullable Output<String> expirationTime;
+        private @Nullable Output<ImageNoteArgs> image;
+        private @Nullable Output<String> longDescription;
+        private Output<String> noteId;
+        private @Nullable Output<PackageNoteArgs> $package;
+        private @Nullable Output<String> project;
+        private @Nullable Output<List<String>> relatedNoteNames;
+        private @Nullable Output<List<RelatedUrlArgs>> relatedUrl;
+        private @Nullable Output<String> shortDescription;
+        private @Nullable Output<UpgradeNoteArgs> upgrade;
+        private @Nullable Output<VulnerabilityNoteArgs> vulnerability;
 
         public Builder() {
     	      // Empty
@@ -314,173 +314,173 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vulnerability = defaults.vulnerability;
         }
 
-        public Builder attestation(@Nullable Input<AttestationNoteArgs> attestation) {
+        public Builder attestation(@Nullable Output<AttestationNoteArgs> attestation) {
             this.attestation = attestation;
             return this;
         }
 
         public Builder attestation(@Nullable AttestationNoteArgs attestation) {
-            this.attestation = Input.ofNullable(attestation);
+            this.attestation = Output.ofNullable(attestation);
             return this;
         }
 
-        public Builder build(@Nullable Input<BuildNoteArgs> build) {
+        public Builder build(@Nullable Output<BuildNoteArgs> build) {
             this.build = build;
             return this;
         }
 
         public Builder build(@Nullable BuildNoteArgs build) {
-            this.build = Input.ofNullable(build);
+            this.build = Output.ofNullable(build);
             return this;
         }
 
-        public Builder compliance(@Nullable Input<ComplianceNoteArgs> compliance) {
+        public Builder compliance(@Nullable Output<ComplianceNoteArgs> compliance) {
             this.compliance = compliance;
             return this;
         }
 
         public Builder compliance(@Nullable ComplianceNoteArgs compliance) {
-            this.compliance = Input.ofNullable(compliance);
+            this.compliance = Output.ofNullable(compliance);
             return this;
         }
 
-        public Builder deployment(@Nullable Input<DeploymentNoteArgs> deployment) {
+        public Builder deployment(@Nullable Output<DeploymentNoteArgs> deployment) {
             this.deployment = deployment;
             return this;
         }
 
         public Builder deployment(@Nullable DeploymentNoteArgs deployment) {
-            this.deployment = Input.ofNullable(deployment);
+            this.deployment = Output.ofNullable(deployment);
             return this;
         }
 
-        public Builder discovery(@Nullable Input<DiscoveryNoteArgs> discovery) {
+        public Builder discovery(@Nullable Output<DiscoveryNoteArgs> discovery) {
             this.discovery = discovery;
             return this;
         }
 
         public Builder discovery(@Nullable DiscoveryNoteArgs discovery) {
-            this.discovery = Input.ofNullable(discovery);
+            this.discovery = Output.ofNullable(discovery);
             return this;
         }
 
-        public Builder dsseAttestation(@Nullable Input<DSSEAttestationNoteArgs> dsseAttestation) {
+        public Builder dsseAttestation(@Nullable Output<DSSEAttestationNoteArgs> dsseAttestation) {
             this.dsseAttestation = dsseAttestation;
             return this;
         }
 
         public Builder dsseAttestation(@Nullable DSSEAttestationNoteArgs dsseAttestation) {
-            this.dsseAttestation = Input.ofNullable(dsseAttestation);
+            this.dsseAttestation = Output.ofNullable(dsseAttestation);
             return this;
         }
 
-        public Builder expirationTime(@Nullable Input<String> expirationTime) {
+        public Builder expirationTime(@Nullable Output<String> expirationTime) {
             this.expirationTime = expirationTime;
             return this;
         }
 
         public Builder expirationTime(@Nullable String expirationTime) {
-            this.expirationTime = Input.ofNullable(expirationTime);
+            this.expirationTime = Output.ofNullable(expirationTime);
             return this;
         }
 
-        public Builder image(@Nullable Input<ImageNoteArgs> image) {
+        public Builder image(@Nullable Output<ImageNoteArgs> image) {
             this.image = image;
             return this;
         }
 
         public Builder image(@Nullable ImageNoteArgs image) {
-            this.image = Input.ofNullable(image);
+            this.image = Output.ofNullable(image);
             return this;
         }
 
-        public Builder longDescription(@Nullable Input<String> longDescription) {
+        public Builder longDescription(@Nullable Output<String> longDescription) {
             this.longDescription = longDescription;
             return this;
         }
 
         public Builder longDescription(@Nullable String longDescription) {
-            this.longDescription = Input.ofNullable(longDescription);
+            this.longDescription = Output.ofNullable(longDescription);
             return this;
         }
 
-        public Builder noteId(Input<String> noteId) {
+        public Builder noteId(Output<String> noteId) {
             this.noteId = Objects.requireNonNull(noteId);
             return this;
         }
 
         public Builder noteId(String noteId) {
-            this.noteId = Input.of(Objects.requireNonNull(noteId));
+            this.noteId = Output.of(Objects.requireNonNull(noteId));
             return this;
         }
 
-        public Builder $package(@Nullable Input<PackageNoteArgs> $package) {
+        public Builder $package(@Nullable Output<PackageNoteArgs> $package) {
             this.$package = $package;
             return this;
         }
 
         public Builder $package(@Nullable PackageNoteArgs $package) {
-            this.$package = Input.ofNullable($package);
+            this.$package = Output.ofNullable($package);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder relatedNoteNames(@Nullable Input<List<String>> relatedNoteNames) {
+        public Builder relatedNoteNames(@Nullable Output<List<String>> relatedNoteNames) {
             this.relatedNoteNames = relatedNoteNames;
             return this;
         }
 
         public Builder relatedNoteNames(@Nullable List<String> relatedNoteNames) {
-            this.relatedNoteNames = Input.ofNullable(relatedNoteNames);
+            this.relatedNoteNames = Output.ofNullable(relatedNoteNames);
             return this;
         }
 
-        public Builder relatedUrl(@Nullable Input<List<RelatedUrlArgs>> relatedUrl) {
+        public Builder relatedUrl(@Nullable Output<List<RelatedUrlArgs>> relatedUrl) {
             this.relatedUrl = relatedUrl;
             return this;
         }
 
         public Builder relatedUrl(@Nullable List<RelatedUrlArgs> relatedUrl) {
-            this.relatedUrl = Input.ofNullable(relatedUrl);
+            this.relatedUrl = Output.ofNullable(relatedUrl);
             return this;
         }
 
-        public Builder shortDescription(@Nullable Input<String> shortDescription) {
+        public Builder shortDescription(@Nullable Output<String> shortDescription) {
             this.shortDescription = shortDescription;
             return this;
         }
 
         public Builder shortDescription(@Nullable String shortDescription) {
-            this.shortDescription = Input.ofNullable(shortDescription);
+            this.shortDescription = Output.ofNullable(shortDescription);
             return this;
         }
 
-        public Builder upgrade(@Nullable Input<UpgradeNoteArgs> upgrade) {
+        public Builder upgrade(@Nullable Output<UpgradeNoteArgs> upgrade) {
             this.upgrade = upgrade;
             return this;
         }
 
         public Builder upgrade(@Nullable UpgradeNoteArgs upgrade) {
-            this.upgrade = Input.ofNullable(upgrade);
+            this.upgrade = Output.ofNullable(upgrade);
             return this;
         }
 
-        public Builder vulnerability(@Nullable Input<VulnerabilityNoteArgs> vulnerability) {
+        public Builder vulnerability(@Nullable Output<VulnerabilityNoteArgs> vulnerability) {
             this.vulnerability = vulnerability;
             return this;
         }
 
         public Builder vulnerability(@Nullable VulnerabilityNoteArgs vulnerability) {
-            this.vulnerability = Input.ofNullable(vulnerability);
+            this.vulnerability = Output.ofNullable(vulnerability);
             return this;
         }
         public NoteArgs build() {

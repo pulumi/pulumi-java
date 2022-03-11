@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class NetworkPolicyConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="disabled")
-      private final @Nullable Input<Boolean> disabled;
+      private final @Nullable Output<Boolean> disabled;
 
-    public Input<Boolean> getDisabled() {
-        return this.disabled == null ? Input.empty() : this.disabled;
+    public Output<Boolean> getDisabled() {
+        return this.disabled == null ? Output.empty() : this.disabled;
     }
 
-    public NetworkPolicyConfigArgs(@Nullable Input<Boolean> disabled) {
+    public NetworkPolicyConfigArgs(@Nullable Output<Boolean> disabled) {
         this.disabled = disabled;
     }
 
     private NetworkPolicyConfigArgs() {
-        this.disabled = Input.empty();
+        this.disabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class NetworkPolicyConfigArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> disabled;
+        private @Nullable Output<Boolean> disabled;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class NetworkPolicyConfigArgs extends io.pulumi.resources.ResourceA
     	      this.disabled = defaults.disabled;
         }
 
-        public Builder disabled(@Nullable Input<Boolean> disabled) {
+        public Builder disabled(@Nullable Output<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
 
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Input.ofNullable(disabled);
+            this.disabled = Output.ofNullable(disabled);
             return this;
         }
         public NetworkPolicyConfigArgs build() {

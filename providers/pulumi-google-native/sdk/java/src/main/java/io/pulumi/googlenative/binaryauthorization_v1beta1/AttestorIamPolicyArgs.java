@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.binaryauthorization_v1beta1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.binaryauthorization_v1beta1.inputs.BindingArgs;
 import java.lang.Integer;
@@ -18,9 +18,9 @@ public final class AttestorIamPolicyArgs extends io.pulumi.resources.ResourceArg
     public static final AttestorIamPolicyArgs Empty = new AttestorIamPolicyArgs();
 
     @InputImport(name="attestorId", required=true)
-      private final Input<String> attestorId;
+      private final Output<String> attestorId;
 
-    public Input<String> getAttestorId() {
+    public Output<String> getAttestorId() {
         return this.attestorId;
     }
 
@@ -29,10 +29,10 @@ public final class AttestorIamPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="bindings")
-      private final @Nullable Input<List<BindingArgs>> bindings;
+      private final @Nullable Output<List<BindingArgs>> bindings;
 
-    public Input<List<BindingArgs>> getBindings() {
-        return this.bindings == null ? Input.empty() : this.bindings;
+    public Output<List<BindingArgs>> getBindings() {
+        return this.bindings == null ? Output.empty() : this.bindings;
     }
 
     /**
@@ -40,17 +40,17 @@ public final class AttestorIamPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -58,18 +58,18 @@ public final class AttestorIamPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<Integer> version;
+      private final @Nullable Output<Integer> version;
 
-    public Input<Integer> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<Integer> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public AttestorIamPolicyArgs(
-        Input<String> attestorId,
-        @Nullable Input<List<BindingArgs>> bindings,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> project,
-        @Nullable Input<Integer> version) {
+        Output<String> attestorId,
+        @Nullable Output<List<BindingArgs>> bindings,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> project,
+        @Nullable Output<Integer> version) {
         this.attestorId = Objects.requireNonNull(attestorId, "expected parameter 'attestorId' to be non-null");
         this.bindings = bindings;
         this.etag = etag;
@@ -78,11 +78,11 @@ public final class AttestorIamPolicyArgs extends io.pulumi.resources.ResourceArg
     }
 
     private AttestorIamPolicyArgs() {
-        this.attestorId = Input.empty();
-        this.bindings = Input.empty();
-        this.etag = Input.empty();
-        this.project = Input.empty();
-        this.version = Input.empty();
+        this.attestorId = Output.empty();
+        this.bindings = Output.empty();
+        this.etag = Output.empty();
+        this.project = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -94,11 +94,11 @@ public final class AttestorIamPolicyArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> attestorId;
-        private @Nullable Input<List<BindingArgs>> bindings;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> project;
-        private @Nullable Input<Integer> version;
+        private Output<String> attestorId;
+        private @Nullable Output<List<BindingArgs>> bindings;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> project;
+        private @Nullable Output<Integer> version;
 
         public Builder() {
     	      // Empty
@@ -113,53 +113,53 @@ public final class AttestorIamPolicyArgs extends io.pulumi.resources.ResourceArg
     	      this.version = defaults.version;
         }
 
-        public Builder attestorId(Input<String> attestorId) {
+        public Builder attestorId(Output<String> attestorId) {
             this.attestorId = Objects.requireNonNull(attestorId);
             return this;
         }
 
         public Builder attestorId(String attestorId) {
-            this.attestorId = Input.of(Objects.requireNonNull(attestorId));
+            this.attestorId = Output.of(Objects.requireNonNull(attestorId));
             return this;
         }
 
-        public Builder bindings(@Nullable Input<List<BindingArgs>> bindings) {
+        public Builder bindings(@Nullable Output<List<BindingArgs>> bindings) {
             this.bindings = bindings;
             return this;
         }
 
         public Builder bindings(@Nullable List<BindingArgs> bindings) {
-            this.bindings = Input.ofNullable(bindings);
+            this.bindings = Output.ofNullable(bindings);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder version(@Nullable Input<Integer> version) {
+        public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable Integer version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public AttestorIamPolicyArgs build() {

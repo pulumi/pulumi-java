@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class AmiLaunchPermissionState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="accountId")
-      private final @Nullable Input<String> accountId;
+      private final @Nullable Output<String> accountId;
 
-    public Input<String> getAccountId() {
-        return this.accountId == null ? Input.empty() : this.accountId;
+    public Output<String> getAccountId() {
+        return this.accountId == null ? Output.empty() : this.accountId;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class AmiLaunchPermissionState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="imageId")
-      private final @Nullable Input<String> imageId;
+      private final @Nullable Output<String> imageId;
 
-    public Input<String> getImageId() {
-        return this.imageId == null ? Input.empty() : this.imageId;
+    public Output<String> getImageId() {
+        return this.imageId == null ? Output.empty() : this.imageId;
     }
 
     public AmiLaunchPermissionState(
-        @Nullable Input<String> accountId,
-        @Nullable Input<String> imageId) {
+        @Nullable Output<String> accountId,
+        @Nullable Output<String> imageId) {
         this.accountId = accountId;
         this.imageId = imageId;
     }
 
     private AmiLaunchPermissionState() {
-        this.accountId = Input.empty();
-        this.imageId = Input.empty();
+        this.accountId = Output.empty();
+        this.imageId = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class AmiLaunchPermissionState extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accountId;
-        private @Nullable Input<String> imageId;
+        private @Nullable Output<String> accountId;
+        private @Nullable Output<String> imageId;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class AmiLaunchPermissionState extends io.pulumi.resources.Resource
     	      this.imageId = defaults.imageId;
         }
 
-        public Builder accountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Output<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Input.ofNullable(accountId);
+            this.accountId = Output.ofNullable(accountId);
             return this;
         }
 
-        public Builder imageId(@Nullable Input<String> imageId) {
+        public Builder imageId(@Nullable Output<String> imageId) {
             this.imageId = imageId;
             return this;
         }
 
         public Builder imageId(@Nullable String imageId) {
-            this.imageId = Input.ofNullable(imageId);
+            this.imageId = Output.ofNullable(imageId);
             return this;
         }
         public AmiLaunchPermissionState build() {

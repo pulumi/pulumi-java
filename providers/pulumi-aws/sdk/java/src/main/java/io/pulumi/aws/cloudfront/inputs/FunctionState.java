@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudfront.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="code")
-      private final @Nullable Input<String> code;
+      private final @Nullable Output<String> code;
 
-    public Input<String> getCode() {
-        return this.code == null ? Input.empty() : this.code;
+    public Output<String> getCode() {
+        return this.code == null ? Output.empty() : this.code;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="comment")
-      private final @Nullable Input<String> comment;
+      private final @Nullable Output<String> comment;
 
-    public Input<String> getComment() {
-        return this.comment == null ? Input.empty() : this.comment;
+    public Output<String> getComment() {
+        return this.comment == null ? Output.empty() : this.comment;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="liveStageEtag")
-      private final @Nullable Input<String> liveStageEtag;
+      private final @Nullable Output<String> liveStageEtag;
 
-    public Input<String> getLiveStageEtag() {
-        return this.liveStageEtag == null ? Input.empty() : this.liveStageEtag;
+    public Output<String> getLiveStageEtag() {
+        return this.liveStageEtag == null ? Output.empty() : this.liveStageEtag;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publish")
-      private final @Nullable Input<Boolean> publish;
+      private final @Nullable Output<Boolean> publish;
 
-    public Input<Boolean> getPublish() {
-        return this.publish == null ? Input.empty() : this.publish;
+    public Output<Boolean> getPublish() {
+        return this.publish == null ? Output.empty() : this.publish;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runtime")
-      private final @Nullable Input<String> runtime;
+      private final @Nullable Output<String> runtime;
 
-    public Input<String> getRuntime() {
-        return this.runtime == null ? Input.empty() : this.runtime;
+    public Output<String> getRuntime() {
+        return this.runtime == null ? Output.empty() : this.runtime;
     }
 
     /**
@@ -108,22 +108,22 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     public FunctionState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> code,
-        @Nullable Input<String> comment,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> liveStageEtag,
-        @Nullable Input<String> name,
-        @Nullable Input<Boolean> publish,
-        @Nullable Input<String> runtime,
-        @Nullable Input<String> status) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> code,
+        @Nullable Output<String> comment,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> liveStageEtag,
+        @Nullable Output<String> name,
+        @Nullable Output<Boolean> publish,
+        @Nullable Output<String> runtime,
+        @Nullable Output<String> status) {
         this.arn = arn;
         this.code = code;
         this.comment = comment;
@@ -136,15 +136,15 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
     }
 
     private FunctionState() {
-        this.arn = Input.empty();
-        this.code = Input.empty();
-        this.comment = Input.empty();
-        this.etag = Input.empty();
-        this.liveStageEtag = Input.empty();
-        this.name = Input.empty();
-        this.publish = Input.empty();
-        this.runtime = Input.empty();
-        this.status = Input.empty();
+        this.arn = Output.empty();
+        this.code = Output.empty();
+        this.comment = Output.empty();
+        this.etag = Output.empty();
+        this.liveStageEtag = Output.empty();
+        this.name = Output.empty();
+        this.publish = Output.empty();
+        this.runtime = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -156,15 +156,15 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> code;
-        private @Nullable Input<String> comment;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> liveStageEtag;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Boolean> publish;
-        private @Nullable Input<String> runtime;
-        private @Nullable Input<String> status;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> code;
+        private @Nullable Output<String> comment;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> liveStageEtag;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Boolean> publish;
+        private @Nullable Output<String> runtime;
+        private @Nullable Output<String> status;
 
         public Builder() {
     	      // Empty
@@ -183,93 +183,93 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
     	      this.status = defaults.status;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder code(@Nullable Input<String> code) {
+        public Builder code(@Nullable Output<String> code) {
             this.code = code;
             return this;
         }
 
         public Builder code(@Nullable String code) {
-            this.code = Input.ofNullable(code);
+            this.code = Output.ofNullable(code);
             return this;
         }
 
-        public Builder comment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Output<String> comment) {
             this.comment = comment;
             return this;
         }
 
         public Builder comment(@Nullable String comment) {
-            this.comment = Input.ofNullable(comment);
+            this.comment = Output.ofNullable(comment);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder liveStageEtag(@Nullable Input<String> liveStageEtag) {
+        public Builder liveStageEtag(@Nullable Output<String> liveStageEtag) {
             this.liveStageEtag = liveStageEtag;
             return this;
         }
 
         public Builder liveStageEtag(@Nullable String liveStageEtag) {
-            this.liveStageEtag = Input.ofNullable(liveStageEtag);
+            this.liveStageEtag = Output.ofNullable(liveStageEtag);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder publish(@Nullable Input<Boolean> publish) {
+        public Builder publish(@Nullable Output<Boolean> publish) {
             this.publish = publish;
             return this;
         }
 
         public Builder publish(@Nullable Boolean publish) {
-            this.publish = Input.ofNullable(publish);
+            this.publish = Output.ofNullable(publish);
             return this;
         }
 
-        public Builder runtime(@Nullable Input<String> runtime) {
+        public Builder runtime(@Nullable Output<String> runtime) {
             this.runtime = runtime;
             return this;
         }
 
         public Builder runtime(@Nullable String runtime) {
-            this.runtime = Input.ofNullable(runtime);
+            this.runtime = Output.ofNullable(runtime);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public FunctionState build() {

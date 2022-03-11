@@ -5,7 +5,7 @@ package io.pulumi.azurenative.chaos;
 
 import io.pulumi.azurenative.chaos.inputs.ExperimentPropertiesArgs;
 import io.pulumi.azurenative.chaos.inputs.ResourceIdentityArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -22,10 +22,10 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="experimentName")
-      private final @Nullable Input<String> experimentName;
+      private final @Nullable Output<String> experimentName;
 
-    public Input<String> getExperimentName() {
-        return this.experimentName == null ? Input.empty() : this.experimentName;
+    public Output<String> getExperimentName() {
+        return this.experimentName == null ? Output.empty() : this.experimentName;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<ResourceIdentityArgs> identity;
+      private final @Nullable Output<ResourceIdentityArgs> identity;
 
-    public Input<ResourceIdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<ResourceIdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -55,9 +55,9 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties", required=true)
-      private final Input<ExperimentPropertiesArgs> properties;
+      private final Output<ExperimentPropertiesArgs> properties;
 
-    public Input<ExperimentPropertiesArgs> getProperties() {
+    public Output<ExperimentPropertiesArgs> getProperties() {
         return this.properties;
     }
 
@@ -66,9 +66,9 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -77,19 +77,19 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ExperimentArgs(
-        @Nullable Input<String> experimentName,
-        @Nullable Input<ResourceIdentityArgs> identity,
-        @Nullable Input<String> location,
-        Input<ExperimentPropertiesArgs> properties,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> experimentName,
+        @Nullable Output<ResourceIdentityArgs> identity,
+        @Nullable Output<String> location,
+        Output<ExperimentPropertiesArgs> properties,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.experimentName = experimentName;
         this.identity = identity;
         this.location = location;
@@ -99,12 +99,12 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ExperimentArgs() {
-        this.experimentName = Input.empty();
-        this.identity = Input.empty();
-        this.location = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.experimentName = Output.empty();
+        this.identity = Output.empty();
+        this.location = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> experimentName;
-        private @Nullable Input<ResourceIdentityArgs> identity;
-        private @Nullable Input<String> location;
-        private Input<ExperimentPropertiesArgs> properties;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> experimentName;
+        private @Nullable Output<ResourceIdentityArgs> identity;
+        private @Nullable Output<String> location;
+        private Output<ExperimentPropertiesArgs> properties;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder experimentName(@Nullable Input<String> experimentName) {
+        public Builder experimentName(@Nullable Output<String> experimentName) {
             this.experimentName = experimentName;
             return this;
         }
 
         public Builder experimentName(@Nullable String experimentName) {
-            this.experimentName = Input.ofNullable(experimentName);
+            this.experimentName = Output.ofNullable(experimentName);
             return this;
         }
 
-        public Builder identity(@Nullable Input<ResourceIdentityArgs> identity) {
+        public Builder identity(@Nullable Output<ResourceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable ResourceIdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder properties(Input<ExperimentPropertiesArgs> properties) {
+        public Builder properties(Output<ExperimentPropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
         public Builder properties(ExperimentPropertiesArgs properties) {
-            this.properties = Input.of(Objects.requireNonNull(properties));
+            this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ExperimentArgs build() {

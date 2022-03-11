@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class AuthorityKeySpecGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="algorithm")
-      private final @Nullable Input<String> algorithm;
+      private final @Nullable Output<String> algorithm;
 
-    public Input<String> getAlgorithm() {
-        return this.algorithm == null ? Input.empty() : this.algorithm;
+    public Output<String> getAlgorithm() {
+        return this.algorithm == null ? Output.empty() : this.algorithm;
     }
 
     /**
@@ -33,22 +33,22 @@ public final class AuthorityKeySpecGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="cloudKmsKeyVersion")
-      private final @Nullable Input<String> cloudKmsKeyVersion;
+      private final @Nullable Output<String> cloudKmsKeyVersion;
 
-    public Input<String> getCloudKmsKeyVersion() {
-        return this.cloudKmsKeyVersion == null ? Input.empty() : this.cloudKmsKeyVersion;
+    public Output<String> getCloudKmsKeyVersion() {
+        return this.cloudKmsKeyVersion == null ? Output.empty() : this.cloudKmsKeyVersion;
     }
 
     public AuthorityKeySpecGetArgs(
-        @Nullable Input<String> algorithm,
-        @Nullable Input<String> cloudKmsKeyVersion) {
+        @Nullable Output<String> algorithm,
+        @Nullable Output<String> cloudKmsKeyVersion) {
         this.algorithm = algorithm;
         this.cloudKmsKeyVersion = cloudKmsKeyVersion;
     }
 
     private AuthorityKeySpecGetArgs() {
-        this.algorithm = Input.empty();
-        this.cloudKmsKeyVersion = Input.empty();
+        this.algorithm = Output.empty();
+        this.cloudKmsKeyVersion = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class AuthorityKeySpecGetArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> algorithm;
-        private @Nullable Input<String> cloudKmsKeyVersion;
+        private @Nullable Output<String> algorithm;
+        private @Nullable Output<String> cloudKmsKeyVersion;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class AuthorityKeySpecGetArgs extends io.pulumi.resources.ResourceA
     	      this.cloudKmsKeyVersion = defaults.cloudKmsKeyVersion;
         }
 
-        public Builder algorithm(@Nullable Input<String> algorithm) {
+        public Builder algorithm(@Nullable Output<String> algorithm) {
             this.algorithm = algorithm;
             return this;
         }
 
         public Builder algorithm(@Nullable String algorithm) {
-            this.algorithm = Input.ofNullable(algorithm);
+            this.algorithm = Output.ofNullable(algorithm);
             return this;
         }
 
-        public Builder cloudKmsKeyVersion(@Nullable Input<String> cloudKmsKeyVersion) {
+        public Builder cloudKmsKeyVersion(@Nullable Output<String> cloudKmsKeyVersion) {
             this.cloudKmsKeyVersion = cloudKmsKeyVersion;
             return this;
         }
 
         public Builder cloudKmsKeyVersion(@Nullable String cloudKmsKeyVersion) {
-            this.cloudKmsKeyVersion = Input.ofNullable(cloudKmsKeyVersion);
+            this.cloudKmsKeyVersion = Output.ofNullable(cloudKmsKeyVersion);
             return this;
         }
         public AuthorityKeySpecGetArgs build() {

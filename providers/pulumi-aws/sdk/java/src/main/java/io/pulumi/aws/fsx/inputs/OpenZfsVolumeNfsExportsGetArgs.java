@@ -4,7 +4,7 @@
 package io.pulumi.aws.fsx.inputs;
 
 import io.pulumi.aws.fsx.inputs.OpenZfsVolumeNfsExportsClientConfigurationGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class OpenZfsVolumeNfsExportsGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="clientConfigurations", required=true)
-      private final Input<List<OpenZfsVolumeNfsExportsClientConfigurationGetArgs>> clientConfigurations;
+      private final Output<List<OpenZfsVolumeNfsExportsClientConfigurationGetArgs>> clientConfigurations;
 
-    public Input<List<OpenZfsVolumeNfsExportsClientConfigurationGetArgs>> getClientConfigurations() {
+    public Output<List<OpenZfsVolumeNfsExportsClientConfigurationGetArgs>> getClientConfigurations() {
         return this.clientConfigurations;
     }
 
-    public OpenZfsVolumeNfsExportsGetArgs(Input<List<OpenZfsVolumeNfsExportsClientConfigurationGetArgs>> clientConfigurations) {
+    public OpenZfsVolumeNfsExportsGetArgs(Output<List<OpenZfsVolumeNfsExportsClientConfigurationGetArgs>> clientConfigurations) {
         this.clientConfigurations = Objects.requireNonNull(clientConfigurations, "expected parameter 'clientConfigurations' to be non-null");
     }
 
     private OpenZfsVolumeNfsExportsGetArgs() {
-        this.clientConfigurations = Input.empty();
+        this.clientConfigurations = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class OpenZfsVolumeNfsExportsGetArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<List<OpenZfsVolumeNfsExportsClientConfigurationGetArgs>> clientConfigurations;
+        private Output<List<OpenZfsVolumeNfsExportsClientConfigurationGetArgs>> clientConfigurations;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class OpenZfsVolumeNfsExportsGetArgs extends io.pulumi.resources.Re
     	      this.clientConfigurations = defaults.clientConfigurations;
         }
 
-        public Builder clientConfigurations(Input<List<OpenZfsVolumeNfsExportsClientConfigurationGetArgs>> clientConfigurations) {
+        public Builder clientConfigurations(Output<List<OpenZfsVolumeNfsExportsClientConfigurationGetArgs>> clientConfigurations) {
             this.clientConfigurations = Objects.requireNonNull(clientConfigurations);
             return this;
         }
 
         public Builder clientConfigurations(List<OpenZfsVolumeNfsExportsClientConfigurationGetArgs> clientConfigurations) {
-            this.clientConfigurations = Input.of(Objects.requireNonNull(clientConfigurations));
+            this.clientConfigurations = Output.of(Objects.requireNonNull(clientConfigurations));
             return this;
         }
         public OpenZfsVolumeNfsExportsGetArgs build() {

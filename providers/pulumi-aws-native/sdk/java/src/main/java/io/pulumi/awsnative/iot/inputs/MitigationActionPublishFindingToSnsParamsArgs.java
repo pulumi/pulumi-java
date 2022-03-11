@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class MitigationActionPublishFindingToSnsParamsArgs extends io.pulu
      * 
      */
     @InputImport(name="topicArn", required=true)
-      private final Input<String> topicArn;
+      private final Output<String> topicArn;
 
-    public Input<String> getTopicArn() {
+    public Output<String> getTopicArn() {
         return this.topicArn;
     }
 
-    public MitigationActionPublishFindingToSnsParamsArgs(Input<String> topicArn) {
+    public MitigationActionPublishFindingToSnsParamsArgs(Output<String> topicArn) {
         this.topicArn = Objects.requireNonNull(topicArn, "expected parameter 'topicArn' to be non-null");
     }
 
     private MitigationActionPublishFindingToSnsParamsArgs() {
-        this.topicArn = Input.empty();
+        this.topicArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class MitigationActionPublishFindingToSnsParamsArgs extends io.pulu
     }
 
     public static final class Builder {
-        private Input<String> topicArn;
+        private Output<String> topicArn;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class MitigationActionPublishFindingToSnsParamsArgs extends io.pulu
     	      this.topicArn = defaults.topicArn;
         }
 
-        public Builder topicArn(Input<String> topicArn) {
+        public Builder topicArn(Output<String> topicArn) {
             this.topicArn = Objects.requireNonNull(topicArn);
             return this;
         }
 
         public Builder topicArn(String topicArn) {
-            this.topicArn = Input.of(Objects.requireNonNull(topicArn));
+            this.topicArn = Output.of(Objects.requireNonNull(topicArn));
             return this;
         }
         public MitigationActionPublishFindingToSnsParamsArgs build() {

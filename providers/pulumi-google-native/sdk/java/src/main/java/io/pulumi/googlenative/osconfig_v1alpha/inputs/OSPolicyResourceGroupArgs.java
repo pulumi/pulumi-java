@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyInventoryFilterArgs;
 import io.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyResourceArgs;
@@ -25,10 +25,10 @@ public final class OSPolicyResourceGroupArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="inventoryFilters")
-      private final @Nullable Input<List<OSPolicyInventoryFilterArgs>> inventoryFilters;
+      private final @Nullable Output<List<OSPolicyInventoryFilterArgs>> inventoryFilters;
 
-    public Input<List<OSPolicyInventoryFilterArgs>> getInventoryFilters() {
-        return this.inventoryFilters == null ? Input.empty() : this.inventoryFilters;
+    public Output<List<OSPolicyInventoryFilterArgs>> getInventoryFilters() {
+        return this.inventoryFilters == null ? Output.empty() : this.inventoryFilters;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class OSPolicyResourceGroupArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resources", required=true)
-      private final Input<List<OSPolicyResourceArgs>> resources;
+      private final Output<List<OSPolicyResourceArgs>> resources;
 
-    public Input<List<OSPolicyResourceArgs>> getResources() {
+    public Output<List<OSPolicyResourceArgs>> getResources() {
         return this.resources;
     }
 
     public OSPolicyResourceGroupArgs(
-        @Nullable Input<List<OSPolicyInventoryFilterArgs>> inventoryFilters,
-        Input<List<OSPolicyResourceArgs>> resources) {
+        @Nullable Output<List<OSPolicyInventoryFilterArgs>> inventoryFilters,
+        Output<List<OSPolicyResourceArgs>> resources) {
         this.inventoryFilters = inventoryFilters;
         this.resources = Objects.requireNonNull(resources, "expected parameter 'resources' to be non-null");
     }
 
     private OSPolicyResourceGroupArgs() {
-        this.inventoryFilters = Input.empty();
-        this.resources = Input.empty();
+        this.inventoryFilters = Output.empty();
+        this.resources = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class OSPolicyResourceGroupArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<List<OSPolicyInventoryFilterArgs>> inventoryFilters;
-        private Input<List<OSPolicyResourceArgs>> resources;
+        private @Nullable Output<List<OSPolicyInventoryFilterArgs>> inventoryFilters;
+        private Output<List<OSPolicyResourceArgs>> resources;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class OSPolicyResourceGroupArgs extends io.pulumi.resources.Resourc
     	      this.resources = defaults.resources;
         }
 
-        public Builder inventoryFilters(@Nullable Input<List<OSPolicyInventoryFilterArgs>> inventoryFilters) {
+        public Builder inventoryFilters(@Nullable Output<List<OSPolicyInventoryFilterArgs>> inventoryFilters) {
             this.inventoryFilters = inventoryFilters;
             return this;
         }
 
         public Builder inventoryFilters(@Nullable List<OSPolicyInventoryFilterArgs> inventoryFilters) {
-            this.inventoryFilters = Input.ofNullable(inventoryFilters);
+            this.inventoryFilters = Output.ofNullable(inventoryFilters);
             return this;
         }
 
-        public Builder resources(Input<List<OSPolicyResourceArgs>> resources) {
+        public Builder resources(Output<List<OSPolicyResourceArgs>> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
 
         public Builder resources(List<OSPolicyResourceArgs> resources) {
-            this.resources = Input.of(Objects.requireNonNull(resources));
+            this.resources = Output.of(Objects.requireNonNull(resources));
             return this;
         }
         public OSPolicyResourceGroupArgs build() {

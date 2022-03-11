@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
      * 
      */
     @InputImport(name="noSmallTalk")
-      private final @Nullable Input<Boolean> noSmallTalk;
+      private final @Nullable Output<Boolean> noSmallTalk;
 
-    public Input<Boolean> getNoSmallTalk() {
-        return this.noSmallTalk == null ? Input.empty() : this.noSmallTalk;
+    public Output<Boolean> getNoSmallTalk() {
+        return this.noSmallTalk == null ? Output.empty() : this.noSmallTalk;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
      * 
      */
     @InputImport(name="onlyEndUser")
-      private final @Nullable Input<Boolean> onlyEndUser;
+      private final @Nullable Output<Boolean> onlyEndUser;
 
-    public Input<Boolean> getOnlyEndUser() {
-        return this.onlyEndUser == null ? Input.empty() : this.onlyEndUser;
+    public Output<Boolean> getOnlyEndUser() {
+        return this.onlyEndUser == null ? Output.empty() : this.onlyEndUser;
     }
 
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettingsArgs(
-        @Nullable Input<Boolean> noSmallTalk,
-        @Nullable Input<Boolean> onlyEndUser) {
+        @Nullable Output<Boolean> noSmallTalk,
+        @Nullable Output<Boolean> onlyEndUser) {
         this.noSmallTalk = noSmallTalk;
         this.onlyEndUser = onlyEndUser;
     }
 
     private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettingsArgs() {
-        this.noSmallTalk = Input.empty();
-        this.onlyEndUser = Input.empty();
+        this.noSmallTalk = Output.empty();
+        this.onlyEndUser = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> noSmallTalk;
-        private @Nullable Input<Boolean> onlyEndUser;
+        private @Nullable Output<Boolean> noSmallTalk;
+        private @Nullable Output<Boolean> onlyEndUser;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
     	      this.onlyEndUser = defaults.onlyEndUser;
         }
 
-        public Builder noSmallTalk(@Nullable Input<Boolean> noSmallTalk) {
+        public Builder noSmallTalk(@Nullable Output<Boolean> noSmallTalk) {
             this.noSmallTalk = noSmallTalk;
             return this;
         }
 
         public Builder noSmallTalk(@Nullable Boolean noSmallTalk) {
-            this.noSmallTalk = Input.ofNullable(noSmallTalk);
+            this.noSmallTalk = Output.ofNullable(noSmallTalk);
             return this;
         }
 
-        public Builder onlyEndUser(@Nullable Input<Boolean> onlyEndUser) {
+        public Builder onlyEndUser(@Nullable Output<Boolean> onlyEndUser) {
             this.onlyEndUser = onlyEndUser;
             return this;
         }
 
         public Builder onlyEndUser(@Nullable Boolean onlyEndUser) {
-            this.onlyEndUser = Input.ofNullable(onlyEndUser);
+            this.onlyEndUser = Output.ofNullable(onlyEndUser);
             return this;
         }
         public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettingsArgs build() {

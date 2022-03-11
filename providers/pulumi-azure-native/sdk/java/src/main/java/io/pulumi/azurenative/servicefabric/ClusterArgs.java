@@ -13,7 +13,7 @@ import io.pulumi.azurenative.servicefabric.inputs.DiagnosticsStorageAccountConfi
 import io.pulumi.azurenative.servicefabric.inputs.NodeTypeDescriptionArgs;
 import io.pulumi.azurenative.servicefabric.inputs.ServerCertificateCommonNamesArgs;
 import io.pulumi.azurenative.servicefabric.inputs.SettingsSectionDescriptionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -32,10 +32,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addOnFeatures")
-      private final @Nullable Input<List<String>> addOnFeatures;
+      private final @Nullable Output<List<String>> addOnFeatures;
 
-    public Input<List<String>> getAddOnFeatures() {
-        return this.addOnFeatures == null ? Input.empty() : this.addOnFeatures;
+    public Output<List<String>> getAddOnFeatures() {
+        return this.addOnFeatures == null ? Output.empty() : this.addOnFeatures;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationTypeVersionsCleanupPolicy")
-      private final @Nullable Input<ApplicationTypeVersionsCleanupPolicyArgs> applicationTypeVersionsCleanupPolicy;
+      private final @Nullable Output<ApplicationTypeVersionsCleanupPolicyArgs> applicationTypeVersionsCleanupPolicy;
 
-    public Input<ApplicationTypeVersionsCleanupPolicyArgs> getApplicationTypeVersionsCleanupPolicy() {
-        return this.applicationTypeVersionsCleanupPolicy == null ? Input.empty() : this.applicationTypeVersionsCleanupPolicy;
+    public Output<ApplicationTypeVersionsCleanupPolicyArgs> getApplicationTypeVersionsCleanupPolicy() {
+        return this.applicationTypeVersionsCleanupPolicy == null ? Output.empty() : this.applicationTypeVersionsCleanupPolicy;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="azureActiveDirectory")
-      private final @Nullable Input<AzureActiveDirectoryArgs> azureActiveDirectory;
+      private final @Nullable Output<AzureActiveDirectoryArgs> azureActiveDirectory;
 
-    public Input<AzureActiveDirectoryArgs> getAzureActiveDirectory() {
-        return this.azureActiveDirectory == null ? Input.empty() : this.azureActiveDirectory;
+    public Output<AzureActiveDirectoryArgs> getAzureActiveDirectory() {
+        return this.azureActiveDirectory == null ? Output.empty() : this.azureActiveDirectory;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificate")
-      private final @Nullable Input<CertificateDescriptionArgs> certificate;
+      private final @Nullable Output<CertificateDescriptionArgs> certificate;
 
-    public Input<CertificateDescriptionArgs> getCertificate() {
-        return this.certificate == null ? Input.empty() : this.certificate;
+    public Output<CertificateDescriptionArgs> getCertificate() {
+        return this.certificate == null ? Output.empty() : this.certificate;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateCommonNames")
-      private final @Nullable Input<ServerCertificateCommonNamesArgs> certificateCommonNames;
+      private final @Nullable Output<ServerCertificateCommonNamesArgs> certificateCommonNames;
 
-    public Input<ServerCertificateCommonNamesArgs> getCertificateCommonNames() {
-        return this.certificateCommonNames == null ? Input.empty() : this.certificateCommonNames;
+    public Output<ServerCertificateCommonNamesArgs> getCertificateCommonNames() {
+        return this.certificateCommonNames == null ? Output.empty() : this.certificateCommonNames;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientCertificateCommonNames")
-      private final @Nullable Input<List<ClientCertificateCommonNameArgs>> clientCertificateCommonNames;
+      private final @Nullable Output<List<ClientCertificateCommonNameArgs>> clientCertificateCommonNames;
 
-    public Input<List<ClientCertificateCommonNameArgs>> getClientCertificateCommonNames() {
-        return this.clientCertificateCommonNames == null ? Input.empty() : this.clientCertificateCommonNames;
+    public Output<List<ClientCertificateCommonNameArgs>> getClientCertificateCommonNames() {
+        return this.clientCertificateCommonNames == null ? Output.empty() : this.clientCertificateCommonNames;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientCertificateThumbprints")
-      private final @Nullable Input<List<ClientCertificateThumbprintArgs>> clientCertificateThumbprints;
+      private final @Nullable Output<List<ClientCertificateThumbprintArgs>> clientCertificateThumbprints;
 
-    public Input<List<ClientCertificateThumbprintArgs>> getClientCertificateThumbprints() {
-        return this.clientCertificateThumbprints == null ? Input.empty() : this.clientCertificateThumbprints;
+    public Output<List<ClientCertificateThumbprintArgs>> getClientCertificateThumbprints() {
+        return this.clientCertificateThumbprints == null ? Output.empty() : this.clientCertificateThumbprints;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterCodeVersion")
-      private final @Nullable Input<String> clusterCodeVersion;
+      private final @Nullable Output<String> clusterCodeVersion;
 
-    public Input<String> getClusterCodeVersion() {
-        return this.clusterCodeVersion == null ? Input.empty() : this.clusterCodeVersion;
+    public Output<String> getClusterCodeVersion() {
+        return this.clusterCodeVersion == null ? Output.empty() : this.clusterCodeVersion;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName")
-      private final @Nullable Input<String> clusterName;
+      private final @Nullable Output<String> clusterName;
 
-    public Input<String> getClusterName() {
-        return this.clusterName == null ? Input.empty() : this.clusterName;
+    public Output<String> getClusterName() {
+        return this.clusterName == null ? Output.empty() : this.clusterName;
     }
 
     /**
@@ -131,10 +131,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diagnosticsStorageAccountConfig")
-      private final @Nullable Input<DiagnosticsStorageAccountConfigArgs> diagnosticsStorageAccountConfig;
+      private final @Nullable Output<DiagnosticsStorageAccountConfigArgs> diagnosticsStorageAccountConfig;
 
-    public Input<DiagnosticsStorageAccountConfigArgs> getDiagnosticsStorageAccountConfig() {
-        return this.diagnosticsStorageAccountConfig == null ? Input.empty() : this.diagnosticsStorageAccountConfig;
+    public Output<DiagnosticsStorageAccountConfigArgs> getDiagnosticsStorageAccountConfig() {
+        return this.diagnosticsStorageAccountConfig == null ? Output.empty() : this.diagnosticsStorageAccountConfig;
     }
 
     /**
@@ -142,10 +142,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventStoreServiceEnabled")
-      private final @Nullable Input<Boolean> eventStoreServiceEnabled;
+      private final @Nullable Output<Boolean> eventStoreServiceEnabled;
 
-    public Input<Boolean> getEventStoreServiceEnabled() {
-        return this.eventStoreServiceEnabled == null ? Input.empty() : this.eventStoreServiceEnabled;
+    public Output<Boolean> getEventStoreServiceEnabled() {
+        return this.eventStoreServiceEnabled == null ? Output.empty() : this.eventStoreServiceEnabled;
     }
 
     /**
@@ -153,10 +153,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fabricSettings")
-      private final @Nullable Input<List<SettingsSectionDescriptionArgs>> fabricSettings;
+      private final @Nullable Output<List<SettingsSectionDescriptionArgs>> fabricSettings;
 
-    public Input<List<SettingsSectionDescriptionArgs>> getFabricSettings() {
-        return this.fabricSettings == null ? Input.empty() : this.fabricSettings;
+    public Output<List<SettingsSectionDescriptionArgs>> getFabricSettings() {
+        return this.fabricSettings == null ? Output.empty() : this.fabricSettings;
     }
 
     /**
@@ -164,10 +164,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -175,9 +175,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managementEndpoint", required=true)
-      private final Input<String> managementEndpoint;
+      private final Output<String> managementEndpoint;
 
-    public Input<String> getManagementEndpoint() {
+    public Output<String> getManagementEndpoint() {
         return this.managementEndpoint;
     }
 
@@ -186,9 +186,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeTypes", required=true)
-      private final Input<List<NodeTypeDescriptionArgs>> nodeTypes;
+      private final Output<List<NodeTypeDescriptionArgs>> nodeTypes;
 
-    public Input<List<NodeTypeDescriptionArgs>> getNodeTypes() {
+    public Output<List<NodeTypeDescriptionArgs>> getNodeTypes() {
         return this.nodeTypes;
     }
 
@@ -203,10 +203,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reliabilityLevel")
-      private final @Nullable Input<String> reliabilityLevel;
+      private final @Nullable Output<String> reliabilityLevel;
 
-    public Input<String> getReliabilityLevel() {
-        return this.reliabilityLevel == null ? Input.empty() : this.reliabilityLevel;
+    public Output<String> getReliabilityLevel() {
+        return this.reliabilityLevel == null ? Output.empty() : this.reliabilityLevel;
     }
 
     /**
@@ -214,9 +214,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -225,10 +225,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reverseProxyCertificate")
-      private final @Nullable Input<CertificateDescriptionArgs> reverseProxyCertificate;
+      private final @Nullable Output<CertificateDescriptionArgs> reverseProxyCertificate;
 
-    public Input<CertificateDescriptionArgs> getReverseProxyCertificate() {
-        return this.reverseProxyCertificate == null ? Input.empty() : this.reverseProxyCertificate;
+    public Output<CertificateDescriptionArgs> getReverseProxyCertificate() {
+        return this.reverseProxyCertificate == null ? Output.empty() : this.reverseProxyCertificate;
     }
 
     /**
@@ -236,10 +236,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reverseProxyCertificateCommonNames")
-      private final @Nullable Input<ServerCertificateCommonNamesArgs> reverseProxyCertificateCommonNames;
+      private final @Nullable Output<ServerCertificateCommonNamesArgs> reverseProxyCertificateCommonNames;
 
-    public Input<ServerCertificateCommonNamesArgs> getReverseProxyCertificateCommonNames() {
-        return this.reverseProxyCertificateCommonNames == null ? Input.empty() : this.reverseProxyCertificateCommonNames;
+    public Output<ServerCertificateCommonNamesArgs> getReverseProxyCertificateCommonNames() {
+        return this.reverseProxyCertificateCommonNames == null ? Output.empty() : this.reverseProxyCertificateCommonNames;
     }
 
     /**
@@ -247,10 +247,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -258,10 +258,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="upgradeDescription")
-      private final @Nullable Input<ClusterUpgradePolicyArgs> upgradeDescription;
+      private final @Nullable Output<ClusterUpgradePolicyArgs> upgradeDescription;
 
-    public Input<ClusterUpgradePolicyArgs> getUpgradeDescription() {
-        return this.upgradeDescription == null ? Input.empty() : this.upgradeDescription;
+    public Output<ClusterUpgradePolicyArgs> getUpgradeDescription() {
+        return this.upgradeDescription == null ? Output.empty() : this.upgradeDescription;
     }
 
     /**
@@ -272,10 +272,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="upgradeMode")
-      private final @Nullable Input<String> upgradeMode;
+      private final @Nullable Output<String> upgradeMode;
 
-    public Input<String> getUpgradeMode() {
-        return this.upgradeMode == null ? Input.empty() : this.upgradeMode;
+    public Output<String> getUpgradeMode() {
+        return this.upgradeMode == null ? Output.empty() : this.upgradeMode;
     }
 
     /**
@@ -283,36 +283,36 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vmImage")
-      private final @Nullable Input<String> vmImage;
+      private final @Nullable Output<String> vmImage;
 
-    public Input<String> getVmImage() {
-        return this.vmImage == null ? Input.empty() : this.vmImage;
+    public Output<String> getVmImage() {
+        return this.vmImage == null ? Output.empty() : this.vmImage;
     }
 
     public ClusterArgs(
-        @Nullable Input<List<String>> addOnFeatures,
-        @Nullable Input<ApplicationTypeVersionsCleanupPolicyArgs> applicationTypeVersionsCleanupPolicy,
-        @Nullable Input<AzureActiveDirectoryArgs> azureActiveDirectory,
-        @Nullable Input<CertificateDescriptionArgs> certificate,
-        @Nullable Input<ServerCertificateCommonNamesArgs> certificateCommonNames,
-        @Nullable Input<List<ClientCertificateCommonNameArgs>> clientCertificateCommonNames,
-        @Nullable Input<List<ClientCertificateThumbprintArgs>> clientCertificateThumbprints,
-        @Nullable Input<String> clusterCodeVersion,
-        @Nullable Input<String> clusterName,
-        @Nullable Input<DiagnosticsStorageAccountConfigArgs> diagnosticsStorageAccountConfig,
-        @Nullable Input<Boolean> eventStoreServiceEnabled,
-        @Nullable Input<List<SettingsSectionDescriptionArgs>> fabricSettings,
-        @Nullable Input<String> location,
-        Input<String> managementEndpoint,
-        Input<List<NodeTypeDescriptionArgs>> nodeTypes,
-        @Nullable Input<String> reliabilityLevel,
-        Input<String> resourceGroupName,
-        @Nullable Input<CertificateDescriptionArgs> reverseProxyCertificate,
-        @Nullable Input<ServerCertificateCommonNamesArgs> reverseProxyCertificateCommonNames,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<ClusterUpgradePolicyArgs> upgradeDescription,
-        @Nullable Input<String> upgradeMode,
-        @Nullable Input<String> vmImage) {
+        @Nullable Output<List<String>> addOnFeatures,
+        @Nullable Output<ApplicationTypeVersionsCleanupPolicyArgs> applicationTypeVersionsCleanupPolicy,
+        @Nullable Output<AzureActiveDirectoryArgs> azureActiveDirectory,
+        @Nullable Output<CertificateDescriptionArgs> certificate,
+        @Nullable Output<ServerCertificateCommonNamesArgs> certificateCommonNames,
+        @Nullable Output<List<ClientCertificateCommonNameArgs>> clientCertificateCommonNames,
+        @Nullable Output<List<ClientCertificateThumbprintArgs>> clientCertificateThumbprints,
+        @Nullable Output<String> clusterCodeVersion,
+        @Nullable Output<String> clusterName,
+        @Nullable Output<DiagnosticsStorageAccountConfigArgs> diagnosticsStorageAccountConfig,
+        @Nullable Output<Boolean> eventStoreServiceEnabled,
+        @Nullable Output<List<SettingsSectionDescriptionArgs>> fabricSettings,
+        @Nullable Output<String> location,
+        Output<String> managementEndpoint,
+        Output<List<NodeTypeDescriptionArgs>> nodeTypes,
+        @Nullable Output<String> reliabilityLevel,
+        Output<String> resourceGroupName,
+        @Nullable Output<CertificateDescriptionArgs> reverseProxyCertificate,
+        @Nullable Output<ServerCertificateCommonNamesArgs> reverseProxyCertificateCommonNames,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<ClusterUpgradePolicyArgs> upgradeDescription,
+        @Nullable Output<String> upgradeMode,
+        @Nullable Output<String> vmImage) {
         this.addOnFeatures = addOnFeatures;
         this.applicationTypeVersionsCleanupPolicy = applicationTypeVersionsCleanupPolicy;
         this.azureActiveDirectory = azureActiveDirectory;
@@ -339,29 +339,29 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClusterArgs() {
-        this.addOnFeatures = Input.empty();
-        this.applicationTypeVersionsCleanupPolicy = Input.empty();
-        this.azureActiveDirectory = Input.empty();
-        this.certificate = Input.empty();
-        this.certificateCommonNames = Input.empty();
-        this.clientCertificateCommonNames = Input.empty();
-        this.clientCertificateThumbprints = Input.empty();
-        this.clusterCodeVersion = Input.empty();
-        this.clusterName = Input.empty();
-        this.diagnosticsStorageAccountConfig = Input.empty();
-        this.eventStoreServiceEnabled = Input.empty();
-        this.fabricSettings = Input.empty();
-        this.location = Input.empty();
-        this.managementEndpoint = Input.empty();
-        this.nodeTypes = Input.empty();
-        this.reliabilityLevel = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.reverseProxyCertificate = Input.empty();
-        this.reverseProxyCertificateCommonNames = Input.empty();
-        this.tags = Input.empty();
-        this.upgradeDescription = Input.empty();
-        this.upgradeMode = Input.empty();
-        this.vmImage = Input.empty();
+        this.addOnFeatures = Output.empty();
+        this.applicationTypeVersionsCleanupPolicy = Output.empty();
+        this.azureActiveDirectory = Output.empty();
+        this.certificate = Output.empty();
+        this.certificateCommonNames = Output.empty();
+        this.clientCertificateCommonNames = Output.empty();
+        this.clientCertificateThumbprints = Output.empty();
+        this.clusterCodeVersion = Output.empty();
+        this.clusterName = Output.empty();
+        this.diagnosticsStorageAccountConfig = Output.empty();
+        this.eventStoreServiceEnabled = Output.empty();
+        this.fabricSettings = Output.empty();
+        this.location = Output.empty();
+        this.managementEndpoint = Output.empty();
+        this.nodeTypes = Output.empty();
+        this.reliabilityLevel = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.reverseProxyCertificate = Output.empty();
+        this.reverseProxyCertificateCommonNames = Output.empty();
+        this.tags = Output.empty();
+        this.upgradeDescription = Output.empty();
+        this.upgradeMode = Output.empty();
+        this.vmImage = Output.empty();
     }
 
     public static Builder builder() {
@@ -373,29 +373,29 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> addOnFeatures;
-        private @Nullable Input<ApplicationTypeVersionsCleanupPolicyArgs> applicationTypeVersionsCleanupPolicy;
-        private @Nullable Input<AzureActiveDirectoryArgs> azureActiveDirectory;
-        private @Nullable Input<CertificateDescriptionArgs> certificate;
-        private @Nullable Input<ServerCertificateCommonNamesArgs> certificateCommonNames;
-        private @Nullable Input<List<ClientCertificateCommonNameArgs>> clientCertificateCommonNames;
-        private @Nullable Input<List<ClientCertificateThumbprintArgs>> clientCertificateThumbprints;
-        private @Nullable Input<String> clusterCodeVersion;
-        private @Nullable Input<String> clusterName;
-        private @Nullable Input<DiagnosticsStorageAccountConfigArgs> diagnosticsStorageAccountConfig;
-        private @Nullable Input<Boolean> eventStoreServiceEnabled;
-        private @Nullable Input<List<SettingsSectionDescriptionArgs>> fabricSettings;
-        private @Nullable Input<String> location;
-        private Input<String> managementEndpoint;
-        private Input<List<NodeTypeDescriptionArgs>> nodeTypes;
-        private @Nullable Input<String> reliabilityLevel;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<CertificateDescriptionArgs> reverseProxyCertificate;
-        private @Nullable Input<ServerCertificateCommonNamesArgs> reverseProxyCertificateCommonNames;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<ClusterUpgradePolicyArgs> upgradeDescription;
-        private @Nullable Input<String> upgradeMode;
-        private @Nullable Input<String> vmImage;
+        private @Nullable Output<List<String>> addOnFeatures;
+        private @Nullable Output<ApplicationTypeVersionsCleanupPolicyArgs> applicationTypeVersionsCleanupPolicy;
+        private @Nullable Output<AzureActiveDirectoryArgs> azureActiveDirectory;
+        private @Nullable Output<CertificateDescriptionArgs> certificate;
+        private @Nullable Output<ServerCertificateCommonNamesArgs> certificateCommonNames;
+        private @Nullable Output<List<ClientCertificateCommonNameArgs>> clientCertificateCommonNames;
+        private @Nullable Output<List<ClientCertificateThumbprintArgs>> clientCertificateThumbprints;
+        private @Nullable Output<String> clusterCodeVersion;
+        private @Nullable Output<String> clusterName;
+        private @Nullable Output<DiagnosticsStorageAccountConfigArgs> diagnosticsStorageAccountConfig;
+        private @Nullable Output<Boolean> eventStoreServiceEnabled;
+        private @Nullable Output<List<SettingsSectionDescriptionArgs>> fabricSettings;
+        private @Nullable Output<String> location;
+        private Output<String> managementEndpoint;
+        private Output<List<NodeTypeDescriptionArgs>> nodeTypes;
+        private @Nullable Output<String> reliabilityLevel;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<CertificateDescriptionArgs> reverseProxyCertificate;
+        private @Nullable Output<ServerCertificateCommonNamesArgs> reverseProxyCertificateCommonNames;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<ClusterUpgradePolicyArgs> upgradeDescription;
+        private @Nullable Output<String> upgradeMode;
+        private @Nullable Output<String> vmImage;
 
         public Builder() {
     	      // Empty
@@ -428,233 +428,233 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vmImage = defaults.vmImage;
         }
 
-        public Builder addOnFeatures(@Nullable Input<List<String>> addOnFeatures) {
+        public Builder addOnFeatures(@Nullable Output<List<String>> addOnFeatures) {
             this.addOnFeatures = addOnFeatures;
             return this;
         }
 
         public Builder addOnFeatures(@Nullable List<String> addOnFeatures) {
-            this.addOnFeatures = Input.ofNullable(addOnFeatures);
+            this.addOnFeatures = Output.ofNullable(addOnFeatures);
             return this;
         }
 
-        public Builder applicationTypeVersionsCleanupPolicy(@Nullable Input<ApplicationTypeVersionsCleanupPolicyArgs> applicationTypeVersionsCleanupPolicy) {
+        public Builder applicationTypeVersionsCleanupPolicy(@Nullable Output<ApplicationTypeVersionsCleanupPolicyArgs> applicationTypeVersionsCleanupPolicy) {
             this.applicationTypeVersionsCleanupPolicy = applicationTypeVersionsCleanupPolicy;
             return this;
         }
 
         public Builder applicationTypeVersionsCleanupPolicy(@Nullable ApplicationTypeVersionsCleanupPolicyArgs applicationTypeVersionsCleanupPolicy) {
-            this.applicationTypeVersionsCleanupPolicy = Input.ofNullable(applicationTypeVersionsCleanupPolicy);
+            this.applicationTypeVersionsCleanupPolicy = Output.ofNullable(applicationTypeVersionsCleanupPolicy);
             return this;
         }
 
-        public Builder azureActiveDirectory(@Nullable Input<AzureActiveDirectoryArgs> azureActiveDirectory) {
+        public Builder azureActiveDirectory(@Nullable Output<AzureActiveDirectoryArgs> azureActiveDirectory) {
             this.azureActiveDirectory = azureActiveDirectory;
             return this;
         }
 
         public Builder azureActiveDirectory(@Nullable AzureActiveDirectoryArgs azureActiveDirectory) {
-            this.azureActiveDirectory = Input.ofNullable(azureActiveDirectory);
+            this.azureActiveDirectory = Output.ofNullable(azureActiveDirectory);
             return this;
         }
 
-        public Builder certificate(@Nullable Input<CertificateDescriptionArgs> certificate) {
+        public Builder certificate(@Nullable Output<CertificateDescriptionArgs> certificate) {
             this.certificate = certificate;
             return this;
         }
 
         public Builder certificate(@Nullable CertificateDescriptionArgs certificate) {
-            this.certificate = Input.ofNullable(certificate);
+            this.certificate = Output.ofNullable(certificate);
             return this;
         }
 
-        public Builder certificateCommonNames(@Nullable Input<ServerCertificateCommonNamesArgs> certificateCommonNames) {
+        public Builder certificateCommonNames(@Nullable Output<ServerCertificateCommonNamesArgs> certificateCommonNames) {
             this.certificateCommonNames = certificateCommonNames;
             return this;
         }
 
         public Builder certificateCommonNames(@Nullable ServerCertificateCommonNamesArgs certificateCommonNames) {
-            this.certificateCommonNames = Input.ofNullable(certificateCommonNames);
+            this.certificateCommonNames = Output.ofNullable(certificateCommonNames);
             return this;
         }
 
-        public Builder clientCertificateCommonNames(@Nullable Input<List<ClientCertificateCommonNameArgs>> clientCertificateCommonNames) {
+        public Builder clientCertificateCommonNames(@Nullable Output<List<ClientCertificateCommonNameArgs>> clientCertificateCommonNames) {
             this.clientCertificateCommonNames = clientCertificateCommonNames;
             return this;
         }
 
         public Builder clientCertificateCommonNames(@Nullable List<ClientCertificateCommonNameArgs> clientCertificateCommonNames) {
-            this.clientCertificateCommonNames = Input.ofNullable(clientCertificateCommonNames);
+            this.clientCertificateCommonNames = Output.ofNullable(clientCertificateCommonNames);
             return this;
         }
 
-        public Builder clientCertificateThumbprints(@Nullable Input<List<ClientCertificateThumbprintArgs>> clientCertificateThumbprints) {
+        public Builder clientCertificateThumbprints(@Nullable Output<List<ClientCertificateThumbprintArgs>> clientCertificateThumbprints) {
             this.clientCertificateThumbprints = clientCertificateThumbprints;
             return this;
         }
 
         public Builder clientCertificateThumbprints(@Nullable List<ClientCertificateThumbprintArgs> clientCertificateThumbprints) {
-            this.clientCertificateThumbprints = Input.ofNullable(clientCertificateThumbprints);
+            this.clientCertificateThumbprints = Output.ofNullable(clientCertificateThumbprints);
             return this;
         }
 
-        public Builder clusterCodeVersion(@Nullable Input<String> clusterCodeVersion) {
+        public Builder clusterCodeVersion(@Nullable Output<String> clusterCodeVersion) {
             this.clusterCodeVersion = clusterCodeVersion;
             return this;
         }
 
         public Builder clusterCodeVersion(@Nullable String clusterCodeVersion) {
-            this.clusterCodeVersion = Input.ofNullable(clusterCodeVersion);
+            this.clusterCodeVersion = Output.ofNullable(clusterCodeVersion);
             return this;
         }
 
-        public Builder clusterName(@Nullable Input<String> clusterName) {
+        public Builder clusterName(@Nullable Output<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
 
         public Builder clusterName(@Nullable String clusterName) {
-            this.clusterName = Input.ofNullable(clusterName);
+            this.clusterName = Output.ofNullable(clusterName);
             return this;
         }
 
-        public Builder diagnosticsStorageAccountConfig(@Nullable Input<DiagnosticsStorageAccountConfigArgs> diagnosticsStorageAccountConfig) {
+        public Builder diagnosticsStorageAccountConfig(@Nullable Output<DiagnosticsStorageAccountConfigArgs> diagnosticsStorageAccountConfig) {
             this.diagnosticsStorageAccountConfig = diagnosticsStorageAccountConfig;
             return this;
         }
 
         public Builder diagnosticsStorageAccountConfig(@Nullable DiagnosticsStorageAccountConfigArgs diagnosticsStorageAccountConfig) {
-            this.diagnosticsStorageAccountConfig = Input.ofNullable(diagnosticsStorageAccountConfig);
+            this.diagnosticsStorageAccountConfig = Output.ofNullable(diagnosticsStorageAccountConfig);
             return this;
         }
 
-        public Builder eventStoreServiceEnabled(@Nullable Input<Boolean> eventStoreServiceEnabled) {
+        public Builder eventStoreServiceEnabled(@Nullable Output<Boolean> eventStoreServiceEnabled) {
             this.eventStoreServiceEnabled = eventStoreServiceEnabled;
             return this;
         }
 
         public Builder eventStoreServiceEnabled(@Nullable Boolean eventStoreServiceEnabled) {
-            this.eventStoreServiceEnabled = Input.ofNullable(eventStoreServiceEnabled);
+            this.eventStoreServiceEnabled = Output.ofNullable(eventStoreServiceEnabled);
             return this;
         }
 
-        public Builder fabricSettings(@Nullable Input<List<SettingsSectionDescriptionArgs>> fabricSettings) {
+        public Builder fabricSettings(@Nullable Output<List<SettingsSectionDescriptionArgs>> fabricSettings) {
             this.fabricSettings = fabricSettings;
             return this;
         }
 
         public Builder fabricSettings(@Nullable List<SettingsSectionDescriptionArgs> fabricSettings) {
-            this.fabricSettings = Input.ofNullable(fabricSettings);
+            this.fabricSettings = Output.ofNullable(fabricSettings);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder managementEndpoint(Input<String> managementEndpoint) {
+        public Builder managementEndpoint(Output<String> managementEndpoint) {
             this.managementEndpoint = Objects.requireNonNull(managementEndpoint);
             return this;
         }
 
         public Builder managementEndpoint(String managementEndpoint) {
-            this.managementEndpoint = Input.of(Objects.requireNonNull(managementEndpoint));
+            this.managementEndpoint = Output.of(Objects.requireNonNull(managementEndpoint));
             return this;
         }
 
-        public Builder nodeTypes(Input<List<NodeTypeDescriptionArgs>> nodeTypes) {
+        public Builder nodeTypes(Output<List<NodeTypeDescriptionArgs>> nodeTypes) {
             this.nodeTypes = Objects.requireNonNull(nodeTypes);
             return this;
         }
 
         public Builder nodeTypes(List<NodeTypeDescriptionArgs> nodeTypes) {
-            this.nodeTypes = Input.of(Objects.requireNonNull(nodeTypes));
+            this.nodeTypes = Output.of(Objects.requireNonNull(nodeTypes));
             return this;
         }
 
-        public Builder reliabilityLevel(@Nullable Input<String> reliabilityLevel) {
+        public Builder reliabilityLevel(@Nullable Output<String> reliabilityLevel) {
             this.reliabilityLevel = reliabilityLevel;
             return this;
         }
 
         public Builder reliabilityLevel(@Nullable String reliabilityLevel) {
-            this.reliabilityLevel = Input.ofNullable(reliabilityLevel);
+            this.reliabilityLevel = Output.ofNullable(reliabilityLevel);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder reverseProxyCertificate(@Nullable Input<CertificateDescriptionArgs> reverseProxyCertificate) {
+        public Builder reverseProxyCertificate(@Nullable Output<CertificateDescriptionArgs> reverseProxyCertificate) {
             this.reverseProxyCertificate = reverseProxyCertificate;
             return this;
         }
 
         public Builder reverseProxyCertificate(@Nullable CertificateDescriptionArgs reverseProxyCertificate) {
-            this.reverseProxyCertificate = Input.ofNullable(reverseProxyCertificate);
+            this.reverseProxyCertificate = Output.ofNullable(reverseProxyCertificate);
             return this;
         }
 
-        public Builder reverseProxyCertificateCommonNames(@Nullable Input<ServerCertificateCommonNamesArgs> reverseProxyCertificateCommonNames) {
+        public Builder reverseProxyCertificateCommonNames(@Nullable Output<ServerCertificateCommonNamesArgs> reverseProxyCertificateCommonNames) {
             this.reverseProxyCertificateCommonNames = reverseProxyCertificateCommonNames;
             return this;
         }
 
         public Builder reverseProxyCertificateCommonNames(@Nullable ServerCertificateCommonNamesArgs reverseProxyCertificateCommonNames) {
-            this.reverseProxyCertificateCommonNames = Input.ofNullable(reverseProxyCertificateCommonNames);
+            this.reverseProxyCertificateCommonNames = Output.ofNullable(reverseProxyCertificateCommonNames);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder upgradeDescription(@Nullable Input<ClusterUpgradePolicyArgs> upgradeDescription) {
+        public Builder upgradeDescription(@Nullable Output<ClusterUpgradePolicyArgs> upgradeDescription) {
             this.upgradeDescription = upgradeDescription;
             return this;
         }
 
         public Builder upgradeDescription(@Nullable ClusterUpgradePolicyArgs upgradeDescription) {
-            this.upgradeDescription = Input.ofNullable(upgradeDescription);
+            this.upgradeDescription = Output.ofNullable(upgradeDescription);
             return this;
         }
 
-        public Builder upgradeMode(@Nullable Input<String> upgradeMode) {
+        public Builder upgradeMode(@Nullable Output<String> upgradeMode) {
             this.upgradeMode = upgradeMode;
             return this;
         }
 
         public Builder upgradeMode(@Nullable String upgradeMode) {
-            this.upgradeMode = Input.ofNullable(upgradeMode);
+            this.upgradeMode = Output.ofNullable(upgradeMode);
             return this;
         }
 
-        public Builder vmImage(@Nullable Input<String> vmImage) {
+        public Builder vmImage(@Nullable Output<String> vmImage) {
             this.vmImage = vmImage;
             return this;
         }
 
         public Builder vmImage(@Nullable String vmImage) {
-            this.vmImage = Input.ofNullable(vmImage);
+            this.vmImage = Output.ofNullable(vmImage);
             return this;
         }
         public ClusterArgs build() {

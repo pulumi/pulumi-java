@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudrun.inputs.DomainMappingStatusConditionGetArgs;
 import io.pulumi.gcp.cloudrun.inputs.DomainMappingStatusResourceRecordGetArgs;
@@ -19,38 +19,38 @@ public final class DomainMappingStatusGetArgs extends io.pulumi.resources.Resour
     public static final DomainMappingStatusGetArgs Empty = new DomainMappingStatusGetArgs();
 
     @InputImport(name="conditions")
-      private final @Nullable Input<List<DomainMappingStatusConditionGetArgs>> conditions;
+      private final @Nullable Output<List<DomainMappingStatusConditionGetArgs>> conditions;
 
-    public Input<List<DomainMappingStatusConditionGetArgs>> getConditions() {
-        return this.conditions == null ? Input.empty() : this.conditions;
+    public Output<List<DomainMappingStatusConditionGetArgs>> getConditions() {
+        return this.conditions == null ? Output.empty() : this.conditions;
     }
 
     @InputImport(name="mappedRouteName")
-      private final @Nullable Input<String> mappedRouteName;
+      private final @Nullable Output<String> mappedRouteName;
 
-    public Input<String> getMappedRouteName() {
-        return this.mappedRouteName == null ? Input.empty() : this.mappedRouteName;
+    public Output<String> getMappedRouteName() {
+        return this.mappedRouteName == null ? Output.empty() : this.mappedRouteName;
     }
 
     @InputImport(name="observedGeneration")
-      private final @Nullable Input<Integer> observedGeneration;
+      private final @Nullable Output<Integer> observedGeneration;
 
-    public Input<Integer> getObservedGeneration() {
-        return this.observedGeneration == null ? Input.empty() : this.observedGeneration;
+    public Output<Integer> getObservedGeneration() {
+        return this.observedGeneration == null ? Output.empty() : this.observedGeneration;
     }
 
     @InputImport(name="resourceRecords")
-      private final @Nullable Input<List<DomainMappingStatusResourceRecordGetArgs>> resourceRecords;
+      private final @Nullable Output<List<DomainMappingStatusResourceRecordGetArgs>> resourceRecords;
 
-    public Input<List<DomainMappingStatusResourceRecordGetArgs>> getResourceRecords() {
-        return this.resourceRecords == null ? Input.empty() : this.resourceRecords;
+    public Output<List<DomainMappingStatusResourceRecordGetArgs>> getResourceRecords() {
+        return this.resourceRecords == null ? Output.empty() : this.resourceRecords;
     }
 
     public DomainMappingStatusGetArgs(
-        @Nullable Input<List<DomainMappingStatusConditionGetArgs>> conditions,
-        @Nullable Input<String> mappedRouteName,
-        @Nullable Input<Integer> observedGeneration,
-        @Nullable Input<List<DomainMappingStatusResourceRecordGetArgs>> resourceRecords) {
+        @Nullable Output<List<DomainMappingStatusConditionGetArgs>> conditions,
+        @Nullable Output<String> mappedRouteName,
+        @Nullable Output<Integer> observedGeneration,
+        @Nullable Output<List<DomainMappingStatusResourceRecordGetArgs>> resourceRecords) {
         this.conditions = conditions;
         this.mappedRouteName = mappedRouteName;
         this.observedGeneration = observedGeneration;
@@ -58,10 +58,10 @@ public final class DomainMappingStatusGetArgs extends io.pulumi.resources.Resour
     }
 
     private DomainMappingStatusGetArgs() {
-        this.conditions = Input.empty();
-        this.mappedRouteName = Input.empty();
-        this.observedGeneration = Input.empty();
-        this.resourceRecords = Input.empty();
+        this.conditions = Output.empty();
+        this.mappedRouteName = Output.empty();
+        this.observedGeneration = Output.empty();
+        this.resourceRecords = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,10 +73,10 @@ public final class DomainMappingStatusGetArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<DomainMappingStatusConditionGetArgs>> conditions;
-        private @Nullable Input<String> mappedRouteName;
-        private @Nullable Input<Integer> observedGeneration;
-        private @Nullable Input<List<DomainMappingStatusResourceRecordGetArgs>> resourceRecords;
+        private @Nullable Output<List<DomainMappingStatusConditionGetArgs>> conditions;
+        private @Nullable Output<String> mappedRouteName;
+        private @Nullable Output<Integer> observedGeneration;
+        private @Nullable Output<List<DomainMappingStatusResourceRecordGetArgs>> resourceRecords;
 
         public Builder() {
     	      // Empty
@@ -90,43 +90,43 @@ public final class DomainMappingStatusGetArgs extends io.pulumi.resources.Resour
     	      this.resourceRecords = defaults.resourceRecords;
         }
 
-        public Builder conditions(@Nullable Input<List<DomainMappingStatusConditionGetArgs>> conditions) {
+        public Builder conditions(@Nullable Output<List<DomainMappingStatusConditionGetArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
         public Builder conditions(@Nullable List<DomainMappingStatusConditionGetArgs> conditions) {
-            this.conditions = Input.ofNullable(conditions);
+            this.conditions = Output.ofNullable(conditions);
             return this;
         }
 
-        public Builder mappedRouteName(@Nullable Input<String> mappedRouteName) {
+        public Builder mappedRouteName(@Nullable Output<String> mappedRouteName) {
             this.mappedRouteName = mappedRouteName;
             return this;
         }
 
         public Builder mappedRouteName(@Nullable String mappedRouteName) {
-            this.mappedRouteName = Input.ofNullable(mappedRouteName);
+            this.mappedRouteName = Output.ofNullable(mappedRouteName);
             return this;
         }
 
-        public Builder observedGeneration(@Nullable Input<Integer> observedGeneration) {
+        public Builder observedGeneration(@Nullable Output<Integer> observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }
 
         public Builder observedGeneration(@Nullable Integer observedGeneration) {
-            this.observedGeneration = Input.ofNullable(observedGeneration);
+            this.observedGeneration = Output.ofNullable(observedGeneration);
             return this;
         }
 
-        public Builder resourceRecords(@Nullable Input<List<DomainMappingStatusResourceRecordGetArgs>> resourceRecords) {
+        public Builder resourceRecords(@Nullable Output<List<DomainMappingStatusResourceRecordGetArgs>> resourceRecords) {
             this.resourceRecords = resourceRecords;
             return this;
         }
 
         public Builder resourceRecords(@Nullable List<DomainMappingStatusResourceRecordGetArgs> resourceRecords) {
-            this.resourceRecords = Input.ofNullable(resourceRecords);
+            this.resourceRecords = Output.ofNullable(resourceRecords);
             return this;
         }
         public DomainMappingStatusGetArgs build() {

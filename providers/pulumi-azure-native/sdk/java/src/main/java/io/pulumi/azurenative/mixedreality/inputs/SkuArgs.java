@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.mixedreality.inputs;
 
 import io.pulumi.azurenative.mixedreality.enums.SkuTier;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacity")
-      private final @Nullable Input<Integer> capacity;
+      private final @Nullable Output<Integer> capacity;
 
-    public Input<Integer> getCapacity() {
-        return this.capacity == null ? Input.empty() : this.capacity;
+    public Output<Integer> getCapacity() {
+        return this.capacity == null ? Output.empty() : this.capacity;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="family")
-      private final @Nullable Input<String> family;
+      private final @Nullable Output<String> family;
 
-    public Input<String> getFamily() {
-        return this.family == null ? Input.empty() : this.family;
+    public Output<String> getFamily() {
+        return this.family == null ? Output.empty() : this.family;
     }
 
     /**
@@ -47,9 +47,9 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -58,10 +58,10 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="size")
-      private final @Nullable Input<String> size;
+      private final @Nullable Output<String> size;
 
-    public Input<String> getSize() {
-        return this.size == null ? Input.empty() : this.size;
+    public Output<String> getSize() {
+        return this.size == null ? Output.empty() : this.size;
     }
 
     /**
@@ -69,18 +69,18 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tier")
-      private final @Nullable Input<SkuTier> tier;
+      private final @Nullable Output<SkuTier> tier;
 
-    public Input<SkuTier> getTier() {
-        return this.tier == null ? Input.empty() : this.tier;
+    public Output<SkuTier> getTier() {
+        return this.tier == null ? Output.empty() : this.tier;
     }
 
     public SkuArgs(
-        @Nullable Input<Integer> capacity,
-        @Nullable Input<String> family,
-        Input<String> name,
-        @Nullable Input<String> size,
-        @Nullable Input<SkuTier> tier) {
+        @Nullable Output<Integer> capacity,
+        @Nullable Output<String> family,
+        Output<String> name,
+        @Nullable Output<String> size,
+        @Nullable Output<SkuTier> tier) {
         this.capacity = capacity;
         this.family = family;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
@@ -89,11 +89,11 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SkuArgs() {
-        this.capacity = Input.empty();
-        this.family = Input.empty();
-        this.name = Input.empty();
-        this.size = Input.empty();
-        this.tier = Input.empty();
+        this.capacity = Output.empty();
+        this.family = Output.empty();
+        this.name = Output.empty();
+        this.size = Output.empty();
+        this.tier = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> capacity;
-        private @Nullable Input<String> family;
-        private Input<String> name;
-        private @Nullable Input<String> size;
-        private @Nullable Input<SkuTier> tier;
+        private @Nullable Output<Integer> capacity;
+        private @Nullable Output<String> family;
+        private Output<String> name;
+        private @Nullable Output<String> size;
+        private @Nullable Output<SkuTier> tier;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tier = defaults.tier;
         }
 
-        public Builder capacity(@Nullable Input<Integer> capacity) {
+        public Builder capacity(@Nullable Output<Integer> capacity) {
             this.capacity = capacity;
             return this;
         }
 
         public Builder capacity(@Nullable Integer capacity) {
-            this.capacity = Input.ofNullable(capacity);
+            this.capacity = Output.ofNullable(capacity);
             return this;
         }
 
-        public Builder family(@Nullable Input<String> family) {
+        public Builder family(@Nullable Output<String> family) {
             this.family = family;
             return this;
         }
 
         public Builder family(@Nullable String family) {
-            this.family = Input.ofNullable(family);
+            this.family = Output.ofNullable(family);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder size(@Nullable Input<String> size) {
+        public Builder size(@Nullable Output<String> size) {
             this.size = size;
             return this;
         }
 
         public Builder size(@Nullable String size) {
-            this.size = Input.ofNullable(size);
+            this.size = Output.ofNullable(size);
             return this;
         }
 
-        public Builder tier(@Nullable Input<SkuTier> tier) {
+        public Builder tier(@Nullable Output<SkuTier> tier) {
             this.tier = tier;
             return this;
         }
 
         public Builder tier(@Nullable SkuTier tier) {
-            this.tier = Input.ofNullable(tier);
+            this.tier = Output.ofNullable(tier);
             return this;
         }
         public SkuArgs build() {

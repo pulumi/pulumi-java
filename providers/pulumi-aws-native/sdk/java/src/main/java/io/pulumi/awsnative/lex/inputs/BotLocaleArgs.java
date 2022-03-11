@@ -6,7 +6,7 @@ package io.pulumi.awsnative.lex.inputs;
 import io.pulumi.awsnative.lex.inputs.BotIntentArgs;
 import io.pulumi.awsnative.lex.inputs.BotSlotTypeArgs;
 import io.pulumi.awsnative.lex.inputs.BotVoiceSettingsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class BotLocaleArgs extends io.pulumi.resources.ResourceArgs {
     public static final BotLocaleArgs Empty = new BotLocaleArgs();
 
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -35,23 +35,23 @@ public final class BotLocaleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="intents")
-      private final @Nullable Input<List<BotIntentArgs>> intents;
+      private final @Nullable Output<List<BotIntentArgs>> intents;
 
-    public Input<List<BotIntentArgs>> getIntents() {
-        return this.intents == null ? Input.empty() : this.intents;
+    public Output<List<BotIntentArgs>> getIntents() {
+        return this.intents == null ? Output.empty() : this.intents;
     }
 
     @InputImport(name="localeId", required=true)
-      private final Input<String> localeId;
+      private final Output<String> localeId;
 
-    public Input<String> getLocaleId() {
+    public Output<String> getLocaleId() {
         return this.localeId;
     }
 
     @InputImport(name="nluConfidenceThreshold", required=true)
-      private final Input<Double> nluConfidenceThreshold;
+      private final Output<Double> nluConfidenceThreshold;
 
-    public Input<Double> getNluConfidenceThreshold() {
+    public Output<Double> getNluConfidenceThreshold() {
         return this.nluConfidenceThreshold;
     }
 
@@ -60,26 +60,26 @@ public final class BotLocaleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="slotTypes")
-      private final @Nullable Input<List<BotSlotTypeArgs>> slotTypes;
+      private final @Nullable Output<List<BotSlotTypeArgs>> slotTypes;
 
-    public Input<List<BotSlotTypeArgs>> getSlotTypes() {
-        return this.slotTypes == null ? Input.empty() : this.slotTypes;
+    public Output<List<BotSlotTypeArgs>> getSlotTypes() {
+        return this.slotTypes == null ? Output.empty() : this.slotTypes;
     }
 
     @InputImport(name="voiceSettings")
-      private final @Nullable Input<BotVoiceSettingsArgs> voiceSettings;
+      private final @Nullable Output<BotVoiceSettingsArgs> voiceSettings;
 
-    public Input<BotVoiceSettingsArgs> getVoiceSettings() {
-        return this.voiceSettings == null ? Input.empty() : this.voiceSettings;
+    public Output<BotVoiceSettingsArgs> getVoiceSettings() {
+        return this.voiceSettings == null ? Output.empty() : this.voiceSettings;
     }
 
     public BotLocaleArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<List<BotIntentArgs>> intents,
-        Input<String> localeId,
-        Input<Double> nluConfidenceThreshold,
-        @Nullable Input<List<BotSlotTypeArgs>> slotTypes,
-        @Nullable Input<BotVoiceSettingsArgs> voiceSettings) {
+        @Nullable Output<String> description,
+        @Nullable Output<List<BotIntentArgs>> intents,
+        Output<String> localeId,
+        Output<Double> nluConfidenceThreshold,
+        @Nullable Output<List<BotSlotTypeArgs>> slotTypes,
+        @Nullable Output<BotVoiceSettingsArgs> voiceSettings) {
         this.description = description;
         this.intents = intents;
         this.localeId = Objects.requireNonNull(localeId, "expected parameter 'localeId' to be non-null");
@@ -89,12 +89,12 @@ public final class BotLocaleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BotLocaleArgs() {
-        this.description = Input.empty();
-        this.intents = Input.empty();
-        this.localeId = Input.empty();
-        this.nluConfidenceThreshold = Input.empty();
-        this.slotTypes = Input.empty();
-        this.voiceSettings = Input.empty();
+        this.description = Output.empty();
+        this.intents = Output.empty();
+        this.localeId = Output.empty();
+        this.nluConfidenceThreshold = Output.empty();
+        this.slotTypes = Output.empty();
+        this.voiceSettings = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,12 +106,12 @@ public final class BotLocaleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<BotIntentArgs>> intents;
-        private Input<String> localeId;
-        private Input<Double> nluConfidenceThreshold;
-        private @Nullable Input<List<BotSlotTypeArgs>> slotTypes;
-        private @Nullable Input<BotVoiceSettingsArgs> voiceSettings;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<BotIntentArgs>> intents;
+        private Output<String> localeId;
+        private Output<Double> nluConfidenceThreshold;
+        private @Nullable Output<List<BotSlotTypeArgs>> slotTypes;
+        private @Nullable Output<BotVoiceSettingsArgs> voiceSettings;
 
         public Builder() {
     	      // Empty
@@ -127,63 +127,63 @@ public final class BotLocaleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.voiceSettings = defaults.voiceSettings;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder intents(@Nullable Input<List<BotIntentArgs>> intents) {
+        public Builder intents(@Nullable Output<List<BotIntentArgs>> intents) {
             this.intents = intents;
             return this;
         }
 
         public Builder intents(@Nullable List<BotIntentArgs> intents) {
-            this.intents = Input.ofNullable(intents);
+            this.intents = Output.ofNullable(intents);
             return this;
         }
 
-        public Builder localeId(Input<String> localeId) {
+        public Builder localeId(Output<String> localeId) {
             this.localeId = Objects.requireNonNull(localeId);
             return this;
         }
 
         public Builder localeId(String localeId) {
-            this.localeId = Input.of(Objects.requireNonNull(localeId));
+            this.localeId = Output.of(Objects.requireNonNull(localeId));
             return this;
         }
 
-        public Builder nluConfidenceThreshold(Input<Double> nluConfidenceThreshold) {
+        public Builder nluConfidenceThreshold(Output<Double> nluConfidenceThreshold) {
             this.nluConfidenceThreshold = Objects.requireNonNull(nluConfidenceThreshold);
             return this;
         }
 
         public Builder nluConfidenceThreshold(Double nluConfidenceThreshold) {
-            this.nluConfidenceThreshold = Input.of(Objects.requireNonNull(nluConfidenceThreshold));
+            this.nluConfidenceThreshold = Output.of(Objects.requireNonNull(nluConfidenceThreshold));
             return this;
         }
 
-        public Builder slotTypes(@Nullable Input<List<BotSlotTypeArgs>> slotTypes) {
+        public Builder slotTypes(@Nullable Output<List<BotSlotTypeArgs>> slotTypes) {
             this.slotTypes = slotTypes;
             return this;
         }
 
         public Builder slotTypes(@Nullable List<BotSlotTypeArgs> slotTypes) {
-            this.slotTypes = Input.ofNullable(slotTypes);
+            this.slotTypes = Output.ofNullable(slotTypes);
             return this;
         }
 
-        public Builder voiceSettings(@Nullable Input<BotVoiceSettingsArgs> voiceSettings) {
+        public Builder voiceSettings(@Nullable Output<BotVoiceSettingsArgs> voiceSettings) {
             this.voiceSettings = voiceSettings;
             return this;
         }
 
         public Builder voiceSettings(@Nullable BotVoiceSettingsArgs voiceSettings) {
-            this.voiceSettings = Input.ofNullable(voiceSettings);
+            this.voiceSettings = Output.ofNullable(voiceSettings);
             return this;
         }
         public BotLocaleArgs build() {

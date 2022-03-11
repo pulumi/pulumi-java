@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsub_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.pubsub_v1.enums.SchemaSettingsEncoding;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class SchemaSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encoding")
-      private final @Nullable Input<SchemaSettingsEncoding> encoding;
+      private final @Nullable Output<SchemaSettingsEncoding> encoding;
 
-    public Input<SchemaSettingsEncoding> getEncoding() {
-        return this.encoding == null ? Input.empty() : this.encoding;
+    public Output<SchemaSettingsEncoding> getEncoding() {
+        return this.encoding == null ? Output.empty() : this.encoding;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class SchemaSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schema", required=true)
-      private final Input<String> schema;
+      private final Output<String> schema;
 
-    public Input<String> getSchema() {
+    public Output<String> getSchema() {
         return this.schema;
     }
 
     public SchemaSettingsArgs(
-        @Nullable Input<SchemaSettingsEncoding> encoding,
-        Input<String> schema) {
+        @Nullable Output<SchemaSettingsEncoding> encoding,
+        Output<String> schema) {
         this.encoding = encoding;
         this.schema = Objects.requireNonNull(schema, "expected parameter 'schema' to be non-null");
     }
 
     private SchemaSettingsArgs() {
-        this.encoding = Input.empty();
-        this.schema = Input.empty();
+        this.encoding = Output.empty();
+        this.schema = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class SchemaSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<SchemaSettingsEncoding> encoding;
-        private Input<String> schema;
+        private @Nullable Output<SchemaSettingsEncoding> encoding;
+        private Output<String> schema;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class SchemaSettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.schema = defaults.schema;
         }
 
-        public Builder encoding(@Nullable Input<SchemaSettingsEncoding> encoding) {
+        public Builder encoding(@Nullable Output<SchemaSettingsEncoding> encoding) {
             this.encoding = encoding;
             return this;
         }
 
         public Builder encoding(@Nullable SchemaSettingsEncoding encoding) {
-            this.encoding = Input.ofNullable(encoding);
+            this.encoding = Output.ofNullable(encoding);
             return this;
         }
 
-        public Builder schema(Input<String> schema) {
+        public Builder schema(Output<String> schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
 
         public Builder schema(String schema) {
-            this.schema = Input.of(Objects.requireNonNull(schema));
+            this.schema = Output.of(Objects.requireNonNull(schema));
             return this;
         }
         public SchemaSettingsArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Object;
@@ -24,10 +24,10 @@ public final class SSISPropertyOverrideArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="isSensitive")
-      private final @Nullable Input<Boolean> isSensitive;
+      private final @Nullable Output<Boolean> isSensitive;
 
-    public Input<Boolean> getIsSensitive() {
-        return this.isSensitive == null ? Input.empty() : this.isSensitive;
+    public Output<Boolean> getIsSensitive() {
+        return this.isSensitive == null ? Output.empty() : this.isSensitive;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class SSISPropertyOverrideArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="value", required=true)
-      private final Input<Object> value;
+      private final Output<Object> value;
 
-    public Input<Object> getValue() {
+    public Output<Object> getValue() {
         return this.value;
     }
 
     public SSISPropertyOverrideArgs(
-        @Nullable Input<Boolean> isSensitive,
-        Input<Object> value) {
+        @Nullable Output<Boolean> isSensitive,
+        Output<Object> value) {
         this.isSensitive = isSensitive;
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private SSISPropertyOverrideArgs() {
-        this.isSensitive = Input.empty();
-        this.value = Input.empty();
+        this.isSensitive = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class SSISPropertyOverrideArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> isSensitive;
-        private Input<Object> value;
+        private @Nullable Output<Boolean> isSensitive;
+        private Output<Object> value;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class SSISPropertyOverrideArgs extends io.pulumi.resources.Resource
     	      this.value = defaults.value;
         }
 
-        public Builder isSensitive(@Nullable Input<Boolean> isSensitive) {
+        public Builder isSensitive(@Nullable Output<Boolean> isSensitive) {
             this.isSensitive = isSensitive;
             return this;
         }
 
         public Builder isSensitive(@Nullable Boolean isSensitive) {
-            this.isSensitive = Input.ofNullable(isSensitive);
+            this.isSensitive = Output.ofNullable(isSensitive);
             return this;
         }
 
-        public Builder value(Input<Object> value) {
+        public Builder value(Output<Object> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(Object value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public SSISPropertyOverrideArgs build() {

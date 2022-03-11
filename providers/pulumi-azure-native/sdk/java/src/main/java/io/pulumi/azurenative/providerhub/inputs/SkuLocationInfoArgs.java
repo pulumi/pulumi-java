@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.azurenative.providerhub.inputs.SkuZoneDetailArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,46 +17,46 @@ public final class SkuLocationInfoArgs extends io.pulumi.resources.ResourceArgs 
     public static final SkuLocationInfoArgs Empty = new SkuLocationInfoArgs();
 
     @InputImport(name="extendedLocations")
-      private final @Nullable Input<List<String>> extendedLocations;
+      private final @Nullable Output<List<String>> extendedLocations;
 
-    public Input<List<String>> getExtendedLocations() {
-        return this.extendedLocations == null ? Input.empty() : this.extendedLocations;
+    public Output<List<String>> getExtendedLocations() {
+        return this.extendedLocations == null ? Output.empty() : this.extendedLocations;
     }
 
     @InputImport(name="location", required=true)
-      private final Input<String> location;
+      private final Output<String> location;
 
-    public Input<String> getLocation() {
+    public Output<String> getLocation() {
         return this.location;
     }
 
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     @InputImport(name="zoneDetails")
-      private final @Nullable Input<List<SkuZoneDetailArgs>> zoneDetails;
+      private final @Nullable Output<List<SkuZoneDetailArgs>> zoneDetails;
 
-    public Input<List<SkuZoneDetailArgs>> getZoneDetails() {
-        return this.zoneDetails == null ? Input.empty() : this.zoneDetails;
+    public Output<List<SkuZoneDetailArgs>> getZoneDetails() {
+        return this.zoneDetails == null ? Output.empty() : this.zoneDetails;
     }
 
     @InputImport(name="zones")
-      private final @Nullable Input<List<String>> zones;
+      private final @Nullable Output<List<String>> zones;
 
-    public Input<List<String>> getZones() {
-        return this.zones == null ? Input.empty() : this.zones;
+    public Output<List<String>> getZones() {
+        return this.zones == null ? Output.empty() : this.zones;
     }
 
     public SkuLocationInfoArgs(
-        @Nullable Input<List<String>> extendedLocations,
-        Input<String> location,
-        @Nullable Input<String> type,
-        @Nullable Input<List<SkuZoneDetailArgs>> zoneDetails,
-        @Nullable Input<List<String>> zones) {
+        @Nullable Output<List<String>> extendedLocations,
+        Output<String> location,
+        @Nullable Output<String> type,
+        @Nullable Output<List<SkuZoneDetailArgs>> zoneDetails,
+        @Nullable Output<List<String>> zones) {
         this.extendedLocations = extendedLocations;
         this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
         this.type = type;
@@ -65,11 +65,11 @@ public final class SkuLocationInfoArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private SkuLocationInfoArgs() {
-        this.extendedLocations = Input.empty();
-        this.location = Input.empty();
-        this.type = Input.empty();
-        this.zoneDetails = Input.empty();
-        this.zones = Input.empty();
+        this.extendedLocations = Output.empty();
+        this.location = Output.empty();
+        this.type = Output.empty();
+        this.zoneDetails = Output.empty();
+        this.zones = Output.empty();
     }
 
     public static Builder builder() {
@@ -81,11 +81,11 @@ public final class SkuLocationInfoArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> extendedLocations;
-        private Input<String> location;
-        private @Nullable Input<String> type;
-        private @Nullable Input<List<SkuZoneDetailArgs>> zoneDetails;
-        private @Nullable Input<List<String>> zones;
+        private @Nullable Output<List<String>> extendedLocations;
+        private Output<String> location;
+        private @Nullable Output<String> type;
+        private @Nullable Output<List<SkuZoneDetailArgs>> zoneDetails;
+        private @Nullable Output<List<String>> zones;
 
         public Builder() {
     	      // Empty
@@ -100,53 +100,53 @@ public final class SkuLocationInfoArgs extends io.pulumi.resources.ResourceArgs 
     	      this.zones = defaults.zones;
         }
 
-        public Builder extendedLocations(@Nullable Input<List<String>> extendedLocations) {
+        public Builder extendedLocations(@Nullable Output<List<String>> extendedLocations) {
             this.extendedLocations = extendedLocations;
             return this;
         }
 
         public Builder extendedLocations(@Nullable List<String> extendedLocations) {
-            this.extendedLocations = Input.ofNullable(extendedLocations);
+            this.extendedLocations = Output.ofNullable(extendedLocations);
             return this;
         }
 
-        public Builder location(Input<String> location) {
+        public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
         public Builder location(String location) {
-            this.location = Input.of(Objects.requireNonNull(location));
+            this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder zoneDetails(@Nullable Input<List<SkuZoneDetailArgs>> zoneDetails) {
+        public Builder zoneDetails(@Nullable Output<List<SkuZoneDetailArgs>> zoneDetails) {
             this.zoneDetails = zoneDetails;
             return this;
         }
 
         public Builder zoneDetails(@Nullable List<SkuZoneDetailArgs> zoneDetails) {
-            this.zoneDetails = Input.ofNullable(zoneDetails);
+            this.zoneDetails = Output.ofNullable(zoneDetails);
             return this;
         }
 
-        public Builder zones(@Nullable Input<List<String>> zones) {
+        public Builder zones(@Nullable Output<List<String>> zones) {
             this.zones = zones;
             return this;
         }
 
         public Builder zones(@Nullable List<String> zones) {
-            this.zones = Input.ofNullable(zones);
+            this.zones = Output.ofNullable(zones);
             return this;
         }
         public SkuLocationInfoArgs build() {

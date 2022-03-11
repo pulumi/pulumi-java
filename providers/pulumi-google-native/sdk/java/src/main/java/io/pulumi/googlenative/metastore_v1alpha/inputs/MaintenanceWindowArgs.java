@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.metastore_v1alpha.enums.MaintenanceWindowDayOfWeek;
 import java.lang.Integer;
@@ -24,10 +24,10 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="dayOfWeek")
-      private final @Nullable Input<MaintenanceWindowDayOfWeek> dayOfWeek;
+      private final @Nullable Output<MaintenanceWindowDayOfWeek> dayOfWeek;
 
-    public Input<MaintenanceWindowDayOfWeek> getDayOfWeek() {
-        return this.dayOfWeek == null ? Input.empty() : this.dayOfWeek;
+    public Output<MaintenanceWindowDayOfWeek> getDayOfWeek() {
+        return this.dayOfWeek == null ? Output.empty() : this.dayOfWeek;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="hourOfDay")
-      private final @Nullable Input<Integer> hourOfDay;
+      private final @Nullable Output<Integer> hourOfDay;
 
-    public Input<Integer> getHourOfDay() {
-        return this.hourOfDay == null ? Input.empty() : this.hourOfDay;
+    public Output<Integer> getHourOfDay() {
+        return this.hourOfDay == null ? Output.empty() : this.hourOfDay;
     }
 
     public MaintenanceWindowArgs(
-        @Nullable Input<MaintenanceWindowDayOfWeek> dayOfWeek,
-        @Nullable Input<Integer> hourOfDay) {
+        @Nullable Output<MaintenanceWindowDayOfWeek> dayOfWeek,
+        @Nullable Output<Integer> hourOfDay) {
         this.dayOfWeek = dayOfWeek;
         this.hourOfDay = hourOfDay;
     }
 
     private MaintenanceWindowArgs() {
-        this.dayOfWeek = Input.empty();
-        this.hourOfDay = Input.empty();
+        this.dayOfWeek = Output.empty();
+        this.hourOfDay = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<MaintenanceWindowDayOfWeek> dayOfWeek;
-        private @Nullable Input<Integer> hourOfDay;
+        private @Nullable Output<MaintenanceWindowDayOfWeek> dayOfWeek;
+        private @Nullable Output<Integer> hourOfDay;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
     	      this.hourOfDay = defaults.hourOfDay;
         }
 
-        public Builder dayOfWeek(@Nullable Input<MaintenanceWindowDayOfWeek> dayOfWeek) {
+        public Builder dayOfWeek(@Nullable Output<MaintenanceWindowDayOfWeek> dayOfWeek) {
             this.dayOfWeek = dayOfWeek;
             return this;
         }
 
         public Builder dayOfWeek(@Nullable MaintenanceWindowDayOfWeek dayOfWeek) {
-            this.dayOfWeek = Input.ofNullable(dayOfWeek);
+            this.dayOfWeek = Output.ofNullable(dayOfWeek);
             return this;
         }
 
-        public Builder hourOfDay(@Nullable Input<Integer> hourOfDay) {
+        public Builder hourOfDay(@Nullable Output<Integer> hourOfDay) {
             this.hourOfDay = hourOfDay;
             return this;
         }
 
         public Builder hourOfDay(@Nullable Integer hourOfDay) {
-            this.hourOfDay = Input.ofNullable(hourOfDay);
+            this.hourOfDay = Output.ofNullable(hourOfDay);
             return this;
         }
         public MaintenanceWindowArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ecs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class TaskSetLoadBalancerGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="containerName", required=true)
-      private final Input<String> containerName;
+      private final Output<String> containerName;
 
-    public Input<String> getContainerName() {
+    public Output<String> getContainerName() {
         return this.containerName;
     }
 
@@ -31,10 +31,10 @@ public final class TaskSetLoadBalancerGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="containerPort")
-      private final @Nullable Input<Integer> containerPort;
+      private final @Nullable Output<Integer> containerPort;
 
-    public Input<Integer> getContainerPort() {
-        return this.containerPort == null ? Input.empty() : this.containerPort;
+    public Output<Integer> getContainerPort() {
+        return this.containerPort == null ? Output.empty() : this.containerPort;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class TaskSetLoadBalancerGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="loadBalancerName")
-      private final @Nullable Input<String> loadBalancerName;
+      private final @Nullable Output<String> loadBalancerName;
 
-    public Input<String> getLoadBalancerName() {
-        return this.loadBalancerName == null ? Input.empty() : this.loadBalancerName;
+    public Output<String> getLoadBalancerName() {
+        return this.loadBalancerName == null ? Output.empty() : this.loadBalancerName;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class TaskSetLoadBalancerGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="targetGroupArn")
-      private final @Nullable Input<String> targetGroupArn;
+      private final @Nullable Output<String> targetGroupArn;
 
-    public Input<String> getTargetGroupArn() {
-        return this.targetGroupArn == null ? Input.empty() : this.targetGroupArn;
+    public Output<String> getTargetGroupArn() {
+        return this.targetGroupArn == null ? Output.empty() : this.targetGroupArn;
     }
 
     public TaskSetLoadBalancerGetArgs(
-        Input<String> containerName,
-        @Nullable Input<Integer> containerPort,
-        @Nullable Input<String> loadBalancerName,
-        @Nullable Input<String> targetGroupArn) {
+        Output<String> containerName,
+        @Nullable Output<Integer> containerPort,
+        @Nullable Output<String> loadBalancerName,
+        @Nullable Output<String> targetGroupArn) {
         this.containerName = Objects.requireNonNull(containerName, "expected parameter 'containerName' to be non-null");
         this.containerPort = containerPort;
         this.loadBalancerName = loadBalancerName;
@@ -71,10 +71,10 @@ public final class TaskSetLoadBalancerGetArgs extends io.pulumi.resources.Resour
     }
 
     private TaskSetLoadBalancerGetArgs() {
-        this.containerName = Input.empty();
-        this.containerPort = Input.empty();
-        this.loadBalancerName = Input.empty();
-        this.targetGroupArn = Input.empty();
+        this.containerName = Output.empty();
+        this.containerPort = Output.empty();
+        this.loadBalancerName = Output.empty();
+        this.targetGroupArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class TaskSetLoadBalancerGetArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> containerName;
-        private @Nullable Input<Integer> containerPort;
-        private @Nullable Input<String> loadBalancerName;
-        private @Nullable Input<String> targetGroupArn;
+        private Output<String> containerName;
+        private @Nullable Output<Integer> containerPort;
+        private @Nullable Output<String> loadBalancerName;
+        private @Nullable Output<String> targetGroupArn;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class TaskSetLoadBalancerGetArgs extends io.pulumi.resources.Resour
     	      this.targetGroupArn = defaults.targetGroupArn;
         }
 
-        public Builder containerName(Input<String> containerName) {
+        public Builder containerName(Output<String> containerName) {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
 
         public Builder containerName(String containerName) {
-            this.containerName = Input.of(Objects.requireNonNull(containerName));
+            this.containerName = Output.of(Objects.requireNonNull(containerName));
             return this;
         }
 
-        public Builder containerPort(@Nullable Input<Integer> containerPort) {
+        public Builder containerPort(@Nullable Output<Integer> containerPort) {
             this.containerPort = containerPort;
             return this;
         }
 
         public Builder containerPort(@Nullable Integer containerPort) {
-            this.containerPort = Input.ofNullable(containerPort);
+            this.containerPort = Output.ofNullable(containerPort);
             return this;
         }
 
-        public Builder loadBalancerName(@Nullable Input<String> loadBalancerName) {
+        public Builder loadBalancerName(@Nullable Output<String> loadBalancerName) {
             this.loadBalancerName = loadBalancerName;
             return this;
         }
 
         public Builder loadBalancerName(@Nullable String loadBalancerName) {
-            this.loadBalancerName = Input.ofNullable(loadBalancerName);
+            this.loadBalancerName = Output.ofNullable(loadBalancerName);
             return this;
         }
 
-        public Builder targetGroupArn(@Nullable Input<String> targetGroupArn) {
+        public Builder targetGroupArn(@Nullable Output<String> targetGroupArn) {
             this.targetGroupArn = targetGroupArn;
             return this;
         }
 
         public Builder targetGroupArn(@Nullable String targetGroupArn) {
-            this.targetGroupArn = Input.ofNullable(targetGroupArn);
+            this.targetGroupArn = Output.ofNullable(targetGroupArn);
             return this;
         }
         public TaskSetLoadBalancerGetArgs build() {

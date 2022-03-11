@@ -11,7 +11,6 @@ import io.pulumi.azurenative.web.outputs.HttpSettingsResponse;
 import io.pulumi.azurenative.web.outputs.IdentityProvidersResponse;
 import io.pulumi.azurenative.web.outputs.LoginResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -184,25 +183,25 @@ public class WebAppAuthSettingsV2Slot extends io.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public WebAppAuthSettingsV2Slot(String name, WebAppAuthSettingsV2SlotArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:web:WebAppAuthSettingsV2Slot", name, args == null ? WebAppAuthSettingsV2SlotArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:web:WebAppAuthSettingsV2Slot", name, args == null ? WebAppAuthSettingsV2SlotArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private WebAppAuthSettingsV2Slot(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private WebAppAuthSettingsV2Slot(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:web:WebAppAuthSettingsV2Slot", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:web/v20200601:WebAppAuthSettingsV2Slot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20200901:WebAppAuthSettingsV2Slot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20201001:WebAppAuthSettingsV2Slot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20201201:WebAppAuthSettingsV2Slot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210101:WebAppAuthSettingsV2Slot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210115:WebAppAuthSettingsV2Slot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210201:WebAppAuthSettingsV2Slot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210301:WebAppAuthSettingsV2Slot").build())
+                Output.of(Alias.builder().setType("azure-native:web/v20200601:WebAppAuthSettingsV2Slot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20200901:WebAppAuthSettingsV2Slot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20201001:WebAppAuthSettingsV2Slot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20201201:WebAppAuthSettingsV2Slot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210101:WebAppAuthSettingsV2Slot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210115:WebAppAuthSettingsV2Slot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210201:WebAppAuthSettingsV2Slot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210301:WebAppAuthSettingsV2Slot").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -216,7 +215,7 @@ public class WebAppAuthSettingsV2Slot extends io.pulumi.resources.CustomResource
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WebAppAuthSettingsV2Slot get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static WebAppAuthSettingsV2Slot get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new WebAppAuthSettingsV2Slot(name, id, options);
     }
 }

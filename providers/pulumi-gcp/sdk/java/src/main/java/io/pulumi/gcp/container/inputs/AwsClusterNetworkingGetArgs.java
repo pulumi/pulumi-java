@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,9 +19,9 @@ public final class AwsClusterNetworkingGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="podAddressCidrBlocks", required=true)
-      private final Input<List<String>> podAddressCidrBlocks;
+      private final Output<List<String>> podAddressCidrBlocks;
 
-    public Input<List<String>> getPodAddressCidrBlocks() {
+    public Output<List<String>> getPodAddressCidrBlocks() {
         return this.podAddressCidrBlocks;
     }
 
@@ -30,9 +30,9 @@ public final class AwsClusterNetworkingGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="serviceAddressCidrBlocks", required=true)
-      private final Input<List<String>> serviceAddressCidrBlocks;
+      private final Output<List<String>> serviceAddressCidrBlocks;
 
-    public Input<List<String>> getServiceAddressCidrBlocks() {
+    public Output<List<String>> getServiceAddressCidrBlocks() {
         return this.serviceAddressCidrBlocks;
     }
 
@@ -41,25 +41,25 @@ public final class AwsClusterNetworkingGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="vpcId", required=true)
-      private final Input<String> vpcId;
+      private final Output<String> vpcId;
 
-    public Input<String> getVpcId() {
+    public Output<String> getVpcId() {
         return this.vpcId;
     }
 
     public AwsClusterNetworkingGetArgs(
-        Input<List<String>> podAddressCidrBlocks,
-        Input<List<String>> serviceAddressCidrBlocks,
-        Input<String> vpcId) {
+        Output<List<String>> podAddressCidrBlocks,
+        Output<List<String>> serviceAddressCidrBlocks,
+        Output<String> vpcId) {
         this.podAddressCidrBlocks = Objects.requireNonNull(podAddressCidrBlocks, "expected parameter 'podAddressCidrBlocks' to be non-null");
         this.serviceAddressCidrBlocks = Objects.requireNonNull(serviceAddressCidrBlocks, "expected parameter 'serviceAddressCidrBlocks' to be non-null");
         this.vpcId = Objects.requireNonNull(vpcId, "expected parameter 'vpcId' to be non-null");
     }
 
     private AwsClusterNetworkingGetArgs() {
-        this.podAddressCidrBlocks = Input.empty();
-        this.serviceAddressCidrBlocks = Input.empty();
-        this.vpcId = Input.empty();
+        this.podAddressCidrBlocks = Output.empty();
+        this.serviceAddressCidrBlocks = Output.empty();
+        this.vpcId = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class AwsClusterNetworkingGetArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<List<String>> podAddressCidrBlocks;
-        private Input<List<String>> serviceAddressCidrBlocks;
-        private Input<String> vpcId;
+        private Output<List<String>> podAddressCidrBlocks;
+        private Output<List<String>> serviceAddressCidrBlocks;
+        private Output<String> vpcId;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class AwsClusterNetworkingGetArgs extends io.pulumi.resources.Resou
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder podAddressCidrBlocks(Input<List<String>> podAddressCidrBlocks) {
+        public Builder podAddressCidrBlocks(Output<List<String>> podAddressCidrBlocks) {
             this.podAddressCidrBlocks = Objects.requireNonNull(podAddressCidrBlocks);
             return this;
         }
 
         public Builder podAddressCidrBlocks(List<String> podAddressCidrBlocks) {
-            this.podAddressCidrBlocks = Input.of(Objects.requireNonNull(podAddressCidrBlocks));
+            this.podAddressCidrBlocks = Output.of(Objects.requireNonNull(podAddressCidrBlocks));
             return this;
         }
 
-        public Builder serviceAddressCidrBlocks(Input<List<String>> serviceAddressCidrBlocks) {
+        public Builder serviceAddressCidrBlocks(Output<List<String>> serviceAddressCidrBlocks) {
             this.serviceAddressCidrBlocks = Objects.requireNonNull(serviceAddressCidrBlocks);
             return this;
         }
 
         public Builder serviceAddressCidrBlocks(List<String> serviceAddressCidrBlocks) {
-            this.serviceAddressCidrBlocks = Input.of(Objects.requireNonNull(serviceAddressCidrBlocks));
+            this.serviceAddressCidrBlocks = Output.of(Objects.requireNonNull(serviceAddressCidrBlocks));
             return this;
         }
 
-        public Builder vpcId(Input<String> vpcId) {
+        public Builder vpcId(Output<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
 
         public Builder vpcId(String vpcId) {
-            this.vpcId = Input.of(Objects.requireNonNull(vpcId));
+            this.vpcId = Output.of(Objects.requireNonNull(vpcId));
             return this;
         }
         public AwsClusterNetworkingGetArgs build() {

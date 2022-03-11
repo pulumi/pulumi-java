@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class RuleMetricDataSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="legacyResourceId")
-      private final @Nullable Input<String> legacyResourceId;
+      private final @Nullable Output<String> legacyResourceId;
 
-    public Input<String> getLegacyResourceId() {
-        return this.legacyResourceId == null ? Input.empty() : this.legacyResourceId;
+    public Output<String> getLegacyResourceId() {
+        return this.legacyResourceId == null ? Output.empty() : this.legacyResourceId;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RuleMetricDataSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="metricName")
-      private final @Nullable Input<String> metricName;
+      private final @Nullable Output<String> metricName;
 
-    public Input<String> getMetricName() {
-        return this.metricName == null ? Input.empty() : this.metricName;
+    public Output<String> getMetricName() {
+        return this.metricName == null ? Output.empty() : this.metricName;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class RuleMetricDataSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="metricNamespace")
-      private final @Nullable Input<String> metricNamespace;
+      private final @Nullable Output<String> metricNamespace;
 
-    public Input<String> getMetricNamespace() {
-        return this.metricNamespace == null ? Input.empty() : this.metricNamespace;
+    public Output<String> getMetricNamespace() {
+        return this.metricNamespace == null ? Output.empty() : this.metricNamespace;
     }
 
     /**
@@ -57,9 +57,9 @@ public final class RuleMetricDataSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
@@ -68,10 +68,10 @@ public final class RuleMetricDataSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceLocation")
-      private final @Nullable Input<String> resourceLocation;
+      private final @Nullable Output<String> resourceLocation;
 
-    public Input<String> getResourceLocation() {
-        return this.resourceLocation == null ? Input.empty() : this.resourceLocation;
+    public Output<String> getResourceLocation() {
+        return this.resourceLocation == null ? Output.empty() : this.resourceLocation;
     }
 
     /**
@@ -79,19 +79,19 @@ public final class RuleMetricDataSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceUri")
-      private final @Nullable Input<String> resourceUri;
+      private final @Nullable Output<String> resourceUri;
 
-    public Input<String> getResourceUri() {
-        return this.resourceUri == null ? Input.empty() : this.resourceUri;
+    public Output<String> getResourceUri() {
+        return this.resourceUri == null ? Output.empty() : this.resourceUri;
     }
 
     public RuleMetricDataSourceArgs(
-        @Nullable Input<String> legacyResourceId,
-        @Nullable Input<String> metricName,
-        @Nullable Input<String> metricNamespace,
-        Input<String> odataType,
-        @Nullable Input<String> resourceLocation,
-        @Nullable Input<String> resourceUri) {
+        @Nullable Output<String> legacyResourceId,
+        @Nullable Output<String> metricName,
+        @Nullable Output<String> metricNamespace,
+        Output<String> odataType,
+        @Nullable Output<String> resourceLocation,
+        @Nullable Output<String> resourceUri) {
         this.legacyResourceId = legacyResourceId;
         this.metricName = metricName;
         this.metricNamespace = metricNamespace;
@@ -101,12 +101,12 @@ public final class RuleMetricDataSourceArgs extends io.pulumi.resources.Resource
     }
 
     private RuleMetricDataSourceArgs() {
-        this.legacyResourceId = Input.empty();
-        this.metricName = Input.empty();
-        this.metricNamespace = Input.empty();
-        this.odataType = Input.empty();
-        this.resourceLocation = Input.empty();
-        this.resourceUri = Input.empty();
+        this.legacyResourceId = Output.empty();
+        this.metricName = Output.empty();
+        this.metricNamespace = Output.empty();
+        this.odataType = Output.empty();
+        this.resourceLocation = Output.empty();
+        this.resourceUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,12 +118,12 @@ public final class RuleMetricDataSourceArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> legacyResourceId;
-        private @Nullable Input<String> metricName;
-        private @Nullable Input<String> metricNamespace;
-        private Input<String> odataType;
-        private @Nullable Input<String> resourceLocation;
-        private @Nullable Input<String> resourceUri;
+        private @Nullable Output<String> legacyResourceId;
+        private @Nullable Output<String> metricName;
+        private @Nullable Output<String> metricNamespace;
+        private Output<String> odataType;
+        private @Nullable Output<String> resourceLocation;
+        private @Nullable Output<String> resourceUri;
 
         public Builder() {
     	      // Empty
@@ -139,63 +139,63 @@ public final class RuleMetricDataSourceArgs extends io.pulumi.resources.Resource
     	      this.resourceUri = defaults.resourceUri;
         }
 
-        public Builder legacyResourceId(@Nullable Input<String> legacyResourceId) {
+        public Builder legacyResourceId(@Nullable Output<String> legacyResourceId) {
             this.legacyResourceId = legacyResourceId;
             return this;
         }
 
         public Builder legacyResourceId(@Nullable String legacyResourceId) {
-            this.legacyResourceId = Input.ofNullable(legacyResourceId);
+            this.legacyResourceId = Output.ofNullable(legacyResourceId);
             return this;
         }
 
-        public Builder metricName(@Nullable Input<String> metricName) {
+        public Builder metricName(@Nullable Output<String> metricName) {
             this.metricName = metricName;
             return this;
         }
 
         public Builder metricName(@Nullable String metricName) {
-            this.metricName = Input.ofNullable(metricName);
+            this.metricName = Output.ofNullable(metricName);
             return this;
         }
 
-        public Builder metricNamespace(@Nullable Input<String> metricNamespace) {
+        public Builder metricNamespace(@Nullable Output<String> metricNamespace) {
             this.metricNamespace = metricNamespace;
             return this;
         }
 
         public Builder metricNamespace(@Nullable String metricNamespace) {
-            this.metricNamespace = Input.ofNullable(metricNamespace);
+            this.metricNamespace = Output.ofNullable(metricNamespace);
             return this;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder resourceLocation(@Nullable Input<String> resourceLocation) {
+        public Builder resourceLocation(@Nullable Output<String> resourceLocation) {
             this.resourceLocation = resourceLocation;
             return this;
         }
 
         public Builder resourceLocation(@Nullable String resourceLocation) {
-            this.resourceLocation = Input.ofNullable(resourceLocation);
+            this.resourceLocation = Output.ofNullable(resourceLocation);
             return this;
         }
 
-        public Builder resourceUri(@Nullable Input<String> resourceUri) {
+        public Builder resourceUri(@Nullable Output<String> resourceUri) {
             this.resourceUri = resourceUri;
             return this;
         }
 
         public Builder resourceUri(@Nullable String resourceUri) {
-            this.resourceUri = Input.ofNullable(resourceUri);
+            this.resourceUri = Output.ofNullable(resourceUri);
             return this;
         }
         public RuleMetricDataSourceArgs build() {

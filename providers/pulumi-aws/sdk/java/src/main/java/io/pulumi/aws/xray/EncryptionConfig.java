@@ -6,7 +6,6 @@ package io.pulumi.aws.xray;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.xray.EncryptionConfigArgs;
 import io.pulumi.aws.xray.inputs.EncryptionConfigState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -98,14 +97,14 @@ public class EncryptionConfig extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EncryptionConfig(String name, EncryptionConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:xray/encryptionConfig:EncryptionConfig", name, args == null ? EncryptionConfigArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:xray/encryptionConfig:EncryptionConfig", name, args == null ? EncryptionConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private EncryptionConfig(String name, Input<String> id, @Nullable EncryptionConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private EncryptionConfig(String name, Output<String> id, @Nullable EncryptionConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:xray/encryptionConfig:EncryptionConfig", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -121,7 +120,7 @@ public class EncryptionConfig extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static EncryptionConfig get(String name, Input<String> id, @Nullable EncryptionConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static EncryptionConfig get(String name, Output<String> id, @Nullable EncryptionConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new EncryptionConfig(name, id, state, options);
     }
 }

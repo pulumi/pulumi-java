@@ -6,7 +6,7 @@ package io.pulumi.azurenative.desktopvirtualization;
 import io.pulumi.azurenative.desktopvirtualization.inputs.ResourceModelWithAllowedPropertySetIdentityArgs;
 import io.pulumi.azurenative.desktopvirtualization.inputs.ResourceModelWithAllowedPropertySetPlanArgs;
 import io.pulumi.azurenative.desktopvirtualization.inputs.ResourceModelWithAllowedPropertySetSkuArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationGroupReferences")
-      private final @Nullable Input<List<String>> applicationGroupReferences;
+      private final @Nullable Output<List<String>> applicationGroupReferences;
 
-    public Input<List<String>> getApplicationGroupReferences() {
-        return this.applicationGroupReferences == null ? Input.empty() : this.applicationGroupReferences;
+    public Output<List<String>> getApplicationGroupReferences() {
+        return this.applicationGroupReferences == null ? Output.empty() : this.applicationGroupReferences;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -46,17 +46,17 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="friendlyName")
-      private final @Nullable Input<String> friendlyName;
+      private final @Nullable Output<String> friendlyName;
 
-    public Input<String> getFriendlyName() {
-        return this.friendlyName == null ? Input.empty() : this.friendlyName;
+    public Output<String> getFriendlyName() {
+        return this.friendlyName == null ? Output.empty() : this.friendlyName;
     }
 
     @InputImport(name="identity")
-      private final @Nullable Input<ResourceModelWithAllowedPropertySetIdentityArgs> identity;
+      private final @Nullable Output<ResourceModelWithAllowedPropertySetIdentityArgs> identity;
 
-    public Input<ResourceModelWithAllowedPropertySetIdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<ResourceModelWithAllowedPropertySetIdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -86,17 +86,17 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedBy")
-      private final @Nullable Input<String> managedBy;
+      private final @Nullable Output<String> managedBy;
 
-    public Input<String> getManagedBy() {
-        return this.managedBy == null ? Input.empty() : this.managedBy;
+    public Output<String> getManagedBy() {
+        return this.managedBy == null ? Output.empty() : this.managedBy;
     }
 
     @InputImport(name="plan")
-      private final @Nullable Input<ResourceModelWithAllowedPropertySetPlanArgs> plan;
+      private final @Nullable Output<ResourceModelWithAllowedPropertySetPlanArgs> plan;
 
-    public Input<ResourceModelWithAllowedPropertySetPlanArgs> getPlan() {
-        return this.plan == null ? Input.empty() : this.plan;
+    public Output<ResourceModelWithAllowedPropertySetPlanArgs> getPlan() {
+        return this.plan == null ? Output.empty() : this.plan;
     }
 
     /**
@@ -104,17 +104,17 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     @InputImport(name="sku")
-      private final @Nullable Input<ResourceModelWithAllowedPropertySetSkuArgs> sku;
+      private final @Nullable Output<ResourceModelWithAllowedPropertySetSkuArgs> sku;
 
-    public Input<ResourceModelWithAllowedPropertySetSkuArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<ResourceModelWithAllowedPropertySetSkuArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -133,25 +133,25 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName")
-      private final @Nullable Input<String> workspaceName;
+      private final @Nullable Output<String> workspaceName;
 
-    public Input<String> getWorkspaceName() {
-        return this.workspaceName == null ? Input.empty() : this.workspaceName;
+    public Output<String> getWorkspaceName() {
+        return this.workspaceName == null ? Output.empty() : this.workspaceName;
     }
 
     public WorkspaceArgs(
-        @Nullable Input<List<String>> applicationGroupReferences,
-        @Nullable Input<String> description,
-        @Nullable Input<String> friendlyName,
-        @Nullable Input<ResourceModelWithAllowedPropertySetIdentityArgs> identity,
-        @Nullable Input<String> kind,
-        @Nullable Input<String> location,
-        @Nullable Input<String> managedBy,
-        @Nullable Input<ResourceModelWithAllowedPropertySetPlanArgs> plan,
-        Input<String> resourceGroupName,
-        @Nullable Input<ResourceModelWithAllowedPropertySetSkuArgs> sku,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> workspaceName) {
+        @Nullable Output<List<String>> applicationGroupReferences,
+        @Nullable Output<String> description,
+        @Nullable Output<String> friendlyName,
+        @Nullable Output<ResourceModelWithAllowedPropertySetIdentityArgs> identity,
+        @Nullable Output<String> kind,
+        @Nullable Output<String> location,
+        @Nullable Output<String> managedBy,
+        @Nullable Output<ResourceModelWithAllowedPropertySetPlanArgs> plan,
+        Output<String> resourceGroupName,
+        @Nullable Output<ResourceModelWithAllowedPropertySetSkuArgs> sku,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> workspaceName) {
         this.applicationGroupReferences = applicationGroupReferences;
         this.description = description;
         this.friendlyName = friendlyName;
@@ -167,18 +167,18 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WorkspaceArgs() {
-        this.applicationGroupReferences = Input.empty();
-        this.description = Input.empty();
-        this.friendlyName = Input.empty();
-        this.identity = Input.empty();
-        this.kind = Input.empty();
-        this.location = Input.empty();
-        this.managedBy = Input.empty();
-        this.plan = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sku = Input.empty();
-        this.tags = Input.empty();
-        this.workspaceName = Input.empty();
+        this.applicationGroupReferences = Output.empty();
+        this.description = Output.empty();
+        this.friendlyName = Output.empty();
+        this.identity = Output.empty();
+        this.kind = Output.empty();
+        this.location = Output.empty();
+        this.managedBy = Output.empty();
+        this.plan = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sku = Output.empty();
+        this.tags = Output.empty();
+        this.workspaceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -190,18 +190,18 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> applicationGroupReferences;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> friendlyName;
-        private @Nullable Input<ResourceModelWithAllowedPropertySetIdentityArgs> identity;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> managedBy;
-        private @Nullable Input<ResourceModelWithAllowedPropertySetPlanArgs> plan;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<ResourceModelWithAllowedPropertySetSkuArgs> sku;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> workspaceName;
+        private @Nullable Output<List<String>> applicationGroupReferences;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> friendlyName;
+        private @Nullable Output<ResourceModelWithAllowedPropertySetIdentityArgs> identity;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> managedBy;
+        private @Nullable Output<ResourceModelWithAllowedPropertySetPlanArgs> plan;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<ResourceModelWithAllowedPropertySetSkuArgs> sku;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> workspaceName;
 
         public Builder() {
     	      // Empty
@@ -223,123 +223,123 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder applicationGroupReferences(@Nullable Input<List<String>> applicationGroupReferences) {
+        public Builder applicationGroupReferences(@Nullable Output<List<String>> applicationGroupReferences) {
             this.applicationGroupReferences = applicationGroupReferences;
             return this;
         }
 
         public Builder applicationGroupReferences(@Nullable List<String> applicationGroupReferences) {
-            this.applicationGroupReferences = Input.ofNullable(applicationGroupReferences);
+            this.applicationGroupReferences = Output.ofNullable(applicationGroupReferences);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder friendlyName(@Nullable Input<String> friendlyName) {
+        public Builder friendlyName(@Nullable Output<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Input.ofNullable(friendlyName);
+            this.friendlyName = Output.ofNullable(friendlyName);
             return this;
         }
 
-        public Builder identity(@Nullable Input<ResourceModelWithAllowedPropertySetIdentityArgs> identity) {
+        public Builder identity(@Nullable Output<ResourceModelWithAllowedPropertySetIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable ResourceModelWithAllowedPropertySetIdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder managedBy(@Nullable Input<String> managedBy) {
+        public Builder managedBy(@Nullable Output<String> managedBy) {
             this.managedBy = managedBy;
             return this;
         }
 
         public Builder managedBy(@Nullable String managedBy) {
-            this.managedBy = Input.ofNullable(managedBy);
+            this.managedBy = Output.ofNullable(managedBy);
             return this;
         }
 
-        public Builder plan(@Nullable Input<ResourceModelWithAllowedPropertySetPlanArgs> plan) {
+        public Builder plan(@Nullable Output<ResourceModelWithAllowedPropertySetPlanArgs> plan) {
             this.plan = plan;
             return this;
         }
 
         public Builder plan(@Nullable ResourceModelWithAllowedPropertySetPlanArgs plan) {
-            this.plan = Input.ofNullable(plan);
+            this.plan = Output.ofNullable(plan);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sku(@Nullable Input<ResourceModelWithAllowedPropertySetSkuArgs> sku) {
+        public Builder sku(@Nullable Output<ResourceModelWithAllowedPropertySetSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable ResourceModelWithAllowedPropertySetSkuArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder workspaceName(@Nullable Input<String> workspaceName) {
+        public Builder workspaceName(@Nullable Output<String> workspaceName) {
             this.workspaceName = workspaceName;
             return this;
         }
 
         public Builder workspaceName(@Nullable String workspaceName) {
-            this.workspaceName = Input.ofNullable(workspaceName);
+            this.workspaceName = Output.ofNullable(workspaceName);
             return this;
         }
         public WorkspaceArgs build() {

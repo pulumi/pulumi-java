@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.inputs.TableFieldSchemaArgs;
 import java.util.List;
@@ -20,18 +20,18 @@ public final class TableSchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fields")
-      private final @Nullable Input<List<TableFieldSchemaArgs>> fields;
+      private final @Nullable Output<List<TableFieldSchemaArgs>> fields;
 
-    public Input<List<TableFieldSchemaArgs>> getFields() {
-        return this.fields == null ? Input.empty() : this.fields;
+    public Output<List<TableFieldSchemaArgs>> getFields() {
+        return this.fields == null ? Output.empty() : this.fields;
     }
 
-    public TableSchemaArgs(@Nullable Input<List<TableFieldSchemaArgs>> fields) {
+    public TableSchemaArgs(@Nullable Output<List<TableFieldSchemaArgs>> fields) {
         this.fields = fields;
     }
 
     private TableSchemaArgs() {
-        this.fields = Input.empty();
+        this.fields = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class TableSchemaArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<TableFieldSchemaArgs>> fields;
+        private @Nullable Output<List<TableFieldSchemaArgs>> fields;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class TableSchemaArgs extends io.pulumi.resources.ResourceArgs {
     	      this.fields = defaults.fields;
         }
 
-        public Builder fields(@Nullable Input<List<TableFieldSchemaArgs>> fields) {
+        public Builder fields(@Nullable Output<List<TableFieldSchemaArgs>> fields) {
             this.fields = fields;
             return this;
         }
 
         public Builder fields(@Nullable List<TableFieldSchemaArgs> fields) {
-            this.fields = Input.ofNullable(fields);
+            this.fields = Output.ofNullable(fields);
             return this;
         }
         public TableSchemaArgs build() {

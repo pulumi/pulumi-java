@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ProjectRepoIdArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class ProjectRepoIdArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repoName")
-      private final @Nullable Input<String> repoName;
+      private final @Nullable Output<String> repoName;
 
-    public Input<String> getRepoName() {
-        return this.repoName == null ? Input.empty() : this.repoName;
+    public Output<String> getRepoName() {
+        return this.repoName == null ? Output.empty() : this.repoName;
     }
 
     public ProjectRepoIdArgs(
-        @Nullable Input<String> project,
-        @Nullable Input<String> repoName) {
+        @Nullable Output<String> project,
+        @Nullable Output<String> repoName) {
         this.project = project;
         this.repoName = repoName;
     }
 
     private ProjectRepoIdArgs() {
-        this.project = Input.empty();
-        this.repoName = Input.empty();
+        this.project = Output.empty();
+        this.repoName = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ProjectRepoIdArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> repoName;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> repoName;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ProjectRepoIdArgs extends io.pulumi.resources.ResourceArgs {
     	      this.repoName = defaults.repoName;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder repoName(@Nullable Input<String> repoName) {
+        public Builder repoName(@Nullable Output<String> repoName) {
             this.repoName = repoName;
             return this;
         }
 
         public Builder repoName(@Nullable String repoName) {
-            this.repoName = Input.ofNullable(repoName);
+            this.repoName = Output.ofNullable(repoName);
             return this;
         }
         public ProjectRepoIdArgs build() {

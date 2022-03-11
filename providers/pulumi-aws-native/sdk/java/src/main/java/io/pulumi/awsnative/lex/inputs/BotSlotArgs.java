@@ -6,7 +6,7 @@ package io.pulumi.awsnative.lex.inputs;
 import io.pulumi.awsnative.lex.inputs.BotMultipleValuesSettingArgs;
 import io.pulumi.awsnative.lex.inputs.BotObfuscationSettingArgs;
 import io.pulumi.awsnative.lex.inputs.BotSlotValueElicitationSettingArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,54 +22,54 @@ public final class BotSlotArgs extends io.pulumi.resources.ResourceArgs {
     public static final BotSlotArgs Empty = new BotSlotArgs();
 
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="multipleValuesSetting")
-      private final @Nullable Input<BotMultipleValuesSettingArgs> multipleValuesSetting;
+      private final @Nullable Output<BotMultipleValuesSettingArgs> multipleValuesSetting;
 
-    public Input<BotMultipleValuesSettingArgs> getMultipleValuesSetting() {
-        return this.multipleValuesSetting == null ? Input.empty() : this.multipleValuesSetting;
+    public Output<BotMultipleValuesSettingArgs> getMultipleValuesSetting() {
+        return this.multipleValuesSetting == null ? Output.empty() : this.multipleValuesSetting;
     }
 
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     @InputImport(name="obfuscationSetting")
-      private final @Nullable Input<BotObfuscationSettingArgs> obfuscationSetting;
+      private final @Nullable Output<BotObfuscationSettingArgs> obfuscationSetting;
 
-    public Input<BotObfuscationSettingArgs> getObfuscationSetting() {
-        return this.obfuscationSetting == null ? Input.empty() : this.obfuscationSetting;
+    public Output<BotObfuscationSettingArgs> getObfuscationSetting() {
+        return this.obfuscationSetting == null ? Output.empty() : this.obfuscationSetting;
     }
 
     @InputImport(name="slotTypeName", required=true)
-      private final Input<String> slotTypeName;
+      private final Output<String> slotTypeName;
 
-    public Input<String> getSlotTypeName() {
+    public Output<String> getSlotTypeName() {
         return this.slotTypeName;
     }
 
     @InputImport(name="valueElicitationSetting", required=true)
-      private final Input<BotSlotValueElicitationSettingArgs> valueElicitationSetting;
+      private final Output<BotSlotValueElicitationSettingArgs> valueElicitationSetting;
 
-    public Input<BotSlotValueElicitationSettingArgs> getValueElicitationSetting() {
+    public Output<BotSlotValueElicitationSettingArgs> getValueElicitationSetting() {
         return this.valueElicitationSetting;
     }
 
     public BotSlotArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<BotMultipleValuesSettingArgs> multipleValuesSetting,
-        Input<String> name,
-        @Nullable Input<BotObfuscationSettingArgs> obfuscationSetting,
-        Input<String> slotTypeName,
-        Input<BotSlotValueElicitationSettingArgs> valueElicitationSetting) {
+        @Nullable Output<String> description,
+        @Nullable Output<BotMultipleValuesSettingArgs> multipleValuesSetting,
+        Output<String> name,
+        @Nullable Output<BotObfuscationSettingArgs> obfuscationSetting,
+        Output<String> slotTypeName,
+        Output<BotSlotValueElicitationSettingArgs> valueElicitationSetting) {
         this.description = description;
         this.multipleValuesSetting = multipleValuesSetting;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
@@ -79,12 +79,12 @@ public final class BotSlotArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BotSlotArgs() {
-        this.description = Input.empty();
-        this.multipleValuesSetting = Input.empty();
-        this.name = Input.empty();
-        this.obfuscationSetting = Input.empty();
-        this.slotTypeName = Input.empty();
-        this.valueElicitationSetting = Input.empty();
+        this.description = Output.empty();
+        this.multipleValuesSetting = Output.empty();
+        this.name = Output.empty();
+        this.obfuscationSetting = Output.empty();
+        this.slotTypeName = Output.empty();
+        this.valueElicitationSetting = Output.empty();
     }
 
     public static Builder builder() {
@@ -96,12 +96,12 @@ public final class BotSlotArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<BotMultipleValuesSettingArgs> multipleValuesSetting;
-        private Input<String> name;
-        private @Nullable Input<BotObfuscationSettingArgs> obfuscationSetting;
-        private Input<String> slotTypeName;
-        private Input<BotSlotValueElicitationSettingArgs> valueElicitationSetting;
+        private @Nullable Output<String> description;
+        private @Nullable Output<BotMultipleValuesSettingArgs> multipleValuesSetting;
+        private Output<String> name;
+        private @Nullable Output<BotObfuscationSettingArgs> obfuscationSetting;
+        private Output<String> slotTypeName;
+        private Output<BotSlotValueElicitationSettingArgs> valueElicitationSetting;
 
         public Builder() {
     	      // Empty
@@ -117,63 +117,63 @@ public final class BotSlotArgs extends io.pulumi.resources.ResourceArgs {
     	      this.valueElicitationSetting = defaults.valueElicitationSetting;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder multipleValuesSetting(@Nullable Input<BotMultipleValuesSettingArgs> multipleValuesSetting) {
+        public Builder multipleValuesSetting(@Nullable Output<BotMultipleValuesSettingArgs> multipleValuesSetting) {
             this.multipleValuesSetting = multipleValuesSetting;
             return this;
         }
 
         public Builder multipleValuesSetting(@Nullable BotMultipleValuesSettingArgs multipleValuesSetting) {
-            this.multipleValuesSetting = Input.ofNullable(multipleValuesSetting);
+            this.multipleValuesSetting = Output.ofNullable(multipleValuesSetting);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder obfuscationSetting(@Nullable Input<BotObfuscationSettingArgs> obfuscationSetting) {
+        public Builder obfuscationSetting(@Nullable Output<BotObfuscationSettingArgs> obfuscationSetting) {
             this.obfuscationSetting = obfuscationSetting;
             return this;
         }
 
         public Builder obfuscationSetting(@Nullable BotObfuscationSettingArgs obfuscationSetting) {
-            this.obfuscationSetting = Input.ofNullable(obfuscationSetting);
+            this.obfuscationSetting = Output.ofNullable(obfuscationSetting);
             return this;
         }
 
-        public Builder slotTypeName(Input<String> slotTypeName) {
+        public Builder slotTypeName(Output<String> slotTypeName) {
             this.slotTypeName = Objects.requireNonNull(slotTypeName);
             return this;
         }
 
         public Builder slotTypeName(String slotTypeName) {
-            this.slotTypeName = Input.of(Objects.requireNonNull(slotTypeName));
+            this.slotTypeName = Output.of(Objects.requireNonNull(slotTypeName));
             return this;
         }
 
-        public Builder valueElicitationSetting(Input<BotSlotValueElicitationSettingArgs> valueElicitationSetting) {
+        public Builder valueElicitationSetting(Output<BotSlotValueElicitationSettingArgs> valueElicitationSetting) {
             this.valueElicitationSetting = Objects.requireNonNull(valueElicitationSetting);
             return this;
         }
 
         public Builder valueElicitationSetting(BotSlotValueElicitationSettingArgs valueElicitationSetting) {
-            this.valueElicitationSetting = Input.of(Objects.requireNonNull(valueElicitationSetting));
+            this.valueElicitationSetting = Output.of(Objects.requireNonNull(valueElicitationSetting));
             return this;
         }
         public BotSlotArgs build() {

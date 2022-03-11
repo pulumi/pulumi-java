@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.testbase.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class UserObjectReceiverValueArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="userObjectIds")
-      private final @Nullable Input<List<String>> userObjectIds;
+      private final @Nullable Output<List<String>> userObjectIds;
 
-    public Input<List<String>> getUserObjectIds() {
-        return this.userObjectIds == null ? Input.empty() : this.userObjectIds;
+    public Output<List<String>> getUserObjectIds() {
+        return this.userObjectIds == null ? Output.empty() : this.userObjectIds;
     }
 
-    public UserObjectReceiverValueArgs(@Nullable Input<List<String>> userObjectIds) {
+    public UserObjectReceiverValueArgs(@Nullable Output<List<String>> userObjectIds) {
         this.userObjectIds = userObjectIds;
     }
 
     private UserObjectReceiverValueArgs() {
-        this.userObjectIds = Input.empty();
+        this.userObjectIds = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class UserObjectReceiverValueArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> userObjectIds;
+        private @Nullable Output<List<String>> userObjectIds;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class UserObjectReceiverValueArgs extends io.pulumi.resources.Resou
     	      this.userObjectIds = defaults.userObjectIds;
         }
 
-        public Builder userObjectIds(@Nullable Input<List<String>> userObjectIds) {
+        public Builder userObjectIds(@Nullable Output<List<String>> userObjectIds) {
             this.userObjectIds = userObjectIds;
             return this;
         }
 
         public Builder userObjectIds(@Nullable List<String> userObjectIds) {
-            this.userObjectIds = Input.ofNullable(userObjectIds);
+            this.userObjectIds = Output.ofNullable(userObjectIds);
             return this;
         }
         public UserObjectReceiverValueArgs build() {

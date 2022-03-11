@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ecs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -16,29 +16,29 @@ public final class TaskDefinitionVolumeFromArgs extends io.pulumi.resources.Reso
     public static final TaskDefinitionVolumeFromArgs Empty = new TaskDefinitionVolumeFromArgs();
 
     @InputImport(name="readOnly")
-      private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Output<Boolean> readOnly;
 
-    public Input<Boolean> getReadOnly() {
-        return this.readOnly == null ? Input.empty() : this.readOnly;
+    public Output<Boolean> getReadOnly() {
+        return this.readOnly == null ? Output.empty() : this.readOnly;
     }
 
     @InputImport(name="sourceContainer")
-      private final @Nullable Input<String> sourceContainer;
+      private final @Nullable Output<String> sourceContainer;
 
-    public Input<String> getSourceContainer() {
-        return this.sourceContainer == null ? Input.empty() : this.sourceContainer;
+    public Output<String> getSourceContainer() {
+        return this.sourceContainer == null ? Output.empty() : this.sourceContainer;
     }
 
     public TaskDefinitionVolumeFromArgs(
-        @Nullable Input<Boolean> readOnly,
-        @Nullable Input<String> sourceContainer) {
+        @Nullable Output<Boolean> readOnly,
+        @Nullable Output<String> sourceContainer) {
         this.readOnly = readOnly;
         this.sourceContainer = sourceContainer;
     }
 
     private TaskDefinitionVolumeFromArgs() {
-        this.readOnly = Input.empty();
-        this.sourceContainer = Input.empty();
+        this.readOnly = Output.empty();
+        this.sourceContainer = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class TaskDefinitionVolumeFromArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> readOnly;
-        private @Nullable Input<String> sourceContainer;
+        private @Nullable Output<Boolean> readOnly;
+        private @Nullable Output<String> sourceContainer;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class TaskDefinitionVolumeFromArgs extends io.pulumi.resources.Reso
     	      this.sourceContainer = defaults.sourceContainer;
         }
 
-        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Input.ofNullable(readOnly);
+            this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
 
-        public Builder sourceContainer(@Nullable Input<String> sourceContainer) {
+        public Builder sourceContainer(@Nullable Output<String> sourceContainer) {
             this.sourceContainer = sourceContainer;
             return this;
         }
 
         public Builder sourceContainer(@Nullable String sourceContainer) {
-            this.sourceContainer = Input.ofNullable(sourceContainer);
+            this.sourceContainer = Output.ofNullable(sourceContainer);
             return this;
         }
         public TaskDefinitionVolumeFromArgs build() {

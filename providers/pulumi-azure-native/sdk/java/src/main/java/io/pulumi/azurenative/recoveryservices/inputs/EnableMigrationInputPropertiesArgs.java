@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.VMwareCbtEnableMigrationInputArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class EnableMigrationInputPropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="policyId", required=true)
-      private final Input<String> policyId;
+      private final Output<String> policyId;
 
-    public Input<String> getPolicyId() {
+    public Output<String> getPolicyId() {
         return this.policyId;
     }
 
@@ -34,22 +34,22 @@ public final class EnableMigrationInputPropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="providerSpecificDetails", required=true)
-      private final Input<VMwareCbtEnableMigrationInputArgs> providerSpecificDetails;
+      private final Output<VMwareCbtEnableMigrationInputArgs> providerSpecificDetails;
 
-    public Input<VMwareCbtEnableMigrationInputArgs> getProviderSpecificDetails() {
+    public Output<VMwareCbtEnableMigrationInputArgs> getProviderSpecificDetails() {
         return this.providerSpecificDetails;
     }
 
     public EnableMigrationInputPropertiesArgs(
-        Input<String> policyId,
-        Input<VMwareCbtEnableMigrationInputArgs> providerSpecificDetails) {
+        Output<String> policyId,
+        Output<VMwareCbtEnableMigrationInputArgs> providerSpecificDetails) {
         this.policyId = Objects.requireNonNull(policyId, "expected parameter 'policyId' to be non-null");
         this.providerSpecificDetails = Objects.requireNonNull(providerSpecificDetails, "expected parameter 'providerSpecificDetails' to be non-null");
     }
 
     private EnableMigrationInputPropertiesArgs() {
-        this.policyId = Input.empty();
-        this.providerSpecificDetails = Input.empty();
+        this.policyId = Output.empty();
+        this.providerSpecificDetails = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class EnableMigrationInputPropertiesArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<String> policyId;
-        private Input<VMwareCbtEnableMigrationInputArgs> providerSpecificDetails;
+        private Output<String> policyId;
+        private Output<VMwareCbtEnableMigrationInputArgs> providerSpecificDetails;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class EnableMigrationInputPropertiesArgs extends io.pulumi.resource
     	      this.providerSpecificDetails = defaults.providerSpecificDetails;
         }
 
-        public Builder policyId(Input<String> policyId) {
+        public Builder policyId(Output<String> policyId) {
             this.policyId = Objects.requireNonNull(policyId);
             return this;
         }
 
         public Builder policyId(String policyId) {
-            this.policyId = Input.of(Objects.requireNonNull(policyId));
+            this.policyId = Output.of(Objects.requireNonNull(policyId));
             return this;
         }
 
-        public Builder providerSpecificDetails(Input<VMwareCbtEnableMigrationInputArgs> providerSpecificDetails) {
+        public Builder providerSpecificDetails(Output<VMwareCbtEnableMigrationInputArgs> providerSpecificDetails) {
             this.providerSpecificDetails = Objects.requireNonNull(providerSpecificDetails);
             return this;
         }
 
         public Builder providerSpecificDetails(VMwareCbtEnableMigrationInputArgs providerSpecificDetails) {
-            this.providerSpecificDetails = Input.of(Objects.requireNonNull(providerSpecificDetails));
+            this.providerSpecificDetails = Output.of(Objects.requireNonNull(providerSpecificDetails));
             return this;
         }
         public EnableMigrationInputPropertiesArgs build() {

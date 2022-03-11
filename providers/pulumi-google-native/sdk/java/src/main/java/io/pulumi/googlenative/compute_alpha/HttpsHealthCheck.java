@@ -3,7 +3,6 @@
 
 package io.pulumi.googlenative.compute_alpha;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -240,14 +239,14 @@ public class HttpsHealthCheck extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public HttpsHealthCheck(String name, @Nullable HttpsHealthCheckArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/alpha:HttpsHealthCheck", name, args == null ? HttpsHealthCheckArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("google-native:compute/alpha:HttpsHealthCheck", name, args == null ? HttpsHealthCheckArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private HttpsHealthCheck(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private HttpsHealthCheck(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:compute/alpha:HttpsHealthCheck", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -262,7 +261,7 @@ public class HttpsHealthCheck extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static HttpsHealthCheck get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static HttpsHealthCheck get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new HttpsHealthCheck(name, id, options);
     }
 }

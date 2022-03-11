@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.storage.k8s.io_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class VolumeErrorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="message")
-      private final @Nullable Input<String> message;
+      private final @Nullable Output<String> message;
 
-    public Input<String> getMessage() {
-        return this.message == null ? Input.empty() : this.message;
+    public Output<String> getMessage() {
+        return this.message == null ? Output.empty() : this.message;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class VolumeErrorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="time")
-      private final @Nullable Input<String> time;
+      private final @Nullable Output<String> time;
 
-    public Input<String> getTime() {
-        return this.time == null ? Input.empty() : this.time;
+    public Output<String> getTime() {
+        return this.time == null ? Output.empty() : this.time;
     }
 
     public VolumeErrorArgs(
-        @Nullable Input<String> message,
-        @Nullable Input<String> time) {
+        @Nullable Output<String> message,
+        @Nullable Output<String> time) {
         this.message = message;
         this.time = time;
     }
 
     private VolumeErrorArgs() {
-        this.message = Input.empty();
-        this.time = Input.empty();
+        this.message = Output.empty();
+        this.time = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class VolumeErrorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> message;
-        private @Nullable Input<String> time;
+        private @Nullable Output<String> message;
+        private @Nullable Output<String> time;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class VolumeErrorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.time = defaults.time;
         }
 
-        public Builder message(@Nullable Input<String> message) {
+        public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
 
         public Builder message(@Nullable String message) {
-            this.message = Input.ofNullable(message);
+            this.message = Output.ofNullable(message);
             return this;
         }
 
-        public Builder time(@Nullable Input<String> time) {
+        public Builder time(@Nullable Output<String> time) {
             this.time = time;
             return this;
         }
 
         public Builder time(@Nullable String time) {
-            this.time = Input.ofNullable(time);
+            this.time = Output.ofNullable(time);
             return this;
         }
         public VolumeErrorArgs build() {

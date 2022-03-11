@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ses;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class DomainIdentityVerificationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="domain", required=true)
-      private final Input<String> domain;
+      private final Output<String> domain;
 
-    public Input<String> getDomain() {
+    public Output<String> getDomain() {
         return this.domain;
     }
 
-    public DomainIdentityVerificationArgs(Input<String> domain) {
+    public DomainIdentityVerificationArgs(Output<String> domain) {
         this.domain = Objects.requireNonNull(domain, "expected parameter 'domain' to be non-null");
     }
 
     private DomainIdentityVerificationArgs() {
-        this.domain = Input.empty();
+        this.domain = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class DomainIdentityVerificationArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<String> domain;
+        private Output<String> domain;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class DomainIdentityVerificationArgs extends io.pulumi.resources.Re
     	      this.domain = defaults.domain;
         }
 
-        public Builder domain(Input<String> domain) {
+        public Builder domain(Output<String> domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
 
         public Builder domain(String domain) {
-            this.domain = Input.of(Objects.requireNonNull(domain));
+            this.domain = Output.of(Objects.requireNonNull(domain));
             return this;
         }
         public DomainIdentityVerificationArgs build() {

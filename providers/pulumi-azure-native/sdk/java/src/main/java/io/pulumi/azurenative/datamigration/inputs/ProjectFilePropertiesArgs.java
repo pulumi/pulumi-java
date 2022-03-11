@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ProjectFilePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="extension")
-      private final @Nullable Input<String> extension;
+      private final @Nullable Output<String> extension;
 
-    public Input<String> getExtension() {
-        return this.extension == null ? Input.empty() : this.extension;
+    public Output<String> getExtension() {
+        return this.extension == null ? Output.empty() : this.extension;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ProjectFilePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="filePath")
-      private final @Nullable Input<String> filePath;
+      private final @Nullable Output<String> filePath;
 
-    public Input<String> getFilePath() {
-        return this.filePath == null ? Input.empty() : this.filePath;
+    public Output<String> getFilePath() {
+        return this.filePath == null ? Output.empty() : this.filePath;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class ProjectFilePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="mediaType")
-      private final @Nullable Input<String> mediaType;
+      private final @Nullable Output<String> mediaType;
 
-    public Input<String> getMediaType() {
-        return this.mediaType == null ? Input.empty() : this.mediaType;
+    public Output<String> getMediaType() {
+        return this.mediaType == null ? Output.empty() : this.mediaType;
     }
 
     public ProjectFilePropertiesArgs(
-        @Nullable Input<String> extension,
-        @Nullable Input<String> filePath,
-        @Nullable Input<String> mediaType) {
+        @Nullable Output<String> extension,
+        @Nullable Output<String> filePath,
+        @Nullable Output<String> mediaType) {
         this.extension = extension;
         this.filePath = filePath;
         this.mediaType = mediaType;
     }
 
     private ProjectFilePropertiesArgs() {
-        this.extension = Input.empty();
-        this.filePath = Input.empty();
-        this.mediaType = Input.empty();
+        this.extension = Output.empty();
+        this.filePath = Output.empty();
+        this.mediaType = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class ProjectFilePropertiesArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> extension;
-        private @Nullable Input<String> filePath;
-        private @Nullable Input<String> mediaType;
+        private @Nullable Output<String> extension;
+        private @Nullable Output<String> filePath;
+        private @Nullable Output<String> mediaType;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class ProjectFilePropertiesArgs extends io.pulumi.resources.Resourc
     	      this.mediaType = defaults.mediaType;
         }
 
-        public Builder extension(@Nullable Input<String> extension) {
+        public Builder extension(@Nullable Output<String> extension) {
             this.extension = extension;
             return this;
         }
 
         public Builder extension(@Nullable String extension) {
-            this.extension = Input.ofNullable(extension);
+            this.extension = Output.ofNullable(extension);
             return this;
         }
 
-        public Builder filePath(@Nullable Input<String> filePath) {
+        public Builder filePath(@Nullable Output<String> filePath) {
             this.filePath = filePath;
             return this;
         }
 
         public Builder filePath(@Nullable String filePath) {
-            this.filePath = Input.ofNullable(filePath);
+            this.filePath = Output.ofNullable(filePath);
             return this;
         }
 
-        public Builder mediaType(@Nullable Input<String> mediaType) {
+        public Builder mediaType(@Nullable Output<String> mediaType) {
             this.mediaType = mediaType;
             return this;
         }
 
         public Builder mediaType(@Nullable String mediaType) {
-            this.mediaType = Input.ofNullable(mediaType);
+            this.mediaType = Output.ofNullable(mediaType);
             return this;
         }
         public ProjectFilePropertiesArgs build() {

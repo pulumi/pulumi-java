@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class BucketAutoclassArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class BucketAutoclassArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="toggleTime")
-      private final @Nullable Input<String> toggleTime;
+      private final @Nullable Output<String> toggleTime;
 
-    public Input<String> getToggleTime() {
-        return this.toggleTime == null ? Input.empty() : this.toggleTime;
+    public Output<String> getToggleTime() {
+        return this.toggleTime == null ? Output.empty() : this.toggleTime;
     }
 
     public BucketAutoclassArgs(
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<String> toggleTime) {
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<String> toggleTime) {
         this.enabled = enabled;
         this.toggleTime = toggleTime;
     }
 
     private BucketAutoclassArgs() {
-        this.enabled = Input.empty();
-        this.toggleTime = Input.empty();
+        this.enabled = Output.empty();
+        this.toggleTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class BucketAutoclassArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<String> toggleTime;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<String> toggleTime;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class BucketAutoclassArgs extends io.pulumi.resources.ResourceArgs 
     	      this.toggleTime = defaults.toggleTime;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder toggleTime(@Nullable Input<String> toggleTime) {
+        public Builder toggleTime(@Nullable Output<String> toggleTime) {
             this.toggleTime = toggleTime;
             return this;
         }
 
         public Builder toggleTime(@Nullable String toggleTime) {
-            this.toggleTime = Input.ofNullable(toggleTime);
+            this.toggleTime = Output.ofNullable(toggleTime);
             return this;
         }
         public BucketAutoclassArgs build() {

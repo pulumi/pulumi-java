@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.monitoring.inputs.SloBasicSliGetArgs;
 import io.pulumi.gcp.monitoring.inputs.SloRequestBasedSliGetArgs;
@@ -30,10 +30,10 @@ public final class SloState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="basicSli")
-      private final @Nullable Input<SloBasicSliGetArgs> basicSli;
+      private final @Nullable Output<SloBasicSliGetArgs> basicSli;
 
-    public Input<SloBasicSliGetArgs> getBasicSli() {
-        return this.basicSli == null ? Input.empty() : this.basicSli;
+    public Output<SloBasicSliGetArgs> getBasicSli() {
+        return this.basicSli == null ? Output.empty() : this.basicSli;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class SloState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="calendarPeriod")
-      private final @Nullable Input<String> calendarPeriod;
+      private final @Nullable Output<String> calendarPeriod;
 
-    public Input<String> getCalendarPeriod() {
-        return this.calendarPeriod == null ? Input.empty() : this.calendarPeriod;
+    public Output<String> getCalendarPeriod() {
+        return this.calendarPeriod == null ? Output.empty() : this.calendarPeriod;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class SloState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class SloState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="goal")
-      private final @Nullable Input<Double> goal;
+      private final @Nullable Output<Double> goal;
 
-    public Input<Double> getGoal() {
-        return this.goal == null ? Input.empty() : this.goal;
+    public Output<Double> getGoal() {
+        return this.goal == null ? Output.empty() : this.goal;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class SloState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class SloState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -108,10 +108,10 @@ public final class SloState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestBasedSli")
-      private final @Nullable Input<SloRequestBasedSliGetArgs> requestBasedSli;
+      private final @Nullable Output<SloRequestBasedSliGetArgs> requestBasedSli;
 
-    public Input<SloRequestBasedSliGetArgs> getRequestBasedSli() {
-        return this.requestBasedSli == null ? Input.empty() : this.requestBasedSli;
+    public Output<SloRequestBasedSliGetArgs> getRequestBasedSli() {
+        return this.requestBasedSli == null ? Output.empty() : this.requestBasedSli;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class SloState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rollingPeriodDays")
-      private final @Nullable Input<Integer> rollingPeriodDays;
+      private final @Nullable Output<Integer> rollingPeriodDays;
 
-    public Input<Integer> getRollingPeriodDays() {
-        return this.rollingPeriodDays == null ? Input.empty() : this.rollingPeriodDays;
+    public Output<Integer> getRollingPeriodDays() {
+        return this.rollingPeriodDays == null ? Output.empty() : this.rollingPeriodDays;
     }
 
     /**
@@ -131,10 +131,10 @@ public final class SloState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service")
-      private final @Nullable Input<String> service;
+      private final @Nullable Output<String> service;
 
-    public Input<String> getService() {
-        return this.service == null ? Input.empty() : this.service;
+    public Output<String> getService() {
+        return this.service == null ? Output.empty() : this.service;
     }
 
     /**
@@ -142,10 +142,10 @@ public final class SloState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sloId")
-      private final @Nullable Input<String> sloId;
+      private final @Nullable Output<String> sloId;
 
-    public Input<String> getSloId() {
-        return this.sloId == null ? Input.empty() : this.sloId;
+    public Output<String> getSloId() {
+        return this.sloId == null ? Output.empty() : this.sloId;
     }
 
     /**
@@ -161,24 +161,24 @@ public final class SloState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="windowsBasedSli")
-      private final @Nullable Input<SloWindowsBasedSliGetArgs> windowsBasedSli;
+      private final @Nullable Output<SloWindowsBasedSliGetArgs> windowsBasedSli;
 
-    public Input<SloWindowsBasedSliGetArgs> getWindowsBasedSli() {
-        return this.windowsBasedSli == null ? Input.empty() : this.windowsBasedSli;
+    public Output<SloWindowsBasedSliGetArgs> getWindowsBasedSli() {
+        return this.windowsBasedSli == null ? Output.empty() : this.windowsBasedSli;
     }
 
     public SloState(
-        @Nullable Input<SloBasicSliGetArgs> basicSli,
-        @Nullable Input<String> calendarPeriod,
-        @Nullable Input<String> displayName,
-        @Nullable Input<Double> goal,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<SloRequestBasedSliGetArgs> requestBasedSli,
-        @Nullable Input<Integer> rollingPeriodDays,
-        @Nullable Input<String> service,
-        @Nullable Input<String> sloId,
-        @Nullable Input<SloWindowsBasedSliGetArgs> windowsBasedSli) {
+        @Nullable Output<SloBasicSliGetArgs> basicSli,
+        @Nullable Output<String> calendarPeriod,
+        @Nullable Output<String> displayName,
+        @Nullable Output<Double> goal,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<SloRequestBasedSliGetArgs> requestBasedSli,
+        @Nullable Output<Integer> rollingPeriodDays,
+        @Nullable Output<String> service,
+        @Nullable Output<String> sloId,
+        @Nullable Output<SloWindowsBasedSliGetArgs> windowsBasedSli) {
         this.basicSli = basicSli;
         this.calendarPeriod = calendarPeriod;
         this.displayName = displayName;
@@ -193,17 +193,17 @@ public final class SloState extends io.pulumi.resources.ResourceArgs {
     }
 
     private SloState() {
-        this.basicSli = Input.empty();
-        this.calendarPeriod = Input.empty();
-        this.displayName = Input.empty();
-        this.goal = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.requestBasedSli = Input.empty();
-        this.rollingPeriodDays = Input.empty();
-        this.service = Input.empty();
-        this.sloId = Input.empty();
-        this.windowsBasedSli = Input.empty();
+        this.basicSli = Output.empty();
+        this.calendarPeriod = Output.empty();
+        this.displayName = Output.empty();
+        this.goal = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.requestBasedSli = Output.empty();
+        this.rollingPeriodDays = Output.empty();
+        this.service = Output.empty();
+        this.sloId = Output.empty();
+        this.windowsBasedSli = Output.empty();
     }
 
     public static Builder builder() {
@@ -215,17 +215,17 @@ public final class SloState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<SloBasicSliGetArgs> basicSli;
-        private @Nullable Input<String> calendarPeriod;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<Double> goal;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<SloRequestBasedSliGetArgs> requestBasedSli;
-        private @Nullable Input<Integer> rollingPeriodDays;
-        private @Nullable Input<String> service;
-        private @Nullable Input<String> sloId;
-        private @Nullable Input<SloWindowsBasedSliGetArgs> windowsBasedSli;
+        private @Nullable Output<SloBasicSliGetArgs> basicSli;
+        private @Nullable Output<String> calendarPeriod;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<Double> goal;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<SloRequestBasedSliGetArgs> requestBasedSli;
+        private @Nullable Output<Integer> rollingPeriodDays;
+        private @Nullable Output<String> service;
+        private @Nullable Output<String> sloId;
+        private @Nullable Output<SloWindowsBasedSliGetArgs> windowsBasedSli;
 
         public Builder() {
     	      // Empty
@@ -246,113 +246,113 @@ public final class SloState extends io.pulumi.resources.ResourceArgs {
     	      this.windowsBasedSli = defaults.windowsBasedSli;
         }
 
-        public Builder basicSli(@Nullable Input<SloBasicSliGetArgs> basicSli) {
+        public Builder basicSli(@Nullable Output<SloBasicSliGetArgs> basicSli) {
             this.basicSli = basicSli;
             return this;
         }
 
         public Builder basicSli(@Nullable SloBasicSliGetArgs basicSli) {
-            this.basicSli = Input.ofNullable(basicSli);
+            this.basicSli = Output.ofNullable(basicSli);
             return this;
         }
 
-        public Builder calendarPeriod(@Nullable Input<String> calendarPeriod) {
+        public Builder calendarPeriod(@Nullable Output<String> calendarPeriod) {
             this.calendarPeriod = calendarPeriod;
             return this;
         }
 
         public Builder calendarPeriod(@Nullable String calendarPeriod) {
-            this.calendarPeriod = Input.ofNullable(calendarPeriod);
+            this.calendarPeriod = Output.ofNullable(calendarPeriod);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder goal(@Nullable Input<Double> goal) {
+        public Builder goal(@Nullable Output<Double> goal) {
             this.goal = goal;
             return this;
         }
 
         public Builder goal(@Nullable Double goal) {
-            this.goal = Input.ofNullable(goal);
+            this.goal = Output.ofNullable(goal);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder requestBasedSli(@Nullable Input<SloRequestBasedSliGetArgs> requestBasedSli) {
+        public Builder requestBasedSli(@Nullable Output<SloRequestBasedSliGetArgs> requestBasedSli) {
             this.requestBasedSli = requestBasedSli;
             return this;
         }
 
         public Builder requestBasedSli(@Nullable SloRequestBasedSliGetArgs requestBasedSli) {
-            this.requestBasedSli = Input.ofNullable(requestBasedSli);
+            this.requestBasedSli = Output.ofNullable(requestBasedSli);
             return this;
         }
 
-        public Builder rollingPeriodDays(@Nullable Input<Integer> rollingPeriodDays) {
+        public Builder rollingPeriodDays(@Nullable Output<Integer> rollingPeriodDays) {
             this.rollingPeriodDays = rollingPeriodDays;
             return this;
         }
 
         public Builder rollingPeriodDays(@Nullable Integer rollingPeriodDays) {
-            this.rollingPeriodDays = Input.ofNullable(rollingPeriodDays);
+            this.rollingPeriodDays = Output.ofNullable(rollingPeriodDays);
             return this;
         }
 
-        public Builder service(@Nullable Input<String> service) {
+        public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
 
         public Builder service(@Nullable String service) {
-            this.service = Input.ofNullable(service);
+            this.service = Output.ofNullable(service);
             return this;
         }
 
-        public Builder sloId(@Nullable Input<String> sloId) {
+        public Builder sloId(@Nullable Output<String> sloId) {
             this.sloId = sloId;
             return this;
         }
 
         public Builder sloId(@Nullable String sloId) {
-            this.sloId = Input.ofNullable(sloId);
+            this.sloId = Output.ofNullable(sloId);
             return this;
         }
 
-        public Builder windowsBasedSli(@Nullable Input<SloWindowsBasedSliGetArgs> windowsBasedSli) {
+        public Builder windowsBasedSli(@Nullable Output<SloWindowsBasedSliGetArgs> windowsBasedSli) {
             this.windowsBasedSli = windowsBasedSli;
             return this;
         }
 
         public Builder windowsBasedSli(@Nullable SloWindowsBasedSliGetArgs windowsBasedSli) {
-            this.windowsBasedSli = Input.ofNullable(windowsBasedSli);
+            this.windowsBasedSli = Output.ofNullable(windowsBasedSli);
             return this;
         }
         public SloState build() {

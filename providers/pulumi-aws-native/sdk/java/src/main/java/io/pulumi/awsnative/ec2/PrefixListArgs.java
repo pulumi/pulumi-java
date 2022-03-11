@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ec2;
 import io.pulumi.awsnative.ec2.enums.PrefixListAddressFamily;
 import io.pulumi.awsnative.ec2.inputs.PrefixListEntryArgs;
 import io.pulumi.awsnative.ec2.inputs.PrefixListTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class PrefixListArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addressFamily", required=true)
-      private final Input<PrefixListAddressFamily> addressFamily;
+      private final Output<PrefixListAddressFamily> addressFamily;
 
-    public Input<PrefixListAddressFamily> getAddressFamily() {
+    public Output<PrefixListAddressFamily> getAddressFamily() {
         return this.addressFamily;
     }
 
@@ -35,10 +35,10 @@ public final class PrefixListArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="entries")
-      private final @Nullable Input<List<PrefixListEntryArgs>> entries;
+      private final @Nullable Output<List<PrefixListEntryArgs>> entries;
 
-    public Input<List<PrefixListEntryArgs>> getEntries() {
-        return this.entries == null ? Input.empty() : this.entries;
+    public Output<List<PrefixListEntryArgs>> getEntries() {
+        return this.entries == null ? Output.empty() : this.entries;
     }
 
     /**
@@ -46,9 +46,9 @@ public final class PrefixListArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxEntries", required=true)
-      private final Input<Integer> maxEntries;
+      private final Output<Integer> maxEntries;
 
-    public Input<Integer> getMaxEntries() {
+    public Output<Integer> getMaxEntries() {
         return this.maxEntries;
     }
 
@@ -57,10 +57,10 @@ public final class PrefixListArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="prefixListName")
-      private final @Nullable Input<String> prefixListName;
+      private final @Nullable Output<String> prefixListName;
 
-    public Input<String> getPrefixListName() {
-        return this.prefixListName == null ? Input.empty() : this.prefixListName;
+    public Output<String> getPrefixListName() {
+        return this.prefixListName == null ? Output.empty() : this.prefixListName;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class PrefixListArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<PrefixListTagArgs>> tags;
+      private final @Nullable Output<List<PrefixListTagArgs>> tags;
 
-    public Input<List<PrefixListTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<PrefixListTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public PrefixListArgs(
-        Input<PrefixListAddressFamily> addressFamily,
-        @Nullable Input<List<PrefixListEntryArgs>> entries,
-        Input<Integer> maxEntries,
-        @Nullable Input<String> prefixListName,
-        @Nullable Input<List<PrefixListTagArgs>> tags) {
+        Output<PrefixListAddressFamily> addressFamily,
+        @Nullable Output<List<PrefixListEntryArgs>> entries,
+        Output<Integer> maxEntries,
+        @Nullable Output<String> prefixListName,
+        @Nullable Output<List<PrefixListTagArgs>> tags) {
         this.addressFamily = Objects.requireNonNull(addressFamily, "expected parameter 'addressFamily' to be non-null");
         this.entries = entries;
         this.maxEntries = Objects.requireNonNull(maxEntries, "expected parameter 'maxEntries' to be non-null");
@@ -88,11 +88,11 @@ public final class PrefixListArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PrefixListArgs() {
-        this.addressFamily = Input.empty();
-        this.entries = Input.empty();
-        this.maxEntries = Input.empty();
-        this.prefixListName = Input.empty();
-        this.tags = Input.empty();
+        this.addressFamily = Output.empty();
+        this.entries = Output.empty();
+        this.maxEntries = Output.empty();
+        this.prefixListName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class PrefixListArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<PrefixListAddressFamily> addressFamily;
-        private @Nullable Input<List<PrefixListEntryArgs>> entries;
-        private Input<Integer> maxEntries;
-        private @Nullable Input<String> prefixListName;
-        private @Nullable Input<List<PrefixListTagArgs>> tags;
+        private Output<PrefixListAddressFamily> addressFamily;
+        private @Nullable Output<List<PrefixListEntryArgs>> entries;
+        private Output<Integer> maxEntries;
+        private @Nullable Output<String> prefixListName;
+        private @Nullable Output<List<PrefixListTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class PrefixListArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder addressFamily(Input<PrefixListAddressFamily> addressFamily) {
+        public Builder addressFamily(Output<PrefixListAddressFamily> addressFamily) {
             this.addressFamily = Objects.requireNonNull(addressFamily);
             return this;
         }
 
         public Builder addressFamily(PrefixListAddressFamily addressFamily) {
-            this.addressFamily = Input.of(Objects.requireNonNull(addressFamily));
+            this.addressFamily = Output.of(Objects.requireNonNull(addressFamily));
             return this;
         }
 
-        public Builder entries(@Nullable Input<List<PrefixListEntryArgs>> entries) {
+        public Builder entries(@Nullable Output<List<PrefixListEntryArgs>> entries) {
             this.entries = entries;
             return this;
         }
 
         public Builder entries(@Nullable List<PrefixListEntryArgs> entries) {
-            this.entries = Input.ofNullable(entries);
+            this.entries = Output.ofNullable(entries);
             return this;
         }
 
-        public Builder maxEntries(Input<Integer> maxEntries) {
+        public Builder maxEntries(Output<Integer> maxEntries) {
             this.maxEntries = Objects.requireNonNull(maxEntries);
             return this;
         }
 
         public Builder maxEntries(Integer maxEntries) {
-            this.maxEntries = Input.of(Objects.requireNonNull(maxEntries));
+            this.maxEntries = Output.of(Objects.requireNonNull(maxEntries));
             return this;
         }
 
-        public Builder prefixListName(@Nullable Input<String> prefixListName) {
+        public Builder prefixListName(@Nullable Output<String> prefixListName) {
             this.prefixListName = prefixListName;
             return this;
         }
 
         public Builder prefixListName(@Nullable String prefixListName) {
-            this.prefixListName = Input.ofNullable(prefixListName);
+            this.prefixListName = Output.ofNullable(prefixListName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<PrefixListTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<PrefixListTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<PrefixListTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public PrefixListArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class TargetPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backupPool")
-      private final @Nullable Input<String> backupPool;
+      private final @Nullable Output<String> backupPool;
 
-    public Input<String> getBackupPool() {
-        return this.backupPool == null ? Input.empty() : this.backupPool;
+    public Output<String> getBackupPool() {
+        return this.backupPool == null ? Output.empty() : this.backupPool;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class TargetPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class TargetPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="failoverRatio")
-      private final @Nullable Input<Double> failoverRatio;
+      private final @Nullable Output<Double> failoverRatio;
 
-    public Input<Double> getFailoverRatio() {
-        return this.failoverRatio == null ? Input.empty() : this.failoverRatio;
+    public Output<Double> getFailoverRatio() {
+        return this.failoverRatio == null ? Output.empty() : this.failoverRatio;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class TargetPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthChecks")
-      private final @Nullable Input<String> healthChecks;
+      private final @Nullable Output<String> healthChecks;
 
-    public Input<String> getHealthChecks() {
-        return this.healthChecks == null ? Input.empty() : this.healthChecks;
+    public Output<String> getHealthChecks() {
+        return this.healthChecks == null ? Output.empty() : this.healthChecks;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class TargetPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instances")
-      private final @Nullable Input<List<String>> instances;
+      private final @Nullable Output<List<String>> instances;
 
-    public Input<List<String>> getInstances() {
-        return this.instances == null ? Input.empty() : this.instances;
+    public Output<List<String>> getInstances() {
+        return this.instances == null ? Output.empty() : this.instances;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class TargetPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -96,10 +96,10 @@ public final class TargetPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -108,10 +108,10 @@ public final class TargetPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -119,10 +119,10 @@ public final class TargetPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfLink")
-      private final @Nullable Input<String> selfLink;
+      private final @Nullable Output<String> selfLink;
 
-    public Input<String> getSelfLink() {
-        return this.selfLink == null ? Input.empty() : this.selfLink;
+    public Output<String> getSelfLink() {
+        return this.selfLink == null ? Output.empty() : this.selfLink;
     }
 
     /**
@@ -132,23 +132,23 @@ public final class TargetPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sessionAffinity")
-      private final @Nullable Input<String> sessionAffinity;
+      private final @Nullable Output<String> sessionAffinity;
 
-    public Input<String> getSessionAffinity() {
-        return this.sessionAffinity == null ? Input.empty() : this.sessionAffinity;
+    public Output<String> getSessionAffinity() {
+        return this.sessionAffinity == null ? Output.empty() : this.sessionAffinity;
     }
 
     public TargetPoolState(
-        @Nullable Input<String> backupPool,
-        @Nullable Input<String> description,
-        @Nullable Input<Double> failoverRatio,
-        @Nullable Input<String> healthChecks,
-        @Nullable Input<List<String>> instances,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<String> region,
-        @Nullable Input<String> selfLink,
-        @Nullable Input<String> sessionAffinity) {
+        @Nullable Output<String> backupPool,
+        @Nullable Output<String> description,
+        @Nullable Output<Double> failoverRatio,
+        @Nullable Output<String> healthChecks,
+        @Nullable Output<List<String>> instances,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<String> region,
+        @Nullable Output<String> selfLink,
+        @Nullable Output<String> sessionAffinity) {
         this.backupPool = backupPool;
         this.description = description;
         this.failoverRatio = failoverRatio;
@@ -162,16 +162,16 @@ public final class TargetPoolState extends io.pulumi.resources.ResourceArgs {
     }
 
     private TargetPoolState() {
-        this.backupPool = Input.empty();
-        this.description = Input.empty();
-        this.failoverRatio = Input.empty();
-        this.healthChecks = Input.empty();
-        this.instances = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
-        this.selfLink = Input.empty();
-        this.sessionAffinity = Input.empty();
+        this.backupPool = Output.empty();
+        this.description = Output.empty();
+        this.failoverRatio = Output.empty();
+        this.healthChecks = Output.empty();
+        this.instances = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
+        this.selfLink = Output.empty();
+        this.sessionAffinity = Output.empty();
     }
 
     public static Builder builder() {
@@ -183,16 +183,16 @@ public final class TargetPoolState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> backupPool;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Double> failoverRatio;
-        private @Nullable Input<String> healthChecks;
-        private @Nullable Input<List<String>> instances;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> region;
-        private @Nullable Input<String> selfLink;
-        private @Nullable Input<String> sessionAffinity;
+        private @Nullable Output<String> backupPool;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Double> failoverRatio;
+        private @Nullable Output<String> healthChecks;
+        private @Nullable Output<List<String>> instances;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> region;
+        private @Nullable Output<String> selfLink;
+        private @Nullable Output<String> sessionAffinity;
 
         public Builder() {
     	      // Empty
@@ -212,103 +212,103 @@ public final class TargetPoolState extends io.pulumi.resources.ResourceArgs {
     	      this.sessionAffinity = defaults.sessionAffinity;
         }
 
-        public Builder backupPool(@Nullable Input<String> backupPool) {
+        public Builder backupPool(@Nullable Output<String> backupPool) {
             this.backupPool = backupPool;
             return this;
         }
 
         public Builder backupPool(@Nullable String backupPool) {
-            this.backupPool = Input.ofNullable(backupPool);
+            this.backupPool = Output.ofNullable(backupPool);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder failoverRatio(@Nullable Input<Double> failoverRatio) {
+        public Builder failoverRatio(@Nullable Output<Double> failoverRatio) {
             this.failoverRatio = failoverRatio;
             return this;
         }
 
         public Builder failoverRatio(@Nullable Double failoverRatio) {
-            this.failoverRatio = Input.ofNullable(failoverRatio);
+            this.failoverRatio = Output.ofNullable(failoverRatio);
             return this;
         }
 
-        public Builder healthChecks(@Nullable Input<String> healthChecks) {
+        public Builder healthChecks(@Nullable Output<String> healthChecks) {
             this.healthChecks = healthChecks;
             return this;
         }
 
         public Builder healthChecks(@Nullable String healthChecks) {
-            this.healthChecks = Input.ofNullable(healthChecks);
+            this.healthChecks = Output.ofNullable(healthChecks);
             return this;
         }
 
-        public Builder instances(@Nullable Input<List<String>> instances) {
+        public Builder instances(@Nullable Output<List<String>> instances) {
             this.instances = instances;
             return this;
         }
 
         public Builder instances(@Nullable List<String> instances) {
-            this.instances = Input.ofNullable(instances);
+            this.instances = Output.ofNullable(instances);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder selfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Input.ofNullable(selfLink);
+            this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
 
-        public Builder sessionAffinity(@Nullable Input<String> sessionAffinity) {
+        public Builder sessionAffinity(@Nullable Output<String> sessionAffinity) {
             this.sessionAffinity = sessionAffinity;
             return this;
         }
 
         public Builder sessionAffinity(@Nullable String sessionAffinity) {
-            this.sessionAffinity = Input.ofNullable(sessionAffinity);
+            this.sessionAffinity = Output.ofNullable(sessionAffinity);
             return this;
         }
         public TargetPoolState build() {

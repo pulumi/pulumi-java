@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.dynamodb.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class TableReplicaGetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="kmsKeyArn")
-      private final @Nullable Input<String> kmsKeyArn;
+      private final @Nullable Output<String> kmsKeyArn;
 
-    public Input<String> getKmsKeyArn() {
-        return this.kmsKeyArn == null ? Input.empty() : this.kmsKeyArn;
+    public Output<String> getKmsKeyArn() {
+        return this.kmsKeyArn == null ? Output.empty() : this.kmsKeyArn;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class TableReplicaGetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="regionName", required=true)
-      private final Input<String> regionName;
+      private final Output<String> regionName;
 
-    public Input<String> getRegionName() {
+    public Output<String> getRegionName() {
         return this.regionName;
     }
 
     public TableReplicaGetArgs(
-        @Nullable Input<String> kmsKeyArn,
-        Input<String> regionName) {
+        @Nullable Output<String> kmsKeyArn,
+        Output<String> regionName) {
         this.kmsKeyArn = kmsKeyArn;
         this.regionName = Objects.requireNonNull(regionName, "expected parameter 'regionName' to be non-null");
     }
 
     private TableReplicaGetArgs() {
-        this.kmsKeyArn = Input.empty();
-        this.regionName = Input.empty();
+        this.kmsKeyArn = Output.empty();
+        this.regionName = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class TableReplicaGetArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> kmsKeyArn;
-        private Input<String> regionName;
+        private @Nullable Output<String> kmsKeyArn;
+        private Output<String> regionName;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class TableReplicaGetArgs extends io.pulumi.resources.ResourceArgs 
     	      this.regionName = defaults.regionName;
         }
 
-        public Builder kmsKeyArn(@Nullable Input<String> kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Input.ofNullable(kmsKeyArn);
+            this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
             return this;
         }
 
-        public Builder regionName(Input<String> regionName) {
+        public Builder regionName(Output<String> regionName) {
             this.regionName = Objects.requireNonNull(regionName);
             return this;
         }
 
         public Builder regionName(String regionName) {
-            this.regionName = Input.of(Objects.requireNonNull(regionName));
+            this.regionName = Output.of(Objects.requireNonNull(regionName));
             return this;
         }
         public TableReplicaGetArgs build() {

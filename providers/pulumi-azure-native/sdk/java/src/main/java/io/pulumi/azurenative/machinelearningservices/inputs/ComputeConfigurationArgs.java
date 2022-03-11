@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -26,10 +26,10 @@ public final class ComputeConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="instanceCount")
-      private final @Nullable Input<Integer> instanceCount;
+      private final @Nullable Output<Integer> instanceCount;
 
-    public Input<Integer> getInstanceCount() {
-        return this.instanceCount == null ? Input.empty() : this.instanceCount;
+    public Output<Integer> getInstanceCount() {
+        return this.instanceCount == null ? Output.empty() : this.instanceCount;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ComputeConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="instanceType")
-      private final @Nullable Input<String> instanceType;
+      private final @Nullable Output<String> instanceType;
 
-    public Input<String> getInstanceType() {
-        return this.instanceType == null ? Input.empty() : this.instanceType;
+    public Output<String> getInstanceType() {
+        return this.instanceType == null ? Output.empty() : this.instanceType;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ComputeConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="isLocal")
-      private final @Nullable Input<Boolean> isLocal;
+      private final @Nullable Output<Boolean> isLocal;
 
-    public Input<Boolean> getIsLocal() {
-        return this.isLocal == null ? Input.empty() : this.isLocal;
+    public Output<Boolean> getIsLocal() {
+        return this.isLocal == null ? Output.empty() : this.isLocal;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ComputeConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ComputeConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<Map<String,String>> properties;
+      private final @Nullable Output<Map<String,String>> properties;
 
-    public Input<Map<String,String>> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<Map<String,String>> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -81,19 +81,19 @@ public final class ComputeConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="target")
-      private final @Nullable Input<String> target;
+      private final @Nullable Output<String> target;
 
-    public Input<String> getTarget() {
-        return this.target == null ? Input.empty() : this.target;
+    public Output<String> getTarget() {
+        return this.target == null ? Output.empty() : this.target;
     }
 
     public ComputeConfigurationArgs(
-        @Nullable Input<Integer> instanceCount,
-        @Nullable Input<String> instanceType,
-        @Nullable Input<Boolean> isLocal,
-        @Nullable Input<String> location,
-        @Nullable Input<Map<String,String>> properties,
-        @Nullable Input<String> target) {
+        @Nullable Output<Integer> instanceCount,
+        @Nullable Output<String> instanceType,
+        @Nullable Output<Boolean> isLocal,
+        @Nullable Output<String> location,
+        @Nullable Output<Map<String,String>> properties,
+        @Nullable Output<String> target) {
         this.instanceCount = instanceCount;
         this.instanceType = instanceType;
         this.isLocal = isLocal;
@@ -103,12 +103,12 @@ public final class ComputeConfigurationArgs extends io.pulumi.resources.Resource
     }
 
     private ComputeConfigurationArgs() {
-        this.instanceCount = Input.empty();
-        this.instanceType = Input.empty();
-        this.isLocal = Input.empty();
-        this.location = Input.empty();
-        this.properties = Input.empty();
-        this.target = Input.empty();
+        this.instanceCount = Output.empty();
+        this.instanceType = Output.empty();
+        this.isLocal = Output.empty();
+        this.location = Output.empty();
+        this.properties = Output.empty();
+        this.target = Output.empty();
     }
 
     public static Builder builder() {
@@ -120,12 +120,12 @@ public final class ComputeConfigurationArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> instanceCount;
-        private @Nullable Input<String> instanceType;
-        private @Nullable Input<Boolean> isLocal;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Map<String,String>> properties;
-        private @Nullable Input<String> target;
+        private @Nullable Output<Integer> instanceCount;
+        private @Nullable Output<String> instanceType;
+        private @Nullable Output<Boolean> isLocal;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Map<String,String>> properties;
+        private @Nullable Output<String> target;
 
         public Builder() {
     	      // Empty
@@ -141,63 +141,63 @@ public final class ComputeConfigurationArgs extends io.pulumi.resources.Resource
     	      this.target = defaults.target;
         }
 
-        public Builder instanceCount(@Nullable Input<Integer> instanceCount) {
+        public Builder instanceCount(@Nullable Output<Integer> instanceCount) {
             this.instanceCount = instanceCount;
             return this;
         }
 
         public Builder instanceCount(@Nullable Integer instanceCount) {
-            this.instanceCount = Input.ofNullable(instanceCount);
+            this.instanceCount = Output.ofNullable(instanceCount);
             return this;
         }
 
-        public Builder instanceType(@Nullable Input<String> instanceType) {
+        public Builder instanceType(@Nullable Output<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Input.ofNullable(instanceType);
+            this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
 
-        public Builder isLocal(@Nullable Input<Boolean> isLocal) {
+        public Builder isLocal(@Nullable Output<Boolean> isLocal) {
             this.isLocal = isLocal;
             return this;
         }
 
         public Builder isLocal(@Nullable Boolean isLocal) {
-            this.isLocal = Input.ofNullable(isLocal);
+            this.isLocal = Output.ofNullable(isLocal);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder properties(@Nullable Input<Map<String,String>> properties) {
+        public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder target(@Nullable Input<String> target) {
+        public Builder target(@Nullable Output<String> target) {
             this.target = target;
             return this;
         }
 
         public Builder target(@Nullable String target) {
-            this.target = Input.ofNullable(target);
+            this.target = Output.ofNullable(target);
             return this;
         }
         public ComputeConfigurationArgs build() {

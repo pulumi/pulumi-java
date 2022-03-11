@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.databrew.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class RecipeConditionExpressionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="condition", required=true)
-      private final Input<String> condition;
+      private final Output<String> condition;
 
-    public Input<String> getCondition() {
+    public Output<String> getCondition() {
         return this.condition;
     }
 
@@ -34,9 +34,9 @@ public final class RecipeConditionExpressionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="targetColumn", required=true)
-      private final Input<String> targetColumn;
+      private final Output<String> targetColumn;
 
-    public Input<String> getTargetColumn() {
+    public Output<String> getTargetColumn() {
         return this.targetColumn;
     }
 
@@ -45,25 +45,25 @@ public final class RecipeConditionExpressionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public RecipeConditionExpressionArgs(
-        Input<String> condition,
-        Input<String> targetColumn,
-        @Nullable Input<String> value) {
+        Output<String> condition,
+        Output<String> targetColumn,
+        @Nullable Output<String> value) {
         this.condition = Objects.requireNonNull(condition, "expected parameter 'condition' to be non-null");
         this.targetColumn = Objects.requireNonNull(targetColumn, "expected parameter 'targetColumn' to be non-null");
         this.value = value;
     }
 
     private RecipeConditionExpressionArgs() {
-        this.condition = Input.empty();
-        this.targetColumn = Input.empty();
-        this.value = Input.empty();
+        this.condition = Output.empty();
+        this.targetColumn = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class RecipeConditionExpressionArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> condition;
-        private Input<String> targetColumn;
-        private @Nullable Input<String> value;
+        private Output<String> condition;
+        private Output<String> targetColumn;
+        private @Nullable Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class RecipeConditionExpressionArgs extends io.pulumi.resources.Res
     	      this.value = defaults.value;
         }
 
-        public Builder condition(Input<String> condition) {
+        public Builder condition(Output<String> condition) {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
 
         public Builder condition(String condition) {
-            this.condition = Input.of(Objects.requireNonNull(condition));
+            this.condition = Output.of(Objects.requireNonNull(condition));
             return this;
         }
 
-        public Builder targetColumn(Input<String> targetColumn) {
+        public Builder targetColumn(Output<String> targetColumn) {
             this.targetColumn = Objects.requireNonNull(targetColumn);
             return this;
         }
 
         public Builder targetColumn(String targetColumn) {
-            this.targetColumn = Input.of(Objects.requireNonNull(targetColumn));
+            this.targetColumn = Output.of(Objects.requireNonNull(targetColumn));
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public RecipeConditionExpressionArgs build() {

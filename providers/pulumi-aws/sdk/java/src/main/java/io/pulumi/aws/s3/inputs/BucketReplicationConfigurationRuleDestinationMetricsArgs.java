@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.s3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class BucketReplicationConfigurationRuleDestinationMetricsArgs exte
      * 
      */
     @InputImport(name="minutes")
-      private final @Nullable Input<Integer> minutes;
+      private final @Nullable Output<Integer> minutes;
 
-    public Input<Integer> getMinutes() {
-        return this.minutes == null ? Input.empty() : this.minutes;
+    public Output<Integer> getMinutes() {
+        return this.minutes == null ? Output.empty() : this.minutes;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class BucketReplicationConfigurationRuleDestinationMetricsArgs exte
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     public BucketReplicationConfigurationRuleDestinationMetricsArgs(
-        @Nullable Input<Integer> minutes,
-        @Nullable Input<String> status) {
+        @Nullable Output<Integer> minutes,
+        @Nullable Output<String> status) {
         this.minutes = minutes;
         this.status = status;
     }
 
     private BucketReplicationConfigurationRuleDestinationMetricsArgs() {
-        this.minutes = Input.empty();
-        this.status = Input.empty();
+        this.minutes = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class BucketReplicationConfigurationRuleDestinationMetricsArgs exte
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> minutes;
-        private @Nullable Input<String> status;
+        private @Nullable Output<Integer> minutes;
+        private @Nullable Output<String> status;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class BucketReplicationConfigurationRuleDestinationMetricsArgs exte
     	      this.status = defaults.status;
         }
 
-        public Builder minutes(@Nullable Input<Integer> minutes) {
+        public Builder minutes(@Nullable Output<Integer> minutes) {
             this.minutes = minutes;
             return this;
         }
 
         public Builder minutes(@Nullable Integer minutes) {
-            this.minutes = Input.ofNullable(minutes);
+            this.minutes = Output.ofNullable(minutes);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public BucketReplicationConfigurationRuleDestinationMetricsArgs build() {

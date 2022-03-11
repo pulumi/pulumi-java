@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.databrew;
 
 import io.pulumi.awsnative.databrew.inputs.ScheduleTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,17 +21,17 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cronExpression", required=true)
-      private final Input<String> cronExpression;
+      private final Output<String> cronExpression;
 
-    public Input<String> getCronExpression() {
+    public Output<String> getCronExpression() {
         return this.cronExpression;
     }
 
     @InputImport(name="jobNames")
-      private final @Nullable Input<List<String>> jobNames;
+      private final @Nullable Output<List<String>> jobNames;
 
-    public Input<List<String>> getJobNames() {
-        return this.jobNames == null ? Input.empty() : this.jobNames;
+    public Output<List<String>> getJobNames() {
+        return this.jobNames == null ? Output.empty() : this.jobNames;
     }
 
     /**
@@ -39,24 +39,24 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<List<ScheduleTagArgs>> tags;
+      private final @Nullable Output<List<ScheduleTagArgs>> tags;
 
-    public Input<List<ScheduleTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<ScheduleTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ScheduleArgs(
-        Input<String> cronExpression,
-        @Nullable Input<List<String>> jobNames,
-        @Nullable Input<String> name,
-        @Nullable Input<List<ScheduleTagArgs>> tags) {
+        Output<String> cronExpression,
+        @Nullable Output<List<String>> jobNames,
+        @Nullable Output<String> name,
+        @Nullable Output<List<ScheduleTagArgs>> tags) {
         this.cronExpression = Objects.requireNonNull(cronExpression, "expected parameter 'cronExpression' to be non-null");
         this.jobNames = jobNames;
         this.name = name;
@@ -64,10 +64,10 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ScheduleArgs() {
-        this.cronExpression = Input.empty();
-        this.jobNames = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
+        this.cronExpression = Output.empty();
+        this.jobNames = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -79,10 +79,10 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> cronExpression;
-        private @Nullable Input<List<String>> jobNames;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<ScheduleTagArgs>> tags;
+        private Output<String> cronExpression;
+        private @Nullable Output<List<String>> jobNames;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<ScheduleTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -96,43 +96,43 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder cronExpression(Input<String> cronExpression) {
+        public Builder cronExpression(Output<String> cronExpression) {
             this.cronExpression = Objects.requireNonNull(cronExpression);
             return this;
         }
 
         public Builder cronExpression(String cronExpression) {
-            this.cronExpression = Input.of(Objects.requireNonNull(cronExpression));
+            this.cronExpression = Output.of(Objects.requireNonNull(cronExpression));
             return this;
         }
 
-        public Builder jobNames(@Nullable Input<List<String>> jobNames) {
+        public Builder jobNames(@Nullable Output<List<String>> jobNames) {
             this.jobNames = jobNames;
             return this;
         }
 
         public Builder jobNames(@Nullable List<String> jobNames) {
-            this.jobNames = Input.ofNullable(jobNames);
+            this.jobNames = Output.ofNullable(jobNames);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<ScheduleTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<ScheduleTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<ScheduleTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ScheduleArgs build() {

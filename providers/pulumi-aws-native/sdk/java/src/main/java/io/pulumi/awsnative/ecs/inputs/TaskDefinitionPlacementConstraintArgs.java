@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ecs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class TaskDefinitionPlacementConstraintArgs extends io.pulumi.resou
     public static final TaskDefinitionPlacementConstraintArgs Empty = new TaskDefinitionPlacementConstraintArgs();
 
     @InputImport(name="expression")
-      private final @Nullable Input<String> expression;
+      private final @Nullable Output<String> expression;
 
-    public Input<String> getExpression() {
-        return this.expression == null ? Input.empty() : this.expression;
+    public Output<String> getExpression() {
+        return this.expression == null ? Output.empty() : this.expression;
     }
 
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public TaskDefinitionPlacementConstraintArgs(
-        @Nullable Input<String> expression,
-        Input<String> type) {
+        @Nullable Output<String> expression,
+        Output<String> type) {
         this.expression = expression;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private TaskDefinitionPlacementConstraintArgs() {
-        this.expression = Input.empty();
-        this.type = Input.empty();
+        this.expression = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class TaskDefinitionPlacementConstraintArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> expression;
-        private Input<String> type;
+        private @Nullable Output<String> expression;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class TaskDefinitionPlacementConstraintArgs extends io.pulumi.resou
     	      this.type = defaults.type;
         }
 
-        public Builder expression(@Nullable Input<String> expression) {
+        public Builder expression(@Nullable Output<String> expression) {
             this.expression = expression;
             return this;
         }
 
         public Builder expression(@Nullable String expression) {
-            this.expression = Input.ofNullable(expression);
+            this.expression = Output.ofNullable(expression);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public TaskDefinitionPlacementConstraintArgs build() {

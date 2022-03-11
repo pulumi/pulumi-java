@@ -6,7 +6,7 @@ package io.pulumi.azurenative.insights.inputs;
 import io.pulumi.azurenative.insights.enums.OperationType;
 import io.pulumi.azurenative.insights.inputs.EmailNotificationArgs;
 import io.pulumi.azurenative.insights.inputs.WebhookNotificationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class AutoscaleNotificationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="email")
-      private final @Nullable Input<EmailNotificationArgs> email;
+      private final @Nullable Output<EmailNotificationArgs> email;
 
-    public Input<EmailNotificationArgs> getEmail() {
-        return this.email == null ? Input.empty() : this.email;
+    public Output<EmailNotificationArgs> getEmail() {
+        return this.email == null ? Output.empty() : this.email;
     }
 
     /**
@@ -37,9 +37,9 @@ public final class AutoscaleNotificationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="operation", required=true)
-      private final Input<OperationType> operation;
+      private final Output<OperationType> operation;
 
-    public Input<OperationType> getOperation() {
+    public Output<OperationType> getOperation() {
         return this.operation;
     }
 
@@ -48,25 +48,25 @@ public final class AutoscaleNotificationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="webhooks")
-      private final @Nullable Input<List<WebhookNotificationArgs>> webhooks;
+      private final @Nullable Output<List<WebhookNotificationArgs>> webhooks;
 
-    public Input<List<WebhookNotificationArgs>> getWebhooks() {
-        return this.webhooks == null ? Input.empty() : this.webhooks;
+    public Output<List<WebhookNotificationArgs>> getWebhooks() {
+        return this.webhooks == null ? Output.empty() : this.webhooks;
     }
 
     public AutoscaleNotificationArgs(
-        @Nullable Input<EmailNotificationArgs> email,
-        Input<OperationType> operation,
-        @Nullable Input<List<WebhookNotificationArgs>> webhooks) {
+        @Nullable Output<EmailNotificationArgs> email,
+        Output<OperationType> operation,
+        @Nullable Output<List<WebhookNotificationArgs>> webhooks) {
         this.email = email;
         this.operation = Objects.requireNonNull(operation, "expected parameter 'operation' to be non-null");
         this.webhooks = webhooks;
     }
 
     private AutoscaleNotificationArgs() {
-        this.email = Input.empty();
-        this.operation = Input.empty();
-        this.webhooks = Input.empty();
+        this.email = Output.empty();
+        this.operation = Output.empty();
+        this.webhooks = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class AutoscaleNotificationArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<EmailNotificationArgs> email;
-        private Input<OperationType> operation;
-        private @Nullable Input<List<WebhookNotificationArgs>> webhooks;
+        private @Nullable Output<EmailNotificationArgs> email;
+        private Output<OperationType> operation;
+        private @Nullable Output<List<WebhookNotificationArgs>> webhooks;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class AutoscaleNotificationArgs extends io.pulumi.resources.Resourc
     	      this.webhooks = defaults.webhooks;
         }
 
-        public Builder email(@Nullable Input<EmailNotificationArgs> email) {
+        public Builder email(@Nullable Output<EmailNotificationArgs> email) {
             this.email = email;
             return this;
         }
 
         public Builder email(@Nullable EmailNotificationArgs email) {
-            this.email = Input.ofNullable(email);
+            this.email = Output.ofNullable(email);
             return this;
         }
 
-        public Builder operation(Input<OperationType> operation) {
+        public Builder operation(Output<OperationType> operation) {
             this.operation = Objects.requireNonNull(operation);
             return this;
         }
 
         public Builder operation(OperationType operation) {
-            this.operation = Input.of(Objects.requireNonNull(operation));
+            this.operation = Output.of(Objects.requireNonNull(operation));
             return this;
         }
 
-        public Builder webhooks(@Nullable Input<List<WebhookNotificationArgs>> webhooks) {
+        public Builder webhooks(@Nullable Output<List<WebhookNotificationArgs>> webhooks) {
             this.webhooks = webhooks;
             return this;
         }
 
         public Builder webhooks(@Nullable List<WebhookNotificationArgs> webhooks) {
-            this.webhooks = Input.ofNullable(webhooks);
+            this.webhooks = Output.ofNullable(webhooks);
             return this;
         }
         public AutoscaleNotificationArgs build() {

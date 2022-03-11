@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class ModelQualityJobDefinitionStoppingConditionArgs extends io.pul
      * 
      */
     @InputImport(name="maxRuntimeInSeconds", required=true)
-      private final Input<Integer> maxRuntimeInSeconds;
+      private final Output<Integer> maxRuntimeInSeconds;
 
-    public Input<Integer> getMaxRuntimeInSeconds() {
+    public Output<Integer> getMaxRuntimeInSeconds() {
         return this.maxRuntimeInSeconds;
     }
 
-    public ModelQualityJobDefinitionStoppingConditionArgs(Input<Integer> maxRuntimeInSeconds) {
+    public ModelQualityJobDefinitionStoppingConditionArgs(Output<Integer> maxRuntimeInSeconds) {
         this.maxRuntimeInSeconds = Objects.requireNonNull(maxRuntimeInSeconds, "expected parameter 'maxRuntimeInSeconds' to be non-null");
     }
 
     private ModelQualityJobDefinitionStoppingConditionArgs() {
-        this.maxRuntimeInSeconds = Input.empty();
+        this.maxRuntimeInSeconds = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class ModelQualityJobDefinitionStoppingConditionArgs extends io.pul
     }
 
     public static final class Builder {
-        private Input<Integer> maxRuntimeInSeconds;
+        private Output<Integer> maxRuntimeInSeconds;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class ModelQualityJobDefinitionStoppingConditionArgs extends io.pul
     	      this.maxRuntimeInSeconds = defaults.maxRuntimeInSeconds;
         }
 
-        public Builder maxRuntimeInSeconds(Input<Integer> maxRuntimeInSeconds) {
+        public Builder maxRuntimeInSeconds(Output<Integer> maxRuntimeInSeconds) {
             this.maxRuntimeInSeconds = Objects.requireNonNull(maxRuntimeInSeconds);
             return this;
         }
 
         public Builder maxRuntimeInSeconds(Integer maxRuntimeInSeconds) {
-            this.maxRuntimeInSeconds = Input.of(Objects.requireNonNull(maxRuntimeInSeconds));
+            this.maxRuntimeInSeconds = Output.of(Objects.requireNonNull(maxRuntimeInSeconds));
             return this;
         }
         public ModelQualityJobDefinitionStoppingConditionArgs build() {

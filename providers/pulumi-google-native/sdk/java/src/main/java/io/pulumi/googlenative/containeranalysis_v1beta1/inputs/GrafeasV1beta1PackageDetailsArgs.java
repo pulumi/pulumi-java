@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.InstallationArgs;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class GrafeasV1beta1PackageDetailsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="installation", required=true)
-      private final Input<InstallationArgs> installation;
+      private final Output<InstallationArgs> installation;
 
-    public Input<InstallationArgs> getInstallation() {
+    public Output<InstallationArgs> getInstallation() {
         return this.installation;
     }
 
-    public GrafeasV1beta1PackageDetailsArgs(Input<InstallationArgs> installation) {
+    public GrafeasV1beta1PackageDetailsArgs(Output<InstallationArgs> installation) {
         this.installation = Objects.requireNonNull(installation, "expected parameter 'installation' to be non-null");
     }
 
     private GrafeasV1beta1PackageDetailsArgs() {
-        this.installation = Input.empty();
+        this.installation = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class GrafeasV1beta1PackageDetailsArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<InstallationArgs> installation;
+        private Output<InstallationArgs> installation;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class GrafeasV1beta1PackageDetailsArgs extends io.pulumi.resources.
     	      this.installation = defaults.installation;
         }
 
-        public Builder installation(Input<InstallationArgs> installation) {
+        public Builder installation(Output<InstallationArgs> installation) {
             this.installation = Objects.requireNonNull(installation);
             return this;
         }
 
         public Builder installation(InstallationArgs installation) {
-            this.installation = Input.of(Objects.requireNonNull(installation));
+            this.installation = Output.of(Objects.requireNonNull(installation));
             return this;
         }
         public GrafeasV1beta1PackageDetailsArgs build() {

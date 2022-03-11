@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerinstance.inputs;
 
 import io.pulumi.azurenative.containerinstance.inputs.GpuResourceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class ResourceRequestsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cpu", required=true)
-      private final Input<Double> cpu;
+      private final Output<Double> cpu;
 
-    public Input<Double> getCpu() {
+    public Output<Double> getCpu() {
         return this.cpu;
     }
 
@@ -35,10 +35,10 @@ public final class ResourceRequestsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="gpu")
-      private final @Nullable Input<GpuResourceArgs> gpu;
+      private final @Nullable Output<GpuResourceArgs> gpu;
 
-    public Input<GpuResourceArgs> getGpu() {
-        return this.gpu == null ? Input.empty() : this.gpu;
+    public Output<GpuResourceArgs> getGpu() {
+        return this.gpu == null ? Output.empty() : this.gpu;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class ResourceRequestsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="memoryInGB", required=true)
-      private final Input<Double> memoryInGB;
+      private final Output<Double> memoryInGB;
 
-    public Input<Double> getMemoryInGB() {
+    public Output<Double> getMemoryInGB() {
         return this.memoryInGB;
     }
 
     public ResourceRequestsArgs(
-        Input<Double> cpu,
-        @Nullable Input<GpuResourceArgs> gpu,
-        Input<Double> memoryInGB) {
+        Output<Double> cpu,
+        @Nullable Output<GpuResourceArgs> gpu,
+        Output<Double> memoryInGB) {
         this.cpu = Objects.requireNonNull(cpu, "expected parameter 'cpu' to be non-null");
         this.gpu = gpu;
         this.memoryInGB = Objects.requireNonNull(memoryInGB, "expected parameter 'memoryInGB' to be non-null");
     }
 
     private ResourceRequestsArgs() {
-        this.cpu = Input.empty();
-        this.gpu = Input.empty();
-        this.memoryInGB = Input.empty();
+        this.cpu = Output.empty();
+        this.gpu = Output.empty();
+        this.memoryInGB = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class ResourceRequestsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<Double> cpu;
-        private @Nullable Input<GpuResourceArgs> gpu;
-        private Input<Double> memoryInGB;
+        private Output<Double> cpu;
+        private @Nullable Output<GpuResourceArgs> gpu;
+        private Output<Double> memoryInGB;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class ResourceRequestsArgs extends io.pulumi.resources.ResourceArgs
     	      this.memoryInGB = defaults.memoryInGB;
         }
 
-        public Builder cpu(Input<Double> cpu) {
+        public Builder cpu(Output<Double> cpu) {
             this.cpu = Objects.requireNonNull(cpu);
             return this;
         }
 
         public Builder cpu(Double cpu) {
-            this.cpu = Input.of(Objects.requireNonNull(cpu));
+            this.cpu = Output.of(Objects.requireNonNull(cpu));
             return this;
         }
 
-        public Builder gpu(@Nullable Input<GpuResourceArgs> gpu) {
+        public Builder gpu(@Nullable Output<GpuResourceArgs> gpu) {
             this.gpu = gpu;
             return this;
         }
 
         public Builder gpu(@Nullable GpuResourceArgs gpu) {
-            this.gpu = Input.ofNullable(gpu);
+            this.gpu = Output.ofNullable(gpu);
             return this;
         }
 
-        public Builder memoryInGB(Input<Double> memoryInGB) {
+        public Builder memoryInGB(Output<Double> memoryInGB) {
             this.memoryInGB = Objects.requireNonNull(memoryInGB);
             return this;
         }
 
         public Builder memoryInGB(Double memoryInGB) {
-            this.memoryInGB = Input.of(Objects.requireNonNull(memoryInGB));
+            this.memoryInGB = Output.of(Objects.requireNonNull(memoryInGB));
             return this;
         }
         public ResourceRequestsArgs build() {

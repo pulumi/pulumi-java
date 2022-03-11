@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.webpubsub.inputs;
 
 import io.pulumi.azurenative.webpubsub.inputs.EventHandlerTemplateArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,18 +26,18 @@ public final class EventHandlerSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="items")
-      private final @Nullable Input<Map<String,List<EventHandlerTemplateArgs>>> items;
+      private final @Nullable Output<Map<String,List<EventHandlerTemplateArgs>>> items;
 
-    public Input<Map<String,List<EventHandlerTemplateArgs>>> getItems() {
-        return this.items == null ? Input.empty() : this.items;
+    public Output<Map<String,List<EventHandlerTemplateArgs>>> getItems() {
+        return this.items == null ? Output.empty() : this.items;
     }
 
-    public EventHandlerSettingsArgs(@Nullable Input<Map<String,List<EventHandlerTemplateArgs>>> items) {
+    public EventHandlerSettingsArgs(@Nullable Output<Map<String,List<EventHandlerTemplateArgs>>> items) {
         this.items = items;
     }
 
     private EventHandlerSettingsArgs() {
-        this.items = Input.empty();
+        this.items = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,7 +49,7 @@ public final class EventHandlerSettingsArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,List<EventHandlerTemplateArgs>>> items;
+        private @Nullable Output<Map<String,List<EventHandlerTemplateArgs>>> items;
 
         public Builder() {
     	      // Empty
@@ -60,13 +60,13 @@ public final class EventHandlerSettingsArgs extends io.pulumi.resources.Resource
     	      this.items = defaults.items;
         }
 
-        public Builder items(@Nullable Input<Map<String,List<EventHandlerTemplateArgs>>> items) {
+        public Builder items(@Nullable Output<Map<String,List<EventHandlerTemplateArgs>>> items) {
             this.items = items;
             return this;
         }
 
         public Builder items(@Nullable Map<String,List<EventHandlerTemplateArgs>> items) {
-            this.items = Input.ofNullable(items);
+            this.items = Output.ofNullable(items);
             return this;
         }
         public EventHandlerSettingsArgs build() {

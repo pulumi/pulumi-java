@@ -8,7 +8,6 @@ import io.pulumi.aws.wafv2.WebAclLoggingConfigurationArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationState;
 import io.pulumi.aws.wafv2.outputs.WebAclLoggingConfigurationLoggingFilter;
 import io.pulumi.aws.wafv2.outputs.WebAclLoggingConfigurationRedactedField;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -131,14 +130,14 @@ public class WebAclLoggingConfiguration extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public WebAclLoggingConfiguration(String name, WebAclLoggingConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:wafv2/webAclLoggingConfiguration:WebAclLoggingConfiguration", name, args == null ? WebAclLoggingConfigurationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:wafv2/webAclLoggingConfiguration:WebAclLoggingConfiguration", name, args == null ? WebAclLoggingConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private WebAclLoggingConfiguration(String name, Input<String> id, @Nullable WebAclLoggingConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private WebAclLoggingConfiguration(String name, Output<String> id, @Nullable WebAclLoggingConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:wafv2/webAclLoggingConfiguration:WebAclLoggingConfiguration", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -154,7 +153,7 @@ public class WebAclLoggingConfiguration extends io.pulumi.resources.CustomResour
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WebAclLoggingConfiguration get(String name, Input<String> id, @Nullable WebAclLoggingConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static WebAclLoggingConfiguration get(String name, Output<String> id, @Nullable WebAclLoggingConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new WebAclLoggingConfiguration(name, id, state, options);
     }
 }

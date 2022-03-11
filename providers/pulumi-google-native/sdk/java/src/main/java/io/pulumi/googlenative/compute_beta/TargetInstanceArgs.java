@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.enums.TargetInstanceNatPolicy;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class TargetInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class TargetInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instance")
-      private final @Nullable Input<String> instance;
+      private final @Nullable Output<String> instance;
 
-    public Input<String> getInstance() {
-        return this.instance == null ? Input.empty() : this.instance;
+    public Output<String> getInstance() {
+        return this.instance == null ? Output.empty() : this.instance;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class TargetInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class TargetInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="natPolicy")
-      private final @Nullable Input<TargetInstanceNatPolicy> natPolicy;
+      private final @Nullable Output<TargetInstanceNatPolicy> natPolicy;
 
-    public Input<TargetInstanceNatPolicy> getNatPolicy() {
-        return this.natPolicy == null ? Input.empty() : this.natPolicy;
+    public Output<TargetInstanceNatPolicy> getNatPolicy() {
+        return this.natPolicy == null ? Output.empty() : this.natPolicy;
     }
 
     /**
@@ -64,42 +64,42 @@ public final class TargetInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-      private final @Nullable Input<String> network;
+      private final @Nullable Output<String> network;
 
-    public Input<String> getNetwork() {
-        return this.network == null ? Input.empty() : this.network;
+    public Output<String> getNetwork() {
+        return this.network == null ? Output.empty() : this.network;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     @InputImport(name="zone")
-      private final @Nullable Input<String> zone;
+      private final @Nullable Output<String> zone;
 
-    public Input<String> getZone() {
-        return this.zone == null ? Input.empty() : this.zone;
+    public Output<String> getZone() {
+        return this.zone == null ? Output.empty() : this.zone;
     }
 
     public TargetInstanceArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> instance,
-        @Nullable Input<String> name,
-        @Nullable Input<TargetInstanceNatPolicy> natPolicy,
-        @Nullable Input<String> network,
-        @Nullable Input<String> project,
-        @Nullable Input<String> requestId,
-        @Nullable Input<String> zone) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> instance,
+        @Nullable Output<String> name,
+        @Nullable Output<TargetInstanceNatPolicy> natPolicy,
+        @Nullable Output<String> network,
+        @Nullable Output<String> project,
+        @Nullable Output<String> requestId,
+        @Nullable Output<String> zone) {
         this.description = description;
         this.instance = instance;
         this.name = name;
@@ -111,14 +111,14 @@ public final class TargetInstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TargetInstanceArgs() {
-        this.description = Input.empty();
-        this.instance = Input.empty();
-        this.name = Input.empty();
-        this.natPolicy = Input.empty();
-        this.network = Input.empty();
-        this.project = Input.empty();
-        this.requestId = Input.empty();
-        this.zone = Input.empty();
+        this.description = Output.empty();
+        this.instance = Output.empty();
+        this.name = Output.empty();
+        this.natPolicy = Output.empty();
+        this.network = Output.empty();
+        this.project = Output.empty();
+        this.requestId = Output.empty();
+        this.zone = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,14 +130,14 @@ public final class TargetInstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> instance;
-        private @Nullable Input<String> name;
-        private @Nullable Input<TargetInstanceNatPolicy> natPolicy;
-        private @Nullable Input<String> network;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> requestId;
-        private @Nullable Input<String> zone;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> instance;
+        private @Nullable Output<String> name;
+        private @Nullable Output<TargetInstanceNatPolicy> natPolicy;
+        private @Nullable Output<String> network;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> requestId;
+        private @Nullable Output<String> zone;
 
         public Builder() {
     	      // Empty
@@ -155,83 +155,83 @@ public final class TargetInstanceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zone = defaults.zone;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder instance(@Nullable Input<String> instance) {
+        public Builder instance(@Nullable Output<String> instance) {
             this.instance = instance;
             return this;
         }
 
         public Builder instance(@Nullable String instance) {
-            this.instance = Input.ofNullable(instance);
+            this.instance = Output.ofNullable(instance);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder natPolicy(@Nullable Input<TargetInstanceNatPolicy> natPolicy) {
+        public Builder natPolicy(@Nullable Output<TargetInstanceNatPolicy> natPolicy) {
             this.natPolicy = natPolicy;
             return this;
         }
 
         public Builder natPolicy(@Nullable TargetInstanceNatPolicy natPolicy) {
-            this.natPolicy = Input.ofNullable(natPolicy);
+            this.natPolicy = Output.ofNullable(natPolicy);
             return this;
         }
 
-        public Builder network(@Nullable Input<String> network) {
+        public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
 
         public Builder network(@Nullable String network) {
-            this.network = Input.ofNullable(network);
+            this.network = Output.ofNullable(network);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
 
-        public Builder zone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
 
         public Builder zone(@Nullable String zone) {
-            this.zone = Input.ofNullable(zone);
+            this.zone = Output.ofNullable(zone);
             return this;
         }
         public TargetInstanceArgs build() {

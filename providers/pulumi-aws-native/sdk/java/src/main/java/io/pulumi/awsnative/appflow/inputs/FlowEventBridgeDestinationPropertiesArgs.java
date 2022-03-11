@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.awsnative.appflow.inputs.FlowErrorHandlingConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,29 +16,29 @@ public final class FlowEventBridgeDestinationPropertiesArgs extends io.pulumi.re
     public static final FlowEventBridgeDestinationPropertiesArgs Empty = new FlowEventBridgeDestinationPropertiesArgs();
 
     @InputImport(name="errorHandlingConfig")
-      private final @Nullable Input<FlowErrorHandlingConfigArgs> errorHandlingConfig;
+      private final @Nullable Output<FlowErrorHandlingConfigArgs> errorHandlingConfig;
 
-    public Input<FlowErrorHandlingConfigArgs> getErrorHandlingConfig() {
-        return this.errorHandlingConfig == null ? Input.empty() : this.errorHandlingConfig;
+    public Output<FlowErrorHandlingConfigArgs> getErrorHandlingConfig() {
+        return this.errorHandlingConfig == null ? Output.empty() : this.errorHandlingConfig;
     }
 
     @InputImport(name="object", required=true)
-      private final Input<String> object;
+      private final Output<String> object;
 
-    public Input<String> getObject() {
+    public Output<String> getObject() {
         return this.object;
     }
 
     public FlowEventBridgeDestinationPropertiesArgs(
-        @Nullable Input<FlowErrorHandlingConfigArgs> errorHandlingConfig,
-        Input<String> object) {
+        @Nullable Output<FlowErrorHandlingConfigArgs> errorHandlingConfig,
+        Output<String> object) {
         this.errorHandlingConfig = errorHandlingConfig;
         this.object = Objects.requireNonNull(object, "expected parameter 'object' to be non-null");
     }
 
     private FlowEventBridgeDestinationPropertiesArgs() {
-        this.errorHandlingConfig = Input.empty();
-        this.object = Input.empty();
+        this.errorHandlingConfig = Output.empty();
+        this.object = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class FlowEventBridgeDestinationPropertiesArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<FlowErrorHandlingConfigArgs> errorHandlingConfig;
-        private Input<String> object;
+        private @Nullable Output<FlowErrorHandlingConfigArgs> errorHandlingConfig;
+        private Output<String> object;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class FlowEventBridgeDestinationPropertiesArgs extends io.pulumi.re
     	      this.object = defaults.object;
         }
 
-        public Builder errorHandlingConfig(@Nullable Input<FlowErrorHandlingConfigArgs> errorHandlingConfig) {
+        public Builder errorHandlingConfig(@Nullable Output<FlowErrorHandlingConfigArgs> errorHandlingConfig) {
             this.errorHandlingConfig = errorHandlingConfig;
             return this;
         }
 
         public Builder errorHandlingConfig(@Nullable FlowErrorHandlingConfigArgs errorHandlingConfig) {
-            this.errorHandlingConfig = Input.ofNullable(errorHandlingConfig);
+            this.errorHandlingConfig = Output.ofNullable(errorHandlingConfig);
             return this;
         }
 
-        public Builder object(Input<String> object) {
+        public Builder object(Output<String> object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }
 
         public Builder object(String object) {
-            this.object = Input.of(Objects.requireNonNull(object));
+            this.object = Output.of(Objects.requireNonNull(object));
             return this;
         }
         public FlowEventBridgeDestinationPropertiesArgs build() {

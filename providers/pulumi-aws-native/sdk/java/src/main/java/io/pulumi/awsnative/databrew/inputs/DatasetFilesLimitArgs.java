@@ -5,7 +5,7 @@ package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.awsnative.databrew.enums.DatasetFilesLimitOrder;
 import io.pulumi.awsnative.databrew.enums.DatasetFilesLimitOrderedBy;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -21,9 +21,9 @@ public final class DatasetFilesLimitArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="maxFiles", required=true)
-      private final Input<Integer> maxFiles;
+      private final Output<Integer> maxFiles;
 
-    public Input<Integer> getMaxFiles() {
+    public Output<Integer> getMaxFiles() {
         return this.maxFiles;
     }
 
@@ -32,10 +32,10 @@ public final class DatasetFilesLimitArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="order")
-      private final @Nullable Input<DatasetFilesLimitOrder> order;
+      private final @Nullable Output<DatasetFilesLimitOrder> order;
 
-    public Input<DatasetFilesLimitOrder> getOrder() {
-        return this.order == null ? Input.empty() : this.order;
+    public Output<DatasetFilesLimitOrder> getOrder() {
+        return this.order == null ? Output.empty() : this.order;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class DatasetFilesLimitArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="orderedBy")
-      private final @Nullable Input<DatasetFilesLimitOrderedBy> orderedBy;
+      private final @Nullable Output<DatasetFilesLimitOrderedBy> orderedBy;
 
-    public Input<DatasetFilesLimitOrderedBy> getOrderedBy() {
-        return this.orderedBy == null ? Input.empty() : this.orderedBy;
+    public Output<DatasetFilesLimitOrderedBy> getOrderedBy() {
+        return this.orderedBy == null ? Output.empty() : this.orderedBy;
     }
 
     public DatasetFilesLimitArgs(
-        Input<Integer> maxFiles,
-        @Nullable Input<DatasetFilesLimitOrder> order,
-        @Nullable Input<DatasetFilesLimitOrderedBy> orderedBy) {
+        Output<Integer> maxFiles,
+        @Nullable Output<DatasetFilesLimitOrder> order,
+        @Nullable Output<DatasetFilesLimitOrderedBy> orderedBy) {
         this.maxFiles = Objects.requireNonNull(maxFiles, "expected parameter 'maxFiles' to be non-null");
         this.order = order;
         this.orderedBy = orderedBy;
     }
 
     private DatasetFilesLimitArgs() {
-        this.maxFiles = Input.empty();
-        this.order = Input.empty();
-        this.orderedBy = Input.empty();
+        this.maxFiles = Output.empty();
+        this.order = Output.empty();
+        this.orderedBy = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class DatasetFilesLimitArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<Integer> maxFiles;
-        private @Nullable Input<DatasetFilesLimitOrder> order;
-        private @Nullable Input<DatasetFilesLimitOrderedBy> orderedBy;
+        private Output<Integer> maxFiles;
+        private @Nullable Output<DatasetFilesLimitOrder> order;
+        private @Nullable Output<DatasetFilesLimitOrderedBy> orderedBy;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class DatasetFilesLimitArgs extends io.pulumi.resources.ResourceArg
     	      this.orderedBy = defaults.orderedBy;
         }
 
-        public Builder maxFiles(Input<Integer> maxFiles) {
+        public Builder maxFiles(Output<Integer> maxFiles) {
             this.maxFiles = Objects.requireNonNull(maxFiles);
             return this;
         }
 
         public Builder maxFiles(Integer maxFiles) {
-            this.maxFiles = Input.of(Objects.requireNonNull(maxFiles));
+            this.maxFiles = Output.of(Objects.requireNonNull(maxFiles));
             return this;
         }
 
-        public Builder order(@Nullable Input<DatasetFilesLimitOrder> order) {
+        public Builder order(@Nullable Output<DatasetFilesLimitOrder> order) {
             this.order = order;
             return this;
         }
 
         public Builder order(@Nullable DatasetFilesLimitOrder order) {
-            this.order = Input.ofNullable(order);
+            this.order = Output.ofNullable(order);
             return this;
         }
 
-        public Builder orderedBy(@Nullable Input<DatasetFilesLimitOrderedBy> orderedBy) {
+        public Builder orderedBy(@Nullable Output<DatasetFilesLimitOrderedBy> orderedBy) {
             this.orderedBy = orderedBy;
             return this;
         }
 
         public Builder orderedBy(@Nullable DatasetFilesLimitOrderedBy orderedBy) {
-            this.orderedBy = Input.ofNullable(orderedBy);
+            this.orderedBy = Output.ofNullable(orderedBy);
             return this;
         }
         public DatasetFilesLimitArgs build() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.enums.ApplicationGatewayProtocol;
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayProbeHealthResponseMatchArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -28,10 +28,10 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="host")
-      private final @Nullable Input<String> host;
+      private final @Nullable Output<String> host;
 
-    public Input<String> getHost() {
-        return this.host == null ? Input.empty() : this.host;
+    public Output<String> getHost() {
+        return this.host == null ? Output.empty() : this.host;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="interval")
-      private final @Nullable Input<Integer> interval;
+      private final @Nullable Output<Integer> interval;
 
-    public Input<Integer> getInterval() {
-        return this.interval == null ? Input.empty() : this.interval;
+    public Output<Integer> getInterval() {
+        return this.interval == null ? Output.empty() : this.interval;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="match")
-      private final @Nullable Input<ApplicationGatewayProbeHealthResponseMatchArgs> match;
+      private final @Nullable Output<ApplicationGatewayProbeHealthResponseMatchArgs> match;
 
-    public Input<ApplicationGatewayProbeHealthResponseMatchArgs> getMatch() {
-        return this.match == null ? Input.empty() : this.match;
+    public Output<ApplicationGatewayProbeHealthResponseMatchArgs> getMatch() {
+        return this.match == null ? Output.empty() : this.match;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="minServers")
-      private final @Nullable Input<Integer> minServers;
+      private final @Nullable Output<Integer> minServers;
 
-    public Input<Integer> getMinServers() {
-        return this.minServers == null ? Input.empty() : this.minServers;
+    public Output<Integer> getMinServers() {
+        return this.minServers == null ? Output.empty() : this.minServers;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     /**
@@ -105,10 +105,10 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="pickHostNameFromBackendHttpSettings")
-      private final @Nullable Input<Boolean> pickHostNameFromBackendHttpSettings;
+      private final @Nullable Output<Boolean> pickHostNameFromBackendHttpSettings;
 
-    public Input<Boolean> getPickHostNameFromBackendHttpSettings() {
-        return this.pickHostNameFromBackendHttpSettings == null ? Input.empty() : this.pickHostNameFromBackendHttpSettings;
+    public Output<Boolean> getPickHostNameFromBackendHttpSettings() {
+        return this.pickHostNameFromBackendHttpSettings == null ? Output.empty() : this.pickHostNameFromBackendHttpSettings;
     }
 
     /**
@@ -116,10 +116,10 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -127,10 +127,10 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="protocol")
-      private final @Nullable Input<Either<String,ApplicationGatewayProtocol>> protocol;
+      private final @Nullable Output<Either<String,ApplicationGatewayProtocol>> protocol;
 
-    public Input<Either<String,ApplicationGatewayProtocol>> getProtocol() {
-        return this.protocol == null ? Input.empty() : this.protocol;
+    public Output<Either<String,ApplicationGatewayProtocol>> getProtocol() {
+        return this.protocol == null ? Output.empty() : this.protocol;
     }
 
     /**
@@ -138,10 +138,10 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="timeout")
-      private final @Nullable Input<Integer> timeout;
+      private final @Nullable Output<Integer> timeout;
 
-    public Input<Integer> getTimeout() {
-        return this.timeout == null ? Input.empty() : this.timeout;
+    public Output<Integer> getTimeout() {
+        return this.timeout == null ? Output.empty() : this.timeout;
     }
 
     /**
@@ -149,25 +149,25 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="unhealthyThreshold")
-      private final @Nullable Input<Integer> unhealthyThreshold;
+      private final @Nullable Output<Integer> unhealthyThreshold;
 
-    public Input<Integer> getUnhealthyThreshold() {
-        return this.unhealthyThreshold == null ? Input.empty() : this.unhealthyThreshold;
+    public Output<Integer> getUnhealthyThreshold() {
+        return this.unhealthyThreshold == null ? Output.empty() : this.unhealthyThreshold;
     }
 
     public ApplicationGatewayProbeArgs(
-        @Nullable Input<String> host,
-        @Nullable Input<String> id,
-        @Nullable Input<Integer> interval,
-        @Nullable Input<ApplicationGatewayProbeHealthResponseMatchArgs> match,
-        @Nullable Input<Integer> minServers,
-        @Nullable Input<String> name,
-        @Nullable Input<String> path,
-        @Nullable Input<Boolean> pickHostNameFromBackendHttpSettings,
-        @Nullable Input<Integer> port,
-        @Nullable Input<Either<String,ApplicationGatewayProtocol>> protocol,
-        @Nullable Input<Integer> timeout,
-        @Nullable Input<Integer> unhealthyThreshold) {
+        @Nullable Output<String> host,
+        @Nullable Output<String> id,
+        @Nullable Output<Integer> interval,
+        @Nullable Output<ApplicationGatewayProbeHealthResponseMatchArgs> match,
+        @Nullable Output<Integer> minServers,
+        @Nullable Output<String> name,
+        @Nullable Output<String> path,
+        @Nullable Output<Boolean> pickHostNameFromBackendHttpSettings,
+        @Nullable Output<Integer> port,
+        @Nullable Output<Either<String,ApplicationGatewayProtocol>> protocol,
+        @Nullable Output<Integer> timeout,
+        @Nullable Output<Integer> unhealthyThreshold) {
         this.host = host;
         this.id = id;
         this.interval = interval;
@@ -183,18 +183,18 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
     }
 
     private ApplicationGatewayProbeArgs() {
-        this.host = Input.empty();
-        this.id = Input.empty();
-        this.interval = Input.empty();
-        this.match = Input.empty();
-        this.minServers = Input.empty();
-        this.name = Input.empty();
-        this.path = Input.empty();
-        this.pickHostNameFromBackendHttpSettings = Input.empty();
-        this.port = Input.empty();
-        this.protocol = Input.empty();
-        this.timeout = Input.empty();
-        this.unhealthyThreshold = Input.empty();
+        this.host = Output.empty();
+        this.id = Output.empty();
+        this.interval = Output.empty();
+        this.match = Output.empty();
+        this.minServers = Output.empty();
+        this.name = Output.empty();
+        this.path = Output.empty();
+        this.pickHostNameFromBackendHttpSettings = Output.empty();
+        this.port = Output.empty();
+        this.protocol = Output.empty();
+        this.timeout = Output.empty();
+        this.unhealthyThreshold = Output.empty();
     }
 
     public static Builder builder() {
@@ -206,18 +206,18 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> host;
-        private @Nullable Input<String> id;
-        private @Nullable Input<Integer> interval;
-        private @Nullable Input<ApplicationGatewayProbeHealthResponseMatchArgs> match;
-        private @Nullable Input<Integer> minServers;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> path;
-        private @Nullable Input<Boolean> pickHostNameFromBackendHttpSettings;
-        private @Nullable Input<Integer> port;
-        private @Nullable Input<Either<String,ApplicationGatewayProtocol>> protocol;
-        private @Nullable Input<Integer> timeout;
-        private @Nullable Input<Integer> unhealthyThreshold;
+        private @Nullable Output<String> host;
+        private @Nullable Output<String> id;
+        private @Nullable Output<Integer> interval;
+        private @Nullable Output<ApplicationGatewayProbeHealthResponseMatchArgs> match;
+        private @Nullable Output<Integer> minServers;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> path;
+        private @Nullable Output<Boolean> pickHostNameFromBackendHttpSettings;
+        private @Nullable Output<Integer> port;
+        private @Nullable Output<Either<String,ApplicationGatewayProtocol>> protocol;
+        private @Nullable Output<Integer> timeout;
+        private @Nullable Output<Integer> unhealthyThreshold;
 
         public Builder() {
     	      // Empty
@@ -239,123 +239,123 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
     	      this.unhealthyThreshold = defaults.unhealthyThreshold;
         }
 
-        public Builder host(@Nullable Input<String> host) {
+        public Builder host(@Nullable Output<String> host) {
             this.host = host;
             return this;
         }
 
         public Builder host(@Nullable String host) {
-            this.host = Input.ofNullable(host);
+            this.host = Output.ofNullable(host);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder interval(@Nullable Input<Integer> interval) {
+        public Builder interval(@Nullable Output<Integer> interval) {
             this.interval = interval;
             return this;
         }
 
         public Builder interval(@Nullable Integer interval) {
-            this.interval = Input.ofNullable(interval);
+            this.interval = Output.ofNullable(interval);
             return this;
         }
 
-        public Builder match(@Nullable Input<ApplicationGatewayProbeHealthResponseMatchArgs> match) {
+        public Builder match(@Nullable Output<ApplicationGatewayProbeHealthResponseMatchArgs> match) {
             this.match = match;
             return this;
         }
 
         public Builder match(@Nullable ApplicationGatewayProbeHealthResponseMatchArgs match) {
-            this.match = Input.ofNullable(match);
+            this.match = Output.ofNullable(match);
             return this;
         }
 
-        public Builder minServers(@Nullable Input<Integer> minServers) {
+        public Builder minServers(@Nullable Output<Integer> minServers) {
             this.minServers = minServers;
             return this;
         }
 
         public Builder minServers(@Nullable Integer minServers) {
-            this.minServers = Input.ofNullable(minServers);
+            this.minServers = Output.ofNullable(minServers);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
 
-        public Builder pickHostNameFromBackendHttpSettings(@Nullable Input<Boolean> pickHostNameFromBackendHttpSettings) {
+        public Builder pickHostNameFromBackendHttpSettings(@Nullable Output<Boolean> pickHostNameFromBackendHttpSettings) {
             this.pickHostNameFromBackendHttpSettings = pickHostNameFromBackendHttpSettings;
             return this;
         }
 
         public Builder pickHostNameFromBackendHttpSettings(@Nullable Boolean pickHostNameFromBackendHttpSettings) {
-            this.pickHostNameFromBackendHttpSettings = Input.ofNullable(pickHostNameFromBackendHttpSettings);
+            this.pickHostNameFromBackendHttpSettings = Output.ofNullable(pickHostNameFromBackendHttpSettings);
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder protocol(@Nullable Input<Either<String,ApplicationGatewayProtocol>> protocol) {
+        public Builder protocol(@Nullable Output<Either<String,ApplicationGatewayProtocol>> protocol) {
             this.protocol = protocol;
             return this;
         }
 
         public Builder protocol(@Nullable Either<String,ApplicationGatewayProtocol> protocol) {
-            this.protocol = Input.ofNullable(protocol);
+            this.protocol = Output.ofNullable(protocol);
             return this;
         }
 
-        public Builder timeout(@Nullable Input<Integer> timeout) {
+        public Builder timeout(@Nullable Output<Integer> timeout) {
             this.timeout = timeout;
             return this;
         }
 
         public Builder timeout(@Nullable Integer timeout) {
-            this.timeout = Input.ofNullable(timeout);
+            this.timeout = Output.ofNullable(timeout);
             return this;
         }
 
-        public Builder unhealthyThreshold(@Nullable Input<Integer> unhealthyThreshold) {
+        public Builder unhealthyThreshold(@Nullable Output<Integer> unhealthyThreshold) {
             this.unhealthyThreshold = unhealthyThreshold;
             return this;
         }
 
         public Builder unhealthyThreshold(@Nullable Integer unhealthyThreshold) {
-            this.unhealthyThreshold = Input.ofNullable(unhealthyThreshold);
+            this.unhealthyThreshold = Output.ofNullable(unhealthyThreshold);
             return this;
         }
         public ApplicationGatewayProbeArgs build() {

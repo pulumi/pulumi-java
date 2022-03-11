@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.mediapackage.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class PackagingGroupLogConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="logGroupName")
-      private final @Nullable Input<String> logGroupName;
+      private final @Nullable Output<String> logGroupName;
 
-    public Input<String> getLogGroupName() {
-        return this.logGroupName == null ? Input.empty() : this.logGroupName;
+    public Output<String> getLogGroupName() {
+        return this.logGroupName == null ? Output.empty() : this.logGroupName;
     }
 
-    public PackagingGroupLogConfigurationArgs(@Nullable Input<String> logGroupName) {
+    public PackagingGroupLogConfigurationArgs(@Nullable Output<String> logGroupName) {
         this.logGroupName = logGroupName;
     }
 
     private PackagingGroupLogConfigurationArgs() {
-        this.logGroupName = Input.empty();
+        this.logGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class PackagingGroupLogConfigurationArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> logGroupName;
+        private @Nullable Output<String> logGroupName;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class PackagingGroupLogConfigurationArgs extends io.pulumi.resource
     	      this.logGroupName = defaults.logGroupName;
         }
 
-        public Builder logGroupName(@Nullable Input<String> logGroupName) {
+        public Builder logGroupName(@Nullable Output<String> logGroupName) {
             this.logGroupName = logGroupName;
             return this;
         }
 
         public Builder logGroupName(@Nullable String logGroupName) {
-            this.logGroupName = Input.ofNullable(logGroupName);
+            this.logGroupName = Output.ofNullable(logGroupName);
             return this;
         }
         public PackagingGroupLogConfigurationArgs build() {

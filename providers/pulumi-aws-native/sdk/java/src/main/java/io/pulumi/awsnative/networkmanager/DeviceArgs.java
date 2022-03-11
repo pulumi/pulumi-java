@@ -5,7 +5,7 @@ package io.pulumi.awsnative.networkmanager;
 
 import io.pulumi.awsnative.networkmanager.inputs.DeviceLocationArgs;
 import io.pulumi.awsnative.networkmanager.inputs.DeviceTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -33,9 +33,9 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="globalNetworkId", required=true)
-      private final Input<String> globalNetworkId;
+      private final Output<String> globalNetworkId;
 
-    public Input<String> getGlobalNetworkId() {
+    public Output<String> getGlobalNetworkId() {
         return this.globalNetworkId;
     }
 
@@ -44,10 +44,10 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<DeviceLocationArgs> location;
+      private final @Nullable Output<DeviceLocationArgs> location;
 
-    public Input<DeviceLocationArgs> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<DeviceLocationArgs> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="model")
-      private final @Nullable Input<String> model;
+      private final @Nullable Output<String> model;
 
-    public Input<String> getModel() {
-        return this.model == null ? Input.empty() : this.model;
+    public Output<String> getModel() {
+        return this.model == null ? Output.empty() : this.model;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serialNumber")
-      private final @Nullable Input<String> serialNumber;
+      private final @Nullable Output<String> serialNumber;
 
-    public Input<String> getSerialNumber() {
-        return this.serialNumber == null ? Input.empty() : this.serialNumber;
+    public Output<String> getSerialNumber() {
+        return this.serialNumber == null ? Output.empty() : this.serialNumber;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="siteId")
-      private final @Nullable Input<String> siteId;
+      private final @Nullable Output<String> siteId;
 
-    public Input<String> getSiteId() {
-        return this.siteId == null ? Input.empty() : this.siteId;
+    public Output<String> getSiteId() {
+        return this.siteId == null ? Output.empty() : this.siteId;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<DeviceTagArgs>> tags;
+      private final @Nullable Output<List<DeviceTagArgs>> tags;
 
-    public Input<List<DeviceTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<DeviceTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -110,22 +110,22 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vendor")
-      private final @Nullable Input<String> vendor;
+      private final @Nullable Output<String> vendor;
 
-    public Input<String> getVendor() {
-        return this.vendor == null ? Input.empty() : this.vendor;
+    public Output<String> getVendor() {
+        return this.vendor == null ? Output.empty() : this.vendor;
     }
 
     public DeviceArgs(
-        @Nullable Input<String> description,
-        Input<String> globalNetworkId,
-        @Nullable Input<DeviceLocationArgs> location,
-        @Nullable Input<String> model,
-        @Nullable Input<String> serialNumber,
-        @Nullable Input<String> siteId,
-        @Nullable Input<List<DeviceTagArgs>> tags,
-        @Nullable Input<String> type,
-        @Nullable Input<String> vendor) {
+        @Nullable Output<String> description,
+        Output<String> globalNetworkId,
+        @Nullable Output<DeviceLocationArgs> location,
+        @Nullable Output<String> model,
+        @Nullable Output<String> serialNumber,
+        @Nullable Output<String> siteId,
+        @Nullable Output<List<DeviceTagArgs>> tags,
+        @Nullable Output<String> type,
+        @Nullable Output<String> vendor) {
         this.description = description;
         this.globalNetworkId = Objects.requireNonNull(globalNetworkId, "expected parameter 'globalNetworkId' to be non-null");
         this.location = location;
@@ -138,15 +138,15 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeviceArgs() {
-        this.description = Input.empty();
-        this.globalNetworkId = Input.empty();
-        this.location = Input.empty();
-        this.model = Input.empty();
-        this.serialNumber = Input.empty();
-        this.siteId = Input.empty();
-        this.tags = Input.empty();
-        this.type = Input.empty();
-        this.vendor = Input.empty();
+        this.description = Output.empty();
+        this.globalNetworkId = Output.empty();
+        this.location = Output.empty();
+        this.model = Output.empty();
+        this.serialNumber = Output.empty();
+        this.siteId = Output.empty();
+        this.tags = Output.empty();
+        this.type = Output.empty();
+        this.vendor = Output.empty();
     }
 
     public static Builder builder() {
@@ -158,15 +158,15 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> globalNetworkId;
-        private @Nullable Input<DeviceLocationArgs> location;
-        private @Nullable Input<String> model;
-        private @Nullable Input<String> serialNumber;
-        private @Nullable Input<String> siteId;
-        private @Nullable Input<List<DeviceTagArgs>> tags;
-        private @Nullable Input<String> type;
-        private @Nullable Input<String> vendor;
+        private @Nullable Output<String> description;
+        private Output<String> globalNetworkId;
+        private @Nullable Output<DeviceLocationArgs> location;
+        private @Nullable Output<String> model;
+        private @Nullable Output<String> serialNumber;
+        private @Nullable Output<String> siteId;
+        private @Nullable Output<List<DeviceTagArgs>> tags;
+        private @Nullable Output<String> type;
+        private @Nullable Output<String> vendor;
 
         public Builder() {
     	      // Empty
@@ -185,93 +185,93 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vendor = defaults.vendor;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder globalNetworkId(Input<String> globalNetworkId) {
+        public Builder globalNetworkId(Output<String> globalNetworkId) {
             this.globalNetworkId = Objects.requireNonNull(globalNetworkId);
             return this;
         }
 
         public Builder globalNetworkId(String globalNetworkId) {
-            this.globalNetworkId = Input.of(Objects.requireNonNull(globalNetworkId));
+            this.globalNetworkId = Output.of(Objects.requireNonNull(globalNetworkId));
             return this;
         }
 
-        public Builder location(@Nullable Input<DeviceLocationArgs> location) {
+        public Builder location(@Nullable Output<DeviceLocationArgs> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable DeviceLocationArgs location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder model(@Nullable Input<String> model) {
+        public Builder model(@Nullable Output<String> model) {
             this.model = model;
             return this;
         }
 
         public Builder model(@Nullable String model) {
-            this.model = Input.ofNullable(model);
+            this.model = Output.ofNullable(model);
             return this;
         }
 
-        public Builder serialNumber(@Nullable Input<String> serialNumber) {
+        public Builder serialNumber(@Nullable Output<String> serialNumber) {
             this.serialNumber = serialNumber;
             return this;
         }
 
         public Builder serialNumber(@Nullable String serialNumber) {
-            this.serialNumber = Input.ofNullable(serialNumber);
+            this.serialNumber = Output.ofNullable(serialNumber);
             return this;
         }
 
-        public Builder siteId(@Nullable Input<String> siteId) {
+        public Builder siteId(@Nullable Output<String> siteId) {
             this.siteId = siteId;
             return this;
         }
 
         public Builder siteId(@Nullable String siteId) {
-            this.siteId = Input.ofNullable(siteId);
+            this.siteId = Output.ofNullable(siteId);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<DeviceTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<DeviceTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<DeviceTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder vendor(@Nullable Input<String> vendor) {
+        public Builder vendor(@Nullable Output<String> vendor) {
             this.vendor = vendor;
             return this;
         }
 
         public Builder vendor(@Nullable String vendor) {
-            this.vendor = Input.ofNullable(vendor);
+            this.vendor = Output.ofNullable(vendor);
             return this;
         }
         public DeviceArgs build() {

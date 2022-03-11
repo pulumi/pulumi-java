@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3FulfillmentConditionalCasesArgs;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3ResponseMessageArgs;
@@ -24,10 +24,10 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseC
      * 
      */
     @InputImport(name="additionalCases")
-      private final @Nullable Input<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesArgs> additionalCases;
+      private final @Nullable Output<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesArgs> additionalCases;
 
-    public Input<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesArgs> getAdditionalCases() {
-        return this.additionalCases == null ? Input.empty() : this.additionalCases;
+    public Output<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesArgs> getAdditionalCases() {
+        return this.additionalCases == null ? Output.empty() : this.additionalCases;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseC
      * 
      */
     @InputImport(name="message")
-      private final @Nullable Input<GoogleCloudDialogflowCxV3ResponseMessageArgs> message;
+      private final @Nullable Output<GoogleCloudDialogflowCxV3ResponseMessageArgs> message;
 
-    public Input<GoogleCloudDialogflowCxV3ResponseMessageArgs> getMessage() {
-        return this.message == null ? Input.empty() : this.message;
+    public Output<GoogleCloudDialogflowCxV3ResponseMessageArgs> getMessage() {
+        return this.message == null ? Output.empty() : this.message;
     }
 
     public GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentArgs(
-        @Nullable Input<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesArgs> additionalCases,
-        @Nullable Input<GoogleCloudDialogflowCxV3ResponseMessageArgs> message) {
+        @Nullable Output<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesArgs> additionalCases,
+        @Nullable Output<GoogleCloudDialogflowCxV3ResponseMessageArgs> message) {
         this.additionalCases = additionalCases;
         this.message = message;
     }
 
     private GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentArgs() {
-        this.additionalCases = Input.empty();
-        this.message = Input.empty();
+        this.additionalCases = Output.empty();
+        this.message = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseC
     }
 
     public static final class Builder {
-        private @Nullable Input<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesArgs> additionalCases;
-        private @Nullable Input<GoogleCloudDialogflowCxV3ResponseMessageArgs> message;
+        private @Nullable Output<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesArgs> additionalCases;
+        private @Nullable Output<GoogleCloudDialogflowCxV3ResponseMessageArgs> message;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseC
     	      this.message = defaults.message;
         }
 
-        public Builder additionalCases(@Nullable Input<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesArgs> additionalCases) {
+        public Builder additionalCases(@Nullable Output<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesArgs> additionalCases) {
             this.additionalCases = additionalCases;
             return this;
         }
 
         public Builder additionalCases(@Nullable GoogleCloudDialogflowCxV3FulfillmentConditionalCasesArgs additionalCases) {
-            this.additionalCases = Input.ofNullable(additionalCases);
+            this.additionalCases = Output.ofNullable(additionalCases);
             return this;
         }
 
-        public Builder message(@Nullable Input<GoogleCloudDialogflowCxV3ResponseMessageArgs> message) {
+        public Builder message(@Nullable Output<GoogleCloudDialogflowCxV3ResponseMessageArgs> message) {
             this.message = message;
             return this;
         }
 
         public Builder message(@Nullable GoogleCloudDialogflowCxV3ResponseMessageArgs message) {
-            this.message = Input.ofNullable(message);
+            this.message = Output.ofNullable(message);
             return this;
         }
         public GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentArgs build() {

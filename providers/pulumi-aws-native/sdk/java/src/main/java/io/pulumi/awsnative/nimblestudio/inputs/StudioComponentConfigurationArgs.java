@@ -7,7 +7,7 @@ import io.pulumi.awsnative.nimblestudio.inputs.StudioComponentActiveDirectoryCon
 import io.pulumi.awsnative.nimblestudio.inputs.StudioComponentComputeFarmConfigurationArgs;
 import io.pulumi.awsnative.nimblestudio.inputs.StudioComponentLicenseServiceConfigurationArgs;
 import io.pulumi.awsnative.nimblestudio.inputs.StudioComponentSharedFileSystemConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,38 +22,38 @@ public final class StudioComponentConfigurationArgs extends io.pulumi.resources.
     public static final StudioComponentConfigurationArgs Empty = new StudioComponentConfigurationArgs();
 
     @InputImport(name="activeDirectoryConfiguration")
-      private final @Nullable Input<StudioComponentActiveDirectoryConfigurationArgs> activeDirectoryConfiguration;
+      private final @Nullable Output<StudioComponentActiveDirectoryConfigurationArgs> activeDirectoryConfiguration;
 
-    public Input<StudioComponentActiveDirectoryConfigurationArgs> getActiveDirectoryConfiguration() {
-        return this.activeDirectoryConfiguration == null ? Input.empty() : this.activeDirectoryConfiguration;
+    public Output<StudioComponentActiveDirectoryConfigurationArgs> getActiveDirectoryConfiguration() {
+        return this.activeDirectoryConfiguration == null ? Output.empty() : this.activeDirectoryConfiguration;
     }
 
     @InputImport(name="computeFarmConfiguration")
-      private final @Nullable Input<StudioComponentComputeFarmConfigurationArgs> computeFarmConfiguration;
+      private final @Nullable Output<StudioComponentComputeFarmConfigurationArgs> computeFarmConfiguration;
 
-    public Input<StudioComponentComputeFarmConfigurationArgs> getComputeFarmConfiguration() {
-        return this.computeFarmConfiguration == null ? Input.empty() : this.computeFarmConfiguration;
+    public Output<StudioComponentComputeFarmConfigurationArgs> getComputeFarmConfiguration() {
+        return this.computeFarmConfiguration == null ? Output.empty() : this.computeFarmConfiguration;
     }
 
     @InputImport(name="licenseServiceConfiguration")
-      private final @Nullable Input<StudioComponentLicenseServiceConfigurationArgs> licenseServiceConfiguration;
+      private final @Nullable Output<StudioComponentLicenseServiceConfigurationArgs> licenseServiceConfiguration;
 
-    public Input<StudioComponentLicenseServiceConfigurationArgs> getLicenseServiceConfiguration() {
-        return this.licenseServiceConfiguration == null ? Input.empty() : this.licenseServiceConfiguration;
+    public Output<StudioComponentLicenseServiceConfigurationArgs> getLicenseServiceConfiguration() {
+        return this.licenseServiceConfiguration == null ? Output.empty() : this.licenseServiceConfiguration;
     }
 
     @InputImport(name="sharedFileSystemConfiguration")
-      private final @Nullable Input<StudioComponentSharedFileSystemConfigurationArgs> sharedFileSystemConfiguration;
+      private final @Nullable Output<StudioComponentSharedFileSystemConfigurationArgs> sharedFileSystemConfiguration;
 
-    public Input<StudioComponentSharedFileSystemConfigurationArgs> getSharedFileSystemConfiguration() {
-        return this.sharedFileSystemConfiguration == null ? Input.empty() : this.sharedFileSystemConfiguration;
+    public Output<StudioComponentSharedFileSystemConfigurationArgs> getSharedFileSystemConfiguration() {
+        return this.sharedFileSystemConfiguration == null ? Output.empty() : this.sharedFileSystemConfiguration;
     }
 
     public StudioComponentConfigurationArgs(
-        @Nullable Input<StudioComponentActiveDirectoryConfigurationArgs> activeDirectoryConfiguration,
-        @Nullable Input<StudioComponentComputeFarmConfigurationArgs> computeFarmConfiguration,
-        @Nullable Input<StudioComponentLicenseServiceConfigurationArgs> licenseServiceConfiguration,
-        @Nullable Input<StudioComponentSharedFileSystemConfigurationArgs> sharedFileSystemConfiguration) {
+        @Nullable Output<StudioComponentActiveDirectoryConfigurationArgs> activeDirectoryConfiguration,
+        @Nullable Output<StudioComponentComputeFarmConfigurationArgs> computeFarmConfiguration,
+        @Nullable Output<StudioComponentLicenseServiceConfigurationArgs> licenseServiceConfiguration,
+        @Nullable Output<StudioComponentSharedFileSystemConfigurationArgs> sharedFileSystemConfiguration) {
         this.activeDirectoryConfiguration = activeDirectoryConfiguration;
         this.computeFarmConfiguration = computeFarmConfiguration;
         this.licenseServiceConfiguration = licenseServiceConfiguration;
@@ -61,10 +61,10 @@ public final class StudioComponentConfigurationArgs extends io.pulumi.resources.
     }
 
     private StudioComponentConfigurationArgs() {
-        this.activeDirectoryConfiguration = Input.empty();
-        this.computeFarmConfiguration = Input.empty();
-        this.licenseServiceConfiguration = Input.empty();
-        this.sharedFileSystemConfiguration = Input.empty();
+        this.activeDirectoryConfiguration = Output.empty();
+        this.computeFarmConfiguration = Output.empty();
+        this.licenseServiceConfiguration = Output.empty();
+        this.sharedFileSystemConfiguration = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,10 +76,10 @@ public final class StudioComponentConfigurationArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<StudioComponentActiveDirectoryConfigurationArgs> activeDirectoryConfiguration;
-        private @Nullable Input<StudioComponentComputeFarmConfigurationArgs> computeFarmConfiguration;
-        private @Nullable Input<StudioComponentLicenseServiceConfigurationArgs> licenseServiceConfiguration;
-        private @Nullable Input<StudioComponentSharedFileSystemConfigurationArgs> sharedFileSystemConfiguration;
+        private @Nullable Output<StudioComponentActiveDirectoryConfigurationArgs> activeDirectoryConfiguration;
+        private @Nullable Output<StudioComponentComputeFarmConfigurationArgs> computeFarmConfiguration;
+        private @Nullable Output<StudioComponentLicenseServiceConfigurationArgs> licenseServiceConfiguration;
+        private @Nullable Output<StudioComponentSharedFileSystemConfigurationArgs> sharedFileSystemConfiguration;
 
         public Builder() {
     	      // Empty
@@ -93,43 +93,43 @@ public final class StudioComponentConfigurationArgs extends io.pulumi.resources.
     	      this.sharedFileSystemConfiguration = defaults.sharedFileSystemConfiguration;
         }
 
-        public Builder activeDirectoryConfiguration(@Nullable Input<StudioComponentActiveDirectoryConfigurationArgs> activeDirectoryConfiguration) {
+        public Builder activeDirectoryConfiguration(@Nullable Output<StudioComponentActiveDirectoryConfigurationArgs> activeDirectoryConfiguration) {
             this.activeDirectoryConfiguration = activeDirectoryConfiguration;
             return this;
         }
 
         public Builder activeDirectoryConfiguration(@Nullable StudioComponentActiveDirectoryConfigurationArgs activeDirectoryConfiguration) {
-            this.activeDirectoryConfiguration = Input.ofNullable(activeDirectoryConfiguration);
+            this.activeDirectoryConfiguration = Output.ofNullable(activeDirectoryConfiguration);
             return this;
         }
 
-        public Builder computeFarmConfiguration(@Nullable Input<StudioComponentComputeFarmConfigurationArgs> computeFarmConfiguration) {
+        public Builder computeFarmConfiguration(@Nullable Output<StudioComponentComputeFarmConfigurationArgs> computeFarmConfiguration) {
             this.computeFarmConfiguration = computeFarmConfiguration;
             return this;
         }
 
         public Builder computeFarmConfiguration(@Nullable StudioComponentComputeFarmConfigurationArgs computeFarmConfiguration) {
-            this.computeFarmConfiguration = Input.ofNullable(computeFarmConfiguration);
+            this.computeFarmConfiguration = Output.ofNullable(computeFarmConfiguration);
             return this;
         }
 
-        public Builder licenseServiceConfiguration(@Nullable Input<StudioComponentLicenseServiceConfigurationArgs> licenseServiceConfiguration) {
+        public Builder licenseServiceConfiguration(@Nullable Output<StudioComponentLicenseServiceConfigurationArgs> licenseServiceConfiguration) {
             this.licenseServiceConfiguration = licenseServiceConfiguration;
             return this;
         }
 
         public Builder licenseServiceConfiguration(@Nullable StudioComponentLicenseServiceConfigurationArgs licenseServiceConfiguration) {
-            this.licenseServiceConfiguration = Input.ofNullable(licenseServiceConfiguration);
+            this.licenseServiceConfiguration = Output.ofNullable(licenseServiceConfiguration);
             return this;
         }
 
-        public Builder sharedFileSystemConfiguration(@Nullable Input<StudioComponentSharedFileSystemConfigurationArgs> sharedFileSystemConfiguration) {
+        public Builder sharedFileSystemConfiguration(@Nullable Output<StudioComponentSharedFileSystemConfigurationArgs> sharedFileSystemConfiguration) {
             this.sharedFileSystemConfiguration = sharedFileSystemConfiguration;
             return this;
         }
 
         public Builder sharedFileSystemConfiguration(@Nullable StudioComponentSharedFileSystemConfigurationArgs sharedFileSystemConfiguration) {
-            this.sharedFileSystemConfiguration = Input.ofNullable(sharedFileSystemConfiguration);
+            this.sharedFileSystemConfiguration = Output.ofNullable(sharedFileSystemConfiguration);
             return this;
         }
         public StudioComponentConfigurationArgs build() {

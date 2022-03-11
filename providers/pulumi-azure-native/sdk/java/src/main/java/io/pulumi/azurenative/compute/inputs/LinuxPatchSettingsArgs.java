@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.enums.LinuxPatchAssessmentMode;
 import io.pulumi.azurenative.compute.enums.LinuxVMGuestPatchMode;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class LinuxPatchSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="assessmentMode")
-      private final @Nullable Input<Either<String,LinuxPatchAssessmentMode>> assessmentMode;
+      private final @Nullable Output<Either<String,LinuxPatchAssessmentMode>> assessmentMode;
 
-    public Input<Either<String,LinuxPatchAssessmentMode>> getAssessmentMode() {
-        return this.assessmentMode == null ? Input.empty() : this.assessmentMode;
+    public Output<Either<String,LinuxPatchAssessmentMode>> getAssessmentMode() {
+        return this.assessmentMode == null ? Output.empty() : this.assessmentMode;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class LinuxPatchSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="patchMode")
-      private final @Nullable Input<Either<String,LinuxVMGuestPatchMode>> patchMode;
+      private final @Nullable Output<Either<String,LinuxVMGuestPatchMode>> patchMode;
 
-    public Input<Either<String,LinuxVMGuestPatchMode>> getPatchMode() {
-        return this.patchMode == null ? Input.empty() : this.patchMode;
+    public Output<Either<String,LinuxVMGuestPatchMode>> getPatchMode() {
+        return this.patchMode == null ? Output.empty() : this.patchMode;
     }
 
     public LinuxPatchSettingsArgs(
-        @Nullable Input<Either<String,LinuxPatchAssessmentMode>> assessmentMode,
-        @Nullable Input<Either<String,LinuxVMGuestPatchMode>> patchMode) {
+        @Nullable Output<Either<String,LinuxPatchAssessmentMode>> assessmentMode,
+        @Nullable Output<Either<String,LinuxVMGuestPatchMode>> patchMode) {
         this.assessmentMode = assessmentMode;
         this.patchMode = patchMode;
     }
 
     private LinuxPatchSettingsArgs() {
-        this.assessmentMode = Input.empty();
-        this.patchMode = Input.empty();
+        this.assessmentMode = Output.empty();
+        this.patchMode = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class LinuxPatchSettingsArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,LinuxPatchAssessmentMode>> assessmentMode;
-        private @Nullable Input<Either<String,LinuxVMGuestPatchMode>> patchMode;
+        private @Nullable Output<Either<String,LinuxPatchAssessmentMode>> assessmentMode;
+        private @Nullable Output<Either<String,LinuxVMGuestPatchMode>> patchMode;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class LinuxPatchSettingsArgs extends io.pulumi.resources.ResourceAr
     	      this.patchMode = defaults.patchMode;
         }
 
-        public Builder assessmentMode(@Nullable Input<Either<String,LinuxPatchAssessmentMode>> assessmentMode) {
+        public Builder assessmentMode(@Nullable Output<Either<String,LinuxPatchAssessmentMode>> assessmentMode) {
             this.assessmentMode = assessmentMode;
             return this;
         }
 
         public Builder assessmentMode(@Nullable Either<String,LinuxPatchAssessmentMode> assessmentMode) {
-            this.assessmentMode = Input.ofNullable(assessmentMode);
+            this.assessmentMode = Output.ofNullable(assessmentMode);
             return this;
         }
 
-        public Builder patchMode(@Nullable Input<Either<String,LinuxVMGuestPatchMode>> patchMode) {
+        public Builder patchMode(@Nullable Output<Either<String,LinuxVMGuestPatchMode>> patchMode) {
             this.patchMode = patchMode;
             return this;
         }
 
         public Builder patchMode(@Nullable Either<String,LinuxVMGuestPatchMode> patchMode) {
-            this.patchMode = Input.ofNullable(patchMode);
+            this.patchMode = Output.ofNullable(patchMode);
             return this;
         }
         public LinuxPatchSettingsArgs build() {

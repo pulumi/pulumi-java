@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storagetransfer_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.storagetransfer_v1.inputs.BandwidthLimitArgs;
 import java.lang.String;
@@ -16,9 +16,9 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     public static final AgentPoolArgs Empty = new AgentPoolArgs();
 
     @InputImport(name="agentPoolId", required=true)
-      private final Input<String> agentPoolId;
+      private final Output<String> agentPoolId;
 
-    public Input<String> getAgentPoolId() {
+    public Output<String> getAgentPoolId() {
         return this.agentPoolId;
     }
 
@@ -27,10 +27,10 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bandwidthLimit")
-      private final @Nullable Input<BandwidthLimitArgs> bandwidthLimit;
+      private final @Nullable Output<BandwidthLimitArgs> bandwidthLimit;
 
-    public Input<BandwidthLimitArgs> getBandwidthLimit() {
-        return this.bandwidthLimit == null ? Input.empty() : this.bandwidthLimit;
+    public Output<BandwidthLimitArgs> getBandwidthLimit() {
+        return this.bandwidthLimit == null ? Output.empty() : this.bandwidthLimit;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -49,25 +49,25 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public AgentPoolArgs(
-        Input<String> agentPoolId,
-        @Nullable Input<BandwidthLimitArgs> bandwidthLimit,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project) {
+        Output<String> agentPoolId,
+        @Nullable Output<BandwidthLimitArgs> bandwidthLimit,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project) {
         this.agentPoolId = Objects.requireNonNull(agentPoolId, "expected parameter 'agentPoolId' to be non-null");
         this.bandwidthLimit = bandwidthLimit;
         this.displayName = displayName;
@@ -76,11 +76,11 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AgentPoolArgs() {
-        this.agentPoolId = Input.empty();
-        this.bandwidthLimit = Input.empty();
-        this.displayName = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
+        this.agentPoolId = Output.empty();
+        this.bandwidthLimit = Output.empty();
+        this.displayName = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,11 +92,11 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> agentPoolId;
-        private @Nullable Input<BandwidthLimitArgs> bandwidthLimit;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
+        private Output<String> agentPoolId;
+        private @Nullable Output<BandwidthLimitArgs> bandwidthLimit;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -111,53 +111,53 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder agentPoolId(Input<String> agentPoolId) {
+        public Builder agentPoolId(Output<String> agentPoolId) {
             this.agentPoolId = Objects.requireNonNull(agentPoolId);
             return this;
         }
 
         public Builder agentPoolId(String agentPoolId) {
-            this.agentPoolId = Input.of(Objects.requireNonNull(agentPoolId));
+            this.agentPoolId = Output.of(Objects.requireNonNull(agentPoolId));
             return this;
         }
 
-        public Builder bandwidthLimit(@Nullable Input<BandwidthLimitArgs> bandwidthLimit) {
+        public Builder bandwidthLimit(@Nullable Output<BandwidthLimitArgs> bandwidthLimit) {
             this.bandwidthLimit = bandwidthLimit;
             return this;
         }
 
         public Builder bandwidthLimit(@Nullable BandwidthLimitArgs bandwidthLimit) {
-            this.bandwidthLimit = Input.ofNullable(bandwidthLimit);
+            this.bandwidthLimit = Output.ofNullable(bandwidthLimit);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public AgentPoolArgs build() {

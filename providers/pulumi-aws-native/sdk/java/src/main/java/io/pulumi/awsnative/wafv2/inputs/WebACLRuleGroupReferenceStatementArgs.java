@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.inputs.WebACLExcludedRuleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,29 +17,29 @@ public final class WebACLRuleGroupReferenceStatementArgs extends io.pulumi.resou
     public static final WebACLRuleGroupReferenceStatementArgs Empty = new WebACLRuleGroupReferenceStatementArgs();
 
     @InputImport(name="arn", required=true)
-      private final Input<String> arn;
+      private final Output<String> arn;
 
-    public Input<String> getArn() {
+    public Output<String> getArn() {
         return this.arn;
     }
 
     @InputImport(name="excludedRules")
-      private final @Nullable Input<List<WebACLExcludedRuleArgs>> excludedRules;
+      private final @Nullable Output<List<WebACLExcludedRuleArgs>> excludedRules;
 
-    public Input<List<WebACLExcludedRuleArgs>> getExcludedRules() {
-        return this.excludedRules == null ? Input.empty() : this.excludedRules;
+    public Output<List<WebACLExcludedRuleArgs>> getExcludedRules() {
+        return this.excludedRules == null ? Output.empty() : this.excludedRules;
     }
 
     public WebACLRuleGroupReferenceStatementArgs(
-        Input<String> arn,
-        @Nullable Input<List<WebACLExcludedRuleArgs>> excludedRules) {
+        Output<String> arn,
+        @Nullable Output<List<WebACLExcludedRuleArgs>> excludedRules) {
         this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
         this.excludedRules = excludedRules;
     }
 
     private WebACLRuleGroupReferenceStatementArgs() {
-        this.arn = Input.empty();
-        this.excludedRules = Input.empty();
+        this.arn = Output.empty();
+        this.excludedRules = Output.empty();
     }
 
     public static Builder builder() {
@@ -51,8 +51,8 @@ public final class WebACLRuleGroupReferenceStatementArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private Input<String> arn;
-        private @Nullable Input<List<WebACLExcludedRuleArgs>> excludedRules;
+        private Output<String> arn;
+        private @Nullable Output<List<WebACLExcludedRuleArgs>> excludedRules;
 
         public Builder() {
     	      // Empty
@@ -64,23 +64,23 @@ public final class WebACLRuleGroupReferenceStatementArgs extends io.pulumi.resou
     	      this.excludedRules = defaults.excludedRules;
         }
 
-        public Builder arn(Input<String> arn) {
+        public Builder arn(Output<String> arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
         public Builder arn(String arn) {
-            this.arn = Input.of(Objects.requireNonNull(arn));
+            this.arn = Output.of(Objects.requireNonNull(arn));
             return this;
         }
 
-        public Builder excludedRules(@Nullable Input<List<WebACLExcludedRuleArgs>> excludedRules) {
+        public Builder excludedRules(@Nullable Output<List<WebACLExcludedRuleArgs>> excludedRules) {
             this.excludedRules = excludedRules;
             return this;
         }
 
         public Builder excludedRules(@Nullable List<WebACLExcludedRuleArgs> excludedRules) {
-            this.excludedRules = Input.ofNullable(excludedRules);
+            this.excludedRules = Output.ofNullable(excludedRules);
             return this;
         }
         public WebACLRuleGroupReferenceStatementArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.signer.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class SigningJobSignedObjectS3Args extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="bucket")
-      private final @Nullable Input<String> bucket;
+      private final @Nullable Output<String> bucket;
 
-    public Input<String> getBucket() {
-        return this.bucket == null ? Input.empty() : this.bucket;
+    public Output<String> getBucket() {
+        return this.bucket == null ? Output.empty() : this.bucket;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class SigningJobSignedObjectS3Args extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="key")
-      private final @Nullable Input<String> key;
+      private final @Nullable Output<String> key;
 
-    public Input<String> getKey() {
-        return this.key == null ? Input.empty() : this.key;
+    public Output<String> getKey() {
+        return this.key == null ? Output.empty() : this.key;
     }
 
     public SigningJobSignedObjectS3Args(
-        @Nullable Input<String> bucket,
-        @Nullable Input<String> key) {
+        @Nullable Output<String> bucket,
+        @Nullable Output<String> key) {
         this.bucket = bucket;
         this.key = key;
     }
 
     private SigningJobSignedObjectS3Args() {
-        this.bucket = Input.empty();
-        this.key = Input.empty();
+        this.bucket = Output.empty();
+        this.key = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class SigningJobSignedObjectS3Args extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bucket;
-        private @Nullable Input<String> key;
+        private @Nullable Output<String> bucket;
+        private @Nullable Output<String> key;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class SigningJobSignedObjectS3Args extends io.pulumi.resources.Reso
     	      this.key = defaults.key;
         }
 
-        public Builder bucket(@Nullable Input<String> bucket) {
+        public Builder bucket(@Nullable Output<String> bucket) {
             this.bucket = bucket;
             return this;
         }
 
         public Builder bucket(@Nullable String bucket) {
-            this.bucket = Input.ofNullable(bucket);
+            this.bucket = Output.ofNullable(bucket);
             return this;
         }
 
-        public Builder key(@Nullable Input<String> key) {
+        public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
 
         public Builder key(@Nullable String key) {
-            this.key = Input.ofNullable(key);
+            this.key = Output.ofNullable(key);
             return this;
         }
         public SigningJobSignedObjectS3Args build() {

@@ -10,7 +10,7 @@ import io.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationRedactedFieldQuerySt
 import io.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationRedactedFieldSingleHeaderArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationRedactedFieldUriPathArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,11 +29,11 @@ public final class WebAclLoggingConfigurationRedactedFieldArgs extends io.pulumi
      */
     @Deprecated /* Not supported by WAFv2 API */
     @InputImport(name="allQueryArguments")
-      private final @Nullable Input<WebAclLoggingConfigurationRedactedFieldAllQueryArgumentsArgs> allQueryArguments;
+      private final @Nullable Output<WebAclLoggingConfigurationRedactedFieldAllQueryArgumentsArgs> allQueryArguments;
 
     @Deprecated /* Not supported by WAFv2 API */
-    public Input<WebAclLoggingConfigurationRedactedFieldAllQueryArgumentsArgs> getAllQueryArguments() {
-        return this.allQueryArguments == null ? Input.empty() : this.allQueryArguments;
+    public Output<WebAclLoggingConfigurationRedactedFieldAllQueryArgumentsArgs> getAllQueryArguments() {
+        return this.allQueryArguments == null ? Output.empty() : this.allQueryArguments;
     }
 
     /**
@@ -45,11 +45,11 @@ public final class WebAclLoggingConfigurationRedactedFieldArgs extends io.pulumi
      */
     @Deprecated /* Not supported by WAFv2 API */
     @InputImport(name="body")
-      private final @Nullable Input<WebAclLoggingConfigurationRedactedFieldBodyArgs> body;
+      private final @Nullable Output<WebAclLoggingConfigurationRedactedFieldBodyArgs> body;
 
     @Deprecated /* Not supported by WAFv2 API */
-    public Input<WebAclLoggingConfigurationRedactedFieldBodyArgs> getBody() {
-        return this.body == null ? Input.empty() : this.body;
+    public Output<WebAclLoggingConfigurationRedactedFieldBodyArgs> getBody() {
+        return this.body == null ? Output.empty() : this.body;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class WebAclLoggingConfigurationRedactedFieldArgs extends io.pulumi
      * 
      */
     @InputImport(name="method")
-      private final @Nullable Input<WebAclLoggingConfigurationRedactedFieldMethodArgs> method;
+      private final @Nullable Output<WebAclLoggingConfigurationRedactedFieldMethodArgs> method;
 
-    public Input<WebAclLoggingConfigurationRedactedFieldMethodArgs> getMethod() {
-        return this.method == null ? Input.empty() : this.method;
+    public Output<WebAclLoggingConfigurationRedactedFieldMethodArgs> getMethod() {
+        return this.method == null ? Output.empty() : this.method;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class WebAclLoggingConfigurationRedactedFieldArgs extends io.pulumi
      * 
      */
     @InputImport(name="queryString")
-      private final @Nullable Input<WebAclLoggingConfigurationRedactedFieldQueryStringArgs> queryString;
+      private final @Nullable Output<WebAclLoggingConfigurationRedactedFieldQueryStringArgs> queryString;
 
-    public Input<WebAclLoggingConfigurationRedactedFieldQueryStringArgs> getQueryString() {
-        return this.queryString == null ? Input.empty() : this.queryString;
+    public Output<WebAclLoggingConfigurationRedactedFieldQueryStringArgs> getQueryString() {
+        return this.queryString == null ? Output.empty() : this.queryString;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class WebAclLoggingConfigurationRedactedFieldArgs extends io.pulumi
      * 
      */
     @InputImport(name="singleHeader")
-      private final @Nullable Input<WebAclLoggingConfigurationRedactedFieldSingleHeaderArgs> singleHeader;
+      private final @Nullable Output<WebAclLoggingConfigurationRedactedFieldSingleHeaderArgs> singleHeader;
 
-    public Input<WebAclLoggingConfigurationRedactedFieldSingleHeaderArgs> getSingleHeader() {
-        return this.singleHeader == null ? Input.empty() : this.singleHeader;
+    public Output<WebAclLoggingConfigurationRedactedFieldSingleHeaderArgs> getSingleHeader() {
+        return this.singleHeader == null ? Output.empty() : this.singleHeader;
     }
 
     /**
@@ -94,11 +94,11 @@ public final class WebAclLoggingConfigurationRedactedFieldArgs extends io.pulumi
      */
     @Deprecated /* Not supported by WAFv2 API */
     @InputImport(name="singleQueryArgument")
-      private final @Nullable Input<WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentArgs> singleQueryArgument;
+      private final @Nullable Output<WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentArgs> singleQueryArgument;
 
     @Deprecated /* Not supported by WAFv2 API */
-    public Input<WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentArgs> getSingleQueryArgument() {
-        return this.singleQueryArgument == null ? Input.empty() : this.singleQueryArgument;
+    public Output<WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentArgs> getSingleQueryArgument() {
+        return this.singleQueryArgument == null ? Output.empty() : this.singleQueryArgument;
     }
 
     /**
@@ -106,20 +106,20 @@ public final class WebAclLoggingConfigurationRedactedFieldArgs extends io.pulumi
      * 
      */
     @InputImport(name="uriPath")
-      private final @Nullable Input<WebAclLoggingConfigurationRedactedFieldUriPathArgs> uriPath;
+      private final @Nullable Output<WebAclLoggingConfigurationRedactedFieldUriPathArgs> uriPath;
 
-    public Input<WebAclLoggingConfigurationRedactedFieldUriPathArgs> getUriPath() {
-        return this.uriPath == null ? Input.empty() : this.uriPath;
+    public Output<WebAclLoggingConfigurationRedactedFieldUriPathArgs> getUriPath() {
+        return this.uriPath == null ? Output.empty() : this.uriPath;
     }
 
     public WebAclLoggingConfigurationRedactedFieldArgs(
-        @Nullable Input<WebAclLoggingConfigurationRedactedFieldAllQueryArgumentsArgs> allQueryArguments,
-        @Nullable Input<WebAclLoggingConfigurationRedactedFieldBodyArgs> body,
-        @Nullable Input<WebAclLoggingConfigurationRedactedFieldMethodArgs> method,
-        @Nullable Input<WebAclLoggingConfigurationRedactedFieldQueryStringArgs> queryString,
-        @Nullable Input<WebAclLoggingConfigurationRedactedFieldSingleHeaderArgs> singleHeader,
-        @Nullable Input<WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentArgs> singleQueryArgument,
-        @Nullable Input<WebAclLoggingConfigurationRedactedFieldUriPathArgs> uriPath) {
+        @Nullable Output<WebAclLoggingConfigurationRedactedFieldAllQueryArgumentsArgs> allQueryArguments,
+        @Nullable Output<WebAclLoggingConfigurationRedactedFieldBodyArgs> body,
+        @Nullable Output<WebAclLoggingConfigurationRedactedFieldMethodArgs> method,
+        @Nullable Output<WebAclLoggingConfigurationRedactedFieldQueryStringArgs> queryString,
+        @Nullable Output<WebAclLoggingConfigurationRedactedFieldSingleHeaderArgs> singleHeader,
+        @Nullable Output<WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentArgs> singleQueryArgument,
+        @Nullable Output<WebAclLoggingConfigurationRedactedFieldUriPathArgs> uriPath) {
         this.allQueryArguments = allQueryArguments;
         this.body = body;
         this.method = method;
@@ -130,13 +130,13 @@ public final class WebAclLoggingConfigurationRedactedFieldArgs extends io.pulumi
     }
 
     private WebAclLoggingConfigurationRedactedFieldArgs() {
-        this.allQueryArguments = Input.empty();
-        this.body = Input.empty();
-        this.method = Input.empty();
-        this.queryString = Input.empty();
-        this.singleHeader = Input.empty();
-        this.singleQueryArgument = Input.empty();
-        this.uriPath = Input.empty();
+        this.allQueryArguments = Output.empty();
+        this.body = Output.empty();
+        this.method = Output.empty();
+        this.queryString = Output.empty();
+        this.singleHeader = Output.empty();
+        this.singleQueryArgument = Output.empty();
+        this.uriPath = Output.empty();
     }
 
     public static Builder builder() {
@@ -148,13 +148,13 @@ public final class WebAclLoggingConfigurationRedactedFieldArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private @Nullable Input<WebAclLoggingConfigurationRedactedFieldAllQueryArgumentsArgs> allQueryArguments;
-        private @Nullable Input<WebAclLoggingConfigurationRedactedFieldBodyArgs> body;
-        private @Nullable Input<WebAclLoggingConfigurationRedactedFieldMethodArgs> method;
-        private @Nullable Input<WebAclLoggingConfigurationRedactedFieldQueryStringArgs> queryString;
-        private @Nullable Input<WebAclLoggingConfigurationRedactedFieldSingleHeaderArgs> singleHeader;
-        private @Nullable Input<WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentArgs> singleQueryArgument;
-        private @Nullable Input<WebAclLoggingConfigurationRedactedFieldUriPathArgs> uriPath;
+        private @Nullable Output<WebAclLoggingConfigurationRedactedFieldAllQueryArgumentsArgs> allQueryArguments;
+        private @Nullable Output<WebAclLoggingConfigurationRedactedFieldBodyArgs> body;
+        private @Nullable Output<WebAclLoggingConfigurationRedactedFieldMethodArgs> method;
+        private @Nullable Output<WebAclLoggingConfigurationRedactedFieldQueryStringArgs> queryString;
+        private @Nullable Output<WebAclLoggingConfigurationRedactedFieldSingleHeaderArgs> singleHeader;
+        private @Nullable Output<WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentArgs> singleQueryArgument;
+        private @Nullable Output<WebAclLoggingConfigurationRedactedFieldUriPathArgs> uriPath;
 
         public Builder() {
     	      // Empty
@@ -171,73 +171,73 @@ public final class WebAclLoggingConfigurationRedactedFieldArgs extends io.pulumi
     	      this.uriPath = defaults.uriPath;
         }
 
-        public Builder allQueryArguments(@Nullable Input<WebAclLoggingConfigurationRedactedFieldAllQueryArgumentsArgs> allQueryArguments) {
+        public Builder allQueryArguments(@Nullable Output<WebAclLoggingConfigurationRedactedFieldAllQueryArgumentsArgs> allQueryArguments) {
             this.allQueryArguments = allQueryArguments;
             return this;
         }
 
         public Builder allQueryArguments(@Nullable WebAclLoggingConfigurationRedactedFieldAllQueryArgumentsArgs allQueryArguments) {
-            this.allQueryArguments = Input.ofNullable(allQueryArguments);
+            this.allQueryArguments = Output.ofNullable(allQueryArguments);
             return this;
         }
 
-        public Builder body(@Nullable Input<WebAclLoggingConfigurationRedactedFieldBodyArgs> body) {
+        public Builder body(@Nullable Output<WebAclLoggingConfigurationRedactedFieldBodyArgs> body) {
             this.body = body;
             return this;
         }
 
         public Builder body(@Nullable WebAclLoggingConfigurationRedactedFieldBodyArgs body) {
-            this.body = Input.ofNullable(body);
+            this.body = Output.ofNullable(body);
             return this;
         }
 
-        public Builder method(@Nullable Input<WebAclLoggingConfigurationRedactedFieldMethodArgs> method) {
+        public Builder method(@Nullable Output<WebAclLoggingConfigurationRedactedFieldMethodArgs> method) {
             this.method = method;
             return this;
         }
 
         public Builder method(@Nullable WebAclLoggingConfigurationRedactedFieldMethodArgs method) {
-            this.method = Input.ofNullable(method);
+            this.method = Output.ofNullable(method);
             return this;
         }
 
-        public Builder queryString(@Nullable Input<WebAclLoggingConfigurationRedactedFieldQueryStringArgs> queryString) {
+        public Builder queryString(@Nullable Output<WebAclLoggingConfigurationRedactedFieldQueryStringArgs> queryString) {
             this.queryString = queryString;
             return this;
         }
 
         public Builder queryString(@Nullable WebAclLoggingConfigurationRedactedFieldQueryStringArgs queryString) {
-            this.queryString = Input.ofNullable(queryString);
+            this.queryString = Output.ofNullable(queryString);
             return this;
         }
 
-        public Builder singleHeader(@Nullable Input<WebAclLoggingConfigurationRedactedFieldSingleHeaderArgs> singleHeader) {
+        public Builder singleHeader(@Nullable Output<WebAclLoggingConfigurationRedactedFieldSingleHeaderArgs> singleHeader) {
             this.singleHeader = singleHeader;
             return this;
         }
 
         public Builder singleHeader(@Nullable WebAclLoggingConfigurationRedactedFieldSingleHeaderArgs singleHeader) {
-            this.singleHeader = Input.ofNullable(singleHeader);
+            this.singleHeader = Output.ofNullable(singleHeader);
             return this;
         }
 
-        public Builder singleQueryArgument(@Nullable Input<WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentArgs> singleQueryArgument) {
+        public Builder singleQueryArgument(@Nullable Output<WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentArgs> singleQueryArgument) {
             this.singleQueryArgument = singleQueryArgument;
             return this;
         }
 
         public Builder singleQueryArgument(@Nullable WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentArgs singleQueryArgument) {
-            this.singleQueryArgument = Input.ofNullable(singleQueryArgument);
+            this.singleQueryArgument = Output.ofNullable(singleQueryArgument);
             return this;
         }
 
-        public Builder uriPath(@Nullable Input<WebAclLoggingConfigurationRedactedFieldUriPathArgs> uriPath) {
+        public Builder uriPath(@Nullable Output<WebAclLoggingConfigurationRedactedFieldUriPathArgs> uriPath) {
             this.uriPath = uriPath;
             return this;
         }
 
         public Builder uriPath(@Nullable WebAclLoggingConfigurationRedactedFieldUriPathArgs uriPath) {
-            this.uriPath = Input.ofNullable(uriPath);
+            this.uriPath = Output.ofNullable(uriPath);
             return this;
         }
         public WebAclLoggingConfigurationRedactedFieldArgs build() {

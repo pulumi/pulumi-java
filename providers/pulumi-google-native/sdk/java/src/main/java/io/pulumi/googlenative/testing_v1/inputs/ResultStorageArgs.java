@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.testing_v1.inputs.GoogleCloudStorageArgs;
 import io.pulumi.googlenative.testing_v1.inputs.ToolResultsHistoryArgs;
@@ -24,9 +24,9 @@ public final class ResultStorageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="googleCloudStorage", required=true)
-      private final Input<GoogleCloudStorageArgs> googleCloudStorage;
+      private final Output<GoogleCloudStorageArgs> googleCloudStorage;
 
-    public Input<GoogleCloudStorageArgs> getGoogleCloudStorage() {
+    public Output<GoogleCloudStorageArgs> getGoogleCloudStorage() {
         return this.googleCloudStorage;
     }
 
@@ -35,22 +35,22 @@ public final class ResultStorageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="toolResultsHistory")
-      private final @Nullable Input<ToolResultsHistoryArgs> toolResultsHistory;
+      private final @Nullable Output<ToolResultsHistoryArgs> toolResultsHistory;
 
-    public Input<ToolResultsHistoryArgs> getToolResultsHistory() {
-        return this.toolResultsHistory == null ? Input.empty() : this.toolResultsHistory;
+    public Output<ToolResultsHistoryArgs> getToolResultsHistory() {
+        return this.toolResultsHistory == null ? Output.empty() : this.toolResultsHistory;
     }
 
     public ResultStorageArgs(
-        Input<GoogleCloudStorageArgs> googleCloudStorage,
-        @Nullable Input<ToolResultsHistoryArgs> toolResultsHistory) {
+        Output<GoogleCloudStorageArgs> googleCloudStorage,
+        @Nullable Output<ToolResultsHistoryArgs> toolResultsHistory) {
         this.googleCloudStorage = Objects.requireNonNull(googleCloudStorage, "expected parameter 'googleCloudStorage' to be non-null");
         this.toolResultsHistory = toolResultsHistory;
     }
 
     private ResultStorageArgs() {
-        this.googleCloudStorage = Input.empty();
-        this.toolResultsHistory = Input.empty();
+        this.googleCloudStorage = Output.empty();
+        this.toolResultsHistory = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ResultStorageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<GoogleCloudStorageArgs> googleCloudStorage;
-        private @Nullable Input<ToolResultsHistoryArgs> toolResultsHistory;
+        private Output<GoogleCloudStorageArgs> googleCloudStorage;
+        private @Nullable Output<ToolResultsHistoryArgs> toolResultsHistory;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ResultStorageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.toolResultsHistory = defaults.toolResultsHistory;
         }
 
-        public Builder googleCloudStorage(Input<GoogleCloudStorageArgs> googleCloudStorage) {
+        public Builder googleCloudStorage(Output<GoogleCloudStorageArgs> googleCloudStorage) {
             this.googleCloudStorage = Objects.requireNonNull(googleCloudStorage);
             return this;
         }
 
         public Builder googleCloudStorage(GoogleCloudStorageArgs googleCloudStorage) {
-            this.googleCloudStorage = Input.of(Objects.requireNonNull(googleCloudStorage));
+            this.googleCloudStorage = Output.of(Objects.requireNonNull(googleCloudStorage));
             return this;
         }
 
-        public Builder toolResultsHistory(@Nullable Input<ToolResultsHistoryArgs> toolResultsHistory) {
+        public Builder toolResultsHistory(@Nullable Output<ToolResultsHistoryArgs> toolResultsHistory) {
             this.toolResultsHistory = toolResultsHistory;
             return this;
         }
 
         public Builder toolResultsHistory(@Nullable ToolResultsHistoryArgs toolResultsHistory) {
-            this.toolResultsHistory = Input.ofNullable(toolResultsHistory);
+            this.toolResultsHistory = Output.ofNullable(toolResultsHistory);
             return this;
         }
         public ResultStorageArgs build() {

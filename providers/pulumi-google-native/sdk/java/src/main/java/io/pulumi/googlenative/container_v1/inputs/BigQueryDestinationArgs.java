@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class BigQueryDestinationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="datasetId")
-      private final @Nullable Input<String> datasetId;
+      private final @Nullable Output<String> datasetId;
 
-    public Input<String> getDatasetId() {
-        return this.datasetId == null ? Input.empty() : this.datasetId;
+    public Output<String> getDatasetId() {
+        return this.datasetId == null ? Output.empty() : this.datasetId;
     }
 
-    public BigQueryDestinationArgs(@Nullable Input<String> datasetId) {
+    public BigQueryDestinationArgs(@Nullable Output<String> datasetId) {
         this.datasetId = datasetId;
     }
 
     private BigQueryDestinationArgs() {
-        this.datasetId = Input.empty();
+        this.datasetId = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class BigQueryDestinationArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> datasetId;
+        private @Nullable Output<String> datasetId;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class BigQueryDestinationArgs extends io.pulumi.resources.ResourceA
     	      this.datasetId = defaults.datasetId;
         }
 
-        public Builder datasetId(@Nullable Input<String> datasetId) {
+        public Builder datasetId(@Nullable Output<String> datasetId) {
             this.datasetId = datasetId;
             return this;
         }
 
         public Builder datasetId(@Nullable String datasetId) {
-            this.datasetId = Input.ofNullable(datasetId);
+            this.datasetId = Output.ofNullable(datasetId);
             return this;
         }
         public BigQueryDestinationArgs build() {

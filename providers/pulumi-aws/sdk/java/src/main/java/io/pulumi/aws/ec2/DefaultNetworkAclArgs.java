@@ -5,7 +5,7 @@ package io.pulumi.aws.ec2;
 
 import io.pulumi.aws.ec2.inputs.DefaultNetworkAclEgressArgs;
 import io.pulumi.aws.ec2.inputs.DefaultNetworkAclIngressArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,9 +23,9 @@ public final class DefaultNetworkAclArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="defaultNetworkAclId", required=true)
-      private final Input<String> defaultNetworkAclId;
+      private final Output<String> defaultNetworkAclId;
 
-    public Input<String> getDefaultNetworkAclId() {
+    public Output<String> getDefaultNetworkAclId() {
         return this.defaultNetworkAclId;
     }
 
@@ -34,10 +34,10 @@ public final class DefaultNetworkAclArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="egress")
-      private final @Nullable Input<List<DefaultNetworkAclEgressArgs>> egress;
+      private final @Nullable Output<List<DefaultNetworkAclEgressArgs>> egress;
 
-    public Input<List<DefaultNetworkAclEgressArgs>> getEgress() {
-        return this.egress == null ? Input.empty() : this.egress;
+    public Output<List<DefaultNetworkAclEgressArgs>> getEgress() {
+        return this.egress == null ? Output.empty() : this.egress;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class DefaultNetworkAclArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="ingress")
-      private final @Nullable Input<List<DefaultNetworkAclIngressArgs>> ingress;
+      private final @Nullable Output<List<DefaultNetworkAclIngressArgs>> ingress;
 
-    public Input<List<DefaultNetworkAclIngressArgs>> getIngress() {
-        return this.ingress == null ? Input.empty() : this.ingress;
+    public Output<List<DefaultNetworkAclIngressArgs>> getIngress() {
+        return this.ingress == null ? Output.empty() : this.ingress;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class DefaultNetworkAclArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="subnetIds")
-      private final @Nullable Input<List<String>> subnetIds;
+      private final @Nullable Output<List<String>> subnetIds;
 
-    public Input<List<String>> getSubnetIds() {
-        return this.subnetIds == null ? Input.empty() : this.subnetIds;
+    public Output<List<String>> getSubnetIds() {
+        return this.subnetIds == null ? Output.empty() : this.subnetIds;
     }
 
     /**
@@ -67,18 +67,18 @@ public final class DefaultNetworkAclArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public DefaultNetworkAclArgs(
-        Input<String> defaultNetworkAclId,
-        @Nullable Input<List<DefaultNetworkAclEgressArgs>> egress,
-        @Nullable Input<List<DefaultNetworkAclIngressArgs>> ingress,
-        @Nullable Input<List<String>> subnetIds,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> defaultNetworkAclId,
+        @Nullable Output<List<DefaultNetworkAclEgressArgs>> egress,
+        @Nullable Output<List<DefaultNetworkAclIngressArgs>> ingress,
+        @Nullable Output<List<String>> subnetIds,
+        @Nullable Output<Map<String,String>> tags) {
         this.defaultNetworkAclId = Objects.requireNonNull(defaultNetworkAclId, "expected parameter 'defaultNetworkAclId' to be non-null");
         this.egress = egress;
         this.ingress = ingress;
@@ -87,11 +87,11 @@ public final class DefaultNetworkAclArgs extends io.pulumi.resources.ResourceArg
     }
 
     private DefaultNetworkAclArgs() {
-        this.defaultNetworkAclId = Input.empty();
-        this.egress = Input.empty();
-        this.ingress = Input.empty();
-        this.subnetIds = Input.empty();
-        this.tags = Input.empty();
+        this.defaultNetworkAclId = Output.empty();
+        this.egress = Output.empty();
+        this.ingress = Output.empty();
+        this.subnetIds = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,11 +103,11 @@ public final class DefaultNetworkAclArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> defaultNetworkAclId;
-        private @Nullable Input<List<DefaultNetworkAclEgressArgs>> egress;
-        private @Nullable Input<List<DefaultNetworkAclIngressArgs>> ingress;
-        private @Nullable Input<List<String>> subnetIds;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> defaultNetworkAclId;
+        private @Nullable Output<List<DefaultNetworkAclEgressArgs>> egress;
+        private @Nullable Output<List<DefaultNetworkAclIngressArgs>> ingress;
+        private @Nullable Output<List<String>> subnetIds;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -122,53 +122,53 @@ public final class DefaultNetworkAclArgs extends io.pulumi.resources.ResourceArg
     	      this.tags = defaults.tags;
         }
 
-        public Builder defaultNetworkAclId(Input<String> defaultNetworkAclId) {
+        public Builder defaultNetworkAclId(Output<String> defaultNetworkAclId) {
             this.defaultNetworkAclId = Objects.requireNonNull(defaultNetworkAclId);
             return this;
         }
 
         public Builder defaultNetworkAclId(String defaultNetworkAclId) {
-            this.defaultNetworkAclId = Input.of(Objects.requireNonNull(defaultNetworkAclId));
+            this.defaultNetworkAclId = Output.of(Objects.requireNonNull(defaultNetworkAclId));
             return this;
         }
 
-        public Builder egress(@Nullable Input<List<DefaultNetworkAclEgressArgs>> egress) {
+        public Builder egress(@Nullable Output<List<DefaultNetworkAclEgressArgs>> egress) {
             this.egress = egress;
             return this;
         }
 
         public Builder egress(@Nullable List<DefaultNetworkAclEgressArgs> egress) {
-            this.egress = Input.ofNullable(egress);
+            this.egress = Output.ofNullable(egress);
             return this;
         }
 
-        public Builder ingress(@Nullable Input<List<DefaultNetworkAclIngressArgs>> ingress) {
+        public Builder ingress(@Nullable Output<List<DefaultNetworkAclIngressArgs>> ingress) {
             this.ingress = ingress;
             return this;
         }
 
         public Builder ingress(@Nullable List<DefaultNetworkAclIngressArgs> ingress) {
-            this.ingress = Input.ofNullable(ingress);
+            this.ingress = Output.ofNullable(ingress);
             return this;
         }
 
-        public Builder subnetIds(@Nullable Input<List<String>> subnetIds) {
+        public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
 
         public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Input.ofNullable(subnetIds);
+            this.subnetIds = Output.ofNullable(subnetIds);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public DefaultNetworkAclArgs build() {

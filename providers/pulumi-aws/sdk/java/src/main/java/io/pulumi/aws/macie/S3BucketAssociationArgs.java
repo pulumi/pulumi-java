@@ -4,7 +4,7 @@
 package io.pulumi.aws.macie;
 
 import io.pulumi.aws.macie.inputs.S3BucketAssociationClassificationTypeArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class S3BucketAssociationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="bucketName", required=true)
-      private final Input<String> bucketName;
+      private final Output<String> bucketName;
 
-    public Input<String> getBucketName() {
+    public Output<String> getBucketName() {
         return this.bucketName;
     }
 
@@ -31,10 +31,10 @@ public final class S3BucketAssociationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="classificationType")
-      private final @Nullable Input<S3BucketAssociationClassificationTypeArgs> classificationType;
+      private final @Nullable Output<S3BucketAssociationClassificationTypeArgs> classificationType;
 
-    public Input<S3BucketAssociationClassificationTypeArgs> getClassificationType() {
-        return this.classificationType == null ? Input.empty() : this.classificationType;
+    public Output<S3BucketAssociationClassificationTypeArgs> getClassificationType() {
+        return this.classificationType == null ? Output.empty() : this.classificationType;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class S3BucketAssociationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="memberAccountId")
-      private final @Nullable Input<String> memberAccountId;
+      private final @Nullable Output<String> memberAccountId;
 
-    public Input<String> getMemberAccountId() {
-        return this.memberAccountId == null ? Input.empty() : this.memberAccountId;
+    public Output<String> getMemberAccountId() {
+        return this.memberAccountId == null ? Output.empty() : this.memberAccountId;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class S3BucketAssociationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="prefix")
-      private final @Nullable Input<String> prefix;
+      private final @Nullable Output<String> prefix;
 
-    public Input<String> getPrefix() {
-        return this.prefix == null ? Input.empty() : this.prefix;
+    public Output<String> getPrefix() {
+        return this.prefix == null ? Output.empty() : this.prefix;
     }
 
     public S3BucketAssociationArgs(
-        Input<String> bucketName,
-        @Nullable Input<S3BucketAssociationClassificationTypeArgs> classificationType,
-        @Nullable Input<String> memberAccountId,
-        @Nullable Input<String> prefix) {
+        Output<String> bucketName,
+        @Nullable Output<S3BucketAssociationClassificationTypeArgs> classificationType,
+        @Nullable Output<String> memberAccountId,
+        @Nullable Output<String> prefix) {
         this.bucketName = Objects.requireNonNull(bucketName, "expected parameter 'bucketName' to be non-null");
         this.classificationType = classificationType;
         this.memberAccountId = memberAccountId;
@@ -71,10 +71,10 @@ public final class S3BucketAssociationArgs extends io.pulumi.resources.ResourceA
     }
 
     private S3BucketAssociationArgs() {
-        this.bucketName = Input.empty();
-        this.classificationType = Input.empty();
-        this.memberAccountId = Input.empty();
-        this.prefix = Input.empty();
+        this.bucketName = Output.empty();
+        this.classificationType = Output.empty();
+        this.memberAccountId = Output.empty();
+        this.prefix = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class S3BucketAssociationArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> bucketName;
-        private @Nullable Input<S3BucketAssociationClassificationTypeArgs> classificationType;
-        private @Nullable Input<String> memberAccountId;
-        private @Nullable Input<String> prefix;
+        private Output<String> bucketName;
+        private @Nullable Output<S3BucketAssociationClassificationTypeArgs> classificationType;
+        private @Nullable Output<String> memberAccountId;
+        private @Nullable Output<String> prefix;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class S3BucketAssociationArgs extends io.pulumi.resources.ResourceA
     	      this.prefix = defaults.prefix;
         }
 
-        public Builder bucketName(Input<String> bucketName) {
+        public Builder bucketName(Output<String> bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
         public Builder bucketName(String bucketName) {
-            this.bucketName = Input.of(Objects.requireNonNull(bucketName));
+            this.bucketName = Output.of(Objects.requireNonNull(bucketName));
             return this;
         }
 
-        public Builder classificationType(@Nullable Input<S3BucketAssociationClassificationTypeArgs> classificationType) {
+        public Builder classificationType(@Nullable Output<S3BucketAssociationClassificationTypeArgs> classificationType) {
             this.classificationType = classificationType;
             return this;
         }
 
         public Builder classificationType(@Nullable S3BucketAssociationClassificationTypeArgs classificationType) {
-            this.classificationType = Input.ofNullable(classificationType);
+            this.classificationType = Output.ofNullable(classificationType);
             return this;
         }
 
-        public Builder memberAccountId(@Nullable Input<String> memberAccountId) {
+        public Builder memberAccountId(@Nullable Output<String> memberAccountId) {
             this.memberAccountId = memberAccountId;
             return this;
         }
 
         public Builder memberAccountId(@Nullable String memberAccountId) {
-            this.memberAccountId = Input.ofNullable(memberAccountId);
+            this.memberAccountId = Output.ofNullable(memberAccountId);
             return this;
         }
 
-        public Builder prefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Input.ofNullable(prefix);
+            this.prefix = Output.ofNullable(prefix);
             return this;
         }
         public S3BucketAssociationArgs build() {

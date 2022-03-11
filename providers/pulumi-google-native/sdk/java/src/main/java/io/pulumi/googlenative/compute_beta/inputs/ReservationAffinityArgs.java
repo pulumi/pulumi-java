@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.enums.ReservationAffinityConsumeReservationType;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class ReservationAffinityArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="consumeReservationType")
-      private final @Nullable Input<ReservationAffinityConsumeReservationType> consumeReservationType;
+      private final @Nullable Output<ReservationAffinityConsumeReservationType> consumeReservationType;
 
-    public Input<ReservationAffinityConsumeReservationType> getConsumeReservationType() {
-        return this.consumeReservationType == null ? Input.empty() : this.consumeReservationType;
+    public Output<ReservationAffinityConsumeReservationType> getConsumeReservationType() {
+        return this.consumeReservationType == null ? Output.empty() : this.consumeReservationType;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ReservationAffinityArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="key")
-      private final @Nullable Input<String> key;
+      private final @Nullable Output<String> key;
 
-    public Input<String> getKey() {
-        return this.key == null ? Input.empty() : this.key;
+    public Output<String> getKey() {
+        return this.key == null ? Output.empty() : this.key;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class ReservationAffinityArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="values")
-      private final @Nullable Input<List<String>> values;
+      private final @Nullable Output<List<String>> values;
 
-    public Input<List<String>> getValues() {
-        return this.values == null ? Input.empty() : this.values;
+    public Output<List<String>> getValues() {
+        return this.values == null ? Output.empty() : this.values;
     }
 
     public ReservationAffinityArgs(
-        @Nullable Input<ReservationAffinityConsumeReservationType> consumeReservationType,
-        @Nullable Input<String> key,
-        @Nullable Input<List<String>> values) {
+        @Nullable Output<ReservationAffinityConsumeReservationType> consumeReservationType,
+        @Nullable Output<String> key,
+        @Nullable Output<List<String>> values) {
         this.consumeReservationType = consumeReservationType;
         this.key = key;
         this.values = values;
     }
 
     private ReservationAffinityArgs() {
-        this.consumeReservationType = Input.empty();
-        this.key = Input.empty();
-        this.values = Input.empty();
+        this.consumeReservationType = Output.empty();
+        this.key = Output.empty();
+        this.values = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class ReservationAffinityArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<ReservationAffinityConsumeReservationType> consumeReservationType;
-        private @Nullable Input<String> key;
-        private @Nullable Input<List<String>> values;
+        private @Nullable Output<ReservationAffinityConsumeReservationType> consumeReservationType;
+        private @Nullable Output<String> key;
+        private @Nullable Output<List<String>> values;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class ReservationAffinityArgs extends io.pulumi.resources.ResourceA
     	      this.values = defaults.values;
         }
 
-        public Builder consumeReservationType(@Nullable Input<ReservationAffinityConsumeReservationType> consumeReservationType) {
+        public Builder consumeReservationType(@Nullable Output<ReservationAffinityConsumeReservationType> consumeReservationType) {
             this.consumeReservationType = consumeReservationType;
             return this;
         }
 
         public Builder consumeReservationType(@Nullable ReservationAffinityConsumeReservationType consumeReservationType) {
-            this.consumeReservationType = Input.ofNullable(consumeReservationType);
+            this.consumeReservationType = Output.ofNullable(consumeReservationType);
             return this;
         }
 
-        public Builder key(@Nullable Input<String> key) {
+        public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
 
         public Builder key(@Nullable String key) {
-            this.key = Input.ofNullable(key);
+            this.key = Output.ofNullable(key);
             return this;
         }
 
-        public Builder values(@Nullable Input<List<String>> values) {
+        public Builder values(@Nullable Output<List<String>> values) {
             this.values = values;
             return this;
         }
 
         public Builder values(@Nullable List<String> values) {
-            this.values = Input.ofNullable(values);
+            this.values = Output.ofNullable(values);
             return this;
         }
         public ReservationAffinityArgs build() {

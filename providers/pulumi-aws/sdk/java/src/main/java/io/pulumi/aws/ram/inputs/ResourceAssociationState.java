@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ram.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ResourceAssociationState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceArn")
-      private final @Nullable Input<String> resourceArn;
+      private final @Nullable Output<String> resourceArn;
 
-    public Input<String> getResourceArn() {
-        return this.resourceArn == null ? Input.empty() : this.resourceArn;
+    public Output<String> getResourceArn() {
+        return this.resourceArn == null ? Output.empty() : this.resourceArn;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class ResourceAssociationState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceShareArn")
-      private final @Nullable Input<String> resourceShareArn;
+      private final @Nullable Output<String> resourceShareArn;
 
-    public Input<String> getResourceShareArn() {
-        return this.resourceShareArn == null ? Input.empty() : this.resourceShareArn;
+    public Output<String> getResourceShareArn() {
+        return this.resourceShareArn == null ? Output.empty() : this.resourceShareArn;
     }
 
     public ResourceAssociationState(
-        @Nullable Input<String> resourceArn,
-        @Nullable Input<String> resourceShareArn) {
+        @Nullable Output<String> resourceArn,
+        @Nullable Output<String> resourceShareArn) {
         this.resourceArn = resourceArn;
         this.resourceShareArn = resourceShareArn;
     }
 
     private ResourceAssociationState() {
-        this.resourceArn = Input.empty();
-        this.resourceShareArn = Input.empty();
+        this.resourceArn = Output.empty();
+        this.resourceShareArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ResourceAssociationState extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> resourceArn;
-        private @Nullable Input<String> resourceShareArn;
+        private @Nullable Output<String> resourceArn;
+        private @Nullable Output<String> resourceShareArn;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ResourceAssociationState extends io.pulumi.resources.Resource
     	      this.resourceShareArn = defaults.resourceShareArn;
         }
 
-        public Builder resourceArn(@Nullable Input<String> resourceArn) {
+        public Builder resourceArn(@Nullable Output<String> resourceArn) {
             this.resourceArn = resourceArn;
             return this;
         }
 
         public Builder resourceArn(@Nullable String resourceArn) {
-            this.resourceArn = Input.ofNullable(resourceArn);
+            this.resourceArn = Output.ofNullable(resourceArn);
             return this;
         }
 
-        public Builder resourceShareArn(@Nullable Input<String> resourceShareArn) {
+        public Builder resourceShareArn(@Nullable Output<String> resourceShareArn) {
             this.resourceShareArn = resourceShareArn;
             return this;
         }
 
         public Builder resourceShareArn(@Nullable String resourceShareArn) {
-            this.resourceShareArn = Input.ofNullable(resourceShareArn);
+            this.resourceShareArn = Output.ofNullable(resourceShareArn);
             return this;
         }
         public ResourceAssociationState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.outputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
@@ -16,17 +16,17 @@ public final class KubeClientSettingsArgs {
      * Maximum burst for throttle. Default value is 10.
      * 
      */
-    private final @Nullable Input<Integer> burst;
+    private final @Nullable Output<Integer> burst;
     /**
      * Maximum queries per second (QPS) to the API server from this client. Default value is 5.
      * 
      */
-    private final @Nullable Input<Double> qps;
+    private final @Nullable Output<Double> qps;
 
     @OutputCustomType.Constructor
     private KubeClientSettingsArgs(
-        @OutputCustomType.Parameter("burst") @Nullable Input<Integer> burst,
-        @OutputCustomType.Parameter("qps") @Nullable Input<Double> qps) {
+        @OutputCustomType.Parameter("burst") @Nullable Output<Integer> burst,
+        @OutputCustomType.Parameter("qps") @Nullable Output<Double> qps) {
         this.burst = burst;
         this.qps = qps;
     }
@@ -35,14 +35,14 @@ public final class KubeClientSettingsArgs {
      * Maximum burst for throttle. Default value is 10.
      * 
     */
-    public @Nullable Input<Integer> getBurst() {
+    public @Nullable Output<Integer> getBurst() {
         return this.burst;
     }
     /**
      * Maximum queries per second (QPS) to the API server from this client. Default value is 5.
      * 
     */
-    public @Nullable Input<Double> getQps() {
+    public @Nullable Output<Double> getQps() {
         return this.qps;
     }
 
@@ -55,8 +55,8 @@ public final class KubeClientSettingsArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> burst;
-        private @Nullable Input<Double> qps;
+        private @Nullable Output<Integer> burst;
+        private @Nullable Output<Double> qps;
 
         public Builder() {
     	      // Empty
@@ -68,12 +68,12 @@ public final class KubeClientSettingsArgs {
     	      this.qps = defaults.qps;
         }
 
-        public Builder burst(@Nullable Input<Integer> burst) {
+        public Builder burst(@Nullable Output<Integer> burst) {
             this.burst = burst;
             return this;
         }
 
-        public Builder qps(@Nullable Input<Double> qps) {
+        public Builder qps(@Nullable Output<Double> qps) {
             this.qps = qps;
             return this;
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices;
 
 import io.pulumi.azurenative.recoveryservices.inputs.AddRecoveryServicesProviderInputPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class ReplicationRecoveryServicesProviderArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="fabricName", required=true)
-      private final Input<String> fabricName;
+      private final Output<String> fabricName;
 
-    public Input<String> getFabricName() {
+    public Output<String> getFabricName() {
         return this.fabricName;
     }
 
@@ -31,9 +31,9 @@ public final class ReplicationRecoveryServicesProviderArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="properties", required=true)
-      private final Input<AddRecoveryServicesProviderInputPropertiesArgs> properties;
+      private final Output<AddRecoveryServicesProviderInputPropertiesArgs> properties;
 
-    public Input<AddRecoveryServicesProviderInputPropertiesArgs> getProperties() {
+    public Output<AddRecoveryServicesProviderInputPropertiesArgs> getProperties() {
         return this.properties;
     }
 
@@ -42,10 +42,10 @@ public final class ReplicationRecoveryServicesProviderArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="providerName")
-      private final @Nullable Input<String> providerName;
+      private final @Nullable Output<String> providerName;
 
-    public Input<String> getProviderName() {
-        return this.providerName == null ? Input.empty() : this.providerName;
+    public Output<String> getProviderName() {
+        return this.providerName == null ? Output.empty() : this.providerName;
     }
 
     /**
@@ -53,9 +53,9 @@ public final class ReplicationRecoveryServicesProviderArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -64,18 +64,18 @@ public final class ReplicationRecoveryServicesProviderArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="resourceName", required=true)
-      private final Input<String> resourceName;
+      private final Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
+    public Output<String> getPropResourceName() {
         return this.resourceName;
     }
 
     public ReplicationRecoveryServicesProviderArgs(
-        Input<String> fabricName,
-        Input<AddRecoveryServicesProviderInputPropertiesArgs> properties,
-        @Nullable Input<String> providerName,
-        Input<String> resourceGroupName,
-        Input<String> resourceName) {
+        Output<String> fabricName,
+        Output<AddRecoveryServicesProviderInputPropertiesArgs> properties,
+        @Nullable Output<String> providerName,
+        Output<String> resourceGroupName,
+        Output<String> resourceName) {
         this.fabricName = Objects.requireNonNull(fabricName, "expected parameter 'fabricName' to be non-null");
         this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
         this.providerName = providerName;
@@ -84,11 +84,11 @@ public final class ReplicationRecoveryServicesProviderArgs extends io.pulumi.res
     }
 
     private ReplicationRecoveryServicesProviderArgs() {
-        this.fabricName = Input.empty();
-        this.properties = Input.empty();
-        this.providerName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceName = Input.empty();
+        this.fabricName = Output.empty();
+        this.properties = Output.empty();
+        this.providerName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class ReplicationRecoveryServicesProviderArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private Input<String> fabricName;
-        private Input<AddRecoveryServicesProviderInputPropertiesArgs> properties;
-        private @Nullable Input<String> providerName;
-        private Input<String> resourceGroupName;
-        private Input<String> resourceName;
+        private Output<String> fabricName;
+        private Output<AddRecoveryServicesProviderInputPropertiesArgs> properties;
+        private @Nullable Output<String> providerName;
+        private Output<String> resourceGroupName;
+        private Output<String> resourceName;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class ReplicationRecoveryServicesProviderArgs extends io.pulumi.res
     	      this.resourceName = defaults.resourceName;
         }
 
-        public Builder fabricName(Input<String> fabricName) {
+        public Builder fabricName(Output<String> fabricName) {
             this.fabricName = Objects.requireNonNull(fabricName);
             return this;
         }
 
         public Builder fabricName(String fabricName) {
-            this.fabricName = Input.of(Objects.requireNonNull(fabricName));
+            this.fabricName = Output.of(Objects.requireNonNull(fabricName));
             return this;
         }
 
-        public Builder properties(Input<AddRecoveryServicesProviderInputPropertiesArgs> properties) {
+        public Builder properties(Output<AddRecoveryServicesProviderInputPropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
         public Builder properties(AddRecoveryServicesProviderInputPropertiesArgs properties) {
-            this.properties = Input.of(Objects.requireNonNull(properties));
+            this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
 
-        public Builder providerName(@Nullable Input<String> providerName) {
+        public Builder providerName(@Nullable Output<String> providerName) {
             this.providerName = providerName;
             return this;
         }
 
         public Builder providerName(@Nullable String providerName) {
-            this.providerName = Input.ofNullable(providerName);
+            this.providerName = Output.ofNullable(providerName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceName(Input<String> resourceName) {
+        public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
         public Builder resourceName(String resourceName) {
-            this.resourceName = Input.of(Objects.requireNonNull(resourceName));
+            this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
         }
         public ReplicationRecoveryServicesProviderArgs build() {

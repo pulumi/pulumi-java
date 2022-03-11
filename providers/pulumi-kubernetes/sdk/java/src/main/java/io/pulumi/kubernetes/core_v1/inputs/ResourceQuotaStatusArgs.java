@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -24,10 +24,10 @@ public final class ResourceQuotaStatusArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="hard")
-      private final @Nullable Input<Map<String,String>> hard;
+      private final @Nullable Output<Map<String,String>> hard;
 
-    public Input<Map<String,String>> getHard() {
-        return this.hard == null ? Input.empty() : this.hard;
+    public Output<Map<String,String>> getHard() {
+        return this.hard == null ? Output.empty() : this.hard;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ResourceQuotaStatusArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="used")
-      private final @Nullable Input<Map<String,String>> used;
+      private final @Nullable Output<Map<String,String>> used;
 
-    public Input<Map<String,String>> getUsed() {
-        return this.used == null ? Input.empty() : this.used;
+    public Output<Map<String,String>> getUsed() {
+        return this.used == null ? Output.empty() : this.used;
     }
 
     public ResourceQuotaStatusArgs(
-        @Nullable Input<Map<String,String>> hard,
-        @Nullable Input<Map<String,String>> used) {
+        @Nullable Output<Map<String,String>> hard,
+        @Nullable Output<Map<String,String>> used) {
         this.hard = hard;
         this.used = used;
     }
 
     private ResourceQuotaStatusArgs() {
-        this.hard = Input.empty();
-        this.used = Input.empty();
+        this.hard = Output.empty();
+        this.used = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ResourceQuotaStatusArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> hard;
-        private @Nullable Input<Map<String,String>> used;
+        private @Nullable Output<Map<String,String>> hard;
+        private @Nullable Output<Map<String,String>> used;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ResourceQuotaStatusArgs extends io.pulumi.resources.ResourceA
     	      this.used = defaults.used;
         }
 
-        public Builder hard(@Nullable Input<Map<String,String>> hard) {
+        public Builder hard(@Nullable Output<Map<String,String>> hard) {
             this.hard = hard;
             return this;
         }
 
         public Builder hard(@Nullable Map<String,String> hard) {
-            this.hard = Input.ofNullable(hard);
+            this.hard = Output.ofNullable(hard);
             return this;
         }
 
-        public Builder used(@Nullable Input<Map<String,String>> used) {
+        public Builder used(@Nullable Output<Map<String,String>> used) {
             this.used = used;
             return this;
         }
 
         public Builder used(@Nullable Map<String,String> used) {
-            this.used = Input.ofNullable(used);
+            this.used = Output.ofNullable(used);
             return this;
         }
         public ResourceQuotaStatusArgs build() {

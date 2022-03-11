@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class DefaultObjectACLState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="bucket")
-      private final @Nullable Input<String> bucket;
+      private final @Nullable Output<String> bucket;
 
-    public Input<String> getBucket() {
-        return this.bucket == null ? Input.empty() : this.bucket;
+    public Output<String> getBucket() {
+        return this.bucket == null ? Output.empty() : this.bucket;
     }
 
     /**
@@ -33,22 +33,22 @@ public final class DefaultObjectACLState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="roleEntities")
-      private final @Nullable Input<List<String>> roleEntities;
+      private final @Nullable Output<List<String>> roleEntities;
 
-    public Input<List<String>> getRoleEntities() {
-        return this.roleEntities == null ? Input.empty() : this.roleEntities;
+    public Output<List<String>> getRoleEntities() {
+        return this.roleEntities == null ? Output.empty() : this.roleEntities;
     }
 
     public DefaultObjectACLState(
-        @Nullable Input<String> bucket,
-        @Nullable Input<List<String>> roleEntities) {
+        @Nullable Output<String> bucket,
+        @Nullable Output<List<String>> roleEntities) {
         this.bucket = bucket;
         this.roleEntities = roleEntities;
     }
 
     private DefaultObjectACLState() {
-        this.bucket = Input.empty();
-        this.roleEntities = Input.empty();
+        this.bucket = Output.empty();
+        this.roleEntities = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class DefaultObjectACLState extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bucket;
-        private @Nullable Input<List<String>> roleEntities;
+        private @Nullable Output<String> bucket;
+        private @Nullable Output<List<String>> roleEntities;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class DefaultObjectACLState extends io.pulumi.resources.ResourceArg
     	      this.roleEntities = defaults.roleEntities;
         }
 
-        public Builder bucket(@Nullable Input<String> bucket) {
+        public Builder bucket(@Nullable Output<String> bucket) {
             this.bucket = bucket;
             return this;
         }
 
         public Builder bucket(@Nullable String bucket) {
-            this.bucket = Input.ofNullable(bucket);
+            this.bucket = Output.ofNullable(bucket);
             return this;
         }
 
-        public Builder roleEntities(@Nullable Input<List<String>> roleEntities) {
+        public Builder roleEntities(@Nullable Output<List<String>> roleEntities) {
             this.roleEntities = roleEntities;
             return this;
         }
 
         public Builder roleEntities(@Nullable List<String> roleEntities) {
-            this.roleEntities = Input.ofNullable(roleEntities);
+            this.roleEntities = Output.ofNullable(roleEntities);
             return this;
         }
         public DefaultObjectACLState build() {

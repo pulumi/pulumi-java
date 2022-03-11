@@ -8,7 +8,7 @@ import io.pulumi.aws.quicksight.inputs.DataSourceParametersGetArgs;
 import io.pulumi.aws.quicksight.inputs.DataSourcePermissionGetArgs;
 import io.pulumi.aws.quicksight.inputs.DataSourceSslPropertiesGetArgs;
 import io.pulumi.aws.quicksight.inputs.DataSourceVpcConnectionPropertiesGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="awsAccountId")
-      private final @Nullable Input<String> awsAccountId;
+      private final @Nullable Output<String> awsAccountId;
 
-    public Input<String> getAwsAccountId() {
-        return this.awsAccountId == null ? Input.empty() : this.awsAccountId;
+    public Output<String> getAwsAccountId() {
+        return this.awsAccountId == null ? Output.empty() : this.awsAccountId;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="credentials")
-      private final @Nullable Input<DataSourceCredentialsGetArgs> credentials;
+      private final @Nullable Output<DataSourceCredentialsGetArgs> credentials;
 
-    public Input<DataSourceCredentialsGetArgs> getCredentials() {
-        return this.credentials == null ? Input.empty() : this.credentials;
+    public Output<DataSourceCredentialsGetArgs> getCredentials() {
+        return this.credentials == null ? Output.empty() : this.credentials;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataSourceId")
-      private final @Nullable Input<String> dataSourceId;
+      private final @Nullable Output<String> dataSourceId;
 
-    public Input<String> getDataSourceId() {
-        return this.dataSourceId == null ? Input.empty() : this.dataSourceId;
+    public Output<String> getDataSourceId() {
+        return this.dataSourceId == null ? Output.empty() : this.dataSourceId;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<DataSourceParametersGetArgs> parameters;
+      private final @Nullable Output<DataSourceParametersGetArgs> parameters;
 
-    public Input<DataSourceParametersGetArgs> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<DataSourceParametersGetArgs> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permissions")
-      private final @Nullable Input<List<DataSourcePermissionGetArgs>> permissions;
+      private final @Nullable Output<List<DataSourcePermissionGetArgs>> permissions;
 
-    public Input<List<DataSourcePermissionGetArgs>> getPermissions() {
-        return this.permissions == null ? Input.empty() : this.permissions;
+    public Output<List<DataSourcePermissionGetArgs>> getPermissions() {
+        return this.permissions == null ? Output.empty() : this.permissions;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sslProperties")
-      private final @Nullable Input<DataSourceSslPropertiesGetArgs> sslProperties;
+      private final @Nullable Output<DataSourceSslPropertiesGetArgs> sslProperties;
 
-    public Input<DataSourceSslPropertiesGetArgs> getSslProperties() {
-        return this.sslProperties == null ? Input.empty() : this.sslProperties;
+    public Output<DataSourceSslPropertiesGetArgs> getSslProperties() {
+        return this.sslProperties == null ? Output.empty() : this.sslProperties;
     }
 
     /**
@@ -114,10 +114,10 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -125,10 +125,10 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -136,10 +136,10 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -147,25 +147,25 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcConnectionProperties")
-      private final @Nullable Input<DataSourceVpcConnectionPropertiesGetArgs> vpcConnectionProperties;
+      private final @Nullable Output<DataSourceVpcConnectionPropertiesGetArgs> vpcConnectionProperties;
 
-    public Input<DataSourceVpcConnectionPropertiesGetArgs> getVpcConnectionProperties() {
-        return this.vpcConnectionProperties == null ? Input.empty() : this.vpcConnectionProperties;
+    public Output<DataSourceVpcConnectionPropertiesGetArgs> getVpcConnectionProperties() {
+        return this.vpcConnectionProperties == null ? Output.empty() : this.vpcConnectionProperties;
     }
 
     public DataSourceState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> awsAccountId,
-        @Nullable Input<DataSourceCredentialsGetArgs> credentials,
-        @Nullable Input<String> dataSourceId,
-        @Nullable Input<String> name,
-        @Nullable Input<DataSourceParametersGetArgs> parameters,
-        @Nullable Input<List<DataSourcePermissionGetArgs>> permissions,
-        @Nullable Input<DataSourceSslPropertiesGetArgs> sslProperties,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> type,
-        @Nullable Input<DataSourceVpcConnectionPropertiesGetArgs> vpcConnectionProperties) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> awsAccountId,
+        @Nullable Output<DataSourceCredentialsGetArgs> credentials,
+        @Nullable Output<String> dataSourceId,
+        @Nullable Output<String> name,
+        @Nullable Output<DataSourceParametersGetArgs> parameters,
+        @Nullable Output<List<DataSourcePermissionGetArgs>> permissions,
+        @Nullable Output<DataSourceSslPropertiesGetArgs> sslProperties,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> type,
+        @Nullable Output<DataSourceVpcConnectionPropertiesGetArgs> vpcConnectionProperties) {
         this.arn = arn;
         this.awsAccountId = awsAccountId;
         this.credentials = credentials;
@@ -181,18 +181,18 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DataSourceState() {
-        this.arn = Input.empty();
-        this.awsAccountId = Input.empty();
-        this.credentials = Input.empty();
-        this.dataSourceId = Input.empty();
-        this.name = Input.empty();
-        this.parameters = Input.empty();
-        this.permissions = Input.empty();
-        this.sslProperties = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.type = Input.empty();
-        this.vpcConnectionProperties = Input.empty();
+        this.arn = Output.empty();
+        this.awsAccountId = Output.empty();
+        this.credentials = Output.empty();
+        this.dataSourceId = Output.empty();
+        this.name = Output.empty();
+        this.parameters = Output.empty();
+        this.permissions = Output.empty();
+        this.sslProperties = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.type = Output.empty();
+        this.vpcConnectionProperties = Output.empty();
     }
 
     public static Builder builder() {
@@ -204,18 +204,18 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> awsAccountId;
-        private @Nullable Input<DataSourceCredentialsGetArgs> credentials;
-        private @Nullable Input<String> dataSourceId;
-        private @Nullable Input<String> name;
-        private @Nullable Input<DataSourceParametersGetArgs> parameters;
-        private @Nullable Input<List<DataSourcePermissionGetArgs>> permissions;
-        private @Nullable Input<DataSourceSslPropertiesGetArgs> sslProperties;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> type;
-        private @Nullable Input<DataSourceVpcConnectionPropertiesGetArgs> vpcConnectionProperties;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> awsAccountId;
+        private @Nullable Output<DataSourceCredentialsGetArgs> credentials;
+        private @Nullable Output<String> dataSourceId;
+        private @Nullable Output<String> name;
+        private @Nullable Output<DataSourceParametersGetArgs> parameters;
+        private @Nullable Output<List<DataSourcePermissionGetArgs>> permissions;
+        private @Nullable Output<DataSourceSslPropertiesGetArgs> sslProperties;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> type;
+        private @Nullable Output<DataSourceVpcConnectionPropertiesGetArgs> vpcConnectionProperties;
 
         public Builder() {
     	      // Empty
@@ -237,123 +237,123 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
     	      this.vpcConnectionProperties = defaults.vpcConnectionProperties;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder awsAccountId(@Nullable Input<String> awsAccountId) {
+        public Builder awsAccountId(@Nullable Output<String> awsAccountId) {
             this.awsAccountId = awsAccountId;
             return this;
         }
 
         public Builder awsAccountId(@Nullable String awsAccountId) {
-            this.awsAccountId = Input.ofNullable(awsAccountId);
+            this.awsAccountId = Output.ofNullable(awsAccountId);
             return this;
         }
 
-        public Builder credentials(@Nullable Input<DataSourceCredentialsGetArgs> credentials) {
+        public Builder credentials(@Nullable Output<DataSourceCredentialsGetArgs> credentials) {
             this.credentials = credentials;
             return this;
         }
 
         public Builder credentials(@Nullable DataSourceCredentialsGetArgs credentials) {
-            this.credentials = Input.ofNullable(credentials);
+            this.credentials = Output.ofNullable(credentials);
             return this;
         }
 
-        public Builder dataSourceId(@Nullable Input<String> dataSourceId) {
+        public Builder dataSourceId(@Nullable Output<String> dataSourceId) {
             this.dataSourceId = dataSourceId;
             return this;
         }
 
         public Builder dataSourceId(@Nullable String dataSourceId) {
-            this.dataSourceId = Input.ofNullable(dataSourceId);
+            this.dataSourceId = Output.ofNullable(dataSourceId);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<DataSourceParametersGetArgs> parameters) {
+        public Builder parameters(@Nullable Output<DataSourceParametersGetArgs> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable DataSourceParametersGetArgs parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder permissions(@Nullable Input<List<DataSourcePermissionGetArgs>> permissions) {
+        public Builder permissions(@Nullable Output<List<DataSourcePermissionGetArgs>> permissions) {
             this.permissions = permissions;
             return this;
         }
 
         public Builder permissions(@Nullable List<DataSourcePermissionGetArgs> permissions) {
-            this.permissions = Input.ofNullable(permissions);
+            this.permissions = Output.ofNullable(permissions);
             return this;
         }
 
-        public Builder sslProperties(@Nullable Input<DataSourceSslPropertiesGetArgs> sslProperties) {
+        public Builder sslProperties(@Nullable Output<DataSourceSslPropertiesGetArgs> sslProperties) {
             this.sslProperties = sslProperties;
             return this;
         }
 
         public Builder sslProperties(@Nullable DataSourceSslPropertiesGetArgs sslProperties) {
-            this.sslProperties = Input.ofNullable(sslProperties);
+            this.sslProperties = Output.ofNullable(sslProperties);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder vpcConnectionProperties(@Nullable Input<DataSourceVpcConnectionPropertiesGetArgs> vpcConnectionProperties) {
+        public Builder vpcConnectionProperties(@Nullable Output<DataSourceVpcConnectionPropertiesGetArgs> vpcConnectionProperties) {
             this.vpcConnectionProperties = vpcConnectionProperties;
             return this;
         }
 
         public Builder vpcConnectionProperties(@Nullable DataSourceVpcConnectionPropertiesGetArgs vpcConnectionProperties) {
-            this.vpcConnectionProperties = Input.ofNullable(vpcConnectionProperties);
+            this.vpcConnectionProperties = Output.ofNullable(vpcConnectionProperties);
             return this;
         }
         public DataSourceState build() {

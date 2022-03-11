@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.enums.AttachedDiskInitializeParamsOnUpdateAction;
 import io.pulumi.googlenative.compute_beta.inputs.CustomerEncryptionKeyArgs;
@@ -29,10 +29,10 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="diskName")
-      private final @Nullable Input<String> diskName;
+      private final @Nullable Output<String> diskName;
 
-    public Input<String> getDiskName() {
-        return this.diskName == null ? Input.empty() : this.diskName;
+    public Output<String> getDiskName() {
+        return this.diskName == null ? Output.empty() : this.diskName;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="diskSizeGb")
-      private final @Nullable Input<String> diskSizeGb;
+      private final @Nullable Output<String> diskSizeGb;
 
-    public Input<String> getDiskSizeGb() {
-        return this.diskSizeGb == null ? Input.empty() : this.diskSizeGb;
+    public Output<String> getDiskSizeGb() {
+        return this.diskSizeGb == null ? Output.empty() : this.diskSizeGb;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="diskType")
-      private final @Nullable Input<String> diskType;
+      private final @Nullable Output<String> diskType;
 
-    public Input<String> getDiskType() {
-        return this.diskType == null ? Input.empty() : this.diskType;
+    public Output<String> getDiskType() {
+        return this.diskType == null ? Output.empty() : this.diskType;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="guestOsFeatures")
-      private final @Nullable Input<List<GuestOsFeatureArgs>> guestOsFeatures;
+      private final @Nullable Output<List<GuestOsFeatureArgs>> guestOsFeatures;
 
-    public Input<List<GuestOsFeatureArgs>> getGuestOsFeatures() {
-        return this.guestOsFeatures == null ? Input.empty() : this.guestOsFeatures;
+    public Output<List<GuestOsFeatureArgs>> getGuestOsFeatures() {
+        return this.guestOsFeatures == null ? Output.empty() : this.guestOsFeatures;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="licenses")
-      private final @Nullable Input<List<String>> licenses;
+      private final @Nullable Output<List<String>> licenses;
 
-    public Input<List<String>> getLicenses() {
-        return this.licenses == null ? Input.empty() : this.licenses;
+    public Output<List<String>> getLicenses() {
+        return this.licenses == null ? Output.empty() : this.licenses;
     }
 
     /**
@@ -106,10 +106,10 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="multiWriter")
-      private final @Nullable Input<Boolean> multiWriter;
+      private final @Nullable Output<Boolean> multiWriter;
 
-    public Input<Boolean> getMultiWriter() {
-        return this.multiWriter == null ? Input.empty() : this.multiWriter;
+    public Output<Boolean> getMultiWriter() {
+        return this.multiWriter == null ? Output.empty() : this.multiWriter;
     }
 
     /**
@@ -117,10 +117,10 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="onUpdateAction")
-      private final @Nullable Input<AttachedDiskInitializeParamsOnUpdateAction> onUpdateAction;
+      private final @Nullable Output<AttachedDiskInitializeParamsOnUpdateAction> onUpdateAction;
 
-    public Input<AttachedDiskInitializeParamsOnUpdateAction> getOnUpdateAction() {
-        return this.onUpdateAction == null ? Input.empty() : this.onUpdateAction;
+    public Output<AttachedDiskInitializeParamsOnUpdateAction> getOnUpdateAction() {
+        return this.onUpdateAction == null ? Output.empty() : this.onUpdateAction;
     }
 
     /**
@@ -128,10 +128,10 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="provisionedIops")
-      private final @Nullable Input<String> provisionedIops;
+      private final @Nullable Output<String> provisionedIops;
 
-    public Input<String> getProvisionedIops() {
-        return this.provisionedIops == null ? Input.empty() : this.provisionedIops;
+    public Output<String> getProvisionedIops() {
+        return this.provisionedIops == null ? Output.empty() : this.provisionedIops;
     }
 
     /**
@@ -139,10 +139,10 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourcePolicies")
-      private final @Nullable Input<List<String>> resourcePolicies;
+      private final @Nullable Output<List<String>> resourcePolicies;
 
-    public Input<List<String>> getResourcePolicies() {
-        return this.resourcePolicies == null ? Input.empty() : this.resourcePolicies;
+    public Output<List<String>> getResourcePolicies() {
+        return this.resourcePolicies == null ? Output.empty() : this.resourcePolicies;
     }
 
     /**
@@ -150,10 +150,10 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sourceImage")
-      private final @Nullable Input<String> sourceImage;
+      private final @Nullable Output<String> sourceImage;
 
-    public Input<String> getSourceImage() {
-        return this.sourceImage == null ? Input.empty() : this.sourceImage;
+    public Output<String> getSourceImage() {
+        return this.sourceImage == null ? Output.empty() : this.sourceImage;
     }
 
     /**
@@ -161,10 +161,10 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sourceImageEncryptionKey")
-      private final @Nullable Input<CustomerEncryptionKeyArgs> sourceImageEncryptionKey;
+      private final @Nullable Output<CustomerEncryptionKeyArgs> sourceImageEncryptionKey;
 
-    public Input<CustomerEncryptionKeyArgs> getSourceImageEncryptionKey() {
-        return this.sourceImageEncryptionKey == null ? Input.empty() : this.sourceImageEncryptionKey;
+    public Output<CustomerEncryptionKeyArgs> getSourceImageEncryptionKey() {
+        return this.sourceImageEncryptionKey == null ? Output.empty() : this.sourceImageEncryptionKey;
     }
 
     /**
@@ -172,10 +172,10 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sourceSnapshot")
-      private final @Nullable Input<String> sourceSnapshot;
+      private final @Nullable Output<String> sourceSnapshot;
 
-    public Input<String> getSourceSnapshot() {
-        return this.sourceSnapshot == null ? Input.empty() : this.sourceSnapshot;
+    public Output<String> getSourceSnapshot() {
+        return this.sourceSnapshot == null ? Output.empty() : this.sourceSnapshot;
     }
 
     /**
@@ -183,28 +183,28 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sourceSnapshotEncryptionKey")
-      private final @Nullable Input<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey;
+      private final @Nullable Output<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey;
 
-    public Input<CustomerEncryptionKeyArgs> getSourceSnapshotEncryptionKey() {
-        return this.sourceSnapshotEncryptionKey == null ? Input.empty() : this.sourceSnapshotEncryptionKey;
+    public Output<CustomerEncryptionKeyArgs> getSourceSnapshotEncryptionKey() {
+        return this.sourceSnapshotEncryptionKey == null ? Output.empty() : this.sourceSnapshotEncryptionKey;
     }
 
     public AttachedDiskInitializeParamsArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> diskName,
-        @Nullable Input<String> diskSizeGb,
-        @Nullable Input<String> diskType,
-        @Nullable Input<List<GuestOsFeatureArgs>> guestOsFeatures,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<List<String>> licenses,
-        @Nullable Input<Boolean> multiWriter,
-        @Nullable Input<AttachedDiskInitializeParamsOnUpdateAction> onUpdateAction,
-        @Nullable Input<String> provisionedIops,
-        @Nullable Input<List<String>> resourcePolicies,
-        @Nullable Input<String> sourceImage,
-        @Nullable Input<CustomerEncryptionKeyArgs> sourceImageEncryptionKey,
-        @Nullable Input<String> sourceSnapshot,
-        @Nullable Input<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> diskName,
+        @Nullable Output<String> diskSizeGb,
+        @Nullable Output<String> diskType,
+        @Nullable Output<List<GuestOsFeatureArgs>> guestOsFeatures,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<List<String>> licenses,
+        @Nullable Output<Boolean> multiWriter,
+        @Nullable Output<AttachedDiskInitializeParamsOnUpdateAction> onUpdateAction,
+        @Nullable Output<String> provisionedIops,
+        @Nullable Output<List<String>> resourcePolicies,
+        @Nullable Output<String> sourceImage,
+        @Nullable Output<CustomerEncryptionKeyArgs> sourceImageEncryptionKey,
+        @Nullable Output<String> sourceSnapshot,
+        @Nullable Output<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey) {
         this.description = description;
         this.diskName = diskName;
         this.diskSizeGb = diskSizeGb;
@@ -223,21 +223,21 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
     }
 
     private AttachedDiskInitializeParamsArgs() {
-        this.description = Input.empty();
-        this.diskName = Input.empty();
-        this.diskSizeGb = Input.empty();
-        this.diskType = Input.empty();
-        this.guestOsFeatures = Input.empty();
-        this.labels = Input.empty();
-        this.licenses = Input.empty();
-        this.multiWriter = Input.empty();
-        this.onUpdateAction = Input.empty();
-        this.provisionedIops = Input.empty();
-        this.resourcePolicies = Input.empty();
-        this.sourceImage = Input.empty();
-        this.sourceImageEncryptionKey = Input.empty();
-        this.sourceSnapshot = Input.empty();
-        this.sourceSnapshotEncryptionKey = Input.empty();
+        this.description = Output.empty();
+        this.diskName = Output.empty();
+        this.diskSizeGb = Output.empty();
+        this.diskType = Output.empty();
+        this.guestOsFeatures = Output.empty();
+        this.labels = Output.empty();
+        this.licenses = Output.empty();
+        this.multiWriter = Output.empty();
+        this.onUpdateAction = Output.empty();
+        this.provisionedIops = Output.empty();
+        this.resourcePolicies = Output.empty();
+        this.sourceImage = Output.empty();
+        this.sourceImageEncryptionKey = Output.empty();
+        this.sourceSnapshot = Output.empty();
+        this.sourceSnapshotEncryptionKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -249,21 +249,21 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> diskName;
-        private @Nullable Input<String> diskSizeGb;
-        private @Nullable Input<String> diskType;
-        private @Nullable Input<List<GuestOsFeatureArgs>> guestOsFeatures;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<List<String>> licenses;
-        private @Nullable Input<Boolean> multiWriter;
-        private @Nullable Input<AttachedDiskInitializeParamsOnUpdateAction> onUpdateAction;
-        private @Nullable Input<String> provisionedIops;
-        private @Nullable Input<List<String>> resourcePolicies;
-        private @Nullable Input<String> sourceImage;
-        private @Nullable Input<CustomerEncryptionKeyArgs> sourceImageEncryptionKey;
-        private @Nullable Input<String> sourceSnapshot;
-        private @Nullable Input<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> diskName;
+        private @Nullable Output<String> diskSizeGb;
+        private @Nullable Output<String> diskType;
+        private @Nullable Output<List<GuestOsFeatureArgs>> guestOsFeatures;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<List<String>> licenses;
+        private @Nullable Output<Boolean> multiWriter;
+        private @Nullable Output<AttachedDiskInitializeParamsOnUpdateAction> onUpdateAction;
+        private @Nullable Output<String> provisionedIops;
+        private @Nullable Output<List<String>> resourcePolicies;
+        private @Nullable Output<String> sourceImage;
+        private @Nullable Output<CustomerEncryptionKeyArgs> sourceImageEncryptionKey;
+        private @Nullable Output<String> sourceSnapshot;
+        private @Nullable Output<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey;
 
         public Builder() {
     	      // Empty
@@ -288,153 +288,153 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
     	      this.sourceSnapshotEncryptionKey = defaults.sourceSnapshotEncryptionKey;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder diskName(@Nullable Input<String> diskName) {
+        public Builder diskName(@Nullable Output<String> diskName) {
             this.diskName = diskName;
             return this;
         }
 
         public Builder diskName(@Nullable String diskName) {
-            this.diskName = Input.ofNullable(diskName);
+            this.diskName = Output.ofNullable(diskName);
             return this;
         }
 
-        public Builder diskSizeGb(@Nullable Input<String> diskSizeGb) {
+        public Builder diskSizeGb(@Nullable Output<String> diskSizeGb) {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
 
         public Builder diskSizeGb(@Nullable String diskSizeGb) {
-            this.diskSizeGb = Input.ofNullable(diskSizeGb);
+            this.diskSizeGb = Output.ofNullable(diskSizeGb);
             return this;
         }
 
-        public Builder diskType(@Nullable Input<String> diskType) {
+        public Builder diskType(@Nullable Output<String> diskType) {
             this.diskType = diskType;
             return this;
         }
 
         public Builder diskType(@Nullable String diskType) {
-            this.diskType = Input.ofNullable(diskType);
+            this.diskType = Output.ofNullable(diskType);
             return this;
         }
 
-        public Builder guestOsFeatures(@Nullable Input<List<GuestOsFeatureArgs>> guestOsFeatures) {
+        public Builder guestOsFeatures(@Nullable Output<List<GuestOsFeatureArgs>> guestOsFeatures) {
             this.guestOsFeatures = guestOsFeatures;
             return this;
         }
 
         public Builder guestOsFeatures(@Nullable List<GuestOsFeatureArgs> guestOsFeatures) {
-            this.guestOsFeatures = Input.ofNullable(guestOsFeatures);
+            this.guestOsFeatures = Output.ofNullable(guestOsFeatures);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder licenses(@Nullable Input<List<String>> licenses) {
+        public Builder licenses(@Nullable Output<List<String>> licenses) {
             this.licenses = licenses;
             return this;
         }
 
         public Builder licenses(@Nullable List<String> licenses) {
-            this.licenses = Input.ofNullable(licenses);
+            this.licenses = Output.ofNullable(licenses);
             return this;
         }
 
-        public Builder multiWriter(@Nullable Input<Boolean> multiWriter) {
+        public Builder multiWriter(@Nullable Output<Boolean> multiWriter) {
             this.multiWriter = multiWriter;
             return this;
         }
 
         public Builder multiWriter(@Nullable Boolean multiWriter) {
-            this.multiWriter = Input.ofNullable(multiWriter);
+            this.multiWriter = Output.ofNullable(multiWriter);
             return this;
         }
 
-        public Builder onUpdateAction(@Nullable Input<AttachedDiskInitializeParamsOnUpdateAction> onUpdateAction) {
+        public Builder onUpdateAction(@Nullable Output<AttachedDiskInitializeParamsOnUpdateAction> onUpdateAction) {
             this.onUpdateAction = onUpdateAction;
             return this;
         }
 
         public Builder onUpdateAction(@Nullable AttachedDiskInitializeParamsOnUpdateAction onUpdateAction) {
-            this.onUpdateAction = Input.ofNullable(onUpdateAction);
+            this.onUpdateAction = Output.ofNullable(onUpdateAction);
             return this;
         }
 
-        public Builder provisionedIops(@Nullable Input<String> provisionedIops) {
+        public Builder provisionedIops(@Nullable Output<String> provisionedIops) {
             this.provisionedIops = provisionedIops;
             return this;
         }
 
         public Builder provisionedIops(@Nullable String provisionedIops) {
-            this.provisionedIops = Input.ofNullable(provisionedIops);
+            this.provisionedIops = Output.ofNullable(provisionedIops);
             return this;
         }
 
-        public Builder resourcePolicies(@Nullable Input<List<String>> resourcePolicies) {
+        public Builder resourcePolicies(@Nullable Output<List<String>> resourcePolicies) {
             this.resourcePolicies = resourcePolicies;
             return this;
         }
 
         public Builder resourcePolicies(@Nullable List<String> resourcePolicies) {
-            this.resourcePolicies = Input.ofNullable(resourcePolicies);
+            this.resourcePolicies = Output.ofNullable(resourcePolicies);
             return this;
         }
 
-        public Builder sourceImage(@Nullable Input<String> sourceImage) {
+        public Builder sourceImage(@Nullable Output<String> sourceImage) {
             this.sourceImage = sourceImage;
             return this;
         }
 
         public Builder sourceImage(@Nullable String sourceImage) {
-            this.sourceImage = Input.ofNullable(sourceImage);
+            this.sourceImage = Output.ofNullable(sourceImage);
             return this;
         }
 
-        public Builder sourceImageEncryptionKey(@Nullable Input<CustomerEncryptionKeyArgs> sourceImageEncryptionKey) {
+        public Builder sourceImageEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> sourceImageEncryptionKey) {
             this.sourceImageEncryptionKey = sourceImageEncryptionKey;
             return this;
         }
 
         public Builder sourceImageEncryptionKey(@Nullable CustomerEncryptionKeyArgs sourceImageEncryptionKey) {
-            this.sourceImageEncryptionKey = Input.ofNullable(sourceImageEncryptionKey);
+            this.sourceImageEncryptionKey = Output.ofNullable(sourceImageEncryptionKey);
             return this;
         }
 
-        public Builder sourceSnapshot(@Nullable Input<String> sourceSnapshot) {
+        public Builder sourceSnapshot(@Nullable Output<String> sourceSnapshot) {
             this.sourceSnapshot = sourceSnapshot;
             return this;
         }
 
         public Builder sourceSnapshot(@Nullable String sourceSnapshot) {
-            this.sourceSnapshot = Input.ofNullable(sourceSnapshot);
+            this.sourceSnapshot = Output.ofNullable(sourceSnapshot);
             return this;
         }
 
-        public Builder sourceSnapshotEncryptionKey(@Nullable Input<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey) {
+        public Builder sourceSnapshotEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey) {
             this.sourceSnapshotEncryptionKey = sourceSnapshotEncryptionKey;
             return this;
         }
 
         public Builder sourceSnapshotEncryptionKey(@Nullable CustomerEncryptionKeyArgs sourceSnapshotEncryptionKey) {
-            this.sourceSnapshotEncryptionKey = Input.ofNullable(sourceSnapshotEncryptionKey);
+            this.sourceSnapshotEncryptionKey = Output.ofNullable(sourceSnapshotEncryptionKey);
             return this;
         }
         public AttachedDiskInitializeParamsArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apprunner;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,9 +20,9 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectionName", required=true)
-      private final Input<String> connectionName;
+      private final Output<String> connectionName;
 
-    public Input<String> getConnectionName() {
+    public Output<String> getConnectionName() {
         return this.connectionName;
     }
 
@@ -31,9 +31,9 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="providerType", required=true)
-      private final Input<String> providerType;
+      private final Output<String> providerType;
 
-    public Input<String> getProviderType() {
+    public Output<String> getProviderType() {
         return this.providerType;
     }
 
@@ -42,25 +42,25 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ConnectionArgs(
-        Input<String> connectionName,
-        Input<String> providerType,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> connectionName,
+        Output<String> providerType,
+        @Nullable Output<Map<String,String>> tags) {
         this.connectionName = Objects.requireNonNull(connectionName, "expected parameter 'connectionName' to be non-null");
         this.providerType = Objects.requireNonNull(providerType, "expected parameter 'providerType' to be non-null");
         this.tags = tags;
     }
 
     private ConnectionArgs() {
-        this.connectionName = Input.empty();
-        this.providerType = Input.empty();
-        this.tags = Input.empty();
+        this.connectionName = Output.empty();
+        this.providerType = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> connectionName;
-        private Input<String> providerType;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> connectionName;
+        private Output<String> providerType;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder connectionName(Input<String> connectionName) {
+        public Builder connectionName(Output<String> connectionName) {
             this.connectionName = Objects.requireNonNull(connectionName);
             return this;
         }
 
         public Builder connectionName(String connectionName) {
-            this.connectionName = Input.of(Objects.requireNonNull(connectionName));
+            this.connectionName = Output.of(Objects.requireNonNull(connectionName));
             return this;
         }
 
-        public Builder providerType(Input<String> providerType) {
+        public Builder providerType(Output<String> providerType) {
             this.providerType = Objects.requireNonNull(providerType);
             return this;
         }
 
         public Builder providerType(String providerType) {
-            this.providerType = Input.of(Objects.requireNonNull(providerType));
+            this.providerType = Output.of(Objects.requireNonNull(providerType));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ConnectionArgs build() {

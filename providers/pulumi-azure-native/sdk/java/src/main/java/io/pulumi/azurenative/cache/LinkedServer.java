@@ -6,7 +6,6 @@ package io.pulumi.azurenative.cache;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.cache.LinkedServerArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -154,24 +153,24 @@ public class LinkedServer extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public LinkedServer(String name, LinkedServerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:cache:LinkedServer", name, args == null ? LinkedServerArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:cache:LinkedServer", name, args == null ? LinkedServerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private LinkedServer(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private LinkedServer(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:cache:LinkedServer", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:cache/v20170201:LinkedServer").build()),
-                Input.of(Alias.builder().setType("azure-native:cache/v20171001:LinkedServer").build()),
-                Input.of(Alias.builder().setType("azure-native:cache/v20180301:LinkedServer").build()),
-                Input.of(Alias.builder().setType("azure-native:cache/v20190701:LinkedServer").build()),
-                Input.of(Alias.builder().setType("azure-native:cache/v20200601:LinkedServer").build()),
-                Input.of(Alias.builder().setType("azure-native:cache/v20201201:LinkedServer").build()),
-                Input.of(Alias.builder().setType("azure-native:cache/v20210601:LinkedServer").build())
+                Output.of(Alias.builder().setType("azure-native:cache/v20170201:LinkedServer").build()),
+                Output.of(Alias.builder().setType("azure-native:cache/v20171001:LinkedServer").build()),
+                Output.of(Alias.builder().setType("azure-native:cache/v20180301:LinkedServer").build()),
+                Output.of(Alias.builder().setType("azure-native:cache/v20190701:LinkedServer").build()),
+                Output.of(Alias.builder().setType("azure-native:cache/v20200601:LinkedServer").build()),
+                Output.of(Alias.builder().setType("azure-native:cache/v20201201:LinkedServer").build()),
+                Output.of(Alias.builder().setType("azure-native:cache/v20210601:LinkedServer").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -185,7 +184,7 @@ public class LinkedServer extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static LinkedServer get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static LinkedServer get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new LinkedServer(name, id, options);
     }
 }

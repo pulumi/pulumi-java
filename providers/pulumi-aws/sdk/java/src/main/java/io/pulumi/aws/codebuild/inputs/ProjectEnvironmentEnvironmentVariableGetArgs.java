@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codebuild.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class ProjectEnvironmentEnvironmentVariableGetArgs extends io.pulum
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -30,10 +30,10 @@ public final class ProjectEnvironmentEnvironmentVariableGetArgs extends io.pulum
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class ProjectEnvironmentEnvironmentVariableGetArgs extends io.pulum
      * 
      */
     @InputImport(name="value", required=true)
-      private final Input<String> value;
+      private final Output<String> value;
 
-    public Input<String> getValue() {
+    public Output<String> getValue() {
         return this.value;
     }
 
     public ProjectEnvironmentEnvironmentVariableGetArgs(
-        Input<String> name,
-        @Nullable Input<String> type,
-        Input<String> value) {
+        Output<String> name,
+        @Nullable Output<String> type,
+        Output<String> value) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.type = type;
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private ProjectEnvironmentEnvironmentVariableGetArgs() {
-        this.name = Input.empty();
-        this.type = Input.empty();
-        this.value = Input.empty();
+        this.name = Output.empty();
+        this.type = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class ProjectEnvironmentEnvironmentVariableGetArgs extends io.pulum
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private @Nullable Input<String> type;
-        private Input<String> value;
+        private Output<String> name;
+        private @Nullable Output<String> type;
+        private Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class ProjectEnvironmentEnvironmentVariableGetArgs extends io.pulum
     	      this.value = defaults.value;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder value(Input<String> value) {
+        public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(String value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public ProjectEnvironmentEnvironmentVariableGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class ContainerServiceSshPublicKeyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="keyData", required=true)
-      private final Input<String> keyData;
+      private final Output<String> keyData;
 
-    public Input<String> getKeyData() {
+    public Output<String> getKeyData() {
         return this.keyData;
     }
 
-    public ContainerServiceSshPublicKeyArgs(Input<String> keyData) {
+    public ContainerServiceSshPublicKeyArgs(Output<String> keyData) {
         this.keyData = Objects.requireNonNull(keyData, "expected parameter 'keyData' to be non-null");
     }
 
     private ContainerServiceSshPublicKeyArgs() {
-        this.keyData = Input.empty();
+        this.keyData = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class ContainerServiceSshPublicKeyArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<String> keyData;
+        private Output<String> keyData;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class ContainerServiceSshPublicKeyArgs extends io.pulumi.resources.
     	      this.keyData = defaults.keyData;
         }
 
-        public Builder keyData(Input<String> keyData) {
+        public Builder keyData(Output<String> keyData) {
             this.keyData = Objects.requireNonNull(keyData);
             return this;
         }
 
         public Builder keyData(String keyData) {
-            this.keyData = Input.of(Objects.requireNonNull(keyData));
+            this.keyData = Output.of(Objects.requireNonNull(keyData));
             return this;
         }
         public ContainerServiceSshPublicKeyArgs build() {

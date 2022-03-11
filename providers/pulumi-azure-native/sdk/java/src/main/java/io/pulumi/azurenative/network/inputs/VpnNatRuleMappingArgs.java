@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class VpnNatRuleMappingArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="addressSpace")
-      private final @Nullable Input<String> addressSpace;
+      private final @Nullable Output<String> addressSpace;
 
-    public Input<String> getAddressSpace() {
-        return this.addressSpace == null ? Input.empty() : this.addressSpace;
+    public Output<String> getAddressSpace() {
+        return this.addressSpace == null ? Output.empty() : this.addressSpace;
     }
 
-    public VpnNatRuleMappingArgs(@Nullable Input<String> addressSpace) {
+    public VpnNatRuleMappingArgs(@Nullable Output<String> addressSpace) {
         this.addressSpace = addressSpace;
     }
 
     private VpnNatRuleMappingArgs() {
-        this.addressSpace = Input.empty();
+        this.addressSpace = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class VpnNatRuleMappingArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> addressSpace;
+        private @Nullable Output<String> addressSpace;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class VpnNatRuleMappingArgs extends io.pulumi.resources.ResourceArg
     	      this.addressSpace = defaults.addressSpace;
         }
 
-        public Builder addressSpace(@Nullable Input<String> addressSpace) {
+        public Builder addressSpace(@Nullable Output<String> addressSpace) {
             this.addressSpace = addressSpace;
             return this;
         }
 
         public Builder addressSpace(@Nullable String addressSpace) {
-            this.addressSpace = Input.ofNullable(addressSpace);
+            this.addressSpace = Output.ofNullable(addressSpace);
             return this;
         }
         public VpnNatRuleMappingArgs build() {

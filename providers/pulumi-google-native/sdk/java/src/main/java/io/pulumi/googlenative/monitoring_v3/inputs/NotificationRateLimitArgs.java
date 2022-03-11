@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class NotificationRateLimitArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="period")
-      private final @Nullable Input<String> period;
+      private final @Nullable Output<String> period;
 
-    public Input<String> getPeriod() {
-        return this.period == null ? Input.empty() : this.period;
+    public Output<String> getPeriod() {
+        return this.period == null ? Output.empty() : this.period;
     }
 
-    public NotificationRateLimitArgs(@Nullable Input<String> period) {
+    public NotificationRateLimitArgs(@Nullable Output<String> period) {
         this.period = period;
     }
 
     private NotificationRateLimitArgs() {
-        this.period = Input.empty();
+        this.period = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class NotificationRateLimitArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> period;
+        private @Nullable Output<String> period;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class NotificationRateLimitArgs extends io.pulumi.resources.Resourc
     	      this.period = defaults.period;
         }
 
-        public Builder period(@Nullable Input<String> period) {
+        public Builder period(@Nullable Output<String> period) {
             this.period = period;
             return this;
         }
 
         public Builder period(@Nullable String period) {
-            this.period = Input.ofNullable(period);
+            this.period = Output.ofNullable(period);
             return this;
         }
         public NotificationRateLimitArgs build() {

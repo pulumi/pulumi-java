@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apps_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.apps_v1.inputs.StatefulSetConditionArgs;
 import java.lang.Integer;
@@ -26,9 +26,9 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="availableReplicas", required=true)
-      private final Input<Integer> availableReplicas;
+      private final Output<Integer> availableReplicas;
 
-    public Input<Integer> getAvailableReplicas() {
+    public Output<Integer> getAvailableReplicas() {
         return this.availableReplicas;
     }
 
@@ -37,10 +37,10 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="collisionCount")
-      private final @Nullable Input<Integer> collisionCount;
+      private final @Nullable Output<Integer> collisionCount;
 
-    public Input<Integer> getCollisionCount() {
-        return this.collisionCount == null ? Input.empty() : this.collisionCount;
+    public Output<Integer> getCollisionCount() {
+        return this.collisionCount == null ? Output.empty() : this.collisionCount;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="conditions")
-      private final @Nullable Input<List<StatefulSetConditionArgs>> conditions;
+      private final @Nullable Output<List<StatefulSetConditionArgs>> conditions;
 
-    public Input<List<StatefulSetConditionArgs>> getConditions() {
-        return this.conditions == null ? Input.empty() : this.conditions;
+    public Output<List<StatefulSetConditionArgs>> getConditions() {
+        return this.conditions == null ? Output.empty() : this.conditions;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="currentReplicas")
-      private final @Nullable Input<Integer> currentReplicas;
+      private final @Nullable Output<Integer> currentReplicas;
 
-    public Input<Integer> getCurrentReplicas() {
-        return this.currentReplicas == null ? Input.empty() : this.currentReplicas;
+    public Output<Integer> getCurrentReplicas() {
+        return this.currentReplicas == null ? Output.empty() : this.currentReplicas;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="currentRevision")
-      private final @Nullable Input<String> currentRevision;
+      private final @Nullable Output<String> currentRevision;
 
-    public Input<String> getCurrentRevision() {
-        return this.currentRevision == null ? Input.empty() : this.currentRevision;
+    public Output<String> getCurrentRevision() {
+        return this.currentRevision == null ? Output.empty() : this.currentRevision;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="observedGeneration")
-      private final @Nullable Input<Integer> observedGeneration;
+      private final @Nullable Output<Integer> observedGeneration;
 
-    public Input<Integer> getObservedGeneration() {
-        return this.observedGeneration == null ? Input.empty() : this.observedGeneration;
+    public Output<Integer> getObservedGeneration() {
+        return this.observedGeneration == null ? Output.empty() : this.observedGeneration;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="readyReplicas")
-      private final @Nullable Input<Integer> readyReplicas;
+      private final @Nullable Output<Integer> readyReplicas;
 
-    public Input<Integer> getReadyReplicas() {
-        return this.readyReplicas == null ? Input.empty() : this.readyReplicas;
+    public Output<Integer> getReadyReplicas() {
+        return this.readyReplicas == null ? Output.empty() : this.readyReplicas;
     }
 
     /**
@@ -103,9 +103,9 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="replicas", required=true)
-      private final Input<Integer> replicas;
+      private final Output<Integer> replicas;
 
-    public Input<Integer> getReplicas() {
+    public Output<Integer> getReplicas() {
         return this.replicas;
     }
 
@@ -114,10 +114,10 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="updateRevision")
-      private final @Nullable Input<String> updateRevision;
+      private final @Nullable Output<String> updateRevision;
 
-    public Input<String> getUpdateRevision() {
-        return this.updateRevision == null ? Input.empty() : this.updateRevision;
+    public Output<String> getUpdateRevision() {
+        return this.updateRevision == null ? Output.empty() : this.updateRevision;
     }
 
     /**
@@ -125,23 +125,23 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="updatedReplicas")
-      private final @Nullable Input<Integer> updatedReplicas;
+      private final @Nullable Output<Integer> updatedReplicas;
 
-    public Input<Integer> getUpdatedReplicas() {
-        return this.updatedReplicas == null ? Input.empty() : this.updatedReplicas;
+    public Output<Integer> getUpdatedReplicas() {
+        return this.updatedReplicas == null ? Output.empty() : this.updatedReplicas;
     }
 
     public StatefulSetStatusArgs(
-        Input<Integer> availableReplicas,
-        @Nullable Input<Integer> collisionCount,
-        @Nullable Input<List<StatefulSetConditionArgs>> conditions,
-        @Nullable Input<Integer> currentReplicas,
-        @Nullable Input<String> currentRevision,
-        @Nullable Input<Integer> observedGeneration,
-        @Nullable Input<Integer> readyReplicas,
-        Input<Integer> replicas,
-        @Nullable Input<String> updateRevision,
-        @Nullable Input<Integer> updatedReplicas) {
+        Output<Integer> availableReplicas,
+        @Nullable Output<Integer> collisionCount,
+        @Nullable Output<List<StatefulSetConditionArgs>> conditions,
+        @Nullable Output<Integer> currentReplicas,
+        @Nullable Output<String> currentRevision,
+        @Nullable Output<Integer> observedGeneration,
+        @Nullable Output<Integer> readyReplicas,
+        Output<Integer> replicas,
+        @Nullable Output<String> updateRevision,
+        @Nullable Output<Integer> updatedReplicas) {
         this.availableReplicas = Objects.requireNonNull(availableReplicas, "expected parameter 'availableReplicas' to be non-null");
         this.collisionCount = collisionCount;
         this.conditions = conditions;
@@ -155,16 +155,16 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
     }
 
     private StatefulSetStatusArgs() {
-        this.availableReplicas = Input.empty();
-        this.collisionCount = Input.empty();
-        this.conditions = Input.empty();
-        this.currentReplicas = Input.empty();
-        this.currentRevision = Input.empty();
-        this.observedGeneration = Input.empty();
-        this.readyReplicas = Input.empty();
-        this.replicas = Input.empty();
-        this.updateRevision = Input.empty();
-        this.updatedReplicas = Input.empty();
+        this.availableReplicas = Output.empty();
+        this.collisionCount = Output.empty();
+        this.conditions = Output.empty();
+        this.currentReplicas = Output.empty();
+        this.currentRevision = Output.empty();
+        this.observedGeneration = Output.empty();
+        this.readyReplicas = Output.empty();
+        this.replicas = Output.empty();
+        this.updateRevision = Output.empty();
+        this.updatedReplicas = Output.empty();
     }
 
     public static Builder builder() {
@@ -176,16 +176,16 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<Integer> availableReplicas;
-        private @Nullable Input<Integer> collisionCount;
-        private @Nullable Input<List<StatefulSetConditionArgs>> conditions;
-        private @Nullable Input<Integer> currentReplicas;
-        private @Nullable Input<String> currentRevision;
-        private @Nullable Input<Integer> observedGeneration;
-        private @Nullable Input<Integer> readyReplicas;
-        private Input<Integer> replicas;
-        private @Nullable Input<String> updateRevision;
-        private @Nullable Input<Integer> updatedReplicas;
+        private Output<Integer> availableReplicas;
+        private @Nullable Output<Integer> collisionCount;
+        private @Nullable Output<List<StatefulSetConditionArgs>> conditions;
+        private @Nullable Output<Integer> currentReplicas;
+        private @Nullable Output<String> currentRevision;
+        private @Nullable Output<Integer> observedGeneration;
+        private @Nullable Output<Integer> readyReplicas;
+        private Output<Integer> replicas;
+        private @Nullable Output<String> updateRevision;
+        private @Nullable Output<Integer> updatedReplicas;
 
         public Builder() {
     	      // Empty
@@ -205,103 +205,103 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
     	      this.updatedReplicas = defaults.updatedReplicas;
         }
 
-        public Builder availableReplicas(Input<Integer> availableReplicas) {
+        public Builder availableReplicas(Output<Integer> availableReplicas) {
             this.availableReplicas = Objects.requireNonNull(availableReplicas);
             return this;
         }
 
         public Builder availableReplicas(Integer availableReplicas) {
-            this.availableReplicas = Input.of(Objects.requireNonNull(availableReplicas));
+            this.availableReplicas = Output.of(Objects.requireNonNull(availableReplicas));
             return this;
         }
 
-        public Builder collisionCount(@Nullable Input<Integer> collisionCount) {
+        public Builder collisionCount(@Nullable Output<Integer> collisionCount) {
             this.collisionCount = collisionCount;
             return this;
         }
 
         public Builder collisionCount(@Nullable Integer collisionCount) {
-            this.collisionCount = Input.ofNullable(collisionCount);
+            this.collisionCount = Output.ofNullable(collisionCount);
             return this;
         }
 
-        public Builder conditions(@Nullable Input<List<StatefulSetConditionArgs>> conditions) {
+        public Builder conditions(@Nullable Output<List<StatefulSetConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
         public Builder conditions(@Nullable List<StatefulSetConditionArgs> conditions) {
-            this.conditions = Input.ofNullable(conditions);
+            this.conditions = Output.ofNullable(conditions);
             return this;
         }
 
-        public Builder currentReplicas(@Nullable Input<Integer> currentReplicas) {
+        public Builder currentReplicas(@Nullable Output<Integer> currentReplicas) {
             this.currentReplicas = currentReplicas;
             return this;
         }
 
         public Builder currentReplicas(@Nullable Integer currentReplicas) {
-            this.currentReplicas = Input.ofNullable(currentReplicas);
+            this.currentReplicas = Output.ofNullable(currentReplicas);
             return this;
         }
 
-        public Builder currentRevision(@Nullable Input<String> currentRevision) {
+        public Builder currentRevision(@Nullable Output<String> currentRevision) {
             this.currentRevision = currentRevision;
             return this;
         }
 
         public Builder currentRevision(@Nullable String currentRevision) {
-            this.currentRevision = Input.ofNullable(currentRevision);
+            this.currentRevision = Output.ofNullable(currentRevision);
             return this;
         }
 
-        public Builder observedGeneration(@Nullable Input<Integer> observedGeneration) {
+        public Builder observedGeneration(@Nullable Output<Integer> observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }
 
         public Builder observedGeneration(@Nullable Integer observedGeneration) {
-            this.observedGeneration = Input.ofNullable(observedGeneration);
+            this.observedGeneration = Output.ofNullable(observedGeneration);
             return this;
         }
 
-        public Builder readyReplicas(@Nullable Input<Integer> readyReplicas) {
+        public Builder readyReplicas(@Nullable Output<Integer> readyReplicas) {
             this.readyReplicas = readyReplicas;
             return this;
         }
 
         public Builder readyReplicas(@Nullable Integer readyReplicas) {
-            this.readyReplicas = Input.ofNullable(readyReplicas);
+            this.readyReplicas = Output.ofNullable(readyReplicas);
             return this;
         }
 
-        public Builder replicas(Input<Integer> replicas) {
+        public Builder replicas(Output<Integer> replicas) {
             this.replicas = Objects.requireNonNull(replicas);
             return this;
         }
 
         public Builder replicas(Integer replicas) {
-            this.replicas = Input.of(Objects.requireNonNull(replicas));
+            this.replicas = Output.of(Objects.requireNonNull(replicas));
             return this;
         }
 
-        public Builder updateRevision(@Nullable Input<String> updateRevision) {
+        public Builder updateRevision(@Nullable Output<String> updateRevision) {
             this.updateRevision = updateRevision;
             return this;
         }
 
         public Builder updateRevision(@Nullable String updateRevision) {
-            this.updateRevision = Input.ofNullable(updateRevision);
+            this.updateRevision = Output.ofNullable(updateRevision);
             return this;
         }
 
-        public Builder updatedReplicas(@Nullable Input<Integer> updatedReplicas) {
+        public Builder updatedReplicas(@Nullable Output<Integer> updatedReplicas) {
             this.updatedReplicas = updatedReplicas;
             return this;
         }
 
         public Builder updatedReplicas(@Nullable Integer updatedReplicas) {
-            this.updatedReplicas = Input.ofNullable(updatedReplicas);
+            this.updatedReplicas = Output.ofNullable(updatedReplicas);
             return this;
         }
         public StatefulSetStatusArgs build() {

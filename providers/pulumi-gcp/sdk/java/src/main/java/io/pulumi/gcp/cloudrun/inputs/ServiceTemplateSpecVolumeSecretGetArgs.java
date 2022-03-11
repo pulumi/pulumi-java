@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecVolumeSecretItemGetArgs;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class ServiceTemplateSpecVolumeSecretGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="defaultMode")
-      private final @Nullable Input<Integer> defaultMode;
+      private final @Nullable Output<Integer> defaultMode;
 
-    public Input<Integer> getDefaultMode() {
-        return this.defaultMode == null ? Input.empty() : this.defaultMode;
+    public Output<Integer> getDefaultMode() {
+        return this.defaultMode == null ? Output.empty() : this.defaultMode;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ServiceTemplateSpecVolumeSecretGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="items")
-      private final @Nullable Input<List<ServiceTemplateSpecVolumeSecretItemGetArgs>> items;
+      private final @Nullable Output<List<ServiceTemplateSpecVolumeSecretItemGetArgs>> items;
 
-    public Input<List<ServiceTemplateSpecVolumeSecretItemGetArgs>> getItems() {
-        return this.items == null ? Input.empty() : this.items;
+    public Output<List<ServiceTemplateSpecVolumeSecretItemGetArgs>> getItems() {
+        return this.items == null ? Output.empty() : this.items;
     }
 
     /**
@@ -60,25 +60,25 @@ public final class ServiceTemplateSpecVolumeSecretGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="secretName", required=true)
-      private final Input<String> secretName;
+      private final Output<String> secretName;
 
-    public Input<String> getSecretName() {
+    public Output<String> getSecretName() {
         return this.secretName;
     }
 
     public ServiceTemplateSpecVolumeSecretGetArgs(
-        @Nullable Input<Integer> defaultMode,
-        @Nullable Input<List<ServiceTemplateSpecVolumeSecretItemGetArgs>> items,
-        Input<String> secretName) {
+        @Nullable Output<Integer> defaultMode,
+        @Nullable Output<List<ServiceTemplateSpecVolumeSecretItemGetArgs>> items,
+        Output<String> secretName) {
         this.defaultMode = defaultMode;
         this.items = items;
         this.secretName = Objects.requireNonNull(secretName, "expected parameter 'secretName' to be non-null");
     }
 
     private ServiceTemplateSpecVolumeSecretGetArgs() {
-        this.defaultMode = Input.empty();
-        this.items = Input.empty();
-        this.secretName = Input.empty();
+        this.defaultMode = Output.empty();
+        this.items = Output.empty();
+        this.secretName = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,9 +90,9 @@ public final class ServiceTemplateSpecVolumeSecretGetArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> defaultMode;
-        private @Nullable Input<List<ServiceTemplateSpecVolumeSecretItemGetArgs>> items;
-        private Input<String> secretName;
+        private @Nullable Output<Integer> defaultMode;
+        private @Nullable Output<List<ServiceTemplateSpecVolumeSecretItemGetArgs>> items;
+        private Output<String> secretName;
 
         public Builder() {
     	      // Empty
@@ -105,33 +105,33 @@ public final class ServiceTemplateSpecVolumeSecretGetArgs extends io.pulumi.reso
     	      this.secretName = defaults.secretName;
         }
 
-        public Builder defaultMode(@Nullable Input<Integer> defaultMode) {
+        public Builder defaultMode(@Nullable Output<Integer> defaultMode) {
             this.defaultMode = defaultMode;
             return this;
         }
 
         public Builder defaultMode(@Nullable Integer defaultMode) {
-            this.defaultMode = Input.ofNullable(defaultMode);
+            this.defaultMode = Output.ofNullable(defaultMode);
             return this;
         }
 
-        public Builder items(@Nullable Input<List<ServiceTemplateSpecVolumeSecretItemGetArgs>> items) {
+        public Builder items(@Nullable Output<List<ServiceTemplateSpecVolumeSecretItemGetArgs>> items) {
             this.items = items;
             return this;
         }
 
         public Builder items(@Nullable List<ServiceTemplateSpecVolumeSecretItemGetArgs> items) {
-            this.items = Input.ofNullable(items);
+            this.items = Output.ofNullable(items);
             return this;
         }
 
-        public Builder secretName(Input<String> secretName) {
+        public Builder secretName(Output<String> secretName) {
             this.secretName = Objects.requireNonNull(secretName);
             return this;
         }
 
         public Builder secretName(String secretName) {
-            this.secretName = Input.of(Objects.requireNonNull(secretName));
+            this.secretName = Output.of(Objects.requireNonNull(secretName));
             return this;
         }
         public ServiceTemplateSpecVolumeSecretGetArgs build() {

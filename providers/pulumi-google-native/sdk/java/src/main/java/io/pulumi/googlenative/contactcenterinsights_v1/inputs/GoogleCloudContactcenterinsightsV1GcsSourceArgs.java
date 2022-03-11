@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class GoogleCloudContactcenterinsightsV1GcsSourceArgs extends io.pu
      * 
      */
     @InputImport(name="audioUri")
-      private final @Nullable Input<String> audioUri;
+      private final @Nullable Output<String> audioUri;
 
-    public Input<String> getAudioUri() {
-        return this.audioUri == null ? Input.empty() : this.audioUri;
+    public Output<String> getAudioUri() {
+        return this.audioUri == null ? Output.empty() : this.audioUri;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class GoogleCloudContactcenterinsightsV1GcsSourceArgs extends io.pu
      * 
      */
     @InputImport(name="transcriptUri")
-      private final @Nullable Input<String> transcriptUri;
+      private final @Nullable Output<String> transcriptUri;
 
-    public Input<String> getTranscriptUri() {
-        return this.transcriptUri == null ? Input.empty() : this.transcriptUri;
+    public Output<String> getTranscriptUri() {
+        return this.transcriptUri == null ? Output.empty() : this.transcriptUri;
     }
 
     public GoogleCloudContactcenterinsightsV1GcsSourceArgs(
-        @Nullable Input<String> audioUri,
-        @Nullable Input<String> transcriptUri) {
+        @Nullable Output<String> audioUri,
+        @Nullable Output<String> transcriptUri) {
         this.audioUri = audioUri;
         this.transcriptUri = transcriptUri;
     }
 
     private GoogleCloudContactcenterinsightsV1GcsSourceArgs() {
-        this.audioUri = Input.empty();
-        this.transcriptUri = Input.empty();
+        this.audioUri = Output.empty();
+        this.transcriptUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class GoogleCloudContactcenterinsightsV1GcsSourceArgs extends io.pu
     }
 
     public static final class Builder {
-        private @Nullable Input<String> audioUri;
-        private @Nullable Input<String> transcriptUri;
+        private @Nullable Output<String> audioUri;
+        private @Nullable Output<String> transcriptUri;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class GoogleCloudContactcenterinsightsV1GcsSourceArgs extends io.pu
     	      this.transcriptUri = defaults.transcriptUri;
         }
 
-        public Builder audioUri(@Nullable Input<String> audioUri) {
+        public Builder audioUri(@Nullable Output<String> audioUri) {
             this.audioUri = audioUri;
             return this;
         }
 
         public Builder audioUri(@Nullable String audioUri) {
-            this.audioUri = Input.ofNullable(audioUri);
+            this.audioUri = Output.ofNullable(audioUri);
             return this;
         }
 
-        public Builder transcriptUri(@Nullable Input<String> transcriptUri) {
+        public Builder transcriptUri(@Nullable Output<String> transcriptUri) {
             this.transcriptUri = transcriptUri;
             return this;
         }
 
         public Builder transcriptUri(@Nullable String transcriptUri) {
-            this.transcriptUri = Input.ofNullable(transcriptUri);
+            this.transcriptUri = Output.ofNullable(transcriptUri);
             return this;
         }
         public GoogleCloudContactcenterinsightsV1GcsSourceArgs build() {

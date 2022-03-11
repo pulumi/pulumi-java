@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.enums.SharedPrivateLinkResourceStatus;
 import io.pulumi.azurenative.cdn.inputs.ResourceReferenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="groupId")
-      private final @Nullable Input<String> groupId;
+      private final @Nullable Output<String> groupId;
 
-    public Input<String> getGroupId() {
-        return this.groupId == null ? Input.empty() : this.groupId;
+    public Output<String> getGroupId() {
+        return this.groupId == null ? Output.empty() : this.groupId;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="privateLink")
-      private final @Nullable Input<ResourceReferenceArgs> privateLink;
+      private final @Nullable Output<ResourceReferenceArgs> privateLink;
 
-    public Input<ResourceReferenceArgs> getPrivateLink() {
-        return this.privateLink == null ? Input.empty() : this.privateLink;
+    public Output<ResourceReferenceArgs> getPrivateLink() {
+        return this.privateLink == null ? Output.empty() : this.privateLink;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="privateLinkLocation")
-      private final @Nullable Input<String> privateLinkLocation;
+      private final @Nullable Output<String> privateLinkLocation;
 
-    public Input<String> getPrivateLinkLocation() {
-        return this.privateLinkLocation == null ? Input.empty() : this.privateLinkLocation;
+    public Output<String> getPrivateLinkLocation() {
+        return this.privateLinkLocation == null ? Output.empty() : this.privateLinkLocation;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="requestMessage")
-      private final @Nullable Input<String> requestMessage;
+      private final @Nullable Output<String> requestMessage;
 
-    public Input<String> getRequestMessage() {
-        return this.requestMessage == null ? Input.empty() : this.requestMessage;
+    public Output<String> getRequestMessage() {
+        return this.requestMessage == null ? Output.empty() : this.requestMessage;
     }
 
     /**
@@ -69,18 +69,18 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<SharedPrivateLinkResourceStatus> status;
+      private final @Nullable Output<SharedPrivateLinkResourceStatus> status;
 
-    public Input<SharedPrivateLinkResourceStatus> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<SharedPrivateLinkResourceStatus> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     public SharedPrivateLinkResourcePropertiesArgs(
-        @Nullable Input<String> groupId,
-        @Nullable Input<ResourceReferenceArgs> privateLink,
-        @Nullable Input<String> privateLinkLocation,
-        @Nullable Input<String> requestMessage,
-        @Nullable Input<SharedPrivateLinkResourceStatus> status) {
+        @Nullable Output<String> groupId,
+        @Nullable Output<ResourceReferenceArgs> privateLink,
+        @Nullable Output<String> privateLinkLocation,
+        @Nullable Output<String> requestMessage,
+        @Nullable Output<SharedPrivateLinkResourceStatus> status) {
         this.groupId = groupId;
         this.privateLink = privateLink;
         this.privateLinkLocation = privateLinkLocation;
@@ -89,11 +89,11 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends io.pulumi.res
     }
 
     private SharedPrivateLinkResourcePropertiesArgs() {
-        this.groupId = Input.empty();
-        this.privateLink = Input.empty();
-        this.privateLinkLocation = Input.empty();
-        this.requestMessage = Input.empty();
-        this.status = Input.empty();
+        this.groupId = Output.empty();
+        this.privateLink = Output.empty();
+        this.privateLinkLocation = Output.empty();
+        this.requestMessage = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> groupId;
-        private @Nullable Input<ResourceReferenceArgs> privateLink;
-        private @Nullable Input<String> privateLinkLocation;
-        private @Nullable Input<String> requestMessage;
-        private @Nullable Input<SharedPrivateLinkResourceStatus> status;
+        private @Nullable Output<String> groupId;
+        private @Nullable Output<ResourceReferenceArgs> privateLink;
+        private @Nullable Output<String> privateLinkLocation;
+        private @Nullable Output<String> requestMessage;
+        private @Nullable Output<SharedPrivateLinkResourceStatus> status;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends io.pulumi.res
     	      this.status = defaults.status;
         }
 
-        public Builder groupId(@Nullable Input<String> groupId) {
+        public Builder groupId(@Nullable Output<String> groupId) {
             this.groupId = groupId;
             return this;
         }
 
         public Builder groupId(@Nullable String groupId) {
-            this.groupId = Input.ofNullable(groupId);
+            this.groupId = Output.ofNullable(groupId);
             return this;
         }
 
-        public Builder privateLink(@Nullable Input<ResourceReferenceArgs> privateLink) {
+        public Builder privateLink(@Nullable Output<ResourceReferenceArgs> privateLink) {
             this.privateLink = privateLink;
             return this;
         }
 
         public Builder privateLink(@Nullable ResourceReferenceArgs privateLink) {
-            this.privateLink = Input.ofNullable(privateLink);
+            this.privateLink = Output.ofNullable(privateLink);
             return this;
         }
 
-        public Builder privateLinkLocation(@Nullable Input<String> privateLinkLocation) {
+        public Builder privateLinkLocation(@Nullable Output<String> privateLinkLocation) {
             this.privateLinkLocation = privateLinkLocation;
             return this;
         }
 
         public Builder privateLinkLocation(@Nullable String privateLinkLocation) {
-            this.privateLinkLocation = Input.ofNullable(privateLinkLocation);
+            this.privateLinkLocation = Output.ofNullable(privateLinkLocation);
             return this;
         }
 
-        public Builder requestMessage(@Nullable Input<String> requestMessage) {
+        public Builder requestMessage(@Nullable Output<String> requestMessage) {
             this.requestMessage = requestMessage;
             return this;
         }
 
         public Builder requestMessage(@Nullable String requestMessage) {
-            this.requestMessage = Input.ofNullable(requestMessage);
+            this.requestMessage = Output.ofNullable(requestMessage);
             return this;
         }
 
-        public Builder status(@Nullable Input<SharedPrivateLinkResourceStatus> status) {
+        public Builder status(@Nullable Output<SharedPrivateLinkResourceStatus> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable SharedPrivateLinkResourceStatus status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public SharedPrivateLinkResourcePropertiesArgs build() {

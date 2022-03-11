@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="apiVersion")
-      private final @Nullable Input<String> apiVersion;
+      private final @Nullable Output<String> apiVersion;
 
-    public Input<String> getApiVersion() {
-        return this.apiVersion == null ? Input.empty() : this.apiVersion;
+    public Output<String> getApiVersion() {
+        return this.apiVersion == null ? Output.empty() : this.apiVersion;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="fieldPath")
-      private final @Nullable Input<String> fieldPath;
+      private final @Nullable Output<String> fieldPath;
 
-    public Input<String> getFieldPath() {
-        return this.fieldPath == null ? Input.empty() : this.fieldPath;
+    public Output<String> getFieldPath() {
+        return this.fieldPath == null ? Output.empty() : this.fieldPath;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="namespace")
-      private final @Nullable Input<String> namespace;
+      private final @Nullable Output<String> namespace;
 
-    public Input<String> getNamespace() {
-        return this.namespace == null ? Input.empty() : this.namespace;
+    public Output<String> getNamespace() {
+        return this.namespace == null ? Output.empty() : this.namespace;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceVersion")
-      private final @Nullable Input<String> resourceVersion;
+      private final @Nullable Output<String> resourceVersion;
 
-    public Input<String> getResourceVersion() {
-        return this.resourceVersion == null ? Input.empty() : this.resourceVersion;
+    public Output<String> getResourceVersion() {
+        return this.resourceVersion == null ? Output.empty() : this.resourceVersion;
     }
 
     /**
@@ -89,20 +89,20 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="uid")
-      private final @Nullable Input<String> uid;
+      private final @Nullable Output<String> uid;
 
-    public Input<String> getUid() {
-        return this.uid == null ? Input.empty() : this.uid;
+    public Output<String> getUid() {
+        return this.uid == null ? Output.empty() : this.uid;
     }
 
     public ObjectReferenceArgs(
-        @Nullable Input<String> apiVersion,
-        @Nullable Input<String> fieldPath,
-        @Nullable Input<String> kind,
-        @Nullable Input<String> name,
-        @Nullable Input<String> namespace,
-        @Nullable Input<String> resourceVersion,
-        @Nullable Input<String> uid) {
+        @Nullable Output<String> apiVersion,
+        @Nullable Output<String> fieldPath,
+        @Nullable Output<String> kind,
+        @Nullable Output<String> name,
+        @Nullable Output<String> namespace,
+        @Nullable Output<String> resourceVersion,
+        @Nullable Output<String> uid) {
         this.apiVersion = apiVersion;
         this.fieldPath = fieldPath;
         this.kind = kind;
@@ -113,13 +113,13 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ObjectReferenceArgs() {
-        this.apiVersion = Input.empty();
-        this.fieldPath = Input.empty();
-        this.kind = Input.empty();
-        this.name = Input.empty();
-        this.namespace = Input.empty();
-        this.resourceVersion = Input.empty();
-        this.uid = Input.empty();
+        this.apiVersion = Output.empty();
+        this.fieldPath = Output.empty();
+        this.kind = Output.empty();
+        this.name = Output.empty();
+        this.namespace = Output.empty();
+        this.resourceVersion = Output.empty();
+        this.uid = Output.empty();
     }
 
     public static Builder builder() {
@@ -131,13 +131,13 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> apiVersion;
-        private @Nullable Input<String> fieldPath;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> namespace;
-        private @Nullable Input<String> resourceVersion;
-        private @Nullable Input<String> uid;
+        private @Nullable Output<String> apiVersion;
+        private @Nullable Output<String> fieldPath;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> namespace;
+        private @Nullable Output<String> resourceVersion;
+        private @Nullable Output<String> uid;
 
         public Builder() {
     	      // Empty
@@ -154,73 +154,73 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
     	      this.uid = defaults.uid;
         }
 
-        public Builder apiVersion(@Nullable Input<String> apiVersion) {
+        public Builder apiVersion(@Nullable Output<String> apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
         public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Input.ofNullable(apiVersion);
+            this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
 
-        public Builder fieldPath(@Nullable Input<String> fieldPath) {
+        public Builder fieldPath(@Nullable Output<String> fieldPath) {
             this.fieldPath = fieldPath;
             return this;
         }
 
         public Builder fieldPath(@Nullable String fieldPath) {
-            this.fieldPath = Input.ofNullable(fieldPath);
+            this.fieldPath = Output.ofNullable(fieldPath);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namespace(@Nullable Input<String> namespace) {
+        public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
 
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Input.ofNullable(namespace);
+            this.namespace = Output.ofNullable(namespace);
             return this;
         }
 
-        public Builder resourceVersion(@Nullable Input<String> resourceVersion) {
+        public Builder resourceVersion(@Nullable Output<String> resourceVersion) {
             this.resourceVersion = resourceVersion;
             return this;
         }
 
         public Builder resourceVersion(@Nullable String resourceVersion) {
-            this.resourceVersion = Input.ofNullable(resourceVersion);
+            this.resourceVersion = Output.ofNullable(resourceVersion);
             return this;
         }
 
-        public Builder uid(@Nullable Input<String> uid) {
+        public Builder uid(@Nullable Output<String> uid) {
             this.uid = uid;
             return this;
         }
 
         public Builder uid(@Nullable String uid) {
-            this.uid = Input.ofNullable(uid);
+            this.uid = Output.ofNullable(uid);
             return this;
         }
         public ObjectReferenceArgs build() {

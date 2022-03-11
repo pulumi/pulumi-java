@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicyCustomHeadersConfigItemArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -16,18 +16,18 @@ public final class ResponseHeadersPolicyCustomHeadersConfigArgs extends io.pulum
     public static final ResponseHeadersPolicyCustomHeadersConfigArgs Empty = new ResponseHeadersPolicyCustomHeadersConfigArgs();
 
     @InputImport(name="items")
-      private final @Nullable Input<List<ResponseHeadersPolicyCustomHeadersConfigItemArgs>> items;
+      private final @Nullable Output<List<ResponseHeadersPolicyCustomHeadersConfigItemArgs>> items;
 
-    public Input<List<ResponseHeadersPolicyCustomHeadersConfigItemArgs>> getItems() {
-        return this.items == null ? Input.empty() : this.items;
+    public Output<List<ResponseHeadersPolicyCustomHeadersConfigItemArgs>> getItems() {
+        return this.items == null ? Output.empty() : this.items;
     }
 
-    public ResponseHeadersPolicyCustomHeadersConfigArgs(@Nullable Input<List<ResponseHeadersPolicyCustomHeadersConfigItemArgs>> items) {
+    public ResponseHeadersPolicyCustomHeadersConfigArgs(@Nullable Output<List<ResponseHeadersPolicyCustomHeadersConfigItemArgs>> items) {
         this.items = items;
     }
 
     private ResponseHeadersPolicyCustomHeadersConfigArgs() {
-        this.items = Input.empty();
+        this.items = Output.empty();
     }
 
     public static Builder builder() {
@@ -39,7 +39,7 @@ public final class ResponseHeadersPolicyCustomHeadersConfigArgs extends io.pulum
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ResponseHeadersPolicyCustomHeadersConfigItemArgs>> items;
+        private @Nullable Output<List<ResponseHeadersPolicyCustomHeadersConfigItemArgs>> items;
 
         public Builder() {
     	      // Empty
@@ -50,13 +50,13 @@ public final class ResponseHeadersPolicyCustomHeadersConfigArgs extends io.pulum
     	      this.items = defaults.items;
         }
 
-        public Builder items(@Nullable Input<List<ResponseHeadersPolicyCustomHeadersConfigItemArgs>> items) {
+        public Builder items(@Nullable Output<List<ResponseHeadersPolicyCustomHeadersConfigItemArgs>> items) {
             this.items = items;
             return this;
         }
 
         public Builder items(@Nullable List<ResponseHeadersPolicyCustomHeadersConfigItemArgs> items) {
-            this.items = Input.ofNullable(items);
+            this.items = Output.ofNullable(items);
             return this;
         }
         public ResponseHeadersPolicyCustomHeadersConfigArgs build() {

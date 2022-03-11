@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.connect.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class HoursOfOperationConfigEndTimeGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="hours", required=true)
-      private final Input<Integer> hours;
+      private final Output<Integer> hours;
 
-    public Input<Integer> getHours() {
+    public Output<Integer> getHours() {
         return this.hours;
     }
 
@@ -29,22 +29,22 @@ public final class HoursOfOperationConfigEndTimeGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="minutes", required=true)
-      private final Input<Integer> minutes;
+      private final Output<Integer> minutes;
 
-    public Input<Integer> getMinutes() {
+    public Output<Integer> getMinutes() {
         return this.minutes;
     }
 
     public HoursOfOperationConfigEndTimeGetArgs(
-        Input<Integer> hours,
-        Input<Integer> minutes) {
+        Output<Integer> hours,
+        Output<Integer> minutes) {
         this.hours = Objects.requireNonNull(hours, "expected parameter 'hours' to be non-null");
         this.minutes = Objects.requireNonNull(minutes, "expected parameter 'minutes' to be non-null");
     }
 
     private HoursOfOperationConfigEndTimeGetArgs() {
-        this.hours = Input.empty();
-        this.minutes = Input.empty();
+        this.hours = Output.empty();
+        this.minutes = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class HoursOfOperationConfigEndTimeGetArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private Input<Integer> hours;
-        private Input<Integer> minutes;
+        private Output<Integer> hours;
+        private Output<Integer> minutes;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class HoursOfOperationConfigEndTimeGetArgs extends io.pulumi.resour
     	      this.minutes = defaults.minutes;
         }
 
-        public Builder hours(Input<Integer> hours) {
+        public Builder hours(Output<Integer> hours) {
             this.hours = Objects.requireNonNull(hours);
             return this;
         }
 
         public Builder hours(Integer hours) {
-            this.hours = Input.of(Objects.requireNonNull(hours));
+            this.hours = Output.of(Objects.requireNonNull(hours));
             return this;
         }
 
-        public Builder minutes(Input<Integer> minutes) {
+        public Builder minutes(Output<Integer> minutes) {
             this.minutes = Objects.requireNonNull(minutes);
             return this;
         }
 
         public Builder minutes(Integer minutes) {
-            this.minutes = Input.of(Objects.requireNonNull(minutes));
+            this.minutes = Output.of(Objects.requireNonNull(minutes));
             return this;
         }
         public HoursOfOperationConfigEndTimeGetArgs build() {

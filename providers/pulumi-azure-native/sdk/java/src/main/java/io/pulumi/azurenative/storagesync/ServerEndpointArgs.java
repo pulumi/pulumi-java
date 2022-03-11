@@ -7,7 +7,7 @@ import io.pulumi.azurenative.storagesync.enums.FeatureStatus;
 import io.pulumi.azurenative.storagesync.enums.InitialDownloadPolicy;
 import io.pulumi.azurenative.storagesync.enums.LocalCacheMode;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudTiering")
-      private final @Nullable Input<Either<String,FeatureStatus>> cloudTiering;
+      private final @Nullable Output<Either<String,FeatureStatus>> cloudTiering;
 
-    public Input<Either<String,FeatureStatus>> getCloudTiering() {
-        return this.cloudTiering == null ? Input.empty() : this.cloudTiering;
+    public Output<Either<String,FeatureStatus>> getCloudTiering() {
+        return this.cloudTiering == null ? Output.empty() : this.cloudTiering;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="friendlyName")
-      private final @Nullable Input<String> friendlyName;
+      private final @Nullable Output<String> friendlyName;
 
-    public Input<String> getFriendlyName() {
-        return this.friendlyName == null ? Input.empty() : this.friendlyName;
+    public Output<String> getFriendlyName() {
+        return this.friendlyName == null ? Output.empty() : this.friendlyName;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="initialDownloadPolicy")
-      private final @Nullable Input<Either<String,InitialDownloadPolicy>> initialDownloadPolicy;
+      private final @Nullable Output<Either<String,InitialDownloadPolicy>> initialDownloadPolicy;
 
-    public Input<Either<String,InitialDownloadPolicy>> getInitialDownloadPolicy() {
-        return this.initialDownloadPolicy == null ? Input.empty() : this.initialDownloadPolicy;
+    public Output<Either<String,InitialDownloadPolicy>> getInitialDownloadPolicy() {
+        return this.initialDownloadPolicy == null ? Output.empty() : this.initialDownloadPolicy;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="localCacheMode")
-      private final @Nullable Input<Either<String,LocalCacheMode>> localCacheMode;
+      private final @Nullable Output<Either<String,LocalCacheMode>> localCacheMode;
 
-    public Input<Either<String,LocalCacheMode>> getLocalCacheMode() {
-        return this.localCacheMode == null ? Input.empty() : this.localCacheMode;
+    public Output<Either<String,LocalCacheMode>> getLocalCacheMode() {
+        return this.localCacheMode == null ? Output.empty() : this.localCacheMode;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="offlineDataTransfer")
-      private final @Nullable Input<Either<String,FeatureStatus>> offlineDataTransfer;
+      private final @Nullable Output<Either<String,FeatureStatus>> offlineDataTransfer;
 
-    public Input<Either<String,FeatureStatus>> getOfflineDataTransfer() {
-        return this.offlineDataTransfer == null ? Input.empty() : this.offlineDataTransfer;
+    public Output<Either<String,FeatureStatus>> getOfflineDataTransfer() {
+        return this.offlineDataTransfer == null ? Output.empty() : this.offlineDataTransfer;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="offlineDataTransferShareName")
-      private final @Nullable Input<String> offlineDataTransferShareName;
+      private final @Nullable Output<String> offlineDataTransferShareName;
 
-    public Input<String> getOfflineDataTransferShareName() {
-        return this.offlineDataTransferShareName == null ? Input.empty() : this.offlineDataTransferShareName;
+    public Output<String> getOfflineDataTransferShareName() {
+        return this.offlineDataTransferShareName == null ? Output.empty() : this.offlineDataTransferShareName;
     }
 
     /**
@@ -90,9 +90,9 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -101,10 +101,10 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverEndpointName")
-      private final @Nullable Input<String> serverEndpointName;
+      private final @Nullable Output<String> serverEndpointName;
 
-    public Input<String> getServerEndpointName() {
-        return this.serverEndpointName == null ? Input.empty() : this.serverEndpointName;
+    public Output<String> getServerEndpointName() {
+        return this.serverEndpointName == null ? Output.empty() : this.serverEndpointName;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverLocalPath")
-      private final @Nullable Input<String> serverLocalPath;
+      private final @Nullable Output<String> serverLocalPath;
 
-    public Input<String> getServerLocalPath() {
-        return this.serverLocalPath == null ? Input.empty() : this.serverLocalPath;
+    public Output<String> getServerLocalPath() {
+        return this.serverLocalPath == null ? Output.empty() : this.serverLocalPath;
     }
 
     /**
@@ -123,10 +123,10 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverResourceId")
-      private final @Nullable Input<String> serverResourceId;
+      private final @Nullable Output<String> serverResourceId;
 
-    public Input<String> getServerResourceId() {
-        return this.serverResourceId == null ? Input.empty() : this.serverResourceId;
+    public Output<String> getServerResourceId() {
+        return this.serverResourceId == null ? Output.empty() : this.serverResourceId;
     }
 
     /**
@@ -134,9 +134,9 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageSyncServiceName", required=true)
-      private final Input<String> storageSyncServiceName;
+      private final Output<String> storageSyncServiceName;
 
-    public Input<String> getStorageSyncServiceName() {
+    public Output<String> getStorageSyncServiceName() {
         return this.storageSyncServiceName;
     }
 
@@ -145,9 +145,9 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="syncGroupName", required=true)
-      private final Input<String> syncGroupName;
+      private final Output<String> syncGroupName;
 
-    public Input<String> getSyncGroupName() {
+    public Output<String> getSyncGroupName() {
         return this.syncGroupName;
     }
 
@@ -156,10 +156,10 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tierFilesOlderThanDays")
-      private final @Nullable Input<Integer> tierFilesOlderThanDays;
+      private final @Nullable Output<Integer> tierFilesOlderThanDays;
 
-    public Input<Integer> getTierFilesOlderThanDays() {
-        return this.tierFilesOlderThanDays == null ? Input.empty() : this.tierFilesOlderThanDays;
+    public Output<Integer> getTierFilesOlderThanDays() {
+        return this.tierFilesOlderThanDays == null ? Output.empty() : this.tierFilesOlderThanDays;
     }
 
     /**
@@ -167,31 +167,31 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumeFreeSpacePercent")
-      private final @Nullable Input<Integer> volumeFreeSpacePercent;
+      private final @Nullable Output<Integer> volumeFreeSpacePercent;
 
-    public Input<Integer> getVolumeFreeSpacePercent() {
-        return this.volumeFreeSpacePercent == null ? Input.empty() : this.volumeFreeSpacePercent;
+    public Output<Integer> getVolumeFreeSpacePercent() {
+        return this.volumeFreeSpacePercent == null ? Output.empty() : this.volumeFreeSpacePercent;
     }
 
     public ServerEndpointArgs(
-        @Nullable Input<Either<String,FeatureStatus>> cloudTiering,
-        @Nullable Input<String> friendlyName,
-        @Nullable Input<Either<String,InitialDownloadPolicy>> initialDownloadPolicy,
-        @Nullable Input<Either<String,LocalCacheMode>> localCacheMode,
-        @Nullable Input<Either<String,FeatureStatus>> offlineDataTransfer,
-        @Nullable Input<String> offlineDataTransferShareName,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> serverEndpointName,
-        @Nullable Input<String> serverLocalPath,
-        @Nullable Input<String> serverResourceId,
-        Input<String> storageSyncServiceName,
-        Input<String> syncGroupName,
-        @Nullable Input<Integer> tierFilesOlderThanDays,
-        @Nullable Input<Integer> volumeFreeSpacePercent) {
+        @Nullable Output<Either<String,FeatureStatus>> cloudTiering,
+        @Nullable Output<String> friendlyName,
+        @Nullable Output<Either<String,InitialDownloadPolicy>> initialDownloadPolicy,
+        @Nullable Output<Either<String,LocalCacheMode>> localCacheMode,
+        @Nullable Output<Either<String,FeatureStatus>> offlineDataTransfer,
+        @Nullable Output<String> offlineDataTransferShareName,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> serverEndpointName,
+        @Nullable Output<String> serverLocalPath,
+        @Nullable Output<String> serverResourceId,
+        Output<String> storageSyncServiceName,
+        Output<String> syncGroupName,
+        @Nullable Output<Integer> tierFilesOlderThanDays,
+        @Nullable Output<Integer> volumeFreeSpacePercent) {
         this.cloudTiering = cloudTiering;
         this.friendlyName = friendlyName;
-        this.initialDownloadPolicy = initialDownloadPolicy == null ? Input.ofLeft("NamespaceThenModifiedFiles") : initialDownloadPolicy;
-        this.localCacheMode = localCacheMode == null ? Input.ofLeft("UpdateLocallyCachedFiles") : localCacheMode;
+        this.initialDownloadPolicy = initialDownloadPolicy == null ? Output.ofLeft("NamespaceThenModifiedFiles") : initialDownloadPolicy;
+        this.localCacheMode = localCacheMode == null ? Output.ofLeft("UpdateLocallyCachedFiles") : localCacheMode;
         this.offlineDataTransfer = offlineDataTransfer;
         this.offlineDataTransferShareName = offlineDataTransferShareName;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -205,20 +205,20 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServerEndpointArgs() {
-        this.cloudTiering = Input.empty();
-        this.friendlyName = Input.empty();
-        this.initialDownloadPolicy = Input.empty();
-        this.localCacheMode = Input.empty();
-        this.offlineDataTransfer = Input.empty();
-        this.offlineDataTransferShareName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serverEndpointName = Input.empty();
-        this.serverLocalPath = Input.empty();
-        this.serverResourceId = Input.empty();
-        this.storageSyncServiceName = Input.empty();
-        this.syncGroupName = Input.empty();
-        this.tierFilesOlderThanDays = Input.empty();
-        this.volumeFreeSpacePercent = Input.empty();
+        this.cloudTiering = Output.empty();
+        this.friendlyName = Output.empty();
+        this.initialDownloadPolicy = Output.empty();
+        this.localCacheMode = Output.empty();
+        this.offlineDataTransfer = Output.empty();
+        this.offlineDataTransferShareName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serverEndpointName = Output.empty();
+        this.serverLocalPath = Output.empty();
+        this.serverResourceId = Output.empty();
+        this.storageSyncServiceName = Output.empty();
+        this.syncGroupName = Output.empty();
+        this.tierFilesOlderThanDays = Output.empty();
+        this.volumeFreeSpacePercent = Output.empty();
     }
 
     public static Builder builder() {
@@ -230,20 +230,20 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,FeatureStatus>> cloudTiering;
-        private @Nullable Input<String> friendlyName;
-        private @Nullable Input<Either<String,InitialDownloadPolicy>> initialDownloadPolicy;
-        private @Nullable Input<Either<String,LocalCacheMode>> localCacheMode;
-        private @Nullable Input<Either<String,FeatureStatus>> offlineDataTransfer;
-        private @Nullable Input<String> offlineDataTransferShareName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> serverEndpointName;
-        private @Nullable Input<String> serverLocalPath;
-        private @Nullable Input<String> serverResourceId;
-        private Input<String> storageSyncServiceName;
-        private Input<String> syncGroupName;
-        private @Nullable Input<Integer> tierFilesOlderThanDays;
-        private @Nullable Input<Integer> volumeFreeSpacePercent;
+        private @Nullable Output<Either<String,FeatureStatus>> cloudTiering;
+        private @Nullable Output<String> friendlyName;
+        private @Nullable Output<Either<String,InitialDownloadPolicy>> initialDownloadPolicy;
+        private @Nullable Output<Either<String,LocalCacheMode>> localCacheMode;
+        private @Nullable Output<Either<String,FeatureStatus>> offlineDataTransfer;
+        private @Nullable Output<String> offlineDataTransferShareName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> serverEndpointName;
+        private @Nullable Output<String> serverLocalPath;
+        private @Nullable Output<String> serverResourceId;
+        private Output<String> storageSyncServiceName;
+        private Output<String> syncGroupName;
+        private @Nullable Output<Integer> tierFilesOlderThanDays;
+        private @Nullable Output<Integer> volumeFreeSpacePercent;
 
         public Builder() {
     	      // Empty
@@ -267,143 +267,143 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.volumeFreeSpacePercent = defaults.volumeFreeSpacePercent;
         }
 
-        public Builder cloudTiering(@Nullable Input<Either<String,FeatureStatus>> cloudTiering) {
+        public Builder cloudTiering(@Nullable Output<Either<String,FeatureStatus>> cloudTiering) {
             this.cloudTiering = cloudTiering;
             return this;
         }
 
         public Builder cloudTiering(@Nullable Either<String,FeatureStatus> cloudTiering) {
-            this.cloudTiering = Input.ofNullable(cloudTiering);
+            this.cloudTiering = Output.ofNullable(cloudTiering);
             return this;
         }
 
-        public Builder friendlyName(@Nullable Input<String> friendlyName) {
+        public Builder friendlyName(@Nullable Output<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Input.ofNullable(friendlyName);
+            this.friendlyName = Output.ofNullable(friendlyName);
             return this;
         }
 
-        public Builder initialDownloadPolicy(@Nullable Input<Either<String,InitialDownloadPolicy>> initialDownloadPolicy) {
+        public Builder initialDownloadPolicy(@Nullable Output<Either<String,InitialDownloadPolicy>> initialDownloadPolicy) {
             this.initialDownloadPolicy = initialDownloadPolicy;
             return this;
         }
 
         public Builder initialDownloadPolicy(@Nullable Either<String,InitialDownloadPolicy> initialDownloadPolicy) {
-            this.initialDownloadPolicy = Input.ofNullable(initialDownloadPolicy);
+            this.initialDownloadPolicy = Output.ofNullable(initialDownloadPolicy);
             return this;
         }
 
-        public Builder localCacheMode(@Nullable Input<Either<String,LocalCacheMode>> localCacheMode) {
+        public Builder localCacheMode(@Nullable Output<Either<String,LocalCacheMode>> localCacheMode) {
             this.localCacheMode = localCacheMode;
             return this;
         }
 
         public Builder localCacheMode(@Nullable Either<String,LocalCacheMode> localCacheMode) {
-            this.localCacheMode = Input.ofNullable(localCacheMode);
+            this.localCacheMode = Output.ofNullable(localCacheMode);
             return this;
         }
 
-        public Builder offlineDataTransfer(@Nullable Input<Either<String,FeatureStatus>> offlineDataTransfer) {
+        public Builder offlineDataTransfer(@Nullable Output<Either<String,FeatureStatus>> offlineDataTransfer) {
             this.offlineDataTransfer = offlineDataTransfer;
             return this;
         }
 
         public Builder offlineDataTransfer(@Nullable Either<String,FeatureStatus> offlineDataTransfer) {
-            this.offlineDataTransfer = Input.ofNullable(offlineDataTransfer);
+            this.offlineDataTransfer = Output.ofNullable(offlineDataTransfer);
             return this;
         }
 
-        public Builder offlineDataTransferShareName(@Nullable Input<String> offlineDataTransferShareName) {
+        public Builder offlineDataTransferShareName(@Nullable Output<String> offlineDataTransferShareName) {
             this.offlineDataTransferShareName = offlineDataTransferShareName;
             return this;
         }
 
         public Builder offlineDataTransferShareName(@Nullable String offlineDataTransferShareName) {
-            this.offlineDataTransferShareName = Input.ofNullable(offlineDataTransferShareName);
+            this.offlineDataTransferShareName = Output.ofNullable(offlineDataTransferShareName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serverEndpointName(@Nullable Input<String> serverEndpointName) {
+        public Builder serverEndpointName(@Nullable Output<String> serverEndpointName) {
             this.serverEndpointName = serverEndpointName;
             return this;
         }
 
         public Builder serverEndpointName(@Nullable String serverEndpointName) {
-            this.serverEndpointName = Input.ofNullable(serverEndpointName);
+            this.serverEndpointName = Output.ofNullable(serverEndpointName);
             return this;
         }
 
-        public Builder serverLocalPath(@Nullable Input<String> serverLocalPath) {
+        public Builder serverLocalPath(@Nullable Output<String> serverLocalPath) {
             this.serverLocalPath = serverLocalPath;
             return this;
         }
 
         public Builder serverLocalPath(@Nullable String serverLocalPath) {
-            this.serverLocalPath = Input.ofNullable(serverLocalPath);
+            this.serverLocalPath = Output.ofNullable(serverLocalPath);
             return this;
         }
 
-        public Builder serverResourceId(@Nullable Input<String> serverResourceId) {
+        public Builder serverResourceId(@Nullable Output<String> serverResourceId) {
             this.serverResourceId = serverResourceId;
             return this;
         }
 
         public Builder serverResourceId(@Nullable String serverResourceId) {
-            this.serverResourceId = Input.ofNullable(serverResourceId);
+            this.serverResourceId = Output.ofNullable(serverResourceId);
             return this;
         }
 
-        public Builder storageSyncServiceName(Input<String> storageSyncServiceName) {
+        public Builder storageSyncServiceName(Output<String> storageSyncServiceName) {
             this.storageSyncServiceName = Objects.requireNonNull(storageSyncServiceName);
             return this;
         }
 
         public Builder storageSyncServiceName(String storageSyncServiceName) {
-            this.storageSyncServiceName = Input.of(Objects.requireNonNull(storageSyncServiceName));
+            this.storageSyncServiceName = Output.of(Objects.requireNonNull(storageSyncServiceName));
             return this;
         }
 
-        public Builder syncGroupName(Input<String> syncGroupName) {
+        public Builder syncGroupName(Output<String> syncGroupName) {
             this.syncGroupName = Objects.requireNonNull(syncGroupName);
             return this;
         }
 
         public Builder syncGroupName(String syncGroupName) {
-            this.syncGroupName = Input.of(Objects.requireNonNull(syncGroupName));
+            this.syncGroupName = Output.of(Objects.requireNonNull(syncGroupName));
             return this;
         }
 
-        public Builder tierFilesOlderThanDays(@Nullable Input<Integer> tierFilesOlderThanDays) {
+        public Builder tierFilesOlderThanDays(@Nullable Output<Integer> tierFilesOlderThanDays) {
             this.tierFilesOlderThanDays = tierFilesOlderThanDays;
             return this;
         }
 
         public Builder tierFilesOlderThanDays(@Nullable Integer tierFilesOlderThanDays) {
-            this.tierFilesOlderThanDays = Input.ofNullable(tierFilesOlderThanDays);
+            this.tierFilesOlderThanDays = Output.ofNullable(tierFilesOlderThanDays);
             return this;
         }
 
-        public Builder volumeFreeSpacePercent(@Nullable Input<Integer> volumeFreeSpacePercent) {
+        public Builder volumeFreeSpacePercent(@Nullable Output<Integer> volumeFreeSpacePercent) {
             this.volumeFreeSpacePercent = volumeFreeSpacePercent;
             return this;
         }
 
         public Builder volumeFreeSpacePercent(@Nullable Integer volumeFreeSpacePercent) {
-            this.volumeFreeSpacePercent = Input.ofNullable(volumeFreeSpacePercent);
+            this.volumeFreeSpacePercent = Output.ofNullable(volumeFreeSpacePercent);
             return this;
         }
         public ServerEndpointArgs build() {

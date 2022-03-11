@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class MitigationActionAddThingsToThingGroupParamsArgs extends io.pu
      * 
      */
     @InputImport(name="overrideDynamicGroups")
-      private final @Nullable Input<Boolean> overrideDynamicGroups;
+      private final @Nullable Output<Boolean> overrideDynamicGroups;
 
-    public Input<Boolean> getOverrideDynamicGroups() {
-        return this.overrideDynamicGroups == null ? Input.empty() : this.overrideDynamicGroups;
+    public Output<Boolean> getOverrideDynamicGroups() {
+        return this.overrideDynamicGroups == null ? Output.empty() : this.overrideDynamicGroups;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class MitigationActionAddThingsToThingGroupParamsArgs extends io.pu
      * 
      */
     @InputImport(name="thingGroupNames", required=true)
-      private final Input<List<String>> thingGroupNames;
+      private final Output<List<String>> thingGroupNames;
 
-    public Input<List<String>> getThingGroupNames() {
+    public Output<List<String>> getThingGroupNames() {
         return this.thingGroupNames;
     }
 
     public MitigationActionAddThingsToThingGroupParamsArgs(
-        @Nullable Input<Boolean> overrideDynamicGroups,
-        Input<List<String>> thingGroupNames) {
+        @Nullable Output<Boolean> overrideDynamicGroups,
+        Output<List<String>> thingGroupNames) {
         this.overrideDynamicGroups = overrideDynamicGroups;
         this.thingGroupNames = Objects.requireNonNull(thingGroupNames, "expected parameter 'thingGroupNames' to be non-null");
     }
 
     private MitigationActionAddThingsToThingGroupParamsArgs() {
-        this.overrideDynamicGroups = Input.empty();
-        this.thingGroupNames = Input.empty();
+        this.overrideDynamicGroups = Output.empty();
+        this.thingGroupNames = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class MitigationActionAddThingsToThingGroupParamsArgs extends io.pu
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> overrideDynamicGroups;
-        private Input<List<String>> thingGroupNames;
+        private @Nullable Output<Boolean> overrideDynamicGroups;
+        private Output<List<String>> thingGroupNames;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class MitigationActionAddThingsToThingGroupParamsArgs extends io.pu
     	      this.thingGroupNames = defaults.thingGroupNames;
         }
 
-        public Builder overrideDynamicGroups(@Nullable Input<Boolean> overrideDynamicGroups) {
+        public Builder overrideDynamicGroups(@Nullable Output<Boolean> overrideDynamicGroups) {
             this.overrideDynamicGroups = overrideDynamicGroups;
             return this;
         }
 
         public Builder overrideDynamicGroups(@Nullable Boolean overrideDynamicGroups) {
-            this.overrideDynamicGroups = Input.ofNullable(overrideDynamicGroups);
+            this.overrideDynamicGroups = Output.ofNullable(overrideDynamicGroups);
             return this;
         }
 
-        public Builder thingGroupNames(Input<List<String>> thingGroupNames) {
+        public Builder thingGroupNames(Output<List<String>> thingGroupNames) {
             this.thingGroupNames = Objects.requireNonNull(thingGroupNames);
             return this;
         }
 
         public Builder thingGroupNames(List<String> thingGroupNames) {
-            this.thingGroupNames = Input.of(Objects.requireNonNull(thingGroupNames));
+            this.thingGroupNames = Output.of(Objects.requireNonNull(thingGroupNames));
             return this;
         }
         public MitigationActionAddThingsToThingGroupParamsArgs build() {

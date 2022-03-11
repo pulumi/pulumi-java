@@ -5,7 +5,7 @@ package io.pulumi.aws.acmpca.inputs;
 
 import io.pulumi.aws.acmpca.inputs.CertificateAuthorityCertificateAuthorityConfigurationGetArgs;
 import io.pulumi.aws.acmpca.inputs.CertificateAuthorityRevocationConfigurationGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -24,10 +24,10 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="certificate")
-      private final @Nullable Input<String> certificate;
+      private final @Nullable Output<String> certificate;
 
-    public Input<String> getCertificate() {
-        return this.certificate == null ? Input.empty() : this.certificate;
+    public Output<String> getCertificate() {
+        return this.certificate == null ? Output.empty() : this.certificate;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="certificateAuthorityConfiguration")
-      private final @Nullable Input<CertificateAuthorityCertificateAuthorityConfigurationGetArgs> certificateAuthorityConfiguration;
+      private final @Nullable Output<CertificateAuthorityCertificateAuthorityConfigurationGetArgs> certificateAuthorityConfiguration;
 
-    public Input<CertificateAuthorityCertificateAuthorityConfigurationGetArgs> getCertificateAuthorityConfiguration() {
-        return this.certificateAuthorityConfiguration == null ? Input.empty() : this.certificateAuthorityConfiguration;
+    public Output<CertificateAuthorityCertificateAuthorityConfigurationGetArgs> getCertificateAuthorityConfiguration() {
+        return this.certificateAuthorityConfiguration == null ? Output.empty() : this.certificateAuthorityConfiguration;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="certificateChain")
-      private final @Nullable Input<String> certificateChain;
+      private final @Nullable Output<String> certificateChain;
 
-    public Input<String> getCertificateChain() {
-        return this.certificateChain == null ? Input.empty() : this.certificateChain;
+    public Output<String> getCertificateChain() {
+        return this.certificateChain == null ? Output.empty() : this.certificateChain;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="certificateSigningRequest")
-      private final @Nullable Input<String> certificateSigningRequest;
+      private final @Nullable Output<String> certificateSigningRequest;
 
-    public Input<String> getCertificateSigningRequest() {
-        return this.certificateSigningRequest == null ? Input.empty() : this.certificateSigningRequest;
+    public Output<String> getCertificateSigningRequest() {
+        return this.certificateSigningRequest == null ? Output.empty() : this.certificateSigningRequest;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="notAfter")
-      private final @Nullable Input<String> notAfter;
+      private final @Nullable Output<String> notAfter;
 
-    public Input<String> getNotAfter() {
-        return this.notAfter == null ? Input.empty() : this.notAfter;
+    public Output<String> getNotAfter() {
+        return this.notAfter == null ? Output.empty() : this.notAfter;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="notBefore")
-      private final @Nullable Input<String> notBefore;
+      private final @Nullable Output<String> notBefore;
 
-    public Input<String> getNotBefore() {
-        return this.notBefore == null ? Input.empty() : this.notBefore;
+    public Output<String> getNotBefore() {
+        return this.notBefore == null ? Output.empty() : this.notBefore;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="permanentDeletionTimeInDays")
-      private final @Nullable Input<Integer> permanentDeletionTimeInDays;
+      private final @Nullable Output<Integer> permanentDeletionTimeInDays;
 
-    public Input<Integer> getPermanentDeletionTimeInDays() {
-        return this.permanentDeletionTimeInDays == null ? Input.empty() : this.permanentDeletionTimeInDays;
+    public Output<Integer> getPermanentDeletionTimeInDays() {
+        return this.permanentDeletionTimeInDays == null ? Output.empty() : this.permanentDeletionTimeInDays;
     }
 
     /**
@@ -123,10 +123,10 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="revocationConfiguration")
-      private final @Nullable Input<CertificateAuthorityRevocationConfigurationGetArgs> revocationConfiguration;
+      private final @Nullable Output<CertificateAuthorityRevocationConfigurationGetArgs> revocationConfiguration;
 
-    public Input<CertificateAuthorityRevocationConfigurationGetArgs> getRevocationConfiguration() {
-        return this.revocationConfiguration == null ? Input.empty() : this.revocationConfiguration;
+    public Output<CertificateAuthorityRevocationConfigurationGetArgs> getRevocationConfiguration() {
+        return this.revocationConfiguration == null ? Output.empty() : this.revocationConfiguration;
     }
 
     /**
@@ -134,10 +134,10 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="serial")
-      private final @Nullable Input<String> serial;
+      private final @Nullable Output<String> serial;
 
-    public Input<String> getSerial() {
-        return this.serial == null ? Input.empty() : this.serial;
+    public Output<String> getSerial() {
+        return this.serial == null ? Output.empty() : this.serial;
     }
 
     /**
@@ -145,10 +145,10 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -156,10 +156,10 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -167,10 +167,10 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -178,28 +178,28 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public CertificateAuthorityState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> certificate,
-        @Nullable Input<CertificateAuthorityCertificateAuthorityConfigurationGetArgs> certificateAuthorityConfiguration,
-        @Nullable Input<String> certificateChain,
-        @Nullable Input<String> certificateSigningRequest,
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<String> notAfter,
-        @Nullable Input<String> notBefore,
-        @Nullable Input<Integer> permanentDeletionTimeInDays,
-        @Nullable Input<CertificateAuthorityRevocationConfigurationGetArgs> revocationConfiguration,
-        @Nullable Input<String> serial,
-        @Nullable Input<String> status,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> type) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> certificate,
+        @Nullable Output<CertificateAuthorityCertificateAuthorityConfigurationGetArgs> certificateAuthorityConfiguration,
+        @Nullable Output<String> certificateChain,
+        @Nullable Output<String> certificateSigningRequest,
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<String> notAfter,
+        @Nullable Output<String> notBefore,
+        @Nullable Output<Integer> permanentDeletionTimeInDays,
+        @Nullable Output<CertificateAuthorityRevocationConfigurationGetArgs> revocationConfiguration,
+        @Nullable Output<String> serial,
+        @Nullable Output<String> status,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> type) {
         this.arn = arn;
         this.certificate = certificate;
         this.certificateAuthorityConfiguration = certificateAuthorityConfiguration;
@@ -218,21 +218,21 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
     }
 
     private CertificateAuthorityState() {
-        this.arn = Input.empty();
-        this.certificate = Input.empty();
-        this.certificateAuthorityConfiguration = Input.empty();
-        this.certificateChain = Input.empty();
-        this.certificateSigningRequest = Input.empty();
-        this.enabled = Input.empty();
-        this.notAfter = Input.empty();
-        this.notBefore = Input.empty();
-        this.permanentDeletionTimeInDays = Input.empty();
-        this.revocationConfiguration = Input.empty();
-        this.serial = Input.empty();
-        this.status = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.type = Input.empty();
+        this.arn = Output.empty();
+        this.certificate = Output.empty();
+        this.certificateAuthorityConfiguration = Output.empty();
+        this.certificateChain = Output.empty();
+        this.certificateSigningRequest = Output.empty();
+        this.enabled = Output.empty();
+        this.notAfter = Output.empty();
+        this.notBefore = Output.empty();
+        this.permanentDeletionTimeInDays = Output.empty();
+        this.revocationConfiguration = Output.empty();
+        this.serial = Output.empty();
+        this.status = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -244,21 +244,21 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> certificate;
-        private @Nullable Input<CertificateAuthorityCertificateAuthorityConfigurationGetArgs> certificateAuthorityConfiguration;
-        private @Nullable Input<String> certificateChain;
-        private @Nullable Input<String> certificateSigningRequest;
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<String> notAfter;
-        private @Nullable Input<String> notBefore;
-        private @Nullable Input<Integer> permanentDeletionTimeInDays;
-        private @Nullable Input<CertificateAuthorityRevocationConfigurationGetArgs> revocationConfiguration;
-        private @Nullable Input<String> serial;
-        private @Nullable Input<String> status;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> type;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> certificate;
+        private @Nullable Output<CertificateAuthorityCertificateAuthorityConfigurationGetArgs> certificateAuthorityConfiguration;
+        private @Nullable Output<String> certificateChain;
+        private @Nullable Output<String> certificateSigningRequest;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<String> notAfter;
+        private @Nullable Output<String> notBefore;
+        private @Nullable Output<Integer> permanentDeletionTimeInDays;
+        private @Nullable Output<CertificateAuthorityRevocationConfigurationGetArgs> revocationConfiguration;
+        private @Nullable Output<String> serial;
+        private @Nullable Output<String> status;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -283,153 +283,153 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
     	      this.type = defaults.type;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder certificate(@Nullable Input<String> certificate) {
+        public Builder certificate(@Nullable Output<String> certificate) {
             this.certificate = certificate;
             return this;
         }
 
         public Builder certificate(@Nullable String certificate) {
-            this.certificate = Input.ofNullable(certificate);
+            this.certificate = Output.ofNullable(certificate);
             return this;
         }
 
-        public Builder certificateAuthorityConfiguration(@Nullable Input<CertificateAuthorityCertificateAuthorityConfigurationGetArgs> certificateAuthorityConfiguration) {
+        public Builder certificateAuthorityConfiguration(@Nullable Output<CertificateAuthorityCertificateAuthorityConfigurationGetArgs> certificateAuthorityConfiguration) {
             this.certificateAuthorityConfiguration = certificateAuthorityConfiguration;
             return this;
         }
 
         public Builder certificateAuthorityConfiguration(@Nullable CertificateAuthorityCertificateAuthorityConfigurationGetArgs certificateAuthorityConfiguration) {
-            this.certificateAuthorityConfiguration = Input.ofNullable(certificateAuthorityConfiguration);
+            this.certificateAuthorityConfiguration = Output.ofNullable(certificateAuthorityConfiguration);
             return this;
         }
 
-        public Builder certificateChain(@Nullable Input<String> certificateChain) {
+        public Builder certificateChain(@Nullable Output<String> certificateChain) {
             this.certificateChain = certificateChain;
             return this;
         }
 
         public Builder certificateChain(@Nullable String certificateChain) {
-            this.certificateChain = Input.ofNullable(certificateChain);
+            this.certificateChain = Output.ofNullable(certificateChain);
             return this;
         }
 
-        public Builder certificateSigningRequest(@Nullable Input<String> certificateSigningRequest) {
+        public Builder certificateSigningRequest(@Nullable Output<String> certificateSigningRequest) {
             this.certificateSigningRequest = certificateSigningRequest;
             return this;
         }
 
         public Builder certificateSigningRequest(@Nullable String certificateSigningRequest) {
-            this.certificateSigningRequest = Input.ofNullable(certificateSigningRequest);
+            this.certificateSigningRequest = Output.ofNullable(certificateSigningRequest);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder notAfter(@Nullable Input<String> notAfter) {
+        public Builder notAfter(@Nullable Output<String> notAfter) {
             this.notAfter = notAfter;
             return this;
         }
 
         public Builder notAfter(@Nullable String notAfter) {
-            this.notAfter = Input.ofNullable(notAfter);
+            this.notAfter = Output.ofNullable(notAfter);
             return this;
         }
 
-        public Builder notBefore(@Nullable Input<String> notBefore) {
+        public Builder notBefore(@Nullable Output<String> notBefore) {
             this.notBefore = notBefore;
             return this;
         }
 
         public Builder notBefore(@Nullable String notBefore) {
-            this.notBefore = Input.ofNullable(notBefore);
+            this.notBefore = Output.ofNullable(notBefore);
             return this;
         }
 
-        public Builder permanentDeletionTimeInDays(@Nullable Input<Integer> permanentDeletionTimeInDays) {
+        public Builder permanentDeletionTimeInDays(@Nullable Output<Integer> permanentDeletionTimeInDays) {
             this.permanentDeletionTimeInDays = permanentDeletionTimeInDays;
             return this;
         }
 
         public Builder permanentDeletionTimeInDays(@Nullable Integer permanentDeletionTimeInDays) {
-            this.permanentDeletionTimeInDays = Input.ofNullable(permanentDeletionTimeInDays);
+            this.permanentDeletionTimeInDays = Output.ofNullable(permanentDeletionTimeInDays);
             return this;
         }
 
-        public Builder revocationConfiguration(@Nullable Input<CertificateAuthorityRevocationConfigurationGetArgs> revocationConfiguration) {
+        public Builder revocationConfiguration(@Nullable Output<CertificateAuthorityRevocationConfigurationGetArgs> revocationConfiguration) {
             this.revocationConfiguration = revocationConfiguration;
             return this;
         }
 
         public Builder revocationConfiguration(@Nullable CertificateAuthorityRevocationConfigurationGetArgs revocationConfiguration) {
-            this.revocationConfiguration = Input.ofNullable(revocationConfiguration);
+            this.revocationConfiguration = Output.ofNullable(revocationConfiguration);
             return this;
         }
 
-        public Builder serial(@Nullable Input<String> serial) {
+        public Builder serial(@Nullable Output<String> serial) {
             this.serial = serial;
             return this;
         }
 
         public Builder serial(@Nullable String serial) {
-            this.serial = Input.ofNullable(serial);
+            this.serial = Output.ofNullable(serial);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public CertificateAuthorityState build() {

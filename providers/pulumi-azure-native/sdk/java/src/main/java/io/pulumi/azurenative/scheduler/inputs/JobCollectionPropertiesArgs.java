@@ -6,7 +6,7 @@ package io.pulumi.azurenative.scheduler.inputs;
 import io.pulumi.azurenative.scheduler.enums.JobCollectionState;
 import io.pulumi.azurenative.scheduler.inputs.JobCollectionQuotaArgs;
 import io.pulumi.azurenative.scheduler.inputs.SkuArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,10 +21,10 @@ public final class JobCollectionPropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="quota")
-      private final @Nullable Input<JobCollectionQuotaArgs> quota;
+      private final @Nullable Output<JobCollectionQuotaArgs> quota;
 
-    public Input<JobCollectionQuotaArgs> getQuota() {
-        return this.quota == null ? Input.empty() : this.quota;
+    public Output<JobCollectionQuotaArgs> getQuota() {
+        return this.quota == null ? Output.empty() : this.quota;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class JobCollectionPropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<SkuArgs> sku;
+      private final @Nullable Output<SkuArgs> sku;
 
-    public Input<SkuArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<SkuArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class JobCollectionPropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<JobCollectionState> state;
+      private final @Nullable Output<JobCollectionState> state;
 
-    public Input<JobCollectionState> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<JobCollectionState> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     public JobCollectionPropertiesArgs(
-        @Nullable Input<JobCollectionQuotaArgs> quota,
-        @Nullable Input<SkuArgs> sku,
-        @Nullable Input<JobCollectionState> state) {
+        @Nullable Output<JobCollectionQuotaArgs> quota,
+        @Nullable Output<SkuArgs> sku,
+        @Nullable Output<JobCollectionState> state) {
         this.quota = quota;
         this.sku = sku;
         this.state = state;
     }
 
     private JobCollectionPropertiesArgs() {
-        this.quota = Input.empty();
-        this.sku = Input.empty();
-        this.state = Input.empty();
+        this.quota = Output.empty();
+        this.sku = Output.empty();
+        this.state = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class JobCollectionPropertiesArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<JobCollectionQuotaArgs> quota;
-        private @Nullable Input<SkuArgs> sku;
-        private @Nullable Input<JobCollectionState> state;
+        private @Nullable Output<JobCollectionQuotaArgs> quota;
+        private @Nullable Output<SkuArgs> sku;
+        private @Nullable Output<JobCollectionState> state;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class JobCollectionPropertiesArgs extends io.pulumi.resources.Resou
     	      this.state = defaults.state;
         }
 
-        public Builder quota(@Nullable Input<JobCollectionQuotaArgs> quota) {
+        public Builder quota(@Nullable Output<JobCollectionQuotaArgs> quota) {
             this.quota = quota;
             return this;
         }
 
         public Builder quota(@Nullable JobCollectionQuotaArgs quota) {
-            this.quota = Input.ofNullable(quota);
+            this.quota = Output.ofNullable(quota);
             return this;
         }
 
-        public Builder sku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder state(@Nullable Input<JobCollectionState> state) {
+        public Builder state(@Nullable Output<JobCollectionState> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable JobCollectionState state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
         public JobCollectionPropertiesArgs build() {

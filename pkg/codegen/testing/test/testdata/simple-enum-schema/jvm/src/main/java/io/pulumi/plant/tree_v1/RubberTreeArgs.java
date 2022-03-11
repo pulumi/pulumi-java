@@ -4,7 +4,7 @@
 package io.pulumi.plant.tree_v1;
 
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.plant.inputs.ContainerArgs;
 import io.pulumi.plant.tree_v1.enums.Diameter;
@@ -21,59 +21,59 @@ public final class RubberTreeArgs extends io.pulumi.resources.ResourceArgs {
     public static final RubberTreeArgs Empty = new RubberTreeArgs();
 
     @InputImport(name="container")
-      private final @Nullable Input<ContainerArgs> container;
+      private final @Nullable Output<ContainerArgs> container;
 
-    public Input<ContainerArgs> getContainer() {
-        return this.container == null ? Input.empty() : this.container;
+    public Output<ContainerArgs> getContainer() {
+        return this.container == null ? Output.empty() : this.container;
     }
 
     @InputImport(name="diameter", required=true)
-      private final Input<Diameter> diameter;
+      private final Output<Diameter> diameter;
 
-    public Input<Diameter> getDiameter() {
+    public Output<Diameter> getDiameter() {
         return this.diameter;
     }
 
     @InputImport(name="farm")
-      private final @Nullable Input<Either<Farm,String>> farm;
+      private final @Nullable Output<Either<Farm,String>> farm;
 
-    public Input<Either<Farm,String>> getFarm() {
-        return this.farm == null ? Input.empty() : this.farm;
+    public Output<Either<Farm,String>> getFarm() {
+        return this.farm == null ? Output.empty() : this.farm;
     }
 
     @InputImport(name="size")
-      private final @Nullable Input<TreeSize> size;
+      private final @Nullable Output<TreeSize> size;
 
-    public Input<TreeSize> getSize() {
-        return this.size == null ? Input.empty() : this.size;
+    public Output<TreeSize> getSize() {
+        return this.size == null ? Output.empty() : this.size;
     }
 
     @InputImport(name="type", required=true)
-      private final Input<RubberTreeVariety> type;
+      private final Output<RubberTreeVariety> type;
 
-    public Input<RubberTreeVariety> getType() {
+    public Output<RubberTreeVariety> getType() {
         return this.type;
     }
 
     public RubberTreeArgs(
-        @Nullable Input<ContainerArgs> container,
-        Input<Diameter> diameter,
-        @Nullable Input<Either<Farm,String>> farm,
-        @Nullable Input<TreeSize> size,
-        Input<RubberTreeVariety> type) {
+        @Nullable Output<ContainerArgs> container,
+        Output<Diameter> diameter,
+        @Nullable Output<Either<Farm,String>> farm,
+        @Nullable Output<TreeSize> size,
+        Output<RubberTreeVariety> type) {
         this.container = container;
-        this.diameter = diameter == null ? Input.ofNullable(io.pulumi.plant.tree_v1.enums.Diameter.Sixinch) : Objects.requireNonNull(diameter, "expected parameter 'diameter' to be non-null");
-        this.farm = farm == null ? Input.ofRight("(unknown)") : farm;
-        this.size = size == null ? Input.ofNullable(io.pulumi.plant.tree_v1.enums.TreeSize.Medium) : size;
-        this.type = type == null ? Input.ofNullable(io.pulumi.plant.tree_v1.enums.RubberTreeVariety.Burgundy) : Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.diameter = diameter == null ? Output.ofNullable(io.pulumi.plant.tree_v1.enums.Diameter.Sixinch) : Objects.requireNonNull(diameter, "expected parameter 'diameter' to be non-null");
+        this.farm = farm == null ? Output.ofRight("(unknown)") : farm;
+        this.size = size == null ? Output.ofNullable(io.pulumi.plant.tree_v1.enums.TreeSize.Medium) : size;
+        this.type = type == null ? Output.ofNullable(io.pulumi.plant.tree_v1.enums.RubberTreeVariety.Burgundy) : Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private RubberTreeArgs() {
-        this.container = Input.empty();
-        this.diameter = Input.empty();
-        this.farm = Input.empty();
-        this.size = Input.empty();
-        this.type = Input.empty();
+        this.container = Output.empty();
+        this.diameter = Output.empty();
+        this.farm = Output.empty();
+        this.size = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,11 +85,11 @@ public final class RubberTreeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ContainerArgs> container;
-        private Input<Diameter> diameter;
-        private @Nullable Input<Either<Farm,String>> farm;
-        private @Nullable Input<TreeSize> size;
-        private Input<RubberTreeVariety> type;
+        private @Nullable Output<ContainerArgs> container;
+        private Output<Diameter> diameter;
+        private @Nullable Output<Either<Farm,String>> farm;
+        private @Nullable Output<TreeSize> size;
+        private Output<RubberTreeVariety> type;
 
         public Builder() {
     	      // Empty
@@ -104,53 +104,53 @@ public final class RubberTreeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder container(@Nullable Input<ContainerArgs> container) {
+        public Builder container(@Nullable Output<ContainerArgs> container) {
             this.container = container;
             return this;
         }
 
         public Builder container(@Nullable ContainerArgs container) {
-            this.container = Input.ofNullable(container);
+            this.container = Output.ofNullable(container);
             return this;
         }
 
-        public Builder diameter(Input<Diameter> diameter) {
+        public Builder diameter(Output<Diameter> diameter) {
             this.diameter = Objects.requireNonNull(diameter);
             return this;
         }
 
         public Builder diameter(Diameter diameter) {
-            this.diameter = Input.of(Objects.requireNonNull(diameter));
+            this.diameter = Output.of(Objects.requireNonNull(diameter));
             return this;
         }
 
-        public Builder farm(@Nullable Input<Either<Farm,String>> farm) {
+        public Builder farm(@Nullable Output<Either<Farm,String>> farm) {
             this.farm = farm;
             return this;
         }
 
         public Builder farm(@Nullable Either<Farm,String> farm) {
-            this.farm = Input.ofNullable(farm);
+            this.farm = Output.ofNullable(farm);
             return this;
         }
 
-        public Builder size(@Nullable Input<TreeSize> size) {
+        public Builder size(@Nullable Output<TreeSize> size) {
             this.size = size;
             return this;
         }
 
         public Builder size(@Nullable TreeSize size) {
-            this.size = Input.ofNullable(size);
+            this.size = Output.ofNullable(size);
             return this;
         }
 
-        public Builder type(Input<RubberTreeVariety> type) {
+        public Builder type(Output<RubberTreeVariety> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(RubberTreeVariety type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public RubberTreeArgs build() {

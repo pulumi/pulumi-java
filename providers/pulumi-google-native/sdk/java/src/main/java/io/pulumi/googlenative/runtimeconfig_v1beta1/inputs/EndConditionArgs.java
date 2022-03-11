@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.runtimeconfig_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.runtimeconfig_v1beta1.inputs.CardinalityArgs;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class EndConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cardinality")
-      private final @Nullable Input<CardinalityArgs> cardinality;
+      private final @Nullable Output<CardinalityArgs> cardinality;
 
-    public Input<CardinalityArgs> getCardinality() {
-        return this.cardinality == null ? Input.empty() : this.cardinality;
+    public Output<CardinalityArgs> getCardinality() {
+        return this.cardinality == null ? Output.empty() : this.cardinality;
     }
 
-    public EndConditionArgs(@Nullable Input<CardinalityArgs> cardinality) {
+    public EndConditionArgs(@Nullable Output<CardinalityArgs> cardinality) {
         this.cardinality = cardinality;
     }
 
     private EndConditionArgs() {
-        this.cardinality = Input.empty();
+        this.cardinality = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class EndConditionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<CardinalityArgs> cardinality;
+        private @Nullable Output<CardinalityArgs> cardinality;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class EndConditionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.cardinality = defaults.cardinality;
         }
 
-        public Builder cardinality(@Nullable Input<CardinalityArgs> cardinality) {
+        public Builder cardinality(@Nullable Output<CardinalityArgs> cardinality) {
             this.cardinality = cardinality;
             return this;
         }
 
         public Builder cardinality(@Nullable CardinalityArgs cardinality) {
-            this.cardinality = Input.ofNullable(cardinality);
+            this.cardinality = Output.ofNullable(cardinality);
             return this;
         }
         public EndConditionArgs build() {

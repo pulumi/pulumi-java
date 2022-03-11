@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.securityhub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountId")
-      private final @Nullable Input<String> accountId;
+      private final @Nullable Output<String> accountId;
 
-    public Input<String> getAccountId() {
-        return this.accountId == null ? Input.empty() : this.accountId;
+    public Output<String> getAccountId() {
+        return this.accountId == null ? Output.empty() : this.accountId;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="email")
-      private final @Nullable Input<String> email;
+      private final @Nullable Output<String> email;
 
-    public Input<String> getEmail() {
-        return this.email == null ? Input.empty() : this.email;
+    public Output<String> getEmail() {
+        return this.email == null ? Output.empty() : this.email;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="invite")
-      private final @Nullable Input<Boolean> invite;
+      private final @Nullable Output<Boolean> invite;
 
-    public Input<Boolean> getInvite() {
-        return this.invite == null ? Input.empty() : this.invite;
+    public Output<Boolean> getInvite() {
+        return this.invite == null ? Output.empty() : this.invite;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="masterId")
-      private final @Nullable Input<String> masterId;
+      private final @Nullable Output<String> masterId;
 
-    public Input<String> getMasterId() {
-        return this.masterId == null ? Input.empty() : this.masterId;
+    public Output<String> getMasterId() {
+        return this.masterId == null ? Output.empty() : this.masterId;
     }
 
     /**
@@ -64,18 +64,18 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="memberStatus")
-      private final @Nullable Input<String> memberStatus;
+      private final @Nullable Output<String> memberStatus;
 
-    public Input<String> getMemberStatus() {
-        return this.memberStatus == null ? Input.empty() : this.memberStatus;
+    public Output<String> getMemberStatus() {
+        return this.memberStatus == null ? Output.empty() : this.memberStatus;
     }
 
     public MemberState(
-        @Nullable Input<String> accountId,
-        @Nullable Input<String> email,
-        @Nullable Input<Boolean> invite,
-        @Nullable Input<String> masterId,
-        @Nullable Input<String> memberStatus) {
+        @Nullable Output<String> accountId,
+        @Nullable Output<String> email,
+        @Nullable Output<Boolean> invite,
+        @Nullable Output<String> masterId,
+        @Nullable Output<String> memberStatus) {
         this.accountId = accountId;
         this.email = email;
         this.invite = invite;
@@ -84,11 +84,11 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
     }
 
     private MemberState() {
-        this.accountId = Input.empty();
-        this.email = Input.empty();
-        this.invite = Input.empty();
-        this.masterId = Input.empty();
-        this.memberStatus = Input.empty();
+        this.accountId = Output.empty();
+        this.email = Output.empty();
+        this.invite = Output.empty();
+        this.masterId = Output.empty();
+        this.memberStatus = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accountId;
-        private @Nullable Input<String> email;
-        private @Nullable Input<Boolean> invite;
-        private @Nullable Input<String> masterId;
-        private @Nullable Input<String> memberStatus;
+        private @Nullable Output<String> accountId;
+        private @Nullable Output<String> email;
+        private @Nullable Output<Boolean> invite;
+        private @Nullable Output<String> masterId;
+        private @Nullable Output<String> memberStatus;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
     	      this.memberStatus = defaults.memberStatus;
         }
 
-        public Builder accountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Output<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Input.ofNullable(accountId);
+            this.accountId = Output.ofNullable(accountId);
             return this;
         }
 
-        public Builder email(@Nullable Input<String> email) {
+        public Builder email(@Nullable Output<String> email) {
             this.email = email;
             return this;
         }
 
         public Builder email(@Nullable String email) {
-            this.email = Input.ofNullable(email);
+            this.email = Output.ofNullable(email);
             return this;
         }
 
-        public Builder invite(@Nullable Input<Boolean> invite) {
+        public Builder invite(@Nullable Output<Boolean> invite) {
             this.invite = invite;
             return this;
         }
 
         public Builder invite(@Nullable Boolean invite) {
-            this.invite = Input.ofNullable(invite);
+            this.invite = Output.ofNullable(invite);
             return this;
         }
 
-        public Builder masterId(@Nullable Input<String> masterId) {
+        public Builder masterId(@Nullable Output<String> masterId) {
             this.masterId = masterId;
             return this;
         }
 
         public Builder masterId(@Nullable String masterId) {
-            this.masterId = Input.ofNullable(masterId);
+            this.masterId = Output.ofNullable(masterId);
             return this;
         }
 
-        public Builder memberStatus(@Nullable Input<String> memberStatus) {
+        public Builder memberStatus(@Nullable Output<String> memberStatus) {
             this.memberStatus = memberStatus;
             return this;
         }
 
         public Builder memberStatus(@Nullable String memberStatus) {
-            this.memberStatus = Input.ofNullable(memberStatus);
+            this.memberStatus = Output.ofNullable(memberStatus);
             return this;
         }
         public MemberState build() {

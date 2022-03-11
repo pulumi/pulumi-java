@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.pubsub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.pubsub.inputs.LiteSubscriptionDeliveryConfigGetArgs;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class LiteSubscriptionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="deliveryConfig")
-      private final @Nullable Input<LiteSubscriptionDeliveryConfigGetArgs> deliveryConfig;
+      private final @Nullable Output<LiteSubscriptionDeliveryConfigGetArgs> deliveryConfig;
 
-    public Input<LiteSubscriptionDeliveryConfigGetArgs> getDeliveryConfig() {
-        return this.deliveryConfig == null ? Input.empty() : this.deliveryConfig;
+    public Output<LiteSubscriptionDeliveryConfigGetArgs> getDeliveryConfig() {
+        return this.deliveryConfig == null ? Output.empty() : this.deliveryConfig;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class LiteSubscriptionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class LiteSubscriptionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class LiteSubscriptionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class LiteSubscriptionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="topic")
-      private final @Nullable Input<String> topic;
+      private final @Nullable Output<String> topic;
 
-    public Input<String> getTopic() {
-        return this.topic == null ? Input.empty() : this.topic;
+    public Output<String> getTopic() {
+        return this.topic == null ? Output.empty() : this.topic;
     }
 
     /**
@@ -77,19 +77,19 @@ public final class LiteSubscriptionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="zone")
-      private final @Nullable Input<String> zone;
+      private final @Nullable Output<String> zone;
 
-    public Input<String> getZone() {
-        return this.zone == null ? Input.empty() : this.zone;
+    public Output<String> getZone() {
+        return this.zone == null ? Output.empty() : this.zone;
     }
 
     public LiteSubscriptionState(
-        @Nullable Input<LiteSubscriptionDeliveryConfigGetArgs> deliveryConfig,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<String> region,
-        @Nullable Input<String> topic,
-        @Nullable Input<String> zone) {
+        @Nullable Output<LiteSubscriptionDeliveryConfigGetArgs> deliveryConfig,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<String> region,
+        @Nullable Output<String> topic,
+        @Nullable Output<String> zone) {
         this.deliveryConfig = deliveryConfig;
         this.name = name;
         this.project = project;
@@ -99,12 +99,12 @@ public final class LiteSubscriptionState extends io.pulumi.resources.ResourceArg
     }
 
     private LiteSubscriptionState() {
-        this.deliveryConfig = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
-        this.topic = Input.empty();
-        this.zone = Input.empty();
+        this.deliveryConfig = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
+        this.topic = Output.empty();
+        this.zone = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class LiteSubscriptionState extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<LiteSubscriptionDeliveryConfigGetArgs> deliveryConfig;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> region;
-        private @Nullable Input<String> topic;
-        private @Nullable Input<String> zone;
+        private @Nullable Output<LiteSubscriptionDeliveryConfigGetArgs> deliveryConfig;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> region;
+        private @Nullable Output<String> topic;
+        private @Nullable Output<String> zone;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class LiteSubscriptionState extends io.pulumi.resources.ResourceArg
     	      this.zone = defaults.zone;
         }
 
-        public Builder deliveryConfig(@Nullable Input<LiteSubscriptionDeliveryConfigGetArgs> deliveryConfig) {
+        public Builder deliveryConfig(@Nullable Output<LiteSubscriptionDeliveryConfigGetArgs> deliveryConfig) {
             this.deliveryConfig = deliveryConfig;
             return this;
         }
 
         public Builder deliveryConfig(@Nullable LiteSubscriptionDeliveryConfigGetArgs deliveryConfig) {
-            this.deliveryConfig = Input.ofNullable(deliveryConfig);
+            this.deliveryConfig = Output.ofNullable(deliveryConfig);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder topic(@Nullable Input<String> topic) {
+        public Builder topic(@Nullable Output<String> topic) {
             this.topic = topic;
             return this;
         }
 
         public Builder topic(@Nullable String topic) {
-            this.topic = Input.ofNullable(topic);
+            this.topic = Output.ofNullable(topic);
             return this;
         }
 
-        public Builder zone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
 
         public Builder zone(@Nullable String zone) {
-            this.zone = Input.ofNullable(zone);
+            this.zone = Output.ofNullable(zone);
             return this;
         }
         public LiteSubscriptionState build() {

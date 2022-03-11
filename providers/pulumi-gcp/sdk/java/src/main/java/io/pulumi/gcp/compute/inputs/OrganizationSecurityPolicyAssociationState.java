@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class OrganizationSecurityPolicyAssociationState extends io.pulumi.
      * 
      */
     @InputImport(name="attachmentId")
-      private final @Nullable Input<String> attachmentId;
+      private final @Nullable Output<String> attachmentId;
 
-    public Input<String> getAttachmentId() {
-        return this.attachmentId == null ? Input.empty() : this.attachmentId;
+    public Output<String> getAttachmentId() {
+        return this.attachmentId == null ? Output.empty() : this.attachmentId;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class OrganizationSecurityPolicyAssociationState extends io.pulumi.
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class OrganizationSecurityPolicyAssociationState extends io.pulumi.
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class OrganizationSecurityPolicyAssociationState extends io.pulumi.
      * 
      */
     @InputImport(name="policyId")
-      private final @Nullable Input<String> policyId;
+      private final @Nullable Output<String> policyId;
 
-    public Input<String> getPolicyId() {
-        return this.policyId == null ? Input.empty() : this.policyId;
+    public Output<String> getPolicyId() {
+        return this.policyId == null ? Output.empty() : this.policyId;
     }
 
     public OrganizationSecurityPolicyAssociationState(
-        @Nullable Input<String> attachmentId,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> name,
-        @Nullable Input<String> policyId) {
+        @Nullable Output<String> attachmentId,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> name,
+        @Nullable Output<String> policyId) {
         this.attachmentId = attachmentId;
         this.displayName = displayName;
         this.name = name;
@@ -70,10 +70,10 @@ public final class OrganizationSecurityPolicyAssociationState extends io.pulumi.
     }
 
     private OrganizationSecurityPolicyAssociationState() {
-        this.attachmentId = Input.empty();
-        this.displayName = Input.empty();
-        this.name = Input.empty();
-        this.policyId = Input.empty();
+        this.attachmentId = Output.empty();
+        this.displayName = Output.empty();
+        this.name = Output.empty();
+        this.policyId = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class OrganizationSecurityPolicyAssociationState extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> attachmentId;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> policyId;
+        private @Nullable Output<String> attachmentId;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> policyId;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class OrganizationSecurityPolicyAssociationState extends io.pulumi.
     	      this.policyId = defaults.policyId;
         }
 
-        public Builder attachmentId(@Nullable Input<String> attachmentId) {
+        public Builder attachmentId(@Nullable Output<String> attachmentId) {
             this.attachmentId = attachmentId;
             return this;
         }
 
         public Builder attachmentId(@Nullable String attachmentId) {
-            this.attachmentId = Input.ofNullable(attachmentId);
+            this.attachmentId = Output.ofNullable(attachmentId);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder policyId(@Nullable Input<String> policyId) {
+        public Builder policyId(@Nullable Output<String> policyId) {
             this.policyId = policyId;
             return this;
         }
 
         public Builder policyId(@Nullable String policyId) {
-            this.policyId = Input.ofNullable(policyId);
+            this.policyId = Output.ofNullable(policyId);
             return this;
         }
         public OrganizationSecurityPolicyAssociationState build() {

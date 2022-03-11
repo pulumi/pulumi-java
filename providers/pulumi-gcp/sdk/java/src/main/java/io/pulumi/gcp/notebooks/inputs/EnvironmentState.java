@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.notebooks.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.notebooks.inputs.EnvironmentContainerImageGetArgs;
 import io.pulumi.gcp.notebooks.inputs.EnvironmentVmImageGetArgs;
@@ -22,10 +22,10 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerImage")
-      private final @Nullable Input<EnvironmentContainerImageGetArgs> containerImage;
+      private final @Nullable Output<EnvironmentContainerImageGetArgs> containerImage;
 
-    public Input<EnvironmentContainerImageGetArgs> getContainerImage() {
-        return this.containerImage == null ? Input.empty() : this.containerImage;
+    public Output<EnvironmentContainerImageGetArgs> getContainerImage() {
+        return this.containerImage == null ? Output.empty() : this.containerImage;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-      private final @Nullable Input<String> createTime;
+      private final @Nullable Output<String> createTime;
 
-    public Input<String> getCreateTime() {
-        return this.createTime == null ? Input.empty() : this.createTime;
+    public Output<String> getCreateTime() {
+        return this.createTime == null ? Output.empty() : this.createTime;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="postStartupScript")
-      private final @Nullable Input<String> postStartupScript;
+      private final @Nullable Output<String> postStartupScript;
 
-    public Input<String> getPostStartupScript() {
-        return this.postStartupScript == null ? Input.empty() : this.postStartupScript;
+    public Output<String> getPostStartupScript() {
+        return this.postStartupScript == null ? Output.empty() : this.postStartupScript;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -114,22 +114,22 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vmImage")
-      private final @Nullable Input<EnvironmentVmImageGetArgs> vmImage;
+      private final @Nullable Output<EnvironmentVmImageGetArgs> vmImage;
 
-    public Input<EnvironmentVmImageGetArgs> getVmImage() {
-        return this.vmImage == null ? Input.empty() : this.vmImage;
+    public Output<EnvironmentVmImageGetArgs> getVmImage() {
+        return this.vmImage == null ? Output.empty() : this.vmImage;
     }
 
     public EnvironmentState(
-        @Nullable Input<EnvironmentContainerImageGetArgs> containerImage,
-        @Nullable Input<String> createTime,
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> postStartupScript,
-        @Nullable Input<String> project,
-        @Nullable Input<EnvironmentVmImageGetArgs> vmImage) {
+        @Nullable Output<EnvironmentContainerImageGetArgs> containerImage,
+        @Nullable Output<String> createTime,
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> postStartupScript,
+        @Nullable Output<String> project,
+        @Nullable Output<EnvironmentVmImageGetArgs> vmImage) {
         this.containerImage = containerImage;
         this.createTime = createTime;
         this.description = description;
@@ -142,15 +142,15 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
     }
 
     private EnvironmentState() {
-        this.containerImage = Input.empty();
-        this.createTime = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.postStartupScript = Input.empty();
-        this.project = Input.empty();
-        this.vmImage = Input.empty();
+        this.containerImage = Output.empty();
+        this.createTime = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.postStartupScript = Output.empty();
+        this.project = Output.empty();
+        this.vmImage = Output.empty();
     }
 
     public static Builder builder() {
@@ -162,15 +162,15 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<EnvironmentContainerImageGetArgs> containerImage;
-        private @Nullable Input<String> createTime;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> postStartupScript;
-        private @Nullable Input<String> project;
-        private @Nullable Input<EnvironmentVmImageGetArgs> vmImage;
+        private @Nullable Output<EnvironmentContainerImageGetArgs> containerImage;
+        private @Nullable Output<String> createTime;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> postStartupScript;
+        private @Nullable Output<String> project;
+        private @Nullable Output<EnvironmentVmImageGetArgs> vmImage;
 
         public Builder() {
     	      // Empty
@@ -189,93 +189,93 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
     	      this.vmImage = defaults.vmImage;
         }
 
-        public Builder containerImage(@Nullable Input<EnvironmentContainerImageGetArgs> containerImage) {
+        public Builder containerImage(@Nullable Output<EnvironmentContainerImageGetArgs> containerImage) {
             this.containerImage = containerImage;
             return this;
         }
 
         public Builder containerImage(@Nullable EnvironmentContainerImageGetArgs containerImage) {
-            this.containerImage = Input.ofNullable(containerImage);
+            this.containerImage = Output.ofNullable(containerImage);
             return this;
         }
 
-        public Builder createTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Input.ofNullable(createTime);
+            this.createTime = Output.ofNullable(createTime);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder postStartupScript(@Nullable Input<String> postStartupScript) {
+        public Builder postStartupScript(@Nullable Output<String> postStartupScript) {
             this.postStartupScript = postStartupScript;
             return this;
         }
 
         public Builder postStartupScript(@Nullable String postStartupScript) {
-            this.postStartupScript = Input.ofNullable(postStartupScript);
+            this.postStartupScript = Output.ofNullable(postStartupScript);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder vmImage(@Nullable Input<EnvironmentVmImageGetArgs> vmImage) {
+        public Builder vmImage(@Nullable Output<EnvironmentVmImageGetArgs> vmImage) {
             this.vmImage = vmImage;
             return this;
         }
 
         public Builder vmImage(@Nullable EnvironmentVmImageGetArgs vmImage) {
-            this.vmImage = Input.ofNullable(vmImage);
+            this.vmImage = Output.ofNullable(vmImage);
             return this;
         }
         public EnvironmentState build() {

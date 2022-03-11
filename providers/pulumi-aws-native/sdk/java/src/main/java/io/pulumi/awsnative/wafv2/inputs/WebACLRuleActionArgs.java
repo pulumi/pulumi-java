@@ -7,7 +7,7 @@ import io.pulumi.awsnative.wafv2.inputs.WebACLAllowActionArgs;
 import io.pulumi.awsnative.wafv2.inputs.WebACLBlockActionArgs;
 import io.pulumi.awsnative.wafv2.inputs.WebACLCaptchaActionArgs;
 import io.pulumi.awsnative.wafv2.inputs.WebACLCountActionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,38 +22,38 @@ public final class WebACLRuleActionArgs extends io.pulumi.resources.ResourceArgs
     public static final WebACLRuleActionArgs Empty = new WebACLRuleActionArgs();
 
     @InputImport(name="allow")
-      private final @Nullable Input<WebACLAllowActionArgs> allow;
+      private final @Nullable Output<WebACLAllowActionArgs> allow;
 
-    public Input<WebACLAllowActionArgs> getAllow() {
-        return this.allow == null ? Input.empty() : this.allow;
+    public Output<WebACLAllowActionArgs> getAllow() {
+        return this.allow == null ? Output.empty() : this.allow;
     }
 
     @InputImport(name="block")
-      private final @Nullable Input<WebACLBlockActionArgs> block;
+      private final @Nullable Output<WebACLBlockActionArgs> block;
 
-    public Input<WebACLBlockActionArgs> getBlock() {
-        return this.block == null ? Input.empty() : this.block;
+    public Output<WebACLBlockActionArgs> getBlock() {
+        return this.block == null ? Output.empty() : this.block;
     }
 
     @InputImport(name="captcha")
-      private final @Nullable Input<WebACLCaptchaActionArgs> captcha;
+      private final @Nullable Output<WebACLCaptchaActionArgs> captcha;
 
-    public Input<WebACLCaptchaActionArgs> getCaptcha() {
-        return this.captcha == null ? Input.empty() : this.captcha;
+    public Output<WebACLCaptchaActionArgs> getCaptcha() {
+        return this.captcha == null ? Output.empty() : this.captcha;
     }
 
     @InputImport(name="count")
-      private final @Nullable Input<WebACLCountActionArgs> count;
+      private final @Nullable Output<WebACLCountActionArgs> count;
 
-    public Input<WebACLCountActionArgs> getCount() {
-        return this.count == null ? Input.empty() : this.count;
+    public Output<WebACLCountActionArgs> getCount() {
+        return this.count == null ? Output.empty() : this.count;
     }
 
     public WebACLRuleActionArgs(
-        @Nullable Input<WebACLAllowActionArgs> allow,
-        @Nullable Input<WebACLBlockActionArgs> block,
-        @Nullable Input<WebACLCaptchaActionArgs> captcha,
-        @Nullable Input<WebACLCountActionArgs> count) {
+        @Nullable Output<WebACLAllowActionArgs> allow,
+        @Nullable Output<WebACLBlockActionArgs> block,
+        @Nullable Output<WebACLCaptchaActionArgs> captcha,
+        @Nullable Output<WebACLCountActionArgs> count) {
         this.allow = allow;
         this.block = block;
         this.captcha = captcha;
@@ -61,10 +61,10 @@ public final class WebACLRuleActionArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private WebACLRuleActionArgs() {
-        this.allow = Input.empty();
-        this.block = Input.empty();
-        this.captcha = Input.empty();
-        this.count = Input.empty();
+        this.allow = Output.empty();
+        this.block = Output.empty();
+        this.captcha = Output.empty();
+        this.count = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,10 +76,10 @@ public final class WebACLRuleActionArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<WebACLAllowActionArgs> allow;
-        private @Nullable Input<WebACLBlockActionArgs> block;
-        private @Nullable Input<WebACLCaptchaActionArgs> captcha;
-        private @Nullable Input<WebACLCountActionArgs> count;
+        private @Nullable Output<WebACLAllowActionArgs> allow;
+        private @Nullable Output<WebACLBlockActionArgs> block;
+        private @Nullable Output<WebACLCaptchaActionArgs> captcha;
+        private @Nullable Output<WebACLCountActionArgs> count;
 
         public Builder() {
     	      // Empty
@@ -93,43 +93,43 @@ public final class WebACLRuleActionArgs extends io.pulumi.resources.ResourceArgs
     	      this.count = defaults.count;
         }
 
-        public Builder allow(@Nullable Input<WebACLAllowActionArgs> allow) {
+        public Builder allow(@Nullable Output<WebACLAllowActionArgs> allow) {
             this.allow = allow;
             return this;
         }
 
         public Builder allow(@Nullable WebACLAllowActionArgs allow) {
-            this.allow = Input.ofNullable(allow);
+            this.allow = Output.ofNullable(allow);
             return this;
         }
 
-        public Builder block(@Nullable Input<WebACLBlockActionArgs> block) {
+        public Builder block(@Nullable Output<WebACLBlockActionArgs> block) {
             this.block = block;
             return this;
         }
 
         public Builder block(@Nullable WebACLBlockActionArgs block) {
-            this.block = Input.ofNullable(block);
+            this.block = Output.ofNullable(block);
             return this;
         }
 
-        public Builder captcha(@Nullable Input<WebACLCaptchaActionArgs> captcha) {
+        public Builder captcha(@Nullable Output<WebACLCaptchaActionArgs> captcha) {
             this.captcha = captcha;
             return this;
         }
 
         public Builder captcha(@Nullable WebACLCaptchaActionArgs captcha) {
-            this.captcha = Input.ofNullable(captcha);
+            this.captcha = Output.ofNullable(captcha);
             return this;
         }
 
-        public Builder count(@Nullable Input<WebACLCountActionArgs> count) {
+        public Builder count(@Nullable Output<WebACLCountActionArgs> count) {
             this.count = count;
             return this;
         }
 
         public Builder count(@Nullable WebACLCountActionArgs count) {
-            this.count = Input.ofNullable(count);
+            this.count = Output.ofNullable(count);
             return this;
         }
         public WebACLRuleActionArgs build() {

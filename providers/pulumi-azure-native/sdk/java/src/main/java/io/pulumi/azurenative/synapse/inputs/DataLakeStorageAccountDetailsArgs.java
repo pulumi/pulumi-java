@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class DataLakeStorageAccountDetailsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="accountUrl")
-      private final @Nullable Input<String> accountUrl;
+      private final @Nullable Output<String> accountUrl;
 
-    public Input<String> getAccountUrl() {
-        return this.accountUrl == null ? Input.empty() : this.accountUrl;
+    public Output<String> getAccountUrl() {
+        return this.accountUrl == null ? Output.empty() : this.accountUrl;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class DataLakeStorageAccountDetailsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="filesystem")
-      private final @Nullable Input<String> filesystem;
+      private final @Nullable Output<String> filesystem;
 
-    public Input<String> getFilesystem() {
-        return this.filesystem == null ? Input.empty() : this.filesystem;
+    public Output<String> getFilesystem() {
+        return this.filesystem == null ? Output.empty() : this.filesystem;
     }
 
     public DataLakeStorageAccountDetailsArgs(
-        @Nullable Input<String> accountUrl,
-        @Nullable Input<String> filesystem) {
+        @Nullable Output<String> accountUrl,
+        @Nullable Output<String> filesystem) {
         this.accountUrl = accountUrl;
         this.filesystem = filesystem;
     }
 
     private DataLakeStorageAccountDetailsArgs() {
-        this.accountUrl = Input.empty();
-        this.filesystem = Input.empty();
+        this.accountUrl = Output.empty();
+        this.filesystem = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class DataLakeStorageAccountDetailsArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accountUrl;
-        private @Nullable Input<String> filesystem;
+        private @Nullable Output<String> accountUrl;
+        private @Nullable Output<String> filesystem;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class DataLakeStorageAccountDetailsArgs extends io.pulumi.resources
     	      this.filesystem = defaults.filesystem;
         }
 
-        public Builder accountUrl(@Nullable Input<String> accountUrl) {
+        public Builder accountUrl(@Nullable Output<String> accountUrl) {
             this.accountUrl = accountUrl;
             return this;
         }
 
         public Builder accountUrl(@Nullable String accountUrl) {
-            this.accountUrl = Input.ofNullable(accountUrl);
+            this.accountUrl = Output.ofNullable(accountUrl);
             return this;
         }
 
-        public Builder filesystem(@Nullable Input<String> filesystem) {
+        public Builder filesystem(@Nullable Output<String> filesystem) {
             this.filesystem = filesystem;
             return this;
         }
 
         public Builder filesystem(@Nullable String filesystem) {
-            this.filesystem = Input.ofNullable(filesystem);
+            this.filesystem = Output.ofNullable(filesystem);
             return this;
         }
         public DataLakeStorageAccountDetailsArgs build() {

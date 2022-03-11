@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class StreamingPolicyWidevineConfigurationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="customLicenseAcquisitionUrlTemplate")
-      private final @Nullable Input<String> customLicenseAcquisitionUrlTemplate;
+      private final @Nullable Output<String> customLicenseAcquisitionUrlTemplate;
 
-    public Input<String> getCustomLicenseAcquisitionUrlTemplate() {
-        return this.customLicenseAcquisitionUrlTemplate == null ? Input.empty() : this.customLicenseAcquisitionUrlTemplate;
+    public Output<String> getCustomLicenseAcquisitionUrlTemplate() {
+        return this.customLicenseAcquisitionUrlTemplate == null ? Output.empty() : this.customLicenseAcquisitionUrlTemplate;
     }
 
-    public StreamingPolicyWidevineConfigurationArgs(@Nullable Input<String> customLicenseAcquisitionUrlTemplate) {
+    public StreamingPolicyWidevineConfigurationArgs(@Nullable Output<String> customLicenseAcquisitionUrlTemplate) {
         this.customLicenseAcquisitionUrlTemplate = customLicenseAcquisitionUrlTemplate;
     }
 
     private StreamingPolicyWidevineConfigurationArgs() {
-        this.customLicenseAcquisitionUrlTemplate = Input.empty();
+        this.customLicenseAcquisitionUrlTemplate = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class StreamingPolicyWidevineConfigurationArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> customLicenseAcquisitionUrlTemplate;
+        private @Nullable Output<String> customLicenseAcquisitionUrlTemplate;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class StreamingPolicyWidevineConfigurationArgs extends io.pulumi.re
     	      this.customLicenseAcquisitionUrlTemplate = defaults.customLicenseAcquisitionUrlTemplate;
         }
 
-        public Builder customLicenseAcquisitionUrlTemplate(@Nullable Input<String> customLicenseAcquisitionUrlTemplate) {
+        public Builder customLicenseAcquisitionUrlTemplate(@Nullable Output<String> customLicenseAcquisitionUrlTemplate) {
             this.customLicenseAcquisitionUrlTemplate = customLicenseAcquisitionUrlTemplate;
             return this;
         }
 
         public Builder customLicenseAcquisitionUrlTemplate(@Nullable String customLicenseAcquisitionUrlTemplate) {
-            this.customLicenseAcquisitionUrlTemplate = Input.ofNullable(customLicenseAcquisitionUrlTemplate);
+            this.customLicenseAcquisitionUrlTemplate = Output.ofNullable(customLicenseAcquisitionUrlTemplate);
             return this;
         }
         public StreamingPolicyWidevineConfigurationArgs build() {

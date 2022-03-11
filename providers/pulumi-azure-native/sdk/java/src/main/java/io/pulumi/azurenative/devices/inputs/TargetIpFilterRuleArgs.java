@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devices.inputs;
 
 import io.pulumi.azurenative.devices.enums.IpFilterActionType;
 import io.pulumi.azurenative.devices.enums.IpFilterTargetType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,9 +25,9 @@ public final class TargetIpFilterRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="action", required=true)
-      private final Input<IpFilterActionType> action;
+      private final Output<IpFilterActionType> action;
 
-    public Input<IpFilterActionType> getAction() {
+    public Output<IpFilterActionType> getAction() {
         return this.action;
     }
 
@@ -36,9 +36,9 @@ public final class TargetIpFilterRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="filterName", required=true)
-      private final Input<String> filterName;
+      private final Output<String> filterName;
 
-    public Input<String> getFilterName() {
+    public Output<String> getFilterName() {
         return this.filterName;
     }
 
@@ -47,9 +47,9 @@ public final class TargetIpFilterRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ipMask", required=true)
-      private final Input<String> ipMask;
+      private final Output<String> ipMask;
 
-    public Input<String> getIpMask() {
+    public Output<String> getIpMask() {
         return this.ipMask;
     }
 
@@ -58,17 +58,17 @@ public final class TargetIpFilterRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="target")
-      private final @Nullable Input<IpFilterTargetType> target;
+      private final @Nullable Output<IpFilterTargetType> target;
 
-    public Input<IpFilterTargetType> getTarget() {
-        return this.target == null ? Input.empty() : this.target;
+    public Output<IpFilterTargetType> getTarget() {
+        return this.target == null ? Output.empty() : this.target;
     }
 
     public TargetIpFilterRuleArgs(
-        Input<IpFilterActionType> action,
-        Input<String> filterName,
-        Input<String> ipMask,
-        @Nullable Input<IpFilterTargetType> target) {
+        Output<IpFilterActionType> action,
+        Output<String> filterName,
+        Output<String> ipMask,
+        @Nullable Output<IpFilterTargetType> target) {
         this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
         this.filterName = Objects.requireNonNull(filterName, "expected parameter 'filterName' to be non-null");
         this.ipMask = Objects.requireNonNull(ipMask, "expected parameter 'ipMask' to be non-null");
@@ -76,10 +76,10 @@ public final class TargetIpFilterRuleArgs extends io.pulumi.resources.ResourceAr
     }
 
     private TargetIpFilterRuleArgs() {
-        this.action = Input.empty();
-        this.filterName = Input.empty();
-        this.ipMask = Input.empty();
-        this.target = Input.empty();
+        this.action = Output.empty();
+        this.filterName = Output.empty();
+        this.ipMask = Output.empty();
+        this.target = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class TargetIpFilterRuleArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<IpFilterActionType> action;
-        private Input<String> filterName;
-        private Input<String> ipMask;
-        private @Nullable Input<IpFilterTargetType> target;
+        private Output<IpFilterActionType> action;
+        private Output<String> filterName;
+        private Output<String> ipMask;
+        private @Nullable Output<IpFilterTargetType> target;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class TargetIpFilterRuleArgs extends io.pulumi.resources.ResourceAr
     	      this.target = defaults.target;
         }
 
-        public Builder action(Input<IpFilterActionType> action) {
+        public Builder action(Output<IpFilterActionType> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
         public Builder action(IpFilterActionType action) {
-            this.action = Input.of(Objects.requireNonNull(action));
+            this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder filterName(Input<String> filterName) {
+        public Builder filterName(Output<String> filterName) {
             this.filterName = Objects.requireNonNull(filterName);
             return this;
         }
 
         public Builder filterName(String filterName) {
-            this.filterName = Input.of(Objects.requireNonNull(filterName));
+            this.filterName = Output.of(Objects.requireNonNull(filterName));
             return this;
         }
 
-        public Builder ipMask(Input<String> ipMask) {
+        public Builder ipMask(Output<String> ipMask) {
             this.ipMask = Objects.requireNonNull(ipMask);
             return this;
         }
 
         public Builder ipMask(String ipMask) {
-            this.ipMask = Input.of(Objects.requireNonNull(ipMask));
+            this.ipMask = Output.of(Objects.requireNonNull(ipMask));
             return this;
         }
 
-        public Builder target(@Nullable Input<IpFilterTargetType> target) {
+        public Builder target(@Nullable Output<IpFilterTargetType> target) {
             this.target = target;
             return this;
         }
 
         public Builder target(@Nullable IpFilterTargetType target) {
-            this.target = Input.ofNullable(target);
+            this.target = Output.ofNullable(target);
             return this;
         }
         public TargetIpFilterRuleArgs build() {

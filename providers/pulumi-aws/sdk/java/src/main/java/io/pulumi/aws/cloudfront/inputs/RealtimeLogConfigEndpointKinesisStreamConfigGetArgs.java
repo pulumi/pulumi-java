@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudfront.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class RealtimeLogConfigEndpointKinesisStreamConfigGetArgs extends i
      * 
      */
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
@@ -30,22 +30,22 @@ public final class RealtimeLogConfigEndpointKinesisStreamConfigGetArgs extends i
      * 
      */
     @InputImport(name="streamArn", required=true)
-      private final Input<String> streamArn;
+      private final Output<String> streamArn;
 
-    public Input<String> getStreamArn() {
+    public Output<String> getStreamArn() {
         return this.streamArn;
     }
 
     public RealtimeLogConfigEndpointKinesisStreamConfigGetArgs(
-        Input<String> roleArn,
-        Input<String> streamArn) {
+        Output<String> roleArn,
+        Output<String> streamArn) {
         this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
         this.streamArn = Objects.requireNonNull(streamArn, "expected parameter 'streamArn' to be non-null");
     }
 
     private RealtimeLogConfigEndpointKinesisStreamConfigGetArgs() {
-        this.roleArn = Input.empty();
-        this.streamArn = Input.empty();
+        this.roleArn = Output.empty();
+        this.streamArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class RealtimeLogConfigEndpointKinesisStreamConfigGetArgs extends i
     }
 
     public static final class Builder {
-        private Input<String> roleArn;
-        private Input<String> streamArn;
+        private Output<String> roleArn;
+        private Output<String> streamArn;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class RealtimeLogConfigEndpointKinesisStreamConfigGetArgs extends i
     	      this.streamArn = defaults.streamArn;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder streamArn(Input<String> streamArn) {
+        public Builder streamArn(Output<String> streamArn) {
             this.streamArn = Objects.requireNonNull(streamArn);
             return this;
         }
 
         public Builder streamArn(String streamArn) {
-            this.streamArn = Input.of(Objects.requireNonNull(streamArn));
+            this.streamArn = Output.of(Objects.requireNonNull(streamArn));
             return this;
         }
         public RealtimeLogConfigEndpointKinesisStreamConfigGetArgs build() {

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.databoxedge.enums.RoleStatus;
 import io.pulumi.azurenative.databoxedge.inputs.KubernetesClusterInfoArgs;
 import io.pulumi.azurenative.databoxedge.inputs.KubernetesRoleResourcesArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class KubernetesRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceName", required=true)
-      private final Input<String> deviceName;
+      private final Output<String> deviceName;
 
-    public Input<String> getDeviceName() {
+    public Output<String> getDeviceName() {
         return this.deviceName;
     }
 
@@ -35,9 +35,9 @@ public final class KubernetesRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostPlatform", required=true)
-      private final Input<Either<String,PlatformType>> hostPlatform;
+      private final Output<Either<String,PlatformType>> hostPlatform;
 
-    public Input<Either<String,PlatformType>> getHostPlatform() {
+    public Output<Either<String,PlatformType>> getHostPlatform() {
         return this.hostPlatform;
     }
 
@@ -47,9 +47,9 @@ public final class KubernetesRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<String> kind;
+      private final Output<String> kind;
 
-    public Input<String> getKind() {
+    public Output<String> getKind() {
         return this.kind;
     }
 
@@ -58,9 +58,9 @@ public final class KubernetesRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kubernetesClusterInfo", required=true)
-      private final Input<KubernetesClusterInfoArgs> kubernetesClusterInfo;
+      private final Output<KubernetesClusterInfoArgs> kubernetesClusterInfo;
 
-    public Input<KubernetesClusterInfoArgs> getKubernetesClusterInfo() {
+    public Output<KubernetesClusterInfoArgs> getKubernetesClusterInfo() {
         return this.kubernetesClusterInfo;
     }
 
@@ -69,9 +69,9 @@ public final class KubernetesRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kubernetesRoleResources", required=true)
-      private final Input<KubernetesRoleResourcesArgs> kubernetesRoleResources;
+      private final Output<KubernetesRoleResourcesArgs> kubernetesRoleResources;
 
-    public Input<KubernetesRoleResourcesArgs> getKubernetesRoleResources() {
+    public Output<KubernetesRoleResourcesArgs> getKubernetesRoleResources() {
         return this.kubernetesRoleResources;
     }
 
@@ -80,10 +80,10 @@ public final class KubernetesRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -91,9 +91,9 @@ public final class KubernetesRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -102,21 +102,21 @@ public final class KubernetesRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleStatus", required=true)
-      private final Input<Either<String,RoleStatus>> roleStatus;
+      private final Output<Either<String,RoleStatus>> roleStatus;
 
-    public Input<Either<String,RoleStatus>> getRoleStatus() {
+    public Output<Either<String,RoleStatus>> getRoleStatus() {
         return this.roleStatus;
     }
 
     public KubernetesRoleArgs(
-        Input<String> deviceName,
-        Input<Either<String,PlatformType>> hostPlatform,
-        Input<String> kind,
-        Input<KubernetesClusterInfoArgs> kubernetesClusterInfo,
-        Input<KubernetesRoleResourcesArgs> kubernetesRoleResources,
-        @Nullable Input<String> name,
-        Input<String> resourceGroupName,
-        Input<Either<String,RoleStatus>> roleStatus) {
+        Output<String> deviceName,
+        Output<Either<String,PlatformType>> hostPlatform,
+        Output<String> kind,
+        Output<KubernetesClusterInfoArgs> kubernetesClusterInfo,
+        Output<KubernetesRoleResourcesArgs> kubernetesRoleResources,
+        @Nullable Output<String> name,
+        Output<String> resourceGroupName,
+        Output<Either<String,RoleStatus>> roleStatus) {
         this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
         this.hostPlatform = Objects.requireNonNull(hostPlatform, "expected parameter 'hostPlatform' to be non-null");
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
@@ -128,14 +128,14 @@ public final class KubernetesRoleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private KubernetesRoleArgs() {
-        this.deviceName = Input.empty();
-        this.hostPlatform = Input.empty();
-        this.kind = Input.empty();
-        this.kubernetesClusterInfo = Input.empty();
-        this.kubernetesRoleResources = Input.empty();
-        this.name = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.roleStatus = Input.empty();
+        this.deviceName = Output.empty();
+        this.hostPlatform = Output.empty();
+        this.kind = Output.empty();
+        this.kubernetesClusterInfo = Output.empty();
+        this.kubernetesRoleResources = Output.empty();
+        this.name = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.roleStatus = Output.empty();
     }
 
     public static Builder builder() {
@@ -147,14 +147,14 @@ public final class KubernetesRoleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> deviceName;
-        private Input<Either<String,PlatformType>> hostPlatform;
-        private Input<String> kind;
-        private Input<KubernetesClusterInfoArgs> kubernetesClusterInfo;
-        private Input<KubernetesRoleResourcesArgs> kubernetesRoleResources;
-        private @Nullable Input<String> name;
-        private Input<String> resourceGroupName;
-        private Input<Either<String,RoleStatus>> roleStatus;
+        private Output<String> deviceName;
+        private Output<Either<String,PlatformType>> hostPlatform;
+        private Output<String> kind;
+        private Output<KubernetesClusterInfoArgs> kubernetesClusterInfo;
+        private Output<KubernetesRoleResourcesArgs> kubernetesRoleResources;
+        private @Nullable Output<String> name;
+        private Output<String> resourceGroupName;
+        private Output<Either<String,RoleStatus>> roleStatus;
 
         public Builder() {
     	      // Empty
@@ -172,83 +172,83 @@ public final class KubernetesRoleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.roleStatus = defaults.roleStatus;
         }
 
-        public Builder deviceName(Input<String> deviceName) {
+        public Builder deviceName(Output<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
         public Builder deviceName(String deviceName) {
-            this.deviceName = Input.of(Objects.requireNonNull(deviceName));
+            this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
 
-        public Builder hostPlatform(Input<Either<String,PlatformType>> hostPlatform) {
+        public Builder hostPlatform(Output<Either<String,PlatformType>> hostPlatform) {
             this.hostPlatform = Objects.requireNonNull(hostPlatform);
             return this;
         }
 
         public Builder hostPlatform(Either<String,PlatformType> hostPlatform) {
-            this.hostPlatform = Input.of(Objects.requireNonNull(hostPlatform));
+            this.hostPlatform = Output.of(Objects.requireNonNull(hostPlatform));
             return this;
         }
 
-        public Builder kind(Input<String> kind) {
+        public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(String kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder kubernetesClusterInfo(Input<KubernetesClusterInfoArgs> kubernetesClusterInfo) {
+        public Builder kubernetesClusterInfo(Output<KubernetesClusterInfoArgs> kubernetesClusterInfo) {
             this.kubernetesClusterInfo = Objects.requireNonNull(kubernetesClusterInfo);
             return this;
         }
 
         public Builder kubernetesClusterInfo(KubernetesClusterInfoArgs kubernetesClusterInfo) {
-            this.kubernetesClusterInfo = Input.of(Objects.requireNonNull(kubernetesClusterInfo));
+            this.kubernetesClusterInfo = Output.of(Objects.requireNonNull(kubernetesClusterInfo));
             return this;
         }
 
-        public Builder kubernetesRoleResources(Input<KubernetesRoleResourcesArgs> kubernetesRoleResources) {
+        public Builder kubernetesRoleResources(Output<KubernetesRoleResourcesArgs> kubernetesRoleResources) {
             this.kubernetesRoleResources = Objects.requireNonNull(kubernetesRoleResources);
             return this;
         }
 
         public Builder kubernetesRoleResources(KubernetesRoleResourcesArgs kubernetesRoleResources) {
-            this.kubernetesRoleResources = Input.of(Objects.requireNonNull(kubernetesRoleResources));
+            this.kubernetesRoleResources = Output.of(Objects.requireNonNull(kubernetesRoleResources));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder roleStatus(Input<Either<String,RoleStatus>> roleStatus) {
+        public Builder roleStatus(Output<Either<String,RoleStatus>> roleStatus) {
             this.roleStatus = Objects.requireNonNull(roleStatus);
             return this;
         }
 
         public Builder roleStatus(Either<String,RoleStatus> roleStatus) {
-            this.roleStatus = Input.of(Objects.requireNonNull(roleStatus));
+            this.roleStatus = Output.of(Objects.requireNonNull(roleStatus));
             return this;
         }
         public KubernetesRoleArgs build() {

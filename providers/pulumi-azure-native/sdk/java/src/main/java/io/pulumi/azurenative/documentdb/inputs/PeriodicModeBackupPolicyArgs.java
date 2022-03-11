@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.azurenative.documentdb.inputs.PeriodicModePropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class PeriodicModeBackupPolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="periodicModeProperties")
-      private final @Nullable Input<PeriodicModePropertiesArgs> periodicModeProperties;
+      private final @Nullable Output<PeriodicModePropertiesArgs> periodicModeProperties;
 
-    public Input<PeriodicModePropertiesArgs> getPeriodicModeProperties() {
-        return this.periodicModeProperties == null ? Input.empty() : this.periodicModeProperties;
+    public Output<PeriodicModePropertiesArgs> getPeriodicModeProperties() {
+        return this.periodicModeProperties == null ? Output.empty() : this.periodicModeProperties;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class PeriodicModeBackupPolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public PeriodicModeBackupPolicyArgs(
-        @Nullable Input<PeriodicModePropertiesArgs> periodicModeProperties,
-        Input<String> type) {
+        @Nullable Output<PeriodicModePropertiesArgs> periodicModeProperties,
+        Output<String> type) {
         this.periodicModeProperties = periodicModeProperties;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private PeriodicModeBackupPolicyArgs() {
-        this.periodicModeProperties = Input.empty();
-        this.type = Input.empty();
+        this.periodicModeProperties = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class PeriodicModeBackupPolicyArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<PeriodicModePropertiesArgs> periodicModeProperties;
-        private Input<String> type;
+        private @Nullable Output<PeriodicModePropertiesArgs> periodicModeProperties;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class PeriodicModeBackupPolicyArgs extends io.pulumi.resources.Reso
     	      this.type = defaults.type;
         }
 
-        public Builder periodicModeProperties(@Nullable Input<PeriodicModePropertiesArgs> periodicModeProperties) {
+        public Builder periodicModeProperties(@Nullable Output<PeriodicModePropertiesArgs> periodicModeProperties) {
             this.periodicModeProperties = periodicModeProperties;
             return this;
         }
 
         public Builder periodicModeProperties(@Nullable PeriodicModePropertiesArgs periodicModeProperties) {
-            this.periodicModeProperties = Input.ofNullable(periodicModeProperties);
+            this.periodicModeProperties = Output.ofNullable(periodicModeProperties);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public PeriodicModeBackupPolicyArgs build() {

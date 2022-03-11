@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices;
 
 import io.pulumi.azurenative.recoveryservices.inputs.CreateRecoveryPlanInputPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class ReplicationRecoveryPlanArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="properties", required=true)
-      private final Input<CreateRecoveryPlanInputPropertiesArgs> properties;
+      private final Output<CreateRecoveryPlanInputPropertiesArgs> properties;
 
-    public Input<CreateRecoveryPlanInputPropertiesArgs> getProperties() {
+    public Output<CreateRecoveryPlanInputPropertiesArgs> getProperties() {
         return this.properties;
     }
 
@@ -31,10 +31,10 @@ public final class ReplicationRecoveryPlanArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="recoveryPlanName")
-      private final @Nullable Input<String> recoveryPlanName;
+      private final @Nullable Output<String> recoveryPlanName;
 
-    public Input<String> getRecoveryPlanName() {
-        return this.recoveryPlanName == null ? Input.empty() : this.recoveryPlanName;
+    public Output<String> getRecoveryPlanName() {
+        return this.recoveryPlanName == null ? Output.empty() : this.recoveryPlanName;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class ReplicationRecoveryPlanArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -53,17 +53,17 @@ public final class ReplicationRecoveryPlanArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceName", required=true)
-      private final Input<String> resourceName;
+      private final Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
+    public Output<String> getPropResourceName() {
         return this.resourceName;
     }
 
     public ReplicationRecoveryPlanArgs(
-        Input<CreateRecoveryPlanInputPropertiesArgs> properties,
-        @Nullable Input<String> recoveryPlanName,
-        Input<String> resourceGroupName,
-        Input<String> resourceName) {
+        Output<CreateRecoveryPlanInputPropertiesArgs> properties,
+        @Nullable Output<String> recoveryPlanName,
+        Output<String> resourceGroupName,
+        Output<String> resourceName) {
         this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
         this.recoveryPlanName = recoveryPlanName;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -71,10 +71,10 @@ public final class ReplicationRecoveryPlanArgs extends io.pulumi.resources.Resou
     }
 
     private ReplicationRecoveryPlanArgs() {
-        this.properties = Input.empty();
-        this.recoveryPlanName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceName = Input.empty();
+        this.properties = Output.empty();
+        this.recoveryPlanName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class ReplicationRecoveryPlanArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<CreateRecoveryPlanInputPropertiesArgs> properties;
-        private @Nullable Input<String> recoveryPlanName;
-        private Input<String> resourceGroupName;
-        private Input<String> resourceName;
+        private Output<CreateRecoveryPlanInputPropertiesArgs> properties;
+        private @Nullable Output<String> recoveryPlanName;
+        private Output<String> resourceGroupName;
+        private Output<String> resourceName;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class ReplicationRecoveryPlanArgs extends io.pulumi.resources.Resou
     	      this.resourceName = defaults.resourceName;
         }
 
-        public Builder properties(Input<CreateRecoveryPlanInputPropertiesArgs> properties) {
+        public Builder properties(Output<CreateRecoveryPlanInputPropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
         public Builder properties(CreateRecoveryPlanInputPropertiesArgs properties) {
-            this.properties = Input.of(Objects.requireNonNull(properties));
+            this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
 
-        public Builder recoveryPlanName(@Nullable Input<String> recoveryPlanName) {
+        public Builder recoveryPlanName(@Nullable Output<String> recoveryPlanName) {
             this.recoveryPlanName = recoveryPlanName;
             return this;
         }
 
         public Builder recoveryPlanName(@Nullable String recoveryPlanName) {
-            this.recoveryPlanName = Input.ofNullable(recoveryPlanName);
+            this.recoveryPlanName = Output.ofNullable(recoveryPlanName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceName(Input<String> resourceName) {
+        public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
         public Builder resourceName(String resourceName) {
-            this.resourceName = Input.of(Objects.requireNonNull(resourceName));
+            this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
         }
         public ReplicationRecoveryPlanArgs build() {

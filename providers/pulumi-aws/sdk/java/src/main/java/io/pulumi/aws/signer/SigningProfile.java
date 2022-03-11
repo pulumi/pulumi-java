@@ -8,7 +8,6 @@ import io.pulumi.aws.signer.SigningProfileArgs;
 import io.pulumi.aws.signer.inputs.SigningProfileState;
 import io.pulumi.aws.signer.outputs.SigningProfileRevocationRecord;
 import io.pulumi.aws.signer.outputs.SigningProfileSignatureValidityPeriod;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -240,14 +239,14 @@ public class SigningProfile extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SigningProfile(String name, SigningProfileArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:signer/signingProfile:SigningProfile", name, args == null ? SigningProfileArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:signer/signingProfile:SigningProfile", name, args == null ? SigningProfileArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private SigningProfile(String name, Input<String> id, @Nullable SigningProfileState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private SigningProfile(String name, Output<String> id, @Nullable SigningProfileState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:signer/signingProfile:SigningProfile", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -263,7 +262,7 @@ public class SigningProfile extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SigningProfile get(String name, Input<String> id, @Nullable SigningProfileState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static SigningProfile get(String name, Output<String> id, @Nullable SigningProfileState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SigningProfile(name, id, state, options);
     }
 }

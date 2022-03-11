@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.sagemaker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class WorkteamNotificationConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="notificationTopicArn")
-      private final @Nullable Input<String> notificationTopicArn;
+      private final @Nullable Output<String> notificationTopicArn;
 
-    public Input<String> getNotificationTopicArn() {
-        return this.notificationTopicArn == null ? Input.empty() : this.notificationTopicArn;
+    public Output<String> getNotificationTopicArn() {
+        return this.notificationTopicArn == null ? Output.empty() : this.notificationTopicArn;
     }
 
-    public WorkteamNotificationConfigurationArgs(@Nullable Input<String> notificationTopicArn) {
+    public WorkteamNotificationConfigurationArgs(@Nullable Output<String> notificationTopicArn) {
         this.notificationTopicArn = notificationTopicArn;
     }
 
     private WorkteamNotificationConfigurationArgs() {
-        this.notificationTopicArn = Input.empty();
+        this.notificationTopicArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class WorkteamNotificationConfigurationArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> notificationTopicArn;
+        private @Nullable Output<String> notificationTopicArn;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class WorkteamNotificationConfigurationArgs extends io.pulumi.resou
     	      this.notificationTopicArn = defaults.notificationTopicArn;
         }
 
-        public Builder notificationTopicArn(@Nullable Input<String> notificationTopicArn) {
+        public Builder notificationTopicArn(@Nullable Output<String> notificationTopicArn) {
             this.notificationTopicArn = notificationTopicArn;
             return this;
         }
 
         public Builder notificationTopicArn(@Nullable String notificationTopicArn) {
-            this.notificationTopicArn = Input.ofNullable(notificationTopicArn);
+            this.notificationTopicArn = Output.ofNullable(notificationTopicArn);
             return this;
         }
         public WorkteamNotificationConfigurationArgs build() {

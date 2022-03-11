@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class HaVpnGatewayVpnInterfaceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<Integer> id;
+      private final @Nullable Output<Integer> id;
 
-    public Input<Integer> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<Integer> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class HaVpnGatewayVpnInterfaceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="interconnectAttachment")
-      private final @Nullable Input<String> interconnectAttachment;
+      private final @Nullable Output<String> interconnectAttachment;
 
-    public Input<String> getInterconnectAttachment() {
-        return this.interconnectAttachment == null ? Input.empty() : this.interconnectAttachment;
+    public Output<String> getInterconnectAttachment() {
+        return this.interconnectAttachment == null ? Output.empty() : this.interconnectAttachment;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class HaVpnGatewayVpnInterfaceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="ipAddress")
-      private final @Nullable Input<String> ipAddress;
+      private final @Nullable Output<String> ipAddress;
 
-    public Input<String> getIpAddress() {
-        return this.ipAddress == null ? Input.empty() : this.ipAddress;
+    public Output<String> getIpAddress() {
+        return this.ipAddress == null ? Output.empty() : this.ipAddress;
     }
 
     public HaVpnGatewayVpnInterfaceArgs(
-        @Nullable Input<Integer> id,
-        @Nullable Input<String> interconnectAttachment,
-        @Nullable Input<String> ipAddress) {
+        @Nullable Output<Integer> id,
+        @Nullable Output<String> interconnectAttachment,
+        @Nullable Output<String> ipAddress) {
         this.id = id;
         this.interconnectAttachment = interconnectAttachment;
         this.ipAddress = ipAddress;
     }
 
     private HaVpnGatewayVpnInterfaceArgs() {
-        this.id = Input.empty();
-        this.interconnectAttachment = Input.empty();
-        this.ipAddress = Input.empty();
+        this.id = Output.empty();
+        this.interconnectAttachment = Output.empty();
+        this.ipAddress = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class HaVpnGatewayVpnInterfaceArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> id;
-        private @Nullable Input<String> interconnectAttachment;
-        private @Nullable Input<String> ipAddress;
+        private @Nullable Output<Integer> id;
+        private @Nullable Output<String> interconnectAttachment;
+        private @Nullable Output<String> ipAddress;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class HaVpnGatewayVpnInterfaceArgs extends io.pulumi.resources.Reso
     	      this.ipAddress = defaults.ipAddress;
         }
 
-        public Builder id(@Nullable Input<Integer> id) {
+        public Builder id(@Nullable Output<Integer> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable Integer id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder interconnectAttachment(@Nullable Input<String> interconnectAttachment) {
+        public Builder interconnectAttachment(@Nullable Output<String> interconnectAttachment) {
             this.interconnectAttachment = interconnectAttachment;
             return this;
         }
 
         public Builder interconnectAttachment(@Nullable String interconnectAttachment) {
-            this.interconnectAttachment = Input.ofNullable(interconnectAttachment);
+            this.interconnectAttachment = Output.ofNullable(interconnectAttachment);
             return this;
         }
 
-        public Builder ipAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Input.ofNullable(ipAddress);
+            this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
         public HaVpnGatewayVpnInterfaceArgs build() {

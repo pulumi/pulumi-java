@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,54 +17,54 @@ public final class EnvironmentConfigSoftwareConfigArgs extends io.pulumi.resourc
     public static final EnvironmentConfigSoftwareConfigArgs Empty = new EnvironmentConfigSoftwareConfigArgs();
 
     @InputImport(name="airflowConfigOverrides")
-      private final @Nullable Input<Map<String,String>> airflowConfigOverrides;
+      private final @Nullable Output<Map<String,String>> airflowConfigOverrides;
 
-    public Input<Map<String,String>> getAirflowConfigOverrides() {
-        return this.airflowConfigOverrides == null ? Input.empty() : this.airflowConfigOverrides;
+    public Output<Map<String,String>> getAirflowConfigOverrides() {
+        return this.airflowConfigOverrides == null ? Output.empty() : this.airflowConfigOverrides;
     }
 
     @InputImport(name="envVariables")
-      private final @Nullable Input<Map<String,String>> envVariables;
+      private final @Nullable Output<Map<String,String>> envVariables;
 
-    public Input<Map<String,String>> getEnvVariables() {
-        return this.envVariables == null ? Input.empty() : this.envVariables;
+    public Output<Map<String,String>> getEnvVariables() {
+        return this.envVariables == null ? Output.empty() : this.envVariables;
     }
 
     @InputImport(name="imageVersion")
-      private final @Nullable Input<String> imageVersion;
+      private final @Nullable Output<String> imageVersion;
 
-    public Input<String> getImageVersion() {
-        return this.imageVersion == null ? Input.empty() : this.imageVersion;
+    public Output<String> getImageVersion() {
+        return this.imageVersion == null ? Output.empty() : this.imageVersion;
     }
 
     @InputImport(name="pypiPackages")
-      private final @Nullable Input<Map<String,String>> pypiPackages;
+      private final @Nullable Output<Map<String,String>> pypiPackages;
 
-    public Input<Map<String,String>> getPypiPackages() {
-        return this.pypiPackages == null ? Input.empty() : this.pypiPackages;
+    public Output<Map<String,String>> getPypiPackages() {
+        return this.pypiPackages == null ? Output.empty() : this.pypiPackages;
     }
 
     @InputImport(name="pythonVersion")
-      private final @Nullable Input<String> pythonVersion;
+      private final @Nullable Output<String> pythonVersion;
 
-    public Input<String> getPythonVersion() {
-        return this.pythonVersion == null ? Input.empty() : this.pythonVersion;
+    public Output<String> getPythonVersion() {
+        return this.pythonVersion == null ? Output.empty() : this.pythonVersion;
     }
 
     @InputImport(name="schedulerCount")
-      private final @Nullable Input<Integer> schedulerCount;
+      private final @Nullable Output<Integer> schedulerCount;
 
-    public Input<Integer> getSchedulerCount() {
-        return this.schedulerCount == null ? Input.empty() : this.schedulerCount;
+    public Output<Integer> getSchedulerCount() {
+        return this.schedulerCount == null ? Output.empty() : this.schedulerCount;
     }
 
     public EnvironmentConfigSoftwareConfigArgs(
-        @Nullable Input<Map<String,String>> airflowConfigOverrides,
-        @Nullable Input<Map<String,String>> envVariables,
-        @Nullable Input<String> imageVersion,
-        @Nullable Input<Map<String,String>> pypiPackages,
-        @Nullable Input<String> pythonVersion,
-        @Nullable Input<Integer> schedulerCount) {
+        @Nullable Output<Map<String,String>> airflowConfigOverrides,
+        @Nullable Output<Map<String,String>> envVariables,
+        @Nullable Output<String> imageVersion,
+        @Nullable Output<Map<String,String>> pypiPackages,
+        @Nullable Output<String> pythonVersion,
+        @Nullable Output<Integer> schedulerCount) {
         this.airflowConfigOverrides = airflowConfigOverrides;
         this.envVariables = envVariables;
         this.imageVersion = imageVersion;
@@ -74,12 +74,12 @@ public final class EnvironmentConfigSoftwareConfigArgs extends io.pulumi.resourc
     }
 
     private EnvironmentConfigSoftwareConfigArgs() {
-        this.airflowConfigOverrides = Input.empty();
-        this.envVariables = Input.empty();
-        this.imageVersion = Input.empty();
-        this.pypiPackages = Input.empty();
-        this.pythonVersion = Input.empty();
-        this.schedulerCount = Input.empty();
+        this.airflowConfigOverrides = Output.empty();
+        this.envVariables = Output.empty();
+        this.imageVersion = Output.empty();
+        this.pypiPackages = Output.empty();
+        this.pythonVersion = Output.empty();
+        this.schedulerCount = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,12 +91,12 @@ public final class EnvironmentConfigSoftwareConfigArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> airflowConfigOverrides;
-        private @Nullable Input<Map<String,String>> envVariables;
-        private @Nullable Input<String> imageVersion;
-        private @Nullable Input<Map<String,String>> pypiPackages;
-        private @Nullable Input<String> pythonVersion;
-        private @Nullable Input<Integer> schedulerCount;
+        private @Nullable Output<Map<String,String>> airflowConfigOverrides;
+        private @Nullable Output<Map<String,String>> envVariables;
+        private @Nullable Output<String> imageVersion;
+        private @Nullable Output<Map<String,String>> pypiPackages;
+        private @Nullable Output<String> pythonVersion;
+        private @Nullable Output<Integer> schedulerCount;
 
         public Builder() {
     	      // Empty
@@ -112,63 +112,63 @@ public final class EnvironmentConfigSoftwareConfigArgs extends io.pulumi.resourc
     	      this.schedulerCount = defaults.schedulerCount;
         }
 
-        public Builder airflowConfigOverrides(@Nullable Input<Map<String,String>> airflowConfigOverrides) {
+        public Builder airflowConfigOverrides(@Nullable Output<Map<String,String>> airflowConfigOverrides) {
             this.airflowConfigOverrides = airflowConfigOverrides;
             return this;
         }
 
         public Builder airflowConfigOverrides(@Nullable Map<String,String> airflowConfigOverrides) {
-            this.airflowConfigOverrides = Input.ofNullable(airflowConfigOverrides);
+            this.airflowConfigOverrides = Output.ofNullable(airflowConfigOverrides);
             return this;
         }
 
-        public Builder envVariables(@Nullable Input<Map<String,String>> envVariables) {
+        public Builder envVariables(@Nullable Output<Map<String,String>> envVariables) {
             this.envVariables = envVariables;
             return this;
         }
 
         public Builder envVariables(@Nullable Map<String,String> envVariables) {
-            this.envVariables = Input.ofNullable(envVariables);
+            this.envVariables = Output.ofNullable(envVariables);
             return this;
         }
 
-        public Builder imageVersion(@Nullable Input<String> imageVersion) {
+        public Builder imageVersion(@Nullable Output<String> imageVersion) {
             this.imageVersion = imageVersion;
             return this;
         }
 
         public Builder imageVersion(@Nullable String imageVersion) {
-            this.imageVersion = Input.ofNullable(imageVersion);
+            this.imageVersion = Output.ofNullable(imageVersion);
             return this;
         }
 
-        public Builder pypiPackages(@Nullable Input<Map<String,String>> pypiPackages) {
+        public Builder pypiPackages(@Nullable Output<Map<String,String>> pypiPackages) {
             this.pypiPackages = pypiPackages;
             return this;
         }
 
         public Builder pypiPackages(@Nullable Map<String,String> pypiPackages) {
-            this.pypiPackages = Input.ofNullable(pypiPackages);
+            this.pypiPackages = Output.ofNullable(pypiPackages);
             return this;
         }
 
-        public Builder pythonVersion(@Nullable Input<String> pythonVersion) {
+        public Builder pythonVersion(@Nullable Output<String> pythonVersion) {
             this.pythonVersion = pythonVersion;
             return this;
         }
 
         public Builder pythonVersion(@Nullable String pythonVersion) {
-            this.pythonVersion = Input.ofNullable(pythonVersion);
+            this.pythonVersion = Output.ofNullable(pythonVersion);
             return this;
         }
 
-        public Builder schedulerCount(@Nullable Input<Integer> schedulerCount) {
+        public Builder schedulerCount(@Nullable Output<Integer> schedulerCount) {
             this.schedulerCount = schedulerCount;
             return this;
         }
 
         public Builder schedulerCount(@Nullable Integer schedulerCount) {
-            this.schedulerCount = Input.ofNullable(schedulerCount);
+            this.schedulerCount = Output.ofNullable(schedulerCount);
             return this;
         }
         public EnvironmentConfigSoftwareConfigArgs build() {

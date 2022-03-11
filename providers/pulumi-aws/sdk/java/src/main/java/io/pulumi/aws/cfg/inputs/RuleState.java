@@ -5,7 +5,7 @@ package io.pulumi.aws.cfg.inputs;
 
 import io.pulumi.aws.cfg.inputs.RuleScopeGetArgs;
 import io.pulumi.aws.cfg.inputs.RuleSourceGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -22,10 +22,10 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputParameters")
-      private final @Nullable Input<String> inputParameters;
+      private final @Nullable Output<String> inputParameters;
 
-    public Input<String> getInputParameters() {
-        return this.inputParameters == null ? Input.empty() : this.inputParameters;
+    public Output<String> getInputParameters() {
+        return this.inputParameters == null ? Output.empty() : this.inputParameters;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maximumExecutionFrequency")
-      private final @Nullable Input<String> maximumExecutionFrequency;
+      private final @Nullable Output<String> maximumExecutionFrequency;
 
-    public Input<String> getMaximumExecutionFrequency() {
-        return this.maximumExecutionFrequency == null ? Input.empty() : this.maximumExecutionFrequency;
+    public Output<String> getMaximumExecutionFrequency() {
+        return this.maximumExecutionFrequency == null ? Output.empty() : this.maximumExecutionFrequency;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleId")
-      private final @Nullable Input<String> ruleId;
+      private final @Nullable Output<String> ruleId;
 
-    public Input<String> getRuleId() {
-        return this.ruleId == null ? Input.empty() : this.ruleId;
+    public Output<String> getRuleId() {
+        return this.ruleId == null ? Output.empty() : this.ruleId;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope")
-      private final @Nullable Input<RuleScopeGetArgs> scope;
+      private final @Nullable Output<RuleScopeGetArgs> scope;
 
-    public Input<RuleScopeGetArgs> getScope() {
-        return this.scope == null ? Input.empty() : this.scope;
+    public Output<RuleScopeGetArgs> getScope() {
+        return this.scope == null ? Output.empty() : this.scope;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source")
-      private final @Nullable Input<RuleSourceGetArgs> source;
+      private final @Nullable Output<RuleSourceGetArgs> source;
 
-    public Input<RuleSourceGetArgs> getSource() {
-        return this.source == null ? Input.empty() : this.source;
+    public Output<RuleSourceGetArgs> getSource() {
+        return this.source == null ? Output.empty() : this.source;
     }
 
     /**
@@ -110,10 +110,10 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -121,23 +121,23 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public RuleState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> description,
-        @Nullable Input<String> inputParameters,
-        @Nullable Input<String> maximumExecutionFrequency,
-        @Nullable Input<String> name,
-        @Nullable Input<String> ruleId,
-        @Nullable Input<RuleScopeGetArgs> scope,
-        @Nullable Input<RuleSourceGetArgs> source,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> description,
+        @Nullable Output<String> inputParameters,
+        @Nullable Output<String> maximumExecutionFrequency,
+        @Nullable Output<String> name,
+        @Nullable Output<String> ruleId,
+        @Nullable Output<RuleScopeGetArgs> scope,
+        @Nullable Output<RuleSourceGetArgs> source,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
         this.description = description;
         this.inputParameters = inputParameters;
@@ -151,16 +151,16 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
     }
 
     private RuleState() {
-        this.arn = Input.empty();
-        this.description = Input.empty();
-        this.inputParameters = Input.empty();
-        this.maximumExecutionFrequency = Input.empty();
-        this.name = Input.empty();
-        this.ruleId = Input.empty();
-        this.scope = Input.empty();
-        this.source = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.arn = Output.empty();
+        this.description = Output.empty();
+        this.inputParameters = Output.empty();
+        this.maximumExecutionFrequency = Output.empty();
+        this.name = Output.empty();
+        this.ruleId = Output.empty();
+        this.scope = Output.empty();
+        this.source = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -172,16 +172,16 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> inputParameters;
-        private @Nullable Input<String> maximumExecutionFrequency;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> ruleId;
-        private @Nullable Input<RuleScopeGetArgs> scope;
-        private @Nullable Input<RuleSourceGetArgs> source;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> inputParameters;
+        private @Nullable Output<String> maximumExecutionFrequency;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> ruleId;
+        private @Nullable Output<RuleScopeGetArgs> scope;
+        private @Nullable Output<RuleSourceGetArgs> source;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -201,103 +201,103 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder inputParameters(@Nullable Input<String> inputParameters) {
+        public Builder inputParameters(@Nullable Output<String> inputParameters) {
             this.inputParameters = inputParameters;
             return this;
         }
 
         public Builder inputParameters(@Nullable String inputParameters) {
-            this.inputParameters = Input.ofNullable(inputParameters);
+            this.inputParameters = Output.ofNullable(inputParameters);
             return this;
         }
 
-        public Builder maximumExecutionFrequency(@Nullable Input<String> maximumExecutionFrequency) {
+        public Builder maximumExecutionFrequency(@Nullable Output<String> maximumExecutionFrequency) {
             this.maximumExecutionFrequency = maximumExecutionFrequency;
             return this;
         }
 
         public Builder maximumExecutionFrequency(@Nullable String maximumExecutionFrequency) {
-            this.maximumExecutionFrequency = Input.ofNullable(maximumExecutionFrequency);
+            this.maximumExecutionFrequency = Output.ofNullable(maximumExecutionFrequency);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder ruleId(@Nullable Input<String> ruleId) {
+        public Builder ruleId(@Nullable Output<String> ruleId) {
             this.ruleId = ruleId;
             return this;
         }
 
         public Builder ruleId(@Nullable String ruleId) {
-            this.ruleId = Input.ofNullable(ruleId);
+            this.ruleId = Output.ofNullable(ruleId);
             return this;
         }
 
-        public Builder scope(@Nullable Input<RuleScopeGetArgs> scope) {
+        public Builder scope(@Nullable Output<RuleScopeGetArgs> scope) {
             this.scope = scope;
             return this;
         }
 
         public Builder scope(@Nullable RuleScopeGetArgs scope) {
-            this.scope = Input.ofNullable(scope);
+            this.scope = Output.ofNullable(scope);
             return this;
         }
 
-        public Builder source(@Nullable Input<RuleSourceGetArgs> source) {
+        public Builder source(@Nullable Output<RuleSourceGetArgs> source) {
             this.source = source;
             return this;
         }
 
         public Builder source(@Nullable RuleSourceGetArgs source) {
-            this.source = Input.ofNullable(source);
+            this.source = Output.ofNullable(source);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public RuleState build() {

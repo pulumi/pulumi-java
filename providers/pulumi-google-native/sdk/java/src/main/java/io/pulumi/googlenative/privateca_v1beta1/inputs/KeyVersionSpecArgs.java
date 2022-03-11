@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.privateca_v1beta1.enums.KeyVersionSpecAlgorithm;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class KeyVersionSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="algorithm", required=true)
-      private final Input<KeyVersionSpecAlgorithm> algorithm;
+      private final Output<KeyVersionSpecAlgorithm> algorithm;
 
-    public Input<KeyVersionSpecAlgorithm> getAlgorithm() {
+    public Output<KeyVersionSpecAlgorithm> getAlgorithm() {
         return this.algorithm;
     }
 
@@ -34,22 +34,22 @@ public final class KeyVersionSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudKmsKeyVersion", required=true)
-      private final Input<String> cloudKmsKeyVersion;
+      private final Output<String> cloudKmsKeyVersion;
 
-    public Input<String> getCloudKmsKeyVersion() {
+    public Output<String> getCloudKmsKeyVersion() {
         return this.cloudKmsKeyVersion;
     }
 
     public KeyVersionSpecArgs(
-        Input<KeyVersionSpecAlgorithm> algorithm,
-        Input<String> cloudKmsKeyVersion) {
+        Output<KeyVersionSpecAlgorithm> algorithm,
+        Output<String> cloudKmsKeyVersion) {
         this.algorithm = Objects.requireNonNull(algorithm, "expected parameter 'algorithm' to be non-null");
         this.cloudKmsKeyVersion = Objects.requireNonNull(cloudKmsKeyVersion, "expected parameter 'cloudKmsKeyVersion' to be non-null");
     }
 
     private KeyVersionSpecArgs() {
-        this.algorithm = Input.empty();
-        this.cloudKmsKeyVersion = Input.empty();
+        this.algorithm = Output.empty();
+        this.cloudKmsKeyVersion = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class KeyVersionSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<KeyVersionSpecAlgorithm> algorithm;
-        private Input<String> cloudKmsKeyVersion;
+        private Output<KeyVersionSpecAlgorithm> algorithm;
+        private Output<String> cloudKmsKeyVersion;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class KeyVersionSpecArgs extends io.pulumi.resources.ResourceArgs {
     	      this.cloudKmsKeyVersion = defaults.cloudKmsKeyVersion;
         }
 
-        public Builder algorithm(Input<KeyVersionSpecAlgorithm> algorithm) {
+        public Builder algorithm(Output<KeyVersionSpecAlgorithm> algorithm) {
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
 
         public Builder algorithm(KeyVersionSpecAlgorithm algorithm) {
-            this.algorithm = Input.of(Objects.requireNonNull(algorithm));
+            this.algorithm = Output.of(Objects.requireNonNull(algorithm));
             return this;
         }
 
-        public Builder cloudKmsKeyVersion(Input<String> cloudKmsKeyVersion) {
+        public Builder cloudKmsKeyVersion(Output<String> cloudKmsKeyVersion) {
             this.cloudKmsKeyVersion = Objects.requireNonNull(cloudKmsKeyVersion);
             return this;
         }
 
         public Builder cloudKmsKeyVersion(String cloudKmsKeyVersion) {
-            this.cloudKmsKeyVersion = Input.of(Objects.requireNonNull(cloudKmsKeyVersion));
+            this.cloudKmsKeyVersion = Output.of(Objects.requireNonNull(cloudKmsKeyVersion));
             return this;
         }
         public KeyVersionSpecArgs build() {

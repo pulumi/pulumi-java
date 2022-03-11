@@ -5,7 +5,7 @@ package io.pulumi.awsnative.databrew;
 
 import io.pulumi.awsnative.databrew.inputs.RecipeStepArgs;
 import io.pulumi.awsnative.databrew.inputs.RecipeTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class RecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -33,31 +33,31 @@ public final class RecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="steps", required=true)
-      private final Input<List<RecipeStepArgs>> steps;
+      private final Output<List<RecipeStepArgs>> steps;
 
-    public Input<List<RecipeStepArgs>> getSteps() {
+    public Output<List<RecipeStepArgs>> getSteps() {
         return this.steps;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<List<RecipeTagArgs>> tags;
+      private final @Nullable Output<List<RecipeTagArgs>> tags;
 
-    public Input<List<RecipeTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<RecipeTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public RecipeArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        Input<List<RecipeStepArgs>> steps,
-        @Nullable Input<List<RecipeTagArgs>> tags) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        Output<List<RecipeStepArgs>> steps,
+        @Nullable Output<List<RecipeTagArgs>> tags) {
         this.description = description;
         this.name = name;
         this.steps = Objects.requireNonNull(steps, "expected parameter 'steps' to be non-null");
@@ -65,10 +65,10 @@ public final class RecipeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RecipeArgs() {
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.steps = Input.empty();
-        this.tags = Input.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.steps = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -80,10 +80,10 @@ public final class RecipeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private Input<List<RecipeStepArgs>> steps;
-        private @Nullable Input<List<RecipeTagArgs>> tags;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private Output<List<RecipeStepArgs>> steps;
+        private @Nullable Output<List<RecipeTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -97,43 +97,43 @@ public final class RecipeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder steps(Input<List<RecipeStepArgs>> steps) {
+        public Builder steps(Output<List<RecipeStepArgs>> steps) {
             this.steps = Objects.requireNonNull(steps);
             return this;
         }
 
         public Builder steps(List<RecipeStepArgs> steps) {
-            this.steps = Input.of(Objects.requireNonNull(steps));
+            this.steps = Output.of(Objects.requireNonNull(steps));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<RecipeTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<RecipeTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<RecipeTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public RecipeArgs build() {

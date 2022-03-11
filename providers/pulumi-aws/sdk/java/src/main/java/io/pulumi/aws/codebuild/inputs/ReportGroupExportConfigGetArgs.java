@@ -4,7 +4,7 @@
 package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.aws.codebuild.inputs.ReportGroupExportConfigS3DestinationGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class ReportGroupExportConfigGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="s3Destination")
-      private final @Nullable Input<ReportGroupExportConfigS3DestinationGetArgs> s3Destination;
+      private final @Nullable Output<ReportGroupExportConfigS3DestinationGetArgs> s3Destination;
 
-    public Input<ReportGroupExportConfigS3DestinationGetArgs> getS3Destination() {
-        return this.s3Destination == null ? Input.empty() : this.s3Destination;
+    public Output<ReportGroupExportConfigS3DestinationGetArgs> getS3Destination() {
+        return this.s3Destination == null ? Output.empty() : this.s3Destination;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class ReportGroupExportConfigGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public ReportGroupExportConfigGetArgs(
-        @Nullable Input<ReportGroupExportConfigS3DestinationGetArgs> s3Destination,
-        Input<String> type) {
+        @Nullable Output<ReportGroupExportConfigS3DestinationGetArgs> s3Destination,
+        Output<String> type) {
         this.s3Destination = s3Destination;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private ReportGroupExportConfigGetArgs() {
-        this.s3Destination = Input.empty();
-        this.type = Input.empty();
+        this.s3Destination = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class ReportGroupExportConfigGetArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<ReportGroupExportConfigS3DestinationGetArgs> s3Destination;
-        private Input<String> type;
+        private @Nullable Output<ReportGroupExportConfigS3DestinationGetArgs> s3Destination;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class ReportGroupExportConfigGetArgs extends io.pulumi.resources.Re
     	      this.type = defaults.type;
         }
 
-        public Builder s3Destination(@Nullable Input<ReportGroupExportConfigS3DestinationGetArgs> s3Destination) {
+        public Builder s3Destination(@Nullable Output<ReportGroupExportConfigS3DestinationGetArgs> s3Destination) {
             this.s3Destination = s3Destination;
             return this;
         }
 
         public Builder s3Destination(@Nullable ReportGroupExportConfigS3DestinationGetArgs s3Destination) {
-            this.s3Destination = Input.ofNullable(s3Destination);
+            this.s3Destination = Output.ofNullable(s3Destination);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ReportGroupExportConfigGetArgs build() {

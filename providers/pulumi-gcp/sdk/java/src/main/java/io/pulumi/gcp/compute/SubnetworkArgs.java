@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.SubnetworkLogConfigArgs;
 import io.pulumi.gcp.compute.inputs.SubnetworkSecondaryIpRangeArgs;
@@ -25,10 +25,10 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -39,9 +39,9 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipCidrRange", required=true)
-      private final Input<String> ipCidrRange;
+      private final Output<String> ipCidrRange;
 
-    public Input<String> getIpCidrRange() {
+    public Output<String> getIpCidrRange() {
         return this.ipCidrRange;
     }
 
@@ -53,10 +53,10 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipv6AccessType")
-      private final @Nullable Input<String> ipv6AccessType;
+      private final @Nullable Output<String> ipv6AccessType;
 
-    public Input<String> getIpv6AccessType() {
-        return this.ipv6AccessType == null ? Input.empty() : this.ipv6AccessType;
+    public Output<String> getIpv6AccessType() {
+        return this.ipv6AccessType == null ? Output.empty() : this.ipv6AccessType;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logConfig")
-      private final @Nullable Input<SubnetworkLogConfigArgs> logConfig;
+      private final @Nullable Output<SubnetworkLogConfigArgs> logConfig;
 
-    public Input<SubnetworkLogConfigArgs> getLogConfig() {
-        return this.logConfig == null ? Input.empty() : this.logConfig;
+    public Output<SubnetworkLogConfigArgs> getLogConfig() {
+        return this.logConfig == null ? Output.empty() : this.logConfig;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -96,9 +96,9 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network", required=true)
-      private final Input<String> network;
+      private final Output<String> network;
 
-    public Input<String> getNetwork() {
+    public Output<String> getNetwork() {
         return this.network;
     }
 
@@ -108,10 +108,10 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateIpGoogleAccess")
-      private final @Nullable Input<Boolean> privateIpGoogleAccess;
+      private final @Nullable Output<Boolean> privateIpGoogleAccess;
 
-    public Input<Boolean> getPrivateIpGoogleAccess() {
-        return this.privateIpGoogleAccess == null ? Input.empty() : this.privateIpGoogleAccess;
+    public Output<Boolean> getPrivateIpGoogleAccess() {
+        return this.privateIpGoogleAccess == null ? Output.empty() : this.privateIpGoogleAccess;
     }
 
     /**
@@ -119,10 +119,10 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateIpv6GoogleAccess")
-      private final @Nullable Input<String> privateIpv6GoogleAccess;
+      private final @Nullable Output<String> privateIpv6GoogleAccess;
 
-    public Input<String> getPrivateIpv6GoogleAccess() {
-        return this.privateIpv6GoogleAccess == null ? Input.empty() : this.privateIpv6GoogleAccess;
+    public Output<String> getPrivateIpv6GoogleAccess() {
+        return this.privateIpv6GoogleAccess == null ? Output.empty() : this.privateIpv6GoogleAccess;
     }
 
     /**
@@ -131,10 +131,10 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -145,10 +145,10 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="purpose")
-      private final @Nullable Input<String> purpose;
+      private final @Nullable Output<String> purpose;
 
-    public Input<String> getPurpose() {
-        return this.purpose == null ? Input.empty() : this.purpose;
+    public Output<String> getPurpose() {
+        return this.purpose == null ? Output.empty() : this.purpose;
     }
 
     /**
@@ -156,10 +156,10 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -172,10 +172,10 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role")
-      private final @Nullable Input<String> role;
+      private final @Nullable Output<String> role;
 
-    public Input<String> getRole() {
-        return this.role == null ? Input.empty() : this.role;
+    public Output<String> getRole() {
+        return this.role == null ? Output.empty() : this.role;
     }
 
     /**
@@ -187,10 +187,10 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secondaryIpRanges")
-      private final @Nullable Input<List<SubnetworkSecondaryIpRangeArgs>> secondaryIpRanges;
+      private final @Nullable Output<List<SubnetworkSecondaryIpRangeArgs>> secondaryIpRanges;
 
-    public Input<List<SubnetworkSecondaryIpRangeArgs>> getSecondaryIpRanges() {
-        return this.secondaryIpRanges == null ? Input.empty() : this.secondaryIpRanges;
+    public Output<List<SubnetworkSecondaryIpRangeArgs>> getSecondaryIpRanges() {
+        return this.secondaryIpRanges == null ? Output.empty() : this.secondaryIpRanges;
     }
 
     /**
@@ -200,27 +200,27 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stackType")
-      private final @Nullable Input<String> stackType;
+      private final @Nullable Output<String> stackType;
 
-    public Input<String> getStackType() {
-        return this.stackType == null ? Input.empty() : this.stackType;
+    public Output<String> getStackType() {
+        return this.stackType == null ? Output.empty() : this.stackType;
     }
 
     public SubnetworkArgs(
-        @Nullable Input<String> description,
-        Input<String> ipCidrRange,
-        @Nullable Input<String> ipv6AccessType,
-        @Nullable Input<SubnetworkLogConfigArgs> logConfig,
-        @Nullable Input<String> name,
-        Input<String> network,
-        @Nullable Input<Boolean> privateIpGoogleAccess,
-        @Nullable Input<String> privateIpv6GoogleAccess,
-        @Nullable Input<String> project,
-        @Nullable Input<String> purpose,
-        @Nullable Input<String> region,
-        @Nullable Input<String> role,
-        @Nullable Input<List<SubnetworkSecondaryIpRangeArgs>> secondaryIpRanges,
-        @Nullable Input<String> stackType) {
+        @Nullable Output<String> description,
+        Output<String> ipCidrRange,
+        @Nullable Output<String> ipv6AccessType,
+        @Nullable Output<SubnetworkLogConfigArgs> logConfig,
+        @Nullable Output<String> name,
+        Output<String> network,
+        @Nullable Output<Boolean> privateIpGoogleAccess,
+        @Nullable Output<String> privateIpv6GoogleAccess,
+        @Nullable Output<String> project,
+        @Nullable Output<String> purpose,
+        @Nullable Output<String> region,
+        @Nullable Output<String> role,
+        @Nullable Output<List<SubnetworkSecondaryIpRangeArgs>> secondaryIpRanges,
+        @Nullable Output<String> stackType) {
         this.description = description;
         this.ipCidrRange = Objects.requireNonNull(ipCidrRange, "expected parameter 'ipCidrRange' to be non-null");
         this.ipv6AccessType = ipv6AccessType;
@@ -238,20 +238,20 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SubnetworkArgs() {
-        this.description = Input.empty();
-        this.ipCidrRange = Input.empty();
-        this.ipv6AccessType = Input.empty();
-        this.logConfig = Input.empty();
-        this.name = Input.empty();
-        this.network = Input.empty();
-        this.privateIpGoogleAccess = Input.empty();
-        this.privateIpv6GoogleAccess = Input.empty();
-        this.project = Input.empty();
-        this.purpose = Input.empty();
-        this.region = Input.empty();
-        this.role = Input.empty();
-        this.secondaryIpRanges = Input.empty();
-        this.stackType = Input.empty();
+        this.description = Output.empty();
+        this.ipCidrRange = Output.empty();
+        this.ipv6AccessType = Output.empty();
+        this.logConfig = Output.empty();
+        this.name = Output.empty();
+        this.network = Output.empty();
+        this.privateIpGoogleAccess = Output.empty();
+        this.privateIpv6GoogleAccess = Output.empty();
+        this.project = Output.empty();
+        this.purpose = Output.empty();
+        this.region = Output.empty();
+        this.role = Output.empty();
+        this.secondaryIpRanges = Output.empty();
+        this.stackType = Output.empty();
     }
 
     public static Builder builder() {
@@ -263,20 +263,20 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> ipCidrRange;
-        private @Nullable Input<String> ipv6AccessType;
-        private @Nullable Input<SubnetworkLogConfigArgs> logConfig;
-        private @Nullable Input<String> name;
-        private Input<String> network;
-        private @Nullable Input<Boolean> privateIpGoogleAccess;
-        private @Nullable Input<String> privateIpv6GoogleAccess;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> purpose;
-        private @Nullable Input<String> region;
-        private @Nullable Input<String> role;
-        private @Nullable Input<List<SubnetworkSecondaryIpRangeArgs>> secondaryIpRanges;
-        private @Nullable Input<String> stackType;
+        private @Nullable Output<String> description;
+        private Output<String> ipCidrRange;
+        private @Nullable Output<String> ipv6AccessType;
+        private @Nullable Output<SubnetworkLogConfigArgs> logConfig;
+        private @Nullable Output<String> name;
+        private Output<String> network;
+        private @Nullable Output<Boolean> privateIpGoogleAccess;
+        private @Nullable Output<String> privateIpv6GoogleAccess;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> purpose;
+        private @Nullable Output<String> region;
+        private @Nullable Output<String> role;
+        private @Nullable Output<List<SubnetworkSecondaryIpRangeArgs>> secondaryIpRanges;
+        private @Nullable Output<String> stackType;
 
         public Builder() {
     	      // Empty
@@ -300,143 +300,143 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.stackType = defaults.stackType;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder ipCidrRange(Input<String> ipCidrRange) {
+        public Builder ipCidrRange(Output<String> ipCidrRange) {
             this.ipCidrRange = Objects.requireNonNull(ipCidrRange);
             return this;
         }
 
         public Builder ipCidrRange(String ipCidrRange) {
-            this.ipCidrRange = Input.of(Objects.requireNonNull(ipCidrRange));
+            this.ipCidrRange = Output.of(Objects.requireNonNull(ipCidrRange));
             return this;
         }
 
-        public Builder ipv6AccessType(@Nullable Input<String> ipv6AccessType) {
+        public Builder ipv6AccessType(@Nullable Output<String> ipv6AccessType) {
             this.ipv6AccessType = ipv6AccessType;
             return this;
         }
 
         public Builder ipv6AccessType(@Nullable String ipv6AccessType) {
-            this.ipv6AccessType = Input.ofNullable(ipv6AccessType);
+            this.ipv6AccessType = Output.ofNullable(ipv6AccessType);
             return this;
         }
 
-        public Builder logConfig(@Nullable Input<SubnetworkLogConfigArgs> logConfig) {
+        public Builder logConfig(@Nullable Output<SubnetworkLogConfigArgs> logConfig) {
             this.logConfig = logConfig;
             return this;
         }
 
         public Builder logConfig(@Nullable SubnetworkLogConfigArgs logConfig) {
-            this.logConfig = Input.ofNullable(logConfig);
+            this.logConfig = Output.ofNullable(logConfig);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder network(Input<String> network) {
+        public Builder network(Output<String> network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
         public Builder network(String network) {
-            this.network = Input.of(Objects.requireNonNull(network));
+            this.network = Output.of(Objects.requireNonNull(network));
             return this;
         }
 
-        public Builder privateIpGoogleAccess(@Nullable Input<Boolean> privateIpGoogleAccess) {
+        public Builder privateIpGoogleAccess(@Nullable Output<Boolean> privateIpGoogleAccess) {
             this.privateIpGoogleAccess = privateIpGoogleAccess;
             return this;
         }
 
         public Builder privateIpGoogleAccess(@Nullable Boolean privateIpGoogleAccess) {
-            this.privateIpGoogleAccess = Input.ofNullable(privateIpGoogleAccess);
+            this.privateIpGoogleAccess = Output.ofNullable(privateIpGoogleAccess);
             return this;
         }
 
-        public Builder privateIpv6GoogleAccess(@Nullable Input<String> privateIpv6GoogleAccess) {
+        public Builder privateIpv6GoogleAccess(@Nullable Output<String> privateIpv6GoogleAccess) {
             this.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
             return this;
         }
 
         public Builder privateIpv6GoogleAccess(@Nullable String privateIpv6GoogleAccess) {
-            this.privateIpv6GoogleAccess = Input.ofNullable(privateIpv6GoogleAccess);
+            this.privateIpv6GoogleAccess = Output.ofNullable(privateIpv6GoogleAccess);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder purpose(@Nullable Input<String> purpose) {
+        public Builder purpose(@Nullable Output<String> purpose) {
             this.purpose = purpose;
             return this;
         }
 
         public Builder purpose(@Nullable String purpose) {
-            this.purpose = Input.ofNullable(purpose);
+            this.purpose = Output.ofNullable(purpose);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder role(@Nullable Input<String> role) {
+        public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
 
         public Builder role(@Nullable String role) {
-            this.role = Input.ofNullable(role);
+            this.role = Output.ofNullable(role);
             return this;
         }
 
-        public Builder secondaryIpRanges(@Nullable Input<List<SubnetworkSecondaryIpRangeArgs>> secondaryIpRanges) {
+        public Builder secondaryIpRanges(@Nullable Output<List<SubnetworkSecondaryIpRangeArgs>> secondaryIpRanges) {
             this.secondaryIpRanges = secondaryIpRanges;
             return this;
         }
 
         public Builder secondaryIpRanges(@Nullable List<SubnetworkSecondaryIpRangeArgs> secondaryIpRanges) {
-            this.secondaryIpRanges = Input.ofNullable(secondaryIpRanges);
+            this.secondaryIpRanges = Output.ofNullable(secondaryIpRanges);
             return this;
         }
 
-        public Builder stackType(@Nullable Input<String> stackType) {
+        public Builder stackType(@Nullable Output<String> stackType) {
             this.stackType = stackType;
             return this;
         }
 
         public Builder stackType(@Nullable String stackType) {
-            this.stackType = Input.ofNullable(stackType);
+            this.stackType = Output.ofNullable(stackType);
             return this;
         }
         public SubnetworkArgs build() {

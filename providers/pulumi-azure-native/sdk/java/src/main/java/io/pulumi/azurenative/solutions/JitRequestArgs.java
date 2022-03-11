@@ -5,7 +5,7 @@ package io.pulumi.azurenative.solutions;
 
 import io.pulumi.azurenative.solutions.inputs.JitAuthorizationPoliciesArgs;
 import io.pulumi.azurenative.solutions.inputs.JitSchedulingPolicyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,9 +23,9 @@ public final class JitRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationResourceId", required=true)
-      private final Input<String> applicationResourceId;
+      private final Output<String> applicationResourceId;
 
-    public Input<String> getApplicationResourceId() {
+    public Output<String> getApplicationResourceId() {
         return this.applicationResourceId;
     }
 
@@ -34,9 +34,9 @@ public final class JitRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jitAuthorizationPolicies", required=true)
-      private final Input<List<JitAuthorizationPoliciesArgs>> jitAuthorizationPolicies;
+      private final Output<List<JitAuthorizationPoliciesArgs>> jitAuthorizationPolicies;
 
-    public Input<List<JitAuthorizationPoliciesArgs>> getJitAuthorizationPolicies() {
+    public Output<List<JitAuthorizationPoliciesArgs>> getJitAuthorizationPolicies() {
         return this.jitAuthorizationPolicies;
     }
 
@@ -45,10 +45,10 @@ public final class JitRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jitRequestName")
-      private final @Nullable Input<String> jitRequestName;
+      private final @Nullable Output<String> jitRequestName;
 
-    public Input<String> getJitRequestName() {
-        return this.jitRequestName == null ? Input.empty() : this.jitRequestName;
+    public Output<String> getJitRequestName() {
+        return this.jitRequestName == null ? Output.empty() : this.jitRequestName;
     }
 
     /**
@@ -56,9 +56,9 @@ public final class JitRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jitSchedulingPolicy", required=true)
-      private final Input<JitSchedulingPolicyArgs> jitSchedulingPolicy;
+      private final Output<JitSchedulingPolicyArgs> jitSchedulingPolicy;
 
-    public Input<JitSchedulingPolicyArgs> getJitSchedulingPolicy() {
+    public Output<JitSchedulingPolicyArgs> getJitSchedulingPolicy() {
         return this.jitSchedulingPolicy;
     }
 
@@ -67,10 +67,10 @@ public final class JitRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -78,9 +78,9 @@ public final class JitRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,20 +89,20 @@ public final class JitRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public JitRequestArgs(
-        Input<String> applicationResourceId,
-        Input<List<JitAuthorizationPoliciesArgs>> jitAuthorizationPolicies,
-        @Nullable Input<String> jitRequestName,
-        Input<JitSchedulingPolicyArgs> jitSchedulingPolicy,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> applicationResourceId,
+        Output<List<JitAuthorizationPoliciesArgs>> jitAuthorizationPolicies,
+        @Nullable Output<String> jitRequestName,
+        Output<JitSchedulingPolicyArgs> jitSchedulingPolicy,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.applicationResourceId = Objects.requireNonNull(applicationResourceId, "expected parameter 'applicationResourceId' to be non-null");
         this.jitAuthorizationPolicies = Objects.requireNonNull(jitAuthorizationPolicies, "expected parameter 'jitAuthorizationPolicies' to be non-null");
         this.jitRequestName = jitRequestName;
@@ -113,13 +113,13 @@ public final class JitRequestArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JitRequestArgs() {
-        this.applicationResourceId = Input.empty();
-        this.jitAuthorizationPolicies = Input.empty();
-        this.jitRequestName = Input.empty();
-        this.jitSchedulingPolicy = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.applicationResourceId = Output.empty();
+        this.jitAuthorizationPolicies = Output.empty();
+        this.jitRequestName = Output.empty();
+        this.jitSchedulingPolicy = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -131,13 +131,13 @@ public final class JitRequestArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> applicationResourceId;
-        private Input<List<JitAuthorizationPoliciesArgs>> jitAuthorizationPolicies;
-        private @Nullable Input<String> jitRequestName;
-        private Input<JitSchedulingPolicyArgs> jitSchedulingPolicy;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> applicationResourceId;
+        private Output<List<JitAuthorizationPoliciesArgs>> jitAuthorizationPolicies;
+        private @Nullable Output<String> jitRequestName;
+        private Output<JitSchedulingPolicyArgs> jitSchedulingPolicy;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -154,73 +154,73 @@ public final class JitRequestArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder applicationResourceId(Input<String> applicationResourceId) {
+        public Builder applicationResourceId(Output<String> applicationResourceId) {
             this.applicationResourceId = Objects.requireNonNull(applicationResourceId);
             return this;
         }
 
         public Builder applicationResourceId(String applicationResourceId) {
-            this.applicationResourceId = Input.of(Objects.requireNonNull(applicationResourceId));
+            this.applicationResourceId = Output.of(Objects.requireNonNull(applicationResourceId));
             return this;
         }
 
-        public Builder jitAuthorizationPolicies(Input<List<JitAuthorizationPoliciesArgs>> jitAuthorizationPolicies) {
+        public Builder jitAuthorizationPolicies(Output<List<JitAuthorizationPoliciesArgs>> jitAuthorizationPolicies) {
             this.jitAuthorizationPolicies = Objects.requireNonNull(jitAuthorizationPolicies);
             return this;
         }
 
         public Builder jitAuthorizationPolicies(List<JitAuthorizationPoliciesArgs> jitAuthorizationPolicies) {
-            this.jitAuthorizationPolicies = Input.of(Objects.requireNonNull(jitAuthorizationPolicies));
+            this.jitAuthorizationPolicies = Output.of(Objects.requireNonNull(jitAuthorizationPolicies));
             return this;
         }
 
-        public Builder jitRequestName(@Nullable Input<String> jitRequestName) {
+        public Builder jitRequestName(@Nullable Output<String> jitRequestName) {
             this.jitRequestName = jitRequestName;
             return this;
         }
 
         public Builder jitRequestName(@Nullable String jitRequestName) {
-            this.jitRequestName = Input.ofNullable(jitRequestName);
+            this.jitRequestName = Output.ofNullable(jitRequestName);
             return this;
         }
 
-        public Builder jitSchedulingPolicy(Input<JitSchedulingPolicyArgs> jitSchedulingPolicy) {
+        public Builder jitSchedulingPolicy(Output<JitSchedulingPolicyArgs> jitSchedulingPolicy) {
             this.jitSchedulingPolicy = Objects.requireNonNull(jitSchedulingPolicy);
             return this;
         }
 
         public Builder jitSchedulingPolicy(JitSchedulingPolicyArgs jitSchedulingPolicy) {
-            this.jitSchedulingPolicy = Input.of(Objects.requireNonNull(jitSchedulingPolicy));
+            this.jitSchedulingPolicy = Output.of(Objects.requireNonNull(jitSchedulingPolicy));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public JitRequestArgs build() {

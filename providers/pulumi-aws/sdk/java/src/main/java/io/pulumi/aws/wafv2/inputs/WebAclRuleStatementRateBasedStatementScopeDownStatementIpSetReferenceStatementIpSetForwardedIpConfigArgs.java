@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.wafv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementIpSetR
      * 
      */
     @InputImport(name="fallbackBehavior", required=true)
-      private final Input<String> fallbackBehavior;
+      private final Output<String> fallbackBehavior;
 
-    public Input<String> getFallbackBehavior() {
+    public Output<String> getFallbackBehavior() {
         return this.fallbackBehavior;
     }
 
@@ -29,9 +29,9 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementIpSetR
      * 
      */
     @InputImport(name="headerName", required=true)
-      private final Input<String> headerName;
+      private final Output<String> headerName;
 
-    public Input<String> getHeaderName() {
+    public Output<String> getHeaderName() {
         return this.headerName;
     }
 
@@ -40,25 +40,25 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementIpSetR
      * 
      */
     @InputImport(name="position", required=true)
-      private final Input<String> position;
+      private final Output<String> position;
 
-    public Input<String> getPosition() {
+    public Output<String> getPosition() {
         return this.position;
     }
 
     public WebAclRuleStatementRateBasedStatementScopeDownStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs(
-        Input<String> fallbackBehavior,
-        Input<String> headerName,
-        Input<String> position) {
+        Output<String> fallbackBehavior,
+        Output<String> headerName,
+        Output<String> position) {
         this.fallbackBehavior = Objects.requireNonNull(fallbackBehavior, "expected parameter 'fallbackBehavior' to be non-null");
         this.headerName = Objects.requireNonNull(headerName, "expected parameter 'headerName' to be non-null");
         this.position = Objects.requireNonNull(position, "expected parameter 'position' to be non-null");
     }
 
     private WebAclRuleStatementRateBasedStatementScopeDownStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs() {
-        this.fallbackBehavior = Input.empty();
-        this.headerName = Input.empty();
-        this.position = Input.empty();
+        this.fallbackBehavior = Output.empty();
+        this.headerName = Output.empty();
+        this.position = Output.empty();
     }
 
     public static Builder builder() {
@@ -70,9 +70,9 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementIpSetR
     }
 
     public static final class Builder {
-        private Input<String> fallbackBehavior;
-        private Input<String> headerName;
-        private Input<String> position;
+        private Output<String> fallbackBehavior;
+        private Output<String> headerName;
+        private Output<String> position;
 
         public Builder() {
     	      // Empty
@@ -85,33 +85,33 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementIpSetR
     	      this.position = defaults.position;
         }
 
-        public Builder fallbackBehavior(Input<String> fallbackBehavior) {
+        public Builder fallbackBehavior(Output<String> fallbackBehavior) {
             this.fallbackBehavior = Objects.requireNonNull(fallbackBehavior);
             return this;
         }
 
         public Builder fallbackBehavior(String fallbackBehavior) {
-            this.fallbackBehavior = Input.of(Objects.requireNonNull(fallbackBehavior));
+            this.fallbackBehavior = Output.of(Objects.requireNonNull(fallbackBehavior));
             return this;
         }
 
-        public Builder headerName(Input<String> headerName) {
+        public Builder headerName(Output<String> headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
 
         public Builder headerName(String headerName) {
-            this.headerName = Input.of(Objects.requireNonNull(headerName));
+            this.headerName = Output.of(Objects.requireNonNull(headerName));
             return this;
         }
 
-        public Builder position(Input<String> position) {
+        public Builder position(Output<String> position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }
 
         public Builder position(String position) {
-            this.position = Input.of(Objects.requireNonNull(position));
+            this.position = Output.of(Objects.requireNonNull(position));
             return this;
         }
         public WebAclRuleStatementRateBasedStatementScopeDownStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs build() {

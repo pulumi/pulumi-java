@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigArgs;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3EnvironmentVersionConfigArgs;
@@ -18,9 +18,9 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     public static final EnvironmentArgs Empty = new EnvironmentArgs();
 
     @InputImport(name="agentId", required=true)
-      private final Input<String> agentId;
+      private final Output<String> agentId;
 
-    public Input<String> getAgentId() {
+    public Output<String> getAgentId() {
         return this.agentId;
     }
 
@@ -29,10 +29,10 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -40,17 +40,17 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="testCasesConfig")
-      private final @Nullable Input<GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigArgs> testCasesConfig;
+      private final @Nullable Output<GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigArgs> testCasesConfig;
 
-    public Input<GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigArgs> getTestCasesConfig() {
-        return this.testCasesConfig == null ? Input.empty() : this.testCasesConfig;
+    public Output<GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigArgs> getTestCasesConfig() {
+        return this.testCasesConfig == null ? Output.empty() : this.testCasesConfig;
     }
 
     /**
@@ -87,21 +87,21 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versionConfigs", required=true)
-      private final Input<List<GoogleCloudDialogflowCxV3EnvironmentVersionConfigArgs>> versionConfigs;
+      private final Output<List<GoogleCloudDialogflowCxV3EnvironmentVersionConfigArgs>> versionConfigs;
 
-    public Input<List<GoogleCloudDialogflowCxV3EnvironmentVersionConfigArgs>> getVersionConfigs() {
+    public Output<List<GoogleCloudDialogflowCxV3EnvironmentVersionConfigArgs>> getVersionConfigs() {
         return this.versionConfigs;
     }
 
     public EnvironmentArgs(
-        Input<String> agentId,
-        @Nullable Input<String> description,
-        Input<String> displayName,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigArgs> testCasesConfig,
-        Input<List<GoogleCloudDialogflowCxV3EnvironmentVersionConfigArgs>> versionConfigs) {
+        Output<String> agentId,
+        @Nullable Output<String> description,
+        Output<String> displayName,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigArgs> testCasesConfig,
+        Output<List<GoogleCloudDialogflowCxV3EnvironmentVersionConfigArgs>> versionConfigs) {
         this.agentId = Objects.requireNonNull(agentId, "expected parameter 'agentId' to be non-null");
         this.description = description;
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
@@ -113,14 +113,14 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EnvironmentArgs() {
-        this.agentId = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.testCasesConfig = Input.empty();
-        this.versionConfigs = Input.empty();
+        this.agentId = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.testCasesConfig = Output.empty();
+        this.versionConfigs = Output.empty();
     }
 
     public static Builder builder() {
@@ -132,14 +132,14 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> agentId;
-        private @Nullable Input<String> description;
-        private Input<String> displayName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigArgs> testCasesConfig;
-        private Input<List<GoogleCloudDialogflowCxV3EnvironmentVersionConfigArgs>> versionConfigs;
+        private Output<String> agentId;
+        private @Nullable Output<String> description;
+        private Output<String> displayName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigArgs> testCasesConfig;
+        private Output<List<GoogleCloudDialogflowCxV3EnvironmentVersionConfigArgs>> versionConfigs;
 
         public Builder() {
     	      // Empty
@@ -157,83 +157,83 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.versionConfigs = defaults.versionConfigs;
         }
 
-        public Builder agentId(Input<String> agentId) {
+        public Builder agentId(Output<String> agentId) {
             this.agentId = Objects.requireNonNull(agentId);
             return this;
         }
 
         public Builder agentId(String agentId) {
-            this.agentId = Input.of(Objects.requireNonNull(agentId));
+            this.agentId = Output.of(Objects.requireNonNull(agentId));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder testCasesConfig(@Nullable Input<GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigArgs> testCasesConfig) {
+        public Builder testCasesConfig(@Nullable Output<GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigArgs> testCasesConfig) {
             this.testCasesConfig = testCasesConfig;
             return this;
         }
 
         public Builder testCasesConfig(@Nullable GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigArgs testCasesConfig) {
-            this.testCasesConfig = Input.ofNullable(testCasesConfig);
+            this.testCasesConfig = Output.ofNullable(testCasesConfig);
             return this;
         }
 
-        public Builder versionConfigs(Input<List<GoogleCloudDialogflowCxV3EnvironmentVersionConfigArgs>> versionConfigs) {
+        public Builder versionConfigs(Output<List<GoogleCloudDialogflowCxV3EnvironmentVersionConfigArgs>> versionConfigs) {
             this.versionConfigs = Objects.requireNonNull(versionConfigs);
             return this;
         }
 
         public Builder versionConfigs(List<GoogleCloudDialogflowCxV3EnvironmentVersionConfigArgs> versionConfigs) {
-            this.versionConfigs = Input.of(Objects.requireNonNull(versionConfigs));
+            this.versionConfigs = Output.of(Objects.requireNonNull(versionConfigs));
             return this;
         }
         public EnvironmentArgs build() {

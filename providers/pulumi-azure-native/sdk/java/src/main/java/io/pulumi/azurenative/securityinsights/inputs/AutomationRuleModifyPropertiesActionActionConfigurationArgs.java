@@ -10,7 +10,7 @@ import io.pulumi.azurenative.securityinsights.enums.IncidentStatus;
 import io.pulumi.azurenative.securityinsights.inputs.IncidentLabelArgs;
 import io.pulumi.azurenative.securityinsights.inputs.IncidentOwnerInfoArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -31,10 +31,10 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
      * 
      */
     @InputImport(name="classification")
-      private final @Nullable Input<Either<String,IncidentClassification>> classification;
+      private final @Nullable Output<Either<String,IncidentClassification>> classification;
 
-    public Input<Either<String,IncidentClassification>> getClassification() {
-        return this.classification == null ? Input.empty() : this.classification;
+    public Output<Either<String,IncidentClassification>> getClassification() {
+        return this.classification == null ? Output.empty() : this.classification;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
      * 
      */
     @InputImport(name="classificationComment")
-      private final @Nullable Input<String> classificationComment;
+      private final @Nullable Output<String> classificationComment;
 
-    public Input<String> getClassificationComment() {
-        return this.classificationComment == null ? Input.empty() : this.classificationComment;
+    public Output<String> getClassificationComment() {
+        return this.classificationComment == null ? Output.empty() : this.classificationComment;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
      * 
      */
     @InputImport(name="classificationReason")
-      private final @Nullable Input<Either<String,IncidentClassificationReason>> classificationReason;
+      private final @Nullable Output<Either<String,IncidentClassificationReason>> classificationReason;
 
-    public Input<Either<String,IncidentClassificationReason>> getClassificationReason() {
-        return this.classificationReason == null ? Input.empty() : this.classificationReason;
+    public Output<Either<String,IncidentClassificationReason>> getClassificationReason() {
+        return this.classificationReason == null ? Output.empty() : this.classificationReason;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<List<IncidentLabelArgs>> labels;
+      private final @Nullable Output<List<IncidentLabelArgs>> labels;
 
-    public Input<List<IncidentLabelArgs>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<List<IncidentLabelArgs>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
      * 
      */
     @InputImport(name="owner")
-      private final @Nullable Input<IncidentOwnerInfoArgs> owner;
+      private final @Nullable Output<IncidentOwnerInfoArgs> owner;
 
-    public Input<IncidentOwnerInfoArgs> getOwner() {
-        return this.owner == null ? Input.empty() : this.owner;
+    public Output<IncidentOwnerInfoArgs> getOwner() {
+        return this.owner == null ? Output.empty() : this.owner;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
      * 
      */
     @InputImport(name="severity")
-      private final @Nullable Input<Either<String,IncidentSeverity>> severity;
+      private final @Nullable Output<Either<String,IncidentSeverity>> severity;
 
-    public Input<Either<String,IncidentSeverity>> getSeverity() {
-        return this.severity == null ? Input.empty() : this.severity;
+    public Output<Either<String,IncidentSeverity>> getSeverity() {
+        return this.severity == null ? Output.empty() : this.severity;
     }
 
     /**
@@ -97,20 +97,20 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<Either<String,IncidentStatus>> status;
+      private final @Nullable Output<Either<String,IncidentStatus>> status;
 
-    public Input<Either<String,IncidentStatus>> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<Either<String,IncidentStatus>> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     public AutomationRuleModifyPropertiesActionActionConfigurationArgs(
-        @Nullable Input<Either<String,IncidentClassification>> classification,
-        @Nullable Input<String> classificationComment,
-        @Nullable Input<Either<String,IncidentClassificationReason>> classificationReason,
-        @Nullable Input<List<IncidentLabelArgs>> labels,
-        @Nullable Input<IncidentOwnerInfoArgs> owner,
-        @Nullable Input<Either<String,IncidentSeverity>> severity,
-        @Nullable Input<Either<String,IncidentStatus>> status) {
+        @Nullable Output<Either<String,IncidentClassification>> classification,
+        @Nullable Output<String> classificationComment,
+        @Nullable Output<Either<String,IncidentClassificationReason>> classificationReason,
+        @Nullable Output<List<IncidentLabelArgs>> labels,
+        @Nullable Output<IncidentOwnerInfoArgs> owner,
+        @Nullable Output<Either<String,IncidentSeverity>> severity,
+        @Nullable Output<Either<String,IncidentStatus>> status) {
         this.classification = classification;
         this.classificationComment = classificationComment;
         this.classificationReason = classificationReason;
@@ -121,13 +121,13 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
     }
 
     private AutomationRuleModifyPropertiesActionActionConfigurationArgs() {
-        this.classification = Input.empty();
-        this.classificationComment = Input.empty();
-        this.classificationReason = Input.empty();
-        this.labels = Input.empty();
-        this.owner = Input.empty();
-        this.severity = Input.empty();
-        this.status = Input.empty();
+        this.classification = Output.empty();
+        this.classificationComment = Output.empty();
+        this.classificationReason = Output.empty();
+        this.labels = Output.empty();
+        this.owner = Output.empty();
+        this.severity = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -139,13 +139,13 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,IncidentClassification>> classification;
-        private @Nullable Input<String> classificationComment;
-        private @Nullable Input<Either<String,IncidentClassificationReason>> classificationReason;
-        private @Nullable Input<List<IncidentLabelArgs>> labels;
-        private @Nullable Input<IncidentOwnerInfoArgs> owner;
-        private @Nullable Input<Either<String,IncidentSeverity>> severity;
-        private @Nullable Input<Either<String,IncidentStatus>> status;
+        private @Nullable Output<Either<String,IncidentClassification>> classification;
+        private @Nullable Output<String> classificationComment;
+        private @Nullable Output<Either<String,IncidentClassificationReason>> classificationReason;
+        private @Nullable Output<List<IncidentLabelArgs>> labels;
+        private @Nullable Output<IncidentOwnerInfoArgs> owner;
+        private @Nullable Output<Either<String,IncidentSeverity>> severity;
+        private @Nullable Output<Either<String,IncidentStatus>> status;
 
         public Builder() {
     	      // Empty
@@ -162,73 +162,73 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
     	      this.status = defaults.status;
         }
 
-        public Builder classification(@Nullable Input<Either<String,IncidentClassification>> classification) {
+        public Builder classification(@Nullable Output<Either<String,IncidentClassification>> classification) {
             this.classification = classification;
             return this;
         }
 
         public Builder classification(@Nullable Either<String,IncidentClassification> classification) {
-            this.classification = Input.ofNullable(classification);
+            this.classification = Output.ofNullable(classification);
             return this;
         }
 
-        public Builder classificationComment(@Nullable Input<String> classificationComment) {
+        public Builder classificationComment(@Nullable Output<String> classificationComment) {
             this.classificationComment = classificationComment;
             return this;
         }
 
         public Builder classificationComment(@Nullable String classificationComment) {
-            this.classificationComment = Input.ofNullable(classificationComment);
+            this.classificationComment = Output.ofNullable(classificationComment);
             return this;
         }
 
-        public Builder classificationReason(@Nullable Input<Either<String,IncidentClassificationReason>> classificationReason) {
+        public Builder classificationReason(@Nullable Output<Either<String,IncidentClassificationReason>> classificationReason) {
             this.classificationReason = classificationReason;
             return this;
         }
 
         public Builder classificationReason(@Nullable Either<String,IncidentClassificationReason> classificationReason) {
-            this.classificationReason = Input.ofNullable(classificationReason);
+            this.classificationReason = Output.ofNullable(classificationReason);
             return this;
         }
 
-        public Builder labels(@Nullable Input<List<IncidentLabelArgs>> labels) {
+        public Builder labels(@Nullable Output<List<IncidentLabelArgs>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable List<IncidentLabelArgs> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder owner(@Nullable Input<IncidentOwnerInfoArgs> owner) {
+        public Builder owner(@Nullable Output<IncidentOwnerInfoArgs> owner) {
             this.owner = owner;
             return this;
         }
 
         public Builder owner(@Nullable IncidentOwnerInfoArgs owner) {
-            this.owner = Input.ofNullable(owner);
+            this.owner = Output.ofNullable(owner);
             return this;
         }
 
-        public Builder severity(@Nullable Input<Either<String,IncidentSeverity>> severity) {
+        public Builder severity(@Nullable Output<Either<String,IncidentSeverity>> severity) {
             this.severity = severity;
             return this;
         }
 
         public Builder severity(@Nullable Either<String,IncidentSeverity> severity) {
-            this.severity = Input.ofNullable(severity);
+            this.severity = Output.ofNullable(severity);
             return this;
         }
 
-        public Builder status(@Nullable Input<Either<String,IncidentStatus>> status) {
+        public Builder status(@Nullable Output<Either<String,IncidentStatus>> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable Either<String,IncidentStatus> status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public AutomationRuleModifyPropertiesActionActionConfigurationArgs build() {

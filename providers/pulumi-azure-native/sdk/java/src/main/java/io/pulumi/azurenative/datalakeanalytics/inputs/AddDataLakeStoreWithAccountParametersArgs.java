@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datalakeanalytics.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class AddDataLakeStoreWithAccountParametersArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -34,22 +34,22 @@ public final class AddDataLakeStoreWithAccountParametersArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="suffix")
-      private final @Nullable Input<String> suffix;
+      private final @Nullable Output<String> suffix;
 
-    public Input<String> getSuffix() {
-        return this.suffix == null ? Input.empty() : this.suffix;
+    public Output<String> getSuffix() {
+        return this.suffix == null ? Output.empty() : this.suffix;
     }
 
     public AddDataLakeStoreWithAccountParametersArgs(
-        Input<String> name,
-        @Nullable Input<String> suffix) {
+        Output<String> name,
+        @Nullable Output<String> suffix) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.suffix = suffix;
     }
 
     private AddDataLakeStoreWithAccountParametersArgs() {
-        this.name = Input.empty();
-        this.suffix = Input.empty();
+        this.name = Output.empty();
+        this.suffix = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class AddDataLakeStoreWithAccountParametersArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private @Nullable Input<String> suffix;
+        private Output<String> name;
+        private @Nullable Output<String> suffix;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class AddDataLakeStoreWithAccountParametersArgs extends io.pulumi.r
     	      this.suffix = defaults.suffix;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder suffix(@Nullable Input<String> suffix) {
+        public Builder suffix(@Nullable Output<String> suffix) {
             this.suffix = suffix;
             return this;
         }
 
         public Builder suffix(@Nullable String suffix) {
-            this.suffix = Input.ofNullable(suffix);
+            this.suffix = Output.ofNullable(suffix);
             return this;
         }
         public AddDataLakeStoreWithAccountParametersArgs build() {

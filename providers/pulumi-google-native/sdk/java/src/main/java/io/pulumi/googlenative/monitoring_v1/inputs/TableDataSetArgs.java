@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v1.inputs.TableDisplayOptionsArgs;
 import io.pulumi.googlenative.monitoring_v1.inputs.TimeSeriesQueryArgs;
@@ -25,10 +25,10 @@ public final class TableDataSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minAlignmentPeriod")
-      private final @Nullable Input<String> minAlignmentPeriod;
+      private final @Nullable Output<String> minAlignmentPeriod;
 
-    public Input<String> getMinAlignmentPeriod() {
-        return this.minAlignmentPeriod == null ? Input.empty() : this.minAlignmentPeriod;
+    public Output<String> getMinAlignmentPeriod() {
+        return this.minAlignmentPeriod == null ? Output.empty() : this.minAlignmentPeriod;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class TableDataSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tableDisplayOptions")
-      private final @Nullable Input<TableDisplayOptionsArgs> tableDisplayOptions;
+      private final @Nullable Output<TableDisplayOptionsArgs> tableDisplayOptions;
 
-    public Input<TableDisplayOptionsArgs> getTableDisplayOptions() {
-        return this.tableDisplayOptions == null ? Input.empty() : this.tableDisplayOptions;
+    public Output<TableDisplayOptionsArgs> getTableDisplayOptions() {
+        return this.tableDisplayOptions == null ? Output.empty() : this.tableDisplayOptions;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class TableDataSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tableTemplate")
-      private final @Nullable Input<String> tableTemplate;
+      private final @Nullable Output<String> tableTemplate;
 
-    public Input<String> getTableTemplate() {
-        return this.tableTemplate == null ? Input.empty() : this.tableTemplate;
+    public Output<String> getTableTemplate() {
+        return this.tableTemplate == null ? Output.empty() : this.tableTemplate;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class TableDataSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeSeriesQuery", required=true)
-      private final Input<TimeSeriesQueryArgs> timeSeriesQuery;
+      private final Output<TimeSeriesQueryArgs> timeSeriesQuery;
 
-    public Input<TimeSeriesQueryArgs> getTimeSeriesQuery() {
+    public Output<TimeSeriesQueryArgs> getTimeSeriesQuery() {
         return this.timeSeriesQuery;
     }
 
     public TableDataSetArgs(
-        @Nullable Input<String> minAlignmentPeriod,
-        @Nullable Input<TableDisplayOptionsArgs> tableDisplayOptions,
-        @Nullable Input<String> tableTemplate,
-        Input<TimeSeriesQueryArgs> timeSeriesQuery) {
+        @Nullable Output<String> minAlignmentPeriod,
+        @Nullable Output<TableDisplayOptionsArgs> tableDisplayOptions,
+        @Nullable Output<String> tableTemplate,
+        Output<TimeSeriesQueryArgs> timeSeriesQuery) {
         this.minAlignmentPeriod = minAlignmentPeriod;
         this.tableDisplayOptions = tableDisplayOptions;
         this.tableTemplate = tableTemplate;
@@ -76,10 +76,10 @@ public final class TableDataSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TableDataSetArgs() {
-        this.minAlignmentPeriod = Input.empty();
-        this.tableDisplayOptions = Input.empty();
-        this.tableTemplate = Input.empty();
-        this.timeSeriesQuery = Input.empty();
+        this.minAlignmentPeriod = Output.empty();
+        this.tableDisplayOptions = Output.empty();
+        this.tableTemplate = Output.empty();
+        this.timeSeriesQuery = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class TableDataSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> minAlignmentPeriod;
-        private @Nullable Input<TableDisplayOptionsArgs> tableDisplayOptions;
-        private @Nullable Input<String> tableTemplate;
-        private Input<TimeSeriesQueryArgs> timeSeriesQuery;
+        private @Nullable Output<String> minAlignmentPeriod;
+        private @Nullable Output<TableDisplayOptionsArgs> tableDisplayOptions;
+        private @Nullable Output<String> tableTemplate;
+        private Output<TimeSeriesQueryArgs> timeSeriesQuery;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class TableDataSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeSeriesQuery = defaults.timeSeriesQuery;
         }
 
-        public Builder minAlignmentPeriod(@Nullable Input<String> minAlignmentPeriod) {
+        public Builder minAlignmentPeriod(@Nullable Output<String> minAlignmentPeriod) {
             this.minAlignmentPeriod = minAlignmentPeriod;
             return this;
         }
 
         public Builder minAlignmentPeriod(@Nullable String minAlignmentPeriod) {
-            this.minAlignmentPeriod = Input.ofNullable(minAlignmentPeriod);
+            this.minAlignmentPeriod = Output.ofNullable(minAlignmentPeriod);
             return this;
         }
 
-        public Builder tableDisplayOptions(@Nullable Input<TableDisplayOptionsArgs> tableDisplayOptions) {
+        public Builder tableDisplayOptions(@Nullable Output<TableDisplayOptionsArgs> tableDisplayOptions) {
             this.tableDisplayOptions = tableDisplayOptions;
             return this;
         }
 
         public Builder tableDisplayOptions(@Nullable TableDisplayOptionsArgs tableDisplayOptions) {
-            this.tableDisplayOptions = Input.ofNullable(tableDisplayOptions);
+            this.tableDisplayOptions = Output.ofNullable(tableDisplayOptions);
             return this;
         }
 
-        public Builder tableTemplate(@Nullable Input<String> tableTemplate) {
+        public Builder tableTemplate(@Nullable Output<String> tableTemplate) {
             this.tableTemplate = tableTemplate;
             return this;
         }
 
         public Builder tableTemplate(@Nullable String tableTemplate) {
-            this.tableTemplate = Input.ofNullable(tableTemplate);
+            this.tableTemplate = Output.ofNullable(tableTemplate);
             return this;
         }
 
-        public Builder timeSeriesQuery(Input<TimeSeriesQueryArgs> timeSeriesQuery) {
+        public Builder timeSeriesQuery(Output<TimeSeriesQueryArgs> timeSeriesQuery) {
             this.timeSeriesQuery = Objects.requireNonNull(timeSeriesQuery);
             return this;
         }
 
         public Builder timeSeriesQuery(TimeSeriesQueryArgs timeSeriesQuery) {
-            this.timeSeriesQuery = Input.of(Objects.requireNonNull(timeSeriesQuery));
+            this.timeSeriesQuery = Output.of(Objects.requireNonNull(timeSeriesQuery));
             return this;
         }
         public TableDataSetArgs build() {

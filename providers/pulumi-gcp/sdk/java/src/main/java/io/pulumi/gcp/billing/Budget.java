@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.billing;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -211,14 +210,14 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Budget(String name, BudgetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:billing/budget:Budget", name, args == null ? BudgetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:billing/budget:Budget", name, args == null ? BudgetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Budget(String name, Input<String> id, @Nullable BudgetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Budget(String name, Output<String> id, @Nullable BudgetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:billing/budget:Budget", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -234,7 +233,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Budget get(String name, Input<String> id, @Nullable BudgetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Budget get(String name, Output<String> id, @Nullable BudgetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Budget(name, id, state, options);
     }
 }

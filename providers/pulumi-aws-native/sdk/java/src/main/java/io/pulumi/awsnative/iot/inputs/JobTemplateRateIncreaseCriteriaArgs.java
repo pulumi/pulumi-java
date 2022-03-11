@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class JobTemplateRateIncreaseCriteriaArgs extends io.pulumi.resourc
     public static final JobTemplateRateIncreaseCriteriaArgs Empty = new JobTemplateRateIncreaseCriteriaArgs();
 
     @InputImport(name="numberOfNotifiedThings")
-      private final @Nullable Input<Integer> numberOfNotifiedThings;
+      private final @Nullable Output<Integer> numberOfNotifiedThings;
 
-    public Input<Integer> getNumberOfNotifiedThings() {
-        return this.numberOfNotifiedThings == null ? Input.empty() : this.numberOfNotifiedThings;
+    public Output<Integer> getNumberOfNotifiedThings() {
+        return this.numberOfNotifiedThings == null ? Output.empty() : this.numberOfNotifiedThings;
     }
 
     @InputImport(name="numberOfSucceededThings")
-      private final @Nullable Input<Integer> numberOfSucceededThings;
+      private final @Nullable Output<Integer> numberOfSucceededThings;
 
-    public Input<Integer> getNumberOfSucceededThings() {
-        return this.numberOfSucceededThings == null ? Input.empty() : this.numberOfSucceededThings;
+    public Output<Integer> getNumberOfSucceededThings() {
+        return this.numberOfSucceededThings == null ? Output.empty() : this.numberOfSucceededThings;
     }
 
     public JobTemplateRateIncreaseCriteriaArgs(
-        @Nullable Input<Integer> numberOfNotifiedThings,
-        @Nullable Input<Integer> numberOfSucceededThings) {
+        @Nullable Output<Integer> numberOfNotifiedThings,
+        @Nullable Output<Integer> numberOfSucceededThings) {
         this.numberOfNotifiedThings = numberOfNotifiedThings;
         this.numberOfSucceededThings = numberOfSucceededThings;
     }
 
     private JobTemplateRateIncreaseCriteriaArgs() {
-        this.numberOfNotifiedThings = Input.empty();
-        this.numberOfSucceededThings = Input.empty();
+        this.numberOfNotifiedThings = Output.empty();
+        this.numberOfSucceededThings = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class JobTemplateRateIncreaseCriteriaArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> numberOfNotifiedThings;
-        private @Nullable Input<Integer> numberOfSucceededThings;
+        private @Nullable Output<Integer> numberOfNotifiedThings;
+        private @Nullable Output<Integer> numberOfSucceededThings;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class JobTemplateRateIncreaseCriteriaArgs extends io.pulumi.resourc
     	      this.numberOfSucceededThings = defaults.numberOfSucceededThings;
         }
 
-        public Builder numberOfNotifiedThings(@Nullable Input<Integer> numberOfNotifiedThings) {
+        public Builder numberOfNotifiedThings(@Nullable Output<Integer> numberOfNotifiedThings) {
             this.numberOfNotifiedThings = numberOfNotifiedThings;
             return this;
         }
 
         public Builder numberOfNotifiedThings(@Nullable Integer numberOfNotifiedThings) {
-            this.numberOfNotifiedThings = Input.ofNullable(numberOfNotifiedThings);
+            this.numberOfNotifiedThings = Output.ofNullable(numberOfNotifiedThings);
             return this;
         }
 
-        public Builder numberOfSucceededThings(@Nullable Input<Integer> numberOfSucceededThings) {
+        public Builder numberOfSucceededThings(@Nullable Output<Integer> numberOfSucceededThings) {
             this.numberOfSucceededThings = numberOfSucceededThings;
             return this;
         }
 
         public Builder numberOfSucceededThings(@Nullable Integer numberOfSucceededThings) {
-            this.numberOfSucceededThings = Input.ofNullable(numberOfSucceededThings);
+            this.numberOfSucceededThings = Output.ofNullable(numberOfSucceededThings);
             return this;
         }
         public JobTemplateRateIncreaseCriteriaArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,9 +17,9 @@ public final class ContextArgs extends io.pulumi.resources.ResourceArgs {
     public static final ContextArgs Empty = new ContextArgs();
 
     @InputImport(name="environmentId", required=true)
-      private final Input<String> environmentId;
+      private final Output<String> environmentId;
 
-    public Input<String> getEnvironmentId() {
+    public Output<String> getEnvironmentId() {
         return this.environmentId;
     }
 
@@ -28,17 +28,17 @@ public final class ContextArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lifespanCount")
-      private final @Nullable Input<Integer> lifespanCount;
+      private final @Nullable Output<Integer> lifespanCount;
 
-    public Input<Integer> getLifespanCount() {
-        return this.lifespanCount == null ? Input.empty() : this.lifespanCount;
+    public Output<Integer> getLifespanCount() {
+        return this.lifespanCount == null ? Output.empty() : this.lifespanCount;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -46,9 +46,9 @@ public final class ContextArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -57,42 +57,42 @@ public final class ContextArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,String>> parameters;
+      private final @Nullable Output<Map<String,String>> parameters;
 
-    public Input<Map<String,String>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,String>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="sessionId", required=true)
-      private final Input<String> sessionId;
+      private final Output<String> sessionId;
 
-    public Input<String> getSessionId() {
+    public Output<String> getSessionId() {
         return this.sessionId;
     }
 
     @InputImport(name="userId", required=true)
-      private final Input<String> userId;
+      private final Output<String> userId;
 
-    public Input<String> getUserId() {
+    public Output<String> getUserId() {
         return this.userId;
     }
 
     public ContextArgs(
-        Input<String> environmentId,
-        @Nullable Input<Integer> lifespanCount,
-        @Nullable Input<String> location,
-        Input<String> name,
-        @Nullable Input<Map<String,String>> parameters,
-        @Nullable Input<String> project,
-        Input<String> sessionId,
-        Input<String> userId) {
+        Output<String> environmentId,
+        @Nullable Output<Integer> lifespanCount,
+        @Nullable Output<String> location,
+        Output<String> name,
+        @Nullable Output<Map<String,String>> parameters,
+        @Nullable Output<String> project,
+        Output<String> sessionId,
+        Output<String> userId) {
         this.environmentId = Objects.requireNonNull(environmentId, "expected parameter 'environmentId' to be non-null");
         this.lifespanCount = lifespanCount;
         this.location = location;
@@ -104,14 +104,14 @@ public final class ContextArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContextArgs() {
-        this.environmentId = Input.empty();
-        this.lifespanCount = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.parameters = Input.empty();
-        this.project = Input.empty();
-        this.sessionId = Input.empty();
-        this.userId = Input.empty();
+        this.environmentId = Output.empty();
+        this.lifespanCount = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.parameters = Output.empty();
+        this.project = Output.empty();
+        this.sessionId = Output.empty();
+        this.userId = Output.empty();
     }
 
     public static Builder builder() {
@@ -123,14 +123,14 @@ public final class ContextArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> environmentId;
-        private @Nullable Input<Integer> lifespanCount;
-        private @Nullable Input<String> location;
-        private Input<String> name;
-        private @Nullable Input<Map<String,String>> parameters;
-        private @Nullable Input<String> project;
-        private Input<String> sessionId;
-        private Input<String> userId;
+        private Output<String> environmentId;
+        private @Nullable Output<Integer> lifespanCount;
+        private @Nullable Output<String> location;
+        private Output<String> name;
+        private @Nullable Output<Map<String,String>> parameters;
+        private @Nullable Output<String> project;
+        private Output<String> sessionId;
+        private Output<String> userId;
 
         public Builder() {
     	      // Empty
@@ -148,83 +148,83 @@ public final class ContextArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userId = defaults.userId;
         }
 
-        public Builder environmentId(Input<String> environmentId) {
+        public Builder environmentId(Output<String> environmentId) {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
 
         public Builder environmentId(String environmentId) {
-            this.environmentId = Input.of(Objects.requireNonNull(environmentId));
+            this.environmentId = Output.of(Objects.requireNonNull(environmentId));
             return this;
         }
 
-        public Builder lifespanCount(@Nullable Input<Integer> lifespanCount) {
+        public Builder lifespanCount(@Nullable Output<Integer> lifespanCount) {
             this.lifespanCount = lifespanCount;
             return this;
         }
 
         public Builder lifespanCount(@Nullable Integer lifespanCount) {
-            this.lifespanCount = Input.ofNullable(lifespanCount);
+            this.lifespanCount = Output.ofNullable(lifespanCount);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,String>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder sessionId(Input<String> sessionId) {
+        public Builder sessionId(Output<String> sessionId) {
             this.sessionId = Objects.requireNonNull(sessionId);
             return this;
         }
 
         public Builder sessionId(String sessionId) {
-            this.sessionId = Input.of(Objects.requireNonNull(sessionId));
+            this.sessionId = Output.of(Objects.requireNonNull(sessionId));
             return this;
         }
 
-        public Builder userId(Input<String> userId) {
+        public Builder userId(Output<String> userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
 
         public Builder userId(String userId) {
-            this.userId = Input.of(Objects.requireNonNull(userId));
+            this.userId = Output.of(Objects.requireNonNull(userId));
             return this;
         }
         public ContextArgs build() {

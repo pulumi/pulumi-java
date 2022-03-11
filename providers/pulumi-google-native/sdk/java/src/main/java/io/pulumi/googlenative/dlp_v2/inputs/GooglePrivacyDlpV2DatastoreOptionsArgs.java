@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2KindExpressionArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2PartitionIdArgs;
@@ -24,10 +24,10 @@ public final class GooglePrivacyDlpV2DatastoreOptionsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<GooglePrivacyDlpV2KindExpressionArgs> kind;
+      private final @Nullable Output<GooglePrivacyDlpV2KindExpressionArgs> kind;
 
-    public Input<GooglePrivacyDlpV2KindExpressionArgs> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<GooglePrivacyDlpV2KindExpressionArgs> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class GooglePrivacyDlpV2DatastoreOptionsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="partitionId")
-      private final @Nullable Input<GooglePrivacyDlpV2PartitionIdArgs> partitionId;
+      private final @Nullable Output<GooglePrivacyDlpV2PartitionIdArgs> partitionId;
 
-    public Input<GooglePrivacyDlpV2PartitionIdArgs> getPartitionId() {
-        return this.partitionId == null ? Input.empty() : this.partitionId;
+    public Output<GooglePrivacyDlpV2PartitionIdArgs> getPartitionId() {
+        return this.partitionId == null ? Output.empty() : this.partitionId;
     }
 
     public GooglePrivacyDlpV2DatastoreOptionsArgs(
-        @Nullable Input<GooglePrivacyDlpV2KindExpressionArgs> kind,
-        @Nullable Input<GooglePrivacyDlpV2PartitionIdArgs> partitionId) {
+        @Nullable Output<GooglePrivacyDlpV2KindExpressionArgs> kind,
+        @Nullable Output<GooglePrivacyDlpV2PartitionIdArgs> partitionId) {
         this.kind = kind;
         this.partitionId = partitionId;
     }
 
     private GooglePrivacyDlpV2DatastoreOptionsArgs() {
-        this.kind = Input.empty();
-        this.partitionId = Input.empty();
+        this.kind = Output.empty();
+        this.partitionId = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class GooglePrivacyDlpV2DatastoreOptionsArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<GooglePrivacyDlpV2KindExpressionArgs> kind;
-        private @Nullable Input<GooglePrivacyDlpV2PartitionIdArgs> partitionId;
+        private @Nullable Output<GooglePrivacyDlpV2KindExpressionArgs> kind;
+        private @Nullable Output<GooglePrivacyDlpV2PartitionIdArgs> partitionId;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class GooglePrivacyDlpV2DatastoreOptionsArgs extends io.pulumi.reso
     	      this.partitionId = defaults.partitionId;
         }
 
-        public Builder kind(@Nullable Input<GooglePrivacyDlpV2KindExpressionArgs> kind) {
+        public Builder kind(@Nullable Output<GooglePrivacyDlpV2KindExpressionArgs> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable GooglePrivacyDlpV2KindExpressionArgs kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder partitionId(@Nullable Input<GooglePrivacyDlpV2PartitionIdArgs> partitionId) {
+        public Builder partitionId(@Nullable Output<GooglePrivacyDlpV2PartitionIdArgs> partitionId) {
             this.partitionId = partitionId;
             return this;
         }
 
         public Builder partitionId(@Nullable GooglePrivacyDlpV2PartitionIdArgs partitionId) {
-            this.partitionId = Input.ofNullable(partitionId);
+            this.partitionId = Output.ofNullable(partitionId);
             return this;
         }
         public GooglePrivacyDlpV2DatastoreOptionsArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3beta1.enums.GoogleCloudDialogflowCxV3beta1InputAudioConfigAudioEncoding;
 import io.pulumi.googlenative.dialogflow_v3beta1.enums.GoogleCloudDialogflowCxV3beta1InputAudioConfigModelVariant;
@@ -28,9 +28,9 @@ public final class GoogleCloudDialogflowCxV3beta1InputAudioConfigArgs extends io
      * 
      */
     @InputImport(name="audioEncoding", required=true)
-      private final Input<GoogleCloudDialogflowCxV3beta1InputAudioConfigAudioEncoding> audioEncoding;
+      private final Output<GoogleCloudDialogflowCxV3beta1InputAudioConfigAudioEncoding> audioEncoding;
 
-    public Input<GoogleCloudDialogflowCxV3beta1InputAudioConfigAudioEncoding> getAudioEncoding() {
+    public Output<GoogleCloudDialogflowCxV3beta1InputAudioConfigAudioEncoding> getAudioEncoding() {
         return this.audioEncoding;
     }
 
@@ -39,10 +39,10 @@ public final class GoogleCloudDialogflowCxV3beta1InputAudioConfigArgs extends io
      * 
      */
     @InputImport(name="enableWordInfo")
-      private final @Nullable Input<Boolean> enableWordInfo;
+      private final @Nullable Output<Boolean> enableWordInfo;
 
-    public Input<Boolean> getEnableWordInfo() {
-        return this.enableWordInfo == null ? Input.empty() : this.enableWordInfo;
+    public Output<Boolean> getEnableWordInfo() {
+        return this.enableWordInfo == null ? Output.empty() : this.enableWordInfo;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class GoogleCloudDialogflowCxV3beta1InputAudioConfigArgs extends io
      * 
      */
     @InputImport(name="model")
-      private final @Nullable Input<String> model;
+      private final @Nullable Output<String> model;
 
-    public Input<String> getModel() {
-        return this.model == null ? Input.empty() : this.model;
+    public Output<String> getModel() {
+        return this.model == null ? Output.empty() : this.model;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class GoogleCloudDialogflowCxV3beta1InputAudioConfigArgs extends io
      * 
      */
     @InputImport(name="modelVariant")
-      private final @Nullable Input<GoogleCloudDialogflowCxV3beta1InputAudioConfigModelVariant> modelVariant;
+      private final @Nullable Output<GoogleCloudDialogflowCxV3beta1InputAudioConfigModelVariant> modelVariant;
 
-    public Input<GoogleCloudDialogflowCxV3beta1InputAudioConfigModelVariant> getModelVariant() {
-        return this.modelVariant == null ? Input.empty() : this.modelVariant;
+    public Output<GoogleCloudDialogflowCxV3beta1InputAudioConfigModelVariant> getModelVariant() {
+        return this.modelVariant == null ? Output.empty() : this.modelVariant;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class GoogleCloudDialogflowCxV3beta1InputAudioConfigArgs extends io
      * 
      */
     @InputImport(name="phraseHints")
-      private final @Nullable Input<List<String>> phraseHints;
+      private final @Nullable Output<List<String>> phraseHints;
 
-    public Input<List<String>> getPhraseHints() {
-        return this.phraseHints == null ? Input.empty() : this.phraseHints;
+    public Output<List<String>> getPhraseHints() {
+        return this.phraseHints == null ? Output.empty() : this.phraseHints;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class GoogleCloudDialogflowCxV3beta1InputAudioConfigArgs extends io
      * 
      */
     @InputImport(name="sampleRateHertz")
-      private final @Nullable Input<Integer> sampleRateHertz;
+      private final @Nullable Output<Integer> sampleRateHertz;
 
-    public Input<Integer> getSampleRateHertz() {
-        return this.sampleRateHertz == null ? Input.empty() : this.sampleRateHertz;
+    public Output<Integer> getSampleRateHertz() {
+        return this.sampleRateHertz == null ? Output.empty() : this.sampleRateHertz;
     }
 
     /**
@@ -94,20 +94,20 @@ public final class GoogleCloudDialogflowCxV3beta1InputAudioConfigArgs extends io
      * 
      */
     @InputImport(name="singleUtterance")
-      private final @Nullable Input<Boolean> singleUtterance;
+      private final @Nullable Output<Boolean> singleUtterance;
 
-    public Input<Boolean> getSingleUtterance() {
-        return this.singleUtterance == null ? Input.empty() : this.singleUtterance;
+    public Output<Boolean> getSingleUtterance() {
+        return this.singleUtterance == null ? Output.empty() : this.singleUtterance;
     }
 
     public GoogleCloudDialogflowCxV3beta1InputAudioConfigArgs(
-        Input<GoogleCloudDialogflowCxV3beta1InputAudioConfigAudioEncoding> audioEncoding,
-        @Nullable Input<Boolean> enableWordInfo,
-        @Nullable Input<String> model,
-        @Nullable Input<GoogleCloudDialogflowCxV3beta1InputAudioConfigModelVariant> modelVariant,
-        @Nullable Input<List<String>> phraseHints,
-        @Nullable Input<Integer> sampleRateHertz,
-        @Nullable Input<Boolean> singleUtterance) {
+        Output<GoogleCloudDialogflowCxV3beta1InputAudioConfigAudioEncoding> audioEncoding,
+        @Nullable Output<Boolean> enableWordInfo,
+        @Nullable Output<String> model,
+        @Nullable Output<GoogleCloudDialogflowCxV3beta1InputAudioConfigModelVariant> modelVariant,
+        @Nullable Output<List<String>> phraseHints,
+        @Nullable Output<Integer> sampleRateHertz,
+        @Nullable Output<Boolean> singleUtterance) {
         this.audioEncoding = Objects.requireNonNull(audioEncoding, "expected parameter 'audioEncoding' to be non-null");
         this.enableWordInfo = enableWordInfo;
         this.model = model;
@@ -118,13 +118,13 @@ public final class GoogleCloudDialogflowCxV3beta1InputAudioConfigArgs extends io
     }
 
     private GoogleCloudDialogflowCxV3beta1InputAudioConfigArgs() {
-        this.audioEncoding = Input.empty();
-        this.enableWordInfo = Input.empty();
-        this.model = Input.empty();
-        this.modelVariant = Input.empty();
-        this.phraseHints = Input.empty();
-        this.sampleRateHertz = Input.empty();
-        this.singleUtterance = Input.empty();
+        this.audioEncoding = Output.empty();
+        this.enableWordInfo = Output.empty();
+        this.model = Output.empty();
+        this.modelVariant = Output.empty();
+        this.phraseHints = Output.empty();
+        this.sampleRateHertz = Output.empty();
+        this.singleUtterance = Output.empty();
     }
 
     public static Builder builder() {
@@ -136,13 +136,13 @@ public final class GoogleCloudDialogflowCxV3beta1InputAudioConfigArgs extends io
     }
 
     public static final class Builder {
-        private Input<GoogleCloudDialogflowCxV3beta1InputAudioConfigAudioEncoding> audioEncoding;
-        private @Nullable Input<Boolean> enableWordInfo;
-        private @Nullable Input<String> model;
-        private @Nullable Input<GoogleCloudDialogflowCxV3beta1InputAudioConfigModelVariant> modelVariant;
-        private @Nullable Input<List<String>> phraseHints;
-        private @Nullable Input<Integer> sampleRateHertz;
-        private @Nullable Input<Boolean> singleUtterance;
+        private Output<GoogleCloudDialogflowCxV3beta1InputAudioConfigAudioEncoding> audioEncoding;
+        private @Nullable Output<Boolean> enableWordInfo;
+        private @Nullable Output<String> model;
+        private @Nullable Output<GoogleCloudDialogflowCxV3beta1InputAudioConfigModelVariant> modelVariant;
+        private @Nullable Output<List<String>> phraseHints;
+        private @Nullable Output<Integer> sampleRateHertz;
+        private @Nullable Output<Boolean> singleUtterance;
 
         public Builder() {
     	      // Empty
@@ -159,73 +159,73 @@ public final class GoogleCloudDialogflowCxV3beta1InputAudioConfigArgs extends io
     	      this.singleUtterance = defaults.singleUtterance;
         }
 
-        public Builder audioEncoding(Input<GoogleCloudDialogflowCxV3beta1InputAudioConfigAudioEncoding> audioEncoding) {
+        public Builder audioEncoding(Output<GoogleCloudDialogflowCxV3beta1InputAudioConfigAudioEncoding> audioEncoding) {
             this.audioEncoding = Objects.requireNonNull(audioEncoding);
             return this;
         }
 
         public Builder audioEncoding(GoogleCloudDialogflowCxV3beta1InputAudioConfigAudioEncoding audioEncoding) {
-            this.audioEncoding = Input.of(Objects.requireNonNull(audioEncoding));
+            this.audioEncoding = Output.of(Objects.requireNonNull(audioEncoding));
             return this;
         }
 
-        public Builder enableWordInfo(@Nullable Input<Boolean> enableWordInfo) {
+        public Builder enableWordInfo(@Nullable Output<Boolean> enableWordInfo) {
             this.enableWordInfo = enableWordInfo;
             return this;
         }
 
         public Builder enableWordInfo(@Nullable Boolean enableWordInfo) {
-            this.enableWordInfo = Input.ofNullable(enableWordInfo);
+            this.enableWordInfo = Output.ofNullable(enableWordInfo);
             return this;
         }
 
-        public Builder model(@Nullable Input<String> model) {
+        public Builder model(@Nullable Output<String> model) {
             this.model = model;
             return this;
         }
 
         public Builder model(@Nullable String model) {
-            this.model = Input.ofNullable(model);
+            this.model = Output.ofNullable(model);
             return this;
         }
 
-        public Builder modelVariant(@Nullable Input<GoogleCloudDialogflowCxV3beta1InputAudioConfigModelVariant> modelVariant) {
+        public Builder modelVariant(@Nullable Output<GoogleCloudDialogflowCxV3beta1InputAudioConfigModelVariant> modelVariant) {
             this.modelVariant = modelVariant;
             return this;
         }
 
         public Builder modelVariant(@Nullable GoogleCloudDialogflowCxV3beta1InputAudioConfigModelVariant modelVariant) {
-            this.modelVariant = Input.ofNullable(modelVariant);
+            this.modelVariant = Output.ofNullable(modelVariant);
             return this;
         }
 
-        public Builder phraseHints(@Nullable Input<List<String>> phraseHints) {
+        public Builder phraseHints(@Nullable Output<List<String>> phraseHints) {
             this.phraseHints = phraseHints;
             return this;
         }
 
         public Builder phraseHints(@Nullable List<String> phraseHints) {
-            this.phraseHints = Input.ofNullable(phraseHints);
+            this.phraseHints = Output.ofNullable(phraseHints);
             return this;
         }
 
-        public Builder sampleRateHertz(@Nullable Input<Integer> sampleRateHertz) {
+        public Builder sampleRateHertz(@Nullable Output<Integer> sampleRateHertz) {
             this.sampleRateHertz = sampleRateHertz;
             return this;
         }
 
         public Builder sampleRateHertz(@Nullable Integer sampleRateHertz) {
-            this.sampleRateHertz = Input.ofNullable(sampleRateHertz);
+            this.sampleRateHertz = Output.ofNullable(sampleRateHertz);
             return this;
         }
 
-        public Builder singleUtterance(@Nullable Input<Boolean> singleUtterance) {
+        public Builder singleUtterance(@Nullable Output<Boolean> singleUtterance) {
             this.singleUtterance = singleUtterance;
             return this;
         }
 
         public Builder singleUtterance(@Nullable Boolean singleUtterance) {
-            this.singleUtterance = Input.ofNullable(singleUtterance);
+            this.singleUtterance = Output.ofNullable(singleUtterance);
             return this;
         }
         public GoogleCloudDialogflowCxV3beta1InputAudioConfigArgs build() {

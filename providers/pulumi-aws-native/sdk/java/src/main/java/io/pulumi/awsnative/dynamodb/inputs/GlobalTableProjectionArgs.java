@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.dynamodb.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -16,29 +16,29 @@ public final class GlobalTableProjectionArgs extends io.pulumi.resources.Resourc
     public static final GlobalTableProjectionArgs Empty = new GlobalTableProjectionArgs();
 
     @InputImport(name="nonKeyAttributes")
-      private final @Nullable Input<List<String>> nonKeyAttributes;
+      private final @Nullable Output<List<String>> nonKeyAttributes;
 
-    public Input<List<String>> getNonKeyAttributes() {
-        return this.nonKeyAttributes == null ? Input.empty() : this.nonKeyAttributes;
+    public Output<List<String>> getNonKeyAttributes() {
+        return this.nonKeyAttributes == null ? Output.empty() : this.nonKeyAttributes;
     }
 
     @InputImport(name="projectionType")
-      private final @Nullable Input<String> projectionType;
+      private final @Nullable Output<String> projectionType;
 
-    public Input<String> getProjectionType() {
-        return this.projectionType == null ? Input.empty() : this.projectionType;
+    public Output<String> getProjectionType() {
+        return this.projectionType == null ? Output.empty() : this.projectionType;
     }
 
     public GlobalTableProjectionArgs(
-        @Nullable Input<List<String>> nonKeyAttributes,
-        @Nullable Input<String> projectionType) {
+        @Nullable Output<List<String>> nonKeyAttributes,
+        @Nullable Output<String> projectionType) {
         this.nonKeyAttributes = nonKeyAttributes;
         this.projectionType = projectionType;
     }
 
     private GlobalTableProjectionArgs() {
-        this.nonKeyAttributes = Input.empty();
-        this.projectionType = Input.empty();
+        this.nonKeyAttributes = Output.empty();
+        this.projectionType = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class GlobalTableProjectionArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> nonKeyAttributes;
-        private @Nullable Input<String> projectionType;
+        private @Nullable Output<List<String>> nonKeyAttributes;
+        private @Nullable Output<String> projectionType;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class GlobalTableProjectionArgs extends io.pulumi.resources.Resourc
     	      this.projectionType = defaults.projectionType;
         }
 
-        public Builder nonKeyAttributes(@Nullable Input<List<String>> nonKeyAttributes) {
+        public Builder nonKeyAttributes(@Nullable Output<List<String>> nonKeyAttributes) {
             this.nonKeyAttributes = nonKeyAttributes;
             return this;
         }
 
         public Builder nonKeyAttributes(@Nullable List<String> nonKeyAttributes) {
-            this.nonKeyAttributes = Input.ofNullable(nonKeyAttributes);
+            this.nonKeyAttributes = Output.ofNullable(nonKeyAttributes);
             return this;
         }
 
-        public Builder projectionType(@Nullable Input<String> projectionType) {
+        public Builder projectionType(@Nullable Output<String> projectionType) {
             this.projectionType = projectionType;
             return this;
         }
 
         public Builder projectionType(@Nullable String projectionType) {
-            this.projectionType = Input.ofNullable(projectionType);
+            this.projectionType = Output.ofNullable(projectionType);
             return this;
         }
         public GlobalTableProjectionArgs build() {

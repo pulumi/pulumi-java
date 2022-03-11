@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecListenerTlsValidationTrustFileGetArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecListenerTlsValidationTrustSdsGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,10 +20,10 @@ public final class VirtualGatewaySpecListenerTlsValidationTrustGetArgs extends i
      * 
      */
     @InputImport(name="file")
-      private final @Nullable Input<VirtualGatewaySpecListenerTlsValidationTrustFileGetArgs> file;
+      private final @Nullable Output<VirtualGatewaySpecListenerTlsValidationTrustFileGetArgs> file;
 
-    public Input<VirtualGatewaySpecListenerTlsValidationTrustFileGetArgs> getFile() {
-        return this.file == null ? Input.empty() : this.file;
+    public Output<VirtualGatewaySpecListenerTlsValidationTrustFileGetArgs> getFile() {
+        return this.file == null ? Output.empty() : this.file;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class VirtualGatewaySpecListenerTlsValidationTrustGetArgs extends i
      * 
      */
     @InputImport(name="sds")
-      private final @Nullable Input<VirtualGatewaySpecListenerTlsValidationTrustSdsGetArgs> sds;
+      private final @Nullable Output<VirtualGatewaySpecListenerTlsValidationTrustSdsGetArgs> sds;
 
-    public Input<VirtualGatewaySpecListenerTlsValidationTrustSdsGetArgs> getSds() {
-        return this.sds == null ? Input.empty() : this.sds;
+    public Output<VirtualGatewaySpecListenerTlsValidationTrustSdsGetArgs> getSds() {
+        return this.sds == null ? Output.empty() : this.sds;
     }
 
     public VirtualGatewaySpecListenerTlsValidationTrustGetArgs(
-        @Nullable Input<VirtualGatewaySpecListenerTlsValidationTrustFileGetArgs> file,
-        @Nullable Input<VirtualGatewaySpecListenerTlsValidationTrustSdsGetArgs> sds) {
+        @Nullable Output<VirtualGatewaySpecListenerTlsValidationTrustFileGetArgs> file,
+        @Nullable Output<VirtualGatewaySpecListenerTlsValidationTrustSdsGetArgs> sds) {
         this.file = file;
         this.sds = sds;
     }
 
     private VirtualGatewaySpecListenerTlsValidationTrustGetArgs() {
-        this.file = Input.empty();
-        this.sds = Input.empty();
+        this.file = Output.empty();
+        this.sds = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class VirtualGatewaySpecListenerTlsValidationTrustGetArgs extends i
     }
 
     public static final class Builder {
-        private @Nullable Input<VirtualGatewaySpecListenerTlsValidationTrustFileGetArgs> file;
-        private @Nullable Input<VirtualGatewaySpecListenerTlsValidationTrustSdsGetArgs> sds;
+        private @Nullable Output<VirtualGatewaySpecListenerTlsValidationTrustFileGetArgs> file;
+        private @Nullable Output<VirtualGatewaySpecListenerTlsValidationTrustSdsGetArgs> sds;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class VirtualGatewaySpecListenerTlsValidationTrustGetArgs extends i
     	      this.sds = defaults.sds;
         }
 
-        public Builder file(@Nullable Input<VirtualGatewaySpecListenerTlsValidationTrustFileGetArgs> file) {
+        public Builder file(@Nullable Output<VirtualGatewaySpecListenerTlsValidationTrustFileGetArgs> file) {
             this.file = file;
             return this;
         }
 
         public Builder file(@Nullable VirtualGatewaySpecListenerTlsValidationTrustFileGetArgs file) {
-            this.file = Input.ofNullable(file);
+            this.file = Output.ofNullable(file);
             return this;
         }
 
-        public Builder sds(@Nullable Input<VirtualGatewaySpecListenerTlsValidationTrustSdsGetArgs> sds) {
+        public Builder sds(@Nullable Output<VirtualGatewaySpecListenerTlsValidationTrustSdsGetArgs> sds) {
             this.sds = sds;
             return this;
         }
 
         public Builder sds(@Nullable VirtualGatewaySpecListenerTlsValidationTrustSdsGetArgs sds) {
-            this.sds = Input.ofNullable(sds);
+            this.sds = Output.ofNullable(sds);
             return this;
         }
         public VirtualGatewaySpecListenerTlsValidationTrustGetArgs build() {

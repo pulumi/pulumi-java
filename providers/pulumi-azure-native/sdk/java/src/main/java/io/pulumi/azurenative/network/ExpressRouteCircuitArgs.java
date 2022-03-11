@@ -10,7 +10,7 @@ import io.pulumi.azurenative.network.inputs.ExpressRouteCircuitServiceProviderPr
 import io.pulumi.azurenative.network.inputs.ExpressRouteCircuitSkuArgs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -30,10 +30,10 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="allowClassicOperations")
-      private final @Nullable Input<Boolean> allowClassicOperations;
+      private final @Nullable Output<Boolean> allowClassicOperations;
 
-    public Input<Boolean> getAllowClassicOperations() {
-        return this.allowClassicOperations == null ? Input.empty() : this.allowClassicOperations;
+    public Output<Boolean> getAllowClassicOperations() {
+        return this.allowClassicOperations == null ? Output.empty() : this.allowClassicOperations;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="authorizations")
-      private final @Nullable Input<List<ExpressRouteCircuitAuthorizationArgs>> authorizations;
+      private final @Nullable Output<List<ExpressRouteCircuitAuthorizationArgs>> authorizations;
 
-    public Input<List<ExpressRouteCircuitAuthorizationArgs>> getAuthorizations() {
-        return this.authorizations == null ? Input.empty() : this.authorizations;
+    public Output<List<ExpressRouteCircuitAuthorizationArgs>> getAuthorizations() {
+        return this.authorizations == null ? Output.empty() : this.authorizations;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="bandwidthInGbps")
-      private final @Nullable Input<Double> bandwidthInGbps;
+      private final @Nullable Output<Double> bandwidthInGbps;
 
-    public Input<Double> getBandwidthInGbps() {
-        return this.bandwidthInGbps == null ? Input.empty() : this.bandwidthInGbps;
+    public Output<Double> getBandwidthInGbps() {
+        return this.bandwidthInGbps == null ? Output.empty() : this.bandwidthInGbps;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="circuitName")
-      private final @Nullable Input<String> circuitName;
+      private final @Nullable Output<String> circuitName;
 
-    public Input<String> getCircuitName() {
-        return this.circuitName == null ? Input.empty() : this.circuitName;
+    public Output<String> getCircuitName() {
+        return this.circuitName == null ? Output.empty() : this.circuitName;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="circuitProvisioningState")
-      private final @Nullable Input<String> circuitProvisioningState;
+      private final @Nullable Output<String> circuitProvisioningState;
 
-    public Input<String> getCircuitProvisioningState() {
-        return this.circuitProvisioningState == null ? Input.empty() : this.circuitProvisioningState;
+    public Output<String> getCircuitProvisioningState() {
+        return this.circuitProvisioningState == null ? Output.empty() : this.circuitProvisioningState;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="expressRoutePort")
-      private final @Nullable Input<SubResourceArgs> expressRoutePort;
+      private final @Nullable Output<SubResourceArgs> expressRoutePort;
 
-    public Input<SubResourceArgs> getExpressRoutePort() {
-        return this.expressRoutePort == null ? Input.empty() : this.expressRoutePort;
+    public Output<SubResourceArgs> getExpressRoutePort() {
+        return this.expressRoutePort == null ? Output.empty() : this.expressRoutePort;
     }
 
     /**
@@ -96,10 +96,10 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="gatewayManagerEtag")
-      private final @Nullable Input<String> gatewayManagerEtag;
+      private final @Nullable Output<String> gatewayManagerEtag;
 
-    public Input<String> getGatewayManagerEtag() {
-        return this.gatewayManagerEtag == null ? Input.empty() : this.gatewayManagerEtag;
+    public Output<String> getGatewayManagerEtag() {
+        return this.gatewayManagerEtag == null ? Output.empty() : this.gatewayManagerEtag;
     }
 
     /**
@@ -107,10 +107,10 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="globalReachEnabled")
-      private final @Nullable Input<Boolean> globalReachEnabled;
+      private final @Nullable Output<Boolean> globalReachEnabled;
 
-    public Input<Boolean> getGlobalReachEnabled() {
-        return this.globalReachEnabled == null ? Input.empty() : this.globalReachEnabled;
+    public Output<Boolean> getGlobalReachEnabled() {
+        return this.globalReachEnabled == null ? Output.empty() : this.globalReachEnabled;
     }
 
     /**
@@ -118,10 +118,10 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -129,10 +129,10 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -140,10 +140,10 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="peerings")
-      private final @Nullable Input<List<ExpressRouteCircuitPeeringArgs>> peerings;
+      private final @Nullable Output<List<ExpressRouteCircuitPeeringArgs>> peerings;
 
-    public Input<List<ExpressRouteCircuitPeeringArgs>> getPeerings() {
-        return this.peerings == null ? Input.empty() : this.peerings;
+    public Output<List<ExpressRouteCircuitPeeringArgs>> getPeerings() {
+        return this.peerings == null ? Output.empty() : this.peerings;
     }
 
     /**
@@ -151,9 +151,9 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -162,10 +162,10 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="serviceKey")
-      private final @Nullable Input<String> serviceKey;
+      private final @Nullable Output<String> serviceKey;
 
-    public Input<String> getServiceKey() {
-        return this.serviceKey == null ? Input.empty() : this.serviceKey;
+    public Output<String> getServiceKey() {
+        return this.serviceKey == null ? Output.empty() : this.serviceKey;
     }
 
     /**
@@ -173,10 +173,10 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="serviceProviderNotes")
-      private final @Nullable Input<String> serviceProviderNotes;
+      private final @Nullable Output<String> serviceProviderNotes;
 
-    public Input<String> getServiceProviderNotes() {
-        return this.serviceProviderNotes == null ? Input.empty() : this.serviceProviderNotes;
+    public Output<String> getServiceProviderNotes() {
+        return this.serviceProviderNotes == null ? Output.empty() : this.serviceProviderNotes;
     }
 
     /**
@@ -184,10 +184,10 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="serviceProviderProperties")
-      private final @Nullable Input<ExpressRouteCircuitServiceProviderPropertiesArgs> serviceProviderProperties;
+      private final @Nullable Output<ExpressRouteCircuitServiceProviderPropertiesArgs> serviceProviderProperties;
 
-    public Input<ExpressRouteCircuitServiceProviderPropertiesArgs> getServiceProviderProperties() {
-        return this.serviceProviderProperties == null ? Input.empty() : this.serviceProviderProperties;
+    public Output<ExpressRouteCircuitServiceProviderPropertiesArgs> getServiceProviderProperties() {
+        return this.serviceProviderProperties == null ? Output.empty() : this.serviceProviderProperties;
     }
 
     /**
@@ -195,10 +195,10 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="serviceProviderProvisioningState")
-      private final @Nullable Input<Either<String,ServiceProviderProvisioningState>> serviceProviderProvisioningState;
+      private final @Nullable Output<Either<String,ServiceProviderProvisioningState>> serviceProviderProvisioningState;
 
-    public Input<Either<String,ServiceProviderProvisioningState>> getServiceProviderProvisioningState() {
-        return this.serviceProviderProvisioningState == null ? Input.empty() : this.serviceProviderProvisioningState;
+    public Output<Either<String,ServiceProviderProvisioningState>> getServiceProviderProvisioningState() {
+        return this.serviceProviderProvisioningState == null ? Output.empty() : this.serviceProviderProvisioningState;
     }
 
     /**
@@ -206,10 +206,10 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<ExpressRouteCircuitSkuArgs> sku;
+      private final @Nullable Output<ExpressRouteCircuitSkuArgs> sku;
 
-    public Input<ExpressRouteCircuitSkuArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<ExpressRouteCircuitSkuArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -217,31 +217,31 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ExpressRouteCircuitArgs(
-        @Nullable Input<Boolean> allowClassicOperations,
-        @Nullable Input<List<ExpressRouteCircuitAuthorizationArgs>> authorizations,
-        @Nullable Input<Double> bandwidthInGbps,
-        @Nullable Input<String> circuitName,
-        @Nullable Input<String> circuitProvisioningState,
-        @Nullable Input<SubResourceArgs> expressRoutePort,
-        @Nullable Input<String> gatewayManagerEtag,
-        @Nullable Input<Boolean> globalReachEnabled,
-        @Nullable Input<String> id,
-        @Nullable Input<String> location,
-        @Nullable Input<List<ExpressRouteCircuitPeeringArgs>> peerings,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> serviceKey,
-        @Nullable Input<String> serviceProviderNotes,
-        @Nullable Input<ExpressRouteCircuitServiceProviderPropertiesArgs> serviceProviderProperties,
-        @Nullable Input<Either<String,ServiceProviderProvisioningState>> serviceProviderProvisioningState,
-        @Nullable Input<ExpressRouteCircuitSkuArgs> sku,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<Boolean> allowClassicOperations,
+        @Nullable Output<List<ExpressRouteCircuitAuthorizationArgs>> authorizations,
+        @Nullable Output<Double> bandwidthInGbps,
+        @Nullable Output<String> circuitName,
+        @Nullable Output<String> circuitProvisioningState,
+        @Nullable Output<SubResourceArgs> expressRoutePort,
+        @Nullable Output<String> gatewayManagerEtag,
+        @Nullable Output<Boolean> globalReachEnabled,
+        @Nullable Output<String> id,
+        @Nullable Output<String> location,
+        @Nullable Output<List<ExpressRouteCircuitPeeringArgs>> peerings,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> serviceKey,
+        @Nullable Output<String> serviceProviderNotes,
+        @Nullable Output<ExpressRouteCircuitServiceProviderPropertiesArgs> serviceProviderProperties,
+        @Nullable Output<Either<String,ServiceProviderProvisioningState>> serviceProviderProvisioningState,
+        @Nullable Output<ExpressRouteCircuitSkuArgs> sku,
+        @Nullable Output<Map<String,String>> tags) {
         this.allowClassicOperations = allowClassicOperations;
         this.authorizations = authorizations;
         this.bandwidthInGbps = bandwidthInGbps;
@@ -263,24 +263,24 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
     }
 
     private ExpressRouteCircuitArgs() {
-        this.allowClassicOperations = Input.empty();
-        this.authorizations = Input.empty();
-        this.bandwidthInGbps = Input.empty();
-        this.circuitName = Input.empty();
-        this.circuitProvisioningState = Input.empty();
-        this.expressRoutePort = Input.empty();
-        this.gatewayManagerEtag = Input.empty();
-        this.globalReachEnabled = Input.empty();
-        this.id = Input.empty();
-        this.location = Input.empty();
-        this.peerings = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serviceKey = Input.empty();
-        this.serviceProviderNotes = Input.empty();
-        this.serviceProviderProperties = Input.empty();
-        this.serviceProviderProvisioningState = Input.empty();
-        this.sku = Input.empty();
-        this.tags = Input.empty();
+        this.allowClassicOperations = Output.empty();
+        this.authorizations = Output.empty();
+        this.bandwidthInGbps = Output.empty();
+        this.circuitName = Output.empty();
+        this.circuitProvisioningState = Output.empty();
+        this.expressRoutePort = Output.empty();
+        this.gatewayManagerEtag = Output.empty();
+        this.globalReachEnabled = Output.empty();
+        this.id = Output.empty();
+        this.location = Output.empty();
+        this.peerings = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serviceKey = Output.empty();
+        this.serviceProviderNotes = Output.empty();
+        this.serviceProviderProperties = Output.empty();
+        this.serviceProviderProvisioningState = Output.empty();
+        this.sku = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -292,24 +292,24 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowClassicOperations;
-        private @Nullable Input<List<ExpressRouteCircuitAuthorizationArgs>> authorizations;
-        private @Nullable Input<Double> bandwidthInGbps;
-        private @Nullable Input<String> circuitName;
-        private @Nullable Input<String> circuitProvisioningState;
-        private @Nullable Input<SubResourceArgs> expressRoutePort;
-        private @Nullable Input<String> gatewayManagerEtag;
-        private @Nullable Input<Boolean> globalReachEnabled;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> location;
-        private @Nullable Input<List<ExpressRouteCircuitPeeringArgs>> peerings;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> serviceKey;
-        private @Nullable Input<String> serviceProviderNotes;
-        private @Nullable Input<ExpressRouteCircuitServiceProviderPropertiesArgs> serviceProviderProperties;
-        private @Nullable Input<Either<String,ServiceProviderProvisioningState>> serviceProviderProvisioningState;
-        private @Nullable Input<ExpressRouteCircuitSkuArgs> sku;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<Boolean> allowClassicOperations;
+        private @Nullable Output<List<ExpressRouteCircuitAuthorizationArgs>> authorizations;
+        private @Nullable Output<Double> bandwidthInGbps;
+        private @Nullable Output<String> circuitName;
+        private @Nullable Output<String> circuitProvisioningState;
+        private @Nullable Output<SubResourceArgs> expressRoutePort;
+        private @Nullable Output<String> gatewayManagerEtag;
+        private @Nullable Output<Boolean> globalReachEnabled;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> location;
+        private @Nullable Output<List<ExpressRouteCircuitPeeringArgs>> peerings;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> serviceKey;
+        private @Nullable Output<String> serviceProviderNotes;
+        private @Nullable Output<ExpressRouteCircuitServiceProviderPropertiesArgs> serviceProviderProperties;
+        private @Nullable Output<Either<String,ServiceProviderProvisioningState>> serviceProviderProvisioningState;
+        private @Nullable Output<ExpressRouteCircuitSkuArgs> sku;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -337,183 +337,183 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
     	      this.tags = defaults.tags;
         }
 
-        public Builder allowClassicOperations(@Nullable Input<Boolean> allowClassicOperations) {
+        public Builder allowClassicOperations(@Nullable Output<Boolean> allowClassicOperations) {
             this.allowClassicOperations = allowClassicOperations;
             return this;
         }
 
         public Builder allowClassicOperations(@Nullable Boolean allowClassicOperations) {
-            this.allowClassicOperations = Input.ofNullable(allowClassicOperations);
+            this.allowClassicOperations = Output.ofNullable(allowClassicOperations);
             return this;
         }
 
-        public Builder authorizations(@Nullable Input<List<ExpressRouteCircuitAuthorizationArgs>> authorizations) {
+        public Builder authorizations(@Nullable Output<List<ExpressRouteCircuitAuthorizationArgs>> authorizations) {
             this.authorizations = authorizations;
             return this;
         }
 
         public Builder authorizations(@Nullable List<ExpressRouteCircuitAuthorizationArgs> authorizations) {
-            this.authorizations = Input.ofNullable(authorizations);
+            this.authorizations = Output.ofNullable(authorizations);
             return this;
         }
 
-        public Builder bandwidthInGbps(@Nullable Input<Double> bandwidthInGbps) {
+        public Builder bandwidthInGbps(@Nullable Output<Double> bandwidthInGbps) {
             this.bandwidthInGbps = bandwidthInGbps;
             return this;
         }
 
         public Builder bandwidthInGbps(@Nullable Double bandwidthInGbps) {
-            this.bandwidthInGbps = Input.ofNullable(bandwidthInGbps);
+            this.bandwidthInGbps = Output.ofNullable(bandwidthInGbps);
             return this;
         }
 
-        public Builder circuitName(@Nullable Input<String> circuitName) {
+        public Builder circuitName(@Nullable Output<String> circuitName) {
             this.circuitName = circuitName;
             return this;
         }
 
         public Builder circuitName(@Nullable String circuitName) {
-            this.circuitName = Input.ofNullable(circuitName);
+            this.circuitName = Output.ofNullable(circuitName);
             return this;
         }
 
-        public Builder circuitProvisioningState(@Nullable Input<String> circuitProvisioningState) {
+        public Builder circuitProvisioningState(@Nullable Output<String> circuitProvisioningState) {
             this.circuitProvisioningState = circuitProvisioningState;
             return this;
         }
 
         public Builder circuitProvisioningState(@Nullable String circuitProvisioningState) {
-            this.circuitProvisioningState = Input.ofNullable(circuitProvisioningState);
+            this.circuitProvisioningState = Output.ofNullable(circuitProvisioningState);
             return this;
         }
 
-        public Builder expressRoutePort(@Nullable Input<SubResourceArgs> expressRoutePort) {
+        public Builder expressRoutePort(@Nullable Output<SubResourceArgs> expressRoutePort) {
             this.expressRoutePort = expressRoutePort;
             return this;
         }
 
         public Builder expressRoutePort(@Nullable SubResourceArgs expressRoutePort) {
-            this.expressRoutePort = Input.ofNullable(expressRoutePort);
+            this.expressRoutePort = Output.ofNullable(expressRoutePort);
             return this;
         }
 
-        public Builder gatewayManagerEtag(@Nullable Input<String> gatewayManagerEtag) {
+        public Builder gatewayManagerEtag(@Nullable Output<String> gatewayManagerEtag) {
             this.gatewayManagerEtag = gatewayManagerEtag;
             return this;
         }
 
         public Builder gatewayManagerEtag(@Nullable String gatewayManagerEtag) {
-            this.gatewayManagerEtag = Input.ofNullable(gatewayManagerEtag);
+            this.gatewayManagerEtag = Output.ofNullable(gatewayManagerEtag);
             return this;
         }
 
-        public Builder globalReachEnabled(@Nullable Input<Boolean> globalReachEnabled) {
+        public Builder globalReachEnabled(@Nullable Output<Boolean> globalReachEnabled) {
             this.globalReachEnabled = globalReachEnabled;
             return this;
         }
 
         public Builder globalReachEnabled(@Nullable Boolean globalReachEnabled) {
-            this.globalReachEnabled = Input.ofNullable(globalReachEnabled);
+            this.globalReachEnabled = Output.ofNullable(globalReachEnabled);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder peerings(@Nullable Input<List<ExpressRouteCircuitPeeringArgs>> peerings) {
+        public Builder peerings(@Nullable Output<List<ExpressRouteCircuitPeeringArgs>> peerings) {
             this.peerings = peerings;
             return this;
         }
 
         public Builder peerings(@Nullable List<ExpressRouteCircuitPeeringArgs> peerings) {
-            this.peerings = Input.ofNullable(peerings);
+            this.peerings = Output.ofNullable(peerings);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serviceKey(@Nullable Input<String> serviceKey) {
+        public Builder serviceKey(@Nullable Output<String> serviceKey) {
             this.serviceKey = serviceKey;
             return this;
         }
 
         public Builder serviceKey(@Nullable String serviceKey) {
-            this.serviceKey = Input.ofNullable(serviceKey);
+            this.serviceKey = Output.ofNullable(serviceKey);
             return this;
         }
 
-        public Builder serviceProviderNotes(@Nullable Input<String> serviceProviderNotes) {
+        public Builder serviceProviderNotes(@Nullable Output<String> serviceProviderNotes) {
             this.serviceProviderNotes = serviceProviderNotes;
             return this;
         }
 
         public Builder serviceProviderNotes(@Nullable String serviceProviderNotes) {
-            this.serviceProviderNotes = Input.ofNullable(serviceProviderNotes);
+            this.serviceProviderNotes = Output.ofNullable(serviceProviderNotes);
             return this;
         }
 
-        public Builder serviceProviderProperties(@Nullable Input<ExpressRouteCircuitServiceProviderPropertiesArgs> serviceProviderProperties) {
+        public Builder serviceProviderProperties(@Nullable Output<ExpressRouteCircuitServiceProviderPropertiesArgs> serviceProviderProperties) {
             this.serviceProviderProperties = serviceProviderProperties;
             return this;
         }
 
         public Builder serviceProviderProperties(@Nullable ExpressRouteCircuitServiceProviderPropertiesArgs serviceProviderProperties) {
-            this.serviceProviderProperties = Input.ofNullable(serviceProviderProperties);
+            this.serviceProviderProperties = Output.ofNullable(serviceProviderProperties);
             return this;
         }
 
-        public Builder serviceProviderProvisioningState(@Nullable Input<Either<String,ServiceProviderProvisioningState>> serviceProviderProvisioningState) {
+        public Builder serviceProviderProvisioningState(@Nullable Output<Either<String,ServiceProviderProvisioningState>> serviceProviderProvisioningState) {
             this.serviceProviderProvisioningState = serviceProviderProvisioningState;
             return this;
         }
 
         public Builder serviceProviderProvisioningState(@Nullable Either<String,ServiceProviderProvisioningState> serviceProviderProvisioningState) {
-            this.serviceProviderProvisioningState = Input.ofNullable(serviceProviderProvisioningState);
+            this.serviceProviderProvisioningState = Output.ofNullable(serviceProviderProvisioningState);
             return this;
         }
 
-        public Builder sku(@Nullable Input<ExpressRouteCircuitSkuArgs> sku) {
+        public Builder sku(@Nullable Output<ExpressRouteCircuitSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable ExpressRouteCircuitSkuArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ExpressRouteCircuitArgs build() {

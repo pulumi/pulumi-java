@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class InstanceGroupManagerStandbyPolicyArgs extends io.pulumi.resou
     public static final InstanceGroupManagerStandbyPolicyArgs Empty = new InstanceGroupManagerStandbyPolicyArgs();
 
     @InputImport(name="initialDelaySec")
-      private final @Nullable Input<Integer> initialDelaySec;
+      private final @Nullable Output<Integer> initialDelaySec;
 
-    public Input<Integer> getInitialDelaySec() {
-        return this.initialDelaySec == null ? Input.empty() : this.initialDelaySec;
+    public Output<Integer> getInitialDelaySec() {
+        return this.initialDelaySec == null ? Output.empty() : this.initialDelaySec;
     }
 
-    public InstanceGroupManagerStandbyPolicyArgs(@Nullable Input<Integer> initialDelaySec) {
+    public InstanceGroupManagerStandbyPolicyArgs(@Nullable Output<Integer> initialDelaySec) {
         this.initialDelaySec = initialDelaySec;
     }
 
     private InstanceGroupManagerStandbyPolicyArgs() {
-        this.initialDelaySec = Input.empty();
+        this.initialDelaySec = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class InstanceGroupManagerStandbyPolicyArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> initialDelaySec;
+        private @Nullable Output<Integer> initialDelaySec;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class InstanceGroupManagerStandbyPolicyArgs extends io.pulumi.resou
     	      this.initialDelaySec = defaults.initialDelaySec;
         }
 
-        public Builder initialDelaySec(@Nullable Input<Integer> initialDelaySec) {
+        public Builder initialDelaySec(@Nullable Output<Integer> initialDelaySec) {
             this.initialDelaySec = initialDelaySec;
             return this;
         }
 
         public Builder initialDelaySec(@Nullable Integer initialDelaySec) {
-            this.initialDelaySec = Input.ofNullable(initialDelaySec);
+            this.initialDelaySec = Output.ofNullable(initialDelaySec);
             return this;
         }
         public InstanceGroupManagerStandbyPolicyArgs build() {

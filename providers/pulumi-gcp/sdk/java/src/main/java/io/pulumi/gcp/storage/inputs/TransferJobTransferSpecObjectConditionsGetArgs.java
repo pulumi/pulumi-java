@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class TransferJobTransferSpecObjectConditionsGetArgs extends io.pul
      * 
      */
     @InputImport(name="excludePrefixes")
-      private final @Nullable Input<List<String>> excludePrefixes;
+      private final @Nullable Output<List<String>> excludePrefixes;
 
-    public Input<List<String>> getExcludePrefixes() {
-        return this.excludePrefixes == null ? Input.empty() : this.excludePrefixes;
+    public Output<List<String>> getExcludePrefixes() {
+        return this.excludePrefixes == null ? Output.empty() : this.excludePrefixes;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class TransferJobTransferSpecObjectConditionsGetArgs extends io.pul
      * 
      */
     @InputImport(name="includePrefixes")
-      private final @Nullable Input<List<String>> includePrefixes;
+      private final @Nullable Output<List<String>> includePrefixes;
 
-    public Input<List<String>> getIncludePrefixes() {
-        return this.includePrefixes == null ? Input.empty() : this.includePrefixes;
+    public Output<List<String>> getIncludePrefixes() {
+        return this.includePrefixes == null ? Output.empty() : this.includePrefixes;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class TransferJobTransferSpecObjectConditionsGetArgs extends io.pul
      * 
      */
     @InputImport(name="maxTimeElapsedSinceLastModification")
-      private final @Nullable Input<String> maxTimeElapsedSinceLastModification;
+      private final @Nullable Output<String> maxTimeElapsedSinceLastModification;
 
-    public Input<String> getMaxTimeElapsedSinceLastModification() {
-        return this.maxTimeElapsedSinceLastModification == null ? Input.empty() : this.maxTimeElapsedSinceLastModification;
+    public Output<String> getMaxTimeElapsedSinceLastModification() {
+        return this.maxTimeElapsedSinceLastModification == null ? Output.empty() : this.maxTimeElapsedSinceLastModification;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class TransferJobTransferSpecObjectConditionsGetArgs extends io.pul
      * 
      */
     @InputImport(name="minTimeElapsedSinceLastModification")
-      private final @Nullable Input<String> minTimeElapsedSinceLastModification;
+      private final @Nullable Output<String> minTimeElapsedSinceLastModification;
 
-    public Input<String> getMinTimeElapsedSinceLastModification() {
-        return this.minTimeElapsedSinceLastModification == null ? Input.empty() : this.minTimeElapsedSinceLastModification;
+    public Output<String> getMinTimeElapsedSinceLastModification() {
+        return this.minTimeElapsedSinceLastModification == null ? Output.empty() : this.minTimeElapsedSinceLastModification;
     }
 
     public TransferJobTransferSpecObjectConditionsGetArgs(
-        @Nullable Input<List<String>> excludePrefixes,
-        @Nullable Input<List<String>> includePrefixes,
-        @Nullable Input<String> maxTimeElapsedSinceLastModification,
-        @Nullable Input<String> minTimeElapsedSinceLastModification) {
+        @Nullable Output<List<String>> excludePrefixes,
+        @Nullable Output<List<String>> includePrefixes,
+        @Nullable Output<String> maxTimeElapsedSinceLastModification,
+        @Nullable Output<String> minTimeElapsedSinceLastModification) {
         this.excludePrefixes = excludePrefixes;
         this.includePrefixes = includePrefixes;
         this.maxTimeElapsedSinceLastModification = maxTimeElapsedSinceLastModification;
@@ -71,10 +71,10 @@ public final class TransferJobTransferSpecObjectConditionsGetArgs extends io.pul
     }
 
     private TransferJobTransferSpecObjectConditionsGetArgs() {
-        this.excludePrefixes = Input.empty();
-        this.includePrefixes = Input.empty();
-        this.maxTimeElapsedSinceLastModification = Input.empty();
-        this.minTimeElapsedSinceLastModification = Input.empty();
+        this.excludePrefixes = Output.empty();
+        this.includePrefixes = Output.empty();
+        this.maxTimeElapsedSinceLastModification = Output.empty();
+        this.minTimeElapsedSinceLastModification = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class TransferJobTransferSpecObjectConditionsGetArgs extends io.pul
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> excludePrefixes;
-        private @Nullable Input<List<String>> includePrefixes;
-        private @Nullable Input<String> maxTimeElapsedSinceLastModification;
-        private @Nullable Input<String> minTimeElapsedSinceLastModification;
+        private @Nullable Output<List<String>> excludePrefixes;
+        private @Nullable Output<List<String>> includePrefixes;
+        private @Nullable Output<String> maxTimeElapsedSinceLastModification;
+        private @Nullable Output<String> minTimeElapsedSinceLastModification;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class TransferJobTransferSpecObjectConditionsGetArgs extends io.pul
     	      this.minTimeElapsedSinceLastModification = defaults.minTimeElapsedSinceLastModification;
         }
 
-        public Builder excludePrefixes(@Nullable Input<List<String>> excludePrefixes) {
+        public Builder excludePrefixes(@Nullable Output<List<String>> excludePrefixes) {
             this.excludePrefixes = excludePrefixes;
             return this;
         }
 
         public Builder excludePrefixes(@Nullable List<String> excludePrefixes) {
-            this.excludePrefixes = Input.ofNullable(excludePrefixes);
+            this.excludePrefixes = Output.ofNullable(excludePrefixes);
             return this;
         }
 
-        public Builder includePrefixes(@Nullable Input<List<String>> includePrefixes) {
+        public Builder includePrefixes(@Nullable Output<List<String>> includePrefixes) {
             this.includePrefixes = includePrefixes;
             return this;
         }
 
         public Builder includePrefixes(@Nullable List<String> includePrefixes) {
-            this.includePrefixes = Input.ofNullable(includePrefixes);
+            this.includePrefixes = Output.ofNullable(includePrefixes);
             return this;
         }
 
-        public Builder maxTimeElapsedSinceLastModification(@Nullable Input<String> maxTimeElapsedSinceLastModification) {
+        public Builder maxTimeElapsedSinceLastModification(@Nullable Output<String> maxTimeElapsedSinceLastModification) {
             this.maxTimeElapsedSinceLastModification = maxTimeElapsedSinceLastModification;
             return this;
         }
 
         public Builder maxTimeElapsedSinceLastModification(@Nullable String maxTimeElapsedSinceLastModification) {
-            this.maxTimeElapsedSinceLastModification = Input.ofNullable(maxTimeElapsedSinceLastModification);
+            this.maxTimeElapsedSinceLastModification = Output.ofNullable(maxTimeElapsedSinceLastModification);
             return this;
         }
 
-        public Builder minTimeElapsedSinceLastModification(@Nullable Input<String> minTimeElapsedSinceLastModification) {
+        public Builder minTimeElapsedSinceLastModification(@Nullable Output<String> minTimeElapsedSinceLastModification) {
             this.minTimeElapsedSinceLastModification = minTimeElapsedSinceLastModification;
             return this;
         }
 
         public Builder minTimeElapsedSinceLastModification(@Nullable String minTimeElapsedSinceLastModification) {
-            this.minTimeElapsedSinceLastModification = Input.ofNullable(minTimeElapsedSinceLastModification);
+            this.minTimeElapsedSinceLastModification = Output.ofNullable(minTimeElapsedSinceLastModification);
             return this;
         }
         public TransferJobTransferSpecObjectConditionsGetArgs build() {

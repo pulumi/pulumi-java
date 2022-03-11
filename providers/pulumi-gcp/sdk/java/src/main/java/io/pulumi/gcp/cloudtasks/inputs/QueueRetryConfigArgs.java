@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudtasks.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class QueueRetryConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="maxAttempts")
-      private final @Nullable Input<Integer> maxAttempts;
+      private final @Nullable Output<Integer> maxAttempts;
 
-    public Input<Integer> getMaxAttempts() {
-        return this.maxAttempts == null ? Input.empty() : this.maxAttempts;
+    public Output<Integer> getMaxAttempts() {
+        return this.maxAttempts == null ? Output.empty() : this.maxAttempts;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class QueueRetryConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="maxBackoff")
-      private final @Nullable Input<String> maxBackoff;
+      private final @Nullable Output<String> maxBackoff;
 
-    public Input<String> getMaxBackoff() {
-        return this.maxBackoff == null ? Input.empty() : this.maxBackoff;
+    public Output<String> getMaxBackoff() {
+        return this.maxBackoff == null ? Output.empty() : this.maxBackoff;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class QueueRetryConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="maxDoublings")
-      private final @Nullable Input<Integer> maxDoublings;
+      private final @Nullable Output<Integer> maxDoublings;
 
-    public Input<Integer> getMaxDoublings() {
-        return this.maxDoublings == null ? Input.empty() : this.maxDoublings;
+    public Output<Integer> getMaxDoublings() {
+        return this.maxDoublings == null ? Output.empty() : this.maxDoublings;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class QueueRetryConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="maxRetryDuration")
-      private final @Nullable Input<String> maxRetryDuration;
+      private final @Nullable Output<String> maxRetryDuration;
 
-    public Input<String> getMaxRetryDuration() {
-        return this.maxRetryDuration == null ? Input.empty() : this.maxRetryDuration;
+    public Output<String> getMaxRetryDuration() {
+        return this.maxRetryDuration == null ? Output.empty() : this.maxRetryDuration;
     }
 
     /**
@@ -82,18 +82,18 @@ public final class QueueRetryConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="minBackoff")
-      private final @Nullable Input<String> minBackoff;
+      private final @Nullable Output<String> minBackoff;
 
-    public Input<String> getMinBackoff() {
-        return this.minBackoff == null ? Input.empty() : this.minBackoff;
+    public Output<String> getMinBackoff() {
+        return this.minBackoff == null ? Output.empty() : this.minBackoff;
     }
 
     public QueueRetryConfigArgs(
-        @Nullable Input<Integer> maxAttempts,
-        @Nullable Input<String> maxBackoff,
-        @Nullable Input<Integer> maxDoublings,
-        @Nullable Input<String> maxRetryDuration,
-        @Nullable Input<String> minBackoff) {
+        @Nullable Output<Integer> maxAttempts,
+        @Nullable Output<String> maxBackoff,
+        @Nullable Output<Integer> maxDoublings,
+        @Nullable Output<String> maxRetryDuration,
+        @Nullable Output<String> minBackoff) {
         this.maxAttempts = maxAttempts;
         this.maxBackoff = maxBackoff;
         this.maxDoublings = maxDoublings;
@@ -102,11 +102,11 @@ public final class QueueRetryConfigArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private QueueRetryConfigArgs() {
-        this.maxAttempts = Input.empty();
-        this.maxBackoff = Input.empty();
-        this.maxDoublings = Input.empty();
-        this.maxRetryDuration = Input.empty();
-        this.minBackoff = Input.empty();
+        this.maxAttempts = Output.empty();
+        this.maxBackoff = Output.empty();
+        this.maxDoublings = Output.empty();
+        this.maxRetryDuration = Output.empty();
+        this.minBackoff = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,11 +118,11 @@ public final class QueueRetryConfigArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> maxAttempts;
-        private @Nullable Input<String> maxBackoff;
-        private @Nullable Input<Integer> maxDoublings;
-        private @Nullable Input<String> maxRetryDuration;
-        private @Nullable Input<String> minBackoff;
+        private @Nullable Output<Integer> maxAttempts;
+        private @Nullable Output<String> maxBackoff;
+        private @Nullable Output<Integer> maxDoublings;
+        private @Nullable Output<String> maxRetryDuration;
+        private @Nullable Output<String> minBackoff;
 
         public Builder() {
     	      // Empty
@@ -137,53 +137,53 @@ public final class QueueRetryConfigArgs extends io.pulumi.resources.ResourceArgs
     	      this.minBackoff = defaults.minBackoff;
         }
 
-        public Builder maxAttempts(@Nullable Input<Integer> maxAttempts) {
+        public Builder maxAttempts(@Nullable Output<Integer> maxAttempts) {
             this.maxAttempts = maxAttempts;
             return this;
         }
 
         public Builder maxAttempts(@Nullable Integer maxAttempts) {
-            this.maxAttempts = Input.ofNullable(maxAttempts);
+            this.maxAttempts = Output.ofNullable(maxAttempts);
             return this;
         }
 
-        public Builder maxBackoff(@Nullable Input<String> maxBackoff) {
+        public Builder maxBackoff(@Nullable Output<String> maxBackoff) {
             this.maxBackoff = maxBackoff;
             return this;
         }
 
         public Builder maxBackoff(@Nullable String maxBackoff) {
-            this.maxBackoff = Input.ofNullable(maxBackoff);
+            this.maxBackoff = Output.ofNullable(maxBackoff);
             return this;
         }
 
-        public Builder maxDoublings(@Nullable Input<Integer> maxDoublings) {
+        public Builder maxDoublings(@Nullable Output<Integer> maxDoublings) {
             this.maxDoublings = maxDoublings;
             return this;
         }
 
         public Builder maxDoublings(@Nullable Integer maxDoublings) {
-            this.maxDoublings = Input.ofNullable(maxDoublings);
+            this.maxDoublings = Output.ofNullable(maxDoublings);
             return this;
         }
 
-        public Builder maxRetryDuration(@Nullable Input<String> maxRetryDuration) {
+        public Builder maxRetryDuration(@Nullable Output<String> maxRetryDuration) {
             this.maxRetryDuration = maxRetryDuration;
             return this;
         }
 
         public Builder maxRetryDuration(@Nullable String maxRetryDuration) {
-            this.maxRetryDuration = Input.ofNullable(maxRetryDuration);
+            this.maxRetryDuration = Output.ofNullable(maxRetryDuration);
             return this;
         }
 
-        public Builder minBackoff(@Nullable Input<String> minBackoff) {
+        public Builder minBackoff(@Nullable Output<String> minBackoff) {
             this.minBackoff = minBackoff;
             return this;
         }
 
         public Builder minBackoff(@Nullable String minBackoff) {
-            this.minBackoff = Input.ofNullable(minBackoff);
+            this.minBackoff = Output.ofNullable(minBackoff);
             return this;
         }
         public QueueRetryConfigArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.AuthorityConfigSubjectConfigSubjectAltNameArgs;
 import io.pulumi.gcp.certificateauthority.inputs.AuthorityConfigSubjectConfigSubjectArgs;
@@ -21,9 +21,9 @@ public final class AuthorityConfigSubjectConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="subject", required=true)
-      private final Input<AuthorityConfigSubjectConfigSubjectArgs> subject;
+      private final Output<AuthorityConfigSubjectConfigSubjectArgs> subject;
 
-    public Input<AuthorityConfigSubjectConfigSubjectArgs> getSubject() {
+    public Output<AuthorityConfigSubjectConfigSubjectArgs> getSubject() {
         return this.subject;
     }
 
@@ -33,22 +33,22 @@ public final class AuthorityConfigSubjectConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="subjectAltName")
-      private final @Nullable Input<AuthorityConfigSubjectConfigSubjectAltNameArgs> subjectAltName;
+      private final @Nullable Output<AuthorityConfigSubjectConfigSubjectAltNameArgs> subjectAltName;
 
-    public Input<AuthorityConfigSubjectConfigSubjectAltNameArgs> getSubjectAltName() {
-        return this.subjectAltName == null ? Input.empty() : this.subjectAltName;
+    public Output<AuthorityConfigSubjectConfigSubjectAltNameArgs> getSubjectAltName() {
+        return this.subjectAltName == null ? Output.empty() : this.subjectAltName;
     }
 
     public AuthorityConfigSubjectConfigArgs(
-        Input<AuthorityConfigSubjectConfigSubjectArgs> subject,
-        @Nullable Input<AuthorityConfigSubjectConfigSubjectAltNameArgs> subjectAltName) {
+        Output<AuthorityConfigSubjectConfigSubjectArgs> subject,
+        @Nullable Output<AuthorityConfigSubjectConfigSubjectAltNameArgs> subjectAltName) {
         this.subject = Objects.requireNonNull(subject, "expected parameter 'subject' to be non-null");
         this.subjectAltName = subjectAltName;
     }
 
     private AuthorityConfigSubjectConfigArgs() {
-        this.subject = Input.empty();
-        this.subjectAltName = Input.empty();
+        this.subject = Output.empty();
+        this.subjectAltName = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class AuthorityConfigSubjectConfigArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<AuthorityConfigSubjectConfigSubjectArgs> subject;
-        private @Nullable Input<AuthorityConfigSubjectConfigSubjectAltNameArgs> subjectAltName;
+        private Output<AuthorityConfigSubjectConfigSubjectArgs> subject;
+        private @Nullable Output<AuthorityConfigSubjectConfigSubjectAltNameArgs> subjectAltName;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class AuthorityConfigSubjectConfigArgs extends io.pulumi.resources.
     	      this.subjectAltName = defaults.subjectAltName;
         }
 
-        public Builder subject(Input<AuthorityConfigSubjectConfigSubjectArgs> subject) {
+        public Builder subject(Output<AuthorityConfigSubjectConfigSubjectArgs> subject) {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
 
         public Builder subject(AuthorityConfigSubjectConfigSubjectArgs subject) {
-            this.subject = Input.of(Objects.requireNonNull(subject));
+            this.subject = Output.of(Objects.requireNonNull(subject));
             return this;
         }
 
-        public Builder subjectAltName(@Nullable Input<AuthorityConfigSubjectConfigSubjectAltNameArgs> subjectAltName) {
+        public Builder subjectAltName(@Nullable Output<AuthorityConfigSubjectConfigSubjectAltNameArgs> subjectAltName) {
             this.subjectAltName = subjectAltName;
             return this;
         }
 
         public Builder subjectAltName(@Nullable AuthorityConfigSubjectConfigSubjectAltNameArgs subjectAltName) {
-            this.subjectAltName = Input.ofNullable(subjectAltName);
+            this.subjectAltName = Output.ofNullable(subjectAltName);
             return this;
         }
         public AuthorityConfigSubjectConfigArgs build() {

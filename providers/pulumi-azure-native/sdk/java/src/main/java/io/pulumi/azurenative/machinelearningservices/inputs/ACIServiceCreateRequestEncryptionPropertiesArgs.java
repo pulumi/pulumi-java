@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class ACIServiceCreateRequestEncryptionPropertiesArgs extends io.pu
      * 
      */
     @InputImport(name="keyName", required=true)
-      private final Input<String> keyName;
+      private final Output<String> keyName;
 
-    public Input<String> getKeyName() {
+    public Output<String> getKeyName() {
         return this.keyName;
     }
 
@@ -33,9 +33,9 @@ public final class ACIServiceCreateRequestEncryptionPropertiesArgs extends io.pu
      * 
      */
     @InputImport(name="keyVersion", required=true)
-      private final Input<String> keyVersion;
+      private final Output<String> keyVersion;
 
-    public Input<String> getKeyVersion() {
+    public Output<String> getKeyVersion() {
         return this.keyVersion;
     }
 
@@ -44,25 +44,25 @@ public final class ACIServiceCreateRequestEncryptionPropertiesArgs extends io.pu
      * 
      */
     @InputImport(name="vaultBaseUrl", required=true)
-      private final Input<String> vaultBaseUrl;
+      private final Output<String> vaultBaseUrl;
 
-    public Input<String> getVaultBaseUrl() {
+    public Output<String> getVaultBaseUrl() {
         return this.vaultBaseUrl;
     }
 
     public ACIServiceCreateRequestEncryptionPropertiesArgs(
-        Input<String> keyName,
-        Input<String> keyVersion,
-        Input<String> vaultBaseUrl) {
+        Output<String> keyName,
+        Output<String> keyVersion,
+        Output<String> vaultBaseUrl) {
         this.keyName = Objects.requireNonNull(keyName, "expected parameter 'keyName' to be non-null");
         this.keyVersion = Objects.requireNonNull(keyVersion, "expected parameter 'keyVersion' to be non-null");
         this.vaultBaseUrl = Objects.requireNonNull(vaultBaseUrl, "expected parameter 'vaultBaseUrl' to be non-null");
     }
 
     private ACIServiceCreateRequestEncryptionPropertiesArgs() {
-        this.keyName = Input.empty();
-        this.keyVersion = Input.empty();
-        this.vaultBaseUrl = Input.empty();
+        this.keyName = Output.empty();
+        this.keyVersion = Output.empty();
+        this.vaultBaseUrl = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class ACIServiceCreateRequestEncryptionPropertiesArgs extends io.pu
     }
 
     public static final class Builder {
-        private Input<String> keyName;
-        private Input<String> keyVersion;
-        private Input<String> vaultBaseUrl;
+        private Output<String> keyName;
+        private Output<String> keyVersion;
+        private Output<String> vaultBaseUrl;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class ACIServiceCreateRequestEncryptionPropertiesArgs extends io.pu
     	      this.vaultBaseUrl = defaults.vaultBaseUrl;
         }
 
-        public Builder keyName(Input<String> keyName) {
+        public Builder keyName(Output<String> keyName) {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
 
         public Builder keyName(String keyName) {
-            this.keyName = Input.of(Objects.requireNonNull(keyName));
+            this.keyName = Output.of(Objects.requireNonNull(keyName));
             return this;
         }
 
-        public Builder keyVersion(Input<String> keyVersion) {
+        public Builder keyVersion(Output<String> keyVersion) {
             this.keyVersion = Objects.requireNonNull(keyVersion);
             return this;
         }
 
         public Builder keyVersion(String keyVersion) {
-            this.keyVersion = Input.of(Objects.requireNonNull(keyVersion));
+            this.keyVersion = Output.of(Objects.requireNonNull(keyVersion));
             return this;
         }
 
-        public Builder vaultBaseUrl(Input<String> vaultBaseUrl) {
+        public Builder vaultBaseUrl(Output<String> vaultBaseUrl) {
             this.vaultBaseUrl = Objects.requireNonNull(vaultBaseUrl);
             return this;
         }
 
         public Builder vaultBaseUrl(String vaultBaseUrl) {
-            this.vaultBaseUrl = Input.of(Objects.requireNonNull(vaultBaseUrl));
+            this.vaultBaseUrl = Output.of(Objects.requireNonNull(vaultBaseUrl));
             return this;
         }
         public ACIServiceCreateRequestEncryptionPropertiesArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appflow.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ConnectorProfileConnectorOAuthRequestArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="authCode")
-      private final @Nullable Input<String> authCode;
+      private final @Nullable Output<String> authCode;
 
-    public Input<String> getAuthCode() {
-        return this.authCode == null ? Input.empty() : this.authCode;
+    public Output<String> getAuthCode() {
+        return this.authCode == null ? Output.empty() : this.authCode;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class ConnectorProfileConnectorOAuthRequestArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="redirectUri")
-      private final @Nullable Input<String> redirectUri;
+      private final @Nullable Output<String> redirectUri;
 
-    public Input<String> getRedirectUri() {
-        return this.redirectUri == null ? Input.empty() : this.redirectUri;
+    public Output<String> getRedirectUri() {
+        return this.redirectUri == null ? Output.empty() : this.redirectUri;
     }
 
     public ConnectorProfileConnectorOAuthRequestArgs(
-        @Nullable Input<String> authCode,
-        @Nullable Input<String> redirectUri) {
+        @Nullable Output<String> authCode,
+        @Nullable Output<String> redirectUri) {
         this.authCode = authCode;
         this.redirectUri = redirectUri;
     }
 
     private ConnectorProfileConnectorOAuthRequestArgs() {
-        this.authCode = Input.empty();
-        this.redirectUri = Input.empty();
+        this.authCode = Output.empty();
+        this.redirectUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class ConnectorProfileConnectorOAuthRequestArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<String> authCode;
-        private @Nullable Input<String> redirectUri;
+        private @Nullable Output<String> authCode;
+        private @Nullable Output<String> redirectUri;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class ConnectorProfileConnectorOAuthRequestArgs extends io.pulumi.r
     	      this.redirectUri = defaults.redirectUri;
         }
 
-        public Builder authCode(@Nullable Input<String> authCode) {
+        public Builder authCode(@Nullable Output<String> authCode) {
             this.authCode = authCode;
             return this;
         }
 
         public Builder authCode(@Nullable String authCode) {
-            this.authCode = Input.ofNullable(authCode);
+            this.authCode = Output.ofNullable(authCode);
             return this;
         }
 
-        public Builder redirectUri(@Nullable Input<String> redirectUri) {
+        public Builder redirectUri(@Nullable Output<String> redirectUri) {
             this.redirectUri = redirectUri;
             return this;
         }
 
         public Builder redirectUri(@Nullable String redirectUri) {
-            this.redirectUri = Input.ofNullable(redirectUri);
+            this.redirectUri = Output.ofNullable(redirectUri);
             return this;
         }
         public ConnectorProfileConnectorOAuthRequestArgs build() {

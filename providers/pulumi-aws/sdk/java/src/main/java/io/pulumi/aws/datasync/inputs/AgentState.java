@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.datasync.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="activationKey")
-      private final @Nullable Input<String> activationKey;
+      private final @Nullable Output<String> activationKey;
 
-    public Input<String> getActivationKey() {
-        return this.activationKey == null ? Input.empty() : this.activationKey;
+    public Output<String> getActivationKey() {
+        return this.activationKey == null ? Output.empty() : this.activationKey;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAddress")
-      private final @Nullable Input<String> ipAddress;
+      private final @Nullable Output<String> ipAddress;
 
-    public Input<String> getIpAddress() {
-        return this.ipAddress == null ? Input.empty() : this.ipAddress;
+    public Output<String> getIpAddress() {
+        return this.ipAddress == null ? Output.empty() : this.ipAddress;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateLinkEndpoint")
-      private final @Nullable Input<String> privateLinkEndpoint;
+      private final @Nullable Output<String> privateLinkEndpoint;
 
-    public Input<String> getPrivateLinkEndpoint() {
-        return this.privateLinkEndpoint == null ? Input.empty() : this.privateLinkEndpoint;
+    public Output<String> getPrivateLinkEndpoint() {
+        return this.privateLinkEndpoint == null ? Output.empty() : this.privateLinkEndpoint;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityGroupArns")
-      private final @Nullable Input<List<String>> securityGroupArns;
+      private final @Nullable Output<List<String>> securityGroupArns;
 
-    public Input<List<String>> getSecurityGroupArns() {
-        return this.securityGroupArns == null ? Input.empty() : this.securityGroupArns;
+    public Output<List<String>> getSecurityGroupArns() {
+        return this.securityGroupArns == null ? Output.empty() : this.securityGroupArns;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetArns")
-      private final @Nullable Input<List<String>> subnetArns;
+      private final @Nullable Output<List<String>> subnetArns;
 
-    public Input<List<String>> getSubnetArns() {
-        return this.subnetArns == null ? Input.empty() : this.subnetArns;
+    public Output<List<String>> getSubnetArns() {
+        return this.subnetArns == null ? Output.empty() : this.subnetArns;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -120,23 +120,23 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcEndpointId")
-      private final @Nullable Input<String> vpcEndpointId;
+      private final @Nullable Output<String> vpcEndpointId;
 
-    public Input<String> getVpcEndpointId() {
-        return this.vpcEndpointId == null ? Input.empty() : this.vpcEndpointId;
+    public Output<String> getVpcEndpointId() {
+        return this.vpcEndpointId == null ? Output.empty() : this.vpcEndpointId;
     }
 
     public AgentState(
-        @Nullable Input<String> activationKey,
-        @Nullable Input<String> arn,
-        @Nullable Input<String> ipAddress,
-        @Nullable Input<String> name,
-        @Nullable Input<String> privateLinkEndpoint,
-        @Nullable Input<List<String>> securityGroupArns,
-        @Nullable Input<List<String>> subnetArns,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> vpcEndpointId) {
+        @Nullable Output<String> activationKey,
+        @Nullable Output<String> arn,
+        @Nullable Output<String> ipAddress,
+        @Nullable Output<String> name,
+        @Nullable Output<String> privateLinkEndpoint,
+        @Nullable Output<List<String>> securityGroupArns,
+        @Nullable Output<List<String>> subnetArns,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> vpcEndpointId) {
         this.activationKey = activationKey;
         this.arn = arn;
         this.ipAddress = ipAddress;
@@ -150,16 +150,16 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
     }
 
     private AgentState() {
-        this.activationKey = Input.empty();
-        this.arn = Input.empty();
-        this.ipAddress = Input.empty();
-        this.name = Input.empty();
-        this.privateLinkEndpoint = Input.empty();
-        this.securityGroupArns = Input.empty();
-        this.subnetArns = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.vpcEndpointId = Input.empty();
+        this.activationKey = Output.empty();
+        this.arn = Output.empty();
+        this.ipAddress = Output.empty();
+        this.name = Output.empty();
+        this.privateLinkEndpoint = Output.empty();
+        this.securityGroupArns = Output.empty();
+        this.subnetArns = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.vpcEndpointId = Output.empty();
     }
 
     public static Builder builder() {
@@ -171,16 +171,16 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> activationKey;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> ipAddress;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> privateLinkEndpoint;
-        private @Nullable Input<List<String>> securityGroupArns;
-        private @Nullable Input<List<String>> subnetArns;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> vpcEndpointId;
+        private @Nullable Output<String> activationKey;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> ipAddress;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> privateLinkEndpoint;
+        private @Nullable Output<List<String>> securityGroupArns;
+        private @Nullable Output<List<String>> subnetArns;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> vpcEndpointId;
 
         public Builder() {
     	      // Empty
@@ -200,103 +200,103 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
     	      this.vpcEndpointId = defaults.vpcEndpointId;
         }
 
-        public Builder activationKey(@Nullable Input<String> activationKey) {
+        public Builder activationKey(@Nullable Output<String> activationKey) {
             this.activationKey = activationKey;
             return this;
         }
 
         public Builder activationKey(@Nullable String activationKey) {
-            this.activationKey = Input.ofNullable(activationKey);
+            this.activationKey = Output.ofNullable(activationKey);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder ipAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Input.ofNullable(ipAddress);
+            this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder privateLinkEndpoint(@Nullable Input<String> privateLinkEndpoint) {
+        public Builder privateLinkEndpoint(@Nullable Output<String> privateLinkEndpoint) {
             this.privateLinkEndpoint = privateLinkEndpoint;
             return this;
         }
 
         public Builder privateLinkEndpoint(@Nullable String privateLinkEndpoint) {
-            this.privateLinkEndpoint = Input.ofNullable(privateLinkEndpoint);
+            this.privateLinkEndpoint = Output.ofNullable(privateLinkEndpoint);
             return this;
         }
 
-        public Builder securityGroupArns(@Nullable Input<List<String>> securityGroupArns) {
+        public Builder securityGroupArns(@Nullable Output<List<String>> securityGroupArns) {
             this.securityGroupArns = securityGroupArns;
             return this;
         }
 
         public Builder securityGroupArns(@Nullable List<String> securityGroupArns) {
-            this.securityGroupArns = Input.ofNullable(securityGroupArns);
+            this.securityGroupArns = Output.ofNullable(securityGroupArns);
             return this;
         }
 
-        public Builder subnetArns(@Nullable Input<List<String>> subnetArns) {
+        public Builder subnetArns(@Nullable Output<List<String>> subnetArns) {
             this.subnetArns = subnetArns;
             return this;
         }
 
         public Builder subnetArns(@Nullable List<String> subnetArns) {
-            this.subnetArns = Input.ofNullable(subnetArns);
+            this.subnetArns = Output.ofNullable(subnetArns);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder vpcEndpointId(@Nullable Input<String> vpcEndpointId) {
+        public Builder vpcEndpointId(@Nullable Output<String> vpcEndpointId) {
             this.vpcEndpointId = vpcEndpointId;
             return this;
         }
 
         public Builder vpcEndpointId(@Nullable String vpcEndpointId) {
-            this.vpcEndpointId = Input.ofNullable(vpcEndpointId);
+            this.vpcEndpointId = Output.ofNullable(vpcEndpointId);
             return this;
         }
         public AgentState build() {

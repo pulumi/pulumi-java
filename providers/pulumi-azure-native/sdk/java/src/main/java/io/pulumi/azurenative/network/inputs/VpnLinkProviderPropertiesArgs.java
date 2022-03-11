@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class VpnLinkProviderPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="linkProviderName")
-      private final @Nullable Input<String> linkProviderName;
+      private final @Nullable Output<String> linkProviderName;
 
-    public Input<String> getLinkProviderName() {
-        return this.linkProviderName == null ? Input.empty() : this.linkProviderName;
+    public Output<String> getLinkProviderName() {
+        return this.linkProviderName == null ? Output.empty() : this.linkProviderName;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class VpnLinkProviderPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="linkSpeedInMbps")
-      private final @Nullable Input<Integer> linkSpeedInMbps;
+      private final @Nullable Output<Integer> linkSpeedInMbps;
 
-    public Input<Integer> getLinkSpeedInMbps() {
-        return this.linkSpeedInMbps == null ? Input.empty() : this.linkSpeedInMbps;
+    public Output<Integer> getLinkSpeedInMbps() {
+        return this.linkSpeedInMbps == null ? Output.empty() : this.linkSpeedInMbps;
     }
 
     public VpnLinkProviderPropertiesArgs(
-        @Nullable Input<String> linkProviderName,
-        @Nullable Input<Integer> linkSpeedInMbps) {
+        @Nullable Output<String> linkProviderName,
+        @Nullable Output<Integer> linkSpeedInMbps) {
         this.linkProviderName = linkProviderName;
         this.linkSpeedInMbps = linkSpeedInMbps;
     }
 
     private VpnLinkProviderPropertiesArgs() {
-        this.linkProviderName = Input.empty();
-        this.linkSpeedInMbps = Input.empty();
+        this.linkProviderName = Output.empty();
+        this.linkSpeedInMbps = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class VpnLinkProviderPropertiesArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> linkProviderName;
-        private @Nullable Input<Integer> linkSpeedInMbps;
+        private @Nullable Output<String> linkProviderName;
+        private @Nullable Output<Integer> linkSpeedInMbps;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class VpnLinkProviderPropertiesArgs extends io.pulumi.resources.Res
     	      this.linkSpeedInMbps = defaults.linkSpeedInMbps;
         }
 
-        public Builder linkProviderName(@Nullable Input<String> linkProviderName) {
+        public Builder linkProviderName(@Nullable Output<String> linkProviderName) {
             this.linkProviderName = linkProviderName;
             return this;
         }
 
         public Builder linkProviderName(@Nullable String linkProviderName) {
-            this.linkProviderName = Input.ofNullable(linkProviderName);
+            this.linkProviderName = Output.ofNullable(linkProviderName);
             return this;
         }
 
-        public Builder linkSpeedInMbps(@Nullable Input<Integer> linkSpeedInMbps) {
+        public Builder linkSpeedInMbps(@Nullable Output<Integer> linkSpeedInMbps) {
             this.linkSpeedInMbps = linkSpeedInMbps;
             return this;
         }
 
         public Builder linkSpeedInMbps(@Nullable Integer linkSpeedInMbps) {
-            this.linkSpeedInMbps = Input.ofNullable(linkSpeedInMbps);
+            this.linkSpeedInMbps = Output.ofNullable(linkSpeedInMbps);
             return this;
         }
         public VpnLinkProviderPropertiesArgs build() {

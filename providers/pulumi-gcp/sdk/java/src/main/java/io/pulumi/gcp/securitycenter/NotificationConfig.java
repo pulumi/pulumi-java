@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.securitycenter;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -191,14 +190,14 @@ public class NotificationConfig extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NotificationConfig(String name, NotificationConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:securitycenter/notificationConfig:NotificationConfig", name, args == null ? NotificationConfigArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:securitycenter/notificationConfig:NotificationConfig", name, args == null ? NotificationConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private NotificationConfig(String name, Input<String> id, @Nullable NotificationConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private NotificationConfig(String name, Output<String> id, @Nullable NotificationConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:securitycenter/notificationConfig:NotificationConfig", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -214,7 +213,7 @@ public class NotificationConfig extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static NotificationConfig get(String name, Input<String> id, @Nullable NotificationConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static NotificationConfig get(String name, Output<String> id, @Nullable NotificationConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new NotificationConfig(name, id, state, options);
     }
 }

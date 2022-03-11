@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecServiceDiscoveryDnsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,10 +20,10 @@ public final class VirtualNodeSpecServiceDiscoveryArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="awsCloudMap")
-      private final @Nullable Input<VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs> awsCloudMap;
+      private final @Nullable Output<VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs> awsCloudMap;
 
-    public Input<VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs> getAwsCloudMap() {
-        return this.awsCloudMap == null ? Input.empty() : this.awsCloudMap;
+    public Output<VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs> getAwsCloudMap() {
+        return this.awsCloudMap == null ? Output.empty() : this.awsCloudMap;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class VirtualNodeSpecServiceDiscoveryArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="dns")
-      private final @Nullable Input<VirtualNodeSpecServiceDiscoveryDnsArgs> dns;
+      private final @Nullable Output<VirtualNodeSpecServiceDiscoveryDnsArgs> dns;
 
-    public Input<VirtualNodeSpecServiceDiscoveryDnsArgs> getDns() {
-        return this.dns == null ? Input.empty() : this.dns;
+    public Output<VirtualNodeSpecServiceDiscoveryDnsArgs> getDns() {
+        return this.dns == null ? Output.empty() : this.dns;
     }
 
     public VirtualNodeSpecServiceDiscoveryArgs(
-        @Nullable Input<VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs> awsCloudMap,
-        @Nullable Input<VirtualNodeSpecServiceDiscoveryDnsArgs> dns) {
+        @Nullable Output<VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs> awsCloudMap,
+        @Nullable Output<VirtualNodeSpecServiceDiscoveryDnsArgs> dns) {
         this.awsCloudMap = awsCloudMap;
         this.dns = dns;
     }
 
     private VirtualNodeSpecServiceDiscoveryArgs() {
-        this.awsCloudMap = Input.empty();
-        this.dns = Input.empty();
+        this.awsCloudMap = Output.empty();
+        this.dns = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class VirtualNodeSpecServiceDiscoveryArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs> awsCloudMap;
-        private @Nullable Input<VirtualNodeSpecServiceDiscoveryDnsArgs> dns;
+        private @Nullable Output<VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs> awsCloudMap;
+        private @Nullable Output<VirtualNodeSpecServiceDiscoveryDnsArgs> dns;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class VirtualNodeSpecServiceDiscoveryArgs extends io.pulumi.resourc
     	      this.dns = defaults.dns;
         }
 
-        public Builder awsCloudMap(@Nullable Input<VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs> awsCloudMap) {
+        public Builder awsCloudMap(@Nullable Output<VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs> awsCloudMap) {
             this.awsCloudMap = awsCloudMap;
             return this;
         }
 
         public Builder awsCloudMap(@Nullable VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs awsCloudMap) {
-            this.awsCloudMap = Input.ofNullable(awsCloudMap);
+            this.awsCloudMap = Output.ofNullable(awsCloudMap);
             return this;
         }
 
-        public Builder dns(@Nullable Input<VirtualNodeSpecServiceDiscoveryDnsArgs> dns) {
+        public Builder dns(@Nullable Output<VirtualNodeSpecServiceDiscoveryDnsArgs> dns) {
             this.dns = dns;
             return this;
         }
 
         public Builder dns(@Nullable VirtualNodeSpecServiceDiscoveryDnsArgs dns) {
-            this.dns = Input.ofNullable(dns);
+            this.dns = Output.ofNullable(dns);
             return this;
         }
         public VirtualNodeSpecServiceDiscoveryArgs build() {

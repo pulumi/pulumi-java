@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class CustomResourceDefinitionNamesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="categories")
-      private final @Nullable Input<List<String>> categories;
+      private final @Nullable Output<List<String>> categories;
 
-    public Input<List<String>> getCategories() {
-        return this.categories == null ? Input.empty() : this.categories;
+    public Output<List<String>> getCategories() {
+        return this.categories == null ? Output.empty() : this.categories;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class CustomResourceDefinitionNamesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<String> kind;
+      private final Output<String> kind;
 
-    public Input<String> getKind() {
+    public Output<String> getKind() {
         return this.kind;
     }
 
@@ -46,10 +46,10 @@ public final class CustomResourceDefinitionNamesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="listKind")
-      private final @Nullable Input<String> listKind;
+      private final @Nullable Output<String> listKind;
 
-    public Input<String> getListKind() {
-        return this.listKind == null ? Input.empty() : this.listKind;
+    public Output<String> getListKind() {
+        return this.listKind == null ? Output.empty() : this.listKind;
     }
 
     /**
@@ -57,9 +57,9 @@ public final class CustomResourceDefinitionNamesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="plural", required=true)
-      private final Input<String> plural;
+      private final Output<String> plural;
 
-    public Input<String> getPlural() {
+    public Output<String> getPlural() {
         return this.plural;
     }
 
@@ -68,10 +68,10 @@ public final class CustomResourceDefinitionNamesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="shortNames")
-      private final @Nullable Input<List<String>> shortNames;
+      private final @Nullable Output<List<String>> shortNames;
 
-    public Input<List<String>> getShortNames() {
-        return this.shortNames == null ? Input.empty() : this.shortNames;
+    public Output<List<String>> getShortNames() {
+        return this.shortNames == null ? Output.empty() : this.shortNames;
     }
 
     /**
@@ -79,19 +79,19 @@ public final class CustomResourceDefinitionNamesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="singular")
-      private final @Nullable Input<String> singular;
+      private final @Nullable Output<String> singular;
 
-    public Input<String> getSingular() {
-        return this.singular == null ? Input.empty() : this.singular;
+    public Output<String> getSingular() {
+        return this.singular == null ? Output.empty() : this.singular;
     }
 
     public CustomResourceDefinitionNamesArgs(
-        @Nullable Input<List<String>> categories,
-        Input<String> kind,
-        @Nullable Input<String> listKind,
-        Input<String> plural,
-        @Nullable Input<List<String>> shortNames,
-        @Nullable Input<String> singular) {
+        @Nullable Output<List<String>> categories,
+        Output<String> kind,
+        @Nullable Output<String> listKind,
+        Output<String> plural,
+        @Nullable Output<List<String>> shortNames,
+        @Nullable Output<String> singular) {
         this.categories = categories;
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
         this.listKind = listKind;
@@ -101,12 +101,12 @@ public final class CustomResourceDefinitionNamesArgs extends io.pulumi.resources
     }
 
     private CustomResourceDefinitionNamesArgs() {
-        this.categories = Input.empty();
-        this.kind = Input.empty();
-        this.listKind = Input.empty();
-        this.plural = Input.empty();
-        this.shortNames = Input.empty();
-        this.singular = Input.empty();
+        this.categories = Output.empty();
+        this.kind = Output.empty();
+        this.listKind = Output.empty();
+        this.plural = Output.empty();
+        this.shortNames = Output.empty();
+        this.singular = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,12 +118,12 @@ public final class CustomResourceDefinitionNamesArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> categories;
-        private Input<String> kind;
-        private @Nullable Input<String> listKind;
-        private Input<String> plural;
-        private @Nullable Input<List<String>> shortNames;
-        private @Nullable Input<String> singular;
+        private @Nullable Output<List<String>> categories;
+        private Output<String> kind;
+        private @Nullable Output<String> listKind;
+        private Output<String> plural;
+        private @Nullable Output<List<String>> shortNames;
+        private @Nullable Output<String> singular;
 
         public Builder() {
     	      // Empty
@@ -139,63 +139,63 @@ public final class CustomResourceDefinitionNamesArgs extends io.pulumi.resources
     	      this.singular = defaults.singular;
         }
 
-        public Builder categories(@Nullable Input<List<String>> categories) {
+        public Builder categories(@Nullable Output<List<String>> categories) {
             this.categories = categories;
             return this;
         }
 
         public Builder categories(@Nullable List<String> categories) {
-            this.categories = Input.ofNullable(categories);
+            this.categories = Output.ofNullable(categories);
             return this;
         }
 
-        public Builder kind(Input<String> kind) {
+        public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(String kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder listKind(@Nullable Input<String> listKind) {
+        public Builder listKind(@Nullable Output<String> listKind) {
             this.listKind = listKind;
             return this;
         }
 
         public Builder listKind(@Nullable String listKind) {
-            this.listKind = Input.ofNullable(listKind);
+            this.listKind = Output.ofNullable(listKind);
             return this;
         }
 
-        public Builder plural(Input<String> plural) {
+        public Builder plural(Output<String> plural) {
             this.plural = Objects.requireNonNull(plural);
             return this;
         }
 
         public Builder plural(String plural) {
-            this.plural = Input.of(Objects.requireNonNull(plural));
+            this.plural = Output.of(Objects.requireNonNull(plural));
             return this;
         }
 
-        public Builder shortNames(@Nullable Input<List<String>> shortNames) {
+        public Builder shortNames(@Nullable Output<List<String>> shortNames) {
             this.shortNames = shortNames;
             return this;
         }
 
         public Builder shortNames(@Nullable List<String> shortNames) {
-            this.shortNames = Input.ofNullable(shortNames);
+            this.shortNames = Output.ofNullable(shortNames);
             return this;
         }
 
-        public Builder singular(@Nullable Input<String> singular) {
+        public Builder singular(@Nullable Output<String> singular) {
             this.singular = singular;
             return this;
         }
 
         public Builder singular(@Nullable String singular) {
-            this.singular = Input.ofNullable(singular);
+            this.singular = Output.ofNullable(singular);
             return this;
         }
         public CustomResourceDefinitionNamesArgs build() {

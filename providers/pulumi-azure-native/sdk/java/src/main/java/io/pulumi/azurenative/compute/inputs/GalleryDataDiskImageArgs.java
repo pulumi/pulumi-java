@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.enums.HostCaching;
 import io.pulumi.azurenative.compute.inputs.GalleryArtifactVersionSourceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class GalleryDataDiskImageArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="hostCaching")
-      private final @Nullable Input<HostCaching> hostCaching;
+      private final @Nullable Output<HostCaching> hostCaching;
 
-    public Input<HostCaching> getHostCaching() {
-        return this.hostCaching == null ? Input.empty() : this.hostCaching;
+    public Output<HostCaching> getHostCaching() {
+        return this.hostCaching == null ? Output.empty() : this.hostCaching;
     }
 
     /**
@@ -36,9 +36,9 @@ public final class GalleryDataDiskImageArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="lun", required=true)
-      private final Input<Integer> lun;
+      private final Output<Integer> lun;
 
-    public Input<Integer> getLun() {
+    public Output<Integer> getLun() {
         return this.lun;
     }
 
@@ -47,25 +47,25 @@ public final class GalleryDataDiskImageArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="source")
-      private final @Nullable Input<GalleryArtifactVersionSourceArgs> source;
+      private final @Nullable Output<GalleryArtifactVersionSourceArgs> source;
 
-    public Input<GalleryArtifactVersionSourceArgs> getSource() {
-        return this.source == null ? Input.empty() : this.source;
+    public Output<GalleryArtifactVersionSourceArgs> getSource() {
+        return this.source == null ? Output.empty() : this.source;
     }
 
     public GalleryDataDiskImageArgs(
-        @Nullable Input<HostCaching> hostCaching,
-        Input<Integer> lun,
-        @Nullable Input<GalleryArtifactVersionSourceArgs> source) {
+        @Nullable Output<HostCaching> hostCaching,
+        Output<Integer> lun,
+        @Nullable Output<GalleryArtifactVersionSourceArgs> source) {
         this.hostCaching = hostCaching;
         this.lun = Objects.requireNonNull(lun, "expected parameter 'lun' to be non-null");
         this.source = source;
     }
 
     private GalleryDataDiskImageArgs() {
-        this.hostCaching = Input.empty();
-        this.lun = Input.empty();
-        this.source = Input.empty();
+        this.hostCaching = Output.empty();
+        this.lun = Output.empty();
+        this.source = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class GalleryDataDiskImageArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<HostCaching> hostCaching;
-        private Input<Integer> lun;
-        private @Nullable Input<GalleryArtifactVersionSourceArgs> source;
+        private @Nullable Output<HostCaching> hostCaching;
+        private Output<Integer> lun;
+        private @Nullable Output<GalleryArtifactVersionSourceArgs> source;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class GalleryDataDiskImageArgs extends io.pulumi.resources.Resource
     	      this.source = defaults.source;
         }
 
-        public Builder hostCaching(@Nullable Input<HostCaching> hostCaching) {
+        public Builder hostCaching(@Nullable Output<HostCaching> hostCaching) {
             this.hostCaching = hostCaching;
             return this;
         }
 
         public Builder hostCaching(@Nullable HostCaching hostCaching) {
-            this.hostCaching = Input.ofNullable(hostCaching);
+            this.hostCaching = Output.ofNullable(hostCaching);
             return this;
         }
 
-        public Builder lun(Input<Integer> lun) {
+        public Builder lun(Output<Integer> lun) {
             this.lun = Objects.requireNonNull(lun);
             return this;
         }
 
         public Builder lun(Integer lun) {
-            this.lun = Input.of(Objects.requireNonNull(lun));
+            this.lun = Output.of(Objects.requireNonNull(lun));
             return this;
         }
 
-        public Builder source(@Nullable Input<GalleryArtifactVersionSourceArgs> source) {
+        public Builder source(@Nullable Output<GalleryArtifactVersionSourceArgs> source) {
             this.source = source;
             return this;
         }
 
         public Builder source(@Nullable GalleryArtifactVersionSourceArgs source) {
-            this.source = Input.ofNullable(source);
+            this.source = Output.ofNullable(source);
             return this;
         }
         public GalleryDataDiskImageArgs build() {

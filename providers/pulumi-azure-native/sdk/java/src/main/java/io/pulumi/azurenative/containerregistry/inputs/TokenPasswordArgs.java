@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.enums.TokenPasswordName;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class TokenPasswordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationTime")
-      private final @Nullable Input<String> creationTime;
+      private final @Nullable Output<String> creationTime;
 
-    public Input<String> getCreationTime() {
-        return this.creationTime == null ? Input.empty() : this.creationTime;
+    public Output<String> getCreationTime() {
+        return this.creationTime == null ? Output.empty() : this.creationTime;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class TokenPasswordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expiry")
-      private final @Nullable Input<String> expiry;
+      private final @Nullable Output<String> expiry;
 
-    public Input<String> getExpiry() {
-        return this.expiry == null ? Input.empty() : this.expiry;
+    public Output<String> getExpiry() {
+        return this.expiry == null ? Output.empty() : this.expiry;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class TokenPasswordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<Either<String,TokenPasswordName>> name;
+      private final @Nullable Output<Either<String,TokenPasswordName>> name;
 
-    public Input<Either<String,TokenPasswordName>> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<Either<String,TokenPasswordName>> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public TokenPasswordArgs(
-        @Nullable Input<String> creationTime,
-        @Nullable Input<String> expiry,
-        @Nullable Input<Either<String,TokenPasswordName>> name) {
+        @Nullable Output<String> creationTime,
+        @Nullable Output<String> expiry,
+        @Nullable Output<Either<String,TokenPasswordName>> name) {
         this.creationTime = creationTime;
         this.expiry = expiry;
         this.name = name;
     }
 
     private TokenPasswordArgs() {
-        this.creationTime = Input.empty();
-        this.expiry = Input.empty();
-        this.name = Input.empty();
+        this.creationTime = Output.empty();
+        this.expiry = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class TokenPasswordArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> creationTime;
-        private @Nullable Input<String> expiry;
-        private @Nullable Input<Either<String,TokenPasswordName>> name;
+        private @Nullable Output<String> creationTime;
+        private @Nullable Output<String> expiry;
+        private @Nullable Output<Either<String,TokenPasswordName>> name;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class TokenPasswordArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder creationTime(@Nullable Input<String> creationTime) {
+        public Builder creationTime(@Nullable Output<String> creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
         public Builder creationTime(@Nullable String creationTime) {
-            this.creationTime = Input.ofNullable(creationTime);
+            this.creationTime = Output.ofNullable(creationTime);
             return this;
         }
 
-        public Builder expiry(@Nullable Input<String> expiry) {
+        public Builder expiry(@Nullable Output<String> expiry) {
             this.expiry = expiry;
             return this;
         }
 
         public Builder expiry(@Nullable String expiry) {
-            this.expiry = Input.ofNullable(expiry);
+            this.expiry = Output.ofNullable(expiry);
             return this;
         }
 
-        public Builder name(@Nullable Input<Either<String,TokenPasswordName>> name) {
+        public Builder name(@Nullable Output<Either<String,TokenPasswordName>> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable Either<String,TokenPasswordName> name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public TokenPasswordArgs build() {

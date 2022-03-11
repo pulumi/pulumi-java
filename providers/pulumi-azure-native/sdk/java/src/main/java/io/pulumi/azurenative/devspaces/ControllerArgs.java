@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devspaces;
 
 import io.pulumi.azurenative.devspaces.inputs.SkuArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -54,9 +54,9 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku", required=true)
-      private final Input<SkuArgs> sku;
+      private final Output<SkuArgs> sku;
 
-    public Input<SkuArgs> getSku() {
+    public Output<SkuArgs> getSku() {
         return this.sku;
     }
 
@@ -65,10 +65,10 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -76,9 +76,9 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetContainerHostCredentialsBase64", required=true)
-      private final Input<String> targetContainerHostCredentialsBase64;
+      private final Output<String> targetContainerHostCredentialsBase64;
 
-    public Input<String> getTargetContainerHostCredentialsBase64() {
+    public Output<String> getTargetContainerHostCredentialsBase64() {
         return this.targetContainerHostCredentialsBase64;
     }
 
@@ -87,20 +87,20 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetContainerHostResourceId", required=true)
-      private final Input<String> targetContainerHostResourceId;
+      private final Output<String> targetContainerHostResourceId;
 
-    public Input<String> getTargetContainerHostResourceId() {
+    public Output<String> getTargetContainerHostResourceId() {
         return this.targetContainerHostResourceId;
     }
 
     public ControllerArgs(
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        Input<String> resourceGroupName,
-        Input<SkuArgs> sku,
-        @Nullable Input<Map<String,String>> tags,
-        Input<String> targetContainerHostCredentialsBase64,
-        Input<String> targetContainerHostResourceId) {
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        Output<String> resourceGroupName,
+        Output<SkuArgs> sku,
+        @Nullable Output<Map<String,String>> tags,
+        Output<String> targetContainerHostCredentialsBase64,
+        Output<String> targetContainerHostResourceId) {
         this.location = location;
         this.name = name;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -111,13 +111,13 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ControllerArgs() {
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sku = Input.empty();
-        this.tags = Input.empty();
-        this.targetContainerHostCredentialsBase64 = Input.empty();
-        this.targetContainerHostResourceId = Input.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sku = Output.empty();
+        this.tags = Output.empty();
+        this.targetContainerHostCredentialsBase64 = Output.empty();
+        this.targetContainerHostResourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -129,13 +129,13 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private Input<String> resourceGroupName;
-        private Input<SkuArgs> sku;
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<String> targetContainerHostCredentialsBase64;
-        private Input<String> targetContainerHostResourceId;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private Output<String> resourceGroupName;
+        private Output<SkuArgs> sku;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<String> targetContainerHostCredentialsBase64;
+        private Output<String> targetContainerHostResourceId;
 
         public Builder() {
     	      // Empty
@@ -152,73 +152,73 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetContainerHostResourceId = defaults.targetContainerHostResourceId;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sku(Input<SkuArgs> sku) {
+        public Builder sku(Output<SkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
         public Builder sku(SkuArgs sku) {
-            this.sku = Input.of(Objects.requireNonNull(sku));
+            this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder targetContainerHostCredentialsBase64(Input<String> targetContainerHostCredentialsBase64) {
+        public Builder targetContainerHostCredentialsBase64(Output<String> targetContainerHostCredentialsBase64) {
             this.targetContainerHostCredentialsBase64 = Objects.requireNonNull(targetContainerHostCredentialsBase64);
             return this;
         }
 
         public Builder targetContainerHostCredentialsBase64(String targetContainerHostCredentialsBase64) {
-            this.targetContainerHostCredentialsBase64 = Input.of(Objects.requireNonNull(targetContainerHostCredentialsBase64));
+            this.targetContainerHostCredentialsBase64 = Output.of(Objects.requireNonNull(targetContainerHostCredentialsBase64));
             return this;
         }
 
-        public Builder targetContainerHostResourceId(Input<String> targetContainerHostResourceId) {
+        public Builder targetContainerHostResourceId(Output<String> targetContainerHostResourceId) {
             this.targetContainerHostResourceId = Objects.requireNonNull(targetContainerHostResourceId);
             return this;
         }
 
         public Builder targetContainerHostResourceId(String targetContainerHostResourceId) {
-            this.targetContainerHostResourceId = Input.of(Objects.requireNonNull(targetContainerHostResourceId));
+            this.targetContainerHostResourceId = Output.of(Objects.requireNonNull(targetContainerHostResourceId));
             return this;
         }
         public ControllerArgs build() {

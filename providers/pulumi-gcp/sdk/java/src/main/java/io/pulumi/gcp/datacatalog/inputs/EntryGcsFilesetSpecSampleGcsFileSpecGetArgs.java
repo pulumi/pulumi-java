@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.datacatalog.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class EntryGcsFilesetSpecSampleGcsFileSpecGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="filePath")
-      private final @Nullable Input<String> filePath;
+      private final @Nullable Output<String> filePath;
 
-    public Input<String> getFilePath() {
-        return this.filePath == null ? Input.empty() : this.filePath;
+    public Output<String> getFilePath() {
+        return this.filePath == null ? Output.empty() : this.filePath;
     }
 
     /**
@@ -33,22 +33,22 @@ public final class EntryGcsFilesetSpecSampleGcsFileSpecGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="sizeBytes")
-      private final @Nullable Input<Integer> sizeBytes;
+      private final @Nullable Output<Integer> sizeBytes;
 
-    public Input<Integer> getSizeBytes() {
-        return this.sizeBytes == null ? Input.empty() : this.sizeBytes;
+    public Output<Integer> getSizeBytes() {
+        return this.sizeBytes == null ? Output.empty() : this.sizeBytes;
     }
 
     public EntryGcsFilesetSpecSampleGcsFileSpecGetArgs(
-        @Nullable Input<String> filePath,
-        @Nullable Input<Integer> sizeBytes) {
+        @Nullable Output<String> filePath,
+        @Nullable Output<Integer> sizeBytes) {
         this.filePath = filePath;
         this.sizeBytes = sizeBytes;
     }
 
     private EntryGcsFilesetSpecSampleGcsFileSpecGetArgs() {
-        this.filePath = Input.empty();
-        this.sizeBytes = Input.empty();
+        this.filePath = Output.empty();
+        this.sizeBytes = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class EntryGcsFilesetSpecSampleGcsFileSpecGetArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private @Nullable Input<String> filePath;
-        private @Nullable Input<Integer> sizeBytes;
+        private @Nullable Output<String> filePath;
+        private @Nullable Output<Integer> sizeBytes;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class EntryGcsFilesetSpecSampleGcsFileSpecGetArgs extends io.pulumi
     	      this.sizeBytes = defaults.sizeBytes;
         }
 
-        public Builder filePath(@Nullable Input<String> filePath) {
+        public Builder filePath(@Nullable Output<String> filePath) {
             this.filePath = filePath;
             return this;
         }
 
         public Builder filePath(@Nullable String filePath) {
-            this.filePath = Input.ofNullable(filePath);
+            this.filePath = Output.ofNullable(filePath);
             return this;
         }
 
-        public Builder sizeBytes(@Nullable Input<Integer> sizeBytes) {
+        public Builder sizeBytes(@Nullable Output<Integer> sizeBytes) {
             this.sizeBytes = sizeBytes;
             return this;
         }
 
         public Builder sizeBytes(@Nullable Integer sizeBytes) {
-            this.sizeBytes = Input.ofNullable(sizeBytes);
+            this.sizeBytes = Output.ofNullable(sizeBytes);
             return this;
         }
         public EntryGcsFilesetSpecSampleGcsFileSpecGetArgs build() {

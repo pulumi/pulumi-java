@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.route53.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class HealthCheckAlarmIdentifierArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -33,22 +33,22 @@ public final class HealthCheckAlarmIdentifierArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="region", required=true)
-      private final Input<String> region;
+      private final Output<String> region;
 
-    public Input<String> getRegion() {
+    public Output<String> getRegion() {
         return this.region;
     }
 
     public HealthCheckAlarmIdentifierArgs(
-        Input<String> name,
-        Input<String> region) {
+        Output<String> name,
+        Output<String> region) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
     }
 
     private HealthCheckAlarmIdentifierArgs() {
-        this.name = Input.empty();
-        this.region = Input.empty();
+        this.name = Output.empty();
+        this.region = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class HealthCheckAlarmIdentifierArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private Input<String> region;
+        private Output<String> name;
+        private Output<String> region;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class HealthCheckAlarmIdentifierArgs extends io.pulumi.resources.Re
     	      this.region = defaults.region;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder region(Input<String> region) {
+        public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
         public Builder region(String region) {
-            this.region = Input.of(Objects.requireNonNull(region));
+            this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
         public HealthCheckAlarmIdentifierArgs build() {

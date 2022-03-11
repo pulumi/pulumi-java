@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ecr.inputs;
 
 import io.pulumi.awsnative.ecr.inputs.ReplicationConfigurationReplicationDestinationArgs;
 import io.pulumi.awsnative.ecr.inputs.ReplicationConfigurationRepositoryFilterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -25,9 +25,9 @@ public final class ReplicationConfigurationReplicationRuleArgs extends io.pulumi
      * 
      */
     @InputImport(name="destinations", required=true)
-      private final Input<List<ReplicationConfigurationReplicationDestinationArgs>> destinations;
+      private final Output<List<ReplicationConfigurationReplicationDestinationArgs>> destinations;
 
-    public Input<List<ReplicationConfigurationReplicationDestinationArgs>> getDestinations() {
+    public Output<List<ReplicationConfigurationReplicationDestinationArgs>> getDestinations() {
         return this.destinations;
     }
 
@@ -36,22 +36,22 @@ public final class ReplicationConfigurationReplicationRuleArgs extends io.pulumi
      * 
      */
     @InputImport(name="repositoryFilters")
-      private final @Nullable Input<List<ReplicationConfigurationRepositoryFilterArgs>> repositoryFilters;
+      private final @Nullable Output<List<ReplicationConfigurationRepositoryFilterArgs>> repositoryFilters;
 
-    public Input<List<ReplicationConfigurationRepositoryFilterArgs>> getRepositoryFilters() {
-        return this.repositoryFilters == null ? Input.empty() : this.repositoryFilters;
+    public Output<List<ReplicationConfigurationRepositoryFilterArgs>> getRepositoryFilters() {
+        return this.repositoryFilters == null ? Output.empty() : this.repositoryFilters;
     }
 
     public ReplicationConfigurationReplicationRuleArgs(
-        Input<List<ReplicationConfigurationReplicationDestinationArgs>> destinations,
-        @Nullable Input<List<ReplicationConfigurationRepositoryFilterArgs>> repositoryFilters) {
+        Output<List<ReplicationConfigurationReplicationDestinationArgs>> destinations,
+        @Nullable Output<List<ReplicationConfigurationRepositoryFilterArgs>> repositoryFilters) {
         this.destinations = Objects.requireNonNull(destinations, "expected parameter 'destinations' to be non-null");
         this.repositoryFilters = repositoryFilters;
     }
 
     private ReplicationConfigurationReplicationRuleArgs() {
-        this.destinations = Input.empty();
-        this.repositoryFilters = Input.empty();
+        this.destinations = Output.empty();
+        this.repositoryFilters = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class ReplicationConfigurationReplicationRuleArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private Input<List<ReplicationConfigurationReplicationDestinationArgs>> destinations;
-        private @Nullable Input<List<ReplicationConfigurationRepositoryFilterArgs>> repositoryFilters;
+        private Output<List<ReplicationConfigurationReplicationDestinationArgs>> destinations;
+        private @Nullable Output<List<ReplicationConfigurationRepositoryFilterArgs>> repositoryFilters;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class ReplicationConfigurationReplicationRuleArgs extends io.pulumi
     	      this.repositoryFilters = defaults.repositoryFilters;
         }
 
-        public Builder destinations(Input<List<ReplicationConfigurationReplicationDestinationArgs>> destinations) {
+        public Builder destinations(Output<List<ReplicationConfigurationReplicationDestinationArgs>> destinations) {
             this.destinations = Objects.requireNonNull(destinations);
             return this;
         }
 
         public Builder destinations(List<ReplicationConfigurationReplicationDestinationArgs> destinations) {
-            this.destinations = Input.of(Objects.requireNonNull(destinations));
+            this.destinations = Output.of(Objects.requireNonNull(destinations));
             return this;
         }
 
-        public Builder repositoryFilters(@Nullable Input<List<ReplicationConfigurationRepositoryFilterArgs>> repositoryFilters) {
+        public Builder repositoryFilters(@Nullable Output<List<ReplicationConfigurationRepositoryFilterArgs>> repositoryFilters) {
             this.repositoryFilters = repositoryFilters;
             return this;
         }
 
         public Builder repositoryFilters(@Nullable List<ReplicationConfigurationRepositoryFilterArgs> repositoryFilters) {
-            this.repositoryFilters = Input.ofNullable(repositoryFilters);
+            this.repositoryFilters = Output.ofNullable(repositoryFilters);
             return this;
         }
         public ReplicationConfigurationReplicationRuleArgs build() {

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.enums.SecurityRuleDirection;
 import io.pulumi.azurenative.network.enums.SecurityRuleProtocol;
 import io.pulumi.azurenative.network.inputs.ApplicationSecurityGroupArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,9 +26,9 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="access", required=true)
-      private final Input<Either<String,SecurityRuleAccess>> access;
+      private final Output<Either<String,SecurityRuleAccess>> access;
 
-    public Input<Either<String,SecurityRuleAccess>> getAccess() {
+    public Output<Either<String,SecurityRuleAccess>> getAccess() {
         return this.access;
     }
 
@@ -37,10 +37,10 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationAddressPrefix")
-      private final @Nullable Input<String> destinationAddressPrefix;
+      private final @Nullable Output<String> destinationAddressPrefix;
 
-    public Input<String> getDestinationAddressPrefix() {
-        return this.destinationAddressPrefix == null ? Input.empty() : this.destinationAddressPrefix;
+    public Output<String> getDestinationAddressPrefix() {
+        return this.destinationAddressPrefix == null ? Output.empty() : this.destinationAddressPrefix;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationAddressPrefixes")
-      private final @Nullable Input<List<String>> destinationAddressPrefixes;
+      private final @Nullable Output<List<String>> destinationAddressPrefixes;
 
-    public Input<List<String>> getDestinationAddressPrefixes() {
-        return this.destinationAddressPrefixes == null ? Input.empty() : this.destinationAddressPrefixes;
+    public Output<List<String>> getDestinationAddressPrefixes() {
+        return this.destinationAddressPrefixes == null ? Output.empty() : this.destinationAddressPrefixes;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationApplicationSecurityGroups")
-      private final @Nullable Input<List<ApplicationSecurityGroupArgs>> destinationApplicationSecurityGroups;
+      private final @Nullable Output<List<ApplicationSecurityGroupArgs>> destinationApplicationSecurityGroups;
 
-    public Input<List<ApplicationSecurityGroupArgs>> getDestinationApplicationSecurityGroups() {
-        return this.destinationApplicationSecurityGroups == null ? Input.empty() : this.destinationApplicationSecurityGroups;
+    public Output<List<ApplicationSecurityGroupArgs>> getDestinationApplicationSecurityGroups() {
+        return this.destinationApplicationSecurityGroups == null ? Output.empty() : this.destinationApplicationSecurityGroups;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationPortRange")
-      private final @Nullable Input<String> destinationPortRange;
+      private final @Nullable Output<String> destinationPortRange;
 
-    public Input<String> getDestinationPortRange() {
-        return this.destinationPortRange == null ? Input.empty() : this.destinationPortRange;
+    public Output<String> getDestinationPortRange() {
+        return this.destinationPortRange == null ? Output.empty() : this.destinationPortRange;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationPortRanges")
-      private final @Nullable Input<List<String>> destinationPortRanges;
+      private final @Nullable Output<List<String>> destinationPortRanges;
 
-    public Input<List<String>> getDestinationPortRanges() {
-        return this.destinationPortRanges == null ? Input.empty() : this.destinationPortRanges;
+    public Output<List<String>> getDestinationPortRanges() {
+        return this.destinationPortRanges == null ? Output.empty() : this.destinationPortRanges;
     }
 
     /**
@@ -103,9 +103,9 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="direction", required=true)
-      private final Input<Either<String,SecurityRuleDirection>> direction;
+      private final Output<Either<String,SecurityRuleDirection>> direction;
 
-    public Input<Either<String,SecurityRuleDirection>> getDirection() {
+    public Output<Either<String,SecurityRuleDirection>> getDirection() {
         return this.direction;
     }
 
@@ -114,10 +114,10 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -125,10 +125,10 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -136,9 +136,9 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkSecurityGroupName", required=true)
-      private final Input<String> networkSecurityGroupName;
+      private final Output<String> networkSecurityGroupName;
 
-    public Input<String> getNetworkSecurityGroupName() {
+    public Output<String> getNetworkSecurityGroupName() {
         return this.networkSecurityGroupName;
     }
 
@@ -147,10 +147,10 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priority")
-      private final @Nullable Input<Integer> priority;
+      private final @Nullable Output<Integer> priority;
 
-    public Input<Integer> getPriority() {
-        return this.priority == null ? Input.empty() : this.priority;
+    public Output<Integer> getPriority() {
+        return this.priority == null ? Output.empty() : this.priority;
     }
 
     /**
@@ -158,9 +158,9 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol", required=true)
-      private final Input<Either<String,SecurityRuleProtocol>> protocol;
+      private final Output<Either<String,SecurityRuleProtocol>> protocol;
 
-    public Input<Either<String,SecurityRuleProtocol>> getProtocol() {
+    public Output<Either<String,SecurityRuleProtocol>> getProtocol() {
         return this.protocol;
     }
 
@@ -169,9 +169,9 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -180,10 +180,10 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityRuleName")
-      private final @Nullable Input<String> securityRuleName;
+      private final @Nullable Output<String> securityRuleName;
 
-    public Input<String> getSecurityRuleName() {
-        return this.securityRuleName == null ? Input.empty() : this.securityRuleName;
+    public Output<String> getSecurityRuleName() {
+        return this.securityRuleName == null ? Output.empty() : this.securityRuleName;
     }
 
     /**
@@ -191,10 +191,10 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceAddressPrefix")
-      private final @Nullable Input<String> sourceAddressPrefix;
+      private final @Nullable Output<String> sourceAddressPrefix;
 
-    public Input<String> getSourceAddressPrefix() {
-        return this.sourceAddressPrefix == null ? Input.empty() : this.sourceAddressPrefix;
+    public Output<String> getSourceAddressPrefix() {
+        return this.sourceAddressPrefix == null ? Output.empty() : this.sourceAddressPrefix;
     }
 
     /**
@@ -202,10 +202,10 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceAddressPrefixes")
-      private final @Nullable Input<List<String>> sourceAddressPrefixes;
+      private final @Nullable Output<List<String>> sourceAddressPrefixes;
 
-    public Input<List<String>> getSourceAddressPrefixes() {
-        return this.sourceAddressPrefixes == null ? Input.empty() : this.sourceAddressPrefixes;
+    public Output<List<String>> getSourceAddressPrefixes() {
+        return this.sourceAddressPrefixes == null ? Output.empty() : this.sourceAddressPrefixes;
     }
 
     /**
@@ -213,10 +213,10 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceApplicationSecurityGroups")
-      private final @Nullable Input<List<ApplicationSecurityGroupArgs>> sourceApplicationSecurityGroups;
+      private final @Nullable Output<List<ApplicationSecurityGroupArgs>> sourceApplicationSecurityGroups;
 
-    public Input<List<ApplicationSecurityGroupArgs>> getSourceApplicationSecurityGroups() {
-        return this.sourceApplicationSecurityGroups == null ? Input.empty() : this.sourceApplicationSecurityGroups;
+    public Output<List<ApplicationSecurityGroupArgs>> getSourceApplicationSecurityGroups() {
+        return this.sourceApplicationSecurityGroups == null ? Output.empty() : this.sourceApplicationSecurityGroups;
     }
 
     /**
@@ -224,10 +224,10 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourcePortRange")
-      private final @Nullable Input<String> sourcePortRange;
+      private final @Nullable Output<String> sourcePortRange;
 
-    public Input<String> getSourcePortRange() {
-        return this.sourcePortRange == null ? Input.empty() : this.sourcePortRange;
+    public Output<String> getSourcePortRange() {
+        return this.sourcePortRange == null ? Output.empty() : this.sourcePortRange;
     }
 
     /**
@@ -235,10 +235,10 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourcePortRanges")
-      private final @Nullable Input<List<String>> sourcePortRanges;
+      private final @Nullable Output<List<String>> sourcePortRanges;
 
-    public Input<List<String>> getSourcePortRanges() {
-        return this.sourcePortRanges == null ? Input.empty() : this.sourcePortRanges;
+    public Output<List<String>> getSourcePortRanges() {
+        return this.sourcePortRanges == null ? Output.empty() : this.sourcePortRanges;
     }
 
     /**
@@ -246,34 +246,34 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public SecurityRuleArgs(
-        Input<Either<String,SecurityRuleAccess>> access,
-        @Nullable Input<String> description,
-        @Nullable Input<String> destinationAddressPrefix,
-        @Nullable Input<List<String>> destinationAddressPrefixes,
-        @Nullable Input<List<ApplicationSecurityGroupArgs>> destinationApplicationSecurityGroups,
-        @Nullable Input<String> destinationPortRange,
-        @Nullable Input<List<String>> destinationPortRanges,
-        Input<Either<String,SecurityRuleDirection>> direction,
-        @Nullable Input<String> id,
-        @Nullable Input<String> name,
-        Input<String> networkSecurityGroupName,
-        @Nullable Input<Integer> priority,
-        Input<Either<String,SecurityRuleProtocol>> protocol,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> securityRuleName,
-        @Nullable Input<String> sourceAddressPrefix,
-        @Nullable Input<List<String>> sourceAddressPrefixes,
-        @Nullable Input<List<ApplicationSecurityGroupArgs>> sourceApplicationSecurityGroups,
-        @Nullable Input<String> sourcePortRange,
-        @Nullable Input<List<String>> sourcePortRanges,
-        @Nullable Input<String> type) {
+        Output<Either<String,SecurityRuleAccess>> access,
+        @Nullable Output<String> description,
+        @Nullable Output<String> destinationAddressPrefix,
+        @Nullable Output<List<String>> destinationAddressPrefixes,
+        @Nullable Output<List<ApplicationSecurityGroupArgs>> destinationApplicationSecurityGroups,
+        @Nullable Output<String> destinationPortRange,
+        @Nullable Output<List<String>> destinationPortRanges,
+        Output<Either<String,SecurityRuleDirection>> direction,
+        @Nullable Output<String> id,
+        @Nullable Output<String> name,
+        Output<String> networkSecurityGroupName,
+        @Nullable Output<Integer> priority,
+        Output<Either<String,SecurityRuleProtocol>> protocol,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> securityRuleName,
+        @Nullable Output<String> sourceAddressPrefix,
+        @Nullable Output<List<String>> sourceAddressPrefixes,
+        @Nullable Output<List<ApplicationSecurityGroupArgs>> sourceApplicationSecurityGroups,
+        @Nullable Output<String> sourcePortRange,
+        @Nullable Output<List<String>> sourcePortRanges,
+        @Nullable Output<String> type) {
         this.access = Objects.requireNonNull(access, "expected parameter 'access' to be non-null");
         this.description = description;
         this.destinationAddressPrefix = destinationAddressPrefix;
@@ -298,27 +298,27 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SecurityRuleArgs() {
-        this.access = Input.empty();
-        this.description = Input.empty();
-        this.destinationAddressPrefix = Input.empty();
-        this.destinationAddressPrefixes = Input.empty();
-        this.destinationApplicationSecurityGroups = Input.empty();
-        this.destinationPortRange = Input.empty();
-        this.destinationPortRanges = Input.empty();
-        this.direction = Input.empty();
-        this.id = Input.empty();
-        this.name = Input.empty();
-        this.networkSecurityGroupName = Input.empty();
-        this.priority = Input.empty();
-        this.protocol = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.securityRuleName = Input.empty();
-        this.sourceAddressPrefix = Input.empty();
-        this.sourceAddressPrefixes = Input.empty();
-        this.sourceApplicationSecurityGroups = Input.empty();
-        this.sourcePortRange = Input.empty();
-        this.sourcePortRanges = Input.empty();
-        this.type = Input.empty();
+        this.access = Output.empty();
+        this.description = Output.empty();
+        this.destinationAddressPrefix = Output.empty();
+        this.destinationAddressPrefixes = Output.empty();
+        this.destinationApplicationSecurityGroups = Output.empty();
+        this.destinationPortRange = Output.empty();
+        this.destinationPortRanges = Output.empty();
+        this.direction = Output.empty();
+        this.id = Output.empty();
+        this.name = Output.empty();
+        this.networkSecurityGroupName = Output.empty();
+        this.priority = Output.empty();
+        this.protocol = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.securityRuleName = Output.empty();
+        this.sourceAddressPrefix = Output.empty();
+        this.sourceAddressPrefixes = Output.empty();
+        this.sourceApplicationSecurityGroups = Output.empty();
+        this.sourcePortRange = Output.empty();
+        this.sourcePortRanges = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -330,27 +330,27 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Either<String,SecurityRuleAccess>> access;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> destinationAddressPrefix;
-        private @Nullable Input<List<String>> destinationAddressPrefixes;
-        private @Nullable Input<List<ApplicationSecurityGroupArgs>> destinationApplicationSecurityGroups;
-        private @Nullable Input<String> destinationPortRange;
-        private @Nullable Input<List<String>> destinationPortRanges;
-        private Input<Either<String,SecurityRuleDirection>> direction;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> name;
-        private Input<String> networkSecurityGroupName;
-        private @Nullable Input<Integer> priority;
-        private Input<Either<String,SecurityRuleProtocol>> protocol;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> securityRuleName;
-        private @Nullable Input<String> sourceAddressPrefix;
-        private @Nullable Input<List<String>> sourceAddressPrefixes;
-        private @Nullable Input<List<ApplicationSecurityGroupArgs>> sourceApplicationSecurityGroups;
-        private @Nullable Input<String> sourcePortRange;
-        private @Nullable Input<List<String>> sourcePortRanges;
-        private @Nullable Input<String> type;
+        private Output<Either<String,SecurityRuleAccess>> access;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> destinationAddressPrefix;
+        private @Nullable Output<List<String>> destinationAddressPrefixes;
+        private @Nullable Output<List<ApplicationSecurityGroupArgs>> destinationApplicationSecurityGroups;
+        private @Nullable Output<String> destinationPortRange;
+        private @Nullable Output<List<String>> destinationPortRanges;
+        private Output<Either<String,SecurityRuleDirection>> direction;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> name;
+        private Output<String> networkSecurityGroupName;
+        private @Nullable Output<Integer> priority;
+        private Output<Either<String,SecurityRuleProtocol>> protocol;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> securityRuleName;
+        private @Nullable Output<String> sourceAddressPrefix;
+        private @Nullable Output<List<String>> sourceAddressPrefixes;
+        private @Nullable Output<List<ApplicationSecurityGroupArgs>> sourceApplicationSecurityGroups;
+        private @Nullable Output<String> sourcePortRange;
+        private @Nullable Output<List<String>> sourcePortRanges;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -381,213 +381,213 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder access(Input<Either<String,SecurityRuleAccess>> access) {
+        public Builder access(Output<Either<String,SecurityRuleAccess>> access) {
             this.access = Objects.requireNonNull(access);
             return this;
         }
 
         public Builder access(Either<String,SecurityRuleAccess> access) {
-            this.access = Input.of(Objects.requireNonNull(access));
+            this.access = Output.of(Objects.requireNonNull(access));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder destinationAddressPrefix(@Nullable Input<String> destinationAddressPrefix) {
+        public Builder destinationAddressPrefix(@Nullable Output<String> destinationAddressPrefix) {
             this.destinationAddressPrefix = destinationAddressPrefix;
             return this;
         }
 
         public Builder destinationAddressPrefix(@Nullable String destinationAddressPrefix) {
-            this.destinationAddressPrefix = Input.ofNullable(destinationAddressPrefix);
+            this.destinationAddressPrefix = Output.ofNullable(destinationAddressPrefix);
             return this;
         }
 
-        public Builder destinationAddressPrefixes(@Nullable Input<List<String>> destinationAddressPrefixes) {
+        public Builder destinationAddressPrefixes(@Nullable Output<List<String>> destinationAddressPrefixes) {
             this.destinationAddressPrefixes = destinationAddressPrefixes;
             return this;
         }
 
         public Builder destinationAddressPrefixes(@Nullable List<String> destinationAddressPrefixes) {
-            this.destinationAddressPrefixes = Input.ofNullable(destinationAddressPrefixes);
+            this.destinationAddressPrefixes = Output.ofNullable(destinationAddressPrefixes);
             return this;
         }
 
-        public Builder destinationApplicationSecurityGroups(@Nullable Input<List<ApplicationSecurityGroupArgs>> destinationApplicationSecurityGroups) {
+        public Builder destinationApplicationSecurityGroups(@Nullable Output<List<ApplicationSecurityGroupArgs>> destinationApplicationSecurityGroups) {
             this.destinationApplicationSecurityGroups = destinationApplicationSecurityGroups;
             return this;
         }
 
         public Builder destinationApplicationSecurityGroups(@Nullable List<ApplicationSecurityGroupArgs> destinationApplicationSecurityGroups) {
-            this.destinationApplicationSecurityGroups = Input.ofNullable(destinationApplicationSecurityGroups);
+            this.destinationApplicationSecurityGroups = Output.ofNullable(destinationApplicationSecurityGroups);
             return this;
         }
 
-        public Builder destinationPortRange(@Nullable Input<String> destinationPortRange) {
+        public Builder destinationPortRange(@Nullable Output<String> destinationPortRange) {
             this.destinationPortRange = destinationPortRange;
             return this;
         }
 
         public Builder destinationPortRange(@Nullable String destinationPortRange) {
-            this.destinationPortRange = Input.ofNullable(destinationPortRange);
+            this.destinationPortRange = Output.ofNullable(destinationPortRange);
             return this;
         }
 
-        public Builder destinationPortRanges(@Nullable Input<List<String>> destinationPortRanges) {
+        public Builder destinationPortRanges(@Nullable Output<List<String>> destinationPortRanges) {
             this.destinationPortRanges = destinationPortRanges;
             return this;
         }
 
         public Builder destinationPortRanges(@Nullable List<String> destinationPortRanges) {
-            this.destinationPortRanges = Input.ofNullable(destinationPortRanges);
+            this.destinationPortRanges = Output.ofNullable(destinationPortRanges);
             return this;
         }
 
-        public Builder direction(Input<Either<String,SecurityRuleDirection>> direction) {
+        public Builder direction(Output<Either<String,SecurityRuleDirection>> direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
 
         public Builder direction(Either<String,SecurityRuleDirection> direction) {
-            this.direction = Input.of(Objects.requireNonNull(direction));
+            this.direction = Output.of(Objects.requireNonNull(direction));
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder networkSecurityGroupName(Input<String> networkSecurityGroupName) {
+        public Builder networkSecurityGroupName(Output<String> networkSecurityGroupName) {
             this.networkSecurityGroupName = Objects.requireNonNull(networkSecurityGroupName);
             return this;
         }
 
         public Builder networkSecurityGroupName(String networkSecurityGroupName) {
-            this.networkSecurityGroupName = Input.of(Objects.requireNonNull(networkSecurityGroupName));
+            this.networkSecurityGroupName = Output.of(Objects.requireNonNull(networkSecurityGroupName));
             return this;
         }
 
-        public Builder priority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Input.ofNullable(priority);
+            this.priority = Output.ofNullable(priority);
             return this;
         }
 
-        public Builder protocol(Input<Either<String,SecurityRuleProtocol>> protocol) {
+        public Builder protocol(Output<Either<String,SecurityRuleProtocol>> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
         public Builder protocol(Either<String,SecurityRuleProtocol> protocol) {
-            this.protocol = Input.of(Objects.requireNonNull(protocol));
+            this.protocol = Output.of(Objects.requireNonNull(protocol));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder securityRuleName(@Nullable Input<String> securityRuleName) {
+        public Builder securityRuleName(@Nullable Output<String> securityRuleName) {
             this.securityRuleName = securityRuleName;
             return this;
         }
 
         public Builder securityRuleName(@Nullable String securityRuleName) {
-            this.securityRuleName = Input.ofNullable(securityRuleName);
+            this.securityRuleName = Output.ofNullable(securityRuleName);
             return this;
         }
 
-        public Builder sourceAddressPrefix(@Nullable Input<String> sourceAddressPrefix) {
+        public Builder sourceAddressPrefix(@Nullable Output<String> sourceAddressPrefix) {
             this.sourceAddressPrefix = sourceAddressPrefix;
             return this;
         }
 
         public Builder sourceAddressPrefix(@Nullable String sourceAddressPrefix) {
-            this.sourceAddressPrefix = Input.ofNullable(sourceAddressPrefix);
+            this.sourceAddressPrefix = Output.ofNullable(sourceAddressPrefix);
             return this;
         }
 
-        public Builder sourceAddressPrefixes(@Nullable Input<List<String>> sourceAddressPrefixes) {
+        public Builder sourceAddressPrefixes(@Nullable Output<List<String>> sourceAddressPrefixes) {
             this.sourceAddressPrefixes = sourceAddressPrefixes;
             return this;
         }
 
         public Builder sourceAddressPrefixes(@Nullable List<String> sourceAddressPrefixes) {
-            this.sourceAddressPrefixes = Input.ofNullable(sourceAddressPrefixes);
+            this.sourceAddressPrefixes = Output.ofNullable(sourceAddressPrefixes);
             return this;
         }
 
-        public Builder sourceApplicationSecurityGroups(@Nullable Input<List<ApplicationSecurityGroupArgs>> sourceApplicationSecurityGroups) {
+        public Builder sourceApplicationSecurityGroups(@Nullable Output<List<ApplicationSecurityGroupArgs>> sourceApplicationSecurityGroups) {
             this.sourceApplicationSecurityGroups = sourceApplicationSecurityGroups;
             return this;
         }
 
         public Builder sourceApplicationSecurityGroups(@Nullable List<ApplicationSecurityGroupArgs> sourceApplicationSecurityGroups) {
-            this.sourceApplicationSecurityGroups = Input.ofNullable(sourceApplicationSecurityGroups);
+            this.sourceApplicationSecurityGroups = Output.ofNullable(sourceApplicationSecurityGroups);
             return this;
         }
 
-        public Builder sourcePortRange(@Nullable Input<String> sourcePortRange) {
+        public Builder sourcePortRange(@Nullable Output<String> sourcePortRange) {
             this.sourcePortRange = sourcePortRange;
             return this;
         }
 
         public Builder sourcePortRange(@Nullable String sourcePortRange) {
-            this.sourcePortRange = Input.ofNullable(sourcePortRange);
+            this.sourcePortRange = Output.ofNullable(sourcePortRange);
             return this;
         }
 
-        public Builder sourcePortRanges(@Nullable Input<List<String>> sourcePortRanges) {
+        public Builder sourcePortRanges(@Nullable Output<List<String>> sourcePortRanges) {
             this.sourcePortRanges = sourcePortRanges;
             return this;
         }
 
         public Builder sourcePortRanges(@Nullable List<String> sourcePortRanges) {
-            this.sourcePortRanges = Input.ofNullable(sourcePortRanges);
+            this.sourcePortRanges = Output.ofNullable(sourcePortRanges);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public SecurityRuleArgs build() {

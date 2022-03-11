@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.fsx;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileSystemId")
-      private final @Nullable Input<String> fileSystemId;
+      private final @Nullable Output<String> fileSystemId;
 
-    public Input<String> getFileSystemId() {
-        return this.fileSystemId == null ? Input.empty() : this.fileSystemId;
+    public Output<String> getFileSystemId() {
+        return this.fileSystemId == null ? Output.empty() : this.fileSystemId;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumeId")
-      private final @Nullable Input<String> volumeId;
+      private final @Nullable Output<String> volumeId;
 
-    public Input<String> getVolumeId() {
-        return this.volumeId == null ? Input.empty() : this.volumeId;
+    public Output<String> getVolumeId() {
+        return this.volumeId == null ? Output.empty() : this.volumeId;
     }
 
     public BackupArgs(
-        @Nullable Input<String> fileSystemId,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> volumeId) {
+        @Nullable Output<String> fileSystemId,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> volumeId) {
         this.fileSystemId = fileSystemId;
         this.tags = tags;
         this.volumeId = volumeId;
     }
 
     private BackupArgs() {
-        this.fileSystemId = Input.empty();
-        this.tags = Input.empty();
-        this.volumeId = Input.empty();
+        this.fileSystemId = Output.empty();
+        this.tags = Output.empty();
+        this.volumeId = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> fileSystemId;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> volumeId;
+        private @Nullable Output<String> fileSystemId;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> volumeId;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.volumeId = defaults.volumeId;
         }
 
-        public Builder fileSystemId(@Nullable Input<String> fileSystemId) {
+        public Builder fileSystemId(@Nullable Output<String> fileSystemId) {
             this.fileSystemId = fileSystemId;
             return this;
         }
 
         public Builder fileSystemId(@Nullable String fileSystemId) {
-            this.fileSystemId = Input.ofNullable(fileSystemId);
+            this.fileSystemId = Output.ofNullable(fileSystemId);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder volumeId(@Nullable Input<String> volumeId) {
+        public Builder volumeId(@Nullable Output<String> volumeId) {
             this.volumeId = volumeId;
             return this;
         }
 
         public Builder volumeId(@Nullable String volumeId) {
-            this.volumeId = Input.ofNullable(volumeId);
+            this.volumeId = Output.ofNullable(volumeId);
             return this;
         }
         public BackupArgs build() {

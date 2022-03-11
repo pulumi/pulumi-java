@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class WatchlistUserInfoArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="objectId")
-      private final @Nullable Input<String> objectId;
+      private final @Nullable Output<String> objectId;
 
-    public Input<String> getObjectId() {
-        return this.objectId == null ? Input.empty() : this.objectId;
+    public Output<String> getObjectId() {
+        return this.objectId == null ? Output.empty() : this.objectId;
     }
 
-    public WatchlistUserInfoArgs(@Nullable Input<String> objectId) {
+    public WatchlistUserInfoArgs(@Nullable Output<String> objectId) {
         this.objectId = objectId;
     }
 
     private WatchlistUserInfoArgs() {
-        this.objectId = Input.empty();
+        this.objectId = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class WatchlistUserInfoArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> objectId;
+        private @Nullable Output<String> objectId;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class WatchlistUserInfoArgs extends io.pulumi.resources.ResourceArg
     	      this.objectId = defaults.objectId;
         }
 
-        public Builder objectId(@Nullable Input<String> objectId) {
+        public Builder objectId(@Nullable Output<String> objectId) {
             this.objectId = objectId;
             return this;
         }
 
         public Builder objectId(@Nullable String objectId) {
-            this.objectId = Input.ofNullable(objectId);
+            this.objectId = Output.ofNullable(objectId);
             return this;
         }
         public WatchlistUserInfoArgs build() {

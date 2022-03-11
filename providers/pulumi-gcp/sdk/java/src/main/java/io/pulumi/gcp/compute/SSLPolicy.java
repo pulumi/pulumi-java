@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -276,14 +275,14 @@ public class SSLPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SSLPolicy(String name, @Nullable SSLPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/sSLPolicy:SSLPolicy", name, args == null ? SSLPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:compute/sSLPolicy:SSLPolicy", name, args == null ? SSLPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private SSLPolicy(String name, Input<String> id, @Nullable SSLPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private SSLPolicy(String name, Output<String> id, @Nullable SSLPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:compute/sSLPolicy:SSLPolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -299,7 +298,7 @@ public class SSLPolicy extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SSLPolicy get(String name, Input<String> id, @Nullable SSLPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static SSLPolicy get(String name, Output<String> id, @Nullable SSLPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SSLPolicy(name, id, state, options);
     }
 }

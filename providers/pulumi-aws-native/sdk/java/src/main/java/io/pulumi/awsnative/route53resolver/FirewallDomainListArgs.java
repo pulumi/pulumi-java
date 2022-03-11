@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.route53resolver;
 
 import io.pulumi.awsnative.route53resolver.inputs.FirewallDomainListTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,17 +21,17 @@ public final class FirewallDomainListArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="domainFileUrl")
-      private final @Nullable Input<String> domainFileUrl;
+      private final @Nullable Output<String> domainFileUrl;
 
-    public Input<String> getDomainFileUrl() {
-        return this.domainFileUrl == null ? Input.empty() : this.domainFileUrl;
+    public Output<String> getDomainFileUrl() {
+        return this.domainFileUrl == null ? Output.empty() : this.domainFileUrl;
     }
 
     @InputImport(name="domains")
-      private final @Nullable Input<List<String>> domains;
+      private final @Nullable Output<List<String>> domains;
 
-    public Input<List<String>> getDomains() {
-        return this.domains == null ? Input.empty() : this.domains;
+    public Output<List<String>> getDomains() {
+        return this.domains == null ? Output.empty() : this.domains;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class FirewallDomainListArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -50,17 +50,17 @@ public final class FirewallDomainListArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<FirewallDomainListTagArgs>> tags;
+      private final @Nullable Output<List<FirewallDomainListTagArgs>> tags;
 
-    public Input<List<FirewallDomainListTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<FirewallDomainListTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public FirewallDomainListArgs(
-        @Nullable Input<String> domainFileUrl,
-        @Nullable Input<List<String>> domains,
-        @Nullable Input<String> name,
-        @Nullable Input<List<FirewallDomainListTagArgs>> tags) {
+        @Nullable Output<String> domainFileUrl,
+        @Nullable Output<List<String>> domains,
+        @Nullable Output<String> name,
+        @Nullable Output<List<FirewallDomainListTagArgs>> tags) {
         this.domainFileUrl = domainFileUrl;
         this.domains = domains;
         this.name = name;
@@ -68,10 +68,10 @@ public final class FirewallDomainListArgs extends io.pulumi.resources.ResourceAr
     }
 
     private FirewallDomainListArgs() {
-        this.domainFileUrl = Input.empty();
-        this.domains = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
+        this.domainFileUrl = Output.empty();
+        this.domains = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -83,10 +83,10 @@ public final class FirewallDomainListArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> domainFileUrl;
-        private @Nullable Input<List<String>> domains;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<FirewallDomainListTagArgs>> tags;
+        private @Nullable Output<String> domainFileUrl;
+        private @Nullable Output<List<String>> domains;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<FirewallDomainListTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -100,43 +100,43 @@ public final class FirewallDomainListArgs extends io.pulumi.resources.ResourceAr
     	      this.tags = defaults.tags;
         }
 
-        public Builder domainFileUrl(@Nullable Input<String> domainFileUrl) {
+        public Builder domainFileUrl(@Nullable Output<String> domainFileUrl) {
             this.domainFileUrl = domainFileUrl;
             return this;
         }
 
         public Builder domainFileUrl(@Nullable String domainFileUrl) {
-            this.domainFileUrl = Input.ofNullable(domainFileUrl);
+            this.domainFileUrl = Output.ofNullable(domainFileUrl);
             return this;
         }
 
-        public Builder domains(@Nullable Input<List<String>> domains) {
+        public Builder domains(@Nullable Output<List<String>> domains) {
             this.domains = domains;
             return this;
         }
 
         public Builder domains(@Nullable List<String> domains) {
-            this.domains = Input.ofNullable(domains);
+            this.domains = Output.ofNullable(domains);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<FirewallDomainListTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<FirewallDomainListTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<FirewallDomainListTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public FirewallDomainListArgs build() {

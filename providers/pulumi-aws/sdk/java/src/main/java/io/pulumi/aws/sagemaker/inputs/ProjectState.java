@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.ProjectServiceCatalogProvisioningDetailsGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectDescription")
-      private final @Nullable Input<String> projectDescription;
+      private final @Nullable Output<String> projectDescription;
 
-    public Input<String> getProjectDescription() {
-        return this.projectDescription == null ? Input.empty() : this.projectDescription;
+    public Output<String> getProjectDescription() {
+        return this.projectDescription == null ? Output.empty() : this.projectDescription;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectId")
-      private final @Nullable Input<String> projectId;
+      private final @Nullable Output<String> projectId;
 
-    public Input<String> getProjectId() {
-        return this.projectId == null ? Input.empty() : this.projectId;
+    public Output<String> getProjectId() {
+        return this.projectId == null ? Output.empty() : this.projectId;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectName")
-      private final @Nullable Input<String> projectName;
+      private final @Nullable Output<String> projectName;
 
-    public Input<String> getProjectName() {
-        return this.projectName == null ? Input.empty() : this.projectName;
+    public Output<String> getProjectName() {
+        return this.projectName == null ? Output.empty() : this.projectName;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceCatalogProvisioningDetails")
-      private final @Nullable Input<ProjectServiceCatalogProvisioningDetailsGetArgs> serviceCatalogProvisioningDetails;
+      private final @Nullable Output<ProjectServiceCatalogProvisioningDetailsGetArgs> serviceCatalogProvisioningDetails;
 
-    public Input<ProjectServiceCatalogProvisioningDetailsGetArgs> getServiceCatalogProvisioningDetails() {
-        return this.serviceCatalogProvisioningDetails == null ? Input.empty() : this.serviceCatalogProvisioningDetails;
+    public Output<ProjectServiceCatalogProvisioningDetailsGetArgs> getServiceCatalogProvisioningDetails() {
+        return this.serviceCatalogProvisioningDetails == null ? Output.empty() : this.serviceCatalogProvisioningDetails;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -87,20 +87,20 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public ProjectState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> projectDescription,
-        @Nullable Input<String> projectId,
-        @Nullable Input<String> projectName,
-        @Nullable Input<ProjectServiceCatalogProvisioningDetailsGetArgs> serviceCatalogProvisioningDetails,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> projectDescription,
+        @Nullable Output<String> projectId,
+        @Nullable Output<String> projectName,
+        @Nullable Output<ProjectServiceCatalogProvisioningDetailsGetArgs> serviceCatalogProvisioningDetails,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
         this.projectDescription = projectDescription;
         this.projectId = projectId;
@@ -111,13 +111,13 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProjectState() {
-        this.arn = Input.empty();
-        this.projectDescription = Input.empty();
-        this.projectId = Input.empty();
-        this.projectName = Input.empty();
-        this.serviceCatalogProvisioningDetails = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.arn = Output.empty();
+        this.projectDescription = Output.empty();
+        this.projectId = Output.empty();
+        this.projectName = Output.empty();
+        this.serviceCatalogProvisioningDetails = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -129,13 +129,13 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> projectDescription;
-        private @Nullable Input<String> projectId;
-        private @Nullable Input<String> projectName;
-        private @Nullable Input<ProjectServiceCatalogProvisioningDetailsGetArgs> serviceCatalogProvisioningDetails;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> projectDescription;
+        private @Nullable Output<String> projectId;
+        private @Nullable Output<String> projectName;
+        private @Nullable Output<ProjectServiceCatalogProvisioningDetailsGetArgs> serviceCatalogProvisioningDetails;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -152,73 +152,73 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder projectDescription(@Nullable Input<String> projectDescription) {
+        public Builder projectDescription(@Nullable Output<String> projectDescription) {
             this.projectDescription = projectDescription;
             return this;
         }
 
         public Builder projectDescription(@Nullable String projectDescription) {
-            this.projectDescription = Input.ofNullable(projectDescription);
+            this.projectDescription = Output.ofNullable(projectDescription);
             return this;
         }
 
-        public Builder projectId(@Nullable Input<String> projectId) {
+        public Builder projectId(@Nullable Output<String> projectId) {
             this.projectId = projectId;
             return this;
         }
 
         public Builder projectId(@Nullable String projectId) {
-            this.projectId = Input.ofNullable(projectId);
+            this.projectId = Output.ofNullable(projectId);
             return this;
         }
 
-        public Builder projectName(@Nullable Input<String> projectName) {
+        public Builder projectName(@Nullable Output<String> projectName) {
             this.projectName = projectName;
             return this;
         }
 
         public Builder projectName(@Nullable String projectName) {
-            this.projectName = Input.ofNullable(projectName);
+            this.projectName = Output.ofNullable(projectName);
             return this;
         }
 
-        public Builder serviceCatalogProvisioningDetails(@Nullable Input<ProjectServiceCatalogProvisioningDetailsGetArgs> serviceCatalogProvisioningDetails) {
+        public Builder serviceCatalogProvisioningDetails(@Nullable Output<ProjectServiceCatalogProvisioningDetailsGetArgs> serviceCatalogProvisioningDetails) {
             this.serviceCatalogProvisioningDetails = serviceCatalogProvisioningDetails;
             return this;
         }
 
         public Builder serviceCatalogProvisioningDetails(@Nullable ProjectServiceCatalogProvisioningDetailsGetArgs serviceCatalogProvisioningDetails) {
-            this.serviceCatalogProvisioningDetails = Input.ofNullable(serviceCatalogProvisioningDetails);
+            this.serviceCatalogProvisioningDetails = Output.ofNullable(serviceCatalogProvisioningDetails);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public ProjectState build() {

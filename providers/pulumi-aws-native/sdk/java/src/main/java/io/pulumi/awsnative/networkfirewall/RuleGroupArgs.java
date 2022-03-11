@@ -5,7 +5,7 @@ package io.pulumi.awsnative.networkfirewall;
 
 import io.pulumi.awsnative.networkfirewall.enums.RuleGroupTypeEnum;
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,54 +19,54 @@ public final class RuleGroupArgs extends io.pulumi.resources.ResourceArgs {
     public static final RuleGroupArgs Empty = new RuleGroupArgs();
 
     @InputImport(name="capacity", required=true)
-      private final Input<Integer> capacity;
+      private final Output<Integer> capacity;
 
-    public Input<Integer> getCapacity() {
+    public Output<Integer> getCapacity() {
         return this.capacity;
     }
 
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="ruleGroup")
-      private final @Nullable Input<io.pulumi.awsnative.networkfirewall.inputs.RuleGroupArgs> ruleGroup;
+      private final @Nullable Output<io.pulumi.awsnative.networkfirewall.inputs.RuleGroupArgs> ruleGroup;
 
-    public Input<io.pulumi.awsnative.networkfirewall.inputs.RuleGroupArgs> getRuleGroup() {
-        return this.ruleGroup == null ? Input.empty() : this.ruleGroup;
+    public Output<io.pulumi.awsnative.networkfirewall.inputs.RuleGroupArgs> getRuleGroup() {
+        return this.ruleGroup == null ? Output.empty() : this.ruleGroup;
     }
 
     @InputImport(name="ruleGroupName")
-      private final @Nullable Input<String> ruleGroupName;
+      private final @Nullable Output<String> ruleGroupName;
 
-    public Input<String> getRuleGroupName() {
-        return this.ruleGroupName == null ? Input.empty() : this.ruleGroupName;
+    public Output<String> getRuleGroupName() {
+        return this.ruleGroupName == null ? Output.empty() : this.ruleGroupName;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<List<RuleGroupTagArgs>> tags;
+      private final @Nullable Output<List<RuleGroupTagArgs>> tags;
 
-    public Input<List<RuleGroupTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<RuleGroupTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     @InputImport(name="type", required=true)
-      private final Input<RuleGroupTypeEnum> type;
+      private final Output<RuleGroupTypeEnum> type;
 
-    public Input<RuleGroupTypeEnum> getType() {
+    public Output<RuleGroupTypeEnum> getType() {
         return this.type;
     }
 
     public RuleGroupArgs(
-        Input<Integer> capacity,
-        @Nullable Input<String> description,
-        @Nullable Input<io.pulumi.awsnative.networkfirewall.inputs.RuleGroupArgs> ruleGroup,
-        @Nullable Input<String> ruleGroupName,
-        @Nullable Input<List<RuleGroupTagArgs>> tags,
-        Input<RuleGroupTypeEnum> type) {
+        Output<Integer> capacity,
+        @Nullable Output<String> description,
+        @Nullable Output<io.pulumi.awsnative.networkfirewall.inputs.RuleGroupArgs> ruleGroup,
+        @Nullable Output<String> ruleGroupName,
+        @Nullable Output<List<RuleGroupTagArgs>> tags,
+        Output<RuleGroupTypeEnum> type) {
         this.capacity = Objects.requireNonNull(capacity, "expected parameter 'capacity' to be non-null");
         this.description = description;
         this.ruleGroup = ruleGroup;
@@ -76,12 +76,12 @@ public final class RuleGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RuleGroupArgs() {
-        this.capacity = Input.empty();
-        this.description = Input.empty();
-        this.ruleGroup = Input.empty();
-        this.ruleGroupName = Input.empty();
-        this.tags = Input.empty();
-        this.type = Input.empty();
+        this.capacity = Output.empty();
+        this.description = Output.empty();
+        this.ruleGroup = Output.empty();
+        this.ruleGroupName = Output.empty();
+        this.tags = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,12 +93,12 @@ public final class RuleGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Integer> capacity;
-        private @Nullable Input<String> description;
-        private @Nullable Input<io.pulumi.awsnative.networkfirewall.inputs.RuleGroupArgs> ruleGroup;
-        private @Nullable Input<String> ruleGroupName;
-        private @Nullable Input<List<RuleGroupTagArgs>> tags;
-        private Input<RuleGroupTypeEnum> type;
+        private Output<Integer> capacity;
+        private @Nullable Output<String> description;
+        private @Nullable Output<io.pulumi.awsnative.networkfirewall.inputs.RuleGroupArgs> ruleGroup;
+        private @Nullable Output<String> ruleGroupName;
+        private @Nullable Output<List<RuleGroupTagArgs>> tags;
+        private Output<RuleGroupTypeEnum> type;
 
         public Builder() {
     	      // Empty
@@ -114,63 +114,63 @@ public final class RuleGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder capacity(Input<Integer> capacity) {
+        public Builder capacity(Output<Integer> capacity) {
             this.capacity = Objects.requireNonNull(capacity);
             return this;
         }
 
         public Builder capacity(Integer capacity) {
-            this.capacity = Input.of(Objects.requireNonNull(capacity));
+            this.capacity = Output.of(Objects.requireNonNull(capacity));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder ruleGroup(@Nullable Input<io.pulumi.awsnative.networkfirewall.inputs.RuleGroupArgs> ruleGroup) {
+        public Builder ruleGroup(@Nullable Output<io.pulumi.awsnative.networkfirewall.inputs.RuleGroupArgs> ruleGroup) {
             this.ruleGroup = ruleGroup;
             return this;
         }
 
         public Builder ruleGroup(@Nullable io.pulumi.awsnative.networkfirewall.inputs.RuleGroupArgs ruleGroup) {
-            this.ruleGroup = Input.ofNullable(ruleGroup);
+            this.ruleGroup = Output.ofNullable(ruleGroup);
             return this;
         }
 
-        public Builder ruleGroupName(@Nullable Input<String> ruleGroupName) {
+        public Builder ruleGroupName(@Nullable Output<String> ruleGroupName) {
             this.ruleGroupName = ruleGroupName;
             return this;
         }
 
         public Builder ruleGroupName(@Nullable String ruleGroupName) {
-            this.ruleGroupName = Input.ofNullable(ruleGroupName);
+            this.ruleGroupName = Output.ofNullable(ruleGroupName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<RuleGroupTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<RuleGroupTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<RuleGroupTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder type(Input<RuleGroupTypeEnum> type) {
+        public Builder type(Output<RuleGroupTypeEnum> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(RuleGroupTypeEnum type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public RuleGroupArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.signalrservice.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class SignalRCorsSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="allowedOrigins")
-      private final @Nullable Input<List<String>> allowedOrigins;
+      private final @Nullable Output<List<String>> allowedOrigins;
 
-    public Input<List<String>> getAllowedOrigins() {
-        return this.allowedOrigins == null ? Input.empty() : this.allowedOrigins;
+    public Output<List<String>> getAllowedOrigins() {
+        return this.allowedOrigins == null ? Output.empty() : this.allowedOrigins;
     }
 
-    public SignalRCorsSettingsArgs(@Nullable Input<List<String>> allowedOrigins) {
+    public SignalRCorsSettingsArgs(@Nullable Output<List<String>> allowedOrigins) {
         this.allowedOrigins = allowedOrigins;
     }
 
     private SignalRCorsSettingsArgs() {
-        this.allowedOrigins = Input.empty();
+        this.allowedOrigins = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class SignalRCorsSettingsArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> allowedOrigins;
+        private @Nullable Output<List<String>> allowedOrigins;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class SignalRCorsSettingsArgs extends io.pulumi.resources.ResourceA
     	      this.allowedOrigins = defaults.allowedOrigins;
         }
 
-        public Builder allowedOrigins(@Nullable Input<List<String>> allowedOrigins) {
+        public Builder allowedOrigins(@Nullable Output<List<String>> allowedOrigins) {
             this.allowedOrigins = allowedOrigins;
             return this;
         }
 
         public Builder allowedOrigins(@Nullable List<String> allowedOrigins) {
-            this.allowedOrigins = Input.ofNullable(allowedOrigins);
+            this.allowedOrigins = Output.ofNullable(allowedOrigins);
             return this;
         }
         public SignalRCorsSettingsArgs build() {

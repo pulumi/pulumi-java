@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class WebAppVnetConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="certBlob")
-      private final @Nullable Input<String> certBlob;
+      private final @Nullable Output<String> certBlob;
 
-    public Input<String> getCertBlob() {
-        return this.certBlob == null ? Input.empty() : this.certBlob;
+    public Output<String> getCertBlob() {
+        return this.certBlob == null ? Output.empty() : this.certBlob;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class WebAppVnetConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="dnsServers")
-      private final @Nullable Input<String> dnsServers;
+      private final @Nullable Output<String> dnsServers;
 
-    public Input<String> getDnsServers() {
-        return this.dnsServers == null ? Input.empty() : this.dnsServers;
+    public Output<String> getDnsServers() {
+        return this.dnsServers == null ? Output.empty() : this.dnsServers;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class WebAppVnetConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="isSwift")
-      private final @Nullable Input<Boolean> isSwift;
+      private final @Nullable Output<Boolean> isSwift;
 
-    public Input<Boolean> getIsSwift() {
-        return this.isSwift == null ? Input.empty() : this.isSwift;
+    public Output<Boolean> getIsSwift() {
+        return this.isSwift == null ? Output.empty() : this.isSwift;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class WebAppVnetConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -65,9 +65,9 @@ public final class WebAppVnetConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -76,9 +76,9 @@ public final class WebAppVnetConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -87,10 +87,10 @@ public final class WebAppVnetConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="vnetName")
-      private final @Nullable Input<String> vnetName;
+      private final @Nullable Output<String> vnetName;
 
-    public Input<String> getVnetName() {
-        return this.vnetName == null ? Input.empty() : this.vnetName;
+    public Output<String> getVnetName() {
+        return this.vnetName == null ? Output.empty() : this.vnetName;
     }
 
     /**
@@ -98,21 +98,21 @@ public final class WebAppVnetConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="vnetResourceId")
-      private final @Nullable Input<String> vnetResourceId;
+      private final @Nullable Output<String> vnetResourceId;
 
-    public Input<String> getVnetResourceId() {
-        return this.vnetResourceId == null ? Input.empty() : this.vnetResourceId;
+    public Output<String> getVnetResourceId() {
+        return this.vnetResourceId == null ? Output.empty() : this.vnetResourceId;
     }
 
     public WebAppVnetConnectionArgs(
-        @Nullable Input<String> certBlob,
-        @Nullable Input<String> dnsServers,
-        @Nullable Input<Boolean> isSwift,
-        @Nullable Input<String> kind,
-        Input<String> name,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> vnetName,
-        @Nullable Input<String> vnetResourceId) {
+        @Nullable Output<String> certBlob,
+        @Nullable Output<String> dnsServers,
+        @Nullable Output<Boolean> isSwift,
+        @Nullable Output<String> kind,
+        Output<String> name,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> vnetName,
+        @Nullable Output<String> vnetResourceId) {
         this.certBlob = certBlob;
         this.dnsServers = dnsServers;
         this.isSwift = isSwift;
@@ -124,14 +124,14 @@ public final class WebAppVnetConnectionArgs extends io.pulumi.resources.Resource
     }
 
     private WebAppVnetConnectionArgs() {
-        this.certBlob = Input.empty();
-        this.dnsServers = Input.empty();
-        this.isSwift = Input.empty();
-        this.kind = Input.empty();
-        this.name = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.vnetName = Input.empty();
-        this.vnetResourceId = Input.empty();
+        this.certBlob = Output.empty();
+        this.dnsServers = Output.empty();
+        this.isSwift = Output.empty();
+        this.kind = Output.empty();
+        this.name = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.vnetName = Output.empty();
+        this.vnetResourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -143,14 +143,14 @@ public final class WebAppVnetConnectionArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> certBlob;
-        private @Nullable Input<String> dnsServers;
-        private @Nullable Input<Boolean> isSwift;
-        private @Nullable Input<String> kind;
-        private Input<String> name;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> vnetName;
-        private @Nullable Input<String> vnetResourceId;
+        private @Nullable Output<String> certBlob;
+        private @Nullable Output<String> dnsServers;
+        private @Nullable Output<Boolean> isSwift;
+        private @Nullable Output<String> kind;
+        private Output<String> name;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> vnetName;
+        private @Nullable Output<String> vnetResourceId;
 
         public Builder() {
     	      // Empty
@@ -168,83 +168,83 @@ public final class WebAppVnetConnectionArgs extends io.pulumi.resources.Resource
     	      this.vnetResourceId = defaults.vnetResourceId;
         }
 
-        public Builder certBlob(@Nullable Input<String> certBlob) {
+        public Builder certBlob(@Nullable Output<String> certBlob) {
             this.certBlob = certBlob;
             return this;
         }
 
         public Builder certBlob(@Nullable String certBlob) {
-            this.certBlob = Input.ofNullable(certBlob);
+            this.certBlob = Output.ofNullable(certBlob);
             return this;
         }
 
-        public Builder dnsServers(@Nullable Input<String> dnsServers) {
+        public Builder dnsServers(@Nullable Output<String> dnsServers) {
             this.dnsServers = dnsServers;
             return this;
         }
 
         public Builder dnsServers(@Nullable String dnsServers) {
-            this.dnsServers = Input.ofNullable(dnsServers);
+            this.dnsServers = Output.ofNullable(dnsServers);
             return this;
         }
 
-        public Builder isSwift(@Nullable Input<Boolean> isSwift) {
+        public Builder isSwift(@Nullable Output<Boolean> isSwift) {
             this.isSwift = isSwift;
             return this;
         }
 
         public Builder isSwift(@Nullable Boolean isSwift) {
-            this.isSwift = Input.ofNullable(isSwift);
+            this.isSwift = Output.ofNullable(isSwift);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder vnetName(@Nullable Input<String> vnetName) {
+        public Builder vnetName(@Nullable Output<String> vnetName) {
             this.vnetName = vnetName;
             return this;
         }
 
         public Builder vnetName(@Nullable String vnetName) {
-            this.vnetName = Input.ofNullable(vnetName);
+            this.vnetName = Output.ofNullable(vnetName);
             return this;
         }
 
-        public Builder vnetResourceId(@Nullable Input<String> vnetResourceId) {
+        public Builder vnetResourceId(@Nullable Output<String> vnetResourceId) {
             this.vnetResourceId = vnetResourceId;
             return this;
         }
 
         public Builder vnetResourceId(@Nullable String vnetResourceId) {
-            this.vnetResourceId = Input.ofNullable(vnetResourceId);
+            this.vnetResourceId = Output.ofNullable(vnetResourceId);
             return this;
         }
         public WebAppVnetConnectionArgs build() {

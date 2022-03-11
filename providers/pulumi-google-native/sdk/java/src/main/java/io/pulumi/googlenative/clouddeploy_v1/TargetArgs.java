@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.clouddeploy_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.clouddeploy_v1.inputs.AnthosClusterArgs;
 import io.pulumi.googlenative.clouddeploy_v1.inputs.ExecutionConfigArgs;
@@ -25,10 +25,10 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="annotations")
-      private final @Nullable Input<Map<String,String>> annotations;
+      private final @Nullable Output<Map<String,String>> annotations;
 
-    public Input<Map<String,String>> getAnnotations() {
-        return this.annotations == null ? Input.empty() : this.annotations;
+    public Output<Map<String,String>> getAnnotations() {
+        return this.annotations == null ? Output.empty() : this.annotations;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="anthosCluster")
-      private final @Nullable Input<AnthosClusterArgs> anthosCluster;
+      private final @Nullable Output<AnthosClusterArgs> anthosCluster;
 
-    public Input<AnthosClusterArgs> getAnthosCluster() {
-        return this.anthosCluster == null ? Input.empty() : this.anthosCluster;
+    public Output<AnthosClusterArgs> getAnthosCluster() {
+        return this.anthosCluster == null ? Output.empty() : this.anthosCluster;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="executionConfigs")
-      private final @Nullable Input<List<ExecutionConfigArgs>> executionConfigs;
+      private final @Nullable Output<List<ExecutionConfigArgs>> executionConfigs;
 
-    public Input<List<ExecutionConfigArgs>> getExecutionConfigs() {
-        return this.executionConfigs == null ? Input.empty() : this.executionConfigs;
+    public Output<List<ExecutionConfigArgs>> getExecutionConfigs() {
+        return this.executionConfigs == null ? Output.empty() : this.executionConfigs;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gke")
-      private final @Nullable Input<GkeClusterArgs> gke;
+      private final @Nullable Output<GkeClusterArgs> gke;
 
-    public Input<GkeClusterArgs> getGke() {
-        return this.gke == null ? Input.empty() : this.gke;
+    public Output<GkeClusterArgs> getGke() {
+        return this.gke == null ? Output.empty() : this.gke;
     }
 
     /**
@@ -91,17 +91,17 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -109,24 +109,24 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     /**
@@ -134,41 +134,41 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requireApproval")
-      private final @Nullable Input<Boolean> requireApproval;
+      private final @Nullable Output<Boolean> requireApproval;
 
-    public Input<Boolean> getRequireApproval() {
-        return this.requireApproval == null ? Input.empty() : this.requireApproval;
+    public Output<Boolean> getRequireApproval() {
+        return this.requireApproval == null ? Output.empty() : this.requireApproval;
     }
 
     @InputImport(name="targetId", required=true)
-      private final Input<String> targetId;
+      private final Output<String> targetId;
 
-    public Input<String> getTargetId() {
+    public Output<String> getTargetId() {
         return this.targetId;
     }
 
     @InputImport(name="validateOnly")
-      private final @Nullable Input<String> validateOnly;
+      private final @Nullable Output<String> validateOnly;
 
-    public Input<String> getValidateOnly() {
-        return this.validateOnly == null ? Input.empty() : this.validateOnly;
+    public Output<String> getValidateOnly() {
+        return this.validateOnly == null ? Output.empty() : this.validateOnly;
     }
 
     public TargetArgs(
-        @Nullable Input<Map<String,String>> annotations,
-        @Nullable Input<AnthosClusterArgs> anthosCluster,
-        @Nullable Input<String> description,
-        @Nullable Input<String> etag,
-        @Nullable Input<List<ExecutionConfigArgs>> executionConfigs,
-        @Nullable Input<GkeClusterArgs> gke,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<String> requestId,
-        @Nullable Input<Boolean> requireApproval,
-        Input<String> targetId,
-        @Nullable Input<String> validateOnly) {
+        @Nullable Output<Map<String,String>> annotations,
+        @Nullable Output<AnthosClusterArgs> anthosCluster,
+        @Nullable Output<String> description,
+        @Nullable Output<String> etag,
+        @Nullable Output<List<ExecutionConfigArgs>> executionConfigs,
+        @Nullable Output<GkeClusterArgs> gke,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<String> requestId,
+        @Nullable Output<Boolean> requireApproval,
+        Output<String> targetId,
+        @Nullable Output<String> validateOnly) {
         this.annotations = annotations;
         this.anthosCluster = anthosCluster;
         this.description = description;
@@ -186,20 +186,20 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TargetArgs() {
-        this.annotations = Input.empty();
-        this.anthosCluster = Input.empty();
-        this.description = Input.empty();
-        this.etag = Input.empty();
-        this.executionConfigs = Input.empty();
-        this.gke = Input.empty();
-        this.labels = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.requestId = Input.empty();
-        this.requireApproval = Input.empty();
-        this.targetId = Input.empty();
-        this.validateOnly = Input.empty();
+        this.annotations = Output.empty();
+        this.anthosCluster = Output.empty();
+        this.description = Output.empty();
+        this.etag = Output.empty();
+        this.executionConfigs = Output.empty();
+        this.gke = Output.empty();
+        this.labels = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.requestId = Output.empty();
+        this.requireApproval = Output.empty();
+        this.targetId = Output.empty();
+        this.validateOnly = Output.empty();
     }
 
     public static Builder builder() {
@@ -211,20 +211,20 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> annotations;
-        private @Nullable Input<AnthosClusterArgs> anthosCluster;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<List<ExecutionConfigArgs>> executionConfigs;
-        private @Nullable Input<GkeClusterArgs> gke;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> requestId;
-        private @Nullable Input<Boolean> requireApproval;
-        private Input<String> targetId;
-        private @Nullable Input<String> validateOnly;
+        private @Nullable Output<Map<String,String>> annotations;
+        private @Nullable Output<AnthosClusterArgs> anthosCluster;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<List<ExecutionConfigArgs>> executionConfigs;
+        private @Nullable Output<GkeClusterArgs> gke;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> requestId;
+        private @Nullable Output<Boolean> requireApproval;
+        private Output<String> targetId;
+        private @Nullable Output<String> validateOnly;
 
         public Builder() {
     	      // Empty
@@ -248,143 +248,143 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.validateOnly = defaults.validateOnly;
         }
 
-        public Builder annotations(@Nullable Input<Map<String,String>> annotations) {
+        public Builder annotations(@Nullable Output<Map<String,String>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
         public Builder annotations(@Nullable Map<String,String> annotations) {
-            this.annotations = Input.ofNullable(annotations);
+            this.annotations = Output.ofNullable(annotations);
             return this;
         }
 
-        public Builder anthosCluster(@Nullable Input<AnthosClusterArgs> anthosCluster) {
+        public Builder anthosCluster(@Nullable Output<AnthosClusterArgs> anthosCluster) {
             this.anthosCluster = anthosCluster;
             return this;
         }
 
         public Builder anthosCluster(@Nullable AnthosClusterArgs anthosCluster) {
-            this.anthosCluster = Input.ofNullable(anthosCluster);
+            this.anthosCluster = Output.ofNullable(anthosCluster);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder executionConfigs(@Nullable Input<List<ExecutionConfigArgs>> executionConfigs) {
+        public Builder executionConfigs(@Nullable Output<List<ExecutionConfigArgs>> executionConfigs) {
             this.executionConfigs = executionConfigs;
             return this;
         }
 
         public Builder executionConfigs(@Nullable List<ExecutionConfigArgs> executionConfigs) {
-            this.executionConfigs = Input.ofNullable(executionConfigs);
+            this.executionConfigs = Output.ofNullable(executionConfigs);
             return this;
         }
 
-        public Builder gke(@Nullable Input<GkeClusterArgs> gke) {
+        public Builder gke(@Nullable Output<GkeClusterArgs> gke) {
             this.gke = gke;
             return this;
         }
 
         public Builder gke(@Nullable GkeClusterArgs gke) {
-            this.gke = Input.ofNullable(gke);
+            this.gke = Output.ofNullable(gke);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
 
-        public Builder requireApproval(@Nullable Input<Boolean> requireApproval) {
+        public Builder requireApproval(@Nullable Output<Boolean> requireApproval) {
             this.requireApproval = requireApproval;
             return this;
         }
 
         public Builder requireApproval(@Nullable Boolean requireApproval) {
-            this.requireApproval = Input.ofNullable(requireApproval);
+            this.requireApproval = Output.ofNullable(requireApproval);
             return this;
         }
 
-        public Builder targetId(Input<String> targetId) {
+        public Builder targetId(Output<String> targetId) {
             this.targetId = Objects.requireNonNull(targetId);
             return this;
         }
 
         public Builder targetId(String targetId) {
-            this.targetId = Input.of(Objects.requireNonNull(targetId));
+            this.targetId = Output.of(Objects.requireNonNull(targetId));
             return this;
         }
 
-        public Builder validateOnly(@Nullable Input<String> validateOnly) {
+        public Builder validateOnly(@Nullable Output<String> validateOnly) {
             this.validateOnly = validateOnly;
             return this;
         }
 
         public Builder validateOnly(@Nullable String validateOnly) {
-            this.validateOnly = Input.ofNullable(validateOnly);
+            this.validateOnly = Output.ofNullable(validateOnly);
             return this;
         }
         public TargetArgs build() {

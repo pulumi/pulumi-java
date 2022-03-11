@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class WorkbookTemplateGalleryArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="category")
-      private final @Nullable Input<String> category;
+      private final @Nullable Output<String> category;
 
-    public Input<String> getCategory() {
-        return this.category == null ? Input.empty() : this.category;
+    public Output<String> getCategory() {
+        return this.category == null ? Output.empty() : this.category;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class WorkbookTemplateGalleryArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class WorkbookTemplateGalleryArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="order")
-      private final @Nullable Input<Integer> order;
+      private final @Nullable Output<Integer> order;
 
-    public Input<Integer> getOrder() {
-        return this.order == null ? Input.empty() : this.order;
+    public Output<Integer> getOrder() {
+        return this.order == null ? Output.empty() : this.order;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class WorkbookTemplateGalleryArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceType")
-      private final @Nullable Input<String> resourceType;
+      private final @Nullable Output<String> resourceType;
 
-    public Input<String> getPropResourceType() {
-        return this.resourceType == null ? Input.empty() : this.resourceType;
+    public Output<String> getPropResourceType() {
+        return this.resourceType == null ? Output.empty() : this.resourceType;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class WorkbookTemplateGalleryArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public WorkbookTemplateGalleryArgs(
-        @Nullable Input<String> category,
-        @Nullable Input<String> name,
-        @Nullable Input<Integer> order,
-        @Nullable Input<String> resourceType,
-        @Nullable Input<String> type) {
+        @Nullable Output<String> category,
+        @Nullable Output<String> name,
+        @Nullable Output<Integer> order,
+        @Nullable Output<String> resourceType,
+        @Nullable Output<String> type) {
         this.category = category;
         this.name = name;
         this.order = order;
@@ -88,11 +88,11 @@ public final class WorkbookTemplateGalleryArgs extends io.pulumi.resources.Resou
     }
 
     private WorkbookTemplateGalleryArgs() {
-        this.category = Input.empty();
-        this.name = Input.empty();
-        this.order = Input.empty();
-        this.resourceType = Input.empty();
-        this.type = Input.empty();
+        this.category = Output.empty();
+        this.name = Output.empty();
+        this.order = Output.empty();
+        this.resourceType = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class WorkbookTemplateGalleryArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> category;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Integer> order;
-        private @Nullable Input<String> resourceType;
-        private @Nullable Input<String> type;
+        private @Nullable Output<String> category;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Integer> order;
+        private @Nullable Output<String> resourceType;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class WorkbookTemplateGalleryArgs extends io.pulumi.resources.Resou
     	      this.type = defaults.type;
         }
 
-        public Builder category(@Nullable Input<String> category) {
+        public Builder category(@Nullable Output<String> category) {
             this.category = category;
             return this;
         }
 
         public Builder category(@Nullable String category) {
-            this.category = Input.ofNullable(category);
+            this.category = Output.ofNullable(category);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder order(@Nullable Input<Integer> order) {
+        public Builder order(@Nullable Output<Integer> order) {
             this.order = order;
             return this;
         }
 
         public Builder order(@Nullable Integer order) {
-            this.order = Input.ofNullable(order);
+            this.order = Output.ofNullable(order);
             return this;
         }
 
-        public Builder resourceType(@Nullable Input<String> resourceType) {
+        public Builder resourceType(@Nullable Output<String> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
         public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Input.ofNullable(resourceType);
+            this.resourceType = Output.ofNullable(resourceType);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public WorkbookTemplateGalleryArgs build() {

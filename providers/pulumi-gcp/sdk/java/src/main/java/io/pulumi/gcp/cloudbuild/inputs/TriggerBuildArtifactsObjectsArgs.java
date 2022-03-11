@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudbuild.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerBuildArtifactsObjectsTimingArgs;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class TriggerBuildArtifactsObjectsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class TriggerBuildArtifactsObjectsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="paths")
-      private final @Nullable Input<List<String>> paths;
+      private final @Nullable Output<List<String>> paths;
 
-    public Input<List<String>> getPaths() {
-        return this.paths == null ? Input.empty() : this.paths;
+    public Output<List<String>> getPaths() {
+        return this.paths == null ? Output.empty() : this.paths;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class TriggerBuildArtifactsObjectsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="timings")
-      private final @Nullable Input<List<TriggerBuildArtifactsObjectsTimingArgs>> timings;
+      private final @Nullable Output<List<TriggerBuildArtifactsObjectsTimingArgs>> timings;
 
-    public Input<List<TriggerBuildArtifactsObjectsTimingArgs>> getTimings() {
-        return this.timings == null ? Input.empty() : this.timings;
+    public Output<List<TriggerBuildArtifactsObjectsTimingArgs>> getTimings() {
+        return this.timings == null ? Output.empty() : this.timings;
     }
 
     public TriggerBuildArtifactsObjectsArgs(
-        @Nullable Input<String> location,
-        @Nullable Input<List<String>> paths,
-        @Nullable Input<List<TriggerBuildArtifactsObjectsTimingArgs>> timings) {
+        @Nullable Output<String> location,
+        @Nullable Output<List<String>> paths,
+        @Nullable Output<List<TriggerBuildArtifactsObjectsTimingArgs>> timings) {
         this.location = location;
         this.paths = paths;
         this.timings = timings;
     }
 
     private TriggerBuildArtifactsObjectsArgs() {
-        this.location = Input.empty();
-        this.paths = Input.empty();
-        this.timings = Input.empty();
+        this.location = Output.empty();
+        this.paths = Output.empty();
+        this.timings = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class TriggerBuildArtifactsObjectsArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> location;
-        private @Nullable Input<List<String>> paths;
-        private @Nullable Input<List<TriggerBuildArtifactsObjectsTimingArgs>> timings;
+        private @Nullable Output<String> location;
+        private @Nullable Output<List<String>> paths;
+        private @Nullable Output<List<TriggerBuildArtifactsObjectsTimingArgs>> timings;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class TriggerBuildArtifactsObjectsArgs extends io.pulumi.resources.
     	      this.timings = defaults.timings;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder paths(@Nullable Input<List<String>> paths) {
+        public Builder paths(@Nullable Output<List<String>> paths) {
             this.paths = paths;
             return this;
         }
 
         public Builder paths(@Nullable List<String> paths) {
-            this.paths = Input.ofNullable(paths);
+            this.paths = Output.ofNullable(paths);
             return this;
         }
 
-        public Builder timings(@Nullable Input<List<TriggerBuildArtifactsObjectsTimingArgs>> timings) {
+        public Builder timings(@Nullable Output<List<TriggerBuildArtifactsObjectsTimingArgs>> timings) {
             this.timings = timings;
             return this;
         }
 
         public Builder timings(@Nullable List<TriggerBuildArtifactsObjectsTimingArgs> timings) {
-            this.timings = Input.ofNullable(timings);
+            this.timings = Output.ofNullable(timings);
             return this;
         }
         public TriggerBuildArtifactsObjectsArgs build() {

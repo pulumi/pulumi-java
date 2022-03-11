@@ -7,7 +7,7 @@ import io.pulumi.awsnative.acmpca.inputs.CertificateExtendedKeyUsageArgs;
 import io.pulumi.awsnative.acmpca.inputs.CertificateGeneralNameArgs;
 import io.pulumi.awsnative.acmpca.inputs.CertificateKeyUsageArgs;
 import io.pulumi.awsnative.acmpca.inputs.CertificatePolicyInformationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -23,38 +23,38 @@ public final class CertificateExtensionsArgs extends io.pulumi.resources.Resourc
     public static final CertificateExtensionsArgs Empty = new CertificateExtensionsArgs();
 
     @InputImport(name="certificatePolicies")
-      private final @Nullable Input<List<CertificatePolicyInformationArgs>> certificatePolicies;
+      private final @Nullable Output<List<CertificatePolicyInformationArgs>> certificatePolicies;
 
-    public Input<List<CertificatePolicyInformationArgs>> getCertificatePolicies() {
-        return this.certificatePolicies == null ? Input.empty() : this.certificatePolicies;
+    public Output<List<CertificatePolicyInformationArgs>> getCertificatePolicies() {
+        return this.certificatePolicies == null ? Output.empty() : this.certificatePolicies;
     }
 
     @InputImport(name="extendedKeyUsage")
-      private final @Nullable Input<List<CertificateExtendedKeyUsageArgs>> extendedKeyUsage;
+      private final @Nullable Output<List<CertificateExtendedKeyUsageArgs>> extendedKeyUsage;
 
-    public Input<List<CertificateExtendedKeyUsageArgs>> getExtendedKeyUsage() {
-        return this.extendedKeyUsage == null ? Input.empty() : this.extendedKeyUsage;
+    public Output<List<CertificateExtendedKeyUsageArgs>> getExtendedKeyUsage() {
+        return this.extendedKeyUsage == null ? Output.empty() : this.extendedKeyUsage;
     }
 
     @InputImport(name="keyUsage")
-      private final @Nullable Input<CertificateKeyUsageArgs> keyUsage;
+      private final @Nullable Output<CertificateKeyUsageArgs> keyUsage;
 
-    public Input<CertificateKeyUsageArgs> getKeyUsage() {
-        return this.keyUsage == null ? Input.empty() : this.keyUsage;
+    public Output<CertificateKeyUsageArgs> getKeyUsage() {
+        return this.keyUsage == null ? Output.empty() : this.keyUsage;
     }
 
     @InputImport(name="subjectAlternativeNames")
-      private final @Nullable Input<List<CertificateGeneralNameArgs>> subjectAlternativeNames;
+      private final @Nullable Output<List<CertificateGeneralNameArgs>> subjectAlternativeNames;
 
-    public Input<List<CertificateGeneralNameArgs>> getSubjectAlternativeNames() {
-        return this.subjectAlternativeNames == null ? Input.empty() : this.subjectAlternativeNames;
+    public Output<List<CertificateGeneralNameArgs>> getSubjectAlternativeNames() {
+        return this.subjectAlternativeNames == null ? Output.empty() : this.subjectAlternativeNames;
     }
 
     public CertificateExtensionsArgs(
-        @Nullable Input<List<CertificatePolicyInformationArgs>> certificatePolicies,
-        @Nullable Input<List<CertificateExtendedKeyUsageArgs>> extendedKeyUsage,
-        @Nullable Input<CertificateKeyUsageArgs> keyUsage,
-        @Nullable Input<List<CertificateGeneralNameArgs>> subjectAlternativeNames) {
+        @Nullable Output<List<CertificatePolicyInformationArgs>> certificatePolicies,
+        @Nullable Output<List<CertificateExtendedKeyUsageArgs>> extendedKeyUsage,
+        @Nullable Output<CertificateKeyUsageArgs> keyUsage,
+        @Nullable Output<List<CertificateGeneralNameArgs>> subjectAlternativeNames) {
         this.certificatePolicies = certificatePolicies;
         this.extendedKeyUsage = extendedKeyUsage;
         this.keyUsage = keyUsage;
@@ -62,10 +62,10 @@ public final class CertificateExtensionsArgs extends io.pulumi.resources.Resourc
     }
 
     private CertificateExtensionsArgs() {
-        this.certificatePolicies = Input.empty();
-        this.extendedKeyUsage = Input.empty();
-        this.keyUsage = Input.empty();
-        this.subjectAlternativeNames = Input.empty();
+        this.certificatePolicies = Output.empty();
+        this.extendedKeyUsage = Output.empty();
+        this.keyUsage = Output.empty();
+        this.subjectAlternativeNames = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,10 +77,10 @@ public final class CertificateExtensionsArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<List<CertificatePolicyInformationArgs>> certificatePolicies;
-        private @Nullable Input<List<CertificateExtendedKeyUsageArgs>> extendedKeyUsage;
-        private @Nullable Input<CertificateKeyUsageArgs> keyUsage;
-        private @Nullable Input<List<CertificateGeneralNameArgs>> subjectAlternativeNames;
+        private @Nullable Output<List<CertificatePolicyInformationArgs>> certificatePolicies;
+        private @Nullable Output<List<CertificateExtendedKeyUsageArgs>> extendedKeyUsage;
+        private @Nullable Output<CertificateKeyUsageArgs> keyUsage;
+        private @Nullable Output<List<CertificateGeneralNameArgs>> subjectAlternativeNames;
 
         public Builder() {
     	      // Empty
@@ -94,43 +94,43 @@ public final class CertificateExtensionsArgs extends io.pulumi.resources.Resourc
     	      this.subjectAlternativeNames = defaults.subjectAlternativeNames;
         }
 
-        public Builder certificatePolicies(@Nullable Input<List<CertificatePolicyInformationArgs>> certificatePolicies) {
+        public Builder certificatePolicies(@Nullable Output<List<CertificatePolicyInformationArgs>> certificatePolicies) {
             this.certificatePolicies = certificatePolicies;
             return this;
         }
 
         public Builder certificatePolicies(@Nullable List<CertificatePolicyInformationArgs> certificatePolicies) {
-            this.certificatePolicies = Input.ofNullable(certificatePolicies);
+            this.certificatePolicies = Output.ofNullable(certificatePolicies);
             return this;
         }
 
-        public Builder extendedKeyUsage(@Nullable Input<List<CertificateExtendedKeyUsageArgs>> extendedKeyUsage) {
+        public Builder extendedKeyUsage(@Nullable Output<List<CertificateExtendedKeyUsageArgs>> extendedKeyUsage) {
             this.extendedKeyUsage = extendedKeyUsage;
             return this;
         }
 
         public Builder extendedKeyUsage(@Nullable List<CertificateExtendedKeyUsageArgs> extendedKeyUsage) {
-            this.extendedKeyUsage = Input.ofNullable(extendedKeyUsage);
+            this.extendedKeyUsage = Output.ofNullable(extendedKeyUsage);
             return this;
         }
 
-        public Builder keyUsage(@Nullable Input<CertificateKeyUsageArgs> keyUsage) {
+        public Builder keyUsage(@Nullable Output<CertificateKeyUsageArgs> keyUsage) {
             this.keyUsage = keyUsage;
             return this;
         }
 
         public Builder keyUsage(@Nullable CertificateKeyUsageArgs keyUsage) {
-            this.keyUsage = Input.ofNullable(keyUsage);
+            this.keyUsage = Output.ofNullable(keyUsage);
             return this;
         }
 
-        public Builder subjectAlternativeNames(@Nullable Input<List<CertificateGeneralNameArgs>> subjectAlternativeNames) {
+        public Builder subjectAlternativeNames(@Nullable Output<List<CertificateGeneralNameArgs>> subjectAlternativeNames) {
             this.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }
 
         public Builder subjectAlternativeNames(@Nullable List<CertificateGeneralNameArgs> subjectAlternativeNames) {
-            this.subjectAlternativeNames = Input.ofNullable(subjectAlternativeNames);
+            this.subjectAlternativeNames = Output.ofNullable(subjectAlternativeNames);
             return this;
         }
         public CertificateExtensionsArgs build() {

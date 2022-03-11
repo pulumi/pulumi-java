@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.groundstation.inputs;
 
 import io.pulumi.awsnative.groundstation.inputs.ConfigSpectrumConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,18 +15,18 @@ public final class ConfigAntennaDownlinkConfigArgs extends io.pulumi.resources.R
     public static final ConfigAntennaDownlinkConfigArgs Empty = new ConfigAntennaDownlinkConfigArgs();
 
     @InputImport(name="spectrumConfig")
-      private final @Nullable Input<ConfigSpectrumConfigArgs> spectrumConfig;
+      private final @Nullable Output<ConfigSpectrumConfigArgs> spectrumConfig;
 
-    public Input<ConfigSpectrumConfigArgs> getSpectrumConfig() {
-        return this.spectrumConfig == null ? Input.empty() : this.spectrumConfig;
+    public Output<ConfigSpectrumConfigArgs> getSpectrumConfig() {
+        return this.spectrumConfig == null ? Output.empty() : this.spectrumConfig;
     }
 
-    public ConfigAntennaDownlinkConfigArgs(@Nullable Input<ConfigSpectrumConfigArgs> spectrumConfig) {
+    public ConfigAntennaDownlinkConfigArgs(@Nullable Output<ConfigSpectrumConfigArgs> spectrumConfig) {
         this.spectrumConfig = spectrumConfig;
     }
 
     private ConfigAntennaDownlinkConfigArgs() {
-        this.spectrumConfig = Input.empty();
+        this.spectrumConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class ConfigAntennaDownlinkConfigArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<ConfigSpectrumConfigArgs> spectrumConfig;
+        private @Nullable Output<ConfigSpectrumConfigArgs> spectrumConfig;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class ConfigAntennaDownlinkConfigArgs extends io.pulumi.resources.R
     	      this.spectrumConfig = defaults.spectrumConfig;
         }
 
-        public Builder spectrumConfig(@Nullable Input<ConfigSpectrumConfigArgs> spectrumConfig) {
+        public Builder spectrumConfig(@Nullable Output<ConfigSpectrumConfigArgs> spectrumConfig) {
             this.spectrumConfig = spectrumConfig;
             return this;
         }
 
         public Builder spectrumConfig(@Nullable ConfigSpectrumConfigArgs spectrumConfig) {
-            this.spectrumConfig = Input.ofNullable(spectrumConfig);
+            this.spectrumConfig = Output.ofNullable(spectrumConfig);
             return this;
         }
         public ConfigAntennaDownlinkConfigArgs build() {

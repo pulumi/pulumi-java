@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.sagemaker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class ModelContainerImageConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="repositoryAccessMode", required=true)
-      private final Input<String> repositoryAccessMode;
+      private final Output<String> repositoryAccessMode;
 
-    public Input<String> getRepositoryAccessMode() {
+    public Output<String> getRepositoryAccessMode() {
         return this.repositoryAccessMode;
     }
 
-    public ModelContainerImageConfigArgs(Input<String> repositoryAccessMode) {
+    public ModelContainerImageConfigArgs(Output<String> repositoryAccessMode) {
         this.repositoryAccessMode = Objects.requireNonNull(repositoryAccessMode, "expected parameter 'repositoryAccessMode' to be non-null");
     }
 
     private ModelContainerImageConfigArgs() {
-        this.repositoryAccessMode = Input.empty();
+        this.repositoryAccessMode = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ModelContainerImageConfigArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> repositoryAccessMode;
+        private Output<String> repositoryAccessMode;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ModelContainerImageConfigArgs extends io.pulumi.resources.Res
     	      this.repositoryAccessMode = defaults.repositoryAccessMode;
         }
 
-        public Builder repositoryAccessMode(Input<String> repositoryAccessMode) {
+        public Builder repositoryAccessMode(Output<String> repositoryAccessMode) {
             this.repositoryAccessMode = Objects.requireNonNull(repositoryAccessMode);
             return this;
         }
 
         public Builder repositoryAccessMode(String repositoryAccessMode) {
-            this.repositoryAccessMode = Input.of(Objects.requireNonNull(repositoryAccessMode));
+            this.repositoryAccessMode = Output.of(Objects.requireNonNull(repositoryAccessMode));
             return this;
         }
         public ModelContainerImageConfigArgs build() {

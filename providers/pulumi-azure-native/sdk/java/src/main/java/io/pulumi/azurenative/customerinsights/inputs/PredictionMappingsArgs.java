@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class PredictionMappingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="grade", required=true)
-      private final Input<String> grade;
+      private final Output<String> grade;
 
-    public Input<String> getGrade() {
+    public Output<String> getGrade() {
         return this.grade;
     }
 
@@ -33,9 +33,9 @@ public final class PredictionMappingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="reason", required=true)
-      private final Input<String> reason;
+      private final Output<String> reason;
 
-    public Input<String> getReason() {
+    public Output<String> getReason() {
         return this.reason;
     }
 
@@ -44,25 +44,25 @@ public final class PredictionMappingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="score", required=true)
-      private final Input<String> score;
+      private final Output<String> score;
 
-    public Input<String> getScore() {
+    public Output<String> getScore() {
         return this.score;
     }
 
     public PredictionMappingsArgs(
-        Input<String> grade,
-        Input<String> reason,
-        Input<String> score) {
+        Output<String> grade,
+        Output<String> reason,
+        Output<String> score) {
         this.grade = Objects.requireNonNull(grade, "expected parameter 'grade' to be non-null");
         this.reason = Objects.requireNonNull(reason, "expected parameter 'reason' to be non-null");
         this.score = Objects.requireNonNull(score, "expected parameter 'score' to be non-null");
     }
 
     private PredictionMappingsArgs() {
-        this.grade = Input.empty();
-        this.reason = Input.empty();
-        this.score = Input.empty();
+        this.grade = Output.empty();
+        this.reason = Output.empty();
+        this.score = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class PredictionMappingsArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> grade;
-        private Input<String> reason;
-        private Input<String> score;
+        private Output<String> grade;
+        private Output<String> reason;
+        private Output<String> score;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class PredictionMappingsArgs extends io.pulumi.resources.ResourceAr
     	      this.score = defaults.score;
         }
 
-        public Builder grade(Input<String> grade) {
+        public Builder grade(Output<String> grade) {
             this.grade = Objects.requireNonNull(grade);
             return this;
         }
 
         public Builder grade(String grade) {
-            this.grade = Input.of(Objects.requireNonNull(grade));
+            this.grade = Output.of(Objects.requireNonNull(grade));
             return this;
         }
 
-        public Builder reason(Input<String> reason) {
+        public Builder reason(Output<String> reason) {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }
 
         public Builder reason(String reason) {
-            this.reason = Input.of(Objects.requireNonNull(reason));
+            this.reason = Output.of(Objects.requireNonNull(reason));
             return this;
         }
 
-        public Builder score(Input<String> score) {
+        public Builder score(Output<String> score) {
             this.score = Objects.requireNonNull(score);
             return this;
         }
 
         public Builder score(String score) {
-            this.score = Input.of(Objects.requireNonNull(score));
+            this.score = Output.of(Objects.requireNonNull(score));
             return this;
         }
         public PredictionMappingsArgs build() {

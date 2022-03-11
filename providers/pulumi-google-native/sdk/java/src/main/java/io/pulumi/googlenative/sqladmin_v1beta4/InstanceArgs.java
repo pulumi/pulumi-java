@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.sqladmin_v1beta4.enums.InstanceBackendType;
 import io.pulumi.googlenative.sqladmin_v1beta4.enums.InstanceDatabaseVersion;
@@ -36,10 +36,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backendType")
-      private final @Nullable Input<InstanceBackendType> backendType;
+      private final @Nullable Output<InstanceBackendType> backendType;
 
-    public Input<InstanceBackendType> getBackendType() {
-        return this.backendType == null ? Input.empty() : this.backendType;
+    public Output<InstanceBackendType> getBackendType() {
+        return this.backendType == null ? Output.empty() : this.backendType;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectionName")
-      private final @Nullable Input<String> connectionName;
+      private final @Nullable Output<String> connectionName;
 
-    public Input<String> getConnectionName() {
-        return this.connectionName == null ? Input.empty() : this.connectionName;
+    public Output<String> getConnectionName() {
+        return this.connectionName == null ? Output.empty() : this.connectionName;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="currentDiskSize")
-      private final @Nullable Input<String> currentDiskSize;
+      private final @Nullable Output<String> currentDiskSize;
 
-    public Input<String> getCurrentDiskSize() {
-        return this.currentDiskSize == null ? Input.empty() : this.currentDiskSize;
+    public Output<String> getCurrentDiskSize() {
+        return this.currentDiskSize == null ? Output.empty() : this.currentDiskSize;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseVersion")
-      private final @Nullable Input<InstanceDatabaseVersion> databaseVersion;
+      private final @Nullable Output<InstanceDatabaseVersion> databaseVersion;
 
-    public Input<InstanceDatabaseVersion> getDatabaseVersion() {
-        return this.databaseVersion == null ? Input.empty() : this.databaseVersion;
+    public Output<InstanceDatabaseVersion> getDatabaseVersion() {
+        return this.databaseVersion == null ? Output.empty() : this.databaseVersion;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskEncryptionConfiguration")
-      private final @Nullable Input<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration;
+      private final @Nullable Output<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration;
 
-    public Input<DiskEncryptionConfigurationArgs> getDiskEncryptionConfiguration() {
-        return this.diskEncryptionConfiguration == null ? Input.empty() : this.diskEncryptionConfiguration;
+    public Output<DiskEncryptionConfigurationArgs> getDiskEncryptionConfiguration() {
+        return this.diskEncryptionConfiguration == null ? Output.empty() : this.diskEncryptionConfiguration;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskEncryptionStatus")
-      private final @Nullable Input<DiskEncryptionStatusArgs> diskEncryptionStatus;
+      private final @Nullable Output<DiskEncryptionStatusArgs> diskEncryptionStatus;
 
-    public Input<DiskEncryptionStatusArgs> getDiskEncryptionStatus() {
-        return this.diskEncryptionStatus == null ? Input.empty() : this.diskEncryptionStatus;
+    public Output<DiskEncryptionStatusArgs> getDiskEncryptionStatus() {
+        return this.diskEncryptionStatus == null ? Output.empty() : this.diskEncryptionStatus;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="failoverReplica")
-      private final @Nullable Input<InstanceFailoverReplicaArgs> failoverReplica;
+      private final @Nullable Output<InstanceFailoverReplicaArgs> failoverReplica;
 
-    public Input<InstanceFailoverReplicaArgs> getFailoverReplica() {
-        return this.failoverReplica == null ? Input.empty() : this.failoverReplica;
+    public Output<InstanceFailoverReplicaArgs> getFailoverReplica() {
+        return this.failoverReplica == null ? Output.empty() : this.failoverReplica;
     }
 
     /**
@@ -113,10 +113,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gceZone")
-      private final @Nullable Input<String> gceZone;
+      private final @Nullable Output<String> gceZone;
 
-    public Input<String> getGceZone() {
-        return this.gceZone == null ? Input.empty() : this.gceZone;
+    public Output<String> getGceZone() {
+        return this.gceZone == null ? Output.empty() : this.gceZone;
     }
 
     /**
@@ -124,10 +124,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceType")
-      private final @Nullable Input<InstanceInstanceType> instanceType;
+      private final @Nullable Output<InstanceInstanceType> instanceType;
 
-    public Input<InstanceInstanceType> getInstanceType() {
-        return this.instanceType == null ? Input.empty() : this.instanceType;
+    public Output<InstanceInstanceType> getInstanceType() {
+        return this.instanceType == null ? Output.empty() : this.instanceType;
     }
 
     /**
@@ -135,10 +135,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAddresses")
-      private final @Nullable Input<List<IpMappingArgs>> ipAddresses;
+      private final @Nullable Output<List<IpMappingArgs>> ipAddresses;
 
-    public Input<List<IpMappingArgs>> getIpAddresses() {
-        return this.ipAddresses == null ? Input.empty() : this.ipAddresses;
+    public Output<List<IpMappingArgs>> getIpAddresses() {
+        return this.ipAddresses == null ? Output.empty() : this.ipAddresses;
     }
 
     /**
@@ -146,10 +146,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -157,10 +157,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="masterInstanceName")
-      private final @Nullable Input<String> masterInstanceName;
+      private final @Nullable Output<String> masterInstanceName;
 
-    public Input<String> getMasterInstanceName() {
-        return this.masterInstanceName == null ? Input.empty() : this.masterInstanceName;
+    public Output<String> getMasterInstanceName() {
+        return this.masterInstanceName == null ? Output.empty() : this.masterInstanceName;
     }
 
     /**
@@ -168,10 +168,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxDiskSize")
-      private final @Nullable Input<String> maxDiskSize;
+      private final @Nullable Output<String> maxDiskSize;
 
-    public Input<String> getMaxDiskSize() {
-        return this.maxDiskSize == null ? Input.empty() : this.maxDiskSize;
+    public Output<String> getMaxDiskSize() {
+        return this.maxDiskSize == null ? Output.empty() : this.maxDiskSize;
     }
 
     /**
@@ -179,10 +179,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -190,10 +190,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="onPremisesConfiguration")
-      private final @Nullable Input<OnPremisesConfigurationArgs> onPremisesConfiguration;
+      private final @Nullable Output<OnPremisesConfigurationArgs> onPremisesConfiguration;
 
-    public Input<OnPremisesConfigurationArgs> getOnPremisesConfiguration() {
-        return this.onPremisesConfiguration == null ? Input.empty() : this.onPremisesConfiguration;
+    public Output<OnPremisesConfigurationArgs> getOnPremisesConfiguration() {
+        return this.onPremisesConfiguration == null ? Output.empty() : this.onPremisesConfiguration;
     }
 
     /**
@@ -201,10 +201,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outOfDiskReport")
-      private final @Nullable Input<SqlOutOfDiskReportArgs> outOfDiskReport;
+      private final @Nullable Output<SqlOutOfDiskReportArgs> outOfDiskReport;
 
-    public Input<SqlOutOfDiskReportArgs> getOutOfDiskReport() {
-        return this.outOfDiskReport == null ? Input.empty() : this.outOfDiskReport;
+    public Output<SqlOutOfDiskReportArgs> getOutOfDiskReport() {
+        return this.outOfDiskReport == null ? Output.empty() : this.outOfDiskReport;
     }
 
     /**
@@ -212,10 +212,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -223,10 +223,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -234,10 +234,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="replicaConfiguration")
-      private final @Nullable Input<ReplicaConfigurationArgs> replicaConfiguration;
+      private final @Nullable Output<ReplicaConfigurationArgs> replicaConfiguration;
 
-    public Input<ReplicaConfigurationArgs> getReplicaConfiguration() {
-        return this.replicaConfiguration == null ? Input.empty() : this.replicaConfiguration;
+    public Output<ReplicaConfigurationArgs> getReplicaConfiguration() {
+        return this.replicaConfiguration == null ? Output.empty() : this.replicaConfiguration;
     }
 
     /**
@@ -245,10 +245,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="replicaNames")
-      private final @Nullable Input<List<String>> replicaNames;
+      private final @Nullable Output<List<String>> replicaNames;
 
-    public Input<List<String>> getReplicaNames() {
-        return this.replicaNames == null ? Input.empty() : this.replicaNames;
+    public Output<List<String>> getReplicaNames() {
+        return this.replicaNames == null ? Output.empty() : this.replicaNames;
     }
 
     /**
@@ -256,10 +256,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rootPassword")
-      private final @Nullable Input<String> rootPassword;
+      private final @Nullable Output<String> rootPassword;
 
-    public Input<String> getRootPassword() {
-        return this.rootPassword == null ? Input.empty() : this.rootPassword;
+    public Output<String> getRootPassword() {
+        return this.rootPassword == null ? Output.empty() : this.rootPassword;
     }
 
     /**
@@ -267,10 +267,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="satisfiesPzs")
-      private final @Nullable Input<Boolean> satisfiesPzs;
+      private final @Nullable Output<Boolean> satisfiesPzs;
 
-    public Input<Boolean> getSatisfiesPzs() {
-        return this.satisfiesPzs == null ? Input.empty() : this.satisfiesPzs;
+    public Output<Boolean> getSatisfiesPzs() {
+        return this.satisfiesPzs == null ? Output.empty() : this.satisfiesPzs;
     }
 
     /**
@@ -278,10 +278,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scheduledMaintenance")
-      private final @Nullable Input<SqlScheduledMaintenanceArgs> scheduledMaintenance;
+      private final @Nullable Output<SqlScheduledMaintenanceArgs> scheduledMaintenance;
 
-    public Input<SqlScheduledMaintenanceArgs> getScheduledMaintenance() {
-        return this.scheduledMaintenance == null ? Input.empty() : this.scheduledMaintenance;
+    public Output<SqlScheduledMaintenanceArgs> getScheduledMaintenance() {
+        return this.scheduledMaintenance == null ? Output.empty() : this.scheduledMaintenance;
     }
 
     /**
@@ -289,10 +289,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secondaryGceZone")
-      private final @Nullable Input<String> secondaryGceZone;
+      private final @Nullable Output<String> secondaryGceZone;
 
-    public Input<String> getSecondaryGceZone() {
-        return this.secondaryGceZone == null ? Input.empty() : this.secondaryGceZone;
+    public Output<String> getSecondaryGceZone() {
+        return this.secondaryGceZone == null ? Output.empty() : this.secondaryGceZone;
     }
 
     /**
@@ -300,10 +300,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfLink")
-      private final @Nullable Input<String> selfLink;
+      private final @Nullable Output<String> selfLink;
 
-    public Input<String> getSelfLink() {
-        return this.selfLink == null ? Input.empty() : this.selfLink;
+    public Output<String> getSelfLink() {
+        return this.selfLink == null ? Output.empty() : this.selfLink;
     }
 
     /**
@@ -311,10 +311,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverCaCert")
-      private final @Nullable Input<SslCertArgs> serverCaCert;
+      private final @Nullable Output<SslCertArgs> serverCaCert;
 
-    public Input<SslCertArgs> getServerCaCert() {
-        return this.serverCaCert == null ? Input.empty() : this.serverCaCert;
+    public Output<SslCertArgs> getServerCaCert() {
+        return this.serverCaCert == null ? Output.empty() : this.serverCaCert;
     }
 
     /**
@@ -322,10 +322,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccountEmailAddress")
-      private final @Nullable Input<String> serviceAccountEmailAddress;
+      private final @Nullable Output<String> serviceAccountEmailAddress;
 
-    public Input<String> getServiceAccountEmailAddress() {
-        return this.serviceAccountEmailAddress == null ? Input.empty() : this.serviceAccountEmailAddress;
+    public Output<String> getServiceAccountEmailAddress() {
+        return this.serviceAccountEmailAddress == null ? Output.empty() : this.serviceAccountEmailAddress;
     }
 
     /**
@@ -333,10 +333,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="settings")
-      private final @Nullable Input<SettingsArgs> settings;
+      private final @Nullable Output<SettingsArgs> settings;
 
-    public Input<SettingsArgs> getSettings() {
-        return this.settings == null ? Input.empty() : this.settings;
+    public Output<SettingsArgs> getSettings() {
+        return this.settings == null ? Output.empty() : this.settings;
     }
 
     /**
@@ -344,10 +344,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<InstanceState> state;
+      private final @Nullable Output<InstanceState> state;
 
-    public Input<InstanceState> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<InstanceState> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     /**
@@ -355,43 +355,43 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="suspensionReason")
-      private final @Nullable Input<List<InstanceSuspensionReasonItem>> suspensionReason;
+      private final @Nullable Output<List<InstanceSuspensionReasonItem>> suspensionReason;
 
-    public Input<List<InstanceSuspensionReasonItem>> getSuspensionReason() {
-        return this.suspensionReason == null ? Input.empty() : this.suspensionReason;
+    public Output<List<InstanceSuspensionReasonItem>> getSuspensionReason() {
+        return this.suspensionReason == null ? Output.empty() : this.suspensionReason;
     }
 
     public InstanceArgs(
-        @Nullable Input<InstanceBackendType> backendType,
-        @Nullable Input<String> connectionName,
-        @Nullable Input<String> currentDiskSize,
-        @Nullable Input<InstanceDatabaseVersion> databaseVersion,
-        @Nullable Input<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration,
-        @Nullable Input<DiskEncryptionStatusArgs> diskEncryptionStatus,
-        @Nullable Input<InstanceFailoverReplicaArgs> failoverReplica,
-        @Nullable Input<String> gceZone,
-        @Nullable Input<InstanceInstanceType> instanceType,
-        @Nullable Input<List<IpMappingArgs>> ipAddresses,
-        @Nullable Input<String> kind,
-        @Nullable Input<String> masterInstanceName,
-        @Nullable Input<String> maxDiskSize,
-        @Nullable Input<String> name,
-        @Nullable Input<OnPremisesConfigurationArgs> onPremisesConfiguration,
-        @Nullable Input<SqlOutOfDiskReportArgs> outOfDiskReport,
-        @Nullable Input<String> project,
-        @Nullable Input<String> region,
-        @Nullable Input<ReplicaConfigurationArgs> replicaConfiguration,
-        @Nullable Input<List<String>> replicaNames,
-        @Nullable Input<String> rootPassword,
-        @Nullable Input<Boolean> satisfiesPzs,
-        @Nullable Input<SqlScheduledMaintenanceArgs> scheduledMaintenance,
-        @Nullable Input<String> secondaryGceZone,
-        @Nullable Input<String> selfLink,
-        @Nullable Input<SslCertArgs> serverCaCert,
-        @Nullable Input<String> serviceAccountEmailAddress,
-        @Nullable Input<SettingsArgs> settings,
-        @Nullable Input<InstanceState> state,
-        @Nullable Input<List<InstanceSuspensionReasonItem>> suspensionReason) {
+        @Nullable Output<InstanceBackendType> backendType,
+        @Nullable Output<String> connectionName,
+        @Nullable Output<String> currentDiskSize,
+        @Nullable Output<InstanceDatabaseVersion> databaseVersion,
+        @Nullable Output<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration,
+        @Nullable Output<DiskEncryptionStatusArgs> diskEncryptionStatus,
+        @Nullable Output<InstanceFailoverReplicaArgs> failoverReplica,
+        @Nullable Output<String> gceZone,
+        @Nullable Output<InstanceInstanceType> instanceType,
+        @Nullable Output<List<IpMappingArgs>> ipAddresses,
+        @Nullable Output<String> kind,
+        @Nullable Output<String> masterInstanceName,
+        @Nullable Output<String> maxDiskSize,
+        @Nullable Output<String> name,
+        @Nullable Output<OnPremisesConfigurationArgs> onPremisesConfiguration,
+        @Nullable Output<SqlOutOfDiskReportArgs> outOfDiskReport,
+        @Nullable Output<String> project,
+        @Nullable Output<String> region,
+        @Nullable Output<ReplicaConfigurationArgs> replicaConfiguration,
+        @Nullable Output<List<String>> replicaNames,
+        @Nullable Output<String> rootPassword,
+        @Nullable Output<Boolean> satisfiesPzs,
+        @Nullable Output<SqlScheduledMaintenanceArgs> scheduledMaintenance,
+        @Nullable Output<String> secondaryGceZone,
+        @Nullable Output<String> selfLink,
+        @Nullable Output<SslCertArgs> serverCaCert,
+        @Nullable Output<String> serviceAccountEmailAddress,
+        @Nullable Output<SettingsArgs> settings,
+        @Nullable Output<InstanceState> state,
+        @Nullable Output<List<InstanceSuspensionReasonItem>> suspensionReason) {
         this.backendType = backendType;
         this.connectionName = connectionName;
         this.currentDiskSize = currentDiskSize;
@@ -425,36 +425,36 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceArgs() {
-        this.backendType = Input.empty();
-        this.connectionName = Input.empty();
-        this.currentDiskSize = Input.empty();
-        this.databaseVersion = Input.empty();
-        this.diskEncryptionConfiguration = Input.empty();
-        this.diskEncryptionStatus = Input.empty();
-        this.failoverReplica = Input.empty();
-        this.gceZone = Input.empty();
-        this.instanceType = Input.empty();
-        this.ipAddresses = Input.empty();
-        this.kind = Input.empty();
-        this.masterInstanceName = Input.empty();
-        this.maxDiskSize = Input.empty();
-        this.name = Input.empty();
-        this.onPremisesConfiguration = Input.empty();
-        this.outOfDiskReport = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
-        this.replicaConfiguration = Input.empty();
-        this.replicaNames = Input.empty();
-        this.rootPassword = Input.empty();
-        this.satisfiesPzs = Input.empty();
-        this.scheduledMaintenance = Input.empty();
-        this.secondaryGceZone = Input.empty();
-        this.selfLink = Input.empty();
-        this.serverCaCert = Input.empty();
-        this.serviceAccountEmailAddress = Input.empty();
-        this.settings = Input.empty();
-        this.state = Input.empty();
-        this.suspensionReason = Input.empty();
+        this.backendType = Output.empty();
+        this.connectionName = Output.empty();
+        this.currentDiskSize = Output.empty();
+        this.databaseVersion = Output.empty();
+        this.diskEncryptionConfiguration = Output.empty();
+        this.diskEncryptionStatus = Output.empty();
+        this.failoverReplica = Output.empty();
+        this.gceZone = Output.empty();
+        this.instanceType = Output.empty();
+        this.ipAddresses = Output.empty();
+        this.kind = Output.empty();
+        this.masterInstanceName = Output.empty();
+        this.maxDiskSize = Output.empty();
+        this.name = Output.empty();
+        this.onPremisesConfiguration = Output.empty();
+        this.outOfDiskReport = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
+        this.replicaConfiguration = Output.empty();
+        this.replicaNames = Output.empty();
+        this.rootPassword = Output.empty();
+        this.satisfiesPzs = Output.empty();
+        this.scheduledMaintenance = Output.empty();
+        this.secondaryGceZone = Output.empty();
+        this.selfLink = Output.empty();
+        this.serverCaCert = Output.empty();
+        this.serviceAccountEmailAddress = Output.empty();
+        this.settings = Output.empty();
+        this.state = Output.empty();
+        this.suspensionReason = Output.empty();
     }
 
     public static Builder builder() {
@@ -466,36 +466,36 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<InstanceBackendType> backendType;
-        private @Nullable Input<String> connectionName;
-        private @Nullable Input<String> currentDiskSize;
-        private @Nullable Input<InstanceDatabaseVersion> databaseVersion;
-        private @Nullable Input<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration;
-        private @Nullable Input<DiskEncryptionStatusArgs> diskEncryptionStatus;
-        private @Nullable Input<InstanceFailoverReplicaArgs> failoverReplica;
-        private @Nullable Input<String> gceZone;
-        private @Nullable Input<InstanceInstanceType> instanceType;
-        private @Nullable Input<List<IpMappingArgs>> ipAddresses;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<String> masterInstanceName;
-        private @Nullable Input<String> maxDiskSize;
-        private @Nullable Input<String> name;
-        private @Nullable Input<OnPremisesConfigurationArgs> onPremisesConfiguration;
-        private @Nullable Input<SqlOutOfDiskReportArgs> outOfDiskReport;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> region;
-        private @Nullable Input<ReplicaConfigurationArgs> replicaConfiguration;
-        private @Nullable Input<List<String>> replicaNames;
-        private @Nullable Input<String> rootPassword;
-        private @Nullable Input<Boolean> satisfiesPzs;
-        private @Nullable Input<SqlScheduledMaintenanceArgs> scheduledMaintenance;
-        private @Nullable Input<String> secondaryGceZone;
-        private @Nullable Input<String> selfLink;
-        private @Nullable Input<SslCertArgs> serverCaCert;
-        private @Nullable Input<String> serviceAccountEmailAddress;
-        private @Nullable Input<SettingsArgs> settings;
-        private @Nullable Input<InstanceState> state;
-        private @Nullable Input<List<InstanceSuspensionReasonItem>> suspensionReason;
+        private @Nullable Output<InstanceBackendType> backendType;
+        private @Nullable Output<String> connectionName;
+        private @Nullable Output<String> currentDiskSize;
+        private @Nullable Output<InstanceDatabaseVersion> databaseVersion;
+        private @Nullable Output<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration;
+        private @Nullable Output<DiskEncryptionStatusArgs> diskEncryptionStatus;
+        private @Nullable Output<InstanceFailoverReplicaArgs> failoverReplica;
+        private @Nullable Output<String> gceZone;
+        private @Nullable Output<InstanceInstanceType> instanceType;
+        private @Nullable Output<List<IpMappingArgs>> ipAddresses;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<String> masterInstanceName;
+        private @Nullable Output<String> maxDiskSize;
+        private @Nullable Output<String> name;
+        private @Nullable Output<OnPremisesConfigurationArgs> onPremisesConfiguration;
+        private @Nullable Output<SqlOutOfDiskReportArgs> outOfDiskReport;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> region;
+        private @Nullable Output<ReplicaConfigurationArgs> replicaConfiguration;
+        private @Nullable Output<List<String>> replicaNames;
+        private @Nullable Output<String> rootPassword;
+        private @Nullable Output<Boolean> satisfiesPzs;
+        private @Nullable Output<SqlScheduledMaintenanceArgs> scheduledMaintenance;
+        private @Nullable Output<String> secondaryGceZone;
+        private @Nullable Output<String> selfLink;
+        private @Nullable Output<SslCertArgs> serverCaCert;
+        private @Nullable Output<String> serviceAccountEmailAddress;
+        private @Nullable Output<SettingsArgs> settings;
+        private @Nullable Output<InstanceState> state;
+        private @Nullable Output<List<InstanceSuspensionReasonItem>> suspensionReason;
 
         public Builder() {
     	      // Empty
@@ -535,303 +535,303 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.suspensionReason = defaults.suspensionReason;
         }
 
-        public Builder backendType(@Nullable Input<InstanceBackendType> backendType) {
+        public Builder backendType(@Nullable Output<InstanceBackendType> backendType) {
             this.backendType = backendType;
             return this;
         }
 
         public Builder backendType(@Nullable InstanceBackendType backendType) {
-            this.backendType = Input.ofNullable(backendType);
+            this.backendType = Output.ofNullable(backendType);
             return this;
         }
 
-        public Builder connectionName(@Nullable Input<String> connectionName) {
+        public Builder connectionName(@Nullable Output<String> connectionName) {
             this.connectionName = connectionName;
             return this;
         }
 
         public Builder connectionName(@Nullable String connectionName) {
-            this.connectionName = Input.ofNullable(connectionName);
+            this.connectionName = Output.ofNullable(connectionName);
             return this;
         }
 
-        public Builder currentDiskSize(@Nullable Input<String> currentDiskSize) {
+        public Builder currentDiskSize(@Nullable Output<String> currentDiskSize) {
             this.currentDiskSize = currentDiskSize;
             return this;
         }
 
         public Builder currentDiskSize(@Nullable String currentDiskSize) {
-            this.currentDiskSize = Input.ofNullable(currentDiskSize);
+            this.currentDiskSize = Output.ofNullable(currentDiskSize);
             return this;
         }
 
-        public Builder databaseVersion(@Nullable Input<InstanceDatabaseVersion> databaseVersion) {
+        public Builder databaseVersion(@Nullable Output<InstanceDatabaseVersion> databaseVersion) {
             this.databaseVersion = databaseVersion;
             return this;
         }
 
         public Builder databaseVersion(@Nullable InstanceDatabaseVersion databaseVersion) {
-            this.databaseVersion = Input.ofNullable(databaseVersion);
+            this.databaseVersion = Output.ofNullable(databaseVersion);
             return this;
         }
 
-        public Builder diskEncryptionConfiguration(@Nullable Input<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration) {
+        public Builder diskEncryptionConfiguration(@Nullable Output<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration) {
             this.diskEncryptionConfiguration = diskEncryptionConfiguration;
             return this;
         }
 
         public Builder diskEncryptionConfiguration(@Nullable DiskEncryptionConfigurationArgs diskEncryptionConfiguration) {
-            this.diskEncryptionConfiguration = Input.ofNullable(diskEncryptionConfiguration);
+            this.diskEncryptionConfiguration = Output.ofNullable(diskEncryptionConfiguration);
             return this;
         }
 
-        public Builder diskEncryptionStatus(@Nullable Input<DiskEncryptionStatusArgs> diskEncryptionStatus) {
+        public Builder diskEncryptionStatus(@Nullable Output<DiskEncryptionStatusArgs> diskEncryptionStatus) {
             this.diskEncryptionStatus = diskEncryptionStatus;
             return this;
         }
 
         public Builder diskEncryptionStatus(@Nullable DiskEncryptionStatusArgs diskEncryptionStatus) {
-            this.diskEncryptionStatus = Input.ofNullable(diskEncryptionStatus);
+            this.diskEncryptionStatus = Output.ofNullable(diskEncryptionStatus);
             return this;
         }
 
-        public Builder failoverReplica(@Nullable Input<InstanceFailoverReplicaArgs> failoverReplica) {
+        public Builder failoverReplica(@Nullable Output<InstanceFailoverReplicaArgs> failoverReplica) {
             this.failoverReplica = failoverReplica;
             return this;
         }
 
         public Builder failoverReplica(@Nullable InstanceFailoverReplicaArgs failoverReplica) {
-            this.failoverReplica = Input.ofNullable(failoverReplica);
+            this.failoverReplica = Output.ofNullable(failoverReplica);
             return this;
         }
 
-        public Builder gceZone(@Nullable Input<String> gceZone) {
+        public Builder gceZone(@Nullable Output<String> gceZone) {
             this.gceZone = gceZone;
             return this;
         }
 
         public Builder gceZone(@Nullable String gceZone) {
-            this.gceZone = Input.ofNullable(gceZone);
+            this.gceZone = Output.ofNullable(gceZone);
             return this;
         }
 
-        public Builder instanceType(@Nullable Input<InstanceInstanceType> instanceType) {
+        public Builder instanceType(@Nullable Output<InstanceInstanceType> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
         public Builder instanceType(@Nullable InstanceInstanceType instanceType) {
-            this.instanceType = Input.ofNullable(instanceType);
+            this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
 
-        public Builder ipAddresses(@Nullable Input<List<IpMappingArgs>> ipAddresses) {
+        public Builder ipAddresses(@Nullable Output<List<IpMappingArgs>> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
 
         public Builder ipAddresses(@Nullable List<IpMappingArgs> ipAddresses) {
-            this.ipAddresses = Input.ofNullable(ipAddresses);
+            this.ipAddresses = Output.ofNullable(ipAddresses);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder masterInstanceName(@Nullable Input<String> masterInstanceName) {
+        public Builder masterInstanceName(@Nullable Output<String> masterInstanceName) {
             this.masterInstanceName = masterInstanceName;
             return this;
         }
 
         public Builder masterInstanceName(@Nullable String masterInstanceName) {
-            this.masterInstanceName = Input.ofNullable(masterInstanceName);
+            this.masterInstanceName = Output.ofNullable(masterInstanceName);
             return this;
         }
 
-        public Builder maxDiskSize(@Nullable Input<String> maxDiskSize) {
+        public Builder maxDiskSize(@Nullable Output<String> maxDiskSize) {
             this.maxDiskSize = maxDiskSize;
             return this;
         }
 
         public Builder maxDiskSize(@Nullable String maxDiskSize) {
-            this.maxDiskSize = Input.ofNullable(maxDiskSize);
+            this.maxDiskSize = Output.ofNullable(maxDiskSize);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder onPremisesConfiguration(@Nullable Input<OnPremisesConfigurationArgs> onPremisesConfiguration) {
+        public Builder onPremisesConfiguration(@Nullable Output<OnPremisesConfigurationArgs> onPremisesConfiguration) {
             this.onPremisesConfiguration = onPremisesConfiguration;
             return this;
         }
 
         public Builder onPremisesConfiguration(@Nullable OnPremisesConfigurationArgs onPremisesConfiguration) {
-            this.onPremisesConfiguration = Input.ofNullable(onPremisesConfiguration);
+            this.onPremisesConfiguration = Output.ofNullable(onPremisesConfiguration);
             return this;
         }
 
-        public Builder outOfDiskReport(@Nullable Input<SqlOutOfDiskReportArgs> outOfDiskReport) {
+        public Builder outOfDiskReport(@Nullable Output<SqlOutOfDiskReportArgs> outOfDiskReport) {
             this.outOfDiskReport = outOfDiskReport;
             return this;
         }
 
         public Builder outOfDiskReport(@Nullable SqlOutOfDiskReportArgs outOfDiskReport) {
-            this.outOfDiskReport = Input.ofNullable(outOfDiskReport);
+            this.outOfDiskReport = Output.ofNullable(outOfDiskReport);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder replicaConfiguration(@Nullable Input<ReplicaConfigurationArgs> replicaConfiguration) {
+        public Builder replicaConfiguration(@Nullable Output<ReplicaConfigurationArgs> replicaConfiguration) {
             this.replicaConfiguration = replicaConfiguration;
             return this;
         }
 
         public Builder replicaConfiguration(@Nullable ReplicaConfigurationArgs replicaConfiguration) {
-            this.replicaConfiguration = Input.ofNullable(replicaConfiguration);
+            this.replicaConfiguration = Output.ofNullable(replicaConfiguration);
             return this;
         }
 
-        public Builder replicaNames(@Nullable Input<List<String>> replicaNames) {
+        public Builder replicaNames(@Nullable Output<List<String>> replicaNames) {
             this.replicaNames = replicaNames;
             return this;
         }
 
         public Builder replicaNames(@Nullable List<String> replicaNames) {
-            this.replicaNames = Input.ofNullable(replicaNames);
+            this.replicaNames = Output.ofNullable(replicaNames);
             return this;
         }
 
-        public Builder rootPassword(@Nullable Input<String> rootPassword) {
+        public Builder rootPassword(@Nullable Output<String> rootPassword) {
             this.rootPassword = rootPassword;
             return this;
         }
 
         public Builder rootPassword(@Nullable String rootPassword) {
-            this.rootPassword = Input.ofNullable(rootPassword);
+            this.rootPassword = Output.ofNullable(rootPassword);
             return this;
         }
 
-        public Builder satisfiesPzs(@Nullable Input<Boolean> satisfiesPzs) {
+        public Builder satisfiesPzs(@Nullable Output<Boolean> satisfiesPzs) {
             this.satisfiesPzs = satisfiesPzs;
             return this;
         }
 
         public Builder satisfiesPzs(@Nullable Boolean satisfiesPzs) {
-            this.satisfiesPzs = Input.ofNullable(satisfiesPzs);
+            this.satisfiesPzs = Output.ofNullable(satisfiesPzs);
             return this;
         }
 
-        public Builder scheduledMaintenance(@Nullable Input<SqlScheduledMaintenanceArgs> scheduledMaintenance) {
+        public Builder scheduledMaintenance(@Nullable Output<SqlScheduledMaintenanceArgs> scheduledMaintenance) {
             this.scheduledMaintenance = scheduledMaintenance;
             return this;
         }
 
         public Builder scheduledMaintenance(@Nullable SqlScheduledMaintenanceArgs scheduledMaintenance) {
-            this.scheduledMaintenance = Input.ofNullable(scheduledMaintenance);
+            this.scheduledMaintenance = Output.ofNullable(scheduledMaintenance);
             return this;
         }
 
-        public Builder secondaryGceZone(@Nullable Input<String> secondaryGceZone) {
+        public Builder secondaryGceZone(@Nullable Output<String> secondaryGceZone) {
             this.secondaryGceZone = secondaryGceZone;
             return this;
         }
 
         public Builder secondaryGceZone(@Nullable String secondaryGceZone) {
-            this.secondaryGceZone = Input.ofNullable(secondaryGceZone);
+            this.secondaryGceZone = Output.ofNullable(secondaryGceZone);
             return this;
         }
 
-        public Builder selfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Input.ofNullable(selfLink);
+            this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
 
-        public Builder serverCaCert(@Nullable Input<SslCertArgs> serverCaCert) {
+        public Builder serverCaCert(@Nullable Output<SslCertArgs> serverCaCert) {
             this.serverCaCert = serverCaCert;
             return this;
         }
 
         public Builder serverCaCert(@Nullable SslCertArgs serverCaCert) {
-            this.serverCaCert = Input.ofNullable(serverCaCert);
+            this.serverCaCert = Output.ofNullable(serverCaCert);
             return this;
         }
 
-        public Builder serviceAccountEmailAddress(@Nullable Input<String> serviceAccountEmailAddress) {
+        public Builder serviceAccountEmailAddress(@Nullable Output<String> serviceAccountEmailAddress) {
             this.serviceAccountEmailAddress = serviceAccountEmailAddress;
             return this;
         }
 
         public Builder serviceAccountEmailAddress(@Nullable String serviceAccountEmailAddress) {
-            this.serviceAccountEmailAddress = Input.ofNullable(serviceAccountEmailAddress);
+            this.serviceAccountEmailAddress = Output.ofNullable(serviceAccountEmailAddress);
             return this;
         }
 
-        public Builder settings(@Nullable Input<SettingsArgs> settings) {
+        public Builder settings(@Nullable Output<SettingsArgs> settings) {
             this.settings = settings;
             return this;
         }
 
         public Builder settings(@Nullable SettingsArgs settings) {
-            this.settings = Input.ofNullable(settings);
+            this.settings = Output.ofNullable(settings);
             return this;
         }
 
-        public Builder state(@Nullable Input<InstanceState> state) {
+        public Builder state(@Nullable Output<InstanceState> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable InstanceState state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
 
-        public Builder suspensionReason(@Nullable Input<List<InstanceSuspensionReasonItem>> suspensionReason) {
+        public Builder suspensionReason(@Nullable Output<List<InstanceSuspensionReasonItem>> suspensionReason) {
             this.suspensionReason = suspensionReason;
             return this;
         }
 
         public Builder suspensionReason(@Nullable List<InstanceSuspensionReasonItem> suspensionReason) {
-            this.suspensionReason = Input.ofNullable(suspensionReason);
+            this.suspensionReason = Output.ofNullable(suspensionReason);
             return this;
         }
         public InstanceArgs build() {

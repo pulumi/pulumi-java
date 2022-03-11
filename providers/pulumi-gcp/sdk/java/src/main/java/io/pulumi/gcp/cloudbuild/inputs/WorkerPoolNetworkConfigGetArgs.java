@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudbuild.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class WorkerPoolNetworkConfigGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="peeredNetwork", required=true)
-      private final Input<String> peeredNetwork;
+      private final Output<String> peeredNetwork;
 
-    public Input<String> getPeeredNetwork() {
+    public Output<String> getPeeredNetwork() {
         return this.peeredNetwork;
     }
 
-    public WorkerPoolNetworkConfigGetArgs(Input<String> peeredNetwork) {
+    public WorkerPoolNetworkConfigGetArgs(Output<String> peeredNetwork) {
         this.peeredNetwork = Objects.requireNonNull(peeredNetwork, "expected parameter 'peeredNetwork' to be non-null");
     }
 
     private WorkerPoolNetworkConfigGetArgs() {
-        this.peeredNetwork = Input.empty();
+        this.peeredNetwork = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class WorkerPoolNetworkConfigGetArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<String> peeredNetwork;
+        private Output<String> peeredNetwork;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class WorkerPoolNetworkConfigGetArgs extends io.pulumi.resources.Re
     	      this.peeredNetwork = defaults.peeredNetwork;
         }
 
-        public Builder peeredNetwork(Input<String> peeredNetwork) {
+        public Builder peeredNetwork(Output<String> peeredNetwork) {
             this.peeredNetwork = Objects.requireNonNull(peeredNetwork);
             return this;
         }
 
         public Builder peeredNetwork(String peeredNetwork) {
-            this.peeredNetwork = Input.of(Objects.requireNonNull(peeredNetwork));
+            this.peeredNetwork = Output.of(Objects.requireNonNull(peeredNetwork));
             return this;
         }
         public WorkerPoolNetworkConfigGetArgs build() {

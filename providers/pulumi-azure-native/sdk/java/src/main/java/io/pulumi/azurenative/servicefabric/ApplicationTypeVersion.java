@@ -6,7 +6,6 @@ package io.pulumi.azurenative.servicefabric;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.servicefabric.ApplicationTypeVersionArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -183,25 +182,25 @@ public class ApplicationTypeVersion extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ApplicationTypeVersion(String name, ApplicationTypeVersionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:servicefabric:ApplicationTypeVersion", name, args == null ? ApplicationTypeVersionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:servicefabric:ApplicationTypeVersion", name, args == null ? ApplicationTypeVersionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ApplicationTypeVersion(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ApplicationTypeVersion(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:servicefabric:ApplicationTypeVersion", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:servicefabric/v20170701preview:ApplicationTypeVersion").build()),
-                Input.of(Alias.builder().setType("azure-native:servicefabric/v20190301:ApplicationTypeVersion").build()),
-                Input.of(Alias.builder().setType("azure-native:servicefabric/v20190301preview:ApplicationTypeVersion").build()),
-                Input.of(Alias.builder().setType("azure-native:servicefabric/v20190601preview:ApplicationTypeVersion").build()),
-                Input.of(Alias.builder().setType("azure-native:servicefabric/v20191101preview:ApplicationTypeVersion").build()),
-                Input.of(Alias.builder().setType("azure-native:servicefabric/v20200301:ApplicationTypeVersion").build()),
-                Input.of(Alias.builder().setType("azure-native:servicefabric/v20201201preview:ApplicationTypeVersion").build()),
-                Input.of(Alias.builder().setType("azure-native:servicefabric/v20210601:ApplicationTypeVersion").build())
+                Output.of(Alias.builder().setType("azure-native:servicefabric/v20170701preview:ApplicationTypeVersion").build()),
+                Output.of(Alias.builder().setType("azure-native:servicefabric/v20190301:ApplicationTypeVersion").build()),
+                Output.of(Alias.builder().setType("azure-native:servicefabric/v20190301preview:ApplicationTypeVersion").build()),
+                Output.of(Alias.builder().setType("azure-native:servicefabric/v20190601preview:ApplicationTypeVersion").build()),
+                Output.of(Alias.builder().setType("azure-native:servicefabric/v20191101preview:ApplicationTypeVersion").build()),
+                Output.of(Alias.builder().setType("azure-native:servicefabric/v20200301:ApplicationTypeVersion").build()),
+                Output.of(Alias.builder().setType("azure-native:servicefabric/v20201201preview:ApplicationTypeVersion").build()),
+                Output.of(Alias.builder().setType("azure-native:servicefabric/v20210601:ApplicationTypeVersion").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -215,7 +214,7 @@ public class ApplicationTypeVersion extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ApplicationTypeVersion get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ApplicationTypeVersion get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ApplicationTypeVersion(name, id, options);
     }
 }

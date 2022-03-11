@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class DenylistCustomAlertRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="denylistValues", required=true)
-      private final Input<List<String>> denylistValues;
+      private final Output<List<String>> denylistValues;
 
-    public Input<List<String>> getDenylistValues() {
+    public Output<List<String>> getDenylistValues() {
         return this.denylistValues;
     }
 
@@ -35,9 +35,9 @@ public final class DenylistCustomAlertRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="isEnabled", required=true)
-      private final Input<Boolean> isEnabled;
+      private final Output<Boolean> isEnabled;
 
-    public Input<Boolean> getIsEnabled() {
+    public Output<Boolean> getIsEnabled() {
         return this.isEnabled;
     }
 
@@ -47,25 +47,25 @@ public final class DenylistCustomAlertRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="ruleType", required=true)
-      private final Input<String> ruleType;
+      private final Output<String> ruleType;
 
-    public Input<String> getRuleType() {
+    public Output<String> getRuleType() {
         return this.ruleType;
     }
 
     public DenylistCustomAlertRuleArgs(
-        Input<List<String>> denylistValues,
-        Input<Boolean> isEnabled,
-        Input<String> ruleType) {
+        Output<List<String>> denylistValues,
+        Output<Boolean> isEnabled,
+        Output<String> ruleType) {
         this.denylistValues = Objects.requireNonNull(denylistValues, "expected parameter 'denylistValues' to be non-null");
         this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
         this.ruleType = Objects.requireNonNull(ruleType, "expected parameter 'ruleType' to be non-null");
     }
 
     private DenylistCustomAlertRuleArgs() {
-        this.denylistValues = Input.empty();
-        this.isEnabled = Input.empty();
-        this.ruleType = Input.empty();
+        this.denylistValues = Output.empty();
+        this.isEnabled = Output.empty();
+        this.ruleType = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class DenylistCustomAlertRuleArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<List<String>> denylistValues;
-        private Input<Boolean> isEnabled;
-        private Input<String> ruleType;
+        private Output<List<String>> denylistValues;
+        private Output<Boolean> isEnabled;
+        private Output<String> ruleType;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class DenylistCustomAlertRuleArgs extends io.pulumi.resources.Resou
     	      this.ruleType = defaults.ruleType;
         }
 
-        public Builder denylistValues(Input<List<String>> denylistValues) {
+        public Builder denylistValues(Output<List<String>> denylistValues) {
             this.denylistValues = Objects.requireNonNull(denylistValues);
             return this;
         }
 
         public Builder denylistValues(List<String> denylistValues) {
-            this.denylistValues = Input.of(Objects.requireNonNull(denylistValues));
+            this.denylistValues = Output.of(Objects.requireNonNull(denylistValues));
             return this;
         }
 
-        public Builder isEnabled(Input<Boolean> isEnabled) {
+        public Builder isEnabled(Output<Boolean> isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Input.of(Objects.requireNonNull(isEnabled));
+            this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
             return this;
         }
 
-        public Builder ruleType(Input<String> ruleType) {
+        public Builder ruleType(Output<String> ruleType) {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }
 
         public Builder ruleType(String ruleType) {
-            this.ruleType = Input.of(Objects.requireNonNull(ruleType));
+            this.ruleType = Output.of(Objects.requireNonNull(ruleType));
             return this;
         }
         public DenylistCustomAlertRuleArgs build() {

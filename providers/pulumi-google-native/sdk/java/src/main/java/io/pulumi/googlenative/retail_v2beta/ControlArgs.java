@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2beta;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.retail_v2beta.enums.ControlSolutionTypesItem;
 import io.pulumi.googlenative.retail_v2beta.inputs.GoogleCloudRetailV2betaRuleArgs;
@@ -19,16 +19,16 @@ public final class ControlArgs extends io.pulumi.resources.ResourceArgs {
     public static final ControlArgs Empty = new ControlArgs();
 
     @InputImport(name="catalogId", required=true)
-      private final Input<String> catalogId;
+      private final Output<String> catalogId;
 
-    public Input<String> getCatalogId() {
+    public Output<String> getCatalogId() {
         return this.catalogId;
     }
 
     @InputImport(name="controlId", required=true)
-      private final Input<String> controlId;
+      private final Output<String> controlId;
 
-    public Input<String> getControlId() {
+    public Output<String> getControlId() {
         return this.controlId;
     }
 
@@ -37,9 +37,9 @@ public final class ControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -48,17 +48,17 @@ public final class ControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="facetSpec")
-      private final @Nullable Input<GoogleCloudRetailV2betaSearchRequestFacetSpecArgs> facetSpec;
+      private final @Nullable Output<GoogleCloudRetailV2betaSearchRequestFacetSpecArgs> facetSpec;
 
-    public Input<GoogleCloudRetailV2betaSearchRequestFacetSpecArgs> getFacetSpec() {
-        return this.facetSpec == null ? Input.empty() : this.facetSpec;
+    public Output<GoogleCloudRetailV2betaSearchRequestFacetSpecArgs> getFacetSpec() {
+        return this.facetSpec == null ? Output.empty() : this.facetSpec;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -66,17 +66,17 @@ public final class ControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class ControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rule")
-      private final @Nullable Input<GoogleCloudRetailV2betaRuleArgs> rule;
+      private final @Nullable Output<GoogleCloudRetailV2betaRuleArgs> rule;
 
-    public Input<GoogleCloudRetailV2betaRuleArgs> getRule() {
-        return this.rule == null ? Input.empty() : this.rule;
+    public Output<GoogleCloudRetailV2betaRuleArgs> getRule() {
+        return this.rule == null ? Output.empty() : this.rule;
     }
 
     /**
@@ -95,22 +95,22 @@ public final class ControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="solutionTypes", required=true)
-      private final Input<List<ControlSolutionTypesItem>> solutionTypes;
+      private final Output<List<ControlSolutionTypesItem>> solutionTypes;
 
-    public Input<List<ControlSolutionTypesItem>> getSolutionTypes() {
+    public Output<List<ControlSolutionTypesItem>> getSolutionTypes() {
         return this.solutionTypes;
     }
 
     public ControlArgs(
-        Input<String> catalogId,
-        Input<String> controlId,
-        Input<String> displayName,
-        @Nullable Input<GoogleCloudRetailV2betaSearchRequestFacetSpecArgs> facetSpec,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<GoogleCloudRetailV2betaRuleArgs> rule,
-        Input<List<ControlSolutionTypesItem>> solutionTypes) {
+        Output<String> catalogId,
+        Output<String> controlId,
+        Output<String> displayName,
+        @Nullable Output<GoogleCloudRetailV2betaSearchRequestFacetSpecArgs> facetSpec,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<GoogleCloudRetailV2betaRuleArgs> rule,
+        Output<List<ControlSolutionTypesItem>> solutionTypes) {
         this.catalogId = Objects.requireNonNull(catalogId, "expected parameter 'catalogId' to be non-null");
         this.controlId = Objects.requireNonNull(controlId, "expected parameter 'controlId' to be non-null");
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
@@ -123,15 +123,15 @@ public final class ControlArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ControlArgs() {
-        this.catalogId = Input.empty();
-        this.controlId = Input.empty();
-        this.displayName = Input.empty();
-        this.facetSpec = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.rule = Input.empty();
-        this.solutionTypes = Input.empty();
+        this.catalogId = Output.empty();
+        this.controlId = Output.empty();
+        this.displayName = Output.empty();
+        this.facetSpec = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.rule = Output.empty();
+        this.solutionTypes = Output.empty();
     }
 
     public static Builder builder() {
@@ -143,15 +143,15 @@ public final class ControlArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> catalogId;
-        private Input<String> controlId;
-        private Input<String> displayName;
-        private @Nullable Input<GoogleCloudRetailV2betaSearchRequestFacetSpecArgs> facetSpec;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<GoogleCloudRetailV2betaRuleArgs> rule;
-        private Input<List<ControlSolutionTypesItem>> solutionTypes;
+        private Output<String> catalogId;
+        private Output<String> controlId;
+        private Output<String> displayName;
+        private @Nullable Output<GoogleCloudRetailV2betaSearchRequestFacetSpecArgs> facetSpec;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<GoogleCloudRetailV2betaRuleArgs> rule;
+        private Output<List<ControlSolutionTypesItem>> solutionTypes;
 
         public Builder() {
     	      // Empty
@@ -170,93 +170,93 @@ public final class ControlArgs extends io.pulumi.resources.ResourceArgs {
     	      this.solutionTypes = defaults.solutionTypes;
         }
 
-        public Builder catalogId(Input<String> catalogId) {
+        public Builder catalogId(Output<String> catalogId) {
             this.catalogId = Objects.requireNonNull(catalogId);
             return this;
         }
 
         public Builder catalogId(String catalogId) {
-            this.catalogId = Input.of(Objects.requireNonNull(catalogId));
+            this.catalogId = Output.of(Objects.requireNonNull(catalogId));
             return this;
         }
 
-        public Builder controlId(Input<String> controlId) {
+        public Builder controlId(Output<String> controlId) {
             this.controlId = Objects.requireNonNull(controlId);
             return this;
         }
 
         public Builder controlId(String controlId) {
-            this.controlId = Input.of(Objects.requireNonNull(controlId));
+            this.controlId = Output.of(Objects.requireNonNull(controlId));
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder facetSpec(@Nullable Input<GoogleCloudRetailV2betaSearchRequestFacetSpecArgs> facetSpec) {
+        public Builder facetSpec(@Nullable Output<GoogleCloudRetailV2betaSearchRequestFacetSpecArgs> facetSpec) {
             this.facetSpec = facetSpec;
             return this;
         }
 
         public Builder facetSpec(@Nullable GoogleCloudRetailV2betaSearchRequestFacetSpecArgs facetSpec) {
-            this.facetSpec = Input.ofNullable(facetSpec);
+            this.facetSpec = Output.ofNullable(facetSpec);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder rule(@Nullable Input<GoogleCloudRetailV2betaRuleArgs> rule) {
+        public Builder rule(@Nullable Output<GoogleCloudRetailV2betaRuleArgs> rule) {
             this.rule = rule;
             return this;
         }
 
         public Builder rule(@Nullable GoogleCloudRetailV2betaRuleArgs rule) {
-            this.rule = Input.ofNullable(rule);
+            this.rule = Output.ofNullable(rule);
             return this;
         }
 
-        public Builder solutionTypes(Input<List<ControlSolutionTypesItem>> solutionTypes) {
+        public Builder solutionTypes(Output<List<ControlSolutionTypesItem>> solutionTypes) {
             this.solutionTypes = Objects.requireNonNull(solutionTypes);
             return this;
         }
 
         public Builder solutionTypes(List<ControlSolutionTypesItem> solutionTypes) {
-            this.solutionTypes = Input.of(Objects.requireNonNull(solutionTypes));
+            this.solutionTypes = Output.of(Objects.requireNonNull(solutionTypes));
             return this;
         }
         public ControlArgs build() {

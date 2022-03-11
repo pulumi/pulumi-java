@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.acmpca.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,29 +18,29 @@ public final class CertificateAuthorityEdiPartyNameArgs extends io.pulumi.resour
     public static final CertificateAuthorityEdiPartyNameArgs Empty = new CertificateAuthorityEdiPartyNameArgs();
 
     @InputImport(name="nameAssigner", required=true)
-      private final Input<String> nameAssigner;
+      private final Output<String> nameAssigner;
 
-    public Input<String> getNameAssigner() {
+    public Output<String> getNameAssigner() {
         return this.nameAssigner;
     }
 
     @InputImport(name="partyName", required=true)
-      private final Input<String> partyName;
+      private final Output<String> partyName;
 
-    public Input<String> getPartyName() {
+    public Output<String> getPartyName() {
         return this.partyName;
     }
 
     public CertificateAuthorityEdiPartyNameArgs(
-        Input<String> nameAssigner,
-        Input<String> partyName) {
+        Output<String> nameAssigner,
+        Output<String> partyName) {
         this.nameAssigner = Objects.requireNonNull(nameAssigner, "expected parameter 'nameAssigner' to be non-null");
         this.partyName = Objects.requireNonNull(partyName, "expected parameter 'partyName' to be non-null");
     }
 
     private CertificateAuthorityEdiPartyNameArgs() {
-        this.nameAssigner = Input.empty();
-        this.partyName = Input.empty();
+        this.nameAssigner = Output.empty();
+        this.partyName = Output.empty();
     }
 
     public static Builder builder() {
@@ -52,8 +52,8 @@ public final class CertificateAuthorityEdiPartyNameArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private Input<String> nameAssigner;
-        private Input<String> partyName;
+        private Output<String> nameAssigner;
+        private Output<String> partyName;
 
         public Builder() {
     	      // Empty
@@ -65,23 +65,23 @@ public final class CertificateAuthorityEdiPartyNameArgs extends io.pulumi.resour
     	      this.partyName = defaults.partyName;
         }
 
-        public Builder nameAssigner(Input<String> nameAssigner) {
+        public Builder nameAssigner(Output<String> nameAssigner) {
             this.nameAssigner = Objects.requireNonNull(nameAssigner);
             return this;
         }
 
         public Builder nameAssigner(String nameAssigner) {
-            this.nameAssigner = Input.of(Objects.requireNonNull(nameAssigner));
+            this.nameAssigner = Output.of(Objects.requireNonNull(nameAssigner));
             return this;
         }
 
-        public Builder partyName(Input<String> partyName) {
+        public Builder partyName(Output<String> partyName) {
             this.partyName = Objects.requireNonNull(partyName);
             return this;
         }
 
         public Builder partyName(String partyName) {
-            this.partyName = Input.of(Objects.requireNonNull(partyName));
+            this.partyName = Output.of(Objects.requireNonNull(partyName));
             return this;
         }
         public CertificateAuthorityEdiPartyNameArgs build() {

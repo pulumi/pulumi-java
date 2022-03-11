@@ -3,7 +3,6 @@
 
 package io.pulumi.googlenative.datacatalog_v1beta1;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -100,14 +99,14 @@ public class TagTemplate extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TagTemplate(String name, TagTemplateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:datacatalog/v1beta1:TagTemplate", name, args == null ? TagTemplateArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("google-native:datacatalog/v1beta1:TagTemplate", name, args == null ? TagTemplateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private TagTemplate(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private TagTemplate(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:datacatalog/v1beta1:TagTemplate", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -122,7 +121,7 @@ public class TagTemplate extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TagTemplate get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static TagTemplate get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new TagTemplate(name, id, options);
     }
 }

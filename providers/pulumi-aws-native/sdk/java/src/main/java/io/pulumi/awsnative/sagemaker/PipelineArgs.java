@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker;
 
 import io.pulumi.awsnative.sagemaker.inputs.ParallelismConfigurationPropertiesArgs;
 import io.pulumi.awsnative.sagemaker.inputs.PipelineTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -19,16 +19,16 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     public static final PipelineArgs Empty = new PipelineArgs();
 
     @InputImport(name="parallelismConfiguration")
-      private final @Nullable Input<ParallelismConfigurationPropertiesArgs> parallelismConfiguration;
+      private final @Nullable Output<ParallelismConfigurationPropertiesArgs> parallelismConfiguration;
 
-    public Input<ParallelismConfigurationPropertiesArgs> getParallelismConfiguration() {
-        return this.parallelismConfiguration == null ? Input.empty() : this.parallelismConfiguration;
+    public Output<ParallelismConfigurationPropertiesArgs> getParallelismConfiguration() {
+        return this.parallelismConfiguration == null ? Output.empty() : this.parallelismConfiguration;
     }
 
     @InputImport(name="pipelineDefinition", required=true)
-      private final Input<Object> pipelineDefinition;
+      private final Output<Object> pipelineDefinition;
 
-    public Input<Object> getPipelineDefinition() {
+    public Output<Object> getPipelineDefinition() {
         return this.pipelineDefinition;
     }
 
@@ -37,10 +37,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pipelineDescription")
-      private final @Nullable Input<String> pipelineDescription;
+      private final @Nullable Output<String> pipelineDescription;
 
-    public Input<String> getPipelineDescription() {
-        return this.pipelineDescription == null ? Input.empty() : this.pipelineDescription;
+    public Output<String> getPipelineDescription() {
+        return this.pipelineDescription == null ? Output.empty() : this.pipelineDescription;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pipelineDisplayName")
-      private final @Nullable Input<String> pipelineDisplayName;
+      private final @Nullable Output<String> pipelineDisplayName;
 
-    public Input<String> getPipelineDisplayName() {
-        return this.pipelineDisplayName == null ? Input.empty() : this.pipelineDisplayName;
+    public Output<String> getPipelineDisplayName() {
+        return this.pipelineDisplayName == null ? Output.empty() : this.pipelineDisplayName;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pipelineName")
-      private final @Nullable Input<String> pipelineName;
+      private final @Nullable Output<String> pipelineName;
 
-    public Input<String> getPipelineName() {
-        return this.pipelineName == null ? Input.empty() : this.pipelineName;
+    public Output<String> getPipelineName() {
+        return this.pipelineName == null ? Output.empty() : this.pipelineName;
     }
 
     /**
@@ -70,27 +70,27 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<List<PipelineTagArgs>> tags;
+      private final @Nullable Output<List<PipelineTagArgs>> tags;
 
-    public Input<List<PipelineTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<PipelineTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public PipelineArgs(
-        @Nullable Input<ParallelismConfigurationPropertiesArgs> parallelismConfiguration,
-        Input<Object> pipelineDefinition,
-        @Nullable Input<String> pipelineDescription,
-        @Nullable Input<String> pipelineDisplayName,
-        @Nullable Input<String> pipelineName,
-        Input<String> roleArn,
-        @Nullable Input<List<PipelineTagArgs>> tags) {
+        @Nullable Output<ParallelismConfigurationPropertiesArgs> parallelismConfiguration,
+        Output<Object> pipelineDefinition,
+        @Nullable Output<String> pipelineDescription,
+        @Nullable Output<String> pipelineDisplayName,
+        @Nullable Output<String> pipelineName,
+        Output<String> roleArn,
+        @Nullable Output<List<PipelineTagArgs>> tags) {
         this.parallelismConfiguration = parallelismConfiguration;
         this.pipelineDefinition = Objects.requireNonNull(pipelineDefinition, "expected parameter 'pipelineDefinition' to be non-null");
         this.pipelineDescription = pipelineDescription;
@@ -101,13 +101,13 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PipelineArgs() {
-        this.parallelismConfiguration = Input.empty();
-        this.pipelineDefinition = Input.empty();
-        this.pipelineDescription = Input.empty();
-        this.pipelineDisplayName = Input.empty();
-        this.pipelineName = Input.empty();
-        this.roleArn = Input.empty();
-        this.tags = Input.empty();
+        this.parallelismConfiguration = Output.empty();
+        this.pipelineDefinition = Output.empty();
+        this.pipelineDescription = Output.empty();
+        this.pipelineDisplayName = Output.empty();
+        this.pipelineName = Output.empty();
+        this.roleArn = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -119,13 +119,13 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ParallelismConfigurationPropertiesArgs> parallelismConfiguration;
-        private Input<Object> pipelineDefinition;
-        private @Nullable Input<String> pipelineDescription;
-        private @Nullable Input<String> pipelineDisplayName;
-        private @Nullable Input<String> pipelineName;
-        private Input<String> roleArn;
-        private @Nullable Input<List<PipelineTagArgs>> tags;
+        private @Nullable Output<ParallelismConfigurationPropertiesArgs> parallelismConfiguration;
+        private Output<Object> pipelineDefinition;
+        private @Nullable Output<String> pipelineDescription;
+        private @Nullable Output<String> pipelineDisplayName;
+        private @Nullable Output<String> pipelineName;
+        private Output<String> roleArn;
+        private @Nullable Output<List<PipelineTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -142,73 +142,73 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder parallelismConfiguration(@Nullable Input<ParallelismConfigurationPropertiesArgs> parallelismConfiguration) {
+        public Builder parallelismConfiguration(@Nullable Output<ParallelismConfigurationPropertiesArgs> parallelismConfiguration) {
             this.parallelismConfiguration = parallelismConfiguration;
             return this;
         }
 
         public Builder parallelismConfiguration(@Nullable ParallelismConfigurationPropertiesArgs parallelismConfiguration) {
-            this.parallelismConfiguration = Input.ofNullable(parallelismConfiguration);
+            this.parallelismConfiguration = Output.ofNullable(parallelismConfiguration);
             return this;
         }
 
-        public Builder pipelineDefinition(Input<Object> pipelineDefinition) {
+        public Builder pipelineDefinition(Output<Object> pipelineDefinition) {
             this.pipelineDefinition = Objects.requireNonNull(pipelineDefinition);
             return this;
         }
 
         public Builder pipelineDefinition(Object pipelineDefinition) {
-            this.pipelineDefinition = Input.of(Objects.requireNonNull(pipelineDefinition));
+            this.pipelineDefinition = Output.of(Objects.requireNonNull(pipelineDefinition));
             return this;
         }
 
-        public Builder pipelineDescription(@Nullable Input<String> pipelineDescription) {
+        public Builder pipelineDescription(@Nullable Output<String> pipelineDescription) {
             this.pipelineDescription = pipelineDescription;
             return this;
         }
 
         public Builder pipelineDescription(@Nullable String pipelineDescription) {
-            this.pipelineDescription = Input.ofNullable(pipelineDescription);
+            this.pipelineDescription = Output.ofNullable(pipelineDescription);
             return this;
         }
 
-        public Builder pipelineDisplayName(@Nullable Input<String> pipelineDisplayName) {
+        public Builder pipelineDisplayName(@Nullable Output<String> pipelineDisplayName) {
             this.pipelineDisplayName = pipelineDisplayName;
             return this;
         }
 
         public Builder pipelineDisplayName(@Nullable String pipelineDisplayName) {
-            this.pipelineDisplayName = Input.ofNullable(pipelineDisplayName);
+            this.pipelineDisplayName = Output.ofNullable(pipelineDisplayName);
             return this;
         }
 
-        public Builder pipelineName(@Nullable Input<String> pipelineName) {
+        public Builder pipelineName(@Nullable Output<String> pipelineName) {
             this.pipelineName = pipelineName;
             return this;
         }
 
         public Builder pipelineName(@Nullable String pipelineName) {
-            this.pipelineName = Input.ofNullable(pipelineName);
+            this.pipelineName = Output.ofNullable(pipelineName);
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<PipelineTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<PipelineTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<PipelineTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public PipelineArgs build() {

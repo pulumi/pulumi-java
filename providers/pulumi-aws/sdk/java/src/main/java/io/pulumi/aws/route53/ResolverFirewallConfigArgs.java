@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.route53;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ResolverFirewallConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="firewallFailOpen")
-      private final @Nullable Input<String> firewallFailOpen;
+      private final @Nullable Output<String> firewallFailOpen;
 
-    public Input<String> getFirewallFailOpen() {
-        return this.firewallFailOpen == null ? Input.empty() : this.firewallFailOpen;
+    public Output<String> getFirewallFailOpen() {
+        return this.firewallFailOpen == null ? Output.empty() : this.firewallFailOpen;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class ResolverFirewallConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceId", required=true)
-      private final Input<String> resourceId;
+      private final Output<String> resourceId;
 
-    public Input<String> getResourceId() {
+    public Output<String> getResourceId() {
         return this.resourceId;
     }
 
     public ResolverFirewallConfigArgs(
-        @Nullable Input<String> firewallFailOpen,
-        Input<String> resourceId) {
+        @Nullable Output<String> firewallFailOpen,
+        Output<String> resourceId) {
         this.firewallFailOpen = firewallFailOpen;
         this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
     }
 
     private ResolverFirewallConfigArgs() {
-        this.firewallFailOpen = Input.empty();
-        this.resourceId = Input.empty();
+        this.firewallFailOpen = Output.empty();
+        this.resourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ResolverFirewallConfigArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> firewallFailOpen;
-        private Input<String> resourceId;
+        private @Nullable Output<String> firewallFailOpen;
+        private Output<String> resourceId;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ResolverFirewallConfigArgs extends io.pulumi.resources.Resour
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder firewallFailOpen(@Nullable Input<String> firewallFailOpen) {
+        public Builder firewallFailOpen(@Nullable Output<String> firewallFailOpen) {
             this.firewallFailOpen = firewallFailOpen;
             return this;
         }
 
         public Builder firewallFailOpen(@Nullable String firewallFailOpen) {
-            this.firewallFailOpen = Input.ofNullable(firewallFailOpen);
+            this.firewallFailOpen = Output.ofNullable(firewallFailOpen);
             return this;
         }
 
-        public Builder resourceId(Input<String> resourceId) {
+        public Builder resourceId(Output<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
         public Builder resourceId(String resourceId) {
-            this.resourceId = Input.of(Objects.requireNonNull(resourceId));
+            this.resourceId = Output.of(Objects.requireNonNull(resourceId));
             return this;
         }
         public ResolverFirewallConfigArgs build() {

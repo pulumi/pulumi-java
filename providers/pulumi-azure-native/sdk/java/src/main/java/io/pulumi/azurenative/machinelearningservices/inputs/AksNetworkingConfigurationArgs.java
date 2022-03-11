@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class AksNetworkingConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="dnsServiceIP")
-      private final @Nullable Input<String> dnsServiceIP;
+      private final @Nullable Output<String> dnsServiceIP;
 
-    public Input<String> getDnsServiceIP() {
-        return this.dnsServiceIP == null ? Input.empty() : this.dnsServiceIP;
+    public Output<String> getDnsServiceIP() {
+        return this.dnsServiceIP == null ? Output.empty() : this.dnsServiceIP;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class AksNetworkingConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="dockerBridgeCidr")
-      private final @Nullable Input<String> dockerBridgeCidr;
+      private final @Nullable Output<String> dockerBridgeCidr;
 
-    public Input<String> getDockerBridgeCidr() {
-        return this.dockerBridgeCidr == null ? Input.empty() : this.dockerBridgeCidr;
+    public Output<String> getDockerBridgeCidr() {
+        return this.dockerBridgeCidr == null ? Output.empty() : this.dockerBridgeCidr;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class AksNetworkingConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="serviceCidr")
-      private final @Nullable Input<String> serviceCidr;
+      private final @Nullable Output<String> serviceCidr;
 
-    public Input<String> getServiceCidr() {
-        return this.serviceCidr == null ? Input.empty() : this.serviceCidr;
+    public Output<String> getServiceCidr() {
+        return this.serviceCidr == null ? Output.empty() : this.serviceCidr;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class AksNetworkingConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="subnetId")
-      private final @Nullable Input<String> subnetId;
+      private final @Nullable Output<String> subnetId;
 
-    public Input<String> getSubnetId() {
-        return this.subnetId == null ? Input.empty() : this.subnetId;
+    public Output<String> getSubnetId() {
+        return this.subnetId == null ? Output.empty() : this.subnetId;
     }
 
     public AksNetworkingConfigurationArgs(
-        @Nullable Input<String> dnsServiceIP,
-        @Nullable Input<String> dockerBridgeCidr,
-        @Nullable Input<String> serviceCidr,
-        @Nullable Input<String> subnetId) {
+        @Nullable Output<String> dnsServiceIP,
+        @Nullable Output<String> dockerBridgeCidr,
+        @Nullable Output<String> serviceCidr,
+        @Nullable Output<String> subnetId) {
         this.dnsServiceIP = dnsServiceIP;
         this.dockerBridgeCidr = dockerBridgeCidr;
         this.serviceCidr = serviceCidr;
@@ -74,10 +74,10 @@ public final class AksNetworkingConfigurationArgs extends io.pulumi.resources.Re
     }
 
     private AksNetworkingConfigurationArgs() {
-        this.dnsServiceIP = Input.empty();
-        this.dockerBridgeCidr = Input.empty();
-        this.serviceCidr = Input.empty();
-        this.subnetId = Input.empty();
+        this.dnsServiceIP = Output.empty();
+        this.dockerBridgeCidr = Output.empty();
+        this.serviceCidr = Output.empty();
+        this.subnetId = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class AksNetworkingConfigurationArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> dnsServiceIP;
-        private @Nullable Input<String> dockerBridgeCidr;
-        private @Nullable Input<String> serviceCidr;
-        private @Nullable Input<String> subnetId;
+        private @Nullable Output<String> dnsServiceIP;
+        private @Nullable Output<String> dockerBridgeCidr;
+        private @Nullable Output<String> serviceCidr;
+        private @Nullable Output<String> subnetId;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class AksNetworkingConfigurationArgs extends io.pulumi.resources.Re
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder dnsServiceIP(@Nullable Input<String> dnsServiceIP) {
+        public Builder dnsServiceIP(@Nullable Output<String> dnsServiceIP) {
             this.dnsServiceIP = dnsServiceIP;
             return this;
         }
 
         public Builder dnsServiceIP(@Nullable String dnsServiceIP) {
-            this.dnsServiceIP = Input.ofNullable(dnsServiceIP);
+            this.dnsServiceIP = Output.ofNullable(dnsServiceIP);
             return this;
         }
 
-        public Builder dockerBridgeCidr(@Nullable Input<String> dockerBridgeCidr) {
+        public Builder dockerBridgeCidr(@Nullable Output<String> dockerBridgeCidr) {
             this.dockerBridgeCidr = dockerBridgeCidr;
             return this;
         }
 
         public Builder dockerBridgeCidr(@Nullable String dockerBridgeCidr) {
-            this.dockerBridgeCidr = Input.ofNullable(dockerBridgeCidr);
+            this.dockerBridgeCidr = Output.ofNullable(dockerBridgeCidr);
             return this;
         }
 
-        public Builder serviceCidr(@Nullable Input<String> serviceCidr) {
+        public Builder serviceCidr(@Nullable Output<String> serviceCidr) {
             this.serviceCidr = serviceCidr;
             return this;
         }
 
         public Builder serviceCidr(@Nullable String serviceCidr) {
-            this.serviceCidr = Input.ofNullable(serviceCidr);
+            this.serviceCidr = Output.ofNullable(serviceCidr);
             return this;
         }
 
-        public Builder subnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Input.ofNullable(subnetId);
+            this.subnetId = Output.ofNullable(subnetId);
             return this;
         }
         public AksNetworkingConfigurationArgs build() {

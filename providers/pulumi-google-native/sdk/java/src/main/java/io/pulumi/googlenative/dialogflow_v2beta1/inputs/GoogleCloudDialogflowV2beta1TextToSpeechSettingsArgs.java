@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2beta1.enums.GoogleCloudDialogflowV2beta1TextToSpeechSettingsOutputAudioEncoding;
 import java.lang.Boolean;
@@ -27,10 +27,10 @@ public final class GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs extends 
      * 
      */
     @InputImport(name="enableTextToSpeech")
-      private final @Nullable Input<Boolean> enableTextToSpeech;
+      private final @Nullable Output<Boolean> enableTextToSpeech;
 
-    public Input<Boolean> getEnableTextToSpeech() {
-        return this.enableTextToSpeech == null ? Input.empty() : this.enableTextToSpeech;
+    public Output<Boolean> getEnableTextToSpeech() {
+        return this.enableTextToSpeech == null ? Output.empty() : this.enableTextToSpeech;
     }
 
     /**
@@ -38,9 +38,9 @@ public final class GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs extends 
      * 
      */
     @InputImport(name="outputAudioEncoding", required=true)
-      private final Input<GoogleCloudDialogflowV2beta1TextToSpeechSettingsOutputAudioEncoding> outputAudioEncoding;
+      private final Output<GoogleCloudDialogflowV2beta1TextToSpeechSettingsOutputAudioEncoding> outputAudioEncoding;
 
-    public Input<GoogleCloudDialogflowV2beta1TextToSpeechSettingsOutputAudioEncoding> getOutputAudioEncoding() {
+    public Output<GoogleCloudDialogflowV2beta1TextToSpeechSettingsOutputAudioEncoding> getOutputAudioEncoding() {
         return this.outputAudioEncoding;
     }
 
@@ -49,10 +49,10 @@ public final class GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs extends 
      * 
      */
     @InputImport(name="sampleRateHertz")
-      private final @Nullable Input<Integer> sampleRateHertz;
+      private final @Nullable Output<Integer> sampleRateHertz;
 
-    public Input<Integer> getSampleRateHertz() {
-        return this.sampleRateHertz == null ? Input.empty() : this.sampleRateHertz;
+    public Output<Integer> getSampleRateHertz() {
+        return this.sampleRateHertz == null ? Output.empty() : this.sampleRateHertz;
     }
 
     /**
@@ -60,17 +60,17 @@ public final class GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs extends 
      * 
      */
     @InputImport(name="synthesizeSpeechConfigs")
-      private final @Nullable Input<Map<String,String>> synthesizeSpeechConfigs;
+      private final @Nullable Output<Map<String,String>> synthesizeSpeechConfigs;
 
-    public Input<Map<String,String>> getSynthesizeSpeechConfigs() {
-        return this.synthesizeSpeechConfigs == null ? Input.empty() : this.synthesizeSpeechConfigs;
+    public Output<Map<String,String>> getSynthesizeSpeechConfigs() {
+        return this.synthesizeSpeechConfigs == null ? Output.empty() : this.synthesizeSpeechConfigs;
     }
 
     public GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs(
-        @Nullable Input<Boolean> enableTextToSpeech,
-        Input<GoogleCloudDialogflowV2beta1TextToSpeechSettingsOutputAudioEncoding> outputAudioEncoding,
-        @Nullable Input<Integer> sampleRateHertz,
-        @Nullable Input<Map<String,String>> synthesizeSpeechConfigs) {
+        @Nullable Output<Boolean> enableTextToSpeech,
+        Output<GoogleCloudDialogflowV2beta1TextToSpeechSettingsOutputAudioEncoding> outputAudioEncoding,
+        @Nullable Output<Integer> sampleRateHertz,
+        @Nullable Output<Map<String,String>> synthesizeSpeechConfigs) {
         this.enableTextToSpeech = enableTextToSpeech;
         this.outputAudioEncoding = Objects.requireNonNull(outputAudioEncoding, "expected parameter 'outputAudioEncoding' to be non-null");
         this.sampleRateHertz = sampleRateHertz;
@@ -78,10 +78,10 @@ public final class GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs extends 
     }
 
     private GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs() {
-        this.enableTextToSpeech = Input.empty();
-        this.outputAudioEncoding = Input.empty();
-        this.sampleRateHertz = Input.empty();
-        this.synthesizeSpeechConfigs = Input.empty();
+        this.enableTextToSpeech = Output.empty();
+        this.outputAudioEncoding = Output.empty();
+        this.sampleRateHertz = Output.empty();
+        this.synthesizeSpeechConfigs = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,10 +93,10 @@ public final class GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs extends 
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enableTextToSpeech;
-        private Input<GoogleCloudDialogflowV2beta1TextToSpeechSettingsOutputAudioEncoding> outputAudioEncoding;
-        private @Nullable Input<Integer> sampleRateHertz;
-        private @Nullable Input<Map<String,String>> synthesizeSpeechConfigs;
+        private @Nullable Output<Boolean> enableTextToSpeech;
+        private Output<GoogleCloudDialogflowV2beta1TextToSpeechSettingsOutputAudioEncoding> outputAudioEncoding;
+        private @Nullable Output<Integer> sampleRateHertz;
+        private @Nullable Output<Map<String,String>> synthesizeSpeechConfigs;
 
         public Builder() {
     	      // Empty
@@ -110,43 +110,43 @@ public final class GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs extends 
     	      this.synthesizeSpeechConfigs = defaults.synthesizeSpeechConfigs;
         }
 
-        public Builder enableTextToSpeech(@Nullable Input<Boolean> enableTextToSpeech) {
+        public Builder enableTextToSpeech(@Nullable Output<Boolean> enableTextToSpeech) {
             this.enableTextToSpeech = enableTextToSpeech;
             return this;
         }
 
         public Builder enableTextToSpeech(@Nullable Boolean enableTextToSpeech) {
-            this.enableTextToSpeech = Input.ofNullable(enableTextToSpeech);
+            this.enableTextToSpeech = Output.ofNullable(enableTextToSpeech);
             return this;
         }
 
-        public Builder outputAudioEncoding(Input<GoogleCloudDialogflowV2beta1TextToSpeechSettingsOutputAudioEncoding> outputAudioEncoding) {
+        public Builder outputAudioEncoding(Output<GoogleCloudDialogflowV2beta1TextToSpeechSettingsOutputAudioEncoding> outputAudioEncoding) {
             this.outputAudioEncoding = Objects.requireNonNull(outputAudioEncoding);
             return this;
         }
 
         public Builder outputAudioEncoding(GoogleCloudDialogflowV2beta1TextToSpeechSettingsOutputAudioEncoding outputAudioEncoding) {
-            this.outputAudioEncoding = Input.of(Objects.requireNonNull(outputAudioEncoding));
+            this.outputAudioEncoding = Output.of(Objects.requireNonNull(outputAudioEncoding));
             return this;
         }
 
-        public Builder sampleRateHertz(@Nullable Input<Integer> sampleRateHertz) {
+        public Builder sampleRateHertz(@Nullable Output<Integer> sampleRateHertz) {
             this.sampleRateHertz = sampleRateHertz;
             return this;
         }
 
         public Builder sampleRateHertz(@Nullable Integer sampleRateHertz) {
-            this.sampleRateHertz = Input.ofNullable(sampleRateHertz);
+            this.sampleRateHertz = Output.ofNullable(sampleRateHertz);
             return this;
         }
 
-        public Builder synthesizeSpeechConfigs(@Nullable Input<Map<String,String>> synthesizeSpeechConfigs) {
+        public Builder synthesizeSpeechConfigs(@Nullable Output<Map<String,String>> synthesizeSpeechConfigs) {
             this.synthesizeSpeechConfigs = synthesizeSpeechConfigs;
             return this;
         }
 
         public Builder synthesizeSpeechConfigs(@Nullable Map<String,String> synthesizeSpeechConfigs) {
-            this.synthesizeSpeechConfigs = Input.ofNullable(synthesizeSpeechConfigs);
+            this.synthesizeSpeechConfigs = Output.ofNullable(synthesizeSpeechConfigs);
             return this;
         }
         public GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs build() {

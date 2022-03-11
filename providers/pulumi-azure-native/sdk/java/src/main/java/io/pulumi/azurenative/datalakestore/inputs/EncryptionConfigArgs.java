@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datalakestore.inputs;
 
 import io.pulumi.azurenative.datalakestore.enums.EncryptionConfigType;
 import io.pulumi.azurenative.datalakestore.inputs.KeyVaultMetaInfoArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,10 +24,10 @@ public final class EncryptionConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="keyVaultMetaInfo")
-      private final @Nullable Input<KeyVaultMetaInfoArgs> keyVaultMetaInfo;
+      private final @Nullable Output<KeyVaultMetaInfoArgs> keyVaultMetaInfo;
 
-    public Input<KeyVaultMetaInfoArgs> getKeyVaultMetaInfo() {
-        return this.keyVaultMetaInfo == null ? Input.empty() : this.keyVaultMetaInfo;
+    public Output<KeyVaultMetaInfoArgs> getKeyVaultMetaInfo() {
+        return this.keyVaultMetaInfo == null ? Output.empty() : this.keyVaultMetaInfo;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class EncryptionConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<EncryptionConfigType> type;
+      private final Output<EncryptionConfigType> type;
 
-    public Input<EncryptionConfigType> getType() {
+    public Output<EncryptionConfigType> getType() {
         return this.type;
     }
 
     public EncryptionConfigArgs(
-        @Nullable Input<KeyVaultMetaInfoArgs> keyVaultMetaInfo,
-        Input<EncryptionConfigType> type) {
+        @Nullable Output<KeyVaultMetaInfoArgs> keyVaultMetaInfo,
+        Output<EncryptionConfigType> type) {
         this.keyVaultMetaInfo = keyVaultMetaInfo;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private EncryptionConfigArgs() {
-        this.keyVaultMetaInfo = Input.empty();
-        this.type = Input.empty();
+        this.keyVaultMetaInfo = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class EncryptionConfigArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<KeyVaultMetaInfoArgs> keyVaultMetaInfo;
-        private Input<EncryptionConfigType> type;
+        private @Nullable Output<KeyVaultMetaInfoArgs> keyVaultMetaInfo;
+        private Output<EncryptionConfigType> type;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class EncryptionConfigArgs extends io.pulumi.resources.ResourceArgs
     	      this.type = defaults.type;
         }
 
-        public Builder keyVaultMetaInfo(@Nullable Input<KeyVaultMetaInfoArgs> keyVaultMetaInfo) {
+        public Builder keyVaultMetaInfo(@Nullable Output<KeyVaultMetaInfoArgs> keyVaultMetaInfo) {
             this.keyVaultMetaInfo = keyVaultMetaInfo;
             return this;
         }
 
         public Builder keyVaultMetaInfo(@Nullable KeyVaultMetaInfoArgs keyVaultMetaInfo) {
-            this.keyVaultMetaInfo = Input.ofNullable(keyVaultMetaInfo);
+            this.keyVaultMetaInfo = Output.ofNullable(keyVaultMetaInfo);
             return this;
         }
 
-        public Builder type(Input<EncryptionConfigType> type) {
+        public Builder type(Output<EncryptionConfigType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(EncryptionConfigType type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public EncryptionConfigArgs build() {

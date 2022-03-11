@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.GitHubClientSecretArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -35,10 +35,10 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="clientId")
-      private final @Nullable Input<String> clientId;
+      private final @Nullable Output<String> clientId;
 
-    public Input<String> getClientId() {
-        return this.clientId == null ? Input.empty() : this.clientId;
+    public Output<String> getClientId() {
+        return this.clientId == null ? Output.empty() : this.clientId;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="clientSecret")
-      private final @Nullable Input<GitHubClientSecretArgs> clientSecret;
+      private final @Nullable Output<GitHubClientSecretArgs> clientSecret;
 
-    public Input<GitHubClientSecretArgs> getClientSecret() {
-        return this.clientSecret == null ? Input.empty() : this.clientSecret;
+    public Output<GitHubClientSecretArgs> getClientSecret() {
+        return this.clientSecret == null ? Output.empty() : this.clientSecret;
     }
 
     /**
@@ -57,9 +57,9 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="collaborationBranch", required=true)
-      private final Input<String> collaborationBranch;
+      private final Output<String> collaborationBranch;
 
-    public Input<String> getCollaborationBranch() {
+    public Output<String> getCollaborationBranch() {
         return this.collaborationBranch;
     }
 
@@ -68,10 +68,10 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="hostName")
-      private final @Nullable Input<String> hostName;
+      private final @Nullable Output<String> hostName;
 
-    public Input<String> getHostName() {
-        return this.hostName == null ? Input.empty() : this.hostName;
+    public Output<String> getHostName() {
+        return this.hostName == null ? Output.empty() : this.hostName;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="lastCommitId")
-      private final @Nullable Input<String> lastCommitId;
+      private final @Nullable Output<String> lastCommitId;
 
-    public Input<String> getLastCommitId() {
-        return this.lastCommitId == null ? Input.empty() : this.lastCommitId;
+    public Output<String> getLastCommitId() {
+        return this.lastCommitId == null ? Output.empty() : this.lastCommitId;
     }
 
     /**
@@ -90,9 +90,9 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="repositoryName", required=true)
-      private final Input<String> repositoryName;
+      private final Output<String> repositoryName;
 
-    public Input<String> getRepositoryName() {
+    public Output<String> getRepositoryName() {
         return this.repositoryName;
     }
 
@@ -101,9 +101,9 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="rootFolder", required=true)
-      private final Input<String> rootFolder;
+      private final Output<String> rootFolder;
 
-    public Input<String> getRootFolder() {
+    public Output<String> getRootFolder() {
         return this.rootFolder;
     }
 
@@ -113,22 +113,22 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public FactoryGitHubConfigurationArgs(
-        Input<String> accountName,
-        @Nullable Input<String> clientId,
-        @Nullable Input<GitHubClientSecretArgs> clientSecret,
-        Input<String> collaborationBranch,
-        @Nullable Input<String> hostName,
-        @Nullable Input<String> lastCommitId,
-        Input<String> repositoryName,
-        Input<String> rootFolder,
-        Input<String> type) {
+        Output<String> accountName,
+        @Nullable Output<String> clientId,
+        @Nullable Output<GitHubClientSecretArgs> clientSecret,
+        Output<String> collaborationBranch,
+        @Nullable Output<String> hostName,
+        @Nullable Output<String> lastCommitId,
+        Output<String> repositoryName,
+        Output<String> rootFolder,
+        Output<String> type) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.clientId = clientId;
         this.clientSecret = clientSecret;
@@ -141,15 +141,15 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
     }
 
     private FactoryGitHubConfigurationArgs() {
-        this.accountName = Input.empty();
-        this.clientId = Input.empty();
-        this.clientSecret = Input.empty();
-        this.collaborationBranch = Input.empty();
-        this.hostName = Input.empty();
-        this.lastCommitId = Input.empty();
-        this.repositoryName = Input.empty();
-        this.rootFolder = Input.empty();
-        this.type = Input.empty();
+        this.accountName = Output.empty();
+        this.clientId = Output.empty();
+        this.clientSecret = Output.empty();
+        this.collaborationBranch = Output.empty();
+        this.hostName = Output.empty();
+        this.lastCommitId = Output.empty();
+        this.repositoryName = Output.empty();
+        this.rootFolder = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -161,15 +161,15 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private @Nullable Input<String> clientId;
-        private @Nullable Input<GitHubClientSecretArgs> clientSecret;
-        private Input<String> collaborationBranch;
-        private @Nullable Input<String> hostName;
-        private @Nullable Input<String> lastCommitId;
-        private Input<String> repositoryName;
-        private Input<String> rootFolder;
-        private Input<String> type;
+        private Output<String> accountName;
+        private @Nullable Output<String> clientId;
+        private @Nullable Output<GitHubClientSecretArgs> clientSecret;
+        private Output<String> collaborationBranch;
+        private @Nullable Output<String> hostName;
+        private @Nullable Output<String> lastCommitId;
+        private Output<String> repositoryName;
+        private Output<String> rootFolder;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -188,93 +188,93 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
     	      this.type = defaults.type;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder clientId(@Nullable Input<String> clientId) {
+        public Builder clientId(@Nullable Output<String> clientId) {
             this.clientId = clientId;
             return this;
         }
 
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = Input.ofNullable(clientId);
+            this.clientId = Output.ofNullable(clientId);
             return this;
         }
 
-        public Builder clientSecret(@Nullable Input<GitHubClientSecretArgs> clientSecret) {
+        public Builder clientSecret(@Nullable Output<GitHubClientSecretArgs> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
 
         public Builder clientSecret(@Nullable GitHubClientSecretArgs clientSecret) {
-            this.clientSecret = Input.ofNullable(clientSecret);
+            this.clientSecret = Output.ofNullable(clientSecret);
             return this;
         }
 
-        public Builder collaborationBranch(Input<String> collaborationBranch) {
+        public Builder collaborationBranch(Output<String> collaborationBranch) {
             this.collaborationBranch = Objects.requireNonNull(collaborationBranch);
             return this;
         }
 
         public Builder collaborationBranch(String collaborationBranch) {
-            this.collaborationBranch = Input.of(Objects.requireNonNull(collaborationBranch));
+            this.collaborationBranch = Output.of(Objects.requireNonNull(collaborationBranch));
             return this;
         }
 
-        public Builder hostName(@Nullable Input<String> hostName) {
+        public Builder hostName(@Nullable Output<String> hostName) {
             this.hostName = hostName;
             return this;
         }
 
         public Builder hostName(@Nullable String hostName) {
-            this.hostName = Input.ofNullable(hostName);
+            this.hostName = Output.ofNullable(hostName);
             return this;
         }
 
-        public Builder lastCommitId(@Nullable Input<String> lastCommitId) {
+        public Builder lastCommitId(@Nullable Output<String> lastCommitId) {
             this.lastCommitId = lastCommitId;
             return this;
         }
 
         public Builder lastCommitId(@Nullable String lastCommitId) {
-            this.lastCommitId = Input.ofNullable(lastCommitId);
+            this.lastCommitId = Output.ofNullable(lastCommitId);
             return this;
         }
 
-        public Builder repositoryName(Input<String> repositoryName) {
+        public Builder repositoryName(Output<String> repositoryName) {
             this.repositoryName = Objects.requireNonNull(repositoryName);
             return this;
         }
 
         public Builder repositoryName(String repositoryName) {
-            this.repositoryName = Input.of(Objects.requireNonNull(repositoryName));
+            this.repositoryName = Output.of(Objects.requireNonNull(repositoryName));
             return this;
         }
 
-        public Builder rootFolder(Input<String> rootFolder) {
+        public Builder rootFolder(Output<String> rootFolder) {
             this.rootFolder = Objects.requireNonNull(rootFolder);
             return this;
         }
 
         public Builder rootFolder(String rootFolder) {
-            this.rootFolder = Input.of(Objects.requireNonNull(rootFolder));
+            this.rootFolder = Output.of(Objects.requireNonNull(rootFolder));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public FactoryGitHubConfigurationArgs build() {

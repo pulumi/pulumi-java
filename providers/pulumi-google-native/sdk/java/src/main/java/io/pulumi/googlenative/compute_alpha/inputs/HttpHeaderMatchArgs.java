@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.Int64RangeMatchArgs;
 import java.lang.Boolean;
@@ -25,10 +25,10 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="exactMatch")
-      private final @Nullable Input<String> exactMatch;
+      private final @Nullable Output<String> exactMatch;
 
-    public Input<String> getExactMatch() {
-        return this.exactMatch == null ? Input.empty() : this.exactMatch;
+    public Output<String> getExactMatch() {
+        return this.exactMatch == null ? Output.empty() : this.exactMatch;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="headerName")
-      private final @Nullable Input<String> headerName;
+      private final @Nullable Output<String> headerName;
 
-    public Input<String> getHeaderName() {
-        return this.headerName == null ? Input.empty() : this.headerName;
+    public Output<String> getHeaderName() {
+        return this.headerName == null ? Output.empty() : this.headerName;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="invertMatch")
-      private final @Nullable Input<Boolean> invertMatch;
+      private final @Nullable Output<Boolean> invertMatch;
 
-    public Input<Boolean> getInvertMatch() {
-        return this.invertMatch == null ? Input.empty() : this.invertMatch;
+    public Output<Boolean> getInvertMatch() {
+        return this.invertMatch == null ? Output.empty() : this.invertMatch;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="prefixMatch")
-      private final @Nullable Input<String> prefixMatch;
+      private final @Nullable Output<String> prefixMatch;
 
-    public Input<String> getPrefixMatch() {
-        return this.prefixMatch == null ? Input.empty() : this.prefixMatch;
+    public Output<String> getPrefixMatch() {
+        return this.prefixMatch == null ? Output.empty() : this.prefixMatch;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="presentMatch")
-      private final @Nullable Input<Boolean> presentMatch;
+      private final @Nullable Output<Boolean> presentMatch;
 
-    public Input<Boolean> getPresentMatch() {
-        return this.presentMatch == null ? Input.empty() : this.presentMatch;
+    public Output<Boolean> getPresentMatch() {
+        return this.presentMatch == null ? Output.empty() : this.presentMatch;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="rangeMatch")
-      private final @Nullable Input<Int64RangeMatchArgs> rangeMatch;
+      private final @Nullable Output<Int64RangeMatchArgs> rangeMatch;
 
-    public Input<Int64RangeMatchArgs> getRangeMatch() {
-        return this.rangeMatch == null ? Input.empty() : this.rangeMatch;
+    public Output<Int64RangeMatchArgs> getRangeMatch() {
+        return this.rangeMatch == null ? Output.empty() : this.rangeMatch;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="regexMatch")
-      private final @Nullable Input<String> regexMatch;
+      private final @Nullable Output<String> regexMatch;
 
-    public Input<String> getRegexMatch() {
-        return this.regexMatch == null ? Input.empty() : this.regexMatch;
+    public Output<String> getRegexMatch() {
+        return this.regexMatch == null ? Output.empty() : this.regexMatch;
     }
 
     /**
@@ -102,21 +102,21 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="suffixMatch")
-      private final @Nullable Input<String> suffixMatch;
+      private final @Nullable Output<String> suffixMatch;
 
-    public Input<String> getSuffixMatch() {
-        return this.suffixMatch == null ? Input.empty() : this.suffixMatch;
+    public Output<String> getSuffixMatch() {
+        return this.suffixMatch == null ? Output.empty() : this.suffixMatch;
     }
 
     public HttpHeaderMatchArgs(
-        @Nullable Input<String> exactMatch,
-        @Nullable Input<String> headerName,
-        @Nullable Input<Boolean> invertMatch,
-        @Nullable Input<String> prefixMatch,
-        @Nullable Input<Boolean> presentMatch,
-        @Nullable Input<Int64RangeMatchArgs> rangeMatch,
-        @Nullable Input<String> regexMatch,
-        @Nullable Input<String> suffixMatch) {
+        @Nullable Output<String> exactMatch,
+        @Nullable Output<String> headerName,
+        @Nullable Output<Boolean> invertMatch,
+        @Nullable Output<String> prefixMatch,
+        @Nullable Output<Boolean> presentMatch,
+        @Nullable Output<Int64RangeMatchArgs> rangeMatch,
+        @Nullable Output<String> regexMatch,
+        @Nullable Output<String> suffixMatch) {
         this.exactMatch = exactMatch;
         this.headerName = headerName;
         this.invertMatch = invertMatch;
@@ -128,14 +128,14 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private HttpHeaderMatchArgs() {
-        this.exactMatch = Input.empty();
-        this.headerName = Input.empty();
-        this.invertMatch = Input.empty();
-        this.prefixMatch = Input.empty();
-        this.presentMatch = Input.empty();
-        this.rangeMatch = Input.empty();
-        this.regexMatch = Input.empty();
-        this.suffixMatch = Input.empty();
+        this.exactMatch = Output.empty();
+        this.headerName = Output.empty();
+        this.invertMatch = Output.empty();
+        this.prefixMatch = Output.empty();
+        this.presentMatch = Output.empty();
+        this.rangeMatch = Output.empty();
+        this.regexMatch = Output.empty();
+        this.suffixMatch = Output.empty();
     }
 
     public static Builder builder() {
@@ -147,14 +147,14 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> exactMatch;
-        private @Nullable Input<String> headerName;
-        private @Nullable Input<Boolean> invertMatch;
-        private @Nullable Input<String> prefixMatch;
-        private @Nullable Input<Boolean> presentMatch;
-        private @Nullable Input<Int64RangeMatchArgs> rangeMatch;
-        private @Nullable Input<String> regexMatch;
-        private @Nullable Input<String> suffixMatch;
+        private @Nullable Output<String> exactMatch;
+        private @Nullable Output<String> headerName;
+        private @Nullable Output<Boolean> invertMatch;
+        private @Nullable Output<String> prefixMatch;
+        private @Nullable Output<Boolean> presentMatch;
+        private @Nullable Output<Int64RangeMatchArgs> rangeMatch;
+        private @Nullable Output<String> regexMatch;
+        private @Nullable Output<String> suffixMatch;
 
         public Builder() {
     	      // Empty
@@ -172,83 +172,83 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
     	      this.suffixMatch = defaults.suffixMatch;
         }
 
-        public Builder exactMatch(@Nullable Input<String> exactMatch) {
+        public Builder exactMatch(@Nullable Output<String> exactMatch) {
             this.exactMatch = exactMatch;
             return this;
         }
 
         public Builder exactMatch(@Nullable String exactMatch) {
-            this.exactMatch = Input.ofNullable(exactMatch);
+            this.exactMatch = Output.ofNullable(exactMatch);
             return this;
         }
 
-        public Builder headerName(@Nullable Input<String> headerName) {
+        public Builder headerName(@Nullable Output<String> headerName) {
             this.headerName = headerName;
             return this;
         }
 
         public Builder headerName(@Nullable String headerName) {
-            this.headerName = Input.ofNullable(headerName);
+            this.headerName = Output.ofNullable(headerName);
             return this;
         }
 
-        public Builder invertMatch(@Nullable Input<Boolean> invertMatch) {
+        public Builder invertMatch(@Nullable Output<Boolean> invertMatch) {
             this.invertMatch = invertMatch;
             return this;
         }
 
         public Builder invertMatch(@Nullable Boolean invertMatch) {
-            this.invertMatch = Input.ofNullable(invertMatch);
+            this.invertMatch = Output.ofNullable(invertMatch);
             return this;
         }
 
-        public Builder prefixMatch(@Nullable Input<String> prefixMatch) {
+        public Builder prefixMatch(@Nullable Output<String> prefixMatch) {
             this.prefixMatch = prefixMatch;
             return this;
         }
 
         public Builder prefixMatch(@Nullable String prefixMatch) {
-            this.prefixMatch = Input.ofNullable(prefixMatch);
+            this.prefixMatch = Output.ofNullable(prefixMatch);
             return this;
         }
 
-        public Builder presentMatch(@Nullable Input<Boolean> presentMatch) {
+        public Builder presentMatch(@Nullable Output<Boolean> presentMatch) {
             this.presentMatch = presentMatch;
             return this;
         }
 
         public Builder presentMatch(@Nullable Boolean presentMatch) {
-            this.presentMatch = Input.ofNullable(presentMatch);
+            this.presentMatch = Output.ofNullable(presentMatch);
             return this;
         }
 
-        public Builder rangeMatch(@Nullable Input<Int64RangeMatchArgs> rangeMatch) {
+        public Builder rangeMatch(@Nullable Output<Int64RangeMatchArgs> rangeMatch) {
             this.rangeMatch = rangeMatch;
             return this;
         }
 
         public Builder rangeMatch(@Nullable Int64RangeMatchArgs rangeMatch) {
-            this.rangeMatch = Input.ofNullable(rangeMatch);
+            this.rangeMatch = Output.ofNullable(rangeMatch);
             return this;
         }
 
-        public Builder regexMatch(@Nullable Input<String> regexMatch) {
+        public Builder regexMatch(@Nullable Output<String> regexMatch) {
             this.regexMatch = regexMatch;
             return this;
         }
 
         public Builder regexMatch(@Nullable String regexMatch) {
-            this.regexMatch = Input.ofNullable(regexMatch);
+            this.regexMatch = Output.ofNullable(regexMatch);
             return this;
         }
 
-        public Builder suffixMatch(@Nullable Input<String> suffixMatch) {
+        public Builder suffixMatch(@Nullable Output<String> suffixMatch) {
             this.suffixMatch = suffixMatch;
             return this;
         }
 
         public Builder suffixMatch(@Nullable String suffixMatch) {
-            this.suffixMatch = Input.ofNullable(suffixMatch);
+            this.suffixMatch = Output.ofNullable(suffixMatch);
             return this;
         }
         public HttpHeaderMatchArgs build() {

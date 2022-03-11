@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.diagflow.inputs.CxIntentTrainingPhrasePartArgs;
 import java.lang.Integer;
@@ -22,10 +22,10 @@ public final class CxIntentTrainingPhraseArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -40,9 +40,9 @@ public final class CxIntentTrainingPhraseArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="parts", required=true)
-      private final Input<List<CxIntentTrainingPhrasePartArgs>> parts;
+      private final Output<List<CxIntentTrainingPhrasePartArgs>> parts;
 
-    public Input<List<CxIntentTrainingPhrasePartArgs>> getParts() {
+    public Output<List<CxIntentTrainingPhrasePartArgs>> getParts() {
         return this.parts;
     }
 
@@ -51,25 +51,25 @@ public final class CxIntentTrainingPhraseArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="repeatCount")
-      private final @Nullable Input<Integer> repeatCount;
+      private final @Nullable Output<Integer> repeatCount;
 
-    public Input<Integer> getRepeatCount() {
-        return this.repeatCount == null ? Input.empty() : this.repeatCount;
+    public Output<Integer> getRepeatCount() {
+        return this.repeatCount == null ? Output.empty() : this.repeatCount;
     }
 
     public CxIntentTrainingPhraseArgs(
-        @Nullable Input<String> id,
-        Input<List<CxIntentTrainingPhrasePartArgs>> parts,
-        @Nullable Input<Integer> repeatCount) {
+        @Nullable Output<String> id,
+        Output<List<CxIntentTrainingPhrasePartArgs>> parts,
+        @Nullable Output<Integer> repeatCount) {
         this.id = id;
         this.parts = Objects.requireNonNull(parts, "expected parameter 'parts' to be non-null");
         this.repeatCount = repeatCount;
     }
 
     private CxIntentTrainingPhraseArgs() {
-        this.id = Input.empty();
-        this.parts = Input.empty();
-        this.repeatCount = Input.empty();
+        this.id = Output.empty();
+        this.parts = Output.empty();
+        this.repeatCount = Output.empty();
     }
 
     public static Builder builder() {
@@ -81,9 +81,9 @@ public final class CxIntentTrainingPhraseArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> id;
-        private Input<List<CxIntentTrainingPhrasePartArgs>> parts;
-        private @Nullable Input<Integer> repeatCount;
+        private @Nullable Output<String> id;
+        private Output<List<CxIntentTrainingPhrasePartArgs>> parts;
+        private @Nullable Output<Integer> repeatCount;
 
         public Builder() {
     	      // Empty
@@ -96,33 +96,33 @@ public final class CxIntentTrainingPhraseArgs extends io.pulumi.resources.Resour
     	      this.repeatCount = defaults.repeatCount;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder parts(Input<List<CxIntentTrainingPhrasePartArgs>> parts) {
+        public Builder parts(Output<List<CxIntentTrainingPhrasePartArgs>> parts) {
             this.parts = Objects.requireNonNull(parts);
             return this;
         }
 
         public Builder parts(List<CxIntentTrainingPhrasePartArgs> parts) {
-            this.parts = Input.of(Objects.requireNonNull(parts));
+            this.parts = Output.of(Objects.requireNonNull(parts));
             return this;
         }
 
-        public Builder repeatCount(@Nullable Input<Integer> repeatCount) {
+        public Builder repeatCount(@Nullable Output<Integer> repeatCount) {
             this.repeatCount = repeatCount;
             return this;
         }
 
         public Builder repeatCount(@Nullable Integer repeatCount) {
-            this.repeatCount = Input.ofNullable(repeatCount);
+            this.repeatCount = Output.ofNullable(repeatCount);
             return this;
         }
         public CxIntentTrainingPhraseArgs build() {

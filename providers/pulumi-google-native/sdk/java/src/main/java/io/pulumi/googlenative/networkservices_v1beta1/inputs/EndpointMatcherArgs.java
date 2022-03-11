@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkservices_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.networkservices_v1beta1.inputs.MetadataLabelMatcherArgs;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class EndpointMatcherArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="metadataLabelMatcher")
-      private final @Nullable Input<MetadataLabelMatcherArgs> metadataLabelMatcher;
+      private final @Nullable Output<MetadataLabelMatcherArgs> metadataLabelMatcher;
 
-    public Input<MetadataLabelMatcherArgs> getMetadataLabelMatcher() {
-        return this.metadataLabelMatcher == null ? Input.empty() : this.metadataLabelMatcher;
+    public Output<MetadataLabelMatcherArgs> getMetadataLabelMatcher() {
+        return this.metadataLabelMatcher == null ? Output.empty() : this.metadataLabelMatcher;
     }
 
-    public EndpointMatcherArgs(@Nullable Input<MetadataLabelMatcherArgs> metadataLabelMatcher) {
+    public EndpointMatcherArgs(@Nullable Output<MetadataLabelMatcherArgs> metadataLabelMatcher) {
         this.metadataLabelMatcher = metadataLabelMatcher;
     }
 
     private EndpointMatcherArgs() {
-        this.metadataLabelMatcher = Input.empty();
+        this.metadataLabelMatcher = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class EndpointMatcherArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<MetadataLabelMatcherArgs> metadataLabelMatcher;
+        private @Nullable Output<MetadataLabelMatcherArgs> metadataLabelMatcher;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class EndpointMatcherArgs extends io.pulumi.resources.ResourceArgs 
     	      this.metadataLabelMatcher = defaults.metadataLabelMatcher;
         }
 
-        public Builder metadataLabelMatcher(@Nullable Input<MetadataLabelMatcherArgs> metadataLabelMatcher) {
+        public Builder metadataLabelMatcher(@Nullable Output<MetadataLabelMatcherArgs> metadataLabelMatcher) {
             this.metadataLabelMatcher = metadataLabelMatcher;
             return this;
         }
 
         public Builder metadataLabelMatcher(@Nullable MetadataLabelMatcherArgs metadataLabelMatcher) {
-            this.metadataLabelMatcher = Input.ofNullable(metadataLabelMatcher);
+            this.metadataLabelMatcher = Output.ofNullable(metadataLabelMatcher);
             return this;
         }
         public EndpointMatcherArgs build() {

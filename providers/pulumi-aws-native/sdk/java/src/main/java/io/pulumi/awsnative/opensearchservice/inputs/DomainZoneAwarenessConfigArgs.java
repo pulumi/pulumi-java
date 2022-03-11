@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.opensearchservice.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class DomainZoneAwarenessConfigArgs extends io.pulumi.resources.Res
     public static final DomainZoneAwarenessConfigArgs Empty = new DomainZoneAwarenessConfigArgs();
 
     @InputImport(name="availabilityZoneCount")
-      private final @Nullable Input<Integer> availabilityZoneCount;
+      private final @Nullable Output<Integer> availabilityZoneCount;
 
-    public Input<Integer> getAvailabilityZoneCount() {
-        return this.availabilityZoneCount == null ? Input.empty() : this.availabilityZoneCount;
+    public Output<Integer> getAvailabilityZoneCount() {
+        return this.availabilityZoneCount == null ? Output.empty() : this.availabilityZoneCount;
     }
 
-    public DomainZoneAwarenessConfigArgs(@Nullable Input<Integer> availabilityZoneCount) {
+    public DomainZoneAwarenessConfigArgs(@Nullable Output<Integer> availabilityZoneCount) {
         this.availabilityZoneCount = availabilityZoneCount;
     }
 
     private DomainZoneAwarenessConfigArgs() {
-        this.availabilityZoneCount = Input.empty();
+        this.availabilityZoneCount = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class DomainZoneAwarenessConfigArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> availabilityZoneCount;
+        private @Nullable Output<Integer> availabilityZoneCount;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class DomainZoneAwarenessConfigArgs extends io.pulumi.resources.Res
     	      this.availabilityZoneCount = defaults.availabilityZoneCount;
         }
 
-        public Builder availabilityZoneCount(@Nullable Input<Integer> availabilityZoneCount) {
+        public Builder availabilityZoneCount(@Nullable Output<Integer> availabilityZoneCount) {
             this.availabilityZoneCount = availabilityZoneCount;
             return this;
         }
 
         public Builder availabilityZoneCount(@Nullable Integer availabilityZoneCount) {
-            this.availabilityZoneCount = Input.ofNullable(availabilityZoneCount);
+            this.availabilityZoneCount = Output.ofNullable(availabilityZoneCount);
             return this;
         }
         public DomainZoneAwarenessConfigArgs build() {

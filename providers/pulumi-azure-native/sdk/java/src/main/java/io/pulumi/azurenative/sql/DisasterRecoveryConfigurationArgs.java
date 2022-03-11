@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class DisasterRecoveryConfigurationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="disasterRecoveryConfigurationName")
-      private final @Nullable Input<String> disasterRecoveryConfigurationName;
+      private final @Nullable Output<String> disasterRecoveryConfigurationName;
 
-    public Input<String> getDisasterRecoveryConfigurationName() {
-        return this.disasterRecoveryConfigurationName == null ? Input.empty() : this.disasterRecoveryConfigurationName;
+    public Output<String> getDisasterRecoveryConfigurationName() {
+        return this.disasterRecoveryConfigurationName == null ? Output.empty() : this.disasterRecoveryConfigurationName;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class DisasterRecoveryConfigurationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,25 +41,25 @@ public final class DisasterRecoveryConfigurationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="serverName", required=true)
-      private final Input<String> serverName;
+      private final Output<String> serverName;
 
-    public Input<String> getServerName() {
+    public Output<String> getServerName() {
         return this.serverName;
     }
 
     public DisasterRecoveryConfigurationArgs(
-        @Nullable Input<String> disasterRecoveryConfigurationName,
-        Input<String> resourceGroupName,
-        Input<String> serverName) {
+        @Nullable Output<String> disasterRecoveryConfigurationName,
+        Output<String> resourceGroupName,
+        Output<String> serverName) {
         this.disasterRecoveryConfigurationName = disasterRecoveryConfigurationName;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
     }
 
     private DisasterRecoveryConfigurationArgs() {
-        this.disasterRecoveryConfigurationName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serverName = Input.empty();
+        this.disasterRecoveryConfigurationName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serverName = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class DisasterRecoveryConfigurationArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<String> disasterRecoveryConfigurationName;
-        private Input<String> resourceGroupName;
-        private Input<String> serverName;
+        private @Nullable Output<String> disasterRecoveryConfigurationName;
+        private Output<String> resourceGroupName;
+        private Output<String> serverName;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class DisasterRecoveryConfigurationArgs extends io.pulumi.resources
     	      this.serverName = defaults.serverName;
         }
 
-        public Builder disasterRecoveryConfigurationName(@Nullable Input<String> disasterRecoveryConfigurationName) {
+        public Builder disasterRecoveryConfigurationName(@Nullable Output<String> disasterRecoveryConfigurationName) {
             this.disasterRecoveryConfigurationName = disasterRecoveryConfigurationName;
             return this;
         }
 
         public Builder disasterRecoveryConfigurationName(@Nullable String disasterRecoveryConfigurationName) {
-            this.disasterRecoveryConfigurationName = Input.ofNullable(disasterRecoveryConfigurationName);
+            this.disasterRecoveryConfigurationName = Output.ofNullable(disasterRecoveryConfigurationName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serverName(Input<String> serverName) {
+        public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
         public Builder serverName(String serverName) {
-            this.serverName = Input.of(Objects.requireNonNull(serverName));
+            this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
         public DisasterRecoveryConfigurationArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.route53resolver;
 
 import io.pulumi.awsnative.route53resolver.inputs.FirewallRuleGroupFirewallRuleArgs;
 import io.pulumi.awsnative.route53resolver.inputs.FirewallRuleGroupTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class FirewallRuleGroupArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="firewallRules")
-      private final @Nullable Input<List<FirewallRuleGroupFirewallRuleArgs>> firewallRules;
+      private final @Nullable Output<List<FirewallRuleGroupFirewallRuleArgs>> firewallRules;
 
-    public Input<List<FirewallRuleGroupFirewallRuleArgs>> getFirewallRules() {
-        return this.firewallRules == null ? Input.empty() : this.firewallRules;
+    public Output<List<FirewallRuleGroupFirewallRuleArgs>> getFirewallRules() {
+        return this.firewallRules == null ? Output.empty() : this.firewallRules;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class FirewallRuleGroupArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -44,25 +44,25 @@ public final class FirewallRuleGroupArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<FirewallRuleGroupTagArgs>> tags;
+      private final @Nullable Output<List<FirewallRuleGroupTagArgs>> tags;
 
-    public Input<List<FirewallRuleGroupTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<FirewallRuleGroupTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public FirewallRuleGroupArgs(
-        @Nullable Input<List<FirewallRuleGroupFirewallRuleArgs>> firewallRules,
-        @Nullable Input<String> name,
-        @Nullable Input<List<FirewallRuleGroupTagArgs>> tags) {
+        @Nullable Output<List<FirewallRuleGroupFirewallRuleArgs>> firewallRules,
+        @Nullable Output<String> name,
+        @Nullable Output<List<FirewallRuleGroupTagArgs>> tags) {
         this.firewallRules = firewallRules;
         this.name = name;
         this.tags = tags;
     }
 
     private FirewallRuleGroupArgs() {
-        this.firewallRules = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
+        this.firewallRules = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class FirewallRuleGroupArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<List<FirewallRuleGroupFirewallRuleArgs>> firewallRules;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<FirewallRuleGroupTagArgs>> tags;
+        private @Nullable Output<List<FirewallRuleGroupFirewallRuleArgs>> firewallRules;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<FirewallRuleGroupTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class FirewallRuleGroupArgs extends io.pulumi.resources.ResourceArg
     	      this.tags = defaults.tags;
         }
 
-        public Builder firewallRules(@Nullable Input<List<FirewallRuleGroupFirewallRuleArgs>> firewallRules) {
+        public Builder firewallRules(@Nullable Output<List<FirewallRuleGroupFirewallRuleArgs>> firewallRules) {
             this.firewallRules = firewallRules;
             return this;
         }
 
         public Builder firewallRules(@Nullable List<FirewallRuleGroupFirewallRuleArgs> firewallRules) {
-            this.firewallRules = Input.ofNullable(firewallRules);
+            this.firewallRules = Output.ofNullable(firewallRules);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<FirewallRuleGroupTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<FirewallRuleGroupTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<FirewallRuleGroupTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public FirewallRuleGroupArgs build() {

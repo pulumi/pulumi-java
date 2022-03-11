@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ses.ConfgurationSetArgs;
 import io.pulumi.aws.ses.inputs.ConfgurationSetState;
 import io.pulumi.aws.ses.outputs.ConfgurationSetDeliveryOptions;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -158,14 +157,14 @@ public class ConfgurationSet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ConfgurationSet(String name, @Nullable ConfgurationSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ses/confgurationSet:ConfgurationSet", name, args == null ? ConfgurationSetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:ses/confgurationSet:ConfgurationSet", name, args == null ? ConfgurationSetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ConfgurationSet(String name, Input<String> id, @Nullable ConfgurationSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ConfgurationSet(String name, Output<String> id, @Nullable ConfgurationSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:ses/confgurationSet:ConfgurationSet", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -181,7 +180,7 @@ public class ConfgurationSet extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ConfgurationSet get(String name, Input<String> id, @Nullable ConfgurationSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ConfgurationSet get(String name, Output<String> id, @Nullable ConfgurationSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ConfgurationSet(name, id, state, options);
     }
 }

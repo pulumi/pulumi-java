@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dns_v1.inputs.ManagedZonePeeringConfigTargetNetworkArgs;
 import java.lang.String;
@@ -16,10 +16,10 @@ public final class ManagedZonePeeringConfigArgs extends io.pulumi.resources.Reso
     public static final ManagedZonePeeringConfigArgs Empty = new ManagedZonePeeringConfigArgs();
 
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -27,22 +27,22 @@ public final class ManagedZonePeeringConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="targetNetwork")
-      private final @Nullable Input<ManagedZonePeeringConfigTargetNetworkArgs> targetNetwork;
+      private final @Nullable Output<ManagedZonePeeringConfigTargetNetworkArgs> targetNetwork;
 
-    public Input<ManagedZonePeeringConfigTargetNetworkArgs> getTargetNetwork() {
-        return this.targetNetwork == null ? Input.empty() : this.targetNetwork;
+    public Output<ManagedZonePeeringConfigTargetNetworkArgs> getTargetNetwork() {
+        return this.targetNetwork == null ? Output.empty() : this.targetNetwork;
     }
 
     public ManagedZonePeeringConfigArgs(
-        @Nullable Input<String> kind,
-        @Nullable Input<ManagedZonePeeringConfigTargetNetworkArgs> targetNetwork) {
+        @Nullable Output<String> kind,
+        @Nullable Output<ManagedZonePeeringConfigTargetNetworkArgs> targetNetwork) {
         this.kind = kind;
         this.targetNetwork = targetNetwork;
     }
 
     private ManagedZonePeeringConfigArgs() {
-        this.kind = Input.empty();
-        this.targetNetwork = Input.empty();
+        this.kind = Output.empty();
+        this.targetNetwork = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class ManagedZonePeeringConfigArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> kind;
-        private @Nullable Input<ManagedZonePeeringConfigTargetNetworkArgs> targetNetwork;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<ManagedZonePeeringConfigTargetNetworkArgs> targetNetwork;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class ManagedZonePeeringConfigArgs extends io.pulumi.resources.Reso
     	      this.targetNetwork = defaults.targetNetwork;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder targetNetwork(@Nullable Input<ManagedZonePeeringConfigTargetNetworkArgs> targetNetwork) {
+        public Builder targetNetwork(@Nullable Output<ManagedZonePeeringConfigTargetNetworkArgs> targetNetwork) {
             this.targetNetwork = targetNetwork;
             return this;
         }
 
         public Builder targetNetwork(@Nullable ManagedZonePeeringConfigTargetNetworkArgs targetNetwork) {
-            this.targetNetwork = Input.ofNullable(targetNetwork);
+            this.targetNetwork = Output.ofNullable(targetNetwork);
             return this;
         }
         public ManagedZonePeeringConfigArgs build() {

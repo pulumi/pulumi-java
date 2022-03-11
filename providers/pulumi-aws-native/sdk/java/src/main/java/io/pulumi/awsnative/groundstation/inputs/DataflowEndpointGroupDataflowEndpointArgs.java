@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.groundstation.inputs;
 
 import io.pulumi.awsnative.groundstation.inputs.DataflowEndpointGroupSocketAddressArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,39 +17,39 @@ public final class DataflowEndpointGroupDataflowEndpointArgs extends io.pulumi.r
     public static final DataflowEndpointGroupDataflowEndpointArgs Empty = new DataflowEndpointGroupDataflowEndpointArgs();
 
     @InputImport(name="address")
-      private final @Nullable Input<DataflowEndpointGroupSocketAddressArgs> address;
+      private final @Nullable Output<DataflowEndpointGroupSocketAddressArgs> address;
 
-    public Input<DataflowEndpointGroupSocketAddressArgs> getAddress() {
-        return this.address == null ? Input.empty() : this.address;
+    public Output<DataflowEndpointGroupSocketAddressArgs> getAddress() {
+        return this.address == null ? Output.empty() : this.address;
     }
 
     @InputImport(name="mtu")
-      private final @Nullable Input<Integer> mtu;
+      private final @Nullable Output<Integer> mtu;
 
-    public Input<Integer> getMtu() {
-        return this.mtu == null ? Input.empty() : this.mtu;
+    public Output<Integer> getMtu() {
+        return this.mtu == null ? Output.empty() : this.mtu;
     }
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public DataflowEndpointGroupDataflowEndpointArgs(
-        @Nullable Input<DataflowEndpointGroupSocketAddressArgs> address,
-        @Nullable Input<Integer> mtu,
-        @Nullable Input<String> name) {
+        @Nullable Output<DataflowEndpointGroupSocketAddressArgs> address,
+        @Nullable Output<Integer> mtu,
+        @Nullable Output<String> name) {
         this.address = address;
         this.mtu = mtu;
         this.name = name;
     }
 
     private DataflowEndpointGroupDataflowEndpointArgs() {
-        this.address = Input.empty();
-        this.mtu = Input.empty();
-        this.name = Input.empty();
+        this.address = Output.empty();
+        this.mtu = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,9 +61,9 @@ public final class DataflowEndpointGroupDataflowEndpointArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<DataflowEndpointGroupSocketAddressArgs> address;
-        private @Nullable Input<Integer> mtu;
-        private @Nullable Input<String> name;
+        private @Nullable Output<DataflowEndpointGroupSocketAddressArgs> address;
+        private @Nullable Output<Integer> mtu;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -76,33 +76,33 @@ public final class DataflowEndpointGroupDataflowEndpointArgs extends io.pulumi.r
     	      this.name = defaults.name;
         }
 
-        public Builder address(@Nullable Input<DataflowEndpointGroupSocketAddressArgs> address) {
+        public Builder address(@Nullable Output<DataflowEndpointGroupSocketAddressArgs> address) {
             this.address = address;
             return this;
         }
 
         public Builder address(@Nullable DataflowEndpointGroupSocketAddressArgs address) {
-            this.address = Input.ofNullable(address);
+            this.address = Output.ofNullable(address);
             return this;
         }
 
-        public Builder mtu(@Nullable Input<Integer> mtu) {
+        public Builder mtu(@Nullable Output<Integer> mtu) {
             this.mtu = mtu;
             return this;
         }
 
         public Builder mtu(@Nullable Integer mtu) {
-            this.mtu = Input.ofNullable(mtu);
+            this.mtu = Output.ofNullable(mtu);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public DataflowEndpointGroupDataflowEndpointArgs build() {

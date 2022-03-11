@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.apigee.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="analyticsRegion")
-      private final @Nullable Input<String> analyticsRegion;
+      private final @Nullable Output<String> analyticsRegion;
 
-    public Input<String> getAnalyticsRegion() {
-        return this.analyticsRegion == null ? Input.empty() : this.analyticsRegion;
+    public Output<String> getAnalyticsRegion() {
+        return this.analyticsRegion == null ? Output.empty() : this.analyticsRegion;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizedNetwork")
-      private final @Nullable Input<String> authorizedNetwork;
+      private final @Nullable Output<String> authorizedNetwork;
 
-    public Input<String> getAuthorizedNetwork() {
-        return this.authorizedNetwork == null ? Input.empty() : this.authorizedNetwork;
+    public Output<String> getAuthorizedNetwork() {
+        return this.authorizedNetwork == null ? Output.empty() : this.authorizedNetwork;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="caCertificate")
-      private final @Nullable Input<String> caCertificate;
+      private final @Nullable Output<String> caCertificate;
 
-    public Input<String> getCaCertificate() {
-        return this.caCertificate == null ? Input.empty() : this.caCertificate;
+    public Output<String> getCaCertificate() {
+        return this.caCertificate == null ? Output.empty() : this.caCertificate;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectId")
-      private final @Nullable Input<String> projectId;
+      private final @Nullable Output<String> projectId;
 
-    public Input<String> getProjectId() {
-        return this.projectId == null ? Input.empty() : this.projectId;
+    public Output<String> getProjectId() {
+        return this.projectId == null ? Output.empty() : this.projectId;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runtimeDatabaseEncryptionKeyName")
-      private final @Nullable Input<String> runtimeDatabaseEncryptionKeyName;
+      private final @Nullable Output<String> runtimeDatabaseEncryptionKeyName;
 
-    public Input<String> getRuntimeDatabaseEncryptionKeyName() {
-        return this.runtimeDatabaseEncryptionKeyName == null ? Input.empty() : this.runtimeDatabaseEncryptionKeyName;
+    public Output<String> getRuntimeDatabaseEncryptionKeyName() {
+        return this.runtimeDatabaseEncryptionKeyName == null ? Output.empty() : this.runtimeDatabaseEncryptionKeyName;
     }
 
     /**
@@ -115,10 +115,10 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runtimeType")
-      private final @Nullable Input<String> runtimeType;
+      private final @Nullable Output<String> runtimeType;
 
-    public Input<String> getRuntimeType() {
-        return this.runtimeType == null ? Input.empty() : this.runtimeType;
+    public Output<String> getRuntimeType() {
+        return this.runtimeType == null ? Output.empty() : this.runtimeType;
     }
 
     /**
@@ -127,23 +127,23 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subscriptionType")
-      private final @Nullable Input<String> subscriptionType;
+      private final @Nullable Output<String> subscriptionType;
 
-    public Input<String> getSubscriptionType() {
-        return this.subscriptionType == null ? Input.empty() : this.subscriptionType;
+    public Output<String> getSubscriptionType() {
+        return this.subscriptionType == null ? Output.empty() : this.subscriptionType;
     }
 
     public OrganizationState(
-        @Nullable Input<String> analyticsRegion,
-        @Nullable Input<String> authorizedNetwork,
-        @Nullable Input<String> caCertificate,
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> name,
-        @Nullable Input<String> projectId,
-        @Nullable Input<String> runtimeDatabaseEncryptionKeyName,
-        @Nullable Input<String> runtimeType,
-        @Nullable Input<String> subscriptionType) {
+        @Nullable Output<String> analyticsRegion,
+        @Nullable Output<String> authorizedNetwork,
+        @Nullable Output<String> caCertificate,
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> name,
+        @Nullable Output<String> projectId,
+        @Nullable Output<String> runtimeDatabaseEncryptionKeyName,
+        @Nullable Output<String> runtimeType,
+        @Nullable Output<String> subscriptionType) {
         this.analyticsRegion = analyticsRegion;
         this.authorizedNetwork = authorizedNetwork;
         this.caCertificate = caCertificate;
@@ -157,16 +157,16 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
     }
 
     private OrganizationState() {
-        this.analyticsRegion = Input.empty();
-        this.authorizedNetwork = Input.empty();
-        this.caCertificate = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.name = Input.empty();
-        this.projectId = Input.empty();
-        this.runtimeDatabaseEncryptionKeyName = Input.empty();
-        this.runtimeType = Input.empty();
-        this.subscriptionType = Input.empty();
+        this.analyticsRegion = Output.empty();
+        this.authorizedNetwork = Output.empty();
+        this.caCertificate = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.name = Output.empty();
+        this.projectId = Output.empty();
+        this.runtimeDatabaseEncryptionKeyName = Output.empty();
+        this.runtimeType = Output.empty();
+        this.subscriptionType = Output.empty();
     }
 
     public static Builder builder() {
@@ -178,16 +178,16 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> analyticsRegion;
-        private @Nullable Input<String> authorizedNetwork;
-        private @Nullable Input<String> caCertificate;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> projectId;
-        private @Nullable Input<String> runtimeDatabaseEncryptionKeyName;
-        private @Nullable Input<String> runtimeType;
-        private @Nullable Input<String> subscriptionType;
+        private @Nullable Output<String> analyticsRegion;
+        private @Nullable Output<String> authorizedNetwork;
+        private @Nullable Output<String> caCertificate;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> projectId;
+        private @Nullable Output<String> runtimeDatabaseEncryptionKeyName;
+        private @Nullable Output<String> runtimeType;
+        private @Nullable Output<String> subscriptionType;
 
         public Builder() {
     	      // Empty
@@ -207,103 +207,103 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
     	      this.subscriptionType = defaults.subscriptionType;
         }
 
-        public Builder analyticsRegion(@Nullable Input<String> analyticsRegion) {
+        public Builder analyticsRegion(@Nullable Output<String> analyticsRegion) {
             this.analyticsRegion = analyticsRegion;
             return this;
         }
 
         public Builder analyticsRegion(@Nullable String analyticsRegion) {
-            this.analyticsRegion = Input.ofNullable(analyticsRegion);
+            this.analyticsRegion = Output.ofNullable(analyticsRegion);
             return this;
         }
 
-        public Builder authorizedNetwork(@Nullable Input<String> authorizedNetwork) {
+        public Builder authorizedNetwork(@Nullable Output<String> authorizedNetwork) {
             this.authorizedNetwork = authorizedNetwork;
             return this;
         }
 
         public Builder authorizedNetwork(@Nullable String authorizedNetwork) {
-            this.authorizedNetwork = Input.ofNullable(authorizedNetwork);
+            this.authorizedNetwork = Output.ofNullable(authorizedNetwork);
             return this;
         }
 
-        public Builder caCertificate(@Nullable Input<String> caCertificate) {
+        public Builder caCertificate(@Nullable Output<String> caCertificate) {
             this.caCertificate = caCertificate;
             return this;
         }
 
         public Builder caCertificate(@Nullable String caCertificate) {
-            this.caCertificate = Input.ofNullable(caCertificate);
+            this.caCertificate = Output.ofNullable(caCertificate);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder projectId(@Nullable Input<String> projectId) {
+        public Builder projectId(@Nullable Output<String> projectId) {
             this.projectId = projectId;
             return this;
         }
 
         public Builder projectId(@Nullable String projectId) {
-            this.projectId = Input.ofNullable(projectId);
+            this.projectId = Output.ofNullable(projectId);
             return this;
         }
 
-        public Builder runtimeDatabaseEncryptionKeyName(@Nullable Input<String> runtimeDatabaseEncryptionKeyName) {
+        public Builder runtimeDatabaseEncryptionKeyName(@Nullable Output<String> runtimeDatabaseEncryptionKeyName) {
             this.runtimeDatabaseEncryptionKeyName = runtimeDatabaseEncryptionKeyName;
             return this;
         }
 
         public Builder runtimeDatabaseEncryptionKeyName(@Nullable String runtimeDatabaseEncryptionKeyName) {
-            this.runtimeDatabaseEncryptionKeyName = Input.ofNullable(runtimeDatabaseEncryptionKeyName);
+            this.runtimeDatabaseEncryptionKeyName = Output.ofNullable(runtimeDatabaseEncryptionKeyName);
             return this;
         }
 
-        public Builder runtimeType(@Nullable Input<String> runtimeType) {
+        public Builder runtimeType(@Nullable Output<String> runtimeType) {
             this.runtimeType = runtimeType;
             return this;
         }
 
         public Builder runtimeType(@Nullable String runtimeType) {
-            this.runtimeType = Input.ofNullable(runtimeType);
+            this.runtimeType = Output.ofNullable(runtimeType);
             return this;
         }
 
-        public Builder subscriptionType(@Nullable Input<String> subscriptionType) {
+        public Builder subscriptionType(@Nullable Output<String> subscriptionType) {
             this.subscriptionType = subscriptionType;
             return this;
         }
 
         public Builder subscriptionType(@Nullable String subscriptionType) {
-            this.subscriptionType = Input.ofNullable(subscriptionType);
+            this.subscriptionType = Output.ofNullable(subscriptionType);
             return this;
         }
         public OrganizationState build() {

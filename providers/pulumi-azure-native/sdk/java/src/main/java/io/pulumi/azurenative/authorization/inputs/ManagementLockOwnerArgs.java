@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ManagementLockOwnerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="applicationId")
-      private final @Nullable Input<String> applicationId;
+      private final @Nullable Output<String> applicationId;
 
-    public Input<String> getApplicationId() {
-        return this.applicationId == null ? Input.empty() : this.applicationId;
+    public Output<String> getApplicationId() {
+        return this.applicationId == null ? Output.empty() : this.applicationId;
     }
 
-    public ManagementLockOwnerArgs(@Nullable Input<String> applicationId) {
+    public ManagementLockOwnerArgs(@Nullable Output<String> applicationId) {
         this.applicationId = applicationId;
     }
 
     private ManagementLockOwnerArgs() {
-        this.applicationId = Input.empty();
+        this.applicationId = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ManagementLockOwnerArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> applicationId;
+        private @Nullable Output<String> applicationId;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ManagementLockOwnerArgs extends io.pulumi.resources.ResourceA
     	      this.applicationId = defaults.applicationId;
         }
 
-        public Builder applicationId(@Nullable Input<String> applicationId) {
+        public Builder applicationId(@Nullable Output<String> applicationId) {
             this.applicationId = applicationId;
             return this;
         }
 
         public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Input.ofNullable(applicationId);
+            this.applicationId = Output.ofNullable(applicationId);
             return this;
         }
         public ManagementLockOwnerArgs build() {

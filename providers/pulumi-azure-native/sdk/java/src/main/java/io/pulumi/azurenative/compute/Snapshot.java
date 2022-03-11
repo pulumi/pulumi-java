@@ -12,7 +12,6 @@ import io.pulumi.azurenative.compute.outputs.ExtendedLocationResponse;
 import io.pulumi.azurenative.compute.outputs.PurchasePlanResponse;
 import io.pulumi.azurenative.compute.outputs.SnapshotSkuResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -402,31 +401,31 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Snapshot(String name, SnapshotArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:compute:Snapshot", name, args == null ? SnapshotArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:compute:Snapshot", name, args == null ? SnapshotArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Snapshot(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Snapshot(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:compute:Snapshot", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:compute/v20160430preview:Snapshot").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20170330:Snapshot").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20180401:Snapshot").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20180601:Snapshot").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20180930:Snapshot").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20190301:Snapshot").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20190701:Snapshot").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20191101:Snapshot").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20200501:Snapshot").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20200630:Snapshot").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20200930:Snapshot").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20201201:Snapshot").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20210401:Snapshot").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20210801:Snapshot").build())
+                Output.of(Alias.builder().setType("azure-native:compute/v20160430preview:Snapshot").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20170330:Snapshot").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20180401:Snapshot").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20180601:Snapshot").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20180930:Snapshot").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20190301:Snapshot").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20190701:Snapshot").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20191101:Snapshot").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20200501:Snapshot").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20200630:Snapshot").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20200930:Snapshot").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20201201:Snapshot").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20210401:Snapshot").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20210801:Snapshot").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -440,7 +439,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Snapshot get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Snapshot get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Snapshot(name, id, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -23,9 +23,9 @@ public final class ApplicationGatewayConnectionDrainingArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="drainTimeoutInSec", required=true)
-      private final Input<Integer> drainTimeoutInSec;
+      private final Output<Integer> drainTimeoutInSec;
 
-    public Input<Integer> getDrainTimeoutInSec() {
+    public Output<Integer> getDrainTimeoutInSec() {
         return this.drainTimeoutInSec;
     }
 
@@ -34,22 +34,22 @@ public final class ApplicationGatewayConnectionDrainingArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="enabled", required=true)
-      private final Input<Boolean> enabled;
+      private final Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
+    public Output<Boolean> getEnabled() {
         return this.enabled;
     }
 
     public ApplicationGatewayConnectionDrainingArgs(
-        Input<Integer> drainTimeoutInSec,
-        Input<Boolean> enabled) {
+        Output<Integer> drainTimeoutInSec,
+        Output<Boolean> enabled) {
         this.drainTimeoutInSec = Objects.requireNonNull(drainTimeoutInSec, "expected parameter 'drainTimeoutInSec' to be non-null");
         this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
     }
 
     private ApplicationGatewayConnectionDrainingArgs() {
-        this.drainTimeoutInSec = Input.empty();
-        this.enabled = Input.empty();
+        this.drainTimeoutInSec = Output.empty();
+        this.enabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ApplicationGatewayConnectionDrainingArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private Input<Integer> drainTimeoutInSec;
-        private Input<Boolean> enabled;
+        private Output<Integer> drainTimeoutInSec;
+        private Output<Boolean> enabled;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ApplicationGatewayConnectionDrainingArgs extends io.pulumi.re
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder drainTimeoutInSec(Input<Integer> drainTimeoutInSec) {
+        public Builder drainTimeoutInSec(Output<Integer> drainTimeoutInSec) {
             this.drainTimeoutInSec = Objects.requireNonNull(drainTimeoutInSec);
             return this;
         }
 
         public Builder drainTimeoutInSec(Integer drainTimeoutInSec) {
-            this.drainTimeoutInSec = Input.of(Objects.requireNonNull(drainTimeoutInSec));
+            this.drainTimeoutInSec = Output.of(Objects.requireNonNull(drainTimeoutInSec));
             return this;
         }
 
-        public Builder enabled(Input<Boolean> enabled) {
+        public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Input.of(Objects.requireNonNull(enabled));
+            this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
         public ApplicationGatewayConnectionDrainingArgs build() {

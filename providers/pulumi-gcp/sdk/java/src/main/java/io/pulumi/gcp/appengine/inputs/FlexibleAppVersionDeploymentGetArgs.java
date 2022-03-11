@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.appengine.inputs.FlexibleAppVersionDeploymentCloudBuildOptionsGetArgs;
 import io.pulumi.gcp.appengine.inputs.FlexibleAppVersionDeploymentContainerGetArgs;
@@ -24,10 +24,10 @@ public final class FlexibleAppVersionDeploymentGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="cloudBuildOptions")
-      private final @Nullable Input<FlexibleAppVersionDeploymentCloudBuildOptionsGetArgs> cloudBuildOptions;
+      private final @Nullable Output<FlexibleAppVersionDeploymentCloudBuildOptionsGetArgs> cloudBuildOptions;
 
-    public Input<FlexibleAppVersionDeploymentCloudBuildOptionsGetArgs> getCloudBuildOptions() {
-        return this.cloudBuildOptions == null ? Input.empty() : this.cloudBuildOptions;
+    public Output<FlexibleAppVersionDeploymentCloudBuildOptionsGetArgs> getCloudBuildOptions() {
+        return this.cloudBuildOptions == null ? Output.empty() : this.cloudBuildOptions;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class FlexibleAppVersionDeploymentGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="container")
-      private final @Nullable Input<FlexibleAppVersionDeploymentContainerGetArgs> container;
+      private final @Nullable Output<FlexibleAppVersionDeploymentContainerGetArgs> container;
 
-    public Input<FlexibleAppVersionDeploymentContainerGetArgs> getContainer() {
-        return this.container == null ? Input.empty() : this.container;
+    public Output<FlexibleAppVersionDeploymentContainerGetArgs> getContainer() {
+        return this.container == null ? Output.empty() : this.container;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class FlexibleAppVersionDeploymentGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="files")
-      private final @Nullable Input<List<FlexibleAppVersionDeploymentFileGetArgs>> files;
+      private final @Nullable Output<List<FlexibleAppVersionDeploymentFileGetArgs>> files;
 
-    public Input<List<FlexibleAppVersionDeploymentFileGetArgs>> getFiles() {
-        return this.files == null ? Input.empty() : this.files;
+    public Output<List<FlexibleAppVersionDeploymentFileGetArgs>> getFiles() {
+        return this.files == null ? Output.empty() : this.files;
     }
 
     /**
@@ -61,17 +61,17 @@ public final class FlexibleAppVersionDeploymentGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="zip")
-      private final @Nullable Input<FlexibleAppVersionDeploymentZipGetArgs> zip;
+      private final @Nullable Output<FlexibleAppVersionDeploymentZipGetArgs> zip;
 
-    public Input<FlexibleAppVersionDeploymentZipGetArgs> getZip() {
-        return this.zip == null ? Input.empty() : this.zip;
+    public Output<FlexibleAppVersionDeploymentZipGetArgs> getZip() {
+        return this.zip == null ? Output.empty() : this.zip;
     }
 
     public FlexibleAppVersionDeploymentGetArgs(
-        @Nullable Input<FlexibleAppVersionDeploymentCloudBuildOptionsGetArgs> cloudBuildOptions,
-        @Nullable Input<FlexibleAppVersionDeploymentContainerGetArgs> container,
-        @Nullable Input<List<FlexibleAppVersionDeploymentFileGetArgs>> files,
-        @Nullable Input<FlexibleAppVersionDeploymentZipGetArgs> zip) {
+        @Nullable Output<FlexibleAppVersionDeploymentCloudBuildOptionsGetArgs> cloudBuildOptions,
+        @Nullable Output<FlexibleAppVersionDeploymentContainerGetArgs> container,
+        @Nullable Output<List<FlexibleAppVersionDeploymentFileGetArgs>> files,
+        @Nullable Output<FlexibleAppVersionDeploymentZipGetArgs> zip) {
         this.cloudBuildOptions = cloudBuildOptions;
         this.container = container;
         this.files = files;
@@ -79,10 +79,10 @@ public final class FlexibleAppVersionDeploymentGetArgs extends io.pulumi.resourc
     }
 
     private FlexibleAppVersionDeploymentGetArgs() {
-        this.cloudBuildOptions = Input.empty();
-        this.container = Input.empty();
-        this.files = Input.empty();
-        this.zip = Input.empty();
+        this.cloudBuildOptions = Output.empty();
+        this.container = Output.empty();
+        this.files = Output.empty();
+        this.zip = Output.empty();
     }
 
     public static Builder builder() {
@@ -94,10 +94,10 @@ public final class FlexibleAppVersionDeploymentGetArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<FlexibleAppVersionDeploymentCloudBuildOptionsGetArgs> cloudBuildOptions;
-        private @Nullable Input<FlexibleAppVersionDeploymentContainerGetArgs> container;
-        private @Nullable Input<List<FlexibleAppVersionDeploymentFileGetArgs>> files;
-        private @Nullable Input<FlexibleAppVersionDeploymentZipGetArgs> zip;
+        private @Nullable Output<FlexibleAppVersionDeploymentCloudBuildOptionsGetArgs> cloudBuildOptions;
+        private @Nullable Output<FlexibleAppVersionDeploymentContainerGetArgs> container;
+        private @Nullable Output<List<FlexibleAppVersionDeploymentFileGetArgs>> files;
+        private @Nullable Output<FlexibleAppVersionDeploymentZipGetArgs> zip;
 
         public Builder() {
     	      // Empty
@@ -111,43 +111,43 @@ public final class FlexibleAppVersionDeploymentGetArgs extends io.pulumi.resourc
     	      this.zip = defaults.zip;
         }
 
-        public Builder cloudBuildOptions(@Nullable Input<FlexibleAppVersionDeploymentCloudBuildOptionsGetArgs> cloudBuildOptions) {
+        public Builder cloudBuildOptions(@Nullable Output<FlexibleAppVersionDeploymentCloudBuildOptionsGetArgs> cloudBuildOptions) {
             this.cloudBuildOptions = cloudBuildOptions;
             return this;
         }
 
         public Builder cloudBuildOptions(@Nullable FlexibleAppVersionDeploymentCloudBuildOptionsGetArgs cloudBuildOptions) {
-            this.cloudBuildOptions = Input.ofNullable(cloudBuildOptions);
+            this.cloudBuildOptions = Output.ofNullable(cloudBuildOptions);
             return this;
         }
 
-        public Builder container(@Nullable Input<FlexibleAppVersionDeploymentContainerGetArgs> container) {
+        public Builder container(@Nullable Output<FlexibleAppVersionDeploymentContainerGetArgs> container) {
             this.container = container;
             return this;
         }
 
         public Builder container(@Nullable FlexibleAppVersionDeploymentContainerGetArgs container) {
-            this.container = Input.ofNullable(container);
+            this.container = Output.ofNullable(container);
             return this;
         }
 
-        public Builder files(@Nullable Input<List<FlexibleAppVersionDeploymentFileGetArgs>> files) {
+        public Builder files(@Nullable Output<List<FlexibleAppVersionDeploymentFileGetArgs>> files) {
             this.files = files;
             return this;
         }
 
         public Builder files(@Nullable List<FlexibleAppVersionDeploymentFileGetArgs> files) {
-            this.files = Input.ofNullable(files);
+            this.files = Output.ofNullable(files);
             return this;
         }
 
-        public Builder zip(@Nullable Input<FlexibleAppVersionDeploymentZipGetArgs> zip) {
+        public Builder zip(@Nullable Output<FlexibleAppVersionDeploymentZipGetArgs> zip) {
             this.zip = zip;
             return this;
         }
 
         public Builder zip(@Nullable FlexibleAppVersionDeploymentZipGetArgs zip) {
-            this.zip = Input.ofNullable(zip);
+            this.zip = Output.ofNullable(zip);
             return this;
         }
         public FlexibleAppVersionDeploymentGetArgs build() {

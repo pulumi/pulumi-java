@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.inputs.DimensionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class CriteriaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dimensions")
-      private final @Nullable Input<List<DimensionArgs>> dimensions;
+      private final @Nullable Output<List<DimensionArgs>> dimensions;
 
-    public Input<List<DimensionArgs>> getDimensions() {
-        return this.dimensions == null ? Input.empty() : this.dimensions;
+    public Output<List<DimensionArgs>> getDimensions() {
+        return this.dimensions == null ? Output.empty() : this.dimensions;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class CriteriaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metricName", required=true)
-      private final Input<String> metricName;
+      private final Output<String> metricName;
 
-    public Input<String> getMetricName() {
+    public Output<String> getMetricName() {
         return this.metricName;
     }
 
     public CriteriaArgs(
-        @Nullable Input<List<DimensionArgs>> dimensions,
-        Input<String> metricName) {
+        @Nullable Output<List<DimensionArgs>> dimensions,
+        Output<String> metricName) {
         this.dimensions = dimensions;
         this.metricName = Objects.requireNonNull(metricName, "expected parameter 'metricName' to be non-null");
     }
 
     private CriteriaArgs() {
-        this.dimensions = Input.empty();
-        this.metricName = Input.empty();
+        this.dimensions = Output.empty();
+        this.metricName = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class CriteriaArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<DimensionArgs>> dimensions;
-        private Input<String> metricName;
+        private @Nullable Output<List<DimensionArgs>> dimensions;
+        private Output<String> metricName;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class CriteriaArgs extends io.pulumi.resources.ResourceArgs {
     	      this.metricName = defaults.metricName;
         }
 
-        public Builder dimensions(@Nullable Input<List<DimensionArgs>> dimensions) {
+        public Builder dimensions(@Nullable Output<List<DimensionArgs>> dimensions) {
             this.dimensions = dimensions;
             return this;
         }
 
         public Builder dimensions(@Nullable List<DimensionArgs> dimensions) {
-            this.dimensions = Input.ofNullable(dimensions);
+            this.dimensions = Output.ofNullable(dimensions);
             return this;
         }
 
-        public Builder metricName(Input<String> metricName) {
+        public Builder metricName(Output<String> metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
         public Builder metricName(String metricName) {
-            this.metricName = Input.of(Objects.requireNonNull(metricName));
+            this.metricName = Output.of(Objects.requireNonNull(metricName));
             return this;
         }
         public CriteriaArgs build() {

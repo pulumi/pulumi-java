@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.elastic.inputs;
 
 import io.pulumi.azurenative.elastic.inputs.CompanyInfoArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="companyInfo")
-      private final @Nullable Input<CompanyInfoArgs> companyInfo;
+      private final @Nullable Output<CompanyInfoArgs> companyInfo;
 
-    public Input<CompanyInfoArgs> getCompanyInfo() {
-        return this.companyInfo == null ? Input.empty() : this.companyInfo;
+    public Output<CompanyInfoArgs> getCompanyInfo() {
+        return this.companyInfo == null ? Output.empty() : this.companyInfo;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="companyName")
-      private final @Nullable Input<String> companyName;
+      private final @Nullable Output<String> companyName;
 
-    public Input<String> getCompanyName() {
-        return this.companyName == null ? Input.empty() : this.companyName;
+    public Output<String> getCompanyName() {
+        return this.companyName == null ? Output.empty() : this.companyName;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="emailAddress")
-      private final @Nullable Input<String> emailAddress;
+      private final @Nullable Output<String> emailAddress;
 
-    public Input<String> getEmailAddress() {
-        return this.emailAddress == null ? Input.empty() : this.emailAddress;
+    public Output<String> getEmailAddress() {
+        return this.emailAddress == null ? Output.empty() : this.emailAddress;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="firstName")
-      private final @Nullable Input<String> firstName;
+      private final @Nullable Output<String> firstName;
 
-    public Input<String> getFirstName() {
-        return this.firstName == null ? Input.empty() : this.firstName;
+    public Output<String> getFirstName() {
+        return this.firstName == null ? Output.empty() : this.firstName;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastName")
-      private final @Nullable Input<String> lastName;
+      private final @Nullable Output<String> lastName;
 
-    public Input<String> getLastName() {
-        return this.lastName == null ? Input.empty() : this.lastName;
+    public Output<String> getLastName() {
+        return this.lastName == null ? Output.empty() : this.lastName;
     }
 
     public UserInfoArgs(
-        @Nullable Input<CompanyInfoArgs> companyInfo,
-        @Nullable Input<String> companyName,
-        @Nullable Input<String> emailAddress,
-        @Nullable Input<String> firstName,
-        @Nullable Input<String> lastName) {
+        @Nullable Output<CompanyInfoArgs> companyInfo,
+        @Nullable Output<String> companyName,
+        @Nullable Output<String> emailAddress,
+        @Nullable Output<String> firstName,
+        @Nullable Output<String> lastName) {
         this.companyInfo = companyInfo;
         this.companyName = companyName;
         this.emailAddress = emailAddress;
@@ -88,11 +88,11 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserInfoArgs() {
-        this.companyInfo = Input.empty();
-        this.companyName = Input.empty();
-        this.emailAddress = Input.empty();
-        this.firstName = Input.empty();
-        this.lastName = Input.empty();
+        this.companyInfo = Output.empty();
+        this.companyName = Output.empty();
+        this.emailAddress = Output.empty();
+        this.firstName = Output.empty();
+        this.lastName = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<CompanyInfoArgs> companyInfo;
-        private @Nullable Input<String> companyName;
-        private @Nullable Input<String> emailAddress;
-        private @Nullable Input<String> firstName;
-        private @Nullable Input<String> lastName;
+        private @Nullable Output<CompanyInfoArgs> companyInfo;
+        private @Nullable Output<String> companyName;
+        private @Nullable Output<String> emailAddress;
+        private @Nullable Output<String> firstName;
+        private @Nullable Output<String> lastName;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.lastName = defaults.lastName;
         }
 
-        public Builder companyInfo(@Nullable Input<CompanyInfoArgs> companyInfo) {
+        public Builder companyInfo(@Nullable Output<CompanyInfoArgs> companyInfo) {
             this.companyInfo = companyInfo;
             return this;
         }
 
         public Builder companyInfo(@Nullable CompanyInfoArgs companyInfo) {
-            this.companyInfo = Input.ofNullable(companyInfo);
+            this.companyInfo = Output.ofNullable(companyInfo);
             return this;
         }
 
-        public Builder companyName(@Nullable Input<String> companyName) {
+        public Builder companyName(@Nullable Output<String> companyName) {
             this.companyName = companyName;
             return this;
         }
 
         public Builder companyName(@Nullable String companyName) {
-            this.companyName = Input.ofNullable(companyName);
+            this.companyName = Output.ofNullable(companyName);
             return this;
         }
 
-        public Builder emailAddress(@Nullable Input<String> emailAddress) {
+        public Builder emailAddress(@Nullable Output<String> emailAddress) {
             this.emailAddress = emailAddress;
             return this;
         }
 
         public Builder emailAddress(@Nullable String emailAddress) {
-            this.emailAddress = Input.ofNullable(emailAddress);
+            this.emailAddress = Output.ofNullable(emailAddress);
             return this;
         }
 
-        public Builder firstName(@Nullable Input<String> firstName) {
+        public Builder firstName(@Nullable Output<String> firstName) {
             this.firstName = firstName;
             return this;
         }
 
         public Builder firstName(@Nullable String firstName) {
-            this.firstName = Input.ofNullable(firstName);
+            this.firstName = Output.ofNullable(firstName);
             return this;
         }
 
-        public Builder lastName(@Nullable Input<String> lastName) {
+        public Builder lastName(@Nullable Output<String> lastName) {
             this.lastName = lastName;
             return this;
         }
 
         public Builder lastName(@Nullable String lastName) {
-            this.lastName = Input.ofNullable(lastName);
+            this.lastName = Output.ofNullable(lastName);
             return this;
         }
         public UserInfoArgs build() {

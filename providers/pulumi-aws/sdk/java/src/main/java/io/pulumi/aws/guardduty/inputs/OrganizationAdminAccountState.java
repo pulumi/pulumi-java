@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.guardduty.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class OrganizationAdminAccountState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="adminAccountId")
-      private final @Nullable Input<String> adminAccountId;
+      private final @Nullable Output<String> adminAccountId;
 
-    public Input<String> getAdminAccountId() {
-        return this.adminAccountId == null ? Input.empty() : this.adminAccountId;
+    public Output<String> getAdminAccountId() {
+        return this.adminAccountId == null ? Output.empty() : this.adminAccountId;
     }
 
-    public OrganizationAdminAccountState(@Nullable Input<String> adminAccountId) {
+    public OrganizationAdminAccountState(@Nullable Output<String> adminAccountId) {
         this.adminAccountId = adminAccountId;
     }
 
     private OrganizationAdminAccountState() {
-        this.adminAccountId = Input.empty();
+        this.adminAccountId = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class OrganizationAdminAccountState extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> adminAccountId;
+        private @Nullable Output<String> adminAccountId;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class OrganizationAdminAccountState extends io.pulumi.resources.Res
     	      this.adminAccountId = defaults.adminAccountId;
         }
 
-        public Builder adminAccountId(@Nullable Input<String> adminAccountId) {
+        public Builder adminAccountId(@Nullable Output<String> adminAccountId) {
             this.adminAccountId = adminAccountId;
             return this;
         }
 
         public Builder adminAccountId(@Nullable String adminAccountId) {
-            this.adminAccountId = Input.ofNullable(adminAccountId);
+            this.adminAccountId = Output.ofNullable(adminAccountId);
             return this;
         }
         public OrganizationAdminAccountState build() {

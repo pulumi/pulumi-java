@@ -6,7 +6,7 @@ package io.pulumi.azurenative.sqlvirtualmachine.inputs;
 import io.pulumi.azurenative.sqlvirtualmachine.enums.BackupScheduleType;
 import io.pulumi.azurenative.sqlvirtualmachine.enums.FullBackupFrequencyType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -28,10 +28,10 @@ public final class AutoBackupSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="backupScheduleType")
-      private final @Nullable Input<Either<String,BackupScheduleType>> backupScheduleType;
+      private final @Nullable Output<Either<String,BackupScheduleType>> backupScheduleType;
 
-    public Input<Either<String,BackupScheduleType>> getBackupScheduleType() {
-        return this.backupScheduleType == null ? Input.empty() : this.backupScheduleType;
+    public Output<Either<String,BackupScheduleType>> getBackupScheduleType() {
+        return this.backupScheduleType == null ? Output.empty() : this.backupScheduleType;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class AutoBackupSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="backupSystemDbs")
-      private final @Nullable Input<Boolean> backupSystemDbs;
+      private final @Nullable Output<Boolean> backupSystemDbs;
 
-    public Input<Boolean> getBackupSystemDbs() {
-        return this.backupSystemDbs == null ? Input.empty() : this.backupSystemDbs;
+    public Output<Boolean> getBackupSystemDbs() {
+        return this.backupSystemDbs == null ? Output.empty() : this.backupSystemDbs;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class AutoBackupSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="enable")
-      private final @Nullable Input<Boolean> enable;
+      private final @Nullable Output<Boolean> enable;
 
-    public Input<Boolean> getEnable() {
-        return this.enable == null ? Input.empty() : this.enable;
+    public Output<Boolean> getEnable() {
+        return this.enable == null ? Output.empty() : this.enable;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class AutoBackupSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="enableEncryption")
-      private final @Nullable Input<Boolean> enableEncryption;
+      private final @Nullable Output<Boolean> enableEncryption;
 
-    public Input<Boolean> getEnableEncryption() {
-        return this.enableEncryption == null ? Input.empty() : this.enableEncryption;
+    public Output<Boolean> getEnableEncryption() {
+        return this.enableEncryption == null ? Output.empty() : this.enableEncryption;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class AutoBackupSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="fullBackupFrequency")
-      private final @Nullable Input<Either<String,FullBackupFrequencyType>> fullBackupFrequency;
+      private final @Nullable Output<Either<String,FullBackupFrequencyType>> fullBackupFrequency;
 
-    public Input<Either<String,FullBackupFrequencyType>> getFullBackupFrequency() {
-        return this.fullBackupFrequency == null ? Input.empty() : this.fullBackupFrequency;
+    public Output<Either<String,FullBackupFrequencyType>> getFullBackupFrequency() {
+        return this.fullBackupFrequency == null ? Output.empty() : this.fullBackupFrequency;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class AutoBackupSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="fullBackupStartTime")
-      private final @Nullable Input<Integer> fullBackupStartTime;
+      private final @Nullable Output<Integer> fullBackupStartTime;
 
-    public Input<Integer> getFullBackupStartTime() {
-        return this.fullBackupStartTime == null ? Input.empty() : this.fullBackupStartTime;
+    public Output<Integer> getFullBackupStartTime() {
+        return this.fullBackupStartTime == null ? Output.empty() : this.fullBackupStartTime;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class AutoBackupSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="fullBackupWindowHours")
-      private final @Nullable Input<Integer> fullBackupWindowHours;
+      private final @Nullable Output<Integer> fullBackupWindowHours;
 
-    public Input<Integer> getFullBackupWindowHours() {
-        return this.fullBackupWindowHours == null ? Input.empty() : this.fullBackupWindowHours;
+    public Output<Integer> getFullBackupWindowHours() {
+        return this.fullBackupWindowHours == null ? Output.empty() : this.fullBackupWindowHours;
     }
 
     /**
@@ -105,10 +105,10 @@ public final class AutoBackupSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="logBackupFrequency")
-      private final @Nullable Input<Integer> logBackupFrequency;
+      private final @Nullable Output<Integer> logBackupFrequency;
 
-    public Input<Integer> getLogBackupFrequency() {
-        return this.logBackupFrequency == null ? Input.empty() : this.logBackupFrequency;
+    public Output<Integer> getLogBackupFrequency() {
+        return this.logBackupFrequency == null ? Output.empty() : this.logBackupFrequency;
     }
 
     /**
@@ -116,10 +116,10 @@ public final class AutoBackupSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<String> password;
+      private final @Nullable Output<String> password;
 
-    public Input<String> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<String> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -127,10 +127,10 @@ public final class AutoBackupSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="retentionPeriod")
-      private final @Nullable Input<Integer> retentionPeriod;
+      private final @Nullable Output<Integer> retentionPeriod;
 
-    public Input<Integer> getRetentionPeriod() {
-        return this.retentionPeriod == null ? Input.empty() : this.retentionPeriod;
+    public Output<Integer> getRetentionPeriod() {
+        return this.retentionPeriod == null ? Output.empty() : this.retentionPeriod;
     }
 
     /**
@@ -138,10 +138,10 @@ public final class AutoBackupSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="storageAccessKey")
-      private final @Nullable Input<String> storageAccessKey;
+      private final @Nullable Output<String> storageAccessKey;
 
-    public Input<String> getStorageAccessKey() {
-        return this.storageAccessKey == null ? Input.empty() : this.storageAccessKey;
+    public Output<String> getStorageAccessKey() {
+        return this.storageAccessKey == null ? Output.empty() : this.storageAccessKey;
     }
 
     /**
@@ -149,25 +149,25 @@ public final class AutoBackupSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="storageAccountUrl")
-      private final @Nullable Input<String> storageAccountUrl;
+      private final @Nullable Output<String> storageAccountUrl;
 
-    public Input<String> getStorageAccountUrl() {
-        return this.storageAccountUrl == null ? Input.empty() : this.storageAccountUrl;
+    public Output<String> getStorageAccountUrl() {
+        return this.storageAccountUrl == null ? Output.empty() : this.storageAccountUrl;
     }
 
     public AutoBackupSettingsArgs(
-        @Nullable Input<Either<String,BackupScheduleType>> backupScheduleType,
-        @Nullable Input<Boolean> backupSystemDbs,
-        @Nullable Input<Boolean> enable,
-        @Nullable Input<Boolean> enableEncryption,
-        @Nullable Input<Either<String,FullBackupFrequencyType>> fullBackupFrequency,
-        @Nullable Input<Integer> fullBackupStartTime,
-        @Nullable Input<Integer> fullBackupWindowHours,
-        @Nullable Input<Integer> logBackupFrequency,
-        @Nullable Input<String> password,
-        @Nullable Input<Integer> retentionPeriod,
-        @Nullable Input<String> storageAccessKey,
-        @Nullable Input<String> storageAccountUrl) {
+        @Nullable Output<Either<String,BackupScheduleType>> backupScheduleType,
+        @Nullable Output<Boolean> backupSystemDbs,
+        @Nullable Output<Boolean> enable,
+        @Nullable Output<Boolean> enableEncryption,
+        @Nullable Output<Either<String,FullBackupFrequencyType>> fullBackupFrequency,
+        @Nullable Output<Integer> fullBackupStartTime,
+        @Nullable Output<Integer> fullBackupWindowHours,
+        @Nullable Output<Integer> logBackupFrequency,
+        @Nullable Output<String> password,
+        @Nullable Output<Integer> retentionPeriod,
+        @Nullable Output<String> storageAccessKey,
+        @Nullable Output<String> storageAccountUrl) {
         this.backupScheduleType = backupScheduleType;
         this.backupSystemDbs = backupSystemDbs;
         this.enable = enable;
@@ -183,18 +183,18 @@ public final class AutoBackupSettingsArgs extends io.pulumi.resources.ResourceAr
     }
 
     private AutoBackupSettingsArgs() {
-        this.backupScheduleType = Input.empty();
-        this.backupSystemDbs = Input.empty();
-        this.enable = Input.empty();
-        this.enableEncryption = Input.empty();
-        this.fullBackupFrequency = Input.empty();
-        this.fullBackupStartTime = Input.empty();
-        this.fullBackupWindowHours = Input.empty();
-        this.logBackupFrequency = Input.empty();
-        this.password = Input.empty();
-        this.retentionPeriod = Input.empty();
-        this.storageAccessKey = Input.empty();
-        this.storageAccountUrl = Input.empty();
+        this.backupScheduleType = Output.empty();
+        this.backupSystemDbs = Output.empty();
+        this.enable = Output.empty();
+        this.enableEncryption = Output.empty();
+        this.fullBackupFrequency = Output.empty();
+        this.fullBackupStartTime = Output.empty();
+        this.fullBackupWindowHours = Output.empty();
+        this.logBackupFrequency = Output.empty();
+        this.password = Output.empty();
+        this.retentionPeriod = Output.empty();
+        this.storageAccessKey = Output.empty();
+        this.storageAccountUrl = Output.empty();
     }
 
     public static Builder builder() {
@@ -206,18 +206,18 @@ public final class AutoBackupSettingsArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,BackupScheduleType>> backupScheduleType;
-        private @Nullable Input<Boolean> backupSystemDbs;
-        private @Nullable Input<Boolean> enable;
-        private @Nullable Input<Boolean> enableEncryption;
-        private @Nullable Input<Either<String,FullBackupFrequencyType>> fullBackupFrequency;
-        private @Nullable Input<Integer> fullBackupStartTime;
-        private @Nullable Input<Integer> fullBackupWindowHours;
-        private @Nullable Input<Integer> logBackupFrequency;
-        private @Nullable Input<String> password;
-        private @Nullable Input<Integer> retentionPeriod;
-        private @Nullable Input<String> storageAccessKey;
-        private @Nullable Input<String> storageAccountUrl;
+        private @Nullable Output<Either<String,BackupScheduleType>> backupScheduleType;
+        private @Nullable Output<Boolean> backupSystemDbs;
+        private @Nullable Output<Boolean> enable;
+        private @Nullable Output<Boolean> enableEncryption;
+        private @Nullable Output<Either<String,FullBackupFrequencyType>> fullBackupFrequency;
+        private @Nullable Output<Integer> fullBackupStartTime;
+        private @Nullable Output<Integer> fullBackupWindowHours;
+        private @Nullable Output<Integer> logBackupFrequency;
+        private @Nullable Output<String> password;
+        private @Nullable Output<Integer> retentionPeriod;
+        private @Nullable Output<String> storageAccessKey;
+        private @Nullable Output<String> storageAccountUrl;
 
         public Builder() {
     	      // Empty
@@ -239,123 +239,123 @@ public final class AutoBackupSettingsArgs extends io.pulumi.resources.ResourceAr
     	      this.storageAccountUrl = defaults.storageAccountUrl;
         }
 
-        public Builder backupScheduleType(@Nullable Input<Either<String,BackupScheduleType>> backupScheduleType) {
+        public Builder backupScheduleType(@Nullable Output<Either<String,BackupScheduleType>> backupScheduleType) {
             this.backupScheduleType = backupScheduleType;
             return this;
         }
 
         public Builder backupScheduleType(@Nullable Either<String,BackupScheduleType> backupScheduleType) {
-            this.backupScheduleType = Input.ofNullable(backupScheduleType);
+            this.backupScheduleType = Output.ofNullable(backupScheduleType);
             return this;
         }
 
-        public Builder backupSystemDbs(@Nullable Input<Boolean> backupSystemDbs) {
+        public Builder backupSystemDbs(@Nullable Output<Boolean> backupSystemDbs) {
             this.backupSystemDbs = backupSystemDbs;
             return this;
         }
 
         public Builder backupSystemDbs(@Nullable Boolean backupSystemDbs) {
-            this.backupSystemDbs = Input.ofNullable(backupSystemDbs);
+            this.backupSystemDbs = Output.ofNullable(backupSystemDbs);
             return this;
         }
 
-        public Builder enable(@Nullable Input<Boolean> enable) {
+        public Builder enable(@Nullable Output<Boolean> enable) {
             this.enable = enable;
             return this;
         }
 
         public Builder enable(@Nullable Boolean enable) {
-            this.enable = Input.ofNullable(enable);
+            this.enable = Output.ofNullable(enable);
             return this;
         }
 
-        public Builder enableEncryption(@Nullable Input<Boolean> enableEncryption) {
+        public Builder enableEncryption(@Nullable Output<Boolean> enableEncryption) {
             this.enableEncryption = enableEncryption;
             return this;
         }
 
         public Builder enableEncryption(@Nullable Boolean enableEncryption) {
-            this.enableEncryption = Input.ofNullable(enableEncryption);
+            this.enableEncryption = Output.ofNullable(enableEncryption);
             return this;
         }
 
-        public Builder fullBackupFrequency(@Nullable Input<Either<String,FullBackupFrequencyType>> fullBackupFrequency) {
+        public Builder fullBackupFrequency(@Nullable Output<Either<String,FullBackupFrequencyType>> fullBackupFrequency) {
             this.fullBackupFrequency = fullBackupFrequency;
             return this;
         }
 
         public Builder fullBackupFrequency(@Nullable Either<String,FullBackupFrequencyType> fullBackupFrequency) {
-            this.fullBackupFrequency = Input.ofNullable(fullBackupFrequency);
+            this.fullBackupFrequency = Output.ofNullable(fullBackupFrequency);
             return this;
         }
 
-        public Builder fullBackupStartTime(@Nullable Input<Integer> fullBackupStartTime) {
+        public Builder fullBackupStartTime(@Nullable Output<Integer> fullBackupStartTime) {
             this.fullBackupStartTime = fullBackupStartTime;
             return this;
         }
 
         public Builder fullBackupStartTime(@Nullable Integer fullBackupStartTime) {
-            this.fullBackupStartTime = Input.ofNullable(fullBackupStartTime);
+            this.fullBackupStartTime = Output.ofNullable(fullBackupStartTime);
             return this;
         }
 
-        public Builder fullBackupWindowHours(@Nullable Input<Integer> fullBackupWindowHours) {
+        public Builder fullBackupWindowHours(@Nullable Output<Integer> fullBackupWindowHours) {
             this.fullBackupWindowHours = fullBackupWindowHours;
             return this;
         }
 
         public Builder fullBackupWindowHours(@Nullable Integer fullBackupWindowHours) {
-            this.fullBackupWindowHours = Input.ofNullable(fullBackupWindowHours);
+            this.fullBackupWindowHours = Output.ofNullable(fullBackupWindowHours);
             return this;
         }
 
-        public Builder logBackupFrequency(@Nullable Input<Integer> logBackupFrequency) {
+        public Builder logBackupFrequency(@Nullable Output<Integer> logBackupFrequency) {
             this.logBackupFrequency = logBackupFrequency;
             return this;
         }
 
         public Builder logBackupFrequency(@Nullable Integer logBackupFrequency) {
-            this.logBackupFrequency = Input.ofNullable(logBackupFrequency);
+            this.logBackupFrequency = Output.ofNullable(logBackupFrequency);
             return this;
         }
 
-        public Builder password(@Nullable Input<String> password) {
+        public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable String password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder retentionPeriod(@Nullable Input<Integer> retentionPeriod) {
+        public Builder retentionPeriod(@Nullable Output<Integer> retentionPeriod) {
             this.retentionPeriod = retentionPeriod;
             return this;
         }
 
         public Builder retentionPeriod(@Nullable Integer retentionPeriod) {
-            this.retentionPeriod = Input.ofNullable(retentionPeriod);
+            this.retentionPeriod = Output.ofNullable(retentionPeriod);
             return this;
         }
 
-        public Builder storageAccessKey(@Nullable Input<String> storageAccessKey) {
+        public Builder storageAccessKey(@Nullable Output<String> storageAccessKey) {
             this.storageAccessKey = storageAccessKey;
             return this;
         }
 
         public Builder storageAccessKey(@Nullable String storageAccessKey) {
-            this.storageAccessKey = Input.ofNullable(storageAccessKey);
+            this.storageAccessKey = Output.ofNullable(storageAccessKey);
             return this;
         }
 
-        public Builder storageAccountUrl(@Nullable Input<String> storageAccountUrl) {
+        public Builder storageAccountUrl(@Nullable Output<String> storageAccountUrl) {
             this.storageAccountUrl = storageAccountUrl;
             return this;
         }
 
         public Builder storageAccountUrl(@Nullable String storageAccountUrl) {
-            this.storageAccountUrl = Input.ofNullable(storageAccountUrl);
+            this.storageAccountUrl = Output.ofNullable(storageAccountUrl);
             return this;
         }
         public AutoBackupSettingsArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.macie2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class InvitationAccepterState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="administratorAccountId")
-      private final @Nullable Input<String> administratorAccountId;
+      private final @Nullable Output<String> administratorAccountId;
 
-    public Input<String> getAdministratorAccountId() {
-        return this.administratorAccountId == null ? Input.empty() : this.administratorAccountId;
+    public Output<String> getAdministratorAccountId() {
+        return this.administratorAccountId == null ? Output.empty() : this.administratorAccountId;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class InvitationAccepterState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="invitationId")
-      private final @Nullable Input<String> invitationId;
+      private final @Nullable Output<String> invitationId;
 
-    public Input<String> getInvitationId() {
-        return this.invitationId == null ? Input.empty() : this.invitationId;
+    public Output<String> getInvitationId() {
+        return this.invitationId == null ? Output.empty() : this.invitationId;
     }
 
     public InvitationAccepterState(
-        @Nullable Input<String> administratorAccountId,
-        @Nullable Input<String> invitationId) {
+        @Nullable Output<String> administratorAccountId,
+        @Nullable Output<String> invitationId) {
         this.administratorAccountId = administratorAccountId;
         this.invitationId = invitationId;
     }
 
     private InvitationAccepterState() {
-        this.administratorAccountId = Input.empty();
-        this.invitationId = Input.empty();
+        this.administratorAccountId = Output.empty();
+        this.invitationId = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class InvitationAccepterState extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> administratorAccountId;
-        private @Nullable Input<String> invitationId;
+        private @Nullable Output<String> administratorAccountId;
+        private @Nullable Output<String> invitationId;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class InvitationAccepterState extends io.pulumi.resources.ResourceA
     	      this.invitationId = defaults.invitationId;
         }
 
-        public Builder administratorAccountId(@Nullable Input<String> administratorAccountId) {
+        public Builder administratorAccountId(@Nullable Output<String> administratorAccountId) {
             this.administratorAccountId = administratorAccountId;
             return this;
         }
 
         public Builder administratorAccountId(@Nullable String administratorAccountId) {
-            this.administratorAccountId = Input.ofNullable(administratorAccountId);
+            this.administratorAccountId = Output.ofNullable(administratorAccountId);
             return this;
         }
 
-        public Builder invitationId(@Nullable Input<String> invitationId) {
+        public Builder invitationId(@Nullable Output<String> invitationId) {
             this.invitationId = invitationId;
             return this;
         }
 
         public Builder invitationId(@Nullable String invitationId) {
-            this.invitationId = Input.ofNullable(invitationId);
+            this.invitationId = Output.ofNullable(invitationId);
             return this;
         }
         public InvitationAccepterState build() {

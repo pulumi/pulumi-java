@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ActivityEntityQueriesPropertiesQueryDefinitionsArgs extends i
      * 
      */
     @InputImport(name="query")
-      private final @Nullable Input<String> query;
+      private final @Nullable Output<String> query;
 
-    public Input<String> getQuery() {
-        return this.query == null ? Input.empty() : this.query;
+    public Output<String> getQuery() {
+        return this.query == null ? Output.empty() : this.query;
     }
 
-    public ActivityEntityQueriesPropertiesQueryDefinitionsArgs(@Nullable Input<String> query) {
+    public ActivityEntityQueriesPropertiesQueryDefinitionsArgs(@Nullable Output<String> query) {
         this.query = query;
     }
 
     private ActivityEntityQueriesPropertiesQueryDefinitionsArgs() {
-        this.query = Input.empty();
+        this.query = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ActivityEntityQueriesPropertiesQueryDefinitionsArgs extends i
     }
 
     public static final class Builder {
-        private @Nullable Input<String> query;
+        private @Nullable Output<String> query;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ActivityEntityQueriesPropertiesQueryDefinitionsArgs extends i
     	      this.query = defaults.query;
         }
 
-        public Builder query(@Nullable Input<String> query) {
+        public Builder query(@Nullable Output<String> query) {
             this.query = query;
             return this;
         }
 
         public Builder query(@Nullable String query) {
-            this.query = Input.ofNullable(query);
+            this.query = Output.ofNullable(query);
             return this;
         }
         public ActivityEntityQueriesPropertiesQueryDefinitionsArgs build() {

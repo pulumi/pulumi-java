@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.authorization.k8s.io_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class NonResourceAttributesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class NonResourceAttributesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="verb")
-      private final @Nullable Input<String> verb;
+      private final @Nullable Output<String> verb;
 
-    public Input<String> getVerb() {
-        return this.verb == null ? Input.empty() : this.verb;
+    public Output<String> getVerb() {
+        return this.verb == null ? Output.empty() : this.verb;
     }
 
     public NonResourceAttributesArgs(
-        @Nullable Input<String> path,
-        @Nullable Input<String> verb) {
+        @Nullable Output<String> path,
+        @Nullable Output<String> verb) {
         this.path = path;
         this.verb = verb;
     }
 
     private NonResourceAttributesArgs() {
-        this.path = Input.empty();
-        this.verb = Input.empty();
+        this.path = Output.empty();
+        this.verb = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class NonResourceAttributesArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> path;
-        private @Nullable Input<String> verb;
+        private @Nullable Output<String> path;
+        private @Nullable Output<String> verb;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class NonResourceAttributesArgs extends io.pulumi.resources.Resourc
     	      this.verb = defaults.verb;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
 
-        public Builder verb(@Nullable Input<String> verb) {
+        public Builder verb(@Nullable Output<String> verb) {
             this.verb = verb;
             return this;
         }
 
         public Builder verb(@Nullable String verb) {
-            this.verb = Input.ofNullable(verb);
+            this.verb = Output.ofNullable(verb);
             return this;
         }
         public NonResourceAttributesArgs build() {

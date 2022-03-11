@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.aws.route53.inputs.ZoneVpcGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="comment")
-      private final @Nullable Input<String> comment;
+      private final @Nullable Output<String> comment;
 
-    public Input<String> getComment() {
-        return this.comment == null ? Input.empty() : this.comment;
+    public Output<String> getComment() {
+        return this.comment == null ? Output.empty() : this.comment;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="delegationSetId")
-      private final @Nullable Input<String> delegationSetId;
+      private final @Nullable Output<String> delegationSetId;
 
-    public Input<String> getDelegationSetId() {
-        return this.delegationSetId == null ? Input.empty() : this.delegationSetId;
+    public Output<String> getDelegationSetId() {
+        return this.delegationSetId == null ? Output.empty() : this.delegationSetId;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceDestroy")
-      private final @Nullable Input<Boolean> forceDestroy;
+      private final @Nullable Output<Boolean> forceDestroy;
 
-    public Input<Boolean> getForceDestroy() {
-        return this.forceDestroy == null ? Input.empty() : this.forceDestroy;
+    public Output<Boolean> getForceDestroy() {
+        return this.forceDestroy == null ? Output.empty() : this.forceDestroy;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nameServers")
-      private final @Nullable Input<List<String>> nameServers;
+      private final @Nullable Output<List<String>> nameServers;
 
-    public Input<List<String>> getNameServers() {
-        return this.nameServers == null ? Input.empty() : this.nameServers;
+    public Output<List<String>> getNameServers() {
+        return this.nameServers == null ? Output.empty() : this.nameServers;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcs")
-      private final @Nullable Input<List<ZoneVpcGetArgs>> vpcs;
+      private final @Nullable Output<List<ZoneVpcGetArgs>> vpcs;
 
-    public Input<List<ZoneVpcGetArgs>> getVpcs() {
-        return this.vpcs == null ? Input.empty() : this.vpcs;
+    public Output<List<ZoneVpcGetArgs>> getVpcs() {
+        return this.vpcs == null ? Output.empty() : this.vpcs;
     }
 
     /**
@@ -123,25 +123,25 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zoneId")
-      private final @Nullable Input<String> zoneId;
+      private final @Nullable Output<String> zoneId;
 
-    public Input<String> getZoneId() {
-        return this.zoneId == null ? Input.empty() : this.zoneId;
+    public Output<String> getZoneId() {
+        return this.zoneId == null ? Output.empty() : this.zoneId;
     }
 
     public ZoneState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> comment,
-        @Nullable Input<String> delegationSetId,
-        @Nullable Input<Boolean> forceDestroy,
-        @Nullable Input<String> name,
-        @Nullable Input<List<String>> nameServers,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<List<ZoneVpcGetArgs>> vpcs,
-        @Nullable Input<String> zoneId) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> comment,
+        @Nullable Output<String> delegationSetId,
+        @Nullable Output<Boolean> forceDestroy,
+        @Nullable Output<String> name,
+        @Nullable Output<List<String>> nameServers,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<List<ZoneVpcGetArgs>> vpcs,
+        @Nullable Output<String> zoneId) {
         this.arn = arn;
-        this.comment = comment == null ? Input.ofNullable("Managed by Pulumi") : comment;
+        this.comment = comment == null ? Output.ofNullable("Managed by Pulumi") : comment;
         this.delegationSetId = delegationSetId;
         this.forceDestroy = forceDestroy;
         this.name = name;
@@ -153,16 +153,16 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ZoneState() {
-        this.arn = Input.empty();
-        this.comment = Input.empty();
-        this.delegationSetId = Input.empty();
-        this.forceDestroy = Input.empty();
-        this.name = Input.empty();
-        this.nameServers = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.vpcs = Input.empty();
-        this.zoneId = Input.empty();
+        this.arn = Output.empty();
+        this.comment = Output.empty();
+        this.delegationSetId = Output.empty();
+        this.forceDestroy = Output.empty();
+        this.name = Output.empty();
+        this.nameServers = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.vpcs = Output.empty();
+        this.zoneId = Output.empty();
     }
 
     public static Builder builder() {
@@ -174,16 +174,16 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> comment;
-        private @Nullable Input<String> delegationSetId;
-        private @Nullable Input<Boolean> forceDestroy;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<String>> nameServers;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<List<ZoneVpcGetArgs>> vpcs;
-        private @Nullable Input<String> zoneId;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> comment;
+        private @Nullable Output<String> delegationSetId;
+        private @Nullable Output<Boolean> forceDestroy;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<String>> nameServers;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<List<ZoneVpcGetArgs>> vpcs;
+        private @Nullable Output<String> zoneId;
 
         public Builder() {
     	      // Empty
@@ -203,103 +203,103 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
     	      this.zoneId = defaults.zoneId;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder comment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Output<String> comment) {
             this.comment = comment;
             return this;
         }
 
         public Builder comment(@Nullable String comment) {
-            this.comment = Input.ofNullable(comment);
+            this.comment = Output.ofNullable(comment);
             return this;
         }
 
-        public Builder delegationSetId(@Nullable Input<String> delegationSetId) {
+        public Builder delegationSetId(@Nullable Output<String> delegationSetId) {
             this.delegationSetId = delegationSetId;
             return this;
         }
 
         public Builder delegationSetId(@Nullable String delegationSetId) {
-            this.delegationSetId = Input.ofNullable(delegationSetId);
+            this.delegationSetId = Output.ofNullable(delegationSetId);
             return this;
         }
 
-        public Builder forceDestroy(@Nullable Input<Boolean> forceDestroy) {
+        public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
             this.forceDestroy = forceDestroy;
             return this;
         }
 
         public Builder forceDestroy(@Nullable Boolean forceDestroy) {
-            this.forceDestroy = Input.ofNullable(forceDestroy);
+            this.forceDestroy = Output.ofNullable(forceDestroy);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder nameServers(@Nullable Input<List<String>> nameServers) {
+        public Builder nameServers(@Nullable Output<List<String>> nameServers) {
             this.nameServers = nameServers;
             return this;
         }
 
         public Builder nameServers(@Nullable List<String> nameServers) {
-            this.nameServers = Input.ofNullable(nameServers);
+            this.nameServers = Output.ofNullable(nameServers);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder vpcs(@Nullable Input<List<ZoneVpcGetArgs>> vpcs) {
+        public Builder vpcs(@Nullable Output<List<ZoneVpcGetArgs>> vpcs) {
             this.vpcs = vpcs;
             return this;
         }
 
         public Builder vpcs(@Nullable List<ZoneVpcGetArgs> vpcs) {
-            this.vpcs = Input.ofNullable(vpcs);
+            this.vpcs = Output.ofNullable(vpcs);
             return this;
         }
 
-        public Builder zoneId(@Nullable Input<String> zoneId) {
+        public Builder zoneId(@Nullable Output<String> zoneId) {
             this.zoneId = zoneId;
             return this;
         }
 
         public Builder zoneId(@Nullable String zoneId) {
-            this.zoneId = Input.ofNullable(zoneId);
+            this.zoneId = Output.ofNullable(zoneId);
             return this;
         }
         public ZoneState build() {

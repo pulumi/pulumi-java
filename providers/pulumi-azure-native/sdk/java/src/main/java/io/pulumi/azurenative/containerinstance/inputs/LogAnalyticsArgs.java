@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerinstance.inputs;
 
 import io.pulumi.azurenative.containerinstance.enums.LogAnalyticsLogType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -26,10 +26,10 @@ public final class LogAnalyticsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logType")
-      private final @Nullable Input<Either<String,LogAnalyticsLogType>> logType;
+      private final @Nullable Output<Either<String,LogAnalyticsLogType>> logType;
 
-    public Input<Either<String,LogAnalyticsLogType>> getLogType() {
-        return this.logType == null ? Input.empty() : this.logType;
+    public Output<Either<String,LogAnalyticsLogType>> getLogType() {
+        return this.logType == null ? Output.empty() : this.logType;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class LogAnalyticsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Output<Map<String,String>> metadata;
 
-    public Input<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Map<String,String>> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -48,9 +48,9 @@ public final class LogAnalyticsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceId", required=true)
-      private final Input<String> workspaceId;
+      private final Output<String> workspaceId;
 
-    public Input<String> getWorkspaceId() {
+    public Output<String> getWorkspaceId() {
         return this.workspaceId;
     }
 
@@ -59,9 +59,9 @@ public final class LogAnalyticsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceKey", required=true)
-      private final Input<String> workspaceKey;
+      private final Output<String> workspaceKey;
 
-    public Input<String> getWorkspaceKey() {
+    public Output<String> getWorkspaceKey() {
         return this.workspaceKey;
     }
 
@@ -70,18 +70,18 @@ public final class LogAnalyticsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceResourceId")
-      private final @Nullable Input<Map<String,String>> workspaceResourceId;
+      private final @Nullable Output<Map<String,String>> workspaceResourceId;
 
-    public Input<Map<String,String>> getWorkspaceResourceId() {
-        return this.workspaceResourceId == null ? Input.empty() : this.workspaceResourceId;
+    public Output<Map<String,String>> getWorkspaceResourceId() {
+        return this.workspaceResourceId == null ? Output.empty() : this.workspaceResourceId;
     }
 
     public LogAnalyticsArgs(
-        @Nullable Input<Either<String,LogAnalyticsLogType>> logType,
-        @Nullable Input<Map<String,String>> metadata,
-        Input<String> workspaceId,
-        Input<String> workspaceKey,
-        @Nullable Input<Map<String,String>> workspaceResourceId) {
+        @Nullable Output<Either<String,LogAnalyticsLogType>> logType,
+        @Nullable Output<Map<String,String>> metadata,
+        Output<String> workspaceId,
+        Output<String> workspaceKey,
+        @Nullable Output<Map<String,String>> workspaceResourceId) {
         this.logType = logType;
         this.metadata = metadata;
         this.workspaceId = Objects.requireNonNull(workspaceId, "expected parameter 'workspaceId' to be non-null");
@@ -90,11 +90,11 @@ public final class LogAnalyticsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LogAnalyticsArgs() {
-        this.logType = Input.empty();
-        this.metadata = Input.empty();
-        this.workspaceId = Input.empty();
-        this.workspaceKey = Input.empty();
-        this.workspaceResourceId = Input.empty();
+        this.logType = Output.empty();
+        this.metadata = Output.empty();
+        this.workspaceId = Output.empty();
+        this.workspaceKey = Output.empty();
+        this.workspaceResourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,11 +106,11 @@ public final class LogAnalyticsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,LogAnalyticsLogType>> logType;
-        private @Nullable Input<Map<String,String>> metadata;
-        private Input<String> workspaceId;
-        private Input<String> workspaceKey;
-        private @Nullable Input<Map<String,String>> workspaceResourceId;
+        private @Nullable Output<Either<String,LogAnalyticsLogType>> logType;
+        private @Nullable Output<Map<String,String>> metadata;
+        private Output<String> workspaceId;
+        private Output<String> workspaceKey;
+        private @Nullable Output<Map<String,String>> workspaceResourceId;
 
         public Builder() {
     	      // Empty
@@ -125,53 +125,53 @@ public final class LogAnalyticsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceResourceId = defaults.workspaceResourceId;
         }
 
-        public Builder logType(@Nullable Input<Either<String,LogAnalyticsLogType>> logType) {
+        public Builder logType(@Nullable Output<Either<String,LogAnalyticsLogType>> logType) {
             this.logType = logType;
             return this;
         }
 
         public Builder logType(@Nullable Either<String,LogAnalyticsLogType> logType) {
-            this.logType = Input.ofNullable(logType);
+            this.logType = Output.ofNullable(logType);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder workspaceId(Input<String> workspaceId) {
+        public Builder workspaceId(Output<String> workspaceId) {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
 
         public Builder workspaceId(String workspaceId) {
-            this.workspaceId = Input.of(Objects.requireNonNull(workspaceId));
+            this.workspaceId = Output.of(Objects.requireNonNull(workspaceId));
             return this;
         }
 
-        public Builder workspaceKey(Input<String> workspaceKey) {
+        public Builder workspaceKey(Output<String> workspaceKey) {
             this.workspaceKey = Objects.requireNonNull(workspaceKey);
             return this;
         }
 
         public Builder workspaceKey(String workspaceKey) {
-            this.workspaceKey = Input.of(Objects.requireNonNull(workspaceKey));
+            this.workspaceKey = Output.of(Objects.requireNonNull(workspaceKey));
             return this;
         }
 
-        public Builder workspaceResourceId(@Nullable Input<Map<String,String>> workspaceResourceId) {
+        public Builder workspaceResourceId(@Nullable Output<Map<String,String>> workspaceResourceId) {
             this.workspaceResourceId = workspaceResourceId;
             return this;
         }
 
         public Builder workspaceResourceId(@Nullable Map<String,String> workspaceResourceId) {
-            this.workspaceResourceId = Input.ofNullable(workspaceResourceId);
+            this.workspaceResourceId = Output.ofNullable(workspaceResourceId);
             return this;
         }
         public LogAnalyticsArgs build() {

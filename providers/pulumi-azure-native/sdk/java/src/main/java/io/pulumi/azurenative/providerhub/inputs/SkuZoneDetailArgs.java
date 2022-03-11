@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.azurenative.providerhub.inputs.SkuCapabilityArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,29 +17,29 @@ public final class SkuZoneDetailArgs extends io.pulumi.resources.ResourceArgs {
     public static final SkuZoneDetailArgs Empty = new SkuZoneDetailArgs();
 
     @InputImport(name="capabilities")
-      private final @Nullable Input<List<SkuCapabilityArgs>> capabilities;
+      private final @Nullable Output<List<SkuCapabilityArgs>> capabilities;
 
-    public Input<List<SkuCapabilityArgs>> getCapabilities() {
-        return this.capabilities == null ? Input.empty() : this.capabilities;
+    public Output<List<SkuCapabilityArgs>> getCapabilities() {
+        return this.capabilities == null ? Output.empty() : this.capabilities;
     }
 
     @InputImport(name="name")
-      private final @Nullable Input<List<String>> name;
+      private final @Nullable Output<List<String>> name;
 
-    public Input<List<String>> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<List<String>> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public SkuZoneDetailArgs(
-        @Nullable Input<List<SkuCapabilityArgs>> capabilities,
-        @Nullable Input<List<String>> name) {
+        @Nullable Output<List<SkuCapabilityArgs>> capabilities,
+        @Nullable Output<List<String>> name) {
         this.capabilities = capabilities;
         this.name = name;
     }
 
     private SkuZoneDetailArgs() {
-        this.capabilities = Input.empty();
-        this.name = Input.empty();
+        this.capabilities = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -51,8 +51,8 @@ public final class SkuZoneDetailArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<SkuCapabilityArgs>> capabilities;
-        private @Nullable Input<List<String>> name;
+        private @Nullable Output<List<SkuCapabilityArgs>> capabilities;
+        private @Nullable Output<List<String>> name;
 
         public Builder() {
     	      // Empty
@@ -64,23 +64,23 @@ public final class SkuZoneDetailArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder capabilities(@Nullable Input<List<SkuCapabilityArgs>> capabilities) {
+        public Builder capabilities(@Nullable Output<List<SkuCapabilityArgs>> capabilities) {
             this.capabilities = capabilities;
             return this;
         }
 
         public Builder capabilities(@Nullable List<SkuCapabilityArgs> capabilities) {
-            this.capabilities = Input.ofNullable(capabilities);
+            this.capabilities = Output.ofNullable(capabilities);
             return this;
         }
 
-        public Builder name(@Nullable Input<List<String>> name) {
+        public Builder name(@Nullable Output<List<String>> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable List<String> name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public SkuZoneDetailArgs build() {

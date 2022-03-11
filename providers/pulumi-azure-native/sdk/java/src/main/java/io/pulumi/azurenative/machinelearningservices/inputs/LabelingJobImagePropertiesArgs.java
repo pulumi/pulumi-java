@@ -6,7 +6,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 import io.pulumi.azurenative.machinelearningservices.enums.ImageAnnotationType;
 import io.pulumi.azurenative.machinelearningservices.enums.MediaType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,10 +22,10 @@ public final class LabelingJobImagePropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="annotationType")
-      private final @Nullable Input<Either<String,ImageAnnotationType>> annotationType;
+      private final @Nullable Output<Either<String,ImageAnnotationType>> annotationType;
 
-    public Input<Either<String,ImageAnnotationType>> getAnnotationType() {
-        return this.annotationType == null ? Input.empty() : this.annotationType;
+    public Output<Either<String,ImageAnnotationType>> getAnnotationType() {
+        return this.annotationType == null ? Output.empty() : this.annotationType;
     }
 
     /**
@@ -33,22 +33,22 @@ public final class LabelingJobImagePropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="mediaType", required=true)
-      private final Input<Either<String,MediaType>> mediaType;
+      private final Output<Either<String,MediaType>> mediaType;
 
-    public Input<Either<String,MediaType>> getMediaType() {
+    public Output<Either<String,MediaType>> getMediaType() {
         return this.mediaType;
     }
 
     public LabelingJobImagePropertiesArgs(
-        @Nullable Input<Either<String,ImageAnnotationType>> annotationType,
-        Input<Either<String,MediaType>> mediaType) {
+        @Nullable Output<Either<String,ImageAnnotationType>> annotationType,
+        Output<Either<String,MediaType>> mediaType) {
         this.annotationType = annotationType;
         this.mediaType = Objects.requireNonNull(mediaType, "expected parameter 'mediaType' to be non-null");
     }
 
     private LabelingJobImagePropertiesArgs() {
-        this.annotationType = Input.empty();
-        this.mediaType = Input.empty();
+        this.annotationType = Output.empty();
+        this.mediaType = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class LabelingJobImagePropertiesArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,ImageAnnotationType>> annotationType;
-        private Input<Either<String,MediaType>> mediaType;
+        private @Nullable Output<Either<String,ImageAnnotationType>> annotationType;
+        private Output<Either<String,MediaType>> mediaType;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class LabelingJobImagePropertiesArgs extends io.pulumi.resources.Re
     	      this.mediaType = defaults.mediaType;
         }
 
-        public Builder annotationType(@Nullable Input<Either<String,ImageAnnotationType>> annotationType) {
+        public Builder annotationType(@Nullable Output<Either<String,ImageAnnotationType>> annotationType) {
             this.annotationType = annotationType;
             return this;
         }
 
         public Builder annotationType(@Nullable Either<String,ImageAnnotationType> annotationType) {
-            this.annotationType = Input.ofNullable(annotationType);
+            this.annotationType = Output.ofNullable(annotationType);
             return this;
         }
 
-        public Builder mediaType(Input<Either<String,MediaType>> mediaType) {
+        public Builder mediaType(Output<Either<String,MediaType>> mediaType) {
             this.mediaType = Objects.requireNonNull(mediaType);
             return this;
         }
 
         public Builder mediaType(Either<String,MediaType> mediaType) {
-            this.mediaType = Input.of(Objects.requireNonNull(mediaType));
+            this.mediaType = Output.of(Objects.requireNonNull(mediaType));
             return this;
         }
         public LabelingJobImagePropertiesArgs build() {

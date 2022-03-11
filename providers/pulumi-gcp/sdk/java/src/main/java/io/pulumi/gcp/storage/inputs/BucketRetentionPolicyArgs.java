@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -20,10 +20,10 @@ public final class BucketRetentionPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="isLocked")
-      private final @Nullable Input<Boolean> isLocked;
+      private final @Nullable Output<Boolean> isLocked;
 
-    public Input<Boolean> getIsLocked() {
-        return this.isLocked == null ? Input.empty() : this.isLocked;
+    public Output<Boolean> getIsLocked() {
+        return this.isLocked == null ? Output.empty() : this.isLocked;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class BucketRetentionPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="retentionPeriod", required=true)
-      private final Input<Integer> retentionPeriod;
+      private final Output<Integer> retentionPeriod;
 
-    public Input<Integer> getRetentionPeriod() {
+    public Output<Integer> getRetentionPeriod() {
         return this.retentionPeriod;
     }
 
     public BucketRetentionPolicyArgs(
-        @Nullable Input<Boolean> isLocked,
-        Input<Integer> retentionPeriod) {
+        @Nullable Output<Boolean> isLocked,
+        Output<Integer> retentionPeriod) {
         this.isLocked = isLocked;
         this.retentionPeriod = Objects.requireNonNull(retentionPeriod, "expected parameter 'retentionPeriod' to be non-null");
     }
 
     private BucketRetentionPolicyArgs() {
-        this.isLocked = Input.empty();
-        this.retentionPeriod = Input.empty();
+        this.isLocked = Output.empty();
+        this.retentionPeriod = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class BucketRetentionPolicyArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> isLocked;
-        private Input<Integer> retentionPeriod;
+        private @Nullable Output<Boolean> isLocked;
+        private Output<Integer> retentionPeriod;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class BucketRetentionPolicyArgs extends io.pulumi.resources.Resourc
     	      this.retentionPeriod = defaults.retentionPeriod;
         }
 
-        public Builder isLocked(@Nullable Input<Boolean> isLocked) {
+        public Builder isLocked(@Nullable Output<Boolean> isLocked) {
             this.isLocked = isLocked;
             return this;
         }
 
         public Builder isLocked(@Nullable Boolean isLocked) {
-            this.isLocked = Input.ofNullable(isLocked);
+            this.isLocked = Output.ofNullable(isLocked);
             return this;
         }
 
-        public Builder retentionPeriod(Input<Integer> retentionPeriod) {
+        public Builder retentionPeriod(Output<Integer> retentionPeriod) {
             this.retentionPeriod = Objects.requireNonNull(retentionPeriod);
             return this;
         }
 
         public Builder retentionPeriod(Integer retentionPeriod) {
-            this.retentionPeriod = Input.of(Objects.requireNonNull(retentionPeriod));
+            this.retentionPeriod = Output.of(Objects.requireNonNull(retentionPeriod));
             return this;
         }
         public BucketRetentionPolicyArgs build() {

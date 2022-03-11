@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.servicecatalog.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class TagOptionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="active")
-      private final @Nullable Input<Boolean> active;
+      private final @Nullable Output<Boolean> active;
 
-    public Input<Boolean> getActive() {
-        return this.active == null ? Input.empty() : this.active;
+    public Output<Boolean> getActive() {
+        return this.active == null ? Output.empty() : this.active;
     }
 
     /**
@@ -31,17 +31,17 @@ public final class TagOptionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="key")
-      private final @Nullable Input<String> key;
+      private final @Nullable Output<String> key;
 
-    public Input<String> getKey() {
-        return this.key == null ? Input.empty() : this.key;
+    public Output<String> getKey() {
+        return this.key == null ? Output.empty() : this.key;
     }
 
     @InputImport(name="owner")
-      private final @Nullable Input<String> owner;
+      private final @Nullable Output<String> owner;
 
-    public Input<String> getOwner() {
-        return this.owner == null ? Input.empty() : this.owner;
+    public Output<String> getOwner() {
+        return this.owner == null ? Output.empty() : this.owner;
     }
 
     /**
@@ -49,17 +49,17 @@ public final class TagOptionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public TagOptionState(
-        @Nullable Input<Boolean> active,
-        @Nullable Input<String> key,
-        @Nullable Input<String> owner,
-        @Nullable Input<String> value) {
+        @Nullable Output<Boolean> active,
+        @Nullable Output<String> key,
+        @Nullable Output<String> owner,
+        @Nullable Output<String> value) {
         this.active = active;
         this.key = key;
         this.owner = owner;
@@ -67,10 +67,10 @@ public final class TagOptionState extends io.pulumi.resources.ResourceArgs {
     }
 
     private TagOptionState() {
-        this.active = Input.empty();
-        this.key = Input.empty();
-        this.owner = Input.empty();
-        this.value = Input.empty();
+        this.active = Output.empty();
+        this.key = Output.empty();
+        this.owner = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -82,10 +82,10 @@ public final class TagOptionState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> active;
-        private @Nullable Input<String> key;
-        private @Nullable Input<String> owner;
-        private @Nullable Input<String> value;
+        private @Nullable Output<Boolean> active;
+        private @Nullable Output<String> key;
+        private @Nullable Output<String> owner;
+        private @Nullable Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -99,43 +99,43 @@ public final class TagOptionState extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder active(@Nullable Input<Boolean> active) {
+        public Builder active(@Nullable Output<Boolean> active) {
             this.active = active;
             return this;
         }
 
         public Builder active(@Nullable Boolean active) {
-            this.active = Input.ofNullable(active);
+            this.active = Output.ofNullable(active);
             return this;
         }
 
-        public Builder key(@Nullable Input<String> key) {
+        public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
 
         public Builder key(@Nullable String key) {
-            this.key = Input.ofNullable(key);
+            this.key = Output.ofNullable(key);
             return this;
         }
 
-        public Builder owner(@Nullable Input<String> owner) {
+        public Builder owner(@Nullable Output<String> owner) {
             this.owner = owner;
             return this;
         }
 
         public Builder owner(@Nullable String owner) {
-            this.owner = Input.ofNullable(owner);
+            this.owner = Output.ofNullable(owner);
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public TagOptionState build() {

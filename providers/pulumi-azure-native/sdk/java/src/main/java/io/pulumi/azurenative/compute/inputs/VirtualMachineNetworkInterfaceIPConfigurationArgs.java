@@ -7,7 +7,7 @@ import io.pulumi.azurenative.compute.enums.IPVersions;
 import io.pulumi.azurenative.compute.inputs.SubResourceArgs;
 import io.pulumi.azurenative.compute.inputs.VirtualMachinePublicIPAddressConfigurationArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -29,10 +29,10 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationArgs extends io.
      * 
      */
     @InputImport(name="applicationGatewayBackendAddressPools")
-      private final @Nullable Input<List<SubResourceArgs>> applicationGatewayBackendAddressPools;
+      private final @Nullable Output<List<SubResourceArgs>> applicationGatewayBackendAddressPools;
 
-    public Input<List<SubResourceArgs>> getApplicationGatewayBackendAddressPools() {
-        return this.applicationGatewayBackendAddressPools == null ? Input.empty() : this.applicationGatewayBackendAddressPools;
+    public Output<List<SubResourceArgs>> getApplicationGatewayBackendAddressPools() {
+        return this.applicationGatewayBackendAddressPools == null ? Output.empty() : this.applicationGatewayBackendAddressPools;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationArgs extends io.
      * 
      */
     @InputImport(name="applicationSecurityGroups")
-      private final @Nullable Input<List<SubResourceArgs>> applicationSecurityGroups;
+      private final @Nullable Output<List<SubResourceArgs>> applicationSecurityGroups;
 
-    public Input<List<SubResourceArgs>> getApplicationSecurityGroups() {
-        return this.applicationSecurityGroups == null ? Input.empty() : this.applicationSecurityGroups;
+    public Output<List<SubResourceArgs>> getApplicationSecurityGroups() {
+        return this.applicationSecurityGroups == null ? Output.empty() : this.applicationSecurityGroups;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationArgs extends io.
      * 
      */
     @InputImport(name="loadBalancerBackendAddressPools")
-      private final @Nullable Input<List<SubResourceArgs>> loadBalancerBackendAddressPools;
+      private final @Nullable Output<List<SubResourceArgs>> loadBalancerBackendAddressPools;
 
-    public Input<List<SubResourceArgs>> getLoadBalancerBackendAddressPools() {
-        return this.loadBalancerBackendAddressPools == null ? Input.empty() : this.loadBalancerBackendAddressPools;
+    public Output<List<SubResourceArgs>> getLoadBalancerBackendAddressPools() {
+        return this.loadBalancerBackendAddressPools == null ? Output.empty() : this.loadBalancerBackendAddressPools;
     }
 
     /**
@@ -62,9 +62,9 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationArgs extends io.
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -73,10 +73,10 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationArgs extends io.
      * 
      */
     @InputImport(name="primary")
-      private final @Nullable Input<Boolean> primary;
+      private final @Nullable Output<Boolean> primary;
 
-    public Input<Boolean> getPrimary() {
-        return this.primary == null ? Input.empty() : this.primary;
+    public Output<Boolean> getPrimary() {
+        return this.primary == null ? Output.empty() : this.primary;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationArgs extends io.
      * 
      */
     @InputImport(name="privateIPAddressVersion")
-      private final @Nullable Input<Either<String,IPVersions>> privateIPAddressVersion;
+      private final @Nullable Output<Either<String,IPVersions>> privateIPAddressVersion;
 
-    public Input<Either<String,IPVersions>> getPrivateIPAddressVersion() {
-        return this.privateIPAddressVersion == null ? Input.empty() : this.privateIPAddressVersion;
+    public Output<Either<String,IPVersions>> getPrivateIPAddressVersion() {
+        return this.privateIPAddressVersion == null ? Output.empty() : this.privateIPAddressVersion;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationArgs extends io.
      * 
      */
     @InputImport(name="publicIPAddressConfiguration")
-      private final @Nullable Input<VirtualMachinePublicIPAddressConfigurationArgs> publicIPAddressConfiguration;
+      private final @Nullable Output<VirtualMachinePublicIPAddressConfigurationArgs> publicIPAddressConfiguration;
 
-    public Input<VirtualMachinePublicIPAddressConfigurationArgs> getPublicIPAddressConfiguration() {
-        return this.publicIPAddressConfiguration == null ? Input.empty() : this.publicIPAddressConfiguration;
+    public Output<VirtualMachinePublicIPAddressConfigurationArgs> getPublicIPAddressConfiguration() {
+        return this.publicIPAddressConfiguration == null ? Output.empty() : this.publicIPAddressConfiguration;
     }
 
     /**
@@ -106,21 +106,21 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationArgs extends io.
      * 
      */
     @InputImport(name="subnet")
-      private final @Nullable Input<SubResourceArgs> subnet;
+      private final @Nullable Output<SubResourceArgs> subnet;
 
-    public Input<SubResourceArgs> getSubnet() {
-        return this.subnet == null ? Input.empty() : this.subnet;
+    public Output<SubResourceArgs> getSubnet() {
+        return this.subnet == null ? Output.empty() : this.subnet;
     }
 
     public VirtualMachineNetworkInterfaceIPConfigurationArgs(
-        @Nullable Input<List<SubResourceArgs>> applicationGatewayBackendAddressPools,
-        @Nullable Input<List<SubResourceArgs>> applicationSecurityGroups,
-        @Nullable Input<List<SubResourceArgs>> loadBalancerBackendAddressPools,
-        Input<String> name,
-        @Nullable Input<Boolean> primary,
-        @Nullable Input<Either<String,IPVersions>> privateIPAddressVersion,
-        @Nullable Input<VirtualMachinePublicIPAddressConfigurationArgs> publicIPAddressConfiguration,
-        @Nullable Input<SubResourceArgs> subnet) {
+        @Nullable Output<List<SubResourceArgs>> applicationGatewayBackendAddressPools,
+        @Nullable Output<List<SubResourceArgs>> applicationSecurityGroups,
+        @Nullable Output<List<SubResourceArgs>> loadBalancerBackendAddressPools,
+        Output<String> name,
+        @Nullable Output<Boolean> primary,
+        @Nullable Output<Either<String,IPVersions>> privateIPAddressVersion,
+        @Nullable Output<VirtualMachinePublicIPAddressConfigurationArgs> publicIPAddressConfiguration,
+        @Nullable Output<SubResourceArgs> subnet) {
         this.applicationGatewayBackendAddressPools = applicationGatewayBackendAddressPools;
         this.applicationSecurityGroups = applicationSecurityGroups;
         this.loadBalancerBackendAddressPools = loadBalancerBackendAddressPools;
@@ -132,14 +132,14 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationArgs extends io.
     }
 
     private VirtualMachineNetworkInterfaceIPConfigurationArgs() {
-        this.applicationGatewayBackendAddressPools = Input.empty();
-        this.applicationSecurityGroups = Input.empty();
-        this.loadBalancerBackendAddressPools = Input.empty();
-        this.name = Input.empty();
-        this.primary = Input.empty();
-        this.privateIPAddressVersion = Input.empty();
-        this.publicIPAddressConfiguration = Input.empty();
-        this.subnet = Input.empty();
+        this.applicationGatewayBackendAddressPools = Output.empty();
+        this.applicationSecurityGroups = Output.empty();
+        this.loadBalancerBackendAddressPools = Output.empty();
+        this.name = Output.empty();
+        this.primary = Output.empty();
+        this.privateIPAddressVersion = Output.empty();
+        this.publicIPAddressConfiguration = Output.empty();
+        this.subnet = Output.empty();
     }
 
     public static Builder builder() {
@@ -151,14 +151,14 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationArgs extends io.
     }
 
     public static final class Builder {
-        private @Nullable Input<List<SubResourceArgs>> applicationGatewayBackendAddressPools;
-        private @Nullable Input<List<SubResourceArgs>> applicationSecurityGroups;
-        private @Nullable Input<List<SubResourceArgs>> loadBalancerBackendAddressPools;
-        private Input<String> name;
-        private @Nullable Input<Boolean> primary;
-        private @Nullable Input<Either<String,IPVersions>> privateIPAddressVersion;
-        private @Nullable Input<VirtualMachinePublicIPAddressConfigurationArgs> publicIPAddressConfiguration;
-        private @Nullable Input<SubResourceArgs> subnet;
+        private @Nullable Output<List<SubResourceArgs>> applicationGatewayBackendAddressPools;
+        private @Nullable Output<List<SubResourceArgs>> applicationSecurityGroups;
+        private @Nullable Output<List<SubResourceArgs>> loadBalancerBackendAddressPools;
+        private Output<String> name;
+        private @Nullable Output<Boolean> primary;
+        private @Nullable Output<Either<String,IPVersions>> privateIPAddressVersion;
+        private @Nullable Output<VirtualMachinePublicIPAddressConfigurationArgs> publicIPAddressConfiguration;
+        private @Nullable Output<SubResourceArgs> subnet;
 
         public Builder() {
     	      // Empty
@@ -176,83 +176,83 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationArgs extends io.
     	      this.subnet = defaults.subnet;
         }
 
-        public Builder applicationGatewayBackendAddressPools(@Nullable Input<List<SubResourceArgs>> applicationGatewayBackendAddressPools) {
+        public Builder applicationGatewayBackendAddressPools(@Nullable Output<List<SubResourceArgs>> applicationGatewayBackendAddressPools) {
             this.applicationGatewayBackendAddressPools = applicationGatewayBackendAddressPools;
             return this;
         }
 
         public Builder applicationGatewayBackendAddressPools(@Nullable List<SubResourceArgs> applicationGatewayBackendAddressPools) {
-            this.applicationGatewayBackendAddressPools = Input.ofNullable(applicationGatewayBackendAddressPools);
+            this.applicationGatewayBackendAddressPools = Output.ofNullable(applicationGatewayBackendAddressPools);
             return this;
         }
 
-        public Builder applicationSecurityGroups(@Nullable Input<List<SubResourceArgs>> applicationSecurityGroups) {
+        public Builder applicationSecurityGroups(@Nullable Output<List<SubResourceArgs>> applicationSecurityGroups) {
             this.applicationSecurityGroups = applicationSecurityGroups;
             return this;
         }
 
         public Builder applicationSecurityGroups(@Nullable List<SubResourceArgs> applicationSecurityGroups) {
-            this.applicationSecurityGroups = Input.ofNullable(applicationSecurityGroups);
+            this.applicationSecurityGroups = Output.ofNullable(applicationSecurityGroups);
             return this;
         }
 
-        public Builder loadBalancerBackendAddressPools(@Nullable Input<List<SubResourceArgs>> loadBalancerBackendAddressPools) {
+        public Builder loadBalancerBackendAddressPools(@Nullable Output<List<SubResourceArgs>> loadBalancerBackendAddressPools) {
             this.loadBalancerBackendAddressPools = loadBalancerBackendAddressPools;
             return this;
         }
 
         public Builder loadBalancerBackendAddressPools(@Nullable List<SubResourceArgs> loadBalancerBackendAddressPools) {
-            this.loadBalancerBackendAddressPools = Input.ofNullable(loadBalancerBackendAddressPools);
+            this.loadBalancerBackendAddressPools = Output.ofNullable(loadBalancerBackendAddressPools);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder primary(@Nullable Input<Boolean> primary) {
+        public Builder primary(@Nullable Output<Boolean> primary) {
             this.primary = primary;
             return this;
         }
 
         public Builder primary(@Nullable Boolean primary) {
-            this.primary = Input.ofNullable(primary);
+            this.primary = Output.ofNullable(primary);
             return this;
         }
 
-        public Builder privateIPAddressVersion(@Nullable Input<Either<String,IPVersions>> privateIPAddressVersion) {
+        public Builder privateIPAddressVersion(@Nullable Output<Either<String,IPVersions>> privateIPAddressVersion) {
             this.privateIPAddressVersion = privateIPAddressVersion;
             return this;
         }
 
         public Builder privateIPAddressVersion(@Nullable Either<String,IPVersions> privateIPAddressVersion) {
-            this.privateIPAddressVersion = Input.ofNullable(privateIPAddressVersion);
+            this.privateIPAddressVersion = Output.ofNullable(privateIPAddressVersion);
             return this;
         }
 
-        public Builder publicIPAddressConfiguration(@Nullable Input<VirtualMachinePublicIPAddressConfigurationArgs> publicIPAddressConfiguration) {
+        public Builder publicIPAddressConfiguration(@Nullable Output<VirtualMachinePublicIPAddressConfigurationArgs> publicIPAddressConfiguration) {
             this.publicIPAddressConfiguration = publicIPAddressConfiguration;
             return this;
         }
 
         public Builder publicIPAddressConfiguration(@Nullable VirtualMachinePublicIPAddressConfigurationArgs publicIPAddressConfiguration) {
-            this.publicIPAddressConfiguration = Input.ofNullable(publicIPAddressConfiguration);
+            this.publicIPAddressConfiguration = Output.ofNullable(publicIPAddressConfiguration);
             return this;
         }
 
-        public Builder subnet(@Nullable Input<SubResourceArgs> subnet) {
+        public Builder subnet(@Nullable Output<SubResourceArgs> subnet) {
             this.subnet = subnet;
             return this;
         }
 
         public Builder subnet(@Nullable SubResourceArgs subnet) {
-            this.subnet = Input.ofNullable(subnet);
+            this.subnet = Output.ofNullable(subnet);
             return this;
         }
         public VirtualMachineNetworkInterfaceIPConfigurationArgs build() {

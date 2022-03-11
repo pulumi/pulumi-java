@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ssmcontacts;
 
 import io.pulumi.awsnative.ssmcontacts.enums.ContactType;
 import io.pulumi.awsnative.ssmcontacts.inputs.ContactStageArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,9 +21,9 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alias", required=true)
-      private final Input<String> alias;
+      private final Output<String> alias;
 
-    public Input<String> getAlias() {
+    public Output<String> getAlias() {
         return this.alias;
     }
 
@@ -32,9 +32,9 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -43,9 +43,9 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="plan", required=true)
-      private final Input<List<ContactStageArgs>> plan;
+      private final Output<List<ContactStageArgs>> plan;
 
-    public Input<List<ContactStageArgs>> getPlan() {
+    public Output<List<ContactStageArgs>> getPlan() {
         return this.plan;
     }
 
@@ -54,17 +54,17 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<ContactType> type;
+      private final Output<ContactType> type;
 
-    public Input<ContactType> getType() {
+    public Output<ContactType> getType() {
         return this.type;
     }
 
     public ContactArgs(
-        Input<String> alias,
-        Input<String> displayName,
-        Input<List<ContactStageArgs>> plan,
-        Input<ContactType> type) {
+        Output<String> alias,
+        Output<String> displayName,
+        Output<List<ContactStageArgs>> plan,
+        Output<ContactType> type) {
         this.alias = Objects.requireNonNull(alias, "expected parameter 'alias' to be non-null");
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
         this.plan = Objects.requireNonNull(plan, "expected parameter 'plan' to be non-null");
@@ -72,10 +72,10 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContactArgs() {
-        this.alias = Input.empty();
-        this.displayName = Input.empty();
-        this.plan = Input.empty();
-        this.type = Input.empty();
+        this.alias = Output.empty();
+        this.displayName = Output.empty();
+        this.plan = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> alias;
-        private Input<String> displayName;
-        private Input<List<ContactStageArgs>> plan;
-        private Input<ContactType> type;
+        private Output<String> alias;
+        private Output<String> displayName;
+        private Output<List<ContactStageArgs>> plan;
+        private Output<ContactType> type;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder alias(Input<String> alias) {
+        public Builder alias(Output<String> alias) {
             this.alias = Objects.requireNonNull(alias);
             return this;
         }
 
         public Builder alias(String alias) {
-            this.alias = Input.of(Objects.requireNonNull(alias));
+            this.alias = Output.of(Objects.requireNonNull(alias));
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder plan(Input<List<ContactStageArgs>> plan) {
+        public Builder plan(Output<List<ContactStageArgs>> plan) {
             this.plan = Objects.requireNonNull(plan);
             return this;
         }
 
         public Builder plan(List<ContactStageArgs> plan) {
-            this.plan = Input.of(Objects.requireNonNull(plan));
+            this.plan = Output.of(Objects.requireNonNull(plan));
             return this;
         }
 
-        public Builder type(Input<ContactType> type) {
+        public Builder type(Output<ContactType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(ContactType type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ContactArgs build() {

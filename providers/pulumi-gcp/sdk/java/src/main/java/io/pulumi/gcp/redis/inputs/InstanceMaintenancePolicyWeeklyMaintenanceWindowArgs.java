@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.redis.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.redis.inputs.InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeArgs;
 import java.lang.String;
@@ -29,9 +29,9 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs extends 
      * 
      */
     @InputImport(name="day", required=true)
-      private final Input<String> day;
+      private final Output<String> day;
 
-    public Input<String> getDay() {
+    public Output<String> getDay() {
         return this.day;
     }
 
@@ -44,10 +44,10 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs extends 
      * 
      */
     @InputImport(name="duration")
-      private final @Nullable Input<String> duration;
+      private final @Nullable Output<String> duration;
 
-    public Input<String> getDuration() {
-        return this.duration == null ? Input.empty() : this.duration;
+    public Output<String> getDuration() {
+        return this.duration == null ? Output.empty() : this.duration;
     }
 
     /**
@@ -58,25 +58,25 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs extends 
      * 
      */
     @InputImport(name="startTime", required=true)
-      private final Input<InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeArgs> startTime;
+      private final Output<InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeArgs> startTime;
 
-    public Input<InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeArgs> getStartTime() {
+    public Output<InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeArgs> getStartTime() {
         return this.startTime;
     }
 
     public InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs(
-        Input<String> day,
-        @Nullable Input<String> duration,
-        Input<InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeArgs> startTime) {
+        Output<String> day,
+        @Nullable Output<String> duration,
+        Output<InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeArgs> startTime) {
         this.day = Objects.requireNonNull(day, "expected parameter 'day' to be non-null");
         this.duration = duration;
         this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
     }
 
     private InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs() {
-        this.day = Input.empty();
-        this.duration = Input.empty();
-        this.startTime = Input.empty();
+        this.day = Output.empty();
+        this.duration = Output.empty();
+        this.startTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,9 +88,9 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs extends 
     }
 
     public static final class Builder {
-        private Input<String> day;
-        private @Nullable Input<String> duration;
-        private Input<InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeArgs> startTime;
+        private Output<String> day;
+        private @Nullable Output<String> duration;
+        private Output<InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeArgs> startTime;
 
         public Builder() {
     	      // Empty
@@ -103,33 +103,33 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs extends 
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder day(Input<String> day) {
+        public Builder day(Output<String> day) {
             this.day = Objects.requireNonNull(day);
             return this;
         }
 
         public Builder day(String day) {
-            this.day = Input.of(Objects.requireNonNull(day));
+            this.day = Output.of(Objects.requireNonNull(day));
             return this;
         }
 
-        public Builder duration(@Nullable Input<String> duration) {
+        public Builder duration(@Nullable Output<String> duration) {
             this.duration = duration;
             return this;
         }
 
         public Builder duration(@Nullable String duration) {
-            this.duration = Input.ofNullable(duration);
+            this.duration = Output.ofNullable(duration);
             return this;
         }
 
-        public Builder startTime(Input<InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeArgs> startTime) {
+        public Builder startTime(Output<InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeArgs> startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
         public Builder startTime(InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeArgs startTime) {
-            this.startTime = Input.of(Objects.requireNonNull(startTime));
+            this.startTime = Output.of(Objects.requireNonNull(startTime));
             return this;
         }
         public InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs build() {

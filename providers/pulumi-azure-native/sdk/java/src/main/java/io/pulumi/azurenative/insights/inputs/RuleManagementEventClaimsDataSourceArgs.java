@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class RuleManagementEventClaimsDataSourceArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="emailAddress")
-      private final @Nullable Input<String> emailAddress;
+      private final @Nullable Output<String> emailAddress;
 
-    public Input<String> getEmailAddress() {
-        return this.emailAddress == null ? Input.empty() : this.emailAddress;
+    public Output<String> getEmailAddress() {
+        return this.emailAddress == null ? Output.empty() : this.emailAddress;
     }
 
-    public RuleManagementEventClaimsDataSourceArgs(@Nullable Input<String> emailAddress) {
+    public RuleManagementEventClaimsDataSourceArgs(@Nullable Output<String> emailAddress) {
         this.emailAddress = emailAddress;
     }
 
     private RuleManagementEventClaimsDataSourceArgs() {
-        this.emailAddress = Input.empty();
+        this.emailAddress = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class RuleManagementEventClaimsDataSourceArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> emailAddress;
+        private @Nullable Output<String> emailAddress;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class RuleManagementEventClaimsDataSourceArgs extends io.pulumi.res
     	      this.emailAddress = defaults.emailAddress;
         }
 
-        public Builder emailAddress(@Nullable Input<String> emailAddress) {
+        public Builder emailAddress(@Nullable Output<String> emailAddress) {
             this.emailAddress = emailAddress;
             return this;
         }
 
         public Builder emailAddress(@Nullable String emailAddress) {
-            this.emailAddress = Input.ofNullable(emailAddress);
+            this.emailAddress = Output.ofNullable(emailAddress);
             return this;
         }
         public RuleManagementEventClaimsDataSourceArgs build() {

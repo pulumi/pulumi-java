@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class SslCertificateSelfManagedSslCertificateArgs extends io.pulumi
      * 
      */
     @InputImport(name="certificate")
-      private final @Nullable Input<String> certificate;
+      private final @Nullable Output<String> certificate;
 
-    public Input<String> getCertificate() {
-        return this.certificate == null ? Input.empty() : this.certificate;
+    public Output<String> getCertificate() {
+        return this.certificate == null ? Output.empty() : this.certificate;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class SslCertificateSelfManagedSslCertificateArgs extends io.pulumi
      * 
      */
     @InputImport(name="privateKey")
-      private final @Nullable Input<String> privateKey;
+      private final @Nullable Output<String> privateKey;
 
-    public Input<String> getPrivateKey() {
-        return this.privateKey == null ? Input.empty() : this.privateKey;
+    public Output<String> getPrivateKey() {
+        return this.privateKey == null ? Output.empty() : this.privateKey;
     }
 
     public SslCertificateSelfManagedSslCertificateArgs(
-        @Nullable Input<String> certificate,
-        @Nullable Input<String> privateKey) {
+        @Nullable Output<String> certificate,
+        @Nullable Output<String> privateKey) {
         this.certificate = certificate;
         this.privateKey = privateKey;
     }
 
     private SslCertificateSelfManagedSslCertificateArgs() {
-        this.certificate = Input.empty();
-        this.privateKey = Input.empty();
+        this.certificate = Output.empty();
+        this.privateKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class SslCertificateSelfManagedSslCertificateArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private @Nullable Input<String> certificate;
-        private @Nullable Input<String> privateKey;
+        private @Nullable Output<String> certificate;
+        private @Nullable Output<String> privateKey;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class SslCertificateSelfManagedSslCertificateArgs extends io.pulumi
     	      this.privateKey = defaults.privateKey;
         }
 
-        public Builder certificate(@Nullable Input<String> certificate) {
+        public Builder certificate(@Nullable Output<String> certificate) {
             this.certificate = certificate;
             return this;
         }
 
         public Builder certificate(@Nullable String certificate) {
-            this.certificate = Input.ofNullable(certificate);
+            this.certificate = Output.ofNullable(certificate);
             return this;
         }
 
-        public Builder privateKey(@Nullable Input<String> privateKey) {
+        public Builder privateKey(@Nullable Output<String> privateKey) {
             this.privateKey = privateKey;
             return this;
         }
 
         public Builder privateKey(@Nullable String privateKey) {
-            this.privateKey = Input.ofNullable(privateKey);
+            this.privateKey = Output.ofNullable(privateKey);
             return this;
         }
         public SslCertificateSelfManagedSslCertificateArgs build() {

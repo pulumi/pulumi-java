@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.iotsecurity;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class OnPremiseSensorArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="onPremiseSensorName")
-      private final @Nullable Input<String> onPremiseSensorName;
+      private final @Nullable Output<String> onPremiseSensorName;
 
-    public Input<String> getOnPremiseSensorName() {
-        return this.onPremiseSensorName == null ? Input.empty() : this.onPremiseSensorName;
+    public Output<String> getOnPremiseSensorName() {
+        return this.onPremiseSensorName == null ? Output.empty() : this.onPremiseSensorName;
     }
 
-    public OnPremiseSensorArgs(@Nullable Input<String> onPremiseSensorName) {
+    public OnPremiseSensorArgs(@Nullable Output<String> onPremiseSensorName) {
         this.onPremiseSensorName = onPremiseSensorName;
     }
 
     private OnPremiseSensorArgs() {
-        this.onPremiseSensorName = Input.empty();
+        this.onPremiseSensorName = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class OnPremiseSensorArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> onPremiseSensorName;
+        private @Nullable Output<String> onPremiseSensorName;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class OnPremiseSensorArgs extends io.pulumi.resources.ResourceArgs 
     	      this.onPremiseSensorName = defaults.onPremiseSensorName;
         }
 
-        public Builder onPremiseSensorName(@Nullable Input<String> onPremiseSensorName) {
+        public Builder onPremiseSensorName(@Nullable Output<String> onPremiseSensorName) {
             this.onPremiseSensorName = onPremiseSensorName;
             return this;
         }
 
         public Builder onPremiseSensorName(@Nullable String onPremiseSensorName) {
-            this.onPremiseSensorName = Input.ofNullable(onPremiseSensorName);
+            this.onPremiseSensorName = Output.ofNullable(onPremiseSensorName);
             return this;
         }
         public OnPremiseSensorArgs build() {

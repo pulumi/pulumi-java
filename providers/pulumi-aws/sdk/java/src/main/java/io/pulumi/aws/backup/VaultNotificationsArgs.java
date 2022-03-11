@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.backup;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,9 +19,9 @@ public final class VaultNotificationsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="backupVaultEvents", required=true)
-      private final Input<List<String>> backupVaultEvents;
+      private final Output<List<String>> backupVaultEvents;
 
-    public Input<List<String>> getBackupVaultEvents() {
+    public Output<List<String>> getBackupVaultEvents() {
         return this.backupVaultEvents;
     }
 
@@ -30,9 +30,9 @@ public final class VaultNotificationsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="backupVaultName", required=true)
-      private final Input<String> backupVaultName;
+      private final Output<String> backupVaultName;
 
-    public Input<String> getBackupVaultName() {
+    public Output<String> getBackupVaultName() {
         return this.backupVaultName;
     }
 
@@ -41,25 +41,25 @@ public final class VaultNotificationsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="snsTopicArn", required=true)
-      private final Input<String> snsTopicArn;
+      private final Output<String> snsTopicArn;
 
-    public Input<String> getSnsTopicArn() {
+    public Output<String> getSnsTopicArn() {
         return this.snsTopicArn;
     }
 
     public VaultNotificationsArgs(
-        Input<List<String>> backupVaultEvents,
-        Input<String> backupVaultName,
-        Input<String> snsTopicArn) {
+        Output<List<String>> backupVaultEvents,
+        Output<String> backupVaultName,
+        Output<String> snsTopicArn) {
         this.backupVaultEvents = Objects.requireNonNull(backupVaultEvents, "expected parameter 'backupVaultEvents' to be non-null");
         this.backupVaultName = Objects.requireNonNull(backupVaultName, "expected parameter 'backupVaultName' to be non-null");
         this.snsTopicArn = Objects.requireNonNull(snsTopicArn, "expected parameter 'snsTopicArn' to be non-null");
     }
 
     private VaultNotificationsArgs() {
-        this.backupVaultEvents = Input.empty();
-        this.backupVaultName = Input.empty();
-        this.snsTopicArn = Input.empty();
+        this.backupVaultEvents = Output.empty();
+        this.backupVaultName = Output.empty();
+        this.snsTopicArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class VaultNotificationsArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<List<String>> backupVaultEvents;
-        private Input<String> backupVaultName;
-        private Input<String> snsTopicArn;
+        private Output<List<String>> backupVaultEvents;
+        private Output<String> backupVaultName;
+        private Output<String> snsTopicArn;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class VaultNotificationsArgs extends io.pulumi.resources.ResourceAr
     	      this.snsTopicArn = defaults.snsTopicArn;
         }
 
-        public Builder backupVaultEvents(Input<List<String>> backupVaultEvents) {
+        public Builder backupVaultEvents(Output<List<String>> backupVaultEvents) {
             this.backupVaultEvents = Objects.requireNonNull(backupVaultEvents);
             return this;
         }
 
         public Builder backupVaultEvents(List<String> backupVaultEvents) {
-            this.backupVaultEvents = Input.of(Objects.requireNonNull(backupVaultEvents));
+            this.backupVaultEvents = Output.of(Objects.requireNonNull(backupVaultEvents));
             return this;
         }
 
-        public Builder backupVaultName(Input<String> backupVaultName) {
+        public Builder backupVaultName(Output<String> backupVaultName) {
             this.backupVaultName = Objects.requireNonNull(backupVaultName);
             return this;
         }
 
         public Builder backupVaultName(String backupVaultName) {
-            this.backupVaultName = Input.of(Objects.requireNonNull(backupVaultName));
+            this.backupVaultName = Output.of(Objects.requireNonNull(backupVaultName));
             return this;
         }
 
-        public Builder snsTopicArn(Input<String> snsTopicArn) {
+        public Builder snsTopicArn(Output<String> snsTopicArn) {
             this.snsTopicArn = Objects.requireNonNull(snsTopicArn);
             return this;
         }
 
         public Builder snsTopicArn(String snsTopicArn) {
-            this.snsTopicArn = Input.of(Objects.requireNonNull(snsTopicArn));
+            this.snsTopicArn = Output.of(Objects.requireNonNull(snsTopicArn));
             return this;
         }
         public VaultNotificationsArgs build() {

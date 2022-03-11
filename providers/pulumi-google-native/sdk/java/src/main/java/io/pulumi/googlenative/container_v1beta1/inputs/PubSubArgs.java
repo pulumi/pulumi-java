@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1beta1.inputs.FilterArgs;
 import java.lang.Boolean;
@@ -25,10 +25,10 @@ public final class PubSubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PubSubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filter")
-      private final @Nullable Input<FilterArgs> filter;
+      private final @Nullable Output<FilterArgs> filter;
 
-    public Input<FilterArgs> getFilter() {
-        return this.filter == null ? Input.empty() : this.filter;
+    public Output<FilterArgs> getFilter() {
+        return this.filter == null ? Output.empty() : this.filter;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class PubSubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topic")
-      private final @Nullable Input<String> topic;
+      private final @Nullable Output<String> topic;
 
-    public Input<String> getTopic() {
-        return this.topic == null ? Input.empty() : this.topic;
+    public Output<String> getTopic() {
+        return this.topic == null ? Output.empty() : this.topic;
     }
 
     public PubSubArgs(
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<FilterArgs> filter,
-        @Nullable Input<String> topic) {
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<FilterArgs> filter,
+        @Nullable Output<String> topic) {
         this.enabled = enabled;
         this.filter = filter;
         this.topic = topic;
     }
 
     private PubSubArgs() {
-        this.enabled = Input.empty();
-        this.filter = Input.empty();
-        this.topic = Input.empty();
+        this.enabled = Output.empty();
+        this.filter = Output.empty();
+        this.topic = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class PubSubArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<FilterArgs> filter;
-        private @Nullable Input<String> topic;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<FilterArgs> filter;
+        private @Nullable Output<String> topic;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class PubSubArgs extends io.pulumi.resources.ResourceArgs {
     	      this.topic = defaults.topic;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder filter(@Nullable Input<FilterArgs> filter) {
+        public Builder filter(@Nullable Output<FilterArgs> filter) {
             this.filter = filter;
             return this;
         }
 
         public Builder filter(@Nullable FilterArgs filter) {
-            this.filter = Input.ofNullable(filter);
+            this.filter = Output.ofNullable(filter);
             return this;
         }
 
-        public Builder topic(@Nullable Input<String> topic) {
+        public Builder topic(@Nullable Output<String> topic) {
             this.topic = topic;
             return this;
         }
 
         public Builder topic(@Nullable String topic) {
-            this.topic = Input.ofNullable(topic);
+            this.topic = Output.ofNullable(topic);
             return this;
         }
         public PubSubArgs build() {

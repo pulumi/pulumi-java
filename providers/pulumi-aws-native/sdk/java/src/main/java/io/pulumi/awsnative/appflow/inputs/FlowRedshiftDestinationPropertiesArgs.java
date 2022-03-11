@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.awsnative.appflow.inputs.FlowErrorHandlingConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,38 +16,38 @@ public final class FlowRedshiftDestinationPropertiesArgs extends io.pulumi.resou
     public static final FlowRedshiftDestinationPropertiesArgs Empty = new FlowRedshiftDestinationPropertiesArgs();
 
     @InputImport(name="bucketPrefix")
-      private final @Nullable Input<String> bucketPrefix;
+      private final @Nullable Output<String> bucketPrefix;
 
-    public Input<String> getBucketPrefix() {
-        return this.bucketPrefix == null ? Input.empty() : this.bucketPrefix;
+    public Output<String> getBucketPrefix() {
+        return this.bucketPrefix == null ? Output.empty() : this.bucketPrefix;
     }
 
     @InputImport(name="errorHandlingConfig")
-      private final @Nullable Input<FlowErrorHandlingConfigArgs> errorHandlingConfig;
+      private final @Nullable Output<FlowErrorHandlingConfigArgs> errorHandlingConfig;
 
-    public Input<FlowErrorHandlingConfigArgs> getErrorHandlingConfig() {
-        return this.errorHandlingConfig == null ? Input.empty() : this.errorHandlingConfig;
+    public Output<FlowErrorHandlingConfigArgs> getErrorHandlingConfig() {
+        return this.errorHandlingConfig == null ? Output.empty() : this.errorHandlingConfig;
     }
 
     @InputImport(name="intermediateBucketName", required=true)
-      private final Input<String> intermediateBucketName;
+      private final Output<String> intermediateBucketName;
 
-    public Input<String> getIntermediateBucketName() {
+    public Output<String> getIntermediateBucketName() {
         return this.intermediateBucketName;
     }
 
     @InputImport(name="object", required=true)
-      private final Input<String> object;
+      private final Output<String> object;
 
-    public Input<String> getObject() {
+    public Output<String> getObject() {
         return this.object;
     }
 
     public FlowRedshiftDestinationPropertiesArgs(
-        @Nullable Input<String> bucketPrefix,
-        @Nullable Input<FlowErrorHandlingConfigArgs> errorHandlingConfig,
-        Input<String> intermediateBucketName,
-        Input<String> object) {
+        @Nullable Output<String> bucketPrefix,
+        @Nullable Output<FlowErrorHandlingConfigArgs> errorHandlingConfig,
+        Output<String> intermediateBucketName,
+        Output<String> object) {
         this.bucketPrefix = bucketPrefix;
         this.errorHandlingConfig = errorHandlingConfig;
         this.intermediateBucketName = Objects.requireNonNull(intermediateBucketName, "expected parameter 'intermediateBucketName' to be non-null");
@@ -55,10 +55,10 @@ public final class FlowRedshiftDestinationPropertiesArgs extends io.pulumi.resou
     }
 
     private FlowRedshiftDestinationPropertiesArgs() {
-        this.bucketPrefix = Input.empty();
-        this.errorHandlingConfig = Input.empty();
-        this.intermediateBucketName = Input.empty();
-        this.object = Input.empty();
+        this.bucketPrefix = Output.empty();
+        this.errorHandlingConfig = Output.empty();
+        this.intermediateBucketName = Output.empty();
+        this.object = Output.empty();
     }
 
     public static Builder builder() {
@@ -70,10 +70,10 @@ public final class FlowRedshiftDestinationPropertiesArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bucketPrefix;
-        private @Nullable Input<FlowErrorHandlingConfigArgs> errorHandlingConfig;
-        private Input<String> intermediateBucketName;
-        private Input<String> object;
+        private @Nullable Output<String> bucketPrefix;
+        private @Nullable Output<FlowErrorHandlingConfigArgs> errorHandlingConfig;
+        private Output<String> intermediateBucketName;
+        private Output<String> object;
 
         public Builder() {
     	      // Empty
@@ -87,43 +87,43 @@ public final class FlowRedshiftDestinationPropertiesArgs extends io.pulumi.resou
     	      this.object = defaults.object;
         }
 
-        public Builder bucketPrefix(@Nullable Input<String> bucketPrefix) {
+        public Builder bucketPrefix(@Nullable Output<String> bucketPrefix) {
             this.bucketPrefix = bucketPrefix;
             return this;
         }
 
         public Builder bucketPrefix(@Nullable String bucketPrefix) {
-            this.bucketPrefix = Input.ofNullable(bucketPrefix);
+            this.bucketPrefix = Output.ofNullable(bucketPrefix);
             return this;
         }
 
-        public Builder errorHandlingConfig(@Nullable Input<FlowErrorHandlingConfigArgs> errorHandlingConfig) {
+        public Builder errorHandlingConfig(@Nullable Output<FlowErrorHandlingConfigArgs> errorHandlingConfig) {
             this.errorHandlingConfig = errorHandlingConfig;
             return this;
         }
 
         public Builder errorHandlingConfig(@Nullable FlowErrorHandlingConfigArgs errorHandlingConfig) {
-            this.errorHandlingConfig = Input.ofNullable(errorHandlingConfig);
+            this.errorHandlingConfig = Output.ofNullable(errorHandlingConfig);
             return this;
         }
 
-        public Builder intermediateBucketName(Input<String> intermediateBucketName) {
+        public Builder intermediateBucketName(Output<String> intermediateBucketName) {
             this.intermediateBucketName = Objects.requireNonNull(intermediateBucketName);
             return this;
         }
 
         public Builder intermediateBucketName(String intermediateBucketName) {
-            this.intermediateBucketName = Input.of(Objects.requireNonNull(intermediateBucketName));
+            this.intermediateBucketName = Output.of(Objects.requireNonNull(intermediateBucketName));
             return this;
         }
 
-        public Builder object(Input<String> object) {
+        public Builder object(Output<String> object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }
 
         public Builder object(String object) {
-            this.object = Input.of(Objects.requireNonNull(object));
+            this.object = Output.of(Objects.requireNonNull(object));
             return this;
         }
         public FlowRedshiftDestinationPropertiesArgs build() {

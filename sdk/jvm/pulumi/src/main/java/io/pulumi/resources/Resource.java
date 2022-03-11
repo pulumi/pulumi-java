@@ -4,7 +4,6 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import io.pulumi.Stack;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.Urn;
 import io.pulumi.core.annotations.OutputExport;
@@ -43,7 +42,7 @@ public abstract class Resource {
 
     private final List<ResourceTransformation> transformations;
 
-    private final List<Input<String>> aliases;
+    private final List<Output<String>> aliases;
 
     private final Map<String, ProviderResource> providers;
 
@@ -182,7 +181,7 @@ public abstract class Resource {
             options.aliases = options.aliases == null ? new ArrayList<>() : copyNullableList(options.aliases);
             for (var parentAlias : options.parent.aliases) {
                 options.aliases.add(
-                        urnInheritedChildAlias(this.name, options.parent.getResourceName(), parentAlias, this.type).toInput()
+                        urnInheritedChildAlias(this.name, options.parent.getResourceName(), parentAlias, this.type)
                 );
             }
 
@@ -229,9 +228,9 @@ public abstract class Resource {
         // Collapse any Aliases down to URNs. We have to wait until this point to do so
         // because we do not know the default 'name' and 'type' to apply until we are inside the
         // resource constructor.
-        var aliases = ImmutableList.<Input<String>>builder();
+        var aliases = ImmutableList.<Output<String>>builder();
         for (var alias : options.getAliases()) {
-            aliases.add(collapseAliasToUrn(alias, name, type, options.parent).toInput());
+            aliases.add(collapseAliasToUrn(alias, name, type, options.parent));
         }
         this.aliases = aliases.build();
 
@@ -300,20 +299,20 @@ public abstract class Resource {
     }
 
     private static Output<String> collapseAliasToUrn(
-            Input<Alias> alias,
+            Output<Alias> alias,
             String defaultName,
             String defaultType,
             @Nullable Resource defaultParent
     ) {
-        return alias.toOutput().apply(a -> {
+        return alias.apply(a -> {
             if (a.getUrn().isPresent()) {
                 return Output.of(a.getUrn().get());
             }
 
-            var name = a.getName().orElse(Input.of(defaultName));
-            var type = a.getType().orElse(Input.of(defaultType));
-            var project = a.getProject().orElse(Input.of(Deployment.getInstance().getProjectName()));
-            var stack = a.getStack().orElse(Input.of(Deployment.getInstance().getStackName()));
+            var name = a.getName().orElse(Output.of(defaultName));
+            var type = a.getType().orElse(Output.of(defaultType));
+            var project = a.getProject().orElse(Output.of(Deployment.getInstance().getProjectName()));
+            var stack = a.getStack().orElse(Output.of(Deployment.getInstance().getStackName()));
 
 
             var parentCount =
@@ -336,9 +335,9 @@ public abstract class Resource {
         @Nullable
         public final Resource parent;
         @Nullable
-        public final Input<String> parentUrn;
+        public final Output<String> parentUrn;
 
-        private ParentInfo(@Nullable Resource parent, @Nullable Input<String> parentUrn) {
+        private ParentInfo(@Nullable Resource parent, @Nullable Output<String> parentUrn) {
             this.parent = parent;
             this.parentUrn = parentUrn;
         }
@@ -365,7 +364,7 @@ public abstract class Resource {
      * and the parent name changed.
      */
     private static Output<Alias> urnInheritedChildAlias(
-            String childName, String parentName, Input<String> parentAlias, String childType
+            String childName, String parentName, Output<String> parentAlias, String childType
     ) {
         Objects.requireNonNull(childName);
         Objects.requireNonNull(parentName);
@@ -386,13 +385,13 @@ public abstract class Resource {
         // * childAlias: "urn:pulumi:stackname::projectname::aws:s3/bucket:Bucket::app-function"
         var aliasName = Output.of(childName);
         if (childName.startsWith(parentName)) {
-            aliasName = parentAlias.toOutput().applyValue(
+            aliasName = parentAlias.applyValue(
                     (String parentAliasUrn) -> parentAliasUrn.substring(
                             parentAliasUrn.lastIndexOf("::") + 2) + childName.substring(parentName.length()));
         }
 
         var urn = Urn.create(
-                aliasName.toInput(), Input.of(childType), null, parentAlias, null, null);
+                aliasName, Output.of(childType), null, parentAlias, null, null);
 
         return urn.applyValue(Alias::withUrn);
     }
@@ -409,7 +408,7 @@ public abstract class Resource {
          * A list of aliases applied to this resource.
          */
         @InternalUse
-        public List<Input<String>> getAliases() {
+        public List<Output<String>> getAliases() {
             return Resource.this.aliases;
         }
 

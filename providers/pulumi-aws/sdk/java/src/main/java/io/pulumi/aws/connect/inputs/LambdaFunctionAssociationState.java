@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.connect.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class LambdaFunctionAssociationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="functionArn")
-      private final @Nullable Input<String> functionArn;
+      private final @Nullable Output<String> functionArn;
 
-    public Input<String> getFunctionArn() {
-        return this.functionArn == null ? Input.empty() : this.functionArn;
+    public Output<String> getFunctionArn() {
+        return this.functionArn == null ? Output.empty() : this.functionArn;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class LambdaFunctionAssociationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="instanceId")
-      private final @Nullable Input<String> instanceId;
+      private final @Nullable Output<String> instanceId;
 
-    public Input<String> getInstanceId() {
-        return this.instanceId == null ? Input.empty() : this.instanceId;
+    public Output<String> getInstanceId() {
+        return this.instanceId == null ? Output.empty() : this.instanceId;
     }
 
     public LambdaFunctionAssociationState(
-        @Nullable Input<String> functionArn,
-        @Nullable Input<String> instanceId) {
+        @Nullable Output<String> functionArn,
+        @Nullable Output<String> instanceId) {
         this.functionArn = functionArn;
         this.instanceId = instanceId;
     }
 
     private LambdaFunctionAssociationState() {
-        this.functionArn = Input.empty();
-        this.instanceId = Input.empty();
+        this.functionArn = Output.empty();
+        this.instanceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class LambdaFunctionAssociationState extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> functionArn;
-        private @Nullable Input<String> instanceId;
+        private @Nullable Output<String> functionArn;
+        private @Nullable Output<String> instanceId;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class LambdaFunctionAssociationState extends io.pulumi.resources.Re
     	      this.instanceId = defaults.instanceId;
         }
 
-        public Builder functionArn(@Nullable Input<String> functionArn) {
+        public Builder functionArn(@Nullable Output<String> functionArn) {
             this.functionArn = functionArn;
             return this;
         }
 
         public Builder functionArn(@Nullable String functionArn) {
-            this.functionArn = Input.ofNullable(functionArn);
+            this.functionArn = Output.ofNullable(functionArn);
             return this;
         }
 
-        public Builder instanceId(@Nullable Input<String> instanceId) {
+        public Builder instanceId(@Nullable Output<String> instanceId) {
             this.instanceId = instanceId;
             return this;
         }
 
         public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Input.ofNullable(instanceId);
+            this.instanceId = Output.ofNullable(instanceId);
             return this;
         }
         public LambdaFunctionAssociationState build() {

@@ -8,7 +8,6 @@ import io.pulumi.aws.cfg.ConfigurationAggregatorArgs;
 import io.pulumi.aws.cfg.inputs.ConfigurationAggregatorState;
 import io.pulumi.aws.cfg.outputs.ConfigurationAggregatorAccountAggregationSource;
 import io.pulumi.aws.cfg.outputs.ConfigurationAggregatorOrganizationAggregationSource;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -155,14 +154,14 @@ public class ConfigurationAggregator extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public ConfigurationAggregator(String name, @Nullable ConfigurationAggregatorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cfg/configurationAggregator:ConfigurationAggregator", name, args == null ? ConfigurationAggregatorArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:cfg/configurationAggregator:ConfigurationAggregator", name, args == null ? ConfigurationAggregatorArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ConfigurationAggregator(String name, Input<String> id, @Nullable ConfigurationAggregatorState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ConfigurationAggregator(String name, Output<String> id, @Nullable ConfigurationAggregatorState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:cfg/configurationAggregator:ConfigurationAggregator", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -178,7 +177,7 @@ public class ConfigurationAggregator extends io.pulumi.resources.CustomResource 
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ConfigurationAggregator get(String name, Input<String> id, @Nullable ConfigurationAggregatorState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ConfigurationAggregator get(String name, Output<String> id, @Nullable ConfigurationAggregatorState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ConfigurationAggregator(name, id, state, options);
     }
 }

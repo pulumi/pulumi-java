@@ -5,7 +5,7 @@ package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.aws.codebuild.inputs.ProjectEnvironmentEnvironmentVariableGetArgs;
 import io.pulumi.aws.codebuild.inputs.ProjectEnvironmentRegistryCredentialGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class ProjectEnvironmentGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="certificate")
-      private final @Nullable Input<String> certificate;
+      private final @Nullable Output<String> certificate;
 
-    public Input<String> getCertificate() {
-        return this.certificate == null ? Input.empty() : this.certificate;
+    public Output<String> getCertificate() {
+        return this.certificate == null ? Output.empty() : this.certificate;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class ProjectEnvironmentGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="computeType", required=true)
-      private final Input<String> computeType;
+      private final Output<String> computeType;
 
-    public Input<String> getComputeType() {
+    public Output<String> getComputeType() {
         return this.computeType;
     }
 
@@ -45,10 +45,10 @@ public final class ProjectEnvironmentGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="environmentVariables")
-      private final @Nullable Input<List<ProjectEnvironmentEnvironmentVariableGetArgs>> environmentVariables;
+      private final @Nullable Output<List<ProjectEnvironmentEnvironmentVariableGetArgs>> environmentVariables;
 
-    public Input<List<ProjectEnvironmentEnvironmentVariableGetArgs>> getEnvironmentVariables() {
-        return this.environmentVariables == null ? Input.empty() : this.environmentVariables;
+    public Output<List<ProjectEnvironmentEnvironmentVariableGetArgs>> getEnvironmentVariables() {
+        return this.environmentVariables == null ? Output.empty() : this.environmentVariables;
     }
 
     /**
@@ -56,9 +56,9 @@ public final class ProjectEnvironmentGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="image", required=true)
-      private final Input<String> image;
+      private final Output<String> image;
 
-    public Input<String> getImage() {
+    public Output<String> getImage() {
         return this.image;
     }
 
@@ -67,10 +67,10 @@ public final class ProjectEnvironmentGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="imagePullCredentialsType")
-      private final @Nullable Input<String> imagePullCredentialsType;
+      private final @Nullable Output<String> imagePullCredentialsType;
 
-    public Input<String> getImagePullCredentialsType() {
-        return this.imagePullCredentialsType == null ? Input.empty() : this.imagePullCredentialsType;
+    public Output<String> getImagePullCredentialsType() {
+        return this.imagePullCredentialsType == null ? Output.empty() : this.imagePullCredentialsType;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ProjectEnvironmentGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="privilegedMode")
-      private final @Nullable Input<Boolean> privilegedMode;
+      private final @Nullable Output<Boolean> privilegedMode;
 
-    public Input<Boolean> getPrivilegedMode() {
-        return this.privilegedMode == null ? Input.empty() : this.privilegedMode;
+    public Output<Boolean> getPrivilegedMode() {
+        return this.privilegedMode == null ? Output.empty() : this.privilegedMode;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class ProjectEnvironmentGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="registryCredential")
-      private final @Nullable Input<ProjectEnvironmentRegistryCredentialGetArgs> registryCredential;
+      private final @Nullable Output<ProjectEnvironmentRegistryCredentialGetArgs> registryCredential;
 
-    public Input<ProjectEnvironmentRegistryCredentialGetArgs> getRegistryCredential() {
-        return this.registryCredential == null ? Input.empty() : this.registryCredential;
+    public Output<ProjectEnvironmentRegistryCredentialGetArgs> getRegistryCredential() {
+        return this.registryCredential == null ? Output.empty() : this.registryCredential;
     }
 
     /**
@@ -100,21 +100,21 @@ public final class ProjectEnvironmentGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public ProjectEnvironmentGetArgs(
-        @Nullable Input<String> certificate,
-        Input<String> computeType,
-        @Nullable Input<List<ProjectEnvironmentEnvironmentVariableGetArgs>> environmentVariables,
-        Input<String> image,
-        @Nullable Input<String> imagePullCredentialsType,
-        @Nullable Input<Boolean> privilegedMode,
-        @Nullable Input<ProjectEnvironmentRegistryCredentialGetArgs> registryCredential,
-        Input<String> type) {
+        @Nullable Output<String> certificate,
+        Output<String> computeType,
+        @Nullable Output<List<ProjectEnvironmentEnvironmentVariableGetArgs>> environmentVariables,
+        Output<String> image,
+        @Nullable Output<String> imagePullCredentialsType,
+        @Nullable Output<Boolean> privilegedMode,
+        @Nullable Output<ProjectEnvironmentRegistryCredentialGetArgs> registryCredential,
+        Output<String> type) {
         this.certificate = certificate;
         this.computeType = Objects.requireNonNull(computeType, "expected parameter 'computeType' to be non-null");
         this.environmentVariables = environmentVariables;
@@ -126,14 +126,14 @@ public final class ProjectEnvironmentGetArgs extends io.pulumi.resources.Resourc
     }
 
     private ProjectEnvironmentGetArgs() {
-        this.certificate = Input.empty();
-        this.computeType = Input.empty();
-        this.environmentVariables = Input.empty();
-        this.image = Input.empty();
-        this.imagePullCredentialsType = Input.empty();
-        this.privilegedMode = Input.empty();
-        this.registryCredential = Input.empty();
-        this.type = Input.empty();
+        this.certificate = Output.empty();
+        this.computeType = Output.empty();
+        this.environmentVariables = Output.empty();
+        this.image = Output.empty();
+        this.imagePullCredentialsType = Output.empty();
+        this.privilegedMode = Output.empty();
+        this.registryCredential = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -145,14 +145,14 @@ public final class ProjectEnvironmentGetArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> certificate;
-        private Input<String> computeType;
-        private @Nullable Input<List<ProjectEnvironmentEnvironmentVariableGetArgs>> environmentVariables;
-        private Input<String> image;
-        private @Nullable Input<String> imagePullCredentialsType;
-        private @Nullable Input<Boolean> privilegedMode;
-        private @Nullable Input<ProjectEnvironmentRegistryCredentialGetArgs> registryCredential;
-        private Input<String> type;
+        private @Nullable Output<String> certificate;
+        private Output<String> computeType;
+        private @Nullable Output<List<ProjectEnvironmentEnvironmentVariableGetArgs>> environmentVariables;
+        private Output<String> image;
+        private @Nullable Output<String> imagePullCredentialsType;
+        private @Nullable Output<Boolean> privilegedMode;
+        private @Nullable Output<ProjectEnvironmentRegistryCredentialGetArgs> registryCredential;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -170,83 +170,83 @@ public final class ProjectEnvironmentGetArgs extends io.pulumi.resources.Resourc
     	      this.type = defaults.type;
         }
 
-        public Builder certificate(@Nullable Input<String> certificate) {
+        public Builder certificate(@Nullable Output<String> certificate) {
             this.certificate = certificate;
             return this;
         }
 
         public Builder certificate(@Nullable String certificate) {
-            this.certificate = Input.ofNullable(certificate);
+            this.certificate = Output.ofNullable(certificate);
             return this;
         }
 
-        public Builder computeType(Input<String> computeType) {
+        public Builder computeType(Output<String> computeType) {
             this.computeType = Objects.requireNonNull(computeType);
             return this;
         }
 
         public Builder computeType(String computeType) {
-            this.computeType = Input.of(Objects.requireNonNull(computeType));
+            this.computeType = Output.of(Objects.requireNonNull(computeType));
             return this;
         }
 
-        public Builder environmentVariables(@Nullable Input<List<ProjectEnvironmentEnvironmentVariableGetArgs>> environmentVariables) {
+        public Builder environmentVariables(@Nullable Output<List<ProjectEnvironmentEnvironmentVariableGetArgs>> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
         public Builder environmentVariables(@Nullable List<ProjectEnvironmentEnvironmentVariableGetArgs> environmentVariables) {
-            this.environmentVariables = Input.ofNullable(environmentVariables);
+            this.environmentVariables = Output.ofNullable(environmentVariables);
             return this;
         }
 
-        public Builder image(Input<String> image) {
+        public Builder image(Output<String> image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
         public Builder image(String image) {
-            this.image = Input.of(Objects.requireNonNull(image));
+            this.image = Output.of(Objects.requireNonNull(image));
             return this;
         }
 
-        public Builder imagePullCredentialsType(@Nullable Input<String> imagePullCredentialsType) {
+        public Builder imagePullCredentialsType(@Nullable Output<String> imagePullCredentialsType) {
             this.imagePullCredentialsType = imagePullCredentialsType;
             return this;
         }
 
         public Builder imagePullCredentialsType(@Nullable String imagePullCredentialsType) {
-            this.imagePullCredentialsType = Input.ofNullable(imagePullCredentialsType);
+            this.imagePullCredentialsType = Output.ofNullable(imagePullCredentialsType);
             return this;
         }
 
-        public Builder privilegedMode(@Nullable Input<Boolean> privilegedMode) {
+        public Builder privilegedMode(@Nullable Output<Boolean> privilegedMode) {
             this.privilegedMode = privilegedMode;
             return this;
         }
 
         public Builder privilegedMode(@Nullable Boolean privilegedMode) {
-            this.privilegedMode = Input.ofNullable(privilegedMode);
+            this.privilegedMode = Output.ofNullable(privilegedMode);
             return this;
         }
 
-        public Builder registryCredential(@Nullable Input<ProjectEnvironmentRegistryCredentialGetArgs> registryCredential) {
+        public Builder registryCredential(@Nullable Output<ProjectEnvironmentRegistryCredentialGetArgs> registryCredential) {
             this.registryCredential = registryCredential;
             return this;
         }
 
         public Builder registryCredential(@Nullable ProjectEnvironmentRegistryCredentialGetArgs registryCredential) {
-            this.registryCredential = Input.ofNullable(registryCredential);
+            this.registryCredential = Output.ofNullable(registryCredential);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ProjectEnvironmentGetArgs build() {

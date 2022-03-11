@@ -5,7 +5,7 @@ package io.pulumi.awsnative.emrcontainers;
 
 import io.pulumi.awsnative.emrcontainers.inputs.VirtualClusterContainerProviderArgs;
 import io.pulumi.awsnative.emrcontainers.inputs.VirtualClusterTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,9 +22,9 @@ public final class VirtualClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerProvider", required=true)
-      private final Input<VirtualClusterContainerProviderArgs> containerProvider;
+      private final Output<VirtualClusterContainerProviderArgs> containerProvider;
 
-    public Input<VirtualClusterContainerProviderArgs> getContainerProvider() {
+    public Output<VirtualClusterContainerProviderArgs> getContainerProvider() {
         return this.containerProvider;
     }
 
@@ -33,10 +33,10 @@ public final class VirtualClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -44,25 +44,25 @@ public final class VirtualClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<VirtualClusterTagArgs>> tags;
+      private final @Nullable Output<List<VirtualClusterTagArgs>> tags;
 
-    public Input<List<VirtualClusterTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<VirtualClusterTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public VirtualClusterArgs(
-        Input<VirtualClusterContainerProviderArgs> containerProvider,
-        @Nullable Input<String> name,
-        @Nullable Input<List<VirtualClusterTagArgs>> tags) {
+        Output<VirtualClusterContainerProviderArgs> containerProvider,
+        @Nullable Output<String> name,
+        @Nullable Output<List<VirtualClusterTagArgs>> tags) {
         this.containerProvider = Objects.requireNonNull(containerProvider, "expected parameter 'containerProvider' to be non-null");
         this.name = name;
         this.tags = tags;
     }
 
     private VirtualClusterArgs() {
-        this.containerProvider = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
+        this.containerProvider = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class VirtualClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<VirtualClusterContainerProviderArgs> containerProvider;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<VirtualClusterTagArgs>> tags;
+        private Output<VirtualClusterContainerProviderArgs> containerProvider;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<VirtualClusterTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class VirtualClusterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder containerProvider(Input<VirtualClusterContainerProviderArgs> containerProvider) {
+        public Builder containerProvider(Output<VirtualClusterContainerProviderArgs> containerProvider) {
             this.containerProvider = Objects.requireNonNull(containerProvider);
             return this;
         }
 
         public Builder containerProvider(VirtualClusterContainerProviderArgs containerProvider) {
-            this.containerProvider = Input.of(Objects.requireNonNull(containerProvider));
+            this.containerProvider = Output.of(Objects.requireNonNull(containerProvider));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<VirtualClusterTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<VirtualClusterTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<VirtualClusterTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public VirtualClusterArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.bigquery.inputs.DataTransferConfigEmailPreferencesArgs;
 import io.pulumi.gcp.bigquery.inputs.DataTransferConfigScheduleOptionsArgs;
@@ -29,10 +29,10 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dataRefreshWindowDays")
-      private final @Nullable Input<Integer> dataRefreshWindowDays;
+      private final @Nullable Output<Integer> dataRefreshWindowDays;
 
-    public Input<Integer> getDataRefreshWindowDays() {
-        return this.dataRefreshWindowDays == null ? Input.empty() : this.dataRefreshWindowDays;
+    public Output<Integer> getDataRefreshWindowDays() {
+        return this.dataRefreshWindowDays == null ? Output.empty() : this.dataRefreshWindowDays;
     }
 
     /**
@@ -40,9 +40,9 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dataSourceId", required=true)
-      private final Input<String> dataSourceId;
+      private final Output<String> dataSourceId;
 
-    public Input<String> getDataSourceId() {
+    public Output<String> getDataSourceId() {
         return this.dataSourceId;
     }
 
@@ -51,10 +51,10 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="destinationDatasetId")
-      private final @Nullable Input<String> destinationDatasetId;
+      private final @Nullable Output<String> destinationDatasetId;
 
-    public Input<String> getDestinationDatasetId() {
-        return this.destinationDatasetId == null ? Input.empty() : this.destinationDatasetId;
+    public Output<String> getDestinationDatasetId() {
+        return this.destinationDatasetId == null ? Output.empty() : this.destinationDatasetId;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="disabled")
-      private final @Nullable Input<Boolean> disabled;
+      private final @Nullable Output<Boolean> disabled;
 
-    public Input<Boolean> getDisabled() {
-        return this.disabled == null ? Input.empty() : this.disabled;
+    public Output<Boolean> getDisabled() {
+        return this.disabled == null ? Output.empty() : this.disabled;
     }
 
     /**
@@ -73,9 +73,9 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -86,10 +86,10 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="emailPreferences")
-      private final @Nullable Input<DataTransferConfigEmailPreferencesArgs> emailPreferences;
+      private final @Nullable Output<DataTransferConfigEmailPreferencesArgs> emailPreferences;
 
-    public Input<DataTransferConfigEmailPreferencesArgs> getEmailPreferences() {
-        return this.emailPreferences == null ? Input.empty() : this.emailPreferences;
+    public Output<DataTransferConfigEmailPreferencesArgs> getEmailPreferences() {
+        return this.emailPreferences == null ? Output.empty() : this.emailPreferences;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -110,10 +110,10 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="notificationPubsubTopic")
-      private final @Nullable Input<String> notificationPubsubTopic;
+      private final @Nullable Output<String> notificationPubsubTopic;
 
-    public Input<String> getNotificationPubsubTopic() {
-        return this.notificationPubsubTopic == null ? Input.empty() : this.notificationPubsubTopic;
+    public Output<String> getNotificationPubsubTopic() {
+        return this.notificationPubsubTopic == null ? Output.empty() : this.notificationPubsubTopic;
     }
 
     /**
@@ -123,9 +123,9 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="params", required=true)
-      private final Input<Map<String,String>> params;
+      private final Output<Map<String,String>> params;
 
-    public Input<Map<String,String>> getParams() {
+    public Output<Map<String,String>> getParams() {
         return this.params;
     }
 
@@ -135,10 +135,10 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -153,10 +153,10 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="schedule")
-      private final @Nullable Input<String> schedule;
+      private final @Nullable Output<String> schedule;
 
-    public Input<String> getSchedule() {
-        return this.schedule == null ? Input.empty() : this.schedule;
+    public Output<String> getSchedule() {
+        return this.schedule == null ? Output.empty() : this.schedule;
     }
 
     /**
@@ -165,10 +165,10 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="scheduleOptions")
-      private final @Nullable Input<DataTransferConfigScheduleOptionsArgs> scheduleOptions;
+      private final @Nullable Output<DataTransferConfigScheduleOptionsArgs> scheduleOptions;
 
-    public Input<DataTransferConfigScheduleOptionsArgs> getScheduleOptions() {
-        return this.scheduleOptions == null ? Input.empty() : this.scheduleOptions;
+    public Output<DataTransferConfigScheduleOptionsArgs> getScheduleOptions() {
+        return this.scheduleOptions == null ? Output.empty() : this.scheduleOptions;
     }
 
     /**
@@ -182,10 +182,10 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="sensitiveParams")
-      private final @Nullable Input<DataTransferConfigSensitiveParamsArgs> sensitiveParams;
+      private final @Nullable Output<DataTransferConfigSensitiveParamsArgs> sensitiveParams;
 
-    public Input<DataTransferConfigSensitiveParamsArgs> getSensitiveParams() {
-        return this.sensitiveParams == null ? Input.empty() : this.sensitiveParams;
+    public Output<DataTransferConfigSensitiveParamsArgs> getSensitiveParams() {
+        return this.sensitiveParams == null ? Output.empty() : this.sensitiveParams;
     }
 
     /**
@@ -195,27 +195,27 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="serviceAccountName")
-      private final @Nullable Input<String> serviceAccountName;
+      private final @Nullable Output<String> serviceAccountName;
 
-    public Input<String> getServiceAccountName() {
-        return this.serviceAccountName == null ? Input.empty() : this.serviceAccountName;
+    public Output<String> getServiceAccountName() {
+        return this.serviceAccountName == null ? Output.empty() : this.serviceAccountName;
     }
 
     public DataTransferConfigArgs(
-        @Nullable Input<Integer> dataRefreshWindowDays,
-        Input<String> dataSourceId,
-        @Nullable Input<String> destinationDatasetId,
-        @Nullable Input<Boolean> disabled,
-        Input<String> displayName,
-        @Nullable Input<DataTransferConfigEmailPreferencesArgs> emailPreferences,
-        @Nullable Input<String> location,
-        @Nullable Input<String> notificationPubsubTopic,
-        Input<Map<String,String>> params,
-        @Nullable Input<String> project,
-        @Nullable Input<String> schedule,
-        @Nullable Input<DataTransferConfigScheduleOptionsArgs> scheduleOptions,
-        @Nullable Input<DataTransferConfigSensitiveParamsArgs> sensitiveParams,
-        @Nullable Input<String> serviceAccountName) {
+        @Nullable Output<Integer> dataRefreshWindowDays,
+        Output<String> dataSourceId,
+        @Nullable Output<String> destinationDatasetId,
+        @Nullable Output<Boolean> disabled,
+        Output<String> displayName,
+        @Nullable Output<DataTransferConfigEmailPreferencesArgs> emailPreferences,
+        @Nullable Output<String> location,
+        @Nullable Output<String> notificationPubsubTopic,
+        Output<Map<String,String>> params,
+        @Nullable Output<String> project,
+        @Nullable Output<String> schedule,
+        @Nullable Output<DataTransferConfigScheduleOptionsArgs> scheduleOptions,
+        @Nullable Output<DataTransferConfigSensitiveParamsArgs> sensitiveParams,
+        @Nullable Output<String> serviceAccountName) {
         this.dataRefreshWindowDays = dataRefreshWindowDays;
         this.dataSourceId = Objects.requireNonNull(dataSourceId, "expected parameter 'dataSourceId' to be non-null");
         this.destinationDatasetId = destinationDatasetId;
@@ -233,20 +233,20 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
     }
 
     private DataTransferConfigArgs() {
-        this.dataRefreshWindowDays = Input.empty();
-        this.dataSourceId = Input.empty();
-        this.destinationDatasetId = Input.empty();
-        this.disabled = Input.empty();
-        this.displayName = Input.empty();
-        this.emailPreferences = Input.empty();
-        this.location = Input.empty();
-        this.notificationPubsubTopic = Input.empty();
-        this.params = Input.empty();
-        this.project = Input.empty();
-        this.schedule = Input.empty();
-        this.scheduleOptions = Input.empty();
-        this.sensitiveParams = Input.empty();
-        this.serviceAccountName = Input.empty();
+        this.dataRefreshWindowDays = Output.empty();
+        this.dataSourceId = Output.empty();
+        this.destinationDatasetId = Output.empty();
+        this.disabled = Output.empty();
+        this.displayName = Output.empty();
+        this.emailPreferences = Output.empty();
+        this.location = Output.empty();
+        this.notificationPubsubTopic = Output.empty();
+        this.params = Output.empty();
+        this.project = Output.empty();
+        this.schedule = Output.empty();
+        this.scheduleOptions = Output.empty();
+        this.sensitiveParams = Output.empty();
+        this.serviceAccountName = Output.empty();
     }
 
     public static Builder builder() {
@@ -258,20 +258,20 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> dataRefreshWindowDays;
-        private Input<String> dataSourceId;
-        private @Nullable Input<String> destinationDatasetId;
-        private @Nullable Input<Boolean> disabled;
-        private Input<String> displayName;
-        private @Nullable Input<DataTransferConfigEmailPreferencesArgs> emailPreferences;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> notificationPubsubTopic;
-        private Input<Map<String,String>> params;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> schedule;
-        private @Nullable Input<DataTransferConfigScheduleOptionsArgs> scheduleOptions;
-        private @Nullable Input<DataTransferConfigSensitiveParamsArgs> sensitiveParams;
-        private @Nullable Input<String> serviceAccountName;
+        private @Nullable Output<Integer> dataRefreshWindowDays;
+        private Output<String> dataSourceId;
+        private @Nullable Output<String> destinationDatasetId;
+        private @Nullable Output<Boolean> disabled;
+        private Output<String> displayName;
+        private @Nullable Output<DataTransferConfigEmailPreferencesArgs> emailPreferences;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> notificationPubsubTopic;
+        private Output<Map<String,String>> params;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> schedule;
+        private @Nullable Output<DataTransferConfigScheduleOptionsArgs> scheduleOptions;
+        private @Nullable Output<DataTransferConfigSensitiveParamsArgs> sensitiveParams;
+        private @Nullable Output<String> serviceAccountName;
 
         public Builder() {
     	      // Empty
@@ -295,143 +295,143 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
     	      this.serviceAccountName = defaults.serviceAccountName;
         }
 
-        public Builder dataRefreshWindowDays(@Nullable Input<Integer> dataRefreshWindowDays) {
+        public Builder dataRefreshWindowDays(@Nullable Output<Integer> dataRefreshWindowDays) {
             this.dataRefreshWindowDays = dataRefreshWindowDays;
             return this;
         }
 
         public Builder dataRefreshWindowDays(@Nullable Integer dataRefreshWindowDays) {
-            this.dataRefreshWindowDays = Input.ofNullable(dataRefreshWindowDays);
+            this.dataRefreshWindowDays = Output.ofNullable(dataRefreshWindowDays);
             return this;
         }
 
-        public Builder dataSourceId(Input<String> dataSourceId) {
+        public Builder dataSourceId(Output<String> dataSourceId) {
             this.dataSourceId = Objects.requireNonNull(dataSourceId);
             return this;
         }
 
         public Builder dataSourceId(String dataSourceId) {
-            this.dataSourceId = Input.of(Objects.requireNonNull(dataSourceId));
+            this.dataSourceId = Output.of(Objects.requireNonNull(dataSourceId));
             return this;
         }
 
-        public Builder destinationDatasetId(@Nullable Input<String> destinationDatasetId) {
+        public Builder destinationDatasetId(@Nullable Output<String> destinationDatasetId) {
             this.destinationDatasetId = destinationDatasetId;
             return this;
         }
 
         public Builder destinationDatasetId(@Nullable String destinationDatasetId) {
-            this.destinationDatasetId = Input.ofNullable(destinationDatasetId);
+            this.destinationDatasetId = Output.ofNullable(destinationDatasetId);
             return this;
         }
 
-        public Builder disabled(@Nullable Input<Boolean> disabled) {
+        public Builder disabled(@Nullable Output<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
 
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Input.ofNullable(disabled);
+            this.disabled = Output.ofNullable(disabled);
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder emailPreferences(@Nullable Input<DataTransferConfigEmailPreferencesArgs> emailPreferences) {
+        public Builder emailPreferences(@Nullable Output<DataTransferConfigEmailPreferencesArgs> emailPreferences) {
             this.emailPreferences = emailPreferences;
             return this;
         }
 
         public Builder emailPreferences(@Nullable DataTransferConfigEmailPreferencesArgs emailPreferences) {
-            this.emailPreferences = Input.ofNullable(emailPreferences);
+            this.emailPreferences = Output.ofNullable(emailPreferences);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder notificationPubsubTopic(@Nullable Input<String> notificationPubsubTopic) {
+        public Builder notificationPubsubTopic(@Nullable Output<String> notificationPubsubTopic) {
             this.notificationPubsubTopic = notificationPubsubTopic;
             return this;
         }
 
         public Builder notificationPubsubTopic(@Nullable String notificationPubsubTopic) {
-            this.notificationPubsubTopic = Input.ofNullable(notificationPubsubTopic);
+            this.notificationPubsubTopic = Output.ofNullable(notificationPubsubTopic);
             return this;
         }
 
-        public Builder params(Input<Map<String,String>> params) {
+        public Builder params(Output<Map<String,String>> params) {
             this.params = Objects.requireNonNull(params);
             return this;
         }
 
         public Builder params(Map<String,String> params) {
-            this.params = Input.of(Objects.requireNonNull(params));
+            this.params = Output.of(Objects.requireNonNull(params));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder schedule(@Nullable Input<String> schedule) {
+        public Builder schedule(@Nullable Output<String> schedule) {
             this.schedule = schedule;
             return this;
         }
 
         public Builder schedule(@Nullable String schedule) {
-            this.schedule = Input.ofNullable(schedule);
+            this.schedule = Output.ofNullable(schedule);
             return this;
         }
 
-        public Builder scheduleOptions(@Nullable Input<DataTransferConfigScheduleOptionsArgs> scheduleOptions) {
+        public Builder scheduleOptions(@Nullable Output<DataTransferConfigScheduleOptionsArgs> scheduleOptions) {
             this.scheduleOptions = scheduleOptions;
             return this;
         }
 
         public Builder scheduleOptions(@Nullable DataTransferConfigScheduleOptionsArgs scheduleOptions) {
-            this.scheduleOptions = Input.ofNullable(scheduleOptions);
+            this.scheduleOptions = Output.ofNullable(scheduleOptions);
             return this;
         }
 
-        public Builder sensitiveParams(@Nullable Input<DataTransferConfigSensitiveParamsArgs> sensitiveParams) {
+        public Builder sensitiveParams(@Nullable Output<DataTransferConfigSensitiveParamsArgs> sensitiveParams) {
             this.sensitiveParams = sensitiveParams;
             return this;
         }
 
         public Builder sensitiveParams(@Nullable DataTransferConfigSensitiveParamsArgs sensitiveParams) {
-            this.sensitiveParams = Input.ofNullable(sensitiveParams);
+            this.sensitiveParams = Output.ofNullable(sensitiveParams);
             return this;
         }
 
-        public Builder serviceAccountName(@Nullable Input<String> serviceAccountName) {
+        public Builder serviceAccountName(@Nullable Output<String> serviceAccountName) {
             this.serviceAccountName = serviceAccountName;
             return this;
         }
 
         public Builder serviceAccountName(@Nullable String serviceAccountName) {
-            this.serviceAccountName = Input.ofNullable(serviceAccountName);
+            this.serviceAccountName = Output.ofNullable(serviceAccountName);
             return this;
         }
         public DataTransferConfigArgs build() {

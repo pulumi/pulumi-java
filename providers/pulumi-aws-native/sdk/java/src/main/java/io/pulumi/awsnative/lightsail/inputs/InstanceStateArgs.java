@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lightsail.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class InstanceStateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="code")
-      private final @Nullable Input<Integer> code;
+      private final @Nullable Output<Integer> code;
 
-    public Input<Integer> getCode() {
-        return this.code == null ? Input.empty() : this.code;
+    public Output<Integer> getCode() {
+        return this.code == null ? Output.empty() : this.code;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class InstanceStateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public InstanceStateArgs(
-        @Nullable Input<Integer> code,
-        @Nullable Input<String> name) {
+        @Nullable Output<Integer> code,
+        @Nullable Output<String> name) {
         this.code = code;
         this.name = name;
     }
 
     private InstanceStateArgs() {
-        this.code = Input.empty();
-        this.name = Input.empty();
+        this.code = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class InstanceStateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> code;
-        private @Nullable Input<String> name;
+        private @Nullable Output<Integer> code;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class InstanceStateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder code(@Nullable Input<Integer> code) {
+        public Builder code(@Nullable Output<Integer> code) {
             this.code = code;
             return this;
         }
 
         public Builder code(@Nullable Integer code) {
-            this.code = Input.ofNullable(code);
+            this.code = Output.ofNullable(code);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public InstanceStateArgs build() {

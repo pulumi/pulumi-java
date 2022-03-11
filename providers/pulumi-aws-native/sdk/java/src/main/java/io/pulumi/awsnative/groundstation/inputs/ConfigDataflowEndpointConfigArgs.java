@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.groundstation.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class ConfigDataflowEndpointConfigArgs extends io.pulumi.resources.
     public static final ConfigDataflowEndpointConfigArgs Empty = new ConfigDataflowEndpointConfigArgs();
 
     @InputImport(name="dataflowEndpointName")
-      private final @Nullable Input<String> dataflowEndpointName;
+      private final @Nullable Output<String> dataflowEndpointName;
 
-    public Input<String> getDataflowEndpointName() {
-        return this.dataflowEndpointName == null ? Input.empty() : this.dataflowEndpointName;
+    public Output<String> getDataflowEndpointName() {
+        return this.dataflowEndpointName == null ? Output.empty() : this.dataflowEndpointName;
     }
 
     @InputImport(name="dataflowEndpointRegion")
-      private final @Nullable Input<String> dataflowEndpointRegion;
+      private final @Nullable Output<String> dataflowEndpointRegion;
 
-    public Input<String> getDataflowEndpointRegion() {
-        return this.dataflowEndpointRegion == null ? Input.empty() : this.dataflowEndpointRegion;
+    public Output<String> getDataflowEndpointRegion() {
+        return this.dataflowEndpointRegion == null ? Output.empty() : this.dataflowEndpointRegion;
     }
 
     public ConfigDataflowEndpointConfigArgs(
-        @Nullable Input<String> dataflowEndpointName,
-        @Nullable Input<String> dataflowEndpointRegion) {
+        @Nullable Output<String> dataflowEndpointName,
+        @Nullable Output<String> dataflowEndpointRegion) {
         this.dataflowEndpointName = dataflowEndpointName;
         this.dataflowEndpointRegion = dataflowEndpointRegion;
     }
 
     private ConfigDataflowEndpointConfigArgs() {
-        this.dataflowEndpointName = Input.empty();
-        this.dataflowEndpointRegion = Input.empty();
+        this.dataflowEndpointName = Output.empty();
+        this.dataflowEndpointRegion = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class ConfigDataflowEndpointConfigArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> dataflowEndpointName;
-        private @Nullable Input<String> dataflowEndpointRegion;
+        private @Nullable Output<String> dataflowEndpointName;
+        private @Nullable Output<String> dataflowEndpointRegion;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class ConfigDataflowEndpointConfigArgs extends io.pulumi.resources.
     	      this.dataflowEndpointRegion = defaults.dataflowEndpointRegion;
         }
 
-        public Builder dataflowEndpointName(@Nullable Input<String> dataflowEndpointName) {
+        public Builder dataflowEndpointName(@Nullable Output<String> dataflowEndpointName) {
             this.dataflowEndpointName = dataflowEndpointName;
             return this;
         }
 
         public Builder dataflowEndpointName(@Nullable String dataflowEndpointName) {
-            this.dataflowEndpointName = Input.ofNullable(dataflowEndpointName);
+            this.dataflowEndpointName = Output.ofNullable(dataflowEndpointName);
             return this;
         }
 
-        public Builder dataflowEndpointRegion(@Nullable Input<String> dataflowEndpointRegion) {
+        public Builder dataflowEndpointRegion(@Nullable Output<String> dataflowEndpointRegion) {
             this.dataflowEndpointRegion = dataflowEndpointRegion;
             return this;
         }
 
         public Builder dataflowEndpointRegion(@Nullable String dataflowEndpointRegion) {
-            this.dataflowEndpointRegion = Input.ofNullable(dataflowEndpointRegion);
+            this.dataflowEndpointRegion = Output.ofNullable(dataflowEndpointRegion);
             return this;
         }
         public ConfigDataflowEndpointConfigArgs build() {

@@ -6,7 +6,6 @@ package io.pulumi.aws.directconnect;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.directconnect.GatewayAssociationProposalArgs;
 import io.pulumi.aws.directconnect.inputs.GatewayAssociationProposalState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -161,14 +160,14 @@ public class GatewayAssociationProposal extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public GatewayAssociationProposal(String name, GatewayAssociationProposalArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:directconnect/gatewayAssociationProposal:GatewayAssociationProposal", name, args == null ? GatewayAssociationProposalArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:directconnect/gatewayAssociationProposal:GatewayAssociationProposal", name, args == null ? GatewayAssociationProposalArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private GatewayAssociationProposal(String name, Input<String> id, @Nullable GatewayAssociationProposalState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private GatewayAssociationProposal(String name, Output<String> id, @Nullable GatewayAssociationProposalState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:directconnect/gatewayAssociationProposal:GatewayAssociationProposal", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -184,7 +183,7 @@ public class GatewayAssociationProposal extends io.pulumi.resources.CustomResour
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static GatewayAssociationProposal get(String name, Input<String> id, @Nullable GatewayAssociationProposalState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static GatewayAssociationProposal get(String name, Output<String> id, @Nullable GatewayAssociationProposalState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new GatewayAssociationProposal(name, id, state, options);
     }
 }

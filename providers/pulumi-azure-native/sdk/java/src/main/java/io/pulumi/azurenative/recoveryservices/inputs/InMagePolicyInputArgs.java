@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.enums.SetMultiVmSyncStatus;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class InMagePolicyInputArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="appConsistentFrequencyInMinutes")
-      private final @Nullable Input<Integer> appConsistentFrequencyInMinutes;
+      private final @Nullable Output<Integer> appConsistentFrequencyInMinutes;
 
-    public Input<Integer> getAppConsistentFrequencyInMinutes() {
-        return this.appConsistentFrequencyInMinutes == null ? Input.empty() : this.appConsistentFrequencyInMinutes;
+    public Output<Integer> getAppConsistentFrequencyInMinutes() {
+        return this.appConsistentFrequencyInMinutes == null ? Output.empty() : this.appConsistentFrequencyInMinutes;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class InMagePolicyInputArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="instanceType")
-      private final @Nullable Input<String> instanceType;
+      private final @Nullable Output<String> instanceType;
 
-    public Input<String> getInstanceType() {
-        return this.instanceType == null ? Input.empty() : this.instanceType;
+    public Output<String> getInstanceType() {
+        return this.instanceType == null ? Output.empty() : this.instanceType;
     }
 
     /**
@@ -49,9 +49,9 @@ public final class InMagePolicyInputArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="multiVmSyncStatus", required=true)
-      private final Input<Either<String,SetMultiVmSyncStatus>> multiVmSyncStatus;
+      private final Output<Either<String,SetMultiVmSyncStatus>> multiVmSyncStatus;
 
-    public Input<Either<String,SetMultiVmSyncStatus>> getMultiVmSyncStatus() {
+    public Output<Either<String,SetMultiVmSyncStatus>> getMultiVmSyncStatus() {
         return this.multiVmSyncStatus;
     }
 
@@ -60,10 +60,10 @@ public final class InMagePolicyInputArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="recoveryPointHistory")
-      private final @Nullable Input<Integer> recoveryPointHistory;
+      private final @Nullable Output<Integer> recoveryPointHistory;
 
-    public Input<Integer> getRecoveryPointHistory() {
-        return this.recoveryPointHistory == null ? Input.empty() : this.recoveryPointHistory;
+    public Output<Integer> getRecoveryPointHistory() {
+        return this.recoveryPointHistory == null ? Output.empty() : this.recoveryPointHistory;
     }
 
     /**
@@ -71,18 +71,18 @@ public final class InMagePolicyInputArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="recoveryPointThresholdInMinutes")
-      private final @Nullable Input<Integer> recoveryPointThresholdInMinutes;
+      private final @Nullable Output<Integer> recoveryPointThresholdInMinutes;
 
-    public Input<Integer> getRecoveryPointThresholdInMinutes() {
-        return this.recoveryPointThresholdInMinutes == null ? Input.empty() : this.recoveryPointThresholdInMinutes;
+    public Output<Integer> getRecoveryPointThresholdInMinutes() {
+        return this.recoveryPointThresholdInMinutes == null ? Output.empty() : this.recoveryPointThresholdInMinutes;
     }
 
     public InMagePolicyInputArgs(
-        @Nullable Input<Integer> appConsistentFrequencyInMinutes,
-        @Nullable Input<String> instanceType,
-        Input<Either<String,SetMultiVmSyncStatus>> multiVmSyncStatus,
-        @Nullable Input<Integer> recoveryPointHistory,
-        @Nullable Input<Integer> recoveryPointThresholdInMinutes) {
+        @Nullable Output<Integer> appConsistentFrequencyInMinutes,
+        @Nullable Output<String> instanceType,
+        Output<Either<String,SetMultiVmSyncStatus>> multiVmSyncStatus,
+        @Nullable Output<Integer> recoveryPointHistory,
+        @Nullable Output<Integer> recoveryPointThresholdInMinutes) {
         this.appConsistentFrequencyInMinutes = appConsistentFrequencyInMinutes;
         this.instanceType = instanceType;
         this.multiVmSyncStatus = Objects.requireNonNull(multiVmSyncStatus, "expected parameter 'multiVmSyncStatus' to be non-null");
@@ -91,11 +91,11 @@ public final class InMagePolicyInputArgs extends io.pulumi.resources.ResourceArg
     }
 
     private InMagePolicyInputArgs() {
-        this.appConsistentFrequencyInMinutes = Input.empty();
-        this.instanceType = Input.empty();
-        this.multiVmSyncStatus = Input.empty();
-        this.recoveryPointHistory = Input.empty();
-        this.recoveryPointThresholdInMinutes = Input.empty();
+        this.appConsistentFrequencyInMinutes = Output.empty();
+        this.instanceType = Output.empty();
+        this.multiVmSyncStatus = Output.empty();
+        this.recoveryPointHistory = Output.empty();
+        this.recoveryPointThresholdInMinutes = Output.empty();
     }
 
     public static Builder builder() {
@@ -107,11 +107,11 @@ public final class InMagePolicyInputArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> appConsistentFrequencyInMinutes;
-        private @Nullable Input<String> instanceType;
-        private Input<Either<String,SetMultiVmSyncStatus>> multiVmSyncStatus;
-        private @Nullable Input<Integer> recoveryPointHistory;
-        private @Nullable Input<Integer> recoveryPointThresholdInMinutes;
+        private @Nullable Output<Integer> appConsistentFrequencyInMinutes;
+        private @Nullable Output<String> instanceType;
+        private Output<Either<String,SetMultiVmSyncStatus>> multiVmSyncStatus;
+        private @Nullable Output<Integer> recoveryPointHistory;
+        private @Nullable Output<Integer> recoveryPointThresholdInMinutes;
 
         public Builder() {
     	      // Empty
@@ -126,53 +126,53 @@ public final class InMagePolicyInputArgs extends io.pulumi.resources.ResourceArg
     	      this.recoveryPointThresholdInMinutes = defaults.recoveryPointThresholdInMinutes;
         }
 
-        public Builder appConsistentFrequencyInMinutes(@Nullable Input<Integer> appConsistentFrequencyInMinutes) {
+        public Builder appConsistentFrequencyInMinutes(@Nullable Output<Integer> appConsistentFrequencyInMinutes) {
             this.appConsistentFrequencyInMinutes = appConsistentFrequencyInMinutes;
             return this;
         }
 
         public Builder appConsistentFrequencyInMinutes(@Nullable Integer appConsistentFrequencyInMinutes) {
-            this.appConsistentFrequencyInMinutes = Input.ofNullable(appConsistentFrequencyInMinutes);
+            this.appConsistentFrequencyInMinutes = Output.ofNullable(appConsistentFrequencyInMinutes);
             return this;
         }
 
-        public Builder instanceType(@Nullable Input<String> instanceType) {
+        public Builder instanceType(@Nullable Output<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Input.ofNullable(instanceType);
+            this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
 
-        public Builder multiVmSyncStatus(Input<Either<String,SetMultiVmSyncStatus>> multiVmSyncStatus) {
+        public Builder multiVmSyncStatus(Output<Either<String,SetMultiVmSyncStatus>> multiVmSyncStatus) {
             this.multiVmSyncStatus = Objects.requireNonNull(multiVmSyncStatus);
             return this;
         }
 
         public Builder multiVmSyncStatus(Either<String,SetMultiVmSyncStatus> multiVmSyncStatus) {
-            this.multiVmSyncStatus = Input.of(Objects.requireNonNull(multiVmSyncStatus));
+            this.multiVmSyncStatus = Output.of(Objects.requireNonNull(multiVmSyncStatus));
             return this;
         }
 
-        public Builder recoveryPointHistory(@Nullable Input<Integer> recoveryPointHistory) {
+        public Builder recoveryPointHistory(@Nullable Output<Integer> recoveryPointHistory) {
             this.recoveryPointHistory = recoveryPointHistory;
             return this;
         }
 
         public Builder recoveryPointHistory(@Nullable Integer recoveryPointHistory) {
-            this.recoveryPointHistory = Input.ofNullable(recoveryPointHistory);
+            this.recoveryPointHistory = Output.ofNullable(recoveryPointHistory);
             return this;
         }
 
-        public Builder recoveryPointThresholdInMinutes(@Nullable Input<Integer> recoveryPointThresholdInMinutes) {
+        public Builder recoveryPointThresholdInMinutes(@Nullable Output<Integer> recoveryPointThresholdInMinutes) {
             this.recoveryPointThresholdInMinutes = recoveryPointThresholdInMinutes;
             return this;
         }
 
         public Builder recoveryPointThresholdInMinutes(@Nullable Integer recoveryPointThresholdInMinutes) {
-            this.recoveryPointThresholdInMinutes = Input.ofNullable(recoveryPointThresholdInMinutes);
+            this.recoveryPointThresholdInMinutes = Output.ofNullable(recoveryPointThresholdInMinutes);
             return this;
         }
         public InMagePolicyInputArgs build() {

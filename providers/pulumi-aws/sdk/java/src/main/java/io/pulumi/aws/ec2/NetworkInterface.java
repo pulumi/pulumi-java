@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2.NetworkInterfaceArgs;
 import io.pulumi.aws.ec2.inputs.NetworkInterfaceState;
 import io.pulumi.aws.ec2.outputs.NetworkInterfaceAttachment;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -421,14 +420,14 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NetworkInterface(String name, NetworkInterfaceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/networkInterface:NetworkInterface", name, args == null ? NetworkInterfaceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:ec2/networkInterface:NetworkInterface", name, args == null ? NetworkInterfaceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private NetworkInterface(String name, Input<String> id, @Nullable NetworkInterfaceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private NetworkInterface(String name, Output<String> id, @Nullable NetworkInterfaceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:ec2/networkInterface:NetworkInterface", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -444,7 +443,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static NetworkInterface get(String name, Input<String> id, @Nullable NetworkInterfaceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static NetworkInterface get(String name, Output<String> id, @Nullable NetworkInterfaceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new NetworkInterface(name, id, state, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.LoadBalancerStatusArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.ConditionArgs;
@@ -25,10 +25,10 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conditions")
-      private final @Nullable Input<List<ConditionArgs>> conditions;
+      private final @Nullable Output<List<ConditionArgs>> conditions;
 
-    public Input<List<ConditionArgs>> getConditions() {
-        return this.conditions == null ? Input.empty() : this.conditions;
+    public Output<List<ConditionArgs>> getConditions() {
+        return this.conditions == null ? Output.empty() : this.conditions;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loadBalancer")
-      private final @Nullable Input<LoadBalancerStatusArgs> loadBalancer;
+      private final @Nullable Output<LoadBalancerStatusArgs> loadBalancer;
 
-    public Input<LoadBalancerStatusArgs> getLoadBalancer() {
-        return this.loadBalancer == null ? Input.empty() : this.loadBalancer;
+    public Output<LoadBalancerStatusArgs> getLoadBalancer() {
+        return this.loadBalancer == null ? Output.empty() : this.loadBalancer;
     }
 
     public ServiceStatusArgs(
-        @Nullable Input<List<ConditionArgs>> conditions,
-        @Nullable Input<LoadBalancerStatusArgs> loadBalancer) {
+        @Nullable Output<List<ConditionArgs>> conditions,
+        @Nullable Output<LoadBalancerStatusArgs> loadBalancer) {
         this.conditions = conditions;
         this.loadBalancer = loadBalancer;
     }
 
     private ServiceStatusArgs() {
-        this.conditions = Input.empty();
-        this.loadBalancer = Input.empty();
+        this.conditions = Output.empty();
+        this.loadBalancer = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ConditionArgs>> conditions;
-        private @Nullable Input<LoadBalancerStatusArgs> loadBalancer;
+        private @Nullable Output<List<ConditionArgs>> conditions;
+        private @Nullable Output<LoadBalancerStatusArgs> loadBalancer;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
     	      this.loadBalancer = defaults.loadBalancer;
         }
 
-        public Builder conditions(@Nullable Input<List<ConditionArgs>> conditions) {
+        public Builder conditions(@Nullable Output<List<ConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
         public Builder conditions(@Nullable List<ConditionArgs> conditions) {
-            this.conditions = Input.ofNullable(conditions);
+            this.conditions = Output.ofNullable(conditions);
             return this;
         }
 
-        public Builder loadBalancer(@Nullable Input<LoadBalancerStatusArgs> loadBalancer) {
+        public Builder loadBalancer(@Nullable Output<LoadBalancerStatusArgs> loadBalancer) {
             this.loadBalancer = loadBalancer;
             return this;
         }
 
         public Builder loadBalancer(@Nullable LoadBalancerStatusArgs loadBalancer) {
-            this.loadBalancer = Input.ofNullable(loadBalancer);
+            this.loadBalancer = Output.ofNullable(loadBalancer);
             return this;
         }
         public ServiceStatusArgs build() {

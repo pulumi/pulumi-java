@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codeartifact.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,39 +19,39 @@ public final class RepositoryExternalConnectionsGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="externalConnectionName", required=true)
-      private final Input<String> externalConnectionName;
+      private final Output<String> externalConnectionName;
 
-    public Input<String> getExternalConnectionName() {
+    public Output<String> getExternalConnectionName() {
         return this.externalConnectionName;
     }
 
     @InputImport(name="packageFormat")
-      private final @Nullable Input<String> packageFormat;
+      private final @Nullable Output<String> packageFormat;
 
-    public Input<String> getPackageFormat() {
-        return this.packageFormat == null ? Input.empty() : this.packageFormat;
+    public Output<String> getPackageFormat() {
+        return this.packageFormat == null ? Output.empty() : this.packageFormat;
     }
 
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     public RepositoryExternalConnectionsGetArgs(
-        Input<String> externalConnectionName,
-        @Nullable Input<String> packageFormat,
-        @Nullable Input<String> status) {
+        Output<String> externalConnectionName,
+        @Nullable Output<String> packageFormat,
+        @Nullable Output<String> status) {
         this.externalConnectionName = Objects.requireNonNull(externalConnectionName, "expected parameter 'externalConnectionName' to be non-null");
         this.packageFormat = packageFormat;
         this.status = status;
     }
 
     private RepositoryExternalConnectionsGetArgs() {
-        this.externalConnectionName = Input.empty();
-        this.packageFormat = Input.empty();
-        this.status = Input.empty();
+        this.externalConnectionName = Output.empty();
+        this.packageFormat = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,9 +63,9 @@ public final class RepositoryExternalConnectionsGetArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private Input<String> externalConnectionName;
-        private @Nullable Input<String> packageFormat;
-        private @Nullable Input<String> status;
+        private Output<String> externalConnectionName;
+        private @Nullable Output<String> packageFormat;
+        private @Nullable Output<String> status;
 
         public Builder() {
     	      // Empty
@@ -78,33 +78,33 @@ public final class RepositoryExternalConnectionsGetArgs extends io.pulumi.resour
     	      this.status = defaults.status;
         }
 
-        public Builder externalConnectionName(Input<String> externalConnectionName) {
+        public Builder externalConnectionName(Output<String> externalConnectionName) {
             this.externalConnectionName = Objects.requireNonNull(externalConnectionName);
             return this;
         }
 
         public Builder externalConnectionName(String externalConnectionName) {
-            this.externalConnectionName = Input.of(Objects.requireNonNull(externalConnectionName));
+            this.externalConnectionName = Output.of(Objects.requireNonNull(externalConnectionName));
             return this;
         }
 
-        public Builder packageFormat(@Nullable Input<String> packageFormat) {
+        public Builder packageFormat(@Nullable Output<String> packageFormat) {
             this.packageFormat = packageFormat;
             return this;
         }
 
         public Builder packageFormat(@Nullable String packageFormat) {
-            this.packageFormat = Input.ofNullable(packageFormat);
+            this.packageFormat = Output.ofNullable(packageFormat);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public RepositoryExternalConnectionsGetArgs build() {

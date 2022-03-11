@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.discovery.k8s.io_v1beta1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.discovery.k8s.io_v1beta1.inputs.EndpointArgs;
 import io.pulumi.kubernetes.discovery.k8s.io_v1beta1.inputs.EndpointPortArgs;
@@ -23,9 +23,9 @@ public final class EndpointSliceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addressType", required=true)
-      private final Input<String> addressType;
+      private final Output<String> addressType;
 
-    public Input<String> getAddressType() {
+    public Output<String> getAddressType() {
         return this.addressType;
     }
 
@@ -34,10 +34,10 @@ public final class EndpointSliceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiVersion")
-      private final @Nullable Input<String> apiVersion;
+      private final @Nullable Output<String> apiVersion;
 
-    public Input<String> getApiVersion() {
-        return this.apiVersion == null ? Input.empty() : this.apiVersion;
+    public Output<String> getApiVersion() {
+        return this.apiVersion == null ? Output.empty() : this.apiVersion;
     }
 
     /**
@@ -45,9 +45,9 @@ public final class EndpointSliceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpoints", required=true)
-      private final Input<List<EndpointArgs>> endpoints;
+      private final Output<List<EndpointArgs>> endpoints;
 
-    public Input<List<EndpointArgs>> getEndpoints() {
+    public Output<List<EndpointArgs>> getEndpoints() {
         return this.endpoints;
     }
 
@@ -56,10 +56,10 @@ public final class EndpointSliceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class EndpointSliceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<ObjectMetaArgs> metadata;
+      private final @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Input<ObjectMetaArgs> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<ObjectMetaArgs> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -78,19 +78,19 @@ public final class EndpointSliceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ports")
-      private final @Nullable Input<List<EndpointPortArgs>> ports;
+      private final @Nullable Output<List<EndpointPortArgs>> ports;
 
-    public Input<List<EndpointPortArgs>> getPorts() {
-        return this.ports == null ? Input.empty() : this.ports;
+    public Output<List<EndpointPortArgs>> getPorts() {
+        return this.ports == null ? Output.empty() : this.ports;
     }
 
     public EndpointSliceArgs(
-        Input<String> addressType,
-        @Nullable Input<String> apiVersion,
-        Input<List<EndpointArgs>> endpoints,
-        @Nullable Input<String> kind,
-        @Nullable Input<ObjectMetaArgs> metadata,
-        @Nullable Input<List<EndpointPortArgs>> ports) {
+        Output<String> addressType,
+        @Nullable Output<String> apiVersion,
+        Output<List<EndpointArgs>> endpoints,
+        @Nullable Output<String> kind,
+        @Nullable Output<ObjectMetaArgs> metadata,
+        @Nullable Output<List<EndpointPortArgs>> ports) {
         this.addressType = Objects.requireNonNull(addressType, "expected parameter 'addressType' to be non-null");
         this.apiVersion = apiVersion;
         this.endpoints = Objects.requireNonNull(endpoints, "expected parameter 'endpoints' to be non-null");
@@ -100,12 +100,12 @@ public final class EndpointSliceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EndpointSliceArgs() {
-        this.addressType = Input.empty();
-        this.apiVersion = Input.empty();
-        this.endpoints = Input.empty();
-        this.kind = Input.empty();
-        this.metadata = Input.empty();
-        this.ports = Input.empty();
+        this.addressType = Output.empty();
+        this.apiVersion = Output.empty();
+        this.endpoints = Output.empty();
+        this.kind = Output.empty();
+        this.metadata = Output.empty();
+        this.ports = Output.empty();
     }
 
     public static Builder builder() {
@@ -117,12 +117,12 @@ public final class EndpointSliceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> addressType;
-        private @Nullable Input<String> apiVersion;
-        private Input<List<EndpointArgs>> endpoints;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<ObjectMetaArgs> metadata;
-        private @Nullable Input<List<EndpointPortArgs>> ports;
+        private Output<String> addressType;
+        private @Nullable Output<String> apiVersion;
+        private Output<List<EndpointArgs>> endpoints;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<ObjectMetaArgs> metadata;
+        private @Nullable Output<List<EndpointPortArgs>> ports;
 
         public Builder() {
     	      // Empty
@@ -138,63 +138,63 @@ public final class EndpointSliceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ports = defaults.ports;
         }
 
-        public Builder addressType(Input<String> addressType) {
+        public Builder addressType(Output<String> addressType) {
             this.addressType = Objects.requireNonNull(addressType);
             return this;
         }
 
         public Builder addressType(String addressType) {
-            this.addressType = Input.of(Objects.requireNonNull(addressType));
+            this.addressType = Output.of(Objects.requireNonNull(addressType));
             return this;
         }
 
-        public Builder apiVersion(@Nullable Input<String> apiVersion) {
+        public Builder apiVersion(@Nullable Output<String> apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
         public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Input.ofNullable(apiVersion);
+            this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
 
-        public Builder endpoints(Input<List<EndpointArgs>> endpoints) {
+        public Builder endpoints(Output<List<EndpointArgs>> endpoints) {
             this.endpoints = Objects.requireNonNull(endpoints);
             return this;
         }
 
         public Builder endpoints(List<EndpointArgs> endpoints) {
-            this.endpoints = Input.of(Objects.requireNonNull(endpoints));
+            this.endpoints = Output.of(Objects.requireNonNull(endpoints));
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<ObjectMetaArgs> metadata) {
+        public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder ports(@Nullable Input<List<EndpointPortArgs>> ports) {
+        public Builder ports(@Nullable Output<List<EndpointPortArgs>> ports) {
             this.ports = ports;
             return this;
         }
 
         public Builder ports(@Nullable List<EndpointPortArgs> ports) {
-            this.ports = Input.ofNullable(ports);
+            this.ports = Output.ofNullable(ports);
             return this;
         }
         public EndpointSliceArgs build() {

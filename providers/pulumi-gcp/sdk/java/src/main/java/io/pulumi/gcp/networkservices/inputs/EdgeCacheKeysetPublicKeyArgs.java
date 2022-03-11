@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.networkservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class EdgeCacheKeysetPublicKeyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="id", required=true)
-      private final Input<String> id;
+      private final Output<String> id;
 
-    public Input<String> getId() {
+    public Output<String> getId() {
         return this.id;
     }
 
@@ -33,22 +33,22 @@ public final class EdgeCacheKeysetPublicKeyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="value", required=true)
-      private final Input<String> value;
+      private final Output<String> value;
 
-    public Input<String> getValue() {
+    public Output<String> getValue() {
         return this.value;
     }
 
     public EdgeCacheKeysetPublicKeyArgs(
-        Input<String> id,
-        Input<String> value) {
+        Output<String> id,
+        Output<String> value) {
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private EdgeCacheKeysetPublicKeyArgs() {
-        this.id = Input.empty();
-        this.value = Input.empty();
+        this.id = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class EdgeCacheKeysetPublicKeyArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> id;
-        private Input<String> value;
+        private Output<String> id;
+        private Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class EdgeCacheKeysetPublicKeyArgs extends io.pulumi.resources.Reso
     	      this.value = defaults.value;
         }
 
-        public Builder id(Input<String> id) {
+        public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
         public Builder id(String id) {
-            this.id = Input.of(Objects.requireNonNull(id));
+            this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder value(Input<String> value) {
+        public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(String value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public EdgeCacheKeysetPublicKeyArgs build() {

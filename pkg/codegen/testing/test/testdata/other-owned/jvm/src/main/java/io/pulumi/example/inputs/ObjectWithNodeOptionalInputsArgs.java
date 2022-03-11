@@ -3,7 +3,7 @@
 
 package io.pulumi.example.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,29 +16,29 @@ public final class ObjectWithNodeOptionalInputsArgs extends io.pulumi.resources.
     public static final ObjectWithNodeOptionalInputsArgs Empty = new ObjectWithNodeOptionalInputsArgs();
 
     @InputImport(name="bar")
-      private final @Nullable Input<Integer> bar;
+      private final @Nullable Output<Integer> bar;
 
-    public Input<Integer> getBar() {
-        return this.bar == null ? Input.empty() : this.bar;
+    public Output<Integer> getBar() {
+        return this.bar == null ? Output.empty() : this.bar;
     }
 
     @InputImport(name="foo", required=true)
-      private final Input<String> foo;
+      private final Output<String> foo;
 
-    public Input<String> getFoo() {
+    public Output<String> getFoo() {
         return this.foo;
     }
 
     public ObjectWithNodeOptionalInputsArgs(
-        @Nullable Input<Integer> bar,
-        Input<String> foo) {
+        @Nullable Output<Integer> bar,
+        Output<String> foo) {
         this.bar = bar;
         this.foo = Objects.requireNonNull(foo, "expected parameter 'foo' to be non-null");
     }
 
     private ObjectWithNodeOptionalInputsArgs() {
-        this.bar = Input.empty();
-        this.foo = Input.empty();
+        this.bar = Output.empty();
+        this.foo = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class ObjectWithNodeOptionalInputsArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> bar;
-        private Input<String> foo;
+        private @Nullable Output<Integer> bar;
+        private Output<String> foo;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class ObjectWithNodeOptionalInputsArgs extends io.pulumi.resources.
     	      this.foo = defaults.foo;
         }
 
-        public Builder bar(@Nullable Input<Integer> bar) {
+        public Builder bar(@Nullable Output<Integer> bar) {
             this.bar = bar;
             return this;
         }
 
         public Builder bar(@Nullable Integer bar) {
-            this.bar = Input.ofNullable(bar);
+            this.bar = Output.ofNullable(bar);
             return this;
         }
 
-        public Builder foo(Input<String> foo) {
+        public Builder foo(Output<String> foo) {
             this.foo = Objects.requireNonNull(foo);
             return this;
         }
 
         public Builder foo(String foo) {
-            this.foo = Input.of(Objects.requireNonNull(foo));
+            this.foo = Output.of(Objects.requireNonNull(foo));
             return this;
         }
         public ObjectWithNodeOptionalInputsArgs build() {

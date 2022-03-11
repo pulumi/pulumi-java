@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,10 +17,10 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
     public static final AliasArgs Empty = new AliasArgs();
 
     @InputImport(name="alias")
-      private final @Nullable Input<String> alias;
+      private final @Nullable Output<String> alias;
 
-    public Input<String> getAlias() {
-        return this.alias == null ? Input.empty() : this.alias;
+    public Output<String> getAlias() {
+        return this.alias == null ? Output.empty() : this.alias;
     }
 
     /**
@@ -28,10 +28,10 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentType")
-      private final @Nullable Input<String> contentType;
+      private final @Nullable Output<String> contentType;
 
-    public Input<String> getContentType() {
-        return this.contentType == null ? Input.empty() : this.contentType;
+    public Output<String> getContentType() {
+        return this.contentType == null ? Output.empty() : this.contentType;
     }
 
     /**
@@ -39,16 +39,16 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="data")
-      private final @Nullable Input<String> data;
+      private final @Nullable Output<String> data;
 
-    public Input<String> getData() {
-        return this.data == null ? Input.empty() : this.data;
+    public Output<String> getData() {
+        return this.data == null ? Output.empty() : this.data;
     }
 
     @InputImport(name="environmentId", required=true)
-      private final Input<String> environmentId;
+      private final Output<String> environmentId;
 
-    public Input<String> getEnvironmentId() {
+    public Output<String> getEnvironmentId() {
         return this.environmentId;
     }
 
@@ -57,58 +57,58 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extensions")
-      private final @Nullable Input<List<Map<String,String>>> extensions;
+      private final @Nullable Output<List<Map<String,String>>> extensions;
 
-    public Input<List<Map<String,String>>> getExtensions() {
-        return this.extensions == null ? Input.empty() : this.extensions;
+    public Output<List<Map<String,String>>> getExtensions() {
+        return this.extensions == null ? Output.empty() : this.extensions;
     }
 
     @InputImport(name="format", required=true)
-      private final Input<String> format;
+      private final Output<String> format;
 
-    public Input<String> getFormat() {
+    public Output<String> getFormat() {
         return this.format;
     }
 
     @InputImport(name="ignoreExpiryValidation")
-      private final @Nullable Input<String> ignoreExpiryValidation;
+      private final @Nullable Output<String> ignoreExpiryValidation;
 
-    public Input<String> getIgnoreExpiryValidation() {
-        return this.ignoreExpiryValidation == null ? Input.empty() : this.ignoreExpiryValidation;
+    public Output<String> getIgnoreExpiryValidation() {
+        return this.ignoreExpiryValidation == null ? Output.empty() : this.ignoreExpiryValidation;
     }
 
     @InputImport(name="ignoreNewlineValidation")
-      private final @Nullable Input<String> ignoreNewlineValidation;
+      private final @Nullable Output<String> ignoreNewlineValidation;
 
-    public Input<String> getIgnoreNewlineValidation() {
-        return this.ignoreNewlineValidation == null ? Input.empty() : this.ignoreNewlineValidation;
+    public Output<String> getIgnoreNewlineValidation() {
+        return this.ignoreNewlineValidation == null ? Output.empty() : this.ignoreNewlineValidation;
     }
 
     @InputImport(name="keystoreId", required=true)
-      private final Input<String> keystoreId;
+      private final Output<String> keystoreId;
 
-    public Input<String> getKeystoreId() {
+    public Output<String> getKeystoreId() {
         return this.keystoreId;
     }
 
     @InputImport(name="organizationId", required=true)
-      private final Input<String> organizationId;
+      private final Output<String> organizationId;
 
-    public Input<String> getOrganizationId() {
+    public Output<String> getOrganizationId() {
         return this.organizationId;
     }
 
     public AliasArgs(
-        @Nullable Input<String> alias,
-        @Nullable Input<String> contentType,
-        @Nullable Input<String> data,
-        Input<String> environmentId,
-        @Nullable Input<List<Map<String,String>>> extensions,
-        Input<String> format,
-        @Nullable Input<String> ignoreExpiryValidation,
-        @Nullable Input<String> ignoreNewlineValidation,
-        Input<String> keystoreId,
-        Input<String> organizationId) {
+        @Nullable Output<String> alias,
+        @Nullable Output<String> contentType,
+        @Nullable Output<String> data,
+        Output<String> environmentId,
+        @Nullable Output<List<Map<String,String>>> extensions,
+        Output<String> format,
+        @Nullable Output<String> ignoreExpiryValidation,
+        @Nullable Output<String> ignoreNewlineValidation,
+        Output<String> keystoreId,
+        Output<String> organizationId) {
         this.alias = alias;
         this.contentType = contentType;
         this.data = data;
@@ -122,16 +122,16 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AliasArgs() {
-        this.alias = Input.empty();
-        this.contentType = Input.empty();
-        this.data = Input.empty();
-        this.environmentId = Input.empty();
-        this.extensions = Input.empty();
-        this.format = Input.empty();
-        this.ignoreExpiryValidation = Input.empty();
-        this.ignoreNewlineValidation = Input.empty();
-        this.keystoreId = Input.empty();
-        this.organizationId = Input.empty();
+        this.alias = Output.empty();
+        this.contentType = Output.empty();
+        this.data = Output.empty();
+        this.environmentId = Output.empty();
+        this.extensions = Output.empty();
+        this.format = Output.empty();
+        this.ignoreExpiryValidation = Output.empty();
+        this.ignoreNewlineValidation = Output.empty();
+        this.keystoreId = Output.empty();
+        this.organizationId = Output.empty();
     }
 
     public static Builder builder() {
@@ -143,16 +143,16 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> alias;
-        private @Nullable Input<String> contentType;
-        private @Nullable Input<String> data;
-        private Input<String> environmentId;
-        private @Nullable Input<List<Map<String,String>>> extensions;
-        private Input<String> format;
-        private @Nullable Input<String> ignoreExpiryValidation;
-        private @Nullable Input<String> ignoreNewlineValidation;
-        private Input<String> keystoreId;
-        private Input<String> organizationId;
+        private @Nullable Output<String> alias;
+        private @Nullable Output<String> contentType;
+        private @Nullable Output<String> data;
+        private Output<String> environmentId;
+        private @Nullable Output<List<Map<String,String>>> extensions;
+        private Output<String> format;
+        private @Nullable Output<String> ignoreExpiryValidation;
+        private @Nullable Output<String> ignoreNewlineValidation;
+        private Output<String> keystoreId;
+        private Output<String> organizationId;
 
         public Builder() {
     	      // Empty
@@ -172,103 +172,103 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
     	      this.organizationId = defaults.organizationId;
         }
 
-        public Builder alias(@Nullable Input<String> alias) {
+        public Builder alias(@Nullable Output<String> alias) {
             this.alias = alias;
             return this;
         }
 
         public Builder alias(@Nullable String alias) {
-            this.alias = Input.ofNullable(alias);
+            this.alias = Output.ofNullable(alias);
             return this;
         }
 
-        public Builder contentType(@Nullable Input<String> contentType) {
+        public Builder contentType(@Nullable Output<String> contentType) {
             this.contentType = contentType;
             return this;
         }
 
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = Input.ofNullable(contentType);
+            this.contentType = Output.ofNullable(contentType);
             return this;
         }
 
-        public Builder data(@Nullable Input<String> data) {
+        public Builder data(@Nullable Output<String> data) {
             this.data = data;
             return this;
         }
 
         public Builder data(@Nullable String data) {
-            this.data = Input.ofNullable(data);
+            this.data = Output.ofNullable(data);
             return this;
         }
 
-        public Builder environmentId(Input<String> environmentId) {
+        public Builder environmentId(Output<String> environmentId) {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
 
         public Builder environmentId(String environmentId) {
-            this.environmentId = Input.of(Objects.requireNonNull(environmentId));
+            this.environmentId = Output.of(Objects.requireNonNull(environmentId));
             return this;
         }
 
-        public Builder extensions(@Nullable Input<List<Map<String,String>>> extensions) {
+        public Builder extensions(@Nullable Output<List<Map<String,String>>> extensions) {
             this.extensions = extensions;
             return this;
         }
 
         public Builder extensions(@Nullable List<Map<String,String>> extensions) {
-            this.extensions = Input.ofNullable(extensions);
+            this.extensions = Output.ofNullable(extensions);
             return this;
         }
 
-        public Builder format(Input<String> format) {
+        public Builder format(Output<String> format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
 
         public Builder format(String format) {
-            this.format = Input.of(Objects.requireNonNull(format));
+            this.format = Output.of(Objects.requireNonNull(format));
             return this;
         }
 
-        public Builder ignoreExpiryValidation(@Nullable Input<String> ignoreExpiryValidation) {
+        public Builder ignoreExpiryValidation(@Nullable Output<String> ignoreExpiryValidation) {
             this.ignoreExpiryValidation = ignoreExpiryValidation;
             return this;
         }
 
         public Builder ignoreExpiryValidation(@Nullable String ignoreExpiryValidation) {
-            this.ignoreExpiryValidation = Input.ofNullable(ignoreExpiryValidation);
+            this.ignoreExpiryValidation = Output.ofNullable(ignoreExpiryValidation);
             return this;
         }
 
-        public Builder ignoreNewlineValidation(@Nullable Input<String> ignoreNewlineValidation) {
+        public Builder ignoreNewlineValidation(@Nullable Output<String> ignoreNewlineValidation) {
             this.ignoreNewlineValidation = ignoreNewlineValidation;
             return this;
         }
 
         public Builder ignoreNewlineValidation(@Nullable String ignoreNewlineValidation) {
-            this.ignoreNewlineValidation = Input.ofNullable(ignoreNewlineValidation);
+            this.ignoreNewlineValidation = Output.ofNullable(ignoreNewlineValidation);
             return this;
         }
 
-        public Builder keystoreId(Input<String> keystoreId) {
+        public Builder keystoreId(Output<String> keystoreId) {
             this.keystoreId = Objects.requireNonNull(keystoreId);
             return this;
         }
 
         public Builder keystoreId(String keystoreId) {
-            this.keystoreId = Input.of(Objects.requireNonNull(keystoreId));
+            this.keystoreId = Output.of(Objects.requireNonNull(keystoreId));
             return this;
         }
 
-        public Builder organizationId(Input<String> organizationId) {
+        public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
         public Builder organizationId(String organizationId) {
-            this.organizationId = Input.of(Objects.requireNonNull(organizationId));
+            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
         public AliasArgs build() {

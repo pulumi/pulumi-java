@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.endpoints;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,29 +19,29 @@ public final class ServiceIamPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="policyData", required=true)
-      private final Input<String> policyData;
+      private final Output<String> policyData;
 
-    public Input<String> getPolicyData() {
+    public Output<String> getPolicyData() {
         return this.policyData;
     }
 
     @InputImport(name="serviceName", required=true)
-      private final Input<String> serviceName;
+      private final Output<String> serviceName;
 
-    public Input<String> getServiceName() {
+    public Output<String> getServiceName() {
         return this.serviceName;
     }
 
     public ServiceIamPolicyArgs(
-        Input<String> policyData,
-        Input<String> serviceName) {
+        Output<String> policyData,
+        Output<String> serviceName) {
         this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
         this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
     }
 
     private ServiceIamPolicyArgs() {
-        this.policyData = Input.empty();
-        this.serviceName = Input.empty();
+        this.policyData = Output.empty();
+        this.serviceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -53,8 +53,8 @@ public final class ServiceIamPolicyArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> policyData;
-        private Input<String> serviceName;
+        private Output<String> policyData;
+        private Output<String> serviceName;
 
         public Builder() {
     	      // Empty
@@ -66,23 +66,23 @@ public final class ServiceIamPolicyArgs extends io.pulumi.resources.ResourceArgs
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder policyData(Input<String> policyData) {
+        public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
 
         public Builder policyData(String policyData) {
-            this.policyData = Input.of(Objects.requireNonNull(policyData));
+            this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
 
-        public Builder serviceName(Input<String> serviceName) {
+        public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Input.of(Objects.requireNonNull(serviceName));
+            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
         public ServiceIamPolicyArgs build() {

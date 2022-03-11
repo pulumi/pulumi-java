@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotcoredeviceadvisor.inputs;
 
 import io.pulumi.awsnative.iotcoredeviceadvisor.inputs.SuiteDefinitionDeviceUnderTestArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -18,46 +18,46 @@ public final class SuiteDefinitionConfigurationPropertiesArgs extends io.pulumi.
     public static final SuiteDefinitionConfigurationPropertiesArgs Empty = new SuiteDefinitionConfigurationPropertiesArgs();
 
     @InputImport(name="devicePermissionRoleArn", required=true)
-      private final Input<String> devicePermissionRoleArn;
+      private final Output<String> devicePermissionRoleArn;
 
-    public Input<String> getDevicePermissionRoleArn() {
+    public Output<String> getDevicePermissionRoleArn() {
         return this.devicePermissionRoleArn;
     }
 
     @InputImport(name="devices")
-      private final @Nullable Input<List<SuiteDefinitionDeviceUnderTestArgs>> devices;
+      private final @Nullable Output<List<SuiteDefinitionDeviceUnderTestArgs>> devices;
 
-    public Input<List<SuiteDefinitionDeviceUnderTestArgs>> getDevices() {
-        return this.devices == null ? Input.empty() : this.devices;
+    public Output<List<SuiteDefinitionDeviceUnderTestArgs>> getDevices() {
+        return this.devices == null ? Output.empty() : this.devices;
     }
 
     @InputImport(name="intendedForQualification")
-      private final @Nullable Input<Boolean> intendedForQualification;
+      private final @Nullable Output<Boolean> intendedForQualification;
 
-    public Input<Boolean> getIntendedForQualification() {
-        return this.intendedForQualification == null ? Input.empty() : this.intendedForQualification;
+    public Output<Boolean> getIntendedForQualification() {
+        return this.intendedForQualification == null ? Output.empty() : this.intendedForQualification;
     }
 
     @InputImport(name="rootGroup", required=true)
-      private final Input<String> rootGroup;
+      private final Output<String> rootGroup;
 
-    public Input<String> getRootGroup() {
+    public Output<String> getRootGroup() {
         return this.rootGroup;
     }
 
     @InputImport(name="suiteDefinitionName")
-      private final @Nullable Input<String> suiteDefinitionName;
+      private final @Nullable Output<String> suiteDefinitionName;
 
-    public Input<String> getSuiteDefinitionName() {
-        return this.suiteDefinitionName == null ? Input.empty() : this.suiteDefinitionName;
+    public Output<String> getSuiteDefinitionName() {
+        return this.suiteDefinitionName == null ? Output.empty() : this.suiteDefinitionName;
     }
 
     public SuiteDefinitionConfigurationPropertiesArgs(
-        Input<String> devicePermissionRoleArn,
-        @Nullable Input<List<SuiteDefinitionDeviceUnderTestArgs>> devices,
-        @Nullable Input<Boolean> intendedForQualification,
-        Input<String> rootGroup,
-        @Nullable Input<String> suiteDefinitionName) {
+        Output<String> devicePermissionRoleArn,
+        @Nullable Output<List<SuiteDefinitionDeviceUnderTestArgs>> devices,
+        @Nullable Output<Boolean> intendedForQualification,
+        Output<String> rootGroup,
+        @Nullable Output<String> suiteDefinitionName) {
         this.devicePermissionRoleArn = Objects.requireNonNull(devicePermissionRoleArn, "expected parameter 'devicePermissionRoleArn' to be non-null");
         this.devices = devices;
         this.intendedForQualification = intendedForQualification;
@@ -66,11 +66,11 @@ public final class SuiteDefinitionConfigurationPropertiesArgs extends io.pulumi.
     }
 
     private SuiteDefinitionConfigurationPropertiesArgs() {
-        this.devicePermissionRoleArn = Input.empty();
-        this.devices = Input.empty();
-        this.intendedForQualification = Input.empty();
-        this.rootGroup = Input.empty();
-        this.suiteDefinitionName = Input.empty();
+        this.devicePermissionRoleArn = Output.empty();
+        this.devices = Output.empty();
+        this.intendedForQualification = Output.empty();
+        this.rootGroup = Output.empty();
+        this.suiteDefinitionName = Output.empty();
     }
 
     public static Builder builder() {
@@ -82,11 +82,11 @@ public final class SuiteDefinitionConfigurationPropertiesArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private Input<String> devicePermissionRoleArn;
-        private @Nullable Input<List<SuiteDefinitionDeviceUnderTestArgs>> devices;
-        private @Nullable Input<Boolean> intendedForQualification;
-        private Input<String> rootGroup;
-        private @Nullable Input<String> suiteDefinitionName;
+        private Output<String> devicePermissionRoleArn;
+        private @Nullable Output<List<SuiteDefinitionDeviceUnderTestArgs>> devices;
+        private @Nullable Output<Boolean> intendedForQualification;
+        private Output<String> rootGroup;
+        private @Nullable Output<String> suiteDefinitionName;
 
         public Builder() {
     	      // Empty
@@ -101,53 +101,53 @@ public final class SuiteDefinitionConfigurationPropertiesArgs extends io.pulumi.
     	      this.suiteDefinitionName = defaults.suiteDefinitionName;
         }
 
-        public Builder devicePermissionRoleArn(Input<String> devicePermissionRoleArn) {
+        public Builder devicePermissionRoleArn(Output<String> devicePermissionRoleArn) {
             this.devicePermissionRoleArn = Objects.requireNonNull(devicePermissionRoleArn);
             return this;
         }
 
         public Builder devicePermissionRoleArn(String devicePermissionRoleArn) {
-            this.devicePermissionRoleArn = Input.of(Objects.requireNonNull(devicePermissionRoleArn));
+            this.devicePermissionRoleArn = Output.of(Objects.requireNonNull(devicePermissionRoleArn));
             return this;
         }
 
-        public Builder devices(@Nullable Input<List<SuiteDefinitionDeviceUnderTestArgs>> devices) {
+        public Builder devices(@Nullable Output<List<SuiteDefinitionDeviceUnderTestArgs>> devices) {
             this.devices = devices;
             return this;
         }
 
         public Builder devices(@Nullable List<SuiteDefinitionDeviceUnderTestArgs> devices) {
-            this.devices = Input.ofNullable(devices);
+            this.devices = Output.ofNullable(devices);
             return this;
         }
 
-        public Builder intendedForQualification(@Nullable Input<Boolean> intendedForQualification) {
+        public Builder intendedForQualification(@Nullable Output<Boolean> intendedForQualification) {
             this.intendedForQualification = intendedForQualification;
             return this;
         }
 
         public Builder intendedForQualification(@Nullable Boolean intendedForQualification) {
-            this.intendedForQualification = Input.ofNullable(intendedForQualification);
+            this.intendedForQualification = Output.ofNullable(intendedForQualification);
             return this;
         }
 
-        public Builder rootGroup(Input<String> rootGroup) {
+        public Builder rootGroup(Output<String> rootGroup) {
             this.rootGroup = Objects.requireNonNull(rootGroup);
             return this;
         }
 
         public Builder rootGroup(String rootGroup) {
-            this.rootGroup = Input.of(Objects.requireNonNull(rootGroup));
+            this.rootGroup = Output.of(Objects.requireNonNull(rootGroup));
             return this;
         }
 
-        public Builder suiteDefinitionName(@Nullable Input<String> suiteDefinitionName) {
+        public Builder suiteDefinitionName(@Nullable Output<String> suiteDefinitionName) {
             this.suiteDefinitionName = suiteDefinitionName;
             return this;
         }
 
         public Builder suiteDefinitionName(@Nullable String suiteDefinitionName) {
-            this.suiteDefinitionName = Input.ofNullable(suiteDefinitionName);
+            this.suiteDefinitionName = Output.ofNullable(suiteDefinitionName);
             return this;
         }
         public SuiteDefinitionConfigurationPropertiesArgs build() {

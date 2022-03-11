@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class JobQueryUserDefinedFunctionResourceArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="inlineCode")
-      private final @Nullable Input<String> inlineCode;
+      private final @Nullable Output<String> inlineCode;
 
-    public Input<String> getInlineCode() {
-        return this.inlineCode == null ? Input.empty() : this.inlineCode;
+    public Output<String> getInlineCode() {
+        return this.inlineCode == null ? Output.empty() : this.inlineCode;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class JobQueryUserDefinedFunctionResourceArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="resourceUri")
-      private final @Nullable Input<String> resourceUri;
+      private final @Nullable Output<String> resourceUri;
 
-    public Input<String> getResourceUri() {
-        return this.resourceUri == null ? Input.empty() : this.resourceUri;
+    public Output<String> getResourceUri() {
+        return this.resourceUri == null ? Output.empty() : this.resourceUri;
     }
 
     public JobQueryUserDefinedFunctionResourceArgs(
-        @Nullable Input<String> inlineCode,
-        @Nullable Input<String> resourceUri) {
+        @Nullable Output<String> inlineCode,
+        @Nullable Output<String> resourceUri) {
         this.inlineCode = inlineCode;
         this.resourceUri = resourceUri;
     }
 
     private JobQueryUserDefinedFunctionResourceArgs() {
-        this.inlineCode = Input.empty();
-        this.resourceUri = Input.empty();
+        this.inlineCode = Output.empty();
+        this.resourceUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class JobQueryUserDefinedFunctionResourceArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> inlineCode;
-        private @Nullable Input<String> resourceUri;
+        private @Nullable Output<String> inlineCode;
+        private @Nullable Output<String> resourceUri;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class JobQueryUserDefinedFunctionResourceArgs extends io.pulumi.res
     	      this.resourceUri = defaults.resourceUri;
         }
 
-        public Builder inlineCode(@Nullable Input<String> inlineCode) {
+        public Builder inlineCode(@Nullable Output<String> inlineCode) {
             this.inlineCode = inlineCode;
             return this;
         }
 
         public Builder inlineCode(@Nullable String inlineCode) {
-            this.inlineCode = Input.ofNullable(inlineCode);
+            this.inlineCode = Output.ofNullable(inlineCode);
             return this;
         }
 
-        public Builder resourceUri(@Nullable Input<String> resourceUri) {
+        public Builder resourceUri(@Nullable Output<String> resourceUri) {
             this.resourceUri = resourceUri;
             return this;
         }
 
         public Builder resourceUri(@Nullable String resourceUri) {
-            this.resourceUri = Input.ofNullable(resourceUri);
+            this.resourceUri = Output.ofNullable(resourceUri);
             return this;
         }
         public JobQueryUserDefinedFunctionResourceArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cache.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="args")
-      private final @Nullable Input<String> args;
+      private final @Nullable Output<String> args;
 
-    public Input<String> getArgs() {
-        return this.args == null ? Input.empty() : this.args;
+    public Output<String> getArgs() {
+        return this.args == null ? Output.empty() : this.args;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     public ModuleArgs(
-        @Nullable Input<String> args,
-        Input<String> name) {
+        @Nullable Output<String> args,
+        Output<String> name) {
         this.args = args;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private ModuleArgs() {
-        this.args = Input.empty();
-        this.name = Input.empty();
+        this.args = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> args;
-        private Input<String> name;
+        private @Nullable Output<String> args;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder args(@Nullable Input<String> args) {
+        public Builder args(@Nullable Output<String> args) {
             this.args = args;
             return this;
         }
 
         public Builder args(@Nullable String args) {
-            this.args = Input.ofNullable(args);
+            this.args = Output.ofNullable(args);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public ModuleArgs build() {

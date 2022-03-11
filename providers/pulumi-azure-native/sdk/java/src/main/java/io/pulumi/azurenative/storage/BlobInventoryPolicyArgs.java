@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage;
 
 import io.pulumi.azurenative.storage.inputs.BlobInventoryPolicySchemaArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class BlobInventoryPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -31,10 +31,10 @@ public final class BlobInventoryPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="blobInventoryPolicyName")
-      private final @Nullable Input<String> blobInventoryPolicyName;
+      private final @Nullable Output<String> blobInventoryPolicyName;
 
-    public Input<String> getBlobInventoryPolicyName() {
-        return this.blobInventoryPolicyName == null ? Input.empty() : this.blobInventoryPolicyName;
+    public Output<String> getBlobInventoryPolicyName() {
+        return this.blobInventoryPolicyName == null ? Output.empty() : this.blobInventoryPolicyName;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class BlobInventoryPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="policy", required=true)
-      private final Input<BlobInventoryPolicySchemaArgs> policy;
+      private final Output<BlobInventoryPolicySchemaArgs> policy;
 
-    public Input<BlobInventoryPolicySchemaArgs> getPolicy() {
+    public Output<BlobInventoryPolicySchemaArgs> getPolicy() {
         return this.policy;
     }
 
@@ -53,17 +53,17 @@ public final class BlobInventoryPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public BlobInventoryPolicyArgs(
-        Input<String> accountName,
-        @Nullable Input<String> blobInventoryPolicyName,
-        Input<BlobInventoryPolicySchemaArgs> policy,
-        Input<String> resourceGroupName) {
+        Output<String> accountName,
+        @Nullable Output<String> blobInventoryPolicyName,
+        Output<BlobInventoryPolicySchemaArgs> policy,
+        Output<String> resourceGroupName) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.blobInventoryPolicyName = blobInventoryPolicyName;
         this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
@@ -71,10 +71,10 @@ public final class BlobInventoryPolicyArgs extends io.pulumi.resources.ResourceA
     }
 
     private BlobInventoryPolicyArgs() {
-        this.accountName = Input.empty();
-        this.blobInventoryPolicyName = Input.empty();
-        this.policy = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.accountName = Output.empty();
+        this.blobInventoryPolicyName = Output.empty();
+        this.policy = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class BlobInventoryPolicyArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private @Nullable Input<String> blobInventoryPolicyName;
-        private Input<BlobInventoryPolicySchemaArgs> policy;
-        private Input<String> resourceGroupName;
+        private Output<String> accountName;
+        private @Nullable Output<String> blobInventoryPolicyName;
+        private Output<BlobInventoryPolicySchemaArgs> policy;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class BlobInventoryPolicyArgs extends io.pulumi.resources.ResourceA
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder blobInventoryPolicyName(@Nullable Input<String> blobInventoryPolicyName) {
+        public Builder blobInventoryPolicyName(@Nullable Output<String> blobInventoryPolicyName) {
             this.blobInventoryPolicyName = blobInventoryPolicyName;
             return this;
         }
 
         public Builder blobInventoryPolicyName(@Nullable String blobInventoryPolicyName) {
-            this.blobInventoryPolicyName = Input.ofNullable(blobInventoryPolicyName);
+            this.blobInventoryPolicyName = Output.ofNullable(blobInventoryPolicyName);
             return this;
         }
 
-        public Builder policy(Input<BlobInventoryPolicySchemaArgs> policy) {
+        public Builder policy(Output<BlobInventoryPolicySchemaArgs> policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
 
         public Builder policy(BlobInventoryPolicySchemaArgs policy) {
-            this.policy = Input.of(Objects.requireNonNull(policy));
+            this.policy = Output.of(Objects.requireNonNull(policy));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public BlobInventoryPolicyArgs build() {

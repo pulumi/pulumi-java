@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpecArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class UserProfileUserSettingsTensorBoardAppSettingsArgs extends io.
      * 
      */
     @InputImport(name="defaultResourceSpec", required=true)
-      private final Input<UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpecArgs> defaultResourceSpec;
+      private final Output<UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpecArgs> defaultResourceSpec;
 
-    public Input<UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpecArgs> getDefaultResourceSpec() {
+    public Output<UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpecArgs> getDefaultResourceSpec() {
         return this.defaultResourceSpec;
     }
 
-    public UserProfileUserSettingsTensorBoardAppSettingsArgs(Input<UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpecArgs> defaultResourceSpec) {
+    public UserProfileUserSettingsTensorBoardAppSettingsArgs(Output<UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpecArgs> defaultResourceSpec) {
         this.defaultResourceSpec = Objects.requireNonNull(defaultResourceSpec, "expected parameter 'defaultResourceSpec' to be non-null");
     }
 
     private UserProfileUserSettingsTensorBoardAppSettingsArgs() {
-        this.defaultResourceSpec = Input.empty();
+        this.defaultResourceSpec = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class UserProfileUserSettingsTensorBoardAppSettingsArgs extends io.
     }
 
     public static final class Builder {
-        private Input<UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpecArgs> defaultResourceSpec;
+        private Output<UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpecArgs> defaultResourceSpec;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class UserProfileUserSettingsTensorBoardAppSettingsArgs extends io.
     	      this.defaultResourceSpec = defaults.defaultResourceSpec;
         }
 
-        public Builder defaultResourceSpec(Input<UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpecArgs> defaultResourceSpec) {
+        public Builder defaultResourceSpec(Output<UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpecArgs> defaultResourceSpec) {
             this.defaultResourceSpec = Objects.requireNonNull(defaultResourceSpec);
             return this;
         }
 
         public Builder defaultResourceSpec(UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpecArgs defaultResourceSpec) {
-            this.defaultResourceSpec = Input.of(Objects.requireNonNull(defaultResourceSpec));
+            this.defaultResourceSpec = Output.of(Objects.requireNonNull(defaultResourceSpec));
             return this;
         }
         public UserProfileUserSettingsTensorBoardAppSettingsArgs build() {

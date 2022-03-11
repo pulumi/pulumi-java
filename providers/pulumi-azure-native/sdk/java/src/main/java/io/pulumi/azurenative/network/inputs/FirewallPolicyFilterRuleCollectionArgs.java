@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.inputs.ApplicationRuleArgs;
 import io.pulumi.azurenative.network.inputs.FirewallPolicyFilterRuleCollectionActionArgs;
 import io.pulumi.azurenative.network.inputs.NatRuleArgs;
 import io.pulumi.azurenative.network.inputs.NetworkRuleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
@@ -30,10 +30,10 @@ public final class FirewallPolicyFilterRuleCollectionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="action")
-      private final @Nullable Input<FirewallPolicyFilterRuleCollectionActionArgs> action;
+      private final @Nullable Output<FirewallPolicyFilterRuleCollectionActionArgs> action;
 
-    public Input<FirewallPolicyFilterRuleCollectionActionArgs> getAction() {
-        return this.action == null ? Input.empty() : this.action;
+    public Output<FirewallPolicyFilterRuleCollectionActionArgs> getAction() {
+        return this.action == null ? Output.empty() : this.action;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class FirewallPolicyFilterRuleCollectionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class FirewallPolicyFilterRuleCollectionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="priority")
-      private final @Nullable Input<Integer> priority;
+      private final @Nullable Output<Integer> priority;
 
-    public Input<Integer> getPriority() {
-        return this.priority == null ? Input.empty() : this.priority;
+    public Output<Integer> getPriority() {
+        return this.priority == null ? Output.empty() : this.priority;
     }
 
     /**
@@ -64,9 +64,9 @@ public final class FirewallPolicyFilterRuleCollectionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="ruleCollectionType", required=true)
-      private final Input<String> ruleCollectionType;
+      private final Output<String> ruleCollectionType;
 
-    public Input<String> getRuleCollectionType() {
+    public Output<String> getRuleCollectionType() {
         return this.ruleCollectionType;
     }
 
@@ -75,18 +75,18 @@ public final class FirewallPolicyFilterRuleCollectionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="rules")
-      private final @Nullable Input<List<Object>> rules;
+      private final @Nullable Output<List<Object>> rules;
 
-    public Input<List<Object>> getRules() {
-        return this.rules == null ? Input.empty() : this.rules;
+    public Output<List<Object>> getRules() {
+        return this.rules == null ? Output.empty() : this.rules;
     }
 
     public FirewallPolicyFilterRuleCollectionArgs(
-        @Nullable Input<FirewallPolicyFilterRuleCollectionActionArgs> action,
-        @Nullable Input<String> name,
-        @Nullable Input<Integer> priority,
-        Input<String> ruleCollectionType,
-        @Nullable Input<List<Object>> rules) {
+        @Nullable Output<FirewallPolicyFilterRuleCollectionActionArgs> action,
+        @Nullable Output<String> name,
+        @Nullable Output<Integer> priority,
+        Output<String> ruleCollectionType,
+        @Nullable Output<List<Object>> rules) {
         this.action = action;
         this.name = name;
         this.priority = priority;
@@ -95,11 +95,11 @@ public final class FirewallPolicyFilterRuleCollectionArgs extends io.pulumi.reso
     }
 
     private FirewallPolicyFilterRuleCollectionArgs() {
-        this.action = Input.empty();
-        this.name = Input.empty();
-        this.priority = Input.empty();
-        this.ruleCollectionType = Input.empty();
-        this.rules = Input.empty();
+        this.action = Output.empty();
+        this.name = Output.empty();
+        this.priority = Output.empty();
+        this.ruleCollectionType = Output.empty();
+        this.rules = Output.empty();
     }
 
     public static Builder builder() {
@@ -111,11 +111,11 @@ public final class FirewallPolicyFilterRuleCollectionArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<FirewallPolicyFilterRuleCollectionActionArgs> action;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Integer> priority;
-        private Input<String> ruleCollectionType;
-        private @Nullable Input<List<Object>> rules;
+        private @Nullable Output<FirewallPolicyFilterRuleCollectionActionArgs> action;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Integer> priority;
+        private Output<String> ruleCollectionType;
+        private @Nullable Output<List<Object>> rules;
 
         public Builder() {
     	      // Empty
@@ -130,53 +130,53 @@ public final class FirewallPolicyFilterRuleCollectionArgs extends io.pulumi.reso
     	      this.rules = defaults.rules;
         }
 
-        public Builder action(@Nullable Input<FirewallPolicyFilterRuleCollectionActionArgs> action) {
+        public Builder action(@Nullable Output<FirewallPolicyFilterRuleCollectionActionArgs> action) {
             this.action = action;
             return this;
         }
 
         public Builder action(@Nullable FirewallPolicyFilterRuleCollectionActionArgs action) {
-            this.action = Input.ofNullable(action);
+            this.action = Output.ofNullable(action);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder priority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Input.ofNullable(priority);
+            this.priority = Output.ofNullable(priority);
             return this;
         }
 
-        public Builder ruleCollectionType(Input<String> ruleCollectionType) {
+        public Builder ruleCollectionType(Output<String> ruleCollectionType) {
             this.ruleCollectionType = Objects.requireNonNull(ruleCollectionType);
             return this;
         }
 
         public Builder ruleCollectionType(String ruleCollectionType) {
-            this.ruleCollectionType = Input.of(Objects.requireNonNull(ruleCollectionType));
+            this.ruleCollectionType = Output.of(Objects.requireNonNull(ruleCollectionType));
             return this;
         }
 
-        public Builder rules(@Nullable Input<List<Object>> rules) {
+        public Builder rules(@Nullable Output<List<Object>> rules) {
             this.rules = rules;
             return this;
         }
 
         public Builder rules(@Nullable List<Object> rules) {
-            this.rules = Input.ofNullable(rules);
+            this.rules = Output.ofNullable(rules);
             return this;
         }
         public FirewallPolicyFilterRuleCollectionArgs build() {

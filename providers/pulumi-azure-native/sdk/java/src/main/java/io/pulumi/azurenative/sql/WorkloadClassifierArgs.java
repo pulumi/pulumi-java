@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="context")
-      private final @Nullable Input<String> context;
+      private final @Nullable Output<String> context;
 
-    public Input<String> getContext() {
-        return this.context == null ? Input.empty() : this.context;
+    public Output<String> getContext() {
+        return this.context == null ? Output.empty() : this.context;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="databaseName", required=true)
-      private final Input<String> databaseName;
+      private final Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
+    public Output<String> getDatabaseName() {
         return this.databaseName;
     }
 
@@ -41,10 +41,10 @@ public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="endTime")
-      private final @Nullable Input<String> endTime;
+      private final @Nullable Output<String> endTime;
 
-    public Input<String> getEndTime() {
-        return this.endTime == null ? Input.empty() : this.endTime;
+    public Output<String> getEndTime() {
+        return this.endTime == null ? Output.empty() : this.endTime;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="importance")
-      private final @Nullable Input<String> importance;
+      private final @Nullable Output<String> importance;
 
-    public Input<String> getImportance() {
-        return this.importance == null ? Input.empty() : this.importance;
+    public Output<String> getImportance() {
+        return this.importance == null ? Output.empty() : this.importance;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="label")
-      private final @Nullable Input<String> label;
+      private final @Nullable Output<String> label;
 
-    public Input<String> getLabel() {
-        return this.label == null ? Input.empty() : this.label;
+    public Output<String> getLabel() {
+        return this.label == null ? Output.empty() : this.label;
     }
 
     /**
@@ -74,9 +74,9 @@ public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="memberName", required=true)
-      private final Input<String> memberName;
+      private final Output<String> memberName;
 
-    public Input<String> getMemberName() {
+    public Output<String> getMemberName() {
         return this.memberName;
     }
 
@@ -85,9 +85,9 @@ public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -96,9 +96,9 @@ public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="serverName", required=true)
-      private final Input<String> serverName;
+      private final Output<String> serverName;
 
-    public Input<String> getServerName() {
+    public Output<String> getServerName() {
         return this.serverName;
     }
 
@@ -107,10 +107,10 @@ public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="startTime")
-      private final @Nullable Input<String> startTime;
+      private final @Nullable Output<String> startTime;
 
-    public Input<String> getStartTime() {
-        return this.startTime == null ? Input.empty() : this.startTime;
+    public Output<String> getStartTime() {
+        return this.startTime == null ? Output.empty() : this.startTime;
     }
 
     /**
@@ -118,10 +118,10 @@ public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="workloadClassifierName")
-      private final @Nullable Input<String> workloadClassifierName;
+      private final @Nullable Output<String> workloadClassifierName;
 
-    public Input<String> getWorkloadClassifierName() {
-        return this.workloadClassifierName == null ? Input.empty() : this.workloadClassifierName;
+    public Output<String> getWorkloadClassifierName() {
+        return this.workloadClassifierName == null ? Output.empty() : this.workloadClassifierName;
     }
 
     /**
@@ -129,24 +129,24 @@ public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="workloadGroupName", required=true)
-      private final Input<String> workloadGroupName;
+      private final Output<String> workloadGroupName;
 
-    public Input<String> getWorkloadGroupName() {
+    public Output<String> getWorkloadGroupName() {
         return this.workloadGroupName;
     }
 
     public WorkloadClassifierArgs(
-        @Nullable Input<String> context,
-        Input<String> databaseName,
-        @Nullable Input<String> endTime,
-        @Nullable Input<String> importance,
-        @Nullable Input<String> label,
-        Input<String> memberName,
-        Input<String> resourceGroupName,
-        Input<String> serverName,
-        @Nullable Input<String> startTime,
-        @Nullable Input<String> workloadClassifierName,
-        Input<String> workloadGroupName) {
+        @Nullable Output<String> context,
+        Output<String> databaseName,
+        @Nullable Output<String> endTime,
+        @Nullable Output<String> importance,
+        @Nullable Output<String> label,
+        Output<String> memberName,
+        Output<String> resourceGroupName,
+        Output<String> serverName,
+        @Nullable Output<String> startTime,
+        @Nullable Output<String> workloadClassifierName,
+        Output<String> workloadGroupName) {
         this.context = context;
         this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
         this.endTime = endTime;
@@ -161,17 +161,17 @@ public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceAr
     }
 
     private WorkloadClassifierArgs() {
-        this.context = Input.empty();
-        this.databaseName = Input.empty();
-        this.endTime = Input.empty();
-        this.importance = Input.empty();
-        this.label = Input.empty();
-        this.memberName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serverName = Input.empty();
-        this.startTime = Input.empty();
-        this.workloadClassifierName = Input.empty();
-        this.workloadGroupName = Input.empty();
+        this.context = Output.empty();
+        this.databaseName = Output.empty();
+        this.endTime = Output.empty();
+        this.importance = Output.empty();
+        this.label = Output.empty();
+        this.memberName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serverName = Output.empty();
+        this.startTime = Output.empty();
+        this.workloadClassifierName = Output.empty();
+        this.workloadGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -183,17 +183,17 @@ public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> context;
-        private Input<String> databaseName;
-        private @Nullable Input<String> endTime;
-        private @Nullable Input<String> importance;
-        private @Nullable Input<String> label;
-        private Input<String> memberName;
-        private Input<String> resourceGroupName;
-        private Input<String> serverName;
-        private @Nullable Input<String> startTime;
-        private @Nullable Input<String> workloadClassifierName;
-        private Input<String> workloadGroupName;
+        private @Nullable Output<String> context;
+        private Output<String> databaseName;
+        private @Nullable Output<String> endTime;
+        private @Nullable Output<String> importance;
+        private @Nullable Output<String> label;
+        private Output<String> memberName;
+        private Output<String> resourceGroupName;
+        private Output<String> serverName;
+        private @Nullable Output<String> startTime;
+        private @Nullable Output<String> workloadClassifierName;
+        private Output<String> workloadGroupName;
 
         public Builder() {
     	      // Empty
@@ -214,113 +214,113 @@ public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceAr
     	      this.workloadGroupName = defaults.workloadGroupName;
         }
 
-        public Builder context(@Nullable Input<String> context) {
+        public Builder context(@Nullable Output<String> context) {
             this.context = context;
             return this;
         }
 
         public Builder context(@Nullable String context) {
-            this.context = Input.ofNullable(context);
+            this.context = Output.ofNullable(context);
             return this;
         }
 
-        public Builder databaseName(Input<String> databaseName) {
+        public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
         public Builder databaseName(String databaseName) {
-            this.databaseName = Input.of(Objects.requireNonNull(databaseName));
+            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder endTime(@Nullable Input<String> endTime) {
+        public Builder endTime(@Nullable Output<String> endTime) {
             this.endTime = endTime;
             return this;
         }
 
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = Input.ofNullable(endTime);
+            this.endTime = Output.ofNullable(endTime);
             return this;
         }
 
-        public Builder importance(@Nullable Input<String> importance) {
+        public Builder importance(@Nullable Output<String> importance) {
             this.importance = importance;
             return this;
         }
 
         public Builder importance(@Nullable String importance) {
-            this.importance = Input.ofNullable(importance);
+            this.importance = Output.ofNullable(importance);
             return this;
         }
 
-        public Builder label(@Nullable Input<String> label) {
+        public Builder label(@Nullable Output<String> label) {
             this.label = label;
             return this;
         }
 
         public Builder label(@Nullable String label) {
-            this.label = Input.ofNullable(label);
+            this.label = Output.ofNullable(label);
             return this;
         }
 
-        public Builder memberName(Input<String> memberName) {
+        public Builder memberName(Output<String> memberName) {
             this.memberName = Objects.requireNonNull(memberName);
             return this;
         }
 
         public Builder memberName(String memberName) {
-            this.memberName = Input.of(Objects.requireNonNull(memberName));
+            this.memberName = Output.of(Objects.requireNonNull(memberName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serverName(Input<String> serverName) {
+        public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
         public Builder serverName(String serverName) {
-            this.serverName = Input.of(Objects.requireNonNull(serverName));
+            this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
 
-        public Builder startTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Input.ofNullable(startTime);
+            this.startTime = Output.ofNullable(startTime);
             return this;
         }
 
-        public Builder workloadClassifierName(@Nullable Input<String> workloadClassifierName) {
+        public Builder workloadClassifierName(@Nullable Output<String> workloadClassifierName) {
             this.workloadClassifierName = workloadClassifierName;
             return this;
         }
 
         public Builder workloadClassifierName(@Nullable String workloadClassifierName) {
-            this.workloadClassifierName = Input.ofNullable(workloadClassifierName);
+            this.workloadClassifierName = Output.ofNullable(workloadClassifierName);
             return this;
         }
 
-        public Builder workloadGroupName(Input<String> workloadGroupName) {
+        public Builder workloadGroupName(Output<String> workloadGroupName) {
             this.workloadGroupName = Objects.requireNonNull(workloadGroupName);
             return this;
         }
 
         public Builder workloadGroupName(String workloadGroupName) {
-            this.workloadGroupName = Input.of(Objects.requireNonNull(workloadGroupName));
+            this.workloadGroupName = Output.of(Objects.requireNonNull(workloadGroupName));
             return this;
         }
         public WorkloadClassifierArgs build() {

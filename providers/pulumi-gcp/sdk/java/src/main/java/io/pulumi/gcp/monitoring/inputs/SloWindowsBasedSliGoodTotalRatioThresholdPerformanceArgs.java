@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutArgs;
 import io.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioArgs;
@@ -25,10 +25,10 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceArgs exte
      * 
      */
     @InputImport(name="distributionCut")
-      private final @Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutArgs> distributionCut;
+      private final @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutArgs> distributionCut;
 
-    public Input<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutArgs> getDistributionCut() {
-        return this.distributionCut == null ? Input.empty() : this.distributionCut;
+    public Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutArgs> getDistributionCut() {
+        return this.distributionCut == null ? Output.empty() : this.distributionCut;
     }
 
     /**
@@ -41,22 +41,22 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceArgs exte
      * 
      */
     @InputImport(name="goodTotalRatio")
-      private final @Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioArgs> goodTotalRatio;
+      private final @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioArgs> goodTotalRatio;
 
-    public Input<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioArgs> getGoodTotalRatio() {
-        return this.goodTotalRatio == null ? Input.empty() : this.goodTotalRatio;
+    public Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioArgs> getGoodTotalRatio() {
+        return this.goodTotalRatio == null ? Output.empty() : this.goodTotalRatio;
     }
 
     public SloWindowsBasedSliGoodTotalRatioThresholdPerformanceArgs(
-        @Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutArgs> distributionCut,
-        @Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioArgs> goodTotalRatio) {
+        @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutArgs> distributionCut,
+        @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioArgs> goodTotalRatio) {
         this.distributionCut = distributionCut;
         this.goodTotalRatio = goodTotalRatio;
     }
 
     private SloWindowsBasedSliGoodTotalRatioThresholdPerformanceArgs() {
-        this.distributionCut = Input.empty();
-        this.goodTotalRatio = Input.empty();
+        this.distributionCut = Output.empty();
+        this.goodTotalRatio = Output.empty();
     }
 
     public static Builder builder() {
@@ -68,8 +68,8 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceArgs exte
     }
 
     public static final class Builder {
-        private @Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutArgs> distributionCut;
-        private @Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioArgs> goodTotalRatio;
+        private @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutArgs> distributionCut;
+        private @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioArgs> goodTotalRatio;
 
         public Builder() {
     	      // Empty
@@ -81,23 +81,23 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceArgs exte
     	      this.goodTotalRatio = defaults.goodTotalRatio;
         }
 
-        public Builder distributionCut(@Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutArgs> distributionCut) {
+        public Builder distributionCut(@Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutArgs> distributionCut) {
             this.distributionCut = distributionCut;
             return this;
         }
 
         public Builder distributionCut(@Nullable SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutArgs distributionCut) {
-            this.distributionCut = Input.ofNullable(distributionCut);
+            this.distributionCut = Output.ofNullable(distributionCut);
             return this;
         }
 
-        public Builder goodTotalRatio(@Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioArgs> goodTotalRatio) {
+        public Builder goodTotalRatio(@Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioArgs> goodTotalRatio) {
             this.goodTotalRatio = goodTotalRatio;
             return this;
         }
 
         public Builder goodTotalRatio(@Nullable SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioArgs goodTotalRatio) {
-            this.goodTotalRatio = Input.ofNullable(goodTotalRatio);
+            this.goodTotalRatio = Output.ofNullable(goodTotalRatio);
             return this;
         }
         public SloWindowsBasedSliGoodTotalRatioThresholdPerformanceArgs build() {

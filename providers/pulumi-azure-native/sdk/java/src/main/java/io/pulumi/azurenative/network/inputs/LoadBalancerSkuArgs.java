@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.enums.LoadBalancerSkuName;
 import io.pulumi.azurenative.network.enums.LoadBalancerSkuTier;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class LoadBalancerSkuArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<Either<String,LoadBalancerSkuName>> name;
+      private final @Nullable Output<Either<String,LoadBalancerSkuName>> name;
 
-    public Input<Either<String,LoadBalancerSkuName>> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<Either<String,LoadBalancerSkuName>> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class LoadBalancerSkuArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tier")
-      private final @Nullable Input<Either<String,LoadBalancerSkuTier>> tier;
+      private final @Nullable Output<Either<String,LoadBalancerSkuTier>> tier;
 
-    public Input<Either<String,LoadBalancerSkuTier>> getTier() {
-        return this.tier == null ? Input.empty() : this.tier;
+    public Output<Either<String,LoadBalancerSkuTier>> getTier() {
+        return this.tier == null ? Output.empty() : this.tier;
     }
 
     public LoadBalancerSkuArgs(
-        @Nullable Input<Either<String,LoadBalancerSkuName>> name,
-        @Nullable Input<Either<String,LoadBalancerSkuTier>> tier) {
+        @Nullable Output<Either<String,LoadBalancerSkuName>> name,
+        @Nullable Output<Either<String,LoadBalancerSkuTier>> tier) {
         this.name = name;
         this.tier = tier;
     }
 
     private LoadBalancerSkuArgs() {
-        this.name = Input.empty();
-        this.tier = Input.empty();
+        this.name = Output.empty();
+        this.tier = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class LoadBalancerSkuArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,LoadBalancerSkuName>> name;
-        private @Nullable Input<Either<String,LoadBalancerSkuTier>> tier;
+        private @Nullable Output<Either<String,LoadBalancerSkuName>> name;
+        private @Nullable Output<Either<String,LoadBalancerSkuTier>> tier;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class LoadBalancerSkuArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tier = defaults.tier;
         }
 
-        public Builder name(@Nullable Input<Either<String,LoadBalancerSkuName>> name) {
+        public Builder name(@Nullable Output<Either<String,LoadBalancerSkuName>> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable Either<String,LoadBalancerSkuName> name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tier(@Nullable Input<Either<String,LoadBalancerSkuTier>> tier) {
+        public Builder tier(@Nullable Output<Either<String,LoadBalancerSkuTier>> tier) {
             this.tier = tier;
             return this;
         }
 
         public Builder tier(@Nullable Either<String,LoadBalancerSkuTier> tier) {
-            this.tier = Input.ofNullable(tier);
+            this.tier = Output.ofNullable(tier);
             return this;
         }
         public LoadBalancerSkuArgs build() {

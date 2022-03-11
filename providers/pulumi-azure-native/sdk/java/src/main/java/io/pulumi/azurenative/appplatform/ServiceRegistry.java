@@ -8,7 +8,6 @@ import io.pulumi.azurenative.appplatform.ServiceRegistryArgs;
 import io.pulumi.azurenative.appplatform.outputs.ServiceRegistryPropertiesResponse;
 import io.pulumi.azurenative.appplatform.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -128,18 +127,18 @@ public class ServiceRegistry extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ServiceRegistry(String name, ServiceRegistryArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:appplatform:ServiceRegistry", name, args == null ? ServiceRegistryArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:appplatform:ServiceRegistry", name, args == null ? ServiceRegistryArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ServiceRegistry(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ServiceRegistry(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:appplatform:ServiceRegistry", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:appplatform/v20220101preview:ServiceRegistry").build())
+                Output.of(Alias.builder().setType("azure-native:appplatform/v20220101preview:ServiceRegistry").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -153,7 +152,7 @@ public class ServiceRegistry extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ServiceRegistry get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ServiceRegistry get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ServiceRegistry(name, id, options);
     }
 }

@@ -4,7 +4,7 @@
 package io.pulumi.aws.organizations.inputs;
 
 import io.pulumi.aws.organizations.inputs.OrganizationRootPolicyTypeGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class OrganizationRootGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class OrganizationRootGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class OrganizationRootGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class OrganizationRootGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="policyTypes")
-      private final @Nullable Input<List<OrganizationRootPolicyTypeGetArgs>> policyTypes;
+      private final @Nullable Output<List<OrganizationRootPolicyTypeGetArgs>> policyTypes;
 
-    public Input<List<OrganizationRootPolicyTypeGetArgs>> getPolicyTypes() {
-        return this.policyTypes == null ? Input.empty() : this.policyTypes;
+    public Output<List<OrganizationRootPolicyTypeGetArgs>> getPolicyTypes() {
+        return this.policyTypes == null ? Output.empty() : this.policyTypes;
     }
 
     public OrganizationRootGetArgs(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> id,
-        @Nullable Input<String> name,
-        @Nullable Input<List<OrganizationRootPolicyTypeGetArgs>> policyTypes) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> id,
+        @Nullable Output<String> name,
+        @Nullable Output<List<OrganizationRootPolicyTypeGetArgs>> policyTypes) {
         this.arn = arn;
         this.id = id;
         this.name = name;
@@ -72,10 +72,10 @@ public final class OrganizationRootGetArgs extends io.pulumi.resources.ResourceA
     }
 
     private OrganizationRootGetArgs() {
-        this.arn = Input.empty();
-        this.id = Input.empty();
-        this.name = Input.empty();
-        this.policyTypes = Input.empty();
+        this.arn = Output.empty();
+        this.id = Output.empty();
+        this.name = Output.empty();
+        this.policyTypes = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class OrganizationRootGetArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<OrganizationRootPolicyTypeGetArgs>> policyTypes;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<OrganizationRootPolicyTypeGetArgs>> policyTypes;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class OrganizationRootGetArgs extends io.pulumi.resources.ResourceA
     	      this.policyTypes = defaults.policyTypes;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder policyTypes(@Nullable Input<List<OrganizationRootPolicyTypeGetArgs>> policyTypes) {
+        public Builder policyTypes(@Nullable Output<List<OrganizationRootPolicyTypeGetArgs>> policyTypes) {
             this.policyTypes = policyTypes;
             return this;
         }
 
         public Builder policyTypes(@Nullable List<OrganizationRootPolicyTypeGetArgs> policyTypes) {
-            this.policyTypes = Input.ofNullable(policyTypes);
+            this.policyTypes = Output.ofNullable(policyTypes);
             return this;
         }
         public OrganizationRootGetArgs build() {

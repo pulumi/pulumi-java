@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudbuild.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class TriggerPubsubConfigGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="serviceAccountEmail")
-      private final @Nullable Input<String> serviceAccountEmail;
+      private final @Nullable Output<String> serviceAccountEmail;
 
-    public Input<String> getServiceAccountEmail() {
-        return this.serviceAccountEmail == null ? Input.empty() : this.serviceAccountEmail;
+    public Output<String> getServiceAccountEmail() {
+        return this.serviceAccountEmail == null ? Output.empty() : this.serviceAccountEmail;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class TriggerPubsubConfigGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<String> state;
+      private final @Nullable Output<String> state;
 
-    public Input<String> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<String> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class TriggerPubsubConfigGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="subscription")
-      private final @Nullable Input<String> subscription;
+      private final @Nullable Output<String> subscription;
 
-    public Input<String> getSubscription() {
-        return this.subscription == null ? Input.empty() : this.subscription;
+    public Output<String> getSubscription() {
+        return this.subscription == null ? Output.empty() : this.subscription;
     }
 
     /**
@@ -55,17 +55,17 @@ public final class TriggerPubsubConfigGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="topic", required=true)
-      private final Input<String> topic;
+      private final Output<String> topic;
 
-    public Input<String> getTopic() {
+    public Output<String> getTopic() {
         return this.topic;
     }
 
     public TriggerPubsubConfigGetArgs(
-        @Nullable Input<String> serviceAccountEmail,
-        @Nullable Input<String> state,
-        @Nullable Input<String> subscription,
-        Input<String> topic) {
+        @Nullable Output<String> serviceAccountEmail,
+        @Nullable Output<String> state,
+        @Nullable Output<String> subscription,
+        Output<String> topic) {
         this.serviceAccountEmail = serviceAccountEmail;
         this.state = state;
         this.subscription = subscription;
@@ -73,10 +73,10 @@ public final class TriggerPubsubConfigGetArgs extends io.pulumi.resources.Resour
     }
 
     private TriggerPubsubConfigGetArgs() {
-        this.serviceAccountEmail = Input.empty();
-        this.state = Input.empty();
-        this.subscription = Input.empty();
-        this.topic = Input.empty();
+        this.serviceAccountEmail = Output.empty();
+        this.state = Output.empty();
+        this.subscription = Output.empty();
+        this.topic = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class TriggerPubsubConfigGetArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> serviceAccountEmail;
-        private @Nullable Input<String> state;
-        private @Nullable Input<String> subscription;
-        private Input<String> topic;
+        private @Nullable Output<String> serviceAccountEmail;
+        private @Nullable Output<String> state;
+        private @Nullable Output<String> subscription;
+        private Output<String> topic;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class TriggerPubsubConfigGetArgs extends io.pulumi.resources.Resour
     	      this.topic = defaults.topic;
         }
 
-        public Builder serviceAccountEmail(@Nullable Input<String> serviceAccountEmail) {
+        public Builder serviceAccountEmail(@Nullable Output<String> serviceAccountEmail) {
             this.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
 
         public Builder serviceAccountEmail(@Nullable String serviceAccountEmail) {
-            this.serviceAccountEmail = Input.ofNullable(serviceAccountEmail);
+            this.serviceAccountEmail = Output.ofNullable(serviceAccountEmail);
             return this;
         }
 
-        public Builder state(@Nullable Input<String> state) {
+        public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable String state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
 
-        public Builder subscription(@Nullable Input<String> subscription) {
+        public Builder subscription(@Nullable Output<String> subscription) {
             this.subscription = subscription;
             return this;
         }
 
         public Builder subscription(@Nullable String subscription) {
-            this.subscription = Input.ofNullable(subscription);
+            this.subscription = Output.ofNullable(subscription);
             return this;
         }
 
-        public Builder topic(Input<String> topic) {
+        public Builder topic(Output<String> topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
 
         public Builder topic(String topic) {
-            this.topic = Input.of(Objects.requireNonNull(topic));
+            this.topic = Output.of(Objects.requireNonNull(topic));
             return this;
         }
         public TriggerPubsubConfigGetArgs build() {

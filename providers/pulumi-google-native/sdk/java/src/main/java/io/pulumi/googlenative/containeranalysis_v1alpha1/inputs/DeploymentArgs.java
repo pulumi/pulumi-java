@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.enums.DeploymentPlatform;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="address")
-      private final @Nullable Input<String> address;
+      private final @Nullable Output<String> address;
 
-    public Input<String> getAddress() {
-        return this.address == null ? Input.empty() : this.address;
+    public Output<String> getAddress() {
+        return this.address == null ? Output.empty() : this.address;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="config")
-      private final @Nullable Input<String> config;
+      private final @Nullable Output<String> config;
 
-    public Input<String> getConfig() {
-        return this.config == null ? Input.empty() : this.config;
+    public Output<String> getConfig() {
+        return this.config == null ? Output.empty() : this.config;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deployTime")
-      private final @Nullable Input<String> deployTime;
+      private final @Nullable Output<String> deployTime;
 
-    public Input<String> getDeployTime() {
-        return this.deployTime == null ? Input.empty() : this.deployTime;
+    public Output<String> getDeployTime() {
+        return this.deployTime == null ? Output.empty() : this.deployTime;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="platform")
-      private final @Nullable Input<DeploymentPlatform> platform;
+      private final @Nullable Output<DeploymentPlatform> platform;
 
-    public Input<DeploymentPlatform> getPlatform() {
-        return this.platform == null ? Input.empty() : this.platform;
+    public Output<DeploymentPlatform> getPlatform() {
+        return this.platform == null ? Output.empty() : this.platform;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="undeployTime")
-      private final @Nullable Input<String> undeployTime;
+      private final @Nullable Output<String> undeployTime;
 
-    public Input<String> getUndeployTime() {
-        return this.undeployTime == null ? Input.empty() : this.undeployTime;
+    public Output<String> getUndeployTime() {
+        return this.undeployTime == null ? Output.empty() : this.undeployTime;
     }
 
     /**
@@ -79,19 +79,19 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userEmail")
-      private final @Nullable Input<String> userEmail;
+      private final @Nullable Output<String> userEmail;
 
-    public Input<String> getUserEmail() {
-        return this.userEmail == null ? Input.empty() : this.userEmail;
+    public Output<String> getUserEmail() {
+        return this.userEmail == null ? Output.empty() : this.userEmail;
     }
 
     public DeploymentArgs(
-        @Nullable Input<String> address,
-        @Nullable Input<String> config,
-        @Nullable Input<String> deployTime,
-        @Nullable Input<DeploymentPlatform> platform,
-        @Nullable Input<String> undeployTime,
-        @Nullable Input<String> userEmail) {
+        @Nullable Output<String> address,
+        @Nullable Output<String> config,
+        @Nullable Output<String> deployTime,
+        @Nullable Output<DeploymentPlatform> platform,
+        @Nullable Output<String> undeployTime,
+        @Nullable Output<String> userEmail) {
         this.address = address;
         this.config = config;
         this.deployTime = deployTime;
@@ -101,12 +101,12 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeploymentArgs() {
-        this.address = Input.empty();
-        this.config = Input.empty();
-        this.deployTime = Input.empty();
-        this.platform = Input.empty();
-        this.undeployTime = Input.empty();
-        this.userEmail = Input.empty();
+        this.address = Output.empty();
+        this.config = Output.empty();
+        this.deployTime = Output.empty();
+        this.platform = Output.empty();
+        this.undeployTime = Output.empty();
+        this.userEmail = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,12 +118,12 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> address;
-        private @Nullable Input<String> config;
-        private @Nullable Input<String> deployTime;
-        private @Nullable Input<DeploymentPlatform> platform;
-        private @Nullable Input<String> undeployTime;
-        private @Nullable Input<String> userEmail;
+        private @Nullable Output<String> address;
+        private @Nullable Output<String> config;
+        private @Nullable Output<String> deployTime;
+        private @Nullable Output<DeploymentPlatform> platform;
+        private @Nullable Output<String> undeployTime;
+        private @Nullable Output<String> userEmail;
 
         public Builder() {
     	      // Empty
@@ -139,63 +139,63 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userEmail = defaults.userEmail;
         }
 
-        public Builder address(@Nullable Input<String> address) {
+        public Builder address(@Nullable Output<String> address) {
             this.address = address;
             return this;
         }
 
         public Builder address(@Nullable String address) {
-            this.address = Input.ofNullable(address);
+            this.address = Output.ofNullable(address);
             return this;
         }
 
-        public Builder config(@Nullable Input<String> config) {
+        public Builder config(@Nullable Output<String> config) {
             this.config = config;
             return this;
         }
 
         public Builder config(@Nullable String config) {
-            this.config = Input.ofNullable(config);
+            this.config = Output.ofNullable(config);
             return this;
         }
 
-        public Builder deployTime(@Nullable Input<String> deployTime) {
+        public Builder deployTime(@Nullable Output<String> deployTime) {
             this.deployTime = deployTime;
             return this;
         }
 
         public Builder deployTime(@Nullable String deployTime) {
-            this.deployTime = Input.ofNullable(deployTime);
+            this.deployTime = Output.ofNullable(deployTime);
             return this;
         }
 
-        public Builder platform(@Nullable Input<DeploymentPlatform> platform) {
+        public Builder platform(@Nullable Output<DeploymentPlatform> platform) {
             this.platform = platform;
             return this;
         }
 
         public Builder platform(@Nullable DeploymentPlatform platform) {
-            this.platform = Input.ofNullable(platform);
+            this.platform = Output.ofNullable(platform);
             return this;
         }
 
-        public Builder undeployTime(@Nullable Input<String> undeployTime) {
+        public Builder undeployTime(@Nullable Output<String> undeployTime) {
             this.undeployTime = undeployTime;
             return this;
         }
 
         public Builder undeployTime(@Nullable String undeployTime) {
-            this.undeployTime = Input.ofNullable(undeployTime);
+            this.undeployTime = Output.ofNullable(undeployTime);
             return this;
         }
 
-        public Builder userEmail(@Nullable Input<String> userEmail) {
+        public Builder userEmail(@Nullable Output<String> userEmail) {
             this.userEmail = userEmail;
             return this;
         }
 
         public Builder userEmail(@Nullable String userEmail) {
-            this.userEmail = Input.ofNullable(userEmail);
+            this.userEmail = Output.ofNullable(userEmail);
             return this;
         }
         public DeploymentArgs build() {

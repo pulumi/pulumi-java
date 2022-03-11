@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowSourceArgs extend
      * 
      */
     @InputImport(name="audioUri")
-      private final @Nullable Input<String> audioUri;
+      private final @Nullable Output<String> audioUri;
 
-    public Input<String> getAudioUri() {
-        return this.audioUri == null ? Input.empty() : this.audioUri;
+    public Output<String> getAudioUri() {
+        return this.audioUri == null ? Output.empty() : this.audioUri;
     }
 
-    public GoogleCloudContactcenterinsightsV1DialogflowSourceArgs(@Nullable Input<String> audioUri) {
+    public GoogleCloudContactcenterinsightsV1DialogflowSourceArgs(@Nullable Output<String> audioUri) {
         this.audioUri = audioUri;
     }
 
     private GoogleCloudContactcenterinsightsV1DialogflowSourceArgs() {
-        this.audioUri = Input.empty();
+        this.audioUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowSourceArgs extend
     }
 
     public static final class Builder {
-        private @Nullable Input<String> audioUri;
+        private @Nullable Output<String> audioUri;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowSourceArgs extend
     	      this.audioUri = defaults.audioUri;
         }
 
-        public Builder audioUri(@Nullable Input<String> audioUri) {
+        public Builder audioUri(@Nullable Output<String> audioUri) {
             this.audioUri = audioUri;
             return this;
         }
 
         public Builder audioUri(@Nullable String audioUri) {
-            this.audioUri = Input.ofNullable(audioUri);
+            this.audioUri = Output.ofNullable(audioUri);
             return this;
         }
         public GoogleCloudContactcenterinsightsV1DialogflowSourceArgs build() {

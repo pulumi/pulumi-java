@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.tags;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class TagKeyIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="policyData", required=true)
-      private final Input<String> policyData;
+      private final Output<String> policyData;
 
-    public Input<String> getPolicyData() {
+    public Output<String> getPolicyData() {
         return this.policyData;
     }
 
@@ -30,22 +30,22 @@ public final class TagKeyIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tagKey", required=true)
-      private final Input<String> tagKey;
+      private final Output<String> tagKey;
 
-    public Input<String> getTagKey() {
+    public Output<String> getTagKey() {
         return this.tagKey;
     }
 
     public TagKeyIamPolicyArgs(
-        Input<String> policyData,
-        Input<String> tagKey) {
+        Output<String> policyData,
+        Output<String> tagKey) {
         this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
         this.tagKey = Objects.requireNonNull(tagKey, "expected parameter 'tagKey' to be non-null");
     }
 
     private TagKeyIamPolicyArgs() {
-        this.policyData = Input.empty();
-        this.tagKey = Input.empty();
+        this.policyData = Output.empty();
+        this.tagKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class TagKeyIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<String> policyData;
-        private Input<String> tagKey;
+        private Output<String> policyData;
+        private Output<String> tagKey;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class TagKeyIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tagKey = defaults.tagKey;
         }
 
-        public Builder policyData(Input<String> policyData) {
+        public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
 
         public Builder policyData(String policyData) {
-            this.policyData = Input.of(Objects.requireNonNull(policyData));
+            this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
 
-        public Builder tagKey(Input<String> tagKey) {
+        public Builder tagKey(Output<String> tagKey) {
             this.tagKey = Objects.requireNonNull(tagKey);
             return this;
         }
 
         public Builder tagKey(String tagKey) {
-            this.tagKey = Input.of(Objects.requireNonNull(tagKey));
+            this.tagKey = Output.of(Objects.requireNonNull(tagKey));
             return this;
         }
         public TagKeyIamPolicyArgs build() {

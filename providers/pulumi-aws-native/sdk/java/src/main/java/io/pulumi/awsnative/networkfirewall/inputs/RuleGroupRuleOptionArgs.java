@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.networkfirewall.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -16,29 +16,29 @@ public final class RuleGroupRuleOptionArgs extends io.pulumi.resources.ResourceA
     public static final RuleGroupRuleOptionArgs Empty = new RuleGroupRuleOptionArgs();
 
     @InputImport(name="keyword", required=true)
-      private final Input<String> keyword;
+      private final Output<String> keyword;
 
-    public Input<String> getKeyword() {
+    public Output<String> getKeyword() {
         return this.keyword;
     }
 
     @InputImport(name="settings")
-      private final @Nullable Input<List<String>> settings;
+      private final @Nullable Output<List<String>> settings;
 
-    public Input<List<String>> getSettings() {
-        return this.settings == null ? Input.empty() : this.settings;
+    public Output<List<String>> getSettings() {
+        return this.settings == null ? Output.empty() : this.settings;
     }
 
     public RuleGroupRuleOptionArgs(
-        Input<String> keyword,
-        @Nullable Input<List<String>> settings) {
+        Output<String> keyword,
+        @Nullable Output<List<String>> settings) {
         this.keyword = Objects.requireNonNull(keyword, "expected parameter 'keyword' to be non-null");
         this.settings = settings;
     }
 
     private RuleGroupRuleOptionArgs() {
-        this.keyword = Input.empty();
-        this.settings = Input.empty();
+        this.keyword = Output.empty();
+        this.settings = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class RuleGroupRuleOptionArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> keyword;
-        private @Nullable Input<List<String>> settings;
+        private Output<String> keyword;
+        private @Nullable Output<List<String>> settings;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class RuleGroupRuleOptionArgs extends io.pulumi.resources.ResourceA
     	      this.settings = defaults.settings;
         }
 
-        public Builder keyword(Input<String> keyword) {
+        public Builder keyword(Output<String> keyword) {
             this.keyword = Objects.requireNonNull(keyword);
             return this;
         }
 
         public Builder keyword(String keyword) {
-            this.keyword = Input.of(Objects.requireNonNull(keyword));
+            this.keyword = Output.of(Objects.requireNonNull(keyword));
             return this;
         }
 
-        public Builder settings(@Nullable Input<List<String>> settings) {
+        public Builder settings(@Nullable Output<List<String>> settings) {
             this.settings = settings;
             return this;
         }
 
         public Builder settings(@Nullable List<String> settings) {
-            this.settings = Input.ofNullable(settings);
+            this.settings = Output.ofNullable(settings);
             return this;
         }
         public RuleGroupRuleOptionArgs build() {

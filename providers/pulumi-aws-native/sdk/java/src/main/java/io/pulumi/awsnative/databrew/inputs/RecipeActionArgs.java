@@ -6,7 +6,7 @@ package io.pulumi.awsnative.databrew.inputs;
 import io.pulumi.awsnative.databrew.inputs.RecipeParameterMapArgs;
 import io.pulumi.awsnative.databrew.inputs.RecipeParametersArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,29 +22,29 @@ public final class RecipeActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operation", required=true)
-      private final Input<String> operation;
+      private final Output<String> operation;
 
-    public Input<String> getOperation() {
+    public Output<String> getOperation() {
         return this.operation;
     }
 
     @InputImport(name="parameters")
-      private final @Nullable Input<Either<RecipeParametersArgs,RecipeParameterMapArgs>> parameters;
+      private final @Nullable Output<Either<RecipeParametersArgs,RecipeParameterMapArgs>> parameters;
 
-    public Input<Either<RecipeParametersArgs,RecipeParameterMapArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Either<RecipeParametersArgs,RecipeParameterMapArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     public RecipeActionArgs(
-        Input<String> operation,
-        @Nullable Input<Either<RecipeParametersArgs,RecipeParameterMapArgs>> parameters) {
+        Output<String> operation,
+        @Nullable Output<Either<RecipeParametersArgs,RecipeParameterMapArgs>> parameters) {
         this.operation = Objects.requireNonNull(operation, "expected parameter 'operation' to be non-null");
         this.parameters = parameters;
     }
 
     private RecipeActionArgs() {
-        this.operation = Input.empty();
-        this.parameters = Input.empty();
+        this.operation = Output.empty();
+        this.parameters = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class RecipeActionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> operation;
-        private @Nullable Input<Either<RecipeParametersArgs,RecipeParameterMapArgs>> parameters;
+        private Output<String> operation;
+        private @Nullable Output<Either<RecipeParametersArgs,RecipeParameterMapArgs>> parameters;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class RecipeActionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder operation(Input<String> operation) {
+        public Builder operation(Output<String> operation) {
             this.operation = Objects.requireNonNull(operation);
             return this;
         }
 
         public Builder operation(String operation) {
-            this.operation = Input.of(Objects.requireNonNull(operation));
+            this.operation = Output.of(Objects.requireNonNull(operation));
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Either<RecipeParametersArgs,RecipeParameterMapArgs>> parameters) {
+        public Builder parameters(@Nullable Output<Either<RecipeParametersArgs,RecipeParameterMapArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Either<RecipeParametersArgs,RecipeParameterMapArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
         public RecipeActionArgs build() {

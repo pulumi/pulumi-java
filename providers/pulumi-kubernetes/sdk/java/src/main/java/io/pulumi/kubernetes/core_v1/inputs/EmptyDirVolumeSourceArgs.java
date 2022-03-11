@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class EmptyDirVolumeSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="medium")
-      private final @Nullable Input<String> medium;
+      private final @Nullable Output<String> medium;
 
-    public Input<String> getMedium() {
-        return this.medium == null ? Input.empty() : this.medium;
+    public Output<String> getMedium() {
+        return this.medium == null ? Output.empty() : this.medium;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class EmptyDirVolumeSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="sizeLimit")
-      private final @Nullable Input<String> sizeLimit;
+      private final @Nullable Output<String> sizeLimit;
 
-    public Input<String> getSizeLimit() {
-        return this.sizeLimit == null ? Input.empty() : this.sizeLimit;
+    public Output<String> getSizeLimit() {
+        return this.sizeLimit == null ? Output.empty() : this.sizeLimit;
     }
 
     public EmptyDirVolumeSourceArgs(
-        @Nullable Input<String> medium,
-        @Nullable Input<String> sizeLimit) {
+        @Nullable Output<String> medium,
+        @Nullable Output<String> sizeLimit) {
         this.medium = medium;
         this.sizeLimit = sizeLimit;
     }
 
     private EmptyDirVolumeSourceArgs() {
-        this.medium = Input.empty();
-        this.sizeLimit = Input.empty();
+        this.medium = Output.empty();
+        this.sizeLimit = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class EmptyDirVolumeSourceArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> medium;
-        private @Nullable Input<String> sizeLimit;
+        private @Nullable Output<String> medium;
+        private @Nullable Output<String> sizeLimit;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class EmptyDirVolumeSourceArgs extends io.pulumi.resources.Resource
     	      this.sizeLimit = defaults.sizeLimit;
         }
 
-        public Builder medium(@Nullable Input<String> medium) {
+        public Builder medium(@Nullable Output<String> medium) {
             this.medium = medium;
             return this;
         }
 
         public Builder medium(@Nullable String medium) {
-            this.medium = Input.ofNullable(medium);
+            this.medium = Output.ofNullable(medium);
             return this;
         }
 
-        public Builder sizeLimit(@Nullable Input<String> sizeLimit) {
+        public Builder sizeLimit(@Nullable Output<String> sizeLimit) {
             this.sizeLimit = sizeLimit;
             return this;
         }
 
         public Builder sizeLimit(@Nullable String sizeLimit) {
-            this.sizeLimit = Input.ofNullable(sizeLimit);
+            this.sizeLimit = Output.ofNullable(sizeLimit);
             return this;
         }
         public EmptyDirVolumeSourceArgs build() {

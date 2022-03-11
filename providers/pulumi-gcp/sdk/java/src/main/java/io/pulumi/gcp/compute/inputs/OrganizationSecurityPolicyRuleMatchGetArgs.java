@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.OrganizationSecurityPolicyRuleMatchConfigGetArgs;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class OrganizationSecurityPolicyRuleMatchGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="config", required=true)
-      private final Input<OrganizationSecurityPolicyRuleMatchConfigGetArgs> config;
+      private final Output<OrganizationSecurityPolicyRuleMatchConfigGetArgs> config;
 
-    public Input<OrganizationSecurityPolicyRuleMatchConfigGetArgs> getConfig() {
+    public Output<OrganizationSecurityPolicyRuleMatchConfigGetArgs> getConfig() {
         return this.config;
     }
 
@@ -32,10 +32,10 @@ public final class OrganizationSecurityPolicyRuleMatchGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class OrganizationSecurityPolicyRuleMatchGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="versionedExpr")
-      private final @Nullable Input<String> versionedExpr;
+      private final @Nullable Output<String> versionedExpr;
 
-    public Input<String> getVersionedExpr() {
-        return this.versionedExpr == null ? Input.empty() : this.versionedExpr;
+    public Output<String> getVersionedExpr() {
+        return this.versionedExpr == null ? Output.empty() : this.versionedExpr;
     }
 
     public OrganizationSecurityPolicyRuleMatchGetArgs(
-        Input<OrganizationSecurityPolicyRuleMatchConfigGetArgs> config,
-        @Nullable Input<String> description,
-        @Nullable Input<String> versionedExpr) {
+        Output<OrganizationSecurityPolicyRuleMatchConfigGetArgs> config,
+        @Nullable Output<String> description,
+        @Nullable Output<String> versionedExpr) {
         this.config = Objects.requireNonNull(config, "expected parameter 'config' to be non-null");
         this.description = description;
         this.versionedExpr = versionedExpr;
     }
 
     private OrganizationSecurityPolicyRuleMatchGetArgs() {
-        this.config = Input.empty();
-        this.description = Input.empty();
-        this.versionedExpr = Input.empty();
+        this.config = Output.empty();
+        this.description = Output.empty();
+        this.versionedExpr = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class OrganizationSecurityPolicyRuleMatchGetArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private Input<OrganizationSecurityPolicyRuleMatchConfigGetArgs> config;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> versionedExpr;
+        private Output<OrganizationSecurityPolicyRuleMatchConfigGetArgs> config;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> versionedExpr;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class OrganizationSecurityPolicyRuleMatchGetArgs extends io.pulumi.
     	      this.versionedExpr = defaults.versionedExpr;
         }
 
-        public Builder config(Input<OrganizationSecurityPolicyRuleMatchConfigGetArgs> config) {
+        public Builder config(Output<OrganizationSecurityPolicyRuleMatchConfigGetArgs> config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
         public Builder config(OrganizationSecurityPolicyRuleMatchConfigGetArgs config) {
-            this.config = Input.of(Objects.requireNonNull(config));
+            this.config = Output.of(Objects.requireNonNull(config));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder versionedExpr(@Nullable Input<String> versionedExpr) {
+        public Builder versionedExpr(@Nullable Output<String> versionedExpr) {
             this.versionedExpr = versionedExpr;
             return this;
         }
 
         public Builder versionedExpr(@Nullable String versionedExpr) {
-            this.versionedExpr = Input.ofNullable(versionedExpr);
+            this.versionedExpr = Output.ofNullable(versionedExpr);
             return this;
         }
         public OrganizationSecurityPolicyRuleMatchGetArgs build() {

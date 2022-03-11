@@ -6,7 +6,7 @@ package io.pulumi.awsnative.customerprofiles;
 import io.pulumi.awsnative.customerprofiles.inputs.IntegrationFlowDefinitionArgs;
 import io.pulumi.awsnative.customerprofiles.inputs.IntegrationObjectTypeMappingArgs;
 import io.pulumi.awsnative.customerprofiles.inputs.IntegrationTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,17 +23,17 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName", required=true)
-      private final Input<String> domainName;
+      private final Output<String> domainName;
 
-    public Input<String> getDomainName() {
+    public Output<String> getDomainName() {
         return this.domainName;
     }
 
     @InputImport(name="flowDefinition")
-      private final @Nullable Input<IntegrationFlowDefinitionArgs> flowDefinition;
+      private final @Nullable Output<IntegrationFlowDefinitionArgs> flowDefinition;
 
-    public Input<IntegrationFlowDefinitionArgs> getFlowDefinition() {
-        return this.flowDefinition == null ? Input.empty() : this.flowDefinition;
+    public Output<IntegrationFlowDefinitionArgs> getFlowDefinition() {
+        return this.flowDefinition == null ? Output.empty() : this.flowDefinition;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectTypeName")
-      private final @Nullable Input<String> objectTypeName;
+      private final @Nullable Output<String> objectTypeName;
 
-    public Input<String> getObjectTypeName() {
-        return this.objectTypeName == null ? Input.empty() : this.objectTypeName;
+    public Output<String> getObjectTypeName() {
+        return this.objectTypeName == null ? Output.empty() : this.objectTypeName;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectTypeNames")
-      private final @Nullable Input<List<IntegrationObjectTypeMappingArgs>> objectTypeNames;
+      private final @Nullable Output<List<IntegrationObjectTypeMappingArgs>> objectTypeNames;
 
-    public Input<List<IntegrationObjectTypeMappingArgs>> getObjectTypeNames() {
-        return this.objectTypeNames == null ? Input.empty() : this.objectTypeNames;
+    public Output<List<IntegrationObjectTypeMappingArgs>> getObjectTypeNames() {
+        return this.objectTypeNames == null ? Output.empty() : this.objectTypeNames;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<IntegrationTagArgs>> tags;
+      private final @Nullable Output<List<IntegrationTagArgs>> tags;
 
-    public Input<List<IntegrationTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<IntegrationTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -74,19 +74,19 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uri")
-      private final @Nullable Input<String> uri;
+      private final @Nullable Output<String> uri;
 
-    public Input<String> getUri() {
-        return this.uri == null ? Input.empty() : this.uri;
+    public Output<String> getUri() {
+        return this.uri == null ? Output.empty() : this.uri;
     }
 
     public IntegrationArgs(
-        Input<String> domainName,
-        @Nullable Input<IntegrationFlowDefinitionArgs> flowDefinition,
-        @Nullable Input<String> objectTypeName,
-        @Nullable Input<List<IntegrationObjectTypeMappingArgs>> objectTypeNames,
-        @Nullable Input<List<IntegrationTagArgs>> tags,
-        @Nullable Input<String> uri) {
+        Output<String> domainName,
+        @Nullable Output<IntegrationFlowDefinitionArgs> flowDefinition,
+        @Nullable Output<String> objectTypeName,
+        @Nullable Output<List<IntegrationObjectTypeMappingArgs>> objectTypeNames,
+        @Nullable Output<List<IntegrationTagArgs>> tags,
+        @Nullable Output<String> uri) {
         this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
         this.flowDefinition = flowDefinition;
         this.objectTypeName = objectTypeName;
@@ -96,12 +96,12 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IntegrationArgs() {
-        this.domainName = Input.empty();
-        this.flowDefinition = Input.empty();
-        this.objectTypeName = Input.empty();
-        this.objectTypeNames = Input.empty();
-        this.tags = Input.empty();
-        this.uri = Input.empty();
+        this.domainName = Output.empty();
+        this.flowDefinition = Output.empty();
+        this.objectTypeName = Output.empty();
+        this.objectTypeNames = Output.empty();
+        this.tags = Output.empty();
+        this.uri = Output.empty();
     }
 
     public static Builder builder() {
@@ -113,12 +113,12 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> domainName;
-        private @Nullable Input<IntegrationFlowDefinitionArgs> flowDefinition;
-        private @Nullable Input<String> objectTypeName;
-        private @Nullable Input<List<IntegrationObjectTypeMappingArgs>> objectTypeNames;
-        private @Nullable Input<List<IntegrationTagArgs>> tags;
-        private @Nullable Input<String> uri;
+        private Output<String> domainName;
+        private @Nullable Output<IntegrationFlowDefinitionArgs> flowDefinition;
+        private @Nullable Output<String> objectTypeName;
+        private @Nullable Output<List<IntegrationObjectTypeMappingArgs>> objectTypeNames;
+        private @Nullable Output<List<IntegrationTagArgs>> tags;
+        private @Nullable Output<String> uri;
 
         public Builder() {
     	      // Empty
@@ -134,63 +134,63 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uri = defaults.uri;
         }
 
-        public Builder domainName(Input<String> domainName) {
+        public Builder domainName(Output<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
         public Builder domainName(String domainName) {
-            this.domainName = Input.of(Objects.requireNonNull(domainName));
+            this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
         }
 
-        public Builder flowDefinition(@Nullable Input<IntegrationFlowDefinitionArgs> flowDefinition) {
+        public Builder flowDefinition(@Nullable Output<IntegrationFlowDefinitionArgs> flowDefinition) {
             this.flowDefinition = flowDefinition;
             return this;
         }
 
         public Builder flowDefinition(@Nullable IntegrationFlowDefinitionArgs flowDefinition) {
-            this.flowDefinition = Input.ofNullable(flowDefinition);
+            this.flowDefinition = Output.ofNullable(flowDefinition);
             return this;
         }
 
-        public Builder objectTypeName(@Nullable Input<String> objectTypeName) {
+        public Builder objectTypeName(@Nullable Output<String> objectTypeName) {
             this.objectTypeName = objectTypeName;
             return this;
         }
 
         public Builder objectTypeName(@Nullable String objectTypeName) {
-            this.objectTypeName = Input.ofNullable(objectTypeName);
+            this.objectTypeName = Output.ofNullable(objectTypeName);
             return this;
         }
 
-        public Builder objectTypeNames(@Nullable Input<List<IntegrationObjectTypeMappingArgs>> objectTypeNames) {
+        public Builder objectTypeNames(@Nullable Output<List<IntegrationObjectTypeMappingArgs>> objectTypeNames) {
             this.objectTypeNames = objectTypeNames;
             return this;
         }
 
         public Builder objectTypeNames(@Nullable List<IntegrationObjectTypeMappingArgs> objectTypeNames) {
-            this.objectTypeNames = Input.ofNullable(objectTypeNames);
+            this.objectTypeNames = Output.ofNullable(objectTypeNames);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<IntegrationTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<IntegrationTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<IntegrationTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder uri(@Nullable Input<String> uri) {
+        public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
 
         public Builder uri(@Nullable String uri) {
-            this.uri = Input.ofNullable(uri);
+            this.uri = Output.ofNullable(uri);
             return this;
         }
         public IntegrationArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.contactcenterinsights_v1.enums.GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMedium;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigAr
      * 
      */
     @InputImport(name="filter")
-      private final @Nullable Input<String> filter;
+      private final @Nullable Output<String> filter;
 
-    public Input<String> getFilter() {
-        return this.filter == null ? Input.empty() : this.filter;
+    public Output<String> getFilter() {
+        return this.filter == null ? Output.empty() : this.filter;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigAr
      * 
      */
     @InputImport(name="medium")
-      private final @Nullable Input<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMedium> medium;
+      private final @Nullable Output<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMedium> medium;
 
-    public Input<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMedium> getMedium() {
-        return this.medium == null ? Input.empty() : this.medium;
+    public Output<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMedium> getMedium() {
+        return this.medium == null ? Output.empty() : this.medium;
     }
 
     public GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs(
-        @Nullable Input<String> filter,
-        @Nullable Input<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMedium> medium) {
+        @Nullable Output<String> filter,
+        @Nullable Output<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMedium> medium) {
         this.filter = filter;
         this.medium = medium;
     }
 
     private GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs() {
-        this.filter = Input.empty();
-        this.medium = Input.empty();
+        this.filter = Output.empty();
+        this.medium = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> filter;
-        private @Nullable Input<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMedium> medium;
+        private @Nullable Output<String> filter;
+        private @Nullable Output<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMedium> medium;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigAr
     	      this.medium = defaults.medium;
         }
 
-        public Builder filter(@Nullable Input<String> filter) {
+        public Builder filter(@Nullable Output<String> filter) {
             this.filter = filter;
             return this;
         }
 
         public Builder filter(@Nullable String filter) {
-            this.filter = Input.ofNullable(filter);
+            this.filter = Output.ofNullable(filter);
             return this;
         }
 
-        public Builder medium(@Nullable Input<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMedium> medium) {
+        public Builder medium(@Nullable Output<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMedium> medium) {
             this.medium = medium;
             return this;
         }
 
         public Builder medium(@Nullable GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMedium medium) {
-            this.medium = Input.ofNullable(medium);
+            this.medium = Output.ofNullable(medium);
             return this;
         }
         public GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.resiliencehub;
 
 import io.pulumi.awsnative.resiliencehub.inputs.AppResourceMappingArgs;
 import io.pulumi.awsnative.resiliencehub.inputs.AppTagMapArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,9 +22,9 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appTemplateBody", required=true)
-      private final Input<String> appTemplateBody;
+      private final Output<String> appTemplateBody;
 
-    public Input<String> getAppTemplateBody() {
+    public Output<String> getAppTemplateBody() {
         return this.appTemplateBody;
     }
 
@@ -33,10 +33,10 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resiliencyPolicyArn")
-      private final @Nullable Input<String> resiliencyPolicyArn;
+      private final @Nullable Output<String> resiliencyPolicyArn;
 
-    public Input<String> getResiliencyPolicyArn() {
-        return this.resiliencyPolicyArn == null ? Input.empty() : this.resiliencyPolicyArn;
+    public Output<String> getResiliencyPolicyArn() {
+        return this.resiliencyPolicyArn == null ? Output.empty() : this.resiliencyPolicyArn;
     }
 
     /**
@@ -66,26 +66,26 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceMappings", required=true)
-      private final Input<List<AppResourceMappingArgs>> resourceMappings;
+      private final Output<List<AppResourceMappingArgs>> resourceMappings;
 
-    public Input<List<AppResourceMappingArgs>> getResourceMappings() {
+    public Output<List<AppResourceMappingArgs>> getResourceMappings() {
         return this.resourceMappings;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<AppTagMapArgs> tags;
+      private final @Nullable Output<AppTagMapArgs> tags;
 
-    public Input<AppTagMapArgs> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<AppTagMapArgs> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public AppArgs(
-        Input<String> appTemplateBody,
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        @Nullable Input<String> resiliencyPolicyArn,
-        Input<List<AppResourceMappingArgs>> resourceMappings,
-        @Nullable Input<AppTagMapArgs> tags) {
+        Output<String> appTemplateBody,
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        @Nullable Output<String> resiliencyPolicyArn,
+        Output<List<AppResourceMappingArgs>> resourceMappings,
+        @Nullable Output<AppTagMapArgs> tags) {
         this.appTemplateBody = Objects.requireNonNull(appTemplateBody, "expected parameter 'appTemplateBody' to be non-null");
         this.description = description;
         this.name = name;
@@ -95,12 +95,12 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AppArgs() {
-        this.appTemplateBody = Input.empty();
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.resiliencyPolicyArn = Input.empty();
-        this.resourceMappings = Input.empty();
-        this.tags = Input.empty();
+        this.appTemplateBody = Output.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.resiliencyPolicyArn = Output.empty();
+        this.resourceMappings = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -112,12 +112,12 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> appTemplateBody;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> resiliencyPolicyArn;
-        private Input<List<AppResourceMappingArgs>> resourceMappings;
-        private @Nullable Input<AppTagMapArgs> tags;
+        private Output<String> appTemplateBody;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> resiliencyPolicyArn;
+        private Output<List<AppResourceMappingArgs>> resourceMappings;
+        private @Nullable Output<AppTagMapArgs> tags;
 
         public Builder() {
     	      // Empty
@@ -133,63 +133,63 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder appTemplateBody(Input<String> appTemplateBody) {
+        public Builder appTemplateBody(Output<String> appTemplateBody) {
             this.appTemplateBody = Objects.requireNonNull(appTemplateBody);
             return this;
         }
 
         public Builder appTemplateBody(String appTemplateBody) {
-            this.appTemplateBody = Input.of(Objects.requireNonNull(appTemplateBody));
+            this.appTemplateBody = Output.of(Objects.requireNonNull(appTemplateBody));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder resiliencyPolicyArn(@Nullable Input<String> resiliencyPolicyArn) {
+        public Builder resiliencyPolicyArn(@Nullable Output<String> resiliencyPolicyArn) {
             this.resiliencyPolicyArn = resiliencyPolicyArn;
             return this;
         }
 
         public Builder resiliencyPolicyArn(@Nullable String resiliencyPolicyArn) {
-            this.resiliencyPolicyArn = Input.ofNullable(resiliencyPolicyArn);
+            this.resiliencyPolicyArn = Output.ofNullable(resiliencyPolicyArn);
             return this;
         }
 
-        public Builder resourceMappings(Input<List<AppResourceMappingArgs>> resourceMappings) {
+        public Builder resourceMappings(Output<List<AppResourceMappingArgs>> resourceMappings) {
             this.resourceMappings = Objects.requireNonNull(resourceMappings);
             return this;
         }
 
         public Builder resourceMappings(List<AppResourceMappingArgs> resourceMappings) {
-            this.resourceMappings = Input.of(Objects.requireNonNull(resourceMappings));
+            this.resourceMappings = Output.of(Objects.requireNonNull(resourceMappings));
             return this;
         }
 
-        public Builder tags(@Nullable Input<AppTagMapArgs> tags) {
+        public Builder tags(@Nullable Output<AppTagMapArgs> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable AppTagMapArgs tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public AppArgs build() {

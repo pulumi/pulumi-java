@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class DataTransferConfigSensitiveParamsArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="secretAccessKey", required=true)
-      private final Input<String> secretAccessKey;
+      private final Output<String> secretAccessKey;
 
-    public Input<String> getSecretAccessKey() {
+    public Output<String> getSecretAccessKey() {
         return this.secretAccessKey;
     }
 
-    public DataTransferConfigSensitiveParamsArgs(Input<String> secretAccessKey) {
+    public DataTransferConfigSensitiveParamsArgs(Output<String> secretAccessKey) {
         this.secretAccessKey = Objects.requireNonNull(secretAccessKey, "expected parameter 'secretAccessKey' to be non-null");
     }
 
     private DataTransferConfigSensitiveParamsArgs() {
-        this.secretAccessKey = Input.empty();
+        this.secretAccessKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class DataTransferConfigSensitiveParamsArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private Input<String> secretAccessKey;
+        private Output<String> secretAccessKey;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class DataTransferConfigSensitiveParamsArgs extends io.pulumi.resou
     	      this.secretAccessKey = defaults.secretAccessKey;
         }
 
-        public Builder secretAccessKey(Input<String> secretAccessKey) {
+        public Builder secretAccessKey(Output<String> secretAccessKey) {
             this.secretAccessKey = Objects.requireNonNull(secretAccessKey);
             return this;
         }
 
         public Builder secretAccessKey(String secretAccessKey) {
-            this.secretAccessKey = Input.of(Objects.requireNonNull(secretAccessKey));
+            this.secretAccessKey = Output.of(Objects.requireNonNull(secretAccessKey));
             return this;
         }
         public DataTransferConfigSensitiveParamsArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigateway_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigateway_v1.inputs.ApigatewayApiConfigFileArgs;
 import io.pulumi.googlenative.apigateway_v1.inputs.ApigatewayApiConfigGrpcServiceDefinitionArgs;
@@ -20,16 +20,16 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     public static final ConfigArgs Empty = new ConfigArgs();
 
     @InputImport(name="apiConfigId", required=true)
-      private final Input<String> apiConfigId;
+      private final Output<String> apiConfigId;
 
-    public Input<String> getApiConfigId() {
+    public Output<String> getApiConfigId() {
         return this.apiConfigId;
     }
 
     @InputImport(name="apiId", required=true)
-      private final Input<String> apiId;
+      private final Output<String> apiId;
 
-    public Input<String> getApiId() {
+    public Output<String> getApiId() {
         return this.apiId;
     }
 
@@ -38,10 +38,10 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayServiceAccount")
-      private final @Nullable Input<String> gatewayServiceAccount;
+      private final @Nullable Output<String> gatewayServiceAccount;
 
-    public Input<String> getGatewayServiceAccount() {
-        return this.gatewayServiceAccount == null ? Input.empty() : this.gatewayServiceAccount;
+    public Output<String> getGatewayServiceAccount() {
+        return this.gatewayServiceAccount == null ? Output.empty() : this.gatewayServiceAccount;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="grpcServices")
-      private final @Nullable Input<List<ApigatewayApiConfigGrpcServiceDefinitionArgs>> grpcServices;
+      private final @Nullable Output<List<ApigatewayApiConfigGrpcServiceDefinitionArgs>> grpcServices;
 
-    public Input<List<ApigatewayApiConfigGrpcServiceDefinitionArgs>> getGrpcServices() {
-        return this.grpcServices == null ? Input.empty() : this.grpcServices;
+    public Output<List<ApigatewayApiConfigGrpcServiceDefinitionArgs>> getGrpcServices() {
+        return this.grpcServices == null ? Output.empty() : this.grpcServices;
     }
 
     /**
@@ -71,17 +71,17 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedServiceConfigs")
-      private final @Nullable Input<List<ApigatewayApiConfigFileArgs>> managedServiceConfigs;
+      private final @Nullable Output<List<ApigatewayApiConfigFileArgs>> managedServiceConfigs;
 
-    public Input<List<ApigatewayApiConfigFileArgs>> getManagedServiceConfigs() {
-        return this.managedServiceConfigs == null ? Input.empty() : this.managedServiceConfigs;
+    public Output<List<ApigatewayApiConfigFileArgs>> getManagedServiceConfigs() {
+        return this.managedServiceConfigs == null ? Output.empty() : this.managedServiceConfigs;
     }
 
     /**
@@ -100,30 +100,30 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="openapiDocuments")
-      private final @Nullable Input<List<ApigatewayApiConfigOpenApiDocumentArgs>> openapiDocuments;
+      private final @Nullable Output<List<ApigatewayApiConfigOpenApiDocumentArgs>> openapiDocuments;
 
-    public Input<List<ApigatewayApiConfigOpenApiDocumentArgs>> getOpenapiDocuments() {
-        return this.openapiDocuments == null ? Input.empty() : this.openapiDocuments;
+    public Output<List<ApigatewayApiConfigOpenApiDocumentArgs>> getOpenapiDocuments() {
+        return this.openapiDocuments == null ? Output.empty() : this.openapiDocuments;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public ConfigArgs(
-        Input<String> apiConfigId,
-        Input<String> apiId,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> gatewayServiceAccount,
-        @Nullable Input<List<ApigatewayApiConfigGrpcServiceDefinitionArgs>> grpcServices,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> location,
-        @Nullable Input<List<ApigatewayApiConfigFileArgs>> managedServiceConfigs,
-        @Nullable Input<List<ApigatewayApiConfigOpenApiDocumentArgs>> openapiDocuments,
-        @Nullable Input<String> project) {
+        Output<String> apiConfigId,
+        Output<String> apiId,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> gatewayServiceAccount,
+        @Nullable Output<List<ApigatewayApiConfigGrpcServiceDefinitionArgs>> grpcServices,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> location,
+        @Nullable Output<List<ApigatewayApiConfigFileArgs>> managedServiceConfigs,
+        @Nullable Output<List<ApigatewayApiConfigOpenApiDocumentArgs>> openapiDocuments,
+        @Nullable Output<String> project) {
         this.apiConfigId = Objects.requireNonNull(apiConfigId, "expected parameter 'apiConfigId' to be non-null");
         this.apiId = Objects.requireNonNull(apiId, "expected parameter 'apiId' to be non-null");
         this.displayName = displayName;
@@ -137,16 +137,16 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConfigArgs() {
-        this.apiConfigId = Input.empty();
-        this.apiId = Input.empty();
-        this.displayName = Input.empty();
-        this.gatewayServiceAccount = Input.empty();
-        this.grpcServices = Input.empty();
-        this.labels = Input.empty();
-        this.location = Input.empty();
-        this.managedServiceConfigs = Input.empty();
-        this.openapiDocuments = Input.empty();
-        this.project = Input.empty();
+        this.apiConfigId = Output.empty();
+        this.apiId = Output.empty();
+        this.displayName = Output.empty();
+        this.gatewayServiceAccount = Output.empty();
+        this.grpcServices = Output.empty();
+        this.labels = Output.empty();
+        this.location = Output.empty();
+        this.managedServiceConfigs = Output.empty();
+        this.openapiDocuments = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -158,16 +158,16 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> apiConfigId;
-        private Input<String> apiId;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> gatewayServiceAccount;
-        private @Nullable Input<List<ApigatewayApiConfigGrpcServiceDefinitionArgs>> grpcServices;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> location;
-        private @Nullable Input<List<ApigatewayApiConfigFileArgs>> managedServiceConfigs;
-        private @Nullable Input<List<ApigatewayApiConfigOpenApiDocumentArgs>> openapiDocuments;
-        private @Nullable Input<String> project;
+        private Output<String> apiConfigId;
+        private Output<String> apiId;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> gatewayServiceAccount;
+        private @Nullable Output<List<ApigatewayApiConfigGrpcServiceDefinitionArgs>> grpcServices;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> location;
+        private @Nullable Output<List<ApigatewayApiConfigFileArgs>> managedServiceConfigs;
+        private @Nullable Output<List<ApigatewayApiConfigOpenApiDocumentArgs>> openapiDocuments;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -187,103 +187,103 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder apiConfigId(Input<String> apiConfigId) {
+        public Builder apiConfigId(Output<String> apiConfigId) {
             this.apiConfigId = Objects.requireNonNull(apiConfigId);
             return this;
         }
 
         public Builder apiConfigId(String apiConfigId) {
-            this.apiConfigId = Input.of(Objects.requireNonNull(apiConfigId));
+            this.apiConfigId = Output.of(Objects.requireNonNull(apiConfigId));
             return this;
         }
 
-        public Builder apiId(Input<String> apiId) {
+        public Builder apiId(Output<String> apiId) {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
 
         public Builder apiId(String apiId) {
-            this.apiId = Input.of(Objects.requireNonNull(apiId));
+            this.apiId = Output.of(Objects.requireNonNull(apiId));
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder gatewayServiceAccount(@Nullable Input<String> gatewayServiceAccount) {
+        public Builder gatewayServiceAccount(@Nullable Output<String> gatewayServiceAccount) {
             this.gatewayServiceAccount = gatewayServiceAccount;
             return this;
         }
 
         public Builder gatewayServiceAccount(@Nullable String gatewayServiceAccount) {
-            this.gatewayServiceAccount = Input.ofNullable(gatewayServiceAccount);
+            this.gatewayServiceAccount = Output.ofNullable(gatewayServiceAccount);
             return this;
         }
 
-        public Builder grpcServices(@Nullable Input<List<ApigatewayApiConfigGrpcServiceDefinitionArgs>> grpcServices) {
+        public Builder grpcServices(@Nullable Output<List<ApigatewayApiConfigGrpcServiceDefinitionArgs>> grpcServices) {
             this.grpcServices = grpcServices;
             return this;
         }
 
         public Builder grpcServices(@Nullable List<ApigatewayApiConfigGrpcServiceDefinitionArgs> grpcServices) {
-            this.grpcServices = Input.ofNullable(grpcServices);
+            this.grpcServices = Output.ofNullable(grpcServices);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder managedServiceConfigs(@Nullable Input<List<ApigatewayApiConfigFileArgs>> managedServiceConfigs) {
+        public Builder managedServiceConfigs(@Nullable Output<List<ApigatewayApiConfigFileArgs>> managedServiceConfigs) {
             this.managedServiceConfigs = managedServiceConfigs;
             return this;
         }
 
         public Builder managedServiceConfigs(@Nullable List<ApigatewayApiConfigFileArgs> managedServiceConfigs) {
-            this.managedServiceConfigs = Input.ofNullable(managedServiceConfigs);
+            this.managedServiceConfigs = Output.ofNullable(managedServiceConfigs);
             return this;
         }
 
-        public Builder openapiDocuments(@Nullable Input<List<ApigatewayApiConfigOpenApiDocumentArgs>> openapiDocuments) {
+        public Builder openapiDocuments(@Nullable Output<List<ApigatewayApiConfigOpenApiDocumentArgs>> openapiDocuments) {
             this.openapiDocuments = openapiDocuments;
             return this;
         }
 
         public Builder openapiDocuments(@Nullable List<ApigatewayApiConfigOpenApiDocumentArgs> openapiDocuments) {
-            this.openapiDocuments = Input.ofNullable(openapiDocuments);
+            this.openapiDocuments = Output.ofNullable(openapiDocuments);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public ConfigArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class AzureDiskVolumeSourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="cachingMode")
-      private final @Nullable Input<String> cachingMode;
+      private final @Nullable Output<String> cachingMode;
 
-    public Input<String> getCachingMode() {
-        return this.cachingMode == null ? Input.empty() : this.cachingMode;
+    public Output<String> getCachingMode() {
+        return this.cachingMode == null ? Output.empty() : this.cachingMode;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class AzureDiskVolumeSourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="diskName", required=true)
-      private final Input<String> diskName;
+      private final Output<String> diskName;
 
-    public Input<String> getDiskName() {
+    public Output<String> getDiskName() {
         return this.diskName;
     }
 
@@ -46,9 +46,9 @@ public final class AzureDiskVolumeSourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="diskURI", required=true)
-      private final Input<String> diskURI;
+      private final Output<String> diskURI;
 
-    public Input<String> getDiskURI() {
+    public Output<String> getDiskURI() {
         return this.diskURI;
     }
 
@@ -57,10 +57,10 @@ public final class AzureDiskVolumeSourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="fsType")
-      private final @Nullable Input<String> fsType;
+      private final @Nullable Output<String> fsType;
 
-    public Input<String> getFsType() {
-        return this.fsType == null ? Input.empty() : this.fsType;
+    public Output<String> getFsType() {
+        return this.fsType == null ? Output.empty() : this.fsType;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class AzureDiskVolumeSourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -79,19 +79,19 @@ public final class AzureDiskVolumeSourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="readOnly")
-      private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Output<Boolean> readOnly;
 
-    public Input<Boolean> getReadOnly() {
-        return this.readOnly == null ? Input.empty() : this.readOnly;
+    public Output<Boolean> getReadOnly() {
+        return this.readOnly == null ? Output.empty() : this.readOnly;
     }
 
     public AzureDiskVolumeSourceArgs(
-        @Nullable Input<String> cachingMode,
-        Input<String> diskName,
-        Input<String> diskURI,
-        @Nullable Input<String> fsType,
-        @Nullable Input<String> kind,
-        @Nullable Input<Boolean> readOnly) {
+        @Nullable Output<String> cachingMode,
+        Output<String> diskName,
+        Output<String> diskURI,
+        @Nullable Output<String> fsType,
+        @Nullable Output<String> kind,
+        @Nullable Output<Boolean> readOnly) {
         this.cachingMode = cachingMode;
         this.diskName = Objects.requireNonNull(diskName, "expected parameter 'diskName' to be non-null");
         this.diskURI = Objects.requireNonNull(diskURI, "expected parameter 'diskURI' to be non-null");
@@ -101,12 +101,12 @@ public final class AzureDiskVolumeSourceArgs extends io.pulumi.resources.Resourc
     }
 
     private AzureDiskVolumeSourceArgs() {
-        this.cachingMode = Input.empty();
-        this.diskName = Input.empty();
-        this.diskURI = Input.empty();
-        this.fsType = Input.empty();
-        this.kind = Input.empty();
-        this.readOnly = Input.empty();
+        this.cachingMode = Output.empty();
+        this.diskName = Output.empty();
+        this.diskURI = Output.empty();
+        this.fsType = Output.empty();
+        this.kind = Output.empty();
+        this.readOnly = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,12 +118,12 @@ public final class AzureDiskVolumeSourceArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> cachingMode;
-        private Input<String> diskName;
-        private Input<String> diskURI;
-        private @Nullable Input<String> fsType;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<Boolean> readOnly;
+        private @Nullable Output<String> cachingMode;
+        private Output<String> diskName;
+        private Output<String> diskURI;
+        private @Nullable Output<String> fsType;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<Boolean> readOnly;
 
         public Builder() {
     	      // Empty
@@ -139,63 +139,63 @@ public final class AzureDiskVolumeSourceArgs extends io.pulumi.resources.Resourc
     	      this.readOnly = defaults.readOnly;
         }
 
-        public Builder cachingMode(@Nullable Input<String> cachingMode) {
+        public Builder cachingMode(@Nullable Output<String> cachingMode) {
             this.cachingMode = cachingMode;
             return this;
         }
 
         public Builder cachingMode(@Nullable String cachingMode) {
-            this.cachingMode = Input.ofNullable(cachingMode);
+            this.cachingMode = Output.ofNullable(cachingMode);
             return this;
         }
 
-        public Builder diskName(Input<String> diskName) {
+        public Builder diskName(Output<String> diskName) {
             this.diskName = Objects.requireNonNull(diskName);
             return this;
         }
 
         public Builder diskName(String diskName) {
-            this.diskName = Input.of(Objects.requireNonNull(diskName));
+            this.diskName = Output.of(Objects.requireNonNull(diskName));
             return this;
         }
 
-        public Builder diskURI(Input<String> diskURI) {
+        public Builder diskURI(Output<String> diskURI) {
             this.diskURI = Objects.requireNonNull(diskURI);
             return this;
         }
 
         public Builder diskURI(String diskURI) {
-            this.diskURI = Input.of(Objects.requireNonNull(diskURI));
+            this.diskURI = Output.of(Objects.requireNonNull(diskURI));
             return this;
         }
 
-        public Builder fsType(@Nullable Input<String> fsType) {
+        public Builder fsType(@Nullable Output<String> fsType) {
             this.fsType = fsType;
             return this;
         }
 
         public Builder fsType(@Nullable String fsType) {
-            this.fsType = Input.ofNullable(fsType);
+            this.fsType = Output.ofNullable(fsType);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Input.ofNullable(readOnly);
+            this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
         public AzureDiskVolumeSourceArgs build() {

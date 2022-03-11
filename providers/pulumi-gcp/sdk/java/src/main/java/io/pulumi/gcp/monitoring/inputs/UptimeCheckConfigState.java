@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.monitoring.inputs.UptimeCheckConfigContentMatcherGetArgs;
 import io.pulumi.gcp.monitoring.inputs.UptimeCheckConfigHttpCheckGetArgs;
@@ -26,10 +26,10 @@ public final class UptimeCheckConfigState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="contentMatchers")
-      private final @Nullable Input<List<UptimeCheckConfigContentMatcherGetArgs>> contentMatchers;
+      private final @Nullable Output<List<UptimeCheckConfigContentMatcherGetArgs>> contentMatchers;
 
-    public Input<List<UptimeCheckConfigContentMatcherGetArgs>> getContentMatchers() {
-        return this.contentMatchers == null ? Input.empty() : this.contentMatchers;
+    public Output<List<UptimeCheckConfigContentMatcherGetArgs>> getContentMatchers() {
+        return this.contentMatchers == null ? Output.empty() : this.contentMatchers;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class UptimeCheckConfigState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class UptimeCheckConfigState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="httpCheck")
-      private final @Nullable Input<UptimeCheckConfigHttpCheckGetArgs> httpCheck;
+      private final @Nullable Output<UptimeCheckConfigHttpCheckGetArgs> httpCheck;
 
-    public Input<UptimeCheckConfigHttpCheckGetArgs> getHttpCheck() {
-        return this.httpCheck == null ? Input.empty() : this.httpCheck;
+    public Output<UptimeCheckConfigHttpCheckGetArgs> getHttpCheck() {
+        return this.httpCheck == null ? Output.empty() : this.httpCheck;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class UptimeCheckConfigState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="monitoredResource")
-      private final @Nullable Input<UptimeCheckConfigMonitoredResourceGetArgs> monitoredResource;
+      private final @Nullable Output<UptimeCheckConfigMonitoredResourceGetArgs> monitoredResource;
 
-    public Input<UptimeCheckConfigMonitoredResourceGetArgs> getMonitoredResource() {
-        return this.monitoredResource == null ? Input.empty() : this.monitoredResource;
+    public Output<UptimeCheckConfigMonitoredResourceGetArgs> getMonitoredResource() {
+        return this.monitoredResource == null ? Output.empty() : this.monitoredResource;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class UptimeCheckConfigState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class UptimeCheckConfigState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="period")
-      private final @Nullable Input<String> period;
+      private final @Nullable Output<String> period;
 
-    public Input<String> getPeriod() {
-        return this.period == null ? Input.empty() : this.period;
+    public Output<String> getPeriod() {
+        return this.period == null ? Output.empty() : this.period;
     }
 
     /**
@@ -96,10 +96,10 @@ public final class UptimeCheckConfigState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -108,10 +108,10 @@ public final class UptimeCheckConfigState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroup")
-      private final @Nullable Input<UptimeCheckConfigResourceGroupGetArgs> resourceGroup;
+      private final @Nullable Output<UptimeCheckConfigResourceGroupGetArgs> resourceGroup;
 
-    public Input<UptimeCheckConfigResourceGroupGetArgs> getResourceGroup() {
-        return this.resourceGroup == null ? Input.empty() : this.resourceGroup;
+    public Output<UptimeCheckConfigResourceGroupGetArgs> getResourceGroup() {
+        return this.resourceGroup == null ? Output.empty() : this.resourceGroup;
     }
 
     /**
@@ -119,10 +119,10 @@ public final class UptimeCheckConfigState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="selectedRegions")
-      private final @Nullable Input<List<String>> selectedRegions;
+      private final @Nullable Output<List<String>> selectedRegions;
 
-    public Input<List<String>> getSelectedRegions() {
-        return this.selectedRegions == null ? Input.empty() : this.selectedRegions;
+    public Output<List<String>> getSelectedRegions() {
+        return this.selectedRegions == null ? Output.empty() : this.selectedRegions;
     }
 
     /**
@@ -131,10 +131,10 @@ public final class UptimeCheckConfigState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tcpCheck")
-      private final @Nullable Input<UptimeCheckConfigTcpCheckGetArgs> tcpCheck;
+      private final @Nullable Output<UptimeCheckConfigTcpCheckGetArgs> tcpCheck;
 
-    public Input<UptimeCheckConfigTcpCheckGetArgs> getTcpCheck() {
-        return this.tcpCheck == null ? Input.empty() : this.tcpCheck;
+    public Output<UptimeCheckConfigTcpCheckGetArgs> getTcpCheck() {
+        return this.tcpCheck == null ? Output.empty() : this.tcpCheck;
     }
 
     /**
@@ -142,10 +142,10 @@ public final class UptimeCheckConfigState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="timeout")
-      private final @Nullable Input<String> timeout;
+      private final @Nullable Output<String> timeout;
 
-    public Input<String> getTimeout() {
-        return this.timeout == null ? Input.empty() : this.timeout;
+    public Output<String> getTimeout() {
+        return this.timeout == null ? Output.empty() : this.timeout;
     }
 
     /**
@@ -153,25 +153,25 @@ public final class UptimeCheckConfigState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="uptimeCheckId")
-      private final @Nullable Input<String> uptimeCheckId;
+      private final @Nullable Output<String> uptimeCheckId;
 
-    public Input<String> getUptimeCheckId() {
-        return this.uptimeCheckId == null ? Input.empty() : this.uptimeCheckId;
+    public Output<String> getUptimeCheckId() {
+        return this.uptimeCheckId == null ? Output.empty() : this.uptimeCheckId;
     }
 
     public UptimeCheckConfigState(
-        @Nullable Input<List<UptimeCheckConfigContentMatcherGetArgs>> contentMatchers,
-        @Nullable Input<String> displayName,
-        @Nullable Input<UptimeCheckConfigHttpCheckGetArgs> httpCheck,
-        @Nullable Input<UptimeCheckConfigMonitoredResourceGetArgs> monitoredResource,
-        @Nullable Input<String> name,
-        @Nullable Input<String> period,
-        @Nullable Input<String> project,
-        @Nullable Input<UptimeCheckConfigResourceGroupGetArgs> resourceGroup,
-        @Nullable Input<List<String>> selectedRegions,
-        @Nullable Input<UptimeCheckConfigTcpCheckGetArgs> tcpCheck,
-        @Nullable Input<String> timeout,
-        @Nullable Input<String> uptimeCheckId) {
+        @Nullable Output<List<UptimeCheckConfigContentMatcherGetArgs>> contentMatchers,
+        @Nullable Output<String> displayName,
+        @Nullable Output<UptimeCheckConfigHttpCheckGetArgs> httpCheck,
+        @Nullable Output<UptimeCheckConfigMonitoredResourceGetArgs> monitoredResource,
+        @Nullable Output<String> name,
+        @Nullable Output<String> period,
+        @Nullable Output<String> project,
+        @Nullable Output<UptimeCheckConfigResourceGroupGetArgs> resourceGroup,
+        @Nullable Output<List<String>> selectedRegions,
+        @Nullable Output<UptimeCheckConfigTcpCheckGetArgs> tcpCheck,
+        @Nullable Output<String> timeout,
+        @Nullable Output<String> uptimeCheckId) {
         this.contentMatchers = contentMatchers;
         this.displayName = displayName;
         this.httpCheck = httpCheck;
@@ -187,18 +187,18 @@ public final class UptimeCheckConfigState extends io.pulumi.resources.ResourceAr
     }
 
     private UptimeCheckConfigState() {
-        this.contentMatchers = Input.empty();
-        this.displayName = Input.empty();
-        this.httpCheck = Input.empty();
-        this.monitoredResource = Input.empty();
-        this.name = Input.empty();
-        this.period = Input.empty();
-        this.project = Input.empty();
-        this.resourceGroup = Input.empty();
-        this.selectedRegions = Input.empty();
-        this.tcpCheck = Input.empty();
-        this.timeout = Input.empty();
-        this.uptimeCheckId = Input.empty();
+        this.contentMatchers = Output.empty();
+        this.displayName = Output.empty();
+        this.httpCheck = Output.empty();
+        this.monitoredResource = Output.empty();
+        this.name = Output.empty();
+        this.period = Output.empty();
+        this.project = Output.empty();
+        this.resourceGroup = Output.empty();
+        this.selectedRegions = Output.empty();
+        this.tcpCheck = Output.empty();
+        this.timeout = Output.empty();
+        this.uptimeCheckId = Output.empty();
     }
 
     public static Builder builder() {
@@ -210,18 +210,18 @@ public final class UptimeCheckConfigState extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<List<UptimeCheckConfigContentMatcherGetArgs>> contentMatchers;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<UptimeCheckConfigHttpCheckGetArgs> httpCheck;
-        private @Nullable Input<UptimeCheckConfigMonitoredResourceGetArgs> monitoredResource;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> period;
-        private @Nullable Input<String> project;
-        private @Nullable Input<UptimeCheckConfigResourceGroupGetArgs> resourceGroup;
-        private @Nullable Input<List<String>> selectedRegions;
-        private @Nullable Input<UptimeCheckConfigTcpCheckGetArgs> tcpCheck;
-        private @Nullable Input<String> timeout;
-        private @Nullable Input<String> uptimeCheckId;
+        private @Nullable Output<List<UptimeCheckConfigContentMatcherGetArgs>> contentMatchers;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<UptimeCheckConfigHttpCheckGetArgs> httpCheck;
+        private @Nullable Output<UptimeCheckConfigMonitoredResourceGetArgs> monitoredResource;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> period;
+        private @Nullable Output<String> project;
+        private @Nullable Output<UptimeCheckConfigResourceGroupGetArgs> resourceGroup;
+        private @Nullable Output<List<String>> selectedRegions;
+        private @Nullable Output<UptimeCheckConfigTcpCheckGetArgs> tcpCheck;
+        private @Nullable Output<String> timeout;
+        private @Nullable Output<String> uptimeCheckId;
 
         public Builder() {
     	      // Empty
@@ -243,123 +243,123 @@ public final class UptimeCheckConfigState extends io.pulumi.resources.ResourceAr
     	      this.uptimeCheckId = defaults.uptimeCheckId;
         }
 
-        public Builder contentMatchers(@Nullable Input<List<UptimeCheckConfigContentMatcherGetArgs>> contentMatchers) {
+        public Builder contentMatchers(@Nullable Output<List<UptimeCheckConfigContentMatcherGetArgs>> contentMatchers) {
             this.contentMatchers = contentMatchers;
             return this;
         }
 
         public Builder contentMatchers(@Nullable List<UptimeCheckConfigContentMatcherGetArgs> contentMatchers) {
-            this.contentMatchers = Input.ofNullable(contentMatchers);
+            this.contentMatchers = Output.ofNullable(contentMatchers);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder httpCheck(@Nullable Input<UptimeCheckConfigHttpCheckGetArgs> httpCheck) {
+        public Builder httpCheck(@Nullable Output<UptimeCheckConfigHttpCheckGetArgs> httpCheck) {
             this.httpCheck = httpCheck;
             return this;
         }
 
         public Builder httpCheck(@Nullable UptimeCheckConfigHttpCheckGetArgs httpCheck) {
-            this.httpCheck = Input.ofNullable(httpCheck);
+            this.httpCheck = Output.ofNullable(httpCheck);
             return this;
         }
 
-        public Builder monitoredResource(@Nullable Input<UptimeCheckConfigMonitoredResourceGetArgs> monitoredResource) {
+        public Builder monitoredResource(@Nullable Output<UptimeCheckConfigMonitoredResourceGetArgs> monitoredResource) {
             this.monitoredResource = monitoredResource;
             return this;
         }
 
         public Builder monitoredResource(@Nullable UptimeCheckConfigMonitoredResourceGetArgs monitoredResource) {
-            this.monitoredResource = Input.ofNullable(monitoredResource);
+            this.monitoredResource = Output.ofNullable(monitoredResource);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder period(@Nullable Input<String> period) {
+        public Builder period(@Nullable Output<String> period) {
             this.period = period;
             return this;
         }
 
         public Builder period(@Nullable String period) {
-            this.period = Input.ofNullable(period);
+            this.period = Output.ofNullable(period);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder resourceGroup(@Nullable Input<UptimeCheckConfigResourceGroupGetArgs> resourceGroup) {
+        public Builder resourceGroup(@Nullable Output<UptimeCheckConfigResourceGroupGetArgs> resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
         }
 
         public Builder resourceGroup(@Nullable UptimeCheckConfigResourceGroupGetArgs resourceGroup) {
-            this.resourceGroup = Input.ofNullable(resourceGroup);
+            this.resourceGroup = Output.ofNullable(resourceGroup);
             return this;
         }
 
-        public Builder selectedRegions(@Nullable Input<List<String>> selectedRegions) {
+        public Builder selectedRegions(@Nullable Output<List<String>> selectedRegions) {
             this.selectedRegions = selectedRegions;
             return this;
         }
 
         public Builder selectedRegions(@Nullable List<String> selectedRegions) {
-            this.selectedRegions = Input.ofNullable(selectedRegions);
+            this.selectedRegions = Output.ofNullable(selectedRegions);
             return this;
         }
 
-        public Builder tcpCheck(@Nullable Input<UptimeCheckConfigTcpCheckGetArgs> tcpCheck) {
+        public Builder tcpCheck(@Nullable Output<UptimeCheckConfigTcpCheckGetArgs> tcpCheck) {
             this.tcpCheck = tcpCheck;
             return this;
         }
 
         public Builder tcpCheck(@Nullable UptimeCheckConfigTcpCheckGetArgs tcpCheck) {
-            this.tcpCheck = Input.ofNullable(tcpCheck);
+            this.tcpCheck = Output.ofNullable(tcpCheck);
             return this;
         }
 
-        public Builder timeout(@Nullable Input<String> timeout) {
+        public Builder timeout(@Nullable Output<String> timeout) {
             this.timeout = timeout;
             return this;
         }
 
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = Input.ofNullable(timeout);
+            this.timeout = Output.ofNullable(timeout);
             return this;
         }
 
-        public Builder uptimeCheckId(@Nullable Input<String> uptimeCheckId) {
+        public Builder uptimeCheckId(@Nullable Output<String> uptimeCheckId) {
             this.uptimeCheckId = uptimeCheckId;
             return this;
         }
 
         public Builder uptimeCheckId(@Nullable String uptimeCheckId) {
-            this.uptimeCheckId = Input.ofNullable(uptimeCheckId);
+            this.uptimeCheckId = Output.ofNullable(uptimeCheckId);
             return this;
         }
         public UptimeCheckConfigState build() {

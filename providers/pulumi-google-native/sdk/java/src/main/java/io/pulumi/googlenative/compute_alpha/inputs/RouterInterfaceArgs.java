@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ipRange")
-      private final @Nullable Input<String> ipRange;
+      private final @Nullable Output<String> ipRange;
 
-    public Input<String> getIpRange() {
-        return this.ipRange == null ? Input.empty() : this.ipRange;
+    public Output<String> getIpRange() {
+        return this.ipRange == null ? Output.empty() : this.ipRange;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="linkedInterconnectAttachment")
-      private final @Nullable Input<String> linkedInterconnectAttachment;
+      private final @Nullable Output<String> linkedInterconnectAttachment;
 
-    public Input<String> getLinkedInterconnectAttachment() {
-        return this.linkedInterconnectAttachment == null ? Input.empty() : this.linkedInterconnectAttachment;
+    public Output<String> getLinkedInterconnectAttachment() {
+        return this.linkedInterconnectAttachment == null ? Output.empty() : this.linkedInterconnectAttachment;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="linkedVpnTunnel")
-      private final @Nullable Input<String> linkedVpnTunnel;
+      private final @Nullable Output<String> linkedVpnTunnel;
 
-    public Input<String> getLinkedVpnTunnel() {
-        return this.linkedVpnTunnel == null ? Input.empty() : this.linkedVpnTunnel;
+    public Output<String> getLinkedVpnTunnel() {
+        return this.linkedVpnTunnel == null ? Output.empty() : this.linkedVpnTunnel;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="privateIpAddress")
-      private final @Nullable Input<String> privateIpAddress;
+      private final @Nullable Output<String> privateIpAddress;
 
-    public Input<String> getPrivateIpAddress() {
-        return this.privateIpAddress == null ? Input.empty() : this.privateIpAddress;
+    public Output<String> getPrivateIpAddress() {
+        return this.privateIpAddress == null ? Output.empty() : this.privateIpAddress;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="redundantInterface")
-      private final @Nullable Input<String> redundantInterface;
+      private final @Nullable Output<String> redundantInterface;
 
-    public Input<String> getRedundantInterface() {
-        return this.redundantInterface == null ? Input.empty() : this.redundantInterface;
+    public Output<String> getRedundantInterface() {
+        return this.redundantInterface == null ? Output.empty() : this.redundantInterface;
     }
 
     /**
@@ -85,20 +85,20 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="subnetwork")
-      private final @Nullable Input<String> subnetwork;
+      private final @Nullable Output<String> subnetwork;
 
-    public Input<String> getSubnetwork() {
-        return this.subnetwork == null ? Input.empty() : this.subnetwork;
+    public Output<String> getSubnetwork() {
+        return this.subnetwork == null ? Output.empty() : this.subnetwork;
     }
 
     public RouterInterfaceArgs(
-        @Nullable Input<String> ipRange,
-        @Nullable Input<String> linkedInterconnectAttachment,
-        @Nullable Input<String> linkedVpnTunnel,
-        @Nullable Input<String> name,
-        @Nullable Input<String> privateIpAddress,
-        @Nullable Input<String> redundantInterface,
-        @Nullable Input<String> subnetwork) {
+        @Nullable Output<String> ipRange,
+        @Nullable Output<String> linkedInterconnectAttachment,
+        @Nullable Output<String> linkedVpnTunnel,
+        @Nullable Output<String> name,
+        @Nullable Output<String> privateIpAddress,
+        @Nullable Output<String> redundantInterface,
+        @Nullable Output<String> subnetwork) {
         this.ipRange = ipRange;
         this.linkedInterconnectAttachment = linkedInterconnectAttachment;
         this.linkedVpnTunnel = linkedVpnTunnel;
@@ -109,13 +109,13 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private RouterInterfaceArgs() {
-        this.ipRange = Input.empty();
-        this.linkedInterconnectAttachment = Input.empty();
-        this.linkedVpnTunnel = Input.empty();
-        this.name = Input.empty();
-        this.privateIpAddress = Input.empty();
-        this.redundantInterface = Input.empty();
-        this.subnetwork = Input.empty();
+        this.ipRange = Output.empty();
+        this.linkedInterconnectAttachment = Output.empty();
+        this.linkedVpnTunnel = Output.empty();
+        this.name = Output.empty();
+        this.privateIpAddress = Output.empty();
+        this.redundantInterface = Output.empty();
+        this.subnetwork = Output.empty();
     }
 
     public static Builder builder() {
@@ -127,13 +127,13 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> ipRange;
-        private @Nullable Input<String> linkedInterconnectAttachment;
-        private @Nullable Input<String> linkedVpnTunnel;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> privateIpAddress;
-        private @Nullable Input<String> redundantInterface;
-        private @Nullable Input<String> subnetwork;
+        private @Nullable Output<String> ipRange;
+        private @Nullable Output<String> linkedInterconnectAttachment;
+        private @Nullable Output<String> linkedVpnTunnel;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> privateIpAddress;
+        private @Nullable Output<String> redundantInterface;
+        private @Nullable Output<String> subnetwork;
 
         public Builder() {
     	      // Empty
@@ -150,73 +150,73 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
     	      this.subnetwork = defaults.subnetwork;
         }
 
-        public Builder ipRange(@Nullable Input<String> ipRange) {
+        public Builder ipRange(@Nullable Output<String> ipRange) {
             this.ipRange = ipRange;
             return this;
         }
 
         public Builder ipRange(@Nullable String ipRange) {
-            this.ipRange = Input.ofNullable(ipRange);
+            this.ipRange = Output.ofNullable(ipRange);
             return this;
         }
 
-        public Builder linkedInterconnectAttachment(@Nullable Input<String> linkedInterconnectAttachment) {
+        public Builder linkedInterconnectAttachment(@Nullable Output<String> linkedInterconnectAttachment) {
             this.linkedInterconnectAttachment = linkedInterconnectAttachment;
             return this;
         }
 
         public Builder linkedInterconnectAttachment(@Nullable String linkedInterconnectAttachment) {
-            this.linkedInterconnectAttachment = Input.ofNullable(linkedInterconnectAttachment);
+            this.linkedInterconnectAttachment = Output.ofNullable(linkedInterconnectAttachment);
             return this;
         }
 
-        public Builder linkedVpnTunnel(@Nullable Input<String> linkedVpnTunnel) {
+        public Builder linkedVpnTunnel(@Nullable Output<String> linkedVpnTunnel) {
             this.linkedVpnTunnel = linkedVpnTunnel;
             return this;
         }
 
         public Builder linkedVpnTunnel(@Nullable String linkedVpnTunnel) {
-            this.linkedVpnTunnel = Input.ofNullable(linkedVpnTunnel);
+            this.linkedVpnTunnel = Output.ofNullable(linkedVpnTunnel);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder privateIpAddress(@Nullable Input<String> privateIpAddress) {
+        public Builder privateIpAddress(@Nullable Output<String> privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
 
         public Builder privateIpAddress(@Nullable String privateIpAddress) {
-            this.privateIpAddress = Input.ofNullable(privateIpAddress);
+            this.privateIpAddress = Output.ofNullable(privateIpAddress);
             return this;
         }
 
-        public Builder redundantInterface(@Nullable Input<String> redundantInterface) {
+        public Builder redundantInterface(@Nullable Output<String> redundantInterface) {
             this.redundantInterface = redundantInterface;
             return this;
         }
 
         public Builder redundantInterface(@Nullable String redundantInterface) {
-            this.redundantInterface = Input.ofNullable(redundantInterface);
+            this.redundantInterface = Output.ofNullable(redundantInterface);
             return this;
         }
 
-        public Builder subnetwork(@Nullable Input<String> subnetwork) {
+        public Builder subnetwork(@Nullable Output<String> subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
 
         public Builder subnetwork(@Nullable String subnetwork) {
-            this.subnetwork = Input.ofNullable(subnetwork);
+            this.subnetwork = Output.ofNullable(subnetwork);
             return this;
         }
         public RouterInterfaceArgs build() {

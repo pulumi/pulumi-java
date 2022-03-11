@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codebuild;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class SourceCredentialArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="authType", required=true)
-      private final Input<String> authType;
+      private final Output<String> authType;
 
-    public Input<String> getAuthType() {
+    public Output<String> getAuthType() {
         return this.authType;
     }
 
@@ -30,9 +30,9 @@ public final class SourceCredentialArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="serverType", required=true)
-      private final Input<String> serverType;
+      private final Output<String> serverType;
 
-    public Input<String> getServerType() {
+    public Output<String> getServerType() {
         return this.serverType;
     }
 
@@ -41,9 +41,9 @@ public final class SourceCredentialArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="token", required=true)
-      private final Input<String> token;
+      private final Output<String> token;
 
-    public Input<String> getToken() {
+    public Output<String> getToken() {
         return this.token;
     }
 
@@ -52,17 +52,17 @@ public final class SourceCredentialArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="userName")
-      private final @Nullable Input<String> userName;
+      private final @Nullable Output<String> userName;
 
-    public Input<String> getUserName() {
-        return this.userName == null ? Input.empty() : this.userName;
+    public Output<String> getUserName() {
+        return this.userName == null ? Output.empty() : this.userName;
     }
 
     public SourceCredentialArgs(
-        Input<String> authType,
-        Input<String> serverType,
-        Input<String> token,
-        @Nullable Input<String> userName) {
+        Output<String> authType,
+        Output<String> serverType,
+        Output<String> token,
+        @Nullable Output<String> userName) {
         this.authType = Objects.requireNonNull(authType, "expected parameter 'authType' to be non-null");
         this.serverType = Objects.requireNonNull(serverType, "expected parameter 'serverType' to be non-null");
         this.token = Objects.requireNonNull(token, "expected parameter 'token' to be non-null");
@@ -70,10 +70,10 @@ public final class SourceCredentialArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private SourceCredentialArgs() {
-        this.authType = Input.empty();
-        this.serverType = Input.empty();
-        this.token = Input.empty();
-        this.userName = Input.empty();
+        this.authType = Output.empty();
+        this.serverType = Output.empty();
+        this.token = Output.empty();
+        this.userName = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class SourceCredentialArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> authType;
-        private Input<String> serverType;
-        private Input<String> token;
-        private @Nullable Input<String> userName;
+        private Output<String> authType;
+        private Output<String> serverType;
+        private Output<String> token;
+        private @Nullable Output<String> userName;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class SourceCredentialArgs extends io.pulumi.resources.ResourceArgs
     	      this.userName = defaults.userName;
         }
 
-        public Builder authType(Input<String> authType) {
+        public Builder authType(Output<String> authType) {
             this.authType = Objects.requireNonNull(authType);
             return this;
         }
 
         public Builder authType(String authType) {
-            this.authType = Input.of(Objects.requireNonNull(authType));
+            this.authType = Output.of(Objects.requireNonNull(authType));
             return this;
         }
 
-        public Builder serverType(Input<String> serverType) {
+        public Builder serverType(Output<String> serverType) {
             this.serverType = Objects.requireNonNull(serverType);
             return this;
         }
 
         public Builder serverType(String serverType) {
-            this.serverType = Input.of(Objects.requireNonNull(serverType));
+            this.serverType = Output.of(Objects.requireNonNull(serverType));
             return this;
         }
 
-        public Builder token(Input<String> token) {
+        public Builder token(Output<String> token) {
             this.token = Objects.requireNonNull(token);
             return this;
         }
 
         public Builder token(String token) {
-            this.token = Input.of(Objects.requireNonNull(token));
+            this.token = Output.of(Objects.requireNonNull(token));
             return this;
         }
 
-        public Builder userName(@Nullable Input<String> userName) {
+        public Builder userName(@Nullable Output<String> userName) {
             this.userName = userName;
             return this;
         }
 
         public Builder userName(@Nullable String userName) {
-            this.userName = Input.ofNullable(userName);
+            this.userName = Output.ofNullable(userName);
             return this;
         }
         public SourceCredentialArgs build() {

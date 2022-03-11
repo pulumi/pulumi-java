@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.enums.VariableType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class VariableSpecificationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="defaultValue")
-      private final @Nullable Input<Object> defaultValue;
+      private final @Nullable Output<Object> defaultValue;
 
-    public Input<Object> getDefaultValue() {
-        return this.defaultValue == null ? Input.empty() : this.defaultValue;
+    public Output<Object> getDefaultValue() {
+        return this.defaultValue == null ? Output.empty() : this.defaultValue;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class VariableSpecificationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<Either<String,VariableType>> type;
+      private final Output<Either<String,VariableType>> type;
 
-    public Input<Either<String,VariableType>> getType() {
+    public Output<Either<String,VariableType>> getType() {
         return this.type;
     }
 
     public VariableSpecificationArgs(
-        @Nullable Input<Object> defaultValue,
-        Input<Either<String,VariableType>> type) {
+        @Nullable Output<Object> defaultValue,
+        Output<Either<String,VariableType>> type) {
         this.defaultValue = defaultValue;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private VariableSpecificationArgs() {
-        this.defaultValue = Input.empty();
-        this.type = Input.empty();
+        this.defaultValue = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class VariableSpecificationArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> defaultValue;
-        private Input<Either<String,VariableType>> type;
+        private @Nullable Output<Object> defaultValue;
+        private Output<Either<String,VariableType>> type;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class VariableSpecificationArgs extends io.pulumi.resources.Resourc
     	      this.type = defaults.type;
         }
 
-        public Builder defaultValue(@Nullable Input<Object> defaultValue) {
+        public Builder defaultValue(@Nullable Output<Object> defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
 
         public Builder defaultValue(@Nullable Object defaultValue) {
-            this.defaultValue = Input.ofNullable(defaultValue);
+            this.defaultValue = Output.ofNullable(defaultValue);
             return this;
         }
 
-        public Builder type(Input<Either<String,VariableType>> type) {
+        public Builder type(Output<Either<String,VariableType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(Either<String,VariableType> type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public VariableSpecificationArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkGetAr
      * 
      */
     @InputImport(name="expirationTime")
-      private final @Nullable Input<String> expirationTime;
+      private final @Nullable Output<String> expirationTime;
 
-    public Input<String> getExpirationTime() {
-        return this.expirationTime == null ? Input.empty() : this.expirationTime;
+    public Output<String> getExpirationTime() {
+        return this.expirationTime == null ? Output.empty() : this.expirationTime;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkGetAr
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -44,25 +44,25 @@ public final class DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkGetAr
      * 
      */
     @InputImport(name="value", required=true)
-      private final Input<String> value;
+      private final Output<String> value;
 
-    public Input<String> getValue() {
+    public Output<String> getValue() {
         return this.value;
     }
 
     public DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkGetArgs(
-        @Nullable Input<String> expirationTime,
-        @Nullable Input<String> name,
-        Input<String> value) {
+        @Nullable Output<String> expirationTime,
+        @Nullable Output<String> name,
+        Output<String> value) {
         this.expirationTime = expirationTime;
         this.name = name;
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkGetArgs() {
-        this.expirationTime = Input.empty();
-        this.name = Input.empty();
-        this.value = Input.empty();
+        this.expirationTime = Output.empty();
+        this.name = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkGetAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> expirationTime;
-        private @Nullable Input<String> name;
-        private Input<String> value;
+        private @Nullable Output<String> expirationTime;
+        private @Nullable Output<String> name;
+        private Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkGetAr
     	      this.value = defaults.value;
         }
 
-        public Builder expirationTime(@Nullable Input<String> expirationTime) {
+        public Builder expirationTime(@Nullable Output<String> expirationTime) {
             this.expirationTime = expirationTime;
             return this;
         }
 
         public Builder expirationTime(@Nullable String expirationTime) {
-            this.expirationTime = Input.ofNullable(expirationTime);
+            this.expirationTime = Output.ofNullable(expirationTime);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder value(Input<String> value) {
+        public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(String value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkGetArgs build() {

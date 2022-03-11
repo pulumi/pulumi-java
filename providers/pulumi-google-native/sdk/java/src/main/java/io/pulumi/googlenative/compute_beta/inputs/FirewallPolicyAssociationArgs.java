@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class FirewallPolicyAssociationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="attachmentTarget")
-      private final @Nullable Input<String> attachmentTarget;
+      private final @Nullable Output<String> attachmentTarget;
 
-    public Input<String> getAttachmentTarget() {
-        return this.attachmentTarget == null ? Input.empty() : this.attachmentTarget;
+    public Output<String> getAttachmentTarget() {
+        return this.attachmentTarget == null ? Output.empty() : this.attachmentTarget;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class FirewallPolicyAssociationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public FirewallPolicyAssociationArgs(
-        @Nullable Input<String> attachmentTarget,
-        @Nullable Input<String> name) {
+        @Nullable Output<String> attachmentTarget,
+        @Nullable Output<String> name) {
         this.attachmentTarget = attachmentTarget;
         this.name = name;
     }
 
     private FirewallPolicyAssociationArgs() {
-        this.attachmentTarget = Input.empty();
-        this.name = Input.empty();
+        this.attachmentTarget = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class FirewallPolicyAssociationArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> attachmentTarget;
-        private @Nullable Input<String> name;
+        private @Nullable Output<String> attachmentTarget;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class FirewallPolicyAssociationArgs extends io.pulumi.resources.Res
     	      this.name = defaults.name;
         }
 
-        public Builder attachmentTarget(@Nullable Input<String> attachmentTarget) {
+        public Builder attachmentTarget(@Nullable Output<String> attachmentTarget) {
             this.attachmentTarget = attachmentTarget;
             return this;
         }
 
         public Builder attachmentTarget(@Nullable String attachmentTarget) {
-            this.attachmentTarget = Input.ofNullable(attachmentTarget);
+            this.attachmentTarget = Output.ofNullable(attachmentTarget);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public FirewallPolicyAssociationArgs build() {

@@ -3,7 +3,6 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -234,14 +233,14 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ConnectionProfile(String name, ConnectionProfileArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:datastream/v1alpha1:ConnectionProfile", name, args == null ? ConnectionProfileArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("google-native:datastream/v1alpha1:ConnectionProfile", name, args == null ? ConnectionProfileArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ConnectionProfile(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ConnectionProfile(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:datastream/v1alpha1:ConnectionProfile", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -256,7 +255,7 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ConnectionProfile get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ConnectionProfile get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ConnectionProfile(name, id, options);
     }
 }

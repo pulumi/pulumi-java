@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,9 +17,9 @@ public final class SharedflowArgs extends io.pulumi.resources.ResourceArgs {
     public static final SharedflowArgs Empty = new SharedflowArgs();
 
     @InputImport(name="action", required=true)
-      private final Input<String> action;
+      private final Output<String> action;
 
-    public Input<String> getAction() {
+    public Output<String> getAction() {
         return this.action;
     }
 
@@ -28,10 +28,10 @@ public final class SharedflowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentType")
-      private final @Nullable Input<String> contentType;
+      private final @Nullable Output<String> contentType;
 
-    public Input<String> getContentType() {
-        return this.contentType == null ? Input.empty() : this.contentType;
+    public Output<String> getContentType() {
+        return this.contentType == null ? Output.empty() : this.contentType;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class SharedflowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="data")
-      private final @Nullable Input<String> data;
+      private final @Nullable Output<String> data;
 
-    public Input<String> getData() {
-        return this.data == null ? Input.empty() : this.data;
+    public Output<String> getData() {
+        return this.data == null ? Output.empty() : this.data;
     }
 
     /**
@@ -50,33 +50,33 @@ public final class SharedflowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extensions")
-      private final @Nullable Input<List<Map<String,String>>> extensions;
+      private final @Nullable Output<List<Map<String,String>>> extensions;
 
-    public Input<List<Map<String,String>>> getExtensions() {
-        return this.extensions == null ? Input.empty() : this.extensions;
+    public Output<List<Map<String,String>>> getExtensions() {
+        return this.extensions == null ? Output.empty() : this.extensions;
     }
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="organizationId", required=true)
-      private final Input<String> organizationId;
+      private final Output<String> organizationId;
 
-    public Input<String> getOrganizationId() {
+    public Output<String> getOrganizationId() {
         return this.organizationId;
     }
 
     public SharedflowArgs(
-        Input<String> action,
-        @Nullable Input<String> contentType,
-        @Nullable Input<String> data,
-        @Nullable Input<List<Map<String,String>>> extensions,
-        @Nullable Input<String> name,
-        Input<String> organizationId) {
+        Output<String> action,
+        @Nullable Output<String> contentType,
+        @Nullable Output<String> data,
+        @Nullable Output<List<Map<String,String>>> extensions,
+        @Nullable Output<String> name,
+        Output<String> organizationId) {
         this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
         this.contentType = contentType;
         this.data = data;
@@ -86,12 +86,12 @@ public final class SharedflowArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SharedflowArgs() {
-        this.action = Input.empty();
-        this.contentType = Input.empty();
-        this.data = Input.empty();
-        this.extensions = Input.empty();
-        this.name = Input.empty();
-        this.organizationId = Input.empty();
+        this.action = Output.empty();
+        this.contentType = Output.empty();
+        this.data = Output.empty();
+        this.extensions = Output.empty();
+        this.name = Output.empty();
+        this.organizationId = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,12 +103,12 @@ public final class SharedflowArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> action;
-        private @Nullable Input<String> contentType;
-        private @Nullable Input<String> data;
-        private @Nullable Input<List<Map<String,String>>> extensions;
-        private @Nullable Input<String> name;
-        private Input<String> organizationId;
+        private Output<String> action;
+        private @Nullable Output<String> contentType;
+        private @Nullable Output<String> data;
+        private @Nullable Output<List<Map<String,String>>> extensions;
+        private @Nullable Output<String> name;
+        private Output<String> organizationId;
 
         public Builder() {
     	      // Empty
@@ -124,63 +124,63 @@ public final class SharedflowArgs extends io.pulumi.resources.ResourceArgs {
     	      this.organizationId = defaults.organizationId;
         }
 
-        public Builder action(Input<String> action) {
+        public Builder action(Output<String> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
         public Builder action(String action) {
-            this.action = Input.of(Objects.requireNonNull(action));
+            this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder contentType(@Nullable Input<String> contentType) {
+        public Builder contentType(@Nullable Output<String> contentType) {
             this.contentType = contentType;
             return this;
         }
 
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = Input.ofNullable(contentType);
+            this.contentType = Output.ofNullable(contentType);
             return this;
         }
 
-        public Builder data(@Nullable Input<String> data) {
+        public Builder data(@Nullable Output<String> data) {
             this.data = data;
             return this;
         }
 
         public Builder data(@Nullable String data) {
-            this.data = Input.ofNullable(data);
+            this.data = Output.ofNullable(data);
             return this;
         }
 
-        public Builder extensions(@Nullable Input<List<Map<String,String>>> extensions) {
+        public Builder extensions(@Nullable Output<List<Map<String,String>>> extensions) {
             this.extensions = extensions;
             return this;
         }
 
         public Builder extensions(@Nullable List<Map<String,String>> extensions) {
-            this.extensions = Input.ofNullable(extensions);
+            this.extensions = Output.ofNullable(extensions);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder organizationId(Input<String> organizationId) {
+        public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
         public Builder organizationId(String organizationId) {
-            this.organizationId = Input.of(Objects.requireNonNull(organizationId));
+            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
         public SharedflowArgs build() {

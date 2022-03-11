@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudfront.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,9 +23,9 @@ public final class DistributionDefaultCacheBehaviorForwardedValuesCookiesArgs ex
      * 
      */
     @InputImport(name="forward", required=true)
-      private final Input<String> forward;
+      private final Output<String> forward;
 
-    public Input<String> getForward() {
+    public Output<String> getForward() {
         return this.forward;
     }
 
@@ -36,22 +36,22 @@ public final class DistributionDefaultCacheBehaviorForwardedValuesCookiesArgs ex
      * 
      */
     @InputImport(name="whitelistedNames")
-      private final @Nullable Input<List<String>> whitelistedNames;
+      private final @Nullable Output<List<String>> whitelistedNames;
 
-    public Input<List<String>> getWhitelistedNames() {
-        return this.whitelistedNames == null ? Input.empty() : this.whitelistedNames;
+    public Output<List<String>> getWhitelistedNames() {
+        return this.whitelistedNames == null ? Output.empty() : this.whitelistedNames;
     }
 
     public DistributionDefaultCacheBehaviorForwardedValuesCookiesArgs(
-        Input<String> forward,
-        @Nullable Input<List<String>> whitelistedNames) {
+        Output<String> forward,
+        @Nullable Output<List<String>> whitelistedNames) {
         this.forward = Objects.requireNonNull(forward, "expected parameter 'forward' to be non-null");
         this.whitelistedNames = whitelistedNames;
     }
 
     private DistributionDefaultCacheBehaviorForwardedValuesCookiesArgs() {
-        this.forward = Input.empty();
-        this.whitelistedNames = Input.empty();
+        this.forward = Output.empty();
+        this.whitelistedNames = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class DistributionDefaultCacheBehaviorForwardedValuesCookiesArgs ex
     }
 
     public static final class Builder {
-        private Input<String> forward;
-        private @Nullable Input<List<String>> whitelistedNames;
+        private Output<String> forward;
+        private @Nullable Output<List<String>> whitelistedNames;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class DistributionDefaultCacheBehaviorForwardedValuesCookiesArgs ex
     	      this.whitelistedNames = defaults.whitelistedNames;
         }
 
-        public Builder forward(Input<String> forward) {
+        public Builder forward(Output<String> forward) {
             this.forward = Objects.requireNonNull(forward);
             return this;
         }
 
         public Builder forward(String forward) {
-            this.forward = Input.of(Objects.requireNonNull(forward));
+            this.forward = Output.of(Objects.requireNonNull(forward));
             return this;
         }
 
-        public Builder whitelistedNames(@Nullable Input<List<String>> whitelistedNames) {
+        public Builder whitelistedNames(@Nullable Output<List<String>> whitelistedNames) {
             this.whitelistedNames = whitelistedNames;
             return this;
         }
 
         public Builder whitelistedNames(@Nullable List<String> whitelistedNames) {
-            this.whitelistedNames = Input.ofNullable(whitelistedNames);
+            this.whitelistedNames = Output.ofNullable(whitelistedNames);
             return this;
         }
         public DistributionDefaultCacheBehaviorForwardedValuesCookiesArgs build() {

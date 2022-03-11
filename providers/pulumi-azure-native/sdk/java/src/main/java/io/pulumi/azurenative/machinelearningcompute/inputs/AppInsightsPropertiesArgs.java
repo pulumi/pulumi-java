@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningcompute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class AppInsightsPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceId")
-      private final @Nullable Input<String> resourceId;
+      private final @Nullable Output<String> resourceId;
 
-    public Input<String> getResourceId() {
-        return this.resourceId == null ? Input.empty() : this.resourceId;
+    public Output<String> getResourceId() {
+        return this.resourceId == null ? Output.empty() : this.resourceId;
     }
 
-    public AppInsightsPropertiesArgs(@Nullable Input<String> resourceId) {
+    public AppInsightsPropertiesArgs(@Nullable Output<String> resourceId) {
         this.resourceId = resourceId;
     }
 
     private AppInsightsPropertiesArgs() {
-        this.resourceId = Input.empty();
+        this.resourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class AppInsightsPropertiesArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> resourceId;
+        private @Nullable Output<String> resourceId;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class AppInsightsPropertiesArgs extends io.pulumi.resources.Resourc
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder resourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Input.ofNullable(resourceId);
+            this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
         public AppInsightsPropertiesArgs build() {

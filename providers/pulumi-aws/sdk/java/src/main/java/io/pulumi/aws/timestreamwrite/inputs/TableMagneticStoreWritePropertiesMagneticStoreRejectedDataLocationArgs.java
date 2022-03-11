@@ -4,7 +4,7 @@
 package io.pulumi.aws.timestreamwrite.inputs;
 
 import io.pulumi.aws.timestreamwrite.inputs.TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLoc
      * 
      */
     @InputImport(name="s3Configuration")
-      private final @Nullable Input<TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationArgs> s3Configuration;
+      private final @Nullable Output<TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationArgs> s3Configuration;
 
-    public Input<TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationArgs> getS3Configuration() {
-        return this.s3Configuration == null ? Input.empty() : this.s3Configuration;
+    public Output<TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationArgs> getS3Configuration() {
+        return this.s3Configuration == null ? Output.empty() : this.s3Configuration;
     }
 
-    public TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationArgs(@Nullable Input<TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationArgs> s3Configuration) {
+    public TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationArgs(@Nullable Output<TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationArgs> s3Configuration) {
         this.s3Configuration = s3Configuration;
     }
 
     private TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationArgs() {
-        this.s3Configuration = Input.empty();
+        this.s3Configuration = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLoc
     }
 
     public static final class Builder {
-        private @Nullable Input<TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationArgs> s3Configuration;
+        private @Nullable Output<TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationArgs> s3Configuration;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLoc
     	      this.s3Configuration = defaults.s3Configuration;
         }
 
-        public Builder s3Configuration(@Nullable Input<TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationArgs> s3Configuration) {
+        public Builder s3Configuration(@Nullable Output<TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationArgs> s3Configuration) {
             this.s3Configuration = s3Configuration;
             return this;
         }
 
         public Builder s3Configuration(@Nullable TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationArgs s3Configuration) {
-            this.s3Configuration = Input.ofNullable(s3Configuration);
+            this.s3Configuration = Output.ofNullable(s3Configuration);
             return this;
         }
         public TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationArgs build() {

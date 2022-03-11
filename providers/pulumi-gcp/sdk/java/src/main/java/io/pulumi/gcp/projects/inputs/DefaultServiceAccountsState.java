@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.projects.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class DefaultServiceAccountsState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="action")
-      private final @Nullable Input<String> action;
+      private final @Nullable Output<String> action;
 
-    public Input<String> getAction() {
-        return this.action == null ? Input.empty() : this.action;
+    public Output<String> getAction() {
+        return this.action == null ? Output.empty() : this.action;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class DefaultServiceAccountsState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class DefaultServiceAccountsState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="restorePolicy")
-      private final @Nullable Input<String> restorePolicy;
+      private final @Nullable Output<String> restorePolicy;
 
-    public Input<String> getRestorePolicy() {
-        return this.restorePolicy == null ? Input.empty() : this.restorePolicy;
+    public Output<String> getRestorePolicy() {
+        return this.restorePolicy == null ? Output.empty() : this.restorePolicy;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class DefaultServiceAccountsState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="serviceAccounts")
-      private final @Nullable Input<Map<String,Object>> serviceAccounts;
+      private final @Nullable Output<Map<String,Object>> serviceAccounts;
 
-    public Input<Map<String,Object>> getServiceAccounts() {
-        return this.serviceAccounts == null ? Input.empty() : this.serviceAccounts;
+    public Output<Map<String,Object>> getServiceAccounts() {
+        return this.serviceAccounts == null ? Output.empty() : this.serviceAccounts;
     }
 
     public DefaultServiceAccountsState(
-        @Nullable Input<String> action,
-        @Nullable Input<String> project,
-        @Nullable Input<String> restorePolicy,
-        @Nullable Input<Map<String,Object>> serviceAccounts) {
+        @Nullable Output<String> action,
+        @Nullable Output<String> project,
+        @Nullable Output<String> restorePolicy,
+        @Nullable Output<Map<String,Object>> serviceAccounts) {
         this.action = action;
         this.project = project;
         this.restorePolicy = restorePolicy;
@@ -75,10 +75,10 @@ public final class DefaultServiceAccountsState extends io.pulumi.resources.Resou
     }
 
     private DefaultServiceAccountsState() {
-        this.action = Input.empty();
-        this.project = Input.empty();
-        this.restorePolicy = Input.empty();
-        this.serviceAccounts = Input.empty();
+        this.action = Output.empty();
+        this.project = Output.empty();
+        this.restorePolicy = Output.empty();
+        this.serviceAccounts = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class DefaultServiceAccountsState extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> action;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> restorePolicy;
-        private @Nullable Input<Map<String,Object>> serviceAccounts;
+        private @Nullable Output<String> action;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> restorePolicy;
+        private @Nullable Output<Map<String,Object>> serviceAccounts;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class DefaultServiceAccountsState extends io.pulumi.resources.Resou
     	      this.serviceAccounts = defaults.serviceAccounts;
         }
 
-        public Builder action(@Nullable Input<String> action) {
+        public Builder action(@Nullable Output<String> action) {
             this.action = action;
             return this;
         }
 
         public Builder action(@Nullable String action) {
-            this.action = Input.ofNullable(action);
+            this.action = Output.ofNullable(action);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder restorePolicy(@Nullable Input<String> restorePolicy) {
+        public Builder restorePolicy(@Nullable Output<String> restorePolicy) {
             this.restorePolicy = restorePolicy;
             return this;
         }
 
         public Builder restorePolicy(@Nullable String restorePolicy) {
-            this.restorePolicy = Input.ofNullable(restorePolicy);
+            this.restorePolicy = Output.ofNullable(restorePolicy);
             return this;
         }
 
-        public Builder serviceAccounts(@Nullable Input<Map<String,Object>> serviceAccounts) {
+        public Builder serviceAccounts(@Nullable Output<Map<String,Object>> serviceAccounts) {
             this.serviceAccounts = serviceAccounts;
             return this;
         }
 
         public Builder serviceAccounts(@Nullable Map<String,Object> serviceAccounts) {
-            this.serviceAccounts = Input.ofNullable(serviceAccounts);
+            this.serviceAccounts = Output.ofNullable(serviceAccounts);
             return this;
         }
         public DefaultServiceAccountsState build() {

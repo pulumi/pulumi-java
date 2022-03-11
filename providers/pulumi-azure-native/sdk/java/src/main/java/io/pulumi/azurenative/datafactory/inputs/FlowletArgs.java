@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.inputs.DataFlowFolderArgs;
 import io.pulumi.azurenative.datafactory.inputs.DataFlowSinkArgs;
 import io.pulumi.azurenative.datafactory.inputs.DataFlowSourceArgs;
 import io.pulumi.azurenative.datafactory.inputs.TransformationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -29,10 +29,10 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="annotations")
-      private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Output<List<Object>> annotations;
 
-    public Input<List<Object>> getAnnotations() {
-        return this.annotations == null ? Input.empty() : this.annotations;
+    public Output<List<Object>> getAnnotations() {
+        return this.annotations == null ? Output.empty() : this.annotations;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="folder")
-      private final @Nullable Input<DataFlowFolderArgs> folder;
+      private final @Nullable Output<DataFlowFolderArgs> folder;
 
-    public Input<DataFlowFolderArgs> getFolder() {
-        return this.folder == null ? Input.empty() : this.folder;
+    public Output<DataFlowFolderArgs> getFolder() {
+        return this.folder == null ? Output.empty() : this.folder;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="script")
-      private final @Nullable Input<String> script;
+      private final @Nullable Output<String> script;
 
-    public Input<String> getScript() {
-        return this.script == null ? Input.empty() : this.script;
+    public Output<String> getScript() {
+        return this.script == null ? Output.empty() : this.script;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scriptLines")
-      private final @Nullable Input<List<String>> scriptLines;
+      private final @Nullable Output<List<String>> scriptLines;
 
-    public Input<List<String>> getScriptLines() {
-        return this.scriptLines == null ? Input.empty() : this.scriptLines;
+    public Output<List<String>> getScriptLines() {
+        return this.scriptLines == null ? Output.empty() : this.scriptLines;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sinks")
-      private final @Nullable Input<List<DataFlowSinkArgs>> sinks;
+      private final @Nullable Output<List<DataFlowSinkArgs>> sinks;
 
-    public Input<List<DataFlowSinkArgs>> getSinks() {
-        return this.sinks == null ? Input.empty() : this.sinks;
+    public Output<List<DataFlowSinkArgs>> getSinks() {
+        return this.sinks == null ? Output.empty() : this.sinks;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sources")
-      private final @Nullable Input<List<DataFlowSourceArgs>> sources;
+      private final @Nullable Output<List<DataFlowSourceArgs>> sources;
 
-    public Input<List<DataFlowSourceArgs>> getSources() {
-        return this.sources == null ? Input.empty() : this.sources;
+    public Output<List<DataFlowSourceArgs>> getSources() {
+        return this.sources == null ? Output.empty() : this.sources;
     }
 
     /**
@@ -106,10 +106,10 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transformations")
-      private final @Nullable Input<List<TransformationArgs>> transformations;
+      private final @Nullable Output<List<TransformationArgs>> transformations;
 
-    public Input<List<TransformationArgs>> getTransformations() {
-        return this.transformations == null ? Input.empty() : this.transformations;
+    public Output<List<TransformationArgs>> getTransformations() {
+        return this.transformations == null ? Output.empty() : this.transformations;
     }
 
     /**
@@ -118,22 +118,22 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public FlowletArgs(
-        @Nullable Input<List<Object>> annotations,
-        @Nullable Input<String> description,
-        @Nullable Input<DataFlowFolderArgs> folder,
-        @Nullable Input<String> script,
-        @Nullable Input<List<String>> scriptLines,
-        @Nullable Input<List<DataFlowSinkArgs>> sinks,
-        @Nullable Input<List<DataFlowSourceArgs>> sources,
-        @Nullable Input<List<TransformationArgs>> transformations,
-        Input<String> type) {
+        @Nullable Output<List<Object>> annotations,
+        @Nullable Output<String> description,
+        @Nullable Output<DataFlowFolderArgs> folder,
+        @Nullable Output<String> script,
+        @Nullable Output<List<String>> scriptLines,
+        @Nullable Output<List<DataFlowSinkArgs>> sinks,
+        @Nullable Output<List<DataFlowSourceArgs>> sources,
+        @Nullable Output<List<TransformationArgs>> transformations,
+        Output<String> type) {
         this.annotations = annotations;
         this.description = description;
         this.folder = folder;
@@ -146,15 +146,15 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FlowletArgs() {
-        this.annotations = Input.empty();
-        this.description = Input.empty();
-        this.folder = Input.empty();
-        this.script = Input.empty();
-        this.scriptLines = Input.empty();
-        this.sinks = Input.empty();
-        this.sources = Input.empty();
-        this.transformations = Input.empty();
-        this.type = Input.empty();
+        this.annotations = Output.empty();
+        this.description = Output.empty();
+        this.folder = Output.empty();
+        this.script = Output.empty();
+        this.scriptLines = Output.empty();
+        this.sinks = Output.empty();
+        this.sources = Output.empty();
+        this.transformations = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -166,15 +166,15 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Object>> annotations;
-        private @Nullable Input<String> description;
-        private @Nullable Input<DataFlowFolderArgs> folder;
-        private @Nullable Input<String> script;
-        private @Nullable Input<List<String>> scriptLines;
-        private @Nullable Input<List<DataFlowSinkArgs>> sinks;
-        private @Nullable Input<List<DataFlowSourceArgs>> sources;
-        private @Nullable Input<List<TransformationArgs>> transformations;
-        private Input<String> type;
+        private @Nullable Output<List<Object>> annotations;
+        private @Nullable Output<String> description;
+        private @Nullable Output<DataFlowFolderArgs> folder;
+        private @Nullable Output<String> script;
+        private @Nullable Output<List<String>> scriptLines;
+        private @Nullable Output<List<DataFlowSinkArgs>> sinks;
+        private @Nullable Output<List<DataFlowSourceArgs>> sources;
+        private @Nullable Output<List<TransformationArgs>> transformations;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -193,93 +193,93 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder annotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Output<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Input.ofNullable(annotations);
+            this.annotations = Output.ofNullable(annotations);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder folder(@Nullable Input<DataFlowFolderArgs> folder) {
+        public Builder folder(@Nullable Output<DataFlowFolderArgs> folder) {
             this.folder = folder;
             return this;
         }
 
         public Builder folder(@Nullable DataFlowFolderArgs folder) {
-            this.folder = Input.ofNullable(folder);
+            this.folder = Output.ofNullable(folder);
             return this;
         }
 
-        public Builder script(@Nullable Input<String> script) {
+        public Builder script(@Nullable Output<String> script) {
             this.script = script;
             return this;
         }
 
         public Builder script(@Nullable String script) {
-            this.script = Input.ofNullable(script);
+            this.script = Output.ofNullable(script);
             return this;
         }
 
-        public Builder scriptLines(@Nullable Input<List<String>> scriptLines) {
+        public Builder scriptLines(@Nullable Output<List<String>> scriptLines) {
             this.scriptLines = scriptLines;
             return this;
         }
 
         public Builder scriptLines(@Nullable List<String> scriptLines) {
-            this.scriptLines = Input.ofNullable(scriptLines);
+            this.scriptLines = Output.ofNullable(scriptLines);
             return this;
         }
 
-        public Builder sinks(@Nullable Input<List<DataFlowSinkArgs>> sinks) {
+        public Builder sinks(@Nullable Output<List<DataFlowSinkArgs>> sinks) {
             this.sinks = sinks;
             return this;
         }
 
         public Builder sinks(@Nullable List<DataFlowSinkArgs> sinks) {
-            this.sinks = Input.ofNullable(sinks);
+            this.sinks = Output.ofNullable(sinks);
             return this;
         }
 
-        public Builder sources(@Nullable Input<List<DataFlowSourceArgs>> sources) {
+        public Builder sources(@Nullable Output<List<DataFlowSourceArgs>> sources) {
             this.sources = sources;
             return this;
         }
 
         public Builder sources(@Nullable List<DataFlowSourceArgs> sources) {
-            this.sources = Input.ofNullable(sources);
+            this.sources = Output.ofNullable(sources);
             return this;
         }
 
-        public Builder transformations(@Nullable Input<List<TransformationArgs>> transformations) {
+        public Builder transformations(@Nullable Output<List<TransformationArgs>> transformations) {
             this.transformations = transformations;
             return this;
         }
 
         public Builder transformations(@Nullable List<TransformationArgs> transformations) {
-            this.transformations = Input.ofNullable(transformations);
+            this.transformations = Output.ofNullable(transformations);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public FlowletArgs build() {

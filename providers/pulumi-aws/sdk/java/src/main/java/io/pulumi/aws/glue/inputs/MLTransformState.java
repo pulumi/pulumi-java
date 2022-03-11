@@ -6,7 +6,7 @@ package io.pulumi.aws.glue.inputs;
 import io.pulumi.aws.glue.inputs.MLTransformInputRecordTableGetArgs;
 import io.pulumi.aws.glue.inputs.MLTransformParametersGetArgs;
 import io.pulumi.aws.glue.inputs.MLTransformSchemaGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
@@ -26,10 +26,10 @@ public final class MLTransformState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class MLTransformState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class MLTransformState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="glueVersion")
-      private final @Nullable Input<String> glueVersion;
+      private final @Nullable Output<String> glueVersion;
 
-    public Input<String> getGlueVersion() {
-        return this.glueVersion == null ? Input.empty() : this.glueVersion;
+    public Output<String> getGlueVersion() {
+        return this.glueVersion == null ? Output.empty() : this.glueVersion;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class MLTransformState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputRecordTables")
-      private final @Nullable Input<List<MLTransformInputRecordTableGetArgs>> inputRecordTables;
+      private final @Nullable Output<List<MLTransformInputRecordTableGetArgs>> inputRecordTables;
 
-    public Input<List<MLTransformInputRecordTableGetArgs>> getInputRecordTables() {
-        return this.inputRecordTables == null ? Input.empty() : this.inputRecordTables;
+    public Output<List<MLTransformInputRecordTableGetArgs>> getInputRecordTables() {
+        return this.inputRecordTables == null ? Output.empty() : this.inputRecordTables;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class MLTransformState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labelCount")
-      private final @Nullable Input<Integer> labelCount;
+      private final @Nullable Output<Integer> labelCount;
 
-    public Input<Integer> getLabelCount() {
-        return this.labelCount == null ? Input.empty() : this.labelCount;
+    public Output<Integer> getLabelCount() {
+        return this.labelCount == null ? Output.empty() : this.labelCount;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class MLTransformState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxCapacity")
-      private final @Nullable Input<Double> maxCapacity;
+      private final @Nullable Output<Double> maxCapacity;
 
-    public Input<Double> getMaxCapacity() {
-        return this.maxCapacity == null ? Input.empty() : this.maxCapacity;
+    public Output<Double> getMaxCapacity() {
+        return this.maxCapacity == null ? Output.empty() : this.maxCapacity;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class MLTransformState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxRetries")
-      private final @Nullable Input<Integer> maxRetries;
+      private final @Nullable Output<Integer> maxRetries;
 
-    public Input<Integer> getMaxRetries() {
-        return this.maxRetries == null ? Input.empty() : this.maxRetries;
+    public Output<Integer> getMaxRetries() {
+        return this.maxRetries == null ? Output.empty() : this.maxRetries;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class MLTransformState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -114,10 +114,10 @@ public final class MLTransformState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="numberOfWorkers")
-      private final @Nullable Input<Integer> numberOfWorkers;
+      private final @Nullable Output<Integer> numberOfWorkers;
 
-    public Input<Integer> getNumberOfWorkers() {
-        return this.numberOfWorkers == null ? Input.empty() : this.numberOfWorkers;
+    public Output<Integer> getNumberOfWorkers() {
+        return this.numberOfWorkers == null ? Output.empty() : this.numberOfWorkers;
     }
 
     /**
@@ -125,10 +125,10 @@ public final class MLTransformState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<MLTransformParametersGetArgs> parameters;
+      private final @Nullable Output<MLTransformParametersGetArgs> parameters;
 
-    public Input<MLTransformParametersGetArgs> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<MLTransformParametersGetArgs> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -136,10 +136,10 @@ public final class MLTransformState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn")
-      private final @Nullable Input<String> roleArn;
+      private final @Nullable Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
-        return this.roleArn == null ? Input.empty() : this.roleArn;
+    public Output<String> getRoleArn() {
+        return this.roleArn == null ? Output.empty() : this.roleArn;
     }
 
     /**
@@ -147,10 +147,10 @@ public final class MLTransformState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schemas")
-      private final @Nullable Input<List<MLTransformSchemaGetArgs>> schemas;
+      private final @Nullable Output<List<MLTransformSchemaGetArgs>> schemas;
 
-    public Input<List<MLTransformSchemaGetArgs>> getSchemas() {
-        return this.schemas == null ? Input.empty() : this.schemas;
+    public Output<List<MLTransformSchemaGetArgs>> getSchemas() {
+        return this.schemas == null ? Output.empty() : this.schemas;
     }
 
     /**
@@ -158,10 +158,10 @@ public final class MLTransformState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -169,10 +169,10 @@ public final class MLTransformState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -180,10 +180,10 @@ public final class MLTransformState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeout")
-      private final @Nullable Input<Integer> timeout;
+      private final @Nullable Output<Integer> timeout;
 
-    public Input<Integer> getTimeout() {
-        return this.timeout == null ? Input.empty() : this.timeout;
+    public Output<Integer> getTimeout() {
+        return this.timeout == null ? Output.empty() : this.timeout;
     }
 
     /**
@@ -191,29 +191,29 @@ public final class MLTransformState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workerType")
-      private final @Nullable Input<String> workerType;
+      private final @Nullable Output<String> workerType;
 
-    public Input<String> getWorkerType() {
-        return this.workerType == null ? Input.empty() : this.workerType;
+    public Output<String> getWorkerType() {
+        return this.workerType == null ? Output.empty() : this.workerType;
     }
 
     public MLTransformState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> description,
-        @Nullable Input<String> glueVersion,
-        @Nullable Input<List<MLTransformInputRecordTableGetArgs>> inputRecordTables,
-        @Nullable Input<Integer> labelCount,
-        @Nullable Input<Double> maxCapacity,
-        @Nullable Input<Integer> maxRetries,
-        @Nullable Input<String> name,
-        @Nullable Input<Integer> numberOfWorkers,
-        @Nullable Input<MLTransformParametersGetArgs> parameters,
-        @Nullable Input<String> roleArn,
-        @Nullable Input<List<MLTransformSchemaGetArgs>> schemas,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<Integer> timeout,
-        @Nullable Input<String> workerType) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> description,
+        @Nullable Output<String> glueVersion,
+        @Nullable Output<List<MLTransformInputRecordTableGetArgs>> inputRecordTables,
+        @Nullable Output<Integer> labelCount,
+        @Nullable Output<Double> maxCapacity,
+        @Nullable Output<Integer> maxRetries,
+        @Nullable Output<String> name,
+        @Nullable Output<Integer> numberOfWorkers,
+        @Nullable Output<MLTransformParametersGetArgs> parameters,
+        @Nullable Output<String> roleArn,
+        @Nullable Output<List<MLTransformSchemaGetArgs>> schemas,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<Integer> timeout,
+        @Nullable Output<String> workerType) {
         this.arn = arn;
         this.description = description;
         this.glueVersion = glueVersion;
@@ -233,22 +233,22 @@ public final class MLTransformState extends io.pulumi.resources.ResourceArgs {
     }
 
     private MLTransformState() {
-        this.arn = Input.empty();
-        this.description = Input.empty();
-        this.glueVersion = Input.empty();
-        this.inputRecordTables = Input.empty();
-        this.labelCount = Input.empty();
-        this.maxCapacity = Input.empty();
-        this.maxRetries = Input.empty();
-        this.name = Input.empty();
-        this.numberOfWorkers = Input.empty();
-        this.parameters = Input.empty();
-        this.roleArn = Input.empty();
-        this.schemas = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.timeout = Input.empty();
-        this.workerType = Input.empty();
+        this.arn = Output.empty();
+        this.description = Output.empty();
+        this.glueVersion = Output.empty();
+        this.inputRecordTables = Output.empty();
+        this.labelCount = Output.empty();
+        this.maxCapacity = Output.empty();
+        this.maxRetries = Output.empty();
+        this.name = Output.empty();
+        this.numberOfWorkers = Output.empty();
+        this.parameters = Output.empty();
+        this.roleArn = Output.empty();
+        this.schemas = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.timeout = Output.empty();
+        this.workerType = Output.empty();
     }
 
     public static Builder builder() {
@@ -260,22 +260,22 @@ public final class MLTransformState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> glueVersion;
-        private @Nullable Input<List<MLTransformInputRecordTableGetArgs>> inputRecordTables;
-        private @Nullable Input<Integer> labelCount;
-        private @Nullable Input<Double> maxCapacity;
-        private @Nullable Input<Integer> maxRetries;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Integer> numberOfWorkers;
-        private @Nullable Input<MLTransformParametersGetArgs> parameters;
-        private @Nullable Input<String> roleArn;
-        private @Nullable Input<List<MLTransformSchemaGetArgs>> schemas;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<Integer> timeout;
-        private @Nullable Input<String> workerType;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> glueVersion;
+        private @Nullable Output<List<MLTransformInputRecordTableGetArgs>> inputRecordTables;
+        private @Nullable Output<Integer> labelCount;
+        private @Nullable Output<Double> maxCapacity;
+        private @Nullable Output<Integer> maxRetries;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Integer> numberOfWorkers;
+        private @Nullable Output<MLTransformParametersGetArgs> parameters;
+        private @Nullable Output<String> roleArn;
+        private @Nullable Output<List<MLTransformSchemaGetArgs>> schemas;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<Integer> timeout;
+        private @Nullable Output<String> workerType;
 
         public Builder() {
     	      // Empty
@@ -301,163 +301,163 @@ public final class MLTransformState extends io.pulumi.resources.ResourceArgs {
     	      this.workerType = defaults.workerType;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder glueVersion(@Nullable Input<String> glueVersion) {
+        public Builder glueVersion(@Nullable Output<String> glueVersion) {
             this.glueVersion = glueVersion;
             return this;
         }
 
         public Builder glueVersion(@Nullable String glueVersion) {
-            this.glueVersion = Input.ofNullable(glueVersion);
+            this.glueVersion = Output.ofNullable(glueVersion);
             return this;
         }
 
-        public Builder inputRecordTables(@Nullable Input<List<MLTransformInputRecordTableGetArgs>> inputRecordTables) {
+        public Builder inputRecordTables(@Nullable Output<List<MLTransformInputRecordTableGetArgs>> inputRecordTables) {
             this.inputRecordTables = inputRecordTables;
             return this;
         }
 
         public Builder inputRecordTables(@Nullable List<MLTransformInputRecordTableGetArgs> inputRecordTables) {
-            this.inputRecordTables = Input.ofNullable(inputRecordTables);
+            this.inputRecordTables = Output.ofNullable(inputRecordTables);
             return this;
         }
 
-        public Builder labelCount(@Nullable Input<Integer> labelCount) {
+        public Builder labelCount(@Nullable Output<Integer> labelCount) {
             this.labelCount = labelCount;
             return this;
         }
 
         public Builder labelCount(@Nullable Integer labelCount) {
-            this.labelCount = Input.ofNullable(labelCount);
+            this.labelCount = Output.ofNullable(labelCount);
             return this;
         }
 
-        public Builder maxCapacity(@Nullable Input<Double> maxCapacity) {
+        public Builder maxCapacity(@Nullable Output<Double> maxCapacity) {
             this.maxCapacity = maxCapacity;
             return this;
         }
 
         public Builder maxCapacity(@Nullable Double maxCapacity) {
-            this.maxCapacity = Input.ofNullable(maxCapacity);
+            this.maxCapacity = Output.ofNullable(maxCapacity);
             return this;
         }
 
-        public Builder maxRetries(@Nullable Input<Integer> maxRetries) {
+        public Builder maxRetries(@Nullable Output<Integer> maxRetries) {
             this.maxRetries = maxRetries;
             return this;
         }
 
         public Builder maxRetries(@Nullable Integer maxRetries) {
-            this.maxRetries = Input.ofNullable(maxRetries);
+            this.maxRetries = Output.ofNullable(maxRetries);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder numberOfWorkers(@Nullable Input<Integer> numberOfWorkers) {
+        public Builder numberOfWorkers(@Nullable Output<Integer> numberOfWorkers) {
             this.numberOfWorkers = numberOfWorkers;
             return this;
         }
 
         public Builder numberOfWorkers(@Nullable Integer numberOfWorkers) {
-            this.numberOfWorkers = Input.ofNullable(numberOfWorkers);
+            this.numberOfWorkers = Output.ofNullable(numberOfWorkers);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<MLTransformParametersGetArgs> parameters) {
+        public Builder parameters(@Nullable Output<MLTransformParametersGetArgs> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable MLTransformParametersGetArgs parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder roleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Input.ofNullable(roleArn);
+            this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
 
-        public Builder schemas(@Nullable Input<List<MLTransformSchemaGetArgs>> schemas) {
+        public Builder schemas(@Nullable Output<List<MLTransformSchemaGetArgs>> schemas) {
             this.schemas = schemas;
             return this;
         }
 
         public Builder schemas(@Nullable List<MLTransformSchemaGetArgs> schemas) {
-            this.schemas = Input.ofNullable(schemas);
+            this.schemas = Output.ofNullable(schemas);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder timeout(@Nullable Input<Integer> timeout) {
+        public Builder timeout(@Nullable Output<Integer> timeout) {
             this.timeout = timeout;
             return this;
         }
 
         public Builder timeout(@Nullable Integer timeout) {
-            this.timeout = Input.ofNullable(timeout);
+            this.timeout = Output.ofNullable(timeout);
             return this;
         }
 
-        public Builder workerType(@Nullable Input<String> workerType) {
+        public Builder workerType(@Nullable Output<String> workerType) {
             this.workerType = workerType;
             return this;
         }
 
         public Builder workerType(@Nullable String workerType) {
-            this.workerType = Input.ofNullable(workerType);
+            this.workerType = Output.ofNullable(workerType);
             return this;
         }
         public MLTransformState build() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.logic;
 import io.pulumi.azurenative.logic.enums.MapType;
 import io.pulumi.azurenative.logic.inputs.IntegrationAccountMapPropertiesParametersSchemaArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="content")
-      private final @Nullable Input<String> content;
+      private final @Nullable Output<String> content;
 
-    public Input<String> getContent() {
-        return this.content == null ? Input.empty() : this.content;
+    public Output<String> getContent() {
+        return this.content == null ? Output.empty() : this.content;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="contentType")
-      private final @Nullable Input<String> contentType;
+      private final @Nullable Output<String> contentType;
 
-    public Input<String> getContentType() {
-        return this.contentType == null ? Input.empty() : this.contentType;
+    public Output<String> getContentType() {
+        return this.contentType == null ? Output.empty() : this.contentType;
     }
 
     /**
@@ -46,9 +46,9 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="integrationAccountName", required=true)
-      private final Input<String> integrationAccountName;
+      private final Output<String> integrationAccountName;
 
-    public Input<String> getIntegrationAccountName() {
+    public Output<String> getIntegrationAccountName() {
         return this.integrationAccountName;
     }
 
@@ -57,10 +57,10 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="mapName")
-      private final @Nullable Input<String> mapName;
+      private final @Nullable Output<String> mapName;
 
-    public Input<String> getMapName() {
-        return this.mapName == null ? Input.empty() : this.mapName;
+    public Output<String> getMapName() {
+        return this.mapName == null ? Output.empty() : this.mapName;
     }
 
     /**
@@ -79,9 +79,9 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="mapType", required=true)
-      private final Input<Either<String,MapType>> mapType;
+      private final Output<Either<String,MapType>> mapType;
 
-    public Input<Either<String,MapType>> getMapType() {
+    public Output<Either<String,MapType>> getMapType() {
         return this.mapType;
     }
 
@@ -90,10 +90,10 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<Object> metadata;
+      private final @Nullable Output<Object> metadata;
 
-    public Input<Object> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Object> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="parametersSchema")
-      private final @Nullable Input<IntegrationAccountMapPropertiesParametersSchemaArgs> parametersSchema;
+      private final @Nullable Output<IntegrationAccountMapPropertiesParametersSchemaArgs> parametersSchema;
 
-    public Input<IntegrationAccountMapPropertiesParametersSchemaArgs> getParametersSchema() {
-        return this.parametersSchema == null ? Input.empty() : this.parametersSchema;
+    public Output<IntegrationAccountMapPropertiesParametersSchemaArgs> getParametersSchema() {
+        return this.parametersSchema == null ? Output.empty() : this.parametersSchema;
     }
 
     /**
@@ -112,9 +112,9 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -123,23 +123,23 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public IntegrationAccountMapArgs(
-        @Nullable Input<String> content,
-        @Nullable Input<String> contentType,
-        Input<String> integrationAccountName,
-        @Nullable Input<String> location,
-        @Nullable Input<String> mapName,
-        Input<Either<String,MapType>> mapType,
-        @Nullable Input<Object> metadata,
-        @Nullable Input<IntegrationAccountMapPropertiesParametersSchemaArgs> parametersSchema,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> content,
+        @Nullable Output<String> contentType,
+        Output<String> integrationAccountName,
+        @Nullable Output<String> location,
+        @Nullable Output<String> mapName,
+        Output<Either<String,MapType>> mapType,
+        @Nullable Output<Object> metadata,
+        @Nullable Output<IntegrationAccountMapPropertiesParametersSchemaArgs> parametersSchema,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.content = content;
         this.contentType = contentType;
         this.integrationAccountName = Objects.requireNonNull(integrationAccountName, "expected parameter 'integrationAccountName' to be non-null");
@@ -153,16 +153,16 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
     }
 
     private IntegrationAccountMapArgs() {
-        this.content = Input.empty();
-        this.contentType = Input.empty();
-        this.integrationAccountName = Input.empty();
-        this.location = Input.empty();
-        this.mapName = Input.empty();
-        this.mapType = Input.empty();
-        this.metadata = Input.empty();
-        this.parametersSchema = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.content = Output.empty();
+        this.contentType = Output.empty();
+        this.integrationAccountName = Output.empty();
+        this.location = Output.empty();
+        this.mapName = Output.empty();
+        this.mapType = Output.empty();
+        this.metadata = Output.empty();
+        this.parametersSchema = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -174,16 +174,16 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> content;
-        private @Nullable Input<String> contentType;
-        private Input<String> integrationAccountName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> mapName;
-        private Input<Either<String,MapType>> mapType;
-        private @Nullable Input<Object> metadata;
-        private @Nullable Input<IntegrationAccountMapPropertiesParametersSchemaArgs> parametersSchema;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> content;
+        private @Nullable Output<String> contentType;
+        private Output<String> integrationAccountName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> mapName;
+        private Output<Either<String,MapType>> mapType;
+        private @Nullable Output<Object> metadata;
+        private @Nullable Output<IntegrationAccountMapPropertiesParametersSchemaArgs> parametersSchema;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -203,103 +203,103 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
     	      this.tags = defaults.tags;
         }
 
-        public Builder content(@Nullable Input<String> content) {
+        public Builder content(@Nullable Output<String> content) {
             this.content = content;
             return this;
         }
 
         public Builder content(@Nullable String content) {
-            this.content = Input.ofNullable(content);
+            this.content = Output.ofNullable(content);
             return this;
         }
 
-        public Builder contentType(@Nullable Input<String> contentType) {
+        public Builder contentType(@Nullable Output<String> contentType) {
             this.contentType = contentType;
             return this;
         }
 
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = Input.ofNullable(contentType);
+            this.contentType = Output.ofNullable(contentType);
             return this;
         }
 
-        public Builder integrationAccountName(Input<String> integrationAccountName) {
+        public Builder integrationAccountName(Output<String> integrationAccountName) {
             this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
             return this;
         }
 
         public Builder integrationAccountName(String integrationAccountName) {
-            this.integrationAccountName = Input.of(Objects.requireNonNull(integrationAccountName));
+            this.integrationAccountName = Output.of(Objects.requireNonNull(integrationAccountName));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder mapName(@Nullable Input<String> mapName) {
+        public Builder mapName(@Nullable Output<String> mapName) {
             this.mapName = mapName;
             return this;
         }
 
         public Builder mapName(@Nullable String mapName) {
-            this.mapName = Input.ofNullable(mapName);
+            this.mapName = Output.ofNullable(mapName);
             return this;
         }
 
-        public Builder mapType(Input<Either<String,MapType>> mapType) {
+        public Builder mapType(Output<Either<String,MapType>> mapType) {
             this.mapType = Objects.requireNonNull(mapType);
             return this;
         }
 
         public Builder mapType(Either<String,MapType> mapType) {
-            this.mapType = Input.of(Objects.requireNonNull(mapType));
+            this.mapType = Output.of(Objects.requireNonNull(mapType));
             return this;
         }
 
-        public Builder metadata(@Nullable Input<Object> metadata) {
+        public Builder metadata(@Nullable Output<Object> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Object metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder parametersSchema(@Nullable Input<IntegrationAccountMapPropertiesParametersSchemaArgs> parametersSchema) {
+        public Builder parametersSchema(@Nullable Output<IntegrationAccountMapPropertiesParametersSchemaArgs> parametersSchema) {
             this.parametersSchema = parametersSchema;
             return this;
         }
 
         public Builder parametersSchema(@Nullable IntegrationAccountMapPropertiesParametersSchemaArgs parametersSchema) {
-            this.parametersSchema = Input.ofNullable(parametersSchema);
+            this.parametersSchema = Output.ofNullable(parametersSchema);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public IntegrationAccountMapArgs build() {

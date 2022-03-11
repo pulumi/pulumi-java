@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class LoadBalancerNatRuleReferenceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class LoadBalancerNatRuleReferenceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sourceArmResourceId", required=true)
-      private final Input<String> sourceArmResourceId;
+      private final Output<String> sourceArmResourceId;
 
-    public Input<String> getSourceArmResourceId() {
+    public Output<String> getSourceArmResourceId() {
         return this.sourceArmResourceId;
     }
 
     public LoadBalancerNatRuleReferenceArgs(
-        @Nullable Input<String> name,
-        Input<String> sourceArmResourceId) {
+        @Nullable Output<String> name,
+        Output<String> sourceArmResourceId) {
         this.name = name;
         this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId, "expected parameter 'sourceArmResourceId' to be non-null");
     }
 
     private LoadBalancerNatRuleReferenceArgs() {
-        this.name = Input.empty();
-        this.sourceArmResourceId = Input.empty();
+        this.name = Output.empty();
+        this.sourceArmResourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class LoadBalancerNatRuleReferenceArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private Input<String> sourceArmResourceId;
+        private @Nullable Output<String> name;
+        private Output<String> sourceArmResourceId;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class LoadBalancerNatRuleReferenceArgs extends io.pulumi.resources.
     	      this.sourceArmResourceId = defaults.sourceArmResourceId;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder sourceArmResourceId(Input<String> sourceArmResourceId) {
+        public Builder sourceArmResourceId(Output<String> sourceArmResourceId) {
             this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId);
             return this;
         }
 
         public Builder sourceArmResourceId(String sourceArmResourceId) {
-            this.sourceArmResourceId = Input.of(Objects.requireNonNull(sourceArmResourceId));
+            this.sourceArmResourceId = Output.of(Objects.requireNonNull(sourceArmResourceId));
             return this;
         }
         public LoadBalancerNatRuleReferenceArgs build() {

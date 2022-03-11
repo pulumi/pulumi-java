@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.inputs.BigtableColumnArgs;
 import java.lang.Boolean;
@@ -22,10 +22,10 @@ public final class BigtableColumnFamilyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="columns")
-      private final @Nullable Input<List<BigtableColumnArgs>> columns;
+      private final @Nullable Output<List<BigtableColumnArgs>> columns;
 
-    public Input<List<BigtableColumnArgs>> getColumns() {
-        return this.columns == null ? Input.empty() : this.columns;
+    public Output<List<BigtableColumnArgs>> getColumns() {
+        return this.columns == null ? Output.empty() : this.columns;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class BigtableColumnFamilyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="encoding")
-      private final @Nullable Input<String> encoding;
+      private final @Nullable Output<String> encoding;
 
-    public Input<String> getEncoding() {
-        return this.encoding == null ? Input.empty() : this.encoding;
+    public Output<String> getEncoding() {
+        return this.encoding == null ? Output.empty() : this.encoding;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class BigtableColumnFamilyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="familyId")
-      private final @Nullable Input<String> familyId;
+      private final @Nullable Output<String> familyId;
 
-    public Input<String> getFamilyId() {
-        return this.familyId == null ? Input.empty() : this.familyId;
+    public Output<String> getFamilyId() {
+        return this.familyId == null ? Output.empty() : this.familyId;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class BigtableColumnFamilyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="onlyReadLatest")
-      private final @Nullable Input<Boolean> onlyReadLatest;
+      private final @Nullable Output<Boolean> onlyReadLatest;
 
-    public Input<Boolean> getOnlyReadLatest() {
-        return this.onlyReadLatest == null ? Input.empty() : this.onlyReadLatest;
+    public Output<Boolean> getOnlyReadLatest() {
+        return this.onlyReadLatest == null ? Output.empty() : this.onlyReadLatest;
     }
 
     /**
@@ -66,18 +66,18 @@ public final class BigtableColumnFamilyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public BigtableColumnFamilyArgs(
-        @Nullable Input<List<BigtableColumnArgs>> columns,
-        @Nullable Input<String> encoding,
-        @Nullable Input<String> familyId,
-        @Nullable Input<Boolean> onlyReadLatest,
-        @Nullable Input<String> type) {
+        @Nullable Output<List<BigtableColumnArgs>> columns,
+        @Nullable Output<String> encoding,
+        @Nullable Output<String> familyId,
+        @Nullable Output<Boolean> onlyReadLatest,
+        @Nullable Output<String> type) {
         this.columns = columns;
         this.encoding = encoding;
         this.familyId = familyId;
@@ -86,11 +86,11 @@ public final class BigtableColumnFamilyArgs extends io.pulumi.resources.Resource
     }
 
     private BigtableColumnFamilyArgs() {
-        this.columns = Input.empty();
-        this.encoding = Input.empty();
-        this.familyId = Input.empty();
-        this.onlyReadLatest = Input.empty();
-        this.type = Input.empty();
+        this.columns = Output.empty();
+        this.encoding = Output.empty();
+        this.familyId = Output.empty();
+        this.onlyReadLatest = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -102,11 +102,11 @@ public final class BigtableColumnFamilyArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<List<BigtableColumnArgs>> columns;
-        private @Nullable Input<String> encoding;
-        private @Nullable Input<String> familyId;
-        private @Nullable Input<Boolean> onlyReadLatest;
-        private @Nullable Input<String> type;
+        private @Nullable Output<List<BigtableColumnArgs>> columns;
+        private @Nullable Output<String> encoding;
+        private @Nullable Output<String> familyId;
+        private @Nullable Output<Boolean> onlyReadLatest;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -121,53 +121,53 @@ public final class BigtableColumnFamilyArgs extends io.pulumi.resources.Resource
     	      this.type = defaults.type;
         }
 
-        public Builder columns(@Nullable Input<List<BigtableColumnArgs>> columns) {
+        public Builder columns(@Nullable Output<List<BigtableColumnArgs>> columns) {
             this.columns = columns;
             return this;
         }
 
         public Builder columns(@Nullable List<BigtableColumnArgs> columns) {
-            this.columns = Input.ofNullable(columns);
+            this.columns = Output.ofNullable(columns);
             return this;
         }
 
-        public Builder encoding(@Nullable Input<String> encoding) {
+        public Builder encoding(@Nullable Output<String> encoding) {
             this.encoding = encoding;
             return this;
         }
 
         public Builder encoding(@Nullable String encoding) {
-            this.encoding = Input.ofNullable(encoding);
+            this.encoding = Output.ofNullable(encoding);
             return this;
         }
 
-        public Builder familyId(@Nullable Input<String> familyId) {
+        public Builder familyId(@Nullable Output<String> familyId) {
             this.familyId = familyId;
             return this;
         }
 
         public Builder familyId(@Nullable String familyId) {
-            this.familyId = Input.ofNullable(familyId);
+            this.familyId = Output.ofNullable(familyId);
             return this;
         }
 
-        public Builder onlyReadLatest(@Nullable Input<Boolean> onlyReadLatest) {
+        public Builder onlyReadLatest(@Nullable Output<Boolean> onlyReadLatest) {
             this.onlyReadLatest = onlyReadLatest;
             return this;
         }
 
         public Builder onlyReadLatest(@Nullable Boolean onlyReadLatest) {
-            this.onlyReadLatest = Input.ofNullable(onlyReadLatest);
+            this.onlyReadLatest = Output.ofNullable(onlyReadLatest);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public BigtableColumnFamilyArgs build() {

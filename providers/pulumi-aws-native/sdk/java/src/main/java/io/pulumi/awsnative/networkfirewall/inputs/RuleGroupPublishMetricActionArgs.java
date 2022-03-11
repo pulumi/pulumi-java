@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.networkfirewall.inputs;
 
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupDimensionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class RuleGroupPublishMetricActionArgs extends io.pulumi.resources.
     public static final RuleGroupPublishMetricActionArgs Empty = new RuleGroupPublishMetricActionArgs();
 
     @InputImport(name="dimensions", required=true)
-      private final Input<List<RuleGroupDimensionArgs>> dimensions;
+      private final Output<List<RuleGroupDimensionArgs>> dimensions;
 
-    public Input<List<RuleGroupDimensionArgs>> getDimensions() {
+    public Output<List<RuleGroupDimensionArgs>> getDimensions() {
         return this.dimensions;
     }
 
-    public RuleGroupPublishMetricActionArgs(Input<List<RuleGroupDimensionArgs>> dimensions) {
+    public RuleGroupPublishMetricActionArgs(Output<List<RuleGroupDimensionArgs>> dimensions) {
         this.dimensions = Objects.requireNonNull(dimensions, "expected parameter 'dimensions' to be non-null");
     }
 
     private RuleGroupPublishMetricActionArgs() {
-        this.dimensions = Input.empty();
+        this.dimensions = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class RuleGroupPublishMetricActionArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<List<RuleGroupDimensionArgs>> dimensions;
+        private Output<List<RuleGroupDimensionArgs>> dimensions;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class RuleGroupPublishMetricActionArgs extends io.pulumi.resources.
     	      this.dimensions = defaults.dimensions;
         }
 
-        public Builder dimensions(Input<List<RuleGroupDimensionArgs>> dimensions) {
+        public Builder dimensions(Output<List<RuleGroupDimensionArgs>> dimensions) {
             this.dimensions = Objects.requireNonNull(dimensions);
             return this;
         }
 
         public Builder dimensions(List<RuleGroupDimensionArgs> dimensions) {
-            this.dimensions = Input.of(Objects.requireNonNull(dimensions));
+            this.dimensions = Output.of(Objects.requireNonNull(dimensions));
             return this;
         }
         public RuleGroupPublishMetricActionArgs build() {

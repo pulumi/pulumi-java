@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class AssignedUserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectId", required=true)
-      private final Input<String> objectId;
+      private final Output<String> objectId;
 
-    public Input<String> getObjectId() {
+    public Output<String> getObjectId() {
         return this.objectId;
     }
 
@@ -33,22 +33,22 @@ public final class AssignedUserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tenantId", required=true)
-      private final Input<String> tenantId;
+      private final Output<String> tenantId;
 
-    public Input<String> getTenantId() {
+    public Output<String> getTenantId() {
         return this.tenantId;
     }
 
     public AssignedUserArgs(
-        Input<String> objectId,
-        Input<String> tenantId) {
+        Output<String> objectId,
+        Output<String> tenantId) {
         this.objectId = Objects.requireNonNull(objectId, "expected parameter 'objectId' to be non-null");
         this.tenantId = Objects.requireNonNull(tenantId, "expected parameter 'tenantId' to be non-null");
     }
 
     private AssignedUserArgs() {
-        this.objectId = Input.empty();
-        this.tenantId = Input.empty();
+        this.objectId = Output.empty();
+        this.tenantId = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class AssignedUserArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> objectId;
-        private Input<String> tenantId;
+        private Output<String> objectId;
+        private Output<String> tenantId;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class AssignedUserArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder objectId(Input<String> objectId) {
+        public Builder objectId(Output<String> objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
 
         public Builder objectId(String objectId) {
-            this.objectId = Input.of(Objects.requireNonNull(objectId));
+            this.objectId = Output.of(Objects.requireNonNull(objectId));
             return this;
         }
 
-        public Builder tenantId(Input<String> tenantId) {
+        public Builder tenantId(Output<String> tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
 
         public Builder tenantId(String tenantId) {
-            this.tenantId = Input.of(Objects.requireNonNull(tenantId));
+            this.tenantId = Output.of(Objects.requireNonNull(tenantId));
             return this;
         }
         public AssignedUserArgs build() {

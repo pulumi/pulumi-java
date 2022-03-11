@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apikeys_v2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apikeys_v2.inputs.V2RestrictionsArgs;
 import java.lang.String;
@@ -20,31 +20,31 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     @InputImport(name="keyId")
-      private final @Nullable Input<String> keyId;
+      private final @Nullable Output<String> keyId;
 
-    public Input<String> getKeyId() {
-        return this.keyId == null ? Input.empty() : this.keyId;
+    public Output<String> getKeyId() {
+        return this.keyId == null ? Output.empty() : this.keyId;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -52,18 +52,18 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restrictions")
-      private final @Nullable Input<V2RestrictionsArgs> restrictions;
+      private final @Nullable Output<V2RestrictionsArgs> restrictions;
 
-    public Input<V2RestrictionsArgs> getRestrictions() {
-        return this.restrictions == null ? Input.empty() : this.restrictions;
+    public Output<V2RestrictionsArgs> getRestrictions() {
+        return this.restrictions == null ? Output.empty() : this.restrictions;
     }
 
     public KeyArgs(
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> keyId,
-        @Nullable Input<String> location,
-        @Nullable Input<String> project,
-        @Nullable Input<V2RestrictionsArgs> restrictions) {
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> keyId,
+        @Nullable Output<String> location,
+        @Nullable Output<String> project,
+        @Nullable Output<V2RestrictionsArgs> restrictions) {
         this.displayName = displayName;
         this.keyId = keyId;
         this.location = location;
@@ -72,11 +72,11 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private KeyArgs() {
-        this.displayName = Input.empty();
-        this.keyId = Input.empty();
-        this.location = Input.empty();
-        this.project = Input.empty();
-        this.restrictions = Input.empty();
+        this.displayName = Output.empty();
+        this.keyId = Output.empty();
+        this.location = Output.empty();
+        this.project = Output.empty();
+        this.restrictions = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,11 +88,11 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> keyId;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> project;
-        private @Nullable Input<V2RestrictionsArgs> restrictions;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> keyId;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> project;
+        private @Nullable Output<V2RestrictionsArgs> restrictions;
 
         public Builder() {
     	      // Empty
@@ -107,53 +107,53 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.restrictions = defaults.restrictions;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder keyId(@Nullable Input<String> keyId) {
+        public Builder keyId(@Nullable Output<String> keyId) {
             this.keyId = keyId;
             return this;
         }
 
         public Builder keyId(@Nullable String keyId) {
-            this.keyId = Input.ofNullable(keyId);
+            this.keyId = Output.ofNullable(keyId);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder restrictions(@Nullable Input<V2RestrictionsArgs> restrictions) {
+        public Builder restrictions(@Nullable Output<V2RestrictionsArgs> restrictions) {
             this.restrictions = restrictions;
             return this;
         }
 
         public Builder restrictions(@Nullable V2RestrictionsArgs restrictions) {
-            this.restrictions = Input.ofNullable(restrictions);
+            this.restrictions = Output.ofNullable(restrictions);
             return this;
         }
         public KeyArgs build() {

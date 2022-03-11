@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
      * 
      */
     @InputImport(name="enable")
-      private final @Nullable Input<Boolean> enable;
+      private final @Nullable Output<Boolean> enable;
 
-    public Input<Boolean> getEnable() {
-        return this.enable == null ? Input.empty() : this.enable;
+    public Output<Boolean> getEnable() {
+        return this.enable == null ? Output.empty() : this.enable;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
      * 
      */
     @InputImport(name="ruleVisibility")
-      private final @Nullable Input<String> ruleVisibility;
+      private final @Nullable Output<String> ruleVisibility;
 
-    public Input<String> getRuleVisibility() {
-        return this.ruleVisibility == null ? Input.empty() : this.ruleVisibility;
+    public Output<String> getRuleVisibility() {
+        return this.ruleVisibility == null ? Output.empty() : this.ruleVisibility;
     }
 
     public SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigGetArgs(
-        @Nullable Input<Boolean> enable,
-        @Nullable Input<String> ruleVisibility) {
+        @Nullable Output<Boolean> enable,
+        @Nullable Output<String> ruleVisibility) {
         this.enable = enable;
         this.ruleVisibility = ruleVisibility;
     }
 
     private SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigGetArgs() {
-        this.enable = Input.empty();
-        this.ruleVisibility = Input.empty();
+        this.enable = Output.empty();
+        this.ruleVisibility = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enable;
-        private @Nullable Input<String> ruleVisibility;
+        private @Nullable Output<Boolean> enable;
+        private @Nullable Output<String> ruleVisibility;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
     	      this.ruleVisibility = defaults.ruleVisibility;
         }
 
-        public Builder enable(@Nullable Input<Boolean> enable) {
+        public Builder enable(@Nullable Output<Boolean> enable) {
             this.enable = enable;
             return this;
         }
 
         public Builder enable(@Nullable Boolean enable) {
-            this.enable = Input.ofNullable(enable);
+            this.enable = Output.ofNullable(enable);
             return this;
         }
 
-        public Builder ruleVisibility(@Nullable Input<String> ruleVisibility) {
+        public Builder ruleVisibility(@Nullable Output<String> ruleVisibility) {
             this.ruleVisibility = ruleVisibility;
             return this;
         }
 
         public Builder ruleVisibility(@Nullable String ruleVisibility) {
-            this.ruleVisibility = Input.ofNullable(ruleVisibility);
+            this.ruleVisibility = Output.ofNullable(ruleVisibility);
             return this;
         }
         public SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigGetArgs build() {

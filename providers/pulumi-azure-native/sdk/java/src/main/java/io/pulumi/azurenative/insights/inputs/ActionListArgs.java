@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.inputs.ActionGroupArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class ActionListArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actionGroups")
-      private final @Nullable Input<List<ActionGroupArgs>> actionGroups;
+      private final @Nullable Output<List<ActionGroupArgs>> actionGroups;
 
-    public Input<List<ActionGroupArgs>> getActionGroups() {
-        return this.actionGroups == null ? Input.empty() : this.actionGroups;
+    public Output<List<ActionGroupArgs>> getActionGroups() {
+        return this.actionGroups == null ? Output.empty() : this.actionGroups;
     }
 
-    public ActionListArgs(@Nullable Input<List<ActionGroupArgs>> actionGroups) {
+    public ActionListArgs(@Nullable Output<List<ActionGroupArgs>> actionGroups) {
         this.actionGroups = actionGroups;
     }
 
     private ActionListArgs() {
-        this.actionGroups = Input.empty();
+        this.actionGroups = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class ActionListArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ActionGroupArgs>> actionGroups;
+        private @Nullable Output<List<ActionGroupArgs>> actionGroups;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class ActionListArgs extends io.pulumi.resources.ResourceArgs {
     	      this.actionGroups = defaults.actionGroups;
         }
 
-        public Builder actionGroups(@Nullable Input<List<ActionGroupArgs>> actionGroups) {
+        public Builder actionGroups(@Nullable Output<List<ActionGroupArgs>> actionGroups) {
             this.actionGroups = actionGroups;
             return this;
         }
 
         public Builder actionGroups(@Nullable List<ActionGroupArgs> actionGroups) {
-            this.actionGroups = Input.ofNullable(actionGroups);
+            this.actionGroups = Output.ofNullable(actionGroups);
             return this;
         }
         public ActionListArgs build() {

@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.providerhub.SkusArgs;
 import io.pulumi.azurenative.providerhub.outputs.SkuResourceResponseProperties;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -104,21 +103,21 @@ public class Skus extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Skus(String name, SkusArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:providerhub:Skus", name, args == null ? SkusArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:providerhub:Skus", name, args == null ? SkusArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Skus(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Skus(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:providerhub:Skus", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:providerhub/v20201120:Skus").build()),
-                Input.of(Alias.builder().setType("azure-native:providerhub/v20210501preview:Skus").build()),
-                Input.of(Alias.builder().setType("azure-native:providerhub/v20210601preview:Skus").build()),
-                Input.of(Alias.builder().setType("azure-native:providerhub/v20210901preview:Skus").build())
+                Output.of(Alias.builder().setType("azure-native:providerhub/v20201120:Skus").build()),
+                Output.of(Alias.builder().setType("azure-native:providerhub/v20210501preview:Skus").build()),
+                Output.of(Alias.builder().setType("azure-native:providerhub/v20210601preview:Skus").build()),
+                Output.of(Alias.builder().setType("azure-native:providerhub/v20210901preview:Skus").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -132,7 +131,7 @@ public class Skus extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Skus get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Skus get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Skus(name, id, options);
     }
 }

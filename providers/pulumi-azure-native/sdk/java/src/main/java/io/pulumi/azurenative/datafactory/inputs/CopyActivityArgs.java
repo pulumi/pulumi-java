@@ -147,7 +147,7 @@ import io.pulumi.azurenative.datafactory.inputs.WebSourceArgs;
 import io.pulumi.azurenative.datafactory.inputs.XeroSourceArgs;
 import io.pulumi.azurenative.datafactory.inputs.XmlSourceArgs;
 import io.pulumi.azurenative.datafactory.inputs.ZohoSourceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -169,10 +169,10 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataIntegrationUnits")
-      private final @Nullable Input<Object> dataIntegrationUnits;
+      private final @Nullable Output<Object> dataIntegrationUnits;
 
-    public Input<Object> getDataIntegrationUnits() {
-        return this.dataIntegrationUnits == null ? Input.empty() : this.dataIntegrationUnits;
+    public Output<Object> getDataIntegrationUnits() {
+        return this.dataIntegrationUnits == null ? Output.empty() : this.dataIntegrationUnits;
     }
 
     /**
@@ -180,10 +180,10 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dependsOn")
-      private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
+      private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Input<List<ActivityDependencyArgs>> getDependsOn() {
-        return this.dependsOn == null ? Input.empty() : this.dependsOn;
+    public Output<List<ActivityDependencyArgs>> getDependsOn() {
+        return this.dependsOn == null ? Output.empty() : this.dependsOn;
     }
 
     /**
@@ -191,10 +191,10 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -202,10 +202,10 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableSkipIncompatibleRow")
-      private final @Nullable Input<Object> enableSkipIncompatibleRow;
+      private final @Nullable Output<Object> enableSkipIncompatibleRow;
 
-    public Input<Object> getEnableSkipIncompatibleRow() {
-        return this.enableSkipIncompatibleRow == null ? Input.empty() : this.enableSkipIncompatibleRow;
+    public Output<Object> getEnableSkipIncompatibleRow() {
+        return this.enableSkipIncompatibleRow == null ? Output.empty() : this.enableSkipIncompatibleRow;
     }
 
     /**
@@ -213,10 +213,10 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableStaging")
-      private final @Nullable Input<Object> enableStaging;
+      private final @Nullable Output<Object> enableStaging;
 
-    public Input<Object> getEnableStaging() {
-        return this.enableStaging == null ? Input.empty() : this.enableStaging;
+    public Output<Object> getEnableStaging() {
+        return this.enableStaging == null ? Output.empty() : this.enableStaging;
     }
 
     /**
@@ -224,10 +224,10 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputs")
-      private final @Nullable Input<List<DatasetReferenceArgs>> inputs;
+      private final @Nullable Output<List<DatasetReferenceArgs>> inputs;
 
-    public Input<List<DatasetReferenceArgs>> getInputs() {
-        return this.inputs == null ? Input.empty() : this.inputs;
+    public Output<List<DatasetReferenceArgs>> getInputs() {
+        return this.inputs == null ? Output.empty() : this.inputs;
     }
 
     /**
@@ -235,10 +235,10 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkedServiceName")
-      private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
+      private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
-        return this.linkedServiceName == null ? Input.empty() : this.linkedServiceName;
+    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+        return this.linkedServiceName == null ? Output.empty() : this.linkedServiceName;
     }
 
     /**
@@ -246,10 +246,10 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logSettings")
-      private final @Nullable Input<LogSettingsArgs> logSettings;
+      private final @Nullable Output<LogSettingsArgs> logSettings;
 
-    public Input<LogSettingsArgs> getLogSettings() {
-        return this.logSettings == null ? Input.empty() : this.logSettings;
+    public Output<LogSettingsArgs> getLogSettings() {
+        return this.logSettings == null ? Output.empty() : this.logSettings;
     }
 
     /**
@@ -257,10 +257,10 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logStorageSettings")
-      private final @Nullable Input<LogStorageSettingsArgs> logStorageSettings;
+      private final @Nullable Output<LogStorageSettingsArgs> logStorageSettings;
 
-    public Input<LogStorageSettingsArgs> getLogStorageSettings() {
-        return this.logStorageSettings == null ? Input.empty() : this.logStorageSettings;
+    public Output<LogStorageSettingsArgs> getLogStorageSettings() {
+        return this.logStorageSettings == null ? Output.empty() : this.logStorageSettings;
     }
 
     /**
@@ -268,9 +268,9 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -279,10 +279,10 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputs")
-      private final @Nullable Input<List<DatasetReferenceArgs>> outputs;
+      private final @Nullable Output<List<DatasetReferenceArgs>> outputs;
 
-    public Input<List<DatasetReferenceArgs>> getOutputs() {
-        return this.outputs == null ? Input.empty() : this.outputs;
+    public Output<List<DatasetReferenceArgs>> getOutputs() {
+        return this.outputs == null ? Output.empty() : this.outputs;
     }
 
     /**
@@ -290,10 +290,10 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parallelCopies")
-      private final @Nullable Input<Object> parallelCopies;
+      private final @Nullable Output<Object> parallelCopies;
 
-    public Input<Object> getParallelCopies() {
-        return this.parallelCopies == null ? Input.empty() : this.parallelCopies;
+    public Output<Object> getParallelCopies() {
+        return this.parallelCopies == null ? Output.empty() : this.parallelCopies;
     }
 
     /**
@@ -301,10 +301,10 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy")
-      private final @Nullable Input<ActivityPolicyArgs> policy;
+      private final @Nullable Output<ActivityPolicyArgs> policy;
 
-    public Input<ActivityPolicyArgs> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<ActivityPolicyArgs> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     /**
@@ -312,10 +312,10 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preserve")
-      private final @Nullable Input<List<Object>> preserve;
+      private final @Nullable Output<List<Object>> preserve;
 
-    public Input<List<Object>> getPreserve() {
-        return this.preserve == null ? Input.empty() : this.preserve;
+    public Output<List<Object>> getPreserve() {
+        return this.preserve == null ? Output.empty() : this.preserve;
     }
 
     /**
@@ -323,10 +323,10 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preserveRules")
-      private final @Nullable Input<List<Object>> preserveRules;
+      private final @Nullable Output<List<Object>> preserveRules;
 
-    public Input<List<Object>> getPreserveRules() {
-        return this.preserveRules == null ? Input.empty() : this.preserveRules;
+    public Output<List<Object>> getPreserveRules() {
+        return this.preserveRules == null ? Output.empty() : this.preserveRules;
     }
 
     /**
@@ -334,10 +334,10 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="redirectIncompatibleRowSettings")
-      private final @Nullable Input<RedirectIncompatibleRowSettingsArgs> redirectIncompatibleRowSettings;
+      private final @Nullable Output<RedirectIncompatibleRowSettingsArgs> redirectIncompatibleRowSettings;
 
-    public Input<RedirectIncompatibleRowSettingsArgs> getRedirectIncompatibleRowSettings() {
-        return this.redirectIncompatibleRowSettings == null ? Input.empty() : this.redirectIncompatibleRowSettings;
+    public Output<RedirectIncompatibleRowSettingsArgs> getRedirectIncompatibleRowSettings() {
+        return this.redirectIncompatibleRowSettings == null ? Output.empty() : this.redirectIncompatibleRowSettings;
     }
 
     /**
@@ -345,9 +345,9 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sink", required=true)
-      private final Input<Object> sink;
+      private final Output<Object> sink;
 
-    public Input<Object> getSink() {
+    public Output<Object> getSink() {
         return this.sink;
     }
 
@@ -356,10 +356,10 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="skipErrorFile")
-      private final @Nullable Input<SkipErrorFileArgs> skipErrorFile;
+      private final @Nullable Output<SkipErrorFileArgs> skipErrorFile;
 
-    public Input<SkipErrorFileArgs> getSkipErrorFile() {
-        return this.skipErrorFile == null ? Input.empty() : this.skipErrorFile;
+    public Output<SkipErrorFileArgs> getSkipErrorFile() {
+        return this.skipErrorFile == null ? Output.empty() : this.skipErrorFile;
     }
 
     /**
@@ -367,9 +367,9 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source", required=true)
-      private final Input<Object> source;
+      private final Output<Object> source;
 
-    public Input<Object> getSource() {
+    public Output<Object> getSource() {
         return this.source;
     }
 
@@ -378,10 +378,10 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stagingSettings")
-      private final @Nullable Input<StagingSettingsArgs> stagingSettings;
+      private final @Nullable Output<StagingSettingsArgs> stagingSettings;
 
-    public Input<StagingSettingsArgs> getStagingSettings() {
-        return this.stagingSettings == null ? Input.empty() : this.stagingSettings;
+    public Output<StagingSettingsArgs> getStagingSettings() {
+        return this.stagingSettings == null ? Output.empty() : this.stagingSettings;
     }
 
     /**
@@ -389,10 +389,10 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="translator")
-      private final @Nullable Input<Object> translator;
+      private final @Nullable Output<Object> translator;
 
-    public Input<Object> getTranslator() {
-        return this.translator == null ? Input.empty() : this.translator;
+    public Output<Object> getTranslator() {
+        return this.translator == null ? Output.empty() : this.translator;
     }
 
     /**
@@ -401,9 +401,9 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -412,10 +412,10 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userProperties")
-      private final @Nullable Input<List<UserPropertyArgs>> userProperties;
+      private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Input<List<UserPropertyArgs>> getUserProperties() {
-        return this.userProperties == null ? Input.empty() : this.userProperties;
+    public Output<List<UserPropertyArgs>> getUserProperties() {
+        return this.userProperties == null ? Output.empty() : this.userProperties;
     }
 
     /**
@@ -423,37 +423,37 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="validateDataConsistency")
-      private final @Nullable Input<Object> validateDataConsistency;
+      private final @Nullable Output<Object> validateDataConsistency;
 
-    public Input<Object> getValidateDataConsistency() {
-        return this.validateDataConsistency == null ? Input.empty() : this.validateDataConsistency;
+    public Output<Object> getValidateDataConsistency() {
+        return this.validateDataConsistency == null ? Output.empty() : this.validateDataConsistency;
     }
 
     public CopyActivityArgs(
-        @Nullable Input<Object> dataIntegrationUnits,
-        @Nullable Input<List<ActivityDependencyArgs>> dependsOn,
-        @Nullable Input<String> description,
-        @Nullable Input<Object> enableSkipIncompatibleRow,
-        @Nullable Input<Object> enableStaging,
-        @Nullable Input<List<DatasetReferenceArgs>> inputs,
-        @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName,
-        @Nullable Input<LogSettingsArgs> logSettings,
-        @Nullable Input<LogStorageSettingsArgs> logStorageSettings,
-        Input<String> name,
-        @Nullable Input<List<DatasetReferenceArgs>> outputs,
-        @Nullable Input<Object> parallelCopies,
-        @Nullable Input<ActivityPolicyArgs> policy,
-        @Nullable Input<List<Object>> preserve,
-        @Nullable Input<List<Object>> preserveRules,
-        @Nullable Input<RedirectIncompatibleRowSettingsArgs> redirectIncompatibleRowSettings,
-        Input<Object> sink,
-        @Nullable Input<SkipErrorFileArgs> skipErrorFile,
-        Input<Object> source,
-        @Nullable Input<StagingSettingsArgs> stagingSettings,
-        @Nullable Input<Object> translator,
-        Input<String> type,
-        @Nullable Input<List<UserPropertyArgs>> userProperties,
-        @Nullable Input<Object> validateDataConsistency) {
+        @Nullable Output<Object> dataIntegrationUnits,
+        @Nullable Output<List<ActivityDependencyArgs>> dependsOn,
+        @Nullable Output<String> description,
+        @Nullable Output<Object> enableSkipIncompatibleRow,
+        @Nullable Output<Object> enableStaging,
+        @Nullable Output<List<DatasetReferenceArgs>> inputs,
+        @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName,
+        @Nullable Output<LogSettingsArgs> logSettings,
+        @Nullable Output<LogStorageSettingsArgs> logStorageSettings,
+        Output<String> name,
+        @Nullable Output<List<DatasetReferenceArgs>> outputs,
+        @Nullable Output<Object> parallelCopies,
+        @Nullable Output<ActivityPolicyArgs> policy,
+        @Nullable Output<List<Object>> preserve,
+        @Nullable Output<List<Object>> preserveRules,
+        @Nullable Output<RedirectIncompatibleRowSettingsArgs> redirectIncompatibleRowSettings,
+        Output<Object> sink,
+        @Nullable Output<SkipErrorFileArgs> skipErrorFile,
+        Output<Object> source,
+        @Nullable Output<StagingSettingsArgs> stagingSettings,
+        @Nullable Output<Object> translator,
+        Output<String> type,
+        @Nullable Output<List<UserPropertyArgs>> userProperties,
+        @Nullable Output<Object> validateDataConsistency) {
         this.dataIntegrationUnits = dataIntegrationUnits;
         this.dependsOn = dependsOn;
         this.description = description;
@@ -481,30 +481,30 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CopyActivityArgs() {
-        this.dataIntegrationUnits = Input.empty();
-        this.dependsOn = Input.empty();
-        this.description = Input.empty();
-        this.enableSkipIncompatibleRow = Input.empty();
-        this.enableStaging = Input.empty();
-        this.inputs = Input.empty();
-        this.linkedServiceName = Input.empty();
-        this.logSettings = Input.empty();
-        this.logStorageSettings = Input.empty();
-        this.name = Input.empty();
-        this.outputs = Input.empty();
-        this.parallelCopies = Input.empty();
-        this.policy = Input.empty();
-        this.preserve = Input.empty();
-        this.preserveRules = Input.empty();
-        this.redirectIncompatibleRowSettings = Input.empty();
-        this.sink = Input.empty();
-        this.skipErrorFile = Input.empty();
-        this.source = Input.empty();
-        this.stagingSettings = Input.empty();
-        this.translator = Input.empty();
-        this.type = Input.empty();
-        this.userProperties = Input.empty();
-        this.validateDataConsistency = Input.empty();
+        this.dataIntegrationUnits = Output.empty();
+        this.dependsOn = Output.empty();
+        this.description = Output.empty();
+        this.enableSkipIncompatibleRow = Output.empty();
+        this.enableStaging = Output.empty();
+        this.inputs = Output.empty();
+        this.linkedServiceName = Output.empty();
+        this.logSettings = Output.empty();
+        this.logStorageSettings = Output.empty();
+        this.name = Output.empty();
+        this.outputs = Output.empty();
+        this.parallelCopies = Output.empty();
+        this.policy = Output.empty();
+        this.preserve = Output.empty();
+        this.preserveRules = Output.empty();
+        this.redirectIncompatibleRowSettings = Output.empty();
+        this.sink = Output.empty();
+        this.skipErrorFile = Output.empty();
+        this.source = Output.empty();
+        this.stagingSettings = Output.empty();
+        this.translator = Output.empty();
+        this.type = Output.empty();
+        this.userProperties = Output.empty();
+        this.validateDataConsistency = Output.empty();
     }
 
     public static Builder builder() {
@@ -516,30 +516,30 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> dataIntegrationUnits;
-        private @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Object> enableSkipIncompatibleRow;
-        private @Nullable Input<Object> enableStaging;
-        private @Nullable Input<List<DatasetReferenceArgs>> inputs;
-        private @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
-        private @Nullable Input<LogSettingsArgs> logSettings;
-        private @Nullable Input<LogStorageSettingsArgs> logStorageSettings;
-        private Input<String> name;
-        private @Nullable Input<List<DatasetReferenceArgs>> outputs;
-        private @Nullable Input<Object> parallelCopies;
-        private @Nullable Input<ActivityPolicyArgs> policy;
-        private @Nullable Input<List<Object>> preserve;
-        private @Nullable Input<List<Object>> preserveRules;
-        private @Nullable Input<RedirectIncompatibleRowSettingsArgs> redirectIncompatibleRowSettings;
-        private Input<Object> sink;
-        private @Nullable Input<SkipErrorFileArgs> skipErrorFile;
-        private Input<Object> source;
-        private @Nullable Input<StagingSettingsArgs> stagingSettings;
-        private @Nullable Input<Object> translator;
-        private Input<String> type;
-        private @Nullable Input<List<UserPropertyArgs>> userProperties;
-        private @Nullable Input<Object> validateDataConsistency;
+        private @Nullable Output<Object> dataIntegrationUnits;
+        private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Object> enableSkipIncompatibleRow;
+        private @Nullable Output<Object> enableStaging;
+        private @Nullable Output<List<DatasetReferenceArgs>> inputs;
+        private @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
+        private @Nullable Output<LogSettingsArgs> logSettings;
+        private @Nullable Output<LogStorageSettingsArgs> logStorageSettings;
+        private Output<String> name;
+        private @Nullable Output<List<DatasetReferenceArgs>> outputs;
+        private @Nullable Output<Object> parallelCopies;
+        private @Nullable Output<ActivityPolicyArgs> policy;
+        private @Nullable Output<List<Object>> preserve;
+        private @Nullable Output<List<Object>> preserveRules;
+        private @Nullable Output<RedirectIncompatibleRowSettingsArgs> redirectIncompatibleRowSettings;
+        private Output<Object> sink;
+        private @Nullable Output<SkipErrorFileArgs> skipErrorFile;
+        private Output<Object> source;
+        private @Nullable Output<StagingSettingsArgs> stagingSettings;
+        private @Nullable Output<Object> translator;
+        private Output<String> type;
+        private @Nullable Output<List<UserPropertyArgs>> userProperties;
+        private @Nullable Output<Object> validateDataConsistency;
 
         public Builder() {
     	      // Empty
@@ -573,243 +573,243 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.validateDataConsistency = defaults.validateDataConsistency;
         }
 
-        public Builder dataIntegrationUnits(@Nullable Input<Object> dataIntegrationUnits) {
+        public Builder dataIntegrationUnits(@Nullable Output<Object> dataIntegrationUnits) {
             this.dataIntegrationUnits = dataIntegrationUnits;
             return this;
         }
 
         public Builder dataIntegrationUnits(@Nullable Object dataIntegrationUnits) {
-            this.dataIntegrationUnits = Input.ofNullable(dataIntegrationUnits);
+            this.dataIntegrationUnits = Output.ofNullable(dataIntegrationUnits);
             return this;
         }
 
-        public Builder dependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
+        public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Input.ofNullable(dependsOn);
+            this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder enableSkipIncompatibleRow(@Nullable Input<Object> enableSkipIncompatibleRow) {
+        public Builder enableSkipIncompatibleRow(@Nullable Output<Object> enableSkipIncompatibleRow) {
             this.enableSkipIncompatibleRow = enableSkipIncompatibleRow;
             return this;
         }
 
         public Builder enableSkipIncompatibleRow(@Nullable Object enableSkipIncompatibleRow) {
-            this.enableSkipIncompatibleRow = Input.ofNullable(enableSkipIncompatibleRow);
+            this.enableSkipIncompatibleRow = Output.ofNullable(enableSkipIncompatibleRow);
             return this;
         }
 
-        public Builder enableStaging(@Nullable Input<Object> enableStaging) {
+        public Builder enableStaging(@Nullable Output<Object> enableStaging) {
             this.enableStaging = enableStaging;
             return this;
         }
 
         public Builder enableStaging(@Nullable Object enableStaging) {
-            this.enableStaging = Input.ofNullable(enableStaging);
+            this.enableStaging = Output.ofNullable(enableStaging);
             return this;
         }
 
-        public Builder inputs(@Nullable Input<List<DatasetReferenceArgs>> inputs) {
+        public Builder inputs(@Nullable Output<List<DatasetReferenceArgs>> inputs) {
             this.inputs = inputs;
             return this;
         }
 
         public Builder inputs(@Nullable List<DatasetReferenceArgs> inputs) {
-            this.inputs = Input.ofNullable(inputs);
+            this.inputs = Output.ofNullable(inputs);
             return this;
         }
 
-        public Builder linkedServiceName(@Nullable Input<LinkedServiceReferenceArgs> linkedServiceName) {
+        public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
 
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Input.ofNullable(linkedServiceName);
+            this.linkedServiceName = Output.ofNullable(linkedServiceName);
             return this;
         }
 
-        public Builder logSettings(@Nullable Input<LogSettingsArgs> logSettings) {
+        public Builder logSettings(@Nullable Output<LogSettingsArgs> logSettings) {
             this.logSettings = logSettings;
             return this;
         }
 
         public Builder logSettings(@Nullable LogSettingsArgs logSettings) {
-            this.logSettings = Input.ofNullable(logSettings);
+            this.logSettings = Output.ofNullable(logSettings);
             return this;
         }
 
-        public Builder logStorageSettings(@Nullable Input<LogStorageSettingsArgs> logStorageSettings) {
+        public Builder logStorageSettings(@Nullable Output<LogStorageSettingsArgs> logStorageSettings) {
             this.logStorageSettings = logStorageSettings;
             return this;
         }
 
         public Builder logStorageSettings(@Nullable LogStorageSettingsArgs logStorageSettings) {
-            this.logStorageSettings = Input.ofNullable(logStorageSettings);
+            this.logStorageSettings = Output.ofNullable(logStorageSettings);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder outputs(@Nullable Input<List<DatasetReferenceArgs>> outputs) {
+        public Builder outputs(@Nullable Output<List<DatasetReferenceArgs>> outputs) {
             this.outputs = outputs;
             return this;
         }
 
         public Builder outputs(@Nullable List<DatasetReferenceArgs> outputs) {
-            this.outputs = Input.ofNullable(outputs);
+            this.outputs = Output.ofNullable(outputs);
             return this;
         }
 
-        public Builder parallelCopies(@Nullable Input<Object> parallelCopies) {
+        public Builder parallelCopies(@Nullable Output<Object> parallelCopies) {
             this.parallelCopies = parallelCopies;
             return this;
         }
 
         public Builder parallelCopies(@Nullable Object parallelCopies) {
-            this.parallelCopies = Input.ofNullable(parallelCopies);
+            this.parallelCopies = Output.ofNullable(parallelCopies);
             return this;
         }
 
-        public Builder policy(@Nullable Input<ActivityPolicyArgs> policy) {
+        public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable ActivityPolicyArgs policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
 
-        public Builder preserve(@Nullable Input<List<Object>> preserve) {
+        public Builder preserve(@Nullable Output<List<Object>> preserve) {
             this.preserve = preserve;
             return this;
         }
 
         public Builder preserve(@Nullable List<Object> preserve) {
-            this.preserve = Input.ofNullable(preserve);
+            this.preserve = Output.ofNullable(preserve);
             return this;
         }
 
-        public Builder preserveRules(@Nullable Input<List<Object>> preserveRules) {
+        public Builder preserveRules(@Nullable Output<List<Object>> preserveRules) {
             this.preserveRules = preserveRules;
             return this;
         }
 
         public Builder preserveRules(@Nullable List<Object> preserveRules) {
-            this.preserveRules = Input.ofNullable(preserveRules);
+            this.preserveRules = Output.ofNullable(preserveRules);
             return this;
         }
 
-        public Builder redirectIncompatibleRowSettings(@Nullable Input<RedirectIncompatibleRowSettingsArgs> redirectIncompatibleRowSettings) {
+        public Builder redirectIncompatibleRowSettings(@Nullable Output<RedirectIncompatibleRowSettingsArgs> redirectIncompatibleRowSettings) {
             this.redirectIncompatibleRowSettings = redirectIncompatibleRowSettings;
             return this;
         }
 
         public Builder redirectIncompatibleRowSettings(@Nullable RedirectIncompatibleRowSettingsArgs redirectIncompatibleRowSettings) {
-            this.redirectIncompatibleRowSettings = Input.ofNullable(redirectIncompatibleRowSettings);
+            this.redirectIncompatibleRowSettings = Output.ofNullable(redirectIncompatibleRowSettings);
             return this;
         }
 
-        public Builder sink(Input<Object> sink) {
+        public Builder sink(Output<Object> sink) {
             this.sink = Objects.requireNonNull(sink);
             return this;
         }
 
         public Builder sink(Object sink) {
-            this.sink = Input.of(Objects.requireNonNull(sink));
+            this.sink = Output.of(Objects.requireNonNull(sink));
             return this;
         }
 
-        public Builder skipErrorFile(@Nullable Input<SkipErrorFileArgs> skipErrorFile) {
+        public Builder skipErrorFile(@Nullable Output<SkipErrorFileArgs> skipErrorFile) {
             this.skipErrorFile = skipErrorFile;
             return this;
         }
 
         public Builder skipErrorFile(@Nullable SkipErrorFileArgs skipErrorFile) {
-            this.skipErrorFile = Input.ofNullable(skipErrorFile);
+            this.skipErrorFile = Output.ofNullable(skipErrorFile);
             return this;
         }
 
-        public Builder source(Input<Object> source) {
+        public Builder source(Output<Object> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
         public Builder source(Object source) {
-            this.source = Input.of(Objects.requireNonNull(source));
+            this.source = Output.of(Objects.requireNonNull(source));
             return this;
         }
 
-        public Builder stagingSettings(@Nullable Input<StagingSettingsArgs> stagingSettings) {
+        public Builder stagingSettings(@Nullable Output<StagingSettingsArgs> stagingSettings) {
             this.stagingSettings = stagingSettings;
             return this;
         }
 
         public Builder stagingSettings(@Nullable StagingSettingsArgs stagingSettings) {
-            this.stagingSettings = Input.ofNullable(stagingSettings);
+            this.stagingSettings = Output.ofNullable(stagingSettings);
             return this;
         }
 
-        public Builder translator(@Nullable Input<Object> translator) {
+        public Builder translator(@Nullable Output<Object> translator) {
             this.translator = translator;
             return this;
         }
 
         public Builder translator(@Nullable Object translator) {
-            this.translator = Input.ofNullable(translator);
+            this.translator = Output.ofNullable(translator);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder userProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
+        public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
 
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Input.ofNullable(userProperties);
+            this.userProperties = Output.ofNullable(userProperties);
             return this;
         }
 
-        public Builder validateDataConsistency(@Nullable Input<Object> validateDataConsistency) {
+        public Builder validateDataConsistency(@Nullable Output<Object> validateDataConsistency) {
             this.validateDataConsistency = validateDataConsistency;
             return this;
         }
 
         public Builder validateDataConsistency(@Nullable Object validateDataConsistency) {
-            this.validateDataConsistency = Input.ofNullable(validateDataConsistency);
+            this.validateDataConsistency = Output.ofNullable(validateDataConsistency);
             return this;
         }
         public CopyActivityArgs build() {

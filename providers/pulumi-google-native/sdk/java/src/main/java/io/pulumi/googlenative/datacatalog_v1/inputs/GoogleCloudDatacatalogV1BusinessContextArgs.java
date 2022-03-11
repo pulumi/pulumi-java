@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1ContactsArgs;
 import io.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1EntryOverviewArgs;
@@ -24,10 +24,10 @@ public final class GoogleCloudDatacatalogV1BusinessContextArgs extends io.pulumi
      * 
      */
     @InputImport(name="contacts")
-      private final @Nullable Input<GoogleCloudDatacatalogV1ContactsArgs> contacts;
+      private final @Nullable Output<GoogleCloudDatacatalogV1ContactsArgs> contacts;
 
-    public Input<GoogleCloudDatacatalogV1ContactsArgs> getContacts() {
-        return this.contacts == null ? Input.empty() : this.contacts;
+    public Output<GoogleCloudDatacatalogV1ContactsArgs> getContacts() {
+        return this.contacts == null ? Output.empty() : this.contacts;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class GoogleCloudDatacatalogV1BusinessContextArgs extends io.pulumi
      * 
      */
     @InputImport(name="entryOverview")
-      private final @Nullable Input<GoogleCloudDatacatalogV1EntryOverviewArgs> entryOverview;
+      private final @Nullable Output<GoogleCloudDatacatalogV1EntryOverviewArgs> entryOverview;
 
-    public Input<GoogleCloudDatacatalogV1EntryOverviewArgs> getEntryOverview() {
-        return this.entryOverview == null ? Input.empty() : this.entryOverview;
+    public Output<GoogleCloudDatacatalogV1EntryOverviewArgs> getEntryOverview() {
+        return this.entryOverview == null ? Output.empty() : this.entryOverview;
     }
 
     public GoogleCloudDatacatalogV1BusinessContextArgs(
-        @Nullable Input<GoogleCloudDatacatalogV1ContactsArgs> contacts,
-        @Nullable Input<GoogleCloudDatacatalogV1EntryOverviewArgs> entryOverview) {
+        @Nullable Output<GoogleCloudDatacatalogV1ContactsArgs> contacts,
+        @Nullable Output<GoogleCloudDatacatalogV1EntryOverviewArgs> entryOverview) {
         this.contacts = contacts;
         this.entryOverview = entryOverview;
     }
 
     private GoogleCloudDatacatalogV1BusinessContextArgs() {
-        this.contacts = Input.empty();
-        this.entryOverview = Input.empty();
+        this.contacts = Output.empty();
+        this.entryOverview = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class GoogleCloudDatacatalogV1BusinessContextArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private @Nullable Input<GoogleCloudDatacatalogV1ContactsArgs> contacts;
-        private @Nullable Input<GoogleCloudDatacatalogV1EntryOverviewArgs> entryOverview;
+        private @Nullable Output<GoogleCloudDatacatalogV1ContactsArgs> contacts;
+        private @Nullable Output<GoogleCloudDatacatalogV1EntryOverviewArgs> entryOverview;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class GoogleCloudDatacatalogV1BusinessContextArgs extends io.pulumi
     	      this.entryOverview = defaults.entryOverview;
         }
 
-        public Builder contacts(@Nullable Input<GoogleCloudDatacatalogV1ContactsArgs> contacts) {
+        public Builder contacts(@Nullable Output<GoogleCloudDatacatalogV1ContactsArgs> contacts) {
             this.contacts = contacts;
             return this;
         }
 
         public Builder contacts(@Nullable GoogleCloudDatacatalogV1ContactsArgs contacts) {
-            this.contacts = Input.ofNullable(contacts);
+            this.contacts = Output.ofNullable(contacts);
             return this;
         }
 
-        public Builder entryOverview(@Nullable Input<GoogleCloudDatacatalogV1EntryOverviewArgs> entryOverview) {
+        public Builder entryOverview(@Nullable Output<GoogleCloudDatacatalogV1EntryOverviewArgs> entryOverview) {
             this.entryOverview = entryOverview;
             return this;
         }
 
         public Builder entryOverview(@Nullable GoogleCloudDatacatalogV1EntryOverviewArgs entryOverview) {
-            this.entryOverview = Input.ofNullable(entryOverview);
+            this.entryOverview = Output.ofNullable(entryOverview);
             return this;
         }
         public GoogleCloudDatacatalogV1BusinessContextArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class AS2EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="autogenerateFileName", required=true)
-      private final Input<Boolean> autogenerateFileName;
+      private final Output<Boolean> autogenerateFileName;
 
-    public Input<Boolean> getAutogenerateFileName() {
+    public Output<Boolean> getAutogenerateFileName() {
         return this.autogenerateFileName;
     }
 
@@ -34,9 +34,9 @@ public final class AS2EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="fileNameTemplate", required=true)
-      private final Input<String> fileNameTemplate;
+      private final Output<String> fileNameTemplate;
 
-    public Input<String> getFileNameTemplate() {
+    public Output<String> getFileNameTemplate() {
         return this.fileNameTemplate;
     }
 
@@ -45,9 +45,9 @@ public final class AS2EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="messageContentType", required=true)
-      private final Input<String> messageContentType;
+      private final Output<String> messageContentType;
 
-    public Input<String> getMessageContentType() {
+    public Output<String> getMessageContentType() {
         return this.messageContentType;
     }
 
@@ -56,9 +56,9 @@ public final class AS2EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="suspendMessageOnFileNameGenerationError", required=true)
-      private final Input<Boolean> suspendMessageOnFileNameGenerationError;
+      private final Output<Boolean> suspendMessageOnFileNameGenerationError;
 
-    public Input<Boolean> getSuspendMessageOnFileNameGenerationError() {
+    public Output<Boolean> getSuspendMessageOnFileNameGenerationError() {
         return this.suspendMessageOnFileNameGenerationError;
     }
 
@@ -67,18 +67,18 @@ public final class AS2EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="transmitFileNameInMimeHeader", required=true)
-      private final Input<Boolean> transmitFileNameInMimeHeader;
+      private final Output<Boolean> transmitFileNameInMimeHeader;
 
-    public Input<Boolean> getTransmitFileNameInMimeHeader() {
+    public Output<Boolean> getTransmitFileNameInMimeHeader() {
         return this.transmitFileNameInMimeHeader;
     }
 
     public AS2EnvelopeSettingsArgs(
-        Input<Boolean> autogenerateFileName,
-        Input<String> fileNameTemplate,
-        Input<String> messageContentType,
-        Input<Boolean> suspendMessageOnFileNameGenerationError,
-        Input<Boolean> transmitFileNameInMimeHeader) {
+        Output<Boolean> autogenerateFileName,
+        Output<String> fileNameTemplate,
+        Output<String> messageContentType,
+        Output<Boolean> suspendMessageOnFileNameGenerationError,
+        Output<Boolean> transmitFileNameInMimeHeader) {
         this.autogenerateFileName = Objects.requireNonNull(autogenerateFileName, "expected parameter 'autogenerateFileName' to be non-null");
         this.fileNameTemplate = Objects.requireNonNull(fileNameTemplate, "expected parameter 'fileNameTemplate' to be non-null");
         this.messageContentType = Objects.requireNonNull(messageContentType, "expected parameter 'messageContentType' to be non-null");
@@ -87,11 +87,11 @@ public final class AS2EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
     }
 
     private AS2EnvelopeSettingsArgs() {
-        this.autogenerateFileName = Input.empty();
-        this.fileNameTemplate = Input.empty();
-        this.messageContentType = Input.empty();
-        this.suspendMessageOnFileNameGenerationError = Input.empty();
-        this.transmitFileNameInMimeHeader = Input.empty();
+        this.autogenerateFileName = Output.empty();
+        this.fileNameTemplate = Output.empty();
+        this.messageContentType = Output.empty();
+        this.suspendMessageOnFileNameGenerationError = Output.empty();
+        this.transmitFileNameInMimeHeader = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,11 +103,11 @@ public final class AS2EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<Boolean> autogenerateFileName;
-        private Input<String> fileNameTemplate;
-        private Input<String> messageContentType;
-        private Input<Boolean> suspendMessageOnFileNameGenerationError;
-        private Input<Boolean> transmitFileNameInMimeHeader;
+        private Output<Boolean> autogenerateFileName;
+        private Output<String> fileNameTemplate;
+        private Output<String> messageContentType;
+        private Output<Boolean> suspendMessageOnFileNameGenerationError;
+        private Output<Boolean> transmitFileNameInMimeHeader;
 
         public Builder() {
     	      // Empty
@@ -122,53 +122,53 @@ public final class AS2EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
     	      this.transmitFileNameInMimeHeader = defaults.transmitFileNameInMimeHeader;
         }
 
-        public Builder autogenerateFileName(Input<Boolean> autogenerateFileName) {
+        public Builder autogenerateFileName(Output<Boolean> autogenerateFileName) {
             this.autogenerateFileName = Objects.requireNonNull(autogenerateFileName);
             return this;
         }
 
         public Builder autogenerateFileName(Boolean autogenerateFileName) {
-            this.autogenerateFileName = Input.of(Objects.requireNonNull(autogenerateFileName));
+            this.autogenerateFileName = Output.of(Objects.requireNonNull(autogenerateFileName));
             return this;
         }
 
-        public Builder fileNameTemplate(Input<String> fileNameTemplate) {
+        public Builder fileNameTemplate(Output<String> fileNameTemplate) {
             this.fileNameTemplate = Objects.requireNonNull(fileNameTemplate);
             return this;
         }
 
         public Builder fileNameTemplate(String fileNameTemplate) {
-            this.fileNameTemplate = Input.of(Objects.requireNonNull(fileNameTemplate));
+            this.fileNameTemplate = Output.of(Objects.requireNonNull(fileNameTemplate));
             return this;
         }
 
-        public Builder messageContentType(Input<String> messageContentType) {
+        public Builder messageContentType(Output<String> messageContentType) {
             this.messageContentType = Objects.requireNonNull(messageContentType);
             return this;
         }
 
         public Builder messageContentType(String messageContentType) {
-            this.messageContentType = Input.of(Objects.requireNonNull(messageContentType));
+            this.messageContentType = Output.of(Objects.requireNonNull(messageContentType));
             return this;
         }
 
-        public Builder suspendMessageOnFileNameGenerationError(Input<Boolean> suspendMessageOnFileNameGenerationError) {
+        public Builder suspendMessageOnFileNameGenerationError(Output<Boolean> suspendMessageOnFileNameGenerationError) {
             this.suspendMessageOnFileNameGenerationError = Objects.requireNonNull(suspendMessageOnFileNameGenerationError);
             return this;
         }
 
         public Builder suspendMessageOnFileNameGenerationError(Boolean suspendMessageOnFileNameGenerationError) {
-            this.suspendMessageOnFileNameGenerationError = Input.of(Objects.requireNonNull(suspendMessageOnFileNameGenerationError));
+            this.suspendMessageOnFileNameGenerationError = Output.of(Objects.requireNonNull(suspendMessageOnFileNameGenerationError));
             return this;
         }
 
-        public Builder transmitFileNameInMimeHeader(Input<Boolean> transmitFileNameInMimeHeader) {
+        public Builder transmitFileNameInMimeHeader(Output<Boolean> transmitFileNameInMimeHeader) {
             this.transmitFileNameInMimeHeader = Objects.requireNonNull(transmitFileNameInMimeHeader);
             return this;
         }
 
         public Builder transmitFileNameInMimeHeader(Boolean transmitFileNameInMimeHeader) {
-            this.transmitFileNameInMimeHeader = Input.of(Objects.requireNonNull(transmitFileNameInMimeHeader));
+            this.transmitFileNameInMimeHeader = Output.of(Objects.requireNonNull(transmitFileNameInMimeHeader));
             return this;
         }
         public AS2EnvelopeSettingsArgs build() {

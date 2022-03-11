@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class GoogleCloudMlV1__ContainerPortArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="containerPort")
-      private final @Nullable Input<Integer> containerPort;
+      private final @Nullable Output<Integer> containerPort;
 
-    public Input<Integer> getContainerPort() {
-        return this.containerPort == null ? Input.empty() : this.containerPort;
+    public Output<Integer> getContainerPort() {
+        return this.containerPort == null ? Output.empty() : this.containerPort;
     }
 
-    public GoogleCloudMlV1__ContainerPortArgs(@Nullable Input<Integer> containerPort) {
+    public GoogleCloudMlV1__ContainerPortArgs(@Nullable Output<Integer> containerPort) {
         this.containerPort = containerPort;
     }
 
     private GoogleCloudMlV1__ContainerPortArgs() {
-        this.containerPort = Input.empty();
+        this.containerPort = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GoogleCloudMlV1__ContainerPortArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> containerPort;
+        private @Nullable Output<Integer> containerPort;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GoogleCloudMlV1__ContainerPortArgs extends io.pulumi.resource
     	      this.containerPort = defaults.containerPort;
         }
 
-        public Builder containerPort(@Nullable Input<Integer> containerPort) {
+        public Builder containerPort(@Nullable Output<Integer> containerPort) {
             this.containerPort = containerPort;
             return this;
         }
 
         public Builder containerPort(@Nullable Integer containerPort) {
-            this.containerPort = Input.ofNullable(containerPort);
+            this.containerPort = Output.ofNullable(containerPort);
             return this;
         }
         public GoogleCloudMlV1__ContainerPortArgs build() {

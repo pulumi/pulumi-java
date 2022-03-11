@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.customerprofiles.inputs;
 
 import io.pulumi.awsnative.customerprofiles.enums.IntegrationScheduledTriggerPropertiesDataPullMode;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
@@ -18,62 +18,62 @@ public final class IntegrationScheduledTriggerPropertiesArgs extends io.pulumi.r
     public static final IntegrationScheduledTriggerPropertiesArgs Empty = new IntegrationScheduledTriggerPropertiesArgs();
 
     @InputImport(name="dataPullMode")
-      private final @Nullable Input<IntegrationScheduledTriggerPropertiesDataPullMode> dataPullMode;
+      private final @Nullable Output<IntegrationScheduledTriggerPropertiesDataPullMode> dataPullMode;
 
-    public Input<IntegrationScheduledTriggerPropertiesDataPullMode> getDataPullMode() {
-        return this.dataPullMode == null ? Input.empty() : this.dataPullMode;
+    public Output<IntegrationScheduledTriggerPropertiesDataPullMode> getDataPullMode() {
+        return this.dataPullMode == null ? Output.empty() : this.dataPullMode;
     }
 
     @InputImport(name="firstExecutionFrom")
-      private final @Nullable Input<Double> firstExecutionFrom;
+      private final @Nullable Output<Double> firstExecutionFrom;
 
-    public Input<Double> getFirstExecutionFrom() {
-        return this.firstExecutionFrom == null ? Input.empty() : this.firstExecutionFrom;
+    public Output<Double> getFirstExecutionFrom() {
+        return this.firstExecutionFrom == null ? Output.empty() : this.firstExecutionFrom;
     }
 
     @InputImport(name="scheduleEndTime")
-      private final @Nullable Input<Double> scheduleEndTime;
+      private final @Nullable Output<Double> scheduleEndTime;
 
-    public Input<Double> getScheduleEndTime() {
-        return this.scheduleEndTime == null ? Input.empty() : this.scheduleEndTime;
+    public Output<Double> getScheduleEndTime() {
+        return this.scheduleEndTime == null ? Output.empty() : this.scheduleEndTime;
     }
 
     @InputImport(name="scheduleExpression", required=true)
-      private final Input<String> scheduleExpression;
+      private final Output<String> scheduleExpression;
 
-    public Input<String> getScheduleExpression() {
+    public Output<String> getScheduleExpression() {
         return this.scheduleExpression;
     }
 
     @InputImport(name="scheduleOffset")
-      private final @Nullable Input<Integer> scheduleOffset;
+      private final @Nullable Output<Integer> scheduleOffset;
 
-    public Input<Integer> getScheduleOffset() {
-        return this.scheduleOffset == null ? Input.empty() : this.scheduleOffset;
+    public Output<Integer> getScheduleOffset() {
+        return this.scheduleOffset == null ? Output.empty() : this.scheduleOffset;
     }
 
     @InputImport(name="scheduleStartTime")
-      private final @Nullable Input<Double> scheduleStartTime;
+      private final @Nullable Output<Double> scheduleStartTime;
 
-    public Input<Double> getScheduleStartTime() {
-        return this.scheduleStartTime == null ? Input.empty() : this.scheduleStartTime;
+    public Output<Double> getScheduleStartTime() {
+        return this.scheduleStartTime == null ? Output.empty() : this.scheduleStartTime;
     }
 
     @InputImport(name="timezone")
-      private final @Nullable Input<String> timezone;
+      private final @Nullable Output<String> timezone;
 
-    public Input<String> getTimezone() {
-        return this.timezone == null ? Input.empty() : this.timezone;
+    public Output<String> getTimezone() {
+        return this.timezone == null ? Output.empty() : this.timezone;
     }
 
     public IntegrationScheduledTriggerPropertiesArgs(
-        @Nullable Input<IntegrationScheduledTriggerPropertiesDataPullMode> dataPullMode,
-        @Nullable Input<Double> firstExecutionFrom,
-        @Nullable Input<Double> scheduleEndTime,
-        Input<String> scheduleExpression,
-        @Nullable Input<Integer> scheduleOffset,
-        @Nullable Input<Double> scheduleStartTime,
-        @Nullable Input<String> timezone) {
+        @Nullable Output<IntegrationScheduledTriggerPropertiesDataPullMode> dataPullMode,
+        @Nullable Output<Double> firstExecutionFrom,
+        @Nullable Output<Double> scheduleEndTime,
+        Output<String> scheduleExpression,
+        @Nullable Output<Integer> scheduleOffset,
+        @Nullable Output<Double> scheduleStartTime,
+        @Nullable Output<String> timezone) {
         this.dataPullMode = dataPullMode;
         this.firstExecutionFrom = firstExecutionFrom;
         this.scheduleEndTime = scheduleEndTime;
@@ -84,13 +84,13 @@ public final class IntegrationScheduledTriggerPropertiesArgs extends io.pulumi.r
     }
 
     private IntegrationScheduledTriggerPropertiesArgs() {
-        this.dataPullMode = Input.empty();
-        this.firstExecutionFrom = Input.empty();
-        this.scheduleEndTime = Input.empty();
-        this.scheduleExpression = Input.empty();
-        this.scheduleOffset = Input.empty();
-        this.scheduleStartTime = Input.empty();
-        this.timezone = Input.empty();
+        this.dataPullMode = Output.empty();
+        this.firstExecutionFrom = Output.empty();
+        this.scheduleEndTime = Output.empty();
+        this.scheduleExpression = Output.empty();
+        this.scheduleOffset = Output.empty();
+        this.scheduleStartTime = Output.empty();
+        this.timezone = Output.empty();
     }
 
     public static Builder builder() {
@@ -102,13 +102,13 @@ public final class IntegrationScheduledTriggerPropertiesArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<IntegrationScheduledTriggerPropertiesDataPullMode> dataPullMode;
-        private @Nullable Input<Double> firstExecutionFrom;
-        private @Nullable Input<Double> scheduleEndTime;
-        private Input<String> scheduleExpression;
-        private @Nullable Input<Integer> scheduleOffset;
-        private @Nullable Input<Double> scheduleStartTime;
-        private @Nullable Input<String> timezone;
+        private @Nullable Output<IntegrationScheduledTriggerPropertiesDataPullMode> dataPullMode;
+        private @Nullable Output<Double> firstExecutionFrom;
+        private @Nullable Output<Double> scheduleEndTime;
+        private Output<String> scheduleExpression;
+        private @Nullable Output<Integer> scheduleOffset;
+        private @Nullable Output<Double> scheduleStartTime;
+        private @Nullable Output<String> timezone;
 
         public Builder() {
     	      // Empty
@@ -125,73 +125,73 @@ public final class IntegrationScheduledTriggerPropertiesArgs extends io.pulumi.r
     	      this.timezone = defaults.timezone;
         }
 
-        public Builder dataPullMode(@Nullable Input<IntegrationScheduledTriggerPropertiesDataPullMode> dataPullMode) {
+        public Builder dataPullMode(@Nullable Output<IntegrationScheduledTriggerPropertiesDataPullMode> dataPullMode) {
             this.dataPullMode = dataPullMode;
             return this;
         }
 
         public Builder dataPullMode(@Nullable IntegrationScheduledTriggerPropertiesDataPullMode dataPullMode) {
-            this.dataPullMode = Input.ofNullable(dataPullMode);
+            this.dataPullMode = Output.ofNullable(dataPullMode);
             return this;
         }
 
-        public Builder firstExecutionFrom(@Nullable Input<Double> firstExecutionFrom) {
+        public Builder firstExecutionFrom(@Nullable Output<Double> firstExecutionFrom) {
             this.firstExecutionFrom = firstExecutionFrom;
             return this;
         }
 
         public Builder firstExecutionFrom(@Nullable Double firstExecutionFrom) {
-            this.firstExecutionFrom = Input.ofNullable(firstExecutionFrom);
+            this.firstExecutionFrom = Output.ofNullable(firstExecutionFrom);
             return this;
         }
 
-        public Builder scheduleEndTime(@Nullable Input<Double> scheduleEndTime) {
+        public Builder scheduleEndTime(@Nullable Output<Double> scheduleEndTime) {
             this.scheduleEndTime = scheduleEndTime;
             return this;
         }
 
         public Builder scheduleEndTime(@Nullable Double scheduleEndTime) {
-            this.scheduleEndTime = Input.ofNullable(scheduleEndTime);
+            this.scheduleEndTime = Output.ofNullable(scheduleEndTime);
             return this;
         }
 
-        public Builder scheduleExpression(Input<String> scheduleExpression) {
+        public Builder scheduleExpression(Output<String> scheduleExpression) {
             this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
             return this;
         }
 
         public Builder scheduleExpression(String scheduleExpression) {
-            this.scheduleExpression = Input.of(Objects.requireNonNull(scheduleExpression));
+            this.scheduleExpression = Output.of(Objects.requireNonNull(scheduleExpression));
             return this;
         }
 
-        public Builder scheduleOffset(@Nullable Input<Integer> scheduleOffset) {
+        public Builder scheduleOffset(@Nullable Output<Integer> scheduleOffset) {
             this.scheduleOffset = scheduleOffset;
             return this;
         }
 
         public Builder scheduleOffset(@Nullable Integer scheduleOffset) {
-            this.scheduleOffset = Input.ofNullable(scheduleOffset);
+            this.scheduleOffset = Output.ofNullable(scheduleOffset);
             return this;
         }
 
-        public Builder scheduleStartTime(@Nullable Input<Double> scheduleStartTime) {
+        public Builder scheduleStartTime(@Nullable Output<Double> scheduleStartTime) {
             this.scheduleStartTime = scheduleStartTime;
             return this;
         }
 
         public Builder scheduleStartTime(@Nullable Double scheduleStartTime) {
-            this.scheduleStartTime = Input.ofNullable(scheduleStartTime);
+            this.scheduleStartTime = Output.ofNullable(scheduleStartTime);
             return this;
         }
 
-        public Builder timezone(@Nullable Input<String> timezone) {
+        public Builder timezone(@Nullable Output<String> timezone) {
             this.timezone = timezone;
             return this;
         }
 
         public Builder timezone(@Nullable String timezone) {
-            this.timezone = Input.ofNullable(timezone);
+            this.timezone = Output.ofNullable(timezone);
             return this;
         }
         public IntegrationScheduledTriggerPropertiesArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.azurearcdata;
 
 import io.pulumi.azurenative.azurearcdata.inputs.SqlServerInstancePropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class SqlServerInstanceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class SqlServerInstanceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<SqlServerInstancePropertiesArgs> properties;
+      private final @Nullable Output<SqlServerInstancePropertiesArgs> properties;
 
-    public Input<SqlServerInstancePropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<SqlServerInstancePropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class SqlServerInstanceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -54,10 +54,10 @@ public final class SqlServerInstanceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sqlServerInstanceName")
-      private final @Nullable Input<String> sqlServerInstanceName;
+      private final @Nullable Output<String> sqlServerInstanceName;
 
-    public Input<String> getSqlServerInstanceName() {
-        return this.sqlServerInstanceName == null ? Input.empty() : this.sqlServerInstanceName;
+    public Output<String> getSqlServerInstanceName() {
+        return this.sqlServerInstanceName == null ? Output.empty() : this.sqlServerInstanceName;
     }
 
     /**
@@ -65,18 +65,18 @@ public final class SqlServerInstanceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public SqlServerInstanceArgs(
-        @Nullable Input<String> location,
-        @Nullable Input<SqlServerInstancePropertiesArgs> properties,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> sqlServerInstanceName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> location,
+        @Nullable Output<SqlServerInstancePropertiesArgs> properties,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> sqlServerInstanceName,
+        @Nullable Output<Map<String,String>> tags) {
         this.location = location;
         this.properties = properties;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -85,11 +85,11 @@ public final class SqlServerInstanceArgs extends io.pulumi.resources.ResourceArg
     }
 
     private SqlServerInstanceArgs() {
-        this.location = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sqlServerInstanceName = Input.empty();
-        this.tags = Input.empty();
+        this.location = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sqlServerInstanceName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class SqlServerInstanceArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> location;
-        private @Nullable Input<SqlServerInstancePropertiesArgs> properties;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> sqlServerInstanceName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> location;
+        private @Nullable Output<SqlServerInstancePropertiesArgs> properties;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> sqlServerInstanceName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class SqlServerInstanceArgs extends io.pulumi.resources.ResourceArg
     	      this.tags = defaults.tags;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder properties(@Nullable Input<SqlServerInstancePropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<SqlServerInstancePropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable SqlServerInstancePropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sqlServerInstanceName(@Nullable Input<String> sqlServerInstanceName) {
+        public Builder sqlServerInstanceName(@Nullable Output<String> sqlServerInstanceName) {
             this.sqlServerInstanceName = sqlServerInstanceName;
             return this;
         }
 
         public Builder sqlServerInstanceName(@Nullable String sqlServerInstanceName) {
-            this.sqlServerInstanceName = Input.ofNullable(sqlServerInstanceName);
+            this.sqlServerInstanceName = Output.ofNullable(sqlServerInstanceName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public SqlServerInstanceArgs build() {

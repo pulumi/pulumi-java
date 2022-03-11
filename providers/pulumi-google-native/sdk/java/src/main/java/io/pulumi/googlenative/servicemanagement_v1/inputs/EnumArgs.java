@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.enums.EnumSyntax;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.EnumValueArgs;
@@ -28,10 +28,10 @@ public final class EnumArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enumvalue")
-      private final @Nullable Input<List<EnumValueArgs>> enumvalue;
+      private final @Nullable Output<List<EnumValueArgs>> enumvalue;
 
-    public Input<List<EnumValueArgs>> getEnumvalue() {
-        return this.enumvalue == null ? Input.empty() : this.enumvalue;
+    public Output<List<EnumValueArgs>> getEnumvalue() {
+        return this.enumvalue == null ? Output.empty() : this.enumvalue;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class EnumArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class EnumArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="options")
-      private final @Nullable Input<List<OptionArgs>> options;
+      private final @Nullable Output<List<OptionArgs>> options;
 
-    public Input<List<OptionArgs>> getOptions() {
-        return this.options == null ? Input.empty() : this.options;
+    public Output<List<OptionArgs>> getOptions() {
+        return this.options == null ? Output.empty() : this.options;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class EnumArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceContext")
-      private final @Nullable Input<SourceContextArgs> sourceContext;
+      private final @Nullable Output<SourceContextArgs> sourceContext;
 
-    public Input<SourceContextArgs> getSourceContext() {
-        return this.sourceContext == null ? Input.empty() : this.sourceContext;
+    public Output<SourceContextArgs> getSourceContext() {
+        return this.sourceContext == null ? Output.empty() : this.sourceContext;
     }
 
     /**
@@ -72,18 +72,18 @@ public final class EnumArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="syntax")
-      private final @Nullable Input<EnumSyntax> syntax;
+      private final @Nullable Output<EnumSyntax> syntax;
 
-    public Input<EnumSyntax> getSyntax() {
-        return this.syntax == null ? Input.empty() : this.syntax;
+    public Output<EnumSyntax> getSyntax() {
+        return this.syntax == null ? Output.empty() : this.syntax;
     }
 
     public EnumArgs(
-        @Nullable Input<List<EnumValueArgs>> enumvalue,
-        @Nullable Input<String> name,
-        @Nullable Input<List<OptionArgs>> options,
-        @Nullable Input<SourceContextArgs> sourceContext,
-        @Nullable Input<EnumSyntax> syntax) {
+        @Nullable Output<List<EnumValueArgs>> enumvalue,
+        @Nullable Output<String> name,
+        @Nullable Output<List<OptionArgs>> options,
+        @Nullable Output<SourceContextArgs> sourceContext,
+        @Nullable Output<EnumSyntax> syntax) {
         this.enumvalue = enumvalue;
         this.name = name;
         this.options = options;
@@ -92,11 +92,11 @@ public final class EnumArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EnumArgs() {
-        this.enumvalue = Input.empty();
-        this.name = Input.empty();
-        this.options = Input.empty();
-        this.sourceContext = Input.empty();
-        this.syntax = Input.empty();
+        this.enumvalue = Output.empty();
+        this.name = Output.empty();
+        this.options = Output.empty();
+        this.sourceContext = Output.empty();
+        this.syntax = Output.empty();
     }
 
     public static Builder builder() {
@@ -108,11 +108,11 @@ public final class EnumArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<EnumValueArgs>> enumvalue;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<OptionArgs>> options;
-        private @Nullable Input<SourceContextArgs> sourceContext;
-        private @Nullable Input<EnumSyntax> syntax;
+        private @Nullable Output<List<EnumValueArgs>> enumvalue;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<OptionArgs>> options;
+        private @Nullable Output<SourceContextArgs> sourceContext;
+        private @Nullable Output<EnumSyntax> syntax;
 
         public Builder() {
     	      // Empty
@@ -127,53 +127,53 @@ public final class EnumArgs extends io.pulumi.resources.ResourceArgs {
     	      this.syntax = defaults.syntax;
         }
 
-        public Builder enumvalue(@Nullable Input<List<EnumValueArgs>> enumvalue) {
+        public Builder enumvalue(@Nullable Output<List<EnumValueArgs>> enumvalue) {
             this.enumvalue = enumvalue;
             return this;
         }
 
         public Builder enumvalue(@Nullable List<EnumValueArgs> enumvalue) {
-            this.enumvalue = Input.ofNullable(enumvalue);
+            this.enumvalue = Output.ofNullable(enumvalue);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder options(@Nullable Input<List<OptionArgs>> options) {
+        public Builder options(@Nullable Output<List<OptionArgs>> options) {
             this.options = options;
             return this;
         }
 
         public Builder options(@Nullable List<OptionArgs> options) {
-            this.options = Input.ofNullable(options);
+            this.options = Output.ofNullable(options);
             return this;
         }
 
-        public Builder sourceContext(@Nullable Input<SourceContextArgs> sourceContext) {
+        public Builder sourceContext(@Nullable Output<SourceContextArgs> sourceContext) {
             this.sourceContext = sourceContext;
             return this;
         }
 
         public Builder sourceContext(@Nullable SourceContextArgs sourceContext) {
-            this.sourceContext = Input.ofNullable(sourceContext);
+            this.sourceContext = Output.ofNullable(sourceContext);
             return this;
         }
 
-        public Builder syntax(@Nullable Input<EnumSyntax> syntax) {
+        public Builder syntax(@Nullable Output<EnumSyntax> syntax) {
             this.syntax = syntax;
             return this;
         }
 
         public Builder syntax(@Nullable EnumSyntax syntax) {
-            this.syntax = Input.ofNullable(syntax);
+            this.syntax = Output.ofNullable(syntax);
             return this;
         }
         public EnumArgs build() {

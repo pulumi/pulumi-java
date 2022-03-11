@@ -6,7 +6,7 @@ package io.pulumi.awsnative.greengrassv2.inputs;
 import io.pulumi.awsnative.greengrassv2.enums.ComponentVersionLambdaExecutionParametersInputPayloadEncodingType;
 import io.pulumi.awsnative.greengrassv2.inputs.ComponentVersionLambdaEventSourceArgs;
 import io.pulumi.awsnative.greengrassv2.inputs.ComponentVersionLambdaLinuxProcessParamsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -22,94 +22,94 @@ public final class ComponentVersionLambdaExecutionParametersArgs extends io.pulu
     public static final ComponentVersionLambdaExecutionParametersArgs Empty = new ComponentVersionLambdaExecutionParametersArgs();
 
     @InputImport(name="environmentVariables")
-      private final @Nullable Input<Object> environmentVariables;
+      private final @Nullable Output<Object> environmentVariables;
 
-    public Input<Object> getEnvironmentVariables() {
-        return this.environmentVariables == null ? Input.empty() : this.environmentVariables;
+    public Output<Object> getEnvironmentVariables() {
+        return this.environmentVariables == null ? Output.empty() : this.environmentVariables;
     }
 
     @InputImport(name="eventSources")
-      private final @Nullable Input<List<ComponentVersionLambdaEventSourceArgs>> eventSources;
+      private final @Nullable Output<List<ComponentVersionLambdaEventSourceArgs>> eventSources;
 
-    public Input<List<ComponentVersionLambdaEventSourceArgs>> getEventSources() {
-        return this.eventSources == null ? Input.empty() : this.eventSources;
+    public Output<List<ComponentVersionLambdaEventSourceArgs>> getEventSources() {
+        return this.eventSources == null ? Output.empty() : this.eventSources;
     }
 
     @InputImport(name="execArgs")
-      private final @Nullable Input<List<String>> execArgs;
+      private final @Nullable Output<List<String>> execArgs;
 
-    public Input<List<String>> getExecArgs() {
-        return this.execArgs == null ? Input.empty() : this.execArgs;
+    public Output<List<String>> getExecArgs() {
+        return this.execArgs == null ? Output.empty() : this.execArgs;
     }
 
     @InputImport(name="inputPayloadEncodingType")
-      private final @Nullable Input<ComponentVersionLambdaExecutionParametersInputPayloadEncodingType> inputPayloadEncodingType;
+      private final @Nullable Output<ComponentVersionLambdaExecutionParametersInputPayloadEncodingType> inputPayloadEncodingType;
 
-    public Input<ComponentVersionLambdaExecutionParametersInputPayloadEncodingType> getInputPayloadEncodingType() {
-        return this.inputPayloadEncodingType == null ? Input.empty() : this.inputPayloadEncodingType;
+    public Output<ComponentVersionLambdaExecutionParametersInputPayloadEncodingType> getInputPayloadEncodingType() {
+        return this.inputPayloadEncodingType == null ? Output.empty() : this.inputPayloadEncodingType;
     }
 
     @InputImport(name="linuxProcessParams")
-      private final @Nullable Input<ComponentVersionLambdaLinuxProcessParamsArgs> linuxProcessParams;
+      private final @Nullable Output<ComponentVersionLambdaLinuxProcessParamsArgs> linuxProcessParams;
 
-    public Input<ComponentVersionLambdaLinuxProcessParamsArgs> getLinuxProcessParams() {
-        return this.linuxProcessParams == null ? Input.empty() : this.linuxProcessParams;
+    public Output<ComponentVersionLambdaLinuxProcessParamsArgs> getLinuxProcessParams() {
+        return this.linuxProcessParams == null ? Output.empty() : this.linuxProcessParams;
     }
 
     @InputImport(name="maxIdleTimeInSeconds")
-      private final @Nullable Input<Integer> maxIdleTimeInSeconds;
+      private final @Nullable Output<Integer> maxIdleTimeInSeconds;
 
-    public Input<Integer> getMaxIdleTimeInSeconds() {
-        return this.maxIdleTimeInSeconds == null ? Input.empty() : this.maxIdleTimeInSeconds;
+    public Output<Integer> getMaxIdleTimeInSeconds() {
+        return this.maxIdleTimeInSeconds == null ? Output.empty() : this.maxIdleTimeInSeconds;
     }
 
     @InputImport(name="maxInstancesCount")
-      private final @Nullable Input<Integer> maxInstancesCount;
+      private final @Nullable Output<Integer> maxInstancesCount;
 
-    public Input<Integer> getMaxInstancesCount() {
-        return this.maxInstancesCount == null ? Input.empty() : this.maxInstancesCount;
+    public Output<Integer> getMaxInstancesCount() {
+        return this.maxInstancesCount == null ? Output.empty() : this.maxInstancesCount;
     }
 
     @InputImport(name="maxQueueSize")
-      private final @Nullable Input<Integer> maxQueueSize;
+      private final @Nullable Output<Integer> maxQueueSize;
 
-    public Input<Integer> getMaxQueueSize() {
-        return this.maxQueueSize == null ? Input.empty() : this.maxQueueSize;
+    public Output<Integer> getMaxQueueSize() {
+        return this.maxQueueSize == null ? Output.empty() : this.maxQueueSize;
     }
 
     @InputImport(name="pinned")
-      private final @Nullable Input<Boolean> pinned;
+      private final @Nullable Output<Boolean> pinned;
 
-    public Input<Boolean> getPinned() {
-        return this.pinned == null ? Input.empty() : this.pinned;
+    public Output<Boolean> getPinned() {
+        return this.pinned == null ? Output.empty() : this.pinned;
     }
 
     @InputImport(name="statusTimeoutInSeconds")
-      private final @Nullable Input<Integer> statusTimeoutInSeconds;
+      private final @Nullable Output<Integer> statusTimeoutInSeconds;
 
-    public Input<Integer> getStatusTimeoutInSeconds() {
-        return this.statusTimeoutInSeconds == null ? Input.empty() : this.statusTimeoutInSeconds;
+    public Output<Integer> getStatusTimeoutInSeconds() {
+        return this.statusTimeoutInSeconds == null ? Output.empty() : this.statusTimeoutInSeconds;
     }
 
     @InputImport(name="timeoutInSeconds")
-      private final @Nullable Input<Integer> timeoutInSeconds;
+      private final @Nullable Output<Integer> timeoutInSeconds;
 
-    public Input<Integer> getTimeoutInSeconds() {
-        return this.timeoutInSeconds == null ? Input.empty() : this.timeoutInSeconds;
+    public Output<Integer> getTimeoutInSeconds() {
+        return this.timeoutInSeconds == null ? Output.empty() : this.timeoutInSeconds;
     }
 
     public ComponentVersionLambdaExecutionParametersArgs(
-        @Nullable Input<Object> environmentVariables,
-        @Nullable Input<List<ComponentVersionLambdaEventSourceArgs>> eventSources,
-        @Nullable Input<List<String>> execArgs,
-        @Nullable Input<ComponentVersionLambdaExecutionParametersInputPayloadEncodingType> inputPayloadEncodingType,
-        @Nullable Input<ComponentVersionLambdaLinuxProcessParamsArgs> linuxProcessParams,
-        @Nullable Input<Integer> maxIdleTimeInSeconds,
-        @Nullable Input<Integer> maxInstancesCount,
-        @Nullable Input<Integer> maxQueueSize,
-        @Nullable Input<Boolean> pinned,
-        @Nullable Input<Integer> statusTimeoutInSeconds,
-        @Nullable Input<Integer> timeoutInSeconds) {
+        @Nullable Output<Object> environmentVariables,
+        @Nullable Output<List<ComponentVersionLambdaEventSourceArgs>> eventSources,
+        @Nullable Output<List<String>> execArgs,
+        @Nullable Output<ComponentVersionLambdaExecutionParametersInputPayloadEncodingType> inputPayloadEncodingType,
+        @Nullable Output<ComponentVersionLambdaLinuxProcessParamsArgs> linuxProcessParams,
+        @Nullable Output<Integer> maxIdleTimeInSeconds,
+        @Nullable Output<Integer> maxInstancesCount,
+        @Nullable Output<Integer> maxQueueSize,
+        @Nullable Output<Boolean> pinned,
+        @Nullable Output<Integer> statusTimeoutInSeconds,
+        @Nullable Output<Integer> timeoutInSeconds) {
         this.environmentVariables = environmentVariables;
         this.eventSources = eventSources;
         this.execArgs = execArgs;
@@ -124,17 +124,17 @@ public final class ComponentVersionLambdaExecutionParametersArgs extends io.pulu
     }
 
     private ComponentVersionLambdaExecutionParametersArgs() {
-        this.environmentVariables = Input.empty();
-        this.eventSources = Input.empty();
-        this.execArgs = Input.empty();
-        this.inputPayloadEncodingType = Input.empty();
-        this.linuxProcessParams = Input.empty();
-        this.maxIdleTimeInSeconds = Input.empty();
-        this.maxInstancesCount = Input.empty();
-        this.maxQueueSize = Input.empty();
-        this.pinned = Input.empty();
-        this.statusTimeoutInSeconds = Input.empty();
-        this.timeoutInSeconds = Input.empty();
+        this.environmentVariables = Output.empty();
+        this.eventSources = Output.empty();
+        this.execArgs = Output.empty();
+        this.inputPayloadEncodingType = Output.empty();
+        this.linuxProcessParams = Output.empty();
+        this.maxIdleTimeInSeconds = Output.empty();
+        this.maxInstancesCount = Output.empty();
+        this.maxQueueSize = Output.empty();
+        this.pinned = Output.empty();
+        this.statusTimeoutInSeconds = Output.empty();
+        this.timeoutInSeconds = Output.empty();
     }
 
     public static Builder builder() {
@@ -146,17 +146,17 @@ public final class ComponentVersionLambdaExecutionParametersArgs extends io.pulu
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> environmentVariables;
-        private @Nullable Input<List<ComponentVersionLambdaEventSourceArgs>> eventSources;
-        private @Nullable Input<List<String>> execArgs;
-        private @Nullable Input<ComponentVersionLambdaExecutionParametersInputPayloadEncodingType> inputPayloadEncodingType;
-        private @Nullable Input<ComponentVersionLambdaLinuxProcessParamsArgs> linuxProcessParams;
-        private @Nullable Input<Integer> maxIdleTimeInSeconds;
-        private @Nullable Input<Integer> maxInstancesCount;
-        private @Nullable Input<Integer> maxQueueSize;
-        private @Nullable Input<Boolean> pinned;
-        private @Nullable Input<Integer> statusTimeoutInSeconds;
-        private @Nullable Input<Integer> timeoutInSeconds;
+        private @Nullable Output<Object> environmentVariables;
+        private @Nullable Output<List<ComponentVersionLambdaEventSourceArgs>> eventSources;
+        private @Nullable Output<List<String>> execArgs;
+        private @Nullable Output<ComponentVersionLambdaExecutionParametersInputPayloadEncodingType> inputPayloadEncodingType;
+        private @Nullable Output<ComponentVersionLambdaLinuxProcessParamsArgs> linuxProcessParams;
+        private @Nullable Output<Integer> maxIdleTimeInSeconds;
+        private @Nullable Output<Integer> maxInstancesCount;
+        private @Nullable Output<Integer> maxQueueSize;
+        private @Nullable Output<Boolean> pinned;
+        private @Nullable Output<Integer> statusTimeoutInSeconds;
+        private @Nullable Output<Integer> timeoutInSeconds;
 
         public Builder() {
     	      // Empty
@@ -177,113 +177,113 @@ public final class ComponentVersionLambdaExecutionParametersArgs extends io.pulu
     	      this.timeoutInSeconds = defaults.timeoutInSeconds;
         }
 
-        public Builder environmentVariables(@Nullable Input<Object> environmentVariables) {
+        public Builder environmentVariables(@Nullable Output<Object> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
         public Builder environmentVariables(@Nullable Object environmentVariables) {
-            this.environmentVariables = Input.ofNullable(environmentVariables);
+            this.environmentVariables = Output.ofNullable(environmentVariables);
             return this;
         }
 
-        public Builder eventSources(@Nullable Input<List<ComponentVersionLambdaEventSourceArgs>> eventSources) {
+        public Builder eventSources(@Nullable Output<List<ComponentVersionLambdaEventSourceArgs>> eventSources) {
             this.eventSources = eventSources;
             return this;
         }
 
         public Builder eventSources(@Nullable List<ComponentVersionLambdaEventSourceArgs> eventSources) {
-            this.eventSources = Input.ofNullable(eventSources);
+            this.eventSources = Output.ofNullable(eventSources);
             return this;
         }
 
-        public Builder execArgs(@Nullable Input<List<String>> execArgs) {
+        public Builder execArgs(@Nullable Output<List<String>> execArgs) {
             this.execArgs = execArgs;
             return this;
         }
 
         public Builder execArgs(@Nullable List<String> execArgs) {
-            this.execArgs = Input.ofNullable(execArgs);
+            this.execArgs = Output.ofNullable(execArgs);
             return this;
         }
 
-        public Builder inputPayloadEncodingType(@Nullable Input<ComponentVersionLambdaExecutionParametersInputPayloadEncodingType> inputPayloadEncodingType) {
+        public Builder inputPayloadEncodingType(@Nullable Output<ComponentVersionLambdaExecutionParametersInputPayloadEncodingType> inputPayloadEncodingType) {
             this.inputPayloadEncodingType = inputPayloadEncodingType;
             return this;
         }
 
         public Builder inputPayloadEncodingType(@Nullable ComponentVersionLambdaExecutionParametersInputPayloadEncodingType inputPayloadEncodingType) {
-            this.inputPayloadEncodingType = Input.ofNullable(inputPayloadEncodingType);
+            this.inputPayloadEncodingType = Output.ofNullable(inputPayloadEncodingType);
             return this;
         }
 
-        public Builder linuxProcessParams(@Nullable Input<ComponentVersionLambdaLinuxProcessParamsArgs> linuxProcessParams) {
+        public Builder linuxProcessParams(@Nullable Output<ComponentVersionLambdaLinuxProcessParamsArgs> linuxProcessParams) {
             this.linuxProcessParams = linuxProcessParams;
             return this;
         }
 
         public Builder linuxProcessParams(@Nullable ComponentVersionLambdaLinuxProcessParamsArgs linuxProcessParams) {
-            this.linuxProcessParams = Input.ofNullable(linuxProcessParams);
+            this.linuxProcessParams = Output.ofNullable(linuxProcessParams);
             return this;
         }
 
-        public Builder maxIdleTimeInSeconds(@Nullable Input<Integer> maxIdleTimeInSeconds) {
+        public Builder maxIdleTimeInSeconds(@Nullable Output<Integer> maxIdleTimeInSeconds) {
             this.maxIdleTimeInSeconds = maxIdleTimeInSeconds;
             return this;
         }
 
         public Builder maxIdleTimeInSeconds(@Nullable Integer maxIdleTimeInSeconds) {
-            this.maxIdleTimeInSeconds = Input.ofNullable(maxIdleTimeInSeconds);
+            this.maxIdleTimeInSeconds = Output.ofNullable(maxIdleTimeInSeconds);
             return this;
         }
 
-        public Builder maxInstancesCount(@Nullable Input<Integer> maxInstancesCount) {
+        public Builder maxInstancesCount(@Nullable Output<Integer> maxInstancesCount) {
             this.maxInstancesCount = maxInstancesCount;
             return this;
         }
 
         public Builder maxInstancesCount(@Nullable Integer maxInstancesCount) {
-            this.maxInstancesCount = Input.ofNullable(maxInstancesCount);
+            this.maxInstancesCount = Output.ofNullable(maxInstancesCount);
             return this;
         }
 
-        public Builder maxQueueSize(@Nullable Input<Integer> maxQueueSize) {
+        public Builder maxQueueSize(@Nullable Output<Integer> maxQueueSize) {
             this.maxQueueSize = maxQueueSize;
             return this;
         }
 
         public Builder maxQueueSize(@Nullable Integer maxQueueSize) {
-            this.maxQueueSize = Input.ofNullable(maxQueueSize);
+            this.maxQueueSize = Output.ofNullable(maxQueueSize);
             return this;
         }
 
-        public Builder pinned(@Nullable Input<Boolean> pinned) {
+        public Builder pinned(@Nullable Output<Boolean> pinned) {
             this.pinned = pinned;
             return this;
         }
 
         public Builder pinned(@Nullable Boolean pinned) {
-            this.pinned = Input.ofNullable(pinned);
+            this.pinned = Output.ofNullable(pinned);
             return this;
         }
 
-        public Builder statusTimeoutInSeconds(@Nullable Input<Integer> statusTimeoutInSeconds) {
+        public Builder statusTimeoutInSeconds(@Nullable Output<Integer> statusTimeoutInSeconds) {
             this.statusTimeoutInSeconds = statusTimeoutInSeconds;
             return this;
         }
 
         public Builder statusTimeoutInSeconds(@Nullable Integer statusTimeoutInSeconds) {
-            this.statusTimeoutInSeconds = Input.ofNullable(statusTimeoutInSeconds);
+            this.statusTimeoutInSeconds = Output.ofNullable(statusTimeoutInSeconds);
             return this;
         }
 
-        public Builder timeoutInSeconds(@Nullable Input<Integer> timeoutInSeconds) {
+        public Builder timeoutInSeconds(@Nullable Output<Integer> timeoutInSeconds) {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
 
         public Builder timeoutInSeconds(@Nullable Integer timeoutInSeconds) {
-            this.timeoutInSeconds = Input.ofNullable(timeoutInSeconds);
+            this.timeoutInSeconds = Output.ofNullable(timeoutInSeconds);
             return this;
         }
         public ComponentVersionLambdaExecutionParametersArgs build() {

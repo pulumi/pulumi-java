@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -16,38 +16,38 @@ public final class ContainerNetworksAdvancedArgs extends io.pulumi.resources.Res
     public static final ContainerNetworksAdvancedArgs Empty = new ContainerNetworksAdvancedArgs();
 
     @InputImport(name="aliases")
-      private final @Nullable Input<List<String>> aliases;
+      private final @Nullable Output<List<String>> aliases;
 
-    public Input<List<String>> getAliases() {
-        return this.aliases == null ? Input.empty() : this.aliases;
+    public Output<List<String>> getAliases() {
+        return this.aliases == null ? Output.empty() : this.aliases;
     }
 
     @InputImport(name="ipv4Address")
-      private final @Nullable Input<String> ipv4Address;
+      private final @Nullable Output<String> ipv4Address;
 
-    public Input<String> getIpv4Address() {
-        return this.ipv4Address == null ? Input.empty() : this.ipv4Address;
+    public Output<String> getIpv4Address() {
+        return this.ipv4Address == null ? Output.empty() : this.ipv4Address;
     }
 
     @InputImport(name="ipv6Address")
-      private final @Nullable Input<String> ipv6Address;
+      private final @Nullable Output<String> ipv6Address;
 
-    public Input<String> getIpv6Address() {
-        return this.ipv6Address == null ? Input.empty() : this.ipv6Address;
+    public Output<String> getIpv6Address() {
+        return this.ipv6Address == null ? Output.empty() : this.ipv6Address;
     }
 
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     public ContainerNetworksAdvancedArgs(
-        @Nullable Input<List<String>> aliases,
-        @Nullable Input<String> ipv4Address,
-        @Nullable Input<String> ipv6Address,
-        Input<String> name) {
+        @Nullable Output<List<String>> aliases,
+        @Nullable Output<String> ipv4Address,
+        @Nullable Output<String> ipv6Address,
+        Output<String> name) {
         this.aliases = aliases;
         this.ipv4Address = ipv4Address;
         this.ipv6Address = ipv6Address;
@@ -55,10 +55,10 @@ public final class ContainerNetworksAdvancedArgs extends io.pulumi.resources.Res
     }
 
     private ContainerNetworksAdvancedArgs() {
-        this.aliases = Input.empty();
-        this.ipv4Address = Input.empty();
-        this.ipv6Address = Input.empty();
-        this.name = Input.empty();
+        this.aliases = Output.empty();
+        this.ipv4Address = Output.empty();
+        this.ipv6Address = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -70,10 +70,10 @@ public final class ContainerNetworksAdvancedArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> aliases;
-        private @Nullable Input<String> ipv4Address;
-        private @Nullable Input<String> ipv6Address;
-        private Input<String> name;
+        private @Nullable Output<List<String>> aliases;
+        private @Nullable Output<String> ipv4Address;
+        private @Nullable Output<String> ipv6Address;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -87,43 +87,43 @@ public final class ContainerNetworksAdvancedArgs extends io.pulumi.resources.Res
     	      this.name = defaults.name;
         }
 
-        public Builder aliases(@Nullable Input<List<String>> aliases) {
+        public Builder aliases(@Nullable Output<List<String>> aliases) {
             this.aliases = aliases;
             return this;
         }
 
         public Builder aliases(@Nullable List<String> aliases) {
-            this.aliases = Input.ofNullable(aliases);
+            this.aliases = Output.ofNullable(aliases);
             return this;
         }
 
-        public Builder ipv4Address(@Nullable Input<String> ipv4Address) {
+        public Builder ipv4Address(@Nullable Output<String> ipv4Address) {
             this.ipv4Address = ipv4Address;
             return this;
         }
 
         public Builder ipv4Address(@Nullable String ipv4Address) {
-            this.ipv4Address = Input.ofNullable(ipv4Address);
+            this.ipv4Address = Output.ofNullable(ipv4Address);
             return this;
         }
 
-        public Builder ipv6Address(@Nullable Input<String> ipv6Address) {
+        public Builder ipv6Address(@Nullable Output<String> ipv6Address) {
             this.ipv6Address = ipv6Address;
             return this;
         }
 
         public Builder ipv6Address(@Nullable String ipv6Address) {
-            this.ipv6Address = Input.ofNullable(ipv6Address);
+            this.ipv6Address = Output.ofNullable(ipv6Address);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public ContainerNetworksAdvancedArgs build() {

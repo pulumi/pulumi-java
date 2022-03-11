@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class FlockerVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="datasetName")
-      private final @Nullable Input<String> datasetName;
+      private final @Nullable Output<String> datasetName;
 
-    public Input<String> getDatasetName() {
-        return this.datasetName == null ? Input.empty() : this.datasetName;
+    public Output<String> getDatasetName() {
+        return this.datasetName == null ? Output.empty() : this.datasetName;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class FlockerVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="datasetUUID")
-      private final @Nullable Input<String> datasetUUID;
+      private final @Nullable Output<String> datasetUUID;
 
-    public Input<String> getDatasetUUID() {
-        return this.datasetUUID == null ? Input.empty() : this.datasetUUID;
+    public Output<String> getDatasetUUID() {
+        return this.datasetUUID == null ? Output.empty() : this.datasetUUID;
     }
 
     public FlockerVolumeSourceArgs(
-        @Nullable Input<String> datasetName,
-        @Nullable Input<String> datasetUUID) {
+        @Nullable Output<String> datasetName,
+        @Nullable Output<String> datasetUUID) {
         this.datasetName = datasetName;
         this.datasetUUID = datasetUUID;
     }
 
     private FlockerVolumeSourceArgs() {
-        this.datasetName = Input.empty();
-        this.datasetUUID = Input.empty();
+        this.datasetName = Output.empty();
+        this.datasetUUID = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class FlockerVolumeSourceArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> datasetName;
-        private @Nullable Input<String> datasetUUID;
+        private @Nullable Output<String> datasetName;
+        private @Nullable Output<String> datasetUUID;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class FlockerVolumeSourceArgs extends io.pulumi.resources.ResourceA
     	      this.datasetUUID = defaults.datasetUUID;
         }
 
-        public Builder datasetName(@Nullable Input<String> datasetName) {
+        public Builder datasetName(@Nullable Output<String> datasetName) {
             this.datasetName = datasetName;
             return this;
         }
 
         public Builder datasetName(@Nullable String datasetName) {
-            this.datasetName = Input.ofNullable(datasetName);
+            this.datasetName = Output.ofNullable(datasetName);
             return this;
         }
 
-        public Builder datasetUUID(@Nullable Input<String> datasetUUID) {
+        public Builder datasetUUID(@Nullable Output<String> datasetUUID) {
             this.datasetUUID = datasetUUID;
             return this;
         }
 
         public Builder datasetUUID(@Nullable String datasetUUID) {
-            this.datasetUUID = Input.ofNullable(datasetUUID);
+            this.datasetUUID = Output.ofNullable(datasetUUID);
             return this;
         }
         public FlockerVolumeSourceArgs build() {

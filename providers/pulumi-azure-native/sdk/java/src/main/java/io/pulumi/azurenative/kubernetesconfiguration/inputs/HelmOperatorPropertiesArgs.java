@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kubernetesconfiguration.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class HelmOperatorPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="chartValues")
-      private final @Nullable Input<String> chartValues;
+      private final @Nullable Output<String> chartValues;
 
-    public Input<String> getChartValues() {
-        return this.chartValues == null ? Input.empty() : this.chartValues;
+    public Output<String> getChartValues() {
+        return this.chartValues == null ? Output.empty() : this.chartValues;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class HelmOperatorPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="chartVersion")
-      private final @Nullable Input<String> chartVersion;
+      private final @Nullable Output<String> chartVersion;
 
-    public Input<String> getChartVersion() {
-        return this.chartVersion == null ? Input.empty() : this.chartVersion;
+    public Output<String> getChartVersion() {
+        return this.chartVersion == null ? Output.empty() : this.chartVersion;
     }
 
     public HelmOperatorPropertiesArgs(
-        @Nullable Input<String> chartValues,
-        @Nullable Input<String> chartVersion) {
+        @Nullable Output<String> chartValues,
+        @Nullable Output<String> chartVersion) {
         this.chartValues = chartValues;
         this.chartVersion = chartVersion;
     }
 
     private HelmOperatorPropertiesArgs() {
-        this.chartValues = Input.empty();
-        this.chartVersion = Input.empty();
+        this.chartValues = Output.empty();
+        this.chartVersion = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class HelmOperatorPropertiesArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> chartValues;
-        private @Nullable Input<String> chartVersion;
+        private @Nullable Output<String> chartValues;
+        private @Nullable Output<String> chartVersion;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class HelmOperatorPropertiesArgs extends io.pulumi.resources.Resour
     	      this.chartVersion = defaults.chartVersion;
         }
 
-        public Builder chartValues(@Nullable Input<String> chartValues) {
+        public Builder chartValues(@Nullable Output<String> chartValues) {
             this.chartValues = chartValues;
             return this;
         }
 
         public Builder chartValues(@Nullable String chartValues) {
-            this.chartValues = Input.ofNullable(chartValues);
+            this.chartValues = Output.ofNullable(chartValues);
             return this;
         }
 
-        public Builder chartVersion(@Nullable Input<String> chartVersion) {
+        public Builder chartVersion(@Nullable Output<String> chartVersion) {
             this.chartVersion = chartVersion;
             return this;
         }
 
         public Builder chartVersion(@Nullable String chartVersion) {
-            this.chartVersion = Input.ofNullable(chartVersion);
+            this.chartVersion = Output.ofNullable(chartVersion);
             return this;
         }
         public HelmOperatorPropertiesArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,9 +19,9 @@ public final class RegionInstanceGroupManagerAutoHealingPoliciesGetArgs extends 
      * 
      */
     @InputImport(name="healthCheck", required=true)
-      private final Input<String> healthCheck;
+      private final Output<String> healthCheck;
 
-    public Input<String> getHealthCheck() {
+    public Output<String> getHealthCheck() {
         return this.healthCheck;
     }
 
@@ -31,22 +31,22 @@ public final class RegionInstanceGroupManagerAutoHealingPoliciesGetArgs extends 
      * 
      */
     @InputImport(name="initialDelaySec", required=true)
-      private final Input<Integer> initialDelaySec;
+      private final Output<Integer> initialDelaySec;
 
-    public Input<Integer> getInitialDelaySec() {
+    public Output<Integer> getInitialDelaySec() {
         return this.initialDelaySec;
     }
 
     public RegionInstanceGroupManagerAutoHealingPoliciesGetArgs(
-        Input<String> healthCheck,
-        Input<Integer> initialDelaySec) {
+        Output<String> healthCheck,
+        Output<Integer> initialDelaySec) {
         this.healthCheck = Objects.requireNonNull(healthCheck, "expected parameter 'healthCheck' to be non-null");
         this.initialDelaySec = Objects.requireNonNull(initialDelaySec, "expected parameter 'initialDelaySec' to be non-null");
     }
 
     private RegionInstanceGroupManagerAutoHealingPoliciesGetArgs() {
-        this.healthCheck = Input.empty();
-        this.initialDelaySec = Input.empty();
+        this.healthCheck = Output.empty();
+        this.initialDelaySec = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class RegionInstanceGroupManagerAutoHealingPoliciesGetArgs extends 
     }
 
     public static final class Builder {
-        private Input<String> healthCheck;
-        private Input<Integer> initialDelaySec;
+        private Output<String> healthCheck;
+        private Output<Integer> initialDelaySec;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class RegionInstanceGroupManagerAutoHealingPoliciesGetArgs extends 
     	      this.initialDelaySec = defaults.initialDelaySec;
         }
 
-        public Builder healthCheck(Input<String> healthCheck) {
+        public Builder healthCheck(Output<String> healthCheck) {
             this.healthCheck = Objects.requireNonNull(healthCheck);
             return this;
         }
 
         public Builder healthCheck(String healthCheck) {
-            this.healthCheck = Input.of(Objects.requireNonNull(healthCheck));
+            this.healthCheck = Output.of(Objects.requireNonNull(healthCheck));
             return this;
         }
 
-        public Builder initialDelaySec(Input<Integer> initialDelaySec) {
+        public Builder initialDelaySec(Output<Integer> initialDelaySec) {
             this.initialDelaySec = Objects.requireNonNull(initialDelaySec);
             return this;
         }
 
         public Builder initialDelaySec(Integer initialDelaySec) {
-            this.initialDelaySec = Input.of(Objects.requireNonNull(initialDelaySec));
+            this.initialDelaySec = Output.of(Objects.requireNonNull(initialDelaySec));
             return this;
         }
         public RegionInstanceGroupManagerAutoHealingPoliciesGetArgs build() {

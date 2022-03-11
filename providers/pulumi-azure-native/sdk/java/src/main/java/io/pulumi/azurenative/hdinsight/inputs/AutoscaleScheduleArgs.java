@@ -5,7 +5,7 @@ package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.azurenative.hdinsight.enums.DaysOfWeek;
 import io.pulumi.azurenative.hdinsight.inputs.AutoscaleTimeAndCapacityArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class AutoscaleScheduleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="days")
-      private final @Nullable Input<List<DaysOfWeek>> days;
+      private final @Nullable Output<List<DaysOfWeek>> days;
 
-    public Input<List<DaysOfWeek>> getDays() {
-        return this.days == null ? Input.empty() : this.days;
+    public Output<List<DaysOfWeek>> getDays() {
+        return this.days == null ? Output.empty() : this.days;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class AutoscaleScheduleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="timeAndCapacity")
-      private final @Nullable Input<AutoscaleTimeAndCapacityArgs> timeAndCapacity;
+      private final @Nullable Output<AutoscaleTimeAndCapacityArgs> timeAndCapacity;
 
-    public Input<AutoscaleTimeAndCapacityArgs> getTimeAndCapacity() {
-        return this.timeAndCapacity == null ? Input.empty() : this.timeAndCapacity;
+    public Output<AutoscaleTimeAndCapacityArgs> getTimeAndCapacity() {
+        return this.timeAndCapacity == null ? Output.empty() : this.timeAndCapacity;
     }
 
     public AutoscaleScheduleArgs(
-        @Nullable Input<List<DaysOfWeek>> days,
-        @Nullable Input<AutoscaleTimeAndCapacityArgs> timeAndCapacity) {
+        @Nullable Output<List<DaysOfWeek>> days,
+        @Nullable Output<AutoscaleTimeAndCapacityArgs> timeAndCapacity) {
         this.days = days;
         this.timeAndCapacity = timeAndCapacity;
     }
 
     private AutoscaleScheduleArgs() {
-        this.days = Input.empty();
-        this.timeAndCapacity = Input.empty();
+        this.days = Output.empty();
+        this.timeAndCapacity = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class AutoscaleScheduleArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<List<DaysOfWeek>> days;
-        private @Nullable Input<AutoscaleTimeAndCapacityArgs> timeAndCapacity;
+        private @Nullable Output<List<DaysOfWeek>> days;
+        private @Nullable Output<AutoscaleTimeAndCapacityArgs> timeAndCapacity;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class AutoscaleScheduleArgs extends io.pulumi.resources.ResourceArg
     	      this.timeAndCapacity = defaults.timeAndCapacity;
         }
 
-        public Builder days(@Nullable Input<List<DaysOfWeek>> days) {
+        public Builder days(@Nullable Output<List<DaysOfWeek>> days) {
             this.days = days;
             return this;
         }
 
         public Builder days(@Nullable List<DaysOfWeek> days) {
-            this.days = Input.ofNullable(days);
+            this.days = Output.ofNullable(days);
             return this;
         }
 
-        public Builder timeAndCapacity(@Nullable Input<AutoscaleTimeAndCapacityArgs> timeAndCapacity) {
+        public Builder timeAndCapacity(@Nullable Output<AutoscaleTimeAndCapacityArgs> timeAndCapacity) {
             this.timeAndCapacity = timeAndCapacity;
             return this;
         }
 
         public Builder timeAndCapacity(@Nullable AutoscaleTimeAndCapacityArgs timeAndCapacity) {
-            this.timeAndCapacity = Input.ofNullable(timeAndCapacity);
+            this.timeAndCapacity = Output.ofNullable(timeAndCapacity);
             return this;
         }
         public AutoscaleScheduleArgs build() {

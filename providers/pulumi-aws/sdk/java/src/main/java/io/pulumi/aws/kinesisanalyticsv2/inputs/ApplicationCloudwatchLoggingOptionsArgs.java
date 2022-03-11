@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,10 +15,10 @@ public final class ApplicationCloudwatchLoggingOptionsArgs extends io.pulumi.res
     public static final ApplicationCloudwatchLoggingOptionsArgs Empty = new ApplicationCloudwatchLoggingOptionsArgs();
 
     @InputImport(name="cloudwatchLoggingOptionId")
-      private final @Nullable Input<String> cloudwatchLoggingOptionId;
+      private final @Nullable Output<String> cloudwatchLoggingOptionId;
 
-    public Input<String> getCloudwatchLoggingOptionId() {
-        return this.cloudwatchLoggingOptionId == null ? Input.empty() : this.cloudwatchLoggingOptionId;
+    public Output<String> getCloudwatchLoggingOptionId() {
+        return this.cloudwatchLoggingOptionId == null ? Output.empty() : this.cloudwatchLoggingOptionId;
     }
 
     /**
@@ -26,22 +26,22 @@ public final class ApplicationCloudwatchLoggingOptionsArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="logStreamArn", required=true)
-      private final Input<String> logStreamArn;
+      private final Output<String> logStreamArn;
 
-    public Input<String> getLogStreamArn() {
+    public Output<String> getLogStreamArn() {
         return this.logStreamArn;
     }
 
     public ApplicationCloudwatchLoggingOptionsArgs(
-        @Nullable Input<String> cloudwatchLoggingOptionId,
-        Input<String> logStreamArn) {
+        @Nullable Output<String> cloudwatchLoggingOptionId,
+        Output<String> logStreamArn) {
         this.cloudwatchLoggingOptionId = cloudwatchLoggingOptionId;
         this.logStreamArn = Objects.requireNonNull(logStreamArn, "expected parameter 'logStreamArn' to be non-null");
     }
 
     private ApplicationCloudwatchLoggingOptionsArgs() {
-        this.cloudwatchLoggingOptionId = Input.empty();
-        this.logStreamArn = Input.empty();
+        this.cloudwatchLoggingOptionId = Output.empty();
+        this.logStreamArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -53,8 +53,8 @@ public final class ApplicationCloudwatchLoggingOptionsArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> cloudwatchLoggingOptionId;
-        private Input<String> logStreamArn;
+        private @Nullable Output<String> cloudwatchLoggingOptionId;
+        private Output<String> logStreamArn;
 
         public Builder() {
     	      // Empty
@@ -66,23 +66,23 @@ public final class ApplicationCloudwatchLoggingOptionsArgs extends io.pulumi.res
     	      this.logStreamArn = defaults.logStreamArn;
         }
 
-        public Builder cloudwatchLoggingOptionId(@Nullable Input<String> cloudwatchLoggingOptionId) {
+        public Builder cloudwatchLoggingOptionId(@Nullable Output<String> cloudwatchLoggingOptionId) {
             this.cloudwatchLoggingOptionId = cloudwatchLoggingOptionId;
             return this;
         }
 
         public Builder cloudwatchLoggingOptionId(@Nullable String cloudwatchLoggingOptionId) {
-            this.cloudwatchLoggingOptionId = Input.ofNullable(cloudwatchLoggingOptionId);
+            this.cloudwatchLoggingOptionId = Output.ofNullable(cloudwatchLoggingOptionId);
             return this;
         }
 
-        public Builder logStreamArn(Input<String> logStreamArn) {
+        public Builder logStreamArn(Output<String> logStreamArn) {
             this.logStreamArn = Objects.requireNonNull(logStreamArn);
             return this;
         }
 
         public Builder logStreamArn(String logStreamArn) {
-            this.logStreamArn = Input.of(Objects.requireNonNull(logStreamArn));
+            this.logStreamArn = Output.of(Objects.requireNonNull(logStreamArn));
             return this;
         }
         public ApplicationCloudwatchLoggingOptionsArgs build() {

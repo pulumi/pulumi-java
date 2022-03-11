@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.quicksight.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="awsAccountId")
-      private final @Nullable Input<String> awsAccountId;
+      private final @Nullable Output<String> awsAccountId;
 
-    public Input<String> getAwsAccountId() {
-        return this.awsAccountId == null ? Input.empty() : this.awsAccountId;
+    public Output<String> getAwsAccountId() {
+        return this.awsAccountId == null ? Output.empty() : this.awsAccountId;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="email")
-      private final @Nullable Input<String> email;
+      private final @Nullable Output<String> email;
 
-    public Input<String> getEmail() {
-        return this.email == null ? Input.empty() : this.email;
+    public Output<String> getEmail() {
+        return this.email == null ? Output.empty() : this.email;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iamArn")
-      private final @Nullable Input<String> iamArn;
+      private final @Nullable Output<String> iamArn;
 
-    public Input<String> getIamArn() {
-        return this.iamArn == null ? Input.empty() : this.iamArn;
+    public Output<String> getIamArn() {
+        return this.iamArn == null ? Output.empty() : this.iamArn;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identityType")
-      private final @Nullable Input<String> identityType;
+      private final @Nullable Output<String> identityType;
 
-    public Input<String> getIdentityType() {
-        return this.identityType == null ? Input.empty() : this.identityType;
+    public Output<String> getIdentityType() {
+        return this.identityType == null ? Output.empty() : this.identityType;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namespace")
-      private final @Nullable Input<String> namespace;
+      private final @Nullable Output<String> namespace;
 
-    public Input<String> getNamespace() {
-        return this.namespace == null ? Input.empty() : this.namespace;
+    public Output<String> getNamespace() {
+        return this.namespace == null ? Output.empty() : this.namespace;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sessionName")
-      private final @Nullable Input<String> sessionName;
+      private final @Nullable Output<String> sessionName;
 
-    public Input<String> getSessionName() {
-        return this.sessionName == null ? Input.empty() : this.sessionName;
+    public Output<String> getSessionName() {
+        return this.sessionName == null ? Output.empty() : this.sessionName;
     }
 
     /**
@@ -96,10 +96,10 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userName")
-      private final @Nullable Input<String> userName;
+      private final @Nullable Output<String> userName;
 
-    public Input<String> getUserName() {
-        return this.userName == null ? Input.empty() : this.userName;
+    public Output<String> getUserName() {
+        return this.userName == null ? Output.empty() : this.userName;
     }
 
     /**
@@ -107,22 +107,22 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userRole")
-      private final @Nullable Input<String> userRole;
+      private final @Nullable Output<String> userRole;
 
-    public Input<String> getUserRole() {
-        return this.userRole == null ? Input.empty() : this.userRole;
+    public Output<String> getUserRole() {
+        return this.userRole == null ? Output.empty() : this.userRole;
     }
 
     public UserState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> awsAccountId,
-        @Nullable Input<String> email,
-        @Nullable Input<String> iamArn,
-        @Nullable Input<String> identityType,
-        @Nullable Input<String> namespace,
-        @Nullable Input<String> sessionName,
-        @Nullable Input<String> userName,
-        @Nullable Input<String> userRole) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> awsAccountId,
+        @Nullable Output<String> email,
+        @Nullable Output<String> iamArn,
+        @Nullable Output<String> identityType,
+        @Nullable Output<String> namespace,
+        @Nullable Output<String> sessionName,
+        @Nullable Output<String> userName,
+        @Nullable Output<String> userRole) {
         this.arn = arn;
         this.awsAccountId = awsAccountId;
         this.email = email;
@@ -135,15 +135,15 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserState() {
-        this.arn = Input.empty();
-        this.awsAccountId = Input.empty();
-        this.email = Input.empty();
-        this.iamArn = Input.empty();
-        this.identityType = Input.empty();
-        this.namespace = Input.empty();
-        this.sessionName = Input.empty();
-        this.userName = Input.empty();
-        this.userRole = Input.empty();
+        this.arn = Output.empty();
+        this.awsAccountId = Output.empty();
+        this.email = Output.empty();
+        this.iamArn = Output.empty();
+        this.identityType = Output.empty();
+        this.namespace = Output.empty();
+        this.sessionName = Output.empty();
+        this.userName = Output.empty();
+        this.userRole = Output.empty();
     }
 
     public static Builder builder() {
@@ -155,15 +155,15 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> awsAccountId;
-        private @Nullable Input<String> email;
-        private @Nullable Input<String> iamArn;
-        private @Nullable Input<String> identityType;
-        private @Nullable Input<String> namespace;
-        private @Nullable Input<String> sessionName;
-        private @Nullable Input<String> userName;
-        private @Nullable Input<String> userRole;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> awsAccountId;
+        private @Nullable Output<String> email;
+        private @Nullable Output<String> iamArn;
+        private @Nullable Output<String> identityType;
+        private @Nullable Output<String> namespace;
+        private @Nullable Output<String> sessionName;
+        private @Nullable Output<String> userName;
+        private @Nullable Output<String> userRole;
 
         public Builder() {
     	      // Empty
@@ -182,93 +182,93 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     	      this.userRole = defaults.userRole;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder awsAccountId(@Nullable Input<String> awsAccountId) {
+        public Builder awsAccountId(@Nullable Output<String> awsAccountId) {
             this.awsAccountId = awsAccountId;
             return this;
         }
 
         public Builder awsAccountId(@Nullable String awsAccountId) {
-            this.awsAccountId = Input.ofNullable(awsAccountId);
+            this.awsAccountId = Output.ofNullable(awsAccountId);
             return this;
         }
 
-        public Builder email(@Nullable Input<String> email) {
+        public Builder email(@Nullable Output<String> email) {
             this.email = email;
             return this;
         }
 
         public Builder email(@Nullable String email) {
-            this.email = Input.ofNullable(email);
+            this.email = Output.ofNullable(email);
             return this;
         }
 
-        public Builder iamArn(@Nullable Input<String> iamArn) {
+        public Builder iamArn(@Nullable Output<String> iamArn) {
             this.iamArn = iamArn;
             return this;
         }
 
         public Builder iamArn(@Nullable String iamArn) {
-            this.iamArn = Input.ofNullable(iamArn);
+            this.iamArn = Output.ofNullable(iamArn);
             return this;
         }
 
-        public Builder identityType(@Nullable Input<String> identityType) {
+        public Builder identityType(@Nullable Output<String> identityType) {
             this.identityType = identityType;
             return this;
         }
 
         public Builder identityType(@Nullable String identityType) {
-            this.identityType = Input.ofNullable(identityType);
+            this.identityType = Output.ofNullable(identityType);
             return this;
         }
 
-        public Builder namespace(@Nullable Input<String> namespace) {
+        public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
 
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Input.ofNullable(namespace);
+            this.namespace = Output.ofNullable(namespace);
             return this;
         }
 
-        public Builder sessionName(@Nullable Input<String> sessionName) {
+        public Builder sessionName(@Nullable Output<String> sessionName) {
             this.sessionName = sessionName;
             return this;
         }
 
         public Builder sessionName(@Nullable String sessionName) {
-            this.sessionName = Input.ofNullable(sessionName);
+            this.sessionName = Output.ofNullable(sessionName);
             return this;
         }
 
-        public Builder userName(@Nullable Input<String> userName) {
+        public Builder userName(@Nullable Output<String> userName) {
             this.userName = userName;
             return this;
         }
 
         public Builder userName(@Nullable String userName) {
-            this.userName = Input.ofNullable(userName);
+            this.userName = Output.ofNullable(userName);
             return this;
         }
 
-        public Builder userRole(@Nullable Input<String> userRole) {
+        public Builder userRole(@Nullable Output<String> userRole) {
             this.userRole = userRole;
             return this;
         }
 
         public Builder userRole(@Nullable String userRole) {
-            this.userRole = Input.ofNullable(userRole);
+            this.userRole = Output.ofNullable(userRole);
             return this;
         }
         public UserState build() {

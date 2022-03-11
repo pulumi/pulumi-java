@@ -9,7 +9,6 @@ import io.pulumi.aws.sagemaker.inputs.FeatureGroupState;
 import io.pulumi.aws.sagemaker.outputs.FeatureGroupFeatureDefinition;
 import io.pulumi.aws.sagemaker.outputs.FeatureGroupOfflineStoreConfig;
 import io.pulumi.aws.sagemaker.outputs.FeatureGroupOnlineStoreConfig;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -227,14 +226,14 @@ public class FeatureGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FeatureGroup(String name, FeatureGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:sagemaker/featureGroup:FeatureGroup", name, args == null ? FeatureGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:sagemaker/featureGroup:FeatureGroup", name, args == null ? FeatureGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private FeatureGroup(String name, Input<String> id, @Nullable FeatureGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private FeatureGroup(String name, Output<String> id, @Nullable FeatureGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:sagemaker/featureGroup:FeatureGroup", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -250,7 +249,7 @@ public class FeatureGroup extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static FeatureGroup get(String name, Input<String> id, @Nullable FeatureGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static FeatureGroup get(String name, Output<String> id, @Nullable FeatureGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new FeatureGroup(name, id, state, options);
     }
 }

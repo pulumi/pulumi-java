@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.inputs.DateAfterCreationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,10 +23,10 @@ public final class ManagementPolicyVersionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="delete")
-      private final @Nullable Input<DateAfterCreationArgs> delete;
+      private final @Nullable Output<DateAfterCreationArgs> delete;
 
-    public Input<DateAfterCreationArgs> getDelete() {
-        return this.delete == null ? Input.empty() : this.delete;
+    public Output<DateAfterCreationArgs> getDelete() {
+        return this.delete == null ? Output.empty() : this.delete;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ManagementPolicyVersionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tierToArchive")
-      private final @Nullable Input<DateAfterCreationArgs> tierToArchive;
+      private final @Nullable Output<DateAfterCreationArgs> tierToArchive;
 
-    public Input<DateAfterCreationArgs> getTierToArchive() {
-        return this.tierToArchive == null ? Input.empty() : this.tierToArchive;
+    public Output<DateAfterCreationArgs> getTierToArchive() {
+        return this.tierToArchive == null ? Output.empty() : this.tierToArchive;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class ManagementPolicyVersionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tierToCool")
-      private final @Nullable Input<DateAfterCreationArgs> tierToCool;
+      private final @Nullable Output<DateAfterCreationArgs> tierToCool;
 
-    public Input<DateAfterCreationArgs> getTierToCool() {
-        return this.tierToCool == null ? Input.empty() : this.tierToCool;
+    public Output<DateAfterCreationArgs> getTierToCool() {
+        return this.tierToCool == null ? Output.empty() : this.tierToCool;
     }
 
     public ManagementPolicyVersionArgs(
-        @Nullable Input<DateAfterCreationArgs> delete,
-        @Nullable Input<DateAfterCreationArgs> tierToArchive,
-        @Nullable Input<DateAfterCreationArgs> tierToCool) {
+        @Nullable Output<DateAfterCreationArgs> delete,
+        @Nullable Output<DateAfterCreationArgs> tierToArchive,
+        @Nullable Output<DateAfterCreationArgs> tierToCool) {
         this.delete = delete;
         this.tierToArchive = tierToArchive;
         this.tierToCool = tierToCool;
     }
 
     private ManagementPolicyVersionArgs() {
-        this.delete = Input.empty();
-        this.tierToArchive = Input.empty();
-        this.tierToCool = Input.empty();
+        this.delete = Output.empty();
+        this.tierToArchive = Output.empty();
+        this.tierToCool = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class ManagementPolicyVersionArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<DateAfterCreationArgs> delete;
-        private @Nullable Input<DateAfterCreationArgs> tierToArchive;
-        private @Nullable Input<DateAfterCreationArgs> tierToCool;
+        private @Nullable Output<DateAfterCreationArgs> delete;
+        private @Nullable Output<DateAfterCreationArgs> tierToArchive;
+        private @Nullable Output<DateAfterCreationArgs> tierToCool;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class ManagementPolicyVersionArgs extends io.pulumi.resources.Resou
     	      this.tierToCool = defaults.tierToCool;
         }
 
-        public Builder delete(@Nullable Input<DateAfterCreationArgs> delete) {
+        public Builder delete(@Nullable Output<DateAfterCreationArgs> delete) {
             this.delete = delete;
             return this;
         }
 
         public Builder delete(@Nullable DateAfterCreationArgs delete) {
-            this.delete = Input.ofNullable(delete);
+            this.delete = Output.ofNullable(delete);
             return this;
         }
 
-        public Builder tierToArchive(@Nullable Input<DateAfterCreationArgs> tierToArchive) {
+        public Builder tierToArchive(@Nullable Output<DateAfterCreationArgs> tierToArchive) {
             this.tierToArchive = tierToArchive;
             return this;
         }
 
         public Builder tierToArchive(@Nullable DateAfterCreationArgs tierToArchive) {
-            this.tierToArchive = Input.ofNullable(tierToArchive);
+            this.tierToArchive = Output.ofNullable(tierToArchive);
             return this;
         }
 
-        public Builder tierToCool(@Nullable Input<DateAfterCreationArgs> tierToCool) {
+        public Builder tierToCool(@Nullable Output<DateAfterCreationArgs> tierToCool) {
             this.tierToCool = tierToCool;
             return this;
         }
 
         public Builder tierToCool(@Nullable DateAfterCreationArgs tierToCool) {
-            this.tierToCool = Input.ofNullable(tierToCool);
+            this.tierToCool = Output.ofNullable(tierToCool);
             return this;
         }
         public ManagementPolicyVersionArgs build() {

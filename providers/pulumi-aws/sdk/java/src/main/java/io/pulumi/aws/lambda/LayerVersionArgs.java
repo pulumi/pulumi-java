@@ -4,7 +4,7 @@
 package io.pulumi.aws.lambda;
 
 import io.pulumi.core.Archive;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class LayerVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="code")
-      private final @Nullable Input<Archive> code;
+      private final @Nullable Output<Archive> code;
 
-    public Input<Archive> getCode() {
-        return this.code == null ? Input.empty() : this.code;
+    public Output<Archive> getCode() {
+        return this.code == null ? Output.empty() : this.code;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class LayerVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="compatibleArchitectures")
-      private final @Nullable Input<List<String>> compatibleArchitectures;
+      private final @Nullable Output<List<String>> compatibleArchitectures;
 
-    public Input<List<String>> getCompatibleArchitectures() {
-        return this.compatibleArchitectures == null ? Input.empty() : this.compatibleArchitectures;
+    public Output<List<String>> getCompatibleArchitectures() {
+        return this.compatibleArchitectures == null ? Output.empty() : this.compatibleArchitectures;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class LayerVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="compatibleRuntimes")
-      private final @Nullable Input<List<String>> compatibleRuntimes;
+      private final @Nullable Output<List<String>> compatibleRuntimes;
 
-    public Input<List<String>> getCompatibleRuntimes() {
-        return this.compatibleRuntimes == null ? Input.empty() : this.compatibleRuntimes;
+    public Output<List<String>> getCompatibleRuntimes() {
+        return this.compatibleRuntimes == null ? Output.empty() : this.compatibleRuntimes;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class LayerVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -66,9 +66,9 @@ public final class LayerVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="layerName", required=true)
-      private final Input<String> layerName;
+      private final Output<String> layerName;
 
-    public Input<String> getLayerName() {
+    public Output<String> getLayerName() {
         return this.layerName;
     }
 
@@ -77,10 +77,10 @@ public final class LayerVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="licenseInfo")
-      private final @Nullable Input<String> licenseInfo;
+      private final @Nullable Output<String> licenseInfo;
 
-    public Input<String> getLicenseInfo() {
-        return this.licenseInfo == null ? Input.empty() : this.licenseInfo;
+    public Output<String> getLicenseInfo() {
+        return this.licenseInfo == null ? Output.empty() : this.licenseInfo;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class LayerVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="s3Bucket")
-      private final @Nullable Input<String> s3Bucket;
+      private final @Nullable Output<String> s3Bucket;
 
-    public Input<String> getS3Bucket() {
-        return this.s3Bucket == null ? Input.empty() : this.s3Bucket;
+    public Output<String> getS3Bucket() {
+        return this.s3Bucket == null ? Output.empty() : this.s3Bucket;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class LayerVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="s3Key")
-      private final @Nullable Input<String> s3Key;
+      private final @Nullable Output<String> s3Key;
 
-    public Input<String> getS3Key() {
-        return this.s3Key == null ? Input.empty() : this.s3Key;
+    public Output<String> getS3Key() {
+        return this.s3Key == null ? Output.empty() : this.s3Key;
     }
 
     /**
@@ -110,10 +110,10 @@ public final class LayerVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="s3ObjectVersion")
-      private final @Nullable Input<String> s3ObjectVersion;
+      private final @Nullable Output<String> s3ObjectVersion;
 
-    public Input<String> getS3ObjectVersion() {
-        return this.s3ObjectVersion == null ? Input.empty() : this.s3ObjectVersion;
+    public Output<String> getS3ObjectVersion() {
+        return this.s3ObjectVersion == null ? Output.empty() : this.s3ObjectVersion;
     }
 
     /**
@@ -121,31 +121,31 @@ public final class LayerVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="skipDestroy")
-      private final @Nullable Input<Boolean> skipDestroy;
+      private final @Nullable Output<Boolean> skipDestroy;
 
-    public Input<Boolean> getSkipDestroy() {
-        return this.skipDestroy == null ? Input.empty() : this.skipDestroy;
+    public Output<Boolean> getSkipDestroy() {
+        return this.skipDestroy == null ? Output.empty() : this.skipDestroy;
     }
 
     @InputImport(name="sourceCodeHash")
-      private final @Nullable Input<String> sourceCodeHash;
+      private final @Nullable Output<String> sourceCodeHash;
 
-    public Input<String> getSourceCodeHash() {
-        return this.sourceCodeHash == null ? Input.empty() : this.sourceCodeHash;
+    public Output<String> getSourceCodeHash() {
+        return this.sourceCodeHash == null ? Output.empty() : this.sourceCodeHash;
     }
 
     public LayerVersionArgs(
-        @Nullable Input<Archive> code,
-        @Nullable Input<List<String>> compatibleArchitectures,
-        @Nullable Input<List<String>> compatibleRuntimes,
-        @Nullable Input<String> description,
-        Input<String> layerName,
-        @Nullable Input<String> licenseInfo,
-        @Nullable Input<String> s3Bucket,
-        @Nullable Input<String> s3Key,
-        @Nullable Input<String> s3ObjectVersion,
-        @Nullable Input<Boolean> skipDestroy,
-        @Nullable Input<String> sourceCodeHash) {
+        @Nullable Output<Archive> code,
+        @Nullable Output<List<String>> compatibleArchitectures,
+        @Nullable Output<List<String>> compatibleRuntimes,
+        @Nullable Output<String> description,
+        Output<String> layerName,
+        @Nullable Output<String> licenseInfo,
+        @Nullable Output<String> s3Bucket,
+        @Nullable Output<String> s3Key,
+        @Nullable Output<String> s3ObjectVersion,
+        @Nullable Output<Boolean> skipDestroy,
+        @Nullable Output<String> sourceCodeHash) {
         this.code = code;
         this.compatibleArchitectures = compatibleArchitectures;
         this.compatibleRuntimes = compatibleRuntimes;
@@ -160,17 +160,17 @@ public final class LayerVersionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LayerVersionArgs() {
-        this.code = Input.empty();
-        this.compatibleArchitectures = Input.empty();
-        this.compatibleRuntimes = Input.empty();
-        this.description = Input.empty();
-        this.layerName = Input.empty();
-        this.licenseInfo = Input.empty();
-        this.s3Bucket = Input.empty();
-        this.s3Key = Input.empty();
-        this.s3ObjectVersion = Input.empty();
-        this.skipDestroy = Input.empty();
-        this.sourceCodeHash = Input.empty();
+        this.code = Output.empty();
+        this.compatibleArchitectures = Output.empty();
+        this.compatibleRuntimes = Output.empty();
+        this.description = Output.empty();
+        this.layerName = Output.empty();
+        this.licenseInfo = Output.empty();
+        this.s3Bucket = Output.empty();
+        this.s3Key = Output.empty();
+        this.s3ObjectVersion = Output.empty();
+        this.skipDestroy = Output.empty();
+        this.sourceCodeHash = Output.empty();
     }
 
     public static Builder builder() {
@@ -182,17 +182,17 @@ public final class LayerVersionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Archive> code;
-        private @Nullable Input<List<String>> compatibleArchitectures;
-        private @Nullable Input<List<String>> compatibleRuntimes;
-        private @Nullable Input<String> description;
-        private Input<String> layerName;
-        private @Nullable Input<String> licenseInfo;
-        private @Nullable Input<String> s3Bucket;
-        private @Nullable Input<String> s3Key;
-        private @Nullable Input<String> s3ObjectVersion;
-        private @Nullable Input<Boolean> skipDestroy;
-        private @Nullable Input<String> sourceCodeHash;
+        private @Nullable Output<Archive> code;
+        private @Nullable Output<List<String>> compatibleArchitectures;
+        private @Nullable Output<List<String>> compatibleRuntimes;
+        private @Nullable Output<String> description;
+        private Output<String> layerName;
+        private @Nullable Output<String> licenseInfo;
+        private @Nullable Output<String> s3Bucket;
+        private @Nullable Output<String> s3Key;
+        private @Nullable Output<String> s3ObjectVersion;
+        private @Nullable Output<Boolean> skipDestroy;
+        private @Nullable Output<String> sourceCodeHash;
 
         public Builder() {
     	      // Empty
@@ -213,113 +213,113 @@ public final class LayerVersionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sourceCodeHash = defaults.sourceCodeHash;
         }
 
-        public Builder code(@Nullable Input<Archive> code) {
+        public Builder code(@Nullable Output<Archive> code) {
             this.code = code;
             return this;
         }
 
         public Builder code(@Nullable Archive code) {
-            this.code = Input.ofNullable(code);
+            this.code = Output.ofNullable(code);
             return this;
         }
 
-        public Builder compatibleArchitectures(@Nullable Input<List<String>> compatibleArchitectures) {
+        public Builder compatibleArchitectures(@Nullable Output<List<String>> compatibleArchitectures) {
             this.compatibleArchitectures = compatibleArchitectures;
             return this;
         }
 
         public Builder compatibleArchitectures(@Nullable List<String> compatibleArchitectures) {
-            this.compatibleArchitectures = Input.ofNullable(compatibleArchitectures);
+            this.compatibleArchitectures = Output.ofNullable(compatibleArchitectures);
             return this;
         }
 
-        public Builder compatibleRuntimes(@Nullable Input<List<String>> compatibleRuntimes) {
+        public Builder compatibleRuntimes(@Nullable Output<List<String>> compatibleRuntimes) {
             this.compatibleRuntimes = compatibleRuntimes;
             return this;
         }
 
         public Builder compatibleRuntimes(@Nullable List<String> compatibleRuntimes) {
-            this.compatibleRuntimes = Input.ofNullable(compatibleRuntimes);
+            this.compatibleRuntimes = Output.ofNullable(compatibleRuntimes);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder layerName(Input<String> layerName) {
+        public Builder layerName(Output<String> layerName) {
             this.layerName = Objects.requireNonNull(layerName);
             return this;
         }
 
         public Builder layerName(String layerName) {
-            this.layerName = Input.of(Objects.requireNonNull(layerName));
+            this.layerName = Output.of(Objects.requireNonNull(layerName));
             return this;
         }
 
-        public Builder licenseInfo(@Nullable Input<String> licenseInfo) {
+        public Builder licenseInfo(@Nullable Output<String> licenseInfo) {
             this.licenseInfo = licenseInfo;
             return this;
         }
 
         public Builder licenseInfo(@Nullable String licenseInfo) {
-            this.licenseInfo = Input.ofNullable(licenseInfo);
+            this.licenseInfo = Output.ofNullable(licenseInfo);
             return this;
         }
 
-        public Builder s3Bucket(@Nullable Input<String> s3Bucket) {
+        public Builder s3Bucket(@Nullable Output<String> s3Bucket) {
             this.s3Bucket = s3Bucket;
             return this;
         }
 
         public Builder s3Bucket(@Nullable String s3Bucket) {
-            this.s3Bucket = Input.ofNullable(s3Bucket);
+            this.s3Bucket = Output.ofNullable(s3Bucket);
             return this;
         }
 
-        public Builder s3Key(@Nullable Input<String> s3Key) {
+        public Builder s3Key(@Nullable Output<String> s3Key) {
             this.s3Key = s3Key;
             return this;
         }
 
         public Builder s3Key(@Nullable String s3Key) {
-            this.s3Key = Input.ofNullable(s3Key);
+            this.s3Key = Output.ofNullable(s3Key);
             return this;
         }
 
-        public Builder s3ObjectVersion(@Nullable Input<String> s3ObjectVersion) {
+        public Builder s3ObjectVersion(@Nullable Output<String> s3ObjectVersion) {
             this.s3ObjectVersion = s3ObjectVersion;
             return this;
         }
 
         public Builder s3ObjectVersion(@Nullable String s3ObjectVersion) {
-            this.s3ObjectVersion = Input.ofNullable(s3ObjectVersion);
+            this.s3ObjectVersion = Output.ofNullable(s3ObjectVersion);
             return this;
         }
 
-        public Builder skipDestroy(@Nullable Input<Boolean> skipDestroy) {
+        public Builder skipDestroy(@Nullable Output<Boolean> skipDestroy) {
             this.skipDestroy = skipDestroy;
             return this;
         }
 
         public Builder skipDestroy(@Nullable Boolean skipDestroy) {
-            this.skipDestroy = Input.ofNullable(skipDestroy);
+            this.skipDestroy = Output.ofNullable(skipDestroy);
             return this;
         }
 
-        public Builder sourceCodeHash(@Nullable Input<String> sourceCodeHash) {
+        public Builder sourceCodeHash(@Nullable Output<String> sourceCodeHash) {
             this.sourceCodeHash = sourceCodeHash;
             return this;
         }
 
         public Builder sourceCodeHash(@Nullable String sourceCodeHash) {
-            this.sourceCodeHash = Input.ofNullable(sourceCodeHash);
+            this.sourceCodeHash = Output.ofNullable(sourceCodeHash);
             return this;
         }
         public LayerVersionArgs build() {

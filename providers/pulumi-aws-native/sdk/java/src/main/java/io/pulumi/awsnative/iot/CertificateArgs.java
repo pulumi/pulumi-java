@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iot;
 
 import io.pulumi.awsnative.iot.enums.CertificateMode;
 import io.pulumi.awsnative.iot.enums.CertificateStatus;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -17,46 +17,46 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     public static final CertificateArgs Empty = new CertificateArgs();
 
     @InputImport(name="cACertificatePem")
-      private final @Nullable Input<String> cACertificatePem;
+      private final @Nullable Output<String> cACertificatePem;
 
-    public Input<String> getCACertificatePem() {
-        return this.cACertificatePem == null ? Input.empty() : this.cACertificatePem;
+    public Output<String> getCACertificatePem() {
+        return this.cACertificatePem == null ? Output.empty() : this.cACertificatePem;
     }
 
     @InputImport(name="certificateMode")
-      private final @Nullable Input<CertificateMode> certificateMode;
+      private final @Nullable Output<CertificateMode> certificateMode;
 
-    public Input<CertificateMode> getCertificateMode() {
-        return this.certificateMode == null ? Input.empty() : this.certificateMode;
+    public Output<CertificateMode> getCertificateMode() {
+        return this.certificateMode == null ? Output.empty() : this.certificateMode;
     }
 
     @InputImport(name="certificatePem")
-      private final @Nullable Input<String> certificatePem;
+      private final @Nullable Output<String> certificatePem;
 
-    public Input<String> getCertificatePem() {
-        return this.certificatePem == null ? Input.empty() : this.certificatePem;
+    public Output<String> getCertificatePem() {
+        return this.certificatePem == null ? Output.empty() : this.certificatePem;
     }
 
     @InputImport(name="certificateSigningRequest")
-      private final @Nullable Input<String> certificateSigningRequest;
+      private final @Nullable Output<String> certificateSigningRequest;
 
-    public Input<String> getCertificateSigningRequest() {
-        return this.certificateSigningRequest == null ? Input.empty() : this.certificateSigningRequest;
+    public Output<String> getCertificateSigningRequest() {
+        return this.certificateSigningRequest == null ? Output.empty() : this.certificateSigningRequest;
     }
 
     @InputImport(name="status", required=true)
-      private final Input<CertificateStatus> status;
+      private final Output<CertificateStatus> status;
 
-    public Input<CertificateStatus> getStatus() {
+    public Output<CertificateStatus> getStatus() {
         return this.status;
     }
 
     public CertificateArgs(
-        @Nullable Input<String> cACertificatePem,
-        @Nullable Input<CertificateMode> certificateMode,
-        @Nullable Input<String> certificatePem,
-        @Nullable Input<String> certificateSigningRequest,
-        Input<CertificateStatus> status) {
+        @Nullable Output<String> cACertificatePem,
+        @Nullable Output<CertificateMode> certificateMode,
+        @Nullable Output<String> certificatePem,
+        @Nullable Output<String> certificateSigningRequest,
+        Output<CertificateStatus> status) {
         this.cACertificatePem = cACertificatePem;
         this.certificateMode = certificateMode;
         this.certificatePem = certificatePem;
@@ -65,11 +65,11 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CertificateArgs() {
-        this.cACertificatePem = Input.empty();
-        this.certificateMode = Input.empty();
-        this.certificatePem = Input.empty();
-        this.certificateSigningRequest = Input.empty();
-        this.status = Input.empty();
+        this.cACertificatePem = Output.empty();
+        this.certificateMode = Output.empty();
+        this.certificatePem = Output.empty();
+        this.certificateSigningRequest = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -81,11 +81,11 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> cACertificatePem;
-        private @Nullable Input<CertificateMode> certificateMode;
-        private @Nullable Input<String> certificatePem;
-        private @Nullable Input<String> certificateSigningRequest;
-        private Input<CertificateStatus> status;
+        private @Nullable Output<String> cACertificatePem;
+        private @Nullable Output<CertificateMode> certificateMode;
+        private @Nullable Output<String> certificatePem;
+        private @Nullable Output<String> certificateSigningRequest;
+        private Output<CertificateStatus> status;
 
         public Builder() {
     	      // Empty
@@ -100,53 +100,53 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.status = defaults.status;
         }
 
-        public Builder cACertificatePem(@Nullable Input<String> cACertificatePem) {
+        public Builder cACertificatePem(@Nullable Output<String> cACertificatePem) {
             this.cACertificatePem = cACertificatePem;
             return this;
         }
 
         public Builder cACertificatePem(@Nullable String cACertificatePem) {
-            this.cACertificatePem = Input.ofNullable(cACertificatePem);
+            this.cACertificatePem = Output.ofNullable(cACertificatePem);
             return this;
         }
 
-        public Builder certificateMode(@Nullable Input<CertificateMode> certificateMode) {
+        public Builder certificateMode(@Nullable Output<CertificateMode> certificateMode) {
             this.certificateMode = certificateMode;
             return this;
         }
 
         public Builder certificateMode(@Nullable CertificateMode certificateMode) {
-            this.certificateMode = Input.ofNullable(certificateMode);
+            this.certificateMode = Output.ofNullable(certificateMode);
             return this;
         }
 
-        public Builder certificatePem(@Nullable Input<String> certificatePem) {
+        public Builder certificatePem(@Nullable Output<String> certificatePem) {
             this.certificatePem = certificatePem;
             return this;
         }
 
         public Builder certificatePem(@Nullable String certificatePem) {
-            this.certificatePem = Input.ofNullable(certificatePem);
+            this.certificatePem = Output.ofNullable(certificatePem);
             return this;
         }
 
-        public Builder certificateSigningRequest(@Nullable Input<String> certificateSigningRequest) {
+        public Builder certificateSigningRequest(@Nullable Output<String> certificateSigningRequest) {
             this.certificateSigningRequest = certificateSigningRequest;
             return this;
         }
 
         public Builder certificateSigningRequest(@Nullable String certificateSigningRequest) {
-            this.certificateSigningRequest = Input.ofNullable(certificateSigningRequest);
+            this.certificateSigningRequest = Output.ofNullable(certificateSigningRequest);
             return this;
         }
 
-        public Builder status(Input<CertificateStatus> status) {
+        public Builder status(Output<CertificateStatus> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
         public Builder status(CertificateStatus status) {
-            this.status = Input.of(Objects.requireNonNull(status));
+            this.status = Output.of(Objects.requireNonNull(status));
             return this;
         }
         public CertificateArgs build() {

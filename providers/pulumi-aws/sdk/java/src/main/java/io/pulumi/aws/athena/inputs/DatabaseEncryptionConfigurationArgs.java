@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.athena.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class DatabaseEncryptionConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="encryptionOption", required=true)
-      private final Input<String> encryptionOption;
+      private final Output<String> encryptionOption;
 
-    public Input<String> getEncryptionOption() {
+    public Output<String> getEncryptionOption() {
         return this.encryptionOption;
     }
 
@@ -30,22 +30,22 @@ public final class DatabaseEncryptionConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="kmsKey")
-      private final @Nullable Input<String> kmsKey;
+      private final @Nullable Output<String> kmsKey;
 
-    public Input<String> getKmsKey() {
-        return this.kmsKey == null ? Input.empty() : this.kmsKey;
+    public Output<String> getKmsKey() {
+        return this.kmsKey == null ? Output.empty() : this.kmsKey;
     }
 
     public DatabaseEncryptionConfigurationArgs(
-        Input<String> encryptionOption,
-        @Nullable Input<String> kmsKey) {
+        Output<String> encryptionOption,
+        @Nullable Output<String> kmsKey) {
         this.encryptionOption = Objects.requireNonNull(encryptionOption, "expected parameter 'encryptionOption' to be non-null");
         this.kmsKey = kmsKey;
     }
 
     private DatabaseEncryptionConfigurationArgs() {
-        this.encryptionOption = Input.empty();
-        this.kmsKey = Input.empty();
+        this.encryptionOption = Output.empty();
+        this.kmsKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class DatabaseEncryptionConfigurationArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<String> encryptionOption;
-        private @Nullable Input<String> kmsKey;
+        private Output<String> encryptionOption;
+        private @Nullable Output<String> kmsKey;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class DatabaseEncryptionConfigurationArgs extends io.pulumi.resourc
     	      this.kmsKey = defaults.kmsKey;
         }
 
-        public Builder encryptionOption(Input<String> encryptionOption) {
+        public Builder encryptionOption(Output<String> encryptionOption) {
             this.encryptionOption = Objects.requireNonNull(encryptionOption);
             return this;
         }
 
         public Builder encryptionOption(String encryptionOption) {
-            this.encryptionOption = Input.of(Objects.requireNonNull(encryptionOption));
+            this.encryptionOption = Output.of(Objects.requireNonNull(encryptionOption));
             return this;
         }
 
-        public Builder kmsKey(@Nullable Input<String> kmsKey) {
+        public Builder kmsKey(@Nullable Output<String> kmsKey) {
             this.kmsKey = kmsKey;
             return this;
         }
 
         public Builder kmsKey(@Nullable String kmsKey) {
-            this.kmsKey = Input.ofNullable(kmsKey);
+            this.kmsKey = Output.ofNullable(kmsKey);
             return this;
         }
         public DatabaseEncryptionConfigurationArgs build() {

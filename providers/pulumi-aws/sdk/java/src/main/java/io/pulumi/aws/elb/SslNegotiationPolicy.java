@@ -8,7 +8,6 @@ import io.pulumi.aws.elb.SslNegotiationPolicyArgs;
 import io.pulumi.aws.elb.inputs.SslNegotiationPolicyState;
 import io.pulumi.aws.elb.outputs.SslNegotiationPolicyAttribute;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -126,18 +125,18 @@ public class SslNegotiationPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SslNegotiationPolicy(String name, SslNegotiationPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:elb/sslNegotiationPolicy:SslNegotiationPolicy", name, args == null ? SslNegotiationPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:elb/sslNegotiationPolicy:SslNegotiationPolicy", name, args == null ? SslNegotiationPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private SslNegotiationPolicy(String name, Input<String> id, @Nullable SslNegotiationPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private SslNegotiationPolicy(String name, Output<String> id, @Nullable SslNegotiationPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:elb/sslNegotiationPolicy:SslNegotiationPolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("aws:elasticloadbalancing/sslNegotiationPolicy:SslNegotiationPolicy").build())
+                Output.of(Alias.builder().setType("aws:elasticloadbalancing/sslNegotiationPolicy:SslNegotiationPolicy").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -152,7 +151,7 @@ public class SslNegotiationPolicy extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SslNegotiationPolicy get(String name, Input<String> id, @Nullable SslNegotiationPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static SslNegotiationPolicy get(String name, Output<String> id, @Nullable SslNegotiationPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SslNegotiationPolicy(name, id, state, options);
     }
 }

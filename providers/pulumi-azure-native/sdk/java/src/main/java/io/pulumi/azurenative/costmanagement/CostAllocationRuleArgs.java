@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.costmanagement;
 
 import io.pulumi.azurenative.costmanagement.inputs.CostAllocationRulePropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class CostAllocationRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="billingAccountId", required=true)
-      private final Input<String> billingAccountId;
+      private final Output<String> billingAccountId;
 
-    public Input<String> getBillingAccountId() {
+    public Output<String> getBillingAccountId() {
         return this.billingAccountId;
     }
 
@@ -31,10 +31,10 @@ public final class CostAllocationRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<CostAllocationRulePropertiesArgs> properties;
+      private final @Nullable Output<CostAllocationRulePropertiesArgs> properties;
 
-    public Input<CostAllocationRulePropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<CostAllocationRulePropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class CostAllocationRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ruleName")
-      private final @Nullable Input<String> ruleName;
+      private final @Nullable Output<String> ruleName;
 
-    public Input<String> getRuleName() {
-        return this.ruleName == null ? Input.empty() : this.ruleName;
+    public Output<String> getRuleName() {
+        return this.ruleName == null ? Output.empty() : this.ruleName;
     }
 
     public CostAllocationRuleArgs(
-        Input<String> billingAccountId,
-        @Nullable Input<CostAllocationRulePropertiesArgs> properties,
-        @Nullable Input<String> ruleName) {
+        Output<String> billingAccountId,
+        @Nullable Output<CostAllocationRulePropertiesArgs> properties,
+        @Nullable Output<String> ruleName) {
         this.billingAccountId = Objects.requireNonNull(billingAccountId, "expected parameter 'billingAccountId' to be non-null");
         this.properties = properties;
         this.ruleName = ruleName;
     }
 
     private CostAllocationRuleArgs() {
-        this.billingAccountId = Input.empty();
-        this.properties = Input.empty();
-        this.ruleName = Input.empty();
+        this.billingAccountId = Output.empty();
+        this.properties = Output.empty();
+        this.ruleName = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class CostAllocationRuleArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> billingAccountId;
-        private @Nullable Input<CostAllocationRulePropertiesArgs> properties;
-        private @Nullable Input<String> ruleName;
+        private Output<String> billingAccountId;
+        private @Nullable Output<CostAllocationRulePropertiesArgs> properties;
+        private @Nullable Output<String> ruleName;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class CostAllocationRuleArgs extends io.pulumi.resources.ResourceAr
     	      this.ruleName = defaults.ruleName;
         }
 
-        public Builder billingAccountId(Input<String> billingAccountId) {
+        public Builder billingAccountId(Output<String> billingAccountId) {
             this.billingAccountId = Objects.requireNonNull(billingAccountId);
             return this;
         }
 
         public Builder billingAccountId(String billingAccountId) {
-            this.billingAccountId = Input.of(Objects.requireNonNull(billingAccountId));
+            this.billingAccountId = Output.of(Objects.requireNonNull(billingAccountId));
             return this;
         }
 
-        public Builder properties(@Nullable Input<CostAllocationRulePropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<CostAllocationRulePropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable CostAllocationRulePropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder ruleName(@Nullable Input<String> ruleName) {
+        public Builder ruleName(@Nullable Output<String> ruleName) {
             this.ruleName = ruleName;
             return this;
         }
 
         public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = Input.ofNullable(ruleName);
+            this.ruleName = Output.ofNullable(ruleName);
             return this;
         }
         public CostAllocationRuleArgs build() {

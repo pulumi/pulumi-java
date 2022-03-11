@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.inputs.CriteriaArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,9 +24,9 @@ public final class LogToMetricActionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="criteria", required=true)
-      private final Input<List<CriteriaArgs>> criteria;
+      private final Output<List<CriteriaArgs>> criteria;
 
-    public Input<List<CriteriaArgs>> getCriteria() {
+    public Output<List<CriteriaArgs>> getCriteria() {
         return this.criteria;
     }
 
@@ -36,22 +36,22 @@ public final class LogToMetricActionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
     public LogToMetricActionArgs(
-        Input<List<CriteriaArgs>> criteria,
-        Input<String> odataType) {
+        Output<List<CriteriaArgs>> criteria,
+        Output<String> odataType) {
         this.criteria = Objects.requireNonNull(criteria, "expected parameter 'criteria' to be non-null");
         this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
     }
 
     private LogToMetricActionArgs() {
-        this.criteria = Input.empty();
-        this.odataType = Input.empty();
+        this.criteria = Output.empty();
+        this.odataType = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class LogToMetricActionArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<List<CriteriaArgs>> criteria;
-        private Input<String> odataType;
+        private Output<List<CriteriaArgs>> criteria;
+        private Output<String> odataType;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class LogToMetricActionArgs extends io.pulumi.resources.ResourceArg
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder criteria(Input<List<CriteriaArgs>> criteria) {
+        public Builder criteria(Output<List<CriteriaArgs>> criteria) {
             this.criteria = Objects.requireNonNull(criteria);
             return this;
         }
 
         public Builder criteria(List<CriteriaArgs> criteria) {
-            this.criteria = Input.of(Objects.requireNonNull(criteria));
+            this.criteria = Output.of(Objects.requireNonNull(criteria));
             return this;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
         public LogToMetricActionArgs build() {

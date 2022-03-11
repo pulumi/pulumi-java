@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class OnPremiseSqlResourceDetailsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="databaseName", required=true)
-      private final Input<String> databaseName;
+      private final Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
+    public Output<String> getDatabaseName() {
         return this.databaseName;
     }
 
@@ -33,9 +33,9 @@ public final class OnPremiseSqlResourceDetailsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="machineName", required=true)
-      private final Input<String> machineName;
+      private final Output<String> machineName;
 
-    public Input<String> getMachineName() {
+    public Output<String> getMachineName() {
         return this.machineName;
     }
 
@@ -44,9 +44,9 @@ public final class OnPremiseSqlResourceDetailsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="serverName", required=true)
-      private final Input<String> serverName;
+      private final Output<String> serverName;
 
-    public Input<String> getServerName() {
+    public Output<String> getServerName() {
         return this.serverName;
     }
 
@@ -56,9 +56,9 @@ public final class OnPremiseSqlResourceDetailsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="source", required=true)
-      private final Input<String> source;
+      private final Output<String> source;
 
-    public Input<String> getSource() {
+    public Output<String> getSource() {
         return this.source;
     }
 
@@ -67,9 +67,9 @@ public final class OnPremiseSqlResourceDetailsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="sourceComputerId", required=true)
-      private final Input<String> sourceComputerId;
+      private final Output<String> sourceComputerId;
 
-    public Input<String> getSourceComputerId() {
+    public Output<String> getSourceComputerId() {
         return this.sourceComputerId;
     }
 
@@ -78,9 +78,9 @@ public final class OnPremiseSqlResourceDetailsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="vmuuid", required=true)
-      private final Input<String> vmuuid;
+      private final Output<String> vmuuid;
 
-    public Input<String> getVmuuid() {
+    public Output<String> getVmuuid() {
         return this.vmuuid;
     }
 
@@ -89,20 +89,20 @@ public final class OnPremiseSqlResourceDetailsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="workspaceId", required=true)
-      private final Input<String> workspaceId;
+      private final Output<String> workspaceId;
 
-    public Input<String> getWorkspaceId() {
+    public Output<String> getWorkspaceId() {
         return this.workspaceId;
     }
 
     public OnPremiseSqlResourceDetailsArgs(
-        Input<String> databaseName,
-        Input<String> machineName,
-        Input<String> serverName,
-        Input<String> source,
-        Input<String> sourceComputerId,
-        Input<String> vmuuid,
-        Input<String> workspaceId) {
+        Output<String> databaseName,
+        Output<String> machineName,
+        Output<String> serverName,
+        Output<String> source,
+        Output<String> sourceComputerId,
+        Output<String> vmuuid,
+        Output<String> workspaceId) {
         this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
         this.machineName = Objects.requireNonNull(machineName, "expected parameter 'machineName' to be non-null");
         this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
@@ -113,13 +113,13 @@ public final class OnPremiseSqlResourceDetailsArgs extends io.pulumi.resources.R
     }
 
     private OnPremiseSqlResourceDetailsArgs() {
-        this.databaseName = Input.empty();
-        this.machineName = Input.empty();
-        this.serverName = Input.empty();
-        this.source = Input.empty();
-        this.sourceComputerId = Input.empty();
-        this.vmuuid = Input.empty();
-        this.workspaceId = Input.empty();
+        this.databaseName = Output.empty();
+        this.machineName = Output.empty();
+        this.serverName = Output.empty();
+        this.source = Output.empty();
+        this.sourceComputerId = Output.empty();
+        this.vmuuid = Output.empty();
+        this.workspaceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -131,13 +131,13 @@ public final class OnPremiseSqlResourceDetailsArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<String> databaseName;
-        private Input<String> machineName;
-        private Input<String> serverName;
-        private Input<String> source;
-        private Input<String> sourceComputerId;
-        private Input<String> vmuuid;
-        private Input<String> workspaceId;
+        private Output<String> databaseName;
+        private Output<String> machineName;
+        private Output<String> serverName;
+        private Output<String> source;
+        private Output<String> sourceComputerId;
+        private Output<String> vmuuid;
+        private Output<String> workspaceId;
 
         public Builder() {
     	      // Empty
@@ -154,73 +154,73 @@ public final class OnPremiseSqlResourceDetailsArgs extends io.pulumi.resources.R
     	      this.workspaceId = defaults.workspaceId;
         }
 
-        public Builder databaseName(Input<String> databaseName) {
+        public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
         public Builder databaseName(String databaseName) {
-            this.databaseName = Input.of(Objects.requireNonNull(databaseName));
+            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder machineName(Input<String> machineName) {
+        public Builder machineName(Output<String> machineName) {
             this.machineName = Objects.requireNonNull(machineName);
             return this;
         }
 
         public Builder machineName(String machineName) {
-            this.machineName = Input.of(Objects.requireNonNull(machineName));
+            this.machineName = Output.of(Objects.requireNonNull(machineName));
             return this;
         }
 
-        public Builder serverName(Input<String> serverName) {
+        public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
         public Builder serverName(String serverName) {
-            this.serverName = Input.of(Objects.requireNonNull(serverName));
+            this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
 
-        public Builder source(Input<String> source) {
+        public Builder source(Output<String> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
         public Builder source(String source) {
-            this.source = Input.of(Objects.requireNonNull(source));
+            this.source = Output.of(Objects.requireNonNull(source));
             return this;
         }
 
-        public Builder sourceComputerId(Input<String> sourceComputerId) {
+        public Builder sourceComputerId(Output<String> sourceComputerId) {
             this.sourceComputerId = Objects.requireNonNull(sourceComputerId);
             return this;
         }
 
         public Builder sourceComputerId(String sourceComputerId) {
-            this.sourceComputerId = Input.of(Objects.requireNonNull(sourceComputerId));
+            this.sourceComputerId = Output.of(Objects.requireNonNull(sourceComputerId));
             return this;
         }
 
-        public Builder vmuuid(Input<String> vmuuid) {
+        public Builder vmuuid(Output<String> vmuuid) {
             this.vmuuid = Objects.requireNonNull(vmuuid);
             return this;
         }
 
         public Builder vmuuid(String vmuuid) {
-            this.vmuuid = Input.of(Objects.requireNonNull(vmuuid));
+            this.vmuuid = Output.of(Objects.requireNonNull(vmuuid));
             return this;
         }
 
-        public Builder workspaceId(Input<String> workspaceId) {
+        public Builder workspaceId(Output<String> workspaceId) {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
 
         public Builder workspaceId(String workspaceId) {
-            this.workspaceId = Input.of(Objects.requireNonNull(workspaceId));
+            this.workspaceId = Output.of(Objects.requireNonNull(workspaceId));
             return this;
         }
         public OnPremiseSqlResourceDetailsArgs build() {

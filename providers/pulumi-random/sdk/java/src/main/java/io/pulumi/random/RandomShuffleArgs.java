@@ -3,15 +3,13 @@
 
 package io.pulumi.random;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
-import java.lang.Integer;
-import java.lang.Object;
-import java.lang.String;
+
+import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
-import javax.annotation.Nullable;
 
 
 public final class RandomShuffleArgs extends io.pulumi.resources.ResourceArgs {
@@ -23,9 +21,9 @@ public final class RandomShuffleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputs", required=true)
-      private final Input<List<String>> inputs;
+      private final Output<List<String>> inputs;
 
-    public Input<List<String>> getInputs() {
+    public Output<List<String>> getInputs() {
         return this.inputs;
     }
 
@@ -34,10 +32,10 @@ public final class RandomShuffleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keepers")
-      private final @Nullable Input<Map<String,Object>> keepers;
+      private final @Nullable Output<Map<String,Object>> keepers;
 
-    public Input<Map<String,Object>> getKeepers() {
-        return this.keepers == null ? Input.empty() : this.keepers;
+    public Output<Map<String,Object>> getKeepers() {
+        return this.keepers == null ? Output.empty() : this.keepers;
     }
 
     /**
@@ -45,10 +43,10 @@ public final class RandomShuffleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resultCount")
-      private final @Nullable Input<Integer> resultCount;
+      private final @Nullable Output<Integer> resultCount;
 
-    public Input<Integer> getResultCount() {
-        return this.resultCount == null ? Input.empty() : this.resultCount;
+    public Output<Integer> getResultCount() {
+        return this.resultCount == null ? Output.empty() : this.resultCount;
     }
 
     /**
@@ -56,17 +54,17 @@ public final class RandomShuffleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="seed")
-      private final @Nullable Input<String> seed;
+      private final @Nullable Output<String> seed;
 
-    public Input<String> getSeed() {
-        return this.seed == null ? Input.empty() : this.seed;
+    public Output<String> getSeed() {
+        return this.seed == null ? Output.empty() : this.seed;
     }
 
     public RandomShuffleArgs(
-        Input<List<String>> inputs,
-        @Nullable Input<Map<String,Object>> keepers,
-        @Nullable Input<Integer> resultCount,
-        @Nullable Input<String> seed) {
+        Output<List<String>> inputs,
+        @Nullable Output<Map<String,Object>> keepers,
+        @Nullable Output<Integer> resultCount,
+        @Nullable Output<String> seed) {
         this.inputs = Objects.requireNonNull(inputs, "expected parameter 'inputs' to be non-null");
         this.keepers = keepers;
         this.resultCount = resultCount;
@@ -74,10 +72,10 @@ public final class RandomShuffleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RandomShuffleArgs() {
-        this.inputs = Input.empty();
-        this.keepers = Input.empty();
-        this.resultCount = Input.empty();
-        this.seed = Input.empty();
+        this.inputs = Output.empty();
+        this.keepers = Output.empty();
+        this.resultCount = Output.empty();
+        this.seed = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +87,10 @@ public final class RandomShuffleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<String>> inputs;
-        private @Nullable Input<Map<String,Object>> keepers;
-        private @Nullable Input<Integer> resultCount;
-        private @Nullable Input<String> seed;
+        private Output<List<String>> inputs;
+        private @Nullable Output<Map<String,Object>> keepers;
+        private @Nullable Output<Integer> resultCount;
+        private @Nullable Output<String> seed;
 
         public Builder() {
     	      // Empty
@@ -106,43 +104,43 @@ public final class RandomShuffleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.seed = defaults.seed;
         }
 
-        public Builder inputs(Input<List<String>> inputs) {
+        public Builder inputs(Output<List<String>> inputs) {
             this.inputs = Objects.requireNonNull(inputs);
             return this;
         }
 
         public Builder inputs(List<String> inputs) {
-            this.inputs = Input.of(Objects.requireNonNull(inputs));
+            this.inputs = Output.of(Objects.requireNonNull(inputs));
             return this;
         }
 
-        public Builder keepers(@Nullable Input<Map<String,Object>> keepers) {
+        public Builder keepers(@Nullable Output<Map<String,Object>> keepers) {
             this.keepers = keepers;
             return this;
         }
 
         public Builder keepers(@Nullable Map<String,Object> keepers) {
-            this.keepers = Input.ofNullable(keepers);
+            this.keepers = Output.ofNullable(keepers);
             return this;
         }
 
-        public Builder resultCount(@Nullable Input<Integer> resultCount) {
+        public Builder resultCount(@Nullable Output<Integer> resultCount) {
             this.resultCount = resultCount;
             return this;
         }
 
         public Builder resultCount(@Nullable Integer resultCount) {
-            this.resultCount = Input.ofNullable(resultCount);
+            this.resultCount = Output.ofNullable(resultCount);
             return this;
         }
 
-        public Builder seed(@Nullable Input<String> seed) {
+        public Builder seed(@Nullable Output<String> seed) {
             this.seed = seed;
             return this;
         }
 
         public Builder seed(@Nullable String seed) {
-            this.seed = Input.ofNullable(seed);
+            this.seed = Output.ofNullable(seed);
             return this;
         }
         public RandomShuffleArgs build() {

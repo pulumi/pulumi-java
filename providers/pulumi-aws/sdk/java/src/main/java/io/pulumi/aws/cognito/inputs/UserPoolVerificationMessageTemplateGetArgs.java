@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cognito.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class UserPoolVerificationMessageTemplateGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="defaultEmailOption")
-      private final @Nullable Input<String> defaultEmailOption;
+      private final @Nullable Output<String> defaultEmailOption;
 
-    public Input<String> getDefaultEmailOption() {
-        return this.defaultEmailOption == null ? Input.empty() : this.defaultEmailOption;
+    public Output<String> getDefaultEmailOption() {
+        return this.defaultEmailOption == null ? Output.empty() : this.defaultEmailOption;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class UserPoolVerificationMessageTemplateGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="emailMessage")
-      private final @Nullable Input<String> emailMessage;
+      private final @Nullable Output<String> emailMessage;
 
-    public Input<String> getEmailMessage() {
-        return this.emailMessage == null ? Input.empty() : this.emailMessage;
+    public Output<String> getEmailMessage() {
+        return this.emailMessage == null ? Output.empty() : this.emailMessage;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class UserPoolVerificationMessageTemplateGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="emailMessageByLink")
-      private final @Nullable Input<String> emailMessageByLink;
+      private final @Nullable Output<String> emailMessageByLink;
 
-    public Input<String> getEmailMessageByLink() {
-        return this.emailMessageByLink == null ? Input.empty() : this.emailMessageByLink;
+    public Output<String> getEmailMessageByLink() {
+        return this.emailMessageByLink == null ? Output.empty() : this.emailMessageByLink;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class UserPoolVerificationMessageTemplateGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="emailSubject")
-      private final @Nullable Input<String> emailSubject;
+      private final @Nullable Output<String> emailSubject;
 
-    public Input<String> getEmailSubject() {
-        return this.emailSubject == null ? Input.empty() : this.emailSubject;
+    public Output<String> getEmailSubject() {
+        return this.emailSubject == null ? Output.empty() : this.emailSubject;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class UserPoolVerificationMessageTemplateGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="emailSubjectByLink")
-      private final @Nullable Input<String> emailSubjectByLink;
+      private final @Nullable Output<String> emailSubjectByLink;
 
-    public Input<String> getEmailSubjectByLink() {
-        return this.emailSubjectByLink == null ? Input.empty() : this.emailSubjectByLink;
+    public Output<String> getEmailSubjectByLink() {
+        return this.emailSubjectByLink == null ? Output.empty() : this.emailSubjectByLink;
     }
 
     /**
@@ -74,19 +74,19 @@ public final class UserPoolVerificationMessageTemplateGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="smsMessage")
-      private final @Nullable Input<String> smsMessage;
+      private final @Nullable Output<String> smsMessage;
 
-    public Input<String> getSmsMessage() {
-        return this.smsMessage == null ? Input.empty() : this.smsMessage;
+    public Output<String> getSmsMessage() {
+        return this.smsMessage == null ? Output.empty() : this.smsMessage;
     }
 
     public UserPoolVerificationMessageTemplateGetArgs(
-        @Nullable Input<String> defaultEmailOption,
-        @Nullable Input<String> emailMessage,
-        @Nullable Input<String> emailMessageByLink,
-        @Nullable Input<String> emailSubject,
-        @Nullable Input<String> emailSubjectByLink,
-        @Nullable Input<String> smsMessage) {
+        @Nullable Output<String> defaultEmailOption,
+        @Nullable Output<String> emailMessage,
+        @Nullable Output<String> emailMessageByLink,
+        @Nullable Output<String> emailSubject,
+        @Nullable Output<String> emailSubjectByLink,
+        @Nullable Output<String> smsMessage) {
         this.defaultEmailOption = defaultEmailOption;
         this.emailMessage = emailMessage;
         this.emailMessageByLink = emailMessageByLink;
@@ -96,12 +96,12 @@ public final class UserPoolVerificationMessageTemplateGetArgs extends io.pulumi.
     }
 
     private UserPoolVerificationMessageTemplateGetArgs() {
-        this.defaultEmailOption = Input.empty();
-        this.emailMessage = Input.empty();
-        this.emailMessageByLink = Input.empty();
-        this.emailSubject = Input.empty();
-        this.emailSubjectByLink = Input.empty();
-        this.smsMessage = Input.empty();
+        this.defaultEmailOption = Output.empty();
+        this.emailMessage = Output.empty();
+        this.emailMessageByLink = Output.empty();
+        this.emailSubject = Output.empty();
+        this.emailSubjectByLink = Output.empty();
+        this.smsMessage = Output.empty();
     }
 
     public static Builder builder() {
@@ -113,12 +113,12 @@ public final class UserPoolVerificationMessageTemplateGetArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> defaultEmailOption;
-        private @Nullable Input<String> emailMessage;
-        private @Nullable Input<String> emailMessageByLink;
-        private @Nullable Input<String> emailSubject;
-        private @Nullable Input<String> emailSubjectByLink;
-        private @Nullable Input<String> smsMessage;
+        private @Nullable Output<String> defaultEmailOption;
+        private @Nullable Output<String> emailMessage;
+        private @Nullable Output<String> emailMessageByLink;
+        private @Nullable Output<String> emailSubject;
+        private @Nullable Output<String> emailSubjectByLink;
+        private @Nullable Output<String> smsMessage;
 
         public Builder() {
     	      // Empty
@@ -134,63 +134,63 @@ public final class UserPoolVerificationMessageTemplateGetArgs extends io.pulumi.
     	      this.smsMessage = defaults.smsMessage;
         }
 
-        public Builder defaultEmailOption(@Nullable Input<String> defaultEmailOption) {
+        public Builder defaultEmailOption(@Nullable Output<String> defaultEmailOption) {
             this.defaultEmailOption = defaultEmailOption;
             return this;
         }
 
         public Builder defaultEmailOption(@Nullable String defaultEmailOption) {
-            this.defaultEmailOption = Input.ofNullable(defaultEmailOption);
+            this.defaultEmailOption = Output.ofNullable(defaultEmailOption);
             return this;
         }
 
-        public Builder emailMessage(@Nullable Input<String> emailMessage) {
+        public Builder emailMessage(@Nullable Output<String> emailMessage) {
             this.emailMessage = emailMessage;
             return this;
         }
 
         public Builder emailMessage(@Nullable String emailMessage) {
-            this.emailMessage = Input.ofNullable(emailMessage);
+            this.emailMessage = Output.ofNullable(emailMessage);
             return this;
         }
 
-        public Builder emailMessageByLink(@Nullable Input<String> emailMessageByLink) {
+        public Builder emailMessageByLink(@Nullable Output<String> emailMessageByLink) {
             this.emailMessageByLink = emailMessageByLink;
             return this;
         }
 
         public Builder emailMessageByLink(@Nullable String emailMessageByLink) {
-            this.emailMessageByLink = Input.ofNullable(emailMessageByLink);
+            this.emailMessageByLink = Output.ofNullable(emailMessageByLink);
             return this;
         }
 
-        public Builder emailSubject(@Nullable Input<String> emailSubject) {
+        public Builder emailSubject(@Nullable Output<String> emailSubject) {
             this.emailSubject = emailSubject;
             return this;
         }
 
         public Builder emailSubject(@Nullable String emailSubject) {
-            this.emailSubject = Input.ofNullable(emailSubject);
+            this.emailSubject = Output.ofNullable(emailSubject);
             return this;
         }
 
-        public Builder emailSubjectByLink(@Nullable Input<String> emailSubjectByLink) {
+        public Builder emailSubjectByLink(@Nullable Output<String> emailSubjectByLink) {
             this.emailSubjectByLink = emailSubjectByLink;
             return this;
         }
 
         public Builder emailSubjectByLink(@Nullable String emailSubjectByLink) {
-            this.emailSubjectByLink = Input.ofNullable(emailSubjectByLink);
+            this.emailSubjectByLink = Output.ofNullable(emailSubjectByLink);
             return this;
         }
 
-        public Builder smsMessage(@Nullable Input<String> smsMessage) {
+        public Builder smsMessage(@Nullable Output<String> smsMessage) {
             this.smsMessage = smsMessage;
             return this;
         }
 
         public Builder smsMessage(@Nullable String smsMessage) {
-            this.smsMessage = Input.ofNullable(smsMessage);
+            this.smsMessage = Output.ofNullable(smsMessage);
             return this;
         }
         public UserPoolVerificationMessageTemplateGetArgs build() {

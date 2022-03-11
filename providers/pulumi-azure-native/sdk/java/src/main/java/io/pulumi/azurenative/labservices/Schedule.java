@@ -8,7 +8,6 @@ import io.pulumi.azurenative.labservices.ScheduleArgs;
 import io.pulumi.azurenative.labservices.outputs.RecurrencePatternResponse;
 import io.pulumi.azurenative.labservices.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -198,19 +197,19 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Schedule(String name, ScheduleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:labservices:Schedule", name, args == null ? ScheduleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:labservices:Schedule", name, args == null ? ScheduleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Schedule(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Schedule(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:labservices:Schedule", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:labservices/v20211001preview:Schedule").build()),
-                Input.of(Alias.builder().setType("azure-native:labservices/v20211115preview:Schedule").build())
+                Output.of(Alias.builder().setType("azure-native:labservices/v20211001preview:Schedule").build()),
+                Output.of(Alias.builder().setType("azure-native:labservices/v20211115preview:Schedule").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -224,7 +223,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Schedule get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Schedule get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Schedule(name, id, options);
     }
 }

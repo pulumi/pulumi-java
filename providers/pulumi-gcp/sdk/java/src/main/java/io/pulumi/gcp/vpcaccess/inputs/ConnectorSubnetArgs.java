@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.vpcaccess.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class ConnectorSubnetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class ConnectorSubnetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="projectId")
-      private final @Nullable Input<String> projectId;
+      private final @Nullable Output<String> projectId;
 
-    public Input<String> getProjectId() {
-        return this.projectId == null ? Input.empty() : this.projectId;
+    public Output<String> getProjectId() {
+        return this.projectId == null ? Output.empty() : this.projectId;
     }
 
     public ConnectorSubnetArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<String> projectId) {
+        @Nullable Output<String> name,
+        @Nullable Output<String> projectId) {
         this.name = name;
         this.projectId = projectId;
     }
 
     private ConnectorSubnetArgs() {
-        this.name = Input.empty();
-        this.projectId = Input.empty();
+        this.name = Output.empty();
+        this.projectId = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class ConnectorSubnetArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> projectId;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> projectId;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class ConnectorSubnetArgs extends io.pulumi.resources.ResourceArgs 
     	      this.projectId = defaults.projectId;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder projectId(@Nullable Input<String> projectId) {
+        public Builder projectId(@Nullable Output<String> projectId) {
             this.projectId = projectId;
             return this;
         }
 
         public Builder projectId(@Nullable String projectId) {
-            this.projectId = Input.ofNullable(projectId);
+            this.projectId = Output.ofNullable(projectId);
             return this;
         }
         public ConnectorSubnetArgs build() {

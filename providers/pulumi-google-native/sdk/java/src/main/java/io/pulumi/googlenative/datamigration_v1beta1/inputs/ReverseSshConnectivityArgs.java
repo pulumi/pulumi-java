@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datamigration_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ReverseSshConnectivityArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="vm")
-      private final @Nullable Input<String> vm;
+      private final @Nullable Output<String> vm;
 
-    public Input<String> getVm() {
-        return this.vm == null ? Input.empty() : this.vm;
+    public Output<String> getVm() {
+        return this.vm == null ? Output.empty() : this.vm;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class ReverseSshConnectivityArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="vmIp", required=true)
-      private final Input<String> vmIp;
+      private final Output<String> vmIp;
 
-    public Input<String> getVmIp() {
+    public Output<String> getVmIp() {
         return this.vmIp;
     }
 
@@ -46,9 +46,9 @@ public final class ReverseSshConnectivityArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="vmPort", required=true)
-      private final Input<Integer> vmPort;
+      private final Output<Integer> vmPort;
 
-    public Input<Integer> getVmPort() {
+    public Output<Integer> getVmPort() {
         return this.vmPort;
     }
 
@@ -57,17 +57,17 @@ public final class ReverseSshConnectivityArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="vpc")
-      private final @Nullable Input<String> vpc;
+      private final @Nullable Output<String> vpc;
 
-    public Input<String> getVpc() {
-        return this.vpc == null ? Input.empty() : this.vpc;
+    public Output<String> getVpc() {
+        return this.vpc == null ? Output.empty() : this.vpc;
     }
 
     public ReverseSshConnectivityArgs(
-        @Nullable Input<String> vm,
-        Input<String> vmIp,
-        Input<Integer> vmPort,
-        @Nullable Input<String> vpc) {
+        @Nullable Output<String> vm,
+        Output<String> vmIp,
+        Output<Integer> vmPort,
+        @Nullable Output<String> vpc) {
         this.vm = vm;
         this.vmIp = Objects.requireNonNull(vmIp, "expected parameter 'vmIp' to be non-null");
         this.vmPort = Objects.requireNonNull(vmPort, "expected parameter 'vmPort' to be non-null");
@@ -75,10 +75,10 @@ public final class ReverseSshConnectivityArgs extends io.pulumi.resources.Resour
     }
 
     private ReverseSshConnectivityArgs() {
-        this.vm = Input.empty();
-        this.vmIp = Input.empty();
-        this.vmPort = Input.empty();
-        this.vpc = Input.empty();
+        this.vm = Output.empty();
+        this.vmIp = Output.empty();
+        this.vmPort = Output.empty();
+        this.vpc = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class ReverseSshConnectivityArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> vm;
-        private Input<String> vmIp;
-        private Input<Integer> vmPort;
-        private @Nullable Input<String> vpc;
+        private @Nullable Output<String> vm;
+        private Output<String> vmIp;
+        private Output<Integer> vmPort;
+        private @Nullable Output<String> vpc;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class ReverseSshConnectivityArgs extends io.pulumi.resources.Resour
     	      this.vpc = defaults.vpc;
         }
 
-        public Builder vm(@Nullable Input<String> vm) {
+        public Builder vm(@Nullable Output<String> vm) {
             this.vm = vm;
             return this;
         }
 
         public Builder vm(@Nullable String vm) {
-            this.vm = Input.ofNullable(vm);
+            this.vm = Output.ofNullable(vm);
             return this;
         }
 
-        public Builder vmIp(Input<String> vmIp) {
+        public Builder vmIp(Output<String> vmIp) {
             this.vmIp = Objects.requireNonNull(vmIp);
             return this;
         }
 
         public Builder vmIp(String vmIp) {
-            this.vmIp = Input.of(Objects.requireNonNull(vmIp));
+            this.vmIp = Output.of(Objects.requireNonNull(vmIp));
             return this;
         }
 
-        public Builder vmPort(Input<Integer> vmPort) {
+        public Builder vmPort(Output<Integer> vmPort) {
             this.vmPort = Objects.requireNonNull(vmPort);
             return this;
         }
 
         public Builder vmPort(Integer vmPort) {
-            this.vmPort = Input.of(Objects.requireNonNull(vmPort));
+            this.vmPort = Output.of(Objects.requireNonNull(vmPort));
             return this;
         }
 
-        public Builder vpc(@Nullable Input<String> vpc) {
+        public Builder vpc(@Nullable Output<String> vpc) {
             this.vpc = vpc;
             return this;
         }
 
         public Builder vpc(@Nullable String vpc) {
-            this.vpc = Input.ofNullable(vpc);
+            this.vpc = Output.ofNullable(vpc);
             return this;
         }
         public ReverseSshConnectivityArgs build() {

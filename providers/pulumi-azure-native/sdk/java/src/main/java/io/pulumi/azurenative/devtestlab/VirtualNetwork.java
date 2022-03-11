@@ -9,7 +9,6 @@ import io.pulumi.azurenative.devtestlab.outputs.ExternalSubnetResponse;
 import io.pulumi.azurenative.devtestlab.outputs.SubnetOverrideResponse;
 import io.pulumi.azurenative.devtestlab.outputs.SubnetResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -242,20 +241,20 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VirtualNetwork(String name, VirtualNetworkArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:devtestlab:VirtualNetwork", name, args == null ? VirtualNetworkArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:devtestlab:VirtualNetwork", name, args == null ? VirtualNetworkArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private VirtualNetwork(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private VirtualNetwork(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:devtestlab:VirtualNetwork", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:devtestlab/v20150521preview:VirtualNetwork").build()),
-                Input.of(Alias.builder().setType("azure-native:devtestlab/v20160515:VirtualNetwork").build()),
-                Input.of(Alias.builder().setType("azure-native:devtestlab/v20180915:VirtualNetwork").build())
+                Output.of(Alias.builder().setType("azure-native:devtestlab/v20150521preview:VirtualNetwork").build()),
+                Output.of(Alias.builder().setType("azure-native:devtestlab/v20160515:VirtualNetwork").build()),
+                Output.of(Alias.builder().setType("azure-native:devtestlab/v20180915:VirtualNetwork").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -269,7 +268,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static VirtualNetwork get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static VirtualNetwork get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new VirtualNetwork(name, id, options);
     }
 }

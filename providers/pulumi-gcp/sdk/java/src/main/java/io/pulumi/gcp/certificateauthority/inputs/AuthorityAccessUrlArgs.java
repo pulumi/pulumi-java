@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -16,29 +16,29 @@ public final class AuthorityAccessUrlArgs extends io.pulumi.resources.ResourceAr
     public static final AuthorityAccessUrlArgs Empty = new AuthorityAccessUrlArgs();
 
     @InputImport(name="caCertificateAccessUrl")
-      private final @Nullable Input<String> caCertificateAccessUrl;
+      private final @Nullable Output<String> caCertificateAccessUrl;
 
-    public Input<String> getCaCertificateAccessUrl() {
-        return this.caCertificateAccessUrl == null ? Input.empty() : this.caCertificateAccessUrl;
+    public Output<String> getCaCertificateAccessUrl() {
+        return this.caCertificateAccessUrl == null ? Output.empty() : this.caCertificateAccessUrl;
     }
 
     @InputImport(name="crlAccessUrls")
-      private final @Nullable Input<List<String>> crlAccessUrls;
+      private final @Nullable Output<List<String>> crlAccessUrls;
 
-    public Input<List<String>> getCrlAccessUrls() {
-        return this.crlAccessUrls == null ? Input.empty() : this.crlAccessUrls;
+    public Output<List<String>> getCrlAccessUrls() {
+        return this.crlAccessUrls == null ? Output.empty() : this.crlAccessUrls;
     }
 
     public AuthorityAccessUrlArgs(
-        @Nullable Input<String> caCertificateAccessUrl,
-        @Nullable Input<List<String>> crlAccessUrls) {
+        @Nullable Output<String> caCertificateAccessUrl,
+        @Nullable Output<List<String>> crlAccessUrls) {
         this.caCertificateAccessUrl = caCertificateAccessUrl;
         this.crlAccessUrls = crlAccessUrls;
     }
 
     private AuthorityAccessUrlArgs() {
-        this.caCertificateAccessUrl = Input.empty();
-        this.crlAccessUrls = Input.empty();
+        this.caCertificateAccessUrl = Output.empty();
+        this.crlAccessUrls = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class AuthorityAccessUrlArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> caCertificateAccessUrl;
-        private @Nullable Input<List<String>> crlAccessUrls;
+        private @Nullable Output<String> caCertificateAccessUrl;
+        private @Nullable Output<List<String>> crlAccessUrls;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class AuthorityAccessUrlArgs extends io.pulumi.resources.ResourceAr
     	      this.crlAccessUrls = defaults.crlAccessUrls;
         }
 
-        public Builder caCertificateAccessUrl(@Nullable Input<String> caCertificateAccessUrl) {
+        public Builder caCertificateAccessUrl(@Nullable Output<String> caCertificateAccessUrl) {
             this.caCertificateAccessUrl = caCertificateAccessUrl;
             return this;
         }
 
         public Builder caCertificateAccessUrl(@Nullable String caCertificateAccessUrl) {
-            this.caCertificateAccessUrl = Input.ofNullable(caCertificateAccessUrl);
+            this.caCertificateAccessUrl = Output.ofNullable(caCertificateAccessUrl);
             return this;
         }
 
-        public Builder crlAccessUrls(@Nullable Input<List<String>> crlAccessUrls) {
+        public Builder crlAccessUrls(@Nullable Output<List<String>> crlAccessUrls) {
             this.crlAccessUrls = crlAccessUrls;
             return this;
         }
 
         public Builder crlAccessUrls(@Nullable List<String> crlAccessUrls) {
-            this.crlAccessUrls = Input.ofNullable(crlAccessUrls);
+            this.crlAccessUrls = Output.ofNullable(crlAccessUrls);
             return this;
         }
         public AuthorityAccessUrlArgs build() {

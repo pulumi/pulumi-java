@@ -9,7 +9,7 @@ import io.pulumi.azurenative.apimanagement.inputs.BackendPropertiesArgs;
 import io.pulumi.azurenative.apimanagement.inputs.BackendProxyContractArgs;
 import io.pulumi.azurenative.apimanagement.inputs.BackendTlsPropertiesArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backendId")
-      private final @Nullable Input<String> backendId;
+      private final @Nullable Output<String> backendId;
 
-    public Input<String> getBackendId() {
-        return this.backendId == null ? Input.empty() : this.backendId;
+    public Output<String> getBackendId() {
+        return this.backendId == null ? Output.empty() : this.backendId;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="credentials")
-      private final @Nullable Input<BackendCredentialsContractArgs> credentials;
+      private final @Nullable Output<BackendCredentialsContractArgs> credentials;
 
-    public Input<BackendCredentialsContractArgs> getCredentials() {
-        return this.credentials == null ? Input.empty() : this.credentials;
+    public Output<BackendCredentialsContractArgs> getCredentials() {
+        return this.credentials == null ? Output.empty() : this.credentials;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<BackendPropertiesArgs> properties;
+      private final @Nullable Output<BackendPropertiesArgs> properties;
 
-    public Input<BackendPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<BackendPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -69,9 +69,9 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol", required=true)
-      private final Input<Either<String,BackendProtocol>> protocol;
+      private final Output<Either<String,BackendProtocol>> protocol;
 
-    public Input<Either<String,BackendProtocol>> getProtocol() {
+    public Output<Either<String,BackendProtocol>> getProtocol() {
         return this.protocol;
     }
 
@@ -80,10 +80,10 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="proxy")
-      private final @Nullable Input<BackendProxyContractArgs> proxy;
+      private final @Nullable Output<BackendProxyContractArgs> proxy;
 
-    public Input<BackendProxyContractArgs> getProxy() {
-        return this.proxy == null ? Input.empty() : this.proxy;
+    public Output<BackendProxyContractArgs> getProxy() {
+        return this.proxy == null ? Output.empty() : this.proxy;
     }
 
     /**
@@ -91,9 +91,9 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -102,10 +102,10 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceId")
-      private final @Nullable Input<String> resourceId;
+      private final @Nullable Output<String> resourceId;
 
-    public Input<String> getResourceId() {
-        return this.resourceId == null ? Input.empty() : this.resourceId;
+    public Output<String> getResourceId() {
+        return this.resourceId == null ? Output.empty() : this.resourceId;
     }
 
     /**
@@ -113,9 +113,9 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-      private final Input<String> serviceName;
+      private final Output<String> serviceName;
 
-    public Input<String> getServiceName() {
+    public Output<String> getServiceName() {
         return this.serviceName;
     }
 
@@ -124,10 +124,10 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="title")
-      private final @Nullable Input<String> title;
+      private final @Nullable Output<String> title;
 
-    public Input<String> getTitle() {
-        return this.title == null ? Input.empty() : this.title;
+    public Output<String> getTitle() {
+        return this.title == null ? Output.empty() : this.title;
     }
 
     /**
@@ -135,10 +135,10 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tls")
-      private final @Nullable Input<BackendTlsPropertiesArgs> tls;
+      private final @Nullable Output<BackendTlsPropertiesArgs> tls;
 
-    public Input<BackendTlsPropertiesArgs> getTls() {
-        return this.tls == null ? Input.empty() : this.tls;
+    public Output<BackendTlsPropertiesArgs> getTls() {
+        return this.tls == null ? Output.empty() : this.tls;
     }
 
     /**
@@ -146,25 +146,25 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="url", required=true)
-      private final Input<String> url;
+      private final Output<String> url;
 
-    public Input<String> getUrl() {
+    public Output<String> getUrl() {
         return this.url;
     }
 
     public BackendArgs(
-        @Nullable Input<String> backendId,
-        @Nullable Input<BackendCredentialsContractArgs> credentials,
-        @Nullable Input<String> description,
-        @Nullable Input<BackendPropertiesArgs> properties,
-        Input<Either<String,BackendProtocol>> protocol,
-        @Nullable Input<BackendProxyContractArgs> proxy,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> resourceId,
-        Input<String> serviceName,
-        @Nullable Input<String> title,
-        @Nullable Input<BackendTlsPropertiesArgs> tls,
-        Input<String> url) {
+        @Nullable Output<String> backendId,
+        @Nullable Output<BackendCredentialsContractArgs> credentials,
+        @Nullable Output<String> description,
+        @Nullable Output<BackendPropertiesArgs> properties,
+        Output<Either<String,BackendProtocol>> protocol,
+        @Nullable Output<BackendProxyContractArgs> proxy,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> resourceId,
+        Output<String> serviceName,
+        @Nullable Output<String> title,
+        @Nullable Output<BackendTlsPropertiesArgs> tls,
+        Output<String> url) {
         this.backendId = backendId;
         this.credentials = credentials;
         this.description = description;
@@ -180,18 +180,18 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BackendArgs() {
-        this.backendId = Input.empty();
-        this.credentials = Input.empty();
-        this.description = Input.empty();
-        this.properties = Input.empty();
-        this.protocol = Input.empty();
-        this.proxy = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceId = Input.empty();
-        this.serviceName = Input.empty();
-        this.title = Input.empty();
-        this.tls = Input.empty();
-        this.url = Input.empty();
+        this.backendId = Output.empty();
+        this.credentials = Output.empty();
+        this.description = Output.empty();
+        this.properties = Output.empty();
+        this.protocol = Output.empty();
+        this.proxy = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceId = Output.empty();
+        this.serviceName = Output.empty();
+        this.title = Output.empty();
+        this.tls = Output.empty();
+        this.url = Output.empty();
     }
 
     public static Builder builder() {
@@ -203,18 +203,18 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> backendId;
-        private @Nullable Input<BackendCredentialsContractArgs> credentials;
-        private @Nullable Input<String> description;
-        private @Nullable Input<BackendPropertiesArgs> properties;
-        private Input<Either<String,BackendProtocol>> protocol;
-        private @Nullable Input<BackendProxyContractArgs> proxy;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> resourceId;
-        private Input<String> serviceName;
-        private @Nullable Input<String> title;
-        private @Nullable Input<BackendTlsPropertiesArgs> tls;
-        private Input<String> url;
+        private @Nullable Output<String> backendId;
+        private @Nullable Output<BackendCredentialsContractArgs> credentials;
+        private @Nullable Output<String> description;
+        private @Nullable Output<BackendPropertiesArgs> properties;
+        private Output<Either<String,BackendProtocol>> protocol;
+        private @Nullable Output<BackendProxyContractArgs> proxy;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> resourceId;
+        private Output<String> serviceName;
+        private @Nullable Output<String> title;
+        private @Nullable Output<BackendTlsPropertiesArgs> tls;
+        private Output<String> url;
 
         public Builder() {
     	      // Empty
@@ -236,123 +236,123 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
     	      this.url = defaults.url;
         }
 
-        public Builder backendId(@Nullable Input<String> backendId) {
+        public Builder backendId(@Nullable Output<String> backendId) {
             this.backendId = backendId;
             return this;
         }
 
         public Builder backendId(@Nullable String backendId) {
-            this.backendId = Input.ofNullable(backendId);
+            this.backendId = Output.ofNullable(backendId);
             return this;
         }
 
-        public Builder credentials(@Nullable Input<BackendCredentialsContractArgs> credentials) {
+        public Builder credentials(@Nullable Output<BackendCredentialsContractArgs> credentials) {
             this.credentials = credentials;
             return this;
         }
 
         public Builder credentials(@Nullable BackendCredentialsContractArgs credentials) {
-            this.credentials = Input.ofNullable(credentials);
+            this.credentials = Output.ofNullable(credentials);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder properties(@Nullable Input<BackendPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<BackendPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable BackendPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder protocol(Input<Either<String,BackendProtocol>> protocol) {
+        public Builder protocol(Output<Either<String,BackendProtocol>> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
         public Builder protocol(Either<String,BackendProtocol> protocol) {
-            this.protocol = Input.of(Objects.requireNonNull(protocol));
+            this.protocol = Output.of(Objects.requireNonNull(protocol));
             return this;
         }
 
-        public Builder proxy(@Nullable Input<BackendProxyContractArgs> proxy) {
+        public Builder proxy(@Nullable Output<BackendProxyContractArgs> proxy) {
             this.proxy = proxy;
             return this;
         }
 
         public Builder proxy(@Nullable BackendProxyContractArgs proxy) {
-            this.proxy = Input.ofNullable(proxy);
+            this.proxy = Output.ofNullable(proxy);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Input.ofNullable(resourceId);
+            this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
 
-        public Builder serviceName(Input<String> serviceName) {
+        public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Input.of(Objects.requireNonNull(serviceName));
+            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder title(@Nullable Input<String> title) {
+        public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
 
         public Builder title(@Nullable String title) {
-            this.title = Input.ofNullable(title);
+            this.title = Output.ofNullable(title);
             return this;
         }
 
-        public Builder tls(@Nullable Input<BackendTlsPropertiesArgs> tls) {
+        public Builder tls(@Nullable Output<BackendTlsPropertiesArgs> tls) {
             this.tls = tls;
             return this;
         }
 
         public Builder tls(@Nullable BackendTlsPropertiesArgs tls) {
-            this.tls = Input.ofNullable(tls);
+            this.tls = Output.ofNullable(tls);
             return this;
         }
 
-        public Builder url(Input<String> url) {
+        public Builder url(Output<String> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
 
         public Builder url(String url) {
-            this.url = Input.of(Objects.requireNonNull(url));
+            this.url = Output.of(Objects.requireNonNull(url));
             return this;
         }
         public BackendArgs build() {

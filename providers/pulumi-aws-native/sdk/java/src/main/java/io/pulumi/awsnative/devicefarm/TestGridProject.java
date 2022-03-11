@@ -7,7 +7,6 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.devicefarm.TestGridProjectArgs;
 import io.pulumi.awsnative.devicefarm.outputs.TestGridProjectTag;
 import io.pulumi.awsnative.devicefarm.outputs.TestGridProjectVpcConfig;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -90,14 +89,14 @@ public class TestGridProject extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TestGridProject(String name, @Nullable TestGridProjectArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:devicefarm:TestGridProject", name, args == null ? TestGridProjectArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:devicefarm:TestGridProject", name, args == null ? TestGridProjectArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private TestGridProject(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private TestGridProject(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:devicefarm:TestGridProject", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -112,7 +111,7 @@ public class TestGridProject extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TestGridProject get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static TestGridProject get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new TestGridProject(name, id, options);
     }
 }

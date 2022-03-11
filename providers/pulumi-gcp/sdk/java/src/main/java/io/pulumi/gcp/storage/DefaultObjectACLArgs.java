@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,9 +20,9 @@ public final class DefaultObjectACLArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="bucket", required=true)
-      private final Input<String> bucket;
+      private final Output<String> bucket;
 
-    public Input<String> getBucket() {
+    public Output<String> getBucket() {
         return this.bucket;
     }
 
@@ -33,22 +33,22 @@ public final class DefaultObjectACLArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="roleEntities")
-      private final @Nullable Input<List<String>> roleEntities;
+      private final @Nullable Output<List<String>> roleEntities;
 
-    public Input<List<String>> getRoleEntities() {
-        return this.roleEntities == null ? Input.empty() : this.roleEntities;
+    public Output<List<String>> getRoleEntities() {
+        return this.roleEntities == null ? Output.empty() : this.roleEntities;
     }
 
     public DefaultObjectACLArgs(
-        Input<String> bucket,
-        @Nullable Input<List<String>> roleEntities) {
+        Output<String> bucket,
+        @Nullable Output<List<String>> roleEntities) {
         this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
         this.roleEntities = roleEntities;
     }
 
     private DefaultObjectACLArgs() {
-        this.bucket = Input.empty();
-        this.roleEntities = Input.empty();
+        this.bucket = Output.empty();
+        this.roleEntities = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class DefaultObjectACLArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> bucket;
-        private @Nullable Input<List<String>> roleEntities;
+        private Output<String> bucket;
+        private @Nullable Output<List<String>> roleEntities;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class DefaultObjectACLArgs extends io.pulumi.resources.ResourceArgs
     	      this.roleEntities = defaults.roleEntities;
         }
 
-        public Builder bucket(Input<String> bucket) {
+        public Builder bucket(Output<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Input.of(Objects.requireNonNull(bucket));
+            this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder roleEntities(@Nullable Input<List<String>> roleEntities) {
+        public Builder roleEntities(@Nullable Output<List<String>> roleEntities) {
             this.roleEntities = roleEntities;
             return this;
         }
 
         public Builder roleEntities(@Nullable List<String> roleEntities) {
-            this.roleEntities = Input.ofNullable(roleEntities);
+            this.roleEntities = Output.ofNullable(roleEntities);
             return this;
         }
         public DefaultObjectACLArgs build() {

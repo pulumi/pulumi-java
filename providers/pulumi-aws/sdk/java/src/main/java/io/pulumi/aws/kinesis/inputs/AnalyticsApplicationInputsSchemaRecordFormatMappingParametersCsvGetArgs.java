@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.kinesis.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatMappingParameters
      * 
      */
     @InputImport(name="recordColumnDelimiter", required=true)
-      private final Input<String> recordColumnDelimiter;
+      private final Output<String> recordColumnDelimiter;
 
-    public Input<String> getRecordColumnDelimiter() {
+    public Output<String> getRecordColumnDelimiter() {
         return this.recordColumnDelimiter;
     }
 
@@ -29,22 +29,22 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatMappingParameters
      * 
      */
     @InputImport(name="recordRowDelimiter", required=true)
-      private final Input<String> recordRowDelimiter;
+      private final Output<String> recordRowDelimiter;
 
-    public Input<String> getRecordRowDelimiter() {
+    public Output<String> getRecordRowDelimiter() {
         return this.recordRowDelimiter;
     }
 
     public AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsvGetArgs(
-        Input<String> recordColumnDelimiter,
-        Input<String> recordRowDelimiter) {
+        Output<String> recordColumnDelimiter,
+        Output<String> recordRowDelimiter) {
         this.recordColumnDelimiter = Objects.requireNonNull(recordColumnDelimiter, "expected parameter 'recordColumnDelimiter' to be non-null");
         this.recordRowDelimiter = Objects.requireNonNull(recordRowDelimiter, "expected parameter 'recordRowDelimiter' to be non-null");
     }
 
     private AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsvGetArgs() {
-        this.recordColumnDelimiter = Input.empty();
-        this.recordRowDelimiter = Input.empty();
+        this.recordColumnDelimiter = Output.empty();
+        this.recordRowDelimiter = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatMappingParameters
     }
 
     public static final class Builder {
-        private Input<String> recordColumnDelimiter;
-        private Input<String> recordRowDelimiter;
+        private Output<String> recordColumnDelimiter;
+        private Output<String> recordRowDelimiter;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatMappingParameters
     	      this.recordRowDelimiter = defaults.recordRowDelimiter;
         }
 
-        public Builder recordColumnDelimiter(Input<String> recordColumnDelimiter) {
+        public Builder recordColumnDelimiter(Output<String> recordColumnDelimiter) {
             this.recordColumnDelimiter = Objects.requireNonNull(recordColumnDelimiter);
             return this;
         }
 
         public Builder recordColumnDelimiter(String recordColumnDelimiter) {
-            this.recordColumnDelimiter = Input.of(Objects.requireNonNull(recordColumnDelimiter));
+            this.recordColumnDelimiter = Output.of(Objects.requireNonNull(recordColumnDelimiter));
             return this;
         }
 
-        public Builder recordRowDelimiter(Input<String> recordRowDelimiter) {
+        public Builder recordRowDelimiter(Output<String> recordRowDelimiter) {
             this.recordRowDelimiter = Objects.requireNonNull(recordRowDelimiter);
             return this;
         }
 
         public Builder recordRowDelimiter(String recordRowDelimiter) {
-            this.recordRowDelimiter = Input.of(Objects.requireNonNull(recordRowDelimiter));
+            this.recordRowDelimiter = Output.of(Objects.requireNonNull(recordRowDelimiter));
             return this;
         }
         public AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsvGetArgs build() {

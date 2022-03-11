@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs extends 
      * 
      */
     @InputImport(name="annotationSpecSet", required=true)
-      private final Input<String> annotationSpecSet;
+      private final Output<String> annotationSpecSet;
 
-    public Input<String> getAnnotationSpecSet() {
+    public Output<String> getAnnotationSpecSet() {
         return this.annotationSpecSet;
     }
 
@@ -34,22 +34,22 @@ public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs extends 
      * 
      */
     @InputImport(name="instructionMessage")
-      private final @Nullable Input<String> instructionMessage;
+      private final @Nullable Output<String> instructionMessage;
 
-    public Input<String> getInstructionMessage() {
-        return this.instructionMessage == null ? Input.empty() : this.instructionMessage;
+    public Output<String> getInstructionMessage() {
+        return this.instructionMessage == null ? Output.empty() : this.instructionMessage;
     }
 
     public GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs(
-        Input<String> annotationSpecSet,
-        @Nullable Input<String> instructionMessage) {
+        Output<String> annotationSpecSet,
+        @Nullable Output<String> instructionMessage) {
         this.annotationSpecSet = Objects.requireNonNull(annotationSpecSet, "expected parameter 'annotationSpecSet' to be non-null");
         this.instructionMessage = instructionMessage;
     }
 
     private GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs() {
-        this.annotationSpecSet = Input.empty();
-        this.instructionMessage = Input.empty();
+        this.annotationSpecSet = Output.empty();
+        this.instructionMessage = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs extends 
     }
 
     public static final class Builder {
-        private Input<String> annotationSpecSet;
-        private @Nullable Input<String> instructionMessage;
+        private Output<String> annotationSpecSet;
+        private @Nullable Output<String> instructionMessage;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs extends 
     	      this.instructionMessage = defaults.instructionMessage;
         }
 
-        public Builder annotationSpecSet(Input<String> annotationSpecSet) {
+        public Builder annotationSpecSet(Output<String> annotationSpecSet) {
             this.annotationSpecSet = Objects.requireNonNull(annotationSpecSet);
             return this;
         }
 
         public Builder annotationSpecSet(String annotationSpecSet) {
-            this.annotationSpecSet = Input.of(Objects.requireNonNull(annotationSpecSet));
+            this.annotationSpecSet = Output.of(Objects.requireNonNull(annotationSpecSet));
             return this;
         }
 
-        public Builder instructionMessage(@Nullable Input<String> instructionMessage) {
+        public Builder instructionMessage(@Nullable Output<String> instructionMessage) {
             this.instructionMessage = instructionMessage;
             return this;
         }
 
         public Builder instructionMessage(@Nullable String instructionMessage) {
-            this.instructionMessage = Input.ofNullable(instructionMessage);
+            this.instructionMessage = Output.ofNullable(instructionMessage);
             return this;
         }
         public GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs build() {

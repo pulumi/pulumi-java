@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.features;
 
 import io.pulumi.azurenative.features.inputs.SubscriptionFeatureRegistrationPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,17 +20,17 @@ public final class SubscriptionFeatureRegistrationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="featureName")
-      private final @Nullable Input<String> featureName;
+      private final @Nullable Output<String> featureName;
 
-    public Input<String> getFeatureName() {
-        return this.featureName == null ? Input.empty() : this.featureName;
+    public Output<String> getFeatureName() {
+        return this.featureName == null ? Output.empty() : this.featureName;
     }
 
     @InputImport(name="properties")
-      private final @Nullable Input<SubscriptionFeatureRegistrationPropertiesArgs> properties;
+      private final @Nullable Output<SubscriptionFeatureRegistrationPropertiesArgs> properties;
 
-    public Input<SubscriptionFeatureRegistrationPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<SubscriptionFeatureRegistrationPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -38,25 +38,25 @@ public final class SubscriptionFeatureRegistrationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="providerNamespace", required=true)
-      private final Input<String> providerNamespace;
+      private final Output<String> providerNamespace;
 
-    public Input<String> getProviderNamespace() {
+    public Output<String> getProviderNamespace() {
         return this.providerNamespace;
     }
 
     public SubscriptionFeatureRegistrationArgs(
-        @Nullable Input<String> featureName,
-        @Nullable Input<SubscriptionFeatureRegistrationPropertiesArgs> properties,
-        Input<String> providerNamespace) {
+        @Nullable Output<String> featureName,
+        @Nullable Output<SubscriptionFeatureRegistrationPropertiesArgs> properties,
+        Output<String> providerNamespace) {
         this.featureName = featureName;
         this.properties = properties;
         this.providerNamespace = Objects.requireNonNull(providerNamespace, "expected parameter 'providerNamespace' to be non-null");
     }
 
     private SubscriptionFeatureRegistrationArgs() {
-        this.featureName = Input.empty();
-        this.properties = Input.empty();
-        this.providerNamespace = Input.empty();
+        this.featureName = Output.empty();
+        this.properties = Output.empty();
+        this.providerNamespace = Output.empty();
     }
 
     public static Builder builder() {
@@ -68,9 +68,9 @@ public final class SubscriptionFeatureRegistrationArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> featureName;
-        private @Nullable Input<SubscriptionFeatureRegistrationPropertiesArgs> properties;
-        private Input<String> providerNamespace;
+        private @Nullable Output<String> featureName;
+        private @Nullable Output<SubscriptionFeatureRegistrationPropertiesArgs> properties;
+        private Output<String> providerNamespace;
 
         public Builder() {
     	      // Empty
@@ -83,33 +83,33 @@ public final class SubscriptionFeatureRegistrationArgs extends io.pulumi.resourc
     	      this.providerNamespace = defaults.providerNamespace;
         }
 
-        public Builder featureName(@Nullable Input<String> featureName) {
+        public Builder featureName(@Nullable Output<String> featureName) {
             this.featureName = featureName;
             return this;
         }
 
         public Builder featureName(@Nullable String featureName) {
-            this.featureName = Input.ofNullable(featureName);
+            this.featureName = Output.ofNullable(featureName);
             return this;
         }
 
-        public Builder properties(@Nullable Input<SubscriptionFeatureRegistrationPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<SubscriptionFeatureRegistrationPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable SubscriptionFeatureRegistrationPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder providerNamespace(Input<String> providerNamespace) {
+        public Builder providerNamespace(Output<String> providerNamespace) {
             this.providerNamespace = Objects.requireNonNull(providerNamespace);
             return this;
         }
 
         public Builder providerNamespace(String providerNamespace) {
-            this.providerNamespace = Input.of(Objects.requireNonNull(providerNamespace));
+            this.providerNamespace = Output.of(Objects.requireNonNull(providerNamespace));
             return this;
         }
         public SubscriptionFeatureRegistrationArgs build() {

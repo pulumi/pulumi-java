@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ParameterDefinitionsValueMetadataArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="assignPermissions")
-      private final @Nullable Input<Boolean> assignPermissions;
+      private final @Nullable Output<Boolean> assignPermissions;
 
-    public Input<Boolean> getAssignPermissions() {
-        return this.assignPermissions == null ? Input.empty() : this.assignPermissions;
+    public Output<Boolean> getAssignPermissions() {
+        return this.assignPermissions == null ? Output.empty() : this.assignPermissions;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ParameterDefinitionsValueMetadataArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ParameterDefinitionsValueMetadataArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class ParameterDefinitionsValueMetadataArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="strongType")
-      private final @Nullable Input<String> strongType;
+      private final @Nullable Output<String> strongType;
 
-    public Input<String> getStrongType() {
-        return this.strongType == null ? Input.empty() : this.strongType;
+    public Output<String> getStrongType() {
+        return this.strongType == null ? Output.empty() : this.strongType;
     }
 
     public ParameterDefinitionsValueMetadataArgs(
-        @Nullable Input<Boolean> assignPermissions,
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> strongType) {
+        @Nullable Output<Boolean> assignPermissions,
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> strongType) {
         this.assignPermissions = assignPermissions;
         this.description = description;
         this.displayName = displayName;
@@ -75,10 +75,10 @@ public final class ParameterDefinitionsValueMetadataArgs extends io.pulumi.resou
     }
 
     private ParameterDefinitionsValueMetadataArgs() {
-        this.assignPermissions = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.strongType = Input.empty();
+        this.assignPermissions = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.strongType = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class ParameterDefinitionsValueMetadataArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> assignPermissions;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> strongType;
+        private @Nullable Output<Boolean> assignPermissions;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> strongType;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class ParameterDefinitionsValueMetadataArgs extends io.pulumi.resou
     	      this.strongType = defaults.strongType;
         }
 
-        public Builder assignPermissions(@Nullable Input<Boolean> assignPermissions) {
+        public Builder assignPermissions(@Nullable Output<Boolean> assignPermissions) {
             this.assignPermissions = assignPermissions;
             return this;
         }
 
         public Builder assignPermissions(@Nullable Boolean assignPermissions) {
-            this.assignPermissions = Input.ofNullable(assignPermissions);
+            this.assignPermissions = Output.ofNullable(assignPermissions);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder strongType(@Nullable Input<String> strongType) {
+        public Builder strongType(@Nullable Output<String> strongType) {
             this.strongType = strongType;
             return this;
         }
 
         public Builder strongType(@Nullable String strongType) {
-            this.strongType = Input.ofNullable(strongType);
+            this.strongType = Output.ofNullable(strongType);
             return this;
         }
         public ParameterDefinitionsValueMetadataArgs build() {

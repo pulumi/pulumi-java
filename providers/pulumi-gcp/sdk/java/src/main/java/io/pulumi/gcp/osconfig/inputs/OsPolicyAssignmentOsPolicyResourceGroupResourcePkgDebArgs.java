@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceArgs;
 import java.lang.Boolean;
@@ -20,10 +20,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebArgs ext
      * 
      */
     @InputImport(name="pullDeps")
-      private final @Nullable Input<Boolean> pullDeps;
+      private final @Nullable Output<Boolean> pullDeps;
 
-    public Input<Boolean> getPullDeps() {
-        return this.pullDeps == null ? Input.empty() : this.pullDeps;
+    public Output<Boolean> getPullDeps() {
+        return this.pullDeps == null ? Output.empty() : this.pullDeps;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebArgs ext
      * 
      */
     @InputImport(name="source", required=true)
-      private final Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceArgs> source;
+      private final Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceArgs> source;
 
-    public Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceArgs> getSource() {
+    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceArgs> getSource() {
         return this.source;
     }
 
     public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebArgs(
-        @Nullable Input<Boolean> pullDeps,
-        Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceArgs> source) {
+        @Nullable Output<Boolean> pullDeps,
+        Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceArgs> source) {
         this.pullDeps = pullDeps;
         this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
     }
 
     private OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebArgs() {
-        this.pullDeps = Input.empty();
-        this.source = Input.empty();
+        this.pullDeps = Output.empty();
+        this.source = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebArgs ext
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> pullDeps;
-        private Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceArgs> source;
+        private @Nullable Output<Boolean> pullDeps;
+        private Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceArgs> source;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebArgs ext
     	      this.source = defaults.source;
         }
 
-        public Builder pullDeps(@Nullable Input<Boolean> pullDeps) {
+        public Builder pullDeps(@Nullable Output<Boolean> pullDeps) {
             this.pullDeps = pullDeps;
             return this;
         }
 
         public Builder pullDeps(@Nullable Boolean pullDeps) {
-            this.pullDeps = Input.ofNullable(pullDeps);
+            this.pullDeps = Output.ofNullable(pullDeps);
             return this;
         }
 
-        public Builder source(Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceArgs> source) {
+        public Builder source(Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceArgs> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
         public Builder source(OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceArgs source) {
-            this.source = Input.of(Objects.requireNonNull(source));
+            this.source = Output.of(Objects.requireNonNull(source));
             return this;
         }
         public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebArgs build() {

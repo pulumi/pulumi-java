@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.customerinsights.inputs;
 
 import io.pulumi.azurenative.customerinsights.enums.FrequencyTypes;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class ConnectorMappingAvailabilityArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="frequency")
-      private final @Nullable Input<FrequencyTypes> frequency;
+      private final @Nullable Output<FrequencyTypes> frequency;
 
-    public Input<FrequencyTypes> getFrequency() {
-        return this.frequency == null ? Input.empty() : this.frequency;
+    public Output<FrequencyTypes> getFrequency() {
+        return this.frequency == null ? Output.empty() : this.frequency;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ConnectorMappingAvailabilityArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="interval", required=true)
-      private final Input<Integer> interval;
+      private final Output<Integer> interval;
 
-    public Input<Integer> getInterval() {
+    public Output<Integer> getInterval() {
         return this.interval;
     }
 
     public ConnectorMappingAvailabilityArgs(
-        @Nullable Input<FrequencyTypes> frequency,
-        Input<Integer> interval) {
+        @Nullable Output<FrequencyTypes> frequency,
+        Output<Integer> interval) {
         this.frequency = frequency;
         this.interval = Objects.requireNonNull(interval, "expected parameter 'interval' to be non-null");
     }
 
     private ConnectorMappingAvailabilityArgs() {
-        this.frequency = Input.empty();
-        this.interval = Input.empty();
+        this.frequency = Output.empty();
+        this.interval = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ConnectorMappingAvailabilityArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<FrequencyTypes> frequency;
-        private Input<Integer> interval;
+        private @Nullable Output<FrequencyTypes> frequency;
+        private Output<Integer> interval;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ConnectorMappingAvailabilityArgs extends io.pulumi.resources.
     	      this.interval = defaults.interval;
         }
 
-        public Builder frequency(@Nullable Input<FrequencyTypes> frequency) {
+        public Builder frequency(@Nullable Output<FrequencyTypes> frequency) {
             this.frequency = frequency;
             return this;
         }
 
         public Builder frequency(@Nullable FrequencyTypes frequency) {
-            this.frequency = Input.ofNullable(frequency);
+            this.frequency = Output.ofNullable(frequency);
             return this;
         }
 
-        public Builder interval(Input<Integer> interval) {
+        public Builder interval(Output<Integer> interval) {
             this.interval = Objects.requireNonNull(interval);
             return this;
         }
 
         public Builder interval(Integer interval) {
-            this.interval = Input.of(Objects.requireNonNull(interval));
+            this.interval = Output.of(Objects.requireNonNull(interval));
             return this;
         }
         public ConnectorMappingAvailabilityArgs build() {

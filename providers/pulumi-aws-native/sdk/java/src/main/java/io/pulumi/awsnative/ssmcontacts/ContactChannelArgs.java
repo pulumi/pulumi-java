@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ssmcontacts;
 
 import io.pulumi.awsnative.ssmcontacts.enums.ContactChannelChannelType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class ContactChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="channelAddress")
-      private final @Nullable Input<String> channelAddress;
+      private final @Nullable Output<String> channelAddress;
 
-    public Input<String> getChannelAddress() {
-        return this.channelAddress == null ? Input.empty() : this.channelAddress;
+    public Output<String> getChannelAddress() {
+        return this.channelAddress == null ? Output.empty() : this.channelAddress;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ContactChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="channelName")
-      private final @Nullable Input<String> channelName;
+      private final @Nullable Output<String> channelName;
 
-    public Input<String> getChannelName() {
-        return this.channelName == null ? Input.empty() : this.channelName;
+    public Output<String> getChannelName() {
+        return this.channelName == null ? Output.empty() : this.channelName;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ContactChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="channelType")
-      private final @Nullable Input<ContactChannelChannelType> channelType;
+      private final @Nullable Output<ContactChannelChannelType> channelType;
 
-    public Input<ContactChannelChannelType> getChannelType() {
-        return this.channelType == null ? Input.empty() : this.channelType;
+    public Output<ContactChannelChannelType> getChannelType() {
+        return this.channelType == null ? Output.empty() : this.channelType;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ContactChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contactId")
-      private final @Nullable Input<String> contactId;
+      private final @Nullable Output<String> contactId;
 
-    public Input<String> getContactId() {
-        return this.contactId == null ? Input.empty() : this.contactId;
+    public Output<String> getContactId() {
+        return this.contactId == null ? Output.empty() : this.contactId;
     }
 
     /**
@@ -65,18 +65,18 @@ public final class ContactChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deferActivation")
-      private final @Nullable Input<Boolean> deferActivation;
+      private final @Nullable Output<Boolean> deferActivation;
 
-    public Input<Boolean> getDeferActivation() {
-        return this.deferActivation == null ? Input.empty() : this.deferActivation;
+    public Output<Boolean> getDeferActivation() {
+        return this.deferActivation == null ? Output.empty() : this.deferActivation;
     }
 
     public ContactChannelArgs(
-        @Nullable Input<String> channelAddress,
-        @Nullable Input<String> channelName,
-        @Nullable Input<ContactChannelChannelType> channelType,
-        @Nullable Input<String> contactId,
-        @Nullable Input<Boolean> deferActivation) {
+        @Nullable Output<String> channelAddress,
+        @Nullable Output<String> channelName,
+        @Nullable Output<ContactChannelChannelType> channelType,
+        @Nullable Output<String> contactId,
+        @Nullable Output<Boolean> deferActivation) {
         this.channelAddress = channelAddress;
         this.channelName = channelName;
         this.channelType = channelType;
@@ -85,11 +85,11 @@ public final class ContactChannelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContactChannelArgs() {
-        this.channelAddress = Input.empty();
-        this.channelName = Input.empty();
-        this.channelType = Input.empty();
-        this.contactId = Input.empty();
-        this.deferActivation = Input.empty();
+        this.channelAddress = Output.empty();
+        this.channelName = Output.empty();
+        this.channelType = Output.empty();
+        this.contactId = Output.empty();
+        this.deferActivation = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class ContactChannelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> channelAddress;
-        private @Nullable Input<String> channelName;
-        private @Nullable Input<ContactChannelChannelType> channelType;
-        private @Nullable Input<String> contactId;
-        private @Nullable Input<Boolean> deferActivation;
+        private @Nullable Output<String> channelAddress;
+        private @Nullable Output<String> channelName;
+        private @Nullable Output<ContactChannelChannelType> channelType;
+        private @Nullable Output<String> contactId;
+        private @Nullable Output<Boolean> deferActivation;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class ContactChannelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.deferActivation = defaults.deferActivation;
         }
 
-        public Builder channelAddress(@Nullable Input<String> channelAddress) {
+        public Builder channelAddress(@Nullable Output<String> channelAddress) {
             this.channelAddress = channelAddress;
             return this;
         }
 
         public Builder channelAddress(@Nullable String channelAddress) {
-            this.channelAddress = Input.ofNullable(channelAddress);
+            this.channelAddress = Output.ofNullable(channelAddress);
             return this;
         }
 
-        public Builder channelName(@Nullable Input<String> channelName) {
+        public Builder channelName(@Nullable Output<String> channelName) {
             this.channelName = channelName;
             return this;
         }
 
         public Builder channelName(@Nullable String channelName) {
-            this.channelName = Input.ofNullable(channelName);
+            this.channelName = Output.ofNullable(channelName);
             return this;
         }
 
-        public Builder channelType(@Nullable Input<ContactChannelChannelType> channelType) {
+        public Builder channelType(@Nullable Output<ContactChannelChannelType> channelType) {
             this.channelType = channelType;
             return this;
         }
 
         public Builder channelType(@Nullable ContactChannelChannelType channelType) {
-            this.channelType = Input.ofNullable(channelType);
+            this.channelType = Output.ofNullable(channelType);
             return this;
         }
 
-        public Builder contactId(@Nullable Input<String> contactId) {
+        public Builder contactId(@Nullable Output<String> contactId) {
             this.contactId = contactId;
             return this;
         }
 
         public Builder contactId(@Nullable String contactId) {
-            this.contactId = Input.ofNullable(contactId);
+            this.contactId = Output.ofNullable(contactId);
             return this;
         }
 
-        public Builder deferActivation(@Nullable Input<Boolean> deferActivation) {
+        public Builder deferActivation(@Nullable Output<Boolean> deferActivation) {
             this.deferActivation = deferActivation;
             return this;
         }
 
         public Builder deferActivation(@Nullable Boolean deferActivation) {
-            this.deferActivation = Input.ofNullable(deferActivation);
+            this.deferActivation = Output.ofNullable(deferActivation);
             return this;
         }
         public ContactChannelArgs build() {

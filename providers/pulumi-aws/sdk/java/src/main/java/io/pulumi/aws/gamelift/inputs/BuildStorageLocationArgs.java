@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.gamelift.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class BuildStorageLocationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="bucket", required=true)
-      private final Input<String> bucket;
+      private final Output<String> bucket;
 
-    public Input<String> getBucket() {
+    public Output<String> getBucket() {
         return this.bucket;
     }
 
@@ -29,9 +29,9 @@ public final class BuildStorageLocationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="key", required=true)
-      private final Input<String> key;
+      private final Output<String> key;
 
-    public Input<String> getKey() {
+    public Output<String> getKey() {
         return this.key;
     }
 
@@ -40,25 +40,25 @@ public final class BuildStorageLocationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
     public BuildStorageLocationArgs(
-        Input<String> bucket,
-        Input<String> key,
-        Input<String> roleArn) {
+        Output<String> bucket,
+        Output<String> key,
+        Output<String> roleArn) {
         this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
         this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
         this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
     }
 
     private BuildStorageLocationArgs() {
-        this.bucket = Input.empty();
-        this.key = Input.empty();
-        this.roleArn = Input.empty();
+        this.bucket = Output.empty();
+        this.key = Output.empty();
+        this.roleArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -70,9 +70,9 @@ public final class BuildStorageLocationArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> bucket;
-        private Input<String> key;
-        private Input<String> roleArn;
+        private Output<String> bucket;
+        private Output<String> key;
+        private Output<String> roleArn;
 
         public Builder() {
     	      // Empty
@@ -85,33 +85,33 @@ public final class BuildStorageLocationArgs extends io.pulumi.resources.Resource
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder bucket(Input<String> bucket) {
+        public Builder bucket(Output<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Input.of(Objects.requireNonNull(bucket));
+            this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder key(Input<String> key) {
+        public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
         public Builder key(String key) {
-            this.key = Input.of(Objects.requireNonNull(key));
+            this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
         public BuildStorageLocationArgs build() {

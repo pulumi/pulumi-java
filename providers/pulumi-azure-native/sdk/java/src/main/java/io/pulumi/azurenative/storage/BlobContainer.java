@@ -8,7 +8,6 @@ import io.pulumi.azurenative.storage.BlobContainerArgs;
 import io.pulumi.azurenative.storage.outputs.ImmutabilityPolicyPropertiesResponse;
 import io.pulumi.azurenative.storage.outputs.LegalHoldPropertiesResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -341,29 +340,29 @@ public class BlobContainer extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BlobContainer(String name, BlobContainerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:storage:BlobContainer", name, args == null ? BlobContainerArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:storage:BlobContainer", name, args == null ? BlobContainerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private BlobContainer(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private BlobContainer(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:storage:BlobContainer", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:storage/v20180201:BlobContainer").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20180301preview:BlobContainer").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20180701:BlobContainer").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20181101:BlobContainer").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20190401:BlobContainer").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20190601:BlobContainer").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20200801preview:BlobContainer").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20210101:BlobContainer").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20210201:BlobContainer").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20210401:BlobContainer").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20210601:BlobContainer").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20210801:BlobContainer").build())
+                Output.of(Alias.builder().setType("azure-native:storage/v20180201:BlobContainer").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20180301preview:BlobContainer").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20180701:BlobContainer").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20181101:BlobContainer").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20190401:BlobContainer").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20190601:BlobContainer").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20200801preview:BlobContainer").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20210101:BlobContainer").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20210201:BlobContainer").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20210401:BlobContainer").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20210601:BlobContainer").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20210801:BlobContainer").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -377,7 +376,7 @@ public class BlobContainer extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static BlobContainer get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static BlobContainer get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new BlobContainer(name, id, options);
     }
 }

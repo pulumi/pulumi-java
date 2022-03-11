@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class ExcludedPathArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
-    public ExcludedPathArgs(@Nullable Input<String> path) {
+    public ExcludedPathArgs(@Nullable Output<String> path) {
         this.path = path;
     }
 
     private ExcludedPathArgs() {
-        this.path = Input.empty();
+        this.path = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class ExcludedPathArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> path;
+        private @Nullable Output<String> path;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class ExcludedPathArgs extends io.pulumi.resources.ResourceArgs {
     	      this.path = defaults.path;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
         public ExcludedPathArgs build() {

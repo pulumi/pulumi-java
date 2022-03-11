@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.s3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class BucketObjectLockConfigurationRuleDefaultRetentionArgs extends
      * 
      */
     @InputImport(name="days")
-      private final @Nullable Input<Integer> days;
+      private final @Nullable Output<Integer> days;
 
-    public Input<Integer> getDays() {
-        return this.days == null ? Input.empty() : this.days;
+    public Output<Integer> getDays() {
+        return this.days == null ? Output.empty() : this.days;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class BucketObjectLockConfigurationRuleDefaultRetentionArgs extends
      * 
      */
     @InputImport(name="mode", required=true)
-      private final Input<String> mode;
+      private final Output<String> mode;
 
-    public Input<String> getMode() {
+    public Output<String> getMode() {
         return this.mode;
     }
 
@@ -42,25 +42,25 @@ public final class BucketObjectLockConfigurationRuleDefaultRetentionArgs extends
      * 
      */
     @InputImport(name="years")
-      private final @Nullable Input<Integer> years;
+      private final @Nullable Output<Integer> years;
 
-    public Input<Integer> getYears() {
-        return this.years == null ? Input.empty() : this.years;
+    public Output<Integer> getYears() {
+        return this.years == null ? Output.empty() : this.years;
     }
 
     public BucketObjectLockConfigurationRuleDefaultRetentionArgs(
-        @Nullable Input<Integer> days,
-        Input<String> mode,
-        @Nullable Input<Integer> years) {
+        @Nullable Output<Integer> days,
+        Output<String> mode,
+        @Nullable Output<Integer> years) {
         this.days = days;
         this.mode = Objects.requireNonNull(mode, "expected parameter 'mode' to be non-null");
         this.years = years;
     }
 
     private BucketObjectLockConfigurationRuleDefaultRetentionArgs() {
-        this.days = Input.empty();
-        this.mode = Input.empty();
-        this.years = Input.empty();
+        this.days = Output.empty();
+        this.mode = Output.empty();
+        this.years = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class BucketObjectLockConfigurationRuleDefaultRetentionArgs extends
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> days;
-        private Input<String> mode;
-        private @Nullable Input<Integer> years;
+        private @Nullable Output<Integer> days;
+        private Output<String> mode;
+        private @Nullable Output<Integer> years;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class BucketObjectLockConfigurationRuleDefaultRetentionArgs extends
     	      this.years = defaults.years;
         }
 
-        public Builder days(@Nullable Input<Integer> days) {
+        public Builder days(@Nullable Output<Integer> days) {
             this.days = days;
             return this;
         }
 
         public Builder days(@Nullable Integer days) {
-            this.days = Input.ofNullable(days);
+            this.days = Output.ofNullable(days);
             return this;
         }
 
-        public Builder mode(Input<String> mode) {
+        public Builder mode(Output<String> mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
 
         public Builder mode(String mode) {
-            this.mode = Input.of(Objects.requireNonNull(mode));
+            this.mode = Output.of(Objects.requireNonNull(mode));
             return this;
         }
 
-        public Builder years(@Nullable Input<Integer> years) {
+        public Builder years(@Nullable Output<Integer> years) {
             this.years = years;
             return this;
         }
 
         public Builder years(@Nullable Integer years) {
-            this.years = Input.ofNullable(years);
+            this.years = Output.ofNullable(years);
             return this;
         }
         public BucketObjectLockConfigurationRuleDefaultRetentionArgs build() {

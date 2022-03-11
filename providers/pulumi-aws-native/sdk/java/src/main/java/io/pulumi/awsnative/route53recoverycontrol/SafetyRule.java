@@ -10,7 +10,6 @@ import io.pulumi.awsnative.route53recoverycontrol.outputs.SafetyRuleAssertionRul
 import io.pulumi.awsnative.route53recoverycontrol.outputs.SafetyRuleGatingRule;
 import io.pulumi.awsnative.route53recoverycontrol.outputs.SafetyRuleRuleConfig;
 import io.pulumi.awsnative.route53recoverycontrol.outputs.SafetyRuleTag;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -143,14 +142,14 @@ public class SafetyRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SafetyRule(String name, @Nullable SafetyRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:route53recoverycontrol:SafetyRule", name, args == null ? SafetyRuleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:route53recoverycontrol:SafetyRule", name, args == null ? SafetyRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private SafetyRule(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private SafetyRule(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:route53recoverycontrol:SafetyRule", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -165,7 +164,7 @@ public class SafetyRule extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SafetyRule get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static SafetyRule get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SafetyRule(name, id, options);
     }
 }

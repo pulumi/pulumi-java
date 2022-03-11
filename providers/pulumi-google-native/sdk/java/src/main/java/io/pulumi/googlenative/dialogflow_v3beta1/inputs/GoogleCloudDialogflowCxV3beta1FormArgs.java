@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1FormParameterArgs;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class GoogleCloudDialogflowCxV3beta1FormArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<List<GoogleCloudDialogflowCxV3beta1FormParameterArgs>> parameters;
+      private final @Nullable Output<List<GoogleCloudDialogflowCxV3beta1FormParameterArgs>> parameters;
 
-    public Input<List<GoogleCloudDialogflowCxV3beta1FormParameterArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<List<GoogleCloudDialogflowCxV3beta1FormParameterArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
-    public GoogleCloudDialogflowCxV3beta1FormArgs(@Nullable Input<List<GoogleCloudDialogflowCxV3beta1FormParameterArgs>> parameters) {
+    public GoogleCloudDialogflowCxV3beta1FormArgs(@Nullable Output<List<GoogleCloudDialogflowCxV3beta1FormParameterArgs>> parameters) {
         this.parameters = parameters;
     }
 
     private GoogleCloudDialogflowCxV3beta1FormArgs() {
-        this.parameters = Input.empty();
+        this.parameters = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class GoogleCloudDialogflowCxV3beta1FormArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<List<GoogleCloudDialogflowCxV3beta1FormParameterArgs>> parameters;
+        private @Nullable Output<List<GoogleCloudDialogflowCxV3beta1FormParameterArgs>> parameters;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class GoogleCloudDialogflowCxV3beta1FormArgs extends io.pulumi.reso
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder parameters(@Nullable Input<List<GoogleCloudDialogflowCxV3beta1FormParameterArgs>> parameters) {
+        public Builder parameters(@Nullable Output<List<GoogleCloudDialogflowCxV3beta1FormParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable List<GoogleCloudDialogflowCxV3beta1FormParameterArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
         public GoogleCloudDialogflowCxV3beta1FormArgs build() {

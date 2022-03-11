@@ -6,7 +6,7 @@ package io.pulumi.azurenative.security.inputs;
 import io.pulumi.azurenative.security.enums.Status;
 import io.pulumi.azurenative.security.enums.StatusReason;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class JitNetworkAccessRequestPortArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="allowedSourceAddressPrefix")
-      private final @Nullable Input<String> allowedSourceAddressPrefix;
+      private final @Nullable Output<String> allowedSourceAddressPrefix;
 
-    public Input<String> getAllowedSourceAddressPrefix() {
-        return this.allowedSourceAddressPrefix == null ? Input.empty() : this.allowedSourceAddressPrefix;
+    public Output<String> getAllowedSourceAddressPrefix() {
+        return this.allowedSourceAddressPrefix == null ? Output.empty() : this.allowedSourceAddressPrefix;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class JitNetworkAccessRequestPortArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="allowedSourceAddressPrefixes")
-      private final @Nullable Input<List<String>> allowedSourceAddressPrefixes;
+      private final @Nullable Output<List<String>> allowedSourceAddressPrefixes;
 
-    public Input<List<String>> getAllowedSourceAddressPrefixes() {
-        return this.allowedSourceAddressPrefixes == null ? Input.empty() : this.allowedSourceAddressPrefixes;
+    public Output<List<String>> getAllowedSourceAddressPrefixes() {
+        return this.allowedSourceAddressPrefixes == null ? Output.empty() : this.allowedSourceAddressPrefixes;
     }
 
     /**
@@ -46,9 +46,9 @@ public final class JitNetworkAccessRequestPortArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="endTimeUtc", required=true)
-      private final Input<String> endTimeUtc;
+      private final Output<String> endTimeUtc;
 
-    public Input<String> getEndTimeUtc() {
+    public Output<String> getEndTimeUtc() {
         return this.endTimeUtc;
     }
 
@@ -57,16 +57,16 @@ public final class JitNetworkAccessRequestPortArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="mappedPort")
-      private final @Nullable Input<Integer> mappedPort;
+      private final @Nullable Output<Integer> mappedPort;
 
-    public Input<Integer> getMappedPort() {
-        return this.mappedPort == null ? Input.empty() : this.mappedPort;
+    public Output<Integer> getMappedPort() {
+        return this.mappedPort == null ? Output.empty() : this.mappedPort;
     }
 
     @InputImport(name="number", required=true)
-      private final Input<Integer> number;
+      private final Output<Integer> number;
 
-    public Input<Integer> getNumber() {
+    public Output<Integer> getNumber() {
         return this.number;
     }
 
@@ -75,9 +75,9 @@ public final class JitNetworkAccessRequestPortArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="status", required=true)
-      private final Input<Either<String,Status>> status;
+      private final Output<Either<String,Status>> status;
 
-    public Input<Either<String,Status>> getStatus() {
+    public Output<Either<String,Status>> getStatus() {
         return this.status;
     }
 
@@ -86,20 +86,20 @@ public final class JitNetworkAccessRequestPortArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="statusReason", required=true)
-      private final Input<Either<String,StatusReason>> statusReason;
+      private final Output<Either<String,StatusReason>> statusReason;
 
-    public Input<Either<String,StatusReason>> getStatusReason() {
+    public Output<Either<String,StatusReason>> getStatusReason() {
         return this.statusReason;
     }
 
     public JitNetworkAccessRequestPortArgs(
-        @Nullable Input<String> allowedSourceAddressPrefix,
-        @Nullable Input<List<String>> allowedSourceAddressPrefixes,
-        Input<String> endTimeUtc,
-        @Nullable Input<Integer> mappedPort,
-        Input<Integer> number,
-        Input<Either<String,Status>> status,
-        Input<Either<String,StatusReason>> statusReason) {
+        @Nullable Output<String> allowedSourceAddressPrefix,
+        @Nullable Output<List<String>> allowedSourceAddressPrefixes,
+        Output<String> endTimeUtc,
+        @Nullable Output<Integer> mappedPort,
+        Output<Integer> number,
+        Output<Either<String,Status>> status,
+        Output<Either<String,StatusReason>> statusReason) {
         this.allowedSourceAddressPrefix = allowedSourceAddressPrefix;
         this.allowedSourceAddressPrefixes = allowedSourceAddressPrefixes;
         this.endTimeUtc = Objects.requireNonNull(endTimeUtc, "expected parameter 'endTimeUtc' to be non-null");
@@ -110,13 +110,13 @@ public final class JitNetworkAccessRequestPortArgs extends io.pulumi.resources.R
     }
 
     private JitNetworkAccessRequestPortArgs() {
-        this.allowedSourceAddressPrefix = Input.empty();
-        this.allowedSourceAddressPrefixes = Input.empty();
-        this.endTimeUtc = Input.empty();
-        this.mappedPort = Input.empty();
-        this.number = Input.empty();
-        this.status = Input.empty();
-        this.statusReason = Input.empty();
+        this.allowedSourceAddressPrefix = Output.empty();
+        this.allowedSourceAddressPrefixes = Output.empty();
+        this.endTimeUtc = Output.empty();
+        this.mappedPort = Output.empty();
+        this.number = Output.empty();
+        this.status = Output.empty();
+        this.statusReason = Output.empty();
     }
 
     public static Builder builder() {
@@ -128,13 +128,13 @@ public final class JitNetworkAccessRequestPortArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> allowedSourceAddressPrefix;
-        private @Nullable Input<List<String>> allowedSourceAddressPrefixes;
-        private Input<String> endTimeUtc;
-        private @Nullable Input<Integer> mappedPort;
-        private Input<Integer> number;
-        private Input<Either<String,Status>> status;
-        private Input<Either<String,StatusReason>> statusReason;
+        private @Nullable Output<String> allowedSourceAddressPrefix;
+        private @Nullable Output<List<String>> allowedSourceAddressPrefixes;
+        private Output<String> endTimeUtc;
+        private @Nullable Output<Integer> mappedPort;
+        private Output<Integer> number;
+        private Output<Either<String,Status>> status;
+        private Output<Either<String,StatusReason>> statusReason;
 
         public Builder() {
     	      // Empty
@@ -151,73 +151,73 @@ public final class JitNetworkAccessRequestPortArgs extends io.pulumi.resources.R
     	      this.statusReason = defaults.statusReason;
         }
 
-        public Builder allowedSourceAddressPrefix(@Nullable Input<String> allowedSourceAddressPrefix) {
+        public Builder allowedSourceAddressPrefix(@Nullable Output<String> allowedSourceAddressPrefix) {
             this.allowedSourceAddressPrefix = allowedSourceAddressPrefix;
             return this;
         }
 
         public Builder allowedSourceAddressPrefix(@Nullable String allowedSourceAddressPrefix) {
-            this.allowedSourceAddressPrefix = Input.ofNullable(allowedSourceAddressPrefix);
+            this.allowedSourceAddressPrefix = Output.ofNullable(allowedSourceAddressPrefix);
             return this;
         }
 
-        public Builder allowedSourceAddressPrefixes(@Nullable Input<List<String>> allowedSourceAddressPrefixes) {
+        public Builder allowedSourceAddressPrefixes(@Nullable Output<List<String>> allowedSourceAddressPrefixes) {
             this.allowedSourceAddressPrefixes = allowedSourceAddressPrefixes;
             return this;
         }
 
         public Builder allowedSourceAddressPrefixes(@Nullable List<String> allowedSourceAddressPrefixes) {
-            this.allowedSourceAddressPrefixes = Input.ofNullable(allowedSourceAddressPrefixes);
+            this.allowedSourceAddressPrefixes = Output.ofNullable(allowedSourceAddressPrefixes);
             return this;
         }
 
-        public Builder endTimeUtc(Input<String> endTimeUtc) {
+        public Builder endTimeUtc(Output<String> endTimeUtc) {
             this.endTimeUtc = Objects.requireNonNull(endTimeUtc);
             return this;
         }
 
         public Builder endTimeUtc(String endTimeUtc) {
-            this.endTimeUtc = Input.of(Objects.requireNonNull(endTimeUtc));
+            this.endTimeUtc = Output.of(Objects.requireNonNull(endTimeUtc));
             return this;
         }
 
-        public Builder mappedPort(@Nullable Input<Integer> mappedPort) {
+        public Builder mappedPort(@Nullable Output<Integer> mappedPort) {
             this.mappedPort = mappedPort;
             return this;
         }
 
         public Builder mappedPort(@Nullable Integer mappedPort) {
-            this.mappedPort = Input.ofNullable(mappedPort);
+            this.mappedPort = Output.ofNullable(mappedPort);
             return this;
         }
 
-        public Builder number(Input<Integer> number) {
+        public Builder number(Output<Integer> number) {
             this.number = Objects.requireNonNull(number);
             return this;
         }
 
         public Builder number(Integer number) {
-            this.number = Input.of(Objects.requireNonNull(number));
+            this.number = Output.of(Objects.requireNonNull(number));
             return this;
         }
 
-        public Builder status(Input<Either<String,Status>> status) {
+        public Builder status(Output<Either<String,Status>> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
         public Builder status(Either<String,Status> status) {
-            this.status = Input.of(Objects.requireNonNull(status));
+            this.status = Output.of(Objects.requireNonNull(status));
             return this;
         }
 
-        public Builder statusReason(Input<Either<String,StatusReason>> statusReason) {
+        public Builder statusReason(Output<Either<String,StatusReason>> statusReason) {
             this.statusReason = Objects.requireNonNull(statusReason);
             return this;
         }
 
         public Builder statusReason(Either<String,StatusReason> statusReason) {
-            this.statusReason = Input.of(Objects.requireNonNull(statusReason));
+            this.statusReason = Output.of(Objects.requireNonNull(statusReason));
             return this;
         }
         public JitNetworkAccessRequestPortArgs build() {

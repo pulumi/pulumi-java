@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.RuntimeEnvironmentArgs;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="environment")
-      private final @Nullable Input<RuntimeEnvironmentArgs> environment;
+      private final @Nullable Output<RuntimeEnvironmentArgs> environment;
 
-    public Input<RuntimeEnvironmentArgs> getEnvironment() {
-        return this.environment == null ? Input.empty() : this.environment;
+    public Output<RuntimeEnvironmentArgs> getEnvironment() {
+        return this.environment == null ? Output.empty() : this.environment;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gcsPath", required=true)
-      private final Input<String> gcsPath;
+      private final Output<String> gcsPath;
 
-    public Input<String> getGcsPath() {
+    public Output<String> getGcsPath() {
         return this.gcsPath;
     }
 
@@ -43,9 +43,9 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobName", required=true)
-      private final Input<String> jobName;
+      private final Output<String> jobName;
 
-    public Input<String> getJobName() {
+    public Output<String> getJobName() {
         return this.jobName;
     }
 
@@ -54,10 +54,10 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -65,26 +65,26 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,String>> parameters;
+      private final @Nullable Output<Map<String,String>> parameters;
 
-    public Input<Map<String,String>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,String>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public TemplateArgs(
-        @Nullable Input<RuntimeEnvironmentArgs> environment,
-        Input<String> gcsPath,
-        Input<String> jobName,
-        @Nullable Input<String> location,
-        @Nullable Input<Map<String,String>> parameters,
-        @Nullable Input<String> project) {
+        @Nullable Output<RuntimeEnvironmentArgs> environment,
+        Output<String> gcsPath,
+        Output<String> jobName,
+        @Nullable Output<String> location,
+        @Nullable Output<Map<String,String>> parameters,
+        @Nullable Output<String> project) {
         this.environment = environment;
         this.gcsPath = Objects.requireNonNull(gcsPath, "expected parameter 'gcsPath' to be non-null");
         this.jobName = Objects.requireNonNull(jobName, "expected parameter 'jobName' to be non-null");
@@ -94,12 +94,12 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TemplateArgs() {
-        this.environment = Input.empty();
-        this.gcsPath = Input.empty();
-        this.jobName = Input.empty();
-        this.location = Input.empty();
-        this.parameters = Input.empty();
-        this.project = Input.empty();
+        this.environment = Output.empty();
+        this.gcsPath = Output.empty();
+        this.jobName = Output.empty();
+        this.location = Output.empty();
+        this.parameters = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -111,12 +111,12 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<RuntimeEnvironmentArgs> environment;
-        private Input<String> gcsPath;
-        private Input<String> jobName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Map<String,String>> parameters;
-        private @Nullable Input<String> project;
+        private @Nullable Output<RuntimeEnvironmentArgs> environment;
+        private Output<String> gcsPath;
+        private Output<String> jobName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Map<String,String>> parameters;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -132,63 +132,63 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder environment(@Nullable Input<RuntimeEnvironmentArgs> environment) {
+        public Builder environment(@Nullable Output<RuntimeEnvironmentArgs> environment) {
             this.environment = environment;
             return this;
         }
 
         public Builder environment(@Nullable RuntimeEnvironmentArgs environment) {
-            this.environment = Input.ofNullable(environment);
+            this.environment = Output.ofNullable(environment);
             return this;
         }
 
-        public Builder gcsPath(Input<String> gcsPath) {
+        public Builder gcsPath(Output<String> gcsPath) {
             this.gcsPath = Objects.requireNonNull(gcsPath);
             return this;
         }
 
         public Builder gcsPath(String gcsPath) {
-            this.gcsPath = Input.of(Objects.requireNonNull(gcsPath));
+            this.gcsPath = Output.of(Objects.requireNonNull(gcsPath));
             return this;
         }
 
-        public Builder jobName(Input<String> jobName) {
+        public Builder jobName(Output<String> jobName) {
             this.jobName = Objects.requireNonNull(jobName);
             return this;
         }
 
         public Builder jobName(String jobName) {
-            this.jobName = Input.of(Objects.requireNonNull(jobName));
+            this.jobName = Output.of(Objects.requireNonNull(jobName));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,String>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public TemplateArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.aws.autoscaling.inputs;
 
 import io.pulumi.aws.autoscaling.inputs.GroupMixedInstancesPolicyInstancesDistributionArgs;
 import io.pulumi.aws.autoscaling.inputs.GroupMixedInstancesPolicyLaunchTemplateArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,10 +20,10 @@ public final class GroupMixedInstancesPolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="instancesDistribution")
-      private final @Nullable Input<GroupMixedInstancesPolicyInstancesDistributionArgs> instancesDistribution;
+      private final @Nullable Output<GroupMixedInstancesPolicyInstancesDistributionArgs> instancesDistribution;
 
-    public Input<GroupMixedInstancesPolicyInstancesDistributionArgs> getInstancesDistribution() {
-        return this.instancesDistribution == null ? Input.empty() : this.instancesDistribution;
+    public Output<GroupMixedInstancesPolicyInstancesDistributionArgs> getInstancesDistribution() {
+        return this.instancesDistribution == null ? Output.empty() : this.instancesDistribution;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class GroupMixedInstancesPolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="launchTemplate", required=true)
-      private final Input<GroupMixedInstancesPolicyLaunchTemplateArgs> launchTemplate;
+      private final Output<GroupMixedInstancesPolicyLaunchTemplateArgs> launchTemplate;
 
-    public Input<GroupMixedInstancesPolicyLaunchTemplateArgs> getLaunchTemplate() {
+    public Output<GroupMixedInstancesPolicyLaunchTemplateArgs> getLaunchTemplate() {
         return this.launchTemplate;
     }
 
     public GroupMixedInstancesPolicyArgs(
-        @Nullable Input<GroupMixedInstancesPolicyInstancesDistributionArgs> instancesDistribution,
-        Input<GroupMixedInstancesPolicyLaunchTemplateArgs> launchTemplate) {
+        @Nullable Output<GroupMixedInstancesPolicyInstancesDistributionArgs> instancesDistribution,
+        Output<GroupMixedInstancesPolicyLaunchTemplateArgs> launchTemplate) {
         this.instancesDistribution = instancesDistribution;
         this.launchTemplate = Objects.requireNonNull(launchTemplate, "expected parameter 'launchTemplate' to be non-null");
     }
 
     private GroupMixedInstancesPolicyArgs() {
-        this.instancesDistribution = Input.empty();
-        this.launchTemplate = Input.empty();
+        this.instancesDistribution = Output.empty();
+        this.launchTemplate = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class GroupMixedInstancesPolicyArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<GroupMixedInstancesPolicyInstancesDistributionArgs> instancesDistribution;
-        private Input<GroupMixedInstancesPolicyLaunchTemplateArgs> launchTemplate;
+        private @Nullable Output<GroupMixedInstancesPolicyInstancesDistributionArgs> instancesDistribution;
+        private Output<GroupMixedInstancesPolicyLaunchTemplateArgs> launchTemplate;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class GroupMixedInstancesPolicyArgs extends io.pulumi.resources.Res
     	      this.launchTemplate = defaults.launchTemplate;
         }
 
-        public Builder instancesDistribution(@Nullable Input<GroupMixedInstancesPolicyInstancesDistributionArgs> instancesDistribution) {
+        public Builder instancesDistribution(@Nullable Output<GroupMixedInstancesPolicyInstancesDistributionArgs> instancesDistribution) {
             this.instancesDistribution = instancesDistribution;
             return this;
         }
 
         public Builder instancesDistribution(@Nullable GroupMixedInstancesPolicyInstancesDistributionArgs instancesDistribution) {
-            this.instancesDistribution = Input.ofNullable(instancesDistribution);
+            this.instancesDistribution = Output.ofNullable(instancesDistribution);
             return this;
         }
 
-        public Builder launchTemplate(Input<GroupMixedInstancesPolicyLaunchTemplateArgs> launchTemplate) {
+        public Builder launchTemplate(Output<GroupMixedInstancesPolicyLaunchTemplateArgs> launchTemplate) {
             this.launchTemplate = Objects.requireNonNull(launchTemplate);
             return this;
         }
 
         public Builder launchTemplate(GroupMixedInstancesPolicyLaunchTemplateArgs launchTemplate) {
-            this.launchTemplate = Input.of(Objects.requireNonNull(launchTemplate));
+            this.launchTemplate = Output.of(Objects.requireNonNull(launchTemplate));
             return this;
         }
         public GroupMixedInstancesPolicyArgs build() {

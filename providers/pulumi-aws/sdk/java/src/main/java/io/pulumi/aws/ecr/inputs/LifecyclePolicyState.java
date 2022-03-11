@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ecr.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class LifecyclePolicyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="policy")
-      private final @Nullable Input<String> policy;
+      private final @Nullable Output<String> policy;
 
-    public Input<String> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<String> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class LifecyclePolicyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="registryId")
-      private final @Nullable Input<String> registryId;
+      private final @Nullable Output<String> registryId;
 
-    public Input<String> getRegistryId() {
-        return this.registryId == null ? Input.empty() : this.registryId;
+    public Output<String> getRegistryId() {
+        return this.registryId == null ? Output.empty() : this.registryId;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class LifecyclePolicyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="repository")
-      private final @Nullable Input<String> repository;
+      private final @Nullable Output<String> repository;
 
-    public Input<String> getRepository() {
-        return this.repository == null ? Input.empty() : this.repository;
+    public Output<String> getRepository() {
+        return this.repository == null ? Output.empty() : this.repository;
     }
 
     public LifecyclePolicyState(
-        @Nullable Input<String> policy,
-        @Nullable Input<String> registryId,
-        @Nullable Input<String> repository) {
+        @Nullable Output<String> policy,
+        @Nullable Output<String> registryId,
+        @Nullable Output<String> repository) {
         this.policy = policy;
         this.registryId = registryId;
         this.repository = repository;
     }
 
     private LifecyclePolicyState() {
-        this.policy = Input.empty();
-        this.registryId = Input.empty();
-        this.repository = Input.empty();
+        this.policy = Output.empty();
+        this.registryId = Output.empty();
+        this.repository = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class LifecyclePolicyState extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> policy;
-        private @Nullable Input<String> registryId;
-        private @Nullable Input<String> repository;
+        private @Nullable Output<String> policy;
+        private @Nullable Output<String> registryId;
+        private @Nullable Output<String> repository;
 
         public Builder() {
     	      // Empty
@@ -86,28 +86,28 @@ public final class LifecyclePolicyState extends io.pulumi.resources.ResourceArgs
     	      this.repository = defaults.repository;
         }
 
-        public Builder policy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder registryId(@Nullable Input<String> registryId) {
+        public Builder registryId(@Nullable Output<String> registryId) {
             this.registryId = registryId;
             return this;
         }
 
         public Builder registryId(@Nullable String registryId) {
-            this.registryId = Input.ofNullable(registryId);
+            this.registryId = Output.ofNullable(registryId);
             return this;
         }
 
-        public Builder repository(@Nullable Input<String> repository) {
+        public Builder repository(@Nullable Output<String> repository) {
             this.repository = repository;
             return this;
         }
 
         public Builder repository(@Nullable String repository) {
-            this.repository = Input.ofNullable(repository);
+            this.repository = Output.ofNullable(repository);
             return this;
         }
         public LifecyclePolicyState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2beta1.enums.DocumentKnowledgeTypesItem;
 import java.lang.Boolean;
@@ -23,10 +23,10 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="content")
-      private final @Nullable Input<String> content;
+      private final @Nullable Output<String> content;
 
-    public Input<String> getContent() {
-        return this.content == null ? Input.empty() : this.content;
+    public Output<String> getContent() {
+        return this.content == null ? Output.empty() : this.content;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentUri")
-      private final @Nullable Input<String> contentUri;
+      private final @Nullable Output<String> contentUri;
 
-    public Input<String> getContentUri() {
-        return this.contentUri == null ? Input.empty() : this.contentUri;
+    public Output<String> getContentUri() {
+        return this.contentUri == null ? Output.empty() : this.contentUri;
     }
 
     /**
@@ -45,9 +45,9 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -56,23 +56,23 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableAutoReload")
-      private final @Nullable Input<Boolean> enableAutoReload;
+      private final @Nullable Output<Boolean> enableAutoReload;
 
-    public Input<Boolean> getEnableAutoReload() {
-        return this.enableAutoReload == null ? Input.empty() : this.enableAutoReload;
+    public Output<Boolean> getEnableAutoReload() {
+        return this.enableAutoReload == null ? Output.empty() : this.enableAutoReload;
     }
 
     @InputImport(name="importGcsCustomMetadata")
-      private final @Nullable Input<String> importGcsCustomMetadata;
+      private final @Nullable Output<String> importGcsCustomMetadata;
 
-    public Input<String> getImportGcsCustomMetadata() {
-        return this.importGcsCustomMetadata == null ? Input.empty() : this.importGcsCustomMetadata;
+    public Output<String> getImportGcsCustomMetadata() {
+        return this.importGcsCustomMetadata == null ? Output.empty() : this.importGcsCustomMetadata;
     }
 
     @InputImport(name="knowledgeBaseId", required=true)
-      private final Input<String> knowledgeBaseId;
+      private final Output<String> knowledgeBaseId;
 
-    public Input<String> getKnowledgeBaseId() {
+    public Output<String> getKnowledgeBaseId() {
         return this.knowledgeBaseId;
     }
 
@@ -81,17 +81,17 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="knowledgeTypes", required=true)
-      private final Input<List<DocumentKnowledgeTypesItem>> knowledgeTypes;
+      private final Output<List<DocumentKnowledgeTypesItem>> knowledgeTypes;
 
-    public Input<List<DocumentKnowledgeTypesItem>> getKnowledgeTypes() {
+    public Output<List<DocumentKnowledgeTypesItem>> getKnowledgeTypes() {
         return this.knowledgeTypes;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Output<Map<String,String>> metadata;
 
-    public Input<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Map<String,String>> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -110,9 +110,9 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mimeType", required=true)
-      private final Input<String> mimeType;
+      private final Output<String> mimeType;
 
-    public Input<String> getMimeType() {
+    public Output<String> getMimeType() {
         return this.mimeType;
     }
 
@@ -121,17 +121,17 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -139,26 +139,26 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rawContent")
-      private final @Nullable Input<String> rawContent;
+      private final @Nullable Output<String> rawContent;
 
-    public Input<String> getRawContent() {
-        return this.rawContent == null ? Input.empty() : this.rawContent;
+    public Output<String> getRawContent() {
+        return this.rawContent == null ? Output.empty() : this.rawContent;
     }
 
     public DocumentArgs(
-        @Nullable Input<String> content,
-        @Nullable Input<String> contentUri,
-        Input<String> displayName,
-        @Nullable Input<Boolean> enableAutoReload,
-        @Nullable Input<String> importGcsCustomMetadata,
-        Input<String> knowledgeBaseId,
-        Input<List<DocumentKnowledgeTypesItem>> knowledgeTypes,
-        @Nullable Input<String> location,
-        @Nullable Input<Map<String,String>> metadata,
-        Input<String> mimeType,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<String> rawContent) {
+        @Nullable Output<String> content,
+        @Nullable Output<String> contentUri,
+        Output<String> displayName,
+        @Nullable Output<Boolean> enableAutoReload,
+        @Nullable Output<String> importGcsCustomMetadata,
+        Output<String> knowledgeBaseId,
+        Output<List<DocumentKnowledgeTypesItem>> knowledgeTypes,
+        @Nullable Output<String> location,
+        @Nullable Output<Map<String,String>> metadata,
+        Output<String> mimeType,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<String> rawContent) {
         this.content = content;
         this.contentUri = contentUri;
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
@@ -175,19 +175,19 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DocumentArgs() {
-        this.content = Input.empty();
-        this.contentUri = Input.empty();
-        this.displayName = Input.empty();
-        this.enableAutoReload = Input.empty();
-        this.importGcsCustomMetadata = Input.empty();
-        this.knowledgeBaseId = Input.empty();
-        this.knowledgeTypes = Input.empty();
-        this.location = Input.empty();
-        this.metadata = Input.empty();
-        this.mimeType = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.rawContent = Input.empty();
+        this.content = Output.empty();
+        this.contentUri = Output.empty();
+        this.displayName = Output.empty();
+        this.enableAutoReload = Output.empty();
+        this.importGcsCustomMetadata = Output.empty();
+        this.knowledgeBaseId = Output.empty();
+        this.knowledgeTypes = Output.empty();
+        this.location = Output.empty();
+        this.metadata = Output.empty();
+        this.mimeType = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.rawContent = Output.empty();
     }
 
     public static Builder builder() {
@@ -199,19 +199,19 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> content;
-        private @Nullable Input<String> contentUri;
-        private Input<String> displayName;
-        private @Nullable Input<Boolean> enableAutoReload;
-        private @Nullable Input<String> importGcsCustomMetadata;
-        private Input<String> knowledgeBaseId;
-        private Input<List<DocumentKnowledgeTypesItem>> knowledgeTypes;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Map<String,String>> metadata;
-        private Input<String> mimeType;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> rawContent;
+        private @Nullable Output<String> content;
+        private @Nullable Output<String> contentUri;
+        private Output<String> displayName;
+        private @Nullable Output<Boolean> enableAutoReload;
+        private @Nullable Output<String> importGcsCustomMetadata;
+        private Output<String> knowledgeBaseId;
+        private Output<List<DocumentKnowledgeTypesItem>> knowledgeTypes;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Map<String,String>> metadata;
+        private Output<String> mimeType;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> rawContent;
 
         public Builder() {
     	      // Empty
@@ -234,133 +234,133 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.rawContent = defaults.rawContent;
         }
 
-        public Builder content(@Nullable Input<String> content) {
+        public Builder content(@Nullable Output<String> content) {
             this.content = content;
             return this;
         }
 
         public Builder content(@Nullable String content) {
-            this.content = Input.ofNullable(content);
+            this.content = Output.ofNullable(content);
             return this;
         }
 
-        public Builder contentUri(@Nullable Input<String> contentUri) {
+        public Builder contentUri(@Nullable Output<String> contentUri) {
             this.contentUri = contentUri;
             return this;
         }
 
         public Builder contentUri(@Nullable String contentUri) {
-            this.contentUri = Input.ofNullable(contentUri);
+            this.contentUri = Output.ofNullable(contentUri);
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder enableAutoReload(@Nullable Input<Boolean> enableAutoReload) {
+        public Builder enableAutoReload(@Nullable Output<Boolean> enableAutoReload) {
             this.enableAutoReload = enableAutoReload;
             return this;
         }
 
         public Builder enableAutoReload(@Nullable Boolean enableAutoReload) {
-            this.enableAutoReload = Input.ofNullable(enableAutoReload);
+            this.enableAutoReload = Output.ofNullable(enableAutoReload);
             return this;
         }
 
-        public Builder importGcsCustomMetadata(@Nullable Input<String> importGcsCustomMetadata) {
+        public Builder importGcsCustomMetadata(@Nullable Output<String> importGcsCustomMetadata) {
             this.importGcsCustomMetadata = importGcsCustomMetadata;
             return this;
         }
 
         public Builder importGcsCustomMetadata(@Nullable String importGcsCustomMetadata) {
-            this.importGcsCustomMetadata = Input.ofNullable(importGcsCustomMetadata);
+            this.importGcsCustomMetadata = Output.ofNullable(importGcsCustomMetadata);
             return this;
         }
 
-        public Builder knowledgeBaseId(Input<String> knowledgeBaseId) {
+        public Builder knowledgeBaseId(Output<String> knowledgeBaseId) {
             this.knowledgeBaseId = Objects.requireNonNull(knowledgeBaseId);
             return this;
         }
 
         public Builder knowledgeBaseId(String knowledgeBaseId) {
-            this.knowledgeBaseId = Input.of(Objects.requireNonNull(knowledgeBaseId));
+            this.knowledgeBaseId = Output.of(Objects.requireNonNull(knowledgeBaseId));
             return this;
         }
 
-        public Builder knowledgeTypes(Input<List<DocumentKnowledgeTypesItem>> knowledgeTypes) {
+        public Builder knowledgeTypes(Output<List<DocumentKnowledgeTypesItem>> knowledgeTypes) {
             this.knowledgeTypes = Objects.requireNonNull(knowledgeTypes);
             return this;
         }
 
         public Builder knowledgeTypes(List<DocumentKnowledgeTypesItem> knowledgeTypes) {
-            this.knowledgeTypes = Input.of(Objects.requireNonNull(knowledgeTypes));
+            this.knowledgeTypes = Output.of(Objects.requireNonNull(knowledgeTypes));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder mimeType(Input<String> mimeType) {
+        public Builder mimeType(Output<String> mimeType) {
             this.mimeType = Objects.requireNonNull(mimeType);
             return this;
         }
 
         public Builder mimeType(String mimeType) {
-            this.mimeType = Input.of(Objects.requireNonNull(mimeType));
+            this.mimeType = Output.of(Objects.requireNonNull(mimeType));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder rawContent(@Nullable Input<String> rawContent) {
+        public Builder rawContent(@Nullable Output<String> rawContent) {
             this.rawContent = rawContent;
             return this;
         }
 
         public Builder rawContent(@Nullable String rawContent) {
-            this.rawContent = Input.ofNullable(rawContent);
+            this.rawContent = Output.ofNullable(rawContent);
             return this;
         }
         public DocumentArgs build() {

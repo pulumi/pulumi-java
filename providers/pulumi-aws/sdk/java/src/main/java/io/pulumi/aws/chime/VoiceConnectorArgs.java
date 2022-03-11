@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.chime;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class VoiceConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="awsRegion")
-      private final @Nullable Input<String> awsRegion;
+      private final @Nullable Output<String> awsRegion;
 
-    public Input<String> getAwsRegion() {
-        return this.awsRegion == null ? Input.empty() : this.awsRegion;
+    public Output<String> getAwsRegion() {
+        return this.awsRegion == null ? Output.empty() : this.awsRegion;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class VoiceConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class VoiceConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requireEncryption", required=true)
-      private final Input<Boolean> requireEncryption;
+      private final Output<Boolean> requireEncryption;
 
-    public Input<Boolean> getRequireEncryption() {
+    public Output<Boolean> getRequireEncryption() {
         return this.requireEncryption;
     }
 
     public VoiceConnectorArgs(
-        @Nullable Input<String> awsRegion,
-        @Nullable Input<String> name,
-        Input<Boolean> requireEncryption) {
+        @Nullable Output<String> awsRegion,
+        @Nullable Output<String> name,
+        Output<Boolean> requireEncryption) {
         this.awsRegion = awsRegion;
         this.name = name;
         this.requireEncryption = Objects.requireNonNull(requireEncryption, "expected parameter 'requireEncryption' to be non-null");
     }
 
     private VoiceConnectorArgs() {
-        this.awsRegion = Input.empty();
-        this.name = Input.empty();
-        this.requireEncryption = Input.empty();
+        this.awsRegion = Output.empty();
+        this.name = Output.empty();
+        this.requireEncryption = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class VoiceConnectorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> awsRegion;
-        private @Nullable Input<String> name;
-        private Input<Boolean> requireEncryption;
+        private @Nullable Output<String> awsRegion;
+        private @Nullable Output<String> name;
+        private Output<Boolean> requireEncryption;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class VoiceConnectorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.requireEncryption = defaults.requireEncryption;
         }
 
-        public Builder awsRegion(@Nullable Input<String> awsRegion) {
+        public Builder awsRegion(@Nullable Output<String> awsRegion) {
             this.awsRegion = awsRegion;
             return this;
         }
 
         public Builder awsRegion(@Nullable String awsRegion) {
-            this.awsRegion = Input.ofNullable(awsRegion);
+            this.awsRegion = Output.ofNullable(awsRegion);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder requireEncryption(Input<Boolean> requireEncryption) {
+        public Builder requireEncryption(Output<Boolean> requireEncryption) {
             this.requireEncryption = Objects.requireNonNull(requireEncryption);
             return this;
         }
 
         public Builder requireEncryption(Boolean requireEncryption) {
-            this.requireEncryption = Input.of(Objects.requireNonNull(requireEncryption));
+            this.requireEncryption = Output.of(Objects.requireNonNull(requireEncryption));
             return this;
         }
         public VoiceConnectorArgs build() {

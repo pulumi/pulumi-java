@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ikeVersion")
-      private final @Nullable Input<Integer> ikeVersion;
+      private final @Nullable Output<Integer> ikeVersion;
 
-    public Input<Integer> getIkeVersion() {
-        return this.ikeVersion == null ? Input.empty() : this.ikeVersion;
+    public Output<Integer> getIkeVersion() {
+        return this.ikeVersion == null ? Output.empty() : this.ikeVersion;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="localTrafficSelectors")
-      private final @Nullable Input<List<String>> localTrafficSelectors;
+      private final @Nullable Output<List<String>> localTrafficSelectors;
 
-    public Input<List<String>> getLocalTrafficSelectors() {
-        return this.localTrafficSelectors == null ? Input.empty() : this.localTrafficSelectors;
+    public Output<List<String>> getLocalTrafficSelectors() {
+        return this.localTrafficSelectors == null ? Output.empty() : this.localTrafficSelectors;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peerExternalGateway")
-      private final @Nullable Input<String> peerExternalGateway;
+      private final @Nullable Output<String> peerExternalGateway;
 
-    public Input<String> getPeerExternalGateway() {
-        return this.peerExternalGateway == null ? Input.empty() : this.peerExternalGateway;
+    public Output<String> getPeerExternalGateway() {
+        return this.peerExternalGateway == null ? Output.empty() : this.peerExternalGateway;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peerExternalGatewayInterface")
-      private final @Nullable Input<Integer> peerExternalGatewayInterface;
+      private final @Nullable Output<Integer> peerExternalGatewayInterface;
 
-    public Input<Integer> getPeerExternalGatewayInterface() {
-        return this.peerExternalGatewayInterface == null ? Input.empty() : this.peerExternalGatewayInterface;
+    public Output<Integer> getPeerExternalGatewayInterface() {
+        return this.peerExternalGatewayInterface == null ? Output.empty() : this.peerExternalGatewayInterface;
     }
 
     /**
@@ -113,10 +113,10 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peerGcpGateway")
-      private final @Nullable Input<String> peerGcpGateway;
+      private final @Nullable Output<String> peerGcpGateway;
 
-    public Input<String> getPeerGcpGateway() {
-        return this.peerGcpGateway == null ? Input.empty() : this.peerGcpGateway;
+    public Output<String> getPeerGcpGateway() {
+        return this.peerGcpGateway == null ? Output.empty() : this.peerGcpGateway;
     }
 
     /**
@@ -124,10 +124,10 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peerIp")
-      private final @Nullable Input<String> peerIp;
+      private final @Nullable Output<String> peerIp;
 
-    public Input<String> getPeerIp() {
-        return this.peerIp == null ? Input.empty() : this.peerIp;
+    public Output<String> getPeerIp() {
+        return this.peerIp == null ? Output.empty() : this.peerIp;
     }
 
     /**
@@ -136,10 +136,10 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -147,10 +147,10 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -161,10 +161,10 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="remoteTrafficSelectors")
-      private final @Nullable Input<List<String>> remoteTrafficSelectors;
+      private final @Nullable Output<List<String>> remoteTrafficSelectors;
 
-    public Input<List<String>> getRemoteTrafficSelectors() {
-        return this.remoteTrafficSelectors == null ? Input.empty() : this.remoteTrafficSelectors;
+    public Output<List<String>> getRemoteTrafficSelectors() {
+        return this.remoteTrafficSelectors == null ? Output.empty() : this.remoteTrafficSelectors;
     }
 
     /**
@@ -172,10 +172,10 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="router")
-      private final @Nullable Input<String> router;
+      private final @Nullable Output<String> router;
 
-    public Input<String> getRouter() {
-        return this.router == null ? Input.empty() : this.router;
+    public Output<String> getRouter() {
+        return this.router == null ? Output.empty() : this.router;
     }
 
     /**
@@ -185,9 +185,9 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sharedSecret", required=true)
-      private final Input<String> sharedSecret;
+      private final Output<String> sharedSecret;
 
-    public Input<String> getSharedSecret() {
+    public Output<String> getSharedSecret() {
         return this.sharedSecret;
     }
 
@@ -197,10 +197,10 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetVpnGateway")
-      private final @Nullable Input<String> targetVpnGateway;
+      private final @Nullable Output<String> targetVpnGateway;
 
-    public Input<String> getTargetVpnGateway() {
-        return this.targetVpnGateway == null ? Input.empty() : this.targetVpnGateway;
+    public Output<String> getTargetVpnGateway() {
+        return this.targetVpnGateway == null ? Output.empty() : this.targetVpnGateway;
     }
 
     /**
@@ -210,10 +210,10 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpnGateway")
-      private final @Nullable Input<String> vpnGateway;
+      private final @Nullable Output<String> vpnGateway;
 
-    public Input<String> getVpnGateway() {
-        return this.vpnGateway == null ? Input.empty() : this.vpnGateway;
+    public Output<String> getVpnGateway() {
+        return this.vpnGateway == null ? Output.empty() : this.vpnGateway;
     }
 
     /**
@@ -221,30 +221,30 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpnGatewayInterface")
-      private final @Nullable Input<Integer> vpnGatewayInterface;
+      private final @Nullable Output<Integer> vpnGatewayInterface;
 
-    public Input<Integer> getVpnGatewayInterface() {
-        return this.vpnGatewayInterface == null ? Input.empty() : this.vpnGatewayInterface;
+    public Output<Integer> getVpnGatewayInterface() {
+        return this.vpnGatewayInterface == null ? Output.empty() : this.vpnGatewayInterface;
     }
 
     public VPNTunnelArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<Integer> ikeVersion,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<List<String>> localTrafficSelectors,
-        @Nullable Input<String> name,
-        @Nullable Input<String> peerExternalGateway,
-        @Nullable Input<Integer> peerExternalGatewayInterface,
-        @Nullable Input<String> peerGcpGateway,
-        @Nullable Input<String> peerIp,
-        @Nullable Input<String> project,
-        @Nullable Input<String> region,
-        @Nullable Input<List<String>> remoteTrafficSelectors,
-        @Nullable Input<String> router,
-        Input<String> sharedSecret,
-        @Nullable Input<String> targetVpnGateway,
-        @Nullable Input<String> vpnGateway,
-        @Nullable Input<Integer> vpnGatewayInterface) {
+        @Nullable Output<String> description,
+        @Nullable Output<Integer> ikeVersion,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<List<String>> localTrafficSelectors,
+        @Nullable Output<String> name,
+        @Nullable Output<String> peerExternalGateway,
+        @Nullable Output<Integer> peerExternalGatewayInterface,
+        @Nullable Output<String> peerGcpGateway,
+        @Nullable Output<String> peerIp,
+        @Nullable Output<String> project,
+        @Nullable Output<String> region,
+        @Nullable Output<List<String>> remoteTrafficSelectors,
+        @Nullable Output<String> router,
+        Output<String> sharedSecret,
+        @Nullable Output<String> targetVpnGateway,
+        @Nullable Output<String> vpnGateway,
+        @Nullable Output<Integer> vpnGatewayInterface) {
         this.description = description;
         this.ikeVersion = ikeVersion;
         this.labels = labels;
@@ -265,23 +265,23 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VPNTunnelArgs() {
-        this.description = Input.empty();
-        this.ikeVersion = Input.empty();
-        this.labels = Input.empty();
-        this.localTrafficSelectors = Input.empty();
-        this.name = Input.empty();
-        this.peerExternalGateway = Input.empty();
-        this.peerExternalGatewayInterface = Input.empty();
-        this.peerGcpGateway = Input.empty();
-        this.peerIp = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
-        this.remoteTrafficSelectors = Input.empty();
-        this.router = Input.empty();
-        this.sharedSecret = Input.empty();
-        this.targetVpnGateway = Input.empty();
-        this.vpnGateway = Input.empty();
-        this.vpnGatewayInterface = Input.empty();
+        this.description = Output.empty();
+        this.ikeVersion = Output.empty();
+        this.labels = Output.empty();
+        this.localTrafficSelectors = Output.empty();
+        this.name = Output.empty();
+        this.peerExternalGateway = Output.empty();
+        this.peerExternalGatewayInterface = Output.empty();
+        this.peerGcpGateway = Output.empty();
+        this.peerIp = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
+        this.remoteTrafficSelectors = Output.empty();
+        this.router = Output.empty();
+        this.sharedSecret = Output.empty();
+        this.targetVpnGateway = Output.empty();
+        this.vpnGateway = Output.empty();
+        this.vpnGatewayInterface = Output.empty();
     }
 
     public static Builder builder() {
@@ -293,23 +293,23 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<Integer> ikeVersion;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<List<String>> localTrafficSelectors;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> peerExternalGateway;
-        private @Nullable Input<Integer> peerExternalGatewayInterface;
-        private @Nullable Input<String> peerGcpGateway;
-        private @Nullable Input<String> peerIp;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> region;
-        private @Nullable Input<List<String>> remoteTrafficSelectors;
-        private @Nullable Input<String> router;
-        private Input<String> sharedSecret;
-        private @Nullable Input<String> targetVpnGateway;
-        private @Nullable Input<String> vpnGateway;
-        private @Nullable Input<Integer> vpnGatewayInterface;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Integer> ikeVersion;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<List<String>> localTrafficSelectors;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> peerExternalGateway;
+        private @Nullable Output<Integer> peerExternalGatewayInterface;
+        private @Nullable Output<String> peerGcpGateway;
+        private @Nullable Output<String> peerIp;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> region;
+        private @Nullable Output<List<String>> remoteTrafficSelectors;
+        private @Nullable Output<String> router;
+        private Output<String> sharedSecret;
+        private @Nullable Output<String> targetVpnGateway;
+        private @Nullable Output<String> vpnGateway;
+        private @Nullable Output<Integer> vpnGatewayInterface;
 
         public Builder() {
     	      // Empty
@@ -336,173 +336,173 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpnGatewayInterface = defaults.vpnGatewayInterface;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder ikeVersion(@Nullable Input<Integer> ikeVersion) {
+        public Builder ikeVersion(@Nullable Output<Integer> ikeVersion) {
             this.ikeVersion = ikeVersion;
             return this;
         }
 
         public Builder ikeVersion(@Nullable Integer ikeVersion) {
-            this.ikeVersion = Input.ofNullable(ikeVersion);
+            this.ikeVersion = Output.ofNullable(ikeVersion);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder localTrafficSelectors(@Nullable Input<List<String>> localTrafficSelectors) {
+        public Builder localTrafficSelectors(@Nullable Output<List<String>> localTrafficSelectors) {
             this.localTrafficSelectors = localTrafficSelectors;
             return this;
         }
 
         public Builder localTrafficSelectors(@Nullable List<String> localTrafficSelectors) {
-            this.localTrafficSelectors = Input.ofNullable(localTrafficSelectors);
+            this.localTrafficSelectors = Output.ofNullable(localTrafficSelectors);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder peerExternalGateway(@Nullable Input<String> peerExternalGateway) {
+        public Builder peerExternalGateway(@Nullable Output<String> peerExternalGateway) {
             this.peerExternalGateway = peerExternalGateway;
             return this;
         }
 
         public Builder peerExternalGateway(@Nullable String peerExternalGateway) {
-            this.peerExternalGateway = Input.ofNullable(peerExternalGateway);
+            this.peerExternalGateway = Output.ofNullable(peerExternalGateway);
             return this;
         }
 
-        public Builder peerExternalGatewayInterface(@Nullable Input<Integer> peerExternalGatewayInterface) {
+        public Builder peerExternalGatewayInterface(@Nullable Output<Integer> peerExternalGatewayInterface) {
             this.peerExternalGatewayInterface = peerExternalGatewayInterface;
             return this;
         }
 
         public Builder peerExternalGatewayInterface(@Nullable Integer peerExternalGatewayInterface) {
-            this.peerExternalGatewayInterface = Input.ofNullable(peerExternalGatewayInterface);
+            this.peerExternalGatewayInterface = Output.ofNullable(peerExternalGatewayInterface);
             return this;
         }
 
-        public Builder peerGcpGateway(@Nullable Input<String> peerGcpGateway) {
+        public Builder peerGcpGateway(@Nullable Output<String> peerGcpGateway) {
             this.peerGcpGateway = peerGcpGateway;
             return this;
         }
 
         public Builder peerGcpGateway(@Nullable String peerGcpGateway) {
-            this.peerGcpGateway = Input.ofNullable(peerGcpGateway);
+            this.peerGcpGateway = Output.ofNullable(peerGcpGateway);
             return this;
         }
 
-        public Builder peerIp(@Nullable Input<String> peerIp) {
+        public Builder peerIp(@Nullable Output<String> peerIp) {
             this.peerIp = peerIp;
             return this;
         }
 
         public Builder peerIp(@Nullable String peerIp) {
-            this.peerIp = Input.ofNullable(peerIp);
+            this.peerIp = Output.ofNullable(peerIp);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder remoteTrafficSelectors(@Nullable Input<List<String>> remoteTrafficSelectors) {
+        public Builder remoteTrafficSelectors(@Nullable Output<List<String>> remoteTrafficSelectors) {
             this.remoteTrafficSelectors = remoteTrafficSelectors;
             return this;
         }
 
         public Builder remoteTrafficSelectors(@Nullable List<String> remoteTrafficSelectors) {
-            this.remoteTrafficSelectors = Input.ofNullable(remoteTrafficSelectors);
+            this.remoteTrafficSelectors = Output.ofNullable(remoteTrafficSelectors);
             return this;
         }
 
-        public Builder router(@Nullable Input<String> router) {
+        public Builder router(@Nullable Output<String> router) {
             this.router = router;
             return this;
         }
 
         public Builder router(@Nullable String router) {
-            this.router = Input.ofNullable(router);
+            this.router = Output.ofNullable(router);
             return this;
         }
 
-        public Builder sharedSecret(Input<String> sharedSecret) {
+        public Builder sharedSecret(Output<String> sharedSecret) {
             this.sharedSecret = Objects.requireNonNull(sharedSecret);
             return this;
         }
 
         public Builder sharedSecret(String sharedSecret) {
-            this.sharedSecret = Input.of(Objects.requireNonNull(sharedSecret));
+            this.sharedSecret = Output.of(Objects.requireNonNull(sharedSecret));
             return this;
         }
 
-        public Builder targetVpnGateway(@Nullable Input<String> targetVpnGateway) {
+        public Builder targetVpnGateway(@Nullable Output<String> targetVpnGateway) {
             this.targetVpnGateway = targetVpnGateway;
             return this;
         }
 
         public Builder targetVpnGateway(@Nullable String targetVpnGateway) {
-            this.targetVpnGateway = Input.ofNullable(targetVpnGateway);
+            this.targetVpnGateway = Output.ofNullable(targetVpnGateway);
             return this;
         }
 
-        public Builder vpnGateway(@Nullable Input<String> vpnGateway) {
+        public Builder vpnGateway(@Nullable Output<String> vpnGateway) {
             this.vpnGateway = vpnGateway;
             return this;
         }
 
         public Builder vpnGateway(@Nullable String vpnGateway) {
-            this.vpnGateway = Input.ofNullable(vpnGateway);
+            this.vpnGateway = Output.ofNullable(vpnGateway);
             return this;
         }
 
-        public Builder vpnGatewayInterface(@Nullable Input<Integer> vpnGatewayInterface) {
+        public Builder vpnGatewayInterface(@Nullable Output<Integer> vpnGatewayInterface) {
             this.vpnGatewayInterface = vpnGatewayInterface;
             return this;
         }
 
         public Builder vpnGatewayInterface(@Nullable Integer vpnGatewayInterface) {
-            this.vpnGatewayInterface = Input.ofNullable(vpnGatewayInterface);
+            this.vpnGatewayInterface = Output.ofNullable(vpnGatewayInterface);
             return this;
         }
         public VPNTunnelArgs build() {

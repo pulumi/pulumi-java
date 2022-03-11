@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class ClusterClusterConfigMetastoreConfigGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="dataprocMetastoreService", required=true)
-      private final Input<String> dataprocMetastoreService;
+      private final Output<String> dataprocMetastoreService;
 
-    public Input<String> getDataprocMetastoreService() {
+    public Output<String> getDataprocMetastoreService() {
         return this.dataprocMetastoreService;
     }
 
-    public ClusterClusterConfigMetastoreConfigGetArgs(Input<String> dataprocMetastoreService) {
+    public ClusterClusterConfigMetastoreConfigGetArgs(Output<String> dataprocMetastoreService) {
         this.dataprocMetastoreService = Objects.requireNonNull(dataprocMetastoreService, "expected parameter 'dataprocMetastoreService' to be non-null");
     }
 
     private ClusterClusterConfigMetastoreConfigGetArgs() {
-        this.dataprocMetastoreService = Input.empty();
+        this.dataprocMetastoreService = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ClusterClusterConfigMetastoreConfigGetArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private Input<String> dataprocMetastoreService;
+        private Output<String> dataprocMetastoreService;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ClusterClusterConfigMetastoreConfigGetArgs extends io.pulumi.
     	      this.dataprocMetastoreService = defaults.dataprocMetastoreService;
         }
 
-        public Builder dataprocMetastoreService(Input<String> dataprocMetastoreService) {
+        public Builder dataprocMetastoreService(Output<String> dataprocMetastoreService) {
             this.dataprocMetastoreService = Objects.requireNonNull(dataprocMetastoreService);
             return this;
         }
 
         public Builder dataprocMetastoreService(String dataprocMetastoreService) {
-            this.dataprocMetastoreService = Input.of(Objects.requireNonNull(dataprocMetastoreService));
+            this.dataprocMetastoreService = Output.of(Objects.requireNonNull(dataprocMetastoreService));
             return this;
         }
         public ClusterClusterConfigMetastoreConfigGetArgs build() {

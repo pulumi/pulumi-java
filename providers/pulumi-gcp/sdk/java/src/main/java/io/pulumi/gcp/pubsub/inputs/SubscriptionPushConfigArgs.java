@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.pubsub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.pubsub.inputs.SubscriptionPushConfigOidcTokenArgs;
 import java.lang.String;
@@ -38,10 +38,10 @@ public final class SubscriptionPushConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="attributes")
-      private final @Nullable Input<Map<String,String>> attributes;
+      private final @Nullable Output<Map<String,String>> attributes;
 
-    public Input<Map<String,String>> getAttributes() {
-        return this.attributes == null ? Input.empty() : this.attributes;
+    public Output<Map<String,String>> getAttributes() {
+        return this.attributes == null ? Output.empty() : this.attributes;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class SubscriptionPushConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="oidcToken")
-      private final @Nullable Input<SubscriptionPushConfigOidcTokenArgs> oidcToken;
+      private final @Nullable Output<SubscriptionPushConfigOidcTokenArgs> oidcToken;
 
-    public Input<SubscriptionPushConfigOidcTokenArgs> getOidcToken() {
-        return this.oidcToken == null ? Input.empty() : this.oidcToken;
+    public Output<SubscriptionPushConfigOidcTokenArgs> getOidcToken() {
+        return this.oidcToken == null ? Output.empty() : this.oidcToken;
     }
 
     /**
@@ -64,25 +64,25 @@ public final class SubscriptionPushConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="pushEndpoint", required=true)
-      private final Input<String> pushEndpoint;
+      private final Output<String> pushEndpoint;
 
-    public Input<String> getPushEndpoint() {
+    public Output<String> getPushEndpoint() {
         return this.pushEndpoint;
     }
 
     public SubscriptionPushConfigArgs(
-        @Nullable Input<Map<String,String>> attributes,
-        @Nullable Input<SubscriptionPushConfigOidcTokenArgs> oidcToken,
-        Input<String> pushEndpoint) {
+        @Nullable Output<Map<String,String>> attributes,
+        @Nullable Output<SubscriptionPushConfigOidcTokenArgs> oidcToken,
+        Output<String> pushEndpoint) {
         this.attributes = attributes;
         this.oidcToken = oidcToken;
         this.pushEndpoint = Objects.requireNonNull(pushEndpoint, "expected parameter 'pushEndpoint' to be non-null");
     }
 
     private SubscriptionPushConfigArgs() {
-        this.attributes = Input.empty();
-        this.oidcToken = Input.empty();
-        this.pushEndpoint = Input.empty();
+        this.attributes = Output.empty();
+        this.oidcToken = Output.empty();
+        this.pushEndpoint = Output.empty();
     }
 
     public static Builder builder() {
@@ -94,9 +94,9 @@ public final class SubscriptionPushConfigArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> attributes;
-        private @Nullable Input<SubscriptionPushConfigOidcTokenArgs> oidcToken;
-        private Input<String> pushEndpoint;
+        private @Nullable Output<Map<String,String>> attributes;
+        private @Nullable Output<SubscriptionPushConfigOidcTokenArgs> oidcToken;
+        private Output<String> pushEndpoint;
 
         public Builder() {
     	      // Empty
@@ -109,33 +109,33 @@ public final class SubscriptionPushConfigArgs extends io.pulumi.resources.Resour
     	      this.pushEndpoint = defaults.pushEndpoint;
         }
 
-        public Builder attributes(@Nullable Input<Map<String,String>> attributes) {
+        public Builder attributes(@Nullable Output<Map<String,String>> attributes) {
             this.attributes = attributes;
             return this;
         }
 
         public Builder attributes(@Nullable Map<String,String> attributes) {
-            this.attributes = Input.ofNullable(attributes);
+            this.attributes = Output.ofNullable(attributes);
             return this;
         }
 
-        public Builder oidcToken(@Nullable Input<SubscriptionPushConfigOidcTokenArgs> oidcToken) {
+        public Builder oidcToken(@Nullable Output<SubscriptionPushConfigOidcTokenArgs> oidcToken) {
             this.oidcToken = oidcToken;
             return this;
         }
 
         public Builder oidcToken(@Nullable SubscriptionPushConfigOidcTokenArgs oidcToken) {
-            this.oidcToken = Input.ofNullable(oidcToken);
+            this.oidcToken = Output.ofNullable(oidcToken);
             return this;
         }
 
-        public Builder pushEndpoint(Input<String> pushEndpoint) {
+        public Builder pushEndpoint(Output<String> pushEndpoint) {
             this.pushEndpoint = Objects.requireNonNull(pushEndpoint);
             return this;
         }
 
         public Builder pushEndpoint(String pushEndpoint) {
-            this.pushEndpoint = Input.of(Objects.requireNonNull(pushEndpoint));
+            this.pushEndpoint = Output.of(Objects.requireNonNull(pushEndpoint));
             return this;
         }
         public SubscriptionPushConfigArgs build() {

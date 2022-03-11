@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class NetworkManagerSecurityGroupItemArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="networkGroupId")
-      private final @Nullable Input<String> networkGroupId;
+      private final @Nullable Output<String> networkGroupId;
 
-    public Input<String> getNetworkGroupId() {
-        return this.networkGroupId == null ? Input.empty() : this.networkGroupId;
+    public Output<String> getNetworkGroupId() {
+        return this.networkGroupId == null ? Output.empty() : this.networkGroupId;
     }
 
-    public NetworkManagerSecurityGroupItemArgs(@Nullable Input<String> networkGroupId) {
+    public NetworkManagerSecurityGroupItemArgs(@Nullable Output<String> networkGroupId) {
         this.networkGroupId = networkGroupId;
     }
 
     private NetworkManagerSecurityGroupItemArgs() {
-        this.networkGroupId = Input.empty();
+        this.networkGroupId = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class NetworkManagerSecurityGroupItemArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> networkGroupId;
+        private @Nullable Output<String> networkGroupId;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class NetworkManagerSecurityGroupItemArgs extends io.pulumi.resourc
     	      this.networkGroupId = defaults.networkGroupId;
         }
 
-        public Builder networkGroupId(@Nullable Input<String> networkGroupId) {
+        public Builder networkGroupId(@Nullable Output<String> networkGroupId) {
             this.networkGroupId = networkGroupId;
             return this;
         }
 
         public Builder networkGroupId(@Nullable String networkGroupId) {
-            this.networkGroupId = Input.ofNullable(networkGroupId);
+            this.networkGroupId = Output.ofNullable(networkGroupId);
             return this;
         }
         public NetworkManagerSecurityGroupItemArgs build() {

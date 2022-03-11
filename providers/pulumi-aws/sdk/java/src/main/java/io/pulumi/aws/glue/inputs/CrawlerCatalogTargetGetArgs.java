@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glue.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,9 +19,9 @@ public final class CrawlerCatalogTargetGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="databaseName", required=true)
-      private final Input<String> databaseName;
+      private final Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
+    public Output<String> getDatabaseName() {
         return this.databaseName;
     }
 
@@ -30,22 +30,22 @@ public final class CrawlerCatalogTargetGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tables", required=true)
-      private final Input<List<String>> tables;
+      private final Output<List<String>> tables;
 
-    public Input<List<String>> getTables() {
+    public Output<List<String>> getTables() {
         return this.tables;
     }
 
     public CrawlerCatalogTargetGetArgs(
-        Input<String> databaseName,
-        Input<List<String>> tables) {
+        Output<String> databaseName,
+        Output<List<String>> tables) {
         this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
         this.tables = Objects.requireNonNull(tables, "expected parameter 'tables' to be non-null");
     }
 
     private CrawlerCatalogTargetGetArgs() {
-        this.databaseName = Input.empty();
-        this.tables = Input.empty();
+        this.databaseName = Output.empty();
+        this.tables = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class CrawlerCatalogTargetGetArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<String> databaseName;
-        private Input<List<String>> tables;
+        private Output<String> databaseName;
+        private Output<List<String>> tables;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class CrawlerCatalogTargetGetArgs extends io.pulumi.resources.Resou
     	      this.tables = defaults.tables;
         }
 
-        public Builder databaseName(Input<String> databaseName) {
+        public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
         public Builder databaseName(String databaseName) {
-            this.databaseName = Input.of(Objects.requireNonNull(databaseName));
+            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder tables(Input<List<String>> tables) {
+        public Builder tables(Output<List<String>> tables) {
             this.tables = Objects.requireNonNull(tables);
             return this;
         }
 
         public Builder tables(List<String> tables) {
-            this.tables = Input.of(Objects.requireNonNull(tables));
+            this.tables = Output.of(Objects.requireNonNull(tables));
             return this;
         }
         public CrawlerCatalogTargetGetArgs build() {

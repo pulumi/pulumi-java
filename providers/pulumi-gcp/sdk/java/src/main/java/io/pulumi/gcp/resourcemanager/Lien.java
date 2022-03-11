@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.resourcemanager;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -173,14 +172,14 @@ public class Lien extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Lien(String name, LienArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:resourcemanager/lien:Lien", name, args == null ? LienArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:resourcemanager/lien:Lien", name, args == null ? LienArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Lien(String name, Input<String> id, @Nullable LienState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Lien(String name, Output<String> id, @Nullable LienState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:resourcemanager/lien:Lien", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -196,7 +195,7 @@ public class Lien extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Lien get(String name, Input<String> id, @Nullable LienState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Lien get(String name, Output<String> id, @Nullable LienState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Lien(name, id, state, options);
     }
 }

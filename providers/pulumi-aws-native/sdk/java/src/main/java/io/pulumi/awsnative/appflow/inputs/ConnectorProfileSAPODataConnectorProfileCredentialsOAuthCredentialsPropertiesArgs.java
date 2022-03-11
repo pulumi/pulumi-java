@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.awsnative.appflow.inputs.ConnectorProfileConnectorOAuthRequestArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,46 +16,46 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCrede
     public static final ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsPropertiesArgs Empty = new ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsPropertiesArgs();
 
     @InputImport(name="accessToken")
-      private final @Nullable Input<String> accessToken;
+      private final @Nullable Output<String> accessToken;
 
-    public Input<String> getAccessToken() {
-        return this.accessToken == null ? Input.empty() : this.accessToken;
+    public Output<String> getAccessToken() {
+        return this.accessToken == null ? Output.empty() : this.accessToken;
     }
 
     @InputImport(name="clientId")
-      private final @Nullable Input<String> clientId;
+      private final @Nullable Output<String> clientId;
 
-    public Input<String> getClientId() {
-        return this.clientId == null ? Input.empty() : this.clientId;
+    public Output<String> getClientId() {
+        return this.clientId == null ? Output.empty() : this.clientId;
     }
 
     @InputImport(name="clientSecret")
-      private final @Nullable Input<String> clientSecret;
+      private final @Nullable Output<String> clientSecret;
 
-    public Input<String> getClientSecret() {
-        return this.clientSecret == null ? Input.empty() : this.clientSecret;
+    public Output<String> getClientSecret() {
+        return this.clientSecret == null ? Output.empty() : this.clientSecret;
     }
 
     @InputImport(name="connectorOAuthRequest")
-      private final @Nullable Input<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest;
+      private final @Nullable Output<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest;
 
-    public Input<ConnectorProfileConnectorOAuthRequestArgs> getConnectorOAuthRequest() {
-        return this.connectorOAuthRequest == null ? Input.empty() : this.connectorOAuthRequest;
+    public Output<ConnectorProfileConnectorOAuthRequestArgs> getConnectorOAuthRequest() {
+        return this.connectorOAuthRequest == null ? Output.empty() : this.connectorOAuthRequest;
     }
 
     @InputImport(name="refreshToken")
-      private final @Nullable Input<String> refreshToken;
+      private final @Nullable Output<String> refreshToken;
 
-    public Input<String> getRefreshToken() {
-        return this.refreshToken == null ? Input.empty() : this.refreshToken;
+    public Output<String> getRefreshToken() {
+        return this.refreshToken == null ? Output.empty() : this.refreshToken;
     }
 
     public ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsPropertiesArgs(
-        @Nullable Input<String> accessToken,
-        @Nullable Input<String> clientId,
-        @Nullable Input<String> clientSecret,
-        @Nullable Input<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest,
-        @Nullable Input<String> refreshToken) {
+        @Nullable Output<String> accessToken,
+        @Nullable Output<String> clientId,
+        @Nullable Output<String> clientSecret,
+        @Nullable Output<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest,
+        @Nullable Output<String> refreshToken) {
         this.accessToken = accessToken;
         this.clientId = clientId;
         this.clientSecret = clientSecret;
@@ -64,11 +64,11 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCrede
     }
 
     private ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsPropertiesArgs() {
-        this.accessToken = Input.empty();
-        this.clientId = Input.empty();
-        this.clientSecret = Input.empty();
-        this.connectorOAuthRequest = Input.empty();
-        this.refreshToken = Input.empty();
+        this.accessToken = Output.empty();
+        this.clientId = Output.empty();
+        this.clientSecret = Output.empty();
+        this.connectorOAuthRequest = Output.empty();
+        this.refreshToken = Output.empty();
     }
 
     public static Builder builder() {
@@ -80,11 +80,11 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCrede
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accessToken;
-        private @Nullable Input<String> clientId;
-        private @Nullable Input<String> clientSecret;
-        private @Nullable Input<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest;
-        private @Nullable Input<String> refreshToken;
+        private @Nullable Output<String> accessToken;
+        private @Nullable Output<String> clientId;
+        private @Nullable Output<String> clientSecret;
+        private @Nullable Output<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest;
+        private @Nullable Output<String> refreshToken;
 
         public Builder() {
     	      // Empty
@@ -99,53 +99,53 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCrede
     	      this.refreshToken = defaults.refreshToken;
         }
 
-        public Builder accessToken(@Nullable Input<String> accessToken) {
+        public Builder accessToken(@Nullable Output<String> accessToken) {
             this.accessToken = accessToken;
             return this;
         }
 
         public Builder accessToken(@Nullable String accessToken) {
-            this.accessToken = Input.ofNullable(accessToken);
+            this.accessToken = Output.ofNullable(accessToken);
             return this;
         }
 
-        public Builder clientId(@Nullable Input<String> clientId) {
+        public Builder clientId(@Nullable Output<String> clientId) {
             this.clientId = clientId;
             return this;
         }
 
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = Input.ofNullable(clientId);
+            this.clientId = Output.ofNullable(clientId);
             return this;
         }
 
-        public Builder clientSecret(@Nullable Input<String> clientSecret) {
+        public Builder clientSecret(@Nullable Output<String> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
 
         public Builder clientSecret(@Nullable String clientSecret) {
-            this.clientSecret = Input.ofNullable(clientSecret);
+            this.clientSecret = Output.ofNullable(clientSecret);
             return this;
         }
 
-        public Builder connectorOAuthRequest(@Nullable Input<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest) {
+        public Builder connectorOAuthRequest(@Nullable Output<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest) {
             this.connectorOAuthRequest = connectorOAuthRequest;
             return this;
         }
 
         public Builder connectorOAuthRequest(@Nullable ConnectorProfileConnectorOAuthRequestArgs connectorOAuthRequest) {
-            this.connectorOAuthRequest = Input.ofNullable(connectorOAuthRequest);
+            this.connectorOAuthRequest = Output.ofNullable(connectorOAuthRequest);
             return this;
         }
 
-        public Builder refreshToken(@Nullable Input<String> refreshToken) {
+        public Builder refreshToken(@Nullable Output<String> refreshToken) {
             this.refreshToken = refreshToken;
             return this;
         }
 
         public Builder refreshToken(@Nullable String refreshToken) {
-            this.refreshToken = Input.ofNullable(refreshToken);
+            this.refreshToken = Output.ofNullable(refreshToken);
             return this;
         }
         public ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsPropertiesArgs build() {

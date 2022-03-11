@@ -7,7 +7,7 @@ import io.pulumi.aws.glue.inputs.CatalogTablePartitionIndexArgs;
 import io.pulumi.aws.glue.inputs.CatalogTablePartitionKeyArgs;
 import io.pulumi.aws.glue.inputs.CatalogTableStorageDescriptorArgs;
 import io.pulumi.aws.glue.inputs.CatalogTableTargetTableArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="catalogId")
-      private final @Nullable Input<String> catalogId;
+      private final @Nullable Output<String> catalogId;
 
-    public Input<String> getCatalogId() {
-        return this.catalogId == null ? Input.empty() : this.catalogId;
+    public Output<String> getCatalogId() {
+        return this.catalogId == null ? Output.empty() : this.catalogId;
     }
 
     /**
@@ -37,9 +37,9 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseName", required=true)
-      private final Input<String> databaseName;
+      private final Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
+    public Output<String> getDatabaseName() {
         return this.databaseName;
     }
 
@@ -48,10 +48,10 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="owner")
-      private final @Nullable Input<String> owner;
+      private final @Nullable Output<String> owner;
 
-    public Input<String> getOwner() {
-        return this.owner == null ? Input.empty() : this.owner;
+    public Output<String> getOwner() {
+        return this.owner == null ? Output.empty() : this.owner;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,String>> parameters;
+      private final @Nullable Output<Map<String,String>> parameters;
 
-    public Input<Map<String,String>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,String>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="partitionIndices")
-      private final @Nullable Input<List<CatalogTablePartitionIndexArgs>> partitionIndices;
+      private final @Nullable Output<List<CatalogTablePartitionIndexArgs>> partitionIndices;
 
-    public Input<List<CatalogTablePartitionIndexArgs>> getPartitionIndices() {
-        return this.partitionIndices == null ? Input.empty() : this.partitionIndices;
+    public Output<List<CatalogTablePartitionIndexArgs>> getPartitionIndices() {
+        return this.partitionIndices == null ? Output.empty() : this.partitionIndices;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="partitionKeys")
-      private final @Nullable Input<List<CatalogTablePartitionKeyArgs>> partitionKeys;
+      private final @Nullable Output<List<CatalogTablePartitionKeyArgs>> partitionKeys;
 
-    public Input<List<CatalogTablePartitionKeyArgs>> getPartitionKeys() {
-        return this.partitionKeys == null ? Input.empty() : this.partitionKeys;
+    public Output<List<CatalogTablePartitionKeyArgs>> getPartitionKeys() {
+        return this.partitionKeys == null ? Output.empty() : this.partitionKeys;
     }
 
     /**
@@ -114,10 +114,10 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retention")
-      private final @Nullable Input<Integer> retention;
+      private final @Nullable Output<Integer> retention;
 
-    public Input<Integer> getRetention() {
-        return this.retention == null ? Input.empty() : this.retention;
+    public Output<Integer> getRetention() {
+        return this.retention == null ? Output.empty() : this.retention;
     }
 
     /**
@@ -125,10 +125,10 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageDescriptor")
-      private final @Nullable Input<CatalogTableStorageDescriptorArgs> storageDescriptor;
+      private final @Nullable Output<CatalogTableStorageDescriptorArgs> storageDescriptor;
 
-    public Input<CatalogTableStorageDescriptorArgs> getStorageDescriptor() {
-        return this.storageDescriptor == null ? Input.empty() : this.storageDescriptor;
+    public Output<CatalogTableStorageDescriptorArgs> getStorageDescriptor() {
+        return this.storageDescriptor == null ? Output.empty() : this.storageDescriptor;
     }
 
     /**
@@ -136,10 +136,10 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tableType")
-      private final @Nullable Input<String> tableType;
+      private final @Nullable Output<String> tableType;
 
-    public Input<String> getTableType() {
-        return this.tableType == null ? Input.empty() : this.tableType;
+    public Output<String> getTableType() {
+        return this.tableType == null ? Output.empty() : this.tableType;
     }
 
     /**
@@ -147,10 +147,10 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetTable")
-      private final @Nullable Input<CatalogTableTargetTableArgs> targetTable;
+      private final @Nullable Output<CatalogTableTargetTableArgs> targetTable;
 
-    public Input<CatalogTableTargetTableArgs> getTargetTable() {
-        return this.targetTable == null ? Input.empty() : this.targetTable;
+    public Output<CatalogTableTargetTableArgs> getTargetTable() {
+        return this.targetTable == null ? Output.empty() : this.targetTable;
     }
 
     /**
@@ -158,10 +158,10 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="viewExpandedText")
-      private final @Nullable Input<String> viewExpandedText;
+      private final @Nullable Output<String> viewExpandedText;
 
-    public Input<String> getViewExpandedText() {
-        return this.viewExpandedText == null ? Input.empty() : this.viewExpandedText;
+    public Output<String> getViewExpandedText() {
+        return this.viewExpandedText == null ? Output.empty() : this.viewExpandedText;
     }
 
     /**
@@ -169,27 +169,27 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="viewOriginalText")
-      private final @Nullable Input<String> viewOriginalText;
+      private final @Nullable Output<String> viewOriginalText;
 
-    public Input<String> getViewOriginalText() {
-        return this.viewOriginalText == null ? Input.empty() : this.viewOriginalText;
+    public Output<String> getViewOriginalText() {
+        return this.viewOriginalText == null ? Output.empty() : this.viewOriginalText;
     }
 
     public CatalogTableArgs(
-        @Nullable Input<String> catalogId,
-        Input<String> databaseName,
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        @Nullable Input<String> owner,
-        @Nullable Input<Map<String,String>> parameters,
-        @Nullable Input<List<CatalogTablePartitionIndexArgs>> partitionIndices,
-        @Nullable Input<List<CatalogTablePartitionKeyArgs>> partitionKeys,
-        @Nullable Input<Integer> retention,
-        @Nullable Input<CatalogTableStorageDescriptorArgs> storageDescriptor,
-        @Nullable Input<String> tableType,
-        @Nullable Input<CatalogTableTargetTableArgs> targetTable,
-        @Nullable Input<String> viewExpandedText,
-        @Nullable Input<String> viewOriginalText) {
+        @Nullable Output<String> catalogId,
+        Output<String> databaseName,
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        @Nullable Output<String> owner,
+        @Nullable Output<Map<String,String>> parameters,
+        @Nullable Output<List<CatalogTablePartitionIndexArgs>> partitionIndices,
+        @Nullable Output<List<CatalogTablePartitionKeyArgs>> partitionKeys,
+        @Nullable Output<Integer> retention,
+        @Nullable Output<CatalogTableStorageDescriptorArgs> storageDescriptor,
+        @Nullable Output<String> tableType,
+        @Nullable Output<CatalogTableTargetTableArgs> targetTable,
+        @Nullable Output<String> viewExpandedText,
+        @Nullable Output<String> viewOriginalText) {
         this.catalogId = catalogId;
         this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
         this.description = description;
@@ -207,20 +207,20 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CatalogTableArgs() {
-        this.catalogId = Input.empty();
-        this.databaseName = Input.empty();
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.owner = Input.empty();
-        this.parameters = Input.empty();
-        this.partitionIndices = Input.empty();
-        this.partitionKeys = Input.empty();
-        this.retention = Input.empty();
-        this.storageDescriptor = Input.empty();
-        this.tableType = Input.empty();
-        this.targetTable = Input.empty();
-        this.viewExpandedText = Input.empty();
-        this.viewOriginalText = Input.empty();
+        this.catalogId = Output.empty();
+        this.databaseName = Output.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.owner = Output.empty();
+        this.parameters = Output.empty();
+        this.partitionIndices = Output.empty();
+        this.partitionKeys = Output.empty();
+        this.retention = Output.empty();
+        this.storageDescriptor = Output.empty();
+        this.tableType = Output.empty();
+        this.targetTable = Output.empty();
+        this.viewExpandedText = Output.empty();
+        this.viewOriginalText = Output.empty();
     }
 
     public static Builder builder() {
@@ -232,20 +232,20 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> catalogId;
-        private Input<String> databaseName;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> owner;
-        private @Nullable Input<Map<String,String>> parameters;
-        private @Nullable Input<List<CatalogTablePartitionIndexArgs>> partitionIndices;
-        private @Nullable Input<List<CatalogTablePartitionKeyArgs>> partitionKeys;
-        private @Nullable Input<Integer> retention;
-        private @Nullable Input<CatalogTableStorageDescriptorArgs> storageDescriptor;
-        private @Nullable Input<String> tableType;
-        private @Nullable Input<CatalogTableTargetTableArgs> targetTable;
-        private @Nullable Input<String> viewExpandedText;
-        private @Nullable Input<String> viewOriginalText;
+        private @Nullable Output<String> catalogId;
+        private Output<String> databaseName;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> owner;
+        private @Nullable Output<Map<String,String>> parameters;
+        private @Nullable Output<List<CatalogTablePartitionIndexArgs>> partitionIndices;
+        private @Nullable Output<List<CatalogTablePartitionKeyArgs>> partitionKeys;
+        private @Nullable Output<Integer> retention;
+        private @Nullable Output<CatalogTableStorageDescriptorArgs> storageDescriptor;
+        private @Nullable Output<String> tableType;
+        private @Nullable Output<CatalogTableTargetTableArgs> targetTable;
+        private @Nullable Output<String> viewExpandedText;
+        private @Nullable Output<String> viewOriginalText;
 
         public Builder() {
     	      // Empty
@@ -269,143 +269,143 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
     	      this.viewOriginalText = defaults.viewOriginalText;
         }
 
-        public Builder catalogId(@Nullable Input<String> catalogId) {
+        public Builder catalogId(@Nullable Output<String> catalogId) {
             this.catalogId = catalogId;
             return this;
         }
 
         public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = Input.ofNullable(catalogId);
+            this.catalogId = Output.ofNullable(catalogId);
             return this;
         }
 
-        public Builder databaseName(Input<String> databaseName) {
+        public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
         public Builder databaseName(String databaseName) {
-            this.databaseName = Input.of(Objects.requireNonNull(databaseName));
+            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder owner(@Nullable Input<String> owner) {
+        public Builder owner(@Nullable Output<String> owner) {
             this.owner = owner;
             return this;
         }
 
         public Builder owner(@Nullable String owner) {
-            this.owner = Input.ofNullable(owner);
+            this.owner = Output.ofNullable(owner);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,String>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder partitionIndices(@Nullable Input<List<CatalogTablePartitionIndexArgs>> partitionIndices) {
+        public Builder partitionIndices(@Nullable Output<List<CatalogTablePartitionIndexArgs>> partitionIndices) {
             this.partitionIndices = partitionIndices;
             return this;
         }
 
         public Builder partitionIndices(@Nullable List<CatalogTablePartitionIndexArgs> partitionIndices) {
-            this.partitionIndices = Input.ofNullable(partitionIndices);
+            this.partitionIndices = Output.ofNullable(partitionIndices);
             return this;
         }
 
-        public Builder partitionKeys(@Nullable Input<List<CatalogTablePartitionKeyArgs>> partitionKeys) {
+        public Builder partitionKeys(@Nullable Output<List<CatalogTablePartitionKeyArgs>> partitionKeys) {
             this.partitionKeys = partitionKeys;
             return this;
         }
 
         public Builder partitionKeys(@Nullable List<CatalogTablePartitionKeyArgs> partitionKeys) {
-            this.partitionKeys = Input.ofNullable(partitionKeys);
+            this.partitionKeys = Output.ofNullable(partitionKeys);
             return this;
         }
 
-        public Builder retention(@Nullable Input<Integer> retention) {
+        public Builder retention(@Nullable Output<Integer> retention) {
             this.retention = retention;
             return this;
         }
 
         public Builder retention(@Nullable Integer retention) {
-            this.retention = Input.ofNullable(retention);
+            this.retention = Output.ofNullable(retention);
             return this;
         }
 
-        public Builder storageDescriptor(@Nullable Input<CatalogTableStorageDescriptorArgs> storageDescriptor) {
+        public Builder storageDescriptor(@Nullable Output<CatalogTableStorageDescriptorArgs> storageDescriptor) {
             this.storageDescriptor = storageDescriptor;
             return this;
         }
 
         public Builder storageDescriptor(@Nullable CatalogTableStorageDescriptorArgs storageDescriptor) {
-            this.storageDescriptor = Input.ofNullable(storageDescriptor);
+            this.storageDescriptor = Output.ofNullable(storageDescriptor);
             return this;
         }
 
-        public Builder tableType(@Nullable Input<String> tableType) {
+        public Builder tableType(@Nullable Output<String> tableType) {
             this.tableType = tableType;
             return this;
         }
 
         public Builder tableType(@Nullable String tableType) {
-            this.tableType = Input.ofNullable(tableType);
+            this.tableType = Output.ofNullable(tableType);
             return this;
         }
 
-        public Builder targetTable(@Nullable Input<CatalogTableTargetTableArgs> targetTable) {
+        public Builder targetTable(@Nullable Output<CatalogTableTargetTableArgs> targetTable) {
             this.targetTable = targetTable;
             return this;
         }
 
         public Builder targetTable(@Nullable CatalogTableTargetTableArgs targetTable) {
-            this.targetTable = Input.ofNullable(targetTable);
+            this.targetTable = Output.ofNullable(targetTable);
             return this;
         }
 
-        public Builder viewExpandedText(@Nullable Input<String> viewExpandedText) {
+        public Builder viewExpandedText(@Nullable Output<String> viewExpandedText) {
             this.viewExpandedText = viewExpandedText;
             return this;
         }
 
         public Builder viewExpandedText(@Nullable String viewExpandedText) {
-            this.viewExpandedText = Input.ofNullable(viewExpandedText);
+            this.viewExpandedText = Output.ofNullable(viewExpandedText);
             return this;
         }
 
-        public Builder viewOriginalText(@Nullable Input<String> viewOriginalText) {
+        public Builder viewOriginalText(@Nullable Output<String> viewOriginalText) {
             this.viewOriginalText = viewOriginalText;
             return this;
         }
 
         public Builder viewOriginalText(@Nullable String viewOriginalText) {
-            this.viewOriginalText = Input.ofNullable(viewOriginalText);
+            this.viewOriginalText = Output.ofNullable(viewOriginalText);
             return this;
         }
         public CatalogTableArgs build() {

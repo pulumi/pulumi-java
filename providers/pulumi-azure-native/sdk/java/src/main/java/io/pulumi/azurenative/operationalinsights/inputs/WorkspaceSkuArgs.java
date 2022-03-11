@@ -5,7 +5,7 @@ package io.pulumi.azurenative.operationalinsights.inputs;
 
 import io.pulumi.azurenative.operationalinsights.enums.WorkspaceSkuNameEnum;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class WorkspaceSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacityReservationLevel")
-      private final @Nullable Input<Integer> capacityReservationLevel;
+      private final @Nullable Output<Integer> capacityReservationLevel;
 
-    public Input<Integer> getCapacityReservationLevel() {
-        return this.capacityReservationLevel == null ? Input.empty() : this.capacityReservationLevel;
+    public Output<Integer> getCapacityReservationLevel() {
+        return this.capacityReservationLevel == null ? Output.empty() : this.capacityReservationLevel;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class WorkspaceSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<Either<String,WorkspaceSkuNameEnum>> name;
+      private final Output<Either<String,WorkspaceSkuNameEnum>> name;
 
-    public Input<Either<String,WorkspaceSkuNameEnum>> getName() {
+    public Output<Either<String,WorkspaceSkuNameEnum>> getName() {
         return this.name;
     }
 
     public WorkspaceSkuArgs(
-        @Nullable Input<Integer> capacityReservationLevel,
-        Input<Either<String,WorkspaceSkuNameEnum>> name) {
+        @Nullable Output<Integer> capacityReservationLevel,
+        Output<Either<String,WorkspaceSkuNameEnum>> name) {
         this.capacityReservationLevel = capacityReservationLevel;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private WorkspaceSkuArgs() {
-        this.capacityReservationLevel = Input.empty();
-        this.name = Input.empty();
+        this.capacityReservationLevel = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class WorkspaceSkuArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> capacityReservationLevel;
-        private Input<Either<String,WorkspaceSkuNameEnum>> name;
+        private @Nullable Output<Integer> capacityReservationLevel;
+        private Output<Either<String,WorkspaceSkuNameEnum>> name;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class WorkspaceSkuArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder capacityReservationLevel(@Nullable Input<Integer> capacityReservationLevel) {
+        public Builder capacityReservationLevel(@Nullable Output<Integer> capacityReservationLevel) {
             this.capacityReservationLevel = capacityReservationLevel;
             return this;
         }
 
         public Builder capacityReservationLevel(@Nullable Integer capacityReservationLevel) {
-            this.capacityReservationLevel = Input.ofNullable(capacityReservationLevel);
+            this.capacityReservationLevel = Output.ofNullable(capacityReservationLevel);
             return this;
         }
 
-        public Builder name(Input<Either<String,WorkspaceSkuNameEnum>> name) {
+        public Builder name(Output<Either<String,WorkspaceSkuNameEnum>> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(Either<String,WorkspaceSkuNameEnum> name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public WorkspaceSkuArgs build() {

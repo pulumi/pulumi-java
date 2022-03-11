@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.storage;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -189,14 +188,14 @@ public class BucketAccessControl extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BucketAccessControl(String name, BucketAccessControlArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:storage/bucketAccessControl:BucketAccessControl", name, args == null ? BucketAccessControlArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:storage/bucketAccessControl:BucketAccessControl", name, args == null ? BucketAccessControlArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private BucketAccessControl(String name, Input<String> id, @Nullable BucketAccessControlState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private BucketAccessControl(String name, Output<String> id, @Nullable BucketAccessControlState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:storage/bucketAccessControl:BucketAccessControl", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -212,7 +211,7 @@ public class BucketAccessControl extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static BucketAccessControl get(String name, Input<String> id, @Nullable BucketAccessControlState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static BucketAccessControl get(String name, Output<String> id, @Nullable BucketAccessControlState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new BucketAccessControl(name, id, state, options);
     }
 }

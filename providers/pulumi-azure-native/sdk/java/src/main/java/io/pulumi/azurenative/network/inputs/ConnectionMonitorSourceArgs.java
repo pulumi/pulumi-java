@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ConnectionMonitorSourceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ConnectionMonitorSourceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceId", required=true)
-      private final Input<String> resourceId;
+      private final Output<String> resourceId;
 
-    public Input<String> getResourceId() {
+    public Output<String> getResourceId() {
         return this.resourceId;
     }
 
     public ConnectionMonitorSourceArgs(
-        @Nullable Input<Integer> port,
-        Input<String> resourceId) {
+        @Nullable Output<Integer> port,
+        Output<String> resourceId) {
         this.port = port;
         this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
     }
 
     private ConnectionMonitorSourceArgs() {
-        this.port = Input.empty();
-        this.resourceId = Input.empty();
+        this.port = Output.empty();
+        this.resourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ConnectionMonitorSourceArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> port;
-        private Input<String> resourceId;
+        private @Nullable Output<Integer> port;
+        private Output<String> resourceId;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ConnectionMonitorSourceArgs extends io.pulumi.resources.Resou
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder resourceId(Input<String> resourceId) {
+        public Builder resourceId(Output<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
         public Builder resourceId(String resourceId) {
-            this.resourceId = Input.of(Objects.requireNonNull(resourceId));
+            this.resourceId = Output.of(Objects.requireNonNull(resourceId));
             return this;
         }
         public ConnectionMonitorSourceArgs build() {

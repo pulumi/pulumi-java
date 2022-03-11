@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.toolresults_v1beta3.enums.BasicPerfSampleSeriesPerfMetricType;
 import io.pulumi.googlenative.toolresults_v1beta3.enums.BasicPerfSampleSeriesPerfUnit;
@@ -21,39 +21,39 @@ public final class BasicPerfSampleSeriesArgs extends io.pulumi.resources.Resourc
     public static final BasicPerfSampleSeriesArgs Empty = new BasicPerfSampleSeriesArgs();
 
     @InputImport(name="perfMetricType")
-      private final @Nullable Input<BasicPerfSampleSeriesPerfMetricType> perfMetricType;
+      private final @Nullable Output<BasicPerfSampleSeriesPerfMetricType> perfMetricType;
 
-    public Input<BasicPerfSampleSeriesPerfMetricType> getPerfMetricType() {
-        return this.perfMetricType == null ? Input.empty() : this.perfMetricType;
+    public Output<BasicPerfSampleSeriesPerfMetricType> getPerfMetricType() {
+        return this.perfMetricType == null ? Output.empty() : this.perfMetricType;
     }
 
     @InputImport(name="perfUnit")
-      private final @Nullable Input<BasicPerfSampleSeriesPerfUnit> perfUnit;
+      private final @Nullable Output<BasicPerfSampleSeriesPerfUnit> perfUnit;
 
-    public Input<BasicPerfSampleSeriesPerfUnit> getPerfUnit() {
-        return this.perfUnit == null ? Input.empty() : this.perfUnit;
+    public Output<BasicPerfSampleSeriesPerfUnit> getPerfUnit() {
+        return this.perfUnit == null ? Output.empty() : this.perfUnit;
     }
 
     @InputImport(name="sampleSeriesLabel")
-      private final @Nullable Input<BasicPerfSampleSeriesSampleSeriesLabel> sampleSeriesLabel;
+      private final @Nullable Output<BasicPerfSampleSeriesSampleSeriesLabel> sampleSeriesLabel;
 
-    public Input<BasicPerfSampleSeriesSampleSeriesLabel> getSampleSeriesLabel() {
-        return this.sampleSeriesLabel == null ? Input.empty() : this.sampleSeriesLabel;
+    public Output<BasicPerfSampleSeriesSampleSeriesLabel> getSampleSeriesLabel() {
+        return this.sampleSeriesLabel == null ? Output.empty() : this.sampleSeriesLabel;
     }
 
     public BasicPerfSampleSeriesArgs(
-        @Nullable Input<BasicPerfSampleSeriesPerfMetricType> perfMetricType,
-        @Nullable Input<BasicPerfSampleSeriesPerfUnit> perfUnit,
-        @Nullable Input<BasicPerfSampleSeriesSampleSeriesLabel> sampleSeriesLabel) {
+        @Nullable Output<BasicPerfSampleSeriesPerfMetricType> perfMetricType,
+        @Nullable Output<BasicPerfSampleSeriesPerfUnit> perfUnit,
+        @Nullable Output<BasicPerfSampleSeriesSampleSeriesLabel> sampleSeriesLabel) {
         this.perfMetricType = perfMetricType;
         this.perfUnit = perfUnit;
         this.sampleSeriesLabel = sampleSeriesLabel;
     }
 
     private BasicPerfSampleSeriesArgs() {
-        this.perfMetricType = Input.empty();
-        this.perfUnit = Input.empty();
-        this.sampleSeriesLabel = Input.empty();
+        this.perfMetricType = Output.empty();
+        this.perfUnit = Output.empty();
+        this.sampleSeriesLabel = Output.empty();
     }
 
     public static Builder builder() {
@@ -65,9 +65,9 @@ public final class BasicPerfSampleSeriesArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<BasicPerfSampleSeriesPerfMetricType> perfMetricType;
-        private @Nullable Input<BasicPerfSampleSeriesPerfUnit> perfUnit;
-        private @Nullable Input<BasicPerfSampleSeriesSampleSeriesLabel> sampleSeriesLabel;
+        private @Nullable Output<BasicPerfSampleSeriesPerfMetricType> perfMetricType;
+        private @Nullable Output<BasicPerfSampleSeriesPerfUnit> perfUnit;
+        private @Nullable Output<BasicPerfSampleSeriesSampleSeriesLabel> sampleSeriesLabel;
 
         public Builder() {
     	      // Empty
@@ -80,33 +80,33 @@ public final class BasicPerfSampleSeriesArgs extends io.pulumi.resources.Resourc
     	      this.sampleSeriesLabel = defaults.sampleSeriesLabel;
         }
 
-        public Builder perfMetricType(@Nullable Input<BasicPerfSampleSeriesPerfMetricType> perfMetricType) {
+        public Builder perfMetricType(@Nullable Output<BasicPerfSampleSeriesPerfMetricType> perfMetricType) {
             this.perfMetricType = perfMetricType;
             return this;
         }
 
         public Builder perfMetricType(@Nullable BasicPerfSampleSeriesPerfMetricType perfMetricType) {
-            this.perfMetricType = Input.ofNullable(perfMetricType);
+            this.perfMetricType = Output.ofNullable(perfMetricType);
             return this;
         }
 
-        public Builder perfUnit(@Nullable Input<BasicPerfSampleSeriesPerfUnit> perfUnit) {
+        public Builder perfUnit(@Nullable Output<BasicPerfSampleSeriesPerfUnit> perfUnit) {
             this.perfUnit = perfUnit;
             return this;
         }
 
         public Builder perfUnit(@Nullable BasicPerfSampleSeriesPerfUnit perfUnit) {
-            this.perfUnit = Input.ofNullable(perfUnit);
+            this.perfUnit = Output.ofNullable(perfUnit);
             return this;
         }
 
-        public Builder sampleSeriesLabel(@Nullable Input<BasicPerfSampleSeriesSampleSeriesLabel> sampleSeriesLabel) {
+        public Builder sampleSeriesLabel(@Nullable Output<BasicPerfSampleSeriesSampleSeriesLabel> sampleSeriesLabel) {
             this.sampleSeriesLabel = sampleSeriesLabel;
             return this;
         }
 
         public Builder sampleSeriesLabel(@Nullable BasicPerfSampleSeriesSampleSeriesLabel sampleSeriesLabel) {
-            this.sampleSeriesLabel = Input.ofNullable(sampleSeriesLabel);
+            this.sampleSeriesLabel = Output.ofNullable(sampleSeriesLabel);
             return this;
         }
         public BasicPerfSampleSeriesArgs build() {

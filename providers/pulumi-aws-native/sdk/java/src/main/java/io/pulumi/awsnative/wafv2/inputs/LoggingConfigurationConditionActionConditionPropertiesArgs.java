@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.enums.LoggingConfigurationConditionActionConditionPropertiesAction;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -22,18 +22,18 @@ public final class LoggingConfigurationConditionActionConditionPropertiesArgs ex
      * 
      */
     @InputImport(name="action", required=true)
-      private final Input<LoggingConfigurationConditionActionConditionPropertiesAction> action;
+      private final Output<LoggingConfigurationConditionActionConditionPropertiesAction> action;
 
-    public Input<LoggingConfigurationConditionActionConditionPropertiesAction> getAction() {
+    public Output<LoggingConfigurationConditionActionConditionPropertiesAction> getAction() {
         return this.action;
     }
 
-    public LoggingConfigurationConditionActionConditionPropertiesArgs(Input<LoggingConfigurationConditionActionConditionPropertiesAction> action) {
+    public LoggingConfigurationConditionActionConditionPropertiesArgs(Output<LoggingConfigurationConditionActionConditionPropertiesAction> action) {
         this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
     }
 
     private LoggingConfigurationConditionActionConditionPropertiesArgs() {
-        this.action = Input.empty();
+        this.action = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class LoggingConfigurationConditionActionConditionPropertiesArgs ex
     }
 
     public static final class Builder {
-        private Input<LoggingConfigurationConditionActionConditionPropertiesAction> action;
+        private Output<LoggingConfigurationConditionActionConditionPropertiesAction> action;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class LoggingConfigurationConditionActionConditionPropertiesArgs ex
     	      this.action = defaults.action;
         }
 
-        public Builder action(Input<LoggingConfigurationConditionActionConditionPropertiesAction> action) {
+        public Builder action(Output<LoggingConfigurationConditionActionConditionPropertiesAction> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
         public Builder action(LoggingConfigurationConditionActionConditionPropertiesAction action) {
-            this.action = Input.of(Objects.requireNonNull(action));
+            this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
         public LoggingConfigurationConditionActionConditionPropertiesArgs build() {

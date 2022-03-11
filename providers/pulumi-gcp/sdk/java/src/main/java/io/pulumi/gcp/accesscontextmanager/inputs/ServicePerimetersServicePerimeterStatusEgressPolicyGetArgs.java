@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimetersServicePerimeterStatusEgressPolicyEgressFromGetArgs;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimetersServicePerimeterStatusEgressPolicyEgressToGetArgs;
@@ -21,10 +21,10 @@ public final class ServicePerimetersServicePerimeterStatusEgressPolicyGetArgs ex
      * 
      */
     @InputImport(name="egressFrom")
-      private final @Nullable Input<ServicePerimetersServicePerimeterStatusEgressPolicyEgressFromGetArgs> egressFrom;
+      private final @Nullable Output<ServicePerimetersServicePerimeterStatusEgressPolicyEgressFromGetArgs> egressFrom;
 
-    public Input<ServicePerimetersServicePerimeterStatusEgressPolicyEgressFromGetArgs> getEgressFrom() {
-        return this.egressFrom == null ? Input.empty() : this.egressFrom;
+    public Output<ServicePerimetersServicePerimeterStatusEgressPolicyEgressFromGetArgs> getEgressFrom() {
+        return this.egressFrom == null ? Output.empty() : this.egressFrom;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class ServicePerimetersServicePerimeterStatusEgressPolicyGetArgs ex
      * 
      */
     @InputImport(name="egressTo")
-      private final @Nullable Input<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToGetArgs> egressTo;
+      private final @Nullable Output<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToGetArgs> egressTo;
 
-    public Input<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToGetArgs> getEgressTo() {
-        return this.egressTo == null ? Input.empty() : this.egressTo;
+    public Output<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToGetArgs> getEgressTo() {
+        return this.egressTo == null ? Output.empty() : this.egressTo;
     }
 
     public ServicePerimetersServicePerimeterStatusEgressPolicyGetArgs(
-        @Nullable Input<ServicePerimetersServicePerimeterStatusEgressPolicyEgressFromGetArgs> egressFrom,
-        @Nullable Input<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToGetArgs> egressTo) {
+        @Nullable Output<ServicePerimetersServicePerimeterStatusEgressPolicyEgressFromGetArgs> egressFrom,
+        @Nullable Output<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToGetArgs> egressTo) {
         this.egressFrom = egressFrom;
         this.egressTo = egressTo;
     }
 
     private ServicePerimetersServicePerimeterStatusEgressPolicyGetArgs() {
-        this.egressFrom = Input.empty();
-        this.egressTo = Input.empty();
+        this.egressFrom = Output.empty();
+        this.egressTo = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ServicePerimetersServicePerimeterStatusEgressPolicyGetArgs ex
     }
 
     public static final class Builder {
-        private @Nullable Input<ServicePerimetersServicePerimeterStatusEgressPolicyEgressFromGetArgs> egressFrom;
-        private @Nullable Input<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToGetArgs> egressTo;
+        private @Nullable Output<ServicePerimetersServicePerimeterStatusEgressPolicyEgressFromGetArgs> egressFrom;
+        private @Nullable Output<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToGetArgs> egressTo;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ServicePerimetersServicePerimeterStatusEgressPolicyGetArgs ex
     	      this.egressTo = defaults.egressTo;
         }
 
-        public Builder egressFrom(@Nullable Input<ServicePerimetersServicePerimeterStatusEgressPolicyEgressFromGetArgs> egressFrom) {
+        public Builder egressFrom(@Nullable Output<ServicePerimetersServicePerimeterStatusEgressPolicyEgressFromGetArgs> egressFrom) {
             this.egressFrom = egressFrom;
             return this;
         }
 
         public Builder egressFrom(@Nullable ServicePerimetersServicePerimeterStatusEgressPolicyEgressFromGetArgs egressFrom) {
-            this.egressFrom = Input.ofNullable(egressFrom);
+            this.egressFrom = Output.ofNullable(egressFrom);
             return this;
         }
 
-        public Builder egressTo(@Nullable Input<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToGetArgs> egressTo) {
+        public Builder egressTo(@Nullable Output<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToGetArgs> egressTo) {
             this.egressTo = egressTo;
             return this;
         }
 
         public Builder egressTo(@Nullable ServicePerimetersServicePerimeterStatusEgressPolicyEgressToGetArgs egressTo) {
-            this.egressTo = Input.ofNullable(egressTo);
+            this.egressTo = Output.ofNullable(egressTo);
             return this;
         }
         public ServicePerimetersServicePerimeterStatusEgressPolicyGetArgs build() {

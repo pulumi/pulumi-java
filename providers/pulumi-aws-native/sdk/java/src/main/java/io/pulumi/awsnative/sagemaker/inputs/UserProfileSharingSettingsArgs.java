@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.enums.UserProfileSharingSettingsNotebookOutputOption;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class UserProfileSharingSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="notebookOutputOption")
-      private final @Nullable Input<UserProfileSharingSettingsNotebookOutputOption> notebookOutputOption;
+      private final @Nullable Output<UserProfileSharingSettingsNotebookOutputOption> notebookOutputOption;
 
-    public Input<UserProfileSharingSettingsNotebookOutputOption> getNotebookOutputOption() {
-        return this.notebookOutputOption == null ? Input.empty() : this.notebookOutputOption;
+    public Output<UserProfileSharingSettingsNotebookOutputOption> getNotebookOutputOption() {
+        return this.notebookOutputOption == null ? Output.empty() : this.notebookOutputOption;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class UserProfileSharingSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="s3KmsKeyId")
-      private final @Nullable Input<String> s3KmsKeyId;
+      private final @Nullable Output<String> s3KmsKeyId;
 
-    public Input<String> getS3KmsKeyId() {
-        return this.s3KmsKeyId == null ? Input.empty() : this.s3KmsKeyId;
+    public Output<String> getS3KmsKeyId() {
+        return this.s3KmsKeyId == null ? Output.empty() : this.s3KmsKeyId;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class UserProfileSharingSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="s3OutputPath")
-      private final @Nullable Input<String> s3OutputPath;
+      private final @Nullable Output<String> s3OutputPath;
 
-    public Input<String> getS3OutputPath() {
-        return this.s3OutputPath == null ? Input.empty() : this.s3OutputPath;
+    public Output<String> getS3OutputPath() {
+        return this.s3OutputPath == null ? Output.empty() : this.s3OutputPath;
     }
 
     public UserProfileSharingSettingsArgs(
-        @Nullable Input<UserProfileSharingSettingsNotebookOutputOption> notebookOutputOption,
-        @Nullable Input<String> s3KmsKeyId,
-        @Nullable Input<String> s3OutputPath) {
+        @Nullable Output<UserProfileSharingSettingsNotebookOutputOption> notebookOutputOption,
+        @Nullable Output<String> s3KmsKeyId,
+        @Nullable Output<String> s3OutputPath) {
         this.notebookOutputOption = notebookOutputOption;
         this.s3KmsKeyId = s3KmsKeyId;
         this.s3OutputPath = s3OutputPath;
     }
 
     private UserProfileSharingSettingsArgs() {
-        this.notebookOutputOption = Input.empty();
-        this.s3KmsKeyId = Input.empty();
-        this.s3OutputPath = Input.empty();
+        this.notebookOutputOption = Output.empty();
+        this.s3KmsKeyId = Output.empty();
+        this.s3OutputPath = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class UserProfileSharingSettingsArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<UserProfileSharingSettingsNotebookOutputOption> notebookOutputOption;
-        private @Nullable Input<String> s3KmsKeyId;
-        private @Nullable Input<String> s3OutputPath;
+        private @Nullable Output<UserProfileSharingSettingsNotebookOutputOption> notebookOutputOption;
+        private @Nullable Output<String> s3KmsKeyId;
+        private @Nullable Output<String> s3OutputPath;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class UserProfileSharingSettingsArgs extends io.pulumi.resources.Re
     	      this.s3OutputPath = defaults.s3OutputPath;
         }
 
-        public Builder notebookOutputOption(@Nullable Input<UserProfileSharingSettingsNotebookOutputOption> notebookOutputOption) {
+        public Builder notebookOutputOption(@Nullable Output<UserProfileSharingSettingsNotebookOutputOption> notebookOutputOption) {
             this.notebookOutputOption = notebookOutputOption;
             return this;
         }
 
         public Builder notebookOutputOption(@Nullable UserProfileSharingSettingsNotebookOutputOption notebookOutputOption) {
-            this.notebookOutputOption = Input.ofNullable(notebookOutputOption);
+            this.notebookOutputOption = Output.ofNullable(notebookOutputOption);
             return this;
         }
 
-        public Builder s3KmsKeyId(@Nullable Input<String> s3KmsKeyId) {
+        public Builder s3KmsKeyId(@Nullable Output<String> s3KmsKeyId) {
             this.s3KmsKeyId = s3KmsKeyId;
             return this;
         }
 
         public Builder s3KmsKeyId(@Nullable String s3KmsKeyId) {
-            this.s3KmsKeyId = Input.ofNullable(s3KmsKeyId);
+            this.s3KmsKeyId = Output.ofNullable(s3KmsKeyId);
             return this;
         }
 
-        public Builder s3OutputPath(@Nullable Input<String> s3OutputPath) {
+        public Builder s3OutputPath(@Nullable Output<String> s3OutputPath) {
             this.s3OutputPath = s3OutputPath;
             return this;
         }
 
         public Builder s3OutputPath(@Nullable String s3OutputPath) {
-            this.s3OutputPath = Input.ofNullable(s3OutputPath);
+            this.s3OutputPath = Output.ofNullable(s3OutputPath);
             return this;
         }
         public UserProfileSharingSettingsArgs build() {

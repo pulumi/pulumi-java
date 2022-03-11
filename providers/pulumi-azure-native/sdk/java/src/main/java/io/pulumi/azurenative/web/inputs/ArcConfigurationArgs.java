@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.enums.StorageType;
 import io.pulumi.azurenative.web.inputs.FrontEndConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -17,62 +17,62 @@ public final class ArcConfigurationArgs extends io.pulumi.resources.ResourceArgs
     public static final ArcConfigurationArgs Empty = new ArcConfigurationArgs();
 
     @InputImport(name="artifactStorageAccessMode")
-      private final @Nullable Input<String> artifactStorageAccessMode;
+      private final @Nullable Output<String> artifactStorageAccessMode;
 
-    public Input<String> getArtifactStorageAccessMode() {
-        return this.artifactStorageAccessMode == null ? Input.empty() : this.artifactStorageAccessMode;
+    public Output<String> getArtifactStorageAccessMode() {
+        return this.artifactStorageAccessMode == null ? Output.empty() : this.artifactStorageAccessMode;
     }
 
     @InputImport(name="artifactStorageClassName")
-      private final @Nullable Input<String> artifactStorageClassName;
+      private final @Nullable Output<String> artifactStorageClassName;
 
-    public Input<String> getArtifactStorageClassName() {
-        return this.artifactStorageClassName == null ? Input.empty() : this.artifactStorageClassName;
+    public Output<String> getArtifactStorageClassName() {
+        return this.artifactStorageClassName == null ? Output.empty() : this.artifactStorageClassName;
     }
 
     @InputImport(name="artifactStorageMountPath")
-      private final @Nullable Input<String> artifactStorageMountPath;
+      private final @Nullable Output<String> artifactStorageMountPath;
 
-    public Input<String> getArtifactStorageMountPath() {
-        return this.artifactStorageMountPath == null ? Input.empty() : this.artifactStorageMountPath;
+    public Output<String> getArtifactStorageMountPath() {
+        return this.artifactStorageMountPath == null ? Output.empty() : this.artifactStorageMountPath;
     }
 
     @InputImport(name="artifactStorageNodeName")
-      private final @Nullable Input<String> artifactStorageNodeName;
+      private final @Nullable Output<String> artifactStorageNodeName;
 
-    public Input<String> getArtifactStorageNodeName() {
-        return this.artifactStorageNodeName == null ? Input.empty() : this.artifactStorageNodeName;
+    public Output<String> getArtifactStorageNodeName() {
+        return this.artifactStorageNodeName == null ? Output.empty() : this.artifactStorageNodeName;
     }
 
     @InputImport(name="artifactsStorageType")
-      private final @Nullable Input<StorageType> artifactsStorageType;
+      private final @Nullable Output<StorageType> artifactsStorageType;
 
-    public Input<StorageType> getArtifactsStorageType() {
-        return this.artifactsStorageType == null ? Input.empty() : this.artifactsStorageType;
+    public Output<StorageType> getArtifactsStorageType() {
+        return this.artifactsStorageType == null ? Output.empty() : this.artifactsStorageType;
     }
 
     @InputImport(name="frontEndServiceConfiguration")
-      private final @Nullable Input<FrontEndConfigurationArgs> frontEndServiceConfiguration;
+      private final @Nullable Output<FrontEndConfigurationArgs> frontEndServiceConfiguration;
 
-    public Input<FrontEndConfigurationArgs> getFrontEndServiceConfiguration() {
-        return this.frontEndServiceConfiguration == null ? Input.empty() : this.frontEndServiceConfiguration;
+    public Output<FrontEndConfigurationArgs> getFrontEndServiceConfiguration() {
+        return this.frontEndServiceConfiguration == null ? Output.empty() : this.frontEndServiceConfiguration;
     }
 
     @InputImport(name="kubeConfig")
-      private final @Nullable Input<String> kubeConfig;
+      private final @Nullable Output<String> kubeConfig;
 
-    public Input<String> getKubeConfig() {
-        return this.kubeConfig == null ? Input.empty() : this.kubeConfig;
+    public Output<String> getKubeConfig() {
+        return this.kubeConfig == null ? Output.empty() : this.kubeConfig;
     }
 
     public ArcConfigurationArgs(
-        @Nullable Input<String> artifactStorageAccessMode,
-        @Nullable Input<String> artifactStorageClassName,
-        @Nullable Input<String> artifactStorageMountPath,
-        @Nullable Input<String> artifactStorageNodeName,
-        @Nullable Input<StorageType> artifactsStorageType,
-        @Nullable Input<FrontEndConfigurationArgs> frontEndServiceConfiguration,
-        @Nullable Input<String> kubeConfig) {
+        @Nullable Output<String> artifactStorageAccessMode,
+        @Nullable Output<String> artifactStorageClassName,
+        @Nullable Output<String> artifactStorageMountPath,
+        @Nullable Output<String> artifactStorageNodeName,
+        @Nullable Output<StorageType> artifactsStorageType,
+        @Nullable Output<FrontEndConfigurationArgs> frontEndServiceConfiguration,
+        @Nullable Output<String> kubeConfig) {
         this.artifactStorageAccessMode = artifactStorageAccessMode;
         this.artifactStorageClassName = artifactStorageClassName;
         this.artifactStorageMountPath = artifactStorageMountPath;
@@ -83,13 +83,13 @@ public final class ArcConfigurationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ArcConfigurationArgs() {
-        this.artifactStorageAccessMode = Input.empty();
-        this.artifactStorageClassName = Input.empty();
-        this.artifactStorageMountPath = Input.empty();
-        this.artifactStorageNodeName = Input.empty();
-        this.artifactsStorageType = Input.empty();
-        this.frontEndServiceConfiguration = Input.empty();
-        this.kubeConfig = Input.empty();
+        this.artifactStorageAccessMode = Output.empty();
+        this.artifactStorageClassName = Output.empty();
+        this.artifactStorageMountPath = Output.empty();
+        this.artifactStorageNodeName = Output.empty();
+        this.artifactsStorageType = Output.empty();
+        this.frontEndServiceConfiguration = Output.empty();
+        this.kubeConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,13 +101,13 @@ public final class ArcConfigurationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> artifactStorageAccessMode;
-        private @Nullable Input<String> artifactStorageClassName;
-        private @Nullable Input<String> artifactStorageMountPath;
-        private @Nullable Input<String> artifactStorageNodeName;
-        private @Nullable Input<StorageType> artifactsStorageType;
-        private @Nullable Input<FrontEndConfigurationArgs> frontEndServiceConfiguration;
-        private @Nullable Input<String> kubeConfig;
+        private @Nullable Output<String> artifactStorageAccessMode;
+        private @Nullable Output<String> artifactStorageClassName;
+        private @Nullable Output<String> artifactStorageMountPath;
+        private @Nullable Output<String> artifactStorageNodeName;
+        private @Nullable Output<StorageType> artifactsStorageType;
+        private @Nullable Output<FrontEndConfigurationArgs> frontEndServiceConfiguration;
+        private @Nullable Output<String> kubeConfig;
 
         public Builder() {
     	      // Empty
@@ -124,73 +124,73 @@ public final class ArcConfigurationArgs extends io.pulumi.resources.ResourceArgs
     	      this.kubeConfig = defaults.kubeConfig;
         }
 
-        public Builder artifactStorageAccessMode(@Nullable Input<String> artifactStorageAccessMode) {
+        public Builder artifactStorageAccessMode(@Nullable Output<String> artifactStorageAccessMode) {
             this.artifactStorageAccessMode = artifactStorageAccessMode;
             return this;
         }
 
         public Builder artifactStorageAccessMode(@Nullable String artifactStorageAccessMode) {
-            this.artifactStorageAccessMode = Input.ofNullable(artifactStorageAccessMode);
+            this.artifactStorageAccessMode = Output.ofNullable(artifactStorageAccessMode);
             return this;
         }
 
-        public Builder artifactStorageClassName(@Nullable Input<String> artifactStorageClassName) {
+        public Builder artifactStorageClassName(@Nullable Output<String> artifactStorageClassName) {
             this.artifactStorageClassName = artifactStorageClassName;
             return this;
         }
 
         public Builder artifactStorageClassName(@Nullable String artifactStorageClassName) {
-            this.artifactStorageClassName = Input.ofNullable(artifactStorageClassName);
+            this.artifactStorageClassName = Output.ofNullable(artifactStorageClassName);
             return this;
         }
 
-        public Builder artifactStorageMountPath(@Nullable Input<String> artifactStorageMountPath) {
+        public Builder artifactStorageMountPath(@Nullable Output<String> artifactStorageMountPath) {
             this.artifactStorageMountPath = artifactStorageMountPath;
             return this;
         }
 
         public Builder artifactStorageMountPath(@Nullable String artifactStorageMountPath) {
-            this.artifactStorageMountPath = Input.ofNullable(artifactStorageMountPath);
+            this.artifactStorageMountPath = Output.ofNullable(artifactStorageMountPath);
             return this;
         }
 
-        public Builder artifactStorageNodeName(@Nullable Input<String> artifactStorageNodeName) {
+        public Builder artifactStorageNodeName(@Nullable Output<String> artifactStorageNodeName) {
             this.artifactStorageNodeName = artifactStorageNodeName;
             return this;
         }
 
         public Builder artifactStorageNodeName(@Nullable String artifactStorageNodeName) {
-            this.artifactStorageNodeName = Input.ofNullable(artifactStorageNodeName);
+            this.artifactStorageNodeName = Output.ofNullable(artifactStorageNodeName);
             return this;
         }
 
-        public Builder artifactsStorageType(@Nullable Input<StorageType> artifactsStorageType) {
+        public Builder artifactsStorageType(@Nullable Output<StorageType> artifactsStorageType) {
             this.artifactsStorageType = artifactsStorageType;
             return this;
         }
 
         public Builder artifactsStorageType(@Nullable StorageType artifactsStorageType) {
-            this.artifactsStorageType = Input.ofNullable(artifactsStorageType);
+            this.artifactsStorageType = Output.ofNullable(artifactsStorageType);
             return this;
         }
 
-        public Builder frontEndServiceConfiguration(@Nullable Input<FrontEndConfigurationArgs> frontEndServiceConfiguration) {
+        public Builder frontEndServiceConfiguration(@Nullable Output<FrontEndConfigurationArgs> frontEndServiceConfiguration) {
             this.frontEndServiceConfiguration = frontEndServiceConfiguration;
             return this;
         }
 
         public Builder frontEndServiceConfiguration(@Nullable FrontEndConfigurationArgs frontEndServiceConfiguration) {
-            this.frontEndServiceConfiguration = Input.ofNullable(frontEndServiceConfiguration);
+            this.frontEndServiceConfiguration = Output.ofNullable(frontEndServiceConfiguration);
             return this;
         }
 
-        public Builder kubeConfig(@Nullable Input<String> kubeConfig) {
+        public Builder kubeConfig(@Nullable Output<String> kubeConfig) {
             this.kubeConfig = kubeConfig;
             return this;
         }
 
         public Builder kubeConfig(@Nullable String kubeConfig) {
-            this.kubeConfig = Input.ofNullable(kubeConfig);
+            this.kubeConfig = Output.ofNullable(kubeConfig);
             return this;
         }
         public ArcConfigurationArgs build() {

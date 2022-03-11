@@ -5,7 +5,7 @@ package io.pulumi.azurenative.automanage.inputs;
 
 import io.pulumi.azurenative.automanage.inputs.ConfigurationProfilePreferenceAntiMalwareArgs;
 import io.pulumi.azurenative.automanage.inputs.ConfigurationProfilePreferenceVmBackupArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,10 +24,10 @@ public final class ConfigurationProfilePreferencePropertiesArgs extends io.pulum
      * 
      */
     @InputImport(name="antiMalware")
-      private final @Nullable Input<ConfigurationProfilePreferenceAntiMalwareArgs> antiMalware;
+      private final @Nullable Output<ConfigurationProfilePreferenceAntiMalwareArgs> antiMalware;
 
-    public Input<ConfigurationProfilePreferenceAntiMalwareArgs> getAntiMalware() {
-        return this.antiMalware == null ? Input.empty() : this.antiMalware;
+    public Output<ConfigurationProfilePreferenceAntiMalwareArgs> getAntiMalware() {
+        return this.antiMalware == null ? Output.empty() : this.antiMalware;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ConfigurationProfilePreferencePropertiesArgs extends io.pulum
      * 
      */
     @InputImport(name="vmBackup")
-      private final @Nullable Input<ConfigurationProfilePreferenceVmBackupArgs> vmBackup;
+      private final @Nullable Output<ConfigurationProfilePreferenceVmBackupArgs> vmBackup;
 
-    public Input<ConfigurationProfilePreferenceVmBackupArgs> getVmBackup() {
-        return this.vmBackup == null ? Input.empty() : this.vmBackup;
+    public Output<ConfigurationProfilePreferenceVmBackupArgs> getVmBackup() {
+        return this.vmBackup == null ? Output.empty() : this.vmBackup;
     }
 
     public ConfigurationProfilePreferencePropertiesArgs(
-        @Nullable Input<ConfigurationProfilePreferenceAntiMalwareArgs> antiMalware,
-        @Nullable Input<ConfigurationProfilePreferenceVmBackupArgs> vmBackup) {
+        @Nullable Output<ConfigurationProfilePreferenceAntiMalwareArgs> antiMalware,
+        @Nullable Output<ConfigurationProfilePreferenceVmBackupArgs> vmBackup) {
         this.antiMalware = antiMalware;
         this.vmBackup = vmBackup;
     }
 
     private ConfigurationProfilePreferencePropertiesArgs() {
-        this.antiMalware = Input.empty();
-        this.vmBackup = Input.empty();
+        this.antiMalware = Output.empty();
+        this.vmBackup = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ConfigurationProfilePreferencePropertiesArgs extends io.pulum
     }
 
     public static final class Builder {
-        private @Nullable Input<ConfigurationProfilePreferenceAntiMalwareArgs> antiMalware;
-        private @Nullable Input<ConfigurationProfilePreferenceVmBackupArgs> vmBackup;
+        private @Nullable Output<ConfigurationProfilePreferenceAntiMalwareArgs> antiMalware;
+        private @Nullable Output<ConfigurationProfilePreferenceVmBackupArgs> vmBackup;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ConfigurationProfilePreferencePropertiesArgs extends io.pulum
     	      this.vmBackup = defaults.vmBackup;
         }
 
-        public Builder antiMalware(@Nullable Input<ConfigurationProfilePreferenceAntiMalwareArgs> antiMalware) {
+        public Builder antiMalware(@Nullable Output<ConfigurationProfilePreferenceAntiMalwareArgs> antiMalware) {
             this.antiMalware = antiMalware;
             return this;
         }
 
         public Builder antiMalware(@Nullable ConfigurationProfilePreferenceAntiMalwareArgs antiMalware) {
-            this.antiMalware = Input.ofNullable(antiMalware);
+            this.antiMalware = Output.ofNullable(antiMalware);
             return this;
         }
 
-        public Builder vmBackup(@Nullable Input<ConfigurationProfilePreferenceVmBackupArgs> vmBackup) {
+        public Builder vmBackup(@Nullable Output<ConfigurationProfilePreferenceVmBackupArgs> vmBackup) {
             this.vmBackup = vmBackup;
             return this;
         }
 
         public Builder vmBackup(@Nullable ConfigurationProfilePreferenceVmBackupArgs vmBackup) {
-            this.vmBackup = Input.ofNullable(vmBackup);
+            this.vmBackup = Output.ofNullable(vmBackup);
             return this;
         }
         public ConfigurationProfilePreferencePropertiesArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.azurenative.migrate.inputs.CollectorAgentPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,10 +16,10 @@ public final class CollectorPropertiesArgs extends io.pulumi.resources.ResourceA
     public static final CollectorPropertiesArgs Empty = new CollectorPropertiesArgs();
 
     @InputImport(name="agentProperties")
-      private final @Nullable Input<CollectorAgentPropertiesArgs> agentProperties;
+      private final @Nullable Output<CollectorAgentPropertiesArgs> agentProperties;
 
-    public Input<CollectorAgentPropertiesArgs> getAgentProperties() {
-        return this.agentProperties == null ? Input.empty() : this.agentProperties;
+    public Output<CollectorAgentPropertiesArgs> getAgentProperties() {
+        return this.agentProperties == null ? Output.empty() : this.agentProperties;
     }
 
     /**
@@ -27,22 +27,22 @@ public final class CollectorPropertiesArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="discoverySiteId")
-      private final @Nullable Input<String> discoverySiteId;
+      private final @Nullable Output<String> discoverySiteId;
 
-    public Input<String> getDiscoverySiteId() {
-        return this.discoverySiteId == null ? Input.empty() : this.discoverySiteId;
+    public Output<String> getDiscoverySiteId() {
+        return this.discoverySiteId == null ? Output.empty() : this.discoverySiteId;
     }
 
     public CollectorPropertiesArgs(
-        @Nullable Input<CollectorAgentPropertiesArgs> agentProperties,
-        @Nullable Input<String> discoverySiteId) {
+        @Nullable Output<CollectorAgentPropertiesArgs> agentProperties,
+        @Nullable Output<String> discoverySiteId) {
         this.agentProperties = agentProperties;
         this.discoverySiteId = discoverySiteId;
     }
 
     private CollectorPropertiesArgs() {
-        this.agentProperties = Input.empty();
-        this.discoverySiteId = Input.empty();
+        this.agentProperties = Output.empty();
+        this.discoverySiteId = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class CollectorPropertiesArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<CollectorAgentPropertiesArgs> agentProperties;
-        private @Nullable Input<String> discoverySiteId;
+        private @Nullable Output<CollectorAgentPropertiesArgs> agentProperties;
+        private @Nullable Output<String> discoverySiteId;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class CollectorPropertiesArgs extends io.pulumi.resources.ResourceA
     	      this.discoverySiteId = defaults.discoverySiteId;
         }
 
-        public Builder agentProperties(@Nullable Input<CollectorAgentPropertiesArgs> agentProperties) {
+        public Builder agentProperties(@Nullable Output<CollectorAgentPropertiesArgs> agentProperties) {
             this.agentProperties = agentProperties;
             return this;
         }
 
         public Builder agentProperties(@Nullable CollectorAgentPropertiesArgs agentProperties) {
-            this.agentProperties = Input.ofNullable(agentProperties);
+            this.agentProperties = Output.ofNullable(agentProperties);
             return this;
         }
 
-        public Builder discoverySiteId(@Nullable Input<String> discoverySiteId) {
+        public Builder discoverySiteId(@Nullable Output<String> discoverySiteId) {
             this.discoverySiteId = discoverySiteId;
             return this;
         }
 
         public Builder discoverySiteId(@Nullable String discoverySiteId) {
-            this.discoverySiteId = Input.ofNullable(discoverySiteId);
+            this.discoverySiteId = Output.ofNullable(discoverySiteId);
             return this;
         }
         public CollectorPropertiesArgs build() {

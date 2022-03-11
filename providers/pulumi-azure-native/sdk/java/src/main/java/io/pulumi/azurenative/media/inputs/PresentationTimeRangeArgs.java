@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -24,10 +24,10 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="endTimestamp")
-      private final @Nullable Input<Double> endTimestamp;
+      private final @Nullable Output<Double> endTimestamp;
 
-    public Input<Double> getEndTimestamp() {
-        return this.endTimestamp == null ? Input.empty() : this.endTimestamp;
+    public Output<Double> getEndTimestamp() {
+        return this.endTimestamp == null ? Output.empty() : this.endTimestamp;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="forceEndTimestamp")
-      private final @Nullable Input<Boolean> forceEndTimestamp;
+      private final @Nullable Output<Boolean> forceEndTimestamp;
 
-    public Input<Boolean> getForceEndTimestamp() {
-        return this.forceEndTimestamp == null ? Input.empty() : this.forceEndTimestamp;
+    public Output<Boolean> getForceEndTimestamp() {
+        return this.forceEndTimestamp == null ? Output.empty() : this.forceEndTimestamp;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="liveBackoffDuration")
-      private final @Nullable Input<Double> liveBackoffDuration;
+      private final @Nullable Output<Double> liveBackoffDuration;
 
-    public Input<Double> getLiveBackoffDuration() {
-        return this.liveBackoffDuration == null ? Input.empty() : this.liveBackoffDuration;
+    public Output<Double> getLiveBackoffDuration() {
+        return this.liveBackoffDuration == null ? Output.empty() : this.liveBackoffDuration;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="presentationWindowDuration")
-      private final @Nullable Input<Double> presentationWindowDuration;
+      private final @Nullable Output<Double> presentationWindowDuration;
 
-    public Input<Double> getPresentationWindowDuration() {
-        return this.presentationWindowDuration == null ? Input.empty() : this.presentationWindowDuration;
+    public Output<Double> getPresentationWindowDuration() {
+        return this.presentationWindowDuration == null ? Output.empty() : this.presentationWindowDuration;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="startTimestamp")
-      private final @Nullable Input<Double> startTimestamp;
+      private final @Nullable Output<Double> startTimestamp;
 
-    public Input<Double> getStartTimestamp() {
-        return this.startTimestamp == null ? Input.empty() : this.startTimestamp;
+    public Output<Double> getStartTimestamp() {
+        return this.startTimestamp == null ? Output.empty() : this.startTimestamp;
     }
 
     /**
@@ -79,19 +79,19 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="timescale")
-      private final @Nullable Input<Double> timescale;
+      private final @Nullable Output<Double> timescale;
 
-    public Input<Double> getTimescale() {
-        return this.timescale == null ? Input.empty() : this.timescale;
+    public Output<Double> getTimescale() {
+        return this.timescale == null ? Output.empty() : this.timescale;
     }
 
     public PresentationTimeRangeArgs(
-        @Nullable Input<Double> endTimestamp,
-        @Nullable Input<Boolean> forceEndTimestamp,
-        @Nullable Input<Double> liveBackoffDuration,
-        @Nullable Input<Double> presentationWindowDuration,
-        @Nullable Input<Double> startTimestamp,
-        @Nullable Input<Double> timescale) {
+        @Nullable Output<Double> endTimestamp,
+        @Nullable Output<Boolean> forceEndTimestamp,
+        @Nullable Output<Double> liveBackoffDuration,
+        @Nullable Output<Double> presentationWindowDuration,
+        @Nullable Output<Double> startTimestamp,
+        @Nullable Output<Double> timescale) {
         this.endTimestamp = endTimestamp;
         this.forceEndTimestamp = forceEndTimestamp;
         this.liveBackoffDuration = liveBackoffDuration;
@@ -101,12 +101,12 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
     }
 
     private PresentationTimeRangeArgs() {
-        this.endTimestamp = Input.empty();
-        this.forceEndTimestamp = Input.empty();
-        this.liveBackoffDuration = Input.empty();
-        this.presentationWindowDuration = Input.empty();
-        this.startTimestamp = Input.empty();
-        this.timescale = Input.empty();
+        this.endTimestamp = Output.empty();
+        this.forceEndTimestamp = Output.empty();
+        this.liveBackoffDuration = Output.empty();
+        this.presentationWindowDuration = Output.empty();
+        this.startTimestamp = Output.empty();
+        this.timescale = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,12 +118,12 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Double> endTimestamp;
-        private @Nullable Input<Boolean> forceEndTimestamp;
-        private @Nullable Input<Double> liveBackoffDuration;
-        private @Nullable Input<Double> presentationWindowDuration;
-        private @Nullable Input<Double> startTimestamp;
-        private @Nullable Input<Double> timescale;
+        private @Nullable Output<Double> endTimestamp;
+        private @Nullable Output<Boolean> forceEndTimestamp;
+        private @Nullable Output<Double> liveBackoffDuration;
+        private @Nullable Output<Double> presentationWindowDuration;
+        private @Nullable Output<Double> startTimestamp;
+        private @Nullable Output<Double> timescale;
 
         public Builder() {
     	      // Empty
@@ -139,63 +139,63 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
     	      this.timescale = defaults.timescale;
         }
 
-        public Builder endTimestamp(@Nullable Input<Double> endTimestamp) {
+        public Builder endTimestamp(@Nullable Output<Double> endTimestamp) {
             this.endTimestamp = endTimestamp;
             return this;
         }
 
         public Builder endTimestamp(@Nullable Double endTimestamp) {
-            this.endTimestamp = Input.ofNullable(endTimestamp);
+            this.endTimestamp = Output.ofNullable(endTimestamp);
             return this;
         }
 
-        public Builder forceEndTimestamp(@Nullable Input<Boolean> forceEndTimestamp) {
+        public Builder forceEndTimestamp(@Nullable Output<Boolean> forceEndTimestamp) {
             this.forceEndTimestamp = forceEndTimestamp;
             return this;
         }
 
         public Builder forceEndTimestamp(@Nullable Boolean forceEndTimestamp) {
-            this.forceEndTimestamp = Input.ofNullable(forceEndTimestamp);
+            this.forceEndTimestamp = Output.ofNullable(forceEndTimestamp);
             return this;
         }
 
-        public Builder liveBackoffDuration(@Nullable Input<Double> liveBackoffDuration) {
+        public Builder liveBackoffDuration(@Nullable Output<Double> liveBackoffDuration) {
             this.liveBackoffDuration = liveBackoffDuration;
             return this;
         }
 
         public Builder liveBackoffDuration(@Nullable Double liveBackoffDuration) {
-            this.liveBackoffDuration = Input.ofNullable(liveBackoffDuration);
+            this.liveBackoffDuration = Output.ofNullable(liveBackoffDuration);
             return this;
         }
 
-        public Builder presentationWindowDuration(@Nullable Input<Double> presentationWindowDuration) {
+        public Builder presentationWindowDuration(@Nullable Output<Double> presentationWindowDuration) {
             this.presentationWindowDuration = presentationWindowDuration;
             return this;
         }
 
         public Builder presentationWindowDuration(@Nullable Double presentationWindowDuration) {
-            this.presentationWindowDuration = Input.ofNullable(presentationWindowDuration);
+            this.presentationWindowDuration = Output.ofNullable(presentationWindowDuration);
             return this;
         }
 
-        public Builder startTimestamp(@Nullable Input<Double> startTimestamp) {
+        public Builder startTimestamp(@Nullable Output<Double> startTimestamp) {
             this.startTimestamp = startTimestamp;
             return this;
         }
 
         public Builder startTimestamp(@Nullable Double startTimestamp) {
-            this.startTimestamp = Input.ofNullable(startTimestamp);
+            this.startTimestamp = Output.ofNullable(startTimestamp);
             return this;
         }
 
-        public Builder timescale(@Nullable Input<Double> timescale) {
+        public Builder timescale(@Nullable Output<Double> timescale) {
             this.timescale = timescale;
             return this;
         }
 
         public Builder timescale(@Nullable Double timescale) {
-            this.timescale = Input.ofNullable(timescale);
+            this.timescale = Output.ofNullable(timescale);
             return this;
         }
         public PresentationTimeRangeArgs build() {

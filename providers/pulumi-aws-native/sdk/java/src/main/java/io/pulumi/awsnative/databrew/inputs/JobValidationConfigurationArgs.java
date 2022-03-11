@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.awsnative.databrew.enums.JobValidationMode;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,29 +24,29 @@ public final class JobValidationConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="rulesetArn", required=true)
-      private final Input<String> rulesetArn;
+      private final Output<String> rulesetArn;
 
-    public Input<String> getRulesetArn() {
+    public Output<String> getRulesetArn() {
         return this.rulesetArn;
     }
 
     @InputImport(name="validationMode")
-      private final @Nullable Input<JobValidationMode> validationMode;
+      private final @Nullable Output<JobValidationMode> validationMode;
 
-    public Input<JobValidationMode> getValidationMode() {
-        return this.validationMode == null ? Input.empty() : this.validationMode;
+    public Output<JobValidationMode> getValidationMode() {
+        return this.validationMode == null ? Output.empty() : this.validationMode;
     }
 
     public JobValidationConfigurationArgs(
-        Input<String> rulesetArn,
-        @Nullable Input<JobValidationMode> validationMode) {
+        Output<String> rulesetArn,
+        @Nullable Output<JobValidationMode> validationMode) {
         this.rulesetArn = Objects.requireNonNull(rulesetArn, "expected parameter 'rulesetArn' to be non-null");
         this.validationMode = validationMode;
     }
 
     private JobValidationConfigurationArgs() {
-        this.rulesetArn = Input.empty();
-        this.validationMode = Input.empty();
+        this.rulesetArn = Output.empty();
+        this.validationMode = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class JobValidationConfigurationArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<String> rulesetArn;
-        private @Nullable Input<JobValidationMode> validationMode;
+        private Output<String> rulesetArn;
+        private @Nullable Output<JobValidationMode> validationMode;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class JobValidationConfigurationArgs extends io.pulumi.resources.Re
     	      this.validationMode = defaults.validationMode;
         }
 
-        public Builder rulesetArn(Input<String> rulesetArn) {
+        public Builder rulesetArn(Output<String> rulesetArn) {
             this.rulesetArn = Objects.requireNonNull(rulesetArn);
             return this;
         }
 
         public Builder rulesetArn(String rulesetArn) {
-            this.rulesetArn = Input.of(Objects.requireNonNull(rulesetArn));
+            this.rulesetArn = Output.of(Objects.requireNonNull(rulesetArn));
             return this;
         }
 
-        public Builder validationMode(@Nullable Input<JobValidationMode> validationMode) {
+        public Builder validationMode(@Nullable Output<JobValidationMode> validationMode) {
             this.validationMode = validationMode;
             return this;
         }
 
         public Builder validationMode(@Nullable JobValidationMode validationMode) {
-            this.validationMode = Input.ofNullable(validationMode);
+            this.validationMode = Output.ofNullable(validationMode);
             return this;
         }
         public JobValidationConfigurationArgs build() {

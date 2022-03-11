@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito;
 
 import io.pulumi.aws.cognito.inputs.ResourceServerScopeArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,9 +21,9 @@ public final class ResourceServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identifier", required=true)
-      private final Input<String> identifier;
+      private final Output<String> identifier;
 
-    public Input<String> getIdentifier() {
+    public Output<String> getIdentifier() {
         return this.identifier;
     }
 
@@ -32,10 +32,10 @@ public final class ResourceServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -43,24 +43,24 @@ public final class ResourceServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scopes")
-      private final @Nullable Input<List<ResourceServerScopeArgs>> scopes;
+      private final @Nullable Output<List<ResourceServerScopeArgs>> scopes;
 
-    public Input<List<ResourceServerScopeArgs>> getScopes() {
-        return this.scopes == null ? Input.empty() : this.scopes;
+    public Output<List<ResourceServerScopeArgs>> getScopes() {
+        return this.scopes == null ? Output.empty() : this.scopes;
     }
 
     @InputImport(name="userPoolId", required=true)
-      private final Input<String> userPoolId;
+      private final Output<String> userPoolId;
 
-    public Input<String> getUserPoolId() {
+    public Output<String> getUserPoolId() {
         return this.userPoolId;
     }
 
     public ResourceServerArgs(
-        Input<String> identifier,
-        @Nullable Input<String> name,
-        @Nullable Input<List<ResourceServerScopeArgs>> scopes,
-        Input<String> userPoolId) {
+        Output<String> identifier,
+        @Nullable Output<String> name,
+        @Nullable Output<List<ResourceServerScopeArgs>> scopes,
+        Output<String> userPoolId) {
         this.identifier = Objects.requireNonNull(identifier, "expected parameter 'identifier' to be non-null");
         this.name = name;
         this.scopes = scopes;
@@ -68,10 +68,10 @@ public final class ResourceServerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResourceServerArgs() {
-        this.identifier = Input.empty();
-        this.name = Input.empty();
-        this.scopes = Input.empty();
-        this.userPoolId = Input.empty();
+        this.identifier = Output.empty();
+        this.name = Output.empty();
+        this.scopes = Output.empty();
+        this.userPoolId = Output.empty();
     }
 
     public static Builder builder() {
@@ -83,10 +83,10 @@ public final class ResourceServerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> identifier;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<ResourceServerScopeArgs>> scopes;
-        private Input<String> userPoolId;
+        private Output<String> identifier;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<ResourceServerScopeArgs>> scopes;
+        private Output<String> userPoolId;
 
         public Builder() {
     	      // Empty
@@ -100,43 +100,43 @@ public final class ResourceServerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userPoolId = defaults.userPoolId;
         }
 
-        public Builder identifier(Input<String> identifier) {
+        public Builder identifier(Output<String> identifier) {
             this.identifier = Objects.requireNonNull(identifier);
             return this;
         }
 
         public Builder identifier(String identifier) {
-            this.identifier = Input.of(Objects.requireNonNull(identifier));
+            this.identifier = Output.of(Objects.requireNonNull(identifier));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder scopes(@Nullable Input<List<ResourceServerScopeArgs>> scopes) {
+        public Builder scopes(@Nullable Output<List<ResourceServerScopeArgs>> scopes) {
             this.scopes = scopes;
             return this;
         }
 
         public Builder scopes(@Nullable List<ResourceServerScopeArgs> scopes) {
-            this.scopes = Input.ofNullable(scopes);
+            this.scopes = Output.ofNullable(scopes);
             return this;
         }
 
-        public Builder userPoolId(Input<String> userPoolId) {
+        public Builder userPoolId(Output<String> userPoolId) {
             this.userPoolId = Objects.requireNonNull(userPoolId);
             return this;
         }
 
         public Builder userPoolId(String userPoolId) {
-            this.userPoolId = Input.of(Objects.requireNonNull(userPoolId));
+            this.userPoolId = Output.of(Objects.requireNonNull(userPoolId));
             return this;
         }
         public ResourceServerArgs build() {

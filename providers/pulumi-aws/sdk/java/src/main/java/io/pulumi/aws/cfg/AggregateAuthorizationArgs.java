@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cfg;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,9 +20,9 @@ public final class AggregateAuthorizationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="accountId", required=true)
-      private final Input<String> accountId;
+      private final Output<String> accountId;
 
-    public Input<String> getAccountId() {
+    public Output<String> getAccountId() {
         return this.accountId;
     }
 
@@ -31,9 +31,9 @@ public final class AggregateAuthorizationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="region", required=true)
-      private final Input<String> region;
+      private final Output<String> region;
 
-    public Input<String> getRegion() {
+    public Output<String> getRegion() {
         return this.region;
     }
 
@@ -42,25 +42,25 @@ public final class AggregateAuthorizationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public AggregateAuthorizationArgs(
-        Input<String> accountId,
-        Input<String> region,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> accountId,
+        Output<String> region,
+        @Nullable Output<Map<String,String>> tags) {
         this.accountId = Objects.requireNonNull(accountId, "expected parameter 'accountId' to be non-null");
         this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
         this.tags = tags;
     }
 
     private AggregateAuthorizationArgs() {
-        this.accountId = Input.empty();
-        this.region = Input.empty();
-        this.tags = Input.empty();
+        this.accountId = Output.empty();
+        this.region = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class AggregateAuthorizationArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> accountId;
-        private Input<String> region;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> accountId;
+        private Output<String> region;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class AggregateAuthorizationArgs extends io.pulumi.resources.Resour
     	      this.tags = defaults.tags;
         }
 
-        public Builder accountId(Input<String> accountId) {
+        public Builder accountId(Output<String> accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
 
         public Builder accountId(String accountId) {
-            this.accountId = Input.of(Objects.requireNonNull(accountId));
+            this.accountId = Output.of(Objects.requireNonNull(accountId));
             return this;
         }
 
-        public Builder region(Input<String> region) {
+        public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
         public Builder region(String region) {
-            this.region = Input.of(Objects.requireNonNull(region));
+            this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public AggregateAuthorizationArgs build() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.media.inputs;
 import io.pulumi.azurenative.media.enums.LiveEventEncodingType;
 import io.pulumi.azurenative.media.enums.StretchMode;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class LiveEventEncodingArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="encodingType")
-      private final @Nullable Input<Either<String,LiveEventEncodingType>> encodingType;
+      private final @Nullable Output<Either<String,LiveEventEncodingType>> encodingType;
 
-    public Input<Either<String,LiveEventEncodingType>> getEncodingType() {
-        return this.encodingType == null ? Input.empty() : this.encodingType;
+    public Output<Either<String,LiveEventEncodingType>> getEncodingType() {
+        return this.encodingType == null ? Output.empty() : this.encodingType;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class LiveEventEncodingArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="keyFrameInterval")
-      private final @Nullable Input<String> keyFrameInterval;
+      private final @Nullable Output<String> keyFrameInterval;
 
-    public Input<String> getKeyFrameInterval() {
-        return this.keyFrameInterval == null ? Input.empty() : this.keyFrameInterval;
+    public Output<String> getKeyFrameInterval() {
+        return this.keyFrameInterval == null ? Output.empty() : this.keyFrameInterval;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class LiveEventEncodingArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="presetName")
-      private final @Nullable Input<String> presetName;
+      private final @Nullable Output<String> presetName;
 
-    public Input<String> getPresetName() {
-        return this.presetName == null ? Input.empty() : this.presetName;
+    public Output<String> getPresetName() {
+        return this.presetName == null ? Output.empty() : this.presetName;
     }
 
     /**
@@ -59,17 +59,17 @@ public final class LiveEventEncodingArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="stretchMode")
-      private final @Nullable Input<Either<String,StretchMode>> stretchMode;
+      private final @Nullable Output<Either<String,StretchMode>> stretchMode;
 
-    public Input<Either<String,StretchMode>> getStretchMode() {
-        return this.stretchMode == null ? Input.empty() : this.stretchMode;
+    public Output<Either<String,StretchMode>> getStretchMode() {
+        return this.stretchMode == null ? Output.empty() : this.stretchMode;
     }
 
     public LiveEventEncodingArgs(
-        @Nullable Input<Either<String,LiveEventEncodingType>> encodingType,
-        @Nullable Input<String> keyFrameInterval,
-        @Nullable Input<String> presetName,
-        @Nullable Input<Either<String,StretchMode>> stretchMode) {
+        @Nullable Output<Either<String,LiveEventEncodingType>> encodingType,
+        @Nullable Output<String> keyFrameInterval,
+        @Nullable Output<String> presetName,
+        @Nullable Output<Either<String,StretchMode>> stretchMode) {
         this.encodingType = encodingType;
         this.keyFrameInterval = keyFrameInterval;
         this.presetName = presetName;
@@ -77,10 +77,10 @@ public final class LiveEventEncodingArgs extends io.pulumi.resources.ResourceArg
     }
 
     private LiveEventEncodingArgs() {
-        this.encodingType = Input.empty();
-        this.keyFrameInterval = Input.empty();
-        this.presetName = Input.empty();
-        this.stretchMode = Input.empty();
+        this.encodingType = Output.empty();
+        this.keyFrameInterval = Output.empty();
+        this.presetName = Output.empty();
+        this.stretchMode = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class LiveEventEncodingArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,LiveEventEncodingType>> encodingType;
-        private @Nullable Input<String> keyFrameInterval;
-        private @Nullable Input<String> presetName;
-        private @Nullable Input<Either<String,StretchMode>> stretchMode;
+        private @Nullable Output<Either<String,LiveEventEncodingType>> encodingType;
+        private @Nullable Output<String> keyFrameInterval;
+        private @Nullable Output<String> presetName;
+        private @Nullable Output<Either<String,StretchMode>> stretchMode;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class LiveEventEncodingArgs extends io.pulumi.resources.ResourceArg
     	      this.stretchMode = defaults.stretchMode;
         }
 
-        public Builder encodingType(@Nullable Input<Either<String,LiveEventEncodingType>> encodingType) {
+        public Builder encodingType(@Nullable Output<Either<String,LiveEventEncodingType>> encodingType) {
             this.encodingType = encodingType;
             return this;
         }
 
         public Builder encodingType(@Nullable Either<String,LiveEventEncodingType> encodingType) {
-            this.encodingType = Input.ofNullable(encodingType);
+            this.encodingType = Output.ofNullable(encodingType);
             return this;
         }
 
-        public Builder keyFrameInterval(@Nullable Input<String> keyFrameInterval) {
+        public Builder keyFrameInterval(@Nullable Output<String> keyFrameInterval) {
             this.keyFrameInterval = keyFrameInterval;
             return this;
         }
 
         public Builder keyFrameInterval(@Nullable String keyFrameInterval) {
-            this.keyFrameInterval = Input.ofNullable(keyFrameInterval);
+            this.keyFrameInterval = Output.ofNullable(keyFrameInterval);
             return this;
         }
 
-        public Builder presetName(@Nullable Input<String> presetName) {
+        public Builder presetName(@Nullable Output<String> presetName) {
             this.presetName = presetName;
             return this;
         }
 
         public Builder presetName(@Nullable String presetName) {
-            this.presetName = Input.ofNullable(presetName);
+            this.presetName = Output.ofNullable(presetName);
             return this;
         }
 
-        public Builder stretchMode(@Nullable Input<Either<String,StretchMode>> stretchMode) {
+        public Builder stretchMode(@Nullable Output<Either<String,StretchMode>> stretchMode) {
             this.stretchMode = stretchMode;
             return this;
         }
 
         public Builder stretchMode(@Nullable Either<String,StretchMode> stretchMode) {
-            this.stretchMode = Input.ofNullable(stretchMode);
+            this.stretchMode = Output.ofNullable(stretchMode);
             return this;
         }
         public LiveEventEncodingArgs build() {

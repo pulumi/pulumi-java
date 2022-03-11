@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.RCranPackageArgs;
 import io.pulumi.azurenative.machinelearningservices.inputs.RGitHubPackageArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="bioConductorPackages")
-      private final @Nullable Input<List<String>> bioConductorPackages;
+      private final @Nullable Output<List<String>> bioConductorPackages;
 
-    public Input<List<String>> getBioConductorPackages() {
-        return this.bioConductorPackages == null ? Input.empty() : this.bioConductorPackages;
+    public Output<List<String>> getBioConductorPackages() {
+        return this.bioConductorPackages == null ? Output.empty() : this.bioConductorPackages;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="cranPackages")
-      private final @Nullable Input<List<RCranPackageArgs>> cranPackages;
+      private final @Nullable Output<List<RCranPackageArgs>> cranPackages;
 
-    public Input<List<RCranPackageArgs>> getCranPackages() {
-        return this.cranPackages == null ? Input.empty() : this.cranPackages;
+    public Output<List<RCranPackageArgs>> getCranPackages() {
+        return this.cranPackages == null ? Output.empty() : this.cranPackages;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="customUrlPackages")
-      private final @Nullable Input<List<String>> customUrlPackages;
+      private final @Nullable Output<List<String>> customUrlPackages;
 
-    public Input<List<String>> getCustomUrlPackages() {
-        return this.customUrlPackages == null ? Input.empty() : this.customUrlPackages;
+    public Output<List<String>> getCustomUrlPackages() {
+        return this.customUrlPackages == null ? Output.empty() : this.customUrlPackages;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="gitHubPackages")
-      private final @Nullable Input<List<RGitHubPackageArgs>> gitHubPackages;
+      private final @Nullable Output<List<RGitHubPackageArgs>> gitHubPackages;
 
-    public Input<List<RGitHubPackageArgs>> getGitHubPackages() {
-        return this.gitHubPackages == null ? Input.empty() : this.gitHubPackages;
+    public Output<List<RGitHubPackageArgs>> getGitHubPackages() {
+        return this.gitHubPackages == null ? Output.empty() : this.gitHubPackages;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="rVersion")
-      private final @Nullable Input<String> rVersion;
+      private final @Nullable Output<String> rVersion;
 
-    public Input<String> getRVersion() {
-        return this.rVersion == null ? Input.empty() : this.rVersion;
+    public Output<String> getRVersion() {
+        return this.rVersion == null ? Output.empty() : this.rVersion;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="rscriptPath")
-      private final @Nullable Input<String> rscriptPath;
+      private final @Nullable Output<String> rscriptPath;
 
-    public Input<String> getRscriptPath() {
-        return this.rscriptPath == null ? Input.empty() : this.rscriptPath;
+    public Output<String> getRscriptPath() {
+        return this.rscriptPath == null ? Output.empty() : this.rscriptPath;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="snapshotDate")
-      private final @Nullable Input<String> snapshotDate;
+      private final @Nullable Output<String> snapshotDate;
 
-    public Input<String> getSnapshotDate() {
-        return this.snapshotDate == null ? Input.empty() : this.snapshotDate;
+    public Output<String> getSnapshotDate() {
+        return this.snapshotDate == null ? Output.empty() : this.snapshotDate;
     }
 
     /**
@@ -105,21 +105,21 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="userManaged")
-      private final @Nullable Input<Boolean> userManaged;
+      private final @Nullable Output<Boolean> userManaged;
 
-    public Input<Boolean> getUserManaged() {
-        return this.userManaged == null ? Input.empty() : this.userManaged;
+    public Output<Boolean> getUserManaged() {
+        return this.userManaged == null ? Output.empty() : this.userManaged;
     }
 
     public ModelEnvironmentDefinitionRArgs(
-        @Nullable Input<List<String>> bioConductorPackages,
-        @Nullable Input<List<RCranPackageArgs>> cranPackages,
-        @Nullable Input<List<String>> customUrlPackages,
-        @Nullable Input<List<RGitHubPackageArgs>> gitHubPackages,
-        @Nullable Input<String> rVersion,
-        @Nullable Input<String> rscriptPath,
-        @Nullable Input<String> snapshotDate,
-        @Nullable Input<Boolean> userManaged) {
+        @Nullable Output<List<String>> bioConductorPackages,
+        @Nullable Output<List<RCranPackageArgs>> cranPackages,
+        @Nullable Output<List<String>> customUrlPackages,
+        @Nullable Output<List<RGitHubPackageArgs>> gitHubPackages,
+        @Nullable Output<String> rVersion,
+        @Nullable Output<String> rscriptPath,
+        @Nullable Output<String> snapshotDate,
+        @Nullable Output<Boolean> userManaged) {
         this.bioConductorPackages = bioConductorPackages;
         this.cranPackages = cranPackages;
         this.customUrlPackages = customUrlPackages;
@@ -131,14 +131,14 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
     }
 
     private ModelEnvironmentDefinitionRArgs() {
-        this.bioConductorPackages = Input.empty();
-        this.cranPackages = Input.empty();
-        this.customUrlPackages = Input.empty();
-        this.gitHubPackages = Input.empty();
-        this.rVersion = Input.empty();
-        this.rscriptPath = Input.empty();
-        this.snapshotDate = Input.empty();
-        this.userManaged = Input.empty();
+        this.bioConductorPackages = Output.empty();
+        this.cranPackages = Output.empty();
+        this.customUrlPackages = Output.empty();
+        this.gitHubPackages = Output.empty();
+        this.rVersion = Output.empty();
+        this.rscriptPath = Output.empty();
+        this.snapshotDate = Output.empty();
+        this.userManaged = Output.empty();
     }
 
     public static Builder builder() {
@@ -150,14 +150,14 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> bioConductorPackages;
-        private @Nullable Input<List<RCranPackageArgs>> cranPackages;
-        private @Nullable Input<List<String>> customUrlPackages;
-        private @Nullable Input<List<RGitHubPackageArgs>> gitHubPackages;
-        private @Nullable Input<String> rVersion;
-        private @Nullable Input<String> rscriptPath;
-        private @Nullable Input<String> snapshotDate;
-        private @Nullable Input<Boolean> userManaged;
+        private @Nullable Output<List<String>> bioConductorPackages;
+        private @Nullable Output<List<RCranPackageArgs>> cranPackages;
+        private @Nullable Output<List<String>> customUrlPackages;
+        private @Nullable Output<List<RGitHubPackageArgs>> gitHubPackages;
+        private @Nullable Output<String> rVersion;
+        private @Nullable Output<String> rscriptPath;
+        private @Nullable Output<String> snapshotDate;
+        private @Nullable Output<Boolean> userManaged;
 
         public Builder() {
     	      // Empty
@@ -175,83 +175,83 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
     	      this.userManaged = defaults.userManaged;
         }
 
-        public Builder bioConductorPackages(@Nullable Input<List<String>> bioConductorPackages) {
+        public Builder bioConductorPackages(@Nullable Output<List<String>> bioConductorPackages) {
             this.bioConductorPackages = bioConductorPackages;
             return this;
         }
 
         public Builder bioConductorPackages(@Nullable List<String> bioConductorPackages) {
-            this.bioConductorPackages = Input.ofNullable(bioConductorPackages);
+            this.bioConductorPackages = Output.ofNullable(bioConductorPackages);
             return this;
         }
 
-        public Builder cranPackages(@Nullable Input<List<RCranPackageArgs>> cranPackages) {
+        public Builder cranPackages(@Nullable Output<List<RCranPackageArgs>> cranPackages) {
             this.cranPackages = cranPackages;
             return this;
         }
 
         public Builder cranPackages(@Nullable List<RCranPackageArgs> cranPackages) {
-            this.cranPackages = Input.ofNullable(cranPackages);
+            this.cranPackages = Output.ofNullable(cranPackages);
             return this;
         }
 
-        public Builder customUrlPackages(@Nullable Input<List<String>> customUrlPackages) {
+        public Builder customUrlPackages(@Nullable Output<List<String>> customUrlPackages) {
             this.customUrlPackages = customUrlPackages;
             return this;
         }
 
         public Builder customUrlPackages(@Nullable List<String> customUrlPackages) {
-            this.customUrlPackages = Input.ofNullable(customUrlPackages);
+            this.customUrlPackages = Output.ofNullable(customUrlPackages);
             return this;
         }
 
-        public Builder gitHubPackages(@Nullable Input<List<RGitHubPackageArgs>> gitHubPackages) {
+        public Builder gitHubPackages(@Nullable Output<List<RGitHubPackageArgs>> gitHubPackages) {
             this.gitHubPackages = gitHubPackages;
             return this;
         }
 
         public Builder gitHubPackages(@Nullable List<RGitHubPackageArgs> gitHubPackages) {
-            this.gitHubPackages = Input.ofNullable(gitHubPackages);
+            this.gitHubPackages = Output.ofNullable(gitHubPackages);
             return this;
         }
 
-        public Builder rVersion(@Nullable Input<String> rVersion) {
+        public Builder rVersion(@Nullable Output<String> rVersion) {
             this.rVersion = rVersion;
             return this;
         }
 
         public Builder rVersion(@Nullable String rVersion) {
-            this.rVersion = Input.ofNullable(rVersion);
+            this.rVersion = Output.ofNullable(rVersion);
             return this;
         }
 
-        public Builder rscriptPath(@Nullable Input<String> rscriptPath) {
+        public Builder rscriptPath(@Nullable Output<String> rscriptPath) {
             this.rscriptPath = rscriptPath;
             return this;
         }
 
         public Builder rscriptPath(@Nullable String rscriptPath) {
-            this.rscriptPath = Input.ofNullable(rscriptPath);
+            this.rscriptPath = Output.ofNullable(rscriptPath);
             return this;
         }
 
-        public Builder snapshotDate(@Nullable Input<String> snapshotDate) {
+        public Builder snapshotDate(@Nullable Output<String> snapshotDate) {
             this.snapshotDate = snapshotDate;
             return this;
         }
 
         public Builder snapshotDate(@Nullable String snapshotDate) {
-            this.snapshotDate = Input.ofNullable(snapshotDate);
+            this.snapshotDate = Output.ofNullable(snapshotDate);
             return this;
         }
 
-        public Builder userManaged(@Nullable Input<Boolean> userManaged) {
+        public Builder userManaged(@Nullable Output<Boolean> userManaged) {
             this.userManaged = userManaged;
             return this;
         }
 
         public Builder userManaged(@Nullable Boolean userManaged) {
-            this.userManaged = Input.ofNullable(userManaged);
+            this.userManaged = Output.ofNullable(userManaged);
             return this;
         }
         public ModelEnvironmentDefinitionRArgs build() {

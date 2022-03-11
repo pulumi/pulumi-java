@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apprunner.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ServiceSourceConfigurationAuthenticationConfigurationArgs ext
      * 
      */
     @InputImport(name="accessRoleArn")
-      private final @Nullable Input<String> accessRoleArn;
+      private final @Nullable Output<String> accessRoleArn;
 
-    public Input<String> getAccessRoleArn() {
-        return this.accessRoleArn == null ? Input.empty() : this.accessRoleArn;
+    public Output<String> getAccessRoleArn() {
+        return this.accessRoleArn == null ? Output.empty() : this.accessRoleArn;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class ServiceSourceConfigurationAuthenticationConfigurationArgs ext
      * 
      */
     @InputImport(name="connectionArn")
-      private final @Nullable Input<String> connectionArn;
+      private final @Nullable Output<String> connectionArn;
 
-    public Input<String> getConnectionArn() {
-        return this.connectionArn == null ? Input.empty() : this.connectionArn;
+    public Output<String> getConnectionArn() {
+        return this.connectionArn == null ? Output.empty() : this.connectionArn;
     }
 
     public ServiceSourceConfigurationAuthenticationConfigurationArgs(
-        @Nullable Input<String> accessRoleArn,
-        @Nullable Input<String> connectionArn) {
+        @Nullable Output<String> accessRoleArn,
+        @Nullable Output<String> connectionArn) {
         this.accessRoleArn = accessRoleArn;
         this.connectionArn = connectionArn;
     }
 
     private ServiceSourceConfigurationAuthenticationConfigurationArgs() {
-        this.accessRoleArn = Input.empty();
-        this.connectionArn = Input.empty();
+        this.accessRoleArn = Output.empty();
+        this.connectionArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ServiceSourceConfigurationAuthenticationConfigurationArgs ext
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accessRoleArn;
-        private @Nullable Input<String> connectionArn;
+        private @Nullable Output<String> accessRoleArn;
+        private @Nullable Output<String> connectionArn;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ServiceSourceConfigurationAuthenticationConfigurationArgs ext
     	      this.connectionArn = defaults.connectionArn;
         }
 
-        public Builder accessRoleArn(@Nullable Input<String> accessRoleArn) {
+        public Builder accessRoleArn(@Nullable Output<String> accessRoleArn) {
             this.accessRoleArn = accessRoleArn;
             return this;
         }
 
         public Builder accessRoleArn(@Nullable String accessRoleArn) {
-            this.accessRoleArn = Input.ofNullable(accessRoleArn);
+            this.accessRoleArn = Output.ofNullable(accessRoleArn);
             return this;
         }
 
-        public Builder connectionArn(@Nullable Input<String> connectionArn) {
+        public Builder connectionArn(@Nullable Output<String> connectionArn) {
             this.connectionArn = connectionArn;
             return this;
         }
 
         public Builder connectionArn(@Nullable String connectionArn) {
-            this.connectionArn = Input.ofNullable(connectionArn);
+            this.connectionArn = Output.ofNullable(connectionArn);
             return this;
         }
         public ServiceSourceConfigurationAuthenticationConfigurationArgs build() {

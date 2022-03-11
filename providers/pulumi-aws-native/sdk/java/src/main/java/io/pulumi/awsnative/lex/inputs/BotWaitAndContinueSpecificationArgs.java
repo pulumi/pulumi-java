@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.inputs.BotResponseSpecificationArgs;
 import io.pulumi.awsnative.lex.inputs.BotStillWaitingResponseSpecificationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -25,9 +25,9 @@ public final class BotWaitAndContinueSpecificationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="continueResponse", required=true)
-      private final Input<BotResponseSpecificationArgs> continueResponse;
+      private final Output<BotResponseSpecificationArgs> continueResponse;
 
-    public Input<BotResponseSpecificationArgs> getContinueResponse() {
+    public Output<BotResponseSpecificationArgs> getContinueResponse() {
         return this.continueResponse;
     }
 
@@ -36,10 +36,10 @@ public final class BotWaitAndContinueSpecificationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="isActive")
-      private final @Nullable Input<Boolean> isActive;
+      private final @Nullable Output<Boolean> isActive;
 
-    public Input<Boolean> getIsActive() {
-        return this.isActive == null ? Input.empty() : this.isActive;
+    public Output<Boolean> getIsActive() {
+        return this.isActive == null ? Output.empty() : this.isActive;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class BotWaitAndContinueSpecificationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="stillWaitingResponse")
-      private final @Nullable Input<BotStillWaitingResponseSpecificationArgs> stillWaitingResponse;
+      private final @Nullable Output<BotStillWaitingResponseSpecificationArgs> stillWaitingResponse;
 
-    public Input<BotStillWaitingResponseSpecificationArgs> getStillWaitingResponse() {
-        return this.stillWaitingResponse == null ? Input.empty() : this.stillWaitingResponse;
+    public Output<BotStillWaitingResponseSpecificationArgs> getStillWaitingResponse() {
+        return this.stillWaitingResponse == null ? Output.empty() : this.stillWaitingResponse;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class BotWaitAndContinueSpecificationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="waitingResponse", required=true)
-      private final Input<BotResponseSpecificationArgs> waitingResponse;
+      private final Output<BotResponseSpecificationArgs> waitingResponse;
 
-    public Input<BotResponseSpecificationArgs> getWaitingResponse() {
+    public Output<BotResponseSpecificationArgs> getWaitingResponse() {
         return this.waitingResponse;
     }
 
     public BotWaitAndContinueSpecificationArgs(
-        Input<BotResponseSpecificationArgs> continueResponse,
-        @Nullable Input<Boolean> isActive,
-        @Nullable Input<BotStillWaitingResponseSpecificationArgs> stillWaitingResponse,
-        Input<BotResponseSpecificationArgs> waitingResponse) {
+        Output<BotResponseSpecificationArgs> continueResponse,
+        @Nullable Output<Boolean> isActive,
+        @Nullable Output<BotStillWaitingResponseSpecificationArgs> stillWaitingResponse,
+        Output<BotResponseSpecificationArgs> waitingResponse) {
         this.continueResponse = Objects.requireNonNull(continueResponse, "expected parameter 'continueResponse' to be non-null");
         this.isActive = isActive;
         this.stillWaitingResponse = stillWaitingResponse;
@@ -76,10 +76,10 @@ public final class BotWaitAndContinueSpecificationArgs extends io.pulumi.resourc
     }
 
     private BotWaitAndContinueSpecificationArgs() {
-        this.continueResponse = Input.empty();
-        this.isActive = Input.empty();
-        this.stillWaitingResponse = Input.empty();
-        this.waitingResponse = Input.empty();
+        this.continueResponse = Output.empty();
+        this.isActive = Output.empty();
+        this.stillWaitingResponse = Output.empty();
+        this.waitingResponse = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class BotWaitAndContinueSpecificationArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<BotResponseSpecificationArgs> continueResponse;
-        private @Nullable Input<Boolean> isActive;
-        private @Nullable Input<BotStillWaitingResponseSpecificationArgs> stillWaitingResponse;
-        private Input<BotResponseSpecificationArgs> waitingResponse;
+        private Output<BotResponseSpecificationArgs> continueResponse;
+        private @Nullable Output<Boolean> isActive;
+        private @Nullable Output<BotStillWaitingResponseSpecificationArgs> stillWaitingResponse;
+        private Output<BotResponseSpecificationArgs> waitingResponse;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class BotWaitAndContinueSpecificationArgs extends io.pulumi.resourc
     	      this.waitingResponse = defaults.waitingResponse;
         }
 
-        public Builder continueResponse(Input<BotResponseSpecificationArgs> continueResponse) {
+        public Builder continueResponse(Output<BotResponseSpecificationArgs> continueResponse) {
             this.continueResponse = Objects.requireNonNull(continueResponse);
             return this;
         }
 
         public Builder continueResponse(BotResponseSpecificationArgs continueResponse) {
-            this.continueResponse = Input.of(Objects.requireNonNull(continueResponse));
+            this.continueResponse = Output.of(Objects.requireNonNull(continueResponse));
             return this;
         }
 
-        public Builder isActive(@Nullable Input<Boolean> isActive) {
+        public Builder isActive(@Nullable Output<Boolean> isActive) {
             this.isActive = isActive;
             return this;
         }
 
         public Builder isActive(@Nullable Boolean isActive) {
-            this.isActive = Input.ofNullable(isActive);
+            this.isActive = Output.ofNullable(isActive);
             return this;
         }
 
-        public Builder stillWaitingResponse(@Nullable Input<BotStillWaitingResponseSpecificationArgs> stillWaitingResponse) {
+        public Builder stillWaitingResponse(@Nullable Output<BotStillWaitingResponseSpecificationArgs> stillWaitingResponse) {
             this.stillWaitingResponse = stillWaitingResponse;
             return this;
         }
 
         public Builder stillWaitingResponse(@Nullable BotStillWaitingResponseSpecificationArgs stillWaitingResponse) {
-            this.stillWaitingResponse = Input.ofNullable(stillWaitingResponse);
+            this.stillWaitingResponse = Output.ofNullable(stillWaitingResponse);
             return this;
         }
 
-        public Builder waitingResponse(Input<BotResponseSpecificationArgs> waitingResponse) {
+        public Builder waitingResponse(Output<BotResponseSpecificationArgs> waitingResponse) {
             this.waitingResponse = Objects.requireNonNull(waitingResponse);
             return this;
         }
 
         public Builder waitingResponse(BotResponseSpecificationArgs waitingResponse) {
-            this.waitingResponse = Input.of(Objects.requireNonNull(waitingResponse));
+            this.waitingResponse = Output.of(Objects.requireNonNull(waitingResponse));
             return this;
         }
         public BotWaitAndContinueSpecificationArgs build() {

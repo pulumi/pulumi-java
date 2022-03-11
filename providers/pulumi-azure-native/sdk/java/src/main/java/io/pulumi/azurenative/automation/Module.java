@@ -8,7 +8,6 @@ import io.pulumi.azurenative.automation.ModuleArgs;
 import io.pulumi.azurenative.automation.outputs.ContentLinkResponse;
 import io.pulumi.azurenative.automation.outputs.ModuleErrorInfoResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -300,20 +299,20 @@ public class Module extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Module(String name, ModuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:automation:Module", name, args == null ? ModuleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:automation:Module", name, args == null ? ModuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Module(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Module(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:automation:Module", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:automation/v20151031:Module").build()),
-                Input.of(Alias.builder().setType("azure-native:automation/v20190601:Module").build()),
-                Input.of(Alias.builder().setType("azure-native:automation/v20200113preview:Module").build())
+                Output.of(Alias.builder().setType("azure-native:automation/v20151031:Module").build()),
+                Output.of(Alias.builder().setType("azure-native:automation/v20190601:Module").build()),
+                Output.of(Alias.builder().setType("azure-native:automation/v20200113preview:Module").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -327,7 +326,7 @@ public class Module extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Module get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Module get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Module(name, id, options);
     }
 }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.ActivityDependencyArgs;
 import io.pulumi.azurenative.datafactory.inputs.DatasetReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -28,10 +28,10 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="childItems")
-      private final @Nullable Input<Object> childItems;
+      private final @Nullable Output<Object> childItems;
 
-    public Input<Object> getChildItems() {
-        return this.childItems == null ? Input.empty() : this.childItems;
+    public Output<Object> getChildItems() {
+        return this.childItems == null ? Output.empty() : this.childItems;
     }
 
     /**
@@ -39,9 +39,9 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dataset", required=true)
-      private final Input<DatasetReferenceArgs> dataset;
+      private final Output<DatasetReferenceArgs> dataset;
 
-    public Input<DatasetReferenceArgs> getDataset() {
+    public Output<DatasetReferenceArgs> getDataset() {
         return this.dataset;
     }
 
@@ -50,10 +50,10 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dependsOn")
-      private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
+      private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Input<List<ActivityDependencyArgs>> getDependsOn() {
-        return this.dependsOn == null ? Input.empty() : this.dependsOn;
+    public Output<List<ActivityDependencyArgs>> getDependsOn() {
+        return this.dependsOn == null ? Output.empty() : this.dependsOn;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="minimumSize")
-      private final @Nullable Input<Object> minimumSize;
+      private final @Nullable Output<Object> minimumSize;
 
-    public Input<Object> getMinimumSize() {
-        return this.minimumSize == null ? Input.empty() : this.minimumSize;
+    public Output<Object> getMinimumSize() {
+        return this.minimumSize == null ? Output.empty() : this.minimumSize;
     }
 
     /**
@@ -83,9 +83,9 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -94,10 +94,10 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="sleep")
-      private final @Nullable Input<Object> sleep;
+      private final @Nullable Output<Object> sleep;
 
-    public Input<Object> getSleep() {
-        return this.sleep == null ? Input.empty() : this.sleep;
+    public Output<Object> getSleep() {
+        return this.sleep == null ? Output.empty() : this.sleep;
     }
 
     /**
@@ -105,10 +105,10 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="timeout")
-      private final @Nullable Input<Object> timeout;
+      private final @Nullable Output<Object> timeout;
 
-    public Input<Object> getTimeout() {
-        return this.timeout == null ? Input.empty() : this.timeout;
+    public Output<Object> getTimeout() {
+        return this.timeout == null ? Output.empty() : this.timeout;
     }
 
     /**
@@ -117,9 +117,9 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -128,23 +128,23 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="userProperties")
-      private final @Nullable Input<List<UserPropertyArgs>> userProperties;
+      private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Input<List<UserPropertyArgs>> getUserProperties() {
-        return this.userProperties == null ? Input.empty() : this.userProperties;
+    public Output<List<UserPropertyArgs>> getUserProperties() {
+        return this.userProperties == null ? Output.empty() : this.userProperties;
     }
 
     public ValidationActivityArgs(
-        @Nullable Input<Object> childItems,
-        Input<DatasetReferenceArgs> dataset,
-        @Nullable Input<List<ActivityDependencyArgs>> dependsOn,
-        @Nullable Input<String> description,
-        @Nullable Input<Object> minimumSize,
-        Input<String> name,
-        @Nullable Input<Object> sleep,
-        @Nullable Input<Object> timeout,
-        Input<String> type,
-        @Nullable Input<List<UserPropertyArgs>> userProperties) {
+        @Nullable Output<Object> childItems,
+        Output<DatasetReferenceArgs> dataset,
+        @Nullable Output<List<ActivityDependencyArgs>> dependsOn,
+        @Nullable Output<String> description,
+        @Nullable Output<Object> minimumSize,
+        Output<String> name,
+        @Nullable Output<Object> sleep,
+        @Nullable Output<Object> timeout,
+        Output<String> type,
+        @Nullable Output<List<UserPropertyArgs>> userProperties) {
         this.childItems = childItems;
         this.dataset = Objects.requireNonNull(dataset, "expected parameter 'dataset' to be non-null");
         this.dependsOn = dependsOn;
@@ -158,16 +158,16 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ValidationActivityArgs() {
-        this.childItems = Input.empty();
-        this.dataset = Input.empty();
-        this.dependsOn = Input.empty();
-        this.description = Input.empty();
-        this.minimumSize = Input.empty();
-        this.name = Input.empty();
-        this.sleep = Input.empty();
-        this.timeout = Input.empty();
-        this.type = Input.empty();
-        this.userProperties = Input.empty();
+        this.childItems = Output.empty();
+        this.dataset = Output.empty();
+        this.dependsOn = Output.empty();
+        this.description = Output.empty();
+        this.minimumSize = Output.empty();
+        this.name = Output.empty();
+        this.sleep = Output.empty();
+        this.timeout = Output.empty();
+        this.type = Output.empty();
+        this.userProperties = Output.empty();
     }
 
     public static Builder builder() {
@@ -179,16 +179,16 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> childItems;
-        private Input<DatasetReferenceArgs> dataset;
-        private @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Object> minimumSize;
-        private Input<String> name;
-        private @Nullable Input<Object> sleep;
-        private @Nullable Input<Object> timeout;
-        private Input<String> type;
-        private @Nullable Input<List<UserPropertyArgs>> userProperties;
+        private @Nullable Output<Object> childItems;
+        private Output<DatasetReferenceArgs> dataset;
+        private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Object> minimumSize;
+        private Output<String> name;
+        private @Nullable Output<Object> sleep;
+        private @Nullable Output<Object> timeout;
+        private Output<String> type;
+        private @Nullable Output<List<UserPropertyArgs>> userProperties;
 
         public Builder() {
     	      // Empty
@@ -208,103 +208,103 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder childItems(@Nullable Input<Object> childItems) {
+        public Builder childItems(@Nullable Output<Object> childItems) {
             this.childItems = childItems;
             return this;
         }
 
         public Builder childItems(@Nullable Object childItems) {
-            this.childItems = Input.ofNullable(childItems);
+            this.childItems = Output.ofNullable(childItems);
             return this;
         }
 
-        public Builder dataset(Input<DatasetReferenceArgs> dataset) {
+        public Builder dataset(Output<DatasetReferenceArgs> dataset) {
             this.dataset = Objects.requireNonNull(dataset);
             return this;
         }
 
         public Builder dataset(DatasetReferenceArgs dataset) {
-            this.dataset = Input.of(Objects.requireNonNull(dataset));
+            this.dataset = Output.of(Objects.requireNonNull(dataset));
             return this;
         }
 
-        public Builder dependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
+        public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Input.ofNullable(dependsOn);
+            this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder minimumSize(@Nullable Input<Object> minimumSize) {
+        public Builder minimumSize(@Nullable Output<Object> minimumSize) {
             this.minimumSize = minimumSize;
             return this;
         }
 
         public Builder minimumSize(@Nullable Object minimumSize) {
-            this.minimumSize = Input.ofNullable(minimumSize);
+            this.minimumSize = Output.ofNullable(minimumSize);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder sleep(@Nullable Input<Object> sleep) {
+        public Builder sleep(@Nullable Output<Object> sleep) {
             this.sleep = sleep;
             return this;
         }
 
         public Builder sleep(@Nullable Object sleep) {
-            this.sleep = Input.ofNullable(sleep);
+            this.sleep = Output.ofNullable(sleep);
             return this;
         }
 
-        public Builder timeout(@Nullable Input<Object> timeout) {
+        public Builder timeout(@Nullable Output<Object> timeout) {
             this.timeout = timeout;
             return this;
         }
 
         public Builder timeout(@Nullable Object timeout) {
-            this.timeout = Input.ofNullable(timeout);
+            this.timeout = Output.ofNullable(timeout);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder userProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
+        public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
 
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Input.ofNullable(userProperties);
+            this.userProperties = Output.ofNullable(userProperties);
             return this;
         }
         public ValidationActivityArgs build() {

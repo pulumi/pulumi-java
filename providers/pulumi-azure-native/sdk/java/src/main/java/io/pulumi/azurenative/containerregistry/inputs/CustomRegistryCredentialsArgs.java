@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.inputs.SecretObjectArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -28,10 +28,10 @@ public final class CustomRegistryCredentialsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<String> identity;
+      private final @Nullable Output<String> identity;
 
-    public Input<String> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<String> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class CustomRegistryCredentialsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<SecretObjectArgs> password;
+      private final @Nullable Output<SecretObjectArgs> password;
 
-    public Input<SecretObjectArgs> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<SecretObjectArgs> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -51,25 +51,25 @@ public final class CustomRegistryCredentialsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="userName")
-      private final @Nullable Input<SecretObjectArgs> userName;
+      private final @Nullable Output<SecretObjectArgs> userName;
 
-    public Input<SecretObjectArgs> getUserName() {
-        return this.userName == null ? Input.empty() : this.userName;
+    public Output<SecretObjectArgs> getUserName() {
+        return this.userName == null ? Output.empty() : this.userName;
     }
 
     public CustomRegistryCredentialsArgs(
-        @Nullable Input<String> identity,
-        @Nullable Input<SecretObjectArgs> password,
-        @Nullable Input<SecretObjectArgs> userName) {
+        @Nullable Output<String> identity,
+        @Nullable Output<SecretObjectArgs> password,
+        @Nullable Output<SecretObjectArgs> userName) {
         this.identity = identity;
         this.password = password;
         this.userName = userName;
     }
 
     private CustomRegistryCredentialsArgs() {
-        this.identity = Input.empty();
-        this.password = Input.empty();
-        this.userName = Input.empty();
+        this.identity = Output.empty();
+        this.password = Output.empty();
+        this.userName = Output.empty();
     }
 
     public static Builder builder() {
@@ -81,9 +81,9 @@ public final class CustomRegistryCredentialsArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> identity;
-        private @Nullable Input<SecretObjectArgs> password;
-        private @Nullable Input<SecretObjectArgs> userName;
+        private @Nullable Output<String> identity;
+        private @Nullable Output<SecretObjectArgs> password;
+        private @Nullable Output<SecretObjectArgs> userName;
 
         public Builder() {
     	      // Empty
@@ -96,33 +96,33 @@ public final class CustomRegistryCredentialsArgs extends io.pulumi.resources.Res
     	      this.userName = defaults.userName;
         }
 
-        public Builder identity(@Nullable Input<String> identity) {
+        public Builder identity(@Nullable Output<String> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable String identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder password(@Nullable Input<SecretObjectArgs> password) {
+        public Builder password(@Nullable Output<SecretObjectArgs> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable SecretObjectArgs password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder userName(@Nullable Input<SecretObjectArgs> userName) {
+        public Builder userName(@Nullable Output<SecretObjectArgs> userName) {
             this.userName = userName;
             return this;
         }
 
         public Builder userName(@Nullable SecretObjectArgs userName) {
-            this.userName = Input.ofNullable(userName);
+            this.userName = Output.ofNullable(userName);
             return this;
         }
         public CustomRegistryCredentialsArgs build() {

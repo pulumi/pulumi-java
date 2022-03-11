@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudtasks_v2beta3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class PullMessageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="payload")
-      private final @Nullable Input<String> payload;
+      private final @Nullable Output<String> payload;
 
-    public Input<String> getPayload() {
-        return this.payload == null ? Input.empty() : this.payload;
+    public Output<String> getPayload() {
+        return this.payload == null ? Output.empty() : this.payload;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class PullMessageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tag")
-      private final @Nullable Input<String> tag;
+      private final @Nullable Output<String> tag;
 
-    public Input<String> getTag() {
-        return this.tag == null ? Input.empty() : this.tag;
+    public Output<String> getTag() {
+        return this.tag == null ? Output.empty() : this.tag;
     }
 
     public PullMessageArgs(
-        @Nullable Input<String> payload,
-        @Nullable Input<String> tag) {
+        @Nullable Output<String> payload,
+        @Nullable Output<String> tag) {
         this.payload = payload;
         this.tag = tag;
     }
 
     private PullMessageArgs() {
-        this.payload = Input.empty();
-        this.tag = Input.empty();
+        this.payload = Output.empty();
+        this.tag = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class PullMessageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> payload;
-        private @Nullable Input<String> tag;
+        private @Nullable Output<String> payload;
+        private @Nullable Output<String> tag;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class PullMessageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tag = defaults.tag;
         }
 
-        public Builder payload(@Nullable Input<String> payload) {
+        public Builder payload(@Nullable Output<String> payload) {
             this.payload = payload;
             return this;
         }
 
         public Builder payload(@Nullable String payload) {
-            this.payload = Input.ofNullable(payload);
+            this.payload = Output.ofNullable(payload);
             return this;
         }
 
-        public Builder tag(@Nullable Input<String> tag) {
+        public Builder tag(@Nullable Output<String> tag) {
             this.tag = tag;
             return this;
         }
 
         public Builder tag(@Nullable String tag) {
-            this.tag = Input.ofNullable(tag);
+            this.tag = Output.ofNullable(tag);
             return this;
         }
         public PullMessageArgs build() {

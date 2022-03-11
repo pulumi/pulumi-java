@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.robomaker;
 
 import io.pulumi.awsnative.robomaker.inputs.FleetTagsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,29 +20,29 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<FleetTagsArgs> tags;
+      private final @Nullable Output<FleetTagsArgs> tags;
 
-    public Input<FleetTagsArgs> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<FleetTagsArgs> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public FleetArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<FleetTagsArgs> tags) {
+        @Nullable Output<String> name,
+        @Nullable Output<FleetTagsArgs> tags) {
         this.name = name;
         this.tags = tags;
     }
 
     private FleetArgs() {
-        this.name = Input.empty();
-        this.tags = Input.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<FleetTagsArgs> tags;
+        private @Nullable Output<String> name;
+        private @Nullable Output<FleetTagsArgs> tags;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<FleetTagsArgs> tags) {
+        public Builder tags(@Nullable Output<FleetTagsArgs> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable FleetTagsArgs tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public FleetArgs build() {

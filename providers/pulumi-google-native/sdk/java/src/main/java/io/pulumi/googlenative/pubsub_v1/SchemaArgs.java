@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsub_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.pubsub_v1.enums.SchemaType;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="definition")
-      private final @Nullable Input<String> definition;
+      private final @Nullable Output<String> definition;
 
-    public Input<String> getDefinition() {
-        return this.definition == null ? Input.empty() : this.definition;
+    public Output<String> getDefinition() {
+        return this.definition == null ? Output.empty() : this.definition;
     }
 
     /**
@@ -31,24 +31,24 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="schemaId")
-      private final @Nullable Input<String> schemaId;
+      private final @Nullable Output<String> schemaId;
 
-    public Input<String> getSchemaId() {
-        return this.schemaId == null ? Input.empty() : this.schemaId;
+    public Output<String> getSchemaId() {
+        return this.schemaId == null ? Output.empty() : this.schemaId;
     }
 
     /**
@@ -56,18 +56,18 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<SchemaType> type;
+      private final @Nullable Output<SchemaType> type;
 
-    public Input<SchemaType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<SchemaType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public SchemaArgs(
-        @Nullable Input<String> definition,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<String> schemaId,
-        @Nullable Input<SchemaType> type) {
+        @Nullable Output<String> definition,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<String> schemaId,
+        @Nullable Output<SchemaType> type) {
         this.definition = definition;
         this.name = name;
         this.project = project;
@@ -76,11 +76,11 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SchemaArgs() {
-        this.definition = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.schemaId = Input.empty();
-        this.type = Input.empty();
+        this.definition = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.schemaId = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,11 +92,11 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> definition;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> schemaId;
-        private @Nullable Input<SchemaType> type;
+        private @Nullable Output<String> definition;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> schemaId;
+        private @Nullable Output<SchemaType> type;
 
         public Builder() {
     	      // Empty
@@ -111,53 +111,53 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder definition(@Nullable Input<String> definition) {
+        public Builder definition(@Nullable Output<String> definition) {
             this.definition = definition;
             return this;
         }
 
         public Builder definition(@Nullable String definition) {
-            this.definition = Input.ofNullable(definition);
+            this.definition = Output.ofNullable(definition);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder schemaId(@Nullable Input<String> schemaId) {
+        public Builder schemaId(@Nullable Output<String> schemaId) {
             this.schemaId = schemaId;
             return this;
         }
 
         public Builder schemaId(@Nullable String schemaId) {
-            this.schemaId = Input.ofNullable(schemaId);
+            this.schemaId = Output.ofNullable(schemaId);
             return this;
         }
 
-        public Builder type(@Nullable Input<SchemaType> type) {
+        public Builder type(@Nullable Output<SchemaType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable SchemaType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public SchemaArgs build() {

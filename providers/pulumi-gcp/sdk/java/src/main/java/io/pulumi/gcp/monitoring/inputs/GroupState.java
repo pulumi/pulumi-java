@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filter")
-      private final @Nullable Input<String> filter;
+      private final @Nullable Output<String> filter;
 
-    public Input<String> getFilter() {
-        return this.filter == null ? Input.empty() : this.filter;
+    public Output<String> getFilter() {
+        return this.filter == null ? Output.empty() : this.filter;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isCluster")
-      private final @Nullable Input<Boolean> isCluster;
+      private final @Nullable Output<Boolean> isCluster;
 
-    public Input<Boolean> getIsCluster() {
-        return this.isCluster == null ? Input.empty() : this.isCluster;
+    public Output<Boolean> getIsCluster() {
+        return this.isCluster == null ? Output.empty() : this.isCluster;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parentName")
-      private final @Nullable Input<String> parentName;
+      private final @Nullable Output<String> parentName;
 
-    public Input<String> getParentName() {
-        return this.parentName == null ? Input.empty() : this.parentName;
+    public Output<String> getParentName() {
+        return this.parentName == null ? Output.empty() : this.parentName;
     }
 
     /**
@@ -82,19 +82,19 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public GroupState(
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> filter,
-        @Nullable Input<Boolean> isCluster,
-        @Nullable Input<String> name,
-        @Nullable Input<String> parentName,
-        @Nullable Input<String> project) {
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> filter,
+        @Nullable Output<Boolean> isCluster,
+        @Nullable Output<String> name,
+        @Nullable Output<String> parentName,
+        @Nullable Output<String> project) {
         this.displayName = displayName;
         this.filter = filter;
         this.isCluster = isCluster;
@@ -104,12 +104,12 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     }
 
     private GroupState() {
-        this.displayName = Input.empty();
-        this.filter = Input.empty();
-        this.isCluster = Input.empty();
-        this.name = Input.empty();
-        this.parentName = Input.empty();
-        this.project = Input.empty();
+        this.displayName = Output.empty();
+        this.filter = Output.empty();
+        this.isCluster = Output.empty();
+        this.name = Output.empty();
+        this.parentName = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -121,12 +121,12 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> filter;
-        private @Nullable Input<Boolean> isCluster;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> parentName;
-        private @Nullable Input<String> project;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> filter;
+        private @Nullable Output<Boolean> isCluster;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> parentName;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -142,63 +142,63 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder filter(@Nullable Input<String> filter) {
+        public Builder filter(@Nullable Output<String> filter) {
             this.filter = filter;
             return this;
         }
 
         public Builder filter(@Nullable String filter) {
-            this.filter = Input.ofNullable(filter);
+            this.filter = Output.ofNullable(filter);
             return this;
         }
 
-        public Builder isCluster(@Nullable Input<Boolean> isCluster) {
+        public Builder isCluster(@Nullable Output<Boolean> isCluster) {
             this.isCluster = isCluster;
             return this;
         }
 
         public Builder isCluster(@Nullable Boolean isCluster) {
-            this.isCluster = Input.ofNullable(isCluster);
+            this.isCluster = Output.ofNullable(isCluster);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder parentName(@Nullable Input<String> parentName) {
+        public Builder parentName(@Nullable Output<String> parentName) {
             this.parentName = parentName;
             return this;
         }
 
         public Builder parentName(@Nullable String parentName) {
-            this.parentName = Input.ofNullable(parentName);
+            this.parentName = Output.ofNullable(parentName);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public GroupState build() {

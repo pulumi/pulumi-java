@@ -5,7 +5,7 @@ package io.pulumi.azurenative.saas.inputs;
 
 import io.pulumi.azurenative.saas.enums.PaymentChannelType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -28,10 +28,10 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="autoRenew")
-      private final @Nullable Input<Boolean> autoRenew;
+      private final @Nullable Output<Boolean> autoRenew;
 
-    public Input<Boolean> getAutoRenew() {
-        return this.autoRenew == null ? Input.empty() : this.autoRenew;
+    public Output<Boolean> getAutoRenew() {
+        return this.autoRenew == null ? Output.empty() : this.autoRenew;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="offerId")
-      private final @Nullable Input<String> offerId;
+      private final @Nullable Output<String> offerId;
 
-    public Input<String> getOfferId() {
-        return this.offerId == null ? Input.empty() : this.offerId;
+    public Output<String> getOfferId() {
+        return this.offerId == null ? Output.empty() : this.offerId;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="paymentChannelMetadata")
-      private final @Nullable Input<Map<String,String>> paymentChannelMetadata;
+      private final @Nullable Output<Map<String,String>> paymentChannelMetadata;
 
-    public Input<Map<String,String>> getPaymentChannelMetadata() {
-        return this.paymentChannelMetadata == null ? Input.empty() : this.paymentChannelMetadata;
+    public Output<Map<String,String>> getPaymentChannelMetadata() {
+        return this.paymentChannelMetadata == null ? Output.empty() : this.paymentChannelMetadata;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="paymentChannelType")
-      private final @Nullable Input<Either<String,PaymentChannelType>> paymentChannelType;
+      private final @Nullable Output<Either<String,PaymentChannelType>> paymentChannelType;
 
-    public Input<Either<String,PaymentChannelType>> getPaymentChannelType() {
-        return this.paymentChannelType == null ? Input.empty() : this.paymentChannelType;
+    public Output<Either<String,PaymentChannelType>> getPaymentChannelType() {
+        return this.paymentChannelType == null ? Output.empty() : this.paymentChannelType;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="publisherId")
-      private final @Nullable Input<String> publisherId;
+      private final @Nullable Output<String> publisherId;
 
-    public Input<String> getPublisherId() {
-        return this.publisherId == null ? Input.empty() : this.publisherId;
+    public Output<String> getPublisherId() {
+        return this.publisherId == null ? Output.empty() : this.publisherId;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="publisherTestEnvironment")
-      private final @Nullable Input<String> publisherTestEnvironment;
+      private final @Nullable Output<String> publisherTestEnvironment;
 
-    public Input<String> getPublisherTestEnvironment() {
-        return this.publisherTestEnvironment == null ? Input.empty() : this.publisherTestEnvironment;
+    public Output<String> getPublisherTestEnvironment() {
+        return this.publisherTestEnvironment == null ? Output.empty() : this.publisherTestEnvironment;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="quantity")
-      private final @Nullable Input<Double> quantity;
+      private final @Nullable Output<Double> quantity;
 
-    public Input<Double> getQuantity() {
-        return this.quantity == null ? Input.empty() : this.quantity;
+    public Output<Double> getQuantity() {
+        return this.quantity == null ? Output.empty() : this.quantity;
     }
 
     /**
@@ -105,10 +105,10 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="saasResourceName")
-      private final @Nullable Input<String> saasResourceName;
+      private final @Nullable Output<String> saasResourceName;
 
-    public Input<String> getSaasResourceName() {
-        return this.saasResourceName == null ? Input.empty() : this.saasResourceName;
+    public Output<String> getSaasResourceName() {
+        return this.saasResourceName == null ? Output.empty() : this.saasResourceName;
     }
 
     /**
@@ -116,10 +116,10 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="saasSessionId")
-      private final @Nullable Input<String> saasSessionId;
+      private final @Nullable Output<String> saasSessionId;
 
-    public Input<String> getSaasSessionId() {
-        return this.saasSessionId == null ? Input.empty() : this.saasSessionId;
+    public Output<String> getSaasSessionId() {
+        return this.saasSessionId == null ? Output.empty() : this.saasSessionId;
     }
 
     /**
@@ -127,10 +127,10 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="saasSubscriptionId")
-      private final @Nullable Input<String> saasSubscriptionId;
+      private final @Nullable Output<String> saasSubscriptionId;
 
-    public Input<String> getSaasSubscriptionId() {
-        return this.saasSubscriptionId == null ? Input.empty() : this.saasSubscriptionId;
+    public Output<String> getSaasSubscriptionId() {
+        return this.saasSubscriptionId == null ? Output.empty() : this.saasSubscriptionId;
     }
 
     /**
@@ -138,10 +138,10 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="skuId")
-      private final @Nullable Input<String> skuId;
+      private final @Nullable Output<String> skuId;
 
-    public Input<String> getSkuId() {
-        return this.skuId == null ? Input.empty() : this.skuId;
+    public Output<String> getSkuId() {
+        return this.skuId == null ? Output.empty() : this.skuId;
     }
 
     /**
@@ -149,25 +149,25 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="termId")
-      private final @Nullable Input<String> termId;
+      private final @Nullable Output<String> termId;
 
-    public Input<String> getTermId() {
-        return this.termId == null ? Input.empty() : this.termId;
+    public Output<String> getTermId() {
+        return this.termId == null ? Output.empty() : this.termId;
     }
 
     public SaasCreationPropertiesArgs(
-        @Nullable Input<Boolean> autoRenew,
-        @Nullable Input<String> offerId,
-        @Nullable Input<Map<String,String>> paymentChannelMetadata,
-        @Nullable Input<Either<String,PaymentChannelType>> paymentChannelType,
-        @Nullable Input<String> publisherId,
-        @Nullable Input<String> publisherTestEnvironment,
-        @Nullable Input<Double> quantity,
-        @Nullable Input<String> saasResourceName,
-        @Nullable Input<String> saasSessionId,
-        @Nullable Input<String> saasSubscriptionId,
-        @Nullable Input<String> skuId,
-        @Nullable Input<String> termId) {
+        @Nullable Output<Boolean> autoRenew,
+        @Nullable Output<String> offerId,
+        @Nullable Output<Map<String,String>> paymentChannelMetadata,
+        @Nullable Output<Either<String,PaymentChannelType>> paymentChannelType,
+        @Nullable Output<String> publisherId,
+        @Nullable Output<String> publisherTestEnvironment,
+        @Nullable Output<Double> quantity,
+        @Nullable Output<String> saasResourceName,
+        @Nullable Output<String> saasSessionId,
+        @Nullable Output<String> saasSubscriptionId,
+        @Nullable Output<String> skuId,
+        @Nullable Output<String> termId) {
         this.autoRenew = autoRenew;
         this.offerId = offerId;
         this.paymentChannelMetadata = paymentChannelMetadata;
@@ -183,18 +183,18 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
     }
 
     private SaasCreationPropertiesArgs() {
-        this.autoRenew = Input.empty();
-        this.offerId = Input.empty();
-        this.paymentChannelMetadata = Input.empty();
-        this.paymentChannelType = Input.empty();
-        this.publisherId = Input.empty();
-        this.publisherTestEnvironment = Input.empty();
-        this.quantity = Input.empty();
-        this.saasResourceName = Input.empty();
-        this.saasSessionId = Input.empty();
-        this.saasSubscriptionId = Input.empty();
-        this.skuId = Input.empty();
-        this.termId = Input.empty();
+        this.autoRenew = Output.empty();
+        this.offerId = Output.empty();
+        this.paymentChannelMetadata = Output.empty();
+        this.paymentChannelType = Output.empty();
+        this.publisherId = Output.empty();
+        this.publisherTestEnvironment = Output.empty();
+        this.quantity = Output.empty();
+        this.saasResourceName = Output.empty();
+        this.saasSessionId = Output.empty();
+        this.saasSubscriptionId = Output.empty();
+        this.skuId = Output.empty();
+        this.termId = Output.empty();
     }
 
     public static Builder builder() {
@@ -206,18 +206,18 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> autoRenew;
-        private @Nullable Input<String> offerId;
-        private @Nullable Input<Map<String,String>> paymentChannelMetadata;
-        private @Nullable Input<Either<String,PaymentChannelType>> paymentChannelType;
-        private @Nullable Input<String> publisherId;
-        private @Nullable Input<String> publisherTestEnvironment;
-        private @Nullable Input<Double> quantity;
-        private @Nullable Input<String> saasResourceName;
-        private @Nullable Input<String> saasSessionId;
-        private @Nullable Input<String> saasSubscriptionId;
-        private @Nullable Input<String> skuId;
-        private @Nullable Input<String> termId;
+        private @Nullable Output<Boolean> autoRenew;
+        private @Nullable Output<String> offerId;
+        private @Nullable Output<Map<String,String>> paymentChannelMetadata;
+        private @Nullable Output<Either<String,PaymentChannelType>> paymentChannelType;
+        private @Nullable Output<String> publisherId;
+        private @Nullable Output<String> publisherTestEnvironment;
+        private @Nullable Output<Double> quantity;
+        private @Nullable Output<String> saasResourceName;
+        private @Nullable Output<String> saasSessionId;
+        private @Nullable Output<String> saasSubscriptionId;
+        private @Nullable Output<String> skuId;
+        private @Nullable Output<String> termId;
 
         public Builder() {
     	      // Empty
@@ -239,123 +239,123 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
     	      this.termId = defaults.termId;
         }
 
-        public Builder autoRenew(@Nullable Input<Boolean> autoRenew) {
+        public Builder autoRenew(@Nullable Output<Boolean> autoRenew) {
             this.autoRenew = autoRenew;
             return this;
         }
 
         public Builder autoRenew(@Nullable Boolean autoRenew) {
-            this.autoRenew = Input.ofNullable(autoRenew);
+            this.autoRenew = Output.ofNullable(autoRenew);
             return this;
         }
 
-        public Builder offerId(@Nullable Input<String> offerId) {
+        public Builder offerId(@Nullable Output<String> offerId) {
             this.offerId = offerId;
             return this;
         }
 
         public Builder offerId(@Nullable String offerId) {
-            this.offerId = Input.ofNullable(offerId);
+            this.offerId = Output.ofNullable(offerId);
             return this;
         }
 
-        public Builder paymentChannelMetadata(@Nullable Input<Map<String,String>> paymentChannelMetadata) {
+        public Builder paymentChannelMetadata(@Nullable Output<Map<String,String>> paymentChannelMetadata) {
             this.paymentChannelMetadata = paymentChannelMetadata;
             return this;
         }
 
         public Builder paymentChannelMetadata(@Nullable Map<String,String> paymentChannelMetadata) {
-            this.paymentChannelMetadata = Input.ofNullable(paymentChannelMetadata);
+            this.paymentChannelMetadata = Output.ofNullable(paymentChannelMetadata);
             return this;
         }
 
-        public Builder paymentChannelType(@Nullable Input<Either<String,PaymentChannelType>> paymentChannelType) {
+        public Builder paymentChannelType(@Nullable Output<Either<String,PaymentChannelType>> paymentChannelType) {
             this.paymentChannelType = paymentChannelType;
             return this;
         }
 
         public Builder paymentChannelType(@Nullable Either<String,PaymentChannelType> paymentChannelType) {
-            this.paymentChannelType = Input.ofNullable(paymentChannelType);
+            this.paymentChannelType = Output.ofNullable(paymentChannelType);
             return this;
         }
 
-        public Builder publisherId(@Nullable Input<String> publisherId) {
+        public Builder publisherId(@Nullable Output<String> publisherId) {
             this.publisherId = publisherId;
             return this;
         }
 
         public Builder publisherId(@Nullable String publisherId) {
-            this.publisherId = Input.ofNullable(publisherId);
+            this.publisherId = Output.ofNullable(publisherId);
             return this;
         }
 
-        public Builder publisherTestEnvironment(@Nullable Input<String> publisherTestEnvironment) {
+        public Builder publisherTestEnvironment(@Nullable Output<String> publisherTestEnvironment) {
             this.publisherTestEnvironment = publisherTestEnvironment;
             return this;
         }
 
         public Builder publisherTestEnvironment(@Nullable String publisherTestEnvironment) {
-            this.publisherTestEnvironment = Input.ofNullable(publisherTestEnvironment);
+            this.publisherTestEnvironment = Output.ofNullable(publisherTestEnvironment);
             return this;
         }
 
-        public Builder quantity(@Nullable Input<Double> quantity) {
+        public Builder quantity(@Nullable Output<Double> quantity) {
             this.quantity = quantity;
             return this;
         }
 
         public Builder quantity(@Nullable Double quantity) {
-            this.quantity = Input.ofNullable(quantity);
+            this.quantity = Output.ofNullable(quantity);
             return this;
         }
 
-        public Builder saasResourceName(@Nullable Input<String> saasResourceName) {
+        public Builder saasResourceName(@Nullable Output<String> saasResourceName) {
             this.saasResourceName = saasResourceName;
             return this;
         }
 
         public Builder saasResourceName(@Nullable String saasResourceName) {
-            this.saasResourceName = Input.ofNullable(saasResourceName);
+            this.saasResourceName = Output.ofNullable(saasResourceName);
             return this;
         }
 
-        public Builder saasSessionId(@Nullable Input<String> saasSessionId) {
+        public Builder saasSessionId(@Nullable Output<String> saasSessionId) {
             this.saasSessionId = saasSessionId;
             return this;
         }
 
         public Builder saasSessionId(@Nullable String saasSessionId) {
-            this.saasSessionId = Input.ofNullable(saasSessionId);
+            this.saasSessionId = Output.ofNullable(saasSessionId);
             return this;
         }
 
-        public Builder saasSubscriptionId(@Nullable Input<String> saasSubscriptionId) {
+        public Builder saasSubscriptionId(@Nullable Output<String> saasSubscriptionId) {
             this.saasSubscriptionId = saasSubscriptionId;
             return this;
         }
 
         public Builder saasSubscriptionId(@Nullable String saasSubscriptionId) {
-            this.saasSubscriptionId = Input.ofNullable(saasSubscriptionId);
+            this.saasSubscriptionId = Output.ofNullable(saasSubscriptionId);
             return this;
         }
 
-        public Builder skuId(@Nullable Input<String> skuId) {
+        public Builder skuId(@Nullable Output<String> skuId) {
             this.skuId = skuId;
             return this;
         }
 
         public Builder skuId(@Nullable String skuId) {
-            this.skuId = Input.ofNullable(skuId);
+            this.skuId = Output.ofNullable(skuId);
             return this;
         }
 
-        public Builder termId(@Nullable Input<String> termId) {
+        public Builder termId(@Nullable Output<String> termId) {
             this.termId = termId;
             return this;
         }
 
         public Builder termId(@Nullable String termId) {
-            this.termId = Input.ofNullable(termId);
+            this.termId = Output.ofNullable(termId);
             return this;
         }
         public SaasCreationPropertiesArgs build() {

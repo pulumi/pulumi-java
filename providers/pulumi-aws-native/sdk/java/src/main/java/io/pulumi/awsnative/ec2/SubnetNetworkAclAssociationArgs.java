@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class SubnetNetworkAclAssociationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="networkAclId", required=true)
-      private final Input<String> networkAclId;
+      private final Output<String> networkAclId;
 
-    public Input<String> getNetworkAclId() {
+    public Output<String> getNetworkAclId() {
         return this.networkAclId;
     }
 
@@ -29,22 +29,22 @@ public final class SubnetNetworkAclAssociationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="subnetId", required=true)
-      private final Input<String> subnetId;
+      private final Output<String> subnetId;
 
-    public Input<String> getSubnetId() {
+    public Output<String> getSubnetId() {
         return this.subnetId;
     }
 
     public SubnetNetworkAclAssociationArgs(
-        Input<String> networkAclId,
-        Input<String> subnetId) {
+        Output<String> networkAclId,
+        Output<String> subnetId) {
         this.networkAclId = Objects.requireNonNull(networkAclId, "expected parameter 'networkAclId' to be non-null");
         this.subnetId = Objects.requireNonNull(subnetId, "expected parameter 'subnetId' to be non-null");
     }
 
     private SubnetNetworkAclAssociationArgs() {
-        this.networkAclId = Input.empty();
-        this.subnetId = Input.empty();
+        this.networkAclId = Output.empty();
+        this.subnetId = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class SubnetNetworkAclAssociationArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<String> networkAclId;
-        private Input<String> subnetId;
+        private Output<String> networkAclId;
+        private Output<String> subnetId;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class SubnetNetworkAclAssociationArgs extends io.pulumi.resources.R
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder networkAclId(Input<String> networkAclId) {
+        public Builder networkAclId(Output<String> networkAclId) {
             this.networkAclId = Objects.requireNonNull(networkAclId);
             return this;
         }
 
         public Builder networkAclId(String networkAclId) {
-            this.networkAclId = Input.of(Objects.requireNonNull(networkAclId));
+            this.networkAclId = Output.of(Objects.requireNonNull(networkAclId));
             return this;
         }
 
-        public Builder subnetId(Input<String> subnetId) {
+        public Builder subnetId(Output<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
 
         public Builder subnetId(String subnetId) {
-            this.subnetId = Input.of(Objects.requireNonNull(subnetId));
+            this.subnetId = Output.of(Objects.requireNonNull(subnetId));
             return this;
         }
         public SubnetNetworkAclAssociationArgs build() {

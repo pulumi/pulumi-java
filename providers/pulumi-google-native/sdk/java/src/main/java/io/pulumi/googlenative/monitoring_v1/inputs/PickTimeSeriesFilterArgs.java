@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v1.enums.PickTimeSeriesFilterDirection;
 import io.pulumi.googlenative.monitoring_v1.enums.PickTimeSeriesFilterRankingMethod;
@@ -25,10 +25,10 @@ public final class PickTimeSeriesFilterArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="direction")
-      private final @Nullable Input<PickTimeSeriesFilterDirection> direction;
+      private final @Nullable Output<PickTimeSeriesFilterDirection> direction;
 
-    public Input<PickTimeSeriesFilterDirection> getDirection() {
-        return this.direction == null ? Input.empty() : this.direction;
+    public Output<PickTimeSeriesFilterDirection> getDirection() {
+        return this.direction == null ? Output.empty() : this.direction;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PickTimeSeriesFilterArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="numTimeSeries")
-      private final @Nullable Input<Integer> numTimeSeries;
+      private final @Nullable Output<Integer> numTimeSeries;
 
-    public Input<Integer> getNumTimeSeries() {
-        return this.numTimeSeries == null ? Input.empty() : this.numTimeSeries;
+    public Output<Integer> getNumTimeSeries() {
+        return this.numTimeSeries == null ? Output.empty() : this.numTimeSeries;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class PickTimeSeriesFilterArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="rankingMethod")
-      private final @Nullable Input<PickTimeSeriesFilterRankingMethod> rankingMethod;
+      private final @Nullable Output<PickTimeSeriesFilterRankingMethod> rankingMethod;
 
-    public Input<PickTimeSeriesFilterRankingMethod> getRankingMethod() {
-        return this.rankingMethod == null ? Input.empty() : this.rankingMethod;
+    public Output<PickTimeSeriesFilterRankingMethod> getRankingMethod() {
+        return this.rankingMethod == null ? Output.empty() : this.rankingMethod;
     }
 
     public PickTimeSeriesFilterArgs(
-        @Nullable Input<PickTimeSeriesFilterDirection> direction,
-        @Nullable Input<Integer> numTimeSeries,
-        @Nullable Input<PickTimeSeriesFilterRankingMethod> rankingMethod) {
+        @Nullable Output<PickTimeSeriesFilterDirection> direction,
+        @Nullable Output<Integer> numTimeSeries,
+        @Nullable Output<PickTimeSeriesFilterRankingMethod> rankingMethod) {
         this.direction = direction;
         this.numTimeSeries = numTimeSeries;
         this.rankingMethod = rankingMethod;
     }
 
     private PickTimeSeriesFilterArgs() {
-        this.direction = Input.empty();
-        this.numTimeSeries = Input.empty();
-        this.rankingMethod = Input.empty();
+        this.direction = Output.empty();
+        this.numTimeSeries = Output.empty();
+        this.rankingMethod = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class PickTimeSeriesFilterArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<PickTimeSeriesFilterDirection> direction;
-        private @Nullable Input<Integer> numTimeSeries;
-        private @Nullable Input<PickTimeSeriesFilterRankingMethod> rankingMethod;
+        private @Nullable Output<PickTimeSeriesFilterDirection> direction;
+        private @Nullable Output<Integer> numTimeSeries;
+        private @Nullable Output<PickTimeSeriesFilterRankingMethod> rankingMethod;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class PickTimeSeriesFilterArgs extends io.pulumi.resources.Resource
     	      this.rankingMethod = defaults.rankingMethod;
         }
 
-        public Builder direction(@Nullable Input<PickTimeSeriesFilterDirection> direction) {
+        public Builder direction(@Nullable Output<PickTimeSeriesFilterDirection> direction) {
             this.direction = direction;
             return this;
         }
 
         public Builder direction(@Nullable PickTimeSeriesFilterDirection direction) {
-            this.direction = Input.ofNullable(direction);
+            this.direction = Output.ofNullable(direction);
             return this;
         }
 
-        public Builder numTimeSeries(@Nullable Input<Integer> numTimeSeries) {
+        public Builder numTimeSeries(@Nullable Output<Integer> numTimeSeries) {
             this.numTimeSeries = numTimeSeries;
             return this;
         }
 
         public Builder numTimeSeries(@Nullable Integer numTimeSeries) {
-            this.numTimeSeries = Input.ofNullable(numTimeSeries);
+            this.numTimeSeries = Output.ofNullable(numTimeSeries);
             return this;
         }
 
-        public Builder rankingMethod(@Nullable Input<PickTimeSeriesFilterRankingMethod> rankingMethod) {
+        public Builder rankingMethod(@Nullable Output<PickTimeSeriesFilterRankingMethod> rankingMethod) {
             this.rankingMethod = rankingMethod;
             return this;
         }
 
         public Builder rankingMethod(@Nullable PickTimeSeriesFilterRankingMethod rankingMethod) {
-            this.rankingMethod = Input.ofNullable(rankingMethod);
+            this.rankingMethod = Output.ofNullable(rankingMethod);
             return this;
         }
         public PickTimeSeriesFilterArgs build() {

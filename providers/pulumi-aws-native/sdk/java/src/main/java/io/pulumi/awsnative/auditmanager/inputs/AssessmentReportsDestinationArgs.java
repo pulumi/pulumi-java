@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.auditmanager.inputs;
 
 import io.pulumi.awsnative.auditmanager.enums.AssessmentReportDestinationType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,29 +20,29 @@ public final class AssessmentReportsDestinationArgs extends io.pulumi.resources.
     public static final AssessmentReportsDestinationArgs Empty = new AssessmentReportsDestinationArgs();
 
     @InputImport(name="destination")
-      private final @Nullable Input<String> destination;
+      private final @Nullable Output<String> destination;
 
-    public Input<String> getDestination() {
-        return this.destination == null ? Input.empty() : this.destination;
+    public Output<String> getDestination() {
+        return this.destination == null ? Output.empty() : this.destination;
     }
 
     @InputImport(name="destinationType")
-      private final @Nullable Input<AssessmentReportDestinationType> destinationType;
+      private final @Nullable Output<AssessmentReportDestinationType> destinationType;
 
-    public Input<AssessmentReportDestinationType> getDestinationType() {
-        return this.destinationType == null ? Input.empty() : this.destinationType;
+    public Output<AssessmentReportDestinationType> getDestinationType() {
+        return this.destinationType == null ? Output.empty() : this.destinationType;
     }
 
     public AssessmentReportsDestinationArgs(
-        @Nullable Input<String> destination,
-        @Nullable Input<AssessmentReportDestinationType> destinationType) {
+        @Nullable Output<String> destination,
+        @Nullable Output<AssessmentReportDestinationType> destinationType) {
         this.destination = destination;
         this.destinationType = destinationType;
     }
 
     private AssessmentReportsDestinationArgs() {
-        this.destination = Input.empty();
-        this.destinationType = Input.empty();
+        this.destination = Output.empty();
+        this.destinationType = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class AssessmentReportsDestinationArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> destination;
-        private @Nullable Input<AssessmentReportDestinationType> destinationType;
+        private @Nullable Output<String> destination;
+        private @Nullable Output<AssessmentReportDestinationType> destinationType;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class AssessmentReportsDestinationArgs extends io.pulumi.resources.
     	      this.destinationType = defaults.destinationType;
         }
 
-        public Builder destination(@Nullable Input<String> destination) {
+        public Builder destination(@Nullable Output<String> destination) {
             this.destination = destination;
             return this;
         }
 
         public Builder destination(@Nullable String destination) {
-            this.destination = Input.ofNullable(destination);
+            this.destination = Output.ofNullable(destination);
             return this;
         }
 
-        public Builder destinationType(@Nullable Input<AssessmentReportDestinationType> destinationType) {
+        public Builder destinationType(@Nullable Output<AssessmentReportDestinationType> destinationType) {
             this.destinationType = destinationType;
             return this;
         }
 
         public Builder destinationType(@Nullable AssessmentReportDestinationType destinationType) {
-            this.destinationType = Input.ofNullable(destinationType);
+            this.destinationType = Output.ofNullable(destinationType);
             return this;
         }
         public AssessmentReportsDestinationArgs build() {

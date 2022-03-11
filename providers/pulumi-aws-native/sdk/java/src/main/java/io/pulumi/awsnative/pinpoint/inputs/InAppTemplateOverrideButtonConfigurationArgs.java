@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.pinpoint.inputs;
 
 import io.pulumi.awsnative.pinpoint.enums.InAppTemplateButtonAction;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,29 +16,29 @@ public final class InAppTemplateOverrideButtonConfigurationArgs extends io.pulum
     public static final InAppTemplateOverrideButtonConfigurationArgs Empty = new InAppTemplateOverrideButtonConfigurationArgs();
 
     @InputImport(name="buttonAction")
-      private final @Nullable Input<InAppTemplateButtonAction> buttonAction;
+      private final @Nullable Output<InAppTemplateButtonAction> buttonAction;
 
-    public Input<InAppTemplateButtonAction> getButtonAction() {
-        return this.buttonAction == null ? Input.empty() : this.buttonAction;
+    public Output<InAppTemplateButtonAction> getButtonAction() {
+        return this.buttonAction == null ? Output.empty() : this.buttonAction;
     }
 
     @InputImport(name="link")
-      private final @Nullable Input<String> link;
+      private final @Nullable Output<String> link;
 
-    public Input<String> getLink() {
-        return this.link == null ? Input.empty() : this.link;
+    public Output<String> getLink() {
+        return this.link == null ? Output.empty() : this.link;
     }
 
     public InAppTemplateOverrideButtonConfigurationArgs(
-        @Nullable Input<InAppTemplateButtonAction> buttonAction,
-        @Nullable Input<String> link) {
+        @Nullable Output<InAppTemplateButtonAction> buttonAction,
+        @Nullable Output<String> link) {
         this.buttonAction = buttonAction;
         this.link = link;
     }
 
     private InAppTemplateOverrideButtonConfigurationArgs() {
-        this.buttonAction = Input.empty();
-        this.link = Input.empty();
+        this.buttonAction = Output.empty();
+        this.link = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class InAppTemplateOverrideButtonConfigurationArgs extends io.pulum
     }
 
     public static final class Builder {
-        private @Nullable Input<InAppTemplateButtonAction> buttonAction;
-        private @Nullable Input<String> link;
+        private @Nullable Output<InAppTemplateButtonAction> buttonAction;
+        private @Nullable Output<String> link;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class InAppTemplateOverrideButtonConfigurationArgs extends io.pulum
     	      this.link = defaults.link;
         }
 
-        public Builder buttonAction(@Nullable Input<InAppTemplateButtonAction> buttonAction) {
+        public Builder buttonAction(@Nullable Output<InAppTemplateButtonAction> buttonAction) {
             this.buttonAction = buttonAction;
             return this;
         }
 
         public Builder buttonAction(@Nullable InAppTemplateButtonAction buttonAction) {
-            this.buttonAction = Input.ofNullable(buttonAction);
+            this.buttonAction = Output.ofNullable(buttonAction);
             return this;
         }
 
-        public Builder link(@Nullable Input<String> link) {
+        public Builder link(@Nullable Output<String> link) {
             this.link = link;
             return this;
         }
 
         public Builder link(@Nullable String link) {
-            this.link = Input.ofNullable(link);
+            this.link = Output.ofNullable(link);
             return this;
         }
         public InAppTemplateOverrideButtonConfigurationArgs build() {

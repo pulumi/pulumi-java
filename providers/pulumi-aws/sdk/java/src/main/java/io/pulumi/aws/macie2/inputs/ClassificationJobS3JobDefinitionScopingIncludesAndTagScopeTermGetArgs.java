@@ -4,7 +4,7 @@
 package io.pulumi.aws.macie2.inputs;
 
 import io.pulumi.aws.macie2.inputs.ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValueGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTer
      * 
      */
     @InputImport(name="comparator")
-      private final @Nullable Input<String> comparator;
+      private final @Nullable Output<String> comparator;
 
-    public Input<String> getComparator() {
-        return this.comparator == null ? Input.empty() : this.comparator;
+    public Output<String> getComparator() {
+        return this.comparator == null ? Output.empty() : this.comparator;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTer
      * 
      */
     @InputImport(name="key")
-      private final @Nullable Input<String> key;
+      private final @Nullable Output<String> key;
 
-    public Input<String> getKey() {
-        return this.key == null ? Input.empty() : this.key;
+    public Output<String> getKey() {
+        return this.key == null ? Output.empty() : this.key;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTer
      * 
      */
     @InputImport(name="tagValues")
-      private final @Nullable Input<List<ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValueGetArgs>> tagValues;
+      private final @Nullable Output<List<ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValueGetArgs>> tagValues;
 
-    public Input<List<ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValueGetArgs>> getTagValues() {
-        return this.tagValues == null ? Input.empty() : this.tagValues;
+    public Output<List<ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValueGetArgs>> getTagValues() {
+        return this.tagValues == null ? Output.empty() : this.tagValues;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTer
      * 
      */
     @InputImport(name="target")
-      private final @Nullable Input<String> target;
+      private final @Nullable Output<String> target;
 
-    public Input<String> getTarget() {
-        return this.target == null ? Input.empty() : this.target;
+    public Output<String> getTarget() {
+        return this.target == null ? Output.empty() : this.target;
     }
 
     public ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermGetArgs(
-        @Nullable Input<String> comparator,
-        @Nullable Input<String> key,
-        @Nullable Input<List<ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValueGetArgs>> tagValues,
-        @Nullable Input<String> target) {
+        @Nullable Output<String> comparator,
+        @Nullable Output<String> key,
+        @Nullable Output<List<ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValueGetArgs>> tagValues,
+        @Nullable Output<String> target) {
         this.comparator = comparator;
         this.key = key;
         this.tagValues = tagValues;
@@ -72,10 +72,10 @@ public final class ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTer
     }
 
     private ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermGetArgs() {
-        this.comparator = Input.empty();
-        this.key = Input.empty();
-        this.tagValues = Input.empty();
-        this.target = Input.empty();
+        this.comparator = Output.empty();
+        this.key = Output.empty();
+        this.tagValues = Output.empty();
+        this.target = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTer
     }
 
     public static final class Builder {
-        private @Nullable Input<String> comparator;
-        private @Nullable Input<String> key;
-        private @Nullable Input<List<ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValueGetArgs>> tagValues;
-        private @Nullable Input<String> target;
+        private @Nullable Output<String> comparator;
+        private @Nullable Output<String> key;
+        private @Nullable Output<List<ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValueGetArgs>> tagValues;
+        private @Nullable Output<String> target;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTer
     	      this.target = defaults.target;
         }
 
-        public Builder comparator(@Nullable Input<String> comparator) {
+        public Builder comparator(@Nullable Output<String> comparator) {
             this.comparator = comparator;
             return this;
         }
 
         public Builder comparator(@Nullable String comparator) {
-            this.comparator = Input.ofNullable(comparator);
+            this.comparator = Output.ofNullable(comparator);
             return this;
         }
 
-        public Builder key(@Nullable Input<String> key) {
+        public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
 
         public Builder key(@Nullable String key) {
-            this.key = Input.ofNullable(key);
+            this.key = Output.ofNullable(key);
             return this;
         }
 
-        public Builder tagValues(@Nullable Input<List<ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValueGetArgs>> tagValues) {
+        public Builder tagValues(@Nullable Output<List<ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValueGetArgs>> tagValues) {
             this.tagValues = tagValues;
             return this;
         }
 
         public Builder tagValues(@Nullable List<ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValueGetArgs> tagValues) {
-            this.tagValues = Input.ofNullable(tagValues);
+            this.tagValues = Output.ofNullable(tagValues);
             return this;
         }
 
-        public Builder target(@Nullable Input<String> target) {
+        public Builder target(@Nullable Output<String> target) {
             this.target = target;
             return this;
         }
 
         public Builder target(@Nullable String target) {
-            this.target = Input.ofNullable(target);
+            this.target = Output.ofNullable(target);
             return this;
         }
         public ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermGetArgs build() {

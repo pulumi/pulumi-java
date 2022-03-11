@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ssmcontacts.inputs;
 
 import io.pulumi.awsnative.ssmcontacts.inputs.ContactTargetsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.List;
@@ -25,9 +25,9 @@ public final class ContactStageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="durationInMinutes", required=true)
-      private final Input<Integer> durationInMinutes;
+      private final Output<Integer> durationInMinutes;
 
-    public Input<Integer> getDurationInMinutes() {
+    public Output<Integer> getDurationInMinutes() {
         return this.durationInMinutes;
     }
 
@@ -36,22 +36,22 @@ public final class ContactStageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targets")
-      private final @Nullable Input<List<ContactTargetsArgs>> targets;
+      private final @Nullable Output<List<ContactTargetsArgs>> targets;
 
-    public Input<List<ContactTargetsArgs>> getTargets() {
-        return this.targets == null ? Input.empty() : this.targets;
+    public Output<List<ContactTargetsArgs>> getTargets() {
+        return this.targets == null ? Output.empty() : this.targets;
     }
 
     public ContactStageArgs(
-        Input<Integer> durationInMinutes,
-        @Nullable Input<List<ContactTargetsArgs>> targets) {
+        Output<Integer> durationInMinutes,
+        @Nullable Output<List<ContactTargetsArgs>> targets) {
         this.durationInMinutes = Objects.requireNonNull(durationInMinutes, "expected parameter 'durationInMinutes' to be non-null");
         this.targets = targets;
     }
 
     private ContactStageArgs() {
-        this.durationInMinutes = Input.empty();
-        this.targets = Input.empty();
+        this.durationInMinutes = Output.empty();
+        this.targets = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class ContactStageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Integer> durationInMinutes;
-        private @Nullable Input<List<ContactTargetsArgs>> targets;
+        private Output<Integer> durationInMinutes;
+        private @Nullable Output<List<ContactTargetsArgs>> targets;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class ContactStageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targets = defaults.targets;
         }
 
-        public Builder durationInMinutes(Input<Integer> durationInMinutes) {
+        public Builder durationInMinutes(Output<Integer> durationInMinutes) {
             this.durationInMinutes = Objects.requireNonNull(durationInMinutes);
             return this;
         }
 
         public Builder durationInMinutes(Integer durationInMinutes) {
-            this.durationInMinutes = Input.of(Objects.requireNonNull(durationInMinutes));
+            this.durationInMinutes = Output.of(Objects.requireNonNull(durationInMinutes));
             return this;
         }
 
-        public Builder targets(@Nullable Input<List<ContactTargetsArgs>> targets) {
+        public Builder targets(@Nullable Output<List<ContactTargetsArgs>> targets) {
             this.targets = targets;
             return this;
         }
 
         public Builder targets(@Nullable List<ContactTargetsArgs> targets) {
-            this.targets = Input.ofNullable(targets);
+            this.targets = Output.ofNullable(targets);
             return this;
         }
         public ContactStageArgs build() {

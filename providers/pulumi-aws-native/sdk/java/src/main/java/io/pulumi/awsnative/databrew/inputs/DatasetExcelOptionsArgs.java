@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.databrew.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -18,39 +18,39 @@ public final class DatasetExcelOptionsArgs extends io.pulumi.resources.ResourceA
     public static final DatasetExcelOptionsArgs Empty = new DatasetExcelOptionsArgs();
 
     @InputImport(name="headerRow")
-      private final @Nullable Input<Boolean> headerRow;
+      private final @Nullable Output<Boolean> headerRow;
 
-    public Input<Boolean> getHeaderRow() {
-        return this.headerRow == null ? Input.empty() : this.headerRow;
+    public Output<Boolean> getHeaderRow() {
+        return this.headerRow == null ? Output.empty() : this.headerRow;
     }
 
     @InputImport(name="sheetIndexes")
-      private final @Nullable Input<List<Integer>> sheetIndexes;
+      private final @Nullable Output<List<Integer>> sheetIndexes;
 
-    public Input<List<Integer>> getSheetIndexes() {
-        return this.sheetIndexes == null ? Input.empty() : this.sheetIndexes;
+    public Output<List<Integer>> getSheetIndexes() {
+        return this.sheetIndexes == null ? Output.empty() : this.sheetIndexes;
     }
 
     @InputImport(name="sheetNames")
-      private final @Nullable Input<List<String>> sheetNames;
+      private final @Nullable Output<List<String>> sheetNames;
 
-    public Input<List<String>> getSheetNames() {
-        return this.sheetNames == null ? Input.empty() : this.sheetNames;
+    public Output<List<String>> getSheetNames() {
+        return this.sheetNames == null ? Output.empty() : this.sheetNames;
     }
 
     public DatasetExcelOptionsArgs(
-        @Nullable Input<Boolean> headerRow,
-        @Nullable Input<List<Integer>> sheetIndexes,
-        @Nullable Input<List<String>> sheetNames) {
+        @Nullable Output<Boolean> headerRow,
+        @Nullable Output<List<Integer>> sheetIndexes,
+        @Nullable Output<List<String>> sheetNames) {
         this.headerRow = headerRow;
         this.sheetIndexes = sheetIndexes;
         this.sheetNames = sheetNames;
     }
 
     private DatasetExcelOptionsArgs() {
-        this.headerRow = Input.empty();
-        this.sheetIndexes = Input.empty();
-        this.sheetNames = Input.empty();
+        this.headerRow = Output.empty();
+        this.sheetIndexes = Output.empty();
+        this.sheetNames = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,9 +62,9 @@ public final class DatasetExcelOptionsArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> headerRow;
-        private @Nullable Input<List<Integer>> sheetIndexes;
-        private @Nullable Input<List<String>> sheetNames;
+        private @Nullable Output<Boolean> headerRow;
+        private @Nullable Output<List<Integer>> sheetIndexes;
+        private @Nullable Output<List<String>> sheetNames;
 
         public Builder() {
     	      // Empty
@@ -77,33 +77,33 @@ public final class DatasetExcelOptionsArgs extends io.pulumi.resources.ResourceA
     	      this.sheetNames = defaults.sheetNames;
         }
 
-        public Builder headerRow(@Nullable Input<Boolean> headerRow) {
+        public Builder headerRow(@Nullable Output<Boolean> headerRow) {
             this.headerRow = headerRow;
             return this;
         }
 
         public Builder headerRow(@Nullable Boolean headerRow) {
-            this.headerRow = Input.ofNullable(headerRow);
+            this.headerRow = Output.ofNullable(headerRow);
             return this;
         }
 
-        public Builder sheetIndexes(@Nullable Input<List<Integer>> sheetIndexes) {
+        public Builder sheetIndexes(@Nullable Output<List<Integer>> sheetIndexes) {
             this.sheetIndexes = sheetIndexes;
             return this;
         }
 
         public Builder sheetIndexes(@Nullable List<Integer> sheetIndexes) {
-            this.sheetIndexes = Input.ofNullable(sheetIndexes);
+            this.sheetIndexes = Output.ofNullable(sheetIndexes);
             return this;
         }
 
-        public Builder sheetNames(@Nullable Input<List<String>> sheetNames) {
+        public Builder sheetNames(@Nullable Output<List<String>> sheetNames) {
             this.sheetNames = sheetNames;
             return this;
         }
 
         public Builder sheetNames(@Nullable List<String> sheetNames) {
-            this.sheetNames = Input.ofNullable(sheetNames);
+            this.sheetNames = Output.ofNullable(sheetNames);
             return this;
         }
         public DatasetExcelOptionsArgs build() {

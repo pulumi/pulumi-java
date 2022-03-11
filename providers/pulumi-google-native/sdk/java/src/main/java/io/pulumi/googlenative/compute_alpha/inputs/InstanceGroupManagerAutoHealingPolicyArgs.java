@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.InstanceGroupManagerAutoHealingPolicyUpdateInstances;
 import io.pulumi.googlenative.compute_alpha.inputs.FixedOrPercentArgs;
@@ -23,10 +23,10 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="autoHealingTriggers")
-      private final @Nullable Input<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs> autoHealingTriggers;
+      private final @Nullable Output<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs> autoHealingTriggers;
 
-    public Input<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs> getAutoHealingTriggers() {
-        return this.autoHealingTriggers == null ? Input.empty() : this.autoHealingTriggers;
+    public Output<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs> getAutoHealingTriggers() {
+        return this.autoHealingTriggers == null ? Output.empty() : this.autoHealingTriggers;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="healthCheck")
-      private final @Nullable Input<String> healthCheck;
+      private final @Nullable Output<String> healthCheck;
 
-    public Input<String> getHealthCheck() {
-        return this.healthCheck == null ? Input.empty() : this.healthCheck;
+    public Output<String> getHealthCheck() {
+        return this.healthCheck == null ? Output.empty() : this.healthCheck;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="initialDelaySec")
-      private final @Nullable Input<Integer> initialDelaySec;
+      private final @Nullable Output<Integer> initialDelaySec;
 
-    public Input<Integer> getInitialDelaySec() {
-        return this.initialDelaySec == null ? Input.empty() : this.initialDelaySec;
+    public Output<Integer> getInitialDelaySec() {
+        return this.initialDelaySec == null ? Output.empty() : this.initialDelaySec;
     }
 
     /**
@@ -56,25 +56,25 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="maxUnavailable")
-      private final @Nullable Input<FixedOrPercentArgs> maxUnavailable;
+      private final @Nullable Output<FixedOrPercentArgs> maxUnavailable;
 
-    public Input<FixedOrPercentArgs> getMaxUnavailable() {
-        return this.maxUnavailable == null ? Input.empty() : this.maxUnavailable;
+    public Output<FixedOrPercentArgs> getMaxUnavailable() {
+        return this.maxUnavailable == null ? Output.empty() : this.maxUnavailable;
     }
 
     @InputImport(name="updateInstances")
-      private final @Nullable Input<InstanceGroupManagerAutoHealingPolicyUpdateInstances> updateInstances;
+      private final @Nullable Output<InstanceGroupManagerAutoHealingPolicyUpdateInstances> updateInstances;
 
-    public Input<InstanceGroupManagerAutoHealingPolicyUpdateInstances> getUpdateInstances() {
-        return this.updateInstances == null ? Input.empty() : this.updateInstances;
+    public Output<InstanceGroupManagerAutoHealingPolicyUpdateInstances> getUpdateInstances() {
+        return this.updateInstances == null ? Output.empty() : this.updateInstances;
     }
 
     public InstanceGroupManagerAutoHealingPolicyArgs(
-        @Nullable Input<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs> autoHealingTriggers,
-        @Nullable Input<String> healthCheck,
-        @Nullable Input<Integer> initialDelaySec,
-        @Nullable Input<FixedOrPercentArgs> maxUnavailable,
-        @Nullable Input<InstanceGroupManagerAutoHealingPolicyUpdateInstances> updateInstances) {
+        @Nullable Output<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs> autoHealingTriggers,
+        @Nullable Output<String> healthCheck,
+        @Nullable Output<Integer> initialDelaySec,
+        @Nullable Output<FixedOrPercentArgs> maxUnavailable,
+        @Nullable Output<InstanceGroupManagerAutoHealingPolicyUpdateInstances> updateInstances) {
         this.autoHealingTriggers = autoHealingTriggers;
         this.healthCheck = healthCheck;
         this.initialDelaySec = initialDelaySec;
@@ -83,11 +83,11 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends io.pulumi.r
     }
 
     private InstanceGroupManagerAutoHealingPolicyArgs() {
-        this.autoHealingTriggers = Input.empty();
-        this.healthCheck = Input.empty();
-        this.initialDelaySec = Input.empty();
-        this.maxUnavailable = Input.empty();
-        this.updateInstances = Input.empty();
+        this.autoHealingTriggers = Output.empty();
+        this.healthCheck = Output.empty();
+        this.initialDelaySec = Output.empty();
+        this.maxUnavailable = Output.empty();
+        this.updateInstances = Output.empty();
     }
 
     public static Builder builder() {
@@ -99,11 +99,11 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs> autoHealingTriggers;
-        private @Nullable Input<String> healthCheck;
-        private @Nullable Input<Integer> initialDelaySec;
-        private @Nullable Input<FixedOrPercentArgs> maxUnavailable;
-        private @Nullable Input<InstanceGroupManagerAutoHealingPolicyUpdateInstances> updateInstances;
+        private @Nullable Output<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs> autoHealingTriggers;
+        private @Nullable Output<String> healthCheck;
+        private @Nullable Output<Integer> initialDelaySec;
+        private @Nullable Output<FixedOrPercentArgs> maxUnavailable;
+        private @Nullable Output<InstanceGroupManagerAutoHealingPolicyUpdateInstances> updateInstances;
 
         public Builder() {
     	      // Empty
@@ -118,53 +118,53 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends io.pulumi.r
     	      this.updateInstances = defaults.updateInstances;
         }
 
-        public Builder autoHealingTriggers(@Nullable Input<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs> autoHealingTriggers) {
+        public Builder autoHealingTriggers(@Nullable Output<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs> autoHealingTriggers) {
             this.autoHealingTriggers = autoHealingTriggers;
             return this;
         }
 
         public Builder autoHealingTriggers(@Nullable InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs autoHealingTriggers) {
-            this.autoHealingTriggers = Input.ofNullable(autoHealingTriggers);
+            this.autoHealingTriggers = Output.ofNullable(autoHealingTriggers);
             return this;
         }
 
-        public Builder healthCheck(@Nullable Input<String> healthCheck) {
+        public Builder healthCheck(@Nullable Output<String> healthCheck) {
             this.healthCheck = healthCheck;
             return this;
         }
 
         public Builder healthCheck(@Nullable String healthCheck) {
-            this.healthCheck = Input.ofNullable(healthCheck);
+            this.healthCheck = Output.ofNullable(healthCheck);
             return this;
         }
 
-        public Builder initialDelaySec(@Nullable Input<Integer> initialDelaySec) {
+        public Builder initialDelaySec(@Nullable Output<Integer> initialDelaySec) {
             this.initialDelaySec = initialDelaySec;
             return this;
         }
 
         public Builder initialDelaySec(@Nullable Integer initialDelaySec) {
-            this.initialDelaySec = Input.ofNullable(initialDelaySec);
+            this.initialDelaySec = Output.ofNullable(initialDelaySec);
             return this;
         }
 
-        public Builder maxUnavailable(@Nullable Input<FixedOrPercentArgs> maxUnavailable) {
+        public Builder maxUnavailable(@Nullable Output<FixedOrPercentArgs> maxUnavailable) {
             this.maxUnavailable = maxUnavailable;
             return this;
         }
 
         public Builder maxUnavailable(@Nullable FixedOrPercentArgs maxUnavailable) {
-            this.maxUnavailable = Input.ofNullable(maxUnavailable);
+            this.maxUnavailable = Output.ofNullable(maxUnavailable);
             return this;
         }
 
-        public Builder updateInstances(@Nullable Input<InstanceGroupManagerAutoHealingPolicyUpdateInstances> updateInstances) {
+        public Builder updateInstances(@Nullable Output<InstanceGroupManagerAutoHealingPolicyUpdateInstances> updateInstances) {
             this.updateInstances = updateInstances;
             return this;
         }
 
         public Builder updateInstances(@Nullable InstanceGroupManagerAutoHealingPolicyUpdateInstances updateInstances) {
-            this.updateInstances = Input.ofNullable(updateInstances);
+            this.updateInstances = Output.ofNullable(updateInstances);
             return this;
         }
         public InstanceGroupManagerAutoHealingPolicyArgs build() {

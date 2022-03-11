@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ToolExitCodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="number")
-      private final @Nullable Input<Integer> number;
+      private final @Nullable Output<Integer> number;
 
-    public Input<Integer> getNumber() {
-        return this.number == null ? Input.empty() : this.number;
+    public Output<Integer> getNumber() {
+        return this.number == null ? Output.empty() : this.number;
     }
 
-    public ToolExitCodeArgs(@Nullable Input<Integer> number) {
+    public ToolExitCodeArgs(@Nullable Output<Integer> number) {
         this.number = number;
     }
 
     private ToolExitCodeArgs() {
-        this.number = Input.empty();
+        this.number = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ToolExitCodeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> number;
+        private @Nullable Output<Integer> number;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ToolExitCodeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.number = defaults.number;
         }
 
-        public Builder number(@Nullable Input<Integer> number) {
+        public Builder number(@Nullable Output<Integer> number) {
             this.number = number;
             return this;
         }
 
         public Builder number(@Nullable Integer number) {
-            this.number = Input.ofNullable(number);
+            this.number = Output.ofNullable(number);
             return this;
         }
         public ToolExitCodeArgs build() {

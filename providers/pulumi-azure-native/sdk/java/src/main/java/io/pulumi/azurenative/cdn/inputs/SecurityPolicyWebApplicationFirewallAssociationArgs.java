@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.ResourceReferenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class SecurityPolicyWebApplicationFirewallAssociationArgs extends i
      * 
      */
     @InputImport(name="domains")
-      private final @Nullable Input<List<ResourceReferenceArgs>> domains;
+      private final @Nullable Output<List<ResourceReferenceArgs>> domains;
 
-    public Input<List<ResourceReferenceArgs>> getDomains() {
-        return this.domains == null ? Input.empty() : this.domains;
+    public Output<List<ResourceReferenceArgs>> getDomains() {
+        return this.domains == null ? Output.empty() : this.domains;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class SecurityPolicyWebApplicationFirewallAssociationArgs extends i
      * 
      */
     @InputImport(name="patternsToMatch")
-      private final @Nullable Input<List<String>> patternsToMatch;
+      private final @Nullable Output<List<String>> patternsToMatch;
 
-    public Input<List<String>> getPatternsToMatch() {
-        return this.patternsToMatch == null ? Input.empty() : this.patternsToMatch;
+    public Output<List<String>> getPatternsToMatch() {
+        return this.patternsToMatch == null ? Output.empty() : this.patternsToMatch;
     }
 
     public SecurityPolicyWebApplicationFirewallAssociationArgs(
-        @Nullable Input<List<ResourceReferenceArgs>> domains,
-        @Nullable Input<List<String>> patternsToMatch) {
+        @Nullable Output<List<ResourceReferenceArgs>> domains,
+        @Nullable Output<List<String>> patternsToMatch) {
         this.domains = domains;
         this.patternsToMatch = patternsToMatch;
     }
 
     private SecurityPolicyWebApplicationFirewallAssociationArgs() {
-        this.domains = Input.empty();
-        this.patternsToMatch = Input.empty();
+        this.domains = Output.empty();
+        this.patternsToMatch = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class SecurityPolicyWebApplicationFirewallAssociationArgs extends i
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ResourceReferenceArgs>> domains;
-        private @Nullable Input<List<String>> patternsToMatch;
+        private @Nullable Output<List<ResourceReferenceArgs>> domains;
+        private @Nullable Output<List<String>> patternsToMatch;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class SecurityPolicyWebApplicationFirewallAssociationArgs extends i
     	      this.patternsToMatch = defaults.patternsToMatch;
         }
 
-        public Builder domains(@Nullable Input<List<ResourceReferenceArgs>> domains) {
+        public Builder domains(@Nullable Output<List<ResourceReferenceArgs>> domains) {
             this.domains = domains;
             return this;
         }
 
         public Builder domains(@Nullable List<ResourceReferenceArgs> domains) {
-            this.domains = Input.ofNullable(domains);
+            this.domains = Output.ofNullable(domains);
             return this;
         }
 
-        public Builder patternsToMatch(@Nullable Input<List<String>> patternsToMatch) {
+        public Builder patternsToMatch(@Nullable Output<List<String>> patternsToMatch) {
             this.patternsToMatch = patternsToMatch;
             return this;
         }
 
         public Builder patternsToMatch(@Nullable List<String> patternsToMatch) {
-            this.patternsToMatch = Input.ofNullable(patternsToMatch);
+            this.patternsToMatch = Output.ofNullable(patternsToMatch);
             return this;
         }
         public SecurityPolicyWebApplicationFirewallAssociationArgs build() {

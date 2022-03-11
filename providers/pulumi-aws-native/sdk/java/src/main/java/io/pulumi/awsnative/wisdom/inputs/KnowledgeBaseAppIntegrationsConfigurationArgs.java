@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.wisdom.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -15,29 +15,29 @@ public final class KnowledgeBaseAppIntegrationsConfigurationArgs extends io.pulu
     public static final KnowledgeBaseAppIntegrationsConfigurationArgs Empty = new KnowledgeBaseAppIntegrationsConfigurationArgs();
 
     @InputImport(name="appIntegrationArn", required=true)
-      private final Input<String> appIntegrationArn;
+      private final Output<String> appIntegrationArn;
 
-    public Input<String> getAppIntegrationArn() {
+    public Output<String> getAppIntegrationArn() {
         return this.appIntegrationArn;
     }
 
     @InputImport(name="objectFields", required=true)
-      private final Input<List<String>> objectFields;
+      private final Output<List<String>> objectFields;
 
-    public Input<List<String>> getObjectFields() {
+    public Output<List<String>> getObjectFields() {
         return this.objectFields;
     }
 
     public KnowledgeBaseAppIntegrationsConfigurationArgs(
-        Input<String> appIntegrationArn,
-        Input<List<String>> objectFields) {
+        Output<String> appIntegrationArn,
+        Output<List<String>> objectFields) {
         this.appIntegrationArn = Objects.requireNonNull(appIntegrationArn, "expected parameter 'appIntegrationArn' to be non-null");
         this.objectFields = Objects.requireNonNull(objectFields, "expected parameter 'objectFields' to be non-null");
     }
 
     private KnowledgeBaseAppIntegrationsConfigurationArgs() {
-        this.appIntegrationArn = Input.empty();
-        this.objectFields = Input.empty();
+        this.appIntegrationArn = Output.empty();
+        this.objectFields = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class KnowledgeBaseAppIntegrationsConfigurationArgs extends io.pulu
     }
 
     public static final class Builder {
-        private Input<String> appIntegrationArn;
-        private Input<List<String>> objectFields;
+        private Output<String> appIntegrationArn;
+        private Output<List<String>> objectFields;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class KnowledgeBaseAppIntegrationsConfigurationArgs extends io.pulu
     	      this.objectFields = defaults.objectFields;
         }
 
-        public Builder appIntegrationArn(Input<String> appIntegrationArn) {
+        public Builder appIntegrationArn(Output<String> appIntegrationArn) {
             this.appIntegrationArn = Objects.requireNonNull(appIntegrationArn);
             return this;
         }
 
         public Builder appIntegrationArn(String appIntegrationArn) {
-            this.appIntegrationArn = Input.of(Objects.requireNonNull(appIntegrationArn));
+            this.appIntegrationArn = Output.of(Objects.requireNonNull(appIntegrationArn));
             return this;
         }
 
-        public Builder objectFields(Input<List<String>> objectFields) {
+        public Builder objectFields(Output<List<String>> objectFields) {
             this.objectFields = Objects.requireNonNull(objectFields);
             return this;
         }
 
         public Builder objectFields(List<String> objectFields) {
-            this.objectFields = Input.of(Objects.requireNonNull(objectFields));
+            this.objectFields = Output.of(Objects.requireNonNull(objectFields));
             return this;
         }
         public KnowledgeBaseAppIntegrationsConfigurationArgs build() {

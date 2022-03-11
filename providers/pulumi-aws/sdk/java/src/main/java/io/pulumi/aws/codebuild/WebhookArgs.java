@@ -4,7 +4,7 @@
 package io.pulumi.aws.codebuild;
 
 import io.pulumi.aws.codebuild.inputs.WebhookFilterGroupArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="branchFilter")
-      private final @Nullable Input<String> branchFilter;
+      private final @Nullable Output<String> branchFilter;
 
-    public Input<String> getBranchFilter() {
-        return this.branchFilter == null ? Input.empty() : this.branchFilter;
+    public Output<String> getBranchFilter() {
+        return this.branchFilter == null ? Output.empty() : this.branchFilter;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="buildType")
-      private final @Nullable Input<String> buildType;
+      private final @Nullable Output<String> buildType;
 
-    public Input<String> getBuildType() {
-        return this.buildType == null ? Input.empty() : this.buildType;
+    public Output<String> getBuildType() {
+        return this.buildType == null ? Output.empty() : this.buildType;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filterGroups")
-      private final @Nullable Input<List<WebhookFilterGroupArgs>> filterGroups;
+      private final @Nullable Output<List<WebhookFilterGroupArgs>> filterGroups;
 
-    public Input<List<WebhookFilterGroupArgs>> getFilterGroups() {
-        return this.filterGroups == null ? Input.empty() : this.filterGroups;
+    public Output<List<WebhookFilterGroupArgs>> getFilterGroups() {
+        return this.filterGroups == null ? Output.empty() : this.filterGroups;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectName", required=true)
-      private final Input<String> projectName;
+      private final Output<String> projectName;
 
-    public Input<String> getProjectName() {
+    public Output<String> getProjectName() {
         return this.projectName;
     }
 
     public WebhookArgs(
-        @Nullable Input<String> branchFilter,
-        @Nullable Input<String> buildType,
-        @Nullable Input<List<WebhookFilterGroupArgs>> filterGroups,
-        Input<String> projectName) {
+        @Nullable Output<String> branchFilter,
+        @Nullable Output<String> buildType,
+        @Nullable Output<List<WebhookFilterGroupArgs>> filterGroups,
+        Output<String> projectName) {
         this.branchFilter = branchFilter;
         this.buildType = buildType;
         this.filterGroups = filterGroups;
@@ -72,10 +72,10 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WebhookArgs() {
-        this.branchFilter = Input.empty();
-        this.buildType = Input.empty();
-        this.filterGroups = Input.empty();
-        this.projectName = Input.empty();
+        this.branchFilter = Output.empty();
+        this.buildType = Output.empty();
+        this.filterGroups = Output.empty();
+        this.projectName = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> branchFilter;
-        private @Nullable Input<String> buildType;
-        private @Nullable Input<List<WebhookFilterGroupArgs>> filterGroups;
-        private Input<String> projectName;
+        private @Nullable Output<String> branchFilter;
+        private @Nullable Output<String> buildType;
+        private @Nullable Output<List<WebhookFilterGroupArgs>> filterGroups;
+        private Output<String> projectName;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     	      this.projectName = defaults.projectName;
         }
 
-        public Builder branchFilter(@Nullable Input<String> branchFilter) {
+        public Builder branchFilter(@Nullable Output<String> branchFilter) {
             this.branchFilter = branchFilter;
             return this;
         }
 
         public Builder branchFilter(@Nullable String branchFilter) {
-            this.branchFilter = Input.ofNullable(branchFilter);
+            this.branchFilter = Output.ofNullable(branchFilter);
             return this;
         }
 
-        public Builder buildType(@Nullable Input<String> buildType) {
+        public Builder buildType(@Nullable Output<String> buildType) {
             this.buildType = buildType;
             return this;
         }
 
         public Builder buildType(@Nullable String buildType) {
-            this.buildType = Input.ofNullable(buildType);
+            this.buildType = Output.ofNullable(buildType);
             return this;
         }
 
-        public Builder filterGroups(@Nullable Input<List<WebhookFilterGroupArgs>> filterGroups) {
+        public Builder filterGroups(@Nullable Output<List<WebhookFilterGroupArgs>> filterGroups) {
             this.filterGroups = filterGroups;
             return this;
         }
 
         public Builder filterGroups(@Nullable List<WebhookFilterGroupArgs> filterGroups) {
-            this.filterGroups = Input.ofNullable(filterGroups);
+            this.filterGroups = Output.ofNullable(filterGroups);
             return this;
         }
 
-        public Builder projectName(Input<String> projectName) {
+        public Builder projectName(Output<String> projectName) {
             this.projectName = Objects.requireNonNull(projectName);
             return this;
         }
 
         public Builder projectName(String projectName) {
-            this.projectName = Input.of(Objects.requireNonNull(projectName));
+            this.projectName = Output.of(Objects.requireNonNull(projectName));
             return this;
         }
         public WebhookArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -24,9 +24,9 @@ public final class AssignmentPrincipalArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="principalId", required=true)
-      private final Input<String> principalId;
+      private final Output<String> principalId;
 
-    public Input<String> getPrincipalId() {
+    public Output<String> getPrincipalId() {
         return this.principalId;
     }
 
@@ -35,10 +35,10 @@ public final class AssignmentPrincipalArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="principalMetadata")
-      private final @Nullable Input<Map<String,String>> principalMetadata;
+      private final @Nullable Output<Map<String,String>> principalMetadata;
 
-    public Input<Map<String,String>> getPrincipalMetadata() {
-        return this.principalMetadata == null ? Input.empty() : this.principalMetadata;
+    public Output<Map<String,String>> getPrincipalMetadata() {
+        return this.principalMetadata == null ? Output.empty() : this.principalMetadata;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class AssignmentPrincipalArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="principalType", required=true)
-      private final Input<String> principalType;
+      private final Output<String> principalType;
 
-    public Input<String> getPrincipalType() {
+    public Output<String> getPrincipalType() {
         return this.principalType;
     }
 
     public AssignmentPrincipalArgs(
-        Input<String> principalId,
-        @Nullable Input<Map<String,String>> principalMetadata,
-        Input<String> principalType) {
+        Output<String> principalId,
+        @Nullable Output<Map<String,String>> principalMetadata,
+        Output<String> principalType) {
         this.principalId = Objects.requireNonNull(principalId, "expected parameter 'principalId' to be non-null");
         this.principalMetadata = principalMetadata;
         this.principalType = Objects.requireNonNull(principalType, "expected parameter 'principalType' to be non-null");
     }
 
     private AssignmentPrincipalArgs() {
-        this.principalId = Input.empty();
-        this.principalMetadata = Input.empty();
-        this.principalType = Input.empty();
+        this.principalId = Output.empty();
+        this.principalMetadata = Output.empty();
+        this.principalType = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class AssignmentPrincipalArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> principalId;
-        private @Nullable Input<Map<String,String>> principalMetadata;
-        private Input<String> principalType;
+        private Output<String> principalId;
+        private @Nullable Output<Map<String,String>> principalMetadata;
+        private Output<String> principalType;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class AssignmentPrincipalArgs extends io.pulumi.resources.ResourceA
     	      this.principalType = defaults.principalType;
         }
 
-        public Builder principalId(Input<String> principalId) {
+        public Builder principalId(Output<String> principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
 
         public Builder principalId(String principalId) {
-            this.principalId = Input.of(Objects.requireNonNull(principalId));
+            this.principalId = Output.of(Objects.requireNonNull(principalId));
             return this;
         }
 
-        public Builder principalMetadata(@Nullable Input<Map<String,String>> principalMetadata) {
+        public Builder principalMetadata(@Nullable Output<Map<String,String>> principalMetadata) {
             this.principalMetadata = principalMetadata;
             return this;
         }
 
         public Builder principalMetadata(@Nullable Map<String,String> principalMetadata) {
-            this.principalMetadata = Input.ofNullable(principalMetadata);
+            this.principalMetadata = Output.ofNullable(principalMetadata);
             return this;
         }
 
-        public Builder principalType(Input<String> principalType) {
+        public Builder principalType(Output<String> principalType) {
             this.principalType = Objects.requireNonNull(principalType);
             return this;
         }
 
         public Builder principalType(String principalType) {
-            this.principalType = Input.of(Objects.requireNonNull(principalType));
+            this.principalType = Output.of(Objects.requireNonNull(principalType));
             return this;
         }
         public AssignmentPrincipalArgs build() {

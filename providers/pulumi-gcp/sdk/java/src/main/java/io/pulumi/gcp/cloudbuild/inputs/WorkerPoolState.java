@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudbuild.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudbuild.inputs.WorkerPoolNetworkConfigGetArgs;
 import io.pulumi.gcp.cloudbuild.inputs.WorkerPoolWorkerConfigGetArgs;
@@ -23,10 +23,10 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="annotations")
-      private final @Nullable Input<Map<String,String>> annotations;
+      private final @Nullable Output<Map<String,String>> annotations;
 
-    public Input<Map<String,String>> getAnnotations() {
-        return this.annotations == null ? Input.empty() : this.annotations;
+    public Output<Map<String,String>> getAnnotations() {
+        return this.annotations == null ? Output.empty() : this.annotations;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-      private final @Nullable Input<String> createTime;
+      private final @Nullable Output<String> createTime;
 
-    public Input<String> getCreateTime() {
-        return this.createTime == null ? Input.empty() : this.createTime;
+    public Output<String> getCreateTime() {
+        return this.createTime == null ? Output.empty() : this.createTime;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deleteTime")
-      private final @Nullable Input<String> deleteTime;
+      private final @Nullable Output<String> deleteTime;
 
-    public Input<String> getDeleteTime() {
-        return this.deleteTime == null ? Input.empty() : this.deleteTime;
+    public Output<String> getDeleteTime() {
+        return this.deleteTime == null ? Output.empty() : this.deleteTime;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkConfig")
-      private final @Nullable Input<WorkerPoolNetworkConfigGetArgs> networkConfig;
+      private final @Nullable Output<WorkerPoolNetworkConfigGetArgs> networkConfig;
 
-    public Input<WorkerPoolNetworkConfigGetArgs> getNetworkConfig() {
-        return this.networkConfig == null ? Input.empty() : this.networkConfig;
+    public Output<WorkerPoolNetworkConfigGetArgs> getNetworkConfig() {
+        return this.networkConfig == null ? Output.empty() : this.networkConfig;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<String> state;
+      private final @Nullable Output<String> state;
 
-    public Input<String> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<String> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uid")
-      private final @Nullable Input<String> uid;
+      private final @Nullable Output<String> uid;
 
-    public Input<String> getUid() {
-        return this.uid == null ? Input.empty() : this.uid;
+    public Output<String> getUid() {
+        return this.uid == null ? Output.empty() : this.uid;
     }
 
     /**
@@ -133,10 +133,10 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updateTime")
-      private final @Nullable Input<String> updateTime;
+      private final @Nullable Output<String> updateTime;
 
-    public Input<String> getUpdateTime() {
-        return this.updateTime == null ? Input.empty() : this.updateTime;
+    public Output<String> getUpdateTime() {
+        return this.updateTime == null ? Output.empty() : this.updateTime;
     }
 
     /**
@@ -144,25 +144,25 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workerConfig")
-      private final @Nullable Input<WorkerPoolWorkerConfigGetArgs> workerConfig;
+      private final @Nullable Output<WorkerPoolWorkerConfigGetArgs> workerConfig;
 
-    public Input<WorkerPoolWorkerConfigGetArgs> getWorkerConfig() {
-        return this.workerConfig == null ? Input.empty() : this.workerConfig;
+    public Output<WorkerPoolWorkerConfigGetArgs> getWorkerConfig() {
+        return this.workerConfig == null ? Output.empty() : this.workerConfig;
     }
 
     public WorkerPoolState(
-        @Nullable Input<Map<String,String>> annotations,
-        @Nullable Input<String> createTime,
-        @Nullable Input<String> deleteTime,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<WorkerPoolNetworkConfigGetArgs> networkConfig,
-        @Nullable Input<String> project,
-        @Nullable Input<String> state,
-        @Nullable Input<String> uid,
-        @Nullable Input<String> updateTime,
-        @Nullable Input<WorkerPoolWorkerConfigGetArgs> workerConfig) {
+        @Nullable Output<Map<String,String>> annotations,
+        @Nullable Output<String> createTime,
+        @Nullable Output<String> deleteTime,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<WorkerPoolNetworkConfigGetArgs> networkConfig,
+        @Nullable Output<String> project,
+        @Nullable Output<String> state,
+        @Nullable Output<String> uid,
+        @Nullable Output<String> updateTime,
+        @Nullable Output<WorkerPoolWorkerConfigGetArgs> workerConfig) {
         this.annotations = annotations;
         this.createTime = createTime;
         this.deleteTime = deleteTime;
@@ -178,18 +178,18 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
     }
 
     private WorkerPoolState() {
-        this.annotations = Input.empty();
-        this.createTime = Input.empty();
-        this.deleteTime = Input.empty();
-        this.displayName = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.networkConfig = Input.empty();
-        this.project = Input.empty();
-        this.state = Input.empty();
-        this.uid = Input.empty();
-        this.updateTime = Input.empty();
-        this.workerConfig = Input.empty();
+        this.annotations = Output.empty();
+        this.createTime = Output.empty();
+        this.deleteTime = Output.empty();
+        this.displayName = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.networkConfig = Output.empty();
+        this.project = Output.empty();
+        this.state = Output.empty();
+        this.uid = Output.empty();
+        this.updateTime = Output.empty();
+        this.workerConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -201,18 +201,18 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> annotations;
-        private @Nullable Input<String> createTime;
-        private @Nullable Input<String> deleteTime;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<WorkerPoolNetworkConfigGetArgs> networkConfig;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> state;
-        private @Nullable Input<String> uid;
-        private @Nullable Input<String> updateTime;
-        private @Nullable Input<WorkerPoolWorkerConfigGetArgs> workerConfig;
+        private @Nullable Output<Map<String,String>> annotations;
+        private @Nullable Output<String> createTime;
+        private @Nullable Output<String> deleteTime;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<WorkerPoolNetworkConfigGetArgs> networkConfig;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> state;
+        private @Nullable Output<String> uid;
+        private @Nullable Output<String> updateTime;
+        private @Nullable Output<WorkerPoolWorkerConfigGetArgs> workerConfig;
 
         public Builder() {
     	      // Empty
@@ -234,123 +234,123 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
     	      this.workerConfig = defaults.workerConfig;
         }
 
-        public Builder annotations(@Nullable Input<Map<String,String>> annotations) {
+        public Builder annotations(@Nullable Output<Map<String,String>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
         public Builder annotations(@Nullable Map<String,String> annotations) {
-            this.annotations = Input.ofNullable(annotations);
+            this.annotations = Output.ofNullable(annotations);
             return this;
         }
 
-        public Builder createTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Input.ofNullable(createTime);
+            this.createTime = Output.ofNullable(createTime);
             return this;
         }
 
-        public Builder deleteTime(@Nullable Input<String> deleteTime) {
+        public Builder deleteTime(@Nullable Output<String> deleteTime) {
             this.deleteTime = deleteTime;
             return this;
         }
 
         public Builder deleteTime(@Nullable String deleteTime) {
-            this.deleteTime = Input.ofNullable(deleteTime);
+            this.deleteTime = Output.ofNullable(deleteTime);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder networkConfig(@Nullable Input<WorkerPoolNetworkConfigGetArgs> networkConfig) {
+        public Builder networkConfig(@Nullable Output<WorkerPoolNetworkConfigGetArgs> networkConfig) {
             this.networkConfig = networkConfig;
             return this;
         }
 
         public Builder networkConfig(@Nullable WorkerPoolNetworkConfigGetArgs networkConfig) {
-            this.networkConfig = Input.ofNullable(networkConfig);
+            this.networkConfig = Output.ofNullable(networkConfig);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder state(@Nullable Input<String> state) {
+        public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable String state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
 
-        public Builder uid(@Nullable Input<String> uid) {
+        public Builder uid(@Nullable Output<String> uid) {
             this.uid = uid;
             return this;
         }
 
         public Builder uid(@Nullable String uid) {
-            this.uid = Input.ofNullable(uid);
+            this.uid = Output.ofNullable(uid);
             return this;
         }
 
-        public Builder updateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Input.ofNullable(updateTime);
+            this.updateTime = Output.ofNullable(updateTime);
             return this;
         }
 
-        public Builder workerConfig(@Nullable Input<WorkerPoolWorkerConfigGetArgs> workerConfig) {
+        public Builder workerConfig(@Nullable Output<WorkerPoolWorkerConfigGetArgs> workerConfig) {
             this.workerConfig = workerConfig;
             return this;
         }
 
         public Builder workerConfig(@Nullable WorkerPoolWorkerConfigGetArgs workerConfig) {
-            this.workerConfig = Input.ofNullable(workerConfig);
+            this.workerConfig = Output.ofNullable(workerConfig);
             return this;
         }
         public WorkerPoolState build() {

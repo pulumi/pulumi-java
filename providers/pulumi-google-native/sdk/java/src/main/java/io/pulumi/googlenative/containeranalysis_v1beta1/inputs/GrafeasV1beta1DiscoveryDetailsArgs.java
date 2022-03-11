@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.DiscoveredArgs;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class GrafeasV1beta1DiscoveryDetailsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="discovered", required=true)
-      private final Input<DiscoveredArgs> discovered;
+      private final Output<DiscoveredArgs> discovered;
 
-    public Input<DiscoveredArgs> getDiscovered() {
+    public Output<DiscoveredArgs> getDiscovered() {
         return this.discovered;
     }
 
-    public GrafeasV1beta1DiscoveryDetailsArgs(Input<DiscoveredArgs> discovered) {
+    public GrafeasV1beta1DiscoveryDetailsArgs(Output<DiscoveredArgs> discovered) {
         this.discovered = Objects.requireNonNull(discovered, "expected parameter 'discovered' to be non-null");
     }
 
     private GrafeasV1beta1DiscoveryDetailsArgs() {
-        this.discovered = Input.empty();
+        this.discovered = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class GrafeasV1beta1DiscoveryDetailsArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<DiscoveredArgs> discovered;
+        private Output<DiscoveredArgs> discovered;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class GrafeasV1beta1DiscoveryDetailsArgs extends io.pulumi.resource
     	      this.discovered = defaults.discovered;
         }
 
-        public Builder discovered(Input<DiscoveredArgs> discovered) {
+        public Builder discovered(Output<DiscoveredArgs> discovered) {
             this.discovered = Objects.requireNonNull(discovered);
             return this;
         }
 
         public Builder discovered(DiscoveredArgs discovered) {
-            this.discovered = Input.of(Objects.requireNonNull(discovered));
+            this.discovered = Output.of(Objects.requireNonNull(discovered));
             return this;
         }
         public GrafeasV1beta1DiscoveryDetailsArgs build() {

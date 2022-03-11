@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,29 +19,29 @@ public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="evaluationInterval")
-      private final @Nullable Input<String> evaluationInterval;
+      private final @Nullable Output<String> evaluationInterval;
 
-    public Input<String> getEvaluationInterval() {
-        return this.evaluationInterval == null ? Input.empty() : this.evaluationInterval;
+    public Output<String> getEvaluationInterval() {
+        return this.evaluationInterval == null ? Output.empty() : this.evaluationInterval;
     }
 
     @InputImport(name="formula", required=true)
-      private final Input<String> formula;
+      private final Output<String> formula;
 
-    public Input<String> getFormula() {
+    public Output<String> getFormula() {
         return this.formula;
     }
 
     public AutoScaleSettingsArgs(
-        @Nullable Input<String> evaluationInterval,
-        Input<String> formula) {
+        @Nullable Output<String> evaluationInterval,
+        Output<String> formula) {
         this.evaluationInterval = evaluationInterval;
         this.formula = Objects.requireNonNull(formula, "expected parameter 'formula' to be non-null");
     }
 
     private AutoScaleSettingsArgs() {
-        this.evaluationInterval = Input.empty();
-        this.formula = Input.empty();
+        this.evaluationInterval = Output.empty();
+        this.formula = Output.empty();
     }
 
     public static Builder builder() {
@@ -53,8 +53,8 @@ public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> evaluationInterval;
-        private Input<String> formula;
+        private @Nullable Output<String> evaluationInterval;
+        private Output<String> formula;
 
         public Builder() {
     	      // Empty
@@ -66,23 +66,23 @@ public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArg
     	      this.formula = defaults.formula;
         }
 
-        public Builder evaluationInterval(@Nullable Input<String> evaluationInterval) {
+        public Builder evaluationInterval(@Nullable Output<String> evaluationInterval) {
             this.evaluationInterval = evaluationInterval;
             return this;
         }
 
         public Builder evaluationInterval(@Nullable String evaluationInterval) {
-            this.evaluationInterval = Input.ofNullable(evaluationInterval);
+            this.evaluationInterval = Output.ofNullable(evaluationInterval);
             return this;
         }
 
-        public Builder formula(Input<String> formula) {
+        public Builder formula(Output<String> formula) {
             this.formula = Objects.requireNonNull(formula);
             return this;
         }
 
         public Builder formula(String formula) {
-            this.formula = Input.of(Objects.requireNonNull(formula));
+            this.formula = Output.of(Objects.requireNonNull(formula));
             return this;
         }
         public AutoScaleSettingsArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.imagebuilder.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class ImageRecipeComponentGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="componentArn", required=true)
-      private final Input<String> componentArn;
+      private final Output<String> componentArn;
 
-    public Input<String> getComponentArn() {
+    public Output<String> getComponentArn() {
         return this.componentArn;
     }
 
-    public ImageRecipeComponentGetArgs(Input<String> componentArn) {
+    public ImageRecipeComponentGetArgs(Output<String> componentArn) {
         this.componentArn = Objects.requireNonNull(componentArn, "expected parameter 'componentArn' to be non-null");
     }
 
     private ImageRecipeComponentGetArgs() {
-        this.componentArn = Input.empty();
+        this.componentArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ImageRecipeComponentGetArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<String> componentArn;
+        private Output<String> componentArn;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ImageRecipeComponentGetArgs extends io.pulumi.resources.Resou
     	      this.componentArn = defaults.componentArn;
         }
 
-        public Builder componentArn(Input<String> componentArn) {
+        public Builder componentArn(Output<String> componentArn) {
             this.componentArn = Objects.requireNonNull(componentArn);
             return this;
         }
 
         public Builder componentArn(String componentArn) {
-            this.componentArn = Input.of(Objects.requireNonNull(componentArn));
+            this.componentArn = Output.of(Objects.requireNonNull(componentArn));
             return this;
         }
         public ImageRecipeComponentGetArgs build() {

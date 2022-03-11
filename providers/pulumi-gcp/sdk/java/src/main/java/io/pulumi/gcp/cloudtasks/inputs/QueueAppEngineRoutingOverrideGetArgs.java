@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudtasks.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class QueueAppEngineRoutingOverrideGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="host")
-      private final @Nullable Input<String> host;
+      private final @Nullable Output<String> host;
 
-    public Input<String> getHost() {
-        return this.host == null ? Input.empty() : this.host;
+    public Output<String> getHost() {
+        return this.host == null ? Output.empty() : this.host;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class QueueAppEngineRoutingOverrideGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="instance")
-      private final @Nullable Input<String> instance;
+      private final @Nullable Output<String> instance;
 
-    public Input<String> getInstance() {
-        return this.instance == null ? Input.empty() : this.instance;
+    public Output<String> getInstance() {
+        return this.instance == null ? Output.empty() : this.instance;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class QueueAppEngineRoutingOverrideGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="service")
-      private final @Nullable Input<String> service;
+      private final @Nullable Output<String> service;
 
-    public Input<String> getService() {
-        return this.service == null ? Input.empty() : this.service;
+    public Output<String> getService() {
+        return this.service == null ? Output.empty() : this.service;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class QueueAppEngineRoutingOverrideGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public QueueAppEngineRoutingOverrideGetArgs(
-        @Nullable Input<String> host,
-        @Nullable Input<String> instance,
-        @Nullable Input<String> service,
-        @Nullable Input<String> version) {
+        @Nullable Output<String> host,
+        @Nullable Output<String> instance,
+        @Nullable Output<String> service,
+        @Nullable Output<String> version) {
         this.host = host;
         this.instance = instance;
         this.service = service;
@@ -74,10 +74,10 @@ public final class QueueAppEngineRoutingOverrideGetArgs extends io.pulumi.resour
     }
 
     private QueueAppEngineRoutingOverrideGetArgs() {
-        this.host = Input.empty();
-        this.instance = Input.empty();
-        this.service = Input.empty();
-        this.version = Input.empty();
+        this.host = Output.empty();
+        this.instance = Output.empty();
+        this.service = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class QueueAppEngineRoutingOverrideGetArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> host;
-        private @Nullable Input<String> instance;
-        private @Nullable Input<String> service;
-        private @Nullable Input<String> version;
+        private @Nullable Output<String> host;
+        private @Nullable Output<String> instance;
+        private @Nullable Output<String> service;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class QueueAppEngineRoutingOverrideGetArgs extends io.pulumi.resour
     	      this.version = defaults.version;
         }
 
-        public Builder host(@Nullable Input<String> host) {
+        public Builder host(@Nullable Output<String> host) {
             this.host = host;
             return this;
         }
 
         public Builder host(@Nullable String host) {
-            this.host = Input.ofNullable(host);
+            this.host = Output.ofNullable(host);
             return this;
         }
 
-        public Builder instance(@Nullable Input<String> instance) {
+        public Builder instance(@Nullable Output<String> instance) {
             this.instance = instance;
             return this;
         }
 
         public Builder instance(@Nullable String instance) {
-            this.instance = Input.ofNullable(instance);
+            this.instance = Output.ofNullable(instance);
             return this;
         }
 
-        public Builder service(@Nullable Input<String> service) {
+        public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
 
         public Builder service(@Nullable String service) {
-            this.service = Input.ofNullable(service);
+            this.service = Output.ofNullable(service);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public QueueAppEngineRoutingOverrideGetArgs build() {

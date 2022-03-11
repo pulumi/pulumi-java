@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.athena.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class NamedQueryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="database")
-      private final @Nullable Input<String> database;
+      private final @Nullable Output<String> database;
 
-    public Input<String> getDatabase() {
-        return this.database == null ? Input.empty() : this.database;
+    public Output<String> getDatabase() {
+        return this.database == null ? Output.empty() : this.database;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class NamedQueryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class NamedQueryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class NamedQueryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="query")
-      private final @Nullable Input<String> query;
+      private final @Nullable Output<String> query;
 
-    public Input<String> getQuery() {
-        return this.query == null ? Input.empty() : this.query;
+    public Output<String> getQuery() {
+        return this.query == null ? Output.empty() : this.query;
     }
 
     /**
@@ -63,18 +63,18 @@ public final class NamedQueryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workgroup")
-      private final @Nullable Input<String> workgroup;
+      private final @Nullable Output<String> workgroup;
 
-    public Input<String> getWorkgroup() {
-        return this.workgroup == null ? Input.empty() : this.workgroup;
+    public Output<String> getWorkgroup() {
+        return this.workgroup == null ? Output.empty() : this.workgroup;
     }
 
     public NamedQueryState(
-        @Nullable Input<String> database,
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        @Nullable Input<String> query,
-        @Nullable Input<String> workgroup) {
+        @Nullable Output<String> database,
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        @Nullable Output<String> query,
+        @Nullable Output<String> workgroup) {
         this.database = database;
         this.description = description;
         this.name = name;
@@ -83,11 +83,11 @@ public final class NamedQueryState extends io.pulumi.resources.ResourceArgs {
     }
 
     private NamedQueryState() {
-        this.database = Input.empty();
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.query = Input.empty();
-        this.workgroup = Input.empty();
+        this.database = Output.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.query = Output.empty();
+        this.workgroup = Output.empty();
     }
 
     public static Builder builder() {
@@ -99,11 +99,11 @@ public final class NamedQueryState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> database;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> query;
-        private @Nullable Input<String> workgroup;
+        private @Nullable Output<String> database;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> query;
+        private @Nullable Output<String> workgroup;
 
         public Builder() {
     	      // Empty
@@ -118,53 +118,53 @@ public final class NamedQueryState extends io.pulumi.resources.ResourceArgs {
     	      this.workgroup = defaults.workgroup;
         }
 
-        public Builder database(@Nullable Input<String> database) {
+        public Builder database(@Nullable Output<String> database) {
             this.database = database;
             return this;
         }
 
         public Builder database(@Nullable String database) {
-            this.database = Input.ofNullable(database);
+            this.database = Output.ofNullable(database);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder query(@Nullable Input<String> query) {
+        public Builder query(@Nullable Output<String> query) {
             this.query = query;
             return this;
         }
 
         public Builder query(@Nullable String query) {
-            this.query = Input.ofNullable(query);
+            this.query = Output.ofNullable(query);
             return this;
         }
 
-        public Builder workgroup(@Nullable Input<String> workgroup) {
+        public Builder workgroup(@Nullable Output<String> workgroup) {
             this.workgroup = workgroup;
             return this;
         }
 
         public Builder workgroup(@Nullable String workgroup) {
-            this.workgroup = Input.ofNullable(workgroup);
+            this.workgroup = Output.ofNullable(workgroup);
             return this;
         }
         public NamedQueryState build() {

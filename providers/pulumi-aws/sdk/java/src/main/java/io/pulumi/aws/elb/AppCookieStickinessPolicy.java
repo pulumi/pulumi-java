@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.elb.AppCookieStickinessPolicyArgs;
 import io.pulumi.aws.elb.inputs.AppCookieStickinessPolicyState;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -133,18 +132,18 @@ public class AppCookieStickinessPolicy extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public AppCookieStickinessPolicy(String name, AppCookieStickinessPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:elb/appCookieStickinessPolicy:AppCookieStickinessPolicy", name, args == null ? AppCookieStickinessPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:elb/appCookieStickinessPolicy:AppCookieStickinessPolicy", name, args == null ? AppCookieStickinessPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private AppCookieStickinessPolicy(String name, Input<String> id, @Nullable AppCookieStickinessPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private AppCookieStickinessPolicy(String name, Output<String> id, @Nullable AppCookieStickinessPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:elb/appCookieStickinessPolicy:AppCookieStickinessPolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("aws:elasticloadbalancing/appCookieStickinessPolicy:AppCookieStickinessPolicy").build())
+                Output.of(Alias.builder().setType("aws:elasticloadbalancing/appCookieStickinessPolicy:AppCookieStickinessPolicy").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -159,7 +158,7 @@ public class AppCookieStickinessPolicy extends io.pulumi.resources.CustomResourc
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AppCookieStickinessPolicy get(String name, Input<String> id, @Nullable AppCookieStickinessPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static AppCookieStickinessPolicy get(String name, Output<String> id, @Nullable AppCookieStickinessPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AppCookieStickinessPolicy(name, id, state, options);
     }
 }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 import io.pulumi.azurenative.recoveryservices.enums.BackupManagementType;
 import io.pulumi.azurenative.recoveryservices.inputs.GenericContainerExtendedInfoArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class GenericContainerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="backupManagementType")
-      private final @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
+      private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
 
-    public Input<Either<String,BackupManagementType>> getBackupManagementType() {
-        return this.backupManagementType == null ? Input.empty() : this.backupManagementType;
+    public Output<Either<String,BackupManagementType>> getBackupManagementType() {
+        return this.backupManagementType == null ? Output.empty() : this.backupManagementType;
     }
 
     /**
@@ -41,9 +41,9 @@ public final class GenericContainerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="containerType", required=true)
-      private final Input<String> containerType;
+      private final Output<String> containerType;
 
-    public Input<String> getContainerType() {
+    public Output<String> getContainerType() {
         return this.containerType;
     }
 
@@ -52,10 +52,10 @@ public final class GenericContainerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="extendedInformation")
-      private final @Nullable Input<GenericContainerExtendedInfoArgs> extendedInformation;
+      private final @Nullable Output<GenericContainerExtendedInfoArgs> extendedInformation;
 
-    public Input<GenericContainerExtendedInfoArgs> getExtendedInformation() {
-        return this.extendedInformation == null ? Input.empty() : this.extendedInformation;
+    public Output<GenericContainerExtendedInfoArgs> getExtendedInformation() {
+        return this.extendedInformation == null ? Output.empty() : this.extendedInformation;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class GenericContainerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="fabricName")
-      private final @Nullable Input<String> fabricName;
+      private final @Nullable Output<String> fabricName;
 
-    public Input<String> getFabricName() {
-        return this.fabricName == null ? Input.empty() : this.fabricName;
+    public Output<String> getFabricName() {
+        return this.fabricName == null ? Output.empty() : this.fabricName;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class GenericContainerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="friendlyName")
-      private final @Nullable Input<String> friendlyName;
+      private final @Nullable Output<String> friendlyName;
 
-    public Input<String> getFriendlyName() {
-        return this.friendlyName == null ? Input.empty() : this.friendlyName;
+    public Output<String> getFriendlyName() {
+        return this.friendlyName == null ? Output.empty() : this.friendlyName;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class GenericContainerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="healthStatus")
-      private final @Nullable Input<String> healthStatus;
+      private final @Nullable Output<String> healthStatus;
 
-    public Input<String> getHealthStatus() {
-        return this.healthStatus == null ? Input.empty() : this.healthStatus;
+    public Output<String> getHealthStatus() {
+        return this.healthStatus == null ? Output.empty() : this.healthStatus;
     }
 
     /**
@@ -96,20 +96,20 @@ public final class GenericContainerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="registrationStatus")
-      private final @Nullable Input<String> registrationStatus;
+      private final @Nullable Output<String> registrationStatus;
 
-    public Input<String> getRegistrationStatus() {
-        return this.registrationStatus == null ? Input.empty() : this.registrationStatus;
+    public Output<String> getRegistrationStatus() {
+        return this.registrationStatus == null ? Output.empty() : this.registrationStatus;
     }
 
     public GenericContainerArgs(
-        @Nullable Input<Either<String,BackupManagementType>> backupManagementType,
-        Input<String> containerType,
-        @Nullable Input<GenericContainerExtendedInfoArgs> extendedInformation,
-        @Nullable Input<String> fabricName,
-        @Nullable Input<String> friendlyName,
-        @Nullable Input<String> healthStatus,
-        @Nullable Input<String> registrationStatus) {
+        @Nullable Output<Either<String,BackupManagementType>> backupManagementType,
+        Output<String> containerType,
+        @Nullable Output<GenericContainerExtendedInfoArgs> extendedInformation,
+        @Nullable Output<String> fabricName,
+        @Nullable Output<String> friendlyName,
+        @Nullable Output<String> healthStatus,
+        @Nullable Output<String> registrationStatus) {
         this.backupManagementType = backupManagementType;
         this.containerType = Objects.requireNonNull(containerType, "expected parameter 'containerType' to be non-null");
         this.extendedInformation = extendedInformation;
@@ -120,13 +120,13 @@ public final class GenericContainerArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private GenericContainerArgs() {
-        this.backupManagementType = Input.empty();
-        this.containerType = Input.empty();
-        this.extendedInformation = Input.empty();
-        this.fabricName = Input.empty();
-        this.friendlyName = Input.empty();
-        this.healthStatus = Input.empty();
-        this.registrationStatus = Input.empty();
+        this.backupManagementType = Output.empty();
+        this.containerType = Output.empty();
+        this.extendedInformation = Output.empty();
+        this.fabricName = Output.empty();
+        this.friendlyName = Output.empty();
+        this.healthStatus = Output.empty();
+        this.registrationStatus = Output.empty();
     }
 
     public static Builder builder() {
@@ -138,13 +138,13 @@ public final class GenericContainerArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
-        private Input<String> containerType;
-        private @Nullable Input<GenericContainerExtendedInfoArgs> extendedInformation;
-        private @Nullable Input<String> fabricName;
-        private @Nullable Input<String> friendlyName;
-        private @Nullable Input<String> healthStatus;
-        private @Nullable Input<String> registrationStatus;
+        private @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
+        private Output<String> containerType;
+        private @Nullable Output<GenericContainerExtendedInfoArgs> extendedInformation;
+        private @Nullable Output<String> fabricName;
+        private @Nullable Output<String> friendlyName;
+        private @Nullable Output<String> healthStatus;
+        private @Nullable Output<String> registrationStatus;
 
         public Builder() {
     	      // Empty
@@ -161,73 +161,73 @@ public final class GenericContainerArgs extends io.pulumi.resources.ResourceArgs
     	      this.registrationStatus = defaults.registrationStatus;
         }
 
-        public Builder backupManagementType(@Nullable Input<Either<String,BackupManagementType>> backupManagementType) {
+        public Builder backupManagementType(@Nullable Output<Either<String,BackupManagementType>> backupManagementType) {
             this.backupManagementType = backupManagementType;
             return this;
         }
 
         public Builder backupManagementType(@Nullable Either<String,BackupManagementType> backupManagementType) {
-            this.backupManagementType = Input.ofNullable(backupManagementType);
+            this.backupManagementType = Output.ofNullable(backupManagementType);
             return this;
         }
 
-        public Builder containerType(Input<String> containerType) {
+        public Builder containerType(Output<String> containerType) {
             this.containerType = Objects.requireNonNull(containerType);
             return this;
         }
 
         public Builder containerType(String containerType) {
-            this.containerType = Input.of(Objects.requireNonNull(containerType));
+            this.containerType = Output.of(Objects.requireNonNull(containerType));
             return this;
         }
 
-        public Builder extendedInformation(@Nullable Input<GenericContainerExtendedInfoArgs> extendedInformation) {
+        public Builder extendedInformation(@Nullable Output<GenericContainerExtendedInfoArgs> extendedInformation) {
             this.extendedInformation = extendedInformation;
             return this;
         }
 
         public Builder extendedInformation(@Nullable GenericContainerExtendedInfoArgs extendedInformation) {
-            this.extendedInformation = Input.ofNullable(extendedInformation);
+            this.extendedInformation = Output.ofNullable(extendedInformation);
             return this;
         }
 
-        public Builder fabricName(@Nullable Input<String> fabricName) {
+        public Builder fabricName(@Nullable Output<String> fabricName) {
             this.fabricName = fabricName;
             return this;
         }
 
         public Builder fabricName(@Nullable String fabricName) {
-            this.fabricName = Input.ofNullable(fabricName);
+            this.fabricName = Output.ofNullable(fabricName);
             return this;
         }
 
-        public Builder friendlyName(@Nullable Input<String> friendlyName) {
+        public Builder friendlyName(@Nullable Output<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Input.ofNullable(friendlyName);
+            this.friendlyName = Output.ofNullable(friendlyName);
             return this;
         }
 
-        public Builder healthStatus(@Nullable Input<String> healthStatus) {
+        public Builder healthStatus(@Nullable Output<String> healthStatus) {
             this.healthStatus = healthStatus;
             return this;
         }
 
         public Builder healthStatus(@Nullable String healthStatus) {
-            this.healthStatus = Input.ofNullable(healthStatus);
+            this.healthStatus = Output.ofNullable(healthStatus);
             return this;
         }
 
-        public Builder registrationStatus(@Nullable Input<String> registrationStatus) {
+        public Builder registrationStatus(@Nullable Output<String> registrationStatus) {
             this.registrationStatus = registrationStatus;
             return this;
         }
 
         public Builder registrationStatus(@Nullable String registrationStatus) {
-            this.registrationStatus = Input.ofNullable(registrationStatus);
+            this.registrationStatus = Output.ofNullable(registrationStatus);
             return this;
         }
         public GenericContainerArgs build() {

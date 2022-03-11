@@ -9,7 +9,7 @@ import io.pulumi.azurenative.media.inputs.ContentKeyPolicyPlayReadyContentEncryp
 import io.pulumi.azurenative.media.inputs.ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierArgs;
 import io.pulumi.azurenative.media.inputs.ContentKeyPolicyPlayReadyPlayRightArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -30,9 +30,9 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="allowTestDevices", required=true)
-      private final Input<Boolean> allowTestDevices;
+      private final Output<Boolean> allowTestDevices;
 
-    public Input<Boolean> getAllowTestDevices() {
+    public Output<Boolean> getAllowTestDevices() {
         return this.allowTestDevices;
     }
 
@@ -41,10 +41,10 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="beginDate")
-      private final @Nullable Input<String> beginDate;
+      private final @Nullable Output<String> beginDate;
 
-    public Input<String> getBeginDate() {
-        return this.beginDate == null ? Input.empty() : this.beginDate;
+    public Output<String> getBeginDate() {
+        return this.beginDate == null ? Output.empty() : this.beginDate;
     }
 
     /**
@@ -52,9 +52,9 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="contentKeyLocation", required=true)
-      private final Input<Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderArgs,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierArgs>> contentKeyLocation;
+      private final Output<Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderArgs,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierArgs>> contentKeyLocation;
 
-    public Input<Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderArgs,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierArgs>> getContentKeyLocation() {
+    public Output<Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderArgs,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierArgs>> getContentKeyLocation() {
         return this.contentKeyLocation;
     }
 
@@ -63,9 +63,9 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="contentType", required=true)
-      private final Input<Either<String,ContentKeyPolicyPlayReadyContentType>> contentType;
+      private final Output<Either<String,ContentKeyPolicyPlayReadyContentType>> contentType;
 
-    public Input<Either<String,ContentKeyPolicyPlayReadyContentType>> getContentType() {
+    public Output<Either<String,ContentKeyPolicyPlayReadyContentType>> getContentType() {
         return this.contentType;
     }
 
@@ -74,10 +74,10 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="expirationDate")
-      private final @Nullable Input<String> expirationDate;
+      private final @Nullable Output<String> expirationDate;
 
-    public Input<String> getExpirationDate() {
-        return this.expirationDate == null ? Input.empty() : this.expirationDate;
+    public Output<String> getExpirationDate() {
+        return this.expirationDate == null ? Output.empty() : this.expirationDate;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="gracePeriod")
-      private final @Nullable Input<String> gracePeriod;
+      private final @Nullable Output<String> gracePeriod;
 
-    public Input<String> getGracePeriod() {
-        return this.gracePeriod == null ? Input.empty() : this.gracePeriod;
+    public Output<String> getGracePeriod() {
+        return this.gracePeriod == null ? Output.empty() : this.gracePeriod;
     }
 
     /**
@@ -96,9 +96,9 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="licenseType", required=true)
-      private final Input<Either<String,ContentKeyPolicyPlayReadyLicenseType>> licenseType;
+      private final Output<Either<String,ContentKeyPolicyPlayReadyLicenseType>> licenseType;
 
-    public Input<Either<String,ContentKeyPolicyPlayReadyLicenseType>> getLicenseType() {
+    public Output<Either<String,ContentKeyPolicyPlayReadyLicenseType>> getLicenseType() {
         return this.licenseType;
     }
 
@@ -107,10 +107,10 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="playRight")
-      private final @Nullable Input<ContentKeyPolicyPlayReadyPlayRightArgs> playRight;
+      private final @Nullable Output<ContentKeyPolicyPlayReadyPlayRightArgs> playRight;
 
-    public Input<ContentKeyPolicyPlayReadyPlayRightArgs> getPlayRight() {
-        return this.playRight == null ? Input.empty() : this.playRight;
+    public Output<ContentKeyPolicyPlayReadyPlayRightArgs> getPlayRight() {
+        return this.playRight == null ? Output.empty() : this.playRight;
     }
 
     /**
@@ -118,10 +118,10 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="relativeBeginDate")
-      private final @Nullable Input<String> relativeBeginDate;
+      private final @Nullable Output<String> relativeBeginDate;
 
-    public Input<String> getRelativeBeginDate() {
-        return this.relativeBeginDate == null ? Input.empty() : this.relativeBeginDate;
+    public Output<String> getRelativeBeginDate() {
+        return this.relativeBeginDate == null ? Output.empty() : this.relativeBeginDate;
     }
 
     /**
@@ -129,23 +129,23 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="relativeExpirationDate")
-      private final @Nullable Input<String> relativeExpirationDate;
+      private final @Nullable Output<String> relativeExpirationDate;
 
-    public Input<String> getRelativeExpirationDate() {
-        return this.relativeExpirationDate == null ? Input.empty() : this.relativeExpirationDate;
+    public Output<String> getRelativeExpirationDate() {
+        return this.relativeExpirationDate == null ? Output.empty() : this.relativeExpirationDate;
     }
 
     public ContentKeyPolicyPlayReadyLicenseArgs(
-        Input<Boolean> allowTestDevices,
-        @Nullable Input<String> beginDate,
-        Input<Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderArgs,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierArgs>> contentKeyLocation,
-        Input<Either<String,ContentKeyPolicyPlayReadyContentType>> contentType,
-        @Nullable Input<String> expirationDate,
-        @Nullable Input<String> gracePeriod,
-        Input<Either<String,ContentKeyPolicyPlayReadyLicenseType>> licenseType,
-        @Nullable Input<ContentKeyPolicyPlayReadyPlayRightArgs> playRight,
-        @Nullable Input<String> relativeBeginDate,
-        @Nullable Input<String> relativeExpirationDate) {
+        Output<Boolean> allowTestDevices,
+        @Nullable Output<String> beginDate,
+        Output<Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderArgs,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierArgs>> contentKeyLocation,
+        Output<Either<String,ContentKeyPolicyPlayReadyContentType>> contentType,
+        @Nullable Output<String> expirationDate,
+        @Nullable Output<String> gracePeriod,
+        Output<Either<String,ContentKeyPolicyPlayReadyLicenseType>> licenseType,
+        @Nullable Output<ContentKeyPolicyPlayReadyPlayRightArgs> playRight,
+        @Nullable Output<String> relativeBeginDate,
+        @Nullable Output<String> relativeExpirationDate) {
         this.allowTestDevices = Objects.requireNonNull(allowTestDevices, "expected parameter 'allowTestDevices' to be non-null");
         this.beginDate = beginDate;
         this.contentKeyLocation = Objects.requireNonNull(contentKeyLocation, "expected parameter 'contentKeyLocation' to be non-null");
@@ -159,16 +159,16 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends io.pulumi.resour
     }
 
     private ContentKeyPolicyPlayReadyLicenseArgs() {
-        this.allowTestDevices = Input.empty();
-        this.beginDate = Input.empty();
-        this.contentKeyLocation = Input.empty();
-        this.contentType = Input.empty();
-        this.expirationDate = Input.empty();
-        this.gracePeriod = Input.empty();
-        this.licenseType = Input.empty();
-        this.playRight = Input.empty();
-        this.relativeBeginDate = Input.empty();
-        this.relativeExpirationDate = Input.empty();
+        this.allowTestDevices = Output.empty();
+        this.beginDate = Output.empty();
+        this.contentKeyLocation = Output.empty();
+        this.contentType = Output.empty();
+        this.expirationDate = Output.empty();
+        this.gracePeriod = Output.empty();
+        this.licenseType = Output.empty();
+        this.playRight = Output.empty();
+        this.relativeBeginDate = Output.empty();
+        this.relativeExpirationDate = Output.empty();
     }
 
     public static Builder builder() {
@@ -180,16 +180,16 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private Input<Boolean> allowTestDevices;
-        private @Nullable Input<String> beginDate;
-        private Input<Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderArgs,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierArgs>> contentKeyLocation;
-        private Input<Either<String,ContentKeyPolicyPlayReadyContentType>> contentType;
-        private @Nullable Input<String> expirationDate;
-        private @Nullable Input<String> gracePeriod;
-        private Input<Either<String,ContentKeyPolicyPlayReadyLicenseType>> licenseType;
-        private @Nullable Input<ContentKeyPolicyPlayReadyPlayRightArgs> playRight;
-        private @Nullable Input<String> relativeBeginDate;
-        private @Nullable Input<String> relativeExpirationDate;
+        private Output<Boolean> allowTestDevices;
+        private @Nullable Output<String> beginDate;
+        private Output<Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderArgs,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierArgs>> contentKeyLocation;
+        private Output<Either<String,ContentKeyPolicyPlayReadyContentType>> contentType;
+        private @Nullable Output<String> expirationDate;
+        private @Nullable Output<String> gracePeriod;
+        private Output<Either<String,ContentKeyPolicyPlayReadyLicenseType>> licenseType;
+        private @Nullable Output<ContentKeyPolicyPlayReadyPlayRightArgs> playRight;
+        private @Nullable Output<String> relativeBeginDate;
+        private @Nullable Output<String> relativeExpirationDate;
 
         public Builder() {
     	      // Empty
@@ -209,103 +209,103 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends io.pulumi.resour
     	      this.relativeExpirationDate = defaults.relativeExpirationDate;
         }
 
-        public Builder allowTestDevices(Input<Boolean> allowTestDevices) {
+        public Builder allowTestDevices(Output<Boolean> allowTestDevices) {
             this.allowTestDevices = Objects.requireNonNull(allowTestDevices);
             return this;
         }
 
         public Builder allowTestDevices(Boolean allowTestDevices) {
-            this.allowTestDevices = Input.of(Objects.requireNonNull(allowTestDevices));
+            this.allowTestDevices = Output.of(Objects.requireNonNull(allowTestDevices));
             return this;
         }
 
-        public Builder beginDate(@Nullable Input<String> beginDate) {
+        public Builder beginDate(@Nullable Output<String> beginDate) {
             this.beginDate = beginDate;
             return this;
         }
 
         public Builder beginDate(@Nullable String beginDate) {
-            this.beginDate = Input.ofNullable(beginDate);
+            this.beginDate = Output.ofNullable(beginDate);
             return this;
         }
 
-        public Builder contentKeyLocation(Input<Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderArgs,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierArgs>> contentKeyLocation) {
+        public Builder contentKeyLocation(Output<Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderArgs,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierArgs>> contentKeyLocation) {
             this.contentKeyLocation = Objects.requireNonNull(contentKeyLocation);
             return this;
         }
 
         public Builder contentKeyLocation(Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderArgs,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierArgs> contentKeyLocation) {
-            this.contentKeyLocation = Input.of(Objects.requireNonNull(contentKeyLocation));
+            this.contentKeyLocation = Output.of(Objects.requireNonNull(contentKeyLocation));
             return this;
         }
 
-        public Builder contentType(Input<Either<String,ContentKeyPolicyPlayReadyContentType>> contentType) {
+        public Builder contentType(Output<Either<String,ContentKeyPolicyPlayReadyContentType>> contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
 
         public Builder contentType(Either<String,ContentKeyPolicyPlayReadyContentType> contentType) {
-            this.contentType = Input.of(Objects.requireNonNull(contentType));
+            this.contentType = Output.of(Objects.requireNonNull(contentType));
             return this;
         }
 
-        public Builder expirationDate(@Nullable Input<String> expirationDate) {
+        public Builder expirationDate(@Nullable Output<String> expirationDate) {
             this.expirationDate = expirationDate;
             return this;
         }
 
         public Builder expirationDate(@Nullable String expirationDate) {
-            this.expirationDate = Input.ofNullable(expirationDate);
+            this.expirationDate = Output.ofNullable(expirationDate);
             return this;
         }
 
-        public Builder gracePeriod(@Nullable Input<String> gracePeriod) {
+        public Builder gracePeriod(@Nullable Output<String> gracePeriod) {
             this.gracePeriod = gracePeriod;
             return this;
         }
 
         public Builder gracePeriod(@Nullable String gracePeriod) {
-            this.gracePeriod = Input.ofNullable(gracePeriod);
+            this.gracePeriod = Output.ofNullable(gracePeriod);
             return this;
         }
 
-        public Builder licenseType(Input<Either<String,ContentKeyPolicyPlayReadyLicenseType>> licenseType) {
+        public Builder licenseType(Output<Either<String,ContentKeyPolicyPlayReadyLicenseType>> licenseType) {
             this.licenseType = Objects.requireNonNull(licenseType);
             return this;
         }
 
         public Builder licenseType(Either<String,ContentKeyPolicyPlayReadyLicenseType> licenseType) {
-            this.licenseType = Input.of(Objects.requireNonNull(licenseType));
+            this.licenseType = Output.of(Objects.requireNonNull(licenseType));
             return this;
         }
 
-        public Builder playRight(@Nullable Input<ContentKeyPolicyPlayReadyPlayRightArgs> playRight) {
+        public Builder playRight(@Nullable Output<ContentKeyPolicyPlayReadyPlayRightArgs> playRight) {
             this.playRight = playRight;
             return this;
         }
 
         public Builder playRight(@Nullable ContentKeyPolicyPlayReadyPlayRightArgs playRight) {
-            this.playRight = Input.ofNullable(playRight);
+            this.playRight = Output.ofNullable(playRight);
             return this;
         }
 
-        public Builder relativeBeginDate(@Nullable Input<String> relativeBeginDate) {
+        public Builder relativeBeginDate(@Nullable Output<String> relativeBeginDate) {
             this.relativeBeginDate = relativeBeginDate;
             return this;
         }
 
         public Builder relativeBeginDate(@Nullable String relativeBeginDate) {
-            this.relativeBeginDate = Input.ofNullable(relativeBeginDate);
+            this.relativeBeginDate = Output.ofNullable(relativeBeginDate);
             return this;
         }
 
-        public Builder relativeExpirationDate(@Nullable Input<String> relativeExpirationDate) {
+        public Builder relativeExpirationDate(@Nullable Output<String> relativeExpirationDate) {
             this.relativeExpirationDate = relativeExpirationDate;
             return this;
         }
 
         public Builder relativeExpirationDate(@Nullable String relativeExpirationDate) {
-            this.relativeExpirationDate = Input.ofNullable(relativeExpirationDate);
+            this.relativeExpirationDate = Output.ofNullable(relativeExpirationDate);
             return this;
         }
         public ContentKeyPolicyPlayReadyLicenseArgs build() {

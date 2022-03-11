@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotevents.inputs;
 
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelActionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class DetectorModelTransitionEventArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="actions")
-      private final @Nullable Input<List<DetectorModelActionArgs>> actions;
+      private final @Nullable Output<List<DetectorModelActionArgs>> actions;
 
-    public Input<List<DetectorModelActionArgs>> getActions() {
-        return this.actions == null ? Input.empty() : this.actions;
+    public Output<List<DetectorModelActionArgs>> getActions() {
+        return this.actions == null ? Output.empty() : this.actions;
     }
 
     /**
@@ -36,9 +36,9 @@ public final class DetectorModelTransitionEventArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="condition", required=true)
-      private final Input<String> condition;
+      private final Output<String> condition;
 
-    public Input<String> getCondition() {
+    public Output<String> getCondition() {
         return this.condition;
     }
 
@@ -47,9 +47,9 @@ public final class DetectorModelTransitionEventArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="eventName", required=true)
-      private final Input<String> eventName;
+      private final Output<String> eventName;
 
-    public Input<String> getEventName() {
+    public Output<String> getEventName() {
         return this.eventName;
     }
 
@@ -58,17 +58,17 @@ public final class DetectorModelTransitionEventArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="nextState", required=true)
-      private final Input<String> nextState;
+      private final Output<String> nextState;
 
-    public Input<String> getNextState() {
+    public Output<String> getNextState() {
         return this.nextState;
     }
 
     public DetectorModelTransitionEventArgs(
-        @Nullable Input<List<DetectorModelActionArgs>> actions,
-        Input<String> condition,
-        Input<String> eventName,
-        Input<String> nextState) {
+        @Nullable Output<List<DetectorModelActionArgs>> actions,
+        Output<String> condition,
+        Output<String> eventName,
+        Output<String> nextState) {
         this.actions = actions;
         this.condition = Objects.requireNonNull(condition, "expected parameter 'condition' to be non-null");
         this.eventName = Objects.requireNonNull(eventName, "expected parameter 'eventName' to be non-null");
@@ -76,10 +76,10 @@ public final class DetectorModelTransitionEventArgs extends io.pulumi.resources.
     }
 
     private DetectorModelTransitionEventArgs() {
-        this.actions = Input.empty();
-        this.condition = Input.empty();
-        this.eventName = Input.empty();
-        this.nextState = Input.empty();
+        this.actions = Output.empty();
+        this.condition = Output.empty();
+        this.eventName = Output.empty();
+        this.nextState = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class DetectorModelTransitionEventArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<List<DetectorModelActionArgs>> actions;
-        private Input<String> condition;
-        private Input<String> eventName;
-        private Input<String> nextState;
+        private @Nullable Output<List<DetectorModelActionArgs>> actions;
+        private Output<String> condition;
+        private Output<String> eventName;
+        private Output<String> nextState;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class DetectorModelTransitionEventArgs extends io.pulumi.resources.
     	      this.nextState = defaults.nextState;
         }
 
-        public Builder actions(@Nullable Input<List<DetectorModelActionArgs>> actions) {
+        public Builder actions(@Nullable Output<List<DetectorModelActionArgs>> actions) {
             this.actions = actions;
             return this;
         }
 
         public Builder actions(@Nullable List<DetectorModelActionArgs> actions) {
-            this.actions = Input.ofNullable(actions);
+            this.actions = Output.ofNullable(actions);
             return this;
         }
 
-        public Builder condition(Input<String> condition) {
+        public Builder condition(Output<String> condition) {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
 
         public Builder condition(String condition) {
-            this.condition = Input.of(Objects.requireNonNull(condition));
+            this.condition = Output.of(Objects.requireNonNull(condition));
             return this;
         }
 
-        public Builder eventName(Input<String> eventName) {
+        public Builder eventName(Output<String> eventName) {
             this.eventName = Objects.requireNonNull(eventName);
             return this;
         }
 
         public Builder eventName(String eventName) {
-            this.eventName = Input.of(Objects.requireNonNull(eventName));
+            this.eventName = Output.of(Objects.requireNonNull(eventName));
             return this;
         }
 
-        public Builder nextState(Input<String> nextState) {
+        public Builder nextState(Output<String> nextState) {
             this.nextState = Objects.requireNonNull(nextState);
             return this;
         }
 
         public Builder nextState(String nextState) {
-            this.nextState = Input.of(Objects.requireNonNull(nextState));
+            this.nextState = Output.of(Objects.requireNonNull(nextState));
             return this;
         }
         public DetectorModelTransitionEventArgs build() {

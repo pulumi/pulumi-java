@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class BusinessIdentityArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="qualifier", required=true)
-      private final Input<String> qualifier;
+      private final Output<String> qualifier;
 
-    public Input<String> getQualifier() {
+    public Output<String> getQualifier() {
         return this.qualifier;
     }
 
@@ -33,22 +33,22 @@ public final class BusinessIdentityArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="value", required=true)
-      private final Input<String> value;
+      private final Output<String> value;
 
-    public Input<String> getValue() {
+    public Output<String> getValue() {
         return this.value;
     }
 
     public BusinessIdentityArgs(
-        Input<String> qualifier,
-        Input<String> value) {
+        Output<String> qualifier,
+        Output<String> value) {
         this.qualifier = Objects.requireNonNull(qualifier, "expected parameter 'qualifier' to be non-null");
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private BusinessIdentityArgs() {
-        this.qualifier = Input.empty();
-        this.value = Input.empty();
+        this.qualifier = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class BusinessIdentityArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> qualifier;
-        private Input<String> value;
+        private Output<String> qualifier;
+        private Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class BusinessIdentityArgs extends io.pulumi.resources.ResourceArgs
     	      this.value = defaults.value;
         }
 
-        public Builder qualifier(Input<String> qualifier) {
+        public Builder qualifier(Output<String> qualifier) {
             this.qualifier = Objects.requireNonNull(qualifier);
             return this;
         }
 
         public Builder qualifier(String qualifier) {
-            this.qualifier = Input.of(Objects.requireNonNull(qualifier));
+            this.qualifier = Output.of(Objects.requireNonNull(qualifier));
             return this;
         }
 
-        public Builder value(Input<String> value) {
+        public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(String value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public BusinessIdentityArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.marketplace.inputs;
 
 import io.pulumi.azurenative.marketplace.enums.Accessibility;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,18 +21,18 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessibility")
-      private final @Nullable Input<Either<String,Accessibility>> accessibility;
+      private final @Nullable Output<Either<String,Accessibility>> accessibility;
 
-    public Input<Either<String,Accessibility>> getAccessibility() {
-        return this.accessibility == null ? Input.empty() : this.accessibility;
+    public Output<Either<String,Accessibility>> getAccessibility() {
+        return this.accessibility == null ? Output.empty() : this.accessibility;
     }
 
-    public PlanArgs(@Nullable Input<Either<String,Accessibility>> accessibility) {
+    public PlanArgs(@Nullable Output<Either<String,Accessibility>> accessibility) {
         this.accessibility = accessibility;
     }
 
     private PlanArgs() {
-        this.accessibility = Input.empty();
+        this.accessibility = Output.empty();
     }
 
     public static Builder builder() {
@@ -44,7 +44,7 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,Accessibility>> accessibility;
+        private @Nullable Output<Either<String,Accessibility>> accessibility;
 
         public Builder() {
     	      // Empty
@@ -55,13 +55,13 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
     	      this.accessibility = defaults.accessibility;
         }
 
-        public Builder accessibility(@Nullable Input<Either<String,Accessibility>> accessibility) {
+        public Builder accessibility(@Nullable Output<Either<String,Accessibility>> accessibility) {
             this.accessibility = accessibility;
             return this;
         }
 
         public Builder accessibility(@Nullable Either<String,Accessibility> accessibility) {
-            this.accessibility = Input.ofNullable(accessibility);
+            this.accessibility = Output.ofNullable(accessibility);
             return this;
         }
         public PlanArgs build() {

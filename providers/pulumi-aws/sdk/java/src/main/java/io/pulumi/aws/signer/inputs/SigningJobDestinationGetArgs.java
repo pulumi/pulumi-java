@@ -4,7 +4,7 @@
 package io.pulumi.aws.signer.inputs;
 
 import io.pulumi.aws.signer.inputs.SigningJobDestinationS3GetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class SigningJobDestinationGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="s3", required=true)
-      private final Input<SigningJobDestinationS3GetArgs> s3;
+      private final Output<SigningJobDestinationS3GetArgs> s3;
 
-    public Input<SigningJobDestinationS3GetArgs> getS3() {
+    public Output<SigningJobDestinationS3GetArgs> getS3() {
         return this.s3;
     }
 
-    public SigningJobDestinationGetArgs(Input<SigningJobDestinationS3GetArgs> s3) {
+    public SigningJobDestinationGetArgs(Output<SigningJobDestinationS3GetArgs> s3) {
         this.s3 = Objects.requireNonNull(s3, "expected parameter 's3' to be non-null");
     }
 
     private SigningJobDestinationGetArgs() {
-        this.s3 = Input.empty();
+        this.s3 = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class SigningJobDestinationGetArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<SigningJobDestinationS3GetArgs> s3;
+        private Output<SigningJobDestinationS3GetArgs> s3;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class SigningJobDestinationGetArgs extends io.pulumi.resources.Reso
     	      this.s3 = defaults.s3;
         }
 
-        public Builder s3(Input<SigningJobDestinationS3GetArgs> s3) {
+        public Builder s3(Output<SigningJobDestinationS3GetArgs> s3) {
             this.s3 = Objects.requireNonNull(s3);
             return this;
         }
 
         public Builder s3(SigningJobDestinationS3GetArgs s3) {
-            this.s3 = Input.of(Objects.requireNonNull(s3));
+            this.s3 = Output.of(Objects.requireNonNull(s3));
             return this;
         }
         public SigningJobDestinationGetArgs build() {

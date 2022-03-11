@@ -6,7 +6,6 @@ package io.pulumi.aws.acm;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.acm.CertificateValidationArgs;
 import io.pulumi.aws.acm.inputs.CertificateValidationState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -96,14 +95,14 @@ public class CertificateValidation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CertificateValidation(String name, CertificateValidationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:acm/certificateValidation:CertificateValidation", name, args == null ? CertificateValidationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:acm/certificateValidation:CertificateValidation", name, args == null ? CertificateValidationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private CertificateValidation(String name, Input<String> id, @Nullable CertificateValidationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private CertificateValidation(String name, Output<String> id, @Nullable CertificateValidationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:acm/certificateValidation:CertificateValidation", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -119,7 +118,7 @@ public class CertificateValidation extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CertificateValidation get(String name, Input<String> id, @Nullable CertificateValidationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static CertificateValidation get(String name, Output<String> id, @Nullable CertificateValidationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new CertificateValidation(name, id, state, options);
     }
 }

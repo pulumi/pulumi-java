@@ -8,7 +8,6 @@ import io.pulumi.aws.fsx.OntapStorageVirtualMachineArgs;
 import io.pulumi.aws.fsx.inputs.OntapStorageVirtualMachineState;
 import io.pulumi.aws.fsx.outputs.OntapStorageVirtualMachineActiveDirectoryConfiguration;
 import io.pulumi.aws.fsx.outputs.OntapStorageVirtualMachineEndpoint;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -233,14 +232,14 @@ public class OntapStorageVirtualMachine extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public OntapStorageVirtualMachine(String name, OntapStorageVirtualMachineArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:fsx/ontapStorageVirtualMachine:OntapStorageVirtualMachine", name, args == null ? OntapStorageVirtualMachineArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:fsx/ontapStorageVirtualMachine:OntapStorageVirtualMachine", name, args == null ? OntapStorageVirtualMachineArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private OntapStorageVirtualMachine(String name, Input<String> id, @Nullable OntapStorageVirtualMachineState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private OntapStorageVirtualMachine(String name, Output<String> id, @Nullable OntapStorageVirtualMachineState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:fsx/ontapStorageVirtualMachine:OntapStorageVirtualMachine", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -256,7 +255,7 @@ public class OntapStorageVirtualMachine extends io.pulumi.resources.CustomResour
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static OntapStorageVirtualMachine get(String name, Input<String> id, @Nullable OntapStorageVirtualMachineState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static OntapStorageVirtualMachine get(String name, Output<String> id, @Nullable OntapStorageVirtualMachineState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new OntapStorageVirtualMachine(name, id, state, options);
     }
 }

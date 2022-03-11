@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.healthcare;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,9 +21,9 @@ public final class Hl7StoreIamPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="hl7V2StoreId", required=true)
-      private final Input<String> hl7V2StoreId;
+      private final Output<String> hl7V2StoreId;
 
-    public Input<String> getHl7V2StoreId() {
+    public Output<String> getHl7V2StoreId() {
         return this.hl7V2StoreId;
     }
 
@@ -33,22 +33,22 @@ public final class Hl7StoreIamPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="policyData", required=true)
-      private final Input<String> policyData;
+      private final Output<String> policyData;
 
-    public Input<String> getPolicyData() {
+    public Output<String> getPolicyData() {
         return this.policyData;
     }
 
     public Hl7StoreIamPolicyArgs(
-        Input<String> hl7V2StoreId,
-        Input<String> policyData) {
+        Output<String> hl7V2StoreId,
+        Output<String> policyData) {
         this.hl7V2StoreId = Objects.requireNonNull(hl7V2StoreId, "expected parameter 'hl7V2StoreId' to be non-null");
         this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
     }
 
     private Hl7StoreIamPolicyArgs() {
-        this.hl7V2StoreId = Input.empty();
-        this.policyData = Input.empty();
+        this.hl7V2StoreId = Output.empty();
+        this.policyData = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class Hl7StoreIamPolicyArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> hl7V2StoreId;
-        private Input<String> policyData;
+        private Output<String> hl7V2StoreId;
+        private Output<String> policyData;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class Hl7StoreIamPolicyArgs extends io.pulumi.resources.ResourceArg
     	      this.policyData = defaults.policyData;
         }
 
-        public Builder hl7V2StoreId(Input<String> hl7V2StoreId) {
+        public Builder hl7V2StoreId(Output<String> hl7V2StoreId) {
             this.hl7V2StoreId = Objects.requireNonNull(hl7V2StoreId);
             return this;
         }
 
         public Builder hl7V2StoreId(String hl7V2StoreId) {
-            this.hl7V2StoreId = Input.of(Objects.requireNonNull(hl7V2StoreId));
+            this.hl7V2StoreId = Output.of(Objects.requireNonNull(hl7V2StoreId));
             return this;
         }
 
-        public Builder policyData(Input<String> policyData) {
+        public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
 
         public Builder policyData(String policyData) {
-            this.policyData = Input.of(Objects.requireNonNull(policyData));
+            this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
         public Hl7StoreIamPolicyArgs build() {

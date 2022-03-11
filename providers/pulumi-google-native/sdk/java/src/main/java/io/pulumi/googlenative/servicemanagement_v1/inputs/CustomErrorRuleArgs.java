@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class CustomErrorRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="isErrorType")
-      private final @Nullable Input<Boolean> isErrorType;
+      private final @Nullable Output<Boolean> isErrorType;
 
-    public Input<Boolean> getIsErrorType() {
-        return this.isErrorType == null ? Input.empty() : this.isErrorType;
+    public Output<Boolean> getIsErrorType() {
+        return this.isErrorType == null ? Output.empty() : this.isErrorType;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class CustomErrorRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="selector")
-      private final @Nullable Input<String> selector;
+      private final @Nullable Output<String> selector;
 
-    public Input<String> getSelector() {
-        return this.selector == null ? Input.empty() : this.selector;
+    public Output<String> getSelector() {
+        return this.selector == null ? Output.empty() : this.selector;
     }
 
     public CustomErrorRuleArgs(
-        @Nullable Input<Boolean> isErrorType,
-        @Nullable Input<String> selector) {
+        @Nullable Output<Boolean> isErrorType,
+        @Nullable Output<String> selector) {
         this.isErrorType = isErrorType;
         this.selector = selector;
     }
 
     private CustomErrorRuleArgs() {
-        this.isErrorType = Input.empty();
-        this.selector = Input.empty();
+        this.isErrorType = Output.empty();
+        this.selector = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class CustomErrorRuleArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> isErrorType;
-        private @Nullable Input<String> selector;
+        private @Nullable Output<Boolean> isErrorType;
+        private @Nullable Output<String> selector;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class CustomErrorRuleArgs extends io.pulumi.resources.ResourceArgs 
     	      this.selector = defaults.selector;
         }
 
-        public Builder isErrorType(@Nullable Input<Boolean> isErrorType) {
+        public Builder isErrorType(@Nullable Output<Boolean> isErrorType) {
             this.isErrorType = isErrorType;
             return this;
         }
 
         public Builder isErrorType(@Nullable Boolean isErrorType) {
-            this.isErrorType = Input.ofNullable(isErrorType);
+            this.isErrorType = Output.ofNullable(isErrorType);
             return this;
         }
 
-        public Builder selector(@Nullable Input<String> selector) {
+        public Builder selector(@Nullable Output<String> selector) {
             this.selector = selector;
             return this;
         }
 
         public Builder selector(@Nullable String selector) {
-            this.selector = Input.ofNullable(selector);
+            this.selector = Output.ofNullable(selector);
             return this;
         }
         public CustomErrorRuleArgs build() {

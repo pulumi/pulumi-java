@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ebs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -22,10 +22,10 @@ public final class VolumeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class VolumeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZone")
-      private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Output<String> availabilityZone;
 
-    public Input<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
+    public Output<String> getAvailabilityZone() {
+        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class VolumeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encrypted")
-      private final @Nullable Input<Boolean> encrypted;
+      private final @Nullable Output<Boolean> encrypted;
 
-    public Input<Boolean> getEncrypted() {
-        return this.encrypted == null ? Input.empty() : this.encrypted;
+    public Output<Boolean> getEncrypted() {
+        return this.encrypted == null ? Output.empty() : this.encrypted;
     }
 
     /**
@@ -55,17 +55,17 @@ public final class VolumeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iops")
-      private final @Nullable Input<Integer> iops;
+      private final @Nullable Output<Integer> iops;
 
-    public Input<Integer> getIops() {
-        return this.iops == null ? Input.empty() : this.iops;
+    public Output<Integer> getIops() {
+        return this.iops == null ? Output.empty() : this.iops;
     }
 
     @InputImport(name="kmsKeyId")
-      private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Output<String> kmsKeyId;
 
-    public Input<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
+    public Output<String> getKmsKeyId() {
+        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class VolumeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="multiAttachEnabled")
-      private final @Nullable Input<Boolean> multiAttachEnabled;
+      private final @Nullable Output<Boolean> multiAttachEnabled;
 
-    public Input<Boolean> getMultiAttachEnabled() {
-        return this.multiAttachEnabled == null ? Input.empty() : this.multiAttachEnabled;
+    public Output<Boolean> getMultiAttachEnabled() {
+        return this.multiAttachEnabled == null ? Output.empty() : this.multiAttachEnabled;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class VolumeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outpostArn")
-      private final @Nullable Input<String> outpostArn;
+      private final @Nullable Output<String> outpostArn;
 
-    public Input<String> getOutpostArn() {
-        return this.outpostArn == null ? Input.empty() : this.outpostArn;
+    public Output<String> getOutpostArn() {
+        return this.outpostArn == null ? Output.empty() : this.outpostArn;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class VolumeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="size")
-      private final @Nullable Input<Integer> size;
+      private final @Nullable Output<Integer> size;
 
-    public Input<Integer> getSize() {
-        return this.size == null ? Input.empty() : this.size;
+    public Output<Integer> getSize() {
+        return this.size == null ? Output.empty() : this.size;
     }
 
     /**
@@ -106,10 +106,10 @@ public final class VolumeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="snapshotId")
-      private final @Nullable Input<String> snapshotId;
+      private final @Nullable Output<String> snapshotId;
 
-    public Input<String> getSnapshotId() {
-        return this.snapshotId == null ? Input.empty() : this.snapshotId;
+    public Output<String> getSnapshotId() {
+        return this.snapshotId == null ? Output.empty() : this.snapshotId;
     }
 
     /**
@@ -117,10 +117,10 @@ public final class VolumeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -128,10 +128,10 @@ public final class VolumeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -139,10 +139,10 @@ public final class VolumeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="throughput")
-      private final @Nullable Input<Integer> throughput;
+      private final @Nullable Output<Integer> throughput;
 
-    public Input<Integer> getThroughput() {
-        return this.throughput == null ? Input.empty() : this.throughput;
+    public Output<Integer> getThroughput() {
+        return this.throughput == null ? Output.empty() : this.throughput;
     }
 
     /**
@@ -150,26 +150,26 @@ public final class VolumeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public VolumeState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> availabilityZone,
-        @Nullable Input<Boolean> encrypted,
-        @Nullable Input<Integer> iops,
-        @Nullable Input<String> kmsKeyId,
-        @Nullable Input<Boolean> multiAttachEnabled,
-        @Nullable Input<String> outpostArn,
-        @Nullable Input<Integer> size,
-        @Nullable Input<String> snapshotId,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<Integer> throughput,
-        @Nullable Input<String> type) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> availabilityZone,
+        @Nullable Output<Boolean> encrypted,
+        @Nullable Output<Integer> iops,
+        @Nullable Output<String> kmsKeyId,
+        @Nullable Output<Boolean> multiAttachEnabled,
+        @Nullable Output<String> outpostArn,
+        @Nullable Output<Integer> size,
+        @Nullable Output<String> snapshotId,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<Integer> throughput,
+        @Nullable Output<String> type) {
         this.arn = arn;
         this.availabilityZone = availabilityZone;
         this.encrypted = encrypted;
@@ -186,19 +186,19 @@ public final class VolumeState extends io.pulumi.resources.ResourceArgs {
     }
 
     private VolumeState() {
-        this.arn = Input.empty();
-        this.availabilityZone = Input.empty();
-        this.encrypted = Input.empty();
-        this.iops = Input.empty();
-        this.kmsKeyId = Input.empty();
-        this.multiAttachEnabled = Input.empty();
-        this.outpostArn = Input.empty();
-        this.size = Input.empty();
-        this.snapshotId = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.throughput = Input.empty();
-        this.type = Input.empty();
+        this.arn = Output.empty();
+        this.availabilityZone = Output.empty();
+        this.encrypted = Output.empty();
+        this.iops = Output.empty();
+        this.kmsKeyId = Output.empty();
+        this.multiAttachEnabled = Output.empty();
+        this.outpostArn = Output.empty();
+        this.size = Output.empty();
+        this.snapshotId = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.throughput = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -210,19 +210,19 @@ public final class VolumeState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> availabilityZone;
-        private @Nullable Input<Boolean> encrypted;
-        private @Nullable Input<Integer> iops;
-        private @Nullable Input<String> kmsKeyId;
-        private @Nullable Input<Boolean> multiAttachEnabled;
-        private @Nullable Input<String> outpostArn;
-        private @Nullable Input<Integer> size;
-        private @Nullable Input<String> snapshotId;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<Integer> throughput;
-        private @Nullable Input<String> type;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> availabilityZone;
+        private @Nullable Output<Boolean> encrypted;
+        private @Nullable Output<Integer> iops;
+        private @Nullable Output<String> kmsKeyId;
+        private @Nullable Output<Boolean> multiAttachEnabled;
+        private @Nullable Output<String> outpostArn;
+        private @Nullable Output<Integer> size;
+        private @Nullable Output<String> snapshotId;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<Integer> throughput;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -245,133 +245,133 @@ public final class VolumeState extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Input.ofNullable(availabilityZone);
+            this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder encrypted(@Nullable Input<Boolean> encrypted) {
+        public Builder encrypted(@Nullable Output<Boolean> encrypted) {
             this.encrypted = encrypted;
             return this;
         }
 
         public Builder encrypted(@Nullable Boolean encrypted) {
-            this.encrypted = Input.ofNullable(encrypted);
+            this.encrypted = Output.ofNullable(encrypted);
             return this;
         }
 
-        public Builder iops(@Nullable Input<Integer> iops) {
+        public Builder iops(@Nullable Output<Integer> iops) {
             this.iops = iops;
             return this;
         }
 
         public Builder iops(@Nullable Integer iops) {
-            this.iops = Input.ofNullable(iops);
+            this.iops = Output.ofNullable(iops);
             return this;
         }
 
-        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Input.ofNullable(kmsKeyId);
+            this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder multiAttachEnabled(@Nullable Input<Boolean> multiAttachEnabled) {
+        public Builder multiAttachEnabled(@Nullable Output<Boolean> multiAttachEnabled) {
             this.multiAttachEnabled = multiAttachEnabled;
             return this;
         }
 
         public Builder multiAttachEnabled(@Nullable Boolean multiAttachEnabled) {
-            this.multiAttachEnabled = Input.ofNullable(multiAttachEnabled);
+            this.multiAttachEnabled = Output.ofNullable(multiAttachEnabled);
             return this;
         }
 
-        public Builder outpostArn(@Nullable Input<String> outpostArn) {
+        public Builder outpostArn(@Nullable Output<String> outpostArn) {
             this.outpostArn = outpostArn;
             return this;
         }
 
         public Builder outpostArn(@Nullable String outpostArn) {
-            this.outpostArn = Input.ofNullable(outpostArn);
+            this.outpostArn = Output.ofNullable(outpostArn);
             return this;
         }
 
-        public Builder size(@Nullable Input<Integer> size) {
+        public Builder size(@Nullable Output<Integer> size) {
             this.size = size;
             return this;
         }
 
         public Builder size(@Nullable Integer size) {
-            this.size = Input.ofNullable(size);
+            this.size = Output.ofNullable(size);
             return this;
         }
 
-        public Builder snapshotId(@Nullable Input<String> snapshotId) {
+        public Builder snapshotId(@Nullable Output<String> snapshotId) {
             this.snapshotId = snapshotId;
             return this;
         }
 
         public Builder snapshotId(@Nullable String snapshotId) {
-            this.snapshotId = Input.ofNullable(snapshotId);
+            this.snapshotId = Output.ofNullable(snapshotId);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder throughput(@Nullable Input<Integer> throughput) {
+        public Builder throughput(@Nullable Output<Integer> throughput) {
             this.throughput = throughput;
             return this;
         }
 
         public Builder throughput(@Nullable Integer throughput) {
-            this.throughput = Input.ofNullable(throughput);
+            this.throughput = Output.ofNullable(throughput);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public VolumeState build() {

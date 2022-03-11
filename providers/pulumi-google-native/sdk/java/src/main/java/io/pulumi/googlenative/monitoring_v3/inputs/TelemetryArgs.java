@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class TelemetryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceName")
-      private final @Nullable Input<String> resourceName;
+      private final @Nullable Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
-        return this.resourceName == null ? Input.empty() : this.resourceName;
+    public Output<String> getPropResourceName() {
+        return this.resourceName == null ? Output.empty() : this.resourceName;
     }
 
-    public TelemetryArgs(@Nullable Input<String> resourceName) {
+    public TelemetryArgs(@Nullable Output<String> resourceName) {
         this.resourceName = resourceName;
     }
 
     private TelemetryArgs() {
-        this.resourceName = Input.empty();
+        this.resourceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class TelemetryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> resourceName;
+        private @Nullable Output<String> resourceName;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class TelemetryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceName = defaults.resourceName;
         }
 
-        public Builder resourceName(@Nullable Input<String> resourceName) {
+        public Builder resourceName(@Nullable Output<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Input.ofNullable(resourceName);
+            this.resourceName = Output.ofNullable(resourceName);
             return this;
         }
         public TelemetryArgs build() {

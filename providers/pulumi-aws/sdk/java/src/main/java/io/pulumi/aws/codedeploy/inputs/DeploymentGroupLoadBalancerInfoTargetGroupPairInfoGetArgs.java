@@ -6,7 +6,7 @@ package io.pulumi.aws.codedeploy.inputs;
 import io.pulumi.aws.codedeploy.inputs.DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteGetArgs;
 import io.pulumi.aws.codedeploy.inputs.DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupGetArgs;
 import io.pulumi.aws.codedeploy.inputs.DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRouteGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoGetArgs ext
      * 
      */
     @InputImport(name="prodTrafficRoute", required=true)
-      private final Input<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteGetArgs> prodTrafficRoute;
+      private final Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteGetArgs> prodTrafficRoute;
 
-    public Input<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteGetArgs> getProdTrafficRoute() {
+    public Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteGetArgs> getProdTrafficRoute() {
         return this.prodTrafficRoute;
     }
 
@@ -33,9 +33,9 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoGetArgs ext
      * 
      */
     @InputImport(name="targetGroups", required=true)
-      private final Input<List<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupGetArgs>> targetGroups;
+      private final Output<List<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupGetArgs>> targetGroups;
 
-    public Input<List<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupGetArgs>> getTargetGroups() {
+    public Output<List<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupGetArgs>> getTargetGroups() {
         return this.targetGroups;
     }
 
@@ -44,25 +44,25 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoGetArgs ext
      * 
      */
     @InputImport(name="testTrafficRoute")
-      private final @Nullable Input<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRouteGetArgs> testTrafficRoute;
+      private final @Nullable Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRouteGetArgs> testTrafficRoute;
 
-    public Input<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRouteGetArgs> getTestTrafficRoute() {
-        return this.testTrafficRoute == null ? Input.empty() : this.testTrafficRoute;
+    public Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRouteGetArgs> getTestTrafficRoute() {
+        return this.testTrafficRoute == null ? Output.empty() : this.testTrafficRoute;
     }
 
     public DeploymentGroupLoadBalancerInfoTargetGroupPairInfoGetArgs(
-        Input<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteGetArgs> prodTrafficRoute,
-        Input<List<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupGetArgs>> targetGroups,
-        @Nullable Input<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRouteGetArgs> testTrafficRoute) {
+        Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteGetArgs> prodTrafficRoute,
+        Output<List<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupGetArgs>> targetGroups,
+        @Nullable Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRouteGetArgs> testTrafficRoute) {
         this.prodTrafficRoute = Objects.requireNonNull(prodTrafficRoute, "expected parameter 'prodTrafficRoute' to be non-null");
         this.targetGroups = Objects.requireNonNull(targetGroups, "expected parameter 'targetGroups' to be non-null");
         this.testTrafficRoute = testTrafficRoute;
     }
 
     private DeploymentGroupLoadBalancerInfoTargetGroupPairInfoGetArgs() {
-        this.prodTrafficRoute = Input.empty();
-        this.targetGroups = Input.empty();
-        this.testTrafficRoute = Input.empty();
+        this.prodTrafficRoute = Output.empty();
+        this.targetGroups = Output.empty();
+        this.testTrafficRoute = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoGetArgs ext
     }
 
     public static final class Builder {
-        private Input<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteGetArgs> prodTrafficRoute;
-        private Input<List<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupGetArgs>> targetGroups;
-        private @Nullable Input<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRouteGetArgs> testTrafficRoute;
+        private Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteGetArgs> prodTrafficRoute;
+        private Output<List<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupGetArgs>> targetGroups;
+        private @Nullable Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRouteGetArgs> testTrafficRoute;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoGetArgs ext
     	      this.testTrafficRoute = defaults.testTrafficRoute;
         }
 
-        public Builder prodTrafficRoute(Input<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteGetArgs> prodTrafficRoute) {
+        public Builder prodTrafficRoute(Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteGetArgs> prodTrafficRoute) {
             this.prodTrafficRoute = Objects.requireNonNull(prodTrafficRoute);
             return this;
         }
 
         public Builder prodTrafficRoute(DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteGetArgs prodTrafficRoute) {
-            this.prodTrafficRoute = Input.of(Objects.requireNonNull(prodTrafficRoute));
+            this.prodTrafficRoute = Output.of(Objects.requireNonNull(prodTrafficRoute));
             return this;
         }
 
-        public Builder targetGroups(Input<List<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupGetArgs>> targetGroups) {
+        public Builder targetGroups(Output<List<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupGetArgs>> targetGroups) {
             this.targetGroups = Objects.requireNonNull(targetGroups);
             return this;
         }
 
         public Builder targetGroups(List<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupGetArgs> targetGroups) {
-            this.targetGroups = Input.of(Objects.requireNonNull(targetGroups));
+            this.targetGroups = Output.of(Objects.requireNonNull(targetGroups));
             return this;
         }
 
-        public Builder testTrafficRoute(@Nullable Input<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRouteGetArgs> testTrafficRoute) {
+        public Builder testTrafficRoute(@Nullable Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRouteGetArgs> testTrafficRoute) {
             this.testTrafficRoute = testTrafficRoute;
             return this;
         }
 
         public Builder testTrafficRoute(@Nullable DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRouteGetArgs testTrafficRoute) {
-            this.testTrafficRoute = Input.ofNullable(testTrafficRoute);
+            this.testTrafficRoute = Output.ofNullable(testTrafficRoute);
             return this;
         }
         public DeploymentGroupLoadBalancerInfoTargetGroupPairInfoGetArgs build() {

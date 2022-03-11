@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.DeliveryRuleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class EndpointPropertiesUpdateParametersDeliveryPolicyArgs extends 
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class EndpointPropertiesUpdateParametersDeliveryPolicyArgs extends 
      * 
      */
     @InputImport(name="rules", required=true)
-      private final Input<List<DeliveryRuleArgs>> rules;
+      private final Output<List<DeliveryRuleArgs>> rules;
 
-    public Input<List<DeliveryRuleArgs>> getRules() {
+    public Output<List<DeliveryRuleArgs>> getRules() {
         return this.rules;
     }
 
     public EndpointPropertiesUpdateParametersDeliveryPolicyArgs(
-        @Nullable Input<String> description,
-        Input<List<DeliveryRuleArgs>> rules) {
+        @Nullable Output<String> description,
+        Output<List<DeliveryRuleArgs>> rules) {
         this.description = description;
         this.rules = Objects.requireNonNull(rules, "expected parameter 'rules' to be non-null");
     }
 
     private EndpointPropertiesUpdateParametersDeliveryPolicyArgs() {
-        this.description = Input.empty();
-        this.rules = Input.empty();
+        this.description = Output.empty();
+        this.rules = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class EndpointPropertiesUpdateParametersDeliveryPolicyArgs extends 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<List<DeliveryRuleArgs>> rules;
+        private @Nullable Output<String> description;
+        private Output<List<DeliveryRuleArgs>> rules;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class EndpointPropertiesUpdateParametersDeliveryPolicyArgs extends 
     	      this.rules = defaults.rules;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder rules(Input<List<DeliveryRuleArgs>> rules) {
+        public Builder rules(Output<List<DeliveryRuleArgs>> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
 
         public Builder rules(List<DeliveryRuleArgs> rules) {
-            this.rules = Input.of(Objects.requireNonNull(rules));
+            this.rules = Output.of(Objects.requireNonNull(rules));
             return this;
         }
         public EndpointPropertiesUpdateParametersDeliveryPolicyArgs build() {

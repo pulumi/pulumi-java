@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1beta1.inputs.PubSubArgs;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="pubsub")
-      private final @Nullable Input<PubSubArgs> pubsub;
+      private final @Nullable Output<PubSubArgs> pubsub;
 
-    public Input<PubSubArgs> getPubsub() {
-        return this.pubsub == null ? Input.empty() : this.pubsub;
+    public Output<PubSubArgs> getPubsub() {
+        return this.pubsub == null ? Output.empty() : this.pubsub;
     }
 
-    public NotificationConfigArgs(@Nullable Input<PubSubArgs> pubsub) {
+    public NotificationConfigArgs(@Nullable Output<PubSubArgs> pubsub) {
         this.pubsub = pubsub;
     }
 
     private NotificationConfigArgs() {
-        this.pubsub = Input.empty();
+        this.pubsub = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<PubSubArgs> pubsub;
+        private @Nullable Output<PubSubArgs> pubsub;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
     	      this.pubsub = defaults.pubsub;
         }
 
-        public Builder pubsub(@Nullable Input<PubSubArgs> pubsub) {
+        public Builder pubsub(@Nullable Output<PubSubArgs> pubsub) {
             this.pubsub = pubsub;
             return this;
         }
 
         public Builder pubsub(@Nullable PubSubArgs pubsub) {
-            this.pubsub = Input.ofNullable(pubsub);
+            this.pubsub = Output.ofNullable(pubsub);
             return this;
         }
         public NotificationConfigArgs build() {

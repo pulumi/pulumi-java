@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.inputs.SetValueArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="contextAccessToken")
-      private final @Nullable Input<String> contextAccessToken;
+      private final @Nullable Output<String> contextAccessToken;
 
-    public Input<String> getContextAccessToken() {
-        return this.contextAccessToken == null ? Input.empty() : this.contextAccessToken;
+    public Output<String> getContextAccessToken() {
+        return this.contextAccessToken == null ? Output.empty() : this.contextAccessToken;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="contextPath")
-      private final @Nullable Input<String> contextPath;
+      private final @Nullable Output<String> contextPath;
 
-    public Input<String> getContextPath() {
-        return this.contextPath == null ? Input.empty() : this.contextPath;
+    public Output<String> getContextPath() {
+        return this.contextPath == null ? Output.empty() : this.contextPath;
     }
 
     /**
@@ -47,9 +47,9 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="encodedTaskContent", required=true)
-      private final Input<String> encodedTaskContent;
+      private final Output<String> encodedTaskContent;
 
-    public Input<String> getEncodedTaskContent() {
+    public Output<String> getEncodedTaskContent() {
         return this.encodedTaskContent;
     }
 
@@ -58,10 +58,10 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="encodedValuesContent")
-      private final @Nullable Input<String> encodedValuesContent;
+      private final @Nullable Output<String> encodedValuesContent;
 
-    public Input<String> getEncodedValuesContent() {
-        return this.encodedValuesContent == null ? Input.empty() : this.encodedValuesContent;
+    public Output<String> getEncodedValuesContent() {
+        return this.encodedValuesContent == null ? Output.empty() : this.encodedValuesContent;
     }
 
     /**
@@ -70,9 +70,9 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -81,19 +81,19 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="values")
-      private final @Nullable Input<List<SetValueArgs>> values;
+      private final @Nullable Output<List<SetValueArgs>> values;
 
-    public Input<List<SetValueArgs>> getValues() {
-        return this.values == null ? Input.empty() : this.values;
+    public Output<List<SetValueArgs>> getValues() {
+        return this.values == null ? Output.empty() : this.values;
     }
 
     public EncodedTaskStepArgs(
-        @Nullable Input<String> contextAccessToken,
-        @Nullable Input<String> contextPath,
-        Input<String> encodedTaskContent,
-        @Nullable Input<String> encodedValuesContent,
-        Input<String> type,
-        @Nullable Input<List<SetValueArgs>> values) {
+        @Nullable Output<String> contextAccessToken,
+        @Nullable Output<String> contextPath,
+        Output<String> encodedTaskContent,
+        @Nullable Output<String> encodedValuesContent,
+        Output<String> type,
+        @Nullable Output<List<SetValueArgs>> values) {
         this.contextAccessToken = contextAccessToken;
         this.contextPath = contextPath;
         this.encodedTaskContent = Objects.requireNonNull(encodedTaskContent, "expected parameter 'encodedTaskContent' to be non-null");
@@ -103,12 +103,12 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private EncodedTaskStepArgs() {
-        this.contextAccessToken = Input.empty();
-        this.contextPath = Input.empty();
-        this.encodedTaskContent = Input.empty();
-        this.encodedValuesContent = Input.empty();
-        this.type = Input.empty();
-        this.values = Input.empty();
+        this.contextAccessToken = Output.empty();
+        this.contextPath = Output.empty();
+        this.encodedTaskContent = Output.empty();
+        this.encodedValuesContent = Output.empty();
+        this.type = Output.empty();
+        this.values = Output.empty();
     }
 
     public static Builder builder() {
@@ -120,12 +120,12 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> contextAccessToken;
-        private @Nullable Input<String> contextPath;
-        private Input<String> encodedTaskContent;
-        private @Nullable Input<String> encodedValuesContent;
-        private Input<String> type;
-        private @Nullable Input<List<SetValueArgs>> values;
+        private @Nullable Output<String> contextAccessToken;
+        private @Nullable Output<String> contextPath;
+        private Output<String> encodedTaskContent;
+        private @Nullable Output<String> encodedValuesContent;
+        private Output<String> type;
+        private @Nullable Output<List<SetValueArgs>> values;
 
         public Builder() {
     	      // Empty
@@ -141,63 +141,63 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
     	      this.values = defaults.values;
         }
 
-        public Builder contextAccessToken(@Nullable Input<String> contextAccessToken) {
+        public Builder contextAccessToken(@Nullable Output<String> contextAccessToken) {
             this.contextAccessToken = contextAccessToken;
             return this;
         }
 
         public Builder contextAccessToken(@Nullable String contextAccessToken) {
-            this.contextAccessToken = Input.ofNullable(contextAccessToken);
+            this.contextAccessToken = Output.ofNullable(contextAccessToken);
             return this;
         }
 
-        public Builder contextPath(@Nullable Input<String> contextPath) {
+        public Builder contextPath(@Nullable Output<String> contextPath) {
             this.contextPath = contextPath;
             return this;
         }
 
         public Builder contextPath(@Nullable String contextPath) {
-            this.contextPath = Input.ofNullable(contextPath);
+            this.contextPath = Output.ofNullable(contextPath);
             return this;
         }
 
-        public Builder encodedTaskContent(Input<String> encodedTaskContent) {
+        public Builder encodedTaskContent(Output<String> encodedTaskContent) {
             this.encodedTaskContent = Objects.requireNonNull(encodedTaskContent);
             return this;
         }
 
         public Builder encodedTaskContent(String encodedTaskContent) {
-            this.encodedTaskContent = Input.of(Objects.requireNonNull(encodedTaskContent));
+            this.encodedTaskContent = Output.of(Objects.requireNonNull(encodedTaskContent));
             return this;
         }
 
-        public Builder encodedValuesContent(@Nullable Input<String> encodedValuesContent) {
+        public Builder encodedValuesContent(@Nullable Output<String> encodedValuesContent) {
             this.encodedValuesContent = encodedValuesContent;
             return this;
         }
 
         public Builder encodedValuesContent(@Nullable String encodedValuesContent) {
-            this.encodedValuesContent = Input.ofNullable(encodedValuesContent);
+            this.encodedValuesContent = Output.ofNullable(encodedValuesContent);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder values(@Nullable Input<List<SetValueArgs>> values) {
+        public Builder values(@Nullable Output<List<SetValueArgs>> values) {
             this.values = values;
             return this;
         }
 
         public Builder values(@Nullable List<SetValueArgs> values) {
-            this.values = Input.ofNullable(values);
+            this.values = Output.ofNullable(values);
             return this;
         }
         public EncodedTaskStepArgs build() {

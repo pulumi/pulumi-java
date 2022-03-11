@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.resourcegroups.inputs;
 
 import io.pulumi.awsnative.resourcegroups.inputs.GroupTagFilterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,39 +17,39 @@ public final class GroupQueryArgs extends io.pulumi.resources.ResourceArgs {
     public static final GroupQueryArgs Empty = new GroupQueryArgs();
 
     @InputImport(name="resourceTypeFilters")
-      private final @Nullable Input<List<String>> resourceTypeFilters;
+      private final @Nullable Output<List<String>> resourceTypeFilters;
 
-    public Input<List<String>> getResourceTypeFilters() {
-        return this.resourceTypeFilters == null ? Input.empty() : this.resourceTypeFilters;
+    public Output<List<String>> getResourceTypeFilters() {
+        return this.resourceTypeFilters == null ? Output.empty() : this.resourceTypeFilters;
     }
 
     @InputImport(name="stackIdentifier")
-      private final @Nullable Input<String> stackIdentifier;
+      private final @Nullable Output<String> stackIdentifier;
 
-    public Input<String> getStackIdentifier() {
-        return this.stackIdentifier == null ? Input.empty() : this.stackIdentifier;
+    public Output<String> getStackIdentifier() {
+        return this.stackIdentifier == null ? Output.empty() : this.stackIdentifier;
     }
 
     @InputImport(name="tagFilters")
-      private final @Nullable Input<List<GroupTagFilterArgs>> tagFilters;
+      private final @Nullable Output<List<GroupTagFilterArgs>> tagFilters;
 
-    public Input<List<GroupTagFilterArgs>> getTagFilters() {
-        return this.tagFilters == null ? Input.empty() : this.tagFilters;
+    public Output<List<GroupTagFilterArgs>> getTagFilters() {
+        return this.tagFilters == null ? Output.empty() : this.tagFilters;
     }
 
     public GroupQueryArgs(
-        @Nullable Input<List<String>> resourceTypeFilters,
-        @Nullable Input<String> stackIdentifier,
-        @Nullable Input<List<GroupTagFilterArgs>> tagFilters) {
+        @Nullable Output<List<String>> resourceTypeFilters,
+        @Nullable Output<String> stackIdentifier,
+        @Nullable Output<List<GroupTagFilterArgs>> tagFilters) {
         this.resourceTypeFilters = resourceTypeFilters;
         this.stackIdentifier = stackIdentifier;
         this.tagFilters = tagFilters;
     }
 
     private GroupQueryArgs() {
-        this.resourceTypeFilters = Input.empty();
-        this.stackIdentifier = Input.empty();
-        this.tagFilters = Input.empty();
+        this.resourceTypeFilters = Output.empty();
+        this.stackIdentifier = Output.empty();
+        this.tagFilters = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,9 +61,9 @@ public final class GroupQueryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> resourceTypeFilters;
-        private @Nullable Input<String> stackIdentifier;
-        private @Nullable Input<List<GroupTagFilterArgs>> tagFilters;
+        private @Nullable Output<List<String>> resourceTypeFilters;
+        private @Nullable Output<String> stackIdentifier;
+        private @Nullable Output<List<GroupTagFilterArgs>> tagFilters;
 
         public Builder() {
     	      // Empty
@@ -76,33 +76,33 @@ public final class GroupQueryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tagFilters = defaults.tagFilters;
         }
 
-        public Builder resourceTypeFilters(@Nullable Input<List<String>> resourceTypeFilters) {
+        public Builder resourceTypeFilters(@Nullable Output<List<String>> resourceTypeFilters) {
             this.resourceTypeFilters = resourceTypeFilters;
             return this;
         }
 
         public Builder resourceTypeFilters(@Nullable List<String> resourceTypeFilters) {
-            this.resourceTypeFilters = Input.ofNullable(resourceTypeFilters);
+            this.resourceTypeFilters = Output.ofNullable(resourceTypeFilters);
             return this;
         }
 
-        public Builder stackIdentifier(@Nullable Input<String> stackIdentifier) {
+        public Builder stackIdentifier(@Nullable Output<String> stackIdentifier) {
             this.stackIdentifier = stackIdentifier;
             return this;
         }
 
         public Builder stackIdentifier(@Nullable String stackIdentifier) {
-            this.stackIdentifier = Input.ofNullable(stackIdentifier);
+            this.stackIdentifier = Output.ofNullable(stackIdentifier);
             return this;
         }
 
-        public Builder tagFilters(@Nullable Input<List<GroupTagFilterArgs>> tagFilters) {
+        public Builder tagFilters(@Nullable Output<List<GroupTagFilterArgs>> tagFilters) {
             this.tagFilters = tagFilters;
             return this;
         }
 
         public Builder tagFilters(@Nullable List<GroupTagFilterArgs> tagFilters) {
-            this.tagFilters = Input.ofNullable(tagFilters);
+            this.tagFilters = Output.ofNullable(tagFilters);
             return this;
         }
         public GroupQueryArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.s3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
      * 
      */
     @InputImport(name="bucketAccountId")
-      private final @Nullable Input<String> bucketAccountId;
+      private final @Nullable Output<String> bucketAccountId;
 
-    public Input<String> getBucketAccountId() {
-        return this.bucketAccountId == null ? Input.empty() : this.bucketAccountId;
+    public Output<String> getBucketAccountId() {
+        return this.bucketAccountId == null ? Output.empty() : this.bucketAccountId;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
      * 
      */
     @InputImport(name="bucketArn", required=true)
-      private final Input<String> bucketArn;
+      private final Output<String> bucketArn;
 
-    public Input<String> getBucketArn() {
+    public Output<String> getBucketArn() {
         return this.bucketArn;
     }
 
@@ -41,10 +41,10 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
      * 
      */
     @InputImport(name="format")
-      private final @Nullable Input<String> format;
+      private final @Nullable Output<String> format;
 
-    public Input<String> getFormat() {
-        return this.format == null ? Input.empty() : this.format;
+    public Output<String> getFormat() {
+        return this.format == null ? Output.empty() : this.format;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
      * 
      */
     @InputImport(name="prefix")
-      private final @Nullable Input<String> prefix;
+      private final @Nullable Output<String> prefix;
 
-    public Input<String> getPrefix() {
-        return this.prefix == null ? Input.empty() : this.prefix;
+    public Output<String> getPrefix() {
+        return this.prefix == null ? Output.empty() : this.prefix;
     }
 
     public AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestinationGetArgs(
-        @Nullable Input<String> bucketAccountId,
-        Input<String> bucketArn,
-        @Nullable Input<String> format,
-        @Nullable Input<String> prefix) {
+        @Nullable Output<String> bucketAccountId,
+        Output<String> bucketArn,
+        @Nullable Output<String> format,
+        @Nullable Output<String> prefix) {
         this.bucketAccountId = bucketAccountId;
         this.bucketArn = Objects.requireNonNull(bucketArn, "expected parameter 'bucketArn' to be non-null");
         this.format = format;
@@ -70,10 +70,10 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
     }
 
     private AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestinationGetArgs() {
-        this.bucketAccountId = Input.empty();
-        this.bucketArn = Input.empty();
-        this.format = Input.empty();
-        this.prefix = Input.empty();
+        this.bucketAccountId = Output.empty();
+        this.bucketArn = Output.empty();
+        this.format = Output.empty();
+        this.prefix = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bucketAccountId;
-        private Input<String> bucketArn;
-        private @Nullable Input<String> format;
-        private @Nullable Input<String> prefix;
+        private @Nullable Output<String> bucketAccountId;
+        private Output<String> bucketArn;
+        private @Nullable Output<String> format;
+        private @Nullable Output<String> prefix;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
     	      this.prefix = defaults.prefix;
         }
 
-        public Builder bucketAccountId(@Nullable Input<String> bucketAccountId) {
+        public Builder bucketAccountId(@Nullable Output<String> bucketAccountId) {
             this.bucketAccountId = bucketAccountId;
             return this;
         }
 
         public Builder bucketAccountId(@Nullable String bucketAccountId) {
-            this.bucketAccountId = Input.ofNullable(bucketAccountId);
+            this.bucketAccountId = Output.ofNullable(bucketAccountId);
             return this;
         }
 
-        public Builder bucketArn(Input<String> bucketArn) {
+        public Builder bucketArn(Output<String> bucketArn) {
             this.bucketArn = Objects.requireNonNull(bucketArn);
             return this;
         }
 
         public Builder bucketArn(String bucketArn) {
-            this.bucketArn = Input.of(Objects.requireNonNull(bucketArn));
+            this.bucketArn = Output.of(Objects.requireNonNull(bucketArn));
             return this;
         }
 
-        public Builder format(@Nullable Input<String> format) {
+        public Builder format(@Nullable Output<String> format) {
             this.format = format;
             return this;
         }
 
         public Builder format(@Nullable String format) {
-            this.format = Input.ofNullable(format);
+            this.format = Output.ofNullable(format);
             return this;
         }
 
-        public Builder prefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Input.ofNullable(prefix);
+            this.prefix = Output.ofNullable(prefix);
             return this;
         }
         public AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestinationGetArgs build() {

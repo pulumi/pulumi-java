@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.route53.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class HostedZoneDnsSecState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="hostedZoneId")
-      private final @Nullable Input<String> hostedZoneId;
+      private final @Nullable Output<String> hostedZoneId;
 
-    public Input<String> getHostedZoneId() {
-        return this.hostedZoneId == null ? Input.empty() : this.hostedZoneId;
+    public Output<String> getHostedZoneId() {
+        return this.hostedZoneId == null ? Output.empty() : this.hostedZoneId;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class HostedZoneDnsSecState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="signingStatus")
-      private final @Nullable Input<String> signingStatus;
+      private final @Nullable Output<String> signingStatus;
 
-    public Input<String> getSigningStatus() {
-        return this.signingStatus == null ? Input.empty() : this.signingStatus;
+    public Output<String> getSigningStatus() {
+        return this.signingStatus == null ? Output.empty() : this.signingStatus;
     }
 
     public HostedZoneDnsSecState(
-        @Nullable Input<String> hostedZoneId,
-        @Nullable Input<String> signingStatus) {
+        @Nullable Output<String> hostedZoneId,
+        @Nullable Output<String> signingStatus) {
         this.hostedZoneId = hostedZoneId;
         this.signingStatus = signingStatus;
     }
 
     private HostedZoneDnsSecState() {
-        this.hostedZoneId = Input.empty();
-        this.signingStatus = Input.empty();
+        this.hostedZoneId = Output.empty();
+        this.signingStatus = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class HostedZoneDnsSecState extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> hostedZoneId;
-        private @Nullable Input<String> signingStatus;
+        private @Nullable Output<String> hostedZoneId;
+        private @Nullable Output<String> signingStatus;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class HostedZoneDnsSecState extends io.pulumi.resources.ResourceArg
     	      this.signingStatus = defaults.signingStatus;
         }
 
-        public Builder hostedZoneId(@Nullable Input<String> hostedZoneId) {
+        public Builder hostedZoneId(@Nullable Output<String> hostedZoneId) {
             this.hostedZoneId = hostedZoneId;
             return this;
         }
 
         public Builder hostedZoneId(@Nullable String hostedZoneId) {
-            this.hostedZoneId = Input.ofNullable(hostedZoneId);
+            this.hostedZoneId = Output.ofNullable(hostedZoneId);
             return this;
         }
 
-        public Builder signingStatus(@Nullable Input<String> signingStatus) {
+        public Builder signingStatus(@Nullable Output<String> signingStatus) {
             this.signingStatus = signingStatus;
             return this;
         }
 
         public Builder signingStatus(@Nullable String signingStatus) {
-            this.signingStatus = Input.ofNullable(signingStatus);
+            this.signingStatus = Output.ofNullable(signingStatus);
             return this;
         }
         public HostedZoneDnsSecState build() {

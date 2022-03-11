@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.route53;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class QueryLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudwatchLogGroupArn", required=true)
-      private final Input<String> cloudwatchLogGroupArn;
+      private final Output<String> cloudwatchLogGroupArn;
 
-    public Input<String> getCloudwatchLogGroupArn() {
+    public Output<String> getCloudwatchLogGroupArn() {
         return this.cloudwatchLogGroupArn;
     }
 
@@ -29,22 +29,22 @@ public final class QueryLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zoneId", required=true)
-      private final Input<String> zoneId;
+      private final Output<String> zoneId;
 
-    public Input<String> getZoneId() {
+    public Output<String> getZoneId() {
         return this.zoneId;
     }
 
     public QueryLogArgs(
-        Input<String> cloudwatchLogGroupArn,
-        Input<String> zoneId) {
+        Output<String> cloudwatchLogGroupArn,
+        Output<String> zoneId) {
         this.cloudwatchLogGroupArn = Objects.requireNonNull(cloudwatchLogGroupArn, "expected parameter 'cloudwatchLogGroupArn' to be non-null");
         this.zoneId = Objects.requireNonNull(zoneId, "expected parameter 'zoneId' to be non-null");
     }
 
     private QueryLogArgs() {
-        this.cloudwatchLogGroupArn = Input.empty();
-        this.zoneId = Input.empty();
+        this.cloudwatchLogGroupArn = Output.empty();
+        this.zoneId = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class QueryLogArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> cloudwatchLogGroupArn;
-        private Input<String> zoneId;
+        private Output<String> cloudwatchLogGroupArn;
+        private Output<String> zoneId;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class QueryLogArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zoneId = defaults.zoneId;
         }
 
-        public Builder cloudwatchLogGroupArn(Input<String> cloudwatchLogGroupArn) {
+        public Builder cloudwatchLogGroupArn(Output<String> cloudwatchLogGroupArn) {
             this.cloudwatchLogGroupArn = Objects.requireNonNull(cloudwatchLogGroupArn);
             return this;
         }
 
         public Builder cloudwatchLogGroupArn(String cloudwatchLogGroupArn) {
-            this.cloudwatchLogGroupArn = Input.of(Objects.requireNonNull(cloudwatchLogGroupArn));
+            this.cloudwatchLogGroupArn = Output.of(Objects.requireNonNull(cloudwatchLogGroupArn));
             return this;
         }
 
-        public Builder zoneId(Input<String> zoneId) {
+        public Builder zoneId(Output<String> zoneId) {
             this.zoneId = Objects.requireNonNull(zoneId);
             return this;
         }
 
         public Builder zoneId(String zoneId) {
-            this.zoneId = Input.of(Objects.requireNonNull(zoneId));
+            this.zoneId = Output.of(Objects.requireNonNull(zoneId));
             return this;
         }
         public QueryLogArgs build() {

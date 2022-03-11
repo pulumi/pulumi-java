@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.kinesis.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class FirehoseDeliveryStreamServerSideEncryptionGetArgs extends io.
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class FirehoseDeliveryStreamServerSideEncryptionGetArgs extends io.
      * 
      */
     @InputImport(name="keyArn")
-      private final @Nullable Input<String> keyArn;
+      private final @Nullable Output<String> keyArn;
 
-    public Input<String> getKeyArn() {
-        return this.keyArn == null ? Input.empty() : this.keyArn;
+    public Output<String> getKeyArn() {
+        return this.keyArn == null ? Output.empty() : this.keyArn;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class FirehoseDeliveryStreamServerSideEncryptionGetArgs extends io.
      * 
      */
     @InputImport(name="keyType")
-      private final @Nullable Input<String> keyType;
+      private final @Nullable Output<String> keyType;
 
-    public Input<String> getKeyType() {
-        return this.keyType == null ? Input.empty() : this.keyType;
+    public Output<String> getKeyType() {
+        return this.keyType == null ? Output.empty() : this.keyType;
     }
 
     public FirehoseDeliveryStreamServerSideEncryptionGetArgs(
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<String> keyArn,
-        @Nullable Input<String> keyType) {
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<String> keyArn,
+        @Nullable Output<String> keyType) {
         this.enabled = enabled;
         this.keyArn = keyArn;
         this.keyType = keyType;
     }
 
     private FirehoseDeliveryStreamServerSideEncryptionGetArgs() {
-        this.enabled = Input.empty();
-        this.keyArn = Input.empty();
-        this.keyType = Input.empty();
+        this.enabled = Output.empty();
+        this.keyArn = Output.empty();
+        this.keyType = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class FirehoseDeliveryStreamServerSideEncryptionGetArgs extends io.
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<String> keyArn;
-        private @Nullable Input<String> keyType;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<String> keyArn;
+        private @Nullable Output<String> keyType;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class FirehoseDeliveryStreamServerSideEncryptionGetArgs extends io.
     	      this.keyType = defaults.keyType;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder keyArn(@Nullable Input<String> keyArn) {
+        public Builder keyArn(@Nullable Output<String> keyArn) {
             this.keyArn = keyArn;
             return this;
         }
 
         public Builder keyArn(@Nullable String keyArn) {
-            this.keyArn = Input.ofNullable(keyArn);
+            this.keyArn = Output.ofNullable(keyArn);
             return this;
         }
 
-        public Builder keyType(@Nullable Input<String> keyType) {
+        public Builder keyType(@Nullable Output<String> keyType) {
             this.keyType = keyType;
             return this;
         }
 
         public Builder keyType(@Nullable String keyType) {
-            this.keyType = Input.ofNullable(keyType);
+            this.keyType = Output.ofNullable(keyType);
             return this;
         }
         public FirehoseDeliveryStreamServerSideEncryptionGetArgs build() {

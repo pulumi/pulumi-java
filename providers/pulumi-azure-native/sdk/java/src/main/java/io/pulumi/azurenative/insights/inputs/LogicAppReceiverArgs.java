@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class LogicAppReceiverArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="callbackUrl", required=true)
-      private final Input<String> callbackUrl;
+      private final Output<String> callbackUrl;
 
-    public Input<String> getCallbackUrl() {
+    public Output<String> getCallbackUrl() {
         return this.callbackUrl;
     }
 
@@ -35,9 +35,9 @@ public final class LogicAppReceiverArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -46,9 +46,9 @@ public final class LogicAppReceiverArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceId", required=true)
-      private final Input<String> resourceId;
+      private final Output<String> resourceId;
 
-    public Input<String> getResourceId() {
+    public Output<String> getResourceId() {
         return this.resourceId;
     }
 
@@ -57,28 +57,28 @@ public final class LogicAppReceiverArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="useCommonAlertSchema")
-      private final @Nullable Input<Boolean> useCommonAlertSchema;
+      private final @Nullable Output<Boolean> useCommonAlertSchema;
 
-    public Input<Boolean> getUseCommonAlertSchema() {
-        return this.useCommonAlertSchema == null ? Input.empty() : this.useCommonAlertSchema;
+    public Output<Boolean> getUseCommonAlertSchema() {
+        return this.useCommonAlertSchema == null ? Output.empty() : this.useCommonAlertSchema;
     }
 
     public LogicAppReceiverArgs(
-        Input<String> callbackUrl,
-        Input<String> name,
-        Input<String> resourceId,
-        @Nullable Input<Boolean> useCommonAlertSchema) {
+        Output<String> callbackUrl,
+        Output<String> name,
+        Output<String> resourceId,
+        @Nullable Output<Boolean> useCommonAlertSchema) {
         this.callbackUrl = Objects.requireNonNull(callbackUrl, "expected parameter 'callbackUrl' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
-        this.useCommonAlertSchema = useCommonAlertSchema == null ? Input.ofNullable(false) : useCommonAlertSchema;
+        this.useCommonAlertSchema = useCommonAlertSchema == null ? Output.ofNullable(false) : useCommonAlertSchema;
     }
 
     private LogicAppReceiverArgs() {
-        this.callbackUrl = Input.empty();
-        this.name = Input.empty();
-        this.resourceId = Input.empty();
-        this.useCommonAlertSchema = Input.empty();
+        this.callbackUrl = Output.empty();
+        this.name = Output.empty();
+        this.resourceId = Output.empty();
+        this.useCommonAlertSchema = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class LogicAppReceiverArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> callbackUrl;
-        private Input<String> name;
-        private Input<String> resourceId;
-        private @Nullable Input<Boolean> useCommonAlertSchema;
+        private Output<String> callbackUrl;
+        private Output<String> name;
+        private Output<String> resourceId;
+        private @Nullable Output<Boolean> useCommonAlertSchema;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class LogicAppReceiverArgs extends io.pulumi.resources.ResourceArgs
     	      this.useCommonAlertSchema = defaults.useCommonAlertSchema;
         }
 
-        public Builder callbackUrl(Input<String> callbackUrl) {
+        public Builder callbackUrl(Output<String> callbackUrl) {
             this.callbackUrl = Objects.requireNonNull(callbackUrl);
             return this;
         }
 
         public Builder callbackUrl(String callbackUrl) {
-            this.callbackUrl = Input.of(Objects.requireNonNull(callbackUrl));
+            this.callbackUrl = Output.of(Objects.requireNonNull(callbackUrl));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder resourceId(Input<String> resourceId) {
+        public Builder resourceId(Output<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
         public Builder resourceId(String resourceId) {
-            this.resourceId = Input.of(Objects.requireNonNull(resourceId));
+            this.resourceId = Output.of(Objects.requireNonNull(resourceId));
             return this;
         }
 
-        public Builder useCommonAlertSchema(@Nullable Input<Boolean> useCommonAlertSchema) {
+        public Builder useCommonAlertSchema(@Nullable Output<Boolean> useCommonAlertSchema) {
             this.useCommonAlertSchema = useCommonAlertSchema;
             return this;
         }
 
         public Builder useCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
-            this.useCommonAlertSchema = Input.ofNullable(useCommonAlertSchema);
+            this.useCommonAlertSchema = Output.ofNullable(useCommonAlertSchema);
             return this;
         }
         public LogicAppReceiverArgs build() {

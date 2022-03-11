@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.msk.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,9 +19,9 @@ public final class ClusterConfigurationInfoArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="arn", required=true)
-      private final Input<String> arn;
+      private final Output<String> arn;
 
-    public Input<String> getArn() {
+    public Output<String> getArn() {
         return this.arn;
     }
 
@@ -30,22 +30,22 @@ public final class ClusterConfigurationInfoArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="revision", required=true)
-      private final Input<Integer> revision;
+      private final Output<Integer> revision;
 
-    public Input<Integer> getRevision() {
+    public Output<Integer> getRevision() {
         return this.revision;
     }
 
     public ClusterConfigurationInfoArgs(
-        Input<String> arn,
-        Input<Integer> revision) {
+        Output<String> arn,
+        Output<Integer> revision) {
         this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
         this.revision = Objects.requireNonNull(revision, "expected parameter 'revision' to be non-null");
     }
 
     private ClusterConfigurationInfoArgs() {
-        this.arn = Input.empty();
-        this.revision = Input.empty();
+        this.arn = Output.empty();
+        this.revision = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ClusterConfigurationInfoArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> arn;
-        private Input<Integer> revision;
+        private Output<String> arn;
+        private Output<Integer> revision;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ClusterConfigurationInfoArgs extends io.pulumi.resources.Reso
     	      this.revision = defaults.revision;
         }
 
-        public Builder arn(Input<String> arn) {
+        public Builder arn(Output<String> arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
         public Builder arn(String arn) {
-            this.arn = Input.of(Objects.requireNonNull(arn));
+            this.arn = Output.of(Objects.requireNonNull(arn));
             return this;
         }
 
-        public Builder revision(Input<Integer> revision) {
+        public Builder revision(Output<Integer> revision) {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }
 
         public Builder revision(Integer revision) {
-            this.revision = Input.of(Objects.requireNonNull(revision));
+            this.revision = Output.of(Objects.requireNonNull(revision));
             return this;
         }
         public ClusterConfigurationInfoArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.nimblestudio;
 
 import io.pulumi.awsnative.nimblestudio.inputs.StreamingImageTagsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class StreamingImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class StreamingImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ec2ImageId", required=true)
-      private final Input<String> ec2ImageId;
+      private final Output<String> ec2ImageId;
 
-    public Input<String> getEc2ImageId() {
+    public Output<String> getEc2ImageId() {
         return this.ec2ImageId;
     }
 
@@ -42,10 +42,10 @@ public final class StreamingImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -53,25 +53,25 @@ public final class StreamingImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="studioId", required=true)
-      private final Input<String> studioId;
+      private final Output<String> studioId;
 
-    public Input<String> getStudioId() {
+    public Output<String> getStudioId() {
         return this.studioId;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<StreamingImageTagsArgs> tags;
+      private final @Nullable Output<StreamingImageTagsArgs> tags;
 
-    public Input<StreamingImageTagsArgs> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<StreamingImageTagsArgs> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public StreamingImageArgs(
-        @Nullable Input<String> description,
-        Input<String> ec2ImageId,
-        @Nullable Input<String> name,
-        Input<String> studioId,
-        @Nullable Input<StreamingImageTagsArgs> tags) {
+        @Nullable Output<String> description,
+        Output<String> ec2ImageId,
+        @Nullable Output<String> name,
+        Output<String> studioId,
+        @Nullable Output<StreamingImageTagsArgs> tags) {
         this.description = description;
         this.ec2ImageId = Objects.requireNonNull(ec2ImageId, "expected parameter 'ec2ImageId' to be non-null");
         this.name = name;
@@ -80,11 +80,11 @@ public final class StreamingImageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StreamingImageArgs() {
-        this.description = Input.empty();
-        this.ec2ImageId = Input.empty();
-        this.name = Input.empty();
-        this.studioId = Input.empty();
-        this.tags = Input.empty();
+        this.description = Output.empty();
+        this.ec2ImageId = Output.empty();
+        this.name = Output.empty();
+        this.studioId = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -96,11 +96,11 @@ public final class StreamingImageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> ec2ImageId;
-        private @Nullable Input<String> name;
-        private Input<String> studioId;
-        private @Nullable Input<StreamingImageTagsArgs> tags;
+        private @Nullable Output<String> description;
+        private Output<String> ec2ImageId;
+        private @Nullable Output<String> name;
+        private Output<String> studioId;
+        private @Nullable Output<StreamingImageTagsArgs> tags;
 
         public Builder() {
     	      // Empty
@@ -115,53 +115,53 @@ public final class StreamingImageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder ec2ImageId(Input<String> ec2ImageId) {
+        public Builder ec2ImageId(Output<String> ec2ImageId) {
             this.ec2ImageId = Objects.requireNonNull(ec2ImageId);
             return this;
         }
 
         public Builder ec2ImageId(String ec2ImageId) {
-            this.ec2ImageId = Input.of(Objects.requireNonNull(ec2ImageId));
+            this.ec2ImageId = Output.of(Objects.requireNonNull(ec2ImageId));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder studioId(Input<String> studioId) {
+        public Builder studioId(Output<String> studioId) {
             this.studioId = Objects.requireNonNull(studioId);
             return this;
         }
 
         public Builder studioId(String studioId) {
-            this.studioId = Input.of(Objects.requireNonNull(studioId));
+            this.studioId = Output.of(Objects.requireNonNull(studioId));
             return this;
         }
 
-        public Builder tags(@Nullable Input<StreamingImageTagsArgs> tags) {
+        public Builder tags(@Nullable Output<StreamingImageTagsArgs> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable StreamingImageTagsArgs tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public StreamingImageArgs build() {

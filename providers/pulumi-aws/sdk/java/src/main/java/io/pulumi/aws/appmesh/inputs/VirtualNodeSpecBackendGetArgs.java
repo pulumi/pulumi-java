@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendVirtualServiceGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class VirtualNodeSpecBackendGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="virtualService", required=true)
-      private final Input<VirtualNodeSpecBackendVirtualServiceGetArgs> virtualService;
+      private final Output<VirtualNodeSpecBackendVirtualServiceGetArgs> virtualService;
 
-    public Input<VirtualNodeSpecBackendVirtualServiceGetArgs> getVirtualService() {
+    public Output<VirtualNodeSpecBackendVirtualServiceGetArgs> getVirtualService() {
         return this.virtualService;
     }
 
-    public VirtualNodeSpecBackendGetArgs(Input<VirtualNodeSpecBackendVirtualServiceGetArgs> virtualService) {
+    public VirtualNodeSpecBackendGetArgs(Output<VirtualNodeSpecBackendVirtualServiceGetArgs> virtualService) {
         this.virtualService = Objects.requireNonNull(virtualService, "expected parameter 'virtualService' to be non-null");
     }
 
     private VirtualNodeSpecBackendGetArgs() {
-        this.virtualService = Input.empty();
+        this.virtualService = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class VirtualNodeSpecBackendGetArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<VirtualNodeSpecBackendVirtualServiceGetArgs> virtualService;
+        private Output<VirtualNodeSpecBackendVirtualServiceGetArgs> virtualService;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class VirtualNodeSpecBackendGetArgs extends io.pulumi.resources.Res
     	      this.virtualService = defaults.virtualService;
         }
 
-        public Builder virtualService(Input<VirtualNodeSpecBackendVirtualServiceGetArgs> virtualService) {
+        public Builder virtualService(Output<VirtualNodeSpecBackendVirtualServiceGetArgs> virtualService) {
             this.virtualService = Objects.requireNonNull(virtualService);
             return this;
         }
 
         public Builder virtualService(VirtualNodeSpecBackendVirtualServiceGetArgs virtualService) {
-            this.virtualService = Input.of(Objects.requireNonNull(virtualService));
+            this.virtualService = Output.of(Objects.requireNonNull(virtualService));
             return this;
         }
         public VirtualNodeSpecBackendGetArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.azurenative.apimanagement.inputs.EmailTemplateParametersContractPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="body")
-      private final @Nullable Input<String> body;
+      private final @Nullable Output<String> body;
 
-    public Input<String> getBody() {
-        return this.body == null ? Input.empty() : this.body;
+    public Output<String> getBody() {
+        return this.body == null ? Output.empty() : this.body;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<List<EmailTemplateParametersContractPropertiesArgs>> parameters;
+      private final @Nullable Output<List<EmailTemplateParametersContractPropertiesArgs>> parameters;
 
-    public Input<List<EmailTemplateParametersContractPropertiesArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<List<EmailTemplateParametersContractPropertiesArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -54,9 +54,9 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -65,9 +65,9 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-      private final Input<String> serviceName;
+      private final Output<String> serviceName;
 
-    public Input<String> getServiceName() {
+    public Output<String> getServiceName() {
         return this.serviceName;
     }
 
@@ -76,10 +76,10 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subject")
-      private final @Nullable Input<String> subject;
+      private final @Nullable Output<String> subject;
 
-    public Input<String> getSubject() {
-        return this.subject == null ? Input.empty() : this.subject;
+    public Output<String> getSubject() {
+        return this.subject == null ? Output.empty() : this.subject;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="templateName")
-      private final @Nullable Input<String> templateName;
+      private final @Nullable Output<String> templateName;
 
-    public Input<String> getTemplateName() {
-        return this.templateName == null ? Input.empty() : this.templateName;
+    public Output<String> getTemplateName() {
+        return this.templateName == null ? Output.empty() : this.templateName;
     }
 
     /**
@@ -98,21 +98,21 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="title")
-      private final @Nullable Input<String> title;
+      private final @Nullable Output<String> title;
 
-    public Input<String> getTitle() {
-        return this.title == null ? Input.empty() : this.title;
+    public Output<String> getTitle() {
+        return this.title == null ? Output.empty() : this.title;
     }
 
     public EmailTemplateArgs(
-        @Nullable Input<String> body,
-        @Nullable Input<String> description,
-        @Nullable Input<List<EmailTemplateParametersContractPropertiesArgs>> parameters,
-        Input<String> resourceGroupName,
-        Input<String> serviceName,
-        @Nullable Input<String> subject,
-        @Nullable Input<String> templateName,
-        @Nullable Input<String> title) {
+        @Nullable Output<String> body,
+        @Nullable Output<String> description,
+        @Nullable Output<List<EmailTemplateParametersContractPropertiesArgs>> parameters,
+        Output<String> resourceGroupName,
+        Output<String> serviceName,
+        @Nullable Output<String> subject,
+        @Nullable Output<String> templateName,
+        @Nullable Output<String> title) {
         this.body = body;
         this.description = description;
         this.parameters = parameters;
@@ -124,14 +124,14 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EmailTemplateArgs() {
-        this.body = Input.empty();
-        this.description = Input.empty();
-        this.parameters = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serviceName = Input.empty();
-        this.subject = Input.empty();
-        this.templateName = Input.empty();
-        this.title = Input.empty();
+        this.body = Output.empty();
+        this.description = Output.empty();
+        this.parameters = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serviceName = Output.empty();
+        this.subject = Output.empty();
+        this.templateName = Output.empty();
+        this.title = Output.empty();
     }
 
     public static Builder builder() {
@@ -143,14 +143,14 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> body;
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<EmailTemplateParametersContractPropertiesArgs>> parameters;
-        private Input<String> resourceGroupName;
-        private Input<String> serviceName;
-        private @Nullable Input<String> subject;
-        private @Nullable Input<String> templateName;
-        private @Nullable Input<String> title;
+        private @Nullable Output<String> body;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<EmailTemplateParametersContractPropertiesArgs>> parameters;
+        private Output<String> resourceGroupName;
+        private Output<String> serviceName;
+        private @Nullable Output<String> subject;
+        private @Nullable Output<String> templateName;
+        private @Nullable Output<String> title;
 
         public Builder() {
     	      // Empty
@@ -168,83 +168,83 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.title = defaults.title;
         }
 
-        public Builder body(@Nullable Input<String> body) {
+        public Builder body(@Nullable Output<String> body) {
             this.body = body;
             return this;
         }
 
         public Builder body(@Nullable String body) {
-            this.body = Input.ofNullable(body);
+            this.body = Output.ofNullable(body);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<List<EmailTemplateParametersContractPropertiesArgs>> parameters) {
+        public Builder parameters(@Nullable Output<List<EmailTemplateParametersContractPropertiesArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable List<EmailTemplateParametersContractPropertiesArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serviceName(Input<String> serviceName) {
+        public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Input.of(Objects.requireNonNull(serviceName));
+            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder subject(@Nullable Input<String> subject) {
+        public Builder subject(@Nullable Output<String> subject) {
             this.subject = subject;
             return this;
         }
 
         public Builder subject(@Nullable String subject) {
-            this.subject = Input.ofNullable(subject);
+            this.subject = Output.ofNullable(subject);
             return this;
         }
 
-        public Builder templateName(@Nullable Input<String> templateName) {
+        public Builder templateName(@Nullable Output<String> templateName) {
             this.templateName = templateName;
             return this;
         }
 
         public Builder templateName(@Nullable String templateName) {
-            this.templateName = Input.ofNullable(templateName);
+            this.templateName = Output.ofNullable(templateName);
             return this;
         }
 
-        public Builder title(@Nullable Input<String> title) {
+        public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
 
         public Builder title(@Nullable String title) {
-            this.title = Input.ofNullable(title);
+            this.title = Output.ofNullable(title);
             return this;
         }
         public EmailTemplateArgs build() {

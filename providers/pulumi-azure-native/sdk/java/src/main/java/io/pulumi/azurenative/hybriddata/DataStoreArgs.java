@@ -5,7 +5,7 @@ package io.pulumi.azurenative.hybriddata;
 
 import io.pulumi.azurenative.hybriddata.enums.State;
 import io.pulumi.azurenative.hybriddata.inputs.CustomerSecretArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customerSecrets")
-      private final @Nullable Input<List<CustomerSecretArgs>> customerSecrets;
+      private final @Nullable Output<List<CustomerSecretArgs>> customerSecrets;
 
-    public Input<List<CustomerSecretArgs>> getCustomerSecrets() {
-        return this.customerSecrets == null ? Input.empty() : this.customerSecrets;
+    public Output<List<CustomerSecretArgs>> getCustomerSecrets() {
+        return this.customerSecrets == null ? Output.empty() : this.customerSecrets;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataManagerName", required=true)
-      private final Input<String> dataManagerName;
+      private final Output<String> dataManagerName;
 
-    public Input<String> getDataManagerName() {
+    public Output<String> getDataManagerName() {
         return this.dataManagerName;
     }
 
@@ -45,10 +45,10 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataStoreName")
-      private final @Nullable Input<String> dataStoreName;
+      private final @Nullable Output<String> dataStoreName;
 
-    public Input<String> getDataStoreName() {
-        return this.dataStoreName == null ? Input.empty() : this.dataStoreName;
+    public Output<String> getDataStoreName() {
+        return this.dataStoreName == null ? Output.empty() : this.dataStoreName;
     }
 
     /**
@@ -56,9 +56,9 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataStoreTypeId", required=true)
-      private final Input<String> dataStoreTypeId;
+      private final Output<String> dataStoreTypeId;
 
-    public Input<String> getDataStoreTypeId() {
+    public Output<String> getDataStoreTypeId() {
         return this.dataStoreTypeId;
     }
 
@@ -67,10 +67,10 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extendedProperties")
-      private final @Nullable Input<Object> extendedProperties;
+      private final @Nullable Output<Object> extendedProperties;
 
-    public Input<Object> getExtendedProperties() {
-        return this.extendedProperties == null ? Input.empty() : this.extendedProperties;
+    public Output<Object> getExtendedProperties() {
+        return this.extendedProperties == null ? Output.empty() : this.extendedProperties;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repositoryId")
-      private final @Nullable Input<String> repositoryId;
+      private final @Nullable Output<String> repositoryId;
 
-    public Input<String> getRepositoryId() {
-        return this.repositoryId == null ? Input.empty() : this.repositoryId;
+    public Output<String> getRepositoryId() {
+        return this.repositoryId == null ? Output.empty() : this.repositoryId;
     }
 
     /**
@@ -89,9 +89,9 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -100,21 +100,21 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state", required=true)
-      private final Input<State> state;
+      private final Output<State> state;
 
-    public Input<State> getState() {
+    public Output<State> getState() {
         return this.state;
     }
 
     public DataStoreArgs(
-        @Nullable Input<List<CustomerSecretArgs>> customerSecrets,
-        Input<String> dataManagerName,
-        @Nullable Input<String> dataStoreName,
-        Input<String> dataStoreTypeId,
-        @Nullable Input<Object> extendedProperties,
-        @Nullable Input<String> repositoryId,
-        Input<String> resourceGroupName,
-        Input<State> state) {
+        @Nullable Output<List<CustomerSecretArgs>> customerSecrets,
+        Output<String> dataManagerName,
+        @Nullable Output<String> dataStoreName,
+        Output<String> dataStoreTypeId,
+        @Nullable Output<Object> extendedProperties,
+        @Nullable Output<String> repositoryId,
+        Output<String> resourceGroupName,
+        Output<State> state) {
         this.customerSecrets = customerSecrets;
         this.dataManagerName = Objects.requireNonNull(dataManagerName, "expected parameter 'dataManagerName' to be non-null");
         this.dataStoreName = dataStoreName;
@@ -126,14 +126,14 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DataStoreArgs() {
-        this.customerSecrets = Input.empty();
-        this.dataManagerName = Input.empty();
-        this.dataStoreName = Input.empty();
-        this.dataStoreTypeId = Input.empty();
-        this.extendedProperties = Input.empty();
-        this.repositoryId = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.state = Input.empty();
+        this.customerSecrets = Output.empty();
+        this.dataManagerName = Output.empty();
+        this.dataStoreName = Output.empty();
+        this.dataStoreTypeId = Output.empty();
+        this.extendedProperties = Output.empty();
+        this.repositoryId = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.state = Output.empty();
     }
 
     public static Builder builder() {
@@ -145,14 +145,14 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<CustomerSecretArgs>> customerSecrets;
-        private Input<String> dataManagerName;
-        private @Nullable Input<String> dataStoreName;
-        private Input<String> dataStoreTypeId;
-        private @Nullable Input<Object> extendedProperties;
-        private @Nullable Input<String> repositoryId;
-        private Input<String> resourceGroupName;
-        private Input<State> state;
+        private @Nullable Output<List<CustomerSecretArgs>> customerSecrets;
+        private Output<String> dataManagerName;
+        private @Nullable Output<String> dataStoreName;
+        private Output<String> dataStoreTypeId;
+        private @Nullable Output<Object> extendedProperties;
+        private @Nullable Output<String> repositoryId;
+        private Output<String> resourceGroupName;
+        private Output<State> state;
 
         public Builder() {
     	      // Empty
@@ -170,83 +170,83 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
     	      this.state = defaults.state;
         }
 
-        public Builder customerSecrets(@Nullable Input<List<CustomerSecretArgs>> customerSecrets) {
+        public Builder customerSecrets(@Nullable Output<List<CustomerSecretArgs>> customerSecrets) {
             this.customerSecrets = customerSecrets;
             return this;
         }
 
         public Builder customerSecrets(@Nullable List<CustomerSecretArgs> customerSecrets) {
-            this.customerSecrets = Input.ofNullable(customerSecrets);
+            this.customerSecrets = Output.ofNullable(customerSecrets);
             return this;
         }
 
-        public Builder dataManagerName(Input<String> dataManagerName) {
+        public Builder dataManagerName(Output<String> dataManagerName) {
             this.dataManagerName = Objects.requireNonNull(dataManagerName);
             return this;
         }
 
         public Builder dataManagerName(String dataManagerName) {
-            this.dataManagerName = Input.of(Objects.requireNonNull(dataManagerName));
+            this.dataManagerName = Output.of(Objects.requireNonNull(dataManagerName));
             return this;
         }
 
-        public Builder dataStoreName(@Nullable Input<String> dataStoreName) {
+        public Builder dataStoreName(@Nullable Output<String> dataStoreName) {
             this.dataStoreName = dataStoreName;
             return this;
         }
 
         public Builder dataStoreName(@Nullable String dataStoreName) {
-            this.dataStoreName = Input.ofNullable(dataStoreName);
+            this.dataStoreName = Output.ofNullable(dataStoreName);
             return this;
         }
 
-        public Builder dataStoreTypeId(Input<String> dataStoreTypeId) {
+        public Builder dataStoreTypeId(Output<String> dataStoreTypeId) {
             this.dataStoreTypeId = Objects.requireNonNull(dataStoreTypeId);
             return this;
         }
 
         public Builder dataStoreTypeId(String dataStoreTypeId) {
-            this.dataStoreTypeId = Input.of(Objects.requireNonNull(dataStoreTypeId));
+            this.dataStoreTypeId = Output.of(Objects.requireNonNull(dataStoreTypeId));
             return this;
         }
 
-        public Builder extendedProperties(@Nullable Input<Object> extendedProperties) {
+        public Builder extendedProperties(@Nullable Output<Object> extendedProperties) {
             this.extendedProperties = extendedProperties;
             return this;
         }
 
         public Builder extendedProperties(@Nullable Object extendedProperties) {
-            this.extendedProperties = Input.ofNullable(extendedProperties);
+            this.extendedProperties = Output.ofNullable(extendedProperties);
             return this;
         }
 
-        public Builder repositoryId(@Nullable Input<String> repositoryId) {
+        public Builder repositoryId(@Nullable Output<String> repositoryId) {
             this.repositoryId = repositoryId;
             return this;
         }
 
         public Builder repositoryId(@Nullable String repositoryId) {
-            this.repositoryId = Input.ofNullable(repositoryId);
+            this.repositoryId = Output.ofNullable(repositoryId);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder state(Input<State> state) {
+        public Builder state(Output<State> state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
         public Builder state(State state) {
-            this.state = Input.of(Objects.requireNonNull(state));
+            this.state = Output.of(Objects.requireNonNull(state));
             return this;
         }
         public DataStoreArgs build() {

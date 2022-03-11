@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3outposts;
 
 import io.pulumi.awsnative.s3outposts.enums.EndpointAccessType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessType")
-      private final @Nullable Input<EndpointAccessType> accessType;
+      private final @Nullable Output<EndpointAccessType> accessType;
 
-    public Input<EndpointAccessType> getAccessType() {
-        return this.accessType == null ? Input.empty() : this.accessType;
+    public Output<EndpointAccessType> getAccessType() {
+        return this.accessType == null ? Output.empty() : this.accessType;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customerOwnedIpv4Pool")
-      private final @Nullable Input<String> customerOwnedIpv4Pool;
+      private final @Nullable Output<String> customerOwnedIpv4Pool;
 
-    public Input<String> getCustomerOwnedIpv4Pool() {
-        return this.customerOwnedIpv4Pool == null ? Input.empty() : this.customerOwnedIpv4Pool;
+    public Output<String> getCustomerOwnedIpv4Pool() {
+        return this.customerOwnedIpv4Pool == null ? Output.empty() : this.customerOwnedIpv4Pool;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outpostId", required=true)
-      private final Input<String> outpostId;
+      private final Output<String> outpostId;
 
-    public Input<String> getOutpostId() {
+    public Output<String> getOutpostId() {
         return this.outpostId;
     }
 
@@ -53,9 +53,9 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityGroupId", required=true)
-      private final Input<String> securityGroupId;
+      private final Output<String> securityGroupId;
 
-    public Input<String> getSecurityGroupId() {
+    public Output<String> getSecurityGroupId() {
         return this.securityGroupId;
     }
 
@@ -64,18 +64,18 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetId", required=true)
-      private final Input<String> subnetId;
+      private final Output<String> subnetId;
 
-    public Input<String> getSubnetId() {
+    public Output<String> getSubnetId() {
         return this.subnetId;
     }
 
     public EndpointArgs(
-        @Nullable Input<EndpointAccessType> accessType,
-        @Nullable Input<String> customerOwnedIpv4Pool,
-        Input<String> outpostId,
-        Input<String> securityGroupId,
-        Input<String> subnetId) {
+        @Nullable Output<EndpointAccessType> accessType,
+        @Nullable Output<String> customerOwnedIpv4Pool,
+        Output<String> outpostId,
+        Output<String> securityGroupId,
+        Output<String> subnetId) {
         this.accessType = accessType;
         this.customerOwnedIpv4Pool = customerOwnedIpv4Pool;
         this.outpostId = Objects.requireNonNull(outpostId, "expected parameter 'outpostId' to be non-null");
@@ -84,11 +84,11 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EndpointArgs() {
-        this.accessType = Input.empty();
-        this.customerOwnedIpv4Pool = Input.empty();
-        this.outpostId = Input.empty();
-        this.securityGroupId = Input.empty();
-        this.subnetId = Input.empty();
+        this.accessType = Output.empty();
+        this.customerOwnedIpv4Pool = Output.empty();
+        this.outpostId = Output.empty();
+        this.securityGroupId = Output.empty();
+        this.subnetId = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<EndpointAccessType> accessType;
-        private @Nullable Input<String> customerOwnedIpv4Pool;
-        private Input<String> outpostId;
-        private Input<String> securityGroupId;
-        private Input<String> subnetId;
+        private @Nullable Output<EndpointAccessType> accessType;
+        private @Nullable Output<String> customerOwnedIpv4Pool;
+        private Output<String> outpostId;
+        private Output<String> securityGroupId;
+        private Output<String> subnetId;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder accessType(@Nullable Input<EndpointAccessType> accessType) {
+        public Builder accessType(@Nullable Output<EndpointAccessType> accessType) {
             this.accessType = accessType;
             return this;
         }
 
         public Builder accessType(@Nullable EndpointAccessType accessType) {
-            this.accessType = Input.ofNullable(accessType);
+            this.accessType = Output.ofNullable(accessType);
             return this;
         }
 
-        public Builder customerOwnedIpv4Pool(@Nullable Input<String> customerOwnedIpv4Pool) {
+        public Builder customerOwnedIpv4Pool(@Nullable Output<String> customerOwnedIpv4Pool) {
             this.customerOwnedIpv4Pool = customerOwnedIpv4Pool;
             return this;
         }
 
         public Builder customerOwnedIpv4Pool(@Nullable String customerOwnedIpv4Pool) {
-            this.customerOwnedIpv4Pool = Input.ofNullable(customerOwnedIpv4Pool);
+            this.customerOwnedIpv4Pool = Output.ofNullable(customerOwnedIpv4Pool);
             return this;
         }
 
-        public Builder outpostId(Input<String> outpostId) {
+        public Builder outpostId(Output<String> outpostId) {
             this.outpostId = Objects.requireNonNull(outpostId);
             return this;
         }
 
         public Builder outpostId(String outpostId) {
-            this.outpostId = Input.of(Objects.requireNonNull(outpostId));
+            this.outpostId = Output.of(Objects.requireNonNull(outpostId));
             return this;
         }
 
-        public Builder securityGroupId(Input<String> securityGroupId) {
+        public Builder securityGroupId(Output<String> securityGroupId) {
             this.securityGroupId = Objects.requireNonNull(securityGroupId);
             return this;
         }
 
         public Builder securityGroupId(String securityGroupId) {
-            this.securityGroupId = Input.of(Objects.requireNonNull(securityGroupId));
+            this.securityGroupId = Output.of(Objects.requireNonNull(securityGroupId));
             return this;
         }
 
-        public Builder subnetId(Input<String> subnetId) {
+        public Builder subnetId(Output<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
 
         public Builder subnetId(String subnetId) {
-            this.subnetId = Input.of(Objects.requireNonNull(subnetId));
+            this.subnetId = Output.of(Objects.requireNonNull(subnetId));
             return this;
         }
         public EndpointArgs build() {

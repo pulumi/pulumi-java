@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.pinpoint.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class ApnsSandboxChannelState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="applicationId")
-      private final @Nullable Input<String> applicationId;
+      private final @Nullable Output<String> applicationId;
 
-    public Input<String> getApplicationId() {
-        return this.applicationId == null ? Input.empty() : this.applicationId;
+    public Output<String> getApplicationId() {
+        return this.applicationId == null ? Output.empty() : this.applicationId;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ApnsSandboxChannelState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="bundleId")
-      private final @Nullable Input<String> bundleId;
+      private final @Nullable Output<String> bundleId;
 
-    public Input<String> getBundleId() {
-        return this.bundleId == null ? Input.empty() : this.bundleId;
+    public Output<String> getBundleId() {
+        return this.bundleId == null ? Output.empty() : this.bundleId;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ApnsSandboxChannelState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="certificate")
-      private final @Nullable Input<String> certificate;
+      private final @Nullable Output<String> certificate;
 
-    public Input<String> getCertificate() {
-        return this.certificate == null ? Input.empty() : this.certificate;
+    public Output<String> getCertificate() {
+        return this.certificate == null ? Output.empty() : this.certificate;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ApnsSandboxChannelState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="defaultAuthenticationMethod")
-      private final @Nullable Input<String> defaultAuthenticationMethod;
+      private final @Nullable Output<String> defaultAuthenticationMethod;
 
-    public Input<String> getDefaultAuthenticationMethod() {
-        return this.defaultAuthenticationMethod == null ? Input.empty() : this.defaultAuthenticationMethod;
+    public Output<String> getDefaultAuthenticationMethod() {
+        return this.defaultAuthenticationMethod == null ? Output.empty() : this.defaultAuthenticationMethod;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ApnsSandboxChannelState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ApnsSandboxChannelState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="privateKey")
-      private final @Nullable Input<String> privateKey;
+      private final @Nullable Output<String> privateKey;
 
-    public Input<String> getPrivateKey() {
-        return this.privateKey == null ? Input.empty() : this.privateKey;
+    public Output<String> getPrivateKey() {
+        return this.privateKey == null ? Output.empty() : this.privateKey;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class ApnsSandboxChannelState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="teamId")
-      private final @Nullable Input<String> teamId;
+      private final @Nullable Output<String> teamId;
 
-    public Input<String> getTeamId() {
-        return this.teamId == null ? Input.empty() : this.teamId;
+    public Output<String> getTeamId() {
+        return this.teamId == null ? Output.empty() : this.teamId;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class ApnsSandboxChannelState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tokenKey")
-      private final @Nullable Input<String> tokenKey;
+      private final @Nullable Output<String> tokenKey;
 
-    public Input<String> getTokenKey() {
-        return this.tokenKey == null ? Input.empty() : this.tokenKey;
+    public Output<String> getTokenKey() {
+        return this.tokenKey == null ? Output.empty() : this.tokenKey;
     }
 
     /**
@@ -111,22 +111,22 @@ public final class ApnsSandboxChannelState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tokenKeyId")
-      private final @Nullable Input<String> tokenKeyId;
+      private final @Nullable Output<String> tokenKeyId;
 
-    public Input<String> getTokenKeyId() {
-        return this.tokenKeyId == null ? Input.empty() : this.tokenKeyId;
+    public Output<String> getTokenKeyId() {
+        return this.tokenKeyId == null ? Output.empty() : this.tokenKeyId;
     }
 
     public ApnsSandboxChannelState(
-        @Nullable Input<String> applicationId,
-        @Nullable Input<String> bundleId,
-        @Nullable Input<String> certificate,
-        @Nullable Input<String> defaultAuthenticationMethod,
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<String> privateKey,
-        @Nullable Input<String> teamId,
-        @Nullable Input<String> tokenKey,
-        @Nullable Input<String> tokenKeyId) {
+        @Nullable Output<String> applicationId,
+        @Nullable Output<String> bundleId,
+        @Nullable Output<String> certificate,
+        @Nullable Output<String> defaultAuthenticationMethod,
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<String> privateKey,
+        @Nullable Output<String> teamId,
+        @Nullable Output<String> tokenKey,
+        @Nullable Output<String> tokenKeyId) {
         this.applicationId = applicationId;
         this.bundleId = bundleId;
         this.certificate = certificate;
@@ -139,15 +139,15 @@ public final class ApnsSandboxChannelState extends io.pulumi.resources.ResourceA
     }
 
     private ApnsSandboxChannelState() {
-        this.applicationId = Input.empty();
-        this.bundleId = Input.empty();
-        this.certificate = Input.empty();
-        this.defaultAuthenticationMethod = Input.empty();
-        this.enabled = Input.empty();
-        this.privateKey = Input.empty();
-        this.teamId = Input.empty();
-        this.tokenKey = Input.empty();
-        this.tokenKeyId = Input.empty();
+        this.applicationId = Output.empty();
+        this.bundleId = Output.empty();
+        this.certificate = Output.empty();
+        this.defaultAuthenticationMethod = Output.empty();
+        this.enabled = Output.empty();
+        this.privateKey = Output.empty();
+        this.teamId = Output.empty();
+        this.tokenKey = Output.empty();
+        this.tokenKeyId = Output.empty();
     }
 
     public static Builder builder() {
@@ -159,15 +159,15 @@ public final class ApnsSandboxChannelState extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> applicationId;
-        private @Nullable Input<String> bundleId;
-        private @Nullable Input<String> certificate;
-        private @Nullable Input<String> defaultAuthenticationMethod;
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<String> privateKey;
-        private @Nullable Input<String> teamId;
-        private @Nullable Input<String> tokenKey;
-        private @Nullable Input<String> tokenKeyId;
+        private @Nullable Output<String> applicationId;
+        private @Nullable Output<String> bundleId;
+        private @Nullable Output<String> certificate;
+        private @Nullable Output<String> defaultAuthenticationMethod;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<String> privateKey;
+        private @Nullable Output<String> teamId;
+        private @Nullable Output<String> tokenKey;
+        private @Nullable Output<String> tokenKeyId;
 
         public Builder() {
     	      // Empty
@@ -186,93 +186,93 @@ public final class ApnsSandboxChannelState extends io.pulumi.resources.ResourceA
     	      this.tokenKeyId = defaults.tokenKeyId;
         }
 
-        public Builder applicationId(@Nullable Input<String> applicationId) {
+        public Builder applicationId(@Nullable Output<String> applicationId) {
             this.applicationId = applicationId;
             return this;
         }
 
         public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Input.ofNullable(applicationId);
+            this.applicationId = Output.ofNullable(applicationId);
             return this;
         }
 
-        public Builder bundleId(@Nullable Input<String> bundleId) {
+        public Builder bundleId(@Nullable Output<String> bundleId) {
             this.bundleId = bundleId;
             return this;
         }
 
         public Builder bundleId(@Nullable String bundleId) {
-            this.bundleId = Input.ofNullable(bundleId);
+            this.bundleId = Output.ofNullable(bundleId);
             return this;
         }
 
-        public Builder certificate(@Nullable Input<String> certificate) {
+        public Builder certificate(@Nullable Output<String> certificate) {
             this.certificate = certificate;
             return this;
         }
 
         public Builder certificate(@Nullable String certificate) {
-            this.certificate = Input.ofNullable(certificate);
+            this.certificate = Output.ofNullable(certificate);
             return this;
         }
 
-        public Builder defaultAuthenticationMethod(@Nullable Input<String> defaultAuthenticationMethod) {
+        public Builder defaultAuthenticationMethod(@Nullable Output<String> defaultAuthenticationMethod) {
             this.defaultAuthenticationMethod = defaultAuthenticationMethod;
             return this;
         }
 
         public Builder defaultAuthenticationMethod(@Nullable String defaultAuthenticationMethod) {
-            this.defaultAuthenticationMethod = Input.ofNullable(defaultAuthenticationMethod);
+            this.defaultAuthenticationMethod = Output.ofNullable(defaultAuthenticationMethod);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder privateKey(@Nullable Input<String> privateKey) {
+        public Builder privateKey(@Nullable Output<String> privateKey) {
             this.privateKey = privateKey;
             return this;
         }
 
         public Builder privateKey(@Nullable String privateKey) {
-            this.privateKey = Input.ofNullable(privateKey);
+            this.privateKey = Output.ofNullable(privateKey);
             return this;
         }
 
-        public Builder teamId(@Nullable Input<String> teamId) {
+        public Builder teamId(@Nullable Output<String> teamId) {
             this.teamId = teamId;
             return this;
         }
 
         public Builder teamId(@Nullable String teamId) {
-            this.teamId = Input.ofNullable(teamId);
+            this.teamId = Output.ofNullable(teamId);
             return this;
         }
 
-        public Builder tokenKey(@Nullable Input<String> tokenKey) {
+        public Builder tokenKey(@Nullable Output<String> tokenKey) {
             this.tokenKey = tokenKey;
             return this;
         }
 
         public Builder tokenKey(@Nullable String tokenKey) {
-            this.tokenKey = Input.ofNullable(tokenKey);
+            this.tokenKey = Output.ofNullable(tokenKey);
             return this;
         }
 
-        public Builder tokenKeyId(@Nullable Input<String> tokenKeyId) {
+        public Builder tokenKeyId(@Nullable Output<String> tokenKeyId) {
             this.tokenKeyId = tokenKeyId;
             return this;
         }
 
         public Builder tokenKeyId(@Nullable String tokenKeyId) {
-            this.tokenKeyId = Input.ofNullable(tokenKeyId);
+            this.tokenKeyId = Output.ofNullable(tokenKeyId);
             return this;
         }
         public ApnsSandboxChannelState build() {

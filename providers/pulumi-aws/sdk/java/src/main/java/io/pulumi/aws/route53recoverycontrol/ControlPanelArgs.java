@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.route53recoverycontrol;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class ControlPanelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterArn", required=true)
-      private final Input<String> clusterArn;
+      private final Output<String> clusterArn;
 
-    public Input<String> getClusterArn() {
+    public Output<String> getClusterArn() {
         return this.clusterArn;
     }
 
@@ -30,22 +30,22 @@ public final class ControlPanelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public ControlPanelArgs(
-        Input<String> clusterArn,
-        @Nullable Input<String> name) {
+        Output<String> clusterArn,
+        @Nullable Output<String> name) {
         this.clusterArn = Objects.requireNonNull(clusterArn, "expected parameter 'clusterArn' to be non-null");
         this.name = name;
     }
 
     private ControlPanelArgs() {
-        this.clusterArn = Input.empty();
-        this.name = Input.empty();
+        this.clusterArn = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ControlPanelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> clusterArn;
-        private @Nullable Input<String> name;
+        private Output<String> clusterArn;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ControlPanelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder clusterArn(Input<String> clusterArn) {
+        public Builder clusterArn(Output<String> clusterArn) {
             this.clusterArn = Objects.requireNonNull(clusterArn);
             return this;
         }
 
         public Builder clusterArn(String clusterArn) {
-            this.clusterArn = Input.of(Objects.requireNonNull(clusterArn));
+            this.clusterArn = Output.of(Objects.requireNonNull(clusterArn));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public ControlPanelArgs build() {

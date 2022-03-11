@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobActionSaveFindingsArgs;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class PreventionJobTriggerInspectJobActionArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="saveFindings", required=true)
-      private final Input<PreventionJobTriggerInspectJobActionSaveFindingsArgs> saveFindings;
+      private final Output<PreventionJobTriggerInspectJobActionSaveFindingsArgs> saveFindings;
 
-    public Input<PreventionJobTriggerInspectJobActionSaveFindingsArgs> getSaveFindings() {
+    public Output<PreventionJobTriggerInspectJobActionSaveFindingsArgs> getSaveFindings() {
         return this.saveFindings;
     }
 
-    public PreventionJobTriggerInspectJobActionArgs(Input<PreventionJobTriggerInspectJobActionSaveFindingsArgs> saveFindings) {
+    public PreventionJobTriggerInspectJobActionArgs(Output<PreventionJobTriggerInspectJobActionSaveFindingsArgs> saveFindings) {
         this.saveFindings = Objects.requireNonNull(saveFindings, "expected parameter 'saveFindings' to be non-null");
     }
 
     private PreventionJobTriggerInspectJobActionArgs() {
-        this.saveFindings = Input.empty();
+        this.saveFindings = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class PreventionJobTriggerInspectJobActionArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private Input<PreventionJobTriggerInspectJobActionSaveFindingsArgs> saveFindings;
+        private Output<PreventionJobTriggerInspectJobActionSaveFindingsArgs> saveFindings;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class PreventionJobTriggerInspectJobActionArgs extends io.pulumi.re
     	      this.saveFindings = defaults.saveFindings;
         }
 
-        public Builder saveFindings(Input<PreventionJobTriggerInspectJobActionSaveFindingsArgs> saveFindings) {
+        public Builder saveFindings(Output<PreventionJobTriggerInspectJobActionSaveFindingsArgs> saveFindings) {
             this.saveFindings = Objects.requireNonNull(saveFindings);
             return this;
         }
 
         public Builder saveFindings(PreventionJobTriggerInspectJobActionSaveFindingsArgs saveFindings) {
-            this.saveFindings = Input.of(Objects.requireNonNull(saveFindings));
+            this.saveFindings = Output.of(Objects.requireNonNull(saveFindings));
             return this;
         }
         public PreventionJobTriggerInspectJobActionArgs build() {

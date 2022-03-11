@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.connect.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,29 +18,29 @@ public final class QuickConnectUserQuickConnectConfigArgs extends io.pulumi.reso
     public static final QuickConnectUserQuickConnectConfigArgs Empty = new QuickConnectUserQuickConnectConfigArgs();
 
     @InputImport(name="contactFlowArn", required=true)
-      private final Input<String> contactFlowArn;
+      private final Output<String> contactFlowArn;
 
-    public Input<String> getContactFlowArn() {
+    public Output<String> getContactFlowArn() {
         return this.contactFlowArn;
     }
 
     @InputImport(name="userArn", required=true)
-      private final Input<String> userArn;
+      private final Output<String> userArn;
 
-    public Input<String> getUserArn() {
+    public Output<String> getUserArn() {
         return this.userArn;
     }
 
     public QuickConnectUserQuickConnectConfigArgs(
-        Input<String> contactFlowArn,
-        Input<String> userArn) {
+        Output<String> contactFlowArn,
+        Output<String> userArn) {
         this.contactFlowArn = Objects.requireNonNull(contactFlowArn, "expected parameter 'contactFlowArn' to be non-null");
         this.userArn = Objects.requireNonNull(userArn, "expected parameter 'userArn' to be non-null");
     }
 
     private QuickConnectUserQuickConnectConfigArgs() {
-        this.contactFlowArn = Input.empty();
-        this.userArn = Input.empty();
+        this.contactFlowArn = Output.empty();
+        this.userArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -52,8 +52,8 @@ public final class QuickConnectUserQuickConnectConfigArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private Input<String> contactFlowArn;
-        private Input<String> userArn;
+        private Output<String> contactFlowArn;
+        private Output<String> userArn;
 
         public Builder() {
     	      // Empty
@@ -65,23 +65,23 @@ public final class QuickConnectUserQuickConnectConfigArgs extends io.pulumi.reso
     	      this.userArn = defaults.userArn;
         }
 
-        public Builder contactFlowArn(Input<String> contactFlowArn) {
+        public Builder contactFlowArn(Output<String> contactFlowArn) {
             this.contactFlowArn = Objects.requireNonNull(contactFlowArn);
             return this;
         }
 
         public Builder contactFlowArn(String contactFlowArn) {
-            this.contactFlowArn = Input.of(Objects.requireNonNull(contactFlowArn));
+            this.contactFlowArn = Output.of(Objects.requireNonNull(contactFlowArn));
             return this;
         }
 
-        public Builder userArn(Input<String> userArn) {
+        public Builder userArn(Output<String> userArn) {
             this.userArn = Objects.requireNonNull(userArn);
             return this;
         }
 
         public Builder userArn(String userArn) {
-            this.userArn = Input.of(Objects.requireNonNull(userArn));
+            this.userArn = Output.of(Objects.requireNonNull(userArn));
             return this;
         }
         public QuickConnectUserQuickConnectConfigArgs build() {

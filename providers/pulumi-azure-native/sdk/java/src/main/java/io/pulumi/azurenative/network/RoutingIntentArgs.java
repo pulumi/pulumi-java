@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.network.inputs.RoutingPolicyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class RoutingIntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class RoutingIntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class RoutingIntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -54,10 +54,10 @@ public final class RoutingIntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routingIntentName")
-      private final @Nullable Input<String> routingIntentName;
+      private final @Nullable Output<String> routingIntentName;
 
-    public Input<String> getRoutingIntentName() {
-        return this.routingIntentName == null ? Input.empty() : this.routingIntentName;
+    public Output<String> getRoutingIntentName() {
+        return this.routingIntentName == null ? Output.empty() : this.routingIntentName;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class RoutingIntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routingPolicies")
-      private final @Nullable Input<List<RoutingPolicyArgs>> routingPolicies;
+      private final @Nullable Output<List<RoutingPolicyArgs>> routingPolicies;
 
-    public Input<List<RoutingPolicyArgs>> getRoutingPolicies() {
-        return this.routingPolicies == null ? Input.empty() : this.routingPolicies;
+    public Output<List<RoutingPolicyArgs>> getRoutingPolicies() {
+        return this.routingPolicies == null ? Output.empty() : this.routingPolicies;
     }
 
     /**
@@ -76,19 +76,19 @@ public final class RoutingIntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualHubName", required=true)
-      private final Input<String> virtualHubName;
+      private final Output<String> virtualHubName;
 
-    public Input<String> getVirtualHubName() {
+    public Output<String> getVirtualHubName() {
         return this.virtualHubName;
     }
 
     public RoutingIntentArgs(
-        @Nullable Input<String> id,
-        @Nullable Input<String> name,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> routingIntentName,
-        @Nullable Input<List<RoutingPolicyArgs>> routingPolicies,
-        Input<String> virtualHubName) {
+        @Nullable Output<String> id,
+        @Nullable Output<String> name,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> routingIntentName,
+        @Nullable Output<List<RoutingPolicyArgs>> routingPolicies,
+        Output<String> virtualHubName) {
         this.id = id;
         this.name = name;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -98,12 +98,12 @@ public final class RoutingIntentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RoutingIntentArgs() {
-        this.id = Input.empty();
-        this.name = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.routingIntentName = Input.empty();
-        this.routingPolicies = Input.empty();
-        this.virtualHubName = Input.empty();
+        this.id = Output.empty();
+        this.name = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.routingIntentName = Output.empty();
+        this.routingPolicies = Output.empty();
+        this.virtualHubName = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class RoutingIntentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> name;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> routingIntentName;
-        private @Nullable Input<List<RoutingPolicyArgs>> routingPolicies;
-        private Input<String> virtualHubName;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> name;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> routingIntentName;
+        private @Nullable Output<List<RoutingPolicyArgs>> routingPolicies;
+        private Output<String> virtualHubName;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class RoutingIntentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.virtualHubName = defaults.virtualHubName;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder routingIntentName(@Nullable Input<String> routingIntentName) {
+        public Builder routingIntentName(@Nullable Output<String> routingIntentName) {
             this.routingIntentName = routingIntentName;
             return this;
         }
 
         public Builder routingIntentName(@Nullable String routingIntentName) {
-            this.routingIntentName = Input.ofNullable(routingIntentName);
+            this.routingIntentName = Output.ofNullable(routingIntentName);
             return this;
         }
 
-        public Builder routingPolicies(@Nullable Input<List<RoutingPolicyArgs>> routingPolicies) {
+        public Builder routingPolicies(@Nullable Output<List<RoutingPolicyArgs>> routingPolicies) {
             this.routingPolicies = routingPolicies;
             return this;
         }
 
         public Builder routingPolicies(@Nullable List<RoutingPolicyArgs> routingPolicies) {
-            this.routingPolicies = Input.ofNullable(routingPolicies);
+            this.routingPolicies = Output.ofNullable(routingPolicies);
             return this;
         }
 
-        public Builder virtualHubName(Input<String> virtualHubName) {
+        public Builder virtualHubName(Output<String> virtualHubName) {
             this.virtualHubName = Objects.requireNonNull(virtualHubName);
             return this;
         }
 
         public Builder virtualHubName(String virtualHubName) {
-            this.virtualHubName = Input.of(Objects.requireNonNull(virtualHubName));
+            this.virtualHubName = Output.of(Objects.requireNonNull(virtualHubName));
             return this;
         }
         public RoutingIntentArgs build() {

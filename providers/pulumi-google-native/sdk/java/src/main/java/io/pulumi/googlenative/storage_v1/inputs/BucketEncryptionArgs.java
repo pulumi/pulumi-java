@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class BucketEncryptionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="defaultKmsKeyName")
-      private final @Nullable Input<String> defaultKmsKeyName;
+      private final @Nullable Output<String> defaultKmsKeyName;
 
-    public Input<String> getDefaultKmsKeyName() {
-        return this.defaultKmsKeyName == null ? Input.empty() : this.defaultKmsKeyName;
+    public Output<String> getDefaultKmsKeyName() {
+        return this.defaultKmsKeyName == null ? Output.empty() : this.defaultKmsKeyName;
     }
 
-    public BucketEncryptionArgs(@Nullable Input<String> defaultKmsKeyName) {
+    public BucketEncryptionArgs(@Nullable Output<String> defaultKmsKeyName) {
         this.defaultKmsKeyName = defaultKmsKeyName;
     }
 
     private BucketEncryptionArgs() {
-        this.defaultKmsKeyName = Input.empty();
+        this.defaultKmsKeyName = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class BucketEncryptionArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> defaultKmsKeyName;
+        private @Nullable Output<String> defaultKmsKeyName;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class BucketEncryptionArgs extends io.pulumi.resources.ResourceArgs
     	      this.defaultKmsKeyName = defaults.defaultKmsKeyName;
         }
 
-        public Builder defaultKmsKeyName(@Nullable Input<String> defaultKmsKeyName) {
+        public Builder defaultKmsKeyName(@Nullable Output<String> defaultKmsKeyName) {
             this.defaultKmsKeyName = defaultKmsKeyName;
             return this;
         }
 
         public Builder defaultKmsKeyName(@Nullable String defaultKmsKeyName) {
-            this.defaultKmsKeyName = Input.ofNullable(defaultKmsKeyName);
+            this.defaultKmsKeyName = Output.ofNullable(defaultKmsKeyName);
             return this;
         }
         public BucketEncryptionArgs build() {

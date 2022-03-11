@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class TCPSocketActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="host")
-      private final @Nullable Input<String> host;
+      private final @Nullable Output<String> host;
 
-    public Input<String> getHost() {
-        return this.host == null ? Input.empty() : this.host;
+    public Output<String> getHost() {
+        return this.host == null ? Output.empty() : this.host;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class TCPSocketActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="port", required=true)
-      private final Input<Either<Integer,String>> port;
+      private final Output<Either<Integer,String>> port;
 
-    public Input<Either<Integer,String>> getPort() {
+    public Output<Either<Integer,String>> getPort() {
         return this.port;
     }
 
     public TCPSocketActionArgs(
-        @Nullable Input<String> host,
-        Input<Either<Integer,String>> port) {
+        @Nullable Output<String> host,
+        Output<Either<Integer,String>> port) {
         this.host = host;
         this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
     }
 
     private TCPSocketActionArgs() {
-        this.host = Input.empty();
-        this.port = Input.empty();
+        this.host = Output.empty();
+        this.port = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class TCPSocketActionArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> host;
-        private Input<Either<Integer,String>> port;
+        private @Nullable Output<String> host;
+        private Output<Either<Integer,String>> port;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class TCPSocketActionArgs extends io.pulumi.resources.ResourceArgs 
     	      this.port = defaults.port;
         }
 
-        public Builder host(@Nullable Input<String> host) {
+        public Builder host(@Nullable Output<String> host) {
             this.host = host;
             return this;
         }
 
         public Builder host(@Nullable String host) {
-            this.host = Input.ofNullable(host);
+            this.host = Output.ofNullable(host);
             return this;
         }
 
-        public Builder port(Input<Either<Integer,String>> port) {
+        public Builder port(Output<Either<Integer,String>> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
         public Builder port(Either<Integer,String> port) {
-            this.port = Input.of(Objects.requireNonNull(port));
+            this.port = Output.of(Objects.requireNonNull(port));
             return this;
         }
         public TCPSocketActionArgs build() {

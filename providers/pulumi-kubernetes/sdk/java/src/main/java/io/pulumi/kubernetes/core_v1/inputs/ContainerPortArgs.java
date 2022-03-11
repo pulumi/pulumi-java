@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerPort", required=true)
-      private final Input<Integer> containerPort;
+      private final Output<Integer> containerPort;
 
-    public Input<Integer> getContainerPort() {
+    public Output<Integer> getContainerPort() {
         return this.containerPort;
     }
 
@@ -35,10 +35,10 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostIP")
-      private final @Nullable Input<String> hostIP;
+      private final @Nullable Output<String> hostIP;
 
-    public Input<String> getHostIP() {
-        return this.hostIP == null ? Input.empty() : this.hostIP;
+    public Output<String> getHostIP() {
+        return this.hostIP == null ? Output.empty() : this.hostIP;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostPort")
-      private final @Nullable Input<Integer> hostPort;
+      private final @Nullable Output<Integer> hostPort;
 
-    public Input<Integer> getHostPort() {
-        return this.hostPort == null ? Input.empty() : this.hostPort;
+    public Output<Integer> getHostPort() {
+        return this.hostPort == null ? Output.empty() : this.hostPort;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -73,18 +73,18 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol")
-      private final @Nullable Input<String> protocol;
+      private final @Nullable Output<String> protocol;
 
-    public Input<String> getProtocol() {
-        return this.protocol == null ? Input.empty() : this.protocol;
+    public Output<String> getProtocol() {
+        return this.protocol == null ? Output.empty() : this.protocol;
     }
 
     public ContainerPortArgs(
-        Input<Integer> containerPort,
-        @Nullable Input<String> hostIP,
-        @Nullable Input<Integer> hostPort,
-        @Nullable Input<String> name,
-        @Nullable Input<String> protocol) {
+        Output<Integer> containerPort,
+        @Nullable Output<String> hostIP,
+        @Nullable Output<Integer> hostPort,
+        @Nullable Output<String> name,
+        @Nullable Output<String> protocol) {
         this.containerPort = Objects.requireNonNull(containerPort, "expected parameter 'containerPort' to be non-null");
         this.hostIP = hostIP;
         this.hostPort = hostPort;
@@ -93,11 +93,11 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContainerPortArgs() {
-        this.containerPort = Input.empty();
-        this.hostIP = Input.empty();
-        this.hostPort = Input.empty();
-        this.name = Input.empty();
-        this.protocol = Input.empty();
+        this.containerPort = Output.empty();
+        this.hostIP = Output.empty();
+        this.hostPort = Output.empty();
+        this.name = Output.empty();
+        this.protocol = Output.empty();
     }
 
     public static Builder builder() {
@@ -109,11 +109,11 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Integer> containerPort;
-        private @Nullable Input<String> hostIP;
-        private @Nullable Input<Integer> hostPort;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> protocol;
+        private Output<Integer> containerPort;
+        private @Nullable Output<String> hostIP;
+        private @Nullable Output<Integer> hostPort;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> protocol;
 
         public Builder() {
     	      // Empty
@@ -128,53 +128,53 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder containerPort(Input<Integer> containerPort) {
+        public Builder containerPort(Output<Integer> containerPort) {
             this.containerPort = Objects.requireNonNull(containerPort);
             return this;
         }
 
         public Builder containerPort(Integer containerPort) {
-            this.containerPort = Input.of(Objects.requireNonNull(containerPort));
+            this.containerPort = Output.of(Objects.requireNonNull(containerPort));
             return this;
         }
 
-        public Builder hostIP(@Nullable Input<String> hostIP) {
+        public Builder hostIP(@Nullable Output<String> hostIP) {
             this.hostIP = hostIP;
             return this;
         }
 
         public Builder hostIP(@Nullable String hostIP) {
-            this.hostIP = Input.ofNullable(hostIP);
+            this.hostIP = Output.ofNullable(hostIP);
             return this;
         }
 
-        public Builder hostPort(@Nullable Input<Integer> hostPort) {
+        public Builder hostPort(@Nullable Output<Integer> hostPort) {
             this.hostPort = hostPort;
             return this;
         }
 
         public Builder hostPort(@Nullable Integer hostPort) {
-            this.hostPort = Input.ofNullable(hostPort);
+            this.hostPort = Output.ofNullable(hostPort);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder protocol(@Nullable Input<String> protocol) {
+        public Builder protocol(@Nullable Output<String> protocol) {
             this.protocol = protocol;
             return this;
         }
 
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = Input.ofNullable(protocol);
+            this.protocol = Output.ofNullable(protocol);
             return this;
         }
         public ContainerPortArgs build() {

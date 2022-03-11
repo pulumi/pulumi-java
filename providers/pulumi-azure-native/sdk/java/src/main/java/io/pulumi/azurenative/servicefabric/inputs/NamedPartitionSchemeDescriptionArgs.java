@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class NamedPartitionSchemeDescriptionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="count", required=true)
-      private final Input<Integer> count;
+      private final Output<Integer> count;
 
-    public Input<Integer> getCount() {
+    public Output<Integer> getCount() {
         return this.count;
     }
 
@@ -35,9 +35,9 @@ public final class NamedPartitionSchemeDescriptionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="names", required=true)
-      private final Input<List<String>> names;
+      private final Output<List<String>> names;
 
-    public Input<List<String>> getNames() {
+    public Output<List<String>> getNames() {
         return this.names;
     }
 
@@ -47,25 +47,25 @@ public final class NamedPartitionSchemeDescriptionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="partitionScheme", required=true)
-      private final Input<String> partitionScheme;
+      private final Output<String> partitionScheme;
 
-    public Input<String> getPartitionScheme() {
+    public Output<String> getPartitionScheme() {
         return this.partitionScheme;
     }
 
     public NamedPartitionSchemeDescriptionArgs(
-        Input<Integer> count,
-        Input<List<String>> names,
-        Input<String> partitionScheme) {
+        Output<Integer> count,
+        Output<List<String>> names,
+        Output<String> partitionScheme) {
         this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
         this.names = Objects.requireNonNull(names, "expected parameter 'names' to be non-null");
         this.partitionScheme = Objects.requireNonNull(partitionScheme, "expected parameter 'partitionScheme' to be non-null");
     }
 
     private NamedPartitionSchemeDescriptionArgs() {
-        this.count = Input.empty();
-        this.names = Input.empty();
-        this.partitionScheme = Input.empty();
+        this.count = Output.empty();
+        this.names = Output.empty();
+        this.partitionScheme = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class NamedPartitionSchemeDescriptionArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<Integer> count;
-        private Input<List<String>> names;
-        private Input<String> partitionScheme;
+        private Output<Integer> count;
+        private Output<List<String>> names;
+        private Output<String> partitionScheme;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class NamedPartitionSchemeDescriptionArgs extends io.pulumi.resourc
     	      this.partitionScheme = defaults.partitionScheme;
         }
 
-        public Builder count(Input<Integer> count) {
+        public Builder count(Output<Integer> count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
         public Builder count(Integer count) {
-            this.count = Input.of(Objects.requireNonNull(count));
+            this.count = Output.of(Objects.requireNonNull(count));
             return this;
         }
 
-        public Builder names(Input<List<String>> names) {
+        public Builder names(Output<List<String>> names) {
             this.names = Objects.requireNonNull(names);
             return this;
         }
 
         public Builder names(List<String> names) {
-            this.names = Input.of(Objects.requireNonNull(names));
+            this.names = Output.of(Objects.requireNonNull(names));
             return this;
         }
 
-        public Builder partitionScheme(Input<String> partitionScheme) {
+        public Builder partitionScheme(Output<String> partitionScheme) {
             this.partitionScheme = Objects.requireNonNull(partitionScheme);
             return this;
         }
 
         public Builder partitionScheme(String partitionScheme) {
-            this.partitionScheme = Input.of(Objects.requireNonNull(partitionScheme));
+            this.partitionScheme = Output.of(Objects.requireNonNull(partitionScheme));
             return this;
         }
         public NamedPartitionSchemeDescriptionArgs build() {

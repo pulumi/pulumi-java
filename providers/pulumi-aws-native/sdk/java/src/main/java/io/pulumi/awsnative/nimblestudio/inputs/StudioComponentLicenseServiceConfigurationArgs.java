@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.nimblestudio.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class StudioComponentLicenseServiceConfigurationArgs extends io.pul
      * 
      */
     @InputImport(name="endpoint")
-      private final @Nullable Input<String> endpoint;
+      private final @Nullable Output<String> endpoint;
 
-    public Input<String> getEndpoint() {
-        return this.endpoint == null ? Input.empty() : this.endpoint;
+    public Output<String> getEndpoint() {
+        return this.endpoint == null ? Output.empty() : this.endpoint;
     }
 
-    public StudioComponentLicenseServiceConfigurationArgs(@Nullable Input<String> endpoint) {
+    public StudioComponentLicenseServiceConfigurationArgs(@Nullable Output<String> endpoint) {
         this.endpoint = endpoint;
     }
 
     private StudioComponentLicenseServiceConfigurationArgs() {
-        this.endpoint = Input.empty();
+        this.endpoint = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class StudioComponentLicenseServiceConfigurationArgs extends io.pul
     }
 
     public static final class Builder {
-        private @Nullable Input<String> endpoint;
+        private @Nullable Output<String> endpoint;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class StudioComponentLicenseServiceConfigurationArgs extends io.pul
     	      this.endpoint = defaults.endpoint;
         }
 
-        public Builder endpoint(@Nullable Input<String> endpoint) {
+        public Builder endpoint(@Nullable Output<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
         public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = Input.ofNullable(endpoint);
+            this.endpoint = Output.ofNullable(endpoint);
             return this;
         }
         public StudioComponentLicenseServiceConfigurationArgs build() {

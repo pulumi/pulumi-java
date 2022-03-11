@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.managednetwork;
 
 import io.pulumi.azurenative.managednetwork.inputs.ManagedNetworkPeeringPolicyPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class ManagedNetworkPeeringPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class ManagedNetworkPeeringPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="managedNetworkName", required=true)
-      private final Input<String> managedNetworkName;
+      private final Output<String> managedNetworkName;
 
-    public Input<String> getManagedNetworkName() {
+    public Output<String> getManagedNetworkName() {
         return this.managedNetworkName;
     }
 
@@ -42,10 +42,10 @@ public final class ManagedNetworkPeeringPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="managedNetworkPeeringPolicyName")
-      private final @Nullable Input<String> managedNetworkPeeringPolicyName;
+      private final @Nullable Output<String> managedNetworkPeeringPolicyName;
 
-    public Input<String> getManagedNetworkPeeringPolicyName() {
-        return this.managedNetworkPeeringPolicyName == null ? Input.empty() : this.managedNetworkPeeringPolicyName;
+    public Output<String> getManagedNetworkPeeringPolicyName() {
+        return this.managedNetworkPeeringPolicyName == null ? Output.empty() : this.managedNetworkPeeringPolicyName;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ManagedNetworkPeeringPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<ManagedNetworkPeeringPolicyPropertiesArgs> properties;
+      private final @Nullable Output<ManagedNetworkPeeringPolicyPropertiesArgs> properties;
 
-    public Input<ManagedNetworkPeeringPolicyPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<ManagedNetworkPeeringPolicyPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -64,18 +64,18 @@ public final class ManagedNetworkPeeringPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public ManagedNetworkPeeringPolicyArgs(
-        @Nullable Input<String> location,
-        Input<String> managedNetworkName,
-        @Nullable Input<String> managedNetworkPeeringPolicyName,
-        @Nullable Input<ManagedNetworkPeeringPolicyPropertiesArgs> properties,
-        Input<String> resourceGroupName) {
+        @Nullable Output<String> location,
+        Output<String> managedNetworkName,
+        @Nullable Output<String> managedNetworkPeeringPolicyName,
+        @Nullable Output<ManagedNetworkPeeringPolicyPropertiesArgs> properties,
+        Output<String> resourceGroupName) {
         this.location = location;
         this.managedNetworkName = Objects.requireNonNull(managedNetworkName, "expected parameter 'managedNetworkName' to be non-null");
         this.managedNetworkPeeringPolicyName = managedNetworkPeeringPolicyName;
@@ -84,11 +84,11 @@ public final class ManagedNetworkPeeringPolicyArgs extends io.pulumi.resources.R
     }
 
     private ManagedNetworkPeeringPolicyArgs() {
-        this.location = Input.empty();
-        this.managedNetworkName = Input.empty();
-        this.managedNetworkPeeringPolicyName = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.location = Output.empty();
+        this.managedNetworkName = Output.empty();
+        this.managedNetworkPeeringPolicyName = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class ManagedNetworkPeeringPolicyArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> location;
-        private Input<String> managedNetworkName;
-        private @Nullable Input<String> managedNetworkPeeringPolicyName;
-        private @Nullable Input<ManagedNetworkPeeringPolicyPropertiesArgs> properties;
-        private Input<String> resourceGroupName;
+        private @Nullable Output<String> location;
+        private Output<String> managedNetworkName;
+        private @Nullable Output<String> managedNetworkPeeringPolicyName;
+        private @Nullable Output<ManagedNetworkPeeringPolicyPropertiesArgs> properties;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class ManagedNetworkPeeringPolicyArgs extends io.pulumi.resources.R
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder managedNetworkName(Input<String> managedNetworkName) {
+        public Builder managedNetworkName(Output<String> managedNetworkName) {
             this.managedNetworkName = Objects.requireNonNull(managedNetworkName);
             return this;
         }
 
         public Builder managedNetworkName(String managedNetworkName) {
-            this.managedNetworkName = Input.of(Objects.requireNonNull(managedNetworkName));
+            this.managedNetworkName = Output.of(Objects.requireNonNull(managedNetworkName));
             return this;
         }
 
-        public Builder managedNetworkPeeringPolicyName(@Nullable Input<String> managedNetworkPeeringPolicyName) {
+        public Builder managedNetworkPeeringPolicyName(@Nullable Output<String> managedNetworkPeeringPolicyName) {
             this.managedNetworkPeeringPolicyName = managedNetworkPeeringPolicyName;
             return this;
         }
 
         public Builder managedNetworkPeeringPolicyName(@Nullable String managedNetworkPeeringPolicyName) {
-            this.managedNetworkPeeringPolicyName = Input.ofNullable(managedNetworkPeeringPolicyName);
+            this.managedNetworkPeeringPolicyName = Output.ofNullable(managedNetworkPeeringPolicyName);
             return this;
         }
 
-        public Builder properties(@Nullable Input<ManagedNetworkPeeringPolicyPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<ManagedNetworkPeeringPolicyPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable ManagedNetworkPeeringPolicyPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public ManagedNetworkPeeringPolicyArgs build() {

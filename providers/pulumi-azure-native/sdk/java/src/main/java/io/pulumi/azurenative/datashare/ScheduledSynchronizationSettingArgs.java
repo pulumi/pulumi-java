@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datashare;
 
 import io.pulumi.azurenative.datashare.enums.RecurrenceInterval;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,9 +21,9 @@ public final class ScheduledSynchronizationSettingArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -33,9 +33,9 @@ public final class ScheduledSynchronizationSettingArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<String> kind;
+      private final Output<String> kind;
 
-    public Input<String> getKind() {
+    public Output<String> getKind() {
         return this.kind;
     }
 
@@ -44,9 +44,9 @@ public final class ScheduledSynchronizationSettingArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="recurrenceInterval", required=true)
-      private final Input<Either<String,RecurrenceInterval>> recurrenceInterval;
+      private final Output<Either<String,RecurrenceInterval>> recurrenceInterval;
 
-    public Input<Either<String,RecurrenceInterval>> getRecurrenceInterval() {
+    public Output<Either<String,RecurrenceInterval>> getRecurrenceInterval() {
         return this.recurrenceInterval;
     }
 
@@ -55,9 +55,9 @@ public final class ScheduledSynchronizationSettingArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -66,9 +66,9 @@ public final class ScheduledSynchronizationSettingArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="shareName", required=true)
-      private final Input<String> shareName;
+      private final Output<String> shareName;
 
-    public Input<String> getShareName() {
+    public Output<String> getShareName() {
         return this.shareName;
     }
 
@@ -77,10 +77,10 @@ public final class ScheduledSynchronizationSettingArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="synchronizationSettingName")
-      private final @Nullable Input<String> synchronizationSettingName;
+      private final @Nullable Output<String> synchronizationSettingName;
 
-    public Input<String> getSynchronizationSettingName() {
-        return this.synchronizationSettingName == null ? Input.empty() : this.synchronizationSettingName;
+    public Output<String> getSynchronizationSettingName() {
+        return this.synchronizationSettingName == null ? Output.empty() : this.synchronizationSettingName;
     }
 
     /**
@@ -88,20 +88,20 @@ public final class ScheduledSynchronizationSettingArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="synchronizationTime", required=true)
-      private final Input<String> synchronizationTime;
+      private final Output<String> synchronizationTime;
 
-    public Input<String> getSynchronizationTime() {
+    public Output<String> getSynchronizationTime() {
         return this.synchronizationTime;
     }
 
     public ScheduledSynchronizationSettingArgs(
-        Input<String> accountName,
-        Input<String> kind,
-        Input<Either<String,RecurrenceInterval>> recurrenceInterval,
-        Input<String> resourceGroupName,
-        Input<String> shareName,
-        @Nullable Input<String> synchronizationSettingName,
-        Input<String> synchronizationTime) {
+        Output<String> accountName,
+        Output<String> kind,
+        Output<Either<String,RecurrenceInterval>> recurrenceInterval,
+        Output<String> resourceGroupName,
+        Output<String> shareName,
+        @Nullable Output<String> synchronizationSettingName,
+        Output<String> synchronizationTime) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
         this.recurrenceInterval = Objects.requireNonNull(recurrenceInterval, "expected parameter 'recurrenceInterval' to be non-null");
@@ -112,13 +112,13 @@ public final class ScheduledSynchronizationSettingArgs extends io.pulumi.resourc
     }
 
     private ScheduledSynchronizationSettingArgs() {
-        this.accountName = Input.empty();
-        this.kind = Input.empty();
-        this.recurrenceInterval = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.shareName = Input.empty();
-        this.synchronizationSettingName = Input.empty();
-        this.synchronizationTime = Input.empty();
+        this.accountName = Output.empty();
+        this.kind = Output.empty();
+        this.recurrenceInterval = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.shareName = Output.empty();
+        this.synchronizationSettingName = Output.empty();
+        this.synchronizationTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class ScheduledSynchronizationSettingArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private Input<String> kind;
-        private Input<Either<String,RecurrenceInterval>> recurrenceInterval;
-        private Input<String> resourceGroupName;
-        private Input<String> shareName;
-        private @Nullable Input<String> synchronizationSettingName;
-        private Input<String> synchronizationTime;
+        private Output<String> accountName;
+        private Output<String> kind;
+        private Output<Either<String,RecurrenceInterval>> recurrenceInterval;
+        private Output<String> resourceGroupName;
+        private Output<String> shareName;
+        private @Nullable Output<String> synchronizationSettingName;
+        private Output<String> synchronizationTime;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class ScheduledSynchronizationSettingArgs extends io.pulumi.resourc
     	      this.synchronizationTime = defaults.synchronizationTime;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder kind(Input<String> kind) {
+        public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(String kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder recurrenceInterval(Input<Either<String,RecurrenceInterval>> recurrenceInterval) {
+        public Builder recurrenceInterval(Output<Either<String,RecurrenceInterval>> recurrenceInterval) {
             this.recurrenceInterval = Objects.requireNonNull(recurrenceInterval);
             return this;
         }
 
         public Builder recurrenceInterval(Either<String,RecurrenceInterval> recurrenceInterval) {
-            this.recurrenceInterval = Input.of(Objects.requireNonNull(recurrenceInterval));
+            this.recurrenceInterval = Output.of(Objects.requireNonNull(recurrenceInterval));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder shareName(Input<String> shareName) {
+        public Builder shareName(Output<String> shareName) {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
         }
 
         public Builder shareName(String shareName) {
-            this.shareName = Input.of(Objects.requireNonNull(shareName));
+            this.shareName = Output.of(Objects.requireNonNull(shareName));
             return this;
         }
 
-        public Builder synchronizationSettingName(@Nullable Input<String> synchronizationSettingName) {
+        public Builder synchronizationSettingName(@Nullable Output<String> synchronizationSettingName) {
             this.synchronizationSettingName = synchronizationSettingName;
             return this;
         }
 
         public Builder synchronizationSettingName(@Nullable String synchronizationSettingName) {
-            this.synchronizationSettingName = Input.ofNullable(synchronizationSettingName);
+            this.synchronizationSettingName = Output.ofNullable(synchronizationSettingName);
             return this;
         }
 
-        public Builder synchronizationTime(Input<String> synchronizationTime) {
+        public Builder synchronizationTime(Output<String> synchronizationTime) {
             this.synchronizationTime = Objects.requireNonNull(synchronizationTime);
             return this;
         }
 
         public Builder synchronizationTime(String synchronizationTime) {
-            this.synchronizationTime = Input.of(Objects.requireNonNull(synchronizationTime));
+            this.synchronizationTime = Output.of(Objects.requireNonNull(synchronizationTime));
             return this;
         }
         public ScheduledSynchronizationSettingArgs build() {

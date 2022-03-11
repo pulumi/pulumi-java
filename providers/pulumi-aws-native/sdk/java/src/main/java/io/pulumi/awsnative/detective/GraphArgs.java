@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.detective;
 
 import io.pulumi.awsnative.detective.inputs.GraphTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -16,18 +16,18 @@ public final class GraphArgs extends io.pulumi.resources.ResourceArgs {
     public static final GraphArgs Empty = new GraphArgs();
 
     @InputImport(name="tags")
-      private final @Nullable Input<List<GraphTagArgs>> tags;
+      private final @Nullable Output<List<GraphTagArgs>> tags;
 
-    public Input<List<GraphTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<GraphTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
-    public GraphArgs(@Nullable Input<List<GraphTagArgs>> tags) {
+    public GraphArgs(@Nullable Output<List<GraphTagArgs>> tags) {
         this.tags = tags;
     }
 
     private GraphArgs() {
-        this.tags = Input.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -39,7 +39,7 @@ public final class GraphArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<GraphTagArgs>> tags;
+        private @Nullable Output<List<GraphTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -50,13 +50,13 @@ public final class GraphArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder tags(@Nullable Input<List<GraphTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<GraphTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<GraphTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public GraphArgs build() {

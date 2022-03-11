@@ -6,7 +6,7 @@ package io.pulumi.aws.cloudfront.inputs;
 import io.pulumi.aws.cloudfront.inputs.DistributionDefaultCacheBehaviorForwardedValuesArgs;
 import io.pulumi.aws.cloudfront.inputs.DistributionDefaultCacheBehaviorFunctionAssociationArgs;
 import io.pulumi.aws.cloudfront.inputs.DistributionDefaultCacheBehaviorLambdaFunctionAssociationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -26,9 +26,9 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="allowedMethods", required=true)
-      private final Input<List<String>> allowedMethods;
+      private final Output<List<String>> allowedMethods;
 
-    public Input<List<String>> getAllowedMethods() {
+    public Output<List<String>> getAllowedMethods() {
         return this.allowedMethods;
     }
 
@@ -38,10 +38,10 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="cachePolicyId")
-      private final @Nullable Input<String> cachePolicyId;
+      private final @Nullable Output<String> cachePolicyId;
 
-    public Input<String> getCachePolicyId() {
-        return this.cachePolicyId == null ? Input.empty() : this.cachePolicyId;
+    public Output<String> getCachePolicyId() {
+        return this.cachePolicyId == null ? Output.empty() : this.cachePolicyId;
     }
 
     /**
@@ -50,9 +50,9 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="cachedMethods", required=true)
-      private final Input<List<String>> cachedMethods;
+      private final Output<List<String>> cachedMethods;
 
-    public Input<List<String>> getCachedMethods() {
+    public Output<List<String>> getCachedMethods() {
         return this.cachedMethods;
     }
 
@@ -63,10 +63,10 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="compress")
-      private final @Nullable Input<Boolean> compress;
+      private final @Nullable Output<Boolean> compress;
 
-    public Input<Boolean> getCompress() {
-        return this.compress == null ? Input.empty() : this.compress;
+    public Output<Boolean> getCompress() {
+        return this.compress == null ? Output.empty() : this.compress;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="defaultTtl")
-      private final @Nullable Input<Integer> defaultTtl;
+      private final @Nullable Output<Integer> defaultTtl;
 
-    public Input<Integer> getDefaultTtl() {
-        return this.defaultTtl == null ? Input.empty() : this.defaultTtl;
+    public Output<Integer> getDefaultTtl() {
+        return this.defaultTtl == null ? Output.empty() : this.defaultTtl;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="fieldLevelEncryptionId")
-      private final @Nullable Input<String> fieldLevelEncryptionId;
+      private final @Nullable Output<String> fieldLevelEncryptionId;
 
-    public Input<String> getFieldLevelEncryptionId() {
-        return this.fieldLevelEncryptionId == null ? Input.empty() : this.fieldLevelEncryptionId;
+    public Output<String> getFieldLevelEncryptionId() {
+        return this.fieldLevelEncryptionId == null ? Output.empty() : this.fieldLevelEncryptionId;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="forwardedValues")
-      private final @Nullable Input<DistributionDefaultCacheBehaviorForwardedValuesArgs> forwardedValues;
+      private final @Nullable Output<DistributionDefaultCacheBehaviorForwardedValuesArgs> forwardedValues;
 
-    public Input<DistributionDefaultCacheBehaviorForwardedValuesArgs> getForwardedValues() {
-        return this.forwardedValues == null ? Input.empty() : this.forwardedValues;
+    public Output<DistributionDefaultCacheBehaviorForwardedValuesArgs> getForwardedValues() {
+        return this.forwardedValues == null ? Output.empty() : this.forwardedValues;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="functionAssociations")
-      private final @Nullable Input<List<DistributionDefaultCacheBehaviorFunctionAssociationArgs>> functionAssociations;
+      private final @Nullable Output<List<DistributionDefaultCacheBehaviorFunctionAssociationArgs>> functionAssociations;
 
-    public Input<List<DistributionDefaultCacheBehaviorFunctionAssociationArgs>> getFunctionAssociations() {
-        return this.functionAssociations == null ? Input.empty() : this.functionAssociations;
+    public Output<List<DistributionDefaultCacheBehaviorFunctionAssociationArgs>> getFunctionAssociations() {
+        return this.functionAssociations == null ? Output.empty() : this.functionAssociations;
     }
 
     /**
@@ -123,10 +123,10 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="lambdaFunctionAssociations")
-      private final @Nullable Input<List<DistributionDefaultCacheBehaviorLambdaFunctionAssociationArgs>> lambdaFunctionAssociations;
+      private final @Nullable Output<List<DistributionDefaultCacheBehaviorLambdaFunctionAssociationArgs>> lambdaFunctionAssociations;
 
-    public Input<List<DistributionDefaultCacheBehaviorLambdaFunctionAssociationArgs>> getLambdaFunctionAssociations() {
-        return this.lambdaFunctionAssociations == null ? Input.empty() : this.lambdaFunctionAssociations;
+    public Output<List<DistributionDefaultCacheBehaviorLambdaFunctionAssociationArgs>> getLambdaFunctionAssociations() {
+        return this.lambdaFunctionAssociations == null ? Output.empty() : this.lambdaFunctionAssociations;
     }
 
     /**
@@ -138,10 +138,10 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="maxTtl")
-      private final @Nullable Input<Integer> maxTtl;
+      private final @Nullable Output<Integer> maxTtl;
 
-    public Input<Integer> getMaxTtl() {
-        return this.maxTtl == null ? Input.empty() : this.maxTtl;
+    public Output<Integer> getMaxTtl() {
+        return this.maxTtl == null ? Output.empty() : this.maxTtl;
     }
 
     /**
@@ -151,10 +151,10 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="minTtl")
-      private final @Nullable Input<Integer> minTtl;
+      private final @Nullable Output<Integer> minTtl;
 
-    public Input<Integer> getMinTtl() {
-        return this.minTtl == null ? Input.empty() : this.minTtl;
+    public Output<Integer> getMinTtl() {
+        return this.minTtl == null ? Output.empty() : this.minTtl;
     }
 
     /**
@@ -163,10 +163,10 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="originRequestPolicyId")
-      private final @Nullable Input<String> originRequestPolicyId;
+      private final @Nullable Output<String> originRequestPolicyId;
 
-    public Input<String> getOriginRequestPolicyId() {
-        return this.originRequestPolicyId == null ? Input.empty() : this.originRequestPolicyId;
+    public Output<String> getOriginRequestPolicyId() {
+        return this.originRequestPolicyId == null ? Output.empty() : this.originRequestPolicyId;
     }
 
     /**
@@ -175,10 +175,10 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="realtimeLogConfigArn")
-      private final @Nullable Input<String> realtimeLogConfigArn;
+      private final @Nullable Output<String> realtimeLogConfigArn;
 
-    public Input<String> getRealtimeLogConfigArn() {
-        return this.realtimeLogConfigArn == null ? Input.empty() : this.realtimeLogConfigArn;
+    public Output<String> getRealtimeLogConfigArn() {
+        return this.realtimeLogConfigArn == null ? Output.empty() : this.realtimeLogConfigArn;
     }
 
     /**
@@ -186,10 +186,10 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="responseHeadersPolicyId")
-      private final @Nullable Input<String> responseHeadersPolicyId;
+      private final @Nullable Output<String> responseHeadersPolicyId;
 
-    public Input<String> getResponseHeadersPolicyId() {
-        return this.responseHeadersPolicyId == null ? Input.empty() : this.responseHeadersPolicyId;
+    public Output<String> getResponseHeadersPolicyId() {
+        return this.responseHeadersPolicyId == null ? Output.empty() : this.responseHeadersPolicyId;
     }
 
     /**
@@ -199,10 +199,10 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="smoothStreaming")
-      private final @Nullable Input<Boolean> smoothStreaming;
+      private final @Nullable Output<Boolean> smoothStreaming;
 
-    public Input<Boolean> getSmoothStreaming() {
-        return this.smoothStreaming == null ? Input.empty() : this.smoothStreaming;
+    public Output<Boolean> getSmoothStreaming() {
+        return this.smoothStreaming == null ? Output.empty() : this.smoothStreaming;
     }
 
     /**
@@ -212,9 +212,9 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="targetOriginId", required=true)
-      private final Input<String> targetOriginId;
+      private final Output<String> targetOriginId;
 
-    public Input<String> getTargetOriginId() {
+    public Output<String> getTargetOriginId() {
         return this.targetOriginId;
     }
 
@@ -224,10 +224,10 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="trustedKeyGroups")
-      private final @Nullable Input<List<String>> trustedKeyGroups;
+      private final @Nullable Output<List<String>> trustedKeyGroups;
 
-    public Input<List<String>> getTrustedKeyGroups() {
-        return this.trustedKeyGroups == null ? Input.empty() : this.trustedKeyGroups;
+    public Output<List<String>> getTrustedKeyGroups() {
+        return this.trustedKeyGroups == null ? Output.empty() : this.trustedKeyGroups;
     }
 
     /**
@@ -236,10 +236,10 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="trustedSigners")
-      private final @Nullable Input<List<String>> trustedSigners;
+      private final @Nullable Output<List<String>> trustedSigners;
 
-    public Input<List<String>> getTrustedSigners() {
-        return this.trustedSigners == null ? Input.empty() : this.trustedSigners;
+    public Output<List<String>> getTrustedSigners() {
+        return this.trustedSigners == null ? Output.empty() : this.trustedSigners;
     }
 
     /**
@@ -250,32 +250,32 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="viewerProtocolPolicy", required=true)
-      private final Input<String> viewerProtocolPolicy;
+      private final Output<String> viewerProtocolPolicy;
 
-    public Input<String> getViewerProtocolPolicy() {
+    public Output<String> getViewerProtocolPolicy() {
         return this.viewerProtocolPolicy;
     }
 
     public DistributionDefaultCacheBehaviorArgs(
-        Input<List<String>> allowedMethods,
-        @Nullable Input<String> cachePolicyId,
-        Input<List<String>> cachedMethods,
-        @Nullable Input<Boolean> compress,
-        @Nullable Input<Integer> defaultTtl,
-        @Nullable Input<String> fieldLevelEncryptionId,
-        @Nullable Input<DistributionDefaultCacheBehaviorForwardedValuesArgs> forwardedValues,
-        @Nullable Input<List<DistributionDefaultCacheBehaviorFunctionAssociationArgs>> functionAssociations,
-        @Nullable Input<List<DistributionDefaultCacheBehaviorLambdaFunctionAssociationArgs>> lambdaFunctionAssociations,
-        @Nullable Input<Integer> maxTtl,
-        @Nullable Input<Integer> minTtl,
-        @Nullable Input<String> originRequestPolicyId,
-        @Nullable Input<String> realtimeLogConfigArn,
-        @Nullable Input<String> responseHeadersPolicyId,
-        @Nullable Input<Boolean> smoothStreaming,
-        Input<String> targetOriginId,
-        @Nullable Input<List<String>> trustedKeyGroups,
-        @Nullable Input<List<String>> trustedSigners,
-        Input<String> viewerProtocolPolicy) {
+        Output<List<String>> allowedMethods,
+        @Nullable Output<String> cachePolicyId,
+        Output<List<String>> cachedMethods,
+        @Nullable Output<Boolean> compress,
+        @Nullable Output<Integer> defaultTtl,
+        @Nullable Output<String> fieldLevelEncryptionId,
+        @Nullable Output<DistributionDefaultCacheBehaviorForwardedValuesArgs> forwardedValues,
+        @Nullable Output<List<DistributionDefaultCacheBehaviorFunctionAssociationArgs>> functionAssociations,
+        @Nullable Output<List<DistributionDefaultCacheBehaviorLambdaFunctionAssociationArgs>> lambdaFunctionAssociations,
+        @Nullable Output<Integer> maxTtl,
+        @Nullable Output<Integer> minTtl,
+        @Nullable Output<String> originRequestPolicyId,
+        @Nullable Output<String> realtimeLogConfigArn,
+        @Nullable Output<String> responseHeadersPolicyId,
+        @Nullable Output<Boolean> smoothStreaming,
+        Output<String> targetOriginId,
+        @Nullable Output<List<String>> trustedKeyGroups,
+        @Nullable Output<List<String>> trustedSigners,
+        Output<String> viewerProtocolPolicy) {
         this.allowedMethods = Objects.requireNonNull(allowedMethods, "expected parameter 'allowedMethods' to be non-null");
         this.cachePolicyId = cachePolicyId;
         this.cachedMethods = Objects.requireNonNull(cachedMethods, "expected parameter 'cachedMethods' to be non-null");
@@ -298,25 +298,25 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
     }
 
     private DistributionDefaultCacheBehaviorArgs() {
-        this.allowedMethods = Input.empty();
-        this.cachePolicyId = Input.empty();
-        this.cachedMethods = Input.empty();
-        this.compress = Input.empty();
-        this.defaultTtl = Input.empty();
-        this.fieldLevelEncryptionId = Input.empty();
-        this.forwardedValues = Input.empty();
-        this.functionAssociations = Input.empty();
-        this.lambdaFunctionAssociations = Input.empty();
-        this.maxTtl = Input.empty();
-        this.minTtl = Input.empty();
-        this.originRequestPolicyId = Input.empty();
-        this.realtimeLogConfigArn = Input.empty();
-        this.responseHeadersPolicyId = Input.empty();
-        this.smoothStreaming = Input.empty();
-        this.targetOriginId = Input.empty();
-        this.trustedKeyGroups = Input.empty();
-        this.trustedSigners = Input.empty();
-        this.viewerProtocolPolicy = Input.empty();
+        this.allowedMethods = Output.empty();
+        this.cachePolicyId = Output.empty();
+        this.cachedMethods = Output.empty();
+        this.compress = Output.empty();
+        this.defaultTtl = Output.empty();
+        this.fieldLevelEncryptionId = Output.empty();
+        this.forwardedValues = Output.empty();
+        this.functionAssociations = Output.empty();
+        this.lambdaFunctionAssociations = Output.empty();
+        this.maxTtl = Output.empty();
+        this.minTtl = Output.empty();
+        this.originRequestPolicyId = Output.empty();
+        this.realtimeLogConfigArn = Output.empty();
+        this.responseHeadersPolicyId = Output.empty();
+        this.smoothStreaming = Output.empty();
+        this.targetOriginId = Output.empty();
+        this.trustedKeyGroups = Output.empty();
+        this.trustedSigners = Output.empty();
+        this.viewerProtocolPolicy = Output.empty();
     }
 
     public static Builder builder() {
@@ -328,25 +328,25 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private Input<List<String>> allowedMethods;
-        private @Nullable Input<String> cachePolicyId;
-        private Input<List<String>> cachedMethods;
-        private @Nullable Input<Boolean> compress;
-        private @Nullable Input<Integer> defaultTtl;
-        private @Nullable Input<String> fieldLevelEncryptionId;
-        private @Nullable Input<DistributionDefaultCacheBehaviorForwardedValuesArgs> forwardedValues;
-        private @Nullable Input<List<DistributionDefaultCacheBehaviorFunctionAssociationArgs>> functionAssociations;
-        private @Nullable Input<List<DistributionDefaultCacheBehaviorLambdaFunctionAssociationArgs>> lambdaFunctionAssociations;
-        private @Nullable Input<Integer> maxTtl;
-        private @Nullable Input<Integer> minTtl;
-        private @Nullable Input<String> originRequestPolicyId;
-        private @Nullable Input<String> realtimeLogConfigArn;
-        private @Nullable Input<String> responseHeadersPolicyId;
-        private @Nullable Input<Boolean> smoothStreaming;
-        private Input<String> targetOriginId;
-        private @Nullable Input<List<String>> trustedKeyGroups;
-        private @Nullable Input<List<String>> trustedSigners;
-        private Input<String> viewerProtocolPolicy;
+        private Output<List<String>> allowedMethods;
+        private @Nullable Output<String> cachePolicyId;
+        private Output<List<String>> cachedMethods;
+        private @Nullable Output<Boolean> compress;
+        private @Nullable Output<Integer> defaultTtl;
+        private @Nullable Output<String> fieldLevelEncryptionId;
+        private @Nullable Output<DistributionDefaultCacheBehaviorForwardedValuesArgs> forwardedValues;
+        private @Nullable Output<List<DistributionDefaultCacheBehaviorFunctionAssociationArgs>> functionAssociations;
+        private @Nullable Output<List<DistributionDefaultCacheBehaviorLambdaFunctionAssociationArgs>> lambdaFunctionAssociations;
+        private @Nullable Output<Integer> maxTtl;
+        private @Nullable Output<Integer> minTtl;
+        private @Nullable Output<String> originRequestPolicyId;
+        private @Nullable Output<String> realtimeLogConfigArn;
+        private @Nullable Output<String> responseHeadersPolicyId;
+        private @Nullable Output<Boolean> smoothStreaming;
+        private Output<String> targetOriginId;
+        private @Nullable Output<List<String>> trustedKeyGroups;
+        private @Nullable Output<List<String>> trustedSigners;
+        private Output<String> viewerProtocolPolicy;
 
         public Builder() {
     	      // Empty
@@ -375,193 +375,193 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
     	      this.viewerProtocolPolicy = defaults.viewerProtocolPolicy;
         }
 
-        public Builder allowedMethods(Input<List<String>> allowedMethods) {
+        public Builder allowedMethods(Output<List<String>> allowedMethods) {
             this.allowedMethods = Objects.requireNonNull(allowedMethods);
             return this;
         }
 
         public Builder allowedMethods(List<String> allowedMethods) {
-            this.allowedMethods = Input.of(Objects.requireNonNull(allowedMethods));
+            this.allowedMethods = Output.of(Objects.requireNonNull(allowedMethods));
             return this;
         }
 
-        public Builder cachePolicyId(@Nullable Input<String> cachePolicyId) {
+        public Builder cachePolicyId(@Nullable Output<String> cachePolicyId) {
             this.cachePolicyId = cachePolicyId;
             return this;
         }
 
         public Builder cachePolicyId(@Nullable String cachePolicyId) {
-            this.cachePolicyId = Input.ofNullable(cachePolicyId);
+            this.cachePolicyId = Output.ofNullable(cachePolicyId);
             return this;
         }
 
-        public Builder cachedMethods(Input<List<String>> cachedMethods) {
+        public Builder cachedMethods(Output<List<String>> cachedMethods) {
             this.cachedMethods = Objects.requireNonNull(cachedMethods);
             return this;
         }
 
         public Builder cachedMethods(List<String> cachedMethods) {
-            this.cachedMethods = Input.of(Objects.requireNonNull(cachedMethods));
+            this.cachedMethods = Output.of(Objects.requireNonNull(cachedMethods));
             return this;
         }
 
-        public Builder compress(@Nullable Input<Boolean> compress) {
+        public Builder compress(@Nullable Output<Boolean> compress) {
             this.compress = compress;
             return this;
         }
 
         public Builder compress(@Nullable Boolean compress) {
-            this.compress = Input.ofNullable(compress);
+            this.compress = Output.ofNullable(compress);
             return this;
         }
 
-        public Builder defaultTtl(@Nullable Input<Integer> defaultTtl) {
+        public Builder defaultTtl(@Nullable Output<Integer> defaultTtl) {
             this.defaultTtl = defaultTtl;
             return this;
         }
 
         public Builder defaultTtl(@Nullable Integer defaultTtl) {
-            this.defaultTtl = Input.ofNullable(defaultTtl);
+            this.defaultTtl = Output.ofNullable(defaultTtl);
             return this;
         }
 
-        public Builder fieldLevelEncryptionId(@Nullable Input<String> fieldLevelEncryptionId) {
+        public Builder fieldLevelEncryptionId(@Nullable Output<String> fieldLevelEncryptionId) {
             this.fieldLevelEncryptionId = fieldLevelEncryptionId;
             return this;
         }
 
         public Builder fieldLevelEncryptionId(@Nullable String fieldLevelEncryptionId) {
-            this.fieldLevelEncryptionId = Input.ofNullable(fieldLevelEncryptionId);
+            this.fieldLevelEncryptionId = Output.ofNullable(fieldLevelEncryptionId);
             return this;
         }
 
-        public Builder forwardedValues(@Nullable Input<DistributionDefaultCacheBehaviorForwardedValuesArgs> forwardedValues) {
+        public Builder forwardedValues(@Nullable Output<DistributionDefaultCacheBehaviorForwardedValuesArgs> forwardedValues) {
             this.forwardedValues = forwardedValues;
             return this;
         }
 
         public Builder forwardedValues(@Nullable DistributionDefaultCacheBehaviorForwardedValuesArgs forwardedValues) {
-            this.forwardedValues = Input.ofNullable(forwardedValues);
+            this.forwardedValues = Output.ofNullable(forwardedValues);
             return this;
         }
 
-        public Builder functionAssociations(@Nullable Input<List<DistributionDefaultCacheBehaviorFunctionAssociationArgs>> functionAssociations) {
+        public Builder functionAssociations(@Nullable Output<List<DistributionDefaultCacheBehaviorFunctionAssociationArgs>> functionAssociations) {
             this.functionAssociations = functionAssociations;
             return this;
         }
 
         public Builder functionAssociations(@Nullable List<DistributionDefaultCacheBehaviorFunctionAssociationArgs> functionAssociations) {
-            this.functionAssociations = Input.ofNullable(functionAssociations);
+            this.functionAssociations = Output.ofNullable(functionAssociations);
             return this;
         }
 
-        public Builder lambdaFunctionAssociations(@Nullable Input<List<DistributionDefaultCacheBehaviorLambdaFunctionAssociationArgs>> lambdaFunctionAssociations) {
+        public Builder lambdaFunctionAssociations(@Nullable Output<List<DistributionDefaultCacheBehaviorLambdaFunctionAssociationArgs>> lambdaFunctionAssociations) {
             this.lambdaFunctionAssociations = lambdaFunctionAssociations;
             return this;
         }
 
         public Builder lambdaFunctionAssociations(@Nullable List<DistributionDefaultCacheBehaviorLambdaFunctionAssociationArgs> lambdaFunctionAssociations) {
-            this.lambdaFunctionAssociations = Input.ofNullable(lambdaFunctionAssociations);
+            this.lambdaFunctionAssociations = Output.ofNullable(lambdaFunctionAssociations);
             return this;
         }
 
-        public Builder maxTtl(@Nullable Input<Integer> maxTtl) {
+        public Builder maxTtl(@Nullable Output<Integer> maxTtl) {
             this.maxTtl = maxTtl;
             return this;
         }
 
         public Builder maxTtl(@Nullable Integer maxTtl) {
-            this.maxTtl = Input.ofNullable(maxTtl);
+            this.maxTtl = Output.ofNullable(maxTtl);
             return this;
         }
 
-        public Builder minTtl(@Nullable Input<Integer> minTtl) {
+        public Builder minTtl(@Nullable Output<Integer> minTtl) {
             this.minTtl = minTtl;
             return this;
         }
 
         public Builder minTtl(@Nullable Integer minTtl) {
-            this.minTtl = Input.ofNullable(minTtl);
+            this.minTtl = Output.ofNullable(minTtl);
             return this;
         }
 
-        public Builder originRequestPolicyId(@Nullable Input<String> originRequestPolicyId) {
+        public Builder originRequestPolicyId(@Nullable Output<String> originRequestPolicyId) {
             this.originRequestPolicyId = originRequestPolicyId;
             return this;
         }
 
         public Builder originRequestPolicyId(@Nullable String originRequestPolicyId) {
-            this.originRequestPolicyId = Input.ofNullable(originRequestPolicyId);
+            this.originRequestPolicyId = Output.ofNullable(originRequestPolicyId);
             return this;
         }
 
-        public Builder realtimeLogConfigArn(@Nullable Input<String> realtimeLogConfigArn) {
+        public Builder realtimeLogConfigArn(@Nullable Output<String> realtimeLogConfigArn) {
             this.realtimeLogConfigArn = realtimeLogConfigArn;
             return this;
         }
 
         public Builder realtimeLogConfigArn(@Nullable String realtimeLogConfigArn) {
-            this.realtimeLogConfigArn = Input.ofNullable(realtimeLogConfigArn);
+            this.realtimeLogConfigArn = Output.ofNullable(realtimeLogConfigArn);
             return this;
         }
 
-        public Builder responseHeadersPolicyId(@Nullable Input<String> responseHeadersPolicyId) {
+        public Builder responseHeadersPolicyId(@Nullable Output<String> responseHeadersPolicyId) {
             this.responseHeadersPolicyId = responseHeadersPolicyId;
             return this;
         }
 
         public Builder responseHeadersPolicyId(@Nullable String responseHeadersPolicyId) {
-            this.responseHeadersPolicyId = Input.ofNullable(responseHeadersPolicyId);
+            this.responseHeadersPolicyId = Output.ofNullable(responseHeadersPolicyId);
             return this;
         }
 
-        public Builder smoothStreaming(@Nullable Input<Boolean> smoothStreaming) {
+        public Builder smoothStreaming(@Nullable Output<Boolean> smoothStreaming) {
             this.smoothStreaming = smoothStreaming;
             return this;
         }
 
         public Builder smoothStreaming(@Nullable Boolean smoothStreaming) {
-            this.smoothStreaming = Input.ofNullable(smoothStreaming);
+            this.smoothStreaming = Output.ofNullable(smoothStreaming);
             return this;
         }
 
-        public Builder targetOriginId(Input<String> targetOriginId) {
+        public Builder targetOriginId(Output<String> targetOriginId) {
             this.targetOriginId = Objects.requireNonNull(targetOriginId);
             return this;
         }
 
         public Builder targetOriginId(String targetOriginId) {
-            this.targetOriginId = Input.of(Objects.requireNonNull(targetOriginId));
+            this.targetOriginId = Output.of(Objects.requireNonNull(targetOriginId));
             return this;
         }
 
-        public Builder trustedKeyGroups(@Nullable Input<List<String>> trustedKeyGroups) {
+        public Builder trustedKeyGroups(@Nullable Output<List<String>> trustedKeyGroups) {
             this.trustedKeyGroups = trustedKeyGroups;
             return this;
         }
 
         public Builder trustedKeyGroups(@Nullable List<String> trustedKeyGroups) {
-            this.trustedKeyGroups = Input.ofNullable(trustedKeyGroups);
+            this.trustedKeyGroups = Output.ofNullable(trustedKeyGroups);
             return this;
         }
 
-        public Builder trustedSigners(@Nullable Input<List<String>> trustedSigners) {
+        public Builder trustedSigners(@Nullable Output<List<String>> trustedSigners) {
             this.trustedSigners = trustedSigners;
             return this;
         }
 
         public Builder trustedSigners(@Nullable List<String> trustedSigners) {
-            this.trustedSigners = Input.ofNullable(trustedSigners);
+            this.trustedSigners = Output.ofNullable(trustedSigners);
             return this;
         }
 
-        public Builder viewerProtocolPolicy(Input<String> viewerProtocolPolicy) {
+        public Builder viewerProtocolPolicy(Output<String> viewerProtocolPolicy) {
             this.viewerProtocolPolicy = Objects.requireNonNull(viewerProtocolPolicy);
             return this;
         }
 
         public Builder viewerProtocolPolicy(String viewerProtocolPolicy) {
-            this.viewerProtocolPolicy = Input.of(Objects.requireNonNull(viewerProtocolPolicy));
+            this.viewerProtocolPolicy = Output.of(Objects.requireNonNull(viewerProtocolPolicy));
             return this;
         }
         public DistributionDefaultCacheBehaviorArgs build() {

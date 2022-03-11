@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.sqladmin_v1beta4.enums.BackupRunBackupKind;
 import io.pulumi.googlenative.sqladmin_v1beta4.enums.BackupRunStatus;
@@ -25,10 +25,10 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backupKind")
-      private final @Nullable Input<BackupRunBackupKind> backupKind;
+      private final @Nullable Output<BackupRunBackupKind> backupKind;
 
-    public Input<BackupRunBackupKind> getBackupKind() {
-        return this.backupKind == null ? Input.empty() : this.backupKind;
+    public Output<BackupRunBackupKind> getBackupKind() {
+        return this.backupKind == null ? Output.empty() : this.backupKind;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskEncryptionConfiguration")
-      private final @Nullable Input<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration;
+      private final @Nullable Output<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration;
 
-    public Input<DiskEncryptionConfigurationArgs> getDiskEncryptionConfiguration() {
-        return this.diskEncryptionConfiguration == null ? Input.empty() : this.diskEncryptionConfiguration;
+    public Output<DiskEncryptionConfigurationArgs> getDiskEncryptionConfiguration() {
+        return this.diskEncryptionConfiguration == null ? Output.empty() : this.diskEncryptionConfiguration;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskEncryptionStatus")
-      private final @Nullable Input<DiskEncryptionStatusArgs> diskEncryptionStatus;
+      private final @Nullable Output<DiskEncryptionStatusArgs> diskEncryptionStatus;
 
-    public Input<DiskEncryptionStatusArgs> getDiskEncryptionStatus() {
-        return this.diskEncryptionStatus == null ? Input.empty() : this.diskEncryptionStatus;
+    public Output<DiskEncryptionStatusArgs> getDiskEncryptionStatus() {
+        return this.diskEncryptionStatus == null ? Output.empty() : this.diskEncryptionStatus;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endTime")
-      private final @Nullable Input<String> endTime;
+      private final @Nullable Output<String> endTime;
 
-    public Input<String> getEndTime() {
-        return this.endTime == null ? Input.empty() : this.endTime;
+    public Output<String> getEndTime() {
+        return this.endTime == null ? Output.empty() : this.endTime;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enqueuedTime")
-      private final @Nullable Input<String> enqueuedTime;
+      private final @Nullable Output<String> enqueuedTime;
 
-    public Input<String> getEnqueuedTime() {
-        return this.enqueuedTime == null ? Input.empty() : this.enqueuedTime;
+    public Output<String> getEnqueuedTime() {
+        return this.enqueuedTime == null ? Output.empty() : this.enqueuedTime;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="error")
-      private final @Nullable Input<OperationErrorArgs> error;
+      private final @Nullable Output<OperationErrorArgs> error;
 
-    public Input<OperationErrorArgs> getError() {
-        return this.error == null ? Input.empty() : this.error;
+    public Output<OperationErrorArgs> getError() {
+        return this.error == null ? Output.empty() : this.error;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -113,9 +113,9 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instance", required=true)
-      private final Input<String> instance;
+      private final Output<String> instance;
 
-    public Input<String> getInstance() {
+    public Output<String> getInstance() {
         return this.instance;
     }
 
@@ -124,10 +124,10 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -135,17 +135,17 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -153,10 +153,10 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfLink")
-      private final @Nullable Input<String> selfLink;
+      private final @Nullable Output<String> selfLink;
 
-    public Input<String> getSelfLink() {
-        return this.selfLink == null ? Input.empty() : this.selfLink;
+    public Output<String> getSelfLink() {
+        return this.selfLink == null ? Output.empty() : this.selfLink;
     }
 
     /**
@@ -164,10 +164,10 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startTime")
-      private final @Nullable Input<String> startTime;
+      private final @Nullable Output<String> startTime;
 
-    public Input<String> getStartTime() {
-        return this.startTime == null ? Input.empty() : this.startTime;
+    public Output<String> getStartTime() {
+        return this.startTime == null ? Output.empty() : this.startTime;
     }
 
     /**
@@ -175,10 +175,10 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<BackupRunStatus> status;
+      private final @Nullable Output<BackupRunStatus> status;
 
-    public Input<BackupRunStatus> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<BackupRunStatus> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -186,10 +186,10 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<BackupRunType> type;
+      private final @Nullable Output<BackupRunType> type;
 
-    public Input<BackupRunType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<BackupRunType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -197,30 +197,30 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="windowStartTime")
-      private final @Nullable Input<String> windowStartTime;
+      private final @Nullable Output<String> windowStartTime;
 
-    public Input<String> getWindowStartTime() {
-        return this.windowStartTime == null ? Input.empty() : this.windowStartTime;
+    public Output<String> getWindowStartTime() {
+        return this.windowStartTime == null ? Output.empty() : this.windowStartTime;
     }
 
     public BackupRunArgs(
-        @Nullable Input<BackupRunBackupKind> backupKind,
-        @Nullable Input<String> description,
-        @Nullable Input<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration,
-        @Nullable Input<DiskEncryptionStatusArgs> diskEncryptionStatus,
-        @Nullable Input<String> endTime,
-        @Nullable Input<String> enqueuedTime,
-        @Nullable Input<OperationErrorArgs> error,
-        @Nullable Input<String> id,
-        Input<String> instance,
-        @Nullable Input<String> kind,
-        @Nullable Input<String> location,
-        @Nullable Input<String> project,
-        @Nullable Input<String> selfLink,
-        @Nullable Input<String> startTime,
-        @Nullable Input<BackupRunStatus> status,
-        @Nullable Input<BackupRunType> type,
-        @Nullable Input<String> windowStartTime) {
+        @Nullable Output<BackupRunBackupKind> backupKind,
+        @Nullable Output<String> description,
+        @Nullable Output<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration,
+        @Nullable Output<DiskEncryptionStatusArgs> diskEncryptionStatus,
+        @Nullable Output<String> endTime,
+        @Nullable Output<String> enqueuedTime,
+        @Nullable Output<OperationErrorArgs> error,
+        @Nullable Output<String> id,
+        Output<String> instance,
+        @Nullable Output<String> kind,
+        @Nullable Output<String> location,
+        @Nullable Output<String> project,
+        @Nullable Output<String> selfLink,
+        @Nullable Output<String> startTime,
+        @Nullable Output<BackupRunStatus> status,
+        @Nullable Output<BackupRunType> type,
+        @Nullable Output<String> windowStartTime) {
         this.backupKind = backupKind;
         this.description = description;
         this.diskEncryptionConfiguration = diskEncryptionConfiguration;
@@ -241,23 +241,23 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BackupRunArgs() {
-        this.backupKind = Input.empty();
-        this.description = Input.empty();
-        this.diskEncryptionConfiguration = Input.empty();
-        this.diskEncryptionStatus = Input.empty();
-        this.endTime = Input.empty();
-        this.enqueuedTime = Input.empty();
-        this.error = Input.empty();
-        this.id = Input.empty();
-        this.instance = Input.empty();
-        this.kind = Input.empty();
-        this.location = Input.empty();
-        this.project = Input.empty();
-        this.selfLink = Input.empty();
-        this.startTime = Input.empty();
-        this.status = Input.empty();
-        this.type = Input.empty();
-        this.windowStartTime = Input.empty();
+        this.backupKind = Output.empty();
+        this.description = Output.empty();
+        this.diskEncryptionConfiguration = Output.empty();
+        this.diskEncryptionStatus = Output.empty();
+        this.endTime = Output.empty();
+        this.enqueuedTime = Output.empty();
+        this.error = Output.empty();
+        this.id = Output.empty();
+        this.instance = Output.empty();
+        this.kind = Output.empty();
+        this.location = Output.empty();
+        this.project = Output.empty();
+        this.selfLink = Output.empty();
+        this.startTime = Output.empty();
+        this.status = Output.empty();
+        this.type = Output.empty();
+        this.windowStartTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -269,23 +269,23 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<BackupRunBackupKind> backupKind;
-        private @Nullable Input<String> description;
-        private @Nullable Input<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration;
-        private @Nullable Input<DiskEncryptionStatusArgs> diskEncryptionStatus;
-        private @Nullable Input<String> endTime;
-        private @Nullable Input<String> enqueuedTime;
-        private @Nullable Input<OperationErrorArgs> error;
-        private @Nullable Input<String> id;
-        private Input<String> instance;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> selfLink;
-        private @Nullable Input<String> startTime;
-        private @Nullable Input<BackupRunStatus> status;
-        private @Nullable Input<BackupRunType> type;
-        private @Nullable Input<String> windowStartTime;
+        private @Nullable Output<BackupRunBackupKind> backupKind;
+        private @Nullable Output<String> description;
+        private @Nullable Output<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration;
+        private @Nullable Output<DiskEncryptionStatusArgs> diskEncryptionStatus;
+        private @Nullable Output<String> endTime;
+        private @Nullable Output<String> enqueuedTime;
+        private @Nullable Output<OperationErrorArgs> error;
+        private @Nullable Output<String> id;
+        private Output<String> instance;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> selfLink;
+        private @Nullable Output<String> startTime;
+        private @Nullable Output<BackupRunStatus> status;
+        private @Nullable Output<BackupRunType> type;
+        private @Nullable Output<String> windowStartTime;
 
         public Builder() {
     	      // Empty
@@ -312,173 +312,173 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
     	      this.windowStartTime = defaults.windowStartTime;
         }
 
-        public Builder backupKind(@Nullable Input<BackupRunBackupKind> backupKind) {
+        public Builder backupKind(@Nullable Output<BackupRunBackupKind> backupKind) {
             this.backupKind = backupKind;
             return this;
         }
 
         public Builder backupKind(@Nullable BackupRunBackupKind backupKind) {
-            this.backupKind = Input.ofNullable(backupKind);
+            this.backupKind = Output.ofNullable(backupKind);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder diskEncryptionConfiguration(@Nullable Input<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration) {
+        public Builder diskEncryptionConfiguration(@Nullable Output<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration) {
             this.diskEncryptionConfiguration = diskEncryptionConfiguration;
             return this;
         }
 
         public Builder diskEncryptionConfiguration(@Nullable DiskEncryptionConfigurationArgs diskEncryptionConfiguration) {
-            this.diskEncryptionConfiguration = Input.ofNullable(diskEncryptionConfiguration);
+            this.diskEncryptionConfiguration = Output.ofNullable(diskEncryptionConfiguration);
             return this;
         }
 
-        public Builder diskEncryptionStatus(@Nullable Input<DiskEncryptionStatusArgs> diskEncryptionStatus) {
+        public Builder diskEncryptionStatus(@Nullable Output<DiskEncryptionStatusArgs> diskEncryptionStatus) {
             this.diskEncryptionStatus = diskEncryptionStatus;
             return this;
         }
 
         public Builder diskEncryptionStatus(@Nullable DiskEncryptionStatusArgs diskEncryptionStatus) {
-            this.diskEncryptionStatus = Input.ofNullable(diskEncryptionStatus);
+            this.diskEncryptionStatus = Output.ofNullable(diskEncryptionStatus);
             return this;
         }
 
-        public Builder endTime(@Nullable Input<String> endTime) {
+        public Builder endTime(@Nullable Output<String> endTime) {
             this.endTime = endTime;
             return this;
         }
 
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = Input.ofNullable(endTime);
+            this.endTime = Output.ofNullable(endTime);
             return this;
         }
 
-        public Builder enqueuedTime(@Nullable Input<String> enqueuedTime) {
+        public Builder enqueuedTime(@Nullable Output<String> enqueuedTime) {
             this.enqueuedTime = enqueuedTime;
             return this;
         }
 
         public Builder enqueuedTime(@Nullable String enqueuedTime) {
-            this.enqueuedTime = Input.ofNullable(enqueuedTime);
+            this.enqueuedTime = Output.ofNullable(enqueuedTime);
             return this;
         }
 
-        public Builder error(@Nullable Input<OperationErrorArgs> error) {
+        public Builder error(@Nullable Output<OperationErrorArgs> error) {
             this.error = error;
             return this;
         }
 
         public Builder error(@Nullable OperationErrorArgs error) {
-            this.error = Input.ofNullable(error);
+            this.error = Output.ofNullable(error);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder instance(Input<String> instance) {
+        public Builder instance(Output<String> instance) {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
 
         public Builder instance(String instance) {
-            this.instance = Input.of(Objects.requireNonNull(instance));
+            this.instance = Output.of(Objects.requireNonNull(instance));
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder selfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Input.ofNullable(selfLink);
+            this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
 
-        public Builder startTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Input.ofNullable(startTime);
+            this.startTime = Output.ofNullable(startTime);
             return this;
         }
 
-        public Builder status(@Nullable Input<BackupRunStatus> status) {
+        public Builder status(@Nullable Output<BackupRunStatus> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable BackupRunStatus status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder type(@Nullable Input<BackupRunType> type) {
+        public Builder type(@Nullable Output<BackupRunType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable BackupRunType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder windowStartTime(@Nullable Input<String> windowStartTime) {
+        public Builder windowStartTime(@Nullable Output<String> windowStartTime) {
             this.windowStartTime = windowStartTime;
             return this;
         }
 
         public Builder windowStartTime(@Nullable String windowStartTime) {
-            this.windowStartTime = Input.ofNullable(windowStartTime);
+            this.windowStartTime = Output.ofNullable(windowStartTime);
             return this;
         }
         public BackupRunArgs build() {

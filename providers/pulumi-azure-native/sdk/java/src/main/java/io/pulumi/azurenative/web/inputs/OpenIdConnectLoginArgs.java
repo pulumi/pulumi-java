@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class OpenIdConnectLoginArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="nameClaimType")
-      private final @Nullable Input<String> nameClaimType;
+      private final @Nullable Output<String> nameClaimType;
 
-    public Input<String> getNameClaimType() {
-        return this.nameClaimType == null ? Input.empty() : this.nameClaimType;
+    public Output<String> getNameClaimType() {
+        return this.nameClaimType == null ? Output.empty() : this.nameClaimType;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class OpenIdConnectLoginArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="scopes")
-      private final @Nullable Input<List<String>> scopes;
+      private final @Nullable Output<List<String>> scopes;
 
-    public Input<List<String>> getScopes() {
-        return this.scopes == null ? Input.empty() : this.scopes;
+    public Output<List<String>> getScopes() {
+        return this.scopes == null ? Output.empty() : this.scopes;
     }
 
     public OpenIdConnectLoginArgs(
-        @Nullable Input<String> nameClaimType,
-        @Nullable Input<List<String>> scopes) {
+        @Nullable Output<String> nameClaimType,
+        @Nullable Output<List<String>> scopes) {
         this.nameClaimType = nameClaimType;
         this.scopes = scopes;
     }
 
     private OpenIdConnectLoginArgs() {
-        this.nameClaimType = Input.empty();
-        this.scopes = Input.empty();
+        this.nameClaimType = Output.empty();
+        this.scopes = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class OpenIdConnectLoginArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> nameClaimType;
-        private @Nullable Input<List<String>> scopes;
+        private @Nullable Output<String> nameClaimType;
+        private @Nullable Output<List<String>> scopes;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class OpenIdConnectLoginArgs extends io.pulumi.resources.ResourceAr
     	      this.scopes = defaults.scopes;
         }
 
-        public Builder nameClaimType(@Nullable Input<String> nameClaimType) {
+        public Builder nameClaimType(@Nullable Output<String> nameClaimType) {
             this.nameClaimType = nameClaimType;
             return this;
         }
 
         public Builder nameClaimType(@Nullable String nameClaimType) {
-            this.nameClaimType = Input.ofNullable(nameClaimType);
+            this.nameClaimType = Output.ofNullable(nameClaimType);
             return this;
         }
 
-        public Builder scopes(@Nullable Input<List<String>> scopes) {
+        public Builder scopes(@Nullable Output<List<String>> scopes) {
             this.scopes = scopes;
             return this;
         }
 
         public Builder scopes(@Nullable List<String> scopes) {
-            this.scopes = Input.ofNullable(scopes);
+            this.scopes = Output.ofNullable(scopes);
             return this;
         }
         public OpenIdConnectLoginArgs build() {

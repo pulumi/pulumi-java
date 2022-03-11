@@ -4,7 +4,7 @@
 package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.aws.iot.inputs.ThingGroupPropertiesAttributePayloadArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class ThingGroupPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="attributePayload")
-      private final @Nullable Input<ThingGroupPropertiesAttributePayloadArgs> attributePayload;
+      private final @Nullable Output<ThingGroupPropertiesAttributePayloadArgs> attributePayload;
 
-    public Input<ThingGroupPropertiesAttributePayloadArgs> getAttributePayload() {
-        return this.attributePayload == null ? Input.empty() : this.attributePayload;
+    public Output<ThingGroupPropertiesAttributePayloadArgs> getAttributePayload() {
+        return this.attributePayload == null ? Output.empty() : this.attributePayload;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class ThingGroupPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     public ThingGroupPropertiesArgs(
-        @Nullable Input<ThingGroupPropertiesAttributePayloadArgs> attributePayload,
-        @Nullable Input<String> description) {
+        @Nullable Output<ThingGroupPropertiesAttributePayloadArgs> attributePayload,
+        @Nullable Output<String> description) {
         this.attributePayload = attributePayload;
         this.description = description;
     }
 
     private ThingGroupPropertiesArgs() {
-        this.attributePayload = Input.empty();
-        this.description = Input.empty();
+        this.attributePayload = Output.empty();
+        this.description = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class ThingGroupPropertiesArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<ThingGroupPropertiesAttributePayloadArgs> attributePayload;
-        private @Nullable Input<String> description;
+        private @Nullable Output<ThingGroupPropertiesAttributePayloadArgs> attributePayload;
+        private @Nullable Output<String> description;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class ThingGroupPropertiesArgs extends io.pulumi.resources.Resource
     	      this.description = defaults.description;
         }
 
-        public Builder attributePayload(@Nullable Input<ThingGroupPropertiesAttributePayloadArgs> attributePayload) {
+        public Builder attributePayload(@Nullable Output<ThingGroupPropertiesAttributePayloadArgs> attributePayload) {
             this.attributePayload = attributePayload;
             return this;
         }
 
         public Builder attributePayload(@Nullable ThingGroupPropertiesAttributePayloadArgs attributePayload) {
-            this.attributePayload = Input.ofNullable(attributePayload);
+            this.attributePayload = Output.ofNullable(attributePayload);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
         public ThingGroupPropertiesArgs build() {

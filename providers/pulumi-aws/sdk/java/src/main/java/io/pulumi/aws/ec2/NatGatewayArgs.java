@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allocationId")
-      private final @Nullable Input<String> allocationId;
+      private final @Nullable Output<String> allocationId;
 
-    public Input<String> getAllocationId() {
-        return this.allocationId == null ? Input.empty() : this.allocationId;
+    public Output<String> getAllocationId() {
+        return this.allocationId == null ? Output.empty() : this.allocationId;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectivityType")
-      private final @Nullable Input<String> connectivityType;
+      private final @Nullable Output<String> connectivityType;
 
-    public Input<String> getConnectivityType() {
-        return this.connectivityType == null ? Input.empty() : this.connectivityType;
+    public Output<String> getConnectivityType() {
+        return this.connectivityType == null ? Output.empty() : this.connectivityType;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetId", required=true)
-      private final Input<String> subnetId;
+      private final Output<String> subnetId;
 
-    public Input<String> getSubnetId() {
+    public Output<String> getSubnetId() {
         return this.subnetId;
     }
 
@@ -53,17 +53,17 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public NatGatewayArgs(
-        @Nullable Input<String> allocationId,
-        @Nullable Input<String> connectivityType,
-        Input<String> subnetId,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> allocationId,
+        @Nullable Output<String> connectivityType,
+        Output<String> subnetId,
+        @Nullable Output<Map<String,String>> tags) {
         this.allocationId = allocationId;
         this.connectivityType = connectivityType;
         this.subnetId = Objects.requireNonNull(subnetId, "expected parameter 'subnetId' to be non-null");
@@ -71,10 +71,10 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NatGatewayArgs() {
-        this.allocationId = Input.empty();
-        this.connectivityType = Input.empty();
-        this.subnetId = Input.empty();
-        this.tags = Input.empty();
+        this.allocationId = Output.empty();
+        this.connectivityType = Output.empty();
+        this.subnetId = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> allocationId;
-        private @Nullable Input<String> connectivityType;
-        private Input<String> subnetId;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> allocationId;
+        private @Nullable Output<String> connectivityType;
+        private Output<String> subnetId;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder allocationId(@Nullable Input<String> allocationId) {
+        public Builder allocationId(@Nullable Output<String> allocationId) {
             this.allocationId = allocationId;
             return this;
         }
 
         public Builder allocationId(@Nullable String allocationId) {
-            this.allocationId = Input.ofNullable(allocationId);
+            this.allocationId = Output.ofNullable(allocationId);
             return this;
         }
 
-        public Builder connectivityType(@Nullable Input<String> connectivityType) {
+        public Builder connectivityType(@Nullable Output<String> connectivityType) {
             this.connectivityType = connectivityType;
             return this;
         }
 
         public Builder connectivityType(@Nullable String connectivityType) {
-            this.connectivityType = Input.ofNullable(connectivityType);
+            this.connectivityType = Output.ofNullable(connectivityType);
             return this;
         }
 
-        public Builder subnetId(Input<String> subnetId) {
+        public Builder subnetId(Output<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
 
         public Builder subnetId(String subnetId) {
-            this.subnetId = Input.of(Objects.requireNonNull(subnetId));
+            this.subnetId = Output.of(Objects.requireNonNull(subnetId));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public NatGatewayArgs build() {

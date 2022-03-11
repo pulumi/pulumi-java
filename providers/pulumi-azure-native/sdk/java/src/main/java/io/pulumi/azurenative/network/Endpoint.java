@@ -8,7 +8,6 @@ import io.pulumi.azurenative.network.EndpointArgs;
 import io.pulumi.azurenative.network.outputs.EndpointPropertiesResponseCustomHeaders;
 import io.pulumi.azurenative.network.outputs.EndpointPropertiesResponseSubnets;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -283,24 +282,24 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Endpoint(String name, EndpointArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:Endpoint", name, args == null ? EndpointArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:network:Endpoint", name, args == null ? EndpointArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Endpoint(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Endpoint(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:Endpoint", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:network/v20151101:Endpoint").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20170301:Endpoint").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20170501:Endpoint").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180201:Endpoint").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180301:Endpoint").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180401:Endpoint").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180801:Endpoint").build())
+                Output.of(Alias.builder().setType("azure-native:network/v20151101:Endpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170301:Endpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170501:Endpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180201:Endpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180301:Endpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180401:Endpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180801:Endpoint").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -314,7 +313,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Endpoint get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Endpoint get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Endpoint(name, id, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apps_v1beta2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.apps_v1beta2.inputs.StatefulSetUpdateStrategyArgs;
 import io.pulumi.kubernetes.core_v1.inputs.PersistentVolumeClaimArgs;
@@ -29,10 +29,10 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="podManagementPolicy")
-      private final @Nullable Input<String> podManagementPolicy;
+      private final @Nullable Output<String> podManagementPolicy;
 
-    public Input<String> getPodManagementPolicy() {
-        return this.podManagementPolicy == null ? Input.empty() : this.podManagementPolicy;
+    public Output<String> getPodManagementPolicy() {
+        return this.podManagementPolicy == null ? Output.empty() : this.podManagementPolicy;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="replicas")
-      private final @Nullable Input<Integer> replicas;
+      private final @Nullable Output<Integer> replicas;
 
-    public Input<Integer> getReplicas() {
-        return this.replicas == null ? Input.empty() : this.replicas;
+    public Output<Integer> getReplicas() {
+        return this.replicas == null ? Output.empty() : this.replicas;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="revisionHistoryLimit")
-      private final @Nullable Input<Integer> revisionHistoryLimit;
+      private final @Nullable Output<Integer> revisionHistoryLimit;
 
-    public Input<Integer> getRevisionHistoryLimit() {
-        return this.revisionHistoryLimit == null ? Input.empty() : this.revisionHistoryLimit;
+    public Output<Integer> getRevisionHistoryLimit() {
+        return this.revisionHistoryLimit == null ? Output.empty() : this.revisionHistoryLimit;
     }
 
     /**
@@ -62,9 +62,9 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="selector", required=true)
-      private final Input<LabelSelectorArgs> selector;
+      private final Output<LabelSelectorArgs> selector;
 
-    public Input<LabelSelectorArgs> getSelector() {
+    public Output<LabelSelectorArgs> getSelector() {
         return this.selector;
     }
 
@@ -73,9 +73,9 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="serviceName", required=true)
-      private final Input<String> serviceName;
+      private final Output<String> serviceName;
 
-    public Input<String> getServiceName() {
+    public Output<String> getServiceName() {
         return this.serviceName;
     }
 
@@ -84,9 +84,9 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="template", required=true)
-      private final Input<PodTemplateSpecArgs> template;
+      private final Output<PodTemplateSpecArgs> template;
 
-    public Input<PodTemplateSpecArgs> getTemplate() {
+    public Output<PodTemplateSpecArgs> getTemplate() {
         return this.template;
     }
 
@@ -95,10 +95,10 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="updateStrategy")
-      private final @Nullable Input<StatefulSetUpdateStrategyArgs> updateStrategy;
+      private final @Nullable Output<StatefulSetUpdateStrategyArgs> updateStrategy;
 
-    public Input<StatefulSetUpdateStrategyArgs> getUpdateStrategy() {
-        return this.updateStrategy == null ? Input.empty() : this.updateStrategy;
+    public Output<StatefulSetUpdateStrategyArgs> getUpdateStrategy() {
+        return this.updateStrategy == null ? Output.empty() : this.updateStrategy;
     }
 
     /**
@@ -106,21 +106,21 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="volumeClaimTemplates")
-      private final @Nullable Input<List<PersistentVolumeClaimArgs>> volumeClaimTemplates;
+      private final @Nullable Output<List<PersistentVolumeClaimArgs>> volumeClaimTemplates;
 
-    public Input<List<PersistentVolumeClaimArgs>> getVolumeClaimTemplates() {
-        return this.volumeClaimTemplates == null ? Input.empty() : this.volumeClaimTemplates;
+    public Output<List<PersistentVolumeClaimArgs>> getVolumeClaimTemplates() {
+        return this.volumeClaimTemplates == null ? Output.empty() : this.volumeClaimTemplates;
     }
 
     public StatefulSetSpecArgs(
-        @Nullable Input<String> podManagementPolicy,
-        @Nullable Input<Integer> replicas,
-        @Nullable Input<Integer> revisionHistoryLimit,
-        Input<LabelSelectorArgs> selector,
-        Input<String> serviceName,
-        Input<PodTemplateSpecArgs> template,
-        @Nullable Input<StatefulSetUpdateStrategyArgs> updateStrategy,
-        @Nullable Input<List<PersistentVolumeClaimArgs>> volumeClaimTemplates) {
+        @Nullable Output<String> podManagementPolicy,
+        @Nullable Output<Integer> replicas,
+        @Nullable Output<Integer> revisionHistoryLimit,
+        Output<LabelSelectorArgs> selector,
+        Output<String> serviceName,
+        Output<PodTemplateSpecArgs> template,
+        @Nullable Output<StatefulSetUpdateStrategyArgs> updateStrategy,
+        @Nullable Output<List<PersistentVolumeClaimArgs>> volumeClaimTemplates) {
         this.podManagementPolicy = podManagementPolicy;
         this.replicas = replicas;
         this.revisionHistoryLimit = revisionHistoryLimit;
@@ -132,14 +132,14 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private StatefulSetSpecArgs() {
-        this.podManagementPolicy = Input.empty();
-        this.replicas = Input.empty();
-        this.revisionHistoryLimit = Input.empty();
-        this.selector = Input.empty();
-        this.serviceName = Input.empty();
-        this.template = Input.empty();
-        this.updateStrategy = Input.empty();
-        this.volumeClaimTemplates = Input.empty();
+        this.podManagementPolicy = Output.empty();
+        this.replicas = Output.empty();
+        this.revisionHistoryLimit = Output.empty();
+        this.selector = Output.empty();
+        this.serviceName = Output.empty();
+        this.template = Output.empty();
+        this.updateStrategy = Output.empty();
+        this.volumeClaimTemplates = Output.empty();
     }
 
     public static Builder builder() {
@@ -151,14 +151,14 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> podManagementPolicy;
-        private @Nullable Input<Integer> replicas;
-        private @Nullable Input<Integer> revisionHistoryLimit;
-        private Input<LabelSelectorArgs> selector;
-        private Input<String> serviceName;
-        private Input<PodTemplateSpecArgs> template;
-        private @Nullable Input<StatefulSetUpdateStrategyArgs> updateStrategy;
-        private @Nullable Input<List<PersistentVolumeClaimArgs>> volumeClaimTemplates;
+        private @Nullable Output<String> podManagementPolicy;
+        private @Nullable Output<Integer> replicas;
+        private @Nullable Output<Integer> revisionHistoryLimit;
+        private Output<LabelSelectorArgs> selector;
+        private Output<String> serviceName;
+        private Output<PodTemplateSpecArgs> template;
+        private @Nullable Output<StatefulSetUpdateStrategyArgs> updateStrategy;
+        private @Nullable Output<List<PersistentVolumeClaimArgs>> volumeClaimTemplates;
 
         public Builder() {
     	      // Empty
@@ -176,83 +176,83 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
     	      this.volumeClaimTemplates = defaults.volumeClaimTemplates;
         }
 
-        public Builder podManagementPolicy(@Nullable Input<String> podManagementPolicy) {
+        public Builder podManagementPolicy(@Nullable Output<String> podManagementPolicy) {
             this.podManagementPolicy = podManagementPolicy;
             return this;
         }
 
         public Builder podManagementPolicy(@Nullable String podManagementPolicy) {
-            this.podManagementPolicy = Input.ofNullable(podManagementPolicy);
+            this.podManagementPolicy = Output.ofNullable(podManagementPolicy);
             return this;
         }
 
-        public Builder replicas(@Nullable Input<Integer> replicas) {
+        public Builder replicas(@Nullable Output<Integer> replicas) {
             this.replicas = replicas;
             return this;
         }
 
         public Builder replicas(@Nullable Integer replicas) {
-            this.replicas = Input.ofNullable(replicas);
+            this.replicas = Output.ofNullable(replicas);
             return this;
         }
 
-        public Builder revisionHistoryLimit(@Nullable Input<Integer> revisionHistoryLimit) {
+        public Builder revisionHistoryLimit(@Nullable Output<Integer> revisionHistoryLimit) {
             this.revisionHistoryLimit = revisionHistoryLimit;
             return this;
         }
 
         public Builder revisionHistoryLimit(@Nullable Integer revisionHistoryLimit) {
-            this.revisionHistoryLimit = Input.ofNullable(revisionHistoryLimit);
+            this.revisionHistoryLimit = Output.ofNullable(revisionHistoryLimit);
             return this;
         }
 
-        public Builder selector(Input<LabelSelectorArgs> selector) {
+        public Builder selector(Output<LabelSelectorArgs> selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
 
         public Builder selector(LabelSelectorArgs selector) {
-            this.selector = Input.of(Objects.requireNonNull(selector));
+            this.selector = Output.of(Objects.requireNonNull(selector));
             return this;
         }
 
-        public Builder serviceName(Input<String> serviceName) {
+        public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Input.of(Objects.requireNonNull(serviceName));
+            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder template(Input<PodTemplateSpecArgs> template) {
+        public Builder template(Output<PodTemplateSpecArgs> template) {
             this.template = Objects.requireNonNull(template);
             return this;
         }
 
         public Builder template(PodTemplateSpecArgs template) {
-            this.template = Input.of(Objects.requireNonNull(template));
+            this.template = Output.of(Objects.requireNonNull(template));
             return this;
         }
 
-        public Builder updateStrategy(@Nullable Input<StatefulSetUpdateStrategyArgs> updateStrategy) {
+        public Builder updateStrategy(@Nullable Output<StatefulSetUpdateStrategyArgs> updateStrategy) {
             this.updateStrategy = updateStrategy;
             return this;
         }
 
         public Builder updateStrategy(@Nullable StatefulSetUpdateStrategyArgs updateStrategy) {
-            this.updateStrategy = Input.ofNullable(updateStrategy);
+            this.updateStrategy = Output.ofNullable(updateStrategy);
             return this;
         }
 
-        public Builder volumeClaimTemplates(@Nullable Input<List<PersistentVolumeClaimArgs>> volumeClaimTemplates) {
+        public Builder volumeClaimTemplates(@Nullable Output<List<PersistentVolumeClaimArgs>> volumeClaimTemplates) {
             this.volumeClaimTemplates = volumeClaimTemplates;
             return this;
         }
 
         public Builder volumeClaimTemplates(@Nullable List<PersistentVolumeClaimArgs> volumeClaimTemplates) {
-            this.volumeClaimTemplates = Input.ofNullable(volumeClaimTemplates);
+            this.volumeClaimTemplates = Output.ofNullable(volumeClaimTemplates);
             return this;
         }
         public StatefulSetSpecArgs build() {

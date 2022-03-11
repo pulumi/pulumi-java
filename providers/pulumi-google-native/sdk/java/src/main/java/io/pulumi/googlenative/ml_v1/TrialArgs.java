@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.ml_v1.enums.TrialState;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1_Trial_ParameterArgs;
@@ -23,17 +23,17 @@ public final class TrialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="finalMeasurement")
-      private final @Nullable Input<GoogleCloudMlV1__MeasurementArgs> finalMeasurement;
+      private final @Nullable Output<GoogleCloudMlV1__MeasurementArgs> finalMeasurement;
 
-    public Input<GoogleCloudMlV1__MeasurementArgs> getFinalMeasurement() {
-        return this.finalMeasurement == null ? Input.empty() : this.finalMeasurement;
+    public Output<GoogleCloudMlV1__MeasurementArgs> getFinalMeasurement() {
+        return this.finalMeasurement == null ? Output.empty() : this.finalMeasurement;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class TrialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="measurements")
-      private final @Nullable Input<List<GoogleCloudMlV1__MeasurementArgs>> measurements;
+      private final @Nullable Output<List<GoogleCloudMlV1__MeasurementArgs>> measurements;
 
-    public Input<List<GoogleCloudMlV1__MeasurementArgs>> getMeasurements() {
-        return this.measurements == null ? Input.empty() : this.measurements;
+    public Output<List<GoogleCloudMlV1__MeasurementArgs>> getMeasurements() {
+        return this.measurements == null ? Output.empty() : this.measurements;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class TrialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<List<GoogleCloudMlV1_Trial_ParameterArgs>> parameters;
+      private final @Nullable Output<List<GoogleCloudMlV1_Trial_ParameterArgs>> parameters;
 
-    public Input<List<GoogleCloudMlV1_Trial_ParameterArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<List<GoogleCloudMlV1_Trial_ParameterArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -70,27 +70,27 @@ public final class TrialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<TrialState> state;
+      private final @Nullable Output<TrialState> state;
 
-    public Input<TrialState> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<TrialState> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     @InputImport(name="studyId", required=true)
-      private final Input<String> studyId;
+      private final Output<String> studyId;
 
-    public Input<String> getStudyId() {
+    public Output<String> getStudyId() {
         return this.studyId;
     }
 
     public TrialArgs(
-        @Nullable Input<GoogleCloudMlV1__MeasurementArgs> finalMeasurement,
-        @Nullable Input<String> location,
-        @Nullable Input<List<GoogleCloudMlV1__MeasurementArgs>> measurements,
-        @Nullable Input<List<GoogleCloudMlV1_Trial_ParameterArgs>> parameters,
-        @Nullable Input<String> project,
-        @Nullable Input<TrialState> state,
-        Input<String> studyId) {
+        @Nullable Output<GoogleCloudMlV1__MeasurementArgs> finalMeasurement,
+        @Nullable Output<String> location,
+        @Nullable Output<List<GoogleCloudMlV1__MeasurementArgs>> measurements,
+        @Nullable Output<List<GoogleCloudMlV1_Trial_ParameterArgs>> parameters,
+        @Nullable Output<String> project,
+        @Nullable Output<TrialState> state,
+        Output<String> studyId) {
         this.finalMeasurement = finalMeasurement;
         this.location = location;
         this.measurements = measurements;
@@ -101,13 +101,13 @@ public final class TrialArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TrialArgs() {
-        this.finalMeasurement = Input.empty();
-        this.location = Input.empty();
-        this.measurements = Input.empty();
-        this.parameters = Input.empty();
-        this.project = Input.empty();
-        this.state = Input.empty();
-        this.studyId = Input.empty();
+        this.finalMeasurement = Output.empty();
+        this.location = Output.empty();
+        this.measurements = Output.empty();
+        this.parameters = Output.empty();
+        this.project = Output.empty();
+        this.state = Output.empty();
+        this.studyId = Output.empty();
     }
 
     public static Builder builder() {
@@ -119,13 +119,13 @@ public final class TrialArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<GoogleCloudMlV1__MeasurementArgs> finalMeasurement;
-        private @Nullable Input<String> location;
-        private @Nullable Input<List<GoogleCloudMlV1__MeasurementArgs>> measurements;
-        private @Nullable Input<List<GoogleCloudMlV1_Trial_ParameterArgs>> parameters;
-        private @Nullable Input<String> project;
-        private @Nullable Input<TrialState> state;
-        private Input<String> studyId;
+        private @Nullable Output<GoogleCloudMlV1__MeasurementArgs> finalMeasurement;
+        private @Nullable Output<String> location;
+        private @Nullable Output<List<GoogleCloudMlV1__MeasurementArgs>> measurements;
+        private @Nullable Output<List<GoogleCloudMlV1_Trial_ParameterArgs>> parameters;
+        private @Nullable Output<String> project;
+        private @Nullable Output<TrialState> state;
+        private Output<String> studyId;
 
         public Builder() {
     	      // Empty
@@ -142,73 +142,73 @@ public final class TrialArgs extends io.pulumi.resources.ResourceArgs {
     	      this.studyId = defaults.studyId;
         }
 
-        public Builder finalMeasurement(@Nullable Input<GoogleCloudMlV1__MeasurementArgs> finalMeasurement) {
+        public Builder finalMeasurement(@Nullable Output<GoogleCloudMlV1__MeasurementArgs> finalMeasurement) {
             this.finalMeasurement = finalMeasurement;
             return this;
         }
 
         public Builder finalMeasurement(@Nullable GoogleCloudMlV1__MeasurementArgs finalMeasurement) {
-            this.finalMeasurement = Input.ofNullable(finalMeasurement);
+            this.finalMeasurement = Output.ofNullable(finalMeasurement);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder measurements(@Nullable Input<List<GoogleCloudMlV1__MeasurementArgs>> measurements) {
+        public Builder measurements(@Nullable Output<List<GoogleCloudMlV1__MeasurementArgs>> measurements) {
             this.measurements = measurements;
             return this;
         }
 
         public Builder measurements(@Nullable List<GoogleCloudMlV1__MeasurementArgs> measurements) {
-            this.measurements = Input.ofNullable(measurements);
+            this.measurements = Output.ofNullable(measurements);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<List<GoogleCloudMlV1_Trial_ParameterArgs>> parameters) {
+        public Builder parameters(@Nullable Output<List<GoogleCloudMlV1_Trial_ParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable List<GoogleCloudMlV1_Trial_ParameterArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder state(@Nullable Input<TrialState> state) {
+        public Builder state(@Nullable Output<TrialState> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable TrialState state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
 
-        public Builder studyId(Input<String> studyId) {
+        public Builder studyId(Output<String> studyId) {
             this.studyId = Objects.requireNonNull(studyId);
             return this;
         }
 
         public Builder studyId(String studyId) {
-            this.studyId = Input.of(Objects.requireNonNull(studyId));
+            this.studyId = Output.of(Objects.requireNonNull(studyId));
             return this;
         }
         public TrialArgs build() {

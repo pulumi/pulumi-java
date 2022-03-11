@@ -3,7 +3,7 @@
 
 package io.pulumi.example;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.example.inputs.Foo;
 import io.pulumi.example.inputs.FooArgs;
@@ -77,10 +77,10 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     @InputImport(name="foo")
-      private final @Nullable Input<FooArgs> foo;
+      private final @Nullable Output<FooArgs> foo;
 
-    public Input<FooArgs> getFoo() {
-        return this.foo == null ? Input.empty() : this.foo;
+    public Output<FooArgs> getFoo() {
+        return this.foo == null ? Output.empty() : this.foo;
     }
 
     public ComponentArgs(
@@ -92,7 +92,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
         @Nullable Integer d,
         String e,
         @Nullable String f,
-        @Nullable Input<FooArgs> foo) {
+        @Nullable Output<FooArgs> foo) {
         this.a = Objects.requireNonNull(a, "expected parameter 'a' to be non-null");
         this.b = b;
         this.bar = bar;
@@ -113,7 +113,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
         this.d = null;
         this.e = null;
         this.f = null;
-        this.foo = Input.empty();
+        this.foo = Output.empty();
     }
 
     public static Builder builder() {
@@ -133,7 +133,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
         private @Nullable Integer d;
         private String e;
         private @Nullable String f;
-        private @Nullable Input<FooArgs> foo;
+        private @Nullable Output<FooArgs> foo;
 
         public Builder() {
     	      // Empty
@@ -192,13 +192,13 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
 
-        public Builder foo(@Nullable Input<FooArgs> foo) {
+        public Builder foo(@Nullable Output<FooArgs> foo) {
             this.foo = foo;
             return this;
         }
 
         public Builder foo(@Nullable FooArgs foo) {
-            this.foo = Input.ofNullable(foo);
+            this.foo = Output.ofNullable(foo);
             return this;
         }
         public ComponentArgs build() {

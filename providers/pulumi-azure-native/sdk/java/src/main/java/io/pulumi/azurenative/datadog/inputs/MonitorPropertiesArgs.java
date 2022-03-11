@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datadog.enums.MonitoringStatus;
 import io.pulumi.azurenative.datadog.inputs.DatadogOrganizationPropertiesArgs;
 import io.pulumi.azurenative.datadog.inputs.UserInfoArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -27,10 +27,10 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="datadogOrganizationProperties")
-      private final @Nullable Input<DatadogOrganizationPropertiesArgs> datadogOrganizationProperties;
+      private final @Nullable Output<DatadogOrganizationPropertiesArgs> datadogOrganizationProperties;
 
-    public Input<DatadogOrganizationPropertiesArgs> getDatadogOrganizationProperties() {
-        return this.datadogOrganizationProperties == null ? Input.empty() : this.datadogOrganizationProperties;
+    public Output<DatadogOrganizationPropertiesArgs> getDatadogOrganizationProperties() {
+        return this.datadogOrganizationProperties == null ? Output.empty() : this.datadogOrganizationProperties;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="monitoringStatus")
-      private final @Nullable Input<Either<String,MonitoringStatus>> monitoringStatus;
+      private final @Nullable Output<Either<String,MonitoringStatus>> monitoringStatus;
 
-    public Input<Either<String,MonitoringStatus>> getMonitoringStatus() {
-        return this.monitoringStatus == null ? Input.empty() : this.monitoringStatus;
+    public Output<Either<String,MonitoringStatus>> getMonitoringStatus() {
+        return this.monitoringStatus == null ? Output.empty() : this.monitoringStatus;
     }
 
     /**
@@ -49,25 +49,25 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="userInfo")
-      private final @Nullable Input<UserInfoArgs> userInfo;
+      private final @Nullable Output<UserInfoArgs> userInfo;
 
-    public Input<UserInfoArgs> getUserInfo() {
-        return this.userInfo == null ? Input.empty() : this.userInfo;
+    public Output<UserInfoArgs> getUserInfo() {
+        return this.userInfo == null ? Output.empty() : this.userInfo;
     }
 
     public MonitorPropertiesArgs(
-        @Nullable Input<DatadogOrganizationPropertiesArgs> datadogOrganizationProperties,
-        @Nullable Input<Either<String,MonitoringStatus>> monitoringStatus,
-        @Nullable Input<UserInfoArgs> userInfo) {
+        @Nullable Output<DatadogOrganizationPropertiesArgs> datadogOrganizationProperties,
+        @Nullable Output<Either<String,MonitoringStatus>> monitoringStatus,
+        @Nullable Output<UserInfoArgs> userInfo) {
         this.datadogOrganizationProperties = datadogOrganizationProperties;
         this.monitoringStatus = monitoringStatus;
         this.userInfo = userInfo;
     }
 
     private MonitorPropertiesArgs() {
-        this.datadogOrganizationProperties = Input.empty();
-        this.monitoringStatus = Input.empty();
-        this.userInfo = Input.empty();
+        this.datadogOrganizationProperties = Output.empty();
+        this.monitoringStatus = Output.empty();
+        this.userInfo = Output.empty();
     }
 
     public static Builder builder() {
@@ -79,9 +79,9 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<DatadogOrganizationPropertiesArgs> datadogOrganizationProperties;
-        private @Nullable Input<Either<String,MonitoringStatus>> monitoringStatus;
-        private @Nullable Input<UserInfoArgs> userInfo;
+        private @Nullable Output<DatadogOrganizationPropertiesArgs> datadogOrganizationProperties;
+        private @Nullable Output<Either<String,MonitoringStatus>> monitoringStatus;
+        private @Nullable Output<UserInfoArgs> userInfo;
 
         public Builder() {
     	      // Empty
@@ -94,33 +94,33 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
     	      this.userInfo = defaults.userInfo;
         }
 
-        public Builder datadogOrganizationProperties(@Nullable Input<DatadogOrganizationPropertiesArgs> datadogOrganizationProperties) {
+        public Builder datadogOrganizationProperties(@Nullable Output<DatadogOrganizationPropertiesArgs> datadogOrganizationProperties) {
             this.datadogOrganizationProperties = datadogOrganizationProperties;
             return this;
         }
 
         public Builder datadogOrganizationProperties(@Nullable DatadogOrganizationPropertiesArgs datadogOrganizationProperties) {
-            this.datadogOrganizationProperties = Input.ofNullable(datadogOrganizationProperties);
+            this.datadogOrganizationProperties = Output.ofNullable(datadogOrganizationProperties);
             return this;
         }
 
-        public Builder monitoringStatus(@Nullable Input<Either<String,MonitoringStatus>> monitoringStatus) {
+        public Builder monitoringStatus(@Nullable Output<Either<String,MonitoringStatus>> monitoringStatus) {
             this.monitoringStatus = monitoringStatus;
             return this;
         }
 
         public Builder monitoringStatus(@Nullable Either<String,MonitoringStatus> monitoringStatus) {
-            this.monitoringStatus = Input.ofNullable(monitoringStatus);
+            this.monitoringStatus = Output.ofNullable(monitoringStatus);
             return this;
         }
 
-        public Builder userInfo(@Nullable Input<UserInfoArgs> userInfo) {
+        public Builder userInfo(@Nullable Output<UserInfoArgs> userInfo) {
             this.userInfo = userInfo;
             return this;
         }
 
         public Builder userInfo(@Nullable UserInfoArgs userInfo) {
-            this.userInfo = Input.ofNullable(userInfo);
+            this.userInfo = Output.ofNullable(userInfo);
             return this;
         }
         public MonitorPropertiesArgs build() {

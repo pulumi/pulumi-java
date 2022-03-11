@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamProcessorArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.List;
@@ -17,29 +17,29 @@ public final class DeliveryStreamProcessingConfigurationArgs extends io.pulumi.r
     public static final DeliveryStreamProcessingConfigurationArgs Empty = new DeliveryStreamProcessingConfigurationArgs();
 
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     @InputImport(name="processors")
-      private final @Nullable Input<List<DeliveryStreamProcessorArgs>> processors;
+      private final @Nullable Output<List<DeliveryStreamProcessorArgs>> processors;
 
-    public Input<List<DeliveryStreamProcessorArgs>> getProcessors() {
-        return this.processors == null ? Input.empty() : this.processors;
+    public Output<List<DeliveryStreamProcessorArgs>> getProcessors() {
+        return this.processors == null ? Output.empty() : this.processors;
     }
 
     public DeliveryStreamProcessingConfigurationArgs(
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<List<DeliveryStreamProcessorArgs>> processors) {
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<List<DeliveryStreamProcessorArgs>> processors) {
         this.enabled = enabled;
         this.processors = processors;
     }
 
     private DeliveryStreamProcessingConfigurationArgs() {
-        this.enabled = Input.empty();
-        this.processors = Input.empty();
+        this.enabled = Output.empty();
+        this.processors = Output.empty();
     }
 
     public static Builder builder() {
@@ -51,8 +51,8 @@ public final class DeliveryStreamProcessingConfigurationArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<List<DeliveryStreamProcessorArgs>> processors;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<List<DeliveryStreamProcessorArgs>> processors;
 
         public Builder() {
     	      // Empty
@@ -64,23 +64,23 @@ public final class DeliveryStreamProcessingConfigurationArgs extends io.pulumi.r
     	      this.processors = defaults.processors;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder processors(@Nullable Input<List<DeliveryStreamProcessorArgs>> processors) {
+        public Builder processors(@Nullable Output<List<DeliveryStreamProcessorArgs>> processors) {
             this.processors = processors;
             return this;
         }
 
         public Builder processors(@Nullable List<DeliveryStreamProcessorArgs> processors) {
-            this.processors = Input.ofNullable(processors);
+            this.processors = Output.ofNullable(processors);
             return this;
         }
         public DeliveryStreamProcessingConfigurationArgs build() {

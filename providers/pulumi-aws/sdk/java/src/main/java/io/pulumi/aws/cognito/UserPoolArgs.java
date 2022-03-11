@@ -15,7 +15,7 @@ import io.pulumi.aws.cognito.inputs.UserPoolSoftwareTokenMfaConfigurationArgs;
 import io.pulumi.aws.cognito.inputs.UserPoolUserPoolAddOnsArgs;
 import io.pulumi.aws.cognito.inputs.UserPoolUsernameConfigurationArgs;
 import io.pulumi.aws.cognito.inputs.UserPoolVerificationMessageTemplateArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -33,10 +33,10 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountRecoverySetting")
-      private final @Nullable Input<UserPoolAccountRecoverySettingArgs> accountRecoverySetting;
+      private final @Nullable Output<UserPoolAccountRecoverySettingArgs> accountRecoverySetting;
 
-    public Input<UserPoolAccountRecoverySettingArgs> getAccountRecoverySetting() {
-        return this.accountRecoverySetting == null ? Input.empty() : this.accountRecoverySetting;
+    public Output<UserPoolAccountRecoverySettingArgs> getAccountRecoverySetting() {
+        return this.accountRecoverySetting == null ? Output.empty() : this.accountRecoverySetting;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="adminCreateUserConfig")
-      private final @Nullable Input<UserPoolAdminCreateUserConfigArgs> adminCreateUserConfig;
+      private final @Nullable Output<UserPoolAdminCreateUserConfigArgs> adminCreateUserConfig;
 
-    public Input<UserPoolAdminCreateUserConfigArgs> getAdminCreateUserConfig() {
-        return this.adminCreateUserConfig == null ? Input.empty() : this.adminCreateUserConfig;
+    public Output<UserPoolAdminCreateUserConfigArgs> getAdminCreateUserConfig() {
+        return this.adminCreateUserConfig == null ? Output.empty() : this.adminCreateUserConfig;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aliasAttributes")
-      private final @Nullable Input<List<String>> aliasAttributes;
+      private final @Nullable Output<List<String>> aliasAttributes;
 
-    public Input<List<String>> getAliasAttributes() {
-        return this.aliasAttributes == null ? Input.empty() : this.aliasAttributes;
+    public Output<List<String>> getAliasAttributes() {
+        return this.aliasAttributes == null ? Output.empty() : this.aliasAttributes;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoVerifiedAttributes")
-      private final @Nullable Input<List<String>> autoVerifiedAttributes;
+      private final @Nullable Output<List<String>> autoVerifiedAttributes;
 
-    public Input<List<String>> getAutoVerifiedAttributes() {
-        return this.autoVerifiedAttributes == null ? Input.empty() : this.autoVerifiedAttributes;
+    public Output<List<String>> getAutoVerifiedAttributes() {
+        return this.autoVerifiedAttributes == null ? Output.empty() : this.autoVerifiedAttributes;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceConfiguration")
-      private final @Nullable Input<UserPoolDeviceConfigurationArgs> deviceConfiguration;
+      private final @Nullable Output<UserPoolDeviceConfigurationArgs> deviceConfiguration;
 
-    public Input<UserPoolDeviceConfigurationArgs> getDeviceConfiguration() {
-        return this.deviceConfiguration == null ? Input.empty() : this.deviceConfiguration;
+    public Output<UserPoolDeviceConfigurationArgs> getDeviceConfiguration() {
+        return this.deviceConfiguration == null ? Output.empty() : this.deviceConfiguration;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="emailConfiguration")
-      private final @Nullable Input<UserPoolEmailConfigurationArgs> emailConfiguration;
+      private final @Nullable Output<UserPoolEmailConfigurationArgs> emailConfiguration;
 
-    public Input<UserPoolEmailConfigurationArgs> getEmailConfiguration() {
-        return this.emailConfiguration == null ? Input.empty() : this.emailConfiguration;
+    public Output<UserPoolEmailConfigurationArgs> getEmailConfiguration() {
+        return this.emailConfiguration == null ? Output.empty() : this.emailConfiguration;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="emailVerificationMessage")
-      private final @Nullable Input<String> emailVerificationMessage;
+      private final @Nullable Output<String> emailVerificationMessage;
 
-    public Input<String> getEmailVerificationMessage() {
-        return this.emailVerificationMessage == null ? Input.empty() : this.emailVerificationMessage;
+    public Output<String> getEmailVerificationMessage() {
+        return this.emailVerificationMessage == null ? Output.empty() : this.emailVerificationMessage;
     }
 
     /**
@@ -110,10 +110,10 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="emailVerificationSubject")
-      private final @Nullable Input<String> emailVerificationSubject;
+      private final @Nullable Output<String> emailVerificationSubject;
 
-    public Input<String> getEmailVerificationSubject() {
-        return this.emailVerificationSubject == null ? Input.empty() : this.emailVerificationSubject;
+    public Output<String> getEmailVerificationSubject() {
+        return this.emailVerificationSubject == null ? Output.empty() : this.emailVerificationSubject;
     }
 
     /**
@@ -121,10 +121,10 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lambdaConfig")
-      private final @Nullable Input<UserPoolLambdaConfigArgs> lambdaConfig;
+      private final @Nullable Output<UserPoolLambdaConfigArgs> lambdaConfig;
 
-    public Input<UserPoolLambdaConfigArgs> getLambdaConfig() {
-        return this.lambdaConfig == null ? Input.empty() : this.lambdaConfig;
+    public Output<UserPoolLambdaConfigArgs> getLambdaConfig() {
+        return this.lambdaConfig == null ? Output.empty() : this.lambdaConfig;
     }
 
     /**
@@ -132,10 +132,10 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mfaConfiguration")
-      private final @Nullable Input<String> mfaConfiguration;
+      private final @Nullable Output<String> mfaConfiguration;
 
-    public Input<String> getMfaConfiguration() {
-        return this.mfaConfiguration == null ? Input.empty() : this.mfaConfiguration;
+    public Output<String> getMfaConfiguration() {
+        return this.mfaConfiguration == null ? Output.empty() : this.mfaConfiguration;
     }
 
     /**
@@ -143,10 +143,10 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -154,10 +154,10 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="passwordPolicy")
-      private final @Nullable Input<UserPoolPasswordPolicyArgs> passwordPolicy;
+      private final @Nullable Output<UserPoolPasswordPolicyArgs> passwordPolicy;
 
-    public Input<UserPoolPasswordPolicyArgs> getPasswordPolicy() {
-        return this.passwordPolicy == null ? Input.empty() : this.passwordPolicy;
+    public Output<UserPoolPasswordPolicyArgs> getPasswordPolicy() {
+        return this.passwordPolicy == null ? Output.empty() : this.passwordPolicy;
     }
 
     /**
@@ -165,10 +165,10 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schemas")
-      private final @Nullable Input<List<UserPoolSchemaArgs>> schemas;
+      private final @Nullable Output<List<UserPoolSchemaArgs>> schemas;
 
-    public Input<List<UserPoolSchemaArgs>> getSchemas() {
-        return this.schemas == null ? Input.empty() : this.schemas;
+    public Output<List<UserPoolSchemaArgs>> getSchemas() {
+        return this.schemas == null ? Output.empty() : this.schemas;
     }
 
     /**
@@ -176,10 +176,10 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="smsAuthenticationMessage")
-      private final @Nullable Input<String> smsAuthenticationMessage;
+      private final @Nullable Output<String> smsAuthenticationMessage;
 
-    public Input<String> getSmsAuthenticationMessage() {
-        return this.smsAuthenticationMessage == null ? Input.empty() : this.smsAuthenticationMessage;
+    public Output<String> getSmsAuthenticationMessage() {
+        return this.smsAuthenticationMessage == null ? Output.empty() : this.smsAuthenticationMessage;
     }
 
     /**
@@ -187,10 +187,10 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="smsConfiguration")
-      private final @Nullable Input<UserPoolSmsConfigurationArgs> smsConfiguration;
+      private final @Nullable Output<UserPoolSmsConfigurationArgs> smsConfiguration;
 
-    public Input<UserPoolSmsConfigurationArgs> getSmsConfiguration() {
-        return this.smsConfiguration == null ? Input.empty() : this.smsConfiguration;
+    public Output<UserPoolSmsConfigurationArgs> getSmsConfiguration() {
+        return this.smsConfiguration == null ? Output.empty() : this.smsConfiguration;
     }
 
     /**
@@ -198,10 +198,10 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="smsVerificationMessage")
-      private final @Nullable Input<String> smsVerificationMessage;
+      private final @Nullable Output<String> smsVerificationMessage;
 
-    public Input<String> getSmsVerificationMessage() {
-        return this.smsVerificationMessage == null ? Input.empty() : this.smsVerificationMessage;
+    public Output<String> getSmsVerificationMessage() {
+        return this.smsVerificationMessage == null ? Output.empty() : this.smsVerificationMessage;
     }
 
     /**
@@ -209,10 +209,10 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="softwareTokenMfaConfiguration")
-      private final @Nullable Input<UserPoolSoftwareTokenMfaConfigurationArgs> softwareTokenMfaConfiguration;
+      private final @Nullable Output<UserPoolSoftwareTokenMfaConfigurationArgs> softwareTokenMfaConfiguration;
 
-    public Input<UserPoolSoftwareTokenMfaConfigurationArgs> getSoftwareTokenMfaConfiguration() {
-        return this.softwareTokenMfaConfiguration == null ? Input.empty() : this.softwareTokenMfaConfiguration;
+    public Output<UserPoolSoftwareTokenMfaConfigurationArgs> getSoftwareTokenMfaConfiguration() {
+        return this.softwareTokenMfaConfiguration == null ? Output.empty() : this.softwareTokenMfaConfiguration;
     }
 
     /**
@@ -220,10 +220,10 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -231,10 +231,10 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userPoolAddOns")
-      private final @Nullable Input<UserPoolUserPoolAddOnsArgs> userPoolAddOns;
+      private final @Nullable Output<UserPoolUserPoolAddOnsArgs> userPoolAddOns;
 
-    public Input<UserPoolUserPoolAddOnsArgs> getUserPoolAddOns() {
-        return this.userPoolAddOns == null ? Input.empty() : this.userPoolAddOns;
+    public Output<UserPoolUserPoolAddOnsArgs> getUserPoolAddOns() {
+        return this.userPoolAddOns == null ? Output.empty() : this.userPoolAddOns;
     }
 
     /**
@@ -242,10 +242,10 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="usernameAttributes")
-      private final @Nullable Input<List<String>> usernameAttributes;
+      private final @Nullable Output<List<String>> usernameAttributes;
 
-    public Input<List<String>> getUsernameAttributes() {
-        return this.usernameAttributes == null ? Input.empty() : this.usernameAttributes;
+    public Output<List<String>> getUsernameAttributes() {
+        return this.usernameAttributes == null ? Output.empty() : this.usernameAttributes;
     }
 
     /**
@@ -253,10 +253,10 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="usernameConfiguration")
-      private final @Nullable Input<UserPoolUsernameConfigurationArgs> usernameConfiguration;
+      private final @Nullable Output<UserPoolUsernameConfigurationArgs> usernameConfiguration;
 
-    public Input<UserPoolUsernameConfigurationArgs> getUsernameConfiguration() {
-        return this.usernameConfiguration == null ? Input.empty() : this.usernameConfiguration;
+    public Output<UserPoolUsernameConfigurationArgs> getUsernameConfiguration() {
+        return this.usernameConfiguration == null ? Output.empty() : this.usernameConfiguration;
     }
 
     /**
@@ -264,35 +264,35 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="verificationMessageTemplate")
-      private final @Nullable Input<UserPoolVerificationMessageTemplateArgs> verificationMessageTemplate;
+      private final @Nullable Output<UserPoolVerificationMessageTemplateArgs> verificationMessageTemplate;
 
-    public Input<UserPoolVerificationMessageTemplateArgs> getVerificationMessageTemplate() {
-        return this.verificationMessageTemplate == null ? Input.empty() : this.verificationMessageTemplate;
+    public Output<UserPoolVerificationMessageTemplateArgs> getVerificationMessageTemplate() {
+        return this.verificationMessageTemplate == null ? Output.empty() : this.verificationMessageTemplate;
     }
 
     public UserPoolArgs(
-        @Nullable Input<UserPoolAccountRecoverySettingArgs> accountRecoverySetting,
-        @Nullable Input<UserPoolAdminCreateUserConfigArgs> adminCreateUserConfig,
-        @Nullable Input<List<String>> aliasAttributes,
-        @Nullable Input<List<String>> autoVerifiedAttributes,
-        @Nullable Input<UserPoolDeviceConfigurationArgs> deviceConfiguration,
-        @Nullable Input<UserPoolEmailConfigurationArgs> emailConfiguration,
-        @Nullable Input<String> emailVerificationMessage,
-        @Nullable Input<String> emailVerificationSubject,
-        @Nullable Input<UserPoolLambdaConfigArgs> lambdaConfig,
-        @Nullable Input<String> mfaConfiguration,
-        @Nullable Input<String> name,
-        @Nullable Input<UserPoolPasswordPolicyArgs> passwordPolicy,
-        @Nullable Input<List<UserPoolSchemaArgs>> schemas,
-        @Nullable Input<String> smsAuthenticationMessage,
-        @Nullable Input<UserPoolSmsConfigurationArgs> smsConfiguration,
-        @Nullable Input<String> smsVerificationMessage,
-        @Nullable Input<UserPoolSoftwareTokenMfaConfigurationArgs> softwareTokenMfaConfiguration,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<UserPoolUserPoolAddOnsArgs> userPoolAddOns,
-        @Nullable Input<List<String>> usernameAttributes,
-        @Nullable Input<UserPoolUsernameConfigurationArgs> usernameConfiguration,
-        @Nullable Input<UserPoolVerificationMessageTemplateArgs> verificationMessageTemplate) {
+        @Nullable Output<UserPoolAccountRecoverySettingArgs> accountRecoverySetting,
+        @Nullable Output<UserPoolAdminCreateUserConfigArgs> adminCreateUserConfig,
+        @Nullable Output<List<String>> aliasAttributes,
+        @Nullable Output<List<String>> autoVerifiedAttributes,
+        @Nullable Output<UserPoolDeviceConfigurationArgs> deviceConfiguration,
+        @Nullable Output<UserPoolEmailConfigurationArgs> emailConfiguration,
+        @Nullable Output<String> emailVerificationMessage,
+        @Nullable Output<String> emailVerificationSubject,
+        @Nullable Output<UserPoolLambdaConfigArgs> lambdaConfig,
+        @Nullable Output<String> mfaConfiguration,
+        @Nullable Output<String> name,
+        @Nullable Output<UserPoolPasswordPolicyArgs> passwordPolicy,
+        @Nullable Output<List<UserPoolSchemaArgs>> schemas,
+        @Nullable Output<String> smsAuthenticationMessage,
+        @Nullable Output<UserPoolSmsConfigurationArgs> smsConfiguration,
+        @Nullable Output<String> smsVerificationMessage,
+        @Nullable Output<UserPoolSoftwareTokenMfaConfigurationArgs> softwareTokenMfaConfiguration,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<UserPoolUserPoolAddOnsArgs> userPoolAddOns,
+        @Nullable Output<List<String>> usernameAttributes,
+        @Nullable Output<UserPoolUsernameConfigurationArgs> usernameConfiguration,
+        @Nullable Output<UserPoolVerificationMessageTemplateArgs> verificationMessageTemplate) {
         this.accountRecoverySetting = accountRecoverySetting;
         this.adminCreateUserConfig = adminCreateUserConfig;
         this.aliasAttributes = aliasAttributes;
@@ -318,28 +318,28 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserPoolArgs() {
-        this.accountRecoverySetting = Input.empty();
-        this.adminCreateUserConfig = Input.empty();
-        this.aliasAttributes = Input.empty();
-        this.autoVerifiedAttributes = Input.empty();
-        this.deviceConfiguration = Input.empty();
-        this.emailConfiguration = Input.empty();
-        this.emailVerificationMessage = Input.empty();
-        this.emailVerificationSubject = Input.empty();
-        this.lambdaConfig = Input.empty();
-        this.mfaConfiguration = Input.empty();
-        this.name = Input.empty();
-        this.passwordPolicy = Input.empty();
-        this.schemas = Input.empty();
-        this.smsAuthenticationMessage = Input.empty();
-        this.smsConfiguration = Input.empty();
-        this.smsVerificationMessage = Input.empty();
-        this.softwareTokenMfaConfiguration = Input.empty();
-        this.tags = Input.empty();
-        this.userPoolAddOns = Input.empty();
-        this.usernameAttributes = Input.empty();
-        this.usernameConfiguration = Input.empty();
-        this.verificationMessageTemplate = Input.empty();
+        this.accountRecoverySetting = Output.empty();
+        this.adminCreateUserConfig = Output.empty();
+        this.aliasAttributes = Output.empty();
+        this.autoVerifiedAttributes = Output.empty();
+        this.deviceConfiguration = Output.empty();
+        this.emailConfiguration = Output.empty();
+        this.emailVerificationMessage = Output.empty();
+        this.emailVerificationSubject = Output.empty();
+        this.lambdaConfig = Output.empty();
+        this.mfaConfiguration = Output.empty();
+        this.name = Output.empty();
+        this.passwordPolicy = Output.empty();
+        this.schemas = Output.empty();
+        this.smsAuthenticationMessage = Output.empty();
+        this.smsConfiguration = Output.empty();
+        this.smsVerificationMessage = Output.empty();
+        this.softwareTokenMfaConfiguration = Output.empty();
+        this.tags = Output.empty();
+        this.userPoolAddOns = Output.empty();
+        this.usernameAttributes = Output.empty();
+        this.usernameConfiguration = Output.empty();
+        this.verificationMessageTemplate = Output.empty();
     }
 
     public static Builder builder() {
@@ -351,28 +351,28 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<UserPoolAccountRecoverySettingArgs> accountRecoverySetting;
-        private @Nullable Input<UserPoolAdminCreateUserConfigArgs> adminCreateUserConfig;
-        private @Nullable Input<List<String>> aliasAttributes;
-        private @Nullable Input<List<String>> autoVerifiedAttributes;
-        private @Nullable Input<UserPoolDeviceConfigurationArgs> deviceConfiguration;
-        private @Nullable Input<UserPoolEmailConfigurationArgs> emailConfiguration;
-        private @Nullable Input<String> emailVerificationMessage;
-        private @Nullable Input<String> emailVerificationSubject;
-        private @Nullable Input<UserPoolLambdaConfigArgs> lambdaConfig;
-        private @Nullable Input<String> mfaConfiguration;
-        private @Nullable Input<String> name;
-        private @Nullable Input<UserPoolPasswordPolicyArgs> passwordPolicy;
-        private @Nullable Input<List<UserPoolSchemaArgs>> schemas;
-        private @Nullable Input<String> smsAuthenticationMessage;
-        private @Nullable Input<UserPoolSmsConfigurationArgs> smsConfiguration;
-        private @Nullable Input<String> smsVerificationMessage;
-        private @Nullable Input<UserPoolSoftwareTokenMfaConfigurationArgs> softwareTokenMfaConfiguration;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<UserPoolUserPoolAddOnsArgs> userPoolAddOns;
-        private @Nullable Input<List<String>> usernameAttributes;
-        private @Nullable Input<UserPoolUsernameConfigurationArgs> usernameConfiguration;
-        private @Nullable Input<UserPoolVerificationMessageTemplateArgs> verificationMessageTemplate;
+        private @Nullable Output<UserPoolAccountRecoverySettingArgs> accountRecoverySetting;
+        private @Nullable Output<UserPoolAdminCreateUserConfigArgs> adminCreateUserConfig;
+        private @Nullable Output<List<String>> aliasAttributes;
+        private @Nullable Output<List<String>> autoVerifiedAttributes;
+        private @Nullable Output<UserPoolDeviceConfigurationArgs> deviceConfiguration;
+        private @Nullable Output<UserPoolEmailConfigurationArgs> emailConfiguration;
+        private @Nullable Output<String> emailVerificationMessage;
+        private @Nullable Output<String> emailVerificationSubject;
+        private @Nullable Output<UserPoolLambdaConfigArgs> lambdaConfig;
+        private @Nullable Output<String> mfaConfiguration;
+        private @Nullable Output<String> name;
+        private @Nullable Output<UserPoolPasswordPolicyArgs> passwordPolicy;
+        private @Nullable Output<List<UserPoolSchemaArgs>> schemas;
+        private @Nullable Output<String> smsAuthenticationMessage;
+        private @Nullable Output<UserPoolSmsConfigurationArgs> smsConfiguration;
+        private @Nullable Output<String> smsVerificationMessage;
+        private @Nullable Output<UserPoolSoftwareTokenMfaConfigurationArgs> softwareTokenMfaConfiguration;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<UserPoolUserPoolAddOnsArgs> userPoolAddOns;
+        private @Nullable Output<List<String>> usernameAttributes;
+        private @Nullable Output<UserPoolUsernameConfigurationArgs> usernameConfiguration;
+        private @Nullable Output<UserPoolVerificationMessageTemplateArgs> verificationMessageTemplate;
 
         public Builder() {
     	      // Empty
@@ -404,223 +404,223 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.verificationMessageTemplate = defaults.verificationMessageTemplate;
         }
 
-        public Builder accountRecoverySetting(@Nullable Input<UserPoolAccountRecoverySettingArgs> accountRecoverySetting) {
+        public Builder accountRecoverySetting(@Nullable Output<UserPoolAccountRecoverySettingArgs> accountRecoverySetting) {
             this.accountRecoverySetting = accountRecoverySetting;
             return this;
         }
 
         public Builder accountRecoverySetting(@Nullable UserPoolAccountRecoverySettingArgs accountRecoverySetting) {
-            this.accountRecoverySetting = Input.ofNullable(accountRecoverySetting);
+            this.accountRecoverySetting = Output.ofNullable(accountRecoverySetting);
             return this;
         }
 
-        public Builder adminCreateUserConfig(@Nullable Input<UserPoolAdminCreateUserConfigArgs> adminCreateUserConfig) {
+        public Builder adminCreateUserConfig(@Nullable Output<UserPoolAdminCreateUserConfigArgs> adminCreateUserConfig) {
             this.adminCreateUserConfig = adminCreateUserConfig;
             return this;
         }
 
         public Builder adminCreateUserConfig(@Nullable UserPoolAdminCreateUserConfigArgs adminCreateUserConfig) {
-            this.adminCreateUserConfig = Input.ofNullable(adminCreateUserConfig);
+            this.adminCreateUserConfig = Output.ofNullable(adminCreateUserConfig);
             return this;
         }
 
-        public Builder aliasAttributes(@Nullable Input<List<String>> aliasAttributes) {
+        public Builder aliasAttributes(@Nullable Output<List<String>> aliasAttributes) {
             this.aliasAttributes = aliasAttributes;
             return this;
         }
 
         public Builder aliasAttributes(@Nullable List<String> aliasAttributes) {
-            this.aliasAttributes = Input.ofNullable(aliasAttributes);
+            this.aliasAttributes = Output.ofNullable(aliasAttributes);
             return this;
         }
 
-        public Builder autoVerifiedAttributes(@Nullable Input<List<String>> autoVerifiedAttributes) {
+        public Builder autoVerifiedAttributes(@Nullable Output<List<String>> autoVerifiedAttributes) {
             this.autoVerifiedAttributes = autoVerifiedAttributes;
             return this;
         }
 
         public Builder autoVerifiedAttributes(@Nullable List<String> autoVerifiedAttributes) {
-            this.autoVerifiedAttributes = Input.ofNullable(autoVerifiedAttributes);
+            this.autoVerifiedAttributes = Output.ofNullable(autoVerifiedAttributes);
             return this;
         }
 
-        public Builder deviceConfiguration(@Nullable Input<UserPoolDeviceConfigurationArgs> deviceConfiguration) {
+        public Builder deviceConfiguration(@Nullable Output<UserPoolDeviceConfigurationArgs> deviceConfiguration) {
             this.deviceConfiguration = deviceConfiguration;
             return this;
         }
 
         public Builder deviceConfiguration(@Nullable UserPoolDeviceConfigurationArgs deviceConfiguration) {
-            this.deviceConfiguration = Input.ofNullable(deviceConfiguration);
+            this.deviceConfiguration = Output.ofNullable(deviceConfiguration);
             return this;
         }
 
-        public Builder emailConfiguration(@Nullable Input<UserPoolEmailConfigurationArgs> emailConfiguration) {
+        public Builder emailConfiguration(@Nullable Output<UserPoolEmailConfigurationArgs> emailConfiguration) {
             this.emailConfiguration = emailConfiguration;
             return this;
         }
 
         public Builder emailConfiguration(@Nullable UserPoolEmailConfigurationArgs emailConfiguration) {
-            this.emailConfiguration = Input.ofNullable(emailConfiguration);
+            this.emailConfiguration = Output.ofNullable(emailConfiguration);
             return this;
         }
 
-        public Builder emailVerificationMessage(@Nullable Input<String> emailVerificationMessage) {
+        public Builder emailVerificationMessage(@Nullable Output<String> emailVerificationMessage) {
             this.emailVerificationMessage = emailVerificationMessage;
             return this;
         }
 
         public Builder emailVerificationMessage(@Nullable String emailVerificationMessage) {
-            this.emailVerificationMessage = Input.ofNullable(emailVerificationMessage);
+            this.emailVerificationMessage = Output.ofNullable(emailVerificationMessage);
             return this;
         }
 
-        public Builder emailVerificationSubject(@Nullable Input<String> emailVerificationSubject) {
+        public Builder emailVerificationSubject(@Nullable Output<String> emailVerificationSubject) {
             this.emailVerificationSubject = emailVerificationSubject;
             return this;
         }
 
         public Builder emailVerificationSubject(@Nullable String emailVerificationSubject) {
-            this.emailVerificationSubject = Input.ofNullable(emailVerificationSubject);
+            this.emailVerificationSubject = Output.ofNullable(emailVerificationSubject);
             return this;
         }
 
-        public Builder lambdaConfig(@Nullable Input<UserPoolLambdaConfigArgs> lambdaConfig) {
+        public Builder lambdaConfig(@Nullable Output<UserPoolLambdaConfigArgs> lambdaConfig) {
             this.lambdaConfig = lambdaConfig;
             return this;
         }
 
         public Builder lambdaConfig(@Nullable UserPoolLambdaConfigArgs lambdaConfig) {
-            this.lambdaConfig = Input.ofNullable(lambdaConfig);
+            this.lambdaConfig = Output.ofNullable(lambdaConfig);
             return this;
         }
 
-        public Builder mfaConfiguration(@Nullable Input<String> mfaConfiguration) {
+        public Builder mfaConfiguration(@Nullable Output<String> mfaConfiguration) {
             this.mfaConfiguration = mfaConfiguration;
             return this;
         }
 
         public Builder mfaConfiguration(@Nullable String mfaConfiguration) {
-            this.mfaConfiguration = Input.ofNullable(mfaConfiguration);
+            this.mfaConfiguration = Output.ofNullable(mfaConfiguration);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder passwordPolicy(@Nullable Input<UserPoolPasswordPolicyArgs> passwordPolicy) {
+        public Builder passwordPolicy(@Nullable Output<UserPoolPasswordPolicyArgs> passwordPolicy) {
             this.passwordPolicy = passwordPolicy;
             return this;
         }
 
         public Builder passwordPolicy(@Nullable UserPoolPasswordPolicyArgs passwordPolicy) {
-            this.passwordPolicy = Input.ofNullable(passwordPolicy);
+            this.passwordPolicy = Output.ofNullable(passwordPolicy);
             return this;
         }
 
-        public Builder schemas(@Nullable Input<List<UserPoolSchemaArgs>> schemas) {
+        public Builder schemas(@Nullable Output<List<UserPoolSchemaArgs>> schemas) {
             this.schemas = schemas;
             return this;
         }
 
         public Builder schemas(@Nullable List<UserPoolSchemaArgs> schemas) {
-            this.schemas = Input.ofNullable(schemas);
+            this.schemas = Output.ofNullable(schemas);
             return this;
         }
 
-        public Builder smsAuthenticationMessage(@Nullable Input<String> smsAuthenticationMessage) {
+        public Builder smsAuthenticationMessage(@Nullable Output<String> smsAuthenticationMessage) {
             this.smsAuthenticationMessage = smsAuthenticationMessage;
             return this;
         }
 
         public Builder smsAuthenticationMessage(@Nullable String smsAuthenticationMessage) {
-            this.smsAuthenticationMessage = Input.ofNullable(smsAuthenticationMessage);
+            this.smsAuthenticationMessage = Output.ofNullable(smsAuthenticationMessage);
             return this;
         }
 
-        public Builder smsConfiguration(@Nullable Input<UserPoolSmsConfigurationArgs> smsConfiguration) {
+        public Builder smsConfiguration(@Nullable Output<UserPoolSmsConfigurationArgs> smsConfiguration) {
             this.smsConfiguration = smsConfiguration;
             return this;
         }
 
         public Builder smsConfiguration(@Nullable UserPoolSmsConfigurationArgs smsConfiguration) {
-            this.smsConfiguration = Input.ofNullable(smsConfiguration);
+            this.smsConfiguration = Output.ofNullable(smsConfiguration);
             return this;
         }
 
-        public Builder smsVerificationMessage(@Nullable Input<String> smsVerificationMessage) {
+        public Builder smsVerificationMessage(@Nullable Output<String> smsVerificationMessage) {
             this.smsVerificationMessage = smsVerificationMessage;
             return this;
         }
 
         public Builder smsVerificationMessage(@Nullable String smsVerificationMessage) {
-            this.smsVerificationMessage = Input.ofNullable(smsVerificationMessage);
+            this.smsVerificationMessage = Output.ofNullable(smsVerificationMessage);
             return this;
         }
 
-        public Builder softwareTokenMfaConfiguration(@Nullable Input<UserPoolSoftwareTokenMfaConfigurationArgs> softwareTokenMfaConfiguration) {
+        public Builder softwareTokenMfaConfiguration(@Nullable Output<UserPoolSoftwareTokenMfaConfigurationArgs> softwareTokenMfaConfiguration) {
             this.softwareTokenMfaConfiguration = softwareTokenMfaConfiguration;
             return this;
         }
 
         public Builder softwareTokenMfaConfiguration(@Nullable UserPoolSoftwareTokenMfaConfigurationArgs softwareTokenMfaConfiguration) {
-            this.softwareTokenMfaConfiguration = Input.ofNullable(softwareTokenMfaConfiguration);
+            this.softwareTokenMfaConfiguration = Output.ofNullable(softwareTokenMfaConfiguration);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder userPoolAddOns(@Nullable Input<UserPoolUserPoolAddOnsArgs> userPoolAddOns) {
+        public Builder userPoolAddOns(@Nullable Output<UserPoolUserPoolAddOnsArgs> userPoolAddOns) {
             this.userPoolAddOns = userPoolAddOns;
             return this;
         }
 
         public Builder userPoolAddOns(@Nullable UserPoolUserPoolAddOnsArgs userPoolAddOns) {
-            this.userPoolAddOns = Input.ofNullable(userPoolAddOns);
+            this.userPoolAddOns = Output.ofNullable(userPoolAddOns);
             return this;
         }
 
-        public Builder usernameAttributes(@Nullable Input<List<String>> usernameAttributes) {
+        public Builder usernameAttributes(@Nullable Output<List<String>> usernameAttributes) {
             this.usernameAttributes = usernameAttributes;
             return this;
         }
 
         public Builder usernameAttributes(@Nullable List<String> usernameAttributes) {
-            this.usernameAttributes = Input.ofNullable(usernameAttributes);
+            this.usernameAttributes = Output.ofNullable(usernameAttributes);
             return this;
         }
 
-        public Builder usernameConfiguration(@Nullable Input<UserPoolUsernameConfigurationArgs> usernameConfiguration) {
+        public Builder usernameConfiguration(@Nullable Output<UserPoolUsernameConfigurationArgs> usernameConfiguration) {
             this.usernameConfiguration = usernameConfiguration;
             return this;
         }
 
         public Builder usernameConfiguration(@Nullable UserPoolUsernameConfigurationArgs usernameConfiguration) {
-            this.usernameConfiguration = Input.ofNullable(usernameConfiguration);
+            this.usernameConfiguration = Output.ofNullable(usernameConfiguration);
             return this;
         }
 
-        public Builder verificationMessageTemplate(@Nullable Input<UserPoolVerificationMessageTemplateArgs> verificationMessageTemplate) {
+        public Builder verificationMessageTemplate(@Nullable Output<UserPoolVerificationMessageTemplateArgs> verificationMessageTemplate) {
             this.verificationMessageTemplate = verificationMessageTemplate;
             return this;
         }
 
         public Builder verificationMessageTemplate(@Nullable UserPoolVerificationMessageTemplateArgs verificationMessageTemplate) {
-            this.verificationMessageTemplate = Input.ofNullable(verificationMessageTemplate);
+            this.verificationMessageTemplate = Output.ofNullable(verificationMessageTemplate);
             return this;
         }
         public UserPoolArgs build() {

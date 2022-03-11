@@ -6,7 +6,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 import io.pulumi.awsnative.wafv2.enums.RuleGroupPositionalConstraint;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupFieldToMatchArgs;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupTextTransformationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,46 +23,46 @@ public final class RuleGroupByteMatchStatementArgs extends io.pulumi.resources.R
     public static final RuleGroupByteMatchStatementArgs Empty = new RuleGroupByteMatchStatementArgs();
 
     @InputImport(name="fieldToMatch", required=true)
-      private final Input<RuleGroupFieldToMatchArgs> fieldToMatch;
+      private final Output<RuleGroupFieldToMatchArgs> fieldToMatch;
 
-    public Input<RuleGroupFieldToMatchArgs> getFieldToMatch() {
+    public Output<RuleGroupFieldToMatchArgs> getFieldToMatch() {
         return this.fieldToMatch;
     }
 
     @InputImport(name="positionalConstraint", required=true)
-      private final Input<RuleGroupPositionalConstraint> positionalConstraint;
+      private final Output<RuleGroupPositionalConstraint> positionalConstraint;
 
-    public Input<RuleGroupPositionalConstraint> getPositionalConstraint() {
+    public Output<RuleGroupPositionalConstraint> getPositionalConstraint() {
         return this.positionalConstraint;
     }
 
     @InputImport(name="searchString")
-      private final @Nullable Input<String> searchString;
+      private final @Nullable Output<String> searchString;
 
-    public Input<String> getSearchString() {
-        return this.searchString == null ? Input.empty() : this.searchString;
+    public Output<String> getSearchString() {
+        return this.searchString == null ? Output.empty() : this.searchString;
     }
 
     @InputImport(name="searchStringBase64")
-      private final @Nullable Input<String> searchStringBase64;
+      private final @Nullable Output<String> searchStringBase64;
 
-    public Input<String> getSearchStringBase64() {
-        return this.searchStringBase64 == null ? Input.empty() : this.searchStringBase64;
+    public Output<String> getSearchStringBase64() {
+        return this.searchStringBase64 == null ? Output.empty() : this.searchStringBase64;
     }
 
     @InputImport(name="textTransformations", required=true)
-      private final Input<List<RuleGroupTextTransformationArgs>> textTransformations;
+      private final Output<List<RuleGroupTextTransformationArgs>> textTransformations;
 
-    public Input<List<RuleGroupTextTransformationArgs>> getTextTransformations() {
+    public Output<List<RuleGroupTextTransformationArgs>> getTextTransformations() {
         return this.textTransformations;
     }
 
     public RuleGroupByteMatchStatementArgs(
-        Input<RuleGroupFieldToMatchArgs> fieldToMatch,
-        Input<RuleGroupPositionalConstraint> positionalConstraint,
-        @Nullable Input<String> searchString,
-        @Nullable Input<String> searchStringBase64,
-        Input<List<RuleGroupTextTransformationArgs>> textTransformations) {
+        Output<RuleGroupFieldToMatchArgs> fieldToMatch,
+        Output<RuleGroupPositionalConstraint> positionalConstraint,
+        @Nullable Output<String> searchString,
+        @Nullable Output<String> searchStringBase64,
+        Output<List<RuleGroupTextTransformationArgs>> textTransformations) {
         this.fieldToMatch = Objects.requireNonNull(fieldToMatch, "expected parameter 'fieldToMatch' to be non-null");
         this.positionalConstraint = Objects.requireNonNull(positionalConstraint, "expected parameter 'positionalConstraint' to be non-null");
         this.searchString = searchString;
@@ -71,11 +71,11 @@ public final class RuleGroupByteMatchStatementArgs extends io.pulumi.resources.R
     }
 
     private RuleGroupByteMatchStatementArgs() {
-        this.fieldToMatch = Input.empty();
-        this.positionalConstraint = Input.empty();
-        this.searchString = Input.empty();
-        this.searchStringBase64 = Input.empty();
-        this.textTransformations = Input.empty();
+        this.fieldToMatch = Output.empty();
+        this.positionalConstraint = Output.empty();
+        this.searchString = Output.empty();
+        this.searchStringBase64 = Output.empty();
+        this.textTransformations = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,11 +87,11 @@ public final class RuleGroupByteMatchStatementArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<RuleGroupFieldToMatchArgs> fieldToMatch;
-        private Input<RuleGroupPositionalConstraint> positionalConstraint;
-        private @Nullable Input<String> searchString;
-        private @Nullable Input<String> searchStringBase64;
-        private Input<List<RuleGroupTextTransformationArgs>> textTransformations;
+        private Output<RuleGroupFieldToMatchArgs> fieldToMatch;
+        private Output<RuleGroupPositionalConstraint> positionalConstraint;
+        private @Nullable Output<String> searchString;
+        private @Nullable Output<String> searchStringBase64;
+        private Output<List<RuleGroupTextTransformationArgs>> textTransformations;
 
         public Builder() {
     	      // Empty
@@ -106,53 +106,53 @@ public final class RuleGroupByteMatchStatementArgs extends io.pulumi.resources.R
     	      this.textTransformations = defaults.textTransformations;
         }
 
-        public Builder fieldToMatch(Input<RuleGroupFieldToMatchArgs> fieldToMatch) {
+        public Builder fieldToMatch(Output<RuleGroupFieldToMatchArgs> fieldToMatch) {
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
 
         public Builder fieldToMatch(RuleGroupFieldToMatchArgs fieldToMatch) {
-            this.fieldToMatch = Input.of(Objects.requireNonNull(fieldToMatch));
+            this.fieldToMatch = Output.of(Objects.requireNonNull(fieldToMatch));
             return this;
         }
 
-        public Builder positionalConstraint(Input<RuleGroupPositionalConstraint> positionalConstraint) {
+        public Builder positionalConstraint(Output<RuleGroupPositionalConstraint> positionalConstraint) {
             this.positionalConstraint = Objects.requireNonNull(positionalConstraint);
             return this;
         }
 
         public Builder positionalConstraint(RuleGroupPositionalConstraint positionalConstraint) {
-            this.positionalConstraint = Input.of(Objects.requireNonNull(positionalConstraint));
+            this.positionalConstraint = Output.of(Objects.requireNonNull(positionalConstraint));
             return this;
         }
 
-        public Builder searchString(@Nullable Input<String> searchString) {
+        public Builder searchString(@Nullable Output<String> searchString) {
             this.searchString = searchString;
             return this;
         }
 
         public Builder searchString(@Nullable String searchString) {
-            this.searchString = Input.ofNullable(searchString);
+            this.searchString = Output.ofNullable(searchString);
             return this;
         }
 
-        public Builder searchStringBase64(@Nullable Input<String> searchStringBase64) {
+        public Builder searchStringBase64(@Nullable Output<String> searchStringBase64) {
             this.searchStringBase64 = searchStringBase64;
             return this;
         }
 
         public Builder searchStringBase64(@Nullable String searchStringBase64) {
-            this.searchStringBase64 = Input.ofNullable(searchStringBase64);
+            this.searchStringBase64 = Output.ofNullable(searchStringBase64);
             return this;
         }
 
-        public Builder textTransformations(Input<List<RuleGroupTextTransformationArgs>> textTransformations) {
+        public Builder textTransformations(Output<List<RuleGroupTextTransformationArgs>> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
 
         public Builder textTransformations(List<RuleGroupTextTransformationArgs> textTransformations) {
-            this.textTransformations = Input.of(Objects.requireNonNull(textTransformations));
+            this.textTransformations = Output.of(Objects.requireNonNull(textTransformations));
             return this;
         }
         public RuleGroupByteMatchStatementArgs build() {

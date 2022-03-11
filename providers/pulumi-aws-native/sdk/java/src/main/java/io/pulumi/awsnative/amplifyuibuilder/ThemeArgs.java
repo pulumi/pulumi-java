@@ -5,7 +5,7 @@ package io.pulumi.awsnative.amplifyuibuilder;
 
 import io.pulumi.awsnative.amplifyuibuilder.inputs.ThemeTagsArgs;
 import io.pulumi.awsnative.amplifyuibuilder.inputs.ThemeValuesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -18,38 +18,38 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
     public static final ThemeArgs Empty = new ThemeArgs();
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="overrides")
-      private final @Nullable Input<List<ThemeValuesArgs>> overrides;
+      private final @Nullable Output<List<ThemeValuesArgs>> overrides;
 
-    public Input<List<ThemeValuesArgs>> getOverrides() {
-        return this.overrides == null ? Input.empty() : this.overrides;
+    public Output<List<ThemeValuesArgs>> getOverrides() {
+        return this.overrides == null ? Output.empty() : this.overrides;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<ThemeTagsArgs> tags;
+      private final @Nullable Output<ThemeTagsArgs> tags;
 
-    public Input<ThemeTagsArgs> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<ThemeTagsArgs> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     @InputImport(name="values", required=true)
-      private final Input<List<ThemeValuesArgs>> values;
+      private final Output<List<ThemeValuesArgs>> values;
 
-    public Input<List<ThemeValuesArgs>> getValues() {
+    public Output<List<ThemeValuesArgs>> getValues() {
         return this.values;
     }
 
     public ThemeArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<List<ThemeValuesArgs>> overrides,
-        @Nullable Input<ThemeTagsArgs> tags,
-        Input<List<ThemeValuesArgs>> values) {
+        @Nullable Output<String> name,
+        @Nullable Output<List<ThemeValuesArgs>> overrides,
+        @Nullable Output<ThemeTagsArgs> tags,
+        Output<List<ThemeValuesArgs>> values) {
         this.name = name;
         this.overrides = overrides;
         this.tags = tags;
@@ -57,10 +57,10 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ThemeArgs() {
-        this.name = Input.empty();
-        this.overrides = Input.empty();
-        this.tags = Input.empty();
-        this.values = Input.empty();
+        this.name = Output.empty();
+        this.overrides = Output.empty();
+        this.tags = Output.empty();
+        this.values = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,10 +72,10 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<ThemeValuesArgs>> overrides;
-        private @Nullable Input<ThemeTagsArgs> tags;
-        private Input<List<ThemeValuesArgs>> values;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<ThemeValuesArgs>> overrides;
+        private @Nullable Output<ThemeTagsArgs> tags;
+        private Output<List<ThemeValuesArgs>> values;
 
         public Builder() {
     	      // Empty
@@ -89,43 +89,43 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.values = defaults.values;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder overrides(@Nullable Input<List<ThemeValuesArgs>> overrides) {
+        public Builder overrides(@Nullable Output<List<ThemeValuesArgs>> overrides) {
             this.overrides = overrides;
             return this;
         }
 
         public Builder overrides(@Nullable List<ThemeValuesArgs> overrides) {
-            this.overrides = Input.ofNullable(overrides);
+            this.overrides = Output.ofNullable(overrides);
             return this;
         }
 
-        public Builder tags(@Nullable Input<ThemeTagsArgs> tags) {
+        public Builder tags(@Nullable Output<ThemeTagsArgs> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable ThemeTagsArgs tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder values(Input<List<ThemeValuesArgs>> values) {
+        public Builder values(Output<List<ThemeValuesArgs>> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
 
         public Builder values(List<ThemeValuesArgs> values) {
-            this.values = Input.of(Objects.requireNonNull(values));
+            this.values = Output.of(Objects.requireNonNull(values));
             return this;
         }
         public ThemeArgs build() {

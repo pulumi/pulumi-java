@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.apigateway.RestApiArgs;
 import io.pulumi.aws.apigateway.inputs.RestApiState;
 import io.pulumi.aws.apigateway.outputs.RestApiEndpointConfiguration;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -303,14 +302,14 @@ public class RestApi extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RestApi(String name, @Nullable RestApiArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:apigateway/restApi:RestApi", name, args == null ? RestApiArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:apigateway/restApi:RestApi", name, args == null ? RestApiArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private RestApi(String name, Input<String> id, @Nullable RestApiState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private RestApi(String name, Output<String> id, @Nullable RestApiState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:apigateway/restApi:RestApi", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -326,7 +325,7 @@ public class RestApi extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RestApi get(String name, Input<String> id, @Nullable RestApiState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static RestApi get(String name, Output<String> id, @Nullable RestApiState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RestApi(name, id, state, options);
     }
 }

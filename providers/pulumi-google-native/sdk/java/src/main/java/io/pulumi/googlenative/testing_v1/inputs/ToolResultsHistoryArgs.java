@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class ToolResultsHistoryArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="historyId", required=true)
-      private final Input<String> historyId;
+      private final Output<String> historyId;
 
-    public Input<String> getHistoryId() {
+    public Output<String> getHistoryId() {
         return this.historyId;
     }
 
@@ -33,22 +33,22 @@ public final class ToolResultsHistoryArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="project", required=true)
-      private final Input<String> project;
+      private final Output<String> project;
 
-    public Input<String> getProject() {
+    public Output<String> getProject() {
         return this.project;
     }
 
     public ToolResultsHistoryArgs(
-        Input<String> historyId,
-        Input<String> project) {
+        Output<String> historyId,
+        Output<String> project) {
         this.historyId = Objects.requireNonNull(historyId, "expected parameter 'historyId' to be non-null");
         this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
     }
 
     private ToolResultsHistoryArgs() {
-        this.historyId = Input.empty();
-        this.project = Input.empty();
+        this.historyId = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class ToolResultsHistoryArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> historyId;
-        private Input<String> project;
+        private Output<String> historyId;
+        private Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class ToolResultsHistoryArgs extends io.pulumi.resources.ResourceAr
     	      this.project = defaults.project;
         }
 
-        public Builder historyId(Input<String> historyId) {
+        public Builder historyId(Output<String> historyId) {
             this.historyId = Objects.requireNonNull(historyId);
             return this;
         }
 
         public Builder historyId(String historyId) {
-            this.historyId = Input.of(Objects.requireNonNull(historyId));
+            this.historyId = Output.of(Objects.requireNonNull(historyId));
             return this;
         }
 
-        public Builder project(Input<String> project) {
+        public Builder project(Output<String> project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
         public Builder project(String project) {
-            this.project = Input.of(Objects.requireNonNull(project));
+            this.project = Output.of(Objects.requireNonNull(project));
             return this;
         }
         public ToolResultsHistoryArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.transcoder_v1.inputs.PreprocessingConfigArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="key")
-      private final @Nullable Input<String> key;
+      private final @Nullable Output<String> key;
 
-    public Input<String> getKey() {
-        return this.key == null ? Input.empty() : this.key;
+    public Output<String> getKey() {
+        return this.key == null ? Output.empty() : this.key;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preprocessingConfig")
-      private final @Nullable Input<PreprocessingConfigArgs> preprocessingConfig;
+      private final @Nullable Output<PreprocessingConfigArgs> preprocessingConfig;
 
-    public Input<PreprocessingConfigArgs> getPreprocessingConfig() {
-        return this.preprocessingConfig == null ? Input.empty() : this.preprocessingConfig;
+    public Output<PreprocessingConfigArgs> getPreprocessingConfig() {
+        return this.preprocessingConfig == null ? Output.empty() : this.preprocessingConfig;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uri")
-      private final @Nullable Input<String> uri;
+      private final @Nullable Output<String> uri;
 
-    public Input<String> getUri() {
-        return this.uri == null ? Input.empty() : this.uri;
+    public Output<String> getUri() {
+        return this.uri == null ? Output.empty() : this.uri;
     }
 
     public InputArgs(
-        @Nullable Input<String> key,
-        @Nullable Input<PreprocessingConfigArgs> preprocessingConfig,
-        @Nullable Input<String> uri) {
+        @Nullable Output<String> key,
+        @Nullable Output<PreprocessingConfigArgs> preprocessingConfig,
+        @Nullable Output<String> uri) {
         this.key = key;
         this.preprocessingConfig = preprocessingConfig;
         this.uri = uri;
     }
 
     private InputArgs() {
-        this.key = Input.empty();
-        this.preprocessingConfig = Input.empty();
-        this.uri = Input.empty();
+        this.key = Output.empty();
+        this.preprocessingConfig = Output.empty();
+        this.uri = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> key;
-        private @Nullable Input<PreprocessingConfigArgs> preprocessingConfig;
-        private @Nullable Input<String> uri;
+        private @Nullable Output<String> key;
+        private @Nullable Output<PreprocessingConfigArgs> preprocessingConfig;
+        private @Nullable Output<String> uri;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uri = defaults.uri;
         }
 
-        public Builder key(@Nullable Input<String> key) {
+        public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
 
         public Builder key(@Nullable String key) {
-            this.key = Input.ofNullable(key);
+            this.key = Output.ofNullable(key);
             return this;
         }
 
-        public Builder preprocessingConfig(@Nullable Input<PreprocessingConfigArgs> preprocessingConfig) {
+        public Builder preprocessingConfig(@Nullable Output<PreprocessingConfigArgs> preprocessingConfig) {
             this.preprocessingConfig = preprocessingConfig;
             return this;
         }
 
         public Builder preprocessingConfig(@Nullable PreprocessingConfigArgs preprocessingConfig) {
-            this.preprocessingConfig = Input.ofNullable(preprocessingConfig);
+            this.preprocessingConfig = Output.ofNullable(preprocessingConfig);
             return this;
         }
 
-        public Builder uri(@Nullable Input<String> uri) {
+        public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
 
         public Builder uri(@Nullable String uri) {
-            this.uri = Input.ofNullable(uri);
+            this.uri = Output.ofNullable(uri);
             return this;
         }
         public InputArgs build() {

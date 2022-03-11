@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class AssignmentPropertiesAdditionalDataArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="exemptionCategory")
-      private final @Nullable Input<String> exemptionCategory;
+      private final @Nullable Output<String> exemptionCategory;
 
-    public Input<String> getExemptionCategory() {
-        return this.exemptionCategory == null ? Input.empty() : this.exemptionCategory;
+    public Output<String> getExemptionCategory() {
+        return this.exemptionCategory == null ? Output.empty() : this.exemptionCategory;
     }
 
-    public AssignmentPropertiesAdditionalDataArgs(@Nullable Input<String> exemptionCategory) {
+    public AssignmentPropertiesAdditionalDataArgs(@Nullable Output<String> exemptionCategory) {
         this.exemptionCategory = exemptionCategory;
     }
 
     private AssignmentPropertiesAdditionalDataArgs() {
-        this.exemptionCategory = Input.empty();
+        this.exemptionCategory = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class AssignmentPropertiesAdditionalDataArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> exemptionCategory;
+        private @Nullable Output<String> exemptionCategory;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class AssignmentPropertiesAdditionalDataArgs extends io.pulumi.reso
     	      this.exemptionCategory = defaults.exemptionCategory;
         }
 
-        public Builder exemptionCategory(@Nullable Input<String> exemptionCategory) {
+        public Builder exemptionCategory(@Nullable Output<String> exemptionCategory) {
             this.exemptionCategory = exemptionCategory;
             return this;
         }
 
         public Builder exemptionCategory(@Nullable String exemptionCategory) {
-            this.exemptionCategory = Input.ofNullable(exemptionCategory);
+            this.exemptionCategory = Output.ofNullable(exemptionCategory);
             return this;
         }
         public AssignmentPropertiesAdditionalDataArgs build() {

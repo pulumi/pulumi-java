@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.datacatalog.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.datacatalog.inputs.EntryGcsFilesetSpecSampleGcsFileSpecArgs;
 import java.lang.String;
@@ -31,9 +31,9 @@ public final class EntryGcsFilesetSpecArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="filePatterns", required=true)
-      private final Input<List<String>> filePatterns;
+      private final Output<List<String>> filePatterns;
 
-    public Input<List<String>> getFilePatterns() {
+    public Output<List<String>> getFilePatterns() {
         return this.filePatterns;
     }
 
@@ -44,22 +44,22 @@ public final class EntryGcsFilesetSpecArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="sampleGcsFileSpecs")
-      private final @Nullable Input<List<EntryGcsFilesetSpecSampleGcsFileSpecArgs>> sampleGcsFileSpecs;
+      private final @Nullable Output<List<EntryGcsFilesetSpecSampleGcsFileSpecArgs>> sampleGcsFileSpecs;
 
-    public Input<List<EntryGcsFilesetSpecSampleGcsFileSpecArgs>> getSampleGcsFileSpecs() {
-        return this.sampleGcsFileSpecs == null ? Input.empty() : this.sampleGcsFileSpecs;
+    public Output<List<EntryGcsFilesetSpecSampleGcsFileSpecArgs>> getSampleGcsFileSpecs() {
+        return this.sampleGcsFileSpecs == null ? Output.empty() : this.sampleGcsFileSpecs;
     }
 
     public EntryGcsFilesetSpecArgs(
-        Input<List<String>> filePatterns,
-        @Nullable Input<List<EntryGcsFilesetSpecSampleGcsFileSpecArgs>> sampleGcsFileSpecs) {
+        Output<List<String>> filePatterns,
+        @Nullable Output<List<EntryGcsFilesetSpecSampleGcsFileSpecArgs>> sampleGcsFileSpecs) {
         this.filePatterns = Objects.requireNonNull(filePatterns, "expected parameter 'filePatterns' to be non-null");
         this.sampleGcsFileSpecs = sampleGcsFileSpecs;
     }
 
     private EntryGcsFilesetSpecArgs() {
-        this.filePatterns = Input.empty();
-        this.sampleGcsFileSpecs = Input.empty();
+        this.filePatterns = Output.empty();
+        this.sampleGcsFileSpecs = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,8 +71,8 @@ public final class EntryGcsFilesetSpecArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<List<String>> filePatterns;
-        private @Nullable Input<List<EntryGcsFilesetSpecSampleGcsFileSpecArgs>> sampleGcsFileSpecs;
+        private Output<List<String>> filePatterns;
+        private @Nullable Output<List<EntryGcsFilesetSpecSampleGcsFileSpecArgs>> sampleGcsFileSpecs;
 
         public Builder() {
     	      // Empty
@@ -84,23 +84,23 @@ public final class EntryGcsFilesetSpecArgs extends io.pulumi.resources.ResourceA
     	      this.sampleGcsFileSpecs = defaults.sampleGcsFileSpecs;
         }
 
-        public Builder filePatterns(Input<List<String>> filePatterns) {
+        public Builder filePatterns(Output<List<String>> filePatterns) {
             this.filePatterns = Objects.requireNonNull(filePatterns);
             return this;
         }
 
         public Builder filePatterns(List<String> filePatterns) {
-            this.filePatterns = Input.of(Objects.requireNonNull(filePatterns));
+            this.filePatterns = Output.of(Objects.requireNonNull(filePatterns));
             return this;
         }
 
-        public Builder sampleGcsFileSpecs(@Nullable Input<List<EntryGcsFilesetSpecSampleGcsFileSpecArgs>> sampleGcsFileSpecs) {
+        public Builder sampleGcsFileSpecs(@Nullable Output<List<EntryGcsFilesetSpecSampleGcsFileSpecArgs>> sampleGcsFileSpecs) {
             this.sampleGcsFileSpecs = sampleGcsFileSpecs;
             return this;
         }
 
         public Builder sampleGcsFileSpecs(@Nullable List<EntryGcsFilesetSpecSampleGcsFileSpecArgs> sampleGcsFileSpecs) {
-            this.sampleGcsFileSpecs = Input.ofNullable(sampleGcsFileSpecs);
+            this.sampleGcsFileSpecs = Output.ofNullable(sampleGcsFileSpecs);
             return this;
         }
         public EntryGcsFilesetSpecArgs build() {

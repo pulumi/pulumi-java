@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.baremetalsolution_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="crontabSpec")
-      private final @Nullable Input<String> crontabSpec;
+      private final @Nullable Output<String> crontabSpec;
 
-    public Input<String> getCrontabSpec() {
-        return this.crontabSpec == null ? Input.empty() : this.crontabSpec;
+    public Output<String> getCrontabSpec() {
+        return this.crontabSpec == null ? Output.empty() : this.crontabSpec;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="prefix")
-      private final @Nullable Input<String> prefix;
+      private final @Nullable Output<String> prefix;
 
-    public Input<String> getPrefix() {
-        return this.prefix == null ? Input.empty() : this.prefix;
+    public Output<String> getPrefix() {
+        return this.prefix == null ? Output.empty() : this.prefix;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionCount")
-      private final @Nullable Input<Integer> retentionCount;
+      private final @Nullable Output<Integer> retentionCount;
 
-    public Input<Integer> getRetentionCount() {
-        return this.retentionCount == null ? Input.empty() : this.retentionCount;
+    public Output<Integer> getRetentionCount() {
+        return this.retentionCount == null ? Output.empty() : this.retentionCount;
     }
 
     public ScheduleArgs(
-        @Nullable Input<String> crontabSpec,
-        @Nullable Input<String> prefix,
-        @Nullable Input<Integer> retentionCount) {
+        @Nullable Output<String> crontabSpec,
+        @Nullable Output<String> prefix,
+        @Nullable Output<Integer> retentionCount) {
         this.crontabSpec = crontabSpec;
         this.prefix = prefix;
         this.retentionCount = retentionCount;
     }
 
     private ScheduleArgs() {
-        this.crontabSpec = Input.empty();
-        this.prefix = Input.empty();
-        this.retentionCount = Input.empty();
+        this.crontabSpec = Output.empty();
+        this.prefix = Output.empty();
+        this.retentionCount = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> crontabSpec;
-        private @Nullable Input<String> prefix;
-        private @Nullable Input<Integer> retentionCount;
+        private @Nullable Output<String> crontabSpec;
+        private @Nullable Output<String> prefix;
+        private @Nullable Output<Integer> retentionCount;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.retentionCount = defaults.retentionCount;
         }
 
-        public Builder crontabSpec(@Nullable Input<String> crontabSpec) {
+        public Builder crontabSpec(@Nullable Output<String> crontabSpec) {
             this.crontabSpec = crontabSpec;
             return this;
         }
 
         public Builder crontabSpec(@Nullable String crontabSpec) {
-            this.crontabSpec = Input.ofNullable(crontabSpec);
+            this.crontabSpec = Output.ofNullable(crontabSpec);
             return this;
         }
 
-        public Builder prefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Input.ofNullable(prefix);
+            this.prefix = Output.ofNullable(prefix);
             return this;
         }
 
-        public Builder retentionCount(@Nullable Input<Integer> retentionCount) {
+        public Builder retentionCount(@Nullable Output<Integer> retentionCount) {
             this.retentionCount = retentionCount;
             return this;
         }
 
         public Builder retentionCount(@Nullable Integer retentionCount) {
-            this.retentionCount = Input.ofNullable(retentionCount);
+            this.retentionCount = Output.ofNullable(retentionCount);
             return this;
         }
         public ScheduleArgs build() {

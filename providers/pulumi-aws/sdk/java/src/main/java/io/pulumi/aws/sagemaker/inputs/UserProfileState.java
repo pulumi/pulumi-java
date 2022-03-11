@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.UserProfileUserSettingsGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainId")
-      private final @Nullable Input<String> domainId;
+      private final @Nullable Output<String> domainId;
 
-    public Input<String> getDomainId() {
-        return this.domainId == null ? Input.empty() : this.domainId;
+    public Output<String> getDomainId() {
+        return this.domainId == null ? Output.empty() : this.domainId;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="homeEfsFileSystemUid")
-      private final @Nullable Input<String> homeEfsFileSystemUid;
+      private final @Nullable Output<String> homeEfsFileSystemUid;
 
-    public Input<String> getHomeEfsFileSystemUid() {
-        return this.homeEfsFileSystemUid == null ? Input.empty() : this.homeEfsFileSystemUid;
+    public Output<String> getHomeEfsFileSystemUid() {
+        return this.homeEfsFileSystemUid == null ? Output.empty() : this.homeEfsFileSystemUid;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="singleSignOnUserIdentifier")
-      private final @Nullable Input<String> singleSignOnUserIdentifier;
+      private final @Nullable Output<String> singleSignOnUserIdentifier;
 
-    public Input<String> getSingleSignOnUserIdentifier() {
-        return this.singleSignOnUserIdentifier == null ? Input.empty() : this.singleSignOnUserIdentifier;
+    public Output<String> getSingleSignOnUserIdentifier() {
+        return this.singleSignOnUserIdentifier == null ? Output.empty() : this.singleSignOnUserIdentifier;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="singleSignOnUserValue")
-      private final @Nullable Input<String> singleSignOnUserValue;
+      private final @Nullable Output<String> singleSignOnUserValue;
 
-    public Input<String> getSingleSignOnUserValue() {
-        return this.singleSignOnUserValue == null ? Input.empty() : this.singleSignOnUserValue;
+    public Output<String> getSingleSignOnUserValue() {
+        return this.singleSignOnUserValue == null ? Output.empty() : this.singleSignOnUserValue;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userProfileName")
-      private final @Nullable Input<String> userProfileName;
+      private final @Nullable Output<String> userProfileName;
 
-    public Input<String> getUserProfileName() {
-        return this.userProfileName == null ? Input.empty() : this.userProfileName;
+    public Output<String> getUserProfileName() {
+        return this.userProfileName == null ? Output.empty() : this.userProfileName;
     }
 
     /**
@@ -109,22 +109,22 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userSettings")
-      private final @Nullable Input<UserProfileUserSettingsGetArgs> userSettings;
+      private final @Nullable Output<UserProfileUserSettingsGetArgs> userSettings;
 
-    public Input<UserProfileUserSettingsGetArgs> getUserSettings() {
-        return this.userSettings == null ? Input.empty() : this.userSettings;
+    public Output<UserProfileUserSettingsGetArgs> getUserSettings() {
+        return this.userSettings == null ? Output.empty() : this.userSettings;
     }
 
     public UserProfileState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> domainId,
-        @Nullable Input<String> homeEfsFileSystemUid,
-        @Nullable Input<String> singleSignOnUserIdentifier,
-        @Nullable Input<String> singleSignOnUserValue,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> userProfileName,
-        @Nullable Input<UserProfileUserSettingsGetArgs> userSettings) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> domainId,
+        @Nullable Output<String> homeEfsFileSystemUid,
+        @Nullable Output<String> singleSignOnUserIdentifier,
+        @Nullable Output<String> singleSignOnUserValue,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> userProfileName,
+        @Nullable Output<UserProfileUserSettingsGetArgs> userSettings) {
         this.arn = arn;
         this.domainId = domainId;
         this.homeEfsFileSystemUid = homeEfsFileSystemUid;
@@ -137,15 +137,15 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserProfileState() {
-        this.arn = Input.empty();
-        this.domainId = Input.empty();
-        this.homeEfsFileSystemUid = Input.empty();
-        this.singleSignOnUserIdentifier = Input.empty();
-        this.singleSignOnUserValue = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.userProfileName = Input.empty();
-        this.userSettings = Input.empty();
+        this.arn = Output.empty();
+        this.domainId = Output.empty();
+        this.homeEfsFileSystemUid = Output.empty();
+        this.singleSignOnUserIdentifier = Output.empty();
+        this.singleSignOnUserValue = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.userProfileName = Output.empty();
+        this.userSettings = Output.empty();
     }
 
     public static Builder builder() {
@@ -157,15 +157,15 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> domainId;
-        private @Nullable Input<String> homeEfsFileSystemUid;
-        private @Nullable Input<String> singleSignOnUserIdentifier;
-        private @Nullable Input<String> singleSignOnUserValue;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> userProfileName;
-        private @Nullable Input<UserProfileUserSettingsGetArgs> userSettings;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> domainId;
+        private @Nullable Output<String> homeEfsFileSystemUid;
+        private @Nullable Output<String> singleSignOnUserIdentifier;
+        private @Nullable Output<String> singleSignOnUserValue;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> userProfileName;
+        private @Nullable Output<UserProfileUserSettingsGetArgs> userSettings;
 
         public Builder() {
     	      // Empty
@@ -184,93 +184,93 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
     	      this.userSettings = defaults.userSettings;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder domainId(@Nullable Input<String> domainId) {
+        public Builder domainId(@Nullable Output<String> domainId) {
             this.domainId = domainId;
             return this;
         }
 
         public Builder domainId(@Nullable String domainId) {
-            this.domainId = Input.ofNullable(domainId);
+            this.domainId = Output.ofNullable(domainId);
             return this;
         }
 
-        public Builder homeEfsFileSystemUid(@Nullable Input<String> homeEfsFileSystemUid) {
+        public Builder homeEfsFileSystemUid(@Nullable Output<String> homeEfsFileSystemUid) {
             this.homeEfsFileSystemUid = homeEfsFileSystemUid;
             return this;
         }
 
         public Builder homeEfsFileSystemUid(@Nullable String homeEfsFileSystemUid) {
-            this.homeEfsFileSystemUid = Input.ofNullable(homeEfsFileSystemUid);
+            this.homeEfsFileSystemUid = Output.ofNullable(homeEfsFileSystemUid);
             return this;
         }
 
-        public Builder singleSignOnUserIdentifier(@Nullable Input<String> singleSignOnUserIdentifier) {
+        public Builder singleSignOnUserIdentifier(@Nullable Output<String> singleSignOnUserIdentifier) {
             this.singleSignOnUserIdentifier = singleSignOnUserIdentifier;
             return this;
         }
 
         public Builder singleSignOnUserIdentifier(@Nullable String singleSignOnUserIdentifier) {
-            this.singleSignOnUserIdentifier = Input.ofNullable(singleSignOnUserIdentifier);
+            this.singleSignOnUserIdentifier = Output.ofNullable(singleSignOnUserIdentifier);
             return this;
         }
 
-        public Builder singleSignOnUserValue(@Nullable Input<String> singleSignOnUserValue) {
+        public Builder singleSignOnUserValue(@Nullable Output<String> singleSignOnUserValue) {
             this.singleSignOnUserValue = singleSignOnUserValue;
             return this;
         }
 
         public Builder singleSignOnUserValue(@Nullable String singleSignOnUserValue) {
-            this.singleSignOnUserValue = Input.ofNullable(singleSignOnUserValue);
+            this.singleSignOnUserValue = Output.ofNullable(singleSignOnUserValue);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder userProfileName(@Nullable Input<String> userProfileName) {
+        public Builder userProfileName(@Nullable Output<String> userProfileName) {
             this.userProfileName = userProfileName;
             return this;
         }
 
         public Builder userProfileName(@Nullable String userProfileName) {
-            this.userProfileName = Input.ofNullable(userProfileName);
+            this.userProfileName = Output.ofNullable(userProfileName);
             return this;
         }
 
-        public Builder userSettings(@Nullable Input<UserProfileUserSettingsGetArgs> userSettings) {
+        public Builder userSettings(@Nullable Output<UserProfileUserSettingsGetArgs> userSettings) {
             this.userSettings = userSettings;
             return this;
         }
 
         public Builder userSettings(@Nullable UserProfileUserSettingsGetArgs userSettings) {
-            this.userSettings = Input.ofNullable(userSettings);
+            this.userSettings = Output.ofNullable(userSettings);
             return this;
         }
         public UserProfileState build() {

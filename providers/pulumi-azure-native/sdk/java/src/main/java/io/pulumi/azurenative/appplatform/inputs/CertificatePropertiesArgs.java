@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class CertificatePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="certVersion")
-      private final @Nullable Input<String> certVersion;
+      private final @Nullable Output<String> certVersion;
 
-    public Input<String> getCertVersion() {
-        return this.certVersion == null ? Input.empty() : this.certVersion;
+    public Output<String> getCertVersion() {
+        return this.certVersion == null ? Output.empty() : this.certVersion;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class CertificatePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="keyVaultCertName", required=true)
-      private final Input<String> keyVaultCertName;
+      private final Output<String> keyVaultCertName;
 
-    public Input<String> getKeyVaultCertName() {
+    public Output<String> getKeyVaultCertName() {
         return this.keyVaultCertName;
     }
 
@@ -45,25 +45,25 @@ public final class CertificatePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="vaultUri", required=true)
-      private final Input<String> vaultUri;
+      private final Output<String> vaultUri;
 
-    public Input<String> getVaultUri() {
+    public Output<String> getVaultUri() {
         return this.vaultUri;
     }
 
     public CertificatePropertiesArgs(
-        @Nullable Input<String> certVersion,
-        Input<String> keyVaultCertName,
-        Input<String> vaultUri) {
+        @Nullable Output<String> certVersion,
+        Output<String> keyVaultCertName,
+        Output<String> vaultUri) {
         this.certVersion = certVersion;
         this.keyVaultCertName = Objects.requireNonNull(keyVaultCertName, "expected parameter 'keyVaultCertName' to be non-null");
         this.vaultUri = Objects.requireNonNull(vaultUri, "expected parameter 'vaultUri' to be non-null");
     }
 
     private CertificatePropertiesArgs() {
-        this.certVersion = Input.empty();
-        this.keyVaultCertName = Input.empty();
-        this.vaultUri = Input.empty();
+        this.certVersion = Output.empty();
+        this.keyVaultCertName = Output.empty();
+        this.vaultUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class CertificatePropertiesArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> certVersion;
-        private Input<String> keyVaultCertName;
-        private Input<String> vaultUri;
+        private @Nullable Output<String> certVersion;
+        private Output<String> keyVaultCertName;
+        private Output<String> vaultUri;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class CertificatePropertiesArgs extends io.pulumi.resources.Resourc
     	      this.vaultUri = defaults.vaultUri;
         }
 
-        public Builder certVersion(@Nullable Input<String> certVersion) {
+        public Builder certVersion(@Nullable Output<String> certVersion) {
             this.certVersion = certVersion;
             return this;
         }
 
         public Builder certVersion(@Nullable String certVersion) {
-            this.certVersion = Input.ofNullable(certVersion);
+            this.certVersion = Output.ofNullable(certVersion);
             return this;
         }
 
-        public Builder keyVaultCertName(Input<String> keyVaultCertName) {
+        public Builder keyVaultCertName(Output<String> keyVaultCertName) {
             this.keyVaultCertName = Objects.requireNonNull(keyVaultCertName);
             return this;
         }
 
         public Builder keyVaultCertName(String keyVaultCertName) {
-            this.keyVaultCertName = Input.of(Objects.requireNonNull(keyVaultCertName));
+            this.keyVaultCertName = Output.of(Objects.requireNonNull(keyVaultCertName));
             return this;
         }
 
-        public Builder vaultUri(Input<String> vaultUri) {
+        public Builder vaultUri(Output<String> vaultUri) {
             this.vaultUri = Objects.requireNonNull(vaultUri);
             return this;
         }
 
         public Builder vaultUri(String vaultUri) {
-            this.vaultUri = Input.of(Objects.requireNonNull(vaultUri));
+            this.vaultUri = Output.of(Objects.requireNonNull(vaultUri));
             return this;
         }
         public CertificatePropertiesArgs build() {

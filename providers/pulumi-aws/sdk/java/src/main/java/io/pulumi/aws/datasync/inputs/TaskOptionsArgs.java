@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.datasync.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="atime")
-      private final @Nullable Input<String> atime;
+      private final @Nullable Output<String> atime;
 
-    public Input<String> getAtime() {
-        return this.atime == null ? Input.empty() : this.atime;
+    public Output<String> getAtime() {
+        return this.atime == null ? Output.empty() : this.atime;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bytesPerSecond")
-      private final @Nullable Input<Integer> bytesPerSecond;
+      private final @Nullable Output<Integer> bytesPerSecond;
 
-    public Input<Integer> getBytesPerSecond() {
-        return this.bytesPerSecond == null ? Input.empty() : this.bytesPerSecond;
+    public Output<Integer> getBytesPerSecond() {
+        return this.bytesPerSecond == null ? Output.empty() : this.bytesPerSecond;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gid")
-      private final @Nullable Input<String> gid;
+      private final @Nullable Output<String> gid;
 
-    public Input<String> getGid() {
-        return this.gid == null ? Input.empty() : this.gid;
+    public Output<String> getGid() {
+        return this.gid == null ? Output.empty() : this.gid;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logLevel")
-      private final @Nullable Input<String> logLevel;
+      private final @Nullable Output<String> logLevel;
 
-    public Input<String> getLogLevel() {
-        return this.logLevel == null ? Input.empty() : this.logLevel;
+    public Output<String> getLogLevel() {
+        return this.logLevel == null ? Output.empty() : this.logLevel;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mtime")
-      private final @Nullable Input<String> mtime;
+      private final @Nullable Output<String> mtime;
 
-    public Input<String> getMtime() {
-        return this.mtime == null ? Input.empty() : this.mtime;
+    public Output<String> getMtime() {
+        return this.mtime == null ? Output.empty() : this.mtime;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="overwriteMode")
-      private final @Nullable Input<String> overwriteMode;
+      private final @Nullable Output<String> overwriteMode;
 
-    public Input<String> getOverwriteMode() {
-        return this.overwriteMode == null ? Input.empty() : this.overwriteMode;
+    public Output<String> getOverwriteMode() {
+        return this.overwriteMode == null ? Output.empty() : this.overwriteMode;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="posixPermissions")
-      private final @Nullable Input<String> posixPermissions;
+      private final @Nullable Output<String> posixPermissions;
 
-    public Input<String> getPosixPermissions() {
-        return this.posixPermissions == null ? Input.empty() : this.posixPermissions;
+    public Output<String> getPosixPermissions() {
+        return this.posixPermissions == null ? Output.empty() : this.posixPermissions;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preserveDeletedFiles")
-      private final @Nullable Input<String> preserveDeletedFiles;
+      private final @Nullable Output<String> preserveDeletedFiles;
 
-    public Input<String> getPreserveDeletedFiles() {
-        return this.preserveDeletedFiles == null ? Input.empty() : this.preserveDeletedFiles;
+    public Output<String> getPreserveDeletedFiles() {
+        return this.preserveDeletedFiles == null ? Output.empty() : this.preserveDeletedFiles;
     }
 
     /**
@@ -108,10 +108,10 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preserveDevices")
-      private final @Nullable Input<String> preserveDevices;
+      private final @Nullable Output<String> preserveDevices;
 
-    public Input<String> getPreserveDevices() {
-        return this.preserveDevices == null ? Input.empty() : this.preserveDevices;
+    public Output<String> getPreserveDevices() {
+        return this.preserveDevices == null ? Output.empty() : this.preserveDevices;
     }
 
     /**
@@ -119,10 +119,10 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="taskQueueing")
-      private final @Nullable Input<String> taskQueueing;
+      private final @Nullable Output<String> taskQueueing;
 
-    public Input<String> getTaskQueueing() {
-        return this.taskQueueing == null ? Input.empty() : this.taskQueueing;
+    public Output<String> getTaskQueueing() {
+        return this.taskQueueing == null ? Output.empty() : this.taskQueueing;
     }
 
     /**
@@ -130,10 +130,10 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transferMode")
-      private final @Nullable Input<String> transferMode;
+      private final @Nullable Output<String> transferMode;
 
-    public Input<String> getTransferMode() {
-        return this.transferMode == null ? Input.empty() : this.transferMode;
+    public Output<String> getTransferMode() {
+        return this.transferMode == null ? Output.empty() : this.transferMode;
     }
 
     /**
@@ -141,10 +141,10 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uid")
-      private final @Nullable Input<String> uid;
+      private final @Nullable Output<String> uid;
 
-    public Input<String> getUid() {
-        return this.uid == null ? Input.empty() : this.uid;
+    public Output<String> getUid() {
+        return this.uid == null ? Output.empty() : this.uid;
     }
 
     /**
@@ -152,26 +152,26 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="verifyMode")
-      private final @Nullable Input<String> verifyMode;
+      private final @Nullable Output<String> verifyMode;
 
-    public Input<String> getVerifyMode() {
-        return this.verifyMode == null ? Input.empty() : this.verifyMode;
+    public Output<String> getVerifyMode() {
+        return this.verifyMode == null ? Output.empty() : this.verifyMode;
     }
 
     public TaskOptionsArgs(
-        @Nullable Input<String> atime,
-        @Nullable Input<Integer> bytesPerSecond,
-        @Nullable Input<String> gid,
-        @Nullable Input<String> logLevel,
-        @Nullable Input<String> mtime,
-        @Nullable Input<String> overwriteMode,
-        @Nullable Input<String> posixPermissions,
-        @Nullable Input<String> preserveDeletedFiles,
-        @Nullable Input<String> preserveDevices,
-        @Nullable Input<String> taskQueueing,
-        @Nullable Input<String> transferMode,
-        @Nullable Input<String> uid,
-        @Nullable Input<String> verifyMode) {
+        @Nullable Output<String> atime,
+        @Nullable Output<Integer> bytesPerSecond,
+        @Nullable Output<String> gid,
+        @Nullable Output<String> logLevel,
+        @Nullable Output<String> mtime,
+        @Nullable Output<String> overwriteMode,
+        @Nullable Output<String> posixPermissions,
+        @Nullable Output<String> preserveDeletedFiles,
+        @Nullable Output<String> preserveDevices,
+        @Nullable Output<String> taskQueueing,
+        @Nullable Output<String> transferMode,
+        @Nullable Output<String> uid,
+        @Nullable Output<String> verifyMode) {
         this.atime = atime;
         this.bytesPerSecond = bytesPerSecond;
         this.gid = gid;
@@ -188,19 +188,19 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TaskOptionsArgs() {
-        this.atime = Input.empty();
-        this.bytesPerSecond = Input.empty();
-        this.gid = Input.empty();
-        this.logLevel = Input.empty();
-        this.mtime = Input.empty();
-        this.overwriteMode = Input.empty();
-        this.posixPermissions = Input.empty();
-        this.preserveDeletedFiles = Input.empty();
-        this.preserveDevices = Input.empty();
-        this.taskQueueing = Input.empty();
-        this.transferMode = Input.empty();
-        this.uid = Input.empty();
-        this.verifyMode = Input.empty();
+        this.atime = Output.empty();
+        this.bytesPerSecond = Output.empty();
+        this.gid = Output.empty();
+        this.logLevel = Output.empty();
+        this.mtime = Output.empty();
+        this.overwriteMode = Output.empty();
+        this.posixPermissions = Output.empty();
+        this.preserveDeletedFiles = Output.empty();
+        this.preserveDevices = Output.empty();
+        this.taskQueueing = Output.empty();
+        this.transferMode = Output.empty();
+        this.uid = Output.empty();
+        this.verifyMode = Output.empty();
     }
 
     public static Builder builder() {
@@ -212,19 +212,19 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> atime;
-        private @Nullable Input<Integer> bytesPerSecond;
-        private @Nullable Input<String> gid;
-        private @Nullable Input<String> logLevel;
-        private @Nullable Input<String> mtime;
-        private @Nullable Input<String> overwriteMode;
-        private @Nullable Input<String> posixPermissions;
-        private @Nullable Input<String> preserveDeletedFiles;
-        private @Nullable Input<String> preserveDevices;
-        private @Nullable Input<String> taskQueueing;
-        private @Nullable Input<String> transferMode;
-        private @Nullable Input<String> uid;
-        private @Nullable Input<String> verifyMode;
+        private @Nullable Output<String> atime;
+        private @Nullable Output<Integer> bytesPerSecond;
+        private @Nullable Output<String> gid;
+        private @Nullable Output<String> logLevel;
+        private @Nullable Output<String> mtime;
+        private @Nullable Output<String> overwriteMode;
+        private @Nullable Output<String> posixPermissions;
+        private @Nullable Output<String> preserveDeletedFiles;
+        private @Nullable Output<String> preserveDevices;
+        private @Nullable Output<String> taskQueueing;
+        private @Nullable Output<String> transferMode;
+        private @Nullable Output<String> uid;
+        private @Nullable Output<String> verifyMode;
 
         public Builder() {
     	      // Empty
@@ -247,133 +247,133 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.verifyMode = defaults.verifyMode;
         }
 
-        public Builder atime(@Nullable Input<String> atime) {
+        public Builder atime(@Nullable Output<String> atime) {
             this.atime = atime;
             return this;
         }
 
         public Builder atime(@Nullable String atime) {
-            this.atime = Input.ofNullable(atime);
+            this.atime = Output.ofNullable(atime);
             return this;
         }
 
-        public Builder bytesPerSecond(@Nullable Input<Integer> bytesPerSecond) {
+        public Builder bytesPerSecond(@Nullable Output<Integer> bytesPerSecond) {
             this.bytesPerSecond = bytesPerSecond;
             return this;
         }
 
         public Builder bytesPerSecond(@Nullable Integer bytesPerSecond) {
-            this.bytesPerSecond = Input.ofNullable(bytesPerSecond);
+            this.bytesPerSecond = Output.ofNullable(bytesPerSecond);
             return this;
         }
 
-        public Builder gid(@Nullable Input<String> gid) {
+        public Builder gid(@Nullable Output<String> gid) {
             this.gid = gid;
             return this;
         }
 
         public Builder gid(@Nullable String gid) {
-            this.gid = Input.ofNullable(gid);
+            this.gid = Output.ofNullable(gid);
             return this;
         }
 
-        public Builder logLevel(@Nullable Input<String> logLevel) {
+        public Builder logLevel(@Nullable Output<String> logLevel) {
             this.logLevel = logLevel;
             return this;
         }
 
         public Builder logLevel(@Nullable String logLevel) {
-            this.logLevel = Input.ofNullable(logLevel);
+            this.logLevel = Output.ofNullable(logLevel);
             return this;
         }
 
-        public Builder mtime(@Nullable Input<String> mtime) {
+        public Builder mtime(@Nullable Output<String> mtime) {
             this.mtime = mtime;
             return this;
         }
 
         public Builder mtime(@Nullable String mtime) {
-            this.mtime = Input.ofNullable(mtime);
+            this.mtime = Output.ofNullable(mtime);
             return this;
         }
 
-        public Builder overwriteMode(@Nullable Input<String> overwriteMode) {
+        public Builder overwriteMode(@Nullable Output<String> overwriteMode) {
             this.overwriteMode = overwriteMode;
             return this;
         }
 
         public Builder overwriteMode(@Nullable String overwriteMode) {
-            this.overwriteMode = Input.ofNullable(overwriteMode);
+            this.overwriteMode = Output.ofNullable(overwriteMode);
             return this;
         }
 
-        public Builder posixPermissions(@Nullable Input<String> posixPermissions) {
+        public Builder posixPermissions(@Nullable Output<String> posixPermissions) {
             this.posixPermissions = posixPermissions;
             return this;
         }
 
         public Builder posixPermissions(@Nullable String posixPermissions) {
-            this.posixPermissions = Input.ofNullable(posixPermissions);
+            this.posixPermissions = Output.ofNullable(posixPermissions);
             return this;
         }
 
-        public Builder preserveDeletedFiles(@Nullable Input<String> preserveDeletedFiles) {
+        public Builder preserveDeletedFiles(@Nullable Output<String> preserveDeletedFiles) {
             this.preserveDeletedFiles = preserveDeletedFiles;
             return this;
         }
 
         public Builder preserveDeletedFiles(@Nullable String preserveDeletedFiles) {
-            this.preserveDeletedFiles = Input.ofNullable(preserveDeletedFiles);
+            this.preserveDeletedFiles = Output.ofNullable(preserveDeletedFiles);
             return this;
         }
 
-        public Builder preserveDevices(@Nullable Input<String> preserveDevices) {
+        public Builder preserveDevices(@Nullable Output<String> preserveDevices) {
             this.preserveDevices = preserveDevices;
             return this;
         }
 
         public Builder preserveDevices(@Nullable String preserveDevices) {
-            this.preserveDevices = Input.ofNullable(preserveDevices);
+            this.preserveDevices = Output.ofNullable(preserveDevices);
             return this;
         }
 
-        public Builder taskQueueing(@Nullable Input<String> taskQueueing) {
+        public Builder taskQueueing(@Nullable Output<String> taskQueueing) {
             this.taskQueueing = taskQueueing;
             return this;
         }
 
         public Builder taskQueueing(@Nullable String taskQueueing) {
-            this.taskQueueing = Input.ofNullable(taskQueueing);
+            this.taskQueueing = Output.ofNullable(taskQueueing);
             return this;
         }
 
-        public Builder transferMode(@Nullable Input<String> transferMode) {
+        public Builder transferMode(@Nullable Output<String> transferMode) {
             this.transferMode = transferMode;
             return this;
         }
 
         public Builder transferMode(@Nullable String transferMode) {
-            this.transferMode = Input.ofNullable(transferMode);
+            this.transferMode = Output.ofNullable(transferMode);
             return this;
         }
 
-        public Builder uid(@Nullable Input<String> uid) {
+        public Builder uid(@Nullable Output<String> uid) {
             this.uid = uid;
             return this;
         }
 
         public Builder uid(@Nullable String uid) {
-            this.uid = Input.ofNullable(uid);
+            this.uid = Output.ofNullable(uid);
             return this;
         }
 
-        public Builder verifyMode(@Nullable Input<String> verifyMode) {
+        public Builder verifyMode(@Nullable Output<String> verifyMode) {
             this.verifyMode = verifyMode;
             return this;
         }
 
         public Builder verifyMode(@Nullable String verifyMode) {
-            this.verifyMode = Input.ofNullable(verifyMode);
+            this.verifyMode = Output.ofNullable(verifyMode);
             return this;
         }
         public TaskOptionsArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class RelationshipTypeFieldMappingArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="profileFieldName", required=true)
-      private final Input<String> profileFieldName;
+      private final Output<String> profileFieldName;
 
-    public Input<String> getProfileFieldName() {
+    public Output<String> getProfileFieldName() {
         return this.profileFieldName;
     }
 
@@ -33,22 +33,22 @@ public final class RelationshipTypeFieldMappingArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="relatedProfileKeyProperty", required=true)
-      private final Input<String> relatedProfileKeyProperty;
+      private final Output<String> relatedProfileKeyProperty;
 
-    public Input<String> getRelatedProfileKeyProperty() {
+    public Output<String> getRelatedProfileKeyProperty() {
         return this.relatedProfileKeyProperty;
     }
 
     public RelationshipTypeFieldMappingArgs(
-        Input<String> profileFieldName,
-        Input<String> relatedProfileKeyProperty) {
+        Output<String> profileFieldName,
+        Output<String> relatedProfileKeyProperty) {
         this.profileFieldName = Objects.requireNonNull(profileFieldName, "expected parameter 'profileFieldName' to be non-null");
         this.relatedProfileKeyProperty = Objects.requireNonNull(relatedProfileKeyProperty, "expected parameter 'relatedProfileKeyProperty' to be non-null");
     }
 
     private RelationshipTypeFieldMappingArgs() {
-        this.profileFieldName = Input.empty();
-        this.relatedProfileKeyProperty = Input.empty();
+        this.profileFieldName = Output.empty();
+        this.relatedProfileKeyProperty = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class RelationshipTypeFieldMappingArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<String> profileFieldName;
-        private Input<String> relatedProfileKeyProperty;
+        private Output<String> profileFieldName;
+        private Output<String> relatedProfileKeyProperty;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class RelationshipTypeFieldMappingArgs extends io.pulumi.resources.
     	      this.relatedProfileKeyProperty = defaults.relatedProfileKeyProperty;
         }
 
-        public Builder profileFieldName(Input<String> profileFieldName) {
+        public Builder profileFieldName(Output<String> profileFieldName) {
             this.profileFieldName = Objects.requireNonNull(profileFieldName);
             return this;
         }
 
         public Builder profileFieldName(String profileFieldName) {
-            this.profileFieldName = Input.of(Objects.requireNonNull(profileFieldName));
+            this.profileFieldName = Output.of(Objects.requireNonNull(profileFieldName));
             return this;
         }
 
-        public Builder relatedProfileKeyProperty(Input<String> relatedProfileKeyProperty) {
+        public Builder relatedProfileKeyProperty(Output<String> relatedProfileKeyProperty) {
             this.relatedProfileKeyProperty = Objects.requireNonNull(relatedProfileKeyProperty);
             return this;
         }
 
         public Builder relatedProfileKeyProperty(String relatedProfileKeyProperty) {
-            this.relatedProfileKeyProperty = Input.of(Objects.requireNonNull(relatedProfileKeyProperty));
+            this.relatedProfileKeyProperty = Output.of(Objects.requireNonNull(relatedProfileKeyProperty));
             return this;
         }
         public RelationshipTypeFieldMappingArgs build() {

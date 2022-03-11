@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ResourcePolicyInstanceSchedulePolicyScheduleArgs extends io.p
      * 
      */
     @InputImport(name="schedule")
-      private final @Nullable Input<String> schedule;
+      private final @Nullable Output<String> schedule;
 
-    public Input<String> getSchedule() {
-        return this.schedule == null ? Input.empty() : this.schedule;
+    public Output<String> getSchedule() {
+        return this.schedule == null ? Output.empty() : this.schedule;
     }
 
-    public ResourcePolicyInstanceSchedulePolicyScheduleArgs(@Nullable Input<String> schedule) {
+    public ResourcePolicyInstanceSchedulePolicyScheduleArgs(@Nullable Output<String> schedule) {
         this.schedule = schedule;
     }
 
     private ResourcePolicyInstanceSchedulePolicyScheduleArgs() {
-        this.schedule = Input.empty();
+        this.schedule = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ResourcePolicyInstanceSchedulePolicyScheduleArgs extends io.p
     }
 
     public static final class Builder {
-        private @Nullable Input<String> schedule;
+        private @Nullable Output<String> schedule;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ResourcePolicyInstanceSchedulePolicyScheduleArgs extends io.p
     	      this.schedule = defaults.schedule;
         }
 
-        public Builder schedule(@Nullable Input<String> schedule) {
+        public Builder schedule(@Nullable Output<String> schedule) {
             this.schedule = schedule;
             return this;
         }
 
         public Builder schedule(@Nullable String schedule) {
-            this.schedule = Input.ofNullable(schedule);
+            this.schedule = Output.ofNullable(schedule);
             return this;
         }
         public ResourcePolicyInstanceSchedulePolicyScheduleArgs build() {

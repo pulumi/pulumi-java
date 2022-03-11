@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceSettingId")
-      private final @Nullable Input<String> resourceSettingId;
+      private final @Nullable Output<String> resourceSettingId;
 
-    public Input<String> getResourceSettingId() {
-        return this.resourceSettingId == null ? Input.empty() : this.resourceSettingId;
+    public Output<String> getResourceSettingId() {
+        return this.resourceSettingId == null ? Output.empty() : this.resourceSettingId;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vmResourceId")
-      private final @Nullable Input<String> vmResourceId;
+      private final @Nullable Output<String> vmResourceId;
 
-    public Input<String> getVmResourceId() {
-        return this.vmResourceId == null ? Input.empty() : this.vmResourceId;
+    public Output<String> getVmResourceId() {
+        return this.vmResourceId == null ? Output.empty() : this.vmResourceId;
     }
 
     public ResourceSetArgs(
-        @Nullable Input<String> resourceSettingId,
-        @Nullable Input<String> vmResourceId) {
+        @Nullable Output<String> resourceSettingId,
+        @Nullable Output<String> vmResourceId) {
         this.resourceSettingId = resourceSettingId;
         this.vmResourceId = vmResourceId;
     }
 
     private ResourceSetArgs() {
-        this.resourceSettingId = Input.empty();
-        this.vmResourceId = Input.empty();
+        this.resourceSettingId = Output.empty();
+        this.vmResourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> resourceSettingId;
-        private @Nullable Input<String> vmResourceId;
+        private @Nullable Output<String> resourceSettingId;
+        private @Nullable Output<String> vmResourceId;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vmResourceId = defaults.vmResourceId;
         }
 
-        public Builder resourceSettingId(@Nullable Input<String> resourceSettingId) {
+        public Builder resourceSettingId(@Nullable Output<String> resourceSettingId) {
             this.resourceSettingId = resourceSettingId;
             return this;
         }
 
         public Builder resourceSettingId(@Nullable String resourceSettingId) {
-            this.resourceSettingId = Input.ofNullable(resourceSettingId);
+            this.resourceSettingId = Output.ofNullable(resourceSettingId);
             return this;
         }
 
-        public Builder vmResourceId(@Nullable Input<String> vmResourceId) {
+        public Builder vmResourceId(@Nullable Output<String> vmResourceId) {
             this.vmResourceId = vmResourceId;
             return this;
         }
 
         public Builder vmResourceId(@Nullable String vmResourceId) {
-            this.vmResourceId = Input.ofNullable(vmResourceId);
+            this.vmResourceId = Output.ofNullable(vmResourceId);
             return this;
         }
         public ResourceSetArgs build() {

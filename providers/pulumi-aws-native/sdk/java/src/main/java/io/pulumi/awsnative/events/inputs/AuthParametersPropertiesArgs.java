@@ -7,7 +7,7 @@ import io.pulumi.awsnative.events.inputs.ConnectionApiKeyAuthParametersArgs;
 import io.pulumi.awsnative.events.inputs.ConnectionBasicAuthParametersArgs;
 import io.pulumi.awsnative.events.inputs.ConnectionHttpParametersArgs;
 import io.pulumi.awsnative.events.inputs.ConnectionOAuthParametersArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,38 +18,38 @@ public final class AuthParametersPropertiesArgs extends io.pulumi.resources.Reso
     public static final AuthParametersPropertiesArgs Empty = new AuthParametersPropertiesArgs();
 
     @InputImport(name="apiKeyAuthParameters")
-      private final @Nullable Input<ConnectionApiKeyAuthParametersArgs> apiKeyAuthParameters;
+      private final @Nullable Output<ConnectionApiKeyAuthParametersArgs> apiKeyAuthParameters;
 
-    public Input<ConnectionApiKeyAuthParametersArgs> getApiKeyAuthParameters() {
-        return this.apiKeyAuthParameters == null ? Input.empty() : this.apiKeyAuthParameters;
+    public Output<ConnectionApiKeyAuthParametersArgs> getApiKeyAuthParameters() {
+        return this.apiKeyAuthParameters == null ? Output.empty() : this.apiKeyAuthParameters;
     }
 
     @InputImport(name="basicAuthParameters")
-      private final @Nullable Input<ConnectionBasicAuthParametersArgs> basicAuthParameters;
+      private final @Nullable Output<ConnectionBasicAuthParametersArgs> basicAuthParameters;
 
-    public Input<ConnectionBasicAuthParametersArgs> getBasicAuthParameters() {
-        return this.basicAuthParameters == null ? Input.empty() : this.basicAuthParameters;
+    public Output<ConnectionBasicAuthParametersArgs> getBasicAuthParameters() {
+        return this.basicAuthParameters == null ? Output.empty() : this.basicAuthParameters;
     }
 
     @InputImport(name="invocationHttpParameters")
-      private final @Nullable Input<ConnectionHttpParametersArgs> invocationHttpParameters;
+      private final @Nullable Output<ConnectionHttpParametersArgs> invocationHttpParameters;
 
-    public Input<ConnectionHttpParametersArgs> getInvocationHttpParameters() {
-        return this.invocationHttpParameters == null ? Input.empty() : this.invocationHttpParameters;
+    public Output<ConnectionHttpParametersArgs> getInvocationHttpParameters() {
+        return this.invocationHttpParameters == null ? Output.empty() : this.invocationHttpParameters;
     }
 
     @InputImport(name="oAuthParameters")
-      private final @Nullable Input<ConnectionOAuthParametersArgs> oAuthParameters;
+      private final @Nullable Output<ConnectionOAuthParametersArgs> oAuthParameters;
 
-    public Input<ConnectionOAuthParametersArgs> getOAuthParameters() {
-        return this.oAuthParameters == null ? Input.empty() : this.oAuthParameters;
+    public Output<ConnectionOAuthParametersArgs> getOAuthParameters() {
+        return this.oAuthParameters == null ? Output.empty() : this.oAuthParameters;
     }
 
     public AuthParametersPropertiesArgs(
-        @Nullable Input<ConnectionApiKeyAuthParametersArgs> apiKeyAuthParameters,
-        @Nullable Input<ConnectionBasicAuthParametersArgs> basicAuthParameters,
-        @Nullable Input<ConnectionHttpParametersArgs> invocationHttpParameters,
-        @Nullable Input<ConnectionOAuthParametersArgs> oAuthParameters) {
+        @Nullable Output<ConnectionApiKeyAuthParametersArgs> apiKeyAuthParameters,
+        @Nullable Output<ConnectionBasicAuthParametersArgs> basicAuthParameters,
+        @Nullable Output<ConnectionHttpParametersArgs> invocationHttpParameters,
+        @Nullable Output<ConnectionOAuthParametersArgs> oAuthParameters) {
         this.apiKeyAuthParameters = apiKeyAuthParameters;
         this.basicAuthParameters = basicAuthParameters;
         this.invocationHttpParameters = invocationHttpParameters;
@@ -57,10 +57,10 @@ public final class AuthParametersPropertiesArgs extends io.pulumi.resources.Reso
     }
 
     private AuthParametersPropertiesArgs() {
-        this.apiKeyAuthParameters = Input.empty();
-        this.basicAuthParameters = Input.empty();
-        this.invocationHttpParameters = Input.empty();
-        this.oAuthParameters = Input.empty();
+        this.apiKeyAuthParameters = Output.empty();
+        this.basicAuthParameters = Output.empty();
+        this.invocationHttpParameters = Output.empty();
+        this.oAuthParameters = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,10 +72,10 @@ public final class AuthParametersPropertiesArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<ConnectionApiKeyAuthParametersArgs> apiKeyAuthParameters;
-        private @Nullable Input<ConnectionBasicAuthParametersArgs> basicAuthParameters;
-        private @Nullable Input<ConnectionHttpParametersArgs> invocationHttpParameters;
-        private @Nullable Input<ConnectionOAuthParametersArgs> oAuthParameters;
+        private @Nullable Output<ConnectionApiKeyAuthParametersArgs> apiKeyAuthParameters;
+        private @Nullable Output<ConnectionBasicAuthParametersArgs> basicAuthParameters;
+        private @Nullable Output<ConnectionHttpParametersArgs> invocationHttpParameters;
+        private @Nullable Output<ConnectionOAuthParametersArgs> oAuthParameters;
 
         public Builder() {
     	      // Empty
@@ -89,43 +89,43 @@ public final class AuthParametersPropertiesArgs extends io.pulumi.resources.Reso
     	      this.oAuthParameters = defaults.oAuthParameters;
         }
 
-        public Builder apiKeyAuthParameters(@Nullable Input<ConnectionApiKeyAuthParametersArgs> apiKeyAuthParameters) {
+        public Builder apiKeyAuthParameters(@Nullable Output<ConnectionApiKeyAuthParametersArgs> apiKeyAuthParameters) {
             this.apiKeyAuthParameters = apiKeyAuthParameters;
             return this;
         }
 
         public Builder apiKeyAuthParameters(@Nullable ConnectionApiKeyAuthParametersArgs apiKeyAuthParameters) {
-            this.apiKeyAuthParameters = Input.ofNullable(apiKeyAuthParameters);
+            this.apiKeyAuthParameters = Output.ofNullable(apiKeyAuthParameters);
             return this;
         }
 
-        public Builder basicAuthParameters(@Nullable Input<ConnectionBasicAuthParametersArgs> basicAuthParameters) {
+        public Builder basicAuthParameters(@Nullable Output<ConnectionBasicAuthParametersArgs> basicAuthParameters) {
             this.basicAuthParameters = basicAuthParameters;
             return this;
         }
 
         public Builder basicAuthParameters(@Nullable ConnectionBasicAuthParametersArgs basicAuthParameters) {
-            this.basicAuthParameters = Input.ofNullable(basicAuthParameters);
+            this.basicAuthParameters = Output.ofNullable(basicAuthParameters);
             return this;
         }
 
-        public Builder invocationHttpParameters(@Nullable Input<ConnectionHttpParametersArgs> invocationHttpParameters) {
+        public Builder invocationHttpParameters(@Nullable Output<ConnectionHttpParametersArgs> invocationHttpParameters) {
             this.invocationHttpParameters = invocationHttpParameters;
             return this;
         }
 
         public Builder invocationHttpParameters(@Nullable ConnectionHttpParametersArgs invocationHttpParameters) {
-            this.invocationHttpParameters = Input.ofNullable(invocationHttpParameters);
+            this.invocationHttpParameters = Output.ofNullable(invocationHttpParameters);
             return this;
         }
 
-        public Builder oAuthParameters(@Nullable Input<ConnectionOAuthParametersArgs> oAuthParameters) {
+        public Builder oAuthParameters(@Nullable Output<ConnectionOAuthParametersArgs> oAuthParameters) {
             this.oAuthParameters = oAuthParameters;
             return this;
         }
 
         public Builder oAuthParameters(@Nullable ConnectionOAuthParametersArgs oAuthParameters) {
-            this.oAuthParameters = Input.ofNullable(oAuthParameters);
+            this.oAuthParameters = Output.ofNullable(oAuthParameters);
             return this;
         }
         public AuthParametersPropertiesArgs build() {

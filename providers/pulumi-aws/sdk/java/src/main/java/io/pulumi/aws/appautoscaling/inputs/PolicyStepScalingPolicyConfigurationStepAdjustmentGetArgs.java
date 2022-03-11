@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appautoscaling.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class PolicyStepScalingPolicyConfigurationStepAdjustmentGetArgs ext
      * 
      */
     @InputImport(name="metricIntervalLowerBound")
-      private final @Nullable Input<String> metricIntervalLowerBound;
+      private final @Nullable Output<String> metricIntervalLowerBound;
 
-    public Input<String> getMetricIntervalLowerBound() {
-        return this.metricIntervalLowerBound == null ? Input.empty() : this.metricIntervalLowerBound;
+    public Output<String> getMetricIntervalLowerBound() {
+        return this.metricIntervalLowerBound == null ? Output.empty() : this.metricIntervalLowerBound;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class PolicyStepScalingPolicyConfigurationStepAdjustmentGetArgs ext
      * 
      */
     @InputImport(name="metricIntervalUpperBound")
-      private final @Nullable Input<String> metricIntervalUpperBound;
+      private final @Nullable Output<String> metricIntervalUpperBound;
 
-    public Input<String> getMetricIntervalUpperBound() {
-        return this.metricIntervalUpperBound == null ? Input.empty() : this.metricIntervalUpperBound;
+    public Output<String> getMetricIntervalUpperBound() {
+        return this.metricIntervalUpperBound == null ? Output.empty() : this.metricIntervalUpperBound;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class PolicyStepScalingPolicyConfigurationStepAdjustmentGetArgs ext
      * 
      */
     @InputImport(name="scalingAdjustment", required=true)
-      private final Input<Integer> scalingAdjustment;
+      private final Output<Integer> scalingAdjustment;
 
-    public Input<Integer> getScalingAdjustment() {
+    public Output<Integer> getScalingAdjustment() {
         return this.scalingAdjustment;
     }
 
     public PolicyStepScalingPolicyConfigurationStepAdjustmentGetArgs(
-        @Nullable Input<String> metricIntervalLowerBound,
-        @Nullable Input<String> metricIntervalUpperBound,
-        Input<Integer> scalingAdjustment) {
+        @Nullable Output<String> metricIntervalLowerBound,
+        @Nullable Output<String> metricIntervalUpperBound,
+        Output<Integer> scalingAdjustment) {
         this.metricIntervalLowerBound = metricIntervalLowerBound;
         this.metricIntervalUpperBound = metricIntervalUpperBound;
         this.scalingAdjustment = Objects.requireNonNull(scalingAdjustment, "expected parameter 'scalingAdjustment' to be non-null");
     }
 
     private PolicyStepScalingPolicyConfigurationStepAdjustmentGetArgs() {
-        this.metricIntervalLowerBound = Input.empty();
-        this.metricIntervalUpperBound = Input.empty();
-        this.scalingAdjustment = Input.empty();
+        this.metricIntervalLowerBound = Output.empty();
+        this.metricIntervalUpperBound = Output.empty();
+        this.scalingAdjustment = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class PolicyStepScalingPolicyConfigurationStepAdjustmentGetArgs ext
     }
 
     public static final class Builder {
-        private @Nullable Input<String> metricIntervalLowerBound;
-        private @Nullable Input<String> metricIntervalUpperBound;
-        private Input<Integer> scalingAdjustment;
+        private @Nullable Output<String> metricIntervalLowerBound;
+        private @Nullable Output<String> metricIntervalUpperBound;
+        private Output<Integer> scalingAdjustment;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class PolicyStepScalingPolicyConfigurationStepAdjustmentGetArgs ext
     	      this.scalingAdjustment = defaults.scalingAdjustment;
         }
 
-        public Builder metricIntervalLowerBound(@Nullable Input<String> metricIntervalLowerBound) {
+        public Builder metricIntervalLowerBound(@Nullable Output<String> metricIntervalLowerBound) {
             this.metricIntervalLowerBound = metricIntervalLowerBound;
             return this;
         }
 
         public Builder metricIntervalLowerBound(@Nullable String metricIntervalLowerBound) {
-            this.metricIntervalLowerBound = Input.ofNullable(metricIntervalLowerBound);
+            this.metricIntervalLowerBound = Output.ofNullable(metricIntervalLowerBound);
             return this;
         }
 
-        public Builder metricIntervalUpperBound(@Nullable Input<String> metricIntervalUpperBound) {
+        public Builder metricIntervalUpperBound(@Nullable Output<String> metricIntervalUpperBound) {
             this.metricIntervalUpperBound = metricIntervalUpperBound;
             return this;
         }
 
         public Builder metricIntervalUpperBound(@Nullable String metricIntervalUpperBound) {
-            this.metricIntervalUpperBound = Input.ofNullable(metricIntervalUpperBound);
+            this.metricIntervalUpperBound = Output.ofNullable(metricIntervalUpperBound);
             return this;
         }
 
-        public Builder scalingAdjustment(Input<Integer> scalingAdjustment) {
+        public Builder scalingAdjustment(Output<Integer> scalingAdjustment) {
             this.scalingAdjustment = Objects.requireNonNull(scalingAdjustment);
             return this;
         }
 
         public Builder scalingAdjustment(Integer scalingAdjustment) {
-            this.scalingAdjustment = Input.of(Objects.requireNonNull(scalingAdjustment));
+            this.scalingAdjustment = Output.of(Objects.requireNonNull(scalingAdjustment));
             return this;
         }
         public PolicyStepScalingPolicyConfigurationStepAdjustmentGetArgs build() {

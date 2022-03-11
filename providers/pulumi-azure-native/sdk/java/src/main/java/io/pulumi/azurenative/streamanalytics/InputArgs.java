@@ -6,7 +6,7 @@ package io.pulumi.azurenative.streamanalytics;
 import io.pulumi.azurenative.streamanalytics.inputs.ReferenceInputPropertiesArgs;
 import io.pulumi.azurenative.streamanalytics.inputs.StreamInputPropertiesArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,10 +22,10 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputName")
-      private final @Nullable Input<String> inputName;
+      private final @Nullable Output<String> inputName;
 
-    public Input<String> getInputName() {
-        return this.inputName == null ? Input.empty() : this.inputName;
+    public Output<String> getInputName() {
+        return this.inputName == null ? Output.empty() : this.inputName;
     }
 
     /**
@@ -33,9 +33,9 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobName", required=true)
-      private final Input<String> jobName;
+      private final Output<String> jobName;
 
-    public Input<String> getJobName() {
+    public Output<String> getJobName() {
         return this.jobName;
     }
 
@@ -44,10 +44,10 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs>> properties;
+      private final @Nullable Output<Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs>> properties;
 
-    public Input<Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs>> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs>> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -66,18 +66,18 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public InputArgs(
-        @Nullable Input<String> inputName,
-        Input<String> jobName,
-        @Nullable Input<String> name,
-        @Nullable Input<Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs>> properties,
-        Input<String> resourceGroupName) {
+        @Nullable Output<String> inputName,
+        Output<String> jobName,
+        @Nullable Output<String> name,
+        @Nullable Output<Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs>> properties,
+        Output<String> resourceGroupName) {
         this.inputName = inputName;
         this.jobName = Objects.requireNonNull(jobName, "expected parameter 'jobName' to be non-null");
         this.name = name;
@@ -86,11 +86,11 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InputArgs() {
-        this.inputName = Input.empty();
-        this.jobName = Input.empty();
-        this.name = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.inputName = Output.empty();
+        this.jobName = Output.empty();
+        this.name = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -102,11 +102,11 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> inputName;
-        private Input<String> jobName;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs>> properties;
-        private Input<String> resourceGroupName;
+        private @Nullable Output<String> inputName;
+        private Output<String> jobName;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs>> properties;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -121,53 +121,53 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder inputName(@Nullable Input<String> inputName) {
+        public Builder inputName(@Nullable Output<String> inputName) {
             this.inputName = inputName;
             return this;
         }
 
         public Builder inputName(@Nullable String inputName) {
-            this.inputName = Input.ofNullable(inputName);
+            this.inputName = Output.ofNullable(inputName);
             return this;
         }
 
-        public Builder jobName(Input<String> jobName) {
+        public Builder jobName(Output<String> jobName) {
             this.jobName = Objects.requireNonNull(jobName);
             return this;
         }
 
         public Builder jobName(String jobName) {
-            this.jobName = Input.of(Objects.requireNonNull(jobName));
+            this.jobName = Output.of(Objects.requireNonNull(jobName));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder properties(@Nullable Input<Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs>> properties) {
+        public Builder properties(@Nullable Output<Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs>> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs> properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public InputArgs build() {

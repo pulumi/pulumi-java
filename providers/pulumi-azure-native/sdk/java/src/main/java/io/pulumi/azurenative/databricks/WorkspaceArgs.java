@@ -6,7 +6,7 @@ package io.pulumi.azurenative.databricks;
 import io.pulumi.azurenative.databricks.inputs.SkuArgs;
 import io.pulumi.azurenative.databricks.inputs.WorkspaceCustomParametersArgs;
 import io.pulumi.azurenative.databricks.inputs.WorkspaceProviderAuthorizationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizations")
-      private final @Nullable Input<List<WorkspaceProviderAuthorizationArgs>> authorizations;
+      private final @Nullable Output<List<WorkspaceProviderAuthorizationArgs>> authorizations;
 
-    public Input<List<WorkspaceProviderAuthorizationArgs>> getAuthorizations() {
-        return this.authorizations == null ? Input.empty() : this.authorizations;
+    public Output<List<WorkspaceProviderAuthorizationArgs>> getAuthorizations() {
+        return this.authorizations == null ? Output.empty() : this.authorizations;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -46,9 +46,9 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedResourceGroupId", required=true)
-      private final Input<String> managedResourceGroupId;
+      private final Output<String> managedResourceGroupId;
 
-    public Input<String> getManagedResourceGroupId() {
+    public Output<String> getManagedResourceGroupId() {
         return this.managedResourceGroupId;
     }
 
@@ -57,10 +57,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<WorkspaceCustomParametersArgs> parameters;
+      private final @Nullable Output<WorkspaceCustomParametersArgs> parameters;
 
-    public Input<WorkspaceCustomParametersArgs> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<WorkspaceCustomParametersArgs> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -68,9 +68,9 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -79,10 +79,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<SkuArgs> sku;
+      private final @Nullable Output<SkuArgs> sku;
 
-    public Input<SkuArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<SkuArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uiDefinitionUri")
-      private final @Nullable Input<String> uiDefinitionUri;
+      private final @Nullable Output<String> uiDefinitionUri;
 
-    public Input<String> getUiDefinitionUri() {
-        return this.uiDefinitionUri == null ? Input.empty() : this.uiDefinitionUri;
+    public Output<String> getUiDefinitionUri() {
+        return this.uiDefinitionUri == null ? Output.empty() : this.uiDefinitionUri;
     }
 
     /**
@@ -112,22 +112,22 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName")
-      private final @Nullable Input<String> workspaceName;
+      private final @Nullable Output<String> workspaceName;
 
-    public Input<String> getWorkspaceName() {
-        return this.workspaceName == null ? Input.empty() : this.workspaceName;
+    public Output<String> getWorkspaceName() {
+        return this.workspaceName == null ? Output.empty() : this.workspaceName;
     }
 
     public WorkspaceArgs(
-        @Nullable Input<List<WorkspaceProviderAuthorizationArgs>> authorizations,
-        @Nullable Input<String> location,
-        Input<String> managedResourceGroupId,
-        @Nullable Input<WorkspaceCustomParametersArgs> parameters,
-        Input<String> resourceGroupName,
-        @Nullable Input<SkuArgs> sku,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> uiDefinitionUri,
-        @Nullable Input<String> workspaceName) {
+        @Nullable Output<List<WorkspaceProviderAuthorizationArgs>> authorizations,
+        @Nullable Output<String> location,
+        Output<String> managedResourceGroupId,
+        @Nullable Output<WorkspaceCustomParametersArgs> parameters,
+        Output<String> resourceGroupName,
+        @Nullable Output<SkuArgs> sku,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> uiDefinitionUri,
+        @Nullable Output<String> workspaceName) {
         this.authorizations = authorizations;
         this.location = location;
         this.managedResourceGroupId = Objects.requireNonNull(managedResourceGroupId, "expected parameter 'managedResourceGroupId' to be non-null");
@@ -140,15 +140,15 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WorkspaceArgs() {
-        this.authorizations = Input.empty();
-        this.location = Input.empty();
-        this.managedResourceGroupId = Input.empty();
-        this.parameters = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sku = Input.empty();
-        this.tags = Input.empty();
-        this.uiDefinitionUri = Input.empty();
-        this.workspaceName = Input.empty();
+        this.authorizations = Output.empty();
+        this.location = Output.empty();
+        this.managedResourceGroupId = Output.empty();
+        this.parameters = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sku = Output.empty();
+        this.tags = Output.empty();
+        this.uiDefinitionUri = Output.empty();
+        this.workspaceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -160,15 +160,15 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<WorkspaceProviderAuthorizationArgs>> authorizations;
-        private @Nullable Input<String> location;
-        private Input<String> managedResourceGroupId;
-        private @Nullable Input<WorkspaceCustomParametersArgs> parameters;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<SkuArgs> sku;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> uiDefinitionUri;
-        private @Nullable Input<String> workspaceName;
+        private @Nullable Output<List<WorkspaceProviderAuthorizationArgs>> authorizations;
+        private @Nullable Output<String> location;
+        private Output<String> managedResourceGroupId;
+        private @Nullable Output<WorkspaceCustomParametersArgs> parameters;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<SkuArgs> sku;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> uiDefinitionUri;
+        private @Nullable Output<String> workspaceName;
 
         public Builder() {
     	      // Empty
@@ -187,93 +187,93 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder authorizations(@Nullable Input<List<WorkspaceProviderAuthorizationArgs>> authorizations) {
+        public Builder authorizations(@Nullable Output<List<WorkspaceProviderAuthorizationArgs>> authorizations) {
             this.authorizations = authorizations;
             return this;
         }
 
         public Builder authorizations(@Nullable List<WorkspaceProviderAuthorizationArgs> authorizations) {
-            this.authorizations = Input.ofNullable(authorizations);
+            this.authorizations = Output.ofNullable(authorizations);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder managedResourceGroupId(Input<String> managedResourceGroupId) {
+        public Builder managedResourceGroupId(Output<String> managedResourceGroupId) {
             this.managedResourceGroupId = Objects.requireNonNull(managedResourceGroupId);
             return this;
         }
 
         public Builder managedResourceGroupId(String managedResourceGroupId) {
-            this.managedResourceGroupId = Input.of(Objects.requireNonNull(managedResourceGroupId));
+            this.managedResourceGroupId = Output.of(Objects.requireNonNull(managedResourceGroupId));
             return this;
         }
 
-        public Builder parameters(@Nullable Input<WorkspaceCustomParametersArgs> parameters) {
+        public Builder parameters(@Nullable Output<WorkspaceCustomParametersArgs> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable WorkspaceCustomParametersArgs parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder uiDefinitionUri(@Nullable Input<String> uiDefinitionUri) {
+        public Builder uiDefinitionUri(@Nullable Output<String> uiDefinitionUri) {
             this.uiDefinitionUri = uiDefinitionUri;
             return this;
         }
 
         public Builder uiDefinitionUri(@Nullable String uiDefinitionUri) {
-            this.uiDefinitionUri = Input.ofNullable(uiDefinitionUri);
+            this.uiDefinitionUri = Output.ofNullable(uiDefinitionUri);
             return this;
         }
 
-        public Builder workspaceName(@Nullable Input<String> workspaceName) {
+        public Builder workspaceName(@Nullable Output<String> workspaceName) {
             this.workspaceName = workspaceName;
             return this;
         }
 
         public Builder workspaceName(@Nullable String workspaceName) {
-            this.workspaceName = Input.ofNullable(workspaceName);
+            this.workspaceName = Output.ofNullable(workspaceName);
             return this;
         }
         public WorkspaceArgs build() {

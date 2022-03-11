@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.notebooks.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.notebooks.inputs.RuntimeIamMemberConditionGetArgs;
 import java.lang.String;
@@ -16,10 +16,10 @@ public final class RuntimeIamMemberState extends io.pulumi.resources.ResourceArg
     public static final RuntimeIamMemberState Empty = new RuntimeIamMemberState();
 
     @InputImport(name="condition")
-      private final @Nullable Input<RuntimeIamMemberConditionGetArgs> condition;
+      private final @Nullable Output<RuntimeIamMemberConditionGetArgs> condition;
 
-    public Input<RuntimeIamMemberConditionGetArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<RuntimeIamMemberConditionGetArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -27,10 +27,10 @@ public final class RuntimeIamMemberState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -38,17 +38,17 @@ public final class RuntimeIamMemberState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     @InputImport(name="member")
-      private final @Nullable Input<String> member;
+      private final @Nullable Output<String> member;
 
-    public Input<String> getMember() {
-        return this.member == null ? Input.empty() : this.member;
+    public Output<String> getMember() {
+        return this.member == null ? Output.empty() : this.member;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class RuntimeIamMemberState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class RuntimeIamMemberState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="role")
-      private final @Nullable Input<String> role;
+      private final @Nullable Output<String> role;
 
-    public Input<String> getRole() {
-        return this.role == null ? Input.empty() : this.role;
+    public Output<String> getRole() {
+        return this.role == null ? Output.empty() : this.role;
     }
 
     /**
@@ -81,20 +81,20 @@ public final class RuntimeIamMemberState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="runtimeName")
-      private final @Nullable Input<String> runtimeName;
+      private final @Nullable Output<String> runtimeName;
 
-    public Input<String> getRuntimeName() {
-        return this.runtimeName == null ? Input.empty() : this.runtimeName;
+    public Output<String> getRuntimeName() {
+        return this.runtimeName == null ? Output.empty() : this.runtimeName;
     }
 
     public RuntimeIamMemberState(
-        @Nullable Input<RuntimeIamMemberConditionGetArgs> condition,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> location,
-        @Nullable Input<String> member,
-        @Nullable Input<String> project,
-        @Nullable Input<String> role,
-        @Nullable Input<String> runtimeName) {
+        @Nullable Output<RuntimeIamMemberConditionGetArgs> condition,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> location,
+        @Nullable Output<String> member,
+        @Nullable Output<String> project,
+        @Nullable Output<String> role,
+        @Nullable Output<String> runtimeName) {
         this.condition = condition;
         this.etag = etag;
         this.location = location;
@@ -105,13 +105,13 @@ public final class RuntimeIamMemberState extends io.pulumi.resources.ResourceArg
     }
 
     private RuntimeIamMemberState() {
-        this.condition = Input.empty();
-        this.etag = Input.empty();
-        this.location = Input.empty();
-        this.member = Input.empty();
-        this.project = Input.empty();
-        this.role = Input.empty();
-        this.runtimeName = Input.empty();
+        this.condition = Output.empty();
+        this.etag = Output.empty();
+        this.location = Output.empty();
+        this.member = Output.empty();
+        this.project = Output.empty();
+        this.role = Output.empty();
+        this.runtimeName = Output.empty();
     }
 
     public static Builder builder() {
@@ -123,13 +123,13 @@ public final class RuntimeIamMemberState extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<RuntimeIamMemberConditionGetArgs> condition;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> member;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> role;
-        private @Nullable Input<String> runtimeName;
+        private @Nullable Output<RuntimeIamMemberConditionGetArgs> condition;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> member;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> role;
+        private @Nullable Output<String> runtimeName;
 
         public Builder() {
     	      // Empty
@@ -146,73 +146,73 @@ public final class RuntimeIamMemberState extends io.pulumi.resources.ResourceArg
     	      this.runtimeName = defaults.runtimeName;
         }
 
-        public Builder condition(@Nullable Input<RuntimeIamMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<RuntimeIamMemberConditionGetArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable RuntimeIamMemberConditionGetArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder member(@Nullable Input<String> member) {
+        public Builder member(@Nullable Output<String> member) {
             this.member = member;
             return this;
         }
 
         public Builder member(@Nullable String member) {
-            this.member = Input.ofNullable(member);
+            this.member = Output.ofNullable(member);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder role(@Nullable Input<String> role) {
+        public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
 
         public Builder role(@Nullable String role) {
-            this.role = Input.ofNullable(role);
+            this.role = Output.ofNullable(role);
             return this;
         }
 
-        public Builder runtimeName(@Nullable Input<String> runtimeName) {
+        public Builder runtimeName(@Nullable Output<String> runtimeName) {
             this.runtimeName = runtimeName;
             return this;
         }
 
         public Builder runtimeName(@Nullable String runtimeName) {
-            this.runtimeName = Input.ofNullable(runtimeName);
+            this.runtimeName = Output.ofNullable(runtimeName);
             return this;
         }
         public RuntimeIamMemberState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peerVnetId")
-      private final @Nullable Input<String> peerVnetId;
+      private final @Nullable Output<String> peerVnetId;
 
-    public Input<String> getPeerVnetId() {
-        return this.peerVnetId == null ? Input.empty() : this.peerVnetId;
+    public Output<String> getPeerVnetId() {
+        return this.peerVnetId == null ? Output.empty() : this.peerVnetId;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vnetCidr")
-      private final @Nullable Input<String> vnetCidr;
+      private final @Nullable Output<String> vnetCidr;
 
-    public Input<String> getVnetCidr() {
-        return this.vnetCidr == null ? Input.empty() : this.vnetCidr;
+    public Output<String> getVnetCidr() {
+        return this.vnetCidr == null ? Output.empty() : this.vnetCidr;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vnetId")
-      private final @Nullable Input<String> vnetId;
+      private final @Nullable Output<String> vnetId;
 
-    public Input<String> getVnetId() {
-        return this.vnetId == null ? Input.empty() : this.vnetId;
+    public Output<String> getVnetId() {
+        return this.vnetId == null ? Output.empty() : this.vnetId;
     }
 
     public NetworkProfileArgs(
-        @Nullable Input<String> peerVnetId,
-        @Nullable Input<String> vnetCidr,
-        @Nullable Input<String> vnetId) {
+        @Nullable Output<String> peerVnetId,
+        @Nullable Output<String> vnetCidr,
+        @Nullable Output<String> vnetId) {
         this.peerVnetId = peerVnetId;
-        this.vnetCidr = vnetCidr == null ? Input.ofNullable("10.0.0.0/8") : vnetCidr;
+        this.vnetCidr = vnetCidr == null ? Output.ofNullable("10.0.0.0/8") : vnetCidr;
         this.vnetId = vnetId;
     }
 
     private NetworkProfileArgs() {
-        this.peerVnetId = Input.empty();
-        this.vnetCidr = Input.empty();
-        this.vnetId = Input.empty();
+        this.peerVnetId = Output.empty();
+        this.vnetCidr = Output.empty();
+        this.vnetId = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> peerVnetId;
-        private @Nullable Input<String> vnetCidr;
-        private @Nullable Input<String> vnetId;
+        private @Nullable Output<String> peerVnetId;
+        private @Nullable Output<String> vnetCidr;
+        private @Nullable Output<String> vnetId;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vnetId = defaults.vnetId;
         }
 
-        public Builder peerVnetId(@Nullable Input<String> peerVnetId) {
+        public Builder peerVnetId(@Nullable Output<String> peerVnetId) {
             this.peerVnetId = peerVnetId;
             return this;
         }
 
         public Builder peerVnetId(@Nullable String peerVnetId) {
-            this.peerVnetId = Input.ofNullable(peerVnetId);
+            this.peerVnetId = Output.ofNullable(peerVnetId);
             return this;
         }
 
-        public Builder vnetCidr(@Nullable Input<String> vnetCidr) {
+        public Builder vnetCidr(@Nullable Output<String> vnetCidr) {
             this.vnetCidr = vnetCidr;
             return this;
         }
 
         public Builder vnetCidr(@Nullable String vnetCidr) {
-            this.vnetCidr = Input.ofNullable(vnetCidr);
+            this.vnetCidr = Output.ofNullable(vnetCidr);
             return this;
         }
 
-        public Builder vnetId(@Nullable Input<String> vnetId) {
+        public Builder vnetId(@Nullable Output<String> vnetId) {
             this.vnetId = vnetId;
             return this;
         }
 
         public Builder vnetId(@Nullable String vnetId) {
-            this.vnetId = Input.ofNullable(vnetId);
+            this.vnetId = Output.ofNullable(vnetId);
             return this;
         }
         public NetworkProfileArgs build() {

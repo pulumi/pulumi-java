@@ -4,7 +4,7 @@
 package io.pulumi.aws.datasync;
 
 import io.pulumi.aws.datasync.inputs.S3LocationS3ConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class S3LocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="agentArns")
-      private final @Nullable Input<List<String>> agentArns;
+      private final @Nullable Output<List<String>> agentArns;
 
-    public Input<List<String>> getAgentArns() {
-        return this.agentArns == null ? Input.empty() : this.agentArns;
+    public Output<List<String>> getAgentArns() {
+        return this.agentArns == null ? Output.empty() : this.agentArns;
     }
 
     /**
@@ -33,9 +33,9 @@ public final class S3LocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="s3BucketArn", required=true)
-      private final Input<String> s3BucketArn;
+      private final Output<String> s3BucketArn;
 
-    public Input<String> getS3BucketArn() {
+    public Output<String> getS3BucketArn() {
         return this.s3BucketArn;
     }
 
@@ -44,9 +44,9 @@ public final class S3LocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="s3Config", required=true)
-      private final Input<S3LocationS3ConfigArgs> s3Config;
+      private final Output<S3LocationS3ConfigArgs> s3Config;
 
-    public Input<S3LocationS3ConfigArgs> getS3Config() {
+    public Output<S3LocationS3ConfigArgs> getS3Config() {
         return this.s3Config;
     }
 
@@ -55,10 +55,10 @@ public final class S3LocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="s3StorageClass")
-      private final @Nullable Input<String> s3StorageClass;
+      private final @Nullable Output<String> s3StorageClass;
 
-    public Input<String> getS3StorageClass() {
-        return this.s3StorageClass == null ? Input.empty() : this.s3StorageClass;
+    public Output<String> getS3StorageClass() {
+        return this.s3StorageClass == null ? Output.empty() : this.s3StorageClass;
     }
 
     /**
@@ -66,9 +66,9 @@ public final class S3LocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subdirectory", required=true)
-      private final Input<String> subdirectory;
+      private final Output<String> subdirectory;
 
-    public Input<String> getSubdirectory() {
+    public Output<String> getSubdirectory() {
         return this.subdirectory;
     }
 
@@ -77,19 +77,19 @@ public final class S3LocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public S3LocationArgs(
-        @Nullable Input<List<String>> agentArns,
-        Input<String> s3BucketArn,
-        Input<S3LocationS3ConfigArgs> s3Config,
-        @Nullable Input<String> s3StorageClass,
-        Input<String> subdirectory,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<List<String>> agentArns,
+        Output<String> s3BucketArn,
+        Output<S3LocationS3ConfigArgs> s3Config,
+        @Nullable Output<String> s3StorageClass,
+        Output<String> subdirectory,
+        @Nullable Output<Map<String,String>> tags) {
         this.agentArns = agentArns;
         this.s3BucketArn = Objects.requireNonNull(s3BucketArn, "expected parameter 's3BucketArn' to be non-null");
         this.s3Config = Objects.requireNonNull(s3Config, "expected parameter 's3Config' to be non-null");
@@ -99,12 +99,12 @@ public final class S3LocationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private S3LocationArgs() {
-        this.agentArns = Input.empty();
-        this.s3BucketArn = Input.empty();
-        this.s3Config = Input.empty();
-        this.s3StorageClass = Input.empty();
-        this.subdirectory = Input.empty();
-        this.tags = Input.empty();
+        this.agentArns = Output.empty();
+        this.s3BucketArn = Output.empty();
+        this.s3Config = Output.empty();
+        this.s3StorageClass = Output.empty();
+        this.subdirectory = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class S3LocationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> agentArns;
-        private Input<String> s3BucketArn;
-        private Input<S3LocationS3ConfigArgs> s3Config;
-        private @Nullable Input<String> s3StorageClass;
-        private Input<String> subdirectory;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<List<String>> agentArns;
+        private Output<String> s3BucketArn;
+        private Output<S3LocationS3ConfigArgs> s3Config;
+        private @Nullable Output<String> s3StorageClass;
+        private Output<String> subdirectory;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class S3LocationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder agentArns(@Nullable Input<List<String>> agentArns) {
+        public Builder agentArns(@Nullable Output<List<String>> agentArns) {
             this.agentArns = agentArns;
             return this;
         }
 
         public Builder agentArns(@Nullable List<String> agentArns) {
-            this.agentArns = Input.ofNullable(agentArns);
+            this.agentArns = Output.ofNullable(agentArns);
             return this;
         }
 
-        public Builder s3BucketArn(Input<String> s3BucketArn) {
+        public Builder s3BucketArn(Output<String> s3BucketArn) {
             this.s3BucketArn = Objects.requireNonNull(s3BucketArn);
             return this;
         }
 
         public Builder s3BucketArn(String s3BucketArn) {
-            this.s3BucketArn = Input.of(Objects.requireNonNull(s3BucketArn));
+            this.s3BucketArn = Output.of(Objects.requireNonNull(s3BucketArn));
             return this;
         }
 
-        public Builder s3Config(Input<S3LocationS3ConfigArgs> s3Config) {
+        public Builder s3Config(Output<S3LocationS3ConfigArgs> s3Config) {
             this.s3Config = Objects.requireNonNull(s3Config);
             return this;
         }
 
         public Builder s3Config(S3LocationS3ConfigArgs s3Config) {
-            this.s3Config = Input.of(Objects.requireNonNull(s3Config));
+            this.s3Config = Output.of(Objects.requireNonNull(s3Config));
             return this;
         }
 
-        public Builder s3StorageClass(@Nullable Input<String> s3StorageClass) {
+        public Builder s3StorageClass(@Nullable Output<String> s3StorageClass) {
             this.s3StorageClass = s3StorageClass;
             return this;
         }
 
         public Builder s3StorageClass(@Nullable String s3StorageClass) {
-            this.s3StorageClass = Input.ofNullable(s3StorageClass);
+            this.s3StorageClass = Output.ofNullable(s3StorageClass);
             return this;
         }
 
-        public Builder subdirectory(Input<String> subdirectory) {
+        public Builder subdirectory(Output<String> subdirectory) {
             this.subdirectory = Objects.requireNonNull(subdirectory);
             return this;
         }
 
         public Builder subdirectory(String subdirectory) {
-            this.subdirectory = Input.of(Objects.requireNonNull(subdirectory));
+            this.subdirectory = Output.of(Objects.requireNonNull(subdirectory));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public S3LocationArgs build() {

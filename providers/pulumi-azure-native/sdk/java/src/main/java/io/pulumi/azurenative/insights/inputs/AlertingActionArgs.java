@@ -7,7 +7,7 @@ import io.pulumi.azurenative.insights.enums.AlertSeverity;
 import io.pulumi.azurenative.insights.inputs.AzNsActionGroupArgs;
 import io.pulumi.azurenative.insights.inputs.TriggerConditionArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,10 +28,10 @@ public final class AlertingActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aznsAction")
-      private final @Nullable Input<AzNsActionGroupArgs> aznsAction;
+      private final @Nullable Output<AzNsActionGroupArgs> aznsAction;
 
-    public Input<AzNsActionGroupArgs> getAznsAction() {
-        return this.aznsAction == null ? Input.empty() : this.aznsAction;
+    public Output<AzNsActionGroupArgs> getAznsAction() {
+        return this.aznsAction == null ? Output.empty() : this.aznsAction;
     }
 
     /**
@@ -40,9 +40,9 @@ public final class AlertingActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
@@ -51,9 +51,9 @@ public final class AlertingActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="severity", required=true)
-      private final Input<Either<String,AlertSeverity>> severity;
+      private final Output<Either<String,AlertSeverity>> severity;
 
-    public Input<Either<String,AlertSeverity>> getSeverity() {
+    public Output<Either<String,AlertSeverity>> getSeverity() {
         return this.severity;
     }
 
@@ -62,10 +62,10 @@ public final class AlertingActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="throttlingInMin")
-      private final @Nullable Input<Integer> throttlingInMin;
+      private final @Nullable Output<Integer> throttlingInMin;
 
-    public Input<Integer> getThrottlingInMin() {
-        return this.throttlingInMin == null ? Input.empty() : this.throttlingInMin;
+    public Output<Integer> getThrottlingInMin() {
+        return this.throttlingInMin == null ? Output.empty() : this.throttlingInMin;
     }
 
     /**
@@ -73,18 +73,18 @@ public final class AlertingActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trigger", required=true)
-      private final Input<TriggerConditionArgs> trigger;
+      private final Output<TriggerConditionArgs> trigger;
 
-    public Input<TriggerConditionArgs> getTrigger() {
+    public Output<TriggerConditionArgs> getTrigger() {
         return this.trigger;
     }
 
     public AlertingActionArgs(
-        @Nullable Input<AzNsActionGroupArgs> aznsAction,
-        Input<String> odataType,
-        Input<Either<String,AlertSeverity>> severity,
-        @Nullable Input<Integer> throttlingInMin,
-        Input<TriggerConditionArgs> trigger) {
+        @Nullable Output<AzNsActionGroupArgs> aznsAction,
+        Output<String> odataType,
+        Output<Either<String,AlertSeverity>> severity,
+        @Nullable Output<Integer> throttlingInMin,
+        Output<TriggerConditionArgs> trigger) {
         this.aznsAction = aznsAction;
         this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
         this.severity = Objects.requireNonNull(severity, "expected parameter 'severity' to be non-null");
@@ -93,11 +93,11 @@ public final class AlertingActionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AlertingActionArgs() {
-        this.aznsAction = Input.empty();
-        this.odataType = Input.empty();
-        this.severity = Input.empty();
-        this.throttlingInMin = Input.empty();
-        this.trigger = Input.empty();
+        this.aznsAction = Output.empty();
+        this.odataType = Output.empty();
+        this.severity = Output.empty();
+        this.throttlingInMin = Output.empty();
+        this.trigger = Output.empty();
     }
 
     public static Builder builder() {
@@ -109,11 +109,11 @@ public final class AlertingActionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<AzNsActionGroupArgs> aznsAction;
-        private Input<String> odataType;
-        private Input<Either<String,AlertSeverity>> severity;
-        private @Nullable Input<Integer> throttlingInMin;
-        private Input<TriggerConditionArgs> trigger;
+        private @Nullable Output<AzNsActionGroupArgs> aznsAction;
+        private Output<String> odataType;
+        private Output<Either<String,AlertSeverity>> severity;
+        private @Nullable Output<Integer> throttlingInMin;
+        private Output<TriggerConditionArgs> trigger;
 
         public Builder() {
     	      // Empty
@@ -128,53 +128,53 @@ public final class AlertingActionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.trigger = defaults.trigger;
         }
 
-        public Builder aznsAction(@Nullable Input<AzNsActionGroupArgs> aznsAction) {
+        public Builder aznsAction(@Nullable Output<AzNsActionGroupArgs> aznsAction) {
             this.aznsAction = aznsAction;
             return this;
         }
 
         public Builder aznsAction(@Nullable AzNsActionGroupArgs aznsAction) {
-            this.aznsAction = Input.ofNullable(aznsAction);
+            this.aznsAction = Output.ofNullable(aznsAction);
             return this;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder severity(Input<Either<String,AlertSeverity>> severity) {
+        public Builder severity(Output<Either<String,AlertSeverity>> severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
 
         public Builder severity(Either<String,AlertSeverity> severity) {
-            this.severity = Input.of(Objects.requireNonNull(severity));
+            this.severity = Output.of(Objects.requireNonNull(severity));
             return this;
         }
 
-        public Builder throttlingInMin(@Nullable Input<Integer> throttlingInMin) {
+        public Builder throttlingInMin(@Nullable Output<Integer> throttlingInMin) {
             this.throttlingInMin = throttlingInMin;
             return this;
         }
 
         public Builder throttlingInMin(@Nullable Integer throttlingInMin) {
-            this.throttlingInMin = Input.ofNullable(throttlingInMin);
+            this.throttlingInMin = Output.ofNullable(throttlingInMin);
             return this;
         }
 
-        public Builder trigger(Input<TriggerConditionArgs> trigger) {
+        public Builder trigger(Output<TriggerConditionArgs> trigger) {
             this.trigger = Objects.requireNonNull(trigger);
             return this;
         }
 
         public Builder trigger(TriggerConditionArgs trigger) {
-            this.trigger = Input.of(Objects.requireNonNull(trigger));
+            this.trigger = Output.of(Objects.requireNonNull(trigger));
             return this;
         }
         public AlertingActionArgs build() {

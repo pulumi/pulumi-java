@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class StaticMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkGroupName", required=true)
-      private final Input<String> networkGroupName;
+      private final Output<String> networkGroupName;
 
-    public Input<String> getNetworkGroupName() {
+    public Output<String> getNetworkGroupName() {
         return this.networkGroupName;
     }
 
@@ -30,9 +30,9 @@ public final class StaticMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkManagerName", required=true)
-      private final Input<String> networkManagerName;
+      private final Output<String> networkManagerName;
 
-    public Input<String> getNetworkManagerName() {
+    public Output<String> getNetworkManagerName() {
         return this.networkManagerName;
     }
 
@@ -41,9 +41,9 @@ public final class StaticMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -52,10 +52,10 @@ public final class StaticMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceId")
-      private final @Nullable Input<String> resourceId;
+      private final @Nullable Output<String> resourceId;
 
-    public Input<String> getResourceId() {
-        return this.resourceId == null ? Input.empty() : this.resourceId;
+    public Output<String> getResourceId() {
+        return this.resourceId == null ? Output.empty() : this.resourceId;
     }
 
     /**
@@ -63,18 +63,18 @@ public final class StaticMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="staticMemberName")
-      private final @Nullable Input<String> staticMemberName;
+      private final @Nullable Output<String> staticMemberName;
 
-    public Input<String> getStaticMemberName() {
-        return this.staticMemberName == null ? Input.empty() : this.staticMemberName;
+    public Output<String> getStaticMemberName() {
+        return this.staticMemberName == null ? Output.empty() : this.staticMemberName;
     }
 
     public StaticMemberArgs(
-        Input<String> networkGroupName,
-        Input<String> networkManagerName,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> resourceId,
-        @Nullable Input<String> staticMemberName) {
+        Output<String> networkGroupName,
+        Output<String> networkManagerName,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> resourceId,
+        @Nullable Output<String> staticMemberName) {
         this.networkGroupName = Objects.requireNonNull(networkGroupName, "expected parameter 'networkGroupName' to be non-null");
         this.networkManagerName = Objects.requireNonNull(networkManagerName, "expected parameter 'networkManagerName' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -83,11 +83,11 @@ public final class StaticMemberArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StaticMemberArgs() {
-        this.networkGroupName = Input.empty();
-        this.networkManagerName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceId = Input.empty();
-        this.staticMemberName = Input.empty();
+        this.networkGroupName = Output.empty();
+        this.networkManagerName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceId = Output.empty();
+        this.staticMemberName = Output.empty();
     }
 
     public static Builder builder() {
@@ -99,11 +99,11 @@ public final class StaticMemberArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> networkGroupName;
-        private Input<String> networkManagerName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> resourceId;
-        private @Nullable Input<String> staticMemberName;
+        private Output<String> networkGroupName;
+        private Output<String> networkManagerName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> resourceId;
+        private @Nullable Output<String> staticMemberName;
 
         public Builder() {
     	      // Empty
@@ -118,53 +118,53 @@ public final class StaticMemberArgs extends io.pulumi.resources.ResourceArgs {
     	      this.staticMemberName = defaults.staticMemberName;
         }
 
-        public Builder networkGroupName(Input<String> networkGroupName) {
+        public Builder networkGroupName(Output<String> networkGroupName) {
             this.networkGroupName = Objects.requireNonNull(networkGroupName);
             return this;
         }
 
         public Builder networkGroupName(String networkGroupName) {
-            this.networkGroupName = Input.of(Objects.requireNonNull(networkGroupName));
+            this.networkGroupName = Output.of(Objects.requireNonNull(networkGroupName));
             return this;
         }
 
-        public Builder networkManagerName(Input<String> networkManagerName) {
+        public Builder networkManagerName(Output<String> networkManagerName) {
             this.networkManagerName = Objects.requireNonNull(networkManagerName);
             return this;
         }
 
         public Builder networkManagerName(String networkManagerName) {
-            this.networkManagerName = Input.of(Objects.requireNonNull(networkManagerName));
+            this.networkManagerName = Output.of(Objects.requireNonNull(networkManagerName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Input.ofNullable(resourceId);
+            this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
 
-        public Builder staticMemberName(@Nullable Input<String> staticMemberName) {
+        public Builder staticMemberName(@Nullable Output<String> staticMemberName) {
             this.staticMemberName = staticMemberName;
             return this;
         }
 
         public Builder staticMemberName(@Nullable String staticMemberName) {
-            this.staticMemberName = Input.ofNullable(staticMemberName);
+            this.staticMemberName = Output.ofNullable(staticMemberName);
             return this;
         }
         public StaticMemberArgs build() {

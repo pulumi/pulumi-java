@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.bigquery.inputs.JobStatusErrorGetArgs;
 import io.pulumi.gcp.bigquery.inputs.JobStatusErrorResultGetArgs;
@@ -18,39 +18,39 @@ public final class JobStatusGetArgs extends io.pulumi.resources.ResourceArgs {
     public static final JobStatusGetArgs Empty = new JobStatusGetArgs();
 
     @InputImport(name="errorResults")
-      private final @Nullable Input<List<JobStatusErrorResultGetArgs>> errorResults;
+      private final @Nullable Output<List<JobStatusErrorResultGetArgs>> errorResults;
 
-    public Input<List<JobStatusErrorResultGetArgs>> getErrorResults() {
-        return this.errorResults == null ? Input.empty() : this.errorResults;
+    public Output<List<JobStatusErrorResultGetArgs>> getErrorResults() {
+        return this.errorResults == null ? Output.empty() : this.errorResults;
     }
 
     @InputImport(name="errors")
-      private final @Nullable Input<List<JobStatusErrorGetArgs>> errors;
+      private final @Nullable Output<List<JobStatusErrorGetArgs>> errors;
 
-    public Input<List<JobStatusErrorGetArgs>> getErrors() {
-        return this.errors == null ? Input.empty() : this.errors;
+    public Output<List<JobStatusErrorGetArgs>> getErrors() {
+        return this.errors == null ? Output.empty() : this.errors;
     }
 
     @InputImport(name="state")
-      private final @Nullable Input<String> state;
+      private final @Nullable Output<String> state;
 
-    public Input<String> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<String> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     public JobStatusGetArgs(
-        @Nullable Input<List<JobStatusErrorResultGetArgs>> errorResults,
-        @Nullable Input<List<JobStatusErrorGetArgs>> errors,
-        @Nullable Input<String> state) {
+        @Nullable Output<List<JobStatusErrorResultGetArgs>> errorResults,
+        @Nullable Output<List<JobStatusErrorGetArgs>> errors,
+        @Nullable Output<String> state) {
         this.errorResults = errorResults;
         this.errors = errors;
         this.state = state;
     }
 
     private JobStatusGetArgs() {
-        this.errorResults = Input.empty();
-        this.errors = Input.empty();
-        this.state = Input.empty();
+        this.errorResults = Output.empty();
+        this.errors = Output.empty();
+        this.state = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,9 +62,9 @@ public final class JobStatusGetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<JobStatusErrorResultGetArgs>> errorResults;
-        private @Nullable Input<List<JobStatusErrorGetArgs>> errors;
-        private @Nullable Input<String> state;
+        private @Nullable Output<List<JobStatusErrorResultGetArgs>> errorResults;
+        private @Nullable Output<List<JobStatusErrorGetArgs>> errors;
+        private @Nullable Output<String> state;
 
         public Builder() {
     	      // Empty
@@ -77,33 +77,33 @@ public final class JobStatusGetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.state = defaults.state;
         }
 
-        public Builder errorResults(@Nullable Input<List<JobStatusErrorResultGetArgs>> errorResults) {
+        public Builder errorResults(@Nullable Output<List<JobStatusErrorResultGetArgs>> errorResults) {
             this.errorResults = errorResults;
             return this;
         }
 
         public Builder errorResults(@Nullable List<JobStatusErrorResultGetArgs> errorResults) {
-            this.errorResults = Input.ofNullable(errorResults);
+            this.errorResults = Output.ofNullable(errorResults);
             return this;
         }
 
-        public Builder errors(@Nullable Input<List<JobStatusErrorGetArgs>> errors) {
+        public Builder errors(@Nullable Output<List<JobStatusErrorGetArgs>> errors) {
             this.errors = errors;
             return this;
         }
 
         public Builder errors(@Nullable List<JobStatusErrorGetArgs> errors) {
-            this.errors = Input.ofNullable(errors);
+            this.errors = Output.ofNullable(errors);
             return this;
         }
 
-        public Builder state(@Nullable Input<String> state) {
+        public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable String state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
         public JobStatusGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class ManagedZoneReverseLookupConfigArgs extends io.pulumi.resource
     public static final ManagedZoneReverseLookupConfigArgs Empty = new ManagedZoneReverseLookupConfigArgs();
 
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
-    public ManagedZoneReverseLookupConfigArgs(@Nullable Input<String> kind) {
+    public ManagedZoneReverseLookupConfigArgs(@Nullable Output<String> kind) {
         this.kind = kind;
     }
 
     private ManagedZoneReverseLookupConfigArgs() {
-        this.kind = Input.empty();
+        this.kind = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class ManagedZoneReverseLookupConfigArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> kind;
+        private @Nullable Output<String> kind;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class ManagedZoneReverseLookupConfigArgs extends io.pulumi.resource
     	      this.kind = defaults.kind;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
         public ManagedZoneReverseLookupConfigArgs build() {

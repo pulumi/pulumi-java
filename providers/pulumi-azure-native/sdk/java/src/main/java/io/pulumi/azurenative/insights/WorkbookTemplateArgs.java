@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights;
 
 import io.pulumi.azurenative.insights.inputs.WorkbookTemplateGalleryArgs;
 import io.pulumi.azurenative.insights.inputs.WorkbookTemplateLocalizedGalleryArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
@@ -25,10 +25,10 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="author")
-      private final @Nullable Input<String> author;
+      private final @Nullable Output<String> author;
 
-    public Input<String> getAuthor() {
-        return this.author == null ? Input.empty() : this.author;
+    public Output<String> getAuthor() {
+        return this.author == null ? Output.empty() : this.author;
     }
 
     /**
@@ -36,9 +36,9 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="galleries", required=true)
-      private final Input<List<WorkbookTemplateGalleryArgs>> galleries;
+      private final Output<List<WorkbookTemplateGalleryArgs>> galleries;
 
-    public Input<List<WorkbookTemplateGalleryArgs>> getGalleries() {
+    public Output<List<WorkbookTemplateGalleryArgs>> getGalleries() {
         return this.galleries;
     }
 
@@ -47,10 +47,10 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="localized")
-      private final @Nullable Input<Map<String,List<WorkbookTemplateLocalizedGalleryArgs>>> localized;
+      private final @Nullable Output<Map<String,List<WorkbookTemplateLocalizedGalleryArgs>>> localized;
 
-    public Input<Map<String,List<WorkbookTemplateLocalizedGalleryArgs>>> getLocalized() {
-        return this.localized == null ? Input.empty() : this.localized;
+    public Output<Map<String,List<WorkbookTemplateLocalizedGalleryArgs>>> getLocalized() {
+        return this.localized == null ? Output.empty() : this.localized;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="priority")
-      private final @Nullable Input<Integer> priority;
+      private final @Nullable Output<Integer> priority;
 
-    public Input<Integer> getPriority() {
-        return this.priority == null ? Input.empty() : this.priority;
+    public Output<Integer> getPriority() {
+        return this.priority == null ? Output.empty() : this.priority;
     }
 
     /**
@@ -80,9 +80,9 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -91,10 +91,10 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceName")
-      private final @Nullable Input<String> resourceName;
+      private final @Nullable Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
-        return this.resourceName == null ? Input.empty() : this.resourceName;
+    public Output<String> getPropResourceName() {
+        return this.resourceName == null ? Output.empty() : this.resourceName;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -113,22 +113,22 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="templateData", required=true)
-      private final Input<Object> templateData;
+      private final Output<Object> templateData;
 
-    public Input<Object> getTemplateData() {
+    public Output<Object> getTemplateData() {
         return this.templateData;
     }
 
     public WorkbookTemplateArgs(
-        @Nullable Input<String> author,
-        Input<List<WorkbookTemplateGalleryArgs>> galleries,
-        @Nullable Input<Map<String,List<WorkbookTemplateLocalizedGalleryArgs>>> localized,
-        @Nullable Input<String> location,
-        @Nullable Input<Integer> priority,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> resourceName,
-        @Nullable Input<Map<String,String>> tags,
-        Input<Object> templateData) {
+        @Nullable Output<String> author,
+        Output<List<WorkbookTemplateGalleryArgs>> galleries,
+        @Nullable Output<Map<String,List<WorkbookTemplateLocalizedGalleryArgs>>> localized,
+        @Nullable Output<String> location,
+        @Nullable Output<Integer> priority,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> resourceName,
+        @Nullable Output<Map<String,String>> tags,
+        Output<Object> templateData) {
         this.author = author;
         this.galleries = Objects.requireNonNull(galleries, "expected parameter 'galleries' to be non-null");
         this.localized = localized;
@@ -141,15 +141,15 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private WorkbookTemplateArgs() {
-        this.author = Input.empty();
-        this.galleries = Input.empty();
-        this.localized = Input.empty();
-        this.location = Input.empty();
-        this.priority = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceName = Input.empty();
-        this.tags = Input.empty();
-        this.templateData = Input.empty();
+        this.author = Output.empty();
+        this.galleries = Output.empty();
+        this.localized = Output.empty();
+        this.location = Output.empty();
+        this.priority = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceName = Output.empty();
+        this.tags = Output.empty();
+        this.templateData = Output.empty();
     }
 
     public static Builder builder() {
@@ -161,15 +161,15 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> author;
-        private Input<List<WorkbookTemplateGalleryArgs>> galleries;
-        private @Nullable Input<Map<String,List<WorkbookTemplateLocalizedGalleryArgs>>> localized;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Integer> priority;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> resourceName;
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<Object> templateData;
+        private @Nullable Output<String> author;
+        private Output<List<WorkbookTemplateGalleryArgs>> galleries;
+        private @Nullable Output<Map<String,List<WorkbookTemplateLocalizedGalleryArgs>>> localized;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Integer> priority;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> resourceName;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<Object> templateData;
 
         public Builder() {
     	      // Empty
@@ -188,93 +188,93 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
     	      this.templateData = defaults.templateData;
         }
 
-        public Builder author(@Nullable Input<String> author) {
+        public Builder author(@Nullable Output<String> author) {
             this.author = author;
             return this;
         }
 
         public Builder author(@Nullable String author) {
-            this.author = Input.ofNullable(author);
+            this.author = Output.ofNullable(author);
             return this;
         }
 
-        public Builder galleries(Input<List<WorkbookTemplateGalleryArgs>> galleries) {
+        public Builder galleries(Output<List<WorkbookTemplateGalleryArgs>> galleries) {
             this.galleries = Objects.requireNonNull(galleries);
             return this;
         }
 
         public Builder galleries(List<WorkbookTemplateGalleryArgs> galleries) {
-            this.galleries = Input.of(Objects.requireNonNull(galleries));
+            this.galleries = Output.of(Objects.requireNonNull(galleries));
             return this;
         }
 
-        public Builder localized(@Nullable Input<Map<String,List<WorkbookTemplateLocalizedGalleryArgs>>> localized) {
+        public Builder localized(@Nullable Output<Map<String,List<WorkbookTemplateLocalizedGalleryArgs>>> localized) {
             this.localized = localized;
             return this;
         }
 
         public Builder localized(@Nullable Map<String,List<WorkbookTemplateLocalizedGalleryArgs>> localized) {
-            this.localized = Input.ofNullable(localized);
+            this.localized = Output.ofNullable(localized);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder priority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Input.ofNullable(priority);
+            this.priority = Output.ofNullable(priority);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceName(@Nullable Input<String> resourceName) {
+        public Builder resourceName(@Nullable Output<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Input.ofNullable(resourceName);
+            this.resourceName = Output.ofNullable(resourceName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder templateData(Input<Object> templateData) {
+        public Builder templateData(Output<Object> templateData) {
             this.templateData = Objects.requireNonNull(templateData);
             return this;
         }
 
         public Builder templateData(Object templateData) {
-            this.templateData = Input.of(Objects.requireNonNull(templateData));
+            this.templateData = Output.of(Objects.requireNonNull(templateData));
             return this;
         }
         public WorkbookTemplateArgs build() {

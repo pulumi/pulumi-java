@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.pubsub;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -172,14 +171,14 @@ public class TopicIAMBinding extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TopicIAMBinding(String name, TopicIAMBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:pubsub/topicIAMBinding:TopicIAMBinding", name, args == null ? TopicIAMBindingArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:pubsub/topicIAMBinding:TopicIAMBinding", name, args == null ? TopicIAMBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private TopicIAMBinding(String name, Input<String> id, @Nullable TopicIAMBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private TopicIAMBinding(String name, Output<String> id, @Nullable TopicIAMBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:pubsub/topicIAMBinding:TopicIAMBinding", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -195,7 +194,7 @@ public class TopicIAMBinding extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TopicIAMBinding get(String name, Input<String> id, @Nullable TopicIAMBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static TopicIAMBinding get(String name, Output<String> id, @Nullable TopicIAMBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new TopicIAMBinding(name, id, state, options);
     }
 }

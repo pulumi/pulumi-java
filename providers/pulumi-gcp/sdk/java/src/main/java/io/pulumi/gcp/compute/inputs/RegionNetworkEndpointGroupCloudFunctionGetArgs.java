@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class RegionNetworkEndpointGroupCloudFunctionGetArgs extends io.pul
      * 
      */
     @InputImport(name="function")
-      private final @Nullable Input<String> function;
+      private final @Nullable Output<String> function;
 
-    public Input<String> getFunction() {
-        return this.function == null ? Input.empty() : this.function;
+    public Output<String> getFunction() {
+        return this.function == null ? Output.empty() : this.function;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class RegionNetworkEndpointGroupCloudFunctionGetArgs extends io.pul
      * 
      */
     @InputImport(name="urlMask")
-      private final @Nullable Input<String> urlMask;
+      private final @Nullable Output<String> urlMask;
 
-    public Input<String> getUrlMask() {
-        return this.urlMask == null ? Input.empty() : this.urlMask;
+    public Output<String> getUrlMask() {
+        return this.urlMask == null ? Output.empty() : this.urlMask;
     }
 
     public RegionNetworkEndpointGroupCloudFunctionGetArgs(
-        @Nullable Input<String> function,
-        @Nullable Input<String> urlMask) {
+        @Nullable Output<String> function,
+        @Nullable Output<String> urlMask) {
         this.function = function;
         this.urlMask = urlMask;
     }
 
     private RegionNetworkEndpointGroupCloudFunctionGetArgs() {
-        this.function = Input.empty();
-        this.urlMask = Input.empty();
+        this.function = Output.empty();
+        this.urlMask = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class RegionNetworkEndpointGroupCloudFunctionGetArgs extends io.pul
     }
 
     public static final class Builder {
-        private @Nullable Input<String> function;
-        private @Nullable Input<String> urlMask;
+        private @Nullable Output<String> function;
+        private @Nullable Output<String> urlMask;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class RegionNetworkEndpointGroupCloudFunctionGetArgs extends io.pul
     	      this.urlMask = defaults.urlMask;
         }
 
-        public Builder function(@Nullable Input<String> function) {
+        public Builder function(@Nullable Output<String> function) {
             this.function = function;
             return this;
         }
 
         public Builder function(@Nullable String function) {
-            this.function = Input.ofNullable(function);
+            this.function = Output.ofNullable(function);
             return this;
         }
 
-        public Builder urlMask(@Nullable Input<String> urlMask) {
+        public Builder urlMask(@Nullable Output<String> urlMask) {
             this.urlMask = urlMask;
             return this;
         }
 
         public Builder urlMask(@Nullable String urlMask) {
-            this.urlMask = Input.ofNullable(urlMask);
+            this.urlMask = Output.ofNullable(urlMask);
             return this;
         }
         public RegionNetworkEndpointGroupCloudFunctionGetArgs build() {

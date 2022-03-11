@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class GooglePrivacyDlpV2NumericalStatsConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="field")
-      private final @Nullable Input<GooglePrivacyDlpV2FieldIdArgs> field;
+      private final @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> field;
 
-    public Input<GooglePrivacyDlpV2FieldIdArgs> getField() {
-        return this.field == null ? Input.empty() : this.field;
+    public Output<GooglePrivacyDlpV2FieldIdArgs> getField() {
+        return this.field == null ? Output.empty() : this.field;
     }
 
-    public GooglePrivacyDlpV2NumericalStatsConfigArgs(@Nullable Input<GooglePrivacyDlpV2FieldIdArgs> field) {
+    public GooglePrivacyDlpV2NumericalStatsConfigArgs(@Nullable Output<GooglePrivacyDlpV2FieldIdArgs> field) {
         this.field = field;
     }
 
     private GooglePrivacyDlpV2NumericalStatsConfigArgs() {
-        this.field = Input.empty();
+        this.field = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2NumericalStatsConfigArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<GooglePrivacyDlpV2FieldIdArgs> field;
+        private @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> field;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GooglePrivacyDlpV2NumericalStatsConfigArgs extends io.pulumi.
     	      this.field = defaults.field;
         }
 
-        public Builder field(@Nullable Input<GooglePrivacyDlpV2FieldIdArgs> field) {
+        public Builder field(@Nullable Output<GooglePrivacyDlpV2FieldIdArgs> field) {
             this.field = field;
             return this;
         }
 
         public Builder field(@Nullable GooglePrivacyDlpV2FieldIdArgs field) {
-            this.field = Input.ofNullable(field);
+            this.field = Output.ofNullable(field);
             return this;
         }
         public GooglePrivacyDlpV2NumericalStatsConfigArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.diagflow.inputs.CxFlowEventHandlerTriggerFulfillmentGetArgs;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class CxFlowEventHandlerGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="event")
-      private final @Nullable Input<String> event;
+      private final @Nullable Output<String> event;
 
-    public Input<String> getEvent() {
-        return this.event == null ? Input.empty() : this.event;
+    public Output<String> getEvent() {
+        return this.event == null ? Output.empty() : this.event;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class CxFlowEventHandlerGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class CxFlowEventHandlerGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="targetFlow")
-      private final @Nullable Input<String> targetFlow;
+      private final @Nullable Output<String> targetFlow;
 
-    public Input<String> getTargetFlow() {
-        return this.targetFlow == null ? Input.empty() : this.targetFlow;
+    public Output<String> getTargetFlow() {
+        return this.targetFlow == null ? Output.empty() : this.targetFlow;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class CxFlowEventHandlerGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="targetPage")
-      private final @Nullable Input<String> targetPage;
+      private final @Nullable Output<String> targetPage;
 
-    public Input<String> getTargetPage() {
-        return this.targetPage == null ? Input.empty() : this.targetPage;
+    public Output<String> getTargetPage() {
+        return this.targetPage == null ? Output.empty() : this.targetPage;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class CxFlowEventHandlerGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="triggerFulfillment")
-      private final @Nullable Input<CxFlowEventHandlerTriggerFulfillmentGetArgs> triggerFulfillment;
+      private final @Nullable Output<CxFlowEventHandlerTriggerFulfillmentGetArgs> triggerFulfillment;
 
-    public Input<CxFlowEventHandlerTriggerFulfillmentGetArgs> getTriggerFulfillment() {
-        return this.triggerFulfillment == null ? Input.empty() : this.triggerFulfillment;
+    public Output<CxFlowEventHandlerTriggerFulfillmentGetArgs> getTriggerFulfillment() {
+        return this.triggerFulfillment == null ? Output.empty() : this.triggerFulfillment;
     }
 
     public CxFlowEventHandlerGetArgs(
-        @Nullable Input<String> event,
-        @Nullable Input<String> name,
-        @Nullable Input<String> targetFlow,
-        @Nullable Input<String> targetPage,
-        @Nullable Input<CxFlowEventHandlerTriggerFulfillmentGetArgs> triggerFulfillment) {
+        @Nullable Output<String> event,
+        @Nullable Output<String> name,
+        @Nullable Output<String> targetFlow,
+        @Nullable Output<String> targetPage,
+        @Nullable Output<CxFlowEventHandlerTriggerFulfillmentGetArgs> triggerFulfillment) {
         this.event = event;
         this.name = name;
         this.targetFlow = targetFlow;
@@ -88,11 +88,11 @@ public final class CxFlowEventHandlerGetArgs extends io.pulumi.resources.Resourc
     }
 
     private CxFlowEventHandlerGetArgs() {
-        this.event = Input.empty();
-        this.name = Input.empty();
-        this.targetFlow = Input.empty();
-        this.targetPage = Input.empty();
-        this.triggerFulfillment = Input.empty();
+        this.event = Output.empty();
+        this.name = Output.empty();
+        this.targetFlow = Output.empty();
+        this.targetPage = Output.empty();
+        this.triggerFulfillment = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class CxFlowEventHandlerGetArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> event;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> targetFlow;
-        private @Nullable Input<String> targetPage;
-        private @Nullable Input<CxFlowEventHandlerTriggerFulfillmentGetArgs> triggerFulfillment;
+        private @Nullable Output<String> event;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> targetFlow;
+        private @Nullable Output<String> targetPage;
+        private @Nullable Output<CxFlowEventHandlerTriggerFulfillmentGetArgs> triggerFulfillment;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class CxFlowEventHandlerGetArgs extends io.pulumi.resources.Resourc
     	      this.triggerFulfillment = defaults.triggerFulfillment;
         }
 
-        public Builder event(@Nullable Input<String> event) {
+        public Builder event(@Nullable Output<String> event) {
             this.event = event;
             return this;
         }
 
         public Builder event(@Nullable String event) {
-            this.event = Input.ofNullable(event);
+            this.event = Output.ofNullable(event);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder targetFlow(@Nullable Input<String> targetFlow) {
+        public Builder targetFlow(@Nullable Output<String> targetFlow) {
             this.targetFlow = targetFlow;
             return this;
         }
 
         public Builder targetFlow(@Nullable String targetFlow) {
-            this.targetFlow = Input.ofNullable(targetFlow);
+            this.targetFlow = Output.ofNullable(targetFlow);
             return this;
         }
 
-        public Builder targetPage(@Nullable Input<String> targetPage) {
+        public Builder targetPage(@Nullable Output<String> targetPage) {
             this.targetPage = targetPage;
             return this;
         }
 
         public Builder targetPage(@Nullable String targetPage) {
-            this.targetPage = Input.ofNullable(targetPage);
+            this.targetPage = Output.ofNullable(targetPage);
             return this;
         }
 
-        public Builder triggerFulfillment(@Nullable Input<CxFlowEventHandlerTriggerFulfillmentGetArgs> triggerFulfillment) {
+        public Builder triggerFulfillment(@Nullable Output<CxFlowEventHandlerTriggerFulfillmentGetArgs> triggerFulfillment) {
             this.triggerFulfillment = triggerFulfillment;
             return this;
         }
 
         public Builder triggerFulfillment(@Nullable CxFlowEventHandlerTriggerFulfillmentGetArgs triggerFulfillment) {
-            this.triggerFulfillment = Input.ofNullable(triggerFulfillment);
+            this.triggerFulfillment = Output.ofNullable(triggerFulfillment);
             return this;
         }
         public CxFlowEventHandlerGetArgs build() {

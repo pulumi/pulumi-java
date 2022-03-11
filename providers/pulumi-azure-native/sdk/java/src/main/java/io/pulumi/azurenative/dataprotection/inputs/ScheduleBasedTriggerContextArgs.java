@@ -5,7 +5,7 @@ package io.pulumi.azurenative.dataprotection.inputs;
 
 import io.pulumi.azurenative.dataprotection.inputs.BackupScheduleArgs;
 import io.pulumi.azurenative.dataprotection.inputs.TaggingCriteriaArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,9 +26,9 @@ public final class ScheduleBasedTriggerContextArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="objectType", required=true)
-      private final Input<String> objectType;
+      private final Output<String> objectType;
 
-    public Input<String> getObjectType() {
+    public Output<String> getObjectType() {
         return this.objectType;
     }
 
@@ -37,9 +37,9 @@ public final class ScheduleBasedTriggerContextArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="schedule", required=true)
-      private final Input<BackupScheduleArgs> schedule;
+      private final Output<BackupScheduleArgs> schedule;
 
-    public Input<BackupScheduleArgs> getSchedule() {
+    public Output<BackupScheduleArgs> getSchedule() {
         return this.schedule;
     }
 
@@ -48,25 +48,25 @@ public final class ScheduleBasedTriggerContextArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="taggingCriteria", required=true)
-      private final Input<List<TaggingCriteriaArgs>> taggingCriteria;
+      private final Output<List<TaggingCriteriaArgs>> taggingCriteria;
 
-    public Input<List<TaggingCriteriaArgs>> getTaggingCriteria() {
+    public Output<List<TaggingCriteriaArgs>> getTaggingCriteria() {
         return this.taggingCriteria;
     }
 
     public ScheduleBasedTriggerContextArgs(
-        Input<String> objectType,
-        Input<BackupScheduleArgs> schedule,
-        Input<List<TaggingCriteriaArgs>> taggingCriteria) {
+        Output<String> objectType,
+        Output<BackupScheduleArgs> schedule,
+        Output<List<TaggingCriteriaArgs>> taggingCriteria) {
         this.objectType = Objects.requireNonNull(objectType, "expected parameter 'objectType' to be non-null");
         this.schedule = Objects.requireNonNull(schedule, "expected parameter 'schedule' to be non-null");
         this.taggingCriteria = Objects.requireNonNull(taggingCriteria, "expected parameter 'taggingCriteria' to be non-null");
     }
 
     private ScheduleBasedTriggerContextArgs() {
-        this.objectType = Input.empty();
-        this.schedule = Input.empty();
-        this.taggingCriteria = Input.empty();
+        this.objectType = Output.empty();
+        this.schedule = Output.empty();
+        this.taggingCriteria = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class ScheduleBasedTriggerContextArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<String> objectType;
-        private Input<BackupScheduleArgs> schedule;
-        private Input<List<TaggingCriteriaArgs>> taggingCriteria;
+        private Output<String> objectType;
+        private Output<BackupScheduleArgs> schedule;
+        private Output<List<TaggingCriteriaArgs>> taggingCriteria;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class ScheduleBasedTriggerContextArgs extends io.pulumi.resources.R
     	      this.taggingCriteria = defaults.taggingCriteria;
         }
 
-        public Builder objectType(Input<String> objectType) {
+        public Builder objectType(Output<String> objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
 
         public Builder objectType(String objectType) {
-            this.objectType = Input.of(Objects.requireNonNull(objectType));
+            this.objectType = Output.of(Objects.requireNonNull(objectType));
             return this;
         }
 
-        public Builder schedule(Input<BackupScheduleArgs> schedule) {
+        public Builder schedule(Output<BackupScheduleArgs> schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
 
         public Builder schedule(BackupScheduleArgs schedule) {
-            this.schedule = Input.of(Objects.requireNonNull(schedule));
+            this.schedule = Output.of(Objects.requireNonNull(schedule));
             return this;
         }
 
-        public Builder taggingCriteria(Input<List<TaggingCriteriaArgs>> taggingCriteria) {
+        public Builder taggingCriteria(Output<List<TaggingCriteriaArgs>> taggingCriteria) {
             this.taggingCriteria = Objects.requireNonNull(taggingCriteria);
             return this;
         }
 
         public Builder taggingCriteria(List<TaggingCriteriaArgs> taggingCriteria) {
-            this.taggingCriteria = Input.of(Objects.requireNonNull(taggingCriteria));
+            this.taggingCriteria = Output.of(Objects.requireNonNull(taggingCriteria));
             return this;
         }
         public ScheduleBasedTriggerContextArgs build() {

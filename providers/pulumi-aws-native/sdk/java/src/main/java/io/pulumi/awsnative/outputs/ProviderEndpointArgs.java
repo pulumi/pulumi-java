@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.outputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
@@ -15,959 +15,959 @@ public final class ProviderEndpointArgs {
      * Override the default endpoint for AWS Access Analyzer
      * 
      */
-    private final @Nullable Input<String> accessanalyzer;
+    private final @Nullable Output<String> accessanalyzer;
     /**
      * Override the default endpoint for AWS Certificate Manager
      * 
      */
-    private final @Nullable Input<String> acm;
+    private final @Nullable Output<String> acm;
     /**
      * Override the default endpoint for AWS Certificate Manager Private Certificate Authority
      * 
      */
-    private final @Nullable Input<String> acmpca;
+    private final @Nullable Output<String> acmpca;
     /**
      * Override the default endpoint for AWS Amplify Console
      * 
      */
-    private final @Nullable Input<String> amplify;
+    private final @Nullable Output<String> amplify;
     /**
      * Override the default endpoint for AWS AppConfig
      * 
      */
-    private final @Nullable Input<String> appconfig;
+    private final @Nullable Output<String> appconfig;
     /**
      * Override the default endpoint for AWS Application Auto Scaling
      * 
      */
-    private final @Nullable Input<String> applicationautoscaling;
+    private final @Nullable Output<String> applicationautoscaling;
     /**
      * Override the default endpoint for AWS CloudWatch Application Insights
      * 
      */
-    private final @Nullable Input<String> applicationinsights;
+    private final @Nullable Output<String> applicationinsights;
     /**
      * Override the default endpoint for AWS App Mesh
      * 
      */
-    private final @Nullable Input<String> appmesh;
+    private final @Nullable Output<String> appmesh;
     /**
      * Override the default endpoint for AWS App Runner
      * 
      */
-    private final @Nullable Input<String> apprunner;
+    private final @Nullable Output<String> apprunner;
     /**
      * Override the default endpoint for AWS AppStream 2.0
      * 
      */
-    private final @Nullable Input<String> appstream;
+    private final @Nullable Output<String> appstream;
     /**
      * Override the default endpoint for AWS AppSync
      * 
      */
-    private final @Nullable Input<String> appsync;
+    private final @Nullable Output<String> appsync;
     /**
      * Override the default endpoint for AWS Athena
      * 
      */
-    private final @Nullable Input<String> athena;
+    private final @Nullable Output<String> athena;
     /**
      * Override the default endpoint for AWS Audit Manager
      * 
      */
-    private final @Nullable Input<String> auditmanager;
+    private final @Nullable Output<String> auditmanager;
     /**
      * Override the default endpoint for AWS Auto Scaling
      * 
      */
-    private final @Nullable Input<String> autoscaling;
+    private final @Nullable Output<String> autoscaling;
     /**
      * Override the default endpoint for AWS Backup
      * 
      */
-    private final @Nullable Input<String> backup;
+    private final @Nullable Output<String> backup;
     /**
      * Override the default endpoint for AWS Batch
      * 
      */
-    private final @Nullable Input<String> batch;
+    private final @Nullable Output<String> batch;
     /**
      * Override the default endpoint for AWS Budgets
      * 
      */
-    private final @Nullable Input<String> budgets;
+    private final @Nullable Output<String> budgets;
     /**
      * Override the default endpoint for Amazon Chime
      * 
      */
-    private final @Nullable Input<String> chime;
+    private final @Nullable Output<String> chime;
     /**
      * Override the default endpoint for AWS Cloud9
      * 
      */
-    private final @Nullable Input<String> cloud9;
+    private final @Nullable Output<String> cloud9;
     /**
      * Override the default endpoint for AWS CloudFormation
      * 
      */
-    private final @Nullable Input<String> cloudformation;
+    private final @Nullable Output<String> cloudformation;
     /**
      * Override the default endpoint for AWS CloudFront
      * 
      */
-    private final @Nullable Input<String> cloudfront;
+    private final @Nullable Output<String> cloudfront;
     /**
      * Override the default endpoint for AWS CloudHSM
      * 
      */
-    private final @Nullable Input<String> cloudhsm;
+    private final @Nullable Output<String> cloudhsm;
     /**
      * Override the default endpoint for AWS CloudSearch
      * 
      */
-    private final @Nullable Input<String> cloudsearch;
+    private final @Nullable Output<String> cloudsearch;
     /**
      * Override the default endpoint for AWS CloudTrail
      * 
      */
-    private final @Nullable Input<String> cloudtrail;
+    private final @Nullable Output<String> cloudtrail;
     /**
      * Override the default endpoint for AWS CloudWatch
      * 
      */
-    private final @Nullable Input<String> cloudwatch;
+    private final @Nullable Output<String> cloudwatch;
     /**
      * Override the default endpoint for AWS CloudWatch Events
      * 
      */
-    private final @Nullable Input<String> cloudwatchevents;
+    private final @Nullable Output<String> cloudwatchevents;
     /**
      * Override the default endpoint for AWS CloudWatch Logs
      * 
      */
-    private final @Nullable Input<String> cloudwatchlogs;
+    private final @Nullable Output<String> cloudwatchlogs;
     /**
      * Override the default endpoint for AWS CodeArtifact
      * 
      */
-    private final @Nullable Input<String> codeartifact;
+    private final @Nullable Output<String> codeartifact;
     /**
      * Override the default endpoint for AWS CodeBuild
      * 
      */
-    private final @Nullable Input<String> codebuild;
+    private final @Nullable Output<String> codebuild;
     /**
      * Override the default endpoint for AWS CodeCommit
      * 
      */
-    private final @Nullable Input<String> codecommit;
+    private final @Nullable Output<String> codecommit;
     /**
      * Override the default endpoint for AWS CodeDeploy
      * 
      */
-    private final @Nullable Input<String> codedeploy;
+    private final @Nullable Output<String> codedeploy;
     /**
      * Override the default endpoint for AWS CodePipeline
      * 
      */
-    private final @Nullable Input<String> codepipeline;
+    private final @Nullable Output<String> codepipeline;
     /**
      * Override the default endpoint for AWS CodeStart Connections
      * 
      */
-    private final @Nullable Input<String> codestarconnections;
+    private final @Nullable Output<String> codestarconnections;
     /**
      * Override the default endpoint for Amazon Cognito
      * 
      */
-    private final @Nullable Input<String> cognitoidentity;
+    private final @Nullable Output<String> cognitoidentity;
     /**
      * Override the default endpoint for AWS Config
      * 
      */
-    private final @Nullable Input<String> configservice;
+    private final @Nullable Output<String> configservice;
     /**
      * Override the default endpoint for Amazon Connect
      * 
      */
-    private final @Nullable Input<String> connect;
+    private final @Nullable Output<String> connect;
     /**
      * Override the default endpoint for AWS Cost and Usage Reports
      * 
      */
-    private final @Nullable Input<String> cur;
+    private final @Nullable Output<String> cur;
     /**
      * Override the default endpoint for AWS Data Exchange
      * 
      */
-    private final @Nullable Input<String> dataexchange;
+    private final @Nullable Output<String> dataexchange;
     /**
      * Override the default endpoint for AWS Data Pipeline
      * 
      */
-    private final @Nullable Input<String> datapipeline;
+    private final @Nullable Output<String> datapipeline;
     /**
      * Override the default endpoint for AWS DataSync
      * 
      */
-    private final @Nullable Input<String> datasync;
+    private final @Nullable Output<String> datasync;
     /**
      * Override the default endpoint for AWS DynamoDB Accelerator
      * 
      */
-    private final @Nullable Input<String> dax;
+    private final @Nullable Output<String> dax;
     /**
      * Override the default endpoint for AWS Detective
      * 
      */
-    private final @Nullable Input<String> detective;
+    private final @Nullable Output<String> detective;
     /**
      * Override the default endpoint for AWS Device Farm
      * 
      */
-    private final @Nullable Input<String> devicefarm;
+    private final @Nullable Output<String> devicefarm;
     /**
      * Override the default endpoint for AWS Direct Connect
      * 
      */
-    private final @Nullable Input<String> directconnect;
+    private final @Nullable Output<String> directconnect;
     /**
      * Override the default endpoint for AWS Data Lifecycle Manager
      * 
      */
-    private final @Nullable Input<String> dlm;
+    private final @Nullable Output<String> dlm;
     /**
      * Override the default endpoint for AWS Database Migration Service
      * 
      */
-    private final @Nullable Input<String> dms;
+    private final @Nullable Output<String> dms;
     /**
      * Override the default endpoint for AWS DocumentDB
      * 
      */
-    private final @Nullable Input<String> docdb;
+    private final @Nullable Output<String> docdb;
     /**
      * Override the default endpoint for AWS Directory Service
      * 
      */
-    private final @Nullable Input<String> ds;
+    private final @Nullable Output<String> ds;
     /**
      * Override the default endpoint for AWS DynamoDB
      * 
      */
-    private final @Nullable Input<String> dynamodb;
+    private final @Nullable Output<String> dynamodb;
     /**
      * Override the default endpoint for AWS Elastic Compute Cloud (EC2)
      * 
      */
-    private final @Nullable Input<String> ec2;
+    private final @Nullable Output<String> ec2;
     /**
      * Override the default endpoint for AWS Elastic Container Registry (ECR)
      * 
      */
-    private final @Nullable Input<String> ecr;
+    private final @Nullable Output<String> ecr;
     /**
      * Override the default endpoint for AWS Elastic Container Registry (ECR) Public
      * 
      */
-    private final @Nullable Input<String> ecrpublic;
+    private final @Nullable Output<String> ecrpublic;
     /**
      * Override the default endpoint for AWS Elastic Container Service (ECS)
      * 
      */
-    private final @Nullable Input<String> ecs;
+    private final @Nullable Output<String> ecs;
     /**
      * Override the default endpoint for AWS Elastic File System (EFS)
      * 
      */
-    private final @Nullable Input<String> efs;
+    private final @Nullable Output<String> efs;
     /**
      * Override the default endpoint for AWS Elastic Kubernetes Service (EKS)
      * 
      */
-    private final @Nullable Input<String> eks;
+    private final @Nullable Output<String> eks;
     /**
      * Override the default endpoint for AWS ElastiCache
      * 
      */
-    private final @Nullable Input<String> elasticache;
+    private final @Nullable Output<String> elasticache;
     /**
      * Override the default endpoint for AWS Elastic Beanstalk
      * 
      */
-    private final @Nullable Input<String> elasticbeanstalk;
+    private final @Nullable Output<String> elasticbeanstalk;
     /**
      * Override the default endpoint for AWS Elastic Transcoder
      * 
      */
-    private final @Nullable Input<String> elastictranscoder;
+    private final @Nullable Output<String> elastictranscoder;
     /**
      * Override the default endpoint for AWS Elastic Load Balancing
      * 
      */
-    private final @Nullable Input<String> elb;
+    private final @Nullable Output<String> elb;
     /**
      * Override the default endpoint for AWS Elastic Load Balancing V2
      * 
      */
-    private final @Nullable Input<String> elbv2;
+    private final @Nullable Output<String> elbv2;
     /**
      * Override the default endpoint for AWS EMR
      * 
      */
-    private final @Nullable Input<String> emr;
+    private final @Nullable Output<String> emr;
     /**
      * Override the default endpoint for AWS EMR on EKS
      * 
      */
-    private final @Nullable Input<String> emrcontainers;
+    private final @Nullable Output<String> emrcontainers;
     /**
      * Override the default endpoint for AWS OpenSearch Service (formerly Elasticsearch)
      * 
      */
-    private final @Nullable Input<String> es;
+    private final @Nullable Output<String> es;
     /**
      * Override the default endpoint for AWS Kinesis Data Firehose
      * 
      */
-    private final @Nullable Input<String> firehose;
+    private final @Nullable Output<String> firehose;
     /**
      * Override the default endpoint for AWS Firewall Manager
      * 
      */
-    private final @Nullable Input<String> fms;
+    private final @Nullable Output<String> fms;
     /**
      * Override the default endpoint for Amazon Forecast
      * 
      */
-    private final @Nullable Input<String> forecast;
+    private final @Nullable Output<String> forecast;
     /**
      * Override the default endpoint for AWS FSx
      * 
      */
-    private final @Nullable Input<String> fsx;
+    private final @Nullable Output<String> fsx;
     /**
      * Override the default endpoint for AWS GameLift
      * 
      */
-    private final @Nullable Input<String> gamelift;
+    private final @Nullable Output<String> gamelift;
     /**
      * Override the default endpoint for Amazon S3 Glacier
      * 
      */
-    private final @Nullable Input<String> glacier;
+    private final @Nullable Output<String> glacier;
     /**
      * Override the default endpoint for AWS Global Accelerator
      * 
      */
-    private final @Nullable Input<String> globalaccelerator;
+    private final @Nullable Output<String> globalaccelerator;
     /**
      * Override the default endpoint for AWS Glue
      * 
      */
-    private final @Nullable Input<String> glue;
+    private final @Nullable Output<String> glue;
     /**
      * Override the default endpoint for AWS IoT Greengrass
      * 
      */
-    private final @Nullable Input<String> greengrass;
+    private final @Nullable Output<String> greengrass;
     /**
      * Override the default endpoint for AWS GuardDuty
      * 
      */
-    private final @Nullable Input<String> guardduty;
+    private final @Nullable Output<String> guardduty;
     /**
      * Override the default endpoint for AWS Identity and Access Management
      * 
      */
-    private final @Nullable Input<String> iam;
+    private final @Nullable Output<String> iam;
     /**
      * Override the default endpoint for AWS Single Sign-On (SSO) Identity Store
      * 
      */
-    private final @Nullable Input<String> identitystore;
+    private final @Nullable Output<String> identitystore;
     /**
      * Override the default endpoint for AWS Image Builder
      * 
      */
-    private final @Nullable Input<String> imagebuilder;
+    private final @Nullable Output<String> imagebuilder;
     /**
      * Override the default endpoint for Amazon Inspector
      * 
      */
-    private final @Nullable Input<String> inspector;
+    private final @Nullable Output<String> inspector;
     /**
      * Override the default endpoint for AWS IoT
      * 
      */
-    private final @Nullable Input<String> iot;
+    private final @Nullable Output<String> iot;
     /**
      * Override the default endpoint for AWS IoT Analytics
      * 
      */
-    private final @Nullable Input<String> iotanalytics;
+    private final @Nullable Output<String> iotanalytics;
     /**
      * Override the default endpoint for AWS IoT Events
      * 
      */
-    private final @Nullable Input<String> iotevents;
+    private final @Nullable Output<String> iotevents;
     /**
      * Override the default endpoint for Amazon Managed Streaming for Apache Kafka (MSK)
      * 
      */
-    private final @Nullable Input<String> kafka;
+    private final @Nullable Output<String> kafka;
     /**
      * Override the default endpoint for Amazon Kinesis
      * 
      */
-    private final @Nullable Input<String> kinesis;
+    private final @Nullable Output<String> kinesis;
     /**
      * Override the default endpoint for Amazon Kinesis Data Analytics
      * 
      */
-    private final @Nullable Input<String> kinesisanalytics;
+    private final @Nullable Output<String> kinesisanalytics;
     /**
      * Override the default endpoint for Amazon Kinesis Data Analytics V2
      * 
      */
-    private final @Nullable Input<String> kinesisanalyticsv2;
+    private final @Nullable Output<String> kinesisanalyticsv2;
     /**
      * Override the default endpoint for Amazon Kinesis Video Streams
      * 
      */
-    private final @Nullable Input<String> kinesisvideo;
+    private final @Nullable Output<String> kinesisvideo;
     /**
      * Override the default endpoint for AWS Key Management Service
      * 
      */
-    private final @Nullable Input<String> kms;
+    private final @Nullable Output<String> kms;
     /**
      * Override the default endpoint for AWS Lake Formation
      * 
      */
-    private final @Nullable Input<String> lakeformation;
+    private final @Nullable Output<String> lakeformation;
     /**
      * Override the default endpoint for AWS Lambda
      * 
      */
-    private final @Nullable Input<String> lambda;
+    private final @Nullable Output<String> lambda;
     /**
      * Override the default endpoint for Amazon Lex
      * 
      */
-    private final @Nullable Input<String> lexmodels;
+    private final @Nullable Output<String> lexmodels;
     /**
      * Override the default endpoint for AWS License Manager
      * 
      */
-    private final @Nullable Input<String> licensemanager;
+    private final @Nullable Output<String> licensemanager;
     /**
      * Override the default endpoint for Amazon Lightsail
      * 
      */
-    private final @Nullable Input<String> lightsail;
+    private final @Nullable Output<String> lightsail;
     /**
      * Override the default endpoint for Amazon Location
      * 
      */
-    private final @Nullable Input<String> location;
+    private final @Nullable Output<String> location;
     /**
      * Override the default endpoint for Amazon Macie
      * 
      */
-    private final @Nullable Input<String> macie;
+    private final @Nullable Output<String> macie;
     /**
      * Override the default endpoint for Amazon Macie V2
      * 
      */
-    private final @Nullable Input<String> macie2;
+    private final @Nullable Output<String> macie2;
     /**
      * Override the default endpoint for Amazon Managed Blockchain
      * 
      */
-    private final @Nullable Input<String> managedblockchain;
+    private final @Nullable Output<String> managedblockchain;
     /**
      * Override the default endpoint for AWS Marketplace Catalog
      * 
      */
-    private final @Nullable Input<String> marketplacecatalog;
+    private final @Nullable Output<String> marketplacecatalog;
     /**
      * Override the default endpoint for AWS MediaConnect
      * 
      */
-    private final @Nullable Input<String> mediaconnect;
+    private final @Nullable Output<String> mediaconnect;
     /**
      * Override the default endpoint for AWS MediaConvert
      * 
      */
-    private final @Nullable Input<String> mediaconvert;
+    private final @Nullable Output<String> mediaconvert;
     /**
      * Override the default endpoint for AWS MediaLive
      * 
      */
-    private final @Nullable Input<String> medialive;
+    private final @Nullable Output<String> medialive;
     /**
      * Override the default endpoint for AWS MediaPackage
      * 
      */
-    private final @Nullable Input<String> mediapackage;
+    private final @Nullable Output<String> mediapackage;
     /**
      * Override the default endpoint for AWS Elemental MediaStore container
      * 
      */
-    private final @Nullable Input<String> mediastore;
+    private final @Nullable Output<String> mediastore;
     /**
      * Override the default endpoint for AWS Elemental MediaStore asset
      * 
      */
-    private final @Nullable Input<String> mediastoredata;
+    private final @Nullable Output<String> mediastoredata;
     /**
      * Override the default endpoint for AWS MemoryDB for Redis
      * 
      */
-    private final @Nullable Input<String> memorydb;
+    private final @Nullable Output<String> memorydb;
     /**
      * Override the default endpoint for Amazon MQ
      * 
      */
-    private final @Nullable Input<String> mq;
+    private final @Nullable Output<String> mq;
     /**
      * Override the default endpoint for Amazon Managed Workflows for Apache Airflow
      * 
      */
-    private final @Nullable Input<String> mwaa;
+    private final @Nullable Output<String> mwaa;
     /**
      * Override the default endpoint for Amazon Neptune
      * 
      */
-    private final @Nullable Input<String> neptune;
+    private final @Nullable Output<String> neptune;
     /**
      * Override the default endpoint for AWS Network Firewall
      * 
      */
-    private final @Nullable Input<String> networkfirewall;
+    private final @Nullable Output<String> networkfirewall;
     /**
      * Override the default endpoint for AWS Network Manager
      * 
      */
-    private final @Nullable Input<String> networkmanager;
+    private final @Nullable Output<String> networkmanager;
     /**
      * Override the default endpoint for AWS OpsWorks
      * 
      */
-    private final @Nullable Input<String> opsworks;
+    private final @Nullable Output<String> opsworks;
     /**
      * Override the default endpoint for AWS Organizations
      * 
      */
-    private final @Nullable Input<String> organizations;
+    private final @Nullable Output<String> organizations;
     /**
      * Override the default endpoint for AWS Outposts
      * 
      */
-    private final @Nullable Input<String> outposts;
+    private final @Nullable Output<String> outposts;
     /**
      * Override the default endpoint for Amazon Personalize
      * 
      */
-    private final @Nullable Input<String> personalize;
+    private final @Nullable Output<String> personalize;
     /**
      * Override the default endpoint for Amazon Pinpoint
      * 
      */
-    private final @Nullable Input<String> pinpoint;
+    private final @Nullable Output<String> pinpoint;
     /**
      * Override the default endpoint for Amazon Web Services Price List Service
      * 
      */
-    private final @Nullable Input<String> pricing;
+    private final @Nullable Output<String> pricing;
     /**
      * Override the default endpoint for Amazon QLDB
      * 
      */
-    private final @Nullable Input<String> qldb;
+    private final @Nullable Output<String> qldb;
     /**
      * Override the default endpoint for Amazon QuickSight
      * 
      */
-    private final @Nullable Input<String> quicksight;
+    private final @Nullable Output<String> quicksight;
     /**
      * Override the default endpoint for AWS Resource Access Manager
      * 
      */
-    private final @Nullable Input<String> ram;
+    private final @Nullable Output<String> ram;
     /**
      * Override the default endpoint for Amazon Relational Database Service
      * 
      */
-    private final @Nullable Input<String> rds;
+    private final @Nullable Output<String> rds;
     /**
      * Override the default endpoint for Amazon Redshift
      * 
      */
-    private final @Nullable Input<String> redshift;
+    private final @Nullable Output<String> redshift;
     /**
      * Override the default endpoint for AWS Resource Groups
      * 
      */
-    private final @Nullable Input<String> resourcegroups;
+    private final @Nullable Output<String> resourcegroups;
     /**
      * Override the default endpoint for AWS Resource Groups Tagging API
      * 
      */
-    private final @Nullable Input<String> resourcegroupstaggingapi;
+    private final @Nullable Output<String> resourcegroupstaggingapi;
     /**
      * Override the default endpoint for Amazon Route 53
      * 
      */
-    private final @Nullable Input<String> route53;
+    private final @Nullable Output<String> route53;
     /**
      * Override the default endpoint for Amazon Route 53 Domains
      * 
      */
-    private final @Nullable Input<String> route53domains;
+    private final @Nullable Output<String> route53domains;
     /**
      * Override the default endpoint for Amazon Route 53 Recovery Control
      * 
      */
-    private final @Nullable Input<String> route53recoverycontrolconfig;
+    private final @Nullable Output<String> route53recoverycontrolconfig;
     /**
      * Override the default endpoint for Amazon Route 53 Recovery Readiness
      * 
      */
-    private final @Nullable Input<String> route53recoveryreadiness;
+    private final @Nullable Output<String> route53recoveryreadiness;
     /**
      * Override the default endpoint for Amazon Route 53 Resolver
      * 
      */
-    private final @Nullable Input<String> route53resolver;
+    private final @Nullable Output<String> route53resolver;
     /**
      * Override the default endpoint for Amazon Simple Storage Service (S3)
      * 
      */
-    private final @Nullable Input<String> s3;
+    private final @Nullable Output<String> s3;
     /**
      * Override the default endpoint for Amazon Simple Storage Service (S3) Control
      * 
      */
-    private final @Nullable Input<String> s3control;
+    private final @Nullable Output<String> s3control;
     /**
      * Override the default endpoint for Amazon S3 on Outposts
      * 
      */
-    private final @Nullable Input<String> s3outposts;
+    private final @Nullable Output<String> s3outposts;
     /**
      * Override the default endpoint for AWS SageMaker
      * 
      */
-    private final @Nullable Input<String> sagemaker;
+    private final @Nullable Output<String> sagemaker;
     /**
      * Override the default endpoint for Amazon EventBridge Schema Registry
      * 
      */
-    private final @Nullable Input<String> schemas;
+    private final @Nullable Output<String> schemas;
     /**
      * Override the default endpoint for Amazon SimpleDB
      * 
      */
-    private final @Nullable Input<String> sdb;
+    private final @Nullable Output<String> sdb;
     /**
      * Override the default endpoint for AWS Secrets Manager
      * 
      */
-    private final @Nullable Input<String> secretsmanager;
+    private final @Nullable Output<String> secretsmanager;
     /**
      * Override the default endpoint for AWS Security Hub
      * 
      */
-    private final @Nullable Input<String> securityhub;
+    private final @Nullable Output<String> securityhub;
     /**
      * Override the default endpoint for AWS Serverless Application Repository
      * 
      */
-    private final @Nullable Input<String> serverlessrepo;
+    private final @Nullable Output<String> serverlessrepo;
     /**
      * Override the default endpoint for AWS Service Catalog
      * 
      */
-    private final @Nullable Input<String> servicecatalog;
+    private final @Nullable Output<String> servicecatalog;
     /**
      * Override the default endpoint for AWS Cloud Map
      * 
      */
-    private final @Nullable Input<String> servicediscovery;
+    private final @Nullable Output<String> servicediscovery;
     /**
      * Override the default endpoint for AWS Service Quotas
      * 
      */
-    private final @Nullable Input<String> servicequotas;
+    private final @Nullable Output<String> servicequotas;
     /**
      * Override the default endpoint for Amazon Simple Email Service (SES)
      * 
      */
-    private final @Nullable Input<String> ses;
+    private final @Nullable Output<String> ses;
     /**
      * Override the default endpoint for AWS Shield Advanced API
      * 
      */
-    private final @Nullable Input<String> shield;
+    private final @Nullable Output<String> shield;
     /**
      * Override the default endpoint for AWS Signer
      * 
      */
-    private final @Nullable Input<String> signer;
+    private final @Nullable Output<String> signer;
     /**
      * Override the default endpoint for Amazon Simple Notification Service (SNS)
      * 
      */
-    private final @Nullable Input<String> sns;
+    private final @Nullable Output<String> sns;
     /**
      * Override the default endpoint for Amazon Simple Queue Service (SQS)
      * 
      */
-    private final @Nullable Input<String> sqs;
+    private final @Nullable Output<String> sqs;
     /**
      * Override the default endpoint for AWS Systems Manager
      * 
      */
-    private final @Nullable Input<String> ssm;
+    private final @Nullable Output<String> ssm;
     /**
      * Override the default endpoint for AWS Single Sign On (SSO)
      * 
      */
-    private final @Nullable Input<String> ssoadmin;
+    private final @Nullable Output<String> ssoadmin;
     /**
      * Override the default endpoint for AWS Step Functions
      * 
      */
-    private final @Nullable Input<String> stepfunctions;
+    private final @Nullable Output<String> stepfunctions;
     /**
      * Override the default endpoint for AWS Storage Gateway
      * 
      */
-    private final @Nullable Input<String> storagegateway;
+    private final @Nullable Output<String> storagegateway;
     /**
      * Override the default endpoint for AWS Security Token Service (STS)
      * 
      */
-    private final @Nullable Input<String> sts;
+    private final @Nullable Output<String> sts;
     /**
      * Override the default endpoint for Amazon Simple Workflow Service (SWF)
      * 
      */
-    private final @Nullable Input<String> swf;
+    private final @Nullable Output<String> swf;
     /**
      * Override the default endpoint for Amazon CloudWatch Synthetics
      * 
      */
-    private final @Nullable Input<String> synthetics;
+    private final @Nullable Output<String> synthetics;
     /**
      * Override the default endpoint for Amazon Timestream
      * 
      */
-    private final @Nullable Input<String> timestreamwrite;
+    private final @Nullable Output<String> timestreamwrite;
     /**
      * Override the default endpoint for AWS Transfer Family
      * 
      */
-    private final @Nullable Input<String> transfer;
+    private final @Nullable Output<String> transfer;
     /**
      * Override the default endpoint for AWS WAF Classic
      * 
      */
-    private final @Nullable Input<String> waf;
+    private final @Nullable Output<String> waf;
     /**
      * Override the default endpoint for AWS WAF Regional Classic
      * 
      */
-    private final @Nullable Input<String> wafregional;
+    private final @Nullable Output<String> wafregional;
     /**
      * Override the default endpoint for AWS WAF V2
      * 
      */
-    private final @Nullable Input<String> wafv2;
+    private final @Nullable Output<String> wafv2;
     /**
      * Override the default endpoint for Amazon WorkLink
      * 
      */
-    private final @Nullable Input<String> worklink;
+    private final @Nullable Output<String> worklink;
     /**
      * Override the default endpoint for Amazon WorkMail
      * 
      */
-    private final @Nullable Input<String> workmail;
+    private final @Nullable Output<String> workmail;
     /**
      * Override the default endpoint for Amazon WorkSpaces
      * 
      */
-    private final @Nullable Input<String> workspaces;
+    private final @Nullable Output<String> workspaces;
     /**
      * Override the default endpoint for AWS X-Ray
      * 
      */
-    private final @Nullable Input<String> xray;
+    private final @Nullable Output<String> xray;
 
     @OutputCustomType.Constructor
     private ProviderEndpointArgs(
-        @OutputCustomType.Parameter("accessanalyzer") @Nullable Input<String> accessanalyzer,
-        @OutputCustomType.Parameter("acm") @Nullable Input<String> acm,
-        @OutputCustomType.Parameter("acmpca") @Nullable Input<String> acmpca,
-        @OutputCustomType.Parameter("amplify") @Nullable Input<String> amplify,
-        @OutputCustomType.Parameter("appconfig") @Nullable Input<String> appconfig,
-        @OutputCustomType.Parameter("applicationautoscaling") @Nullable Input<String> applicationautoscaling,
-        @OutputCustomType.Parameter("applicationinsights") @Nullable Input<String> applicationinsights,
-        @OutputCustomType.Parameter("appmesh") @Nullable Input<String> appmesh,
-        @OutputCustomType.Parameter("apprunner") @Nullable Input<String> apprunner,
-        @OutputCustomType.Parameter("appstream") @Nullable Input<String> appstream,
-        @OutputCustomType.Parameter("appsync") @Nullable Input<String> appsync,
-        @OutputCustomType.Parameter("athena") @Nullable Input<String> athena,
-        @OutputCustomType.Parameter("auditmanager") @Nullable Input<String> auditmanager,
-        @OutputCustomType.Parameter("autoscaling") @Nullable Input<String> autoscaling,
-        @OutputCustomType.Parameter("backup") @Nullable Input<String> backup,
-        @OutputCustomType.Parameter("batch") @Nullable Input<String> batch,
-        @OutputCustomType.Parameter("budgets") @Nullable Input<String> budgets,
-        @OutputCustomType.Parameter("chime") @Nullable Input<String> chime,
-        @OutputCustomType.Parameter("cloud9") @Nullable Input<String> cloud9,
-        @OutputCustomType.Parameter("cloudformation") @Nullable Input<String> cloudformation,
-        @OutputCustomType.Parameter("cloudfront") @Nullable Input<String> cloudfront,
-        @OutputCustomType.Parameter("cloudhsm") @Nullable Input<String> cloudhsm,
-        @OutputCustomType.Parameter("cloudsearch") @Nullable Input<String> cloudsearch,
-        @OutputCustomType.Parameter("cloudtrail") @Nullable Input<String> cloudtrail,
-        @OutputCustomType.Parameter("cloudwatch") @Nullable Input<String> cloudwatch,
-        @OutputCustomType.Parameter("cloudwatchevents") @Nullable Input<String> cloudwatchevents,
-        @OutputCustomType.Parameter("cloudwatchlogs") @Nullable Input<String> cloudwatchlogs,
-        @OutputCustomType.Parameter("codeartifact") @Nullable Input<String> codeartifact,
-        @OutputCustomType.Parameter("codebuild") @Nullable Input<String> codebuild,
-        @OutputCustomType.Parameter("codecommit") @Nullable Input<String> codecommit,
-        @OutputCustomType.Parameter("codedeploy") @Nullable Input<String> codedeploy,
-        @OutputCustomType.Parameter("codepipeline") @Nullable Input<String> codepipeline,
-        @OutputCustomType.Parameter("codestarconnections") @Nullable Input<String> codestarconnections,
-        @OutputCustomType.Parameter("cognitoidentity") @Nullable Input<String> cognitoidentity,
-        @OutputCustomType.Parameter("configservice") @Nullable Input<String> configservice,
-        @OutputCustomType.Parameter("connect") @Nullable Input<String> connect,
-        @OutputCustomType.Parameter("cur") @Nullable Input<String> cur,
-        @OutputCustomType.Parameter("dataexchange") @Nullable Input<String> dataexchange,
-        @OutputCustomType.Parameter("datapipeline") @Nullable Input<String> datapipeline,
-        @OutputCustomType.Parameter("datasync") @Nullable Input<String> datasync,
-        @OutputCustomType.Parameter("dax") @Nullable Input<String> dax,
-        @OutputCustomType.Parameter("detective") @Nullable Input<String> detective,
-        @OutputCustomType.Parameter("devicefarm") @Nullable Input<String> devicefarm,
-        @OutputCustomType.Parameter("directconnect") @Nullable Input<String> directconnect,
-        @OutputCustomType.Parameter("dlm") @Nullable Input<String> dlm,
-        @OutputCustomType.Parameter("dms") @Nullable Input<String> dms,
-        @OutputCustomType.Parameter("docdb") @Nullable Input<String> docdb,
-        @OutputCustomType.Parameter("ds") @Nullable Input<String> ds,
-        @OutputCustomType.Parameter("dynamodb") @Nullable Input<String> dynamodb,
-        @OutputCustomType.Parameter("ec2") @Nullable Input<String> ec2,
-        @OutputCustomType.Parameter("ecr") @Nullable Input<String> ecr,
-        @OutputCustomType.Parameter("ecrpublic") @Nullable Input<String> ecrpublic,
-        @OutputCustomType.Parameter("ecs") @Nullable Input<String> ecs,
-        @OutputCustomType.Parameter("efs") @Nullable Input<String> efs,
-        @OutputCustomType.Parameter("eks") @Nullable Input<String> eks,
-        @OutputCustomType.Parameter("elasticache") @Nullable Input<String> elasticache,
-        @OutputCustomType.Parameter("elasticbeanstalk") @Nullable Input<String> elasticbeanstalk,
-        @OutputCustomType.Parameter("elastictranscoder") @Nullable Input<String> elastictranscoder,
-        @OutputCustomType.Parameter("elb") @Nullable Input<String> elb,
-        @OutputCustomType.Parameter("elbv2") @Nullable Input<String> elbv2,
-        @OutputCustomType.Parameter("emr") @Nullable Input<String> emr,
-        @OutputCustomType.Parameter("emrcontainers") @Nullable Input<String> emrcontainers,
-        @OutputCustomType.Parameter("es") @Nullable Input<String> es,
-        @OutputCustomType.Parameter("firehose") @Nullable Input<String> firehose,
-        @OutputCustomType.Parameter("fms") @Nullable Input<String> fms,
-        @OutputCustomType.Parameter("forecast") @Nullable Input<String> forecast,
-        @OutputCustomType.Parameter("fsx") @Nullable Input<String> fsx,
-        @OutputCustomType.Parameter("gamelift") @Nullable Input<String> gamelift,
-        @OutputCustomType.Parameter("glacier") @Nullable Input<String> glacier,
-        @OutputCustomType.Parameter("globalaccelerator") @Nullable Input<String> globalaccelerator,
-        @OutputCustomType.Parameter("glue") @Nullable Input<String> glue,
-        @OutputCustomType.Parameter("greengrass") @Nullable Input<String> greengrass,
-        @OutputCustomType.Parameter("guardduty") @Nullable Input<String> guardduty,
-        @OutputCustomType.Parameter("iam") @Nullable Input<String> iam,
-        @OutputCustomType.Parameter("identitystore") @Nullable Input<String> identitystore,
-        @OutputCustomType.Parameter("imagebuilder") @Nullable Input<String> imagebuilder,
-        @OutputCustomType.Parameter("inspector") @Nullable Input<String> inspector,
-        @OutputCustomType.Parameter("iot") @Nullable Input<String> iot,
-        @OutputCustomType.Parameter("iotanalytics") @Nullable Input<String> iotanalytics,
-        @OutputCustomType.Parameter("iotevents") @Nullable Input<String> iotevents,
-        @OutputCustomType.Parameter("kafka") @Nullable Input<String> kafka,
-        @OutputCustomType.Parameter("kinesis") @Nullable Input<String> kinesis,
-        @OutputCustomType.Parameter("kinesisanalytics") @Nullable Input<String> kinesisanalytics,
-        @OutputCustomType.Parameter("kinesisanalyticsv2") @Nullable Input<String> kinesisanalyticsv2,
-        @OutputCustomType.Parameter("kinesisvideo") @Nullable Input<String> kinesisvideo,
-        @OutputCustomType.Parameter("kms") @Nullable Input<String> kms,
-        @OutputCustomType.Parameter("lakeformation") @Nullable Input<String> lakeformation,
-        @OutputCustomType.Parameter("lambda") @Nullable Input<String> lambda,
-        @OutputCustomType.Parameter("lexmodels") @Nullable Input<String> lexmodels,
-        @OutputCustomType.Parameter("licensemanager") @Nullable Input<String> licensemanager,
-        @OutputCustomType.Parameter("lightsail") @Nullable Input<String> lightsail,
-        @OutputCustomType.Parameter("location") @Nullable Input<String> location,
-        @OutputCustomType.Parameter("macie") @Nullable Input<String> macie,
-        @OutputCustomType.Parameter("macie2") @Nullable Input<String> macie2,
-        @OutputCustomType.Parameter("managedblockchain") @Nullable Input<String> managedblockchain,
-        @OutputCustomType.Parameter("marketplacecatalog") @Nullable Input<String> marketplacecatalog,
-        @OutputCustomType.Parameter("mediaconnect") @Nullable Input<String> mediaconnect,
-        @OutputCustomType.Parameter("mediaconvert") @Nullable Input<String> mediaconvert,
-        @OutputCustomType.Parameter("medialive") @Nullable Input<String> medialive,
-        @OutputCustomType.Parameter("mediapackage") @Nullable Input<String> mediapackage,
-        @OutputCustomType.Parameter("mediastore") @Nullable Input<String> mediastore,
-        @OutputCustomType.Parameter("mediastoredata") @Nullable Input<String> mediastoredata,
-        @OutputCustomType.Parameter("memorydb") @Nullable Input<String> memorydb,
-        @OutputCustomType.Parameter("mq") @Nullable Input<String> mq,
-        @OutputCustomType.Parameter("mwaa") @Nullable Input<String> mwaa,
-        @OutputCustomType.Parameter("neptune") @Nullable Input<String> neptune,
-        @OutputCustomType.Parameter("networkfirewall") @Nullable Input<String> networkfirewall,
-        @OutputCustomType.Parameter("networkmanager") @Nullable Input<String> networkmanager,
-        @OutputCustomType.Parameter("opsworks") @Nullable Input<String> opsworks,
-        @OutputCustomType.Parameter("organizations") @Nullable Input<String> organizations,
-        @OutputCustomType.Parameter("outposts") @Nullable Input<String> outposts,
-        @OutputCustomType.Parameter("personalize") @Nullable Input<String> personalize,
-        @OutputCustomType.Parameter("pinpoint") @Nullable Input<String> pinpoint,
-        @OutputCustomType.Parameter("pricing") @Nullable Input<String> pricing,
-        @OutputCustomType.Parameter("qldb") @Nullable Input<String> qldb,
-        @OutputCustomType.Parameter("quicksight") @Nullable Input<String> quicksight,
-        @OutputCustomType.Parameter("ram") @Nullable Input<String> ram,
-        @OutputCustomType.Parameter("rds") @Nullable Input<String> rds,
-        @OutputCustomType.Parameter("redshift") @Nullable Input<String> redshift,
-        @OutputCustomType.Parameter("resourcegroups") @Nullable Input<String> resourcegroups,
-        @OutputCustomType.Parameter("resourcegroupstaggingapi") @Nullable Input<String> resourcegroupstaggingapi,
-        @OutputCustomType.Parameter("route53") @Nullable Input<String> route53,
-        @OutputCustomType.Parameter("route53domains") @Nullable Input<String> route53domains,
-        @OutputCustomType.Parameter("route53recoverycontrolconfig") @Nullable Input<String> route53recoverycontrolconfig,
-        @OutputCustomType.Parameter("route53recoveryreadiness") @Nullable Input<String> route53recoveryreadiness,
-        @OutputCustomType.Parameter("route53resolver") @Nullable Input<String> route53resolver,
-        @OutputCustomType.Parameter("s3") @Nullable Input<String> s3,
-        @OutputCustomType.Parameter("s3control") @Nullable Input<String> s3control,
-        @OutputCustomType.Parameter("s3outposts") @Nullable Input<String> s3outposts,
-        @OutputCustomType.Parameter("sagemaker") @Nullable Input<String> sagemaker,
-        @OutputCustomType.Parameter("schemas") @Nullable Input<String> schemas,
-        @OutputCustomType.Parameter("sdb") @Nullable Input<String> sdb,
-        @OutputCustomType.Parameter("secretsmanager") @Nullable Input<String> secretsmanager,
-        @OutputCustomType.Parameter("securityhub") @Nullable Input<String> securityhub,
-        @OutputCustomType.Parameter("serverlessrepo") @Nullable Input<String> serverlessrepo,
-        @OutputCustomType.Parameter("servicecatalog") @Nullable Input<String> servicecatalog,
-        @OutputCustomType.Parameter("servicediscovery") @Nullable Input<String> servicediscovery,
-        @OutputCustomType.Parameter("servicequotas") @Nullable Input<String> servicequotas,
-        @OutputCustomType.Parameter("ses") @Nullable Input<String> ses,
-        @OutputCustomType.Parameter("shield") @Nullable Input<String> shield,
-        @OutputCustomType.Parameter("signer") @Nullable Input<String> signer,
-        @OutputCustomType.Parameter("sns") @Nullable Input<String> sns,
-        @OutputCustomType.Parameter("sqs") @Nullable Input<String> sqs,
-        @OutputCustomType.Parameter("ssm") @Nullable Input<String> ssm,
-        @OutputCustomType.Parameter("ssoadmin") @Nullable Input<String> ssoadmin,
-        @OutputCustomType.Parameter("stepfunctions") @Nullable Input<String> stepfunctions,
-        @OutputCustomType.Parameter("storagegateway") @Nullable Input<String> storagegateway,
-        @OutputCustomType.Parameter("sts") @Nullable Input<String> sts,
-        @OutputCustomType.Parameter("swf") @Nullable Input<String> swf,
-        @OutputCustomType.Parameter("synthetics") @Nullable Input<String> synthetics,
-        @OutputCustomType.Parameter("timestreamwrite") @Nullable Input<String> timestreamwrite,
-        @OutputCustomType.Parameter("transfer") @Nullable Input<String> transfer,
-        @OutputCustomType.Parameter("waf") @Nullable Input<String> waf,
-        @OutputCustomType.Parameter("wafregional") @Nullable Input<String> wafregional,
-        @OutputCustomType.Parameter("wafv2") @Nullable Input<String> wafv2,
-        @OutputCustomType.Parameter("worklink") @Nullable Input<String> worklink,
-        @OutputCustomType.Parameter("workmail") @Nullable Input<String> workmail,
-        @OutputCustomType.Parameter("workspaces") @Nullable Input<String> workspaces,
-        @OutputCustomType.Parameter("xray") @Nullable Input<String> xray) {
+        @OutputCustomType.Parameter("accessanalyzer") @Nullable Output<String> accessanalyzer,
+        @OutputCustomType.Parameter("acm") @Nullable Output<String> acm,
+        @OutputCustomType.Parameter("acmpca") @Nullable Output<String> acmpca,
+        @OutputCustomType.Parameter("amplify") @Nullable Output<String> amplify,
+        @OutputCustomType.Parameter("appconfig") @Nullable Output<String> appconfig,
+        @OutputCustomType.Parameter("applicationautoscaling") @Nullable Output<String> applicationautoscaling,
+        @OutputCustomType.Parameter("applicationinsights") @Nullable Output<String> applicationinsights,
+        @OutputCustomType.Parameter("appmesh") @Nullable Output<String> appmesh,
+        @OutputCustomType.Parameter("apprunner") @Nullable Output<String> apprunner,
+        @OutputCustomType.Parameter("appstream") @Nullable Output<String> appstream,
+        @OutputCustomType.Parameter("appsync") @Nullable Output<String> appsync,
+        @OutputCustomType.Parameter("athena") @Nullable Output<String> athena,
+        @OutputCustomType.Parameter("auditmanager") @Nullable Output<String> auditmanager,
+        @OutputCustomType.Parameter("autoscaling") @Nullable Output<String> autoscaling,
+        @OutputCustomType.Parameter("backup") @Nullable Output<String> backup,
+        @OutputCustomType.Parameter("batch") @Nullable Output<String> batch,
+        @OutputCustomType.Parameter("budgets") @Nullable Output<String> budgets,
+        @OutputCustomType.Parameter("chime") @Nullable Output<String> chime,
+        @OutputCustomType.Parameter("cloud9") @Nullable Output<String> cloud9,
+        @OutputCustomType.Parameter("cloudformation") @Nullable Output<String> cloudformation,
+        @OutputCustomType.Parameter("cloudfront") @Nullable Output<String> cloudfront,
+        @OutputCustomType.Parameter("cloudhsm") @Nullable Output<String> cloudhsm,
+        @OutputCustomType.Parameter("cloudsearch") @Nullable Output<String> cloudsearch,
+        @OutputCustomType.Parameter("cloudtrail") @Nullable Output<String> cloudtrail,
+        @OutputCustomType.Parameter("cloudwatch") @Nullable Output<String> cloudwatch,
+        @OutputCustomType.Parameter("cloudwatchevents") @Nullable Output<String> cloudwatchevents,
+        @OutputCustomType.Parameter("cloudwatchlogs") @Nullable Output<String> cloudwatchlogs,
+        @OutputCustomType.Parameter("codeartifact") @Nullable Output<String> codeartifact,
+        @OutputCustomType.Parameter("codebuild") @Nullable Output<String> codebuild,
+        @OutputCustomType.Parameter("codecommit") @Nullable Output<String> codecommit,
+        @OutputCustomType.Parameter("codedeploy") @Nullable Output<String> codedeploy,
+        @OutputCustomType.Parameter("codepipeline") @Nullable Output<String> codepipeline,
+        @OutputCustomType.Parameter("codestarconnections") @Nullable Output<String> codestarconnections,
+        @OutputCustomType.Parameter("cognitoidentity") @Nullable Output<String> cognitoidentity,
+        @OutputCustomType.Parameter("configservice") @Nullable Output<String> configservice,
+        @OutputCustomType.Parameter("connect") @Nullable Output<String> connect,
+        @OutputCustomType.Parameter("cur") @Nullable Output<String> cur,
+        @OutputCustomType.Parameter("dataexchange") @Nullable Output<String> dataexchange,
+        @OutputCustomType.Parameter("datapipeline") @Nullable Output<String> datapipeline,
+        @OutputCustomType.Parameter("datasync") @Nullable Output<String> datasync,
+        @OutputCustomType.Parameter("dax") @Nullable Output<String> dax,
+        @OutputCustomType.Parameter("detective") @Nullable Output<String> detective,
+        @OutputCustomType.Parameter("devicefarm") @Nullable Output<String> devicefarm,
+        @OutputCustomType.Parameter("directconnect") @Nullable Output<String> directconnect,
+        @OutputCustomType.Parameter("dlm") @Nullable Output<String> dlm,
+        @OutputCustomType.Parameter("dms") @Nullable Output<String> dms,
+        @OutputCustomType.Parameter("docdb") @Nullable Output<String> docdb,
+        @OutputCustomType.Parameter("ds") @Nullable Output<String> ds,
+        @OutputCustomType.Parameter("dynamodb") @Nullable Output<String> dynamodb,
+        @OutputCustomType.Parameter("ec2") @Nullable Output<String> ec2,
+        @OutputCustomType.Parameter("ecr") @Nullable Output<String> ecr,
+        @OutputCustomType.Parameter("ecrpublic") @Nullable Output<String> ecrpublic,
+        @OutputCustomType.Parameter("ecs") @Nullable Output<String> ecs,
+        @OutputCustomType.Parameter("efs") @Nullable Output<String> efs,
+        @OutputCustomType.Parameter("eks") @Nullable Output<String> eks,
+        @OutputCustomType.Parameter("elasticache") @Nullable Output<String> elasticache,
+        @OutputCustomType.Parameter("elasticbeanstalk") @Nullable Output<String> elasticbeanstalk,
+        @OutputCustomType.Parameter("elastictranscoder") @Nullable Output<String> elastictranscoder,
+        @OutputCustomType.Parameter("elb") @Nullable Output<String> elb,
+        @OutputCustomType.Parameter("elbv2") @Nullable Output<String> elbv2,
+        @OutputCustomType.Parameter("emr") @Nullable Output<String> emr,
+        @OutputCustomType.Parameter("emrcontainers") @Nullable Output<String> emrcontainers,
+        @OutputCustomType.Parameter("es") @Nullable Output<String> es,
+        @OutputCustomType.Parameter("firehose") @Nullable Output<String> firehose,
+        @OutputCustomType.Parameter("fms") @Nullable Output<String> fms,
+        @OutputCustomType.Parameter("forecast") @Nullable Output<String> forecast,
+        @OutputCustomType.Parameter("fsx") @Nullable Output<String> fsx,
+        @OutputCustomType.Parameter("gamelift") @Nullable Output<String> gamelift,
+        @OutputCustomType.Parameter("glacier") @Nullable Output<String> glacier,
+        @OutputCustomType.Parameter("globalaccelerator") @Nullable Output<String> globalaccelerator,
+        @OutputCustomType.Parameter("glue") @Nullable Output<String> glue,
+        @OutputCustomType.Parameter("greengrass") @Nullable Output<String> greengrass,
+        @OutputCustomType.Parameter("guardduty") @Nullable Output<String> guardduty,
+        @OutputCustomType.Parameter("iam") @Nullable Output<String> iam,
+        @OutputCustomType.Parameter("identitystore") @Nullable Output<String> identitystore,
+        @OutputCustomType.Parameter("imagebuilder") @Nullable Output<String> imagebuilder,
+        @OutputCustomType.Parameter("inspector") @Nullable Output<String> inspector,
+        @OutputCustomType.Parameter("iot") @Nullable Output<String> iot,
+        @OutputCustomType.Parameter("iotanalytics") @Nullable Output<String> iotanalytics,
+        @OutputCustomType.Parameter("iotevents") @Nullable Output<String> iotevents,
+        @OutputCustomType.Parameter("kafka") @Nullable Output<String> kafka,
+        @OutputCustomType.Parameter("kinesis") @Nullable Output<String> kinesis,
+        @OutputCustomType.Parameter("kinesisanalytics") @Nullable Output<String> kinesisanalytics,
+        @OutputCustomType.Parameter("kinesisanalyticsv2") @Nullable Output<String> kinesisanalyticsv2,
+        @OutputCustomType.Parameter("kinesisvideo") @Nullable Output<String> kinesisvideo,
+        @OutputCustomType.Parameter("kms") @Nullable Output<String> kms,
+        @OutputCustomType.Parameter("lakeformation") @Nullable Output<String> lakeformation,
+        @OutputCustomType.Parameter("lambda") @Nullable Output<String> lambda,
+        @OutputCustomType.Parameter("lexmodels") @Nullable Output<String> lexmodels,
+        @OutputCustomType.Parameter("licensemanager") @Nullable Output<String> licensemanager,
+        @OutputCustomType.Parameter("lightsail") @Nullable Output<String> lightsail,
+        @OutputCustomType.Parameter("location") @Nullable Output<String> location,
+        @OutputCustomType.Parameter("macie") @Nullable Output<String> macie,
+        @OutputCustomType.Parameter("macie2") @Nullable Output<String> macie2,
+        @OutputCustomType.Parameter("managedblockchain") @Nullable Output<String> managedblockchain,
+        @OutputCustomType.Parameter("marketplacecatalog") @Nullable Output<String> marketplacecatalog,
+        @OutputCustomType.Parameter("mediaconnect") @Nullable Output<String> mediaconnect,
+        @OutputCustomType.Parameter("mediaconvert") @Nullable Output<String> mediaconvert,
+        @OutputCustomType.Parameter("medialive") @Nullable Output<String> medialive,
+        @OutputCustomType.Parameter("mediapackage") @Nullable Output<String> mediapackage,
+        @OutputCustomType.Parameter("mediastore") @Nullable Output<String> mediastore,
+        @OutputCustomType.Parameter("mediastoredata") @Nullable Output<String> mediastoredata,
+        @OutputCustomType.Parameter("memorydb") @Nullable Output<String> memorydb,
+        @OutputCustomType.Parameter("mq") @Nullable Output<String> mq,
+        @OutputCustomType.Parameter("mwaa") @Nullable Output<String> mwaa,
+        @OutputCustomType.Parameter("neptune") @Nullable Output<String> neptune,
+        @OutputCustomType.Parameter("networkfirewall") @Nullable Output<String> networkfirewall,
+        @OutputCustomType.Parameter("networkmanager") @Nullable Output<String> networkmanager,
+        @OutputCustomType.Parameter("opsworks") @Nullable Output<String> opsworks,
+        @OutputCustomType.Parameter("organizations") @Nullable Output<String> organizations,
+        @OutputCustomType.Parameter("outposts") @Nullable Output<String> outposts,
+        @OutputCustomType.Parameter("personalize") @Nullable Output<String> personalize,
+        @OutputCustomType.Parameter("pinpoint") @Nullable Output<String> pinpoint,
+        @OutputCustomType.Parameter("pricing") @Nullable Output<String> pricing,
+        @OutputCustomType.Parameter("qldb") @Nullable Output<String> qldb,
+        @OutputCustomType.Parameter("quicksight") @Nullable Output<String> quicksight,
+        @OutputCustomType.Parameter("ram") @Nullable Output<String> ram,
+        @OutputCustomType.Parameter("rds") @Nullable Output<String> rds,
+        @OutputCustomType.Parameter("redshift") @Nullable Output<String> redshift,
+        @OutputCustomType.Parameter("resourcegroups") @Nullable Output<String> resourcegroups,
+        @OutputCustomType.Parameter("resourcegroupstaggingapi") @Nullable Output<String> resourcegroupstaggingapi,
+        @OutputCustomType.Parameter("route53") @Nullable Output<String> route53,
+        @OutputCustomType.Parameter("route53domains") @Nullable Output<String> route53domains,
+        @OutputCustomType.Parameter("route53recoverycontrolconfig") @Nullable Output<String> route53recoverycontrolconfig,
+        @OutputCustomType.Parameter("route53recoveryreadiness") @Nullable Output<String> route53recoveryreadiness,
+        @OutputCustomType.Parameter("route53resolver") @Nullable Output<String> route53resolver,
+        @OutputCustomType.Parameter("s3") @Nullable Output<String> s3,
+        @OutputCustomType.Parameter("s3control") @Nullable Output<String> s3control,
+        @OutputCustomType.Parameter("s3outposts") @Nullable Output<String> s3outposts,
+        @OutputCustomType.Parameter("sagemaker") @Nullable Output<String> sagemaker,
+        @OutputCustomType.Parameter("schemas") @Nullable Output<String> schemas,
+        @OutputCustomType.Parameter("sdb") @Nullable Output<String> sdb,
+        @OutputCustomType.Parameter("secretsmanager") @Nullable Output<String> secretsmanager,
+        @OutputCustomType.Parameter("securityhub") @Nullable Output<String> securityhub,
+        @OutputCustomType.Parameter("serverlessrepo") @Nullable Output<String> serverlessrepo,
+        @OutputCustomType.Parameter("servicecatalog") @Nullable Output<String> servicecatalog,
+        @OutputCustomType.Parameter("servicediscovery") @Nullable Output<String> servicediscovery,
+        @OutputCustomType.Parameter("servicequotas") @Nullable Output<String> servicequotas,
+        @OutputCustomType.Parameter("ses") @Nullable Output<String> ses,
+        @OutputCustomType.Parameter("shield") @Nullable Output<String> shield,
+        @OutputCustomType.Parameter("signer") @Nullable Output<String> signer,
+        @OutputCustomType.Parameter("sns") @Nullable Output<String> sns,
+        @OutputCustomType.Parameter("sqs") @Nullable Output<String> sqs,
+        @OutputCustomType.Parameter("ssm") @Nullable Output<String> ssm,
+        @OutputCustomType.Parameter("ssoadmin") @Nullable Output<String> ssoadmin,
+        @OutputCustomType.Parameter("stepfunctions") @Nullable Output<String> stepfunctions,
+        @OutputCustomType.Parameter("storagegateway") @Nullable Output<String> storagegateway,
+        @OutputCustomType.Parameter("sts") @Nullable Output<String> sts,
+        @OutputCustomType.Parameter("swf") @Nullable Output<String> swf,
+        @OutputCustomType.Parameter("synthetics") @Nullable Output<String> synthetics,
+        @OutputCustomType.Parameter("timestreamwrite") @Nullable Output<String> timestreamwrite,
+        @OutputCustomType.Parameter("transfer") @Nullable Output<String> transfer,
+        @OutputCustomType.Parameter("waf") @Nullable Output<String> waf,
+        @OutputCustomType.Parameter("wafregional") @Nullable Output<String> wafregional,
+        @OutputCustomType.Parameter("wafv2") @Nullable Output<String> wafv2,
+        @OutputCustomType.Parameter("worklink") @Nullable Output<String> worklink,
+        @OutputCustomType.Parameter("workmail") @Nullable Output<String> workmail,
+        @OutputCustomType.Parameter("workspaces") @Nullable Output<String> workspaces,
+        @OutputCustomType.Parameter("xray") @Nullable Output<String> xray) {
         this.accessanalyzer = accessanalyzer;
         this.acm = acm;
         this.acmpca = acmpca;
@@ -1133,1113 +1133,1113 @@ public final class ProviderEndpointArgs {
      * Override the default endpoint for AWS Access Analyzer
      * 
     */
-    public @Nullable Input<String> getAccessanalyzer() {
+    public @Nullable Output<String> getAccessanalyzer() {
         return this.accessanalyzer;
     }
     /**
      * Override the default endpoint for AWS Certificate Manager
      * 
     */
-    public @Nullable Input<String> getAcm() {
+    public @Nullable Output<String> getAcm() {
         return this.acm;
     }
     /**
      * Override the default endpoint for AWS Certificate Manager Private Certificate Authority
      * 
     */
-    public @Nullable Input<String> getAcmpca() {
+    public @Nullable Output<String> getAcmpca() {
         return this.acmpca;
     }
     /**
      * Override the default endpoint for AWS Amplify Console
      * 
     */
-    public @Nullable Input<String> getAmplify() {
+    public @Nullable Output<String> getAmplify() {
         return this.amplify;
     }
     /**
      * Override the default endpoint for AWS AppConfig
      * 
     */
-    public @Nullable Input<String> getAppconfig() {
+    public @Nullable Output<String> getAppconfig() {
         return this.appconfig;
     }
     /**
      * Override the default endpoint for AWS Application Auto Scaling
      * 
     */
-    public @Nullable Input<String> getApplicationautoscaling() {
+    public @Nullable Output<String> getApplicationautoscaling() {
         return this.applicationautoscaling;
     }
     /**
      * Override the default endpoint for AWS CloudWatch Application Insights
      * 
     */
-    public @Nullable Input<String> getApplicationinsights() {
+    public @Nullable Output<String> getApplicationinsights() {
         return this.applicationinsights;
     }
     /**
      * Override the default endpoint for AWS App Mesh
      * 
     */
-    public @Nullable Input<String> getAppmesh() {
+    public @Nullable Output<String> getAppmesh() {
         return this.appmesh;
     }
     /**
      * Override the default endpoint for AWS App Runner
      * 
     */
-    public @Nullable Input<String> getApprunner() {
+    public @Nullable Output<String> getApprunner() {
         return this.apprunner;
     }
     /**
      * Override the default endpoint for AWS AppStream 2.0
      * 
     */
-    public @Nullable Input<String> getAppstream() {
+    public @Nullable Output<String> getAppstream() {
         return this.appstream;
     }
     /**
      * Override the default endpoint for AWS AppSync
      * 
     */
-    public @Nullable Input<String> getAppsync() {
+    public @Nullable Output<String> getAppsync() {
         return this.appsync;
     }
     /**
      * Override the default endpoint for AWS Athena
      * 
     */
-    public @Nullable Input<String> getAthena() {
+    public @Nullable Output<String> getAthena() {
         return this.athena;
     }
     /**
      * Override the default endpoint for AWS Audit Manager
      * 
     */
-    public @Nullable Input<String> getAuditmanager() {
+    public @Nullable Output<String> getAuditmanager() {
         return this.auditmanager;
     }
     /**
      * Override the default endpoint for AWS Auto Scaling
      * 
     */
-    public @Nullable Input<String> getAutoscaling() {
+    public @Nullable Output<String> getAutoscaling() {
         return this.autoscaling;
     }
     /**
      * Override the default endpoint for AWS Backup
      * 
     */
-    public @Nullable Input<String> getBackup() {
+    public @Nullable Output<String> getBackup() {
         return this.backup;
     }
     /**
      * Override the default endpoint for AWS Batch
      * 
     */
-    public @Nullable Input<String> getBatch() {
+    public @Nullable Output<String> getBatch() {
         return this.batch;
     }
     /**
      * Override the default endpoint for AWS Budgets
      * 
     */
-    public @Nullable Input<String> getBudgets() {
+    public @Nullable Output<String> getBudgets() {
         return this.budgets;
     }
     /**
      * Override the default endpoint for Amazon Chime
      * 
     */
-    public @Nullable Input<String> getChime() {
+    public @Nullable Output<String> getChime() {
         return this.chime;
     }
     /**
      * Override the default endpoint for AWS Cloud9
      * 
     */
-    public @Nullable Input<String> getCloud9() {
+    public @Nullable Output<String> getCloud9() {
         return this.cloud9;
     }
     /**
      * Override the default endpoint for AWS CloudFormation
      * 
     */
-    public @Nullable Input<String> getCloudformation() {
+    public @Nullable Output<String> getCloudformation() {
         return this.cloudformation;
     }
     /**
      * Override the default endpoint for AWS CloudFront
      * 
     */
-    public @Nullable Input<String> getCloudfront() {
+    public @Nullable Output<String> getCloudfront() {
         return this.cloudfront;
     }
     /**
      * Override the default endpoint for AWS CloudHSM
      * 
     */
-    public @Nullable Input<String> getCloudhsm() {
+    public @Nullable Output<String> getCloudhsm() {
         return this.cloudhsm;
     }
     /**
      * Override the default endpoint for AWS CloudSearch
      * 
     */
-    public @Nullable Input<String> getCloudsearch() {
+    public @Nullable Output<String> getCloudsearch() {
         return this.cloudsearch;
     }
     /**
      * Override the default endpoint for AWS CloudTrail
      * 
     */
-    public @Nullable Input<String> getCloudtrail() {
+    public @Nullable Output<String> getCloudtrail() {
         return this.cloudtrail;
     }
     /**
      * Override the default endpoint for AWS CloudWatch
      * 
     */
-    public @Nullable Input<String> getCloudwatch() {
+    public @Nullable Output<String> getCloudwatch() {
         return this.cloudwatch;
     }
     /**
      * Override the default endpoint for AWS CloudWatch Events
      * 
     */
-    public @Nullable Input<String> getCloudwatchevents() {
+    public @Nullable Output<String> getCloudwatchevents() {
         return this.cloudwatchevents;
     }
     /**
      * Override the default endpoint for AWS CloudWatch Logs
      * 
     */
-    public @Nullable Input<String> getCloudwatchlogs() {
+    public @Nullable Output<String> getCloudwatchlogs() {
         return this.cloudwatchlogs;
     }
     /**
      * Override the default endpoint for AWS CodeArtifact
      * 
     */
-    public @Nullable Input<String> getCodeartifact() {
+    public @Nullable Output<String> getCodeartifact() {
         return this.codeartifact;
     }
     /**
      * Override the default endpoint for AWS CodeBuild
      * 
     */
-    public @Nullable Input<String> getCodebuild() {
+    public @Nullable Output<String> getCodebuild() {
         return this.codebuild;
     }
     /**
      * Override the default endpoint for AWS CodeCommit
      * 
     */
-    public @Nullable Input<String> getCodecommit() {
+    public @Nullable Output<String> getCodecommit() {
         return this.codecommit;
     }
     /**
      * Override the default endpoint for AWS CodeDeploy
      * 
     */
-    public @Nullable Input<String> getCodedeploy() {
+    public @Nullable Output<String> getCodedeploy() {
         return this.codedeploy;
     }
     /**
      * Override the default endpoint for AWS CodePipeline
      * 
     */
-    public @Nullable Input<String> getCodepipeline() {
+    public @Nullable Output<String> getCodepipeline() {
         return this.codepipeline;
     }
     /**
      * Override the default endpoint for AWS CodeStart Connections
      * 
     */
-    public @Nullable Input<String> getCodestarconnections() {
+    public @Nullable Output<String> getCodestarconnections() {
         return this.codestarconnections;
     }
     /**
      * Override the default endpoint for Amazon Cognito
      * 
     */
-    public @Nullable Input<String> getCognitoidentity() {
+    public @Nullable Output<String> getCognitoidentity() {
         return this.cognitoidentity;
     }
     /**
      * Override the default endpoint for AWS Config
      * 
     */
-    public @Nullable Input<String> getConfigservice() {
+    public @Nullable Output<String> getConfigservice() {
         return this.configservice;
     }
     /**
      * Override the default endpoint for Amazon Connect
      * 
     */
-    public @Nullable Input<String> getConnect() {
+    public @Nullable Output<String> getConnect() {
         return this.connect;
     }
     /**
      * Override the default endpoint for AWS Cost and Usage Reports
      * 
     */
-    public @Nullable Input<String> getCur() {
+    public @Nullable Output<String> getCur() {
         return this.cur;
     }
     /**
      * Override the default endpoint for AWS Data Exchange
      * 
     */
-    public @Nullable Input<String> getDataexchange() {
+    public @Nullable Output<String> getDataexchange() {
         return this.dataexchange;
     }
     /**
      * Override the default endpoint for AWS Data Pipeline
      * 
     */
-    public @Nullable Input<String> getDatapipeline() {
+    public @Nullable Output<String> getDatapipeline() {
         return this.datapipeline;
     }
     /**
      * Override the default endpoint for AWS DataSync
      * 
     */
-    public @Nullable Input<String> getDatasync() {
+    public @Nullable Output<String> getDatasync() {
         return this.datasync;
     }
     /**
      * Override the default endpoint for AWS DynamoDB Accelerator
      * 
     */
-    public @Nullable Input<String> getDax() {
+    public @Nullable Output<String> getDax() {
         return this.dax;
     }
     /**
      * Override the default endpoint for AWS Detective
      * 
     */
-    public @Nullable Input<String> getDetective() {
+    public @Nullable Output<String> getDetective() {
         return this.detective;
     }
     /**
      * Override the default endpoint for AWS Device Farm
      * 
     */
-    public @Nullable Input<String> getDevicefarm() {
+    public @Nullable Output<String> getDevicefarm() {
         return this.devicefarm;
     }
     /**
      * Override the default endpoint for AWS Direct Connect
      * 
     */
-    public @Nullable Input<String> getDirectconnect() {
+    public @Nullable Output<String> getDirectconnect() {
         return this.directconnect;
     }
     /**
      * Override the default endpoint for AWS Data Lifecycle Manager
      * 
     */
-    public @Nullable Input<String> getDlm() {
+    public @Nullable Output<String> getDlm() {
         return this.dlm;
     }
     /**
      * Override the default endpoint for AWS Database Migration Service
      * 
     */
-    public @Nullable Input<String> getDms() {
+    public @Nullable Output<String> getDms() {
         return this.dms;
     }
     /**
      * Override the default endpoint for AWS DocumentDB
      * 
     */
-    public @Nullable Input<String> getDocdb() {
+    public @Nullable Output<String> getDocdb() {
         return this.docdb;
     }
     /**
      * Override the default endpoint for AWS Directory Service
      * 
     */
-    public @Nullable Input<String> getDs() {
+    public @Nullable Output<String> getDs() {
         return this.ds;
     }
     /**
      * Override the default endpoint for AWS DynamoDB
      * 
     */
-    public @Nullable Input<String> getDynamodb() {
+    public @Nullable Output<String> getDynamodb() {
         return this.dynamodb;
     }
     /**
      * Override the default endpoint for AWS Elastic Compute Cloud (EC2)
      * 
     */
-    public @Nullable Input<String> getEc2() {
+    public @Nullable Output<String> getEc2() {
         return this.ec2;
     }
     /**
      * Override the default endpoint for AWS Elastic Container Registry (ECR)
      * 
     */
-    public @Nullable Input<String> getEcr() {
+    public @Nullable Output<String> getEcr() {
         return this.ecr;
     }
     /**
      * Override the default endpoint for AWS Elastic Container Registry (ECR) Public
      * 
     */
-    public @Nullable Input<String> getEcrpublic() {
+    public @Nullable Output<String> getEcrpublic() {
         return this.ecrpublic;
     }
     /**
      * Override the default endpoint for AWS Elastic Container Service (ECS)
      * 
     */
-    public @Nullable Input<String> getEcs() {
+    public @Nullable Output<String> getEcs() {
         return this.ecs;
     }
     /**
      * Override the default endpoint for AWS Elastic File System (EFS)
      * 
     */
-    public @Nullable Input<String> getEfs() {
+    public @Nullable Output<String> getEfs() {
         return this.efs;
     }
     /**
      * Override the default endpoint for AWS Elastic Kubernetes Service (EKS)
      * 
     */
-    public @Nullable Input<String> getEks() {
+    public @Nullable Output<String> getEks() {
         return this.eks;
     }
     /**
      * Override the default endpoint for AWS ElastiCache
      * 
     */
-    public @Nullable Input<String> getElasticache() {
+    public @Nullable Output<String> getElasticache() {
         return this.elasticache;
     }
     /**
      * Override the default endpoint for AWS Elastic Beanstalk
      * 
     */
-    public @Nullable Input<String> getElasticbeanstalk() {
+    public @Nullable Output<String> getElasticbeanstalk() {
         return this.elasticbeanstalk;
     }
     /**
      * Override the default endpoint for AWS Elastic Transcoder
      * 
     */
-    public @Nullable Input<String> getElastictranscoder() {
+    public @Nullable Output<String> getElastictranscoder() {
         return this.elastictranscoder;
     }
     /**
      * Override the default endpoint for AWS Elastic Load Balancing
      * 
     */
-    public @Nullable Input<String> getElb() {
+    public @Nullable Output<String> getElb() {
         return this.elb;
     }
     /**
      * Override the default endpoint for AWS Elastic Load Balancing V2
      * 
     */
-    public @Nullable Input<String> getElbv2() {
+    public @Nullable Output<String> getElbv2() {
         return this.elbv2;
     }
     /**
      * Override the default endpoint for AWS EMR
      * 
     */
-    public @Nullable Input<String> getEmr() {
+    public @Nullable Output<String> getEmr() {
         return this.emr;
     }
     /**
      * Override the default endpoint for AWS EMR on EKS
      * 
     */
-    public @Nullable Input<String> getEmrcontainers() {
+    public @Nullable Output<String> getEmrcontainers() {
         return this.emrcontainers;
     }
     /**
      * Override the default endpoint for AWS OpenSearch Service (formerly Elasticsearch)
      * 
     */
-    public @Nullable Input<String> getEs() {
+    public @Nullable Output<String> getEs() {
         return this.es;
     }
     /**
      * Override the default endpoint for AWS Kinesis Data Firehose
      * 
     */
-    public @Nullable Input<String> getFirehose() {
+    public @Nullable Output<String> getFirehose() {
         return this.firehose;
     }
     /**
      * Override the default endpoint for AWS Firewall Manager
      * 
     */
-    public @Nullable Input<String> getFms() {
+    public @Nullable Output<String> getFms() {
         return this.fms;
     }
     /**
      * Override the default endpoint for Amazon Forecast
      * 
     */
-    public @Nullable Input<String> getForecast() {
+    public @Nullable Output<String> getForecast() {
         return this.forecast;
     }
     /**
      * Override the default endpoint for AWS FSx
      * 
     */
-    public @Nullable Input<String> getFsx() {
+    public @Nullable Output<String> getFsx() {
         return this.fsx;
     }
     /**
      * Override the default endpoint for AWS GameLift
      * 
     */
-    public @Nullable Input<String> getGamelift() {
+    public @Nullable Output<String> getGamelift() {
         return this.gamelift;
     }
     /**
      * Override the default endpoint for Amazon S3 Glacier
      * 
     */
-    public @Nullable Input<String> getGlacier() {
+    public @Nullable Output<String> getGlacier() {
         return this.glacier;
     }
     /**
      * Override the default endpoint for AWS Global Accelerator
      * 
     */
-    public @Nullable Input<String> getGlobalaccelerator() {
+    public @Nullable Output<String> getGlobalaccelerator() {
         return this.globalaccelerator;
     }
     /**
      * Override the default endpoint for AWS Glue
      * 
     */
-    public @Nullable Input<String> getGlue() {
+    public @Nullable Output<String> getGlue() {
         return this.glue;
     }
     /**
      * Override the default endpoint for AWS IoT Greengrass
      * 
     */
-    public @Nullable Input<String> getGreengrass() {
+    public @Nullable Output<String> getGreengrass() {
         return this.greengrass;
     }
     /**
      * Override the default endpoint for AWS GuardDuty
      * 
     */
-    public @Nullable Input<String> getGuardduty() {
+    public @Nullable Output<String> getGuardduty() {
         return this.guardduty;
     }
     /**
      * Override the default endpoint for AWS Identity and Access Management
      * 
     */
-    public @Nullable Input<String> getIam() {
+    public @Nullable Output<String> getIam() {
         return this.iam;
     }
     /**
      * Override the default endpoint for AWS Single Sign-On (SSO) Identity Store
      * 
     */
-    public @Nullable Input<String> getIdentitystore() {
+    public @Nullable Output<String> getIdentitystore() {
         return this.identitystore;
     }
     /**
      * Override the default endpoint for AWS Image Builder
      * 
     */
-    public @Nullable Input<String> getImagebuilder() {
+    public @Nullable Output<String> getImagebuilder() {
         return this.imagebuilder;
     }
     /**
      * Override the default endpoint for Amazon Inspector
      * 
     */
-    public @Nullable Input<String> getInspector() {
+    public @Nullable Output<String> getInspector() {
         return this.inspector;
     }
     /**
      * Override the default endpoint for AWS IoT
      * 
     */
-    public @Nullable Input<String> getIot() {
+    public @Nullable Output<String> getIot() {
         return this.iot;
     }
     /**
      * Override the default endpoint for AWS IoT Analytics
      * 
     */
-    public @Nullable Input<String> getIotanalytics() {
+    public @Nullable Output<String> getIotanalytics() {
         return this.iotanalytics;
     }
     /**
      * Override the default endpoint for AWS IoT Events
      * 
     */
-    public @Nullable Input<String> getIotevents() {
+    public @Nullable Output<String> getIotevents() {
         return this.iotevents;
     }
     /**
      * Override the default endpoint for Amazon Managed Streaming for Apache Kafka (MSK)
      * 
     */
-    public @Nullable Input<String> getKafka() {
+    public @Nullable Output<String> getKafka() {
         return this.kafka;
     }
     /**
      * Override the default endpoint for Amazon Kinesis
      * 
     */
-    public @Nullable Input<String> getKinesis() {
+    public @Nullable Output<String> getKinesis() {
         return this.kinesis;
     }
     /**
      * Override the default endpoint for Amazon Kinesis Data Analytics
      * 
     */
-    public @Nullable Input<String> getKinesisanalytics() {
+    public @Nullable Output<String> getKinesisanalytics() {
         return this.kinesisanalytics;
     }
     /**
      * Override the default endpoint for Amazon Kinesis Data Analytics V2
      * 
     */
-    public @Nullable Input<String> getKinesisanalyticsv2() {
+    public @Nullable Output<String> getKinesisanalyticsv2() {
         return this.kinesisanalyticsv2;
     }
     /**
      * Override the default endpoint for Amazon Kinesis Video Streams
      * 
     */
-    public @Nullable Input<String> getKinesisvideo() {
+    public @Nullable Output<String> getKinesisvideo() {
         return this.kinesisvideo;
     }
     /**
      * Override the default endpoint for AWS Key Management Service
      * 
     */
-    public @Nullable Input<String> getKms() {
+    public @Nullable Output<String> getKms() {
         return this.kms;
     }
     /**
      * Override the default endpoint for AWS Lake Formation
      * 
     */
-    public @Nullable Input<String> getLakeformation() {
+    public @Nullable Output<String> getLakeformation() {
         return this.lakeformation;
     }
     /**
      * Override the default endpoint for AWS Lambda
      * 
     */
-    public @Nullable Input<String> getLambda() {
+    public @Nullable Output<String> getLambda() {
         return this.lambda;
     }
     /**
      * Override the default endpoint for Amazon Lex
      * 
     */
-    public @Nullable Input<String> getLexmodels() {
+    public @Nullable Output<String> getLexmodels() {
         return this.lexmodels;
     }
     /**
      * Override the default endpoint for AWS License Manager
      * 
     */
-    public @Nullable Input<String> getLicensemanager() {
+    public @Nullable Output<String> getLicensemanager() {
         return this.licensemanager;
     }
     /**
      * Override the default endpoint for Amazon Lightsail
      * 
     */
-    public @Nullable Input<String> getLightsail() {
+    public @Nullable Output<String> getLightsail() {
         return this.lightsail;
     }
     /**
      * Override the default endpoint for Amazon Location
      * 
     */
-    public @Nullable Input<String> getLocation() {
+    public @Nullable Output<String> getLocation() {
         return this.location;
     }
     /**
      * Override the default endpoint for Amazon Macie
      * 
     */
-    public @Nullable Input<String> getMacie() {
+    public @Nullable Output<String> getMacie() {
         return this.macie;
     }
     /**
      * Override the default endpoint for Amazon Macie V2
      * 
     */
-    public @Nullable Input<String> getMacie2() {
+    public @Nullable Output<String> getMacie2() {
         return this.macie2;
     }
     /**
      * Override the default endpoint for Amazon Managed Blockchain
      * 
     */
-    public @Nullable Input<String> getManagedblockchain() {
+    public @Nullable Output<String> getManagedblockchain() {
         return this.managedblockchain;
     }
     /**
      * Override the default endpoint for AWS Marketplace Catalog
      * 
     */
-    public @Nullable Input<String> getMarketplacecatalog() {
+    public @Nullable Output<String> getMarketplacecatalog() {
         return this.marketplacecatalog;
     }
     /**
      * Override the default endpoint for AWS MediaConnect
      * 
     */
-    public @Nullable Input<String> getMediaconnect() {
+    public @Nullable Output<String> getMediaconnect() {
         return this.mediaconnect;
     }
     /**
      * Override the default endpoint for AWS MediaConvert
      * 
     */
-    public @Nullable Input<String> getMediaconvert() {
+    public @Nullable Output<String> getMediaconvert() {
         return this.mediaconvert;
     }
     /**
      * Override the default endpoint for AWS MediaLive
      * 
     */
-    public @Nullable Input<String> getMedialive() {
+    public @Nullable Output<String> getMedialive() {
         return this.medialive;
     }
     /**
      * Override the default endpoint for AWS MediaPackage
      * 
     */
-    public @Nullable Input<String> getMediapackage() {
+    public @Nullable Output<String> getMediapackage() {
         return this.mediapackage;
     }
     /**
      * Override the default endpoint for AWS Elemental MediaStore container
      * 
     */
-    public @Nullable Input<String> getMediastore() {
+    public @Nullable Output<String> getMediastore() {
         return this.mediastore;
     }
     /**
      * Override the default endpoint for AWS Elemental MediaStore asset
      * 
     */
-    public @Nullable Input<String> getMediastoredata() {
+    public @Nullable Output<String> getMediastoredata() {
         return this.mediastoredata;
     }
     /**
      * Override the default endpoint for AWS MemoryDB for Redis
      * 
     */
-    public @Nullable Input<String> getMemorydb() {
+    public @Nullable Output<String> getMemorydb() {
         return this.memorydb;
     }
     /**
      * Override the default endpoint for Amazon MQ
      * 
     */
-    public @Nullable Input<String> getMq() {
+    public @Nullable Output<String> getMq() {
         return this.mq;
     }
     /**
      * Override the default endpoint for Amazon Managed Workflows for Apache Airflow
      * 
     */
-    public @Nullable Input<String> getMwaa() {
+    public @Nullable Output<String> getMwaa() {
         return this.mwaa;
     }
     /**
      * Override the default endpoint for Amazon Neptune
      * 
     */
-    public @Nullable Input<String> getNeptune() {
+    public @Nullable Output<String> getNeptune() {
         return this.neptune;
     }
     /**
      * Override the default endpoint for AWS Network Firewall
      * 
     */
-    public @Nullable Input<String> getNetworkfirewall() {
+    public @Nullable Output<String> getNetworkfirewall() {
         return this.networkfirewall;
     }
     /**
      * Override the default endpoint for AWS Network Manager
      * 
     */
-    public @Nullable Input<String> getNetworkmanager() {
+    public @Nullable Output<String> getNetworkmanager() {
         return this.networkmanager;
     }
     /**
      * Override the default endpoint for AWS OpsWorks
      * 
     */
-    public @Nullable Input<String> getOpsworks() {
+    public @Nullable Output<String> getOpsworks() {
         return this.opsworks;
     }
     /**
      * Override the default endpoint for AWS Organizations
      * 
     */
-    public @Nullable Input<String> getOrganizations() {
+    public @Nullable Output<String> getOrganizations() {
         return this.organizations;
     }
     /**
      * Override the default endpoint for AWS Outposts
      * 
     */
-    public @Nullable Input<String> getOutposts() {
+    public @Nullable Output<String> getOutposts() {
         return this.outposts;
     }
     /**
      * Override the default endpoint for Amazon Personalize
      * 
     */
-    public @Nullable Input<String> getPersonalize() {
+    public @Nullable Output<String> getPersonalize() {
         return this.personalize;
     }
     /**
      * Override the default endpoint for Amazon Pinpoint
      * 
     */
-    public @Nullable Input<String> getPinpoint() {
+    public @Nullable Output<String> getPinpoint() {
         return this.pinpoint;
     }
     /**
      * Override the default endpoint for Amazon Web Services Price List Service
      * 
     */
-    public @Nullable Input<String> getPricing() {
+    public @Nullable Output<String> getPricing() {
         return this.pricing;
     }
     /**
      * Override the default endpoint for Amazon QLDB
      * 
     */
-    public @Nullable Input<String> getQldb() {
+    public @Nullable Output<String> getQldb() {
         return this.qldb;
     }
     /**
      * Override the default endpoint for Amazon QuickSight
      * 
     */
-    public @Nullable Input<String> getQuicksight() {
+    public @Nullable Output<String> getQuicksight() {
         return this.quicksight;
     }
     /**
      * Override the default endpoint for AWS Resource Access Manager
      * 
     */
-    public @Nullable Input<String> getRam() {
+    public @Nullable Output<String> getRam() {
         return this.ram;
     }
     /**
      * Override the default endpoint for Amazon Relational Database Service
      * 
     */
-    public @Nullable Input<String> getRds() {
+    public @Nullable Output<String> getRds() {
         return this.rds;
     }
     /**
      * Override the default endpoint for Amazon Redshift
      * 
     */
-    public @Nullable Input<String> getRedshift() {
+    public @Nullable Output<String> getRedshift() {
         return this.redshift;
     }
     /**
      * Override the default endpoint for AWS Resource Groups
      * 
     */
-    public @Nullable Input<String> getResourcegroups() {
+    public @Nullable Output<String> getResourcegroups() {
         return this.resourcegroups;
     }
     /**
      * Override the default endpoint for AWS Resource Groups Tagging API
      * 
     */
-    public @Nullable Input<String> getResourcegroupstaggingapi() {
+    public @Nullable Output<String> getResourcegroupstaggingapi() {
         return this.resourcegroupstaggingapi;
     }
     /**
      * Override the default endpoint for Amazon Route 53
      * 
     */
-    public @Nullable Input<String> getRoute53() {
+    public @Nullable Output<String> getRoute53() {
         return this.route53;
     }
     /**
      * Override the default endpoint for Amazon Route 53 Domains
      * 
     */
-    public @Nullable Input<String> getRoute53domains() {
+    public @Nullable Output<String> getRoute53domains() {
         return this.route53domains;
     }
     /**
      * Override the default endpoint for Amazon Route 53 Recovery Control
      * 
     */
-    public @Nullable Input<String> getRoute53recoverycontrolconfig() {
+    public @Nullable Output<String> getRoute53recoverycontrolconfig() {
         return this.route53recoverycontrolconfig;
     }
     /**
      * Override the default endpoint for Amazon Route 53 Recovery Readiness
      * 
     */
-    public @Nullable Input<String> getRoute53recoveryreadiness() {
+    public @Nullable Output<String> getRoute53recoveryreadiness() {
         return this.route53recoveryreadiness;
     }
     /**
      * Override the default endpoint for Amazon Route 53 Resolver
      * 
     */
-    public @Nullable Input<String> getRoute53resolver() {
+    public @Nullable Output<String> getRoute53resolver() {
         return this.route53resolver;
     }
     /**
      * Override the default endpoint for Amazon Simple Storage Service (S3)
      * 
     */
-    public @Nullable Input<String> getS3() {
+    public @Nullable Output<String> getS3() {
         return this.s3;
     }
     /**
      * Override the default endpoint for Amazon Simple Storage Service (S3) Control
      * 
     */
-    public @Nullable Input<String> getS3control() {
+    public @Nullable Output<String> getS3control() {
         return this.s3control;
     }
     /**
      * Override the default endpoint for Amazon S3 on Outposts
      * 
     */
-    public @Nullable Input<String> getS3outposts() {
+    public @Nullable Output<String> getS3outposts() {
         return this.s3outposts;
     }
     /**
      * Override the default endpoint for AWS SageMaker
      * 
     */
-    public @Nullable Input<String> getSagemaker() {
+    public @Nullable Output<String> getSagemaker() {
         return this.sagemaker;
     }
     /**
      * Override the default endpoint for Amazon EventBridge Schema Registry
      * 
     */
-    public @Nullable Input<String> getSchemas() {
+    public @Nullable Output<String> getSchemas() {
         return this.schemas;
     }
     /**
      * Override the default endpoint for Amazon SimpleDB
      * 
     */
-    public @Nullable Input<String> getSdb() {
+    public @Nullable Output<String> getSdb() {
         return this.sdb;
     }
     /**
      * Override the default endpoint for AWS Secrets Manager
      * 
     */
-    public @Nullable Input<String> getSecretsmanager() {
+    public @Nullable Output<String> getSecretsmanager() {
         return this.secretsmanager;
     }
     /**
      * Override the default endpoint for AWS Security Hub
      * 
     */
-    public @Nullable Input<String> getSecurityhub() {
+    public @Nullable Output<String> getSecurityhub() {
         return this.securityhub;
     }
     /**
      * Override the default endpoint for AWS Serverless Application Repository
      * 
     */
-    public @Nullable Input<String> getServerlessrepo() {
+    public @Nullable Output<String> getServerlessrepo() {
         return this.serverlessrepo;
     }
     /**
      * Override the default endpoint for AWS Service Catalog
      * 
     */
-    public @Nullable Input<String> getServicecatalog() {
+    public @Nullable Output<String> getServicecatalog() {
         return this.servicecatalog;
     }
     /**
      * Override the default endpoint for AWS Cloud Map
      * 
     */
-    public @Nullable Input<String> getServicediscovery() {
+    public @Nullable Output<String> getServicediscovery() {
         return this.servicediscovery;
     }
     /**
      * Override the default endpoint for AWS Service Quotas
      * 
     */
-    public @Nullable Input<String> getServicequotas() {
+    public @Nullable Output<String> getServicequotas() {
         return this.servicequotas;
     }
     /**
      * Override the default endpoint for Amazon Simple Email Service (SES)
      * 
     */
-    public @Nullable Input<String> getSes() {
+    public @Nullable Output<String> getSes() {
         return this.ses;
     }
     /**
      * Override the default endpoint for AWS Shield Advanced API
      * 
     */
-    public @Nullable Input<String> getShield() {
+    public @Nullable Output<String> getShield() {
         return this.shield;
     }
     /**
      * Override the default endpoint for AWS Signer
      * 
     */
-    public @Nullable Input<String> getSigner() {
+    public @Nullable Output<String> getSigner() {
         return this.signer;
     }
     /**
      * Override the default endpoint for Amazon Simple Notification Service (SNS)
      * 
     */
-    public @Nullable Input<String> getSns() {
+    public @Nullable Output<String> getSns() {
         return this.sns;
     }
     /**
      * Override the default endpoint for Amazon Simple Queue Service (SQS)
      * 
     */
-    public @Nullable Input<String> getSqs() {
+    public @Nullable Output<String> getSqs() {
         return this.sqs;
     }
     /**
      * Override the default endpoint for AWS Systems Manager
      * 
     */
-    public @Nullable Input<String> getSsm() {
+    public @Nullable Output<String> getSsm() {
         return this.ssm;
     }
     /**
      * Override the default endpoint for AWS Single Sign On (SSO)
      * 
     */
-    public @Nullable Input<String> getSsoadmin() {
+    public @Nullable Output<String> getSsoadmin() {
         return this.ssoadmin;
     }
     /**
      * Override the default endpoint for AWS Step Functions
      * 
     */
-    public @Nullable Input<String> getStepfunctions() {
+    public @Nullable Output<String> getStepfunctions() {
         return this.stepfunctions;
     }
     /**
      * Override the default endpoint for AWS Storage Gateway
      * 
     */
-    public @Nullable Input<String> getStoragegateway() {
+    public @Nullable Output<String> getStoragegateway() {
         return this.storagegateway;
     }
     /**
      * Override the default endpoint for AWS Security Token Service (STS)
      * 
     */
-    public @Nullable Input<String> getSts() {
+    public @Nullable Output<String> getSts() {
         return this.sts;
     }
     /**
      * Override the default endpoint for Amazon Simple Workflow Service (SWF)
      * 
     */
-    public @Nullable Input<String> getSwf() {
+    public @Nullable Output<String> getSwf() {
         return this.swf;
     }
     /**
      * Override the default endpoint for Amazon CloudWatch Synthetics
      * 
     */
-    public @Nullable Input<String> getSynthetics() {
+    public @Nullable Output<String> getSynthetics() {
         return this.synthetics;
     }
     /**
      * Override the default endpoint for Amazon Timestream
      * 
     */
-    public @Nullable Input<String> getTimestreamwrite() {
+    public @Nullable Output<String> getTimestreamwrite() {
         return this.timestreamwrite;
     }
     /**
      * Override the default endpoint for AWS Transfer Family
      * 
     */
-    public @Nullable Input<String> getTransfer() {
+    public @Nullable Output<String> getTransfer() {
         return this.transfer;
     }
     /**
      * Override the default endpoint for AWS WAF Classic
      * 
     */
-    public @Nullable Input<String> getWaf() {
+    public @Nullable Output<String> getWaf() {
         return this.waf;
     }
     /**
      * Override the default endpoint for AWS WAF Regional Classic
      * 
     */
-    public @Nullable Input<String> getWafregional() {
+    public @Nullable Output<String> getWafregional() {
         return this.wafregional;
     }
     /**
      * Override the default endpoint for AWS WAF V2
      * 
     */
-    public @Nullable Input<String> getWafv2() {
+    public @Nullable Output<String> getWafv2() {
         return this.wafv2;
     }
     /**
      * Override the default endpoint for Amazon WorkLink
      * 
     */
-    public @Nullable Input<String> getWorklink() {
+    public @Nullable Output<String> getWorklink() {
         return this.worklink;
     }
     /**
      * Override the default endpoint for Amazon WorkMail
      * 
     */
-    public @Nullable Input<String> getWorkmail() {
+    public @Nullable Output<String> getWorkmail() {
         return this.workmail;
     }
     /**
      * Override the default endpoint for Amazon WorkSpaces
      * 
     */
-    public @Nullable Input<String> getWorkspaces() {
+    public @Nullable Output<String> getWorkspaces() {
         return this.workspaces;
     }
     /**
      * Override the default endpoint for AWS X-Ray
      * 
     */
-    public @Nullable Input<String> getXray() {
+    public @Nullable Output<String> getXray() {
         return this.xray;
     }
 
@@ -2252,165 +2252,165 @@ public final class ProviderEndpointArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accessanalyzer;
-        private @Nullable Input<String> acm;
-        private @Nullable Input<String> acmpca;
-        private @Nullable Input<String> amplify;
-        private @Nullable Input<String> appconfig;
-        private @Nullable Input<String> applicationautoscaling;
-        private @Nullable Input<String> applicationinsights;
-        private @Nullable Input<String> appmesh;
-        private @Nullable Input<String> apprunner;
-        private @Nullable Input<String> appstream;
-        private @Nullable Input<String> appsync;
-        private @Nullable Input<String> athena;
-        private @Nullable Input<String> auditmanager;
-        private @Nullable Input<String> autoscaling;
-        private @Nullable Input<String> backup;
-        private @Nullable Input<String> batch;
-        private @Nullable Input<String> budgets;
-        private @Nullable Input<String> chime;
-        private @Nullable Input<String> cloud9;
-        private @Nullable Input<String> cloudformation;
-        private @Nullable Input<String> cloudfront;
-        private @Nullable Input<String> cloudhsm;
-        private @Nullable Input<String> cloudsearch;
-        private @Nullable Input<String> cloudtrail;
-        private @Nullable Input<String> cloudwatch;
-        private @Nullable Input<String> cloudwatchevents;
-        private @Nullable Input<String> cloudwatchlogs;
-        private @Nullable Input<String> codeartifact;
-        private @Nullable Input<String> codebuild;
-        private @Nullable Input<String> codecommit;
-        private @Nullable Input<String> codedeploy;
-        private @Nullable Input<String> codepipeline;
-        private @Nullable Input<String> codestarconnections;
-        private @Nullable Input<String> cognitoidentity;
-        private @Nullable Input<String> configservice;
-        private @Nullable Input<String> connect;
-        private @Nullable Input<String> cur;
-        private @Nullable Input<String> dataexchange;
-        private @Nullable Input<String> datapipeline;
-        private @Nullable Input<String> datasync;
-        private @Nullable Input<String> dax;
-        private @Nullable Input<String> detective;
-        private @Nullable Input<String> devicefarm;
-        private @Nullable Input<String> directconnect;
-        private @Nullable Input<String> dlm;
-        private @Nullable Input<String> dms;
-        private @Nullable Input<String> docdb;
-        private @Nullable Input<String> ds;
-        private @Nullable Input<String> dynamodb;
-        private @Nullable Input<String> ec2;
-        private @Nullable Input<String> ecr;
-        private @Nullable Input<String> ecrpublic;
-        private @Nullable Input<String> ecs;
-        private @Nullable Input<String> efs;
-        private @Nullable Input<String> eks;
-        private @Nullable Input<String> elasticache;
-        private @Nullable Input<String> elasticbeanstalk;
-        private @Nullable Input<String> elastictranscoder;
-        private @Nullable Input<String> elb;
-        private @Nullable Input<String> elbv2;
-        private @Nullable Input<String> emr;
-        private @Nullable Input<String> emrcontainers;
-        private @Nullable Input<String> es;
-        private @Nullable Input<String> firehose;
-        private @Nullable Input<String> fms;
-        private @Nullable Input<String> forecast;
-        private @Nullable Input<String> fsx;
-        private @Nullable Input<String> gamelift;
-        private @Nullable Input<String> glacier;
-        private @Nullable Input<String> globalaccelerator;
-        private @Nullable Input<String> glue;
-        private @Nullable Input<String> greengrass;
-        private @Nullable Input<String> guardduty;
-        private @Nullable Input<String> iam;
-        private @Nullable Input<String> identitystore;
-        private @Nullable Input<String> imagebuilder;
-        private @Nullable Input<String> inspector;
-        private @Nullable Input<String> iot;
-        private @Nullable Input<String> iotanalytics;
-        private @Nullable Input<String> iotevents;
-        private @Nullable Input<String> kafka;
-        private @Nullable Input<String> kinesis;
-        private @Nullable Input<String> kinesisanalytics;
-        private @Nullable Input<String> kinesisanalyticsv2;
-        private @Nullable Input<String> kinesisvideo;
-        private @Nullable Input<String> kms;
-        private @Nullable Input<String> lakeformation;
-        private @Nullable Input<String> lambda;
-        private @Nullable Input<String> lexmodels;
-        private @Nullable Input<String> licensemanager;
-        private @Nullable Input<String> lightsail;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> macie;
-        private @Nullable Input<String> macie2;
-        private @Nullable Input<String> managedblockchain;
-        private @Nullable Input<String> marketplacecatalog;
-        private @Nullable Input<String> mediaconnect;
-        private @Nullable Input<String> mediaconvert;
-        private @Nullable Input<String> medialive;
-        private @Nullable Input<String> mediapackage;
-        private @Nullable Input<String> mediastore;
-        private @Nullable Input<String> mediastoredata;
-        private @Nullable Input<String> memorydb;
-        private @Nullable Input<String> mq;
-        private @Nullable Input<String> mwaa;
-        private @Nullable Input<String> neptune;
-        private @Nullable Input<String> networkfirewall;
-        private @Nullable Input<String> networkmanager;
-        private @Nullable Input<String> opsworks;
-        private @Nullable Input<String> organizations;
-        private @Nullable Input<String> outposts;
-        private @Nullable Input<String> personalize;
-        private @Nullable Input<String> pinpoint;
-        private @Nullable Input<String> pricing;
-        private @Nullable Input<String> qldb;
-        private @Nullable Input<String> quicksight;
-        private @Nullable Input<String> ram;
-        private @Nullable Input<String> rds;
-        private @Nullable Input<String> redshift;
-        private @Nullable Input<String> resourcegroups;
-        private @Nullable Input<String> resourcegroupstaggingapi;
-        private @Nullable Input<String> route53;
-        private @Nullable Input<String> route53domains;
-        private @Nullable Input<String> route53recoverycontrolconfig;
-        private @Nullable Input<String> route53recoveryreadiness;
-        private @Nullable Input<String> route53resolver;
-        private @Nullable Input<String> s3;
-        private @Nullable Input<String> s3control;
-        private @Nullable Input<String> s3outposts;
-        private @Nullable Input<String> sagemaker;
-        private @Nullable Input<String> schemas;
-        private @Nullable Input<String> sdb;
-        private @Nullable Input<String> secretsmanager;
-        private @Nullable Input<String> securityhub;
-        private @Nullable Input<String> serverlessrepo;
-        private @Nullable Input<String> servicecatalog;
-        private @Nullable Input<String> servicediscovery;
-        private @Nullable Input<String> servicequotas;
-        private @Nullable Input<String> ses;
-        private @Nullable Input<String> shield;
-        private @Nullable Input<String> signer;
-        private @Nullable Input<String> sns;
-        private @Nullable Input<String> sqs;
-        private @Nullable Input<String> ssm;
-        private @Nullable Input<String> ssoadmin;
-        private @Nullable Input<String> stepfunctions;
-        private @Nullable Input<String> storagegateway;
-        private @Nullable Input<String> sts;
-        private @Nullable Input<String> swf;
-        private @Nullable Input<String> synthetics;
-        private @Nullable Input<String> timestreamwrite;
-        private @Nullable Input<String> transfer;
-        private @Nullable Input<String> waf;
-        private @Nullable Input<String> wafregional;
-        private @Nullable Input<String> wafv2;
-        private @Nullable Input<String> worklink;
-        private @Nullable Input<String> workmail;
-        private @Nullable Input<String> workspaces;
-        private @Nullable Input<String> xray;
+        private @Nullable Output<String> accessanalyzer;
+        private @Nullable Output<String> acm;
+        private @Nullable Output<String> acmpca;
+        private @Nullable Output<String> amplify;
+        private @Nullable Output<String> appconfig;
+        private @Nullable Output<String> applicationautoscaling;
+        private @Nullable Output<String> applicationinsights;
+        private @Nullable Output<String> appmesh;
+        private @Nullable Output<String> apprunner;
+        private @Nullable Output<String> appstream;
+        private @Nullable Output<String> appsync;
+        private @Nullable Output<String> athena;
+        private @Nullable Output<String> auditmanager;
+        private @Nullable Output<String> autoscaling;
+        private @Nullable Output<String> backup;
+        private @Nullable Output<String> batch;
+        private @Nullable Output<String> budgets;
+        private @Nullable Output<String> chime;
+        private @Nullable Output<String> cloud9;
+        private @Nullable Output<String> cloudformation;
+        private @Nullable Output<String> cloudfront;
+        private @Nullable Output<String> cloudhsm;
+        private @Nullable Output<String> cloudsearch;
+        private @Nullable Output<String> cloudtrail;
+        private @Nullable Output<String> cloudwatch;
+        private @Nullable Output<String> cloudwatchevents;
+        private @Nullable Output<String> cloudwatchlogs;
+        private @Nullable Output<String> codeartifact;
+        private @Nullable Output<String> codebuild;
+        private @Nullable Output<String> codecommit;
+        private @Nullable Output<String> codedeploy;
+        private @Nullable Output<String> codepipeline;
+        private @Nullable Output<String> codestarconnections;
+        private @Nullable Output<String> cognitoidentity;
+        private @Nullable Output<String> configservice;
+        private @Nullable Output<String> connect;
+        private @Nullable Output<String> cur;
+        private @Nullable Output<String> dataexchange;
+        private @Nullable Output<String> datapipeline;
+        private @Nullable Output<String> datasync;
+        private @Nullable Output<String> dax;
+        private @Nullable Output<String> detective;
+        private @Nullable Output<String> devicefarm;
+        private @Nullable Output<String> directconnect;
+        private @Nullable Output<String> dlm;
+        private @Nullable Output<String> dms;
+        private @Nullable Output<String> docdb;
+        private @Nullable Output<String> ds;
+        private @Nullable Output<String> dynamodb;
+        private @Nullable Output<String> ec2;
+        private @Nullable Output<String> ecr;
+        private @Nullable Output<String> ecrpublic;
+        private @Nullable Output<String> ecs;
+        private @Nullable Output<String> efs;
+        private @Nullable Output<String> eks;
+        private @Nullable Output<String> elasticache;
+        private @Nullable Output<String> elasticbeanstalk;
+        private @Nullable Output<String> elastictranscoder;
+        private @Nullable Output<String> elb;
+        private @Nullable Output<String> elbv2;
+        private @Nullable Output<String> emr;
+        private @Nullable Output<String> emrcontainers;
+        private @Nullable Output<String> es;
+        private @Nullable Output<String> firehose;
+        private @Nullable Output<String> fms;
+        private @Nullable Output<String> forecast;
+        private @Nullable Output<String> fsx;
+        private @Nullable Output<String> gamelift;
+        private @Nullable Output<String> glacier;
+        private @Nullable Output<String> globalaccelerator;
+        private @Nullable Output<String> glue;
+        private @Nullable Output<String> greengrass;
+        private @Nullable Output<String> guardduty;
+        private @Nullable Output<String> iam;
+        private @Nullable Output<String> identitystore;
+        private @Nullable Output<String> imagebuilder;
+        private @Nullable Output<String> inspector;
+        private @Nullable Output<String> iot;
+        private @Nullable Output<String> iotanalytics;
+        private @Nullable Output<String> iotevents;
+        private @Nullable Output<String> kafka;
+        private @Nullable Output<String> kinesis;
+        private @Nullable Output<String> kinesisanalytics;
+        private @Nullable Output<String> kinesisanalyticsv2;
+        private @Nullable Output<String> kinesisvideo;
+        private @Nullable Output<String> kms;
+        private @Nullable Output<String> lakeformation;
+        private @Nullable Output<String> lambda;
+        private @Nullable Output<String> lexmodels;
+        private @Nullable Output<String> licensemanager;
+        private @Nullable Output<String> lightsail;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> macie;
+        private @Nullable Output<String> macie2;
+        private @Nullable Output<String> managedblockchain;
+        private @Nullable Output<String> marketplacecatalog;
+        private @Nullable Output<String> mediaconnect;
+        private @Nullable Output<String> mediaconvert;
+        private @Nullable Output<String> medialive;
+        private @Nullable Output<String> mediapackage;
+        private @Nullable Output<String> mediastore;
+        private @Nullable Output<String> mediastoredata;
+        private @Nullable Output<String> memorydb;
+        private @Nullable Output<String> mq;
+        private @Nullable Output<String> mwaa;
+        private @Nullable Output<String> neptune;
+        private @Nullable Output<String> networkfirewall;
+        private @Nullable Output<String> networkmanager;
+        private @Nullable Output<String> opsworks;
+        private @Nullable Output<String> organizations;
+        private @Nullable Output<String> outposts;
+        private @Nullable Output<String> personalize;
+        private @Nullable Output<String> pinpoint;
+        private @Nullable Output<String> pricing;
+        private @Nullable Output<String> qldb;
+        private @Nullable Output<String> quicksight;
+        private @Nullable Output<String> ram;
+        private @Nullable Output<String> rds;
+        private @Nullable Output<String> redshift;
+        private @Nullable Output<String> resourcegroups;
+        private @Nullable Output<String> resourcegroupstaggingapi;
+        private @Nullable Output<String> route53;
+        private @Nullable Output<String> route53domains;
+        private @Nullable Output<String> route53recoverycontrolconfig;
+        private @Nullable Output<String> route53recoveryreadiness;
+        private @Nullable Output<String> route53resolver;
+        private @Nullable Output<String> s3;
+        private @Nullable Output<String> s3control;
+        private @Nullable Output<String> s3outposts;
+        private @Nullable Output<String> sagemaker;
+        private @Nullable Output<String> schemas;
+        private @Nullable Output<String> sdb;
+        private @Nullable Output<String> secretsmanager;
+        private @Nullable Output<String> securityhub;
+        private @Nullable Output<String> serverlessrepo;
+        private @Nullable Output<String> servicecatalog;
+        private @Nullable Output<String> servicediscovery;
+        private @Nullable Output<String> servicequotas;
+        private @Nullable Output<String> ses;
+        private @Nullable Output<String> shield;
+        private @Nullable Output<String> signer;
+        private @Nullable Output<String> sns;
+        private @Nullable Output<String> sqs;
+        private @Nullable Output<String> ssm;
+        private @Nullable Output<String> ssoadmin;
+        private @Nullable Output<String> stepfunctions;
+        private @Nullable Output<String> storagegateway;
+        private @Nullable Output<String> sts;
+        private @Nullable Output<String> swf;
+        private @Nullable Output<String> synthetics;
+        private @Nullable Output<String> timestreamwrite;
+        private @Nullable Output<String> transfer;
+        private @Nullable Output<String> waf;
+        private @Nullable Output<String> wafregional;
+        private @Nullable Output<String> wafv2;
+        private @Nullable Output<String> worklink;
+        private @Nullable Output<String> workmail;
+        private @Nullable Output<String> workspaces;
+        private @Nullable Output<String> xray;
 
         public Builder() {
     	      // Empty
@@ -2579,797 +2579,797 @@ public final class ProviderEndpointArgs {
     	      this.xray = defaults.xray;
         }
 
-        public Builder accessanalyzer(@Nullable Input<String> accessanalyzer) {
+        public Builder accessanalyzer(@Nullable Output<String> accessanalyzer) {
             this.accessanalyzer = accessanalyzer;
             return this;
         }
 
-        public Builder acm(@Nullable Input<String> acm) {
+        public Builder acm(@Nullable Output<String> acm) {
             this.acm = acm;
             return this;
         }
 
-        public Builder acmpca(@Nullable Input<String> acmpca) {
+        public Builder acmpca(@Nullable Output<String> acmpca) {
             this.acmpca = acmpca;
             return this;
         }
 
-        public Builder amplify(@Nullable Input<String> amplify) {
+        public Builder amplify(@Nullable Output<String> amplify) {
             this.amplify = amplify;
             return this;
         }
 
-        public Builder appconfig(@Nullable Input<String> appconfig) {
+        public Builder appconfig(@Nullable Output<String> appconfig) {
             this.appconfig = appconfig;
             return this;
         }
 
-        public Builder applicationautoscaling(@Nullable Input<String> applicationautoscaling) {
+        public Builder applicationautoscaling(@Nullable Output<String> applicationautoscaling) {
             this.applicationautoscaling = applicationautoscaling;
             return this;
         }
 
-        public Builder applicationinsights(@Nullable Input<String> applicationinsights) {
+        public Builder applicationinsights(@Nullable Output<String> applicationinsights) {
             this.applicationinsights = applicationinsights;
             return this;
         }
 
-        public Builder appmesh(@Nullable Input<String> appmesh) {
+        public Builder appmesh(@Nullable Output<String> appmesh) {
             this.appmesh = appmesh;
             return this;
         }
 
-        public Builder apprunner(@Nullable Input<String> apprunner) {
+        public Builder apprunner(@Nullable Output<String> apprunner) {
             this.apprunner = apprunner;
             return this;
         }
 
-        public Builder appstream(@Nullable Input<String> appstream) {
+        public Builder appstream(@Nullable Output<String> appstream) {
             this.appstream = appstream;
             return this;
         }
 
-        public Builder appsync(@Nullable Input<String> appsync) {
+        public Builder appsync(@Nullable Output<String> appsync) {
             this.appsync = appsync;
             return this;
         }
 
-        public Builder athena(@Nullable Input<String> athena) {
+        public Builder athena(@Nullable Output<String> athena) {
             this.athena = athena;
             return this;
         }
 
-        public Builder auditmanager(@Nullable Input<String> auditmanager) {
+        public Builder auditmanager(@Nullable Output<String> auditmanager) {
             this.auditmanager = auditmanager;
             return this;
         }
 
-        public Builder autoscaling(@Nullable Input<String> autoscaling) {
+        public Builder autoscaling(@Nullable Output<String> autoscaling) {
             this.autoscaling = autoscaling;
             return this;
         }
 
-        public Builder backup(@Nullable Input<String> backup) {
+        public Builder backup(@Nullable Output<String> backup) {
             this.backup = backup;
             return this;
         }
 
-        public Builder batch(@Nullable Input<String> batch) {
+        public Builder batch(@Nullable Output<String> batch) {
             this.batch = batch;
             return this;
         }
 
-        public Builder budgets(@Nullable Input<String> budgets) {
+        public Builder budgets(@Nullable Output<String> budgets) {
             this.budgets = budgets;
             return this;
         }
 
-        public Builder chime(@Nullable Input<String> chime) {
+        public Builder chime(@Nullable Output<String> chime) {
             this.chime = chime;
             return this;
         }
 
-        public Builder cloud9(@Nullable Input<String> cloud9) {
+        public Builder cloud9(@Nullable Output<String> cloud9) {
             this.cloud9 = cloud9;
             return this;
         }
 
-        public Builder cloudformation(@Nullable Input<String> cloudformation) {
+        public Builder cloudformation(@Nullable Output<String> cloudformation) {
             this.cloudformation = cloudformation;
             return this;
         }
 
-        public Builder cloudfront(@Nullable Input<String> cloudfront) {
+        public Builder cloudfront(@Nullable Output<String> cloudfront) {
             this.cloudfront = cloudfront;
             return this;
         }
 
-        public Builder cloudhsm(@Nullable Input<String> cloudhsm) {
+        public Builder cloudhsm(@Nullable Output<String> cloudhsm) {
             this.cloudhsm = cloudhsm;
             return this;
         }
 
-        public Builder cloudsearch(@Nullable Input<String> cloudsearch) {
+        public Builder cloudsearch(@Nullable Output<String> cloudsearch) {
             this.cloudsearch = cloudsearch;
             return this;
         }
 
-        public Builder cloudtrail(@Nullable Input<String> cloudtrail) {
+        public Builder cloudtrail(@Nullable Output<String> cloudtrail) {
             this.cloudtrail = cloudtrail;
             return this;
         }
 
-        public Builder cloudwatch(@Nullable Input<String> cloudwatch) {
+        public Builder cloudwatch(@Nullable Output<String> cloudwatch) {
             this.cloudwatch = cloudwatch;
             return this;
         }
 
-        public Builder cloudwatchevents(@Nullable Input<String> cloudwatchevents) {
+        public Builder cloudwatchevents(@Nullable Output<String> cloudwatchevents) {
             this.cloudwatchevents = cloudwatchevents;
             return this;
         }
 
-        public Builder cloudwatchlogs(@Nullable Input<String> cloudwatchlogs) {
+        public Builder cloudwatchlogs(@Nullable Output<String> cloudwatchlogs) {
             this.cloudwatchlogs = cloudwatchlogs;
             return this;
         }
 
-        public Builder codeartifact(@Nullable Input<String> codeartifact) {
+        public Builder codeartifact(@Nullable Output<String> codeartifact) {
             this.codeartifact = codeartifact;
             return this;
         }
 
-        public Builder codebuild(@Nullable Input<String> codebuild) {
+        public Builder codebuild(@Nullable Output<String> codebuild) {
             this.codebuild = codebuild;
             return this;
         }
 
-        public Builder codecommit(@Nullable Input<String> codecommit) {
+        public Builder codecommit(@Nullable Output<String> codecommit) {
             this.codecommit = codecommit;
             return this;
         }
 
-        public Builder codedeploy(@Nullable Input<String> codedeploy) {
+        public Builder codedeploy(@Nullable Output<String> codedeploy) {
             this.codedeploy = codedeploy;
             return this;
         }
 
-        public Builder codepipeline(@Nullable Input<String> codepipeline) {
+        public Builder codepipeline(@Nullable Output<String> codepipeline) {
             this.codepipeline = codepipeline;
             return this;
         }
 
-        public Builder codestarconnections(@Nullable Input<String> codestarconnections) {
+        public Builder codestarconnections(@Nullable Output<String> codestarconnections) {
             this.codestarconnections = codestarconnections;
             return this;
         }
 
-        public Builder cognitoidentity(@Nullable Input<String> cognitoidentity) {
+        public Builder cognitoidentity(@Nullable Output<String> cognitoidentity) {
             this.cognitoidentity = cognitoidentity;
             return this;
         }
 
-        public Builder configservice(@Nullable Input<String> configservice) {
+        public Builder configservice(@Nullable Output<String> configservice) {
             this.configservice = configservice;
             return this;
         }
 
-        public Builder connect(@Nullable Input<String> connect) {
+        public Builder connect(@Nullable Output<String> connect) {
             this.connect = connect;
             return this;
         }
 
-        public Builder cur(@Nullable Input<String> cur) {
+        public Builder cur(@Nullable Output<String> cur) {
             this.cur = cur;
             return this;
         }
 
-        public Builder dataexchange(@Nullable Input<String> dataexchange) {
+        public Builder dataexchange(@Nullable Output<String> dataexchange) {
             this.dataexchange = dataexchange;
             return this;
         }
 
-        public Builder datapipeline(@Nullable Input<String> datapipeline) {
+        public Builder datapipeline(@Nullable Output<String> datapipeline) {
             this.datapipeline = datapipeline;
             return this;
         }
 
-        public Builder datasync(@Nullable Input<String> datasync) {
+        public Builder datasync(@Nullable Output<String> datasync) {
             this.datasync = datasync;
             return this;
         }
 
-        public Builder dax(@Nullable Input<String> dax) {
+        public Builder dax(@Nullable Output<String> dax) {
             this.dax = dax;
             return this;
         }
 
-        public Builder detective(@Nullable Input<String> detective) {
+        public Builder detective(@Nullable Output<String> detective) {
             this.detective = detective;
             return this;
         }
 
-        public Builder devicefarm(@Nullable Input<String> devicefarm) {
+        public Builder devicefarm(@Nullable Output<String> devicefarm) {
             this.devicefarm = devicefarm;
             return this;
         }
 
-        public Builder directconnect(@Nullable Input<String> directconnect) {
+        public Builder directconnect(@Nullable Output<String> directconnect) {
             this.directconnect = directconnect;
             return this;
         }
 
-        public Builder dlm(@Nullable Input<String> dlm) {
+        public Builder dlm(@Nullable Output<String> dlm) {
             this.dlm = dlm;
             return this;
         }
 
-        public Builder dms(@Nullable Input<String> dms) {
+        public Builder dms(@Nullable Output<String> dms) {
             this.dms = dms;
             return this;
         }
 
-        public Builder docdb(@Nullable Input<String> docdb) {
+        public Builder docdb(@Nullable Output<String> docdb) {
             this.docdb = docdb;
             return this;
         }
 
-        public Builder ds(@Nullable Input<String> ds) {
+        public Builder ds(@Nullable Output<String> ds) {
             this.ds = ds;
             return this;
         }
 
-        public Builder dynamodb(@Nullable Input<String> dynamodb) {
+        public Builder dynamodb(@Nullable Output<String> dynamodb) {
             this.dynamodb = dynamodb;
             return this;
         }
 
-        public Builder ec2(@Nullable Input<String> ec2) {
+        public Builder ec2(@Nullable Output<String> ec2) {
             this.ec2 = ec2;
             return this;
         }
 
-        public Builder ecr(@Nullable Input<String> ecr) {
+        public Builder ecr(@Nullable Output<String> ecr) {
             this.ecr = ecr;
             return this;
         }
 
-        public Builder ecrpublic(@Nullable Input<String> ecrpublic) {
+        public Builder ecrpublic(@Nullable Output<String> ecrpublic) {
             this.ecrpublic = ecrpublic;
             return this;
         }
 
-        public Builder ecs(@Nullable Input<String> ecs) {
+        public Builder ecs(@Nullable Output<String> ecs) {
             this.ecs = ecs;
             return this;
         }
 
-        public Builder efs(@Nullable Input<String> efs) {
+        public Builder efs(@Nullable Output<String> efs) {
             this.efs = efs;
             return this;
         }
 
-        public Builder eks(@Nullable Input<String> eks) {
+        public Builder eks(@Nullable Output<String> eks) {
             this.eks = eks;
             return this;
         }
 
-        public Builder elasticache(@Nullable Input<String> elasticache) {
+        public Builder elasticache(@Nullable Output<String> elasticache) {
             this.elasticache = elasticache;
             return this;
         }
 
-        public Builder elasticbeanstalk(@Nullable Input<String> elasticbeanstalk) {
+        public Builder elasticbeanstalk(@Nullable Output<String> elasticbeanstalk) {
             this.elasticbeanstalk = elasticbeanstalk;
             return this;
         }
 
-        public Builder elastictranscoder(@Nullable Input<String> elastictranscoder) {
+        public Builder elastictranscoder(@Nullable Output<String> elastictranscoder) {
             this.elastictranscoder = elastictranscoder;
             return this;
         }
 
-        public Builder elb(@Nullable Input<String> elb) {
+        public Builder elb(@Nullable Output<String> elb) {
             this.elb = elb;
             return this;
         }
 
-        public Builder elbv2(@Nullable Input<String> elbv2) {
+        public Builder elbv2(@Nullable Output<String> elbv2) {
             this.elbv2 = elbv2;
             return this;
         }
 
-        public Builder emr(@Nullable Input<String> emr) {
+        public Builder emr(@Nullable Output<String> emr) {
             this.emr = emr;
             return this;
         }
 
-        public Builder emrcontainers(@Nullable Input<String> emrcontainers) {
+        public Builder emrcontainers(@Nullable Output<String> emrcontainers) {
             this.emrcontainers = emrcontainers;
             return this;
         }
 
-        public Builder es(@Nullable Input<String> es) {
+        public Builder es(@Nullable Output<String> es) {
             this.es = es;
             return this;
         }
 
-        public Builder firehose(@Nullable Input<String> firehose) {
+        public Builder firehose(@Nullable Output<String> firehose) {
             this.firehose = firehose;
             return this;
         }
 
-        public Builder fms(@Nullable Input<String> fms) {
+        public Builder fms(@Nullable Output<String> fms) {
             this.fms = fms;
             return this;
         }
 
-        public Builder forecast(@Nullable Input<String> forecast) {
+        public Builder forecast(@Nullable Output<String> forecast) {
             this.forecast = forecast;
             return this;
         }
 
-        public Builder fsx(@Nullable Input<String> fsx) {
+        public Builder fsx(@Nullable Output<String> fsx) {
             this.fsx = fsx;
             return this;
         }
 
-        public Builder gamelift(@Nullable Input<String> gamelift) {
+        public Builder gamelift(@Nullable Output<String> gamelift) {
             this.gamelift = gamelift;
             return this;
         }
 
-        public Builder glacier(@Nullable Input<String> glacier) {
+        public Builder glacier(@Nullable Output<String> glacier) {
             this.glacier = glacier;
             return this;
         }
 
-        public Builder globalaccelerator(@Nullable Input<String> globalaccelerator) {
+        public Builder globalaccelerator(@Nullable Output<String> globalaccelerator) {
             this.globalaccelerator = globalaccelerator;
             return this;
         }
 
-        public Builder glue(@Nullable Input<String> glue) {
+        public Builder glue(@Nullable Output<String> glue) {
             this.glue = glue;
             return this;
         }
 
-        public Builder greengrass(@Nullable Input<String> greengrass) {
+        public Builder greengrass(@Nullable Output<String> greengrass) {
             this.greengrass = greengrass;
             return this;
         }
 
-        public Builder guardduty(@Nullable Input<String> guardduty) {
+        public Builder guardduty(@Nullable Output<String> guardduty) {
             this.guardduty = guardduty;
             return this;
         }
 
-        public Builder iam(@Nullable Input<String> iam) {
+        public Builder iam(@Nullable Output<String> iam) {
             this.iam = iam;
             return this;
         }
 
-        public Builder identitystore(@Nullable Input<String> identitystore) {
+        public Builder identitystore(@Nullable Output<String> identitystore) {
             this.identitystore = identitystore;
             return this;
         }
 
-        public Builder imagebuilder(@Nullable Input<String> imagebuilder) {
+        public Builder imagebuilder(@Nullable Output<String> imagebuilder) {
             this.imagebuilder = imagebuilder;
             return this;
         }
 
-        public Builder inspector(@Nullable Input<String> inspector) {
+        public Builder inspector(@Nullable Output<String> inspector) {
             this.inspector = inspector;
             return this;
         }
 
-        public Builder iot(@Nullable Input<String> iot) {
+        public Builder iot(@Nullable Output<String> iot) {
             this.iot = iot;
             return this;
         }
 
-        public Builder iotanalytics(@Nullable Input<String> iotanalytics) {
+        public Builder iotanalytics(@Nullable Output<String> iotanalytics) {
             this.iotanalytics = iotanalytics;
             return this;
         }
 
-        public Builder iotevents(@Nullable Input<String> iotevents) {
+        public Builder iotevents(@Nullable Output<String> iotevents) {
             this.iotevents = iotevents;
             return this;
         }
 
-        public Builder kafka(@Nullable Input<String> kafka) {
+        public Builder kafka(@Nullable Output<String> kafka) {
             this.kafka = kafka;
             return this;
         }
 
-        public Builder kinesis(@Nullable Input<String> kinesis) {
+        public Builder kinesis(@Nullable Output<String> kinesis) {
             this.kinesis = kinesis;
             return this;
         }
 
-        public Builder kinesisanalytics(@Nullable Input<String> kinesisanalytics) {
+        public Builder kinesisanalytics(@Nullable Output<String> kinesisanalytics) {
             this.kinesisanalytics = kinesisanalytics;
             return this;
         }
 
-        public Builder kinesisanalyticsv2(@Nullable Input<String> kinesisanalyticsv2) {
+        public Builder kinesisanalyticsv2(@Nullable Output<String> kinesisanalyticsv2) {
             this.kinesisanalyticsv2 = kinesisanalyticsv2;
             return this;
         }
 
-        public Builder kinesisvideo(@Nullable Input<String> kinesisvideo) {
+        public Builder kinesisvideo(@Nullable Output<String> kinesisvideo) {
             this.kinesisvideo = kinesisvideo;
             return this;
         }
 
-        public Builder kms(@Nullable Input<String> kms) {
+        public Builder kms(@Nullable Output<String> kms) {
             this.kms = kms;
             return this;
         }
 
-        public Builder lakeformation(@Nullable Input<String> lakeformation) {
+        public Builder lakeformation(@Nullable Output<String> lakeformation) {
             this.lakeformation = lakeformation;
             return this;
         }
 
-        public Builder lambda(@Nullable Input<String> lambda) {
+        public Builder lambda(@Nullable Output<String> lambda) {
             this.lambda = lambda;
             return this;
         }
 
-        public Builder lexmodels(@Nullable Input<String> lexmodels) {
+        public Builder lexmodels(@Nullable Output<String> lexmodels) {
             this.lexmodels = lexmodels;
             return this;
         }
 
-        public Builder licensemanager(@Nullable Input<String> licensemanager) {
+        public Builder licensemanager(@Nullable Output<String> licensemanager) {
             this.licensemanager = licensemanager;
             return this;
         }
 
-        public Builder lightsail(@Nullable Input<String> lightsail) {
+        public Builder lightsail(@Nullable Output<String> lightsail) {
             this.lightsail = lightsail;
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder macie(@Nullable Input<String> macie) {
+        public Builder macie(@Nullable Output<String> macie) {
             this.macie = macie;
             return this;
         }
 
-        public Builder macie2(@Nullable Input<String> macie2) {
+        public Builder macie2(@Nullable Output<String> macie2) {
             this.macie2 = macie2;
             return this;
         }
 
-        public Builder managedblockchain(@Nullable Input<String> managedblockchain) {
+        public Builder managedblockchain(@Nullable Output<String> managedblockchain) {
             this.managedblockchain = managedblockchain;
             return this;
         }
 
-        public Builder marketplacecatalog(@Nullable Input<String> marketplacecatalog) {
+        public Builder marketplacecatalog(@Nullable Output<String> marketplacecatalog) {
             this.marketplacecatalog = marketplacecatalog;
             return this;
         }
 
-        public Builder mediaconnect(@Nullable Input<String> mediaconnect) {
+        public Builder mediaconnect(@Nullable Output<String> mediaconnect) {
             this.mediaconnect = mediaconnect;
             return this;
         }
 
-        public Builder mediaconvert(@Nullable Input<String> mediaconvert) {
+        public Builder mediaconvert(@Nullable Output<String> mediaconvert) {
             this.mediaconvert = mediaconvert;
             return this;
         }
 
-        public Builder medialive(@Nullable Input<String> medialive) {
+        public Builder medialive(@Nullable Output<String> medialive) {
             this.medialive = medialive;
             return this;
         }
 
-        public Builder mediapackage(@Nullable Input<String> mediapackage) {
+        public Builder mediapackage(@Nullable Output<String> mediapackage) {
             this.mediapackage = mediapackage;
             return this;
         }
 
-        public Builder mediastore(@Nullable Input<String> mediastore) {
+        public Builder mediastore(@Nullable Output<String> mediastore) {
             this.mediastore = mediastore;
             return this;
         }
 
-        public Builder mediastoredata(@Nullable Input<String> mediastoredata) {
+        public Builder mediastoredata(@Nullable Output<String> mediastoredata) {
             this.mediastoredata = mediastoredata;
             return this;
         }
 
-        public Builder memorydb(@Nullable Input<String> memorydb) {
+        public Builder memorydb(@Nullable Output<String> memorydb) {
             this.memorydb = memorydb;
             return this;
         }
 
-        public Builder mq(@Nullable Input<String> mq) {
+        public Builder mq(@Nullable Output<String> mq) {
             this.mq = mq;
             return this;
         }
 
-        public Builder mwaa(@Nullable Input<String> mwaa) {
+        public Builder mwaa(@Nullable Output<String> mwaa) {
             this.mwaa = mwaa;
             return this;
         }
 
-        public Builder neptune(@Nullable Input<String> neptune) {
+        public Builder neptune(@Nullable Output<String> neptune) {
             this.neptune = neptune;
             return this;
         }
 
-        public Builder networkfirewall(@Nullable Input<String> networkfirewall) {
+        public Builder networkfirewall(@Nullable Output<String> networkfirewall) {
             this.networkfirewall = networkfirewall;
             return this;
         }
 
-        public Builder networkmanager(@Nullable Input<String> networkmanager) {
+        public Builder networkmanager(@Nullable Output<String> networkmanager) {
             this.networkmanager = networkmanager;
             return this;
         }
 
-        public Builder opsworks(@Nullable Input<String> opsworks) {
+        public Builder opsworks(@Nullable Output<String> opsworks) {
             this.opsworks = opsworks;
             return this;
         }
 
-        public Builder organizations(@Nullable Input<String> organizations) {
+        public Builder organizations(@Nullable Output<String> organizations) {
             this.organizations = organizations;
             return this;
         }
 
-        public Builder outposts(@Nullable Input<String> outposts) {
+        public Builder outposts(@Nullable Output<String> outposts) {
             this.outposts = outposts;
             return this;
         }
 
-        public Builder personalize(@Nullable Input<String> personalize) {
+        public Builder personalize(@Nullable Output<String> personalize) {
             this.personalize = personalize;
             return this;
         }
 
-        public Builder pinpoint(@Nullable Input<String> pinpoint) {
+        public Builder pinpoint(@Nullable Output<String> pinpoint) {
             this.pinpoint = pinpoint;
             return this;
         }
 
-        public Builder pricing(@Nullable Input<String> pricing) {
+        public Builder pricing(@Nullable Output<String> pricing) {
             this.pricing = pricing;
             return this;
         }
 
-        public Builder qldb(@Nullable Input<String> qldb) {
+        public Builder qldb(@Nullable Output<String> qldb) {
             this.qldb = qldb;
             return this;
         }
 
-        public Builder quicksight(@Nullable Input<String> quicksight) {
+        public Builder quicksight(@Nullable Output<String> quicksight) {
             this.quicksight = quicksight;
             return this;
         }
 
-        public Builder ram(@Nullable Input<String> ram) {
+        public Builder ram(@Nullable Output<String> ram) {
             this.ram = ram;
             return this;
         }
 
-        public Builder rds(@Nullable Input<String> rds) {
+        public Builder rds(@Nullable Output<String> rds) {
             this.rds = rds;
             return this;
         }
 
-        public Builder redshift(@Nullable Input<String> redshift) {
+        public Builder redshift(@Nullable Output<String> redshift) {
             this.redshift = redshift;
             return this;
         }
 
-        public Builder resourcegroups(@Nullable Input<String> resourcegroups) {
+        public Builder resourcegroups(@Nullable Output<String> resourcegroups) {
             this.resourcegroups = resourcegroups;
             return this;
         }
 
-        public Builder resourcegroupstaggingapi(@Nullable Input<String> resourcegroupstaggingapi) {
+        public Builder resourcegroupstaggingapi(@Nullable Output<String> resourcegroupstaggingapi) {
             this.resourcegroupstaggingapi = resourcegroupstaggingapi;
             return this;
         }
 
-        public Builder route53(@Nullable Input<String> route53) {
+        public Builder route53(@Nullable Output<String> route53) {
             this.route53 = route53;
             return this;
         }
 
-        public Builder route53domains(@Nullable Input<String> route53domains) {
+        public Builder route53domains(@Nullable Output<String> route53domains) {
             this.route53domains = route53domains;
             return this;
         }
 
-        public Builder route53recoverycontrolconfig(@Nullable Input<String> route53recoverycontrolconfig) {
+        public Builder route53recoverycontrolconfig(@Nullable Output<String> route53recoverycontrolconfig) {
             this.route53recoverycontrolconfig = route53recoverycontrolconfig;
             return this;
         }
 
-        public Builder route53recoveryreadiness(@Nullable Input<String> route53recoveryreadiness) {
+        public Builder route53recoveryreadiness(@Nullable Output<String> route53recoveryreadiness) {
             this.route53recoveryreadiness = route53recoveryreadiness;
             return this;
         }
 
-        public Builder route53resolver(@Nullable Input<String> route53resolver) {
+        public Builder route53resolver(@Nullable Output<String> route53resolver) {
             this.route53resolver = route53resolver;
             return this;
         }
 
-        public Builder s3(@Nullable Input<String> s3) {
+        public Builder s3(@Nullable Output<String> s3) {
             this.s3 = s3;
             return this;
         }
 
-        public Builder s3control(@Nullable Input<String> s3control) {
+        public Builder s3control(@Nullable Output<String> s3control) {
             this.s3control = s3control;
             return this;
         }
 
-        public Builder s3outposts(@Nullable Input<String> s3outposts) {
+        public Builder s3outposts(@Nullable Output<String> s3outposts) {
             this.s3outposts = s3outposts;
             return this;
         }
 
-        public Builder sagemaker(@Nullable Input<String> sagemaker) {
+        public Builder sagemaker(@Nullable Output<String> sagemaker) {
             this.sagemaker = sagemaker;
             return this;
         }
 
-        public Builder schemas(@Nullable Input<String> schemas) {
+        public Builder schemas(@Nullable Output<String> schemas) {
             this.schemas = schemas;
             return this;
         }
 
-        public Builder sdb(@Nullable Input<String> sdb) {
+        public Builder sdb(@Nullable Output<String> sdb) {
             this.sdb = sdb;
             return this;
         }
 
-        public Builder secretsmanager(@Nullable Input<String> secretsmanager) {
+        public Builder secretsmanager(@Nullable Output<String> secretsmanager) {
             this.secretsmanager = secretsmanager;
             return this;
         }
 
-        public Builder securityhub(@Nullable Input<String> securityhub) {
+        public Builder securityhub(@Nullable Output<String> securityhub) {
             this.securityhub = securityhub;
             return this;
         }
 
-        public Builder serverlessrepo(@Nullable Input<String> serverlessrepo) {
+        public Builder serverlessrepo(@Nullable Output<String> serverlessrepo) {
             this.serverlessrepo = serverlessrepo;
             return this;
         }
 
-        public Builder servicecatalog(@Nullable Input<String> servicecatalog) {
+        public Builder servicecatalog(@Nullable Output<String> servicecatalog) {
             this.servicecatalog = servicecatalog;
             return this;
         }
 
-        public Builder servicediscovery(@Nullable Input<String> servicediscovery) {
+        public Builder servicediscovery(@Nullable Output<String> servicediscovery) {
             this.servicediscovery = servicediscovery;
             return this;
         }
 
-        public Builder servicequotas(@Nullable Input<String> servicequotas) {
+        public Builder servicequotas(@Nullable Output<String> servicequotas) {
             this.servicequotas = servicequotas;
             return this;
         }
 
-        public Builder ses(@Nullable Input<String> ses) {
+        public Builder ses(@Nullable Output<String> ses) {
             this.ses = ses;
             return this;
         }
 
-        public Builder shield(@Nullable Input<String> shield) {
+        public Builder shield(@Nullable Output<String> shield) {
             this.shield = shield;
             return this;
         }
 
-        public Builder signer(@Nullable Input<String> signer) {
+        public Builder signer(@Nullable Output<String> signer) {
             this.signer = signer;
             return this;
         }
 
-        public Builder sns(@Nullable Input<String> sns) {
+        public Builder sns(@Nullable Output<String> sns) {
             this.sns = sns;
             return this;
         }
 
-        public Builder sqs(@Nullable Input<String> sqs) {
+        public Builder sqs(@Nullable Output<String> sqs) {
             this.sqs = sqs;
             return this;
         }
 
-        public Builder ssm(@Nullable Input<String> ssm) {
+        public Builder ssm(@Nullable Output<String> ssm) {
             this.ssm = ssm;
             return this;
         }
 
-        public Builder ssoadmin(@Nullable Input<String> ssoadmin) {
+        public Builder ssoadmin(@Nullable Output<String> ssoadmin) {
             this.ssoadmin = ssoadmin;
             return this;
         }
 
-        public Builder stepfunctions(@Nullable Input<String> stepfunctions) {
+        public Builder stepfunctions(@Nullable Output<String> stepfunctions) {
             this.stepfunctions = stepfunctions;
             return this;
         }
 
-        public Builder storagegateway(@Nullable Input<String> storagegateway) {
+        public Builder storagegateway(@Nullable Output<String> storagegateway) {
             this.storagegateway = storagegateway;
             return this;
         }
 
-        public Builder sts(@Nullable Input<String> sts) {
+        public Builder sts(@Nullable Output<String> sts) {
             this.sts = sts;
             return this;
         }
 
-        public Builder swf(@Nullable Input<String> swf) {
+        public Builder swf(@Nullable Output<String> swf) {
             this.swf = swf;
             return this;
         }
 
-        public Builder synthetics(@Nullable Input<String> synthetics) {
+        public Builder synthetics(@Nullable Output<String> synthetics) {
             this.synthetics = synthetics;
             return this;
         }
 
-        public Builder timestreamwrite(@Nullable Input<String> timestreamwrite) {
+        public Builder timestreamwrite(@Nullable Output<String> timestreamwrite) {
             this.timestreamwrite = timestreamwrite;
             return this;
         }
 
-        public Builder transfer(@Nullable Input<String> transfer) {
+        public Builder transfer(@Nullable Output<String> transfer) {
             this.transfer = transfer;
             return this;
         }
 
-        public Builder waf(@Nullable Input<String> waf) {
+        public Builder waf(@Nullable Output<String> waf) {
             this.waf = waf;
             return this;
         }
 
-        public Builder wafregional(@Nullable Input<String> wafregional) {
+        public Builder wafregional(@Nullable Output<String> wafregional) {
             this.wafregional = wafregional;
             return this;
         }
 
-        public Builder wafv2(@Nullable Input<String> wafv2) {
+        public Builder wafv2(@Nullable Output<String> wafv2) {
             this.wafv2 = wafv2;
             return this;
         }
 
-        public Builder worklink(@Nullable Input<String> worklink) {
+        public Builder worklink(@Nullable Output<String> worklink) {
             this.worklink = worklink;
             return this;
         }
 
-        public Builder workmail(@Nullable Input<String> workmail) {
+        public Builder workmail(@Nullable Output<String> workmail) {
             this.workmail = workmail;
             return this;
         }
 
-        public Builder workspaces(@Nullable Input<String> workspaces) {
+        public Builder workspaces(@Nullable Output<String> workspaces) {
             this.workspaces = workspaces;
             return this;
         }
 
-        public Builder xray(@Nullable Input<String> xray) {
+        public Builder xray(@Nullable Output<String> xray) {
             this.xray = xray;
             return this;
         }

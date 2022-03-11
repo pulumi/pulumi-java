@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lightsail.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class DiskAutoSnapshotAddOnArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="snapshotTimeOfDay")
-      private final @Nullable Input<String> snapshotTimeOfDay;
+      private final @Nullable Output<String> snapshotTimeOfDay;
 
-    public Input<String> getSnapshotTimeOfDay() {
-        return this.snapshotTimeOfDay == null ? Input.empty() : this.snapshotTimeOfDay;
+    public Output<String> getSnapshotTimeOfDay() {
+        return this.snapshotTimeOfDay == null ? Output.empty() : this.snapshotTimeOfDay;
     }
 
-    public DiskAutoSnapshotAddOnArgs(@Nullable Input<String> snapshotTimeOfDay) {
+    public DiskAutoSnapshotAddOnArgs(@Nullable Output<String> snapshotTimeOfDay) {
         this.snapshotTimeOfDay = snapshotTimeOfDay;
     }
 
     private DiskAutoSnapshotAddOnArgs() {
-        this.snapshotTimeOfDay = Input.empty();
+        this.snapshotTimeOfDay = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class DiskAutoSnapshotAddOnArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> snapshotTimeOfDay;
+        private @Nullable Output<String> snapshotTimeOfDay;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class DiskAutoSnapshotAddOnArgs extends io.pulumi.resources.Resourc
     	      this.snapshotTimeOfDay = defaults.snapshotTimeOfDay;
         }
 
-        public Builder snapshotTimeOfDay(@Nullable Input<String> snapshotTimeOfDay) {
+        public Builder snapshotTimeOfDay(@Nullable Output<String> snapshotTimeOfDay) {
             this.snapshotTimeOfDay = snapshotTimeOfDay;
             return this;
         }
 
         public Builder snapshotTimeOfDay(@Nullable String snapshotTimeOfDay) {
-            this.snapshotTimeOfDay = Input.ofNullable(snapshotTimeOfDay);
+            this.snapshotTimeOfDay = Output.ofNullable(snapshotTimeOfDay);
             return this;
         }
         public DiskAutoSnapshotAddOnArgs build() {

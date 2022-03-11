@@ -6,7 +6,7 @@ package io.pulumi.azurenative.storage.inputs;
 import io.pulumi.azurenative.storage.enums.RuleType;
 import io.pulumi.azurenative.storage.inputs.ManagementPolicyDefinitionArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -27,9 +27,9 @@ public final class ManagementPolicyRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="definition", required=true)
-      private final Input<ManagementPolicyDefinitionArgs> definition;
+      private final Output<ManagementPolicyDefinitionArgs> definition;
 
-    public Input<ManagementPolicyDefinitionArgs> getDefinition() {
+    public Output<ManagementPolicyDefinitionArgs> getDefinition() {
         return this.definition;
     }
 
@@ -38,10 +38,10 @@ public final class ManagementPolicyRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -49,9 +49,9 @@ public final class ManagementPolicyRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -60,17 +60,17 @@ public final class ManagementPolicyRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<Either<String,RuleType>> type;
+      private final Output<Either<String,RuleType>> type;
 
-    public Input<Either<String,RuleType>> getType() {
+    public Output<Either<String,RuleType>> getType() {
         return this.type;
     }
 
     public ManagementPolicyRuleArgs(
-        Input<ManagementPolicyDefinitionArgs> definition,
-        @Nullable Input<Boolean> enabled,
-        Input<String> name,
-        Input<Either<String,RuleType>> type) {
+        Output<ManagementPolicyDefinitionArgs> definition,
+        @Nullable Output<Boolean> enabled,
+        Output<String> name,
+        Output<Either<String,RuleType>> type) {
         this.definition = Objects.requireNonNull(definition, "expected parameter 'definition' to be non-null");
         this.enabled = enabled;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
@@ -78,10 +78,10 @@ public final class ManagementPolicyRuleArgs extends io.pulumi.resources.Resource
     }
 
     private ManagementPolicyRuleArgs() {
-        this.definition = Input.empty();
-        this.enabled = Input.empty();
-        this.name = Input.empty();
-        this.type = Input.empty();
+        this.definition = Output.empty();
+        this.enabled = Output.empty();
+        this.name = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,10 +93,10 @@ public final class ManagementPolicyRuleArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<ManagementPolicyDefinitionArgs> definition;
-        private @Nullable Input<Boolean> enabled;
-        private Input<String> name;
-        private Input<Either<String,RuleType>> type;
+        private Output<ManagementPolicyDefinitionArgs> definition;
+        private @Nullable Output<Boolean> enabled;
+        private Output<String> name;
+        private Output<Either<String,RuleType>> type;
 
         public Builder() {
     	      // Empty
@@ -110,43 +110,43 @@ public final class ManagementPolicyRuleArgs extends io.pulumi.resources.Resource
     	      this.type = defaults.type;
         }
 
-        public Builder definition(Input<ManagementPolicyDefinitionArgs> definition) {
+        public Builder definition(Output<ManagementPolicyDefinitionArgs> definition) {
             this.definition = Objects.requireNonNull(definition);
             return this;
         }
 
         public Builder definition(ManagementPolicyDefinitionArgs definition) {
-            this.definition = Input.of(Objects.requireNonNull(definition));
+            this.definition = Output.of(Objects.requireNonNull(definition));
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder type(Input<Either<String,RuleType>> type) {
+        public Builder type(Output<Either<String,RuleType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(Either<String,RuleType> type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ManagementPolicyRuleArgs build() {

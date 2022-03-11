@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
@@ -20,18 +20,18 @@ public final class AutoscalerAutoscalingPolicyLoadBalancingUtilizationGetArgs ex
      * 
      */
     @InputImport(name="target", required=true)
-      private final Input<Double> target;
+      private final Output<Double> target;
 
-    public Input<Double> getTarget() {
+    public Output<Double> getTarget() {
         return this.target;
     }
 
-    public AutoscalerAutoscalingPolicyLoadBalancingUtilizationGetArgs(Input<Double> target) {
+    public AutoscalerAutoscalingPolicyLoadBalancingUtilizationGetArgs(Output<Double> target) {
         this.target = Objects.requireNonNull(target, "expected parameter 'target' to be non-null");
     }
 
     private AutoscalerAutoscalingPolicyLoadBalancingUtilizationGetArgs() {
-        this.target = Input.empty();
+        this.target = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class AutoscalerAutoscalingPolicyLoadBalancingUtilizationGetArgs ex
     }
 
     public static final class Builder {
-        private Input<Double> target;
+        private Output<Double> target;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class AutoscalerAutoscalingPolicyLoadBalancingUtilizationGetArgs ex
     	      this.target = defaults.target;
         }
 
-        public Builder target(Input<Double> target) {
+        public Builder target(Output<Double> target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
 
         public Builder target(Double target) {
-            this.target = Input.of(Objects.requireNonNull(target));
+            this.target = Output.of(Objects.requireNonNull(target));
             return this;
         }
         public AutoscalerAutoscalingPolicyLoadBalancingUtilizationGetArgs build() {

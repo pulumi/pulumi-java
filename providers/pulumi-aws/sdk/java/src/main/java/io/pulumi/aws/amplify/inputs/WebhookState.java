@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.amplify.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appId")
-      private final @Nullable Input<String> appId;
+      private final @Nullable Output<String> appId;
 
-    public Input<String> getAppId() {
-        return this.appId == null ? Input.empty() : this.appId;
+    public Output<String> getAppId() {
+        return this.appId == null ? Output.empty() : this.appId;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="branchName")
-      private final @Nullable Input<String> branchName;
+      private final @Nullable Output<String> branchName;
 
-    public Input<String> getBranchName() {
-        return this.branchName == null ? Input.empty() : this.branchName;
+    public Output<String> getBranchName() {
+        return this.branchName == null ? Output.empty() : this.branchName;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -63,18 +63,18 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="url")
-      private final @Nullable Input<String> url;
+      private final @Nullable Output<String> url;
 
-    public Input<String> getUrl() {
-        return this.url == null ? Input.empty() : this.url;
+    public Output<String> getUrl() {
+        return this.url == null ? Output.empty() : this.url;
     }
 
     public WebhookState(
-        @Nullable Input<String> appId,
-        @Nullable Input<String> arn,
-        @Nullable Input<String> branchName,
-        @Nullable Input<String> description,
-        @Nullable Input<String> url) {
+        @Nullable Output<String> appId,
+        @Nullable Output<String> arn,
+        @Nullable Output<String> branchName,
+        @Nullable Output<String> description,
+        @Nullable Output<String> url) {
         this.appId = appId;
         this.arn = arn;
         this.branchName = branchName;
@@ -83,11 +83,11 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
     }
 
     private WebhookState() {
-        this.appId = Input.empty();
-        this.arn = Input.empty();
-        this.branchName = Input.empty();
-        this.description = Input.empty();
-        this.url = Input.empty();
+        this.appId = Output.empty();
+        this.arn = Output.empty();
+        this.branchName = Output.empty();
+        this.description = Output.empty();
+        this.url = Output.empty();
     }
 
     public static Builder builder() {
@@ -99,11 +99,11 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> appId;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> branchName;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> url;
+        private @Nullable Output<String> appId;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> branchName;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> url;
 
         public Builder() {
     	      // Empty
@@ -118,53 +118,53 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
     	      this.url = defaults.url;
         }
 
-        public Builder appId(@Nullable Input<String> appId) {
+        public Builder appId(@Nullable Output<String> appId) {
             this.appId = appId;
             return this;
         }
 
         public Builder appId(@Nullable String appId) {
-            this.appId = Input.ofNullable(appId);
+            this.appId = Output.ofNullable(appId);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder branchName(@Nullable Input<String> branchName) {
+        public Builder branchName(@Nullable Output<String> branchName) {
             this.branchName = branchName;
             return this;
         }
 
         public Builder branchName(@Nullable String branchName) {
-            this.branchName = Input.ofNullable(branchName);
+            this.branchName = Output.ofNullable(branchName);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder url(@Nullable Input<String> url) {
+        public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
 
         public Builder url(@Nullable String url) {
-            this.url = Input.ofNullable(url);
+            this.url = Output.ofNullable(url);
             return this;
         }
         public WebhookState build() {

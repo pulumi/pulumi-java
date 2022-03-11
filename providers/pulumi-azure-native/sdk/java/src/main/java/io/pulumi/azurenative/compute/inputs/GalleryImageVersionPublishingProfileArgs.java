@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.enums.StorageAccountType;
 import io.pulumi.azurenative.compute.inputs.TargetRegionArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -29,10 +29,10 @@ public final class GalleryImageVersionPublishingProfileArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="endOfLifeDate")
-      private final @Nullable Input<String> endOfLifeDate;
+      private final @Nullable Output<String> endOfLifeDate;
 
-    public Input<String> getEndOfLifeDate() {
-        return this.endOfLifeDate == null ? Input.empty() : this.endOfLifeDate;
+    public Output<String> getEndOfLifeDate() {
+        return this.endOfLifeDate == null ? Output.empty() : this.endOfLifeDate;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class GalleryImageVersionPublishingProfileArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="excludeFromLatest")
-      private final @Nullable Input<Boolean> excludeFromLatest;
+      private final @Nullable Output<Boolean> excludeFromLatest;
 
-    public Input<Boolean> getExcludeFromLatest() {
-        return this.excludeFromLatest == null ? Input.empty() : this.excludeFromLatest;
+    public Output<Boolean> getExcludeFromLatest() {
+        return this.excludeFromLatest == null ? Output.empty() : this.excludeFromLatest;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class GalleryImageVersionPublishingProfileArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="replicaCount")
-      private final @Nullable Input<Integer> replicaCount;
+      private final @Nullable Output<Integer> replicaCount;
 
-    public Input<Integer> getReplicaCount() {
-        return this.replicaCount == null ? Input.empty() : this.replicaCount;
+    public Output<Integer> getReplicaCount() {
+        return this.replicaCount == null ? Output.empty() : this.replicaCount;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class GalleryImageVersionPublishingProfileArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="storageAccountType")
-      private final @Nullable Input<Either<String,StorageAccountType>> storageAccountType;
+      private final @Nullable Output<Either<String,StorageAccountType>> storageAccountType;
 
-    public Input<Either<String,StorageAccountType>> getStorageAccountType() {
-        return this.storageAccountType == null ? Input.empty() : this.storageAccountType;
+    public Output<Either<String,StorageAccountType>> getStorageAccountType() {
+        return this.storageAccountType == null ? Output.empty() : this.storageAccountType;
     }
 
     /**
@@ -73,18 +73,18 @@ public final class GalleryImageVersionPublishingProfileArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="targetRegions")
-      private final @Nullable Input<List<TargetRegionArgs>> targetRegions;
+      private final @Nullable Output<List<TargetRegionArgs>> targetRegions;
 
-    public Input<List<TargetRegionArgs>> getTargetRegions() {
-        return this.targetRegions == null ? Input.empty() : this.targetRegions;
+    public Output<List<TargetRegionArgs>> getTargetRegions() {
+        return this.targetRegions == null ? Output.empty() : this.targetRegions;
     }
 
     public GalleryImageVersionPublishingProfileArgs(
-        @Nullable Input<String> endOfLifeDate,
-        @Nullable Input<Boolean> excludeFromLatest,
-        @Nullable Input<Integer> replicaCount,
-        @Nullable Input<Either<String,StorageAccountType>> storageAccountType,
-        @Nullable Input<List<TargetRegionArgs>> targetRegions) {
+        @Nullable Output<String> endOfLifeDate,
+        @Nullable Output<Boolean> excludeFromLatest,
+        @Nullable Output<Integer> replicaCount,
+        @Nullable Output<Either<String,StorageAccountType>> storageAccountType,
+        @Nullable Output<List<TargetRegionArgs>> targetRegions) {
         this.endOfLifeDate = endOfLifeDate;
         this.excludeFromLatest = excludeFromLatest;
         this.replicaCount = replicaCount;
@@ -93,11 +93,11 @@ public final class GalleryImageVersionPublishingProfileArgs extends io.pulumi.re
     }
 
     private GalleryImageVersionPublishingProfileArgs() {
-        this.endOfLifeDate = Input.empty();
-        this.excludeFromLatest = Input.empty();
-        this.replicaCount = Input.empty();
-        this.storageAccountType = Input.empty();
-        this.targetRegions = Input.empty();
+        this.endOfLifeDate = Output.empty();
+        this.excludeFromLatest = Output.empty();
+        this.replicaCount = Output.empty();
+        this.storageAccountType = Output.empty();
+        this.targetRegions = Output.empty();
     }
 
     public static Builder builder() {
@@ -109,11 +109,11 @@ public final class GalleryImageVersionPublishingProfileArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> endOfLifeDate;
-        private @Nullable Input<Boolean> excludeFromLatest;
-        private @Nullable Input<Integer> replicaCount;
-        private @Nullable Input<Either<String,StorageAccountType>> storageAccountType;
-        private @Nullable Input<List<TargetRegionArgs>> targetRegions;
+        private @Nullable Output<String> endOfLifeDate;
+        private @Nullable Output<Boolean> excludeFromLatest;
+        private @Nullable Output<Integer> replicaCount;
+        private @Nullable Output<Either<String,StorageAccountType>> storageAccountType;
+        private @Nullable Output<List<TargetRegionArgs>> targetRegions;
 
         public Builder() {
     	      // Empty
@@ -128,53 +128,53 @@ public final class GalleryImageVersionPublishingProfileArgs extends io.pulumi.re
     	      this.targetRegions = defaults.targetRegions;
         }
 
-        public Builder endOfLifeDate(@Nullable Input<String> endOfLifeDate) {
+        public Builder endOfLifeDate(@Nullable Output<String> endOfLifeDate) {
             this.endOfLifeDate = endOfLifeDate;
             return this;
         }
 
         public Builder endOfLifeDate(@Nullable String endOfLifeDate) {
-            this.endOfLifeDate = Input.ofNullable(endOfLifeDate);
+            this.endOfLifeDate = Output.ofNullable(endOfLifeDate);
             return this;
         }
 
-        public Builder excludeFromLatest(@Nullable Input<Boolean> excludeFromLatest) {
+        public Builder excludeFromLatest(@Nullable Output<Boolean> excludeFromLatest) {
             this.excludeFromLatest = excludeFromLatest;
             return this;
         }
 
         public Builder excludeFromLatest(@Nullable Boolean excludeFromLatest) {
-            this.excludeFromLatest = Input.ofNullable(excludeFromLatest);
+            this.excludeFromLatest = Output.ofNullable(excludeFromLatest);
             return this;
         }
 
-        public Builder replicaCount(@Nullable Input<Integer> replicaCount) {
+        public Builder replicaCount(@Nullable Output<Integer> replicaCount) {
             this.replicaCount = replicaCount;
             return this;
         }
 
         public Builder replicaCount(@Nullable Integer replicaCount) {
-            this.replicaCount = Input.ofNullable(replicaCount);
+            this.replicaCount = Output.ofNullable(replicaCount);
             return this;
         }
 
-        public Builder storageAccountType(@Nullable Input<Either<String,StorageAccountType>> storageAccountType) {
+        public Builder storageAccountType(@Nullable Output<Either<String,StorageAccountType>> storageAccountType) {
             this.storageAccountType = storageAccountType;
             return this;
         }
 
         public Builder storageAccountType(@Nullable Either<String,StorageAccountType> storageAccountType) {
-            this.storageAccountType = Input.ofNullable(storageAccountType);
+            this.storageAccountType = Output.ofNullable(storageAccountType);
             return this;
         }
 
-        public Builder targetRegions(@Nullable Input<List<TargetRegionArgs>> targetRegions) {
+        public Builder targetRegions(@Nullable Output<List<TargetRegionArgs>> targetRegions) {
             this.targetRegions = targetRegions;
             return this;
         }
 
         public Builder targetRegions(@Nullable List<TargetRegionArgs> targetRegions) {
-            this.targetRegions = Input.ofNullable(targetRegions);
+            this.targetRegions = Output.ofNullable(targetRegions);
             return this;
         }
         public GalleryImageVersionPublishingProfileArgs build() {

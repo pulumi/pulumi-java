@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.identityplatform.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class DefaultSupportedIdpConfigState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="clientId")
-      private final @Nullable Input<String> clientId;
+      private final @Nullable Output<String> clientId;
 
-    public Input<String> getClientId() {
-        return this.clientId == null ? Input.empty() : this.clientId;
+    public Output<String> getClientId() {
+        return this.clientId == null ? Output.empty() : this.clientId;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class DefaultSupportedIdpConfigState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="clientSecret")
-      private final @Nullable Input<String> clientSecret;
+      private final @Nullable Output<String> clientSecret;
 
-    public Input<String> getClientSecret() {
-        return this.clientSecret == null ? Input.empty() : this.clientSecret;
+    public Output<String> getClientSecret() {
+        return this.clientSecret == null ? Output.empty() : this.clientSecret;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class DefaultSupportedIdpConfigState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class DefaultSupportedIdpConfigState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="idpId")
-      private final @Nullable Input<String> idpId;
+      private final @Nullable Output<String> idpId;
 
-    public Input<String> getIdpId() {
-        return this.idpId == null ? Input.empty() : this.idpId;
+    public Output<String> getIdpId() {
+        return this.idpId == null ? Output.empty() : this.idpId;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class DefaultSupportedIdpConfigState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -86,19 +86,19 @@ public final class DefaultSupportedIdpConfigState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public DefaultSupportedIdpConfigState(
-        @Nullable Input<String> clientId,
-        @Nullable Input<String> clientSecret,
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<String> idpId,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project) {
+        @Nullable Output<String> clientId,
+        @Nullable Output<String> clientSecret,
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<String> idpId,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project) {
         this.clientId = clientId;
         this.clientSecret = clientSecret;
         this.enabled = enabled;
@@ -108,12 +108,12 @@ public final class DefaultSupportedIdpConfigState extends io.pulumi.resources.Re
     }
 
     private DefaultSupportedIdpConfigState() {
-        this.clientId = Input.empty();
-        this.clientSecret = Input.empty();
-        this.enabled = Input.empty();
-        this.idpId = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
+        this.clientId = Output.empty();
+        this.clientSecret = Output.empty();
+        this.enabled = Output.empty();
+        this.idpId = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -125,12 +125,12 @@ public final class DefaultSupportedIdpConfigState extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> clientId;
-        private @Nullable Input<String> clientSecret;
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<String> idpId;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
+        private @Nullable Output<String> clientId;
+        private @Nullable Output<String> clientSecret;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<String> idpId;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -146,63 +146,63 @@ public final class DefaultSupportedIdpConfigState extends io.pulumi.resources.Re
     	      this.project = defaults.project;
         }
 
-        public Builder clientId(@Nullable Input<String> clientId) {
+        public Builder clientId(@Nullable Output<String> clientId) {
             this.clientId = clientId;
             return this;
         }
 
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = Input.ofNullable(clientId);
+            this.clientId = Output.ofNullable(clientId);
             return this;
         }
 
-        public Builder clientSecret(@Nullable Input<String> clientSecret) {
+        public Builder clientSecret(@Nullable Output<String> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
 
         public Builder clientSecret(@Nullable String clientSecret) {
-            this.clientSecret = Input.ofNullable(clientSecret);
+            this.clientSecret = Output.ofNullable(clientSecret);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder idpId(@Nullable Input<String> idpId) {
+        public Builder idpId(@Nullable Output<String> idpId) {
             this.idpId = idpId;
             return this;
         }
 
         public Builder idpId(@Nullable String idpId) {
-            this.idpId = Input.ofNullable(idpId);
+            this.idpId = Output.ofNullable(idpId);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public DefaultSupportedIdpConfigState build() {

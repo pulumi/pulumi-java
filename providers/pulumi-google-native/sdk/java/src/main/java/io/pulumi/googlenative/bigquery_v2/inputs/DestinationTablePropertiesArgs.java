@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class DestinationTablePropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class DestinationTablePropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="expirationTime")
-      private final @Nullable Input<String> expirationTime;
+      private final @Nullable Output<String> expirationTime;
 
-    public Input<String> getExpirationTime() {
-        return this.expirationTime == null ? Input.empty() : this.expirationTime;
+    public Output<String> getExpirationTime() {
+        return this.expirationTime == null ? Output.empty() : this.expirationTime;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class DestinationTablePropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="friendlyName")
-      private final @Nullable Input<String> friendlyName;
+      private final @Nullable Output<String> friendlyName;
 
-    public Input<String> getFriendlyName() {
-        return this.friendlyName == null ? Input.empty() : this.friendlyName;
+    public Output<String> getFriendlyName() {
+        return this.friendlyName == null ? Output.empty() : this.friendlyName;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class DestinationTablePropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     public DestinationTablePropertiesArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> expirationTime,
-        @Nullable Input<String> friendlyName,
-        @Nullable Input<Map<String,String>> labels) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> expirationTime,
+        @Nullable Output<String> friendlyName,
+        @Nullable Output<Map<String,String>> labels) {
         this.description = description;
         this.expirationTime = expirationTime;
         this.friendlyName = friendlyName;
@@ -71,10 +71,10 @@ public final class DestinationTablePropertiesArgs extends io.pulumi.resources.Re
     }
 
     private DestinationTablePropertiesArgs() {
-        this.description = Input.empty();
-        this.expirationTime = Input.empty();
-        this.friendlyName = Input.empty();
-        this.labels = Input.empty();
+        this.description = Output.empty();
+        this.expirationTime = Output.empty();
+        this.friendlyName = Output.empty();
+        this.labels = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class DestinationTablePropertiesArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> expirationTime;
-        private @Nullable Input<String> friendlyName;
-        private @Nullable Input<Map<String,String>> labels;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> expirationTime;
+        private @Nullable Output<String> friendlyName;
+        private @Nullable Output<Map<String,String>> labels;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class DestinationTablePropertiesArgs extends io.pulumi.resources.Re
     	      this.labels = defaults.labels;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder expirationTime(@Nullable Input<String> expirationTime) {
+        public Builder expirationTime(@Nullable Output<String> expirationTime) {
             this.expirationTime = expirationTime;
             return this;
         }
 
         public Builder expirationTime(@Nullable String expirationTime) {
-            this.expirationTime = Input.ofNullable(expirationTime);
+            this.expirationTime = Output.ofNullable(expirationTime);
             return this;
         }
 
-        public Builder friendlyName(@Nullable Input<String> friendlyName) {
+        public Builder friendlyName(@Nullable Output<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Input.ofNullable(friendlyName);
+            this.friendlyName = Output.ofNullable(friendlyName);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
         public DestinationTablePropertiesArgs build() {

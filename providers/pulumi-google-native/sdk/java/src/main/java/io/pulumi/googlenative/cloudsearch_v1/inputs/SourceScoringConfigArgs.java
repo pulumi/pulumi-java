@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudsearch_v1.enums.SourceScoringConfigSourceImportance;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class SourceScoringConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="sourceImportance")
-      private final @Nullable Input<SourceScoringConfigSourceImportance> sourceImportance;
+      private final @Nullable Output<SourceScoringConfigSourceImportance> sourceImportance;
 
-    public Input<SourceScoringConfigSourceImportance> getSourceImportance() {
-        return this.sourceImportance == null ? Input.empty() : this.sourceImportance;
+    public Output<SourceScoringConfigSourceImportance> getSourceImportance() {
+        return this.sourceImportance == null ? Output.empty() : this.sourceImportance;
     }
 
-    public SourceScoringConfigArgs(@Nullable Input<SourceScoringConfigSourceImportance> sourceImportance) {
+    public SourceScoringConfigArgs(@Nullable Output<SourceScoringConfigSourceImportance> sourceImportance) {
         this.sourceImportance = sourceImportance;
     }
 
     private SourceScoringConfigArgs() {
-        this.sourceImportance = Input.empty();
+        this.sourceImportance = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class SourceScoringConfigArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<SourceScoringConfigSourceImportance> sourceImportance;
+        private @Nullable Output<SourceScoringConfigSourceImportance> sourceImportance;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class SourceScoringConfigArgs extends io.pulumi.resources.ResourceA
     	      this.sourceImportance = defaults.sourceImportance;
         }
 
-        public Builder sourceImportance(@Nullable Input<SourceScoringConfigSourceImportance> sourceImportance) {
+        public Builder sourceImportance(@Nullable Output<SourceScoringConfigSourceImportance> sourceImportance) {
             this.sourceImportance = sourceImportance;
             return this;
         }
 
         public Builder sourceImportance(@Nullable SourceScoringConfigSourceImportance sourceImportance) {
-            this.sourceImportance = Input.ofNullable(sourceImportance);
+            this.sourceImportance = Output.ofNullable(sourceImportance);
             return this;
         }
         public SourceScoringConfigArgs build() {

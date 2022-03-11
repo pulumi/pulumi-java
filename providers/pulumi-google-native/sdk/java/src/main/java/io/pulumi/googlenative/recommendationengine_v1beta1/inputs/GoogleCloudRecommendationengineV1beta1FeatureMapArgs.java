@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.recommendationengine_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -24,10 +24,10 @@ public final class GoogleCloudRecommendationengineV1beta1FeatureMapArgs extends 
      * 
      */
     @InputImport(name="categoricalFeatures")
-      private final @Nullable Input<Map<String,String>> categoricalFeatures;
+      private final @Nullable Output<Map<String,String>> categoricalFeatures;
 
-    public Input<Map<String,String>> getCategoricalFeatures() {
-        return this.categoricalFeatures == null ? Input.empty() : this.categoricalFeatures;
+    public Output<Map<String,String>> getCategoricalFeatures() {
+        return this.categoricalFeatures == null ? Output.empty() : this.categoricalFeatures;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class GoogleCloudRecommendationengineV1beta1FeatureMapArgs extends 
      * 
      */
     @InputImport(name="numericalFeatures")
-      private final @Nullable Input<Map<String,String>> numericalFeatures;
+      private final @Nullable Output<Map<String,String>> numericalFeatures;
 
-    public Input<Map<String,String>> getNumericalFeatures() {
-        return this.numericalFeatures == null ? Input.empty() : this.numericalFeatures;
+    public Output<Map<String,String>> getNumericalFeatures() {
+        return this.numericalFeatures == null ? Output.empty() : this.numericalFeatures;
     }
 
     public GoogleCloudRecommendationengineV1beta1FeatureMapArgs(
-        @Nullable Input<Map<String,String>> categoricalFeatures,
-        @Nullable Input<Map<String,String>> numericalFeatures) {
+        @Nullable Output<Map<String,String>> categoricalFeatures,
+        @Nullable Output<Map<String,String>> numericalFeatures) {
         this.categoricalFeatures = categoricalFeatures;
         this.numericalFeatures = numericalFeatures;
     }
 
     private GoogleCloudRecommendationengineV1beta1FeatureMapArgs() {
-        this.categoricalFeatures = Input.empty();
-        this.numericalFeatures = Input.empty();
+        this.categoricalFeatures = Output.empty();
+        this.numericalFeatures = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class GoogleCloudRecommendationengineV1beta1FeatureMapArgs extends 
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> categoricalFeatures;
-        private @Nullable Input<Map<String,String>> numericalFeatures;
+        private @Nullable Output<Map<String,String>> categoricalFeatures;
+        private @Nullable Output<Map<String,String>> numericalFeatures;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class GoogleCloudRecommendationengineV1beta1FeatureMapArgs extends 
     	      this.numericalFeatures = defaults.numericalFeatures;
         }
 
-        public Builder categoricalFeatures(@Nullable Input<Map<String,String>> categoricalFeatures) {
+        public Builder categoricalFeatures(@Nullable Output<Map<String,String>> categoricalFeatures) {
             this.categoricalFeatures = categoricalFeatures;
             return this;
         }
 
         public Builder categoricalFeatures(@Nullable Map<String,String> categoricalFeatures) {
-            this.categoricalFeatures = Input.ofNullable(categoricalFeatures);
+            this.categoricalFeatures = Output.ofNullable(categoricalFeatures);
             return this;
         }
 
-        public Builder numericalFeatures(@Nullable Input<Map<String,String>> numericalFeatures) {
+        public Builder numericalFeatures(@Nullable Output<Map<String,String>> numericalFeatures) {
             this.numericalFeatures = numericalFeatures;
             return this;
         }
 
         public Builder numericalFeatures(@Nullable Map<String,String> numericalFeatures) {
-            this.numericalFeatures = Input.ofNullable(numericalFeatures);
+            this.numericalFeatures = Output.ofNullable(numericalFeatures);
             return this;
         }
         public GoogleCloudRecommendationengineV1beta1FeatureMapArgs build() {

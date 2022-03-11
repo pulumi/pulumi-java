@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.awsnative.ecs.enums.ServiceDeploymentControllerType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,18 +15,18 @@ public final class ServiceDeploymentControllerArgs extends io.pulumi.resources.R
     public static final ServiceDeploymentControllerArgs Empty = new ServiceDeploymentControllerArgs();
 
     @InputImport(name="type")
-      private final @Nullable Input<ServiceDeploymentControllerType> type;
+      private final @Nullable Output<ServiceDeploymentControllerType> type;
 
-    public Input<ServiceDeploymentControllerType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<ServiceDeploymentControllerType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
-    public ServiceDeploymentControllerArgs(@Nullable Input<ServiceDeploymentControllerType> type) {
+    public ServiceDeploymentControllerArgs(@Nullable Output<ServiceDeploymentControllerType> type) {
         this.type = type;
     }
 
     private ServiceDeploymentControllerArgs() {
-        this.type = Input.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class ServiceDeploymentControllerArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<ServiceDeploymentControllerType> type;
+        private @Nullable Output<ServiceDeploymentControllerType> type;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class ServiceDeploymentControllerArgs extends io.pulumi.resources.R
     	      this.type = defaults.type;
         }
 
-        public Builder type(@Nullable Input<ServiceDeploymentControllerType> type) {
+        public Builder type(@Nullable Output<ServiceDeploymentControllerType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable ServiceDeploymentControllerType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public ServiceDeploymentControllerArgs build() {

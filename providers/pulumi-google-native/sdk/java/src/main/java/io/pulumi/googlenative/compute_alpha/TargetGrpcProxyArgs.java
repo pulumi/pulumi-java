@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class TargetGrpcProxyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -31,24 +31,24 @@ public final class TargetGrpcProxyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class TargetGrpcProxyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="urlMap")
-      private final @Nullable Input<String> urlMap;
+      private final @Nullable Output<String> urlMap;
 
-    public Input<String> getUrlMap() {
-        return this.urlMap == null ? Input.empty() : this.urlMap;
+    public Output<String> getUrlMap() {
+        return this.urlMap == null ? Output.empty() : this.urlMap;
     }
 
     /**
@@ -67,19 +67,19 @@ public final class TargetGrpcProxyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="validateForProxyless")
-      private final @Nullable Input<Boolean> validateForProxyless;
+      private final @Nullable Output<Boolean> validateForProxyless;
 
-    public Input<Boolean> getValidateForProxyless() {
-        return this.validateForProxyless == null ? Input.empty() : this.validateForProxyless;
+    public Output<Boolean> getValidateForProxyless() {
+        return this.validateForProxyless == null ? Output.empty() : this.validateForProxyless;
     }
 
     public TargetGrpcProxyArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<String> requestId,
-        @Nullable Input<String> urlMap,
-        @Nullable Input<Boolean> validateForProxyless) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<String> requestId,
+        @Nullable Output<String> urlMap,
+        @Nullable Output<Boolean> validateForProxyless) {
         this.description = description;
         this.name = name;
         this.project = project;
@@ -89,12 +89,12 @@ public final class TargetGrpcProxyArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private TargetGrpcProxyArgs() {
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.requestId = Input.empty();
-        this.urlMap = Input.empty();
-        this.validateForProxyless = Input.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.requestId = Output.empty();
+        this.urlMap = Output.empty();
+        this.validateForProxyless = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,12 +106,12 @@ public final class TargetGrpcProxyArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> requestId;
-        private @Nullable Input<String> urlMap;
-        private @Nullable Input<Boolean> validateForProxyless;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> requestId;
+        private @Nullable Output<String> urlMap;
+        private @Nullable Output<Boolean> validateForProxyless;
 
         public Builder() {
     	      // Empty
@@ -127,63 +127,63 @@ public final class TargetGrpcProxyArgs extends io.pulumi.resources.ResourceArgs 
     	      this.validateForProxyless = defaults.validateForProxyless;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
 
-        public Builder urlMap(@Nullable Input<String> urlMap) {
+        public Builder urlMap(@Nullable Output<String> urlMap) {
             this.urlMap = urlMap;
             return this;
         }
 
         public Builder urlMap(@Nullable String urlMap) {
-            this.urlMap = Input.ofNullable(urlMap);
+            this.urlMap = Output.ofNullable(urlMap);
             return this;
         }
 
-        public Builder validateForProxyless(@Nullable Input<Boolean> validateForProxyless) {
+        public Builder validateForProxyless(@Nullable Output<Boolean> validateForProxyless) {
             this.validateForProxyless = validateForProxyless;
             return this;
         }
 
         public Builder validateForProxyless(@Nullable Boolean validateForProxyless) {
-            this.validateForProxyless = Input.ofNullable(validateForProxyless);
+            this.validateForProxyless = Output.ofNullable(validateForProxyless);
             return this;
         }
         public TargetGrpcProxyArgs build() {

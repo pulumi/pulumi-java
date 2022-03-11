@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.meta_v1.inputs;
 
 import com.google.gson.JsonElement;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="apiVersion")
-      private final @Nullable Input<String> apiVersion;
+      private final @Nullable Output<String> apiVersion;
 
-    public Input<String> getApiVersion() {
-        return this.apiVersion == null ? Input.empty() : this.apiVersion;
+    public Output<String> getApiVersion() {
+        return this.apiVersion == null ? Output.empty() : this.apiVersion;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="fieldsType")
-      private final @Nullable Input<String> fieldsType;
+      private final @Nullable Output<String> fieldsType;
 
-    public Input<String> getFieldsType() {
-        return this.fieldsType == null ? Input.empty() : this.fieldsType;
+    public Output<String> getFieldsType() {
+        return this.fieldsType == null ? Output.empty() : this.fieldsType;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="fieldsV1")
-      private final @Nullable Input<JsonElement> fieldsV1;
+      private final @Nullable Output<JsonElement> fieldsV1;
 
-    public Input<JsonElement> getFieldsV1() {
-        return this.fieldsV1 == null ? Input.empty() : this.fieldsV1;
+    public Output<JsonElement> getFieldsV1() {
+        return this.fieldsV1 == null ? Output.empty() : this.fieldsV1;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="manager")
-      private final @Nullable Input<String> manager;
+      private final @Nullable Output<String> manager;
 
-    public Input<String> getManager() {
-        return this.manager == null ? Input.empty() : this.manager;
+    public Output<String> getManager() {
+        return this.manager == null ? Output.empty() : this.manager;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="operation")
-      private final @Nullable Input<String> operation;
+      private final @Nullable Output<String> operation;
 
-    public Input<String> getOperation() {
-        return this.operation == null ? Input.empty() : this.operation;
+    public Output<String> getOperation() {
+        return this.operation == null ? Output.empty() : this.operation;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="subresource")
-      private final @Nullable Input<String> subresource;
+      private final @Nullable Output<String> subresource;
 
-    public Input<String> getSubresource() {
-        return this.subresource == null ? Input.empty() : this.subresource;
+    public Output<String> getSubresource() {
+        return this.subresource == null ? Output.empty() : this.subresource;
     }
 
     /**
@@ -90,20 +90,20 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="time")
-      private final @Nullable Input<String> time;
+      private final @Nullable Output<String> time;
 
-    public Input<String> getTime() {
-        return this.time == null ? Input.empty() : this.time;
+    public Output<String> getTime() {
+        return this.time == null ? Output.empty() : this.time;
     }
 
     public ManagedFieldsEntryArgs(
-        @Nullable Input<String> apiVersion,
-        @Nullable Input<String> fieldsType,
-        @Nullable Input<JsonElement> fieldsV1,
-        @Nullable Input<String> manager,
-        @Nullable Input<String> operation,
-        @Nullable Input<String> subresource,
-        @Nullable Input<String> time) {
+        @Nullable Output<String> apiVersion,
+        @Nullable Output<String> fieldsType,
+        @Nullable Output<JsonElement> fieldsV1,
+        @Nullable Output<String> manager,
+        @Nullable Output<String> operation,
+        @Nullable Output<String> subresource,
+        @Nullable Output<String> time) {
         this.apiVersion = apiVersion;
         this.fieldsType = fieldsType;
         this.fieldsV1 = fieldsV1;
@@ -114,13 +114,13 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ManagedFieldsEntryArgs() {
-        this.apiVersion = Input.empty();
-        this.fieldsType = Input.empty();
-        this.fieldsV1 = Input.empty();
-        this.manager = Input.empty();
-        this.operation = Input.empty();
-        this.subresource = Input.empty();
-        this.time = Input.empty();
+        this.apiVersion = Output.empty();
+        this.fieldsType = Output.empty();
+        this.fieldsV1 = Output.empty();
+        this.manager = Output.empty();
+        this.operation = Output.empty();
+        this.subresource = Output.empty();
+        this.time = Output.empty();
     }
 
     public static Builder builder() {
@@ -132,13 +132,13 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> apiVersion;
-        private @Nullable Input<String> fieldsType;
-        private @Nullable Input<JsonElement> fieldsV1;
-        private @Nullable Input<String> manager;
-        private @Nullable Input<String> operation;
-        private @Nullable Input<String> subresource;
-        private @Nullable Input<String> time;
+        private @Nullable Output<String> apiVersion;
+        private @Nullable Output<String> fieldsType;
+        private @Nullable Output<JsonElement> fieldsV1;
+        private @Nullable Output<String> manager;
+        private @Nullable Output<String> operation;
+        private @Nullable Output<String> subresource;
+        private @Nullable Output<String> time;
 
         public Builder() {
     	      // Empty
@@ -155,73 +155,73 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
     	      this.time = defaults.time;
         }
 
-        public Builder apiVersion(@Nullable Input<String> apiVersion) {
+        public Builder apiVersion(@Nullable Output<String> apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
         public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Input.ofNullable(apiVersion);
+            this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
 
-        public Builder fieldsType(@Nullable Input<String> fieldsType) {
+        public Builder fieldsType(@Nullable Output<String> fieldsType) {
             this.fieldsType = fieldsType;
             return this;
         }
 
         public Builder fieldsType(@Nullable String fieldsType) {
-            this.fieldsType = Input.ofNullable(fieldsType);
+            this.fieldsType = Output.ofNullable(fieldsType);
             return this;
         }
 
-        public Builder fieldsV1(@Nullable Input<JsonElement> fieldsV1) {
+        public Builder fieldsV1(@Nullable Output<JsonElement> fieldsV1) {
             this.fieldsV1 = fieldsV1;
             return this;
         }
 
         public Builder fieldsV1(@Nullable JsonElement fieldsV1) {
-            this.fieldsV1 = Input.ofNullable(fieldsV1);
+            this.fieldsV1 = Output.ofNullable(fieldsV1);
             return this;
         }
 
-        public Builder manager(@Nullable Input<String> manager) {
+        public Builder manager(@Nullable Output<String> manager) {
             this.manager = manager;
             return this;
         }
 
         public Builder manager(@Nullable String manager) {
-            this.manager = Input.ofNullable(manager);
+            this.manager = Output.ofNullable(manager);
             return this;
         }
 
-        public Builder operation(@Nullable Input<String> operation) {
+        public Builder operation(@Nullable Output<String> operation) {
             this.operation = operation;
             return this;
         }
 
         public Builder operation(@Nullable String operation) {
-            this.operation = Input.ofNullable(operation);
+            this.operation = Output.ofNullable(operation);
             return this;
         }
 
-        public Builder subresource(@Nullable Input<String> subresource) {
+        public Builder subresource(@Nullable Output<String> subresource) {
             this.subresource = subresource;
             return this;
         }
 
         public Builder subresource(@Nullable String subresource) {
-            this.subresource = Input.ofNullable(subresource);
+            this.subresource = Output.ofNullable(subresource);
             return this;
         }
 
-        public Builder time(@Nullable Input<String> time) {
+        public Builder time(@Nullable Output<String> time) {
             this.time = time;
             return this;
         }
 
         public Builder time(@Nullable String time) {
-            this.time = Input.ofNullable(time);
+            this.time = Output.ofNullable(time);
             return this;
         }
         public ManagedFieldsEntryArgs build() {

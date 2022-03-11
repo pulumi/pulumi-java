@@ -5,7 +5,7 @@ package io.pulumi.aws.codepipeline.inputs;
 
 import io.pulumi.aws.codepipeline.inputs.PipelineArtifactStoreGetArgs;
 import io.pulumi.aws.codepipeline.inputs.PipelineStageGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,10 +23,10 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="artifactStore")
-      private final @Nullable Input<PipelineArtifactStoreGetArgs> artifactStore;
+      private final @Nullable Output<PipelineArtifactStoreGetArgs> artifactStore;
 
-    public Input<PipelineArtifactStoreGetArgs> getArtifactStore() {
-        return this.artifactStore == null ? Input.empty() : this.artifactStore;
+    public Output<PipelineArtifactStoreGetArgs> getArtifactStore() {
+        return this.artifactStore == null ? Output.empty() : this.artifactStore;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn")
-      private final @Nullable Input<String> roleArn;
+      private final @Nullable Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
-        return this.roleArn == null ? Input.empty() : this.roleArn;
+    public Output<String> getRoleArn() {
+        return this.roleArn == null ? Output.empty() : this.roleArn;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stages")
-      private final @Nullable Input<List<PipelineStageGetArgs>> stages;
+      private final @Nullable Output<List<PipelineStageGetArgs>> stages;
 
-    public Input<List<PipelineStageGetArgs>> getStages() {
-        return this.stages == null ? Input.empty() : this.stages;
+    public Output<List<PipelineStageGetArgs>> getStages() {
+        return this.stages == null ? Output.empty() : this.stages;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -89,20 +89,20 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public PipelineState(
-        @Nullable Input<String> arn,
-        @Nullable Input<PipelineArtifactStoreGetArgs> artifactStore,
-        @Nullable Input<String> name,
-        @Nullable Input<String> roleArn,
-        @Nullable Input<List<PipelineStageGetArgs>> stages,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> arn,
+        @Nullable Output<PipelineArtifactStoreGetArgs> artifactStore,
+        @Nullable Output<String> name,
+        @Nullable Output<String> roleArn,
+        @Nullable Output<List<PipelineStageGetArgs>> stages,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
         this.artifactStore = artifactStore;
         this.name = name;
@@ -113,13 +113,13 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
     }
 
     private PipelineState() {
-        this.arn = Input.empty();
-        this.artifactStore = Input.empty();
-        this.name = Input.empty();
-        this.roleArn = Input.empty();
-        this.stages = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.arn = Output.empty();
+        this.artifactStore = Output.empty();
+        this.name = Output.empty();
+        this.roleArn = Output.empty();
+        this.stages = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -131,13 +131,13 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<PipelineArtifactStoreGetArgs> artifactStore;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> roleArn;
-        private @Nullable Input<List<PipelineStageGetArgs>> stages;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<PipelineArtifactStoreGetArgs> artifactStore;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> roleArn;
+        private @Nullable Output<List<PipelineStageGetArgs>> stages;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -154,73 +154,73 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder artifactStore(@Nullable Input<PipelineArtifactStoreGetArgs> artifactStore) {
+        public Builder artifactStore(@Nullable Output<PipelineArtifactStoreGetArgs> artifactStore) {
             this.artifactStore = artifactStore;
             return this;
         }
 
         public Builder artifactStore(@Nullable PipelineArtifactStoreGetArgs artifactStore) {
-            this.artifactStore = Input.ofNullable(artifactStore);
+            this.artifactStore = Output.ofNullable(artifactStore);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder roleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Input.ofNullable(roleArn);
+            this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
 
-        public Builder stages(@Nullable Input<List<PipelineStageGetArgs>> stages) {
+        public Builder stages(@Nullable Output<List<PipelineStageGetArgs>> stages) {
             this.stages = stages;
             return this;
         }
 
         public Builder stages(@Nullable List<PipelineStageGetArgs> stages) {
-            this.stages = Input.ofNullable(stages);
+            this.stages = Output.ofNullable(stages);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public PipelineState build() {

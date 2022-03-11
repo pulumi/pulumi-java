@@ -9,7 +9,6 @@ import io.pulumi.azurenative.dataprotection.outputs.DppIdentityDetailsResponse;
 import io.pulumi.azurenative.dataprotection.outputs.ResourceGuardResponse;
 import io.pulumi.azurenative.dataprotection.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -185,20 +184,20 @@ public class ResourceGuard extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ResourceGuard(String name, ResourceGuardArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:dataprotection:ResourceGuard", name, args == null ? ResourceGuardArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:dataprotection:ResourceGuard", name, args == null ? ResourceGuardArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ResourceGuard(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ResourceGuard(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:dataprotection:ResourceGuard", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:dataprotection/v20210701:ResourceGuard").build()),
-                Input.of(Alias.builder().setType("azure-native:dataprotection/v20211001preview:ResourceGuard").build()),
-                Input.of(Alias.builder().setType("azure-native:dataprotection/v20211201preview:ResourceGuard").build())
+                Output.of(Alias.builder().setType("azure-native:dataprotection/v20210701:ResourceGuard").build()),
+                Output.of(Alias.builder().setType("azure-native:dataprotection/v20211001preview:ResourceGuard").build()),
+                Output.of(Alias.builder().setType("azure-native:dataprotection/v20211201preview:ResourceGuard").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -212,7 +211,7 @@ public class ResourceGuard extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ResourceGuard get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ResourceGuard get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ResourceGuard(name, id, options);
     }
 }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.customerprofiles.inputs;
 
 import io.pulumi.awsnative.customerprofiles.inputs.ObjectTypeFieldArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,29 +16,29 @@ public final class ObjectTypeFieldMapArgs extends io.pulumi.resources.ResourceAr
     public static final ObjectTypeFieldMapArgs Empty = new ObjectTypeFieldMapArgs();
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="objectTypeField")
-      private final @Nullable Input<ObjectTypeFieldArgs> objectTypeField;
+      private final @Nullable Output<ObjectTypeFieldArgs> objectTypeField;
 
-    public Input<ObjectTypeFieldArgs> getObjectTypeField() {
-        return this.objectTypeField == null ? Input.empty() : this.objectTypeField;
+    public Output<ObjectTypeFieldArgs> getObjectTypeField() {
+        return this.objectTypeField == null ? Output.empty() : this.objectTypeField;
     }
 
     public ObjectTypeFieldMapArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<ObjectTypeFieldArgs> objectTypeField) {
+        @Nullable Output<String> name,
+        @Nullable Output<ObjectTypeFieldArgs> objectTypeField) {
         this.name = name;
         this.objectTypeField = objectTypeField;
     }
 
     private ObjectTypeFieldMapArgs() {
-        this.name = Input.empty();
-        this.objectTypeField = Input.empty();
+        this.name = Output.empty();
+        this.objectTypeField = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class ObjectTypeFieldMapArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<ObjectTypeFieldArgs> objectTypeField;
+        private @Nullable Output<String> name;
+        private @Nullable Output<ObjectTypeFieldArgs> objectTypeField;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class ObjectTypeFieldMapArgs extends io.pulumi.resources.ResourceAr
     	      this.objectTypeField = defaults.objectTypeField;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder objectTypeField(@Nullable Input<ObjectTypeFieldArgs> objectTypeField) {
+        public Builder objectTypeField(@Nullable Output<ObjectTypeFieldArgs> objectTypeField) {
             this.objectTypeField = objectTypeField;
             return this;
         }
 
         public Builder objectTypeField(@Nullable ObjectTypeFieldArgs objectTypeField) {
-            this.objectTypeField = Input.ofNullable(objectTypeField);
+            this.objectTypeField = Output.ofNullable(objectTypeField);
             return this;
         }
         public ObjectTypeFieldMapArgs build() {

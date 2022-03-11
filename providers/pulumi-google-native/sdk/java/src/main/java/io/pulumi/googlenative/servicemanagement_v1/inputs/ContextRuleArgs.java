@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedRequestExtensions")
-      private final @Nullable Input<List<String>> allowedRequestExtensions;
+      private final @Nullable Output<List<String>> allowedRequestExtensions;
 
-    public Input<List<String>> getAllowedRequestExtensions() {
-        return this.allowedRequestExtensions == null ? Input.empty() : this.allowedRequestExtensions;
+    public Output<List<String>> getAllowedRequestExtensions() {
+        return this.allowedRequestExtensions == null ? Output.empty() : this.allowedRequestExtensions;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedResponseExtensions")
-      private final @Nullable Input<List<String>> allowedResponseExtensions;
+      private final @Nullable Output<List<String>> allowedResponseExtensions;
 
-    public Input<List<String>> getAllowedResponseExtensions() {
-        return this.allowedResponseExtensions == null ? Input.empty() : this.allowedResponseExtensions;
+    public Output<List<String>> getAllowedResponseExtensions() {
+        return this.allowedResponseExtensions == null ? Output.empty() : this.allowedResponseExtensions;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provided")
-      private final @Nullable Input<List<String>> provided;
+      private final @Nullable Output<List<String>> provided;
 
-    public Input<List<String>> getProvided() {
-        return this.provided == null ? Input.empty() : this.provided;
+    public Output<List<String>> getProvided() {
+        return this.provided == null ? Output.empty() : this.provided;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requested")
-      private final @Nullable Input<List<String>> requested;
+      private final @Nullable Output<List<String>> requested;
 
-    public Input<List<String>> getRequested() {
-        return this.requested == null ? Input.empty() : this.requested;
+    public Output<List<String>> getRequested() {
+        return this.requested == null ? Output.empty() : this.requested;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selector")
-      private final @Nullable Input<String> selector;
+      private final @Nullable Output<String> selector;
 
-    public Input<String> getSelector() {
-        return this.selector == null ? Input.empty() : this.selector;
+    public Output<String> getSelector() {
+        return this.selector == null ? Output.empty() : this.selector;
     }
 
     public ContextRuleArgs(
-        @Nullable Input<List<String>> allowedRequestExtensions,
-        @Nullable Input<List<String>> allowedResponseExtensions,
-        @Nullable Input<List<String>> provided,
-        @Nullable Input<List<String>> requested,
-        @Nullable Input<String> selector) {
+        @Nullable Output<List<String>> allowedRequestExtensions,
+        @Nullable Output<List<String>> allowedResponseExtensions,
+        @Nullable Output<List<String>> provided,
+        @Nullable Output<List<String>> requested,
+        @Nullable Output<String> selector) {
         this.allowedRequestExtensions = allowedRequestExtensions;
         this.allowedResponseExtensions = allowedResponseExtensions;
         this.provided = provided;
@@ -88,11 +88,11 @@ public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContextRuleArgs() {
-        this.allowedRequestExtensions = Input.empty();
-        this.allowedResponseExtensions = Input.empty();
-        this.provided = Input.empty();
-        this.requested = Input.empty();
-        this.selector = Input.empty();
+        this.allowedRequestExtensions = Output.empty();
+        this.allowedResponseExtensions = Output.empty();
+        this.provided = Output.empty();
+        this.requested = Output.empty();
+        this.selector = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> allowedRequestExtensions;
-        private @Nullable Input<List<String>> allowedResponseExtensions;
-        private @Nullable Input<List<String>> provided;
-        private @Nullable Input<List<String>> requested;
-        private @Nullable Input<String> selector;
+        private @Nullable Output<List<String>> allowedRequestExtensions;
+        private @Nullable Output<List<String>> allowedResponseExtensions;
+        private @Nullable Output<List<String>> provided;
+        private @Nullable Output<List<String>> requested;
+        private @Nullable Output<String> selector;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.selector = defaults.selector;
         }
 
-        public Builder allowedRequestExtensions(@Nullable Input<List<String>> allowedRequestExtensions) {
+        public Builder allowedRequestExtensions(@Nullable Output<List<String>> allowedRequestExtensions) {
             this.allowedRequestExtensions = allowedRequestExtensions;
             return this;
         }
 
         public Builder allowedRequestExtensions(@Nullable List<String> allowedRequestExtensions) {
-            this.allowedRequestExtensions = Input.ofNullable(allowedRequestExtensions);
+            this.allowedRequestExtensions = Output.ofNullable(allowedRequestExtensions);
             return this;
         }
 
-        public Builder allowedResponseExtensions(@Nullable Input<List<String>> allowedResponseExtensions) {
+        public Builder allowedResponseExtensions(@Nullable Output<List<String>> allowedResponseExtensions) {
             this.allowedResponseExtensions = allowedResponseExtensions;
             return this;
         }
 
         public Builder allowedResponseExtensions(@Nullable List<String> allowedResponseExtensions) {
-            this.allowedResponseExtensions = Input.ofNullable(allowedResponseExtensions);
+            this.allowedResponseExtensions = Output.ofNullable(allowedResponseExtensions);
             return this;
         }
 
-        public Builder provided(@Nullable Input<List<String>> provided) {
+        public Builder provided(@Nullable Output<List<String>> provided) {
             this.provided = provided;
             return this;
         }
 
         public Builder provided(@Nullable List<String> provided) {
-            this.provided = Input.ofNullable(provided);
+            this.provided = Output.ofNullable(provided);
             return this;
         }
 
-        public Builder requested(@Nullable Input<List<String>> requested) {
+        public Builder requested(@Nullable Output<List<String>> requested) {
             this.requested = requested;
             return this;
         }
 
         public Builder requested(@Nullable List<String> requested) {
-            this.requested = Input.ofNullable(requested);
+            this.requested = Output.ofNullable(requested);
             return this;
         }
 
-        public Builder selector(@Nullable Input<String> selector) {
+        public Builder selector(@Nullable Output<String> selector) {
             this.selector = selector;
             return this;
         }
 
         public Builder selector(@Nullable String selector) {
-            this.selector = Input.ofNullable(selector);
+            this.selector = Output.ofNullable(selector);
             return this;
         }
         public ContextRuleArgs build() {

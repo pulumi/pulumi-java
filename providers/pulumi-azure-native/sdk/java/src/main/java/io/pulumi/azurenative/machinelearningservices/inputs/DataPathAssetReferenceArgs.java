@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class DataPathAssetReferenceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="datastoreId")
-      private final @Nullable Input<String> datastoreId;
+      private final @Nullable Output<String> datastoreId;
 
-    public Input<String> getDatastoreId() {
-        return this.datastoreId == null ? Input.empty() : this.datastoreId;
+    public Output<String> getDatastoreId() {
+        return this.datastoreId == null ? Output.empty() : this.datastoreId;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DataPathAssetReferenceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class DataPathAssetReferenceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="referenceType", required=true)
-      private final Input<String> referenceType;
+      private final Output<String> referenceType;
 
-    public Input<String> getReferenceType() {
+    public Output<String> getReferenceType() {
         return this.referenceType;
     }
 
     public DataPathAssetReferenceArgs(
-        @Nullable Input<String> datastoreId,
-        @Nullable Input<String> path,
-        Input<String> referenceType) {
+        @Nullable Output<String> datastoreId,
+        @Nullable Output<String> path,
+        Output<String> referenceType) {
         this.datastoreId = datastoreId;
         this.path = path;
         this.referenceType = Objects.requireNonNull(referenceType, "expected parameter 'referenceType' to be non-null");
     }
 
     private DataPathAssetReferenceArgs() {
-        this.datastoreId = Input.empty();
-        this.path = Input.empty();
-        this.referenceType = Input.empty();
+        this.datastoreId = Output.empty();
+        this.path = Output.empty();
+        this.referenceType = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class DataPathAssetReferenceArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> datastoreId;
-        private @Nullable Input<String> path;
-        private Input<String> referenceType;
+        private @Nullable Output<String> datastoreId;
+        private @Nullable Output<String> path;
+        private Output<String> referenceType;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class DataPathAssetReferenceArgs extends io.pulumi.resources.Resour
     	      this.referenceType = defaults.referenceType;
         }
 
-        public Builder datastoreId(@Nullable Input<String> datastoreId) {
+        public Builder datastoreId(@Nullable Output<String> datastoreId) {
             this.datastoreId = datastoreId;
             return this;
         }
 
         public Builder datastoreId(@Nullable String datastoreId) {
-            this.datastoreId = Input.ofNullable(datastoreId);
+            this.datastoreId = Output.ofNullable(datastoreId);
             return this;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
 
-        public Builder referenceType(Input<String> referenceType) {
+        public Builder referenceType(Output<String> referenceType) {
             this.referenceType = Objects.requireNonNull(referenceType);
             return this;
         }
 
         public Builder referenceType(String referenceType) {
-            this.referenceType = Input.of(Objects.requireNonNull(referenceType));
+            this.referenceType = Output.of(Objects.requireNonNull(referenceType));
             return this;
         }
         public DataPathAssetReferenceArgs build() {

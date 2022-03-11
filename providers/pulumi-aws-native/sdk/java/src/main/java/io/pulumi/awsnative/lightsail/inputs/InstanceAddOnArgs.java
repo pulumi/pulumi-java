@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lightsail.inputs;
 
 import io.pulumi.awsnative.lightsail.enums.InstanceAddOnStatus;
 import io.pulumi.awsnative.lightsail.inputs.InstanceAutoSnapshotAddOnArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,17 +25,17 @@ public final class InstanceAddOnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addOnType", required=true)
-      private final Input<String> addOnType;
+      private final Output<String> addOnType;
 
-    public Input<String> getAddOnType() {
+    public Output<String> getAddOnType() {
         return this.addOnType;
     }
 
     @InputImport(name="autoSnapshotAddOnRequest")
-      private final @Nullable Input<InstanceAutoSnapshotAddOnArgs> autoSnapshotAddOnRequest;
+      private final @Nullable Output<InstanceAutoSnapshotAddOnArgs> autoSnapshotAddOnRequest;
 
-    public Input<InstanceAutoSnapshotAddOnArgs> getAutoSnapshotAddOnRequest() {
-        return this.autoSnapshotAddOnRequest == null ? Input.empty() : this.autoSnapshotAddOnRequest;
+    public Output<InstanceAutoSnapshotAddOnArgs> getAutoSnapshotAddOnRequest() {
+        return this.autoSnapshotAddOnRequest == null ? Output.empty() : this.autoSnapshotAddOnRequest;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class InstanceAddOnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<InstanceAddOnStatus> status;
+      private final @Nullable Output<InstanceAddOnStatus> status;
 
-    public Input<InstanceAddOnStatus> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<InstanceAddOnStatus> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     public InstanceAddOnArgs(
-        Input<String> addOnType,
-        @Nullable Input<InstanceAutoSnapshotAddOnArgs> autoSnapshotAddOnRequest,
-        @Nullable Input<InstanceAddOnStatus> status) {
+        Output<String> addOnType,
+        @Nullable Output<InstanceAutoSnapshotAddOnArgs> autoSnapshotAddOnRequest,
+        @Nullable Output<InstanceAddOnStatus> status) {
         this.addOnType = Objects.requireNonNull(addOnType, "expected parameter 'addOnType' to be non-null");
         this.autoSnapshotAddOnRequest = autoSnapshotAddOnRequest;
         this.status = status;
     }
 
     private InstanceAddOnArgs() {
-        this.addOnType = Input.empty();
-        this.autoSnapshotAddOnRequest = Input.empty();
-        this.status = Input.empty();
+        this.addOnType = Output.empty();
+        this.autoSnapshotAddOnRequest = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class InstanceAddOnArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> addOnType;
-        private @Nullable Input<InstanceAutoSnapshotAddOnArgs> autoSnapshotAddOnRequest;
-        private @Nullable Input<InstanceAddOnStatus> status;
+        private Output<String> addOnType;
+        private @Nullable Output<InstanceAutoSnapshotAddOnArgs> autoSnapshotAddOnRequest;
+        private @Nullable Output<InstanceAddOnStatus> status;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class InstanceAddOnArgs extends io.pulumi.resources.ResourceArgs {
     	      this.status = defaults.status;
         }
 
-        public Builder addOnType(Input<String> addOnType) {
+        public Builder addOnType(Output<String> addOnType) {
             this.addOnType = Objects.requireNonNull(addOnType);
             return this;
         }
 
         public Builder addOnType(String addOnType) {
-            this.addOnType = Input.of(Objects.requireNonNull(addOnType));
+            this.addOnType = Output.of(Objects.requireNonNull(addOnType));
             return this;
         }
 
-        public Builder autoSnapshotAddOnRequest(@Nullable Input<InstanceAutoSnapshotAddOnArgs> autoSnapshotAddOnRequest) {
+        public Builder autoSnapshotAddOnRequest(@Nullable Output<InstanceAutoSnapshotAddOnArgs> autoSnapshotAddOnRequest) {
             this.autoSnapshotAddOnRequest = autoSnapshotAddOnRequest;
             return this;
         }
 
         public Builder autoSnapshotAddOnRequest(@Nullable InstanceAutoSnapshotAddOnArgs autoSnapshotAddOnRequest) {
-            this.autoSnapshotAddOnRequest = Input.ofNullable(autoSnapshotAddOnRequest);
+            this.autoSnapshotAddOnRequest = Output.ofNullable(autoSnapshotAddOnRequest);
             return this;
         }
 
-        public Builder status(@Nullable Input<InstanceAddOnStatus> status) {
+        public Builder status(@Nullable Output<InstanceAddOnStatus> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable InstanceAddOnStatus status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public InstanceAddOnArgs build() {

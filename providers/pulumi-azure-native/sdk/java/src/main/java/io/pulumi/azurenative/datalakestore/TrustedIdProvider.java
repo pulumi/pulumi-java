@@ -6,7 +6,6 @@ package io.pulumi.azurenative.datalakestore;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.datalakestore.TrustedIdProviderArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -112,18 +111,18 @@ public class TrustedIdProvider extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TrustedIdProvider(String name, TrustedIdProviderArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:datalakestore:TrustedIdProvider", name, args == null ? TrustedIdProviderArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:datalakestore:TrustedIdProvider", name, args == null ? TrustedIdProviderArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private TrustedIdProvider(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private TrustedIdProvider(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:datalakestore:TrustedIdProvider", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:datalakestore/v20161101:TrustedIdProvider").build())
+                Output.of(Alias.builder().setType("azure-native:datalakestore/v20161101:TrustedIdProvider").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -137,7 +136,7 @@ public class TrustedIdProvider extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TrustedIdProvider get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static TrustedIdProvider get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new TrustedIdProvider(name, id, options);
     }
 }

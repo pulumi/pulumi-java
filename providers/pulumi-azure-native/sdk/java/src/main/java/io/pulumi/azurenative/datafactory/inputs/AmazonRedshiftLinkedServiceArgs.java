@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -31,10 +31,10 @@ public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="annotations")
-      private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Output<List<Object>> annotations;
 
-    public Input<List<Object>> getAnnotations() {
-        return this.annotations == null ? Input.empty() : this.annotations;
+    public Output<List<Object>> getAnnotations() {
+        return this.annotations == null ? Output.empty() : this.annotations;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="connectVia")
-      private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+      private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
-        return this.connectVia == null ? Input.empty() : this.connectVia;
+    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+        return this.connectVia == null ? Output.empty() : this.connectVia;
     }
 
     /**
@@ -53,9 +53,9 @@ public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="database", required=true)
-      private final Input<Object> database;
+      private final Output<Object> database;
 
-    public Input<Object> getDatabase() {
+    public Output<Object> getDatabase() {
         return this.database;
     }
 
@@ -64,10 +64,10 @@ public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="encryptedCredential")
-      private final @Nullable Input<Object> encryptedCredential;
+      private final @Nullable Output<Object> encryptedCredential;
 
-    public Input<Object> getEncryptedCredential() {
-        return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
+    public Output<Object> getEncryptedCredential() {
+        return this.encryptedCredential == null ? Output.empty() : this.encryptedCredential;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+      private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
+      private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
-    public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -108,10 +108,10 @@ public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Object> port;
+      private final @Nullable Output<Object> port;
 
-    public Input<Object> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Object> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -119,9 +119,9 @@ public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="server", required=true)
-      private final Input<Object> server;
+      private final Output<Object> server;
 
-    public Input<Object> getServer() {
+    public Output<Object> getServer() {
         return this.server;
     }
 
@@ -131,9 +131,9 @@ public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -142,24 +142,24 @@ public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="username")
-      private final @Nullable Input<Object> username;
+      private final @Nullable Output<Object> username;
 
-    public Input<Object> getUsername() {
-        return this.username == null ? Input.empty() : this.username;
+    public Output<Object> getUsername() {
+        return this.username == null ? Output.empty() : this.username;
     }
 
     public AmazonRedshiftLinkedServiceArgs(
-        @Nullable Input<List<Object>> annotations,
-        @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia,
-        Input<Object> database,
-        @Nullable Input<String> description,
-        @Nullable Input<Object> encryptedCredential,
-        @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters,
-        @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password,
-        @Nullable Input<Object> port,
-        Input<Object> server,
-        Input<String> type,
-        @Nullable Input<Object> username) {
+        @Nullable Output<List<Object>> annotations,
+        @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia,
+        Output<Object> database,
+        @Nullable Output<String> description,
+        @Nullable Output<Object> encryptedCredential,
+        @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters,
+        @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password,
+        @Nullable Output<Object> port,
+        Output<Object> server,
+        Output<String> type,
+        @Nullable Output<Object> username) {
         this.annotations = annotations;
         this.connectVia = connectVia;
         this.database = Objects.requireNonNull(database, "expected parameter 'database' to be non-null");
@@ -174,17 +174,17 @@ public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.R
     }
 
     private AmazonRedshiftLinkedServiceArgs() {
-        this.annotations = Input.empty();
-        this.connectVia = Input.empty();
-        this.database = Input.empty();
-        this.description = Input.empty();
-        this.encryptedCredential = Input.empty();
-        this.parameters = Input.empty();
-        this.password = Input.empty();
-        this.port = Input.empty();
-        this.server = Input.empty();
-        this.type = Input.empty();
-        this.username = Input.empty();
+        this.annotations = Output.empty();
+        this.connectVia = Output.empty();
+        this.database = Output.empty();
+        this.description = Output.empty();
+        this.encryptedCredential = Output.empty();
+        this.parameters = Output.empty();
+        this.password = Output.empty();
+        this.port = Output.empty();
+        this.server = Output.empty();
+        this.type = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -196,17 +196,17 @@ public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Object>> annotations;
-        private @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
-        private Input<Object> database;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Object> encryptedCredential;
-        private @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
-        private @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
-        private @Nullable Input<Object> port;
-        private Input<Object> server;
-        private Input<String> type;
-        private @Nullable Input<Object> username;
+        private @Nullable Output<List<Object>> annotations;
+        private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
+        private Output<Object> database;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Object> encryptedCredential;
+        private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
+        private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
+        private @Nullable Output<Object> port;
+        private Output<Object> server;
+        private Output<String> type;
+        private @Nullable Output<Object> username;
 
         public Builder() {
     	      // Empty
@@ -227,113 +227,113 @@ public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.R
     	      this.username = defaults.username;
         }
 
-        public Builder annotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Output<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Input.ofNullable(annotations);
+            this.annotations = Output.ofNullable(annotations);
             return this;
         }
 
-        public Builder connectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
+        public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Input.ofNullable(connectVia);
+            this.connectVia = Output.ofNullable(connectVia);
             return this;
         }
 
-        public Builder database(Input<Object> database) {
+        public Builder database(Output<Object> database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
 
         public Builder database(Object database) {
-            this.database = Input.of(Objects.requireNonNull(database));
+            this.database = Output.of(Objects.requireNonNull(database));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder encryptedCredential(@Nullable Input<Object> encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Input.ofNullable(encryptedCredential);
+            this.encryptedCredential = Output.ofNullable(encryptedCredential);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder password(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
+        public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder port(@Nullable Input<Object> port) {
+        public Builder port(@Nullable Output<Object> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Object port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder server(Input<Object> server) {
+        public Builder server(Output<Object> server) {
             this.server = Objects.requireNonNull(server);
             return this;
         }
 
         public Builder server(Object server) {
-            this.server = Input.of(Objects.requireNonNull(server));
+            this.server = Output.of(Objects.requireNonNull(server));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder username(@Nullable Input<Object> username) {
+        public Builder username(@Nullable Output<Object> username) {
             this.username = username;
             return this;
         }
 
         public Builder username(@Nullable Object username) {
-            this.username = Input.ofNullable(username);
+            this.username = Output.ofNullable(username);
             return this;
         }
         public AmazonRedshiftLinkedServiceArgs build() {

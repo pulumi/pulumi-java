@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -24,18 +24,18 @@ public final class TrafficPercentStrategyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="percentages")
-      private final @Nullable Input<Map<String,String>> percentages;
+      private final @Nullable Output<Map<String,String>> percentages;
 
-    public Input<Map<String,String>> getPercentages() {
-        return this.percentages == null ? Input.empty() : this.percentages;
+    public Output<Map<String,String>> getPercentages() {
+        return this.percentages == null ? Output.empty() : this.percentages;
     }
 
-    public TrafficPercentStrategyArgs(@Nullable Input<Map<String,String>> percentages) {
+    public TrafficPercentStrategyArgs(@Nullable Output<Map<String,String>> percentages) {
         this.percentages = percentages;
     }
 
     private TrafficPercentStrategyArgs() {
-        this.percentages = Input.empty();
+        this.percentages = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class TrafficPercentStrategyArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> percentages;
+        private @Nullable Output<Map<String,String>> percentages;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class TrafficPercentStrategyArgs extends io.pulumi.resources.Resour
     	      this.percentages = defaults.percentages;
         }
 
-        public Builder percentages(@Nullable Input<Map<String,String>> percentages) {
+        public Builder percentages(@Nullable Output<Map<String,String>> percentages) {
             this.percentages = percentages;
             return this;
         }
 
         public Builder percentages(@Nullable Map<String,String> percentages) {
-            this.percentages = Input.ofNullable(percentages);
+            this.percentages = Output.ofNullable(percentages);
             return this;
         }
         public TrafficPercentStrategyArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.azurenative.appplatform.enums.RuntimeVersion;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class DeploymentSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="cpu")
-      private final @Nullable Input<Integer> cpu;
+      private final @Nullable Output<Integer> cpu;
 
-    public Input<Integer> getCpu() {
-        return this.cpu == null ? Input.empty() : this.cpu;
+    public Output<Integer> getCpu() {
+        return this.cpu == null ? Output.empty() : this.cpu;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class DeploymentSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="environmentVariables")
-      private final @Nullable Input<Map<String,String>> environmentVariables;
+      private final @Nullable Output<Map<String,String>> environmentVariables;
 
-    public Input<Map<String,String>> getEnvironmentVariables() {
-        return this.environmentVariables == null ? Input.empty() : this.environmentVariables;
+    public Output<Map<String,String>> getEnvironmentVariables() {
+        return this.environmentVariables == null ? Output.empty() : this.environmentVariables;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class DeploymentSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="jvmOptions")
-      private final @Nullable Input<String> jvmOptions;
+      private final @Nullable Output<String> jvmOptions;
 
-    public Input<String> getJvmOptions() {
-        return this.jvmOptions == null ? Input.empty() : this.jvmOptions;
+    public Output<String> getJvmOptions() {
+        return this.jvmOptions == null ? Output.empty() : this.jvmOptions;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class DeploymentSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="memoryInGB")
-      private final @Nullable Input<Integer> memoryInGB;
+      private final @Nullable Output<Integer> memoryInGB;
 
-    public Input<Integer> getMemoryInGB() {
-        return this.memoryInGB == null ? Input.empty() : this.memoryInGB;
+    public Output<Integer> getMemoryInGB() {
+        return this.memoryInGB == null ? Output.empty() : this.memoryInGB;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class DeploymentSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="netCoreMainEntryPath")
-      private final @Nullable Input<String> netCoreMainEntryPath;
+      private final @Nullable Output<String> netCoreMainEntryPath;
 
-    public Input<String> getNetCoreMainEntryPath() {
-        return this.netCoreMainEntryPath == null ? Input.empty() : this.netCoreMainEntryPath;
+    public Output<String> getNetCoreMainEntryPath() {
+        return this.netCoreMainEntryPath == null ? Output.empty() : this.netCoreMainEntryPath;
     }
 
     /**
@@ -82,34 +82,34 @@ public final class DeploymentSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="runtimeVersion")
-      private final @Nullable Input<Either<String,RuntimeVersion>> runtimeVersion;
+      private final @Nullable Output<Either<String,RuntimeVersion>> runtimeVersion;
 
-    public Input<Either<String,RuntimeVersion>> getRuntimeVersion() {
-        return this.runtimeVersion == null ? Input.empty() : this.runtimeVersion;
+    public Output<Either<String,RuntimeVersion>> getRuntimeVersion() {
+        return this.runtimeVersion == null ? Output.empty() : this.runtimeVersion;
     }
 
     public DeploymentSettingsArgs(
-        @Nullable Input<Integer> cpu,
-        @Nullable Input<Map<String,String>> environmentVariables,
-        @Nullable Input<String> jvmOptions,
-        @Nullable Input<Integer> memoryInGB,
-        @Nullable Input<String> netCoreMainEntryPath,
-        @Nullable Input<Either<String,RuntimeVersion>> runtimeVersion) {
-        this.cpu = cpu == null ? Input.ofNullable(1) : cpu;
+        @Nullable Output<Integer> cpu,
+        @Nullable Output<Map<String,String>> environmentVariables,
+        @Nullable Output<String> jvmOptions,
+        @Nullable Output<Integer> memoryInGB,
+        @Nullable Output<String> netCoreMainEntryPath,
+        @Nullable Output<Either<String,RuntimeVersion>> runtimeVersion) {
+        this.cpu = cpu == null ? Output.ofNullable(1) : cpu;
         this.environmentVariables = environmentVariables;
         this.jvmOptions = jvmOptions;
-        this.memoryInGB = memoryInGB == null ? Input.ofNullable(1) : memoryInGB;
+        this.memoryInGB = memoryInGB == null ? Output.ofNullable(1) : memoryInGB;
         this.netCoreMainEntryPath = netCoreMainEntryPath;
-        this.runtimeVersion = runtimeVersion == null ? Input.ofLeft("Java_8") : runtimeVersion;
+        this.runtimeVersion = runtimeVersion == null ? Output.ofLeft("Java_8") : runtimeVersion;
     }
 
     private DeploymentSettingsArgs() {
-        this.cpu = Input.empty();
-        this.environmentVariables = Input.empty();
-        this.jvmOptions = Input.empty();
-        this.memoryInGB = Input.empty();
-        this.netCoreMainEntryPath = Input.empty();
-        this.runtimeVersion = Input.empty();
+        this.cpu = Output.empty();
+        this.environmentVariables = Output.empty();
+        this.jvmOptions = Output.empty();
+        this.memoryInGB = Output.empty();
+        this.netCoreMainEntryPath = Output.empty();
+        this.runtimeVersion = Output.empty();
     }
 
     public static Builder builder() {
@@ -121,12 +121,12 @@ public final class DeploymentSettingsArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> cpu;
-        private @Nullable Input<Map<String,String>> environmentVariables;
-        private @Nullable Input<String> jvmOptions;
-        private @Nullable Input<Integer> memoryInGB;
-        private @Nullable Input<String> netCoreMainEntryPath;
-        private @Nullable Input<Either<String,RuntimeVersion>> runtimeVersion;
+        private @Nullable Output<Integer> cpu;
+        private @Nullable Output<Map<String,String>> environmentVariables;
+        private @Nullable Output<String> jvmOptions;
+        private @Nullable Output<Integer> memoryInGB;
+        private @Nullable Output<String> netCoreMainEntryPath;
+        private @Nullable Output<Either<String,RuntimeVersion>> runtimeVersion;
 
         public Builder() {
     	      // Empty
@@ -142,63 +142,63 @@ public final class DeploymentSettingsArgs extends io.pulumi.resources.ResourceAr
     	      this.runtimeVersion = defaults.runtimeVersion;
         }
 
-        public Builder cpu(@Nullable Input<Integer> cpu) {
+        public Builder cpu(@Nullable Output<Integer> cpu) {
             this.cpu = cpu;
             return this;
         }
 
         public Builder cpu(@Nullable Integer cpu) {
-            this.cpu = Input.ofNullable(cpu);
+            this.cpu = Output.ofNullable(cpu);
             return this;
         }
 
-        public Builder environmentVariables(@Nullable Input<Map<String,String>> environmentVariables) {
+        public Builder environmentVariables(@Nullable Output<Map<String,String>> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
         public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
-            this.environmentVariables = Input.ofNullable(environmentVariables);
+            this.environmentVariables = Output.ofNullable(environmentVariables);
             return this;
         }
 
-        public Builder jvmOptions(@Nullable Input<String> jvmOptions) {
+        public Builder jvmOptions(@Nullable Output<String> jvmOptions) {
             this.jvmOptions = jvmOptions;
             return this;
         }
 
         public Builder jvmOptions(@Nullable String jvmOptions) {
-            this.jvmOptions = Input.ofNullable(jvmOptions);
+            this.jvmOptions = Output.ofNullable(jvmOptions);
             return this;
         }
 
-        public Builder memoryInGB(@Nullable Input<Integer> memoryInGB) {
+        public Builder memoryInGB(@Nullable Output<Integer> memoryInGB) {
             this.memoryInGB = memoryInGB;
             return this;
         }
 
         public Builder memoryInGB(@Nullable Integer memoryInGB) {
-            this.memoryInGB = Input.ofNullable(memoryInGB);
+            this.memoryInGB = Output.ofNullable(memoryInGB);
             return this;
         }
 
-        public Builder netCoreMainEntryPath(@Nullable Input<String> netCoreMainEntryPath) {
+        public Builder netCoreMainEntryPath(@Nullable Output<String> netCoreMainEntryPath) {
             this.netCoreMainEntryPath = netCoreMainEntryPath;
             return this;
         }
 
         public Builder netCoreMainEntryPath(@Nullable String netCoreMainEntryPath) {
-            this.netCoreMainEntryPath = Input.ofNullable(netCoreMainEntryPath);
+            this.netCoreMainEntryPath = Output.ofNullable(netCoreMainEntryPath);
             return this;
         }
 
-        public Builder runtimeVersion(@Nullable Input<Either<String,RuntimeVersion>> runtimeVersion) {
+        public Builder runtimeVersion(@Nullable Output<Either<String,RuntimeVersion>> runtimeVersion) {
             this.runtimeVersion = runtimeVersion;
             return this;
         }
 
         public Builder runtimeVersion(@Nullable Either<String,RuntimeVersion> runtimeVersion) {
-            this.runtimeVersion = Input.ofNullable(runtimeVersion);
+            this.runtimeVersion = Output.ofNullable(runtimeVersion);
             return this;
         }
         public DeploymentSettingsArgs build() {

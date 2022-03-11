@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.testing_v1.inputs.FileReferenceArgs;
 import java.lang.Integer;
@@ -25,9 +25,9 @@ public final class IosTestLoopArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appIpa", required=true)
-      private final Input<FileReferenceArgs> appIpa;
+      private final Output<FileReferenceArgs> appIpa;
 
-    public Input<FileReferenceArgs> getAppIpa() {
+    public Output<FileReferenceArgs> getAppIpa() {
         return this.appIpa;
     }
 
@@ -36,22 +36,22 @@ public final class IosTestLoopArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scenarios")
-      private final @Nullable Input<List<Integer>> scenarios;
+      private final @Nullable Output<List<Integer>> scenarios;
 
-    public Input<List<Integer>> getScenarios() {
-        return this.scenarios == null ? Input.empty() : this.scenarios;
+    public Output<List<Integer>> getScenarios() {
+        return this.scenarios == null ? Output.empty() : this.scenarios;
     }
 
     public IosTestLoopArgs(
-        Input<FileReferenceArgs> appIpa,
-        @Nullable Input<List<Integer>> scenarios) {
+        Output<FileReferenceArgs> appIpa,
+        @Nullable Output<List<Integer>> scenarios) {
         this.appIpa = Objects.requireNonNull(appIpa, "expected parameter 'appIpa' to be non-null");
         this.scenarios = scenarios;
     }
 
     private IosTestLoopArgs() {
-        this.appIpa = Input.empty();
-        this.scenarios = Input.empty();
+        this.appIpa = Output.empty();
+        this.scenarios = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class IosTestLoopArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<FileReferenceArgs> appIpa;
-        private @Nullable Input<List<Integer>> scenarios;
+        private Output<FileReferenceArgs> appIpa;
+        private @Nullable Output<List<Integer>> scenarios;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class IosTestLoopArgs extends io.pulumi.resources.ResourceArgs {
     	      this.scenarios = defaults.scenarios;
         }
 
-        public Builder appIpa(Input<FileReferenceArgs> appIpa) {
+        public Builder appIpa(Output<FileReferenceArgs> appIpa) {
             this.appIpa = Objects.requireNonNull(appIpa);
             return this;
         }
 
         public Builder appIpa(FileReferenceArgs appIpa) {
-            this.appIpa = Input.of(Objects.requireNonNull(appIpa));
+            this.appIpa = Output.of(Objects.requireNonNull(appIpa));
             return this;
         }
 
-        public Builder scenarios(@Nullable Input<List<Integer>> scenarios) {
+        public Builder scenarios(@Nullable Output<List<Integer>> scenarios) {
             this.scenarios = scenarios;
             return this;
         }
 
         public Builder scenarios(@Nullable List<Integer> scenarios) {
-            this.scenarios = Input.ofNullable(scenarios);
+            this.scenarios = Output.ofNullable(scenarios);
             return this;
         }
         public IosTestLoopArgs build() {

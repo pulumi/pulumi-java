@@ -6,7 +6,7 @@ package io.pulumi.azurenative.customerinsights;
 import io.pulumi.azurenative.customerinsights.enums.CardinalityTypes;
 import io.pulumi.azurenative.customerinsights.inputs.PropertyDefinitionArgs;
 import io.pulumi.azurenative.customerinsights.inputs.RelationshipTypeMappingArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cardinality")
-      private final @Nullable Input<CardinalityTypes> cardinality;
+      private final @Nullable Output<CardinalityTypes> cardinality;
 
-    public Input<CardinalityTypes> getCardinality() {
-        return this.cardinality == null ? Input.empty() : this.cardinality;
+    public Output<CardinalityTypes> getCardinality() {
+        return this.cardinality == null ? Output.empty() : this.cardinality;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<Map<String,String>> description;
+      private final @Nullable Output<Map<String,String>> description;
 
-    public Input<Map<String,String>> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<Map<String,String>> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<Map<String,String>> displayName;
+      private final @Nullable Output<Map<String,String>> displayName;
 
-    public Input<Map<String,String>> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<Map<String,String>> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expiryDateTimeUtc")
-      private final @Nullable Input<String> expiryDateTimeUtc;
+      private final @Nullable Output<String> expiryDateTimeUtc;
 
-    public Input<String> getExpiryDateTimeUtc() {
-        return this.expiryDateTimeUtc == null ? Input.empty() : this.expiryDateTimeUtc;
+    public Output<String> getExpiryDateTimeUtc() {
+        return this.expiryDateTimeUtc == null ? Output.empty() : this.expiryDateTimeUtc;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fields")
-      private final @Nullable Input<List<PropertyDefinitionArgs>> fields;
+      private final @Nullable Output<List<PropertyDefinitionArgs>> fields;
 
-    public Input<List<PropertyDefinitionArgs>> getFields() {
-        return this.fields == null ? Input.empty() : this.fields;
+    public Output<List<PropertyDefinitionArgs>> getFields() {
+        return this.fields == null ? Output.empty() : this.fields;
     }
 
     /**
@@ -79,9 +79,9 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hubName", required=true)
-      private final Input<String> hubName;
+      private final Output<String> hubName;
 
-    public Input<String> getHubName() {
+    public Output<String> getHubName() {
         return this.hubName;
     }
 
@@ -90,10 +90,10 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lookupMappings")
-      private final @Nullable Input<List<RelationshipTypeMappingArgs>> lookupMappings;
+      private final @Nullable Output<List<RelationshipTypeMappingArgs>> lookupMappings;
 
-    public Input<List<RelationshipTypeMappingArgs>> getLookupMappings() {
-        return this.lookupMappings == null ? Input.empty() : this.lookupMappings;
+    public Output<List<RelationshipTypeMappingArgs>> getLookupMappings() {
+        return this.lookupMappings == null ? Output.empty() : this.lookupMappings;
     }
 
     /**
@@ -101,9 +101,9 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profileType", required=true)
-      private final Input<String> profileType;
+      private final Output<String> profileType;
 
-    public Input<String> getProfileType() {
+    public Output<String> getProfileType() {
         return this.profileType;
     }
 
@@ -112,9 +112,9 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relatedProfileType", required=true)
-      private final Input<String> relatedProfileType;
+      private final Output<String> relatedProfileType;
 
-    public Input<String> getRelatedProfileType() {
+    public Output<String> getRelatedProfileType() {
         return this.relatedProfileType;
     }
 
@@ -123,10 +123,10 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relationshipName")
-      private final @Nullable Input<String> relationshipName;
+      private final @Nullable Output<String> relationshipName;
 
-    public Input<String> getRelationshipName() {
-        return this.relationshipName == null ? Input.empty() : this.relationshipName;
+    public Output<String> getRelationshipName() {
+        return this.relationshipName == null ? Output.empty() : this.relationshipName;
     }
 
     /**
@@ -134,24 +134,24 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public RelationshipArgs(
-        @Nullable Input<CardinalityTypes> cardinality,
-        @Nullable Input<Map<String,String>> description,
-        @Nullable Input<Map<String,String>> displayName,
-        @Nullable Input<String> expiryDateTimeUtc,
-        @Nullable Input<List<PropertyDefinitionArgs>> fields,
-        Input<String> hubName,
-        @Nullable Input<List<RelationshipTypeMappingArgs>> lookupMappings,
-        Input<String> profileType,
-        Input<String> relatedProfileType,
-        @Nullable Input<String> relationshipName,
-        Input<String> resourceGroupName) {
+        @Nullable Output<CardinalityTypes> cardinality,
+        @Nullable Output<Map<String,String>> description,
+        @Nullable Output<Map<String,String>> displayName,
+        @Nullable Output<String> expiryDateTimeUtc,
+        @Nullable Output<List<PropertyDefinitionArgs>> fields,
+        Output<String> hubName,
+        @Nullable Output<List<RelationshipTypeMappingArgs>> lookupMappings,
+        Output<String> profileType,
+        Output<String> relatedProfileType,
+        @Nullable Output<String> relationshipName,
+        Output<String> resourceGroupName) {
         this.cardinality = cardinality;
         this.description = description;
         this.displayName = displayName;
@@ -166,17 +166,17 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RelationshipArgs() {
-        this.cardinality = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.expiryDateTimeUtc = Input.empty();
-        this.fields = Input.empty();
-        this.hubName = Input.empty();
-        this.lookupMappings = Input.empty();
-        this.profileType = Input.empty();
-        this.relatedProfileType = Input.empty();
-        this.relationshipName = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.cardinality = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.expiryDateTimeUtc = Output.empty();
+        this.fields = Output.empty();
+        this.hubName = Output.empty();
+        this.lookupMappings = Output.empty();
+        this.profileType = Output.empty();
+        this.relatedProfileType = Output.empty();
+        this.relationshipName = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -188,17 +188,17 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<CardinalityTypes> cardinality;
-        private @Nullable Input<Map<String,String>> description;
-        private @Nullable Input<Map<String,String>> displayName;
-        private @Nullable Input<String> expiryDateTimeUtc;
-        private @Nullable Input<List<PropertyDefinitionArgs>> fields;
-        private Input<String> hubName;
-        private @Nullable Input<List<RelationshipTypeMappingArgs>> lookupMappings;
-        private Input<String> profileType;
-        private Input<String> relatedProfileType;
-        private @Nullable Input<String> relationshipName;
-        private Input<String> resourceGroupName;
+        private @Nullable Output<CardinalityTypes> cardinality;
+        private @Nullable Output<Map<String,String>> description;
+        private @Nullable Output<Map<String,String>> displayName;
+        private @Nullable Output<String> expiryDateTimeUtc;
+        private @Nullable Output<List<PropertyDefinitionArgs>> fields;
+        private Output<String> hubName;
+        private @Nullable Output<List<RelationshipTypeMappingArgs>> lookupMappings;
+        private Output<String> profileType;
+        private Output<String> relatedProfileType;
+        private @Nullable Output<String> relationshipName;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -219,113 +219,113 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder cardinality(@Nullable Input<CardinalityTypes> cardinality) {
+        public Builder cardinality(@Nullable Output<CardinalityTypes> cardinality) {
             this.cardinality = cardinality;
             return this;
         }
 
         public Builder cardinality(@Nullable CardinalityTypes cardinality) {
-            this.cardinality = Input.ofNullable(cardinality);
+            this.cardinality = Output.ofNullable(cardinality);
             return this;
         }
 
-        public Builder description(@Nullable Input<Map<String,String>> description) {
+        public Builder description(@Nullable Output<Map<String,String>> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable Map<String,String> description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<Map<String,String>> displayName) {
+        public Builder displayName(@Nullable Output<Map<String,String>> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable Map<String,String> displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder expiryDateTimeUtc(@Nullable Input<String> expiryDateTimeUtc) {
+        public Builder expiryDateTimeUtc(@Nullable Output<String> expiryDateTimeUtc) {
             this.expiryDateTimeUtc = expiryDateTimeUtc;
             return this;
         }
 
         public Builder expiryDateTimeUtc(@Nullable String expiryDateTimeUtc) {
-            this.expiryDateTimeUtc = Input.ofNullable(expiryDateTimeUtc);
+            this.expiryDateTimeUtc = Output.ofNullable(expiryDateTimeUtc);
             return this;
         }
 
-        public Builder fields(@Nullable Input<List<PropertyDefinitionArgs>> fields) {
+        public Builder fields(@Nullable Output<List<PropertyDefinitionArgs>> fields) {
             this.fields = fields;
             return this;
         }
 
         public Builder fields(@Nullable List<PropertyDefinitionArgs> fields) {
-            this.fields = Input.ofNullable(fields);
+            this.fields = Output.ofNullable(fields);
             return this;
         }
 
-        public Builder hubName(Input<String> hubName) {
+        public Builder hubName(Output<String> hubName) {
             this.hubName = Objects.requireNonNull(hubName);
             return this;
         }
 
         public Builder hubName(String hubName) {
-            this.hubName = Input.of(Objects.requireNonNull(hubName));
+            this.hubName = Output.of(Objects.requireNonNull(hubName));
             return this;
         }
 
-        public Builder lookupMappings(@Nullable Input<List<RelationshipTypeMappingArgs>> lookupMappings) {
+        public Builder lookupMappings(@Nullable Output<List<RelationshipTypeMappingArgs>> lookupMappings) {
             this.lookupMappings = lookupMappings;
             return this;
         }
 
         public Builder lookupMappings(@Nullable List<RelationshipTypeMappingArgs> lookupMappings) {
-            this.lookupMappings = Input.ofNullable(lookupMappings);
+            this.lookupMappings = Output.ofNullable(lookupMappings);
             return this;
         }
 
-        public Builder profileType(Input<String> profileType) {
+        public Builder profileType(Output<String> profileType) {
             this.profileType = Objects.requireNonNull(profileType);
             return this;
         }
 
         public Builder profileType(String profileType) {
-            this.profileType = Input.of(Objects.requireNonNull(profileType));
+            this.profileType = Output.of(Objects.requireNonNull(profileType));
             return this;
         }
 
-        public Builder relatedProfileType(Input<String> relatedProfileType) {
+        public Builder relatedProfileType(Output<String> relatedProfileType) {
             this.relatedProfileType = Objects.requireNonNull(relatedProfileType);
             return this;
         }
 
         public Builder relatedProfileType(String relatedProfileType) {
-            this.relatedProfileType = Input.of(Objects.requireNonNull(relatedProfileType));
+            this.relatedProfileType = Output.of(Objects.requireNonNull(relatedProfileType));
             return this;
         }
 
-        public Builder relationshipName(@Nullable Input<String> relationshipName) {
+        public Builder relationshipName(@Nullable Output<String> relationshipName) {
             this.relationshipName = relationshipName;
             return this;
         }
 
         public Builder relationshipName(@Nullable String relationshipName) {
-            this.relationshipName = Input.ofNullable(relationshipName);
+            this.relationshipName = Output.ofNullable(relationshipName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public RelationshipArgs build() {

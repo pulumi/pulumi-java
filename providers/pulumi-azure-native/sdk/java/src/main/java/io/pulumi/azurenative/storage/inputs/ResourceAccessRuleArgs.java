@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ResourceAccessRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceId")
-      private final @Nullable Input<String> resourceId;
+      private final @Nullable Output<String> resourceId;
 
-    public Input<String> getResourceId() {
-        return this.resourceId == null ? Input.empty() : this.resourceId;
+    public Output<String> getResourceId() {
+        return this.resourceId == null ? Output.empty() : this.resourceId;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class ResourceAccessRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tenantId")
-      private final @Nullable Input<String> tenantId;
+      private final @Nullable Output<String> tenantId;
 
-    public Input<String> getTenantId() {
-        return this.tenantId == null ? Input.empty() : this.tenantId;
+    public Output<String> getTenantId() {
+        return this.tenantId == null ? Output.empty() : this.tenantId;
     }
 
     public ResourceAccessRuleArgs(
-        @Nullable Input<String> resourceId,
-        @Nullable Input<String> tenantId) {
+        @Nullable Output<String> resourceId,
+        @Nullable Output<String> tenantId) {
         this.resourceId = resourceId;
         this.tenantId = tenantId;
     }
 
     private ResourceAccessRuleArgs() {
-        this.resourceId = Input.empty();
-        this.tenantId = Input.empty();
+        this.resourceId = Output.empty();
+        this.tenantId = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ResourceAccessRuleArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> resourceId;
-        private @Nullable Input<String> tenantId;
+        private @Nullable Output<String> resourceId;
+        private @Nullable Output<String> tenantId;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ResourceAccessRuleArgs extends io.pulumi.resources.ResourceAr
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder resourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Input.ofNullable(resourceId);
+            this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
 
-        public Builder tenantId(@Nullable Input<String> tenantId) {
+        public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Input.ofNullable(tenantId);
+            this.tenantId = Output.ofNullable(tenantId);
             return this;
         }
         public ResourceAccessRuleArgs build() {

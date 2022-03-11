@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.CredentialReferenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,9 +25,9 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationArgs extends io.pulu
      * 
      */
     @InputImport(name="authorizationType", required=true)
-      private final Input<String> authorizationType;
+      private final Output<String> authorizationType;
 
-    public Input<String> getAuthorizationType() {
+    public Output<String> getAuthorizationType() {
         return this.authorizationType;
     }
 
@@ -36,10 +36,10 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationArgs extends io.pulu
      * 
      */
     @InputImport(name="credential")
-      private final @Nullable Input<CredentialReferenceArgs> credential;
+      private final @Nullable Output<CredentialReferenceArgs> credential;
 
-    public Input<CredentialReferenceArgs> getCredential() {
-        return this.credential == null ? Input.empty() : this.credential;
+    public Output<CredentialReferenceArgs> getCredential() {
+        return this.credential == null ? Output.empty() : this.credential;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationArgs extends io.pulu
      * 
      */
     @InputImport(name="resourceId", required=true)
-      private final Input<String> resourceId;
+      private final Output<String> resourceId;
 
-    public Input<String> getResourceId() {
+    public Output<String> getResourceId() {
         return this.resourceId;
     }
 
     public LinkedIntegrationRuntimeRbacAuthorizationArgs(
-        Input<String> authorizationType,
-        @Nullable Input<CredentialReferenceArgs> credential,
-        Input<String> resourceId) {
+        Output<String> authorizationType,
+        @Nullable Output<CredentialReferenceArgs> credential,
+        Output<String> resourceId) {
         this.authorizationType = Objects.requireNonNull(authorizationType, "expected parameter 'authorizationType' to be non-null");
         this.credential = credential;
         this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
     }
 
     private LinkedIntegrationRuntimeRbacAuthorizationArgs() {
-        this.authorizationType = Input.empty();
-        this.credential = Input.empty();
-        this.resourceId = Input.empty();
+        this.authorizationType = Output.empty();
+        this.credential = Output.empty();
+        this.resourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationArgs extends io.pulu
     }
 
     public static final class Builder {
-        private Input<String> authorizationType;
-        private @Nullable Input<CredentialReferenceArgs> credential;
-        private Input<String> resourceId;
+        private Output<String> authorizationType;
+        private @Nullable Output<CredentialReferenceArgs> credential;
+        private Output<String> resourceId;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationArgs extends io.pulu
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder authorizationType(Input<String> authorizationType) {
+        public Builder authorizationType(Output<String> authorizationType) {
             this.authorizationType = Objects.requireNonNull(authorizationType);
             return this;
         }
 
         public Builder authorizationType(String authorizationType) {
-            this.authorizationType = Input.of(Objects.requireNonNull(authorizationType));
+            this.authorizationType = Output.of(Objects.requireNonNull(authorizationType));
             return this;
         }
 
-        public Builder credential(@Nullable Input<CredentialReferenceArgs> credential) {
+        public Builder credential(@Nullable Output<CredentialReferenceArgs> credential) {
             this.credential = credential;
             return this;
         }
 
         public Builder credential(@Nullable CredentialReferenceArgs credential) {
-            this.credential = Input.ofNullable(credential);
+            this.credential = Output.ofNullable(credential);
             return this;
         }
 
-        public Builder resourceId(Input<String> resourceId) {
+        public Builder resourceId(Output<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
         public Builder resourceId(String resourceId) {
-            this.resourceId = Input.of(Objects.requireNonNull(resourceId));
+            this.resourceId = Output.of(Objects.requireNonNull(resourceId));
             return this;
         }
         public LinkedIntegrationRuntimeRbacAuthorizationArgs build() {

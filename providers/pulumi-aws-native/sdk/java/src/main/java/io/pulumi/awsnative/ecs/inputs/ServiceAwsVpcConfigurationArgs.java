@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.awsnative.ecs.enums.ServiceAwsVpcConfigurationAssignPublicIp;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,39 +17,39 @@ public final class ServiceAwsVpcConfigurationArgs extends io.pulumi.resources.Re
     public static final ServiceAwsVpcConfigurationArgs Empty = new ServiceAwsVpcConfigurationArgs();
 
     @InputImport(name="assignPublicIp")
-      private final @Nullable Input<ServiceAwsVpcConfigurationAssignPublicIp> assignPublicIp;
+      private final @Nullable Output<ServiceAwsVpcConfigurationAssignPublicIp> assignPublicIp;
 
-    public Input<ServiceAwsVpcConfigurationAssignPublicIp> getAssignPublicIp() {
-        return this.assignPublicIp == null ? Input.empty() : this.assignPublicIp;
+    public Output<ServiceAwsVpcConfigurationAssignPublicIp> getAssignPublicIp() {
+        return this.assignPublicIp == null ? Output.empty() : this.assignPublicIp;
     }
 
     @InputImport(name="securityGroups")
-      private final @Nullable Input<List<String>> securityGroups;
+      private final @Nullable Output<List<String>> securityGroups;
 
-    public Input<List<String>> getSecurityGroups() {
-        return this.securityGroups == null ? Input.empty() : this.securityGroups;
+    public Output<List<String>> getSecurityGroups() {
+        return this.securityGroups == null ? Output.empty() : this.securityGroups;
     }
 
     @InputImport(name="subnets")
-      private final @Nullable Input<List<String>> subnets;
+      private final @Nullable Output<List<String>> subnets;
 
-    public Input<List<String>> getSubnets() {
-        return this.subnets == null ? Input.empty() : this.subnets;
+    public Output<List<String>> getSubnets() {
+        return this.subnets == null ? Output.empty() : this.subnets;
     }
 
     public ServiceAwsVpcConfigurationArgs(
-        @Nullable Input<ServiceAwsVpcConfigurationAssignPublicIp> assignPublicIp,
-        @Nullable Input<List<String>> securityGroups,
-        @Nullable Input<List<String>> subnets) {
+        @Nullable Output<ServiceAwsVpcConfigurationAssignPublicIp> assignPublicIp,
+        @Nullable Output<List<String>> securityGroups,
+        @Nullable Output<List<String>> subnets) {
         this.assignPublicIp = assignPublicIp;
         this.securityGroups = securityGroups;
         this.subnets = subnets;
     }
 
     private ServiceAwsVpcConfigurationArgs() {
-        this.assignPublicIp = Input.empty();
-        this.securityGroups = Input.empty();
-        this.subnets = Input.empty();
+        this.assignPublicIp = Output.empty();
+        this.securityGroups = Output.empty();
+        this.subnets = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,9 +61,9 @@ public final class ServiceAwsVpcConfigurationArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<ServiceAwsVpcConfigurationAssignPublicIp> assignPublicIp;
-        private @Nullable Input<List<String>> securityGroups;
-        private @Nullable Input<List<String>> subnets;
+        private @Nullable Output<ServiceAwsVpcConfigurationAssignPublicIp> assignPublicIp;
+        private @Nullable Output<List<String>> securityGroups;
+        private @Nullable Output<List<String>> subnets;
 
         public Builder() {
     	      // Empty
@@ -76,33 +76,33 @@ public final class ServiceAwsVpcConfigurationArgs extends io.pulumi.resources.Re
     	      this.subnets = defaults.subnets;
         }
 
-        public Builder assignPublicIp(@Nullable Input<ServiceAwsVpcConfigurationAssignPublicIp> assignPublicIp) {
+        public Builder assignPublicIp(@Nullable Output<ServiceAwsVpcConfigurationAssignPublicIp> assignPublicIp) {
             this.assignPublicIp = assignPublicIp;
             return this;
         }
 
         public Builder assignPublicIp(@Nullable ServiceAwsVpcConfigurationAssignPublicIp assignPublicIp) {
-            this.assignPublicIp = Input.ofNullable(assignPublicIp);
+            this.assignPublicIp = Output.ofNullable(assignPublicIp);
             return this;
         }
 
-        public Builder securityGroups(@Nullable Input<List<String>> securityGroups) {
+        public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
         public Builder securityGroups(@Nullable List<String> securityGroups) {
-            this.securityGroups = Input.ofNullable(securityGroups);
+            this.securityGroups = Output.ofNullable(securityGroups);
             return this;
         }
 
-        public Builder subnets(@Nullable Input<List<String>> subnets) {
+        public Builder subnets(@Nullable Output<List<String>> subnets) {
             this.subnets = subnets;
             return this;
         }
 
         public Builder subnets(@Nullable List<String> subnets) {
-            this.subnets = Input.ofNullable(subnets);
+            this.subnets = Output.ofNullable(subnets);
             return this;
         }
         public ServiceAwsVpcConfigurationArgs build() {

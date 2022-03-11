@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appstream.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -16,29 +16,29 @@ public final class StackApplicationSettingsGetArgs extends io.pulumi.resources.R
     public static final StackApplicationSettingsGetArgs Empty = new StackApplicationSettingsGetArgs();
 
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     @InputImport(name="settingsGroup")
-      private final @Nullable Input<String> settingsGroup;
+      private final @Nullable Output<String> settingsGroup;
 
-    public Input<String> getSettingsGroup() {
-        return this.settingsGroup == null ? Input.empty() : this.settingsGroup;
+    public Output<String> getSettingsGroup() {
+        return this.settingsGroup == null ? Output.empty() : this.settingsGroup;
     }
 
     public StackApplicationSettingsGetArgs(
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<String> settingsGroup) {
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<String> settingsGroup) {
         this.enabled = enabled;
         this.settingsGroup = settingsGroup;
     }
 
     private StackApplicationSettingsGetArgs() {
-        this.enabled = Input.empty();
-        this.settingsGroup = Input.empty();
+        this.enabled = Output.empty();
+        this.settingsGroup = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class StackApplicationSettingsGetArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<String> settingsGroup;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<String> settingsGroup;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class StackApplicationSettingsGetArgs extends io.pulumi.resources.R
     	      this.settingsGroup = defaults.settingsGroup;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder settingsGroup(@Nullable Input<String> settingsGroup) {
+        public Builder settingsGroup(@Nullable Output<String> settingsGroup) {
             this.settingsGroup = settingsGroup;
             return this;
         }
 
         public Builder settingsGroup(@Nullable String settingsGroup) {
-            this.settingsGroup = Input.ofNullable(settingsGroup);
+            this.settingsGroup = Output.ofNullable(settingsGroup);
             return this;
         }
         public StackApplicationSettingsGetArgs build() {

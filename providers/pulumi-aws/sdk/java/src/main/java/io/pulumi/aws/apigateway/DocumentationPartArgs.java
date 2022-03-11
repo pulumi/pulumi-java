@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway;
 
 import io.pulumi.aws.apigateway.inputs.DocumentationPartLocationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class DocumentationPartArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="location", required=true)
-      private final Input<DocumentationPartLocationArgs> location;
+      private final Output<DocumentationPartLocationArgs> location;
 
-    public Input<DocumentationPartLocationArgs> getLocation() {
+    public Output<DocumentationPartLocationArgs> getLocation() {
         return this.location;
     }
 
@@ -30,9 +30,9 @@ public final class DocumentationPartArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="properties", required=true)
-      private final Input<String> properties;
+      private final Output<String> properties;
 
-    public Input<String> getProperties() {
+    public Output<String> getProperties() {
         return this.properties;
     }
 
@@ -41,25 +41,25 @@ public final class DocumentationPartArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="restApiId", required=true)
-      private final Input<String> restApiId;
+      private final Output<String> restApiId;
 
-    public Input<String> getRestApiId() {
+    public Output<String> getRestApiId() {
         return this.restApiId;
     }
 
     public DocumentationPartArgs(
-        Input<DocumentationPartLocationArgs> location,
-        Input<String> properties,
-        Input<String> restApiId) {
+        Output<DocumentationPartLocationArgs> location,
+        Output<String> properties,
+        Output<String> restApiId) {
         this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
         this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
         this.restApiId = Objects.requireNonNull(restApiId, "expected parameter 'restApiId' to be non-null");
     }
 
     private DocumentationPartArgs() {
-        this.location = Input.empty();
-        this.properties = Input.empty();
-        this.restApiId = Input.empty();
+        this.location = Output.empty();
+        this.properties = Output.empty();
+        this.restApiId = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class DocumentationPartArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<DocumentationPartLocationArgs> location;
-        private Input<String> properties;
-        private Input<String> restApiId;
+        private Output<DocumentationPartLocationArgs> location;
+        private Output<String> properties;
+        private Output<String> restApiId;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class DocumentationPartArgs extends io.pulumi.resources.ResourceArg
     	      this.restApiId = defaults.restApiId;
         }
 
-        public Builder location(Input<DocumentationPartLocationArgs> location) {
+        public Builder location(Output<DocumentationPartLocationArgs> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
         public Builder location(DocumentationPartLocationArgs location) {
-            this.location = Input.of(Objects.requireNonNull(location));
+            this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
 
-        public Builder properties(Input<String> properties) {
+        public Builder properties(Output<String> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
         public Builder properties(String properties) {
-            this.properties = Input.of(Objects.requireNonNull(properties));
+            this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
 
-        public Builder restApiId(Input<String> restApiId) {
+        public Builder restApiId(Output<String> restApiId) {
             this.restApiId = Objects.requireNonNull(restApiId);
             return this;
         }
 
         public Builder restApiId(String restApiId) {
-            this.restApiId = Input.of(Objects.requireNonNull(restApiId));
+            this.restApiId = Output.of(Objects.requireNonNull(restApiId));
             return this;
         }
         public DocumentationPartArgs build() {

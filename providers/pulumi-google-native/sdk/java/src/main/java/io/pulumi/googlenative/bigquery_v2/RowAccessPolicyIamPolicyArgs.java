@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.inputs.AuditConfigArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.BindingArgs;
@@ -23,10 +23,10 @@ public final class RowAccessPolicyIamPolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="auditConfigs")
-      private final @Nullable Input<List<AuditConfigArgs>> auditConfigs;
+      private final @Nullable Output<List<AuditConfigArgs>> auditConfigs;
 
-    public Input<List<AuditConfigArgs>> getAuditConfigs() {
-        return this.auditConfigs == null ? Input.empty() : this.auditConfigs;
+    public Output<List<AuditConfigArgs>> getAuditConfigs() {
+        return this.auditConfigs == null ? Output.empty() : this.auditConfigs;
     }
 
     /**
@@ -34,16 +34,16 @@ public final class RowAccessPolicyIamPolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="bindings")
-      private final @Nullable Input<List<BindingArgs>> bindings;
+      private final @Nullable Output<List<BindingArgs>> bindings;
 
-    public Input<List<BindingArgs>> getBindings() {
-        return this.bindings == null ? Input.empty() : this.bindings;
+    public Output<List<BindingArgs>> getBindings() {
+        return this.bindings == null ? Output.empty() : this.bindings;
     }
 
     @InputImport(name="datasetId", required=true)
-      private final Input<String> datasetId;
+      private final Output<String> datasetId;
 
-    public Input<String> getDatasetId() {
+    public Output<String> getDatasetId() {
         return this.datasetId;
     }
 
@@ -52,30 +52,30 @@ public final class RowAccessPolicyIamPolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="rowAccessPolicyId", required=true)
-      private final Input<String> rowAccessPolicyId;
+      private final Output<String> rowAccessPolicyId;
 
-    public Input<String> getRowAccessPolicyId() {
+    public Output<String> getRowAccessPolicyId() {
         return this.rowAccessPolicyId;
     }
 
     @InputImport(name="tableId", required=true)
-      private final Input<String> tableId;
+      private final Output<String> tableId;
 
-    public Input<String> getTableId() {
+    public Output<String> getTableId() {
         return this.tableId;
     }
 
@@ -84,10 +84,10 @@ public final class RowAccessPolicyIamPolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="updateMask")
-      private final @Nullable Input<String> updateMask;
+      private final @Nullable Output<String> updateMask;
 
-    public Input<String> getUpdateMask() {
-        return this.updateMask == null ? Input.empty() : this.updateMask;
+    public Output<String> getUpdateMask() {
+        return this.updateMask == null ? Output.empty() : this.updateMask;
     }
 
     /**
@@ -95,22 +95,22 @@ public final class RowAccessPolicyIamPolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<Integer> version;
+      private final @Nullable Output<Integer> version;
 
-    public Input<Integer> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<Integer> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public RowAccessPolicyIamPolicyArgs(
-        @Nullable Input<List<AuditConfigArgs>> auditConfigs,
-        @Nullable Input<List<BindingArgs>> bindings,
-        Input<String> datasetId,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> project,
-        Input<String> rowAccessPolicyId,
-        Input<String> tableId,
-        @Nullable Input<String> updateMask,
-        @Nullable Input<Integer> version) {
+        @Nullable Output<List<AuditConfigArgs>> auditConfigs,
+        @Nullable Output<List<BindingArgs>> bindings,
+        Output<String> datasetId,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> project,
+        Output<String> rowAccessPolicyId,
+        Output<String> tableId,
+        @Nullable Output<String> updateMask,
+        @Nullable Output<Integer> version) {
         this.auditConfigs = auditConfigs;
         this.bindings = bindings;
         this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
@@ -123,15 +123,15 @@ public final class RowAccessPolicyIamPolicyArgs extends io.pulumi.resources.Reso
     }
 
     private RowAccessPolicyIamPolicyArgs() {
-        this.auditConfigs = Input.empty();
-        this.bindings = Input.empty();
-        this.datasetId = Input.empty();
-        this.etag = Input.empty();
-        this.project = Input.empty();
-        this.rowAccessPolicyId = Input.empty();
-        this.tableId = Input.empty();
-        this.updateMask = Input.empty();
-        this.version = Input.empty();
+        this.auditConfigs = Output.empty();
+        this.bindings = Output.empty();
+        this.datasetId = Output.empty();
+        this.etag = Output.empty();
+        this.project = Output.empty();
+        this.rowAccessPolicyId = Output.empty();
+        this.tableId = Output.empty();
+        this.updateMask = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -143,15 +143,15 @@ public final class RowAccessPolicyIamPolicyArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<List<AuditConfigArgs>> auditConfigs;
-        private @Nullable Input<List<BindingArgs>> bindings;
-        private Input<String> datasetId;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> project;
-        private Input<String> rowAccessPolicyId;
-        private Input<String> tableId;
-        private @Nullable Input<String> updateMask;
-        private @Nullable Input<Integer> version;
+        private @Nullable Output<List<AuditConfigArgs>> auditConfigs;
+        private @Nullable Output<List<BindingArgs>> bindings;
+        private Output<String> datasetId;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> project;
+        private Output<String> rowAccessPolicyId;
+        private Output<String> tableId;
+        private @Nullable Output<String> updateMask;
+        private @Nullable Output<Integer> version;
 
         public Builder() {
     	      // Empty
@@ -170,93 +170,93 @@ public final class RowAccessPolicyIamPolicyArgs extends io.pulumi.resources.Reso
     	      this.version = defaults.version;
         }
 
-        public Builder auditConfigs(@Nullable Input<List<AuditConfigArgs>> auditConfigs) {
+        public Builder auditConfigs(@Nullable Output<List<AuditConfigArgs>> auditConfigs) {
             this.auditConfigs = auditConfigs;
             return this;
         }
 
         public Builder auditConfigs(@Nullable List<AuditConfigArgs> auditConfigs) {
-            this.auditConfigs = Input.ofNullable(auditConfigs);
+            this.auditConfigs = Output.ofNullable(auditConfigs);
             return this;
         }
 
-        public Builder bindings(@Nullable Input<List<BindingArgs>> bindings) {
+        public Builder bindings(@Nullable Output<List<BindingArgs>> bindings) {
             this.bindings = bindings;
             return this;
         }
 
         public Builder bindings(@Nullable List<BindingArgs> bindings) {
-            this.bindings = Input.ofNullable(bindings);
+            this.bindings = Output.ofNullable(bindings);
             return this;
         }
 
-        public Builder datasetId(Input<String> datasetId) {
+        public Builder datasetId(Output<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
         public Builder datasetId(String datasetId) {
-            this.datasetId = Input.of(Objects.requireNonNull(datasetId));
+            this.datasetId = Output.of(Objects.requireNonNull(datasetId));
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder rowAccessPolicyId(Input<String> rowAccessPolicyId) {
+        public Builder rowAccessPolicyId(Output<String> rowAccessPolicyId) {
             this.rowAccessPolicyId = Objects.requireNonNull(rowAccessPolicyId);
             return this;
         }
 
         public Builder rowAccessPolicyId(String rowAccessPolicyId) {
-            this.rowAccessPolicyId = Input.of(Objects.requireNonNull(rowAccessPolicyId));
+            this.rowAccessPolicyId = Output.of(Objects.requireNonNull(rowAccessPolicyId));
             return this;
         }
 
-        public Builder tableId(Input<String> tableId) {
+        public Builder tableId(Output<String> tableId) {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
         }
 
         public Builder tableId(String tableId) {
-            this.tableId = Input.of(Objects.requireNonNull(tableId));
+            this.tableId = Output.of(Objects.requireNonNull(tableId));
             return this;
         }
 
-        public Builder updateMask(@Nullable Input<String> updateMask) {
+        public Builder updateMask(@Nullable Output<String> updateMask) {
             this.updateMask = updateMask;
             return this;
         }
 
         public Builder updateMask(@Nullable String updateMask) {
-            this.updateMask = Input.ofNullable(updateMask);
+            this.updateMask = Output.ofNullable(updateMask);
             return this;
         }
 
-        public Builder version(@Nullable Input<Integer> version) {
+        public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable Integer version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public RowAccessPolicyIamPolicyArgs build() {

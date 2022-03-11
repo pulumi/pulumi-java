@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetContainerActionArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetQueryActionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -17,39 +17,39 @@ public final class DatasetActionArgs extends io.pulumi.resources.ResourceArgs {
     public static final DatasetActionArgs Empty = new DatasetActionArgs();
 
     @InputImport(name="actionName", required=true)
-      private final Input<String> actionName;
+      private final Output<String> actionName;
 
-    public Input<String> getActionName() {
+    public Output<String> getActionName() {
         return this.actionName;
     }
 
     @InputImport(name="containerAction")
-      private final @Nullable Input<DatasetContainerActionArgs> containerAction;
+      private final @Nullable Output<DatasetContainerActionArgs> containerAction;
 
-    public Input<DatasetContainerActionArgs> getContainerAction() {
-        return this.containerAction == null ? Input.empty() : this.containerAction;
+    public Output<DatasetContainerActionArgs> getContainerAction() {
+        return this.containerAction == null ? Output.empty() : this.containerAction;
     }
 
     @InputImport(name="queryAction")
-      private final @Nullable Input<DatasetQueryActionArgs> queryAction;
+      private final @Nullable Output<DatasetQueryActionArgs> queryAction;
 
-    public Input<DatasetQueryActionArgs> getQueryAction() {
-        return this.queryAction == null ? Input.empty() : this.queryAction;
+    public Output<DatasetQueryActionArgs> getQueryAction() {
+        return this.queryAction == null ? Output.empty() : this.queryAction;
     }
 
     public DatasetActionArgs(
-        Input<String> actionName,
-        @Nullable Input<DatasetContainerActionArgs> containerAction,
-        @Nullable Input<DatasetQueryActionArgs> queryAction) {
+        Output<String> actionName,
+        @Nullable Output<DatasetContainerActionArgs> containerAction,
+        @Nullable Output<DatasetQueryActionArgs> queryAction) {
         this.actionName = Objects.requireNonNull(actionName, "expected parameter 'actionName' to be non-null");
         this.containerAction = containerAction;
         this.queryAction = queryAction;
     }
 
     private DatasetActionArgs() {
-        this.actionName = Input.empty();
-        this.containerAction = Input.empty();
-        this.queryAction = Input.empty();
+        this.actionName = Output.empty();
+        this.containerAction = Output.empty();
+        this.queryAction = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,9 +61,9 @@ public final class DatasetActionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> actionName;
-        private @Nullable Input<DatasetContainerActionArgs> containerAction;
-        private @Nullable Input<DatasetQueryActionArgs> queryAction;
+        private Output<String> actionName;
+        private @Nullable Output<DatasetContainerActionArgs> containerAction;
+        private @Nullable Output<DatasetQueryActionArgs> queryAction;
 
         public Builder() {
     	      // Empty
@@ -76,33 +76,33 @@ public final class DatasetActionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.queryAction = defaults.queryAction;
         }
 
-        public Builder actionName(Input<String> actionName) {
+        public Builder actionName(Output<String> actionName) {
             this.actionName = Objects.requireNonNull(actionName);
             return this;
         }
 
         public Builder actionName(String actionName) {
-            this.actionName = Input.of(Objects.requireNonNull(actionName));
+            this.actionName = Output.of(Objects.requireNonNull(actionName));
             return this;
         }
 
-        public Builder containerAction(@Nullable Input<DatasetContainerActionArgs> containerAction) {
+        public Builder containerAction(@Nullable Output<DatasetContainerActionArgs> containerAction) {
             this.containerAction = containerAction;
             return this;
         }
 
         public Builder containerAction(@Nullable DatasetContainerActionArgs containerAction) {
-            this.containerAction = Input.ofNullable(containerAction);
+            this.containerAction = Output.ofNullable(containerAction);
             return this;
         }
 
-        public Builder queryAction(@Nullable Input<DatasetQueryActionArgs> queryAction) {
+        public Builder queryAction(@Nullable Output<DatasetQueryActionArgs> queryAction) {
             this.queryAction = queryAction;
             return this;
         }
 
         public Builder queryAction(@Nullable DatasetQueryActionArgs queryAction) {
-            this.queryAction = Input.ofNullable(queryAction);
+            this.queryAction = Output.ofNullable(queryAction);
             return this;
         }
         public DatasetActionArgs build() {

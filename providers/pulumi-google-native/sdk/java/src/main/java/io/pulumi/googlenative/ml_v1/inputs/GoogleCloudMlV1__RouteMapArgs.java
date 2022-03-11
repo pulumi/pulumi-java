@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class GoogleCloudMlV1__RouteMapArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="health")
-      private final @Nullable Input<String> health;
+      private final @Nullable Output<String> health;
 
-    public Input<String> getHealth() {
-        return this.health == null ? Input.empty() : this.health;
+    public Output<String> getHealth() {
+        return this.health == null ? Output.empty() : this.health;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class GoogleCloudMlV1__RouteMapArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="predict")
-      private final @Nullable Input<String> predict;
+      private final @Nullable Output<String> predict;
 
-    public Input<String> getPredict() {
-        return this.predict == null ? Input.empty() : this.predict;
+    public Output<String> getPredict() {
+        return this.predict == null ? Output.empty() : this.predict;
     }
 
     public GoogleCloudMlV1__RouteMapArgs(
-        @Nullable Input<String> health,
-        @Nullable Input<String> predict) {
+        @Nullable Output<String> health,
+        @Nullable Output<String> predict) {
         this.health = health;
         this.predict = predict;
     }
 
     private GoogleCloudMlV1__RouteMapArgs() {
-        this.health = Input.empty();
-        this.predict = Input.empty();
+        this.health = Output.empty();
+        this.predict = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class GoogleCloudMlV1__RouteMapArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> health;
-        private @Nullable Input<String> predict;
+        private @Nullable Output<String> health;
+        private @Nullable Output<String> predict;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class GoogleCloudMlV1__RouteMapArgs extends io.pulumi.resources.Res
     	      this.predict = defaults.predict;
         }
 
-        public Builder health(@Nullable Input<String> health) {
+        public Builder health(@Nullable Output<String> health) {
             this.health = health;
             return this;
         }
 
         public Builder health(@Nullable String health) {
-            this.health = Input.ofNullable(health);
+            this.health = Output.ofNullable(health);
             return this;
         }
 
-        public Builder predict(@Nullable Input<String> predict) {
+        public Builder predict(@Nullable Output<String> predict) {
             this.predict = predict;
             return this;
         }
 
         public Builder predict(@Nullable String predict) {
-            this.predict = Input.ofNullable(predict);
+            this.predict = Output.ofNullable(predict);
             return this;
         }
         public GoogleCloudMlV1__RouteMapArgs build() {

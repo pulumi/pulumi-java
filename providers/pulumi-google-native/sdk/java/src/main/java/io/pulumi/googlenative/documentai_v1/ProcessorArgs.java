@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.documentai_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ProcessorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-      private final @Nullable Input<String> createTime;
+      private final @Nullable Output<String> createTime;
 
-    public Input<String> getCreateTime() {
-        return this.createTime == null ? Input.empty() : this.createTime;
+    public Output<String> getCreateTime() {
+        return this.createTime == null ? Output.empty() : this.createTime;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class ProcessorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultProcessorVersion")
-      private final @Nullable Input<String> defaultProcessorVersion;
+      private final @Nullable Output<String> defaultProcessorVersion;
 
-    public Input<String> getDefaultProcessorVersion() {
-        return this.defaultProcessorVersion == null ? Input.empty() : this.defaultProcessorVersion;
+    public Output<String> getDefaultProcessorVersion() {
+        return this.defaultProcessorVersion == null ? Output.empty() : this.defaultProcessorVersion;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ProcessorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -52,24 +52,24 @@ public final class ProcessorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyName")
-      private final @Nullable Input<String> kmsKeyName;
+      private final @Nullable Output<String> kmsKeyName;
 
-    public Input<String> getKmsKeyName() {
-        return this.kmsKeyName == null ? Input.empty() : this.kmsKeyName;
+    public Output<String> getKmsKeyName() {
+        return this.kmsKeyName == null ? Output.empty() : this.kmsKeyName;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -77,20 +77,20 @@ public final class ProcessorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public ProcessorArgs(
-        @Nullable Input<String> createTime,
-        @Nullable Input<String> defaultProcessorVersion,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> kmsKeyName,
-        @Nullable Input<String> location,
-        @Nullable Input<String> project,
-        @Nullable Input<String> type) {
+        @Nullable Output<String> createTime,
+        @Nullable Output<String> defaultProcessorVersion,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> kmsKeyName,
+        @Nullable Output<String> location,
+        @Nullable Output<String> project,
+        @Nullable Output<String> type) {
         this.createTime = createTime;
         this.defaultProcessorVersion = defaultProcessorVersion;
         this.displayName = displayName;
@@ -101,13 +101,13 @@ public final class ProcessorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProcessorArgs() {
-        this.createTime = Input.empty();
-        this.defaultProcessorVersion = Input.empty();
-        this.displayName = Input.empty();
-        this.kmsKeyName = Input.empty();
-        this.location = Input.empty();
-        this.project = Input.empty();
-        this.type = Input.empty();
+        this.createTime = Output.empty();
+        this.defaultProcessorVersion = Output.empty();
+        this.displayName = Output.empty();
+        this.kmsKeyName = Output.empty();
+        this.location = Output.empty();
+        this.project = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -119,13 +119,13 @@ public final class ProcessorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> createTime;
-        private @Nullable Input<String> defaultProcessorVersion;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> kmsKeyName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> type;
+        private @Nullable Output<String> createTime;
+        private @Nullable Output<String> defaultProcessorVersion;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> kmsKeyName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -142,73 +142,73 @@ public final class ProcessorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder createTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Input.ofNullable(createTime);
+            this.createTime = Output.ofNullable(createTime);
             return this;
         }
 
-        public Builder defaultProcessorVersion(@Nullable Input<String> defaultProcessorVersion) {
+        public Builder defaultProcessorVersion(@Nullable Output<String> defaultProcessorVersion) {
             this.defaultProcessorVersion = defaultProcessorVersion;
             return this;
         }
 
         public Builder defaultProcessorVersion(@Nullable String defaultProcessorVersion) {
-            this.defaultProcessorVersion = Input.ofNullable(defaultProcessorVersion);
+            this.defaultProcessorVersion = Output.ofNullable(defaultProcessorVersion);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder kmsKeyName(@Nullable Input<String> kmsKeyName) {
+        public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
             this.kmsKeyName = kmsKeyName;
             return this;
         }
 
         public Builder kmsKeyName(@Nullable String kmsKeyName) {
-            this.kmsKeyName = Input.ofNullable(kmsKeyName);
+            this.kmsKeyName = Output.ofNullable(kmsKeyName);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public ProcessorArgs build() {

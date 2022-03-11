@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsublite_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,10 +15,10 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
     public static final ReservationArgs Empty = new ReservationArgs();
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -26,23 +26,23 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="reservationId", required=true)
-      private final Input<String> reservationId;
+      private final Output<String> reservationId;
 
-    public Input<String> getReservationId() {
+    public Output<String> getReservationId() {
         return this.reservationId;
     }
 
@@ -51,18 +51,18 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="throughputCapacity")
-      private final @Nullable Input<String> throughputCapacity;
+      private final @Nullable Output<String> throughputCapacity;
 
-    public Input<String> getThroughputCapacity() {
-        return this.throughputCapacity == null ? Input.empty() : this.throughputCapacity;
+    public Output<String> getThroughputCapacity() {
+        return this.throughputCapacity == null ? Output.empty() : this.throughputCapacity;
     }
 
     public ReservationArgs(
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        Input<String> reservationId,
-        @Nullable Input<String> throughputCapacity) {
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        Output<String> reservationId,
+        @Nullable Output<String> throughputCapacity) {
         this.location = location;
         this.name = name;
         this.project = project;
@@ -71,11 +71,11 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ReservationArgs() {
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.reservationId = Input.empty();
-        this.throughputCapacity = Input.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.reservationId = Output.empty();
+        this.throughputCapacity = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,11 +87,11 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private Input<String> reservationId;
-        private @Nullable Input<String> throughputCapacity;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private Output<String> reservationId;
+        private @Nullable Output<String> throughputCapacity;
 
         public Builder() {
     	      // Empty
@@ -106,53 +106,53 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.throughputCapacity = defaults.throughputCapacity;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder reservationId(Input<String> reservationId) {
+        public Builder reservationId(Output<String> reservationId) {
             this.reservationId = Objects.requireNonNull(reservationId);
             return this;
         }
 
         public Builder reservationId(String reservationId) {
-            this.reservationId = Input.of(Objects.requireNonNull(reservationId));
+            this.reservationId = Output.of(Objects.requireNonNull(reservationId));
             return this;
         }
 
-        public Builder throughputCapacity(@Nullable Input<String> throughputCapacity) {
+        public Builder throughputCapacity(@Nullable Output<String> throughputCapacity) {
             this.throughputCapacity = throughputCapacity;
             return this;
         }
 
         public Builder throughputCapacity(@Nullable String throughputCapacity) {
-            this.throughputCapacity = Input.ofNullable(throughputCapacity);
+            this.throughputCapacity = Output.ofNullable(throughputCapacity);
             return this;
         }
         public ReservationArgs build() {

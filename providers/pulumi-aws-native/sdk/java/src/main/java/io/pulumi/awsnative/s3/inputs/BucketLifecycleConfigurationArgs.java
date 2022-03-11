@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.inputs.BucketRuleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class BucketLifecycleConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="rules", required=true)
-      private final Input<List<BucketRuleArgs>> rules;
+      private final Output<List<BucketRuleArgs>> rules;
 
-    public Input<List<BucketRuleArgs>> getRules() {
+    public Output<List<BucketRuleArgs>> getRules() {
         return this.rules;
     }
 
-    public BucketLifecycleConfigurationArgs(Input<List<BucketRuleArgs>> rules) {
+    public BucketLifecycleConfigurationArgs(Output<List<BucketRuleArgs>> rules) {
         this.rules = Objects.requireNonNull(rules, "expected parameter 'rules' to be non-null");
     }
 
     private BucketLifecycleConfigurationArgs() {
-        this.rules = Input.empty();
+        this.rules = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class BucketLifecycleConfigurationArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<List<BucketRuleArgs>> rules;
+        private Output<List<BucketRuleArgs>> rules;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class BucketLifecycleConfigurationArgs extends io.pulumi.resources.
     	      this.rules = defaults.rules;
         }
 
-        public Builder rules(Input<List<BucketRuleArgs>> rules) {
+        public Builder rules(Output<List<BucketRuleArgs>> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
 
         public Builder rules(List<BucketRuleArgs> rules) {
-            this.rules = Input.of(Objects.requireNonNull(rules));
+            this.rules = Output.of(Objects.requireNonNull(rules));
             return this;
         }
         public BucketLifecycleConfigurationArgs build() {

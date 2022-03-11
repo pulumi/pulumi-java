@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.pubsub;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -152,14 +151,14 @@ public class SubscriptionIAMPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SubscriptionIAMPolicy(String name, SubscriptionIAMPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:pubsub/subscriptionIAMPolicy:SubscriptionIAMPolicy", name, args == null ? SubscriptionIAMPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:pubsub/subscriptionIAMPolicy:SubscriptionIAMPolicy", name, args == null ? SubscriptionIAMPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private SubscriptionIAMPolicy(String name, Input<String> id, @Nullable SubscriptionIAMPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private SubscriptionIAMPolicy(String name, Output<String> id, @Nullable SubscriptionIAMPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:pubsub/subscriptionIAMPolicy:SubscriptionIAMPolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -175,7 +174,7 @@ public class SubscriptionIAMPolicy extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SubscriptionIAMPolicy get(String name, Input<String> id, @Nullable SubscriptionIAMPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static SubscriptionIAMPolicy get(String name, Output<String> id, @Nullable SubscriptionIAMPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SubscriptionIAMPolicy(name, id, state, options);
     }
 }

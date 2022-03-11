@@ -1,7 +1,7 @@
 package io.pulumi.core.internal;
 
-import io.pulumi.core.Input;
-import io.pulumi.core.InputOutputTests;
+import io.pulumi.core.Output;
+import io.pulumi.core.OutputTests;
 import io.pulumi.core.Tuples;
 import org.junit.jupiter.api.Test;
 
@@ -18,8 +18,8 @@ class InputOutputDataTest {
     @Test
     void testTuple() {
         var result = InputOutputData.tuple(
-                Input.of(1), Input.of(2), Input.of(3), Input.of(4),
-                Input.of(5), Input.of(6), Input.of(7), Input.of(8)
+                Output.of(1), Output.of(2), Output.of(3), Output.of(4),
+                Output.of(5), Output.of(6), Output.of(7), Output.of(8)
         ).join();
 
         assertThat(result.getValueNullable()).isNotNull()
@@ -29,8 +29,8 @@ class InputOutputDataTest {
     @Test
     void testTupleEmpty() {
         var result = InputOutputData.tuple(
-                Input.empty(), Input.empty(), Input.empty(), Input.empty(),
-                Input.empty(), Input.empty(), Input.empty(), Input.empty()
+                Output.empty(), Output.empty(), Output.empty(), Output.empty(),
+                Output.empty(), Output.empty(), Output.empty(), Output.empty()
         ).join();
 
         assertThat(result.getValueNullable()).isNotNull()
@@ -40,10 +40,10 @@ class InputOutputDataTest {
     @Test
     void testTupleUnknown() {
         var result = InputOutputData.tuple(
-                InputOutputTests.unknown(), InputOutputTests.unknown(),
-                InputOutputTests.unknown(), InputOutputTests.unknown(),
-                InputOutputTests.unknown(), InputOutputTests.unknown(),
-                InputOutputTests.unknown(), InputOutputTests.unknown()
+                OutputTests.unknown(), OutputTests.unknown(),
+                OutputTests.unknown(), OutputTests.unknown(),
+                OutputTests.unknown(), OutputTests.unknown(),
+                OutputTests.unknown(), OutputTests.unknown()
         ).join();
 
         assertThat(result.isKnown()).isFalse();

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ecs;
 import io.pulumi.awsnative.ecs.enums.ClusterCapacityProviderAssociationsCapacityProvider;
 import io.pulumi.awsnative.ecs.inputs.ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -18,39 +18,39 @@ public final class ClusterCapacityProviderAssociationsArgs extends io.pulumi.res
     public static final ClusterCapacityProviderAssociationsArgs Empty = new ClusterCapacityProviderAssociationsArgs();
 
     @InputImport(name="capacityProviders", required=true)
-      private final Input<List<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>>> capacityProviders;
+      private final Output<List<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>>> capacityProviders;
 
-    public Input<List<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>>> getCapacityProviders() {
+    public Output<List<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>>> getCapacityProviders() {
         return this.capacityProviders;
     }
 
     @InputImport(name="cluster", required=true)
-      private final Input<String> cluster;
+      private final Output<String> cluster;
 
-    public Input<String> getCluster() {
+    public Output<String> getCluster() {
         return this.cluster;
     }
 
     @InputImport(name="defaultCapacityProviderStrategy", required=true)
-      private final Input<List<ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs>> defaultCapacityProviderStrategy;
+      private final Output<List<ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs>> defaultCapacityProviderStrategy;
 
-    public Input<List<ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs>> getDefaultCapacityProviderStrategy() {
+    public Output<List<ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs>> getDefaultCapacityProviderStrategy() {
         return this.defaultCapacityProviderStrategy;
     }
 
     public ClusterCapacityProviderAssociationsArgs(
-        Input<List<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>>> capacityProviders,
-        Input<String> cluster,
-        Input<List<ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs>> defaultCapacityProviderStrategy) {
+        Output<List<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>>> capacityProviders,
+        Output<String> cluster,
+        Output<List<ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs>> defaultCapacityProviderStrategy) {
         this.capacityProviders = Objects.requireNonNull(capacityProviders, "expected parameter 'capacityProviders' to be non-null");
         this.cluster = Objects.requireNonNull(cluster, "expected parameter 'cluster' to be non-null");
         this.defaultCapacityProviderStrategy = Objects.requireNonNull(defaultCapacityProviderStrategy, "expected parameter 'defaultCapacityProviderStrategy' to be non-null");
     }
 
     private ClusterCapacityProviderAssociationsArgs() {
-        this.capacityProviders = Input.empty();
-        this.cluster = Input.empty();
-        this.defaultCapacityProviderStrategy = Input.empty();
+        this.capacityProviders = Output.empty();
+        this.cluster = Output.empty();
+        this.defaultCapacityProviderStrategy = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,9 +62,9 @@ public final class ClusterCapacityProviderAssociationsArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private Input<List<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>>> capacityProviders;
-        private Input<String> cluster;
-        private Input<List<ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs>> defaultCapacityProviderStrategy;
+        private Output<List<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>>> capacityProviders;
+        private Output<String> cluster;
+        private Output<List<ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs>> defaultCapacityProviderStrategy;
 
         public Builder() {
     	      // Empty
@@ -77,33 +77,33 @@ public final class ClusterCapacityProviderAssociationsArgs extends io.pulumi.res
     	      this.defaultCapacityProviderStrategy = defaults.defaultCapacityProviderStrategy;
         }
 
-        public Builder capacityProviders(Input<List<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>>> capacityProviders) {
+        public Builder capacityProviders(Output<List<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>>> capacityProviders) {
             this.capacityProviders = Objects.requireNonNull(capacityProviders);
             return this;
         }
 
         public Builder capacityProviders(List<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>> capacityProviders) {
-            this.capacityProviders = Input.of(Objects.requireNonNull(capacityProviders));
+            this.capacityProviders = Output.of(Objects.requireNonNull(capacityProviders));
             return this;
         }
 
-        public Builder cluster(Input<String> cluster) {
+        public Builder cluster(Output<String> cluster) {
             this.cluster = Objects.requireNonNull(cluster);
             return this;
         }
 
         public Builder cluster(String cluster) {
-            this.cluster = Input.of(Objects.requireNonNull(cluster));
+            this.cluster = Output.of(Objects.requireNonNull(cluster));
             return this;
         }
 
-        public Builder defaultCapacityProviderStrategy(Input<List<ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs>> defaultCapacityProviderStrategy) {
+        public Builder defaultCapacityProviderStrategy(Output<List<ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs>> defaultCapacityProviderStrategy) {
             this.defaultCapacityProviderStrategy = Objects.requireNonNull(defaultCapacityProviderStrategy);
             return this;
         }
 
         public Builder defaultCapacityProviderStrategy(List<ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs> defaultCapacityProviderStrategy) {
-            this.defaultCapacityProviderStrategy = Input.of(Objects.requireNonNull(defaultCapacityProviderStrategy));
+            this.defaultCapacityProviderStrategy = Output.of(Objects.requireNonNull(defaultCapacityProviderStrategy));
             return this;
         }
         public ClusterCapacityProviderAssociationsArgs build() {

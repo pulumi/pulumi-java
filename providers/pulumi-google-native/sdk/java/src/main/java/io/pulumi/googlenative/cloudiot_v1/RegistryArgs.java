@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudiot_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudiot_v1.enums.RegistryLogLevel;
 import io.pulumi.googlenative.cloudiot_v1.inputs.EventNotificationConfigArgs;
@@ -26,10 +26,10 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="credentials")
-      private final @Nullable Input<List<RegistryCredentialArgs>> credentials;
+      private final @Nullable Output<List<RegistryCredentialArgs>> credentials;
 
-    public Input<List<RegistryCredentialArgs>> getCredentials() {
-        return this.credentials == null ? Input.empty() : this.credentials;
+    public Output<List<RegistryCredentialArgs>> getCredentials() {
+        return this.credentials == null ? Output.empty() : this.credentials;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventNotificationConfigs")
-      private final @Nullable Input<List<EventNotificationConfigArgs>> eventNotificationConfigs;
+      private final @Nullable Output<List<EventNotificationConfigArgs>> eventNotificationConfigs;
 
-    public Input<List<EventNotificationConfigArgs>> getEventNotificationConfigs() {
-        return this.eventNotificationConfigs == null ? Input.empty() : this.eventNotificationConfigs;
+    public Output<List<EventNotificationConfigArgs>> getEventNotificationConfigs() {
+        return this.eventNotificationConfigs == null ? Output.empty() : this.eventNotificationConfigs;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpConfig")
-      private final @Nullable Input<HttpConfigArgs> httpConfig;
+      private final @Nullable Output<HttpConfigArgs> httpConfig;
 
-    public Input<HttpConfigArgs> getHttpConfig() {
-        return this.httpConfig == null ? Input.empty() : this.httpConfig;
+    public Output<HttpConfigArgs> getHttpConfig() {
+        return this.httpConfig == null ? Output.empty() : this.httpConfig;
     }
 
     /**
@@ -59,17 +59,17 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logLevel")
-      private final @Nullable Input<RegistryLogLevel> logLevel;
+      private final @Nullable Output<RegistryLogLevel> logLevel;
 
-    public Input<RegistryLogLevel> getLogLevel() {
-        return this.logLevel == null ? Input.empty() : this.logLevel;
+    public Output<RegistryLogLevel> getLogLevel() {
+        return this.logLevel == null ? Output.empty() : this.logLevel;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mqttConfig")
-      private final @Nullable Input<MqttConfigArgs> mqttConfig;
+      private final @Nullable Output<MqttConfigArgs> mqttConfig;
 
-    public Input<MqttConfigArgs> getMqttConfig() {
-        return this.mqttConfig == null ? Input.empty() : this.mqttConfig;
+    public Output<MqttConfigArgs> getMqttConfig() {
+        return this.mqttConfig == null ? Output.empty() : this.mqttConfig;
     }
 
     /**
@@ -99,17 +99,17 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -117,23 +117,23 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stateNotificationConfig")
-      private final @Nullable Input<StateNotificationConfigArgs> stateNotificationConfig;
+      private final @Nullable Output<StateNotificationConfigArgs> stateNotificationConfig;
 
-    public Input<StateNotificationConfigArgs> getStateNotificationConfig() {
-        return this.stateNotificationConfig == null ? Input.empty() : this.stateNotificationConfig;
+    public Output<StateNotificationConfigArgs> getStateNotificationConfig() {
+        return this.stateNotificationConfig == null ? Output.empty() : this.stateNotificationConfig;
     }
 
     public RegistryArgs(
-        @Nullable Input<List<RegistryCredentialArgs>> credentials,
-        @Nullable Input<List<EventNotificationConfigArgs>> eventNotificationConfigs,
-        @Nullable Input<HttpConfigArgs> httpConfig,
-        @Nullable Input<String> id,
-        @Nullable Input<String> location,
-        @Nullable Input<RegistryLogLevel> logLevel,
-        @Nullable Input<MqttConfigArgs> mqttConfig,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<StateNotificationConfigArgs> stateNotificationConfig) {
+        @Nullable Output<List<RegistryCredentialArgs>> credentials,
+        @Nullable Output<List<EventNotificationConfigArgs>> eventNotificationConfigs,
+        @Nullable Output<HttpConfigArgs> httpConfig,
+        @Nullable Output<String> id,
+        @Nullable Output<String> location,
+        @Nullable Output<RegistryLogLevel> logLevel,
+        @Nullable Output<MqttConfigArgs> mqttConfig,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<StateNotificationConfigArgs> stateNotificationConfig) {
         this.credentials = credentials;
         this.eventNotificationConfigs = eventNotificationConfigs;
         this.httpConfig = httpConfig;
@@ -147,16 +147,16 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RegistryArgs() {
-        this.credentials = Input.empty();
-        this.eventNotificationConfigs = Input.empty();
-        this.httpConfig = Input.empty();
-        this.id = Input.empty();
-        this.location = Input.empty();
-        this.logLevel = Input.empty();
-        this.mqttConfig = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.stateNotificationConfig = Input.empty();
+        this.credentials = Output.empty();
+        this.eventNotificationConfigs = Output.empty();
+        this.httpConfig = Output.empty();
+        this.id = Output.empty();
+        this.location = Output.empty();
+        this.logLevel = Output.empty();
+        this.mqttConfig = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.stateNotificationConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -168,16 +168,16 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<RegistryCredentialArgs>> credentials;
-        private @Nullable Input<List<EventNotificationConfigArgs>> eventNotificationConfigs;
-        private @Nullable Input<HttpConfigArgs> httpConfig;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> location;
-        private @Nullable Input<RegistryLogLevel> logLevel;
-        private @Nullable Input<MqttConfigArgs> mqttConfig;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<StateNotificationConfigArgs> stateNotificationConfig;
+        private @Nullable Output<List<RegistryCredentialArgs>> credentials;
+        private @Nullable Output<List<EventNotificationConfigArgs>> eventNotificationConfigs;
+        private @Nullable Output<HttpConfigArgs> httpConfig;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> location;
+        private @Nullable Output<RegistryLogLevel> logLevel;
+        private @Nullable Output<MqttConfigArgs> mqttConfig;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<StateNotificationConfigArgs> stateNotificationConfig;
 
         public Builder() {
     	      // Empty
@@ -197,103 +197,103 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.stateNotificationConfig = defaults.stateNotificationConfig;
         }
 
-        public Builder credentials(@Nullable Input<List<RegistryCredentialArgs>> credentials) {
+        public Builder credentials(@Nullable Output<List<RegistryCredentialArgs>> credentials) {
             this.credentials = credentials;
             return this;
         }
 
         public Builder credentials(@Nullable List<RegistryCredentialArgs> credentials) {
-            this.credentials = Input.ofNullable(credentials);
+            this.credentials = Output.ofNullable(credentials);
             return this;
         }
 
-        public Builder eventNotificationConfigs(@Nullable Input<List<EventNotificationConfigArgs>> eventNotificationConfigs) {
+        public Builder eventNotificationConfigs(@Nullable Output<List<EventNotificationConfigArgs>> eventNotificationConfigs) {
             this.eventNotificationConfigs = eventNotificationConfigs;
             return this;
         }
 
         public Builder eventNotificationConfigs(@Nullable List<EventNotificationConfigArgs> eventNotificationConfigs) {
-            this.eventNotificationConfigs = Input.ofNullable(eventNotificationConfigs);
+            this.eventNotificationConfigs = Output.ofNullable(eventNotificationConfigs);
             return this;
         }
 
-        public Builder httpConfig(@Nullable Input<HttpConfigArgs> httpConfig) {
+        public Builder httpConfig(@Nullable Output<HttpConfigArgs> httpConfig) {
             this.httpConfig = httpConfig;
             return this;
         }
 
         public Builder httpConfig(@Nullable HttpConfigArgs httpConfig) {
-            this.httpConfig = Input.ofNullable(httpConfig);
+            this.httpConfig = Output.ofNullable(httpConfig);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder logLevel(@Nullable Input<RegistryLogLevel> logLevel) {
+        public Builder logLevel(@Nullable Output<RegistryLogLevel> logLevel) {
             this.logLevel = logLevel;
             return this;
         }
 
         public Builder logLevel(@Nullable RegistryLogLevel logLevel) {
-            this.logLevel = Input.ofNullable(logLevel);
+            this.logLevel = Output.ofNullable(logLevel);
             return this;
         }
 
-        public Builder mqttConfig(@Nullable Input<MqttConfigArgs> mqttConfig) {
+        public Builder mqttConfig(@Nullable Output<MqttConfigArgs> mqttConfig) {
             this.mqttConfig = mqttConfig;
             return this;
         }
 
         public Builder mqttConfig(@Nullable MqttConfigArgs mqttConfig) {
-            this.mqttConfig = Input.ofNullable(mqttConfig);
+            this.mqttConfig = Output.ofNullable(mqttConfig);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder stateNotificationConfig(@Nullable Input<StateNotificationConfigArgs> stateNotificationConfig) {
+        public Builder stateNotificationConfig(@Nullable Output<StateNotificationConfigArgs> stateNotificationConfig) {
             this.stateNotificationConfig = stateNotificationConfig;
             return this;
         }
 
         public Builder stateNotificationConfig(@Nullable StateNotificationConfigArgs stateNotificationConfig) {
-            this.stateNotificationConfig = Input.ofNullable(stateNotificationConfig);
+            this.stateNotificationConfig = Output.ofNullable(stateNotificationConfig);
             return this;
         }
         public RegistryArgs build() {

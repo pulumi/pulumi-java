@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.extensions_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class RollbackConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="revision")
-      private final @Nullable Input<Integer> revision;
+      private final @Nullable Output<Integer> revision;
 
-    public Input<Integer> getRevision() {
-        return this.revision == null ? Input.empty() : this.revision;
+    public Output<Integer> getRevision() {
+        return this.revision == null ? Output.empty() : this.revision;
     }
 
-    public RollbackConfigArgs(@Nullable Input<Integer> revision) {
+    public RollbackConfigArgs(@Nullable Output<Integer> revision) {
         this.revision = revision;
     }
 
     private RollbackConfigArgs() {
-        this.revision = Input.empty();
+        this.revision = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class RollbackConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> revision;
+        private @Nullable Output<Integer> revision;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class RollbackConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.revision = defaults.revision;
         }
 
-        public Builder revision(@Nullable Input<Integer> revision) {
+        public Builder revision(@Nullable Output<Integer> revision) {
             this.revision = revision;
             return this;
         }
 
         public Builder revision(@Nullable Integer revision) {
-            this.revision = Input.ofNullable(revision);
+            this.revision = Output.ofNullable(revision);
             return this;
         }
         public RollbackConfigArgs build() {

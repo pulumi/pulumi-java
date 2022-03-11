@@ -4,7 +4,7 @@
 package io.pulumi.aws.waf.inputs;
 
 import io.pulumi.aws.waf.inputs.XssMatchSetXssMatchTupleGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class XssMatchSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class XssMatchSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class XssMatchSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="xssMatchTuples")
-      private final @Nullable Input<List<XssMatchSetXssMatchTupleGetArgs>> xssMatchTuples;
+      private final @Nullable Output<List<XssMatchSetXssMatchTupleGetArgs>> xssMatchTuples;
 
-    public Input<List<XssMatchSetXssMatchTupleGetArgs>> getXssMatchTuples() {
-        return this.xssMatchTuples == null ? Input.empty() : this.xssMatchTuples;
+    public Output<List<XssMatchSetXssMatchTupleGetArgs>> getXssMatchTuples() {
+        return this.xssMatchTuples == null ? Output.empty() : this.xssMatchTuples;
     }
 
     public XssMatchSetState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> name,
-        @Nullable Input<List<XssMatchSetXssMatchTupleGetArgs>> xssMatchTuples) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> name,
+        @Nullable Output<List<XssMatchSetXssMatchTupleGetArgs>> xssMatchTuples) {
         this.arn = arn;
         this.name = name;
         this.xssMatchTuples = xssMatchTuples;
     }
 
     private XssMatchSetState() {
-        this.arn = Input.empty();
-        this.name = Input.empty();
-        this.xssMatchTuples = Input.empty();
+        this.arn = Output.empty();
+        this.name = Output.empty();
+        this.xssMatchTuples = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class XssMatchSetState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<XssMatchSetXssMatchTupleGetArgs>> xssMatchTuples;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<XssMatchSetXssMatchTupleGetArgs>> xssMatchTuples;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class XssMatchSetState extends io.pulumi.resources.ResourceArgs {
     	      this.xssMatchTuples = defaults.xssMatchTuples;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder xssMatchTuples(@Nullable Input<List<XssMatchSetXssMatchTupleGetArgs>> xssMatchTuples) {
+        public Builder xssMatchTuples(@Nullable Output<List<XssMatchSetXssMatchTupleGetArgs>> xssMatchTuples) {
             this.xssMatchTuples = xssMatchTuples;
             return this;
         }
 
         public Builder xssMatchTuples(@Nullable List<XssMatchSetXssMatchTupleGetArgs> xssMatchTuples) {
-            this.xssMatchTuples = Input.ofNullable(xssMatchTuples);
+            this.xssMatchTuples = Output.ofNullable(xssMatchTuples);
             return this;
         }
         public XssMatchSetState build() {

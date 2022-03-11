@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.InstanceTemplateAdvancedMachineFeaturesArgs;
 import io.pulumi.gcp.compute.inputs.InstanceTemplateConfidentialInstanceConfigArgs;
@@ -33,10 +33,10 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="advancedMachineFeatures")
-      private final @Nullable Input<InstanceTemplateAdvancedMachineFeaturesArgs> advancedMachineFeatures;
+      private final @Nullable Output<InstanceTemplateAdvancedMachineFeaturesArgs> advancedMachineFeatures;
 
-    public Input<InstanceTemplateAdvancedMachineFeaturesArgs> getAdvancedMachineFeatures() {
-        return this.advancedMachineFeatures == null ? Input.empty() : this.advancedMachineFeatures;
+    public Output<InstanceTemplateAdvancedMachineFeaturesArgs> getAdvancedMachineFeatures() {
+        return this.advancedMachineFeatures == null ? Output.empty() : this.advancedMachineFeatures;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="canIpForward")
-      private final @Nullable Input<Boolean> canIpForward;
+      private final @Nullable Output<Boolean> canIpForward;
 
-    public Input<Boolean> getCanIpForward() {
-        return this.canIpForward == null ? Input.empty() : this.canIpForward;
+    public Output<Boolean> getCanIpForward() {
+        return this.canIpForward == null ? Output.empty() : this.canIpForward;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="confidentialInstanceConfig")
-      private final @Nullable Input<InstanceTemplateConfidentialInstanceConfigArgs> confidentialInstanceConfig;
+      private final @Nullable Output<InstanceTemplateConfidentialInstanceConfigArgs> confidentialInstanceConfig;
 
-    public Input<InstanceTemplateConfidentialInstanceConfigArgs> getConfidentialInstanceConfig() {
-        return this.confidentialInstanceConfig == null ? Input.empty() : this.confidentialInstanceConfig;
+    public Output<InstanceTemplateConfidentialInstanceConfigArgs> getConfidentialInstanceConfig() {
+        return this.confidentialInstanceConfig == null ? Output.empty() : this.confidentialInstanceConfig;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -80,9 +80,9 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="disks", required=true)
-      private final Input<List<InstanceTemplateDiskArgs>> disks;
+      private final Output<List<InstanceTemplateDiskArgs>> disks;
 
-    public Input<List<InstanceTemplateDiskArgs>> getDisks() {
+    public Output<List<InstanceTemplateDiskArgs>> getDisks() {
         return this.disks;
     }
 
@@ -92,10 +92,10 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="enableDisplay")
-      private final @Nullable Input<Boolean> enableDisplay;
+      private final @Nullable Output<Boolean> enableDisplay;
 
-    public Input<Boolean> getEnableDisplay() {
-        return this.enableDisplay == null ? Input.empty() : this.enableDisplay;
+    public Output<Boolean> getEnableDisplay() {
+        return this.enableDisplay == null ? Output.empty() : this.enableDisplay;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="guestAccelerators")
-      private final @Nullable Input<List<InstanceTemplateGuestAcceleratorArgs>> guestAccelerators;
+      private final @Nullable Output<List<InstanceTemplateGuestAcceleratorArgs>> guestAccelerators;
 
-    public Input<List<InstanceTemplateGuestAcceleratorArgs>> getGuestAccelerators() {
-        return this.guestAccelerators == null ? Input.empty() : this.guestAccelerators;
+    public Output<List<InstanceTemplateGuestAcceleratorArgs>> getGuestAccelerators() {
+        return this.guestAccelerators == null ? Output.empty() : this.guestAccelerators;
     }
 
     /**
@@ -115,10 +115,10 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="instanceDescription")
-      private final @Nullable Input<String> instanceDescription;
+      private final @Nullable Output<String> instanceDescription;
 
-    public Input<String> getInstanceDescription() {
-        return this.instanceDescription == null ? Input.empty() : this.instanceDescription;
+    public Output<String> getInstanceDescription() {
+        return this.instanceDescription == null ? Output.empty() : this.instanceDescription;
     }
 
     /**
@@ -127,10 +127,10 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -138,9 +138,9 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="machineType", required=true)
-      private final Input<String> machineType;
+      private final Output<String> machineType;
 
-    public Input<String> getMachineType() {
+    public Output<String> getMachineType() {
         return this.machineType;
     }
 
@@ -150,10 +150,10 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<Map<String,Object>> metadata;
+      private final @Nullable Output<Map<String,Object>> metadata;
 
-    public Input<Map<String,Object>> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Map<String,Object>> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -164,10 +164,10 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="metadataStartupScript")
-      private final @Nullable Input<String> metadataStartupScript;
+      private final @Nullable Output<String> metadataStartupScript;
 
-    public Input<String> getMetadataStartupScript() {
-        return this.metadataStartupScript == null ? Input.empty() : this.metadataStartupScript;
+    public Output<String> getMetadataStartupScript() {
+        return this.metadataStartupScript == null ? Output.empty() : this.metadataStartupScript;
     }
 
     /**
@@ -176,10 +176,10 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="minCpuPlatform")
-      private final @Nullable Input<String> minCpuPlatform;
+      private final @Nullable Output<String> minCpuPlatform;
 
-    public Input<String> getMinCpuPlatform() {
-        return this.minCpuPlatform == null ? Input.empty() : this.minCpuPlatform;
+    public Output<String> getMinCpuPlatform() {
+        return this.minCpuPlatform == null ? Output.empty() : this.minCpuPlatform;
     }
 
     /**
@@ -188,10 +188,10 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -200,10 +200,10 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="namePrefix")
-      private final @Nullable Input<String> namePrefix;
+      private final @Nullable Output<String> namePrefix;
 
-    public Input<String> getNamePrefix() {
-        return this.namePrefix == null ? Input.empty() : this.namePrefix;
+    public Output<String> getNamePrefix() {
+        return this.namePrefix == null ? Output.empty() : this.namePrefix;
     }
 
     /**
@@ -213,10 +213,10 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="networkInterfaces")
-      private final @Nullable Input<List<InstanceTemplateNetworkInterfaceArgs>> networkInterfaces;
+      private final @Nullable Output<List<InstanceTemplateNetworkInterfaceArgs>> networkInterfaces;
 
-    public Input<List<InstanceTemplateNetworkInterfaceArgs>> getNetworkInterfaces() {
-        return this.networkInterfaces == null ? Input.empty() : this.networkInterfaces;
+    public Output<List<InstanceTemplateNetworkInterfaceArgs>> getNetworkInterfaces() {
+        return this.networkInterfaces == null ? Output.empty() : this.networkInterfaces;
     }
 
     /**
@@ -229,10 +229,10 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="networkPerformanceConfig")
-      private final @Nullable Input<InstanceTemplateNetworkPerformanceConfigArgs> networkPerformanceConfig;
+      private final @Nullable Output<InstanceTemplateNetworkPerformanceConfigArgs> networkPerformanceConfig;
 
-    public Input<InstanceTemplateNetworkPerformanceConfigArgs> getNetworkPerformanceConfig() {
-        return this.networkPerformanceConfig == null ? Input.empty() : this.networkPerformanceConfig;
+    public Output<InstanceTemplateNetworkPerformanceConfigArgs> getNetworkPerformanceConfig() {
+        return this.networkPerformanceConfig == null ? Output.empty() : this.networkPerformanceConfig;
     }
 
     /**
@@ -241,10 +241,10 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -257,10 +257,10 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -269,10 +269,10 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="reservationAffinity")
-      private final @Nullable Input<InstanceTemplateReservationAffinityArgs> reservationAffinity;
+      private final @Nullable Output<InstanceTemplateReservationAffinityArgs> reservationAffinity;
 
-    public Input<InstanceTemplateReservationAffinityArgs> getReservationAffinity() {
-        return this.reservationAffinity == null ? Input.empty() : this.reservationAffinity;
+    public Output<InstanceTemplateReservationAffinityArgs> getReservationAffinity() {
+        return this.reservationAffinity == null ? Output.empty() : this.reservationAffinity;
     }
 
     /**
@@ -281,10 +281,10 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="scheduling")
-      private final @Nullable Input<InstanceTemplateSchedulingArgs> scheduling;
+      private final @Nullable Output<InstanceTemplateSchedulingArgs> scheduling;
 
-    public Input<InstanceTemplateSchedulingArgs> getScheduling() {
-        return this.scheduling == null ? Input.empty() : this.scheduling;
+    public Output<InstanceTemplateSchedulingArgs> getScheduling() {
+        return this.scheduling == null ? Output.empty() : this.scheduling;
     }
 
     /**
@@ -292,10 +292,10 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="serviceAccount")
-      private final @Nullable Input<InstanceTemplateServiceAccountArgs> serviceAccount;
+      private final @Nullable Output<InstanceTemplateServiceAccountArgs> serviceAccount;
 
-    public Input<InstanceTemplateServiceAccountArgs> getServiceAccount() {
-        return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
+    public Output<InstanceTemplateServiceAccountArgs> getServiceAccount() {
+        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
     }
 
     /**
@@ -304,10 +304,10 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="shieldedInstanceConfig")
-      private final @Nullable Input<InstanceTemplateShieldedInstanceConfigArgs> shieldedInstanceConfig;
+      private final @Nullable Output<InstanceTemplateShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
-    public Input<InstanceTemplateShieldedInstanceConfigArgs> getShieldedInstanceConfig() {
-        return this.shieldedInstanceConfig == null ? Input.empty() : this.shieldedInstanceConfig;
+    public Output<InstanceTemplateShieldedInstanceConfigArgs> getShieldedInstanceConfig() {
+        return this.shieldedInstanceConfig == null ? Output.empty() : this.shieldedInstanceConfig;
     }
 
     /**
@@ -315,37 +315,37 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<String>> tags;
+      private final @Nullable Output<List<String>> tags;
 
-    public Input<List<String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public InstanceTemplateArgs(
-        @Nullable Input<InstanceTemplateAdvancedMachineFeaturesArgs> advancedMachineFeatures,
-        @Nullable Input<Boolean> canIpForward,
-        @Nullable Input<InstanceTemplateConfidentialInstanceConfigArgs> confidentialInstanceConfig,
-        @Nullable Input<String> description,
-        Input<List<InstanceTemplateDiskArgs>> disks,
-        @Nullable Input<Boolean> enableDisplay,
-        @Nullable Input<List<InstanceTemplateGuestAcceleratorArgs>> guestAccelerators,
-        @Nullable Input<String> instanceDescription,
-        @Nullable Input<Map<String,String>> labels,
-        Input<String> machineType,
-        @Nullable Input<Map<String,Object>> metadata,
-        @Nullable Input<String> metadataStartupScript,
-        @Nullable Input<String> minCpuPlatform,
-        @Nullable Input<String> name,
-        @Nullable Input<String> namePrefix,
-        @Nullable Input<List<InstanceTemplateNetworkInterfaceArgs>> networkInterfaces,
-        @Nullable Input<InstanceTemplateNetworkPerformanceConfigArgs> networkPerformanceConfig,
-        @Nullable Input<String> project,
-        @Nullable Input<String> region,
-        @Nullable Input<InstanceTemplateReservationAffinityArgs> reservationAffinity,
-        @Nullable Input<InstanceTemplateSchedulingArgs> scheduling,
-        @Nullable Input<InstanceTemplateServiceAccountArgs> serviceAccount,
-        @Nullable Input<InstanceTemplateShieldedInstanceConfigArgs> shieldedInstanceConfig,
-        @Nullable Input<List<String>> tags) {
+        @Nullable Output<InstanceTemplateAdvancedMachineFeaturesArgs> advancedMachineFeatures,
+        @Nullable Output<Boolean> canIpForward,
+        @Nullable Output<InstanceTemplateConfidentialInstanceConfigArgs> confidentialInstanceConfig,
+        @Nullable Output<String> description,
+        Output<List<InstanceTemplateDiskArgs>> disks,
+        @Nullable Output<Boolean> enableDisplay,
+        @Nullable Output<List<InstanceTemplateGuestAcceleratorArgs>> guestAccelerators,
+        @Nullable Output<String> instanceDescription,
+        @Nullable Output<Map<String,String>> labels,
+        Output<String> machineType,
+        @Nullable Output<Map<String,Object>> metadata,
+        @Nullable Output<String> metadataStartupScript,
+        @Nullable Output<String> minCpuPlatform,
+        @Nullable Output<String> name,
+        @Nullable Output<String> namePrefix,
+        @Nullable Output<List<InstanceTemplateNetworkInterfaceArgs>> networkInterfaces,
+        @Nullable Output<InstanceTemplateNetworkPerformanceConfigArgs> networkPerformanceConfig,
+        @Nullable Output<String> project,
+        @Nullable Output<String> region,
+        @Nullable Output<InstanceTemplateReservationAffinityArgs> reservationAffinity,
+        @Nullable Output<InstanceTemplateSchedulingArgs> scheduling,
+        @Nullable Output<InstanceTemplateServiceAccountArgs> serviceAccount,
+        @Nullable Output<InstanceTemplateShieldedInstanceConfigArgs> shieldedInstanceConfig,
+        @Nullable Output<List<String>> tags) {
         this.advancedMachineFeatures = advancedMachineFeatures;
         this.canIpForward = canIpForward;
         this.confidentialInstanceConfig = confidentialInstanceConfig;
@@ -373,30 +373,30 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private InstanceTemplateArgs() {
-        this.advancedMachineFeatures = Input.empty();
-        this.canIpForward = Input.empty();
-        this.confidentialInstanceConfig = Input.empty();
-        this.description = Input.empty();
-        this.disks = Input.empty();
-        this.enableDisplay = Input.empty();
-        this.guestAccelerators = Input.empty();
-        this.instanceDescription = Input.empty();
-        this.labels = Input.empty();
-        this.machineType = Input.empty();
-        this.metadata = Input.empty();
-        this.metadataStartupScript = Input.empty();
-        this.minCpuPlatform = Input.empty();
-        this.name = Input.empty();
-        this.namePrefix = Input.empty();
-        this.networkInterfaces = Input.empty();
-        this.networkPerformanceConfig = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
-        this.reservationAffinity = Input.empty();
-        this.scheduling = Input.empty();
-        this.serviceAccount = Input.empty();
-        this.shieldedInstanceConfig = Input.empty();
-        this.tags = Input.empty();
+        this.advancedMachineFeatures = Output.empty();
+        this.canIpForward = Output.empty();
+        this.confidentialInstanceConfig = Output.empty();
+        this.description = Output.empty();
+        this.disks = Output.empty();
+        this.enableDisplay = Output.empty();
+        this.guestAccelerators = Output.empty();
+        this.instanceDescription = Output.empty();
+        this.labels = Output.empty();
+        this.machineType = Output.empty();
+        this.metadata = Output.empty();
+        this.metadataStartupScript = Output.empty();
+        this.minCpuPlatform = Output.empty();
+        this.name = Output.empty();
+        this.namePrefix = Output.empty();
+        this.networkInterfaces = Output.empty();
+        this.networkPerformanceConfig = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
+        this.reservationAffinity = Output.empty();
+        this.scheduling = Output.empty();
+        this.serviceAccount = Output.empty();
+        this.shieldedInstanceConfig = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -408,30 +408,30 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<InstanceTemplateAdvancedMachineFeaturesArgs> advancedMachineFeatures;
-        private @Nullable Input<Boolean> canIpForward;
-        private @Nullable Input<InstanceTemplateConfidentialInstanceConfigArgs> confidentialInstanceConfig;
-        private @Nullable Input<String> description;
-        private Input<List<InstanceTemplateDiskArgs>> disks;
-        private @Nullable Input<Boolean> enableDisplay;
-        private @Nullable Input<List<InstanceTemplateGuestAcceleratorArgs>> guestAccelerators;
-        private @Nullable Input<String> instanceDescription;
-        private @Nullable Input<Map<String,String>> labels;
-        private Input<String> machineType;
-        private @Nullable Input<Map<String,Object>> metadata;
-        private @Nullable Input<String> metadataStartupScript;
-        private @Nullable Input<String> minCpuPlatform;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> namePrefix;
-        private @Nullable Input<List<InstanceTemplateNetworkInterfaceArgs>> networkInterfaces;
-        private @Nullable Input<InstanceTemplateNetworkPerformanceConfigArgs> networkPerformanceConfig;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> region;
-        private @Nullable Input<InstanceTemplateReservationAffinityArgs> reservationAffinity;
-        private @Nullable Input<InstanceTemplateSchedulingArgs> scheduling;
-        private @Nullable Input<InstanceTemplateServiceAccountArgs> serviceAccount;
-        private @Nullable Input<InstanceTemplateShieldedInstanceConfigArgs> shieldedInstanceConfig;
-        private @Nullable Input<List<String>> tags;
+        private @Nullable Output<InstanceTemplateAdvancedMachineFeaturesArgs> advancedMachineFeatures;
+        private @Nullable Output<Boolean> canIpForward;
+        private @Nullable Output<InstanceTemplateConfidentialInstanceConfigArgs> confidentialInstanceConfig;
+        private @Nullable Output<String> description;
+        private Output<List<InstanceTemplateDiskArgs>> disks;
+        private @Nullable Output<Boolean> enableDisplay;
+        private @Nullable Output<List<InstanceTemplateGuestAcceleratorArgs>> guestAccelerators;
+        private @Nullable Output<String> instanceDescription;
+        private @Nullable Output<Map<String,String>> labels;
+        private Output<String> machineType;
+        private @Nullable Output<Map<String,Object>> metadata;
+        private @Nullable Output<String> metadataStartupScript;
+        private @Nullable Output<String> minCpuPlatform;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> namePrefix;
+        private @Nullable Output<List<InstanceTemplateNetworkInterfaceArgs>> networkInterfaces;
+        private @Nullable Output<InstanceTemplateNetworkPerformanceConfigArgs> networkPerformanceConfig;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> region;
+        private @Nullable Output<InstanceTemplateReservationAffinityArgs> reservationAffinity;
+        private @Nullable Output<InstanceTemplateSchedulingArgs> scheduling;
+        private @Nullable Output<InstanceTemplateServiceAccountArgs> serviceAccount;
+        private @Nullable Output<InstanceTemplateShieldedInstanceConfigArgs> shieldedInstanceConfig;
+        private @Nullable Output<List<String>> tags;
 
         public Builder() {
     	      // Empty
@@ -465,243 +465,243 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
     	      this.tags = defaults.tags;
         }
 
-        public Builder advancedMachineFeatures(@Nullable Input<InstanceTemplateAdvancedMachineFeaturesArgs> advancedMachineFeatures) {
+        public Builder advancedMachineFeatures(@Nullable Output<InstanceTemplateAdvancedMachineFeaturesArgs> advancedMachineFeatures) {
             this.advancedMachineFeatures = advancedMachineFeatures;
             return this;
         }
 
         public Builder advancedMachineFeatures(@Nullable InstanceTemplateAdvancedMachineFeaturesArgs advancedMachineFeatures) {
-            this.advancedMachineFeatures = Input.ofNullable(advancedMachineFeatures);
+            this.advancedMachineFeatures = Output.ofNullable(advancedMachineFeatures);
             return this;
         }
 
-        public Builder canIpForward(@Nullable Input<Boolean> canIpForward) {
+        public Builder canIpForward(@Nullable Output<Boolean> canIpForward) {
             this.canIpForward = canIpForward;
             return this;
         }
 
         public Builder canIpForward(@Nullable Boolean canIpForward) {
-            this.canIpForward = Input.ofNullable(canIpForward);
+            this.canIpForward = Output.ofNullable(canIpForward);
             return this;
         }
 
-        public Builder confidentialInstanceConfig(@Nullable Input<InstanceTemplateConfidentialInstanceConfigArgs> confidentialInstanceConfig) {
+        public Builder confidentialInstanceConfig(@Nullable Output<InstanceTemplateConfidentialInstanceConfigArgs> confidentialInstanceConfig) {
             this.confidentialInstanceConfig = confidentialInstanceConfig;
             return this;
         }
 
         public Builder confidentialInstanceConfig(@Nullable InstanceTemplateConfidentialInstanceConfigArgs confidentialInstanceConfig) {
-            this.confidentialInstanceConfig = Input.ofNullable(confidentialInstanceConfig);
+            this.confidentialInstanceConfig = Output.ofNullable(confidentialInstanceConfig);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder disks(Input<List<InstanceTemplateDiskArgs>> disks) {
+        public Builder disks(Output<List<InstanceTemplateDiskArgs>> disks) {
             this.disks = Objects.requireNonNull(disks);
             return this;
         }
 
         public Builder disks(List<InstanceTemplateDiskArgs> disks) {
-            this.disks = Input.of(Objects.requireNonNull(disks));
+            this.disks = Output.of(Objects.requireNonNull(disks));
             return this;
         }
 
-        public Builder enableDisplay(@Nullable Input<Boolean> enableDisplay) {
+        public Builder enableDisplay(@Nullable Output<Boolean> enableDisplay) {
             this.enableDisplay = enableDisplay;
             return this;
         }
 
         public Builder enableDisplay(@Nullable Boolean enableDisplay) {
-            this.enableDisplay = Input.ofNullable(enableDisplay);
+            this.enableDisplay = Output.ofNullable(enableDisplay);
             return this;
         }
 
-        public Builder guestAccelerators(@Nullable Input<List<InstanceTemplateGuestAcceleratorArgs>> guestAccelerators) {
+        public Builder guestAccelerators(@Nullable Output<List<InstanceTemplateGuestAcceleratorArgs>> guestAccelerators) {
             this.guestAccelerators = guestAccelerators;
             return this;
         }
 
         public Builder guestAccelerators(@Nullable List<InstanceTemplateGuestAcceleratorArgs> guestAccelerators) {
-            this.guestAccelerators = Input.ofNullable(guestAccelerators);
+            this.guestAccelerators = Output.ofNullable(guestAccelerators);
             return this;
         }
 
-        public Builder instanceDescription(@Nullable Input<String> instanceDescription) {
+        public Builder instanceDescription(@Nullable Output<String> instanceDescription) {
             this.instanceDescription = instanceDescription;
             return this;
         }
 
         public Builder instanceDescription(@Nullable String instanceDescription) {
-            this.instanceDescription = Input.ofNullable(instanceDescription);
+            this.instanceDescription = Output.ofNullable(instanceDescription);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder machineType(Input<String> machineType) {
+        public Builder machineType(Output<String> machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
 
         public Builder machineType(String machineType) {
-            this.machineType = Input.of(Objects.requireNonNull(machineType));
+            this.machineType = Output.of(Objects.requireNonNull(machineType));
             return this;
         }
 
-        public Builder metadata(@Nullable Input<Map<String,Object>> metadata) {
+        public Builder metadata(@Nullable Output<Map<String,Object>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Map<String,Object> metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder metadataStartupScript(@Nullable Input<String> metadataStartupScript) {
+        public Builder metadataStartupScript(@Nullable Output<String> metadataStartupScript) {
             this.metadataStartupScript = metadataStartupScript;
             return this;
         }
 
         public Builder metadataStartupScript(@Nullable String metadataStartupScript) {
-            this.metadataStartupScript = Input.ofNullable(metadataStartupScript);
+            this.metadataStartupScript = Output.ofNullable(metadataStartupScript);
             return this;
         }
 
-        public Builder minCpuPlatform(@Nullable Input<String> minCpuPlatform) {
+        public Builder minCpuPlatform(@Nullable Output<String> minCpuPlatform) {
             this.minCpuPlatform = minCpuPlatform;
             return this;
         }
 
         public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
-            this.minCpuPlatform = Input.ofNullable(minCpuPlatform);
+            this.minCpuPlatform = Output.ofNullable(minCpuPlatform);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Input.ofNullable(namePrefix);
+            this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder networkInterfaces(@Nullable Input<List<InstanceTemplateNetworkInterfaceArgs>> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable Output<List<InstanceTemplateNetworkInterfaceArgs>> networkInterfaces) {
             this.networkInterfaces = networkInterfaces;
             return this;
         }
 
         public Builder networkInterfaces(@Nullable List<InstanceTemplateNetworkInterfaceArgs> networkInterfaces) {
-            this.networkInterfaces = Input.ofNullable(networkInterfaces);
+            this.networkInterfaces = Output.ofNullable(networkInterfaces);
             return this;
         }
 
-        public Builder networkPerformanceConfig(@Nullable Input<InstanceTemplateNetworkPerformanceConfigArgs> networkPerformanceConfig) {
+        public Builder networkPerformanceConfig(@Nullable Output<InstanceTemplateNetworkPerformanceConfigArgs> networkPerformanceConfig) {
             this.networkPerformanceConfig = networkPerformanceConfig;
             return this;
         }
 
         public Builder networkPerformanceConfig(@Nullable InstanceTemplateNetworkPerformanceConfigArgs networkPerformanceConfig) {
-            this.networkPerformanceConfig = Input.ofNullable(networkPerformanceConfig);
+            this.networkPerformanceConfig = Output.ofNullable(networkPerformanceConfig);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder reservationAffinity(@Nullable Input<InstanceTemplateReservationAffinityArgs> reservationAffinity) {
+        public Builder reservationAffinity(@Nullable Output<InstanceTemplateReservationAffinityArgs> reservationAffinity) {
             this.reservationAffinity = reservationAffinity;
             return this;
         }
 
         public Builder reservationAffinity(@Nullable InstanceTemplateReservationAffinityArgs reservationAffinity) {
-            this.reservationAffinity = Input.ofNullable(reservationAffinity);
+            this.reservationAffinity = Output.ofNullable(reservationAffinity);
             return this;
         }
 
-        public Builder scheduling(@Nullable Input<InstanceTemplateSchedulingArgs> scheduling) {
+        public Builder scheduling(@Nullable Output<InstanceTemplateSchedulingArgs> scheduling) {
             this.scheduling = scheduling;
             return this;
         }
 
         public Builder scheduling(@Nullable InstanceTemplateSchedulingArgs scheduling) {
-            this.scheduling = Input.ofNullable(scheduling);
+            this.scheduling = Output.ofNullable(scheduling);
             return this;
         }
 
-        public Builder serviceAccount(@Nullable Input<InstanceTemplateServiceAccountArgs> serviceAccount) {
+        public Builder serviceAccount(@Nullable Output<InstanceTemplateServiceAccountArgs> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
         public Builder serviceAccount(@Nullable InstanceTemplateServiceAccountArgs serviceAccount) {
-            this.serviceAccount = Input.ofNullable(serviceAccount);
+            this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder shieldedInstanceConfig(@Nullable Input<InstanceTemplateShieldedInstanceConfigArgs> shieldedInstanceConfig) {
+        public Builder shieldedInstanceConfig(@Nullable Output<InstanceTemplateShieldedInstanceConfigArgs> shieldedInstanceConfig) {
             this.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
 
         public Builder shieldedInstanceConfig(@Nullable InstanceTemplateShieldedInstanceConfigArgs shieldedInstanceConfig) {
-            this.shieldedInstanceConfig = Input.ofNullable(shieldedInstanceConfig);
+            this.shieldedInstanceConfig = Output.ofNullable(shieldedInstanceConfig);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<String>> tags) {
+        public Builder tags(@Nullable Output<List<String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public InstanceTemplateArgs build() {

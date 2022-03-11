@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2;
 
 import io.pulumi.core.AssetOrArchive;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.inputs.JobConfigurationArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.JobReferenceArgs;
@@ -22,10 +22,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configuration")
-      private final @Nullable Input<JobConfigurationArgs> configuration;
+      private final @Nullable Output<JobConfigurationArgs> configuration;
 
-    public Input<JobConfigurationArgs> getConfiguration() {
-        return this.configuration == null ? Input.empty() : this.configuration;
+    public Output<JobConfigurationArgs> getConfiguration() {
+        return this.configuration == null ? Output.empty() : this.configuration;
     }
 
     /**
@@ -33,31 +33,31 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobReference")
-      private final @Nullable Input<JobReferenceArgs> jobReference;
+      private final @Nullable Output<JobReferenceArgs> jobReference;
 
-    public Input<JobReferenceArgs> getJobReference() {
-        return this.jobReference == null ? Input.empty() : this.jobReference;
+    public Output<JobReferenceArgs> getJobReference() {
+        return this.jobReference == null ? Output.empty() : this.jobReference;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="source")
-      private final @Nullable Input<AssetOrArchive> source;
+      private final @Nullable Output<AssetOrArchive> source;
 
-    public Input<AssetOrArchive> getSource() {
-        return this.source == null ? Input.empty() : this.source;
+    public Output<AssetOrArchive> getSource() {
+        return this.source == null ? Output.empty() : this.source;
     }
 
     public JobArgs(
-        @Nullable Input<JobConfigurationArgs> configuration,
-        @Nullable Input<JobReferenceArgs> jobReference,
-        @Nullable Input<String> project,
-        @Nullable Input<AssetOrArchive> source) {
+        @Nullable Output<JobConfigurationArgs> configuration,
+        @Nullable Output<JobReferenceArgs> jobReference,
+        @Nullable Output<String> project,
+        @Nullable Output<AssetOrArchive> source) {
         this.configuration = configuration;
         this.jobReference = jobReference;
         this.project = project;
@@ -65,10 +65,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobArgs() {
-        this.configuration = Input.empty();
-        this.jobReference = Input.empty();
-        this.project = Input.empty();
-        this.source = Input.empty();
+        this.configuration = Output.empty();
+        this.jobReference = Output.empty();
+        this.project = Output.empty();
+        this.source = Output.empty();
     }
 
     public static Builder builder() {
@@ -80,10 +80,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<JobConfigurationArgs> configuration;
-        private @Nullable Input<JobReferenceArgs> jobReference;
-        private @Nullable Input<String> project;
-        private @Nullable Input<AssetOrArchive> source;
+        private @Nullable Output<JobConfigurationArgs> configuration;
+        private @Nullable Output<JobReferenceArgs> jobReference;
+        private @Nullable Output<String> project;
+        private @Nullable Output<AssetOrArchive> source;
 
         public Builder() {
     	      // Empty
@@ -97,43 +97,43 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     	      this.source = defaults.source;
         }
 
-        public Builder configuration(@Nullable Input<JobConfigurationArgs> configuration) {
+        public Builder configuration(@Nullable Output<JobConfigurationArgs> configuration) {
             this.configuration = configuration;
             return this;
         }
 
         public Builder configuration(@Nullable JobConfigurationArgs configuration) {
-            this.configuration = Input.ofNullable(configuration);
+            this.configuration = Output.ofNullable(configuration);
             return this;
         }
 
-        public Builder jobReference(@Nullable Input<JobReferenceArgs> jobReference) {
+        public Builder jobReference(@Nullable Output<JobReferenceArgs> jobReference) {
             this.jobReference = jobReference;
             return this;
         }
 
         public Builder jobReference(@Nullable JobReferenceArgs jobReference) {
-            this.jobReference = Input.ofNullable(jobReference);
+            this.jobReference = Output.ofNullable(jobReference);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder source(@Nullable Input<AssetOrArchive> source) {
+        public Builder source(@Nullable Output<AssetOrArchive> source) {
             this.source = source;
             return this;
         }
 
         public Builder source(@Nullable AssetOrArchive source) {
-            this.source = Input.ofNullable(source);
+            this.source = Output.ofNullable(source);
             return this;
         }
         public JobArgs build() {

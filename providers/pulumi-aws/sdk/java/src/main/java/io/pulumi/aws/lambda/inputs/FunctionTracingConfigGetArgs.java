@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lambda.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class FunctionTracingConfigGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="mode", required=true)
-      private final Input<String> mode;
+      private final Output<String> mode;
 
-    public Input<String> getMode() {
+    public Output<String> getMode() {
         return this.mode;
     }
 
-    public FunctionTracingConfigGetArgs(Input<String> mode) {
+    public FunctionTracingConfigGetArgs(Output<String> mode) {
         this.mode = Objects.requireNonNull(mode, "expected parameter 'mode' to be non-null");
     }
 
     private FunctionTracingConfigGetArgs() {
-        this.mode = Input.empty();
+        this.mode = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class FunctionTracingConfigGetArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> mode;
+        private Output<String> mode;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class FunctionTracingConfigGetArgs extends io.pulumi.resources.Reso
     	      this.mode = defaults.mode;
         }
 
-        public Builder mode(Input<String> mode) {
+        public Builder mode(Output<String> mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
 
         public Builder mode(String mode) {
-            this.mode = Input.of(Objects.requireNonNull(mode));
+            this.mode = Output.of(Objects.requireNonNull(mode));
             return this;
         }
         public FunctionTracingConfigGetArgs build() {

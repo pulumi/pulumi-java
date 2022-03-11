@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.VpcEndpointServicePrivateDnsNameConfigurationGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="acceptanceRequired")
-      private final @Nullable Input<Boolean> acceptanceRequired;
+      private final @Nullable Output<Boolean> acceptanceRequired;
 
-    public Input<Boolean> getAcceptanceRequired() {
-        return this.acceptanceRequired == null ? Input.empty() : this.acceptanceRequired;
+    public Output<Boolean> getAcceptanceRequired() {
+        return this.acceptanceRequired == null ? Output.empty() : this.acceptanceRequired;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="allowedPrincipals")
-      private final @Nullable Input<List<String>> allowedPrincipals;
+      private final @Nullable Output<List<String>> allowedPrincipals;
 
-    public Input<List<String>> getAllowedPrincipals() {
-        return this.allowedPrincipals == null ? Input.empty() : this.allowedPrincipals;
+    public Output<List<String>> getAllowedPrincipals() {
+        return this.allowedPrincipals == null ? Output.empty() : this.allowedPrincipals;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="availabilityZones")
-      private final @Nullable Input<List<String>> availabilityZones;
+      private final @Nullable Output<List<String>> availabilityZones;
 
-    public Input<List<String>> getAvailabilityZones() {
-        return this.availabilityZones == null ? Input.empty() : this.availabilityZones;
+    public Output<List<String>> getAvailabilityZones() {
+        return this.availabilityZones == null ? Output.empty() : this.availabilityZones;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="baseEndpointDnsNames")
-      private final @Nullable Input<List<String>> baseEndpointDnsNames;
+      private final @Nullable Output<List<String>> baseEndpointDnsNames;
 
-    public Input<List<String>> getBaseEndpointDnsNames() {
-        return this.baseEndpointDnsNames == null ? Input.empty() : this.baseEndpointDnsNames;
+    public Output<List<String>> getBaseEndpointDnsNames() {
+        return this.baseEndpointDnsNames == null ? Output.empty() : this.baseEndpointDnsNames;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="gatewayLoadBalancerArns")
-      private final @Nullable Input<List<String>> gatewayLoadBalancerArns;
+      private final @Nullable Output<List<String>> gatewayLoadBalancerArns;
 
-    public Input<List<String>> getGatewayLoadBalancerArns() {
-        return this.gatewayLoadBalancerArns == null ? Input.empty() : this.gatewayLoadBalancerArns;
+    public Output<List<String>> getGatewayLoadBalancerArns() {
+        return this.gatewayLoadBalancerArns == null ? Output.empty() : this.gatewayLoadBalancerArns;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="managesVpcEndpoints")
-      private final @Nullable Input<Boolean> managesVpcEndpoints;
+      private final @Nullable Output<Boolean> managesVpcEndpoints;
 
-    public Input<Boolean> getManagesVpcEndpoints() {
-        return this.managesVpcEndpoints == null ? Input.empty() : this.managesVpcEndpoints;
+    public Output<Boolean> getManagesVpcEndpoints() {
+        return this.managesVpcEndpoints == null ? Output.empty() : this.managesVpcEndpoints;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="networkLoadBalancerArns")
-      private final @Nullable Input<List<String>> networkLoadBalancerArns;
+      private final @Nullable Output<List<String>> networkLoadBalancerArns;
 
-    public Input<List<String>> getNetworkLoadBalancerArns() {
-        return this.networkLoadBalancerArns == null ? Input.empty() : this.networkLoadBalancerArns;
+    public Output<List<String>> getNetworkLoadBalancerArns() {
+        return this.networkLoadBalancerArns == null ? Output.empty() : this.networkLoadBalancerArns;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="privateDnsName")
-      private final @Nullable Input<String> privateDnsName;
+      private final @Nullable Output<String> privateDnsName;
 
-    public Input<String> getPrivateDnsName() {
-        return this.privateDnsName == null ? Input.empty() : this.privateDnsName;
+    public Output<String> getPrivateDnsName() {
+        return this.privateDnsName == null ? Output.empty() : this.privateDnsName;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="privateDnsNameConfigurations")
-      private final @Nullable Input<List<VpcEndpointServicePrivateDnsNameConfigurationGetArgs>> privateDnsNameConfigurations;
+      private final @Nullable Output<List<VpcEndpointServicePrivateDnsNameConfigurationGetArgs>> privateDnsNameConfigurations;
 
-    public Input<List<VpcEndpointServicePrivateDnsNameConfigurationGetArgs>> getPrivateDnsNameConfigurations() {
-        return this.privateDnsNameConfigurations == null ? Input.empty() : this.privateDnsNameConfigurations;
+    public Output<List<VpcEndpointServicePrivateDnsNameConfigurationGetArgs>> getPrivateDnsNameConfigurations() {
+        return this.privateDnsNameConfigurations == null ? Output.empty() : this.privateDnsNameConfigurations;
     }
 
     /**
@@ -133,10 +133,10 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="serviceName")
-      private final @Nullable Input<String> serviceName;
+      private final @Nullable Output<String> serviceName;
 
-    public Input<String> getServiceName() {
-        return this.serviceName == null ? Input.empty() : this.serviceName;
+    public Output<String> getServiceName() {
+        return this.serviceName == null ? Output.empty() : this.serviceName;
     }
 
     /**
@@ -144,10 +144,10 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="serviceType")
-      private final @Nullable Input<String> serviceType;
+      private final @Nullable Output<String> serviceType;
 
-    public Input<String> getServiceType() {
-        return this.serviceType == null ? Input.empty() : this.serviceType;
+    public Output<String> getServiceType() {
+        return this.serviceType == null ? Output.empty() : this.serviceType;
     }
 
     /**
@@ -155,10 +155,10 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<String> state;
+      private final @Nullable Output<String> state;
 
-    public Input<String> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<String> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     /**
@@ -166,10 +166,10 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -177,28 +177,28 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public VpcEndpointServiceState(
-        @Nullable Input<Boolean> acceptanceRequired,
-        @Nullable Input<List<String>> allowedPrincipals,
-        @Nullable Input<String> arn,
-        @Nullable Input<List<String>> availabilityZones,
-        @Nullable Input<List<String>> baseEndpointDnsNames,
-        @Nullable Input<List<String>> gatewayLoadBalancerArns,
-        @Nullable Input<Boolean> managesVpcEndpoints,
-        @Nullable Input<List<String>> networkLoadBalancerArns,
-        @Nullable Input<String> privateDnsName,
-        @Nullable Input<List<VpcEndpointServicePrivateDnsNameConfigurationGetArgs>> privateDnsNameConfigurations,
-        @Nullable Input<String> serviceName,
-        @Nullable Input<String> serviceType,
-        @Nullable Input<String> state,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<Boolean> acceptanceRequired,
+        @Nullable Output<List<String>> allowedPrincipals,
+        @Nullable Output<String> arn,
+        @Nullable Output<List<String>> availabilityZones,
+        @Nullable Output<List<String>> baseEndpointDnsNames,
+        @Nullable Output<List<String>> gatewayLoadBalancerArns,
+        @Nullable Output<Boolean> managesVpcEndpoints,
+        @Nullable Output<List<String>> networkLoadBalancerArns,
+        @Nullable Output<String> privateDnsName,
+        @Nullable Output<List<VpcEndpointServicePrivateDnsNameConfigurationGetArgs>> privateDnsNameConfigurations,
+        @Nullable Output<String> serviceName,
+        @Nullable Output<String> serviceType,
+        @Nullable Output<String> state,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.acceptanceRequired = acceptanceRequired;
         this.allowedPrincipals = allowedPrincipals;
         this.arn = arn;
@@ -217,21 +217,21 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
     }
 
     private VpcEndpointServiceState() {
-        this.acceptanceRequired = Input.empty();
-        this.allowedPrincipals = Input.empty();
-        this.arn = Input.empty();
-        this.availabilityZones = Input.empty();
-        this.baseEndpointDnsNames = Input.empty();
-        this.gatewayLoadBalancerArns = Input.empty();
-        this.managesVpcEndpoints = Input.empty();
-        this.networkLoadBalancerArns = Input.empty();
-        this.privateDnsName = Input.empty();
-        this.privateDnsNameConfigurations = Input.empty();
-        this.serviceName = Input.empty();
-        this.serviceType = Input.empty();
-        this.state = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.acceptanceRequired = Output.empty();
+        this.allowedPrincipals = Output.empty();
+        this.arn = Output.empty();
+        this.availabilityZones = Output.empty();
+        this.baseEndpointDnsNames = Output.empty();
+        this.gatewayLoadBalancerArns = Output.empty();
+        this.managesVpcEndpoints = Output.empty();
+        this.networkLoadBalancerArns = Output.empty();
+        this.privateDnsName = Output.empty();
+        this.privateDnsNameConfigurations = Output.empty();
+        this.serviceName = Output.empty();
+        this.serviceType = Output.empty();
+        this.state = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -243,21 +243,21 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> acceptanceRequired;
-        private @Nullable Input<List<String>> allowedPrincipals;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<List<String>> availabilityZones;
-        private @Nullable Input<List<String>> baseEndpointDnsNames;
-        private @Nullable Input<List<String>> gatewayLoadBalancerArns;
-        private @Nullable Input<Boolean> managesVpcEndpoints;
-        private @Nullable Input<List<String>> networkLoadBalancerArns;
-        private @Nullable Input<String> privateDnsName;
-        private @Nullable Input<List<VpcEndpointServicePrivateDnsNameConfigurationGetArgs>> privateDnsNameConfigurations;
-        private @Nullable Input<String> serviceName;
-        private @Nullable Input<String> serviceType;
-        private @Nullable Input<String> state;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<Boolean> acceptanceRequired;
+        private @Nullable Output<List<String>> allowedPrincipals;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<List<String>> availabilityZones;
+        private @Nullable Output<List<String>> baseEndpointDnsNames;
+        private @Nullable Output<List<String>> gatewayLoadBalancerArns;
+        private @Nullable Output<Boolean> managesVpcEndpoints;
+        private @Nullable Output<List<String>> networkLoadBalancerArns;
+        private @Nullable Output<String> privateDnsName;
+        private @Nullable Output<List<VpcEndpointServicePrivateDnsNameConfigurationGetArgs>> privateDnsNameConfigurations;
+        private @Nullable Output<String> serviceName;
+        private @Nullable Output<String> serviceType;
+        private @Nullable Output<String> state;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -282,153 +282,153 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder acceptanceRequired(@Nullable Input<Boolean> acceptanceRequired) {
+        public Builder acceptanceRequired(@Nullable Output<Boolean> acceptanceRequired) {
             this.acceptanceRequired = acceptanceRequired;
             return this;
         }
 
         public Builder acceptanceRequired(@Nullable Boolean acceptanceRequired) {
-            this.acceptanceRequired = Input.ofNullable(acceptanceRequired);
+            this.acceptanceRequired = Output.ofNullable(acceptanceRequired);
             return this;
         }
 
-        public Builder allowedPrincipals(@Nullable Input<List<String>> allowedPrincipals) {
+        public Builder allowedPrincipals(@Nullable Output<List<String>> allowedPrincipals) {
             this.allowedPrincipals = allowedPrincipals;
             return this;
         }
 
         public Builder allowedPrincipals(@Nullable List<String> allowedPrincipals) {
-            this.allowedPrincipals = Input.ofNullable(allowedPrincipals);
+            this.allowedPrincipals = Output.ofNullable(allowedPrincipals);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder availabilityZones(@Nullable Input<List<String>> availabilityZones) {
+        public Builder availabilityZones(@Nullable Output<List<String>> availabilityZones) {
             this.availabilityZones = availabilityZones;
             return this;
         }
 
         public Builder availabilityZones(@Nullable List<String> availabilityZones) {
-            this.availabilityZones = Input.ofNullable(availabilityZones);
+            this.availabilityZones = Output.ofNullable(availabilityZones);
             return this;
         }
 
-        public Builder baseEndpointDnsNames(@Nullable Input<List<String>> baseEndpointDnsNames) {
+        public Builder baseEndpointDnsNames(@Nullable Output<List<String>> baseEndpointDnsNames) {
             this.baseEndpointDnsNames = baseEndpointDnsNames;
             return this;
         }
 
         public Builder baseEndpointDnsNames(@Nullable List<String> baseEndpointDnsNames) {
-            this.baseEndpointDnsNames = Input.ofNullable(baseEndpointDnsNames);
+            this.baseEndpointDnsNames = Output.ofNullable(baseEndpointDnsNames);
             return this;
         }
 
-        public Builder gatewayLoadBalancerArns(@Nullable Input<List<String>> gatewayLoadBalancerArns) {
+        public Builder gatewayLoadBalancerArns(@Nullable Output<List<String>> gatewayLoadBalancerArns) {
             this.gatewayLoadBalancerArns = gatewayLoadBalancerArns;
             return this;
         }
 
         public Builder gatewayLoadBalancerArns(@Nullable List<String> gatewayLoadBalancerArns) {
-            this.gatewayLoadBalancerArns = Input.ofNullable(gatewayLoadBalancerArns);
+            this.gatewayLoadBalancerArns = Output.ofNullable(gatewayLoadBalancerArns);
             return this;
         }
 
-        public Builder managesVpcEndpoints(@Nullable Input<Boolean> managesVpcEndpoints) {
+        public Builder managesVpcEndpoints(@Nullable Output<Boolean> managesVpcEndpoints) {
             this.managesVpcEndpoints = managesVpcEndpoints;
             return this;
         }
 
         public Builder managesVpcEndpoints(@Nullable Boolean managesVpcEndpoints) {
-            this.managesVpcEndpoints = Input.ofNullable(managesVpcEndpoints);
+            this.managesVpcEndpoints = Output.ofNullable(managesVpcEndpoints);
             return this;
         }
 
-        public Builder networkLoadBalancerArns(@Nullable Input<List<String>> networkLoadBalancerArns) {
+        public Builder networkLoadBalancerArns(@Nullable Output<List<String>> networkLoadBalancerArns) {
             this.networkLoadBalancerArns = networkLoadBalancerArns;
             return this;
         }
 
         public Builder networkLoadBalancerArns(@Nullable List<String> networkLoadBalancerArns) {
-            this.networkLoadBalancerArns = Input.ofNullable(networkLoadBalancerArns);
+            this.networkLoadBalancerArns = Output.ofNullable(networkLoadBalancerArns);
             return this;
         }
 
-        public Builder privateDnsName(@Nullable Input<String> privateDnsName) {
+        public Builder privateDnsName(@Nullable Output<String> privateDnsName) {
             this.privateDnsName = privateDnsName;
             return this;
         }
 
         public Builder privateDnsName(@Nullable String privateDnsName) {
-            this.privateDnsName = Input.ofNullable(privateDnsName);
+            this.privateDnsName = Output.ofNullable(privateDnsName);
             return this;
         }
 
-        public Builder privateDnsNameConfigurations(@Nullable Input<List<VpcEndpointServicePrivateDnsNameConfigurationGetArgs>> privateDnsNameConfigurations) {
+        public Builder privateDnsNameConfigurations(@Nullable Output<List<VpcEndpointServicePrivateDnsNameConfigurationGetArgs>> privateDnsNameConfigurations) {
             this.privateDnsNameConfigurations = privateDnsNameConfigurations;
             return this;
         }
 
         public Builder privateDnsNameConfigurations(@Nullable List<VpcEndpointServicePrivateDnsNameConfigurationGetArgs> privateDnsNameConfigurations) {
-            this.privateDnsNameConfigurations = Input.ofNullable(privateDnsNameConfigurations);
+            this.privateDnsNameConfigurations = Output.ofNullable(privateDnsNameConfigurations);
             return this;
         }
 
-        public Builder serviceName(@Nullable Input<String> serviceName) {
+        public Builder serviceName(@Nullable Output<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
 
         public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Input.ofNullable(serviceName);
+            this.serviceName = Output.ofNullable(serviceName);
             return this;
         }
 
-        public Builder serviceType(@Nullable Input<String> serviceType) {
+        public Builder serviceType(@Nullable Output<String> serviceType) {
             this.serviceType = serviceType;
             return this;
         }
 
         public Builder serviceType(@Nullable String serviceType) {
-            this.serviceType = Input.ofNullable(serviceType);
+            this.serviceType = Output.ofNullable(serviceType);
             return this;
         }
 
-        public Builder state(@Nullable Input<String> state) {
+        public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable String state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public VpcEndpointServiceState build() {

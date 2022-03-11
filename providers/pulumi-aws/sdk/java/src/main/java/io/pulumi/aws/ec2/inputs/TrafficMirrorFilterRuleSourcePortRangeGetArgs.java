@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class TrafficMirrorFilterRuleSourcePortRangeGetArgs extends io.pulu
      * 
      */
     @InputImport(name="fromPort")
-      private final @Nullable Input<Integer> fromPort;
+      private final @Nullable Output<Integer> fromPort;
 
-    public Input<Integer> getFromPort() {
-        return this.fromPort == null ? Input.empty() : this.fromPort;
+    public Output<Integer> getFromPort() {
+        return this.fromPort == null ? Output.empty() : this.fromPort;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class TrafficMirrorFilterRuleSourcePortRangeGetArgs extends io.pulu
      * 
      */
     @InputImport(name="toPort")
-      private final @Nullable Input<Integer> toPort;
+      private final @Nullable Output<Integer> toPort;
 
-    public Input<Integer> getToPort() {
-        return this.toPort == null ? Input.empty() : this.toPort;
+    public Output<Integer> getToPort() {
+        return this.toPort == null ? Output.empty() : this.toPort;
     }
 
     public TrafficMirrorFilterRuleSourcePortRangeGetArgs(
-        @Nullable Input<Integer> fromPort,
-        @Nullable Input<Integer> toPort) {
+        @Nullable Output<Integer> fromPort,
+        @Nullable Output<Integer> toPort) {
         this.fromPort = fromPort;
         this.toPort = toPort;
     }
 
     private TrafficMirrorFilterRuleSourcePortRangeGetArgs() {
-        this.fromPort = Input.empty();
-        this.toPort = Input.empty();
+        this.fromPort = Output.empty();
+        this.toPort = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class TrafficMirrorFilterRuleSourcePortRangeGetArgs extends io.pulu
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> fromPort;
-        private @Nullable Input<Integer> toPort;
+        private @Nullable Output<Integer> fromPort;
+        private @Nullable Output<Integer> toPort;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class TrafficMirrorFilterRuleSourcePortRangeGetArgs extends io.pulu
     	      this.toPort = defaults.toPort;
         }
 
-        public Builder fromPort(@Nullable Input<Integer> fromPort) {
+        public Builder fromPort(@Nullable Output<Integer> fromPort) {
             this.fromPort = fromPort;
             return this;
         }
 
         public Builder fromPort(@Nullable Integer fromPort) {
-            this.fromPort = Input.ofNullable(fromPort);
+            this.fromPort = Output.ofNullable(fromPort);
             return this;
         }
 
-        public Builder toPort(@Nullable Input<Integer> toPort) {
+        public Builder toPort(@Nullable Output<Integer> toPort) {
             this.toPort = toPort;
             return this;
         }
 
         public Builder toPort(@Nullable Integer toPort) {
-            this.toPort = Input.ofNullable(toPort);
+            this.toPort = Output.ofNullable(toPort);
             return this;
         }
         public TrafficMirrorFilterRuleSourcePortRangeGetArgs build() {

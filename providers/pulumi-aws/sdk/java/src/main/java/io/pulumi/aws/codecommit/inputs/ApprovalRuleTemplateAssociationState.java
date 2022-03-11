@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codecommit.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ApprovalRuleTemplateAssociationState extends io.pulumi.resour
      * 
      */
     @InputImport(name="approvalRuleTemplateName")
-      private final @Nullable Input<String> approvalRuleTemplateName;
+      private final @Nullable Output<String> approvalRuleTemplateName;
 
-    public Input<String> getApprovalRuleTemplateName() {
-        return this.approvalRuleTemplateName == null ? Input.empty() : this.approvalRuleTemplateName;
+    public Output<String> getApprovalRuleTemplateName() {
+        return this.approvalRuleTemplateName == null ? Output.empty() : this.approvalRuleTemplateName;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class ApprovalRuleTemplateAssociationState extends io.pulumi.resour
      * 
      */
     @InputImport(name="repositoryName")
-      private final @Nullable Input<String> repositoryName;
+      private final @Nullable Output<String> repositoryName;
 
-    public Input<String> getRepositoryName() {
-        return this.repositoryName == null ? Input.empty() : this.repositoryName;
+    public Output<String> getRepositoryName() {
+        return this.repositoryName == null ? Output.empty() : this.repositoryName;
     }
 
     public ApprovalRuleTemplateAssociationState(
-        @Nullable Input<String> approvalRuleTemplateName,
-        @Nullable Input<String> repositoryName) {
+        @Nullable Output<String> approvalRuleTemplateName,
+        @Nullable Output<String> repositoryName) {
         this.approvalRuleTemplateName = approvalRuleTemplateName;
         this.repositoryName = repositoryName;
     }
 
     private ApprovalRuleTemplateAssociationState() {
-        this.approvalRuleTemplateName = Input.empty();
-        this.repositoryName = Input.empty();
+        this.approvalRuleTemplateName = Output.empty();
+        this.repositoryName = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ApprovalRuleTemplateAssociationState extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> approvalRuleTemplateName;
-        private @Nullable Input<String> repositoryName;
+        private @Nullable Output<String> approvalRuleTemplateName;
+        private @Nullable Output<String> repositoryName;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ApprovalRuleTemplateAssociationState extends io.pulumi.resour
     	      this.repositoryName = defaults.repositoryName;
         }
 
-        public Builder approvalRuleTemplateName(@Nullable Input<String> approvalRuleTemplateName) {
+        public Builder approvalRuleTemplateName(@Nullable Output<String> approvalRuleTemplateName) {
             this.approvalRuleTemplateName = approvalRuleTemplateName;
             return this;
         }
 
         public Builder approvalRuleTemplateName(@Nullable String approvalRuleTemplateName) {
-            this.approvalRuleTemplateName = Input.ofNullable(approvalRuleTemplateName);
+            this.approvalRuleTemplateName = Output.ofNullable(approvalRuleTemplateName);
             return this;
         }
 
-        public Builder repositoryName(@Nullable Input<String> repositoryName) {
+        public Builder repositoryName(@Nullable Output<String> repositoryName) {
             this.repositoryName = repositoryName;
             return this;
         }
 
         public Builder repositoryName(@Nullable String repositoryName) {
-            this.repositoryName = Input.ofNullable(repositoryName);
+            this.repositoryName = Output.ofNullable(repositoryName);
             return this;
         }
         public ApprovalRuleTemplateAssociationState build() {

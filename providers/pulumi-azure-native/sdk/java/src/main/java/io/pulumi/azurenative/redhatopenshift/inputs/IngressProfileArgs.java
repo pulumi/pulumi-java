@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.redhatopenshift.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class IngressProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ip")
-      private final @Nullable Input<String> ip;
+      private final @Nullable Output<String> ip;
 
-    public Input<String> getIp() {
-        return this.ip == null ? Input.empty() : this.ip;
+    public Output<String> getIp() {
+        return this.ip == null ? Output.empty() : this.ip;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class IngressProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class IngressProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="visibility")
-      private final @Nullable Input<String> visibility;
+      private final @Nullable Output<String> visibility;
 
-    public Input<String> getVisibility() {
-        return this.visibility == null ? Input.empty() : this.visibility;
+    public Output<String> getVisibility() {
+        return this.visibility == null ? Output.empty() : this.visibility;
     }
 
     public IngressProfileArgs(
-        @Nullable Input<String> ip,
-        @Nullable Input<String> name,
-        @Nullable Input<String> visibility) {
+        @Nullable Output<String> ip,
+        @Nullable Output<String> name,
+        @Nullable Output<String> visibility) {
         this.ip = ip;
         this.name = name;
         this.visibility = visibility;
     }
 
     private IngressProfileArgs() {
-        this.ip = Input.empty();
-        this.name = Input.empty();
-        this.visibility = Input.empty();
+        this.ip = Output.empty();
+        this.name = Output.empty();
+        this.visibility = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class IngressProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> ip;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> visibility;
+        private @Nullable Output<String> ip;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> visibility;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class IngressProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.visibility = defaults.visibility;
         }
 
-        public Builder ip(@Nullable Input<String> ip) {
+        public Builder ip(@Nullable Output<String> ip) {
             this.ip = ip;
             return this;
         }
 
         public Builder ip(@Nullable String ip) {
-            this.ip = Input.ofNullable(ip);
+            this.ip = Output.ofNullable(ip);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder visibility(@Nullable Input<String> visibility) {
+        public Builder visibility(@Nullable Output<String> visibility) {
             this.visibility = visibility;
             return this;
         }
 
         public Builder visibility(@Nullable String visibility) {
-            this.visibility = Input.ofNullable(visibility);
+            this.visibility = Output.ofNullable(visibility);
             return this;
         }
         public IngressProfileArgs build() {

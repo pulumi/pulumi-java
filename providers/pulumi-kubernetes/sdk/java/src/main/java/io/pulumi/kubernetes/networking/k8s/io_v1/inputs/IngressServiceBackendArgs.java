@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.networking.k8s.io_v1.inputs.ServiceBackendPortArgs;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class IngressServiceBackendArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -35,22 +35,22 @@ public final class IngressServiceBackendArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<ServiceBackendPortArgs> port;
+      private final @Nullable Output<ServiceBackendPortArgs> port;
 
-    public Input<ServiceBackendPortArgs> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<ServiceBackendPortArgs> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     public IngressServiceBackendArgs(
-        Input<String> name,
-        @Nullable Input<ServiceBackendPortArgs> port) {
+        Output<String> name,
+        @Nullable Output<ServiceBackendPortArgs> port) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.port = port;
     }
 
     private IngressServiceBackendArgs() {
-        this.name = Input.empty();
-        this.port = Input.empty();
+        this.name = Output.empty();
+        this.port = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class IngressServiceBackendArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private @Nullable Input<ServiceBackendPortArgs> port;
+        private Output<String> name;
+        private @Nullable Output<ServiceBackendPortArgs> port;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class IngressServiceBackendArgs extends io.pulumi.resources.Resourc
     	      this.port = defaults.port;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder port(@Nullable Input<ServiceBackendPortArgs> port) {
+        public Builder port(@Nullable Output<ServiceBackendPortArgs> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable ServiceBackendPortArgs port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
         public IngressServiceBackendArgs build() {

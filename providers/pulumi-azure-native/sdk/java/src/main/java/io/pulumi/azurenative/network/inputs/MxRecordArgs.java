@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class MxRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="exchange")
-      private final @Nullable Input<String> exchange;
+      private final @Nullable Output<String> exchange;
 
-    public Input<String> getExchange() {
-        return this.exchange == null ? Input.empty() : this.exchange;
+    public Output<String> getExchange() {
+        return this.exchange == null ? Output.empty() : this.exchange;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class MxRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preference")
-      private final @Nullable Input<Integer> preference;
+      private final @Nullable Output<Integer> preference;
 
-    public Input<Integer> getPreference() {
-        return this.preference == null ? Input.empty() : this.preference;
+    public Output<Integer> getPreference() {
+        return this.preference == null ? Output.empty() : this.preference;
     }
 
     public MxRecordArgs(
-        @Nullable Input<String> exchange,
-        @Nullable Input<Integer> preference) {
+        @Nullable Output<String> exchange,
+        @Nullable Output<Integer> preference) {
         this.exchange = exchange;
         this.preference = preference;
     }
 
     private MxRecordArgs() {
-        this.exchange = Input.empty();
-        this.preference = Input.empty();
+        this.exchange = Output.empty();
+        this.preference = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class MxRecordArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> exchange;
-        private @Nullable Input<Integer> preference;
+        private @Nullable Output<String> exchange;
+        private @Nullable Output<Integer> preference;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class MxRecordArgs extends io.pulumi.resources.ResourceArgs {
     	      this.preference = defaults.preference;
         }
 
-        public Builder exchange(@Nullable Input<String> exchange) {
+        public Builder exchange(@Nullable Output<String> exchange) {
             this.exchange = exchange;
             return this;
         }
 
         public Builder exchange(@Nullable String exchange) {
-            this.exchange = Input.ofNullable(exchange);
+            this.exchange = Output.ofNullable(exchange);
             return this;
         }
 
-        public Builder preference(@Nullable Input<Integer> preference) {
+        public Builder preference(@Nullable Output<Integer> preference) {
             this.preference = preference;
             return this;
         }
 
         public Builder preference(@Nullable Integer preference) {
-            this.preference = Input.ofNullable(preference);
+            this.preference = Output.ofNullable(preference);
             return this;
         }
         public MxRecordArgs build() {

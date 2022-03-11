@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.azurenative.securityinsights.inputs.DataConnectorDataTypeCommonArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,10 +23,10 @@ public final class MCASDataConnectorDataTypesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="alerts")
-      private final @Nullable Input<DataConnectorDataTypeCommonArgs> alerts;
+      private final @Nullable Output<DataConnectorDataTypeCommonArgs> alerts;
 
-    public Input<DataConnectorDataTypeCommonArgs> getAlerts() {
-        return this.alerts == null ? Input.empty() : this.alerts;
+    public Output<DataConnectorDataTypeCommonArgs> getAlerts() {
+        return this.alerts == null ? Output.empty() : this.alerts;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class MCASDataConnectorDataTypesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="discoveryLogs")
-      private final @Nullable Input<DataConnectorDataTypeCommonArgs> discoveryLogs;
+      private final @Nullable Output<DataConnectorDataTypeCommonArgs> discoveryLogs;
 
-    public Input<DataConnectorDataTypeCommonArgs> getDiscoveryLogs() {
-        return this.discoveryLogs == null ? Input.empty() : this.discoveryLogs;
+    public Output<DataConnectorDataTypeCommonArgs> getDiscoveryLogs() {
+        return this.discoveryLogs == null ? Output.empty() : this.discoveryLogs;
     }
 
     public MCASDataConnectorDataTypesArgs(
-        @Nullable Input<DataConnectorDataTypeCommonArgs> alerts,
-        @Nullable Input<DataConnectorDataTypeCommonArgs> discoveryLogs) {
+        @Nullable Output<DataConnectorDataTypeCommonArgs> alerts,
+        @Nullable Output<DataConnectorDataTypeCommonArgs> discoveryLogs) {
         this.alerts = alerts;
         this.discoveryLogs = discoveryLogs;
     }
 
     private MCASDataConnectorDataTypesArgs() {
-        this.alerts = Input.empty();
-        this.discoveryLogs = Input.empty();
+        this.alerts = Output.empty();
+        this.discoveryLogs = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class MCASDataConnectorDataTypesArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<DataConnectorDataTypeCommonArgs> alerts;
-        private @Nullable Input<DataConnectorDataTypeCommonArgs> discoveryLogs;
+        private @Nullable Output<DataConnectorDataTypeCommonArgs> alerts;
+        private @Nullable Output<DataConnectorDataTypeCommonArgs> discoveryLogs;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class MCASDataConnectorDataTypesArgs extends io.pulumi.resources.Re
     	      this.discoveryLogs = defaults.discoveryLogs;
         }
 
-        public Builder alerts(@Nullable Input<DataConnectorDataTypeCommonArgs> alerts) {
+        public Builder alerts(@Nullable Output<DataConnectorDataTypeCommonArgs> alerts) {
             this.alerts = alerts;
             return this;
         }
 
         public Builder alerts(@Nullable DataConnectorDataTypeCommonArgs alerts) {
-            this.alerts = Input.ofNullable(alerts);
+            this.alerts = Output.ofNullable(alerts);
             return this;
         }
 
-        public Builder discoveryLogs(@Nullable Input<DataConnectorDataTypeCommonArgs> discoveryLogs) {
+        public Builder discoveryLogs(@Nullable Output<DataConnectorDataTypeCommonArgs> discoveryLogs) {
             this.discoveryLogs = discoveryLogs;
             return this;
         }
 
         public Builder discoveryLogs(@Nullable DataConnectorDataTypeCommonArgs discoveryLogs) {
-            this.discoveryLogs = Input.ofNullable(discoveryLogs);
+            this.discoveryLogs = Output.ofNullable(discoveryLogs);
             return this;
         }
         public MCASDataConnectorDataTypesArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codestarconnections;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostArn")
-      private final @Nullable Input<String> hostArn;
+      private final @Nullable Output<String> hostArn;
 
-    public Input<String> getHostArn() {
-        return this.hostArn == null ? Input.empty() : this.hostArn;
+    public Output<String> getHostArn() {
+        return this.hostArn == null ? Output.empty() : this.hostArn;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="providerType")
-      private final @Nullable Input<String> providerType;
+      private final @Nullable Output<String> providerType;
 
-    public Input<String> getProviderType() {
-        return this.providerType == null ? Input.empty() : this.providerType;
+    public Output<String> getProviderType() {
+        return this.providerType == null ? Output.empty() : this.providerType;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ConnectionArgs(
-        @Nullable Input<String> hostArn,
-        @Nullable Input<String> name,
-        @Nullable Input<String> providerType,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> hostArn,
+        @Nullable Output<String> name,
+        @Nullable Output<String> providerType,
+        @Nullable Output<Map<String,String>> tags) {
         this.hostArn = hostArn;
         this.name = name;
         this.providerType = providerType;
@@ -71,10 +71,10 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConnectionArgs() {
-        this.hostArn = Input.empty();
-        this.name = Input.empty();
-        this.providerType = Input.empty();
-        this.tags = Input.empty();
+        this.hostArn = Output.empty();
+        this.name = Output.empty();
+        this.providerType = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> hostArn;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> providerType;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> hostArn;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> providerType;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder hostArn(@Nullable Input<String> hostArn) {
+        public Builder hostArn(@Nullable Output<String> hostArn) {
             this.hostArn = hostArn;
             return this;
         }
 
         public Builder hostArn(@Nullable String hostArn) {
-            this.hostArn = Input.ofNullable(hostArn);
+            this.hostArn = Output.ofNullable(hostArn);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder providerType(@Nullable Input<String> providerType) {
+        public Builder providerType(@Nullable Output<String> providerType) {
             this.providerType = providerType;
             return this;
         }
 
         public Builder providerType(@Nullable String providerType) {
-            this.providerType = Input.ofNullable(providerType);
+            this.providerType = Output.ofNullable(providerType);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ConnectionArgs build() {

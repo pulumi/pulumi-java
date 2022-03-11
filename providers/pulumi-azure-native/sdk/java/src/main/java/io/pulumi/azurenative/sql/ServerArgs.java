@@ -7,7 +7,7 @@ import io.pulumi.azurenative.sql.enums.ServerPublicNetworkAccess;
 import io.pulumi.azurenative.sql.inputs.ResourceIdentityArgs;
 import io.pulumi.azurenative.sql.inputs.ServerExternalAdministratorArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -24,10 +24,10 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="administratorLogin")
-      private final @Nullable Input<String> administratorLogin;
+      private final @Nullable Output<String> administratorLogin;
 
-    public Input<String> getAdministratorLogin() {
-        return this.administratorLogin == null ? Input.empty() : this.administratorLogin;
+    public Output<String> getAdministratorLogin() {
+        return this.administratorLogin == null ? Output.empty() : this.administratorLogin;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="administratorLoginPassword")
-      private final @Nullable Input<String> administratorLoginPassword;
+      private final @Nullable Output<String> administratorLoginPassword;
 
-    public Input<String> getAdministratorLoginPassword() {
-        return this.administratorLoginPassword == null ? Input.empty() : this.administratorLoginPassword;
+    public Output<String> getAdministratorLoginPassword() {
+        return this.administratorLoginPassword == null ? Output.empty() : this.administratorLoginPassword;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="administrators")
-      private final @Nullable Input<ServerExternalAdministratorArgs> administrators;
+      private final @Nullable Output<ServerExternalAdministratorArgs> administrators;
 
-    public Input<ServerExternalAdministratorArgs> getAdministrators() {
-        return this.administrators == null ? Input.empty() : this.administrators;
+    public Output<ServerExternalAdministratorArgs> getAdministrators() {
+        return this.administrators == null ? Output.empty() : this.administrators;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<ResourceIdentityArgs> identity;
+      private final @Nullable Output<ResourceIdentityArgs> identity;
 
-    public Input<ResourceIdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<ResourceIdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyId")
-      private final @Nullable Input<String> keyId;
+      private final @Nullable Output<String> keyId;
 
-    public Input<String> getKeyId() {
-        return this.keyId == null ? Input.empty() : this.keyId;
+    public Output<String> getKeyId() {
+        return this.keyId == null ? Output.empty() : this.keyId;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minimalTlsVersion")
-      private final @Nullable Input<String> minimalTlsVersion;
+      private final @Nullable Output<String> minimalTlsVersion;
 
-    public Input<String> getMinimalTlsVersion() {
-        return this.minimalTlsVersion == null ? Input.empty() : this.minimalTlsVersion;
+    public Output<String> getMinimalTlsVersion() {
+        return this.minimalTlsVersion == null ? Output.empty() : this.minimalTlsVersion;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="primaryUserAssignedIdentityId")
-      private final @Nullable Input<String> primaryUserAssignedIdentityId;
+      private final @Nullable Output<String> primaryUserAssignedIdentityId;
 
-    public Input<String> getPrimaryUserAssignedIdentityId() {
-        return this.primaryUserAssignedIdentityId == null ? Input.empty() : this.primaryUserAssignedIdentityId;
+    public Output<String> getPrimaryUserAssignedIdentityId() {
+        return this.primaryUserAssignedIdentityId == null ? Output.empty() : this.primaryUserAssignedIdentityId;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicNetworkAccess")
-      private final @Nullable Input<Either<String,ServerPublicNetworkAccess>> publicNetworkAccess;
+      private final @Nullable Output<Either<String,ServerPublicNetworkAccess>> publicNetworkAccess;
 
-    public Input<Either<String,ServerPublicNetworkAccess>> getPublicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
+    public Output<Either<String,ServerPublicNetworkAccess>> getPublicNetworkAccess() {
+        return this.publicNetworkAccess == null ? Output.empty() : this.publicNetworkAccess;
     }
 
     /**
@@ -123,9 +123,9 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -134,10 +134,10 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverName")
-      private final @Nullable Input<String> serverName;
+      private final @Nullable Output<String> serverName;
 
-    public Input<String> getServerName() {
-        return this.serverName == null ? Input.empty() : this.serverName;
+    public Output<String> getServerName() {
+        return this.serverName == null ? Output.empty() : this.serverName;
     }
 
     /**
@@ -145,10 +145,10 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -156,26 +156,26 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public ServerArgs(
-        @Nullable Input<String> administratorLogin,
-        @Nullable Input<String> administratorLoginPassword,
-        @Nullable Input<ServerExternalAdministratorArgs> administrators,
-        @Nullable Input<ResourceIdentityArgs> identity,
-        @Nullable Input<String> keyId,
-        @Nullable Input<String> location,
-        @Nullable Input<String> minimalTlsVersion,
-        @Nullable Input<String> primaryUserAssignedIdentityId,
-        @Nullable Input<Either<String,ServerPublicNetworkAccess>> publicNetworkAccess,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> serverName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> version) {
+        @Nullable Output<String> administratorLogin,
+        @Nullable Output<String> administratorLoginPassword,
+        @Nullable Output<ServerExternalAdministratorArgs> administrators,
+        @Nullable Output<ResourceIdentityArgs> identity,
+        @Nullable Output<String> keyId,
+        @Nullable Output<String> location,
+        @Nullable Output<String> minimalTlsVersion,
+        @Nullable Output<String> primaryUserAssignedIdentityId,
+        @Nullable Output<Either<String,ServerPublicNetworkAccess>> publicNetworkAccess,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> serverName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> version) {
         this.administratorLogin = administratorLogin;
         this.administratorLoginPassword = administratorLoginPassword;
         this.administrators = administrators;
@@ -192,19 +192,19 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServerArgs() {
-        this.administratorLogin = Input.empty();
-        this.administratorLoginPassword = Input.empty();
-        this.administrators = Input.empty();
-        this.identity = Input.empty();
-        this.keyId = Input.empty();
-        this.location = Input.empty();
-        this.minimalTlsVersion = Input.empty();
-        this.primaryUserAssignedIdentityId = Input.empty();
-        this.publicNetworkAccess = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serverName = Input.empty();
-        this.tags = Input.empty();
-        this.version = Input.empty();
+        this.administratorLogin = Output.empty();
+        this.administratorLoginPassword = Output.empty();
+        this.administrators = Output.empty();
+        this.identity = Output.empty();
+        this.keyId = Output.empty();
+        this.location = Output.empty();
+        this.minimalTlsVersion = Output.empty();
+        this.primaryUserAssignedIdentityId = Output.empty();
+        this.publicNetworkAccess = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serverName = Output.empty();
+        this.tags = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -216,19 +216,19 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> administratorLogin;
-        private @Nullable Input<String> administratorLoginPassword;
-        private @Nullable Input<ServerExternalAdministratorArgs> administrators;
-        private @Nullable Input<ResourceIdentityArgs> identity;
-        private @Nullable Input<String> keyId;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> minimalTlsVersion;
-        private @Nullable Input<String> primaryUserAssignedIdentityId;
-        private @Nullable Input<Either<String,ServerPublicNetworkAccess>> publicNetworkAccess;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> serverName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> version;
+        private @Nullable Output<String> administratorLogin;
+        private @Nullable Output<String> administratorLoginPassword;
+        private @Nullable Output<ServerExternalAdministratorArgs> administrators;
+        private @Nullable Output<ResourceIdentityArgs> identity;
+        private @Nullable Output<String> keyId;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> minimalTlsVersion;
+        private @Nullable Output<String> primaryUserAssignedIdentityId;
+        private @Nullable Output<Either<String,ServerPublicNetworkAccess>> publicNetworkAccess;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> serverName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -251,133 +251,133 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder administratorLogin(@Nullable Input<String> administratorLogin) {
+        public Builder administratorLogin(@Nullable Output<String> administratorLogin) {
             this.administratorLogin = administratorLogin;
             return this;
         }
 
         public Builder administratorLogin(@Nullable String administratorLogin) {
-            this.administratorLogin = Input.ofNullable(administratorLogin);
+            this.administratorLogin = Output.ofNullable(administratorLogin);
             return this;
         }
 
-        public Builder administratorLoginPassword(@Nullable Input<String> administratorLoginPassword) {
+        public Builder administratorLoginPassword(@Nullable Output<String> administratorLoginPassword) {
             this.administratorLoginPassword = administratorLoginPassword;
             return this;
         }
 
         public Builder administratorLoginPassword(@Nullable String administratorLoginPassword) {
-            this.administratorLoginPassword = Input.ofNullable(administratorLoginPassword);
+            this.administratorLoginPassword = Output.ofNullable(administratorLoginPassword);
             return this;
         }
 
-        public Builder administrators(@Nullable Input<ServerExternalAdministratorArgs> administrators) {
+        public Builder administrators(@Nullable Output<ServerExternalAdministratorArgs> administrators) {
             this.administrators = administrators;
             return this;
         }
 
         public Builder administrators(@Nullable ServerExternalAdministratorArgs administrators) {
-            this.administrators = Input.ofNullable(administrators);
+            this.administrators = Output.ofNullable(administrators);
             return this;
         }
 
-        public Builder identity(@Nullable Input<ResourceIdentityArgs> identity) {
+        public Builder identity(@Nullable Output<ResourceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable ResourceIdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder keyId(@Nullable Input<String> keyId) {
+        public Builder keyId(@Nullable Output<String> keyId) {
             this.keyId = keyId;
             return this;
         }
 
         public Builder keyId(@Nullable String keyId) {
-            this.keyId = Input.ofNullable(keyId);
+            this.keyId = Output.ofNullable(keyId);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder minimalTlsVersion(@Nullable Input<String> minimalTlsVersion) {
+        public Builder minimalTlsVersion(@Nullable Output<String> minimalTlsVersion) {
             this.minimalTlsVersion = minimalTlsVersion;
             return this;
         }
 
         public Builder minimalTlsVersion(@Nullable String minimalTlsVersion) {
-            this.minimalTlsVersion = Input.ofNullable(minimalTlsVersion);
+            this.minimalTlsVersion = Output.ofNullable(minimalTlsVersion);
             return this;
         }
 
-        public Builder primaryUserAssignedIdentityId(@Nullable Input<String> primaryUserAssignedIdentityId) {
+        public Builder primaryUserAssignedIdentityId(@Nullable Output<String> primaryUserAssignedIdentityId) {
             this.primaryUserAssignedIdentityId = primaryUserAssignedIdentityId;
             return this;
         }
 
         public Builder primaryUserAssignedIdentityId(@Nullable String primaryUserAssignedIdentityId) {
-            this.primaryUserAssignedIdentityId = Input.ofNullable(primaryUserAssignedIdentityId);
+            this.primaryUserAssignedIdentityId = Output.ofNullable(primaryUserAssignedIdentityId);
             return this;
         }
 
-        public Builder publicNetworkAccess(@Nullable Input<Either<String,ServerPublicNetworkAccess>> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Output<Either<String,ServerPublicNetworkAccess>> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
         public Builder publicNetworkAccess(@Nullable Either<String,ServerPublicNetworkAccess> publicNetworkAccess) {
-            this.publicNetworkAccess = Input.ofNullable(publicNetworkAccess);
+            this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serverName(@Nullable Input<String> serverName) {
+        public Builder serverName(@Nullable Output<String> serverName) {
             this.serverName = serverName;
             return this;
         }
 
         public Builder serverName(@Nullable String serverName) {
-            this.serverName = Input.ofNullable(serverName);
+            this.serverName = Output.ofNullable(serverName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public ServerArgs build() {

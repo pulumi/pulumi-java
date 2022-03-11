@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.servicecatalogappregistry;
 
 import io.pulumi.awsnative.servicecatalogappregistry.enums.ResourceAssociationResourceType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class ResourceAssociationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="application", required=true)
-      private final Input<String> application;
+      private final Output<String> application;
 
-    public Input<String> getApplication() {
+    public Output<String> getApplication() {
         return this.application;
     }
 
@@ -30,9 +30,9 @@ public final class ResourceAssociationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resource", required=true)
-      private final Input<String> resource;
+      private final Output<String> resource;
 
-    public Input<String> getResource() {
+    public Output<String> getResource() {
         return this.resource;
     }
 
@@ -41,25 +41,25 @@ public final class ResourceAssociationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceType", required=true)
-      private final Input<ResourceAssociationResourceType> resourceType;
+      private final Output<ResourceAssociationResourceType> resourceType;
 
-    public Input<ResourceAssociationResourceType> getPropResourceType() {
+    public Output<ResourceAssociationResourceType> getPropResourceType() {
         return this.resourceType;
     }
 
     public ResourceAssociationArgs(
-        Input<String> application,
-        Input<String> resource,
-        Input<ResourceAssociationResourceType> resourceType) {
+        Output<String> application,
+        Output<String> resource,
+        Output<ResourceAssociationResourceType> resourceType) {
         this.application = Objects.requireNonNull(application, "expected parameter 'application' to be non-null");
         this.resource = Objects.requireNonNull(resource, "expected parameter 'resource' to be non-null");
         this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
     }
 
     private ResourceAssociationArgs() {
-        this.application = Input.empty();
-        this.resource = Input.empty();
-        this.resourceType = Input.empty();
+        this.application = Output.empty();
+        this.resource = Output.empty();
+        this.resourceType = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class ResourceAssociationArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> application;
-        private Input<String> resource;
-        private Input<ResourceAssociationResourceType> resourceType;
+        private Output<String> application;
+        private Output<String> resource;
+        private Output<ResourceAssociationResourceType> resourceType;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class ResourceAssociationArgs extends io.pulumi.resources.ResourceA
     	      this.resourceType = defaults.resourceType;
         }
 
-        public Builder application(Input<String> application) {
+        public Builder application(Output<String> application) {
             this.application = Objects.requireNonNull(application);
             return this;
         }
 
         public Builder application(String application) {
-            this.application = Input.of(Objects.requireNonNull(application));
+            this.application = Output.of(Objects.requireNonNull(application));
             return this;
         }
 
-        public Builder resource(Input<String> resource) {
+        public Builder resource(Output<String> resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
 
         public Builder resource(String resource) {
-            this.resource = Input.of(Objects.requireNonNull(resource));
+            this.resource = Output.of(Objects.requireNonNull(resource));
             return this;
         }
 
-        public Builder resourceType(Input<ResourceAssociationResourceType> resourceType) {
+        public Builder resourceType(Output<ResourceAssociationResourceType> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
         public Builder resourceType(ResourceAssociationResourceType resourceType) {
-            this.resourceType = Input.of(Objects.requireNonNull(resourceType));
+            this.resourceType = Output.of(Objects.requireNonNull(resourceType));
             return this;
         }
         public ResourceAssociationArgs build() {

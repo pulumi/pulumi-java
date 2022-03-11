@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lex.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class BotButtonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="text", required=true)
-      private final Input<String> text;
+      private final Output<String> text;
 
-    public Input<String> getText() {
+    public Output<String> getText() {
         return this.text;
     }
 
@@ -33,22 +33,22 @@ public final class BotButtonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value", required=true)
-      private final Input<String> value;
+      private final Output<String> value;
 
-    public Input<String> getValue() {
+    public Output<String> getValue() {
         return this.value;
     }
 
     public BotButtonArgs(
-        Input<String> text,
-        Input<String> value) {
+        Output<String> text,
+        Output<String> value) {
         this.text = Objects.requireNonNull(text, "expected parameter 'text' to be non-null");
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private BotButtonArgs() {
-        this.text = Input.empty();
-        this.value = Input.empty();
+        this.text = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class BotButtonArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> text;
-        private Input<String> value;
+        private Output<String> text;
+        private Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class BotButtonArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder text(Input<String> text) {
+        public Builder text(Output<String> text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }
 
         public Builder text(String text) {
-            this.text = Input.of(Objects.requireNonNull(text));
+            this.text = Output.of(Objects.requireNonNull(text));
             return this;
         }
 
-        public Builder value(Input<String> value) {
+        public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(String value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public BotButtonArgs build() {

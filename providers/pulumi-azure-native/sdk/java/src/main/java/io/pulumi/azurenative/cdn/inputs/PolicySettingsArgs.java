@@ -6,7 +6,7 @@ package io.pulumi.azurenative.cdn.inputs;
 import io.pulumi.azurenative.cdn.enums.PolicyEnabledState;
 import io.pulumi.azurenative.cdn.enums.PolicyMode;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultCustomBlockResponseBody")
-      private final @Nullable Input<String> defaultCustomBlockResponseBody;
+      private final @Nullable Output<String> defaultCustomBlockResponseBody;
 
-    public Input<String> getDefaultCustomBlockResponseBody() {
-        return this.defaultCustomBlockResponseBody == null ? Input.empty() : this.defaultCustomBlockResponseBody;
+    public Output<String> getDefaultCustomBlockResponseBody() {
+        return this.defaultCustomBlockResponseBody == null ? Output.empty() : this.defaultCustomBlockResponseBody;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultCustomBlockResponseStatusCode")
-      private final @Nullable Input<Integer> defaultCustomBlockResponseStatusCode;
+      private final @Nullable Output<Integer> defaultCustomBlockResponseStatusCode;
 
-    public Input<Integer> getDefaultCustomBlockResponseStatusCode() {
-        return this.defaultCustomBlockResponseStatusCode == null ? Input.empty() : this.defaultCustomBlockResponseStatusCode;
+    public Output<Integer> getDefaultCustomBlockResponseStatusCode() {
+        return this.defaultCustomBlockResponseStatusCode == null ? Output.empty() : this.defaultCustomBlockResponseStatusCode;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultRedirectUrl")
-      private final @Nullable Input<String> defaultRedirectUrl;
+      private final @Nullable Output<String> defaultRedirectUrl;
 
-    public Input<String> getDefaultRedirectUrl() {
-        return this.defaultRedirectUrl == null ? Input.empty() : this.defaultRedirectUrl;
+    public Output<String> getDefaultRedirectUrl() {
+        return this.defaultRedirectUrl == null ? Output.empty() : this.defaultRedirectUrl;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabledState")
-      private final @Nullable Input<Either<String,PolicyEnabledState>> enabledState;
+      private final @Nullable Output<Either<String,PolicyEnabledState>> enabledState;
 
-    public Input<Either<String,PolicyEnabledState>> getEnabledState() {
-        return this.enabledState == null ? Input.empty() : this.enabledState;
+    public Output<Either<String,PolicyEnabledState>> getEnabledState() {
+        return this.enabledState == null ? Output.empty() : this.enabledState;
     }
 
     /**
@@ -71,18 +71,18 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mode")
-      private final @Nullable Input<Either<String,PolicyMode>> mode;
+      private final @Nullable Output<Either<String,PolicyMode>> mode;
 
-    public Input<Either<String,PolicyMode>> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<Either<String,PolicyMode>> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
     public PolicySettingsArgs(
-        @Nullable Input<String> defaultCustomBlockResponseBody,
-        @Nullable Input<Integer> defaultCustomBlockResponseStatusCode,
-        @Nullable Input<String> defaultRedirectUrl,
-        @Nullable Input<Either<String,PolicyEnabledState>> enabledState,
-        @Nullable Input<Either<String,PolicyMode>> mode) {
+        @Nullable Output<String> defaultCustomBlockResponseBody,
+        @Nullable Output<Integer> defaultCustomBlockResponseStatusCode,
+        @Nullable Output<String> defaultRedirectUrl,
+        @Nullable Output<Either<String,PolicyEnabledState>> enabledState,
+        @Nullable Output<Either<String,PolicyMode>> mode) {
         this.defaultCustomBlockResponseBody = defaultCustomBlockResponseBody;
         this.defaultCustomBlockResponseStatusCode = defaultCustomBlockResponseStatusCode;
         this.defaultRedirectUrl = defaultRedirectUrl;
@@ -91,11 +91,11 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PolicySettingsArgs() {
-        this.defaultCustomBlockResponseBody = Input.empty();
-        this.defaultCustomBlockResponseStatusCode = Input.empty();
-        this.defaultRedirectUrl = Input.empty();
-        this.enabledState = Input.empty();
-        this.mode = Input.empty();
+        this.defaultCustomBlockResponseBody = Output.empty();
+        this.defaultCustomBlockResponseStatusCode = Output.empty();
+        this.defaultRedirectUrl = Output.empty();
+        this.enabledState = Output.empty();
+        this.mode = Output.empty();
     }
 
     public static Builder builder() {
@@ -107,11 +107,11 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> defaultCustomBlockResponseBody;
-        private @Nullable Input<Integer> defaultCustomBlockResponseStatusCode;
-        private @Nullable Input<String> defaultRedirectUrl;
-        private @Nullable Input<Either<String,PolicyEnabledState>> enabledState;
-        private @Nullable Input<Either<String,PolicyMode>> mode;
+        private @Nullable Output<String> defaultCustomBlockResponseBody;
+        private @Nullable Output<Integer> defaultCustomBlockResponseStatusCode;
+        private @Nullable Output<String> defaultRedirectUrl;
+        private @Nullable Output<Either<String,PolicyEnabledState>> enabledState;
+        private @Nullable Output<Either<String,PolicyMode>> mode;
 
         public Builder() {
     	      // Empty
@@ -126,53 +126,53 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.mode = defaults.mode;
         }
 
-        public Builder defaultCustomBlockResponseBody(@Nullable Input<String> defaultCustomBlockResponseBody) {
+        public Builder defaultCustomBlockResponseBody(@Nullable Output<String> defaultCustomBlockResponseBody) {
             this.defaultCustomBlockResponseBody = defaultCustomBlockResponseBody;
             return this;
         }
 
         public Builder defaultCustomBlockResponseBody(@Nullable String defaultCustomBlockResponseBody) {
-            this.defaultCustomBlockResponseBody = Input.ofNullable(defaultCustomBlockResponseBody);
+            this.defaultCustomBlockResponseBody = Output.ofNullable(defaultCustomBlockResponseBody);
             return this;
         }
 
-        public Builder defaultCustomBlockResponseStatusCode(@Nullable Input<Integer> defaultCustomBlockResponseStatusCode) {
+        public Builder defaultCustomBlockResponseStatusCode(@Nullable Output<Integer> defaultCustomBlockResponseStatusCode) {
             this.defaultCustomBlockResponseStatusCode = defaultCustomBlockResponseStatusCode;
             return this;
         }
 
         public Builder defaultCustomBlockResponseStatusCode(@Nullable Integer defaultCustomBlockResponseStatusCode) {
-            this.defaultCustomBlockResponseStatusCode = Input.ofNullable(defaultCustomBlockResponseStatusCode);
+            this.defaultCustomBlockResponseStatusCode = Output.ofNullable(defaultCustomBlockResponseStatusCode);
             return this;
         }
 
-        public Builder defaultRedirectUrl(@Nullable Input<String> defaultRedirectUrl) {
+        public Builder defaultRedirectUrl(@Nullable Output<String> defaultRedirectUrl) {
             this.defaultRedirectUrl = defaultRedirectUrl;
             return this;
         }
 
         public Builder defaultRedirectUrl(@Nullable String defaultRedirectUrl) {
-            this.defaultRedirectUrl = Input.ofNullable(defaultRedirectUrl);
+            this.defaultRedirectUrl = Output.ofNullable(defaultRedirectUrl);
             return this;
         }
 
-        public Builder enabledState(@Nullable Input<Either<String,PolicyEnabledState>> enabledState) {
+        public Builder enabledState(@Nullable Output<Either<String,PolicyEnabledState>> enabledState) {
             this.enabledState = enabledState;
             return this;
         }
 
         public Builder enabledState(@Nullable Either<String,PolicyEnabledState> enabledState) {
-            this.enabledState = Input.ofNullable(enabledState);
+            this.enabledState = Output.ofNullable(enabledState);
             return this;
         }
 
-        public Builder mode(@Nullable Input<Either<String,PolicyMode>> mode) {
+        public Builder mode(@Nullable Output<Either<String,PolicyMode>> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable Either<String,PolicyMode> mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
         public PolicySettingsArgs build() {

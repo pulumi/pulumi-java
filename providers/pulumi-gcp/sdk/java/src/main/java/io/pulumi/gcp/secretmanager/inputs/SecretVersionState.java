@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.secretmanager.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class SecretVersionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-      private final @Nullable Input<String> createTime;
+      private final @Nullable Output<String> createTime;
 
-    public Input<String> getCreateTime() {
-        return this.createTime == null ? Input.empty() : this.createTime;
+    public Output<String> getCreateTime() {
+        return this.createTime == null ? Output.empty() : this.createTime;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class SecretVersionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destroyTime")
-      private final @Nullable Input<String> destroyTime;
+      private final @Nullable Output<String> destroyTime;
 
-    public Input<String> getDestroyTime() {
-        return this.destroyTime == null ? Input.empty() : this.destroyTime;
+    public Output<String> getDestroyTime() {
+        return this.destroyTime == null ? Output.empty() : this.destroyTime;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class SecretVersionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class SecretVersionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class SecretVersionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secret")
-      private final @Nullable Input<String> secret;
+      private final @Nullable Output<String> secret;
 
-    public Input<String> getSecret() {
-        return this.secret == null ? Input.empty() : this.secret;
+    public Output<String> getSecret() {
+        return this.secret == null ? Output.empty() : this.secret;
     }
 
     /**
@@ -76,19 +76,19 @@ public final class SecretVersionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretData")
-      private final @Nullable Input<String> secretData;
+      private final @Nullable Output<String> secretData;
 
-    public Input<String> getSecretData() {
-        return this.secretData == null ? Input.empty() : this.secretData;
+    public Output<String> getSecretData() {
+        return this.secretData == null ? Output.empty() : this.secretData;
     }
 
     public SecretVersionState(
-        @Nullable Input<String> createTime,
-        @Nullable Input<String> destroyTime,
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<String> name,
-        @Nullable Input<String> secret,
-        @Nullable Input<String> secretData) {
+        @Nullable Output<String> createTime,
+        @Nullable Output<String> destroyTime,
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<String> name,
+        @Nullable Output<String> secret,
+        @Nullable Output<String> secretData) {
         this.createTime = createTime;
         this.destroyTime = destroyTime;
         this.enabled = enabled;
@@ -98,12 +98,12 @@ public final class SecretVersionState extends io.pulumi.resources.ResourceArgs {
     }
 
     private SecretVersionState() {
-        this.createTime = Input.empty();
-        this.destroyTime = Input.empty();
-        this.enabled = Input.empty();
-        this.name = Input.empty();
-        this.secret = Input.empty();
-        this.secretData = Input.empty();
+        this.createTime = Output.empty();
+        this.destroyTime = Output.empty();
+        this.enabled = Output.empty();
+        this.name = Output.empty();
+        this.secret = Output.empty();
+        this.secretData = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class SecretVersionState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> createTime;
-        private @Nullable Input<String> destroyTime;
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> secret;
-        private @Nullable Input<String> secretData;
+        private @Nullable Output<String> createTime;
+        private @Nullable Output<String> destroyTime;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> secret;
+        private @Nullable Output<String> secretData;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class SecretVersionState extends io.pulumi.resources.ResourceArgs {
     	      this.secretData = defaults.secretData;
         }
 
-        public Builder createTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Input.ofNullable(createTime);
+            this.createTime = Output.ofNullable(createTime);
             return this;
         }
 
-        public Builder destroyTime(@Nullable Input<String> destroyTime) {
+        public Builder destroyTime(@Nullable Output<String> destroyTime) {
             this.destroyTime = destroyTime;
             return this;
         }
 
         public Builder destroyTime(@Nullable String destroyTime) {
-            this.destroyTime = Input.ofNullable(destroyTime);
+            this.destroyTime = Output.ofNullable(destroyTime);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder secret(@Nullable Input<String> secret) {
+        public Builder secret(@Nullable Output<String> secret) {
             this.secret = secret;
             return this;
         }
 
         public Builder secret(@Nullable String secret) {
-            this.secret = Input.ofNullable(secret);
+            this.secret = Output.ofNullable(secret);
             return this;
         }
 
-        public Builder secretData(@Nullable Input<String> secretData) {
+        public Builder secretData(@Nullable Output<String> secretData) {
             this.secretData = secretData;
             return this;
         }
 
         public Builder secretData(@Nullable String secretData) {
-            this.secretData = Input.ofNullable(secretData);
+            this.secretData = Output.ofNullable(secretData);
             return this;
         }
         public SecretVersionState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appsync;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,29 +14,29 @@ public final class DomainNameApiAssociationArgs extends io.pulumi.resources.Reso
     public static final DomainNameApiAssociationArgs Empty = new DomainNameApiAssociationArgs();
 
     @InputImport(name="apiId", required=true)
-      private final Input<String> apiId;
+      private final Output<String> apiId;
 
-    public Input<String> getApiId() {
+    public Output<String> getApiId() {
         return this.apiId;
     }
 
     @InputImport(name="domainName", required=true)
-      private final Input<String> domainName;
+      private final Output<String> domainName;
 
-    public Input<String> getDomainName() {
+    public Output<String> getDomainName() {
         return this.domainName;
     }
 
     public DomainNameApiAssociationArgs(
-        Input<String> apiId,
-        Input<String> domainName) {
+        Output<String> apiId,
+        Output<String> domainName) {
         this.apiId = Objects.requireNonNull(apiId, "expected parameter 'apiId' to be non-null");
         this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
     }
 
     private DomainNameApiAssociationArgs() {
-        this.apiId = Input.empty();
-        this.domainName = Input.empty();
+        this.apiId = Output.empty();
+        this.domainName = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,8 +48,8 @@ public final class DomainNameApiAssociationArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> apiId;
-        private Input<String> domainName;
+        private Output<String> apiId;
+        private Output<String> domainName;
 
         public Builder() {
     	      // Empty
@@ -61,23 +61,23 @@ public final class DomainNameApiAssociationArgs extends io.pulumi.resources.Reso
     	      this.domainName = defaults.domainName;
         }
 
-        public Builder apiId(Input<String> apiId) {
+        public Builder apiId(Output<String> apiId) {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
 
         public Builder apiId(String apiId) {
-            this.apiId = Input.of(Objects.requireNonNull(apiId));
+            this.apiId = Output.of(Objects.requireNonNull(apiId));
             return this;
         }
 
-        public Builder domainName(Input<String> domainName) {
+        public Builder domainName(Output<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
         public Builder domainName(String domainName) {
-            this.domainName = Input.of(Objects.requireNonNull(domainName));
+            this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
         }
         public DomainNameApiAssociationArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class SigningKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyId")
-      private final @Nullable Input<String> keyId;
+      private final @Nullable Output<String> keyId;
 
-    public Input<String> getKeyId() {
-        return this.keyId == null ? Input.empty() : this.keyId;
+    public Output<String> getKeyId() {
+        return this.keyId == null ? Output.empty() : this.keyId;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SigningKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyScheme")
-      private final @Nullable Input<String> keyScheme;
+      private final @Nullable Output<String> keyScheme;
 
-    public Input<String> getKeyScheme() {
-        return this.keyScheme == null ? Input.empty() : this.keyScheme;
+    public Output<String> getKeyScheme() {
+        return this.keyScheme == null ? Output.empty() : this.keyScheme;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class SigningKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyType")
-      private final @Nullable Input<String> keyType;
+      private final @Nullable Output<String> keyType;
 
-    public Input<String> getKeyType() {
-        return this.keyType == null ? Input.empty() : this.keyType;
+    public Output<String> getKeyType() {
+        return this.keyType == null ? Output.empty() : this.keyType;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class SigningKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicKeyValue")
-      private final @Nullable Input<String> publicKeyValue;
+      private final @Nullable Output<String> publicKeyValue;
 
-    public Input<String> getPublicKeyValue() {
-        return this.publicKeyValue == null ? Input.empty() : this.publicKeyValue;
+    public Output<String> getPublicKeyValue() {
+        return this.publicKeyValue == null ? Output.empty() : this.publicKeyValue;
     }
 
     public SigningKeyArgs(
-        @Nullable Input<String> keyId,
-        @Nullable Input<String> keyScheme,
-        @Nullable Input<String> keyType,
-        @Nullable Input<String> publicKeyValue) {
+        @Nullable Output<String> keyId,
+        @Nullable Output<String> keyScheme,
+        @Nullable Output<String> keyType,
+        @Nullable Output<String> publicKeyValue) {
         this.keyId = keyId;
         this.keyScheme = keyScheme;
         this.keyType = keyType;
@@ -74,10 +74,10 @@ public final class SigningKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SigningKeyArgs() {
-        this.keyId = Input.empty();
-        this.keyScheme = Input.empty();
-        this.keyType = Input.empty();
-        this.publicKeyValue = Input.empty();
+        this.keyId = Output.empty();
+        this.keyScheme = Output.empty();
+        this.keyType = Output.empty();
+        this.publicKeyValue = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class SigningKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> keyId;
-        private @Nullable Input<String> keyScheme;
-        private @Nullable Input<String> keyType;
-        private @Nullable Input<String> publicKeyValue;
+        private @Nullable Output<String> keyId;
+        private @Nullable Output<String> keyScheme;
+        private @Nullable Output<String> keyType;
+        private @Nullable Output<String> publicKeyValue;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class SigningKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.publicKeyValue = defaults.publicKeyValue;
         }
 
-        public Builder keyId(@Nullable Input<String> keyId) {
+        public Builder keyId(@Nullable Output<String> keyId) {
             this.keyId = keyId;
             return this;
         }
 
         public Builder keyId(@Nullable String keyId) {
-            this.keyId = Input.ofNullable(keyId);
+            this.keyId = Output.ofNullable(keyId);
             return this;
         }
 
-        public Builder keyScheme(@Nullable Input<String> keyScheme) {
+        public Builder keyScheme(@Nullable Output<String> keyScheme) {
             this.keyScheme = keyScheme;
             return this;
         }
 
         public Builder keyScheme(@Nullable String keyScheme) {
-            this.keyScheme = Input.ofNullable(keyScheme);
+            this.keyScheme = Output.ofNullable(keyScheme);
             return this;
         }
 
-        public Builder keyType(@Nullable Input<String> keyType) {
+        public Builder keyType(@Nullable Output<String> keyType) {
             this.keyType = keyType;
             return this;
         }
 
         public Builder keyType(@Nullable String keyType) {
-            this.keyType = Input.ofNullable(keyType);
+            this.keyType = Output.ofNullable(keyType);
             return this;
         }
 
-        public Builder publicKeyValue(@Nullable Input<String> publicKeyValue) {
+        public Builder publicKeyValue(@Nullable Output<String> publicKeyValue) {
             this.publicKeyValue = publicKeyValue;
             return this;
         }
 
         public Builder publicKeyValue(@Nullable String publicKeyValue) {
-            this.publicKeyValue = Input.ofNullable(publicKeyValue);
+            this.publicKeyValue = Output.ofNullable(publicKeyValue);
             return this;
         }
         public SigningKeyArgs build() {

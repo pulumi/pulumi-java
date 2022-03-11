@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.ResourceReferenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class CustomerCertificateParametersArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="certificateAuthority")
-      private final @Nullable Input<String> certificateAuthority;
+      private final @Nullable Output<String> certificateAuthority;
 
-    public Input<String> getCertificateAuthority() {
-        return this.certificateAuthority == null ? Input.empty() : this.certificateAuthority;
+    public Output<String> getCertificateAuthority() {
+        return this.certificateAuthority == null ? Output.empty() : this.certificateAuthority;
     }
 
     /**
@@ -37,9 +37,9 @@ public final class CustomerCertificateParametersArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="secretSource", required=true)
-      private final Input<ResourceReferenceArgs> secretSource;
+      private final Output<ResourceReferenceArgs> secretSource;
 
-    public Input<ResourceReferenceArgs> getSecretSource() {
+    public Output<ResourceReferenceArgs> getSecretSource() {
         return this.secretSource;
     }
 
@@ -48,10 +48,10 @@ public final class CustomerCertificateParametersArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="secretVersion")
-      private final @Nullable Input<String> secretVersion;
+      private final @Nullable Output<String> secretVersion;
 
-    public Input<String> getSecretVersion() {
-        return this.secretVersion == null ? Input.empty() : this.secretVersion;
+    public Output<String> getSecretVersion() {
+        return this.secretVersion == null ? Output.empty() : this.secretVersion;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class CustomerCertificateParametersArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="subjectAlternativeNames")
-      private final @Nullable Input<List<String>> subjectAlternativeNames;
+      private final @Nullable Output<List<String>> subjectAlternativeNames;
 
-    public Input<List<String>> getSubjectAlternativeNames() {
-        return this.subjectAlternativeNames == null ? Input.empty() : this.subjectAlternativeNames;
+    public Output<List<String>> getSubjectAlternativeNames() {
+        return this.subjectAlternativeNames == null ? Output.empty() : this.subjectAlternativeNames;
     }
 
     /**
@@ -71,9 +71,9 @@ public final class CustomerCertificateParametersArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -82,19 +82,19 @@ public final class CustomerCertificateParametersArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="useLatestVersion")
-      private final @Nullable Input<Boolean> useLatestVersion;
+      private final @Nullable Output<Boolean> useLatestVersion;
 
-    public Input<Boolean> getUseLatestVersion() {
-        return this.useLatestVersion == null ? Input.empty() : this.useLatestVersion;
+    public Output<Boolean> getUseLatestVersion() {
+        return this.useLatestVersion == null ? Output.empty() : this.useLatestVersion;
     }
 
     public CustomerCertificateParametersArgs(
-        @Nullable Input<String> certificateAuthority,
-        Input<ResourceReferenceArgs> secretSource,
-        @Nullable Input<String> secretVersion,
-        @Nullable Input<List<String>> subjectAlternativeNames,
-        Input<String> type,
-        @Nullable Input<Boolean> useLatestVersion) {
+        @Nullable Output<String> certificateAuthority,
+        Output<ResourceReferenceArgs> secretSource,
+        @Nullable Output<String> secretVersion,
+        @Nullable Output<List<String>> subjectAlternativeNames,
+        Output<String> type,
+        @Nullable Output<Boolean> useLatestVersion) {
         this.certificateAuthority = certificateAuthority;
         this.secretSource = Objects.requireNonNull(secretSource, "expected parameter 'secretSource' to be non-null");
         this.secretVersion = secretVersion;
@@ -104,12 +104,12 @@ public final class CustomerCertificateParametersArgs extends io.pulumi.resources
     }
 
     private CustomerCertificateParametersArgs() {
-        this.certificateAuthority = Input.empty();
-        this.secretSource = Input.empty();
-        this.secretVersion = Input.empty();
-        this.subjectAlternativeNames = Input.empty();
-        this.type = Input.empty();
-        this.useLatestVersion = Input.empty();
+        this.certificateAuthority = Output.empty();
+        this.secretSource = Output.empty();
+        this.secretVersion = Output.empty();
+        this.subjectAlternativeNames = Output.empty();
+        this.type = Output.empty();
+        this.useLatestVersion = Output.empty();
     }
 
     public static Builder builder() {
@@ -121,12 +121,12 @@ public final class CustomerCertificateParametersArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<String> certificateAuthority;
-        private Input<ResourceReferenceArgs> secretSource;
-        private @Nullable Input<String> secretVersion;
-        private @Nullable Input<List<String>> subjectAlternativeNames;
-        private Input<String> type;
-        private @Nullable Input<Boolean> useLatestVersion;
+        private @Nullable Output<String> certificateAuthority;
+        private Output<ResourceReferenceArgs> secretSource;
+        private @Nullable Output<String> secretVersion;
+        private @Nullable Output<List<String>> subjectAlternativeNames;
+        private Output<String> type;
+        private @Nullable Output<Boolean> useLatestVersion;
 
         public Builder() {
     	      // Empty
@@ -142,63 +142,63 @@ public final class CustomerCertificateParametersArgs extends io.pulumi.resources
     	      this.useLatestVersion = defaults.useLatestVersion;
         }
 
-        public Builder certificateAuthority(@Nullable Input<String> certificateAuthority) {
+        public Builder certificateAuthority(@Nullable Output<String> certificateAuthority) {
             this.certificateAuthority = certificateAuthority;
             return this;
         }
 
         public Builder certificateAuthority(@Nullable String certificateAuthority) {
-            this.certificateAuthority = Input.ofNullable(certificateAuthority);
+            this.certificateAuthority = Output.ofNullable(certificateAuthority);
             return this;
         }
 
-        public Builder secretSource(Input<ResourceReferenceArgs> secretSource) {
+        public Builder secretSource(Output<ResourceReferenceArgs> secretSource) {
             this.secretSource = Objects.requireNonNull(secretSource);
             return this;
         }
 
         public Builder secretSource(ResourceReferenceArgs secretSource) {
-            this.secretSource = Input.of(Objects.requireNonNull(secretSource));
+            this.secretSource = Output.of(Objects.requireNonNull(secretSource));
             return this;
         }
 
-        public Builder secretVersion(@Nullable Input<String> secretVersion) {
+        public Builder secretVersion(@Nullable Output<String> secretVersion) {
             this.secretVersion = secretVersion;
             return this;
         }
 
         public Builder secretVersion(@Nullable String secretVersion) {
-            this.secretVersion = Input.ofNullable(secretVersion);
+            this.secretVersion = Output.ofNullable(secretVersion);
             return this;
         }
 
-        public Builder subjectAlternativeNames(@Nullable Input<List<String>> subjectAlternativeNames) {
+        public Builder subjectAlternativeNames(@Nullable Output<List<String>> subjectAlternativeNames) {
             this.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }
 
         public Builder subjectAlternativeNames(@Nullable List<String> subjectAlternativeNames) {
-            this.subjectAlternativeNames = Input.ofNullable(subjectAlternativeNames);
+            this.subjectAlternativeNames = Output.ofNullable(subjectAlternativeNames);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder useLatestVersion(@Nullable Input<Boolean> useLatestVersion) {
+        public Builder useLatestVersion(@Nullable Output<Boolean> useLatestVersion) {
             this.useLatestVersion = useLatestVersion;
             return this;
         }
 
         public Builder useLatestVersion(@Nullable Boolean useLatestVersion) {
-            this.useLatestVersion = Input.ofNullable(useLatestVersion);
+            this.useLatestVersion = Output.ofNullable(useLatestVersion);
             return this;
         }
         public CustomerCertificateParametersArgs build() {

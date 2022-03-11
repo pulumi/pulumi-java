@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.diagflow.inputs.CxPageEntryFulfillmentArgs;
 import io.pulumi.gcp.diagflow.inputs.CxPageEventHandlerArgs;
@@ -24,9 +24,9 @@ public final class CxPageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -36,10 +36,10 @@ public final class CxPageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="entryFulfillment")
-      private final @Nullable Input<CxPageEntryFulfillmentArgs> entryFulfillment;
+      private final @Nullable Output<CxPageEntryFulfillmentArgs> entryFulfillment;
 
-    public Input<CxPageEntryFulfillmentArgs> getEntryFulfillment() {
-        return this.entryFulfillment == null ? Input.empty() : this.entryFulfillment;
+    public Output<CxPageEntryFulfillmentArgs> getEntryFulfillment() {
+        return this.entryFulfillment == null ? Output.empty() : this.entryFulfillment;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class CxPageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventHandlers")
-      private final @Nullable Input<List<CxPageEventHandlerArgs>> eventHandlers;
+      private final @Nullable Output<List<CxPageEventHandlerArgs>> eventHandlers;
 
-    public Input<List<CxPageEventHandlerArgs>> getEventHandlers() {
-        return this.eventHandlers == null ? Input.empty() : this.eventHandlers;
+    public Output<List<CxPageEventHandlerArgs>> getEventHandlers() {
+        return this.eventHandlers == null ? Output.empty() : this.eventHandlers;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class CxPageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="form")
-      private final @Nullable Input<CxPageFormArgs> form;
+      private final @Nullable Output<CxPageFormArgs> form;
 
-    public Input<CxPageFormArgs> getForm() {
-        return this.form == null ? Input.empty() : this.form;
+    public Output<CxPageFormArgs> getForm() {
+        return this.form == null ? Output.empty() : this.form;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class CxPageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="languageCode")
-      private final @Nullable Input<String> languageCode;
+      private final @Nullable Output<String> languageCode;
 
-    public Input<String> getLanguageCode() {
-        return this.languageCode == null ? Input.empty() : this.languageCode;
+    public Output<String> getLanguageCode() {
+        return this.languageCode == null ? Output.empty() : this.languageCode;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class CxPageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent")
-      private final @Nullable Input<String> parent;
+      private final @Nullable Output<String> parent;
 
-    public Input<String> getParent() {
-        return this.parent == null ? Input.empty() : this.parent;
+    public Output<String> getParent() {
+        return this.parent == null ? Output.empty() : this.parent;
     }
 
     /**
@@ -108,10 +108,10 @@ public final class CxPageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transitionRouteGroups")
-      private final @Nullable Input<List<String>> transitionRouteGroups;
+      private final @Nullable Output<List<String>> transitionRouteGroups;
 
-    public Input<List<String>> getTransitionRouteGroups() {
-        return this.transitionRouteGroups == null ? Input.empty() : this.transitionRouteGroups;
+    public Output<List<String>> getTransitionRouteGroups() {
+        return this.transitionRouteGroups == null ? Output.empty() : this.transitionRouteGroups;
     }
 
     /**
@@ -127,21 +127,21 @@ public final class CxPageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transitionRoutes")
-      private final @Nullable Input<List<CxPageTransitionRouteArgs>> transitionRoutes;
+      private final @Nullable Output<List<CxPageTransitionRouteArgs>> transitionRoutes;
 
-    public Input<List<CxPageTransitionRouteArgs>> getTransitionRoutes() {
-        return this.transitionRoutes == null ? Input.empty() : this.transitionRoutes;
+    public Output<List<CxPageTransitionRouteArgs>> getTransitionRoutes() {
+        return this.transitionRoutes == null ? Output.empty() : this.transitionRoutes;
     }
 
     public CxPageArgs(
-        Input<String> displayName,
-        @Nullable Input<CxPageEntryFulfillmentArgs> entryFulfillment,
-        @Nullable Input<List<CxPageEventHandlerArgs>> eventHandlers,
-        @Nullable Input<CxPageFormArgs> form,
-        @Nullable Input<String> languageCode,
-        @Nullable Input<String> parent,
-        @Nullable Input<List<String>> transitionRouteGroups,
-        @Nullable Input<List<CxPageTransitionRouteArgs>> transitionRoutes) {
+        Output<String> displayName,
+        @Nullable Output<CxPageEntryFulfillmentArgs> entryFulfillment,
+        @Nullable Output<List<CxPageEventHandlerArgs>> eventHandlers,
+        @Nullable Output<CxPageFormArgs> form,
+        @Nullable Output<String> languageCode,
+        @Nullable Output<String> parent,
+        @Nullable Output<List<String>> transitionRouteGroups,
+        @Nullable Output<List<CxPageTransitionRouteArgs>> transitionRoutes) {
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
         this.entryFulfillment = entryFulfillment;
         this.eventHandlers = eventHandlers;
@@ -153,14 +153,14 @@ public final class CxPageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CxPageArgs() {
-        this.displayName = Input.empty();
-        this.entryFulfillment = Input.empty();
-        this.eventHandlers = Input.empty();
-        this.form = Input.empty();
-        this.languageCode = Input.empty();
-        this.parent = Input.empty();
-        this.transitionRouteGroups = Input.empty();
-        this.transitionRoutes = Input.empty();
+        this.displayName = Output.empty();
+        this.entryFulfillment = Output.empty();
+        this.eventHandlers = Output.empty();
+        this.form = Output.empty();
+        this.languageCode = Output.empty();
+        this.parent = Output.empty();
+        this.transitionRouteGroups = Output.empty();
+        this.transitionRoutes = Output.empty();
     }
 
     public static Builder builder() {
@@ -172,14 +172,14 @@ public final class CxPageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> displayName;
-        private @Nullable Input<CxPageEntryFulfillmentArgs> entryFulfillment;
-        private @Nullable Input<List<CxPageEventHandlerArgs>> eventHandlers;
-        private @Nullable Input<CxPageFormArgs> form;
-        private @Nullable Input<String> languageCode;
-        private @Nullable Input<String> parent;
-        private @Nullable Input<List<String>> transitionRouteGroups;
-        private @Nullable Input<List<CxPageTransitionRouteArgs>> transitionRoutes;
+        private Output<String> displayName;
+        private @Nullable Output<CxPageEntryFulfillmentArgs> entryFulfillment;
+        private @Nullable Output<List<CxPageEventHandlerArgs>> eventHandlers;
+        private @Nullable Output<CxPageFormArgs> form;
+        private @Nullable Output<String> languageCode;
+        private @Nullable Output<String> parent;
+        private @Nullable Output<List<String>> transitionRouteGroups;
+        private @Nullable Output<List<CxPageTransitionRouteArgs>> transitionRoutes;
 
         public Builder() {
     	      // Empty
@@ -197,83 +197,83 @@ public final class CxPageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.transitionRoutes = defaults.transitionRoutes;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder entryFulfillment(@Nullable Input<CxPageEntryFulfillmentArgs> entryFulfillment) {
+        public Builder entryFulfillment(@Nullable Output<CxPageEntryFulfillmentArgs> entryFulfillment) {
             this.entryFulfillment = entryFulfillment;
             return this;
         }
 
         public Builder entryFulfillment(@Nullable CxPageEntryFulfillmentArgs entryFulfillment) {
-            this.entryFulfillment = Input.ofNullable(entryFulfillment);
+            this.entryFulfillment = Output.ofNullable(entryFulfillment);
             return this;
         }
 
-        public Builder eventHandlers(@Nullable Input<List<CxPageEventHandlerArgs>> eventHandlers) {
+        public Builder eventHandlers(@Nullable Output<List<CxPageEventHandlerArgs>> eventHandlers) {
             this.eventHandlers = eventHandlers;
             return this;
         }
 
         public Builder eventHandlers(@Nullable List<CxPageEventHandlerArgs> eventHandlers) {
-            this.eventHandlers = Input.ofNullable(eventHandlers);
+            this.eventHandlers = Output.ofNullable(eventHandlers);
             return this;
         }
 
-        public Builder form(@Nullable Input<CxPageFormArgs> form) {
+        public Builder form(@Nullable Output<CxPageFormArgs> form) {
             this.form = form;
             return this;
         }
 
         public Builder form(@Nullable CxPageFormArgs form) {
-            this.form = Input.ofNullable(form);
+            this.form = Output.ofNullable(form);
             return this;
         }
 
-        public Builder languageCode(@Nullable Input<String> languageCode) {
+        public Builder languageCode(@Nullable Output<String> languageCode) {
             this.languageCode = languageCode;
             return this;
         }
 
         public Builder languageCode(@Nullable String languageCode) {
-            this.languageCode = Input.ofNullable(languageCode);
+            this.languageCode = Output.ofNullable(languageCode);
             return this;
         }
 
-        public Builder parent(@Nullable Input<String> parent) {
+        public Builder parent(@Nullable Output<String> parent) {
             this.parent = parent;
             return this;
         }
 
         public Builder parent(@Nullable String parent) {
-            this.parent = Input.ofNullable(parent);
+            this.parent = Output.ofNullable(parent);
             return this;
         }
 
-        public Builder transitionRouteGroups(@Nullable Input<List<String>> transitionRouteGroups) {
+        public Builder transitionRouteGroups(@Nullable Output<List<String>> transitionRouteGroups) {
             this.transitionRouteGroups = transitionRouteGroups;
             return this;
         }
 
         public Builder transitionRouteGroups(@Nullable List<String> transitionRouteGroups) {
-            this.transitionRouteGroups = Input.ofNullable(transitionRouteGroups);
+            this.transitionRouteGroups = Output.ofNullable(transitionRouteGroups);
             return this;
         }
 
-        public Builder transitionRoutes(@Nullable Input<List<CxPageTransitionRouteArgs>> transitionRoutes) {
+        public Builder transitionRoutes(@Nullable Output<List<CxPageTransitionRouteArgs>> transitionRoutes) {
             this.transitionRoutes = transitionRoutes;
             return this;
         }
 
         public Builder transitionRoutes(@Nullable List<CxPageTransitionRouteArgs> transitionRoutes) {
-            this.transitionRoutes = Input.ofNullable(transitionRoutes);
+            this.transitionRoutes = Output.ofNullable(transitionRoutes);
             return this;
         }
         public CxPageArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cognitiveservices.inputs;
 
 import io.pulumi.azurenative.cognitiveservices.enums.DeploymentScaleType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class DeploymentScaleSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="capacity")
-      private final @Nullable Input<Integer> capacity;
+      private final @Nullable Output<Integer> capacity;
 
-    public Input<Integer> getCapacity() {
-        return this.capacity == null ? Input.empty() : this.capacity;
+    public Output<Integer> getCapacity() {
+        return this.capacity == null ? Output.empty() : this.capacity;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class DeploymentScaleSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="scaleType")
-      private final @Nullable Input<Either<String,DeploymentScaleType>> scaleType;
+      private final @Nullable Output<Either<String,DeploymentScaleType>> scaleType;
 
-    public Input<Either<String,DeploymentScaleType>> getScaleType() {
-        return this.scaleType == null ? Input.empty() : this.scaleType;
+    public Output<Either<String,DeploymentScaleType>> getScaleType() {
+        return this.scaleType == null ? Output.empty() : this.scaleType;
     }
 
     public DeploymentScaleSettingsArgs(
-        @Nullable Input<Integer> capacity,
-        @Nullable Input<Either<String,DeploymentScaleType>> scaleType) {
+        @Nullable Output<Integer> capacity,
+        @Nullable Output<Either<String,DeploymentScaleType>> scaleType) {
         this.capacity = capacity;
         this.scaleType = scaleType;
     }
 
     private DeploymentScaleSettingsArgs() {
-        this.capacity = Input.empty();
-        this.scaleType = Input.empty();
+        this.capacity = Output.empty();
+        this.scaleType = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class DeploymentScaleSettingsArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> capacity;
-        private @Nullable Input<Either<String,DeploymentScaleType>> scaleType;
+        private @Nullable Output<Integer> capacity;
+        private @Nullable Output<Either<String,DeploymentScaleType>> scaleType;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class DeploymentScaleSettingsArgs extends io.pulumi.resources.Resou
     	      this.scaleType = defaults.scaleType;
         }
 
-        public Builder capacity(@Nullable Input<Integer> capacity) {
+        public Builder capacity(@Nullable Output<Integer> capacity) {
             this.capacity = capacity;
             return this;
         }
 
         public Builder capacity(@Nullable Integer capacity) {
-            this.capacity = Input.ofNullable(capacity);
+            this.capacity = Output.ofNullable(capacity);
             return this;
         }
 
-        public Builder scaleType(@Nullable Input<Either<String,DeploymentScaleType>> scaleType) {
+        public Builder scaleType(@Nullable Output<Either<String,DeploymentScaleType>> scaleType) {
             this.scaleType = scaleType;
             return this;
         }
 
         public Builder scaleType(@Nullable Either<String,DeploymentScaleType> scaleType) {
-            this.scaleType = Input.ofNullable(scaleType);
+            this.scaleType = Output.ofNullable(scaleType);
             return this;
         }
         public DeploymentScaleSettingsArgs build() {

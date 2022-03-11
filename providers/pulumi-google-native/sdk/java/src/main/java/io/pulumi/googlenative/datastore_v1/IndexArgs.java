@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastore_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datastore_v1.enums.IndexAncestor;
 import io.pulumi.googlenative.datastore_v1.inputs.GoogleDatastoreAdminV1IndexedPropertyArgs;
@@ -22,9 +22,9 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ancestor", required=true)
-      private final Input<IndexAncestor> ancestor;
+      private final Output<IndexAncestor> ancestor;
 
-    public Input<IndexAncestor> getAncestor() {
+    public Output<IndexAncestor> getAncestor() {
         return this.ancestor;
     }
 
@@ -33,17 +33,17 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<String> kind;
+      private final Output<String> kind;
 
-    public Input<String> getKind() {
+    public Output<String> getKind() {
         return this.kind;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -51,17 +51,17 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties", required=true)
-      private final Input<List<GoogleDatastoreAdminV1IndexedPropertyArgs>> properties;
+      private final Output<List<GoogleDatastoreAdminV1IndexedPropertyArgs>> properties;
 
-    public Input<List<GoogleDatastoreAdminV1IndexedPropertyArgs>> getProperties() {
+    public Output<List<GoogleDatastoreAdminV1IndexedPropertyArgs>> getProperties() {
         return this.properties;
     }
 
     public IndexArgs(
-        Input<IndexAncestor> ancestor,
-        Input<String> kind,
-        @Nullable Input<String> project,
-        Input<List<GoogleDatastoreAdminV1IndexedPropertyArgs>> properties) {
+        Output<IndexAncestor> ancestor,
+        Output<String> kind,
+        @Nullable Output<String> project,
+        Output<List<GoogleDatastoreAdminV1IndexedPropertyArgs>> properties) {
         this.ancestor = Objects.requireNonNull(ancestor, "expected parameter 'ancestor' to be non-null");
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
         this.project = project;
@@ -69,10 +69,10 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IndexArgs() {
-        this.ancestor = Input.empty();
-        this.kind = Input.empty();
-        this.project = Input.empty();
-        this.properties = Input.empty();
+        this.ancestor = Output.empty();
+        this.kind = Output.empty();
+        this.project = Output.empty();
+        this.properties = Output.empty();
     }
 
     public static Builder builder() {
@@ -84,10 +84,10 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<IndexAncestor> ancestor;
-        private Input<String> kind;
-        private @Nullable Input<String> project;
-        private Input<List<GoogleDatastoreAdminV1IndexedPropertyArgs>> properties;
+        private Output<IndexAncestor> ancestor;
+        private Output<String> kind;
+        private @Nullable Output<String> project;
+        private Output<List<GoogleDatastoreAdminV1IndexedPropertyArgs>> properties;
 
         public Builder() {
     	      // Empty
@@ -101,43 +101,43 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     	      this.properties = defaults.properties;
         }
 
-        public Builder ancestor(Input<IndexAncestor> ancestor) {
+        public Builder ancestor(Output<IndexAncestor> ancestor) {
             this.ancestor = Objects.requireNonNull(ancestor);
             return this;
         }
 
         public Builder ancestor(IndexAncestor ancestor) {
-            this.ancestor = Input.of(Objects.requireNonNull(ancestor));
+            this.ancestor = Output.of(Objects.requireNonNull(ancestor));
             return this;
         }
 
-        public Builder kind(Input<String> kind) {
+        public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(String kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder properties(Input<List<GoogleDatastoreAdminV1IndexedPropertyArgs>> properties) {
+        public Builder properties(Output<List<GoogleDatastoreAdminV1IndexedPropertyArgs>> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
         public Builder properties(List<GoogleDatastoreAdminV1IndexedPropertyArgs> properties) {
-            this.properties = Input.of(Objects.requireNonNull(properties));
+            this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
         public IndexArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.imagebuilder.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class DistributionConfigurationLaunchTemplateConfigurationArgs exte
      * 
      */
     @InputImport(name="accountId")
-      private final @Nullable Input<String> accountId;
+      private final @Nullable Output<String> accountId;
 
-    public Input<String> getAccountId() {
-        return this.accountId == null ? Input.empty() : this.accountId;
+    public Output<String> getAccountId() {
+        return this.accountId == null ? Output.empty() : this.accountId;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DistributionConfigurationLaunchTemplateConfigurationArgs exte
      * 
      */
     @InputImport(name="launchTemplateId")
-      private final @Nullable Input<String> launchTemplateId;
+      private final @Nullable Output<String> launchTemplateId;
 
-    public Input<String> getLaunchTemplateId() {
-        return this.launchTemplateId == null ? Input.empty() : this.launchTemplateId;
+    public Output<String> getLaunchTemplateId() {
+        return this.launchTemplateId == null ? Output.empty() : this.launchTemplateId;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class DistributionConfigurationLaunchTemplateConfigurationArgs exte
      * 
      */
     @InputImport(name="setDefaultVersion")
-      private final @Nullable Input<Boolean> setDefaultVersion;
+      private final @Nullable Output<Boolean> setDefaultVersion;
 
-    public Input<Boolean> getSetDefaultVersion() {
-        return this.setDefaultVersion == null ? Input.empty() : this.setDefaultVersion;
+    public Output<Boolean> getSetDefaultVersion() {
+        return this.setDefaultVersion == null ? Output.empty() : this.setDefaultVersion;
     }
 
     public DistributionConfigurationLaunchTemplateConfigurationArgs(
-        @Nullable Input<String> accountId,
-        @Nullable Input<String> launchTemplateId,
-        @Nullable Input<Boolean> setDefaultVersion) {
+        @Nullable Output<String> accountId,
+        @Nullable Output<String> launchTemplateId,
+        @Nullable Output<Boolean> setDefaultVersion) {
         this.accountId = accountId;
         this.launchTemplateId = launchTemplateId;
         this.setDefaultVersion = setDefaultVersion;
     }
 
     private DistributionConfigurationLaunchTemplateConfigurationArgs() {
-        this.accountId = Input.empty();
-        this.launchTemplateId = Input.empty();
-        this.setDefaultVersion = Input.empty();
+        this.accountId = Output.empty();
+        this.launchTemplateId = Output.empty();
+        this.setDefaultVersion = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class DistributionConfigurationLaunchTemplateConfigurationArgs exte
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accountId;
-        private @Nullable Input<String> launchTemplateId;
-        private @Nullable Input<Boolean> setDefaultVersion;
+        private @Nullable Output<String> accountId;
+        private @Nullable Output<String> launchTemplateId;
+        private @Nullable Output<Boolean> setDefaultVersion;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class DistributionConfigurationLaunchTemplateConfigurationArgs exte
     	      this.setDefaultVersion = defaults.setDefaultVersion;
         }
 
-        public Builder accountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Output<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Input.ofNullable(accountId);
+            this.accountId = Output.ofNullable(accountId);
             return this;
         }
 
-        public Builder launchTemplateId(@Nullable Input<String> launchTemplateId) {
+        public Builder launchTemplateId(@Nullable Output<String> launchTemplateId) {
             this.launchTemplateId = launchTemplateId;
             return this;
         }
 
         public Builder launchTemplateId(@Nullable String launchTemplateId) {
-            this.launchTemplateId = Input.ofNullable(launchTemplateId);
+            this.launchTemplateId = Output.ofNullable(launchTemplateId);
             return this;
         }
 
-        public Builder setDefaultVersion(@Nullable Input<Boolean> setDefaultVersion) {
+        public Builder setDefaultVersion(@Nullable Output<Boolean> setDefaultVersion) {
             this.setDefaultVersion = setDefaultVersion;
             return this;
         }
 
         public Builder setDefaultVersion(@Nullable Boolean setDefaultVersion) {
-            this.setDefaultVersion = Input.ofNullable(setDefaultVersion);
+            this.setDefaultVersion = Output.ofNullable(setDefaultVersion);
             return this;
         }
         public DistributionConfigurationLaunchTemplateConfigurationArgs build() {

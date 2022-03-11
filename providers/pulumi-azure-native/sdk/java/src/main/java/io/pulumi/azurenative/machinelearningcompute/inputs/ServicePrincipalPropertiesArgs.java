@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningcompute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class ServicePrincipalPropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="clientId", required=true)
-      private final Input<String> clientId;
+      private final Output<String> clientId;
 
-    public Input<String> getClientId() {
+    public Output<String> getClientId() {
         return this.clientId;
     }
 
@@ -33,22 +33,22 @@ public final class ServicePrincipalPropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="secret", required=true)
-      private final Input<String> secret;
+      private final Output<String> secret;
 
-    public Input<String> getSecret() {
+    public Output<String> getSecret() {
         return this.secret;
     }
 
     public ServicePrincipalPropertiesArgs(
-        Input<String> clientId,
-        Input<String> secret) {
+        Output<String> clientId,
+        Output<String> secret) {
         this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
         this.secret = Objects.requireNonNull(secret, "expected parameter 'secret' to be non-null");
     }
 
     private ServicePrincipalPropertiesArgs() {
-        this.clientId = Input.empty();
-        this.secret = Input.empty();
+        this.clientId = Output.empty();
+        this.secret = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class ServicePrincipalPropertiesArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<String> clientId;
-        private Input<String> secret;
+        private Output<String> clientId;
+        private Output<String> secret;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class ServicePrincipalPropertiesArgs extends io.pulumi.resources.Re
     	      this.secret = defaults.secret;
         }
 
-        public Builder clientId(Input<String> clientId) {
+        public Builder clientId(Output<String> clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Input.of(Objects.requireNonNull(clientId));
+            this.clientId = Output.of(Objects.requireNonNull(clientId));
             return this;
         }
 
-        public Builder secret(Input<String> secret) {
+        public Builder secret(Output<String> secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
 
         public Builder secret(String secret) {
-            this.secret = Input.of(Objects.requireNonNull(secret));
+            this.secret = Output.of(Objects.requireNonNull(secret));
             return this;
         }
         public ServicePrincipalPropertiesArgs build() {

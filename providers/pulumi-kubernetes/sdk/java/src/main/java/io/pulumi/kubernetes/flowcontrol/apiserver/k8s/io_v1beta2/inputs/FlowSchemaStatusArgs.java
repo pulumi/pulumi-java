@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.inputs.FlowSchemaConditionArgs;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class FlowSchemaStatusArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="conditions")
-      private final @Nullable Input<List<FlowSchemaConditionArgs>> conditions;
+      private final @Nullable Output<List<FlowSchemaConditionArgs>> conditions;
 
-    public Input<List<FlowSchemaConditionArgs>> getConditions() {
-        return this.conditions == null ? Input.empty() : this.conditions;
+    public Output<List<FlowSchemaConditionArgs>> getConditions() {
+        return this.conditions == null ? Output.empty() : this.conditions;
     }
 
-    public FlowSchemaStatusArgs(@Nullable Input<List<FlowSchemaConditionArgs>> conditions) {
+    public FlowSchemaStatusArgs(@Nullable Output<List<FlowSchemaConditionArgs>> conditions) {
         this.conditions = conditions;
     }
 
     private FlowSchemaStatusArgs() {
-        this.conditions = Input.empty();
+        this.conditions = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class FlowSchemaStatusArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<List<FlowSchemaConditionArgs>> conditions;
+        private @Nullable Output<List<FlowSchemaConditionArgs>> conditions;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class FlowSchemaStatusArgs extends io.pulumi.resources.ResourceArgs
     	      this.conditions = defaults.conditions;
         }
 
-        public Builder conditions(@Nullable Input<List<FlowSchemaConditionArgs>> conditions) {
+        public Builder conditions(@Nullable Output<List<FlowSchemaConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
         public Builder conditions(@Nullable List<FlowSchemaConditionArgs> conditions) {
-            this.conditions = Input.ofNullable(conditions);
+            this.conditions = Output.ofNullable(conditions);
             return this;
         }
         public FlowSchemaStatusArgs build() {

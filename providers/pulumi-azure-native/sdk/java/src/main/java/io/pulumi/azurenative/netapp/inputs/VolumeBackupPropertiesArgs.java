@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.netapp.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class VolumeBackupPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="backupEnabled")
-      private final @Nullable Input<Boolean> backupEnabled;
+      private final @Nullable Output<Boolean> backupEnabled;
 
-    public Input<Boolean> getBackupEnabled() {
-        return this.backupEnabled == null ? Input.empty() : this.backupEnabled;
+    public Output<Boolean> getBackupEnabled() {
+        return this.backupEnabled == null ? Output.empty() : this.backupEnabled;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class VolumeBackupPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="backupPolicyId")
-      private final @Nullable Input<String> backupPolicyId;
+      private final @Nullable Output<String> backupPolicyId;
 
-    public Input<String> getBackupPolicyId() {
-        return this.backupPolicyId == null ? Input.empty() : this.backupPolicyId;
+    public Output<String> getBackupPolicyId() {
+        return this.backupPolicyId == null ? Output.empty() : this.backupPolicyId;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class VolumeBackupPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="policyEnforced")
-      private final @Nullable Input<Boolean> policyEnforced;
+      private final @Nullable Output<Boolean> policyEnforced;
 
-    public Input<Boolean> getPolicyEnforced() {
-        return this.policyEnforced == null ? Input.empty() : this.policyEnforced;
+    public Output<Boolean> getPolicyEnforced() {
+        return this.policyEnforced == null ? Output.empty() : this.policyEnforced;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class VolumeBackupPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="vaultId")
-      private final @Nullable Input<String> vaultId;
+      private final @Nullable Output<String> vaultId;
 
-    public Input<String> getVaultId() {
-        return this.vaultId == null ? Input.empty() : this.vaultId;
+    public Output<String> getVaultId() {
+        return this.vaultId == null ? Output.empty() : this.vaultId;
     }
 
     public VolumeBackupPropertiesArgs(
-        @Nullable Input<Boolean> backupEnabled,
-        @Nullable Input<String> backupPolicyId,
-        @Nullable Input<Boolean> policyEnforced,
-        @Nullable Input<String> vaultId) {
+        @Nullable Output<Boolean> backupEnabled,
+        @Nullable Output<String> backupPolicyId,
+        @Nullable Output<Boolean> policyEnforced,
+        @Nullable Output<String> vaultId) {
         this.backupEnabled = backupEnabled;
         this.backupPolicyId = backupPolicyId;
         this.policyEnforced = policyEnforced;
@@ -75,10 +75,10 @@ public final class VolumeBackupPropertiesArgs extends io.pulumi.resources.Resour
     }
 
     private VolumeBackupPropertiesArgs() {
-        this.backupEnabled = Input.empty();
-        this.backupPolicyId = Input.empty();
-        this.policyEnforced = Input.empty();
-        this.vaultId = Input.empty();
+        this.backupEnabled = Output.empty();
+        this.backupPolicyId = Output.empty();
+        this.policyEnforced = Output.empty();
+        this.vaultId = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class VolumeBackupPropertiesArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> backupEnabled;
-        private @Nullable Input<String> backupPolicyId;
-        private @Nullable Input<Boolean> policyEnforced;
-        private @Nullable Input<String> vaultId;
+        private @Nullable Output<Boolean> backupEnabled;
+        private @Nullable Output<String> backupPolicyId;
+        private @Nullable Output<Boolean> policyEnforced;
+        private @Nullable Output<String> vaultId;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class VolumeBackupPropertiesArgs extends io.pulumi.resources.Resour
     	      this.vaultId = defaults.vaultId;
         }
 
-        public Builder backupEnabled(@Nullable Input<Boolean> backupEnabled) {
+        public Builder backupEnabled(@Nullable Output<Boolean> backupEnabled) {
             this.backupEnabled = backupEnabled;
             return this;
         }
 
         public Builder backupEnabled(@Nullable Boolean backupEnabled) {
-            this.backupEnabled = Input.ofNullable(backupEnabled);
+            this.backupEnabled = Output.ofNullable(backupEnabled);
             return this;
         }
 
-        public Builder backupPolicyId(@Nullable Input<String> backupPolicyId) {
+        public Builder backupPolicyId(@Nullable Output<String> backupPolicyId) {
             this.backupPolicyId = backupPolicyId;
             return this;
         }
 
         public Builder backupPolicyId(@Nullable String backupPolicyId) {
-            this.backupPolicyId = Input.ofNullable(backupPolicyId);
+            this.backupPolicyId = Output.ofNullable(backupPolicyId);
             return this;
         }
 
-        public Builder policyEnforced(@Nullable Input<Boolean> policyEnforced) {
+        public Builder policyEnforced(@Nullable Output<Boolean> policyEnforced) {
             this.policyEnforced = policyEnforced;
             return this;
         }
 
         public Builder policyEnforced(@Nullable Boolean policyEnforced) {
-            this.policyEnforced = Input.ofNullable(policyEnforced);
+            this.policyEnforced = Output.ofNullable(policyEnforced);
             return this;
         }
 
-        public Builder vaultId(@Nullable Input<String> vaultId) {
+        public Builder vaultId(@Nullable Output<String> vaultId) {
             this.vaultId = vaultId;
             return this;
         }
 
         public Builder vaultId(@Nullable String vaultId) {
-            this.vaultId = Input.ofNullable(vaultId);
+            this.vaultId = Output.ofNullable(vaultId);
             return this;
         }
         public VolumeBackupPropertiesArgs build() {

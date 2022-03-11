@@ -22,7 +22,7 @@ import io.pulumi.azurenative.web.inputs.PushSettingsArgs;
 import io.pulumi.azurenative.web.inputs.SiteLimitsArgs;
 import io.pulumi.azurenative.web.inputs.VirtualApplicationArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -46,10 +46,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="acrUseManagedIdentityCreds")
-      private final @Nullable Input<Boolean> acrUseManagedIdentityCreds;
+      private final @Nullable Output<Boolean> acrUseManagedIdentityCreds;
 
-    public Input<Boolean> getAcrUseManagedIdentityCreds() {
-        return this.acrUseManagedIdentityCreds == null ? Input.empty() : this.acrUseManagedIdentityCreds;
+    public Output<Boolean> getAcrUseManagedIdentityCreds() {
+        return this.acrUseManagedIdentityCreds == null ? Output.empty() : this.acrUseManagedIdentityCreds;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="acrUserManagedIdentityID")
-      private final @Nullable Input<String> acrUserManagedIdentityID;
+      private final @Nullable Output<String> acrUserManagedIdentityID;
 
-    public Input<String> getAcrUserManagedIdentityID() {
-        return this.acrUserManagedIdentityID == null ? Input.empty() : this.acrUserManagedIdentityID;
+    public Output<String> getAcrUserManagedIdentityID() {
+        return this.acrUserManagedIdentityID == null ? Output.empty() : this.acrUserManagedIdentityID;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alwaysOn")
-      private final @Nullable Input<Boolean> alwaysOn;
+      private final @Nullable Output<Boolean> alwaysOn;
 
-    public Input<Boolean> getAlwaysOn() {
-        return this.alwaysOn == null ? Input.empty() : this.alwaysOn;
+    public Output<Boolean> getAlwaysOn() {
+        return this.alwaysOn == null ? Output.empty() : this.alwaysOn;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiDefinition")
-      private final @Nullable Input<ApiDefinitionInfoArgs> apiDefinition;
+      private final @Nullable Output<ApiDefinitionInfoArgs> apiDefinition;
 
-    public Input<ApiDefinitionInfoArgs> getApiDefinition() {
-        return this.apiDefinition == null ? Input.empty() : this.apiDefinition;
+    public Output<ApiDefinitionInfoArgs> getApiDefinition() {
+        return this.apiDefinition == null ? Output.empty() : this.apiDefinition;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiManagementConfig")
-      private final @Nullable Input<ApiManagementConfigArgs> apiManagementConfig;
+      private final @Nullable Output<ApiManagementConfigArgs> apiManagementConfig;
 
-    public Input<ApiManagementConfigArgs> getApiManagementConfig() {
-        return this.apiManagementConfig == null ? Input.empty() : this.apiManagementConfig;
+    public Output<ApiManagementConfigArgs> getApiManagementConfig() {
+        return this.apiManagementConfig == null ? Output.empty() : this.apiManagementConfig;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appCommandLine")
-      private final @Nullable Input<String> appCommandLine;
+      private final @Nullable Output<String> appCommandLine;
 
-    public Input<String> getAppCommandLine() {
-        return this.appCommandLine == null ? Input.empty() : this.appCommandLine;
+    public Output<String> getAppCommandLine() {
+        return this.appCommandLine == null ? Output.empty() : this.appCommandLine;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appSettings")
-      private final @Nullable Input<List<NameValuePairArgs>> appSettings;
+      private final @Nullable Output<List<NameValuePairArgs>> appSettings;
 
-    public Input<List<NameValuePairArgs>> getAppSettings() {
-        return this.appSettings == null ? Input.empty() : this.appSettings;
+    public Output<List<NameValuePairArgs>> getAppSettings() {
+        return this.appSettings == null ? Output.empty() : this.appSettings;
     }
 
     /**
@@ -123,10 +123,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoHealEnabled")
-      private final @Nullable Input<Boolean> autoHealEnabled;
+      private final @Nullable Output<Boolean> autoHealEnabled;
 
-    public Input<Boolean> getAutoHealEnabled() {
-        return this.autoHealEnabled == null ? Input.empty() : this.autoHealEnabled;
+    public Output<Boolean> getAutoHealEnabled() {
+        return this.autoHealEnabled == null ? Output.empty() : this.autoHealEnabled;
     }
 
     /**
@@ -134,10 +134,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoHealRules")
-      private final @Nullable Input<AutoHealRulesArgs> autoHealRules;
+      private final @Nullable Output<AutoHealRulesArgs> autoHealRules;
 
-    public Input<AutoHealRulesArgs> getAutoHealRules() {
-        return this.autoHealRules == null ? Input.empty() : this.autoHealRules;
+    public Output<AutoHealRulesArgs> getAutoHealRules() {
+        return this.autoHealRules == null ? Output.empty() : this.autoHealRules;
     }
 
     /**
@@ -145,10 +145,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoSwapSlotName")
-      private final @Nullable Input<String> autoSwapSlotName;
+      private final @Nullable Output<String> autoSwapSlotName;
 
-    public Input<String> getAutoSwapSlotName() {
-        return this.autoSwapSlotName == null ? Input.empty() : this.autoSwapSlotName;
+    public Output<String> getAutoSwapSlotName() {
+        return this.autoSwapSlotName == null ? Output.empty() : this.autoSwapSlotName;
     }
 
     /**
@@ -156,10 +156,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="azureStorageAccounts")
-      private final @Nullable Input<Map<String,AzureStorageInfoValueArgs>> azureStorageAccounts;
+      private final @Nullable Output<Map<String,AzureStorageInfoValueArgs>> azureStorageAccounts;
 
-    public Input<Map<String,AzureStorageInfoValueArgs>> getAzureStorageAccounts() {
-        return this.azureStorageAccounts == null ? Input.empty() : this.azureStorageAccounts;
+    public Output<Map<String,AzureStorageInfoValueArgs>> getAzureStorageAccounts() {
+        return this.azureStorageAccounts == null ? Output.empty() : this.azureStorageAccounts;
     }
 
     /**
@@ -167,10 +167,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectionStrings")
-      private final @Nullable Input<List<ConnStringInfoArgs>> connectionStrings;
+      private final @Nullable Output<List<ConnStringInfoArgs>> connectionStrings;
 
-    public Input<List<ConnStringInfoArgs>> getConnectionStrings() {
-        return this.connectionStrings == null ? Input.empty() : this.connectionStrings;
+    public Output<List<ConnStringInfoArgs>> getConnectionStrings() {
+        return this.connectionStrings == null ? Output.empty() : this.connectionStrings;
     }
 
     /**
@@ -178,10 +178,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cors")
-      private final @Nullable Input<CorsSettingsArgs> cors;
+      private final @Nullable Output<CorsSettingsArgs> cors;
 
-    public Input<CorsSettingsArgs> getCors() {
-        return this.cors == null ? Input.empty() : this.cors;
+    public Output<CorsSettingsArgs> getCors() {
+        return this.cors == null ? Output.empty() : this.cors;
     }
 
     /**
@@ -189,10 +189,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultDocuments")
-      private final @Nullable Input<List<String>> defaultDocuments;
+      private final @Nullable Output<List<String>> defaultDocuments;
 
-    public Input<List<String>> getDefaultDocuments() {
-        return this.defaultDocuments == null ? Input.empty() : this.defaultDocuments;
+    public Output<List<String>> getDefaultDocuments() {
+        return this.defaultDocuments == null ? Output.empty() : this.defaultDocuments;
     }
 
     /**
@@ -200,10 +200,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="detailedErrorLoggingEnabled")
-      private final @Nullable Input<Boolean> detailedErrorLoggingEnabled;
+      private final @Nullable Output<Boolean> detailedErrorLoggingEnabled;
 
-    public Input<Boolean> getDetailedErrorLoggingEnabled() {
-        return this.detailedErrorLoggingEnabled == null ? Input.empty() : this.detailedErrorLoggingEnabled;
+    public Output<Boolean> getDetailedErrorLoggingEnabled() {
+        return this.detailedErrorLoggingEnabled == null ? Output.empty() : this.detailedErrorLoggingEnabled;
     }
 
     /**
@@ -211,10 +211,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="documentRoot")
-      private final @Nullable Input<String> documentRoot;
+      private final @Nullable Output<String> documentRoot;
 
-    public Input<String> getDocumentRoot() {
-        return this.documentRoot == null ? Input.empty() : this.documentRoot;
+    public Output<String> getDocumentRoot() {
+        return this.documentRoot == null ? Output.empty() : this.documentRoot;
     }
 
     /**
@@ -222,10 +222,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="experiments")
-      private final @Nullable Input<ExperimentsArgs> experiments;
+      private final @Nullable Output<ExperimentsArgs> experiments;
 
-    public Input<ExperimentsArgs> getExperiments() {
-        return this.experiments == null ? Input.empty() : this.experiments;
+    public Output<ExperimentsArgs> getExperiments() {
+        return this.experiments == null ? Output.empty() : this.experiments;
     }
 
     /**
@@ -233,10 +233,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ftpsState")
-      private final @Nullable Input<Either<String,FtpsState>> ftpsState;
+      private final @Nullable Output<Either<String,FtpsState>> ftpsState;
 
-    public Input<Either<String,FtpsState>> getFtpsState() {
-        return this.ftpsState == null ? Input.empty() : this.ftpsState;
+    public Output<Either<String,FtpsState>> getFtpsState() {
+        return this.ftpsState == null ? Output.empty() : this.ftpsState;
     }
 
     /**
@@ -245,10 +245,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="functionAppScaleLimit")
-      private final @Nullable Input<Integer> functionAppScaleLimit;
+      private final @Nullable Output<Integer> functionAppScaleLimit;
 
-    public Input<Integer> getFunctionAppScaleLimit() {
-        return this.functionAppScaleLimit == null ? Input.empty() : this.functionAppScaleLimit;
+    public Output<Integer> getFunctionAppScaleLimit() {
+        return this.functionAppScaleLimit == null ? Output.empty() : this.functionAppScaleLimit;
     }
 
     /**
@@ -258,10 +258,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="functionsRuntimeScaleMonitoringEnabled")
-      private final @Nullable Input<Boolean> functionsRuntimeScaleMonitoringEnabled;
+      private final @Nullable Output<Boolean> functionsRuntimeScaleMonitoringEnabled;
 
-    public Input<Boolean> getFunctionsRuntimeScaleMonitoringEnabled() {
-        return this.functionsRuntimeScaleMonitoringEnabled == null ? Input.empty() : this.functionsRuntimeScaleMonitoringEnabled;
+    public Output<Boolean> getFunctionsRuntimeScaleMonitoringEnabled() {
+        return this.functionsRuntimeScaleMonitoringEnabled == null ? Output.empty() : this.functionsRuntimeScaleMonitoringEnabled;
     }
 
     /**
@@ -269,10 +269,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="handlerMappings")
-      private final @Nullable Input<List<HandlerMappingArgs>> handlerMappings;
+      private final @Nullable Output<List<HandlerMappingArgs>> handlerMappings;
 
-    public Input<List<HandlerMappingArgs>> getHandlerMappings() {
-        return this.handlerMappings == null ? Input.empty() : this.handlerMappings;
+    public Output<List<HandlerMappingArgs>> getHandlerMappings() {
+        return this.handlerMappings == null ? Output.empty() : this.handlerMappings;
     }
 
     /**
@@ -280,10 +280,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthCheckPath")
-      private final @Nullable Input<String> healthCheckPath;
+      private final @Nullable Output<String> healthCheckPath;
 
-    public Input<String> getHealthCheckPath() {
-        return this.healthCheckPath == null ? Input.empty() : this.healthCheckPath;
+    public Output<String> getHealthCheckPath() {
+        return this.healthCheckPath == null ? Output.empty() : this.healthCheckPath;
     }
 
     /**
@@ -291,10 +291,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="http20Enabled")
-      private final @Nullable Input<Boolean> http20Enabled;
+      private final @Nullable Output<Boolean> http20Enabled;
 
-    public Input<Boolean> getHttp20Enabled() {
-        return this.http20Enabled == null ? Input.empty() : this.http20Enabled;
+    public Output<Boolean> getHttp20Enabled() {
+        return this.http20Enabled == null ? Output.empty() : this.http20Enabled;
     }
 
     /**
@@ -302,10 +302,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpLoggingEnabled")
-      private final @Nullable Input<Boolean> httpLoggingEnabled;
+      private final @Nullable Output<Boolean> httpLoggingEnabled;
 
-    public Input<Boolean> getHttpLoggingEnabled() {
-        return this.httpLoggingEnabled == null ? Input.empty() : this.httpLoggingEnabled;
+    public Output<Boolean> getHttpLoggingEnabled() {
+        return this.httpLoggingEnabled == null ? Output.empty() : this.httpLoggingEnabled;
     }
 
     /**
@@ -313,10 +313,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipSecurityRestrictions")
-      private final @Nullable Input<List<IpSecurityRestrictionArgs>> ipSecurityRestrictions;
+      private final @Nullable Output<List<IpSecurityRestrictionArgs>> ipSecurityRestrictions;
 
-    public Input<List<IpSecurityRestrictionArgs>> getIpSecurityRestrictions() {
-        return this.ipSecurityRestrictions == null ? Input.empty() : this.ipSecurityRestrictions;
+    public Output<List<IpSecurityRestrictionArgs>> getIpSecurityRestrictions() {
+        return this.ipSecurityRestrictions == null ? Output.empty() : this.ipSecurityRestrictions;
     }
 
     /**
@@ -324,10 +324,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="javaContainer")
-      private final @Nullable Input<String> javaContainer;
+      private final @Nullable Output<String> javaContainer;
 
-    public Input<String> getJavaContainer() {
-        return this.javaContainer == null ? Input.empty() : this.javaContainer;
+    public Output<String> getJavaContainer() {
+        return this.javaContainer == null ? Output.empty() : this.javaContainer;
     }
 
     /**
@@ -335,10 +335,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="javaContainerVersion")
-      private final @Nullable Input<String> javaContainerVersion;
+      private final @Nullable Output<String> javaContainerVersion;
 
-    public Input<String> getJavaContainerVersion() {
-        return this.javaContainerVersion == null ? Input.empty() : this.javaContainerVersion;
+    public Output<String> getJavaContainerVersion() {
+        return this.javaContainerVersion == null ? Output.empty() : this.javaContainerVersion;
     }
 
     /**
@@ -346,10 +346,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="javaVersion")
-      private final @Nullable Input<String> javaVersion;
+      private final @Nullable Output<String> javaVersion;
 
-    public Input<String> getJavaVersion() {
-        return this.javaVersion == null ? Input.empty() : this.javaVersion;
+    public Output<String> getJavaVersion() {
+        return this.javaVersion == null ? Output.empty() : this.javaVersion;
     }
 
     /**
@@ -357,10 +357,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyVaultReferenceIdentity")
-      private final @Nullable Input<String> keyVaultReferenceIdentity;
+      private final @Nullable Output<String> keyVaultReferenceIdentity;
 
-    public Input<String> getKeyVaultReferenceIdentity() {
-        return this.keyVaultReferenceIdentity == null ? Input.empty() : this.keyVaultReferenceIdentity;
+    public Output<String> getKeyVaultReferenceIdentity() {
+        return this.keyVaultReferenceIdentity == null ? Output.empty() : this.keyVaultReferenceIdentity;
     }
 
     /**
@@ -368,10 +368,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="limits")
-      private final @Nullable Input<SiteLimitsArgs> limits;
+      private final @Nullable Output<SiteLimitsArgs> limits;
 
-    public Input<SiteLimitsArgs> getLimits() {
-        return this.limits == null ? Input.empty() : this.limits;
+    public Output<SiteLimitsArgs> getLimits() {
+        return this.limits == null ? Output.empty() : this.limits;
     }
 
     /**
@@ -379,10 +379,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linuxFxVersion")
-      private final @Nullable Input<String> linuxFxVersion;
+      private final @Nullable Output<String> linuxFxVersion;
 
-    public Input<String> getLinuxFxVersion() {
-        return this.linuxFxVersion == null ? Input.empty() : this.linuxFxVersion;
+    public Output<String> getLinuxFxVersion() {
+        return this.linuxFxVersion == null ? Output.empty() : this.linuxFxVersion;
     }
 
     /**
@@ -390,10 +390,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loadBalancing")
-      private final @Nullable Input<SiteLoadBalancing> loadBalancing;
+      private final @Nullable Output<SiteLoadBalancing> loadBalancing;
 
-    public Input<SiteLoadBalancing> getLoadBalancing() {
-        return this.loadBalancing == null ? Input.empty() : this.loadBalancing;
+    public Output<SiteLoadBalancing> getLoadBalancing() {
+        return this.loadBalancing == null ? Output.empty() : this.loadBalancing;
     }
 
     /**
@@ -401,10 +401,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="localMySqlEnabled")
-      private final @Nullable Input<Boolean> localMySqlEnabled;
+      private final @Nullable Output<Boolean> localMySqlEnabled;
 
-    public Input<Boolean> getLocalMySqlEnabled() {
-        return this.localMySqlEnabled == null ? Input.empty() : this.localMySqlEnabled;
+    public Output<Boolean> getLocalMySqlEnabled() {
+        return this.localMySqlEnabled == null ? Output.empty() : this.localMySqlEnabled;
     }
 
     /**
@@ -412,10 +412,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logsDirectorySizeLimit")
-      private final @Nullable Input<Integer> logsDirectorySizeLimit;
+      private final @Nullable Output<Integer> logsDirectorySizeLimit;
 
-    public Input<Integer> getLogsDirectorySizeLimit() {
-        return this.logsDirectorySizeLimit == null ? Input.empty() : this.logsDirectorySizeLimit;
+    public Output<Integer> getLogsDirectorySizeLimit() {
+        return this.logsDirectorySizeLimit == null ? Output.empty() : this.logsDirectorySizeLimit;
     }
 
     /**
@@ -423,10 +423,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedPipelineMode")
-      private final @Nullable Input<ManagedPipelineMode> managedPipelineMode;
+      private final @Nullable Output<ManagedPipelineMode> managedPipelineMode;
 
-    public Input<ManagedPipelineMode> getManagedPipelineMode() {
-        return this.managedPipelineMode == null ? Input.empty() : this.managedPipelineMode;
+    public Output<ManagedPipelineMode> getManagedPipelineMode() {
+        return this.managedPipelineMode == null ? Output.empty() : this.managedPipelineMode;
     }
 
     /**
@@ -434,10 +434,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedServiceIdentityId")
-      private final @Nullable Input<Integer> managedServiceIdentityId;
+      private final @Nullable Output<Integer> managedServiceIdentityId;
 
-    public Input<Integer> getManagedServiceIdentityId() {
-        return this.managedServiceIdentityId == null ? Input.empty() : this.managedServiceIdentityId;
+    public Output<Integer> getManagedServiceIdentityId() {
+        return this.managedServiceIdentityId == null ? Output.empty() : this.managedServiceIdentityId;
     }
 
     /**
@@ -445,10 +445,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minTlsVersion")
-      private final @Nullable Input<Either<String,SupportedTlsVersions>> minTlsVersion;
+      private final @Nullable Output<Either<String,SupportedTlsVersions>> minTlsVersion;
 
-    public Input<Either<String,SupportedTlsVersions>> getMinTlsVersion() {
-        return this.minTlsVersion == null ? Input.empty() : this.minTlsVersion;
+    public Output<Either<String,SupportedTlsVersions>> getMinTlsVersion() {
+        return this.minTlsVersion == null ? Output.empty() : this.minTlsVersion;
     }
 
     /**
@@ -457,10 +457,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minimumElasticInstanceCount")
-      private final @Nullable Input<Integer> minimumElasticInstanceCount;
+      private final @Nullable Output<Integer> minimumElasticInstanceCount;
 
-    public Input<Integer> getMinimumElasticInstanceCount() {
-        return this.minimumElasticInstanceCount == null ? Input.empty() : this.minimumElasticInstanceCount;
+    public Output<Integer> getMinimumElasticInstanceCount() {
+        return this.minimumElasticInstanceCount == null ? Output.empty() : this.minimumElasticInstanceCount;
     }
 
     /**
@@ -468,10 +468,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="netFrameworkVersion")
-      private final @Nullable Input<String> netFrameworkVersion;
+      private final @Nullable Output<String> netFrameworkVersion;
 
-    public Input<String> getNetFrameworkVersion() {
-        return this.netFrameworkVersion == null ? Input.empty() : this.netFrameworkVersion;
+    public Output<String> getNetFrameworkVersion() {
+        return this.netFrameworkVersion == null ? Output.empty() : this.netFrameworkVersion;
     }
 
     /**
@@ -479,10 +479,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeVersion")
-      private final @Nullable Input<String> nodeVersion;
+      private final @Nullable Output<String> nodeVersion;
 
-    public Input<String> getNodeVersion() {
-        return this.nodeVersion == null ? Input.empty() : this.nodeVersion;
+    public Output<String> getNodeVersion() {
+        return this.nodeVersion == null ? Output.empty() : this.nodeVersion;
     }
 
     /**
@@ -490,10 +490,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="numberOfWorkers")
-      private final @Nullable Input<Integer> numberOfWorkers;
+      private final @Nullable Output<Integer> numberOfWorkers;
 
-    public Input<Integer> getNumberOfWorkers() {
-        return this.numberOfWorkers == null ? Input.empty() : this.numberOfWorkers;
+    public Output<Integer> getNumberOfWorkers() {
+        return this.numberOfWorkers == null ? Output.empty() : this.numberOfWorkers;
     }
 
     /**
@@ -501,10 +501,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="phpVersion")
-      private final @Nullable Input<String> phpVersion;
+      private final @Nullable Output<String> phpVersion;
 
-    public Input<String> getPhpVersion() {
-        return this.phpVersion == null ? Input.empty() : this.phpVersion;
+    public Output<String> getPhpVersion() {
+        return this.phpVersion == null ? Output.empty() : this.phpVersion;
     }
 
     /**
@@ -512,10 +512,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="powerShellVersion")
-      private final @Nullable Input<String> powerShellVersion;
+      private final @Nullable Output<String> powerShellVersion;
 
-    public Input<String> getPowerShellVersion() {
-        return this.powerShellVersion == null ? Input.empty() : this.powerShellVersion;
+    public Output<String> getPowerShellVersion() {
+        return this.powerShellVersion == null ? Output.empty() : this.powerShellVersion;
     }
 
     /**
@@ -524,10 +524,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preWarmedInstanceCount")
-      private final @Nullable Input<Integer> preWarmedInstanceCount;
+      private final @Nullable Output<Integer> preWarmedInstanceCount;
 
-    public Input<Integer> getPreWarmedInstanceCount() {
-        return this.preWarmedInstanceCount == null ? Input.empty() : this.preWarmedInstanceCount;
+    public Output<Integer> getPreWarmedInstanceCount() {
+        return this.preWarmedInstanceCount == null ? Output.empty() : this.preWarmedInstanceCount;
     }
 
     /**
@@ -535,10 +535,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicNetworkAccess")
-      private final @Nullable Input<String> publicNetworkAccess;
+      private final @Nullable Output<String> publicNetworkAccess;
 
-    public Input<String> getPublicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
+    public Output<String> getPublicNetworkAccess() {
+        return this.publicNetworkAccess == null ? Output.empty() : this.publicNetworkAccess;
     }
 
     /**
@@ -546,10 +546,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publishingUsername")
-      private final @Nullable Input<String> publishingUsername;
+      private final @Nullable Output<String> publishingUsername;
 
-    public Input<String> getPublishingUsername() {
-        return this.publishingUsername == null ? Input.empty() : this.publishingUsername;
+    public Output<String> getPublishingUsername() {
+        return this.publishingUsername == null ? Output.empty() : this.publishingUsername;
     }
 
     /**
@@ -557,10 +557,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="push")
-      private final @Nullable Input<PushSettingsArgs> push;
+      private final @Nullable Output<PushSettingsArgs> push;
 
-    public Input<PushSettingsArgs> getPush() {
-        return this.push == null ? Input.empty() : this.push;
+    public Output<PushSettingsArgs> getPush() {
+        return this.push == null ? Output.empty() : this.push;
     }
 
     /**
@@ -568,10 +568,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pythonVersion")
-      private final @Nullable Input<String> pythonVersion;
+      private final @Nullable Output<String> pythonVersion;
 
-    public Input<String> getPythonVersion() {
-        return this.pythonVersion == null ? Input.empty() : this.pythonVersion;
+    public Output<String> getPythonVersion() {
+        return this.pythonVersion == null ? Output.empty() : this.pythonVersion;
     }
 
     /**
@@ -579,10 +579,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="remoteDebuggingEnabled")
-      private final @Nullable Input<Boolean> remoteDebuggingEnabled;
+      private final @Nullable Output<Boolean> remoteDebuggingEnabled;
 
-    public Input<Boolean> getRemoteDebuggingEnabled() {
-        return this.remoteDebuggingEnabled == null ? Input.empty() : this.remoteDebuggingEnabled;
+    public Output<Boolean> getRemoteDebuggingEnabled() {
+        return this.remoteDebuggingEnabled == null ? Output.empty() : this.remoteDebuggingEnabled;
     }
 
     /**
@@ -590,10 +590,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="remoteDebuggingVersion")
-      private final @Nullable Input<String> remoteDebuggingVersion;
+      private final @Nullable Output<String> remoteDebuggingVersion;
 
-    public Input<String> getRemoteDebuggingVersion() {
-        return this.remoteDebuggingVersion == null ? Input.empty() : this.remoteDebuggingVersion;
+    public Output<String> getRemoteDebuggingVersion() {
+        return this.remoteDebuggingVersion == null ? Output.empty() : this.remoteDebuggingVersion;
     }
 
     /**
@@ -601,10 +601,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestTracingEnabled")
-      private final @Nullable Input<Boolean> requestTracingEnabled;
+      private final @Nullable Output<Boolean> requestTracingEnabled;
 
-    public Input<Boolean> getRequestTracingEnabled() {
-        return this.requestTracingEnabled == null ? Input.empty() : this.requestTracingEnabled;
+    public Output<Boolean> getRequestTracingEnabled() {
+        return this.requestTracingEnabled == null ? Output.empty() : this.requestTracingEnabled;
     }
 
     /**
@@ -612,10 +612,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestTracingExpirationTime")
-      private final @Nullable Input<String> requestTracingExpirationTime;
+      private final @Nullable Output<String> requestTracingExpirationTime;
 
-    public Input<String> getRequestTracingExpirationTime() {
-        return this.requestTracingExpirationTime == null ? Input.empty() : this.requestTracingExpirationTime;
+    public Output<String> getRequestTracingExpirationTime() {
+        return this.requestTracingExpirationTime == null ? Output.empty() : this.requestTracingExpirationTime;
     }
 
     /**
@@ -623,10 +623,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scmIpSecurityRestrictions")
-      private final @Nullable Input<List<IpSecurityRestrictionArgs>> scmIpSecurityRestrictions;
+      private final @Nullable Output<List<IpSecurityRestrictionArgs>> scmIpSecurityRestrictions;
 
-    public Input<List<IpSecurityRestrictionArgs>> getScmIpSecurityRestrictions() {
-        return this.scmIpSecurityRestrictions == null ? Input.empty() : this.scmIpSecurityRestrictions;
+    public Output<List<IpSecurityRestrictionArgs>> getScmIpSecurityRestrictions() {
+        return this.scmIpSecurityRestrictions == null ? Output.empty() : this.scmIpSecurityRestrictions;
     }
 
     /**
@@ -634,10 +634,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scmIpSecurityRestrictionsUseMain")
-      private final @Nullable Input<Boolean> scmIpSecurityRestrictionsUseMain;
+      private final @Nullable Output<Boolean> scmIpSecurityRestrictionsUseMain;
 
-    public Input<Boolean> getScmIpSecurityRestrictionsUseMain() {
-        return this.scmIpSecurityRestrictionsUseMain == null ? Input.empty() : this.scmIpSecurityRestrictionsUseMain;
+    public Output<Boolean> getScmIpSecurityRestrictionsUseMain() {
+        return this.scmIpSecurityRestrictionsUseMain == null ? Output.empty() : this.scmIpSecurityRestrictionsUseMain;
     }
 
     /**
@@ -645,10 +645,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scmMinTlsVersion")
-      private final @Nullable Input<Either<String,SupportedTlsVersions>> scmMinTlsVersion;
+      private final @Nullable Output<Either<String,SupportedTlsVersions>> scmMinTlsVersion;
 
-    public Input<Either<String,SupportedTlsVersions>> getScmMinTlsVersion() {
-        return this.scmMinTlsVersion == null ? Input.empty() : this.scmMinTlsVersion;
+    public Output<Either<String,SupportedTlsVersions>> getScmMinTlsVersion() {
+        return this.scmMinTlsVersion == null ? Output.empty() : this.scmMinTlsVersion;
     }
 
     /**
@@ -656,10 +656,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scmType")
-      private final @Nullable Input<Either<String,ScmType>> scmType;
+      private final @Nullable Output<Either<String,ScmType>> scmType;
 
-    public Input<Either<String,ScmType>> getScmType() {
-        return this.scmType == null ? Input.empty() : this.scmType;
+    public Output<Either<String,ScmType>> getScmType() {
+        return this.scmType == null ? Output.empty() : this.scmType;
     }
 
     /**
@@ -667,10 +667,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tracingOptions")
-      private final @Nullable Input<String> tracingOptions;
+      private final @Nullable Output<String> tracingOptions;
 
-    public Input<String> getTracingOptions() {
-        return this.tracingOptions == null ? Input.empty() : this.tracingOptions;
+    public Output<String> getTracingOptions() {
+        return this.tracingOptions == null ? Output.empty() : this.tracingOptions;
     }
 
     /**
@@ -678,10 +678,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="use32BitWorkerProcess")
-      private final @Nullable Input<Boolean> use32BitWorkerProcess;
+      private final @Nullable Output<Boolean> use32BitWorkerProcess;
 
-    public Input<Boolean> getUse32BitWorkerProcess() {
-        return this.use32BitWorkerProcess == null ? Input.empty() : this.use32BitWorkerProcess;
+    public Output<Boolean> getUse32BitWorkerProcess() {
+        return this.use32BitWorkerProcess == null ? Output.empty() : this.use32BitWorkerProcess;
     }
 
     /**
@@ -689,10 +689,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualApplications")
-      private final @Nullable Input<List<VirtualApplicationArgs>> virtualApplications;
+      private final @Nullable Output<List<VirtualApplicationArgs>> virtualApplications;
 
-    public Input<List<VirtualApplicationArgs>> getVirtualApplications() {
-        return this.virtualApplications == null ? Input.empty() : this.virtualApplications;
+    public Output<List<VirtualApplicationArgs>> getVirtualApplications() {
+        return this.virtualApplications == null ? Output.empty() : this.virtualApplications;
     }
 
     /**
@@ -700,10 +700,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vnetName")
-      private final @Nullable Input<String> vnetName;
+      private final @Nullable Output<String> vnetName;
 
-    public Input<String> getVnetName() {
-        return this.vnetName == null ? Input.empty() : this.vnetName;
+    public Output<String> getVnetName() {
+        return this.vnetName == null ? Output.empty() : this.vnetName;
     }
 
     /**
@@ -711,10 +711,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vnetPrivatePortsCount")
-      private final @Nullable Input<Integer> vnetPrivatePortsCount;
+      private final @Nullable Output<Integer> vnetPrivatePortsCount;
 
-    public Input<Integer> getVnetPrivatePortsCount() {
-        return this.vnetPrivatePortsCount == null ? Input.empty() : this.vnetPrivatePortsCount;
+    public Output<Integer> getVnetPrivatePortsCount() {
+        return this.vnetPrivatePortsCount == null ? Output.empty() : this.vnetPrivatePortsCount;
     }
 
     /**
@@ -722,10 +722,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vnetRouteAllEnabled")
-      private final @Nullable Input<Boolean> vnetRouteAllEnabled;
+      private final @Nullable Output<Boolean> vnetRouteAllEnabled;
 
-    public Input<Boolean> getVnetRouteAllEnabled() {
-        return this.vnetRouteAllEnabled == null ? Input.empty() : this.vnetRouteAllEnabled;
+    public Output<Boolean> getVnetRouteAllEnabled() {
+        return this.vnetRouteAllEnabled == null ? Output.empty() : this.vnetRouteAllEnabled;
     }
 
     /**
@@ -733,10 +733,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="webSocketsEnabled")
-      private final @Nullable Input<Boolean> webSocketsEnabled;
+      private final @Nullable Output<Boolean> webSocketsEnabled;
 
-    public Input<Boolean> getWebSocketsEnabled() {
-        return this.webSocketsEnabled == null ? Input.empty() : this.webSocketsEnabled;
+    public Output<Boolean> getWebSocketsEnabled() {
+        return this.webSocketsEnabled == null ? Output.empty() : this.webSocketsEnabled;
     }
 
     /**
@@ -744,10 +744,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="websiteTimeZone")
-      private final @Nullable Input<String> websiteTimeZone;
+      private final @Nullable Output<String> websiteTimeZone;
 
-    public Input<String> getWebsiteTimeZone() {
-        return this.websiteTimeZone == null ? Input.empty() : this.websiteTimeZone;
+    public Output<String> getWebsiteTimeZone() {
+        return this.websiteTimeZone == null ? Output.empty() : this.websiteTimeZone;
     }
 
     /**
@@ -755,10 +755,10 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="windowsFxVersion")
-      private final @Nullable Input<String> windowsFxVersion;
+      private final @Nullable Output<String> windowsFxVersion;
 
-    public Input<String> getWindowsFxVersion() {
-        return this.windowsFxVersion == null ? Input.empty() : this.windowsFxVersion;
+    public Output<String> getWindowsFxVersion() {
+        return this.windowsFxVersion == null ? Output.empty() : this.windowsFxVersion;
     }
 
     /**
@@ -766,79 +766,79 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="xManagedServiceIdentityId")
-      private final @Nullable Input<Integer> xManagedServiceIdentityId;
+      private final @Nullable Output<Integer> xManagedServiceIdentityId;
 
-    public Input<Integer> getXManagedServiceIdentityId() {
-        return this.xManagedServiceIdentityId == null ? Input.empty() : this.xManagedServiceIdentityId;
+    public Output<Integer> getXManagedServiceIdentityId() {
+        return this.xManagedServiceIdentityId == null ? Output.empty() : this.xManagedServiceIdentityId;
     }
 
     public SiteConfigArgs(
-        @Nullable Input<Boolean> acrUseManagedIdentityCreds,
-        @Nullable Input<String> acrUserManagedIdentityID,
-        @Nullable Input<Boolean> alwaysOn,
-        @Nullable Input<ApiDefinitionInfoArgs> apiDefinition,
-        @Nullable Input<ApiManagementConfigArgs> apiManagementConfig,
-        @Nullable Input<String> appCommandLine,
-        @Nullable Input<List<NameValuePairArgs>> appSettings,
-        @Nullable Input<Boolean> autoHealEnabled,
-        @Nullable Input<AutoHealRulesArgs> autoHealRules,
-        @Nullable Input<String> autoSwapSlotName,
-        @Nullable Input<Map<String,AzureStorageInfoValueArgs>> azureStorageAccounts,
-        @Nullable Input<List<ConnStringInfoArgs>> connectionStrings,
-        @Nullable Input<CorsSettingsArgs> cors,
-        @Nullable Input<List<String>> defaultDocuments,
-        @Nullable Input<Boolean> detailedErrorLoggingEnabled,
-        @Nullable Input<String> documentRoot,
-        @Nullable Input<ExperimentsArgs> experiments,
-        @Nullable Input<Either<String,FtpsState>> ftpsState,
-        @Nullable Input<Integer> functionAppScaleLimit,
-        @Nullable Input<Boolean> functionsRuntimeScaleMonitoringEnabled,
-        @Nullable Input<List<HandlerMappingArgs>> handlerMappings,
-        @Nullable Input<String> healthCheckPath,
-        @Nullable Input<Boolean> http20Enabled,
-        @Nullable Input<Boolean> httpLoggingEnabled,
-        @Nullable Input<List<IpSecurityRestrictionArgs>> ipSecurityRestrictions,
-        @Nullable Input<String> javaContainer,
-        @Nullable Input<String> javaContainerVersion,
-        @Nullable Input<String> javaVersion,
-        @Nullable Input<String> keyVaultReferenceIdentity,
-        @Nullable Input<SiteLimitsArgs> limits,
-        @Nullable Input<String> linuxFxVersion,
-        @Nullable Input<SiteLoadBalancing> loadBalancing,
-        @Nullable Input<Boolean> localMySqlEnabled,
-        @Nullable Input<Integer> logsDirectorySizeLimit,
-        @Nullable Input<ManagedPipelineMode> managedPipelineMode,
-        @Nullable Input<Integer> managedServiceIdentityId,
-        @Nullable Input<Either<String,SupportedTlsVersions>> minTlsVersion,
-        @Nullable Input<Integer> minimumElasticInstanceCount,
-        @Nullable Input<String> netFrameworkVersion,
-        @Nullable Input<String> nodeVersion,
-        @Nullable Input<Integer> numberOfWorkers,
-        @Nullable Input<String> phpVersion,
-        @Nullable Input<String> powerShellVersion,
-        @Nullable Input<Integer> preWarmedInstanceCount,
-        @Nullable Input<String> publicNetworkAccess,
-        @Nullable Input<String> publishingUsername,
-        @Nullable Input<PushSettingsArgs> push,
-        @Nullable Input<String> pythonVersion,
-        @Nullable Input<Boolean> remoteDebuggingEnabled,
-        @Nullable Input<String> remoteDebuggingVersion,
-        @Nullable Input<Boolean> requestTracingEnabled,
-        @Nullable Input<String> requestTracingExpirationTime,
-        @Nullable Input<List<IpSecurityRestrictionArgs>> scmIpSecurityRestrictions,
-        @Nullable Input<Boolean> scmIpSecurityRestrictionsUseMain,
-        @Nullable Input<Either<String,SupportedTlsVersions>> scmMinTlsVersion,
-        @Nullable Input<Either<String,ScmType>> scmType,
-        @Nullable Input<String> tracingOptions,
-        @Nullable Input<Boolean> use32BitWorkerProcess,
-        @Nullable Input<List<VirtualApplicationArgs>> virtualApplications,
-        @Nullable Input<String> vnetName,
-        @Nullable Input<Integer> vnetPrivatePortsCount,
-        @Nullable Input<Boolean> vnetRouteAllEnabled,
-        @Nullable Input<Boolean> webSocketsEnabled,
-        @Nullable Input<String> websiteTimeZone,
-        @Nullable Input<String> windowsFxVersion,
-        @Nullable Input<Integer> xManagedServiceIdentityId) {
+        @Nullable Output<Boolean> acrUseManagedIdentityCreds,
+        @Nullable Output<String> acrUserManagedIdentityID,
+        @Nullable Output<Boolean> alwaysOn,
+        @Nullable Output<ApiDefinitionInfoArgs> apiDefinition,
+        @Nullable Output<ApiManagementConfigArgs> apiManagementConfig,
+        @Nullable Output<String> appCommandLine,
+        @Nullable Output<List<NameValuePairArgs>> appSettings,
+        @Nullable Output<Boolean> autoHealEnabled,
+        @Nullable Output<AutoHealRulesArgs> autoHealRules,
+        @Nullable Output<String> autoSwapSlotName,
+        @Nullable Output<Map<String,AzureStorageInfoValueArgs>> azureStorageAccounts,
+        @Nullable Output<List<ConnStringInfoArgs>> connectionStrings,
+        @Nullable Output<CorsSettingsArgs> cors,
+        @Nullable Output<List<String>> defaultDocuments,
+        @Nullable Output<Boolean> detailedErrorLoggingEnabled,
+        @Nullable Output<String> documentRoot,
+        @Nullable Output<ExperimentsArgs> experiments,
+        @Nullable Output<Either<String,FtpsState>> ftpsState,
+        @Nullable Output<Integer> functionAppScaleLimit,
+        @Nullable Output<Boolean> functionsRuntimeScaleMonitoringEnabled,
+        @Nullable Output<List<HandlerMappingArgs>> handlerMappings,
+        @Nullable Output<String> healthCheckPath,
+        @Nullable Output<Boolean> http20Enabled,
+        @Nullable Output<Boolean> httpLoggingEnabled,
+        @Nullable Output<List<IpSecurityRestrictionArgs>> ipSecurityRestrictions,
+        @Nullable Output<String> javaContainer,
+        @Nullable Output<String> javaContainerVersion,
+        @Nullable Output<String> javaVersion,
+        @Nullable Output<String> keyVaultReferenceIdentity,
+        @Nullable Output<SiteLimitsArgs> limits,
+        @Nullable Output<String> linuxFxVersion,
+        @Nullable Output<SiteLoadBalancing> loadBalancing,
+        @Nullable Output<Boolean> localMySqlEnabled,
+        @Nullable Output<Integer> logsDirectorySizeLimit,
+        @Nullable Output<ManagedPipelineMode> managedPipelineMode,
+        @Nullable Output<Integer> managedServiceIdentityId,
+        @Nullable Output<Either<String,SupportedTlsVersions>> minTlsVersion,
+        @Nullable Output<Integer> minimumElasticInstanceCount,
+        @Nullable Output<String> netFrameworkVersion,
+        @Nullable Output<String> nodeVersion,
+        @Nullable Output<Integer> numberOfWorkers,
+        @Nullable Output<String> phpVersion,
+        @Nullable Output<String> powerShellVersion,
+        @Nullable Output<Integer> preWarmedInstanceCount,
+        @Nullable Output<String> publicNetworkAccess,
+        @Nullable Output<String> publishingUsername,
+        @Nullable Output<PushSettingsArgs> push,
+        @Nullable Output<String> pythonVersion,
+        @Nullable Output<Boolean> remoteDebuggingEnabled,
+        @Nullable Output<String> remoteDebuggingVersion,
+        @Nullable Output<Boolean> requestTracingEnabled,
+        @Nullable Output<String> requestTracingExpirationTime,
+        @Nullable Output<List<IpSecurityRestrictionArgs>> scmIpSecurityRestrictions,
+        @Nullable Output<Boolean> scmIpSecurityRestrictionsUseMain,
+        @Nullable Output<Either<String,SupportedTlsVersions>> scmMinTlsVersion,
+        @Nullable Output<Either<String,ScmType>> scmType,
+        @Nullable Output<String> tracingOptions,
+        @Nullable Output<Boolean> use32BitWorkerProcess,
+        @Nullable Output<List<VirtualApplicationArgs>> virtualApplications,
+        @Nullable Output<String> vnetName,
+        @Nullable Output<Integer> vnetPrivatePortsCount,
+        @Nullable Output<Boolean> vnetRouteAllEnabled,
+        @Nullable Output<Boolean> webSocketsEnabled,
+        @Nullable Output<String> websiteTimeZone,
+        @Nullable Output<String> windowsFxVersion,
+        @Nullable Output<Integer> xManagedServiceIdentityId) {
         this.acrUseManagedIdentityCreds = acrUseManagedIdentityCreds;
         this.acrUserManagedIdentityID = acrUserManagedIdentityID;
         this.alwaysOn = alwaysOn;
@@ -861,7 +861,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
         this.functionsRuntimeScaleMonitoringEnabled = functionsRuntimeScaleMonitoringEnabled;
         this.handlerMappings = handlerMappings;
         this.healthCheckPath = healthCheckPath;
-        this.http20Enabled = http20Enabled == null ? Input.ofNullable(true) : http20Enabled;
+        this.http20Enabled = http20Enabled == null ? Output.ofNullable(true) : http20Enabled;
         this.httpLoggingEnabled = httpLoggingEnabled;
         this.ipSecurityRestrictions = ipSecurityRestrictions;
         this.javaContainer = javaContainer;
@@ -871,13 +871,13 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
         this.limits = limits;
         this.linuxFxVersion = linuxFxVersion;
         this.loadBalancing = loadBalancing;
-        this.localMySqlEnabled = localMySqlEnabled == null ? Input.ofNullable(false) : localMySqlEnabled;
+        this.localMySqlEnabled = localMySqlEnabled == null ? Output.ofNullable(false) : localMySqlEnabled;
         this.logsDirectorySizeLimit = logsDirectorySizeLimit;
         this.managedPipelineMode = managedPipelineMode;
         this.managedServiceIdentityId = managedServiceIdentityId;
         this.minTlsVersion = minTlsVersion;
         this.minimumElasticInstanceCount = minimumElasticInstanceCount;
-        this.netFrameworkVersion = netFrameworkVersion == null ? Input.ofNullable("v4.6") : netFrameworkVersion;
+        this.netFrameworkVersion = netFrameworkVersion == null ? Output.ofNullable("v4.6") : netFrameworkVersion;
         this.nodeVersion = nodeVersion;
         this.numberOfWorkers = numberOfWorkers;
         this.phpVersion = phpVersion;
@@ -908,72 +908,72 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SiteConfigArgs() {
-        this.acrUseManagedIdentityCreds = Input.empty();
-        this.acrUserManagedIdentityID = Input.empty();
-        this.alwaysOn = Input.empty();
-        this.apiDefinition = Input.empty();
-        this.apiManagementConfig = Input.empty();
-        this.appCommandLine = Input.empty();
-        this.appSettings = Input.empty();
-        this.autoHealEnabled = Input.empty();
-        this.autoHealRules = Input.empty();
-        this.autoSwapSlotName = Input.empty();
-        this.azureStorageAccounts = Input.empty();
-        this.connectionStrings = Input.empty();
-        this.cors = Input.empty();
-        this.defaultDocuments = Input.empty();
-        this.detailedErrorLoggingEnabled = Input.empty();
-        this.documentRoot = Input.empty();
-        this.experiments = Input.empty();
-        this.ftpsState = Input.empty();
-        this.functionAppScaleLimit = Input.empty();
-        this.functionsRuntimeScaleMonitoringEnabled = Input.empty();
-        this.handlerMappings = Input.empty();
-        this.healthCheckPath = Input.empty();
-        this.http20Enabled = Input.empty();
-        this.httpLoggingEnabled = Input.empty();
-        this.ipSecurityRestrictions = Input.empty();
-        this.javaContainer = Input.empty();
-        this.javaContainerVersion = Input.empty();
-        this.javaVersion = Input.empty();
-        this.keyVaultReferenceIdentity = Input.empty();
-        this.limits = Input.empty();
-        this.linuxFxVersion = Input.empty();
-        this.loadBalancing = Input.empty();
-        this.localMySqlEnabled = Input.empty();
-        this.logsDirectorySizeLimit = Input.empty();
-        this.managedPipelineMode = Input.empty();
-        this.managedServiceIdentityId = Input.empty();
-        this.minTlsVersion = Input.empty();
-        this.minimumElasticInstanceCount = Input.empty();
-        this.netFrameworkVersion = Input.empty();
-        this.nodeVersion = Input.empty();
-        this.numberOfWorkers = Input.empty();
-        this.phpVersion = Input.empty();
-        this.powerShellVersion = Input.empty();
-        this.preWarmedInstanceCount = Input.empty();
-        this.publicNetworkAccess = Input.empty();
-        this.publishingUsername = Input.empty();
-        this.push = Input.empty();
-        this.pythonVersion = Input.empty();
-        this.remoteDebuggingEnabled = Input.empty();
-        this.remoteDebuggingVersion = Input.empty();
-        this.requestTracingEnabled = Input.empty();
-        this.requestTracingExpirationTime = Input.empty();
-        this.scmIpSecurityRestrictions = Input.empty();
-        this.scmIpSecurityRestrictionsUseMain = Input.empty();
-        this.scmMinTlsVersion = Input.empty();
-        this.scmType = Input.empty();
-        this.tracingOptions = Input.empty();
-        this.use32BitWorkerProcess = Input.empty();
-        this.virtualApplications = Input.empty();
-        this.vnetName = Input.empty();
-        this.vnetPrivatePortsCount = Input.empty();
-        this.vnetRouteAllEnabled = Input.empty();
-        this.webSocketsEnabled = Input.empty();
-        this.websiteTimeZone = Input.empty();
-        this.windowsFxVersion = Input.empty();
-        this.xManagedServiceIdentityId = Input.empty();
+        this.acrUseManagedIdentityCreds = Output.empty();
+        this.acrUserManagedIdentityID = Output.empty();
+        this.alwaysOn = Output.empty();
+        this.apiDefinition = Output.empty();
+        this.apiManagementConfig = Output.empty();
+        this.appCommandLine = Output.empty();
+        this.appSettings = Output.empty();
+        this.autoHealEnabled = Output.empty();
+        this.autoHealRules = Output.empty();
+        this.autoSwapSlotName = Output.empty();
+        this.azureStorageAccounts = Output.empty();
+        this.connectionStrings = Output.empty();
+        this.cors = Output.empty();
+        this.defaultDocuments = Output.empty();
+        this.detailedErrorLoggingEnabled = Output.empty();
+        this.documentRoot = Output.empty();
+        this.experiments = Output.empty();
+        this.ftpsState = Output.empty();
+        this.functionAppScaleLimit = Output.empty();
+        this.functionsRuntimeScaleMonitoringEnabled = Output.empty();
+        this.handlerMappings = Output.empty();
+        this.healthCheckPath = Output.empty();
+        this.http20Enabled = Output.empty();
+        this.httpLoggingEnabled = Output.empty();
+        this.ipSecurityRestrictions = Output.empty();
+        this.javaContainer = Output.empty();
+        this.javaContainerVersion = Output.empty();
+        this.javaVersion = Output.empty();
+        this.keyVaultReferenceIdentity = Output.empty();
+        this.limits = Output.empty();
+        this.linuxFxVersion = Output.empty();
+        this.loadBalancing = Output.empty();
+        this.localMySqlEnabled = Output.empty();
+        this.logsDirectorySizeLimit = Output.empty();
+        this.managedPipelineMode = Output.empty();
+        this.managedServiceIdentityId = Output.empty();
+        this.minTlsVersion = Output.empty();
+        this.minimumElasticInstanceCount = Output.empty();
+        this.netFrameworkVersion = Output.empty();
+        this.nodeVersion = Output.empty();
+        this.numberOfWorkers = Output.empty();
+        this.phpVersion = Output.empty();
+        this.powerShellVersion = Output.empty();
+        this.preWarmedInstanceCount = Output.empty();
+        this.publicNetworkAccess = Output.empty();
+        this.publishingUsername = Output.empty();
+        this.push = Output.empty();
+        this.pythonVersion = Output.empty();
+        this.remoteDebuggingEnabled = Output.empty();
+        this.remoteDebuggingVersion = Output.empty();
+        this.requestTracingEnabled = Output.empty();
+        this.requestTracingExpirationTime = Output.empty();
+        this.scmIpSecurityRestrictions = Output.empty();
+        this.scmIpSecurityRestrictionsUseMain = Output.empty();
+        this.scmMinTlsVersion = Output.empty();
+        this.scmType = Output.empty();
+        this.tracingOptions = Output.empty();
+        this.use32BitWorkerProcess = Output.empty();
+        this.virtualApplications = Output.empty();
+        this.vnetName = Output.empty();
+        this.vnetPrivatePortsCount = Output.empty();
+        this.vnetRouteAllEnabled = Output.empty();
+        this.webSocketsEnabled = Output.empty();
+        this.websiteTimeZone = Output.empty();
+        this.windowsFxVersion = Output.empty();
+        this.xManagedServiceIdentityId = Output.empty();
     }
 
     public static Builder builder() {
@@ -985,72 +985,72 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> acrUseManagedIdentityCreds;
-        private @Nullable Input<String> acrUserManagedIdentityID;
-        private @Nullable Input<Boolean> alwaysOn;
-        private @Nullable Input<ApiDefinitionInfoArgs> apiDefinition;
-        private @Nullable Input<ApiManagementConfigArgs> apiManagementConfig;
-        private @Nullable Input<String> appCommandLine;
-        private @Nullable Input<List<NameValuePairArgs>> appSettings;
-        private @Nullable Input<Boolean> autoHealEnabled;
-        private @Nullable Input<AutoHealRulesArgs> autoHealRules;
-        private @Nullable Input<String> autoSwapSlotName;
-        private @Nullable Input<Map<String,AzureStorageInfoValueArgs>> azureStorageAccounts;
-        private @Nullable Input<List<ConnStringInfoArgs>> connectionStrings;
-        private @Nullable Input<CorsSettingsArgs> cors;
-        private @Nullable Input<List<String>> defaultDocuments;
-        private @Nullable Input<Boolean> detailedErrorLoggingEnabled;
-        private @Nullable Input<String> documentRoot;
-        private @Nullable Input<ExperimentsArgs> experiments;
-        private @Nullable Input<Either<String,FtpsState>> ftpsState;
-        private @Nullable Input<Integer> functionAppScaleLimit;
-        private @Nullable Input<Boolean> functionsRuntimeScaleMonitoringEnabled;
-        private @Nullable Input<List<HandlerMappingArgs>> handlerMappings;
-        private @Nullable Input<String> healthCheckPath;
-        private @Nullable Input<Boolean> http20Enabled;
-        private @Nullable Input<Boolean> httpLoggingEnabled;
-        private @Nullable Input<List<IpSecurityRestrictionArgs>> ipSecurityRestrictions;
-        private @Nullable Input<String> javaContainer;
-        private @Nullable Input<String> javaContainerVersion;
-        private @Nullable Input<String> javaVersion;
-        private @Nullable Input<String> keyVaultReferenceIdentity;
-        private @Nullable Input<SiteLimitsArgs> limits;
-        private @Nullable Input<String> linuxFxVersion;
-        private @Nullable Input<SiteLoadBalancing> loadBalancing;
-        private @Nullable Input<Boolean> localMySqlEnabled;
-        private @Nullable Input<Integer> logsDirectorySizeLimit;
-        private @Nullable Input<ManagedPipelineMode> managedPipelineMode;
-        private @Nullable Input<Integer> managedServiceIdentityId;
-        private @Nullable Input<Either<String,SupportedTlsVersions>> minTlsVersion;
-        private @Nullable Input<Integer> minimumElasticInstanceCount;
-        private @Nullable Input<String> netFrameworkVersion;
-        private @Nullable Input<String> nodeVersion;
-        private @Nullable Input<Integer> numberOfWorkers;
-        private @Nullable Input<String> phpVersion;
-        private @Nullable Input<String> powerShellVersion;
-        private @Nullable Input<Integer> preWarmedInstanceCount;
-        private @Nullable Input<String> publicNetworkAccess;
-        private @Nullable Input<String> publishingUsername;
-        private @Nullable Input<PushSettingsArgs> push;
-        private @Nullable Input<String> pythonVersion;
-        private @Nullable Input<Boolean> remoteDebuggingEnabled;
-        private @Nullable Input<String> remoteDebuggingVersion;
-        private @Nullable Input<Boolean> requestTracingEnabled;
-        private @Nullable Input<String> requestTracingExpirationTime;
-        private @Nullable Input<List<IpSecurityRestrictionArgs>> scmIpSecurityRestrictions;
-        private @Nullable Input<Boolean> scmIpSecurityRestrictionsUseMain;
-        private @Nullable Input<Either<String,SupportedTlsVersions>> scmMinTlsVersion;
-        private @Nullable Input<Either<String,ScmType>> scmType;
-        private @Nullable Input<String> tracingOptions;
-        private @Nullable Input<Boolean> use32BitWorkerProcess;
-        private @Nullable Input<List<VirtualApplicationArgs>> virtualApplications;
-        private @Nullable Input<String> vnetName;
-        private @Nullable Input<Integer> vnetPrivatePortsCount;
-        private @Nullable Input<Boolean> vnetRouteAllEnabled;
-        private @Nullable Input<Boolean> webSocketsEnabled;
-        private @Nullable Input<String> websiteTimeZone;
-        private @Nullable Input<String> windowsFxVersion;
-        private @Nullable Input<Integer> xManagedServiceIdentityId;
+        private @Nullable Output<Boolean> acrUseManagedIdentityCreds;
+        private @Nullable Output<String> acrUserManagedIdentityID;
+        private @Nullable Output<Boolean> alwaysOn;
+        private @Nullable Output<ApiDefinitionInfoArgs> apiDefinition;
+        private @Nullable Output<ApiManagementConfigArgs> apiManagementConfig;
+        private @Nullable Output<String> appCommandLine;
+        private @Nullable Output<List<NameValuePairArgs>> appSettings;
+        private @Nullable Output<Boolean> autoHealEnabled;
+        private @Nullable Output<AutoHealRulesArgs> autoHealRules;
+        private @Nullable Output<String> autoSwapSlotName;
+        private @Nullable Output<Map<String,AzureStorageInfoValueArgs>> azureStorageAccounts;
+        private @Nullable Output<List<ConnStringInfoArgs>> connectionStrings;
+        private @Nullable Output<CorsSettingsArgs> cors;
+        private @Nullable Output<List<String>> defaultDocuments;
+        private @Nullable Output<Boolean> detailedErrorLoggingEnabled;
+        private @Nullable Output<String> documentRoot;
+        private @Nullable Output<ExperimentsArgs> experiments;
+        private @Nullable Output<Either<String,FtpsState>> ftpsState;
+        private @Nullable Output<Integer> functionAppScaleLimit;
+        private @Nullable Output<Boolean> functionsRuntimeScaleMonitoringEnabled;
+        private @Nullable Output<List<HandlerMappingArgs>> handlerMappings;
+        private @Nullable Output<String> healthCheckPath;
+        private @Nullable Output<Boolean> http20Enabled;
+        private @Nullable Output<Boolean> httpLoggingEnabled;
+        private @Nullable Output<List<IpSecurityRestrictionArgs>> ipSecurityRestrictions;
+        private @Nullable Output<String> javaContainer;
+        private @Nullable Output<String> javaContainerVersion;
+        private @Nullable Output<String> javaVersion;
+        private @Nullable Output<String> keyVaultReferenceIdentity;
+        private @Nullable Output<SiteLimitsArgs> limits;
+        private @Nullable Output<String> linuxFxVersion;
+        private @Nullable Output<SiteLoadBalancing> loadBalancing;
+        private @Nullable Output<Boolean> localMySqlEnabled;
+        private @Nullable Output<Integer> logsDirectorySizeLimit;
+        private @Nullable Output<ManagedPipelineMode> managedPipelineMode;
+        private @Nullable Output<Integer> managedServiceIdentityId;
+        private @Nullable Output<Either<String,SupportedTlsVersions>> minTlsVersion;
+        private @Nullable Output<Integer> minimumElasticInstanceCount;
+        private @Nullable Output<String> netFrameworkVersion;
+        private @Nullable Output<String> nodeVersion;
+        private @Nullable Output<Integer> numberOfWorkers;
+        private @Nullable Output<String> phpVersion;
+        private @Nullable Output<String> powerShellVersion;
+        private @Nullable Output<Integer> preWarmedInstanceCount;
+        private @Nullable Output<String> publicNetworkAccess;
+        private @Nullable Output<String> publishingUsername;
+        private @Nullable Output<PushSettingsArgs> push;
+        private @Nullable Output<String> pythonVersion;
+        private @Nullable Output<Boolean> remoteDebuggingEnabled;
+        private @Nullable Output<String> remoteDebuggingVersion;
+        private @Nullable Output<Boolean> requestTracingEnabled;
+        private @Nullable Output<String> requestTracingExpirationTime;
+        private @Nullable Output<List<IpSecurityRestrictionArgs>> scmIpSecurityRestrictions;
+        private @Nullable Output<Boolean> scmIpSecurityRestrictionsUseMain;
+        private @Nullable Output<Either<String,SupportedTlsVersions>> scmMinTlsVersion;
+        private @Nullable Output<Either<String,ScmType>> scmType;
+        private @Nullable Output<String> tracingOptions;
+        private @Nullable Output<Boolean> use32BitWorkerProcess;
+        private @Nullable Output<List<VirtualApplicationArgs>> virtualApplications;
+        private @Nullable Output<String> vnetName;
+        private @Nullable Output<Integer> vnetPrivatePortsCount;
+        private @Nullable Output<Boolean> vnetRouteAllEnabled;
+        private @Nullable Output<Boolean> webSocketsEnabled;
+        private @Nullable Output<String> websiteTimeZone;
+        private @Nullable Output<String> windowsFxVersion;
+        private @Nullable Output<Integer> xManagedServiceIdentityId;
 
         public Builder() {
     	      // Empty
@@ -1126,663 +1126,663 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.xManagedServiceIdentityId = defaults.xManagedServiceIdentityId;
         }
 
-        public Builder acrUseManagedIdentityCreds(@Nullable Input<Boolean> acrUseManagedIdentityCreds) {
+        public Builder acrUseManagedIdentityCreds(@Nullable Output<Boolean> acrUseManagedIdentityCreds) {
             this.acrUseManagedIdentityCreds = acrUseManagedIdentityCreds;
             return this;
         }
 
         public Builder acrUseManagedIdentityCreds(@Nullable Boolean acrUseManagedIdentityCreds) {
-            this.acrUseManagedIdentityCreds = Input.ofNullable(acrUseManagedIdentityCreds);
+            this.acrUseManagedIdentityCreds = Output.ofNullable(acrUseManagedIdentityCreds);
             return this;
         }
 
-        public Builder acrUserManagedIdentityID(@Nullable Input<String> acrUserManagedIdentityID) {
+        public Builder acrUserManagedIdentityID(@Nullable Output<String> acrUserManagedIdentityID) {
             this.acrUserManagedIdentityID = acrUserManagedIdentityID;
             return this;
         }
 
         public Builder acrUserManagedIdentityID(@Nullable String acrUserManagedIdentityID) {
-            this.acrUserManagedIdentityID = Input.ofNullable(acrUserManagedIdentityID);
+            this.acrUserManagedIdentityID = Output.ofNullable(acrUserManagedIdentityID);
             return this;
         }
 
-        public Builder alwaysOn(@Nullable Input<Boolean> alwaysOn) {
+        public Builder alwaysOn(@Nullable Output<Boolean> alwaysOn) {
             this.alwaysOn = alwaysOn;
             return this;
         }
 
         public Builder alwaysOn(@Nullable Boolean alwaysOn) {
-            this.alwaysOn = Input.ofNullable(alwaysOn);
+            this.alwaysOn = Output.ofNullable(alwaysOn);
             return this;
         }
 
-        public Builder apiDefinition(@Nullable Input<ApiDefinitionInfoArgs> apiDefinition) {
+        public Builder apiDefinition(@Nullable Output<ApiDefinitionInfoArgs> apiDefinition) {
             this.apiDefinition = apiDefinition;
             return this;
         }
 
         public Builder apiDefinition(@Nullable ApiDefinitionInfoArgs apiDefinition) {
-            this.apiDefinition = Input.ofNullable(apiDefinition);
+            this.apiDefinition = Output.ofNullable(apiDefinition);
             return this;
         }
 
-        public Builder apiManagementConfig(@Nullable Input<ApiManagementConfigArgs> apiManagementConfig) {
+        public Builder apiManagementConfig(@Nullable Output<ApiManagementConfigArgs> apiManagementConfig) {
             this.apiManagementConfig = apiManagementConfig;
             return this;
         }
 
         public Builder apiManagementConfig(@Nullable ApiManagementConfigArgs apiManagementConfig) {
-            this.apiManagementConfig = Input.ofNullable(apiManagementConfig);
+            this.apiManagementConfig = Output.ofNullable(apiManagementConfig);
             return this;
         }
 
-        public Builder appCommandLine(@Nullable Input<String> appCommandLine) {
+        public Builder appCommandLine(@Nullable Output<String> appCommandLine) {
             this.appCommandLine = appCommandLine;
             return this;
         }
 
         public Builder appCommandLine(@Nullable String appCommandLine) {
-            this.appCommandLine = Input.ofNullable(appCommandLine);
+            this.appCommandLine = Output.ofNullable(appCommandLine);
             return this;
         }
 
-        public Builder appSettings(@Nullable Input<List<NameValuePairArgs>> appSettings) {
+        public Builder appSettings(@Nullable Output<List<NameValuePairArgs>> appSettings) {
             this.appSettings = appSettings;
             return this;
         }
 
         public Builder appSettings(@Nullable List<NameValuePairArgs> appSettings) {
-            this.appSettings = Input.ofNullable(appSettings);
+            this.appSettings = Output.ofNullable(appSettings);
             return this;
         }
 
-        public Builder autoHealEnabled(@Nullable Input<Boolean> autoHealEnabled) {
+        public Builder autoHealEnabled(@Nullable Output<Boolean> autoHealEnabled) {
             this.autoHealEnabled = autoHealEnabled;
             return this;
         }
 
         public Builder autoHealEnabled(@Nullable Boolean autoHealEnabled) {
-            this.autoHealEnabled = Input.ofNullable(autoHealEnabled);
+            this.autoHealEnabled = Output.ofNullable(autoHealEnabled);
             return this;
         }
 
-        public Builder autoHealRules(@Nullable Input<AutoHealRulesArgs> autoHealRules) {
+        public Builder autoHealRules(@Nullable Output<AutoHealRulesArgs> autoHealRules) {
             this.autoHealRules = autoHealRules;
             return this;
         }
 
         public Builder autoHealRules(@Nullable AutoHealRulesArgs autoHealRules) {
-            this.autoHealRules = Input.ofNullable(autoHealRules);
+            this.autoHealRules = Output.ofNullable(autoHealRules);
             return this;
         }
 
-        public Builder autoSwapSlotName(@Nullable Input<String> autoSwapSlotName) {
+        public Builder autoSwapSlotName(@Nullable Output<String> autoSwapSlotName) {
             this.autoSwapSlotName = autoSwapSlotName;
             return this;
         }
 
         public Builder autoSwapSlotName(@Nullable String autoSwapSlotName) {
-            this.autoSwapSlotName = Input.ofNullable(autoSwapSlotName);
+            this.autoSwapSlotName = Output.ofNullable(autoSwapSlotName);
             return this;
         }
 
-        public Builder azureStorageAccounts(@Nullable Input<Map<String,AzureStorageInfoValueArgs>> azureStorageAccounts) {
+        public Builder azureStorageAccounts(@Nullable Output<Map<String,AzureStorageInfoValueArgs>> azureStorageAccounts) {
             this.azureStorageAccounts = azureStorageAccounts;
             return this;
         }
 
         public Builder azureStorageAccounts(@Nullable Map<String,AzureStorageInfoValueArgs> azureStorageAccounts) {
-            this.azureStorageAccounts = Input.ofNullable(azureStorageAccounts);
+            this.azureStorageAccounts = Output.ofNullable(azureStorageAccounts);
             return this;
         }
 
-        public Builder connectionStrings(@Nullable Input<List<ConnStringInfoArgs>> connectionStrings) {
+        public Builder connectionStrings(@Nullable Output<List<ConnStringInfoArgs>> connectionStrings) {
             this.connectionStrings = connectionStrings;
             return this;
         }
 
         public Builder connectionStrings(@Nullable List<ConnStringInfoArgs> connectionStrings) {
-            this.connectionStrings = Input.ofNullable(connectionStrings);
+            this.connectionStrings = Output.ofNullable(connectionStrings);
             return this;
         }
 
-        public Builder cors(@Nullable Input<CorsSettingsArgs> cors) {
+        public Builder cors(@Nullable Output<CorsSettingsArgs> cors) {
             this.cors = cors;
             return this;
         }
 
         public Builder cors(@Nullable CorsSettingsArgs cors) {
-            this.cors = Input.ofNullable(cors);
+            this.cors = Output.ofNullable(cors);
             return this;
         }
 
-        public Builder defaultDocuments(@Nullable Input<List<String>> defaultDocuments) {
+        public Builder defaultDocuments(@Nullable Output<List<String>> defaultDocuments) {
             this.defaultDocuments = defaultDocuments;
             return this;
         }
 
         public Builder defaultDocuments(@Nullable List<String> defaultDocuments) {
-            this.defaultDocuments = Input.ofNullable(defaultDocuments);
+            this.defaultDocuments = Output.ofNullable(defaultDocuments);
             return this;
         }
 
-        public Builder detailedErrorLoggingEnabled(@Nullable Input<Boolean> detailedErrorLoggingEnabled) {
+        public Builder detailedErrorLoggingEnabled(@Nullable Output<Boolean> detailedErrorLoggingEnabled) {
             this.detailedErrorLoggingEnabled = detailedErrorLoggingEnabled;
             return this;
         }
 
         public Builder detailedErrorLoggingEnabled(@Nullable Boolean detailedErrorLoggingEnabled) {
-            this.detailedErrorLoggingEnabled = Input.ofNullable(detailedErrorLoggingEnabled);
+            this.detailedErrorLoggingEnabled = Output.ofNullable(detailedErrorLoggingEnabled);
             return this;
         }
 
-        public Builder documentRoot(@Nullable Input<String> documentRoot) {
+        public Builder documentRoot(@Nullable Output<String> documentRoot) {
             this.documentRoot = documentRoot;
             return this;
         }
 
         public Builder documentRoot(@Nullable String documentRoot) {
-            this.documentRoot = Input.ofNullable(documentRoot);
+            this.documentRoot = Output.ofNullable(documentRoot);
             return this;
         }
 
-        public Builder experiments(@Nullable Input<ExperimentsArgs> experiments) {
+        public Builder experiments(@Nullable Output<ExperimentsArgs> experiments) {
             this.experiments = experiments;
             return this;
         }
 
         public Builder experiments(@Nullable ExperimentsArgs experiments) {
-            this.experiments = Input.ofNullable(experiments);
+            this.experiments = Output.ofNullable(experiments);
             return this;
         }
 
-        public Builder ftpsState(@Nullable Input<Either<String,FtpsState>> ftpsState) {
+        public Builder ftpsState(@Nullable Output<Either<String,FtpsState>> ftpsState) {
             this.ftpsState = ftpsState;
             return this;
         }
 
         public Builder ftpsState(@Nullable Either<String,FtpsState> ftpsState) {
-            this.ftpsState = Input.ofNullable(ftpsState);
+            this.ftpsState = Output.ofNullable(ftpsState);
             return this;
         }
 
-        public Builder functionAppScaleLimit(@Nullable Input<Integer> functionAppScaleLimit) {
+        public Builder functionAppScaleLimit(@Nullable Output<Integer> functionAppScaleLimit) {
             this.functionAppScaleLimit = functionAppScaleLimit;
             return this;
         }
 
         public Builder functionAppScaleLimit(@Nullable Integer functionAppScaleLimit) {
-            this.functionAppScaleLimit = Input.ofNullable(functionAppScaleLimit);
+            this.functionAppScaleLimit = Output.ofNullable(functionAppScaleLimit);
             return this;
         }
 
-        public Builder functionsRuntimeScaleMonitoringEnabled(@Nullable Input<Boolean> functionsRuntimeScaleMonitoringEnabled) {
+        public Builder functionsRuntimeScaleMonitoringEnabled(@Nullable Output<Boolean> functionsRuntimeScaleMonitoringEnabled) {
             this.functionsRuntimeScaleMonitoringEnabled = functionsRuntimeScaleMonitoringEnabled;
             return this;
         }
 
         public Builder functionsRuntimeScaleMonitoringEnabled(@Nullable Boolean functionsRuntimeScaleMonitoringEnabled) {
-            this.functionsRuntimeScaleMonitoringEnabled = Input.ofNullable(functionsRuntimeScaleMonitoringEnabled);
+            this.functionsRuntimeScaleMonitoringEnabled = Output.ofNullable(functionsRuntimeScaleMonitoringEnabled);
             return this;
         }
 
-        public Builder handlerMappings(@Nullable Input<List<HandlerMappingArgs>> handlerMappings) {
+        public Builder handlerMappings(@Nullable Output<List<HandlerMappingArgs>> handlerMappings) {
             this.handlerMappings = handlerMappings;
             return this;
         }
 
         public Builder handlerMappings(@Nullable List<HandlerMappingArgs> handlerMappings) {
-            this.handlerMappings = Input.ofNullable(handlerMappings);
+            this.handlerMappings = Output.ofNullable(handlerMappings);
             return this;
         }
 
-        public Builder healthCheckPath(@Nullable Input<String> healthCheckPath) {
+        public Builder healthCheckPath(@Nullable Output<String> healthCheckPath) {
             this.healthCheckPath = healthCheckPath;
             return this;
         }
 
         public Builder healthCheckPath(@Nullable String healthCheckPath) {
-            this.healthCheckPath = Input.ofNullable(healthCheckPath);
+            this.healthCheckPath = Output.ofNullable(healthCheckPath);
             return this;
         }
 
-        public Builder http20Enabled(@Nullable Input<Boolean> http20Enabled) {
+        public Builder http20Enabled(@Nullable Output<Boolean> http20Enabled) {
             this.http20Enabled = http20Enabled;
             return this;
         }
 
         public Builder http20Enabled(@Nullable Boolean http20Enabled) {
-            this.http20Enabled = Input.ofNullable(http20Enabled);
+            this.http20Enabled = Output.ofNullable(http20Enabled);
             return this;
         }
 
-        public Builder httpLoggingEnabled(@Nullable Input<Boolean> httpLoggingEnabled) {
+        public Builder httpLoggingEnabled(@Nullable Output<Boolean> httpLoggingEnabled) {
             this.httpLoggingEnabled = httpLoggingEnabled;
             return this;
         }
 
         public Builder httpLoggingEnabled(@Nullable Boolean httpLoggingEnabled) {
-            this.httpLoggingEnabled = Input.ofNullable(httpLoggingEnabled);
+            this.httpLoggingEnabled = Output.ofNullable(httpLoggingEnabled);
             return this;
         }
 
-        public Builder ipSecurityRestrictions(@Nullable Input<List<IpSecurityRestrictionArgs>> ipSecurityRestrictions) {
+        public Builder ipSecurityRestrictions(@Nullable Output<List<IpSecurityRestrictionArgs>> ipSecurityRestrictions) {
             this.ipSecurityRestrictions = ipSecurityRestrictions;
             return this;
         }
 
         public Builder ipSecurityRestrictions(@Nullable List<IpSecurityRestrictionArgs> ipSecurityRestrictions) {
-            this.ipSecurityRestrictions = Input.ofNullable(ipSecurityRestrictions);
+            this.ipSecurityRestrictions = Output.ofNullable(ipSecurityRestrictions);
             return this;
         }
 
-        public Builder javaContainer(@Nullable Input<String> javaContainer) {
+        public Builder javaContainer(@Nullable Output<String> javaContainer) {
             this.javaContainer = javaContainer;
             return this;
         }
 
         public Builder javaContainer(@Nullable String javaContainer) {
-            this.javaContainer = Input.ofNullable(javaContainer);
+            this.javaContainer = Output.ofNullable(javaContainer);
             return this;
         }
 
-        public Builder javaContainerVersion(@Nullable Input<String> javaContainerVersion) {
+        public Builder javaContainerVersion(@Nullable Output<String> javaContainerVersion) {
             this.javaContainerVersion = javaContainerVersion;
             return this;
         }
 
         public Builder javaContainerVersion(@Nullable String javaContainerVersion) {
-            this.javaContainerVersion = Input.ofNullable(javaContainerVersion);
+            this.javaContainerVersion = Output.ofNullable(javaContainerVersion);
             return this;
         }
 
-        public Builder javaVersion(@Nullable Input<String> javaVersion) {
+        public Builder javaVersion(@Nullable Output<String> javaVersion) {
             this.javaVersion = javaVersion;
             return this;
         }
 
         public Builder javaVersion(@Nullable String javaVersion) {
-            this.javaVersion = Input.ofNullable(javaVersion);
+            this.javaVersion = Output.ofNullable(javaVersion);
             return this;
         }
 
-        public Builder keyVaultReferenceIdentity(@Nullable Input<String> keyVaultReferenceIdentity) {
+        public Builder keyVaultReferenceIdentity(@Nullable Output<String> keyVaultReferenceIdentity) {
             this.keyVaultReferenceIdentity = keyVaultReferenceIdentity;
             return this;
         }
 
         public Builder keyVaultReferenceIdentity(@Nullable String keyVaultReferenceIdentity) {
-            this.keyVaultReferenceIdentity = Input.ofNullable(keyVaultReferenceIdentity);
+            this.keyVaultReferenceIdentity = Output.ofNullable(keyVaultReferenceIdentity);
             return this;
         }
 
-        public Builder limits(@Nullable Input<SiteLimitsArgs> limits) {
+        public Builder limits(@Nullable Output<SiteLimitsArgs> limits) {
             this.limits = limits;
             return this;
         }
 
         public Builder limits(@Nullable SiteLimitsArgs limits) {
-            this.limits = Input.ofNullable(limits);
+            this.limits = Output.ofNullable(limits);
             return this;
         }
 
-        public Builder linuxFxVersion(@Nullable Input<String> linuxFxVersion) {
+        public Builder linuxFxVersion(@Nullable Output<String> linuxFxVersion) {
             this.linuxFxVersion = linuxFxVersion;
             return this;
         }
 
         public Builder linuxFxVersion(@Nullable String linuxFxVersion) {
-            this.linuxFxVersion = Input.ofNullable(linuxFxVersion);
+            this.linuxFxVersion = Output.ofNullable(linuxFxVersion);
             return this;
         }
 
-        public Builder loadBalancing(@Nullable Input<SiteLoadBalancing> loadBalancing) {
+        public Builder loadBalancing(@Nullable Output<SiteLoadBalancing> loadBalancing) {
             this.loadBalancing = loadBalancing;
             return this;
         }
 
         public Builder loadBalancing(@Nullable SiteLoadBalancing loadBalancing) {
-            this.loadBalancing = Input.ofNullable(loadBalancing);
+            this.loadBalancing = Output.ofNullable(loadBalancing);
             return this;
         }
 
-        public Builder localMySqlEnabled(@Nullable Input<Boolean> localMySqlEnabled) {
+        public Builder localMySqlEnabled(@Nullable Output<Boolean> localMySqlEnabled) {
             this.localMySqlEnabled = localMySqlEnabled;
             return this;
         }
 
         public Builder localMySqlEnabled(@Nullable Boolean localMySqlEnabled) {
-            this.localMySqlEnabled = Input.ofNullable(localMySqlEnabled);
+            this.localMySqlEnabled = Output.ofNullable(localMySqlEnabled);
             return this;
         }
 
-        public Builder logsDirectorySizeLimit(@Nullable Input<Integer> logsDirectorySizeLimit) {
+        public Builder logsDirectorySizeLimit(@Nullable Output<Integer> logsDirectorySizeLimit) {
             this.logsDirectorySizeLimit = logsDirectorySizeLimit;
             return this;
         }
 
         public Builder logsDirectorySizeLimit(@Nullable Integer logsDirectorySizeLimit) {
-            this.logsDirectorySizeLimit = Input.ofNullable(logsDirectorySizeLimit);
+            this.logsDirectorySizeLimit = Output.ofNullable(logsDirectorySizeLimit);
             return this;
         }
 
-        public Builder managedPipelineMode(@Nullable Input<ManagedPipelineMode> managedPipelineMode) {
+        public Builder managedPipelineMode(@Nullable Output<ManagedPipelineMode> managedPipelineMode) {
             this.managedPipelineMode = managedPipelineMode;
             return this;
         }
 
         public Builder managedPipelineMode(@Nullable ManagedPipelineMode managedPipelineMode) {
-            this.managedPipelineMode = Input.ofNullable(managedPipelineMode);
+            this.managedPipelineMode = Output.ofNullable(managedPipelineMode);
             return this;
         }
 
-        public Builder managedServiceIdentityId(@Nullable Input<Integer> managedServiceIdentityId) {
+        public Builder managedServiceIdentityId(@Nullable Output<Integer> managedServiceIdentityId) {
             this.managedServiceIdentityId = managedServiceIdentityId;
             return this;
         }
 
         public Builder managedServiceIdentityId(@Nullable Integer managedServiceIdentityId) {
-            this.managedServiceIdentityId = Input.ofNullable(managedServiceIdentityId);
+            this.managedServiceIdentityId = Output.ofNullable(managedServiceIdentityId);
             return this;
         }
 
-        public Builder minTlsVersion(@Nullable Input<Either<String,SupportedTlsVersions>> minTlsVersion) {
+        public Builder minTlsVersion(@Nullable Output<Either<String,SupportedTlsVersions>> minTlsVersion) {
             this.minTlsVersion = minTlsVersion;
             return this;
         }
 
         public Builder minTlsVersion(@Nullable Either<String,SupportedTlsVersions> minTlsVersion) {
-            this.minTlsVersion = Input.ofNullable(minTlsVersion);
+            this.minTlsVersion = Output.ofNullable(minTlsVersion);
             return this;
         }
 
-        public Builder minimumElasticInstanceCount(@Nullable Input<Integer> minimumElasticInstanceCount) {
+        public Builder minimumElasticInstanceCount(@Nullable Output<Integer> minimumElasticInstanceCount) {
             this.minimumElasticInstanceCount = minimumElasticInstanceCount;
             return this;
         }
 
         public Builder minimumElasticInstanceCount(@Nullable Integer minimumElasticInstanceCount) {
-            this.minimumElasticInstanceCount = Input.ofNullable(minimumElasticInstanceCount);
+            this.minimumElasticInstanceCount = Output.ofNullable(minimumElasticInstanceCount);
             return this;
         }
 
-        public Builder netFrameworkVersion(@Nullable Input<String> netFrameworkVersion) {
+        public Builder netFrameworkVersion(@Nullable Output<String> netFrameworkVersion) {
             this.netFrameworkVersion = netFrameworkVersion;
             return this;
         }
 
         public Builder netFrameworkVersion(@Nullable String netFrameworkVersion) {
-            this.netFrameworkVersion = Input.ofNullable(netFrameworkVersion);
+            this.netFrameworkVersion = Output.ofNullable(netFrameworkVersion);
             return this;
         }
 
-        public Builder nodeVersion(@Nullable Input<String> nodeVersion) {
+        public Builder nodeVersion(@Nullable Output<String> nodeVersion) {
             this.nodeVersion = nodeVersion;
             return this;
         }
 
         public Builder nodeVersion(@Nullable String nodeVersion) {
-            this.nodeVersion = Input.ofNullable(nodeVersion);
+            this.nodeVersion = Output.ofNullable(nodeVersion);
             return this;
         }
 
-        public Builder numberOfWorkers(@Nullable Input<Integer> numberOfWorkers) {
+        public Builder numberOfWorkers(@Nullable Output<Integer> numberOfWorkers) {
             this.numberOfWorkers = numberOfWorkers;
             return this;
         }
 
         public Builder numberOfWorkers(@Nullable Integer numberOfWorkers) {
-            this.numberOfWorkers = Input.ofNullable(numberOfWorkers);
+            this.numberOfWorkers = Output.ofNullable(numberOfWorkers);
             return this;
         }
 
-        public Builder phpVersion(@Nullable Input<String> phpVersion) {
+        public Builder phpVersion(@Nullable Output<String> phpVersion) {
             this.phpVersion = phpVersion;
             return this;
         }
 
         public Builder phpVersion(@Nullable String phpVersion) {
-            this.phpVersion = Input.ofNullable(phpVersion);
+            this.phpVersion = Output.ofNullable(phpVersion);
             return this;
         }
 
-        public Builder powerShellVersion(@Nullable Input<String> powerShellVersion) {
+        public Builder powerShellVersion(@Nullable Output<String> powerShellVersion) {
             this.powerShellVersion = powerShellVersion;
             return this;
         }
 
         public Builder powerShellVersion(@Nullable String powerShellVersion) {
-            this.powerShellVersion = Input.ofNullable(powerShellVersion);
+            this.powerShellVersion = Output.ofNullable(powerShellVersion);
             return this;
         }
 
-        public Builder preWarmedInstanceCount(@Nullable Input<Integer> preWarmedInstanceCount) {
+        public Builder preWarmedInstanceCount(@Nullable Output<Integer> preWarmedInstanceCount) {
             this.preWarmedInstanceCount = preWarmedInstanceCount;
             return this;
         }
 
         public Builder preWarmedInstanceCount(@Nullable Integer preWarmedInstanceCount) {
-            this.preWarmedInstanceCount = Input.ofNullable(preWarmedInstanceCount);
+            this.preWarmedInstanceCount = Output.ofNullable(preWarmedInstanceCount);
             return this;
         }
 
-        public Builder publicNetworkAccess(@Nullable Input<String> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Output<String> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
         public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
-            this.publicNetworkAccess = Input.ofNullable(publicNetworkAccess);
+            this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
             return this;
         }
 
-        public Builder publishingUsername(@Nullable Input<String> publishingUsername) {
+        public Builder publishingUsername(@Nullable Output<String> publishingUsername) {
             this.publishingUsername = publishingUsername;
             return this;
         }
 
         public Builder publishingUsername(@Nullable String publishingUsername) {
-            this.publishingUsername = Input.ofNullable(publishingUsername);
+            this.publishingUsername = Output.ofNullable(publishingUsername);
             return this;
         }
 
-        public Builder push(@Nullable Input<PushSettingsArgs> push) {
+        public Builder push(@Nullable Output<PushSettingsArgs> push) {
             this.push = push;
             return this;
         }
 
         public Builder push(@Nullable PushSettingsArgs push) {
-            this.push = Input.ofNullable(push);
+            this.push = Output.ofNullable(push);
             return this;
         }
 
-        public Builder pythonVersion(@Nullable Input<String> pythonVersion) {
+        public Builder pythonVersion(@Nullable Output<String> pythonVersion) {
             this.pythonVersion = pythonVersion;
             return this;
         }
 
         public Builder pythonVersion(@Nullable String pythonVersion) {
-            this.pythonVersion = Input.ofNullable(pythonVersion);
+            this.pythonVersion = Output.ofNullable(pythonVersion);
             return this;
         }
 
-        public Builder remoteDebuggingEnabled(@Nullable Input<Boolean> remoteDebuggingEnabled) {
+        public Builder remoteDebuggingEnabled(@Nullable Output<Boolean> remoteDebuggingEnabled) {
             this.remoteDebuggingEnabled = remoteDebuggingEnabled;
             return this;
         }
 
         public Builder remoteDebuggingEnabled(@Nullable Boolean remoteDebuggingEnabled) {
-            this.remoteDebuggingEnabled = Input.ofNullable(remoteDebuggingEnabled);
+            this.remoteDebuggingEnabled = Output.ofNullable(remoteDebuggingEnabled);
             return this;
         }
 
-        public Builder remoteDebuggingVersion(@Nullable Input<String> remoteDebuggingVersion) {
+        public Builder remoteDebuggingVersion(@Nullable Output<String> remoteDebuggingVersion) {
             this.remoteDebuggingVersion = remoteDebuggingVersion;
             return this;
         }
 
         public Builder remoteDebuggingVersion(@Nullable String remoteDebuggingVersion) {
-            this.remoteDebuggingVersion = Input.ofNullable(remoteDebuggingVersion);
+            this.remoteDebuggingVersion = Output.ofNullable(remoteDebuggingVersion);
             return this;
         }
 
-        public Builder requestTracingEnabled(@Nullable Input<Boolean> requestTracingEnabled) {
+        public Builder requestTracingEnabled(@Nullable Output<Boolean> requestTracingEnabled) {
             this.requestTracingEnabled = requestTracingEnabled;
             return this;
         }
 
         public Builder requestTracingEnabled(@Nullable Boolean requestTracingEnabled) {
-            this.requestTracingEnabled = Input.ofNullable(requestTracingEnabled);
+            this.requestTracingEnabled = Output.ofNullable(requestTracingEnabled);
             return this;
         }
 
-        public Builder requestTracingExpirationTime(@Nullable Input<String> requestTracingExpirationTime) {
+        public Builder requestTracingExpirationTime(@Nullable Output<String> requestTracingExpirationTime) {
             this.requestTracingExpirationTime = requestTracingExpirationTime;
             return this;
         }
 
         public Builder requestTracingExpirationTime(@Nullable String requestTracingExpirationTime) {
-            this.requestTracingExpirationTime = Input.ofNullable(requestTracingExpirationTime);
+            this.requestTracingExpirationTime = Output.ofNullable(requestTracingExpirationTime);
             return this;
         }
 
-        public Builder scmIpSecurityRestrictions(@Nullable Input<List<IpSecurityRestrictionArgs>> scmIpSecurityRestrictions) {
+        public Builder scmIpSecurityRestrictions(@Nullable Output<List<IpSecurityRestrictionArgs>> scmIpSecurityRestrictions) {
             this.scmIpSecurityRestrictions = scmIpSecurityRestrictions;
             return this;
         }
 
         public Builder scmIpSecurityRestrictions(@Nullable List<IpSecurityRestrictionArgs> scmIpSecurityRestrictions) {
-            this.scmIpSecurityRestrictions = Input.ofNullable(scmIpSecurityRestrictions);
+            this.scmIpSecurityRestrictions = Output.ofNullable(scmIpSecurityRestrictions);
             return this;
         }
 
-        public Builder scmIpSecurityRestrictionsUseMain(@Nullable Input<Boolean> scmIpSecurityRestrictionsUseMain) {
+        public Builder scmIpSecurityRestrictionsUseMain(@Nullable Output<Boolean> scmIpSecurityRestrictionsUseMain) {
             this.scmIpSecurityRestrictionsUseMain = scmIpSecurityRestrictionsUseMain;
             return this;
         }
 
         public Builder scmIpSecurityRestrictionsUseMain(@Nullable Boolean scmIpSecurityRestrictionsUseMain) {
-            this.scmIpSecurityRestrictionsUseMain = Input.ofNullable(scmIpSecurityRestrictionsUseMain);
+            this.scmIpSecurityRestrictionsUseMain = Output.ofNullable(scmIpSecurityRestrictionsUseMain);
             return this;
         }
 
-        public Builder scmMinTlsVersion(@Nullable Input<Either<String,SupportedTlsVersions>> scmMinTlsVersion) {
+        public Builder scmMinTlsVersion(@Nullable Output<Either<String,SupportedTlsVersions>> scmMinTlsVersion) {
             this.scmMinTlsVersion = scmMinTlsVersion;
             return this;
         }
 
         public Builder scmMinTlsVersion(@Nullable Either<String,SupportedTlsVersions> scmMinTlsVersion) {
-            this.scmMinTlsVersion = Input.ofNullable(scmMinTlsVersion);
+            this.scmMinTlsVersion = Output.ofNullable(scmMinTlsVersion);
             return this;
         }
 
-        public Builder scmType(@Nullable Input<Either<String,ScmType>> scmType) {
+        public Builder scmType(@Nullable Output<Either<String,ScmType>> scmType) {
             this.scmType = scmType;
             return this;
         }
 
         public Builder scmType(@Nullable Either<String,ScmType> scmType) {
-            this.scmType = Input.ofNullable(scmType);
+            this.scmType = Output.ofNullable(scmType);
             return this;
         }
 
-        public Builder tracingOptions(@Nullable Input<String> tracingOptions) {
+        public Builder tracingOptions(@Nullable Output<String> tracingOptions) {
             this.tracingOptions = tracingOptions;
             return this;
         }
 
         public Builder tracingOptions(@Nullable String tracingOptions) {
-            this.tracingOptions = Input.ofNullable(tracingOptions);
+            this.tracingOptions = Output.ofNullable(tracingOptions);
             return this;
         }
 
-        public Builder use32BitWorkerProcess(@Nullable Input<Boolean> use32BitWorkerProcess) {
+        public Builder use32BitWorkerProcess(@Nullable Output<Boolean> use32BitWorkerProcess) {
             this.use32BitWorkerProcess = use32BitWorkerProcess;
             return this;
         }
 
         public Builder use32BitWorkerProcess(@Nullable Boolean use32BitWorkerProcess) {
-            this.use32BitWorkerProcess = Input.ofNullable(use32BitWorkerProcess);
+            this.use32BitWorkerProcess = Output.ofNullable(use32BitWorkerProcess);
             return this;
         }
 
-        public Builder virtualApplications(@Nullable Input<List<VirtualApplicationArgs>> virtualApplications) {
+        public Builder virtualApplications(@Nullable Output<List<VirtualApplicationArgs>> virtualApplications) {
             this.virtualApplications = virtualApplications;
             return this;
         }
 
         public Builder virtualApplications(@Nullable List<VirtualApplicationArgs> virtualApplications) {
-            this.virtualApplications = Input.ofNullable(virtualApplications);
+            this.virtualApplications = Output.ofNullable(virtualApplications);
             return this;
         }
 
-        public Builder vnetName(@Nullable Input<String> vnetName) {
+        public Builder vnetName(@Nullable Output<String> vnetName) {
             this.vnetName = vnetName;
             return this;
         }
 
         public Builder vnetName(@Nullable String vnetName) {
-            this.vnetName = Input.ofNullable(vnetName);
+            this.vnetName = Output.ofNullable(vnetName);
             return this;
         }
 
-        public Builder vnetPrivatePortsCount(@Nullable Input<Integer> vnetPrivatePortsCount) {
+        public Builder vnetPrivatePortsCount(@Nullable Output<Integer> vnetPrivatePortsCount) {
             this.vnetPrivatePortsCount = vnetPrivatePortsCount;
             return this;
         }
 
         public Builder vnetPrivatePortsCount(@Nullable Integer vnetPrivatePortsCount) {
-            this.vnetPrivatePortsCount = Input.ofNullable(vnetPrivatePortsCount);
+            this.vnetPrivatePortsCount = Output.ofNullable(vnetPrivatePortsCount);
             return this;
         }
 
-        public Builder vnetRouteAllEnabled(@Nullable Input<Boolean> vnetRouteAllEnabled) {
+        public Builder vnetRouteAllEnabled(@Nullable Output<Boolean> vnetRouteAllEnabled) {
             this.vnetRouteAllEnabled = vnetRouteAllEnabled;
             return this;
         }
 
         public Builder vnetRouteAllEnabled(@Nullable Boolean vnetRouteAllEnabled) {
-            this.vnetRouteAllEnabled = Input.ofNullable(vnetRouteAllEnabled);
+            this.vnetRouteAllEnabled = Output.ofNullable(vnetRouteAllEnabled);
             return this;
         }
 
-        public Builder webSocketsEnabled(@Nullable Input<Boolean> webSocketsEnabled) {
+        public Builder webSocketsEnabled(@Nullable Output<Boolean> webSocketsEnabled) {
             this.webSocketsEnabled = webSocketsEnabled;
             return this;
         }
 
         public Builder webSocketsEnabled(@Nullable Boolean webSocketsEnabled) {
-            this.webSocketsEnabled = Input.ofNullable(webSocketsEnabled);
+            this.webSocketsEnabled = Output.ofNullable(webSocketsEnabled);
             return this;
         }
 
-        public Builder websiteTimeZone(@Nullable Input<String> websiteTimeZone) {
+        public Builder websiteTimeZone(@Nullable Output<String> websiteTimeZone) {
             this.websiteTimeZone = websiteTimeZone;
             return this;
         }
 
         public Builder websiteTimeZone(@Nullable String websiteTimeZone) {
-            this.websiteTimeZone = Input.ofNullable(websiteTimeZone);
+            this.websiteTimeZone = Output.ofNullable(websiteTimeZone);
             return this;
         }
 
-        public Builder windowsFxVersion(@Nullable Input<String> windowsFxVersion) {
+        public Builder windowsFxVersion(@Nullable Output<String> windowsFxVersion) {
             this.windowsFxVersion = windowsFxVersion;
             return this;
         }
 
         public Builder windowsFxVersion(@Nullable String windowsFxVersion) {
-            this.windowsFxVersion = Input.ofNullable(windowsFxVersion);
+            this.windowsFxVersion = Output.ofNullable(windowsFxVersion);
             return this;
         }
 
-        public Builder xManagedServiceIdentityId(@Nullable Input<Integer> xManagedServiceIdentityId) {
+        public Builder xManagedServiceIdentityId(@Nullable Output<Integer> xManagedServiceIdentityId) {
             this.xManagedServiceIdentityId = xManagedServiceIdentityId;
             return this;
         }
 
         public Builder xManagedServiceIdentityId(@Nullable Integer xManagedServiceIdentityId) {
-            this.xManagedServiceIdentityId = Input.ofNullable(xManagedServiceIdentityId);
+            this.xManagedServiceIdentityId = Output.ofNullable(xManagedServiceIdentityId);
             return this;
         }
         public SiteConfigArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.signer.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,39 +15,39 @@ public final class SigningProfileRevocationRecordGetArgs extends io.pulumi.resou
     public static final SigningProfileRevocationRecordGetArgs Empty = new SigningProfileRevocationRecordGetArgs();
 
     @InputImport(name="revocationEffectiveFrom")
-      private final @Nullable Input<String> revocationEffectiveFrom;
+      private final @Nullable Output<String> revocationEffectiveFrom;
 
-    public Input<String> getRevocationEffectiveFrom() {
-        return this.revocationEffectiveFrom == null ? Input.empty() : this.revocationEffectiveFrom;
+    public Output<String> getRevocationEffectiveFrom() {
+        return this.revocationEffectiveFrom == null ? Output.empty() : this.revocationEffectiveFrom;
     }
 
     @InputImport(name="revokedAt")
-      private final @Nullable Input<String> revokedAt;
+      private final @Nullable Output<String> revokedAt;
 
-    public Input<String> getRevokedAt() {
-        return this.revokedAt == null ? Input.empty() : this.revokedAt;
+    public Output<String> getRevokedAt() {
+        return this.revokedAt == null ? Output.empty() : this.revokedAt;
     }
 
     @InputImport(name="revokedBy")
-      private final @Nullable Input<String> revokedBy;
+      private final @Nullable Output<String> revokedBy;
 
-    public Input<String> getRevokedBy() {
-        return this.revokedBy == null ? Input.empty() : this.revokedBy;
+    public Output<String> getRevokedBy() {
+        return this.revokedBy == null ? Output.empty() : this.revokedBy;
     }
 
     public SigningProfileRevocationRecordGetArgs(
-        @Nullable Input<String> revocationEffectiveFrom,
-        @Nullable Input<String> revokedAt,
-        @Nullable Input<String> revokedBy) {
+        @Nullable Output<String> revocationEffectiveFrom,
+        @Nullable Output<String> revokedAt,
+        @Nullable Output<String> revokedBy) {
         this.revocationEffectiveFrom = revocationEffectiveFrom;
         this.revokedAt = revokedAt;
         this.revokedBy = revokedBy;
     }
 
     private SigningProfileRevocationRecordGetArgs() {
-        this.revocationEffectiveFrom = Input.empty();
-        this.revokedAt = Input.empty();
-        this.revokedBy = Input.empty();
+        this.revocationEffectiveFrom = Output.empty();
+        this.revokedAt = Output.empty();
+        this.revokedBy = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,9 +59,9 @@ public final class SigningProfileRevocationRecordGetArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> revocationEffectiveFrom;
-        private @Nullable Input<String> revokedAt;
-        private @Nullable Input<String> revokedBy;
+        private @Nullable Output<String> revocationEffectiveFrom;
+        private @Nullable Output<String> revokedAt;
+        private @Nullable Output<String> revokedBy;
 
         public Builder() {
     	      // Empty
@@ -74,33 +74,33 @@ public final class SigningProfileRevocationRecordGetArgs extends io.pulumi.resou
     	      this.revokedBy = defaults.revokedBy;
         }
 
-        public Builder revocationEffectiveFrom(@Nullable Input<String> revocationEffectiveFrom) {
+        public Builder revocationEffectiveFrom(@Nullable Output<String> revocationEffectiveFrom) {
             this.revocationEffectiveFrom = revocationEffectiveFrom;
             return this;
         }
 
         public Builder revocationEffectiveFrom(@Nullable String revocationEffectiveFrom) {
-            this.revocationEffectiveFrom = Input.ofNullable(revocationEffectiveFrom);
+            this.revocationEffectiveFrom = Output.ofNullable(revocationEffectiveFrom);
             return this;
         }
 
-        public Builder revokedAt(@Nullable Input<String> revokedAt) {
+        public Builder revokedAt(@Nullable Output<String> revokedAt) {
             this.revokedAt = revokedAt;
             return this;
         }
 
         public Builder revokedAt(@Nullable String revokedAt) {
-            this.revokedAt = Input.ofNullable(revokedAt);
+            this.revokedAt = Output.ofNullable(revokedAt);
             return this;
         }
 
-        public Builder revokedBy(@Nullable Input<String> revokedBy) {
+        public Builder revokedBy(@Nullable Output<String> revokedBy) {
             this.revokedBy = revokedBy;
             return this;
         }
 
         public Builder revokedBy(@Nullable String revokedBy) {
-            this.revokedBy = Input.ofNullable(revokedBy);
+            this.revokedBy = Output.ofNullable(revokedBy);
             return this;
         }
         public SigningProfileRevocationRecordGetArgs build() {

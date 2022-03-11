@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class AlertRuleLeafConditionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="containsAny")
-      private final @Nullable Input<List<String>> containsAny;
+      private final @Nullable Output<List<String>> containsAny;
 
-    public Input<List<String>> getContainsAny() {
-        return this.containsAny == null ? Input.empty() : this.containsAny;
+    public Output<List<String>> getContainsAny() {
+        return this.containsAny == null ? Output.empty() : this.containsAny;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AlertRuleLeafConditionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="equals")
-      private final @Nullable Input<String> equals;
+      private final @Nullable Output<String> equals;
 
-    public Input<String> getEquals() {
-        return this.equals == null ? Input.empty() : this.equals;
+    public Output<String> getEquals() {
+        return this.equals == null ? Output.empty() : this.equals;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class AlertRuleLeafConditionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="field")
-      private final @Nullable Input<String> field;
+      private final @Nullable Output<String> field;
 
-    public Input<String> getField() {
-        return this.field == null ? Input.empty() : this.field;
+    public Output<String> getField() {
+        return this.field == null ? Output.empty() : this.field;
     }
 
     public AlertRuleLeafConditionArgs(
-        @Nullable Input<List<String>> containsAny,
-        @Nullable Input<String> equals,
-        @Nullable Input<String> field) {
+        @Nullable Output<List<String>> containsAny,
+        @Nullable Output<String> equals,
+        @Nullable Output<String> field) {
         this.containsAny = containsAny;
         this.equals = equals;
         this.field = field;
     }
 
     private AlertRuleLeafConditionArgs() {
-        this.containsAny = Input.empty();
-        this.equals = Input.empty();
-        this.field = Input.empty();
+        this.containsAny = Output.empty();
+        this.equals = Output.empty();
+        this.field = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class AlertRuleLeafConditionArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> containsAny;
-        private @Nullable Input<String> equals;
-        private @Nullable Input<String> field;
+        private @Nullable Output<List<String>> containsAny;
+        private @Nullable Output<String> equals;
+        private @Nullable Output<String> field;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class AlertRuleLeafConditionArgs extends io.pulumi.resources.Resour
     	      this.field = defaults.field;
         }
 
-        public Builder containsAny(@Nullable Input<List<String>> containsAny) {
+        public Builder containsAny(@Nullable Output<List<String>> containsAny) {
             this.containsAny = containsAny;
             return this;
         }
 
         public Builder containsAny(@Nullable List<String> containsAny) {
-            this.containsAny = Input.ofNullable(containsAny);
+            this.containsAny = Output.ofNullable(containsAny);
             return this;
         }
 
-        public Builder equals(@Nullable Input<String> equals) {
+        public Builder equals(@Nullable Output<String> equals) {
             this.equals = equals;
             return this;
         }
 
         public Builder equals(@Nullable String equals) {
-            this.equals = Input.ofNullable(equals);
+            this.equals = Output.ofNullable(equals);
             return this;
         }
 
-        public Builder field(@Nullable Input<String> field) {
+        public Builder field(@Nullable Output<String> field) {
             this.field = field;
             return this;
         }
 
         public Builder field(@Nullable String field) {
-            this.field = Input.ofNullable(field);
+            this.field = Output.ofNullable(field);
             return this;
         }
         public AlertRuleLeafConditionArgs build() {

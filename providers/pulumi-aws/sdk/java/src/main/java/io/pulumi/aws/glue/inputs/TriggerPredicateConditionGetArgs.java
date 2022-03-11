@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glue.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class TriggerPredicateConditionGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="crawlState")
-      private final @Nullable Input<String> crawlState;
+      private final @Nullable Output<String> crawlState;
 
-    public Input<String> getCrawlState() {
-        return this.crawlState == null ? Input.empty() : this.crawlState;
+    public Output<String> getCrawlState() {
+        return this.crawlState == null ? Output.empty() : this.crawlState;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class TriggerPredicateConditionGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="crawlerName")
-      private final @Nullable Input<String> crawlerName;
+      private final @Nullable Output<String> crawlerName;
 
-    public Input<String> getCrawlerName() {
-        return this.crawlerName == null ? Input.empty() : this.crawlerName;
+    public Output<String> getCrawlerName() {
+        return this.crawlerName == null ? Output.empty() : this.crawlerName;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class TriggerPredicateConditionGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="jobName")
-      private final @Nullable Input<String> jobName;
+      private final @Nullable Output<String> jobName;
 
-    public Input<String> getJobName() {
-        return this.jobName == null ? Input.empty() : this.jobName;
+    public Output<String> getJobName() {
+        return this.jobName == null ? Output.empty() : this.jobName;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class TriggerPredicateConditionGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="logicalOperator")
-      private final @Nullable Input<String> logicalOperator;
+      private final @Nullable Output<String> logicalOperator;
 
-    public Input<String> getLogicalOperator() {
-        return this.logicalOperator == null ? Input.empty() : this.logicalOperator;
+    public Output<String> getLogicalOperator() {
+        return this.logicalOperator == null ? Output.empty() : this.logicalOperator;
     }
 
     /**
@@ -63,18 +63,18 @@ public final class TriggerPredicateConditionGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<String> state;
+      private final @Nullable Output<String> state;
 
-    public Input<String> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<String> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     public TriggerPredicateConditionGetArgs(
-        @Nullable Input<String> crawlState,
-        @Nullable Input<String> crawlerName,
-        @Nullable Input<String> jobName,
-        @Nullable Input<String> logicalOperator,
-        @Nullable Input<String> state) {
+        @Nullable Output<String> crawlState,
+        @Nullable Output<String> crawlerName,
+        @Nullable Output<String> jobName,
+        @Nullable Output<String> logicalOperator,
+        @Nullable Output<String> state) {
         this.crawlState = crawlState;
         this.crawlerName = crawlerName;
         this.jobName = jobName;
@@ -83,11 +83,11 @@ public final class TriggerPredicateConditionGetArgs extends io.pulumi.resources.
     }
 
     private TriggerPredicateConditionGetArgs() {
-        this.crawlState = Input.empty();
-        this.crawlerName = Input.empty();
-        this.jobName = Input.empty();
-        this.logicalOperator = Input.empty();
-        this.state = Input.empty();
+        this.crawlState = Output.empty();
+        this.crawlerName = Output.empty();
+        this.jobName = Output.empty();
+        this.logicalOperator = Output.empty();
+        this.state = Output.empty();
     }
 
     public static Builder builder() {
@@ -99,11 +99,11 @@ public final class TriggerPredicateConditionGetArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> crawlState;
-        private @Nullable Input<String> crawlerName;
-        private @Nullable Input<String> jobName;
-        private @Nullable Input<String> logicalOperator;
-        private @Nullable Input<String> state;
+        private @Nullable Output<String> crawlState;
+        private @Nullable Output<String> crawlerName;
+        private @Nullable Output<String> jobName;
+        private @Nullable Output<String> logicalOperator;
+        private @Nullable Output<String> state;
 
         public Builder() {
     	      // Empty
@@ -118,53 +118,53 @@ public final class TriggerPredicateConditionGetArgs extends io.pulumi.resources.
     	      this.state = defaults.state;
         }
 
-        public Builder crawlState(@Nullable Input<String> crawlState) {
+        public Builder crawlState(@Nullable Output<String> crawlState) {
             this.crawlState = crawlState;
             return this;
         }
 
         public Builder crawlState(@Nullable String crawlState) {
-            this.crawlState = Input.ofNullable(crawlState);
+            this.crawlState = Output.ofNullable(crawlState);
             return this;
         }
 
-        public Builder crawlerName(@Nullable Input<String> crawlerName) {
+        public Builder crawlerName(@Nullable Output<String> crawlerName) {
             this.crawlerName = crawlerName;
             return this;
         }
 
         public Builder crawlerName(@Nullable String crawlerName) {
-            this.crawlerName = Input.ofNullable(crawlerName);
+            this.crawlerName = Output.ofNullable(crawlerName);
             return this;
         }
 
-        public Builder jobName(@Nullable Input<String> jobName) {
+        public Builder jobName(@Nullable Output<String> jobName) {
             this.jobName = jobName;
             return this;
         }
 
         public Builder jobName(@Nullable String jobName) {
-            this.jobName = Input.ofNullable(jobName);
+            this.jobName = Output.ofNullable(jobName);
             return this;
         }
 
-        public Builder logicalOperator(@Nullable Input<String> logicalOperator) {
+        public Builder logicalOperator(@Nullable Output<String> logicalOperator) {
             this.logicalOperator = logicalOperator;
             return this;
         }
 
         public Builder logicalOperator(@Nullable String logicalOperator) {
-            this.logicalOperator = Input.ofNullable(logicalOperator);
+            this.logicalOperator = Output.ofNullable(logicalOperator);
             return this;
         }
 
-        public Builder state(@Nullable Input<String> state) {
+        public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable String state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
         public TriggerPredicateConditionGetArgs build() {

@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.hybridcompute.MachineExtensionArgs;
 import io.pulumi.azurenative.hybridcompute.outputs.MachineExtensionPropertiesResponseInstanceView;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -242,29 +241,29 @@ public class MachineExtension extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public MachineExtension(String name, MachineExtensionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:hybridcompute:MachineExtension", name, args == null ? MachineExtensionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:hybridcompute:MachineExtension", name, args == null ? MachineExtensionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private MachineExtension(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private MachineExtension(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:hybridcompute:MachineExtension", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:hybridcompute/v20190802preview:MachineExtension").build()),
-                Input.of(Alias.builder().setType("azure-native:hybridcompute/v20191212:MachineExtension").build()),
-                Input.of(Alias.builder().setType("azure-native:hybridcompute/v20200730preview:MachineExtension").build()),
-                Input.of(Alias.builder().setType("azure-native:hybridcompute/v20200802:MachineExtension").build()),
-                Input.of(Alias.builder().setType("azure-native:hybridcompute/v20200815preview:MachineExtension").build()),
-                Input.of(Alias.builder().setType("azure-native:hybridcompute/v20210128preview:MachineExtension").build()),
-                Input.of(Alias.builder().setType("azure-native:hybridcompute/v20210325preview:MachineExtension").build()),
-                Input.of(Alias.builder().setType("azure-native:hybridcompute/v20210422preview:MachineExtension").build()),
-                Input.of(Alias.builder().setType("azure-native:hybridcompute/v20210517preview:MachineExtension").build()),
-                Input.of(Alias.builder().setType("azure-native:hybridcompute/v20210520:MachineExtension").build()),
-                Input.of(Alias.builder().setType("azure-native:hybridcompute/v20210610preview:MachineExtension").build()),
-                Input.of(Alias.builder().setType("azure-native:hybridcompute/v20211210preview:MachineExtension").build())
+                Output.of(Alias.builder().setType("azure-native:hybridcompute/v20190802preview:MachineExtension").build()),
+                Output.of(Alias.builder().setType("azure-native:hybridcompute/v20191212:MachineExtension").build()),
+                Output.of(Alias.builder().setType("azure-native:hybridcompute/v20200730preview:MachineExtension").build()),
+                Output.of(Alias.builder().setType("azure-native:hybridcompute/v20200802:MachineExtension").build()),
+                Output.of(Alias.builder().setType("azure-native:hybridcompute/v20200815preview:MachineExtension").build()),
+                Output.of(Alias.builder().setType("azure-native:hybridcompute/v20210128preview:MachineExtension").build()),
+                Output.of(Alias.builder().setType("azure-native:hybridcompute/v20210325preview:MachineExtension").build()),
+                Output.of(Alias.builder().setType("azure-native:hybridcompute/v20210422preview:MachineExtension").build()),
+                Output.of(Alias.builder().setType("azure-native:hybridcompute/v20210517preview:MachineExtension").build()),
+                Output.of(Alias.builder().setType("azure-native:hybridcompute/v20210520:MachineExtension").build()),
+                Output.of(Alias.builder().setType("azure-native:hybridcompute/v20210610preview:MachineExtension").build()),
+                Output.of(Alias.builder().setType("azure-native:hybridcompute/v20211210preview:MachineExtension").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -278,7 +277,7 @@ public class MachineExtension extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static MachineExtension get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static MachineExtension get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new MachineExtension(name, id, options);
     }
 }

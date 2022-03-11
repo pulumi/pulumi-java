@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gameservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,18 +25,18 @@ public final class GameServerClusterConnectionInfoGkeClusterReferenceArgs extend
      * 
      */
     @InputImport(name="cluster", required=true)
-      private final Input<String> cluster;
+      private final Output<String> cluster;
 
-    public Input<String> getCluster() {
+    public Output<String> getCluster() {
         return this.cluster;
     }
 
-    public GameServerClusterConnectionInfoGkeClusterReferenceArgs(Input<String> cluster) {
+    public GameServerClusterConnectionInfoGkeClusterReferenceArgs(Output<String> cluster) {
         this.cluster = Objects.requireNonNull(cluster, "expected parameter 'cluster' to be non-null");
     }
 
     private GameServerClusterConnectionInfoGkeClusterReferenceArgs() {
-        this.cluster = Input.empty();
+        this.cluster = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,7 +48,7 @@ public final class GameServerClusterConnectionInfoGkeClusterReferenceArgs extend
     }
 
     public static final class Builder {
-        private Input<String> cluster;
+        private Output<String> cluster;
 
         public Builder() {
     	      // Empty
@@ -59,13 +59,13 @@ public final class GameServerClusterConnectionInfoGkeClusterReferenceArgs extend
     	      this.cluster = defaults.cluster;
         }
 
-        public Builder cluster(Input<String> cluster) {
+        public Builder cluster(Output<String> cluster) {
             this.cluster = Objects.requireNonNull(cluster);
             return this;
         }
 
         public Builder cluster(String cluster) {
-            this.cluster = Input.of(Objects.requireNonNull(cluster));
+            this.cluster = Output.of(Objects.requireNonNull(cluster));
             return this;
         }
         public GameServerClusterConnectionInfoGkeClusterReferenceArgs build() {

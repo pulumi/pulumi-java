@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.enums.VirtualMachineSizeTypes;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,18 +25,18 @@ public final class HardwareProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="vmSize")
-      private final @Nullable Input<Either<String,VirtualMachineSizeTypes>> vmSize;
+      private final @Nullable Output<Either<String,VirtualMachineSizeTypes>> vmSize;
 
-    public Input<Either<String,VirtualMachineSizeTypes>> getVmSize() {
-        return this.vmSize == null ? Input.empty() : this.vmSize;
+    public Output<Either<String,VirtualMachineSizeTypes>> getVmSize() {
+        return this.vmSize == null ? Output.empty() : this.vmSize;
     }
 
-    public HardwareProfileArgs(@Nullable Input<Either<String,VirtualMachineSizeTypes>> vmSize) {
+    public HardwareProfileArgs(@Nullable Output<Either<String,VirtualMachineSizeTypes>> vmSize) {
         this.vmSize = vmSize;
     }
 
     private HardwareProfileArgs() {
-        this.vmSize = Input.empty();
+        this.vmSize = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,7 +48,7 @@ public final class HardwareProfileArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,VirtualMachineSizeTypes>> vmSize;
+        private @Nullable Output<Either<String,VirtualMachineSizeTypes>> vmSize;
 
         public Builder() {
     	      // Empty
@@ -59,13 +59,13 @@ public final class HardwareProfileArgs extends io.pulumi.resources.ResourceArgs 
     	      this.vmSize = defaults.vmSize;
         }
 
-        public Builder vmSize(@Nullable Input<Either<String,VirtualMachineSizeTypes>> vmSize) {
+        public Builder vmSize(@Nullable Output<Either<String,VirtualMachineSizeTypes>> vmSize) {
             this.vmSize = vmSize;
             return this;
         }
 
         public Builder vmSize(@Nullable Either<String,VirtualMachineSizeTypes> vmSize) {
-            this.vmSize = Input.ofNullable(vmSize);
+            this.vmSize = Output.ofNullable(vmSize);
             return this;
         }
         public HardwareProfileArgs build() {

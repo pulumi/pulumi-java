@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.billing.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.billing.inputs.BudgetAmountSpecifiedAmountArgs;
 import java.lang.Boolean;
@@ -23,10 +23,10 @@ public final class BudgetAmountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastPeriodAmount")
-      private final @Nullable Input<Boolean> lastPeriodAmount;
+      private final @Nullable Output<Boolean> lastPeriodAmount;
 
-    public Input<Boolean> getLastPeriodAmount() {
-        return this.lastPeriodAmount == null ? Input.empty() : this.lastPeriodAmount;
+    public Output<Boolean> getLastPeriodAmount() {
+        return this.lastPeriodAmount == null ? Output.empty() : this.lastPeriodAmount;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class BudgetAmountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="specifiedAmount")
-      private final @Nullable Input<BudgetAmountSpecifiedAmountArgs> specifiedAmount;
+      private final @Nullable Output<BudgetAmountSpecifiedAmountArgs> specifiedAmount;
 
-    public Input<BudgetAmountSpecifiedAmountArgs> getSpecifiedAmount() {
-        return this.specifiedAmount == null ? Input.empty() : this.specifiedAmount;
+    public Output<BudgetAmountSpecifiedAmountArgs> getSpecifiedAmount() {
+        return this.specifiedAmount == null ? Output.empty() : this.specifiedAmount;
     }
 
     public BudgetAmountArgs(
-        @Nullable Input<Boolean> lastPeriodAmount,
-        @Nullable Input<BudgetAmountSpecifiedAmountArgs> specifiedAmount) {
+        @Nullable Output<Boolean> lastPeriodAmount,
+        @Nullable Output<BudgetAmountSpecifiedAmountArgs> specifiedAmount) {
         this.lastPeriodAmount = lastPeriodAmount;
         this.specifiedAmount = specifiedAmount;
     }
 
     private BudgetAmountArgs() {
-        this.lastPeriodAmount = Input.empty();
-        this.specifiedAmount = Input.empty();
+        this.lastPeriodAmount = Output.empty();
+        this.specifiedAmount = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class BudgetAmountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> lastPeriodAmount;
-        private @Nullable Input<BudgetAmountSpecifiedAmountArgs> specifiedAmount;
+        private @Nullable Output<Boolean> lastPeriodAmount;
+        private @Nullable Output<BudgetAmountSpecifiedAmountArgs> specifiedAmount;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class BudgetAmountArgs extends io.pulumi.resources.ResourceArgs {
     	      this.specifiedAmount = defaults.specifiedAmount;
         }
 
-        public Builder lastPeriodAmount(@Nullable Input<Boolean> lastPeriodAmount) {
+        public Builder lastPeriodAmount(@Nullable Output<Boolean> lastPeriodAmount) {
             this.lastPeriodAmount = lastPeriodAmount;
             return this;
         }
 
         public Builder lastPeriodAmount(@Nullable Boolean lastPeriodAmount) {
-            this.lastPeriodAmount = Input.ofNullable(lastPeriodAmount);
+            this.lastPeriodAmount = Output.ofNullable(lastPeriodAmount);
             return this;
         }
 
-        public Builder specifiedAmount(@Nullable Input<BudgetAmountSpecifiedAmountArgs> specifiedAmount) {
+        public Builder specifiedAmount(@Nullable Output<BudgetAmountSpecifiedAmountArgs> specifiedAmount) {
             this.specifiedAmount = specifiedAmount;
             return this;
         }
 
         public Builder specifiedAmount(@Nullable BudgetAmountSpecifiedAmountArgs specifiedAmount) {
-            this.specifiedAmount = Input.ofNullable(specifiedAmount);
+            this.specifiedAmount = Output.ofNullable(specifiedAmount);
             return this;
         }
         public BudgetAmountArgs build() {

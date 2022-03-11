@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotanalytics.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -16,29 +16,29 @@ public final class DatasetVersioningConfigurationArgs extends io.pulumi.resource
     public static final DatasetVersioningConfigurationArgs Empty = new DatasetVersioningConfigurationArgs();
 
     @InputImport(name="maxVersions")
-      private final @Nullable Input<Integer> maxVersions;
+      private final @Nullable Output<Integer> maxVersions;
 
-    public Input<Integer> getMaxVersions() {
-        return this.maxVersions == null ? Input.empty() : this.maxVersions;
+    public Output<Integer> getMaxVersions() {
+        return this.maxVersions == null ? Output.empty() : this.maxVersions;
     }
 
     @InputImport(name="unlimited")
-      private final @Nullable Input<Boolean> unlimited;
+      private final @Nullable Output<Boolean> unlimited;
 
-    public Input<Boolean> getUnlimited() {
-        return this.unlimited == null ? Input.empty() : this.unlimited;
+    public Output<Boolean> getUnlimited() {
+        return this.unlimited == null ? Output.empty() : this.unlimited;
     }
 
     public DatasetVersioningConfigurationArgs(
-        @Nullable Input<Integer> maxVersions,
-        @Nullable Input<Boolean> unlimited) {
+        @Nullable Output<Integer> maxVersions,
+        @Nullable Output<Boolean> unlimited) {
         this.maxVersions = maxVersions;
         this.unlimited = unlimited;
     }
 
     private DatasetVersioningConfigurationArgs() {
-        this.maxVersions = Input.empty();
-        this.unlimited = Input.empty();
+        this.maxVersions = Output.empty();
+        this.unlimited = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class DatasetVersioningConfigurationArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> maxVersions;
-        private @Nullable Input<Boolean> unlimited;
+        private @Nullable Output<Integer> maxVersions;
+        private @Nullable Output<Boolean> unlimited;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class DatasetVersioningConfigurationArgs extends io.pulumi.resource
     	      this.unlimited = defaults.unlimited;
         }
 
-        public Builder maxVersions(@Nullable Input<Integer> maxVersions) {
+        public Builder maxVersions(@Nullable Output<Integer> maxVersions) {
             this.maxVersions = maxVersions;
             return this;
         }
 
         public Builder maxVersions(@Nullable Integer maxVersions) {
-            this.maxVersions = Input.ofNullable(maxVersions);
+            this.maxVersions = Output.ofNullable(maxVersions);
             return this;
         }
 
-        public Builder unlimited(@Nullable Input<Boolean> unlimited) {
+        public Builder unlimited(@Nullable Output<Boolean> unlimited) {
             this.unlimited = unlimited;
             return this;
         }
 
         public Builder unlimited(@Nullable Boolean unlimited) {
-            this.unlimited = Input.ofNullable(unlimited);
+            this.unlimited = Output.ofNullable(unlimited);
             return this;
         }
         public DatasetVersioningConfigurationArgs build() {

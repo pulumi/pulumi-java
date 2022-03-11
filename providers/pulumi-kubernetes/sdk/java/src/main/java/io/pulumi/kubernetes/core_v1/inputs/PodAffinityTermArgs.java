@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class PodAffinityTermArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="labelSelector")
-      private final @Nullable Input<LabelSelectorArgs> labelSelector;
+      private final @Nullable Output<LabelSelectorArgs> labelSelector;
 
-    public Input<LabelSelectorArgs> getLabelSelector() {
-        return this.labelSelector == null ? Input.empty() : this.labelSelector;
+    public Output<LabelSelectorArgs> getLabelSelector() {
+        return this.labelSelector == null ? Output.empty() : this.labelSelector;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PodAffinityTermArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="namespaceSelector")
-      private final @Nullable Input<LabelSelectorArgs> namespaceSelector;
+      private final @Nullable Output<LabelSelectorArgs> namespaceSelector;
 
-    public Input<LabelSelectorArgs> getNamespaceSelector() {
-        return this.namespaceSelector == null ? Input.empty() : this.namespaceSelector;
+    public Output<LabelSelectorArgs> getNamespaceSelector() {
+        return this.namespaceSelector == null ? Output.empty() : this.namespaceSelector;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class PodAffinityTermArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="namespaces")
-      private final @Nullable Input<List<String>> namespaces;
+      private final @Nullable Output<List<String>> namespaces;
 
-    public Input<List<String>> getNamespaces() {
-        return this.namespaces == null ? Input.empty() : this.namespaces;
+    public Output<List<String>> getNamespaces() {
+        return this.namespaces == null ? Output.empty() : this.namespaces;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class PodAffinityTermArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="topologyKey", required=true)
-      private final Input<String> topologyKey;
+      private final Output<String> topologyKey;
 
-    public Input<String> getTopologyKey() {
+    public Output<String> getTopologyKey() {
         return this.topologyKey;
     }
 
     public PodAffinityTermArgs(
-        @Nullable Input<LabelSelectorArgs> labelSelector,
-        @Nullable Input<LabelSelectorArgs> namespaceSelector,
-        @Nullable Input<List<String>> namespaces,
-        Input<String> topologyKey) {
+        @Nullable Output<LabelSelectorArgs> labelSelector,
+        @Nullable Output<LabelSelectorArgs> namespaceSelector,
+        @Nullable Output<List<String>> namespaces,
+        Output<String> topologyKey) {
         this.labelSelector = labelSelector;
         this.namespaceSelector = namespaceSelector;
         this.namespaces = namespaces;
@@ -76,10 +76,10 @@ public final class PodAffinityTermArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private PodAffinityTermArgs() {
-        this.labelSelector = Input.empty();
-        this.namespaceSelector = Input.empty();
-        this.namespaces = Input.empty();
-        this.topologyKey = Input.empty();
+        this.labelSelector = Output.empty();
+        this.namespaceSelector = Output.empty();
+        this.namespaces = Output.empty();
+        this.topologyKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class PodAffinityTermArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<LabelSelectorArgs> labelSelector;
-        private @Nullable Input<LabelSelectorArgs> namespaceSelector;
-        private @Nullable Input<List<String>> namespaces;
-        private Input<String> topologyKey;
+        private @Nullable Output<LabelSelectorArgs> labelSelector;
+        private @Nullable Output<LabelSelectorArgs> namespaceSelector;
+        private @Nullable Output<List<String>> namespaces;
+        private Output<String> topologyKey;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class PodAffinityTermArgs extends io.pulumi.resources.ResourceArgs 
     	      this.topologyKey = defaults.topologyKey;
         }
 
-        public Builder labelSelector(@Nullable Input<LabelSelectorArgs> labelSelector) {
+        public Builder labelSelector(@Nullable Output<LabelSelectorArgs> labelSelector) {
             this.labelSelector = labelSelector;
             return this;
         }
 
         public Builder labelSelector(@Nullable LabelSelectorArgs labelSelector) {
-            this.labelSelector = Input.ofNullable(labelSelector);
+            this.labelSelector = Output.ofNullable(labelSelector);
             return this;
         }
 
-        public Builder namespaceSelector(@Nullable Input<LabelSelectorArgs> namespaceSelector) {
+        public Builder namespaceSelector(@Nullable Output<LabelSelectorArgs> namespaceSelector) {
             this.namespaceSelector = namespaceSelector;
             return this;
         }
 
         public Builder namespaceSelector(@Nullable LabelSelectorArgs namespaceSelector) {
-            this.namespaceSelector = Input.ofNullable(namespaceSelector);
+            this.namespaceSelector = Output.ofNullable(namespaceSelector);
             return this;
         }
 
-        public Builder namespaces(@Nullable Input<List<String>> namespaces) {
+        public Builder namespaces(@Nullable Output<List<String>> namespaces) {
             this.namespaces = namespaces;
             return this;
         }
 
         public Builder namespaces(@Nullable List<String> namespaces) {
-            this.namespaces = Input.ofNullable(namespaces);
+            this.namespaces = Output.ofNullable(namespaces);
             return this;
         }
 
-        public Builder topologyKey(Input<String> topologyKey) {
+        public Builder topologyKey(Output<String> topologyKey) {
             this.topologyKey = Objects.requireNonNull(topologyKey);
             return this;
         }
 
         public Builder topologyKey(String topologyKey) {
-            this.topologyKey = Input.of(Objects.requireNonNull(topologyKey));
+            this.topologyKey = Output.of(Objects.requireNonNull(topologyKey));
             return this;
         }
         public PodAffinityTermArgs build() {

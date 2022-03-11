@@ -8,7 +8,7 @@ import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamExtendedS3Configuratio
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartitioningConfigurationGetArgs;
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationGetArgs;
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,9 +25,9 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs extends 
      * 
      */
     @InputImport(name="bucketArn", required=true)
-      private final Input<String> bucketArn;
+      private final Output<String> bucketArn;
 
-    public Input<String> getBucketArn() {
+    public Output<String> getBucketArn() {
         return this.bucketArn;
     }
 
@@ -36,10 +36,10 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs extends 
      * 
      */
     @InputImport(name="bufferInterval")
-      private final @Nullable Input<Integer> bufferInterval;
+      private final @Nullable Output<Integer> bufferInterval;
 
-    public Input<Integer> getBufferInterval() {
-        return this.bufferInterval == null ? Input.empty() : this.bufferInterval;
+    public Output<Integer> getBufferInterval() {
+        return this.bufferInterval == null ? Output.empty() : this.bufferInterval;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs extends 
      * 
      */
     @InputImport(name="bufferSize")
-      private final @Nullable Input<Integer> bufferSize;
+      private final @Nullable Output<Integer> bufferSize;
 
-    public Input<Integer> getBufferSize() {
-        return this.bufferSize == null ? Input.empty() : this.bufferSize;
+    public Output<Integer> getBufferSize() {
+        return this.bufferSize == null ? Output.empty() : this.bufferSize;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs extends 
      * 
      */
     @InputImport(name="cloudwatchLoggingOptions")
-      private final @Nullable Input<FirehoseDeliveryStreamExtendedS3ConfigurationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions;
+      private final @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions;
 
-    public Input<FirehoseDeliveryStreamExtendedS3ConfigurationCloudwatchLoggingOptionsGetArgs> getCloudwatchLoggingOptions() {
-        return this.cloudwatchLoggingOptions == null ? Input.empty() : this.cloudwatchLoggingOptions;
+    public Output<FirehoseDeliveryStreamExtendedS3ConfigurationCloudwatchLoggingOptionsGetArgs> getCloudwatchLoggingOptions() {
+        return this.cloudwatchLoggingOptions == null ? Output.empty() : this.cloudwatchLoggingOptions;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs extends 
      * 
      */
     @InputImport(name="compressionFormat")
-      private final @Nullable Input<String> compressionFormat;
+      private final @Nullable Output<String> compressionFormat;
 
-    public Input<String> getCompressionFormat() {
-        return this.compressionFormat == null ? Input.empty() : this.compressionFormat;
+    public Output<String> getCompressionFormat() {
+        return this.compressionFormat == null ? Output.empty() : this.compressionFormat;
     }
 
     /**
@@ -81,17 +81,17 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs extends 
      * 
      */
     @InputImport(name="dataFormatConversionConfiguration")
-      private final @Nullable Input<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationGetArgs> dataFormatConversionConfiguration;
+      private final @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationGetArgs> dataFormatConversionConfiguration;
 
-    public Input<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationGetArgs> getDataFormatConversionConfiguration() {
-        return this.dataFormatConversionConfiguration == null ? Input.empty() : this.dataFormatConversionConfiguration;
+    public Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationGetArgs> getDataFormatConversionConfiguration() {
+        return this.dataFormatConversionConfiguration == null ? Output.empty() : this.dataFormatConversionConfiguration;
     }
 
     @InputImport(name="dynamicPartitioningConfiguration")
-      private final @Nullable Input<FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartitioningConfigurationGetArgs> dynamicPartitioningConfiguration;
+      private final @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartitioningConfigurationGetArgs> dynamicPartitioningConfiguration;
 
-    public Input<FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartitioningConfigurationGetArgs> getDynamicPartitioningConfiguration() {
-        return this.dynamicPartitioningConfiguration == null ? Input.empty() : this.dynamicPartitioningConfiguration;
+    public Output<FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartitioningConfigurationGetArgs> getDynamicPartitioningConfiguration() {
+        return this.dynamicPartitioningConfiguration == null ? Output.empty() : this.dynamicPartitioningConfiguration;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs extends 
      * 
      */
     @InputImport(name="errorOutputPrefix")
-      private final @Nullable Input<String> errorOutputPrefix;
+      private final @Nullable Output<String> errorOutputPrefix;
 
-    public Input<String> getErrorOutputPrefix() {
-        return this.errorOutputPrefix == null ? Input.empty() : this.errorOutputPrefix;
+    public Output<String> getErrorOutputPrefix() {
+        return this.errorOutputPrefix == null ? Output.empty() : this.errorOutputPrefix;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs extends 
      * 
      */
     @InputImport(name="kmsKeyArn")
-      private final @Nullable Input<String> kmsKeyArn;
+      private final @Nullable Output<String> kmsKeyArn;
 
-    public Input<String> getKmsKeyArn() {
-        return this.kmsKeyArn == null ? Input.empty() : this.kmsKeyArn;
+    public Output<String> getKmsKeyArn() {
+        return this.kmsKeyArn == null ? Output.empty() : this.kmsKeyArn;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs extends 
      * 
      */
     @InputImport(name="prefix")
-      private final @Nullable Input<String> prefix;
+      private final @Nullable Output<String> prefix;
 
-    public Input<String> getPrefix() {
-        return this.prefix == null ? Input.empty() : this.prefix;
+    public Output<String> getPrefix() {
+        return this.prefix == null ? Output.empty() : this.prefix;
     }
 
     /**
@@ -133,10 +133,10 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs extends 
      * 
      */
     @InputImport(name="processingConfiguration")
-      private final @Nullable Input<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationGetArgs> processingConfiguration;
+      private final @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationGetArgs> processingConfiguration;
 
-    public Input<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationGetArgs> getProcessingConfiguration() {
-        return this.processingConfiguration == null ? Input.empty() : this.processingConfiguration;
+    public Output<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationGetArgs> getProcessingConfiguration() {
+        return this.processingConfiguration == null ? Output.empty() : this.processingConfiguration;
     }
 
     /**
@@ -144,9 +144,9 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs extends 
      * 
      */
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
@@ -155,10 +155,10 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs extends 
      * 
      */
     @InputImport(name="s3BackupConfiguration")
-      private final @Nullable Input<FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationGetArgs> s3BackupConfiguration;
+      private final @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationGetArgs> s3BackupConfiguration;
 
-    public Input<FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationGetArgs> getS3BackupConfiguration() {
-        return this.s3BackupConfiguration == null ? Input.empty() : this.s3BackupConfiguration;
+    public Output<FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationGetArgs> getS3BackupConfiguration() {
+        return this.s3BackupConfiguration == null ? Output.empty() : this.s3BackupConfiguration;
     }
 
     /**
@@ -166,27 +166,27 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs extends 
      * 
      */
     @InputImport(name="s3BackupMode")
-      private final @Nullable Input<String> s3BackupMode;
+      private final @Nullable Output<String> s3BackupMode;
 
-    public Input<String> getS3BackupMode() {
-        return this.s3BackupMode == null ? Input.empty() : this.s3BackupMode;
+    public Output<String> getS3BackupMode() {
+        return this.s3BackupMode == null ? Output.empty() : this.s3BackupMode;
     }
 
     public FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs(
-        Input<String> bucketArn,
-        @Nullable Input<Integer> bufferInterval,
-        @Nullable Input<Integer> bufferSize,
-        @Nullable Input<FirehoseDeliveryStreamExtendedS3ConfigurationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions,
-        @Nullable Input<String> compressionFormat,
-        @Nullable Input<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationGetArgs> dataFormatConversionConfiguration,
-        @Nullable Input<FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartitioningConfigurationGetArgs> dynamicPartitioningConfiguration,
-        @Nullable Input<String> errorOutputPrefix,
-        @Nullable Input<String> kmsKeyArn,
-        @Nullable Input<String> prefix,
-        @Nullable Input<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationGetArgs> processingConfiguration,
-        Input<String> roleArn,
-        @Nullable Input<FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationGetArgs> s3BackupConfiguration,
-        @Nullable Input<String> s3BackupMode) {
+        Output<String> bucketArn,
+        @Nullable Output<Integer> bufferInterval,
+        @Nullable Output<Integer> bufferSize,
+        @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions,
+        @Nullable Output<String> compressionFormat,
+        @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationGetArgs> dataFormatConversionConfiguration,
+        @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartitioningConfigurationGetArgs> dynamicPartitioningConfiguration,
+        @Nullable Output<String> errorOutputPrefix,
+        @Nullable Output<String> kmsKeyArn,
+        @Nullable Output<String> prefix,
+        @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationGetArgs> processingConfiguration,
+        Output<String> roleArn,
+        @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationGetArgs> s3BackupConfiguration,
+        @Nullable Output<String> s3BackupMode) {
         this.bucketArn = Objects.requireNonNull(bucketArn, "expected parameter 'bucketArn' to be non-null");
         this.bufferInterval = bufferInterval;
         this.bufferSize = bufferSize;
@@ -204,20 +204,20 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs extends 
     }
 
     private FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs() {
-        this.bucketArn = Input.empty();
-        this.bufferInterval = Input.empty();
-        this.bufferSize = Input.empty();
-        this.cloudwatchLoggingOptions = Input.empty();
-        this.compressionFormat = Input.empty();
-        this.dataFormatConversionConfiguration = Input.empty();
-        this.dynamicPartitioningConfiguration = Input.empty();
-        this.errorOutputPrefix = Input.empty();
-        this.kmsKeyArn = Input.empty();
-        this.prefix = Input.empty();
-        this.processingConfiguration = Input.empty();
-        this.roleArn = Input.empty();
-        this.s3BackupConfiguration = Input.empty();
-        this.s3BackupMode = Input.empty();
+        this.bucketArn = Output.empty();
+        this.bufferInterval = Output.empty();
+        this.bufferSize = Output.empty();
+        this.cloudwatchLoggingOptions = Output.empty();
+        this.compressionFormat = Output.empty();
+        this.dataFormatConversionConfiguration = Output.empty();
+        this.dynamicPartitioningConfiguration = Output.empty();
+        this.errorOutputPrefix = Output.empty();
+        this.kmsKeyArn = Output.empty();
+        this.prefix = Output.empty();
+        this.processingConfiguration = Output.empty();
+        this.roleArn = Output.empty();
+        this.s3BackupConfiguration = Output.empty();
+        this.s3BackupMode = Output.empty();
     }
 
     public static Builder builder() {
@@ -229,20 +229,20 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs extends 
     }
 
     public static final class Builder {
-        private Input<String> bucketArn;
-        private @Nullable Input<Integer> bufferInterval;
-        private @Nullable Input<Integer> bufferSize;
-        private @Nullable Input<FirehoseDeliveryStreamExtendedS3ConfigurationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions;
-        private @Nullable Input<String> compressionFormat;
-        private @Nullable Input<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationGetArgs> dataFormatConversionConfiguration;
-        private @Nullable Input<FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartitioningConfigurationGetArgs> dynamicPartitioningConfiguration;
-        private @Nullable Input<String> errorOutputPrefix;
-        private @Nullable Input<String> kmsKeyArn;
-        private @Nullable Input<String> prefix;
-        private @Nullable Input<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationGetArgs> processingConfiguration;
-        private Input<String> roleArn;
-        private @Nullable Input<FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationGetArgs> s3BackupConfiguration;
-        private @Nullable Input<String> s3BackupMode;
+        private Output<String> bucketArn;
+        private @Nullable Output<Integer> bufferInterval;
+        private @Nullable Output<Integer> bufferSize;
+        private @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions;
+        private @Nullable Output<String> compressionFormat;
+        private @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationGetArgs> dataFormatConversionConfiguration;
+        private @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartitioningConfigurationGetArgs> dynamicPartitioningConfiguration;
+        private @Nullable Output<String> errorOutputPrefix;
+        private @Nullable Output<String> kmsKeyArn;
+        private @Nullable Output<String> prefix;
+        private @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationGetArgs> processingConfiguration;
+        private Output<String> roleArn;
+        private @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationGetArgs> s3BackupConfiguration;
+        private @Nullable Output<String> s3BackupMode;
 
         public Builder() {
     	      // Empty
@@ -266,143 +266,143 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs extends 
     	      this.s3BackupMode = defaults.s3BackupMode;
         }
 
-        public Builder bucketArn(Input<String> bucketArn) {
+        public Builder bucketArn(Output<String> bucketArn) {
             this.bucketArn = Objects.requireNonNull(bucketArn);
             return this;
         }
 
         public Builder bucketArn(String bucketArn) {
-            this.bucketArn = Input.of(Objects.requireNonNull(bucketArn));
+            this.bucketArn = Output.of(Objects.requireNonNull(bucketArn));
             return this;
         }
 
-        public Builder bufferInterval(@Nullable Input<Integer> bufferInterval) {
+        public Builder bufferInterval(@Nullable Output<Integer> bufferInterval) {
             this.bufferInterval = bufferInterval;
             return this;
         }
 
         public Builder bufferInterval(@Nullable Integer bufferInterval) {
-            this.bufferInterval = Input.ofNullable(bufferInterval);
+            this.bufferInterval = Output.ofNullable(bufferInterval);
             return this;
         }
 
-        public Builder bufferSize(@Nullable Input<Integer> bufferSize) {
+        public Builder bufferSize(@Nullable Output<Integer> bufferSize) {
             this.bufferSize = bufferSize;
             return this;
         }
 
         public Builder bufferSize(@Nullable Integer bufferSize) {
-            this.bufferSize = Input.ofNullable(bufferSize);
+            this.bufferSize = Output.ofNullable(bufferSize);
             return this;
         }
 
-        public Builder cloudwatchLoggingOptions(@Nullable Input<FirehoseDeliveryStreamExtendedS3ConfigurationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions) {
+        public Builder cloudwatchLoggingOptions(@Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions) {
             this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
             return this;
         }
 
         public Builder cloudwatchLoggingOptions(@Nullable FirehoseDeliveryStreamExtendedS3ConfigurationCloudwatchLoggingOptionsGetArgs cloudwatchLoggingOptions) {
-            this.cloudwatchLoggingOptions = Input.ofNullable(cloudwatchLoggingOptions);
+            this.cloudwatchLoggingOptions = Output.ofNullable(cloudwatchLoggingOptions);
             return this;
         }
 
-        public Builder compressionFormat(@Nullable Input<String> compressionFormat) {
+        public Builder compressionFormat(@Nullable Output<String> compressionFormat) {
             this.compressionFormat = compressionFormat;
             return this;
         }
 
         public Builder compressionFormat(@Nullable String compressionFormat) {
-            this.compressionFormat = Input.ofNullable(compressionFormat);
+            this.compressionFormat = Output.ofNullable(compressionFormat);
             return this;
         }
 
-        public Builder dataFormatConversionConfiguration(@Nullable Input<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationGetArgs> dataFormatConversionConfiguration) {
+        public Builder dataFormatConversionConfiguration(@Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationGetArgs> dataFormatConversionConfiguration) {
             this.dataFormatConversionConfiguration = dataFormatConversionConfiguration;
             return this;
         }
 
         public Builder dataFormatConversionConfiguration(@Nullable FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationGetArgs dataFormatConversionConfiguration) {
-            this.dataFormatConversionConfiguration = Input.ofNullable(dataFormatConversionConfiguration);
+            this.dataFormatConversionConfiguration = Output.ofNullable(dataFormatConversionConfiguration);
             return this;
         }
 
-        public Builder dynamicPartitioningConfiguration(@Nullable Input<FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartitioningConfigurationGetArgs> dynamicPartitioningConfiguration) {
+        public Builder dynamicPartitioningConfiguration(@Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartitioningConfigurationGetArgs> dynamicPartitioningConfiguration) {
             this.dynamicPartitioningConfiguration = dynamicPartitioningConfiguration;
             return this;
         }
 
         public Builder dynamicPartitioningConfiguration(@Nullable FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartitioningConfigurationGetArgs dynamicPartitioningConfiguration) {
-            this.dynamicPartitioningConfiguration = Input.ofNullable(dynamicPartitioningConfiguration);
+            this.dynamicPartitioningConfiguration = Output.ofNullable(dynamicPartitioningConfiguration);
             return this;
         }
 
-        public Builder errorOutputPrefix(@Nullable Input<String> errorOutputPrefix) {
+        public Builder errorOutputPrefix(@Nullable Output<String> errorOutputPrefix) {
             this.errorOutputPrefix = errorOutputPrefix;
             return this;
         }
 
         public Builder errorOutputPrefix(@Nullable String errorOutputPrefix) {
-            this.errorOutputPrefix = Input.ofNullable(errorOutputPrefix);
+            this.errorOutputPrefix = Output.ofNullable(errorOutputPrefix);
             return this;
         }
 
-        public Builder kmsKeyArn(@Nullable Input<String> kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Input.ofNullable(kmsKeyArn);
+            this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
             return this;
         }
 
-        public Builder prefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Input.ofNullable(prefix);
+            this.prefix = Output.ofNullable(prefix);
             return this;
         }
 
-        public Builder processingConfiguration(@Nullable Input<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationGetArgs> processingConfiguration) {
+        public Builder processingConfiguration(@Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationGetArgs> processingConfiguration) {
             this.processingConfiguration = processingConfiguration;
             return this;
         }
 
         public Builder processingConfiguration(@Nullable FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationGetArgs processingConfiguration) {
-            this.processingConfiguration = Input.ofNullable(processingConfiguration);
+            this.processingConfiguration = Output.ofNullable(processingConfiguration);
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder s3BackupConfiguration(@Nullable Input<FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationGetArgs> s3BackupConfiguration) {
+        public Builder s3BackupConfiguration(@Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationGetArgs> s3BackupConfiguration) {
             this.s3BackupConfiguration = s3BackupConfiguration;
             return this;
         }
 
         public Builder s3BackupConfiguration(@Nullable FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationGetArgs s3BackupConfiguration) {
-            this.s3BackupConfiguration = Input.ofNullable(s3BackupConfiguration);
+            this.s3BackupConfiguration = Output.ofNullable(s3BackupConfiguration);
             return this;
         }
 
-        public Builder s3BackupMode(@Nullable Input<String> s3BackupMode) {
+        public Builder s3BackupMode(@Nullable Output<String> s3BackupMode) {
             this.s3BackupMode = s3BackupMode;
             return this;
         }
 
         public Builder s3BackupMode(@Nullable String s3BackupMode) {
-            this.s3BackupMode = Input.ofNullable(s3BackupMode);
+            this.s3BackupMode = Output.ofNullable(s3BackupMode);
             return this;
         }
         public FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs build() {

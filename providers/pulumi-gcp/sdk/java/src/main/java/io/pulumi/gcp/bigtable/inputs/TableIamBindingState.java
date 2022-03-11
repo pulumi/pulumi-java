@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigtable.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.bigtable.inputs.TableIamBindingConditionGetArgs;
 import java.lang.String;
@@ -17,10 +17,10 @@ public final class TableIamBindingState extends io.pulumi.resources.ResourceArgs
     public static final TableIamBindingState Empty = new TableIamBindingState();
 
     @InputImport(name="condition")
-      private final @Nullable Input<TableIamBindingConditionGetArgs> condition;
+      private final @Nullable Output<TableIamBindingConditionGetArgs> condition;
 
-    public Input<TableIamBindingConditionGetArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<TableIamBindingConditionGetArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -28,10 +28,10 @@ public final class TableIamBindingState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -39,17 +39,17 @@ public final class TableIamBindingState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="instance")
-      private final @Nullable Input<String> instance;
+      private final @Nullable Output<String> instance;
 
-    public Input<String> getInstance() {
-        return this.instance == null ? Input.empty() : this.instance;
+    public Output<String> getInstance() {
+        return this.instance == null ? Output.empty() : this.instance;
     }
 
     @InputImport(name="members")
-      private final @Nullable Input<List<String>> members;
+      private final @Nullable Output<List<String>> members;
 
-    public Input<List<String>> getMembers() {
-        return this.members == null ? Input.empty() : this.members;
+    public Output<List<String>> getMembers() {
+        return this.members == null ? Output.empty() : this.members;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class TableIamBindingState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class TableIamBindingState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="role")
-      private final @Nullable Input<String> role;
+      private final @Nullable Output<String> role;
 
-    public Input<String> getRole() {
-        return this.role == null ? Input.empty() : this.role;
+    public Output<String> getRole() {
+        return this.role == null ? Output.empty() : this.role;
     }
 
     /**
@@ -82,20 +82,20 @@ public final class TableIamBindingState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="table")
-      private final @Nullable Input<String> table;
+      private final @Nullable Output<String> table;
 
-    public Input<String> getTable() {
-        return this.table == null ? Input.empty() : this.table;
+    public Output<String> getTable() {
+        return this.table == null ? Output.empty() : this.table;
     }
 
     public TableIamBindingState(
-        @Nullable Input<TableIamBindingConditionGetArgs> condition,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> instance,
-        @Nullable Input<List<String>> members,
-        @Nullable Input<String> project,
-        @Nullable Input<String> role,
-        @Nullable Input<String> table) {
+        @Nullable Output<TableIamBindingConditionGetArgs> condition,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> instance,
+        @Nullable Output<List<String>> members,
+        @Nullable Output<String> project,
+        @Nullable Output<String> role,
+        @Nullable Output<String> table) {
         this.condition = condition;
         this.etag = etag;
         this.instance = instance;
@@ -106,13 +106,13 @@ public final class TableIamBindingState extends io.pulumi.resources.ResourceArgs
     }
 
     private TableIamBindingState() {
-        this.condition = Input.empty();
-        this.etag = Input.empty();
-        this.instance = Input.empty();
-        this.members = Input.empty();
-        this.project = Input.empty();
-        this.role = Input.empty();
-        this.table = Input.empty();
+        this.condition = Output.empty();
+        this.etag = Output.empty();
+        this.instance = Output.empty();
+        this.members = Output.empty();
+        this.project = Output.empty();
+        this.role = Output.empty();
+        this.table = Output.empty();
     }
 
     public static Builder builder() {
@@ -124,13 +124,13 @@ public final class TableIamBindingState extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<TableIamBindingConditionGetArgs> condition;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> instance;
-        private @Nullable Input<List<String>> members;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> role;
-        private @Nullable Input<String> table;
+        private @Nullable Output<TableIamBindingConditionGetArgs> condition;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> instance;
+        private @Nullable Output<List<String>> members;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> role;
+        private @Nullable Output<String> table;
 
         public Builder() {
     	      // Empty
@@ -147,73 +147,73 @@ public final class TableIamBindingState extends io.pulumi.resources.ResourceArgs
     	      this.table = defaults.table;
         }
 
-        public Builder condition(@Nullable Input<TableIamBindingConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<TableIamBindingConditionGetArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable TableIamBindingConditionGetArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder instance(@Nullable Input<String> instance) {
+        public Builder instance(@Nullable Output<String> instance) {
             this.instance = instance;
             return this;
         }
 
         public Builder instance(@Nullable String instance) {
-            this.instance = Input.ofNullable(instance);
+            this.instance = Output.ofNullable(instance);
             return this;
         }
 
-        public Builder members(@Nullable Input<List<String>> members) {
+        public Builder members(@Nullable Output<List<String>> members) {
             this.members = members;
             return this;
         }
 
         public Builder members(@Nullable List<String> members) {
-            this.members = Input.ofNullable(members);
+            this.members = Output.ofNullable(members);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder role(@Nullable Input<String> role) {
+        public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
 
         public Builder role(@Nullable String role) {
-            this.role = Input.ofNullable(role);
+            this.role = Output.ofNullable(role);
             return this;
         }
 
-        public Builder table(@Nullable Input<String> table) {
+        public Builder table(@Nullable Output<String> table) {
             this.table = table;
             return this;
         }
 
         public Builder table(@Nullable String table) {
-            this.table = Input.ofNullable(table);
+            this.table = Output.ofNullable(table);
             return this;
         }
         public TableIamBindingState build() {

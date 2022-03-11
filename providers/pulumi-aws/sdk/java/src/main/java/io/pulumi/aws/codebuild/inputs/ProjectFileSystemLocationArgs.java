@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codebuild.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ProjectFileSystemLocationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="identifier")
-      private final @Nullable Input<String> identifier;
+      private final @Nullable Output<String> identifier;
 
-    public Input<String> getIdentifier() {
-        return this.identifier == null ? Input.empty() : this.identifier;
+    public Output<String> getIdentifier() {
+        return this.identifier == null ? Output.empty() : this.identifier;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class ProjectFileSystemLocationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ProjectFileSystemLocationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="mountOptions")
-      private final @Nullable Input<String> mountOptions;
+      private final @Nullable Output<String> mountOptions;
 
-    public Input<String> getMountOptions() {
-        return this.mountOptions == null ? Input.empty() : this.mountOptions;
+    public Output<String> getMountOptions() {
+        return this.mountOptions == null ? Output.empty() : this.mountOptions;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class ProjectFileSystemLocationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="mountPoint")
-      private final @Nullable Input<String> mountPoint;
+      private final @Nullable Output<String> mountPoint;
 
-    public Input<String> getMountPoint() {
-        return this.mountPoint == null ? Input.empty() : this.mountPoint;
+    public Output<String> getMountPoint() {
+        return this.mountPoint == null ? Output.empty() : this.mountPoint;
     }
 
     /**
@@ -63,18 +63,18 @@ public final class ProjectFileSystemLocationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public ProjectFileSystemLocationArgs(
-        @Nullable Input<String> identifier,
-        @Nullable Input<String> location,
-        @Nullable Input<String> mountOptions,
-        @Nullable Input<String> mountPoint,
-        @Nullable Input<String> type) {
+        @Nullable Output<String> identifier,
+        @Nullable Output<String> location,
+        @Nullable Output<String> mountOptions,
+        @Nullable Output<String> mountPoint,
+        @Nullable Output<String> type) {
         this.identifier = identifier;
         this.location = location;
         this.mountOptions = mountOptions;
@@ -83,11 +83,11 @@ public final class ProjectFileSystemLocationArgs extends io.pulumi.resources.Res
     }
 
     private ProjectFileSystemLocationArgs() {
-        this.identifier = Input.empty();
-        this.location = Input.empty();
-        this.mountOptions = Input.empty();
-        this.mountPoint = Input.empty();
-        this.type = Input.empty();
+        this.identifier = Output.empty();
+        this.location = Output.empty();
+        this.mountOptions = Output.empty();
+        this.mountPoint = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -99,11 +99,11 @@ public final class ProjectFileSystemLocationArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> identifier;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> mountOptions;
-        private @Nullable Input<String> mountPoint;
-        private @Nullable Input<String> type;
+        private @Nullable Output<String> identifier;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> mountOptions;
+        private @Nullable Output<String> mountPoint;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -118,53 +118,53 @@ public final class ProjectFileSystemLocationArgs extends io.pulumi.resources.Res
     	      this.type = defaults.type;
         }
 
-        public Builder identifier(@Nullable Input<String> identifier) {
+        public Builder identifier(@Nullable Output<String> identifier) {
             this.identifier = identifier;
             return this;
         }
 
         public Builder identifier(@Nullable String identifier) {
-            this.identifier = Input.ofNullable(identifier);
+            this.identifier = Output.ofNullable(identifier);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder mountOptions(@Nullable Input<String> mountOptions) {
+        public Builder mountOptions(@Nullable Output<String> mountOptions) {
             this.mountOptions = mountOptions;
             return this;
         }
 
         public Builder mountOptions(@Nullable String mountOptions) {
-            this.mountOptions = Input.ofNullable(mountOptions);
+            this.mountOptions = Output.ofNullable(mountOptions);
             return this;
         }
 
-        public Builder mountPoint(@Nullable Input<String> mountPoint) {
+        public Builder mountPoint(@Nullable Output<String> mountPoint) {
             this.mountPoint = mountPoint;
             return this;
         }
 
         public Builder mountPoint(@Nullable String mountPoint) {
-            this.mountPoint = Input.ofNullable(mountPoint);
+            this.mountPoint = Output.ofNullable(mountPoint);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public ProjectFileSystemLocationArgs build() {

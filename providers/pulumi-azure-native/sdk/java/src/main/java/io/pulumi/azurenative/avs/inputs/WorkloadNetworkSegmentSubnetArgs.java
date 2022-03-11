@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class WorkloadNetworkSegmentSubnetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="dhcpRanges")
-      private final @Nullable Input<List<String>> dhcpRanges;
+      private final @Nullable Output<List<String>> dhcpRanges;
 
-    public Input<List<String>> getDhcpRanges() {
-        return this.dhcpRanges == null ? Input.empty() : this.dhcpRanges;
+    public Output<List<String>> getDhcpRanges() {
+        return this.dhcpRanges == null ? Output.empty() : this.dhcpRanges;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class WorkloadNetworkSegmentSubnetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="gatewayAddress")
-      private final @Nullable Input<String> gatewayAddress;
+      private final @Nullable Output<String> gatewayAddress;
 
-    public Input<String> getGatewayAddress() {
-        return this.gatewayAddress == null ? Input.empty() : this.gatewayAddress;
+    public Output<String> getGatewayAddress() {
+        return this.gatewayAddress == null ? Output.empty() : this.gatewayAddress;
     }
 
     public WorkloadNetworkSegmentSubnetArgs(
-        @Nullable Input<List<String>> dhcpRanges,
-        @Nullable Input<String> gatewayAddress) {
+        @Nullable Output<List<String>> dhcpRanges,
+        @Nullable Output<String> gatewayAddress) {
         this.dhcpRanges = dhcpRanges;
         this.gatewayAddress = gatewayAddress;
     }
 
     private WorkloadNetworkSegmentSubnetArgs() {
-        this.dhcpRanges = Input.empty();
-        this.gatewayAddress = Input.empty();
+        this.dhcpRanges = Output.empty();
+        this.gatewayAddress = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class WorkloadNetworkSegmentSubnetArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> dhcpRanges;
-        private @Nullable Input<String> gatewayAddress;
+        private @Nullable Output<List<String>> dhcpRanges;
+        private @Nullable Output<String> gatewayAddress;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class WorkloadNetworkSegmentSubnetArgs extends io.pulumi.resources.
     	      this.gatewayAddress = defaults.gatewayAddress;
         }
 
-        public Builder dhcpRanges(@Nullable Input<List<String>> dhcpRanges) {
+        public Builder dhcpRanges(@Nullable Output<List<String>> dhcpRanges) {
             this.dhcpRanges = dhcpRanges;
             return this;
         }
 
         public Builder dhcpRanges(@Nullable List<String> dhcpRanges) {
-            this.dhcpRanges = Input.ofNullable(dhcpRanges);
+            this.dhcpRanges = Output.ofNullable(dhcpRanges);
             return this;
         }
 
-        public Builder gatewayAddress(@Nullable Input<String> gatewayAddress) {
+        public Builder gatewayAddress(@Nullable Output<String> gatewayAddress) {
             this.gatewayAddress = gatewayAddress;
             return this;
         }
 
         public Builder gatewayAddress(@Nullable String gatewayAddress) {
-            this.gatewayAddress = Input.ofNullable(gatewayAddress);
+            this.gatewayAddress = Output.ofNullable(gatewayAddress);
             return this;
         }
         public WorkloadNetworkSegmentSubnetArgs build() {

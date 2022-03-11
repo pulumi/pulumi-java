@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class RsaKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxModulusSize")
-      private final @Nullable Input<String> maxModulusSize;
+      private final @Nullable Output<String> maxModulusSize;
 
-    public Input<String> getMaxModulusSize() {
-        return this.maxModulusSize == null ? Input.empty() : this.maxModulusSize;
+    public Output<String> getMaxModulusSize() {
+        return this.maxModulusSize == null ? Output.empty() : this.maxModulusSize;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class RsaKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minModulusSize")
-      private final @Nullable Input<String> minModulusSize;
+      private final @Nullable Output<String> minModulusSize;
 
-    public Input<String> getMinModulusSize() {
-        return this.minModulusSize == null ? Input.empty() : this.minModulusSize;
+    public Output<String> getMinModulusSize() {
+        return this.minModulusSize == null ? Output.empty() : this.minModulusSize;
     }
 
     public RsaKeyTypeArgs(
-        @Nullable Input<String> maxModulusSize,
-        @Nullable Input<String> minModulusSize) {
+        @Nullable Output<String> maxModulusSize,
+        @Nullable Output<String> minModulusSize) {
         this.maxModulusSize = maxModulusSize;
         this.minModulusSize = minModulusSize;
     }
 
     private RsaKeyTypeArgs() {
-        this.maxModulusSize = Input.empty();
-        this.minModulusSize = Input.empty();
+        this.maxModulusSize = Output.empty();
+        this.minModulusSize = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class RsaKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> maxModulusSize;
-        private @Nullable Input<String> minModulusSize;
+        private @Nullable Output<String> maxModulusSize;
+        private @Nullable Output<String> minModulusSize;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class RsaKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.minModulusSize = defaults.minModulusSize;
         }
 
-        public Builder maxModulusSize(@Nullable Input<String> maxModulusSize) {
+        public Builder maxModulusSize(@Nullable Output<String> maxModulusSize) {
             this.maxModulusSize = maxModulusSize;
             return this;
         }
 
         public Builder maxModulusSize(@Nullable String maxModulusSize) {
-            this.maxModulusSize = Input.ofNullable(maxModulusSize);
+            this.maxModulusSize = Output.ofNullable(maxModulusSize);
             return this;
         }
 
-        public Builder minModulusSize(@Nullable Input<String> minModulusSize) {
+        public Builder minModulusSize(@Nullable Output<String> minModulusSize) {
             this.minModulusSize = minModulusSize;
             return this;
         }
 
         public Builder minModulusSize(@Nullable String minModulusSize) {
-            this.minModulusSize = Input.ofNullable(minModulusSize);
+            this.minModulusSize = Output.ofNullable(minModulusSize);
             return this;
         }
         public RsaKeyTypeArgs build() {

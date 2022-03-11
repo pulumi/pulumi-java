@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class RectangleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="height")
-      private final @Nullable Input<String> height;
+      private final @Nullable Output<String> height;
 
-    public Input<String> getHeight() {
-        return this.height == null ? Input.empty() : this.height;
+    public Output<String> getHeight() {
+        return this.height == null ? Output.empty() : this.height;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RectangleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="left")
-      private final @Nullable Input<String> left;
+      private final @Nullable Output<String> left;
 
-    public Input<String> getLeft() {
-        return this.left == null ? Input.empty() : this.left;
+    public Output<String> getLeft() {
+        return this.left == null ? Output.empty() : this.left;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class RectangleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="top")
-      private final @Nullable Input<String> top;
+      private final @Nullable Output<String> top;
 
-    public Input<String> getTop() {
-        return this.top == null ? Input.empty() : this.top;
+    public Output<String> getTop() {
+        return this.top == null ? Output.empty() : this.top;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class RectangleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="width")
-      private final @Nullable Input<String> width;
+      private final @Nullable Output<String> width;
 
-    public Input<String> getWidth() {
-        return this.width == null ? Input.empty() : this.width;
+    public Output<String> getWidth() {
+        return this.width == null ? Output.empty() : this.width;
     }
 
     public RectangleArgs(
-        @Nullable Input<String> height,
-        @Nullable Input<String> left,
-        @Nullable Input<String> top,
-        @Nullable Input<String> width) {
+        @Nullable Output<String> height,
+        @Nullable Output<String> left,
+        @Nullable Output<String> top,
+        @Nullable Output<String> width) {
         this.height = height;
         this.left = left;
         this.top = top;
@@ -74,10 +74,10 @@ public final class RectangleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RectangleArgs() {
-        this.height = Input.empty();
-        this.left = Input.empty();
-        this.top = Input.empty();
-        this.width = Input.empty();
+        this.height = Output.empty();
+        this.left = Output.empty();
+        this.top = Output.empty();
+        this.width = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class RectangleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> height;
-        private @Nullable Input<String> left;
-        private @Nullable Input<String> top;
-        private @Nullable Input<String> width;
+        private @Nullable Output<String> height;
+        private @Nullable Output<String> left;
+        private @Nullable Output<String> top;
+        private @Nullable Output<String> width;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class RectangleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.width = defaults.width;
         }
 
-        public Builder height(@Nullable Input<String> height) {
+        public Builder height(@Nullable Output<String> height) {
             this.height = height;
             return this;
         }
 
         public Builder height(@Nullable String height) {
-            this.height = Input.ofNullable(height);
+            this.height = Output.ofNullable(height);
             return this;
         }
 
-        public Builder left(@Nullable Input<String> left) {
+        public Builder left(@Nullable Output<String> left) {
             this.left = left;
             return this;
         }
 
         public Builder left(@Nullable String left) {
-            this.left = Input.ofNullable(left);
+            this.left = Output.ofNullable(left);
             return this;
         }
 
-        public Builder top(@Nullable Input<String> top) {
+        public Builder top(@Nullable Output<String> top) {
             this.top = top;
             return this;
         }
 
         public Builder top(@Nullable String top) {
-            this.top = Input.ofNullable(top);
+            this.top = Output.ofNullable(top);
             return this;
         }
 
-        public Builder width(@Nullable Input<String> width) {
+        public Builder width(@Nullable Output<String> width) {
             this.width = width;
             return this;
         }
 
         public Builder width(@Nullable String width) {
-            this.width = Input.ofNullable(width);
+            this.width = Output.ofNullable(width);
             return this;
         }
         public RectangleArgs build() {

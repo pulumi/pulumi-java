@@ -4,7 +4,7 @@
 package io.pulumi.aws.dynamodb;
 
 import io.pulumi.aws.dynamodb.inputs.GlobalTableReplicaArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class GlobalTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class GlobalTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="replicas", required=true)
-      private final Input<List<GlobalTableReplicaArgs>> replicas;
+      private final Output<List<GlobalTableReplicaArgs>> replicas;
 
-    public Input<List<GlobalTableReplicaArgs>> getReplicas() {
+    public Output<List<GlobalTableReplicaArgs>> getReplicas() {
         return this.replicas;
     }
 
     public GlobalTableArgs(
-        @Nullable Input<String> name,
-        Input<List<GlobalTableReplicaArgs>> replicas) {
+        @Nullable Output<String> name,
+        Output<List<GlobalTableReplicaArgs>> replicas) {
         this.name = name;
         this.replicas = Objects.requireNonNull(replicas, "expected parameter 'replicas' to be non-null");
     }
 
     private GlobalTableArgs() {
-        this.name = Input.empty();
-        this.replicas = Input.empty();
+        this.name = Output.empty();
+        this.replicas = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class GlobalTableArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private Input<List<GlobalTableReplicaArgs>> replicas;
+        private @Nullable Output<String> name;
+        private Output<List<GlobalTableReplicaArgs>> replicas;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class GlobalTableArgs extends io.pulumi.resources.ResourceArgs {
     	      this.replicas = defaults.replicas;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder replicas(Input<List<GlobalTableReplicaArgs>> replicas) {
+        public Builder replicas(Output<List<GlobalTableReplicaArgs>> replicas) {
             this.replicas = Objects.requireNonNull(replicas);
             return this;
         }
 
         public Builder replicas(List<GlobalTableReplicaArgs> replicas) {
-            this.replicas = Input.of(Objects.requireNonNull(replicas));
+            this.replicas = Output.of(Objects.requireNonNull(replicas));
             return this;
         }
         public GlobalTableArgs build() {

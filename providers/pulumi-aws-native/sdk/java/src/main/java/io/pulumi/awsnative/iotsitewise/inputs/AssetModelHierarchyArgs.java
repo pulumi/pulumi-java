@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotsitewise.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class AssetModelHierarchyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="childAssetModelId", required=true)
-      private final Input<String> childAssetModelId;
+      private final Output<String> childAssetModelId;
 
-    public Input<String> getChildAssetModelId() {
+    public Output<String> getChildAssetModelId() {
         return this.childAssetModelId;
     }
 
@@ -33,9 +33,9 @@ public final class AssetModelHierarchyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="logicalId", required=true)
-      private final Input<String> logicalId;
+      private final Output<String> logicalId;
 
-    public Input<String> getLogicalId() {
+    public Output<String> getLogicalId() {
         return this.logicalId;
     }
 
@@ -44,25 +44,25 @@ public final class AssetModelHierarchyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     public AssetModelHierarchyArgs(
-        Input<String> childAssetModelId,
-        Input<String> logicalId,
-        Input<String> name) {
+        Output<String> childAssetModelId,
+        Output<String> logicalId,
+        Output<String> name) {
         this.childAssetModelId = Objects.requireNonNull(childAssetModelId, "expected parameter 'childAssetModelId' to be non-null");
         this.logicalId = Objects.requireNonNull(logicalId, "expected parameter 'logicalId' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private AssetModelHierarchyArgs() {
-        this.childAssetModelId = Input.empty();
-        this.logicalId = Input.empty();
-        this.name = Input.empty();
+        this.childAssetModelId = Output.empty();
+        this.logicalId = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class AssetModelHierarchyArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> childAssetModelId;
-        private Input<String> logicalId;
-        private Input<String> name;
+        private Output<String> childAssetModelId;
+        private Output<String> logicalId;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class AssetModelHierarchyArgs extends io.pulumi.resources.ResourceA
     	      this.name = defaults.name;
         }
 
-        public Builder childAssetModelId(Input<String> childAssetModelId) {
+        public Builder childAssetModelId(Output<String> childAssetModelId) {
             this.childAssetModelId = Objects.requireNonNull(childAssetModelId);
             return this;
         }
 
         public Builder childAssetModelId(String childAssetModelId) {
-            this.childAssetModelId = Input.of(Objects.requireNonNull(childAssetModelId));
+            this.childAssetModelId = Output.of(Objects.requireNonNull(childAssetModelId));
             return this;
         }
 
-        public Builder logicalId(Input<String> logicalId) {
+        public Builder logicalId(Output<String> logicalId) {
             this.logicalId = Objects.requireNonNull(logicalId);
             return this;
         }
 
         public Builder logicalId(String logicalId) {
-            this.logicalId = Input.of(Objects.requireNonNull(logicalId));
+            this.logicalId = Output.of(Objects.requireNonNull(logicalId));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public AssetModelHierarchyArgs build() {

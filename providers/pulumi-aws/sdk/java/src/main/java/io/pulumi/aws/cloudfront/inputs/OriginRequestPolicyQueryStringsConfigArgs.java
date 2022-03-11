@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.OriginRequestPolicyQueryStringsConfigQueryStringsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,29 +16,29 @@ public final class OriginRequestPolicyQueryStringsConfigArgs extends io.pulumi.r
     public static final OriginRequestPolicyQueryStringsConfigArgs Empty = new OriginRequestPolicyQueryStringsConfigArgs();
 
     @InputImport(name="queryStringBehavior", required=true)
-      private final Input<String> queryStringBehavior;
+      private final Output<String> queryStringBehavior;
 
-    public Input<String> getQueryStringBehavior() {
+    public Output<String> getQueryStringBehavior() {
         return this.queryStringBehavior;
     }
 
     @InputImport(name="queryStrings")
-      private final @Nullable Input<OriginRequestPolicyQueryStringsConfigQueryStringsArgs> queryStrings;
+      private final @Nullable Output<OriginRequestPolicyQueryStringsConfigQueryStringsArgs> queryStrings;
 
-    public Input<OriginRequestPolicyQueryStringsConfigQueryStringsArgs> getQueryStrings() {
-        return this.queryStrings == null ? Input.empty() : this.queryStrings;
+    public Output<OriginRequestPolicyQueryStringsConfigQueryStringsArgs> getQueryStrings() {
+        return this.queryStrings == null ? Output.empty() : this.queryStrings;
     }
 
     public OriginRequestPolicyQueryStringsConfigArgs(
-        Input<String> queryStringBehavior,
-        @Nullable Input<OriginRequestPolicyQueryStringsConfigQueryStringsArgs> queryStrings) {
+        Output<String> queryStringBehavior,
+        @Nullable Output<OriginRequestPolicyQueryStringsConfigQueryStringsArgs> queryStrings) {
         this.queryStringBehavior = Objects.requireNonNull(queryStringBehavior, "expected parameter 'queryStringBehavior' to be non-null");
         this.queryStrings = queryStrings;
     }
 
     private OriginRequestPolicyQueryStringsConfigArgs() {
-        this.queryStringBehavior = Input.empty();
-        this.queryStrings = Input.empty();
+        this.queryStringBehavior = Output.empty();
+        this.queryStrings = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class OriginRequestPolicyQueryStringsConfigArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private Input<String> queryStringBehavior;
-        private @Nullable Input<OriginRequestPolicyQueryStringsConfigQueryStringsArgs> queryStrings;
+        private Output<String> queryStringBehavior;
+        private @Nullable Output<OriginRequestPolicyQueryStringsConfigQueryStringsArgs> queryStrings;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class OriginRequestPolicyQueryStringsConfigArgs extends io.pulumi.r
     	      this.queryStrings = defaults.queryStrings;
         }
 
-        public Builder queryStringBehavior(Input<String> queryStringBehavior) {
+        public Builder queryStringBehavior(Output<String> queryStringBehavior) {
             this.queryStringBehavior = Objects.requireNonNull(queryStringBehavior);
             return this;
         }
 
         public Builder queryStringBehavior(String queryStringBehavior) {
-            this.queryStringBehavior = Input.of(Objects.requireNonNull(queryStringBehavior));
+            this.queryStringBehavior = Output.of(Objects.requireNonNull(queryStringBehavior));
             return this;
         }
 
-        public Builder queryStrings(@Nullable Input<OriginRequestPolicyQueryStringsConfigQueryStringsArgs> queryStrings) {
+        public Builder queryStrings(@Nullable Output<OriginRequestPolicyQueryStringsConfigQueryStringsArgs> queryStrings) {
             this.queryStrings = queryStrings;
             return this;
         }
 
         public Builder queryStrings(@Nullable OriginRequestPolicyQueryStringsConfigQueryStringsArgs queryStrings) {
-            this.queryStrings = Input.ofNullable(queryStrings);
+            this.queryStrings = Output.ofNullable(queryStrings);
             return this;
         }
         public OriginRequestPolicyQueryStringsConfigArgs build() {

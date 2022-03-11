@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dns;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dns.inputs.PolicyAlternativeNameServerConfigArgs;
 import io.pulumi.gcp.dns.inputs.PolicyNetworkArgs;
@@ -26,10 +26,10 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alternativeNameServerConfig")
-      private final @Nullable Input<PolicyAlternativeNameServerConfigArgs> alternativeNameServerConfig;
+      private final @Nullable Output<PolicyAlternativeNameServerConfigArgs> alternativeNameServerConfig;
 
-    public Input<PolicyAlternativeNameServerConfigArgs> getAlternativeNameServerConfig() {
-        return this.alternativeNameServerConfig == null ? Input.empty() : this.alternativeNameServerConfig;
+    public Output<PolicyAlternativeNameServerConfigArgs> getAlternativeNameServerConfig() {
+        return this.alternativeNameServerConfig == null ? Output.empty() : this.alternativeNameServerConfig;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableInboundForwarding")
-      private final @Nullable Input<Boolean> enableInboundForwarding;
+      private final @Nullable Output<Boolean> enableInboundForwarding;
 
-    public Input<Boolean> getEnableInboundForwarding() {
-        return this.enableInboundForwarding == null ? Input.empty() : this.enableInboundForwarding;
+    public Output<Boolean> getEnableInboundForwarding() {
+        return this.enableInboundForwarding == null ? Output.empty() : this.enableInboundForwarding;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableLogging")
-      private final @Nullable Input<Boolean> enableLogging;
+      private final @Nullable Output<Boolean> enableLogging;
 
-    public Input<Boolean> getEnableLogging() {
-        return this.enableLogging == null ? Input.empty() : this.enableLogging;
+    public Output<Boolean> getEnableLogging() {
+        return this.enableLogging == null ? Output.empty() : this.enableLogging;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networks")
-      private final @Nullable Input<List<PolicyNetworkArgs>> networks;
+      private final @Nullable Output<List<PolicyNetworkArgs>> networks;
 
-    public Input<List<PolicyNetworkArgs>> getNetworks() {
-        return this.networks == null ? Input.empty() : this.networks;
+    public Output<List<PolicyNetworkArgs>> getNetworks() {
+        return this.networks == null ? Output.empty() : this.networks;
     }
 
     /**
@@ -98,20 +98,20 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public PolicyArgs(
-        @Nullable Input<PolicyAlternativeNameServerConfigArgs> alternativeNameServerConfig,
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> enableInboundForwarding,
-        @Nullable Input<Boolean> enableLogging,
-        @Nullable Input<String> name,
-        @Nullable Input<List<PolicyNetworkArgs>> networks,
-        @Nullable Input<String> project) {
+        @Nullable Output<PolicyAlternativeNameServerConfigArgs> alternativeNameServerConfig,
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> enableInboundForwarding,
+        @Nullable Output<Boolean> enableLogging,
+        @Nullable Output<String> name,
+        @Nullable Output<List<PolicyNetworkArgs>> networks,
+        @Nullable Output<String> project) {
         this.alternativeNameServerConfig = alternativeNameServerConfig;
         this.description = description;
         this.enableInboundForwarding = enableInboundForwarding;
@@ -122,13 +122,13 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PolicyArgs() {
-        this.alternativeNameServerConfig = Input.empty();
-        this.description = Input.empty();
-        this.enableInboundForwarding = Input.empty();
-        this.enableLogging = Input.empty();
-        this.name = Input.empty();
-        this.networks = Input.empty();
-        this.project = Input.empty();
+        this.alternativeNameServerConfig = Output.empty();
+        this.description = Output.empty();
+        this.enableInboundForwarding = Output.empty();
+        this.enableLogging = Output.empty();
+        this.name = Output.empty();
+        this.networks = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -140,13 +140,13 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<PolicyAlternativeNameServerConfigArgs> alternativeNameServerConfig;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> enableInboundForwarding;
-        private @Nullable Input<Boolean> enableLogging;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<PolicyNetworkArgs>> networks;
-        private @Nullable Input<String> project;
+        private @Nullable Output<PolicyAlternativeNameServerConfigArgs> alternativeNameServerConfig;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> enableInboundForwarding;
+        private @Nullable Output<Boolean> enableLogging;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<PolicyNetworkArgs>> networks;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -163,73 +163,73 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder alternativeNameServerConfig(@Nullable Input<PolicyAlternativeNameServerConfigArgs> alternativeNameServerConfig) {
+        public Builder alternativeNameServerConfig(@Nullable Output<PolicyAlternativeNameServerConfigArgs> alternativeNameServerConfig) {
             this.alternativeNameServerConfig = alternativeNameServerConfig;
             return this;
         }
 
         public Builder alternativeNameServerConfig(@Nullable PolicyAlternativeNameServerConfigArgs alternativeNameServerConfig) {
-            this.alternativeNameServerConfig = Input.ofNullable(alternativeNameServerConfig);
+            this.alternativeNameServerConfig = Output.ofNullable(alternativeNameServerConfig);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder enableInboundForwarding(@Nullable Input<Boolean> enableInboundForwarding) {
+        public Builder enableInboundForwarding(@Nullable Output<Boolean> enableInboundForwarding) {
             this.enableInboundForwarding = enableInboundForwarding;
             return this;
         }
 
         public Builder enableInboundForwarding(@Nullable Boolean enableInboundForwarding) {
-            this.enableInboundForwarding = Input.ofNullable(enableInboundForwarding);
+            this.enableInboundForwarding = Output.ofNullable(enableInboundForwarding);
             return this;
         }
 
-        public Builder enableLogging(@Nullable Input<Boolean> enableLogging) {
+        public Builder enableLogging(@Nullable Output<Boolean> enableLogging) {
             this.enableLogging = enableLogging;
             return this;
         }
 
         public Builder enableLogging(@Nullable Boolean enableLogging) {
-            this.enableLogging = Input.ofNullable(enableLogging);
+            this.enableLogging = Output.ofNullable(enableLogging);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder networks(@Nullable Input<List<PolicyNetworkArgs>> networks) {
+        public Builder networks(@Nullable Output<List<PolicyNetworkArgs>> networks) {
             this.networks = networks;
             return this;
         }
 
         public Builder networks(@Nullable List<PolicyNetworkArgs> networks) {
-            this.networks = Input.ofNullable(networks);
+            this.networks = Output.ofNullable(networks);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public PolicyArgs build() {

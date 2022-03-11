@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fingerprint")
-      private final @Nullable Input<String> fingerprint;
+      private final @Nullable Output<String> fingerprint;
 
-    public Input<String> getFingerprint() {
-        return this.fingerprint == null ? Input.empty() : this.fingerprint;
+    public Output<String> getFingerprint() {
+        return this.fingerprint == null ? Output.empty() : this.fingerprint;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyName")
-      private final @Nullable Input<String> keyName;
+      private final @Nullable Output<String> keyName;
 
-    public Input<String> getKeyName() {
-        return this.keyName == null ? Input.empty() : this.keyName;
+    public Output<String> getKeyName() {
+        return this.keyName == null ? Output.empty() : this.keyName;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyNamePrefix")
-      private final @Nullable Input<String> keyNamePrefix;
+      private final @Nullable Output<String> keyNamePrefix;
 
-    public Input<String> getKeyNamePrefix() {
-        return this.keyNamePrefix == null ? Input.empty() : this.keyNamePrefix;
+    public Output<String> getKeyNamePrefix() {
+        return this.keyNamePrefix == null ? Output.empty() : this.keyNamePrefix;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyPairId")
-      private final @Nullable Input<String> keyPairId;
+      private final @Nullable Output<String> keyPairId;
 
-    public Input<String> getKeyPairId() {
-        return this.keyPairId == null ? Input.empty() : this.keyPairId;
+    public Output<String> getKeyPairId() {
+        return this.keyPairId == null ? Output.empty() : this.keyPairId;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicKey")
-      private final @Nullable Input<String> publicKey;
+      private final @Nullable Output<String> publicKey;
 
-    public Input<String> getPublicKey() {
-        return this.publicKey == null ? Input.empty() : this.publicKey;
+    public Output<String> getPublicKey() {
+        return this.publicKey == null ? Output.empty() : this.publicKey;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -97,21 +97,21 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public KeyPairState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> fingerprint,
-        @Nullable Input<String> keyName,
-        @Nullable Input<String> keyNamePrefix,
-        @Nullable Input<String> keyPairId,
-        @Nullable Input<String> publicKey,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> fingerprint,
+        @Nullable Output<String> keyName,
+        @Nullable Output<String> keyNamePrefix,
+        @Nullable Output<String> keyPairId,
+        @Nullable Output<String> publicKey,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
         this.fingerprint = fingerprint;
         this.keyName = keyName;
@@ -123,14 +123,14 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
     }
 
     private KeyPairState() {
-        this.arn = Input.empty();
-        this.fingerprint = Input.empty();
-        this.keyName = Input.empty();
-        this.keyNamePrefix = Input.empty();
-        this.keyPairId = Input.empty();
-        this.publicKey = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.arn = Output.empty();
+        this.fingerprint = Output.empty();
+        this.keyName = Output.empty();
+        this.keyNamePrefix = Output.empty();
+        this.keyPairId = Output.empty();
+        this.publicKey = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -142,14 +142,14 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> fingerprint;
-        private @Nullable Input<String> keyName;
-        private @Nullable Input<String> keyNamePrefix;
-        private @Nullable Input<String> keyPairId;
-        private @Nullable Input<String> publicKey;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> fingerprint;
+        private @Nullable Output<String> keyName;
+        private @Nullable Output<String> keyNamePrefix;
+        private @Nullable Output<String> keyPairId;
+        private @Nullable Output<String> publicKey;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -167,83 +167,83 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder fingerprint(@Nullable Input<String> fingerprint) {
+        public Builder fingerprint(@Nullable Output<String> fingerprint) {
             this.fingerprint = fingerprint;
             return this;
         }
 
         public Builder fingerprint(@Nullable String fingerprint) {
-            this.fingerprint = Input.ofNullable(fingerprint);
+            this.fingerprint = Output.ofNullable(fingerprint);
             return this;
         }
 
-        public Builder keyName(@Nullable Input<String> keyName) {
+        public Builder keyName(@Nullable Output<String> keyName) {
             this.keyName = keyName;
             return this;
         }
 
         public Builder keyName(@Nullable String keyName) {
-            this.keyName = Input.ofNullable(keyName);
+            this.keyName = Output.ofNullable(keyName);
             return this;
         }
 
-        public Builder keyNamePrefix(@Nullable Input<String> keyNamePrefix) {
+        public Builder keyNamePrefix(@Nullable Output<String> keyNamePrefix) {
             this.keyNamePrefix = keyNamePrefix;
             return this;
         }
 
         public Builder keyNamePrefix(@Nullable String keyNamePrefix) {
-            this.keyNamePrefix = Input.ofNullable(keyNamePrefix);
+            this.keyNamePrefix = Output.ofNullable(keyNamePrefix);
             return this;
         }
 
-        public Builder keyPairId(@Nullable Input<String> keyPairId) {
+        public Builder keyPairId(@Nullable Output<String> keyPairId) {
             this.keyPairId = keyPairId;
             return this;
         }
 
         public Builder keyPairId(@Nullable String keyPairId) {
-            this.keyPairId = Input.ofNullable(keyPairId);
+            this.keyPairId = Output.ofNullable(keyPairId);
             return this;
         }
 
-        public Builder publicKey(@Nullable Input<String> publicKey) {
+        public Builder publicKey(@Nullable Output<String> publicKey) {
             this.publicKey = publicKey;
             return this;
         }
 
         public Builder publicKey(@Nullable String publicKey) {
-            this.publicKey = Input.ofNullable(publicKey);
+            this.publicKey = Output.ofNullable(publicKey);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public KeyPairState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dataprotection.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class AzureBackupParamsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="backupType", required=true)
-      private final Input<String> backupType;
+      private final Output<String> backupType;
 
-    public Input<String> getBackupType() {
+    public Output<String> getBackupType() {
         return this.backupType;
     }
 
@@ -34,22 +34,22 @@ public final class AzureBackupParamsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="objectType", required=true)
-      private final Input<String> objectType;
+      private final Output<String> objectType;
 
-    public Input<String> getObjectType() {
+    public Output<String> getObjectType() {
         return this.objectType;
     }
 
     public AzureBackupParamsArgs(
-        Input<String> backupType,
-        Input<String> objectType) {
+        Output<String> backupType,
+        Output<String> objectType) {
         this.backupType = Objects.requireNonNull(backupType, "expected parameter 'backupType' to be non-null");
         this.objectType = Objects.requireNonNull(objectType, "expected parameter 'objectType' to be non-null");
     }
 
     private AzureBackupParamsArgs() {
-        this.backupType = Input.empty();
-        this.objectType = Input.empty();
+        this.backupType = Output.empty();
+        this.objectType = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class AzureBackupParamsArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> backupType;
-        private Input<String> objectType;
+        private Output<String> backupType;
+        private Output<String> objectType;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class AzureBackupParamsArgs extends io.pulumi.resources.ResourceArg
     	      this.objectType = defaults.objectType;
         }
 
-        public Builder backupType(Input<String> backupType) {
+        public Builder backupType(Output<String> backupType) {
             this.backupType = Objects.requireNonNull(backupType);
             return this;
         }
 
         public Builder backupType(String backupType) {
-            this.backupType = Input.of(Objects.requireNonNull(backupType));
+            this.backupType = Output.of(Objects.requireNonNull(backupType));
             return this;
         }
 
-        public Builder objectType(Input<String> objectType) {
+        public Builder objectType(Output<String> objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
 
         public Builder objectType(String objectType) {
-            this.objectType = Input.of(Objects.requireNonNull(objectType));
+            this.objectType = Output.of(Objects.requireNonNull(objectType));
             return this;
         }
         public AzureBackupParamsArgs build() {

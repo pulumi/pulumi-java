@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ram.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class PrincipalAssociationState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="principal")
-      private final @Nullable Input<String> principal;
+      private final @Nullable Output<String> principal;
 
-    public Input<String> getPrincipal() {
-        return this.principal == null ? Input.empty() : this.principal;
+    public Output<String> getPrincipal() {
+        return this.principal == null ? Output.empty() : this.principal;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class PrincipalAssociationState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceShareArn")
-      private final @Nullable Input<String> resourceShareArn;
+      private final @Nullable Output<String> resourceShareArn;
 
-    public Input<String> getResourceShareArn() {
-        return this.resourceShareArn == null ? Input.empty() : this.resourceShareArn;
+    public Output<String> getResourceShareArn() {
+        return this.resourceShareArn == null ? Output.empty() : this.resourceShareArn;
     }
 
     public PrincipalAssociationState(
-        @Nullable Input<String> principal,
-        @Nullable Input<String> resourceShareArn) {
+        @Nullable Output<String> principal,
+        @Nullable Output<String> resourceShareArn) {
         this.principal = principal;
         this.resourceShareArn = resourceShareArn;
     }
 
     private PrincipalAssociationState() {
-        this.principal = Input.empty();
-        this.resourceShareArn = Input.empty();
+        this.principal = Output.empty();
+        this.resourceShareArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class PrincipalAssociationState extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> principal;
-        private @Nullable Input<String> resourceShareArn;
+        private @Nullable Output<String> principal;
+        private @Nullable Output<String> resourceShareArn;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class PrincipalAssociationState extends io.pulumi.resources.Resourc
     	      this.resourceShareArn = defaults.resourceShareArn;
         }
 
-        public Builder principal(@Nullable Input<String> principal) {
+        public Builder principal(@Nullable Output<String> principal) {
             this.principal = principal;
             return this;
         }
 
         public Builder principal(@Nullable String principal) {
-            this.principal = Input.ofNullable(principal);
+            this.principal = Output.ofNullable(principal);
             return this;
         }
 
-        public Builder resourceShareArn(@Nullable Input<String> resourceShareArn) {
+        public Builder resourceShareArn(@Nullable Output<String> resourceShareArn) {
             this.resourceShareArn = resourceShareArn;
             return this;
         }
 
         public Builder resourceShareArn(@Nullable String resourceShareArn) {
-            this.resourceShareArn = Input.ofNullable(resourceShareArn);
+            this.resourceShareArn = Output.ofNullable(resourceShareArn);
             return this;
         }
         public PrincipalAssociationState build() {

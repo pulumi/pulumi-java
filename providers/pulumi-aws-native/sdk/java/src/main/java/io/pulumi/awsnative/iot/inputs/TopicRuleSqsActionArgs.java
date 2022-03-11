@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -16,39 +16,39 @@ public final class TopicRuleSqsActionArgs extends io.pulumi.resources.ResourceAr
     public static final TopicRuleSqsActionArgs Empty = new TopicRuleSqsActionArgs();
 
     @InputImport(name="queueUrl", required=true)
-      private final Input<String> queueUrl;
+      private final Output<String> queueUrl;
 
-    public Input<String> getQueueUrl() {
+    public Output<String> getQueueUrl() {
         return this.queueUrl;
     }
 
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
     @InputImport(name="useBase64")
-      private final @Nullable Input<Boolean> useBase64;
+      private final @Nullable Output<Boolean> useBase64;
 
-    public Input<Boolean> getUseBase64() {
-        return this.useBase64 == null ? Input.empty() : this.useBase64;
+    public Output<Boolean> getUseBase64() {
+        return this.useBase64 == null ? Output.empty() : this.useBase64;
     }
 
     public TopicRuleSqsActionArgs(
-        Input<String> queueUrl,
-        Input<String> roleArn,
-        @Nullable Input<Boolean> useBase64) {
+        Output<String> queueUrl,
+        Output<String> roleArn,
+        @Nullable Output<Boolean> useBase64) {
         this.queueUrl = Objects.requireNonNull(queueUrl, "expected parameter 'queueUrl' to be non-null");
         this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
         this.useBase64 = useBase64;
     }
 
     private TopicRuleSqsActionArgs() {
-        this.queueUrl = Input.empty();
-        this.roleArn = Input.empty();
-        this.useBase64 = Input.empty();
+        this.queueUrl = Output.empty();
+        this.roleArn = Output.empty();
+        this.useBase64 = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,9 +60,9 @@ public final class TopicRuleSqsActionArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> queueUrl;
-        private Input<String> roleArn;
-        private @Nullable Input<Boolean> useBase64;
+        private Output<String> queueUrl;
+        private Output<String> roleArn;
+        private @Nullable Output<Boolean> useBase64;
 
         public Builder() {
     	      // Empty
@@ -75,33 +75,33 @@ public final class TopicRuleSqsActionArgs extends io.pulumi.resources.ResourceAr
     	      this.useBase64 = defaults.useBase64;
         }
 
-        public Builder queueUrl(Input<String> queueUrl) {
+        public Builder queueUrl(Output<String> queueUrl) {
             this.queueUrl = Objects.requireNonNull(queueUrl);
             return this;
         }
 
         public Builder queueUrl(String queueUrl) {
-            this.queueUrl = Input.of(Objects.requireNonNull(queueUrl));
+            this.queueUrl = Output.of(Objects.requireNonNull(queueUrl));
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder useBase64(@Nullable Input<Boolean> useBase64) {
+        public Builder useBase64(@Nullable Output<Boolean> useBase64) {
             this.useBase64 = useBase64;
             return this;
         }
 
         public Builder useBase64(@Nullable Boolean useBase64) {
-            this.useBase64 = Input.ofNullable(useBase64);
+            this.useBase64 = Output.ofNullable(useBase64);
             return this;
         }
         public TopicRuleSqsActionArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codebuild.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class ProjectSecondaryArtifactGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="artifactIdentifier", required=true)
-      private final Input<String> artifactIdentifier;
+      private final Output<String> artifactIdentifier;
 
-    public Input<String> getArtifactIdentifier() {
+    public Output<String> getArtifactIdentifier() {
         return this.artifactIdentifier;
     }
 
@@ -31,10 +31,10 @@ public final class ProjectSecondaryArtifactGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="bucketOwnerAccess")
-      private final @Nullable Input<String> bucketOwnerAccess;
+      private final @Nullable Output<String> bucketOwnerAccess;
 
-    public Input<String> getBucketOwnerAccess() {
-        return this.bucketOwnerAccess == null ? Input.empty() : this.bucketOwnerAccess;
+    public Output<String> getBucketOwnerAccess() {
+        return this.bucketOwnerAccess == null ? Output.empty() : this.bucketOwnerAccess;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ProjectSecondaryArtifactGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="encryptionDisabled")
-      private final @Nullable Input<Boolean> encryptionDisabled;
+      private final @Nullable Output<Boolean> encryptionDisabled;
 
-    public Input<Boolean> getEncryptionDisabled() {
-        return this.encryptionDisabled == null ? Input.empty() : this.encryptionDisabled;
+    public Output<Boolean> getEncryptionDisabled() {
+        return this.encryptionDisabled == null ? Output.empty() : this.encryptionDisabled;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ProjectSecondaryArtifactGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ProjectSecondaryArtifactGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class ProjectSecondaryArtifactGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="namespaceType")
-      private final @Nullable Input<String> namespaceType;
+      private final @Nullable Output<String> namespaceType;
 
-    public Input<String> getNamespaceType() {
-        return this.namespaceType == null ? Input.empty() : this.namespaceType;
+    public Output<String> getNamespaceType() {
+        return this.namespaceType == null ? Output.empty() : this.namespaceType;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class ProjectSecondaryArtifactGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="overrideArtifactName")
-      private final @Nullable Input<Boolean> overrideArtifactName;
+      private final @Nullable Output<Boolean> overrideArtifactName;
 
-    public Input<Boolean> getOverrideArtifactName() {
-        return this.overrideArtifactName == null ? Input.empty() : this.overrideArtifactName;
+    public Output<Boolean> getOverrideArtifactName() {
+        return this.overrideArtifactName == null ? Output.empty() : this.overrideArtifactName;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class ProjectSecondaryArtifactGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="packaging")
-      private final @Nullable Input<String> packaging;
+      private final @Nullable Output<String> packaging;
 
-    public Input<String> getPackaging() {
-        return this.packaging == null ? Input.empty() : this.packaging;
+    public Output<String> getPackaging() {
+        return this.packaging == null ? Output.empty() : this.packaging;
     }
 
     /**
@@ -108,10 +108,10 @@ public final class ProjectSecondaryArtifactGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     /**
@@ -119,23 +119,23 @@ public final class ProjectSecondaryArtifactGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public ProjectSecondaryArtifactGetArgs(
-        Input<String> artifactIdentifier,
-        @Nullable Input<String> bucketOwnerAccess,
-        @Nullable Input<Boolean> encryptionDisabled,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> namespaceType,
-        @Nullable Input<Boolean> overrideArtifactName,
-        @Nullable Input<String> packaging,
-        @Nullable Input<String> path,
-        Input<String> type) {
+        Output<String> artifactIdentifier,
+        @Nullable Output<String> bucketOwnerAccess,
+        @Nullable Output<Boolean> encryptionDisabled,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> namespaceType,
+        @Nullable Output<Boolean> overrideArtifactName,
+        @Nullable Output<String> packaging,
+        @Nullable Output<String> path,
+        Output<String> type) {
         this.artifactIdentifier = Objects.requireNonNull(artifactIdentifier, "expected parameter 'artifactIdentifier' to be non-null");
         this.bucketOwnerAccess = bucketOwnerAccess;
         this.encryptionDisabled = encryptionDisabled;
@@ -149,16 +149,16 @@ public final class ProjectSecondaryArtifactGetArgs extends io.pulumi.resources.R
     }
 
     private ProjectSecondaryArtifactGetArgs() {
-        this.artifactIdentifier = Input.empty();
-        this.bucketOwnerAccess = Input.empty();
-        this.encryptionDisabled = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.namespaceType = Input.empty();
-        this.overrideArtifactName = Input.empty();
-        this.packaging = Input.empty();
-        this.path = Input.empty();
-        this.type = Input.empty();
+        this.artifactIdentifier = Output.empty();
+        this.bucketOwnerAccess = Output.empty();
+        this.encryptionDisabled = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.namespaceType = Output.empty();
+        this.overrideArtifactName = Output.empty();
+        this.packaging = Output.empty();
+        this.path = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -170,16 +170,16 @@ public final class ProjectSecondaryArtifactGetArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<String> artifactIdentifier;
-        private @Nullable Input<String> bucketOwnerAccess;
-        private @Nullable Input<Boolean> encryptionDisabled;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> namespaceType;
-        private @Nullable Input<Boolean> overrideArtifactName;
-        private @Nullable Input<String> packaging;
-        private @Nullable Input<String> path;
-        private Input<String> type;
+        private Output<String> artifactIdentifier;
+        private @Nullable Output<String> bucketOwnerAccess;
+        private @Nullable Output<Boolean> encryptionDisabled;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> namespaceType;
+        private @Nullable Output<Boolean> overrideArtifactName;
+        private @Nullable Output<String> packaging;
+        private @Nullable Output<String> path;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -199,103 +199,103 @@ public final class ProjectSecondaryArtifactGetArgs extends io.pulumi.resources.R
     	      this.type = defaults.type;
         }
 
-        public Builder artifactIdentifier(Input<String> artifactIdentifier) {
+        public Builder artifactIdentifier(Output<String> artifactIdentifier) {
             this.artifactIdentifier = Objects.requireNonNull(artifactIdentifier);
             return this;
         }
 
         public Builder artifactIdentifier(String artifactIdentifier) {
-            this.artifactIdentifier = Input.of(Objects.requireNonNull(artifactIdentifier));
+            this.artifactIdentifier = Output.of(Objects.requireNonNull(artifactIdentifier));
             return this;
         }
 
-        public Builder bucketOwnerAccess(@Nullable Input<String> bucketOwnerAccess) {
+        public Builder bucketOwnerAccess(@Nullable Output<String> bucketOwnerAccess) {
             this.bucketOwnerAccess = bucketOwnerAccess;
             return this;
         }
 
         public Builder bucketOwnerAccess(@Nullable String bucketOwnerAccess) {
-            this.bucketOwnerAccess = Input.ofNullable(bucketOwnerAccess);
+            this.bucketOwnerAccess = Output.ofNullable(bucketOwnerAccess);
             return this;
         }
 
-        public Builder encryptionDisabled(@Nullable Input<Boolean> encryptionDisabled) {
+        public Builder encryptionDisabled(@Nullable Output<Boolean> encryptionDisabled) {
             this.encryptionDisabled = encryptionDisabled;
             return this;
         }
 
         public Builder encryptionDisabled(@Nullable Boolean encryptionDisabled) {
-            this.encryptionDisabled = Input.ofNullable(encryptionDisabled);
+            this.encryptionDisabled = Output.ofNullable(encryptionDisabled);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namespaceType(@Nullable Input<String> namespaceType) {
+        public Builder namespaceType(@Nullable Output<String> namespaceType) {
             this.namespaceType = namespaceType;
             return this;
         }
 
         public Builder namespaceType(@Nullable String namespaceType) {
-            this.namespaceType = Input.ofNullable(namespaceType);
+            this.namespaceType = Output.ofNullable(namespaceType);
             return this;
         }
 
-        public Builder overrideArtifactName(@Nullable Input<Boolean> overrideArtifactName) {
+        public Builder overrideArtifactName(@Nullable Output<Boolean> overrideArtifactName) {
             this.overrideArtifactName = overrideArtifactName;
             return this;
         }
 
         public Builder overrideArtifactName(@Nullable Boolean overrideArtifactName) {
-            this.overrideArtifactName = Input.ofNullable(overrideArtifactName);
+            this.overrideArtifactName = Output.ofNullable(overrideArtifactName);
             return this;
         }
 
-        public Builder packaging(@Nullable Input<String> packaging) {
+        public Builder packaging(@Nullable Output<String> packaging) {
             this.packaging = packaging;
             return this;
         }
 
         public Builder packaging(@Nullable String packaging) {
-            this.packaging = Input.ofNullable(packaging);
+            this.packaging = Output.ofNullable(packaging);
             return this;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ProjectSecondaryArtifactGetArgs build() {

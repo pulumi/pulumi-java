@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.BackendBucketCdnPolicyArgs;
 import java.lang.Boolean;
@@ -22,9 +22,9 @@ public final class BackendBucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bucketName", required=true)
-      private final Input<String> bucketName;
+      private final Output<String> bucketName;
 
-    public Input<String> getBucketName() {
+    public Output<String> getBucketName() {
         return this.bucketName;
     }
 
@@ -34,10 +34,10 @@ public final class BackendBucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cdnPolicy")
-      private final @Nullable Input<BackendBucketCdnPolicyArgs> cdnPolicy;
+      private final @Nullable Output<BackendBucketCdnPolicyArgs> cdnPolicy;
 
-    public Input<BackendBucketCdnPolicyArgs> getCdnPolicy() {
-        return this.cdnPolicy == null ? Input.empty() : this.cdnPolicy;
+    public Output<BackendBucketCdnPolicyArgs> getCdnPolicy() {
+        return this.cdnPolicy == null ? Output.empty() : this.cdnPolicy;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class BackendBucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customResponseHeaders")
-      private final @Nullable Input<List<String>> customResponseHeaders;
+      private final @Nullable Output<List<String>> customResponseHeaders;
 
-    public Input<List<String>> getCustomResponseHeaders() {
-        return this.customResponseHeaders == null ? Input.empty() : this.customResponseHeaders;
+    public Output<List<String>> getCustomResponseHeaders() {
+        return this.customResponseHeaders == null ? Output.empty() : this.customResponseHeaders;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class BackendBucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class BackendBucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableCdn")
-      private final @Nullable Input<Boolean> enableCdn;
+      private final @Nullable Output<Boolean> enableCdn;
 
-    public Input<Boolean> getEnableCdn() {
-        return this.enableCdn == null ? Input.empty() : this.enableCdn;
+    public Output<Boolean> getEnableCdn() {
+        return this.enableCdn == null ? Output.empty() : this.enableCdn;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class BackendBucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -97,20 +97,20 @@ public final class BackendBucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public BackendBucketArgs(
-        Input<String> bucketName,
-        @Nullable Input<BackendBucketCdnPolicyArgs> cdnPolicy,
-        @Nullable Input<List<String>> customResponseHeaders,
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> enableCdn,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project) {
+        Output<String> bucketName,
+        @Nullable Output<BackendBucketCdnPolicyArgs> cdnPolicy,
+        @Nullable Output<List<String>> customResponseHeaders,
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> enableCdn,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project) {
         this.bucketName = Objects.requireNonNull(bucketName, "expected parameter 'bucketName' to be non-null");
         this.cdnPolicy = cdnPolicy;
         this.customResponseHeaders = customResponseHeaders;
@@ -121,13 +121,13 @@ public final class BackendBucketArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BackendBucketArgs() {
-        this.bucketName = Input.empty();
-        this.cdnPolicy = Input.empty();
-        this.customResponseHeaders = Input.empty();
-        this.description = Input.empty();
-        this.enableCdn = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
+        this.bucketName = Output.empty();
+        this.cdnPolicy = Output.empty();
+        this.customResponseHeaders = Output.empty();
+        this.description = Output.empty();
+        this.enableCdn = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -139,13 +139,13 @@ public final class BackendBucketArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> bucketName;
-        private @Nullable Input<BackendBucketCdnPolicyArgs> cdnPolicy;
-        private @Nullable Input<List<String>> customResponseHeaders;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> enableCdn;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
+        private Output<String> bucketName;
+        private @Nullable Output<BackendBucketCdnPolicyArgs> cdnPolicy;
+        private @Nullable Output<List<String>> customResponseHeaders;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> enableCdn;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -162,73 +162,73 @@ public final class BackendBucketArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder bucketName(Input<String> bucketName) {
+        public Builder bucketName(Output<String> bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
         public Builder bucketName(String bucketName) {
-            this.bucketName = Input.of(Objects.requireNonNull(bucketName));
+            this.bucketName = Output.of(Objects.requireNonNull(bucketName));
             return this;
         }
 
-        public Builder cdnPolicy(@Nullable Input<BackendBucketCdnPolicyArgs> cdnPolicy) {
+        public Builder cdnPolicy(@Nullable Output<BackendBucketCdnPolicyArgs> cdnPolicy) {
             this.cdnPolicy = cdnPolicy;
             return this;
         }
 
         public Builder cdnPolicy(@Nullable BackendBucketCdnPolicyArgs cdnPolicy) {
-            this.cdnPolicy = Input.ofNullable(cdnPolicy);
+            this.cdnPolicy = Output.ofNullable(cdnPolicy);
             return this;
         }
 
-        public Builder customResponseHeaders(@Nullable Input<List<String>> customResponseHeaders) {
+        public Builder customResponseHeaders(@Nullable Output<List<String>> customResponseHeaders) {
             this.customResponseHeaders = customResponseHeaders;
             return this;
         }
 
         public Builder customResponseHeaders(@Nullable List<String> customResponseHeaders) {
-            this.customResponseHeaders = Input.ofNullable(customResponseHeaders);
+            this.customResponseHeaders = Output.ofNullable(customResponseHeaders);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder enableCdn(@Nullable Input<Boolean> enableCdn) {
+        public Builder enableCdn(@Nullable Output<Boolean> enableCdn) {
             this.enableCdn = enableCdn;
             return this;
         }
 
         public Builder enableCdn(@Nullable Boolean enableCdn) {
-            this.enableCdn = Input.ofNullable(enableCdn);
+            this.enableCdn = Output.ofNullable(enableCdn);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public BackendBucketArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1beta2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,29 +24,29 @@ public final class ManagedZoneCloudLoggingConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="enableLogging")
-      private final @Nullable Input<Boolean> enableLogging;
+      private final @Nullable Output<Boolean> enableLogging;
 
-    public Input<Boolean> getEnableLogging() {
-        return this.enableLogging == null ? Input.empty() : this.enableLogging;
+    public Output<Boolean> getEnableLogging() {
+        return this.enableLogging == null ? Output.empty() : this.enableLogging;
     }
 
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     public ManagedZoneCloudLoggingConfigArgs(
-        @Nullable Input<Boolean> enableLogging,
-        @Nullable Input<String> kind) {
+        @Nullable Output<Boolean> enableLogging,
+        @Nullable Output<String> kind) {
         this.enableLogging = enableLogging;
         this.kind = kind;
     }
 
     private ManagedZoneCloudLoggingConfigArgs() {
-        this.enableLogging = Input.empty();
-        this.kind = Input.empty();
+        this.enableLogging = Output.empty();
+        this.kind = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class ManagedZoneCloudLoggingConfigArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enableLogging;
-        private @Nullable Input<String> kind;
+        private @Nullable Output<Boolean> enableLogging;
+        private @Nullable Output<String> kind;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class ManagedZoneCloudLoggingConfigArgs extends io.pulumi.resources
     	      this.kind = defaults.kind;
         }
 
-        public Builder enableLogging(@Nullable Input<Boolean> enableLogging) {
+        public Builder enableLogging(@Nullable Output<Boolean> enableLogging) {
             this.enableLogging = enableLogging;
             return this;
         }
 
         public Builder enableLogging(@Nullable Boolean enableLogging) {
-            this.enableLogging = Input.ofNullable(enableLogging);
+            this.enableLogging = Output.ofNullable(enableLogging);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
         public ManagedZoneCloudLoggingConfigArgs build() {

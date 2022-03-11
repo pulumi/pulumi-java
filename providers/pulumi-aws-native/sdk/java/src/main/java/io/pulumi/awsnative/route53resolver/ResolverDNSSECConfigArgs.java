@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.route53resolver;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class ResolverDNSSECConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceId")
-      private final @Nullable Input<String> resourceId;
+      private final @Nullable Output<String> resourceId;
 
-    public Input<String> getResourceId() {
-        return this.resourceId == null ? Input.empty() : this.resourceId;
+    public Output<String> getResourceId() {
+        return this.resourceId == null ? Output.empty() : this.resourceId;
     }
 
-    public ResolverDNSSECConfigArgs(@Nullable Input<String> resourceId) {
+    public ResolverDNSSECConfigArgs(@Nullable Output<String> resourceId) {
         this.resourceId = resourceId;
     }
 
     private ResolverDNSSECConfigArgs() {
-        this.resourceId = Input.empty();
+        this.resourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class ResolverDNSSECConfigArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> resourceId;
+        private @Nullable Output<String> resourceId;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class ResolverDNSSECConfigArgs extends io.pulumi.resources.Resource
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder resourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Input.ofNullable(resourceId);
+            this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
         public ResolverDNSSECConfigArgs build() {

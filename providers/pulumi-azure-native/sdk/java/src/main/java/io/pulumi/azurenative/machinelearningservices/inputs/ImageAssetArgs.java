@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ImageAssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ImageAssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mimeType")
-      private final @Nullable Input<String> mimeType;
+      private final @Nullable Output<String> mimeType;
 
-    public Input<String> getMimeType() {
-        return this.mimeType == null ? Input.empty() : this.mimeType;
+    public Output<String> getMimeType() {
+        return this.mimeType == null ? Output.empty() : this.mimeType;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ImageAssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="unpack")
-      private final @Nullable Input<Boolean> unpack;
+      private final @Nullable Output<Boolean> unpack;
 
-    public Input<Boolean> getUnpack() {
-        return this.unpack == null ? Input.empty() : this.unpack;
+    public Output<Boolean> getUnpack() {
+        return this.unpack == null ? Output.empty() : this.unpack;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class ImageAssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="url")
-      private final @Nullable Input<String> url;
+      private final @Nullable Output<String> url;
 
-    public Input<String> getUrl() {
-        return this.url == null ? Input.empty() : this.url;
+    public Output<String> getUrl() {
+        return this.url == null ? Output.empty() : this.url;
     }
 
     public ImageAssetArgs(
-        @Nullable Input<String> id,
-        @Nullable Input<String> mimeType,
-        @Nullable Input<Boolean> unpack,
-        @Nullable Input<String> url) {
+        @Nullable Output<String> id,
+        @Nullable Output<String> mimeType,
+        @Nullable Output<Boolean> unpack,
+        @Nullable Output<String> url) {
         this.id = id;
         this.mimeType = mimeType;
         this.unpack = unpack;
@@ -75,10 +75,10 @@ public final class ImageAssetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ImageAssetArgs() {
-        this.id = Input.empty();
-        this.mimeType = Input.empty();
-        this.unpack = Input.empty();
-        this.url = Input.empty();
+        this.id = Output.empty();
+        this.mimeType = Output.empty();
+        this.unpack = Output.empty();
+        this.url = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class ImageAssetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> mimeType;
-        private @Nullable Input<Boolean> unpack;
-        private @Nullable Input<String> url;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> mimeType;
+        private @Nullable Output<Boolean> unpack;
+        private @Nullable Output<String> url;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class ImageAssetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.url = defaults.url;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder mimeType(@Nullable Input<String> mimeType) {
+        public Builder mimeType(@Nullable Output<String> mimeType) {
             this.mimeType = mimeType;
             return this;
         }
 
         public Builder mimeType(@Nullable String mimeType) {
-            this.mimeType = Input.ofNullable(mimeType);
+            this.mimeType = Output.ofNullable(mimeType);
             return this;
         }
 
-        public Builder unpack(@Nullable Input<Boolean> unpack) {
+        public Builder unpack(@Nullable Output<Boolean> unpack) {
             this.unpack = unpack;
             return this;
         }
 
         public Builder unpack(@Nullable Boolean unpack) {
-            this.unpack = Input.ofNullable(unpack);
+            this.unpack = Output.ofNullable(unpack);
             return this;
         }
 
-        public Builder url(@Nullable Input<String> url) {
+        public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
 
         public Builder url(@Nullable String url) {
-            this.url = Input.ofNullable(url);
+            this.url = Output.ofNullable(url);
             return this;
         }
         public ImageAssetArgs build() {

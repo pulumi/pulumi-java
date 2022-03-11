@@ -7,7 +7,7 @@ import io.pulumi.azurenative.providerhub.enums.LoggingDetails;
 import io.pulumi.azurenative.providerhub.enums.LoggingDirections;
 import io.pulumi.azurenative.providerhub.inputs.LoggingRuleHiddenPropertyPathsArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,38 +19,38 @@ public final class LoggingRuleArgs extends io.pulumi.resources.ResourceArgs {
     public static final LoggingRuleArgs Empty = new LoggingRuleArgs();
 
     @InputImport(name="action", required=true)
-      private final Input<String> action;
+      private final Output<String> action;
 
-    public Input<String> getAction() {
+    public Output<String> getAction() {
         return this.action;
     }
 
     @InputImport(name="detailLevel", required=true)
-      private final Input<Either<String,LoggingDetails>> detailLevel;
+      private final Output<Either<String,LoggingDetails>> detailLevel;
 
-    public Input<Either<String,LoggingDetails>> getDetailLevel() {
+    public Output<Either<String,LoggingDetails>> getDetailLevel() {
         return this.detailLevel;
     }
 
     @InputImport(name="direction", required=true)
-      private final Input<Either<String,LoggingDirections>> direction;
+      private final Output<Either<String,LoggingDirections>> direction;
 
-    public Input<Either<String,LoggingDirections>> getDirection() {
+    public Output<Either<String,LoggingDirections>> getDirection() {
         return this.direction;
     }
 
     @InputImport(name="hiddenPropertyPaths")
-      private final @Nullable Input<LoggingRuleHiddenPropertyPathsArgs> hiddenPropertyPaths;
+      private final @Nullable Output<LoggingRuleHiddenPropertyPathsArgs> hiddenPropertyPaths;
 
-    public Input<LoggingRuleHiddenPropertyPathsArgs> getHiddenPropertyPaths() {
-        return this.hiddenPropertyPaths == null ? Input.empty() : this.hiddenPropertyPaths;
+    public Output<LoggingRuleHiddenPropertyPathsArgs> getHiddenPropertyPaths() {
+        return this.hiddenPropertyPaths == null ? Output.empty() : this.hiddenPropertyPaths;
     }
 
     public LoggingRuleArgs(
-        Input<String> action,
-        Input<Either<String,LoggingDetails>> detailLevel,
-        Input<Either<String,LoggingDirections>> direction,
-        @Nullable Input<LoggingRuleHiddenPropertyPathsArgs> hiddenPropertyPaths) {
+        Output<String> action,
+        Output<Either<String,LoggingDetails>> detailLevel,
+        Output<Either<String,LoggingDirections>> direction,
+        @Nullable Output<LoggingRuleHiddenPropertyPathsArgs> hiddenPropertyPaths) {
         this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
         this.detailLevel = Objects.requireNonNull(detailLevel, "expected parameter 'detailLevel' to be non-null");
         this.direction = Objects.requireNonNull(direction, "expected parameter 'direction' to be non-null");
@@ -58,10 +58,10 @@ public final class LoggingRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LoggingRuleArgs() {
-        this.action = Input.empty();
-        this.detailLevel = Input.empty();
-        this.direction = Input.empty();
-        this.hiddenPropertyPaths = Input.empty();
+        this.action = Output.empty();
+        this.detailLevel = Output.empty();
+        this.direction = Output.empty();
+        this.hiddenPropertyPaths = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,10 +73,10 @@ public final class LoggingRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> action;
-        private Input<Either<String,LoggingDetails>> detailLevel;
-        private Input<Either<String,LoggingDirections>> direction;
-        private @Nullable Input<LoggingRuleHiddenPropertyPathsArgs> hiddenPropertyPaths;
+        private Output<String> action;
+        private Output<Either<String,LoggingDetails>> detailLevel;
+        private Output<Either<String,LoggingDirections>> direction;
+        private @Nullable Output<LoggingRuleHiddenPropertyPathsArgs> hiddenPropertyPaths;
 
         public Builder() {
     	      // Empty
@@ -90,43 +90,43 @@ public final class LoggingRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.hiddenPropertyPaths = defaults.hiddenPropertyPaths;
         }
 
-        public Builder action(Input<String> action) {
+        public Builder action(Output<String> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
         public Builder action(String action) {
-            this.action = Input.of(Objects.requireNonNull(action));
+            this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder detailLevel(Input<Either<String,LoggingDetails>> detailLevel) {
+        public Builder detailLevel(Output<Either<String,LoggingDetails>> detailLevel) {
             this.detailLevel = Objects.requireNonNull(detailLevel);
             return this;
         }
 
         public Builder detailLevel(Either<String,LoggingDetails> detailLevel) {
-            this.detailLevel = Input.of(Objects.requireNonNull(detailLevel));
+            this.detailLevel = Output.of(Objects.requireNonNull(detailLevel));
             return this;
         }
 
-        public Builder direction(Input<Either<String,LoggingDirections>> direction) {
+        public Builder direction(Output<Either<String,LoggingDirections>> direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
 
         public Builder direction(Either<String,LoggingDirections> direction) {
-            this.direction = Input.of(Objects.requireNonNull(direction));
+            this.direction = Output.of(Objects.requireNonNull(direction));
             return this;
         }
 
-        public Builder hiddenPropertyPaths(@Nullable Input<LoggingRuleHiddenPropertyPathsArgs> hiddenPropertyPaths) {
+        public Builder hiddenPropertyPaths(@Nullable Output<LoggingRuleHiddenPropertyPathsArgs> hiddenPropertyPaths) {
             this.hiddenPropertyPaths = hiddenPropertyPaths;
             return this;
         }
 
         public Builder hiddenPropertyPaths(@Nullable LoggingRuleHiddenPropertyPathsArgs hiddenPropertyPaths) {
-            this.hiddenPropertyPaths = Input.ofNullable(hiddenPropertyPaths);
+            this.hiddenPropertyPaths = Output.ofNullable(hiddenPropertyPaths);
             return this;
         }
         public LoggingRuleArgs build() {

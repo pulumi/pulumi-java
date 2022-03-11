@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.storagetransfer_v1.enums.LoggingConfigLogActionStatesItem;
 import io.pulumi.googlenative.storagetransfer_v1.enums.LoggingConfigLogActionsItem;
@@ -26,10 +26,10 @@ public final class LoggingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableOnpremGcsTransferLogs")
-      private final @Nullable Input<Boolean> enableOnpremGcsTransferLogs;
+      private final @Nullable Output<Boolean> enableOnpremGcsTransferLogs;
 
-    public Input<Boolean> getEnableOnpremGcsTransferLogs() {
-        return this.enableOnpremGcsTransferLogs == null ? Input.empty() : this.enableOnpremGcsTransferLogs;
+    public Output<Boolean> getEnableOnpremGcsTransferLogs() {
+        return this.enableOnpremGcsTransferLogs == null ? Output.empty() : this.enableOnpremGcsTransferLogs;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class LoggingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logActionStates")
-      private final @Nullable Input<List<LoggingConfigLogActionStatesItem>> logActionStates;
+      private final @Nullable Output<List<LoggingConfigLogActionStatesItem>> logActionStates;
 
-    public Input<List<LoggingConfigLogActionStatesItem>> getLogActionStates() {
-        return this.logActionStates == null ? Input.empty() : this.logActionStates;
+    public Output<List<LoggingConfigLogActionStatesItem>> getLogActionStates() {
+        return this.logActionStates == null ? Output.empty() : this.logActionStates;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class LoggingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logActions")
-      private final @Nullable Input<List<LoggingConfigLogActionsItem>> logActions;
+      private final @Nullable Output<List<LoggingConfigLogActionsItem>> logActions;
 
-    public Input<List<LoggingConfigLogActionsItem>> getLogActions() {
-        return this.logActions == null ? Input.empty() : this.logActions;
+    public Output<List<LoggingConfigLogActionsItem>> getLogActions() {
+        return this.logActions == null ? Output.empty() : this.logActions;
     }
 
     public LoggingConfigArgs(
-        @Nullable Input<Boolean> enableOnpremGcsTransferLogs,
-        @Nullable Input<List<LoggingConfigLogActionStatesItem>> logActionStates,
-        @Nullable Input<List<LoggingConfigLogActionsItem>> logActions) {
+        @Nullable Output<Boolean> enableOnpremGcsTransferLogs,
+        @Nullable Output<List<LoggingConfigLogActionStatesItem>> logActionStates,
+        @Nullable Output<List<LoggingConfigLogActionsItem>> logActions) {
         this.enableOnpremGcsTransferLogs = enableOnpremGcsTransferLogs;
         this.logActionStates = logActionStates;
         this.logActions = logActions;
     }
 
     private LoggingConfigArgs() {
-        this.enableOnpremGcsTransferLogs = Input.empty();
-        this.logActionStates = Input.empty();
-        this.logActions = Input.empty();
+        this.enableOnpremGcsTransferLogs = Output.empty();
+        this.logActionStates = Output.empty();
+        this.logActions = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class LoggingConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enableOnpremGcsTransferLogs;
-        private @Nullable Input<List<LoggingConfigLogActionStatesItem>> logActionStates;
-        private @Nullable Input<List<LoggingConfigLogActionsItem>> logActions;
+        private @Nullable Output<Boolean> enableOnpremGcsTransferLogs;
+        private @Nullable Output<List<LoggingConfigLogActionStatesItem>> logActionStates;
+        private @Nullable Output<List<LoggingConfigLogActionsItem>> logActions;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class LoggingConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.logActions = defaults.logActions;
         }
 
-        public Builder enableOnpremGcsTransferLogs(@Nullable Input<Boolean> enableOnpremGcsTransferLogs) {
+        public Builder enableOnpremGcsTransferLogs(@Nullable Output<Boolean> enableOnpremGcsTransferLogs) {
             this.enableOnpremGcsTransferLogs = enableOnpremGcsTransferLogs;
             return this;
         }
 
         public Builder enableOnpremGcsTransferLogs(@Nullable Boolean enableOnpremGcsTransferLogs) {
-            this.enableOnpremGcsTransferLogs = Input.ofNullable(enableOnpremGcsTransferLogs);
+            this.enableOnpremGcsTransferLogs = Output.ofNullable(enableOnpremGcsTransferLogs);
             return this;
         }
 
-        public Builder logActionStates(@Nullable Input<List<LoggingConfigLogActionStatesItem>> logActionStates) {
+        public Builder logActionStates(@Nullable Output<List<LoggingConfigLogActionStatesItem>> logActionStates) {
             this.logActionStates = logActionStates;
             return this;
         }
 
         public Builder logActionStates(@Nullable List<LoggingConfigLogActionStatesItem> logActionStates) {
-            this.logActionStates = Input.ofNullable(logActionStates);
+            this.logActionStates = Output.ofNullable(logActionStates);
             return this;
         }
 
-        public Builder logActions(@Nullable Input<List<LoggingConfigLogActionsItem>> logActions) {
+        public Builder logActions(@Nullable Output<List<LoggingConfigLogActionsItem>> logActions) {
             this.logActions = logActions;
             return this;
         }
 
         public Builder logActions(@Nullable List<LoggingConfigLogActionsItem> logActions) {
-            this.logActions = Input.ofNullable(logActions);
+            this.logActions = Output.ofNullable(logActions);
             return this;
         }
         public LoggingConfigArgs build() {

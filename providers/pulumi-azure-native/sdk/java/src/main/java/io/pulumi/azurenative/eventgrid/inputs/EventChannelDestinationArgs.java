@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class EventChannelDestinationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="azureSubscriptionId")
-      private final @Nullable Input<String> azureSubscriptionId;
+      private final @Nullable Output<String> azureSubscriptionId;
 
-    public Input<String> getAzureSubscriptionId() {
-        return this.azureSubscriptionId == null ? Input.empty() : this.azureSubscriptionId;
+    public Output<String> getAzureSubscriptionId() {
+        return this.azureSubscriptionId == null ? Output.empty() : this.azureSubscriptionId;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class EventChannelDestinationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="partnerTopicName")
-      private final @Nullable Input<String> partnerTopicName;
+      private final @Nullable Output<String> partnerTopicName;
 
-    public Input<String> getPartnerTopicName() {
-        return this.partnerTopicName == null ? Input.empty() : this.partnerTopicName;
+    public Output<String> getPartnerTopicName() {
+        return this.partnerTopicName == null ? Output.empty() : this.partnerTopicName;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class EventChannelDestinationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceGroup")
-      private final @Nullable Input<String> resourceGroup;
+      private final @Nullable Output<String> resourceGroup;
 
-    public Input<String> getResourceGroup() {
-        return this.resourceGroup == null ? Input.empty() : this.resourceGroup;
+    public Output<String> getResourceGroup() {
+        return this.resourceGroup == null ? Output.empty() : this.resourceGroup;
     }
 
     public EventChannelDestinationArgs(
-        @Nullable Input<String> azureSubscriptionId,
-        @Nullable Input<String> partnerTopicName,
-        @Nullable Input<String> resourceGroup) {
+        @Nullable Output<String> azureSubscriptionId,
+        @Nullable Output<String> partnerTopicName,
+        @Nullable Output<String> resourceGroup) {
         this.azureSubscriptionId = azureSubscriptionId;
         this.partnerTopicName = partnerTopicName;
         this.resourceGroup = resourceGroup;
     }
 
     private EventChannelDestinationArgs() {
-        this.azureSubscriptionId = Input.empty();
-        this.partnerTopicName = Input.empty();
-        this.resourceGroup = Input.empty();
+        this.azureSubscriptionId = Output.empty();
+        this.partnerTopicName = Output.empty();
+        this.resourceGroup = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class EventChannelDestinationArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> azureSubscriptionId;
-        private @Nullable Input<String> partnerTopicName;
-        private @Nullable Input<String> resourceGroup;
+        private @Nullable Output<String> azureSubscriptionId;
+        private @Nullable Output<String> partnerTopicName;
+        private @Nullable Output<String> resourceGroup;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class EventChannelDestinationArgs extends io.pulumi.resources.Resou
     	      this.resourceGroup = defaults.resourceGroup;
         }
 
-        public Builder azureSubscriptionId(@Nullable Input<String> azureSubscriptionId) {
+        public Builder azureSubscriptionId(@Nullable Output<String> azureSubscriptionId) {
             this.azureSubscriptionId = azureSubscriptionId;
             return this;
         }
 
         public Builder azureSubscriptionId(@Nullable String azureSubscriptionId) {
-            this.azureSubscriptionId = Input.ofNullable(azureSubscriptionId);
+            this.azureSubscriptionId = Output.ofNullable(azureSubscriptionId);
             return this;
         }
 
-        public Builder partnerTopicName(@Nullable Input<String> partnerTopicName) {
+        public Builder partnerTopicName(@Nullable Output<String> partnerTopicName) {
             this.partnerTopicName = partnerTopicName;
             return this;
         }
 
         public Builder partnerTopicName(@Nullable String partnerTopicName) {
-            this.partnerTopicName = Input.ofNullable(partnerTopicName);
+            this.partnerTopicName = Output.ofNullable(partnerTopicName);
             return this;
         }
 
-        public Builder resourceGroup(@Nullable Input<String> resourceGroup) {
+        public Builder resourceGroup(@Nullable Output<String> resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
         }
 
         public Builder resourceGroup(@Nullable String resourceGroup) {
-            this.resourceGroup = Input.ofNullable(resourceGroup);
+            this.resourceGroup = Output.ofNullable(resourceGroup);
             return this;
         }
         public EventChannelDestinationArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.blueprint.inputs;
 
 import io.pulumi.azurenative.blueprint.enums.AssignmentLockMode;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class AssignmentLockSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="excludedActions")
-      private final @Nullable Input<List<String>> excludedActions;
+      private final @Nullable Output<List<String>> excludedActions;
 
-    public Input<List<String>> getExcludedActions() {
-        return this.excludedActions == null ? Input.empty() : this.excludedActions;
+    public Output<List<String>> getExcludedActions() {
+        return this.excludedActions == null ? Output.empty() : this.excludedActions;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class AssignmentLockSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="excludedPrincipals")
-      private final @Nullable Input<List<String>> excludedPrincipals;
+      private final @Nullable Output<List<String>> excludedPrincipals;
 
-    public Input<List<String>> getExcludedPrincipals() {
-        return this.excludedPrincipals == null ? Input.empty() : this.excludedPrincipals;
+    public Output<List<String>> getExcludedPrincipals() {
+        return this.excludedPrincipals == null ? Output.empty() : this.excludedPrincipals;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class AssignmentLockSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="mode")
-      private final @Nullable Input<Either<String,AssignmentLockMode>> mode;
+      private final @Nullable Output<Either<String,AssignmentLockMode>> mode;
 
-    public Input<Either<String,AssignmentLockMode>> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<Either<String,AssignmentLockMode>> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
     public AssignmentLockSettingsArgs(
-        @Nullable Input<List<String>> excludedActions,
-        @Nullable Input<List<String>> excludedPrincipals,
-        @Nullable Input<Either<String,AssignmentLockMode>> mode) {
+        @Nullable Output<List<String>> excludedActions,
+        @Nullable Output<List<String>> excludedPrincipals,
+        @Nullable Output<Either<String,AssignmentLockMode>> mode) {
         this.excludedActions = excludedActions;
         this.excludedPrincipals = excludedPrincipals;
         this.mode = mode;
     }
 
     private AssignmentLockSettingsArgs() {
-        this.excludedActions = Input.empty();
-        this.excludedPrincipals = Input.empty();
-        this.mode = Input.empty();
+        this.excludedActions = Output.empty();
+        this.excludedPrincipals = Output.empty();
+        this.mode = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class AssignmentLockSettingsArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> excludedActions;
-        private @Nullable Input<List<String>> excludedPrincipals;
-        private @Nullable Input<Either<String,AssignmentLockMode>> mode;
+        private @Nullable Output<List<String>> excludedActions;
+        private @Nullable Output<List<String>> excludedPrincipals;
+        private @Nullable Output<Either<String,AssignmentLockMode>> mode;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class AssignmentLockSettingsArgs extends io.pulumi.resources.Resour
     	      this.mode = defaults.mode;
         }
 
-        public Builder excludedActions(@Nullable Input<List<String>> excludedActions) {
+        public Builder excludedActions(@Nullable Output<List<String>> excludedActions) {
             this.excludedActions = excludedActions;
             return this;
         }
 
         public Builder excludedActions(@Nullable List<String> excludedActions) {
-            this.excludedActions = Input.ofNullable(excludedActions);
+            this.excludedActions = Output.ofNullable(excludedActions);
             return this;
         }
 
-        public Builder excludedPrincipals(@Nullable Input<List<String>> excludedPrincipals) {
+        public Builder excludedPrincipals(@Nullable Output<List<String>> excludedPrincipals) {
             this.excludedPrincipals = excludedPrincipals;
             return this;
         }
 
         public Builder excludedPrincipals(@Nullable List<String> excludedPrincipals) {
-            this.excludedPrincipals = Input.ofNullable(excludedPrincipals);
+            this.excludedPrincipals = Output.ofNullable(excludedPrincipals);
             return this;
         }
 
-        public Builder mode(@Nullable Input<Either<String,AssignmentLockMode>> mode) {
+        public Builder mode(@Nullable Output<Either<String,AssignmentLockMode>> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable Either<String,AssignmentLockMode> mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
         public AssignmentLockSettingsArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.streamanalytics.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class FunctionOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataType")
-      private final @Nullable Input<String> dataType;
+      private final @Nullable Output<String> dataType;
 
-    public Input<String> getDataType() {
-        return this.dataType == null ? Input.empty() : this.dataType;
+    public Output<String> getDataType() {
+        return this.dataType == null ? Output.empty() : this.dataType;
     }
 
-    public FunctionOutputArgs(@Nullable Input<String> dataType) {
+    public FunctionOutputArgs(@Nullable Output<String> dataType) {
         this.dataType = dataType;
     }
 
     private FunctionOutputArgs() {
-        this.dataType = Input.empty();
+        this.dataType = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class FunctionOutputArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> dataType;
+        private @Nullable Output<String> dataType;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class FunctionOutputArgs extends io.pulumi.resources.ResourceArgs {
     	      this.dataType = defaults.dataType;
         }
 
-        public Builder dataType(@Nullable Input<String> dataType) {
+        public Builder dataType(@Nullable Output<String> dataType) {
             this.dataType = dataType;
             return this;
         }
 
         public Builder dataType(@Nullable String dataType) {
-            this.dataType = Input.ofNullable(dataType);
+            this.dataType = Output.ofNullable(dataType);
             return this;
         }
         public FunctionOutputArgs build() {

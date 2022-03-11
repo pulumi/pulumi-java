@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apigateway.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -16,18 +16,18 @@ public final class DomainNameEndpointConfigurationArgs extends io.pulumi.resourc
     public static final DomainNameEndpointConfigurationArgs Empty = new DomainNameEndpointConfigurationArgs();
 
     @InputImport(name="types")
-      private final @Nullable Input<List<String>> types;
+      private final @Nullable Output<List<String>> types;
 
-    public Input<List<String>> getTypes() {
-        return this.types == null ? Input.empty() : this.types;
+    public Output<List<String>> getTypes() {
+        return this.types == null ? Output.empty() : this.types;
     }
 
-    public DomainNameEndpointConfigurationArgs(@Nullable Input<List<String>> types) {
+    public DomainNameEndpointConfigurationArgs(@Nullable Output<List<String>> types) {
         this.types = types;
     }
 
     private DomainNameEndpointConfigurationArgs() {
-        this.types = Input.empty();
+        this.types = Output.empty();
     }
 
     public static Builder builder() {
@@ -39,7 +39,7 @@ public final class DomainNameEndpointConfigurationArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> types;
+        private @Nullable Output<List<String>> types;
 
         public Builder() {
     	      // Empty
@@ -50,13 +50,13 @@ public final class DomainNameEndpointConfigurationArgs extends io.pulumi.resourc
     	      this.types = defaults.types;
         }
 
-        public Builder types(@Nullable Input<List<String>> types) {
+        public Builder types(@Nullable Output<List<String>> types) {
             this.types = types;
             return this;
         }
 
         public Builder types(@Nullable List<String> types) {
-            this.types = Input.ofNullable(types);
+            this.types = Output.ofNullable(types);
             return this;
         }
         public DomainNameEndpointConfigurationArgs build() {

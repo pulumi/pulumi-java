@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs ex
      * 
      */
     @InputImport(name="dnsServers")
-      private final @Nullable Input<List<String>> dnsServers;
+      private final @Nullable Output<List<String>> dnsServers;
 
-    public Input<List<String>> getDnsServers() {
-        return this.dnsServers == null ? Input.empty() : this.dnsServers;
+    public Output<List<String>> getDnsServers() {
+        return this.dnsServers == null ? Output.empty() : this.dnsServers;
     }
 
-    public VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs(@Nullable Input<List<String>> dnsServers) {
+    public VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs(@Nullable Output<List<String>> dnsServers) {
         this.dnsServers = dnsServers;
     }
 
     private VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs() {
-        this.dnsServers = Input.empty();
+        this.dnsServers = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs ex
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> dnsServers;
+        private @Nullable Output<List<String>> dnsServers;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs ex
     	      this.dnsServers = defaults.dnsServers;
         }
 
-        public Builder dnsServers(@Nullable Input<List<String>> dnsServers) {
+        public Builder dnsServers(@Nullable Output<List<String>> dnsServers) {
             this.dnsServers = dnsServers;
             return this;
         }
 
         public Builder dnsServers(@Nullable List<String> dnsServers) {
-            this.dnsServers = Input.ofNullable(dnsServers);
+            this.dnsServers = Output.ofNullable(dnsServers);
             return this;
         }
         public VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs build() {

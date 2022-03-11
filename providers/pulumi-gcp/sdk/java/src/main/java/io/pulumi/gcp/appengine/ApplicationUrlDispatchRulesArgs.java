@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.appengine.inputs.ApplicationUrlDispatchRulesDispatchRuleArgs;
 import java.lang.String;
@@ -22,9 +22,9 @@ public final class ApplicationUrlDispatchRulesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="dispatchRules", required=true)
-      private final Input<List<ApplicationUrlDispatchRulesDispatchRuleArgs>> dispatchRules;
+      private final Output<List<ApplicationUrlDispatchRulesDispatchRuleArgs>> dispatchRules;
 
-    public Input<List<ApplicationUrlDispatchRulesDispatchRuleArgs>> getDispatchRules() {
+    public Output<List<ApplicationUrlDispatchRulesDispatchRuleArgs>> getDispatchRules() {
         return this.dispatchRules;
     }
 
@@ -34,22 +34,22 @@ public final class ApplicationUrlDispatchRulesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public ApplicationUrlDispatchRulesArgs(
-        Input<List<ApplicationUrlDispatchRulesDispatchRuleArgs>> dispatchRules,
-        @Nullable Input<String> project) {
+        Output<List<ApplicationUrlDispatchRulesDispatchRuleArgs>> dispatchRules,
+        @Nullable Output<String> project) {
         this.dispatchRules = Objects.requireNonNull(dispatchRules, "expected parameter 'dispatchRules' to be non-null");
         this.project = project;
     }
 
     private ApplicationUrlDispatchRulesArgs() {
-        this.dispatchRules = Input.empty();
-        this.project = Input.empty();
+        this.dispatchRules = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ApplicationUrlDispatchRulesArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<List<ApplicationUrlDispatchRulesDispatchRuleArgs>> dispatchRules;
-        private @Nullable Input<String> project;
+        private Output<List<ApplicationUrlDispatchRulesDispatchRuleArgs>> dispatchRules;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ApplicationUrlDispatchRulesArgs extends io.pulumi.resources.R
     	      this.project = defaults.project;
         }
 
-        public Builder dispatchRules(Input<List<ApplicationUrlDispatchRulesDispatchRuleArgs>> dispatchRules) {
+        public Builder dispatchRules(Output<List<ApplicationUrlDispatchRulesDispatchRuleArgs>> dispatchRules) {
             this.dispatchRules = Objects.requireNonNull(dispatchRules);
             return this;
         }
 
         public Builder dispatchRules(List<ApplicationUrlDispatchRulesDispatchRuleArgs> dispatchRules) {
-            this.dispatchRules = Input.of(Objects.requireNonNull(dispatchRules));
+            this.dispatchRules = Output.of(Objects.requireNonNull(dispatchRules));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public ApplicationUrlDispatchRulesArgs build() {

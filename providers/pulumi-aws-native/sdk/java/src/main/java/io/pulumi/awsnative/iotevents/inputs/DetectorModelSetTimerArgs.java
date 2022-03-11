@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotevents.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class DetectorModelSetTimerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="durationExpression")
-      private final @Nullable Input<String> durationExpression;
+      private final @Nullable Output<String> durationExpression;
 
-    public Input<String> getDurationExpression() {
-        return this.durationExpression == null ? Input.empty() : this.durationExpression;
+    public Output<String> getDurationExpression() {
+        return this.durationExpression == null ? Output.empty() : this.durationExpression;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DetectorModelSetTimerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="seconds")
-      private final @Nullable Input<Integer> seconds;
+      private final @Nullable Output<Integer> seconds;
 
-    public Input<Integer> getSeconds() {
-        return this.seconds == null ? Input.empty() : this.seconds;
+    public Output<Integer> getSeconds() {
+        return this.seconds == null ? Output.empty() : this.seconds;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class DetectorModelSetTimerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="timerName", required=true)
-      private final Input<String> timerName;
+      private final Output<String> timerName;
 
-    public Input<String> getTimerName() {
+    public Output<String> getTimerName() {
         return this.timerName;
     }
 
     public DetectorModelSetTimerArgs(
-        @Nullable Input<String> durationExpression,
-        @Nullable Input<Integer> seconds,
-        Input<String> timerName) {
+        @Nullable Output<String> durationExpression,
+        @Nullable Output<Integer> seconds,
+        Output<String> timerName) {
         this.durationExpression = durationExpression;
         this.seconds = seconds;
         this.timerName = Objects.requireNonNull(timerName, "expected parameter 'timerName' to be non-null");
     }
 
     private DetectorModelSetTimerArgs() {
-        this.durationExpression = Input.empty();
-        this.seconds = Input.empty();
-        this.timerName = Input.empty();
+        this.durationExpression = Output.empty();
+        this.seconds = Output.empty();
+        this.timerName = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class DetectorModelSetTimerArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> durationExpression;
-        private @Nullable Input<Integer> seconds;
-        private Input<String> timerName;
+        private @Nullable Output<String> durationExpression;
+        private @Nullable Output<Integer> seconds;
+        private Output<String> timerName;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class DetectorModelSetTimerArgs extends io.pulumi.resources.Resourc
     	      this.timerName = defaults.timerName;
         }
 
-        public Builder durationExpression(@Nullable Input<String> durationExpression) {
+        public Builder durationExpression(@Nullable Output<String> durationExpression) {
             this.durationExpression = durationExpression;
             return this;
         }
 
         public Builder durationExpression(@Nullable String durationExpression) {
-            this.durationExpression = Input.ofNullable(durationExpression);
+            this.durationExpression = Output.ofNullable(durationExpression);
             return this;
         }
 
-        public Builder seconds(@Nullable Input<Integer> seconds) {
+        public Builder seconds(@Nullable Output<Integer> seconds) {
             this.seconds = seconds;
             return this;
         }
 
         public Builder seconds(@Nullable Integer seconds) {
-            this.seconds = Input.ofNullable(seconds);
+            this.seconds = Output.ofNullable(seconds);
             return this;
         }
 
-        public Builder timerName(Input<String> timerName) {
+        public Builder timerName(Output<String> timerName) {
             this.timerName = Objects.requireNonNull(timerName);
             return this;
         }
 
         public Builder timerName(String timerName) {
-            this.timerName = Input.of(Objects.requireNonNull(timerName));
+            this.timerName = Output.of(Objects.requireNonNull(timerName));
             return this;
         }
         public DetectorModelSetTimerArgs build() {

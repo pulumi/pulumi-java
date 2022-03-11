@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.sagemaker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class EndpointConfigurationDataCaptureConfigCaptureContentTypeHeade
      * 
      */
     @InputImport(name="csvContentTypes")
-      private final @Nullable Input<List<String>> csvContentTypes;
+      private final @Nullable Output<List<String>> csvContentTypes;
 
-    public Input<List<String>> getCsvContentTypes() {
-        return this.csvContentTypes == null ? Input.empty() : this.csvContentTypes;
+    public Output<List<String>> getCsvContentTypes() {
+        return this.csvContentTypes == null ? Output.empty() : this.csvContentTypes;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class EndpointConfigurationDataCaptureConfigCaptureContentTypeHeade
      * 
      */
     @InputImport(name="jsonContentTypes")
-      private final @Nullable Input<List<String>> jsonContentTypes;
+      private final @Nullable Output<List<String>> jsonContentTypes;
 
-    public Input<List<String>> getJsonContentTypes() {
-        return this.jsonContentTypes == null ? Input.empty() : this.jsonContentTypes;
+    public Output<List<String>> getJsonContentTypes() {
+        return this.jsonContentTypes == null ? Output.empty() : this.jsonContentTypes;
     }
 
     public EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderArgs(
-        @Nullable Input<List<String>> csvContentTypes,
-        @Nullable Input<List<String>> jsonContentTypes) {
+        @Nullable Output<List<String>> csvContentTypes,
+        @Nullable Output<List<String>> jsonContentTypes) {
         this.csvContentTypes = csvContentTypes;
         this.jsonContentTypes = jsonContentTypes;
     }
 
     private EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderArgs() {
-        this.csvContentTypes = Input.empty();
-        this.jsonContentTypes = Input.empty();
+        this.csvContentTypes = Output.empty();
+        this.jsonContentTypes = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class EndpointConfigurationDataCaptureConfigCaptureContentTypeHeade
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> csvContentTypes;
-        private @Nullable Input<List<String>> jsonContentTypes;
+        private @Nullable Output<List<String>> csvContentTypes;
+        private @Nullable Output<List<String>> jsonContentTypes;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class EndpointConfigurationDataCaptureConfigCaptureContentTypeHeade
     	      this.jsonContentTypes = defaults.jsonContentTypes;
         }
 
-        public Builder csvContentTypes(@Nullable Input<List<String>> csvContentTypes) {
+        public Builder csvContentTypes(@Nullable Output<List<String>> csvContentTypes) {
             this.csvContentTypes = csvContentTypes;
             return this;
         }
 
         public Builder csvContentTypes(@Nullable List<String> csvContentTypes) {
-            this.csvContentTypes = Input.ofNullable(csvContentTypes);
+            this.csvContentTypes = Output.ofNullable(csvContentTypes);
             return this;
         }
 
-        public Builder jsonContentTypes(@Nullable Input<List<String>> jsonContentTypes) {
+        public Builder jsonContentTypes(@Nullable Output<List<String>> jsonContentTypes) {
             this.jsonContentTypes = jsonContentTypes;
             return this;
         }
 
         public Builder jsonContentTypes(@Nullable List<String> jsonContentTypes) {
-            this.jsonContentTypes = Input.ofNullable(jsonContentTypes);
+            this.jsonContentTypes = Output.ofNullable(jsonContentTypes);
             return this;
         }
         public EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderArgs build() {

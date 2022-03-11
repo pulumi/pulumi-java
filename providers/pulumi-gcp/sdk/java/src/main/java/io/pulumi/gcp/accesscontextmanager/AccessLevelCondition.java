@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.accesscontextmanager;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -236,14 +235,14 @@ public class AccessLevelCondition extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AccessLevelCondition(String name, AccessLevelConditionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:accesscontextmanager/accessLevelCondition:AccessLevelCondition", name, args == null ? AccessLevelConditionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:accesscontextmanager/accessLevelCondition:AccessLevelCondition", name, args == null ? AccessLevelConditionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private AccessLevelCondition(String name, Input<String> id, @Nullable AccessLevelConditionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private AccessLevelCondition(String name, Output<String> id, @Nullable AccessLevelConditionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:accesscontextmanager/accessLevelCondition:AccessLevelCondition", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -259,7 +258,7 @@ public class AccessLevelCondition extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AccessLevelCondition get(String name, Input<String> id, @Nullable AccessLevelConditionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static AccessLevelCondition get(String name, Output<String> id, @Nullable AccessLevelConditionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AccessLevelCondition(name, id, state, options);
     }
 }

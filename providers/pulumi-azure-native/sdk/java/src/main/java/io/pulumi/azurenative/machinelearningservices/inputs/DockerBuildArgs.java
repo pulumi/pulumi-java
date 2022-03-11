@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.DockerImagePlatformArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class DockerBuildArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="context")
-      private final @Nullable Input<String> context;
+      private final @Nullable Output<String> context;
 
-    public Input<String> getContext() {
-        return this.context == null ? Input.empty() : this.context;
+    public Output<String> getContext() {
+        return this.context == null ? Output.empty() : this.context;
     }
 
     /**
@@ -38,9 +38,9 @@ public final class DockerBuildArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dockerSpecificationType", required=true)
-      private final Input<String> dockerSpecificationType;
+      private final Output<String> dockerSpecificationType;
 
-    public Input<String> getDockerSpecificationType() {
+    public Output<String> getDockerSpecificationType() {
         return this.dockerSpecificationType;
     }
 
@@ -50,9 +50,9 @@ public final class DockerBuildArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dockerfile", required=true)
-      private final Input<String> dockerfile;
+      private final Output<String> dockerfile;
 
-    public Input<String> getDockerfile() {
+    public Output<String> getDockerfile() {
         return this.dockerfile;
     }
 
@@ -61,17 +61,17 @@ public final class DockerBuildArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="platform")
-      private final @Nullable Input<DockerImagePlatformArgs> platform;
+      private final @Nullable Output<DockerImagePlatformArgs> platform;
 
-    public Input<DockerImagePlatformArgs> getPlatform() {
-        return this.platform == null ? Input.empty() : this.platform;
+    public Output<DockerImagePlatformArgs> getPlatform() {
+        return this.platform == null ? Output.empty() : this.platform;
     }
 
     public DockerBuildArgs(
-        @Nullable Input<String> context,
-        Input<String> dockerSpecificationType,
-        Input<String> dockerfile,
-        @Nullable Input<DockerImagePlatformArgs> platform) {
+        @Nullable Output<String> context,
+        Output<String> dockerSpecificationType,
+        Output<String> dockerfile,
+        @Nullable Output<DockerImagePlatformArgs> platform) {
         this.context = context;
         this.dockerSpecificationType = Objects.requireNonNull(dockerSpecificationType, "expected parameter 'dockerSpecificationType' to be non-null");
         this.dockerfile = Objects.requireNonNull(dockerfile, "expected parameter 'dockerfile' to be non-null");
@@ -79,10 +79,10 @@ public final class DockerBuildArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DockerBuildArgs() {
-        this.context = Input.empty();
-        this.dockerSpecificationType = Input.empty();
-        this.dockerfile = Input.empty();
-        this.platform = Input.empty();
+        this.context = Output.empty();
+        this.dockerSpecificationType = Output.empty();
+        this.dockerfile = Output.empty();
+        this.platform = Output.empty();
     }
 
     public static Builder builder() {
@@ -94,10 +94,10 @@ public final class DockerBuildArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> context;
-        private Input<String> dockerSpecificationType;
-        private Input<String> dockerfile;
-        private @Nullable Input<DockerImagePlatformArgs> platform;
+        private @Nullable Output<String> context;
+        private Output<String> dockerSpecificationType;
+        private Output<String> dockerfile;
+        private @Nullable Output<DockerImagePlatformArgs> platform;
 
         public Builder() {
     	      // Empty
@@ -111,43 +111,43 @@ public final class DockerBuildArgs extends io.pulumi.resources.ResourceArgs {
     	      this.platform = defaults.platform;
         }
 
-        public Builder context(@Nullable Input<String> context) {
+        public Builder context(@Nullable Output<String> context) {
             this.context = context;
             return this;
         }
 
         public Builder context(@Nullable String context) {
-            this.context = Input.ofNullable(context);
+            this.context = Output.ofNullable(context);
             return this;
         }
 
-        public Builder dockerSpecificationType(Input<String> dockerSpecificationType) {
+        public Builder dockerSpecificationType(Output<String> dockerSpecificationType) {
             this.dockerSpecificationType = Objects.requireNonNull(dockerSpecificationType);
             return this;
         }
 
         public Builder dockerSpecificationType(String dockerSpecificationType) {
-            this.dockerSpecificationType = Input.of(Objects.requireNonNull(dockerSpecificationType));
+            this.dockerSpecificationType = Output.of(Objects.requireNonNull(dockerSpecificationType));
             return this;
         }
 
-        public Builder dockerfile(Input<String> dockerfile) {
+        public Builder dockerfile(Output<String> dockerfile) {
             this.dockerfile = Objects.requireNonNull(dockerfile);
             return this;
         }
 
         public Builder dockerfile(String dockerfile) {
-            this.dockerfile = Input.of(Objects.requireNonNull(dockerfile));
+            this.dockerfile = Output.of(Objects.requireNonNull(dockerfile));
             return this;
         }
 
-        public Builder platform(@Nullable Input<DockerImagePlatformArgs> platform) {
+        public Builder platform(@Nullable Output<DockerImagePlatformArgs> platform) {
             this.platform = platform;
             return this;
         }
 
         public Builder platform(@Nullable DockerImagePlatformArgs platform) {
-            this.platform = Input.ofNullable(platform);
+            this.platform = Output.ofNullable(platform);
             return this;
         }
         public DockerBuildArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.inputs.WebACLFieldToMatchArgs;
 import io.pulumi.awsnative.wafv2.inputs.WebACLTextTransformationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -20,29 +20,29 @@ public final class WebACLSqliMatchStatementArgs extends io.pulumi.resources.Reso
     public static final WebACLSqliMatchStatementArgs Empty = new WebACLSqliMatchStatementArgs();
 
     @InputImport(name="fieldToMatch", required=true)
-      private final Input<WebACLFieldToMatchArgs> fieldToMatch;
+      private final Output<WebACLFieldToMatchArgs> fieldToMatch;
 
-    public Input<WebACLFieldToMatchArgs> getFieldToMatch() {
+    public Output<WebACLFieldToMatchArgs> getFieldToMatch() {
         return this.fieldToMatch;
     }
 
     @InputImport(name="textTransformations", required=true)
-      private final Input<List<WebACLTextTransformationArgs>> textTransformations;
+      private final Output<List<WebACLTextTransformationArgs>> textTransformations;
 
-    public Input<List<WebACLTextTransformationArgs>> getTextTransformations() {
+    public Output<List<WebACLTextTransformationArgs>> getTextTransformations() {
         return this.textTransformations;
     }
 
     public WebACLSqliMatchStatementArgs(
-        Input<WebACLFieldToMatchArgs> fieldToMatch,
-        Input<List<WebACLTextTransformationArgs>> textTransformations) {
+        Output<WebACLFieldToMatchArgs> fieldToMatch,
+        Output<List<WebACLTextTransformationArgs>> textTransformations) {
         this.fieldToMatch = Objects.requireNonNull(fieldToMatch, "expected parameter 'fieldToMatch' to be non-null");
         this.textTransformations = Objects.requireNonNull(textTransformations, "expected parameter 'textTransformations' to be non-null");
     }
 
     private WebACLSqliMatchStatementArgs() {
-        this.fieldToMatch = Input.empty();
-        this.textTransformations = Input.empty();
+        this.fieldToMatch = Output.empty();
+        this.textTransformations = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class WebACLSqliMatchStatementArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<WebACLFieldToMatchArgs> fieldToMatch;
-        private Input<List<WebACLTextTransformationArgs>> textTransformations;
+        private Output<WebACLFieldToMatchArgs> fieldToMatch;
+        private Output<List<WebACLTextTransformationArgs>> textTransformations;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class WebACLSqliMatchStatementArgs extends io.pulumi.resources.Reso
     	      this.textTransformations = defaults.textTransformations;
         }
 
-        public Builder fieldToMatch(Input<WebACLFieldToMatchArgs> fieldToMatch) {
+        public Builder fieldToMatch(Output<WebACLFieldToMatchArgs> fieldToMatch) {
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
 
         public Builder fieldToMatch(WebACLFieldToMatchArgs fieldToMatch) {
-            this.fieldToMatch = Input.of(Objects.requireNonNull(fieldToMatch));
+            this.fieldToMatch = Output.of(Objects.requireNonNull(fieldToMatch));
             return this;
         }
 
-        public Builder textTransformations(Input<List<WebACLTextTransformationArgs>> textTransformations) {
+        public Builder textTransformations(Output<List<WebACLTextTransformationArgs>> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
 
         public Builder textTransformations(List<WebACLTextTransformationArgs> textTransformations) {
-            this.textTransformations = Input.of(Objects.requireNonNull(textTransformations));
+            this.textTransformations = Output.of(Objects.requireNonNull(textTransformations));
             return this;
         }
         public WebACLSqliMatchStatementArgs build() {

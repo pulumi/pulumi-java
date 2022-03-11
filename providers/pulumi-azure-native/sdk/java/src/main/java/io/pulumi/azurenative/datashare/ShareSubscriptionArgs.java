@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datashare;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class ShareSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -30,10 +30,10 @@ public final class ShareSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="expirationDate")
-      private final @Nullable Input<String> expirationDate;
+      private final @Nullable Output<String> expirationDate;
 
-    public Input<String> getExpirationDate() {
-        return this.expirationDate == null ? Input.empty() : this.expirationDate;
+    public Output<String> getExpirationDate() {
+        return this.expirationDate == null ? Output.empty() : this.expirationDate;
     }
 
     /**
@@ -41,9 +41,9 @@ public final class ShareSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="invitationId", required=true)
-      private final Input<String> invitationId;
+      private final Output<String> invitationId;
 
-    public Input<String> getInvitationId() {
+    public Output<String> getInvitationId() {
         return this.invitationId;
     }
 
@@ -52,9 +52,9 @@ public final class ShareSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -63,10 +63,10 @@ public final class ShareSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="shareSubscriptionName")
-      private final @Nullable Input<String> shareSubscriptionName;
+      private final @Nullable Output<String> shareSubscriptionName;
 
-    public Input<String> getShareSubscriptionName() {
-        return this.shareSubscriptionName == null ? Input.empty() : this.shareSubscriptionName;
+    public Output<String> getShareSubscriptionName() {
+        return this.shareSubscriptionName == null ? Output.empty() : this.shareSubscriptionName;
     }
 
     /**
@@ -74,19 +74,19 @@ public final class ShareSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sourceShareLocation", required=true)
-      private final Input<String> sourceShareLocation;
+      private final Output<String> sourceShareLocation;
 
-    public Input<String> getSourceShareLocation() {
+    public Output<String> getSourceShareLocation() {
         return this.sourceShareLocation;
     }
 
     public ShareSubscriptionArgs(
-        Input<String> accountName,
-        @Nullable Input<String> expirationDate,
-        Input<String> invitationId,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> shareSubscriptionName,
-        Input<String> sourceShareLocation) {
+        Output<String> accountName,
+        @Nullable Output<String> expirationDate,
+        Output<String> invitationId,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> shareSubscriptionName,
+        Output<String> sourceShareLocation) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.expirationDate = expirationDate;
         this.invitationId = Objects.requireNonNull(invitationId, "expected parameter 'invitationId' to be non-null");
@@ -96,12 +96,12 @@ public final class ShareSubscriptionArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ShareSubscriptionArgs() {
-        this.accountName = Input.empty();
-        this.expirationDate = Input.empty();
-        this.invitationId = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.shareSubscriptionName = Input.empty();
-        this.sourceShareLocation = Input.empty();
+        this.accountName = Output.empty();
+        this.expirationDate = Output.empty();
+        this.invitationId = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.shareSubscriptionName = Output.empty();
+        this.sourceShareLocation = Output.empty();
     }
 
     public static Builder builder() {
@@ -113,12 +113,12 @@ public final class ShareSubscriptionArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private @Nullable Input<String> expirationDate;
-        private Input<String> invitationId;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> shareSubscriptionName;
-        private Input<String> sourceShareLocation;
+        private Output<String> accountName;
+        private @Nullable Output<String> expirationDate;
+        private Output<String> invitationId;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> shareSubscriptionName;
+        private Output<String> sourceShareLocation;
 
         public Builder() {
     	      // Empty
@@ -134,63 +134,63 @@ public final class ShareSubscriptionArgs extends io.pulumi.resources.ResourceArg
     	      this.sourceShareLocation = defaults.sourceShareLocation;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder expirationDate(@Nullable Input<String> expirationDate) {
+        public Builder expirationDate(@Nullable Output<String> expirationDate) {
             this.expirationDate = expirationDate;
             return this;
         }
 
         public Builder expirationDate(@Nullable String expirationDate) {
-            this.expirationDate = Input.ofNullable(expirationDate);
+            this.expirationDate = Output.ofNullable(expirationDate);
             return this;
         }
 
-        public Builder invitationId(Input<String> invitationId) {
+        public Builder invitationId(Output<String> invitationId) {
             this.invitationId = Objects.requireNonNull(invitationId);
             return this;
         }
 
         public Builder invitationId(String invitationId) {
-            this.invitationId = Input.of(Objects.requireNonNull(invitationId));
+            this.invitationId = Output.of(Objects.requireNonNull(invitationId));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder shareSubscriptionName(@Nullable Input<String> shareSubscriptionName) {
+        public Builder shareSubscriptionName(@Nullable Output<String> shareSubscriptionName) {
             this.shareSubscriptionName = shareSubscriptionName;
             return this;
         }
 
         public Builder shareSubscriptionName(@Nullable String shareSubscriptionName) {
-            this.shareSubscriptionName = Input.ofNullable(shareSubscriptionName);
+            this.shareSubscriptionName = Output.ofNullable(shareSubscriptionName);
             return this;
         }
 
-        public Builder sourceShareLocation(Input<String> sourceShareLocation) {
+        public Builder sourceShareLocation(Output<String> sourceShareLocation) {
             this.sourceShareLocation = Objects.requireNonNull(sourceShareLocation);
             return this;
         }
 
         public Builder sourceShareLocation(String sourceShareLocation) {
-            this.sourceShareLocation = Input.of(Objects.requireNonNull(sourceShareLocation));
+            this.sourceShareLocation = Output.of(Objects.requireNonNull(sourceShareLocation));
             return this;
         }
         public ShareSubscriptionArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class EnvironmentVariableSetupArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -34,9 +34,9 @@ public final class EnvironmentVariableSetupArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="variableName", required=true)
-      private final Input<String> variableName;
+      private final Output<String> variableName;
 
-    public Input<String> getVariableName() {
+    public Output<String> getVariableName() {
         return this.variableName;
     }
 
@@ -45,25 +45,25 @@ public final class EnvironmentVariableSetupArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="variableValue", required=true)
-      private final Input<String> variableValue;
+      private final Output<String> variableValue;
 
-    public Input<String> getVariableValue() {
+    public Output<String> getVariableValue() {
         return this.variableValue;
     }
 
     public EnvironmentVariableSetupArgs(
-        Input<String> type,
-        Input<String> variableName,
-        Input<String> variableValue) {
+        Output<String> type,
+        Output<String> variableName,
+        Output<String> variableValue) {
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
         this.variableName = Objects.requireNonNull(variableName, "expected parameter 'variableName' to be non-null");
         this.variableValue = Objects.requireNonNull(variableValue, "expected parameter 'variableValue' to be non-null");
     }
 
     private EnvironmentVariableSetupArgs() {
-        this.type = Input.empty();
-        this.variableName = Input.empty();
-        this.variableValue = Input.empty();
+        this.type = Output.empty();
+        this.variableName = Output.empty();
+        this.variableValue = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class EnvironmentVariableSetupArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> type;
-        private Input<String> variableName;
-        private Input<String> variableValue;
+        private Output<String> type;
+        private Output<String> variableName;
+        private Output<String> variableValue;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class EnvironmentVariableSetupArgs extends io.pulumi.resources.Reso
     	      this.variableValue = defaults.variableValue;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder variableName(Input<String> variableName) {
+        public Builder variableName(Output<String> variableName) {
             this.variableName = Objects.requireNonNull(variableName);
             return this;
         }
 
         public Builder variableName(String variableName) {
-            this.variableName = Input.of(Objects.requireNonNull(variableName));
+            this.variableName = Output.of(Objects.requireNonNull(variableName));
             return this;
         }
 
-        public Builder variableValue(Input<String> variableValue) {
+        public Builder variableValue(Output<String> variableValue) {
             this.variableValue = Objects.requireNonNull(variableValue);
             return this;
         }
 
         public Builder variableValue(String variableValue) {
-            this.variableValue = Input.of(Objects.requireNonNull(variableValue));
+            this.variableValue = Output.of(Objects.requireNonNull(variableValue));
             return this;
         }
         public EnvironmentVariableSetupArgs build() {

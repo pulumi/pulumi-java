@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databox.inputs;
 
 import io.pulumi.azurenative.databox.inputs.NotificationPreferenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,9 +25,9 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contactName", required=true)
-      private final Input<String> contactName;
+      private final Output<String> contactName;
 
-    public Input<String> getContactName() {
+    public Output<String> getContactName() {
         return this.contactName;
     }
 
@@ -36,9 +36,9 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="emailList", required=true)
-      private final Input<List<String>> emailList;
+      private final Output<List<String>> emailList;
 
-    public Input<List<String>> getEmailList() {
+    public Output<List<String>> getEmailList() {
         return this.emailList;
     }
 
@@ -47,10 +47,10 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mobile")
-      private final @Nullable Input<String> mobile;
+      private final @Nullable Output<String> mobile;
 
-    public Input<String> getMobile() {
-        return this.mobile == null ? Input.empty() : this.mobile;
+    public Output<String> getMobile() {
+        return this.mobile == null ? Output.empty() : this.mobile;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationPreference")
-      private final @Nullable Input<List<NotificationPreferenceArgs>> notificationPreference;
+      private final @Nullable Output<List<NotificationPreferenceArgs>> notificationPreference;
 
-    public Input<List<NotificationPreferenceArgs>> getNotificationPreference() {
-        return this.notificationPreference == null ? Input.empty() : this.notificationPreference;
+    public Output<List<NotificationPreferenceArgs>> getNotificationPreference() {
+        return this.notificationPreference == null ? Output.empty() : this.notificationPreference;
     }
 
     /**
@@ -69,9 +69,9 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="phone", required=true)
-      private final Input<String> phone;
+      private final Output<String> phone;
 
-    public Input<String> getPhone() {
+    public Output<String> getPhone() {
         return this.phone;
     }
 
@@ -80,19 +80,19 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="phoneExtension")
-      private final @Nullable Input<String> phoneExtension;
+      private final @Nullable Output<String> phoneExtension;
 
-    public Input<String> getPhoneExtension() {
-        return this.phoneExtension == null ? Input.empty() : this.phoneExtension;
+    public Output<String> getPhoneExtension() {
+        return this.phoneExtension == null ? Output.empty() : this.phoneExtension;
     }
 
     public ContactDetailsArgs(
-        Input<String> contactName,
-        Input<List<String>> emailList,
-        @Nullable Input<String> mobile,
-        @Nullable Input<List<NotificationPreferenceArgs>> notificationPreference,
-        Input<String> phone,
-        @Nullable Input<String> phoneExtension) {
+        Output<String> contactName,
+        Output<List<String>> emailList,
+        @Nullable Output<String> mobile,
+        @Nullable Output<List<NotificationPreferenceArgs>> notificationPreference,
+        Output<String> phone,
+        @Nullable Output<String> phoneExtension) {
         this.contactName = Objects.requireNonNull(contactName, "expected parameter 'contactName' to be non-null");
         this.emailList = Objects.requireNonNull(emailList, "expected parameter 'emailList' to be non-null");
         this.mobile = mobile;
@@ -102,12 +102,12 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContactDetailsArgs() {
-        this.contactName = Input.empty();
-        this.emailList = Input.empty();
-        this.mobile = Input.empty();
-        this.notificationPreference = Input.empty();
-        this.phone = Input.empty();
-        this.phoneExtension = Input.empty();
+        this.contactName = Output.empty();
+        this.emailList = Output.empty();
+        this.mobile = Output.empty();
+        this.notificationPreference = Output.empty();
+        this.phone = Output.empty();
+        this.phoneExtension = Output.empty();
     }
 
     public static Builder builder() {
@@ -119,12 +119,12 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> contactName;
-        private Input<List<String>> emailList;
-        private @Nullable Input<String> mobile;
-        private @Nullable Input<List<NotificationPreferenceArgs>> notificationPreference;
-        private Input<String> phone;
-        private @Nullable Input<String> phoneExtension;
+        private Output<String> contactName;
+        private Output<List<String>> emailList;
+        private @Nullable Output<String> mobile;
+        private @Nullable Output<List<NotificationPreferenceArgs>> notificationPreference;
+        private Output<String> phone;
+        private @Nullable Output<String> phoneExtension;
 
         public Builder() {
     	      // Empty
@@ -140,63 +140,63 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.phoneExtension = defaults.phoneExtension;
         }
 
-        public Builder contactName(Input<String> contactName) {
+        public Builder contactName(Output<String> contactName) {
             this.contactName = Objects.requireNonNull(contactName);
             return this;
         }
 
         public Builder contactName(String contactName) {
-            this.contactName = Input.of(Objects.requireNonNull(contactName));
+            this.contactName = Output.of(Objects.requireNonNull(contactName));
             return this;
         }
 
-        public Builder emailList(Input<List<String>> emailList) {
+        public Builder emailList(Output<List<String>> emailList) {
             this.emailList = Objects.requireNonNull(emailList);
             return this;
         }
 
         public Builder emailList(List<String> emailList) {
-            this.emailList = Input.of(Objects.requireNonNull(emailList));
+            this.emailList = Output.of(Objects.requireNonNull(emailList));
             return this;
         }
 
-        public Builder mobile(@Nullable Input<String> mobile) {
+        public Builder mobile(@Nullable Output<String> mobile) {
             this.mobile = mobile;
             return this;
         }
 
         public Builder mobile(@Nullable String mobile) {
-            this.mobile = Input.ofNullable(mobile);
+            this.mobile = Output.ofNullable(mobile);
             return this;
         }
 
-        public Builder notificationPreference(@Nullable Input<List<NotificationPreferenceArgs>> notificationPreference) {
+        public Builder notificationPreference(@Nullable Output<List<NotificationPreferenceArgs>> notificationPreference) {
             this.notificationPreference = notificationPreference;
             return this;
         }
 
         public Builder notificationPreference(@Nullable List<NotificationPreferenceArgs> notificationPreference) {
-            this.notificationPreference = Input.ofNullable(notificationPreference);
+            this.notificationPreference = Output.ofNullable(notificationPreference);
             return this;
         }
 
-        public Builder phone(Input<String> phone) {
+        public Builder phone(Output<String> phone) {
             this.phone = Objects.requireNonNull(phone);
             return this;
         }
 
         public Builder phone(String phone) {
-            this.phone = Input.of(Objects.requireNonNull(phone));
+            this.phone = Output.of(Objects.requireNonNull(phone));
             return this;
         }
 
-        public Builder phoneExtension(@Nullable Input<String> phoneExtension) {
+        public Builder phoneExtension(@Nullable Output<String> phoneExtension) {
             this.phoneExtension = phoneExtension;
             return this;
         }
 
         public Builder phoneExtension(@Nullable String phoneExtension) {
-            this.phoneExtension = Input.ofNullable(phoneExtension);
+            this.phoneExtension = Output.ofNullable(phoneExtension);
             return this;
         }
         public ContactDetailsArgs build() {

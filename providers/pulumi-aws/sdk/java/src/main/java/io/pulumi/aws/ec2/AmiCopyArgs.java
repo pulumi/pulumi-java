@@ -5,7 +5,7 @@ package io.pulumi.aws.ec2;
 
 import io.pulumi.aws.ec2.inputs.AmiCopyEbsBlockDeviceArgs;
 import io.pulumi.aws.ec2.inputs.AmiCopyEphemeralBlockDeviceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class AmiCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AmiCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationOutpostArn")
-      private final @Nullable Input<String> destinationOutpostArn;
+      private final @Nullable Output<String> destinationOutpostArn;
 
-    public Input<String> getDestinationOutpostArn() {
-        return this.destinationOutpostArn == null ? Input.empty() : this.destinationOutpostArn;
+    public Output<String> getDestinationOutpostArn() {
+        return this.destinationOutpostArn == null ? Output.empty() : this.destinationOutpostArn;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class AmiCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ebsBlockDevices")
-      private final @Nullable Input<List<AmiCopyEbsBlockDeviceArgs>> ebsBlockDevices;
+      private final @Nullable Output<List<AmiCopyEbsBlockDeviceArgs>> ebsBlockDevices;
 
-    public Input<List<AmiCopyEbsBlockDeviceArgs>> getEbsBlockDevices() {
-        return this.ebsBlockDevices == null ? Input.empty() : this.ebsBlockDevices;
+    public Output<List<AmiCopyEbsBlockDeviceArgs>> getEbsBlockDevices() {
+        return this.ebsBlockDevices == null ? Output.empty() : this.ebsBlockDevices;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class AmiCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encrypted")
-      private final @Nullable Input<Boolean> encrypted;
+      private final @Nullable Output<Boolean> encrypted;
 
-    public Input<Boolean> getEncrypted() {
-        return this.encrypted == null ? Input.empty() : this.encrypted;
+    public Output<Boolean> getEncrypted() {
+        return this.encrypted == null ? Output.empty() : this.encrypted;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class AmiCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ephemeralBlockDevices")
-      private final @Nullable Input<List<AmiCopyEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
+      private final @Nullable Output<List<AmiCopyEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
 
-    public Input<List<AmiCopyEphemeralBlockDeviceArgs>> getEphemeralBlockDevices() {
-        return this.ephemeralBlockDevices == null ? Input.empty() : this.ephemeralBlockDevices;
+    public Output<List<AmiCopyEphemeralBlockDeviceArgs>> getEphemeralBlockDevices() {
+        return this.ephemeralBlockDevices == null ? Output.empty() : this.ephemeralBlockDevices;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class AmiCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyId")
-      private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Output<String> kmsKeyId;
 
-    public Input<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
+    public Output<String> getKmsKeyId() {
+        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class AmiCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -107,9 +107,9 @@ public final class AmiCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceAmiId", required=true)
-      private final Input<String> sourceAmiId;
+      private final Output<String> sourceAmiId;
 
-    public Input<String> getSourceAmiId() {
+    public Output<String> getSourceAmiId() {
         return this.sourceAmiId;
     }
 
@@ -119,9 +119,9 @@ public final class AmiCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceAmiRegion", required=true)
-      private final Input<String> sourceAmiRegion;
+      private final Output<String> sourceAmiRegion;
 
-    public Input<String> getSourceAmiRegion() {
+    public Output<String> getSourceAmiRegion() {
         return this.sourceAmiRegion;
     }
 
@@ -130,23 +130,23 @@ public final class AmiCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public AmiCopyArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> destinationOutpostArn,
-        @Nullable Input<List<AmiCopyEbsBlockDeviceArgs>> ebsBlockDevices,
-        @Nullable Input<Boolean> encrypted,
-        @Nullable Input<List<AmiCopyEphemeralBlockDeviceArgs>> ephemeralBlockDevices,
-        @Nullable Input<String> kmsKeyId,
-        @Nullable Input<String> name,
-        Input<String> sourceAmiId,
-        Input<String> sourceAmiRegion,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> destinationOutpostArn,
+        @Nullable Output<List<AmiCopyEbsBlockDeviceArgs>> ebsBlockDevices,
+        @Nullable Output<Boolean> encrypted,
+        @Nullable Output<List<AmiCopyEphemeralBlockDeviceArgs>> ephemeralBlockDevices,
+        @Nullable Output<String> kmsKeyId,
+        @Nullable Output<String> name,
+        Output<String> sourceAmiId,
+        Output<String> sourceAmiRegion,
+        @Nullable Output<Map<String,String>> tags) {
         this.description = description;
         this.destinationOutpostArn = destinationOutpostArn;
         this.ebsBlockDevices = ebsBlockDevices;
@@ -160,16 +160,16 @@ public final class AmiCopyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AmiCopyArgs() {
-        this.description = Input.empty();
-        this.destinationOutpostArn = Input.empty();
-        this.ebsBlockDevices = Input.empty();
-        this.encrypted = Input.empty();
-        this.ephemeralBlockDevices = Input.empty();
-        this.kmsKeyId = Input.empty();
-        this.name = Input.empty();
-        this.sourceAmiId = Input.empty();
-        this.sourceAmiRegion = Input.empty();
-        this.tags = Input.empty();
+        this.description = Output.empty();
+        this.destinationOutpostArn = Output.empty();
+        this.ebsBlockDevices = Output.empty();
+        this.encrypted = Output.empty();
+        this.ephemeralBlockDevices = Output.empty();
+        this.kmsKeyId = Output.empty();
+        this.name = Output.empty();
+        this.sourceAmiId = Output.empty();
+        this.sourceAmiRegion = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -181,16 +181,16 @@ public final class AmiCopyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> destinationOutpostArn;
-        private @Nullable Input<List<AmiCopyEbsBlockDeviceArgs>> ebsBlockDevices;
-        private @Nullable Input<Boolean> encrypted;
-        private @Nullable Input<List<AmiCopyEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
-        private @Nullable Input<String> kmsKeyId;
-        private @Nullable Input<String> name;
-        private Input<String> sourceAmiId;
-        private Input<String> sourceAmiRegion;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> destinationOutpostArn;
+        private @Nullable Output<List<AmiCopyEbsBlockDeviceArgs>> ebsBlockDevices;
+        private @Nullable Output<Boolean> encrypted;
+        private @Nullable Output<List<AmiCopyEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
+        private @Nullable Output<String> kmsKeyId;
+        private @Nullable Output<String> name;
+        private Output<String> sourceAmiId;
+        private Output<String> sourceAmiRegion;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -210,103 +210,103 @@ public final class AmiCopyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder destinationOutpostArn(@Nullable Input<String> destinationOutpostArn) {
+        public Builder destinationOutpostArn(@Nullable Output<String> destinationOutpostArn) {
             this.destinationOutpostArn = destinationOutpostArn;
             return this;
         }
 
         public Builder destinationOutpostArn(@Nullable String destinationOutpostArn) {
-            this.destinationOutpostArn = Input.ofNullable(destinationOutpostArn);
+            this.destinationOutpostArn = Output.ofNullable(destinationOutpostArn);
             return this;
         }
 
-        public Builder ebsBlockDevices(@Nullable Input<List<AmiCopyEbsBlockDeviceArgs>> ebsBlockDevices) {
+        public Builder ebsBlockDevices(@Nullable Output<List<AmiCopyEbsBlockDeviceArgs>> ebsBlockDevices) {
             this.ebsBlockDevices = ebsBlockDevices;
             return this;
         }
 
         public Builder ebsBlockDevices(@Nullable List<AmiCopyEbsBlockDeviceArgs> ebsBlockDevices) {
-            this.ebsBlockDevices = Input.ofNullable(ebsBlockDevices);
+            this.ebsBlockDevices = Output.ofNullable(ebsBlockDevices);
             return this;
         }
 
-        public Builder encrypted(@Nullable Input<Boolean> encrypted) {
+        public Builder encrypted(@Nullable Output<Boolean> encrypted) {
             this.encrypted = encrypted;
             return this;
         }
 
         public Builder encrypted(@Nullable Boolean encrypted) {
-            this.encrypted = Input.ofNullable(encrypted);
+            this.encrypted = Output.ofNullable(encrypted);
             return this;
         }
 
-        public Builder ephemeralBlockDevices(@Nullable Input<List<AmiCopyEphemeralBlockDeviceArgs>> ephemeralBlockDevices) {
+        public Builder ephemeralBlockDevices(@Nullable Output<List<AmiCopyEphemeralBlockDeviceArgs>> ephemeralBlockDevices) {
             this.ephemeralBlockDevices = ephemeralBlockDevices;
             return this;
         }
 
         public Builder ephemeralBlockDevices(@Nullable List<AmiCopyEphemeralBlockDeviceArgs> ephemeralBlockDevices) {
-            this.ephemeralBlockDevices = Input.ofNullable(ephemeralBlockDevices);
+            this.ephemeralBlockDevices = Output.ofNullable(ephemeralBlockDevices);
             return this;
         }
 
-        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Input.ofNullable(kmsKeyId);
+            this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder sourceAmiId(Input<String> sourceAmiId) {
+        public Builder sourceAmiId(Output<String> sourceAmiId) {
             this.sourceAmiId = Objects.requireNonNull(sourceAmiId);
             return this;
         }
 
         public Builder sourceAmiId(String sourceAmiId) {
-            this.sourceAmiId = Input.of(Objects.requireNonNull(sourceAmiId));
+            this.sourceAmiId = Output.of(Objects.requireNonNull(sourceAmiId));
             return this;
         }
 
-        public Builder sourceAmiRegion(Input<String> sourceAmiRegion) {
+        public Builder sourceAmiRegion(Output<String> sourceAmiRegion) {
             this.sourceAmiRegion = Objects.requireNonNull(sourceAmiRegion);
             return this;
         }
 
         public Builder sourceAmiRegion(String sourceAmiRegion) {
-            this.sourceAmiRegion = Input.of(Objects.requireNonNull(sourceAmiRegion));
+            this.sourceAmiRegion = Output.of(Objects.requireNonNull(sourceAmiRegion));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public AmiCopyArgs build() {

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -31,10 +31,10 @@ public final class GoogleCloudStorageLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="accessKeyId")
-      private final @Nullable Input<Object> accessKeyId;
+      private final @Nullable Output<Object> accessKeyId;
 
-    public Input<Object> getAccessKeyId() {
-        return this.accessKeyId == null ? Input.empty() : this.accessKeyId;
+    public Output<Object> getAccessKeyId() {
+        return this.accessKeyId == null ? Output.empty() : this.accessKeyId;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class GoogleCloudStorageLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="annotations")
-      private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Output<List<Object>> annotations;
 
-    public Input<List<Object>> getAnnotations() {
-        return this.annotations == null ? Input.empty() : this.annotations;
+    public Output<List<Object>> getAnnotations() {
+        return this.annotations == null ? Output.empty() : this.annotations;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class GoogleCloudStorageLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="connectVia")
-      private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+      private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
-        return this.connectVia == null ? Input.empty() : this.connectVia;
+    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+        return this.connectVia == null ? Output.empty() : this.connectVia;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class GoogleCloudStorageLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class GoogleCloudStorageLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="encryptedCredential")
-      private final @Nullable Input<Object> encryptedCredential;
+      private final @Nullable Output<Object> encryptedCredential;
 
-    public Input<Object> getEncryptedCredential() {
-        return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
+    public Output<Object> getEncryptedCredential() {
+        return this.encryptedCredential == null ? Output.empty() : this.encryptedCredential;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class GoogleCloudStorageLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+      private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class GoogleCloudStorageLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="secretAccessKey")
-      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> secretAccessKey;
+      private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> secretAccessKey;
 
-    public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getSecretAccessKey() {
-        return this.secretAccessKey == null ? Input.empty() : this.secretAccessKey;
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getSecretAccessKey() {
+        return this.secretAccessKey == null ? Output.empty() : this.secretAccessKey;
     }
 
     /**
@@ -108,10 +108,10 @@ public final class GoogleCloudStorageLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="serviceUrl")
-      private final @Nullable Input<Object> serviceUrl;
+      private final @Nullable Output<Object> serviceUrl;
 
-    public Input<Object> getServiceUrl() {
-        return this.serviceUrl == null ? Input.empty() : this.serviceUrl;
+    public Output<Object> getServiceUrl() {
+        return this.serviceUrl == null ? Output.empty() : this.serviceUrl;
     }
 
     /**
@@ -120,22 +120,22 @@ public final class GoogleCloudStorageLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public GoogleCloudStorageLinkedServiceArgs(
-        @Nullable Input<Object> accessKeyId,
-        @Nullable Input<List<Object>> annotations,
-        @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia,
-        @Nullable Input<String> description,
-        @Nullable Input<Object> encryptedCredential,
-        @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters,
-        @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> secretAccessKey,
-        @Nullable Input<Object> serviceUrl,
-        Input<String> type) {
+        @Nullable Output<Object> accessKeyId,
+        @Nullable Output<List<Object>> annotations,
+        @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia,
+        @Nullable Output<String> description,
+        @Nullable Output<Object> encryptedCredential,
+        @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters,
+        @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> secretAccessKey,
+        @Nullable Output<Object> serviceUrl,
+        Output<String> type) {
         this.accessKeyId = accessKeyId;
         this.annotations = annotations;
         this.connectVia = connectVia;
@@ -148,15 +148,15 @@ public final class GoogleCloudStorageLinkedServiceArgs extends io.pulumi.resourc
     }
 
     private GoogleCloudStorageLinkedServiceArgs() {
-        this.accessKeyId = Input.empty();
-        this.annotations = Input.empty();
-        this.connectVia = Input.empty();
-        this.description = Input.empty();
-        this.encryptedCredential = Input.empty();
-        this.parameters = Input.empty();
-        this.secretAccessKey = Input.empty();
-        this.serviceUrl = Input.empty();
-        this.type = Input.empty();
+        this.accessKeyId = Output.empty();
+        this.annotations = Output.empty();
+        this.connectVia = Output.empty();
+        this.description = Output.empty();
+        this.encryptedCredential = Output.empty();
+        this.parameters = Output.empty();
+        this.secretAccessKey = Output.empty();
+        this.serviceUrl = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -168,15 +168,15 @@ public final class GoogleCloudStorageLinkedServiceArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> accessKeyId;
-        private @Nullable Input<List<Object>> annotations;
-        private @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Object> encryptedCredential;
-        private @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
-        private @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> secretAccessKey;
-        private @Nullable Input<Object> serviceUrl;
-        private Input<String> type;
+        private @Nullable Output<Object> accessKeyId;
+        private @Nullable Output<List<Object>> annotations;
+        private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Object> encryptedCredential;
+        private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
+        private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> secretAccessKey;
+        private @Nullable Output<Object> serviceUrl;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -195,93 +195,93 @@ public final class GoogleCloudStorageLinkedServiceArgs extends io.pulumi.resourc
     	      this.type = defaults.type;
         }
 
-        public Builder accessKeyId(@Nullable Input<Object> accessKeyId) {
+        public Builder accessKeyId(@Nullable Output<Object> accessKeyId) {
             this.accessKeyId = accessKeyId;
             return this;
         }
 
         public Builder accessKeyId(@Nullable Object accessKeyId) {
-            this.accessKeyId = Input.ofNullable(accessKeyId);
+            this.accessKeyId = Output.ofNullable(accessKeyId);
             return this;
         }
 
-        public Builder annotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Output<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Input.ofNullable(annotations);
+            this.annotations = Output.ofNullable(annotations);
             return this;
         }
 
-        public Builder connectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
+        public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Input.ofNullable(connectVia);
+            this.connectVia = Output.ofNullable(connectVia);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder encryptedCredential(@Nullable Input<Object> encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Input.ofNullable(encryptedCredential);
+            this.encryptedCredential = Output.ofNullable(encryptedCredential);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder secretAccessKey(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> secretAccessKey) {
+        public Builder secretAccessKey(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> secretAccessKey) {
             this.secretAccessKey = secretAccessKey;
             return this;
         }
 
         public Builder secretAccessKey(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> secretAccessKey) {
-            this.secretAccessKey = Input.ofNullable(secretAccessKey);
+            this.secretAccessKey = Output.ofNullable(secretAccessKey);
             return this;
         }
 
-        public Builder serviceUrl(@Nullable Input<Object> serviceUrl) {
+        public Builder serviceUrl(@Nullable Output<Object> serviceUrl) {
             this.serviceUrl = serviceUrl;
             return this;
         }
 
         public Builder serviceUrl(@Nullable Object serviceUrl) {
-            this.serviceUrl = Input.ofNullable(serviceUrl);
+            this.serviceUrl = Output.ofNullable(serviceUrl);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public GoogleCloudStorageLinkedServiceArgs build() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.storage.inputs;
 import io.pulumi.azurenative.storage.inputs.ManagementPolicyBaseBlobArgs;
 import io.pulumi.azurenative.storage.inputs.ManagementPolicySnapShotArgs;
 import io.pulumi.azurenative.storage.inputs.ManagementPolicyVersionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,10 +25,10 @@ public final class ManagementPolicyActionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="baseBlob")
-      private final @Nullable Input<ManagementPolicyBaseBlobArgs> baseBlob;
+      private final @Nullable Output<ManagementPolicyBaseBlobArgs> baseBlob;
 
-    public Input<ManagementPolicyBaseBlobArgs> getBaseBlob() {
-        return this.baseBlob == null ? Input.empty() : this.baseBlob;
+    public Output<ManagementPolicyBaseBlobArgs> getBaseBlob() {
+        return this.baseBlob == null ? Output.empty() : this.baseBlob;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ManagementPolicyActionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="snapshot")
-      private final @Nullable Input<ManagementPolicySnapShotArgs> snapshot;
+      private final @Nullable Output<ManagementPolicySnapShotArgs> snapshot;
 
-    public Input<ManagementPolicySnapShotArgs> getSnapshot() {
-        return this.snapshot == null ? Input.empty() : this.snapshot;
+    public Output<ManagementPolicySnapShotArgs> getSnapshot() {
+        return this.snapshot == null ? Output.empty() : this.snapshot;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class ManagementPolicyActionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<ManagementPolicyVersionArgs> version;
+      private final @Nullable Output<ManagementPolicyVersionArgs> version;
 
-    public Input<ManagementPolicyVersionArgs> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<ManagementPolicyVersionArgs> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public ManagementPolicyActionArgs(
-        @Nullable Input<ManagementPolicyBaseBlobArgs> baseBlob,
-        @Nullable Input<ManagementPolicySnapShotArgs> snapshot,
-        @Nullable Input<ManagementPolicyVersionArgs> version) {
+        @Nullable Output<ManagementPolicyBaseBlobArgs> baseBlob,
+        @Nullable Output<ManagementPolicySnapShotArgs> snapshot,
+        @Nullable Output<ManagementPolicyVersionArgs> version) {
         this.baseBlob = baseBlob;
         this.snapshot = snapshot;
         this.version = version;
     }
 
     private ManagementPolicyActionArgs() {
-        this.baseBlob = Input.empty();
-        this.snapshot = Input.empty();
-        this.version = Input.empty();
+        this.baseBlob = Output.empty();
+        this.snapshot = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class ManagementPolicyActionArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<ManagementPolicyBaseBlobArgs> baseBlob;
-        private @Nullable Input<ManagementPolicySnapShotArgs> snapshot;
-        private @Nullable Input<ManagementPolicyVersionArgs> version;
+        private @Nullable Output<ManagementPolicyBaseBlobArgs> baseBlob;
+        private @Nullable Output<ManagementPolicySnapShotArgs> snapshot;
+        private @Nullable Output<ManagementPolicyVersionArgs> version;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class ManagementPolicyActionArgs extends io.pulumi.resources.Resour
     	      this.version = defaults.version;
         }
 
-        public Builder baseBlob(@Nullable Input<ManagementPolicyBaseBlobArgs> baseBlob) {
+        public Builder baseBlob(@Nullable Output<ManagementPolicyBaseBlobArgs> baseBlob) {
             this.baseBlob = baseBlob;
             return this;
         }
 
         public Builder baseBlob(@Nullable ManagementPolicyBaseBlobArgs baseBlob) {
-            this.baseBlob = Input.ofNullable(baseBlob);
+            this.baseBlob = Output.ofNullable(baseBlob);
             return this;
         }
 
-        public Builder snapshot(@Nullable Input<ManagementPolicySnapShotArgs> snapshot) {
+        public Builder snapshot(@Nullable Output<ManagementPolicySnapShotArgs> snapshot) {
             this.snapshot = snapshot;
             return this;
         }
 
         public Builder snapshot(@Nullable ManagementPolicySnapShotArgs snapshot) {
-            this.snapshot = Input.ofNullable(snapshot);
+            this.snapshot = Output.ofNullable(snapshot);
             return this;
         }
 
-        public Builder version(@Nullable Input<ManagementPolicyVersionArgs> version) {
+        public Builder version(@Nullable Output<ManagementPolicyVersionArgs> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable ManagementPolicyVersionArgs version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public ManagementPolicyActionArgs build() {

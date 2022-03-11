@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.awsnative.kendra.enums.DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,29 +17,29 @@ public final class DataSourceWebCrawlerSeedUrlConfigurationArgs extends io.pulum
     public static final DataSourceWebCrawlerSeedUrlConfigurationArgs Empty = new DataSourceWebCrawlerSeedUrlConfigurationArgs();
 
     @InputImport(name="seedUrls", required=true)
-      private final Input<List<String>> seedUrls;
+      private final Output<List<String>> seedUrls;
 
-    public Input<List<String>> getSeedUrls() {
+    public Output<List<String>> getSeedUrls() {
         return this.seedUrls;
     }
 
     @InputImport(name="webCrawlerMode")
-      private final @Nullable Input<DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode> webCrawlerMode;
+      private final @Nullable Output<DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode> webCrawlerMode;
 
-    public Input<DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode> getWebCrawlerMode() {
-        return this.webCrawlerMode == null ? Input.empty() : this.webCrawlerMode;
+    public Output<DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode> getWebCrawlerMode() {
+        return this.webCrawlerMode == null ? Output.empty() : this.webCrawlerMode;
     }
 
     public DataSourceWebCrawlerSeedUrlConfigurationArgs(
-        Input<List<String>> seedUrls,
-        @Nullable Input<DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode> webCrawlerMode) {
+        Output<List<String>> seedUrls,
+        @Nullable Output<DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode> webCrawlerMode) {
         this.seedUrls = Objects.requireNonNull(seedUrls, "expected parameter 'seedUrls' to be non-null");
         this.webCrawlerMode = webCrawlerMode;
     }
 
     private DataSourceWebCrawlerSeedUrlConfigurationArgs() {
-        this.seedUrls = Input.empty();
-        this.webCrawlerMode = Input.empty();
+        this.seedUrls = Output.empty();
+        this.webCrawlerMode = Output.empty();
     }
 
     public static Builder builder() {
@@ -51,8 +51,8 @@ public final class DataSourceWebCrawlerSeedUrlConfigurationArgs extends io.pulum
     }
 
     public static final class Builder {
-        private Input<List<String>> seedUrls;
-        private @Nullable Input<DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode> webCrawlerMode;
+        private Output<List<String>> seedUrls;
+        private @Nullable Output<DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode> webCrawlerMode;
 
         public Builder() {
     	      // Empty
@@ -64,23 +64,23 @@ public final class DataSourceWebCrawlerSeedUrlConfigurationArgs extends io.pulum
     	      this.webCrawlerMode = defaults.webCrawlerMode;
         }
 
-        public Builder seedUrls(Input<List<String>> seedUrls) {
+        public Builder seedUrls(Output<List<String>> seedUrls) {
             this.seedUrls = Objects.requireNonNull(seedUrls);
             return this;
         }
 
         public Builder seedUrls(List<String> seedUrls) {
-            this.seedUrls = Input.of(Objects.requireNonNull(seedUrls));
+            this.seedUrls = Output.of(Objects.requireNonNull(seedUrls));
             return this;
         }
 
-        public Builder webCrawlerMode(@Nullable Input<DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode> webCrawlerMode) {
+        public Builder webCrawlerMode(@Nullable Output<DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode> webCrawlerMode) {
             this.webCrawlerMode = webCrawlerMode;
             return this;
         }
 
         public Builder webCrawlerMode(@Nullable DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode webCrawlerMode) {
-            this.webCrawlerMode = Input.ofNullable(webCrawlerMode);
+            this.webCrawlerMode = Output.ofNullable(webCrawlerMode);
             return this;
         }
         public DataSourceWebCrawlerSeedUrlConfigurationArgs build() {

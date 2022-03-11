@@ -4,7 +4,7 @@
 package io.pulumi.plant.inputs;
 
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.plant.enums.ContainerBrightness;
 import io.pulumi.plant.enums.ContainerColor;
@@ -19,49 +19,49 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     public static final ContainerArgs Empty = new ContainerArgs();
 
     @InputImport(name="brightness")
-      private final @Nullable Input<ContainerBrightness> brightness;
+      private final @Nullable Output<ContainerBrightness> brightness;
 
-    public Input<ContainerBrightness> getBrightness() {
-        return this.brightness == null ? Input.empty() : this.brightness;
+    public Output<ContainerBrightness> getBrightness() {
+        return this.brightness == null ? Output.empty() : this.brightness;
     }
 
     @InputImport(name="color")
-      private final @Nullable Input<Either<ContainerColor,String>> color;
+      private final @Nullable Output<Either<ContainerColor,String>> color;
 
-    public Input<Either<ContainerColor,String>> getColor() {
-        return this.color == null ? Input.empty() : this.color;
+    public Output<Either<ContainerColor,String>> getColor() {
+        return this.color == null ? Output.empty() : this.color;
     }
 
     @InputImport(name="material")
-      private final @Nullable Input<String> material;
+      private final @Nullable Output<String> material;
 
-    public Input<String> getMaterial() {
-        return this.material == null ? Input.empty() : this.material;
+    public Output<String> getMaterial() {
+        return this.material == null ? Output.empty() : this.material;
     }
 
     @InputImport(name="size", required=true)
-      private final Input<ContainerSize> size;
+      private final Output<ContainerSize> size;
 
-    public Input<ContainerSize> getSize() {
+    public Output<ContainerSize> getSize() {
         return this.size;
     }
 
     public ContainerArgs(
-        @Nullable Input<ContainerBrightness> brightness,
-        @Nullable Input<Either<ContainerColor,String>> color,
-        @Nullable Input<String> material,
-        Input<ContainerSize> size) {
-        this.brightness = brightness == null ? Input.ofNullable(io.pulumi.plant.enums.ContainerBrightness.One) : brightness;
+        @Nullable Output<ContainerBrightness> brightness,
+        @Nullable Output<Either<ContainerColor,String>> color,
+        @Nullable Output<String> material,
+        Output<ContainerSize> size) {
+        this.brightness = brightness == null ? Output.ofNullable(io.pulumi.plant.enums.ContainerBrightness.One) : brightness;
         this.color = color;
         this.material = material;
         this.size = Objects.requireNonNull(size, "expected parameter 'size' to be non-null");
     }
 
     private ContainerArgs() {
-        this.brightness = Input.empty();
-        this.color = Input.empty();
-        this.material = Input.empty();
-        this.size = Input.empty();
+        this.brightness = Output.empty();
+        this.color = Output.empty();
+        this.material = Output.empty();
+        this.size = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,10 +73,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ContainerBrightness> brightness;
-        private @Nullable Input<Either<ContainerColor,String>> color;
-        private @Nullable Input<String> material;
-        private Input<ContainerSize> size;
+        private @Nullable Output<ContainerBrightness> brightness;
+        private @Nullable Output<Either<ContainerColor,String>> color;
+        private @Nullable Output<String> material;
+        private Output<ContainerSize> size;
 
         public Builder() {
     	      // Empty
@@ -90,43 +90,43 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.size = defaults.size;
         }
 
-        public Builder brightness(@Nullable Input<ContainerBrightness> brightness) {
+        public Builder brightness(@Nullable Output<ContainerBrightness> brightness) {
             this.brightness = brightness;
             return this;
         }
 
         public Builder brightness(@Nullable ContainerBrightness brightness) {
-            this.brightness = Input.ofNullable(brightness);
+            this.brightness = Output.ofNullable(brightness);
             return this;
         }
 
-        public Builder color(@Nullable Input<Either<ContainerColor,String>> color) {
+        public Builder color(@Nullable Output<Either<ContainerColor,String>> color) {
             this.color = color;
             return this;
         }
 
         public Builder color(@Nullable Either<ContainerColor,String> color) {
-            this.color = Input.ofNullable(color);
+            this.color = Output.ofNullable(color);
             return this;
         }
 
-        public Builder material(@Nullable Input<String> material) {
+        public Builder material(@Nullable Output<String> material) {
             this.material = material;
             return this;
         }
 
         public Builder material(@Nullable String material) {
-            this.material = Input.ofNullable(material);
+            this.material = Output.ofNullable(material);
             return this;
         }
 
-        public Builder size(Input<ContainerSize> size) {
+        public Builder size(Output<ContainerSize> size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
 
         public Builder size(ContainerSize size) {
-            this.size = Input.of(Objects.requireNonNull(size));
+            this.size = Output.of(Objects.requireNonNull(size));
             return this;
         }
         public ContainerArgs build() {

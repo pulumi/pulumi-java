@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dns_v1.inputs.RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs;
 import java.lang.String;
@@ -21,29 +21,29 @@ public final class RRSetRoutingPolicyWrrPolicyArgs extends io.pulumi.resources.R
     public static final RRSetRoutingPolicyWrrPolicyArgs Empty = new RRSetRoutingPolicyWrrPolicyArgs();
 
     @InputImport(name="items")
-      private final @Nullable Input<List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs>> items;
+      private final @Nullable Output<List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs>> items;
 
-    public Input<List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs>> getItems() {
-        return this.items == null ? Input.empty() : this.items;
+    public Output<List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs>> getItems() {
+        return this.items == null ? Output.empty() : this.items;
     }
 
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     public RRSetRoutingPolicyWrrPolicyArgs(
-        @Nullable Input<List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs>> items,
-        @Nullable Input<String> kind) {
+        @Nullable Output<List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs>> items,
+        @Nullable Output<String> kind) {
         this.items = items;
         this.kind = kind;
     }
 
     private RRSetRoutingPolicyWrrPolicyArgs() {
-        this.items = Input.empty();
-        this.kind = Input.empty();
+        this.items = Output.empty();
+        this.kind = Output.empty();
     }
 
     public static Builder builder() {
@@ -55,8 +55,8 @@ public final class RRSetRoutingPolicyWrrPolicyArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs>> items;
-        private @Nullable Input<String> kind;
+        private @Nullable Output<List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs>> items;
+        private @Nullable Output<String> kind;
 
         public Builder() {
     	      // Empty
@@ -68,23 +68,23 @@ public final class RRSetRoutingPolicyWrrPolicyArgs extends io.pulumi.resources.R
     	      this.kind = defaults.kind;
         }
 
-        public Builder items(@Nullable Input<List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs>> items) {
+        public Builder items(@Nullable Output<List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs>> items) {
             this.items = items;
             return this;
         }
 
         public Builder items(@Nullable List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs> items) {
-            this.items = Input.ofNullable(items);
+            this.items = Output.ofNullable(items);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
         public RRSetRoutingPolicyWrrPolicyArgs build() {

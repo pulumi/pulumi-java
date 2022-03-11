@@ -6,7 +6,7 @@ package io.pulumi.azurenative.aad.inputs;
 import io.pulumi.azurenative.aad.enums.NotifyDcAdmins;
 import io.pulumi.azurenative.aad.enums.NotifyGlobalAdmins;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -27,10 +27,10 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="additionalRecipients")
-      private final @Nullable Input<List<String>> additionalRecipients;
+      private final @Nullable Output<List<String>> additionalRecipients;
 
-    public Input<List<String>> getAdditionalRecipients() {
-        return this.additionalRecipients == null ? Input.empty() : this.additionalRecipients;
+    public Output<List<String>> getAdditionalRecipients() {
+        return this.additionalRecipients == null ? Output.empty() : this.additionalRecipients;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="notifyDcAdmins")
-      private final @Nullable Input<Either<String,NotifyDcAdmins>> notifyDcAdmins;
+      private final @Nullable Output<Either<String,NotifyDcAdmins>> notifyDcAdmins;
 
-    public Input<Either<String,NotifyDcAdmins>> getNotifyDcAdmins() {
-        return this.notifyDcAdmins == null ? Input.empty() : this.notifyDcAdmins;
+    public Output<Either<String,NotifyDcAdmins>> getNotifyDcAdmins() {
+        return this.notifyDcAdmins == null ? Output.empty() : this.notifyDcAdmins;
     }
 
     /**
@@ -49,25 +49,25 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="notifyGlobalAdmins")
-      private final @Nullable Input<Either<String,NotifyGlobalAdmins>> notifyGlobalAdmins;
+      private final @Nullable Output<Either<String,NotifyGlobalAdmins>> notifyGlobalAdmins;
 
-    public Input<Either<String,NotifyGlobalAdmins>> getNotifyGlobalAdmins() {
-        return this.notifyGlobalAdmins == null ? Input.empty() : this.notifyGlobalAdmins;
+    public Output<Either<String,NotifyGlobalAdmins>> getNotifyGlobalAdmins() {
+        return this.notifyGlobalAdmins == null ? Output.empty() : this.notifyGlobalAdmins;
     }
 
     public NotificationSettingsArgs(
-        @Nullable Input<List<String>> additionalRecipients,
-        @Nullable Input<Either<String,NotifyDcAdmins>> notifyDcAdmins,
-        @Nullable Input<Either<String,NotifyGlobalAdmins>> notifyGlobalAdmins) {
+        @Nullable Output<List<String>> additionalRecipients,
+        @Nullable Output<Either<String,NotifyDcAdmins>> notifyDcAdmins,
+        @Nullable Output<Either<String,NotifyGlobalAdmins>> notifyGlobalAdmins) {
         this.additionalRecipients = additionalRecipients;
         this.notifyDcAdmins = notifyDcAdmins;
         this.notifyGlobalAdmins = notifyGlobalAdmins;
     }
 
     private NotificationSettingsArgs() {
-        this.additionalRecipients = Input.empty();
-        this.notifyDcAdmins = Input.empty();
-        this.notifyGlobalAdmins = Input.empty();
+        this.additionalRecipients = Output.empty();
+        this.notifyDcAdmins = Output.empty();
+        this.notifyGlobalAdmins = Output.empty();
     }
 
     public static Builder builder() {
@@ -79,9 +79,9 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> additionalRecipients;
-        private @Nullable Input<Either<String,NotifyDcAdmins>> notifyDcAdmins;
-        private @Nullable Input<Either<String,NotifyGlobalAdmins>> notifyGlobalAdmins;
+        private @Nullable Output<List<String>> additionalRecipients;
+        private @Nullable Output<Either<String,NotifyDcAdmins>> notifyDcAdmins;
+        private @Nullable Output<Either<String,NotifyGlobalAdmins>> notifyGlobalAdmins;
 
         public Builder() {
     	      // Empty
@@ -94,33 +94,33 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
     	      this.notifyGlobalAdmins = defaults.notifyGlobalAdmins;
         }
 
-        public Builder additionalRecipients(@Nullable Input<List<String>> additionalRecipients) {
+        public Builder additionalRecipients(@Nullable Output<List<String>> additionalRecipients) {
             this.additionalRecipients = additionalRecipients;
             return this;
         }
 
         public Builder additionalRecipients(@Nullable List<String> additionalRecipients) {
-            this.additionalRecipients = Input.ofNullable(additionalRecipients);
+            this.additionalRecipients = Output.ofNullable(additionalRecipients);
             return this;
         }
 
-        public Builder notifyDcAdmins(@Nullable Input<Either<String,NotifyDcAdmins>> notifyDcAdmins) {
+        public Builder notifyDcAdmins(@Nullable Output<Either<String,NotifyDcAdmins>> notifyDcAdmins) {
             this.notifyDcAdmins = notifyDcAdmins;
             return this;
         }
 
         public Builder notifyDcAdmins(@Nullable Either<String,NotifyDcAdmins> notifyDcAdmins) {
-            this.notifyDcAdmins = Input.ofNullable(notifyDcAdmins);
+            this.notifyDcAdmins = Output.ofNullable(notifyDcAdmins);
             return this;
         }
 
-        public Builder notifyGlobalAdmins(@Nullable Input<Either<String,NotifyGlobalAdmins>> notifyGlobalAdmins) {
+        public Builder notifyGlobalAdmins(@Nullable Output<Either<String,NotifyGlobalAdmins>> notifyGlobalAdmins) {
             this.notifyGlobalAdmins = notifyGlobalAdmins;
             return this;
         }
 
         public Builder notifyGlobalAdmins(@Nullable Either<String,NotifyGlobalAdmins> notifyGlobalAdmins) {
-            this.notifyGlobalAdmins = Input.ofNullable(notifyGlobalAdmins);
+            this.notifyGlobalAdmins = Output.ofNullable(notifyGlobalAdmins);
             return this;
         }
         public NotificationSettingsArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1EventHandlerArgs;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1FulfillmentArgs;
@@ -25,9 +25,9 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorArgs e
      * 
      */
     @InputImport(name="initialPromptFulfillment", required=true)
-      private final Input<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> initialPromptFulfillment;
+      private final Output<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> initialPromptFulfillment;
 
-    public Input<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> getInitialPromptFulfillment() {
+    public Output<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> getInitialPromptFulfillment() {
         return this.initialPromptFulfillment;
     }
 
@@ -36,22 +36,22 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorArgs e
      * 
      */
     @InputImport(name="repromptEventHandlers")
-      private final @Nullable Input<List<GoogleCloudDialogflowCxV3beta1EventHandlerArgs>> repromptEventHandlers;
+      private final @Nullable Output<List<GoogleCloudDialogflowCxV3beta1EventHandlerArgs>> repromptEventHandlers;
 
-    public Input<List<GoogleCloudDialogflowCxV3beta1EventHandlerArgs>> getRepromptEventHandlers() {
-        return this.repromptEventHandlers == null ? Input.empty() : this.repromptEventHandlers;
+    public Output<List<GoogleCloudDialogflowCxV3beta1EventHandlerArgs>> getRepromptEventHandlers() {
+        return this.repromptEventHandlers == null ? Output.empty() : this.repromptEventHandlers;
     }
 
     public GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorArgs(
-        Input<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> initialPromptFulfillment,
-        @Nullable Input<List<GoogleCloudDialogflowCxV3beta1EventHandlerArgs>> repromptEventHandlers) {
+        Output<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> initialPromptFulfillment,
+        @Nullable Output<List<GoogleCloudDialogflowCxV3beta1EventHandlerArgs>> repromptEventHandlers) {
         this.initialPromptFulfillment = Objects.requireNonNull(initialPromptFulfillment, "expected parameter 'initialPromptFulfillment' to be non-null");
         this.repromptEventHandlers = repromptEventHandlers;
     }
 
     private GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorArgs() {
-        this.initialPromptFulfillment = Input.empty();
-        this.repromptEventHandlers = Input.empty();
+        this.initialPromptFulfillment = Output.empty();
+        this.repromptEventHandlers = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorArgs e
     }
 
     public static final class Builder {
-        private Input<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> initialPromptFulfillment;
-        private @Nullable Input<List<GoogleCloudDialogflowCxV3beta1EventHandlerArgs>> repromptEventHandlers;
+        private Output<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> initialPromptFulfillment;
+        private @Nullable Output<List<GoogleCloudDialogflowCxV3beta1EventHandlerArgs>> repromptEventHandlers;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorArgs e
     	      this.repromptEventHandlers = defaults.repromptEventHandlers;
         }
 
-        public Builder initialPromptFulfillment(Input<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> initialPromptFulfillment) {
+        public Builder initialPromptFulfillment(Output<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> initialPromptFulfillment) {
             this.initialPromptFulfillment = Objects.requireNonNull(initialPromptFulfillment);
             return this;
         }
 
         public Builder initialPromptFulfillment(GoogleCloudDialogflowCxV3beta1FulfillmentArgs initialPromptFulfillment) {
-            this.initialPromptFulfillment = Input.of(Objects.requireNonNull(initialPromptFulfillment));
+            this.initialPromptFulfillment = Output.of(Objects.requireNonNull(initialPromptFulfillment));
             return this;
         }
 
-        public Builder repromptEventHandlers(@Nullable Input<List<GoogleCloudDialogflowCxV3beta1EventHandlerArgs>> repromptEventHandlers) {
+        public Builder repromptEventHandlers(@Nullable Output<List<GoogleCloudDialogflowCxV3beta1EventHandlerArgs>> repromptEventHandlers) {
             this.repromptEventHandlers = repromptEventHandlers;
             return this;
         }
 
         public Builder repromptEventHandlers(@Nullable List<GoogleCloudDialogflowCxV3beta1EventHandlerArgs> repromptEventHandlers) {
-            this.repromptEventHandlers = Input.ofNullable(repromptEventHandlers);
+            this.repromptEventHandlers = Output.ofNullable(repromptEventHandlers);
             return this;
         }
         public GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorArgs build() {

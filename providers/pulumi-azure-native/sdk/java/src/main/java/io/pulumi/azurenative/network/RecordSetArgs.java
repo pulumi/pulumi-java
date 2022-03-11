@@ -14,7 +14,7 @@ import io.pulumi.azurenative.network.inputs.SoaRecordArgs;
 import io.pulumi.azurenative.network.inputs.SrvRecordArgs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.azurenative.network.inputs.TxtRecordArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -33,10 +33,10 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aRecords")
-      private final @Nullable Input<List<ARecordArgs>> aRecords;
+      private final @Nullable Output<List<ARecordArgs>> aRecords;
 
-    public Input<List<ARecordArgs>> getARecords() {
-        return this.aRecords == null ? Input.empty() : this.aRecords;
+    public Output<List<ARecordArgs>> getARecords() {
+        return this.aRecords == null ? Output.empty() : this.aRecords;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aaaaRecords")
-      private final @Nullable Input<List<AaaaRecordArgs>> aaaaRecords;
+      private final @Nullable Output<List<AaaaRecordArgs>> aaaaRecords;
 
-    public Input<List<AaaaRecordArgs>> getAaaaRecords() {
-        return this.aaaaRecords == null ? Input.empty() : this.aaaaRecords;
+    public Output<List<AaaaRecordArgs>> getAaaaRecords() {
+        return this.aaaaRecords == null ? Output.empty() : this.aaaaRecords;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="caaRecords")
-      private final @Nullable Input<List<CaaRecordArgs>> caaRecords;
+      private final @Nullable Output<List<CaaRecordArgs>> caaRecords;
 
-    public Input<List<CaaRecordArgs>> getCaaRecords() {
-        return this.caaRecords == null ? Input.empty() : this.caaRecords;
+    public Output<List<CaaRecordArgs>> getCaaRecords() {
+        return this.caaRecords == null ? Output.empty() : this.caaRecords;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cnameRecord")
-      private final @Nullable Input<CnameRecordArgs> cnameRecord;
+      private final @Nullable Output<CnameRecordArgs> cnameRecord;
 
-    public Input<CnameRecordArgs> getCnameRecord() {
-        return this.cnameRecord == null ? Input.empty() : this.cnameRecord;
+    public Output<CnameRecordArgs> getCnameRecord() {
+        return this.cnameRecord == null ? Output.empty() : this.cnameRecord;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Output<Map<String,String>> metadata;
 
-    public Input<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Map<String,String>> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mxRecords")
-      private final @Nullable Input<List<MxRecordArgs>> mxRecords;
+      private final @Nullable Output<List<MxRecordArgs>> mxRecords;
 
-    public Input<List<MxRecordArgs>> getMxRecords() {
-        return this.mxRecords == null ? Input.empty() : this.mxRecords;
+    public Output<List<MxRecordArgs>> getMxRecords() {
+        return this.mxRecords == null ? Output.empty() : this.mxRecords;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nsRecords")
-      private final @Nullable Input<List<NsRecordArgs>> nsRecords;
+      private final @Nullable Output<List<NsRecordArgs>> nsRecords;
 
-    public Input<List<NsRecordArgs>> getNsRecords() {
-        return this.nsRecords == null ? Input.empty() : this.nsRecords;
+    public Output<List<NsRecordArgs>> getNsRecords() {
+        return this.nsRecords == null ? Output.empty() : this.nsRecords;
     }
 
     /**
@@ -110,10 +110,10 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ptrRecords")
-      private final @Nullable Input<List<PtrRecordArgs>> ptrRecords;
+      private final @Nullable Output<List<PtrRecordArgs>> ptrRecords;
 
-    public Input<List<PtrRecordArgs>> getPtrRecords() {
-        return this.ptrRecords == null ? Input.empty() : this.ptrRecords;
+    public Output<List<PtrRecordArgs>> getPtrRecords() {
+        return this.ptrRecords == null ? Output.empty() : this.ptrRecords;
     }
 
     /**
@@ -121,9 +121,9 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recordType", required=true)
-      private final Input<String> recordType;
+      private final Output<String> recordType;
 
-    public Input<String> getRecordType() {
+    public Output<String> getRecordType() {
         return this.recordType;
     }
 
@@ -132,10 +132,10 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relativeRecordSetName")
-      private final @Nullable Input<String> relativeRecordSetName;
+      private final @Nullable Output<String> relativeRecordSetName;
 
-    public Input<String> getRelativeRecordSetName() {
-        return this.relativeRecordSetName == null ? Input.empty() : this.relativeRecordSetName;
+    public Output<String> getRelativeRecordSetName() {
+        return this.relativeRecordSetName == null ? Output.empty() : this.relativeRecordSetName;
     }
 
     /**
@@ -143,9 +143,9 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -154,10 +154,10 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="soaRecord")
-      private final @Nullable Input<SoaRecordArgs> soaRecord;
+      private final @Nullable Output<SoaRecordArgs> soaRecord;
 
-    public Input<SoaRecordArgs> getSoaRecord() {
-        return this.soaRecord == null ? Input.empty() : this.soaRecord;
+    public Output<SoaRecordArgs> getSoaRecord() {
+        return this.soaRecord == null ? Output.empty() : this.soaRecord;
     }
 
     /**
@@ -165,10 +165,10 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="srvRecords")
-      private final @Nullable Input<List<SrvRecordArgs>> srvRecords;
+      private final @Nullable Output<List<SrvRecordArgs>> srvRecords;
 
-    public Input<List<SrvRecordArgs>> getSrvRecords() {
-        return this.srvRecords == null ? Input.empty() : this.srvRecords;
+    public Output<List<SrvRecordArgs>> getSrvRecords() {
+        return this.srvRecords == null ? Output.empty() : this.srvRecords;
     }
 
     /**
@@ -176,10 +176,10 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetResource")
-      private final @Nullable Input<SubResourceArgs> targetResource;
+      private final @Nullable Output<SubResourceArgs> targetResource;
 
-    public Input<SubResourceArgs> getTargetResource() {
-        return this.targetResource == null ? Input.empty() : this.targetResource;
+    public Output<SubResourceArgs> getTargetResource() {
+        return this.targetResource == null ? Output.empty() : this.targetResource;
     }
 
     /**
@@ -187,10 +187,10 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ttl")
-      private final @Nullable Input<Double> ttl;
+      private final @Nullable Output<Double> ttl;
 
-    public Input<Double> getTtl() {
-        return this.ttl == null ? Input.empty() : this.ttl;
+    public Output<Double> getTtl() {
+        return this.ttl == null ? Output.empty() : this.ttl;
     }
 
     /**
@@ -198,10 +198,10 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="txtRecords")
-      private final @Nullable Input<List<TxtRecordArgs>> txtRecords;
+      private final @Nullable Output<List<TxtRecordArgs>> txtRecords;
 
-    public Input<List<TxtRecordArgs>> getTxtRecords() {
-        return this.txtRecords == null ? Input.empty() : this.txtRecords;
+    public Output<List<TxtRecordArgs>> getTxtRecords() {
+        return this.txtRecords == null ? Output.empty() : this.txtRecords;
     }
 
     /**
@@ -209,30 +209,30 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zoneName", required=true)
-      private final Input<String> zoneName;
+      private final Output<String> zoneName;
 
-    public Input<String> getZoneName() {
+    public Output<String> getZoneName() {
         return this.zoneName;
     }
 
     public RecordSetArgs(
-        @Nullable Input<List<ARecordArgs>> aRecords,
-        @Nullable Input<List<AaaaRecordArgs>> aaaaRecords,
-        @Nullable Input<List<CaaRecordArgs>> caaRecords,
-        @Nullable Input<CnameRecordArgs> cnameRecord,
-        @Nullable Input<Map<String,String>> metadata,
-        @Nullable Input<List<MxRecordArgs>> mxRecords,
-        @Nullable Input<List<NsRecordArgs>> nsRecords,
-        @Nullable Input<List<PtrRecordArgs>> ptrRecords,
-        Input<String> recordType,
-        @Nullable Input<String> relativeRecordSetName,
-        Input<String> resourceGroupName,
-        @Nullable Input<SoaRecordArgs> soaRecord,
-        @Nullable Input<List<SrvRecordArgs>> srvRecords,
-        @Nullable Input<SubResourceArgs> targetResource,
-        @Nullable Input<Double> ttl,
-        @Nullable Input<List<TxtRecordArgs>> txtRecords,
-        Input<String> zoneName) {
+        @Nullable Output<List<ARecordArgs>> aRecords,
+        @Nullable Output<List<AaaaRecordArgs>> aaaaRecords,
+        @Nullable Output<List<CaaRecordArgs>> caaRecords,
+        @Nullable Output<CnameRecordArgs> cnameRecord,
+        @Nullable Output<Map<String,String>> metadata,
+        @Nullable Output<List<MxRecordArgs>> mxRecords,
+        @Nullable Output<List<NsRecordArgs>> nsRecords,
+        @Nullable Output<List<PtrRecordArgs>> ptrRecords,
+        Output<String> recordType,
+        @Nullable Output<String> relativeRecordSetName,
+        Output<String> resourceGroupName,
+        @Nullable Output<SoaRecordArgs> soaRecord,
+        @Nullable Output<List<SrvRecordArgs>> srvRecords,
+        @Nullable Output<SubResourceArgs> targetResource,
+        @Nullable Output<Double> ttl,
+        @Nullable Output<List<TxtRecordArgs>> txtRecords,
+        Output<String> zoneName) {
         this.aRecords = aRecords;
         this.aaaaRecords = aaaaRecords;
         this.caaRecords = caaRecords;
@@ -253,23 +253,23 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RecordSetArgs() {
-        this.aRecords = Input.empty();
-        this.aaaaRecords = Input.empty();
-        this.caaRecords = Input.empty();
-        this.cnameRecord = Input.empty();
-        this.metadata = Input.empty();
-        this.mxRecords = Input.empty();
-        this.nsRecords = Input.empty();
-        this.ptrRecords = Input.empty();
-        this.recordType = Input.empty();
-        this.relativeRecordSetName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.soaRecord = Input.empty();
-        this.srvRecords = Input.empty();
-        this.targetResource = Input.empty();
-        this.ttl = Input.empty();
-        this.txtRecords = Input.empty();
-        this.zoneName = Input.empty();
+        this.aRecords = Output.empty();
+        this.aaaaRecords = Output.empty();
+        this.caaRecords = Output.empty();
+        this.cnameRecord = Output.empty();
+        this.metadata = Output.empty();
+        this.mxRecords = Output.empty();
+        this.nsRecords = Output.empty();
+        this.ptrRecords = Output.empty();
+        this.recordType = Output.empty();
+        this.relativeRecordSetName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.soaRecord = Output.empty();
+        this.srvRecords = Output.empty();
+        this.targetResource = Output.empty();
+        this.ttl = Output.empty();
+        this.txtRecords = Output.empty();
+        this.zoneName = Output.empty();
     }
 
     public static Builder builder() {
@@ -281,23 +281,23 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ARecordArgs>> aRecords;
-        private @Nullable Input<List<AaaaRecordArgs>> aaaaRecords;
-        private @Nullable Input<List<CaaRecordArgs>> caaRecords;
-        private @Nullable Input<CnameRecordArgs> cnameRecord;
-        private @Nullable Input<Map<String,String>> metadata;
-        private @Nullable Input<List<MxRecordArgs>> mxRecords;
-        private @Nullable Input<List<NsRecordArgs>> nsRecords;
-        private @Nullable Input<List<PtrRecordArgs>> ptrRecords;
-        private Input<String> recordType;
-        private @Nullable Input<String> relativeRecordSetName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<SoaRecordArgs> soaRecord;
-        private @Nullable Input<List<SrvRecordArgs>> srvRecords;
-        private @Nullable Input<SubResourceArgs> targetResource;
-        private @Nullable Input<Double> ttl;
-        private @Nullable Input<List<TxtRecordArgs>> txtRecords;
-        private Input<String> zoneName;
+        private @Nullable Output<List<ARecordArgs>> aRecords;
+        private @Nullable Output<List<AaaaRecordArgs>> aaaaRecords;
+        private @Nullable Output<List<CaaRecordArgs>> caaRecords;
+        private @Nullable Output<CnameRecordArgs> cnameRecord;
+        private @Nullable Output<Map<String,String>> metadata;
+        private @Nullable Output<List<MxRecordArgs>> mxRecords;
+        private @Nullable Output<List<NsRecordArgs>> nsRecords;
+        private @Nullable Output<List<PtrRecordArgs>> ptrRecords;
+        private Output<String> recordType;
+        private @Nullable Output<String> relativeRecordSetName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<SoaRecordArgs> soaRecord;
+        private @Nullable Output<List<SrvRecordArgs>> srvRecords;
+        private @Nullable Output<SubResourceArgs> targetResource;
+        private @Nullable Output<Double> ttl;
+        private @Nullable Output<List<TxtRecordArgs>> txtRecords;
+        private Output<String> zoneName;
 
         public Builder() {
     	      // Empty
@@ -324,173 +324,173 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zoneName = defaults.zoneName;
         }
 
-        public Builder aRecords(@Nullable Input<List<ARecordArgs>> aRecords) {
+        public Builder aRecords(@Nullable Output<List<ARecordArgs>> aRecords) {
             this.aRecords = aRecords;
             return this;
         }
 
         public Builder aRecords(@Nullable List<ARecordArgs> aRecords) {
-            this.aRecords = Input.ofNullable(aRecords);
+            this.aRecords = Output.ofNullable(aRecords);
             return this;
         }
 
-        public Builder aaaaRecords(@Nullable Input<List<AaaaRecordArgs>> aaaaRecords) {
+        public Builder aaaaRecords(@Nullable Output<List<AaaaRecordArgs>> aaaaRecords) {
             this.aaaaRecords = aaaaRecords;
             return this;
         }
 
         public Builder aaaaRecords(@Nullable List<AaaaRecordArgs> aaaaRecords) {
-            this.aaaaRecords = Input.ofNullable(aaaaRecords);
+            this.aaaaRecords = Output.ofNullable(aaaaRecords);
             return this;
         }
 
-        public Builder caaRecords(@Nullable Input<List<CaaRecordArgs>> caaRecords) {
+        public Builder caaRecords(@Nullable Output<List<CaaRecordArgs>> caaRecords) {
             this.caaRecords = caaRecords;
             return this;
         }
 
         public Builder caaRecords(@Nullable List<CaaRecordArgs> caaRecords) {
-            this.caaRecords = Input.ofNullable(caaRecords);
+            this.caaRecords = Output.ofNullable(caaRecords);
             return this;
         }
 
-        public Builder cnameRecord(@Nullable Input<CnameRecordArgs> cnameRecord) {
+        public Builder cnameRecord(@Nullable Output<CnameRecordArgs> cnameRecord) {
             this.cnameRecord = cnameRecord;
             return this;
         }
 
         public Builder cnameRecord(@Nullable CnameRecordArgs cnameRecord) {
-            this.cnameRecord = Input.ofNullable(cnameRecord);
+            this.cnameRecord = Output.ofNullable(cnameRecord);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder mxRecords(@Nullable Input<List<MxRecordArgs>> mxRecords) {
+        public Builder mxRecords(@Nullable Output<List<MxRecordArgs>> mxRecords) {
             this.mxRecords = mxRecords;
             return this;
         }
 
         public Builder mxRecords(@Nullable List<MxRecordArgs> mxRecords) {
-            this.mxRecords = Input.ofNullable(mxRecords);
+            this.mxRecords = Output.ofNullable(mxRecords);
             return this;
         }
 
-        public Builder nsRecords(@Nullable Input<List<NsRecordArgs>> nsRecords) {
+        public Builder nsRecords(@Nullable Output<List<NsRecordArgs>> nsRecords) {
             this.nsRecords = nsRecords;
             return this;
         }
 
         public Builder nsRecords(@Nullable List<NsRecordArgs> nsRecords) {
-            this.nsRecords = Input.ofNullable(nsRecords);
+            this.nsRecords = Output.ofNullable(nsRecords);
             return this;
         }
 
-        public Builder ptrRecords(@Nullable Input<List<PtrRecordArgs>> ptrRecords) {
+        public Builder ptrRecords(@Nullable Output<List<PtrRecordArgs>> ptrRecords) {
             this.ptrRecords = ptrRecords;
             return this;
         }
 
         public Builder ptrRecords(@Nullable List<PtrRecordArgs> ptrRecords) {
-            this.ptrRecords = Input.ofNullable(ptrRecords);
+            this.ptrRecords = Output.ofNullable(ptrRecords);
             return this;
         }
 
-        public Builder recordType(Input<String> recordType) {
+        public Builder recordType(Output<String> recordType) {
             this.recordType = Objects.requireNonNull(recordType);
             return this;
         }
 
         public Builder recordType(String recordType) {
-            this.recordType = Input.of(Objects.requireNonNull(recordType));
+            this.recordType = Output.of(Objects.requireNonNull(recordType));
             return this;
         }
 
-        public Builder relativeRecordSetName(@Nullable Input<String> relativeRecordSetName) {
+        public Builder relativeRecordSetName(@Nullable Output<String> relativeRecordSetName) {
             this.relativeRecordSetName = relativeRecordSetName;
             return this;
         }
 
         public Builder relativeRecordSetName(@Nullable String relativeRecordSetName) {
-            this.relativeRecordSetName = Input.ofNullable(relativeRecordSetName);
+            this.relativeRecordSetName = Output.ofNullable(relativeRecordSetName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder soaRecord(@Nullable Input<SoaRecordArgs> soaRecord) {
+        public Builder soaRecord(@Nullable Output<SoaRecordArgs> soaRecord) {
             this.soaRecord = soaRecord;
             return this;
         }
 
         public Builder soaRecord(@Nullable SoaRecordArgs soaRecord) {
-            this.soaRecord = Input.ofNullable(soaRecord);
+            this.soaRecord = Output.ofNullable(soaRecord);
             return this;
         }
 
-        public Builder srvRecords(@Nullable Input<List<SrvRecordArgs>> srvRecords) {
+        public Builder srvRecords(@Nullable Output<List<SrvRecordArgs>> srvRecords) {
             this.srvRecords = srvRecords;
             return this;
         }
 
         public Builder srvRecords(@Nullable List<SrvRecordArgs> srvRecords) {
-            this.srvRecords = Input.ofNullable(srvRecords);
+            this.srvRecords = Output.ofNullable(srvRecords);
             return this;
         }
 
-        public Builder targetResource(@Nullable Input<SubResourceArgs> targetResource) {
+        public Builder targetResource(@Nullable Output<SubResourceArgs> targetResource) {
             this.targetResource = targetResource;
             return this;
         }
 
         public Builder targetResource(@Nullable SubResourceArgs targetResource) {
-            this.targetResource = Input.ofNullable(targetResource);
+            this.targetResource = Output.ofNullable(targetResource);
             return this;
         }
 
-        public Builder ttl(@Nullable Input<Double> ttl) {
+        public Builder ttl(@Nullable Output<Double> ttl) {
             this.ttl = ttl;
             return this;
         }
 
         public Builder ttl(@Nullable Double ttl) {
-            this.ttl = Input.ofNullable(ttl);
+            this.ttl = Output.ofNullable(ttl);
             return this;
         }
 
-        public Builder txtRecords(@Nullable Input<List<TxtRecordArgs>> txtRecords) {
+        public Builder txtRecords(@Nullable Output<List<TxtRecordArgs>> txtRecords) {
             this.txtRecords = txtRecords;
             return this;
         }
 
         public Builder txtRecords(@Nullable List<TxtRecordArgs> txtRecords) {
-            this.txtRecords = Input.ofNullable(txtRecords);
+            this.txtRecords = Output.ofNullable(txtRecords);
             return this;
         }
 
-        public Builder zoneName(Input<String> zoneName) {
+        public Builder zoneName(Output<String> zoneName) {
             this.zoneName = Objects.requireNonNull(zoneName);
             return this;
         }
 
         public Builder zoneName(String zoneName) {
-            this.zoneName = Input.of(Objects.requireNonNull(zoneName));
+            this.zoneName = Output.of(Objects.requireNonNull(zoneName));
             return this;
         }
         public RecordSetArgs build() {

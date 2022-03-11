@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.appengine.inputs.StandardAppVersionDeploymentFileArgs;
 import io.pulumi.gcp.appengine.inputs.StandardAppVersionDeploymentZipArgs;
@@ -23,10 +23,10 @@ public final class StandardAppVersionDeploymentArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="files")
-      private final @Nullable Input<List<StandardAppVersionDeploymentFileArgs>> files;
+      private final @Nullable Output<List<StandardAppVersionDeploymentFileArgs>> files;
 
-    public Input<List<StandardAppVersionDeploymentFileArgs>> getFiles() {
-        return this.files == null ? Input.empty() : this.files;
+    public Output<List<StandardAppVersionDeploymentFileArgs>> getFiles() {
+        return this.files == null ? Output.empty() : this.files;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class StandardAppVersionDeploymentArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="zip")
-      private final @Nullable Input<StandardAppVersionDeploymentZipArgs> zip;
+      private final @Nullable Output<StandardAppVersionDeploymentZipArgs> zip;
 
-    public Input<StandardAppVersionDeploymentZipArgs> getZip() {
-        return this.zip == null ? Input.empty() : this.zip;
+    public Output<StandardAppVersionDeploymentZipArgs> getZip() {
+        return this.zip == null ? Output.empty() : this.zip;
     }
 
     public StandardAppVersionDeploymentArgs(
-        @Nullable Input<List<StandardAppVersionDeploymentFileArgs>> files,
-        @Nullable Input<StandardAppVersionDeploymentZipArgs> zip) {
+        @Nullable Output<List<StandardAppVersionDeploymentFileArgs>> files,
+        @Nullable Output<StandardAppVersionDeploymentZipArgs> zip) {
         this.files = files;
         this.zip = zip;
     }
 
     private StandardAppVersionDeploymentArgs() {
-        this.files = Input.empty();
-        this.zip = Input.empty();
+        this.files = Output.empty();
+        this.zip = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class StandardAppVersionDeploymentArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<List<StandardAppVersionDeploymentFileArgs>> files;
-        private @Nullable Input<StandardAppVersionDeploymentZipArgs> zip;
+        private @Nullable Output<List<StandardAppVersionDeploymentFileArgs>> files;
+        private @Nullable Output<StandardAppVersionDeploymentZipArgs> zip;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class StandardAppVersionDeploymentArgs extends io.pulumi.resources.
     	      this.zip = defaults.zip;
         }
 
-        public Builder files(@Nullable Input<List<StandardAppVersionDeploymentFileArgs>> files) {
+        public Builder files(@Nullable Output<List<StandardAppVersionDeploymentFileArgs>> files) {
             this.files = files;
             return this;
         }
 
         public Builder files(@Nullable List<StandardAppVersionDeploymentFileArgs> files) {
-            this.files = Input.ofNullable(files);
+            this.files = Output.ofNullable(files);
             return this;
         }
 
-        public Builder zip(@Nullable Input<StandardAppVersionDeploymentZipArgs> zip) {
+        public Builder zip(@Nullable Output<StandardAppVersionDeploymentZipArgs> zip) {
             this.zip = zip;
             return this;
         }
 
         public Builder zip(@Nullable StandardAppVersionDeploymentZipArgs zip) {
-            this.zip = Input.ofNullable(zip);
+            this.zip = Output.ofNullable(zip);
             return this;
         }
         public StandardAppVersionDeploymentArgs build() {

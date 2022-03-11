@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudscheduler.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class JobHttpTargetOauthTokenGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="scope")
-      private final @Nullable Input<String> scope;
+      private final @Nullable Output<String> scope;
 
-    public Input<String> getScope() {
-        return this.scope == null ? Input.empty() : this.scope;
+    public Output<String> getScope() {
+        return this.scope == null ? Output.empty() : this.scope;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class JobHttpTargetOauthTokenGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="serviceAccountEmail", required=true)
-      private final Input<String> serviceAccountEmail;
+      private final Output<String> serviceAccountEmail;
 
-    public Input<String> getServiceAccountEmail() {
+    public Output<String> getServiceAccountEmail() {
         return this.serviceAccountEmail;
     }
 
     public JobHttpTargetOauthTokenGetArgs(
-        @Nullable Input<String> scope,
-        Input<String> serviceAccountEmail) {
+        @Nullable Output<String> scope,
+        Output<String> serviceAccountEmail) {
         this.scope = scope;
         this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail, "expected parameter 'serviceAccountEmail' to be non-null");
     }
 
     private JobHttpTargetOauthTokenGetArgs() {
-        this.scope = Input.empty();
-        this.serviceAccountEmail = Input.empty();
+        this.scope = Output.empty();
+        this.serviceAccountEmail = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class JobHttpTargetOauthTokenGetArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> scope;
-        private Input<String> serviceAccountEmail;
+        private @Nullable Output<String> scope;
+        private Output<String> serviceAccountEmail;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class JobHttpTargetOauthTokenGetArgs extends io.pulumi.resources.Re
     	      this.serviceAccountEmail = defaults.serviceAccountEmail;
         }
 
-        public Builder scope(@Nullable Input<String> scope) {
+        public Builder scope(@Nullable Output<String> scope) {
             this.scope = scope;
             return this;
         }
 
         public Builder scope(@Nullable String scope) {
-            this.scope = Input.ofNullable(scope);
+            this.scope = Output.ofNullable(scope);
             return this;
         }
 
-        public Builder serviceAccountEmail(Input<String> serviceAccountEmail) {
+        public Builder serviceAccountEmail(Output<String> serviceAccountEmail) {
             this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
             return this;
         }
 
         public Builder serviceAccountEmail(String serviceAccountEmail) {
-            this.serviceAccountEmail = Input.of(Objects.requireNonNull(serviceAccountEmail));
+            this.serviceAccountEmail = Output.of(Objects.requireNonNull(serviceAccountEmail));
             return this;
         }
         public JobHttpTargetOauthTokenGetArgs build() {

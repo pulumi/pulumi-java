@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.enums.IntegrationRuntimeEntityReferenceType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class EntityReferenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="referenceName")
-      private final @Nullable Input<String> referenceName;
+      private final @Nullable Output<String> referenceName;
 
-    public Input<String> getReferenceName() {
-        return this.referenceName == null ? Input.empty() : this.referenceName;
+    public Output<String> getReferenceName() {
+        return this.referenceName == null ? Output.empty() : this.referenceName;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class EntityReferenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<Either<String,IntegrationRuntimeEntityReferenceType>> type;
+      private final @Nullable Output<Either<String,IntegrationRuntimeEntityReferenceType>> type;
 
-    public Input<Either<String,IntegrationRuntimeEntityReferenceType>> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<Either<String,IntegrationRuntimeEntityReferenceType>> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public EntityReferenceArgs(
-        @Nullable Input<String> referenceName,
-        @Nullable Input<Either<String,IntegrationRuntimeEntityReferenceType>> type) {
+        @Nullable Output<String> referenceName,
+        @Nullable Output<Either<String,IntegrationRuntimeEntityReferenceType>> type) {
         this.referenceName = referenceName;
         this.type = type;
     }
 
     private EntityReferenceArgs() {
-        this.referenceName = Input.empty();
-        this.type = Input.empty();
+        this.referenceName = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class EntityReferenceArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> referenceName;
-        private @Nullable Input<Either<String,IntegrationRuntimeEntityReferenceType>> type;
+        private @Nullable Output<String> referenceName;
+        private @Nullable Output<Either<String,IntegrationRuntimeEntityReferenceType>> type;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class EntityReferenceArgs extends io.pulumi.resources.ResourceArgs 
     	      this.type = defaults.type;
         }
 
-        public Builder referenceName(@Nullable Input<String> referenceName) {
+        public Builder referenceName(@Nullable Output<String> referenceName) {
             this.referenceName = referenceName;
             return this;
         }
 
         public Builder referenceName(@Nullable String referenceName) {
-            this.referenceName = Input.ofNullable(referenceName);
+            this.referenceName = Output.ofNullable(referenceName);
             return this;
         }
 
-        public Builder type(@Nullable Input<Either<String,IntegrationRuntimeEntityReferenceType>> type) {
+        public Builder type(@Nullable Output<Either<String,IntegrationRuntimeEntityReferenceType>> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable Either<String,IntegrationRuntimeEntityReferenceType> type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public EntityReferenceArgs build() {

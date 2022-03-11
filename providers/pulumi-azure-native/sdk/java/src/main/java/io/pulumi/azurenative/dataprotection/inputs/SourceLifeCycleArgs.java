@@ -6,7 +6,7 @@ package io.pulumi.azurenative.dataprotection.inputs;
 import io.pulumi.azurenative.dataprotection.inputs.AbsoluteDeleteOptionArgs;
 import io.pulumi.azurenative.dataprotection.inputs.DataStoreInfoBaseArgs;
 import io.pulumi.azurenative.dataprotection.inputs.TargetCopySettingArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -26,9 +26,9 @@ public final class SourceLifeCycleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="deleteAfter", required=true)
-      private final Input<AbsoluteDeleteOptionArgs> deleteAfter;
+      private final Output<AbsoluteDeleteOptionArgs> deleteAfter;
 
-    public Input<AbsoluteDeleteOptionArgs> getDeleteAfter() {
+    public Output<AbsoluteDeleteOptionArgs> getDeleteAfter() {
         return this.deleteAfter;
     }
 
@@ -37,32 +37,32 @@ public final class SourceLifeCycleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sourceDataStore", required=true)
-      private final Input<DataStoreInfoBaseArgs> sourceDataStore;
+      private final Output<DataStoreInfoBaseArgs> sourceDataStore;
 
-    public Input<DataStoreInfoBaseArgs> getSourceDataStore() {
+    public Output<DataStoreInfoBaseArgs> getSourceDataStore() {
         return this.sourceDataStore;
     }
 
     @InputImport(name="targetDataStoreCopySettings")
-      private final @Nullable Input<List<TargetCopySettingArgs>> targetDataStoreCopySettings;
+      private final @Nullable Output<List<TargetCopySettingArgs>> targetDataStoreCopySettings;
 
-    public Input<List<TargetCopySettingArgs>> getTargetDataStoreCopySettings() {
-        return this.targetDataStoreCopySettings == null ? Input.empty() : this.targetDataStoreCopySettings;
+    public Output<List<TargetCopySettingArgs>> getTargetDataStoreCopySettings() {
+        return this.targetDataStoreCopySettings == null ? Output.empty() : this.targetDataStoreCopySettings;
     }
 
     public SourceLifeCycleArgs(
-        Input<AbsoluteDeleteOptionArgs> deleteAfter,
-        Input<DataStoreInfoBaseArgs> sourceDataStore,
-        @Nullable Input<List<TargetCopySettingArgs>> targetDataStoreCopySettings) {
+        Output<AbsoluteDeleteOptionArgs> deleteAfter,
+        Output<DataStoreInfoBaseArgs> sourceDataStore,
+        @Nullable Output<List<TargetCopySettingArgs>> targetDataStoreCopySettings) {
         this.deleteAfter = Objects.requireNonNull(deleteAfter, "expected parameter 'deleteAfter' to be non-null");
         this.sourceDataStore = Objects.requireNonNull(sourceDataStore, "expected parameter 'sourceDataStore' to be non-null");
         this.targetDataStoreCopySettings = targetDataStoreCopySettings;
     }
 
     private SourceLifeCycleArgs() {
-        this.deleteAfter = Input.empty();
-        this.sourceDataStore = Input.empty();
-        this.targetDataStoreCopySettings = Input.empty();
+        this.deleteAfter = Output.empty();
+        this.sourceDataStore = Output.empty();
+        this.targetDataStoreCopySettings = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class SourceLifeCycleArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<AbsoluteDeleteOptionArgs> deleteAfter;
-        private Input<DataStoreInfoBaseArgs> sourceDataStore;
-        private @Nullable Input<List<TargetCopySettingArgs>> targetDataStoreCopySettings;
+        private Output<AbsoluteDeleteOptionArgs> deleteAfter;
+        private Output<DataStoreInfoBaseArgs> sourceDataStore;
+        private @Nullable Output<List<TargetCopySettingArgs>> targetDataStoreCopySettings;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class SourceLifeCycleArgs extends io.pulumi.resources.ResourceArgs 
     	      this.targetDataStoreCopySettings = defaults.targetDataStoreCopySettings;
         }
 
-        public Builder deleteAfter(Input<AbsoluteDeleteOptionArgs> deleteAfter) {
+        public Builder deleteAfter(Output<AbsoluteDeleteOptionArgs> deleteAfter) {
             this.deleteAfter = Objects.requireNonNull(deleteAfter);
             return this;
         }
 
         public Builder deleteAfter(AbsoluteDeleteOptionArgs deleteAfter) {
-            this.deleteAfter = Input.of(Objects.requireNonNull(deleteAfter));
+            this.deleteAfter = Output.of(Objects.requireNonNull(deleteAfter));
             return this;
         }
 
-        public Builder sourceDataStore(Input<DataStoreInfoBaseArgs> sourceDataStore) {
+        public Builder sourceDataStore(Output<DataStoreInfoBaseArgs> sourceDataStore) {
             this.sourceDataStore = Objects.requireNonNull(sourceDataStore);
             return this;
         }
 
         public Builder sourceDataStore(DataStoreInfoBaseArgs sourceDataStore) {
-            this.sourceDataStore = Input.of(Objects.requireNonNull(sourceDataStore));
+            this.sourceDataStore = Output.of(Objects.requireNonNull(sourceDataStore));
             return this;
         }
 
-        public Builder targetDataStoreCopySettings(@Nullable Input<List<TargetCopySettingArgs>> targetDataStoreCopySettings) {
+        public Builder targetDataStoreCopySettings(@Nullable Output<List<TargetCopySettingArgs>> targetDataStoreCopySettings) {
             this.targetDataStoreCopySettings = targetDataStoreCopySettings;
             return this;
         }
 
         public Builder targetDataStoreCopySettings(@Nullable List<TargetCopySettingArgs> targetDataStoreCopySettings) {
-            this.targetDataStoreCopySettings = Input.ofNullable(targetDataStoreCopySettings);
+            this.targetDataStoreCopySettings = Output.ofNullable(targetDataStoreCopySettings);
             return this;
         }
         public SourceLifeCycleArgs build() {

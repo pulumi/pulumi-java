@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.bigquery.inputs.RoutineArgumentArgs;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arguments")
-      private final @Nullable Input<List<RoutineArgumentArgs>> arguments;
+      private final @Nullable Output<List<RoutineArgumentArgs>> arguments;
 
-    public Input<List<RoutineArgumentArgs>> getArguments() {
-        return this.arguments == null ? Input.empty() : this.arguments;
+    public Output<List<RoutineArgumentArgs>> getArguments() {
+        return this.arguments == null ? Output.empty() : this.arguments;
     }
 
     /**
@@ -33,9 +33,9 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datasetId", required=true)
-      private final Input<String> datasetId;
+      private final Output<String> datasetId;
 
-    public Input<String> getDatasetId() {
+    public Output<String> getDatasetId() {
         return this.datasetId;
     }
 
@@ -45,9 +45,9 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="definitionBody", required=true)
-      private final Input<String> definitionBody;
+      private final Output<String> definitionBody;
 
-    public Input<String> getDefinitionBody() {
+    public Output<String> getDefinitionBody() {
         return this.definitionBody;
     }
 
@@ -56,10 +56,10 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="determinismLevel")
-      private final @Nullable Input<String> determinismLevel;
+      private final @Nullable Output<String> determinismLevel;
 
-    public Input<String> getDeterminismLevel() {
-        return this.determinismLevel == null ? Input.empty() : this.determinismLevel;
+    public Output<String> getDeterminismLevel() {
+        return this.determinismLevel == null ? Output.empty() : this.determinismLevel;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="importedLibraries")
-      private final @Nullable Input<List<String>> importedLibraries;
+      private final @Nullable Output<List<String>> importedLibraries;
 
-    public Input<List<String>> getImportedLibraries() {
-        return this.importedLibraries == null ? Input.empty() : this.importedLibraries;
+    public Output<List<String>> getImportedLibraries() {
+        return this.importedLibraries == null ? Output.empty() : this.importedLibraries;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="language")
-      private final @Nullable Input<String> language;
+      private final @Nullable Output<String> language;
 
-    public Input<String> getLanguage() {
-        return this.language == null ? Input.empty() : this.language;
+    public Output<String> getLanguage() {
+        return this.language == null ? Output.empty() : this.language;
     }
 
     /**
@@ -104,10 +104,10 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -118,10 +118,10 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="returnTableType")
-      private final @Nullable Input<String> returnTableType;
+      private final @Nullable Output<String> returnTableType;
 
-    public Input<String> getReturnTableType() {
-        return this.returnTableType == null ? Input.empty() : this.returnTableType;
+    public Output<String> getReturnTableType() {
+        return this.returnTableType == null ? Output.empty() : this.returnTableType;
     }
 
     /**
@@ -137,10 +137,10 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="returnType")
-      private final @Nullable Input<String> returnType;
+      private final @Nullable Output<String> returnType;
 
-    public Input<String> getReturnType() {
-        return this.returnType == null ? Input.empty() : this.returnType;
+    public Output<String> getReturnType() {
+        return this.returnType == null ? Output.empty() : this.returnType;
     }
 
     /**
@@ -148,9 +148,9 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routineId", required=true)
-      private final Input<String> routineId;
+      private final Output<String> routineId;
 
-    public Input<String> getRoutineId() {
+    public Output<String> getRoutineId() {
         return this.routineId;
     }
 
@@ -160,25 +160,25 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routineType")
-      private final @Nullable Input<String> routineType;
+      private final @Nullable Output<String> routineType;
 
-    public Input<String> getRoutineType() {
-        return this.routineType == null ? Input.empty() : this.routineType;
+    public Output<String> getRoutineType() {
+        return this.routineType == null ? Output.empty() : this.routineType;
     }
 
     public RoutineArgs(
-        @Nullable Input<List<RoutineArgumentArgs>> arguments,
-        Input<String> datasetId,
-        Input<String> definitionBody,
-        @Nullable Input<String> description,
-        @Nullable Input<String> determinismLevel,
-        @Nullable Input<List<String>> importedLibraries,
-        @Nullable Input<String> language,
-        @Nullable Input<String> project,
-        @Nullable Input<String> returnTableType,
-        @Nullable Input<String> returnType,
-        Input<String> routineId,
-        @Nullable Input<String> routineType) {
+        @Nullable Output<List<RoutineArgumentArgs>> arguments,
+        Output<String> datasetId,
+        Output<String> definitionBody,
+        @Nullable Output<String> description,
+        @Nullable Output<String> determinismLevel,
+        @Nullable Output<List<String>> importedLibraries,
+        @Nullable Output<String> language,
+        @Nullable Output<String> project,
+        @Nullable Output<String> returnTableType,
+        @Nullable Output<String> returnType,
+        Output<String> routineId,
+        @Nullable Output<String> routineType) {
         this.arguments = arguments;
         this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
         this.definitionBody = Objects.requireNonNull(definitionBody, "expected parameter 'definitionBody' to be non-null");
@@ -194,18 +194,18 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RoutineArgs() {
-        this.arguments = Input.empty();
-        this.datasetId = Input.empty();
-        this.definitionBody = Input.empty();
-        this.description = Input.empty();
-        this.determinismLevel = Input.empty();
-        this.importedLibraries = Input.empty();
-        this.language = Input.empty();
-        this.project = Input.empty();
-        this.returnTableType = Input.empty();
-        this.returnType = Input.empty();
-        this.routineId = Input.empty();
-        this.routineType = Input.empty();
+        this.arguments = Output.empty();
+        this.datasetId = Output.empty();
+        this.definitionBody = Output.empty();
+        this.description = Output.empty();
+        this.determinismLevel = Output.empty();
+        this.importedLibraries = Output.empty();
+        this.language = Output.empty();
+        this.project = Output.empty();
+        this.returnTableType = Output.empty();
+        this.returnType = Output.empty();
+        this.routineId = Output.empty();
+        this.routineType = Output.empty();
     }
 
     public static Builder builder() {
@@ -217,18 +217,18 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<RoutineArgumentArgs>> arguments;
-        private Input<String> datasetId;
-        private Input<String> definitionBody;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> determinismLevel;
-        private @Nullable Input<List<String>> importedLibraries;
-        private @Nullable Input<String> language;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> returnTableType;
-        private @Nullable Input<String> returnType;
-        private Input<String> routineId;
-        private @Nullable Input<String> routineType;
+        private @Nullable Output<List<RoutineArgumentArgs>> arguments;
+        private Output<String> datasetId;
+        private Output<String> definitionBody;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> determinismLevel;
+        private @Nullable Output<List<String>> importedLibraries;
+        private @Nullable Output<String> language;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> returnTableType;
+        private @Nullable Output<String> returnType;
+        private Output<String> routineId;
+        private @Nullable Output<String> routineType;
 
         public Builder() {
     	      // Empty
@@ -250,123 +250,123 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
     	      this.routineType = defaults.routineType;
         }
 
-        public Builder arguments(@Nullable Input<List<RoutineArgumentArgs>> arguments) {
+        public Builder arguments(@Nullable Output<List<RoutineArgumentArgs>> arguments) {
             this.arguments = arguments;
             return this;
         }
 
         public Builder arguments(@Nullable List<RoutineArgumentArgs> arguments) {
-            this.arguments = Input.ofNullable(arguments);
+            this.arguments = Output.ofNullable(arguments);
             return this;
         }
 
-        public Builder datasetId(Input<String> datasetId) {
+        public Builder datasetId(Output<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
         public Builder datasetId(String datasetId) {
-            this.datasetId = Input.of(Objects.requireNonNull(datasetId));
+            this.datasetId = Output.of(Objects.requireNonNull(datasetId));
             return this;
         }
 
-        public Builder definitionBody(Input<String> definitionBody) {
+        public Builder definitionBody(Output<String> definitionBody) {
             this.definitionBody = Objects.requireNonNull(definitionBody);
             return this;
         }
 
         public Builder definitionBody(String definitionBody) {
-            this.definitionBody = Input.of(Objects.requireNonNull(definitionBody));
+            this.definitionBody = Output.of(Objects.requireNonNull(definitionBody));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder determinismLevel(@Nullable Input<String> determinismLevel) {
+        public Builder determinismLevel(@Nullable Output<String> determinismLevel) {
             this.determinismLevel = determinismLevel;
             return this;
         }
 
         public Builder determinismLevel(@Nullable String determinismLevel) {
-            this.determinismLevel = Input.ofNullable(determinismLevel);
+            this.determinismLevel = Output.ofNullable(determinismLevel);
             return this;
         }
 
-        public Builder importedLibraries(@Nullable Input<List<String>> importedLibraries) {
+        public Builder importedLibraries(@Nullable Output<List<String>> importedLibraries) {
             this.importedLibraries = importedLibraries;
             return this;
         }
 
         public Builder importedLibraries(@Nullable List<String> importedLibraries) {
-            this.importedLibraries = Input.ofNullable(importedLibraries);
+            this.importedLibraries = Output.ofNullable(importedLibraries);
             return this;
         }
 
-        public Builder language(@Nullable Input<String> language) {
+        public Builder language(@Nullable Output<String> language) {
             this.language = language;
             return this;
         }
 
         public Builder language(@Nullable String language) {
-            this.language = Input.ofNullable(language);
+            this.language = Output.ofNullable(language);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder returnTableType(@Nullable Input<String> returnTableType) {
+        public Builder returnTableType(@Nullable Output<String> returnTableType) {
             this.returnTableType = returnTableType;
             return this;
         }
 
         public Builder returnTableType(@Nullable String returnTableType) {
-            this.returnTableType = Input.ofNullable(returnTableType);
+            this.returnTableType = Output.ofNullable(returnTableType);
             return this;
         }
 
-        public Builder returnType(@Nullable Input<String> returnType) {
+        public Builder returnType(@Nullable Output<String> returnType) {
             this.returnType = returnType;
             return this;
         }
 
         public Builder returnType(@Nullable String returnType) {
-            this.returnType = Input.ofNullable(returnType);
+            this.returnType = Output.ofNullable(returnType);
             return this;
         }
 
-        public Builder routineId(Input<String> routineId) {
+        public Builder routineId(Output<String> routineId) {
             this.routineId = Objects.requireNonNull(routineId);
             return this;
         }
 
         public Builder routineId(String routineId) {
-            this.routineId = Input.of(Objects.requireNonNull(routineId));
+            this.routineId = Output.of(Objects.requireNonNull(routineId));
             return this;
         }
 
-        public Builder routineType(@Nullable Input<String> routineType) {
+        public Builder routineType(@Nullable Output<String> routineType) {
             this.routineType = routineType;
             return this;
         }
 
         public Builder routineType(@Nullable String routineType) {
-            this.routineType = Input.ofNullable(routineType);
+            this.routineType = Output.ofNullable(routineType);
             return this;
         }
         public RoutineArgs build() {

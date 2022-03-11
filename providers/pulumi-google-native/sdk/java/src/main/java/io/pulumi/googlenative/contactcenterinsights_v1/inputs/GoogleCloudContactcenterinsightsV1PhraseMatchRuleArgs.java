@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs;
 import java.lang.Boolean;
@@ -25,10 +25,10 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs extends
      * 
      */
     @InputImport(name="config")
-      private final @Nullable Input<GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs> config;
+      private final @Nullable Output<GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs> config;
 
-    public Input<GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs> getConfig() {
-        return this.config == null ? Input.empty() : this.config;
+    public Output<GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs> getConfig() {
+        return this.config == null ? Output.empty() : this.config;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs extends
      * 
      */
     @InputImport(name="negated")
-      private final @Nullable Input<Boolean> negated;
+      private final @Nullable Output<Boolean> negated;
 
-    public Input<Boolean> getNegated() {
-        return this.negated == null ? Input.empty() : this.negated;
+    public Output<Boolean> getNegated() {
+        return this.negated == null ? Output.empty() : this.negated;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs extends
      * 
      */
     @InputImport(name="query", required=true)
-      private final Input<String> query;
+      private final Output<String> query;
 
-    public Input<String> getQuery() {
+    public Output<String> getQuery() {
         return this.query;
     }
 
     public GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs(
-        @Nullable Input<GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs> config,
-        @Nullable Input<Boolean> negated,
-        Input<String> query) {
+        @Nullable Output<GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs> config,
+        @Nullable Output<Boolean> negated,
+        Output<String> query) {
         this.config = config;
         this.negated = negated;
         this.query = Objects.requireNonNull(query, "expected parameter 'query' to be non-null");
     }
 
     private GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs() {
-        this.config = Input.empty();
-        this.negated = Input.empty();
-        this.query = Input.empty();
+        this.config = Output.empty();
+        this.negated = Output.empty();
+        this.query = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs extends
     }
 
     public static final class Builder {
-        private @Nullable Input<GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs> config;
-        private @Nullable Input<Boolean> negated;
-        private Input<String> query;
+        private @Nullable Output<GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs> config;
+        private @Nullable Output<Boolean> negated;
+        private Output<String> query;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs extends
     	      this.query = defaults.query;
         }
 
-        public Builder config(@Nullable Input<GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs> config) {
+        public Builder config(@Nullable Output<GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs> config) {
             this.config = config;
             return this;
         }
 
         public Builder config(@Nullable GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs config) {
-            this.config = Input.ofNullable(config);
+            this.config = Output.ofNullable(config);
             return this;
         }
 
-        public Builder negated(@Nullable Input<Boolean> negated) {
+        public Builder negated(@Nullable Output<Boolean> negated) {
             this.negated = negated;
             return this;
         }
 
         public Builder negated(@Nullable Boolean negated) {
-            this.negated = Input.ofNullable(negated);
+            this.negated = Output.ofNullable(negated);
             return this;
         }
 
-        public Builder query(Input<String> query) {
+        public Builder query(Output<String> query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
 
         public Builder query(String query) {
-            this.query = Input.of(Objects.requireNonNull(query));
+            this.query = Output.of(Objects.requireNonNull(query));
             return this;
         }
         public GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs build() {

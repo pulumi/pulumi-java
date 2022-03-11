@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,39 +15,39 @@ public final class AwsClusterWorkloadIdentityConfigArgs extends io.pulumi.resour
     public static final AwsClusterWorkloadIdentityConfigArgs Empty = new AwsClusterWorkloadIdentityConfigArgs();
 
     @InputImport(name="identityProvider")
-      private final @Nullable Input<String> identityProvider;
+      private final @Nullable Output<String> identityProvider;
 
-    public Input<String> getIdentityProvider() {
-        return this.identityProvider == null ? Input.empty() : this.identityProvider;
+    public Output<String> getIdentityProvider() {
+        return this.identityProvider == null ? Output.empty() : this.identityProvider;
     }
 
     @InputImport(name="issuerUri")
-      private final @Nullable Input<String> issuerUri;
+      private final @Nullable Output<String> issuerUri;
 
-    public Input<String> getIssuerUri() {
-        return this.issuerUri == null ? Input.empty() : this.issuerUri;
+    public Output<String> getIssuerUri() {
+        return this.issuerUri == null ? Output.empty() : this.issuerUri;
     }
 
     @InputImport(name="workloadPool")
-      private final @Nullable Input<String> workloadPool;
+      private final @Nullable Output<String> workloadPool;
 
-    public Input<String> getWorkloadPool() {
-        return this.workloadPool == null ? Input.empty() : this.workloadPool;
+    public Output<String> getWorkloadPool() {
+        return this.workloadPool == null ? Output.empty() : this.workloadPool;
     }
 
     public AwsClusterWorkloadIdentityConfigArgs(
-        @Nullable Input<String> identityProvider,
-        @Nullable Input<String> issuerUri,
-        @Nullable Input<String> workloadPool) {
+        @Nullable Output<String> identityProvider,
+        @Nullable Output<String> issuerUri,
+        @Nullable Output<String> workloadPool) {
         this.identityProvider = identityProvider;
         this.issuerUri = issuerUri;
         this.workloadPool = workloadPool;
     }
 
     private AwsClusterWorkloadIdentityConfigArgs() {
-        this.identityProvider = Input.empty();
-        this.issuerUri = Input.empty();
-        this.workloadPool = Input.empty();
+        this.identityProvider = Output.empty();
+        this.issuerUri = Output.empty();
+        this.workloadPool = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,9 +59,9 @@ public final class AwsClusterWorkloadIdentityConfigArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> identityProvider;
-        private @Nullable Input<String> issuerUri;
-        private @Nullable Input<String> workloadPool;
+        private @Nullable Output<String> identityProvider;
+        private @Nullable Output<String> issuerUri;
+        private @Nullable Output<String> workloadPool;
 
         public Builder() {
     	      // Empty
@@ -74,33 +74,33 @@ public final class AwsClusterWorkloadIdentityConfigArgs extends io.pulumi.resour
     	      this.workloadPool = defaults.workloadPool;
         }
 
-        public Builder identityProvider(@Nullable Input<String> identityProvider) {
+        public Builder identityProvider(@Nullable Output<String> identityProvider) {
             this.identityProvider = identityProvider;
             return this;
         }
 
         public Builder identityProvider(@Nullable String identityProvider) {
-            this.identityProvider = Input.ofNullable(identityProvider);
+            this.identityProvider = Output.ofNullable(identityProvider);
             return this;
         }
 
-        public Builder issuerUri(@Nullable Input<String> issuerUri) {
+        public Builder issuerUri(@Nullable Output<String> issuerUri) {
             this.issuerUri = issuerUri;
             return this;
         }
 
         public Builder issuerUri(@Nullable String issuerUri) {
-            this.issuerUri = Input.ofNullable(issuerUri);
+            this.issuerUri = Output.ofNullable(issuerUri);
             return this;
         }
 
-        public Builder workloadPool(@Nullable Input<String> workloadPool) {
+        public Builder workloadPool(@Nullable Output<String> workloadPool) {
             this.workloadPool = workloadPool;
             return this;
         }
 
         public Builder workloadPool(@Nullable String workloadPool) {
-            this.workloadPool = Input.ofNullable(workloadPool);
+            this.workloadPool = Output.ofNullable(workloadPool);
             return this;
         }
         public AwsClusterWorkloadIdentityConfigArgs build() {

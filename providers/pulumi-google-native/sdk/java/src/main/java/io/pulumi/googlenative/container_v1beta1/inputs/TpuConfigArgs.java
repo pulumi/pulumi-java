@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class TpuConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class TpuConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipv4CidrBlock")
-      private final @Nullable Input<String> ipv4CidrBlock;
+      private final @Nullable Output<String> ipv4CidrBlock;
 
-    public Input<String> getIpv4CidrBlock() {
-        return this.ipv4CidrBlock == null ? Input.empty() : this.ipv4CidrBlock;
+    public Output<String> getIpv4CidrBlock() {
+        return this.ipv4CidrBlock == null ? Output.empty() : this.ipv4CidrBlock;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class TpuConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useServiceNetworking")
-      private final @Nullable Input<Boolean> useServiceNetworking;
+      private final @Nullable Output<Boolean> useServiceNetworking;
 
-    public Input<Boolean> getUseServiceNetworking() {
-        return this.useServiceNetworking == null ? Input.empty() : this.useServiceNetworking;
+    public Output<Boolean> getUseServiceNetworking() {
+        return this.useServiceNetworking == null ? Output.empty() : this.useServiceNetworking;
     }
 
     public TpuConfigArgs(
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<String> ipv4CidrBlock,
-        @Nullable Input<Boolean> useServiceNetworking) {
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<String> ipv4CidrBlock,
+        @Nullable Output<Boolean> useServiceNetworking) {
         this.enabled = enabled;
         this.ipv4CidrBlock = ipv4CidrBlock;
         this.useServiceNetworking = useServiceNetworking;
     }
 
     private TpuConfigArgs() {
-        this.enabled = Input.empty();
-        this.ipv4CidrBlock = Input.empty();
-        this.useServiceNetworking = Input.empty();
+        this.enabled = Output.empty();
+        this.ipv4CidrBlock = Output.empty();
+        this.useServiceNetworking = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class TpuConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<String> ipv4CidrBlock;
-        private @Nullable Input<Boolean> useServiceNetworking;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<String> ipv4CidrBlock;
+        private @Nullable Output<Boolean> useServiceNetworking;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class TpuConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.useServiceNetworking = defaults.useServiceNetworking;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder ipv4CidrBlock(@Nullable Input<String> ipv4CidrBlock) {
+        public Builder ipv4CidrBlock(@Nullable Output<String> ipv4CidrBlock) {
             this.ipv4CidrBlock = ipv4CidrBlock;
             return this;
         }
 
         public Builder ipv4CidrBlock(@Nullable String ipv4CidrBlock) {
-            this.ipv4CidrBlock = Input.ofNullable(ipv4CidrBlock);
+            this.ipv4CidrBlock = Output.ofNullable(ipv4CidrBlock);
             return this;
         }
 
-        public Builder useServiceNetworking(@Nullable Input<Boolean> useServiceNetworking) {
+        public Builder useServiceNetworking(@Nullable Output<Boolean> useServiceNetworking) {
             this.useServiceNetworking = useServiceNetworking;
             return this;
         }
 
         public Builder useServiceNetworking(@Nullable Boolean useServiceNetworking) {
-            this.useServiceNetworking = Input.ofNullable(useServiceNetworking);
+            this.useServiceNetworking = Output.ofNullable(useServiceNetworking);
             return this;
         }
         public TpuConfigArgs build() {

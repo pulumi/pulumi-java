@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerservice.inputs;
 import io.pulumi.azurenative.containerservice.enums.OSType;
 import io.pulumi.azurenative.containerservice.enums.OpenShiftContainerServiceVMSize;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,9 +27,9 @@ public final class OpenShiftManagedClusterMasterPoolProfileArgs extends io.pulum
      * 
      */
     @InputImport(name="count", required=true)
-      private final Input<Integer> count;
+      private final Output<Integer> count;
 
-    public Input<Integer> getCount() {
+    public Output<Integer> getCount() {
         return this.count;
     }
 
@@ -38,10 +38,10 @@ public final class OpenShiftManagedClusterMasterPoolProfileArgs extends io.pulum
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class OpenShiftManagedClusterMasterPoolProfileArgs extends io.pulum
      * 
      */
     @InputImport(name="osType")
-      private final @Nullable Input<Either<String,OSType>> osType;
+      private final @Nullable Output<Either<String,OSType>> osType;
 
-    public Input<Either<String,OSType>> getOsType() {
-        return this.osType == null ? Input.empty() : this.osType;
+    public Output<Either<String,OSType>> getOsType() {
+        return this.osType == null ? Output.empty() : this.osType;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class OpenShiftManagedClusterMasterPoolProfileArgs extends io.pulum
      * 
      */
     @InputImport(name="subnetCidr")
-      private final @Nullable Input<String> subnetCidr;
+      private final @Nullable Output<String> subnetCidr;
 
-    public Input<String> getSubnetCidr() {
-        return this.subnetCidr == null ? Input.empty() : this.subnetCidr;
+    public Output<String> getSubnetCidr() {
+        return this.subnetCidr == null ? Output.empty() : this.subnetCidr;
     }
 
     /**
@@ -71,18 +71,18 @@ public final class OpenShiftManagedClusterMasterPoolProfileArgs extends io.pulum
      * 
      */
     @InputImport(name="vmSize", required=true)
-      private final Input<Either<String,OpenShiftContainerServiceVMSize>> vmSize;
+      private final Output<Either<String,OpenShiftContainerServiceVMSize>> vmSize;
 
-    public Input<Either<String,OpenShiftContainerServiceVMSize>> getVmSize() {
+    public Output<Either<String,OpenShiftContainerServiceVMSize>> getVmSize() {
         return this.vmSize;
     }
 
     public OpenShiftManagedClusterMasterPoolProfileArgs(
-        Input<Integer> count,
-        @Nullable Input<String> name,
-        @Nullable Input<Either<String,OSType>> osType,
-        @Nullable Input<String> subnetCidr,
-        Input<Either<String,OpenShiftContainerServiceVMSize>> vmSize) {
+        Output<Integer> count,
+        @Nullable Output<String> name,
+        @Nullable Output<Either<String,OSType>> osType,
+        @Nullable Output<String> subnetCidr,
+        Output<Either<String,OpenShiftContainerServiceVMSize>> vmSize) {
         this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
         this.name = name;
         this.osType = osType;
@@ -91,11 +91,11 @@ public final class OpenShiftManagedClusterMasterPoolProfileArgs extends io.pulum
     }
 
     private OpenShiftManagedClusterMasterPoolProfileArgs() {
-        this.count = Input.empty();
-        this.name = Input.empty();
-        this.osType = Input.empty();
-        this.subnetCidr = Input.empty();
-        this.vmSize = Input.empty();
+        this.count = Output.empty();
+        this.name = Output.empty();
+        this.osType = Output.empty();
+        this.subnetCidr = Output.empty();
+        this.vmSize = Output.empty();
     }
 
     public static Builder builder() {
@@ -107,11 +107,11 @@ public final class OpenShiftManagedClusterMasterPoolProfileArgs extends io.pulum
     }
 
     public static final class Builder {
-        private Input<Integer> count;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Either<String,OSType>> osType;
-        private @Nullable Input<String> subnetCidr;
-        private Input<Either<String,OpenShiftContainerServiceVMSize>> vmSize;
+        private Output<Integer> count;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Either<String,OSType>> osType;
+        private @Nullable Output<String> subnetCidr;
+        private Output<Either<String,OpenShiftContainerServiceVMSize>> vmSize;
 
         public Builder() {
     	      // Empty
@@ -126,53 +126,53 @@ public final class OpenShiftManagedClusterMasterPoolProfileArgs extends io.pulum
     	      this.vmSize = defaults.vmSize;
         }
 
-        public Builder count(Input<Integer> count) {
+        public Builder count(Output<Integer> count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
         public Builder count(Integer count) {
-            this.count = Input.of(Objects.requireNonNull(count));
+            this.count = Output.of(Objects.requireNonNull(count));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder osType(@Nullable Input<Either<String,OSType>> osType) {
+        public Builder osType(@Nullable Output<Either<String,OSType>> osType) {
             this.osType = osType;
             return this;
         }
 
         public Builder osType(@Nullable Either<String,OSType> osType) {
-            this.osType = Input.ofNullable(osType);
+            this.osType = Output.ofNullable(osType);
             return this;
         }
 
-        public Builder subnetCidr(@Nullable Input<String> subnetCidr) {
+        public Builder subnetCidr(@Nullable Output<String> subnetCidr) {
             this.subnetCidr = subnetCidr;
             return this;
         }
 
         public Builder subnetCidr(@Nullable String subnetCidr) {
-            this.subnetCidr = Input.ofNullable(subnetCidr);
+            this.subnetCidr = Output.ofNullable(subnetCidr);
             return this;
         }
 
-        public Builder vmSize(Input<Either<String,OpenShiftContainerServiceVMSize>> vmSize) {
+        public Builder vmSize(Output<Either<String,OpenShiftContainerServiceVMSize>> vmSize) {
             this.vmSize = Objects.requireNonNull(vmSize);
             return this;
         }
 
         public Builder vmSize(Either<String,OpenShiftContainerServiceVMSize> vmSize) {
-            this.vmSize = Input.of(Objects.requireNonNull(vmSize));
+            this.vmSize = Output.of(Objects.requireNonNull(vmSize));
             return this;
         }
         public OpenShiftManagedClusterMasterPoolProfileArgs build() {

@@ -6,7 +6,7 @@ package io.pulumi.aws.codedeploy.inputs;
 import io.pulumi.aws.codedeploy.inputs.DeploymentGroupLoadBalancerInfoElbInfoArgs;
 import io.pulumi.aws.codedeploy.inputs.DeploymentGroupLoadBalancerInfoTargetGroupInfoArgs;
 import io.pulumi.aws.codedeploy.inputs.DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -22,10 +22,10 @@ public final class DeploymentGroupLoadBalancerInfoArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="elbInfos")
-      private final @Nullable Input<List<DeploymentGroupLoadBalancerInfoElbInfoArgs>> elbInfos;
+      private final @Nullable Output<List<DeploymentGroupLoadBalancerInfoElbInfoArgs>> elbInfos;
 
-    public Input<List<DeploymentGroupLoadBalancerInfoElbInfoArgs>> getElbInfos() {
-        return this.elbInfos == null ? Input.empty() : this.elbInfos;
+    public Output<List<DeploymentGroupLoadBalancerInfoElbInfoArgs>> getElbInfos() {
+        return this.elbInfos == null ? Output.empty() : this.elbInfos;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class DeploymentGroupLoadBalancerInfoArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="targetGroupInfos")
-      private final @Nullable Input<List<DeploymentGroupLoadBalancerInfoTargetGroupInfoArgs>> targetGroupInfos;
+      private final @Nullable Output<List<DeploymentGroupLoadBalancerInfoTargetGroupInfoArgs>> targetGroupInfos;
 
-    public Input<List<DeploymentGroupLoadBalancerInfoTargetGroupInfoArgs>> getTargetGroupInfos() {
-        return this.targetGroupInfos == null ? Input.empty() : this.targetGroupInfos;
+    public Output<List<DeploymentGroupLoadBalancerInfoTargetGroupInfoArgs>> getTargetGroupInfos() {
+        return this.targetGroupInfos == null ? Output.empty() : this.targetGroupInfos;
     }
 
     /**
@@ -44,25 +44,25 @@ public final class DeploymentGroupLoadBalancerInfoArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="targetGroupPairInfo")
-      private final @Nullable Input<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs> targetGroupPairInfo;
+      private final @Nullable Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs> targetGroupPairInfo;
 
-    public Input<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs> getTargetGroupPairInfo() {
-        return this.targetGroupPairInfo == null ? Input.empty() : this.targetGroupPairInfo;
+    public Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs> getTargetGroupPairInfo() {
+        return this.targetGroupPairInfo == null ? Output.empty() : this.targetGroupPairInfo;
     }
 
     public DeploymentGroupLoadBalancerInfoArgs(
-        @Nullable Input<List<DeploymentGroupLoadBalancerInfoElbInfoArgs>> elbInfos,
-        @Nullable Input<List<DeploymentGroupLoadBalancerInfoTargetGroupInfoArgs>> targetGroupInfos,
-        @Nullable Input<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs> targetGroupPairInfo) {
+        @Nullable Output<List<DeploymentGroupLoadBalancerInfoElbInfoArgs>> elbInfos,
+        @Nullable Output<List<DeploymentGroupLoadBalancerInfoTargetGroupInfoArgs>> targetGroupInfos,
+        @Nullable Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs> targetGroupPairInfo) {
         this.elbInfos = elbInfos;
         this.targetGroupInfos = targetGroupInfos;
         this.targetGroupPairInfo = targetGroupPairInfo;
     }
 
     private DeploymentGroupLoadBalancerInfoArgs() {
-        this.elbInfos = Input.empty();
-        this.targetGroupInfos = Input.empty();
-        this.targetGroupPairInfo = Input.empty();
+        this.elbInfos = Output.empty();
+        this.targetGroupInfos = Output.empty();
+        this.targetGroupPairInfo = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class DeploymentGroupLoadBalancerInfoArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<List<DeploymentGroupLoadBalancerInfoElbInfoArgs>> elbInfos;
-        private @Nullable Input<List<DeploymentGroupLoadBalancerInfoTargetGroupInfoArgs>> targetGroupInfos;
-        private @Nullable Input<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs> targetGroupPairInfo;
+        private @Nullable Output<List<DeploymentGroupLoadBalancerInfoElbInfoArgs>> elbInfos;
+        private @Nullable Output<List<DeploymentGroupLoadBalancerInfoTargetGroupInfoArgs>> targetGroupInfos;
+        private @Nullable Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs> targetGroupPairInfo;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class DeploymentGroupLoadBalancerInfoArgs extends io.pulumi.resourc
     	      this.targetGroupPairInfo = defaults.targetGroupPairInfo;
         }
 
-        public Builder elbInfos(@Nullable Input<List<DeploymentGroupLoadBalancerInfoElbInfoArgs>> elbInfos) {
+        public Builder elbInfos(@Nullable Output<List<DeploymentGroupLoadBalancerInfoElbInfoArgs>> elbInfos) {
             this.elbInfos = elbInfos;
             return this;
         }
 
         public Builder elbInfos(@Nullable List<DeploymentGroupLoadBalancerInfoElbInfoArgs> elbInfos) {
-            this.elbInfos = Input.ofNullable(elbInfos);
+            this.elbInfos = Output.ofNullable(elbInfos);
             return this;
         }
 
-        public Builder targetGroupInfos(@Nullable Input<List<DeploymentGroupLoadBalancerInfoTargetGroupInfoArgs>> targetGroupInfos) {
+        public Builder targetGroupInfos(@Nullable Output<List<DeploymentGroupLoadBalancerInfoTargetGroupInfoArgs>> targetGroupInfos) {
             this.targetGroupInfos = targetGroupInfos;
             return this;
         }
 
         public Builder targetGroupInfos(@Nullable List<DeploymentGroupLoadBalancerInfoTargetGroupInfoArgs> targetGroupInfos) {
-            this.targetGroupInfos = Input.ofNullable(targetGroupInfos);
+            this.targetGroupInfos = Output.ofNullable(targetGroupInfos);
             return this;
         }
 
-        public Builder targetGroupPairInfo(@Nullable Input<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs> targetGroupPairInfo) {
+        public Builder targetGroupPairInfo(@Nullable Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs> targetGroupPairInfo) {
             this.targetGroupPairInfo = targetGroupPairInfo;
             return this;
         }
 
         public Builder targetGroupPairInfo(@Nullable DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs targetGroupPairInfo) {
-            this.targetGroupPairInfo = Input.ofNullable(targetGroupPairInfo);
+            this.targetGroupPairInfo = Output.ofNullable(targetGroupPairInfo);
             return this;
         }
         public DeploymentGroupLoadBalancerInfoArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.azurenative.servicefabric.enums.ServicePlacementPolicyType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class ServicePlacementPolicyDescriptionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<Either<String,ServicePlacementPolicyType>> type;
+      private final Output<Either<String,ServicePlacementPolicyType>> type;
 
-    public Input<Either<String,ServicePlacementPolicyType>> getType() {
+    public Output<Either<String,ServicePlacementPolicyType>> getType() {
         return this.type;
     }
 
-    public ServicePlacementPolicyDescriptionArgs(Input<Either<String,ServicePlacementPolicyType>> type) {
+    public ServicePlacementPolicyDescriptionArgs(Output<Either<String,ServicePlacementPolicyType>> type) {
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private ServicePlacementPolicyDescriptionArgs() {
-        this.type = Input.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class ServicePlacementPolicyDescriptionArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private Input<Either<String,ServicePlacementPolicyType>> type;
+        private Output<Either<String,ServicePlacementPolicyType>> type;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class ServicePlacementPolicyDescriptionArgs extends io.pulumi.resou
     	      this.type = defaults.type;
         }
 
-        public Builder type(Input<Either<String,ServicePlacementPolicyType>> type) {
+        public Builder type(Output<Either<String,ServicePlacementPolicyType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(Either<String,ServicePlacementPolicyType> type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ServicePlacementPolicyDescriptionArgs build() {

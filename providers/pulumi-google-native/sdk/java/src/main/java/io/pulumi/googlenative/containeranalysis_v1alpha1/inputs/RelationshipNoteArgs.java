@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.enums.RelationshipNoteType;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class RelationshipNoteArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<RelationshipNoteType> type;
+      private final @Nullable Output<RelationshipNoteType> type;
 
-    public Input<RelationshipNoteType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<RelationshipNoteType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
-    public RelationshipNoteArgs(@Nullable Input<RelationshipNoteType> type) {
+    public RelationshipNoteArgs(@Nullable Output<RelationshipNoteType> type) {
         this.type = type;
     }
 
     private RelationshipNoteArgs() {
-        this.type = Input.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class RelationshipNoteArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<RelationshipNoteType> type;
+        private @Nullable Output<RelationshipNoteType> type;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class RelationshipNoteArgs extends io.pulumi.resources.ResourceArgs
     	      this.type = defaults.type;
         }
 
-        public Builder type(@Nullable Input<RelationshipNoteType> type) {
+        public Builder type(@Nullable Output<RelationshipNoteType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable RelationshipNoteType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public RelationshipNoteArgs build() {

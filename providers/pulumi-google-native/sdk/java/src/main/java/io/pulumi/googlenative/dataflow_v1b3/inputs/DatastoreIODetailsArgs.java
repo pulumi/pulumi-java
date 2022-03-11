@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class DatastoreIODetailsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="namespace")
-      private final @Nullable Input<String> namespace;
+      private final @Nullable Output<String> namespace;
 
-    public Input<String> getNamespace() {
-        return this.namespace == null ? Input.empty() : this.namespace;
+    public Output<String> getNamespace() {
+        return this.namespace == null ? Output.empty() : this.namespace;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class DatastoreIODetailsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public DatastoreIODetailsArgs(
-        @Nullable Input<String> namespace,
-        @Nullable Input<String> project) {
+        @Nullable Output<String> namespace,
+        @Nullable Output<String> project) {
         this.namespace = namespace;
         this.project = project;
     }
 
     private DatastoreIODetailsArgs() {
-        this.namespace = Input.empty();
-        this.project = Input.empty();
+        this.namespace = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class DatastoreIODetailsArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> namespace;
-        private @Nullable Input<String> project;
+        private @Nullable Output<String> namespace;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class DatastoreIODetailsArgs extends io.pulumi.resources.ResourceAr
     	      this.project = defaults.project;
         }
 
-        public Builder namespace(@Nullable Input<String> namespace) {
+        public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
 
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Input.ofNullable(namespace);
+            this.namespace = Output.ofNullable(namespace);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public DatastoreIODetailsArgs build() {

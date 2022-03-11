@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.FrontendIPConfigurationArgs;
 import io.pulumi.azurenative.network.inputs.NetworkInterfaceIPConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="destinationLoadBalancerFrontEndIPConfiguration")
-      private final @Nullable Input<FrontendIPConfigurationArgs> destinationLoadBalancerFrontEndIPConfiguration;
+      private final @Nullable Output<FrontendIPConfigurationArgs> destinationLoadBalancerFrontEndIPConfiguration;
 
-    public Input<FrontendIPConfigurationArgs> getDestinationLoadBalancerFrontEndIPConfiguration() {
-        return this.destinationLoadBalancerFrontEndIPConfiguration == null ? Input.empty() : this.destinationLoadBalancerFrontEndIPConfiguration;
+    public Output<FrontendIPConfigurationArgs> getDestinationLoadBalancerFrontEndIPConfiguration() {
+        return this.destinationLoadBalancerFrontEndIPConfiguration == null ? Output.empty() : this.destinationLoadBalancerFrontEndIPConfiguration;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="destinationNetworkInterfaceIPConfiguration")
-      private final @Nullable Input<NetworkInterfaceIPConfigurationArgs> destinationNetworkInterfaceIPConfiguration;
+      private final @Nullable Output<NetworkInterfaceIPConfigurationArgs> destinationNetworkInterfaceIPConfiguration;
 
-    public Input<NetworkInterfaceIPConfigurationArgs> getDestinationNetworkInterfaceIPConfiguration() {
-        return this.destinationNetworkInterfaceIPConfiguration == null ? Input.empty() : this.destinationNetworkInterfaceIPConfiguration;
+    public Output<NetworkInterfaceIPConfigurationArgs> getDestinationNetworkInterfaceIPConfiguration() {
+        return this.destinationNetworkInterfaceIPConfiguration == null ? Output.empty() : this.destinationNetworkInterfaceIPConfiguration;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="destinationPort")
-      private final @Nullable Input<Integer> destinationPort;
+      private final @Nullable Output<Integer> destinationPort;
 
-    public Input<Integer> getDestinationPort() {
-        return this.destinationPort == null ? Input.empty() : this.destinationPort;
+    public Output<Integer> getDestinationPort() {
+        return this.destinationPort == null ? Output.empty() : this.destinationPort;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -82,19 +82,19 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public VirtualNetworkTapArgs(
-        @Nullable Input<FrontendIPConfigurationArgs> destinationLoadBalancerFrontEndIPConfiguration,
-        @Nullable Input<NetworkInterfaceIPConfigurationArgs> destinationNetworkInterfaceIPConfiguration,
-        @Nullable Input<Integer> destinationPort,
-        @Nullable Input<String> id,
-        @Nullable Input<String> location,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<FrontendIPConfigurationArgs> destinationLoadBalancerFrontEndIPConfiguration,
+        @Nullable Output<NetworkInterfaceIPConfigurationArgs> destinationNetworkInterfaceIPConfiguration,
+        @Nullable Output<Integer> destinationPort,
+        @Nullable Output<String> id,
+        @Nullable Output<String> location,
+        @Nullable Output<Map<String,String>> tags) {
         this.destinationLoadBalancerFrontEndIPConfiguration = destinationLoadBalancerFrontEndIPConfiguration;
         this.destinationNetworkInterfaceIPConfiguration = destinationNetworkInterfaceIPConfiguration;
         this.destinationPort = destinationPort;
@@ -104,12 +104,12 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
     }
 
     private VirtualNetworkTapArgs() {
-        this.destinationLoadBalancerFrontEndIPConfiguration = Input.empty();
-        this.destinationNetworkInterfaceIPConfiguration = Input.empty();
-        this.destinationPort = Input.empty();
-        this.id = Input.empty();
-        this.location = Input.empty();
-        this.tags = Input.empty();
+        this.destinationLoadBalancerFrontEndIPConfiguration = Output.empty();
+        this.destinationNetworkInterfaceIPConfiguration = Output.empty();
+        this.destinationPort = Output.empty();
+        this.id = Output.empty();
+        this.location = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -121,12 +121,12 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<FrontendIPConfigurationArgs> destinationLoadBalancerFrontEndIPConfiguration;
-        private @Nullable Input<NetworkInterfaceIPConfigurationArgs> destinationNetworkInterfaceIPConfiguration;
-        private @Nullable Input<Integer> destinationPort;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<FrontendIPConfigurationArgs> destinationLoadBalancerFrontEndIPConfiguration;
+        private @Nullable Output<NetworkInterfaceIPConfigurationArgs> destinationNetworkInterfaceIPConfiguration;
+        private @Nullable Output<Integer> destinationPort;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -142,63 +142,63 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
     	      this.tags = defaults.tags;
         }
 
-        public Builder destinationLoadBalancerFrontEndIPConfiguration(@Nullable Input<FrontendIPConfigurationArgs> destinationLoadBalancerFrontEndIPConfiguration) {
+        public Builder destinationLoadBalancerFrontEndIPConfiguration(@Nullable Output<FrontendIPConfigurationArgs> destinationLoadBalancerFrontEndIPConfiguration) {
             this.destinationLoadBalancerFrontEndIPConfiguration = destinationLoadBalancerFrontEndIPConfiguration;
             return this;
         }
 
         public Builder destinationLoadBalancerFrontEndIPConfiguration(@Nullable FrontendIPConfigurationArgs destinationLoadBalancerFrontEndIPConfiguration) {
-            this.destinationLoadBalancerFrontEndIPConfiguration = Input.ofNullable(destinationLoadBalancerFrontEndIPConfiguration);
+            this.destinationLoadBalancerFrontEndIPConfiguration = Output.ofNullable(destinationLoadBalancerFrontEndIPConfiguration);
             return this;
         }
 
-        public Builder destinationNetworkInterfaceIPConfiguration(@Nullable Input<NetworkInterfaceIPConfigurationArgs> destinationNetworkInterfaceIPConfiguration) {
+        public Builder destinationNetworkInterfaceIPConfiguration(@Nullable Output<NetworkInterfaceIPConfigurationArgs> destinationNetworkInterfaceIPConfiguration) {
             this.destinationNetworkInterfaceIPConfiguration = destinationNetworkInterfaceIPConfiguration;
             return this;
         }
 
         public Builder destinationNetworkInterfaceIPConfiguration(@Nullable NetworkInterfaceIPConfigurationArgs destinationNetworkInterfaceIPConfiguration) {
-            this.destinationNetworkInterfaceIPConfiguration = Input.ofNullable(destinationNetworkInterfaceIPConfiguration);
+            this.destinationNetworkInterfaceIPConfiguration = Output.ofNullable(destinationNetworkInterfaceIPConfiguration);
             return this;
         }
 
-        public Builder destinationPort(@Nullable Input<Integer> destinationPort) {
+        public Builder destinationPort(@Nullable Output<Integer> destinationPort) {
             this.destinationPort = destinationPort;
             return this;
         }
 
         public Builder destinationPort(@Nullable Integer destinationPort) {
-            this.destinationPort = Input.ofNullable(destinationPort);
+            this.destinationPort = Output.ofNullable(destinationPort);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public VirtualNetworkTapArgs build() {

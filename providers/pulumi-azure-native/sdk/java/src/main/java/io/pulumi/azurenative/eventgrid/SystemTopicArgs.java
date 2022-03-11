@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.eventgrid;
 
 import io.pulumi.azurenative.eventgrid.inputs.IdentityInfoArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<IdentityInfoArgs> identity;
+      private final @Nullable Output<IdentityInfoArgs> identity;
 
-    public Input<IdentityInfoArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<IdentityInfoArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -54,10 +54,10 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source")
-      private final @Nullable Input<String> source;
+      private final @Nullable Output<String> source;
 
-    public Input<String> getSource() {
-        return this.source == null ? Input.empty() : this.source;
+    public Output<String> getSource() {
+        return this.source == null ? Output.empty() : this.source;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="systemTopicName")
-      private final @Nullable Input<String> systemTopicName;
+      private final @Nullable Output<String> systemTopicName;
 
-    public Input<String> getSystemTopicName() {
-        return this.systemTopicName == null ? Input.empty() : this.systemTopicName;
+    public Output<String> getSystemTopicName() {
+        return this.systemTopicName == null ? Output.empty() : this.systemTopicName;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -87,20 +87,20 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topicType")
-      private final @Nullable Input<String> topicType;
+      private final @Nullable Output<String> topicType;
 
-    public Input<String> getTopicType() {
-        return this.topicType == null ? Input.empty() : this.topicType;
+    public Output<String> getTopicType() {
+        return this.topicType == null ? Output.empty() : this.topicType;
     }
 
     public SystemTopicArgs(
-        @Nullable Input<IdentityInfoArgs> identity,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> source,
-        @Nullable Input<String> systemTopicName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> topicType) {
+        @Nullable Output<IdentityInfoArgs> identity,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> source,
+        @Nullable Output<String> systemTopicName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> topicType) {
         this.identity = identity;
         this.location = location;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -111,13 +111,13 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SystemTopicArgs() {
-        this.identity = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.source = Input.empty();
-        this.systemTopicName = Input.empty();
-        this.tags = Input.empty();
-        this.topicType = Input.empty();
+        this.identity = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.source = Output.empty();
+        this.systemTopicName = Output.empty();
+        this.tags = Output.empty();
+        this.topicType = Output.empty();
     }
 
     public static Builder builder() {
@@ -129,13 +129,13 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<IdentityInfoArgs> identity;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> source;
-        private @Nullable Input<String> systemTopicName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> topicType;
+        private @Nullable Output<IdentityInfoArgs> identity;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> source;
+        private @Nullable Output<String> systemTopicName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> topicType;
 
         public Builder() {
     	      // Empty
@@ -152,73 +152,73 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
     	      this.topicType = defaults.topicType;
         }
 
-        public Builder identity(@Nullable Input<IdentityInfoArgs> identity) {
+        public Builder identity(@Nullable Output<IdentityInfoArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable IdentityInfoArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder source(@Nullable Input<String> source) {
+        public Builder source(@Nullable Output<String> source) {
             this.source = source;
             return this;
         }
 
         public Builder source(@Nullable String source) {
-            this.source = Input.ofNullable(source);
+            this.source = Output.ofNullable(source);
             return this;
         }
 
-        public Builder systemTopicName(@Nullable Input<String> systemTopicName) {
+        public Builder systemTopicName(@Nullable Output<String> systemTopicName) {
             this.systemTopicName = systemTopicName;
             return this;
         }
 
         public Builder systemTopicName(@Nullable String systemTopicName) {
-            this.systemTopicName = Input.ofNullable(systemTopicName);
+            this.systemTopicName = Output.ofNullable(systemTopicName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder topicType(@Nullable Input<String> topicType) {
+        public Builder topicType(@Nullable Output<String> topicType) {
             this.topicType = topicType;
             return this;
         }
 
         public Builder topicType(@Nullable String topicType) {
-            this.topicType = Input.ofNullable(topicType);
+            this.topicType = Output.ofNullable(topicType);
             return this;
         }
         public SystemTopicArgs build() {

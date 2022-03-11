@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.FleetSpotOptionsMaintenanceStrategiesCapacityRebalanceGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class FleetSpotOptionsMaintenanceStrategiesGetArgs extends io.pulum
      * 
      */
     @InputImport(name="capacityRebalance")
-      private final @Nullable Input<FleetSpotOptionsMaintenanceStrategiesCapacityRebalanceGetArgs> capacityRebalance;
+      private final @Nullable Output<FleetSpotOptionsMaintenanceStrategiesCapacityRebalanceGetArgs> capacityRebalance;
 
-    public Input<FleetSpotOptionsMaintenanceStrategiesCapacityRebalanceGetArgs> getCapacityRebalance() {
-        return this.capacityRebalance == null ? Input.empty() : this.capacityRebalance;
+    public Output<FleetSpotOptionsMaintenanceStrategiesCapacityRebalanceGetArgs> getCapacityRebalance() {
+        return this.capacityRebalance == null ? Output.empty() : this.capacityRebalance;
     }
 
-    public FleetSpotOptionsMaintenanceStrategiesGetArgs(@Nullable Input<FleetSpotOptionsMaintenanceStrategiesCapacityRebalanceGetArgs> capacityRebalance) {
+    public FleetSpotOptionsMaintenanceStrategiesGetArgs(@Nullable Output<FleetSpotOptionsMaintenanceStrategiesCapacityRebalanceGetArgs> capacityRebalance) {
         this.capacityRebalance = capacityRebalance;
     }
 
     private FleetSpotOptionsMaintenanceStrategiesGetArgs() {
-        this.capacityRebalance = Input.empty();
+        this.capacityRebalance = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class FleetSpotOptionsMaintenanceStrategiesGetArgs extends io.pulum
     }
 
     public static final class Builder {
-        private @Nullable Input<FleetSpotOptionsMaintenanceStrategiesCapacityRebalanceGetArgs> capacityRebalance;
+        private @Nullable Output<FleetSpotOptionsMaintenanceStrategiesCapacityRebalanceGetArgs> capacityRebalance;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class FleetSpotOptionsMaintenanceStrategiesGetArgs extends io.pulum
     	      this.capacityRebalance = defaults.capacityRebalance;
         }
 
-        public Builder capacityRebalance(@Nullable Input<FleetSpotOptionsMaintenanceStrategiesCapacityRebalanceGetArgs> capacityRebalance) {
+        public Builder capacityRebalance(@Nullable Output<FleetSpotOptionsMaintenanceStrategiesCapacityRebalanceGetArgs> capacityRebalance) {
             this.capacityRebalance = capacityRebalance;
             return this;
         }
 
         public Builder capacityRebalance(@Nullable FleetSpotOptionsMaintenanceStrategiesCapacityRebalanceGetArgs capacityRebalance) {
-            this.capacityRebalance = Input.ofNullable(capacityRebalance);
+            this.capacityRebalance = Output.ofNullable(capacityRebalance);
             return this;
         }
         public FleetSpotOptionsMaintenanceStrategiesGetArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetFilterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,29 +17,29 @@ public final class DatasetQueryActionArgs extends io.pulumi.resources.ResourceAr
     public static final DatasetQueryActionArgs Empty = new DatasetQueryActionArgs();
 
     @InputImport(name="filters")
-      private final @Nullable Input<List<DatasetFilterArgs>> filters;
+      private final @Nullable Output<List<DatasetFilterArgs>> filters;
 
-    public Input<List<DatasetFilterArgs>> getFilters() {
-        return this.filters == null ? Input.empty() : this.filters;
+    public Output<List<DatasetFilterArgs>> getFilters() {
+        return this.filters == null ? Output.empty() : this.filters;
     }
 
     @InputImport(name="sqlQuery", required=true)
-      private final Input<String> sqlQuery;
+      private final Output<String> sqlQuery;
 
-    public Input<String> getSqlQuery() {
+    public Output<String> getSqlQuery() {
         return this.sqlQuery;
     }
 
     public DatasetQueryActionArgs(
-        @Nullable Input<List<DatasetFilterArgs>> filters,
-        Input<String> sqlQuery) {
+        @Nullable Output<List<DatasetFilterArgs>> filters,
+        Output<String> sqlQuery) {
         this.filters = filters;
         this.sqlQuery = Objects.requireNonNull(sqlQuery, "expected parameter 'sqlQuery' to be non-null");
     }
 
     private DatasetQueryActionArgs() {
-        this.filters = Input.empty();
-        this.sqlQuery = Input.empty();
+        this.filters = Output.empty();
+        this.sqlQuery = Output.empty();
     }
 
     public static Builder builder() {
@@ -51,8 +51,8 @@ public final class DatasetQueryActionArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<List<DatasetFilterArgs>> filters;
-        private Input<String> sqlQuery;
+        private @Nullable Output<List<DatasetFilterArgs>> filters;
+        private Output<String> sqlQuery;
 
         public Builder() {
     	      // Empty
@@ -64,23 +64,23 @@ public final class DatasetQueryActionArgs extends io.pulumi.resources.ResourceAr
     	      this.sqlQuery = defaults.sqlQuery;
         }
 
-        public Builder filters(@Nullable Input<List<DatasetFilterArgs>> filters) {
+        public Builder filters(@Nullable Output<List<DatasetFilterArgs>> filters) {
             this.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<DatasetFilterArgs> filters) {
-            this.filters = Input.ofNullable(filters);
+            this.filters = Output.ofNullable(filters);
             return this;
         }
 
-        public Builder sqlQuery(Input<String> sqlQuery) {
+        public Builder sqlQuery(Output<String> sqlQuery) {
             this.sqlQuery = Objects.requireNonNull(sqlQuery);
             return this;
         }
 
         public Builder sqlQuery(String sqlQuery) {
-            this.sqlQuery = Input.of(Objects.requireNonNull(sqlQuery));
+            this.sqlQuery = Output.of(Objects.requireNonNull(sqlQuery));
             return this;
         }
         public DatasetQueryActionArgs build() {

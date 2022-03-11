@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apigateway.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class UsagePlanQuotaSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="limit")
-      private final @Nullable Input<Integer> limit;
+      private final @Nullable Output<Integer> limit;
 
-    public Input<Integer> getLimit() {
-        return this.limit == null ? Input.empty() : this.limit;
+    public Output<Integer> getLimit() {
+        return this.limit == null ? Output.empty() : this.limit;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class UsagePlanQuotaSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="offset")
-      private final @Nullable Input<Integer> offset;
+      private final @Nullable Output<Integer> offset;
 
-    public Input<Integer> getOffset() {
-        return this.offset == null ? Input.empty() : this.offset;
+    public Output<Integer> getOffset() {
+        return this.offset == null ? Output.empty() : this.offset;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class UsagePlanQuotaSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="period")
-      private final @Nullable Input<String> period;
+      private final @Nullable Output<String> period;
 
-    public Input<String> getPeriod() {
-        return this.period == null ? Input.empty() : this.period;
+    public Output<String> getPeriod() {
+        return this.period == null ? Output.empty() : this.period;
     }
 
     public UsagePlanQuotaSettingsArgs(
-        @Nullable Input<Integer> limit,
-        @Nullable Input<Integer> offset,
-        @Nullable Input<String> period) {
+        @Nullable Output<Integer> limit,
+        @Nullable Output<Integer> offset,
+        @Nullable Output<String> period) {
         this.limit = limit;
         this.offset = offset;
         this.period = period;
     }
 
     private UsagePlanQuotaSettingsArgs() {
-        this.limit = Input.empty();
-        this.offset = Input.empty();
-        this.period = Input.empty();
+        this.limit = Output.empty();
+        this.offset = Output.empty();
+        this.period = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class UsagePlanQuotaSettingsArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> limit;
-        private @Nullable Input<Integer> offset;
-        private @Nullable Input<String> period;
+        private @Nullable Output<Integer> limit;
+        private @Nullable Output<Integer> offset;
+        private @Nullable Output<String> period;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class UsagePlanQuotaSettingsArgs extends io.pulumi.resources.Resour
     	      this.period = defaults.period;
         }
 
-        public Builder limit(@Nullable Input<Integer> limit) {
+        public Builder limit(@Nullable Output<Integer> limit) {
             this.limit = limit;
             return this;
         }
 
         public Builder limit(@Nullable Integer limit) {
-            this.limit = Input.ofNullable(limit);
+            this.limit = Output.ofNullable(limit);
             return this;
         }
 
-        public Builder offset(@Nullable Input<Integer> offset) {
+        public Builder offset(@Nullable Output<Integer> offset) {
             this.offset = offset;
             return this;
         }
 
         public Builder offset(@Nullable Integer offset) {
-            this.offset = Input.ofNullable(offset);
+            this.offset = Output.ofNullable(offset);
             return this;
         }
 
-        public Builder period(@Nullable Input<String> period) {
+        public Builder period(@Nullable Output<String> period) {
             this.period = period;
             return this;
         }
 
         public Builder period(@Nullable String period) {
-            this.period = Input.ofNullable(period);
+            this.period = Output.ofNullable(period);
             return this;
         }
         public UsagePlanQuotaSettingsArgs build() {

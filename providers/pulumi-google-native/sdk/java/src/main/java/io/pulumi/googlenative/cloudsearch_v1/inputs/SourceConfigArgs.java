@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.SourceArgs;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.SourceCrowdingConfigArgs;
@@ -25,10 +25,10 @@ public final class SourceConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="crowdingConfig")
-      private final @Nullable Input<SourceCrowdingConfigArgs> crowdingConfig;
+      private final @Nullable Output<SourceCrowdingConfigArgs> crowdingConfig;
 
-    public Input<SourceCrowdingConfigArgs> getCrowdingConfig() {
-        return this.crowdingConfig == null ? Input.empty() : this.crowdingConfig;
+    public Output<SourceCrowdingConfigArgs> getCrowdingConfig() {
+        return this.crowdingConfig == null ? Output.empty() : this.crowdingConfig;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SourceConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scoringConfig")
-      private final @Nullable Input<SourceScoringConfigArgs> scoringConfig;
+      private final @Nullable Output<SourceScoringConfigArgs> scoringConfig;
 
-    public Input<SourceScoringConfigArgs> getScoringConfig() {
-        return this.scoringConfig == null ? Input.empty() : this.scoringConfig;
+    public Output<SourceScoringConfigArgs> getScoringConfig() {
+        return this.scoringConfig == null ? Output.empty() : this.scoringConfig;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class SourceConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source")
-      private final @Nullable Input<SourceArgs> source;
+      private final @Nullable Output<SourceArgs> source;
 
-    public Input<SourceArgs> getSource() {
-        return this.source == null ? Input.empty() : this.source;
+    public Output<SourceArgs> getSource() {
+        return this.source == null ? Output.empty() : this.source;
     }
 
     public SourceConfigArgs(
-        @Nullable Input<SourceCrowdingConfigArgs> crowdingConfig,
-        @Nullable Input<SourceScoringConfigArgs> scoringConfig,
-        @Nullable Input<SourceArgs> source) {
+        @Nullable Output<SourceCrowdingConfigArgs> crowdingConfig,
+        @Nullable Output<SourceScoringConfigArgs> scoringConfig,
+        @Nullable Output<SourceArgs> source) {
         this.crowdingConfig = crowdingConfig;
         this.scoringConfig = scoringConfig;
         this.source = source;
     }
 
     private SourceConfigArgs() {
-        this.crowdingConfig = Input.empty();
-        this.scoringConfig = Input.empty();
-        this.source = Input.empty();
+        this.crowdingConfig = Output.empty();
+        this.scoringConfig = Output.empty();
+        this.source = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class SourceConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<SourceCrowdingConfigArgs> crowdingConfig;
-        private @Nullable Input<SourceScoringConfigArgs> scoringConfig;
-        private @Nullable Input<SourceArgs> source;
+        private @Nullable Output<SourceCrowdingConfigArgs> crowdingConfig;
+        private @Nullable Output<SourceScoringConfigArgs> scoringConfig;
+        private @Nullable Output<SourceArgs> source;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class SourceConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.source = defaults.source;
         }
 
-        public Builder crowdingConfig(@Nullable Input<SourceCrowdingConfigArgs> crowdingConfig) {
+        public Builder crowdingConfig(@Nullable Output<SourceCrowdingConfigArgs> crowdingConfig) {
             this.crowdingConfig = crowdingConfig;
             return this;
         }
 
         public Builder crowdingConfig(@Nullable SourceCrowdingConfigArgs crowdingConfig) {
-            this.crowdingConfig = Input.ofNullable(crowdingConfig);
+            this.crowdingConfig = Output.ofNullable(crowdingConfig);
             return this;
         }
 
-        public Builder scoringConfig(@Nullable Input<SourceScoringConfigArgs> scoringConfig) {
+        public Builder scoringConfig(@Nullable Output<SourceScoringConfigArgs> scoringConfig) {
             this.scoringConfig = scoringConfig;
             return this;
         }
 
         public Builder scoringConfig(@Nullable SourceScoringConfigArgs scoringConfig) {
-            this.scoringConfig = Input.ofNullable(scoringConfig);
+            this.scoringConfig = Output.ofNullable(scoringConfig);
             return this;
         }
 
-        public Builder source(@Nullable Input<SourceArgs> source) {
+        public Builder source(@Nullable Output<SourceArgs> source) {
             this.source = source;
             return this;
         }
 
         public Builder source(@Nullable SourceArgs source) {
-            this.source = Input.ofNullable(source);
+            this.source = Output.ofNullable(source);
             return this;
         }
         public SourceConfigArgs build() {

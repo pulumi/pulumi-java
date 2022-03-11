@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotsitewise.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,29 +19,29 @@ public final class GatewayCapabilitySummaryArgs extends io.pulumi.resources.Reso
     public static final GatewayCapabilitySummaryArgs Empty = new GatewayCapabilitySummaryArgs();
 
     @InputImport(name="capabilityConfiguration")
-      private final @Nullable Input<String> capabilityConfiguration;
+      private final @Nullable Output<String> capabilityConfiguration;
 
-    public Input<String> getCapabilityConfiguration() {
-        return this.capabilityConfiguration == null ? Input.empty() : this.capabilityConfiguration;
+    public Output<String> getCapabilityConfiguration() {
+        return this.capabilityConfiguration == null ? Output.empty() : this.capabilityConfiguration;
     }
 
     @InputImport(name="capabilityNamespace", required=true)
-      private final Input<String> capabilityNamespace;
+      private final Output<String> capabilityNamespace;
 
-    public Input<String> getCapabilityNamespace() {
+    public Output<String> getCapabilityNamespace() {
         return this.capabilityNamespace;
     }
 
     public GatewayCapabilitySummaryArgs(
-        @Nullable Input<String> capabilityConfiguration,
-        Input<String> capabilityNamespace) {
+        @Nullable Output<String> capabilityConfiguration,
+        Output<String> capabilityNamespace) {
         this.capabilityConfiguration = capabilityConfiguration;
         this.capabilityNamespace = Objects.requireNonNull(capabilityNamespace, "expected parameter 'capabilityNamespace' to be non-null");
     }
 
     private GatewayCapabilitySummaryArgs() {
-        this.capabilityConfiguration = Input.empty();
-        this.capabilityNamespace = Input.empty();
+        this.capabilityConfiguration = Output.empty();
+        this.capabilityNamespace = Output.empty();
     }
 
     public static Builder builder() {
@@ -53,8 +53,8 @@ public final class GatewayCapabilitySummaryArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> capabilityConfiguration;
-        private Input<String> capabilityNamespace;
+        private @Nullable Output<String> capabilityConfiguration;
+        private Output<String> capabilityNamespace;
 
         public Builder() {
     	      // Empty
@@ -66,23 +66,23 @@ public final class GatewayCapabilitySummaryArgs extends io.pulumi.resources.Reso
     	      this.capabilityNamespace = defaults.capabilityNamespace;
         }
 
-        public Builder capabilityConfiguration(@Nullable Input<String> capabilityConfiguration) {
+        public Builder capabilityConfiguration(@Nullable Output<String> capabilityConfiguration) {
             this.capabilityConfiguration = capabilityConfiguration;
             return this;
         }
 
         public Builder capabilityConfiguration(@Nullable String capabilityConfiguration) {
-            this.capabilityConfiguration = Input.ofNullable(capabilityConfiguration);
+            this.capabilityConfiguration = Output.ofNullable(capabilityConfiguration);
             return this;
         }
 
-        public Builder capabilityNamespace(Input<String> capabilityNamespace) {
+        public Builder capabilityNamespace(Output<String> capabilityNamespace) {
             this.capabilityNamespace = Objects.requireNonNull(capabilityNamespace);
             return this;
         }
 
         public Builder capabilityNamespace(String capabilityNamespace) {
-            this.capabilityNamespace = Input.of(Objects.requireNonNull(capabilityNamespace));
+            this.capabilityNamespace = Output.of(Objects.requireNonNull(capabilityNamespace));
             return this;
         }
         public GatewayCapabilitySummaryArgs build() {

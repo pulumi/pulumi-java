@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.pubsub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.pubsub.inputs.LiteTopicPartitionConfigCapacityArgs;
 import java.lang.Integer;
@@ -21,10 +21,10 @@ public final class LiteTopicPartitionConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="capacity")
-      private final @Nullable Input<LiteTopicPartitionConfigCapacityArgs> capacity;
+      private final @Nullable Output<LiteTopicPartitionConfigCapacityArgs> capacity;
 
-    public Input<LiteTopicPartitionConfigCapacityArgs> getCapacity() {
-        return this.capacity == null ? Input.empty() : this.capacity;
+    public Output<LiteTopicPartitionConfigCapacityArgs> getCapacity() {
+        return this.capacity == null ? Output.empty() : this.capacity;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class LiteTopicPartitionConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="count", required=true)
-      private final Input<Integer> count;
+      private final Output<Integer> count;
 
-    public Input<Integer> getCount() {
+    public Output<Integer> getCount() {
         return this.count;
     }
 
     public LiteTopicPartitionConfigArgs(
-        @Nullable Input<LiteTopicPartitionConfigCapacityArgs> capacity,
-        Input<Integer> count) {
+        @Nullable Output<LiteTopicPartitionConfigCapacityArgs> capacity,
+        Output<Integer> count) {
         this.capacity = capacity;
         this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
     }
 
     private LiteTopicPartitionConfigArgs() {
-        this.capacity = Input.empty();
-        this.count = Input.empty();
+        this.capacity = Output.empty();
+        this.count = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class LiteTopicPartitionConfigArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<LiteTopicPartitionConfigCapacityArgs> capacity;
-        private Input<Integer> count;
+        private @Nullable Output<LiteTopicPartitionConfigCapacityArgs> capacity;
+        private Output<Integer> count;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class LiteTopicPartitionConfigArgs extends io.pulumi.resources.Reso
     	      this.count = defaults.count;
         }
 
-        public Builder capacity(@Nullable Input<LiteTopicPartitionConfigCapacityArgs> capacity) {
+        public Builder capacity(@Nullable Output<LiteTopicPartitionConfigCapacityArgs> capacity) {
             this.capacity = capacity;
             return this;
         }
 
         public Builder capacity(@Nullable LiteTopicPartitionConfigCapacityArgs capacity) {
-            this.capacity = Input.ofNullable(capacity);
+            this.capacity = Output.ofNullable(capacity);
             return this;
         }
 
-        public Builder count(Input<Integer> count) {
+        public Builder count(Output<Integer> count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
         public Builder count(Integer count) {
-            this.count = Input.of(Objects.requireNonNull(count));
+            this.count = Output.of(Objects.requireNonNull(count));
             return this;
         }
         public LiteTopicPartitionConfigArgs build() {

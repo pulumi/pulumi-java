@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 
 import io.pulumi.azurenative.devtestlab.enums.WindowsOsState;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,18 +25,18 @@ public final class WindowsOsInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="windowsOsState")
-      private final @Nullable Input<Either<String,WindowsOsState>> windowsOsState;
+      private final @Nullable Output<Either<String,WindowsOsState>> windowsOsState;
 
-    public Input<Either<String,WindowsOsState>> getWindowsOsState() {
-        return this.windowsOsState == null ? Input.empty() : this.windowsOsState;
+    public Output<Either<String,WindowsOsState>> getWindowsOsState() {
+        return this.windowsOsState == null ? Output.empty() : this.windowsOsState;
     }
 
-    public WindowsOsInfoArgs(@Nullable Input<Either<String,WindowsOsState>> windowsOsState) {
+    public WindowsOsInfoArgs(@Nullable Output<Either<String,WindowsOsState>> windowsOsState) {
         this.windowsOsState = windowsOsState;
     }
 
     private WindowsOsInfoArgs() {
-        this.windowsOsState = Input.empty();
+        this.windowsOsState = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,7 +48,7 @@ public final class WindowsOsInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,WindowsOsState>> windowsOsState;
+        private @Nullable Output<Either<String,WindowsOsState>> windowsOsState;
 
         public Builder() {
     	      // Empty
@@ -59,13 +59,13 @@ public final class WindowsOsInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.windowsOsState = defaults.windowsOsState;
         }
 
-        public Builder windowsOsState(@Nullable Input<Either<String,WindowsOsState>> windowsOsState) {
+        public Builder windowsOsState(@Nullable Output<Either<String,WindowsOsState>> windowsOsState) {
             this.windowsOsState = windowsOsState;
             return this;
         }
 
         public Builder windowsOsState(@Nullable Either<String,WindowsOsState> windowsOsState) {
-            this.windowsOsState = Input.ofNullable(windowsOsState);
+            this.windowsOsState = Output.ofNullable(windowsOsState);
             return this;
         }
         public WindowsOsInfoArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageGetArgs;
@@ -23,9 +23,9 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageGetArgs extends io.
      * 
      */
     @InputImport(name="baseKeyUsage", required=true)
-      private final Input<CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageGetArgs> baseKeyUsage;
+      private final Output<CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageGetArgs> baseKeyUsage;
 
-    public Input<CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageGetArgs> getBaseKeyUsage() {
+    public Output<CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageGetArgs> getBaseKeyUsage() {
         return this.baseKeyUsage;
     }
 
@@ -35,9 +35,9 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageGetArgs extends io.
      * 
      */
     @InputImport(name="extendedKeyUsage", required=true)
-      private final Input<CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageGetArgs> extendedKeyUsage;
+      private final Output<CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageGetArgs> extendedKeyUsage;
 
-    public Input<CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageGetArgs> getExtendedKeyUsage() {
+    public Output<CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageGetArgs> getExtendedKeyUsage() {
         return this.extendedKeyUsage;
     }
 
@@ -47,25 +47,25 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageGetArgs extends io.
      * 
      */
     @InputImport(name="unknownExtendedKeyUsages")
-      private final @Nullable Input<List<CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsageGetArgs>> unknownExtendedKeyUsages;
+      private final @Nullable Output<List<CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsageGetArgs>> unknownExtendedKeyUsages;
 
-    public Input<List<CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsageGetArgs>> getUnknownExtendedKeyUsages() {
-        return this.unknownExtendedKeyUsages == null ? Input.empty() : this.unknownExtendedKeyUsages;
+    public Output<List<CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsageGetArgs>> getUnknownExtendedKeyUsages() {
+        return this.unknownExtendedKeyUsages == null ? Output.empty() : this.unknownExtendedKeyUsages;
     }
 
     public CaPoolIssuancePolicyBaselineValuesKeyUsageGetArgs(
-        Input<CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageGetArgs> baseKeyUsage,
-        Input<CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageGetArgs> extendedKeyUsage,
-        @Nullable Input<List<CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsageGetArgs>> unknownExtendedKeyUsages) {
+        Output<CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageGetArgs> baseKeyUsage,
+        Output<CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageGetArgs> extendedKeyUsage,
+        @Nullable Output<List<CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsageGetArgs>> unknownExtendedKeyUsages) {
         this.baseKeyUsage = Objects.requireNonNull(baseKeyUsage, "expected parameter 'baseKeyUsage' to be non-null");
         this.extendedKeyUsage = Objects.requireNonNull(extendedKeyUsage, "expected parameter 'extendedKeyUsage' to be non-null");
         this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;
     }
 
     private CaPoolIssuancePolicyBaselineValuesKeyUsageGetArgs() {
-        this.baseKeyUsage = Input.empty();
-        this.extendedKeyUsage = Input.empty();
-        this.unknownExtendedKeyUsages = Input.empty();
+        this.baseKeyUsage = Output.empty();
+        this.extendedKeyUsage = Output.empty();
+        this.unknownExtendedKeyUsages = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageGetArgs extends io.
     }
 
     public static final class Builder {
-        private Input<CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageGetArgs> baseKeyUsage;
-        private Input<CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageGetArgs> extendedKeyUsage;
-        private @Nullable Input<List<CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsageGetArgs>> unknownExtendedKeyUsages;
+        private Output<CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageGetArgs> baseKeyUsage;
+        private Output<CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageGetArgs> extendedKeyUsage;
+        private @Nullable Output<List<CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsageGetArgs>> unknownExtendedKeyUsages;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageGetArgs extends io.
     	      this.unknownExtendedKeyUsages = defaults.unknownExtendedKeyUsages;
         }
 
-        public Builder baseKeyUsage(Input<CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageGetArgs> baseKeyUsage) {
+        public Builder baseKeyUsage(Output<CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageGetArgs> baseKeyUsage) {
             this.baseKeyUsage = Objects.requireNonNull(baseKeyUsage);
             return this;
         }
 
         public Builder baseKeyUsage(CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageGetArgs baseKeyUsage) {
-            this.baseKeyUsage = Input.of(Objects.requireNonNull(baseKeyUsage));
+            this.baseKeyUsage = Output.of(Objects.requireNonNull(baseKeyUsage));
             return this;
         }
 
-        public Builder extendedKeyUsage(Input<CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageGetArgs> extendedKeyUsage) {
+        public Builder extendedKeyUsage(Output<CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageGetArgs> extendedKeyUsage) {
             this.extendedKeyUsage = Objects.requireNonNull(extendedKeyUsage);
             return this;
         }
 
         public Builder extendedKeyUsage(CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageGetArgs extendedKeyUsage) {
-            this.extendedKeyUsage = Input.of(Objects.requireNonNull(extendedKeyUsage));
+            this.extendedKeyUsage = Output.of(Objects.requireNonNull(extendedKeyUsage));
             return this;
         }
 
-        public Builder unknownExtendedKeyUsages(@Nullable Input<List<CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsageGetArgs>> unknownExtendedKeyUsages) {
+        public Builder unknownExtendedKeyUsages(@Nullable Output<List<CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsageGetArgs>> unknownExtendedKeyUsages) {
             this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;
             return this;
         }
 
         public Builder unknownExtendedKeyUsages(@Nullable List<CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsageGetArgs> unknownExtendedKeyUsages) {
-            this.unknownExtendedKeyUsages = Input.ofNullable(unknownExtendedKeyUsages);
+            this.unknownExtendedKeyUsages = Output.ofNullable(unknownExtendedKeyUsages);
             return this;
         }
         public CaPoolIssuancePolicyBaselineValuesKeyUsageGetArgs build() {

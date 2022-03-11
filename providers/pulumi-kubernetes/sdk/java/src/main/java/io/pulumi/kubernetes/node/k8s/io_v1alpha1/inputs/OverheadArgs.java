@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.node.k8s.io_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -24,18 +24,18 @@ public final class OverheadArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="podFixed")
-      private final @Nullable Input<Map<String,String>> podFixed;
+      private final @Nullable Output<Map<String,String>> podFixed;
 
-    public Input<Map<String,String>> getPodFixed() {
-        return this.podFixed == null ? Input.empty() : this.podFixed;
+    public Output<Map<String,String>> getPodFixed() {
+        return this.podFixed == null ? Output.empty() : this.podFixed;
     }
 
-    public OverheadArgs(@Nullable Input<Map<String,String>> podFixed) {
+    public OverheadArgs(@Nullable Output<Map<String,String>> podFixed) {
         this.podFixed = podFixed;
     }
 
     private OverheadArgs() {
-        this.podFixed = Input.empty();
+        this.podFixed = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class OverheadArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> podFixed;
+        private @Nullable Output<Map<String,String>> podFixed;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class OverheadArgs extends io.pulumi.resources.ResourceArgs {
     	      this.podFixed = defaults.podFixed;
         }
 
-        public Builder podFixed(@Nullable Input<Map<String,String>> podFixed) {
+        public Builder podFixed(@Nullable Output<Map<String,String>> podFixed) {
             this.podFixed = podFixed;
             return this;
         }
 
         public Builder podFixed(@Nullable Map<String,String> podFixed) {
-            this.podFixed = Input.ofNullable(podFixed);
+            this.podFixed = Output.ofNullable(podFixed);
             return this;
         }
         public OverheadArgs build() {

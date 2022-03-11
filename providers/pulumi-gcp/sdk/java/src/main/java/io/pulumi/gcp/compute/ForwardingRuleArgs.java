@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -28,10 +28,10 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allPorts")
-      private final @Nullable Input<Boolean> allPorts;
+      private final @Nullable Output<Boolean> allPorts;
 
-    public Input<Boolean> getAllPorts() {
-        return this.allPorts == null ? Input.empty() : this.allPorts;
+    public Output<Boolean> getAllPorts() {
+        return this.allPorts == null ? Output.empty() : this.allPorts;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowGlobalAccess")
-      private final @Nullable Input<Boolean> allowGlobalAccess;
+      private final @Nullable Output<Boolean> allowGlobalAccess;
 
-    public Input<Boolean> getAllowGlobalAccess() {
-        return this.allowGlobalAccess == null ? Input.empty() : this.allowGlobalAccess;
+    public Output<Boolean> getAllowGlobalAccess() {
+        return this.allowGlobalAccess == null ? Output.empty() : this.allowGlobalAccess;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backendService")
-      private final @Nullable Input<String> backendService;
+      private final @Nullable Output<String> backendService;
 
-    public Input<String> getBackendService() {
-        return this.backendService == null ? Input.empty() : this.backendService;
+    public Output<String> getBackendService() {
+        return this.backendService == null ? Output.empty() : this.backendService;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAddress")
-      private final @Nullable Input<String> ipAddress;
+      private final @Nullable Output<String> ipAddress;
 
-    public Input<String> getIpAddress() {
-        return this.ipAddress == null ? Input.empty() : this.ipAddress;
+    public Output<String> getIpAddress() {
+        return this.ipAddress == null ? Output.empty() : this.ipAddress;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipProtocol")
-      private final @Nullable Input<String> ipProtocol;
+      private final @Nullable Output<String> ipProtocol;
 
-    public Input<String> getIpProtocol() {
-        return this.ipProtocol == null ? Input.empty() : this.ipProtocol;
+    public Output<String> getIpProtocol() {
+        return this.ipProtocol == null ? Output.empty() : this.ipProtocol;
     }
 
     /**
@@ -117,10 +117,10 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isMirroringCollector")
-      private final @Nullable Input<Boolean> isMirroringCollector;
+      private final @Nullable Output<Boolean> isMirroringCollector;
 
-    public Input<Boolean> getIsMirroringCollector() {
-        return this.isMirroringCollector == null ? Input.empty() : this.isMirroringCollector;
+    public Output<Boolean> getIsMirroringCollector() {
+        return this.isMirroringCollector == null ? Output.empty() : this.isMirroringCollector;
     }
 
     /**
@@ -128,10 +128,10 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -148,10 +148,10 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loadBalancingScheme")
-      private final @Nullable Input<String> loadBalancingScheme;
+      private final @Nullable Output<String> loadBalancingScheme;
 
-    public Input<String> getLoadBalancingScheme() {
-        return this.loadBalancingScheme == null ? Input.empty() : this.loadBalancingScheme;
+    public Output<String> getLoadBalancingScheme() {
+        return this.loadBalancingScheme == null ? Output.empty() : this.loadBalancingScheme;
     }
 
     /**
@@ -165,10 +165,10 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -179,10 +179,10 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-      private final @Nullable Input<String> network;
+      private final @Nullable Output<String> network;
 
-    public Input<String> getNetwork() {
-        return this.network == null ? Input.empty() : this.network;
+    public Output<String> getNetwork() {
+        return this.network == null ? Output.empty() : this.network;
     }
 
     /**
@@ -192,10 +192,10 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkTier")
-      private final @Nullable Input<String> networkTier;
+      private final @Nullable Output<String> networkTier;
 
-    public Input<String> getNetworkTier() {
-        return this.networkTier == null ? Input.empty() : this.networkTier;
+    public Output<String> getNetworkTier() {
+        return this.networkTier == null ? Output.empty() : this.networkTier;
     }
 
     /**
@@ -218,10 +218,10 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="portRange")
-      private final @Nullable Input<String> portRange;
+      private final @Nullable Output<String> portRange;
 
-    public Input<String> getPortRange() {
-        return this.portRange == null ? Input.empty() : this.portRange;
+    public Output<String> getPortRange() {
+        return this.portRange == null ? Output.empty() : this.portRange;
     }
 
     /**
@@ -237,10 +237,10 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ports")
-      private final @Nullable Input<List<String>> ports;
+      private final @Nullable Output<List<String>> ports;
 
-    public Input<List<String>> getPorts() {
-        return this.ports == null ? Input.empty() : this.ports;
+    public Output<List<String>> getPorts() {
+        return this.ports == null ? Output.empty() : this.ports;
     }
 
     /**
@@ -249,10 +249,10 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -261,10 +261,10 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -281,10 +281,10 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceLabel")
-      private final @Nullable Input<String> serviceLabel;
+      private final @Nullable Output<String> serviceLabel;
 
-    public Input<String> getServiceLabel() {
-        return this.serviceLabel == null ? Input.empty() : this.serviceLabel;
+    public Output<String> getServiceLabel() {
+        return this.serviceLabel == null ? Output.empty() : this.serviceLabel;
     }
 
     /**
@@ -296,10 +296,10 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetwork")
-      private final @Nullable Input<String> subnetwork;
+      private final @Nullable Output<String> subnetwork;
 
-    public Input<String> getSubnetwork() {
-        return this.subnetwork == null ? Input.empty() : this.subnetwork;
+    public Output<String> getSubnetwork() {
+        return this.subnetwork == null ? Output.empty() : this.subnetwork;
     }
 
     /**
@@ -310,32 +310,32 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="target")
-      private final @Nullable Input<String> target;
+      private final @Nullable Output<String> target;
 
-    public Input<String> getTarget() {
-        return this.target == null ? Input.empty() : this.target;
+    public Output<String> getTarget() {
+        return this.target == null ? Output.empty() : this.target;
     }
 
     public ForwardingRuleArgs(
-        @Nullable Input<Boolean> allPorts,
-        @Nullable Input<Boolean> allowGlobalAccess,
-        @Nullable Input<String> backendService,
-        @Nullable Input<String> description,
-        @Nullable Input<String> ipAddress,
-        @Nullable Input<String> ipProtocol,
-        @Nullable Input<Boolean> isMirroringCollector,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> loadBalancingScheme,
-        @Nullable Input<String> name,
-        @Nullable Input<String> network,
-        @Nullable Input<String> networkTier,
-        @Nullable Input<String> portRange,
-        @Nullable Input<List<String>> ports,
-        @Nullable Input<String> project,
-        @Nullable Input<String> region,
-        @Nullable Input<String> serviceLabel,
-        @Nullable Input<String> subnetwork,
-        @Nullable Input<String> target) {
+        @Nullable Output<Boolean> allPorts,
+        @Nullable Output<Boolean> allowGlobalAccess,
+        @Nullable Output<String> backendService,
+        @Nullable Output<String> description,
+        @Nullable Output<String> ipAddress,
+        @Nullable Output<String> ipProtocol,
+        @Nullable Output<Boolean> isMirroringCollector,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> loadBalancingScheme,
+        @Nullable Output<String> name,
+        @Nullable Output<String> network,
+        @Nullable Output<String> networkTier,
+        @Nullable Output<String> portRange,
+        @Nullable Output<List<String>> ports,
+        @Nullable Output<String> project,
+        @Nullable Output<String> region,
+        @Nullable Output<String> serviceLabel,
+        @Nullable Output<String> subnetwork,
+        @Nullable Output<String> target) {
         this.allPorts = allPorts;
         this.allowGlobalAccess = allowGlobalAccess;
         this.backendService = backendService;
@@ -358,25 +358,25 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ForwardingRuleArgs() {
-        this.allPorts = Input.empty();
-        this.allowGlobalAccess = Input.empty();
-        this.backendService = Input.empty();
-        this.description = Input.empty();
-        this.ipAddress = Input.empty();
-        this.ipProtocol = Input.empty();
-        this.isMirroringCollector = Input.empty();
-        this.labels = Input.empty();
-        this.loadBalancingScheme = Input.empty();
-        this.name = Input.empty();
-        this.network = Input.empty();
-        this.networkTier = Input.empty();
-        this.portRange = Input.empty();
-        this.ports = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
-        this.serviceLabel = Input.empty();
-        this.subnetwork = Input.empty();
-        this.target = Input.empty();
+        this.allPorts = Output.empty();
+        this.allowGlobalAccess = Output.empty();
+        this.backendService = Output.empty();
+        this.description = Output.empty();
+        this.ipAddress = Output.empty();
+        this.ipProtocol = Output.empty();
+        this.isMirroringCollector = Output.empty();
+        this.labels = Output.empty();
+        this.loadBalancingScheme = Output.empty();
+        this.name = Output.empty();
+        this.network = Output.empty();
+        this.networkTier = Output.empty();
+        this.portRange = Output.empty();
+        this.ports = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
+        this.serviceLabel = Output.empty();
+        this.subnetwork = Output.empty();
+        this.target = Output.empty();
     }
 
     public static Builder builder() {
@@ -388,25 +388,25 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allPorts;
-        private @Nullable Input<Boolean> allowGlobalAccess;
-        private @Nullable Input<String> backendService;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> ipAddress;
-        private @Nullable Input<String> ipProtocol;
-        private @Nullable Input<Boolean> isMirroringCollector;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> loadBalancingScheme;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> network;
-        private @Nullable Input<String> networkTier;
-        private @Nullable Input<String> portRange;
-        private @Nullable Input<List<String>> ports;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> region;
-        private @Nullable Input<String> serviceLabel;
-        private @Nullable Input<String> subnetwork;
-        private @Nullable Input<String> target;
+        private @Nullable Output<Boolean> allPorts;
+        private @Nullable Output<Boolean> allowGlobalAccess;
+        private @Nullable Output<String> backendService;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> ipAddress;
+        private @Nullable Output<String> ipProtocol;
+        private @Nullable Output<Boolean> isMirroringCollector;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> loadBalancingScheme;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> network;
+        private @Nullable Output<String> networkTier;
+        private @Nullable Output<String> portRange;
+        private @Nullable Output<List<String>> ports;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> region;
+        private @Nullable Output<String> serviceLabel;
+        private @Nullable Output<String> subnetwork;
+        private @Nullable Output<String> target;
 
         public Builder() {
     	      // Empty
@@ -435,193 +435,193 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.target = defaults.target;
         }
 
-        public Builder allPorts(@Nullable Input<Boolean> allPorts) {
+        public Builder allPorts(@Nullable Output<Boolean> allPorts) {
             this.allPorts = allPorts;
             return this;
         }
 
         public Builder allPorts(@Nullable Boolean allPorts) {
-            this.allPorts = Input.ofNullable(allPorts);
+            this.allPorts = Output.ofNullable(allPorts);
             return this;
         }
 
-        public Builder allowGlobalAccess(@Nullable Input<Boolean> allowGlobalAccess) {
+        public Builder allowGlobalAccess(@Nullable Output<Boolean> allowGlobalAccess) {
             this.allowGlobalAccess = allowGlobalAccess;
             return this;
         }
 
         public Builder allowGlobalAccess(@Nullable Boolean allowGlobalAccess) {
-            this.allowGlobalAccess = Input.ofNullable(allowGlobalAccess);
+            this.allowGlobalAccess = Output.ofNullable(allowGlobalAccess);
             return this;
         }
 
-        public Builder backendService(@Nullable Input<String> backendService) {
+        public Builder backendService(@Nullable Output<String> backendService) {
             this.backendService = backendService;
             return this;
         }
 
         public Builder backendService(@Nullable String backendService) {
-            this.backendService = Input.ofNullable(backendService);
+            this.backendService = Output.ofNullable(backendService);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder ipAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Input.ofNullable(ipAddress);
+            this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
 
-        public Builder ipProtocol(@Nullable Input<String> ipProtocol) {
+        public Builder ipProtocol(@Nullable Output<String> ipProtocol) {
             this.ipProtocol = ipProtocol;
             return this;
         }
 
         public Builder ipProtocol(@Nullable String ipProtocol) {
-            this.ipProtocol = Input.ofNullable(ipProtocol);
+            this.ipProtocol = Output.ofNullable(ipProtocol);
             return this;
         }
 
-        public Builder isMirroringCollector(@Nullable Input<Boolean> isMirroringCollector) {
+        public Builder isMirroringCollector(@Nullable Output<Boolean> isMirroringCollector) {
             this.isMirroringCollector = isMirroringCollector;
             return this;
         }
 
         public Builder isMirroringCollector(@Nullable Boolean isMirroringCollector) {
-            this.isMirroringCollector = Input.ofNullable(isMirroringCollector);
+            this.isMirroringCollector = Output.ofNullable(isMirroringCollector);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder loadBalancingScheme(@Nullable Input<String> loadBalancingScheme) {
+        public Builder loadBalancingScheme(@Nullable Output<String> loadBalancingScheme) {
             this.loadBalancingScheme = loadBalancingScheme;
             return this;
         }
 
         public Builder loadBalancingScheme(@Nullable String loadBalancingScheme) {
-            this.loadBalancingScheme = Input.ofNullable(loadBalancingScheme);
+            this.loadBalancingScheme = Output.ofNullable(loadBalancingScheme);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder network(@Nullable Input<String> network) {
+        public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
 
         public Builder network(@Nullable String network) {
-            this.network = Input.ofNullable(network);
+            this.network = Output.ofNullable(network);
             return this;
         }
 
-        public Builder networkTier(@Nullable Input<String> networkTier) {
+        public Builder networkTier(@Nullable Output<String> networkTier) {
             this.networkTier = networkTier;
             return this;
         }
 
         public Builder networkTier(@Nullable String networkTier) {
-            this.networkTier = Input.ofNullable(networkTier);
+            this.networkTier = Output.ofNullable(networkTier);
             return this;
         }
 
-        public Builder portRange(@Nullable Input<String> portRange) {
+        public Builder portRange(@Nullable Output<String> portRange) {
             this.portRange = portRange;
             return this;
         }
 
         public Builder portRange(@Nullable String portRange) {
-            this.portRange = Input.ofNullable(portRange);
+            this.portRange = Output.ofNullable(portRange);
             return this;
         }
 
-        public Builder ports(@Nullable Input<List<String>> ports) {
+        public Builder ports(@Nullable Output<List<String>> ports) {
             this.ports = ports;
             return this;
         }
 
         public Builder ports(@Nullable List<String> ports) {
-            this.ports = Input.ofNullable(ports);
+            this.ports = Output.ofNullable(ports);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder serviceLabel(@Nullable Input<String> serviceLabel) {
+        public Builder serviceLabel(@Nullable Output<String> serviceLabel) {
             this.serviceLabel = serviceLabel;
             return this;
         }
 
         public Builder serviceLabel(@Nullable String serviceLabel) {
-            this.serviceLabel = Input.ofNullable(serviceLabel);
+            this.serviceLabel = Output.ofNullable(serviceLabel);
             return this;
         }
 
-        public Builder subnetwork(@Nullable Input<String> subnetwork) {
+        public Builder subnetwork(@Nullable Output<String> subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
 
         public Builder subnetwork(@Nullable String subnetwork) {
-            this.subnetwork = Input.ofNullable(subnetwork);
+            this.subnetwork = Output.ofNullable(subnetwork);
             return this;
         }
 
-        public Builder target(@Nullable Input<String> target) {
+        public Builder target(@Nullable Output<String> target) {
             this.target = target;
             return this;
         }
 
         public Builder target(@Nullable String target) {
-            this.target = Input.ofNullable(target);
+            this.target = Output.ofNullable(target);
             return this;
         }
         public ForwardingRuleArgs build() {

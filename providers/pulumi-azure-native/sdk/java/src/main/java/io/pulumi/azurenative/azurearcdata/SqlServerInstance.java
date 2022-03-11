@@ -8,7 +8,6 @@ import io.pulumi.azurenative.azurearcdata.SqlServerInstanceArgs;
 import io.pulumi.azurenative.azurearcdata.outputs.SqlServerInstancePropertiesResponse;
 import io.pulumi.azurenative.azurearcdata.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -157,21 +156,21 @@ public class SqlServerInstance extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SqlServerInstance(String name, SqlServerInstanceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:azurearcdata:SqlServerInstance", name, args == null ? SqlServerInstanceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:azurearcdata:SqlServerInstance", name, args == null ? SqlServerInstanceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private SqlServerInstance(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private SqlServerInstance(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:azurearcdata:SqlServerInstance", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:azurearcdata/v20210601preview:SqlServerInstance").build()),
-                Input.of(Alias.builder().setType("azure-native:azurearcdata/v20210701preview:SqlServerInstance").build()),
-                Input.of(Alias.builder().setType("azure-native:azurearcdata/v20210801:SqlServerInstance").build()),
-                Input.of(Alias.builder().setType("azure-native:azurearcdata/v20211101:SqlServerInstance").build())
+                Output.of(Alias.builder().setType("azure-native:azurearcdata/v20210601preview:SqlServerInstance").build()),
+                Output.of(Alias.builder().setType("azure-native:azurearcdata/v20210701preview:SqlServerInstance").build()),
+                Output.of(Alias.builder().setType("azure-native:azurearcdata/v20210801:SqlServerInstance").build()),
+                Output.of(Alias.builder().setType("azure-native:azurearcdata/v20211101:SqlServerInstance").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -185,7 +184,7 @@ public class SqlServerInstance extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SqlServerInstance get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static SqlServerInstance get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SqlServerInstance(name, id, options);
     }
 }

@@ -12,7 +12,7 @@ import io.pulumi.awsnative.cloudformation.inputs.StackSetOperationPreferencesArg
 import io.pulumi.awsnative.cloudformation.inputs.StackSetParameterArgs;
 import io.pulumi.awsnative.cloudformation.inputs.StackSetStackInstancesArgs;
 import io.pulumi.awsnative.cloudformation.inputs.StackSetTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -29,10 +29,10 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="administrationRoleARN")
-      private final @Nullable Input<String> administrationRoleARN;
+      private final @Nullable Output<String> administrationRoleARN;
 
-    public Input<String> getAdministrationRoleARN() {
-        return this.administrationRoleARN == null ? Input.empty() : this.administrationRoleARN;
+    public Output<String> getAdministrationRoleARN() {
+        return this.administrationRoleARN == null ? Output.empty() : this.administrationRoleARN;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoDeployment")
-      private final @Nullable Input<StackSetAutoDeploymentArgs> autoDeployment;
+      private final @Nullable Output<StackSetAutoDeploymentArgs> autoDeployment;
 
-    public Input<StackSetAutoDeploymentArgs> getAutoDeployment() {
-        return this.autoDeployment == null ? Input.empty() : this.autoDeployment;
+    public Output<StackSetAutoDeploymentArgs> getAutoDeployment() {
+        return this.autoDeployment == null ? Output.empty() : this.autoDeployment;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="callAs")
-      private final @Nullable Input<StackSetCallAs> callAs;
+      private final @Nullable Output<StackSetCallAs> callAs;
 
-    public Input<StackSetCallAs> getCallAs() {
-        return this.callAs == null ? Input.empty() : this.callAs;
+    public Output<StackSetCallAs> getCallAs() {
+        return this.callAs == null ? Output.empty() : this.callAs;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capabilities")
-      private final @Nullable Input<List<StackSetCapability>> capabilities;
+      private final @Nullable Output<List<StackSetCapability>> capabilities;
 
-    public Input<List<StackSetCapability>> getCapabilities() {
-        return this.capabilities == null ? Input.empty() : this.capabilities;
+    public Output<List<StackSetCapability>> getCapabilities() {
+        return this.capabilities == null ? Output.empty() : this.capabilities;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="executionRoleName")
-      private final @Nullable Input<String> executionRoleName;
+      private final @Nullable Output<String> executionRoleName;
 
-    public Input<String> getExecutionRoleName() {
-        return this.executionRoleName == null ? Input.empty() : this.executionRoleName;
+    public Output<String> getExecutionRoleName() {
+        return this.executionRoleName == null ? Output.empty() : this.executionRoleName;
     }
 
     /**
@@ -95,17 +95,17 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedExecution")
-      private final @Nullable Input<ManagedExecutionPropertiesArgs> managedExecution;
+      private final @Nullable Output<ManagedExecutionPropertiesArgs> managedExecution;
 
-    public Input<ManagedExecutionPropertiesArgs> getManagedExecution() {
-        return this.managedExecution == null ? Input.empty() : this.managedExecution;
+    public Output<ManagedExecutionPropertiesArgs> getManagedExecution() {
+        return this.managedExecution == null ? Output.empty() : this.managedExecution;
     }
 
     @InputImport(name="operationPreferences")
-      private final @Nullable Input<StackSetOperationPreferencesArgs> operationPreferences;
+      private final @Nullable Output<StackSetOperationPreferencesArgs> operationPreferences;
 
-    public Input<StackSetOperationPreferencesArgs> getOperationPreferences() {
-        return this.operationPreferences == null ? Input.empty() : this.operationPreferences;
+    public Output<StackSetOperationPreferencesArgs> getOperationPreferences() {
+        return this.operationPreferences == null ? Output.empty() : this.operationPreferences;
     }
 
     /**
@@ -113,10 +113,10 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<List<StackSetParameterArgs>> parameters;
+      private final @Nullable Output<List<StackSetParameterArgs>> parameters;
 
-    public Input<List<StackSetParameterArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<List<StackSetParameterArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -124,9 +124,9 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permissionModel", required=true)
-      private final Input<StackSetPermissionModel> permissionModel;
+      private final Output<StackSetPermissionModel> permissionModel;
 
-    public Input<StackSetPermissionModel> getPermissionModel() {
+    public Output<StackSetPermissionModel> getPermissionModel() {
         return this.permissionModel;
     }
 
@@ -135,10 +135,10 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stackInstancesGroup")
-      private final @Nullable Input<List<StackSetStackInstancesArgs>> stackInstancesGroup;
+      private final @Nullable Output<List<StackSetStackInstancesArgs>> stackInstancesGroup;
 
-    public Input<List<StackSetStackInstancesArgs>> getStackInstancesGroup() {
-        return this.stackInstancesGroup == null ? Input.empty() : this.stackInstancesGroup;
+    public Output<List<StackSetStackInstancesArgs>> getStackInstancesGroup() {
+        return this.stackInstancesGroup == null ? Output.empty() : this.stackInstancesGroup;
     }
 
     /**
@@ -146,10 +146,10 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stackSetName")
-      private final @Nullable Input<String> stackSetName;
+      private final @Nullable Output<String> stackSetName;
 
-    public Input<String> getStackSetName() {
-        return this.stackSetName == null ? Input.empty() : this.stackSetName;
+    public Output<String> getStackSetName() {
+        return this.stackSetName == null ? Output.empty() : this.stackSetName;
     }
 
     /**
@@ -157,10 +157,10 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<StackSetTagArgs>> tags;
+      private final @Nullable Output<List<StackSetTagArgs>> tags;
 
-    public Input<List<StackSetTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<StackSetTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -168,10 +168,10 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="templateBody")
-      private final @Nullable Input<String> templateBody;
+      private final @Nullable Output<String> templateBody;
 
-    public Input<String> getTemplateBody() {
-        return this.templateBody == null ? Input.empty() : this.templateBody;
+    public Output<String> getTemplateBody() {
+        return this.templateBody == null ? Output.empty() : this.templateBody;
     }
 
     /**
@@ -179,28 +179,28 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="templateURL")
-      private final @Nullable Input<String> templateURL;
+      private final @Nullable Output<String> templateURL;
 
-    public Input<String> getTemplateURL() {
-        return this.templateURL == null ? Input.empty() : this.templateURL;
+    public Output<String> getTemplateURL() {
+        return this.templateURL == null ? Output.empty() : this.templateURL;
     }
 
     public StackSetArgs(
-        @Nullable Input<String> administrationRoleARN,
-        @Nullable Input<StackSetAutoDeploymentArgs> autoDeployment,
-        @Nullable Input<StackSetCallAs> callAs,
-        @Nullable Input<List<StackSetCapability>> capabilities,
-        @Nullable Input<String> description,
-        @Nullable Input<String> executionRoleName,
-        @Nullable Input<ManagedExecutionPropertiesArgs> managedExecution,
-        @Nullable Input<StackSetOperationPreferencesArgs> operationPreferences,
-        @Nullable Input<List<StackSetParameterArgs>> parameters,
-        Input<StackSetPermissionModel> permissionModel,
-        @Nullable Input<List<StackSetStackInstancesArgs>> stackInstancesGroup,
-        @Nullable Input<String> stackSetName,
-        @Nullable Input<List<StackSetTagArgs>> tags,
-        @Nullable Input<String> templateBody,
-        @Nullable Input<String> templateURL) {
+        @Nullable Output<String> administrationRoleARN,
+        @Nullable Output<StackSetAutoDeploymentArgs> autoDeployment,
+        @Nullable Output<StackSetCallAs> callAs,
+        @Nullable Output<List<StackSetCapability>> capabilities,
+        @Nullable Output<String> description,
+        @Nullable Output<String> executionRoleName,
+        @Nullable Output<ManagedExecutionPropertiesArgs> managedExecution,
+        @Nullable Output<StackSetOperationPreferencesArgs> operationPreferences,
+        @Nullable Output<List<StackSetParameterArgs>> parameters,
+        Output<StackSetPermissionModel> permissionModel,
+        @Nullable Output<List<StackSetStackInstancesArgs>> stackInstancesGroup,
+        @Nullable Output<String> stackSetName,
+        @Nullable Output<List<StackSetTagArgs>> tags,
+        @Nullable Output<String> templateBody,
+        @Nullable Output<String> templateURL) {
         this.administrationRoleARN = administrationRoleARN;
         this.autoDeployment = autoDeployment;
         this.callAs = callAs;
@@ -219,21 +219,21 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StackSetArgs() {
-        this.administrationRoleARN = Input.empty();
-        this.autoDeployment = Input.empty();
-        this.callAs = Input.empty();
-        this.capabilities = Input.empty();
-        this.description = Input.empty();
-        this.executionRoleName = Input.empty();
-        this.managedExecution = Input.empty();
-        this.operationPreferences = Input.empty();
-        this.parameters = Input.empty();
-        this.permissionModel = Input.empty();
-        this.stackInstancesGroup = Input.empty();
-        this.stackSetName = Input.empty();
-        this.tags = Input.empty();
-        this.templateBody = Input.empty();
-        this.templateURL = Input.empty();
+        this.administrationRoleARN = Output.empty();
+        this.autoDeployment = Output.empty();
+        this.callAs = Output.empty();
+        this.capabilities = Output.empty();
+        this.description = Output.empty();
+        this.executionRoleName = Output.empty();
+        this.managedExecution = Output.empty();
+        this.operationPreferences = Output.empty();
+        this.parameters = Output.empty();
+        this.permissionModel = Output.empty();
+        this.stackInstancesGroup = Output.empty();
+        this.stackSetName = Output.empty();
+        this.tags = Output.empty();
+        this.templateBody = Output.empty();
+        this.templateURL = Output.empty();
     }
 
     public static Builder builder() {
@@ -245,21 +245,21 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> administrationRoleARN;
-        private @Nullable Input<StackSetAutoDeploymentArgs> autoDeployment;
-        private @Nullable Input<StackSetCallAs> callAs;
-        private @Nullable Input<List<StackSetCapability>> capabilities;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> executionRoleName;
-        private @Nullable Input<ManagedExecutionPropertiesArgs> managedExecution;
-        private @Nullable Input<StackSetOperationPreferencesArgs> operationPreferences;
-        private @Nullable Input<List<StackSetParameterArgs>> parameters;
-        private Input<StackSetPermissionModel> permissionModel;
-        private @Nullable Input<List<StackSetStackInstancesArgs>> stackInstancesGroup;
-        private @Nullable Input<String> stackSetName;
-        private @Nullable Input<List<StackSetTagArgs>> tags;
-        private @Nullable Input<String> templateBody;
-        private @Nullable Input<String> templateURL;
+        private @Nullable Output<String> administrationRoleARN;
+        private @Nullable Output<StackSetAutoDeploymentArgs> autoDeployment;
+        private @Nullable Output<StackSetCallAs> callAs;
+        private @Nullable Output<List<StackSetCapability>> capabilities;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> executionRoleName;
+        private @Nullable Output<ManagedExecutionPropertiesArgs> managedExecution;
+        private @Nullable Output<StackSetOperationPreferencesArgs> operationPreferences;
+        private @Nullable Output<List<StackSetParameterArgs>> parameters;
+        private Output<StackSetPermissionModel> permissionModel;
+        private @Nullable Output<List<StackSetStackInstancesArgs>> stackInstancesGroup;
+        private @Nullable Output<String> stackSetName;
+        private @Nullable Output<List<StackSetTagArgs>> tags;
+        private @Nullable Output<String> templateBody;
+        private @Nullable Output<String> templateURL;
 
         public Builder() {
     	      // Empty
@@ -284,153 +284,153 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.templateURL = defaults.templateURL;
         }
 
-        public Builder administrationRoleARN(@Nullable Input<String> administrationRoleARN) {
+        public Builder administrationRoleARN(@Nullable Output<String> administrationRoleARN) {
             this.administrationRoleARN = administrationRoleARN;
             return this;
         }
 
         public Builder administrationRoleARN(@Nullable String administrationRoleARN) {
-            this.administrationRoleARN = Input.ofNullable(administrationRoleARN);
+            this.administrationRoleARN = Output.ofNullable(administrationRoleARN);
             return this;
         }
 
-        public Builder autoDeployment(@Nullable Input<StackSetAutoDeploymentArgs> autoDeployment) {
+        public Builder autoDeployment(@Nullable Output<StackSetAutoDeploymentArgs> autoDeployment) {
             this.autoDeployment = autoDeployment;
             return this;
         }
 
         public Builder autoDeployment(@Nullable StackSetAutoDeploymentArgs autoDeployment) {
-            this.autoDeployment = Input.ofNullable(autoDeployment);
+            this.autoDeployment = Output.ofNullable(autoDeployment);
             return this;
         }
 
-        public Builder callAs(@Nullable Input<StackSetCallAs> callAs) {
+        public Builder callAs(@Nullable Output<StackSetCallAs> callAs) {
             this.callAs = callAs;
             return this;
         }
 
         public Builder callAs(@Nullable StackSetCallAs callAs) {
-            this.callAs = Input.ofNullable(callAs);
+            this.callAs = Output.ofNullable(callAs);
             return this;
         }
 
-        public Builder capabilities(@Nullable Input<List<StackSetCapability>> capabilities) {
+        public Builder capabilities(@Nullable Output<List<StackSetCapability>> capabilities) {
             this.capabilities = capabilities;
             return this;
         }
 
         public Builder capabilities(@Nullable List<StackSetCapability> capabilities) {
-            this.capabilities = Input.ofNullable(capabilities);
+            this.capabilities = Output.ofNullable(capabilities);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder executionRoleName(@Nullable Input<String> executionRoleName) {
+        public Builder executionRoleName(@Nullable Output<String> executionRoleName) {
             this.executionRoleName = executionRoleName;
             return this;
         }
 
         public Builder executionRoleName(@Nullable String executionRoleName) {
-            this.executionRoleName = Input.ofNullable(executionRoleName);
+            this.executionRoleName = Output.ofNullable(executionRoleName);
             return this;
         }
 
-        public Builder managedExecution(@Nullable Input<ManagedExecutionPropertiesArgs> managedExecution) {
+        public Builder managedExecution(@Nullable Output<ManagedExecutionPropertiesArgs> managedExecution) {
             this.managedExecution = managedExecution;
             return this;
         }
 
         public Builder managedExecution(@Nullable ManagedExecutionPropertiesArgs managedExecution) {
-            this.managedExecution = Input.ofNullable(managedExecution);
+            this.managedExecution = Output.ofNullable(managedExecution);
             return this;
         }
 
-        public Builder operationPreferences(@Nullable Input<StackSetOperationPreferencesArgs> operationPreferences) {
+        public Builder operationPreferences(@Nullable Output<StackSetOperationPreferencesArgs> operationPreferences) {
             this.operationPreferences = operationPreferences;
             return this;
         }
 
         public Builder operationPreferences(@Nullable StackSetOperationPreferencesArgs operationPreferences) {
-            this.operationPreferences = Input.ofNullable(operationPreferences);
+            this.operationPreferences = Output.ofNullable(operationPreferences);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<List<StackSetParameterArgs>> parameters) {
+        public Builder parameters(@Nullable Output<List<StackSetParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable List<StackSetParameterArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder permissionModel(Input<StackSetPermissionModel> permissionModel) {
+        public Builder permissionModel(Output<StackSetPermissionModel> permissionModel) {
             this.permissionModel = Objects.requireNonNull(permissionModel);
             return this;
         }
 
         public Builder permissionModel(StackSetPermissionModel permissionModel) {
-            this.permissionModel = Input.of(Objects.requireNonNull(permissionModel));
+            this.permissionModel = Output.of(Objects.requireNonNull(permissionModel));
             return this;
         }
 
-        public Builder stackInstancesGroup(@Nullable Input<List<StackSetStackInstancesArgs>> stackInstancesGroup) {
+        public Builder stackInstancesGroup(@Nullable Output<List<StackSetStackInstancesArgs>> stackInstancesGroup) {
             this.stackInstancesGroup = stackInstancesGroup;
             return this;
         }
 
         public Builder stackInstancesGroup(@Nullable List<StackSetStackInstancesArgs> stackInstancesGroup) {
-            this.stackInstancesGroup = Input.ofNullable(stackInstancesGroup);
+            this.stackInstancesGroup = Output.ofNullable(stackInstancesGroup);
             return this;
         }
 
-        public Builder stackSetName(@Nullable Input<String> stackSetName) {
+        public Builder stackSetName(@Nullable Output<String> stackSetName) {
             this.stackSetName = stackSetName;
             return this;
         }
 
         public Builder stackSetName(@Nullable String stackSetName) {
-            this.stackSetName = Input.ofNullable(stackSetName);
+            this.stackSetName = Output.ofNullable(stackSetName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<StackSetTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<StackSetTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<StackSetTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder templateBody(@Nullable Input<String> templateBody) {
+        public Builder templateBody(@Nullable Output<String> templateBody) {
             this.templateBody = templateBody;
             return this;
         }
 
         public Builder templateBody(@Nullable String templateBody) {
-            this.templateBody = Input.ofNullable(templateBody);
+            this.templateBody = Output.ofNullable(templateBody);
             return this;
         }
 
-        public Builder templateURL(@Nullable Input<String> templateURL) {
+        public Builder templateURL(@Nullable Output<String> templateURL) {
             this.templateURL = templateURL;
             return this;
         }
 
         public Builder templateURL(@Nullable String templateURL) {
-            this.templateURL = Input.ofNullable(templateURL);
+            this.templateURL = Output.ofNullable(templateURL);
             return this;
         }
         public StackSetArgs build() {

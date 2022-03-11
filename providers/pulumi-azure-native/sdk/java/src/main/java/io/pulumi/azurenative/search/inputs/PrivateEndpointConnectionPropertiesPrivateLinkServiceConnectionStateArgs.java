@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.search.inputs;
 
 import io.pulumi.azurenative.search.enums.PrivateLinkServiceConnectionStatus;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class PrivateEndpointConnectionPropertiesPrivateLinkServiceConnecti
      * 
      */
     @InputImport(name="actionsRequired")
-      private final @Nullable Input<String> actionsRequired;
+      private final @Nullable Output<String> actionsRequired;
 
-    public Input<String> getActionsRequired() {
-        return this.actionsRequired == null ? Input.empty() : this.actionsRequired;
+    public Output<String> getActionsRequired() {
+        return this.actionsRequired == null ? Output.empty() : this.actionsRequired;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PrivateEndpointConnectionPropertiesPrivateLinkServiceConnecti
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class PrivateEndpointConnectionPropertiesPrivateLinkServiceConnecti
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<PrivateLinkServiceConnectionStatus> status;
+      private final @Nullable Output<PrivateLinkServiceConnectionStatus> status;
 
-    public Input<PrivateLinkServiceConnectionStatus> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<PrivateLinkServiceConnectionStatus> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     public PrivateEndpointConnectionPropertiesPrivateLinkServiceConnectionStateArgs(
-        @Nullable Input<String> actionsRequired,
-        @Nullable Input<String> description,
-        @Nullable Input<PrivateLinkServiceConnectionStatus> status) {
-        this.actionsRequired = actionsRequired == null ? Input.ofNullable("None") : actionsRequired;
+        @Nullable Output<String> actionsRequired,
+        @Nullable Output<String> description,
+        @Nullable Output<PrivateLinkServiceConnectionStatus> status) {
+        this.actionsRequired = actionsRequired == null ? Output.ofNullable("None") : actionsRequired;
         this.description = description;
         this.status = status;
     }
 
     private PrivateEndpointConnectionPropertiesPrivateLinkServiceConnectionStateArgs() {
-        this.actionsRequired = Input.empty();
-        this.description = Input.empty();
-        this.status = Input.empty();
+        this.actionsRequired = Output.empty();
+        this.description = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class PrivateEndpointConnectionPropertiesPrivateLinkServiceConnecti
     }
 
     public static final class Builder {
-        private @Nullable Input<String> actionsRequired;
-        private @Nullable Input<String> description;
-        private @Nullable Input<PrivateLinkServiceConnectionStatus> status;
+        private @Nullable Output<String> actionsRequired;
+        private @Nullable Output<String> description;
+        private @Nullable Output<PrivateLinkServiceConnectionStatus> status;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class PrivateEndpointConnectionPropertiesPrivateLinkServiceConnecti
     	      this.status = defaults.status;
         }
 
-        public Builder actionsRequired(@Nullable Input<String> actionsRequired) {
+        public Builder actionsRequired(@Nullable Output<String> actionsRequired) {
             this.actionsRequired = actionsRequired;
             return this;
         }
 
         public Builder actionsRequired(@Nullable String actionsRequired) {
-            this.actionsRequired = Input.ofNullable(actionsRequired);
+            this.actionsRequired = Output.ofNullable(actionsRequired);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder status(@Nullable Input<PrivateLinkServiceConnectionStatus> status) {
+        public Builder status(@Nullable Output<PrivateLinkServiceConnectionStatus> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable PrivateLinkServiceConnectionStatus status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public PrivateEndpointConnectionPropertiesPrivateLinkServiceConnectionStateArgs build() {

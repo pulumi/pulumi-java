@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,9 +23,9 @@ public final class AndroidMatrixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="androidModelIds", required=true)
-      private final Input<List<String>> androidModelIds;
+      private final Output<List<String>> androidModelIds;
 
-    public Input<List<String>> getAndroidModelIds() {
+    public Output<List<String>> getAndroidModelIds() {
         return this.androidModelIds;
     }
 
@@ -34,9 +34,9 @@ public final class AndroidMatrixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="androidVersionIds", required=true)
-      private final Input<List<String>> androidVersionIds;
+      private final Output<List<String>> androidVersionIds;
 
-    public Input<List<String>> getAndroidVersionIds() {
+    public Output<List<String>> getAndroidVersionIds() {
         return this.androidVersionIds;
     }
 
@@ -45,9 +45,9 @@ public final class AndroidMatrixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locales", required=true)
-      private final Input<List<String>> locales;
+      private final Output<List<String>> locales;
 
-    public Input<List<String>> getLocales() {
+    public Output<List<String>> getLocales() {
         return this.locales;
     }
 
@@ -56,17 +56,17 @@ public final class AndroidMatrixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="orientations", required=true)
-      private final Input<List<String>> orientations;
+      private final Output<List<String>> orientations;
 
-    public Input<List<String>> getOrientations() {
+    public Output<List<String>> getOrientations() {
         return this.orientations;
     }
 
     public AndroidMatrixArgs(
-        Input<List<String>> androidModelIds,
-        Input<List<String>> androidVersionIds,
-        Input<List<String>> locales,
-        Input<List<String>> orientations) {
+        Output<List<String>> androidModelIds,
+        Output<List<String>> androidVersionIds,
+        Output<List<String>> locales,
+        Output<List<String>> orientations) {
         this.androidModelIds = Objects.requireNonNull(androidModelIds, "expected parameter 'androidModelIds' to be non-null");
         this.androidVersionIds = Objects.requireNonNull(androidVersionIds, "expected parameter 'androidVersionIds' to be non-null");
         this.locales = Objects.requireNonNull(locales, "expected parameter 'locales' to be non-null");
@@ -74,10 +74,10 @@ public final class AndroidMatrixArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AndroidMatrixArgs() {
-        this.androidModelIds = Input.empty();
-        this.androidVersionIds = Input.empty();
-        this.locales = Input.empty();
-        this.orientations = Input.empty();
+        this.androidModelIds = Output.empty();
+        this.androidVersionIds = Output.empty();
+        this.locales = Output.empty();
+        this.orientations = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class AndroidMatrixArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<String>> androidModelIds;
-        private Input<List<String>> androidVersionIds;
-        private Input<List<String>> locales;
-        private Input<List<String>> orientations;
+        private Output<List<String>> androidModelIds;
+        private Output<List<String>> androidVersionIds;
+        private Output<List<String>> locales;
+        private Output<List<String>> orientations;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class AndroidMatrixArgs extends io.pulumi.resources.ResourceArgs {
     	      this.orientations = defaults.orientations;
         }
 
-        public Builder androidModelIds(Input<List<String>> androidModelIds) {
+        public Builder androidModelIds(Output<List<String>> androidModelIds) {
             this.androidModelIds = Objects.requireNonNull(androidModelIds);
             return this;
         }
 
         public Builder androidModelIds(List<String> androidModelIds) {
-            this.androidModelIds = Input.of(Objects.requireNonNull(androidModelIds));
+            this.androidModelIds = Output.of(Objects.requireNonNull(androidModelIds));
             return this;
         }
 
-        public Builder androidVersionIds(Input<List<String>> androidVersionIds) {
+        public Builder androidVersionIds(Output<List<String>> androidVersionIds) {
             this.androidVersionIds = Objects.requireNonNull(androidVersionIds);
             return this;
         }
 
         public Builder androidVersionIds(List<String> androidVersionIds) {
-            this.androidVersionIds = Input.of(Objects.requireNonNull(androidVersionIds));
+            this.androidVersionIds = Output.of(Objects.requireNonNull(androidVersionIds));
             return this;
         }
 
-        public Builder locales(Input<List<String>> locales) {
+        public Builder locales(Output<List<String>> locales) {
             this.locales = Objects.requireNonNull(locales);
             return this;
         }
 
         public Builder locales(List<String> locales) {
-            this.locales = Input.of(Objects.requireNonNull(locales));
+            this.locales = Output.of(Objects.requireNonNull(locales));
             return this;
         }
 
-        public Builder orientations(Input<List<String>> orientations) {
+        public Builder orientations(Output<List<String>> orientations) {
             this.orientations = Objects.requireNonNull(orientations);
             return this;
         }
 
         public Builder orientations(List<String> orientations) {
-            this.orientations = Input.of(Objects.requireNonNull(orientations));
+            this.orientations = Output.of(Objects.requireNonNull(orientations));
             return this;
         }
         public AndroidMatrixArgs build() {

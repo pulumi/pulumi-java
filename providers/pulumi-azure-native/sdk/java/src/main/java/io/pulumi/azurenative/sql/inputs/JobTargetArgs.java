@@ -6,7 +6,7 @@ package io.pulumi.azurenative.sql.inputs;
 import io.pulumi.azurenative.sql.enums.JobTargetGroupMembershipType;
 import io.pulumi.azurenative.sql.enums.JobTargetType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseName")
-      private final @Nullable Input<String> databaseName;
+      private final @Nullable Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
-        return this.databaseName == null ? Input.empty() : this.databaseName;
+    public Output<String> getDatabaseName() {
+        return this.databaseName == null ? Output.empty() : this.databaseName;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="elasticPoolName")
-      private final @Nullable Input<String> elasticPoolName;
+      private final @Nullable Output<String> elasticPoolName;
 
-    public Input<String> getElasticPoolName() {
-        return this.elasticPoolName == null ? Input.empty() : this.elasticPoolName;
+    public Output<String> getElasticPoolName() {
+        return this.elasticPoolName == null ? Output.empty() : this.elasticPoolName;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="membershipType")
-      private final @Nullable Input<JobTargetGroupMembershipType> membershipType;
+      private final @Nullable Output<JobTargetGroupMembershipType> membershipType;
 
-    public Input<JobTargetGroupMembershipType> getMembershipType() {
-        return this.membershipType == null ? Input.empty() : this.membershipType;
+    public Output<JobTargetGroupMembershipType> getMembershipType() {
+        return this.membershipType == null ? Output.empty() : this.membershipType;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="refreshCredential")
-      private final @Nullable Input<String> refreshCredential;
+      private final @Nullable Output<String> refreshCredential;
 
-    public Input<String> getRefreshCredential() {
-        return this.refreshCredential == null ? Input.empty() : this.refreshCredential;
+    public Output<String> getRefreshCredential() {
+        return this.refreshCredential == null ? Output.empty() : this.refreshCredential;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverName")
-      private final @Nullable Input<String> serverName;
+      private final @Nullable Output<String> serverName;
 
-    public Input<String> getServerName() {
-        return this.serverName == null ? Input.empty() : this.serverName;
+    public Output<String> getServerName() {
+        return this.serverName == null ? Output.empty() : this.serverName;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shardMapName")
-      private final @Nullable Input<String> shardMapName;
+      private final @Nullable Output<String> shardMapName;
 
-    public Input<String> getShardMapName() {
-        return this.shardMapName == null ? Input.empty() : this.shardMapName;
+    public Output<String> getShardMapName() {
+        return this.shardMapName == null ? Output.empty() : this.shardMapName;
     }
 
     /**
@@ -92,23 +92,23 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<Either<String,JobTargetType>> type;
+      private final Output<Either<String,JobTargetType>> type;
 
-    public Input<Either<String,JobTargetType>> getType() {
+    public Output<Either<String,JobTargetType>> getType() {
         return this.type;
     }
 
     public JobTargetArgs(
-        @Nullable Input<String> databaseName,
-        @Nullable Input<String> elasticPoolName,
-        @Nullable Input<JobTargetGroupMembershipType> membershipType,
-        @Nullable Input<String> refreshCredential,
-        @Nullable Input<String> serverName,
-        @Nullable Input<String> shardMapName,
-        Input<Either<String,JobTargetType>> type) {
+        @Nullable Output<String> databaseName,
+        @Nullable Output<String> elasticPoolName,
+        @Nullable Output<JobTargetGroupMembershipType> membershipType,
+        @Nullable Output<String> refreshCredential,
+        @Nullable Output<String> serverName,
+        @Nullable Output<String> shardMapName,
+        Output<Either<String,JobTargetType>> type) {
         this.databaseName = databaseName;
         this.elasticPoolName = elasticPoolName;
-        this.membershipType = membershipType == null ? Input.ofNullable(io.pulumi.azurenative.sql.enums.JobTargetGroupMembershipType.Include) : membershipType;
+        this.membershipType = membershipType == null ? Output.ofNullable(io.pulumi.azurenative.sql.enums.JobTargetGroupMembershipType.Include) : membershipType;
         this.refreshCredential = refreshCredential;
         this.serverName = serverName;
         this.shardMapName = shardMapName;
@@ -116,13 +116,13 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobTargetArgs() {
-        this.databaseName = Input.empty();
-        this.elasticPoolName = Input.empty();
-        this.membershipType = Input.empty();
-        this.refreshCredential = Input.empty();
-        this.serverName = Input.empty();
-        this.shardMapName = Input.empty();
-        this.type = Input.empty();
+        this.databaseName = Output.empty();
+        this.elasticPoolName = Output.empty();
+        this.membershipType = Output.empty();
+        this.refreshCredential = Output.empty();
+        this.serverName = Output.empty();
+        this.shardMapName = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -134,13 +134,13 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> databaseName;
-        private @Nullable Input<String> elasticPoolName;
-        private @Nullable Input<JobTargetGroupMembershipType> membershipType;
-        private @Nullable Input<String> refreshCredential;
-        private @Nullable Input<String> serverName;
-        private @Nullable Input<String> shardMapName;
-        private Input<Either<String,JobTargetType>> type;
+        private @Nullable Output<String> databaseName;
+        private @Nullable Output<String> elasticPoolName;
+        private @Nullable Output<JobTargetGroupMembershipType> membershipType;
+        private @Nullable Output<String> refreshCredential;
+        private @Nullable Output<String> serverName;
+        private @Nullable Output<String> shardMapName;
+        private Output<Either<String,JobTargetType>> type;
 
         public Builder() {
     	      // Empty
@@ -157,73 +157,73 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder databaseName(@Nullable Input<String> databaseName) {
+        public Builder databaseName(@Nullable Output<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
         public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Input.ofNullable(databaseName);
+            this.databaseName = Output.ofNullable(databaseName);
             return this;
         }
 
-        public Builder elasticPoolName(@Nullable Input<String> elasticPoolName) {
+        public Builder elasticPoolName(@Nullable Output<String> elasticPoolName) {
             this.elasticPoolName = elasticPoolName;
             return this;
         }
 
         public Builder elasticPoolName(@Nullable String elasticPoolName) {
-            this.elasticPoolName = Input.ofNullable(elasticPoolName);
+            this.elasticPoolName = Output.ofNullable(elasticPoolName);
             return this;
         }
 
-        public Builder membershipType(@Nullable Input<JobTargetGroupMembershipType> membershipType) {
+        public Builder membershipType(@Nullable Output<JobTargetGroupMembershipType> membershipType) {
             this.membershipType = membershipType;
             return this;
         }
 
         public Builder membershipType(@Nullable JobTargetGroupMembershipType membershipType) {
-            this.membershipType = Input.ofNullable(membershipType);
+            this.membershipType = Output.ofNullable(membershipType);
             return this;
         }
 
-        public Builder refreshCredential(@Nullable Input<String> refreshCredential) {
+        public Builder refreshCredential(@Nullable Output<String> refreshCredential) {
             this.refreshCredential = refreshCredential;
             return this;
         }
 
         public Builder refreshCredential(@Nullable String refreshCredential) {
-            this.refreshCredential = Input.ofNullable(refreshCredential);
+            this.refreshCredential = Output.ofNullable(refreshCredential);
             return this;
         }
 
-        public Builder serverName(@Nullable Input<String> serverName) {
+        public Builder serverName(@Nullable Output<String> serverName) {
             this.serverName = serverName;
             return this;
         }
 
         public Builder serverName(@Nullable String serverName) {
-            this.serverName = Input.ofNullable(serverName);
+            this.serverName = Output.ofNullable(serverName);
             return this;
         }
 
-        public Builder shardMapName(@Nullable Input<String> shardMapName) {
+        public Builder shardMapName(@Nullable Output<String> shardMapName) {
             this.shardMapName = shardMapName;
             return this;
         }
 
         public Builder shardMapName(@Nullable String shardMapName) {
-            this.shardMapName = Input.ofNullable(shardMapName);
+            this.shardMapName = Output.ofNullable(shardMapName);
             return this;
         }
 
-        public Builder type(Input<Either<String,JobTargetType>> type) {
+        public Builder type(Output<Either<String,JobTargetType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(Either<String,JobTargetType> type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public JobTargetArgs build() {

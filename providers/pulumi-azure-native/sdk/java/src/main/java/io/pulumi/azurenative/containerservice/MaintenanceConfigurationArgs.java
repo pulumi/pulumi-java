@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerservice;
 
 import io.pulumi.azurenative.containerservice.inputs.TimeInWeekArgs;
 import io.pulumi.azurenative.containerservice.inputs.TimeSpanArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="configName")
-      private final @Nullable Input<String> configName;
+      private final @Nullable Output<String> configName;
 
-    public Input<String> getConfigName() {
-        return this.configName == null ? Input.empty() : this.configName;
+    public Output<String> getConfigName() {
+        return this.configName == null ? Output.empty() : this.configName;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="notAllowedTime")
-      private final @Nullable Input<List<TimeSpanArgs>> notAllowedTime;
+      private final @Nullable Output<List<TimeSpanArgs>> notAllowedTime;
 
-    public Input<List<TimeSpanArgs>> getNotAllowedTime() {
-        return this.notAllowedTime == null ? Input.empty() : this.notAllowedTime;
+    public Output<List<TimeSpanArgs>> getNotAllowedTime() {
+        return this.notAllowedTime == null ? Output.empty() : this.notAllowedTime;
     }
 
     /**
@@ -44,9 +44,9 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -55,9 +55,9 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resourceName", required=true)
-      private final Input<String> resourceName;
+      private final Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
+    public Output<String> getPropResourceName() {
         return this.resourceName;
     }
 
@@ -66,18 +66,18 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="timeInWeek")
-      private final @Nullable Input<List<TimeInWeekArgs>> timeInWeek;
+      private final @Nullable Output<List<TimeInWeekArgs>> timeInWeek;
 
-    public Input<List<TimeInWeekArgs>> getTimeInWeek() {
-        return this.timeInWeek == null ? Input.empty() : this.timeInWeek;
+    public Output<List<TimeInWeekArgs>> getTimeInWeek() {
+        return this.timeInWeek == null ? Output.empty() : this.timeInWeek;
     }
 
     public MaintenanceConfigurationArgs(
-        @Nullable Input<String> configName,
-        @Nullable Input<List<TimeSpanArgs>> notAllowedTime,
-        Input<String> resourceGroupName,
-        Input<String> resourceName,
-        @Nullable Input<List<TimeInWeekArgs>> timeInWeek) {
+        @Nullable Output<String> configName,
+        @Nullable Output<List<TimeSpanArgs>> notAllowedTime,
+        Output<String> resourceGroupName,
+        Output<String> resourceName,
+        @Nullable Output<List<TimeInWeekArgs>> timeInWeek) {
         this.configName = configName;
         this.notAllowedTime = notAllowedTime;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -86,11 +86,11 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
     }
 
     private MaintenanceConfigurationArgs() {
-        this.configName = Input.empty();
-        this.notAllowedTime = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceName = Input.empty();
-        this.timeInWeek = Input.empty();
+        this.configName = Output.empty();
+        this.notAllowedTime = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceName = Output.empty();
+        this.timeInWeek = Output.empty();
     }
 
     public static Builder builder() {
@@ -102,11 +102,11 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> configName;
-        private @Nullable Input<List<TimeSpanArgs>> notAllowedTime;
-        private Input<String> resourceGroupName;
-        private Input<String> resourceName;
-        private @Nullable Input<List<TimeInWeekArgs>> timeInWeek;
+        private @Nullable Output<String> configName;
+        private @Nullable Output<List<TimeSpanArgs>> notAllowedTime;
+        private Output<String> resourceGroupName;
+        private Output<String> resourceName;
+        private @Nullable Output<List<TimeInWeekArgs>> timeInWeek;
 
         public Builder() {
     	      // Empty
@@ -121,53 +121,53 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
     	      this.timeInWeek = defaults.timeInWeek;
         }
 
-        public Builder configName(@Nullable Input<String> configName) {
+        public Builder configName(@Nullable Output<String> configName) {
             this.configName = configName;
             return this;
         }
 
         public Builder configName(@Nullable String configName) {
-            this.configName = Input.ofNullable(configName);
+            this.configName = Output.ofNullable(configName);
             return this;
         }
 
-        public Builder notAllowedTime(@Nullable Input<List<TimeSpanArgs>> notAllowedTime) {
+        public Builder notAllowedTime(@Nullable Output<List<TimeSpanArgs>> notAllowedTime) {
             this.notAllowedTime = notAllowedTime;
             return this;
         }
 
         public Builder notAllowedTime(@Nullable List<TimeSpanArgs> notAllowedTime) {
-            this.notAllowedTime = Input.ofNullable(notAllowedTime);
+            this.notAllowedTime = Output.ofNullable(notAllowedTime);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceName(Input<String> resourceName) {
+        public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
         public Builder resourceName(String resourceName) {
-            this.resourceName = Input.of(Objects.requireNonNull(resourceName));
+            this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
         }
 
-        public Builder timeInWeek(@Nullable Input<List<TimeInWeekArgs>> timeInWeek) {
+        public Builder timeInWeek(@Nullable Output<List<TimeInWeekArgs>> timeInWeek) {
             this.timeInWeek = timeInWeek;
             return this;
         }
 
         public Builder timeInWeek(@Nullable List<TimeInWeekArgs> timeInWeek) {
-            this.timeInWeek = Input.ofNullable(timeInWeek);
+            this.timeInWeek = Output.ofNullable(timeInWeek);
             return this;
         }
         public MaintenanceConfigurationArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -14,29 +14,29 @@ public final class JobSchedulingArgs extends io.pulumi.resources.ResourceArgs {
     public static final JobSchedulingArgs Empty = new JobSchedulingArgs();
 
     @InputImport(name="maxFailuresPerHour", required=true)
-      private final Input<Integer> maxFailuresPerHour;
+      private final Output<Integer> maxFailuresPerHour;
 
-    public Input<Integer> getMaxFailuresPerHour() {
+    public Output<Integer> getMaxFailuresPerHour() {
         return this.maxFailuresPerHour;
     }
 
     @InputImport(name="maxFailuresTotal", required=true)
-      private final Input<Integer> maxFailuresTotal;
+      private final Output<Integer> maxFailuresTotal;
 
-    public Input<Integer> getMaxFailuresTotal() {
+    public Output<Integer> getMaxFailuresTotal() {
         return this.maxFailuresTotal;
     }
 
     public JobSchedulingArgs(
-        Input<Integer> maxFailuresPerHour,
-        Input<Integer> maxFailuresTotal) {
+        Output<Integer> maxFailuresPerHour,
+        Output<Integer> maxFailuresTotal) {
         this.maxFailuresPerHour = Objects.requireNonNull(maxFailuresPerHour, "expected parameter 'maxFailuresPerHour' to be non-null");
         this.maxFailuresTotal = Objects.requireNonNull(maxFailuresTotal, "expected parameter 'maxFailuresTotal' to be non-null");
     }
 
     private JobSchedulingArgs() {
-        this.maxFailuresPerHour = Input.empty();
-        this.maxFailuresTotal = Input.empty();
+        this.maxFailuresPerHour = Output.empty();
+        this.maxFailuresTotal = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,8 +48,8 @@ public final class JobSchedulingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Integer> maxFailuresPerHour;
-        private Input<Integer> maxFailuresTotal;
+        private Output<Integer> maxFailuresPerHour;
+        private Output<Integer> maxFailuresTotal;
 
         public Builder() {
     	      // Empty
@@ -61,23 +61,23 @@ public final class JobSchedulingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.maxFailuresTotal = defaults.maxFailuresTotal;
         }
 
-        public Builder maxFailuresPerHour(Input<Integer> maxFailuresPerHour) {
+        public Builder maxFailuresPerHour(Output<Integer> maxFailuresPerHour) {
             this.maxFailuresPerHour = Objects.requireNonNull(maxFailuresPerHour);
             return this;
         }
 
         public Builder maxFailuresPerHour(Integer maxFailuresPerHour) {
-            this.maxFailuresPerHour = Input.of(Objects.requireNonNull(maxFailuresPerHour));
+            this.maxFailuresPerHour = Output.of(Objects.requireNonNull(maxFailuresPerHour));
             return this;
         }
 
-        public Builder maxFailuresTotal(Input<Integer> maxFailuresTotal) {
+        public Builder maxFailuresTotal(Output<Integer> maxFailuresTotal) {
             this.maxFailuresTotal = Objects.requireNonNull(maxFailuresTotal);
             return this;
         }
 
         public Builder maxFailuresTotal(Integer maxFailuresTotal) {
-            this.maxFailuresTotal = Input.of(Objects.requireNonNull(maxFailuresTotal));
+            this.maxFailuresTotal = Output.of(Objects.requireNonNull(maxFailuresTotal));
             return this;
         }
         public JobSchedulingArgs build() {

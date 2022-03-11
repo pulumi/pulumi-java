@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.privateca_v1.inputs.AllowedKeyTypeArgs;
 import io.pulumi.googlenative.privateca_v1.inputs.CertificateExtensionConstraintsArgs;
@@ -29,10 +29,10 @@ public final class IssuancePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedIssuanceModes")
-      private final @Nullable Input<IssuanceModesArgs> allowedIssuanceModes;
+      private final @Nullable Output<IssuanceModesArgs> allowedIssuanceModes;
 
-    public Input<IssuanceModesArgs> getAllowedIssuanceModes() {
-        return this.allowedIssuanceModes == null ? Input.empty() : this.allowedIssuanceModes;
+    public Output<IssuanceModesArgs> getAllowedIssuanceModes() {
+        return this.allowedIssuanceModes == null ? Output.empty() : this.allowedIssuanceModes;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class IssuancePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedKeyTypes")
-      private final @Nullable Input<List<AllowedKeyTypeArgs>> allowedKeyTypes;
+      private final @Nullable Output<List<AllowedKeyTypeArgs>> allowedKeyTypes;
 
-    public Input<List<AllowedKeyTypeArgs>> getAllowedKeyTypes() {
-        return this.allowedKeyTypes == null ? Input.empty() : this.allowedKeyTypes;
+    public Output<List<AllowedKeyTypeArgs>> getAllowedKeyTypes() {
+        return this.allowedKeyTypes == null ? Output.empty() : this.allowedKeyTypes;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class IssuancePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="baselineValues")
-      private final @Nullable Input<X509ParametersArgs> baselineValues;
+      private final @Nullable Output<X509ParametersArgs> baselineValues;
 
-    public Input<X509ParametersArgs> getBaselineValues() {
-        return this.baselineValues == null ? Input.empty() : this.baselineValues;
+    public Output<X509ParametersArgs> getBaselineValues() {
+        return this.baselineValues == null ? Output.empty() : this.baselineValues;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class IssuancePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identityConstraints")
-      private final @Nullable Input<CertificateIdentityConstraintsArgs> identityConstraints;
+      private final @Nullable Output<CertificateIdentityConstraintsArgs> identityConstraints;
 
-    public Input<CertificateIdentityConstraintsArgs> getIdentityConstraints() {
-        return this.identityConstraints == null ? Input.empty() : this.identityConstraints;
+    public Output<CertificateIdentityConstraintsArgs> getIdentityConstraints() {
+        return this.identityConstraints == null ? Output.empty() : this.identityConstraints;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class IssuancePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maximumLifetime")
-      private final @Nullable Input<String> maximumLifetime;
+      private final @Nullable Output<String> maximumLifetime;
 
-    public Input<String> getMaximumLifetime() {
-        return this.maximumLifetime == null ? Input.empty() : this.maximumLifetime;
+    public Output<String> getMaximumLifetime() {
+        return this.maximumLifetime == null ? Output.empty() : this.maximumLifetime;
     }
 
     /**
@@ -84,19 +84,19 @@ public final class IssuancePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="passthroughExtensions")
-      private final @Nullable Input<CertificateExtensionConstraintsArgs> passthroughExtensions;
+      private final @Nullable Output<CertificateExtensionConstraintsArgs> passthroughExtensions;
 
-    public Input<CertificateExtensionConstraintsArgs> getPassthroughExtensions() {
-        return this.passthroughExtensions == null ? Input.empty() : this.passthroughExtensions;
+    public Output<CertificateExtensionConstraintsArgs> getPassthroughExtensions() {
+        return this.passthroughExtensions == null ? Output.empty() : this.passthroughExtensions;
     }
 
     public IssuancePolicyArgs(
-        @Nullable Input<IssuanceModesArgs> allowedIssuanceModes,
-        @Nullable Input<List<AllowedKeyTypeArgs>> allowedKeyTypes,
-        @Nullable Input<X509ParametersArgs> baselineValues,
-        @Nullable Input<CertificateIdentityConstraintsArgs> identityConstraints,
-        @Nullable Input<String> maximumLifetime,
-        @Nullable Input<CertificateExtensionConstraintsArgs> passthroughExtensions) {
+        @Nullable Output<IssuanceModesArgs> allowedIssuanceModes,
+        @Nullable Output<List<AllowedKeyTypeArgs>> allowedKeyTypes,
+        @Nullable Output<X509ParametersArgs> baselineValues,
+        @Nullable Output<CertificateIdentityConstraintsArgs> identityConstraints,
+        @Nullable Output<String> maximumLifetime,
+        @Nullable Output<CertificateExtensionConstraintsArgs> passthroughExtensions) {
         this.allowedIssuanceModes = allowedIssuanceModes;
         this.allowedKeyTypes = allowedKeyTypes;
         this.baselineValues = baselineValues;
@@ -106,12 +106,12 @@ public final class IssuancePolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IssuancePolicyArgs() {
-        this.allowedIssuanceModes = Input.empty();
-        this.allowedKeyTypes = Input.empty();
-        this.baselineValues = Input.empty();
-        this.identityConstraints = Input.empty();
-        this.maximumLifetime = Input.empty();
-        this.passthroughExtensions = Input.empty();
+        this.allowedIssuanceModes = Output.empty();
+        this.allowedKeyTypes = Output.empty();
+        this.baselineValues = Output.empty();
+        this.identityConstraints = Output.empty();
+        this.maximumLifetime = Output.empty();
+        this.passthroughExtensions = Output.empty();
     }
 
     public static Builder builder() {
@@ -123,12 +123,12 @@ public final class IssuancePolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<IssuanceModesArgs> allowedIssuanceModes;
-        private @Nullable Input<List<AllowedKeyTypeArgs>> allowedKeyTypes;
-        private @Nullable Input<X509ParametersArgs> baselineValues;
-        private @Nullable Input<CertificateIdentityConstraintsArgs> identityConstraints;
-        private @Nullable Input<String> maximumLifetime;
-        private @Nullable Input<CertificateExtensionConstraintsArgs> passthroughExtensions;
+        private @Nullable Output<IssuanceModesArgs> allowedIssuanceModes;
+        private @Nullable Output<List<AllowedKeyTypeArgs>> allowedKeyTypes;
+        private @Nullable Output<X509ParametersArgs> baselineValues;
+        private @Nullable Output<CertificateIdentityConstraintsArgs> identityConstraints;
+        private @Nullable Output<String> maximumLifetime;
+        private @Nullable Output<CertificateExtensionConstraintsArgs> passthroughExtensions;
 
         public Builder() {
     	      // Empty
@@ -144,63 +144,63 @@ public final class IssuancePolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.passthroughExtensions = defaults.passthroughExtensions;
         }
 
-        public Builder allowedIssuanceModes(@Nullable Input<IssuanceModesArgs> allowedIssuanceModes) {
+        public Builder allowedIssuanceModes(@Nullable Output<IssuanceModesArgs> allowedIssuanceModes) {
             this.allowedIssuanceModes = allowedIssuanceModes;
             return this;
         }
 
         public Builder allowedIssuanceModes(@Nullable IssuanceModesArgs allowedIssuanceModes) {
-            this.allowedIssuanceModes = Input.ofNullable(allowedIssuanceModes);
+            this.allowedIssuanceModes = Output.ofNullable(allowedIssuanceModes);
             return this;
         }
 
-        public Builder allowedKeyTypes(@Nullable Input<List<AllowedKeyTypeArgs>> allowedKeyTypes) {
+        public Builder allowedKeyTypes(@Nullable Output<List<AllowedKeyTypeArgs>> allowedKeyTypes) {
             this.allowedKeyTypes = allowedKeyTypes;
             return this;
         }
 
         public Builder allowedKeyTypes(@Nullable List<AllowedKeyTypeArgs> allowedKeyTypes) {
-            this.allowedKeyTypes = Input.ofNullable(allowedKeyTypes);
+            this.allowedKeyTypes = Output.ofNullable(allowedKeyTypes);
             return this;
         }
 
-        public Builder baselineValues(@Nullable Input<X509ParametersArgs> baselineValues) {
+        public Builder baselineValues(@Nullable Output<X509ParametersArgs> baselineValues) {
             this.baselineValues = baselineValues;
             return this;
         }
 
         public Builder baselineValues(@Nullable X509ParametersArgs baselineValues) {
-            this.baselineValues = Input.ofNullable(baselineValues);
+            this.baselineValues = Output.ofNullable(baselineValues);
             return this;
         }
 
-        public Builder identityConstraints(@Nullable Input<CertificateIdentityConstraintsArgs> identityConstraints) {
+        public Builder identityConstraints(@Nullable Output<CertificateIdentityConstraintsArgs> identityConstraints) {
             this.identityConstraints = identityConstraints;
             return this;
         }
 
         public Builder identityConstraints(@Nullable CertificateIdentityConstraintsArgs identityConstraints) {
-            this.identityConstraints = Input.ofNullable(identityConstraints);
+            this.identityConstraints = Output.ofNullable(identityConstraints);
             return this;
         }
 
-        public Builder maximumLifetime(@Nullable Input<String> maximumLifetime) {
+        public Builder maximumLifetime(@Nullable Output<String> maximumLifetime) {
             this.maximumLifetime = maximumLifetime;
             return this;
         }
 
         public Builder maximumLifetime(@Nullable String maximumLifetime) {
-            this.maximumLifetime = Input.ofNullable(maximumLifetime);
+            this.maximumLifetime = Output.ofNullable(maximumLifetime);
             return this;
         }
 
-        public Builder passthroughExtensions(@Nullable Input<CertificateExtensionConstraintsArgs> passthroughExtensions) {
+        public Builder passthroughExtensions(@Nullable Output<CertificateExtensionConstraintsArgs> passthroughExtensions) {
             this.passthroughExtensions = passthroughExtensions;
             return this;
         }
 
         public Builder passthroughExtensions(@Nullable CertificateExtensionConstraintsArgs passthroughExtensions) {
-            this.passthroughExtensions = Input.ofNullable(passthroughExtensions);
+            this.passthroughExtensions = Output.ofNullable(passthroughExtensions);
             return this;
         }
         public IssuancePolicyArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.SecurityPolicyRuleMatchGetArgs;
 import io.pulumi.gcp.compute.inputs.SecurityPolicyRuleRateLimitOptionsGetArgs;
@@ -27,9 +27,9 @@ public final class SecurityPolicyRuleGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="action", required=true)
-      private final Input<String> action;
+      private final Output<String> action;
 
-    public Input<String> getAction() {
+    public Output<String> getAction() {
         return this.action;
     }
 
@@ -38,10 +38,10 @@ public final class SecurityPolicyRuleGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -50,9 +50,9 @@ public final class SecurityPolicyRuleGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="match", required=true)
-      private final Input<SecurityPolicyRuleMatchGetArgs> match;
+      private final Output<SecurityPolicyRuleMatchGetArgs> match;
 
-    public Input<SecurityPolicyRuleMatchGetArgs> getMatch() {
+    public Output<SecurityPolicyRuleMatchGetArgs> getMatch() {
         return this.match;
     }
 
@@ -62,10 +62,10 @@ public final class SecurityPolicyRuleGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="preview")
-      private final @Nullable Input<Boolean> preview;
+      private final @Nullable Output<Boolean> preview;
 
-    public Input<Boolean> getPreview() {
-        return this.preview == null ? Input.empty() : this.preview;
+    public Output<Boolean> getPreview() {
+        return this.preview == null ? Output.empty() : this.preview;
     }
 
     /**
@@ -74,9 +74,9 @@ public final class SecurityPolicyRuleGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="priority", required=true)
-      private final Input<Integer> priority;
+      private final Output<Integer> priority;
 
-    public Input<Integer> getPriority() {
+    public Output<Integer> getPriority() {
         return this.priority;
     }
 
@@ -86,19 +86,19 @@ public final class SecurityPolicyRuleGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="rateLimitOptions")
-      private final @Nullable Input<SecurityPolicyRuleRateLimitOptionsGetArgs> rateLimitOptions;
+      private final @Nullable Output<SecurityPolicyRuleRateLimitOptionsGetArgs> rateLimitOptions;
 
-    public Input<SecurityPolicyRuleRateLimitOptionsGetArgs> getRateLimitOptions() {
-        return this.rateLimitOptions == null ? Input.empty() : this.rateLimitOptions;
+    public Output<SecurityPolicyRuleRateLimitOptionsGetArgs> getRateLimitOptions() {
+        return this.rateLimitOptions == null ? Output.empty() : this.rateLimitOptions;
     }
 
     public SecurityPolicyRuleGetArgs(
-        Input<String> action,
-        @Nullable Input<String> description,
-        Input<SecurityPolicyRuleMatchGetArgs> match,
-        @Nullable Input<Boolean> preview,
-        Input<Integer> priority,
-        @Nullable Input<SecurityPolicyRuleRateLimitOptionsGetArgs> rateLimitOptions) {
+        Output<String> action,
+        @Nullable Output<String> description,
+        Output<SecurityPolicyRuleMatchGetArgs> match,
+        @Nullable Output<Boolean> preview,
+        Output<Integer> priority,
+        @Nullable Output<SecurityPolicyRuleRateLimitOptionsGetArgs> rateLimitOptions) {
         this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
         this.description = description;
         this.match = Objects.requireNonNull(match, "expected parameter 'match' to be non-null");
@@ -108,12 +108,12 @@ public final class SecurityPolicyRuleGetArgs extends io.pulumi.resources.Resourc
     }
 
     private SecurityPolicyRuleGetArgs() {
-        this.action = Input.empty();
-        this.description = Input.empty();
-        this.match = Input.empty();
-        this.preview = Input.empty();
-        this.priority = Input.empty();
-        this.rateLimitOptions = Input.empty();
+        this.action = Output.empty();
+        this.description = Output.empty();
+        this.match = Output.empty();
+        this.preview = Output.empty();
+        this.priority = Output.empty();
+        this.rateLimitOptions = Output.empty();
     }
 
     public static Builder builder() {
@@ -125,12 +125,12 @@ public final class SecurityPolicyRuleGetArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<String> action;
-        private @Nullable Input<String> description;
-        private Input<SecurityPolicyRuleMatchGetArgs> match;
-        private @Nullable Input<Boolean> preview;
-        private Input<Integer> priority;
-        private @Nullable Input<SecurityPolicyRuleRateLimitOptionsGetArgs> rateLimitOptions;
+        private Output<String> action;
+        private @Nullable Output<String> description;
+        private Output<SecurityPolicyRuleMatchGetArgs> match;
+        private @Nullable Output<Boolean> preview;
+        private Output<Integer> priority;
+        private @Nullable Output<SecurityPolicyRuleRateLimitOptionsGetArgs> rateLimitOptions;
 
         public Builder() {
     	      // Empty
@@ -146,63 +146,63 @@ public final class SecurityPolicyRuleGetArgs extends io.pulumi.resources.Resourc
     	      this.rateLimitOptions = defaults.rateLimitOptions;
         }
 
-        public Builder action(Input<String> action) {
+        public Builder action(Output<String> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
         public Builder action(String action) {
-            this.action = Input.of(Objects.requireNonNull(action));
+            this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder match(Input<SecurityPolicyRuleMatchGetArgs> match) {
+        public Builder match(Output<SecurityPolicyRuleMatchGetArgs> match) {
             this.match = Objects.requireNonNull(match);
             return this;
         }
 
         public Builder match(SecurityPolicyRuleMatchGetArgs match) {
-            this.match = Input.of(Objects.requireNonNull(match));
+            this.match = Output.of(Objects.requireNonNull(match));
             return this;
         }
 
-        public Builder preview(@Nullable Input<Boolean> preview) {
+        public Builder preview(@Nullable Output<Boolean> preview) {
             this.preview = preview;
             return this;
         }
 
         public Builder preview(@Nullable Boolean preview) {
-            this.preview = Input.ofNullable(preview);
+            this.preview = Output.ofNullable(preview);
             return this;
         }
 
-        public Builder priority(Input<Integer> priority) {
+        public Builder priority(Output<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
         public Builder priority(Integer priority) {
-            this.priority = Input.of(Objects.requireNonNull(priority));
+            this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
         }
 
-        public Builder rateLimitOptions(@Nullable Input<SecurityPolicyRuleRateLimitOptionsGetArgs> rateLimitOptions) {
+        public Builder rateLimitOptions(@Nullable Output<SecurityPolicyRuleRateLimitOptionsGetArgs> rateLimitOptions) {
             this.rateLimitOptions = rateLimitOptions;
             return this;
         }
 
         public Builder rateLimitOptions(@Nullable SecurityPolicyRuleRateLimitOptionsGetArgs rateLimitOptions) {
-            this.rateLimitOptions = Input.ofNullable(rateLimitOptions);
+            this.rateLimitOptions = Output.ofNullable(rateLimitOptions);
             return this;
         }
         public SecurityPolicyRuleGetArgs build() {

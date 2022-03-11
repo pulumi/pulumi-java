@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.containeranalysis.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.containeranalysis.inputs.NoteAttestationAuthorityHintArgs;
 import java.util.Objects;
@@ -26,18 +26,18 @@ public final class NoteAttestationAuthorityArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="hint", required=true)
-      private final Input<NoteAttestationAuthorityHintArgs> hint;
+      private final Output<NoteAttestationAuthorityHintArgs> hint;
 
-    public Input<NoteAttestationAuthorityHintArgs> getHint() {
+    public Output<NoteAttestationAuthorityHintArgs> getHint() {
         return this.hint;
     }
 
-    public NoteAttestationAuthorityArgs(Input<NoteAttestationAuthorityHintArgs> hint) {
+    public NoteAttestationAuthorityArgs(Output<NoteAttestationAuthorityHintArgs> hint) {
         this.hint = Objects.requireNonNull(hint, "expected parameter 'hint' to be non-null");
     }
 
     private NoteAttestationAuthorityArgs() {
-        this.hint = Input.empty();
+        this.hint = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,7 +49,7 @@ public final class NoteAttestationAuthorityArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<NoteAttestationAuthorityHintArgs> hint;
+        private Output<NoteAttestationAuthorityHintArgs> hint;
 
         public Builder() {
     	      // Empty
@@ -60,13 +60,13 @@ public final class NoteAttestationAuthorityArgs extends io.pulumi.resources.Reso
     	      this.hint = defaults.hint;
         }
 
-        public Builder hint(Input<NoteAttestationAuthorityHintArgs> hint) {
+        public Builder hint(Output<NoteAttestationAuthorityHintArgs> hint) {
             this.hint = Objects.requireNonNull(hint);
             return this;
         }
 
         public Builder hint(NoteAttestationAuthorityHintArgs hint) {
-            this.hint = Input.of(Objects.requireNonNull(hint));
+            this.hint = Output.of(Objects.requireNonNull(hint));
             return this;
         }
         public NoteAttestationAuthorityArgs build() {

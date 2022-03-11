@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.bigquery.inputs.DatasetAccessGetArgs;
 import io.pulumi.gcp.bigquery.inputs.DatasetDefaultEncryptionConfigurationGetArgs;
@@ -26,10 +26,10 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accesses")
-      private final @Nullable Input<List<DatasetAccessGetArgs>> accesses;
+      private final @Nullable Output<List<DatasetAccessGetArgs>> accesses;
 
-    public Input<List<DatasetAccessGetArgs>> getAccesses() {
-        return this.accesses == null ? Input.empty() : this.accesses;
+    public Output<List<DatasetAccessGetArgs>> getAccesses() {
+        return this.accesses == null ? Output.empty() : this.accesses;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationTime")
-      private final @Nullable Input<Integer> creationTime;
+      private final @Nullable Output<Integer> creationTime;
 
-    public Input<Integer> getCreationTime() {
-        return this.creationTime == null ? Input.empty() : this.creationTime;
+    public Output<Integer> getCreationTime() {
+        return this.creationTime == null ? Output.empty() : this.creationTime;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datasetId")
-      private final @Nullable Input<String> datasetId;
+      private final @Nullable Output<String> datasetId;
 
-    public Input<String> getDatasetId() {
-        return this.datasetId == null ? Input.empty() : this.datasetId;
+    public Output<String> getDatasetId() {
+        return this.datasetId == null ? Output.empty() : this.datasetId;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultEncryptionConfiguration")
-      private final @Nullable Input<DatasetDefaultEncryptionConfigurationGetArgs> defaultEncryptionConfiguration;
+      private final @Nullable Output<DatasetDefaultEncryptionConfigurationGetArgs> defaultEncryptionConfiguration;
 
-    public Input<DatasetDefaultEncryptionConfigurationGetArgs> getDefaultEncryptionConfiguration() {
-        return this.defaultEncryptionConfiguration == null ? Input.empty() : this.defaultEncryptionConfiguration;
+    public Output<DatasetDefaultEncryptionConfigurationGetArgs> getDefaultEncryptionConfiguration() {
+        return this.defaultEncryptionConfiguration == null ? Output.empty() : this.defaultEncryptionConfiguration;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultPartitionExpirationMs")
-      private final @Nullable Input<Integer> defaultPartitionExpirationMs;
+      private final @Nullable Output<Integer> defaultPartitionExpirationMs;
 
-    public Input<Integer> getDefaultPartitionExpirationMs() {
-        return this.defaultPartitionExpirationMs == null ? Input.empty() : this.defaultPartitionExpirationMs;
+    public Output<Integer> getDefaultPartitionExpirationMs() {
+        return this.defaultPartitionExpirationMs == null ? Output.empty() : this.defaultPartitionExpirationMs;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultTableExpirationMs")
-      private final @Nullable Input<Integer> defaultTableExpirationMs;
+      private final @Nullable Output<Integer> defaultTableExpirationMs;
 
-    public Input<Integer> getDefaultTableExpirationMs() {
-        return this.defaultTableExpirationMs == null ? Input.empty() : this.defaultTableExpirationMs;
+    public Output<Integer> getDefaultTableExpirationMs() {
+        return this.defaultTableExpirationMs == null ? Output.empty() : this.defaultTableExpirationMs;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deleteContentsOnDestroy")
-      private final @Nullable Input<Boolean> deleteContentsOnDestroy;
+      private final @Nullable Output<Boolean> deleteContentsOnDestroy;
 
-    public Input<Boolean> getDeleteContentsOnDestroy() {
-        return this.deleteContentsOnDestroy == null ? Input.empty() : this.deleteContentsOnDestroy;
+    public Output<Boolean> getDeleteContentsOnDestroy() {
+        return this.deleteContentsOnDestroy == null ? Output.empty() : this.deleteContentsOnDestroy;
     }
 
     /**
@@ -110,10 +110,10 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -121,10 +121,10 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -132,10 +132,10 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="friendlyName")
-      private final @Nullable Input<String> friendlyName;
+      private final @Nullable Output<String> friendlyName;
 
-    public Input<String> getFriendlyName() {
-        return this.friendlyName == null ? Input.empty() : this.friendlyName;
+    public Output<String> getFriendlyName() {
+        return this.friendlyName == null ? Output.empty() : this.friendlyName;
     }
 
     /**
@@ -144,10 +144,10 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -155,10 +155,10 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModifiedTime")
-      private final @Nullable Input<Integer> lastModifiedTime;
+      private final @Nullable Output<Integer> lastModifiedTime;
 
-    public Input<Integer> getLastModifiedTime() {
-        return this.lastModifiedTime == null ? Input.empty() : this.lastModifiedTime;
+    public Output<Integer> getLastModifiedTime() {
+        return this.lastModifiedTime == null ? Output.empty() : this.lastModifiedTime;
     }
 
     /**
@@ -167,10 +167,10 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -179,10 +179,10 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -190,28 +190,28 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfLink")
-      private final @Nullable Input<String> selfLink;
+      private final @Nullable Output<String> selfLink;
 
-    public Input<String> getSelfLink() {
-        return this.selfLink == null ? Input.empty() : this.selfLink;
+    public Output<String> getSelfLink() {
+        return this.selfLink == null ? Output.empty() : this.selfLink;
     }
 
     public DatasetState(
-        @Nullable Input<List<DatasetAccessGetArgs>> accesses,
-        @Nullable Input<Integer> creationTime,
-        @Nullable Input<String> datasetId,
-        @Nullable Input<DatasetDefaultEncryptionConfigurationGetArgs> defaultEncryptionConfiguration,
-        @Nullable Input<Integer> defaultPartitionExpirationMs,
-        @Nullable Input<Integer> defaultTableExpirationMs,
-        @Nullable Input<Boolean> deleteContentsOnDestroy,
-        @Nullable Input<String> description,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> friendlyName,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<Integer> lastModifiedTime,
-        @Nullable Input<String> location,
-        @Nullable Input<String> project,
-        @Nullable Input<String> selfLink) {
+        @Nullable Output<List<DatasetAccessGetArgs>> accesses,
+        @Nullable Output<Integer> creationTime,
+        @Nullable Output<String> datasetId,
+        @Nullable Output<DatasetDefaultEncryptionConfigurationGetArgs> defaultEncryptionConfiguration,
+        @Nullable Output<Integer> defaultPartitionExpirationMs,
+        @Nullable Output<Integer> defaultTableExpirationMs,
+        @Nullable Output<Boolean> deleteContentsOnDestroy,
+        @Nullable Output<String> description,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> friendlyName,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<Integer> lastModifiedTime,
+        @Nullable Output<String> location,
+        @Nullable Output<String> project,
+        @Nullable Output<String> selfLink) {
         this.accesses = accesses;
         this.creationTime = creationTime;
         this.datasetId = datasetId;
@@ -230,21 +230,21 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DatasetState() {
-        this.accesses = Input.empty();
-        this.creationTime = Input.empty();
-        this.datasetId = Input.empty();
-        this.defaultEncryptionConfiguration = Input.empty();
-        this.defaultPartitionExpirationMs = Input.empty();
-        this.defaultTableExpirationMs = Input.empty();
-        this.deleteContentsOnDestroy = Input.empty();
-        this.description = Input.empty();
-        this.etag = Input.empty();
-        this.friendlyName = Input.empty();
-        this.labels = Input.empty();
-        this.lastModifiedTime = Input.empty();
-        this.location = Input.empty();
-        this.project = Input.empty();
-        this.selfLink = Input.empty();
+        this.accesses = Output.empty();
+        this.creationTime = Output.empty();
+        this.datasetId = Output.empty();
+        this.defaultEncryptionConfiguration = Output.empty();
+        this.defaultPartitionExpirationMs = Output.empty();
+        this.defaultTableExpirationMs = Output.empty();
+        this.deleteContentsOnDestroy = Output.empty();
+        this.description = Output.empty();
+        this.etag = Output.empty();
+        this.friendlyName = Output.empty();
+        this.labels = Output.empty();
+        this.lastModifiedTime = Output.empty();
+        this.location = Output.empty();
+        this.project = Output.empty();
+        this.selfLink = Output.empty();
     }
 
     public static Builder builder() {
@@ -256,21 +256,21 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<DatasetAccessGetArgs>> accesses;
-        private @Nullable Input<Integer> creationTime;
-        private @Nullable Input<String> datasetId;
-        private @Nullable Input<DatasetDefaultEncryptionConfigurationGetArgs> defaultEncryptionConfiguration;
-        private @Nullable Input<Integer> defaultPartitionExpirationMs;
-        private @Nullable Input<Integer> defaultTableExpirationMs;
-        private @Nullable Input<Boolean> deleteContentsOnDestroy;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> friendlyName;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<Integer> lastModifiedTime;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> selfLink;
+        private @Nullable Output<List<DatasetAccessGetArgs>> accesses;
+        private @Nullable Output<Integer> creationTime;
+        private @Nullable Output<String> datasetId;
+        private @Nullable Output<DatasetDefaultEncryptionConfigurationGetArgs> defaultEncryptionConfiguration;
+        private @Nullable Output<Integer> defaultPartitionExpirationMs;
+        private @Nullable Output<Integer> defaultTableExpirationMs;
+        private @Nullable Output<Boolean> deleteContentsOnDestroy;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> friendlyName;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<Integer> lastModifiedTime;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> selfLink;
 
         public Builder() {
     	      // Empty
@@ -295,153 +295,153 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
     	      this.selfLink = defaults.selfLink;
         }
 
-        public Builder accesses(@Nullable Input<List<DatasetAccessGetArgs>> accesses) {
+        public Builder accesses(@Nullable Output<List<DatasetAccessGetArgs>> accesses) {
             this.accesses = accesses;
             return this;
         }
 
         public Builder accesses(@Nullable List<DatasetAccessGetArgs> accesses) {
-            this.accesses = Input.ofNullable(accesses);
+            this.accesses = Output.ofNullable(accesses);
             return this;
         }
 
-        public Builder creationTime(@Nullable Input<Integer> creationTime) {
+        public Builder creationTime(@Nullable Output<Integer> creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
         public Builder creationTime(@Nullable Integer creationTime) {
-            this.creationTime = Input.ofNullable(creationTime);
+            this.creationTime = Output.ofNullable(creationTime);
             return this;
         }
 
-        public Builder datasetId(@Nullable Input<String> datasetId) {
+        public Builder datasetId(@Nullable Output<String> datasetId) {
             this.datasetId = datasetId;
             return this;
         }
 
         public Builder datasetId(@Nullable String datasetId) {
-            this.datasetId = Input.ofNullable(datasetId);
+            this.datasetId = Output.ofNullable(datasetId);
             return this;
         }
 
-        public Builder defaultEncryptionConfiguration(@Nullable Input<DatasetDefaultEncryptionConfigurationGetArgs> defaultEncryptionConfiguration) {
+        public Builder defaultEncryptionConfiguration(@Nullable Output<DatasetDefaultEncryptionConfigurationGetArgs> defaultEncryptionConfiguration) {
             this.defaultEncryptionConfiguration = defaultEncryptionConfiguration;
             return this;
         }
 
         public Builder defaultEncryptionConfiguration(@Nullable DatasetDefaultEncryptionConfigurationGetArgs defaultEncryptionConfiguration) {
-            this.defaultEncryptionConfiguration = Input.ofNullable(defaultEncryptionConfiguration);
+            this.defaultEncryptionConfiguration = Output.ofNullable(defaultEncryptionConfiguration);
             return this;
         }
 
-        public Builder defaultPartitionExpirationMs(@Nullable Input<Integer> defaultPartitionExpirationMs) {
+        public Builder defaultPartitionExpirationMs(@Nullable Output<Integer> defaultPartitionExpirationMs) {
             this.defaultPartitionExpirationMs = defaultPartitionExpirationMs;
             return this;
         }
 
         public Builder defaultPartitionExpirationMs(@Nullable Integer defaultPartitionExpirationMs) {
-            this.defaultPartitionExpirationMs = Input.ofNullable(defaultPartitionExpirationMs);
+            this.defaultPartitionExpirationMs = Output.ofNullable(defaultPartitionExpirationMs);
             return this;
         }
 
-        public Builder defaultTableExpirationMs(@Nullable Input<Integer> defaultTableExpirationMs) {
+        public Builder defaultTableExpirationMs(@Nullable Output<Integer> defaultTableExpirationMs) {
             this.defaultTableExpirationMs = defaultTableExpirationMs;
             return this;
         }
 
         public Builder defaultTableExpirationMs(@Nullable Integer defaultTableExpirationMs) {
-            this.defaultTableExpirationMs = Input.ofNullable(defaultTableExpirationMs);
+            this.defaultTableExpirationMs = Output.ofNullable(defaultTableExpirationMs);
             return this;
         }
 
-        public Builder deleteContentsOnDestroy(@Nullable Input<Boolean> deleteContentsOnDestroy) {
+        public Builder deleteContentsOnDestroy(@Nullable Output<Boolean> deleteContentsOnDestroy) {
             this.deleteContentsOnDestroy = deleteContentsOnDestroy;
             return this;
         }
 
         public Builder deleteContentsOnDestroy(@Nullable Boolean deleteContentsOnDestroy) {
-            this.deleteContentsOnDestroy = Input.ofNullable(deleteContentsOnDestroy);
+            this.deleteContentsOnDestroy = Output.ofNullable(deleteContentsOnDestroy);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder friendlyName(@Nullable Input<String> friendlyName) {
+        public Builder friendlyName(@Nullable Output<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Input.ofNullable(friendlyName);
+            this.friendlyName = Output.ofNullable(friendlyName);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder lastModifiedTime(@Nullable Input<Integer> lastModifiedTime) {
+        public Builder lastModifiedTime(@Nullable Output<Integer> lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
 
         public Builder lastModifiedTime(@Nullable Integer lastModifiedTime) {
-            this.lastModifiedTime = Input.ofNullable(lastModifiedTime);
+            this.lastModifiedTime = Output.ofNullable(lastModifiedTime);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder selfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Input.ofNullable(selfLink);
+            this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
         public DatasetState build() {

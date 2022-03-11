@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.azurenative.providerhub.inputs.ServiceTreeInfoArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -18,70 +18,70 @@ public final class ResourceProviderManifestPropertiesManagementArgs extends io.p
     public static final ResourceProviderManifestPropertiesManagementArgs Empty = new ResourceProviderManifestPropertiesManagementArgs();
 
     @InputImport(name="incidentContactEmail")
-      private final @Nullable Input<String> incidentContactEmail;
+      private final @Nullable Output<String> incidentContactEmail;
 
-    public Input<String> getIncidentContactEmail() {
-        return this.incidentContactEmail == null ? Input.empty() : this.incidentContactEmail;
+    public Output<String> getIncidentContactEmail() {
+        return this.incidentContactEmail == null ? Output.empty() : this.incidentContactEmail;
     }
 
     @InputImport(name="incidentRoutingService")
-      private final @Nullable Input<String> incidentRoutingService;
+      private final @Nullable Output<String> incidentRoutingService;
 
-    public Input<String> getIncidentRoutingService() {
-        return this.incidentRoutingService == null ? Input.empty() : this.incidentRoutingService;
+    public Output<String> getIncidentRoutingService() {
+        return this.incidentRoutingService == null ? Output.empty() : this.incidentRoutingService;
     }
 
     @InputImport(name="incidentRoutingTeam")
-      private final @Nullable Input<String> incidentRoutingTeam;
+      private final @Nullable Output<String> incidentRoutingTeam;
 
-    public Input<String> getIncidentRoutingTeam() {
-        return this.incidentRoutingTeam == null ? Input.empty() : this.incidentRoutingTeam;
+    public Output<String> getIncidentRoutingTeam() {
+        return this.incidentRoutingTeam == null ? Output.empty() : this.incidentRoutingTeam;
     }
 
     @InputImport(name="manifestOwners")
-      private final @Nullable Input<List<String>> manifestOwners;
+      private final @Nullable Output<List<String>> manifestOwners;
 
-    public Input<List<String>> getManifestOwners() {
-        return this.manifestOwners == null ? Input.empty() : this.manifestOwners;
+    public Output<List<String>> getManifestOwners() {
+        return this.manifestOwners == null ? Output.empty() : this.manifestOwners;
     }
 
     @InputImport(name="resourceAccessPolicy")
-      private final @Nullable Input<String> resourceAccessPolicy;
+      private final @Nullable Output<String> resourceAccessPolicy;
 
-    public Input<String> getResourceAccessPolicy() {
-        return this.resourceAccessPolicy == null ? Input.empty() : this.resourceAccessPolicy;
+    public Output<String> getResourceAccessPolicy() {
+        return this.resourceAccessPolicy == null ? Output.empty() : this.resourceAccessPolicy;
     }
 
     @InputImport(name="resourceAccessRoles")
-      private final @Nullable Input<List<Object>> resourceAccessRoles;
+      private final @Nullable Output<List<Object>> resourceAccessRoles;
 
-    public Input<List<Object>> getResourceAccessRoles() {
-        return this.resourceAccessRoles == null ? Input.empty() : this.resourceAccessRoles;
+    public Output<List<Object>> getResourceAccessRoles() {
+        return this.resourceAccessRoles == null ? Output.empty() : this.resourceAccessRoles;
     }
 
     @InputImport(name="schemaOwners")
-      private final @Nullable Input<List<String>> schemaOwners;
+      private final @Nullable Output<List<String>> schemaOwners;
 
-    public Input<List<String>> getSchemaOwners() {
-        return this.schemaOwners == null ? Input.empty() : this.schemaOwners;
+    public Output<List<String>> getSchemaOwners() {
+        return this.schemaOwners == null ? Output.empty() : this.schemaOwners;
     }
 
     @InputImport(name="serviceTreeInfos")
-      private final @Nullable Input<List<ServiceTreeInfoArgs>> serviceTreeInfos;
+      private final @Nullable Output<List<ServiceTreeInfoArgs>> serviceTreeInfos;
 
-    public Input<List<ServiceTreeInfoArgs>> getServiceTreeInfos() {
-        return this.serviceTreeInfos == null ? Input.empty() : this.serviceTreeInfos;
+    public Output<List<ServiceTreeInfoArgs>> getServiceTreeInfos() {
+        return this.serviceTreeInfos == null ? Output.empty() : this.serviceTreeInfos;
     }
 
     public ResourceProviderManifestPropertiesManagementArgs(
-        @Nullable Input<String> incidentContactEmail,
-        @Nullable Input<String> incidentRoutingService,
-        @Nullable Input<String> incidentRoutingTeam,
-        @Nullable Input<List<String>> manifestOwners,
-        @Nullable Input<String> resourceAccessPolicy,
-        @Nullable Input<List<Object>> resourceAccessRoles,
-        @Nullable Input<List<String>> schemaOwners,
-        @Nullable Input<List<ServiceTreeInfoArgs>> serviceTreeInfos) {
+        @Nullable Output<String> incidentContactEmail,
+        @Nullable Output<String> incidentRoutingService,
+        @Nullable Output<String> incidentRoutingTeam,
+        @Nullable Output<List<String>> manifestOwners,
+        @Nullable Output<String> resourceAccessPolicy,
+        @Nullable Output<List<Object>> resourceAccessRoles,
+        @Nullable Output<List<String>> schemaOwners,
+        @Nullable Output<List<ServiceTreeInfoArgs>> serviceTreeInfos) {
         this.incidentContactEmail = incidentContactEmail;
         this.incidentRoutingService = incidentRoutingService;
         this.incidentRoutingTeam = incidentRoutingTeam;
@@ -93,14 +93,14 @@ public final class ResourceProviderManifestPropertiesManagementArgs extends io.p
     }
 
     private ResourceProviderManifestPropertiesManagementArgs() {
-        this.incidentContactEmail = Input.empty();
-        this.incidentRoutingService = Input.empty();
-        this.incidentRoutingTeam = Input.empty();
-        this.manifestOwners = Input.empty();
-        this.resourceAccessPolicy = Input.empty();
-        this.resourceAccessRoles = Input.empty();
-        this.schemaOwners = Input.empty();
-        this.serviceTreeInfos = Input.empty();
+        this.incidentContactEmail = Output.empty();
+        this.incidentRoutingService = Output.empty();
+        this.incidentRoutingTeam = Output.empty();
+        this.manifestOwners = Output.empty();
+        this.resourceAccessPolicy = Output.empty();
+        this.resourceAccessRoles = Output.empty();
+        this.schemaOwners = Output.empty();
+        this.serviceTreeInfos = Output.empty();
     }
 
     public static Builder builder() {
@@ -112,14 +112,14 @@ public final class ResourceProviderManifestPropertiesManagementArgs extends io.p
     }
 
     public static final class Builder {
-        private @Nullable Input<String> incidentContactEmail;
-        private @Nullable Input<String> incidentRoutingService;
-        private @Nullable Input<String> incidentRoutingTeam;
-        private @Nullable Input<List<String>> manifestOwners;
-        private @Nullable Input<String> resourceAccessPolicy;
-        private @Nullable Input<List<Object>> resourceAccessRoles;
-        private @Nullable Input<List<String>> schemaOwners;
-        private @Nullable Input<List<ServiceTreeInfoArgs>> serviceTreeInfos;
+        private @Nullable Output<String> incidentContactEmail;
+        private @Nullable Output<String> incidentRoutingService;
+        private @Nullable Output<String> incidentRoutingTeam;
+        private @Nullable Output<List<String>> manifestOwners;
+        private @Nullable Output<String> resourceAccessPolicy;
+        private @Nullable Output<List<Object>> resourceAccessRoles;
+        private @Nullable Output<List<String>> schemaOwners;
+        private @Nullable Output<List<ServiceTreeInfoArgs>> serviceTreeInfos;
 
         public Builder() {
     	      // Empty
@@ -137,83 +137,83 @@ public final class ResourceProviderManifestPropertiesManagementArgs extends io.p
     	      this.serviceTreeInfos = defaults.serviceTreeInfos;
         }
 
-        public Builder incidentContactEmail(@Nullable Input<String> incidentContactEmail) {
+        public Builder incidentContactEmail(@Nullable Output<String> incidentContactEmail) {
             this.incidentContactEmail = incidentContactEmail;
             return this;
         }
 
         public Builder incidentContactEmail(@Nullable String incidentContactEmail) {
-            this.incidentContactEmail = Input.ofNullable(incidentContactEmail);
+            this.incidentContactEmail = Output.ofNullable(incidentContactEmail);
             return this;
         }
 
-        public Builder incidentRoutingService(@Nullable Input<String> incidentRoutingService) {
+        public Builder incidentRoutingService(@Nullable Output<String> incidentRoutingService) {
             this.incidentRoutingService = incidentRoutingService;
             return this;
         }
 
         public Builder incidentRoutingService(@Nullable String incidentRoutingService) {
-            this.incidentRoutingService = Input.ofNullable(incidentRoutingService);
+            this.incidentRoutingService = Output.ofNullable(incidentRoutingService);
             return this;
         }
 
-        public Builder incidentRoutingTeam(@Nullable Input<String> incidentRoutingTeam) {
+        public Builder incidentRoutingTeam(@Nullable Output<String> incidentRoutingTeam) {
             this.incidentRoutingTeam = incidentRoutingTeam;
             return this;
         }
 
         public Builder incidentRoutingTeam(@Nullable String incidentRoutingTeam) {
-            this.incidentRoutingTeam = Input.ofNullable(incidentRoutingTeam);
+            this.incidentRoutingTeam = Output.ofNullable(incidentRoutingTeam);
             return this;
         }
 
-        public Builder manifestOwners(@Nullable Input<List<String>> manifestOwners) {
+        public Builder manifestOwners(@Nullable Output<List<String>> manifestOwners) {
             this.manifestOwners = manifestOwners;
             return this;
         }
 
         public Builder manifestOwners(@Nullable List<String> manifestOwners) {
-            this.manifestOwners = Input.ofNullable(manifestOwners);
+            this.manifestOwners = Output.ofNullable(manifestOwners);
             return this;
         }
 
-        public Builder resourceAccessPolicy(@Nullable Input<String> resourceAccessPolicy) {
+        public Builder resourceAccessPolicy(@Nullable Output<String> resourceAccessPolicy) {
             this.resourceAccessPolicy = resourceAccessPolicy;
             return this;
         }
 
         public Builder resourceAccessPolicy(@Nullable String resourceAccessPolicy) {
-            this.resourceAccessPolicy = Input.ofNullable(resourceAccessPolicy);
+            this.resourceAccessPolicy = Output.ofNullable(resourceAccessPolicy);
             return this;
         }
 
-        public Builder resourceAccessRoles(@Nullable Input<List<Object>> resourceAccessRoles) {
+        public Builder resourceAccessRoles(@Nullable Output<List<Object>> resourceAccessRoles) {
             this.resourceAccessRoles = resourceAccessRoles;
             return this;
         }
 
         public Builder resourceAccessRoles(@Nullable List<Object> resourceAccessRoles) {
-            this.resourceAccessRoles = Input.ofNullable(resourceAccessRoles);
+            this.resourceAccessRoles = Output.ofNullable(resourceAccessRoles);
             return this;
         }
 
-        public Builder schemaOwners(@Nullable Input<List<String>> schemaOwners) {
+        public Builder schemaOwners(@Nullable Output<List<String>> schemaOwners) {
             this.schemaOwners = schemaOwners;
             return this;
         }
 
         public Builder schemaOwners(@Nullable List<String> schemaOwners) {
-            this.schemaOwners = Input.ofNullable(schemaOwners);
+            this.schemaOwners = Output.ofNullable(schemaOwners);
             return this;
         }
 
-        public Builder serviceTreeInfos(@Nullable Input<List<ServiceTreeInfoArgs>> serviceTreeInfos) {
+        public Builder serviceTreeInfos(@Nullable Output<List<ServiceTreeInfoArgs>> serviceTreeInfos) {
             this.serviceTreeInfos = serviceTreeInfos;
             return this;
         }
 
         public Builder serviceTreeInfos(@Nullable List<ServiceTreeInfoArgs> serviceTreeInfos) {
-            this.serviceTreeInfos = Input.ofNullable(serviceTreeInfos);
+            this.serviceTreeInfos = Output.ofNullable(serviceTreeInfos);
             return this;
         }
         public ResourceProviderManifestPropertiesManagementArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.azurenative.apimanagement.enums.LoggerType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class LoggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="credentials")
-      private final @Nullable Input<Map<String,String>> credentials;
+      private final @Nullable Output<Map<String,String>> credentials;
 
-    public Input<Map<String,String>> getCredentials() {
-        return this.credentials == null ? Input.empty() : this.credentials;
+    public Output<Map<String,String>> getCredentials() {
+        return this.credentials == null ? Output.empty() : this.credentials;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class LoggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class LoggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isBuffered")
-      private final @Nullable Input<Boolean> isBuffered;
+      private final @Nullable Output<Boolean> isBuffered;
 
-    public Input<Boolean> getIsBuffered() {
-        return this.isBuffered == null ? Input.empty() : this.isBuffered;
+    public Output<Boolean> getIsBuffered() {
+        return this.isBuffered == null ? Output.empty() : this.isBuffered;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class LoggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loggerId")
-      private final @Nullable Input<String> loggerId;
+      private final @Nullable Output<String> loggerId;
 
-    public Input<String> getLoggerId() {
-        return this.loggerId == null ? Input.empty() : this.loggerId;
+    public Output<String> getLoggerId() {
+        return this.loggerId == null ? Output.empty() : this.loggerId;
     }
 
     /**
@@ -68,9 +68,9 @@ public final class LoggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loggerType", required=true)
-      private final Input<Either<String,LoggerType>> loggerType;
+      private final Output<Either<String,LoggerType>> loggerType;
 
-    public Input<Either<String,LoggerType>> getLoggerType() {
+    public Output<Either<String,LoggerType>> getLoggerType() {
         return this.loggerType;
     }
 
@@ -79,9 +79,9 @@ public final class LoggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -90,10 +90,10 @@ public final class LoggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceId")
-      private final @Nullable Input<String> resourceId;
+      private final @Nullable Output<String> resourceId;
 
-    public Input<String> getResourceId() {
-        return this.resourceId == null ? Input.empty() : this.resourceId;
+    public Output<String> getResourceId() {
+        return this.resourceId == null ? Output.empty() : this.resourceId;
     }
 
     /**
@@ -101,21 +101,21 @@ public final class LoggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-      private final Input<String> serviceName;
+      private final Output<String> serviceName;
 
-    public Input<String> getServiceName() {
+    public Output<String> getServiceName() {
         return this.serviceName;
     }
 
     public LoggerArgs(
-        @Nullable Input<Map<String,String>> credentials,
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> isBuffered,
-        @Nullable Input<String> loggerId,
-        Input<Either<String,LoggerType>> loggerType,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> resourceId,
-        Input<String> serviceName) {
+        @Nullable Output<Map<String,String>> credentials,
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> isBuffered,
+        @Nullable Output<String> loggerId,
+        Output<Either<String,LoggerType>> loggerType,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> resourceId,
+        Output<String> serviceName) {
         this.credentials = credentials;
         this.description = description;
         this.isBuffered = isBuffered;
@@ -127,14 +127,14 @@ public final class LoggerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LoggerArgs() {
-        this.credentials = Input.empty();
-        this.description = Input.empty();
-        this.isBuffered = Input.empty();
-        this.loggerId = Input.empty();
-        this.loggerType = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceId = Input.empty();
-        this.serviceName = Input.empty();
+        this.credentials = Output.empty();
+        this.description = Output.empty();
+        this.isBuffered = Output.empty();
+        this.loggerId = Output.empty();
+        this.loggerType = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceId = Output.empty();
+        this.serviceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -146,14 +146,14 @@ public final class LoggerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> credentials;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> isBuffered;
-        private @Nullable Input<String> loggerId;
-        private Input<Either<String,LoggerType>> loggerType;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> resourceId;
-        private Input<String> serviceName;
+        private @Nullable Output<Map<String,String>> credentials;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> isBuffered;
+        private @Nullable Output<String> loggerId;
+        private Output<Either<String,LoggerType>> loggerType;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> resourceId;
+        private Output<String> serviceName;
 
         public Builder() {
     	      // Empty
@@ -171,83 +171,83 @@ public final class LoggerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder credentials(@Nullable Input<Map<String,String>> credentials) {
+        public Builder credentials(@Nullable Output<Map<String,String>> credentials) {
             this.credentials = credentials;
             return this;
         }
 
         public Builder credentials(@Nullable Map<String,String> credentials) {
-            this.credentials = Input.ofNullable(credentials);
+            this.credentials = Output.ofNullable(credentials);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder isBuffered(@Nullable Input<Boolean> isBuffered) {
+        public Builder isBuffered(@Nullable Output<Boolean> isBuffered) {
             this.isBuffered = isBuffered;
             return this;
         }
 
         public Builder isBuffered(@Nullable Boolean isBuffered) {
-            this.isBuffered = Input.ofNullable(isBuffered);
+            this.isBuffered = Output.ofNullable(isBuffered);
             return this;
         }
 
-        public Builder loggerId(@Nullable Input<String> loggerId) {
+        public Builder loggerId(@Nullable Output<String> loggerId) {
             this.loggerId = loggerId;
             return this;
         }
 
         public Builder loggerId(@Nullable String loggerId) {
-            this.loggerId = Input.ofNullable(loggerId);
+            this.loggerId = Output.ofNullable(loggerId);
             return this;
         }
 
-        public Builder loggerType(Input<Either<String,LoggerType>> loggerType) {
+        public Builder loggerType(Output<Either<String,LoggerType>> loggerType) {
             this.loggerType = Objects.requireNonNull(loggerType);
             return this;
         }
 
         public Builder loggerType(Either<String,LoggerType> loggerType) {
-            this.loggerType = Input.of(Objects.requireNonNull(loggerType));
+            this.loggerType = Output.of(Objects.requireNonNull(loggerType));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Input.ofNullable(resourceId);
+            this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
 
-        public Builder serviceName(Input<String> serviceName) {
+        public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Input.of(Objects.requireNonNull(serviceName));
+            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
         public LoggerArgs build() {

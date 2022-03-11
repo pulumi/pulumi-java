@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.remotebuildexecution_v1alpha;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.remotebuildexecution_v1alpha.inputs.GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs;
 import io.pulumi.googlenative.remotebuildexecution_v1alpha.inputs.GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs;
@@ -21,10 +21,10 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoscale")
-      private final @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs> autoscale;
+      private final @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs> autoscale;
 
-    public Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs> getAutoscale() {
-        return this.autoscale == null ? Input.empty() : this.autoscale;
+    public Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs> getAutoscale() {
+        return this.autoscale == null ? Output.empty() : this.autoscale;
     }
 
     /**
@@ -32,16 +32,16 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="channel")
-      private final @Nullable Input<String> channel;
+      private final @Nullable Output<String> channel;
 
-    public Input<String> getChannel() {
-        return this.channel == null ? Input.empty() : this.channel;
+    public Output<String> getChannel() {
+        return this.channel == null ? Output.empty() : this.channel;
     }
 
     @InputImport(name="instanceId", required=true)
-      private final Input<String> instanceId;
+      private final Output<String> instanceId;
 
-    public Input<String> getInstanceId() {
+    public Output<String> getInstanceId() {
         return this.instanceId;
     }
 
@@ -50,10 +50,10 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent")
-      private final @Nullable Input<String> parent;
+      private final @Nullable Output<String> parent;
 
-    public Input<String> getParent() {
-        return this.parent == null ? Input.empty() : this.parent;
+    public Output<String> getParent() {
+        return this.parent == null ? Output.empty() : this.parent;
     }
 
     /**
@@ -72,17 +72,17 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="poolId")
-      private final @Nullable Input<String> poolId;
+      private final @Nullable Output<String> poolId;
 
-    public Input<String> getPoolId() {
-        return this.poolId == null ? Input.empty() : this.poolId;
+    public Output<String> getPoolId() {
+        return this.poolId == null ? Output.empty() : this.poolId;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workerConfig")
-      private final @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs> workerConfig;
+      private final @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs> workerConfig;
 
-    public Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs> getWorkerConfig() {
-        return this.workerConfig == null ? Input.empty() : this.workerConfig;
+    public Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs> getWorkerConfig() {
+        return this.workerConfig == null ? Output.empty() : this.workerConfig;
     }
 
     /**
@@ -101,22 +101,22 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workerCount")
-      private final @Nullable Input<String> workerCount;
+      private final @Nullable Output<String> workerCount;
 
-    public Input<String> getWorkerCount() {
-        return this.workerCount == null ? Input.empty() : this.workerCount;
+    public Output<String> getWorkerCount() {
+        return this.workerCount == null ? Output.empty() : this.workerCount;
     }
 
     public WorkerPoolArgs(
-        @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs> autoscale,
-        @Nullable Input<String> channel,
-        Input<String> instanceId,
-        @Nullable Input<String> name,
-        @Nullable Input<String> parent,
-        @Nullable Input<String> poolId,
-        @Nullable Input<String> project,
-        @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs> workerConfig,
-        @Nullable Input<String> workerCount) {
+        @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs> autoscale,
+        @Nullable Output<String> channel,
+        Output<String> instanceId,
+        @Nullable Output<String> name,
+        @Nullable Output<String> parent,
+        @Nullable Output<String> poolId,
+        @Nullable Output<String> project,
+        @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs> workerConfig,
+        @Nullable Output<String> workerCount) {
         this.autoscale = autoscale;
         this.channel = channel;
         this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
@@ -129,15 +129,15 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WorkerPoolArgs() {
-        this.autoscale = Input.empty();
-        this.channel = Input.empty();
-        this.instanceId = Input.empty();
-        this.name = Input.empty();
-        this.parent = Input.empty();
-        this.poolId = Input.empty();
-        this.project = Input.empty();
-        this.workerConfig = Input.empty();
-        this.workerCount = Input.empty();
+        this.autoscale = Output.empty();
+        this.channel = Output.empty();
+        this.instanceId = Output.empty();
+        this.name = Output.empty();
+        this.parent = Output.empty();
+        this.poolId = Output.empty();
+        this.project = Output.empty();
+        this.workerConfig = Output.empty();
+        this.workerCount = Output.empty();
     }
 
     public static Builder builder() {
@@ -149,15 +149,15 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs> autoscale;
-        private @Nullable Input<String> channel;
-        private Input<String> instanceId;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> parent;
-        private @Nullable Input<String> poolId;
-        private @Nullable Input<String> project;
-        private @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs> workerConfig;
-        private @Nullable Input<String> workerCount;
+        private @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs> autoscale;
+        private @Nullable Output<String> channel;
+        private Output<String> instanceId;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> parent;
+        private @Nullable Output<String> poolId;
+        private @Nullable Output<String> project;
+        private @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs> workerConfig;
+        private @Nullable Output<String> workerCount;
 
         public Builder() {
     	      // Empty
@@ -176,93 +176,93 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workerCount = defaults.workerCount;
         }
 
-        public Builder autoscale(@Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs> autoscale) {
+        public Builder autoscale(@Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs> autoscale) {
             this.autoscale = autoscale;
             return this;
         }
 
         public Builder autoscale(@Nullable GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs autoscale) {
-            this.autoscale = Input.ofNullable(autoscale);
+            this.autoscale = Output.ofNullable(autoscale);
             return this;
         }
 
-        public Builder channel(@Nullable Input<String> channel) {
+        public Builder channel(@Nullable Output<String> channel) {
             this.channel = channel;
             return this;
         }
 
         public Builder channel(@Nullable String channel) {
-            this.channel = Input.ofNullable(channel);
+            this.channel = Output.ofNullable(channel);
             return this;
         }
 
-        public Builder instanceId(Input<String> instanceId) {
+        public Builder instanceId(Output<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
         public Builder instanceId(String instanceId) {
-            this.instanceId = Input.of(Objects.requireNonNull(instanceId));
+            this.instanceId = Output.of(Objects.requireNonNull(instanceId));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder parent(@Nullable Input<String> parent) {
+        public Builder parent(@Nullable Output<String> parent) {
             this.parent = parent;
             return this;
         }
 
         public Builder parent(@Nullable String parent) {
-            this.parent = Input.ofNullable(parent);
+            this.parent = Output.ofNullable(parent);
             return this;
         }
 
-        public Builder poolId(@Nullable Input<String> poolId) {
+        public Builder poolId(@Nullable Output<String> poolId) {
             this.poolId = poolId;
             return this;
         }
 
         public Builder poolId(@Nullable String poolId) {
-            this.poolId = Input.ofNullable(poolId);
+            this.poolId = Output.ofNullable(poolId);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder workerConfig(@Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs> workerConfig) {
+        public Builder workerConfig(@Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs> workerConfig) {
             this.workerConfig = workerConfig;
             return this;
         }
 
         public Builder workerConfig(@Nullable GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs workerConfig) {
-            this.workerConfig = Input.ofNullable(workerConfig);
+            this.workerConfig = Output.ofNullable(workerConfig);
             return this;
         }
 
-        public Builder workerCount(@Nullable Input<String> workerCount) {
+        public Builder workerCount(@Nullable Output<String> workerCount) {
             this.workerCount = workerCount;
             return this;
         }
 
         public Builder workerCount(@Nullable String workerCount) {
-            this.workerCount = Input.ofNullable(workerCount);
+            this.workerCount = Output.ofNullable(workerCount);
             return this;
         }
         public WorkerPoolArgs build() {

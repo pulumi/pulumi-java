@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.inputs.BotSlotDefaultValueArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class BotSlotDefaultValueSpecificationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="defaultValueList", required=true)
-      private final Input<List<BotSlotDefaultValueArgs>> defaultValueList;
+      private final Output<List<BotSlotDefaultValueArgs>> defaultValueList;
 
-    public Input<List<BotSlotDefaultValueArgs>> getDefaultValueList() {
+    public Output<List<BotSlotDefaultValueArgs>> getDefaultValueList() {
         return this.defaultValueList;
     }
 
-    public BotSlotDefaultValueSpecificationArgs(Input<List<BotSlotDefaultValueArgs>> defaultValueList) {
+    public BotSlotDefaultValueSpecificationArgs(Output<List<BotSlotDefaultValueArgs>> defaultValueList) {
         this.defaultValueList = Objects.requireNonNull(defaultValueList, "expected parameter 'defaultValueList' to be non-null");
     }
 
     private BotSlotDefaultValueSpecificationArgs() {
-        this.defaultValueList = Input.empty();
+        this.defaultValueList = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class BotSlotDefaultValueSpecificationArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private Input<List<BotSlotDefaultValueArgs>> defaultValueList;
+        private Output<List<BotSlotDefaultValueArgs>> defaultValueList;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class BotSlotDefaultValueSpecificationArgs extends io.pulumi.resour
     	      this.defaultValueList = defaults.defaultValueList;
         }
 
-        public Builder defaultValueList(Input<List<BotSlotDefaultValueArgs>> defaultValueList) {
+        public Builder defaultValueList(Output<List<BotSlotDefaultValueArgs>> defaultValueList) {
             this.defaultValueList = Objects.requireNonNull(defaultValueList);
             return this;
         }
 
         public Builder defaultValueList(List<BotSlotDefaultValueArgs> defaultValueList) {
-            this.defaultValueList = Input.of(Objects.requireNonNull(defaultValueList));
+            this.defaultValueList = Output.of(Objects.requireNonNull(defaultValueList));
             return this;
         }
         public BotSlotDefaultValueSpecificationArgs build() {

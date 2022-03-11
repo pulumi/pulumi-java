@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.azurenative.securityinsights.inputs.TIDataConnectorDataTypesIndicatorsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class TIDataConnectorDataTypesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="indicators")
-      private final @Nullable Input<TIDataConnectorDataTypesIndicatorsArgs> indicators;
+      private final @Nullable Output<TIDataConnectorDataTypesIndicatorsArgs> indicators;
 
-    public Input<TIDataConnectorDataTypesIndicatorsArgs> getIndicators() {
-        return this.indicators == null ? Input.empty() : this.indicators;
+    public Output<TIDataConnectorDataTypesIndicatorsArgs> getIndicators() {
+        return this.indicators == null ? Output.empty() : this.indicators;
     }
 
-    public TIDataConnectorDataTypesArgs(@Nullable Input<TIDataConnectorDataTypesIndicatorsArgs> indicators) {
+    public TIDataConnectorDataTypesArgs(@Nullable Output<TIDataConnectorDataTypesIndicatorsArgs> indicators) {
         this.indicators = indicators;
     }
 
     private TIDataConnectorDataTypesArgs() {
-        this.indicators = Input.empty();
+        this.indicators = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class TIDataConnectorDataTypesArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<TIDataConnectorDataTypesIndicatorsArgs> indicators;
+        private @Nullable Output<TIDataConnectorDataTypesIndicatorsArgs> indicators;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class TIDataConnectorDataTypesArgs extends io.pulumi.resources.Reso
     	      this.indicators = defaults.indicators;
         }
 
-        public Builder indicators(@Nullable Input<TIDataConnectorDataTypesIndicatorsArgs> indicators) {
+        public Builder indicators(@Nullable Output<TIDataConnectorDataTypesIndicatorsArgs> indicators) {
             this.indicators = indicators;
             return this;
         }
 
         public Builder indicators(@Nullable TIDataConnectorDataTypesIndicatorsArgs indicators) {
-            this.indicators = Input.ofNullable(indicators);
+            this.indicators = Output.ofNullable(indicators);
             return this;
         }
         public TIDataConnectorDataTypesArgs build() {

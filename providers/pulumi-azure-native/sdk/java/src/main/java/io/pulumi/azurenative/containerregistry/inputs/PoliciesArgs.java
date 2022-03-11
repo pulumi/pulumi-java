@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 import io.pulumi.azurenative.containerregistry.inputs.QuarantinePolicyArgs;
 import io.pulumi.azurenative.containerregistry.inputs.RetentionPolicyArgs;
 import io.pulumi.azurenative.containerregistry.inputs.TrustPolicyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,10 +25,10 @@ public final class PoliciesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="quarantinePolicy")
-      private final @Nullable Input<QuarantinePolicyArgs> quarantinePolicy;
+      private final @Nullable Output<QuarantinePolicyArgs> quarantinePolicy;
 
-    public Input<QuarantinePolicyArgs> getQuarantinePolicy() {
-        return this.quarantinePolicy == null ? Input.empty() : this.quarantinePolicy;
+    public Output<QuarantinePolicyArgs> getQuarantinePolicy() {
+        return this.quarantinePolicy == null ? Output.empty() : this.quarantinePolicy;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PoliciesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionPolicy")
-      private final @Nullable Input<RetentionPolicyArgs> retentionPolicy;
+      private final @Nullable Output<RetentionPolicyArgs> retentionPolicy;
 
-    public Input<RetentionPolicyArgs> getRetentionPolicy() {
-        return this.retentionPolicy == null ? Input.empty() : this.retentionPolicy;
+    public Output<RetentionPolicyArgs> getRetentionPolicy() {
+        return this.retentionPolicy == null ? Output.empty() : this.retentionPolicy;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class PoliciesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trustPolicy")
-      private final @Nullable Input<TrustPolicyArgs> trustPolicy;
+      private final @Nullable Output<TrustPolicyArgs> trustPolicy;
 
-    public Input<TrustPolicyArgs> getTrustPolicy() {
-        return this.trustPolicy == null ? Input.empty() : this.trustPolicy;
+    public Output<TrustPolicyArgs> getTrustPolicy() {
+        return this.trustPolicy == null ? Output.empty() : this.trustPolicy;
     }
 
     public PoliciesArgs(
-        @Nullable Input<QuarantinePolicyArgs> quarantinePolicy,
-        @Nullable Input<RetentionPolicyArgs> retentionPolicy,
-        @Nullable Input<TrustPolicyArgs> trustPolicy) {
+        @Nullable Output<QuarantinePolicyArgs> quarantinePolicy,
+        @Nullable Output<RetentionPolicyArgs> retentionPolicy,
+        @Nullable Output<TrustPolicyArgs> trustPolicy) {
         this.quarantinePolicy = quarantinePolicy;
         this.retentionPolicy = retentionPolicy;
         this.trustPolicy = trustPolicy;
     }
 
     private PoliciesArgs() {
-        this.quarantinePolicy = Input.empty();
-        this.retentionPolicy = Input.empty();
-        this.trustPolicy = Input.empty();
+        this.quarantinePolicy = Output.empty();
+        this.retentionPolicy = Output.empty();
+        this.trustPolicy = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class PoliciesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<QuarantinePolicyArgs> quarantinePolicy;
-        private @Nullable Input<RetentionPolicyArgs> retentionPolicy;
-        private @Nullable Input<TrustPolicyArgs> trustPolicy;
+        private @Nullable Output<QuarantinePolicyArgs> quarantinePolicy;
+        private @Nullable Output<RetentionPolicyArgs> retentionPolicy;
+        private @Nullable Output<TrustPolicyArgs> trustPolicy;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class PoliciesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.trustPolicy = defaults.trustPolicy;
         }
 
-        public Builder quarantinePolicy(@Nullable Input<QuarantinePolicyArgs> quarantinePolicy) {
+        public Builder quarantinePolicy(@Nullable Output<QuarantinePolicyArgs> quarantinePolicy) {
             this.quarantinePolicy = quarantinePolicy;
             return this;
         }
 
         public Builder quarantinePolicy(@Nullable QuarantinePolicyArgs quarantinePolicy) {
-            this.quarantinePolicy = Input.ofNullable(quarantinePolicy);
+            this.quarantinePolicy = Output.ofNullable(quarantinePolicy);
             return this;
         }
 
-        public Builder retentionPolicy(@Nullable Input<RetentionPolicyArgs> retentionPolicy) {
+        public Builder retentionPolicy(@Nullable Output<RetentionPolicyArgs> retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
 
         public Builder retentionPolicy(@Nullable RetentionPolicyArgs retentionPolicy) {
-            this.retentionPolicy = Input.ofNullable(retentionPolicy);
+            this.retentionPolicy = Output.ofNullable(retentionPolicy);
             return this;
         }
 
-        public Builder trustPolicy(@Nullable Input<TrustPolicyArgs> trustPolicy) {
+        public Builder trustPolicy(@Nullable Output<TrustPolicyArgs> trustPolicy) {
             this.trustPolicy = trustPolicy;
             return this;
         }
 
         public Builder trustPolicy(@Nullable TrustPolicyArgs trustPolicy) {
-            this.trustPolicy = Input.ofNullable(trustPolicy);
+            this.trustPolicy = Output.ofNullable(trustPolicy);
             return this;
         }
         public PoliciesArgs build() {

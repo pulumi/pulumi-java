@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.sagemaker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class FlowDefinitionHumanLoopRequestSourceArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="awsManagedHumanLoopRequestSource", required=true)
-      private final Input<String> awsManagedHumanLoopRequestSource;
+      private final Output<String> awsManagedHumanLoopRequestSource;
 
-    public Input<String> getAwsManagedHumanLoopRequestSource() {
+    public Output<String> getAwsManagedHumanLoopRequestSource() {
         return this.awsManagedHumanLoopRequestSource;
     }
 
-    public FlowDefinitionHumanLoopRequestSourceArgs(Input<String> awsManagedHumanLoopRequestSource) {
+    public FlowDefinitionHumanLoopRequestSourceArgs(Output<String> awsManagedHumanLoopRequestSource) {
         this.awsManagedHumanLoopRequestSource = Objects.requireNonNull(awsManagedHumanLoopRequestSource, "expected parameter 'awsManagedHumanLoopRequestSource' to be non-null");
     }
 
     private FlowDefinitionHumanLoopRequestSourceArgs() {
-        this.awsManagedHumanLoopRequestSource = Input.empty();
+        this.awsManagedHumanLoopRequestSource = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class FlowDefinitionHumanLoopRequestSourceArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private Input<String> awsManagedHumanLoopRequestSource;
+        private Output<String> awsManagedHumanLoopRequestSource;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class FlowDefinitionHumanLoopRequestSourceArgs extends io.pulumi.re
     	      this.awsManagedHumanLoopRequestSource = defaults.awsManagedHumanLoopRequestSource;
         }
 
-        public Builder awsManagedHumanLoopRequestSource(Input<String> awsManagedHumanLoopRequestSource) {
+        public Builder awsManagedHumanLoopRequestSource(Output<String> awsManagedHumanLoopRequestSource) {
             this.awsManagedHumanLoopRequestSource = Objects.requireNonNull(awsManagedHumanLoopRequestSource);
             return this;
         }
 
         public Builder awsManagedHumanLoopRequestSource(String awsManagedHumanLoopRequestSource) {
-            this.awsManagedHumanLoopRequestSource = Input.of(Objects.requireNonNull(awsManagedHumanLoopRequestSource));
+            this.awsManagedHumanLoopRequestSource = Output.of(Objects.requireNonNull(awsManagedHumanLoopRequestSource));
             return this;
         }
         public FlowDefinitionHumanLoopRequestSourceArgs build() {

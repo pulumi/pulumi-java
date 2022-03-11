@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.botservice.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class TelegramChannelPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="accessToken")
-      private final @Nullable Input<String> accessToken;
+      private final @Nullable Output<String> accessToken;
 
-    public Input<String> getAccessToken() {
-        return this.accessToken == null ? Input.empty() : this.accessToken;
+    public Output<String> getAccessToken() {
+        return this.accessToken == null ? Output.empty() : this.accessToken;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class TelegramChannelPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="isEnabled", required=true)
-      private final Input<Boolean> isEnabled;
+      private final Output<Boolean> isEnabled;
 
-    public Input<Boolean> getIsEnabled() {
+    public Output<Boolean> getIsEnabled() {
         return this.isEnabled;
     }
 
@@ -46,25 +46,25 @@ public final class TelegramChannelPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="isValidated")
-      private final @Nullable Input<Boolean> isValidated;
+      private final @Nullable Output<Boolean> isValidated;
 
-    public Input<Boolean> getIsValidated() {
-        return this.isValidated == null ? Input.empty() : this.isValidated;
+    public Output<Boolean> getIsValidated() {
+        return this.isValidated == null ? Output.empty() : this.isValidated;
     }
 
     public TelegramChannelPropertiesArgs(
-        @Nullable Input<String> accessToken,
-        Input<Boolean> isEnabled,
-        @Nullable Input<Boolean> isValidated) {
+        @Nullable Output<String> accessToken,
+        Output<Boolean> isEnabled,
+        @Nullable Output<Boolean> isValidated) {
         this.accessToken = accessToken;
         this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
         this.isValidated = isValidated;
     }
 
     private TelegramChannelPropertiesArgs() {
-        this.accessToken = Input.empty();
-        this.isEnabled = Input.empty();
-        this.isValidated = Input.empty();
+        this.accessToken = Output.empty();
+        this.isEnabled = Output.empty();
+        this.isValidated = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class TelegramChannelPropertiesArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accessToken;
-        private Input<Boolean> isEnabled;
-        private @Nullable Input<Boolean> isValidated;
+        private @Nullable Output<String> accessToken;
+        private Output<Boolean> isEnabled;
+        private @Nullable Output<Boolean> isValidated;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class TelegramChannelPropertiesArgs extends io.pulumi.resources.Res
     	      this.isValidated = defaults.isValidated;
         }
 
-        public Builder accessToken(@Nullable Input<String> accessToken) {
+        public Builder accessToken(@Nullable Output<String> accessToken) {
             this.accessToken = accessToken;
             return this;
         }
 
         public Builder accessToken(@Nullable String accessToken) {
-            this.accessToken = Input.ofNullable(accessToken);
+            this.accessToken = Output.ofNullable(accessToken);
             return this;
         }
 
-        public Builder isEnabled(Input<Boolean> isEnabled) {
+        public Builder isEnabled(Output<Boolean> isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Input.of(Objects.requireNonNull(isEnabled));
+            this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
             return this;
         }
 
-        public Builder isValidated(@Nullable Input<Boolean> isValidated) {
+        public Builder isValidated(@Nullable Output<Boolean> isValidated) {
             this.isValidated = isValidated;
             return this;
         }
 
         public Builder isValidated(@Nullable Boolean isValidated) {
-            this.isValidated = Input.ofNullable(isValidated);
+            this.isValidated = Output.ofNullable(isValidated);
             return this;
         }
         public TelegramChannelPropertiesArgs build() {

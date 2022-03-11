@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.ConnectionErrorArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class ConnectionStatusDefinitionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="error")
-      private final @Nullable Input<ConnectionErrorArgs> error;
+      private final @Nullable Output<ConnectionErrorArgs> error;
 
-    public Input<ConnectionErrorArgs> getError() {
-        return this.error == null ? Input.empty() : this.error;
+    public Output<ConnectionErrorArgs> getError() {
+        return this.error == null ? Output.empty() : this.error;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ConnectionStatusDefinitionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class ConnectionStatusDefinitionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="target")
-      private final @Nullable Input<String> target;
+      private final @Nullable Output<String> target;
 
-    public Input<String> getTarget() {
-        return this.target == null ? Input.empty() : this.target;
+    public Output<String> getTarget() {
+        return this.target == null ? Output.empty() : this.target;
     }
 
     public ConnectionStatusDefinitionArgs(
-        @Nullable Input<ConnectionErrorArgs> error,
-        @Nullable Input<String> status,
-        @Nullable Input<String> target) {
+        @Nullable Output<ConnectionErrorArgs> error,
+        @Nullable Output<String> status,
+        @Nullable Output<String> target) {
         this.error = error;
         this.status = status;
         this.target = target;
     }
 
     private ConnectionStatusDefinitionArgs() {
-        this.error = Input.empty();
-        this.status = Input.empty();
-        this.target = Input.empty();
+        this.error = Output.empty();
+        this.status = Output.empty();
+        this.target = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class ConnectionStatusDefinitionArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<ConnectionErrorArgs> error;
-        private @Nullable Input<String> status;
-        private @Nullable Input<String> target;
+        private @Nullable Output<ConnectionErrorArgs> error;
+        private @Nullable Output<String> status;
+        private @Nullable Output<String> target;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class ConnectionStatusDefinitionArgs extends io.pulumi.resources.Re
     	      this.target = defaults.target;
         }
 
-        public Builder error(@Nullable Input<ConnectionErrorArgs> error) {
+        public Builder error(@Nullable Output<ConnectionErrorArgs> error) {
             this.error = error;
             return this;
         }
 
         public Builder error(@Nullable ConnectionErrorArgs error) {
-            this.error = Input.ofNullable(error);
+            this.error = Output.ofNullable(error);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder target(@Nullable Input<String> target) {
+        public Builder target(@Nullable Output<String> target) {
             this.target = target;
             return this;
         }
 
         public Builder target(@Nullable String target) {
-            this.target = Input.ofNullable(target);
+            this.target = Output.ofNullable(target);
             return this;
         }
         public ConnectionStatusDefinitionArgs build() {

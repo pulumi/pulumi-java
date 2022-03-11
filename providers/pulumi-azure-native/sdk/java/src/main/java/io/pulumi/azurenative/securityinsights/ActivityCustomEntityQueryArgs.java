@@ -6,7 +6,7 @@ package io.pulumi.azurenative.securityinsights;
 import io.pulumi.azurenative.securityinsights.enums.EntityType;
 import io.pulumi.azurenative.securityinsights.inputs.ActivityEntityQueriesPropertiesQueryDefinitionsArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="content")
-      private final @Nullable Input<String> content;
+      private final @Nullable Output<String> content;
 
-    public Input<String> getContent() {
-        return this.content == null ? Input.empty() : this.content;
+    public Output<String> getContent() {
+        return this.content == null ? Output.empty() : this.content;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="entitiesFilter")
-      private final @Nullable Input<Map<String,List<String>>> entitiesFilter;
+      private final @Nullable Output<Map<String,List<String>>> entitiesFilter;
 
-    public Input<Map<String,List<String>>> getEntitiesFilter() {
-        return this.entitiesFilter == null ? Input.empty() : this.entitiesFilter;
+    public Output<Map<String,List<String>>> getEntitiesFilter() {
+        return this.entitiesFilter == null ? Output.empty() : this.entitiesFilter;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="entityQueryId")
-      private final @Nullable Input<String> entityQueryId;
+      private final @Nullable Output<String> entityQueryId;
 
-    public Input<String> getEntityQueryId() {
-        return this.entityQueryId == null ? Input.empty() : this.entityQueryId;
+    public Output<String> getEntityQueryId() {
+        return this.entityQueryId == null ? Output.empty() : this.entityQueryId;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="inputEntityType")
-      private final @Nullable Input<Either<String,EntityType>> inputEntityType;
+      private final @Nullable Output<Either<String,EntityType>> inputEntityType;
 
-    public Input<Either<String,EntityType>> getInputEntityType() {
-        return this.inputEntityType == null ? Input.empty() : this.inputEntityType;
+    public Output<Either<String,EntityType>> getInputEntityType() {
+        return this.inputEntityType == null ? Output.empty() : this.inputEntityType;
     }
 
     /**
@@ -92,9 +92,9 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<String> kind;
+      private final Output<String> kind;
 
-    public Input<String> getKind() {
+    public Output<String> getKind() {
         return this.kind;
     }
 
@@ -103,9 +103,9 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="operationalInsightsResourceProvider", required=true)
-      private final Input<String> operationalInsightsResourceProvider;
+      private final Output<String> operationalInsightsResourceProvider;
 
-    public Input<String> getOperationalInsightsResourceProvider() {
+    public Output<String> getOperationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
     }
 
@@ -114,10 +114,10 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="queryDefinitions")
-      private final @Nullable Input<ActivityEntityQueriesPropertiesQueryDefinitionsArgs> queryDefinitions;
+      private final @Nullable Output<ActivityEntityQueriesPropertiesQueryDefinitionsArgs> queryDefinitions;
 
-    public Input<ActivityEntityQueriesPropertiesQueryDefinitionsArgs> getQueryDefinitions() {
-        return this.queryDefinitions == null ? Input.empty() : this.queryDefinitions;
+    public Output<ActivityEntityQueriesPropertiesQueryDefinitionsArgs> getQueryDefinitions() {
+        return this.queryDefinitions == null ? Output.empty() : this.queryDefinitions;
     }
 
     /**
@@ -125,10 +125,10 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="requiredInputFieldsSets")
-      private final @Nullable Input<List<List<String>>> requiredInputFieldsSets;
+      private final @Nullable Output<List<List<String>>> requiredInputFieldsSets;
 
-    public Input<List<List<String>>> getRequiredInputFieldsSets() {
-        return this.requiredInputFieldsSets == null ? Input.empty() : this.requiredInputFieldsSets;
+    public Output<List<List<String>>> getRequiredInputFieldsSets() {
+        return this.requiredInputFieldsSets == null ? Output.empty() : this.requiredInputFieldsSets;
     }
 
     /**
@@ -136,9 +136,9 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -147,10 +147,10 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="templateName")
-      private final @Nullable Input<String> templateName;
+      private final @Nullable Output<String> templateName;
 
-    public Input<String> getTemplateName() {
-        return this.templateName == null ? Input.empty() : this.templateName;
+    public Output<String> getTemplateName() {
+        return this.templateName == null ? Output.empty() : this.templateName;
     }
 
     /**
@@ -158,10 +158,10 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="title")
-      private final @Nullable Input<String> title;
+      private final @Nullable Output<String> title;
 
-    public Input<String> getTitle() {
-        return this.title == null ? Input.empty() : this.title;
+    public Output<String> getTitle() {
+        return this.title == null ? Output.empty() : this.title;
     }
 
     /**
@@ -169,27 +169,27 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="workspaceName", required=true)
-      private final Input<String> workspaceName;
+      private final Output<String> workspaceName;
 
-    public Input<String> getWorkspaceName() {
+    public Output<String> getWorkspaceName() {
         return this.workspaceName;
     }
 
     public ActivityCustomEntityQueryArgs(
-        @Nullable Input<String> content,
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<Map<String,List<String>>> entitiesFilter,
-        @Nullable Input<String> entityQueryId,
-        @Nullable Input<Either<String,EntityType>> inputEntityType,
-        Input<String> kind,
-        Input<String> operationalInsightsResourceProvider,
-        @Nullable Input<ActivityEntityQueriesPropertiesQueryDefinitionsArgs> queryDefinitions,
-        @Nullable Input<List<List<String>>> requiredInputFieldsSets,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> templateName,
-        @Nullable Input<String> title,
-        Input<String> workspaceName) {
+        @Nullable Output<String> content,
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<Map<String,List<String>>> entitiesFilter,
+        @Nullable Output<String> entityQueryId,
+        @Nullable Output<Either<String,EntityType>> inputEntityType,
+        Output<String> kind,
+        Output<String> operationalInsightsResourceProvider,
+        @Nullable Output<ActivityEntityQueriesPropertiesQueryDefinitionsArgs> queryDefinitions,
+        @Nullable Output<List<List<String>>> requiredInputFieldsSets,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> templateName,
+        @Nullable Output<String> title,
+        Output<String> workspaceName) {
         this.content = content;
         this.description = description;
         this.enabled = enabled;
@@ -207,20 +207,20 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
     }
 
     private ActivityCustomEntityQueryArgs() {
-        this.content = Input.empty();
-        this.description = Input.empty();
-        this.enabled = Input.empty();
-        this.entitiesFilter = Input.empty();
-        this.entityQueryId = Input.empty();
-        this.inputEntityType = Input.empty();
-        this.kind = Input.empty();
-        this.operationalInsightsResourceProvider = Input.empty();
-        this.queryDefinitions = Input.empty();
-        this.requiredInputFieldsSets = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.templateName = Input.empty();
-        this.title = Input.empty();
-        this.workspaceName = Input.empty();
+        this.content = Output.empty();
+        this.description = Output.empty();
+        this.enabled = Output.empty();
+        this.entitiesFilter = Output.empty();
+        this.entityQueryId = Output.empty();
+        this.inputEntityType = Output.empty();
+        this.kind = Output.empty();
+        this.operationalInsightsResourceProvider = Output.empty();
+        this.queryDefinitions = Output.empty();
+        this.requiredInputFieldsSets = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.templateName = Output.empty();
+        this.title = Output.empty();
+        this.workspaceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -232,20 +232,20 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> content;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<Map<String,List<String>>> entitiesFilter;
-        private @Nullable Input<String> entityQueryId;
-        private @Nullable Input<Either<String,EntityType>> inputEntityType;
-        private Input<String> kind;
-        private Input<String> operationalInsightsResourceProvider;
-        private @Nullable Input<ActivityEntityQueriesPropertiesQueryDefinitionsArgs> queryDefinitions;
-        private @Nullable Input<List<List<String>>> requiredInputFieldsSets;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> templateName;
-        private @Nullable Input<String> title;
-        private Input<String> workspaceName;
+        private @Nullable Output<String> content;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<Map<String,List<String>>> entitiesFilter;
+        private @Nullable Output<String> entityQueryId;
+        private @Nullable Output<Either<String,EntityType>> inputEntityType;
+        private Output<String> kind;
+        private Output<String> operationalInsightsResourceProvider;
+        private @Nullable Output<ActivityEntityQueriesPropertiesQueryDefinitionsArgs> queryDefinitions;
+        private @Nullable Output<List<List<String>>> requiredInputFieldsSets;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> templateName;
+        private @Nullable Output<String> title;
+        private Output<String> workspaceName;
 
         public Builder() {
     	      // Empty
@@ -269,143 +269,143 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder content(@Nullable Input<String> content) {
+        public Builder content(@Nullable Output<String> content) {
             this.content = content;
             return this;
         }
 
         public Builder content(@Nullable String content) {
-            this.content = Input.ofNullable(content);
+            this.content = Output.ofNullable(content);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder entitiesFilter(@Nullable Input<Map<String,List<String>>> entitiesFilter) {
+        public Builder entitiesFilter(@Nullable Output<Map<String,List<String>>> entitiesFilter) {
             this.entitiesFilter = entitiesFilter;
             return this;
         }
 
         public Builder entitiesFilter(@Nullable Map<String,List<String>> entitiesFilter) {
-            this.entitiesFilter = Input.ofNullable(entitiesFilter);
+            this.entitiesFilter = Output.ofNullable(entitiesFilter);
             return this;
         }
 
-        public Builder entityQueryId(@Nullable Input<String> entityQueryId) {
+        public Builder entityQueryId(@Nullable Output<String> entityQueryId) {
             this.entityQueryId = entityQueryId;
             return this;
         }
 
         public Builder entityQueryId(@Nullable String entityQueryId) {
-            this.entityQueryId = Input.ofNullable(entityQueryId);
+            this.entityQueryId = Output.ofNullable(entityQueryId);
             return this;
         }
 
-        public Builder inputEntityType(@Nullable Input<Either<String,EntityType>> inputEntityType) {
+        public Builder inputEntityType(@Nullable Output<Either<String,EntityType>> inputEntityType) {
             this.inputEntityType = inputEntityType;
             return this;
         }
 
         public Builder inputEntityType(@Nullable Either<String,EntityType> inputEntityType) {
-            this.inputEntityType = Input.ofNullable(inputEntityType);
+            this.inputEntityType = Output.ofNullable(inputEntityType);
             return this;
         }
 
-        public Builder kind(Input<String> kind) {
+        public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(String kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder operationalInsightsResourceProvider(Input<String> operationalInsightsResourceProvider) {
+        public Builder operationalInsightsResourceProvider(Output<String> operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
             return this;
         }
 
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
-            this.operationalInsightsResourceProvider = Input.of(Objects.requireNonNull(operationalInsightsResourceProvider));
+            this.operationalInsightsResourceProvider = Output.of(Objects.requireNonNull(operationalInsightsResourceProvider));
             return this;
         }
 
-        public Builder queryDefinitions(@Nullable Input<ActivityEntityQueriesPropertiesQueryDefinitionsArgs> queryDefinitions) {
+        public Builder queryDefinitions(@Nullable Output<ActivityEntityQueriesPropertiesQueryDefinitionsArgs> queryDefinitions) {
             this.queryDefinitions = queryDefinitions;
             return this;
         }
 
         public Builder queryDefinitions(@Nullable ActivityEntityQueriesPropertiesQueryDefinitionsArgs queryDefinitions) {
-            this.queryDefinitions = Input.ofNullable(queryDefinitions);
+            this.queryDefinitions = Output.ofNullable(queryDefinitions);
             return this;
         }
 
-        public Builder requiredInputFieldsSets(@Nullable Input<List<List<String>>> requiredInputFieldsSets) {
+        public Builder requiredInputFieldsSets(@Nullable Output<List<List<String>>> requiredInputFieldsSets) {
             this.requiredInputFieldsSets = requiredInputFieldsSets;
             return this;
         }
 
         public Builder requiredInputFieldsSets(@Nullable List<List<String>> requiredInputFieldsSets) {
-            this.requiredInputFieldsSets = Input.ofNullable(requiredInputFieldsSets);
+            this.requiredInputFieldsSets = Output.ofNullable(requiredInputFieldsSets);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder templateName(@Nullable Input<String> templateName) {
+        public Builder templateName(@Nullable Output<String> templateName) {
             this.templateName = templateName;
             return this;
         }
 
         public Builder templateName(@Nullable String templateName) {
-            this.templateName = Input.ofNullable(templateName);
+            this.templateName = Output.ofNullable(templateName);
             return this;
         }
 
-        public Builder title(@Nullable Input<String> title) {
+        public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
 
         public Builder title(@Nullable String title) {
-            this.title = Input.ofNullable(title);
+            this.title = Output.ofNullable(title);
             return this;
         }
 
-        public Builder workspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
+            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
         }
         public ActivityCustomEntityQueryArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.autoscaling;
 
 import io.pulumi.awsnative.autoscaling.inputs.LaunchConfigurationBlockDeviceMappingArgs;
 import io.pulumi.awsnative.autoscaling.inputs.LaunchConfigurationMetadataOptionsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="associatePublicIpAddress")
-      private final @Nullable Input<Boolean> associatePublicIpAddress;
+      private final @Nullable Output<Boolean> associatePublicIpAddress;
 
-    public Input<Boolean> getAssociatePublicIpAddress() {
-        return this.associatePublicIpAddress == null ? Input.empty() : this.associatePublicIpAddress;
+    public Output<Boolean> getAssociatePublicIpAddress() {
+        return this.associatePublicIpAddress == null ? Output.empty() : this.associatePublicIpAddress;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="blockDeviceMappings")
-      private final @Nullable Input<List<LaunchConfigurationBlockDeviceMappingArgs>> blockDeviceMappings;
+      private final @Nullable Output<List<LaunchConfigurationBlockDeviceMappingArgs>> blockDeviceMappings;
 
-    public Input<List<LaunchConfigurationBlockDeviceMappingArgs>> getBlockDeviceMappings() {
-        return this.blockDeviceMappings == null ? Input.empty() : this.blockDeviceMappings;
+    public Output<List<LaunchConfigurationBlockDeviceMappingArgs>> getBlockDeviceMappings() {
+        return this.blockDeviceMappings == null ? Output.empty() : this.blockDeviceMappings;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="classicLinkVPCId")
-      private final @Nullable Input<String> classicLinkVPCId;
+      private final @Nullable Output<String> classicLinkVPCId;
 
-    public Input<String> getClassicLinkVPCId() {
-        return this.classicLinkVPCId == null ? Input.empty() : this.classicLinkVPCId;
+    public Output<String> getClassicLinkVPCId() {
+        return this.classicLinkVPCId == null ? Output.empty() : this.classicLinkVPCId;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="classicLinkVPCSecurityGroups")
-      private final @Nullable Input<List<String>> classicLinkVPCSecurityGroups;
+      private final @Nullable Output<List<String>> classicLinkVPCSecurityGroups;
 
-    public Input<List<String>> getClassicLinkVPCSecurityGroups() {
-        return this.classicLinkVPCSecurityGroups == null ? Input.empty() : this.classicLinkVPCSecurityGroups;
+    public Output<List<String>> getClassicLinkVPCSecurityGroups() {
+        return this.classicLinkVPCSecurityGroups == null ? Output.empty() : this.classicLinkVPCSecurityGroups;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="ebsOptimized")
-      private final @Nullable Input<Boolean> ebsOptimized;
+      private final @Nullable Output<Boolean> ebsOptimized;
 
-    public Input<Boolean> getEbsOptimized() {
-        return this.ebsOptimized == null ? Input.empty() : this.ebsOptimized;
+    public Output<Boolean> getEbsOptimized() {
+        return this.ebsOptimized == null ? Output.empty() : this.ebsOptimized;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="iamInstanceProfile")
-      private final @Nullable Input<String> iamInstanceProfile;
+      private final @Nullable Output<String> iamInstanceProfile;
 
-    public Input<String> getIamInstanceProfile() {
-        return this.iamInstanceProfile == null ? Input.empty() : this.iamInstanceProfile;
+    public Output<String> getIamInstanceProfile() {
+        return this.iamInstanceProfile == null ? Output.empty() : this.iamInstanceProfile;
     }
 
     /**
@@ -89,9 +89,9 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="imageId", required=true)
-      private final Input<String> imageId;
+      private final Output<String> imageId;
 
-    public Input<String> getImageId() {
+    public Output<String> getImageId() {
         return this.imageId;
     }
 
@@ -100,10 +100,10 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="instanceId")
-      private final @Nullable Input<String> instanceId;
+      private final @Nullable Output<String> instanceId;
 
-    public Input<String> getInstanceId() {
-        return this.instanceId == null ? Input.empty() : this.instanceId;
+    public Output<String> getInstanceId() {
+        return this.instanceId == null ? Output.empty() : this.instanceId;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="instanceMonitoring")
-      private final @Nullable Input<Boolean> instanceMonitoring;
+      private final @Nullable Output<Boolean> instanceMonitoring;
 
-    public Input<Boolean> getInstanceMonitoring() {
-        return this.instanceMonitoring == null ? Input.empty() : this.instanceMonitoring;
+    public Output<Boolean> getInstanceMonitoring() {
+        return this.instanceMonitoring == null ? Output.empty() : this.instanceMonitoring;
     }
 
     /**
@@ -122,9 +122,9 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="instanceType", required=true)
-      private final Input<String> instanceType;
+      private final Output<String> instanceType;
 
-    public Input<String> getInstanceType() {
+    public Output<String> getInstanceType() {
         return this.instanceType;
     }
 
@@ -133,10 +133,10 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="kernelId")
-      private final @Nullable Input<String> kernelId;
+      private final @Nullable Output<String> kernelId;
 
-    public Input<String> getKernelId() {
-        return this.kernelId == null ? Input.empty() : this.kernelId;
+    public Output<String> getKernelId() {
+        return this.kernelId == null ? Output.empty() : this.kernelId;
     }
 
     /**
@@ -144,10 +144,10 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="keyName")
-      private final @Nullable Input<String> keyName;
+      private final @Nullable Output<String> keyName;
 
-    public Input<String> getKeyName() {
-        return this.keyName == null ? Input.empty() : this.keyName;
+    public Output<String> getKeyName() {
+        return this.keyName == null ? Output.empty() : this.keyName;
     }
 
     /**
@@ -155,10 +155,10 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="launchConfigurationName")
-      private final @Nullable Input<String> launchConfigurationName;
+      private final @Nullable Output<String> launchConfigurationName;
 
-    public Input<String> getLaunchConfigurationName() {
-        return this.launchConfigurationName == null ? Input.empty() : this.launchConfigurationName;
+    public Output<String> getLaunchConfigurationName() {
+        return this.launchConfigurationName == null ? Output.empty() : this.launchConfigurationName;
     }
 
     /**
@@ -166,10 +166,10 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="metadataOptions")
-      private final @Nullable Input<LaunchConfigurationMetadataOptionsArgs> metadataOptions;
+      private final @Nullable Output<LaunchConfigurationMetadataOptionsArgs> metadataOptions;
 
-    public Input<LaunchConfigurationMetadataOptionsArgs> getMetadataOptions() {
-        return this.metadataOptions == null ? Input.empty() : this.metadataOptions;
+    public Output<LaunchConfigurationMetadataOptionsArgs> getMetadataOptions() {
+        return this.metadataOptions == null ? Output.empty() : this.metadataOptions;
     }
 
     /**
@@ -177,10 +177,10 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="placementTenancy")
-      private final @Nullable Input<String> placementTenancy;
+      private final @Nullable Output<String> placementTenancy;
 
-    public Input<String> getPlacementTenancy() {
-        return this.placementTenancy == null ? Input.empty() : this.placementTenancy;
+    public Output<String> getPlacementTenancy() {
+        return this.placementTenancy == null ? Output.empty() : this.placementTenancy;
     }
 
     /**
@@ -188,10 +188,10 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="ramDiskId")
-      private final @Nullable Input<String> ramDiskId;
+      private final @Nullable Output<String> ramDiskId;
 
-    public Input<String> getRamDiskId() {
-        return this.ramDiskId == null ? Input.empty() : this.ramDiskId;
+    public Output<String> getRamDiskId() {
+        return this.ramDiskId == null ? Output.empty() : this.ramDiskId;
     }
 
     /**
@@ -199,10 +199,10 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="securityGroups")
-      private final @Nullable Input<List<String>> securityGroups;
+      private final @Nullable Output<List<String>> securityGroups;
 
-    public Input<List<String>> getSecurityGroups() {
-        return this.securityGroups == null ? Input.empty() : this.securityGroups;
+    public Output<List<String>> getSecurityGroups() {
+        return this.securityGroups == null ? Output.empty() : this.securityGroups;
     }
 
     /**
@@ -210,10 +210,10 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="spotPrice")
-      private final @Nullable Input<String> spotPrice;
+      private final @Nullable Output<String> spotPrice;
 
-    public Input<String> getSpotPrice() {
-        return this.spotPrice == null ? Input.empty() : this.spotPrice;
+    public Output<String> getSpotPrice() {
+        return this.spotPrice == null ? Output.empty() : this.spotPrice;
     }
 
     /**
@@ -221,32 +221,32 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="userData")
-      private final @Nullable Input<String> userData;
+      private final @Nullable Output<String> userData;
 
-    public Input<String> getUserData() {
-        return this.userData == null ? Input.empty() : this.userData;
+    public Output<String> getUserData() {
+        return this.userData == null ? Output.empty() : this.userData;
     }
 
     public LaunchConfigurationArgs(
-        @Nullable Input<Boolean> associatePublicIpAddress,
-        @Nullable Input<List<LaunchConfigurationBlockDeviceMappingArgs>> blockDeviceMappings,
-        @Nullable Input<String> classicLinkVPCId,
-        @Nullable Input<List<String>> classicLinkVPCSecurityGroups,
-        @Nullable Input<Boolean> ebsOptimized,
-        @Nullable Input<String> iamInstanceProfile,
-        Input<String> imageId,
-        @Nullable Input<String> instanceId,
-        @Nullable Input<Boolean> instanceMonitoring,
-        Input<String> instanceType,
-        @Nullable Input<String> kernelId,
-        @Nullable Input<String> keyName,
-        @Nullable Input<String> launchConfigurationName,
-        @Nullable Input<LaunchConfigurationMetadataOptionsArgs> metadataOptions,
-        @Nullable Input<String> placementTenancy,
-        @Nullable Input<String> ramDiskId,
-        @Nullable Input<List<String>> securityGroups,
-        @Nullable Input<String> spotPrice,
-        @Nullable Input<String> userData) {
+        @Nullable Output<Boolean> associatePublicIpAddress,
+        @Nullable Output<List<LaunchConfigurationBlockDeviceMappingArgs>> blockDeviceMappings,
+        @Nullable Output<String> classicLinkVPCId,
+        @Nullable Output<List<String>> classicLinkVPCSecurityGroups,
+        @Nullable Output<Boolean> ebsOptimized,
+        @Nullable Output<String> iamInstanceProfile,
+        Output<String> imageId,
+        @Nullable Output<String> instanceId,
+        @Nullable Output<Boolean> instanceMonitoring,
+        Output<String> instanceType,
+        @Nullable Output<String> kernelId,
+        @Nullable Output<String> keyName,
+        @Nullable Output<String> launchConfigurationName,
+        @Nullable Output<LaunchConfigurationMetadataOptionsArgs> metadataOptions,
+        @Nullable Output<String> placementTenancy,
+        @Nullable Output<String> ramDiskId,
+        @Nullable Output<List<String>> securityGroups,
+        @Nullable Output<String> spotPrice,
+        @Nullable Output<String> userData) {
         this.associatePublicIpAddress = associatePublicIpAddress;
         this.blockDeviceMappings = blockDeviceMappings;
         this.classicLinkVPCId = classicLinkVPCId;
@@ -269,25 +269,25 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
     }
 
     private LaunchConfigurationArgs() {
-        this.associatePublicIpAddress = Input.empty();
-        this.blockDeviceMappings = Input.empty();
-        this.classicLinkVPCId = Input.empty();
-        this.classicLinkVPCSecurityGroups = Input.empty();
-        this.ebsOptimized = Input.empty();
-        this.iamInstanceProfile = Input.empty();
-        this.imageId = Input.empty();
-        this.instanceId = Input.empty();
-        this.instanceMonitoring = Input.empty();
-        this.instanceType = Input.empty();
-        this.kernelId = Input.empty();
-        this.keyName = Input.empty();
-        this.launchConfigurationName = Input.empty();
-        this.metadataOptions = Input.empty();
-        this.placementTenancy = Input.empty();
-        this.ramDiskId = Input.empty();
-        this.securityGroups = Input.empty();
-        this.spotPrice = Input.empty();
-        this.userData = Input.empty();
+        this.associatePublicIpAddress = Output.empty();
+        this.blockDeviceMappings = Output.empty();
+        this.classicLinkVPCId = Output.empty();
+        this.classicLinkVPCSecurityGroups = Output.empty();
+        this.ebsOptimized = Output.empty();
+        this.iamInstanceProfile = Output.empty();
+        this.imageId = Output.empty();
+        this.instanceId = Output.empty();
+        this.instanceMonitoring = Output.empty();
+        this.instanceType = Output.empty();
+        this.kernelId = Output.empty();
+        this.keyName = Output.empty();
+        this.launchConfigurationName = Output.empty();
+        this.metadataOptions = Output.empty();
+        this.placementTenancy = Output.empty();
+        this.ramDiskId = Output.empty();
+        this.securityGroups = Output.empty();
+        this.spotPrice = Output.empty();
+        this.userData = Output.empty();
     }
 
     public static Builder builder() {
@@ -299,25 +299,25 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> associatePublicIpAddress;
-        private @Nullable Input<List<LaunchConfigurationBlockDeviceMappingArgs>> blockDeviceMappings;
-        private @Nullable Input<String> classicLinkVPCId;
-        private @Nullable Input<List<String>> classicLinkVPCSecurityGroups;
-        private @Nullable Input<Boolean> ebsOptimized;
-        private @Nullable Input<String> iamInstanceProfile;
-        private Input<String> imageId;
-        private @Nullable Input<String> instanceId;
-        private @Nullable Input<Boolean> instanceMonitoring;
-        private Input<String> instanceType;
-        private @Nullable Input<String> kernelId;
-        private @Nullable Input<String> keyName;
-        private @Nullable Input<String> launchConfigurationName;
-        private @Nullable Input<LaunchConfigurationMetadataOptionsArgs> metadataOptions;
-        private @Nullable Input<String> placementTenancy;
-        private @Nullable Input<String> ramDiskId;
-        private @Nullable Input<List<String>> securityGroups;
-        private @Nullable Input<String> spotPrice;
-        private @Nullable Input<String> userData;
+        private @Nullable Output<Boolean> associatePublicIpAddress;
+        private @Nullable Output<List<LaunchConfigurationBlockDeviceMappingArgs>> blockDeviceMappings;
+        private @Nullable Output<String> classicLinkVPCId;
+        private @Nullable Output<List<String>> classicLinkVPCSecurityGroups;
+        private @Nullable Output<Boolean> ebsOptimized;
+        private @Nullable Output<String> iamInstanceProfile;
+        private Output<String> imageId;
+        private @Nullable Output<String> instanceId;
+        private @Nullable Output<Boolean> instanceMonitoring;
+        private Output<String> instanceType;
+        private @Nullable Output<String> kernelId;
+        private @Nullable Output<String> keyName;
+        private @Nullable Output<String> launchConfigurationName;
+        private @Nullable Output<LaunchConfigurationMetadataOptionsArgs> metadataOptions;
+        private @Nullable Output<String> placementTenancy;
+        private @Nullable Output<String> ramDiskId;
+        private @Nullable Output<List<String>> securityGroups;
+        private @Nullable Output<String> spotPrice;
+        private @Nullable Output<String> userData;
 
         public Builder() {
     	      // Empty
@@ -346,193 +346,193 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
     	      this.userData = defaults.userData;
         }
 
-        public Builder associatePublicIpAddress(@Nullable Input<Boolean> associatePublicIpAddress) {
+        public Builder associatePublicIpAddress(@Nullable Output<Boolean> associatePublicIpAddress) {
             this.associatePublicIpAddress = associatePublicIpAddress;
             return this;
         }
 
         public Builder associatePublicIpAddress(@Nullable Boolean associatePublicIpAddress) {
-            this.associatePublicIpAddress = Input.ofNullable(associatePublicIpAddress);
+            this.associatePublicIpAddress = Output.ofNullable(associatePublicIpAddress);
             return this;
         }
 
-        public Builder blockDeviceMappings(@Nullable Input<List<LaunchConfigurationBlockDeviceMappingArgs>> blockDeviceMappings) {
+        public Builder blockDeviceMappings(@Nullable Output<List<LaunchConfigurationBlockDeviceMappingArgs>> blockDeviceMappings) {
             this.blockDeviceMappings = blockDeviceMappings;
             return this;
         }
 
         public Builder blockDeviceMappings(@Nullable List<LaunchConfigurationBlockDeviceMappingArgs> blockDeviceMappings) {
-            this.blockDeviceMappings = Input.ofNullable(blockDeviceMappings);
+            this.blockDeviceMappings = Output.ofNullable(blockDeviceMappings);
             return this;
         }
 
-        public Builder classicLinkVPCId(@Nullable Input<String> classicLinkVPCId) {
+        public Builder classicLinkVPCId(@Nullable Output<String> classicLinkVPCId) {
             this.classicLinkVPCId = classicLinkVPCId;
             return this;
         }
 
         public Builder classicLinkVPCId(@Nullable String classicLinkVPCId) {
-            this.classicLinkVPCId = Input.ofNullable(classicLinkVPCId);
+            this.classicLinkVPCId = Output.ofNullable(classicLinkVPCId);
             return this;
         }
 
-        public Builder classicLinkVPCSecurityGroups(@Nullable Input<List<String>> classicLinkVPCSecurityGroups) {
+        public Builder classicLinkVPCSecurityGroups(@Nullable Output<List<String>> classicLinkVPCSecurityGroups) {
             this.classicLinkVPCSecurityGroups = classicLinkVPCSecurityGroups;
             return this;
         }
 
         public Builder classicLinkVPCSecurityGroups(@Nullable List<String> classicLinkVPCSecurityGroups) {
-            this.classicLinkVPCSecurityGroups = Input.ofNullable(classicLinkVPCSecurityGroups);
+            this.classicLinkVPCSecurityGroups = Output.ofNullable(classicLinkVPCSecurityGroups);
             return this;
         }
 
-        public Builder ebsOptimized(@Nullable Input<Boolean> ebsOptimized) {
+        public Builder ebsOptimized(@Nullable Output<Boolean> ebsOptimized) {
             this.ebsOptimized = ebsOptimized;
             return this;
         }
 
         public Builder ebsOptimized(@Nullable Boolean ebsOptimized) {
-            this.ebsOptimized = Input.ofNullable(ebsOptimized);
+            this.ebsOptimized = Output.ofNullable(ebsOptimized);
             return this;
         }
 
-        public Builder iamInstanceProfile(@Nullable Input<String> iamInstanceProfile) {
+        public Builder iamInstanceProfile(@Nullable Output<String> iamInstanceProfile) {
             this.iamInstanceProfile = iamInstanceProfile;
             return this;
         }
 
         public Builder iamInstanceProfile(@Nullable String iamInstanceProfile) {
-            this.iamInstanceProfile = Input.ofNullable(iamInstanceProfile);
+            this.iamInstanceProfile = Output.ofNullable(iamInstanceProfile);
             return this;
         }
 
-        public Builder imageId(Input<String> imageId) {
+        public Builder imageId(Output<String> imageId) {
             this.imageId = Objects.requireNonNull(imageId);
             return this;
         }
 
         public Builder imageId(String imageId) {
-            this.imageId = Input.of(Objects.requireNonNull(imageId));
+            this.imageId = Output.of(Objects.requireNonNull(imageId));
             return this;
         }
 
-        public Builder instanceId(@Nullable Input<String> instanceId) {
+        public Builder instanceId(@Nullable Output<String> instanceId) {
             this.instanceId = instanceId;
             return this;
         }
 
         public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Input.ofNullable(instanceId);
+            this.instanceId = Output.ofNullable(instanceId);
             return this;
         }
 
-        public Builder instanceMonitoring(@Nullable Input<Boolean> instanceMonitoring) {
+        public Builder instanceMonitoring(@Nullable Output<Boolean> instanceMonitoring) {
             this.instanceMonitoring = instanceMonitoring;
             return this;
         }
 
         public Builder instanceMonitoring(@Nullable Boolean instanceMonitoring) {
-            this.instanceMonitoring = Input.ofNullable(instanceMonitoring);
+            this.instanceMonitoring = Output.ofNullable(instanceMonitoring);
             return this;
         }
 
-        public Builder instanceType(Input<String> instanceType) {
+        public Builder instanceType(Output<String> instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
         public Builder instanceType(String instanceType) {
-            this.instanceType = Input.of(Objects.requireNonNull(instanceType));
+            this.instanceType = Output.of(Objects.requireNonNull(instanceType));
             return this;
         }
 
-        public Builder kernelId(@Nullable Input<String> kernelId) {
+        public Builder kernelId(@Nullable Output<String> kernelId) {
             this.kernelId = kernelId;
             return this;
         }
 
         public Builder kernelId(@Nullable String kernelId) {
-            this.kernelId = Input.ofNullable(kernelId);
+            this.kernelId = Output.ofNullable(kernelId);
             return this;
         }
 
-        public Builder keyName(@Nullable Input<String> keyName) {
+        public Builder keyName(@Nullable Output<String> keyName) {
             this.keyName = keyName;
             return this;
         }
 
         public Builder keyName(@Nullable String keyName) {
-            this.keyName = Input.ofNullable(keyName);
+            this.keyName = Output.ofNullable(keyName);
             return this;
         }
 
-        public Builder launchConfigurationName(@Nullable Input<String> launchConfigurationName) {
+        public Builder launchConfigurationName(@Nullable Output<String> launchConfigurationName) {
             this.launchConfigurationName = launchConfigurationName;
             return this;
         }
 
         public Builder launchConfigurationName(@Nullable String launchConfigurationName) {
-            this.launchConfigurationName = Input.ofNullable(launchConfigurationName);
+            this.launchConfigurationName = Output.ofNullable(launchConfigurationName);
             return this;
         }
 
-        public Builder metadataOptions(@Nullable Input<LaunchConfigurationMetadataOptionsArgs> metadataOptions) {
+        public Builder metadataOptions(@Nullable Output<LaunchConfigurationMetadataOptionsArgs> metadataOptions) {
             this.metadataOptions = metadataOptions;
             return this;
         }
 
         public Builder metadataOptions(@Nullable LaunchConfigurationMetadataOptionsArgs metadataOptions) {
-            this.metadataOptions = Input.ofNullable(metadataOptions);
+            this.metadataOptions = Output.ofNullable(metadataOptions);
             return this;
         }
 
-        public Builder placementTenancy(@Nullable Input<String> placementTenancy) {
+        public Builder placementTenancy(@Nullable Output<String> placementTenancy) {
             this.placementTenancy = placementTenancy;
             return this;
         }
 
         public Builder placementTenancy(@Nullable String placementTenancy) {
-            this.placementTenancy = Input.ofNullable(placementTenancy);
+            this.placementTenancy = Output.ofNullable(placementTenancy);
             return this;
         }
 
-        public Builder ramDiskId(@Nullable Input<String> ramDiskId) {
+        public Builder ramDiskId(@Nullable Output<String> ramDiskId) {
             this.ramDiskId = ramDiskId;
             return this;
         }
 
         public Builder ramDiskId(@Nullable String ramDiskId) {
-            this.ramDiskId = Input.ofNullable(ramDiskId);
+            this.ramDiskId = Output.ofNullable(ramDiskId);
             return this;
         }
 
-        public Builder securityGroups(@Nullable Input<List<String>> securityGroups) {
+        public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
         public Builder securityGroups(@Nullable List<String> securityGroups) {
-            this.securityGroups = Input.ofNullable(securityGroups);
+            this.securityGroups = Output.ofNullable(securityGroups);
             return this;
         }
 
-        public Builder spotPrice(@Nullable Input<String> spotPrice) {
+        public Builder spotPrice(@Nullable Output<String> spotPrice) {
             this.spotPrice = spotPrice;
             return this;
         }
 
         public Builder spotPrice(@Nullable String spotPrice) {
-            this.spotPrice = Input.ofNullable(spotPrice);
+            this.spotPrice = Output.ofNullable(spotPrice);
             return this;
         }
 
-        public Builder userData(@Nullable Input<String> userData) {
+        public Builder userData(@Nullable Output<String> userData) {
             this.userData = userData;
             return this;
         }
 
         public Builder userData(@Nullable String userData) {
-            this.userData = Input.ofNullable(userData);
+            this.userData = Output.ofNullable(userData);
             return this;
         }
         public LaunchConfigurationArgs build() {

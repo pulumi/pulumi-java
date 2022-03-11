@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -21,10 +21,10 @@ public final class AutoscalerAutoscalingPolicyScalingScheduleGetArgs extends io.
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class AutoscalerAutoscalingPolicyScalingScheduleGetArgs extends io.
      * 
      */
     @InputImport(name="disabled")
-      private final @Nullable Input<Boolean> disabled;
+      private final @Nullable Output<Boolean> disabled;
 
-    public Input<Boolean> getDisabled() {
-        return this.disabled == null ? Input.empty() : this.disabled;
+    public Output<Boolean> getDisabled() {
+        return this.disabled == null ? Output.empty() : this.disabled;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class AutoscalerAutoscalingPolicyScalingScheduleGetArgs extends io.
      * 
      */
     @InputImport(name="durationSec", required=true)
-      private final Input<Integer> durationSec;
+      private final Output<Integer> durationSec;
 
-    public Input<Integer> getDurationSec() {
+    public Output<Integer> getDurationSec() {
         return this.durationSec;
     }
 
@@ -54,9 +54,9 @@ public final class AutoscalerAutoscalingPolicyScalingScheduleGetArgs extends io.
      * 
      */
     @InputImport(name="minRequiredReplicas", required=true)
-      private final Input<Integer> minRequiredReplicas;
+      private final Output<Integer> minRequiredReplicas;
 
-    public Input<Integer> getMinRequiredReplicas() {
+    public Output<Integer> getMinRequiredReplicas() {
         return this.minRequiredReplicas;
     }
 
@@ -65,9 +65,9 @@ public final class AutoscalerAutoscalingPolicyScalingScheduleGetArgs extends io.
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -76,9 +76,9 @@ public final class AutoscalerAutoscalingPolicyScalingScheduleGetArgs extends io.
      * 
      */
     @InputImport(name="schedule", required=true)
-      private final Input<String> schedule;
+      private final Output<String> schedule;
 
-    public Input<String> getSchedule() {
+    public Output<String> getSchedule() {
         return this.schedule;
     }
 
@@ -87,20 +87,20 @@ public final class AutoscalerAutoscalingPolicyScalingScheduleGetArgs extends io.
      * 
      */
     @InputImport(name="timeZone")
-      private final @Nullable Input<String> timeZone;
+      private final @Nullable Output<String> timeZone;
 
-    public Input<String> getTimeZone() {
-        return this.timeZone == null ? Input.empty() : this.timeZone;
+    public Output<String> getTimeZone() {
+        return this.timeZone == null ? Output.empty() : this.timeZone;
     }
 
     public AutoscalerAutoscalingPolicyScalingScheduleGetArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> disabled,
-        Input<Integer> durationSec,
-        Input<Integer> minRequiredReplicas,
-        Input<String> name,
-        Input<String> schedule,
-        @Nullable Input<String> timeZone) {
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> disabled,
+        Output<Integer> durationSec,
+        Output<Integer> minRequiredReplicas,
+        Output<String> name,
+        Output<String> schedule,
+        @Nullable Output<String> timeZone) {
         this.description = description;
         this.disabled = disabled;
         this.durationSec = Objects.requireNonNull(durationSec, "expected parameter 'durationSec' to be non-null");
@@ -111,13 +111,13 @@ public final class AutoscalerAutoscalingPolicyScalingScheduleGetArgs extends io.
     }
 
     private AutoscalerAutoscalingPolicyScalingScheduleGetArgs() {
-        this.description = Input.empty();
-        this.disabled = Input.empty();
-        this.durationSec = Input.empty();
-        this.minRequiredReplicas = Input.empty();
-        this.name = Input.empty();
-        this.schedule = Input.empty();
-        this.timeZone = Input.empty();
+        this.description = Output.empty();
+        this.disabled = Output.empty();
+        this.durationSec = Output.empty();
+        this.minRequiredReplicas = Output.empty();
+        this.name = Output.empty();
+        this.schedule = Output.empty();
+        this.timeZone = Output.empty();
     }
 
     public static Builder builder() {
@@ -129,13 +129,13 @@ public final class AutoscalerAutoscalingPolicyScalingScheduleGetArgs extends io.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> disabled;
-        private Input<Integer> durationSec;
-        private Input<Integer> minRequiredReplicas;
-        private Input<String> name;
-        private Input<String> schedule;
-        private @Nullable Input<String> timeZone;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> disabled;
+        private Output<Integer> durationSec;
+        private Output<Integer> minRequiredReplicas;
+        private Output<String> name;
+        private Output<String> schedule;
+        private @Nullable Output<String> timeZone;
 
         public Builder() {
     	      // Empty
@@ -152,73 +152,73 @@ public final class AutoscalerAutoscalingPolicyScalingScheduleGetArgs extends io.
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder disabled(@Nullable Input<Boolean> disabled) {
+        public Builder disabled(@Nullable Output<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
 
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Input.ofNullable(disabled);
+            this.disabled = Output.ofNullable(disabled);
             return this;
         }
 
-        public Builder durationSec(Input<Integer> durationSec) {
+        public Builder durationSec(Output<Integer> durationSec) {
             this.durationSec = Objects.requireNonNull(durationSec);
             return this;
         }
 
         public Builder durationSec(Integer durationSec) {
-            this.durationSec = Input.of(Objects.requireNonNull(durationSec));
+            this.durationSec = Output.of(Objects.requireNonNull(durationSec));
             return this;
         }
 
-        public Builder minRequiredReplicas(Input<Integer> minRequiredReplicas) {
+        public Builder minRequiredReplicas(Output<Integer> minRequiredReplicas) {
             this.minRequiredReplicas = Objects.requireNonNull(minRequiredReplicas);
             return this;
         }
 
         public Builder minRequiredReplicas(Integer minRequiredReplicas) {
-            this.minRequiredReplicas = Input.of(Objects.requireNonNull(minRequiredReplicas));
+            this.minRequiredReplicas = Output.of(Objects.requireNonNull(minRequiredReplicas));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder schedule(Input<String> schedule) {
+        public Builder schedule(Output<String> schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
 
         public Builder schedule(String schedule) {
-            this.schedule = Input.of(Objects.requireNonNull(schedule));
+            this.schedule = Output.of(Objects.requireNonNull(schedule));
             return this;
         }
 
-        public Builder timeZone(@Nullable Input<String> timeZone) {
+        public Builder timeZone(@Nullable Output<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
 
         public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = Input.ofNullable(timeZone);
+            this.timeZone = Output.ofNullable(timeZone);
             return this;
         }
         public AutoscalerAutoscalingPolicyScalingScheduleGetArgs build() {

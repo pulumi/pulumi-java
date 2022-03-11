@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.authentication.k8s.io_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.authentication.k8s.io_v1.inputs.BoundObjectReferenceArgs;
 import java.lang.Integer;
@@ -26,9 +26,9 @@ public final class TokenRequestSpecArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="audiences", required=true)
-      private final Input<List<String>> audiences;
+      private final Output<List<String>> audiences;
 
-    public Input<List<String>> getAudiences() {
+    public Output<List<String>> getAudiences() {
         return this.audiences;
     }
 
@@ -37,10 +37,10 @@ public final class TokenRequestSpecArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="boundObjectRef")
-      private final @Nullable Input<BoundObjectReferenceArgs> boundObjectRef;
+      private final @Nullable Output<BoundObjectReferenceArgs> boundObjectRef;
 
-    public Input<BoundObjectReferenceArgs> getBoundObjectRef() {
-        return this.boundObjectRef == null ? Input.empty() : this.boundObjectRef;
+    public Output<BoundObjectReferenceArgs> getBoundObjectRef() {
+        return this.boundObjectRef == null ? Output.empty() : this.boundObjectRef;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class TokenRequestSpecArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="expirationSeconds")
-      private final @Nullable Input<Integer> expirationSeconds;
+      private final @Nullable Output<Integer> expirationSeconds;
 
-    public Input<Integer> getExpirationSeconds() {
-        return this.expirationSeconds == null ? Input.empty() : this.expirationSeconds;
+    public Output<Integer> getExpirationSeconds() {
+        return this.expirationSeconds == null ? Output.empty() : this.expirationSeconds;
     }
 
     public TokenRequestSpecArgs(
-        Input<List<String>> audiences,
-        @Nullable Input<BoundObjectReferenceArgs> boundObjectRef,
-        @Nullable Input<Integer> expirationSeconds) {
+        Output<List<String>> audiences,
+        @Nullable Output<BoundObjectReferenceArgs> boundObjectRef,
+        @Nullable Output<Integer> expirationSeconds) {
         this.audiences = Objects.requireNonNull(audiences, "expected parameter 'audiences' to be non-null");
         this.boundObjectRef = boundObjectRef;
         this.expirationSeconds = expirationSeconds;
     }
 
     private TokenRequestSpecArgs() {
-        this.audiences = Input.empty();
-        this.boundObjectRef = Input.empty();
-        this.expirationSeconds = Input.empty();
+        this.audiences = Output.empty();
+        this.boundObjectRef = Output.empty();
+        this.expirationSeconds = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class TokenRequestSpecArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<List<String>> audiences;
-        private @Nullable Input<BoundObjectReferenceArgs> boundObjectRef;
-        private @Nullable Input<Integer> expirationSeconds;
+        private Output<List<String>> audiences;
+        private @Nullable Output<BoundObjectReferenceArgs> boundObjectRef;
+        private @Nullable Output<Integer> expirationSeconds;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class TokenRequestSpecArgs extends io.pulumi.resources.ResourceArgs
     	      this.expirationSeconds = defaults.expirationSeconds;
         }
 
-        public Builder audiences(Input<List<String>> audiences) {
+        public Builder audiences(Output<List<String>> audiences) {
             this.audiences = Objects.requireNonNull(audiences);
             return this;
         }
 
         public Builder audiences(List<String> audiences) {
-            this.audiences = Input.of(Objects.requireNonNull(audiences));
+            this.audiences = Output.of(Objects.requireNonNull(audiences));
             return this;
         }
 
-        public Builder boundObjectRef(@Nullable Input<BoundObjectReferenceArgs> boundObjectRef) {
+        public Builder boundObjectRef(@Nullable Output<BoundObjectReferenceArgs> boundObjectRef) {
             this.boundObjectRef = boundObjectRef;
             return this;
         }
 
         public Builder boundObjectRef(@Nullable BoundObjectReferenceArgs boundObjectRef) {
-            this.boundObjectRef = Input.ofNullable(boundObjectRef);
+            this.boundObjectRef = Output.ofNullable(boundObjectRef);
             return this;
         }
 
-        public Builder expirationSeconds(@Nullable Input<Integer> expirationSeconds) {
+        public Builder expirationSeconds(@Nullable Output<Integer> expirationSeconds) {
             this.expirationSeconds = expirationSeconds;
             return this;
         }
 
         public Builder expirationSeconds(@Nullable Integer expirationSeconds) {
-            this.expirationSeconds = Input.ofNullable(expirationSeconds);
+            this.expirationSeconds = Output.ofNullable(expirationSeconds);
             return this;
         }
         public TokenRequestSpecArgs build() {

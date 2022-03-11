@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class NetworkEndpointState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="instance")
-      private final @Nullable Input<String> instance;
+      private final @Nullable Output<String> instance;
 
-    public Input<String> getInstance() {
-        return this.instance == null ? Input.empty() : this.instance;
+    public Output<String> getInstance() {
+        return this.instance == null ? Output.empty() : this.instance;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class NetworkEndpointState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ipAddress")
-      private final @Nullable Input<String> ipAddress;
+      private final @Nullable Output<String> ipAddress;
 
-    public Input<String> getIpAddress() {
-        return this.ipAddress == null ? Input.empty() : this.ipAddress;
+    public Output<String> getIpAddress() {
+        return this.ipAddress == null ? Output.empty() : this.ipAddress;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class NetworkEndpointState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="networkEndpointGroup")
-      private final @Nullable Input<String> networkEndpointGroup;
+      private final @Nullable Output<String> networkEndpointGroup;
 
-    public Input<String> getNetworkEndpointGroup() {
-        return this.networkEndpointGroup == null ? Input.empty() : this.networkEndpointGroup;
+    public Output<String> getNetworkEndpointGroup() {
+        return this.networkEndpointGroup == null ? Output.empty() : this.networkEndpointGroup;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class NetworkEndpointState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class NetworkEndpointState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -80,19 +80,19 @@ public final class NetworkEndpointState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="zone")
-      private final @Nullable Input<String> zone;
+      private final @Nullable Output<String> zone;
 
-    public Input<String> getZone() {
-        return this.zone == null ? Input.empty() : this.zone;
+    public Output<String> getZone() {
+        return this.zone == null ? Output.empty() : this.zone;
     }
 
     public NetworkEndpointState(
-        @Nullable Input<String> instance,
-        @Nullable Input<String> ipAddress,
-        @Nullable Input<String> networkEndpointGroup,
-        @Nullable Input<Integer> port,
-        @Nullable Input<String> project,
-        @Nullable Input<String> zone) {
+        @Nullable Output<String> instance,
+        @Nullable Output<String> ipAddress,
+        @Nullable Output<String> networkEndpointGroup,
+        @Nullable Output<Integer> port,
+        @Nullable Output<String> project,
+        @Nullable Output<String> zone) {
         this.instance = instance;
         this.ipAddress = ipAddress;
         this.networkEndpointGroup = networkEndpointGroup;
@@ -102,12 +102,12 @@ public final class NetworkEndpointState extends io.pulumi.resources.ResourceArgs
     }
 
     private NetworkEndpointState() {
-        this.instance = Input.empty();
-        this.ipAddress = Input.empty();
-        this.networkEndpointGroup = Input.empty();
-        this.port = Input.empty();
-        this.project = Input.empty();
-        this.zone = Input.empty();
+        this.instance = Output.empty();
+        this.ipAddress = Output.empty();
+        this.networkEndpointGroup = Output.empty();
+        this.port = Output.empty();
+        this.project = Output.empty();
+        this.zone = Output.empty();
     }
 
     public static Builder builder() {
@@ -119,12 +119,12 @@ public final class NetworkEndpointState extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> instance;
-        private @Nullable Input<String> ipAddress;
-        private @Nullable Input<String> networkEndpointGroup;
-        private @Nullable Input<Integer> port;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> zone;
+        private @Nullable Output<String> instance;
+        private @Nullable Output<String> ipAddress;
+        private @Nullable Output<String> networkEndpointGroup;
+        private @Nullable Output<Integer> port;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> zone;
 
         public Builder() {
     	      // Empty
@@ -140,63 +140,63 @@ public final class NetworkEndpointState extends io.pulumi.resources.ResourceArgs
     	      this.zone = defaults.zone;
         }
 
-        public Builder instance(@Nullable Input<String> instance) {
+        public Builder instance(@Nullable Output<String> instance) {
             this.instance = instance;
             return this;
         }
 
         public Builder instance(@Nullable String instance) {
-            this.instance = Input.ofNullable(instance);
+            this.instance = Output.ofNullable(instance);
             return this;
         }
 
-        public Builder ipAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Input.ofNullable(ipAddress);
+            this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
 
-        public Builder networkEndpointGroup(@Nullable Input<String> networkEndpointGroup) {
+        public Builder networkEndpointGroup(@Nullable Output<String> networkEndpointGroup) {
             this.networkEndpointGroup = networkEndpointGroup;
             return this;
         }
 
         public Builder networkEndpointGroup(@Nullable String networkEndpointGroup) {
-            this.networkEndpointGroup = Input.ofNullable(networkEndpointGroup);
+            this.networkEndpointGroup = Output.ofNullable(networkEndpointGroup);
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder zone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
 
         public Builder zone(@Nullable String zone) {
-            this.zone = Input.ofNullable(zone);
+            this.zone = Output.ofNullable(zone);
             return this;
         }
         public NetworkEndpointState build() {

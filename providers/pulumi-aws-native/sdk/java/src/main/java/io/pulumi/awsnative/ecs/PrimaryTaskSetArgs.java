@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ecs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class PrimaryTaskSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cluster", required=true)
-      private final Input<String> cluster;
+      private final Output<String> cluster;
 
-    public Input<String> getCluster() {
+    public Output<String> getCluster() {
         return this.cluster;
     }
 
@@ -29,9 +29,9 @@ public final class PrimaryTaskSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service", required=true)
-      private final Input<String> service;
+      private final Output<String> service;
 
-    public Input<String> getService() {
+    public Output<String> getService() {
         return this.service;
     }
 
@@ -40,25 +40,25 @@ public final class PrimaryTaskSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="taskSetId", required=true)
-      private final Input<String> taskSetId;
+      private final Output<String> taskSetId;
 
-    public Input<String> getTaskSetId() {
+    public Output<String> getTaskSetId() {
         return this.taskSetId;
     }
 
     public PrimaryTaskSetArgs(
-        Input<String> cluster,
-        Input<String> service,
-        Input<String> taskSetId) {
+        Output<String> cluster,
+        Output<String> service,
+        Output<String> taskSetId) {
         this.cluster = Objects.requireNonNull(cluster, "expected parameter 'cluster' to be non-null");
         this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
         this.taskSetId = Objects.requireNonNull(taskSetId, "expected parameter 'taskSetId' to be non-null");
     }
 
     private PrimaryTaskSetArgs() {
-        this.cluster = Input.empty();
-        this.service = Input.empty();
-        this.taskSetId = Input.empty();
+        this.cluster = Output.empty();
+        this.service = Output.empty();
+        this.taskSetId = Output.empty();
     }
 
     public static Builder builder() {
@@ -70,9 +70,9 @@ public final class PrimaryTaskSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> cluster;
-        private Input<String> service;
-        private Input<String> taskSetId;
+        private Output<String> cluster;
+        private Output<String> service;
+        private Output<String> taskSetId;
 
         public Builder() {
     	      // Empty
@@ -85,33 +85,33 @@ public final class PrimaryTaskSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.taskSetId = defaults.taskSetId;
         }
 
-        public Builder cluster(Input<String> cluster) {
+        public Builder cluster(Output<String> cluster) {
             this.cluster = Objects.requireNonNull(cluster);
             return this;
         }
 
         public Builder cluster(String cluster) {
-            this.cluster = Input.of(Objects.requireNonNull(cluster));
+            this.cluster = Output.of(Objects.requireNonNull(cluster));
             return this;
         }
 
-        public Builder service(Input<String> service) {
+        public Builder service(Output<String> service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
 
         public Builder service(String service) {
-            this.service = Input.of(Objects.requireNonNull(service));
+            this.service = Output.of(Objects.requireNonNull(service));
             return this;
         }
 
-        public Builder taskSetId(Input<String> taskSetId) {
+        public Builder taskSetId(Output<String> taskSetId) {
             this.taskSetId = Objects.requireNonNull(taskSetId);
             return this;
         }
 
         public Builder taskSetId(String taskSetId) {
-            this.taskSetId = Input.of(Objects.requireNonNull(taskSetId));
+            this.taskSetId = Output.of(Objects.requireNonNull(taskSetId));
             return this;
         }
         public PrimaryTaskSetArgs build() {

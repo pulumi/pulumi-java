@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudidentity.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class GroupMembershipMemberKeyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="id", required=true)
-      private final Input<String> id;
+      private final Output<String> id;
 
-    public Input<String> getId() {
+    public Output<String> getId() {
         return this.id;
     }
 
@@ -40,22 +40,22 @@ public final class GroupMembershipMemberKeyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="namespace")
-      private final @Nullable Input<String> namespace;
+      private final @Nullable Output<String> namespace;
 
-    public Input<String> getNamespace() {
-        return this.namespace == null ? Input.empty() : this.namespace;
+    public Output<String> getNamespace() {
+        return this.namespace == null ? Output.empty() : this.namespace;
     }
 
     public GroupMembershipMemberKeyArgs(
-        Input<String> id,
-        @Nullable Input<String> namespace) {
+        Output<String> id,
+        @Nullable Output<String> namespace) {
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
         this.namespace = namespace;
     }
 
     private GroupMembershipMemberKeyArgs() {
-        this.id = Input.empty();
-        this.namespace = Input.empty();
+        this.id = Output.empty();
+        this.namespace = Output.empty();
     }
 
     public static Builder builder() {
@@ -67,8 +67,8 @@ public final class GroupMembershipMemberKeyArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> id;
-        private @Nullable Input<String> namespace;
+        private Output<String> id;
+        private @Nullable Output<String> namespace;
 
         public Builder() {
     	      // Empty
@@ -80,23 +80,23 @@ public final class GroupMembershipMemberKeyArgs extends io.pulumi.resources.Reso
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder id(Input<String> id) {
+        public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
         public Builder id(String id) {
-            this.id = Input.of(Objects.requireNonNull(id));
+            this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder namespace(@Nullable Input<String> namespace) {
+        public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
 
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Input.ofNullable(namespace);
+            this.namespace = Output.ofNullable(namespace);
             return this;
         }
         public GroupMembershipMemberKeyArgs build() {

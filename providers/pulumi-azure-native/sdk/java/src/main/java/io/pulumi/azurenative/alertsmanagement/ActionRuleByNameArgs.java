@@ -6,7 +6,7 @@ package io.pulumi.azurenative.alertsmanagement;
 import io.pulumi.azurenative.alertsmanagement.inputs.ActionGroupArgs;
 import io.pulumi.azurenative.alertsmanagement.inputs.DiagnosticsArgs;
 import io.pulumi.azurenative.alertsmanagement.inputs.SuppressionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ActionRuleByNameArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="actionRuleName")
-      private final @Nullable Input<String> actionRuleName;
+      private final @Nullable Output<String> actionRuleName;
 
-    public Input<String> getActionRuleName() {
-        return this.actionRuleName == null ? Input.empty() : this.actionRuleName;
+    public Output<String> getActionRuleName() {
+        return this.actionRuleName == null ? Output.empty() : this.actionRuleName;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ActionRuleByNameArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ActionRuleByNameArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<Object> properties;
+      private final @Nullable Output<Object> properties;
 
-    public Input<Object> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<Object> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -57,9 +57,9 @@ public final class ActionRuleByNameArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -68,18 +68,18 @@ public final class ActionRuleByNameArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ActionRuleByNameArgs(
-        @Nullable Input<String> actionRuleName,
-        @Nullable Input<String> location,
-        @Nullable Input<Object> properties,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> actionRuleName,
+        @Nullable Output<String> location,
+        @Nullable Output<Object> properties,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.actionRuleName = actionRuleName;
         this.location = location;
         this.properties = properties;
@@ -88,11 +88,11 @@ public final class ActionRuleByNameArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ActionRuleByNameArgs() {
-        this.actionRuleName = Input.empty();
-        this.location = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.actionRuleName = Output.empty();
+        this.location = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class ActionRuleByNameArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> actionRuleName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Object> properties;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> actionRuleName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Object> properties;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class ActionRuleByNameArgs extends io.pulumi.resources.ResourceArgs
     	      this.tags = defaults.tags;
         }
 
-        public Builder actionRuleName(@Nullable Input<String> actionRuleName) {
+        public Builder actionRuleName(@Nullable Output<String> actionRuleName) {
             this.actionRuleName = actionRuleName;
             return this;
         }
 
         public Builder actionRuleName(@Nullable String actionRuleName) {
-            this.actionRuleName = Input.ofNullable(actionRuleName);
+            this.actionRuleName = Output.ofNullable(actionRuleName);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder properties(@Nullable Input<Object> properties) {
+        public Builder properties(@Nullable Output<Object> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable Object properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ActionRuleByNameArgs build() {

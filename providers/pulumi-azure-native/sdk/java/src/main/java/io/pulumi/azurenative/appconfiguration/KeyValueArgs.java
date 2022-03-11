@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appconfiguration;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,9 +20,9 @@ public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configStoreName", required=true)
-      private final Input<String> configStoreName;
+      private final Output<String> configStoreName;
 
-    public Input<String> getConfigStoreName() {
+    public Output<String> getConfigStoreName() {
         return this.configStoreName;
     }
 
@@ -32,10 +32,10 @@ public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentType")
-      private final @Nullable Input<String> contentType;
+      private final @Nullable Output<String> contentType;
 
-    public Input<String> getContentType() {
-        return this.contentType == null ? Input.empty() : this.contentType;
+    public Output<String> getContentType() {
+        return this.contentType == null ? Output.empty() : this.contentType;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyValueName")
-      private final @Nullable Input<String> keyValueName;
+      private final @Nullable Output<String> keyValueName;
 
-    public Input<String> getKeyValueName() {
-        return this.keyValueName == null ? Input.empty() : this.keyValueName;
+    public Output<String> getKeyValueName() {
+        return this.keyValueName == null ? Output.empty() : this.keyValueName;
     }
 
     /**
@@ -54,9 +54,9 @@ public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -65,10 +65,10 @@ public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -76,19 +76,19 @@ public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public KeyValueArgs(
-        Input<String> configStoreName,
-        @Nullable Input<String> contentType,
-        @Nullable Input<String> keyValueName,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> value) {
+        Output<String> configStoreName,
+        @Nullable Output<String> contentType,
+        @Nullable Output<String> keyValueName,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> value) {
         this.configStoreName = Objects.requireNonNull(configStoreName, "expected parameter 'configStoreName' to be non-null");
         this.contentType = contentType;
         this.keyValueName = keyValueName;
@@ -98,12 +98,12 @@ public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private KeyValueArgs() {
-        this.configStoreName = Input.empty();
-        this.contentType = Input.empty();
-        this.keyValueName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
-        this.value = Input.empty();
+        this.configStoreName = Output.empty();
+        this.contentType = Output.empty();
+        this.keyValueName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> configStoreName;
-        private @Nullable Input<String> contentType;
-        private @Nullable Input<String> keyValueName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> value;
+        private Output<String> configStoreName;
+        private @Nullable Output<String> contentType;
+        private @Nullable Output<String> keyValueName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder configStoreName(Input<String> configStoreName) {
+        public Builder configStoreName(Output<String> configStoreName) {
             this.configStoreName = Objects.requireNonNull(configStoreName);
             return this;
         }
 
         public Builder configStoreName(String configStoreName) {
-            this.configStoreName = Input.of(Objects.requireNonNull(configStoreName));
+            this.configStoreName = Output.of(Objects.requireNonNull(configStoreName));
             return this;
         }
 
-        public Builder contentType(@Nullable Input<String> contentType) {
+        public Builder contentType(@Nullable Output<String> contentType) {
             this.contentType = contentType;
             return this;
         }
 
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = Input.ofNullable(contentType);
+            this.contentType = Output.ofNullable(contentType);
             return this;
         }
 
-        public Builder keyValueName(@Nullable Input<String> keyValueName) {
+        public Builder keyValueName(@Nullable Output<String> keyValueName) {
             this.keyValueName = keyValueName;
             return this;
         }
 
         public Builder keyValueName(@Nullable String keyValueName) {
-            this.keyValueName = Input.ofNullable(keyValueName);
+            this.keyValueName = Output.ofNullable(keyValueName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public KeyValueArgs build() {

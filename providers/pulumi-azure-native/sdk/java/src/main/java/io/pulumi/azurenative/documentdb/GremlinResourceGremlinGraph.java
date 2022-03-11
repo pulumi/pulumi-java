@@ -8,7 +8,6 @@ import io.pulumi.azurenative.documentdb.GremlinResourceGremlinGraphArgs;
 import io.pulumi.azurenative.documentdb.outputs.GremlinGraphGetPropertiesResponseOptions;
 import io.pulumi.azurenative.documentdb.outputs.GremlinGraphGetPropertiesResponseResource;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -141,38 +140,38 @@ public class GremlinResourceGremlinGraph extends io.pulumi.resources.CustomResou
      * @param options A bag of options that control this resource's behavior.
      */
     public GremlinResourceGremlinGraph(String name, GremlinResourceGremlinGraphArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:documentdb:GremlinResourceGremlinGraph", name, args == null ? GremlinResourceGremlinGraphArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:documentdb:GremlinResourceGremlinGraph", name, args == null ? GremlinResourceGremlinGraphArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private GremlinResourceGremlinGraph(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private GremlinResourceGremlinGraph(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:documentdb:GremlinResourceGremlinGraph", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20150401:GremlinResourceGremlinGraph").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20150408:GremlinResourceGremlinGraph").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20151106:GremlinResourceGremlinGraph").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20160319:GremlinResourceGremlinGraph").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20160331:GremlinResourceGremlinGraph").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20190801:GremlinResourceGremlinGraph").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20191212:GremlinResourceGremlinGraph").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20200301:GremlinResourceGremlinGraph").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20200401:GremlinResourceGremlinGraph").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20200601preview:GremlinResourceGremlinGraph").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20200901:GremlinResourceGremlinGraph").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210115:GremlinResourceGremlinGraph").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210301preview:GremlinResourceGremlinGraph").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210315:GremlinResourceGremlinGraph").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210401preview:GremlinResourceGremlinGraph").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210415:GremlinResourceGremlinGraph").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210515:GremlinResourceGremlinGraph").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210615:GremlinResourceGremlinGraph").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210701preview:GremlinResourceGremlinGraph").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20211015:GremlinResourceGremlinGraph").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20211015preview:GremlinResourceGremlinGraph").build())
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20150401:GremlinResourceGremlinGraph").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20150408:GremlinResourceGremlinGraph").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20151106:GremlinResourceGremlinGraph").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20160319:GremlinResourceGremlinGraph").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20160331:GremlinResourceGremlinGraph").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20190801:GremlinResourceGremlinGraph").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20191212:GremlinResourceGremlinGraph").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20200301:GremlinResourceGremlinGraph").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20200401:GremlinResourceGremlinGraph").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20200601preview:GremlinResourceGremlinGraph").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20200901:GremlinResourceGremlinGraph").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210115:GremlinResourceGremlinGraph").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210301preview:GremlinResourceGremlinGraph").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210315:GremlinResourceGremlinGraph").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210401preview:GremlinResourceGremlinGraph").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210415:GremlinResourceGremlinGraph").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210515:GremlinResourceGremlinGraph").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210615:GremlinResourceGremlinGraph").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210701preview:GremlinResourceGremlinGraph").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20211015:GremlinResourceGremlinGraph").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20211015preview:GremlinResourceGremlinGraph").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -186,7 +185,7 @@ public class GremlinResourceGremlinGraph extends io.pulumi.resources.CustomResou
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static GremlinResourceGremlinGraph get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static GremlinResourceGremlinGraph get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new GremlinResourceGremlinGraph(name, id, options);
     }
 }

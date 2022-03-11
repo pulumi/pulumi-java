@@ -4,7 +4,7 @@
 package io.pulumi.aws.guardduty;
 
 import io.pulumi.aws.guardduty.inputs.OrganizationConfigurationDatasourcesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class OrganizationConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="autoEnable", required=true)
-      private final Input<Boolean> autoEnable;
+      private final Output<Boolean> autoEnable;
 
-    public Input<Boolean> getAutoEnable() {
+    public Output<Boolean> getAutoEnable() {
         return this.autoEnable;
     }
 
@@ -32,10 +32,10 @@ public final class OrganizationConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="datasources")
-      private final @Nullable Input<OrganizationConfigurationDatasourcesArgs> datasources;
+      private final @Nullable Output<OrganizationConfigurationDatasourcesArgs> datasources;
 
-    public Input<OrganizationConfigurationDatasourcesArgs> getDatasources() {
-        return this.datasources == null ? Input.empty() : this.datasources;
+    public Output<OrganizationConfigurationDatasourcesArgs> getDatasources() {
+        return this.datasources == null ? Output.empty() : this.datasources;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class OrganizationConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="detectorId", required=true)
-      private final Input<String> detectorId;
+      private final Output<String> detectorId;
 
-    public Input<String> getDetectorId() {
+    public Output<String> getDetectorId() {
         return this.detectorId;
     }
 
     public OrganizationConfigurationArgs(
-        Input<Boolean> autoEnable,
-        @Nullable Input<OrganizationConfigurationDatasourcesArgs> datasources,
-        Input<String> detectorId) {
+        Output<Boolean> autoEnable,
+        @Nullable Output<OrganizationConfigurationDatasourcesArgs> datasources,
+        Output<String> detectorId) {
         this.autoEnable = Objects.requireNonNull(autoEnable, "expected parameter 'autoEnable' to be non-null");
         this.datasources = datasources;
         this.detectorId = Objects.requireNonNull(detectorId, "expected parameter 'detectorId' to be non-null");
     }
 
     private OrganizationConfigurationArgs() {
-        this.autoEnable = Input.empty();
-        this.datasources = Input.empty();
-        this.detectorId = Input.empty();
+        this.autoEnable = Output.empty();
+        this.datasources = Output.empty();
+        this.detectorId = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class OrganizationConfigurationArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<Boolean> autoEnable;
-        private @Nullable Input<OrganizationConfigurationDatasourcesArgs> datasources;
-        private Input<String> detectorId;
+        private Output<Boolean> autoEnable;
+        private @Nullable Output<OrganizationConfigurationDatasourcesArgs> datasources;
+        private Output<String> detectorId;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class OrganizationConfigurationArgs extends io.pulumi.resources.Res
     	      this.detectorId = defaults.detectorId;
         }
 
-        public Builder autoEnable(Input<Boolean> autoEnable) {
+        public Builder autoEnable(Output<Boolean> autoEnable) {
             this.autoEnable = Objects.requireNonNull(autoEnable);
             return this;
         }
 
         public Builder autoEnable(Boolean autoEnable) {
-            this.autoEnable = Input.of(Objects.requireNonNull(autoEnable));
+            this.autoEnable = Output.of(Objects.requireNonNull(autoEnable));
             return this;
         }
 
-        public Builder datasources(@Nullable Input<OrganizationConfigurationDatasourcesArgs> datasources) {
+        public Builder datasources(@Nullable Output<OrganizationConfigurationDatasourcesArgs> datasources) {
             this.datasources = datasources;
             return this;
         }
 
         public Builder datasources(@Nullable OrganizationConfigurationDatasourcesArgs datasources) {
-            this.datasources = Input.ofNullable(datasources);
+            this.datasources = Output.ofNullable(datasources);
             return this;
         }
 
-        public Builder detectorId(Input<String> detectorId) {
+        public Builder detectorId(Output<String> detectorId) {
             this.detectorId = Objects.requireNonNull(detectorId);
             return this;
         }
 
         public Builder detectorId(String detectorId) {
-            this.detectorId = Input.of(Objects.requireNonNull(detectorId));
+            this.detectorId = Output.of(Objects.requireNonNull(detectorId));
             return this;
         }
         public OrganizationConfigurationArgs build() {

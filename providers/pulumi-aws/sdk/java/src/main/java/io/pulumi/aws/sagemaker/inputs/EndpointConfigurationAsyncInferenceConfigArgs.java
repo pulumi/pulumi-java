@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.EndpointConfigurationAsyncInferenceConfigClientConfigArgs;
 import io.pulumi.aws.sagemaker.inputs.EndpointConfigurationAsyncInferenceConfigOutputConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,10 +20,10 @@ public final class EndpointConfigurationAsyncInferenceConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="clientConfig")
-      private final @Nullable Input<EndpointConfigurationAsyncInferenceConfigClientConfigArgs> clientConfig;
+      private final @Nullable Output<EndpointConfigurationAsyncInferenceConfigClientConfigArgs> clientConfig;
 
-    public Input<EndpointConfigurationAsyncInferenceConfigClientConfigArgs> getClientConfig() {
-        return this.clientConfig == null ? Input.empty() : this.clientConfig;
+    public Output<EndpointConfigurationAsyncInferenceConfigClientConfigArgs> getClientConfig() {
+        return this.clientConfig == null ? Output.empty() : this.clientConfig;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class EndpointConfigurationAsyncInferenceConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="outputConfig", required=true)
-      private final Input<EndpointConfigurationAsyncInferenceConfigOutputConfigArgs> outputConfig;
+      private final Output<EndpointConfigurationAsyncInferenceConfigOutputConfigArgs> outputConfig;
 
-    public Input<EndpointConfigurationAsyncInferenceConfigOutputConfigArgs> getOutputConfig() {
+    public Output<EndpointConfigurationAsyncInferenceConfigOutputConfigArgs> getOutputConfig() {
         return this.outputConfig;
     }
 
     public EndpointConfigurationAsyncInferenceConfigArgs(
-        @Nullable Input<EndpointConfigurationAsyncInferenceConfigClientConfigArgs> clientConfig,
-        Input<EndpointConfigurationAsyncInferenceConfigOutputConfigArgs> outputConfig) {
+        @Nullable Output<EndpointConfigurationAsyncInferenceConfigClientConfigArgs> clientConfig,
+        Output<EndpointConfigurationAsyncInferenceConfigOutputConfigArgs> outputConfig) {
         this.clientConfig = clientConfig;
         this.outputConfig = Objects.requireNonNull(outputConfig, "expected parameter 'outputConfig' to be non-null");
     }
 
     private EndpointConfigurationAsyncInferenceConfigArgs() {
-        this.clientConfig = Input.empty();
-        this.outputConfig = Input.empty();
+        this.clientConfig = Output.empty();
+        this.outputConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class EndpointConfigurationAsyncInferenceConfigArgs extends io.pulu
     }
 
     public static final class Builder {
-        private @Nullable Input<EndpointConfigurationAsyncInferenceConfigClientConfigArgs> clientConfig;
-        private Input<EndpointConfigurationAsyncInferenceConfigOutputConfigArgs> outputConfig;
+        private @Nullable Output<EndpointConfigurationAsyncInferenceConfigClientConfigArgs> clientConfig;
+        private Output<EndpointConfigurationAsyncInferenceConfigOutputConfigArgs> outputConfig;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class EndpointConfigurationAsyncInferenceConfigArgs extends io.pulu
     	      this.outputConfig = defaults.outputConfig;
         }
 
-        public Builder clientConfig(@Nullable Input<EndpointConfigurationAsyncInferenceConfigClientConfigArgs> clientConfig) {
+        public Builder clientConfig(@Nullable Output<EndpointConfigurationAsyncInferenceConfigClientConfigArgs> clientConfig) {
             this.clientConfig = clientConfig;
             return this;
         }
 
         public Builder clientConfig(@Nullable EndpointConfigurationAsyncInferenceConfigClientConfigArgs clientConfig) {
-            this.clientConfig = Input.ofNullable(clientConfig);
+            this.clientConfig = Output.ofNullable(clientConfig);
             return this;
         }
 
-        public Builder outputConfig(Input<EndpointConfigurationAsyncInferenceConfigOutputConfigArgs> outputConfig) {
+        public Builder outputConfig(Output<EndpointConfigurationAsyncInferenceConfigOutputConfigArgs> outputConfig) {
             this.outputConfig = Objects.requireNonNull(outputConfig);
             return this;
         }
 
         public Builder outputConfig(EndpointConfigurationAsyncInferenceConfigOutputConfigArgs outputConfig) {
-            this.outputConfig = Input.of(Objects.requireNonNull(outputConfig));
+            this.outputConfig = Output.of(Objects.requireNonNull(outputConfig));
             return this;
         }
         public EndpointConfigurationAsyncInferenceConfigArgs build() {

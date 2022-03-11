@@ -9,7 +9,6 @@ import io.pulumi.azurenative.network.outputs.AddressSpaceResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.azurenative.network.outputs.VirtualNetworkBgpCommunitiesResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -270,53 +269,53 @@ public class VirtualNetworkPeering extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VirtualNetworkPeering(String name, VirtualNetworkPeeringArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:VirtualNetworkPeering", name, args == null ? VirtualNetworkPeeringArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:network:VirtualNetworkPeering", name, args == null ? VirtualNetworkPeeringArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private VirtualNetworkPeering(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private VirtualNetworkPeering(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:VirtualNetworkPeering", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:network/v20160601:VirtualNetworkPeering").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20160901:VirtualNetworkPeering").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20161201:VirtualNetworkPeering").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20170301:VirtualNetworkPeering").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20170601:VirtualNetworkPeering").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20170801:VirtualNetworkPeering").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20170901:VirtualNetworkPeering").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20171001:VirtualNetworkPeering").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20171101:VirtualNetworkPeering").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180101:VirtualNetworkPeering").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180201:VirtualNetworkPeering").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180401:VirtualNetworkPeering").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180601:VirtualNetworkPeering").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180701:VirtualNetworkPeering").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180801:VirtualNetworkPeering").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20181001:VirtualNetworkPeering").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20181101:VirtualNetworkPeering").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20181201:VirtualNetworkPeering").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190201:VirtualNetworkPeering").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190401:VirtualNetworkPeering").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190601:VirtualNetworkPeering").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190701:VirtualNetworkPeering").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190801:VirtualNetworkPeering").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190901:VirtualNetworkPeering").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20191101:VirtualNetworkPeering").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20191201:VirtualNetworkPeering").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200301:VirtualNetworkPeering").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200401:VirtualNetworkPeering").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200501:VirtualNetworkPeering").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200601:VirtualNetworkPeering").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200701:VirtualNetworkPeering").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200801:VirtualNetworkPeering").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20201101:VirtualNetworkPeering").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210201:VirtualNetworkPeering").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210301:VirtualNetworkPeering").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210501:VirtualNetworkPeering").build())
+                Output.of(Alias.builder().setType("azure-native:network/v20160601:VirtualNetworkPeering").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20160901:VirtualNetworkPeering").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20161201:VirtualNetworkPeering").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170301:VirtualNetworkPeering").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170601:VirtualNetworkPeering").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170801:VirtualNetworkPeering").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170901:VirtualNetworkPeering").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20171001:VirtualNetworkPeering").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20171101:VirtualNetworkPeering").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180101:VirtualNetworkPeering").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180201:VirtualNetworkPeering").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180401:VirtualNetworkPeering").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180601:VirtualNetworkPeering").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180701:VirtualNetworkPeering").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180801:VirtualNetworkPeering").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181001:VirtualNetworkPeering").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181101:VirtualNetworkPeering").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181201:VirtualNetworkPeering").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190201:VirtualNetworkPeering").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190401:VirtualNetworkPeering").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190601:VirtualNetworkPeering").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190701:VirtualNetworkPeering").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190801:VirtualNetworkPeering").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190901:VirtualNetworkPeering").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20191101:VirtualNetworkPeering").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20191201:VirtualNetworkPeering").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200301:VirtualNetworkPeering").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200401:VirtualNetworkPeering").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200501:VirtualNetworkPeering").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200601:VirtualNetworkPeering").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200701:VirtualNetworkPeering").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200801:VirtualNetworkPeering").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20201101:VirtualNetworkPeering").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210201:VirtualNetworkPeering").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210301:VirtualNetworkPeering").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210501:VirtualNetworkPeering").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -330,7 +329,7 @@ public class VirtualNetworkPeering extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static VirtualNetworkPeering get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static VirtualNetworkPeering get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new VirtualNetworkPeering(name, id, options);
     }
 }

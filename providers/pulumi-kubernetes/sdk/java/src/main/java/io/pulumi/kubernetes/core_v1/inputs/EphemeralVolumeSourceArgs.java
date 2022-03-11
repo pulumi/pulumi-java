@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.PersistentVolumeClaimTemplateArgs;
 import java.lang.Boolean;
@@ -24,10 +24,10 @@ public final class EphemeralVolumeSourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="readOnly")
-      private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Output<Boolean> readOnly;
 
-    public Input<Boolean> getReadOnly() {
-        return this.readOnly == null ? Input.empty() : this.readOnly;
+    public Output<Boolean> getReadOnly() {
+        return this.readOnly == null ? Output.empty() : this.readOnly;
     }
 
     /**
@@ -41,22 +41,22 @@ public final class EphemeralVolumeSourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="volumeClaimTemplate")
-      private final @Nullable Input<PersistentVolumeClaimTemplateArgs> volumeClaimTemplate;
+      private final @Nullable Output<PersistentVolumeClaimTemplateArgs> volumeClaimTemplate;
 
-    public Input<PersistentVolumeClaimTemplateArgs> getVolumeClaimTemplate() {
-        return this.volumeClaimTemplate == null ? Input.empty() : this.volumeClaimTemplate;
+    public Output<PersistentVolumeClaimTemplateArgs> getVolumeClaimTemplate() {
+        return this.volumeClaimTemplate == null ? Output.empty() : this.volumeClaimTemplate;
     }
 
     public EphemeralVolumeSourceArgs(
-        @Nullable Input<Boolean> readOnly,
-        @Nullable Input<PersistentVolumeClaimTemplateArgs> volumeClaimTemplate) {
+        @Nullable Output<Boolean> readOnly,
+        @Nullable Output<PersistentVolumeClaimTemplateArgs> volumeClaimTemplate) {
         this.readOnly = readOnly;
         this.volumeClaimTemplate = volumeClaimTemplate;
     }
 
     private EphemeralVolumeSourceArgs() {
-        this.readOnly = Input.empty();
-        this.volumeClaimTemplate = Input.empty();
+        this.readOnly = Output.empty();
+        this.volumeClaimTemplate = Output.empty();
     }
 
     public static Builder builder() {
@@ -68,8 +68,8 @@ public final class EphemeralVolumeSourceArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> readOnly;
-        private @Nullable Input<PersistentVolumeClaimTemplateArgs> volumeClaimTemplate;
+        private @Nullable Output<Boolean> readOnly;
+        private @Nullable Output<PersistentVolumeClaimTemplateArgs> volumeClaimTemplate;
 
         public Builder() {
     	      // Empty
@@ -81,23 +81,23 @@ public final class EphemeralVolumeSourceArgs extends io.pulumi.resources.Resourc
     	      this.volumeClaimTemplate = defaults.volumeClaimTemplate;
         }
 
-        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Input.ofNullable(readOnly);
+            this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
 
-        public Builder volumeClaimTemplate(@Nullable Input<PersistentVolumeClaimTemplateArgs> volumeClaimTemplate) {
+        public Builder volumeClaimTemplate(@Nullable Output<PersistentVolumeClaimTemplateArgs> volumeClaimTemplate) {
             this.volumeClaimTemplate = volumeClaimTemplate;
             return this;
         }
 
         public Builder volumeClaimTemplate(@Nullable PersistentVolumeClaimTemplateArgs volumeClaimTemplate) {
-            this.volumeClaimTemplate = Input.ofNullable(volumeClaimTemplate);
+            this.volumeClaimTemplate = Output.ofNullable(volumeClaimTemplate);
             return this;
         }
         public EphemeralVolumeSourceArgs build() {

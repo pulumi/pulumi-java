@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class SoftwareRecipeArtifactRemoteArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="checksum")
-      private final @Nullable Input<String> checksum;
+      private final @Nullable Output<String> checksum;
 
-    public Input<String> getChecksum() {
-        return this.checksum == null ? Input.empty() : this.checksum;
+    public Output<String> getChecksum() {
+        return this.checksum == null ? Output.empty() : this.checksum;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class SoftwareRecipeArtifactRemoteArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="uri")
-      private final @Nullable Input<String> uri;
+      private final @Nullable Output<String> uri;
 
-    public Input<String> getUri() {
-        return this.uri == null ? Input.empty() : this.uri;
+    public Output<String> getUri() {
+        return this.uri == null ? Output.empty() : this.uri;
     }
 
     public SoftwareRecipeArtifactRemoteArgs(
-        @Nullable Input<String> checksum,
-        @Nullable Input<String> uri) {
+        @Nullable Output<String> checksum,
+        @Nullable Output<String> uri) {
         this.checksum = checksum;
         this.uri = uri;
     }
 
     private SoftwareRecipeArtifactRemoteArgs() {
-        this.checksum = Input.empty();
-        this.uri = Input.empty();
+        this.checksum = Output.empty();
+        this.uri = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class SoftwareRecipeArtifactRemoteArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> checksum;
-        private @Nullable Input<String> uri;
+        private @Nullable Output<String> checksum;
+        private @Nullable Output<String> uri;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class SoftwareRecipeArtifactRemoteArgs extends io.pulumi.resources.
     	      this.uri = defaults.uri;
         }
 
-        public Builder checksum(@Nullable Input<String> checksum) {
+        public Builder checksum(@Nullable Output<String> checksum) {
             this.checksum = checksum;
             return this;
         }
 
         public Builder checksum(@Nullable String checksum) {
-            this.checksum = Input.ofNullable(checksum);
+            this.checksum = Output.ofNullable(checksum);
             return this;
         }
 
-        public Builder uri(@Nullable Input<String> uri) {
+        public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
 
         public Builder uri(@Nullable String uri) {
-            this.uri = Input.ofNullable(uri);
+            this.uri = Output.ofNullable(uri);
             return this;
         }
         public SoftwareRecipeArtifactRemoteArgs build() {

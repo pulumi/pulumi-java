@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class TimeWindowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="end", required=true)
-      private final Input<String> end;
+      private final Output<String> end;
 
-    public Input<String> getEnd() {
+    public Output<String> getEnd() {
         return this.end;
     }
 
@@ -34,9 +34,9 @@ public final class TimeWindowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="start", required=true)
-      private final Input<String> start;
+      private final Output<String> start;
 
-    public Input<String> getStart() {
+    public Output<String> getStart() {
         return this.start;
     }
 
@@ -45,25 +45,25 @@ public final class TimeWindowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeZone")
-      private final @Nullable Input<String> timeZone;
+      private final @Nullable Output<String> timeZone;
 
-    public Input<String> getTimeZone() {
-        return this.timeZone == null ? Input.empty() : this.timeZone;
+    public Output<String> getTimeZone() {
+        return this.timeZone == null ? Output.empty() : this.timeZone;
     }
 
     public TimeWindowArgs(
-        Input<String> end,
-        Input<String> start,
-        @Nullable Input<String> timeZone) {
+        Output<String> end,
+        Output<String> start,
+        @Nullable Output<String> timeZone) {
         this.end = Objects.requireNonNull(end, "expected parameter 'end' to be non-null");
         this.start = Objects.requireNonNull(start, "expected parameter 'start' to be non-null");
         this.timeZone = timeZone;
     }
 
     private TimeWindowArgs() {
-        this.end = Input.empty();
-        this.start = Input.empty();
-        this.timeZone = Input.empty();
+        this.end = Output.empty();
+        this.start = Output.empty();
+        this.timeZone = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class TimeWindowArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> end;
-        private Input<String> start;
-        private @Nullable Input<String> timeZone;
+        private Output<String> end;
+        private Output<String> start;
+        private @Nullable Output<String> timeZone;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class TimeWindowArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder end(Input<String> end) {
+        public Builder end(Output<String> end) {
             this.end = Objects.requireNonNull(end);
             return this;
         }
 
         public Builder end(String end) {
-            this.end = Input.of(Objects.requireNonNull(end));
+            this.end = Output.of(Objects.requireNonNull(end));
             return this;
         }
 
-        public Builder start(Input<String> start) {
+        public Builder start(Output<String> start) {
             this.start = Objects.requireNonNull(start);
             return this;
         }
 
         public Builder start(String start) {
-            this.start = Input.of(Objects.requireNonNull(start));
+            this.start = Output.of(Objects.requireNonNull(start));
             return this;
         }
 
-        public Builder timeZone(@Nullable Input<String> timeZone) {
+        public Builder timeZone(@Nullable Output<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
 
         public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = Input.ofNullable(timeZone);
+            this.timeZone = Output.ofNullable(timeZone);
             return this;
         }
         public TimeWindowArgs build() {

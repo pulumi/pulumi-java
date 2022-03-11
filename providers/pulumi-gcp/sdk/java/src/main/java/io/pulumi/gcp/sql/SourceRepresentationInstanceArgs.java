@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class SourceRepresentationInstanceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="databaseVersion", required=true)
-      private final Input<String> databaseVersion;
+      private final Output<String> databaseVersion;
 
-    public Input<String> getDatabaseVersion() {
+    public Output<String> getDatabaseVersion() {
         return this.databaseVersion;
     }
 
@@ -32,9 +32,9 @@ public final class SourceRepresentationInstanceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="host", required=true)
-      private final Input<String> host;
+      private final Output<String> host;
 
-    public Input<String> getHost() {
+    public Output<String> getHost() {
         return this.host;
     }
 
@@ -43,10 +43,10 @@ public final class SourceRepresentationInstanceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class SourceRepresentationInstanceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class SourceRepresentationInstanceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -79,19 +79,19 @@ public final class SourceRepresentationInstanceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     public SourceRepresentationInstanceArgs(
-        Input<String> databaseVersion,
-        Input<String> host,
-        @Nullable Input<String> name,
-        @Nullable Input<Integer> port,
-        @Nullable Input<String> project,
-        @Nullable Input<String> region) {
+        Output<String> databaseVersion,
+        Output<String> host,
+        @Nullable Output<String> name,
+        @Nullable Output<Integer> port,
+        @Nullable Output<String> project,
+        @Nullable Output<String> region) {
         this.databaseVersion = Objects.requireNonNull(databaseVersion, "expected parameter 'databaseVersion' to be non-null");
         this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
         this.name = name;
@@ -101,12 +101,12 @@ public final class SourceRepresentationInstanceArgs extends io.pulumi.resources.
     }
 
     private SourceRepresentationInstanceArgs() {
-        this.databaseVersion = Input.empty();
-        this.host = Input.empty();
-        this.name = Input.empty();
-        this.port = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
+        this.databaseVersion = Output.empty();
+        this.host = Output.empty();
+        this.name = Output.empty();
+        this.port = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,12 +118,12 @@ public final class SourceRepresentationInstanceArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<String> databaseVersion;
-        private Input<String> host;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Integer> port;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> region;
+        private Output<String> databaseVersion;
+        private Output<String> host;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Integer> port;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> region;
 
         public Builder() {
     	      // Empty
@@ -139,63 +139,63 @@ public final class SourceRepresentationInstanceArgs extends io.pulumi.resources.
     	      this.region = defaults.region;
         }
 
-        public Builder databaseVersion(Input<String> databaseVersion) {
+        public Builder databaseVersion(Output<String> databaseVersion) {
             this.databaseVersion = Objects.requireNonNull(databaseVersion);
             return this;
         }
 
         public Builder databaseVersion(String databaseVersion) {
-            this.databaseVersion = Input.of(Objects.requireNonNull(databaseVersion));
+            this.databaseVersion = Output.of(Objects.requireNonNull(databaseVersion));
             return this;
         }
 
-        public Builder host(Input<String> host) {
+        public Builder host(Output<String> host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
         public Builder host(String host) {
-            this.host = Input.of(Objects.requireNonNull(host));
+            this.host = Output.of(Objects.requireNonNull(host));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
         public SourceRepresentationInstanceArgs build() {

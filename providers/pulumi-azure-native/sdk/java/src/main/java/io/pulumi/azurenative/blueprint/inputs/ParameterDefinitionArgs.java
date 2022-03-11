@@ -5,7 +5,7 @@ package io.pulumi.azurenative.blueprint.inputs;
 
 import io.pulumi.azurenative.blueprint.enums.TemplateParameterType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="allowedValues")
-      private final @Nullable Input<List<Object>> allowedValues;
+      private final @Nullable Output<List<Object>> allowedValues;
 
-    public Input<List<Object>> getAllowedValues() {
-        return this.allowedValues == null ? Input.empty() : this.allowedValues;
+    public Output<List<Object>> getAllowedValues() {
+        return this.allowedValues == null ? Output.empty() : this.allowedValues;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="defaultValue")
-      private final @Nullable Input<Object> defaultValue;
+      private final @Nullable Output<Object> defaultValue;
 
-    public Input<Object> getDefaultValue() {
-        return this.defaultValue == null ? Input.empty() : this.defaultValue;
+    public Output<Object> getDefaultValue() {
+        return this.defaultValue == null ? Output.empty() : this.defaultValue;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="strongType")
-      private final @Nullable Input<String> strongType;
+      private final @Nullable Output<String> strongType;
 
-    public Input<String> getStrongType() {
-        return this.strongType == null ? Input.empty() : this.strongType;
+    public Output<String> getStrongType() {
+        return this.strongType == null ? Output.empty() : this.strongType;
     }
 
     /**
@@ -82,19 +82,19 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<Either<String,TemplateParameterType>> type;
+      private final Output<Either<String,TemplateParameterType>> type;
 
-    public Input<Either<String,TemplateParameterType>> getType() {
+    public Output<Either<String,TemplateParameterType>> getType() {
         return this.type;
     }
 
     public ParameterDefinitionArgs(
-        @Nullable Input<List<Object>> allowedValues,
-        @Nullable Input<Object> defaultValue,
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> strongType,
-        Input<Either<String,TemplateParameterType>> type) {
+        @Nullable Output<List<Object>> allowedValues,
+        @Nullable Output<Object> defaultValue,
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> strongType,
+        Output<Either<String,TemplateParameterType>> type) {
         this.allowedValues = allowedValues;
         this.defaultValue = defaultValue;
         this.description = description;
@@ -104,12 +104,12 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
     }
 
     private ParameterDefinitionArgs() {
-        this.allowedValues = Input.empty();
-        this.defaultValue = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.strongType = Input.empty();
-        this.type = Input.empty();
+        this.allowedValues = Output.empty();
+        this.defaultValue = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.strongType = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -121,12 +121,12 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Object>> allowedValues;
-        private @Nullable Input<Object> defaultValue;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> strongType;
-        private Input<Either<String,TemplateParameterType>> type;
+        private @Nullable Output<List<Object>> allowedValues;
+        private @Nullable Output<Object> defaultValue;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> strongType;
+        private Output<Either<String,TemplateParameterType>> type;
 
         public Builder() {
     	      // Empty
@@ -142,63 +142,63 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
     	      this.type = defaults.type;
         }
 
-        public Builder allowedValues(@Nullable Input<List<Object>> allowedValues) {
+        public Builder allowedValues(@Nullable Output<List<Object>> allowedValues) {
             this.allowedValues = allowedValues;
             return this;
         }
 
         public Builder allowedValues(@Nullable List<Object> allowedValues) {
-            this.allowedValues = Input.ofNullable(allowedValues);
+            this.allowedValues = Output.ofNullable(allowedValues);
             return this;
         }
 
-        public Builder defaultValue(@Nullable Input<Object> defaultValue) {
+        public Builder defaultValue(@Nullable Output<Object> defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
 
         public Builder defaultValue(@Nullable Object defaultValue) {
-            this.defaultValue = Input.ofNullable(defaultValue);
+            this.defaultValue = Output.ofNullable(defaultValue);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder strongType(@Nullable Input<String> strongType) {
+        public Builder strongType(@Nullable Output<String> strongType) {
             this.strongType = strongType;
             return this;
         }
 
         public Builder strongType(@Nullable String strongType) {
-            this.strongType = Input.ofNullable(strongType);
+            this.strongType = Output.ofNullable(strongType);
             return this;
         }
 
-        public Builder type(Input<Either<String,TemplateParameterType>> type) {
+        public Builder type(Output<Either<String,TemplateParameterType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(Either<String,TemplateParameterType> type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ParameterDefinitionArgs build() {

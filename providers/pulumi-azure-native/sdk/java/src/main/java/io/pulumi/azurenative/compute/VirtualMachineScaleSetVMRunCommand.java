@@ -9,7 +9,6 @@ import io.pulumi.azurenative.compute.outputs.RunCommandInputParameterResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineRunCommandInstanceViewResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineRunCommandScriptSourceResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -286,23 +285,23 @@ public class VirtualMachineScaleSetVMRunCommand extends io.pulumi.resources.Cust
      * @param options A bag of options that control this resource's behavior.
      */
     public VirtualMachineScaleSetVMRunCommand(String name, VirtualMachineScaleSetVMRunCommandArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:compute:VirtualMachineScaleSetVMRunCommand", name, args == null ? VirtualMachineScaleSetVMRunCommandArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:compute:VirtualMachineScaleSetVMRunCommand", name, args == null ? VirtualMachineScaleSetVMRunCommandArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private VirtualMachineScaleSetVMRunCommand(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private VirtualMachineScaleSetVMRunCommand(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:compute:VirtualMachineScaleSetVMRunCommand", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:compute/v20200601:VirtualMachineScaleSetVMRunCommand").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20201201:VirtualMachineScaleSetVMRunCommand").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20210301:VirtualMachineScaleSetVMRunCommand").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20210401:VirtualMachineScaleSetVMRunCommand").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20210701:VirtualMachineScaleSetVMRunCommand").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20211101:VirtualMachineScaleSetVMRunCommand").build())
+                Output.of(Alias.builder().setType("azure-native:compute/v20200601:VirtualMachineScaleSetVMRunCommand").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20201201:VirtualMachineScaleSetVMRunCommand").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20210301:VirtualMachineScaleSetVMRunCommand").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20210401:VirtualMachineScaleSetVMRunCommand").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20210701:VirtualMachineScaleSetVMRunCommand").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20211101:VirtualMachineScaleSetVMRunCommand").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -316,7 +315,7 @@ public class VirtualMachineScaleSetVMRunCommand extends io.pulumi.resources.Cust
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static VirtualMachineScaleSetVMRunCommand get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static VirtualMachineScaleSetVMRunCommand get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new VirtualMachineScaleSetVMRunCommand(name, id, options);
     }
 }

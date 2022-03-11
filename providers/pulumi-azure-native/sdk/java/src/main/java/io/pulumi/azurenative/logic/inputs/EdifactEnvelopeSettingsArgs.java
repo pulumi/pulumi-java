@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -25,10 +25,10 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="applicationReferenceId")
-      private final @Nullable Input<String> applicationReferenceId;
+      private final @Nullable Output<String> applicationReferenceId;
 
-    public Input<String> getApplicationReferenceId() {
-        return this.applicationReferenceId == null ? Input.empty() : this.applicationReferenceId;
+    public Output<String> getApplicationReferenceId() {
+        return this.applicationReferenceId == null ? Output.empty() : this.applicationReferenceId;
     }
 
     /**
@@ -36,9 +36,9 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="applyDelimiterStringAdvice", required=true)
-      private final Input<Boolean> applyDelimiterStringAdvice;
+      private final Output<Boolean> applyDelimiterStringAdvice;
 
-    public Input<Boolean> getApplyDelimiterStringAdvice() {
+    public Output<Boolean> getApplyDelimiterStringAdvice() {
         return this.applyDelimiterStringAdvice;
     }
 
@@ -47,10 +47,10 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="communicationAgreementId")
-      private final @Nullable Input<String> communicationAgreementId;
+      private final @Nullable Output<String> communicationAgreementId;
 
-    public Input<String> getCommunicationAgreementId() {
-        return this.communicationAgreementId == null ? Input.empty() : this.communicationAgreementId;
+    public Output<String> getCommunicationAgreementId() {
+        return this.communicationAgreementId == null ? Output.empty() : this.communicationAgreementId;
     }
 
     /**
@@ -58,9 +58,9 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="createGroupingSegments", required=true)
-      private final Input<Boolean> createGroupingSegments;
+      private final Output<Boolean> createGroupingSegments;
 
-    public Input<Boolean> getCreateGroupingSegments() {
+    public Output<Boolean> getCreateGroupingSegments() {
         return this.createGroupingSegments;
     }
 
@@ -69,9 +69,9 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="enableDefaultGroupHeaders", required=true)
-      private final Input<Boolean> enableDefaultGroupHeaders;
+      private final Output<Boolean> enableDefaultGroupHeaders;
 
-    public Input<Boolean> getEnableDefaultGroupHeaders() {
+    public Output<Boolean> getEnableDefaultGroupHeaders() {
         return this.enableDefaultGroupHeaders;
     }
 
@@ -80,10 +80,10 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="functionalGroupId")
-      private final @Nullable Input<String> functionalGroupId;
+      private final @Nullable Output<String> functionalGroupId;
 
-    public Input<String> getFunctionalGroupId() {
-        return this.functionalGroupId == null ? Input.empty() : this.functionalGroupId;
+    public Output<String> getFunctionalGroupId() {
+        return this.functionalGroupId == null ? Output.empty() : this.functionalGroupId;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="groupApplicationPassword")
-      private final @Nullable Input<String> groupApplicationPassword;
+      private final @Nullable Output<String> groupApplicationPassword;
 
-    public Input<String> getGroupApplicationPassword() {
-        return this.groupApplicationPassword == null ? Input.empty() : this.groupApplicationPassword;
+    public Output<String> getGroupApplicationPassword() {
+        return this.groupApplicationPassword == null ? Output.empty() : this.groupApplicationPassword;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="groupApplicationReceiverId")
-      private final @Nullable Input<String> groupApplicationReceiverId;
+      private final @Nullable Output<String> groupApplicationReceiverId;
 
-    public Input<String> getGroupApplicationReceiverId() {
-        return this.groupApplicationReceiverId == null ? Input.empty() : this.groupApplicationReceiverId;
+    public Output<String> getGroupApplicationReceiverId() {
+        return this.groupApplicationReceiverId == null ? Output.empty() : this.groupApplicationReceiverId;
     }
 
     /**
@@ -113,10 +113,10 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="groupApplicationReceiverQualifier")
-      private final @Nullable Input<String> groupApplicationReceiverQualifier;
+      private final @Nullable Output<String> groupApplicationReceiverQualifier;
 
-    public Input<String> getGroupApplicationReceiverQualifier() {
-        return this.groupApplicationReceiverQualifier == null ? Input.empty() : this.groupApplicationReceiverQualifier;
+    public Output<String> getGroupApplicationReceiverQualifier() {
+        return this.groupApplicationReceiverQualifier == null ? Output.empty() : this.groupApplicationReceiverQualifier;
     }
 
     /**
@@ -124,10 +124,10 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="groupApplicationSenderId")
-      private final @Nullable Input<String> groupApplicationSenderId;
+      private final @Nullable Output<String> groupApplicationSenderId;
 
-    public Input<String> getGroupApplicationSenderId() {
-        return this.groupApplicationSenderId == null ? Input.empty() : this.groupApplicationSenderId;
+    public Output<String> getGroupApplicationSenderId() {
+        return this.groupApplicationSenderId == null ? Output.empty() : this.groupApplicationSenderId;
     }
 
     /**
@@ -135,10 +135,10 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="groupApplicationSenderQualifier")
-      private final @Nullable Input<String> groupApplicationSenderQualifier;
+      private final @Nullable Output<String> groupApplicationSenderQualifier;
 
-    public Input<String> getGroupApplicationSenderQualifier() {
-        return this.groupApplicationSenderQualifier == null ? Input.empty() : this.groupApplicationSenderQualifier;
+    public Output<String> getGroupApplicationSenderQualifier() {
+        return this.groupApplicationSenderQualifier == null ? Output.empty() : this.groupApplicationSenderQualifier;
     }
 
     /**
@@ -146,10 +146,10 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="groupAssociationAssignedCode")
-      private final @Nullable Input<String> groupAssociationAssignedCode;
+      private final @Nullable Output<String> groupAssociationAssignedCode;
 
-    public Input<String> getGroupAssociationAssignedCode() {
-        return this.groupAssociationAssignedCode == null ? Input.empty() : this.groupAssociationAssignedCode;
+    public Output<String> getGroupAssociationAssignedCode() {
+        return this.groupAssociationAssignedCode == null ? Output.empty() : this.groupAssociationAssignedCode;
     }
 
     /**
@@ -157,9 +157,9 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="groupControlNumberLowerBound", required=true)
-      private final Input<Double> groupControlNumberLowerBound;
+      private final Output<Double> groupControlNumberLowerBound;
 
-    public Input<Double> getGroupControlNumberLowerBound() {
+    public Output<Double> getGroupControlNumberLowerBound() {
         return this.groupControlNumberLowerBound;
     }
 
@@ -168,10 +168,10 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="groupControlNumberPrefix")
-      private final @Nullable Input<String> groupControlNumberPrefix;
+      private final @Nullable Output<String> groupControlNumberPrefix;
 
-    public Input<String> getGroupControlNumberPrefix() {
-        return this.groupControlNumberPrefix == null ? Input.empty() : this.groupControlNumberPrefix;
+    public Output<String> getGroupControlNumberPrefix() {
+        return this.groupControlNumberPrefix == null ? Output.empty() : this.groupControlNumberPrefix;
     }
 
     /**
@@ -179,10 +179,10 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="groupControlNumberSuffix")
-      private final @Nullable Input<String> groupControlNumberSuffix;
+      private final @Nullable Output<String> groupControlNumberSuffix;
 
-    public Input<String> getGroupControlNumberSuffix() {
-        return this.groupControlNumberSuffix == null ? Input.empty() : this.groupControlNumberSuffix;
+    public Output<String> getGroupControlNumberSuffix() {
+        return this.groupControlNumberSuffix == null ? Output.empty() : this.groupControlNumberSuffix;
     }
 
     /**
@@ -190,9 +190,9 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="groupControlNumberUpperBound", required=true)
-      private final Input<Double> groupControlNumberUpperBound;
+      private final Output<Double> groupControlNumberUpperBound;
 
-    public Input<Double> getGroupControlNumberUpperBound() {
+    public Output<Double> getGroupControlNumberUpperBound() {
         return this.groupControlNumberUpperBound;
     }
 
@@ -201,10 +201,10 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="groupControllingAgencyCode")
-      private final @Nullable Input<String> groupControllingAgencyCode;
+      private final @Nullable Output<String> groupControllingAgencyCode;
 
-    public Input<String> getGroupControllingAgencyCode() {
-        return this.groupControllingAgencyCode == null ? Input.empty() : this.groupControllingAgencyCode;
+    public Output<String> getGroupControllingAgencyCode() {
+        return this.groupControllingAgencyCode == null ? Output.empty() : this.groupControllingAgencyCode;
     }
 
     /**
@@ -212,10 +212,10 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="groupMessageRelease")
-      private final @Nullable Input<String> groupMessageRelease;
+      private final @Nullable Output<String> groupMessageRelease;
 
-    public Input<String> getGroupMessageRelease() {
-        return this.groupMessageRelease == null ? Input.empty() : this.groupMessageRelease;
+    public Output<String> getGroupMessageRelease() {
+        return this.groupMessageRelease == null ? Output.empty() : this.groupMessageRelease;
     }
 
     /**
@@ -223,10 +223,10 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="groupMessageVersion")
-      private final @Nullable Input<String> groupMessageVersion;
+      private final @Nullable Output<String> groupMessageVersion;
 
-    public Input<String> getGroupMessageVersion() {
-        return this.groupMessageVersion == null ? Input.empty() : this.groupMessageVersion;
+    public Output<String> getGroupMessageVersion() {
+        return this.groupMessageVersion == null ? Output.empty() : this.groupMessageVersion;
     }
 
     /**
@@ -234,9 +234,9 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="interchangeControlNumberLowerBound", required=true)
-      private final Input<Double> interchangeControlNumberLowerBound;
+      private final Output<Double> interchangeControlNumberLowerBound;
 
-    public Input<Double> getInterchangeControlNumberLowerBound() {
+    public Output<Double> getInterchangeControlNumberLowerBound() {
         return this.interchangeControlNumberLowerBound;
     }
 
@@ -245,10 +245,10 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="interchangeControlNumberPrefix")
-      private final @Nullable Input<String> interchangeControlNumberPrefix;
+      private final @Nullable Output<String> interchangeControlNumberPrefix;
 
-    public Input<String> getInterchangeControlNumberPrefix() {
-        return this.interchangeControlNumberPrefix == null ? Input.empty() : this.interchangeControlNumberPrefix;
+    public Output<String> getInterchangeControlNumberPrefix() {
+        return this.interchangeControlNumberPrefix == null ? Output.empty() : this.interchangeControlNumberPrefix;
     }
 
     /**
@@ -256,10 +256,10 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="interchangeControlNumberSuffix")
-      private final @Nullable Input<String> interchangeControlNumberSuffix;
+      private final @Nullable Output<String> interchangeControlNumberSuffix;
 
-    public Input<String> getInterchangeControlNumberSuffix() {
-        return this.interchangeControlNumberSuffix == null ? Input.empty() : this.interchangeControlNumberSuffix;
+    public Output<String> getInterchangeControlNumberSuffix() {
+        return this.interchangeControlNumberSuffix == null ? Output.empty() : this.interchangeControlNumberSuffix;
     }
 
     /**
@@ -267,9 +267,9 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="interchangeControlNumberUpperBound", required=true)
-      private final Input<Double> interchangeControlNumberUpperBound;
+      private final Output<Double> interchangeControlNumberUpperBound;
 
-    public Input<Double> getInterchangeControlNumberUpperBound() {
+    public Output<Double> getInterchangeControlNumberUpperBound() {
         return this.interchangeControlNumberUpperBound;
     }
 
@@ -278,9 +278,9 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="isTestInterchange", required=true)
-      private final Input<Boolean> isTestInterchange;
+      private final Output<Boolean> isTestInterchange;
 
-    public Input<Boolean> getIsTestInterchange() {
+    public Output<Boolean> getIsTestInterchange() {
         return this.isTestInterchange;
     }
 
@@ -289,9 +289,9 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="overwriteExistingTransactionSetControlNumber", required=true)
-      private final Input<Boolean> overwriteExistingTransactionSetControlNumber;
+      private final Output<Boolean> overwriteExistingTransactionSetControlNumber;
 
-    public Input<Boolean> getOverwriteExistingTransactionSetControlNumber() {
+    public Output<Boolean> getOverwriteExistingTransactionSetControlNumber() {
         return this.overwriteExistingTransactionSetControlNumber;
     }
 
@@ -300,10 +300,10 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="processingPriorityCode")
-      private final @Nullable Input<String> processingPriorityCode;
+      private final @Nullable Output<String> processingPriorityCode;
 
-    public Input<String> getProcessingPriorityCode() {
-        return this.processingPriorityCode == null ? Input.empty() : this.processingPriorityCode;
+    public Output<String> getProcessingPriorityCode() {
+        return this.processingPriorityCode == null ? Output.empty() : this.processingPriorityCode;
     }
 
     /**
@@ -311,10 +311,10 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="receiverInternalIdentification")
-      private final @Nullable Input<String> receiverInternalIdentification;
+      private final @Nullable Output<String> receiverInternalIdentification;
 
-    public Input<String> getReceiverInternalIdentification() {
-        return this.receiverInternalIdentification == null ? Input.empty() : this.receiverInternalIdentification;
+    public Output<String> getReceiverInternalIdentification() {
+        return this.receiverInternalIdentification == null ? Output.empty() : this.receiverInternalIdentification;
     }
 
     /**
@@ -322,10 +322,10 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="receiverInternalSubIdentification")
-      private final @Nullable Input<String> receiverInternalSubIdentification;
+      private final @Nullable Output<String> receiverInternalSubIdentification;
 
-    public Input<String> getReceiverInternalSubIdentification() {
-        return this.receiverInternalSubIdentification == null ? Input.empty() : this.receiverInternalSubIdentification;
+    public Output<String> getReceiverInternalSubIdentification() {
+        return this.receiverInternalSubIdentification == null ? Output.empty() : this.receiverInternalSubIdentification;
     }
 
     /**
@@ -333,10 +333,10 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="receiverReverseRoutingAddress")
-      private final @Nullable Input<String> receiverReverseRoutingAddress;
+      private final @Nullable Output<String> receiverReverseRoutingAddress;
 
-    public Input<String> getReceiverReverseRoutingAddress() {
-        return this.receiverReverseRoutingAddress == null ? Input.empty() : this.receiverReverseRoutingAddress;
+    public Output<String> getReceiverReverseRoutingAddress() {
+        return this.receiverReverseRoutingAddress == null ? Output.empty() : this.receiverReverseRoutingAddress;
     }
 
     /**
@@ -344,10 +344,10 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="recipientReferencePasswordQualifier")
-      private final @Nullable Input<String> recipientReferencePasswordQualifier;
+      private final @Nullable Output<String> recipientReferencePasswordQualifier;
 
-    public Input<String> getRecipientReferencePasswordQualifier() {
-        return this.recipientReferencePasswordQualifier == null ? Input.empty() : this.recipientReferencePasswordQualifier;
+    public Output<String> getRecipientReferencePasswordQualifier() {
+        return this.recipientReferencePasswordQualifier == null ? Output.empty() : this.recipientReferencePasswordQualifier;
     }
 
     /**
@@ -355,10 +355,10 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="recipientReferencePasswordValue")
-      private final @Nullable Input<String> recipientReferencePasswordValue;
+      private final @Nullable Output<String> recipientReferencePasswordValue;
 
-    public Input<String> getRecipientReferencePasswordValue() {
-        return this.recipientReferencePasswordValue == null ? Input.empty() : this.recipientReferencePasswordValue;
+    public Output<String> getRecipientReferencePasswordValue() {
+        return this.recipientReferencePasswordValue == null ? Output.empty() : this.recipientReferencePasswordValue;
     }
 
     /**
@@ -366,9 +366,9 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="rolloverGroupControlNumber", required=true)
-      private final Input<Boolean> rolloverGroupControlNumber;
+      private final Output<Boolean> rolloverGroupControlNumber;
 
-    public Input<Boolean> getRolloverGroupControlNumber() {
+    public Output<Boolean> getRolloverGroupControlNumber() {
         return this.rolloverGroupControlNumber;
     }
 
@@ -377,9 +377,9 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="rolloverInterchangeControlNumber", required=true)
-      private final Input<Boolean> rolloverInterchangeControlNumber;
+      private final Output<Boolean> rolloverInterchangeControlNumber;
 
-    public Input<Boolean> getRolloverInterchangeControlNumber() {
+    public Output<Boolean> getRolloverInterchangeControlNumber() {
         return this.rolloverInterchangeControlNumber;
     }
 
@@ -388,9 +388,9 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="rolloverTransactionSetControlNumber", required=true)
-      private final Input<Boolean> rolloverTransactionSetControlNumber;
+      private final Output<Boolean> rolloverTransactionSetControlNumber;
 
-    public Input<Boolean> getRolloverTransactionSetControlNumber() {
+    public Output<Boolean> getRolloverTransactionSetControlNumber() {
         return this.rolloverTransactionSetControlNumber;
     }
 
@@ -399,10 +399,10 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="senderInternalIdentification")
-      private final @Nullable Input<String> senderInternalIdentification;
+      private final @Nullable Output<String> senderInternalIdentification;
 
-    public Input<String> getSenderInternalIdentification() {
-        return this.senderInternalIdentification == null ? Input.empty() : this.senderInternalIdentification;
+    public Output<String> getSenderInternalIdentification() {
+        return this.senderInternalIdentification == null ? Output.empty() : this.senderInternalIdentification;
     }
 
     /**
@@ -410,10 +410,10 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="senderInternalSubIdentification")
-      private final @Nullable Input<String> senderInternalSubIdentification;
+      private final @Nullable Output<String> senderInternalSubIdentification;
 
-    public Input<String> getSenderInternalSubIdentification() {
-        return this.senderInternalSubIdentification == null ? Input.empty() : this.senderInternalSubIdentification;
+    public Output<String> getSenderInternalSubIdentification() {
+        return this.senderInternalSubIdentification == null ? Output.empty() : this.senderInternalSubIdentification;
     }
 
     /**
@@ -421,10 +421,10 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="senderReverseRoutingAddress")
-      private final @Nullable Input<String> senderReverseRoutingAddress;
+      private final @Nullable Output<String> senderReverseRoutingAddress;
 
-    public Input<String> getSenderReverseRoutingAddress() {
-        return this.senderReverseRoutingAddress == null ? Input.empty() : this.senderReverseRoutingAddress;
+    public Output<String> getSenderReverseRoutingAddress() {
+        return this.senderReverseRoutingAddress == null ? Output.empty() : this.senderReverseRoutingAddress;
     }
 
     /**
@@ -432,9 +432,9 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="transactionSetControlNumberLowerBound", required=true)
-      private final Input<Double> transactionSetControlNumberLowerBound;
+      private final Output<Double> transactionSetControlNumberLowerBound;
 
-    public Input<Double> getTransactionSetControlNumberLowerBound() {
+    public Output<Double> getTransactionSetControlNumberLowerBound() {
         return this.transactionSetControlNumberLowerBound;
     }
 
@@ -443,10 +443,10 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="transactionSetControlNumberPrefix")
-      private final @Nullable Input<String> transactionSetControlNumberPrefix;
+      private final @Nullable Output<String> transactionSetControlNumberPrefix;
 
-    public Input<String> getTransactionSetControlNumberPrefix() {
-        return this.transactionSetControlNumberPrefix == null ? Input.empty() : this.transactionSetControlNumberPrefix;
+    public Output<String> getTransactionSetControlNumberPrefix() {
+        return this.transactionSetControlNumberPrefix == null ? Output.empty() : this.transactionSetControlNumberPrefix;
     }
 
     /**
@@ -454,10 +454,10 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="transactionSetControlNumberSuffix")
-      private final @Nullable Input<String> transactionSetControlNumberSuffix;
+      private final @Nullable Output<String> transactionSetControlNumberSuffix;
 
-    public Input<String> getTransactionSetControlNumberSuffix() {
-        return this.transactionSetControlNumberSuffix == null ? Input.empty() : this.transactionSetControlNumberSuffix;
+    public Output<String> getTransactionSetControlNumberSuffix() {
+        return this.transactionSetControlNumberSuffix == null ? Output.empty() : this.transactionSetControlNumberSuffix;
     }
 
     /**
@@ -465,54 +465,54 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="transactionSetControlNumberUpperBound", required=true)
-      private final Input<Double> transactionSetControlNumberUpperBound;
+      private final Output<Double> transactionSetControlNumberUpperBound;
 
-    public Input<Double> getTransactionSetControlNumberUpperBound() {
+    public Output<Double> getTransactionSetControlNumberUpperBound() {
         return this.transactionSetControlNumberUpperBound;
     }
 
     public EdifactEnvelopeSettingsArgs(
-        @Nullable Input<String> applicationReferenceId,
-        Input<Boolean> applyDelimiterStringAdvice,
-        @Nullable Input<String> communicationAgreementId,
-        Input<Boolean> createGroupingSegments,
-        Input<Boolean> enableDefaultGroupHeaders,
-        @Nullable Input<String> functionalGroupId,
-        @Nullable Input<String> groupApplicationPassword,
-        @Nullable Input<String> groupApplicationReceiverId,
-        @Nullable Input<String> groupApplicationReceiverQualifier,
-        @Nullable Input<String> groupApplicationSenderId,
-        @Nullable Input<String> groupApplicationSenderQualifier,
-        @Nullable Input<String> groupAssociationAssignedCode,
-        Input<Double> groupControlNumberLowerBound,
-        @Nullable Input<String> groupControlNumberPrefix,
-        @Nullable Input<String> groupControlNumberSuffix,
-        Input<Double> groupControlNumberUpperBound,
-        @Nullable Input<String> groupControllingAgencyCode,
-        @Nullable Input<String> groupMessageRelease,
-        @Nullable Input<String> groupMessageVersion,
-        Input<Double> interchangeControlNumberLowerBound,
-        @Nullable Input<String> interchangeControlNumberPrefix,
-        @Nullable Input<String> interchangeControlNumberSuffix,
-        Input<Double> interchangeControlNumberUpperBound,
-        Input<Boolean> isTestInterchange,
-        Input<Boolean> overwriteExistingTransactionSetControlNumber,
-        @Nullable Input<String> processingPriorityCode,
-        @Nullable Input<String> receiverInternalIdentification,
-        @Nullable Input<String> receiverInternalSubIdentification,
-        @Nullable Input<String> receiverReverseRoutingAddress,
-        @Nullable Input<String> recipientReferencePasswordQualifier,
-        @Nullable Input<String> recipientReferencePasswordValue,
-        Input<Boolean> rolloverGroupControlNumber,
-        Input<Boolean> rolloverInterchangeControlNumber,
-        Input<Boolean> rolloverTransactionSetControlNumber,
-        @Nullable Input<String> senderInternalIdentification,
-        @Nullable Input<String> senderInternalSubIdentification,
-        @Nullable Input<String> senderReverseRoutingAddress,
-        Input<Double> transactionSetControlNumberLowerBound,
-        @Nullable Input<String> transactionSetControlNumberPrefix,
-        @Nullable Input<String> transactionSetControlNumberSuffix,
-        Input<Double> transactionSetControlNumberUpperBound) {
+        @Nullable Output<String> applicationReferenceId,
+        Output<Boolean> applyDelimiterStringAdvice,
+        @Nullable Output<String> communicationAgreementId,
+        Output<Boolean> createGroupingSegments,
+        Output<Boolean> enableDefaultGroupHeaders,
+        @Nullable Output<String> functionalGroupId,
+        @Nullable Output<String> groupApplicationPassword,
+        @Nullable Output<String> groupApplicationReceiverId,
+        @Nullable Output<String> groupApplicationReceiverQualifier,
+        @Nullable Output<String> groupApplicationSenderId,
+        @Nullable Output<String> groupApplicationSenderQualifier,
+        @Nullable Output<String> groupAssociationAssignedCode,
+        Output<Double> groupControlNumberLowerBound,
+        @Nullable Output<String> groupControlNumberPrefix,
+        @Nullable Output<String> groupControlNumberSuffix,
+        Output<Double> groupControlNumberUpperBound,
+        @Nullable Output<String> groupControllingAgencyCode,
+        @Nullable Output<String> groupMessageRelease,
+        @Nullable Output<String> groupMessageVersion,
+        Output<Double> interchangeControlNumberLowerBound,
+        @Nullable Output<String> interchangeControlNumberPrefix,
+        @Nullable Output<String> interchangeControlNumberSuffix,
+        Output<Double> interchangeControlNumberUpperBound,
+        Output<Boolean> isTestInterchange,
+        Output<Boolean> overwriteExistingTransactionSetControlNumber,
+        @Nullable Output<String> processingPriorityCode,
+        @Nullable Output<String> receiverInternalIdentification,
+        @Nullable Output<String> receiverInternalSubIdentification,
+        @Nullable Output<String> receiverReverseRoutingAddress,
+        @Nullable Output<String> recipientReferencePasswordQualifier,
+        @Nullable Output<String> recipientReferencePasswordValue,
+        Output<Boolean> rolloverGroupControlNumber,
+        Output<Boolean> rolloverInterchangeControlNumber,
+        Output<Boolean> rolloverTransactionSetControlNumber,
+        @Nullable Output<String> senderInternalIdentification,
+        @Nullable Output<String> senderInternalSubIdentification,
+        @Nullable Output<String> senderReverseRoutingAddress,
+        Output<Double> transactionSetControlNumberLowerBound,
+        @Nullable Output<String> transactionSetControlNumberPrefix,
+        @Nullable Output<String> transactionSetControlNumberSuffix,
+        Output<Double> transactionSetControlNumberUpperBound) {
         this.applicationReferenceId = applicationReferenceId;
         this.applyDelimiterStringAdvice = Objects.requireNonNull(applyDelimiterStringAdvice, "expected parameter 'applyDelimiterStringAdvice' to be non-null");
         this.communicationAgreementId = communicationAgreementId;
@@ -557,47 +557,47 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
     }
 
     private EdifactEnvelopeSettingsArgs() {
-        this.applicationReferenceId = Input.empty();
-        this.applyDelimiterStringAdvice = Input.empty();
-        this.communicationAgreementId = Input.empty();
-        this.createGroupingSegments = Input.empty();
-        this.enableDefaultGroupHeaders = Input.empty();
-        this.functionalGroupId = Input.empty();
-        this.groupApplicationPassword = Input.empty();
-        this.groupApplicationReceiverId = Input.empty();
-        this.groupApplicationReceiverQualifier = Input.empty();
-        this.groupApplicationSenderId = Input.empty();
-        this.groupApplicationSenderQualifier = Input.empty();
-        this.groupAssociationAssignedCode = Input.empty();
-        this.groupControlNumberLowerBound = Input.empty();
-        this.groupControlNumberPrefix = Input.empty();
-        this.groupControlNumberSuffix = Input.empty();
-        this.groupControlNumberUpperBound = Input.empty();
-        this.groupControllingAgencyCode = Input.empty();
-        this.groupMessageRelease = Input.empty();
-        this.groupMessageVersion = Input.empty();
-        this.interchangeControlNumberLowerBound = Input.empty();
-        this.interchangeControlNumberPrefix = Input.empty();
-        this.interchangeControlNumberSuffix = Input.empty();
-        this.interchangeControlNumberUpperBound = Input.empty();
-        this.isTestInterchange = Input.empty();
-        this.overwriteExistingTransactionSetControlNumber = Input.empty();
-        this.processingPriorityCode = Input.empty();
-        this.receiverInternalIdentification = Input.empty();
-        this.receiverInternalSubIdentification = Input.empty();
-        this.receiverReverseRoutingAddress = Input.empty();
-        this.recipientReferencePasswordQualifier = Input.empty();
-        this.recipientReferencePasswordValue = Input.empty();
-        this.rolloverGroupControlNumber = Input.empty();
-        this.rolloverInterchangeControlNumber = Input.empty();
-        this.rolloverTransactionSetControlNumber = Input.empty();
-        this.senderInternalIdentification = Input.empty();
-        this.senderInternalSubIdentification = Input.empty();
-        this.senderReverseRoutingAddress = Input.empty();
-        this.transactionSetControlNumberLowerBound = Input.empty();
-        this.transactionSetControlNumberPrefix = Input.empty();
-        this.transactionSetControlNumberSuffix = Input.empty();
-        this.transactionSetControlNumberUpperBound = Input.empty();
+        this.applicationReferenceId = Output.empty();
+        this.applyDelimiterStringAdvice = Output.empty();
+        this.communicationAgreementId = Output.empty();
+        this.createGroupingSegments = Output.empty();
+        this.enableDefaultGroupHeaders = Output.empty();
+        this.functionalGroupId = Output.empty();
+        this.groupApplicationPassword = Output.empty();
+        this.groupApplicationReceiverId = Output.empty();
+        this.groupApplicationReceiverQualifier = Output.empty();
+        this.groupApplicationSenderId = Output.empty();
+        this.groupApplicationSenderQualifier = Output.empty();
+        this.groupAssociationAssignedCode = Output.empty();
+        this.groupControlNumberLowerBound = Output.empty();
+        this.groupControlNumberPrefix = Output.empty();
+        this.groupControlNumberSuffix = Output.empty();
+        this.groupControlNumberUpperBound = Output.empty();
+        this.groupControllingAgencyCode = Output.empty();
+        this.groupMessageRelease = Output.empty();
+        this.groupMessageVersion = Output.empty();
+        this.interchangeControlNumberLowerBound = Output.empty();
+        this.interchangeControlNumberPrefix = Output.empty();
+        this.interchangeControlNumberSuffix = Output.empty();
+        this.interchangeControlNumberUpperBound = Output.empty();
+        this.isTestInterchange = Output.empty();
+        this.overwriteExistingTransactionSetControlNumber = Output.empty();
+        this.processingPriorityCode = Output.empty();
+        this.receiverInternalIdentification = Output.empty();
+        this.receiverInternalSubIdentification = Output.empty();
+        this.receiverReverseRoutingAddress = Output.empty();
+        this.recipientReferencePasswordQualifier = Output.empty();
+        this.recipientReferencePasswordValue = Output.empty();
+        this.rolloverGroupControlNumber = Output.empty();
+        this.rolloverInterchangeControlNumber = Output.empty();
+        this.rolloverTransactionSetControlNumber = Output.empty();
+        this.senderInternalIdentification = Output.empty();
+        this.senderInternalSubIdentification = Output.empty();
+        this.senderReverseRoutingAddress = Output.empty();
+        this.transactionSetControlNumberLowerBound = Output.empty();
+        this.transactionSetControlNumberPrefix = Output.empty();
+        this.transactionSetControlNumberSuffix = Output.empty();
+        this.transactionSetControlNumberUpperBound = Output.empty();
     }
 
     public static Builder builder() {
@@ -609,47 +609,47 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> applicationReferenceId;
-        private Input<Boolean> applyDelimiterStringAdvice;
-        private @Nullable Input<String> communicationAgreementId;
-        private Input<Boolean> createGroupingSegments;
-        private Input<Boolean> enableDefaultGroupHeaders;
-        private @Nullable Input<String> functionalGroupId;
-        private @Nullable Input<String> groupApplicationPassword;
-        private @Nullable Input<String> groupApplicationReceiverId;
-        private @Nullable Input<String> groupApplicationReceiverQualifier;
-        private @Nullable Input<String> groupApplicationSenderId;
-        private @Nullable Input<String> groupApplicationSenderQualifier;
-        private @Nullable Input<String> groupAssociationAssignedCode;
-        private Input<Double> groupControlNumberLowerBound;
-        private @Nullable Input<String> groupControlNumberPrefix;
-        private @Nullable Input<String> groupControlNumberSuffix;
-        private Input<Double> groupControlNumberUpperBound;
-        private @Nullable Input<String> groupControllingAgencyCode;
-        private @Nullable Input<String> groupMessageRelease;
-        private @Nullable Input<String> groupMessageVersion;
-        private Input<Double> interchangeControlNumberLowerBound;
-        private @Nullable Input<String> interchangeControlNumberPrefix;
-        private @Nullable Input<String> interchangeControlNumberSuffix;
-        private Input<Double> interchangeControlNumberUpperBound;
-        private Input<Boolean> isTestInterchange;
-        private Input<Boolean> overwriteExistingTransactionSetControlNumber;
-        private @Nullable Input<String> processingPriorityCode;
-        private @Nullable Input<String> receiverInternalIdentification;
-        private @Nullable Input<String> receiverInternalSubIdentification;
-        private @Nullable Input<String> receiverReverseRoutingAddress;
-        private @Nullable Input<String> recipientReferencePasswordQualifier;
-        private @Nullable Input<String> recipientReferencePasswordValue;
-        private Input<Boolean> rolloverGroupControlNumber;
-        private Input<Boolean> rolloverInterchangeControlNumber;
-        private Input<Boolean> rolloverTransactionSetControlNumber;
-        private @Nullable Input<String> senderInternalIdentification;
-        private @Nullable Input<String> senderInternalSubIdentification;
-        private @Nullable Input<String> senderReverseRoutingAddress;
-        private Input<Double> transactionSetControlNumberLowerBound;
-        private @Nullable Input<String> transactionSetControlNumberPrefix;
-        private @Nullable Input<String> transactionSetControlNumberSuffix;
-        private Input<Double> transactionSetControlNumberUpperBound;
+        private @Nullable Output<String> applicationReferenceId;
+        private Output<Boolean> applyDelimiterStringAdvice;
+        private @Nullable Output<String> communicationAgreementId;
+        private Output<Boolean> createGroupingSegments;
+        private Output<Boolean> enableDefaultGroupHeaders;
+        private @Nullable Output<String> functionalGroupId;
+        private @Nullable Output<String> groupApplicationPassword;
+        private @Nullable Output<String> groupApplicationReceiverId;
+        private @Nullable Output<String> groupApplicationReceiverQualifier;
+        private @Nullable Output<String> groupApplicationSenderId;
+        private @Nullable Output<String> groupApplicationSenderQualifier;
+        private @Nullable Output<String> groupAssociationAssignedCode;
+        private Output<Double> groupControlNumberLowerBound;
+        private @Nullable Output<String> groupControlNumberPrefix;
+        private @Nullable Output<String> groupControlNumberSuffix;
+        private Output<Double> groupControlNumberUpperBound;
+        private @Nullable Output<String> groupControllingAgencyCode;
+        private @Nullable Output<String> groupMessageRelease;
+        private @Nullable Output<String> groupMessageVersion;
+        private Output<Double> interchangeControlNumberLowerBound;
+        private @Nullable Output<String> interchangeControlNumberPrefix;
+        private @Nullable Output<String> interchangeControlNumberSuffix;
+        private Output<Double> interchangeControlNumberUpperBound;
+        private Output<Boolean> isTestInterchange;
+        private Output<Boolean> overwriteExistingTransactionSetControlNumber;
+        private @Nullable Output<String> processingPriorityCode;
+        private @Nullable Output<String> receiverInternalIdentification;
+        private @Nullable Output<String> receiverInternalSubIdentification;
+        private @Nullable Output<String> receiverReverseRoutingAddress;
+        private @Nullable Output<String> recipientReferencePasswordQualifier;
+        private @Nullable Output<String> recipientReferencePasswordValue;
+        private Output<Boolean> rolloverGroupControlNumber;
+        private Output<Boolean> rolloverInterchangeControlNumber;
+        private Output<Boolean> rolloverTransactionSetControlNumber;
+        private @Nullable Output<String> senderInternalIdentification;
+        private @Nullable Output<String> senderInternalSubIdentification;
+        private @Nullable Output<String> senderReverseRoutingAddress;
+        private Output<Double> transactionSetControlNumberLowerBound;
+        private @Nullable Output<String> transactionSetControlNumberPrefix;
+        private @Nullable Output<String> transactionSetControlNumberSuffix;
+        private Output<Double> transactionSetControlNumberUpperBound;
 
         public Builder() {
     	      // Empty
@@ -700,413 +700,413 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
     	      this.transactionSetControlNumberUpperBound = defaults.transactionSetControlNumberUpperBound;
         }
 
-        public Builder applicationReferenceId(@Nullable Input<String> applicationReferenceId) {
+        public Builder applicationReferenceId(@Nullable Output<String> applicationReferenceId) {
             this.applicationReferenceId = applicationReferenceId;
             return this;
         }
 
         public Builder applicationReferenceId(@Nullable String applicationReferenceId) {
-            this.applicationReferenceId = Input.ofNullable(applicationReferenceId);
+            this.applicationReferenceId = Output.ofNullable(applicationReferenceId);
             return this;
         }
 
-        public Builder applyDelimiterStringAdvice(Input<Boolean> applyDelimiterStringAdvice) {
+        public Builder applyDelimiterStringAdvice(Output<Boolean> applyDelimiterStringAdvice) {
             this.applyDelimiterStringAdvice = Objects.requireNonNull(applyDelimiterStringAdvice);
             return this;
         }
 
         public Builder applyDelimiterStringAdvice(Boolean applyDelimiterStringAdvice) {
-            this.applyDelimiterStringAdvice = Input.of(Objects.requireNonNull(applyDelimiterStringAdvice));
+            this.applyDelimiterStringAdvice = Output.of(Objects.requireNonNull(applyDelimiterStringAdvice));
             return this;
         }
 
-        public Builder communicationAgreementId(@Nullable Input<String> communicationAgreementId) {
+        public Builder communicationAgreementId(@Nullable Output<String> communicationAgreementId) {
             this.communicationAgreementId = communicationAgreementId;
             return this;
         }
 
         public Builder communicationAgreementId(@Nullable String communicationAgreementId) {
-            this.communicationAgreementId = Input.ofNullable(communicationAgreementId);
+            this.communicationAgreementId = Output.ofNullable(communicationAgreementId);
             return this;
         }
 
-        public Builder createGroupingSegments(Input<Boolean> createGroupingSegments) {
+        public Builder createGroupingSegments(Output<Boolean> createGroupingSegments) {
             this.createGroupingSegments = Objects.requireNonNull(createGroupingSegments);
             return this;
         }
 
         public Builder createGroupingSegments(Boolean createGroupingSegments) {
-            this.createGroupingSegments = Input.of(Objects.requireNonNull(createGroupingSegments));
+            this.createGroupingSegments = Output.of(Objects.requireNonNull(createGroupingSegments));
             return this;
         }
 
-        public Builder enableDefaultGroupHeaders(Input<Boolean> enableDefaultGroupHeaders) {
+        public Builder enableDefaultGroupHeaders(Output<Boolean> enableDefaultGroupHeaders) {
             this.enableDefaultGroupHeaders = Objects.requireNonNull(enableDefaultGroupHeaders);
             return this;
         }
 
         public Builder enableDefaultGroupHeaders(Boolean enableDefaultGroupHeaders) {
-            this.enableDefaultGroupHeaders = Input.of(Objects.requireNonNull(enableDefaultGroupHeaders));
+            this.enableDefaultGroupHeaders = Output.of(Objects.requireNonNull(enableDefaultGroupHeaders));
             return this;
         }
 
-        public Builder functionalGroupId(@Nullable Input<String> functionalGroupId) {
+        public Builder functionalGroupId(@Nullable Output<String> functionalGroupId) {
             this.functionalGroupId = functionalGroupId;
             return this;
         }
 
         public Builder functionalGroupId(@Nullable String functionalGroupId) {
-            this.functionalGroupId = Input.ofNullable(functionalGroupId);
+            this.functionalGroupId = Output.ofNullable(functionalGroupId);
             return this;
         }
 
-        public Builder groupApplicationPassword(@Nullable Input<String> groupApplicationPassword) {
+        public Builder groupApplicationPassword(@Nullable Output<String> groupApplicationPassword) {
             this.groupApplicationPassword = groupApplicationPassword;
             return this;
         }
 
         public Builder groupApplicationPassword(@Nullable String groupApplicationPassword) {
-            this.groupApplicationPassword = Input.ofNullable(groupApplicationPassword);
+            this.groupApplicationPassword = Output.ofNullable(groupApplicationPassword);
             return this;
         }
 
-        public Builder groupApplicationReceiverId(@Nullable Input<String> groupApplicationReceiverId) {
+        public Builder groupApplicationReceiverId(@Nullable Output<String> groupApplicationReceiverId) {
             this.groupApplicationReceiverId = groupApplicationReceiverId;
             return this;
         }
 
         public Builder groupApplicationReceiverId(@Nullable String groupApplicationReceiverId) {
-            this.groupApplicationReceiverId = Input.ofNullable(groupApplicationReceiverId);
+            this.groupApplicationReceiverId = Output.ofNullable(groupApplicationReceiverId);
             return this;
         }
 
-        public Builder groupApplicationReceiverQualifier(@Nullable Input<String> groupApplicationReceiverQualifier) {
+        public Builder groupApplicationReceiverQualifier(@Nullable Output<String> groupApplicationReceiverQualifier) {
             this.groupApplicationReceiverQualifier = groupApplicationReceiverQualifier;
             return this;
         }
 
         public Builder groupApplicationReceiverQualifier(@Nullable String groupApplicationReceiverQualifier) {
-            this.groupApplicationReceiverQualifier = Input.ofNullable(groupApplicationReceiverQualifier);
+            this.groupApplicationReceiverQualifier = Output.ofNullable(groupApplicationReceiverQualifier);
             return this;
         }
 
-        public Builder groupApplicationSenderId(@Nullable Input<String> groupApplicationSenderId) {
+        public Builder groupApplicationSenderId(@Nullable Output<String> groupApplicationSenderId) {
             this.groupApplicationSenderId = groupApplicationSenderId;
             return this;
         }
 
         public Builder groupApplicationSenderId(@Nullable String groupApplicationSenderId) {
-            this.groupApplicationSenderId = Input.ofNullable(groupApplicationSenderId);
+            this.groupApplicationSenderId = Output.ofNullable(groupApplicationSenderId);
             return this;
         }
 
-        public Builder groupApplicationSenderQualifier(@Nullable Input<String> groupApplicationSenderQualifier) {
+        public Builder groupApplicationSenderQualifier(@Nullable Output<String> groupApplicationSenderQualifier) {
             this.groupApplicationSenderQualifier = groupApplicationSenderQualifier;
             return this;
         }
 
         public Builder groupApplicationSenderQualifier(@Nullable String groupApplicationSenderQualifier) {
-            this.groupApplicationSenderQualifier = Input.ofNullable(groupApplicationSenderQualifier);
+            this.groupApplicationSenderQualifier = Output.ofNullable(groupApplicationSenderQualifier);
             return this;
         }
 
-        public Builder groupAssociationAssignedCode(@Nullable Input<String> groupAssociationAssignedCode) {
+        public Builder groupAssociationAssignedCode(@Nullable Output<String> groupAssociationAssignedCode) {
             this.groupAssociationAssignedCode = groupAssociationAssignedCode;
             return this;
         }
 
         public Builder groupAssociationAssignedCode(@Nullable String groupAssociationAssignedCode) {
-            this.groupAssociationAssignedCode = Input.ofNullable(groupAssociationAssignedCode);
+            this.groupAssociationAssignedCode = Output.ofNullable(groupAssociationAssignedCode);
             return this;
         }
 
-        public Builder groupControlNumberLowerBound(Input<Double> groupControlNumberLowerBound) {
+        public Builder groupControlNumberLowerBound(Output<Double> groupControlNumberLowerBound) {
             this.groupControlNumberLowerBound = Objects.requireNonNull(groupControlNumberLowerBound);
             return this;
         }
 
         public Builder groupControlNumberLowerBound(Double groupControlNumberLowerBound) {
-            this.groupControlNumberLowerBound = Input.of(Objects.requireNonNull(groupControlNumberLowerBound));
+            this.groupControlNumberLowerBound = Output.of(Objects.requireNonNull(groupControlNumberLowerBound));
             return this;
         }
 
-        public Builder groupControlNumberPrefix(@Nullable Input<String> groupControlNumberPrefix) {
+        public Builder groupControlNumberPrefix(@Nullable Output<String> groupControlNumberPrefix) {
             this.groupControlNumberPrefix = groupControlNumberPrefix;
             return this;
         }
 
         public Builder groupControlNumberPrefix(@Nullable String groupControlNumberPrefix) {
-            this.groupControlNumberPrefix = Input.ofNullable(groupControlNumberPrefix);
+            this.groupControlNumberPrefix = Output.ofNullable(groupControlNumberPrefix);
             return this;
         }
 
-        public Builder groupControlNumberSuffix(@Nullable Input<String> groupControlNumberSuffix) {
+        public Builder groupControlNumberSuffix(@Nullable Output<String> groupControlNumberSuffix) {
             this.groupControlNumberSuffix = groupControlNumberSuffix;
             return this;
         }
 
         public Builder groupControlNumberSuffix(@Nullable String groupControlNumberSuffix) {
-            this.groupControlNumberSuffix = Input.ofNullable(groupControlNumberSuffix);
+            this.groupControlNumberSuffix = Output.ofNullable(groupControlNumberSuffix);
             return this;
         }
 
-        public Builder groupControlNumberUpperBound(Input<Double> groupControlNumberUpperBound) {
+        public Builder groupControlNumberUpperBound(Output<Double> groupControlNumberUpperBound) {
             this.groupControlNumberUpperBound = Objects.requireNonNull(groupControlNumberUpperBound);
             return this;
         }
 
         public Builder groupControlNumberUpperBound(Double groupControlNumberUpperBound) {
-            this.groupControlNumberUpperBound = Input.of(Objects.requireNonNull(groupControlNumberUpperBound));
+            this.groupControlNumberUpperBound = Output.of(Objects.requireNonNull(groupControlNumberUpperBound));
             return this;
         }
 
-        public Builder groupControllingAgencyCode(@Nullable Input<String> groupControllingAgencyCode) {
+        public Builder groupControllingAgencyCode(@Nullable Output<String> groupControllingAgencyCode) {
             this.groupControllingAgencyCode = groupControllingAgencyCode;
             return this;
         }
 
         public Builder groupControllingAgencyCode(@Nullable String groupControllingAgencyCode) {
-            this.groupControllingAgencyCode = Input.ofNullable(groupControllingAgencyCode);
+            this.groupControllingAgencyCode = Output.ofNullable(groupControllingAgencyCode);
             return this;
         }
 
-        public Builder groupMessageRelease(@Nullable Input<String> groupMessageRelease) {
+        public Builder groupMessageRelease(@Nullable Output<String> groupMessageRelease) {
             this.groupMessageRelease = groupMessageRelease;
             return this;
         }
 
         public Builder groupMessageRelease(@Nullable String groupMessageRelease) {
-            this.groupMessageRelease = Input.ofNullable(groupMessageRelease);
+            this.groupMessageRelease = Output.ofNullable(groupMessageRelease);
             return this;
         }
 
-        public Builder groupMessageVersion(@Nullable Input<String> groupMessageVersion) {
+        public Builder groupMessageVersion(@Nullable Output<String> groupMessageVersion) {
             this.groupMessageVersion = groupMessageVersion;
             return this;
         }
 
         public Builder groupMessageVersion(@Nullable String groupMessageVersion) {
-            this.groupMessageVersion = Input.ofNullable(groupMessageVersion);
+            this.groupMessageVersion = Output.ofNullable(groupMessageVersion);
             return this;
         }
 
-        public Builder interchangeControlNumberLowerBound(Input<Double> interchangeControlNumberLowerBound) {
+        public Builder interchangeControlNumberLowerBound(Output<Double> interchangeControlNumberLowerBound) {
             this.interchangeControlNumberLowerBound = Objects.requireNonNull(interchangeControlNumberLowerBound);
             return this;
         }
 
         public Builder interchangeControlNumberLowerBound(Double interchangeControlNumberLowerBound) {
-            this.interchangeControlNumberLowerBound = Input.of(Objects.requireNonNull(interchangeControlNumberLowerBound));
+            this.interchangeControlNumberLowerBound = Output.of(Objects.requireNonNull(interchangeControlNumberLowerBound));
             return this;
         }
 
-        public Builder interchangeControlNumberPrefix(@Nullable Input<String> interchangeControlNumberPrefix) {
+        public Builder interchangeControlNumberPrefix(@Nullable Output<String> interchangeControlNumberPrefix) {
             this.interchangeControlNumberPrefix = interchangeControlNumberPrefix;
             return this;
         }
 
         public Builder interchangeControlNumberPrefix(@Nullable String interchangeControlNumberPrefix) {
-            this.interchangeControlNumberPrefix = Input.ofNullable(interchangeControlNumberPrefix);
+            this.interchangeControlNumberPrefix = Output.ofNullable(interchangeControlNumberPrefix);
             return this;
         }
 
-        public Builder interchangeControlNumberSuffix(@Nullable Input<String> interchangeControlNumberSuffix) {
+        public Builder interchangeControlNumberSuffix(@Nullable Output<String> interchangeControlNumberSuffix) {
             this.interchangeControlNumberSuffix = interchangeControlNumberSuffix;
             return this;
         }
 
         public Builder interchangeControlNumberSuffix(@Nullable String interchangeControlNumberSuffix) {
-            this.interchangeControlNumberSuffix = Input.ofNullable(interchangeControlNumberSuffix);
+            this.interchangeControlNumberSuffix = Output.ofNullable(interchangeControlNumberSuffix);
             return this;
         }
 
-        public Builder interchangeControlNumberUpperBound(Input<Double> interchangeControlNumberUpperBound) {
+        public Builder interchangeControlNumberUpperBound(Output<Double> interchangeControlNumberUpperBound) {
             this.interchangeControlNumberUpperBound = Objects.requireNonNull(interchangeControlNumberUpperBound);
             return this;
         }
 
         public Builder interchangeControlNumberUpperBound(Double interchangeControlNumberUpperBound) {
-            this.interchangeControlNumberUpperBound = Input.of(Objects.requireNonNull(interchangeControlNumberUpperBound));
+            this.interchangeControlNumberUpperBound = Output.of(Objects.requireNonNull(interchangeControlNumberUpperBound));
             return this;
         }
 
-        public Builder isTestInterchange(Input<Boolean> isTestInterchange) {
+        public Builder isTestInterchange(Output<Boolean> isTestInterchange) {
             this.isTestInterchange = Objects.requireNonNull(isTestInterchange);
             return this;
         }
 
         public Builder isTestInterchange(Boolean isTestInterchange) {
-            this.isTestInterchange = Input.of(Objects.requireNonNull(isTestInterchange));
+            this.isTestInterchange = Output.of(Objects.requireNonNull(isTestInterchange));
             return this;
         }
 
-        public Builder overwriteExistingTransactionSetControlNumber(Input<Boolean> overwriteExistingTransactionSetControlNumber) {
+        public Builder overwriteExistingTransactionSetControlNumber(Output<Boolean> overwriteExistingTransactionSetControlNumber) {
             this.overwriteExistingTransactionSetControlNumber = Objects.requireNonNull(overwriteExistingTransactionSetControlNumber);
             return this;
         }
 
         public Builder overwriteExistingTransactionSetControlNumber(Boolean overwriteExistingTransactionSetControlNumber) {
-            this.overwriteExistingTransactionSetControlNumber = Input.of(Objects.requireNonNull(overwriteExistingTransactionSetControlNumber));
+            this.overwriteExistingTransactionSetControlNumber = Output.of(Objects.requireNonNull(overwriteExistingTransactionSetControlNumber));
             return this;
         }
 
-        public Builder processingPriorityCode(@Nullable Input<String> processingPriorityCode) {
+        public Builder processingPriorityCode(@Nullable Output<String> processingPriorityCode) {
             this.processingPriorityCode = processingPriorityCode;
             return this;
         }
 
         public Builder processingPriorityCode(@Nullable String processingPriorityCode) {
-            this.processingPriorityCode = Input.ofNullable(processingPriorityCode);
+            this.processingPriorityCode = Output.ofNullable(processingPriorityCode);
             return this;
         }
 
-        public Builder receiverInternalIdentification(@Nullable Input<String> receiverInternalIdentification) {
+        public Builder receiverInternalIdentification(@Nullable Output<String> receiverInternalIdentification) {
             this.receiverInternalIdentification = receiverInternalIdentification;
             return this;
         }
 
         public Builder receiverInternalIdentification(@Nullable String receiverInternalIdentification) {
-            this.receiverInternalIdentification = Input.ofNullable(receiverInternalIdentification);
+            this.receiverInternalIdentification = Output.ofNullable(receiverInternalIdentification);
             return this;
         }
 
-        public Builder receiverInternalSubIdentification(@Nullable Input<String> receiverInternalSubIdentification) {
+        public Builder receiverInternalSubIdentification(@Nullable Output<String> receiverInternalSubIdentification) {
             this.receiverInternalSubIdentification = receiverInternalSubIdentification;
             return this;
         }
 
         public Builder receiverInternalSubIdentification(@Nullable String receiverInternalSubIdentification) {
-            this.receiverInternalSubIdentification = Input.ofNullable(receiverInternalSubIdentification);
+            this.receiverInternalSubIdentification = Output.ofNullable(receiverInternalSubIdentification);
             return this;
         }
 
-        public Builder receiverReverseRoutingAddress(@Nullable Input<String> receiverReverseRoutingAddress) {
+        public Builder receiverReverseRoutingAddress(@Nullable Output<String> receiverReverseRoutingAddress) {
             this.receiverReverseRoutingAddress = receiverReverseRoutingAddress;
             return this;
         }
 
         public Builder receiverReverseRoutingAddress(@Nullable String receiverReverseRoutingAddress) {
-            this.receiverReverseRoutingAddress = Input.ofNullable(receiverReverseRoutingAddress);
+            this.receiverReverseRoutingAddress = Output.ofNullable(receiverReverseRoutingAddress);
             return this;
         }
 
-        public Builder recipientReferencePasswordQualifier(@Nullable Input<String> recipientReferencePasswordQualifier) {
+        public Builder recipientReferencePasswordQualifier(@Nullable Output<String> recipientReferencePasswordQualifier) {
             this.recipientReferencePasswordQualifier = recipientReferencePasswordQualifier;
             return this;
         }
 
         public Builder recipientReferencePasswordQualifier(@Nullable String recipientReferencePasswordQualifier) {
-            this.recipientReferencePasswordQualifier = Input.ofNullable(recipientReferencePasswordQualifier);
+            this.recipientReferencePasswordQualifier = Output.ofNullable(recipientReferencePasswordQualifier);
             return this;
         }
 
-        public Builder recipientReferencePasswordValue(@Nullable Input<String> recipientReferencePasswordValue) {
+        public Builder recipientReferencePasswordValue(@Nullable Output<String> recipientReferencePasswordValue) {
             this.recipientReferencePasswordValue = recipientReferencePasswordValue;
             return this;
         }
 
         public Builder recipientReferencePasswordValue(@Nullable String recipientReferencePasswordValue) {
-            this.recipientReferencePasswordValue = Input.ofNullable(recipientReferencePasswordValue);
+            this.recipientReferencePasswordValue = Output.ofNullable(recipientReferencePasswordValue);
             return this;
         }
 
-        public Builder rolloverGroupControlNumber(Input<Boolean> rolloverGroupControlNumber) {
+        public Builder rolloverGroupControlNumber(Output<Boolean> rolloverGroupControlNumber) {
             this.rolloverGroupControlNumber = Objects.requireNonNull(rolloverGroupControlNumber);
             return this;
         }
 
         public Builder rolloverGroupControlNumber(Boolean rolloverGroupControlNumber) {
-            this.rolloverGroupControlNumber = Input.of(Objects.requireNonNull(rolloverGroupControlNumber));
+            this.rolloverGroupControlNumber = Output.of(Objects.requireNonNull(rolloverGroupControlNumber));
             return this;
         }
 
-        public Builder rolloverInterchangeControlNumber(Input<Boolean> rolloverInterchangeControlNumber) {
+        public Builder rolloverInterchangeControlNumber(Output<Boolean> rolloverInterchangeControlNumber) {
             this.rolloverInterchangeControlNumber = Objects.requireNonNull(rolloverInterchangeControlNumber);
             return this;
         }
 
         public Builder rolloverInterchangeControlNumber(Boolean rolloverInterchangeControlNumber) {
-            this.rolloverInterchangeControlNumber = Input.of(Objects.requireNonNull(rolloverInterchangeControlNumber));
+            this.rolloverInterchangeControlNumber = Output.of(Objects.requireNonNull(rolloverInterchangeControlNumber));
             return this;
         }
 
-        public Builder rolloverTransactionSetControlNumber(Input<Boolean> rolloverTransactionSetControlNumber) {
+        public Builder rolloverTransactionSetControlNumber(Output<Boolean> rolloverTransactionSetControlNumber) {
             this.rolloverTransactionSetControlNumber = Objects.requireNonNull(rolloverTransactionSetControlNumber);
             return this;
         }
 
         public Builder rolloverTransactionSetControlNumber(Boolean rolloverTransactionSetControlNumber) {
-            this.rolloverTransactionSetControlNumber = Input.of(Objects.requireNonNull(rolloverTransactionSetControlNumber));
+            this.rolloverTransactionSetControlNumber = Output.of(Objects.requireNonNull(rolloverTransactionSetControlNumber));
             return this;
         }
 
-        public Builder senderInternalIdentification(@Nullable Input<String> senderInternalIdentification) {
+        public Builder senderInternalIdentification(@Nullable Output<String> senderInternalIdentification) {
             this.senderInternalIdentification = senderInternalIdentification;
             return this;
         }
 
         public Builder senderInternalIdentification(@Nullable String senderInternalIdentification) {
-            this.senderInternalIdentification = Input.ofNullable(senderInternalIdentification);
+            this.senderInternalIdentification = Output.ofNullable(senderInternalIdentification);
             return this;
         }
 
-        public Builder senderInternalSubIdentification(@Nullable Input<String> senderInternalSubIdentification) {
+        public Builder senderInternalSubIdentification(@Nullable Output<String> senderInternalSubIdentification) {
             this.senderInternalSubIdentification = senderInternalSubIdentification;
             return this;
         }
 
         public Builder senderInternalSubIdentification(@Nullable String senderInternalSubIdentification) {
-            this.senderInternalSubIdentification = Input.ofNullable(senderInternalSubIdentification);
+            this.senderInternalSubIdentification = Output.ofNullable(senderInternalSubIdentification);
             return this;
         }
 
-        public Builder senderReverseRoutingAddress(@Nullable Input<String> senderReverseRoutingAddress) {
+        public Builder senderReverseRoutingAddress(@Nullable Output<String> senderReverseRoutingAddress) {
             this.senderReverseRoutingAddress = senderReverseRoutingAddress;
             return this;
         }
 
         public Builder senderReverseRoutingAddress(@Nullable String senderReverseRoutingAddress) {
-            this.senderReverseRoutingAddress = Input.ofNullable(senderReverseRoutingAddress);
+            this.senderReverseRoutingAddress = Output.ofNullable(senderReverseRoutingAddress);
             return this;
         }
 
-        public Builder transactionSetControlNumberLowerBound(Input<Double> transactionSetControlNumberLowerBound) {
+        public Builder transactionSetControlNumberLowerBound(Output<Double> transactionSetControlNumberLowerBound) {
             this.transactionSetControlNumberLowerBound = Objects.requireNonNull(transactionSetControlNumberLowerBound);
             return this;
         }
 
         public Builder transactionSetControlNumberLowerBound(Double transactionSetControlNumberLowerBound) {
-            this.transactionSetControlNumberLowerBound = Input.of(Objects.requireNonNull(transactionSetControlNumberLowerBound));
+            this.transactionSetControlNumberLowerBound = Output.of(Objects.requireNonNull(transactionSetControlNumberLowerBound));
             return this;
         }
 
-        public Builder transactionSetControlNumberPrefix(@Nullable Input<String> transactionSetControlNumberPrefix) {
+        public Builder transactionSetControlNumberPrefix(@Nullable Output<String> transactionSetControlNumberPrefix) {
             this.transactionSetControlNumberPrefix = transactionSetControlNumberPrefix;
             return this;
         }
 
         public Builder transactionSetControlNumberPrefix(@Nullable String transactionSetControlNumberPrefix) {
-            this.transactionSetControlNumberPrefix = Input.ofNullable(transactionSetControlNumberPrefix);
+            this.transactionSetControlNumberPrefix = Output.ofNullable(transactionSetControlNumberPrefix);
             return this;
         }
 
-        public Builder transactionSetControlNumberSuffix(@Nullable Input<String> transactionSetControlNumberSuffix) {
+        public Builder transactionSetControlNumberSuffix(@Nullable Output<String> transactionSetControlNumberSuffix) {
             this.transactionSetControlNumberSuffix = transactionSetControlNumberSuffix;
             return this;
         }
 
         public Builder transactionSetControlNumberSuffix(@Nullable String transactionSetControlNumberSuffix) {
-            this.transactionSetControlNumberSuffix = Input.ofNullable(transactionSetControlNumberSuffix);
+            this.transactionSetControlNumberSuffix = Output.ofNullable(transactionSetControlNumberSuffix);
             return this;
         }
 
-        public Builder transactionSetControlNumberUpperBound(Input<Double> transactionSetControlNumberUpperBound) {
+        public Builder transactionSetControlNumberUpperBound(Output<Double> transactionSetControlNumberUpperBound) {
             this.transactionSetControlNumberUpperBound = Objects.requireNonNull(transactionSetControlNumberUpperBound);
             return this;
         }
 
         public Builder transactionSetControlNumberUpperBound(Double transactionSetControlNumberUpperBound) {
-            this.transactionSetControlNumberUpperBound = Input.of(Objects.requireNonNull(transactionSetControlNumberUpperBound));
+            this.transactionSetControlNumberUpperBound = Output.of(Objects.requireNonNull(transactionSetControlNumberUpperBound));
             return this;
         }
         public EdifactEnvelopeSettingsArgs build() {

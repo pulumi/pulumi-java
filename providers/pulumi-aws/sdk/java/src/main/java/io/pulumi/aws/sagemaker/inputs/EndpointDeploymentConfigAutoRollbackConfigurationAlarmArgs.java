@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.sagemaker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs ex
      * 
      */
     @InputImport(name="alarmName", required=true)
-      private final Input<String> alarmName;
+      private final Output<String> alarmName;
 
-    public Input<String> getAlarmName() {
+    public Output<String> getAlarmName() {
         return this.alarmName;
     }
 
-    public EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs(Input<String> alarmName) {
+    public EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs(Output<String> alarmName) {
         this.alarmName = Objects.requireNonNull(alarmName, "expected parameter 'alarmName' to be non-null");
     }
 
     private EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs() {
-        this.alarmName = Input.empty();
+        this.alarmName = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs ex
     }
 
     public static final class Builder {
-        private Input<String> alarmName;
+        private Output<String> alarmName;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs ex
     	      this.alarmName = defaults.alarmName;
         }
 
-        public Builder alarmName(Input<String> alarmName) {
+        public Builder alarmName(Output<String> alarmName) {
             this.alarmName = Objects.requireNonNull(alarmName);
             return this;
         }
 
         public Builder alarmName(String alarmName) {
-            this.alarmName = Input.of(Objects.requireNonNull(alarmName));
+            this.alarmName = Output.of(Objects.requireNonNull(alarmName));
             return this;
         }
         public EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs build() {

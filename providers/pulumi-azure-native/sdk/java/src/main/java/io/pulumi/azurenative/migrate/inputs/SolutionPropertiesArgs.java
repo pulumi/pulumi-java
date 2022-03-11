@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.azurenative.migrate.inputs.SolutionDetailsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="cleanupState")
-      private final @Nullable Input<String> cleanupState;
+      private final @Nullable Output<String> cleanupState;
 
-    public Input<String> getCleanupState() {
-        return this.cleanupState == null ? Input.empty() : this.cleanupState;
+    public Output<String> getCleanupState() {
+        return this.cleanupState == null ? Output.empty() : this.cleanupState;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="details")
-      private final @Nullable Input<SolutionDetailsArgs> details;
+      private final @Nullable Output<SolutionDetailsArgs> details;
 
-    public Input<SolutionDetailsArgs> getDetails() {
-        return this.details == null ? Input.empty() : this.details;
+    public Output<SolutionDetailsArgs> getDetails() {
+        return this.details == null ? Output.empty() : this.details;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="goal")
-      private final @Nullable Input<String> goal;
+      private final @Nullable Output<String> goal;
 
-    public Input<String> getGoal() {
-        return this.goal == null ? Input.empty() : this.goal;
+    public Output<String> getGoal() {
+        return this.goal == null ? Output.empty() : this.goal;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="purpose")
-      private final @Nullable Input<String> purpose;
+      private final @Nullable Output<String> purpose;
 
-    public Input<String> getPurpose() {
-        return this.purpose == null ? Input.empty() : this.purpose;
+    public Output<String> getPurpose() {
+        return this.purpose == null ? Output.empty() : this.purpose;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -79,19 +79,19 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tool")
-      private final @Nullable Input<String> tool;
+      private final @Nullable Output<String> tool;
 
-    public Input<String> getTool() {
-        return this.tool == null ? Input.empty() : this.tool;
+    public Output<String> getTool() {
+        return this.tool == null ? Output.empty() : this.tool;
     }
 
     public SolutionPropertiesArgs(
-        @Nullable Input<String> cleanupState,
-        @Nullable Input<SolutionDetailsArgs> details,
-        @Nullable Input<String> goal,
-        @Nullable Input<String> purpose,
-        @Nullable Input<String> status,
-        @Nullable Input<String> tool) {
+        @Nullable Output<String> cleanupState,
+        @Nullable Output<SolutionDetailsArgs> details,
+        @Nullable Output<String> goal,
+        @Nullable Output<String> purpose,
+        @Nullable Output<String> status,
+        @Nullable Output<String> tool) {
         this.cleanupState = cleanupState;
         this.details = details;
         this.goal = goal;
@@ -101,12 +101,12 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
     }
 
     private SolutionPropertiesArgs() {
-        this.cleanupState = Input.empty();
-        this.details = Input.empty();
-        this.goal = Input.empty();
-        this.purpose = Input.empty();
-        this.status = Input.empty();
-        this.tool = Input.empty();
+        this.cleanupState = Output.empty();
+        this.details = Output.empty();
+        this.goal = Output.empty();
+        this.purpose = Output.empty();
+        this.status = Output.empty();
+        this.tool = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,12 +118,12 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> cleanupState;
-        private @Nullable Input<SolutionDetailsArgs> details;
-        private @Nullable Input<String> goal;
-        private @Nullable Input<String> purpose;
-        private @Nullable Input<String> status;
-        private @Nullable Input<String> tool;
+        private @Nullable Output<String> cleanupState;
+        private @Nullable Output<SolutionDetailsArgs> details;
+        private @Nullable Output<String> goal;
+        private @Nullable Output<String> purpose;
+        private @Nullable Output<String> status;
+        private @Nullable Output<String> tool;
 
         public Builder() {
     	      // Empty
@@ -139,63 +139,63 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
     	      this.tool = defaults.tool;
         }
 
-        public Builder cleanupState(@Nullable Input<String> cleanupState) {
+        public Builder cleanupState(@Nullable Output<String> cleanupState) {
             this.cleanupState = cleanupState;
             return this;
         }
 
         public Builder cleanupState(@Nullable String cleanupState) {
-            this.cleanupState = Input.ofNullable(cleanupState);
+            this.cleanupState = Output.ofNullable(cleanupState);
             return this;
         }
 
-        public Builder details(@Nullable Input<SolutionDetailsArgs> details) {
+        public Builder details(@Nullable Output<SolutionDetailsArgs> details) {
             this.details = details;
             return this;
         }
 
         public Builder details(@Nullable SolutionDetailsArgs details) {
-            this.details = Input.ofNullable(details);
+            this.details = Output.ofNullable(details);
             return this;
         }
 
-        public Builder goal(@Nullable Input<String> goal) {
+        public Builder goal(@Nullable Output<String> goal) {
             this.goal = goal;
             return this;
         }
 
         public Builder goal(@Nullable String goal) {
-            this.goal = Input.ofNullable(goal);
+            this.goal = Output.ofNullable(goal);
             return this;
         }
 
-        public Builder purpose(@Nullable Input<String> purpose) {
+        public Builder purpose(@Nullable Output<String> purpose) {
             this.purpose = purpose;
             return this;
         }
 
         public Builder purpose(@Nullable String purpose) {
-            this.purpose = Input.ofNullable(purpose);
+            this.purpose = Output.ofNullable(purpose);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder tool(@Nullable Input<String> tool) {
+        public Builder tool(@Nullable Output<String> tool) {
             this.tool = tool;
             return this;
         }
 
         public Builder tool(@Nullable String tool) {
-            this.tool = Input.ofNullable(tool);
+            this.tool = Output.ofNullable(tool);
             return this;
         }
         public SolutionPropertiesArgs build() {

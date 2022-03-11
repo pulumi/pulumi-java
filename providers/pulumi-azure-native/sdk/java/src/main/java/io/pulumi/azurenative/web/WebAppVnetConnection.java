@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.WebAppVnetConnectionArgs;
 import io.pulumi.azurenative.web.outputs.VnetRouteResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -211,30 +210,30 @@ public class WebAppVnetConnection extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public WebAppVnetConnection(String name, WebAppVnetConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:web:WebAppVnetConnection", name, args == null ? WebAppVnetConnectionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:web:WebAppVnetConnection", name, args == null ? WebAppVnetConnectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private WebAppVnetConnection(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private WebAppVnetConnection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:web:WebAppVnetConnection", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:web/v20150801:WebAppVnetConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20160801:WebAppVnetConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20180201:WebAppVnetConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20181101:WebAppVnetConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20190801:WebAppVnetConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20200601:WebAppVnetConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20200901:WebAppVnetConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20201001:WebAppVnetConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20201201:WebAppVnetConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210101:WebAppVnetConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210115:WebAppVnetConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210201:WebAppVnetConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210301:WebAppVnetConnection").build())
+                Output.of(Alias.builder().setType("azure-native:web/v20150801:WebAppVnetConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20160801:WebAppVnetConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20180201:WebAppVnetConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20181101:WebAppVnetConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20190801:WebAppVnetConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20200601:WebAppVnetConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20200901:WebAppVnetConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20201001:WebAppVnetConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20201201:WebAppVnetConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210101:WebAppVnetConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210115:WebAppVnetConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210201:WebAppVnetConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210301:WebAppVnetConnection").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -248,7 +247,7 @@ public class WebAppVnetConnection extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WebAppVnetConnection get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static WebAppVnetConnection get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new WebAppVnetConnection(name, id, options);
     }
 }

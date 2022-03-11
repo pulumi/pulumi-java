@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudwatch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -23,10 +23,10 @@ public final class EventTargetInputTransformerGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="inputPaths")
-      private final @Nullable Input<Map<String,String>> inputPaths;
+      private final @Nullable Output<Map<String,String>> inputPaths;
 
-    public Input<Map<String,String>> getInputPaths() {
-        return this.inputPaths == null ? Input.empty() : this.inputPaths;
+    public Output<Map<String,String>> getInputPaths() {
+        return this.inputPaths == null ? Output.empty() : this.inputPaths;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class EventTargetInputTransformerGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="inputTemplate", required=true)
-      private final Input<String> inputTemplate;
+      private final Output<String> inputTemplate;
 
-    public Input<String> getInputTemplate() {
+    public Output<String> getInputTemplate() {
         return this.inputTemplate;
     }
 
     public EventTargetInputTransformerGetArgs(
-        @Nullable Input<Map<String,String>> inputPaths,
-        Input<String> inputTemplate) {
+        @Nullable Output<Map<String,String>> inputPaths,
+        Output<String> inputTemplate) {
         this.inputPaths = inputPaths;
         this.inputTemplate = Objects.requireNonNull(inputTemplate, "expected parameter 'inputTemplate' to be non-null");
     }
 
     private EventTargetInputTransformerGetArgs() {
-        this.inputPaths = Input.empty();
-        this.inputTemplate = Input.empty();
+        this.inputPaths = Output.empty();
+        this.inputTemplate = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class EventTargetInputTransformerGetArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> inputPaths;
-        private Input<String> inputTemplate;
+        private @Nullable Output<Map<String,String>> inputPaths;
+        private Output<String> inputTemplate;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class EventTargetInputTransformerGetArgs extends io.pulumi.resource
     	      this.inputTemplate = defaults.inputTemplate;
         }
 
-        public Builder inputPaths(@Nullable Input<Map<String,String>> inputPaths) {
+        public Builder inputPaths(@Nullable Output<Map<String,String>> inputPaths) {
             this.inputPaths = inputPaths;
             return this;
         }
 
         public Builder inputPaths(@Nullable Map<String,String> inputPaths) {
-            this.inputPaths = Input.ofNullable(inputPaths);
+            this.inputPaths = Output.ofNullable(inputPaths);
             return this;
         }
 
-        public Builder inputTemplate(Input<String> inputTemplate) {
+        public Builder inputTemplate(Output<String> inputTemplate) {
             this.inputTemplate = Objects.requireNonNull(inputTemplate);
             return this;
         }
 
         public Builder inputTemplate(String inputTemplate) {
-            this.inputTemplate = Input.of(Objects.requireNonNull(inputTemplate));
+            this.inputTemplate = Output.of(Objects.requireNonNull(inputTemplate));
             return this;
         }
         public EventTargetInputTransformerGetArgs build() {

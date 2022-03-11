@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automation.inputs;
 
 import io.pulumi.azurenative.automation.enums.TagOperators;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class TagSettingsPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="filterOperator")
-      private final @Nullable Input<TagOperators> filterOperator;
+      private final @Nullable Output<TagOperators> filterOperator;
 
-    public Input<TagOperators> getFilterOperator() {
-        return this.filterOperator == null ? Input.empty() : this.filterOperator;
+    public Output<TagOperators> getFilterOperator() {
+        return this.filterOperator == null ? Output.empty() : this.filterOperator;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class TagSettingsPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,List<String>>> tags;
+      private final @Nullable Output<Map<String,List<String>>> tags;
 
-    public Input<Map<String,List<String>>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,List<String>>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public TagSettingsPropertiesArgs(
-        @Nullable Input<TagOperators> filterOperator,
-        @Nullable Input<Map<String,List<String>>> tags) {
+        @Nullable Output<TagOperators> filterOperator,
+        @Nullable Output<Map<String,List<String>>> tags) {
         this.filterOperator = filterOperator;
         this.tags = tags;
     }
 
     private TagSettingsPropertiesArgs() {
-        this.filterOperator = Input.empty();
-        this.tags = Input.empty();
+        this.filterOperator = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class TagSettingsPropertiesArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<TagOperators> filterOperator;
-        private @Nullable Input<Map<String,List<String>>> tags;
+        private @Nullable Output<TagOperators> filterOperator;
+        private @Nullable Output<Map<String,List<String>>> tags;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class TagSettingsPropertiesArgs extends io.pulumi.resources.Resourc
     	      this.tags = defaults.tags;
         }
 
-        public Builder filterOperator(@Nullable Input<TagOperators> filterOperator) {
+        public Builder filterOperator(@Nullable Output<TagOperators> filterOperator) {
             this.filterOperator = filterOperator;
             return this;
         }
 
         public Builder filterOperator(@Nullable TagOperators filterOperator) {
-            this.filterOperator = Input.ofNullable(filterOperator);
+            this.filterOperator = Output.ofNullable(filterOperator);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,List<String>>> tags) {
+        public Builder tags(@Nullable Output<Map<String,List<String>>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,List<String>> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public TagSettingsPropertiesArgs build() {

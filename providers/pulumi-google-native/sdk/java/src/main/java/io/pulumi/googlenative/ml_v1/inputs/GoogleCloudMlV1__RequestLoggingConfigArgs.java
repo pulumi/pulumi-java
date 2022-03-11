@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class GoogleCloudMlV1__RequestLoggingConfigArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="bigqueryTableName", required=true)
-      private final Input<String> bigqueryTableName;
+      private final Output<String> bigqueryTableName;
 
-    public Input<String> getBigqueryTableName() {
+    public Output<String> getBigqueryTableName() {
         return this.bigqueryTableName;
     }
 
@@ -35,22 +35,22 @@ public final class GoogleCloudMlV1__RequestLoggingConfigArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="samplingPercentage")
-      private final @Nullable Input<Double> samplingPercentage;
+      private final @Nullable Output<Double> samplingPercentage;
 
-    public Input<Double> getSamplingPercentage() {
-        return this.samplingPercentage == null ? Input.empty() : this.samplingPercentage;
+    public Output<Double> getSamplingPercentage() {
+        return this.samplingPercentage == null ? Output.empty() : this.samplingPercentage;
     }
 
     public GoogleCloudMlV1__RequestLoggingConfigArgs(
-        Input<String> bigqueryTableName,
-        @Nullable Input<Double> samplingPercentage) {
+        Output<String> bigqueryTableName,
+        @Nullable Output<Double> samplingPercentage) {
         this.bigqueryTableName = Objects.requireNonNull(bigqueryTableName, "expected parameter 'bigqueryTableName' to be non-null");
         this.samplingPercentage = samplingPercentage;
     }
 
     private GoogleCloudMlV1__RequestLoggingConfigArgs() {
-        this.bigqueryTableName = Input.empty();
-        this.samplingPercentage = Input.empty();
+        this.bigqueryTableName = Output.empty();
+        this.samplingPercentage = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class GoogleCloudMlV1__RequestLoggingConfigArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private Input<String> bigqueryTableName;
-        private @Nullable Input<Double> samplingPercentage;
+        private Output<String> bigqueryTableName;
+        private @Nullable Output<Double> samplingPercentage;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class GoogleCloudMlV1__RequestLoggingConfigArgs extends io.pulumi.r
     	      this.samplingPercentage = defaults.samplingPercentage;
         }
 
-        public Builder bigqueryTableName(Input<String> bigqueryTableName) {
+        public Builder bigqueryTableName(Output<String> bigqueryTableName) {
             this.bigqueryTableName = Objects.requireNonNull(bigqueryTableName);
             return this;
         }
 
         public Builder bigqueryTableName(String bigqueryTableName) {
-            this.bigqueryTableName = Input.of(Objects.requireNonNull(bigqueryTableName));
+            this.bigqueryTableName = Output.of(Objects.requireNonNull(bigqueryTableName));
             return this;
         }
 
-        public Builder samplingPercentage(@Nullable Input<Double> samplingPercentage) {
+        public Builder samplingPercentage(@Nullable Output<Double> samplingPercentage) {
             this.samplingPercentage = samplingPercentage;
             return this;
         }
 
         public Builder samplingPercentage(@Nullable Double samplingPercentage) {
-            this.samplingPercentage = Input.ofNullable(samplingPercentage);
+            this.samplingPercentage = Output.ofNullable(samplingPercentage);
             return this;
         }
         public GoogleCloudMlV1__RequestLoggingConfigArgs build() {

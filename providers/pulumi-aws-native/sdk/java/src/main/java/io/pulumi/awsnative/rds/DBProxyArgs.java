@@ -6,7 +6,7 @@ package io.pulumi.awsnative.rds;
 import io.pulumi.awsnative.rds.enums.DBProxyEngineFamily;
 import io.pulumi.awsnative.rds.inputs.DBProxyAuthFormatArgs;
 import io.pulumi.awsnative.rds.inputs.DBProxyTagFormatArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,9 +25,9 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="auth", required=true)
-      private final Input<List<DBProxyAuthFormatArgs>> auth;
+      private final Output<List<DBProxyAuthFormatArgs>> auth;
 
-    public Input<List<DBProxyAuthFormatArgs>> getAuth() {
+    public Output<List<DBProxyAuthFormatArgs>> getAuth() {
         return this.auth;
     }
 
@@ -36,10 +36,10 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dBProxyName")
-      private final @Nullable Input<String> dBProxyName;
+      private final @Nullable Output<String> dBProxyName;
 
-    public Input<String> getDBProxyName() {
-        return this.dBProxyName == null ? Input.empty() : this.dBProxyName;
+    public Output<String> getDBProxyName() {
+        return this.dBProxyName == null ? Output.empty() : this.dBProxyName;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="debugLogging")
-      private final @Nullable Input<Boolean> debugLogging;
+      private final @Nullable Output<Boolean> debugLogging;
 
-    public Input<Boolean> getDebugLogging() {
-        return this.debugLogging == null ? Input.empty() : this.debugLogging;
+    public Output<Boolean> getDebugLogging() {
+        return this.debugLogging == null ? Output.empty() : this.debugLogging;
     }
 
     /**
@@ -58,9 +58,9 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engineFamily", required=true)
-      private final Input<DBProxyEngineFamily> engineFamily;
+      private final Output<DBProxyEngineFamily> engineFamily;
 
-    public Input<DBProxyEngineFamily> getEngineFamily() {
+    public Output<DBProxyEngineFamily> getEngineFamily() {
         return this.engineFamily;
     }
 
@@ -69,10 +69,10 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="idleClientTimeout")
-      private final @Nullable Input<Integer> idleClientTimeout;
+      private final @Nullable Output<Integer> idleClientTimeout;
 
-    public Input<Integer> getIdleClientTimeout() {
-        return this.idleClientTimeout == null ? Input.empty() : this.idleClientTimeout;
+    public Output<Integer> getIdleClientTimeout() {
+        return this.idleClientTimeout == null ? Output.empty() : this.idleClientTimeout;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requireTLS")
-      private final @Nullable Input<Boolean> requireTLS;
+      private final @Nullable Output<Boolean> requireTLS;
 
-    public Input<Boolean> getRequireTLS() {
-        return this.requireTLS == null ? Input.empty() : this.requireTLS;
+    public Output<Boolean> getRequireTLS() {
+        return this.requireTLS == null ? Output.empty() : this.requireTLS;
     }
 
     /**
@@ -91,9 +91,9 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
@@ -102,10 +102,10 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<DBProxyTagFormatArgs>> tags;
+      private final @Nullable Output<List<DBProxyTagFormatArgs>> tags;
 
-    public Input<List<DBProxyTagFormatArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<DBProxyTagFormatArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -113,10 +113,10 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcSecurityGroupIds")
-      private final @Nullable Input<List<String>> vpcSecurityGroupIds;
+      private final @Nullable Output<List<String>> vpcSecurityGroupIds;
 
-    public Input<List<String>> getVpcSecurityGroupIds() {
-        return this.vpcSecurityGroupIds == null ? Input.empty() : this.vpcSecurityGroupIds;
+    public Output<List<String>> getVpcSecurityGroupIds() {
+        return this.vpcSecurityGroupIds == null ? Output.empty() : this.vpcSecurityGroupIds;
     }
 
     /**
@@ -124,23 +124,23 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcSubnetIds", required=true)
-      private final Input<List<String>> vpcSubnetIds;
+      private final Output<List<String>> vpcSubnetIds;
 
-    public Input<List<String>> getVpcSubnetIds() {
+    public Output<List<String>> getVpcSubnetIds() {
         return this.vpcSubnetIds;
     }
 
     public DBProxyArgs(
-        Input<List<DBProxyAuthFormatArgs>> auth,
-        @Nullable Input<String> dBProxyName,
-        @Nullable Input<Boolean> debugLogging,
-        Input<DBProxyEngineFamily> engineFamily,
-        @Nullable Input<Integer> idleClientTimeout,
-        @Nullable Input<Boolean> requireTLS,
-        Input<String> roleArn,
-        @Nullable Input<List<DBProxyTagFormatArgs>> tags,
-        @Nullable Input<List<String>> vpcSecurityGroupIds,
-        Input<List<String>> vpcSubnetIds) {
+        Output<List<DBProxyAuthFormatArgs>> auth,
+        @Nullable Output<String> dBProxyName,
+        @Nullable Output<Boolean> debugLogging,
+        Output<DBProxyEngineFamily> engineFamily,
+        @Nullable Output<Integer> idleClientTimeout,
+        @Nullable Output<Boolean> requireTLS,
+        Output<String> roleArn,
+        @Nullable Output<List<DBProxyTagFormatArgs>> tags,
+        @Nullable Output<List<String>> vpcSecurityGroupIds,
+        Output<List<String>> vpcSubnetIds) {
         this.auth = Objects.requireNonNull(auth, "expected parameter 'auth' to be non-null");
         this.dBProxyName = dBProxyName;
         this.debugLogging = debugLogging;
@@ -154,16 +154,16 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DBProxyArgs() {
-        this.auth = Input.empty();
-        this.dBProxyName = Input.empty();
-        this.debugLogging = Input.empty();
-        this.engineFamily = Input.empty();
-        this.idleClientTimeout = Input.empty();
-        this.requireTLS = Input.empty();
-        this.roleArn = Input.empty();
-        this.tags = Input.empty();
-        this.vpcSecurityGroupIds = Input.empty();
-        this.vpcSubnetIds = Input.empty();
+        this.auth = Output.empty();
+        this.dBProxyName = Output.empty();
+        this.debugLogging = Output.empty();
+        this.engineFamily = Output.empty();
+        this.idleClientTimeout = Output.empty();
+        this.requireTLS = Output.empty();
+        this.roleArn = Output.empty();
+        this.tags = Output.empty();
+        this.vpcSecurityGroupIds = Output.empty();
+        this.vpcSubnetIds = Output.empty();
     }
 
     public static Builder builder() {
@@ -175,16 +175,16 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<DBProxyAuthFormatArgs>> auth;
-        private @Nullable Input<String> dBProxyName;
-        private @Nullable Input<Boolean> debugLogging;
-        private Input<DBProxyEngineFamily> engineFamily;
-        private @Nullable Input<Integer> idleClientTimeout;
-        private @Nullable Input<Boolean> requireTLS;
-        private Input<String> roleArn;
-        private @Nullable Input<List<DBProxyTagFormatArgs>> tags;
-        private @Nullable Input<List<String>> vpcSecurityGroupIds;
-        private Input<List<String>> vpcSubnetIds;
+        private Output<List<DBProxyAuthFormatArgs>> auth;
+        private @Nullable Output<String> dBProxyName;
+        private @Nullable Output<Boolean> debugLogging;
+        private Output<DBProxyEngineFamily> engineFamily;
+        private @Nullable Output<Integer> idleClientTimeout;
+        private @Nullable Output<Boolean> requireTLS;
+        private Output<String> roleArn;
+        private @Nullable Output<List<DBProxyTagFormatArgs>> tags;
+        private @Nullable Output<List<String>> vpcSecurityGroupIds;
+        private Output<List<String>> vpcSubnetIds;
 
         public Builder() {
     	      // Empty
@@ -204,103 +204,103 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcSubnetIds = defaults.vpcSubnetIds;
         }
 
-        public Builder auth(Input<List<DBProxyAuthFormatArgs>> auth) {
+        public Builder auth(Output<List<DBProxyAuthFormatArgs>> auth) {
             this.auth = Objects.requireNonNull(auth);
             return this;
         }
 
         public Builder auth(List<DBProxyAuthFormatArgs> auth) {
-            this.auth = Input.of(Objects.requireNonNull(auth));
+            this.auth = Output.of(Objects.requireNonNull(auth));
             return this;
         }
 
-        public Builder dBProxyName(@Nullable Input<String> dBProxyName) {
+        public Builder dBProxyName(@Nullable Output<String> dBProxyName) {
             this.dBProxyName = dBProxyName;
             return this;
         }
 
         public Builder dBProxyName(@Nullable String dBProxyName) {
-            this.dBProxyName = Input.ofNullable(dBProxyName);
+            this.dBProxyName = Output.ofNullable(dBProxyName);
             return this;
         }
 
-        public Builder debugLogging(@Nullable Input<Boolean> debugLogging) {
+        public Builder debugLogging(@Nullable Output<Boolean> debugLogging) {
             this.debugLogging = debugLogging;
             return this;
         }
 
         public Builder debugLogging(@Nullable Boolean debugLogging) {
-            this.debugLogging = Input.ofNullable(debugLogging);
+            this.debugLogging = Output.ofNullable(debugLogging);
             return this;
         }
 
-        public Builder engineFamily(Input<DBProxyEngineFamily> engineFamily) {
+        public Builder engineFamily(Output<DBProxyEngineFamily> engineFamily) {
             this.engineFamily = Objects.requireNonNull(engineFamily);
             return this;
         }
 
         public Builder engineFamily(DBProxyEngineFamily engineFamily) {
-            this.engineFamily = Input.of(Objects.requireNonNull(engineFamily));
+            this.engineFamily = Output.of(Objects.requireNonNull(engineFamily));
             return this;
         }
 
-        public Builder idleClientTimeout(@Nullable Input<Integer> idleClientTimeout) {
+        public Builder idleClientTimeout(@Nullable Output<Integer> idleClientTimeout) {
             this.idleClientTimeout = idleClientTimeout;
             return this;
         }
 
         public Builder idleClientTimeout(@Nullable Integer idleClientTimeout) {
-            this.idleClientTimeout = Input.ofNullable(idleClientTimeout);
+            this.idleClientTimeout = Output.ofNullable(idleClientTimeout);
             return this;
         }
 
-        public Builder requireTLS(@Nullable Input<Boolean> requireTLS) {
+        public Builder requireTLS(@Nullable Output<Boolean> requireTLS) {
             this.requireTLS = requireTLS;
             return this;
         }
 
         public Builder requireTLS(@Nullable Boolean requireTLS) {
-            this.requireTLS = Input.ofNullable(requireTLS);
+            this.requireTLS = Output.ofNullable(requireTLS);
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<DBProxyTagFormatArgs>> tags) {
+        public Builder tags(@Nullable Output<List<DBProxyTagFormatArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<DBProxyTagFormatArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder vpcSecurityGroupIds(@Nullable Input<List<String>> vpcSecurityGroupIds) {
+        public Builder vpcSecurityGroupIds(@Nullable Output<List<String>> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
 
         public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
-            this.vpcSecurityGroupIds = Input.ofNullable(vpcSecurityGroupIds);
+            this.vpcSecurityGroupIds = Output.ofNullable(vpcSecurityGroupIds);
             return this;
         }
 
-        public Builder vpcSubnetIds(Input<List<String>> vpcSubnetIds) {
+        public Builder vpcSubnetIds(Output<List<String>> vpcSubnetIds) {
             this.vpcSubnetIds = Objects.requireNonNull(vpcSubnetIds);
             return this;
         }
 
         public Builder vpcSubnetIds(List<String> vpcSubnetIds) {
-            this.vpcSubnetIds = Input.of(Objects.requireNonNull(vpcSubnetIds));
+            this.vpcSubnetIds = Output.of(Objects.requireNonNull(vpcSubnetIds));
             return this;
         }
         public DBProxyArgs build() {

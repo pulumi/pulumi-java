@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.BuilderConfigArgs;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.MetadataArgs;
@@ -23,10 +23,10 @@ public final class InTotoProvenanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="builderConfig")
-      private final @Nullable Input<BuilderConfigArgs> builderConfig;
+      private final @Nullable Output<BuilderConfigArgs> builderConfig;
 
-    public Input<BuilderConfigArgs> getBuilderConfig() {
-        return this.builderConfig == null ? Input.empty() : this.builderConfig;
+    public Output<BuilderConfigArgs> getBuilderConfig() {
+        return this.builderConfig == null ? Output.empty() : this.builderConfig;
     }
 
     /**
@@ -34,17 +34,17 @@ public final class InTotoProvenanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="materials")
-      private final @Nullable Input<List<String>> materials;
+      private final @Nullable Output<List<String>> materials;
 
-    public Input<List<String>> getMaterials() {
-        return this.materials == null ? Input.empty() : this.materials;
+    public Output<List<String>> getMaterials() {
+        return this.materials == null ? Output.empty() : this.materials;
     }
 
     @InputImport(name="metadata")
-      private final @Nullable Input<MetadataArgs> metadata;
+      private final @Nullable Output<MetadataArgs> metadata;
 
-    public Input<MetadataArgs> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<MetadataArgs> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class InTotoProvenanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="recipe")
-      private final @Nullable Input<RecipeArgs> recipe;
+      private final @Nullable Output<RecipeArgs> recipe;
 
-    public Input<RecipeArgs> getRecipe() {
-        return this.recipe == null ? Input.empty() : this.recipe;
+    public Output<RecipeArgs> getRecipe() {
+        return this.recipe == null ? Output.empty() : this.recipe;
     }
 
     public InTotoProvenanceArgs(
-        @Nullable Input<BuilderConfigArgs> builderConfig,
-        @Nullable Input<List<String>> materials,
-        @Nullable Input<MetadataArgs> metadata,
-        @Nullable Input<RecipeArgs> recipe) {
+        @Nullable Output<BuilderConfigArgs> builderConfig,
+        @Nullable Output<List<String>> materials,
+        @Nullable Output<MetadataArgs> metadata,
+        @Nullable Output<RecipeArgs> recipe) {
         this.builderConfig = builderConfig;
         this.materials = materials;
         this.metadata = metadata;
@@ -70,10 +70,10 @@ public final class InTotoProvenanceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private InTotoProvenanceArgs() {
-        this.builderConfig = Input.empty();
-        this.materials = Input.empty();
-        this.metadata = Input.empty();
-        this.recipe = Input.empty();
+        this.builderConfig = Output.empty();
+        this.materials = Output.empty();
+        this.metadata = Output.empty();
+        this.recipe = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class InTotoProvenanceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<BuilderConfigArgs> builderConfig;
-        private @Nullable Input<List<String>> materials;
-        private @Nullable Input<MetadataArgs> metadata;
-        private @Nullable Input<RecipeArgs> recipe;
+        private @Nullable Output<BuilderConfigArgs> builderConfig;
+        private @Nullable Output<List<String>> materials;
+        private @Nullable Output<MetadataArgs> metadata;
+        private @Nullable Output<RecipeArgs> recipe;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class InTotoProvenanceArgs extends io.pulumi.resources.ResourceArgs
     	      this.recipe = defaults.recipe;
         }
 
-        public Builder builderConfig(@Nullable Input<BuilderConfigArgs> builderConfig) {
+        public Builder builderConfig(@Nullable Output<BuilderConfigArgs> builderConfig) {
             this.builderConfig = builderConfig;
             return this;
         }
 
         public Builder builderConfig(@Nullable BuilderConfigArgs builderConfig) {
-            this.builderConfig = Input.ofNullable(builderConfig);
+            this.builderConfig = Output.ofNullable(builderConfig);
             return this;
         }
 
-        public Builder materials(@Nullable Input<List<String>> materials) {
+        public Builder materials(@Nullable Output<List<String>> materials) {
             this.materials = materials;
             return this;
         }
 
         public Builder materials(@Nullable List<String> materials) {
-            this.materials = Input.ofNullable(materials);
+            this.materials = Output.ofNullable(materials);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<MetadataArgs> metadata) {
+        public Builder metadata(@Nullable Output<MetadataArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable MetadataArgs metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder recipe(@Nullable Input<RecipeArgs> recipe) {
+        public Builder recipe(@Nullable Output<RecipeArgs> recipe) {
             this.recipe = recipe;
             return this;
         }
 
         public Builder recipe(@Nullable RecipeArgs recipe) {
-            this.recipe = Input.ofNullable(recipe);
+            this.recipe = Output.ofNullable(recipe);
             return this;
         }
         public InTotoProvenanceArgs build() {

@@ -24,7 +24,7 @@ import io.pulumi.azurenative.datamigration.inputs.MigrateSqlServerSqlMITaskPrope
 import io.pulumi.azurenative.datamigration.inputs.ValidateMigrationInputSqlServerSqlDbSyncTaskPropertiesArgs;
 import io.pulumi.azurenative.datamigration.inputs.ValidateMigrationInputSqlServerSqlMISyncTaskPropertiesArgs;
 import io.pulumi.azurenative.datamigration.inputs.ValidateMigrationInputSqlServerSqlMITaskPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -41,9 +41,9 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="groupName", required=true)
-      private final Input<String> groupName;
+      private final Output<String> groupName;
 
-    public Input<String> getGroupName() {
+    public Output<String> getGroupName() {
         return this.groupName;
     }
 
@@ -52,9 +52,9 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectName", required=true)
-      private final Input<String> projectName;
+      private final Output<String> projectName;
 
-    public Input<String> getProjectName() {
+    public Output<String> getProjectName() {
         return this.projectName;
     }
 
@@ -63,10 +63,10 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<Object> properties;
+      private final @Nullable Output<Object> properties;
 
-    public Input<Object> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<Object> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -74,9 +74,9 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-      private final Input<String> serviceName;
+      private final Output<String> serviceName;
 
-    public Input<String> getServiceName() {
+    public Output<String> getServiceName() {
         return this.serviceName;
     }
 
@@ -85,18 +85,18 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="taskName")
-      private final @Nullable Input<String> taskName;
+      private final @Nullable Output<String> taskName;
 
-    public Input<String> getTaskName() {
-        return this.taskName == null ? Input.empty() : this.taskName;
+    public Output<String> getTaskName() {
+        return this.taskName == null ? Output.empty() : this.taskName;
     }
 
     public TaskArgs(
-        Input<String> groupName,
-        Input<String> projectName,
-        @Nullable Input<Object> properties,
-        Input<String> serviceName,
-        @Nullable Input<String> taskName) {
+        Output<String> groupName,
+        Output<String> projectName,
+        @Nullable Output<Object> properties,
+        Output<String> serviceName,
+        @Nullable Output<String> taskName) {
         this.groupName = Objects.requireNonNull(groupName, "expected parameter 'groupName' to be non-null");
         this.projectName = Objects.requireNonNull(projectName, "expected parameter 'projectName' to be non-null");
         this.properties = properties;
@@ -105,11 +105,11 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TaskArgs() {
-        this.groupName = Input.empty();
-        this.projectName = Input.empty();
-        this.properties = Input.empty();
-        this.serviceName = Input.empty();
-        this.taskName = Input.empty();
+        this.groupName = Output.empty();
+        this.projectName = Output.empty();
+        this.properties = Output.empty();
+        this.serviceName = Output.empty();
+        this.taskName = Output.empty();
     }
 
     public static Builder builder() {
@@ -121,11 +121,11 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> groupName;
-        private Input<String> projectName;
-        private @Nullable Input<Object> properties;
-        private Input<String> serviceName;
-        private @Nullable Input<String> taskName;
+        private Output<String> groupName;
+        private Output<String> projectName;
+        private @Nullable Output<Object> properties;
+        private Output<String> serviceName;
+        private @Nullable Output<String> taskName;
 
         public Builder() {
     	      // Empty
@@ -140,53 +140,53 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.taskName = defaults.taskName;
         }
 
-        public Builder groupName(Input<String> groupName) {
+        public Builder groupName(Output<String> groupName) {
             this.groupName = Objects.requireNonNull(groupName);
             return this;
         }
 
         public Builder groupName(String groupName) {
-            this.groupName = Input.of(Objects.requireNonNull(groupName));
+            this.groupName = Output.of(Objects.requireNonNull(groupName));
             return this;
         }
 
-        public Builder projectName(Input<String> projectName) {
+        public Builder projectName(Output<String> projectName) {
             this.projectName = Objects.requireNonNull(projectName);
             return this;
         }
 
         public Builder projectName(String projectName) {
-            this.projectName = Input.of(Objects.requireNonNull(projectName));
+            this.projectName = Output.of(Objects.requireNonNull(projectName));
             return this;
         }
 
-        public Builder properties(@Nullable Input<Object> properties) {
+        public Builder properties(@Nullable Output<Object> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable Object properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder serviceName(Input<String> serviceName) {
+        public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Input.of(Objects.requireNonNull(serviceName));
+            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder taskName(@Nullable Input<String> taskName) {
+        public Builder taskName(@Nullable Output<String> taskName) {
             this.taskName = taskName;
             return this;
         }
 
         public Builder taskName(@Nullable String taskName) {
-            this.taskName = Input.ofNullable(taskName);
+            this.taskName = Output.ofNullable(taskName);
             return this;
         }
         public TaskArgs build() {

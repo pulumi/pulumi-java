@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.route53;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -23,10 +23,10 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="childHealthThreshold")
-      private final @Nullable Input<Integer> childHealthThreshold;
+      private final @Nullable Output<Integer> childHealthThreshold;
 
-    public Input<Integer> getChildHealthThreshold() {
-        return this.childHealthThreshold == null ? Input.empty() : this.childHealthThreshold;
+    public Output<Integer> getChildHealthThreshold() {
+        return this.childHealthThreshold == null ? Output.empty() : this.childHealthThreshold;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="childHealthchecks")
-      private final @Nullable Input<List<String>> childHealthchecks;
+      private final @Nullable Output<List<String>> childHealthchecks;
 
-    public Input<List<String>> getChildHealthchecks() {
-        return this.childHealthchecks == null ? Input.empty() : this.childHealthchecks;
+    public Output<List<String>> getChildHealthchecks() {
+        return this.childHealthchecks == null ? Output.empty() : this.childHealthchecks;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudwatchAlarmName")
-      private final @Nullable Input<String> cloudwatchAlarmName;
+      private final @Nullable Output<String> cloudwatchAlarmName;
 
-    public Input<String> getCloudwatchAlarmName() {
-        return this.cloudwatchAlarmName == null ? Input.empty() : this.cloudwatchAlarmName;
+    public Output<String> getCloudwatchAlarmName() {
+        return this.cloudwatchAlarmName == null ? Output.empty() : this.cloudwatchAlarmName;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudwatchAlarmRegion")
-      private final @Nullable Input<String> cloudwatchAlarmRegion;
+      private final @Nullable Output<String> cloudwatchAlarmRegion;
 
-    public Input<String> getCloudwatchAlarmRegion() {
-        return this.cloudwatchAlarmRegion == null ? Input.empty() : this.cloudwatchAlarmRegion;
+    public Output<String> getCloudwatchAlarmRegion() {
+        return this.cloudwatchAlarmRegion == null ? Output.empty() : this.cloudwatchAlarmRegion;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disabled")
-      private final @Nullable Input<Boolean> disabled;
+      private final @Nullable Output<Boolean> disabled;
 
-    public Input<Boolean> getDisabled() {
-        return this.disabled == null ? Input.empty() : this.disabled;
+    public Output<Boolean> getDisabled() {
+        return this.disabled == null ? Output.empty() : this.disabled;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableSni")
-      private final @Nullable Input<Boolean> enableSni;
+      private final @Nullable Output<Boolean> enableSni;
 
-    public Input<Boolean> getEnableSni() {
-        return this.enableSni == null ? Input.empty() : this.enableSni;
+    public Output<Boolean> getEnableSni() {
+        return this.enableSni == null ? Output.empty() : this.enableSni;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="failureThreshold")
-      private final @Nullable Input<Integer> failureThreshold;
+      private final @Nullable Output<Integer> failureThreshold;
 
-    public Input<Integer> getFailureThreshold() {
-        return this.failureThreshold == null ? Input.empty() : this.failureThreshold;
+    public Output<Integer> getFailureThreshold() {
+        return this.failureThreshold == null ? Output.empty() : this.failureThreshold;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fqdn")
-      private final @Nullable Input<String> fqdn;
+      private final @Nullable Output<String> fqdn;
 
-    public Input<String> getFqdn() {
-        return this.fqdn == null ? Input.empty() : this.fqdn;
+    public Output<String> getFqdn() {
+        return this.fqdn == null ? Output.empty() : this.fqdn;
     }
 
     /**
@@ -114,10 +114,10 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="insufficientDataHealthStatus")
-      private final @Nullable Input<String> insufficientDataHealthStatus;
+      private final @Nullable Output<String> insufficientDataHealthStatus;
 
-    public Input<String> getInsufficientDataHealthStatus() {
-        return this.insufficientDataHealthStatus == null ? Input.empty() : this.insufficientDataHealthStatus;
+    public Output<String> getInsufficientDataHealthStatus() {
+        return this.insufficientDataHealthStatus == null ? Output.empty() : this.insufficientDataHealthStatus;
     }
 
     /**
@@ -125,10 +125,10 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="invertHealthcheck")
-      private final @Nullable Input<Boolean> invertHealthcheck;
+      private final @Nullable Output<Boolean> invertHealthcheck;
 
-    public Input<Boolean> getInvertHealthcheck() {
-        return this.invertHealthcheck == null ? Input.empty() : this.invertHealthcheck;
+    public Output<Boolean> getInvertHealthcheck() {
+        return this.invertHealthcheck == null ? Output.empty() : this.invertHealthcheck;
     }
 
     /**
@@ -136,10 +136,10 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAddress")
-      private final @Nullable Input<String> ipAddress;
+      private final @Nullable Output<String> ipAddress;
 
-    public Input<String> getIpAddress() {
-        return this.ipAddress == null ? Input.empty() : this.ipAddress;
+    public Output<String> getIpAddress() {
+        return this.ipAddress == null ? Output.empty() : this.ipAddress;
     }
 
     /**
@@ -147,10 +147,10 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="measureLatency")
-      private final @Nullable Input<Boolean> measureLatency;
+      private final @Nullable Output<Boolean> measureLatency;
 
-    public Input<Boolean> getMeasureLatency() {
-        return this.measureLatency == null ? Input.empty() : this.measureLatency;
+    public Output<Boolean> getMeasureLatency() {
+        return this.measureLatency == null ? Output.empty() : this.measureLatency;
     }
 
     /**
@@ -158,10 +158,10 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -170,10 +170,10 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="referenceName")
-      private final @Nullable Input<String> referenceName;
+      private final @Nullable Output<String> referenceName;
 
-    public Input<String> getReferenceName() {
-        return this.referenceName == null ? Input.empty() : this.referenceName;
+    public Output<String> getReferenceName() {
+        return this.referenceName == null ? Output.empty() : this.referenceName;
     }
 
     /**
@@ -181,10 +181,10 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="regions")
-      private final @Nullable Input<List<String>> regions;
+      private final @Nullable Output<List<String>> regions;
 
-    public Input<List<String>> getRegions() {
-        return this.regions == null ? Input.empty() : this.regions;
+    public Output<List<String>> getRegions() {
+        return this.regions == null ? Output.empty() : this.regions;
     }
 
     /**
@@ -192,10 +192,10 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestInterval")
-      private final @Nullable Input<Integer> requestInterval;
+      private final @Nullable Output<Integer> requestInterval;
 
-    public Input<Integer> getRequestInterval() {
-        return this.requestInterval == null ? Input.empty() : this.requestInterval;
+    public Output<Integer> getRequestInterval() {
+        return this.requestInterval == null ? Output.empty() : this.requestInterval;
     }
 
     /**
@@ -203,10 +203,10 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourcePath")
-      private final @Nullable Input<String> resourcePath;
+      private final @Nullable Output<String> resourcePath;
 
-    public Input<String> getResourcePath() {
-        return this.resourcePath == null ? Input.empty() : this.resourcePath;
+    public Output<String> getResourcePath() {
+        return this.resourcePath == null ? Output.empty() : this.resourcePath;
     }
 
     /**
@@ -214,10 +214,10 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routingControlArn")
-      private final @Nullable Input<String> routingControlArn;
+      private final @Nullable Output<String> routingControlArn;
 
-    public Input<String> getRoutingControlArn() {
-        return this.routingControlArn == null ? Input.empty() : this.routingControlArn;
+    public Output<String> getRoutingControlArn() {
+        return this.routingControlArn == null ? Output.empty() : this.routingControlArn;
     }
 
     /**
@@ -225,10 +225,10 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="searchString")
-      private final @Nullable Input<String> searchString;
+      private final @Nullable Output<String> searchString;
 
-    public Input<String> getSearchString() {
-        return this.searchString == null ? Input.empty() : this.searchString;
+    public Output<String> getSearchString() {
+        return this.searchString == null ? Output.empty() : this.searchString;
     }
 
     /**
@@ -236,10 +236,10 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -247,34 +247,34 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public HealthCheckArgs(
-        @Nullable Input<Integer> childHealthThreshold,
-        @Nullable Input<List<String>> childHealthchecks,
-        @Nullable Input<String> cloudwatchAlarmName,
-        @Nullable Input<String> cloudwatchAlarmRegion,
-        @Nullable Input<Boolean> disabled,
-        @Nullable Input<Boolean> enableSni,
-        @Nullable Input<Integer> failureThreshold,
-        @Nullable Input<String> fqdn,
-        @Nullable Input<String> insufficientDataHealthStatus,
-        @Nullable Input<Boolean> invertHealthcheck,
-        @Nullable Input<String> ipAddress,
-        @Nullable Input<Boolean> measureLatency,
-        @Nullable Input<Integer> port,
-        @Nullable Input<String> referenceName,
-        @Nullable Input<List<String>> regions,
-        @Nullable Input<Integer> requestInterval,
-        @Nullable Input<String> resourcePath,
-        @Nullable Input<String> routingControlArn,
-        @Nullable Input<String> searchString,
-        @Nullable Input<Map<String,String>> tags,
-        Input<String> type) {
+        @Nullable Output<Integer> childHealthThreshold,
+        @Nullable Output<List<String>> childHealthchecks,
+        @Nullable Output<String> cloudwatchAlarmName,
+        @Nullable Output<String> cloudwatchAlarmRegion,
+        @Nullable Output<Boolean> disabled,
+        @Nullable Output<Boolean> enableSni,
+        @Nullable Output<Integer> failureThreshold,
+        @Nullable Output<String> fqdn,
+        @Nullable Output<String> insufficientDataHealthStatus,
+        @Nullable Output<Boolean> invertHealthcheck,
+        @Nullable Output<String> ipAddress,
+        @Nullable Output<Boolean> measureLatency,
+        @Nullable Output<Integer> port,
+        @Nullable Output<String> referenceName,
+        @Nullable Output<List<String>> regions,
+        @Nullable Output<Integer> requestInterval,
+        @Nullable Output<String> resourcePath,
+        @Nullable Output<String> routingControlArn,
+        @Nullable Output<String> searchString,
+        @Nullable Output<Map<String,String>> tags,
+        Output<String> type) {
         this.childHealthThreshold = childHealthThreshold;
         this.childHealthchecks = childHealthchecks;
         this.cloudwatchAlarmName = cloudwatchAlarmName;
@@ -299,27 +299,27 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HealthCheckArgs() {
-        this.childHealthThreshold = Input.empty();
-        this.childHealthchecks = Input.empty();
-        this.cloudwatchAlarmName = Input.empty();
-        this.cloudwatchAlarmRegion = Input.empty();
-        this.disabled = Input.empty();
-        this.enableSni = Input.empty();
-        this.failureThreshold = Input.empty();
-        this.fqdn = Input.empty();
-        this.insufficientDataHealthStatus = Input.empty();
-        this.invertHealthcheck = Input.empty();
-        this.ipAddress = Input.empty();
-        this.measureLatency = Input.empty();
-        this.port = Input.empty();
-        this.referenceName = Input.empty();
-        this.regions = Input.empty();
-        this.requestInterval = Input.empty();
-        this.resourcePath = Input.empty();
-        this.routingControlArn = Input.empty();
-        this.searchString = Input.empty();
-        this.tags = Input.empty();
-        this.type = Input.empty();
+        this.childHealthThreshold = Output.empty();
+        this.childHealthchecks = Output.empty();
+        this.cloudwatchAlarmName = Output.empty();
+        this.cloudwatchAlarmRegion = Output.empty();
+        this.disabled = Output.empty();
+        this.enableSni = Output.empty();
+        this.failureThreshold = Output.empty();
+        this.fqdn = Output.empty();
+        this.insufficientDataHealthStatus = Output.empty();
+        this.invertHealthcheck = Output.empty();
+        this.ipAddress = Output.empty();
+        this.measureLatency = Output.empty();
+        this.port = Output.empty();
+        this.referenceName = Output.empty();
+        this.regions = Output.empty();
+        this.requestInterval = Output.empty();
+        this.resourcePath = Output.empty();
+        this.routingControlArn = Output.empty();
+        this.searchString = Output.empty();
+        this.tags = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -331,27 +331,27 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> childHealthThreshold;
-        private @Nullable Input<List<String>> childHealthchecks;
-        private @Nullable Input<String> cloudwatchAlarmName;
-        private @Nullable Input<String> cloudwatchAlarmRegion;
-        private @Nullable Input<Boolean> disabled;
-        private @Nullable Input<Boolean> enableSni;
-        private @Nullable Input<Integer> failureThreshold;
-        private @Nullable Input<String> fqdn;
-        private @Nullable Input<String> insufficientDataHealthStatus;
-        private @Nullable Input<Boolean> invertHealthcheck;
-        private @Nullable Input<String> ipAddress;
-        private @Nullable Input<Boolean> measureLatency;
-        private @Nullable Input<Integer> port;
-        private @Nullable Input<String> referenceName;
-        private @Nullable Input<List<String>> regions;
-        private @Nullable Input<Integer> requestInterval;
-        private @Nullable Input<String> resourcePath;
-        private @Nullable Input<String> routingControlArn;
-        private @Nullable Input<String> searchString;
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<String> type;
+        private @Nullable Output<Integer> childHealthThreshold;
+        private @Nullable Output<List<String>> childHealthchecks;
+        private @Nullable Output<String> cloudwatchAlarmName;
+        private @Nullable Output<String> cloudwatchAlarmRegion;
+        private @Nullable Output<Boolean> disabled;
+        private @Nullable Output<Boolean> enableSni;
+        private @Nullable Output<Integer> failureThreshold;
+        private @Nullable Output<String> fqdn;
+        private @Nullable Output<String> insufficientDataHealthStatus;
+        private @Nullable Output<Boolean> invertHealthcheck;
+        private @Nullable Output<String> ipAddress;
+        private @Nullable Output<Boolean> measureLatency;
+        private @Nullable Output<Integer> port;
+        private @Nullable Output<String> referenceName;
+        private @Nullable Output<List<String>> regions;
+        private @Nullable Output<Integer> requestInterval;
+        private @Nullable Output<String> resourcePath;
+        private @Nullable Output<String> routingControlArn;
+        private @Nullable Output<String> searchString;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -382,213 +382,213 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder childHealthThreshold(@Nullable Input<Integer> childHealthThreshold) {
+        public Builder childHealthThreshold(@Nullable Output<Integer> childHealthThreshold) {
             this.childHealthThreshold = childHealthThreshold;
             return this;
         }
 
         public Builder childHealthThreshold(@Nullable Integer childHealthThreshold) {
-            this.childHealthThreshold = Input.ofNullable(childHealthThreshold);
+            this.childHealthThreshold = Output.ofNullable(childHealthThreshold);
             return this;
         }
 
-        public Builder childHealthchecks(@Nullable Input<List<String>> childHealthchecks) {
+        public Builder childHealthchecks(@Nullable Output<List<String>> childHealthchecks) {
             this.childHealthchecks = childHealthchecks;
             return this;
         }
 
         public Builder childHealthchecks(@Nullable List<String> childHealthchecks) {
-            this.childHealthchecks = Input.ofNullable(childHealthchecks);
+            this.childHealthchecks = Output.ofNullable(childHealthchecks);
             return this;
         }
 
-        public Builder cloudwatchAlarmName(@Nullable Input<String> cloudwatchAlarmName) {
+        public Builder cloudwatchAlarmName(@Nullable Output<String> cloudwatchAlarmName) {
             this.cloudwatchAlarmName = cloudwatchAlarmName;
             return this;
         }
 
         public Builder cloudwatchAlarmName(@Nullable String cloudwatchAlarmName) {
-            this.cloudwatchAlarmName = Input.ofNullable(cloudwatchAlarmName);
+            this.cloudwatchAlarmName = Output.ofNullable(cloudwatchAlarmName);
             return this;
         }
 
-        public Builder cloudwatchAlarmRegion(@Nullable Input<String> cloudwatchAlarmRegion) {
+        public Builder cloudwatchAlarmRegion(@Nullable Output<String> cloudwatchAlarmRegion) {
             this.cloudwatchAlarmRegion = cloudwatchAlarmRegion;
             return this;
         }
 
         public Builder cloudwatchAlarmRegion(@Nullable String cloudwatchAlarmRegion) {
-            this.cloudwatchAlarmRegion = Input.ofNullable(cloudwatchAlarmRegion);
+            this.cloudwatchAlarmRegion = Output.ofNullable(cloudwatchAlarmRegion);
             return this;
         }
 
-        public Builder disabled(@Nullable Input<Boolean> disabled) {
+        public Builder disabled(@Nullable Output<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
 
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Input.ofNullable(disabled);
+            this.disabled = Output.ofNullable(disabled);
             return this;
         }
 
-        public Builder enableSni(@Nullable Input<Boolean> enableSni) {
+        public Builder enableSni(@Nullable Output<Boolean> enableSni) {
             this.enableSni = enableSni;
             return this;
         }
 
         public Builder enableSni(@Nullable Boolean enableSni) {
-            this.enableSni = Input.ofNullable(enableSni);
+            this.enableSni = Output.ofNullable(enableSni);
             return this;
         }
 
-        public Builder failureThreshold(@Nullable Input<Integer> failureThreshold) {
+        public Builder failureThreshold(@Nullable Output<Integer> failureThreshold) {
             this.failureThreshold = failureThreshold;
             return this;
         }
 
         public Builder failureThreshold(@Nullable Integer failureThreshold) {
-            this.failureThreshold = Input.ofNullable(failureThreshold);
+            this.failureThreshold = Output.ofNullable(failureThreshold);
             return this;
         }
 
-        public Builder fqdn(@Nullable Input<String> fqdn) {
+        public Builder fqdn(@Nullable Output<String> fqdn) {
             this.fqdn = fqdn;
             return this;
         }
 
         public Builder fqdn(@Nullable String fqdn) {
-            this.fqdn = Input.ofNullable(fqdn);
+            this.fqdn = Output.ofNullable(fqdn);
             return this;
         }
 
-        public Builder insufficientDataHealthStatus(@Nullable Input<String> insufficientDataHealthStatus) {
+        public Builder insufficientDataHealthStatus(@Nullable Output<String> insufficientDataHealthStatus) {
             this.insufficientDataHealthStatus = insufficientDataHealthStatus;
             return this;
         }
 
         public Builder insufficientDataHealthStatus(@Nullable String insufficientDataHealthStatus) {
-            this.insufficientDataHealthStatus = Input.ofNullable(insufficientDataHealthStatus);
+            this.insufficientDataHealthStatus = Output.ofNullable(insufficientDataHealthStatus);
             return this;
         }
 
-        public Builder invertHealthcheck(@Nullable Input<Boolean> invertHealthcheck) {
+        public Builder invertHealthcheck(@Nullable Output<Boolean> invertHealthcheck) {
             this.invertHealthcheck = invertHealthcheck;
             return this;
         }
 
         public Builder invertHealthcheck(@Nullable Boolean invertHealthcheck) {
-            this.invertHealthcheck = Input.ofNullable(invertHealthcheck);
+            this.invertHealthcheck = Output.ofNullable(invertHealthcheck);
             return this;
         }
 
-        public Builder ipAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Input.ofNullable(ipAddress);
+            this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
 
-        public Builder measureLatency(@Nullable Input<Boolean> measureLatency) {
+        public Builder measureLatency(@Nullable Output<Boolean> measureLatency) {
             this.measureLatency = measureLatency;
             return this;
         }
 
         public Builder measureLatency(@Nullable Boolean measureLatency) {
-            this.measureLatency = Input.ofNullable(measureLatency);
+            this.measureLatency = Output.ofNullable(measureLatency);
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder referenceName(@Nullable Input<String> referenceName) {
+        public Builder referenceName(@Nullable Output<String> referenceName) {
             this.referenceName = referenceName;
             return this;
         }
 
         public Builder referenceName(@Nullable String referenceName) {
-            this.referenceName = Input.ofNullable(referenceName);
+            this.referenceName = Output.ofNullable(referenceName);
             return this;
         }
 
-        public Builder regions(@Nullable Input<List<String>> regions) {
+        public Builder regions(@Nullable Output<List<String>> regions) {
             this.regions = regions;
             return this;
         }
 
         public Builder regions(@Nullable List<String> regions) {
-            this.regions = Input.ofNullable(regions);
+            this.regions = Output.ofNullable(regions);
             return this;
         }
 
-        public Builder requestInterval(@Nullable Input<Integer> requestInterval) {
+        public Builder requestInterval(@Nullable Output<Integer> requestInterval) {
             this.requestInterval = requestInterval;
             return this;
         }
 
         public Builder requestInterval(@Nullable Integer requestInterval) {
-            this.requestInterval = Input.ofNullable(requestInterval);
+            this.requestInterval = Output.ofNullable(requestInterval);
             return this;
         }
 
-        public Builder resourcePath(@Nullable Input<String> resourcePath) {
+        public Builder resourcePath(@Nullable Output<String> resourcePath) {
             this.resourcePath = resourcePath;
             return this;
         }
 
         public Builder resourcePath(@Nullable String resourcePath) {
-            this.resourcePath = Input.ofNullable(resourcePath);
+            this.resourcePath = Output.ofNullable(resourcePath);
             return this;
         }
 
-        public Builder routingControlArn(@Nullable Input<String> routingControlArn) {
+        public Builder routingControlArn(@Nullable Output<String> routingControlArn) {
             this.routingControlArn = routingControlArn;
             return this;
         }
 
         public Builder routingControlArn(@Nullable String routingControlArn) {
-            this.routingControlArn = Input.ofNullable(routingControlArn);
+            this.routingControlArn = Output.ofNullable(routingControlArn);
             return this;
         }
 
-        public Builder searchString(@Nullable Input<String> searchString) {
+        public Builder searchString(@Nullable Output<String> searchString) {
             this.searchString = searchString;
             return this;
         }
 
         public Builder searchString(@Nullable String searchString) {
-            this.searchString = Input.ofNullable(searchString);
+            this.searchString = Output.ofNullable(searchString);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public HealthCheckArgs build() {

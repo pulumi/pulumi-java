@@ -8,7 +8,7 @@ import io.pulumi.azurenative.search.enums.PublicNetworkAccess;
 import io.pulumi.azurenative.search.inputs.IdentityArgs;
 import io.pulumi.azurenative.search.inputs.NetworkRuleSetArgs;
 import io.pulumi.azurenative.search.inputs.SkuArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostingMode")
-      private final @Nullable Input<HostingMode> hostingMode;
+      private final @Nullable Output<HostingMode> hostingMode;
 
-    public Input<HostingMode> getHostingMode() {
-        return this.hostingMode == null ? Input.empty() : this.hostingMode;
+    public Output<HostingMode> getHostingMode() {
+        return this.hostingMode == null ? Output.empty() : this.hostingMode;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<IdentityArgs> identity;
+      private final @Nullable Output<IdentityArgs> identity;
 
-    public Input<IdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<IdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkRuleSet")
-      private final @Nullable Input<NetworkRuleSetArgs> networkRuleSet;
+      private final @Nullable Output<NetworkRuleSetArgs> networkRuleSet;
 
-    public Input<NetworkRuleSetArgs> getNetworkRuleSet() {
-        return this.networkRuleSet == null ? Input.empty() : this.networkRuleSet;
+    public Output<NetworkRuleSetArgs> getNetworkRuleSet() {
+        return this.networkRuleSet == null ? Output.empty() : this.networkRuleSet;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="partitionCount")
-      private final @Nullable Input<Integer> partitionCount;
+      private final @Nullable Output<Integer> partitionCount;
 
-    public Input<Integer> getPartitionCount() {
-        return this.partitionCount == null ? Input.empty() : this.partitionCount;
+    public Output<Integer> getPartitionCount() {
+        return this.partitionCount == null ? Output.empty() : this.partitionCount;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicNetworkAccess")
-      private final @Nullable Input<PublicNetworkAccess> publicNetworkAccess;
+      private final @Nullable Output<PublicNetworkAccess> publicNetworkAccess;
 
-    public Input<PublicNetworkAccess> getPublicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
+    public Output<PublicNetworkAccess> getPublicNetworkAccess() {
+        return this.publicNetworkAccess == null ? Output.empty() : this.publicNetworkAccess;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="replicaCount")
-      private final @Nullable Input<Integer> replicaCount;
+      private final @Nullable Output<Integer> replicaCount;
 
-    public Input<Integer> getReplicaCount() {
-        return this.replicaCount == null ? Input.empty() : this.replicaCount;
+    public Output<Integer> getReplicaCount() {
+        return this.replicaCount == null ? Output.empty() : this.replicaCount;
     }
 
     /**
@@ -103,9 +103,9 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -114,10 +114,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="searchServiceName")
-      private final @Nullable Input<String> searchServiceName;
+      private final @Nullable Output<String> searchServiceName;
 
-    public Input<String> getSearchServiceName() {
-        return this.searchServiceName == null ? Input.empty() : this.searchServiceName;
+    public Output<String> getSearchServiceName() {
+        return this.searchServiceName == null ? Output.empty() : this.searchServiceName;
     }
 
     /**
@@ -125,10 +125,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<SkuArgs> sku;
+      private final @Nullable Output<SkuArgs> sku;
 
-    public Input<SkuArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<SkuArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -136,31 +136,31 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ServiceArgs(
-        @Nullable Input<HostingMode> hostingMode,
-        @Nullable Input<IdentityArgs> identity,
-        @Nullable Input<String> location,
-        @Nullable Input<NetworkRuleSetArgs> networkRuleSet,
-        @Nullable Input<Integer> partitionCount,
-        @Nullable Input<PublicNetworkAccess> publicNetworkAccess,
-        @Nullable Input<Integer> replicaCount,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> searchServiceName,
-        @Nullable Input<SkuArgs> sku,
-        @Nullable Input<Map<String,String>> tags) {
-        this.hostingMode = hostingMode == null ? Input.ofNullable(io.pulumi.azurenative.search.enums.HostingMode.$Default) : hostingMode;
+        @Nullable Output<HostingMode> hostingMode,
+        @Nullable Output<IdentityArgs> identity,
+        @Nullable Output<String> location,
+        @Nullable Output<NetworkRuleSetArgs> networkRuleSet,
+        @Nullable Output<Integer> partitionCount,
+        @Nullable Output<PublicNetworkAccess> publicNetworkAccess,
+        @Nullable Output<Integer> replicaCount,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> searchServiceName,
+        @Nullable Output<SkuArgs> sku,
+        @Nullable Output<Map<String,String>> tags) {
+        this.hostingMode = hostingMode == null ? Output.ofNullable(io.pulumi.azurenative.search.enums.HostingMode.$Default) : hostingMode;
         this.identity = identity;
         this.location = location;
         this.networkRuleSet = networkRuleSet;
-        this.partitionCount = partitionCount == null ? Input.ofNullable(1) : partitionCount;
-        this.publicNetworkAccess = publicNetworkAccess == null ? Input.ofNullable(io.pulumi.azurenative.search.enums.PublicNetworkAccess.Enabled) : publicNetworkAccess;
-        this.replicaCount = replicaCount == null ? Input.ofNullable(1) : replicaCount;
+        this.partitionCount = partitionCount == null ? Output.ofNullable(1) : partitionCount;
+        this.publicNetworkAccess = publicNetworkAccess == null ? Output.ofNullable(io.pulumi.azurenative.search.enums.PublicNetworkAccess.Enabled) : publicNetworkAccess;
+        this.replicaCount = replicaCount == null ? Output.ofNullable(1) : replicaCount;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.searchServiceName = searchServiceName;
         this.sku = sku;
@@ -168,17 +168,17 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceArgs() {
-        this.hostingMode = Input.empty();
-        this.identity = Input.empty();
-        this.location = Input.empty();
-        this.networkRuleSet = Input.empty();
-        this.partitionCount = Input.empty();
-        this.publicNetworkAccess = Input.empty();
-        this.replicaCount = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.searchServiceName = Input.empty();
-        this.sku = Input.empty();
-        this.tags = Input.empty();
+        this.hostingMode = Output.empty();
+        this.identity = Output.empty();
+        this.location = Output.empty();
+        this.networkRuleSet = Output.empty();
+        this.partitionCount = Output.empty();
+        this.publicNetworkAccess = Output.empty();
+        this.replicaCount = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.searchServiceName = Output.empty();
+        this.sku = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -190,17 +190,17 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<HostingMode> hostingMode;
-        private @Nullable Input<IdentityArgs> identity;
-        private @Nullable Input<String> location;
-        private @Nullable Input<NetworkRuleSetArgs> networkRuleSet;
-        private @Nullable Input<Integer> partitionCount;
-        private @Nullable Input<PublicNetworkAccess> publicNetworkAccess;
-        private @Nullable Input<Integer> replicaCount;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> searchServiceName;
-        private @Nullable Input<SkuArgs> sku;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<HostingMode> hostingMode;
+        private @Nullable Output<IdentityArgs> identity;
+        private @Nullable Output<String> location;
+        private @Nullable Output<NetworkRuleSetArgs> networkRuleSet;
+        private @Nullable Output<Integer> partitionCount;
+        private @Nullable Output<PublicNetworkAccess> publicNetworkAccess;
+        private @Nullable Output<Integer> replicaCount;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> searchServiceName;
+        private @Nullable Output<SkuArgs> sku;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -221,113 +221,113 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder hostingMode(@Nullable Input<HostingMode> hostingMode) {
+        public Builder hostingMode(@Nullable Output<HostingMode> hostingMode) {
             this.hostingMode = hostingMode;
             return this;
         }
 
         public Builder hostingMode(@Nullable HostingMode hostingMode) {
-            this.hostingMode = Input.ofNullable(hostingMode);
+            this.hostingMode = Output.ofNullable(hostingMode);
             return this;
         }
 
-        public Builder identity(@Nullable Input<IdentityArgs> identity) {
+        public Builder identity(@Nullable Output<IdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable IdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder networkRuleSet(@Nullable Input<NetworkRuleSetArgs> networkRuleSet) {
+        public Builder networkRuleSet(@Nullable Output<NetworkRuleSetArgs> networkRuleSet) {
             this.networkRuleSet = networkRuleSet;
             return this;
         }
 
         public Builder networkRuleSet(@Nullable NetworkRuleSetArgs networkRuleSet) {
-            this.networkRuleSet = Input.ofNullable(networkRuleSet);
+            this.networkRuleSet = Output.ofNullable(networkRuleSet);
             return this;
         }
 
-        public Builder partitionCount(@Nullable Input<Integer> partitionCount) {
+        public Builder partitionCount(@Nullable Output<Integer> partitionCount) {
             this.partitionCount = partitionCount;
             return this;
         }
 
         public Builder partitionCount(@Nullable Integer partitionCount) {
-            this.partitionCount = Input.ofNullable(partitionCount);
+            this.partitionCount = Output.ofNullable(partitionCount);
             return this;
         }
 
-        public Builder publicNetworkAccess(@Nullable Input<PublicNetworkAccess> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Output<PublicNetworkAccess> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
         public Builder publicNetworkAccess(@Nullable PublicNetworkAccess publicNetworkAccess) {
-            this.publicNetworkAccess = Input.ofNullable(publicNetworkAccess);
+            this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
             return this;
         }
 
-        public Builder replicaCount(@Nullable Input<Integer> replicaCount) {
+        public Builder replicaCount(@Nullable Output<Integer> replicaCount) {
             this.replicaCount = replicaCount;
             return this;
         }
 
         public Builder replicaCount(@Nullable Integer replicaCount) {
-            this.replicaCount = Input.ofNullable(replicaCount);
+            this.replicaCount = Output.ofNullable(replicaCount);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder searchServiceName(@Nullable Input<String> searchServiceName) {
+        public Builder searchServiceName(@Nullable Output<String> searchServiceName) {
             this.searchServiceName = searchServiceName;
             return this;
         }
 
         public Builder searchServiceName(@Nullable String searchServiceName) {
-            this.searchServiceName = Input.ofNullable(searchServiceName);
+            this.searchServiceName = Output.ofNullable(searchServiceName);
             return this;
         }
 
-        public Builder sku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ServiceArgs build() {

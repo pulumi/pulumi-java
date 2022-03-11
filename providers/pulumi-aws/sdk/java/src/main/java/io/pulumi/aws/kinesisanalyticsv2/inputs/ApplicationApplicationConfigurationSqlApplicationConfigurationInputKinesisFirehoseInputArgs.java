@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @InputImport(name="resourceArn", required=true)
-      private final Input<String> resourceArn;
+      private final Output<String> resourceArn;
 
-    public Input<String> getResourceArn() {
+    public Output<String> getResourceArn() {
         return this.resourceArn;
     }
 
-    public ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInputArgs(Input<String> resourceArn) {
+    public ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInputArgs(Output<String> resourceArn) {
         this.resourceArn = Objects.requireNonNull(resourceArn, "expected parameter 'resourceArn' to be non-null");
     }
 
     private ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInputArgs() {
-        this.resourceArn = Input.empty();
+        this.resourceArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     }
 
     public static final class Builder {
-        private Input<String> resourceArn;
+        private Output<String> resourceArn;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     	      this.resourceArn = defaults.resourceArn;
         }
 
-        public Builder resourceArn(Input<String> resourceArn) {
+        public Builder resourceArn(Output<String> resourceArn) {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }
 
         public Builder resourceArn(String resourceArn) {
-            this.resourceArn = Input.of(Objects.requireNonNull(resourceArn));
+            this.resourceArn = Output.of(Objects.requireNonNull(resourceArn));
             return this;
         }
         public ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInputArgs build() {

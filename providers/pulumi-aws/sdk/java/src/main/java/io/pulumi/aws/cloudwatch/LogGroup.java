@@ -6,7 +6,6 @@ package io.pulumi.aws.cloudwatch;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.cloudwatch.LogGroupArgs;
 import io.pulumi.aws.cloudwatch.inputs.LogGroupState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -176,14 +175,14 @@ public class LogGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public LogGroup(String name, @Nullable LogGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cloudwatch/logGroup:LogGroup", name, args == null ? LogGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:cloudwatch/logGroup:LogGroup", name, args == null ? LogGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private LogGroup(String name, Input<String> id, @Nullable LogGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private LogGroup(String name, Output<String> id, @Nullable LogGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:cloudwatch/logGroup:LogGroup", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -199,7 +198,7 @@ public class LogGroup extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static LogGroup get(String name, Input<String> id, @Nullable LogGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static LogGroup get(String name, Output<String> id, @Nullable LogGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new LogGroup(name, id, state, options);
     }
 }

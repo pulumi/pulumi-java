@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apigateway.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class MethodResponseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="responseModels")
-      private final @Nullable Input<Object> responseModels;
+      private final @Nullable Output<Object> responseModels;
 
-    public Input<Object> getResponseModels() {
-        return this.responseModels == null ? Input.empty() : this.responseModels;
+    public Output<Object> getResponseModels() {
+        return this.responseModels == null ? Output.empty() : this.responseModels;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class MethodResponseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="responseParameters")
-      private final @Nullable Input<Object> responseParameters;
+      private final @Nullable Output<Object> responseParameters;
 
-    public Input<Object> getResponseParameters() {
-        return this.responseParameters == null ? Input.empty() : this.responseParameters;
+    public Output<Object> getResponseParameters() {
+        return this.responseParameters == null ? Output.empty() : this.responseParameters;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class MethodResponseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="statusCode", required=true)
-      private final Input<String> statusCode;
+      private final Output<String> statusCode;
 
-    public Input<String> getStatusCode() {
+    public Output<String> getStatusCode() {
         return this.statusCode;
     }
 
     public MethodResponseArgs(
-        @Nullable Input<Object> responseModels,
-        @Nullable Input<Object> responseParameters,
-        Input<String> statusCode) {
+        @Nullable Output<Object> responseModels,
+        @Nullable Output<Object> responseParameters,
+        Output<String> statusCode) {
         this.responseModels = responseModels;
         this.responseParameters = responseParameters;
         this.statusCode = Objects.requireNonNull(statusCode, "expected parameter 'statusCode' to be non-null");
     }
 
     private MethodResponseArgs() {
-        this.responseModels = Input.empty();
-        this.responseParameters = Input.empty();
-        this.statusCode = Input.empty();
+        this.responseModels = Output.empty();
+        this.responseParameters = Output.empty();
+        this.statusCode = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class MethodResponseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> responseModels;
-        private @Nullable Input<Object> responseParameters;
-        private Input<String> statusCode;
+        private @Nullable Output<Object> responseModels;
+        private @Nullable Output<Object> responseParameters;
+        private Output<String> statusCode;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class MethodResponseArgs extends io.pulumi.resources.ResourceArgs {
     	      this.statusCode = defaults.statusCode;
         }
 
-        public Builder responseModels(@Nullable Input<Object> responseModels) {
+        public Builder responseModels(@Nullable Output<Object> responseModels) {
             this.responseModels = responseModels;
             return this;
         }
 
         public Builder responseModels(@Nullable Object responseModels) {
-            this.responseModels = Input.ofNullable(responseModels);
+            this.responseModels = Output.ofNullable(responseModels);
             return this;
         }
 
-        public Builder responseParameters(@Nullable Input<Object> responseParameters) {
+        public Builder responseParameters(@Nullable Output<Object> responseParameters) {
             this.responseParameters = responseParameters;
             return this;
         }
 
         public Builder responseParameters(@Nullable Object responseParameters) {
-            this.responseParameters = Input.ofNullable(responseParameters);
+            this.responseParameters = Output.ofNullable(responseParameters);
             return this;
         }
 
-        public Builder statusCode(Input<String> statusCode) {
+        public Builder statusCode(Output<String> statusCode) {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }
 
         public Builder statusCode(String statusCode) {
-            this.statusCode = Input.of(Objects.requireNonNull(statusCode));
+            this.statusCode = Output.of(Objects.requireNonNull(statusCode));
             return this;
         }
         public MethodResponseArgs build() {

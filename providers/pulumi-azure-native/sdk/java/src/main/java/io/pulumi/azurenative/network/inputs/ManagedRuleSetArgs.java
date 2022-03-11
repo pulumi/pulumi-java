@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ManagedRuleGroupOverrideArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class ManagedRuleSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleGroupOverrides")
-      private final @Nullable Input<List<ManagedRuleGroupOverrideArgs>> ruleGroupOverrides;
+      private final @Nullable Output<List<ManagedRuleGroupOverrideArgs>> ruleGroupOverrides;
 
-    public Input<List<ManagedRuleGroupOverrideArgs>> getRuleGroupOverrides() {
-        return this.ruleGroupOverrides == null ? Input.empty() : this.ruleGroupOverrides;
+    public Output<List<ManagedRuleGroupOverrideArgs>> getRuleGroupOverrides() {
+        return this.ruleGroupOverrides == null ? Output.empty() : this.ruleGroupOverrides;
     }
 
     /**
@@ -36,9 +36,9 @@ public final class ManagedRuleSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleSetType", required=true)
-      private final Input<String> ruleSetType;
+      private final Output<String> ruleSetType;
 
-    public Input<String> getRuleSetType() {
+    public Output<String> getRuleSetType() {
         return this.ruleSetType;
     }
 
@@ -47,25 +47,25 @@ public final class ManagedRuleSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleSetVersion", required=true)
-      private final Input<String> ruleSetVersion;
+      private final Output<String> ruleSetVersion;
 
-    public Input<String> getRuleSetVersion() {
+    public Output<String> getRuleSetVersion() {
         return this.ruleSetVersion;
     }
 
     public ManagedRuleSetArgs(
-        @Nullable Input<List<ManagedRuleGroupOverrideArgs>> ruleGroupOverrides,
-        Input<String> ruleSetType,
-        Input<String> ruleSetVersion) {
+        @Nullable Output<List<ManagedRuleGroupOverrideArgs>> ruleGroupOverrides,
+        Output<String> ruleSetType,
+        Output<String> ruleSetVersion) {
         this.ruleGroupOverrides = ruleGroupOverrides;
         this.ruleSetType = Objects.requireNonNull(ruleSetType, "expected parameter 'ruleSetType' to be non-null");
         this.ruleSetVersion = Objects.requireNonNull(ruleSetVersion, "expected parameter 'ruleSetVersion' to be non-null");
     }
 
     private ManagedRuleSetArgs() {
-        this.ruleGroupOverrides = Input.empty();
-        this.ruleSetType = Input.empty();
-        this.ruleSetVersion = Input.empty();
+        this.ruleGroupOverrides = Output.empty();
+        this.ruleSetType = Output.empty();
+        this.ruleSetVersion = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class ManagedRuleSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ManagedRuleGroupOverrideArgs>> ruleGroupOverrides;
-        private Input<String> ruleSetType;
-        private Input<String> ruleSetVersion;
+        private @Nullable Output<List<ManagedRuleGroupOverrideArgs>> ruleGroupOverrides;
+        private Output<String> ruleSetType;
+        private Output<String> ruleSetVersion;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class ManagedRuleSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ruleSetVersion = defaults.ruleSetVersion;
         }
 
-        public Builder ruleGroupOverrides(@Nullable Input<List<ManagedRuleGroupOverrideArgs>> ruleGroupOverrides) {
+        public Builder ruleGroupOverrides(@Nullable Output<List<ManagedRuleGroupOverrideArgs>> ruleGroupOverrides) {
             this.ruleGroupOverrides = ruleGroupOverrides;
             return this;
         }
 
         public Builder ruleGroupOverrides(@Nullable List<ManagedRuleGroupOverrideArgs> ruleGroupOverrides) {
-            this.ruleGroupOverrides = Input.ofNullable(ruleGroupOverrides);
+            this.ruleGroupOverrides = Output.ofNullable(ruleGroupOverrides);
             return this;
         }
 
-        public Builder ruleSetType(Input<String> ruleSetType) {
+        public Builder ruleSetType(Output<String> ruleSetType) {
             this.ruleSetType = Objects.requireNonNull(ruleSetType);
             return this;
         }
 
         public Builder ruleSetType(String ruleSetType) {
-            this.ruleSetType = Input.of(Objects.requireNonNull(ruleSetType));
+            this.ruleSetType = Output.of(Objects.requireNonNull(ruleSetType));
             return this;
         }
 
-        public Builder ruleSetVersion(Input<String> ruleSetVersion) {
+        public Builder ruleSetVersion(Output<String> ruleSetVersion) {
             this.ruleSetVersion = Objects.requireNonNull(ruleSetVersion);
             return this;
         }
 
         public Builder ruleSetVersion(String ruleSetVersion) {
-            this.ruleSetVersion = Input.of(Objects.requireNonNull(ruleSetVersion));
+            this.ruleSetVersion = Output.of(Objects.requireNonNull(ruleSetVersion));
             return this;
         }
         public ManagedRuleSetArgs build() {

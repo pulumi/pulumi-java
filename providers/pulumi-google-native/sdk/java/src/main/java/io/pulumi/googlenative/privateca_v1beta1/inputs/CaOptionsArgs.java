@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -24,10 +24,10 @@ public final class CaOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isCa")
-      private final @Nullable Input<Boolean> isCa;
+      private final @Nullable Output<Boolean> isCa;
 
-    public Input<Boolean> getIsCa() {
-        return this.isCa == null ? Input.empty() : this.isCa;
+    public Output<Boolean> getIsCa() {
+        return this.isCa == null ? Output.empty() : this.isCa;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class CaOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxIssuerPathLength")
-      private final @Nullable Input<Integer> maxIssuerPathLength;
+      private final @Nullable Output<Integer> maxIssuerPathLength;
 
-    public Input<Integer> getMaxIssuerPathLength() {
-        return this.maxIssuerPathLength == null ? Input.empty() : this.maxIssuerPathLength;
+    public Output<Integer> getMaxIssuerPathLength() {
+        return this.maxIssuerPathLength == null ? Output.empty() : this.maxIssuerPathLength;
     }
 
     public CaOptionsArgs(
-        @Nullable Input<Boolean> isCa,
-        @Nullable Input<Integer> maxIssuerPathLength) {
+        @Nullable Output<Boolean> isCa,
+        @Nullable Output<Integer> maxIssuerPathLength) {
         this.isCa = isCa;
         this.maxIssuerPathLength = maxIssuerPathLength;
     }
 
     private CaOptionsArgs() {
-        this.isCa = Input.empty();
-        this.maxIssuerPathLength = Input.empty();
+        this.isCa = Output.empty();
+        this.maxIssuerPathLength = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class CaOptionsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> isCa;
-        private @Nullable Input<Integer> maxIssuerPathLength;
+        private @Nullable Output<Boolean> isCa;
+        private @Nullable Output<Integer> maxIssuerPathLength;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class CaOptionsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.maxIssuerPathLength = defaults.maxIssuerPathLength;
         }
 
-        public Builder isCa(@Nullable Input<Boolean> isCa) {
+        public Builder isCa(@Nullable Output<Boolean> isCa) {
             this.isCa = isCa;
             return this;
         }
 
         public Builder isCa(@Nullable Boolean isCa) {
-            this.isCa = Input.ofNullable(isCa);
+            this.isCa = Output.ofNullable(isCa);
             return this;
         }
 
-        public Builder maxIssuerPathLength(@Nullable Input<Integer> maxIssuerPathLength) {
+        public Builder maxIssuerPathLength(@Nullable Output<Integer> maxIssuerPathLength) {
             this.maxIssuerPathLength = maxIssuerPathLength;
             return this;
         }
 
         public Builder maxIssuerPathLength(@Nullable Integer maxIssuerPathLength) {
-            this.maxIssuerPathLength = Input.ofNullable(maxIssuerPathLength);
+            this.maxIssuerPathLength = Output.ofNullable(maxIssuerPathLength);
             return this;
         }
         public CaOptionsArgs build() {

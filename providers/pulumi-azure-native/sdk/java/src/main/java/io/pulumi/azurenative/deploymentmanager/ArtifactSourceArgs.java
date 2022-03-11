@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.deploymentmanager;
 
 import io.pulumi.azurenative.deploymentmanager.inputs.SasAuthenticationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="artifactRoot")
-      private final @Nullable Input<String> artifactRoot;
+      private final @Nullable Output<String> artifactRoot;
 
-    public Input<String> getArtifactRoot() {
-        return this.artifactRoot == null ? Input.empty() : this.artifactRoot;
+    public Output<String> getArtifactRoot() {
+        return this.artifactRoot == null ? Output.empty() : this.artifactRoot;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="artifactSourceName")
-      private final @Nullable Input<String> artifactSourceName;
+      private final @Nullable Output<String> artifactSourceName;
 
-    public Input<String> getArtifactSourceName() {
-        return this.artifactSourceName == null ? Input.empty() : this.artifactSourceName;
+    public Output<String> getArtifactSourceName() {
+        return this.artifactSourceName == null ? Output.empty() : this.artifactSourceName;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authentication", required=true)
-      private final Input<SasAuthenticationArgs> authentication;
+      private final Output<SasAuthenticationArgs> authentication;
 
-    public Input<SasAuthenticationArgs> getAuthentication() {
+    public Output<SasAuthenticationArgs> getAuthentication() {
         return this.authentication;
     }
 
@@ -54,10 +54,10 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -65,9 +65,9 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -76,9 +76,9 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceType", required=true)
-      private final Input<String> sourceType;
+      private final Output<String> sourceType;
 
-    public Input<String> getSourceType() {
+    public Output<String> getSourceType() {
         return this.sourceType;
     }
 
@@ -87,20 +87,20 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ArtifactSourceArgs(
-        @Nullable Input<String> artifactRoot,
-        @Nullable Input<String> artifactSourceName,
-        Input<SasAuthenticationArgs> authentication,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        Input<String> sourceType,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> artifactRoot,
+        @Nullable Output<String> artifactSourceName,
+        Output<SasAuthenticationArgs> authentication,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        Output<String> sourceType,
+        @Nullable Output<Map<String,String>> tags) {
         this.artifactRoot = artifactRoot;
         this.artifactSourceName = artifactSourceName;
         this.authentication = Objects.requireNonNull(authentication, "expected parameter 'authentication' to be non-null");
@@ -111,13 +111,13 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ArtifactSourceArgs() {
-        this.artifactRoot = Input.empty();
-        this.artifactSourceName = Input.empty();
-        this.authentication = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sourceType = Input.empty();
-        this.tags = Input.empty();
+        this.artifactRoot = Output.empty();
+        this.artifactSourceName = Output.empty();
+        this.authentication = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sourceType = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -129,13 +129,13 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> artifactRoot;
-        private @Nullable Input<String> artifactSourceName;
-        private Input<SasAuthenticationArgs> authentication;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private Input<String> sourceType;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> artifactRoot;
+        private @Nullable Output<String> artifactSourceName;
+        private Output<SasAuthenticationArgs> authentication;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private Output<String> sourceType;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -152,73 +152,73 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder artifactRoot(@Nullable Input<String> artifactRoot) {
+        public Builder artifactRoot(@Nullable Output<String> artifactRoot) {
             this.artifactRoot = artifactRoot;
             return this;
         }
 
         public Builder artifactRoot(@Nullable String artifactRoot) {
-            this.artifactRoot = Input.ofNullable(artifactRoot);
+            this.artifactRoot = Output.ofNullable(artifactRoot);
             return this;
         }
 
-        public Builder artifactSourceName(@Nullable Input<String> artifactSourceName) {
+        public Builder artifactSourceName(@Nullable Output<String> artifactSourceName) {
             this.artifactSourceName = artifactSourceName;
             return this;
         }
 
         public Builder artifactSourceName(@Nullable String artifactSourceName) {
-            this.artifactSourceName = Input.ofNullable(artifactSourceName);
+            this.artifactSourceName = Output.ofNullable(artifactSourceName);
             return this;
         }
 
-        public Builder authentication(Input<SasAuthenticationArgs> authentication) {
+        public Builder authentication(Output<SasAuthenticationArgs> authentication) {
             this.authentication = Objects.requireNonNull(authentication);
             return this;
         }
 
         public Builder authentication(SasAuthenticationArgs authentication) {
-            this.authentication = Input.of(Objects.requireNonNull(authentication));
+            this.authentication = Output.of(Objects.requireNonNull(authentication));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sourceType(Input<String> sourceType) {
+        public Builder sourceType(Output<String> sourceType) {
             this.sourceType = Objects.requireNonNull(sourceType);
             return this;
         }
 
         public Builder sourceType(String sourceType) {
-            this.sourceType = Input.of(Objects.requireNonNull(sourceType));
+            this.sourceType = Output.of(Objects.requireNonNull(sourceType));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ArtifactSourceArgs build() {

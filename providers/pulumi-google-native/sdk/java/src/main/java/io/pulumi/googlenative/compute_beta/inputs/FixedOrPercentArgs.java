@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class FixedOrPercentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fixed")
-      private final @Nullable Input<Integer> fixed;
+      private final @Nullable Output<Integer> fixed;
 
-    public Input<Integer> getFixed() {
-        return this.fixed == null ? Input.empty() : this.fixed;
+    public Output<Integer> getFixed() {
+        return this.fixed == null ? Output.empty() : this.fixed;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class FixedOrPercentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="percent")
-      private final @Nullable Input<Integer> percent;
+      private final @Nullable Output<Integer> percent;
 
-    public Input<Integer> getPercent() {
-        return this.percent == null ? Input.empty() : this.percent;
+    public Output<Integer> getPercent() {
+        return this.percent == null ? Output.empty() : this.percent;
     }
 
     public FixedOrPercentArgs(
-        @Nullable Input<Integer> fixed,
-        @Nullable Input<Integer> percent) {
+        @Nullable Output<Integer> fixed,
+        @Nullable Output<Integer> percent) {
         this.fixed = fixed;
         this.percent = percent;
     }
 
     private FixedOrPercentArgs() {
-        this.fixed = Input.empty();
-        this.percent = Input.empty();
+        this.fixed = Output.empty();
+        this.percent = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class FixedOrPercentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> fixed;
-        private @Nullable Input<Integer> percent;
+        private @Nullable Output<Integer> fixed;
+        private @Nullable Output<Integer> percent;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class FixedOrPercentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.percent = defaults.percent;
         }
 
-        public Builder fixed(@Nullable Input<Integer> fixed) {
+        public Builder fixed(@Nullable Output<Integer> fixed) {
             this.fixed = fixed;
             return this;
         }
 
         public Builder fixed(@Nullable Integer fixed) {
-            this.fixed = Input.ofNullable(fixed);
+            this.fixed = Output.ofNullable(fixed);
             return this;
         }
 
-        public Builder percent(@Nullable Input<Integer> percent) {
+        public Builder percent(@Nullable Output<Integer> percent) {
             this.percent = percent;
             return this;
         }
 
         public Builder percent(@Nullable Integer percent) {
-            this.percent = Input.ofNullable(percent);
+            this.percent = Output.ofNullable(percent);
             return this;
         }
         public FixedOrPercentArgs build() {

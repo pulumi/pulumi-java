@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networksecurity_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.networksecurity_v1.inputs.GoogleCloudNetworksecurityV1CertificateProviderArgs;
 import io.pulumi.googlenative.networksecurity_v1.inputs.ValidationCAArgs;
@@ -23,16 +23,16 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="clientCertificate")
-      private final @Nullable Input<GoogleCloudNetworksecurityV1CertificateProviderArgs> clientCertificate;
+      private final @Nullable Output<GoogleCloudNetworksecurityV1CertificateProviderArgs> clientCertificate;
 
-    public Input<GoogleCloudNetworksecurityV1CertificateProviderArgs> getClientCertificate() {
-        return this.clientCertificate == null ? Input.empty() : this.clientCertificate;
+    public Output<GoogleCloudNetworksecurityV1CertificateProviderArgs> getClientCertificate() {
+        return this.clientCertificate == null ? Output.empty() : this.clientCertificate;
     }
 
     @InputImport(name="clientTlsPolicyId", required=true)
-      private final Input<String> clientTlsPolicyId;
+      private final Output<String> clientTlsPolicyId;
 
-    public Input<String> getClientTlsPolicyId() {
+    public Output<String> getClientTlsPolicyId() {
         return this.clientTlsPolicyId;
     }
 
@@ -41,10 +41,10 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -70,17 +70,17 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="serverValidationCa")
-      private final @Nullable Input<List<ValidationCAArgs>> serverValidationCa;
+      private final @Nullable Output<List<ValidationCAArgs>> serverValidationCa;
 
-    public Input<List<ValidationCAArgs>> getServerValidationCa() {
-        return this.serverValidationCa == null ? Input.empty() : this.serverValidationCa;
+    public Output<List<ValidationCAArgs>> getServerValidationCa() {
+        return this.serverValidationCa == null ? Output.empty() : this.serverValidationCa;
     }
 
     /**
@@ -99,22 +99,22 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sni")
-      private final @Nullable Input<String> sni;
+      private final @Nullable Output<String> sni;
 
-    public Input<String> getSni() {
-        return this.sni == null ? Input.empty() : this.sni;
+    public Output<String> getSni() {
+        return this.sni == null ? Output.empty() : this.sni;
     }
 
     public ClientTlsPolicyArgs(
-        @Nullable Input<GoogleCloudNetworksecurityV1CertificateProviderArgs> clientCertificate,
-        Input<String> clientTlsPolicyId,
-        @Nullable Input<String> description,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<List<ValidationCAArgs>> serverValidationCa,
-        @Nullable Input<String> sni) {
+        @Nullable Output<GoogleCloudNetworksecurityV1CertificateProviderArgs> clientCertificate,
+        Output<String> clientTlsPolicyId,
+        @Nullable Output<String> description,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<List<ValidationCAArgs>> serverValidationCa,
+        @Nullable Output<String> sni) {
         this.clientCertificate = clientCertificate;
         this.clientTlsPolicyId = Objects.requireNonNull(clientTlsPolicyId, "expected parameter 'clientTlsPolicyId' to be non-null");
         this.description = description;
@@ -127,15 +127,15 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ClientTlsPolicyArgs() {
-        this.clientCertificate = Input.empty();
-        this.clientTlsPolicyId = Input.empty();
-        this.description = Input.empty();
-        this.labels = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.serverValidationCa = Input.empty();
-        this.sni = Input.empty();
+        this.clientCertificate = Output.empty();
+        this.clientTlsPolicyId = Output.empty();
+        this.description = Output.empty();
+        this.labels = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.serverValidationCa = Output.empty();
+        this.sni = Output.empty();
     }
 
     public static Builder builder() {
@@ -147,15 +147,15 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<GoogleCloudNetworksecurityV1CertificateProviderArgs> clientCertificate;
-        private Input<String> clientTlsPolicyId;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<List<ValidationCAArgs>> serverValidationCa;
-        private @Nullable Input<String> sni;
+        private @Nullable Output<GoogleCloudNetworksecurityV1CertificateProviderArgs> clientCertificate;
+        private Output<String> clientTlsPolicyId;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<List<ValidationCAArgs>> serverValidationCa;
+        private @Nullable Output<String> sni;
 
         public Builder() {
     	      // Empty
@@ -174,93 +174,93 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
     	      this.sni = defaults.sni;
         }
 
-        public Builder clientCertificate(@Nullable Input<GoogleCloudNetworksecurityV1CertificateProviderArgs> clientCertificate) {
+        public Builder clientCertificate(@Nullable Output<GoogleCloudNetworksecurityV1CertificateProviderArgs> clientCertificate) {
             this.clientCertificate = clientCertificate;
             return this;
         }
 
         public Builder clientCertificate(@Nullable GoogleCloudNetworksecurityV1CertificateProviderArgs clientCertificate) {
-            this.clientCertificate = Input.ofNullable(clientCertificate);
+            this.clientCertificate = Output.ofNullable(clientCertificate);
             return this;
         }
 
-        public Builder clientTlsPolicyId(Input<String> clientTlsPolicyId) {
+        public Builder clientTlsPolicyId(Output<String> clientTlsPolicyId) {
             this.clientTlsPolicyId = Objects.requireNonNull(clientTlsPolicyId);
             return this;
         }
 
         public Builder clientTlsPolicyId(String clientTlsPolicyId) {
-            this.clientTlsPolicyId = Input.of(Objects.requireNonNull(clientTlsPolicyId));
+            this.clientTlsPolicyId = Output.of(Objects.requireNonNull(clientTlsPolicyId));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder serverValidationCa(@Nullable Input<List<ValidationCAArgs>> serverValidationCa) {
+        public Builder serverValidationCa(@Nullable Output<List<ValidationCAArgs>> serverValidationCa) {
             this.serverValidationCa = serverValidationCa;
             return this;
         }
 
         public Builder serverValidationCa(@Nullable List<ValidationCAArgs> serverValidationCa) {
-            this.serverValidationCa = Input.ofNullable(serverValidationCa);
+            this.serverValidationCa = Output.ofNullable(serverValidationCa);
             return this;
         }
 
-        public Builder sni(@Nullable Input<String> sni) {
+        public Builder sni(@Nullable Output<String> sni) {
             this.sni = sni;
             return this;
         }
 
         public Builder sni(@Nullable String sni) {
-            this.sni = Input.ofNullable(sni);
+            this.sni = Output.ofNullable(sni);
             return this;
         }
         public ClientTlsPolicyArgs build() {

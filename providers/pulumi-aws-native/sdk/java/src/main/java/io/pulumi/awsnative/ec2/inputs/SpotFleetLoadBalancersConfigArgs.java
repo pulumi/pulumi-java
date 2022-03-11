@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.awsnative.ec2.inputs.SpotFleetClassicLoadBalancersConfigArgs;
 import io.pulumi.awsnative.ec2.inputs.SpotFleetTargetGroupsConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,29 +16,29 @@ public final class SpotFleetLoadBalancersConfigArgs extends io.pulumi.resources.
     public static final SpotFleetLoadBalancersConfigArgs Empty = new SpotFleetLoadBalancersConfigArgs();
 
     @InputImport(name="classicLoadBalancersConfig")
-      private final @Nullable Input<SpotFleetClassicLoadBalancersConfigArgs> classicLoadBalancersConfig;
+      private final @Nullable Output<SpotFleetClassicLoadBalancersConfigArgs> classicLoadBalancersConfig;
 
-    public Input<SpotFleetClassicLoadBalancersConfigArgs> getClassicLoadBalancersConfig() {
-        return this.classicLoadBalancersConfig == null ? Input.empty() : this.classicLoadBalancersConfig;
+    public Output<SpotFleetClassicLoadBalancersConfigArgs> getClassicLoadBalancersConfig() {
+        return this.classicLoadBalancersConfig == null ? Output.empty() : this.classicLoadBalancersConfig;
     }
 
     @InputImport(name="targetGroupsConfig")
-      private final @Nullable Input<SpotFleetTargetGroupsConfigArgs> targetGroupsConfig;
+      private final @Nullable Output<SpotFleetTargetGroupsConfigArgs> targetGroupsConfig;
 
-    public Input<SpotFleetTargetGroupsConfigArgs> getTargetGroupsConfig() {
-        return this.targetGroupsConfig == null ? Input.empty() : this.targetGroupsConfig;
+    public Output<SpotFleetTargetGroupsConfigArgs> getTargetGroupsConfig() {
+        return this.targetGroupsConfig == null ? Output.empty() : this.targetGroupsConfig;
     }
 
     public SpotFleetLoadBalancersConfigArgs(
-        @Nullable Input<SpotFleetClassicLoadBalancersConfigArgs> classicLoadBalancersConfig,
-        @Nullable Input<SpotFleetTargetGroupsConfigArgs> targetGroupsConfig) {
+        @Nullable Output<SpotFleetClassicLoadBalancersConfigArgs> classicLoadBalancersConfig,
+        @Nullable Output<SpotFleetTargetGroupsConfigArgs> targetGroupsConfig) {
         this.classicLoadBalancersConfig = classicLoadBalancersConfig;
         this.targetGroupsConfig = targetGroupsConfig;
     }
 
     private SpotFleetLoadBalancersConfigArgs() {
-        this.classicLoadBalancersConfig = Input.empty();
-        this.targetGroupsConfig = Input.empty();
+        this.classicLoadBalancersConfig = Output.empty();
+        this.targetGroupsConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class SpotFleetLoadBalancersConfigArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<SpotFleetClassicLoadBalancersConfigArgs> classicLoadBalancersConfig;
-        private @Nullable Input<SpotFleetTargetGroupsConfigArgs> targetGroupsConfig;
+        private @Nullable Output<SpotFleetClassicLoadBalancersConfigArgs> classicLoadBalancersConfig;
+        private @Nullable Output<SpotFleetTargetGroupsConfigArgs> targetGroupsConfig;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class SpotFleetLoadBalancersConfigArgs extends io.pulumi.resources.
     	      this.targetGroupsConfig = defaults.targetGroupsConfig;
         }
 
-        public Builder classicLoadBalancersConfig(@Nullable Input<SpotFleetClassicLoadBalancersConfigArgs> classicLoadBalancersConfig) {
+        public Builder classicLoadBalancersConfig(@Nullable Output<SpotFleetClassicLoadBalancersConfigArgs> classicLoadBalancersConfig) {
             this.classicLoadBalancersConfig = classicLoadBalancersConfig;
             return this;
         }
 
         public Builder classicLoadBalancersConfig(@Nullable SpotFleetClassicLoadBalancersConfigArgs classicLoadBalancersConfig) {
-            this.classicLoadBalancersConfig = Input.ofNullable(classicLoadBalancersConfig);
+            this.classicLoadBalancersConfig = Output.ofNullable(classicLoadBalancersConfig);
             return this;
         }
 
-        public Builder targetGroupsConfig(@Nullable Input<SpotFleetTargetGroupsConfigArgs> targetGroupsConfig) {
+        public Builder targetGroupsConfig(@Nullable Output<SpotFleetTargetGroupsConfigArgs> targetGroupsConfig) {
             this.targetGroupsConfig = targetGroupsConfig;
             return this;
         }
 
         public Builder targetGroupsConfig(@Nullable SpotFleetTargetGroupsConfigArgs targetGroupsConfig) {
-            this.targetGroupsConfig = Input.ofNullable(targetGroupsConfig);
+            this.targetGroupsConfig = Output.ofNullable(targetGroupsConfig);
             return this;
         }
         public SpotFleetLoadBalancersConfigArgs build() {

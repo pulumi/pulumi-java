@@ -9,7 +9,7 @@ import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationInputsParallelismGetArgs
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationInputsProcessingConfigurationGetArgs;
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationInputsSchemaGetArgs;
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationInputsStartingPositionConfigurationGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class AnalyticsApplicationInputsGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class AnalyticsApplicationInputsGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="kinesisFirehose")
-      private final @Nullable Input<AnalyticsApplicationInputsKinesisFirehoseGetArgs> kinesisFirehose;
+      private final @Nullable Output<AnalyticsApplicationInputsKinesisFirehoseGetArgs> kinesisFirehose;
 
-    public Input<AnalyticsApplicationInputsKinesisFirehoseGetArgs> getKinesisFirehose() {
-        return this.kinesisFirehose == null ? Input.empty() : this.kinesisFirehose;
+    public Output<AnalyticsApplicationInputsKinesisFirehoseGetArgs> getKinesisFirehose() {
+        return this.kinesisFirehose == null ? Output.empty() : this.kinesisFirehose;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class AnalyticsApplicationInputsGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="kinesisStream")
-      private final @Nullable Input<AnalyticsApplicationInputsKinesisStreamGetArgs> kinesisStream;
+      private final @Nullable Output<AnalyticsApplicationInputsKinesisStreamGetArgs> kinesisStream;
 
-    public Input<AnalyticsApplicationInputsKinesisStreamGetArgs> getKinesisStream() {
-        return this.kinesisStream == null ? Input.empty() : this.kinesisStream;
+    public Output<AnalyticsApplicationInputsKinesisStreamGetArgs> getKinesisStream() {
+        return this.kinesisStream == null ? Output.empty() : this.kinesisStream;
     }
 
     /**
@@ -61,9 +61,9 @@ public final class AnalyticsApplicationInputsGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="namePrefix", required=true)
-      private final Input<String> namePrefix;
+      private final Output<String> namePrefix;
 
-    public Input<String> getNamePrefix() {
+    public Output<String> getNamePrefix() {
         return this.namePrefix;
     }
 
@@ -73,10 +73,10 @@ public final class AnalyticsApplicationInputsGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="parallelism")
-      private final @Nullable Input<AnalyticsApplicationInputsParallelismGetArgs> parallelism;
+      private final @Nullable Output<AnalyticsApplicationInputsParallelismGetArgs> parallelism;
 
-    public Input<AnalyticsApplicationInputsParallelismGetArgs> getParallelism() {
-        return this.parallelism == null ? Input.empty() : this.parallelism;
+    public Output<AnalyticsApplicationInputsParallelismGetArgs> getParallelism() {
+        return this.parallelism == null ? Output.empty() : this.parallelism;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class AnalyticsApplicationInputsGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="processingConfiguration")
-      private final @Nullable Input<AnalyticsApplicationInputsProcessingConfigurationGetArgs> processingConfiguration;
+      private final @Nullable Output<AnalyticsApplicationInputsProcessingConfigurationGetArgs> processingConfiguration;
 
-    public Input<AnalyticsApplicationInputsProcessingConfigurationGetArgs> getProcessingConfiguration() {
-        return this.processingConfiguration == null ? Input.empty() : this.processingConfiguration;
+    public Output<AnalyticsApplicationInputsProcessingConfigurationGetArgs> getProcessingConfiguration() {
+        return this.processingConfiguration == null ? Output.empty() : this.processingConfiguration;
     }
 
     /**
@@ -96,9 +96,9 @@ public final class AnalyticsApplicationInputsGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="schema", required=true)
-      private final Input<AnalyticsApplicationInputsSchemaGetArgs> schema;
+      private final Output<AnalyticsApplicationInputsSchemaGetArgs> schema;
 
-    public Input<AnalyticsApplicationInputsSchemaGetArgs> getSchema() {
+    public Output<AnalyticsApplicationInputsSchemaGetArgs> getSchema() {
         return this.schema;
     }
 
@@ -108,29 +108,29 @@ public final class AnalyticsApplicationInputsGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="startingPositionConfigurations")
-      private final @Nullable Input<List<AnalyticsApplicationInputsStartingPositionConfigurationGetArgs>> startingPositionConfigurations;
+      private final @Nullable Output<List<AnalyticsApplicationInputsStartingPositionConfigurationGetArgs>> startingPositionConfigurations;
 
-    public Input<List<AnalyticsApplicationInputsStartingPositionConfigurationGetArgs>> getStartingPositionConfigurations() {
-        return this.startingPositionConfigurations == null ? Input.empty() : this.startingPositionConfigurations;
+    public Output<List<AnalyticsApplicationInputsStartingPositionConfigurationGetArgs>> getStartingPositionConfigurations() {
+        return this.startingPositionConfigurations == null ? Output.empty() : this.startingPositionConfigurations;
     }
 
     @InputImport(name="streamNames")
-      private final @Nullable Input<List<String>> streamNames;
+      private final @Nullable Output<List<String>> streamNames;
 
-    public Input<List<String>> getStreamNames() {
-        return this.streamNames == null ? Input.empty() : this.streamNames;
+    public Output<List<String>> getStreamNames() {
+        return this.streamNames == null ? Output.empty() : this.streamNames;
     }
 
     public AnalyticsApplicationInputsGetArgs(
-        @Nullable Input<String> id,
-        @Nullable Input<AnalyticsApplicationInputsKinesisFirehoseGetArgs> kinesisFirehose,
-        @Nullable Input<AnalyticsApplicationInputsKinesisStreamGetArgs> kinesisStream,
-        Input<String> namePrefix,
-        @Nullable Input<AnalyticsApplicationInputsParallelismGetArgs> parallelism,
-        @Nullable Input<AnalyticsApplicationInputsProcessingConfigurationGetArgs> processingConfiguration,
-        Input<AnalyticsApplicationInputsSchemaGetArgs> schema,
-        @Nullable Input<List<AnalyticsApplicationInputsStartingPositionConfigurationGetArgs>> startingPositionConfigurations,
-        @Nullable Input<List<String>> streamNames) {
+        @Nullable Output<String> id,
+        @Nullable Output<AnalyticsApplicationInputsKinesisFirehoseGetArgs> kinesisFirehose,
+        @Nullable Output<AnalyticsApplicationInputsKinesisStreamGetArgs> kinesisStream,
+        Output<String> namePrefix,
+        @Nullable Output<AnalyticsApplicationInputsParallelismGetArgs> parallelism,
+        @Nullable Output<AnalyticsApplicationInputsProcessingConfigurationGetArgs> processingConfiguration,
+        Output<AnalyticsApplicationInputsSchemaGetArgs> schema,
+        @Nullable Output<List<AnalyticsApplicationInputsStartingPositionConfigurationGetArgs>> startingPositionConfigurations,
+        @Nullable Output<List<String>> streamNames) {
         this.id = id;
         this.kinesisFirehose = kinesisFirehose;
         this.kinesisStream = kinesisStream;
@@ -143,15 +143,15 @@ public final class AnalyticsApplicationInputsGetArgs extends io.pulumi.resources
     }
 
     private AnalyticsApplicationInputsGetArgs() {
-        this.id = Input.empty();
-        this.kinesisFirehose = Input.empty();
-        this.kinesisStream = Input.empty();
-        this.namePrefix = Input.empty();
-        this.parallelism = Input.empty();
-        this.processingConfiguration = Input.empty();
-        this.schema = Input.empty();
-        this.startingPositionConfigurations = Input.empty();
-        this.streamNames = Input.empty();
+        this.id = Output.empty();
+        this.kinesisFirehose = Output.empty();
+        this.kinesisStream = Output.empty();
+        this.namePrefix = Output.empty();
+        this.parallelism = Output.empty();
+        this.processingConfiguration = Output.empty();
+        this.schema = Output.empty();
+        this.startingPositionConfigurations = Output.empty();
+        this.streamNames = Output.empty();
     }
 
     public static Builder builder() {
@@ -163,15 +163,15 @@ public final class AnalyticsApplicationInputsGetArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<String> id;
-        private @Nullable Input<AnalyticsApplicationInputsKinesisFirehoseGetArgs> kinesisFirehose;
-        private @Nullable Input<AnalyticsApplicationInputsKinesisStreamGetArgs> kinesisStream;
-        private Input<String> namePrefix;
-        private @Nullable Input<AnalyticsApplicationInputsParallelismGetArgs> parallelism;
-        private @Nullable Input<AnalyticsApplicationInputsProcessingConfigurationGetArgs> processingConfiguration;
-        private Input<AnalyticsApplicationInputsSchemaGetArgs> schema;
-        private @Nullable Input<List<AnalyticsApplicationInputsStartingPositionConfigurationGetArgs>> startingPositionConfigurations;
-        private @Nullable Input<List<String>> streamNames;
+        private @Nullable Output<String> id;
+        private @Nullable Output<AnalyticsApplicationInputsKinesisFirehoseGetArgs> kinesisFirehose;
+        private @Nullable Output<AnalyticsApplicationInputsKinesisStreamGetArgs> kinesisStream;
+        private Output<String> namePrefix;
+        private @Nullable Output<AnalyticsApplicationInputsParallelismGetArgs> parallelism;
+        private @Nullable Output<AnalyticsApplicationInputsProcessingConfigurationGetArgs> processingConfiguration;
+        private Output<AnalyticsApplicationInputsSchemaGetArgs> schema;
+        private @Nullable Output<List<AnalyticsApplicationInputsStartingPositionConfigurationGetArgs>> startingPositionConfigurations;
+        private @Nullable Output<List<String>> streamNames;
 
         public Builder() {
     	      // Empty
@@ -190,93 +190,93 @@ public final class AnalyticsApplicationInputsGetArgs extends io.pulumi.resources
     	      this.streamNames = defaults.streamNames;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder kinesisFirehose(@Nullable Input<AnalyticsApplicationInputsKinesisFirehoseGetArgs> kinesisFirehose) {
+        public Builder kinesisFirehose(@Nullable Output<AnalyticsApplicationInputsKinesisFirehoseGetArgs> kinesisFirehose) {
             this.kinesisFirehose = kinesisFirehose;
             return this;
         }
 
         public Builder kinesisFirehose(@Nullable AnalyticsApplicationInputsKinesisFirehoseGetArgs kinesisFirehose) {
-            this.kinesisFirehose = Input.ofNullable(kinesisFirehose);
+            this.kinesisFirehose = Output.ofNullable(kinesisFirehose);
             return this;
         }
 
-        public Builder kinesisStream(@Nullable Input<AnalyticsApplicationInputsKinesisStreamGetArgs> kinesisStream) {
+        public Builder kinesisStream(@Nullable Output<AnalyticsApplicationInputsKinesisStreamGetArgs> kinesisStream) {
             this.kinesisStream = kinesisStream;
             return this;
         }
 
         public Builder kinesisStream(@Nullable AnalyticsApplicationInputsKinesisStreamGetArgs kinesisStream) {
-            this.kinesisStream = Input.ofNullable(kinesisStream);
+            this.kinesisStream = Output.ofNullable(kinesisStream);
             return this;
         }
 
-        public Builder namePrefix(Input<String> namePrefix) {
+        public Builder namePrefix(Output<String> namePrefix) {
             this.namePrefix = Objects.requireNonNull(namePrefix);
             return this;
         }
 
         public Builder namePrefix(String namePrefix) {
-            this.namePrefix = Input.of(Objects.requireNonNull(namePrefix));
+            this.namePrefix = Output.of(Objects.requireNonNull(namePrefix));
             return this;
         }
 
-        public Builder parallelism(@Nullable Input<AnalyticsApplicationInputsParallelismGetArgs> parallelism) {
+        public Builder parallelism(@Nullable Output<AnalyticsApplicationInputsParallelismGetArgs> parallelism) {
             this.parallelism = parallelism;
             return this;
         }
 
         public Builder parallelism(@Nullable AnalyticsApplicationInputsParallelismGetArgs parallelism) {
-            this.parallelism = Input.ofNullable(parallelism);
+            this.parallelism = Output.ofNullable(parallelism);
             return this;
         }
 
-        public Builder processingConfiguration(@Nullable Input<AnalyticsApplicationInputsProcessingConfigurationGetArgs> processingConfiguration) {
+        public Builder processingConfiguration(@Nullable Output<AnalyticsApplicationInputsProcessingConfigurationGetArgs> processingConfiguration) {
             this.processingConfiguration = processingConfiguration;
             return this;
         }
 
         public Builder processingConfiguration(@Nullable AnalyticsApplicationInputsProcessingConfigurationGetArgs processingConfiguration) {
-            this.processingConfiguration = Input.ofNullable(processingConfiguration);
+            this.processingConfiguration = Output.ofNullable(processingConfiguration);
             return this;
         }
 
-        public Builder schema(Input<AnalyticsApplicationInputsSchemaGetArgs> schema) {
+        public Builder schema(Output<AnalyticsApplicationInputsSchemaGetArgs> schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
 
         public Builder schema(AnalyticsApplicationInputsSchemaGetArgs schema) {
-            this.schema = Input.of(Objects.requireNonNull(schema));
+            this.schema = Output.of(Objects.requireNonNull(schema));
             return this;
         }
 
-        public Builder startingPositionConfigurations(@Nullable Input<List<AnalyticsApplicationInputsStartingPositionConfigurationGetArgs>> startingPositionConfigurations) {
+        public Builder startingPositionConfigurations(@Nullable Output<List<AnalyticsApplicationInputsStartingPositionConfigurationGetArgs>> startingPositionConfigurations) {
             this.startingPositionConfigurations = startingPositionConfigurations;
             return this;
         }
 
         public Builder startingPositionConfigurations(@Nullable List<AnalyticsApplicationInputsStartingPositionConfigurationGetArgs> startingPositionConfigurations) {
-            this.startingPositionConfigurations = Input.ofNullable(startingPositionConfigurations);
+            this.startingPositionConfigurations = Output.ofNullable(startingPositionConfigurations);
             return this;
         }
 
-        public Builder streamNames(@Nullable Input<List<String>> streamNames) {
+        public Builder streamNames(@Nullable Output<List<String>> streamNames) {
             this.streamNames = streamNames;
             return this;
         }
 
         public Builder streamNames(@Nullable List<String> streamNames) {
-            this.streamNames = Input.ofNullable(streamNames);
+            this.streamNames = Output.ofNullable(streamNames);
             return this;
         }
         public AnalyticsApplicationInputsGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class ThemeFontArgs extends io.pulumi.resources.ResourceArgs {
     public static final ThemeFontArgs Empty = new ThemeFontArgs();
 
     @InputImport(name="fontFamily")
-      private final @Nullable Input<String> fontFamily;
+      private final @Nullable Output<String> fontFamily;
 
-    public Input<String> getFontFamily() {
-        return this.fontFamily == null ? Input.empty() : this.fontFamily;
+    public Output<String> getFontFamily() {
+        return this.fontFamily == null ? Output.empty() : this.fontFamily;
     }
 
-    public ThemeFontArgs(@Nullable Input<String> fontFamily) {
+    public ThemeFontArgs(@Nullable Output<String> fontFamily) {
         this.fontFamily = fontFamily;
     }
 
     private ThemeFontArgs() {
-        this.fontFamily = Input.empty();
+        this.fontFamily = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class ThemeFontArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> fontFamily;
+        private @Nullable Output<String> fontFamily;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class ThemeFontArgs extends io.pulumi.resources.ResourceArgs {
     	      this.fontFamily = defaults.fontFamily;
         }
 
-        public Builder fontFamily(@Nullable Input<String> fontFamily) {
+        public Builder fontFamily(@Nullable Output<String> fontFamily) {
             this.fontFamily = fontFamily;
             return this;
         }
 
         public Builder fontFamily(@Nullable String fontFamily) {
-            this.fontFamily = Input.ofNullable(fontFamily);
+            this.fontFamily = Output.ofNullable(fontFamily);
             return this;
         }
         public ThemeFontArgs build() {

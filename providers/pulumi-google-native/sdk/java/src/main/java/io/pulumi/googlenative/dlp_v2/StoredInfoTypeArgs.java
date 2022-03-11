@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2StoredInfoTypeConfigArgs;
 import java.lang.String;
@@ -20,24 +20,24 @@ public final class StoredInfoTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="config", required=true)
-      private final Input<GooglePrivacyDlpV2StoredInfoTypeConfigArgs> config;
+      private final Output<GooglePrivacyDlpV2StoredInfoTypeConfigArgs> config;
 
-    public Input<GooglePrivacyDlpV2StoredInfoTypeConfigArgs> getConfig() {
+    public Output<GooglePrivacyDlpV2StoredInfoTypeConfigArgs> getConfig() {
         return this.config;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -45,17 +45,17 @@ public final class StoredInfoTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storedInfoTypeId")
-      private final @Nullable Input<String> storedInfoTypeId;
+      private final @Nullable Output<String> storedInfoTypeId;
 
-    public Input<String> getStoredInfoTypeId() {
-        return this.storedInfoTypeId == null ? Input.empty() : this.storedInfoTypeId;
+    public Output<String> getStoredInfoTypeId() {
+        return this.storedInfoTypeId == null ? Output.empty() : this.storedInfoTypeId;
     }
 
     public StoredInfoTypeArgs(
-        Input<GooglePrivacyDlpV2StoredInfoTypeConfigArgs> config,
-        @Nullable Input<String> location,
-        @Nullable Input<String> project,
-        @Nullable Input<String> storedInfoTypeId) {
+        Output<GooglePrivacyDlpV2StoredInfoTypeConfigArgs> config,
+        @Nullable Output<String> location,
+        @Nullable Output<String> project,
+        @Nullable Output<String> storedInfoTypeId) {
         this.config = Objects.requireNonNull(config, "expected parameter 'config' to be non-null");
         this.location = location;
         this.project = project;
@@ -63,10 +63,10 @@ public final class StoredInfoTypeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StoredInfoTypeArgs() {
-        this.config = Input.empty();
-        this.location = Input.empty();
-        this.project = Input.empty();
-        this.storedInfoTypeId = Input.empty();
+        this.config = Output.empty();
+        this.location = Output.empty();
+        this.project = Output.empty();
+        this.storedInfoTypeId = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,10 +78,10 @@ public final class StoredInfoTypeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<GooglePrivacyDlpV2StoredInfoTypeConfigArgs> config;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> storedInfoTypeId;
+        private Output<GooglePrivacyDlpV2StoredInfoTypeConfigArgs> config;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> storedInfoTypeId;
 
         public Builder() {
     	      // Empty
@@ -95,43 +95,43 @@ public final class StoredInfoTypeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.storedInfoTypeId = defaults.storedInfoTypeId;
         }
 
-        public Builder config(Input<GooglePrivacyDlpV2StoredInfoTypeConfigArgs> config) {
+        public Builder config(Output<GooglePrivacyDlpV2StoredInfoTypeConfigArgs> config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
         public Builder config(GooglePrivacyDlpV2StoredInfoTypeConfigArgs config) {
-            this.config = Input.of(Objects.requireNonNull(config));
+            this.config = Output.of(Objects.requireNonNull(config));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder storedInfoTypeId(@Nullable Input<String> storedInfoTypeId) {
+        public Builder storedInfoTypeId(@Nullable Output<String> storedInfoTypeId) {
             this.storedInfoTypeId = storedInfoTypeId;
             return this;
         }
 
         public Builder storedInfoTypeId(@Nullable String storedInfoTypeId) {
-            this.storedInfoTypeId = Input.ofNullable(storedInfoTypeId);
+            this.storedInfoTypeId = Output.ofNullable(storedInfoTypeId);
             return this;
         }
         public StoredInfoTypeArgs build() {

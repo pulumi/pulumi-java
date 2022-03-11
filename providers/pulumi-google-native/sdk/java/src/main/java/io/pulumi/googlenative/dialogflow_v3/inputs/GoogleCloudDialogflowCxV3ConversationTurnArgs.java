@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3ConversationTurnUserInputArgs;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputArgs;
@@ -24,10 +24,10 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnArgs extends io.pulu
      * 
      */
     @InputImport(name="userInput")
-      private final @Nullable Input<GoogleCloudDialogflowCxV3ConversationTurnUserInputArgs> userInput;
+      private final @Nullable Output<GoogleCloudDialogflowCxV3ConversationTurnUserInputArgs> userInput;
 
-    public Input<GoogleCloudDialogflowCxV3ConversationTurnUserInputArgs> getUserInput() {
-        return this.userInput == null ? Input.empty() : this.userInput;
+    public Output<GoogleCloudDialogflowCxV3ConversationTurnUserInputArgs> getUserInput() {
+        return this.userInput == null ? Output.empty() : this.userInput;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnArgs extends io.pulu
      * 
      */
     @InputImport(name="virtualAgentOutput")
-      private final @Nullable Input<GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputArgs> virtualAgentOutput;
+      private final @Nullable Output<GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputArgs> virtualAgentOutput;
 
-    public Input<GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputArgs> getVirtualAgentOutput() {
-        return this.virtualAgentOutput == null ? Input.empty() : this.virtualAgentOutput;
+    public Output<GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputArgs> getVirtualAgentOutput() {
+        return this.virtualAgentOutput == null ? Output.empty() : this.virtualAgentOutput;
     }
 
     public GoogleCloudDialogflowCxV3ConversationTurnArgs(
-        @Nullable Input<GoogleCloudDialogflowCxV3ConversationTurnUserInputArgs> userInput,
-        @Nullable Input<GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputArgs> virtualAgentOutput) {
+        @Nullable Output<GoogleCloudDialogflowCxV3ConversationTurnUserInputArgs> userInput,
+        @Nullable Output<GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputArgs> virtualAgentOutput) {
         this.userInput = userInput;
         this.virtualAgentOutput = virtualAgentOutput;
     }
 
     private GoogleCloudDialogflowCxV3ConversationTurnArgs() {
-        this.userInput = Input.empty();
-        this.virtualAgentOutput = Input.empty();
+        this.userInput = Output.empty();
+        this.virtualAgentOutput = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnArgs extends io.pulu
     }
 
     public static final class Builder {
-        private @Nullable Input<GoogleCloudDialogflowCxV3ConversationTurnUserInputArgs> userInput;
-        private @Nullable Input<GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputArgs> virtualAgentOutput;
+        private @Nullable Output<GoogleCloudDialogflowCxV3ConversationTurnUserInputArgs> userInput;
+        private @Nullable Output<GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputArgs> virtualAgentOutput;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnArgs extends io.pulu
     	      this.virtualAgentOutput = defaults.virtualAgentOutput;
         }
 
-        public Builder userInput(@Nullable Input<GoogleCloudDialogflowCxV3ConversationTurnUserInputArgs> userInput) {
+        public Builder userInput(@Nullable Output<GoogleCloudDialogflowCxV3ConversationTurnUserInputArgs> userInput) {
             this.userInput = userInput;
             return this;
         }
 
         public Builder userInput(@Nullable GoogleCloudDialogflowCxV3ConversationTurnUserInputArgs userInput) {
-            this.userInput = Input.ofNullable(userInput);
+            this.userInput = Output.ofNullable(userInput);
             return this;
         }
 
-        public Builder virtualAgentOutput(@Nullable Input<GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputArgs> virtualAgentOutput) {
+        public Builder virtualAgentOutput(@Nullable Output<GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputArgs> virtualAgentOutput) {
             this.virtualAgentOutput = virtualAgentOutput;
             return this;
         }
 
         public Builder virtualAgentOutput(@Nullable GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputArgs virtualAgentOutput) {
-            this.virtualAgentOutput = Input.ofNullable(virtualAgentOutput);
+            this.virtualAgentOutput = Output.ofNullable(virtualAgentOutput);
             return this;
         }
         public GoogleCloudDialogflowCxV3ConversationTurnArgs build() {

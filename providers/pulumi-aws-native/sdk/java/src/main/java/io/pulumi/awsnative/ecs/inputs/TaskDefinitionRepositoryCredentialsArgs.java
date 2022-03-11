@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ecs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class TaskDefinitionRepositoryCredentialsArgs extends io.pulumi.res
     public static final TaskDefinitionRepositoryCredentialsArgs Empty = new TaskDefinitionRepositoryCredentialsArgs();
 
     @InputImport(name="credentialsParameter")
-      private final @Nullable Input<String> credentialsParameter;
+      private final @Nullable Output<String> credentialsParameter;
 
-    public Input<String> getCredentialsParameter() {
-        return this.credentialsParameter == null ? Input.empty() : this.credentialsParameter;
+    public Output<String> getCredentialsParameter() {
+        return this.credentialsParameter == null ? Output.empty() : this.credentialsParameter;
     }
 
-    public TaskDefinitionRepositoryCredentialsArgs(@Nullable Input<String> credentialsParameter) {
+    public TaskDefinitionRepositoryCredentialsArgs(@Nullable Output<String> credentialsParameter) {
         this.credentialsParameter = credentialsParameter;
     }
 
     private TaskDefinitionRepositoryCredentialsArgs() {
-        this.credentialsParameter = Input.empty();
+        this.credentialsParameter = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class TaskDefinitionRepositoryCredentialsArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> credentialsParameter;
+        private @Nullable Output<String> credentialsParameter;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class TaskDefinitionRepositoryCredentialsArgs extends io.pulumi.res
     	      this.credentialsParameter = defaults.credentialsParameter;
         }
 
-        public Builder credentialsParameter(@Nullable Input<String> credentialsParameter) {
+        public Builder credentialsParameter(@Nullable Output<String> credentialsParameter) {
             this.credentialsParameter = credentialsParameter;
             return this;
         }
 
         public Builder credentialsParameter(@Nullable String credentialsParameter) {
-            this.credentialsParameter = Input.ofNullable(credentialsParameter);
+            this.credentialsParameter = Output.ofNullable(credentialsParameter);
             return this;
         }
         public TaskDefinitionRepositoryCredentialsArgs build() {

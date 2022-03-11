@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveGetArgs extend
      * 
      */
     @InputImport(name="signatureAlgorithm", required=true)
-      private final Input<String> signatureAlgorithm;
+      private final Output<String> signatureAlgorithm;
 
-    public Input<String> getSignatureAlgorithm() {
+    public Output<String> getSignatureAlgorithm() {
         return this.signatureAlgorithm;
     }
 
-    public CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveGetArgs(Input<String> signatureAlgorithm) {
+    public CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveGetArgs(Output<String> signatureAlgorithm) {
         this.signatureAlgorithm = Objects.requireNonNull(signatureAlgorithm, "expected parameter 'signatureAlgorithm' to be non-null");
     }
 
     private CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveGetArgs() {
-        this.signatureAlgorithm = Input.empty();
+        this.signatureAlgorithm = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveGetArgs extend
     }
 
     public static final class Builder {
-        private Input<String> signatureAlgorithm;
+        private Output<String> signatureAlgorithm;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveGetArgs extend
     	      this.signatureAlgorithm = defaults.signatureAlgorithm;
         }
 
-        public Builder signatureAlgorithm(Input<String> signatureAlgorithm) {
+        public Builder signatureAlgorithm(Output<String> signatureAlgorithm) {
             this.signatureAlgorithm = Objects.requireNonNull(signatureAlgorithm);
             return this;
         }
 
         public Builder signatureAlgorithm(String signatureAlgorithm) {
-            this.signatureAlgorithm = Input.of(Objects.requireNonNull(signatureAlgorithm));
+            this.signatureAlgorithm = Output.of(Objects.requireNonNull(signatureAlgorithm));
             return this;
         }
         public CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveGetArgs build() {

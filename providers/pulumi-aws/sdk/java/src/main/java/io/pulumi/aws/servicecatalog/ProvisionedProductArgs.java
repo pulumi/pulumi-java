@@ -5,7 +5,7 @@ package io.pulumi.aws.servicecatalog;
 
 import io.pulumi.aws.servicecatalog.inputs.ProvisionedProductProvisioningParameterArgs;
 import io.pulumi.aws.servicecatalog.inputs.ProvisionedProductStackSetProvisioningPreferencesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ProvisionedProductArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="acceptLanguage")
-      private final @Nullable Input<String> acceptLanguage;
+      private final @Nullable Output<String> acceptLanguage;
 
-    public Input<String> getAcceptLanguage() {
-        return this.acceptLanguage == null ? Input.empty() : this.acceptLanguage;
+    public Output<String> getAcceptLanguage() {
+        return this.acceptLanguage == null ? Output.empty() : this.acceptLanguage;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ProvisionedProductArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ignoreErrors")
-      private final @Nullable Input<Boolean> ignoreErrors;
+      private final @Nullable Output<Boolean> ignoreErrors;
 
-    public Input<Boolean> getIgnoreErrors() {
-        return this.ignoreErrors == null ? Input.empty() : this.ignoreErrors;
+    public Output<Boolean> getIgnoreErrors() {
+        return this.ignoreErrors == null ? Output.empty() : this.ignoreErrors;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ProvisionedProductArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ProvisionedProductArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="notificationArns")
-      private final @Nullable Input<List<String>> notificationArns;
+      private final @Nullable Output<List<String>> notificationArns;
 
-    public Input<List<String>> getNotificationArns() {
-        return this.notificationArns == null ? Input.empty() : this.notificationArns;
+    public Output<List<String>> getNotificationArns() {
+        return this.notificationArns == null ? Output.empty() : this.notificationArns;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ProvisionedProductArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="pathId")
-      private final @Nullable Input<String> pathId;
+      private final @Nullable Output<String> pathId;
 
-    public Input<String> getPathId() {
-        return this.pathId == null ? Input.empty() : this.pathId;
+    public Output<String> getPathId() {
+        return this.pathId == null ? Output.empty() : this.pathId;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ProvisionedProductArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="pathName")
-      private final @Nullable Input<String> pathName;
+      private final @Nullable Output<String> pathName;
 
-    public Input<String> getPathName() {
-        return this.pathName == null ? Input.empty() : this.pathName;
+    public Output<String> getPathName() {
+        return this.pathName == null ? Output.empty() : this.pathName;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class ProvisionedProductArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="productId")
-      private final @Nullable Input<String> productId;
+      private final @Nullable Output<String> productId;
 
-    public Input<String> getProductId() {
-        return this.productId == null ? Input.empty() : this.productId;
+    public Output<String> getProductId() {
+        return this.productId == null ? Output.empty() : this.productId;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class ProvisionedProductArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="productName")
-      private final @Nullable Input<String> productName;
+      private final @Nullable Output<String> productName;
 
-    public Input<String> getProductName() {
-        return this.productName == null ? Input.empty() : this.productName;
+    public Output<String> getProductName() {
+        return this.productName == null ? Output.empty() : this.productName;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class ProvisionedProductArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="provisioningArtifactId")
-      private final @Nullable Input<String> provisioningArtifactId;
+      private final @Nullable Output<String> provisioningArtifactId;
 
-    public Input<String> getProvisioningArtifactId() {
-        return this.provisioningArtifactId == null ? Input.empty() : this.provisioningArtifactId;
+    public Output<String> getProvisioningArtifactId() {
+        return this.provisioningArtifactId == null ? Output.empty() : this.provisioningArtifactId;
     }
 
     /**
@@ -123,10 +123,10 @@ public final class ProvisionedProductArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="provisioningArtifactName")
-      private final @Nullable Input<String> provisioningArtifactName;
+      private final @Nullable Output<String> provisioningArtifactName;
 
-    public Input<String> getProvisioningArtifactName() {
-        return this.provisioningArtifactName == null ? Input.empty() : this.provisioningArtifactName;
+    public Output<String> getProvisioningArtifactName() {
+        return this.provisioningArtifactName == null ? Output.empty() : this.provisioningArtifactName;
     }
 
     /**
@@ -134,10 +134,10 @@ public final class ProvisionedProductArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="provisioningParameters")
-      private final @Nullable Input<List<ProvisionedProductProvisioningParameterArgs>> provisioningParameters;
+      private final @Nullable Output<List<ProvisionedProductProvisioningParameterArgs>> provisioningParameters;
 
-    public Input<List<ProvisionedProductProvisioningParameterArgs>> getProvisioningParameters() {
-        return this.provisioningParameters == null ? Input.empty() : this.provisioningParameters;
+    public Output<List<ProvisionedProductProvisioningParameterArgs>> getProvisioningParameters() {
+        return this.provisioningParameters == null ? Output.empty() : this.provisioningParameters;
     }
 
     /**
@@ -145,10 +145,10 @@ public final class ProvisionedProductArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="retainPhysicalResources")
-      private final @Nullable Input<Boolean> retainPhysicalResources;
+      private final @Nullable Output<Boolean> retainPhysicalResources;
 
-    public Input<Boolean> getRetainPhysicalResources() {
-        return this.retainPhysicalResources == null ? Input.empty() : this.retainPhysicalResources;
+    public Output<Boolean> getRetainPhysicalResources() {
+        return this.retainPhysicalResources == null ? Output.empty() : this.retainPhysicalResources;
     }
 
     /**
@@ -156,10 +156,10 @@ public final class ProvisionedProductArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="stackSetProvisioningPreferences")
-      private final @Nullable Input<ProvisionedProductStackSetProvisioningPreferencesArgs> stackSetProvisioningPreferences;
+      private final @Nullable Output<ProvisionedProductStackSetProvisioningPreferencesArgs> stackSetProvisioningPreferences;
 
-    public Input<ProvisionedProductStackSetProvisioningPreferencesArgs> getStackSetProvisioningPreferences() {
-        return this.stackSetProvisioningPreferences == null ? Input.empty() : this.stackSetProvisioningPreferences;
+    public Output<ProvisionedProductStackSetProvisioningPreferencesArgs> getStackSetProvisioningPreferences() {
+        return this.stackSetProvisioningPreferences == null ? Output.empty() : this.stackSetProvisioningPreferences;
     }
 
     /**
@@ -167,27 +167,27 @@ public final class ProvisionedProductArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ProvisionedProductArgs(
-        @Nullable Input<String> acceptLanguage,
-        @Nullable Input<Boolean> ignoreErrors,
-        @Nullable Input<String> name,
-        @Nullable Input<List<String>> notificationArns,
-        @Nullable Input<String> pathId,
-        @Nullable Input<String> pathName,
-        @Nullable Input<String> productId,
-        @Nullable Input<String> productName,
-        @Nullable Input<String> provisioningArtifactId,
-        @Nullable Input<String> provisioningArtifactName,
-        @Nullable Input<List<ProvisionedProductProvisioningParameterArgs>> provisioningParameters,
-        @Nullable Input<Boolean> retainPhysicalResources,
-        @Nullable Input<ProvisionedProductStackSetProvisioningPreferencesArgs> stackSetProvisioningPreferences,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> acceptLanguage,
+        @Nullable Output<Boolean> ignoreErrors,
+        @Nullable Output<String> name,
+        @Nullable Output<List<String>> notificationArns,
+        @Nullable Output<String> pathId,
+        @Nullable Output<String> pathName,
+        @Nullable Output<String> productId,
+        @Nullable Output<String> productName,
+        @Nullable Output<String> provisioningArtifactId,
+        @Nullable Output<String> provisioningArtifactName,
+        @Nullable Output<List<ProvisionedProductProvisioningParameterArgs>> provisioningParameters,
+        @Nullable Output<Boolean> retainPhysicalResources,
+        @Nullable Output<ProvisionedProductStackSetProvisioningPreferencesArgs> stackSetProvisioningPreferences,
+        @Nullable Output<Map<String,String>> tags) {
         this.acceptLanguage = acceptLanguage;
         this.ignoreErrors = ignoreErrors;
         this.name = name;
@@ -205,20 +205,20 @@ public final class ProvisionedProductArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ProvisionedProductArgs() {
-        this.acceptLanguage = Input.empty();
-        this.ignoreErrors = Input.empty();
-        this.name = Input.empty();
-        this.notificationArns = Input.empty();
-        this.pathId = Input.empty();
-        this.pathName = Input.empty();
-        this.productId = Input.empty();
-        this.productName = Input.empty();
-        this.provisioningArtifactId = Input.empty();
-        this.provisioningArtifactName = Input.empty();
-        this.provisioningParameters = Input.empty();
-        this.retainPhysicalResources = Input.empty();
-        this.stackSetProvisioningPreferences = Input.empty();
-        this.tags = Input.empty();
+        this.acceptLanguage = Output.empty();
+        this.ignoreErrors = Output.empty();
+        this.name = Output.empty();
+        this.notificationArns = Output.empty();
+        this.pathId = Output.empty();
+        this.pathName = Output.empty();
+        this.productId = Output.empty();
+        this.productName = Output.empty();
+        this.provisioningArtifactId = Output.empty();
+        this.provisioningArtifactName = Output.empty();
+        this.provisioningParameters = Output.empty();
+        this.retainPhysicalResources = Output.empty();
+        this.stackSetProvisioningPreferences = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -230,20 +230,20 @@ public final class ProvisionedProductArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> acceptLanguage;
-        private @Nullable Input<Boolean> ignoreErrors;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<String>> notificationArns;
-        private @Nullable Input<String> pathId;
-        private @Nullable Input<String> pathName;
-        private @Nullable Input<String> productId;
-        private @Nullable Input<String> productName;
-        private @Nullable Input<String> provisioningArtifactId;
-        private @Nullable Input<String> provisioningArtifactName;
-        private @Nullable Input<List<ProvisionedProductProvisioningParameterArgs>> provisioningParameters;
-        private @Nullable Input<Boolean> retainPhysicalResources;
-        private @Nullable Input<ProvisionedProductStackSetProvisioningPreferencesArgs> stackSetProvisioningPreferences;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> acceptLanguage;
+        private @Nullable Output<Boolean> ignoreErrors;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<String>> notificationArns;
+        private @Nullable Output<String> pathId;
+        private @Nullable Output<String> pathName;
+        private @Nullable Output<String> productId;
+        private @Nullable Output<String> productName;
+        private @Nullable Output<String> provisioningArtifactId;
+        private @Nullable Output<String> provisioningArtifactName;
+        private @Nullable Output<List<ProvisionedProductProvisioningParameterArgs>> provisioningParameters;
+        private @Nullable Output<Boolean> retainPhysicalResources;
+        private @Nullable Output<ProvisionedProductStackSetProvisioningPreferencesArgs> stackSetProvisioningPreferences;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -267,143 +267,143 @@ public final class ProvisionedProductArgs extends io.pulumi.resources.ResourceAr
     	      this.tags = defaults.tags;
         }
 
-        public Builder acceptLanguage(@Nullable Input<String> acceptLanguage) {
+        public Builder acceptLanguage(@Nullable Output<String> acceptLanguage) {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
 
         public Builder acceptLanguage(@Nullable String acceptLanguage) {
-            this.acceptLanguage = Input.ofNullable(acceptLanguage);
+            this.acceptLanguage = Output.ofNullable(acceptLanguage);
             return this;
         }
 
-        public Builder ignoreErrors(@Nullable Input<Boolean> ignoreErrors) {
+        public Builder ignoreErrors(@Nullable Output<Boolean> ignoreErrors) {
             this.ignoreErrors = ignoreErrors;
             return this;
         }
 
         public Builder ignoreErrors(@Nullable Boolean ignoreErrors) {
-            this.ignoreErrors = Input.ofNullable(ignoreErrors);
+            this.ignoreErrors = Output.ofNullable(ignoreErrors);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder notificationArns(@Nullable Input<List<String>> notificationArns) {
+        public Builder notificationArns(@Nullable Output<List<String>> notificationArns) {
             this.notificationArns = notificationArns;
             return this;
         }
 
         public Builder notificationArns(@Nullable List<String> notificationArns) {
-            this.notificationArns = Input.ofNullable(notificationArns);
+            this.notificationArns = Output.ofNullable(notificationArns);
             return this;
         }
 
-        public Builder pathId(@Nullable Input<String> pathId) {
+        public Builder pathId(@Nullable Output<String> pathId) {
             this.pathId = pathId;
             return this;
         }
 
         public Builder pathId(@Nullable String pathId) {
-            this.pathId = Input.ofNullable(pathId);
+            this.pathId = Output.ofNullable(pathId);
             return this;
         }
 
-        public Builder pathName(@Nullable Input<String> pathName) {
+        public Builder pathName(@Nullable Output<String> pathName) {
             this.pathName = pathName;
             return this;
         }
 
         public Builder pathName(@Nullable String pathName) {
-            this.pathName = Input.ofNullable(pathName);
+            this.pathName = Output.ofNullable(pathName);
             return this;
         }
 
-        public Builder productId(@Nullable Input<String> productId) {
+        public Builder productId(@Nullable Output<String> productId) {
             this.productId = productId;
             return this;
         }
 
         public Builder productId(@Nullable String productId) {
-            this.productId = Input.ofNullable(productId);
+            this.productId = Output.ofNullable(productId);
             return this;
         }
 
-        public Builder productName(@Nullable Input<String> productName) {
+        public Builder productName(@Nullable Output<String> productName) {
             this.productName = productName;
             return this;
         }
 
         public Builder productName(@Nullable String productName) {
-            this.productName = Input.ofNullable(productName);
+            this.productName = Output.ofNullable(productName);
             return this;
         }
 
-        public Builder provisioningArtifactId(@Nullable Input<String> provisioningArtifactId) {
+        public Builder provisioningArtifactId(@Nullable Output<String> provisioningArtifactId) {
             this.provisioningArtifactId = provisioningArtifactId;
             return this;
         }
 
         public Builder provisioningArtifactId(@Nullable String provisioningArtifactId) {
-            this.provisioningArtifactId = Input.ofNullable(provisioningArtifactId);
+            this.provisioningArtifactId = Output.ofNullable(provisioningArtifactId);
             return this;
         }
 
-        public Builder provisioningArtifactName(@Nullable Input<String> provisioningArtifactName) {
+        public Builder provisioningArtifactName(@Nullable Output<String> provisioningArtifactName) {
             this.provisioningArtifactName = provisioningArtifactName;
             return this;
         }
 
         public Builder provisioningArtifactName(@Nullable String provisioningArtifactName) {
-            this.provisioningArtifactName = Input.ofNullable(provisioningArtifactName);
+            this.provisioningArtifactName = Output.ofNullable(provisioningArtifactName);
             return this;
         }
 
-        public Builder provisioningParameters(@Nullable Input<List<ProvisionedProductProvisioningParameterArgs>> provisioningParameters) {
+        public Builder provisioningParameters(@Nullable Output<List<ProvisionedProductProvisioningParameterArgs>> provisioningParameters) {
             this.provisioningParameters = provisioningParameters;
             return this;
         }
 
         public Builder provisioningParameters(@Nullable List<ProvisionedProductProvisioningParameterArgs> provisioningParameters) {
-            this.provisioningParameters = Input.ofNullable(provisioningParameters);
+            this.provisioningParameters = Output.ofNullable(provisioningParameters);
             return this;
         }
 
-        public Builder retainPhysicalResources(@Nullable Input<Boolean> retainPhysicalResources) {
+        public Builder retainPhysicalResources(@Nullable Output<Boolean> retainPhysicalResources) {
             this.retainPhysicalResources = retainPhysicalResources;
             return this;
         }
 
         public Builder retainPhysicalResources(@Nullable Boolean retainPhysicalResources) {
-            this.retainPhysicalResources = Input.ofNullable(retainPhysicalResources);
+            this.retainPhysicalResources = Output.ofNullable(retainPhysicalResources);
             return this;
         }
 
-        public Builder stackSetProvisioningPreferences(@Nullable Input<ProvisionedProductStackSetProvisioningPreferencesArgs> stackSetProvisioningPreferences) {
+        public Builder stackSetProvisioningPreferences(@Nullable Output<ProvisionedProductStackSetProvisioningPreferencesArgs> stackSetProvisioningPreferences) {
             this.stackSetProvisioningPreferences = stackSetProvisioningPreferences;
             return this;
         }
 
         public Builder stackSetProvisioningPreferences(@Nullable ProvisionedProductStackSetProvisioningPreferencesArgs stackSetProvisioningPreferences) {
-            this.stackSetProvisioningPreferences = Input.ofNullable(stackSetProvisioningPreferences);
+            this.stackSetProvisioningPreferences = Output.ofNullable(stackSetProvisioningPreferences);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ProvisionedProductArgs build() {

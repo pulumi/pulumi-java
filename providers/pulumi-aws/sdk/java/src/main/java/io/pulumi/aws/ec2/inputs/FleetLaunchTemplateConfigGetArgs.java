@@ -5,7 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.FleetLaunchTemplateConfigLaunchTemplateSpecificationGetArgs;
 import io.pulumi.aws.ec2.inputs.FleetLaunchTemplateConfigOverrideGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -21,9 +21,9 @@ public final class FleetLaunchTemplateConfigGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="launchTemplateSpecification", required=true)
-      private final Input<FleetLaunchTemplateConfigLaunchTemplateSpecificationGetArgs> launchTemplateSpecification;
+      private final Output<FleetLaunchTemplateConfigLaunchTemplateSpecificationGetArgs> launchTemplateSpecification;
 
-    public Input<FleetLaunchTemplateConfigLaunchTemplateSpecificationGetArgs> getLaunchTemplateSpecification() {
+    public Output<FleetLaunchTemplateConfigLaunchTemplateSpecificationGetArgs> getLaunchTemplateSpecification() {
         return this.launchTemplateSpecification;
     }
 
@@ -32,22 +32,22 @@ public final class FleetLaunchTemplateConfigGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="overrides")
-      private final @Nullable Input<List<FleetLaunchTemplateConfigOverrideGetArgs>> overrides;
+      private final @Nullable Output<List<FleetLaunchTemplateConfigOverrideGetArgs>> overrides;
 
-    public Input<List<FleetLaunchTemplateConfigOverrideGetArgs>> getOverrides() {
-        return this.overrides == null ? Input.empty() : this.overrides;
+    public Output<List<FleetLaunchTemplateConfigOverrideGetArgs>> getOverrides() {
+        return this.overrides == null ? Output.empty() : this.overrides;
     }
 
     public FleetLaunchTemplateConfigGetArgs(
-        Input<FleetLaunchTemplateConfigLaunchTemplateSpecificationGetArgs> launchTemplateSpecification,
-        @Nullable Input<List<FleetLaunchTemplateConfigOverrideGetArgs>> overrides) {
+        Output<FleetLaunchTemplateConfigLaunchTemplateSpecificationGetArgs> launchTemplateSpecification,
+        @Nullable Output<List<FleetLaunchTemplateConfigOverrideGetArgs>> overrides) {
         this.launchTemplateSpecification = Objects.requireNonNull(launchTemplateSpecification, "expected parameter 'launchTemplateSpecification' to be non-null");
         this.overrides = overrides;
     }
 
     private FleetLaunchTemplateConfigGetArgs() {
-        this.launchTemplateSpecification = Input.empty();
-        this.overrides = Input.empty();
+        this.launchTemplateSpecification = Output.empty();
+        this.overrides = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class FleetLaunchTemplateConfigGetArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<FleetLaunchTemplateConfigLaunchTemplateSpecificationGetArgs> launchTemplateSpecification;
-        private @Nullable Input<List<FleetLaunchTemplateConfigOverrideGetArgs>> overrides;
+        private Output<FleetLaunchTemplateConfigLaunchTemplateSpecificationGetArgs> launchTemplateSpecification;
+        private @Nullable Output<List<FleetLaunchTemplateConfigOverrideGetArgs>> overrides;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class FleetLaunchTemplateConfigGetArgs extends io.pulumi.resources.
     	      this.overrides = defaults.overrides;
         }
 
-        public Builder launchTemplateSpecification(Input<FleetLaunchTemplateConfigLaunchTemplateSpecificationGetArgs> launchTemplateSpecification) {
+        public Builder launchTemplateSpecification(Output<FleetLaunchTemplateConfigLaunchTemplateSpecificationGetArgs> launchTemplateSpecification) {
             this.launchTemplateSpecification = Objects.requireNonNull(launchTemplateSpecification);
             return this;
         }
 
         public Builder launchTemplateSpecification(FleetLaunchTemplateConfigLaunchTemplateSpecificationGetArgs launchTemplateSpecification) {
-            this.launchTemplateSpecification = Input.of(Objects.requireNonNull(launchTemplateSpecification));
+            this.launchTemplateSpecification = Output.of(Objects.requireNonNull(launchTemplateSpecification));
             return this;
         }
 
-        public Builder overrides(@Nullable Input<List<FleetLaunchTemplateConfigOverrideGetArgs>> overrides) {
+        public Builder overrides(@Nullable Output<List<FleetLaunchTemplateConfigOverrideGetArgs>> overrides) {
             this.overrides = overrides;
             return this;
         }
 
         public Builder overrides(@Nullable List<FleetLaunchTemplateConfigOverrideGetArgs> overrides) {
-            this.overrides = Input.ofNullable(overrides);
+            this.overrides = Output.ofNullable(overrides);
             return this;
         }
         public FleetLaunchTemplateConfigGetArgs build() {

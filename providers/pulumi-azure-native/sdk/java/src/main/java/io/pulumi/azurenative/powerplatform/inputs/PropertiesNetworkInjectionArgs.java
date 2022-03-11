@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.powerplatform.inputs;
 
 import io.pulumi.azurenative.powerplatform.inputs.VirtualNetworkPropertiesListArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class PropertiesNetworkInjectionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="virtualNetworks")
-      private final @Nullable Input<VirtualNetworkPropertiesListArgs> virtualNetworks;
+      private final @Nullable Output<VirtualNetworkPropertiesListArgs> virtualNetworks;
 
-    public Input<VirtualNetworkPropertiesListArgs> getVirtualNetworks() {
-        return this.virtualNetworks == null ? Input.empty() : this.virtualNetworks;
+    public Output<VirtualNetworkPropertiesListArgs> getVirtualNetworks() {
+        return this.virtualNetworks == null ? Output.empty() : this.virtualNetworks;
     }
 
-    public PropertiesNetworkInjectionArgs(@Nullable Input<VirtualNetworkPropertiesListArgs> virtualNetworks) {
+    public PropertiesNetworkInjectionArgs(@Nullable Output<VirtualNetworkPropertiesListArgs> virtualNetworks) {
         this.virtualNetworks = virtualNetworks;
     }
 
     private PropertiesNetworkInjectionArgs() {
-        this.virtualNetworks = Input.empty();
+        this.virtualNetworks = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class PropertiesNetworkInjectionArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<VirtualNetworkPropertiesListArgs> virtualNetworks;
+        private @Nullable Output<VirtualNetworkPropertiesListArgs> virtualNetworks;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class PropertiesNetworkInjectionArgs extends io.pulumi.resources.Re
     	      this.virtualNetworks = defaults.virtualNetworks;
         }
 
-        public Builder virtualNetworks(@Nullable Input<VirtualNetworkPropertiesListArgs> virtualNetworks) {
+        public Builder virtualNetworks(@Nullable Output<VirtualNetworkPropertiesListArgs> virtualNetworks) {
             this.virtualNetworks = virtualNetworks;
             return this;
         }
 
         public Builder virtualNetworks(@Nullable VirtualNetworkPropertiesListArgs virtualNetworks) {
-            this.virtualNetworks = Input.ofNullable(virtualNetworks);
+            this.virtualNetworks = Output.ofNullable(virtualNetworks);
             return this;
         }
         public PropertiesNetworkInjectionArgs build() {

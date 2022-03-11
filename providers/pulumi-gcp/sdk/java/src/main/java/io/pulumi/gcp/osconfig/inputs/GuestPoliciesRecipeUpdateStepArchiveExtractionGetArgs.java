@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class GuestPoliciesRecipeUpdateStepArchiveExtractionGetArgs extends
      * 
      */
     @InputImport(name="artifactId", required=true)
-      private final Input<String> artifactId;
+      private final Output<String> artifactId;
 
-    public Input<String> getArtifactId() {
+    public Output<String> getArtifactId() {
         return this.artifactId;
     }
 
@@ -30,10 +30,10 @@ public final class GuestPoliciesRecipeUpdateStepArchiveExtractionGetArgs extends
      * 
      */
     @InputImport(name="destination")
-      private final @Nullable Input<String> destination;
+      private final @Nullable Output<String> destination;
 
-    public Input<String> getDestination() {
-        return this.destination == null ? Input.empty() : this.destination;
+    public Output<String> getDestination() {
+        return this.destination == null ? Output.empty() : this.destination;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class GuestPoliciesRecipeUpdateStepArchiveExtractionGetArgs extends
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public GuestPoliciesRecipeUpdateStepArchiveExtractionGetArgs(
-        Input<String> artifactId,
-        @Nullable Input<String> destination,
-        Input<String> type) {
+        Output<String> artifactId,
+        @Nullable Output<String> destination,
+        Output<String> type) {
         this.artifactId = Objects.requireNonNull(artifactId, "expected parameter 'artifactId' to be non-null");
         this.destination = destination;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private GuestPoliciesRecipeUpdateStepArchiveExtractionGetArgs() {
-        this.artifactId = Input.empty();
-        this.destination = Input.empty();
-        this.type = Input.empty();
+        this.artifactId = Output.empty();
+        this.destination = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class GuestPoliciesRecipeUpdateStepArchiveExtractionGetArgs extends
     }
 
     public static final class Builder {
-        private Input<String> artifactId;
-        private @Nullable Input<String> destination;
-        private Input<String> type;
+        private Output<String> artifactId;
+        private @Nullable Output<String> destination;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class GuestPoliciesRecipeUpdateStepArchiveExtractionGetArgs extends
     	      this.type = defaults.type;
         }
 
-        public Builder artifactId(Input<String> artifactId) {
+        public Builder artifactId(Output<String> artifactId) {
             this.artifactId = Objects.requireNonNull(artifactId);
             return this;
         }
 
         public Builder artifactId(String artifactId) {
-            this.artifactId = Input.of(Objects.requireNonNull(artifactId));
+            this.artifactId = Output.of(Objects.requireNonNull(artifactId));
             return this;
         }
 
-        public Builder destination(@Nullable Input<String> destination) {
+        public Builder destination(@Nullable Output<String> destination) {
             this.destination = destination;
             return this;
         }
 
         public Builder destination(@Nullable String destination) {
-            this.destination = Input.ofNullable(destination);
+            this.destination = Output.ofNullable(destination);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public GuestPoliciesRecipeUpdateStepArchiveExtractionGetArgs build() {

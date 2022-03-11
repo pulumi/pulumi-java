@@ -5,7 +5,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.azurenative.apimanagement.inputs.ParameterContractArgs;
 import io.pulumi.azurenative.apimanagement.inputs.RepresentationContractArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class ResponseContractArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ResponseContractArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="headers")
-      private final @Nullable Input<List<ParameterContractArgs>> headers;
+      private final @Nullable Output<List<ParameterContractArgs>> headers;
 
-    public Input<List<ParameterContractArgs>> getHeaders() {
-        return this.headers == null ? Input.empty() : this.headers;
+    public Output<List<ParameterContractArgs>> getHeaders() {
+        return this.headers == null ? Output.empty() : this.headers;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ResponseContractArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="representations")
-      private final @Nullable Input<List<RepresentationContractArgs>> representations;
+      private final @Nullable Output<List<RepresentationContractArgs>> representations;
 
-    public Input<List<RepresentationContractArgs>> getRepresentations() {
-        return this.representations == null ? Input.empty() : this.representations;
+    public Output<List<RepresentationContractArgs>> getRepresentations() {
+        return this.representations == null ? Output.empty() : this.representations;
     }
 
     /**
@@ -60,17 +60,17 @@ public final class ResponseContractArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="statusCode", required=true)
-      private final Input<Integer> statusCode;
+      private final Output<Integer> statusCode;
 
-    public Input<Integer> getStatusCode() {
+    public Output<Integer> getStatusCode() {
         return this.statusCode;
     }
 
     public ResponseContractArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<List<ParameterContractArgs>> headers,
-        @Nullable Input<List<RepresentationContractArgs>> representations,
-        Input<Integer> statusCode) {
+        @Nullable Output<String> description,
+        @Nullable Output<List<ParameterContractArgs>> headers,
+        @Nullable Output<List<RepresentationContractArgs>> representations,
+        Output<Integer> statusCode) {
         this.description = description;
         this.headers = headers;
         this.representations = representations;
@@ -78,10 +78,10 @@ public final class ResponseContractArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ResponseContractArgs() {
-        this.description = Input.empty();
-        this.headers = Input.empty();
-        this.representations = Input.empty();
-        this.statusCode = Input.empty();
+        this.description = Output.empty();
+        this.headers = Output.empty();
+        this.representations = Output.empty();
+        this.statusCode = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,10 +93,10 @@ public final class ResponseContractArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<ParameterContractArgs>> headers;
-        private @Nullable Input<List<RepresentationContractArgs>> representations;
-        private Input<Integer> statusCode;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<ParameterContractArgs>> headers;
+        private @Nullable Output<List<RepresentationContractArgs>> representations;
+        private Output<Integer> statusCode;
 
         public Builder() {
     	      // Empty
@@ -110,43 +110,43 @@ public final class ResponseContractArgs extends io.pulumi.resources.ResourceArgs
     	      this.statusCode = defaults.statusCode;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder headers(@Nullable Input<List<ParameterContractArgs>> headers) {
+        public Builder headers(@Nullable Output<List<ParameterContractArgs>> headers) {
             this.headers = headers;
             return this;
         }
 
         public Builder headers(@Nullable List<ParameterContractArgs> headers) {
-            this.headers = Input.ofNullable(headers);
+            this.headers = Output.ofNullable(headers);
             return this;
         }
 
-        public Builder representations(@Nullable Input<List<RepresentationContractArgs>> representations) {
+        public Builder representations(@Nullable Output<List<RepresentationContractArgs>> representations) {
             this.representations = representations;
             return this;
         }
 
         public Builder representations(@Nullable List<RepresentationContractArgs> representations) {
-            this.representations = Input.ofNullable(representations);
+            this.representations = Output.ofNullable(representations);
             return this;
         }
 
-        public Builder statusCode(Input<Integer> statusCode) {
+        public Builder statusCode(Output<Integer> statusCode) {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }
 
         public Builder statusCode(Integer statusCode) {
-            this.statusCode = Input.of(Objects.requireNonNull(statusCode));
+            this.statusCode = Output.of(Objects.requireNonNull(statusCode));
             return this;
         }
         public ResponseContractArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.streamanalytics.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class AzureMachineLearningWebServiceInputColumnArgs extends io.pulu
      * 
      */
     @InputImport(name="dataType")
-      private final @Nullable Input<String> dataType;
+      private final @Nullable Output<String> dataType;
 
-    public Input<String> getDataType() {
-        return this.dataType == null ? Input.empty() : this.dataType;
+    public Output<String> getDataType() {
+        return this.dataType == null ? Output.empty() : this.dataType;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AzureMachineLearningWebServiceInputColumnArgs extends io.pulu
      * 
      */
     @InputImport(name="mapTo")
-      private final @Nullable Input<Integer> mapTo;
+      private final @Nullable Output<Integer> mapTo;
 
-    public Input<Integer> getMapTo() {
-        return this.mapTo == null ? Input.empty() : this.mapTo;
+    public Output<Integer> getMapTo() {
+        return this.mapTo == null ? Output.empty() : this.mapTo;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class AzureMachineLearningWebServiceInputColumnArgs extends io.pulu
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public AzureMachineLearningWebServiceInputColumnArgs(
-        @Nullable Input<String> dataType,
-        @Nullable Input<Integer> mapTo,
-        @Nullable Input<String> name) {
+        @Nullable Output<String> dataType,
+        @Nullable Output<Integer> mapTo,
+        @Nullable Output<String> name) {
         this.dataType = dataType;
         this.mapTo = mapTo;
         this.name = name;
     }
 
     private AzureMachineLearningWebServiceInputColumnArgs() {
-        this.dataType = Input.empty();
-        this.mapTo = Input.empty();
-        this.name = Input.empty();
+        this.dataType = Output.empty();
+        this.mapTo = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class AzureMachineLearningWebServiceInputColumnArgs extends io.pulu
     }
 
     public static final class Builder {
-        private @Nullable Input<String> dataType;
-        private @Nullable Input<Integer> mapTo;
-        private @Nullable Input<String> name;
+        private @Nullable Output<String> dataType;
+        private @Nullable Output<Integer> mapTo;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class AzureMachineLearningWebServiceInputColumnArgs extends io.pulu
     	      this.name = defaults.name;
         }
 
-        public Builder dataType(@Nullable Input<String> dataType) {
+        public Builder dataType(@Nullable Output<String> dataType) {
             this.dataType = dataType;
             return this;
         }
 
         public Builder dataType(@Nullable String dataType) {
-            this.dataType = Input.ofNullable(dataType);
+            this.dataType = Output.ofNullable(dataType);
             return this;
         }
 
-        public Builder mapTo(@Nullable Input<Integer> mapTo) {
+        public Builder mapTo(@Nullable Output<Integer> mapTo) {
             this.mapTo = mapTo;
             return this;
         }
 
         public Builder mapTo(@Nullable Integer mapTo) {
-            this.mapTo = Input.ofNullable(mapTo);
+            this.mapTo = Output.ofNullable(mapTo);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public AzureMachineLearningWebServiceInputColumnArgs build() {

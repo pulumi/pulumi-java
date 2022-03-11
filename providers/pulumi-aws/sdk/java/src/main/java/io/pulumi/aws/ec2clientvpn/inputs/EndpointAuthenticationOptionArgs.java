@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2clientvpn.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class EndpointAuthenticationOptionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="activeDirectoryId")
-      private final @Nullable Input<String> activeDirectoryId;
+      private final @Nullable Output<String> activeDirectoryId;
 
-    public Input<String> getActiveDirectoryId() {
-        return this.activeDirectoryId == null ? Input.empty() : this.activeDirectoryId;
+    public Output<String> getActiveDirectoryId() {
+        return this.activeDirectoryId == null ? Output.empty() : this.activeDirectoryId;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class EndpointAuthenticationOptionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="rootCertificateChainArn")
-      private final @Nullable Input<String> rootCertificateChainArn;
+      private final @Nullable Output<String> rootCertificateChainArn;
 
-    public Input<String> getRootCertificateChainArn() {
-        return this.rootCertificateChainArn == null ? Input.empty() : this.rootCertificateChainArn;
+    public Output<String> getRootCertificateChainArn() {
+        return this.rootCertificateChainArn == null ? Output.empty() : this.rootCertificateChainArn;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class EndpointAuthenticationOptionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="samlProviderArn")
-      private final @Nullable Input<String> samlProviderArn;
+      private final @Nullable Output<String> samlProviderArn;
 
-    public Input<String> getSamlProviderArn() {
-        return this.samlProviderArn == null ? Input.empty() : this.samlProviderArn;
+    public Output<String> getSamlProviderArn() {
+        return this.samlProviderArn == null ? Output.empty() : this.samlProviderArn;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class EndpointAuthenticationOptionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="selfServiceSamlProviderArn")
-      private final @Nullable Input<String> selfServiceSamlProviderArn;
+      private final @Nullable Output<String> selfServiceSamlProviderArn;
 
-    public Input<String> getSelfServiceSamlProviderArn() {
-        return this.selfServiceSamlProviderArn == null ? Input.empty() : this.selfServiceSamlProviderArn;
+    public Output<String> getSelfServiceSamlProviderArn() {
+        return this.selfServiceSamlProviderArn == null ? Output.empty() : this.selfServiceSamlProviderArn;
     }
 
     /**
@@ -63,18 +63,18 @@ public final class EndpointAuthenticationOptionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public EndpointAuthenticationOptionArgs(
-        @Nullable Input<String> activeDirectoryId,
-        @Nullable Input<String> rootCertificateChainArn,
-        @Nullable Input<String> samlProviderArn,
-        @Nullable Input<String> selfServiceSamlProviderArn,
-        Input<String> type) {
+        @Nullable Output<String> activeDirectoryId,
+        @Nullable Output<String> rootCertificateChainArn,
+        @Nullable Output<String> samlProviderArn,
+        @Nullable Output<String> selfServiceSamlProviderArn,
+        Output<String> type) {
         this.activeDirectoryId = activeDirectoryId;
         this.rootCertificateChainArn = rootCertificateChainArn;
         this.samlProviderArn = samlProviderArn;
@@ -83,11 +83,11 @@ public final class EndpointAuthenticationOptionArgs extends io.pulumi.resources.
     }
 
     private EndpointAuthenticationOptionArgs() {
-        this.activeDirectoryId = Input.empty();
-        this.rootCertificateChainArn = Input.empty();
-        this.samlProviderArn = Input.empty();
-        this.selfServiceSamlProviderArn = Input.empty();
-        this.type = Input.empty();
+        this.activeDirectoryId = Output.empty();
+        this.rootCertificateChainArn = Output.empty();
+        this.samlProviderArn = Output.empty();
+        this.selfServiceSamlProviderArn = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -99,11 +99,11 @@ public final class EndpointAuthenticationOptionArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> activeDirectoryId;
-        private @Nullable Input<String> rootCertificateChainArn;
-        private @Nullable Input<String> samlProviderArn;
-        private @Nullable Input<String> selfServiceSamlProviderArn;
-        private Input<String> type;
+        private @Nullable Output<String> activeDirectoryId;
+        private @Nullable Output<String> rootCertificateChainArn;
+        private @Nullable Output<String> samlProviderArn;
+        private @Nullable Output<String> selfServiceSamlProviderArn;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -118,53 +118,53 @@ public final class EndpointAuthenticationOptionArgs extends io.pulumi.resources.
     	      this.type = defaults.type;
         }
 
-        public Builder activeDirectoryId(@Nullable Input<String> activeDirectoryId) {
+        public Builder activeDirectoryId(@Nullable Output<String> activeDirectoryId) {
             this.activeDirectoryId = activeDirectoryId;
             return this;
         }
 
         public Builder activeDirectoryId(@Nullable String activeDirectoryId) {
-            this.activeDirectoryId = Input.ofNullable(activeDirectoryId);
+            this.activeDirectoryId = Output.ofNullable(activeDirectoryId);
             return this;
         }
 
-        public Builder rootCertificateChainArn(@Nullable Input<String> rootCertificateChainArn) {
+        public Builder rootCertificateChainArn(@Nullable Output<String> rootCertificateChainArn) {
             this.rootCertificateChainArn = rootCertificateChainArn;
             return this;
         }
 
         public Builder rootCertificateChainArn(@Nullable String rootCertificateChainArn) {
-            this.rootCertificateChainArn = Input.ofNullable(rootCertificateChainArn);
+            this.rootCertificateChainArn = Output.ofNullable(rootCertificateChainArn);
             return this;
         }
 
-        public Builder samlProviderArn(@Nullable Input<String> samlProviderArn) {
+        public Builder samlProviderArn(@Nullable Output<String> samlProviderArn) {
             this.samlProviderArn = samlProviderArn;
             return this;
         }
 
         public Builder samlProviderArn(@Nullable String samlProviderArn) {
-            this.samlProviderArn = Input.ofNullable(samlProviderArn);
+            this.samlProviderArn = Output.ofNullable(samlProviderArn);
             return this;
         }
 
-        public Builder selfServiceSamlProviderArn(@Nullable Input<String> selfServiceSamlProviderArn) {
+        public Builder selfServiceSamlProviderArn(@Nullable Output<String> selfServiceSamlProviderArn) {
             this.selfServiceSamlProviderArn = selfServiceSamlProviderArn;
             return this;
         }
 
         public Builder selfServiceSamlProviderArn(@Nullable String selfServiceSamlProviderArn) {
-            this.selfServiceSamlProviderArn = Input.ofNullable(selfServiceSamlProviderArn);
+            this.selfServiceSamlProviderArn = Output.ofNullable(selfServiceSamlProviderArn);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public EndpointAuthenticationOptionArgs build() {

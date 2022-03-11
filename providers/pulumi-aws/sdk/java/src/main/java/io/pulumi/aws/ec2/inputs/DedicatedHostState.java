@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoPlacement")
-      private final @Nullable Input<String> autoPlacement;
+      private final @Nullable Output<String> autoPlacement;
 
-    public Input<String> getAutoPlacement() {
-        return this.autoPlacement == null ? Input.empty() : this.autoPlacement;
+    public Output<String> getAutoPlacement() {
+        return this.autoPlacement == null ? Output.empty() : this.autoPlacement;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZone")
-      private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Output<String> availabilityZone;
 
-    public Input<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
+    public Output<String> getAvailabilityZone() {
+        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostRecovery")
-      private final @Nullable Input<String> hostRecovery;
+      private final @Nullable Output<String> hostRecovery;
 
-    public Input<String> getHostRecovery() {
-        return this.hostRecovery == null ? Input.empty() : this.hostRecovery;
+    public Output<String> getHostRecovery() {
+        return this.hostRecovery == null ? Output.empty() : this.hostRecovery;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceFamily")
-      private final @Nullable Input<String> instanceFamily;
+      private final @Nullable Output<String> instanceFamily;
 
-    public Input<String> getInstanceFamily() {
-        return this.instanceFamily == null ? Input.empty() : this.instanceFamily;
+    public Output<String> getInstanceFamily() {
+        return this.instanceFamily == null ? Output.empty() : this.instanceFamily;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceType")
-      private final @Nullable Input<String> instanceType;
+      private final @Nullable Output<String> instanceType;
 
-    public Input<String> getInstanceType() {
-        return this.instanceType == null ? Input.empty() : this.instanceType;
+    public Output<String> getInstanceType() {
+        return this.instanceType == null ? Output.empty() : this.instanceType;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ownerId")
-      private final @Nullable Input<String> ownerId;
+      private final @Nullable Output<String> ownerId;
 
-    public Input<String> getOwnerId() {
-        return this.ownerId == null ? Input.empty() : this.ownerId;
+    public Output<String> getOwnerId() {
+        return this.ownerId == null ? Output.empty() : this.ownerId;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -108,22 +108,22 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public DedicatedHostState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> autoPlacement,
-        @Nullable Input<String> availabilityZone,
-        @Nullable Input<String> hostRecovery,
-        @Nullable Input<String> instanceFamily,
-        @Nullable Input<String> instanceType,
-        @Nullable Input<String> ownerId,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> autoPlacement,
+        @Nullable Output<String> availabilityZone,
+        @Nullable Output<String> hostRecovery,
+        @Nullable Output<String> instanceFamily,
+        @Nullable Output<String> instanceType,
+        @Nullable Output<String> ownerId,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
         this.autoPlacement = autoPlacement;
         this.availabilityZone = availabilityZone;
@@ -136,15 +136,15 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DedicatedHostState() {
-        this.arn = Input.empty();
-        this.autoPlacement = Input.empty();
-        this.availabilityZone = Input.empty();
-        this.hostRecovery = Input.empty();
-        this.instanceFamily = Input.empty();
-        this.instanceType = Input.empty();
-        this.ownerId = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.arn = Output.empty();
+        this.autoPlacement = Output.empty();
+        this.availabilityZone = Output.empty();
+        this.hostRecovery = Output.empty();
+        this.instanceFamily = Output.empty();
+        this.instanceType = Output.empty();
+        this.ownerId = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -156,15 +156,15 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> autoPlacement;
-        private @Nullable Input<String> availabilityZone;
-        private @Nullable Input<String> hostRecovery;
-        private @Nullable Input<String> instanceFamily;
-        private @Nullable Input<String> instanceType;
-        private @Nullable Input<String> ownerId;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> autoPlacement;
+        private @Nullable Output<String> availabilityZone;
+        private @Nullable Output<String> hostRecovery;
+        private @Nullable Output<String> instanceFamily;
+        private @Nullable Output<String> instanceType;
+        private @Nullable Output<String> ownerId;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -183,93 +183,93 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder autoPlacement(@Nullable Input<String> autoPlacement) {
+        public Builder autoPlacement(@Nullable Output<String> autoPlacement) {
             this.autoPlacement = autoPlacement;
             return this;
         }
 
         public Builder autoPlacement(@Nullable String autoPlacement) {
-            this.autoPlacement = Input.ofNullable(autoPlacement);
+            this.autoPlacement = Output.ofNullable(autoPlacement);
             return this;
         }
 
-        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Input.ofNullable(availabilityZone);
+            this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder hostRecovery(@Nullable Input<String> hostRecovery) {
+        public Builder hostRecovery(@Nullable Output<String> hostRecovery) {
             this.hostRecovery = hostRecovery;
             return this;
         }
 
         public Builder hostRecovery(@Nullable String hostRecovery) {
-            this.hostRecovery = Input.ofNullable(hostRecovery);
+            this.hostRecovery = Output.ofNullable(hostRecovery);
             return this;
         }
 
-        public Builder instanceFamily(@Nullable Input<String> instanceFamily) {
+        public Builder instanceFamily(@Nullable Output<String> instanceFamily) {
             this.instanceFamily = instanceFamily;
             return this;
         }
 
         public Builder instanceFamily(@Nullable String instanceFamily) {
-            this.instanceFamily = Input.ofNullable(instanceFamily);
+            this.instanceFamily = Output.ofNullable(instanceFamily);
             return this;
         }
 
-        public Builder instanceType(@Nullable Input<String> instanceType) {
+        public Builder instanceType(@Nullable Output<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Input.ofNullable(instanceType);
+            this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
 
-        public Builder ownerId(@Nullable Input<String> ownerId) {
+        public Builder ownerId(@Nullable Output<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
 
         public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Input.ofNullable(ownerId);
+            this.ownerId = Output.ofNullable(ownerId);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public DedicatedHostState build() {

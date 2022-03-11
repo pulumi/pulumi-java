@@ -4,7 +4,7 @@
 package io.pulumi.aws.opsworks.inputs;
 
 import io.pulumi.aws.opsworks.inputs.MysqlLayerCloudwatchConfigurationLogStreamGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.List;
@@ -17,29 +17,29 @@ public final class MysqlLayerCloudwatchConfigurationGetArgs extends io.pulumi.re
     public static final MysqlLayerCloudwatchConfigurationGetArgs Empty = new MysqlLayerCloudwatchConfigurationGetArgs();
 
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     @InputImport(name="logStreams")
-      private final @Nullable Input<List<MysqlLayerCloudwatchConfigurationLogStreamGetArgs>> logStreams;
+      private final @Nullable Output<List<MysqlLayerCloudwatchConfigurationLogStreamGetArgs>> logStreams;
 
-    public Input<List<MysqlLayerCloudwatchConfigurationLogStreamGetArgs>> getLogStreams() {
-        return this.logStreams == null ? Input.empty() : this.logStreams;
+    public Output<List<MysqlLayerCloudwatchConfigurationLogStreamGetArgs>> getLogStreams() {
+        return this.logStreams == null ? Output.empty() : this.logStreams;
     }
 
     public MysqlLayerCloudwatchConfigurationGetArgs(
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<List<MysqlLayerCloudwatchConfigurationLogStreamGetArgs>> logStreams) {
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<List<MysqlLayerCloudwatchConfigurationLogStreamGetArgs>> logStreams) {
         this.enabled = enabled;
         this.logStreams = logStreams;
     }
 
     private MysqlLayerCloudwatchConfigurationGetArgs() {
-        this.enabled = Input.empty();
-        this.logStreams = Input.empty();
+        this.enabled = Output.empty();
+        this.logStreams = Output.empty();
     }
 
     public static Builder builder() {
@@ -51,8 +51,8 @@ public final class MysqlLayerCloudwatchConfigurationGetArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<List<MysqlLayerCloudwatchConfigurationLogStreamGetArgs>> logStreams;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<List<MysqlLayerCloudwatchConfigurationLogStreamGetArgs>> logStreams;
 
         public Builder() {
     	      // Empty
@@ -64,23 +64,23 @@ public final class MysqlLayerCloudwatchConfigurationGetArgs extends io.pulumi.re
     	      this.logStreams = defaults.logStreams;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder logStreams(@Nullable Input<List<MysqlLayerCloudwatchConfigurationLogStreamGetArgs>> logStreams) {
+        public Builder logStreams(@Nullable Output<List<MysqlLayerCloudwatchConfigurationLogStreamGetArgs>> logStreams) {
             this.logStreams = logStreams;
             return this;
         }
 
         public Builder logStreams(@Nullable List<MysqlLayerCloudwatchConfigurationLogStreamGetArgs> logStreams) {
-            this.logStreams = Input.ofNullable(logStreams);
+            this.logStreams = Output.ofNullable(logStreams);
             return this;
         }
         public MysqlLayerCloudwatchConfigurationGetArgs build() {

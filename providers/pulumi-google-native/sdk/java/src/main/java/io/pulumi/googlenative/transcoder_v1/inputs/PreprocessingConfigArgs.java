@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.transcoder_v1.inputs.AudioArgs;
 import io.pulumi.googlenative.transcoder_v1.inputs.ColorArgs;
@@ -28,10 +28,10 @@ public final class PreprocessingConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="audio")
-      private final @Nullable Input<AudioArgs> audio;
+      private final @Nullable Output<AudioArgs> audio;
 
-    public Input<AudioArgs> getAudio() {
-        return this.audio == null ? Input.empty() : this.audio;
+    public Output<AudioArgs> getAudio() {
+        return this.audio == null ? Output.empty() : this.audio;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class PreprocessingConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="color")
-      private final @Nullable Input<ColorArgs> color;
+      private final @Nullable Output<ColorArgs> color;
 
-    public Input<ColorArgs> getColor() {
-        return this.color == null ? Input.empty() : this.color;
+    public Output<ColorArgs> getColor() {
+        return this.color == null ? Output.empty() : this.color;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class PreprocessingConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="crop")
-      private final @Nullable Input<CropArgs> crop;
+      private final @Nullable Output<CropArgs> crop;
 
-    public Input<CropArgs> getCrop() {
-        return this.crop == null ? Input.empty() : this.crop;
+    public Output<CropArgs> getCrop() {
+        return this.crop == null ? Output.empty() : this.crop;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class PreprocessingConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="deblock")
-      private final @Nullable Input<DeblockArgs> deblock;
+      private final @Nullable Output<DeblockArgs> deblock;
 
-    public Input<DeblockArgs> getDeblock() {
-        return this.deblock == null ? Input.empty() : this.deblock;
+    public Output<DeblockArgs> getDeblock() {
+        return this.deblock == null ? Output.empty() : this.deblock;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class PreprocessingConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="denoise")
-      private final @Nullable Input<DenoiseArgs> denoise;
+      private final @Nullable Output<DenoiseArgs> denoise;
 
-    public Input<DenoiseArgs> getDenoise() {
-        return this.denoise == null ? Input.empty() : this.denoise;
+    public Output<DenoiseArgs> getDenoise() {
+        return this.denoise == null ? Output.empty() : this.denoise;
     }
 
     /**
@@ -83,19 +83,19 @@ public final class PreprocessingConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="pad")
-      private final @Nullable Input<PadArgs> pad;
+      private final @Nullable Output<PadArgs> pad;
 
-    public Input<PadArgs> getPad() {
-        return this.pad == null ? Input.empty() : this.pad;
+    public Output<PadArgs> getPad() {
+        return this.pad == null ? Output.empty() : this.pad;
     }
 
     public PreprocessingConfigArgs(
-        @Nullable Input<AudioArgs> audio,
-        @Nullable Input<ColorArgs> color,
-        @Nullable Input<CropArgs> crop,
-        @Nullable Input<DeblockArgs> deblock,
-        @Nullable Input<DenoiseArgs> denoise,
-        @Nullable Input<PadArgs> pad) {
+        @Nullable Output<AudioArgs> audio,
+        @Nullable Output<ColorArgs> color,
+        @Nullable Output<CropArgs> crop,
+        @Nullable Output<DeblockArgs> deblock,
+        @Nullable Output<DenoiseArgs> denoise,
+        @Nullable Output<PadArgs> pad) {
         this.audio = audio;
         this.color = color;
         this.crop = crop;
@@ -105,12 +105,12 @@ public final class PreprocessingConfigArgs extends io.pulumi.resources.ResourceA
     }
 
     private PreprocessingConfigArgs() {
-        this.audio = Input.empty();
-        this.color = Input.empty();
-        this.crop = Input.empty();
-        this.deblock = Input.empty();
-        this.denoise = Input.empty();
-        this.pad = Input.empty();
+        this.audio = Output.empty();
+        this.color = Output.empty();
+        this.crop = Output.empty();
+        this.deblock = Output.empty();
+        this.denoise = Output.empty();
+        this.pad = Output.empty();
     }
 
     public static Builder builder() {
@@ -122,12 +122,12 @@ public final class PreprocessingConfigArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<AudioArgs> audio;
-        private @Nullable Input<ColorArgs> color;
-        private @Nullable Input<CropArgs> crop;
-        private @Nullable Input<DeblockArgs> deblock;
-        private @Nullable Input<DenoiseArgs> denoise;
-        private @Nullable Input<PadArgs> pad;
+        private @Nullable Output<AudioArgs> audio;
+        private @Nullable Output<ColorArgs> color;
+        private @Nullable Output<CropArgs> crop;
+        private @Nullable Output<DeblockArgs> deblock;
+        private @Nullable Output<DenoiseArgs> denoise;
+        private @Nullable Output<PadArgs> pad;
 
         public Builder() {
     	      // Empty
@@ -143,63 +143,63 @@ public final class PreprocessingConfigArgs extends io.pulumi.resources.ResourceA
     	      this.pad = defaults.pad;
         }
 
-        public Builder audio(@Nullable Input<AudioArgs> audio) {
+        public Builder audio(@Nullable Output<AudioArgs> audio) {
             this.audio = audio;
             return this;
         }
 
         public Builder audio(@Nullable AudioArgs audio) {
-            this.audio = Input.ofNullable(audio);
+            this.audio = Output.ofNullable(audio);
             return this;
         }
 
-        public Builder color(@Nullable Input<ColorArgs> color) {
+        public Builder color(@Nullable Output<ColorArgs> color) {
             this.color = color;
             return this;
         }
 
         public Builder color(@Nullable ColorArgs color) {
-            this.color = Input.ofNullable(color);
+            this.color = Output.ofNullable(color);
             return this;
         }
 
-        public Builder crop(@Nullable Input<CropArgs> crop) {
+        public Builder crop(@Nullable Output<CropArgs> crop) {
             this.crop = crop;
             return this;
         }
 
         public Builder crop(@Nullable CropArgs crop) {
-            this.crop = Input.ofNullable(crop);
+            this.crop = Output.ofNullable(crop);
             return this;
         }
 
-        public Builder deblock(@Nullable Input<DeblockArgs> deblock) {
+        public Builder deblock(@Nullable Output<DeblockArgs> deblock) {
             this.deblock = deblock;
             return this;
         }
 
         public Builder deblock(@Nullable DeblockArgs deblock) {
-            this.deblock = Input.ofNullable(deblock);
+            this.deblock = Output.ofNullable(deblock);
             return this;
         }
 
-        public Builder denoise(@Nullable Input<DenoiseArgs> denoise) {
+        public Builder denoise(@Nullable Output<DenoiseArgs> denoise) {
             this.denoise = denoise;
             return this;
         }
 
         public Builder denoise(@Nullable DenoiseArgs denoise) {
-            this.denoise = Input.ofNullable(denoise);
+            this.denoise = Output.ofNullable(denoise);
             return this;
         }
 
-        public Builder pad(@Nullable Input<PadArgs> pad) {
+        public Builder pad(@Nullable Output<PadArgs> pad) {
             this.pad = pad;
             return this;
         }
 
         public Builder pad(@Nullable PadArgs pad) {
-            this.pad = Input.ofNullable(pad);
+            this.pad = Output.ofNullable(pad);
             return this;
         }
         public PreprocessingConfigArgs build() {

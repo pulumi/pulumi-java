@@ -6,7 +6,6 @@ package io.pulumi.azurenative.blueprint;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.blueprint.RoleAssignmentArtifactArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -199,10 +198,10 @@ public class RoleAssignmentArtifact extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RoleAssignmentArtifact(String name, RoleAssignmentArtifactArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:blueprint:RoleAssignmentArtifact", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
+        super("azure-native:blueprint:RoleAssignmentArtifact", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
     }
 
-    private RoleAssignmentArtifact(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private RoleAssignmentArtifact(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:blueprint:RoleAssignmentArtifact", name, null, makeResourceOptions(options, id));
     }
 
@@ -213,11 +212,11 @@ public class RoleAssignmentArtifact extends io.pulumi.resources.CustomResource {
             .build();
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:blueprint/v20181101preview:RoleAssignmentArtifact").build())
+                Output.of(Alias.builder().setType("azure-native:blueprint/v20181101preview:RoleAssignmentArtifact").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -231,7 +230,7 @@ public class RoleAssignmentArtifact extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RoleAssignmentArtifact get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static RoleAssignmentArtifact get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RoleAssignmentArtifact(name, id, options);
     }
 }

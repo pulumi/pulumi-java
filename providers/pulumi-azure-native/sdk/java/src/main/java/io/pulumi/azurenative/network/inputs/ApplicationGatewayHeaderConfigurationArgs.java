@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ApplicationGatewayHeaderConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="headerName")
-      private final @Nullable Input<String> headerName;
+      private final @Nullable Output<String> headerName;
 
-    public Input<String> getHeaderName() {
-        return this.headerName == null ? Input.empty() : this.headerName;
+    public Output<String> getHeaderName() {
+        return this.headerName == null ? Output.empty() : this.headerName;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class ApplicationGatewayHeaderConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="headerValue")
-      private final @Nullable Input<String> headerValue;
+      private final @Nullable Output<String> headerValue;
 
-    public Input<String> getHeaderValue() {
-        return this.headerValue == null ? Input.empty() : this.headerValue;
+    public Output<String> getHeaderValue() {
+        return this.headerValue == null ? Output.empty() : this.headerValue;
     }
 
     public ApplicationGatewayHeaderConfigurationArgs(
-        @Nullable Input<String> headerName,
-        @Nullable Input<String> headerValue) {
+        @Nullable Output<String> headerName,
+        @Nullable Output<String> headerValue) {
         this.headerName = headerName;
         this.headerValue = headerValue;
     }
 
     private ApplicationGatewayHeaderConfigurationArgs() {
-        this.headerName = Input.empty();
-        this.headerValue = Input.empty();
+        this.headerName = Output.empty();
+        this.headerValue = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ApplicationGatewayHeaderConfigurationArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<String> headerName;
-        private @Nullable Input<String> headerValue;
+        private @Nullable Output<String> headerName;
+        private @Nullable Output<String> headerValue;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ApplicationGatewayHeaderConfigurationArgs extends io.pulumi.r
     	      this.headerValue = defaults.headerValue;
         }
 
-        public Builder headerName(@Nullable Input<String> headerName) {
+        public Builder headerName(@Nullable Output<String> headerName) {
             this.headerName = headerName;
             return this;
         }
 
         public Builder headerName(@Nullable String headerName) {
-            this.headerName = Input.ofNullable(headerName);
+            this.headerName = Output.ofNullable(headerName);
             return this;
         }
 
-        public Builder headerValue(@Nullable Input<String> headerValue) {
+        public Builder headerValue(@Nullable Output<String> headerValue) {
             this.headerValue = headerValue;
             return this;
         }
 
         public Builder headerValue(@Nullable String headerValue) {
-            this.headerValue = Input.ofNullable(headerValue);
+            this.headerValue = Output.ofNullable(headerValue);
             return this;
         }
         public ApplicationGatewayHeaderConfigurationArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.node.k8s.io_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.TolerationArgs;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeSelector")
-      private final @Nullable Input<Map<String,String>> nodeSelector;
+      private final @Nullable Output<Map<String,String>> nodeSelector;
 
-    public Input<Map<String,String>> getNodeSelector() {
-        return this.nodeSelector == null ? Input.empty() : this.nodeSelector;
+    public Output<Map<String,String>> getNodeSelector() {
+        return this.nodeSelector == null ? Output.empty() : this.nodeSelector;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tolerations")
-      private final @Nullable Input<List<TolerationArgs>> tolerations;
+      private final @Nullable Output<List<TolerationArgs>> tolerations;
 
-    public Input<List<TolerationArgs>> getTolerations() {
-        return this.tolerations == null ? Input.empty() : this.tolerations;
+    public Output<List<TolerationArgs>> getTolerations() {
+        return this.tolerations == null ? Output.empty() : this.tolerations;
     }
 
     public SchedulingArgs(
-        @Nullable Input<Map<String,String>> nodeSelector,
-        @Nullable Input<List<TolerationArgs>> tolerations) {
+        @Nullable Output<Map<String,String>> nodeSelector,
+        @Nullable Output<List<TolerationArgs>> tolerations) {
         this.nodeSelector = nodeSelector;
         this.tolerations = tolerations;
     }
 
     private SchedulingArgs() {
-        this.nodeSelector = Input.empty();
-        this.tolerations = Input.empty();
+        this.nodeSelector = Output.empty();
+        this.tolerations = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> nodeSelector;
-        private @Nullable Input<List<TolerationArgs>> tolerations;
+        private @Nullable Output<Map<String,String>> nodeSelector;
+        private @Nullable Output<List<TolerationArgs>> tolerations;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tolerations = defaults.tolerations;
         }
 
-        public Builder nodeSelector(@Nullable Input<Map<String,String>> nodeSelector) {
+        public Builder nodeSelector(@Nullable Output<Map<String,String>> nodeSelector) {
             this.nodeSelector = nodeSelector;
             return this;
         }
 
         public Builder nodeSelector(@Nullable Map<String,String> nodeSelector) {
-            this.nodeSelector = Input.ofNullable(nodeSelector);
+            this.nodeSelector = Output.ofNullable(nodeSelector);
             return this;
         }
 
-        public Builder tolerations(@Nullable Input<List<TolerationArgs>> tolerations) {
+        public Builder tolerations(@Nullable Output<List<TolerationArgs>> tolerations) {
             this.tolerations = tolerations;
             return this;
         }
 
         public Builder tolerations(@Nullable List<TolerationArgs> tolerations) {
-            this.tolerations = Input.ofNullable(tolerations);
+            this.tolerations = Output.ofNullable(tolerations);
             return this;
         }
         public SchedulingArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class BlobShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sasUri", required=true)
-      private final Input<String> sasUri;
+      private final Output<String> sasUri;
 
-    public Input<String> getSasUri() {
+    public Output<String> getSasUri() {
         return this.sasUri;
     }
 
-    public BlobShareArgs(Input<String> sasUri) {
+    public BlobShareArgs(Output<String> sasUri) {
         this.sasUri = Objects.requireNonNull(sasUri, "expected parameter 'sasUri' to be non-null");
     }
 
     private BlobShareArgs() {
-        this.sasUri = Input.empty();
+        this.sasUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class BlobShareArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> sasUri;
+        private Output<String> sasUri;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class BlobShareArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sasUri = defaults.sasUri;
         }
 
-        public Builder sasUri(Input<String> sasUri) {
+        public Builder sasUri(Output<String> sasUri) {
             this.sasUri = Objects.requireNonNull(sasUri);
             return this;
         }
 
         public Builder sasUri(String sasUri) {
-            this.sasUri = Input.of(Objects.requireNonNull(sasUri));
+            this.sasUri = Output.of(Objects.requireNonNull(sasUri));
             return this;
         }
         public BlobShareArgs build() {

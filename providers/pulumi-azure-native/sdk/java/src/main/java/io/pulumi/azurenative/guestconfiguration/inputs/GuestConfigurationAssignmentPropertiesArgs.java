@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.guestconfiguration.inputs;
 
 import io.pulumi.azurenative.guestconfiguration.inputs.GuestConfigurationNavigationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class GuestConfigurationAssignmentPropertiesArgs extends io.pulumi.
      * 
      */
     @InputImport(name="context")
-      private final @Nullable Input<String> context;
+      private final @Nullable Output<String> context;
 
-    public Input<String> getContext() {
-        return this.context == null ? Input.empty() : this.context;
+    public Output<String> getContext() {
+        return this.context == null ? Output.empty() : this.context;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class GuestConfigurationAssignmentPropertiesArgs extends io.pulumi.
      * 
      */
     @InputImport(name="guestConfiguration")
-      private final @Nullable Input<GuestConfigurationNavigationArgs> guestConfiguration;
+      private final @Nullable Output<GuestConfigurationNavigationArgs> guestConfiguration;
 
-    public Input<GuestConfigurationNavigationArgs> getGuestConfiguration() {
-        return this.guestConfiguration == null ? Input.empty() : this.guestConfiguration;
+    public Output<GuestConfigurationNavigationArgs> getGuestConfiguration() {
+        return this.guestConfiguration == null ? Output.empty() : this.guestConfiguration;
     }
 
     public GuestConfigurationAssignmentPropertiesArgs(
-        @Nullable Input<String> context,
-        @Nullable Input<GuestConfigurationNavigationArgs> guestConfiguration) {
+        @Nullable Output<String> context,
+        @Nullable Output<GuestConfigurationNavigationArgs> guestConfiguration) {
         this.context = context;
         this.guestConfiguration = guestConfiguration;
     }
 
     private GuestConfigurationAssignmentPropertiesArgs() {
-        this.context = Input.empty();
-        this.guestConfiguration = Input.empty();
+        this.context = Output.empty();
+        this.guestConfiguration = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class GuestConfigurationAssignmentPropertiesArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> context;
-        private @Nullable Input<GuestConfigurationNavigationArgs> guestConfiguration;
+        private @Nullable Output<String> context;
+        private @Nullable Output<GuestConfigurationNavigationArgs> guestConfiguration;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class GuestConfigurationAssignmentPropertiesArgs extends io.pulumi.
     	      this.guestConfiguration = defaults.guestConfiguration;
         }
 
-        public Builder context(@Nullable Input<String> context) {
+        public Builder context(@Nullable Output<String> context) {
             this.context = context;
             return this;
         }
 
         public Builder context(@Nullable String context) {
-            this.context = Input.ofNullable(context);
+            this.context = Output.ofNullable(context);
             return this;
         }
 
-        public Builder guestConfiguration(@Nullable Input<GuestConfigurationNavigationArgs> guestConfiguration) {
+        public Builder guestConfiguration(@Nullable Output<GuestConfigurationNavigationArgs> guestConfiguration) {
             this.guestConfiguration = guestConfiguration;
             return this;
         }
 
         public Builder guestConfiguration(@Nullable GuestConfigurationNavigationArgs guestConfiguration) {
-            this.guestConfiguration = Input.ofNullable(guestConfiguration);
+            this.guestConfiguration = Output.ofNullable(guestConfiguration);
             return this;
         }
         public GuestConfigurationAssignmentPropertiesArgs build() {

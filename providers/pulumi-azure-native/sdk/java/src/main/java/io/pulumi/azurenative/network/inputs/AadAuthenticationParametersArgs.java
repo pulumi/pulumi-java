@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class AadAuthenticationParametersArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="aadAudience")
-      private final @Nullable Input<String> aadAudience;
+      private final @Nullable Output<String> aadAudience;
 
-    public Input<String> getAadAudience() {
-        return this.aadAudience == null ? Input.empty() : this.aadAudience;
+    public Output<String> getAadAudience() {
+        return this.aadAudience == null ? Output.empty() : this.aadAudience;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class AadAuthenticationParametersArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="aadIssuer")
-      private final @Nullable Input<String> aadIssuer;
+      private final @Nullable Output<String> aadIssuer;
 
-    public Input<String> getAadIssuer() {
-        return this.aadIssuer == null ? Input.empty() : this.aadIssuer;
+    public Output<String> getAadIssuer() {
+        return this.aadIssuer == null ? Output.empty() : this.aadIssuer;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class AadAuthenticationParametersArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="aadTenant")
-      private final @Nullable Input<String> aadTenant;
+      private final @Nullable Output<String> aadTenant;
 
-    public Input<String> getAadTenant() {
-        return this.aadTenant == null ? Input.empty() : this.aadTenant;
+    public Output<String> getAadTenant() {
+        return this.aadTenant == null ? Output.empty() : this.aadTenant;
     }
 
     public AadAuthenticationParametersArgs(
-        @Nullable Input<String> aadAudience,
-        @Nullable Input<String> aadIssuer,
-        @Nullable Input<String> aadTenant) {
+        @Nullable Output<String> aadAudience,
+        @Nullable Output<String> aadIssuer,
+        @Nullable Output<String> aadTenant) {
         this.aadAudience = aadAudience;
         this.aadIssuer = aadIssuer;
         this.aadTenant = aadTenant;
     }
 
     private AadAuthenticationParametersArgs() {
-        this.aadAudience = Input.empty();
-        this.aadIssuer = Input.empty();
-        this.aadTenant = Input.empty();
+        this.aadAudience = Output.empty();
+        this.aadIssuer = Output.empty();
+        this.aadTenant = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class AadAuthenticationParametersArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> aadAudience;
-        private @Nullable Input<String> aadIssuer;
-        private @Nullable Input<String> aadTenant;
+        private @Nullable Output<String> aadAudience;
+        private @Nullable Output<String> aadIssuer;
+        private @Nullable Output<String> aadTenant;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class AadAuthenticationParametersArgs extends io.pulumi.resources.R
     	      this.aadTenant = defaults.aadTenant;
         }
 
-        public Builder aadAudience(@Nullable Input<String> aadAudience) {
+        public Builder aadAudience(@Nullable Output<String> aadAudience) {
             this.aadAudience = aadAudience;
             return this;
         }
 
         public Builder aadAudience(@Nullable String aadAudience) {
-            this.aadAudience = Input.ofNullable(aadAudience);
+            this.aadAudience = Output.ofNullable(aadAudience);
             return this;
         }
 
-        public Builder aadIssuer(@Nullable Input<String> aadIssuer) {
+        public Builder aadIssuer(@Nullable Output<String> aadIssuer) {
             this.aadIssuer = aadIssuer;
             return this;
         }
 
         public Builder aadIssuer(@Nullable String aadIssuer) {
-            this.aadIssuer = Input.ofNullable(aadIssuer);
+            this.aadIssuer = Output.ofNullable(aadIssuer);
             return this;
         }
 
-        public Builder aadTenant(@Nullable Input<String> aadTenant) {
+        public Builder aadTenant(@Nullable Output<String> aadTenant) {
             this.aadTenant = aadTenant;
             return this;
         }
 
         public Builder aadTenant(@Nullable String aadTenant) {
-            this.aadTenant = Input.ofNullable(aadTenant);
+            this.aadTenant = Output.ofNullable(aadTenant);
             return this;
         }
         public AadAuthenticationParametersArgs build() {

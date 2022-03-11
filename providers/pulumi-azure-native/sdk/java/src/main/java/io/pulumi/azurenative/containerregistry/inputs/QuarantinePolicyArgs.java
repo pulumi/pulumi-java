@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.enums.PolicyStatus;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,18 +25,18 @@ public final class QuarantinePolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<Either<String,PolicyStatus>> status;
+      private final @Nullable Output<Either<String,PolicyStatus>> status;
 
-    public Input<Either<String,PolicyStatus>> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<Either<String,PolicyStatus>> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
-    public QuarantinePolicyArgs(@Nullable Input<Either<String,PolicyStatus>> status) {
-        this.status = status == null ? Input.ofLeft("disabled") : status;
+    public QuarantinePolicyArgs(@Nullable Output<Either<String,PolicyStatus>> status) {
+        this.status = status == null ? Output.ofLeft("disabled") : status;
     }
 
     private QuarantinePolicyArgs() {
-        this.status = Input.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,7 +48,7 @@ public final class QuarantinePolicyArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,PolicyStatus>> status;
+        private @Nullable Output<Either<String,PolicyStatus>> status;
 
         public Builder() {
     	      // Empty
@@ -59,13 +59,13 @@ public final class QuarantinePolicyArgs extends io.pulumi.resources.ResourceArgs
     	      this.status = defaults.status;
         }
 
-        public Builder status(@Nullable Input<Either<String,PolicyStatus>> status) {
+        public Builder status(@Nullable Output<Either<String,PolicyStatus>> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable Either<String,PolicyStatus> status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public QuarantinePolicyArgs build() {

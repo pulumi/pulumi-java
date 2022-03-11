@@ -6,7 +6,7 @@ package io.pulumi.azurenative.servicefabric;
 import io.pulumi.azurenative.servicefabric.inputs.EndpointRangeDescriptionArgs;
 import io.pulumi.azurenative.servicefabric.inputs.VMSSExtensionArgs;
 import io.pulumi.azurenative.servicefabric.inputs.VaultSecretGroupArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -26,10 +26,10 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationPorts")
-      private final @Nullable Input<EndpointRangeDescriptionArgs> applicationPorts;
+      private final @Nullable Output<EndpointRangeDescriptionArgs> applicationPorts;
 
-    public Input<EndpointRangeDescriptionArgs> getApplicationPorts() {
-        return this.applicationPorts == null ? Input.empty() : this.applicationPorts;
+    public Output<EndpointRangeDescriptionArgs> getApplicationPorts() {
+        return this.applicationPorts == null ? Output.empty() : this.applicationPorts;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacities")
-      private final @Nullable Input<Map<String,String>> capacities;
+      private final @Nullable Output<Map<String,String>> capacities;
 
-    public Input<Map<String,String>> getCapacities() {
-        return this.capacities == null ? Input.empty() : this.capacities;
+    public Output<Map<String,String>> getCapacities() {
+        return this.capacities == null ? Output.empty() : this.capacities;
     }
 
     /**
@@ -48,9 +48,9 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName", required=true)
-      private final Input<String> clusterName;
+      private final Output<String> clusterName;
 
-    public Input<String> getClusterName() {
+    public Output<String> getClusterName() {
         return this.clusterName;
     }
 
@@ -59,9 +59,9 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataDiskSizeGB", required=true)
-      private final Input<Integer> dataDiskSizeGB;
+      private final Output<Integer> dataDiskSizeGB;
 
-    public Input<Integer> getDataDiskSizeGB() {
+    public Output<Integer> getDataDiskSizeGB() {
         return this.dataDiskSizeGB;
     }
 
@@ -70,10 +70,10 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ephemeralPorts")
-      private final @Nullable Input<EndpointRangeDescriptionArgs> ephemeralPorts;
+      private final @Nullable Output<EndpointRangeDescriptionArgs> ephemeralPorts;
 
-    public Input<EndpointRangeDescriptionArgs> getEphemeralPorts() {
-        return this.ephemeralPorts == null ? Input.empty() : this.ephemeralPorts;
+    public Output<EndpointRangeDescriptionArgs> getEphemeralPorts() {
+        return this.ephemeralPorts == null ? Output.empty() : this.ephemeralPorts;
     }
 
     /**
@@ -81,9 +81,9 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isPrimary", required=true)
-      private final Input<Boolean> isPrimary;
+      private final Output<Boolean> isPrimary;
 
-    public Input<Boolean> getIsPrimary() {
+    public Output<Boolean> getIsPrimary() {
         return this.isPrimary;
     }
 
@@ -92,10 +92,10 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeTypeName")
-      private final @Nullable Input<String> nodeTypeName;
+      private final @Nullable Output<String> nodeTypeName;
 
-    public Input<String> getNodeTypeName() {
-        return this.nodeTypeName == null ? Input.empty() : this.nodeTypeName;
+    public Output<String> getNodeTypeName() {
+        return this.nodeTypeName == null ? Output.empty() : this.nodeTypeName;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="placementProperties")
-      private final @Nullable Input<Map<String,String>> placementProperties;
+      private final @Nullable Output<Map<String,String>> placementProperties;
 
-    public Input<Map<String,String>> getPlacementProperties() {
-        return this.placementProperties == null ? Input.empty() : this.placementProperties;
+    public Output<Map<String,String>> getPlacementProperties() {
+        return this.placementProperties == null ? Output.empty() : this.placementProperties;
     }
 
     /**
@@ -114,9 +114,9 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -125,10 +125,10 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -136,10 +136,10 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vmExtensions")
-      private final @Nullable Input<List<VMSSExtensionArgs>> vmExtensions;
+      private final @Nullable Output<List<VMSSExtensionArgs>> vmExtensions;
 
-    public Input<List<VMSSExtensionArgs>> getVmExtensions() {
-        return this.vmExtensions == null ? Input.empty() : this.vmExtensions;
+    public Output<List<VMSSExtensionArgs>> getVmExtensions() {
+        return this.vmExtensions == null ? Output.empty() : this.vmExtensions;
     }
 
     /**
@@ -147,10 +147,10 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vmImageOffer")
-      private final @Nullable Input<String> vmImageOffer;
+      private final @Nullable Output<String> vmImageOffer;
 
-    public Input<String> getVmImageOffer() {
-        return this.vmImageOffer == null ? Input.empty() : this.vmImageOffer;
+    public Output<String> getVmImageOffer() {
+        return this.vmImageOffer == null ? Output.empty() : this.vmImageOffer;
     }
 
     /**
@@ -158,10 +158,10 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vmImagePublisher")
-      private final @Nullable Input<String> vmImagePublisher;
+      private final @Nullable Output<String> vmImagePublisher;
 
-    public Input<String> getVmImagePublisher() {
-        return this.vmImagePublisher == null ? Input.empty() : this.vmImagePublisher;
+    public Output<String> getVmImagePublisher() {
+        return this.vmImagePublisher == null ? Output.empty() : this.vmImagePublisher;
     }
 
     /**
@@ -169,10 +169,10 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vmImageSku")
-      private final @Nullable Input<String> vmImageSku;
+      private final @Nullable Output<String> vmImageSku;
 
-    public Input<String> getVmImageSku() {
-        return this.vmImageSku == null ? Input.empty() : this.vmImageSku;
+    public Output<String> getVmImageSku() {
+        return this.vmImageSku == null ? Output.empty() : this.vmImageSku;
     }
 
     /**
@@ -180,10 +180,10 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vmImageVersion")
-      private final @Nullable Input<String> vmImageVersion;
+      private final @Nullable Output<String> vmImageVersion;
 
-    public Input<String> getVmImageVersion() {
-        return this.vmImageVersion == null ? Input.empty() : this.vmImageVersion;
+    public Output<String> getVmImageVersion() {
+        return this.vmImageVersion == null ? Output.empty() : this.vmImageVersion;
     }
 
     /**
@@ -191,9 +191,9 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vmInstanceCount", required=true)
-      private final Input<Integer> vmInstanceCount;
+      private final Output<Integer> vmInstanceCount;
 
-    public Input<Integer> getVmInstanceCount() {
+    public Output<Integer> getVmInstanceCount() {
         return this.vmInstanceCount;
     }
 
@@ -202,10 +202,10 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vmSecrets")
-      private final @Nullable Input<List<VaultSecretGroupArgs>> vmSecrets;
+      private final @Nullable Output<List<VaultSecretGroupArgs>> vmSecrets;
 
-    public Input<List<VaultSecretGroupArgs>> getVmSecrets() {
-        return this.vmSecrets == null ? Input.empty() : this.vmSecrets;
+    public Output<List<VaultSecretGroupArgs>> getVmSecrets() {
+        return this.vmSecrets == null ? Output.empty() : this.vmSecrets;
     }
 
     /**
@@ -213,31 +213,31 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vmSize")
-      private final @Nullable Input<String> vmSize;
+      private final @Nullable Output<String> vmSize;
 
-    public Input<String> getVmSize() {
-        return this.vmSize == null ? Input.empty() : this.vmSize;
+    public Output<String> getVmSize() {
+        return this.vmSize == null ? Output.empty() : this.vmSize;
     }
 
     public NodeTypeArgs(
-        @Nullable Input<EndpointRangeDescriptionArgs> applicationPorts,
-        @Nullable Input<Map<String,String>> capacities,
-        Input<String> clusterName,
-        Input<Integer> dataDiskSizeGB,
-        @Nullable Input<EndpointRangeDescriptionArgs> ephemeralPorts,
-        Input<Boolean> isPrimary,
-        @Nullable Input<String> nodeTypeName,
-        @Nullable Input<Map<String,String>> placementProperties,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<List<VMSSExtensionArgs>> vmExtensions,
-        @Nullable Input<String> vmImageOffer,
-        @Nullable Input<String> vmImagePublisher,
-        @Nullable Input<String> vmImageSku,
-        @Nullable Input<String> vmImageVersion,
-        Input<Integer> vmInstanceCount,
-        @Nullable Input<List<VaultSecretGroupArgs>> vmSecrets,
-        @Nullable Input<String> vmSize) {
+        @Nullable Output<EndpointRangeDescriptionArgs> applicationPorts,
+        @Nullable Output<Map<String,String>> capacities,
+        Output<String> clusterName,
+        Output<Integer> dataDiskSizeGB,
+        @Nullable Output<EndpointRangeDescriptionArgs> ephemeralPorts,
+        Output<Boolean> isPrimary,
+        @Nullable Output<String> nodeTypeName,
+        @Nullable Output<Map<String,String>> placementProperties,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<List<VMSSExtensionArgs>> vmExtensions,
+        @Nullable Output<String> vmImageOffer,
+        @Nullable Output<String> vmImagePublisher,
+        @Nullable Output<String> vmImageSku,
+        @Nullable Output<String> vmImageVersion,
+        Output<Integer> vmInstanceCount,
+        @Nullable Output<List<VaultSecretGroupArgs>> vmSecrets,
+        @Nullable Output<String> vmSize) {
         this.applicationPorts = applicationPorts;
         this.capacities = capacities;
         this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
@@ -259,24 +259,24 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NodeTypeArgs() {
-        this.applicationPorts = Input.empty();
-        this.capacities = Input.empty();
-        this.clusterName = Input.empty();
-        this.dataDiskSizeGB = Input.empty();
-        this.ephemeralPorts = Input.empty();
-        this.isPrimary = Input.empty();
-        this.nodeTypeName = Input.empty();
-        this.placementProperties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
-        this.vmExtensions = Input.empty();
-        this.vmImageOffer = Input.empty();
-        this.vmImagePublisher = Input.empty();
-        this.vmImageSku = Input.empty();
-        this.vmImageVersion = Input.empty();
-        this.vmInstanceCount = Input.empty();
-        this.vmSecrets = Input.empty();
-        this.vmSize = Input.empty();
+        this.applicationPorts = Output.empty();
+        this.capacities = Output.empty();
+        this.clusterName = Output.empty();
+        this.dataDiskSizeGB = Output.empty();
+        this.ephemeralPorts = Output.empty();
+        this.isPrimary = Output.empty();
+        this.nodeTypeName = Output.empty();
+        this.placementProperties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
+        this.vmExtensions = Output.empty();
+        this.vmImageOffer = Output.empty();
+        this.vmImagePublisher = Output.empty();
+        this.vmImageSku = Output.empty();
+        this.vmImageVersion = Output.empty();
+        this.vmInstanceCount = Output.empty();
+        this.vmSecrets = Output.empty();
+        this.vmSize = Output.empty();
     }
 
     public static Builder builder() {
@@ -288,24 +288,24 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<EndpointRangeDescriptionArgs> applicationPorts;
-        private @Nullable Input<Map<String,String>> capacities;
-        private Input<String> clusterName;
-        private Input<Integer> dataDiskSizeGB;
-        private @Nullable Input<EndpointRangeDescriptionArgs> ephemeralPorts;
-        private Input<Boolean> isPrimary;
-        private @Nullable Input<String> nodeTypeName;
-        private @Nullable Input<Map<String,String>> placementProperties;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<List<VMSSExtensionArgs>> vmExtensions;
-        private @Nullable Input<String> vmImageOffer;
-        private @Nullable Input<String> vmImagePublisher;
-        private @Nullable Input<String> vmImageSku;
-        private @Nullable Input<String> vmImageVersion;
-        private Input<Integer> vmInstanceCount;
-        private @Nullable Input<List<VaultSecretGroupArgs>> vmSecrets;
-        private @Nullable Input<String> vmSize;
+        private @Nullable Output<EndpointRangeDescriptionArgs> applicationPorts;
+        private @Nullable Output<Map<String,String>> capacities;
+        private Output<String> clusterName;
+        private Output<Integer> dataDiskSizeGB;
+        private @Nullable Output<EndpointRangeDescriptionArgs> ephemeralPorts;
+        private Output<Boolean> isPrimary;
+        private @Nullable Output<String> nodeTypeName;
+        private @Nullable Output<Map<String,String>> placementProperties;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<List<VMSSExtensionArgs>> vmExtensions;
+        private @Nullable Output<String> vmImageOffer;
+        private @Nullable Output<String> vmImagePublisher;
+        private @Nullable Output<String> vmImageSku;
+        private @Nullable Output<String> vmImageVersion;
+        private Output<Integer> vmInstanceCount;
+        private @Nullable Output<List<VaultSecretGroupArgs>> vmSecrets;
+        private @Nullable Output<String> vmSize;
 
         public Builder() {
     	      // Empty
@@ -333,183 +333,183 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vmSize = defaults.vmSize;
         }
 
-        public Builder applicationPorts(@Nullable Input<EndpointRangeDescriptionArgs> applicationPorts) {
+        public Builder applicationPorts(@Nullable Output<EndpointRangeDescriptionArgs> applicationPorts) {
             this.applicationPorts = applicationPorts;
             return this;
         }
 
         public Builder applicationPorts(@Nullable EndpointRangeDescriptionArgs applicationPorts) {
-            this.applicationPorts = Input.ofNullable(applicationPorts);
+            this.applicationPorts = Output.ofNullable(applicationPorts);
             return this;
         }
 
-        public Builder capacities(@Nullable Input<Map<String,String>> capacities) {
+        public Builder capacities(@Nullable Output<Map<String,String>> capacities) {
             this.capacities = capacities;
             return this;
         }
 
         public Builder capacities(@Nullable Map<String,String> capacities) {
-            this.capacities = Input.ofNullable(capacities);
+            this.capacities = Output.ofNullable(capacities);
             return this;
         }
 
-        public Builder clusterName(Input<String> clusterName) {
+        public Builder clusterName(Output<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
         public Builder clusterName(String clusterName) {
-            this.clusterName = Input.of(Objects.requireNonNull(clusterName));
+            this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
 
-        public Builder dataDiskSizeGB(Input<Integer> dataDiskSizeGB) {
+        public Builder dataDiskSizeGB(Output<Integer> dataDiskSizeGB) {
             this.dataDiskSizeGB = Objects.requireNonNull(dataDiskSizeGB);
             return this;
         }
 
         public Builder dataDiskSizeGB(Integer dataDiskSizeGB) {
-            this.dataDiskSizeGB = Input.of(Objects.requireNonNull(dataDiskSizeGB));
+            this.dataDiskSizeGB = Output.of(Objects.requireNonNull(dataDiskSizeGB));
             return this;
         }
 
-        public Builder ephemeralPorts(@Nullable Input<EndpointRangeDescriptionArgs> ephemeralPorts) {
+        public Builder ephemeralPorts(@Nullable Output<EndpointRangeDescriptionArgs> ephemeralPorts) {
             this.ephemeralPorts = ephemeralPorts;
             return this;
         }
 
         public Builder ephemeralPorts(@Nullable EndpointRangeDescriptionArgs ephemeralPorts) {
-            this.ephemeralPorts = Input.ofNullable(ephemeralPorts);
+            this.ephemeralPorts = Output.ofNullable(ephemeralPorts);
             return this;
         }
 
-        public Builder isPrimary(Input<Boolean> isPrimary) {
+        public Builder isPrimary(Output<Boolean> isPrimary) {
             this.isPrimary = Objects.requireNonNull(isPrimary);
             return this;
         }
 
         public Builder isPrimary(Boolean isPrimary) {
-            this.isPrimary = Input.of(Objects.requireNonNull(isPrimary));
+            this.isPrimary = Output.of(Objects.requireNonNull(isPrimary));
             return this;
         }
 
-        public Builder nodeTypeName(@Nullable Input<String> nodeTypeName) {
+        public Builder nodeTypeName(@Nullable Output<String> nodeTypeName) {
             this.nodeTypeName = nodeTypeName;
             return this;
         }
 
         public Builder nodeTypeName(@Nullable String nodeTypeName) {
-            this.nodeTypeName = Input.ofNullable(nodeTypeName);
+            this.nodeTypeName = Output.ofNullable(nodeTypeName);
             return this;
         }
 
-        public Builder placementProperties(@Nullable Input<Map<String,String>> placementProperties) {
+        public Builder placementProperties(@Nullable Output<Map<String,String>> placementProperties) {
             this.placementProperties = placementProperties;
             return this;
         }
 
         public Builder placementProperties(@Nullable Map<String,String> placementProperties) {
-            this.placementProperties = Input.ofNullable(placementProperties);
+            this.placementProperties = Output.ofNullable(placementProperties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder vmExtensions(@Nullable Input<List<VMSSExtensionArgs>> vmExtensions) {
+        public Builder vmExtensions(@Nullable Output<List<VMSSExtensionArgs>> vmExtensions) {
             this.vmExtensions = vmExtensions;
             return this;
         }
 
         public Builder vmExtensions(@Nullable List<VMSSExtensionArgs> vmExtensions) {
-            this.vmExtensions = Input.ofNullable(vmExtensions);
+            this.vmExtensions = Output.ofNullable(vmExtensions);
             return this;
         }
 
-        public Builder vmImageOffer(@Nullable Input<String> vmImageOffer) {
+        public Builder vmImageOffer(@Nullable Output<String> vmImageOffer) {
             this.vmImageOffer = vmImageOffer;
             return this;
         }
 
         public Builder vmImageOffer(@Nullable String vmImageOffer) {
-            this.vmImageOffer = Input.ofNullable(vmImageOffer);
+            this.vmImageOffer = Output.ofNullable(vmImageOffer);
             return this;
         }
 
-        public Builder vmImagePublisher(@Nullable Input<String> vmImagePublisher) {
+        public Builder vmImagePublisher(@Nullable Output<String> vmImagePublisher) {
             this.vmImagePublisher = vmImagePublisher;
             return this;
         }
 
         public Builder vmImagePublisher(@Nullable String vmImagePublisher) {
-            this.vmImagePublisher = Input.ofNullable(vmImagePublisher);
+            this.vmImagePublisher = Output.ofNullable(vmImagePublisher);
             return this;
         }
 
-        public Builder vmImageSku(@Nullable Input<String> vmImageSku) {
+        public Builder vmImageSku(@Nullable Output<String> vmImageSku) {
             this.vmImageSku = vmImageSku;
             return this;
         }
 
         public Builder vmImageSku(@Nullable String vmImageSku) {
-            this.vmImageSku = Input.ofNullable(vmImageSku);
+            this.vmImageSku = Output.ofNullable(vmImageSku);
             return this;
         }
 
-        public Builder vmImageVersion(@Nullable Input<String> vmImageVersion) {
+        public Builder vmImageVersion(@Nullable Output<String> vmImageVersion) {
             this.vmImageVersion = vmImageVersion;
             return this;
         }
 
         public Builder vmImageVersion(@Nullable String vmImageVersion) {
-            this.vmImageVersion = Input.ofNullable(vmImageVersion);
+            this.vmImageVersion = Output.ofNullable(vmImageVersion);
             return this;
         }
 
-        public Builder vmInstanceCount(Input<Integer> vmInstanceCount) {
+        public Builder vmInstanceCount(Output<Integer> vmInstanceCount) {
             this.vmInstanceCount = Objects.requireNonNull(vmInstanceCount);
             return this;
         }
 
         public Builder vmInstanceCount(Integer vmInstanceCount) {
-            this.vmInstanceCount = Input.of(Objects.requireNonNull(vmInstanceCount));
+            this.vmInstanceCount = Output.of(Objects.requireNonNull(vmInstanceCount));
             return this;
         }
 
-        public Builder vmSecrets(@Nullable Input<List<VaultSecretGroupArgs>> vmSecrets) {
+        public Builder vmSecrets(@Nullable Output<List<VaultSecretGroupArgs>> vmSecrets) {
             this.vmSecrets = vmSecrets;
             return this;
         }
 
         public Builder vmSecrets(@Nullable List<VaultSecretGroupArgs> vmSecrets) {
-            this.vmSecrets = Input.ofNullable(vmSecrets);
+            this.vmSecrets = Output.ofNullable(vmSecrets);
             return this;
         }
 
-        public Builder vmSize(@Nullable Input<String> vmSize) {
+        public Builder vmSize(@Nullable Output<String> vmSize) {
             this.vmSize = vmSize;
             return this;
         }
 
         public Builder vmSize(@Nullable String vmSize) {
-            this.vmSize = Input.ofNullable(vmSize);
+            this.vmSize = Output.ofNullable(vmSize);
             return this;
         }
         public NodeTypeArgs build() {

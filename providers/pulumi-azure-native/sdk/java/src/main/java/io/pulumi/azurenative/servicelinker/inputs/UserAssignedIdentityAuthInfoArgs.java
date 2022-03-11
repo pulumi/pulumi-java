@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicelinker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class UserAssignedIdentityAuthInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="authType", required=true)
-      private final Input<String> authType;
+      private final Output<String> authType;
 
-    public Input<String> getAuthType() {
+    public Output<String> getAuthType() {
         return this.authType;
     }
 
@@ -34,9 +34,9 @@ public final class UserAssignedIdentityAuthInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="clientId", required=true)
-      private final Input<String> clientId;
+      private final Output<String> clientId;
 
-    public Input<String> getClientId() {
+    public Output<String> getClientId() {
         return this.clientId;
     }
 
@@ -45,25 +45,25 @@ public final class UserAssignedIdentityAuthInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="subscriptionId", required=true)
-      private final Input<String> subscriptionId;
+      private final Output<String> subscriptionId;
 
-    public Input<String> getSubscriptionId() {
+    public Output<String> getSubscriptionId() {
         return this.subscriptionId;
     }
 
     public UserAssignedIdentityAuthInfoArgs(
-        Input<String> authType,
-        Input<String> clientId,
-        Input<String> subscriptionId) {
+        Output<String> authType,
+        Output<String> clientId,
+        Output<String> subscriptionId) {
         this.authType = Objects.requireNonNull(authType, "expected parameter 'authType' to be non-null");
         this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
         this.subscriptionId = Objects.requireNonNull(subscriptionId, "expected parameter 'subscriptionId' to be non-null");
     }
 
     private UserAssignedIdentityAuthInfoArgs() {
-        this.authType = Input.empty();
-        this.clientId = Input.empty();
-        this.subscriptionId = Input.empty();
+        this.authType = Output.empty();
+        this.clientId = Output.empty();
+        this.subscriptionId = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class UserAssignedIdentityAuthInfoArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<String> authType;
-        private Input<String> clientId;
-        private Input<String> subscriptionId;
+        private Output<String> authType;
+        private Output<String> clientId;
+        private Output<String> subscriptionId;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class UserAssignedIdentityAuthInfoArgs extends io.pulumi.resources.
     	      this.subscriptionId = defaults.subscriptionId;
         }
 
-        public Builder authType(Input<String> authType) {
+        public Builder authType(Output<String> authType) {
             this.authType = Objects.requireNonNull(authType);
             return this;
         }
 
         public Builder authType(String authType) {
-            this.authType = Input.of(Objects.requireNonNull(authType));
+            this.authType = Output.of(Objects.requireNonNull(authType));
             return this;
         }
 
-        public Builder clientId(Input<String> clientId) {
+        public Builder clientId(Output<String> clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Input.of(Objects.requireNonNull(clientId));
+            this.clientId = Output.of(Objects.requireNonNull(clientId));
             return this;
         }
 
-        public Builder subscriptionId(Input<String> subscriptionId) {
+        public Builder subscriptionId(Output<String> subscriptionId) {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }
 
         public Builder subscriptionId(String subscriptionId) {
-            this.subscriptionId = Input.of(Objects.requireNonNull(subscriptionId));
+            this.subscriptionId = Output.of(Objects.requireNonNull(subscriptionId));
             return this;
         }
         public UserAssignedIdentityAuthInfoArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.inputs.BucketOwnershipControlsRuleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class BucketOwnershipControlsArgs extends io.pulumi.resources.Resou
     public static final BucketOwnershipControlsArgs Empty = new BucketOwnershipControlsArgs();
 
     @InputImport(name="rules", required=true)
-      private final Input<List<BucketOwnershipControlsRuleArgs>> rules;
+      private final Output<List<BucketOwnershipControlsRuleArgs>> rules;
 
-    public Input<List<BucketOwnershipControlsRuleArgs>> getRules() {
+    public Output<List<BucketOwnershipControlsRuleArgs>> getRules() {
         return this.rules;
     }
 
-    public BucketOwnershipControlsArgs(Input<List<BucketOwnershipControlsRuleArgs>> rules) {
+    public BucketOwnershipControlsArgs(Output<List<BucketOwnershipControlsRuleArgs>> rules) {
         this.rules = Objects.requireNonNull(rules, "expected parameter 'rules' to be non-null");
     }
 
     private BucketOwnershipControlsArgs() {
-        this.rules = Input.empty();
+        this.rules = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class BucketOwnershipControlsArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<List<BucketOwnershipControlsRuleArgs>> rules;
+        private Output<List<BucketOwnershipControlsRuleArgs>> rules;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class BucketOwnershipControlsArgs extends io.pulumi.resources.Resou
     	      this.rules = defaults.rules;
         }
 
-        public Builder rules(Input<List<BucketOwnershipControlsRuleArgs>> rules) {
+        public Builder rules(Output<List<BucketOwnershipControlsRuleArgs>> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
 
         public Builder rules(List<BucketOwnershipControlsRuleArgs> rules) {
-            this.rules = Input.of(Objects.requireNonNull(rules));
+            this.rules = Output.of(Objects.requireNonNull(rules));
             return this;
         }
         public BucketOwnershipControlsArgs build() {

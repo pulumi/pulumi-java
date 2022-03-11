@@ -14,7 +14,7 @@ import io.pulumi.azurenative.compute.inputs.EncryptionSettingsCollectionArgs;
 import io.pulumi.azurenative.compute.inputs.ExtendedLocationArgs;
 import io.pulumi.azurenative.compute.inputs.PurchasePlanArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -35,10 +35,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="burstingEnabled")
-      private final @Nullable Input<Boolean> burstingEnabled;
+      private final @Nullable Output<Boolean> burstingEnabled;
 
-    public Input<Boolean> getBurstingEnabled() {
-        return this.burstingEnabled == null ? Input.empty() : this.burstingEnabled;
+    public Output<Boolean> getBurstingEnabled() {
+        return this.burstingEnabled == null ? Output.empty() : this.burstingEnabled;
     }
 
     /**
@@ -46,9 +46,9 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationData", required=true)
-      private final Input<CreationDataArgs> creationData;
+      private final Output<CreationDataArgs> creationData;
 
-    public Input<CreationDataArgs> getCreationData() {
+    public Output<CreationDataArgs> getCreationData() {
         return this.creationData;
     }
 
@@ -57,10 +57,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskAccessId")
-      private final @Nullable Input<String> diskAccessId;
+      private final @Nullable Output<String> diskAccessId;
 
-    public Input<String> getDiskAccessId() {
-        return this.diskAccessId == null ? Input.empty() : this.diskAccessId;
+    public Output<String> getDiskAccessId() {
+        return this.diskAccessId == null ? Output.empty() : this.diskAccessId;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskIOPSReadOnly")
-      private final @Nullable Input<Double> diskIOPSReadOnly;
+      private final @Nullable Output<Double> diskIOPSReadOnly;
 
-    public Input<Double> getDiskIOPSReadOnly() {
-        return this.diskIOPSReadOnly == null ? Input.empty() : this.diskIOPSReadOnly;
+    public Output<Double> getDiskIOPSReadOnly() {
+        return this.diskIOPSReadOnly == null ? Output.empty() : this.diskIOPSReadOnly;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskIOPSReadWrite")
-      private final @Nullable Input<Double> diskIOPSReadWrite;
+      private final @Nullable Output<Double> diskIOPSReadWrite;
 
-    public Input<Double> getDiskIOPSReadWrite() {
-        return this.diskIOPSReadWrite == null ? Input.empty() : this.diskIOPSReadWrite;
+    public Output<Double> getDiskIOPSReadWrite() {
+        return this.diskIOPSReadWrite == null ? Output.empty() : this.diskIOPSReadWrite;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskMBpsReadOnly")
-      private final @Nullable Input<Double> diskMBpsReadOnly;
+      private final @Nullable Output<Double> diskMBpsReadOnly;
 
-    public Input<Double> getDiskMBpsReadOnly() {
-        return this.diskMBpsReadOnly == null ? Input.empty() : this.diskMBpsReadOnly;
+    public Output<Double> getDiskMBpsReadOnly() {
+        return this.diskMBpsReadOnly == null ? Output.empty() : this.diskMBpsReadOnly;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskMBpsReadWrite")
-      private final @Nullable Input<Double> diskMBpsReadWrite;
+      private final @Nullable Output<Double> diskMBpsReadWrite;
 
-    public Input<Double> getDiskMBpsReadWrite() {
-        return this.diskMBpsReadWrite == null ? Input.empty() : this.diskMBpsReadWrite;
+    public Output<Double> getDiskMBpsReadWrite() {
+        return this.diskMBpsReadWrite == null ? Output.empty() : this.diskMBpsReadWrite;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskName")
-      private final @Nullable Input<String> diskName;
+      private final @Nullable Output<String> diskName;
 
-    public Input<String> getDiskName() {
-        return this.diskName == null ? Input.empty() : this.diskName;
+    public Output<String> getDiskName() {
+        return this.diskName == null ? Output.empty() : this.diskName;
     }
 
     /**
@@ -123,10 +123,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskSizeGB")
-      private final @Nullable Input<Integer> diskSizeGB;
+      private final @Nullable Output<Integer> diskSizeGB;
 
-    public Input<Integer> getDiskSizeGB() {
-        return this.diskSizeGB == null ? Input.empty() : this.diskSizeGB;
+    public Output<Integer> getDiskSizeGB() {
+        return this.diskSizeGB == null ? Output.empty() : this.diskSizeGB;
     }
 
     /**
@@ -134,10 +134,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryption")
-      private final @Nullable Input<EncryptionArgs> encryption;
+      private final @Nullable Output<EncryptionArgs> encryption;
 
-    public Input<EncryptionArgs> getEncryption() {
-        return this.encryption == null ? Input.empty() : this.encryption;
+    public Output<EncryptionArgs> getEncryption() {
+        return this.encryption == null ? Output.empty() : this.encryption;
     }
 
     /**
@@ -145,10 +145,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionSettingsCollection")
-      private final @Nullable Input<EncryptionSettingsCollectionArgs> encryptionSettingsCollection;
+      private final @Nullable Output<EncryptionSettingsCollectionArgs> encryptionSettingsCollection;
 
-    public Input<EncryptionSettingsCollectionArgs> getEncryptionSettingsCollection() {
-        return this.encryptionSettingsCollection == null ? Input.empty() : this.encryptionSettingsCollection;
+    public Output<EncryptionSettingsCollectionArgs> getEncryptionSettingsCollection() {
+        return this.encryptionSettingsCollection == null ? Output.empty() : this.encryptionSettingsCollection;
     }
 
     /**
@@ -156,10 +156,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extendedLocation")
-      private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
+      private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Input<ExtendedLocationArgs> getExtendedLocation() {
-        return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
+    public Output<ExtendedLocationArgs> getExtendedLocation() {
+        return this.extendedLocation == null ? Output.empty() : this.extendedLocation;
     }
 
     /**
@@ -167,10 +167,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hyperVGeneration")
-      private final @Nullable Input<Either<String,HyperVGeneration>> hyperVGeneration;
+      private final @Nullable Output<Either<String,HyperVGeneration>> hyperVGeneration;
 
-    public Input<Either<String,HyperVGeneration>> getHyperVGeneration() {
-        return this.hyperVGeneration == null ? Input.empty() : this.hyperVGeneration;
+    public Output<Either<String,HyperVGeneration>> getHyperVGeneration() {
+        return this.hyperVGeneration == null ? Output.empty() : this.hyperVGeneration;
     }
 
     /**
@@ -178,10 +178,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -189,10 +189,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxShares")
-      private final @Nullable Input<Integer> maxShares;
+      private final @Nullable Output<Integer> maxShares;
 
-    public Input<Integer> getMaxShares() {
-        return this.maxShares == null ? Input.empty() : this.maxShares;
+    public Output<Integer> getMaxShares() {
+        return this.maxShares == null ? Output.empty() : this.maxShares;
     }
 
     /**
@@ -200,10 +200,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkAccessPolicy")
-      private final @Nullable Input<Either<String,NetworkAccessPolicy>> networkAccessPolicy;
+      private final @Nullable Output<Either<String,NetworkAccessPolicy>> networkAccessPolicy;
 
-    public Input<Either<String,NetworkAccessPolicy>> getNetworkAccessPolicy() {
-        return this.networkAccessPolicy == null ? Input.empty() : this.networkAccessPolicy;
+    public Output<Either<String,NetworkAccessPolicy>> getNetworkAccessPolicy() {
+        return this.networkAccessPolicy == null ? Output.empty() : this.networkAccessPolicy;
     }
 
     /**
@@ -211,10 +211,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="osType")
-      private final @Nullable Input<OperatingSystemTypes> osType;
+      private final @Nullable Output<OperatingSystemTypes> osType;
 
-    public Input<OperatingSystemTypes> getOsType() {
-        return this.osType == null ? Input.empty() : this.osType;
+    public Output<OperatingSystemTypes> getOsType() {
+        return this.osType == null ? Output.empty() : this.osType;
     }
 
     /**
@@ -222,10 +222,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="purchasePlan")
-      private final @Nullable Input<PurchasePlanArgs> purchasePlan;
+      private final @Nullable Output<PurchasePlanArgs> purchasePlan;
 
-    public Input<PurchasePlanArgs> getPurchasePlan() {
-        return this.purchasePlan == null ? Input.empty() : this.purchasePlan;
+    public Output<PurchasePlanArgs> getPurchasePlan() {
+        return this.purchasePlan == null ? Output.empty() : this.purchasePlan;
     }
 
     /**
@@ -233,9 +233,9 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -244,10 +244,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityProfile")
-      private final @Nullable Input<DiskSecurityProfileArgs> securityProfile;
+      private final @Nullable Output<DiskSecurityProfileArgs> securityProfile;
 
-    public Input<DiskSecurityProfileArgs> getSecurityProfile() {
-        return this.securityProfile == null ? Input.empty() : this.securityProfile;
+    public Output<DiskSecurityProfileArgs> getSecurityProfile() {
+        return this.securityProfile == null ? Output.empty() : this.securityProfile;
     }
 
     /**
@@ -255,10 +255,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<DiskSkuArgs> sku;
+      private final @Nullable Output<DiskSkuArgs> sku;
 
-    public Input<DiskSkuArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<DiskSkuArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -266,10 +266,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="supportsHibernation")
-      private final @Nullable Input<Boolean> supportsHibernation;
+      private final @Nullable Output<Boolean> supportsHibernation;
 
-    public Input<Boolean> getSupportsHibernation() {
-        return this.supportsHibernation == null ? Input.empty() : this.supportsHibernation;
+    public Output<Boolean> getSupportsHibernation() {
+        return this.supportsHibernation == null ? Output.empty() : this.supportsHibernation;
     }
 
     /**
@@ -277,10 +277,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -288,10 +288,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tier")
-      private final @Nullable Input<String> tier;
+      private final @Nullable Output<String> tier;
 
-    public Input<String> getTier() {
-        return this.tier == null ? Input.empty() : this.tier;
+    public Output<String> getTier() {
+        return this.tier == null ? Output.empty() : this.tier;
     }
 
     /**
@@ -299,38 +299,38 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zones")
-      private final @Nullable Input<List<String>> zones;
+      private final @Nullable Output<List<String>> zones;
 
-    public Input<List<String>> getZones() {
-        return this.zones == null ? Input.empty() : this.zones;
+    public Output<List<String>> getZones() {
+        return this.zones == null ? Output.empty() : this.zones;
     }
 
     public DiskArgs(
-        @Nullable Input<Boolean> burstingEnabled,
-        Input<CreationDataArgs> creationData,
-        @Nullable Input<String> diskAccessId,
-        @Nullable Input<Double> diskIOPSReadOnly,
-        @Nullable Input<Double> diskIOPSReadWrite,
-        @Nullable Input<Double> diskMBpsReadOnly,
-        @Nullable Input<Double> diskMBpsReadWrite,
-        @Nullable Input<String> diskName,
-        @Nullable Input<Integer> diskSizeGB,
-        @Nullable Input<EncryptionArgs> encryption,
-        @Nullable Input<EncryptionSettingsCollectionArgs> encryptionSettingsCollection,
-        @Nullable Input<ExtendedLocationArgs> extendedLocation,
-        @Nullable Input<Either<String,HyperVGeneration>> hyperVGeneration,
-        @Nullable Input<String> location,
-        @Nullable Input<Integer> maxShares,
-        @Nullable Input<Either<String,NetworkAccessPolicy>> networkAccessPolicy,
-        @Nullable Input<OperatingSystemTypes> osType,
-        @Nullable Input<PurchasePlanArgs> purchasePlan,
-        Input<String> resourceGroupName,
-        @Nullable Input<DiskSecurityProfileArgs> securityProfile,
-        @Nullable Input<DiskSkuArgs> sku,
-        @Nullable Input<Boolean> supportsHibernation,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> tier,
-        @Nullable Input<List<String>> zones) {
+        @Nullable Output<Boolean> burstingEnabled,
+        Output<CreationDataArgs> creationData,
+        @Nullable Output<String> diskAccessId,
+        @Nullable Output<Double> diskIOPSReadOnly,
+        @Nullable Output<Double> diskIOPSReadWrite,
+        @Nullable Output<Double> diskMBpsReadOnly,
+        @Nullable Output<Double> diskMBpsReadWrite,
+        @Nullable Output<String> diskName,
+        @Nullable Output<Integer> diskSizeGB,
+        @Nullable Output<EncryptionArgs> encryption,
+        @Nullable Output<EncryptionSettingsCollectionArgs> encryptionSettingsCollection,
+        @Nullable Output<ExtendedLocationArgs> extendedLocation,
+        @Nullable Output<Either<String,HyperVGeneration>> hyperVGeneration,
+        @Nullable Output<String> location,
+        @Nullable Output<Integer> maxShares,
+        @Nullable Output<Either<String,NetworkAccessPolicy>> networkAccessPolicy,
+        @Nullable Output<OperatingSystemTypes> osType,
+        @Nullable Output<PurchasePlanArgs> purchasePlan,
+        Output<String> resourceGroupName,
+        @Nullable Output<DiskSecurityProfileArgs> securityProfile,
+        @Nullable Output<DiskSkuArgs> sku,
+        @Nullable Output<Boolean> supportsHibernation,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> tier,
+        @Nullable Output<List<String>> zones) {
         this.burstingEnabled = burstingEnabled;
         this.creationData = Objects.requireNonNull(creationData, "expected parameter 'creationData' to be non-null");
         this.diskAccessId = diskAccessId;
@@ -359,31 +359,31 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DiskArgs() {
-        this.burstingEnabled = Input.empty();
-        this.creationData = Input.empty();
-        this.diskAccessId = Input.empty();
-        this.diskIOPSReadOnly = Input.empty();
-        this.diskIOPSReadWrite = Input.empty();
-        this.diskMBpsReadOnly = Input.empty();
-        this.diskMBpsReadWrite = Input.empty();
-        this.diskName = Input.empty();
-        this.diskSizeGB = Input.empty();
-        this.encryption = Input.empty();
-        this.encryptionSettingsCollection = Input.empty();
-        this.extendedLocation = Input.empty();
-        this.hyperVGeneration = Input.empty();
-        this.location = Input.empty();
-        this.maxShares = Input.empty();
-        this.networkAccessPolicy = Input.empty();
-        this.osType = Input.empty();
-        this.purchasePlan = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.securityProfile = Input.empty();
-        this.sku = Input.empty();
-        this.supportsHibernation = Input.empty();
-        this.tags = Input.empty();
-        this.tier = Input.empty();
-        this.zones = Input.empty();
+        this.burstingEnabled = Output.empty();
+        this.creationData = Output.empty();
+        this.diskAccessId = Output.empty();
+        this.diskIOPSReadOnly = Output.empty();
+        this.diskIOPSReadWrite = Output.empty();
+        this.diskMBpsReadOnly = Output.empty();
+        this.diskMBpsReadWrite = Output.empty();
+        this.diskName = Output.empty();
+        this.diskSizeGB = Output.empty();
+        this.encryption = Output.empty();
+        this.encryptionSettingsCollection = Output.empty();
+        this.extendedLocation = Output.empty();
+        this.hyperVGeneration = Output.empty();
+        this.location = Output.empty();
+        this.maxShares = Output.empty();
+        this.networkAccessPolicy = Output.empty();
+        this.osType = Output.empty();
+        this.purchasePlan = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.securityProfile = Output.empty();
+        this.sku = Output.empty();
+        this.supportsHibernation = Output.empty();
+        this.tags = Output.empty();
+        this.tier = Output.empty();
+        this.zones = Output.empty();
     }
 
     public static Builder builder() {
@@ -395,31 +395,31 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> burstingEnabled;
-        private Input<CreationDataArgs> creationData;
-        private @Nullable Input<String> diskAccessId;
-        private @Nullable Input<Double> diskIOPSReadOnly;
-        private @Nullable Input<Double> diskIOPSReadWrite;
-        private @Nullable Input<Double> diskMBpsReadOnly;
-        private @Nullable Input<Double> diskMBpsReadWrite;
-        private @Nullable Input<String> diskName;
-        private @Nullable Input<Integer> diskSizeGB;
-        private @Nullable Input<EncryptionArgs> encryption;
-        private @Nullable Input<EncryptionSettingsCollectionArgs> encryptionSettingsCollection;
-        private @Nullable Input<ExtendedLocationArgs> extendedLocation;
-        private @Nullable Input<Either<String,HyperVGeneration>> hyperVGeneration;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Integer> maxShares;
-        private @Nullable Input<Either<String,NetworkAccessPolicy>> networkAccessPolicy;
-        private @Nullable Input<OperatingSystemTypes> osType;
-        private @Nullable Input<PurchasePlanArgs> purchasePlan;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<DiskSecurityProfileArgs> securityProfile;
-        private @Nullable Input<DiskSkuArgs> sku;
-        private @Nullable Input<Boolean> supportsHibernation;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> tier;
-        private @Nullable Input<List<String>> zones;
+        private @Nullable Output<Boolean> burstingEnabled;
+        private Output<CreationDataArgs> creationData;
+        private @Nullable Output<String> diskAccessId;
+        private @Nullable Output<Double> diskIOPSReadOnly;
+        private @Nullable Output<Double> diskIOPSReadWrite;
+        private @Nullable Output<Double> diskMBpsReadOnly;
+        private @Nullable Output<Double> diskMBpsReadWrite;
+        private @Nullable Output<String> diskName;
+        private @Nullable Output<Integer> diskSizeGB;
+        private @Nullable Output<EncryptionArgs> encryption;
+        private @Nullable Output<EncryptionSettingsCollectionArgs> encryptionSettingsCollection;
+        private @Nullable Output<ExtendedLocationArgs> extendedLocation;
+        private @Nullable Output<Either<String,HyperVGeneration>> hyperVGeneration;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Integer> maxShares;
+        private @Nullable Output<Either<String,NetworkAccessPolicy>> networkAccessPolicy;
+        private @Nullable Output<OperatingSystemTypes> osType;
+        private @Nullable Output<PurchasePlanArgs> purchasePlan;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<DiskSecurityProfileArgs> securityProfile;
+        private @Nullable Output<DiskSkuArgs> sku;
+        private @Nullable Output<Boolean> supportsHibernation;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> tier;
+        private @Nullable Output<List<String>> zones;
 
         public Builder() {
     	      // Empty
@@ -454,253 +454,253 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zones = defaults.zones;
         }
 
-        public Builder burstingEnabled(@Nullable Input<Boolean> burstingEnabled) {
+        public Builder burstingEnabled(@Nullable Output<Boolean> burstingEnabled) {
             this.burstingEnabled = burstingEnabled;
             return this;
         }
 
         public Builder burstingEnabled(@Nullable Boolean burstingEnabled) {
-            this.burstingEnabled = Input.ofNullable(burstingEnabled);
+            this.burstingEnabled = Output.ofNullable(burstingEnabled);
             return this;
         }
 
-        public Builder creationData(Input<CreationDataArgs> creationData) {
+        public Builder creationData(Output<CreationDataArgs> creationData) {
             this.creationData = Objects.requireNonNull(creationData);
             return this;
         }
 
         public Builder creationData(CreationDataArgs creationData) {
-            this.creationData = Input.of(Objects.requireNonNull(creationData));
+            this.creationData = Output.of(Objects.requireNonNull(creationData));
             return this;
         }
 
-        public Builder diskAccessId(@Nullable Input<String> diskAccessId) {
+        public Builder diskAccessId(@Nullable Output<String> diskAccessId) {
             this.diskAccessId = diskAccessId;
             return this;
         }
 
         public Builder diskAccessId(@Nullable String diskAccessId) {
-            this.diskAccessId = Input.ofNullable(diskAccessId);
+            this.diskAccessId = Output.ofNullable(diskAccessId);
             return this;
         }
 
-        public Builder diskIOPSReadOnly(@Nullable Input<Double> diskIOPSReadOnly) {
+        public Builder diskIOPSReadOnly(@Nullable Output<Double> diskIOPSReadOnly) {
             this.diskIOPSReadOnly = diskIOPSReadOnly;
             return this;
         }
 
         public Builder diskIOPSReadOnly(@Nullable Double diskIOPSReadOnly) {
-            this.diskIOPSReadOnly = Input.ofNullable(diskIOPSReadOnly);
+            this.diskIOPSReadOnly = Output.ofNullable(diskIOPSReadOnly);
             return this;
         }
 
-        public Builder diskIOPSReadWrite(@Nullable Input<Double> diskIOPSReadWrite) {
+        public Builder diskIOPSReadWrite(@Nullable Output<Double> diskIOPSReadWrite) {
             this.diskIOPSReadWrite = diskIOPSReadWrite;
             return this;
         }
 
         public Builder diskIOPSReadWrite(@Nullable Double diskIOPSReadWrite) {
-            this.diskIOPSReadWrite = Input.ofNullable(diskIOPSReadWrite);
+            this.diskIOPSReadWrite = Output.ofNullable(diskIOPSReadWrite);
             return this;
         }
 
-        public Builder diskMBpsReadOnly(@Nullable Input<Double> diskMBpsReadOnly) {
+        public Builder diskMBpsReadOnly(@Nullable Output<Double> diskMBpsReadOnly) {
             this.diskMBpsReadOnly = diskMBpsReadOnly;
             return this;
         }
 
         public Builder diskMBpsReadOnly(@Nullable Double diskMBpsReadOnly) {
-            this.diskMBpsReadOnly = Input.ofNullable(diskMBpsReadOnly);
+            this.diskMBpsReadOnly = Output.ofNullable(diskMBpsReadOnly);
             return this;
         }
 
-        public Builder diskMBpsReadWrite(@Nullable Input<Double> diskMBpsReadWrite) {
+        public Builder diskMBpsReadWrite(@Nullable Output<Double> diskMBpsReadWrite) {
             this.diskMBpsReadWrite = diskMBpsReadWrite;
             return this;
         }
 
         public Builder diskMBpsReadWrite(@Nullable Double diskMBpsReadWrite) {
-            this.diskMBpsReadWrite = Input.ofNullable(diskMBpsReadWrite);
+            this.diskMBpsReadWrite = Output.ofNullable(diskMBpsReadWrite);
             return this;
         }
 
-        public Builder diskName(@Nullable Input<String> diskName) {
+        public Builder diskName(@Nullable Output<String> diskName) {
             this.diskName = diskName;
             return this;
         }
 
         public Builder diskName(@Nullable String diskName) {
-            this.diskName = Input.ofNullable(diskName);
+            this.diskName = Output.ofNullable(diskName);
             return this;
         }
 
-        public Builder diskSizeGB(@Nullable Input<Integer> diskSizeGB) {
+        public Builder diskSizeGB(@Nullable Output<Integer> diskSizeGB) {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
 
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
-            this.diskSizeGB = Input.ofNullable(diskSizeGB);
+            this.diskSizeGB = Output.ofNullable(diskSizeGB);
             return this;
         }
 
-        public Builder encryption(@Nullable Input<EncryptionArgs> encryption) {
+        public Builder encryption(@Nullable Output<EncryptionArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
 
         public Builder encryption(@Nullable EncryptionArgs encryption) {
-            this.encryption = Input.ofNullable(encryption);
+            this.encryption = Output.ofNullable(encryption);
             return this;
         }
 
-        public Builder encryptionSettingsCollection(@Nullable Input<EncryptionSettingsCollectionArgs> encryptionSettingsCollection) {
+        public Builder encryptionSettingsCollection(@Nullable Output<EncryptionSettingsCollectionArgs> encryptionSettingsCollection) {
             this.encryptionSettingsCollection = encryptionSettingsCollection;
             return this;
         }
 
         public Builder encryptionSettingsCollection(@Nullable EncryptionSettingsCollectionArgs encryptionSettingsCollection) {
-            this.encryptionSettingsCollection = Input.ofNullable(encryptionSettingsCollection);
+            this.encryptionSettingsCollection = Output.ofNullable(encryptionSettingsCollection);
             return this;
         }
 
-        public Builder extendedLocation(@Nullable Input<ExtendedLocationArgs> extendedLocation) {
+        public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
 
         public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
-            this.extendedLocation = Input.ofNullable(extendedLocation);
+            this.extendedLocation = Output.ofNullable(extendedLocation);
             return this;
         }
 
-        public Builder hyperVGeneration(@Nullable Input<Either<String,HyperVGeneration>> hyperVGeneration) {
+        public Builder hyperVGeneration(@Nullable Output<Either<String,HyperVGeneration>> hyperVGeneration) {
             this.hyperVGeneration = hyperVGeneration;
             return this;
         }
 
         public Builder hyperVGeneration(@Nullable Either<String,HyperVGeneration> hyperVGeneration) {
-            this.hyperVGeneration = Input.ofNullable(hyperVGeneration);
+            this.hyperVGeneration = Output.ofNullable(hyperVGeneration);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder maxShares(@Nullable Input<Integer> maxShares) {
+        public Builder maxShares(@Nullable Output<Integer> maxShares) {
             this.maxShares = maxShares;
             return this;
         }
 
         public Builder maxShares(@Nullable Integer maxShares) {
-            this.maxShares = Input.ofNullable(maxShares);
+            this.maxShares = Output.ofNullable(maxShares);
             return this;
         }
 
-        public Builder networkAccessPolicy(@Nullable Input<Either<String,NetworkAccessPolicy>> networkAccessPolicy) {
+        public Builder networkAccessPolicy(@Nullable Output<Either<String,NetworkAccessPolicy>> networkAccessPolicy) {
             this.networkAccessPolicy = networkAccessPolicy;
             return this;
         }
 
         public Builder networkAccessPolicy(@Nullable Either<String,NetworkAccessPolicy> networkAccessPolicy) {
-            this.networkAccessPolicy = Input.ofNullable(networkAccessPolicy);
+            this.networkAccessPolicy = Output.ofNullable(networkAccessPolicy);
             return this;
         }
 
-        public Builder osType(@Nullable Input<OperatingSystemTypes> osType) {
+        public Builder osType(@Nullable Output<OperatingSystemTypes> osType) {
             this.osType = osType;
             return this;
         }
 
         public Builder osType(@Nullable OperatingSystemTypes osType) {
-            this.osType = Input.ofNullable(osType);
+            this.osType = Output.ofNullable(osType);
             return this;
         }
 
-        public Builder purchasePlan(@Nullable Input<PurchasePlanArgs> purchasePlan) {
+        public Builder purchasePlan(@Nullable Output<PurchasePlanArgs> purchasePlan) {
             this.purchasePlan = purchasePlan;
             return this;
         }
 
         public Builder purchasePlan(@Nullable PurchasePlanArgs purchasePlan) {
-            this.purchasePlan = Input.ofNullable(purchasePlan);
+            this.purchasePlan = Output.ofNullable(purchasePlan);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder securityProfile(@Nullable Input<DiskSecurityProfileArgs> securityProfile) {
+        public Builder securityProfile(@Nullable Output<DiskSecurityProfileArgs> securityProfile) {
             this.securityProfile = securityProfile;
             return this;
         }
 
         public Builder securityProfile(@Nullable DiskSecurityProfileArgs securityProfile) {
-            this.securityProfile = Input.ofNullable(securityProfile);
+            this.securityProfile = Output.ofNullable(securityProfile);
             return this;
         }
 
-        public Builder sku(@Nullable Input<DiskSkuArgs> sku) {
+        public Builder sku(@Nullable Output<DiskSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable DiskSkuArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder supportsHibernation(@Nullable Input<Boolean> supportsHibernation) {
+        public Builder supportsHibernation(@Nullable Output<Boolean> supportsHibernation) {
             this.supportsHibernation = supportsHibernation;
             return this;
         }
 
         public Builder supportsHibernation(@Nullable Boolean supportsHibernation) {
-            this.supportsHibernation = Input.ofNullable(supportsHibernation);
+            this.supportsHibernation = Output.ofNullable(supportsHibernation);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tier(@Nullable Input<String> tier) {
+        public Builder tier(@Nullable Output<String> tier) {
             this.tier = tier;
             return this;
         }
 
         public Builder tier(@Nullable String tier) {
-            this.tier = Input.ofNullable(tier);
+            this.tier = Output.ofNullable(tier);
             return this;
         }
 
-        public Builder zones(@Nullable Input<List<String>> zones) {
+        public Builder zones(@Nullable Output<List<String>> zones) {
             this.zones = zones;
             return this;
         }
 
         public Builder zones(@Nullable List<String> zones) {
-            this.zones = Input.ofNullable(zones);
+            this.zones = Output.ofNullable(zones);
             return this;
         }
         public DiskArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs extends 
      * 
      */
     @InputImport(name="synonyms")
-      private final @Nullable Input<List<String>> synonyms;
+      private final @Nullable Output<List<String>> synonyms;
 
-    public Input<List<String>> getSynonyms() {
-        return this.synonyms == null ? Input.empty() : this.synonyms;
+    public Output<List<String>> getSynonyms() {
+        return this.synonyms == null ? Output.empty() : this.synonyms;
     }
 
-    public GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs(@Nullable Input<List<String>> synonyms) {
+    public GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs(@Nullable Output<List<String>> synonyms) {
         this.synonyms = synonyms;
     }
 
     private GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs() {
-        this.synonyms = Input.empty();
+        this.synonyms = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs extends 
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> synonyms;
+        private @Nullable Output<List<String>> synonyms;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs extends 
     	      this.synonyms = defaults.synonyms;
         }
 
-        public Builder synonyms(@Nullable Input<List<String>> synonyms) {
+        public Builder synonyms(@Nullable Output<List<String>> synonyms) {
             this.synonyms = synonyms;
             return this;
         }
 
         public Builder synonyms(@Nullable List<String> synonyms) {
-            this.synonyms = Input.ofNullable(synonyms);
+            this.synonyms = Output.ofNullable(synonyms);
             return this;
         }
         public GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs build() {

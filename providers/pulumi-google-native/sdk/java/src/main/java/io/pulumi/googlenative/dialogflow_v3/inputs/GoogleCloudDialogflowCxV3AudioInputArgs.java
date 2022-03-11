@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3InputAudioConfigArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class GoogleCloudDialogflowCxV3AudioInputArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="audio")
-      private final @Nullable Input<String> audio;
+      private final @Nullable Output<String> audio;
 
-    public Input<String> getAudio() {
-        return this.audio == null ? Input.empty() : this.audio;
+    public Output<String> getAudio() {
+        return this.audio == null ? Output.empty() : this.audio;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class GoogleCloudDialogflowCxV3AudioInputArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="config", required=true)
-      private final Input<GoogleCloudDialogflowCxV3InputAudioConfigArgs> config;
+      private final Output<GoogleCloudDialogflowCxV3InputAudioConfigArgs> config;
 
-    public Input<GoogleCloudDialogflowCxV3InputAudioConfigArgs> getConfig() {
+    public Output<GoogleCloudDialogflowCxV3InputAudioConfigArgs> getConfig() {
         return this.config;
     }
 
     public GoogleCloudDialogflowCxV3AudioInputArgs(
-        @Nullable Input<String> audio,
-        Input<GoogleCloudDialogflowCxV3InputAudioConfigArgs> config) {
+        @Nullable Output<String> audio,
+        Output<GoogleCloudDialogflowCxV3InputAudioConfigArgs> config) {
         this.audio = audio;
         this.config = Objects.requireNonNull(config, "expected parameter 'config' to be non-null");
     }
 
     private GoogleCloudDialogflowCxV3AudioInputArgs() {
-        this.audio = Input.empty();
-        this.config = Input.empty();
+        this.audio = Output.empty();
+        this.config = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class GoogleCloudDialogflowCxV3AudioInputArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> audio;
-        private Input<GoogleCloudDialogflowCxV3InputAudioConfigArgs> config;
+        private @Nullable Output<String> audio;
+        private Output<GoogleCloudDialogflowCxV3InputAudioConfigArgs> config;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class GoogleCloudDialogflowCxV3AudioInputArgs extends io.pulumi.res
     	      this.config = defaults.config;
         }
 
-        public Builder audio(@Nullable Input<String> audio) {
+        public Builder audio(@Nullable Output<String> audio) {
             this.audio = audio;
             return this;
         }
 
         public Builder audio(@Nullable String audio) {
-            this.audio = Input.ofNullable(audio);
+            this.audio = Output.ofNullable(audio);
             return this;
         }
 
-        public Builder config(Input<GoogleCloudDialogflowCxV3InputAudioConfigArgs> config) {
+        public Builder config(Output<GoogleCloudDialogflowCxV3InputAudioConfigArgs> config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
         public Builder config(GoogleCloudDialogflowCxV3InputAudioConfigArgs config) {
-            this.config = Input.of(Objects.requireNonNull(config));
+            this.config = Output.of(Objects.requireNonNull(config));
             return this;
         }
         public GoogleCloudDialogflowCxV3AudioInputArgs build() {

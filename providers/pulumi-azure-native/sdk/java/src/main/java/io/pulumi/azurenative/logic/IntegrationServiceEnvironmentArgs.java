@@ -6,7 +6,7 @@ package io.pulumi.azurenative.logic;
 import io.pulumi.azurenative.logic.inputs.IntegrationServiceEnvironmentPropertiesArgs;
 import io.pulumi.azurenative.logic.inputs.IntegrationServiceEnvironmentSkuArgs;
 import io.pulumi.azurenative.logic.inputs.ManagedServiceIdentityArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -23,10 +23,10 @@ public final class IntegrationServiceEnvironmentArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<ManagedServiceIdentityArgs> identity;
+      private final @Nullable Output<ManagedServiceIdentityArgs> identity;
 
-    public Input<ManagedServiceIdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<ManagedServiceIdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class IntegrationServiceEnvironmentArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="integrationServiceEnvironmentName")
-      private final @Nullable Input<String> integrationServiceEnvironmentName;
+      private final @Nullable Output<String> integrationServiceEnvironmentName;
 
-    public Input<String> getIntegrationServiceEnvironmentName() {
-        return this.integrationServiceEnvironmentName == null ? Input.empty() : this.integrationServiceEnvironmentName;
+    public Output<String> getIntegrationServiceEnvironmentName() {
+        return this.integrationServiceEnvironmentName == null ? Output.empty() : this.integrationServiceEnvironmentName;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class IntegrationServiceEnvironmentArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class IntegrationServiceEnvironmentArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<IntegrationServiceEnvironmentPropertiesArgs> properties;
+      private final @Nullable Output<IntegrationServiceEnvironmentPropertiesArgs> properties;
 
-    public Input<IntegrationServiceEnvironmentPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<IntegrationServiceEnvironmentPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -67,9 +67,9 @@ public final class IntegrationServiceEnvironmentArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceGroup", required=true)
-      private final Input<String> resourceGroup;
+      private final Output<String> resourceGroup;
 
-    public Input<String> getResourceGroup() {
+    public Output<String> getResourceGroup() {
         return this.resourceGroup;
     }
 
@@ -78,10 +78,10 @@ public final class IntegrationServiceEnvironmentArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<IntegrationServiceEnvironmentSkuArgs> sku;
+      private final @Nullable Output<IntegrationServiceEnvironmentSkuArgs> sku;
 
-    public Input<IntegrationServiceEnvironmentSkuArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<IntegrationServiceEnvironmentSkuArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -89,20 +89,20 @@ public final class IntegrationServiceEnvironmentArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public IntegrationServiceEnvironmentArgs(
-        @Nullable Input<ManagedServiceIdentityArgs> identity,
-        @Nullable Input<String> integrationServiceEnvironmentName,
-        @Nullable Input<String> location,
-        @Nullable Input<IntegrationServiceEnvironmentPropertiesArgs> properties,
-        Input<String> resourceGroup,
-        @Nullable Input<IntegrationServiceEnvironmentSkuArgs> sku,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<ManagedServiceIdentityArgs> identity,
+        @Nullable Output<String> integrationServiceEnvironmentName,
+        @Nullable Output<String> location,
+        @Nullable Output<IntegrationServiceEnvironmentPropertiesArgs> properties,
+        Output<String> resourceGroup,
+        @Nullable Output<IntegrationServiceEnvironmentSkuArgs> sku,
+        @Nullable Output<Map<String,String>> tags) {
         this.identity = identity;
         this.integrationServiceEnvironmentName = integrationServiceEnvironmentName;
         this.location = location;
@@ -113,13 +113,13 @@ public final class IntegrationServiceEnvironmentArgs extends io.pulumi.resources
     }
 
     private IntegrationServiceEnvironmentArgs() {
-        this.identity = Input.empty();
-        this.integrationServiceEnvironmentName = Input.empty();
-        this.location = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroup = Input.empty();
-        this.sku = Input.empty();
-        this.tags = Input.empty();
+        this.identity = Output.empty();
+        this.integrationServiceEnvironmentName = Output.empty();
+        this.location = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroup = Output.empty();
+        this.sku = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -131,13 +131,13 @@ public final class IntegrationServiceEnvironmentArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<ManagedServiceIdentityArgs> identity;
-        private @Nullable Input<String> integrationServiceEnvironmentName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<IntegrationServiceEnvironmentPropertiesArgs> properties;
-        private Input<String> resourceGroup;
-        private @Nullable Input<IntegrationServiceEnvironmentSkuArgs> sku;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<ManagedServiceIdentityArgs> identity;
+        private @Nullable Output<String> integrationServiceEnvironmentName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<IntegrationServiceEnvironmentPropertiesArgs> properties;
+        private Output<String> resourceGroup;
+        private @Nullable Output<IntegrationServiceEnvironmentSkuArgs> sku;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -154,73 +154,73 @@ public final class IntegrationServiceEnvironmentArgs extends io.pulumi.resources
     	      this.tags = defaults.tags;
         }
 
-        public Builder identity(@Nullable Input<ManagedServiceIdentityArgs> identity) {
+        public Builder identity(@Nullable Output<ManagedServiceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder integrationServiceEnvironmentName(@Nullable Input<String> integrationServiceEnvironmentName) {
+        public Builder integrationServiceEnvironmentName(@Nullable Output<String> integrationServiceEnvironmentName) {
             this.integrationServiceEnvironmentName = integrationServiceEnvironmentName;
             return this;
         }
 
         public Builder integrationServiceEnvironmentName(@Nullable String integrationServiceEnvironmentName) {
-            this.integrationServiceEnvironmentName = Input.ofNullable(integrationServiceEnvironmentName);
+            this.integrationServiceEnvironmentName = Output.ofNullable(integrationServiceEnvironmentName);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder properties(@Nullable Input<IntegrationServiceEnvironmentPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<IntegrationServiceEnvironmentPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable IntegrationServiceEnvironmentPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroup(Input<String> resourceGroup) {
+        public Builder resourceGroup(Output<String> resourceGroup) {
             this.resourceGroup = Objects.requireNonNull(resourceGroup);
             return this;
         }
 
         public Builder resourceGroup(String resourceGroup) {
-            this.resourceGroup = Input.of(Objects.requireNonNull(resourceGroup));
+            this.resourceGroup = Output.of(Objects.requireNonNull(resourceGroup));
             return this;
         }
 
-        public Builder sku(@Nullable Input<IntegrationServiceEnvironmentSkuArgs> sku) {
+        public Builder sku(@Nullable Output<IntegrationServiceEnvironmentSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable IntegrationServiceEnvironmentSkuArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public IntegrationServiceEnvironmentArgs build() {

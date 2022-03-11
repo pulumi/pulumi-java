@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.enums.ConditionOperator;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class ManagementEventAggregationConditionArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="operator")
-      private final @Nullable Input<ConditionOperator> operator;
+      private final @Nullable Output<ConditionOperator> operator;
 
-    public Input<ConditionOperator> getOperator() {
-        return this.operator == null ? Input.empty() : this.operator;
+    public Output<ConditionOperator> getOperator() {
+        return this.operator == null ? Output.empty() : this.operator;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ManagementEventAggregationConditionArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="threshold")
-      private final @Nullable Input<Double> threshold;
+      private final @Nullable Output<Double> threshold;
 
-    public Input<Double> getThreshold() {
-        return this.threshold == null ? Input.empty() : this.threshold;
+    public Output<Double> getThreshold() {
+        return this.threshold == null ? Output.empty() : this.threshold;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class ManagementEventAggregationConditionArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="windowSize")
-      private final @Nullable Input<String> windowSize;
+      private final @Nullable Output<String> windowSize;
 
-    public Input<String> getWindowSize() {
-        return this.windowSize == null ? Input.empty() : this.windowSize;
+    public Output<String> getWindowSize() {
+        return this.windowSize == null ? Output.empty() : this.windowSize;
     }
 
     public ManagementEventAggregationConditionArgs(
-        @Nullable Input<ConditionOperator> operator,
-        @Nullable Input<Double> threshold,
-        @Nullable Input<String> windowSize) {
+        @Nullable Output<ConditionOperator> operator,
+        @Nullable Output<Double> threshold,
+        @Nullable Output<String> windowSize) {
         this.operator = operator;
         this.threshold = threshold;
         this.windowSize = windowSize;
     }
 
     private ManagementEventAggregationConditionArgs() {
-        this.operator = Input.empty();
-        this.threshold = Input.empty();
-        this.windowSize = Input.empty();
+        this.operator = Output.empty();
+        this.threshold = Output.empty();
+        this.windowSize = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class ManagementEventAggregationConditionArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<ConditionOperator> operator;
-        private @Nullable Input<Double> threshold;
-        private @Nullable Input<String> windowSize;
+        private @Nullable Output<ConditionOperator> operator;
+        private @Nullable Output<Double> threshold;
+        private @Nullable Output<String> windowSize;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class ManagementEventAggregationConditionArgs extends io.pulumi.res
     	      this.windowSize = defaults.windowSize;
         }
 
-        public Builder operator(@Nullable Input<ConditionOperator> operator) {
+        public Builder operator(@Nullable Output<ConditionOperator> operator) {
             this.operator = operator;
             return this;
         }
 
         public Builder operator(@Nullable ConditionOperator operator) {
-            this.operator = Input.ofNullable(operator);
+            this.operator = Output.ofNullable(operator);
             return this;
         }
 
-        public Builder threshold(@Nullable Input<Double> threshold) {
+        public Builder threshold(@Nullable Output<Double> threshold) {
             this.threshold = threshold;
             return this;
         }
 
         public Builder threshold(@Nullable Double threshold) {
-            this.threshold = Input.ofNullable(threshold);
+            this.threshold = Output.ofNullable(threshold);
             return this;
         }
 
-        public Builder windowSize(@Nullable Input<String> windowSize) {
+        public Builder windowSize(@Nullable Output<String> windowSize) {
             this.windowSize = windowSize;
             return this;
         }
 
         public Builder windowSize(@Nullable String windowSize) {
-            this.windowSize = Input.ofNullable(windowSize);
+            this.windowSize = Output.ofNullable(windowSize);
             return this;
         }
         public ManagementEventAggregationConditionArgs build() {

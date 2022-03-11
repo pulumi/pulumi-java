@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ComputeBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="computeId")
-      private final @Nullable Input<String> computeId;
+      private final @Nullable Output<String> computeId;
 
-    public Input<String> getComputeId() {
-        return this.computeId == null ? Input.empty() : this.computeId;
+    public Output<String> getComputeId() {
+        return this.computeId == null ? Output.empty() : this.computeId;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ComputeBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeCount")
-      private final @Nullable Input<Integer> nodeCount;
+      private final @Nullable Output<Integer> nodeCount;
 
-    public Input<Integer> getNodeCount() {
-        return this.nodeCount == null ? Input.empty() : this.nodeCount;
+    public Output<Integer> getNodeCount() {
+        return this.nodeCount == null ? Output.empty() : this.nodeCount;
     }
 
     public ComputeBindingArgs(
-        @Nullable Input<String> computeId,
-        @Nullable Input<Integer> nodeCount) {
+        @Nullable Output<String> computeId,
+        @Nullable Output<Integer> nodeCount) {
         this.computeId = computeId;
         this.nodeCount = nodeCount;
     }
 
     private ComputeBindingArgs() {
-        this.computeId = Input.empty();
-        this.nodeCount = Input.empty();
+        this.computeId = Output.empty();
+        this.nodeCount = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ComputeBindingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> computeId;
-        private @Nullable Input<Integer> nodeCount;
+        private @Nullable Output<String> computeId;
+        private @Nullable Output<Integer> nodeCount;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ComputeBindingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.nodeCount = defaults.nodeCount;
         }
 
-        public Builder computeId(@Nullable Input<String> computeId) {
+        public Builder computeId(@Nullable Output<String> computeId) {
             this.computeId = computeId;
             return this;
         }
 
         public Builder computeId(@Nullable String computeId) {
-            this.computeId = Input.ofNullable(computeId);
+            this.computeId = Output.ofNullable(computeId);
             return this;
         }
 
-        public Builder nodeCount(@Nullable Input<Integer> nodeCount) {
+        public Builder nodeCount(@Nullable Output<Integer> nodeCount) {
             this.nodeCount = nodeCount;
             return this;
         }
 
         public Builder nodeCount(@Nullable Integer nodeCount) {
-            this.nodeCount = Input.ofNullable(nodeCount);
+            this.nodeCount = Output.ofNullable(nodeCount);
             return this;
         }
         public ComputeBindingArgs build() {

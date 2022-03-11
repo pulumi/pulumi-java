@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class VideoCreationPropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class VideoCreationPropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="retentionPeriod")
-      private final @Nullable Input<String> retentionPeriod;
+      private final @Nullable Output<String> retentionPeriod;
 
-    public Input<String> getRetentionPeriod() {
-        return this.retentionPeriod == null ? Input.empty() : this.retentionPeriod;
+    public Output<String> getRetentionPeriod() {
+        return this.retentionPeriod == null ? Output.empty() : this.retentionPeriod;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class VideoCreationPropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="segmentLength")
-      private final @Nullable Input<String> segmentLength;
+      private final @Nullable Output<String> segmentLength;
 
-    public Input<String> getSegmentLength() {
-        return this.segmentLength == null ? Input.empty() : this.segmentLength;
+    public Output<String> getSegmentLength() {
+        return this.segmentLength == null ? Output.empty() : this.segmentLength;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class VideoCreationPropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="title")
-      private final @Nullable Input<String> title;
+      private final @Nullable Output<String> title;
 
-    public Input<String> getTitle() {
-        return this.title == null ? Input.empty() : this.title;
+    public Output<String> getTitle() {
+        return this.title == null ? Output.empty() : this.title;
     }
 
     public VideoCreationPropertiesArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> retentionPeriod,
-        @Nullable Input<String> segmentLength,
-        @Nullable Input<String> title) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> retentionPeriod,
+        @Nullable Output<String> segmentLength,
+        @Nullable Output<String> title) {
         this.description = description;
         this.retentionPeriod = retentionPeriod;
         this.segmentLength = segmentLength;
@@ -74,10 +74,10 @@ public final class VideoCreationPropertiesArgs extends io.pulumi.resources.Resou
     }
 
     private VideoCreationPropertiesArgs() {
-        this.description = Input.empty();
-        this.retentionPeriod = Input.empty();
-        this.segmentLength = Input.empty();
-        this.title = Input.empty();
+        this.description = Output.empty();
+        this.retentionPeriod = Output.empty();
+        this.segmentLength = Output.empty();
+        this.title = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class VideoCreationPropertiesArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> retentionPeriod;
-        private @Nullable Input<String> segmentLength;
-        private @Nullable Input<String> title;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> retentionPeriod;
+        private @Nullable Output<String> segmentLength;
+        private @Nullable Output<String> title;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class VideoCreationPropertiesArgs extends io.pulumi.resources.Resou
     	      this.title = defaults.title;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder retentionPeriod(@Nullable Input<String> retentionPeriod) {
+        public Builder retentionPeriod(@Nullable Output<String> retentionPeriod) {
             this.retentionPeriod = retentionPeriod;
             return this;
         }
 
         public Builder retentionPeriod(@Nullable String retentionPeriod) {
-            this.retentionPeriod = Input.ofNullable(retentionPeriod);
+            this.retentionPeriod = Output.ofNullable(retentionPeriod);
             return this;
         }
 
-        public Builder segmentLength(@Nullable Input<String> segmentLength) {
+        public Builder segmentLength(@Nullable Output<String> segmentLength) {
             this.segmentLength = segmentLength;
             return this;
         }
 
         public Builder segmentLength(@Nullable String segmentLength) {
-            this.segmentLength = Input.ofNullable(segmentLength);
+            this.segmentLength = Output.ofNullable(segmentLength);
             return this;
         }
 
-        public Builder title(@Nullable Input<String> title) {
+        public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
 
         public Builder title(@Nullable String title) {
-            this.title = Input.ofNullable(title);
+            this.title = Output.ofNullable(title);
             return this;
         }
         public VideoCreationPropertiesArgs build() {

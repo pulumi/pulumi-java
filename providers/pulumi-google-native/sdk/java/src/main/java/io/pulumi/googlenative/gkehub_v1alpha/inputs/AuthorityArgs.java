@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="issuer")
-      private final @Nullable Input<String> issuer;
+      private final @Nullable Output<String> issuer;
 
-    public Input<String> getIssuer() {
-        return this.issuer == null ? Input.empty() : this.issuer;
+    public Output<String> getIssuer() {
+        return this.issuer == null ? Output.empty() : this.issuer;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="oidcJwks")
-      private final @Nullable Input<String> oidcJwks;
+      private final @Nullable Output<String> oidcJwks;
 
-    public Input<String> getOidcJwks() {
-        return this.oidcJwks == null ? Input.empty() : this.oidcJwks;
+    public Output<String> getOidcJwks() {
+        return this.oidcJwks == null ? Output.empty() : this.oidcJwks;
     }
 
     public AuthorityArgs(
-        @Nullable Input<String> issuer,
-        @Nullable Input<String> oidcJwks) {
+        @Nullable Output<String> issuer,
+        @Nullable Output<String> oidcJwks) {
         this.issuer = issuer;
         this.oidcJwks = oidcJwks;
     }
 
     private AuthorityArgs() {
-        this.issuer = Input.empty();
-        this.oidcJwks = Input.empty();
+        this.issuer = Output.empty();
+        this.oidcJwks = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> issuer;
-        private @Nullable Input<String> oidcJwks;
+        private @Nullable Output<String> issuer;
+        private @Nullable Output<String> oidcJwks;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.oidcJwks = defaults.oidcJwks;
         }
 
-        public Builder issuer(@Nullable Input<String> issuer) {
+        public Builder issuer(@Nullable Output<String> issuer) {
             this.issuer = issuer;
             return this;
         }
 
         public Builder issuer(@Nullable String issuer) {
-            this.issuer = Input.ofNullable(issuer);
+            this.issuer = Output.ofNullable(issuer);
             return this;
         }
 
-        public Builder oidcJwks(@Nullable Input<String> oidcJwks) {
+        public Builder oidcJwks(@Nullable Output<String> oidcJwks) {
             this.oidcJwks = oidcJwks;
             return this;
         }
 
         public Builder oidcJwks(@Nullable String oidcJwks) {
-            this.oidcJwks = Input.ofNullable(oidcJwks);
+            this.oidcJwks = Output.ofNullable(oidcJwks);
             return this;
         }
         public AuthorityArgs build() {

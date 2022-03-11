@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -27,10 +27,10 @@ public final class AWSElasticBlockStoreVolumeSourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="fsType")
-      private final @Nullable Input<String> fsType;
+      private final @Nullable Output<String> fsType;
 
-    public Input<String> getFsType() {
-        return this.fsType == null ? Input.empty() : this.fsType;
+    public Output<String> getFsType() {
+        return this.fsType == null ? Output.empty() : this.fsType;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class AWSElasticBlockStoreVolumeSourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="partition")
-      private final @Nullable Input<Integer> partition;
+      private final @Nullable Output<Integer> partition;
 
-    public Input<Integer> getPartition() {
-        return this.partition == null ? Input.empty() : this.partition;
+    public Output<Integer> getPartition() {
+        return this.partition == null ? Output.empty() : this.partition;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class AWSElasticBlockStoreVolumeSourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="readOnly")
-      private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Output<Boolean> readOnly;
 
-    public Input<Boolean> getReadOnly() {
-        return this.readOnly == null ? Input.empty() : this.readOnly;
+    public Output<Boolean> getReadOnly() {
+        return this.readOnly == null ? Output.empty() : this.readOnly;
     }
 
     /**
@@ -60,17 +60,17 @@ public final class AWSElasticBlockStoreVolumeSourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="volumeID", required=true)
-      private final Input<String> volumeID;
+      private final Output<String> volumeID;
 
-    public Input<String> getVolumeID() {
+    public Output<String> getVolumeID() {
         return this.volumeID;
     }
 
     public AWSElasticBlockStoreVolumeSourceArgs(
-        @Nullable Input<String> fsType,
-        @Nullable Input<Integer> partition,
-        @Nullable Input<Boolean> readOnly,
-        Input<String> volumeID) {
+        @Nullable Output<String> fsType,
+        @Nullable Output<Integer> partition,
+        @Nullable Output<Boolean> readOnly,
+        Output<String> volumeID) {
         this.fsType = fsType;
         this.partition = partition;
         this.readOnly = readOnly;
@@ -78,10 +78,10 @@ public final class AWSElasticBlockStoreVolumeSourceArgs extends io.pulumi.resour
     }
 
     private AWSElasticBlockStoreVolumeSourceArgs() {
-        this.fsType = Input.empty();
-        this.partition = Input.empty();
-        this.readOnly = Input.empty();
-        this.volumeID = Input.empty();
+        this.fsType = Output.empty();
+        this.partition = Output.empty();
+        this.readOnly = Output.empty();
+        this.volumeID = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,10 +93,10 @@ public final class AWSElasticBlockStoreVolumeSourceArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> fsType;
-        private @Nullable Input<Integer> partition;
-        private @Nullable Input<Boolean> readOnly;
-        private Input<String> volumeID;
+        private @Nullable Output<String> fsType;
+        private @Nullable Output<Integer> partition;
+        private @Nullable Output<Boolean> readOnly;
+        private Output<String> volumeID;
 
         public Builder() {
     	      // Empty
@@ -110,43 +110,43 @@ public final class AWSElasticBlockStoreVolumeSourceArgs extends io.pulumi.resour
     	      this.volumeID = defaults.volumeID;
         }
 
-        public Builder fsType(@Nullable Input<String> fsType) {
+        public Builder fsType(@Nullable Output<String> fsType) {
             this.fsType = fsType;
             return this;
         }
 
         public Builder fsType(@Nullable String fsType) {
-            this.fsType = Input.ofNullable(fsType);
+            this.fsType = Output.ofNullable(fsType);
             return this;
         }
 
-        public Builder partition(@Nullable Input<Integer> partition) {
+        public Builder partition(@Nullable Output<Integer> partition) {
             this.partition = partition;
             return this;
         }
 
         public Builder partition(@Nullable Integer partition) {
-            this.partition = Input.ofNullable(partition);
+            this.partition = Output.ofNullable(partition);
             return this;
         }
 
-        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Input.ofNullable(readOnly);
+            this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
 
-        public Builder volumeID(Input<String> volumeID) {
+        public Builder volumeID(Output<String> volumeID) {
             this.volumeID = Objects.requireNonNull(volumeID);
             return this;
         }
 
         public Builder volumeID(String volumeID) {
-            this.volumeID = Input.of(Objects.requireNonNull(volumeID));
+            this.volumeID = Output.of(Objects.requireNonNull(volumeID));
             return this;
         }
         public AWSElasticBlockStoreVolumeSourceArgs build() {

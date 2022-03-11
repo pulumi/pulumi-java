@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appflow.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class ConnectorProfileTrendmicroConnectorProfileCredentialsArgs ext
      * 
      */
     @InputImport(name="apiSecretKey", required=true)
-      private final Input<String> apiSecretKey;
+      private final Output<String> apiSecretKey;
 
-    public Input<String> getApiSecretKey() {
+    public Output<String> getApiSecretKey() {
         return this.apiSecretKey;
     }
 
-    public ConnectorProfileTrendmicroConnectorProfileCredentialsArgs(Input<String> apiSecretKey) {
+    public ConnectorProfileTrendmicroConnectorProfileCredentialsArgs(Output<String> apiSecretKey) {
         this.apiSecretKey = Objects.requireNonNull(apiSecretKey, "expected parameter 'apiSecretKey' to be non-null");
     }
 
     private ConnectorProfileTrendmicroConnectorProfileCredentialsArgs() {
-        this.apiSecretKey = Input.empty();
+        this.apiSecretKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ConnectorProfileTrendmicroConnectorProfileCredentialsArgs ext
     }
 
     public static final class Builder {
-        private Input<String> apiSecretKey;
+        private Output<String> apiSecretKey;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ConnectorProfileTrendmicroConnectorProfileCredentialsArgs ext
     	      this.apiSecretKey = defaults.apiSecretKey;
         }
 
-        public Builder apiSecretKey(Input<String> apiSecretKey) {
+        public Builder apiSecretKey(Output<String> apiSecretKey) {
             this.apiSecretKey = Objects.requireNonNull(apiSecretKey);
             return this;
         }
 
         public Builder apiSecretKey(String apiSecretKey) {
-            this.apiSecretKey = Input.of(Objects.requireNonNull(apiSecretKey));
+            this.apiSecretKey = Output.of(Objects.requireNonNull(apiSecretKey));
             return this;
         }
         public ConnectorProfileTrendmicroConnectorProfileCredentialsArgs build() {

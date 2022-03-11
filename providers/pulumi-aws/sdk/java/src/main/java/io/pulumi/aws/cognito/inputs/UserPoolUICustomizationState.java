@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cognito.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class UserPoolUICustomizationState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="clientId")
-      private final @Nullable Input<String> clientId;
+      private final @Nullable Output<String> clientId;
 
-    public Input<String> getClientId() {
-        return this.clientId == null ? Input.empty() : this.clientId;
+    public Output<String> getClientId() {
+        return this.clientId == null ? Output.empty() : this.clientId;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class UserPoolUICustomizationState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="creationDate")
-      private final @Nullable Input<String> creationDate;
+      private final @Nullable Output<String> creationDate;
 
-    public Input<String> getCreationDate() {
-        return this.creationDate == null ? Input.empty() : this.creationDate;
+    public Output<String> getCreationDate() {
+        return this.creationDate == null ? Output.empty() : this.creationDate;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class UserPoolUICustomizationState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="css")
-      private final @Nullable Input<String> css;
+      private final @Nullable Output<String> css;
 
-    public Input<String> getCss() {
-        return this.css == null ? Input.empty() : this.css;
+    public Output<String> getCss() {
+        return this.css == null ? Output.empty() : this.css;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class UserPoolUICustomizationState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="cssVersion")
-      private final @Nullable Input<String> cssVersion;
+      private final @Nullable Output<String> cssVersion;
 
-    public Input<String> getCssVersion() {
-        return this.cssVersion == null ? Input.empty() : this.cssVersion;
+    public Output<String> getCssVersion() {
+        return this.cssVersion == null ? Output.empty() : this.cssVersion;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class UserPoolUICustomizationState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="imageFile")
-      private final @Nullable Input<String> imageFile;
+      private final @Nullable Output<String> imageFile;
 
-    public Input<String> getImageFile() {
-        return this.imageFile == null ? Input.empty() : this.imageFile;
+    public Output<String> getImageFile() {
+        return this.imageFile == null ? Output.empty() : this.imageFile;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class UserPoolUICustomizationState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="imageUrl")
-      private final @Nullable Input<String> imageUrl;
+      private final @Nullable Output<String> imageUrl;
 
-    public Input<String> getImageUrl() {
-        return this.imageUrl == null ? Input.empty() : this.imageUrl;
+    public Output<String> getImageUrl() {
+        return this.imageUrl == null ? Output.empty() : this.imageUrl;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class UserPoolUICustomizationState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="lastModifiedDate")
-      private final @Nullable Input<String> lastModifiedDate;
+      private final @Nullable Output<String> lastModifiedDate;
 
-    public Input<String> getLastModifiedDate() {
-        return this.lastModifiedDate == null ? Input.empty() : this.lastModifiedDate;
+    public Output<String> getLastModifiedDate() {
+        return this.lastModifiedDate == null ? Output.empty() : this.lastModifiedDate;
     }
 
     /**
@@ -96,21 +96,21 @@ public final class UserPoolUICustomizationState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="userPoolId")
-      private final @Nullable Input<String> userPoolId;
+      private final @Nullable Output<String> userPoolId;
 
-    public Input<String> getUserPoolId() {
-        return this.userPoolId == null ? Input.empty() : this.userPoolId;
+    public Output<String> getUserPoolId() {
+        return this.userPoolId == null ? Output.empty() : this.userPoolId;
     }
 
     public UserPoolUICustomizationState(
-        @Nullable Input<String> clientId,
-        @Nullable Input<String> creationDate,
-        @Nullable Input<String> css,
-        @Nullable Input<String> cssVersion,
-        @Nullable Input<String> imageFile,
-        @Nullable Input<String> imageUrl,
-        @Nullable Input<String> lastModifiedDate,
-        @Nullable Input<String> userPoolId) {
+        @Nullable Output<String> clientId,
+        @Nullable Output<String> creationDate,
+        @Nullable Output<String> css,
+        @Nullable Output<String> cssVersion,
+        @Nullable Output<String> imageFile,
+        @Nullable Output<String> imageUrl,
+        @Nullable Output<String> lastModifiedDate,
+        @Nullable Output<String> userPoolId) {
         this.clientId = clientId;
         this.creationDate = creationDate;
         this.css = css;
@@ -122,14 +122,14 @@ public final class UserPoolUICustomizationState extends io.pulumi.resources.Reso
     }
 
     private UserPoolUICustomizationState() {
-        this.clientId = Input.empty();
-        this.creationDate = Input.empty();
-        this.css = Input.empty();
-        this.cssVersion = Input.empty();
-        this.imageFile = Input.empty();
-        this.imageUrl = Input.empty();
-        this.lastModifiedDate = Input.empty();
-        this.userPoolId = Input.empty();
+        this.clientId = Output.empty();
+        this.creationDate = Output.empty();
+        this.css = Output.empty();
+        this.cssVersion = Output.empty();
+        this.imageFile = Output.empty();
+        this.imageUrl = Output.empty();
+        this.lastModifiedDate = Output.empty();
+        this.userPoolId = Output.empty();
     }
 
     public static Builder builder() {
@@ -141,14 +141,14 @@ public final class UserPoolUICustomizationState extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> clientId;
-        private @Nullable Input<String> creationDate;
-        private @Nullable Input<String> css;
-        private @Nullable Input<String> cssVersion;
-        private @Nullable Input<String> imageFile;
-        private @Nullable Input<String> imageUrl;
-        private @Nullable Input<String> lastModifiedDate;
-        private @Nullable Input<String> userPoolId;
+        private @Nullable Output<String> clientId;
+        private @Nullable Output<String> creationDate;
+        private @Nullable Output<String> css;
+        private @Nullable Output<String> cssVersion;
+        private @Nullable Output<String> imageFile;
+        private @Nullable Output<String> imageUrl;
+        private @Nullable Output<String> lastModifiedDate;
+        private @Nullable Output<String> userPoolId;
 
         public Builder() {
     	      // Empty
@@ -166,83 +166,83 @@ public final class UserPoolUICustomizationState extends io.pulumi.resources.Reso
     	      this.userPoolId = defaults.userPoolId;
         }
 
-        public Builder clientId(@Nullable Input<String> clientId) {
+        public Builder clientId(@Nullable Output<String> clientId) {
             this.clientId = clientId;
             return this;
         }
 
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = Input.ofNullable(clientId);
+            this.clientId = Output.ofNullable(clientId);
             return this;
         }
 
-        public Builder creationDate(@Nullable Input<String> creationDate) {
+        public Builder creationDate(@Nullable Output<String> creationDate) {
             this.creationDate = creationDate;
             return this;
         }
 
         public Builder creationDate(@Nullable String creationDate) {
-            this.creationDate = Input.ofNullable(creationDate);
+            this.creationDate = Output.ofNullable(creationDate);
             return this;
         }
 
-        public Builder css(@Nullable Input<String> css) {
+        public Builder css(@Nullable Output<String> css) {
             this.css = css;
             return this;
         }
 
         public Builder css(@Nullable String css) {
-            this.css = Input.ofNullable(css);
+            this.css = Output.ofNullable(css);
             return this;
         }
 
-        public Builder cssVersion(@Nullable Input<String> cssVersion) {
+        public Builder cssVersion(@Nullable Output<String> cssVersion) {
             this.cssVersion = cssVersion;
             return this;
         }
 
         public Builder cssVersion(@Nullable String cssVersion) {
-            this.cssVersion = Input.ofNullable(cssVersion);
+            this.cssVersion = Output.ofNullable(cssVersion);
             return this;
         }
 
-        public Builder imageFile(@Nullable Input<String> imageFile) {
+        public Builder imageFile(@Nullable Output<String> imageFile) {
             this.imageFile = imageFile;
             return this;
         }
 
         public Builder imageFile(@Nullable String imageFile) {
-            this.imageFile = Input.ofNullable(imageFile);
+            this.imageFile = Output.ofNullable(imageFile);
             return this;
         }
 
-        public Builder imageUrl(@Nullable Input<String> imageUrl) {
+        public Builder imageUrl(@Nullable Output<String> imageUrl) {
             this.imageUrl = imageUrl;
             return this;
         }
 
         public Builder imageUrl(@Nullable String imageUrl) {
-            this.imageUrl = Input.ofNullable(imageUrl);
+            this.imageUrl = Output.ofNullable(imageUrl);
             return this;
         }
 
-        public Builder lastModifiedDate(@Nullable Input<String> lastModifiedDate) {
+        public Builder lastModifiedDate(@Nullable Output<String> lastModifiedDate) {
             this.lastModifiedDate = lastModifiedDate;
             return this;
         }
 
         public Builder lastModifiedDate(@Nullable String lastModifiedDate) {
-            this.lastModifiedDate = Input.ofNullable(lastModifiedDate);
+            this.lastModifiedDate = Output.ofNullable(lastModifiedDate);
             return this;
         }
 
-        public Builder userPoolId(@Nullable Input<String> userPoolId) {
+        public Builder userPoolId(@Nullable Output<String> userPoolId) {
             this.userPoolId = userPoolId;
             return this;
         }
 
         public Builder userPoolId(@Nullable String userPoolId) {
-            this.userPoolId = Input.ofNullable(userPoolId);
+            this.userPoolId = Output.ofNullable(userPoolId);
             return this;
         }
         public UserPoolUICustomizationState build() {

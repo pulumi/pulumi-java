@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.certificateauthority;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -190,14 +189,14 @@ public class CaPoolIamBinding extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CaPoolIamBinding(String name, CaPoolIamBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:certificateauthority/caPoolIamBinding:CaPoolIamBinding", name, args == null ? CaPoolIamBindingArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:certificateauthority/caPoolIamBinding:CaPoolIamBinding", name, args == null ? CaPoolIamBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private CaPoolIamBinding(String name, Input<String> id, @Nullable CaPoolIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private CaPoolIamBinding(String name, Output<String> id, @Nullable CaPoolIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:certificateauthority/caPoolIamBinding:CaPoolIamBinding", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -213,7 +212,7 @@ public class CaPoolIamBinding extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CaPoolIamBinding get(String name, Input<String> id, @Nullable CaPoolIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static CaPoolIamBinding get(String name, Output<String> id, @Nullable CaPoolIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new CaPoolIamBinding(name, id, state, options);
     }
 }

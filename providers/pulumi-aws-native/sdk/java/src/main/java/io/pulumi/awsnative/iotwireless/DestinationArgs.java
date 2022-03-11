@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotwireless;
 
 import io.pulumi.awsnative.iotwireless.enums.DestinationExpressionType;
 import io.pulumi.awsnative.iotwireless.inputs.DestinationTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -33,9 +33,9 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expression", required=true)
-      private final Input<String> expression;
+      private final Output<String> expression;
 
-    public Input<String> getExpression() {
+    public Output<String> getExpression() {
         return this.expression;
     }
 
@@ -44,9 +44,9 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expressionType", required=true)
-      private final Input<DestinationExpressionType> expressionType;
+      private final Output<DestinationExpressionType> expressionType;
 
-    public Input<DestinationExpressionType> getExpressionType() {
+    public Output<DestinationExpressionType> getExpressionType() {
         return this.expressionType;
     }
 
@@ -55,10 +55,10 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -66,9 +66,9 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
@@ -77,19 +77,19 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<DestinationTagArgs>> tags;
+      private final @Nullable Output<List<DestinationTagArgs>> tags;
 
-    public Input<List<DestinationTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<DestinationTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public DestinationArgs(
-        @Nullable Input<String> description,
-        Input<String> expression,
-        Input<DestinationExpressionType> expressionType,
-        @Nullable Input<String> name,
-        Input<String> roleArn,
-        @Nullable Input<List<DestinationTagArgs>> tags) {
+        @Nullable Output<String> description,
+        Output<String> expression,
+        Output<DestinationExpressionType> expressionType,
+        @Nullable Output<String> name,
+        Output<String> roleArn,
+        @Nullable Output<List<DestinationTagArgs>> tags) {
         this.description = description;
         this.expression = Objects.requireNonNull(expression, "expected parameter 'expression' to be non-null");
         this.expressionType = Objects.requireNonNull(expressionType, "expected parameter 'expressionType' to be non-null");
@@ -99,12 +99,12 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DestinationArgs() {
-        this.description = Input.empty();
-        this.expression = Input.empty();
-        this.expressionType = Input.empty();
-        this.name = Input.empty();
-        this.roleArn = Input.empty();
-        this.tags = Input.empty();
+        this.description = Output.empty();
+        this.expression = Output.empty();
+        this.expressionType = Output.empty();
+        this.name = Output.empty();
+        this.roleArn = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> expression;
-        private Input<DestinationExpressionType> expressionType;
-        private @Nullable Input<String> name;
-        private Input<String> roleArn;
-        private @Nullable Input<List<DestinationTagArgs>> tags;
+        private @Nullable Output<String> description;
+        private Output<String> expression;
+        private Output<DestinationExpressionType> expressionType;
+        private @Nullable Output<String> name;
+        private Output<String> roleArn;
+        private @Nullable Output<List<DestinationTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder expression(Input<String> expression) {
+        public Builder expression(Output<String> expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
 
         public Builder expression(String expression) {
-            this.expression = Input.of(Objects.requireNonNull(expression));
+            this.expression = Output.of(Objects.requireNonNull(expression));
             return this;
         }
 
-        public Builder expressionType(Input<DestinationExpressionType> expressionType) {
+        public Builder expressionType(Output<DestinationExpressionType> expressionType) {
             this.expressionType = Objects.requireNonNull(expressionType);
             return this;
         }
 
         public Builder expressionType(DestinationExpressionType expressionType) {
-            this.expressionType = Input.of(Objects.requireNonNull(expressionType));
+            this.expressionType = Output.of(Objects.requireNonNull(expressionType));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<DestinationTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<DestinationTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<DestinationTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public DestinationArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.networkfirewall.inputs;
 
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupPublishMetricActionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,18 +15,18 @@ public final class RuleGroupActionDefinitionArgs extends io.pulumi.resources.Res
     public static final RuleGroupActionDefinitionArgs Empty = new RuleGroupActionDefinitionArgs();
 
     @InputImport(name="publishMetricAction")
-      private final @Nullable Input<RuleGroupPublishMetricActionArgs> publishMetricAction;
+      private final @Nullable Output<RuleGroupPublishMetricActionArgs> publishMetricAction;
 
-    public Input<RuleGroupPublishMetricActionArgs> getPublishMetricAction() {
-        return this.publishMetricAction == null ? Input.empty() : this.publishMetricAction;
+    public Output<RuleGroupPublishMetricActionArgs> getPublishMetricAction() {
+        return this.publishMetricAction == null ? Output.empty() : this.publishMetricAction;
     }
 
-    public RuleGroupActionDefinitionArgs(@Nullable Input<RuleGroupPublishMetricActionArgs> publishMetricAction) {
+    public RuleGroupActionDefinitionArgs(@Nullable Output<RuleGroupPublishMetricActionArgs> publishMetricAction) {
         this.publishMetricAction = publishMetricAction;
     }
 
     private RuleGroupActionDefinitionArgs() {
-        this.publishMetricAction = Input.empty();
+        this.publishMetricAction = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class RuleGroupActionDefinitionArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<RuleGroupPublishMetricActionArgs> publishMetricAction;
+        private @Nullable Output<RuleGroupPublishMetricActionArgs> publishMetricAction;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class RuleGroupActionDefinitionArgs extends io.pulumi.resources.Res
     	      this.publishMetricAction = defaults.publishMetricAction;
         }
 
-        public Builder publishMetricAction(@Nullable Input<RuleGroupPublishMetricActionArgs> publishMetricAction) {
+        public Builder publishMetricAction(@Nullable Output<RuleGroupPublishMetricActionArgs> publishMetricAction) {
             this.publishMetricAction = publishMetricAction;
             return this;
         }
 
         public Builder publishMetricAction(@Nullable RuleGroupPublishMetricActionArgs publishMetricAction) {
-            this.publishMetricAction = Input.ofNullable(publishMetricAction);
+            this.publishMetricAction = Output.ofNullable(publishMetricAction);
             return this;
         }
         public RuleGroupActionDefinitionArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sso.inputs;
 
 import io.pulumi.awsnative.sso.inputs.InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class InstanceAccessControlAttributeConfigurationPropertiesArgs ext
     public static final InstanceAccessControlAttributeConfigurationPropertiesArgs Empty = new InstanceAccessControlAttributeConfigurationPropertiesArgs();
 
     @InputImport(name="accessControlAttributes", required=true)
-      private final Input<List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs>> accessControlAttributes;
+      private final Output<List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs>> accessControlAttributes;
 
-    public Input<List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs>> getAccessControlAttributes() {
+    public Output<List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs>> getAccessControlAttributes() {
         return this.accessControlAttributes;
     }
 
-    public InstanceAccessControlAttributeConfigurationPropertiesArgs(Input<List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs>> accessControlAttributes) {
+    public InstanceAccessControlAttributeConfigurationPropertiesArgs(Output<List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs>> accessControlAttributes) {
         this.accessControlAttributes = Objects.requireNonNull(accessControlAttributes, "expected parameter 'accessControlAttributes' to be non-null");
     }
 
     private InstanceAccessControlAttributeConfigurationPropertiesArgs() {
-        this.accessControlAttributes = Input.empty();
+        this.accessControlAttributes = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class InstanceAccessControlAttributeConfigurationPropertiesArgs ext
     }
 
     public static final class Builder {
-        private Input<List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs>> accessControlAttributes;
+        private Output<List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs>> accessControlAttributes;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class InstanceAccessControlAttributeConfigurationPropertiesArgs ext
     	      this.accessControlAttributes = defaults.accessControlAttributes;
         }
 
-        public Builder accessControlAttributes(Input<List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs>> accessControlAttributes) {
+        public Builder accessControlAttributes(Output<List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs>> accessControlAttributes) {
             this.accessControlAttributes = Objects.requireNonNull(accessControlAttributes);
             return this;
         }
 
         public Builder accessControlAttributes(List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs> accessControlAttributes) {
-            this.accessControlAttributes = Input.of(Objects.requireNonNull(accessControlAttributes));
+            this.accessControlAttributes = Output.of(Objects.requireNonNull(accessControlAttributes));
             return this;
         }
         public InstanceAccessControlAttributeConfigurationPropertiesArgs build() {

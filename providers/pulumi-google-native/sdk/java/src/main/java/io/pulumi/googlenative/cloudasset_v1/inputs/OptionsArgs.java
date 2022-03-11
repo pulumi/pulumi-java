@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudasset_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="analyzeServiceAccountImpersonation")
-      private final @Nullable Input<Boolean> analyzeServiceAccountImpersonation;
+      private final @Nullable Output<Boolean> analyzeServiceAccountImpersonation;
 
-    public Input<Boolean> getAnalyzeServiceAccountImpersonation() {
-        return this.analyzeServiceAccountImpersonation == null ? Input.empty() : this.analyzeServiceAccountImpersonation;
+    public Output<Boolean> getAnalyzeServiceAccountImpersonation() {
+        return this.analyzeServiceAccountImpersonation == null ? Output.empty() : this.analyzeServiceAccountImpersonation;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expandGroups")
-      private final @Nullable Input<Boolean> expandGroups;
+      private final @Nullable Output<Boolean> expandGroups;
 
-    public Input<Boolean> getExpandGroups() {
-        return this.expandGroups == null ? Input.empty() : this.expandGroups;
+    public Output<Boolean> getExpandGroups() {
+        return this.expandGroups == null ? Output.empty() : this.expandGroups;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expandResources")
-      private final @Nullable Input<Boolean> expandResources;
+      private final @Nullable Output<Boolean> expandResources;
 
-    public Input<Boolean> getExpandResources() {
-        return this.expandResources == null ? Input.empty() : this.expandResources;
+    public Output<Boolean> getExpandResources() {
+        return this.expandResources == null ? Output.empty() : this.expandResources;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expandRoles")
-      private final @Nullable Input<Boolean> expandRoles;
+      private final @Nullable Output<Boolean> expandRoles;
 
-    public Input<Boolean> getExpandRoles() {
-        return this.expandRoles == null ? Input.empty() : this.expandRoles;
+    public Output<Boolean> getExpandRoles() {
+        return this.expandRoles == null ? Output.empty() : this.expandRoles;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputGroupEdges")
-      private final @Nullable Input<Boolean> outputGroupEdges;
+      private final @Nullable Output<Boolean> outputGroupEdges;
 
-    public Input<Boolean> getOutputGroupEdges() {
-        return this.outputGroupEdges == null ? Input.empty() : this.outputGroupEdges;
+    public Output<Boolean> getOutputGroupEdges() {
+        return this.outputGroupEdges == null ? Output.empty() : this.outputGroupEdges;
     }
 
     /**
@@ -78,19 +78,19 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputResourceEdges")
-      private final @Nullable Input<Boolean> outputResourceEdges;
+      private final @Nullable Output<Boolean> outputResourceEdges;
 
-    public Input<Boolean> getOutputResourceEdges() {
-        return this.outputResourceEdges == null ? Input.empty() : this.outputResourceEdges;
+    public Output<Boolean> getOutputResourceEdges() {
+        return this.outputResourceEdges == null ? Output.empty() : this.outputResourceEdges;
     }
 
     public OptionsArgs(
-        @Nullable Input<Boolean> analyzeServiceAccountImpersonation,
-        @Nullable Input<Boolean> expandGroups,
-        @Nullable Input<Boolean> expandResources,
-        @Nullable Input<Boolean> expandRoles,
-        @Nullable Input<Boolean> outputGroupEdges,
-        @Nullable Input<Boolean> outputResourceEdges) {
+        @Nullable Output<Boolean> analyzeServiceAccountImpersonation,
+        @Nullable Output<Boolean> expandGroups,
+        @Nullable Output<Boolean> expandResources,
+        @Nullable Output<Boolean> expandRoles,
+        @Nullable Output<Boolean> outputGroupEdges,
+        @Nullable Output<Boolean> outputResourceEdges) {
         this.analyzeServiceAccountImpersonation = analyzeServiceAccountImpersonation;
         this.expandGroups = expandGroups;
         this.expandResources = expandResources;
@@ -100,12 +100,12 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OptionsArgs() {
-        this.analyzeServiceAccountImpersonation = Input.empty();
-        this.expandGroups = Input.empty();
-        this.expandResources = Input.empty();
-        this.expandRoles = Input.empty();
-        this.outputGroupEdges = Input.empty();
-        this.outputResourceEdges = Input.empty();
+        this.analyzeServiceAccountImpersonation = Output.empty();
+        this.expandGroups = Output.empty();
+        this.expandResources = Output.empty();
+        this.expandRoles = Output.empty();
+        this.outputGroupEdges = Output.empty();
+        this.outputResourceEdges = Output.empty();
     }
 
     public static Builder builder() {
@@ -117,12 +117,12 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> analyzeServiceAccountImpersonation;
-        private @Nullable Input<Boolean> expandGroups;
-        private @Nullable Input<Boolean> expandResources;
-        private @Nullable Input<Boolean> expandRoles;
-        private @Nullable Input<Boolean> outputGroupEdges;
-        private @Nullable Input<Boolean> outputResourceEdges;
+        private @Nullable Output<Boolean> analyzeServiceAccountImpersonation;
+        private @Nullable Output<Boolean> expandGroups;
+        private @Nullable Output<Boolean> expandResources;
+        private @Nullable Output<Boolean> expandRoles;
+        private @Nullable Output<Boolean> outputGroupEdges;
+        private @Nullable Output<Boolean> outputResourceEdges;
 
         public Builder() {
     	      // Empty
@@ -138,63 +138,63 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.outputResourceEdges = defaults.outputResourceEdges;
         }
 
-        public Builder analyzeServiceAccountImpersonation(@Nullable Input<Boolean> analyzeServiceAccountImpersonation) {
+        public Builder analyzeServiceAccountImpersonation(@Nullable Output<Boolean> analyzeServiceAccountImpersonation) {
             this.analyzeServiceAccountImpersonation = analyzeServiceAccountImpersonation;
             return this;
         }
 
         public Builder analyzeServiceAccountImpersonation(@Nullable Boolean analyzeServiceAccountImpersonation) {
-            this.analyzeServiceAccountImpersonation = Input.ofNullable(analyzeServiceAccountImpersonation);
+            this.analyzeServiceAccountImpersonation = Output.ofNullable(analyzeServiceAccountImpersonation);
             return this;
         }
 
-        public Builder expandGroups(@Nullable Input<Boolean> expandGroups) {
+        public Builder expandGroups(@Nullable Output<Boolean> expandGroups) {
             this.expandGroups = expandGroups;
             return this;
         }
 
         public Builder expandGroups(@Nullable Boolean expandGroups) {
-            this.expandGroups = Input.ofNullable(expandGroups);
+            this.expandGroups = Output.ofNullable(expandGroups);
             return this;
         }
 
-        public Builder expandResources(@Nullable Input<Boolean> expandResources) {
+        public Builder expandResources(@Nullable Output<Boolean> expandResources) {
             this.expandResources = expandResources;
             return this;
         }
 
         public Builder expandResources(@Nullable Boolean expandResources) {
-            this.expandResources = Input.ofNullable(expandResources);
+            this.expandResources = Output.ofNullable(expandResources);
             return this;
         }
 
-        public Builder expandRoles(@Nullable Input<Boolean> expandRoles) {
+        public Builder expandRoles(@Nullable Output<Boolean> expandRoles) {
             this.expandRoles = expandRoles;
             return this;
         }
 
         public Builder expandRoles(@Nullable Boolean expandRoles) {
-            this.expandRoles = Input.ofNullable(expandRoles);
+            this.expandRoles = Output.ofNullable(expandRoles);
             return this;
         }
 
-        public Builder outputGroupEdges(@Nullable Input<Boolean> outputGroupEdges) {
+        public Builder outputGroupEdges(@Nullable Output<Boolean> outputGroupEdges) {
             this.outputGroupEdges = outputGroupEdges;
             return this;
         }
 
         public Builder outputGroupEdges(@Nullable Boolean outputGroupEdges) {
-            this.outputGroupEdges = Input.ofNullable(outputGroupEdges);
+            this.outputGroupEdges = Output.ofNullable(outputGroupEdges);
             return this;
         }
 
-        public Builder outputResourceEdges(@Nullable Input<Boolean> outputResourceEdges) {
+        public Builder outputResourceEdges(@Nullable Output<Boolean> outputResourceEdges) {
             this.outputResourceEdges = outputResourceEdges;
             return this;
         }
 
         public Builder outputResourceEdges(@Nullable Boolean outputResourceEdges) {
-            this.outputResourceEdges = Input.ofNullable(outputResourceEdges);
+            this.outputResourceEdges = Output.ofNullable(outputResourceEdges);
             return this;
         }
         public OptionsArgs build() {

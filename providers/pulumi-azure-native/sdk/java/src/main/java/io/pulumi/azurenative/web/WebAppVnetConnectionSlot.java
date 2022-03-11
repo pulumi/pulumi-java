@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.WebAppVnetConnectionSlotArgs;
 import io.pulumi.azurenative.web.outputs.VnetRouteResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -211,30 +210,30 @@ public class WebAppVnetConnectionSlot extends io.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public WebAppVnetConnectionSlot(String name, WebAppVnetConnectionSlotArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:web:WebAppVnetConnectionSlot", name, args == null ? WebAppVnetConnectionSlotArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:web:WebAppVnetConnectionSlot", name, args == null ? WebAppVnetConnectionSlotArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private WebAppVnetConnectionSlot(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private WebAppVnetConnectionSlot(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:web:WebAppVnetConnectionSlot", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:web/v20150801:WebAppVnetConnectionSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20160801:WebAppVnetConnectionSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20180201:WebAppVnetConnectionSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20181101:WebAppVnetConnectionSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20190801:WebAppVnetConnectionSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20200601:WebAppVnetConnectionSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20200901:WebAppVnetConnectionSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20201001:WebAppVnetConnectionSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20201201:WebAppVnetConnectionSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210101:WebAppVnetConnectionSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210115:WebAppVnetConnectionSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210201:WebAppVnetConnectionSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210301:WebAppVnetConnectionSlot").build())
+                Output.of(Alias.builder().setType("azure-native:web/v20150801:WebAppVnetConnectionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20160801:WebAppVnetConnectionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20180201:WebAppVnetConnectionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20181101:WebAppVnetConnectionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20190801:WebAppVnetConnectionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20200601:WebAppVnetConnectionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20200901:WebAppVnetConnectionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20201001:WebAppVnetConnectionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20201201:WebAppVnetConnectionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210101:WebAppVnetConnectionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210115:WebAppVnetConnectionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210201:WebAppVnetConnectionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210301:WebAppVnetConnectionSlot").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -248,7 +247,7 @@ public class WebAppVnetConnectionSlot extends io.pulumi.resources.CustomResource
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WebAppVnetConnectionSlot get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static WebAppVnetConnectionSlot get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new WebAppVnetConnectionSlot(name, id, options);
     }
 }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.greengrassv2.inputs;
 
 import io.pulumi.awsnative.greengrassv2.enums.ComponentVersionLambdaLinuxProcessParamsIsolationMode;
 import io.pulumi.awsnative.greengrassv2.inputs.ComponentVersionLambdaContainerParamsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,29 +16,29 @@ public final class ComponentVersionLambdaLinuxProcessParamsArgs extends io.pulum
     public static final ComponentVersionLambdaLinuxProcessParamsArgs Empty = new ComponentVersionLambdaLinuxProcessParamsArgs();
 
     @InputImport(name="containerParams")
-      private final @Nullable Input<ComponentVersionLambdaContainerParamsArgs> containerParams;
+      private final @Nullable Output<ComponentVersionLambdaContainerParamsArgs> containerParams;
 
-    public Input<ComponentVersionLambdaContainerParamsArgs> getContainerParams() {
-        return this.containerParams == null ? Input.empty() : this.containerParams;
+    public Output<ComponentVersionLambdaContainerParamsArgs> getContainerParams() {
+        return this.containerParams == null ? Output.empty() : this.containerParams;
     }
 
     @InputImport(name="isolationMode")
-      private final @Nullable Input<ComponentVersionLambdaLinuxProcessParamsIsolationMode> isolationMode;
+      private final @Nullable Output<ComponentVersionLambdaLinuxProcessParamsIsolationMode> isolationMode;
 
-    public Input<ComponentVersionLambdaLinuxProcessParamsIsolationMode> getIsolationMode() {
-        return this.isolationMode == null ? Input.empty() : this.isolationMode;
+    public Output<ComponentVersionLambdaLinuxProcessParamsIsolationMode> getIsolationMode() {
+        return this.isolationMode == null ? Output.empty() : this.isolationMode;
     }
 
     public ComponentVersionLambdaLinuxProcessParamsArgs(
-        @Nullable Input<ComponentVersionLambdaContainerParamsArgs> containerParams,
-        @Nullable Input<ComponentVersionLambdaLinuxProcessParamsIsolationMode> isolationMode) {
+        @Nullable Output<ComponentVersionLambdaContainerParamsArgs> containerParams,
+        @Nullable Output<ComponentVersionLambdaLinuxProcessParamsIsolationMode> isolationMode) {
         this.containerParams = containerParams;
         this.isolationMode = isolationMode;
     }
 
     private ComponentVersionLambdaLinuxProcessParamsArgs() {
-        this.containerParams = Input.empty();
-        this.isolationMode = Input.empty();
+        this.containerParams = Output.empty();
+        this.isolationMode = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class ComponentVersionLambdaLinuxProcessParamsArgs extends io.pulum
     }
 
     public static final class Builder {
-        private @Nullable Input<ComponentVersionLambdaContainerParamsArgs> containerParams;
-        private @Nullable Input<ComponentVersionLambdaLinuxProcessParamsIsolationMode> isolationMode;
+        private @Nullable Output<ComponentVersionLambdaContainerParamsArgs> containerParams;
+        private @Nullable Output<ComponentVersionLambdaLinuxProcessParamsIsolationMode> isolationMode;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class ComponentVersionLambdaLinuxProcessParamsArgs extends io.pulum
     	      this.isolationMode = defaults.isolationMode;
         }
 
-        public Builder containerParams(@Nullable Input<ComponentVersionLambdaContainerParamsArgs> containerParams) {
+        public Builder containerParams(@Nullable Output<ComponentVersionLambdaContainerParamsArgs> containerParams) {
             this.containerParams = containerParams;
             return this;
         }
 
         public Builder containerParams(@Nullable ComponentVersionLambdaContainerParamsArgs containerParams) {
-            this.containerParams = Input.ofNullable(containerParams);
+            this.containerParams = Output.ofNullable(containerParams);
             return this;
         }
 
-        public Builder isolationMode(@Nullable Input<ComponentVersionLambdaLinuxProcessParamsIsolationMode> isolationMode) {
+        public Builder isolationMode(@Nullable Output<ComponentVersionLambdaLinuxProcessParamsIsolationMode> isolationMode) {
             this.isolationMode = isolationMode;
             return this;
         }
 
         public Builder isolationMode(@Nullable ComponentVersionLambdaLinuxProcessParamsIsolationMode isolationMode) {
-            this.isolationMode = Input.ofNullable(isolationMode);
+            this.isolationMode = Output.ofNullable(isolationMode);
             return this;
         }
         public ComponentVersionLambdaLinuxProcessParamsArgs build() {

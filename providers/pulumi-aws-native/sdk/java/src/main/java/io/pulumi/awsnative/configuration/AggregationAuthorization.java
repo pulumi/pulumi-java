@@ -6,7 +6,6 @@ package io.pulumi.awsnative.configuration;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.configuration.AggregationAuthorizationArgs;
 import io.pulumi.awsnative.configuration.outputs.AggregationAuthorizationTag;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -115,14 +114,14 @@ public class AggregationAuthorization extends io.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public AggregationAuthorization(String name, AggregationAuthorizationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:configuration:AggregationAuthorization", name, args == null ? AggregationAuthorizationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:configuration:AggregationAuthorization", name, args == null ? AggregationAuthorizationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private AggregationAuthorization(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private AggregationAuthorization(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:configuration:AggregationAuthorization", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -137,7 +136,7 @@ public class AggregationAuthorization extends io.pulumi.resources.CustomResource
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AggregationAuthorization get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static AggregationAuthorization get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AggregationAuthorization(name, id, options);
     }
 }

@@ -4,7 +4,6 @@
 package io.pulumi.kubernetes.events.k8s.io_v1beta1;
 
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -302,10 +301,10 @@ public class Event extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Event(String name, EventArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("kubernetes:events.k8s.io/v1beta1:Event", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
+        super("kubernetes:events.k8s.io/v1beta1:Event", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
     }
 
-    private Event(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Event(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("kubernetes:events.k8s.io/v1beta1:Event", name, null, makeResourceOptions(options, id));
     }
 
@@ -317,12 +316,12 @@ public class Event extends io.pulumi.resources.CustomResource {
             .build();
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("kubernetes:core/v1:Event").build()),
-                Input.of(Alias.builder().setType("kubernetes:events.k8s.io/v1:Event").build())
+                Output.of(Alias.builder().setType("kubernetes:core/v1:Event").build()),
+                Output.of(Alias.builder().setType("kubernetes:events.k8s.io/v1:Event").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -336,7 +335,7 @@ public class Event extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Event get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Event get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Event(name, id, options);
     }
 }

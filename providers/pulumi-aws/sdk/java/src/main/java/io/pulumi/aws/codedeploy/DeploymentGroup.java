@@ -16,7 +16,6 @@ import io.pulumi.aws.codedeploy.outputs.DeploymentGroupEcsService;
 import io.pulumi.aws.codedeploy.outputs.DeploymentGroupLoadBalancerInfo;
 import io.pulumi.aws.codedeploy.outputs.DeploymentGroupOnPremisesInstanceTagFilter;
 import io.pulumi.aws.codedeploy.outputs.DeploymentGroupTriggerConfiguration;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -364,14 +363,14 @@ public class DeploymentGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DeploymentGroup(String name, DeploymentGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:codedeploy/deploymentGroup:DeploymentGroup", name, args == null ? DeploymentGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:codedeploy/deploymentGroup:DeploymentGroup", name, args == null ? DeploymentGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private DeploymentGroup(String name, Input<String> id, @Nullable DeploymentGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private DeploymentGroup(String name, Output<String> id, @Nullable DeploymentGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:codedeploy/deploymentGroup:DeploymentGroup", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -387,7 +386,7 @@ public class DeploymentGroup extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DeploymentGroup get(String name, Input<String> id, @Nullable DeploymentGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static DeploymentGroup get(String name, Output<String> id, @Nullable DeploymentGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DeploymentGroup(name, id, state, options);
     }
 }

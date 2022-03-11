@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.azurenative.containerservice.inputs.ResourceReferenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class ManagedClusterLoadBalancerProfileOutboundIPsArgs extends io.p
      * 
      */
     @InputImport(name="publicIPs")
-      private final @Nullable Input<List<ResourceReferenceArgs>> publicIPs;
+      private final @Nullable Output<List<ResourceReferenceArgs>> publicIPs;
 
-    public Input<List<ResourceReferenceArgs>> getPublicIPs() {
-        return this.publicIPs == null ? Input.empty() : this.publicIPs;
+    public Output<List<ResourceReferenceArgs>> getPublicIPs() {
+        return this.publicIPs == null ? Output.empty() : this.publicIPs;
     }
 
-    public ManagedClusterLoadBalancerProfileOutboundIPsArgs(@Nullable Input<List<ResourceReferenceArgs>> publicIPs) {
+    public ManagedClusterLoadBalancerProfileOutboundIPsArgs(@Nullable Output<List<ResourceReferenceArgs>> publicIPs) {
         this.publicIPs = publicIPs;
     }
 
     private ManagedClusterLoadBalancerProfileOutboundIPsArgs() {
-        this.publicIPs = Input.empty();
+        this.publicIPs = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class ManagedClusterLoadBalancerProfileOutboundIPsArgs extends io.p
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ResourceReferenceArgs>> publicIPs;
+        private @Nullable Output<List<ResourceReferenceArgs>> publicIPs;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class ManagedClusterLoadBalancerProfileOutboundIPsArgs extends io.p
     	      this.publicIPs = defaults.publicIPs;
         }
 
-        public Builder publicIPs(@Nullable Input<List<ResourceReferenceArgs>> publicIPs) {
+        public Builder publicIPs(@Nullable Output<List<ResourceReferenceArgs>> publicIPs) {
             this.publicIPs = publicIPs;
             return this;
         }
 
         public Builder publicIPs(@Nullable List<ResourceReferenceArgs> publicIPs) {
-            this.publicIPs = Input.ofNullable(publicIPs);
+            this.publicIPs = Output.ofNullable(publicIPs);
             return this;
         }
         public ManagedClusterLoadBalancerProfileOutboundIPsArgs build() {

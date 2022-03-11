@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1beta1.inputs.LoggingComponentConfigArgs;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class LoggingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="componentConfig")
-      private final @Nullable Input<LoggingComponentConfigArgs> componentConfig;
+      private final @Nullable Output<LoggingComponentConfigArgs> componentConfig;
 
-    public Input<LoggingComponentConfigArgs> getComponentConfig() {
-        return this.componentConfig == null ? Input.empty() : this.componentConfig;
+    public Output<LoggingComponentConfigArgs> getComponentConfig() {
+        return this.componentConfig == null ? Output.empty() : this.componentConfig;
     }
 
-    public LoggingConfigArgs(@Nullable Input<LoggingComponentConfigArgs> componentConfig) {
+    public LoggingConfigArgs(@Nullable Output<LoggingComponentConfigArgs> componentConfig) {
         this.componentConfig = componentConfig;
     }
 
     private LoggingConfigArgs() {
-        this.componentConfig = Input.empty();
+        this.componentConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class LoggingConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<LoggingComponentConfigArgs> componentConfig;
+        private @Nullable Output<LoggingComponentConfigArgs> componentConfig;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class LoggingConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.componentConfig = defaults.componentConfig;
         }
 
-        public Builder componentConfig(@Nullable Input<LoggingComponentConfigArgs> componentConfig) {
+        public Builder componentConfig(@Nullable Output<LoggingComponentConfigArgs> componentConfig) {
             this.componentConfig = componentConfig;
             return this;
         }
 
         public Builder componentConfig(@Nullable LoggingComponentConfigArgs componentConfig) {
-            this.componentConfig = Input.ofNullable(componentConfig);
+            this.componentConfig = Output.ofNullable(componentConfig);
             return this;
         }
         public LoggingConfigArgs build() {

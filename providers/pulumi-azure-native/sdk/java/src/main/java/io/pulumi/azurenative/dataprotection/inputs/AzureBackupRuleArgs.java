@@ -8,7 +8,7 @@ import io.pulumi.azurenative.dataprotection.inputs.AzureBackupParamsArgs;
 import io.pulumi.azurenative.dataprotection.inputs.DataStoreInfoBaseArgs;
 import io.pulumi.azurenative.dataprotection.inputs.ScheduleBasedTriggerContextArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -28,10 +28,10 @@ public final class AzureBackupRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="backupParameters")
-      private final @Nullable Input<AzureBackupParamsArgs> backupParameters;
+      private final @Nullable Output<AzureBackupParamsArgs> backupParameters;
 
-    public Input<AzureBackupParamsArgs> getBackupParameters() {
-        return this.backupParameters == null ? Input.empty() : this.backupParameters;
+    public Output<AzureBackupParamsArgs> getBackupParameters() {
+        return this.backupParameters == null ? Output.empty() : this.backupParameters;
     }
 
     /**
@@ -39,16 +39,16 @@ public final class AzureBackupRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="dataStore", required=true)
-      private final Input<DataStoreInfoBaseArgs> dataStore;
+      private final Output<DataStoreInfoBaseArgs> dataStore;
 
-    public Input<DataStoreInfoBaseArgs> getDataStore() {
+    public Output<DataStoreInfoBaseArgs> getDataStore() {
         return this.dataStore;
     }
 
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -57,9 +57,9 @@ public final class AzureBackupRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="objectType", required=true)
-      private final Input<String> objectType;
+      private final Output<String> objectType;
 
-    public Input<String> getObjectType() {
+    public Output<String> getObjectType() {
         return this.objectType;
     }
 
@@ -68,18 +68,18 @@ public final class AzureBackupRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="trigger", required=true)
-      private final Input<Either<AdhocBasedTriggerContextArgs,ScheduleBasedTriggerContextArgs>> trigger;
+      private final Output<Either<AdhocBasedTriggerContextArgs,ScheduleBasedTriggerContextArgs>> trigger;
 
-    public Input<Either<AdhocBasedTriggerContextArgs,ScheduleBasedTriggerContextArgs>> getTrigger() {
+    public Output<Either<AdhocBasedTriggerContextArgs,ScheduleBasedTriggerContextArgs>> getTrigger() {
         return this.trigger;
     }
 
     public AzureBackupRuleArgs(
-        @Nullable Input<AzureBackupParamsArgs> backupParameters,
-        Input<DataStoreInfoBaseArgs> dataStore,
-        Input<String> name,
-        Input<String> objectType,
-        Input<Either<AdhocBasedTriggerContextArgs,ScheduleBasedTriggerContextArgs>> trigger) {
+        @Nullable Output<AzureBackupParamsArgs> backupParameters,
+        Output<DataStoreInfoBaseArgs> dataStore,
+        Output<String> name,
+        Output<String> objectType,
+        Output<Either<AdhocBasedTriggerContextArgs,ScheduleBasedTriggerContextArgs>> trigger) {
         this.backupParameters = backupParameters;
         this.dataStore = Objects.requireNonNull(dataStore, "expected parameter 'dataStore' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
@@ -88,11 +88,11 @@ public final class AzureBackupRuleArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private AzureBackupRuleArgs() {
-        this.backupParameters = Input.empty();
-        this.dataStore = Input.empty();
-        this.name = Input.empty();
-        this.objectType = Input.empty();
-        this.trigger = Input.empty();
+        this.backupParameters = Output.empty();
+        this.dataStore = Output.empty();
+        this.name = Output.empty();
+        this.objectType = Output.empty();
+        this.trigger = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class AzureBackupRuleArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<AzureBackupParamsArgs> backupParameters;
-        private Input<DataStoreInfoBaseArgs> dataStore;
-        private Input<String> name;
-        private Input<String> objectType;
-        private Input<Either<AdhocBasedTriggerContextArgs,ScheduleBasedTriggerContextArgs>> trigger;
+        private @Nullable Output<AzureBackupParamsArgs> backupParameters;
+        private Output<DataStoreInfoBaseArgs> dataStore;
+        private Output<String> name;
+        private Output<String> objectType;
+        private Output<Either<AdhocBasedTriggerContextArgs,ScheduleBasedTriggerContextArgs>> trigger;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class AzureBackupRuleArgs extends io.pulumi.resources.ResourceArgs 
     	      this.trigger = defaults.trigger;
         }
 
-        public Builder backupParameters(@Nullable Input<AzureBackupParamsArgs> backupParameters) {
+        public Builder backupParameters(@Nullable Output<AzureBackupParamsArgs> backupParameters) {
             this.backupParameters = backupParameters;
             return this;
         }
 
         public Builder backupParameters(@Nullable AzureBackupParamsArgs backupParameters) {
-            this.backupParameters = Input.ofNullable(backupParameters);
+            this.backupParameters = Output.ofNullable(backupParameters);
             return this;
         }
 
-        public Builder dataStore(Input<DataStoreInfoBaseArgs> dataStore) {
+        public Builder dataStore(Output<DataStoreInfoBaseArgs> dataStore) {
             this.dataStore = Objects.requireNonNull(dataStore);
             return this;
         }
 
         public Builder dataStore(DataStoreInfoBaseArgs dataStore) {
-            this.dataStore = Input.of(Objects.requireNonNull(dataStore));
+            this.dataStore = Output.of(Objects.requireNonNull(dataStore));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder objectType(Input<String> objectType) {
+        public Builder objectType(Output<String> objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
 
         public Builder objectType(String objectType) {
-            this.objectType = Input.of(Objects.requireNonNull(objectType));
+            this.objectType = Output.of(Objects.requireNonNull(objectType));
             return this;
         }
 
-        public Builder trigger(Input<Either<AdhocBasedTriggerContextArgs,ScheduleBasedTriggerContextArgs>> trigger) {
+        public Builder trigger(Output<Either<AdhocBasedTriggerContextArgs,ScheduleBasedTriggerContextArgs>> trigger) {
             this.trigger = Objects.requireNonNull(trigger);
             return this;
         }
 
         public Builder trigger(Either<AdhocBasedTriggerContextArgs,ScheduleBasedTriggerContextArgs> trigger) {
-            this.trigger = Input.of(Objects.requireNonNull(trigger));
+            this.trigger = Output.of(Objects.requireNonNull(trigger));
             return this;
         }
         public AzureBackupRuleArgs build() {

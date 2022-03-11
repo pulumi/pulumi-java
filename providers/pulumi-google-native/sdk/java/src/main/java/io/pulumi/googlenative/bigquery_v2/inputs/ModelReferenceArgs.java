@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ModelReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datasetId")
-      private final @Nullable Input<String> datasetId;
+      private final @Nullable Output<String> datasetId;
 
-    public Input<String> getDatasetId() {
-        return this.datasetId == null ? Input.empty() : this.datasetId;
+    public Output<String> getDatasetId() {
+        return this.datasetId == null ? Output.empty() : this.datasetId;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class ModelReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="modelId")
-      private final @Nullable Input<String> modelId;
+      private final @Nullable Output<String> modelId;
 
-    public Input<String> getModelId() {
-        return this.modelId == null ? Input.empty() : this.modelId;
+    public Output<String> getModelId() {
+        return this.modelId == null ? Output.empty() : this.modelId;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class ModelReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public ModelReferenceArgs(
-        @Nullable Input<String> datasetId,
-        @Nullable Input<String> modelId,
-        @Nullable Input<String> project) {
+        @Nullable Output<String> datasetId,
+        @Nullable Output<String> modelId,
+        @Nullable Output<String> project) {
         this.datasetId = datasetId;
         this.modelId = modelId;
         this.project = project;
     }
 
     private ModelReferenceArgs() {
-        this.datasetId = Input.empty();
-        this.modelId = Input.empty();
-        this.project = Input.empty();
+        this.datasetId = Output.empty();
+        this.modelId = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class ModelReferenceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> datasetId;
-        private @Nullable Input<String> modelId;
-        private @Nullable Input<String> project;
+        private @Nullable Output<String> datasetId;
+        private @Nullable Output<String> modelId;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class ModelReferenceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder datasetId(@Nullable Input<String> datasetId) {
+        public Builder datasetId(@Nullable Output<String> datasetId) {
             this.datasetId = datasetId;
             return this;
         }
 
         public Builder datasetId(@Nullable String datasetId) {
-            this.datasetId = Input.ofNullable(datasetId);
+            this.datasetId = Output.ofNullable(datasetId);
             return this;
         }
 
-        public Builder modelId(@Nullable Input<String> modelId) {
+        public Builder modelId(@Nullable Output<String> modelId) {
             this.modelId = modelId;
             return this;
         }
 
         public Builder modelId(@Nullable String modelId) {
-            this.modelId = Input.ofNullable(modelId);
+            this.modelId = Output.ofNullable(modelId);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public ModelReferenceArgs build() {

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.databrew.inputs;
 import io.pulumi.awsnative.databrew.enums.DatasetParameterType;
 import io.pulumi.awsnative.databrew.inputs.DatasetDatetimeOptionsArgs;
 import io.pulumi.awsnative.databrew.inputs.DatasetFilterExpressionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,30 +23,30 @@ public final class DatasetParameterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="createColumn")
-      private final @Nullable Input<Boolean> createColumn;
+      private final @Nullable Output<Boolean> createColumn;
 
-    public Input<Boolean> getCreateColumn() {
-        return this.createColumn == null ? Input.empty() : this.createColumn;
+    public Output<Boolean> getCreateColumn() {
+        return this.createColumn == null ? Output.empty() : this.createColumn;
     }
 
     @InputImport(name="datetimeOptions")
-      private final @Nullable Input<DatasetDatetimeOptionsArgs> datetimeOptions;
+      private final @Nullable Output<DatasetDatetimeOptionsArgs> datetimeOptions;
 
-    public Input<DatasetDatetimeOptionsArgs> getDatetimeOptions() {
-        return this.datetimeOptions == null ? Input.empty() : this.datetimeOptions;
+    public Output<DatasetDatetimeOptionsArgs> getDatetimeOptions() {
+        return this.datetimeOptions == null ? Output.empty() : this.datetimeOptions;
     }
 
     @InputImport(name="filter")
-      private final @Nullable Input<DatasetFilterExpressionArgs> filter;
+      private final @Nullable Output<DatasetFilterExpressionArgs> filter;
 
-    public Input<DatasetFilterExpressionArgs> getFilter() {
-        return this.filter == null ? Input.empty() : this.filter;
+    public Output<DatasetFilterExpressionArgs> getFilter() {
+        return this.filter == null ? Output.empty() : this.filter;
     }
 
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -55,18 +55,18 @@ public final class DatasetParameterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<DatasetParameterType> type;
+      private final Output<DatasetParameterType> type;
 
-    public Input<DatasetParameterType> getType() {
+    public Output<DatasetParameterType> getType() {
         return this.type;
     }
 
     public DatasetParameterArgs(
-        @Nullable Input<Boolean> createColumn,
-        @Nullable Input<DatasetDatetimeOptionsArgs> datetimeOptions,
-        @Nullable Input<DatasetFilterExpressionArgs> filter,
-        Input<String> name,
-        Input<DatasetParameterType> type) {
+        @Nullable Output<Boolean> createColumn,
+        @Nullable Output<DatasetDatetimeOptionsArgs> datetimeOptions,
+        @Nullable Output<DatasetFilterExpressionArgs> filter,
+        Output<String> name,
+        Output<DatasetParameterType> type) {
         this.createColumn = createColumn;
         this.datetimeOptions = datetimeOptions;
         this.filter = filter;
@@ -75,11 +75,11 @@ public final class DatasetParameterArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private DatasetParameterArgs() {
-        this.createColumn = Input.empty();
-        this.datetimeOptions = Input.empty();
-        this.filter = Input.empty();
-        this.name = Input.empty();
-        this.type = Input.empty();
+        this.createColumn = Output.empty();
+        this.datetimeOptions = Output.empty();
+        this.filter = Output.empty();
+        this.name = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,11 +91,11 @@ public final class DatasetParameterArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> createColumn;
-        private @Nullable Input<DatasetDatetimeOptionsArgs> datetimeOptions;
-        private @Nullable Input<DatasetFilterExpressionArgs> filter;
-        private Input<String> name;
-        private Input<DatasetParameterType> type;
+        private @Nullable Output<Boolean> createColumn;
+        private @Nullable Output<DatasetDatetimeOptionsArgs> datetimeOptions;
+        private @Nullable Output<DatasetFilterExpressionArgs> filter;
+        private Output<String> name;
+        private Output<DatasetParameterType> type;
 
         public Builder() {
     	      // Empty
@@ -110,53 +110,53 @@ public final class DatasetParameterArgs extends io.pulumi.resources.ResourceArgs
     	      this.type = defaults.type;
         }
 
-        public Builder createColumn(@Nullable Input<Boolean> createColumn) {
+        public Builder createColumn(@Nullable Output<Boolean> createColumn) {
             this.createColumn = createColumn;
             return this;
         }
 
         public Builder createColumn(@Nullable Boolean createColumn) {
-            this.createColumn = Input.ofNullable(createColumn);
+            this.createColumn = Output.ofNullable(createColumn);
             return this;
         }
 
-        public Builder datetimeOptions(@Nullable Input<DatasetDatetimeOptionsArgs> datetimeOptions) {
+        public Builder datetimeOptions(@Nullable Output<DatasetDatetimeOptionsArgs> datetimeOptions) {
             this.datetimeOptions = datetimeOptions;
             return this;
         }
 
         public Builder datetimeOptions(@Nullable DatasetDatetimeOptionsArgs datetimeOptions) {
-            this.datetimeOptions = Input.ofNullable(datetimeOptions);
+            this.datetimeOptions = Output.ofNullable(datetimeOptions);
             return this;
         }
 
-        public Builder filter(@Nullable Input<DatasetFilterExpressionArgs> filter) {
+        public Builder filter(@Nullable Output<DatasetFilterExpressionArgs> filter) {
             this.filter = filter;
             return this;
         }
 
         public Builder filter(@Nullable DatasetFilterExpressionArgs filter) {
-            this.filter = Input.ofNullable(filter);
+            this.filter = Output.ofNullable(filter);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder type(Input<DatasetParameterType> type) {
+        public Builder type(Output<DatasetParameterType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(DatasetParameterType type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public DatasetParameterArgs build() {

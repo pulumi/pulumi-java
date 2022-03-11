@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class SelectedCertificateInputArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="certificateName", required=true)
-      private final Input<String> certificateName;
+      private final Output<String> certificateName;
 
-    public Input<String> getCertificateName() {
+    public Output<String> getCertificateName() {
         return this.certificateName;
     }
 
@@ -33,22 +33,22 @@ public final class SelectedCertificateInputArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="password", required=true)
-      private final Input<String> password;
+      private final Output<String> password;
 
-    public Input<String> getPassword() {
+    public Output<String> getPassword() {
         return this.password;
     }
 
     public SelectedCertificateInputArgs(
-        Input<String> certificateName,
-        Input<String> password) {
+        Output<String> certificateName,
+        Output<String> password) {
         this.certificateName = Objects.requireNonNull(certificateName, "expected parameter 'certificateName' to be non-null");
         this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
     }
 
     private SelectedCertificateInputArgs() {
-        this.certificateName = Input.empty();
-        this.password = Input.empty();
+        this.certificateName = Output.empty();
+        this.password = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class SelectedCertificateInputArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> certificateName;
-        private Input<String> password;
+        private Output<String> certificateName;
+        private Output<String> password;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class SelectedCertificateInputArgs extends io.pulumi.resources.Reso
     	      this.password = defaults.password;
         }
 
-        public Builder certificateName(Input<String> certificateName) {
+        public Builder certificateName(Output<String> certificateName) {
             this.certificateName = Objects.requireNonNull(certificateName);
             return this;
         }
 
         public Builder certificateName(String certificateName) {
-            this.certificateName = Input.of(Objects.requireNonNull(certificateName));
+            this.certificateName = Output.of(Objects.requireNonNull(certificateName));
             return this;
         }
 
-        public Builder password(Input<String> password) {
+        public Builder password(Output<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
         public Builder password(String password) {
-            this.password = Input.of(Objects.requireNonNull(password));
+            this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
         public SelectedCertificateInputArgs build() {

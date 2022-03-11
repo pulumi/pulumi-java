@@ -7,7 +7,7 @@ import io.pulumi.azurenative.elastic.enums.MonitoringStatus;
 import io.pulumi.azurenative.elastic.enums.ProvisioningState;
 import io.pulumi.azurenative.elastic.inputs.UserInfoArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -27,10 +27,10 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="monitoringStatus")
-      private final @Nullable Input<Either<String,MonitoringStatus>> monitoringStatus;
+      private final @Nullable Output<Either<String,MonitoringStatus>> monitoringStatus;
 
-    public Input<Either<String,MonitoringStatus>> getMonitoringStatus() {
-        return this.monitoringStatus == null ? Input.empty() : this.monitoringStatus;
+    public Output<Either<String,MonitoringStatus>> getMonitoringStatus() {
+        return this.monitoringStatus == null ? Output.empty() : this.monitoringStatus;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="provisioningState")
-      private final @Nullable Input<Either<String,ProvisioningState>> provisioningState;
+      private final @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
-    public Input<Either<String,ProvisioningState>> getProvisioningState() {
-        return this.provisioningState == null ? Input.empty() : this.provisioningState;
+    public Output<Either<String,ProvisioningState>> getProvisioningState() {
+        return this.provisioningState == null ? Output.empty() : this.provisioningState;
     }
 
     /**
@@ -49,25 +49,25 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="userInfo")
-      private final @Nullable Input<UserInfoArgs> userInfo;
+      private final @Nullable Output<UserInfoArgs> userInfo;
 
-    public Input<UserInfoArgs> getUserInfo() {
-        return this.userInfo == null ? Input.empty() : this.userInfo;
+    public Output<UserInfoArgs> getUserInfo() {
+        return this.userInfo == null ? Output.empty() : this.userInfo;
     }
 
     public MonitorPropertiesArgs(
-        @Nullable Input<Either<String,MonitoringStatus>> monitoringStatus,
-        @Nullable Input<Either<String,ProvisioningState>> provisioningState,
-        @Nullable Input<UserInfoArgs> userInfo) {
+        @Nullable Output<Either<String,MonitoringStatus>> monitoringStatus,
+        @Nullable Output<Either<String,ProvisioningState>> provisioningState,
+        @Nullable Output<UserInfoArgs> userInfo) {
         this.monitoringStatus = monitoringStatus;
         this.provisioningState = provisioningState;
         this.userInfo = userInfo;
     }
 
     private MonitorPropertiesArgs() {
-        this.monitoringStatus = Input.empty();
-        this.provisioningState = Input.empty();
-        this.userInfo = Input.empty();
+        this.monitoringStatus = Output.empty();
+        this.provisioningState = Output.empty();
+        this.userInfo = Output.empty();
     }
 
     public static Builder builder() {
@@ -79,9 +79,9 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,MonitoringStatus>> monitoringStatus;
-        private @Nullable Input<Either<String,ProvisioningState>> provisioningState;
-        private @Nullable Input<UserInfoArgs> userInfo;
+        private @Nullable Output<Either<String,MonitoringStatus>> monitoringStatus;
+        private @Nullable Output<Either<String,ProvisioningState>> provisioningState;
+        private @Nullable Output<UserInfoArgs> userInfo;
 
         public Builder() {
     	      // Empty
@@ -94,33 +94,33 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
     	      this.userInfo = defaults.userInfo;
         }
 
-        public Builder monitoringStatus(@Nullable Input<Either<String,MonitoringStatus>> monitoringStatus) {
+        public Builder monitoringStatus(@Nullable Output<Either<String,MonitoringStatus>> monitoringStatus) {
             this.monitoringStatus = monitoringStatus;
             return this;
         }
 
         public Builder monitoringStatus(@Nullable Either<String,MonitoringStatus> monitoringStatus) {
-            this.monitoringStatus = Input.ofNullable(monitoringStatus);
+            this.monitoringStatus = Output.ofNullable(monitoringStatus);
             return this;
         }
 
-        public Builder provisioningState(@Nullable Input<Either<String,ProvisioningState>> provisioningState) {
+        public Builder provisioningState(@Nullable Output<Either<String,ProvisioningState>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
         public Builder provisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
-            this.provisioningState = Input.ofNullable(provisioningState);
+            this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder userInfo(@Nullable Input<UserInfoArgs> userInfo) {
+        public Builder userInfo(@Nullable Output<UserInfoArgs> userInfo) {
             this.userInfo = userInfo;
             return this;
         }
 
         public Builder userInfo(@Nullable UserInfoArgs userInfo) {
-            this.userInfo = Input.ofNullable(userInfo);
+            this.userInfo = Output.ofNullable(userInfo);
             return this;
         }
         public MonitorPropertiesArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,39 +15,39 @@ public final class TopicRuleSnsActionArgs extends io.pulumi.resources.ResourceAr
     public static final TopicRuleSnsActionArgs Empty = new TopicRuleSnsActionArgs();
 
     @InputImport(name="messageFormat")
-      private final @Nullable Input<String> messageFormat;
+      private final @Nullable Output<String> messageFormat;
 
-    public Input<String> getMessageFormat() {
-        return this.messageFormat == null ? Input.empty() : this.messageFormat;
+    public Output<String> getMessageFormat() {
+        return this.messageFormat == null ? Output.empty() : this.messageFormat;
     }
 
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
     @InputImport(name="targetArn", required=true)
-      private final Input<String> targetArn;
+      private final Output<String> targetArn;
 
-    public Input<String> getTargetArn() {
+    public Output<String> getTargetArn() {
         return this.targetArn;
     }
 
     public TopicRuleSnsActionArgs(
-        @Nullable Input<String> messageFormat,
-        Input<String> roleArn,
-        Input<String> targetArn) {
+        @Nullable Output<String> messageFormat,
+        Output<String> roleArn,
+        Output<String> targetArn) {
         this.messageFormat = messageFormat;
         this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
         this.targetArn = Objects.requireNonNull(targetArn, "expected parameter 'targetArn' to be non-null");
     }
 
     private TopicRuleSnsActionArgs() {
-        this.messageFormat = Input.empty();
-        this.roleArn = Input.empty();
-        this.targetArn = Input.empty();
+        this.messageFormat = Output.empty();
+        this.roleArn = Output.empty();
+        this.targetArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,9 +59,9 @@ public final class TopicRuleSnsActionArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> messageFormat;
-        private Input<String> roleArn;
-        private Input<String> targetArn;
+        private @Nullable Output<String> messageFormat;
+        private Output<String> roleArn;
+        private Output<String> targetArn;
 
         public Builder() {
     	      // Empty
@@ -74,33 +74,33 @@ public final class TopicRuleSnsActionArgs extends io.pulumi.resources.ResourceAr
     	      this.targetArn = defaults.targetArn;
         }
 
-        public Builder messageFormat(@Nullable Input<String> messageFormat) {
+        public Builder messageFormat(@Nullable Output<String> messageFormat) {
             this.messageFormat = messageFormat;
             return this;
         }
 
         public Builder messageFormat(@Nullable String messageFormat) {
-            this.messageFormat = Input.ofNullable(messageFormat);
+            this.messageFormat = Output.ofNullable(messageFormat);
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder targetArn(Input<String> targetArn) {
+        public Builder targetArn(Output<String> targetArn) {
             this.targetArn = Objects.requireNonNull(targetArn);
             return this;
         }
 
         public Builder targetArn(String targetArn) {
-            this.targetArn = Input.of(Objects.requireNonNull(targetArn));
+            this.targetArn = Output.of(Objects.requireNonNull(targetArn));
             return this;
         }
         public TopicRuleSnsActionArgs build() {

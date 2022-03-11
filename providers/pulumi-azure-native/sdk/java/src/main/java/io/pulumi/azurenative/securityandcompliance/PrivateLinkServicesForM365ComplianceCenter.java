@@ -9,7 +9,6 @@ import io.pulumi.azurenative.securityandcompliance.outputs.ServicesPropertiesRes
 import io.pulumi.azurenative.securityandcompliance.outputs.ServicesResourceResponseIdentity;
 import io.pulumi.azurenative.securityandcompliance.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -200,19 +199,19 @@ public class PrivateLinkServicesForM365ComplianceCenter extends io.pulumi.resour
      * @param options A bag of options that control this resource's behavior.
      */
     public PrivateLinkServicesForM365ComplianceCenter(String name, PrivateLinkServicesForM365ComplianceCenterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:securityandcompliance:privateLinkServicesForM365ComplianceCenter", name, args == null ? PrivateLinkServicesForM365ComplianceCenterArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:securityandcompliance:privateLinkServicesForM365ComplianceCenter", name, args == null ? PrivateLinkServicesForM365ComplianceCenterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private PrivateLinkServicesForM365ComplianceCenter(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private PrivateLinkServicesForM365ComplianceCenter(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:securityandcompliance:privateLinkServicesForM365ComplianceCenter", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:securityandcompliance/v20210111:privateLinkServicesForM365ComplianceCenter").build()),
-                Input.of(Alias.builder().setType("azure-native:securityandcompliance/v20210308:privateLinkServicesForM365ComplianceCenter").build())
+                Output.of(Alias.builder().setType("azure-native:securityandcompliance/v20210111:privateLinkServicesForM365ComplianceCenter").build()),
+                Output.of(Alias.builder().setType("azure-native:securityandcompliance/v20210308:privateLinkServicesForM365ComplianceCenter").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -226,7 +225,7 @@ public class PrivateLinkServicesForM365ComplianceCenter extends io.pulumi.resour
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PrivateLinkServicesForM365ComplianceCenter get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static PrivateLinkServicesForM365ComplianceCenter get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PrivateLinkServicesForM365ComplianceCenter(name, id, options);
     }
 }

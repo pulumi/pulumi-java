@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.databrew.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class DatasetJsonOptionsArgs extends io.pulumi.resources.ResourceAr
     public static final DatasetJsonOptionsArgs Empty = new DatasetJsonOptionsArgs();
 
     @InputImport(name="multiLine")
-      private final @Nullable Input<Boolean> multiLine;
+      private final @Nullable Output<Boolean> multiLine;
 
-    public Input<Boolean> getMultiLine() {
-        return this.multiLine == null ? Input.empty() : this.multiLine;
+    public Output<Boolean> getMultiLine() {
+        return this.multiLine == null ? Output.empty() : this.multiLine;
     }
 
-    public DatasetJsonOptionsArgs(@Nullable Input<Boolean> multiLine) {
+    public DatasetJsonOptionsArgs(@Nullable Output<Boolean> multiLine) {
         this.multiLine = multiLine;
     }
 
     private DatasetJsonOptionsArgs() {
-        this.multiLine = Input.empty();
+        this.multiLine = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class DatasetJsonOptionsArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> multiLine;
+        private @Nullable Output<Boolean> multiLine;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class DatasetJsonOptionsArgs extends io.pulumi.resources.ResourceAr
     	      this.multiLine = defaults.multiLine;
         }
 
-        public Builder multiLine(@Nullable Input<Boolean> multiLine) {
+        public Builder multiLine(@Nullable Output<Boolean> multiLine) {
             this.multiLine = multiLine;
             return this;
         }
 
         public Builder multiLine(@Nullable Boolean multiLine) {
-            this.multiLine = Input.ofNullable(multiLine);
+            this.multiLine = Output.ofNullable(multiLine);
             return this;
         }
         public DatasetJsonOptionsArgs build() {

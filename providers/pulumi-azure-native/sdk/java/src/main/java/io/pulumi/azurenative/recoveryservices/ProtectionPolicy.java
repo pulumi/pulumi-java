@@ -12,7 +12,6 @@ import io.pulumi.azurenative.recoveryservices.outputs.AzureVmWorkloadProtectionP
 import io.pulumi.azurenative.recoveryservices.outputs.GenericProtectionPolicyResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.MabProtectionPolicyResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -162,31 +161,31 @@ public class ProtectionPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ProtectionPolicy(String name, ProtectionPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:recoveryservices:ProtectionPolicy", name, args == null ? ProtectionPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:recoveryservices:ProtectionPolicy", name, args == null ? ProtectionPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ProtectionPolicy(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ProtectionPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:recoveryservices:ProtectionPolicy", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20160601:ProtectionPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20201001:ProtectionPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20201201:ProtectionPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20210101:ProtectionPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20210201:ProtectionPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20210201preview:ProtectionPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20210210:ProtectionPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20210301:ProtectionPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20210401:ProtectionPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20210601:ProtectionPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20210701:ProtectionPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20210801:ProtectionPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20211001:ProtectionPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20211201:ProtectionPolicy").build())
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20160601:ProtectionPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20201001:ProtectionPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20201201:ProtectionPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210101:ProtectionPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210201:ProtectionPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210201preview:ProtectionPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210210:ProtectionPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210301:ProtectionPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210401:ProtectionPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210601:ProtectionPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210701:ProtectionPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210801:ProtectionPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20211001:ProtectionPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20211201:ProtectionPolicy").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -200,7 +199,7 @@ public class ProtectionPolicy extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ProtectionPolicy get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ProtectionPolicy get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ProtectionPolicy(name, id, options);
     }
 }

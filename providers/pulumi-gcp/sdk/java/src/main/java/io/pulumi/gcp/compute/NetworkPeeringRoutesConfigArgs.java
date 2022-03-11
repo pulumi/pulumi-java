@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class NetworkPeeringRoutesConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="exportCustomRoutes", required=true)
-      private final Input<Boolean> exportCustomRoutes;
+      private final Output<Boolean> exportCustomRoutes;
 
-    public Input<Boolean> getExportCustomRoutes() {
+    public Output<Boolean> getExportCustomRoutes() {
         return this.exportCustomRoutes;
     }
 
@@ -31,9 +31,9 @@ public final class NetworkPeeringRoutesConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="importCustomRoutes", required=true)
-      private final Input<Boolean> importCustomRoutes;
+      private final Output<Boolean> importCustomRoutes;
 
-    public Input<Boolean> getImportCustomRoutes() {
+    public Output<Boolean> getImportCustomRoutes() {
         return this.importCustomRoutes;
     }
 
@@ -42,9 +42,9 @@ public final class NetworkPeeringRoutesConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="network", required=true)
-      private final Input<String> network;
+      private final Output<String> network;
 
-    public Input<String> getNetwork() {
+    public Output<String> getNetwork() {
         return this.network;
     }
 
@@ -53,9 +53,9 @@ public final class NetworkPeeringRoutesConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="peering", required=true)
-      private final Input<String> peering;
+      private final Output<String> peering;
 
-    public Input<String> getPeering() {
+    public Output<String> getPeering() {
         return this.peering;
     }
 
@@ -65,18 +65,18 @@ public final class NetworkPeeringRoutesConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public NetworkPeeringRoutesConfigArgs(
-        Input<Boolean> exportCustomRoutes,
-        Input<Boolean> importCustomRoutes,
-        Input<String> network,
-        Input<String> peering,
-        @Nullable Input<String> project) {
+        Output<Boolean> exportCustomRoutes,
+        Output<Boolean> importCustomRoutes,
+        Output<String> network,
+        Output<String> peering,
+        @Nullable Output<String> project) {
         this.exportCustomRoutes = Objects.requireNonNull(exportCustomRoutes, "expected parameter 'exportCustomRoutes' to be non-null");
         this.importCustomRoutes = Objects.requireNonNull(importCustomRoutes, "expected parameter 'importCustomRoutes' to be non-null");
         this.network = Objects.requireNonNull(network, "expected parameter 'network' to be non-null");
@@ -85,11 +85,11 @@ public final class NetworkPeeringRoutesConfigArgs extends io.pulumi.resources.Re
     }
 
     private NetworkPeeringRoutesConfigArgs() {
-        this.exportCustomRoutes = Input.empty();
-        this.importCustomRoutes = Input.empty();
-        this.network = Input.empty();
-        this.peering = Input.empty();
-        this.project = Input.empty();
+        this.exportCustomRoutes = Output.empty();
+        this.importCustomRoutes = Output.empty();
+        this.network = Output.empty();
+        this.peering = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class NetworkPeeringRoutesConfigArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<Boolean> exportCustomRoutes;
-        private Input<Boolean> importCustomRoutes;
-        private Input<String> network;
-        private Input<String> peering;
-        private @Nullable Input<String> project;
+        private Output<Boolean> exportCustomRoutes;
+        private Output<Boolean> importCustomRoutes;
+        private Output<String> network;
+        private Output<String> peering;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class NetworkPeeringRoutesConfigArgs extends io.pulumi.resources.Re
     	      this.project = defaults.project;
         }
 
-        public Builder exportCustomRoutes(Input<Boolean> exportCustomRoutes) {
+        public Builder exportCustomRoutes(Output<Boolean> exportCustomRoutes) {
             this.exportCustomRoutes = Objects.requireNonNull(exportCustomRoutes);
             return this;
         }
 
         public Builder exportCustomRoutes(Boolean exportCustomRoutes) {
-            this.exportCustomRoutes = Input.of(Objects.requireNonNull(exportCustomRoutes));
+            this.exportCustomRoutes = Output.of(Objects.requireNonNull(exportCustomRoutes));
             return this;
         }
 
-        public Builder importCustomRoutes(Input<Boolean> importCustomRoutes) {
+        public Builder importCustomRoutes(Output<Boolean> importCustomRoutes) {
             this.importCustomRoutes = Objects.requireNonNull(importCustomRoutes);
             return this;
         }
 
         public Builder importCustomRoutes(Boolean importCustomRoutes) {
-            this.importCustomRoutes = Input.of(Objects.requireNonNull(importCustomRoutes));
+            this.importCustomRoutes = Output.of(Objects.requireNonNull(importCustomRoutes));
             return this;
         }
 
-        public Builder network(Input<String> network) {
+        public Builder network(Output<String> network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
         public Builder network(String network) {
-            this.network = Input.of(Objects.requireNonNull(network));
+            this.network = Output.of(Objects.requireNonNull(network));
             return this;
         }
 
-        public Builder peering(Input<String> peering) {
+        public Builder peering(Output<String> peering) {
             this.peering = Objects.requireNonNull(peering);
             return this;
         }
 
         public Builder peering(String peering) {
-            this.peering = Input.of(Objects.requireNonNull(peering));
+            this.peering = Output.of(Objects.requireNonNull(peering));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public NetworkPeeringRoutesConfigArgs build() {

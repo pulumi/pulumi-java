@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.RegionDiskDiskEncryptionKeyArgs;
 import io.pulumi.gcp.compute.inputs.RegionDiskSourceSnapshotEncryptionKeyArgs;
@@ -25,10 +25,10 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskEncryptionKey")
-      private final @Nullable Input<RegionDiskDiskEncryptionKeyArgs> diskEncryptionKey;
+      private final @Nullable Output<RegionDiskDiskEncryptionKeyArgs> diskEncryptionKey;
 
-    public Input<RegionDiskDiskEncryptionKeyArgs> getDiskEncryptionKey() {
-        return this.diskEncryptionKey == null ? Input.empty() : this.diskEncryptionKey;
+    public Output<RegionDiskDiskEncryptionKeyArgs> getDiskEncryptionKey() {
+        return this.diskEncryptionKey == null ? Output.empty() : this.diskEncryptionKey;
     }
 
     /**
@@ -60,11 +60,11 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      */
     @Deprecated /* This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config. */
     @InputImport(name="interface")
-      private final @Nullable Input<String> $interface;
+      private final @Nullable Output<String> $interface;
 
     @Deprecated /* This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config. */
-    public Input<String> get$interface() {
-        return this.$interface == null ? Input.empty() : this.$interface;
+    public Output<String> get$interface() {
+        return this.$interface == null ? Output.empty() : this.$interface;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -104,10 +104,10 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="physicalBlockSizeBytes")
-      private final @Nullable Input<Integer> physicalBlockSizeBytes;
+      private final @Nullable Output<Integer> physicalBlockSizeBytes;
 
-    public Input<Integer> getPhysicalBlockSizeBytes() {
-        return this.physicalBlockSizeBytes == null ? Input.empty() : this.physicalBlockSizeBytes;
+    public Output<Integer> getPhysicalBlockSizeBytes() {
+        return this.physicalBlockSizeBytes == null ? Output.empty() : this.physicalBlockSizeBytes;
     }
 
     /**
@@ -116,10 +116,10 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -127,10 +127,10 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -138,9 +138,9 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="replicaZones", required=true)
-      private final Input<List<String>> replicaZones;
+      private final Output<List<String>> replicaZones;
 
-    public Input<List<String>> getReplicaZones() {
+    public Output<List<String>> getReplicaZones() {
         return this.replicaZones;
     }
 
@@ -155,10 +155,10 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="size")
-      private final @Nullable Input<Integer> size;
+      private final @Nullable Output<Integer> size;
 
-    public Input<Integer> getSize() {
-        return this.size == null ? Input.empty() : this.size;
+    public Output<Integer> getSize() {
+        return this.size == null ? Output.empty() : this.size;
     }
 
     /**
@@ -172,10 +172,10 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="snapshot")
-      private final @Nullable Input<String> snapshot;
+      private final @Nullable Output<String> snapshot;
 
-    public Input<String> getSnapshot() {
-        return this.snapshot == null ? Input.empty() : this.snapshot;
+    public Output<String> getSnapshot() {
+        return this.snapshot == null ? Output.empty() : this.snapshot;
     }
 
     /**
@@ -186,10 +186,10 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceSnapshotEncryptionKey")
-      private final @Nullable Input<RegionDiskSourceSnapshotEncryptionKeyArgs> sourceSnapshotEncryptionKey;
+      private final @Nullable Output<RegionDiskSourceSnapshotEncryptionKeyArgs> sourceSnapshotEncryptionKey;
 
-    public Input<RegionDiskSourceSnapshotEncryptionKeyArgs> getSourceSnapshotEncryptionKey() {
-        return this.sourceSnapshotEncryptionKey == null ? Input.empty() : this.sourceSnapshotEncryptionKey;
+    public Output<RegionDiskSourceSnapshotEncryptionKeyArgs> getSourceSnapshotEncryptionKey() {
+        return this.sourceSnapshotEncryptionKey == null ? Output.empty() : this.sourceSnapshotEncryptionKey;
     }
 
     /**
@@ -198,26 +198,26 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public RegionDiskArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<RegionDiskDiskEncryptionKeyArgs> diskEncryptionKey,
-        @Nullable Input<String> $interface,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> name,
-        @Nullable Input<Integer> physicalBlockSizeBytes,
-        @Nullable Input<String> project,
-        @Nullable Input<String> region,
-        Input<List<String>> replicaZones,
-        @Nullable Input<Integer> size,
-        @Nullable Input<String> snapshot,
-        @Nullable Input<RegionDiskSourceSnapshotEncryptionKeyArgs> sourceSnapshotEncryptionKey,
-        @Nullable Input<String> type) {
+        @Nullable Output<String> description,
+        @Nullable Output<RegionDiskDiskEncryptionKeyArgs> diskEncryptionKey,
+        @Nullable Output<String> $interface,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> name,
+        @Nullable Output<Integer> physicalBlockSizeBytes,
+        @Nullable Output<String> project,
+        @Nullable Output<String> region,
+        Output<List<String>> replicaZones,
+        @Nullable Output<Integer> size,
+        @Nullable Output<String> snapshot,
+        @Nullable Output<RegionDiskSourceSnapshotEncryptionKeyArgs> sourceSnapshotEncryptionKey,
+        @Nullable Output<String> type) {
         this.description = description;
         this.diskEncryptionKey = diskEncryptionKey;
         this.$interface = $interface;
@@ -234,19 +234,19 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RegionDiskArgs() {
-        this.description = Input.empty();
-        this.diskEncryptionKey = Input.empty();
-        this.$interface = Input.empty();
-        this.labels = Input.empty();
-        this.name = Input.empty();
-        this.physicalBlockSizeBytes = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
-        this.replicaZones = Input.empty();
-        this.size = Input.empty();
-        this.snapshot = Input.empty();
-        this.sourceSnapshotEncryptionKey = Input.empty();
-        this.type = Input.empty();
+        this.description = Output.empty();
+        this.diskEncryptionKey = Output.empty();
+        this.$interface = Output.empty();
+        this.labels = Output.empty();
+        this.name = Output.empty();
+        this.physicalBlockSizeBytes = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
+        this.replicaZones = Output.empty();
+        this.size = Output.empty();
+        this.snapshot = Output.empty();
+        this.sourceSnapshotEncryptionKey = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -258,19 +258,19 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<RegionDiskDiskEncryptionKeyArgs> diskEncryptionKey;
-        private @Nullable Input<String> $interface;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Integer> physicalBlockSizeBytes;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> region;
-        private Input<List<String>> replicaZones;
-        private @Nullable Input<Integer> size;
-        private @Nullable Input<String> snapshot;
-        private @Nullable Input<RegionDiskSourceSnapshotEncryptionKeyArgs> sourceSnapshotEncryptionKey;
-        private @Nullable Input<String> type;
+        private @Nullable Output<String> description;
+        private @Nullable Output<RegionDiskDiskEncryptionKeyArgs> diskEncryptionKey;
+        private @Nullable Output<String> $interface;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Integer> physicalBlockSizeBytes;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> region;
+        private Output<List<String>> replicaZones;
+        private @Nullable Output<Integer> size;
+        private @Nullable Output<String> snapshot;
+        private @Nullable Output<RegionDiskSourceSnapshotEncryptionKeyArgs> sourceSnapshotEncryptionKey;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -293,133 +293,133 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder diskEncryptionKey(@Nullable Input<RegionDiskDiskEncryptionKeyArgs> diskEncryptionKey) {
+        public Builder diskEncryptionKey(@Nullable Output<RegionDiskDiskEncryptionKeyArgs> diskEncryptionKey) {
             this.diskEncryptionKey = diskEncryptionKey;
             return this;
         }
 
         public Builder diskEncryptionKey(@Nullable RegionDiskDiskEncryptionKeyArgs diskEncryptionKey) {
-            this.diskEncryptionKey = Input.ofNullable(diskEncryptionKey);
+            this.diskEncryptionKey = Output.ofNullable(diskEncryptionKey);
             return this;
         }
 
-        public Builder $interface(@Nullable Input<String> $interface) {
+        public Builder $interface(@Nullable Output<String> $interface) {
             this.$interface = $interface;
             return this;
         }
 
         public Builder $interface(@Nullable String $interface) {
-            this.$interface = Input.ofNullable($interface);
+            this.$interface = Output.ofNullable($interface);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder physicalBlockSizeBytes(@Nullable Input<Integer> physicalBlockSizeBytes) {
+        public Builder physicalBlockSizeBytes(@Nullable Output<Integer> physicalBlockSizeBytes) {
             this.physicalBlockSizeBytes = physicalBlockSizeBytes;
             return this;
         }
 
         public Builder physicalBlockSizeBytes(@Nullable Integer physicalBlockSizeBytes) {
-            this.physicalBlockSizeBytes = Input.ofNullable(physicalBlockSizeBytes);
+            this.physicalBlockSizeBytes = Output.ofNullable(physicalBlockSizeBytes);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder replicaZones(Input<List<String>> replicaZones) {
+        public Builder replicaZones(Output<List<String>> replicaZones) {
             this.replicaZones = Objects.requireNonNull(replicaZones);
             return this;
         }
 
         public Builder replicaZones(List<String> replicaZones) {
-            this.replicaZones = Input.of(Objects.requireNonNull(replicaZones));
+            this.replicaZones = Output.of(Objects.requireNonNull(replicaZones));
             return this;
         }
 
-        public Builder size(@Nullable Input<Integer> size) {
+        public Builder size(@Nullable Output<Integer> size) {
             this.size = size;
             return this;
         }
 
         public Builder size(@Nullable Integer size) {
-            this.size = Input.ofNullable(size);
+            this.size = Output.ofNullable(size);
             return this;
         }
 
-        public Builder snapshot(@Nullable Input<String> snapshot) {
+        public Builder snapshot(@Nullable Output<String> snapshot) {
             this.snapshot = snapshot;
             return this;
         }
 
         public Builder snapshot(@Nullable String snapshot) {
-            this.snapshot = Input.ofNullable(snapshot);
+            this.snapshot = Output.ofNullable(snapshot);
             return this;
         }
 
-        public Builder sourceSnapshotEncryptionKey(@Nullable Input<RegionDiskSourceSnapshotEncryptionKeyArgs> sourceSnapshotEncryptionKey) {
+        public Builder sourceSnapshotEncryptionKey(@Nullable Output<RegionDiskSourceSnapshotEncryptionKeyArgs> sourceSnapshotEncryptionKey) {
             this.sourceSnapshotEncryptionKey = sourceSnapshotEncryptionKey;
             return this;
         }
 
         public Builder sourceSnapshotEncryptionKey(@Nullable RegionDiskSourceSnapshotEncryptionKeyArgs sourceSnapshotEncryptionKey) {
-            this.sourceSnapshotEncryptionKey = Input.ofNullable(sourceSnapshotEncryptionKey);
+            this.sourceSnapshotEncryptionKey = Output.ofNullable(sourceSnapshotEncryptionKey);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public RegionDiskArgs build() {

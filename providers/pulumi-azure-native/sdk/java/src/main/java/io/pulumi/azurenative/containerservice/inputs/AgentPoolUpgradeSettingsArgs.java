@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class AgentPoolUpgradeSettingsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="maxSurge")
-      private final @Nullable Input<String> maxSurge;
+      private final @Nullable Output<String> maxSurge;
 
-    public Input<String> getMaxSurge() {
-        return this.maxSurge == null ? Input.empty() : this.maxSurge;
+    public Output<String> getMaxSurge() {
+        return this.maxSurge == null ? Output.empty() : this.maxSurge;
     }
 
-    public AgentPoolUpgradeSettingsArgs(@Nullable Input<String> maxSurge) {
+    public AgentPoolUpgradeSettingsArgs(@Nullable Output<String> maxSurge) {
         this.maxSurge = maxSurge;
     }
 
     private AgentPoolUpgradeSettingsArgs() {
-        this.maxSurge = Input.empty();
+        this.maxSurge = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class AgentPoolUpgradeSettingsArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> maxSurge;
+        private @Nullable Output<String> maxSurge;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class AgentPoolUpgradeSettingsArgs extends io.pulumi.resources.Reso
     	      this.maxSurge = defaults.maxSurge;
         }
 
-        public Builder maxSurge(@Nullable Input<String> maxSurge) {
+        public Builder maxSurge(@Nullable Output<String> maxSurge) {
             this.maxSurge = maxSurge;
             return this;
         }
 
         public Builder maxSurge(@Nullable String maxSurge) {
-            this.maxSurge = Input.ofNullable(maxSurge);
+            this.maxSurge = Output.ofNullable(maxSurge);
             return this;
         }
         public AgentPoolUpgradeSettingsArgs build() {

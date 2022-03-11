@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class ServerAzureADOnlyAuthenticationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="authenticationName")
-      private final @Nullable Input<String> authenticationName;
+      private final @Nullable Output<String> authenticationName;
 
-    public Input<String> getAuthenticationName() {
-        return this.authenticationName == null ? Input.empty() : this.authenticationName;
+    public Output<String> getAuthenticationName() {
+        return this.authenticationName == null ? Output.empty() : this.authenticationName;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class ServerAzureADOnlyAuthenticationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="azureADOnlyAuthentication", required=true)
-      private final Input<Boolean> azureADOnlyAuthentication;
+      private final Output<Boolean> azureADOnlyAuthentication;
 
-    public Input<Boolean> getAzureADOnlyAuthentication() {
+    public Output<Boolean> getAzureADOnlyAuthentication() {
         return this.azureADOnlyAuthentication;
     }
 
@@ -42,9 +42,9 @@ public final class ServerAzureADOnlyAuthenticationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -53,17 +53,17 @@ public final class ServerAzureADOnlyAuthenticationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="serverName", required=true)
-      private final Input<String> serverName;
+      private final Output<String> serverName;
 
-    public Input<String> getServerName() {
+    public Output<String> getServerName() {
         return this.serverName;
     }
 
     public ServerAzureADOnlyAuthenticationArgs(
-        @Nullable Input<String> authenticationName,
-        Input<Boolean> azureADOnlyAuthentication,
-        Input<String> resourceGroupName,
-        Input<String> serverName) {
+        @Nullable Output<String> authenticationName,
+        Output<Boolean> azureADOnlyAuthentication,
+        Output<String> resourceGroupName,
+        Output<String> serverName) {
         this.authenticationName = authenticationName;
         this.azureADOnlyAuthentication = Objects.requireNonNull(azureADOnlyAuthentication, "expected parameter 'azureADOnlyAuthentication' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -71,10 +71,10 @@ public final class ServerAzureADOnlyAuthenticationArgs extends io.pulumi.resourc
     }
 
     private ServerAzureADOnlyAuthenticationArgs() {
-        this.authenticationName = Input.empty();
-        this.azureADOnlyAuthentication = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serverName = Input.empty();
+        this.authenticationName = Output.empty();
+        this.azureADOnlyAuthentication = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serverName = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class ServerAzureADOnlyAuthenticationArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> authenticationName;
-        private Input<Boolean> azureADOnlyAuthentication;
-        private Input<String> resourceGroupName;
-        private Input<String> serverName;
+        private @Nullable Output<String> authenticationName;
+        private Output<Boolean> azureADOnlyAuthentication;
+        private Output<String> resourceGroupName;
+        private Output<String> serverName;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class ServerAzureADOnlyAuthenticationArgs extends io.pulumi.resourc
     	      this.serverName = defaults.serverName;
         }
 
-        public Builder authenticationName(@Nullable Input<String> authenticationName) {
+        public Builder authenticationName(@Nullable Output<String> authenticationName) {
             this.authenticationName = authenticationName;
             return this;
         }
 
         public Builder authenticationName(@Nullable String authenticationName) {
-            this.authenticationName = Input.ofNullable(authenticationName);
+            this.authenticationName = Output.ofNullable(authenticationName);
             return this;
         }
 
-        public Builder azureADOnlyAuthentication(Input<Boolean> azureADOnlyAuthentication) {
+        public Builder azureADOnlyAuthentication(Output<Boolean> azureADOnlyAuthentication) {
             this.azureADOnlyAuthentication = Objects.requireNonNull(azureADOnlyAuthentication);
             return this;
         }
 
         public Builder azureADOnlyAuthentication(Boolean azureADOnlyAuthentication) {
-            this.azureADOnlyAuthentication = Input.of(Objects.requireNonNull(azureADOnlyAuthentication));
+            this.azureADOnlyAuthentication = Output.of(Objects.requireNonNull(azureADOnlyAuthentication));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serverName(Input<String> serverName) {
+        public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
         public Builder serverName(String serverName) {
-            this.serverName = Input.of(Objects.requireNonNull(serverName));
+            this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
         public ServerAzureADOnlyAuthenticationArgs build() {

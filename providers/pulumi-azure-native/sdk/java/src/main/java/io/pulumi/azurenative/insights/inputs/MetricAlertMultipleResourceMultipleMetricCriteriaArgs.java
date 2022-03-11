@@ -6,7 +6,7 @@ package io.pulumi.azurenative.insights.inputs;
 import io.pulumi.azurenative.insights.inputs.DynamicMetricCriteriaArgs;
 import io.pulumi.azurenative.insights.inputs.MetricCriteriaArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -27,10 +27,10 @@ public final class MetricAlertMultipleResourceMultipleMetricCriteriaArgs extends
      * 
      */
     @InputImport(name="allOf")
-      private final @Nullable Input<List<Either<DynamicMetricCriteriaArgs,MetricCriteriaArgs>>> allOf;
+      private final @Nullable Output<List<Either<DynamicMetricCriteriaArgs,MetricCriteriaArgs>>> allOf;
 
-    public Input<List<Either<DynamicMetricCriteriaArgs,MetricCriteriaArgs>>> getAllOf() {
-        return this.allOf == null ? Input.empty() : this.allOf;
+    public Output<List<Either<DynamicMetricCriteriaArgs,MetricCriteriaArgs>>> getAllOf() {
+        return this.allOf == null ? Output.empty() : this.allOf;
     }
 
     /**
@@ -39,22 +39,22 @@ public final class MetricAlertMultipleResourceMultipleMetricCriteriaArgs extends
      * 
      */
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
     public MetricAlertMultipleResourceMultipleMetricCriteriaArgs(
-        @Nullable Input<List<Either<DynamicMetricCriteriaArgs,MetricCriteriaArgs>>> allOf,
-        Input<String> odataType) {
+        @Nullable Output<List<Either<DynamicMetricCriteriaArgs,MetricCriteriaArgs>>> allOf,
+        Output<String> odataType) {
         this.allOf = allOf;
         this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
     }
 
     private MetricAlertMultipleResourceMultipleMetricCriteriaArgs() {
-        this.allOf = Input.empty();
-        this.odataType = Input.empty();
+        this.allOf = Output.empty();
+        this.odataType = Output.empty();
     }
 
     public static Builder builder() {
@@ -66,8 +66,8 @@ public final class MetricAlertMultipleResourceMultipleMetricCriteriaArgs extends
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Either<DynamicMetricCriteriaArgs,MetricCriteriaArgs>>> allOf;
-        private Input<String> odataType;
+        private @Nullable Output<List<Either<DynamicMetricCriteriaArgs,MetricCriteriaArgs>>> allOf;
+        private Output<String> odataType;
 
         public Builder() {
     	      // Empty
@@ -79,23 +79,23 @@ public final class MetricAlertMultipleResourceMultipleMetricCriteriaArgs extends
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder allOf(@Nullable Input<List<Either<DynamicMetricCriteriaArgs,MetricCriteriaArgs>>> allOf) {
+        public Builder allOf(@Nullable Output<List<Either<DynamicMetricCriteriaArgs,MetricCriteriaArgs>>> allOf) {
             this.allOf = allOf;
             return this;
         }
 
         public Builder allOf(@Nullable List<Either<DynamicMetricCriteriaArgs,MetricCriteriaArgs>> allOf) {
-            this.allOf = Input.ofNullable(allOf);
+            this.allOf = Output.ofNullable(allOf);
             return this;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
         public MetricAlertMultipleResourceMultipleMetricCriteriaArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.aws.fsx;
 
 import io.pulumi.aws.fsx.inputs.OpenZfsFileSystemDiskIopsConfigurationArgs;
 import io.pulumi.aws.fsx.inputs.OpenZfsFileSystemRootVolumeConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class OpenZfsFileSystemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="automaticBackupRetentionDays")
-      private final @Nullable Input<Integer> automaticBackupRetentionDays;
+      private final @Nullable Output<Integer> automaticBackupRetentionDays;
 
-    public Input<Integer> getAutomaticBackupRetentionDays() {
-        return this.automaticBackupRetentionDays == null ? Input.empty() : this.automaticBackupRetentionDays;
+    public Output<Integer> getAutomaticBackupRetentionDays() {
+        return this.automaticBackupRetentionDays == null ? Output.empty() : this.automaticBackupRetentionDays;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class OpenZfsFileSystemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="backupId")
-      private final @Nullable Input<String> backupId;
+      private final @Nullable Output<String> backupId;
 
-    public Input<String> getBackupId() {
-        return this.backupId == null ? Input.empty() : this.backupId;
+    public Output<String> getBackupId() {
+        return this.backupId == null ? Output.empty() : this.backupId;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class OpenZfsFileSystemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="copyTagsToBackups")
-      private final @Nullable Input<Boolean> copyTagsToBackups;
+      private final @Nullable Output<Boolean> copyTagsToBackups;
 
-    public Input<Boolean> getCopyTagsToBackups() {
-        return this.copyTagsToBackups == null ? Input.empty() : this.copyTagsToBackups;
+    public Output<Boolean> getCopyTagsToBackups() {
+        return this.copyTagsToBackups == null ? Output.empty() : this.copyTagsToBackups;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class OpenZfsFileSystemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="copyTagsToVolumes")
-      private final @Nullable Input<Boolean> copyTagsToVolumes;
+      private final @Nullable Output<Boolean> copyTagsToVolumes;
 
-    public Input<Boolean> getCopyTagsToVolumes() {
-        return this.copyTagsToVolumes == null ? Input.empty() : this.copyTagsToVolumes;
+    public Output<Boolean> getCopyTagsToVolumes() {
+        return this.copyTagsToVolumes == null ? Output.empty() : this.copyTagsToVolumes;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class OpenZfsFileSystemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="dailyAutomaticBackupStartTime")
-      private final @Nullable Input<String> dailyAutomaticBackupStartTime;
+      private final @Nullable Output<String> dailyAutomaticBackupStartTime;
 
-    public Input<String> getDailyAutomaticBackupStartTime() {
-        return this.dailyAutomaticBackupStartTime == null ? Input.empty() : this.dailyAutomaticBackupStartTime;
+    public Output<String> getDailyAutomaticBackupStartTime() {
+        return this.dailyAutomaticBackupStartTime == null ? Output.empty() : this.dailyAutomaticBackupStartTime;
     }
 
     /**
@@ -80,9 +80,9 @@ public final class OpenZfsFileSystemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="deploymentType", required=true)
-      private final Input<String> deploymentType;
+      private final Output<String> deploymentType;
 
-    public Input<String> getDeploymentType() {
+    public Output<String> getDeploymentType() {
         return this.deploymentType;
     }
 
@@ -91,10 +91,10 @@ public final class OpenZfsFileSystemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="diskIopsConfiguration")
-      private final @Nullable Input<OpenZfsFileSystemDiskIopsConfigurationArgs> diskIopsConfiguration;
+      private final @Nullable Output<OpenZfsFileSystemDiskIopsConfigurationArgs> diskIopsConfiguration;
 
-    public Input<OpenZfsFileSystemDiskIopsConfigurationArgs> getDiskIopsConfiguration() {
-        return this.diskIopsConfiguration == null ? Input.empty() : this.diskIopsConfiguration;
+    public Output<OpenZfsFileSystemDiskIopsConfigurationArgs> getDiskIopsConfiguration() {
+        return this.diskIopsConfiguration == null ? Output.empty() : this.diskIopsConfiguration;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class OpenZfsFileSystemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="kmsKeyId")
-      private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Output<String> kmsKeyId;
 
-    public Input<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
+    public Output<String> getKmsKeyId() {
+        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
     /**
@@ -113,10 +113,10 @@ public final class OpenZfsFileSystemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="rootVolumeConfiguration")
-      private final @Nullable Input<OpenZfsFileSystemRootVolumeConfigurationArgs> rootVolumeConfiguration;
+      private final @Nullable Output<OpenZfsFileSystemRootVolumeConfigurationArgs> rootVolumeConfiguration;
 
-    public Input<OpenZfsFileSystemRootVolumeConfigurationArgs> getRootVolumeConfiguration() {
-        return this.rootVolumeConfiguration == null ? Input.empty() : this.rootVolumeConfiguration;
+    public Output<OpenZfsFileSystemRootVolumeConfigurationArgs> getRootVolumeConfiguration() {
+        return this.rootVolumeConfiguration == null ? Output.empty() : this.rootVolumeConfiguration;
     }
 
     /**
@@ -124,10 +124,10 @@ public final class OpenZfsFileSystemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="securityGroupIds")
-      private final @Nullable Input<List<String>> securityGroupIds;
+      private final @Nullable Output<List<String>> securityGroupIds;
 
-    public Input<List<String>> getSecurityGroupIds() {
-        return this.securityGroupIds == null ? Input.empty() : this.securityGroupIds;
+    public Output<List<String>> getSecurityGroupIds() {
+        return this.securityGroupIds == null ? Output.empty() : this.securityGroupIds;
     }
 
     /**
@@ -135,10 +135,10 @@ public final class OpenZfsFileSystemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="storageCapacity")
-      private final @Nullable Input<Integer> storageCapacity;
+      private final @Nullable Output<Integer> storageCapacity;
 
-    public Input<Integer> getStorageCapacity() {
-        return this.storageCapacity == null ? Input.empty() : this.storageCapacity;
+    public Output<Integer> getStorageCapacity() {
+        return this.storageCapacity == null ? Output.empty() : this.storageCapacity;
     }
 
     /**
@@ -146,10 +146,10 @@ public final class OpenZfsFileSystemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="storageType")
-      private final @Nullable Input<String> storageType;
+      private final @Nullable Output<String> storageType;
 
-    public Input<String> getStorageType() {
-        return this.storageType == null ? Input.empty() : this.storageType;
+    public Output<String> getStorageType() {
+        return this.storageType == null ? Output.empty() : this.storageType;
     }
 
     /**
@@ -157,9 +157,9 @@ public final class OpenZfsFileSystemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="subnetIds", required=true)
-      private final Input<String> subnetIds;
+      private final Output<String> subnetIds;
 
-    public Input<String> getSubnetIds() {
+    public Output<String> getSubnetIds() {
         return this.subnetIds;
     }
 
@@ -168,10 +168,10 @@ public final class OpenZfsFileSystemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -179,10 +179,10 @@ public final class OpenZfsFileSystemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -190,9 +190,9 @@ public final class OpenZfsFileSystemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="throughputCapacity", required=true)
-      private final Input<Integer> throughputCapacity;
+      private final Output<Integer> throughputCapacity;
 
-    public Input<Integer> getThroughputCapacity() {
+    public Output<Integer> getThroughputCapacity() {
         return this.throughputCapacity;
     }
 
@@ -201,30 +201,30 @@ public final class OpenZfsFileSystemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="weeklyMaintenanceStartTime")
-      private final @Nullable Input<String> weeklyMaintenanceStartTime;
+      private final @Nullable Output<String> weeklyMaintenanceStartTime;
 
-    public Input<String> getWeeklyMaintenanceStartTime() {
-        return this.weeklyMaintenanceStartTime == null ? Input.empty() : this.weeklyMaintenanceStartTime;
+    public Output<String> getWeeklyMaintenanceStartTime() {
+        return this.weeklyMaintenanceStartTime == null ? Output.empty() : this.weeklyMaintenanceStartTime;
     }
 
     public OpenZfsFileSystemArgs(
-        @Nullable Input<Integer> automaticBackupRetentionDays,
-        @Nullable Input<String> backupId,
-        @Nullable Input<Boolean> copyTagsToBackups,
-        @Nullable Input<Boolean> copyTagsToVolumes,
-        @Nullable Input<String> dailyAutomaticBackupStartTime,
-        Input<String> deploymentType,
-        @Nullable Input<OpenZfsFileSystemDiskIopsConfigurationArgs> diskIopsConfiguration,
-        @Nullable Input<String> kmsKeyId,
-        @Nullable Input<OpenZfsFileSystemRootVolumeConfigurationArgs> rootVolumeConfiguration,
-        @Nullable Input<List<String>> securityGroupIds,
-        @Nullable Input<Integer> storageCapacity,
-        @Nullable Input<String> storageType,
-        Input<String> subnetIds,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        Input<Integer> throughputCapacity,
-        @Nullable Input<String> weeklyMaintenanceStartTime) {
+        @Nullable Output<Integer> automaticBackupRetentionDays,
+        @Nullable Output<String> backupId,
+        @Nullable Output<Boolean> copyTagsToBackups,
+        @Nullable Output<Boolean> copyTagsToVolumes,
+        @Nullable Output<String> dailyAutomaticBackupStartTime,
+        Output<String> deploymentType,
+        @Nullable Output<OpenZfsFileSystemDiskIopsConfigurationArgs> diskIopsConfiguration,
+        @Nullable Output<String> kmsKeyId,
+        @Nullable Output<OpenZfsFileSystemRootVolumeConfigurationArgs> rootVolumeConfiguration,
+        @Nullable Output<List<String>> securityGroupIds,
+        @Nullable Output<Integer> storageCapacity,
+        @Nullable Output<String> storageType,
+        Output<String> subnetIds,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        Output<Integer> throughputCapacity,
+        @Nullable Output<String> weeklyMaintenanceStartTime) {
         this.automaticBackupRetentionDays = automaticBackupRetentionDays;
         this.backupId = backupId;
         this.copyTagsToBackups = copyTagsToBackups;
@@ -245,23 +245,23 @@ public final class OpenZfsFileSystemArgs extends io.pulumi.resources.ResourceArg
     }
 
     private OpenZfsFileSystemArgs() {
-        this.automaticBackupRetentionDays = Input.empty();
-        this.backupId = Input.empty();
-        this.copyTagsToBackups = Input.empty();
-        this.copyTagsToVolumes = Input.empty();
-        this.dailyAutomaticBackupStartTime = Input.empty();
-        this.deploymentType = Input.empty();
-        this.diskIopsConfiguration = Input.empty();
-        this.kmsKeyId = Input.empty();
-        this.rootVolumeConfiguration = Input.empty();
-        this.securityGroupIds = Input.empty();
-        this.storageCapacity = Input.empty();
-        this.storageType = Input.empty();
-        this.subnetIds = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.throughputCapacity = Input.empty();
-        this.weeklyMaintenanceStartTime = Input.empty();
+        this.automaticBackupRetentionDays = Output.empty();
+        this.backupId = Output.empty();
+        this.copyTagsToBackups = Output.empty();
+        this.copyTagsToVolumes = Output.empty();
+        this.dailyAutomaticBackupStartTime = Output.empty();
+        this.deploymentType = Output.empty();
+        this.diskIopsConfiguration = Output.empty();
+        this.kmsKeyId = Output.empty();
+        this.rootVolumeConfiguration = Output.empty();
+        this.securityGroupIds = Output.empty();
+        this.storageCapacity = Output.empty();
+        this.storageType = Output.empty();
+        this.subnetIds = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.throughputCapacity = Output.empty();
+        this.weeklyMaintenanceStartTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -273,23 +273,23 @@ public final class OpenZfsFileSystemArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> automaticBackupRetentionDays;
-        private @Nullable Input<String> backupId;
-        private @Nullable Input<Boolean> copyTagsToBackups;
-        private @Nullable Input<Boolean> copyTagsToVolumes;
-        private @Nullable Input<String> dailyAutomaticBackupStartTime;
-        private Input<String> deploymentType;
-        private @Nullable Input<OpenZfsFileSystemDiskIopsConfigurationArgs> diskIopsConfiguration;
-        private @Nullable Input<String> kmsKeyId;
-        private @Nullable Input<OpenZfsFileSystemRootVolumeConfigurationArgs> rootVolumeConfiguration;
-        private @Nullable Input<List<String>> securityGroupIds;
-        private @Nullable Input<Integer> storageCapacity;
-        private @Nullable Input<String> storageType;
-        private Input<String> subnetIds;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private Input<Integer> throughputCapacity;
-        private @Nullable Input<String> weeklyMaintenanceStartTime;
+        private @Nullable Output<Integer> automaticBackupRetentionDays;
+        private @Nullable Output<String> backupId;
+        private @Nullable Output<Boolean> copyTagsToBackups;
+        private @Nullable Output<Boolean> copyTagsToVolumes;
+        private @Nullable Output<String> dailyAutomaticBackupStartTime;
+        private Output<String> deploymentType;
+        private @Nullable Output<OpenZfsFileSystemDiskIopsConfigurationArgs> diskIopsConfiguration;
+        private @Nullable Output<String> kmsKeyId;
+        private @Nullable Output<OpenZfsFileSystemRootVolumeConfigurationArgs> rootVolumeConfiguration;
+        private @Nullable Output<List<String>> securityGroupIds;
+        private @Nullable Output<Integer> storageCapacity;
+        private @Nullable Output<String> storageType;
+        private Output<String> subnetIds;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private Output<Integer> throughputCapacity;
+        private @Nullable Output<String> weeklyMaintenanceStartTime;
 
         public Builder() {
     	      // Empty
@@ -316,173 +316,173 @@ public final class OpenZfsFileSystemArgs extends io.pulumi.resources.ResourceArg
     	      this.weeklyMaintenanceStartTime = defaults.weeklyMaintenanceStartTime;
         }
 
-        public Builder automaticBackupRetentionDays(@Nullable Input<Integer> automaticBackupRetentionDays) {
+        public Builder automaticBackupRetentionDays(@Nullable Output<Integer> automaticBackupRetentionDays) {
             this.automaticBackupRetentionDays = automaticBackupRetentionDays;
             return this;
         }
 
         public Builder automaticBackupRetentionDays(@Nullable Integer automaticBackupRetentionDays) {
-            this.automaticBackupRetentionDays = Input.ofNullable(automaticBackupRetentionDays);
+            this.automaticBackupRetentionDays = Output.ofNullable(automaticBackupRetentionDays);
             return this;
         }
 
-        public Builder backupId(@Nullable Input<String> backupId) {
+        public Builder backupId(@Nullable Output<String> backupId) {
             this.backupId = backupId;
             return this;
         }
 
         public Builder backupId(@Nullable String backupId) {
-            this.backupId = Input.ofNullable(backupId);
+            this.backupId = Output.ofNullable(backupId);
             return this;
         }
 
-        public Builder copyTagsToBackups(@Nullable Input<Boolean> copyTagsToBackups) {
+        public Builder copyTagsToBackups(@Nullable Output<Boolean> copyTagsToBackups) {
             this.copyTagsToBackups = copyTagsToBackups;
             return this;
         }
 
         public Builder copyTagsToBackups(@Nullable Boolean copyTagsToBackups) {
-            this.copyTagsToBackups = Input.ofNullable(copyTagsToBackups);
+            this.copyTagsToBackups = Output.ofNullable(copyTagsToBackups);
             return this;
         }
 
-        public Builder copyTagsToVolumes(@Nullable Input<Boolean> copyTagsToVolumes) {
+        public Builder copyTagsToVolumes(@Nullable Output<Boolean> copyTagsToVolumes) {
             this.copyTagsToVolumes = copyTagsToVolumes;
             return this;
         }
 
         public Builder copyTagsToVolumes(@Nullable Boolean copyTagsToVolumes) {
-            this.copyTagsToVolumes = Input.ofNullable(copyTagsToVolumes);
+            this.copyTagsToVolumes = Output.ofNullable(copyTagsToVolumes);
             return this;
         }
 
-        public Builder dailyAutomaticBackupStartTime(@Nullable Input<String> dailyAutomaticBackupStartTime) {
+        public Builder dailyAutomaticBackupStartTime(@Nullable Output<String> dailyAutomaticBackupStartTime) {
             this.dailyAutomaticBackupStartTime = dailyAutomaticBackupStartTime;
             return this;
         }
 
         public Builder dailyAutomaticBackupStartTime(@Nullable String dailyAutomaticBackupStartTime) {
-            this.dailyAutomaticBackupStartTime = Input.ofNullable(dailyAutomaticBackupStartTime);
+            this.dailyAutomaticBackupStartTime = Output.ofNullable(dailyAutomaticBackupStartTime);
             return this;
         }
 
-        public Builder deploymentType(Input<String> deploymentType) {
+        public Builder deploymentType(Output<String> deploymentType) {
             this.deploymentType = Objects.requireNonNull(deploymentType);
             return this;
         }
 
         public Builder deploymentType(String deploymentType) {
-            this.deploymentType = Input.of(Objects.requireNonNull(deploymentType));
+            this.deploymentType = Output.of(Objects.requireNonNull(deploymentType));
             return this;
         }
 
-        public Builder diskIopsConfiguration(@Nullable Input<OpenZfsFileSystemDiskIopsConfigurationArgs> diskIopsConfiguration) {
+        public Builder diskIopsConfiguration(@Nullable Output<OpenZfsFileSystemDiskIopsConfigurationArgs> diskIopsConfiguration) {
             this.diskIopsConfiguration = diskIopsConfiguration;
             return this;
         }
 
         public Builder diskIopsConfiguration(@Nullable OpenZfsFileSystemDiskIopsConfigurationArgs diskIopsConfiguration) {
-            this.diskIopsConfiguration = Input.ofNullable(diskIopsConfiguration);
+            this.diskIopsConfiguration = Output.ofNullable(diskIopsConfiguration);
             return this;
         }
 
-        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Input.ofNullable(kmsKeyId);
+            this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder rootVolumeConfiguration(@Nullable Input<OpenZfsFileSystemRootVolumeConfigurationArgs> rootVolumeConfiguration) {
+        public Builder rootVolumeConfiguration(@Nullable Output<OpenZfsFileSystemRootVolumeConfigurationArgs> rootVolumeConfiguration) {
             this.rootVolumeConfiguration = rootVolumeConfiguration;
             return this;
         }
 
         public Builder rootVolumeConfiguration(@Nullable OpenZfsFileSystemRootVolumeConfigurationArgs rootVolumeConfiguration) {
-            this.rootVolumeConfiguration = Input.ofNullable(rootVolumeConfiguration);
+            this.rootVolumeConfiguration = Output.ofNullable(rootVolumeConfiguration);
             return this;
         }
 
-        public Builder securityGroupIds(@Nullable Input<List<String>> securityGroupIds) {
+        public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
 
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
-            this.securityGroupIds = Input.ofNullable(securityGroupIds);
+            this.securityGroupIds = Output.ofNullable(securityGroupIds);
             return this;
         }
 
-        public Builder storageCapacity(@Nullable Input<Integer> storageCapacity) {
+        public Builder storageCapacity(@Nullable Output<Integer> storageCapacity) {
             this.storageCapacity = storageCapacity;
             return this;
         }
 
         public Builder storageCapacity(@Nullable Integer storageCapacity) {
-            this.storageCapacity = Input.ofNullable(storageCapacity);
+            this.storageCapacity = Output.ofNullable(storageCapacity);
             return this;
         }
 
-        public Builder storageType(@Nullable Input<String> storageType) {
+        public Builder storageType(@Nullable Output<String> storageType) {
             this.storageType = storageType;
             return this;
         }
 
         public Builder storageType(@Nullable String storageType) {
-            this.storageType = Input.ofNullable(storageType);
+            this.storageType = Output.ofNullable(storageType);
             return this;
         }
 
-        public Builder subnetIds(Input<String> subnetIds) {
+        public Builder subnetIds(Output<String> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
 
         public Builder subnetIds(String subnetIds) {
-            this.subnetIds = Input.of(Objects.requireNonNull(subnetIds));
+            this.subnetIds = Output.of(Objects.requireNonNull(subnetIds));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder throughputCapacity(Input<Integer> throughputCapacity) {
+        public Builder throughputCapacity(Output<Integer> throughputCapacity) {
             this.throughputCapacity = Objects.requireNonNull(throughputCapacity);
             return this;
         }
 
         public Builder throughputCapacity(Integer throughputCapacity) {
-            this.throughputCapacity = Input.of(Objects.requireNonNull(throughputCapacity));
+            this.throughputCapacity = Output.of(Objects.requireNonNull(throughputCapacity));
             return this;
         }
 
-        public Builder weeklyMaintenanceStartTime(@Nullable Input<String> weeklyMaintenanceStartTime) {
+        public Builder weeklyMaintenanceStartTime(@Nullable Output<String> weeklyMaintenanceStartTime) {
             this.weeklyMaintenanceStartTime = weeklyMaintenanceStartTime;
             return this;
         }
 
         public Builder weeklyMaintenanceStartTime(@Nullable String weeklyMaintenanceStartTime) {
-            this.weeklyMaintenanceStartTime = Input.ofNullable(weeklyMaintenanceStartTime);
+            this.weeklyMaintenanceStartTime = Output.ofNullable(weeklyMaintenanceStartTime);
             return this;
         }
         public OpenZfsFileSystemArgs build() {

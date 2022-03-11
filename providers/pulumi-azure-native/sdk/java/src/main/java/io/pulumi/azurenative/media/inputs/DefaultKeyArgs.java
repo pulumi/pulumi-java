@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class DefaultKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="label")
-      private final @Nullable Input<String> label;
+      private final @Nullable Output<String> label;
 
-    public Input<String> getLabel() {
-        return this.label == null ? Input.empty() : this.label;
+    public Output<String> getLabel() {
+        return this.label == null ? Output.empty() : this.label;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class DefaultKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policyName")
-      private final @Nullable Input<String> policyName;
+      private final @Nullable Output<String> policyName;
 
-    public Input<String> getPolicyName() {
-        return this.policyName == null ? Input.empty() : this.policyName;
+    public Output<String> getPolicyName() {
+        return this.policyName == null ? Output.empty() : this.policyName;
     }
 
     public DefaultKeyArgs(
-        @Nullable Input<String> label,
-        @Nullable Input<String> policyName) {
+        @Nullable Output<String> label,
+        @Nullable Output<String> policyName) {
         this.label = label;
         this.policyName = policyName;
     }
 
     private DefaultKeyArgs() {
-        this.label = Input.empty();
-        this.policyName = Input.empty();
+        this.label = Output.empty();
+        this.policyName = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class DefaultKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> label;
-        private @Nullable Input<String> policyName;
+        private @Nullable Output<String> label;
+        private @Nullable Output<String> policyName;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class DefaultKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.policyName = defaults.policyName;
         }
 
-        public Builder label(@Nullable Input<String> label) {
+        public Builder label(@Nullable Output<String> label) {
             this.label = label;
             return this;
         }
 
         public Builder label(@Nullable String label) {
-            this.label = Input.ofNullable(label);
+            this.label = Output.ofNullable(label);
             return this;
         }
 
-        public Builder policyName(@Nullable Input<String> policyName) {
+        public Builder policyName(@Nullable Output<String> policyName) {
             this.policyName = policyName;
             return this;
         }
 
         public Builder policyName(@Nullable String policyName) {
-            this.policyName = Input.ofNullable(policyName);
+            this.policyName = Output.ofNullable(policyName);
             return this;
         }
         public DefaultKeyArgs build() {

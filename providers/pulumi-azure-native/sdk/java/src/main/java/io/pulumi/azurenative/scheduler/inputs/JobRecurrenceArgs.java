@@ -5,7 +5,7 @@ package io.pulumi.azurenative.scheduler.inputs;
 
 import io.pulumi.azurenative.scheduler.enums.RecurrenceFrequency;
 import io.pulumi.azurenative.scheduler.inputs.JobRecurrenceScheduleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class JobRecurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="count")
-      private final @Nullable Input<Integer> count;
+      private final @Nullable Output<Integer> count;
 
-    public Input<Integer> getCount() {
-        return this.count == null ? Input.empty() : this.count;
+    public Output<Integer> getCount() {
+        return this.count == null ? Output.empty() : this.count;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class JobRecurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endTime")
-      private final @Nullable Input<String> endTime;
+      private final @Nullable Output<String> endTime;
 
-    public Input<String> getEndTime() {
-        return this.endTime == null ? Input.empty() : this.endTime;
+    public Output<String> getEndTime() {
+        return this.endTime == null ? Output.empty() : this.endTime;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class JobRecurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frequency")
-      private final @Nullable Input<RecurrenceFrequency> frequency;
+      private final @Nullable Output<RecurrenceFrequency> frequency;
 
-    public Input<RecurrenceFrequency> getFrequency() {
-        return this.frequency == null ? Input.empty() : this.frequency;
+    public Output<RecurrenceFrequency> getFrequency() {
+        return this.frequency == null ? Output.empty() : this.frequency;
     }
 
     /**
@@ -55,25 +55,25 @@ public final class JobRecurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="interval")
-      private final @Nullable Input<Integer> interval;
+      private final @Nullable Output<Integer> interval;
 
-    public Input<Integer> getInterval() {
-        return this.interval == null ? Input.empty() : this.interval;
+    public Output<Integer> getInterval() {
+        return this.interval == null ? Output.empty() : this.interval;
     }
 
     @InputImport(name="schedule")
-      private final @Nullable Input<JobRecurrenceScheduleArgs> schedule;
+      private final @Nullable Output<JobRecurrenceScheduleArgs> schedule;
 
-    public Input<JobRecurrenceScheduleArgs> getSchedule() {
-        return this.schedule == null ? Input.empty() : this.schedule;
+    public Output<JobRecurrenceScheduleArgs> getSchedule() {
+        return this.schedule == null ? Output.empty() : this.schedule;
     }
 
     public JobRecurrenceArgs(
-        @Nullable Input<Integer> count,
-        @Nullable Input<String> endTime,
-        @Nullable Input<RecurrenceFrequency> frequency,
-        @Nullable Input<Integer> interval,
-        @Nullable Input<JobRecurrenceScheduleArgs> schedule) {
+        @Nullable Output<Integer> count,
+        @Nullable Output<String> endTime,
+        @Nullable Output<RecurrenceFrequency> frequency,
+        @Nullable Output<Integer> interval,
+        @Nullable Output<JobRecurrenceScheduleArgs> schedule) {
         this.count = count;
         this.endTime = endTime;
         this.frequency = frequency;
@@ -82,11 +82,11 @@ public final class JobRecurrenceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobRecurrenceArgs() {
-        this.count = Input.empty();
-        this.endTime = Input.empty();
-        this.frequency = Input.empty();
-        this.interval = Input.empty();
-        this.schedule = Input.empty();
+        this.count = Output.empty();
+        this.endTime = Output.empty();
+        this.frequency = Output.empty();
+        this.interval = Output.empty();
+        this.schedule = Output.empty();
     }
 
     public static Builder builder() {
@@ -98,11 +98,11 @@ public final class JobRecurrenceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> count;
-        private @Nullable Input<String> endTime;
-        private @Nullable Input<RecurrenceFrequency> frequency;
-        private @Nullable Input<Integer> interval;
-        private @Nullable Input<JobRecurrenceScheduleArgs> schedule;
+        private @Nullable Output<Integer> count;
+        private @Nullable Output<String> endTime;
+        private @Nullable Output<RecurrenceFrequency> frequency;
+        private @Nullable Output<Integer> interval;
+        private @Nullable Output<JobRecurrenceScheduleArgs> schedule;
 
         public Builder() {
     	      // Empty
@@ -117,53 +117,53 @@ public final class JobRecurrenceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.schedule = defaults.schedule;
         }
 
-        public Builder count(@Nullable Input<Integer> count) {
+        public Builder count(@Nullable Output<Integer> count) {
             this.count = count;
             return this;
         }
 
         public Builder count(@Nullable Integer count) {
-            this.count = Input.ofNullable(count);
+            this.count = Output.ofNullable(count);
             return this;
         }
 
-        public Builder endTime(@Nullable Input<String> endTime) {
+        public Builder endTime(@Nullable Output<String> endTime) {
             this.endTime = endTime;
             return this;
         }
 
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = Input.ofNullable(endTime);
+            this.endTime = Output.ofNullable(endTime);
             return this;
         }
 
-        public Builder frequency(@Nullable Input<RecurrenceFrequency> frequency) {
+        public Builder frequency(@Nullable Output<RecurrenceFrequency> frequency) {
             this.frequency = frequency;
             return this;
         }
 
         public Builder frequency(@Nullable RecurrenceFrequency frequency) {
-            this.frequency = Input.ofNullable(frequency);
+            this.frequency = Output.ofNullable(frequency);
             return this;
         }
 
-        public Builder interval(@Nullable Input<Integer> interval) {
+        public Builder interval(@Nullable Output<Integer> interval) {
             this.interval = interval;
             return this;
         }
 
         public Builder interval(@Nullable Integer interval) {
-            this.interval = Input.ofNullable(interval);
+            this.interval = Output.ofNullable(interval);
             return this;
         }
 
-        public Builder schedule(@Nullable Input<JobRecurrenceScheduleArgs> schedule) {
+        public Builder schedule(@Nullable Output<JobRecurrenceScheduleArgs> schedule) {
             this.schedule = schedule;
             return this;
         }
 
         public Builder schedule(@Nullable JobRecurrenceScheduleArgs schedule) {
-            this.schedule = Input.ofNullable(schedule);
+            this.schedule = Output.ofNullable(schedule);
             return this;
         }
         public JobRecurrenceArgs build() {
